@@ -980,8 +980,10 @@ def update_sentiment_gauge(score):
     ))
     
     fig.update_layout(
-        height=200,
-        margin=dict(l=20, r=20, t=30, b=20)
+        height=150,  # Reduced height to avoid overlap
+        margin=dict(l=20, r=20, t=10, b=10),  # Reduced margins
+        paper_bgcolor='rgba(0,0,0,0)',  # Transparent background
+        plot_bgcolor='rgba(0,0,0,0)'
     )
     
     return dcc.Graph(figure=fig, config={'displayModeBar': False})

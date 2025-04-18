@@ -75,12 +75,16 @@
 .sentiment-container {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
+    align-items: flex-start; /* Changed from center to allow overlap control */
+    margin-bottom: 10px; /* Reduced from 20px */
+    height: 140px; /* Fixed height to prevent layout shifts */
+    overflow: visible; /* Allow gauge to overlap if needed */
 }
 
 .sentiment-display {
     text-align: center;
+    min-width: 120px; /* Ensure minimum width */
+    margin-right: 10px; /* Add space between score and gauge */
 }
 
 .sentiment-score {
@@ -100,9 +104,15 @@
     color: #2c3e50;
 }
 
+.factors-container {
+    clear: both; /* Ensure it starts below the gauge */
+    margin-top: 10px; /* Add space above components list */
+}
+
 .components-list {
     max-height: 300px;
     overflow-y: auto;
+    margin-top: 5px;
 }
 
 .component-item {
