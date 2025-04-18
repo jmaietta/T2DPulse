@@ -592,6 +592,9 @@ sentiment_index = calculate_sentiment_index()
 
 # ---- Dashboard Layout ----
 app.layout = html.Div([
+    # Hidden div for initialization callbacks
+    html.Div(id="_", style={"display": "none"}),
+    
     # Header
     html.Div([
         html.H1("Economic Dashboard: Software & Technology Industry", className="dashboard-title"),
@@ -1593,8 +1596,8 @@ def update_total_weight(gdp, unemployment, cpi, nasdaq, data_ppi, software_ppi, 
 # Apply custom weights
 @app.callback(
     [Output("custom-weights-store", "data"),
-     Output("sentiment-score", "children"),
-     Output("sentiment-category", "children")],
+     Output("sentiment-score", "children", allow_duplicate=True),
+     Output("sentiment-category", "children", allow_duplicate=True)],
     [Input("apply-weights", "n_clicks")],
     [State("gdp-weight", "value"),
      State("unemployment-weight", "value"),
@@ -1603,7 +1606,8 @@ def update_total_weight(gdp, unemployment, cpi, nasdaq, data_ppi, software_ppi, 
      State("data-ppi-weight", "value"),
      State("software-ppi-weight", "value"),
      State("interest-rate-weight", "value"),
-     State("proprietary-data-store", "data")]
+     State("proprietary-data-store", "data")],
+    prevent_initial_call=True
 )
 def apply_custom_weights(n_clicks, gdp, unemployment, cpi, nasdaq, 
                          data_ppi, software_ppi, interest_rate, proprietary_data):
@@ -1663,12 +1667,13 @@ def update_upload_preview(contents, filename):
 # Apply proprietary data
 @app.callback(
     [Output("proprietary-data-store", "data"),
-     Output("sentiment-score", "children"),
-     Output("sentiment-category", "children")],
+     Output("sentiment-score", "children", allow_duplicate=True),
+     Output("sentiment-category", "children", allow_duplicate=True)],
     [Input("apply-proprietary", "n_clicks")],
     [State("proprietary-weight", "value"),
      State("proprietary-value", "value"),
-     State("custom-weights-store", "data")]
+     State("custom-weights-store", "data")],
+    prevent_initial_call=True
 )
 def apply_proprietary_data(n_clicks, weight, value, custom_weights):
     if n_clicks is None:
@@ -1797,6 +1802,20 @@ def refresh_data(n_clicks):
 
 # For plotly's make_subplots import to avoid errors
 from plotly.subplots import make_subplots
+
+# Initialize sentiment score on page load
+@app.callback(
+    [Output("sentiment-score", "children"),
+     Output("sentiment-category", "children")],
+    [Input("_", "children")],
+    prevent_initial_call=False
+)
+def initialize_sentiment_index(_):
+    sentiment_index = calculate_sentiment_index()
+    return (
+        f"{sentiment_index['score']:.1f}" if sentiment_index else "N/A", 
+        sentiment_index['category'] if sentiment_index else "N/A"
+    )
 
 # Add this at the end of the file if running directly
 if __name__ == "__main__":
