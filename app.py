@@ -602,29 +602,39 @@ app.layout = html.Div([
                className="dashboard-subtitle")
     ], className="header"),
     
-    # Main content container
+    # Top Section - Sentiment Index
     html.Div([
-        # Left column - Key indicators and sentiment index
+        # Sentiment Index Banner
         html.Div([
-            # Sentiment Index Card
+            # Left side - Score and Category
             html.Div([
-                html.H3("Tech Economy Sentiment Index", className="card-title"),
+                html.H3("Tech Economy Sentiment Index", className="sentiment-banner-title"),
                 html.Div([
-                    html.Div([
-                        html.H2(id="sentiment-score", 
-                               children=f"{sentiment_index['score']:.1f}" if sentiment_index else "N/A", 
-                               className="sentiment-score"),
-                        html.H4(id="sentiment-category", 
-                               children=sentiment_index['category'] if sentiment_index else "N/A", 
-                               className="sentiment-category")
-                    ], className="sentiment-display"),
-                    html.Div(id="sentiment-gauge")
-                ], className="sentiment-container"),
-                html.Div([
-                    html.H4("Contributing Factors", className="factors-title"),
-                    html.Div(id="sentiment-components")
-                ], className="factors-container")
-            ], className="card sentiment-card"),
+                    html.H2(id="sentiment-score", 
+                           children=f"{sentiment_index['score']:.1f}" if sentiment_index else "N/A", 
+                           className="sentiment-score"),
+                    html.H4(id="sentiment-category", 
+                           children=sentiment_index['category'] if sentiment_index else "N/A", 
+                           className="sentiment-category")
+                ], className="sentiment-display")
+            ], className="sentiment-banner-left"),
+            
+            # Right side - Gauge
+            html.Div([
+                html.Div(id="sentiment-gauge", className="sentiment-gauge-container")
+            ], className="sentiment-banner-right")
+        ], className="sentiment-banner")
+    ], className="sentiment-section"),
+    
+    # Main content container - Two column layout
+    html.Div([
+        # Left column - Contributing factors and key indicators
+        html.Div([
+            # Contributing Factors Card
+            html.Div([
+                html.H3("Contributing Factors", className="card-title"),
+                html.Div(id="sentiment-components", className="factors-container")
+            ], className="card factors-card"),
             
             # Key Indicators
             html.Div([
@@ -961,15 +971,19 @@ def update_sentiment_gauge(score):
         mode="gauge+number",
         value=score_value,
         domain={'x': [0, 1], 'y': [0, 1]},
+        number={'font': {'size': 40}},
         gauge={
-            'axis': {'range': [0, 100], 'tickwidth': 1},
+            'axis': {'range': [0, 100], 'tickwidth': 1, 'tickfont': {'size': 12}},
             'bar': {'color': "royalblue"},
+            'bgcolor': "white",
+            'borderwidth': 2,
+            'bordercolor': "lightgray",
             'steps': [
-                {'range': [0, 20], 'color': "red"},
-                {'range': [20, 40], 'color': "orange"},
-                {'range': [40, 60], 'color': "yellow"},
-                {'range': [60, 80], 'color': "lightgreen"},
-                {'range': [80, 100], 'color': "green"}
+                {'range': [0, 20], 'color': "rgba(255, 0, 0, 0.7)"},
+                {'range': [20, 40], 'color': "rgba(255, 165, 0, 0.7)"},
+                {'range': [40, 60], 'color': "rgba(255, 255, 0, 0.7)"},
+                {'range': [60, 80], 'color': "rgba(144, 238, 144, 0.7)"},
+                {'range': [80, 100], 'color': "rgba(0, 128, 0, 0.7)"}
             ],
             'threshold': {
                 'line': {'color': "white", 'width': 4},
@@ -980,10 +994,11 @@ def update_sentiment_gauge(score):
     ))
     
     fig.update_layout(
-        height=150,  # Reduced height to avoid overlap
-        margin=dict(l=20, r=20, t=10, b=10),  # Reduced margins
-        paper_bgcolor='rgba(0,0,0,0)',  # Transparent background
-        plot_bgcolor='rgba(0,0,0,0)'
+        height=140,
+        margin=dict(l=10, r=10, t=10, b=10),
+        paper_bgcolor='rgba(0,0,0,0)',
+        plot_bgcolor='rgba(0,0,0,0)',
+        font={'size': 12}
     )
     
     return dcc.Graph(figure=fig, config={'displayModeBar': False})
