@@ -1841,14 +1841,16 @@ def update_total_weight(gdp, unemployment, cpi, nasdaq, data_ppi, software_ppi, 
     
     # If document weight is present, the economic indicators should sum to (100 - document_weight)
     if document_weight > 0:
-        remaining_for_indicators = 100 - document_weight
-        message = f"Economic Indicators: {remaining_for_indicators:.1f}%, Document: {document_weight:.1f}%, Total: 100.0%"
+        # Format expected percentage for economic indicators
+        message = f"Economic Indicators: {economic_indicators_total:.1f}%, Document: {document_weight:.1f}%, Total: {economic_indicators_total + document_weight:.1f}%"
         
-        # Set color based on whether economic indicators equal remaining weight (100 - document_weight)
-        if abs(economic_indicators_total - remaining_for_indicators) < 0.1:
+        # Set color based on whether total equals 100%
+        if abs(economic_indicators_total + document_weight - 100) < 0.1:
             color = "green"
         else:
             color = "red"
+            # Also print a warning for debugging
+            print(f"WARNING: Total weight is {economic_indicators_total + document_weight:.1f}%, not 100%")
     else:
         # No document weight, just show total of economic indicators
         message = f"Total: {economic_indicators_total:.1f}%"
@@ -2122,10 +2124,12 @@ def initialize_sentiment_index(_):
 # Document weight display update
 @app.callback(
     [Output("document-weight-display", "children"),
-     Output("document-weight", "disabled")],
+     Output("document-weight", "disabled"),
+     Output("document-data-store", "data", allow_duplicate=True)],  # Update data store when slider changes
     [Input("document-weight", "value"),
-     Input("upload-document", "contents"),
-     Input("document-data-store", "data")]
+     Input("upload-document", "contents")],
+    [State("document-data-store", "data")],
+    prevent_initial_call=True
 )
 def update_document_weight_display(weight, contents, document_data):
     # Check if document is uploaded and processed
@@ -2138,16 +2142,25 @@ def update_document_weight_display(weight, contents, document_data):
             html.Span("Upload a document and click 'Apply Document Analysis' to enable document weighting", 
                     className="weight-value",
                     style={"color": "#888"})
-        ]), True
+        ]), True, dash.no_update
     
     # Document is uploaded and processed, allow weight adjustment
     remaining = 100 - weight
+    
+    # If weight was changed by slider, update the document data store
+    if document_data and 'weight' in document_data and document_data['weight'] != weight:
+        # Update the document data with new weight
+        document_data['weight'] = weight
+        updated_data = document_data
+    else:
+        updated_data = dash.no_update
+    
     return html.Div([
         html.Span(f"Document Weight: {weight}%", className="weight-value"),
         html.Span(f"Remaining for Economic Indicators: {remaining}%", 
                  className="weight-remaining",
                  style={"marginLeft": "10px", "color": "green" if remaining >= 0 else "red"})
-    ]), False
+    ]), False, updated_data
 
 # Process and preview document upload for sentiment analysis
 @app.callback(
@@ -2295,19 +2308,12 @@ def apply_document_analysis(n_clicks, weight, contents, filename, custom_weights
                     
                     # Selected for sentiment index indicator
                     html.Div([
-                        html.P("Document Score:", className="sentiment-score-label"),
+                        html.P("Document Sentiment Score:", className="sentiment-score-label",
+                               style={"fontSize": "14px"}),
                         html.P(f"{result['overall_score']:.1f}/100", 
                               className="sentiment-score-value",
-                              style={"fontSize": "24px", "fontWeight": "bold", "color": sentiment_color})
-                    ], className="sentiment-score"),
-                    
-                    # Applied to index indicator
-                    html.Div([
-                        html.P("Applied to Index:", className="sentiment-label"),
-                        html.P(f"Yes (Weight: {weight}%)", 
-                              className="sentiment-value",
-                              style={"color": "green", "fontWeight": "bold"})
-                    ], className="sentiment-row")
+                              style={"fontSize": "22px", "fontWeight": "bold", "color": sentiment_color})
+                    ], className="sentiment-score")
                 ], className="document-sentiment-container")
             ])
             
