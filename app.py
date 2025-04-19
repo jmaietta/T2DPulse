@@ -1678,18 +1678,42 @@ def update_interest_rate_graph(n):
      Input("nasdaq-weight", "value"),
      Input("data-ppi-weight", "value"),
      Input("software-ppi-weight", "value"),
-     Input("interest-rate-weight", "value")]
+     Input("interest-rate-weight", "value")],
+    [State("document-data-store", "data")]
 )
-def update_total_weight(gdp, unemployment, cpi, nasdaq, data_ppi, software_ppi, interest_rate):
-    total = gdp + unemployment + cpi + nasdaq + data_ppi + software_ppi + interest_rate
+def update_total_weight(gdp, unemployment, cpi, nasdaq, data_ppi, software_ppi, interest_rate, document_data_store):
+    # Get document weight if it exists
+    document_weight = 0
+    if document_data_store and isinstance(document_data_store, dict) and 'weight' in document_data_store:
+        document_weight = float(document_data_store['weight'])
     
-    # Change color based on total
-    if total == 100:
-        color = "green"
+    # Calculate total of economic indicators only
+    economic_indicators_total = gdp + unemployment + cpi + nasdaq + data_ppi + software_ppi + interest_rate
+    
+    # If we have document weight, we need to normalize the economic weights to (100 - document_weight)
+    if document_weight > 0:
+        # Calculate what the economic indicators should total
+        target_economic_total = 100 - document_weight
+        
+        # Format message to show both economic indicator total and overall total
+        message = f"Economic Indicators: {economic_indicators_total:.1f}% (target: {target_economic_total:.1f}%), Document: {document_weight:.1f}%, Total: {economic_indicators_total + document_weight:.1f}%"
+        
+        # Change color based on if economic indicators sum to the target
+        if abs(economic_indicators_total - target_economic_total) < 0.1:
+            color = "green"
+        else:
+            color = "red"
     else:
-        color = "red"
+        # No document weight, so economic indicators should sum to 100%
+        message = f"Total: {economic_indicators_total:.1f}%"
+        
+        # Change color based on total
+        if abs(economic_indicators_total - 100) < 0.1:
+            color = "green"
+        else:
+            color = "red"
     
-    return html.Span(f"{total}%", style={"color": color})
+    return html.Span(message, style={"color": color})
 
 # Apply custom weights
 @app.callback(
