@@ -211,37 +211,12 @@ def split_text_into_chunks(text, chunk_size=512):
 
 def extract_qa_section(text):
     """
-    Extract Q&A section from earnings call transcript
-    This is a simple implementation and may need refinement based on transcript formats
+    Extract Q&A section from earnings call transcript if it exists
+    Note: This is no longer required as we analyze the entire document.
+    Kept for backward compatibility.
     """
-    # Look for common Q&A section markers
-    qa_markers = [
-        r'Question-and-Answer Session',
-        r'Questions and Answers',
-        r'Q&A Session',
-        r'Q & A'
-    ]
-    
-    qa_text = ""
-    
-    # Try to find Q&A section
-    for marker in qa_markers:
-        match = re.search(f"({marker})(.*?)(Conference Call|$)", text, re.DOTALL | re.IGNORECASE)
-        if match:
-            qa_text = match.group(2)
-            break
-    
-    # If no marker found, look for Q: pattern
-    if not qa_text:
-        # Find all Q: and A: patterns
-        qa_parts = re.findall(r'(?:^|\n)(?:Q:|Question:).*?(?=(?:^|\n)(?:Q:|Question:|$))', text, re.DOTALL | re.MULTILINE)
-        qa_text = '\n'.join(qa_parts)
-    
-    # If still no QA text found, return empty string
-    if not qa_text:
-        return ""
-        
-    return qa_text
+    # Simply return the full text - no need to search for Q&A sections
+    return text
 
 def process_document(content, filename):
     """
@@ -270,33 +245,21 @@ def process_document(content, filename):
             "message": f"Failed to extract text from {filename}."
         }
     
-    # Extract Q&A section if it exists
-    qa_text = extract_qa_section(text)
-    
-    # Analyze sentiment on full text
+    # Analyze the full document without Q&A section extraction
     full_sentiment = analyze_document_sentiment(text)
     
-    # Analyze sentiment on Q&A section if available
-    qa_sentiment = None
-    if qa_text:
-        qa_sentiment = analyze_document_sentiment(qa_text)
-    
-    # Calculate overall sentiment score
-    # If Q&A section was found, weigh it more heavily (70% Q&A, 30% full text)
-    if qa_sentiment:
-        overall_score = (qa_sentiment["score"] * 0.7) + (full_sentiment["score"] * 0.3)
-    else:
-        overall_score = full_sentiment["score"]
+    # Use the full text sentiment score as the overall score
+    overall_score = full_sentiment["score"]
     
     # Prepare result
     result = {
         "status": "success",
         "filename": filename,
         "text_length": len(text),
-        "qa_section_found": bool(qa_text),
-        "qa_section_length": len(qa_text) if qa_text else 0,
+        "qa_section_found": False,  # Always false since we don't search for Q&A
+        "qa_section_length": 0,
         "full_text_sentiment": full_sentiment,
-        "qa_sentiment": qa_sentiment,
+        "qa_sentiment": None,  # No Q&A sentiment since we don't extract it
         "overall_score": min(100, max(0, overall_score)),
         "processed_date": datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     }

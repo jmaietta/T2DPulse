@@ -2321,13 +2321,12 @@ def apply_document_analysis(n_clicks, weight, contents, filename, custom_weights
             
             # Calculate total weight display
             economic_indicators_total = gdp + unemployment + cpi + nasdaq + data_ppi + software_ppi + interest_rate
-            target_economic_total = 100 - weight
             
             # Format message for total weight
-            message = f"Economic Indicators: {economic_indicators_total:.1f}% (target: {target_economic_total:.1f}%), Document: {weight:.1f}%, Total: {economic_indicators_total + weight:.1f}%"
+            message = f"Economic Indicators: {economic_indicators_total:.1f}%, Document: {weight:.1f}%, Total: {economic_indicators_total + weight:.1f}%"
             
-            # Change color based on if economic indicators sum to the target
-            if abs(economic_indicators_total - target_economic_total) < 0.1:
+            # Change color based on if the total is exactly 100%
+            if abs((economic_indicators_total + weight) - 100) < 0.1:
                 color = "green"
             else:
                 color = "red"
