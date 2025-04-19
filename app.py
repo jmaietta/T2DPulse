@@ -2342,6 +2342,7 @@ def initialize_sentiment_index(_):
      Output("software-ppi-weight", "value", allow_duplicate=True),
      Output("interest-rate-weight", "value", allow_duplicate=True),
      Output("treasury-yield-weight", "value", allow_duplicate=True),
+     Output("vix-weight", "value", allow_duplicate=True),
      # Debug output
      Output("document-weight-debug", "children")],
     [Input("document-weight", "value"),
@@ -2355,11 +2356,12 @@ def initialize_sentiment_index(_):
      State("data-ppi-weight", "value"),
      State("software-ppi-weight", "value"),
      State("interest-rate-weight", "value"),
-     State("treasury-yield-weight", "value")],
+     State("treasury-yield-weight", "value"),
+     State("vix-weight", "value")],
     prevent_initial_call=True
 )
 def update_document_weight_display(weight, contents, n_clicks, document_data,
-                                gdp, unemployment, cpi, nasdaq, data_ppi, software_ppi, interest_rate, treasury_yield):
+                                gdp, unemployment, cpi, nasdaq, data_ppi, software_ppi, interest_rate, treasury_yield, vix_weight):
     ctx = dash.callback_context  # Get the callback context to determine what triggered the callback
     trigger_id = ctx.triggered[0]['prop_id'].split('.')[0] if ctx.triggered else None
     
@@ -2389,7 +2391,7 @@ def update_document_weight_display(weight, contents, n_clicks, document_data,
     
     # Document is uploaded and processed, allow weight adjustment
     remaining = 100 - weight
-    economic_indicators_total = gdp + unemployment + cpi + nasdaq + data_ppi + software_ppi + interest_rate
+    economic_indicators_total = gdp + unemployment + cpi + nasdaq + data_ppi + software_ppi + interest_rate + treasury_yield + vix_weight
     
     # Default return values (no changes)
     updated_data = dash.no_update
@@ -2428,12 +2430,14 @@ def update_document_weight_display(weight, contents, n_clicks, document_data,
             new_data_ppi = round(data_ppi * scaling_factor)
             new_software_ppi = round(software_ppi * scaling_factor)
             new_interest_rate = round(interest_rate * scaling_factor)
+            new_treasury_yield = round(treasury_yield * scaling_factor)
+            new_vix = round(vix_weight * scaling_factor)
             
             # If rounding causes total to be off by 1, adjust the largest value
-            new_total = new_gdp + new_unemployment + new_cpi + new_nasdaq + new_data_ppi + new_software_ppi + new_interest_rate
+            new_total = new_gdp + new_unemployment + new_cpi + new_nasdaq + new_data_ppi + new_software_ppi + new_interest_rate + new_treasury_yield + new_vix
             if new_total != remaining_weight:
                 # Find the largest value and adjust it
-                values = [new_gdp, new_unemployment, new_cpi, new_nasdaq, new_data_ppi, new_software_ppi, new_interest_rate]
+                values = [new_gdp, new_unemployment, new_cpi, new_nasdaq, new_data_ppi, new_software_ppi, new_interest_rate, new_treasury_yield, new_vix]
                 max_index = values.index(max(values))
                 if max_index == 0:
                     new_gdp += (remaining_weight - new_total)
@@ -2449,6 +2453,10 @@ def update_document_weight_display(weight, contents, n_clicks, document_data,
                     new_software_ppi += (remaining_weight - new_total)
                 elif max_index == 6:
                     new_interest_rate += (remaining_weight - new_total)
+                elif max_index == 7:
+                    new_treasury_yield += (remaining_weight - new_total)
+                elif max_index == 8:
+                    new_vix += (remaining_weight - new_total)
     
     # Create the document weight display
     doc_weight_display = html.Div([
@@ -2478,6 +2486,8 @@ def update_document_weight_display(weight, contents, n_clicks, document_data,
         new_data_ppi, 
         new_software_ppi, 
         new_interest_rate,
+        new_treasury_yield,
+        new_vix,
         debug_info
     )
 
@@ -2523,7 +2533,8 @@ def update_document_preview(contents, filename):
      Output("data-ppi-weight", "value", allow_duplicate=True),
      Output("software-ppi-weight", "value", allow_duplicate=True),
      Output("interest-rate-weight", "value", allow_duplicate=True),
-     Output("treasury-yield-weight", "value", allow_duplicate=True)],
+     Output("treasury-yield-weight", "value", allow_duplicate=True),
+     Output("vix-weight", "value", allow_duplicate=True)],
     [Input("apply-document", "n_clicks")],
     [State("document-weight", "value"),
      State("upload-document", "contents"),
@@ -2537,11 +2548,12 @@ def update_document_preview(contents, filename):
      State("data-ppi-weight", "value"),
      State("software-ppi-weight", "value"),
      State("interest-rate-weight", "value"),
-     State("treasury-yield-weight", "value")],
+     State("treasury-yield-weight", "value"),
+     State("vix-weight", "value")],
     prevent_initial_call=True
 )
 def apply_document_analysis(n_clicks, weight, contents, filename, custom_weights, proprietary_data,
-                          gdp, unemployment, cpi, nasdaq, data_ppi, software_ppi, interest_rate, treasury_yield):
+                          gdp, unemployment, cpi, nasdaq, data_ppi, software_ppi, interest_rate, treasury_yield, vix_weight):
     # Document weight should not be applied until a document is uploaded and analyzed
     if n_clicks is None:
         # Return document weight of 0 and no updates to other components
