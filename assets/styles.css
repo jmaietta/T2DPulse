@@ -246,15 +246,15 @@
 }
 
 .trend-up {
-    color: #2ecc71;
+    color: #2ecc71; /* Green for upward arrows */
 }
 
 .trend-down {
-    color: #e74c3c;
+    color: #e74c3c; /* Red for downward arrows */
 }
 
 .trend-neutral {
-    color: #f39c12;
+    color: #000000; /* Black for sideways arrows */
 }
 
 .trend-value {

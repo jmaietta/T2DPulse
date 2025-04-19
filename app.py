@@ -725,7 +725,7 @@ app.layout = html.Div([
                 # GDP
                 html.Div([
                     html.Div([
-                        html.H4("GDP Growth (YoY)"),
+                        html.H4("GDP % Change"),
                         html.P(id="gdp-value", 
                               children=f"{gdp_data.sort_values('date', ascending=False).iloc[0]['yoy_growth']:.1f}%" 
                               if not gdp_data.empty and 'yoy_growth' in gdp_data.columns else "N/A",
@@ -768,6 +768,42 @@ app.layout = html.Div([
                               className="indicator-value")
                     ], className="indicator-text"),
                     html.Div(id="interest-rate-trend", className="indicator-trend")
+                ], className="indicator"),
+                
+                # NASDAQ
+                html.Div([
+                    html.Div([
+                        html.H4("NASDAQ Trend"),
+                        html.P(id="nasdaq-value", 
+                              children=f"{nasdaq_data.sort_values('date', ascending=False).iloc[0]['value']:.0f}" 
+                              if not nasdaq_data.empty else "N/A",
+                              className="indicator-value")
+                    ], className="indicator-text"),
+                    html.Div(id="nasdaq-trend", className="indicator-trend")
+                ], className="indicator"),
+                
+                # PPI: Software Publishers
+                html.Div([
+                    html.Div([
+                        html.H4("PPI: Software Publishers"),
+                        html.P(id="software-ppi-value", 
+                              children=f"{software_ppi_data.sort_values('date', ascending=False).iloc[0]['yoy_pct_change']:.1f}%" 
+                              if not software_ppi_data.empty and 'yoy_pct_change' in software_ppi_data.columns else "N/A",
+                              className="indicator-value")
+                    ], className="indicator-text"),
+                    html.Div(id="software-ppi-trend", className="indicator-trend")
+                ], className="indicator"),
+                
+                # PPI: Data Processing Services
+                html.Div([
+                    html.Div([
+                        html.H4("PPI: Data Processing Services"),
+                        html.P(id="data-ppi-value", 
+                              children=f"{data_processing_ppi_data.sort_values('date', ascending=False).iloc[0]['yoy_pct_change']:.1f}%" 
+                              if not data_processing_ppi_data.empty and 'yoy_pct_change' in data_processing_ppi_data.columns else "N/A",
+                              className="indicator-value")
+                    ], className="indicator-text"),
+                    html.Div(id="data-ppi-trend", className="indicator-trend")
                 ], className="indicator"),
             ], className="card indicators-card"),
             
@@ -1142,7 +1178,10 @@ def update_sentiment_components(score, category, custom_weights, document_data):
     [Output("gdp-trend", "children"),
      Output("unemployment-trend", "children"),
      Output("inflation-trend", "children"),
-     Output("interest-rate-trend", "children")],
+     Output("interest-rate-trend", "children"),
+     Output("nasdaq-trend", "children"),
+     Output("software-ppi-trend", "children"),
+     Output("data-ppi-trend", "children")],
     [Input("interval-component", "n_intervals")]
 )
 def update_indicator_trends(n):
@@ -1158,18 +1197,10 @@ def update_indicator_trends(n):
             # First, always show the actual direction of change
             if abs(change) < 0.2:  # Very small change
                 icon = "→"
+                color = "trend-neutral"  # Black for sideways arrows
             else:
                 icon = "↑" if change > 0 else "↓"
-            
-            # For GDP, higher growth is generally better (within reason)
-            # But we should also consider absolute levels, not just change
-            # Higher growth is good, but we don't want to show green for change from -3% to -2%
-            if current < 0:
-                # We're in negative GDP growth territory (recession), even improvement is concerning
-                color = "trend-down"
-            else:
-                # In positive growth territory, increasing is good, decreasing is concerning
-                color = "trend-up" if change > 0 else "trend-down"
+                color = "trend-up" if icon == "↑" else "trend-down"  # Green for up, Red for down
                 
             gdp_trend = html.Div([
                 html.Span(icon, className=f"trend-icon {color}"),
@@ -1188,12 +1219,10 @@ def update_indicator_trends(n):
             # First, always show the actual direction of change
             if abs(change) < 0.1:  # Very small change
                 icon = "→"
+                color = "trend-neutral"  # Black for sideways arrows
             else:
                 icon = "↑" if change > 0 else "↓"
-            
-            # For unemployment, lower is generally better
-            # Down is good (decrease), up is bad (increase)
-            color = "trend-up" if change < 0 else "trend-down" if change > 0 else "trend-neutral"
+                color = "trend-up" if icon == "↑" else "trend-down"  # Green for up, Red for down
             
             unemployment_trend = html.Div([
                 html.Span(icon, className=f"trend-icon {color}"),
@@ -1212,19 +1241,10 @@ def update_indicator_trends(n):
             # First, always show the actual direction of change
             if abs(change) < 0.1:  # Virtually no change
                 icon = "→"
+                color = "trend-neutral"  # Black for sideways arrows
             else:
                 icon = "↑" if change > 0 else "↓"
-            
-            # Then determine if this change is good or bad
-            # For inflation:
-            # - Movement toward 2% target is good
-            # - Movement away from 2% target is bad
-            current_diff_from_target = abs(current - 2.0)
-            previous_diff_from_target = abs(previous - 2.0)
-            improving = current_diff_from_target < previous_diff_from_target
-            
-            # Set color based on whether we're moving toward or away from target
-            color = "trend-up" if improving else "trend-down"
+                color = "trend-up" if icon == "↑" else "trend-down"  # Green for up, Red for down
                 
             inflation_trend = html.Div([
                 html.Span(icon, className=f"trend-icon {color}"),
@@ -1243,24 +1263,83 @@ def update_indicator_trends(n):
             # First, always show the actual direction of change
             if abs(change) < 0.05:  # Very small change
                 icon = "→"
+                color = "trend-neutral"  # Black for sideways arrows
             else:
                 icon = "↑" if change > 0 else "↓"
-            
-            # Then determine if this change is good or bad
-            # For interest rates, moving toward 2-3% range is good
-            current_diff_from_target = min(abs(current - 2.0), abs(current - 3.0))
-            previous_diff_from_target = min(abs(previous - 2.0), abs(previous - 3.0))
-            improving = current_diff_from_target < previous_diff_from_target
-            
-            # Set color based on whether we're moving toward or away from target range
-            color = "trend-up" if improving else "trend-down"
+                color = "trend-up" if icon == "↑" else "trend-down"  # Green for up, Red for down
             
             interest_rate_trend = html.Div([
                 html.Span(icon, className=f"trend-icon {color}"),
                 html.Span(f"{abs(change):.2f}%", className="trend-value")
             ], className="trend")
     
-    return gdp_trend, unemployment_trend, inflation_trend, interest_rate_trend
+    # NASDAQ Trend
+    nasdaq_trend = html.Div("No data", className="trend-value")
+    if not nasdaq_data.empty:
+        sorted_nasdaq = nasdaq_data.sort_values('date', ascending=False)
+        if len(sorted_nasdaq) >= 2:
+            current = sorted_nasdaq.iloc[0]['value']
+            previous = sorted_nasdaq.iloc[1]['value']
+            change = ((current - previous) / previous) * 100  # Percent change
+            
+            # First, always show the actual direction of change
+            if abs(change) < 0.1:  # Very small change
+                icon = "→"
+                color = "trend-neutral"  # Black for sideways arrows
+            else:
+                icon = "↑" if change > 0 else "↓"
+                color = "trend-up" if icon == "↑" else "trend-down"  # Green for up, Red for down
+            
+            nasdaq_trend = html.Div([
+                html.Span(icon, className=f"trend-icon {color}"),
+                html.Span(f"{abs(change):.1f}%", className="trend-value")
+            ], className="trend")
+    
+    # Software PPI Trend
+    software_ppi_trend = html.Div("No data", className="trend-value")
+    if not software_ppi_data.empty and 'yoy_pct_change' in software_ppi_data.columns:
+        sorted_sw_ppi = software_ppi_data.sort_values('date', ascending=False)
+        if len(sorted_sw_ppi) >= 2:
+            current = sorted_sw_ppi.iloc[0]['yoy_pct_change']
+            previous = sorted_sw_ppi.iloc[1]['yoy_pct_change']
+            change = current - previous
+            
+            # First, always show the actual direction of change
+            if abs(change) < 0.1:  # Very small change
+                icon = "→"
+                color = "trend-neutral"  # Black for sideways arrows
+            else:
+                icon = "↑" if change > 0 else "↓"
+                color = "trend-up" if icon == "↑" else "trend-down"  # Green for up, Red for down
+            
+            software_ppi_trend = html.Div([
+                html.Span(icon, className=f"trend-icon {color}"),
+                html.Span(f"{abs(change):.1f}%", className="trend-value")
+            ], className="trend")
+    
+    # Data Processing PPI Trend
+    data_ppi_trend = html.Div("No data", className="trend-value")
+    if not data_processing_ppi_data.empty and 'yoy_pct_change' in data_processing_ppi_data.columns:
+        sorted_data_ppi = data_processing_ppi_data.sort_values('date', ascending=False)
+        if len(sorted_data_ppi) >= 2:
+            current = sorted_data_ppi.iloc[0]['yoy_pct_change']
+            previous = sorted_data_ppi.iloc[1]['yoy_pct_change']
+            change = current - previous
+            
+            # First, always show the actual direction of change
+            if abs(change) < 0.1:  # Very small change
+                icon = "→"
+                color = "trend-neutral"  # Black for sideways arrows
+            else:
+                icon = "↑" if change > 0 else "↓"
+                color = "trend-up" if icon == "↑" else "trend-down"  # Green for up, Red for down
+            
+            data_ppi_trend = html.Div([
+                html.Span(icon, className=f"trend-icon {color}"),
+                html.Span(f"{abs(change):.1f}%", className="trend-value")
+            ], className="trend")
+    
+    return gdp_trend, unemployment_trend, inflation_trend, interest_rate_trend, nasdaq_trend, software_ppi_trend, data_ppi_trend
 
 # Update GDP Graph
 @app.callback(
