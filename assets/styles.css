@@ -410,7 +410,7 @@
     border-right: 1px solid #ddd;
     border-top: 1px solid #ddd;
     border-bottom: 1px solid #ddd;
-    text-align: center; /* Center the text in tabs */
+    text-align: center !important; /* Center the text in tabs */
 }
 
 .custom-tab--selected {
@@ -419,7 +419,15 @@
     border-right: 1px solid #ddd;
     border-top: 1px solid #ddd;
     border-bottom: 1px solid transparent;
-    text-align: center; /* Maintain center alignment when selected */
+    text-align: center !important; /* Maintain center alignment when selected */
+}
+
+/* Specific style for Monetary Policy tab */
+.custom-tab[aria-selected="true"] label, 
+.custom-tab[aria-selected="false"] label {
+    width: 100%;
+    text-align: center !important;
+    display: inline-block;
 }
 
 /* Footer styling */

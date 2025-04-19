@@ -2128,7 +2128,7 @@ def apply_custom_weights(n_clicks, gdp, unemployment, cpi, nasdaq,
         'PPI: Software Publishers': software_ppi,
         'Federal Funds Rate': interest_rate,
         'Treasury Yield': treasury_yield,
-        'VIX': vix
+        'VIX Volatility': vix
     }
     
     # Calculate using both custom weights and document data
