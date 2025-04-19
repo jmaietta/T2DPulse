@@ -1740,23 +1740,33 @@ def update_total_weight(gdp, unemployment, cpi, nasdaq, data_ppi, software_ppi, 
      State("data-ppi-weight", "value"),
      State("software-ppi-weight", "value"),
      State("interest-rate-weight", "value"),
-     State("proprietary-data-store", "data")],
+     State("proprietary-data-store", "data"),
+     State("document-data-store", "data")],
     prevent_initial_call=True
 )
 def apply_custom_weights(n_clicks, gdp, unemployment, cpi, nasdaq, 
-                         data_ppi, software_ppi, interest_rate, proprietary_data):
+                         data_ppi, software_ppi, interest_rate, proprietary_data, document_data):
     if n_clicks is None:
         # Initial load, use default weights
-        sentiment_index = calculate_sentiment_index(proprietary_data=proprietary_data)
+        sentiment_index = calculate_sentiment_index(proprietary_data=proprietary_data, document_data=document_data)
         return None, f"{sentiment_index['score']:.1f}" if sentiment_index else "N/A", sentiment_index['category'] if sentiment_index else "N/A"
+    
+    # Get document weight if available (it will be 0 if no document has been processed)
+    document_weight = 0
+    if document_data and isinstance(document_data, dict) and 'weight' in document_data:
+        document_weight = float(document_data['weight'])
+        document_weight = max(0, min(50, document_weight))  # Enforce 0-50% range
+    
+    # Total of economic indicators should be (100 - document_weight)
+    target_economic_total = 100 - document_weight
     
     # Create custom weights dictionary
     total_economic_weight = gdp + unemployment + cpi + nasdaq + data_ppi + software_ppi + interest_rate
     
-    # Check if we need to normalize the weights
-    if total_economic_weight != 100:
-        # Normalize to make economic weights sum to 100
-        scaling_factor = 100 / total_economic_weight
+    # Check if we need to normalize the weights to target_economic_total
+    if abs(total_economic_weight - target_economic_total) > 0.1:
+        # Normalize economic indicators to sum to (100 - document_weight)
+        scaling_factor = target_economic_total / total_economic_weight
         gdp = gdp * scaling_factor
         unemployment = unemployment * scaling_factor
         cpi = cpi * scaling_factor
@@ -1775,8 +1785,12 @@ def apply_custom_weights(n_clicks, gdp, unemployment, cpi, nasdaq,
         'Federal Funds Rate': interest_rate
     }
     
-    # Now the original weights sum to 100 before any additional weights are added
-    sentiment_index = calculate_sentiment_index(custom_weights=custom_weights, proprietary_data=proprietary_data)
+    # Calculate using both custom weights and document data
+    sentiment_index = calculate_sentiment_index(
+        custom_weights=custom_weights, 
+        proprietary_data=proprietary_data,
+        document_data=document_data
+    )
     
     # Return the results
     return custom_weights, f"{sentiment_index['score']:.1f}" if sentiment_index else "N/A", sentiment_index['category'] if sentiment_index else "N/A"
@@ -1820,23 +1834,29 @@ def update_upload_preview(contents, filename):
     [Input("apply-proprietary", "n_clicks")],
     [State("proprietary-weight", "value"),
      State("proprietary-value", "value"),
-     State("custom-weights-store", "data")],
+     State("custom-weights-store", "data"),
+     State("document-data-store", "data")],
     prevent_initial_call=True
 )
-def apply_proprietary_data(n_clicks, weight, value, custom_weights):
+def apply_proprietary_data(n_clicks, weight, value, custom_weights, document_data):
     if n_clicks is None:
         # Initial load, no proprietary data
-        sentiment_index = calculate_sentiment_index(custom_weights=custom_weights)
+        sentiment_index = calculate_sentiment_index(custom_weights=custom_weights, document_data=document_data)
         return None, f"{sentiment_index['score']:.1f}" if sentiment_index else "N/A", sentiment_index['category'] if sentiment_index else "N/A"
     
-    # Create proprietary data dictionary
+    # For backward compatibility, we'll set weight to 0 (removing proprietary data functionality)
+    # Create proprietary data dictionary with zero weight
     proprietary_data = {
-        'weight': weight,
+        'weight': 0,  # Always set to 0 as we're removing this feature
         'value': value
     }
     
-    # Calculate sentiment with proprietary data
-    sentiment_index = calculate_sentiment_index(custom_weights=custom_weights, proprietary_data=proprietary_data)
+    # Calculate sentiment with proprietary data (weight=0) and document data
+    sentiment_index = calculate_sentiment_index(
+        custom_weights=custom_weights, 
+        proprietary_data=proprietary_data,
+        document_data=document_data
+    )
     
     # Return the results
     return proprietary_data, f"{sentiment_index['score']:.1f}" if sentiment_index else "N/A", sentiment_index['category'] if sentiment_index else "N/A"
