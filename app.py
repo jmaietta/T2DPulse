@@ -1309,11 +1309,15 @@ def update_sentiment_components(score, category, custom_weights, document_data):
     components_list = []
     for comp in sentiment_index['components']:
         # Format the value based on the indicator
-        if comp['indicator'] == 'GDP % Change' or comp['indicator'] == 'CPI':
+        if comp['indicator'] == 'Real GDP % Change':
+            value_text = f"{comp['value']:.2f}%"
+        elif comp['indicator'] == 'CPI':
             value_text = f"{comp['value']:.1f}%"
         elif comp['indicator'] == 'Unemployment Rate' or comp['indicator'] == 'Federal Funds Rate':
             value_text = f"{comp['value']:.2f}%"
         elif comp['indicator'] == 'NASDAQ Trend':
+            value_text = f"{comp['value']:.2f}%"
+        elif comp['indicator'] == '10-Year Treasury Yield':
             value_text = f"{comp['value']:.2f}%"
         elif 'PPI' in comp['indicator']:
             value_text = f"{comp['value']:.1f}%"
