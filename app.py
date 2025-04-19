@@ -227,7 +227,7 @@ def calculate_sentiment_index(custom_weights=None, proprietary_data=None, docume
         'PPI: Data Processing Services': 12,
         'PPI: Software Publishers': 12,
         'Federal Funds Rate': 12,
-        '10-Year Treasury Yield': 12
+        'Treasury Yield': 12
     }
     
     # Validate default weights sum to 100
@@ -379,7 +379,7 @@ def calculate_sentiment_index(custom_weights=None, proprietary_data=None, docume
             'indicator': '10-Year Treasury Yield',
             'value': latest_yield['value'],
             'score': yield_score,
-            'weight': weights['10-Year Treasury Yield']
+            'weight': weights['Treasury Yield']
         })
     
     # 9. Add proprietary data if provided
