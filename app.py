@@ -2182,7 +2182,15 @@ def update_document_preview(contents, filename):
      Output("document-preview", "children", allow_duplicate=True),
      Output("sentiment-score", "children", allow_duplicate=True),
      Output("sentiment-category", "children", allow_duplicate=True),
-     Output("total-weight", "children", allow_duplicate=True)],
+     Output("total-weight", "children", allow_duplicate=True),
+     # Add outputs to update the Economic Indicators section
+     Output("gdp-weight", "value", allow_duplicate=True),
+     Output("unemployment-weight", "value", allow_duplicate=True),
+     Output("cpi-weight", "value", allow_duplicate=True),
+     Output("nasdaq-weight", "value", allow_duplicate=True),
+     Output("data-ppi-weight", "value", allow_duplicate=True),
+     Output("software-ppi-weight", "value", allow_duplicate=True),
+     Output("interest-rate-weight", "value", allow_duplicate=True)],
     [Input("apply-document", "n_clicks")],
     [State("document-weight", "value"),
      State("upload-document", "contents"),
@@ -2202,13 +2210,13 @@ def apply_document_analysis(n_clicks, weight, contents, filename, custom_weights
                           gdp, unemployment, cpi, nasdaq, data_ppi, software_ppi, interest_rate):
     # Document weight should not be applied until a document is uploaded and analyzed
     if n_clicks is None:
-        # Return document weight of 0
-        return {'weight': 0, 'value': 0}, dash.no_update, dash.no_update, dash.no_update, dash.no_update
+        # Return document weight of 0 and no updates to other components
+        return {'weight': 0, 'value': 0}, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update
         
     # Document content is required
     if contents is None:
         error_message = html.Div("No document uploaded. Upload a document first.", style={"color": "red"})
-        return None, error_message, dash.no_update, dash.no_update, dash.no_update
+        return None, error_message, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update
     
     try:
         # Decode the file contents
@@ -2303,15 +2311,70 @@ def apply_document_analysis(n_clicks, weight, contents, filename, custom_weights
                 ], className="document-sentiment-container")
             ])
             
-            return document_data, document_display, f"{sentiment_index['score']:.1f}" if sentiment_index else "N/A", sentiment_index['category'] if sentiment_index else "N/A", total_weight_display
+            # Calculate scaled values for economic indicators to maintain 100% total
+            if weight > 0:
+                # Scale the current economic indicators to fit in the remaining weight (100 - document_weight)
+                remaining_weight = 100 - weight
+                scaling_factor = remaining_weight / economic_indicators_total if economic_indicators_total > 0 else 0
+                
+                # Scale each economic indicator
+                new_gdp = round(gdp * scaling_factor)
+                new_unemployment = round(unemployment * scaling_factor)
+                new_cpi = round(cpi * scaling_factor)
+                new_nasdaq = round(nasdaq * scaling_factor)
+                new_data_ppi = round(data_ppi * scaling_factor)
+                new_software_ppi = round(software_ppi * scaling_factor)
+                new_interest_rate = round(interest_rate * scaling_factor)
+                
+                # If rounding causes total to be off by 1, adjust the largest value
+                new_total = new_gdp + new_unemployment + new_cpi + new_nasdaq + new_data_ppi + new_software_ppi + new_interest_rate
+                if new_total != remaining_weight:
+                    # Find the largest value and adjust it
+                    values = [new_gdp, new_unemployment, new_cpi, new_nasdaq, new_data_ppi, new_software_ppi, new_interest_rate]
+                    max_index = values.index(max(values))
+                    if max_index == 0:
+                        new_gdp += (remaining_weight - new_total)
+                    elif max_index == 1:
+                        new_unemployment += (remaining_weight - new_total)
+                    elif max_index == 2:
+                        new_cpi += (remaining_weight - new_total)
+                    elif max_index == 3:
+                        new_nasdaq += (remaining_weight - new_total)
+                    elif max_index == 4:
+                        new_data_ppi += (remaining_weight - new_total)
+                    elif max_index == 5:
+                        new_software_ppi += (remaining_weight - new_total)
+                    elif max_index == 6:
+                        new_interest_rate += (remaining_weight - new_total)
+            else:
+                # No document weight, keep original values
+                new_gdp = gdp
+                new_unemployment = unemployment
+                new_cpi = cpi
+                new_nasdaq = nasdaq
+                new_data_ppi = data_ppi
+                new_software_ppi = software_ppi
+                new_interest_rate = interest_rate
+            
+            # Return document data, analysis display, sentiment score and category, weight display, and updated economic indicator values
+            return (
+                document_data, 
+                document_display, 
+                f"{sentiment_index['score']:.1f}" if sentiment_index else "N/A", 
+                sentiment_index['category'] if sentiment_index else "N/A", 
+                total_weight_display,
+                new_gdp, new_unemployment, new_cpi, new_nasdaq, new_data_ppi, new_software_ppi, new_interest_rate
+            )
         else:
             # Document processing failed
             error_message = html.Div(f"Error: {result['message']}", style={"color": "red"})
-            return None, error_message, dash.no_update, dash.no_update, dash.no_update
+            # Return all dash.no_update for the economic indicators
+            return None, error_message, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update
     except Exception as e:
         print(f"Error applying document analysis: {str(e)}")
         error_message = html.Div(f"Error processing document: {str(e)}", style={"color": "red"})
-        return None, error_message, dash.no_update, dash.no_update, dash.no_update
+        # Return all dash.no_update for the economic indicators
+        return None, error_message, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update
 
 # Add this at the end of the file if running directly
 if __name__ == "__main__":
