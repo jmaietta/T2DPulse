@@ -913,9 +913,11 @@ app.layout = html.Div([
                             html.P(
                                 "Upload documents (PDF, DOCX, TXT) for sentiment analysis. "
                                 "Earnings call transcripts, financial reports, and other text documents "
-                                "will be analyzed for financial sentiment.",
-                                className="upload-text"
+                                "will be analyzed for financial sentiment and incorporated into the index.",
+                                className="tab-description"
                             ),
+                            
+                            # Document upload component
                             dcc.Upload(
                                 id="upload-document",
                                 children=html.Div([
@@ -936,7 +938,7 @@ app.layout = html.Div([
                             ),
                             
                             # Document analysis preview
-                            html.Div(id="document-preview"),
+                            html.Div(id="document-preview", className="document-preview"),
                             
                             # Document data weight
                             html.Div([
@@ -946,12 +948,21 @@ app.layout = html.Div([
                                     min=0,
                                     max=50,
                                     step=1,
-                                    value=0,
-                                    marks={0: "0%", 25: "25%", 50: "50%"},
+                                    value=20,
+                                    marks={
+                                        0: '0%',
+                                        10: '10%',
+                                        20: '20%',
+                                        30: '30%',
+                                        40: '40%',
+                                        50: '50%'
+                                    },
                                     className="weight-slider"
                                 ),
-                            ], className="prop-weight-control"),
+                                html.Div(id="document-weight-display", className="weight-display")
+                            ], className="slider-container"),
                             
+                            # Apply button
                             html.Button("Apply Document Analysis", id="apply-document", className="apply-button"),
                         ], className="upload-container")
                     ], className="custom-tab", selected_className="custom-tab--selected"),
@@ -1104,7 +1115,8 @@ def update_sentiment_gauge(score):
 def update_sentiment_components(score, category):
     sentiment_index = calculate_sentiment_index(
         custom_weights=app.get_asset_url("custom-weights-store") if hasattr(app, "custom-weights-store") else None,
-        proprietary_data=app.get_asset_url("proprietary-data-store") if hasattr(app, "proprietary-data-store") else None
+        proprietary_data=app.get_asset_url("proprietary-data-store") if hasattr(app, "proprietary-data-store") else None,
+        document_data=app.get_asset_url("document-data-store") if hasattr(app, "document-data-store") else None
     )
     
     if not sentiment_index or 'components' not in sentiment_index:
