@@ -2557,12 +2557,12 @@ def apply_document_analysis(n_clicks, weight, contents, filename, custom_weights
     # Document weight should not be applied until a document is uploaded and analyzed
     if n_clicks is None:
         # Return document weight of 0 and no updates to other components
-        return {'weight': 0, 'value': 0}, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update
+        return {'weight': 0, 'value': 0}, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update
         
     # Document content is required
     if contents is None:
         error_message = html.Div("No document uploaded. Upload a document first.", style={"color": "red"})
-        return None, error_message, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update
+        return None, error_message, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update
     
     try:
         # Decode the file contents
@@ -2600,7 +2600,7 @@ def apply_document_analysis(n_clicks, weight, contents, filename, custom_weights
             
             # Calculate appropriate scaling for economic indicators to ensure all weights sum to 100%
             remaining_weight = 100 - weight
-            economic_indicators_total = gdp + unemployment + cpi + nasdaq + data_ppi + software_ppi + interest_rate + treasury_yield
+            economic_indicators_total = gdp + unemployment + cpi + nasdaq + data_ppi + software_ppi + interest_rate + treasury_yield + vix_weight
             
             # Create a message showing both the document weight and scaled economic indicators weight
             message = f"Economic Indicators: {remaining_weight:.1f}%, Document: {weight:.1f}%, Total: 100.0%"
@@ -2665,12 +2665,13 @@ def apply_document_analysis(n_clicks, weight, contents, filename, custom_weights
                 new_software_ppi = round(software_ppi * scaling_factor)
                 new_interest_rate = round(interest_rate * scaling_factor)
                 new_treasury_yield = round(treasury_yield * scaling_factor)
+                new_vix = round(vix_weight * scaling_factor)
                 
                 # If rounding causes total to be off by 1, adjust the largest value
-                new_total = new_gdp + new_unemployment + new_cpi + new_nasdaq + new_data_ppi + new_software_ppi + new_interest_rate + new_treasury_yield
+                new_total = new_gdp + new_unemployment + new_cpi + new_nasdaq + new_data_ppi + new_software_ppi + new_interest_rate + new_treasury_yield + new_vix
                 if new_total != remaining_weight:
                     # Find the largest value and adjust it
-                    values = [new_gdp, new_unemployment, new_cpi, new_nasdaq, new_data_ppi, new_software_ppi, new_interest_rate, new_treasury_yield]
+                    values = [new_gdp, new_unemployment, new_cpi, new_nasdaq, new_data_ppi, new_software_ppi, new_interest_rate, new_treasury_yield, new_vix]
                     max_index = values.index(max(values))
                     if max_index == 0:
                         new_gdp += (remaining_weight - new_total)
@@ -2688,6 +2689,8 @@ def apply_document_analysis(n_clicks, weight, contents, filename, custom_weights
                         new_interest_rate += (remaining_weight - new_total)
                     elif max_index == 7:
                         new_treasury_yield += (remaining_weight - new_total)
+                    elif max_index == 8:
+                        new_vix += (remaining_weight - new_total)
             else:
                 # No document weight, keep original values
                 new_gdp = gdp
@@ -2698,6 +2701,7 @@ def apply_document_analysis(n_clicks, weight, contents, filename, custom_weights
                 new_software_ppi = software_ppi
                 new_interest_rate = interest_rate
                 new_treasury_yield = treasury_yield
+                new_vix = vix_weight
             
             # Return document data, analysis display, sentiment score and category, weight display, and updated economic indicator values
             return (
@@ -2706,18 +2710,18 @@ def apply_document_analysis(n_clicks, weight, contents, filename, custom_weights
                 f"{sentiment_index['score']:.1f}" if sentiment_index else "N/A", 
                 sentiment_index['category'] if sentiment_index else "N/A", 
                 total_weight_display,
-                new_gdp, new_unemployment, new_cpi, new_nasdaq, new_data_ppi, new_software_ppi, new_interest_rate, new_treasury_yield
+                new_gdp, new_unemployment, new_cpi, new_nasdaq, new_data_ppi, new_software_ppi, new_interest_rate, new_treasury_yield, new_vix
             )
         else:
             # Document processing failed
             error_message = html.Div(f"Error: {result['message']}", style={"color": "red"})
             # Return all dash.no_update for the economic indicators
-            return None, error_message, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update
+            return None, error_message, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update
     except Exception as e:
         print(f"Error applying document analysis: {str(e)}")
         error_message = html.Div(f"Error processing document: {str(e)}", style={"color": "red"})
         # Return all dash.no_update for the economic indicators
-        return None, error_message, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update
+        return None, error_message, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update
 
 # Update VIX Graph
 @app.callback(
