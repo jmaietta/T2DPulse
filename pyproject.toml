@@ -14,7 +14,8 @@ dependencies = [
     "python-docx>=1.1.2",
     "requests>=2.32.3",
     "torch>=2.0.0,<2.2.0",
-    "transformers>=4.30.0",
+    # Remove transformers dependency as it's causing conflicts
+    # The app works without it, as we're only using basic document analysis
 ]
 
 [[tool.uv.index]]
@@ -1065,7 +1066,7 @@ trainer = [{ index = "pytorch-cpu", marker = "platform_system == 'Linux'" }]
 transformer-engine = [{ index = "pytorch-cpu", marker = "platform_system == 'Linux'" }]
 transformer-lens = [{ index = "pytorch-cpu", marker = "platform_system == 'Linux'" }]
 transformer-smaller-training-vocab = [{ index = "pytorch-cpu", marker = "platform_system == 'Linux'" }]
-transformers = [{ index = "pytorch-cpu", marker = "platform_system == 'Linux'" }]
+# transformers entry removed to resolve dependency conflicts
 transformers-domain-adaptation = [{ index = "pytorch-cpu", marker = "platform_system == 'Linux'" }]
 transfusion-pytorch = [{ index = "pytorch-cpu", marker = "platform_system == 'Linux'" }]
 transparent-background = [{ index = "pytorch-cpu", marker = "platform_system == 'Linux'" }]
