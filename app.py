@@ -651,9 +651,14 @@ app.layout = html.Div([
     
     # Header
     html.Div([
-        html.H1("Economic Dashboard: Software & Technology Industry", className="dashboard-title"),
-        html.P("Interactive dashboard of economic indicators for software and technology sector", 
-               className="dashboard-subtitle")
+        html.Div([
+            html.Img(src="assets/images/t2d_logo.png", height="60px", className="logo"),
+            html.Div([
+                html.H1("Economic Dashboard: Software & Technology Industry", className="dashboard-title"),
+                html.P("Interactive dashboard of economic indicators for software and technology sector", 
+                      className="dashboard-subtitle")
+            ], className="header-text")
+        ], className="header-container")
     ], className="header"),
     
     # Top Section - Sentiment Index
