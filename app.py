@@ -2125,42 +2125,143 @@ def initialize_sentiment_index(_):
 @app.callback(
     [Output("document-weight-display", "children"),
      Output("document-weight", "disabled"),
-     Output("document-data-store", "data", allow_duplicate=True)],  # Update data store when slider changes
+     Output("document-data-store", "data", allow_duplicate=True),  # Update data store when slider changes
+     Output("total-weight", "children", allow_duplicate=True),  # Update the total weight display
+     # Add outputs to update the Economic Indicators section when document weight changes
+     Output("gdp-weight", "value", allow_duplicate=True),
+     Output("unemployment-weight", "value", allow_duplicate=True),
+     Output("cpi-weight", "value", allow_duplicate=True),
+     Output("nasdaq-weight", "value", allow_duplicate=True),
+     Output("data-ppi-weight", "value", allow_duplicate=True),
+     Output("software-ppi-weight", "value", allow_duplicate=True),
+     Output("interest-rate-weight", "value", allow_duplicate=True)],
     [Input("document-weight", "value"),
-     Input("upload-document", "contents")],
-    [State("document-data-store", "data")],
+     Input("upload-document", "contents"),
+     Input("apply-document", "n_clicks")],  # Add the apply document button as an input
+    [State("document-data-store", "data"),
+     State("gdp-weight", "value"),
+     State("unemployment-weight", "value"),
+     State("cpi-weight", "value"),
+     State("nasdaq-weight", "value"),
+     State("data-ppi-weight", "value"),
+     State("software-ppi-weight", "value"),
+     State("interest-rate-weight", "value")],
     prevent_initial_call=True
 )
-def update_document_weight_display(weight, contents, document_data):
+def update_document_weight_display(weight, contents, n_clicks, document_data,
+                                gdp, unemployment, cpi, nasdaq, data_ppi, software_ppi, interest_rate):
+    ctx = dash.callback_context  # Get the callback context to determine what triggered the callback
+    trigger_id = ctx.triggered[0]['prop_id'].split('.')[0] if ctx.triggered else None
+    
     # Check if document is uploaded and processed
     has_document = contents is not None
     document_processed = document_data is not None and isinstance(document_data, dict) and 'value' in document_data
     
     # If document not uploaded or not processed yet, show guidance message and disable slider
     if not has_document or not document_processed:
-        return html.Div([
-            html.Span("Upload a document and click 'Apply Document Analysis' to enable document weighting", 
-                    className="weight-value",
-                    style={"color": "#888"})
-        ]), True, dash.no_update
+        return (
+            html.Div([
+                html.Span("Upload a document and click 'Apply Document Analysis' to enable document weighting", 
+                        className="weight-value",
+                        style={"color": "#888"})
+            ]), 
+            True, 
+            dash.no_update, 
+            dash.no_update,
+            dash.no_update, 
+            dash.no_update, 
+            dash.no_update, 
+            dash.no_update, 
+            dash.no_update, 
+            dash.no_update, 
+            dash.no_update
+        )
     
     # Document is uploaded and processed, allow weight adjustment
     remaining = 100 - weight
+    economic_indicators_total = gdp + unemployment + cpi + nasdaq + data_ppi + software_ppi + interest_rate
     
-    # If weight was changed by slider, update the document data store
-    if document_data and 'weight' in document_data and document_data['weight'] != weight:
+    # Default return values (no changes)
+    updated_data = dash.no_update
+    total_weight_display = dash.no_update
+    new_gdp = dash.no_update
+    new_unemployment = dash.no_update
+    new_cpi = dash.no_update
+    new_nasdaq = dash.no_update
+    new_data_ppi = dash.no_update
+    new_software_ppi = dash.no_update
+    new_interest_rate = dash.no_update
+    
+    # If weight was changed by slider, update the document data store and economic indicators
+    if trigger_id == "document-weight" and document_data and 'weight' in document_data and document_data['weight'] != weight:
         # Update the document data with new weight
         document_data['weight'] = weight
         updated_data = document_data
-    else:
-        updated_data = dash.no_update
+        print(f"Updated document weight to {weight}%")
+        
+        # Update the total weight display message
+        message = f"Economic Indicators: {economic_indicators_total:.1f}%, Document: {weight:.1f}%, Total: {economic_indicators_total + weight:.1f}%"
+        color = "green" if abs(economic_indicators_total + weight - 100) < 0.1 else "red"
+        total_weight_display = html.Span(message, style={"color": color})
+        
+        # Calculate scaled values for economic indicators to maintain 100% total
+        if weight > 0:
+            # Scale the current economic indicators to fit in the remaining weight (100 - document_weight)
+            remaining_weight = 100 - weight
+            scaling_factor = remaining_weight / economic_indicators_total if economic_indicators_total > 0 else 0
+            
+            # Scale each economic indicator (only if user changed the document weight)
+            new_gdp = round(gdp * scaling_factor)
+            new_unemployment = round(unemployment * scaling_factor)
+            new_cpi = round(cpi * scaling_factor)
+            new_nasdaq = round(nasdaq * scaling_factor)
+            new_data_ppi = round(data_ppi * scaling_factor)
+            new_software_ppi = round(software_ppi * scaling_factor)
+            new_interest_rate = round(interest_rate * scaling_factor)
+            
+            # If rounding causes total to be off by 1, adjust the largest value
+            new_total = new_gdp + new_unemployment + new_cpi + new_nasdaq + new_data_ppi + new_software_ppi + new_interest_rate
+            if new_total != remaining_weight:
+                # Find the largest value and adjust it
+                values = [new_gdp, new_unemployment, new_cpi, new_nasdaq, new_data_ppi, new_software_ppi, new_interest_rate]
+                max_index = values.index(max(values))
+                if max_index == 0:
+                    new_gdp += (remaining_weight - new_total)
+                elif max_index == 1:
+                    new_unemployment += (remaining_weight - new_total)
+                elif max_index == 2:
+                    new_cpi += (remaining_weight - new_total)
+                elif max_index == 3:
+                    new_nasdaq += (remaining_weight - new_total)
+                elif max_index == 4:
+                    new_data_ppi += (remaining_weight - new_total)
+                elif max_index == 5:
+                    new_software_ppi += (remaining_weight - new_total)
+                elif max_index == 6:
+                    new_interest_rate += (remaining_weight - new_total)
     
-    return html.Div([
+    # Create the document weight display
+    doc_weight_display = html.Div([
         html.Span(f"Document Weight: {weight}%", className="weight-value"),
         html.Span(f"Remaining for Economic Indicators: {remaining}%", 
                  className="weight-remaining",
                  style={"marginLeft": "10px", "color": "green" if remaining >= 0 else "red"})
-    ]), False, updated_data
+    ])
+    
+    # Return all necessary outputs
+    return (
+        doc_weight_display, 
+        False, 
+        updated_data, 
+        total_weight_display,
+        new_gdp, 
+        new_unemployment, 
+        new_cpi, 
+        new_nasdaq, 
+        new_data_ppi, 
+        new_software_ppi, 
+        new_interest_rate
+    )
 
 # Process and preview document upload for sentiment analysis
 @app.callback(
