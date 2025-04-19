@@ -669,6 +669,22 @@ if treasury_yield_data.empty or (datetime.now() - pd.to_datetime(treasury_yield_
     else:
         print("Failed to fetch treasury yield data")
 
+# Add VIX volatility index data
+vix_data = load_data_from_csv('vix_data.csv')
+
+# If no existing data or data is old, fetch new data
+if vix_data.empty or (datetime.now() - pd.to_datetime(vix_data['date'].max())).days > 7:
+    # Fetch CBOE Volatility Index (VIXCLS)
+    vix_data = fetch_fred_data('VIXCLS')
+    
+    if not vix_data.empty:
+        # Save data
+        save_data_to_csv(vix_data, 'vix_data.csv')
+        
+        print(f"VIX data updated with {len(vix_data)} observations")
+    else:
+        print("Failed to fetch VIX data")
+
 # Calculate initial sentiment index
 sentiment_index = calculate_sentiment_index()
 
@@ -883,6 +899,18 @@ app.layout = html.Div([
                     ], className="indicator-text"),
                     html.Div(id="treasury-yield-trend", className="indicator-trend")
                 ], className="indicator"),
+                
+                # CBOE Volatility Index (VIX)
+                html.Div([
+                    html.Div([
+                        html.H4("VIX Volatility Index"),
+                        html.P(id="vix-value", 
+                              children=f"{vix_data.sort_values('date', ascending=False).iloc[0]['value']:.2f}" 
+                              if not vix_data.empty else "N/A",
+                              className="indicator-value")
+                    ], className="indicator-text"),
+                    html.Div(id="vix-trend", className="indicator-trend")
+                ], className="indicator"),
             ], className="card indicators-card"),
             
             # Custom Weight Adjustment
@@ -987,7 +1015,20 @@ app.layout = html.Div([
                             min=0,
                             max=30,
                             step=1,
-                            value=12,
+                            value=8,
+                            marks={0: "0%", 15: "15%", 30: "30%"},
+                            className="weight-slider"
+                        ),
+                    ], className="weight-control"),
+                    
+                    html.Div([
+                        html.Label("VIX Volatility Index"),
+                        dcc.Slider(
+                            id="vix-weight",
+                            min=0,
+                            max=30,
+                            step=1,
+                            value=8,
                             marks={0: "0%", 15: "15%", 30: "30%"},
                             className="weight-slider"
                         ),
@@ -1127,6 +1168,14 @@ app.layout = html.Div([
                         
                         html.H3("10-Year Treasury Yield", className="graph-title"),
                         dcc.Graph(id="treasury-yield-graph")
+                    ], className="graph-container")
+                ], className="custom-tab", selected_className="custom-tab--selected"),
+                
+                # Volatility Tab
+                dcc.Tab(label="Market Volatility", children=[
+                    html.Div([
+                        html.H3("CBOE Volatility Index (VIX)", className="graph-title"),
+                        dcc.Graph(id="vix-graph")
                     ], className="graph-container")
                 ], className="custom-tab", selected_className="custom-tab--selected"),
             ], className="custom-tabs")
@@ -1277,7 +1326,8 @@ def update_sentiment_components(score, category, custom_weights, document_data):
      Output("nasdaq-trend", "children"),
      Output("software-ppi-trend", "children"),
      Output("data-ppi-trend", "children"),
-     Output("treasury-yield-trend", "children")],
+     Output("treasury-yield-trend", "children"),
+     Output("vix-trend", "children")],
     [Input("interval-component", "n_intervals")]
 )
 def update_indicator_trends(n):
@@ -1457,7 +1507,31 @@ def update_indicator_trends(n):
                 html.Span(f"{abs(change):.2f}%", className="trend-value")
             ], className="trend")
     
-    return gdp_trend, unemployment_trend, inflation_trend, interest_rate_trend, nasdaq_trend, software_ppi_trend, data_ppi_trend, treasury_yield_trend
+    # VIX Trend
+    vix_trend = html.Div("No data", className="trend-value")
+    if not vix_data.empty:
+        sorted_vix = vix_data.sort_values('date', ascending=False)
+        if len(sorted_vix) >= 2:
+            current = sorted_vix.iloc[0]['value']
+            previous = sorted_vix.iloc[1]['value']
+            change = current - previous
+            
+            # For VIX, increasing is typically negative for market sentiment (shows increased fear)
+            # So we reverse the color coding compared to other indicators
+            if abs(change) < 0.5:  # Very small change
+                icon = "→"
+                color = "trend-neutral"  # Black for sideways arrows
+            else:
+                icon = "↑" if change > 0 else "↓"
+                # For VIX, up is considered negative, down is positive
+                color = "trend-down" if icon == "↑" else "trend-up"  
+            
+            vix_trend = html.Div([
+                html.Span(icon, className=f"trend-icon {color}"),
+                html.Span(f"{abs(change):.2f}", className="trend-value")
+            ], className="trend")
+    
+    return gdp_trend, unemployment_trend, inflation_trend, interest_rate_trend, nasdaq_trend, software_ppi_trend, data_ppi_trend, treasury_yield_trend, vix_trend
 
 # Update GDP Graph
 @app.callback(
