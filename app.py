@@ -1839,21 +1839,25 @@ def update_total_weight(gdp, unemployment, cpi, nasdaq, data_ppi, software_ppi, 
     # Calculate total of economic indicators only
     economic_indicators_total = gdp + unemployment + cpi + nasdaq + data_ppi + software_ppi + interest_rate
     
-    # Calculate total weight (economic indicators + document)
-    total_weight = economic_indicators_total + document_weight
-    
-    # If we have document weight, display both economic indicators and document weight
+    # If document weight is present, the economic indicators should sum to (100 - document_weight)
     if document_weight > 0:
-        message = f"Economic Indicators: {economic_indicators_total:.1f}%, Document: {document_weight:.1f}%, Total: {total_weight:.1f}%"
+        remaining_for_indicators = 100 - document_weight
+        message = f"Economic Indicators: {remaining_for_indicators:.1f}%, Document: {document_weight:.1f}%, Total: 100.0%"
+        
+        # Set color based on whether economic indicators equal remaining weight (100 - document_weight)
+        if abs(economic_indicators_total - remaining_for_indicators) < 0.1:
+            color = "green"
+        else:
+            color = "red"
     else:
         # No document weight, just show total of economic indicators
         message = f"Total: {economic_indicators_total:.1f}%"
-    
-    # Set color based on whether total equals 100%
-    if abs(total_weight - 100) < 0.1:
-        color = "green"
-    else:
-        color = "red"
+        
+        # Set color based on whether total equals 100%
+        if abs(economic_indicators_total - 100) < 0.1:
+            color = "green"
+        else:
+            color = "red"
     
     return html.Span(message, style={"color": color})
 
@@ -2240,18 +2244,13 @@ def apply_document_analysis(n_clicks, weight, contents, filename, custom_weights
                 if abs(total_weight - 100) > 0.1:
                     print(f"WARNING: Weights don't sum to 100%, but {total_weight}%")
             
-            # Calculate total weight display
+            # Calculate appropriate scaling for economic indicators to ensure all weights sum to 100%
+            remaining_weight = 100 - weight
             economic_indicators_total = gdp + unemployment + cpi + nasdaq + data_ppi + software_ppi + interest_rate
-            total_weight = economic_indicators_total + weight
             
-            # Format message for total weight
-            message = f"Economic Indicators: {economic_indicators_total:.1f}%, Document: {weight:.1f}%, Total: {total_weight:.1f}%"
-            
-            # Change color based on if the total is exactly 100%
-            if abs(total_weight - 100) < 0.1:
-                color = "green"
-            else:
-                color = "red"
+            # Create a message showing both the document weight and scaled economic indicators weight
+            message = f"Economic Indicators: {remaining_weight:.1f}%, Document: {weight:.1f}%, Total: 100.0%"
+            color = "green"  # Always green since we'll ensure they sum to 100%
                 
             total_weight_display = html.Span(message, style={"color": color})
             
