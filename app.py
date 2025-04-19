@@ -459,6 +459,7 @@ gdp_data = load_data_from_csv('gdp_data.csv')
 unemployment_data = load_data_from_csv('unemployment_data.csv')
 inflation_data = load_data_from_csv('inflation_data.csv')
 interest_rate_data = load_data_from_csv('interest_rate_data.csv')
+treasury_yield_data = load_data_from_csv('treasury_yield_data.csv')
 
 # Add NASDAQ Composite data from FRED (NASDAQCOM)
 nasdaq_data = load_data_from_csv('nasdaq_data.csv')
@@ -640,6 +641,19 @@ if interest_rate_data.empty or (datetime.now() - pd.to_datetime(interest_rate_da
         print(f"Interest rate data updated with {len(interest_rate_data)} observations")
     else:
         print("Failed to fetch interest rate data")
+
+# Fetch 10-Year Treasury yield data if needed
+if treasury_yield_data.empty or (datetime.now() - pd.to_datetime(treasury_yield_data['date'].max())).days > 7:
+    # Fetch 10-Year Treasury Constant Maturity Rate (DGS10)
+    treasury_yield_data = fetch_fred_data('DGS10')
+    
+    if not treasury_yield_data.empty:
+        # Save data
+        save_data_to_csv(treasury_yield_data, 'treasury_yield_data.csv')
+        
+        print(f"Treasury yield data updated with {len(treasury_yield_data)} observations")
+    else:
+        print("Failed to fetch treasury yield data")
 
 # Calculate initial sentiment index
 sentiment_index = calculate_sentiment_index()
@@ -843,6 +857,18 @@ app.layout = html.Div([
                     ], className="indicator-text"),
                     html.Div(id="data-ppi-trend", className="indicator-trend")
                 ], className="indicator"),
+                
+                # 10-Year Treasury Yield
+                html.Div([
+                    html.Div([
+                        html.H4("10-Year Treasury Yield"),
+                        html.P(id="treasury-yield-value", 
+                              children=f"{treasury_yield_data.sort_values('date', ascending=False).iloc[0]['value']:.2f}%" 
+                              if not treasury_yield_data.empty else "N/A",
+                              className="indicator-value")
+                    ], className="indicator-text"),
+                    html.Div(id="treasury-yield-trend", className="indicator-trend")
+                ], className="indicator"),
             ], className="card indicators-card"),
             
             # Custom Weight Adjustment
@@ -935,6 +961,19 @@ app.layout = html.Div([
                             max=30,
                             step=1,
                             value=15,
+                            marks={0: "0%", 15: "15%", 30: "30%"},
+                            className="weight-slider"
+                        ),
+                    ], className="weight-control"),
+                    
+                    html.Div([
+                        html.Label("10-Year Treasury Yield"),
+                        dcc.Slider(
+                            id="treasury-yield-weight",
+                            min=0,
+                            max=30,
+                            step=1,
+                            value=0,
                             marks={0: "0%", 15: "15%", 30: "30%"},
                             className="weight-slider"
                         ),
@@ -1070,7 +1109,10 @@ app.layout = html.Div([
                 dcc.Tab(label="Monetary Policy", children=[
                     html.Div([
                         html.H3("Federal Funds Rate", className="graph-title"),
-                        dcc.Graph(id="interest-rate-graph")
+                        dcc.Graph(id="interest-rate-graph"),
+                        
+                        html.H3("10-Year Treasury Yield", className="graph-title"),
+                        dcc.Graph(id="treasury-yield-graph")
                     ], className="graph-container")
                 ], className="custom-tab", selected_className="custom-tab--selected"),
             ], className="custom-tabs")
@@ -1220,7 +1262,8 @@ def update_sentiment_components(score, category, custom_weights, document_data):
      Output("interest-rate-trend", "children"),
      Output("nasdaq-trend", "children"),
      Output("software-ppi-trend", "children"),
-     Output("data-ppi-trend", "children")],
+     Output("data-ppi-trend", "children"),
+     Output("treasury-yield-trend", "children")],
     [Input("interval-component", "n_intervals")]
 )
 def update_indicator_trends(n):
@@ -1378,7 +1421,29 @@ def update_indicator_trends(n):
                 html.Span(f"{abs(change):.1f}%", className="trend-value")
             ], className="trend")
     
-    return gdp_trend, unemployment_trend, inflation_trend, interest_rate_trend, nasdaq_trend, software_ppi_trend, data_ppi_trend
+    # Treasury Yield Trend
+    treasury_yield_trend = html.Div("No data", className="trend-value")
+    if not treasury_yield_data.empty:
+        sorted_yield = treasury_yield_data.sort_values('date', ascending=False)
+        if len(sorted_yield) >= 2:
+            current = sorted_yield.iloc[0]['value']
+            previous = sorted_yield.iloc[1]['value']
+            change = current - previous
+            
+            # First, always show the actual direction of change
+            if abs(change) < 0.05:  # Very small change
+                icon = "→"
+                color = "trend-neutral"  # Black for sideways arrows
+            else:
+                icon = "↑" if change > 0 else "↓"
+                color = "trend-up" if icon == "↑" else "trend-down"  # Green for up, Red for down
+            
+            treasury_yield_trend = html.Div([
+                html.Span(icon, className=f"trend-icon {color}"),
+                html.Span(f"{abs(change):.2f}%", className="trend-value")
+            ], className="trend")
+    
+    return gdp_trend, unemployment_trend, inflation_trend, interest_rate_trend, nasdaq_trend, software_ppi_trend, data_ppi_trend, treasury_yield_trend
 
 # Update GDP Graph
 @app.callback(
