@@ -681,9 +681,56 @@ app.layout = html.Div([
                     html.H2(id="sentiment-score", 
                            children=f"{sentiment_index['score']:.1f}" if sentiment_index else "N/A", 
                            className="sentiment-score"),
-                    html.H4(id="sentiment-category", 
-                           children=sentiment_index['category'] if sentiment_index else "N/A", 
-                           className="sentiment-category")
+                    html.Div([
+                        html.H4(id="sentiment-category", 
+                               children=sentiment_index['category'] if sentiment_index else "N/A", 
+                               className="sentiment-category", 
+                               style={"display": "inline-block", "marginRight": "5px"}),
+                        html.Span(
+                            "ⓘ", 
+                            id="sentiment-info-icon",
+                            className="info-icon",
+                            style={
+                                "cursor": "pointer", 
+                                "fontSize": "16px", 
+                                "display": "inline-block",
+                                "color": "#2c3e50"
+                            }
+                        ),
+                        html.Div(
+                            id="sentiment-info-tooltip",
+                            style={"display": "none", "position": "absolute", "zIndex": "1000", 
+                                  "backgroundColor": "white", "padding": "10px", "borderRadius": "5px", 
+                                  "boxShadow": "0px 0px 10px rgba(0,0,0,0.1)", "maxWidth": "400px", 
+                                  "top": "100%", "left": "50%", "transform": "translateX(-50%)",
+                                  "marginTop": "10px"},
+                            children=[
+                                html.H5("Sentiment Index Categories", style={"marginBottom": "10px"}),
+                                html.Div([
+                                    html.Div([
+                                        html.Span("Boom (80-100): ", style={"fontWeight": "bold", "color": "#28a745"}),
+                                        "Strong growth across indicators; economic expansion accelerating"
+                                    ], style={"marginBottom": "5px"}),
+                                    html.Div([
+                                        html.Span("Expansion (60-79): ", style={"fontWeight": "bold", "color": "#5cb85c"}),
+                                        "Solid growth with positive momentum; healthy economic conditions"
+                                    ], style={"marginBottom": "5px"}),
+                                    html.Div([
+                                        html.Span("Moderate Growth (40-59): ", style={"fontWeight": "bold", "color": "#f0ad4e"}),
+                                        "Steady but modest growth; economy performing adequately"
+                                    ], style={"marginBottom": "5px"}),
+                                    html.Div([
+                                        html.Span("Slowdown (20-39): ", style={"fontWeight": "bold", "color": "#d9534f"}),
+                                        "Growth decelerating; potential economic challenges ahead"
+                                    ], style={"marginBottom": "5px"}),
+                                    html.Div([
+                                        html.Span("Contraction (0-19): ", style={"fontWeight": "bold", "color": "#d9534f"}),
+                                        "Economic indicators showing decline; recession risks elevated"
+                                    ])
+                                ])
+                            ]
+                        )
+                    ], style={"display": "flex", "alignItems": "center", "justifyContent": "center", "position": "relative"})
                 ], className="sentiment-display")
             ], className="sentiment-banner-left"),
             

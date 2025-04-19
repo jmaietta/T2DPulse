@@ -257,6 +257,15 @@
     color: #000000; /* Black for sideways arrows */
 }
 
+.info-icon {
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.info-icon:hover {
+    color: #3498db;
+}
+
 .trend-value {
     color: #7f8c8d;
     font-size: 14px;
