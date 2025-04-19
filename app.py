@@ -220,7 +220,7 @@ def calculate_sentiment_index(custom_weights=None, proprietary_data=None, docume
     """
     # Default weights (equal percentages that sum to 100%)
     default_weights = {
-        'GDP % Change': 12,
+        'Real GDP % Change': 12,
         'Unemployment Rate': 12,
         'CPI': 12,
         'NASDAQ Trend': 12,
@@ -292,10 +292,10 @@ def calculate_sentiment_index(custom_weights=None, proprietary_data=None, docume
         latest_gdp = gdp_data.sort_values('date', ascending=False).iloc[0]
         gdp_score = min(max(latest_gdp['yoy_growth'] * 10, 0), 100)  # Scale: 0 to 100
         sentiment_components.append({
-            'indicator': 'GDP % Change',
+            'indicator': 'Real GDP % Change',
             'value': latest_gdp['yoy_growth'],
             'score': gdp_score,
-            'weight': weights['GDP % Change']
+            'weight': weights['Real GDP % Change']
         })
     
     # 2. Unemployment - lower is better, normalize around natural rate of ~4%
@@ -2155,7 +2155,7 @@ def apply_custom_weights(n_clicks, gdp, unemployment, cpi, nasdaq,
         vix = vix * scaling_factor
     
     custom_weights = {
-        'GDP % Change': gdp,
+        'Real GDP % Change': gdp,
         'Unemployment Rate': unemployment,
         'CPI': cpi,
         'NASDAQ Trend': nasdaq,
