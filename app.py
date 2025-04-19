@@ -219,13 +219,14 @@ def calculate_sentiment_index(custom_weights=None, proprietary_data=None, docume
     """
     # Default weights (equal percentages that sum to 100%)
     default_weights = {
-        'GDP % Change': 14,
-        'Unemployment Rate': 14,
-        'CPI': 14,
-        'NASDAQ Trend': 14,
-        'PPI: Data Processing Services': 14,
-        'PPI: Software Publishers': 15,
-        'Federal Funds Rate': 15
+        'GDP % Change': 13,
+        'Unemployment Rate': 13,
+        'CPI': 13,
+        'NASDAQ Trend': 13,
+        'PPI: Data Processing Services': 12,
+        'PPI: Software Publishers': 12,
+        'Federal Funds Rate': 12,
+        '10-Year Treasury Yield': 12
     }
     
     # Validate default weights sum to 100
@@ -368,7 +369,19 @@ def calculate_sentiment_index(custom_weights=None, proprietary_data=None, docume
             'weight': weights['Federal Funds Rate']
         })
     
-    # 8. Add proprietary data if provided
+    # 8. Treasury Yield - moderate yields ideal (around 2-4%)
+    if not treasury_yield_data.empty:
+        latest_yield = treasury_yield_data.sort_values('date', ascending=False).iloc[0]
+        # Optimal range is approximately 2-4% for 10-year treasuries
+        yield_score = min(max(100 - abs(latest_yield['value'] - 3.0) * 10, 0), 100)  # Scale: 0 to 100
+        sentiment_components.append({
+            'indicator': '10-Year Treasury Yield',
+            'value': latest_yield['value'],
+            'score': yield_score,
+            'weight': weights['10-Year Treasury Yield']
+        })
+    
+    # 9. Add proprietary data if provided
     if proprietary_data and 'value' in proprietary_data and 'weight' in proprietary_data:
         # Value should be a score from 0-100
         prop_value = proprietary_data['value']
