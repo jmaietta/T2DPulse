@@ -228,23 +228,35 @@ def calculate_sentiment_index(custom_weights=None, proprietary_data=None, docume
         'Federal Funds Rate': 15
     }
     
+    # Validate default weights sum to 100
+    assert abs(sum(default_weights.values()) - 100) < 0.1, "Default weights must sum to 100%"
+    
     # Use custom weights if provided, otherwise use defaults
     weights = custom_weights if custom_weights else default_weights.copy()
     
-    # Collect the extra weights (proprietary data and document sentiment)
-    extra_weights = 0
+    # If this is our initial calculation with no document, ensure economic indicators sum to 100
+    if not document_data:
+        economic_indicators_sum = sum(weights.values())
+        if abs(economic_indicators_sum - 100) > 0.1:
+            print(f"Adjusting economic indicators from {economic_indicators_sum}% to 100%")
+            scaling_factor = 100 / economic_indicators_sum
+            for key in weights:
+                weights[key] = weights[key] * scaling_factor
     
-    # Get document weight if available
+    # Get document weight if available (limit to 0-50%)
     document_weight = 0
     if document_data and 'value' in document_data and 'weight' in document_data:
         document_weight = float(document_data['weight'])
-        extra_weights += document_weight
+        document_weight = max(0, min(50, document_weight))  # Enforce 0-50% range
         
-    # Get proprietary data weight if available
+    # Get proprietary data weight if available (for legacy support)
     proprietary_weight = 0
     if proprietary_data and 'value' in proprietary_data and 'weight' in proprietary_data:
         proprietary_weight = float(proprietary_data['weight'])
-        extra_weights += proprietary_weight
+        proprietary_weight = 0  # Set to 0 since we're removing this feature
+        
+    # The document weight plus all economic indicators must sum to 100%
+    extra_weights = document_weight + proprietary_weight
     
     # Normalize weights to ensure they sum to 100%
     if extra_weights > 0:
@@ -1955,17 +1967,33 @@ def initialize_sentiment_index(_):
 
 # Document weight display update
 @app.callback(
-    Output("document-weight-display", "children"),
-    [Input("document-weight", "value")]
+    [Output("document-weight-display", "children"),
+     Output("document-weight", "disabled")],
+    [Input("document-weight", "value"),
+     Input("upload-document", "contents"),
+     Input("document-data-store", "data")]
 )
-def update_document_weight_display(weight):
+def update_document_weight_display(weight, contents, document_data):
+    # Check if document is uploaded and processed
+    has_document = contents is not None
+    document_processed = document_data is not None and isinstance(document_data, dict) and 'value' in document_data
+    
+    # If document not uploaded or not processed yet, show guidance message and disable slider
+    if not has_document or not document_processed:
+        return html.Div([
+            html.Span("Upload a document and click 'Apply Document Analysis' to enable document weighting", 
+                    className="weight-value",
+                    style={"color": "#888"})
+        ]), True
+    
+    # Document is uploaded and processed, allow weight adjustment
     remaining = 100 - weight
     return html.Div([
         html.Span(f"Document Weight: {weight}%", className="weight-value"),
         html.Span(f"Remaining for Economic Indicators: {remaining}%", 
                  className="weight-remaining",
                  style={"marginLeft": "10px", "color": "green" if remaining >= 0 else "red"})
-    ])
+    ]), False
 
 # Process and preview document upload for sentiment analysis
 @app.callback(
@@ -2077,8 +2105,14 @@ def update_document_preview(contents, filename):
 )
 def apply_document_analysis(n_clicks, weight, contents, filename, custom_weights, proprietary_data,
                           gdp, unemployment, cpi, nasdaq, data_ppi, software_ppi, interest_rate):
-    if n_clicks is None or contents is None:
-        return None, dash.no_update, dash.no_update, dash.no_update
+    # Document weight should not be applied until a document is uploaded and analyzed
+    if n_clicks is None:
+        # Return document weight of 0
+        return {'weight': 0, 'value': 0}, dash.no_update, dash.no_update, dash.no_update
+        
+    # Document content is required
+    if contents is None:
+        return None, dash.no_update, dash.no_update, html.Span("No document uploaded. Upload a document first.", style={"color": "red"})
     
     try:
         # Decode the file contents
