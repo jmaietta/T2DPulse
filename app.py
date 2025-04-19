@@ -951,7 +951,7 @@ app.layout = html.Div([
                             min=0,
                             max=30,
                             step=1,
-                            value=14,
+                            value=11,
                             marks={0: "0%", 15: "15%", 30: "30%"},
                             className="weight-slider"
                         ),
@@ -964,7 +964,7 @@ app.layout = html.Div([
                             min=0,
                             max=30,
                             step=1,
-                            value=14,
+                            value=11,
                             marks={0: "0%", 15: "15%", 30: "30%"},
                             className="weight-slider"
                         ),
