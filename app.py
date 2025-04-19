@@ -2030,17 +2030,18 @@ def update_treasury_yield_graph(n):
      Input("data-ppi-weight", "value"),
      Input("software-ppi-weight", "value"),
      Input("interest-rate-weight", "value"),
-     Input("treasury-yield-weight", "value")],
+     Input("treasury-yield-weight", "value"),
+     Input("vix-weight", "value")],
     [State("document-data-store", "data")]
 )
-def update_total_weight(gdp, unemployment, cpi, nasdaq, data_ppi, software_ppi, interest_rate, treasury_yield, document_data_store):
+def update_total_weight(gdp, unemployment, cpi, nasdaq, data_ppi, software_ppi, interest_rate, treasury_yield, vix, document_data_store):
     # Get document weight if it exists
     document_weight = 0
     if document_data_store and isinstance(document_data_store, dict) and 'weight' in document_data_store:
         document_weight = float(document_data_store['weight'])
     
     # Calculate total of economic indicators only
-    economic_indicators_total = gdp + unemployment + cpi + nasdaq + data_ppi + software_ppi + interest_rate + treasury_yield
+    economic_indicators_total = gdp + unemployment + cpi + nasdaq + data_ppi + software_ppi + interest_rate + treasury_yield + vix
     
     # If document weight is present, the economic indicators should sum to (100 - document_weight)
     if document_weight > 0:
@@ -2080,12 +2081,13 @@ def update_total_weight(gdp, unemployment, cpi, nasdaq, data_ppi, software_ppi, 
      State("software-ppi-weight", "value"),
      State("interest-rate-weight", "value"),
      State("treasury-yield-weight", "value"),
+     State("vix-weight", "value"),
      State("proprietary-data-store", "data"),
      State("document-data-store", "data")],
     prevent_initial_call=True
 )
 def apply_custom_weights(n_clicks, gdp, unemployment, cpi, nasdaq, 
-                         data_ppi, software_ppi, interest_rate, treasury_yield, proprietary_data, document_data):
+                         data_ppi, software_ppi, interest_rate, treasury_yield, vix, proprietary_data, document_data):
     if n_clicks is None:
         # Initial load, use default weights
         sentiment_index = calculate_sentiment_index(proprietary_data=proprietary_data, document_data=document_data)
@@ -2098,7 +2100,7 @@ def apply_custom_weights(n_clicks, gdp, unemployment, cpi, nasdaq,
         document_weight = max(0, min(50, document_weight))  # Enforce 0-50% range
     
     # Create custom weights dictionary
-    total_economic_weight = gdp + unemployment + cpi + nasdaq + data_ppi + software_ppi + interest_rate + treasury_yield
+    total_economic_weight = gdp + unemployment + cpi + nasdaq + data_ppi + software_ppi + interest_rate + treasury_yield + vix
     
     # If total economic weight plus document weight isn't 100%, adjust the economic indicators
     if abs(total_economic_weight + document_weight - 100) > 0.1:
@@ -2115,6 +2117,7 @@ def apply_custom_weights(n_clicks, gdp, unemployment, cpi, nasdaq,
         software_ppi = software_ppi * scaling_factor
         interest_rate = interest_rate * scaling_factor
         treasury_yield = treasury_yield * scaling_factor
+        vix = vix * scaling_factor
     
     custom_weights = {
         'GDP % Change': gdp,
@@ -2124,7 +2127,8 @@ def apply_custom_weights(n_clicks, gdp, unemployment, cpi, nasdaq,
         'PPI: Data Processing Services': data_ppi,
         'PPI: Software Publishers': software_ppi,
         'Federal Funds Rate': interest_rate,
-        'Treasury Yield': treasury_yield
+        'Treasury Yield': treasury_yield,
+        'VIX': vix
     }
     
     # Calculate using both custom weights and document data
