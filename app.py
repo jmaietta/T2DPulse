@@ -2176,86 +2176,27 @@ def update_document_preview(contents, filename):
     if contents is None:
         return html.Div("No document uploaded")
     
-    try:
-        # Decode the file contents
-        content_type, content_string = contents.split(',')
-        decoded = base64.b64decode(content_string)
-        
-        # Process the document
-        result = document_analysis.process_document(decoded, filename)
-        
-        if result["status"] == "success":
-            # Format the sentiment scores for display
-            sentiment_label = result["full_text_sentiment"]["label"].capitalize()
-            sentiment_score = result["full_text_sentiment"]["score"]
-            sentiment_color = "green" if sentiment_score >= 60 else "orange" if sentiment_score >= 40 else "red"
-            
-            # Create sentiment score display
-            sentiment_display = html.Div([
-                html.H4("Document Sentiment Analysis", className="sentiment-analysis-title"),
-                
-                # Overall sentiment score
-                html.Div([
-                    html.P("Overall Sentiment:", className="sentiment-label"),
-                    html.P(f"{sentiment_label} ({sentiment_score:.1f}/100)", 
-                          className="sentiment-value",
-                          style={"color": sentiment_color, "fontWeight": "bold"})
-                ], className="sentiment-row"),
-                
-                # Text details
-                html.Div([
-                    html.P("Document Length:", className="sentiment-label"),
-                    html.P(f"{result['text_length']} characters", className="sentiment-value")
-                ], className="sentiment-row"),
-                
-                # Q&A section if found
-                html.Div([
-                    html.P("Q&A Section:", className="sentiment-label"),
-                    html.P(
-                        f"Found ({result['qa_section_length']} characters)" if result["qa_section_found"] 
-                        else "Not found",
-                        className="sentiment-value"
-                    )
-                ], className="sentiment-row"),
-                
-                # Q&A specific sentiment if available
-                html.Div([
-                    html.P("Q&A Sentiment:", className="sentiment-label"),
-                    html.P(
-                        f"{result['qa_sentiment']['label'].capitalize()} ({result['qa_sentiment']['score']:.1f}/100)" 
-                        if result["qa_sentiment"] else "N/A",
-                        className="sentiment-value",
-                        style={"color": sentiment_color if result["qa_sentiment"] else "inherit"}
-                    )
-                ], className="sentiment-row") if result["qa_sentiment"] else None,
-                
-                # Date processed
-                html.Div([
-                    html.P("Processed:", className="sentiment-label"),
-                    html.P(result["processed_date"], className="sentiment-value")
-                ], className="sentiment-row"),
-                
-                # Selected for sentiment index indicator
-                html.Div([
-                    html.P("Document Score:", className="sentiment-score-label"),
-                    html.P(f"{result['overall_score']:.1f}/100", 
-                          className="sentiment-score-value",
-                          style={"fontSize": "24px", "fontWeight": "bold", "color": sentiment_color})
-                ], className="sentiment-score")
-            ], className="document-sentiment-container")
-            
-            return html.Div([
-                html.P(f"File: {filename}", className="uploaded-filename"),
-                sentiment_display
-            ])
-        else:
-            return html.Div(f"Error: {result['message']}")
-    except Exception as e:
-        return html.Div(f"Error processing document: {str(e)}")
+    # Show the uploaded file without processing it
+    return html.Div([
+        html.P(f"File uploaded: {filename}", className="uploaded-filename"),
+        html.P("Click 'Apply Document Analysis' to analyze this document and use it in the sentiment index calculation.", 
+              style={"fontStyle": "italic", "color": "#666"}),
+        html.Div(className="document-preview-placeholder", style={
+            "border": "1px dashed #ccc",
+            "padding": "20px",
+            "borderRadius": "5px",
+            "textAlign": "center",
+            "marginTop": "10px"
+        }, children=[
+            html.I(className="fas fa-file-alt", style={"fontSize": "32px", "color": "#666"}),
+            html.P("Document ready for analysis", style={"marginTop": "10px"})
+        ])
+    ])
 
 # Apply document sentiment analysis to index
 @app.callback(
     [Output("document-data-store", "data"),
+     Output("document-preview", "children", allow_duplicate=True),
      Output("sentiment-score", "children", allow_duplicate=True),
      Output("sentiment-category", "children", allow_duplicate=True),
      Output("total-weight", "children", allow_duplicate=True)],
@@ -2279,11 +2220,12 @@ def apply_document_analysis(n_clicks, weight, contents, filename, custom_weights
     # Document weight should not be applied until a document is uploaded and analyzed
     if n_clicks is None:
         # Return document weight of 0
-        return {'weight': 0, 'value': 0}, dash.no_update, dash.no_update, dash.no_update
+        return {'weight': 0, 'value': 0}, dash.no_update, dash.no_update, dash.no_update, dash.no_update
         
     # Document content is required
     if contents is None:
-        return None, dash.no_update, dash.no_update, html.Span("No document uploaded. Upload a document first.", style={"color": "red"})
+        error_message = html.Div("No document uploaded. Upload a document first.", style={"color": "red"})
+        return None, error_message, dash.no_update, dash.no_update, dash.no_update
     
     try:
         # Decode the file contents
@@ -2333,13 +2275,64 @@ def apply_document_analysis(n_clicks, weight, contents, filename, custom_weights
                 
             total_weight_display = html.Span(message, style={"color": color})
             
-            return document_data, f"{sentiment_index['score']:.1f}" if sentiment_index else "N/A", sentiment_index['category'] if sentiment_index else "N/A", total_weight_display
+            # Create document analysis preview display
+            sentiment_label = result["full_text_sentiment"]["label"].capitalize()
+            sentiment_score = result["full_text_sentiment"]["score"]
+            sentiment_color = "green" if sentiment_score >= 60 else "orange" if sentiment_score >= 40 else "red"
+            
+            # Create sentiment score display
+            document_display = html.Div([
+                html.P(f"File: {filename}", className="uploaded-filename"),
+                html.Div([
+                    html.H4("Document Sentiment Analysis", className="sentiment-analysis-title"),
+                    
+                    # Overall sentiment score
+                    html.Div([
+                        html.P("Overall Sentiment:", className="sentiment-label"),
+                        html.P(f"{sentiment_label} ({sentiment_score:.1f}/100)", 
+                              className="sentiment-value",
+                              style={"color": sentiment_color, "fontWeight": "bold"})
+                    ], className="sentiment-row"),
+                    
+                    # Text details
+                    html.Div([
+                        html.P("Document Length:", className="sentiment-label"),
+                        html.P(f"{result['text_length']} characters", className="sentiment-value")
+                    ], className="sentiment-row"),
+                    
+                    # Date processed
+                    html.Div([
+                        html.P("Processed:", className="sentiment-label"),
+                        html.P(result["processed_date"], className="sentiment-value")
+                    ], className="sentiment-row"),
+                    
+                    # Selected for sentiment index indicator
+                    html.Div([
+                        html.P("Document Score:", className="sentiment-score-label"),
+                        html.P(f"{result['overall_score']:.1f}/100", 
+                              className="sentiment-score-value",
+                              style={"fontSize": "24px", "fontWeight": "bold", "color": sentiment_color})
+                    ], className="sentiment-score"),
+                    
+                    # Applied to index indicator
+                    html.Div([
+                        html.P("Applied to Index:", className="sentiment-label"),
+                        html.P(f"Yes (Weight: {weight}%)", 
+                              className="sentiment-value",
+                              style={"color": "green", "fontWeight": "bold"})
+                    ], className="sentiment-row")
+                ], className="document-sentiment-container")
+            ])
+            
+            return document_data, document_display, f"{sentiment_index['score']:.1f}" if sentiment_index else "N/A", sentiment_index['category'] if sentiment_index else "N/A", total_weight_display
         else:
             # Document processing failed
-            return None, dash.no_update, dash.no_update, dash.no_update
+            error_message = html.Div(f"Error: {result['message']}", style={"color": "red"})
+            return None, error_message, dash.no_update, dash.no_update, dash.no_update
     except Exception as e:
         print(f"Error applying document analysis: {str(e)}")
-        return None, dash.no_update, dash.no_update, dash.no_update
+        error_message = html.Div(f"Error processing document: {str(e)}", style={"color": "red"})
+        return None, error_message, dash.no_update, dash.no_update, dash.no_update
 
 # Add this at the end of the file if running directly
 if __name__ == "__main__":
