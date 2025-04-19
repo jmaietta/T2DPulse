@@ -410,6 +410,7 @@
     border-right: 1px solid #ddd;
     border-top: 1px solid #ddd;
     border-bottom: 1px solid #ddd;
+    text-align: center; /* Center the text in tabs */
 }
 
 .custom-tab--selected {
@@ -418,6 +419,7 @@
     border-right: 1px solid #ddd;
     border-top: 1px solid #ddd;
     border-bottom: 1px solid transparent;
+    text-align: center; /* Maintain center alignment when selected */
 }
 
 /* Footer styling */
