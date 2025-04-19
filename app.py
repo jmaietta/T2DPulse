@@ -1113,10 +1113,26 @@ def update_sentiment_gauge(score):
      Input("sentiment-category", "children")]
 )
 def update_sentiment_components(score, category):
+    # Get actual store data rather than asset URLs
+    custom_weights = None
+    proprietary_data = None
+    document_data = None
+    
+    # Retrieve data from stores if available in dcc.Store components
+    if hasattr(app, "custom_weights_store"):
+        custom_weights = app.custom_weights_store
+    
+    if hasattr(app, "proprietary_data_store"):
+        proprietary_data = app.proprietary_data_store
+        
+    if hasattr(app, "document_data_store"):
+        document_data = app.document_data_store
+    
+    # Calculate sentiment index with all available data
     sentiment_index = calculate_sentiment_index(
-        custom_weights=app.get_asset_url("custom-weights-store") if hasattr(app, "custom-weights-store") else None,
-        proprietary_data=app.get_asset_url("proprietary-data-store") if hasattr(app, "proprietary-data-store") else None,
-        document_data=app.get_asset_url("document-data-store") if hasattr(app, "document-data-store") else None
+        custom_weights=custom_weights,
+        proprietary_data=proprietary_data,
+        document_data=document_data
     )
     
     if not sentiment_index or 'components' not in sentiment_index:
@@ -1135,6 +1151,8 @@ def update_sentiment_components(score, category):
             value_text = f"{comp['value']:.1f}%"
         elif comp['indicator'] == 'Proprietary Data':
             value_text = f"{comp['value']:.1f}"
+        elif comp['indicator'] == 'Document Sentiment':
+            value_text = f"{comp['value']:.1f}/100"
         else:
             value_text = f"{comp['value']}"
             
@@ -1937,6 +1955,148 @@ def initialize_sentiment_index(_):
         f"{sentiment_index['score']:.1f}" if sentiment_index else "N/A", 
         sentiment_index['category'] if sentiment_index else "N/A"
     )
+
+# Document weight display update
+@app.callback(
+    Output("document-weight-display", "children"),
+    [Input("document-weight", "value")]
+)
+def update_document_weight_display(weight):
+    return f"{weight}%"
+
+# Process and preview document upload for sentiment analysis
+@app.callback(
+    Output("document-preview", "children"),
+    [Input("upload-document", "contents"),
+     Input("upload-document", "filename")]
+)
+def update_document_preview(contents, filename):
+    if contents is None:
+        return html.Div("No document uploaded")
+    
+    try:
+        # Decode the file contents
+        content_type, content_string = contents.split(',')
+        decoded = base64.b64decode(content_string)
+        
+        # Process the document
+        result = document_analysis.process_document(decoded, filename)
+        
+        if result["status"] == "success":
+            # Format the sentiment scores for display
+            sentiment_label = result["full_text_sentiment"]["label"].capitalize()
+            sentiment_score = result["full_text_sentiment"]["score"]
+            sentiment_color = "green" if sentiment_score >= 60 else "orange" if sentiment_score >= 40 else "red"
+            
+            # Create sentiment score display
+            sentiment_display = html.Div([
+                html.H4("Document Sentiment Analysis", className="sentiment-analysis-title"),
+                
+                # Overall sentiment score
+                html.Div([
+                    html.P("Overall Sentiment:", className="sentiment-label"),
+                    html.P(f"{sentiment_label} ({sentiment_score:.1f}/100)", 
+                          className="sentiment-value",
+                          style={"color": sentiment_color, "fontWeight": "bold"})
+                ], className="sentiment-row"),
+                
+                # Text details
+                html.Div([
+                    html.P("Document Length:", className="sentiment-label"),
+                    html.P(f"{result['text_length']} characters", className="sentiment-value")
+                ], className="sentiment-row"),
+                
+                # Q&A section if found
+                html.Div([
+                    html.P("Q&A Section:", className="sentiment-label"),
+                    html.P(
+                        f"Found ({result['qa_section_length']} characters)" if result["qa_section_found"] 
+                        else "Not found",
+                        className="sentiment-value"
+                    )
+                ], className="sentiment-row"),
+                
+                # Q&A specific sentiment if available
+                html.Div([
+                    html.P("Q&A Sentiment:", className="sentiment-label"),
+                    html.P(
+                        f"{result['qa_sentiment']['label'].capitalize()} ({result['qa_sentiment']['score']:.1f}/100)" 
+                        if result["qa_sentiment"] else "N/A",
+                        className="sentiment-value",
+                        style={"color": sentiment_color if result["qa_sentiment"] else "inherit"}
+                    )
+                ], className="sentiment-row") if result["qa_sentiment"] else None,
+                
+                # Date processed
+                html.Div([
+                    html.P("Processed:", className="sentiment-label"),
+                    html.P(result["processed_date"], className="sentiment-value")
+                ], className="sentiment-row"),
+                
+                # Selected for sentiment index indicator
+                html.Div([
+                    html.P("Document Score:", className="sentiment-score-label"),
+                    html.P(f"{result['overall_score']:.1f}/100", 
+                          className="sentiment-score-value",
+                          style={"fontSize": "24px", "fontWeight": "bold", "color": sentiment_color})
+                ], className="sentiment-score")
+            ], className="document-sentiment-container")
+            
+            return html.Div([
+                html.P(f"File: {filename}", className="uploaded-filename"),
+                sentiment_display
+            ])
+        else:
+            return html.Div(f"Error: {result['message']}")
+    except Exception as e:
+        return html.Div(f"Error processing document: {str(e)}")
+
+# Apply document sentiment analysis to index
+@app.callback(
+    [Output("document-data-store", "data"),
+     Output("sentiment-score", "children", allow_duplicate=True),
+     Output("sentiment-category", "children", allow_duplicate=True)],
+    [Input("apply-document", "n_clicks")],
+    [State("document-weight", "value"),
+     State("upload-document", "contents"),
+     State("upload-document", "filename"),
+     State("custom-weights-store", "data"),
+     State("proprietary-data-store", "data")],
+    prevent_initial_call=True
+)
+def apply_document_analysis(n_clicks, weight, contents, filename, custom_weights, proprietary_data):
+    if n_clicks is None or contents is None:
+        return None, dash.no_update, dash.no_update
+    
+    try:
+        # Decode the file contents
+        content_type, content_string = contents.split(',')
+        decoded = base64.b64decode(content_string)
+        
+        # Process the document
+        result = document_analysis.process_document(decoded, filename)
+        
+        if result["status"] == "success":
+            # Create document data dictionary with sentiment score and weight
+            document_data = {
+                'weight': weight,
+                'value': result["overall_score"]
+            }
+            
+            # Calculate new sentiment index with document data
+            sentiment_index = calculate_sentiment_index(
+                custom_weights=custom_weights, 
+                proprietary_data=proprietary_data,
+                document_data=document_data
+            )
+            
+            return document_data, f"{sentiment_index['score']:.1f}" if sentiment_index else "N/A", sentiment_index['category'] if sentiment_index else "N/A"
+        else:
+            # Document processing failed
+            return None, dash.no_update, dash.no_update
+    except Exception as e:
+        print(f"Error applying document analysis: {str(e)}")
+        return None, dash.no_update, dash.no_update
 
 # Add this at the end of the file if running directly
 if __name__ == "__main__":
