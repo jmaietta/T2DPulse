@@ -25,6 +25,7 @@ os.makedirs(DATA_DIR, exist_ok=True)
 # Initialize the Dash app with external stylesheets
 app = dash.Dash(
     __name__,
+    suppress_callback_exceptions=True,  # Suppress exceptions for callbacks to components not in the layout
     meta_tags=[
         {"name": "viewport", "content": "width=device-width, initial-scale=1.0"}
     ]
