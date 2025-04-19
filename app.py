@@ -34,7 +34,7 @@ app = dash.Dash(
 server = app.server
 
 # Set page title
-app.title = "Economic Dashboard: Software & Technology"
+app.title = "T2D Pulse"
 
 # Function to fetch data from FRED
 def fetch_fred_data(series_id, start_date=None, end_date=None):
@@ -654,8 +654,8 @@ app.layout = html.Div([
         html.Div([
             html.Img(src="assets/images/t2d_logo.png", height="60px", className="logo"),
             html.Div([
-                html.H1("Economic Dashboard: Software & Technology Industry", className="dashboard-title"),
-                html.P("Interactive dashboard of economic indicators for software and technology sector", 
+                html.H1("T2D Pulse", className="dashboard-title"),
+                html.P("Power investment decisions with macro data and proprietary intelligence", 
                       className="dashboard-subtitle")
             ], className="header-text")
         ], className="header-container")
@@ -1079,7 +1079,7 @@ app.layout = html.Div([
     
     # Footer
     html.Footer([
-        html.P("Economic Dashboard for Software & Technology Industry"),
+        html.P("T2D Pulse"),
         html.P("Data sources: FRED, BEA, BLS")
     ], className="footer"),
     
