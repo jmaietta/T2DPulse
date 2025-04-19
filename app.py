@@ -367,29 +367,14 @@ def calculate_sentiment_index(custom_weights=None, proprietary_data=None, docume
         doc_value = document_data['value']
         doc_score = min(max(float(doc_value), 0), 100)  # Ensure it's between 0-100
         
-        # If document weight is provided in weights dictionary, update it
+        # Document weight is already set in the weights dictionary at the beginning of the function
         if 'Document Sentiment' in weights:
-            weights['Document Sentiment'] = document_data['weight']
-        # Otherwise, adjust other weights to make room for document data
-        else:
-            doc_weight = document_data['weight']
-            
-            if doc_weight > 0:
-                total_original_weight = sum(weights.values())
-                scaling_factor = (total_original_weight - doc_weight) / total_original_weight
-                
-                for key in weights:
-                    weights[key] = weights[key] * scaling_factor
-                
-                # Add document sentiment weight
-                weights['Document Sentiment'] = doc_weight
-        
-        sentiment_components.append({
-            'indicator': 'Document Sentiment',
-            'value': doc_value,
-            'score': doc_score,
-            'weight': weights['Document Sentiment']
-        })
+            sentiment_components.append({
+                'indicator': 'Document Sentiment',
+                'value': doc_value,
+                'score': doc_score,
+                'weight': weights['Document Sentiment']
+            })
     
     # Calculate composite score if we have components
     if sentiment_components:
@@ -1915,7 +1900,13 @@ def initialize_sentiment_index(_):
     [Input("document-weight", "value")]
 )
 def update_document_weight_display(weight):
-    return f"{weight}%"
+    remaining = 100 - weight
+    return html.Div([
+        html.Span(f"Document Weight: {weight}%", className="weight-value"),
+        html.Span(f"Remaining for Economic Indicators: {remaining}%", 
+                 className="weight-remaining",
+                 style={"marginLeft": "10px", "color": "green" if remaining >= 0 else "red"})
+    ])
 
 # Process and preview document upload for sentiment analysis
 @app.callback(
