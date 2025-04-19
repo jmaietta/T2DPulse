@@ -234,67 +234,53 @@ def calculate_sentiment_index(custom_weights=None, proprietary_data=None, docume
     # Use custom weights if provided, otherwise use defaults
     weights = custom_weights if custom_weights else default_weights.copy()
     
-    # If this is our initial calculation with no document, ensure economic indicators sum to 100
-    if not document_data:
-        economic_indicators_sum = sum(weights.values())
-        if abs(economic_indicators_sum - 100) > 0.1:
-            print(f"Adjusting economic indicators from {economic_indicators_sum}% to 100%")
-            scaling_factor = 100 / economic_indicators_sum
-            for key in weights:
-                weights[key] = weights[key] * scaling_factor
+    # Always start with a clean copy of weights
+    working_weights = weights.copy() if weights else default_weights.copy()
     
     # Get document weight if available (limit to 0-50%)
     document_weight = 0
     if document_data and 'value' in document_data and 'weight' in document_data:
         document_weight = float(document_data['weight'])
         document_weight = max(0, min(50, document_weight))  # Enforce 0-50% range
-        
-    # Get proprietary data weight if available (for legacy support)
-    proprietary_weight = 0
-    if proprietary_data and 'value' in proprietary_data and 'weight' in proprietary_data:
-        proprietary_weight = float(proprietary_data['weight'])
-        proprietary_weight = 0  # Set to 0 since we're removing this feature
-        
-    # The document weight plus all economic indicators must sum to 100%
-    extra_weights = document_weight + proprietary_weight
     
-    # Normalize weights to ensure they sum to 100%
-    if extra_weights > 0:
-        # First calculate what the total weight of economic indicators should be
-        economic_indicator_total_weight = 100 - extra_weights
-        current_total_weight = sum(weights.values())
+    # We no longer use proprietary data, but keep for backward compatibility
+    proprietary_weight = 0
+    
+    # Calculate current weight of economic indicators
+    economic_indicators_total = sum(working_weights.values())
+    
+    # The available weight for economic indicators
+    available_economic_weight = 100 - document_weight
+    
+    # Scale economic indicator weights if needed to ensure they sum to available_economic_weight
+    if abs(economic_indicators_total - available_economic_weight) > 0.001:
+        scaling_factor = available_economic_weight / economic_indicators_total
         
-        # Only scale if the current total is different from what we need
-        if abs(current_total_weight - economic_indicator_total_weight) > 0.001:
-            scaling_factor = economic_indicator_total_weight / current_total_weight
-            
-            # Scale economic indicator weights proportionally
-            for key in weights:
-                weights[key] = round(weights[key] * scaling_factor, 1)
+        # Scale all economic indicators proportionally
+        for key in working_weights:
+            working_weights[key] = round(working_weights[key] * scaling_factor, 1)
+    
+    # Add document sentiment weight if available
+    if document_weight > 0:
+        working_weights['Document Sentiment'] = document_weight
         
-        # Add proprietary data weight if available
-        if proprietary_weight > 0:
-            weights['Proprietary Data'] = proprietary_weight
-            
-        # Add document sentiment weight if available
-        if document_weight > 0:
-            weights['Document Sentiment'] = document_weight
-            
-        # Final check - make sure the sum is exactly 100 after rounding
-        final_total = sum(weights.values())
-        if abs(final_total - 100) > 0.001:
-            print(f"Weights before adjustment: {weights}, Total: {final_total}")
-            
-            # Find the largest weight and adjust it to make the total exactly 100
-            # Sort keys by weight value to find the largest
-            sorted_keys = sorted(weights.keys(), key=lambda k: weights[k], reverse=True)
-            if sorted_keys:
-                largest_key = sorted_keys[0]
-                weights[largest_key] += (100 - final_total)
-                print(f"Adjusted {largest_key} weight by {100 - final_total} to make total exactly 100%")
-            
-            # Verify after adjustment
-            print(f"Weights after adjustment: {weights}, Total: {sum(weights.values())}")
+    # Final check - make sure weights sum exactly to 100%
+    final_total = sum(working_weights.values())
+    if abs(final_total - 100) > 0.001:
+        print(f"Weights before final adjustment: {working_weights}, Total: {final_total}")
+        
+        # Find the largest weight and adjust it to make the total exactly 100
+        sorted_keys = sorted(working_weights.keys(), key=lambda k: working_weights[k], reverse=True)
+        if sorted_keys:
+            largest_key = sorted_keys[0]
+            working_weights[largest_key] += (100 - final_total)
+            print(f"Adjusted {largest_key} weight by {100 - final_total} to make total exactly 100%")
+        
+        # Verify after adjustment
+        print(f"Weights after adjustment: {working_weights}, Total: {sum(working_weights.values())}")
+    
+    # Use the adjusted weights for the rest of the calculation
+    weights = working_weights
     
     sentiment_components = []
     
@@ -1853,28 +1839,21 @@ def update_total_weight(gdp, unemployment, cpi, nasdaq, data_ppi, software_ppi, 
     # Calculate total of economic indicators only
     economic_indicators_total = gdp + unemployment + cpi + nasdaq + data_ppi + software_ppi + interest_rate
     
-    # If we have document weight, we need to normalize the economic weights to (100 - document_weight)
+    # Calculate total weight (economic indicators + document)
+    total_weight = economic_indicators_total + document_weight
+    
+    # If we have document weight, display both economic indicators and document weight
     if document_weight > 0:
-        # Calculate what the economic indicators should total
-        target_economic_total = 100 - document_weight
-        
-        # Format message to show both economic indicator total and overall total
-        message = f"Economic Indicators: {economic_indicators_total:.1f}% (target: {target_economic_total:.1f}%), Document: {document_weight:.1f}%, Total: {economic_indicators_total + document_weight:.1f}%"
-        
-        # Change color based on if economic indicators sum to the target
-        if abs(economic_indicators_total - target_economic_total) < 0.1:
-            color = "green"
-        else:
-            color = "red"
+        message = f"Economic Indicators: {economic_indicators_total:.1f}%, Document: {document_weight:.1f}%, Total: {total_weight:.1f}%"
     else:
-        # No document weight, so economic indicators should sum to 100%
+        # No document weight, just show total of economic indicators
         message = f"Total: {economic_indicators_total:.1f}%"
-        
-        # Change color based on total
-        if abs(economic_indicators_total - 100) < 0.1:
-            color = "green"
-        else:
-            color = "red"
+    
+    # Set color based on whether total equals 100%
+    if abs(total_weight - 100) < 0.1:
+        color = "green"
+    else:
+        color = "red"
     
     return html.Span(message, style={"color": color})
 
@@ -1908,16 +1887,16 @@ def apply_custom_weights(n_clicks, gdp, unemployment, cpi, nasdaq,
         document_weight = float(document_data['weight'])
         document_weight = max(0, min(50, document_weight))  # Enforce 0-50% range
     
-    # Total of economic indicators should be (100 - document_weight)
-    target_economic_total = 100 - document_weight
-    
     # Create custom weights dictionary
     total_economic_weight = gdp + unemployment + cpi + nasdaq + data_ppi + software_ppi + interest_rate
     
-    # Check if we need to normalize the weights to target_economic_total
-    if abs(total_economic_weight - target_economic_total) > 0.1:
-        # Normalize economic indicators to sum to (100 - document_weight)
-        scaling_factor = target_economic_total / total_economic_weight
+    # If total economic weight plus document weight isn't 100%, adjust the economic indicators
+    if abs(total_economic_weight + document_weight - 100) > 0.1:
+        # Available weight for economic indicators
+        available_weight = 100 - document_weight
+        
+        # Scale the economic indicators to use exactly the available weight
+        scaling_factor = available_weight / total_economic_weight
         gdp = gdp * scaling_factor
         unemployment = unemployment * scaling_factor
         cpi = cpi * scaling_factor
@@ -2263,12 +2242,13 @@ def apply_document_analysis(n_clicks, weight, contents, filename, custom_weights
             
             # Calculate total weight display
             economic_indicators_total = gdp + unemployment + cpi + nasdaq + data_ppi + software_ppi + interest_rate
+            total_weight = economic_indicators_total + weight
             
             # Format message for total weight
-            message = f"Economic Indicators: {economic_indicators_total:.1f}%, Document: {weight:.1f}%, Total: {economic_indicators_total + weight:.1f}%"
+            message = f"Economic Indicators: {economic_indicators_total:.1f}%, Document: {weight:.1f}%, Total: {total_weight:.1f}%"
             
             # Change color based on if the total is exactly 100%
-            if abs((economic_indicators_total + weight) - 100) < 0.1:
+            if abs(total_weight - 100) < 0.1:
                 color = "green"
             else:
                 color = "red"
