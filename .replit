@@ -33,6 +33,7 @@ waitForPort = 5000
 
 [deployment]
 run = ["sh", "-c", "python wsgi.py"]
+deploymentTarget = "cloudrun"
 
 [[ports]]
 localPort = 5000
