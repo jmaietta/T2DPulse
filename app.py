@@ -220,14 +220,15 @@ def calculate_sentiment_index(custom_weights=None, proprietary_data=None, docume
     """
     # Default weights (equal percentages that sum to 100%)
     default_weights = {
-        'GDP % Change': 13,
-        'Unemployment Rate': 13,
-        'CPI': 13,
-        'NASDAQ Trend': 13,
-        'PPI: Data Processing Services': 12,
-        'PPI: Software Publishers': 12,
-        'Federal Funds Rate': 12,
-        'Treasury Yield': 12
+        'GDP % Change': 12,
+        'Unemployment Rate': 12,
+        'CPI': 12,
+        'NASDAQ Trend': 12,
+        'PPI: Data Processing Services': 11,
+        'PPI: Software Publishers': 11,
+        'Federal Funds Rate': 10,
+        'Treasury Yield': 10,
+        'VIX Volatility': 10
     }
     
     # Validate default weights sum to 100
@@ -382,7 +383,33 @@ def calculate_sentiment_index(custom_weights=None, proprietary_data=None, docume
             'weight': weights['Treasury Yield']
         })
     
-    # 9. Add proprietary data if provided
+    # 9. VIX Volatility Index - lower is better (market stability)
+    if not vix_data.empty:
+        latest_vix = vix_data.sort_values('date', ascending=False).iloc[0]
+        # VIX below 20 is generally considered low volatility (good)
+        # VIX above 30 is generally considered high volatility (bad)
+        # Scale inverted since lower VIX is better for market sentiment
+        if latest_vix['value'] <= 20:
+            # Low volatility (good): 70-100 score
+            vix_score = 100 - ((latest_vix['value'] - 10) / 10) * 30
+        elif latest_vix['value'] <= 30:
+            # Medium volatility: 30-70 score
+            vix_score = 70 - ((latest_vix['value'] - 20) / 10) * 40
+        else:
+            # High volatility (bad): 0-30 score
+            vix_score = max(30 - ((latest_vix['value'] - 30) / 10) * 30, 0)
+            
+        # Ensure score is in 0-100 range
+        vix_score = min(max(vix_score, 0), 100)
+        
+        sentiment_components.append({
+            'indicator': 'VIX Volatility',
+            'value': latest_vix['value'],
+            'score': vix_score,
+            'weight': weights['VIX Volatility']
+        })
+        
+    # 10. Add proprietary data if provided
     if proprietary_data and 'value' in proprietary_data and 'weight' in proprietary_data:
         # Value should be a score from 0-100
         prop_value = proprietary_data['value']
@@ -2679,6 +2706,105 @@ def apply_document_analysis(n_clicks, weight, contents, filename, custom_weights
         error_message = html.Div(f"Error processing document: {str(e)}", style={"color": "red"})
         # Return all dash.no_update for the economic indicators
         return None, error_message, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update
+
+# Update VIX Graph
+@app.callback(
+    Output("vix-graph", "figure"),
+    [Input("interval-component", "n_intervals")]
+)
+def update_vix_graph(n):
+    if vix_data.empty:
+        return go.Figure().update_layout(
+            title="No data available",
+            height=400
+        )
+    
+    # Filter for last 2 years
+    cutoff_date = datetime.now() - timedelta(days=2*365)
+    filtered_data = vix_data[vix_data['date'] >= cutoff_date].copy()
+    
+    # Create figure
+    fig = go.Figure()
+    
+    # Add VIX line
+    fig.add_trace(go.Scatter(
+        x=filtered_data['date'],
+        y=filtered_data['value'],
+        mode='lines',
+        name='CBOE Volatility Index (VIX)',
+        line=dict(color='darkred', width=3),
+    ))
+    
+    # Add volatility level zones
+    x_range = [filtered_data['date'].min(), filtered_data['date'].max()]
+    
+    # High volatility (>30) - Red zone
+    fig.add_trace(go.Scatter(
+        x=x_range + x_range[::-1],
+        y=[30, 30, max(filtered_data['value'].max() * 1.1, 40), max(filtered_data['value'].max() * 1.1, 40)],
+        fill='toself',
+        fillcolor='rgba(255, 0, 0, 0.1)',
+        line=dict(color='rgba(0, 0, 0, 0)'),
+        hoverinfo='skip',
+        name='High Volatility (>30)',
+        showlegend=True
+    ))
+    
+    # Moderate volatility (20-30) - Yellow zone
+    fig.add_trace(go.Scatter(
+        x=x_range + x_range[::-1],
+        y=[20, 20, 30, 30],
+        fill='toself',
+        fillcolor='rgba(255, 255, 0, 0.1)',
+        line=dict(color='rgba(0, 0, 0, 0)'),
+        hoverinfo='skip',
+        name='Moderate Volatility (20-30)',
+        showlegend=True
+    ))
+    
+    # Low volatility (<20) - Green zone
+    fig.add_trace(go.Scatter(
+        x=x_range + x_range[::-1],
+        y=[0, 0, 20, 20],
+        fill='toself',
+        fillcolor='rgba(0, 255, 0, 0.1)',
+        line=dict(color='rgba(0, 0, 0, 0)'),
+        hoverinfo='skip',
+        name='Low Volatility (<20)',
+        showlegend=True
+    ))
+    
+    # Add a moving average line for trend
+    filtered_data['ma_20'] = filtered_data['value'].rolling(window=20).mean()
+    fig.add_trace(go.Scatter(
+        x=filtered_data['date'],
+        y=filtered_data['ma_20'],
+        mode='lines',
+        name='20-Day Moving Average',
+        line=dict(color='black', width=2, dash='dot'),
+    ))
+    
+    # Update layout
+    fig.update_layout(
+        height=400,
+        margin=dict(l=40, r=40, t=40, b=40),
+        xaxis_title="",
+        yaxis_title="VIX",
+        yaxis=dict(
+            zeroline=False,
+            range=[0, max(filtered_data['value'].max() * 1.1, 40)]
+        ),
+        hovermode="x unified",
+        legend=dict(
+            orientation="h",
+            yanchor="bottom",
+            y=1.02,
+            xanchor="right",
+            x=1
+        )
+    )
+    
+    return fig
 
 # Add this at the end of the file if running directly
 if __name__ == "__main__":
