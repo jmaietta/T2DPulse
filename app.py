@@ -1852,30 +1852,46 @@ def update_interest_rate_graph(n):
     # Filter for last 5 years
     cutoff_date = datetime.now() - timedelta(days=5*365)
     filtered_data = interest_rate_data[interest_rate_data['date'] >= cutoff_date].copy()
+
+# Update Treasury Yield Graph
+@app.callback(
+    Output("treasury-yield-graph", "figure"),
+    [Input("interval-component", "n_intervals")]
+)
+def update_treasury_yield_graph(n):
+    if treasury_yield_data.empty:
+        return go.Figure().update_layout(
+            title="No data available",
+            height=400
+        )
+    
+    # Filter for last 5 years
+    cutoff_date = datetime.now() - timedelta(days=5*365)
+    filtered_data = treasury_yield_data[treasury_yield_data['date'] >= cutoff_date].copy()
     
     # Create figure
     fig = go.Figure()
     
-    # Add interest rate line
+    # Add treasury yield line
     fig.add_trace(go.Scatter(
         x=filtered_data['date'],
         y=filtered_data['value'],
         mode='lines',
-        name='Federal Funds Rate',
-        line=dict(color='darkgreen', width=3),
+        name='10-Year Treasury Yield',
+        line=dict(color='darkblue', width=3),
     ))
     
-    # Add optimal range shading (2-3% is often considered neutral)
+    # Add optimal range shading (2-4% is often considered neutral for 10-year treasuries)
     x_range = [filtered_data['date'].min(), filtered_data['date'].max()]
     
     fig.add_trace(go.Scatter(
         x=x_range + x_range[::-1],
-        y=[2, 2, 3, 3],
+        y=[2, 2, 4, 4],
         fill='toself',
-        fillcolor='rgba(0, 255, 0, 0.1)',
-        line=dict(color='rgba(0, 255, 0, 0.5)'),
+        fillcolor='rgba(0, 0, 255, 0.1)',
+        line=dict(color='rgba(0, 0, 255, 0.5)'),
         hoverinfo='skip',
-        name='Neutral Rate Range',
+        name='Neutral Yield Range',
         showlegend=True
     ))
     
@@ -1884,7 +1900,7 @@ def update_interest_rate_graph(n):
         height=400,
         margin=dict(l=40, r=40, t=40, b=40),
         xaxis_title="",
-        yaxis_title="Federal Funds Rate (%)",
+        yaxis_title="10-Year Treasury Yield (%)",
         yaxis=dict(
             ticksuffix="%",
             zeroline=True,
@@ -2404,7 +2420,8 @@ def update_document_preview(contents, filename):
      Output("nasdaq-weight", "value", allow_duplicate=True),
      Output("data-ppi-weight", "value", allow_duplicate=True),
      Output("software-ppi-weight", "value", allow_duplicate=True),
-     Output("interest-rate-weight", "value", allow_duplicate=True)],
+     Output("interest-rate-weight", "value", allow_duplicate=True),
+     Output("treasury-yield-weight", "value", allow_duplicate=True)],
     [Input("apply-document", "n_clicks")],
     [State("document-weight", "value"),
      State("upload-document", "contents"),
@@ -2417,11 +2434,12 @@ def update_document_preview(contents, filename):
      State("nasdaq-weight", "value"),
      State("data-ppi-weight", "value"),
      State("software-ppi-weight", "value"),
-     State("interest-rate-weight", "value")],
+     State("interest-rate-weight", "value"),
+     State("treasury-yield-weight", "value")],
     prevent_initial_call=True
 )
 def apply_document_analysis(n_clicks, weight, contents, filename, custom_weights, proprietary_data,
-                          gdp, unemployment, cpi, nasdaq, data_ppi, software_ppi, interest_rate):
+                          gdp, unemployment, cpi, nasdaq, data_ppi, software_ppi, interest_rate, treasury_yield):
     # Document weight should not be applied until a document is uploaded and analyzed
     if n_clicks is None:
         # Return document weight of 0 and no updates to other components
@@ -2468,7 +2486,7 @@ def apply_document_analysis(n_clicks, weight, contents, filename, custom_weights
             
             # Calculate appropriate scaling for economic indicators to ensure all weights sum to 100%
             remaining_weight = 100 - weight
-            economic_indicators_total = gdp + unemployment + cpi + nasdaq + data_ppi + software_ppi + interest_rate
+            economic_indicators_total = gdp + unemployment + cpi + nasdaq + data_ppi + software_ppi + interest_rate + treasury_yield
             
             # Create a message showing both the document weight and scaled economic indicators weight
             message = f"Economic Indicators: {remaining_weight:.1f}%, Document: {weight:.1f}%, Total: 100.0%"
@@ -2532,12 +2550,13 @@ def apply_document_analysis(n_clicks, weight, contents, filename, custom_weights
                 new_data_ppi = round(data_ppi * scaling_factor)
                 new_software_ppi = round(software_ppi * scaling_factor)
                 new_interest_rate = round(interest_rate * scaling_factor)
+                new_treasury_yield = round(treasury_yield * scaling_factor)
                 
                 # If rounding causes total to be off by 1, adjust the largest value
-                new_total = new_gdp + new_unemployment + new_cpi + new_nasdaq + new_data_ppi + new_software_ppi + new_interest_rate
+                new_total = new_gdp + new_unemployment + new_cpi + new_nasdaq + new_data_ppi + new_software_ppi + new_interest_rate + new_treasury_yield
                 if new_total != remaining_weight:
                     # Find the largest value and adjust it
-                    values = [new_gdp, new_unemployment, new_cpi, new_nasdaq, new_data_ppi, new_software_ppi, new_interest_rate]
+                    values = [new_gdp, new_unemployment, new_cpi, new_nasdaq, new_data_ppi, new_software_ppi, new_interest_rate, new_treasury_yield]
                     max_index = values.index(max(values))
                     if max_index == 0:
                         new_gdp += (remaining_weight - new_total)
@@ -2553,6 +2572,8 @@ def apply_document_analysis(n_clicks, weight, contents, filename, custom_weights
                         new_software_ppi += (remaining_weight - new_total)
                     elif max_index == 6:
                         new_interest_rate += (remaining_weight - new_total)
+                    elif max_index == 7:
+                        new_treasury_yield += (remaining_weight - new_total)
             else:
                 # No document weight, keep original values
                 new_gdp = gdp
@@ -2562,6 +2583,7 @@ def apply_document_analysis(n_clicks, weight, contents, filename, custom_weights
                 new_data_ppi = data_ppi
                 new_software_ppi = software_ppi
                 new_interest_rate = interest_rate
+                new_treasury_yield = treasury_yield
             
             # Return document data, analysis display, sentiment score and category, weight display, and updated economic indicator values
             return (
@@ -2570,18 +2592,18 @@ def apply_document_analysis(n_clicks, weight, contents, filename, custom_weights
                 f"{sentiment_index['score']:.1f}" if sentiment_index else "N/A", 
                 sentiment_index['category'] if sentiment_index else "N/A", 
                 total_weight_display,
-                new_gdp, new_unemployment, new_cpi, new_nasdaq, new_data_ppi, new_software_ppi, new_interest_rate
+                new_gdp, new_unemployment, new_cpi, new_nasdaq, new_data_ppi, new_software_ppi, new_interest_rate, new_treasury_yield
             )
         else:
             # Document processing failed
             error_message = html.Div(f"Error: {result['message']}", style={"color": "red"})
             # Return all dash.no_update for the economic indicators
-            return None, error_message, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update
+            return None, error_message, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update
     except Exception as e:
         print(f"Error applying document analysis: {str(e)}")
         error_message = html.Div(f"Error processing document: {str(e)}", style={"color": "red"})
         # Return all dash.no_update for the economic indicators
-        return None, error_message, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update
+        return None, error_message, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update
 
 # Add this at the end of the file if running directly
 if __name__ == "__main__":
