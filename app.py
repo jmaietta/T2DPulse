@@ -990,7 +990,7 @@ app.layout = html.Div([
                             min=0,
                             max=50,
                             step=1,
-                            value=20,
+                            value=0,
                             marks={
                                 0: '0%',
                                 10: '10%',
