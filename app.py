@@ -1081,23 +1081,13 @@ def update_sentiment_gauge(score):
 @app.callback(
     Output("sentiment-components", "children"),
     [Input("sentiment-score", "children"),
-     Input("sentiment-category", "children")]
+     Input("sentiment-category", "children"),
+     Input("custom-weights-store", "data"),
+     Input("document-data-store", "data")]
 )
-def update_sentiment_components(score, category):
-    # Get actual store data rather than asset URLs
-    custom_weights = None
+def update_sentiment_components(score, category, custom_weights, document_data):
+    # We'll handle proprietary data as removed feature
     proprietary_data = None
-    document_data = None
-    
-    # Retrieve data from stores if available in dcc.Store components
-    if hasattr(app, "custom_weights_store"):
-        custom_weights = app.custom_weights_store
-    
-    if hasattr(app, "proprietary_data_store"):
-        proprietary_data = app.proprietary_data_store
-        
-    if hasattr(app, "document_data_store"):
-        document_data = app.document_data_store
     
     # Calculate sentiment index with all available data
     sentiment_index = calculate_sentiment_index(
