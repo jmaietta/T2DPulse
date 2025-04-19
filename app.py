@@ -834,7 +834,7 @@ app.layout = html.Div([
                 # GDP
                 html.Div([
                     html.Div([
-                        html.H4("GDP % Change"),
+                        html.H4("Real GDP % Change"),
                         html.P(id="gdp-value", 
                               children=f"{gdp_data.sort_values('date', ascending=False).iloc[0]['yoy_growth']:.1f}%" 
                               if not gdp_data.empty and 'yoy_growth' in gdp_data.columns else "N/A",
@@ -945,7 +945,7 @@ app.layout = html.Div([
                 html.H3("Customize Index Weights", className="card-title"),
                 html.Div([
                     html.Div([
-                        html.Label("GDP % Change"),
+                        html.Label("Real GDP % Change"),
                         dcc.Slider(
                             id="gdp-weight",
                             min=0,
