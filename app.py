@@ -1001,7 +1001,8 @@ app.layout = html.Div([
                             },
                             className="weight-slider"
                         ),
-                        html.Div(id="document-weight-display", className="weight-display")
+                        html.Div(id="document-weight-display", className="weight-display"),
+                        html.Div(id="document-weight-debug", style={"fontSize": "10px", "color": "#999", "marginTop": "5px"})
                     ], className="slider-container"),
                     
                     # Apply button
@@ -2134,7 +2135,9 @@ def initialize_sentiment_index(_):
      Output("nasdaq-weight", "value", allow_duplicate=True),
      Output("data-ppi-weight", "value", allow_duplicate=True),
      Output("software-ppi-weight", "value", allow_duplicate=True),
-     Output("interest-rate-weight", "value", allow_duplicate=True)],
+     Output("interest-rate-weight", "value", allow_duplicate=True),
+     # Debug output
+     Output("document-weight-debug", "children")],
     [Input("document-weight", "value"),
      Input("upload-document", "contents"),
      Input("apply-document", "n_clicks")],  # Add the apply document button as an input
@@ -2248,6 +2251,13 @@ def update_document_weight_display(weight, contents, n_clicks, document_data,
                  style={"marginLeft": "10px", "color": "green" if remaining >= 0 else "red"})
     ])
     
+    # Create a debug message showing the state data
+    debug_info = ""
+    try:
+        debug_info = f"Trigger: {trigger_id}, Weight: {weight}, Doc value: {document_data.get('value') if document_data else 'None'}, Doc weight: {document_data.get('weight') if document_data else 'None'}"
+    except Exception as e:
+        debug_info = f"Debug error: {str(e)}"
+        
     # Return all necessary outputs
     return (
         doc_weight_display, 
@@ -2260,7 +2270,8 @@ def update_document_weight_display(weight, contents, n_clicks, document_data,
         new_nasdaq, 
         new_data_ppi, 
         new_software_ppi, 
-        new_interest_rate
+        new_interest_rate,
+        debug_info
     )
 
 # Process and preview document upload for sentiment analysis
