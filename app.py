@@ -209,12 +209,13 @@ def fetch_bls_data(series_id, start_year, end_year):
         print(f"Exception while fetching BLS data: {str(e)}")
         return pd.DataFrame()
 
-def calculate_sentiment_index(custom_weights=None, proprietary_data=None):
+def calculate_sentiment_index(custom_weights=None, proprietary_data=None, document_data=None):
     """Calculate economic sentiment index from available indicators
     
     Args:
         custom_weights (dict, optional): Dictionary with custom weights for each indicator
         proprietary_data (dict, optional): Dictionary with proprietary data and its weight
+        document_data (dict, optional): Dictionary with document analysis data and its weight
     """
     # Default weights (equal percentages that sum to 100%)
     default_weights = {
@@ -343,6 +344,35 @@ def calculate_sentiment_index(custom_weights=None, proprietary_data=None):
             'value': prop_value,
             'score': prop_score,
             'weight': weights['Proprietary Data']
+        })
+        
+    # 9. Add document analysis data if provided
+    if document_data and 'value' in document_data and 'weight' in document_data:
+        doc_value = document_data['value']
+        doc_score = min(max(float(doc_value), 0), 100)  # Ensure it's between 0-100
+        
+        # If document weight is provided in weights dictionary, update it
+        if 'Document Sentiment' in weights:
+            weights['Document Sentiment'] = document_data['weight']
+        # Otherwise, adjust other weights to make room for document data
+        else:
+            doc_weight = document_data['weight']
+            
+            if doc_weight > 0:
+                total_original_weight = sum(weights.values())
+                scaling_factor = (total_original_weight - doc_weight) / total_original_weight
+                
+                for key in weights:
+                    weights[key] = weights[key] * scaling_factor
+                
+                # Add document sentiment weight
+                weights['Document Sentiment'] = doc_weight
+        
+        sentiment_components.append({
+            'indicator': 'Document Sentiment',
+            'value': doc_value,
+            'score': doc_score,
+            'weight': weights['Document Sentiment']
         })
     
     # Calculate composite score if we have components

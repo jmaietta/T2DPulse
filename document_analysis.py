@@ -71,10 +71,12 @@ def extract_text_from_txt(file_content):
 
 def analyze_document_sentiment(text):
     """
-    Analyze sentiment of financial text using basic keyword approach.
-    Returns sentiment scores for positive, negative, and neutral.
+    Analyze sentiment of financial text using a rule-based lexicon approach.
     
-    This is a simplified version that can be upgraded to FinBERT in the future.
+    This function uses financial-specific positive and negative term lists 
+    to categorize sentiment in the document. It returns normalized scores 
+    for positive, negative, and neutral sentiment, along with an overall
+    sentiment label and score (0-100).
     """
     # Handle empty text
     if not text or text.strip() == "":
@@ -84,44 +86,65 @@ def analyze_document_sentiment(text):
         # Convert to lowercase for case-insensitive matching
         text_lower = text.lower()
         
-        # Count positive and negative terms
+        # Initialize counters for sentiment analysis
         positive_count = 0
         negative_count = 0
+        total_words = len(text_lower.split())
         
         # Process text in chunks for better memory management
         chunks = split_text_into_chunks(text)
         
+        # Match full words only (not parts of words)
         for chunk in chunks:
             chunk_lower = chunk.lower()
+            words = chunk_lower.split()
             
             # Count positive terms
             for term in FINANCIAL_POSITIVE_TERMS:
-                positive_count += chunk_lower.count(term.lower())
+                # If term has multiple words
+                if ' ' in term:
+                    positive_count += chunk_lower.count(term.lower())
+                else:
+                    # Count only full word matches
+                    for word in words:
+                        word_clean = word.strip('.,;:()[]{}"\'-')
+                        if word_clean == term.lower():
+                            positive_count += 1
             
             # Count negative terms
             for term in FINANCIAL_NEGATIVE_TERMS:
-                negative_count += chunk_lower.count(term.lower())
+                # If term has multiple words
+                if ' ' in term:
+                    negative_count += chunk_lower.count(term.lower())
+                else:
+                    # Count only full word matches
+                    for word in words:
+                        word_clean = word.strip('.,;:()[]{}"\'-')
+                        if word_clean == term.lower():
+                            negative_count += 1
         
-        # Calculate total matches
-        total_count = positive_count + negative_count
+        # Calculate sentiment metrics
+        total_sentiment_matches = positive_count + negative_count
         
-        # Calculate sentiment scores
-        if total_count > 0:
-            positive_score = positive_count / total_count
-            negative_score = negative_count / total_count
-            neutral_score = 1 - (positive_score + negative_score)
+        # Calculate sentiment scores with normalization
+        if total_sentiment_matches > 0:
+            # Raw sentiment scores based on term frequency
+            positive_score = positive_count / total_sentiment_matches
+            negative_score = negative_count / total_sentiment_matches
             
-            # Ensure neutral score is not negative
-            neutral_score = max(0, neutral_score)
+            # Determine neutrality based on total matches vs. document size
+            match_ratio = total_sentiment_matches / max(1, total_words)
             
-            # Normalize scores to sum to 1
-            total_scores = positive_score + negative_score + neutral_score
-            if total_scores > 0:
-                positive_score = positive_score / total_scores
-                negative_score = negative_score / total_scores
-                neutral_score = neutral_score / total_scores
+            # Lower match ratio means more neutral content
+            neutral_score = max(0, 1 - (match_ratio * 10))  # Scale to make small ratios more meaningful
+            neutral_score = min(0.8, neutral_score)  # Cap neutrality at 0.8 to prevent all neutral results
+            
+            # Adjust positive and negative to account for neutrality
+            adjustment = (1 - neutral_score) / (positive_score + negative_score)
+            positive_score = positive_score * adjustment
+            negative_score = negative_score * adjustment
         else:
-            # No sentiment terms found
+            # No sentiment terms found - mostly neutral
             positive_score = 0
             negative_score = 0
             neutral_score = 1
@@ -130,7 +153,12 @@ def analyze_document_sentiment(text):
         sentiment_scores = {
             "positive": positive_score,
             "negative": negative_score,
-            "neutral": neutral_score
+            "neutral": neutral_score,
+            "term_matches": {
+                "positive_terms": positive_count,
+                "negative_terms": negative_count,
+                "total_words": total_words
+            }
         }
         
         # Determine overall sentiment label
@@ -142,14 +170,17 @@ def analyze_document_sentiment(text):
             sentiment_label = "neutral"
         
         # Calculate a score from 0-100 (0 = very negative, 100 = very positive)
-        sentiment_value = 50 + (
-            50 * ((positive_score - negative_score) / max(1, positive_score + negative_score))
-        )
+        if positive_score + negative_score > 0:
+            sentiment_value = 50 + (
+                50 * ((positive_score - negative_score) / (positive_score + negative_score))
+            )
+        else:
+            sentiment_value = 50  # Perfectly neutral
         
         # Ensure the score is between 0 and 100
         sentiment_value = min(100, max(0, sentiment_value))
         
-        # Combine all results
+        # Add sentiment label and score to results
         sentiment_scores["label"] = sentiment_label
         sentiment_scores["score"] = sentiment_value
         
