@@ -246,14 +246,19 @@ def calculate_sentiment_index(custom_weights=None, proprietary_data=None, docume
         proprietary_weight = float(proprietary_data['weight'])
         extra_weights += proprietary_weight
     
-    # Normalize core indicator weights if we have extra weights to add
+    # Normalize weights to ensure they sum to 100%
     if extra_weights > 0:
-        total_original_weight = sum(weights.values())
-        scaling_factor = (100 - extra_weights) / total_original_weight
+        # First calculate what the total weight of economic indicators should be
+        economic_indicator_total_weight = 100 - extra_weights
+        current_total_weight = sum(weights.values())
         
-        # Scale down each indicator weight proportionally
-        for key in weights:
-            weights[key] = weights[key] * scaling_factor
+        # Only scale if the current total is different from what we need
+        if abs(current_total_weight - economic_indicator_total_weight) > 0.001:
+            scaling_factor = economic_indicator_total_weight / current_total_weight
+            
+            # Scale economic indicator weights proportionally
+            for key in weights:
+                weights[key] = round(weights[key] * scaling_factor, 1)
         
         # Add proprietary data weight if available
         if proprietary_weight > 0:
@@ -262,6 +267,22 @@ def calculate_sentiment_index(custom_weights=None, proprietary_data=None, docume
         # Add document sentiment weight if available
         if document_weight > 0:
             weights['Document Sentiment'] = document_weight
+            
+        # Final check - make sure the sum is exactly 100 after rounding
+        final_total = sum(weights.values())
+        if abs(final_total - 100) > 0.001:
+            print(f"Weights before adjustment: {weights}, Total: {final_total}")
+            
+            # Find the largest weight and adjust it to make the total exactly 100
+            # Sort keys by weight value to find the largest
+            sorted_keys = sorted(weights.keys(), key=lambda k: weights[k], reverse=True)
+            if sorted_keys:
+                largest_key = sorted_keys[0]
+                weights[largest_key] += (100 - final_total)
+                print(f"Adjusted {largest_key} weight by {100 - final_total} to make total exactly 100%")
+            
+            # Verify after adjustment
+            print(f"Weights after adjustment: {weights}, Total: {sum(weights.values())}")
     
     sentiment_components = []
     
@@ -1694,6 +1715,20 @@ def apply_custom_weights(n_clicks, gdp, unemployment, cpi, nasdaq,
         return None, f"{sentiment_index['score']:.1f}" if sentiment_index else "N/A", sentiment_index['category'] if sentiment_index else "N/A"
     
     # Create custom weights dictionary
+    total_economic_weight = gdp + unemployment + cpi + nasdaq + data_ppi + software_ppi + interest_rate
+    
+    # Check if we need to normalize the weights
+    if total_economic_weight != 100:
+        # Normalize to make economic weights sum to 100
+        scaling_factor = 100 / total_economic_weight
+        gdp = gdp * scaling_factor
+        unemployment = unemployment * scaling_factor
+        cpi = cpi * scaling_factor
+        nasdaq = nasdaq * scaling_factor
+        data_ppi = data_ppi * scaling_factor
+        software_ppi = software_ppi * scaling_factor
+        interest_rate = interest_rate * scaling_factor
+    
     custom_weights = {
         'GDP % Change': gdp,
         'Unemployment Rate': unemployment,
@@ -1704,7 +1739,7 @@ def apply_custom_weights(n_clicks, gdp, unemployment, cpi, nasdaq,
         'Federal Funds Rate': interest_rate
     }
     
-    # Calculate sentiment with custom weights
+    # Now the original weights sum to 100 before any additional weights are added
     sentiment_index = calculate_sentiment_index(custom_weights=custom_weights, proprietary_data=proprietary_data)
     
     # Return the results
@@ -2021,6 +2056,9 @@ def apply_document_analysis(n_clicks, weight, contents, filename, custom_weights
         result = document_analysis.process_document(decoded, filename)
         
         if result["status"] == "success":
+            # Ensure weight is a valid value (0-50%)
+            weight = max(0, min(50, weight))
+            
             # Create document data dictionary with sentiment score and weight
             document_data = {
                 'weight': weight,
@@ -2033,6 +2071,15 @@ def apply_document_analysis(n_clicks, weight, contents, filename, custom_weights
                 proprietary_data=proprietary_data,
                 document_data=document_data
             )
+            
+            # Verify total weights (for debugging)
+            if sentiment_index and 'components' in sentiment_index:
+                total_weight = sum(comp['weight'] for comp in sentiment_index['components'])
+                print(f"Total weight after applying document sentiment: {total_weight}%")
+                
+                # If total weight is not 100, log a warning
+                if abs(total_weight - 100) > 0.1:
+                    print(f"WARNING: Weights don't sum to 100%, but {total_weight}%")
             
             return document_data, f"{sentiment_index['score']:.1f}" if sentiment_index else "N/A", sentiment_index['category'] if sentiment_index else "N/A"
         else:
