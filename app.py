@@ -4,6 +4,7 @@ import numpy as np
 import requests
 import base64
 import io
+import json
 from datetime import datetime, timedelta
 import dash
 from dash import dcc, html, dash_table
@@ -13,6 +14,9 @@ import plotly.express as px
 
 # Import API keys from the separate file
 from api_keys import FRED_API_KEY, BEA_API_KEY, BLS_API_KEY
+
+# Import document analysis functionality
+import document_analysis
 
 # Data directory
 DATA_DIR = 'data'
@@ -812,59 +816,116 @@ app.layout = html.Div([
             # Proprietary Data Upload
             html.Div([
                 html.H3("Upload Proprietary Data", className="card-title"),
-                html.Div([
-                    html.P("Upload your data to incorporate into the sentiment index.", className="upload-text"),
-                    dcc.Upload(
-                        id="upload-data",
-                        children=html.Div([
-                            "Drag and Drop or ",
-                            html.A("Select Files", className="upload-link")
-                        ]),
-                        style={
-                            'width': '100%',
-                            'height': '60px',
-                            'lineHeight': '60px',
-                            'borderWidth': '1px',
-                            'borderStyle': 'dashed',
-                            'borderRadius': '5px',
-                            'textAlign': 'center',
-                            'margin': '10px 0px'
-                        },
-                        multiple=False
-                    ),
+                
+                # Tabs for different data input types
+                dcc.Tabs([
+                    # Tab 1: Numeric data upload
+                    dcc.Tab(label="Numeric Data", children=[
+                        html.Div([
+                            html.P("Upload numeric data (CSV, Excel) to incorporate into the sentiment index.", 
+                                   className="upload-text"),
+                            dcc.Upload(
+                                id="upload-data",
+                                children=html.Div([
+                                    "Drag and Drop or ",
+                                    html.A("Select Files", className="upload-link")
+                                ]),
+                                style={
+                                    'width': '100%',
+                                    'height': '60px',
+                                    'lineHeight': '60px',
+                                    'borderWidth': '1px',
+                                    'borderStyle': 'dashed',
+                                    'borderRadius': '5px',
+                                    'textAlign': 'center',
+                                    'margin': '10px 0px'
+                                },
+                                multiple=False
+                            ),
+                            
+                            # Uploaded data preview
+                            html.Div(id="upload-preview"),
+                            
+                            # Proprietary data weight
+                            html.Div([
+                                html.Label("Proprietary Data Weight", className="prop-label"),
+                                dcc.Slider(
+                                    id="proprietary-weight",
+                                    min=0,
+                                    max=50,
+                                    step=1,
+                                    value=0,
+                                    marks={0: "0%", 25: "25%", 50: "50%"},
+                                    className="weight-slider"
+                                ),
+                            ], className="prop-weight-control"),
+                            
+                            # Proprietary data value (score 0-100)
+                            html.Div([
+                                html.Label("Proprietary Data Score (0-100)", className="prop-label"),
+                                dcc.Input(
+                                    id="proprietary-value",
+                                    type="number",
+                                    min=0,
+                                    max=100,
+                                    value=50,
+                                    className="prop-value-input"
+                                ),
+                            ], className="prop-value-control"),
+                            
+                            html.Button("Apply Proprietary Data", id="apply-proprietary", className="apply-button"),
+                        ], className="upload-container")
+                    ], className="custom-tab", selected_className="custom-tab--selected"),
                     
-                    # Uploaded data preview
-                    html.Div(id="upload-preview"),
-                    
-                    # Proprietary data weight
-                    html.Div([
-                        html.Label("Proprietary Data Weight", className="prop-label"),
-                        dcc.Slider(
-                            id="proprietary-weight",
-                            min=0,
-                            max=50,
-                            step=1,
-                            value=0,
-                            marks={0: "0%", 25: "25%", 50: "50%"},
-                            className="weight-slider"
-                        ),
-                    ], className="prop-weight-control"),
-                    
-                    # Proprietary data value (score 0-100)
-                    html.Div([
-                        html.Label("Proprietary Data Score (0-100)", className="prop-label"),
-                        dcc.Input(
-                            id="proprietary-value",
-                            type="number",
-                            min=0,
-                            max=100,
-                            value=50,
-                            className="prop-value-input"
-                        ),
-                    ], className="prop-value-control"),
-                    
-                    html.Button("Apply Proprietary Data", id="apply-proprietary", className="apply-button"),
-                ], className="upload-container")
+                    # Tab 2: Document upload for sentiment analysis
+                    dcc.Tab(label="Document Analysis", children=[
+                        html.Div([
+                            html.P(
+                                "Upload documents (PDF, DOCX, TXT) for sentiment analysis. "
+                                "Earnings call transcripts, financial reports, and other text documents "
+                                "will be analyzed for financial sentiment.",
+                                className="upload-text"
+                            ),
+                            dcc.Upload(
+                                id="upload-document",
+                                children=html.Div([
+                                    "Drag and Drop or ",
+                                    html.A("Select Document", className="upload-link")
+                                ]),
+                                style={
+                                    'width': '100%',
+                                    'height': '60px',
+                                    'lineHeight': '60px',
+                                    'borderWidth': '1px',
+                                    'borderStyle': 'dashed',
+                                    'borderRadius': '5px',
+                                    'textAlign': 'center',
+                                    'margin': '10px 0px'
+                                },
+                                multiple=False
+                            ),
+                            
+                            # Document analysis preview
+                            html.Div(id="document-preview"),
+                            
+                            # Document data weight
+                            html.Div([
+                                html.Label("Document Sentiment Weight", className="prop-label"),
+                                dcc.Slider(
+                                    id="document-weight",
+                                    min=0,
+                                    max=50,
+                                    step=1,
+                                    value=0,
+                                    marks={0: "0%", 25: "25%", 50: "50%"},
+                                    className="weight-slider"
+                                ),
+                            ], className="prop-weight-control"),
+                            
+                            html.Button("Apply Document Analysis", id="apply-document", className="apply-button"),
+                        ], className="upload-container")
+                    ], className="custom-tab", selected_className="custom-tab--selected"),
+                ], className="custom-tabs"),
             ], className="card upload-card"),
             
         ], className="column left-column"),
@@ -937,6 +998,7 @@ app.layout = html.Div([
     
     # Store components for state management
     dcc.Store(id="proprietary-data-store"),
+    dcc.Store(id="document-data-store"),
     dcc.Store(id="custom-weights-store"),
     dcc.Interval(
         id='interval-component',
