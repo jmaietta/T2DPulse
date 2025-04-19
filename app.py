@@ -1142,8 +1142,8 @@ app.layout = html.Div([
         html.Div([
             # Tabs for different graph groups
             dcc.Tabs([
-                # GDP & Economic Growth Tab
-                dcc.Tab(label="GDP & Growth", children=[
+                # Real GDP Tab
+                dcc.Tab(label="Real GDP", children=[
                     html.Div([
                         html.H3("Real GDP Growth (YoY %)", className="graph-title"),
                         dcc.Graph(id="gdp-graph")
@@ -1954,6 +1954,41 @@ def update_interest_rate_graph(n):
     # Filter for last 5 years
     cutoff_date = datetime.now() - timedelta(days=5*365)
     filtered_data = interest_rate_data[interest_rate_data['date'] >= cutoff_date].copy()
+    
+    # Create figure
+    fig = go.Figure()
+    
+    # Add Federal Funds Rate line
+    fig.add_trace(go.Scatter(
+        x=filtered_data['date'],
+        y=filtered_data['value'],
+        mode='lines',
+        name='Federal Funds Rate',
+        line=dict(color='darkgreen', width=3),
+    ))
+    
+    # Update layout
+    fig.update_layout(
+        height=400,
+        margin=dict(l=40, r=40, t=40, b=40),
+        xaxis_title="",
+        yaxis_title="Rate (%)",
+        yaxis=dict(
+            ticksuffix="%",
+            zeroline=True,
+            zerolinecolor='rgba(0,0,0,0.2)',
+        ),
+        hovermode="x unified",
+        legend=dict(
+            orientation="h",
+            yanchor="bottom",
+            y=1.02,
+            xanchor="right",
+            x=1
+        )
+    )
+    
+    return fig
 
 # Update Treasury Yield Graph
 @app.callback(

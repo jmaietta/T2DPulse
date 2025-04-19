@@ -422,12 +422,13 @@
     text-align: center !important; /* Maintain center alignment when selected */
 }
 
-/* Specific style for Monetary Policy tab */
+/* Specific style for all tabs including Monetary Policy tab */
 .custom-tab[aria-selected="true"] label, 
-.custom-tab[aria-selected="false"] label {
+.custom-tab[aria-selected="false"] label,
+.custom-tab > div {
     width: 100%;
     text-align: center !important;
-    display: inline-block;
+    display: block !important;
 }
 
 /* Footer styling */
