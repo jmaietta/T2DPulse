@@ -1154,8 +1154,23 @@ def update_indicator_trends(n):
             current = sorted_gdp.iloc[0]['yoy_growth']
             previous = sorted_gdp.iloc[1]['yoy_growth']
             change = current - previous
-            icon = "↑" if change > 0 else "↓" if change < 0 else "→"
-            color = "trend-up" if change > 0 else "trend-down" if change < 0 else "trend-neutral"
+            
+            # First, always show the actual direction of change
+            if abs(change) < 0.2:  # Very small change
+                icon = "→"
+            else:
+                icon = "↑" if change > 0 else "↓"
+            
+            # For GDP, higher growth is generally better (within reason)
+            # But we should also consider absolute levels, not just change
+            # Higher growth is good, but we don't want to show green for change from -3% to -2%
+            if current < 0:
+                # We're in negative GDP growth territory (recession), even improvement is concerning
+                color = "trend-down"
+            else:
+                # In positive growth territory, increasing is good, decreasing is concerning
+                color = "trend-up" if change > 0 else "trend-down"
+                
             gdp_trend = html.Div([
                 html.Span(icon, className=f"trend-icon {color}"),
                 html.Span(f"{abs(change):.1f}%", className="trend-value")
@@ -1169,9 +1184,17 @@ def update_indicator_trends(n):
             current = sorted_unemp.iloc[0]['value']
             previous = sorted_unemp.iloc[1]['value']
             change = current - previous
-            # For unemployment, down is good (inverse logic)
-            icon = "↓" if change < 0 else "↑" if change > 0 else "→"
+            
+            # First, always show the actual direction of change
+            if abs(change) < 0.1:  # Very small change
+                icon = "→"
+            else:
+                icon = "↑" if change > 0 else "↓"
+            
+            # For unemployment, lower is generally better
+            # Down is good (decrease), up is bad (increase)
             color = "trend-up" if change < 0 else "trend-down" if change > 0 else "trend-neutral"
+            
             unemployment_trend = html.Div([
                 html.Span(icon, className=f"trend-icon {color}"),
                 html.Span(f"{abs(change):.1f}%", className="trend-value")
@@ -1185,18 +1208,23 @@ def update_indicator_trends(n):
             current = sorted_inf.iloc[0]['inflation']
             previous = sorted_inf.iloc[1]['inflation']
             change = current - previous
-            # For inflation, stable is best
-            if abs(change) < 0.2:  # Almost no change
+            
+            # First, always show the actual direction of change
+            if abs(change) < 0.1:  # Virtually no change
                 icon = "→"
-                color = "trend-neutral"
             else:
-                # Moving toward 2% is good
-                current_diff_from_target = abs(current - 2.0)
-                previous_diff_from_target = abs(previous - 2.0)
-                improving = current_diff_from_target < previous_diff_from_target
-                
-                icon = "↑" if improving else "↓"
-                color = "trend-up" if improving else "trend-down"
+                icon = "↑" if change > 0 else "↓"
+            
+            # Then determine if this change is good or bad
+            # For inflation:
+            # - Movement toward 2% target is good
+            # - Movement away from 2% target is bad
+            current_diff_from_target = abs(current - 2.0)
+            previous_diff_from_target = abs(previous - 2.0)
+            improving = current_diff_from_target < previous_diff_from_target
+            
+            # Set color based on whether we're moving toward or away from target
+            color = "trend-up" if improving else "trend-down"
                 
             inflation_trend = html.Div([
                 html.Span(icon, className=f"trend-icon {color}"),
@@ -1211,14 +1239,21 @@ def update_indicator_trends(n):
             current = sorted_rate.iloc[0]['value']
             previous = sorted_rate.iloc[1]['value']
             change = current - previous
-            icon = "↑" if change > 0 else "↓" if change < 0 else "→"
             
+            # First, always show the actual direction of change
+            if abs(change) < 0.05:  # Very small change
+                icon = "→"
+            else:
+                icon = "↑" if change > 0 else "↓"
+            
+            # Then determine if this change is good or bad
             # For interest rates, moving toward 2-3% range is good
             current_diff_from_target = min(abs(current - 2.0), abs(current - 3.0))
             previous_diff_from_target = min(abs(previous - 2.0), abs(previous - 3.0))
             improving = current_diff_from_target < previous_diff_from_target
             
-            color = "trend-up" if improving else "trend-down" if not improving else "trend-neutral"
+            # Set color based on whether we're moving toward or away from target range
+            color = "trend-up" if improving else "trend-down"
             
             interest_rate_trend = html.Div([
                 html.Span(icon, className=f"trend-icon {color}"),
