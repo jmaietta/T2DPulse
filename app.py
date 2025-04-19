@@ -973,7 +973,7 @@ app.layout = html.Div([
                             min=0,
                             max=30,
                             step=1,
-                            value=15,
+                            value=12,
                             marks={0: "0%", 15: "15%", 30: "30%"},
                             className="weight-slider"
                         ),
@@ -986,7 +986,7 @@ app.layout = html.Div([
                             min=0,
                             max=30,
                             step=1,
-                            value=0,
+                            value=12,
                             marks={0: "0%", 15: "15%", 30: "30%"},
                             className="weight-slider"
                         ),
@@ -1911,17 +1911,18 @@ def update_interest_rate_graph(n):
      Input("nasdaq-weight", "value"),
      Input("data-ppi-weight", "value"),
      Input("software-ppi-weight", "value"),
-     Input("interest-rate-weight", "value")],
+     Input("interest-rate-weight", "value"),
+     Input("treasury-yield-weight", "value")],
     [State("document-data-store", "data")]
 )
-def update_total_weight(gdp, unemployment, cpi, nasdaq, data_ppi, software_ppi, interest_rate, document_data_store):
+def update_total_weight(gdp, unemployment, cpi, nasdaq, data_ppi, software_ppi, interest_rate, treasury_yield, document_data_store):
     # Get document weight if it exists
     document_weight = 0
     if document_data_store and isinstance(document_data_store, dict) and 'weight' in document_data_store:
         document_weight = float(document_data_store['weight'])
     
     # Calculate total of economic indicators only
-    economic_indicators_total = gdp + unemployment + cpi + nasdaq + data_ppi + software_ppi + interest_rate
+    economic_indicators_total = gdp + unemployment + cpi + nasdaq + data_ppi + software_ppi + interest_rate + treasury_yield
     
     # If document weight is present, the economic indicators should sum to (100 - document_weight)
     if document_weight > 0:
@@ -1960,12 +1961,13 @@ def update_total_weight(gdp, unemployment, cpi, nasdaq, data_ppi, software_ppi, 
      State("data-ppi-weight", "value"),
      State("software-ppi-weight", "value"),
      State("interest-rate-weight", "value"),
+     State("treasury-yield-weight", "value"),
      State("proprietary-data-store", "data"),
      State("document-data-store", "data")],
     prevent_initial_call=True
 )
 def apply_custom_weights(n_clicks, gdp, unemployment, cpi, nasdaq, 
-                         data_ppi, software_ppi, interest_rate, proprietary_data, document_data):
+                         data_ppi, software_ppi, interest_rate, treasury_yield, proprietary_data, document_data):
     if n_clicks is None:
         # Initial load, use default weights
         sentiment_index = calculate_sentiment_index(proprietary_data=proprietary_data, document_data=document_data)
@@ -1978,7 +1980,7 @@ def apply_custom_weights(n_clicks, gdp, unemployment, cpi, nasdaq,
         document_weight = max(0, min(50, document_weight))  # Enforce 0-50% range
     
     # Create custom weights dictionary
-    total_economic_weight = gdp + unemployment + cpi + nasdaq + data_ppi + software_ppi + interest_rate
+    total_economic_weight = gdp + unemployment + cpi + nasdaq + data_ppi + software_ppi + interest_rate + treasury_yield
     
     # If total economic weight plus document weight isn't 100%, adjust the economic indicators
     if abs(total_economic_weight + document_weight - 100) > 0.1:
@@ -1994,6 +1996,7 @@ def apply_custom_weights(n_clicks, gdp, unemployment, cpi, nasdaq,
         data_ppi = data_ppi * scaling_factor
         software_ppi = software_ppi * scaling_factor
         interest_rate = interest_rate * scaling_factor
+        treasury_yield = treasury_yield * scaling_factor
     
     custom_weights = {
         'GDP % Change': gdp,
@@ -2002,7 +2005,8 @@ def apply_custom_weights(n_clicks, gdp, unemployment, cpi, nasdaq,
         'NASDAQ Trend': nasdaq,
         'PPI: Data Processing Services': data_ppi,
         'PPI: Software Publishers': software_ppi,
-        'Federal Funds Rate': interest_rate
+        'Federal Funds Rate': interest_rate,
+        'Treasury Yield': treasury_yield
     }
     
     # Calculate using both custom weights and document data
@@ -2219,6 +2223,7 @@ def initialize_sentiment_index(_):
      Output("data-ppi-weight", "value", allow_duplicate=True),
      Output("software-ppi-weight", "value", allow_duplicate=True),
      Output("interest-rate-weight", "value", allow_duplicate=True),
+     Output("treasury-yield-weight", "value", allow_duplicate=True),
      # Debug output
      Output("document-weight-debug", "children")],
     [Input("document-weight", "value"),
@@ -2231,11 +2236,12 @@ def initialize_sentiment_index(_):
      State("nasdaq-weight", "value"),
      State("data-ppi-weight", "value"),
      State("software-ppi-weight", "value"),
-     State("interest-rate-weight", "value")],
+     State("interest-rate-weight", "value"),
+     State("treasury-yield-weight", "value")],
     prevent_initial_call=True
 )
 def update_document_weight_display(weight, contents, n_clicks, document_data,
-                                gdp, unemployment, cpi, nasdaq, data_ppi, software_ppi, interest_rate):
+                                gdp, unemployment, cpi, nasdaq, data_ppi, software_ppi, interest_rate, treasury_yield):
     ctx = dash.callback_context  # Get the callback context to determine what triggered the callback
     trigger_id = ctx.triggered[0]['prop_id'].split('.')[0] if ctx.triggered else None
     
