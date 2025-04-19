@@ -2058,18 +2058,27 @@ def update_document_preview(contents, filename):
 @app.callback(
     [Output("document-data-store", "data"),
      Output("sentiment-score", "children", allow_duplicate=True),
-     Output("sentiment-category", "children", allow_duplicate=True)],
+     Output("sentiment-category", "children", allow_duplicate=True),
+     Output("total-weight", "children", allow_duplicate=True)],
     [Input("apply-document", "n_clicks")],
     [State("document-weight", "value"),
      State("upload-document", "contents"),
      State("upload-document", "filename"),
      State("custom-weights-store", "data"),
-     State("proprietary-data-store", "data")],
+     State("proprietary-data-store", "data"),
+     State("gdp-weight", "value"),
+     State("unemployment-weight", "value"),
+     State("cpi-weight", "value"),
+     State("nasdaq-weight", "value"),
+     State("data-ppi-weight", "value"),
+     State("software-ppi-weight", "value"),
+     State("interest-rate-weight", "value")],
     prevent_initial_call=True
 )
-def apply_document_analysis(n_clicks, weight, contents, filename, custom_weights, proprietary_data):
+def apply_document_analysis(n_clicks, weight, contents, filename, custom_weights, proprietary_data,
+                          gdp, unemployment, cpi, nasdaq, data_ppi, software_ppi, interest_rate):
     if n_clicks is None or contents is None:
-        return None, dash.no_update, dash.no_update
+        return None, dash.no_update, dash.no_update, dash.no_update
     
     try:
         # Decode the file contents
@@ -2105,13 +2114,28 @@ def apply_document_analysis(n_clicks, weight, contents, filename, custom_weights
                 if abs(total_weight - 100) > 0.1:
                     print(f"WARNING: Weights don't sum to 100%, but {total_weight}%")
             
-            return document_data, f"{sentiment_index['score']:.1f}" if sentiment_index else "N/A", sentiment_index['category'] if sentiment_index else "N/A"
+            # Calculate total weight display
+            economic_indicators_total = gdp + unemployment + cpi + nasdaq + data_ppi + software_ppi + interest_rate
+            target_economic_total = 100 - weight
+            
+            # Format message for total weight
+            message = f"Economic Indicators: {economic_indicators_total:.1f}% (target: {target_economic_total:.1f}%), Document: {weight:.1f}%, Total: {economic_indicators_total + weight:.1f}%"
+            
+            # Change color based on if economic indicators sum to the target
+            if abs(economic_indicators_total - target_economic_total) < 0.1:
+                color = "green"
+            else:
+                color = "red"
+                
+            total_weight_display = html.Span(message, style={"color": color})
+            
+            return document_data, f"{sentiment_index['score']:.1f}" if sentiment_index else "N/A", sentiment_index['category'] if sentiment_index else "N/A", total_weight_display
         else:
             # Document processing failed
-            return None, dash.no_update, dash.no_update
+            return None, dash.no_update, dash.no_update, dash.no_update
     except Exception as e:
         print(f"Error applying document analysis: {str(e)}")
-        return None, dash.no_update, dash.no_update
+        return None, dash.no_update, dash.no_update, dash.no_update
 
 # Add this at the end of the file if running directly
 if __name__ == "__main__":
