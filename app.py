@@ -231,21 +231,37 @@ def calculate_sentiment_index(custom_weights=None, proprietary_data=None, docume
     # Use custom weights if provided, otherwise use defaults
     weights = custom_weights if custom_weights else default_weights.copy()
     
-    # Adjust weights for proprietary data if provided
-    if proprietary_data and 'value' in proprietary_data and 'weight' in proprietary_data:
-        # Add proprietary data to weights
-        proprietary_weight = proprietary_data['weight']
+    # Collect the extra weights (proprietary data and document sentiment)
+    extra_weights = 0
+    
+    # Get document weight if available
+    document_weight = 0
+    if document_data and 'value' in document_data and 'weight' in document_data:
+        document_weight = float(document_data['weight'])
+        extra_weights += document_weight
         
-        # Normalize other weights to make room for proprietary data
+    # Get proprietary data weight if available
+    proprietary_weight = 0
+    if proprietary_data and 'value' in proprietary_data and 'weight' in proprietary_data:
+        proprietary_weight = float(proprietary_data['weight'])
+        extra_weights += proprietary_weight
+    
+    # Normalize core indicator weights if we have extra weights to add
+    if extra_weights > 0:
+        total_original_weight = sum(weights.values())
+        scaling_factor = (100 - extra_weights) / total_original_weight
+        
+        # Scale down each indicator weight proportionally
+        for key in weights:
+            weights[key] = weights[key] * scaling_factor
+        
+        # Add proprietary data weight if available
         if proprietary_weight > 0:
-            total_original_weight = sum(weights.values())
-            scaling_factor = (total_original_weight - proprietary_weight) / total_original_weight
-            
-            for key in weights:
-                weights[key] = weights[key] * scaling_factor
-                
-            # Add proprietary data weight
             weights['Proprietary Data'] = proprietary_weight
+            
+        # Add document sentiment weight if available
+        if document_weight > 0:
+            weights['Document Sentiment'] = document_weight
     
     sentiment_components = []
     
@@ -843,130 +859,67 @@ app.layout = html.Div([
                 ], className="weights-container")
             ], className="card weights-card"),
             
-            # Proprietary Data Upload
+            # Document Analysis Card
             html.Div([
-                html.H3("Upload Proprietary Data", className="card-title"),
+                html.H3("Document Sentiment Analysis", className="card-title"),
                 
-                # Tabs for different data input types
-                dcc.Tabs([
-                    # Tab 1: Numeric data upload
-                    dcc.Tab(label="Numeric Data", children=[
-                        html.Div([
-                            html.P("Upload numeric data (CSV, Excel) to incorporate into the sentiment index.", 
-                                   className="upload-text"),
-                            dcc.Upload(
-                                id="upload-data",
-                                children=html.Div([
-                                    "Drag and Drop or ",
-                                    html.A("Select Files", className="upload-link")
-                                ]),
-                                style={
-                                    'width': '100%',
-                                    'height': '60px',
-                                    'lineHeight': '60px',
-                                    'borderWidth': '1px',
-                                    'borderStyle': 'dashed',
-                                    'borderRadius': '5px',
-                                    'textAlign': 'center',
-                                    'margin': '10px 0px'
-                                },
-                                multiple=False
-                            ),
-                            
-                            # Uploaded data preview
-                            html.Div(id="upload-preview"),
-                            
-                            # Proprietary data weight
-                            html.Div([
-                                html.Label("Proprietary Data Weight", className="prop-label"),
-                                dcc.Slider(
-                                    id="proprietary-weight",
-                                    min=0,
-                                    max=50,
-                                    step=1,
-                                    value=0,
-                                    marks={0: "0%", 25: "25%", 50: "50%"},
-                                    className="weight-slider"
-                                ),
-                            ], className="prop-weight-control"),
-                            
-                            # Proprietary data value (score 0-100)
-                            html.Div([
-                                html.Label("Proprietary Data Score (0-100)", className="prop-label"),
-                                dcc.Input(
-                                    id="proprietary-value",
-                                    type="number",
-                                    min=0,
-                                    max=100,
-                                    value=50,
-                                    className="prop-value-input"
-                                ),
-                            ], className="prop-value-control"),
-                            
-                            html.Button("Apply Proprietary Data", id="apply-proprietary", className="apply-button"),
-                        ], className="upload-container")
-                    ], className="custom-tab", selected_className="custom-tab--selected"),
+                # Document upload container
+                html.Div([
+                    html.P(
+                        "Upload documents (PDF, DOCX, TXT) for sentiment analysis. "
+                        "Earnings call transcripts, financial reports, and other text documents "
+                        "will be analyzed for financial sentiment and incorporated into the index.",
+                        className="tab-description"
+                    ),
                     
-                    # Tab 2: Document upload for sentiment analysis
-                    dcc.Tab(label="Document Analysis", children=[
-                        html.Div([
-                            html.P(
-                                "Upload documents (PDF, DOCX, TXT) for sentiment analysis. "
-                                "Earnings call transcripts, financial reports, and other text documents "
-                                "will be analyzed for financial sentiment and incorporated into the index.",
-                                className="tab-description"
-                            ),
-                            
-                            # Document upload component
-                            dcc.Upload(
-                                id="upload-document",
-                                children=html.Div([
-                                    "Drag and Drop or ",
-                                    html.A("Select Document", className="upload-link")
-                                ]),
-                                style={
-                                    'width': '100%',
-                                    'height': '60px',
-                                    'lineHeight': '60px',
-                                    'borderWidth': '1px',
-                                    'borderStyle': 'dashed',
-                                    'borderRadius': '5px',
-                                    'textAlign': 'center',
-                                    'margin': '10px 0px'
-                                },
-                                multiple=False
-                            ),
-                            
-                            # Document analysis preview
-                            html.Div(id="document-preview", className="document-preview"),
-                            
-                            # Document data weight
-                            html.Div([
-                                html.Label("Document Sentiment Weight", className="prop-label"),
-                                dcc.Slider(
-                                    id="document-weight",
-                                    min=0,
-                                    max=50,
-                                    step=1,
-                                    value=20,
-                                    marks={
-                                        0: '0%',
-                                        10: '10%',
-                                        20: '20%',
-                                        30: '30%',
-                                        40: '40%',
-                                        50: '50%'
-                                    },
-                                    className="weight-slider"
-                                ),
-                                html.Div(id="document-weight-display", className="weight-display")
-                            ], className="slider-container"),
-                            
-                            # Apply button
-                            html.Button("Apply Document Analysis", id="apply-document", className="apply-button"),
-                        ], className="upload-container")
-                    ], className="custom-tab", selected_className="custom-tab--selected"),
-                ], className="custom-tabs"),
+                    # Document upload component
+                    dcc.Upload(
+                        id="upload-document",
+                        children=html.Div([
+                            "Drag and Drop or ",
+                            html.A("Select Document", className="upload-link")
+                        ]),
+                        style={
+                            'width': '100%',
+                            'height': '60px',
+                            'lineHeight': '60px',
+                            'borderWidth': '1px',
+                            'borderStyle': 'dashed',
+                            'borderRadius': '5px',
+                            'textAlign': 'center',
+                            'margin': '10px 0px'
+                        },
+                        multiple=False
+                    ),
+                    
+                    # Document analysis preview
+                    html.Div(id="document-preview", className="document-preview"),
+                    
+                    # Document data weight
+                    html.Div([
+                        html.Label("Document Sentiment Weight", className="prop-label"),
+                        dcc.Slider(
+                            id="document-weight",
+                            min=0,
+                            max=50,
+                            step=1,
+                            value=20,
+                            marks={
+                                0: '0%',
+                                10: '10%',
+                                20: '20%',
+                                30: '30%',
+                                40: '40%',
+                                50: '50%'
+                            },
+                            className="weight-slider"
+                        ),
+                        html.Div(id="document-weight-display", className="weight-display")
+                    ], className="slider-container"),
+                    
+                    # Apply button
+                    html.Button("Apply Document Analysis", id="apply-document", className="apply-button"),
+                ], className="upload-container")
             ], className="card upload-card"),
             
         ], className="column left-column"),
