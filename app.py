@@ -220,12 +220,13 @@ def calculate_sentiment_index(custom_weights=None, proprietary_data=None, docume
     """
     # Default weights (equal percentages that sum to 100%)
     default_weights = {
-        'Real GDP % Change': 12,
-        'Unemployment Rate': 12,
-        'CPI': 12,
-        'NASDAQ Trend': 12,
-        'PPI: Data Processing Services': 11,
-        'PPI: Software Publishers': 11,
+        'Real GDP % Change': 10,
+        'PCE': 10,
+        'Unemployment Rate': 10,
+        'CPI': 10,
+        'NASDAQ Trend': 10,
+        'PPI: Data Processing Services': 10,
+        'PPI: Software Publishers': 10,
         'Federal Funds Rate': 10,
         'Treasury Yield': 10,
         'VIX Volatility': 10
@@ -320,6 +321,18 @@ def calculate_sentiment_index(custom_weights=None, proprietary_data=None, docume
             'value': latest_inf['inflation'],
             'score': inf_score,
             'weight': weights['CPI']
+        })
+    
+    # 3.5 PCE Growth - positive growth is good, but too high could signal inflation
+    if not pce_data.empty and 'yoy_growth' in pce_data.columns:
+        latest_pce = pce_data.sort_values('date', ascending=False).iloc[0]
+        # Ideal PCE growth around 2-3%, too high signals inflation, too low signals weak demand
+        pce_score = min(max(100 - abs(latest_pce['yoy_growth'] - 2.5) * 10, 0), 100)  # Scale: 0 to 100
+        sentiment_components.append({
+            'indicator': 'PCE',
+            'value': latest_pce['yoy_growth'],
+            'score': pce_score,
+            'weight': weights['PCE']
         })
     
     # 4. Market Performance - NASDAQ recent trend
@@ -877,6 +890,18 @@ app.layout = html.Div([
                     html.Div(id="gdp-trend", className="indicator-trend")
                 ], className="indicator"),
                 
+                # PCE
+                html.Div([
+                    html.Div([
+                        html.H4("PCE Growth"),
+                        html.P(id="pce-value", 
+                              children=f"{pce_data.sort_values('date', ascending=False).iloc[0]['yoy_growth']:.2f}%" 
+                              if not pce_data.empty and 'yoy_growth' in pce_data.columns else "N/A",
+                              className="indicator-value")
+                    ], className="indicator-text"),
+                    html.Div(id="pce-trend", className="indicator-trend")
+                ], className="indicator"),
+                
                 # Unemployment
                 html.Div([
                     html.Div([
@@ -985,7 +1010,20 @@ app.layout = html.Div([
                             min=0,
                             max=30,
                             step=1,
-                            value=11,
+                            value=10,
+                            marks={0: "0%", 15: "15%", 30: "30%"},
+                            className="weight-slider"
+                        ),
+                    ], className="weight-control"),
+                    
+                    html.Div([
+                        html.Label("PCE"),
+                        dcc.Slider(
+                            id="pce-weight",
+                            min=0,
+                            max=30,
+                            step=1,
+                            value=10,
                             marks={0: "0%", 15: "15%", 30: "30%"},
                             className="weight-slider"
                         ),
