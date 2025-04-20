@@ -318,6 +318,43 @@ def calculate_sentiment_index(custom_weights=None, proprietary_data=None, docume
             'weight': weights['Unemployment Rate']
         })
     
+    # 3. Software Job Postings - higher YoY growth is better for tech sector
+    if not job_postings_data.empty and 'yoy_growth' in job_postings_data.columns:
+        latest_job_posting = job_postings_data.sort_values('date', ascending=False).iloc[0]
+        
+        # Score based on YoY growth rate:
+        # > 20%: Excellent (90-100)
+        # 5-20%: Good (70-90)
+        # 0-5%: Moderate (50-70)
+        # -5-0%: Concerning (30-50)
+        # -20-(-5)%: Poor (10-30)
+        # < -20%: Very Poor (0-10)
+        
+        growth_rate = latest_job_posting['yoy_growth']
+        
+        if growth_rate >= 20:
+            job_posting_score = 90 + (min(growth_rate - 20, 10) / 10) * 10  # 90-100
+        elif growth_rate >= 5:
+            job_posting_score = 70 + ((growth_rate - 5) / 15) * 20  # 70-90
+        elif growth_rate >= 0:
+            job_posting_score = 50 + (growth_rate / 5) * 20  # 50-70
+        elif growth_rate >= -5:
+            job_posting_score = 30 + ((growth_rate + 5) / 5) * 20  # 30-50
+        elif growth_rate >= -20:
+            job_posting_score = 10 + ((growth_rate + 20) / 15) * 20  # 10-30
+        else:
+            job_posting_score = max(0, 10 + (growth_rate + 20))  # 0-10
+            
+        # Ensure score is in 0-100 range
+        job_posting_score = min(max(job_posting_score, 0), 100)
+        
+        sentiment_components.append({
+            'indicator': 'Software Job Postings',
+            'value': growth_rate,
+            'score': job_posting_score,
+            'weight': weights['Software Job Postings']
+        })
+    
     # 3. Inflation - moderate inflation good, high inflation bad
     if not inflation_data.empty and 'inflation' in inflation_data.columns:
         latest_inf = inflation_data.sort_values('date', ascending=False).iloc[0]
@@ -441,42 +478,7 @@ def calculate_sentiment_index(custom_weights=None, proprietary_data=None, docume
             'weight': weights['VIX Volatility']
         })
         
-    # 10. Software Job Postings - higher YoY growth is better for tech sector
-    if not job_postings_data.empty and 'yoy_growth' in job_postings_data.columns:
-        latest_job_posting = job_postings_data.sort_values('date', ascending=False).iloc[0]
-        
-        # Score based on YoY growth rate:
-        # > 20%: Excellent (90-100)
-        # 5-20%: Good (70-90)
-        # 0-5%: Moderate (50-70)
-        # -5-0%: Concerning (30-50)
-        # -20-(-5)%: Poor (10-30)
-        # < -20%: Very Poor (0-10)
-        
-        growth_rate = latest_job_posting['yoy_growth']
-        
-        if growth_rate >= 20:
-            job_posting_score = 90 + (min(growth_rate - 20, 10) / 10) * 10  # 90-100
-        elif growth_rate >= 5:
-            job_posting_score = 70 + ((growth_rate - 5) / 15) * 20  # 70-90
-        elif growth_rate >= 0:
-            job_posting_score = 50 + (growth_rate / 5) * 20  # 50-70
-        elif growth_rate >= -5:
-            job_posting_score = 30 + ((growth_rate + 5) / 5) * 20  # 30-50
-        elif growth_rate >= -20:
-            job_posting_score = 10 + ((growth_rate + 20) / 15) * 20  # 10-30
-        else:
-            job_posting_score = max(0, 10 + (growth_rate + 20))  # 0-10
-            
-        # Ensure score is in 0-100 range
-        job_posting_score = min(max(job_posting_score, 0), 100)
-        
-        sentiment_components.append({
-            'indicator': 'Software Job Postings',
-            'value': growth_rate,
-            'score': job_posting_score,
-            'weight': weights['Software Job Postings']
-        })
+
         
     # 10. Add proprietary data if provided
     if proprietary_data and 'value' in proprietary_data and 'weight' in proprietary_data:
@@ -1594,7 +1596,7 @@ def update_sentiment_components(score, category, custom_weights, document_data):
             value_text = f"{comp['value']:.1f}%"
         elif comp['indicator'] == 'VIX Volatility Index':
             value_text = f"{comp['value']:.1f}"
-        elif 'PPI' in comp['indicator']:
+        elif 'PPI' in comp['indicator'] or comp['indicator'] == 'Software Job Postings':
             value_text = f"{comp['value']:.1f}%"
         elif comp['indicator'] == 'Proprietary Data':
             value_text = f"{comp['value']:.1f}"
@@ -1628,6 +1630,7 @@ def update_sentiment_components(score, category, custom_weights, document_data):
     [Output("gdp-trend", "children"),
      Output("pce-trend", "children"),
      Output("unemployment-trend", "children"),
+     Output("job-postings-trend", "children"),
      Output("inflation-trend", "children"),
      Output("pcepi-trend", "children"),
      Output("interest-rate-trend", "children"),
@@ -1697,6 +1700,28 @@ def update_indicator_trends(n):
                 color = "trend-up" if icon == "↑" else "trend-down"  # Green for up, Red for down
             
             unemployment_trend = html.Div([
+                html.Span(icon, className=f"trend-icon {color}"),
+                html.Span(f"{abs(change):.1f}%", className="trend-value")
+            ], className="trend")
+    
+    # Software Job Postings Trend
+    job_postings_trend = html.Div("No data", className="trend-value")
+    if not job_postings_data.empty and 'yoy_growth' in job_postings_data.columns:
+        sorted_job_postings = job_postings_data.sort_values('date', ascending=False)
+        if len(sorted_job_postings) >= 2:
+            current = sorted_job_postings.iloc[0]['yoy_growth']
+            previous = sorted_job_postings.iloc[1]['yoy_growth']
+            change = current - previous
+            
+            # First, always show the actual direction of change
+            if abs(change) < 0.1:  # Very small change
+                icon = "→"
+                color = "trend-neutral"  # Black for sideways arrows
+            else:
+                icon = "↑" if change > 0 else "↓"
+                color = "trend-up" if icon == "↑" else "trend-down"  # Green for up, Red for down
+            
+            job_postings_trend = html.Div([
                 html.Span(icon, className=f"trend-icon {color}"),
                 html.Span(f"{abs(change):.1f}%", className="trend-value")
             ], className="trend")
@@ -1881,7 +1906,7 @@ def update_indicator_trends(n):
                 html.Span(f"{abs(change):.2f}", className="trend-value")
             ], className="trend")
     
-    return gdp_trend, pce_trend, unemployment_trend, inflation_trend, pcepi_trend, interest_rate_trend, nasdaq_trend, software_ppi_trend, data_ppi_trend, treasury_yield_trend, vix_trend
+    return gdp_trend, pce_trend, unemployment_trend, job_postings_trend, inflation_trend, pcepi_trend, interest_rate_trend, nasdaq_trend, software_ppi_trend, data_ppi_trend, treasury_yield_trend, vix_trend
 
 # Update GDP Graph function (generates figure only)
 def update_gdp_graph(n):
