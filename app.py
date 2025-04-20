@@ -1042,6 +1042,18 @@ app.layout = html.Div([
                     html.Div(id="unemployment-trend", className="indicator-trend")
                 ], className="indicator"),
                 
+                # Software Job Postings
+                html.Div([
+                    html.Div([
+                        html.H4("Software Job Postings"),
+                        html.P(id="job-postings-value", 
+                              children=f"{job_postings_data.sort_values('date', ascending=False).iloc[0]['yoy_growth']:.1f}%" 
+                              if not job_postings_data.empty and 'yoy_growth' in job_postings_data.columns else "N/A",
+                              className="indicator-value")
+                    ], className="indicator-text"),
+                    html.Div(id="job-postings-trend", className="indicator-trend")
+                ], className="indicator"),
+                
                 # Inflation
                 html.Div([
                     html.Div([
@@ -1183,6 +1195,19 @@ app.layout = html.Div([
                     ], className="weight-control"),
                     
                     html.Div([
+                        html.Label("Software Job Postings"),
+                        dcc.Slider(
+                            id="job-postings-weight",
+                            min=0,
+                            max=30,
+                            step=0.1,
+                            value=8.33,
+                            marks={0: "0%", 15: "15%", 30: "30%"},
+                            className="weight-slider"
+                        ),
+                    ], className="weight-control"),
+                    
+                    html.Div([
                         html.Label("CPI"),
                         dcc.Slider(
                             id="cpi-weight",
@@ -1281,19 +1306,6 @@ app.layout = html.Div([
                             max=30,
                             step=0.1,
                             value=8.33,
-                            marks={0: "0%", 15: "15%", 30: "30%"},
-                            className="weight-slider"
-                        ),
-                    ], className="weight-control"),
-                    
-                    html.Div([
-                        html.Label("Software Job Postings"),
-                        dcc.Slider(
-                            id="job-postings-weight",
-                            min=0,
-                            max=30,
-                            step=0.1,
-                            value=8.37,
                             marks={0: "0%", 15: "15%", 30: "30%"},
                             className="weight-slider"
                         ),
@@ -3201,7 +3213,7 @@ def apply_custom_weights(n_clicks, gdp, pce, unemployment, cpi, pcepi, nasdaq,
         'Federal Funds Rate': interest_rate,
         'Treasury Yield': treasury_yield,
         'VIX Volatility': vix,
-        'Job Postings': job_postings
+        'Software Job Postings': job_postings
     }
     
     # Calculate using both custom weights and document data
@@ -3475,6 +3487,7 @@ def initialize_sentiment_index(_):
      Output("interest-rate-weight", "value", allow_duplicate=True),
      Output("treasury-yield-weight", "value", allow_duplicate=True),
      Output("vix-weight", "value", allow_duplicate=True),
+     Output("job-postings-weight", "value", allow_duplicate=True),
      # Debug output
      Output("document-weight-debug", "children")],
     [Input("document-weight", "value"),
@@ -3520,12 +3533,17 @@ def update_document_weight_display(weight, contents, n_clicks, document_data,
             dash.no_update, 
             dash.no_update, 
             dash.no_update, 
+            dash.no_update, 
+            dash.no_update, 
+            dash.no_update, 
+            dash.no_update,
+            dash.no_update, 
             dash.no_update
         )
     
     # Document is uploaded and processed, allow weight adjustment
     remaining = 100 - weight
-    economic_indicators_total = gdp + pce + unemployment + cpi + pcepi + nasdaq + data_ppi + software_ppi + interest_rate + treasury_yield + vix_weight
+    economic_indicators_total = gdp + pce + unemployment + cpi + pcepi + nasdaq + data_ppi + software_ppi + interest_rate + treasury_yield + vix_weight + job_postings_weight
     
     # Default return values (no changes)
     updated_data = dash.no_update
@@ -3573,15 +3591,17 @@ def update_document_weight_display(weight, contents, n_clicks, document_data,
             new_interest_rate = round(interest_rate * scaling_factor, 1)
             new_treasury_yield = round(treasury_yield * scaling_factor, 1)
             new_vix = round(vix_weight * scaling_factor, 1)
+            new_job_postings = round(job_postings_weight * scaling_factor, 1)
             
-            # Debug print for VIX weight calculation
+            # Debug print for weight calculations
             print(f"VIX weight calculation: {vix_weight} * {scaling_factor} = {new_vix}")
+            print(f"Job Postings weight calculation: {job_postings_weight} * {scaling_factor} = {new_job_postings}")
             
             # If rounding causes total to be off by 1, adjust the largest value
-            new_total = new_gdp + new_pce + new_unemployment + new_cpi + new_pcepi + new_nasdaq + new_data_ppi + new_software_ppi + new_interest_rate + new_treasury_yield + new_vix
+            new_total = new_gdp + new_pce + new_unemployment + new_cpi + new_pcepi + new_nasdaq + new_data_ppi + new_software_ppi + new_interest_rate + new_treasury_yield + new_vix + new_job_postings
             if new_total != remaining_weight:
                 # Find the largest value and adjust it
-                values = [new_gdp, new_pce, new_unemployment, new_cpi, new_pcepi, new_nasdaq, new_data_ppi, new_software_ppi, new_interest_rate, new_treasury_yield, new_vix]
+                values = [new_gdp, new_pce, new_unemployment, new_cpi, new_pcepi, new_nasdaq, new_data_ppi, new_software_ppi, new_interest_rate, new_treasury_yield, new_vix, new_job_postings]
                 max_index = values.index(max(values))
                 if max_index == 0:
                     new_gdp += (remaining_weight - new_total)
@@ -3603,6 +3623,8 @@ def update_document_weight_display(weight, contents, n_clicks, document_data,
                     new_treasury_yield += (remaining_weight - new_total)
                 elif max_index == 9:
                     new_vix += (remaining_weight - new_total)
+                elif max_index == 10:
+                    new_job_postings += (remaining_weight - new_total)
     
     # Create the document weight display
     doc_weight_display = html.Div([
@@ -3629,13 +3651,14 @@ def update_document_weight_display(weight, contents, n_clicks, document_data,
         new_pce,
         new_unemployment, 
         new_cpi, 
-        new_pcepi,  # This output was missing!
+        new_pcepi,
         new_nasdaq, 
         new_data_ppi, 
         new_software_ppi, 
         new_interest_rate,
         new_treasury_yield,
         new_vix,
+        new_job_postings,
         debug_info
     )
 
@@ -3711,12 +3734,12 @@ def apply_document_analysis(n_clicks, weight, contents, filename, custom_weights
     # Document weight should not be applied until a document is uploaded and analyzed
     if n_clicks is None:
         # Return document weight of 0 and no updates to other components
-        return {'weight': 0, 'value': 0}, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update
+        return {'weight': 0, 'value': 0}, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update
         
     # Document content is required
     if contents is None:
         error_message = html.Div("No document uploaded. Upload a document first.", style={"color": "red"})
-        return None, error_message, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update
+        return None, error_message, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update
     
     try:
         # Decode the file contents
@@ -3894,12 +3917,12 @@ def apply_document_analysis(n_clicks, weight, contents, filename, custom_weights
             # Document processing failed
             error_message = html.Div(f"Error: {result['message']}", style={"color": "red"})
             # Return all dash.no_update for the economic indicators
-            return None, error_message, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update
+            return None, error_message, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update
     except Exception as e:
         print(f"Error applying document analysis: {str(e)}")
         error_message = html.Div(f"Error processing document: {str(e)}", style={"color": "red"})
         # Return all dash.no_update for the economic indicators
-        return None, error_message, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update
+        return None, error_message, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update
 
 # Update VIX Graph (This function now only generates the figure)
 def update_vix_graph(n):
