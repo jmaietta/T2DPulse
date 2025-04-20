@@ -497,6 +497,7 @@ def parse_uploaded_data(contents, filename):
 # Pre-load all data at startup
 print("Loading economic data...")
 gdp_data = load_data_from_csv('gdp_data.csv')
+pce_data = load_data_from_csv('pce_data.csv')
 unemployment_data = load_data_from_csv('unemployment_data.csv')
 inflation_data = load_data_from_csv('inflation_data.csv')
 interest_rate_data = load_data_from_csv('interest_rate_data.csv')
@@ -695,6 +696,39 @@ if treasury_yield_data.empty or (datetime.now() - pd.to_datetime(treasury_yield_
         print(f"Treasury yield data updated with {len(treasury_yield_data)} observations")
     else:
         print("Failed to fetch treasury yield data")
+
+# Add Personal Consumption Expenditures (PCE) data
+if pce_data.empty or (datetime.now() - pd.to_datetime(pce_data['date'].max() if not pce_data.empty else '2000-01-01')).days > 30:
+    # Fetch PCE data (PCE)
+    pce_temp = fetch_fred_data('PCE')
+    
+    if not pce_temp.empty:
+        # Calculate year-over-year growth
+        pce_temp = pce_temp.sort_values('date')
+        
+        # Create a dataframe shifted by 12 months to calculate YoY change
+        pce_yoy = pce_temp.copy()
+        pce_yoy['date'] = pce_yoy['date'] + pd.DateOffset(months=12)
+        pce_yoy = pce_yoy.rename(columns={'value': 'year_ago_value'})
+        
+        # Merge current and year-ago values
+        pce_data = pd.merge(
+            pce_temp, 
+            pce_yoy[['date', 'year_ago_value']], 
+            on='date', 
+            how='left'
+        )
+        
+        # Calculate YoY growth
+        pce_data['yoy_growth'] = ((pce_data['value'] - pce_data['year_ago_value']) / 
+                               pce_data['year_ago_value'] * 100)
+        
+        # Save data
+        save_data_to_csv(pce_data, 'pce_data.csv')
+        
+        print(f"PCE data updated with {len(pce_data)} observations")
+    else:
+        print("Failed to fetch PCE data")
 
 # Add VIX volatility index data
 vix_data = load_data_from_csv('vix_data.csv')
@@ -1142,11 +1176,15 @@ app.layout = html.Div([
         html.Div([
             # Tabs for different graph groups
             dcc.Tabs([
-                # Real GDP Tab
-                dcc.Tab(label="Real GDP", children=[
+                # Real GDP & PCE Tab
+                dcc.Tab(label="Real GDP & PCE", children=[
                     html.Div([
                         html.H3("Real GDP Growth (YoY %)", className="graph-title"),
                         dcc.Graph(id="gdp-graph")
+                    ], className="graph-container"),
+                    html.Div([
+                        html.H3("Personal Consumption Expenditures (YoY %)", className="graph-title"),
+                        dcc.Graph(id="pce-graph")
                     ], className="graph-container")
                 ], className="custom-tab", selected_className="custom-tab--selected"),
                 
@@ -1595,6 +1633,58 @@ def update_gdp_graph(n):
     
     # Add recession shading (if data available)
     # This would require recession date data which is not included
+    
+    # Update layout
+    fig.update_layout(
+        height=400,
+        margin=dict(l=40, r=40, t=40, b=40),
+        xaxis_title="",
+        yaxis_title="Year-over-Year % Change",
+        yaxis=dict(
+            ticksuffix="%",
+            zeroline=True,
+            zerolinecolor='rgba(0,0,0,0.2)',
+        ),
+        hovermode="x unified",
+        legend=dict(
+            orientation="h",
+            yanchor="bottom",
+            y=1.02,
+            xanchor="right",
+            x=1
+        )
+    )
+    
+    return fig
+
+# Update PCE Graph
+@app.callback(
+    Output("pce-graph", "figure"),
+    [Input("interval-component", "n_intervals")]
+)
+def update_pce_graph(n):
+    if pce_data.empty or 'yoy_growth' not in pce_data.columns:
+        return go.Figure().update_layout(
+            title="No data available",
+            height=400
+        )
+    
+    # Filter for last 5 years
+    cutoff_date = datetime.now() - timedelta(days=5*365)
+    filtered_data = pce_data[pce_data['date'] >= cutoff_date].copy()
+    
+    # Create figure
+    fig = go.Figure()
+    
+    # Add PCE Growth line
+    fig.add_trace(go.Scatter(
+        x=filtered_data['date'],
+        y=filtered_data['yoy_growth'],
+        mode='lines+markers',
+        name='PCE Growth (YoY %)',
+        line=dict(color='#e74c3c', width=3),  # Different color from GDP
+        marker=dict(size=8)
+    ))
     
     # Update layout
     fig.update_layout(
