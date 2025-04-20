@@ -2775,7 +2775,7 @@ def update_document_weight_display(weight, contents, n_clicks, document_data,
     
     # Document is uploaded and processed, allow weight adjustment
     remaining = 100 - weight
-    economic_indicators_total = gdp + pce + unemployment + cpi + nasdaq + data_ppi + software_ppi + interest_rate + treasury_yield + vix_weight
+    economic_indicators_total = gdp + pce + unemployment + cpi + pcepi + nasdaq + data_ppi + software_ppi + interest_rate + treasury_yield + vix_weight
     
     # Default return values (no changes)
     updated_data = dash.no_update
@@ -2938,6 +2938,7 @@ def update_document_preview(contents, filename):
      State("pce-weight", "value"),
      State("unemployment-weight", "value"),
      State("cpi-weight", "value"),
+     State("pcepi-weight", "value"),
      State("nasdaq-weight", "value"),
      State("data-ppi-weight", "value"),
      State("software-ppi-weight", "value"),
@@ -2947,7 +2948,7 @@ def update_document_preview(contents, filename):
     prevent_initial_call=True
 )
 def apply_document_analysis(n_clicks, weight, contents, filename, custom_weights, proprietary_data,
-                          gdp, pce, unemployment, cpi, nasdaq, data_ppi, software_ppi, interest_rate, treasury_yield, vix_weight):
+                          gdp, pce, unemployment, cpi, pcepi, nasdaq, data_ppi, software_ppi, interest_rate, treasury_yield, vix_weight):
     # Document weight should not be applied until a document is uploaded and analyzed
     if n_clicks is None:
         # Return document weight of 0 and no updates to other components
@@ -2994,7 +2995,7 @@ def apply_document_analysis(n_clicks, weight, contents, filename, custom_weights
             
             # Calculate appropriate scaling for economic indicators to ensure all weights sum to 100%
             remaining_weight = 100 - weight
-            economic_indicators_total = gdp + pce + unemployment + cpi + nasdaq + data_ppi + software_ppi + interest_rate + treasury_yield + vix_weight
+            economic_indicators_total = gdp + pce + unemployment + cpi + pcepi + nasdaq + data_ppi + software_ppi + interest_rate + treasury_yield + vix_weight
             
             # Check if economic indicators are already the correct sum
             if abs(economic_indicators_total - remaining_weight) < 0.1:
@@ -3064,6 +3065,7 @@ def apply_document_analysis(n_clicks, weight, contents, filename, custom_weights
                 new_pce = round(pce * scaling_factor, 1)
                 new_unemployment = round(unemployment * scaling_factor, 1)
                 new_cpi = round(cpi * scaling_factor, 1)
+                new_pcepi = round(pcepi * scaling_factor, 1)
                 new_nasdaq = round(nasdaq * scaling_factor, 1)
                 new_data_ppi = round(data_ppi * scaling_factor, 1)
                 new_software_ppi = round(software_ppi * scaling_factor, 1)
@@ -3074,11 +3076,11 @@ def apply_document_analysis(n_clicks, weight, contents, filename, custom_weights
                 print(f"Document apply - After scaling: VIX weight = {new_vix}")
                 
                 # If rounding causes total to differ from remaining weight, adjust the largest value
-                new_total = new_gdp + new_pce + new_unemployment + new_cpi + new_nasdaq + new_data_ppi + new_software_ppi + new_interest_rate + new_treasury_yield + new_vix
+                new_total = new_gdp + new_pce + new_unemployment + new_cpi + new_pcepi + new_nasdaq + new_data_ppi + new_software_ppi + new_interest_rate + new_treasury_yield + new_vix
                 print(f"After scaling: economic weights = {new_total:.1f}, remaining weight = {remaining_weight:.1f}")
                 if abs(new_total - remaining_weight) > 0.1:
                     # Find the largest value and adjust it
-                    values = [new_gdp, new_pce, new_unemployment, new_cpi, new_nasdaq, new_data_ppi, new_software_ppi, new_interest_rate, new_treasury_yield, new_vix]
+                    values = [new_gdp, new_pce, new_unemployment, new_cpi, new_pcepi, new_nasdaq, new_data_ppi, new_software_ppi, new_interest_rate, new_treasury_yield, new_vix]
                     max_index = values.index(max(values))
                     if max_index == 0:
                         new_gdp += (remaining_weight - new_total)
@@ -3089,16 +3091,18 @@ def apply_document_analysis(n_clicks, weight, contents, filename, custom_weights
                     elif max_index == 3:
                         new_cpi += (remaining_weight - new_total)
                     elif max_index == 4:
-                        new_nasdaq += (remaining_weight - new_total)
+                        new_pcepi += (remaining_weight - new_total)
                     elif max_index == 5:
-                        new_data_ppi += (remaining_weight - new_total)
+                        new_nasdaq += (remaining_weight - new_total)
                     elif max_index == 6:
-                        new_software_ppi += (remaining_weight - new_total)
+                        new_data_ppi += (remaining_weight - new_total)
                     elif max_index == 7:
-                        new_interest_rate += (remaining_weight - new_total)
+                        new_software_ppi += (remaining_weight - new_total)
                     elif max_index == 8:
-                        new_treasury_yield += (remaining_weight - new_total)
+                        new_interest_rate += (remaining_weight - new_total)
                     elif max_index == 9:
+                        new_treasury_yield += (remaining_weight - new_total)
+                    elif max_index == 10:
                         new_vix += (remaining_weight - new_total)
             else:
                 # No document weight, keep original values
@@ -3106,6 +3110,7 @@ def apply_document_analysis(n_clicks, weight, contents, filename, custom_weights
                 new_pce = pce
                 new_unemployment = unemployment
                 new_cpi = cpi
+                new_pcepi = pcepi
                 new_nasdaq = nasdaq
                 new_data_ppi = data_ppi
                 new_software_ppi = software_ppi
@@ -3120,7 +3125,7 @@ def apply_document_analysis(n_clicks, weight, contents, filename, custom_weights
                 f"{sentiment_index['score']:.1f}" if sentiment_index else "N/A", 
                 sentiment_index['category'] if sentiment_index else "N/A", 
                 total_weight_display,
-                new_gdp, new_pce, new_unemployment, new_cpi, new_nasdaq, new_data_ppi, new_software_ppi, new_interest_rate, new_treasury_yield, new_vix
+                new_gdp, new_pce, new_unemployment, new_cpi, new_pcepi, new_nasdaq, new_data_ppi, new_software_ppi, new_interest_rate, new_treasury_yield, new_vix
             )
         else:
             # Document processing failed
