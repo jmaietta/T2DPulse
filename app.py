@@ -1511,50 +1511,58 @@ def update_sentiment_gauge(score):
     except (ValueError, TypeError):
         score_value = 0
     
-    # Determine color based on score range
+    # Determine color based on score range using the exact HEX values provided
     if score_value >= 80:
-        color = "#006400"  # dark green for Boom (80-100)
-        intensity = "rgba(0, 100, 0, 0.1)"
+        color = "#2ECC71"  # Boom (80-100) - HEX #2ECC71
         category = "Boom"
     elif score_value >= 60:
-        color = "#4CAF50"  # green for Expansion (60-79)
-        intensity = "rgba(76, 175, 80, 0.1)"
+        color = "#F1C40F"  # Expansion (60-79) - HEX #F1C40F
         category = "Expansion"
     elif score_value >= 40:
-        color = "#FFD700"  # gold for Moderate Growth (40-59)
-        intensity = "rgba(255, 215, 0, 0.1)"
+        color = "#E67E22"  # Moderate Growth (40-59) - HEX #E67E22
         category = "Moderate Growth"
     elif score_value >= 20:
-        color = "#FF8C00"  # dark orange for Slowdown (20-39)
-        intensity = "rgba(255, 140, 0, 0.1)"
+        color = "#E74C3C"  # Slowdown (20-39) - HEX #E74C3C
         category = "Slowdown"
     else:
-        color = "#B22222"  # crimson for Contraction (0-19)
-        intensity = "rgba(178, 34, 34, 0.1)"
+        color = "#C0392B"  # Contraction (0-19) - HEX #C0392B
         category = "Contraction"
     
-    # Create a simpler div with just the centered score and category
+    # Create a simpler div that matches the mockup
     return html.Div([
+        html.H3("T2D Pulse Sentiment", 
+                style={
+                    "fontSize": "18px", 
+                    "fontWeight": "normal", 
+                    "marginBottom": "10px", 
+                    "textAlign": "center",
+                    "color": "#333333"
+                }),
         html.Div([
-            html.H3("T2D Pulse Sentiment", 
-                    style={"fontSize": "22px", "fontWeight": "normal", "marginBottom": "15px", "textAlign": "center"}),
-            html.Div([
-                html.Span(f"{score_value:.1f}", 
-                         style={"fontSize": "64px", "fontWeight": "bold", "color": color}),
-            ], style={"textAlign": "center", "paddingBottom": "10px"}),
-            html.Div([
-                html.Span(category, 
-                         style={"fontSize": "22px", "fontWeight": "bold", "color": color})
-            ], style={"textAlign": "center"})
+            html.Span(f"{score_value:.1f}", 
+                    style={
+                        "fontSize": "48px", 
+                        "fontWeight": "bold", 
+                        "color": color,
+                        "display": "block"
+                    }),
+        ], style={"textAlign": "center", "marginBottom": "5px"}),
+        html.Div([
+            html.Span(category, 
+                    style={
+                        "fontSize": "18px", 
+                        "fontWeight": "normal", 
+                        "color": color,
+                        "display": "block"
+                    }),
         ], style={"textAlign": "center"})
     ], style={
         "width": "100%", 
-        "padding": "15px", 
-        "backgroundColor": "white",
-        "borderRadius": "10px",
-        "boxShadow": "0 2px 5px rgba(0,0,0,0.1)",
+        "padding": "20px 15px", 
+        "backgroundColor": "#f8f8f8",  # Light gray background as shown in mockup
+        "borderRadius": "3px",
         "marginBottom": "15px",
-        "background": intensity
+        "boxShadow": "0 1px 3px rgba(0,0,0,0.05)"
     })
 
 # Update sentiment components list
