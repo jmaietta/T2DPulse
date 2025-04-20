@@ -1584,12 +1584,18 @@ def update_sentiment_gauge(score):
             "alignItems": "center",
             "padding": "20px 0"
         }),
-        # Add outer container styling - this is the key change
+        # Add outer container styling with color-matched glow
         style={
             "display": "flex", 
             "alignItems": "center", 
             "justifyContent": "center",
-            "height": "100%"
+            "height": "100%",
+            "backgroundColor": "white",
+            "borderRadius": "8px",
+            "padding": "15px",
+            "boxShadow": f"0 0 15px rgba({int(color[1:3], 16)}, {int(color[3:5], 16)}, {int(color[5:7], 16)}, 0.6)",  # Color-matched glow
+            "border": f"1px solid {color}",  # Color-matched border
+            "transition": "all 0.3s ease"  # Smooth transition when color changes
         }
     )
 
