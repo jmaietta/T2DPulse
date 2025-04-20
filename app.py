@@ -2526,7 +2526,7 @@ def apply_proprietary_data(n_clicks, weight, value, custom_weights, document_dat
 def refresh_data(n_clicks):
     # Define variables as global at the top of the function
     global gdp_data, unemployment_data, inflation_data, interest_rate_data
-    global nasdaq_data, software_ppi_data, data_processing_ppi_data
+    global nasdaq_data, software_ppi_data, data_processing_ppi_data, pcepi_data
     
     if n_clicks is None:
         # Initial load
@@ -2602,6 +2602,33 @@ def refresh_data(n_clicks):
     if not interest_temp.empty:
         interest_rate_data = interest_temp
         save_data_to_csv(interest_rate_data, 'interest_rate_data.csv')
+    
+    # PCEPI (Personal Consumption Expenditures: Chain-type Price Index)
+    pcepi_temp = fetch_fred_data('PCEPI')
+    if not pcepi_temp.empty:
+        # Calculate year-over-year growth
+        pcepi_temp = pcepi_temp.sort_values('date')
+        
+        # Create a dataframe shifted by 12 months to calculate YoY change
+        pcepi_yoy = pcepi_temp.copy()
+        pcepi_yoy['date'] = pcepi_yoy['date'] + pd.DateOffset(months=12)
+        pcepi_yoy = pcepi_yoy.rename(columns={'value': 'year_ago_value'})
+        
+        # Merge current and year-ago values
+        pcepi_data = pd.merge(
+            pcepi_temp, 
+            pcepi_yoy[['date', 'year_ago_value']], 
+            on='date', 
+            how='left'
+        )
+        
+        # Calculate YoY growth
+        pcepi_data['yoy_growth'] = ((pcepi_data['value'] - pcepi_data['year_ago_value']) / 
+                                  pcepi_data['year_ago_value'] * 100)
+        
+        # Save data
+        save_data_to_csv(pcepi_data, 'pcepi_data.csv')
+        print(f"PCEPI data updated with {len(pcepi_data)} observations")
     
     # Also update other datasets
     # NASDAQ
