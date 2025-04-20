@@ -50,6 +50,35 @@ color_scheme = {
 # Market heuristics data
 # This mapping connects indicators to their relevant market heuristics
 market_heuristics = {
+    "fed_funds": [
+        {
+            "trigger": "Rate Hike Cycle",
+            "market_response": "Tech equities pressure, growth stocks underperform",
+            "effect": "negative",
+            "effect_text": "Higher discount rates compress tech valuations",
+            "rationale": "Growth stocks are more sensitive to higher rates",
+            "confidence": "High",
+            "condition": lambda data: len(data) >= 3 and data['value'].iloc[-1] > data['value'].iloc[-2] > data['value'].iloc[-3],
+        },
+        {
+            "trigger": "Fed Pivot (Rates ↓)",
+            "market_response": "Risk assets rally, tech outperforms",
+            "effect": "positive",
+            "effect_text": "Lower rates boost long-duration assets",
+            "rationale": "Tech cash flows are further in the future, benefit from lower discount rates",
+            "confidence": "High",
+            "condition": lambda data: len(data) >= 2 and data['value'].iloc[-1] < data['value'].iloc[-2],
+        },
+        {
+            "trigger": "Rates > 4.5%",
+            "market_response": "Growth capital becomes expensive",
+            "effect": "negative",
+            "effect_text": "Higher funding costs impact tech startups and growth",
+            "rationale": "Expensive debt reduces tech investment and M&A",
+            "confidence": "Medium",
+            "condition": lambda data: data['value'].iloc[-1] > 4.5,
+        },
+    ],
     "treasury_yield": [
         {
             "trigger": "10Y ↑ > 4.0%",

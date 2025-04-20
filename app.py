@@ -1352,7 +1352,7 @@ app.layout = html.Div([
                 dcc.Tab(label="Monetary Policy", children=[
                     html.Div([
                         html.H3("Federal Funds Rate", className="graph-title"),
-                        dcc.Graph(id="interest-rate-graph"),
+                        html.Div(id="interest-rate-container", className="insights-enabled-container"),
                         
                         html.H3("10-Year Treasury Yield", className="graph-title"),
                         html.Div(id="treasury-yield-container", className="insights-enabled-container")
@@ -2372,12 +2372,9 @@ def update_data_ppi_graph(n):
     
     return fig
 
-# Update Interest Rate Graph
-@app.callback(
-    Output("interest-rate-graph", "figure"),
-    [Input("interval-component", "n_intervals")]
-)
+# Update Interest Rate Graph (generates figure only)
 def update_interest_rate_graph(n):
+    """Generate the Federal Funds Rate chart figure"""
     if interest_rate_data.empty:
         return go.Figure().update_layout(
             title="No data available",
@@ -2391,18 +2388,47 @@ def update_interest_rate_graph(n):
     # Create figure
     fig = go.Figure()
     
-    # Add Federal Funds Rate line
+    # Add Federal Funds Rate line with consistent color scheme
     fig.add_trace(go.Scatter(
         x=filtered_data['date'],
         y=filtered_data['value'],
         mode='lines',
         name='Federal Funds Rate',
-        line=dict(color='darkgreen', width=3),
+        line=dict(color=color_scheme["rates"], width=3),
     ))
     
-    # Update layout
+    # Add current value annotation
+    current_value = filtered_data['value'].iloc[-1]
+    previous_value = filtered_data['value'].iloc[-2]
+    change = current_value - previous_value
+    
+    # Using absolute value change (not percentage) to match key indicators
+    arrow_color = color_scheme["positive"] if change < 0 else color_scheme["negative"]
+    arrow_symbol = "▲" if change > 0 else "▼"
+    
+    current_value_annotation = f"Current: {current_value:.2f}% {arrow_symbol} {abs(change):.2f}%"
+    
+    fig.add_annotation(
+        x=0.02,
+        y=0.95,
+        xref="paper",
+        yref="paper",
+        text=current_value_annotation,
+        showarrow=False,
+        font=dict(size=14, color=arrow_color),
+        align="left",
+        bgcolor="rgba(255, 255, 255, 0.9)",
+        bordercolor=arrow_color,
+        borderwidth=1,
+        borderpad=4,
+        opacity=0.9
+    )
+    
+    # Update layout with custom template
     fig.update_layout(
+        template=custom_template,
         height=400,
+        title=None,
         margin=dict(l=40, r=40, t=40, b=40),
         xaxis_title="",
         yaxis_title="Rate (%)",
@@ -2422,6 +2448,29 @@ def update_interest_rate_graph(n):
     )
     
     return fig
+
+# Update Interest Rate Container with chart and insights panel
+@app.callback(
+    Output("interest-rate-container", "children"),
+    [Input("interval-component", "n_intervals")]
+)
+def update_interest_rate_container(n):
+    """Update the Federal Funds Rate container to include both the graph and insights panel"""
+    # Get the chart figure
+    figure = update_interest_rate_graph(n)
+    
+    # Filter data for insights panel
+    cutoff_date = datetime.now() - timedelta(days=5*365)
+    filtered_data = interest_rate_data[interest_rate_data['date'] >= cutoff_date].copy()
+    
+    # Create insights panel with the filtered data
+    insights_panel = create_insights_panel("fed_funds", filtered_data)
+    
+    # Return container with graph and insights panel
+    return [
+        dcc.Graph(id="interest-rate-graph", figure=figure),
+        insights_panel
+    ]
 
 # Update Treasury Yield Graph and Container
 @app.callback(
