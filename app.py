@@ -2785,15 +2785,20 @@ def apply_document_analysis(n_clicks, weight, contents, filename, custom_weights
             remaining_weight = 100 - weight
             economic_indicators_total = gdp + pce + unemployment + cpi + nasdaq + data_ppi + software_ppi + interest_rate + treasury_yield + vix_weight
             
-            # Create a message showing both the document weight and scaled economic indicators weight
-            message = f"Economic Indicators: {remaining_weight:.1f}%, Document: {weight:.1f}%, Total: 100.0%"
-            color = "green"  # Always green since we'll ensure they sum to 100%
+            # Check if economic indicators are already the correct sum
+            if abs(economic_indicators_total - remaining_weight) < 0.1:
+                message = f"Economic Indicators: {economic_indicators_total:.1f}%, Document: {weight:.1f}%, Total: {economic_indicators_total + weight:.1f}%"
+                color = "green"
+            else:
+                # We'll scale the indicators to fix this
+                message = f"Economic Indicators: {remaining_weight:.1f}%, Document: {weight:.1f}%, Total: 100.0%"
+                color = "green"  # Always green since we'll ensure they sum to 100%
                 
             total_weight_display = html.Span(message, style={"color": color})
             
             # Create document analysis preview display
-            sentiment_label = result["full_text_sentiment"]["label"].capitalize()
-            sentiment_score = result["full_text_sentiment"]["score"]
+            sentiment_label = result["full_text_sentiment"]["label"].capitalize() if isinstance(result["full_text_sentiment"], dict) else "Neutral"
+            sentiment_score = float(result["full_text_sentiment"]["score"]) if isinstance(result["full_text_sentiment"], dict) else 50.0
             sentiment_color = "green" if sentiment_score >= 60 else "orange" if sentiment_score >= 40 else "red"
             
             # Create sentiment score display
