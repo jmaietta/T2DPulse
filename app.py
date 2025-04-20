@@ -978,7 +978,7 @@ app.layout = html.Div([
                 # PCEPI
                 html.Div([
                     html.Div([
-                        html.H4("PCEPI (YoY %)"),
+                        html.H4("PCEPI (YoY)"),
                         html.P(id="pcepi-value", 
                               children=f"{pcepi_data.sort_values('date', ascending=False).iloc[0]['yoy_growth']:.1f}%" 
                               if not pcepi_data.empty and 'yoy_growth' in pcepi_data.columns else "N/A",
