@@ -1127,7 +1127,7 @@ app.layout = html.Div([
                             min=0,
                             max=30,
                             step=1,
-                            value=12,
+                            value=10,
                             marks={0: "0%", 15: "15%", 30: "30%"},
                             className="weight-slider"
                         ),
