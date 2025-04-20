@@ -1,0 +1,64 @@
++--------------------------------------------------------------+
+|                   T2D Pulse - Chart Styling                  |
++--------------------------------------------------------------+
+|                                                              |
+|                 10-Year Treasury Yield                       |
+|                                                              |
+|    Current: 4.30% ▲ 0.10%                                    |
+|                                                              |
+|    5% |                                                      |
+|       |                           ______                     |
+|    4% |---------------------------/------\----------------- |
+|       |                         /        \                   |
+|    3% |          ___           /          \                  |
+|       |         /   \         /                              |
+|    2% |________/     \_______/                               |
+|       |                                                      |
+|    1% |                                                      |
+|       |                                                      |
+|    0% +----------------------------------------------        |
+|        Jan'20   Jan'21   Jan'22   Jan'23   Jan'24           |
+|                                                              |
+|    [ Market Insights ▼ ]                                     |
+|   +--------------------------------------------------------+ |
+|   | ● 10Y ↑ > 4.0% - Currently Active                      | |
+|   | Bond prices fall, equity valuations compressed         | |
+|   | Valuation pressure on long-duration tech growth stocks | |
+|   | Rationale: Higher discount rate → lower DCF values     | |
+|   | Confidence: High                                       | |
+|   +--------------------------------------------------------+ |
+|   |                                                        | |
+|   | ○ 10Y ↓ < 3.0%                                         | |
+|   | Risk-on rally, multiple expansion                      | |
+|   | Tailwind for tech stocks                               | |
+|   | Rationale: Lower discount rates boost valuations       | |
+|   | Confidence: High                                       | |
+|   +--------------------------------------------------------+ |
+|   |                                                        | |
+|   | ○ Fed Hike Surprise                                    | |
+|   | Equities sell off, dollar strengthens                  | |
+|   | Rotation out of tech                                   | |
+|   | Rationale: Signals hawkish Fed, rate-sensitive hurt    | |
+|   | Confidence: High                                       | |
+|   +--------------------------------------------------------+ |
+|                                                              |
++--------------------------------------------------------------+
+
+Key Styling Features:
+1. Consistent green color theme for interest rate indicators
+2. Clear threshold line at 4.0% with annotation
+3. Neutral range shading (2-4%)
+4. Current value with trend indicator in top-left
+5. Expandable insights panel with active/inactive state indicators
+6. Color-coded effect indicators (red/green dots)
+7. Highlighted currently active condition (first card)
+8. Clean, modern layout with appropriate spacing
+9. All text properly aligned and sized for readability
+
+Insights Panel Features:
+1. Collapsible to save space when not needed
+2. Card-based layout for each market heuristic
+3. Visual indicators of positive/negative tech impact
+4. Clear highlighting of currently active conditions
+5. Formatted to match chart styling
+6. Includes trigger, market response, effect, rationale and confidence
