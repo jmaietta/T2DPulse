@@ -911,25 +911,29 @@ app.layout = html.Div([
     
     # Top Section - Sentiment Index
     html.Div([
-        # Store the sentiment score and category in visible elements that can be referenced by callbacks
-        html.Span(id="sentiment-score", 
-                 children=f"{sentiment_index['score']:.1f}" if sentiment_index else "N/A", 
-                 style={"display": "none"}),
-        html.Span(id="sentiment-category", 
-                 children=sentiment_index['category'] if sentiment_index else "N/A", 
-                 style={"display": "none"}),
-                 
-        # Entire sentiment section will be a colored glowing card
-        html.Div(id="sentiment-gauge", className="sentiment-gauge-container",
-                style={
-                    "width": "100%", 
-                    "maxWidth": "800px", 
-                    "margin": "0 auto",
-                    "display": "flex",
-                    "alignItems": "center",
-                    "justifyContent": "center",
-                    "minHeight": "140px"  # Ensure minimum height for content
-                })
+        # Sentiment Index Banner
+        html.Div([
+            # Store the sentiment score and category in visible elements that can be referenced by callbacks
+            html.Span(id="sentiment-score", 
+                     children=f"{sentiment_index['score']:.1f}" if sentiment_index else "N/A", 
+                     style={"display": "none"}),
+            html.Span(id="sentiment-category", 
+                     children=sentiment_index['category'] if sentiment_index else "N/A", 
+                     style={"display": "none"}),
+            
+            # Gauge container - displays the sentiment score with color coding
+            html.Div(id="sentiment-gauge", className="sentiment-gauge-container",
+                    style={
+                        "width": "100%", 
+                        "maxWidth": "600px", 
+                        "margin": "0 auto",
+                        "display": "flex",
+                        "alignItems": "center",
+                        "justifyContent": "center",
+                        "height": "100%",
+                        "minHeight": "180px"  # Ensure minimum height for content
+                    })
+        ], className="sentiment-banner", style={"display": "flex", "alignItems": "center", "minHeight": "220px"})
     ], className="sentiment-section"),
     
     # Main content container - Two column layout
@@ -1480,7 +1484,7 @@ def update_sentiment_gauge(score):
         color = "#C0392B"  # Contraction (0-19) - HEX #C0392B
         category = "Contraction"
     
-    # Create a white rectangular card with a colored glowing border
+    # Fully centered content with fixed vertical centering
     return html.Div(
         # Container with vertical centering for all elements
         html.Div([
@@ -1578,22 +1582,20 @@ def update_sentiment_gauge(score):
             "flexDirection": "column",
             "justifyContent": "center",
             "alignItems": "center",
-            "padding": "20px 0",
-            "backgroundColor": "white",
-            "width": "100%",
-            "height": "100%"
+            "padding": "20px 0"
         }),
-        # White rectangle with colored glow at the border
+        # Add outer container styling with color-matched glow
         style={
-            "width": "100%",
-            "maxWidth": "800px",
-            "height": "140px",
-            "margin": "0 auto 20px auto",
+            "display": "flex", 
+            "alignItems": "center", 
+            "justifyContent": "center",
+            "height": "100%",
             "backgroundColor": "white",
-            "borderRadius": "12px",
-            "boxShadow": f"0 0 15px rgba({int(color[1:3], 16)}, {int(color[3:5], 16)}, {int(color[5:7], 16)}, 0.6)",
-            "border": f"2px solid {color}",
-            "transition": "all 0.3s ease"
+            "borderRadius": "8px",
+            "padding": "15px",
+            "boxShadow": f"0 0 15px rgba({int(color[1:3], 16)}, {int(color[3:5], 16)}, {int(color[5:7], 16)}, 0.6)",  # Color-matched glow
+            "border": f"1px solid {color}",  # Color-matched border
+            "transition": "all 0.3s ease"  # Smooth transition when color changes
         }
     )
 
