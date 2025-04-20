@@ -785,7 +785,7 @@ app.layout = html.Div([
         html.Div([
             # Left side - Score and Category
             html.Div([
-                html.H3("Tech Economy Sentiment Index", className="sentiment-banner-title"),
+                html.H3("T2DPulse Sentiment", className="sentiment-banner-title", style={"textAlign": "center"}),
                 html.Div([
                     html.H2(id="sentiment-score", 
                            children=f"{sentiment_index['score']:.1f}" if sentiment_index else "N/A", 
