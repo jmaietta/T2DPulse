@@ -220,16 +220,17 @@ def calculate_sentiment_index(custom_weights=None, proprietary_data=None, docume
     """
     # Default weights (equal percentages that sum to 100%)
     default_weights = {
-        'Real GDP % Change': 10,
-        'PCE': 10,
-        'Unemployment Rate': 10,
-        'CPI': 10,
-        'NASDAQ Trend': 10,
-        'PPI: Data Processing Services': 10,
-        'PPI: Software Publishers': 10,
-        'Federal Funds Rate': 10,
-        'Treasury Yield': 10,
-        'VIX Volatility': 10
+        'Real GDP % Change': 9.1,
+        'PCE': 9.1,
+        'Unemployment Rate': 9.1,
+        'CPI': 9.1,
+        'PCEPI': 9.1,
+        'NASDAQ Trend': 9.1,
+        'PPI: Data Processing Services': 9.1,
+        'PPI: Software Publishers': 9.1,
+        'Federal Funds Rate': 9.1,
+        'Treasury Yield': 9.1,
+        'VIX Volatility': 9.0
     }
     
     # Validate default weights sum to 100
@@ -333,6 +334,18 @@ def calculate_sentiment_index(custom_weights=None, proprietary_data=None, docume
             'value': latest_pce['yoy_growth'],
             'score': pce_score,
             'weight': weights['PCE']
+        })
+    
+    # 3.6 PCEPI - ideal is around 2% (Fed target), penalize deviation
+    if not pcepi_data.empty and 'yoy_growth' in pcepi_data.columns:
+        latest_pcepi = pcepi_data.sort_values('date', ascending=False).iloc[0]
+        # Ideal PCEPI around 2% (Fed target)
+        pcepi_score = min(max(100 - abs(latest_pcepi['yoy_growth'] - 2.0) * 15, 0), 100)  # Scale: 0 to 100
+        sentiment_components.append({
+            'indicator': 'PCEPI',
+            'value': latest_pcepi['yoy_growth'],
+            'score': pcepi_score,
+            'weight': weights['PCEPI']
         })
     
     # 4. Market Performance - NASDAQ recent trend
@@ -962,6 +975,18 @@ app.layout = html.Div([
                     html.Div(id="inflation-trend", className="indicator-trend")
                 ], className="indicator"),
                 
+                # PCEPI
+                html.Div([
+                    html.Div([
+                        html.H4("PCEPI (YoY %)"),
+                        html.P(id="pcepi-value", 
+                              children=f"{pcepi_data.sort_values('date', ascending=False).iloc[0]['yoy_growth']:.1f}%" 
+                              if not pcepi_data.empty and 'yoy_growth' in pcepi_data.columns else "N/A",
+                              className="indicator-value")
+                    ], className="indicator-text"),
+                    html.Div(id="pcepi-trend", className="indicator-trend")
+                ], className="indicator"),
+                
                 # Interest Rate
                 html.Div([
                     html.Div([
@@ -1082,6 +1107,19 @@ app.layout = html.Div([
                         html.Label("CPI"),
                         dcc.Slider(
                             id="cpi-weight",
+                            min=0,
+                            max=30,
+                            step=1,
+                            value=10,
+                            marks={0: "0%", 15: "15%", 30: "30%"},
+                            className="weight-slider"
+                        ),
+                    ], className="weight-control"),
+                    
+                    html.Div([
+                        html.Label("PCEPI"),
+                        dcc.Slider(
+                            id="pcepi-weight",
                             min=0,
                             max=30,
                             step=1,
