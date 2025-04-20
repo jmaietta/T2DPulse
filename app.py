@@ -922,9 +922,18 @@ app.layout = html.Div([
                      style={"display": "none"}),
             
             # Gauge container - displays the sentiment score with color coding
-            html.Div(id="sentiment-gauge", className="sentiment-gauge-container", 
-                    style={"width": "100%", "maxWidth": "600px", "margin": "0 auto"})
-        ], className="sentiment-banner")
+            html.Div(id="sentiment-gauge", className="sentiment-gauge-container",
+                    style={
+                        "width": "100%", 
+                        "maxWidth": "600px", 
+                        "margin": "0 auto",
+                        "display": "flex",
+                        "alignItems": "center",
+                        "justifyContent": "center",
+                        "height": "100%",
+                        "minHeight": "180px"  # Ensure minimum height for content
+                    })
+        ], className="sentiment-banner", style={"display": "flex", "alignItems": "center", "minHeight": "220px"})
     ], className="sentiment-section"),
     
     # Main content container - Two column layout
@@ -1475,8 +1484,8 @@ def update_sentiment_gauge(score):
         color = "#C0392B"  # Contraction (0-19) - HEX #C0392B
         category = "Contraction"
     
-    # Vertically center-aligned content with proper tooltip positioning
-    return html.Div([
+    # Fully centered content with fixed vertical centering
+    return html.Div(
         # Container with vertical centering for all elements
         html.Div([
             # Title 
@@ -1574,8 +1583,15 @@ def update_sentiment_gauge(score):
             "justifyContent": "center",
             "alignItems": "center",
             "padding": "20px 0"
-        })
-    ])
+        }),
+        # Add outer container styling - this is the key change
+        style={
+            "display": "flex", 
+            "alignItems": "center", 
+            "justifyContent": "center",
+            "height": "100%"
+        }
+    )
 
 # Update sentiment components list
 @app.callback(
