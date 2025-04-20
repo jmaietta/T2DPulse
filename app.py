@@ -18,6 +18,12 @@ from api_keys import FRED_API_KEY, BEA_API_KEY, BLS_API_KEY
 # Import document analysis functionality
 import document_analysis
 
+# Import chart styling components
+from chart_styling import custom_template, color_scheme
+
+# Import market insights panel
+from market_insights import create_insights_panel
+
 # Data directory
 DATA_DIR = 'data'
 os.makedirs(DATA_DIR, exist_ok=True)
@@ -28,7 +34,8 @@ app = dash.Dash(
     suppress_callback_exceptions=True,  # Suppress exceptions for callbacks to components not in the layout
     meta_tags=[
         {"name": "viewport", "content": "width=device-width, initial-scale=1.0"}
-    ]
+    ],
+    external_stylesheets=["https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"]
 )
 
 # Set the server for production deployment
@@ -1348,7 +1355,7 @@ app.layout = html.Div([
                         dcc.Graph(id="interest-rate-graph"),
                         
                         html.H3("10-Year Treasury Yield", className="graph-title"),
-                        dcc.Graph(id="treasury-yield-graph")
+                        html.Div(id="treasury-yield-container", className="insights-enabled-container")
                     ], className="graph-container")
                 ], className="custom-tab", selected_className="custom-tab--selected"),
                 
@@ -2318,7 +2325,7 @@ def update_interest_rate_graph(n):
     
     return fig
 
-# Update Treasury Yield Graph
+# Update Treasury Yield Graph and Container
 @app.callback(
     Output("treasury-yield-graph", "figure"),
     [Input("interval-component", "n_intervals")]
@@ -2337,13 +2344,14 @@ def update_treasury_yield_graph(n):
     # Create figure
     fig = go.Figure()
     
-    # Add treasury yield line
+    # Add treasury yield line with consistent color scheme
     fig.add_trace(go.Scatter(
         x=filtered_data['date'],
         y=filtered_data['value'],
         mode='lines',
         name='10-Year Treasury Yield',
-        line=dict(color='darkblue', width=3),
+        line=dict(color=color_scheme["rates"], width=2.5),
+        hovertemplate="<b>%{x|%b %Y}</b><br>%{y:.2f}%<extra></extra>"
     ))
     
     # Add optimal range shading (2-4% is often considered neutral for 10-year treasuries)
@@ -2353,21 +2361,80 @@ def update_treasury_yield_graph(n):
         x=x_range + x_range[::-1],
         y=[2, 2, 4, 4],
         fill='toself',
-        fillcolor='rgba(0, 0, 255, 0.1)',
-        line=dict(color='rgba(0, 0, 255, 0.5)'),
+        fillcolor='rgba(16, 150, 24, 0.1)',  # Using rates color with transparency
+        line=dict(color='rgba(16, 150, 24, 0.5)'),  # Using rates color with transparency
         hoverinfo='skip',
-        name='Neutral Yield Range',
+        name='Neutral Yield Range (2-4%)',
         showlegend=True
     ))
     
-    # Update layout
+    # Add a current threshold marker for 4% (based on heuristics)
+    fig.add_shape(
+        type="line",
+        x0=filtered_data['date'].min(),
+        x1=filtered_data['date'].max(),
+        y0=4.0,
+        y1=4.0,
+        line=dict(
+            color="rgba(255, 0, 0, 0.5)",
+            width=2,
+            dash="dash",
+        ),
+    )
+    
+    # Add annotation for threshold
+    fig.add_annotation(
+        x=filtered_data['date'].max(),
+        y=4.0,
+        text="4.0% Threshold",
+        showarrow=False,
+        yshift=10,
+        xshift=-5,
+        font=dict(size=10, color="rgba(255, 0, 0, 0.8)"),
+    )
+    
+    # Add current value annotation
+    current_value = filtered_data['value'].iloc[-1]
+    previous_value = filtered_data['value'].iloc[-2]
+    change = current_value - previous_value
+    change_pct = (change / previous_value) * 100
+    
+    arrow_color = color_scheme["positive"] if change > 0 else color_scheme["negative"]
+    arrow_symbol = "▲" if change > 0 else "▼"
+    
+    current_value_annotation = f"Current: {current_value:.2f}% {arrow_symbol} {abs(change_pct):.2f}%"
+    
+    fig.add_annotation(
+        x=0.02,
+        y=0.98,
+        xref="paper",
+        yref="paper",
+        text=current_value_annotation,
+        showarrow=False,
+        font=dict(size=14, color=arrow_color),
+        align="left",
+        bgcolor="rgba(255, 255, 255, 0.8)",
+        bordercolor=arrow_color,
+        borderwidth=1,
+        borderpad=4,
+        opacity=0.8
+    )
+    
+    # Update layout with custom template
     fig.update_layout(
+        template=custom_template,
         height=400,
-        margin=dict(l=40, r=40, t=40, b=40),
+        title=dict(
+            text="10-Year Treasury Yield",
+            font=dict(size=16),
+            x=0.5,
+            xanchor='center'
+        ),
         xaxis_title="",
-        yaxis_title="10-Year Treasury Yield (%)",
+        yaxis_title="Yield (%)",
         yaxis=dict(
             ticksuffix="%",
+            range=[0, max(5.0, filtered_data['value'].max() * 1.1)],
             zeroline=True,
             zerolinecolor='rgba(0,0,0,0.2)',
         ),
@@ -2382,6 +2449,29 @@ def update_treasury_yield_graph(n):
     )
     
     return fig
+
+# Update Treasury Yield Container with chart and insights panel
+@app.callback(
+    Output("treasury-yield-container", "children"),
+    [Input("interval-component", "n_intervals")]
+)
+def update_treasury_yield_container(n):
+    """Update the Treasury Yield container to include both the graph and insights panel"""
+    # Get the chart figure
+    figure = update_treasury_yield_graph(n)
+    
+    # Filter data for insights panel (same filtering as in chart function)
+    cutoff_date = datetime.now() - timedelta(days=5*365)
+    filtered_data = treasury_yield_data[treasury_yield_data['date'] >= cutoff_date].copy()
+    
+    # Create insights panel with the filtered data
+    insights_panel = create_insights_panel("treasury_yield", filtered_data)
+    
+    # Return container with graph and insights panel
+    return [
+        dcc.Graph(id="treasury-yield-graph", figure=figure),
+        insights_panel
+    ]
 
 # Calculate total weights and validate
 @app.callback(

@@ -491,3 +491,44 @@
         height: 120px;
     }
 }
+
+/* Insights Panel Styles */
+.insights-enabled-container {
+    margin-bottom: 20px;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.insights-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 8px 15px;
+    margin-top: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.insights-button:hover {
+    background-color: #e8e8e8;
+}
+
+.insights-button i {
+    margin-left: 8px;
+    transition: transform 0.3s;
+}
+
+.insights-content {
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 0 0 5px 5px;
+    border: 1px solid #ddd;
+    border-top: none;
+    margin-top: 0;
+    display: none;
+}
