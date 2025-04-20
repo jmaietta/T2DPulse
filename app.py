@@ -2166,7 +2166,7 @@ def update_pcepi_container(n):
     filtered_data = pcepi_data[pcepi_data['date'] >= cutoff_date].copy()
     
     # Create insights panel with the filtered data
-    insights_panel = create_insights_panel("pce", filtered_data)
+    insights_panel = create_insights_panel("pcepi", filtered_data)
     
     # Return container with graph and insights panel
     return [
