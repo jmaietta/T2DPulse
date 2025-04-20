@@ -2806,12 +2806,16 @@ def update_document_weight_display(weight, contents, n_clicks, document_data,
     updated_data = dash.no_update
     total_weight_display = dash.no_update
     new_gdp = dash.no_update
+    new_pce = dash.no_update
     new_unemployment = dash.no_update
     new_cpi = dash.no_update
+    new_pcepi = dash.no_update
     new_nasdaq = dash.no_update
     new_data_ppi = dash.no_update
     new_software_ppi = dash.no_update
     new_interest_rate = dash.no_update
+    new_treasury_yield = dash.no_update
+    new_vix = dash.no_update
     
     # If weight was changed by slider, update the document data store and economic indicators
     if trigger_id == "document-weight" and document_data and 'weight' in document_data and document_data['weight'] != weight:
@@ -2837,6 +2841,7 @@ def update_document_weight_display(weight, contents, n_clicks, document_data,
             new_pce = round(pce * scaling_factor, 1)
             new_unemployment = round(unemployment * scaling_factor, 1)
             new_cpi = round(cpi * scaling_factor, 1)
+            new_pcepi = round(pcepi * scaling_factor, 1)  # Add PCEPI scaling
             new_nasdaq = round(nasdaq * scaling_factor, 1)
             new_data_ppi = round(data_ppi * scaling_factor, 1)
             new_software_ppi = round(software_ppi * scaling_factor, 1)
@@ -2848,10 +2853,10 @@ def update_document_weight_display(weight, contents, n_clicks, document_data,
             print(f"VIX weight calculation: {vix_weight} * {scaling_factor} = {new_vix}")
             
             # If rounding causes total to be off by 1, adjust the largest value
-            new_total = new_gdp + new_pce + new_unemployment + new_cpi + new_nasdaq + new_data_ppi + new_software_ppi + new_interest_rate + new_treasury_yield + new_vix
+            new_total = new_gdp + new_pce + new_unemployment + new_cpi + new_pcepi + new_nasdaq + new_data_ppi + new_software_ppi + new_interest_rate + new_treasury_yield + new_vix
             if new_total != remaining_weight:
                 # Find the largest value and adjust it
-                values = [new_gdp, new_pce, new_unemployment, new_cpi, new_nasdaq, new_data_ppi, new_software_ppi, new_interest_rate, new_treasury_yield, new_vix]
+                values = [new_gdp, new_pce, new_unemployment, new_cpi, new_pcepi, new_nasdaq, new_data_ppi, new_software_ppi, new_interest_rate, new_treasury_yield, new_vix]
                 max_index = values.index(max(values))
                 if max_index == 0:
                     new_gdp += (remaining_weight - new_total)
@@ -2899,6 +2904,7 @@ def update_document_weight_display(weight, contents, n_clicks, document_data,
         new_pce,
         new_unemployment, 
         new_cpi, 
+        new_pcepi,  # This output was missing!
         new_nasdaq, 
         new_data_ppi, 
         new_software_ppi, 
