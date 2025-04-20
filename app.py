@@ -2305,16 +2305,24 @@ def apply_custom_weights(n_clicks, gdp, pce, unemployment, cpi, nasdaq,
         
         # Scale the economic indicators to use exactly the available weight
         scaling_factor = available_weight / total_economic_weight
-        gdp = gdp * scaling_factor
-        pce = pce * scaling_factor
-        unemployment = unemployment * scaling_factor
-        cpi = cpi * scaling_factor
-        nasdaq = nasdaq * scaling_factor
-        data_ppi = data_ppi * scaling_factor
-        software_ppi = software_ppi * scaling_factor
-        interest_rate = interest_rate * scaling_factor
-        treasury_yield = treasury_yield * scaling_factor
-        vix = vix * scaling_factor
+        
+        # Debug the scaling operation for VIX
+        print(f"Before scaling: VIX weight = {vix}")
+        print(f"Scaling factor = {scaling_factor}, available_weight = {available_weight}, total_economic_weight = {total_economic_weight}")
+        
+        # Use floating-point precision when scaling
+        gdp = round(gdp * scaling_factor, 1)
+        pce = round(pce * scaling_factor, 1)
+        unemployment = round(unemployment * scaling_factor, 1)
+        cpi = round(cpi * scaling_factor, 1)
+        nasdaq = round(nasdaq * scaling_factor, 1)
+        data_ppi = round(data_ppi * scaling_factor, 1)
+        software_ppi = round(software_ppi * scaling_factor, 1)
+        interest_rate = round(interest_rate * scaling_factor, 1)
+        treasury_yield = round(treasury_yield * scaling_factor, 1)
+        vix = round(vix * scaling_factor, 1)
+        
+        print(f"After scaling: VIX weight = {vix}")
     
     custom_weights = {
         'Real GDP % Change': gdp,
@@ -2626,17 +2634,21 @@ def update_document_weight_display(weight, contents, n_clicks, document_data,
             remaining_weight = 100 - weight
             scaling_factor = remaining_weight / economic_indicators_total if economic_indicators_total > 0 else 0
             
-            # Scale each economic indicator (only if user changed the document weight)
-            new_gdp = round(gdp * scaling_factor)
-            new_pce = round(pce * scaling_factor)
-            new_unemployment = round(unemployment * scaling_factor)
-            new_cpi = round(cpi * scaling_factor)
-            new_nasdaq = round(nasdaq * scaling_factor)
-            new_data_ppi = round(data_ppi * scaling_factor)
-            new_software_ppi = round(software_ppi * scaling_factor)
-            new_interest_rate = round(interest_rate * scaling_factor)
-            new_treasury_yield = round(treasury_yield * scaling_factor)
-            new_vix = round(vix_weight * scaling_factor)
+            # Scale each economic indicator with floating-point precision (only if user changed the document weight)
+            # Using 1 decimal point precision for better accuracy
+            new_gdp = round(gdp * scaling_factor, 1)
+            new_pce = round(pce * scaling_factor, 1)
+            new_unemployment = round(unemployment * scaling_factor, 1)
+            new_cpi = round(cpi * scaling_factor, 1)
+            new_nasdaq = round(nasdaq * scaling_factor, 1)
+            new_data_ppi = round(data_ppi * scaling_factor, 1)
+            new_software_ppi = round(software_ppi * scaling_factor, 1)
+            new_interest_rate = round(interest_rate * scaling_factor, 1)
+            new_treasury_yield = round(treasury_yield * scaling_factor, 1)
+            new_vix = round(vix_weight * scaling_factor, 1)
+            
+            # Debug print for VIX weight calculation
+            print(f"VIX weight calculation: {vix_weight} * {scaling_factor} = {new_vix}")
             
             # If rounding causes total to be off by 1, adjust the largest value
             new_total = new_gdp + new_pce + new_unemployment + new_cpi + new_nasdaq + new_data_ppi + new_software_ppi + new_interest_rate + new_treasury_yield + new_vix
@@ -2871,6 +2883,10 @@ def apply_document_analysis(n_clicks, weight, contents, filename, custom_weights
                 remaining_weight = 100 - weight
                 scaling_factor = remaining_weight / economic_indicators_total if economic_indicators_total > 0 else 0
                 
+                # Debug print for VIX weight calculation
+                print(f"Document apply - Before scaling: VIX weight = {vix_weight}")
+                print(f"Document apply - Scaling factor = {scaling_factor}, remaining_weight = {remaining_weight}")
+                
                 # Scale each economic indicator with 1 decimal precision
                 new_gdp = round(gdp * scaling_factor, 1)
                 new_pce = round(pce * scaling_factor, 1)
@@ -2882,6 +2898,8 @@ def apply_document_analysis(n_clicks, weight, contents, filename, custom_weights
                 new_interest_rate = round(interest_rate * scaling_factor, 1)
                 new_treasury_yield = round(treasury_yield * scaling_factor, 1)
                 new_vix = round(vix_weight * scaling_factor, 1)
+                
+                print(f"Document apply - After scaling: VIX weight = {new_vix}")
                 
                 # If rounding causes total to differ from remaining weight, adjust the largest value
                 new_total = new_gdp + new_pce + new_unemployment + new_cpi + new_nasdaq + new_data_ppi + new_software_ppi + new_interest_rate + new_treasury_yield + new_vix
