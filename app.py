@@ -1386,15 +1386,19 @@ def update_sentiment_components(score, category, custom_weights, document_data):
     for comp in sentiment_index['components']:
         # Format the value based on the indicator
         if comp['indicator'] == 'Real GDP % Change':
-            value_text = f"{comp['value']:.2f}%"
+            value_text = f"{comp['value']:.1f}%"
+        elif comp['indicator'] == 'PCE':
+            value_text = f"{comp['value']:.1f}%"
         elif comp['indicator'] == 'CPI':
             value_text = f"{comp['value']:.1f}%"
         elif comp['indicator'] == 'Unemployment Rate' or comp['indicator'] == 'Federal Funds Rate':
-            value_text = f"{comp['value']:.2f}%"
+            value_text = f"{comp['value']:.1f}%"
         elif comp['indicator'] == 'NASDAQ Trend':
-            value_text = f"{comp['value']:.2f}%"
+            value_text = f"{comp['value']:.1f}%"
         elif comp['indicator'] == '10-Year Treasury Yield':
-            value_text = f"{comp['value']:.2f}%"
+            value_text = f"{comp['value']:.1f}%"
+        elif comp['indicator'] == 'VIX Volatility Index':
+            value_text = f"{comp['value']:.1f}"
         elif 'PPI' in comp['indicator']:
             value_text = f"{comp['value']:.1f}%"
         elif comp['indicator'] == 'Proprietary Data':
@@ -1415,7 +1419,7 @@ def update_sentiment_components(score, category, custom_weights, document_data):
                         style={"width": f"{comp['score']}%"}),
             ], className="component-bar"),
             html.Div([
-                html.Span(f"Weight: {comp['weight']}%", className="component-weight"),
+                html.Span(f"Weight: {comp['weight']:.1f}%", className="component-weight"),
                 html.Span(f"Contribution: {comp['contribution']:.1f}", className="component-contribution")
             ], className="component-footer")
         ], className="component-item")
@@ -1457,6 +1461,28 @@ def update_indicator_trends(n):
                 color = "trend-up" if icon == "↑" else "trend-down"  # Green for up, Red for down
                 
             gdp_trend = html.Div([
+                html.Span(icon, className=f"trend-icon {color}"),
+                html.Span(f"{abs(change):.1f}%", className="trend-value")
+            ], className="trend")
+    
+    # PCE Trend
+    pce_trend = html.Div("No data", className="trend-value")
+    if not pce_data.empty and 'yoy_growth' in pce_data.columns:
+        sorted_pce = pce_data.sort_values('date', ascending=False)
+        if len(sorted_pce) >= 2:
+            current = sorted_pce.iloc[0]['yoy_growth']
+            previous = sorted_pce.iloc[1]['yoy_growth']
+            change = current - previous
+            
+            # First, always show the actual direction of change
+            if abs(change) < 0.1:  # Very small change
+                icon = "→"
+                color = "trend-neutral"  # Black for sideways arrows
+            else:
+                icon = "↑" if change > 0 else "↓"
+                color = "trend-up" if icon == "↑" else "trend-down"  # Green for up, Red for down
+                
+            pce_trend = html.Div([
                 html.Span(icon, className=f"trend-icon {color}"),
                 html.Span(f"{abs(change):.1f}%", className="trend-value")
             ], className="trend")
@@ -1639,7 +1665,7 @@ def update_indicator_trends(n):
                 html.Span(f"{abs(change):.2f}", className="trend-value")
             ], className="trend")
     
-    return gdp_trend, unemployment_trend, inflation_trend, interest_rate_trend, nasdaq_trend, software_ppi_trend, data_ppi_trend, treasury_yield_trend, vix_trend
+    return gdp_trend, pce_trend, unemployment_trend, inflation_trend, interest_rate_trend, nasdaq_trend, software_ppi_trend, data_ppi_trend, treasury_yield_trend, vix_trend
 
 # Update GDP Graph
 @app.callback(
