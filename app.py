@@ -1319,11 +1319,11 @@ app.layout = html.Div([
                 dcc.Tab(label="Inflation", children=[
                     html.Div([
                         html.H3("Consumer Price Index (YoY %)", className="graph-title"),
-                        dcc.Graph(id="inflation-graph")
+                        html.Div(id="inflation-container", className="insights-enabled-container")
                     ], className="graph-container"),
                     html.Div([
                         html.H3("PCEPI (YoY %)", className="graph-title"),
-                        dcc.Graph(id="pcepi-graph")
+                        html.Div(id="pcepi-container", className="insights-enabled-container")
                     ], className="graph-container")
                 ], className="custom-tab", selected_className="custom-tab--selected"),
                 
@@ -1954,12 +1954,9 @@ def update_unemployment_graph(n):
     
     return fig
 
-# Update Inflation Graph
-@app.callback(
-    Output("inflation-graph", "figure"),
-    [Input("interval-component", "n_intervals")]
-)
+# Update Inflation Graph (generates figure only)
 def update_inflation_graph(n):
+    """Generate the CPI inflation chart figure"""
     if inflation_data.empty or 'inflation' not in inflation_data.columns:
         return go.Figure().update_layout(
             title="No data available",
@@ -1979,7 +1976,7 @@ def update_inflation_graph(n):
         y=filtered_data['inflation'],
         mode='lines',
         name='CPI (YoY %)',
-        line=dict(color='orange', width=3),
+        line=dict(color=color_scheme["inflation"], width=3),
     ))
     
     # Add target inflation line
@@ -1988,13 +1985,42 @@ def update_inflation_graph(n):
         x=x_range,
         y=[2, 2],
         mode='lines',
-        line=dict(color='green', width=2, dash='dash'),
+        line=dict(color=color_scheme["target"], width=2, dash='dash'),
         name='Fed Target (2%)'
     ))
     
+    # Add current value annotation
+    current_value = filtered_data['inflation'].iloc[-1]
+    previous_value = filtered_data['inflation'].iloc[-2]
+    change = current_value - previous_value
+    
+    # Using absolute value change (not percentage) to match key indicators
+    arrow_color = color_scheme["positive"] if change < 0 else color_scheme["negative"]
+    arrow_symbol = "▲" if change > 0 else "▼"
+    
+    current_value_annotation = f"Current: {current_value:.2f}% {arrow_symbol} {abs(change):.2f}%"
+    
+    fig.add_annotation(
+        x=0.02,
+        y=0.95,
+        xref="paper",
+        yref="paper",
+        text=current_value_annotation,
+        showarrow=False,
+        font=dict(size=14, color=arrow_color),
+        align="left",
+        bgcolor="rgba(255, 255, 255, 0.9)",
+        bordercolor=arrow_color,
+        borderwidth=1,
+        borderpad=4,
+        opacity=0.9
+    )
+    
     # Update layout
     fig.update_layout(
+        template=custom_template,
         height=400,
+        title=None,
         margin=dict(l=40, r=40, t=40, b=40),
         xaxis_title="",
         yaxis_title="Year-over-Year % Change",
@@ -2015,12 +2041,32 @@ def update_inflation_graph(n):
     
     return fig
 
-# Update PCEPI Graph
+# Update Inflation Container with chart and insights panel
 @app.callback(
-    Output("pcepi-graph", "figure"),
+    Output("inflation-container", "children"),
     [Input("interval-component", "n_intervals")]
 )
+def update_inflation_container(n):
+    """Update the inflation container to include both the graph and insights panel"""
+    # Get the chart figure
+    figure = update_inflation_graph(n)
+    
+    # Filter data for insights panel
+    cutoff_date = datetime.now() - timedelta(days=5*365)
+    filtered_data = inflation_data[inflation_data['date'] >= cutoff_date].copy()
+    
+    # Create insights panel with the filtered data
+    insights_panel = create_insights_panel("inflation", filtered_data)
+    
+    # Return container with graph and insights panel
+    return [
+        dcc.Graph(id="inflation-graph", figure=figure),
+        insights_panel
+    ]
+
+# Update PCEPI Graph (generates figure only)
 def update_pcepi_graph(n):
+    """Generate the PCEPI inflation chart figure"""
     if pcepi_data.empty or 'yoy_growth' not in pcepi_data.columns:
         return go.Figure().update_layout(
             title="No data available",
@@ -2040,7 +2086,7 @@ def update_pcepi_graph(n):
         y=filtered_data['yoy_growth'],
         mode='lines',
         name='PCEPI (YoY %)',
-        line=dict(color='blue', width=3),
+        line=dict(color=color_scheme["inflation"], width=3),
     ))
     
     # Add target inflation line
@@ -2049,13 +2095,42 @@ def update_pcepi_graph(n):
         x=x_range,
         y=[2, 2],
         mode='lines',
-        line=dict(color='green', width=2, dash='dash'),
+        line=dict(color=color_scheme["target"], width=2, dash='dash'),
         name='Fed Target (2%)'
     ))
     
+    # Add current value annotation
+    current_value = filtered_data['yoy_growth'].iloc[-1]
+    previous_value = filtered_data['yoy_growth'].iloc[-2]
+    change = current_value - previous_value
+    
+    # Using absolute value change (not percentage) to match key indicators
+    arrow_color = color_scheme["positive"] if change < 0 else color_scheme["negative"]
+    arrow_symbol = "▲" if change > 0 else "▼"
+    
+    current_value_annotation = f"Current: {current_value:.2f}% {arrow_symbol} {abs(change):.2f}%"
+    
+    fig.add_annotation(
+        x=0.02,
+        y=0.95,
+        xref="paper",
+        yref="paper",
+        text=current_value_annotation,
+        showarrow=False,
+        font=dict(size=14, color=arrow_color),
+        align="left",
+        bgcolor="rgba(255, 255, 255, 0.9)",
+        bordercolor=arrow_color,
+        borderwidth=1,
+        borderpad=4,
+        opacity=0.9
+    )
+    
     # Update layout
     fig.update_layout(
+        template=custom_template,
         height=400,
+        title=None,
         margin=dict(l=40, r=40, t=40, b=40),
         xaxis_title="",
         yaxis_title="Year-over-Year % Change",
@@ -2075,6 +2150,29 @@ def update_pcepi_graph(n):
     )
     
     return fig
+
+# Update PCEPI Container with chart and insights panel
+@app.callback(
+    Output("pcepi-container", "children"),
+    [Input("interval-component", "n_intervals")]
+)
+def update_pcepi_container(n):
+    """Update the PCEPI container to include both the graph and insights panel"""
+    # Get the chart figure
+    figure = update_pcepi_graph(n)
+    
+    # Filter data for insights panel
+    cutoff_date = datetime.now() - timedelta(days=5*365)
+    filtered_data = pcepi_data[pcepi_data['date'] >= cutoff_date].copy()
+    
+    # Create insights panel with the filtered data
+    insights_panel = create_insights_panel("pce", filtered_data)
+    
+    # Return container with graph and insights panel
+    return [
+        dcc.Graph(id="pcepi-graph", figure=figure),
+        insights_panel
+    ]
 
 # Update NASDAQ Graph
 @app.callback(
