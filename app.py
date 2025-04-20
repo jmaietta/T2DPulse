@@ -1511,49 +1511,86 @@ def update_sentiment_gauge(score):
     except (ValueError, TypeError):
         score_value = 0
     
-    # Create gauge chart
-    fig = go.Figure(go.Indicator(
-        mode="gauge+number",
-        value=score_value,
-        domain={'x': [0, 1], 'y': [0, 0.9]},  # Shifted down to prevent cropping
-        number={'font': {'size': 40}, 'suffix': '', 'prefix': ''},
-        gauge={
-            'axis': {
-                'range': [0, 100], 
-                'tickwidth': 2, 
-                'tickfont': {'size': 14},
-                'tickmode': 'array',
-                'tickvals': [0, 20, 40, 60, 80, 100],
-                'ticktext': ['0', '20', '40', '60', '80', '100']
-            },
-            'bar': {'color': "royalblue"},
-            'bgcolor': "white",
-            'borderwidth': 2,
-            'bordercolor': "lightgray",
-            'steps': [
-                {'range': [0, 20], 'color': "rgba(255, 0, 0, 0.7)"},
-                {'range': [20, 40], 'color': "rgba(255, 165, 0, 0.7)"},
-                {'range': [40, 60], 'color': "rgba(255, 255, 0, 0.7)"},
-                {'range': [60, 80], 'color': "rgba(144, 238, 144, 0.7)"},
-                {'range': [80, 100], 'color': "rgba(0, 128, 0, 0.7)"}
-            ],
-            'threshold': {
-                'line': {'color': "white", 'width': 4},
-                'thickness': 0.75,
-                'value': score_value
-            }
-        }
-    ))
+    # Determine color based on score range
+    if score_value >= 80:
+        color = "#006400"  # dark green for Boom (80-100)
+        intensity = "rgba(0, 100, 0, 0.15)"
+        category = "Boom"
+    elif score_value >= 60:
+        color = "#4CAF50"  # green for Expansion (60-79)
+        intensity = "rgba(76, 175, 80, 0.15)"
+        category = "Expansion"
+    elif score_value >= 40:
+        color = "#FFD700"  # gold for Moderate Growth (40-59)
+        intensity = "rgba(255, 215, 0, 0.15)"
+        category = "Moderate Growth"
+    elif score_value >= 20:
+        color = "#FF8C00"  # dark orange for Slowdown (20-39)
+        intensity = "rgba(255, 140, 0, 0.15)"
+        category = "Slowdown"
+    else:
+        color = "#B22222"  # crimson for Contraction (0-19)
+        intensity = "rgba(178, 34, 34, 0.15)"
+        category = "Contraction"
     
-    fig.update_layout(
-        height=160,  # Increased height to prevent cropping
-        margin=dict(l=20, r=20, t=20, b=20),  # Increased margins
-        paper_bgcolor='rgba(0,0,0,0)',
-        plot_bgcolor='rgba(0,0,0,0)',
-        font={'size': 12}
-    )
-    
-    return dcc.Graph(figure=fig, config={'displayModeBar': False})
+    # Create a simple div with large text and background color
+    return html.Div([
+        html.Div([
+            html.Span(f"{score_value:.1f}", 
+                     style={"fontSize": "56px", "fontWeight": "bold", "color": color}),
+        ], style={"textAlign": "center", "paddingBottom": "5px"}),
+        html.Div([
+            html.Span(category, 
+                     style={"fontSize": "20px", "fontWeight": "bold", "color": color})
+        ], style={"textAlign": "center", "paddingBottom": "5px"}),
+        html.Div([
+            html.Span("0", style={"float": "left", "fontSize": "14px", "color": "#888"}),
+            html.Span("100", style={"float": "right", "fontSize": "14px", "color": "#888"}),
+        ], style={"width": "100%", "height": "20px"}),
+        html.Div([
+            html.Div(style={
+                "width": "20%", "height": "10px", "float": "left", 
+                "backgroundColor": "rgba(178, 34, 34, 0.7)", "borderRadius": "5px 0 0 5px"
+            }),
+            html.Div(style={
+                "width": "20%", "height": "10px", "float": "left", 
+                "backgroundColor": "rgba(255, 140, 0, 0.7)"
+            }),
+            html.Div(style={
+                "width": "20%", "height": "10px", "float": "left", 
+                "backgroundColor": "rgba(255, 215, 0, 0.7)"
+            }),
+            html.Div(style={
+                "width": "20%", "height": "10px", "float": "left", 
+                "backgroundColor": "rgba(76, 175, 80, 0.7)"
+            }),
+            html.Div(style={
+                "width": "20%", "height": "10px", "float": "left", 
+                "backgroundColor": "rgba(0, 100, 0, 0.7)", "borderRadius": "0 5px 5px 0"
+            }),
+            # Score indicator
+            html.Div(style={
+                "width": "10px", "height": "15px", "backgroundColor": color,
+                "position": "relative", "left": f"calc({score_value}% - 5px)", "top": "-12px",
+                "borderRadius": "5px", "zIndex": "1000"
+            }),
+        ], style={"width": "100%", "height": "15px", "marginTop": "5px", "position": "relative"}),
+        html.Div([
+            html.Span("Contraction", style={"width": "20%", "float": "left", "textAlign": "left", "fontSize": "12px", "color": "#888"}),
+            html.Span("Slowdown", style={"width": "20%", "float": "left", "textAlign": "center", "fontSize": "12px", "color": "#888"}),
+            html.Span("Moderate", style={"width": "20%", "float": "left", "textAlign": "center", "fontSize": "12px", "color": "#888"}),
+            html.Span("Expansion", style={"width": "20%", "float": "left", "textAlign": "center", "fontSize": "12px", "color": "#888"}),
+            html.Span("Boom", style={"width": "20%", "float": "left", "textAlign": "right", "fontSize": "12px", "color": "#888"}),
+        ], style={"width": "100%", "height": "20px", "marginTop": "5px"}),
+    ], style={
+        "width": "100%", 
+        "padding": "15px", 
+        "backgroundColor": "white",
+        "borderRadius": "10px",
+        "boxShadow": "0 2px 5px rgba(0,0,0,0.1)",
+        "marginBottom": "15px",
+        "background": intensity
+    })
 
 # Update sentiment components list
 @app.callback(
@@ -3484,13 +3521,14 @@ from plotly.subplots import make_subplots
 @app.callback(
     [Output("sentiment-score", "children"),
      Output("sentiment-category", "children")],
-    [Input("_", "children")],
-    [State("custom-weights-store", "data"),
-     State("document-data-store", "data")],
+    [Input("_", "children"),
+     Input("custom-weights-store", "data"),
+     Input("document-data-store", "data")],
     prevent_initial_call=False
 )
 def initialize_sentiment_index(_, custom_weights, document_data):
-    # Use the current custom weights and document data if they exist
+    # Always use the current custom weights and document data
+    # This will respond to changes in the custom-weights-store
     sentiment_index = calculate_sentiment_index(
         custom_weights=custom_weights,
         document_data=document_data
