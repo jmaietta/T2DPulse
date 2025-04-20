@@ -1725,7 +1725,7 @@ def update_indicator_trends(n):
                 html.Span(f"{abs(change):.1f}%", className="trend-value")
             ], className="trend")
     
-    # Treasury Yield Trend - ALWAYS GREEN UP ARROW
+    # Treasury Yield Trend
     treasury_yield_trend = html.Div("No data", className="trend-value")
     if not treasury_yield_data.empty:
         sorted_yield = treasury_yield_data.sort_values('date', ascending=False)
@@ -1734,9 +1734,15 @@ def update_indicator_trends(n):
             previous = sorted_yield.iloc[1]['value']
             change = current - previous
             
-            # Fixed: Always show upward green arrow regardless of actual data
-            icon = "↑"  # Always up arrow
-            color = "trend-up"  # Always green
+            # Show actual direction of change, but make small changes more visible
+            # For Treasury Yield, we need to show an up arrow at 0.05% change
+            # We'll use 0.04% as the threshold to ensure 0.05% shows as an up arrow
+            if abs(change) < 0.04:  # Very small change
+                icon = "→"
+                color = "trend-neutral"  # Black for sideways arrows
+            else:
+                icon = "↑" if change > 0 else "↓"
+                color = "trend-up" if icon == "↑" else "trend-down"  # Green for up, Red for down
             
             treasury_yield_trend = html.Div([
                 html.Span(icon, className=f"trend-icon {color}"),
