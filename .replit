@@ -28,6 +28,10 @@ args = "Sentiment Glow Mockup"
 task = "workflow.run"
 args = "Simple Glow Mockup"
 
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "Single Card Mockup"
+
 [[workflows.workflow]]
 name = "Economic Dashboard Server"
 author = "agent"
@@ -88,6 +92,21 @@ task = "shell.exec"
 args = "python simple_glow_mockup.py"
 waitForPort = 5003
 
+[[workflows.workflow]]
+name = "Single Card Mockup"
+author = "agent"
+
+[workflows.workflow.metadata]
+agentRequireRestartOnSave = false
+
+[[workflows.workflow.tasks]]
+task = "packager.installForAll"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "python single_card_mockup.py"
+waitForPort = 5004
+
 [deployment]
 run = ["sh", "-c", "python wsgi.py"]
 deploymentTarget = "cloudrun"
@@ -103,3 +122,7 @@ externalPort = 3000
 [[ports]]
 localPort = 5003
 externalPort = 3001
+
+[[ports]]
+localPort = 5004
+externalPort = 3002
