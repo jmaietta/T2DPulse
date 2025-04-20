@@ -743,6 +743,42 @@ if pce_data.empty or (datetime.now() - pd.to_datetime(pce_data['date'].max() if 
     else:
         print("Failed to fetch PCE data")
 
+# Add PCEPI (Personal Consumption Expenditures: Chain-type Price Index) data
+pcepi_data = load_data_from_csv('pcepi_data.csv')
+
+# If no existing data or data is old, fetch new data
+if pcepi_data.empty or (datetime.now() - pd.to_datetime(pcepi_data['date'].max() if not pcepi_data.empty else '2000-01-01')).days > 30:
+    # Fetch PCEPI data (PCEPI)
+    pcepi_temp = fetch_fred_data('PCEPI')
+    
+    if not pcepi_temp.empty:
+        # Calculate year-over-year growth
+        pcepi_temp = pcepi_temp.sort_values('date')
+        
+        # Create a dataframe shifted by 12 months to calculate YoY change
+        pcepi_yoy = pcepi_temp.copy()
+        pcepi_yoy['date'] = pcepi_yoy['date'] + pd.DateOffset(months=12)
+        pcepi_yoy = pcepi_yoy.rename(columns={'value': 'year_ago_value'})
+        
+        # Merge current and year-ago values
+        pcepi_data = pd.merge(
+            pcepi_temp, 
+            pcepi_yoy[['date', 'year_ago_value']], 
+            on='date', 
+            how='left'
+        )
+        
+        # Calculate YoY growth
+        pcepi_data['yoy_growth'] = ((pcepi_data['value'] - pcepi_data['year_ago_value']) / 
+                                  pcepi_data['year_ago_value'] * 100)
+        
+        # Save data
+        save_data_to_csv(pcepi_data, 'pcepi_data.csv')
+        
+        print(f"PCEPI data updated with {len(pcepi_data)} observations")
+    else:
+        print("Failed to fetch PCEPI data")
+
 # Add VIX volatility index data
 vix_data = load_data_from_csv('vix_data.csv')
 
@@ -1239,6 +1275,10 @@ app.layout = html.Div([
                     html.Div([
                         html.H3("Consumer Price Index (YoY %)", className="graph-title"),
                         dcc.Graph(id="inflation-graph")
+                    ], className="graph-container"),
+                    html.Div([
+                        html.H3("PCEPI (YoY %)", className="graph-title"),
+                        dcc.Graph(id="pcepi-graph")
                     ], className="graph-container")
                 ], className="custom-tab", selected_className="custom-tab--selected"),
                 
@@ -1865,6 +1905,67 @@ def update_inflation_graph(n):
         mode='lines',
         name='CPI (YoY %)',
         line=dict(color='orange', width=3),
+    ))
+    
+    # Add target inflation line
+    x_range = [filtered_data['date'].min(), filtered_data['date'].max()]
+    fig.add_trace(go.Scatter(
+        x=x_range,
+        y=[2, 2],
+        mode='lines',
+        line=dict(color='green', width=2, dash='dash'),
+        name='Fed Target (2%)'
+    ))
+    
+    # Update layout
+    fig.update_layout(
+        height=400,
+        margin=dict(l=40, r=40, t=40, b=40),
+        xaxis_title="",
+        yaxis_title="Year-over-Year % Change",
+        yaxis=dict(
+            ticksuffix="%",
+            zeroline=True,
+            zerolinecolor='rgba(0,0,0,0.2)',
+        ),
+        hovermode="x unified",
+        legend=dict(
+            orientation="h",
+            yanchor="bottom",
+            y=1.02,
+            xanchor="right",
+            x=1
+        )
+    )
+    
+    return fig
+
+# Update PCEPI Graph
+@app.callback(
+    Output("pcepi-graph", "figure"),
+    [Input("interval-component", "n_intervals")]
+)
+def update_pcepi_graph(n):
+    if pcepi_data.empty or 'yoy_growth' not in pcepi_data.columns:
+        return go.Figure().update_layout(
+            title="No data available",
+            height=400
+        )
+    
+    # Filter for last 5 years
+    cutoff_date = datetime.now() - timedelta(days=5*365)
+    filtered_data = pcepi_data[pcepi_data['date'] >= cutoff_date].copy()
+    
+    # Create figure
+    fig = go.Figure()
+    
+    # Add PCEPI line
+    fig.add_trace(go.Scatter(
+        x=filtered_data['date'],
+        y=filtered_data['yoy_growth'],
+        mode='lines',
+        name='PCEPI (YoY %)',
+        line=dict(color='blue', width=3),
     ))
     
     # Add target inflation line
