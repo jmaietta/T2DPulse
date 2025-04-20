@@ -2365,7 +2365,7 @@ def update_treasury_yield_graph(n):
         line=dict(color='rgba(16, 150, 24, 0.5)'),  # Using rates color with transparency
         hoverinfo='skip',
         name='Neutral Yield Range (2-4%)',
-        showlegend=True
+        showlegend=False  # Changed to false to prevent text overlap
     ))
     
     # Add a current threshold marker for 4% (based on heuristics)
@@ -2406,30 +2406,25 @@ def update_treasury_yield_graph(n):
     
     fig.add_annotation(
         x=0.02,
-        y=0.98,
+        y=0.95,  # Lowered position to avoid overlap with title
         xref="paper",
         yref="paper",
         text=current_value_annotation,
         showarrow=False,
         font=dict(size=14, color=arrow_color),
         align="left",
-        bgcolor="rgba(255, 255, 255, 0.8)",
+        bgcolor="rgba(255, 255, 255, 0.9)",  # Increased opacity for better visibility
         bordercolor=arrow_color,
         borderwidth=1,
         borderpad=4,
-        opacity=0.8
+        opacity=0.9
     )
     
     # Update layout with custom template
     fig.update_layout(
         template=custom_template,
         height=400,
-        title=dict(
-            text="10-Year Treasury Yield",
-            font=dict(size=16),
-            x=0.5,
-            xanchor='center'
-        ),
+        title=None,  # Removed title since we already have it in the HTML
         xaxis_title="",
         yaxis_title="Yield (%)",
         yaxis=dict(
