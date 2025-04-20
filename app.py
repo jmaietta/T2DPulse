@@ -1174,8 +1174,8 @@ app.layout = html.Div([
                             id="interest-rate-weight",
                             min=0,
                             max=30,
-                            step=1,
-                            value=10,
+                            step=0.1,
+                            value=9.1,
                             marks={0: "0%", 15: "15%", 30: "30%"},
                             className="weight-slider"
                         ),
@@ -1187,8 +1187,8 @@ app.layout = html.Div([
                             id="treasury-yield-weight",
                             min=0,
                             max=30,
-                            step=1,
-                            value=10,
+                            step=0.1,
+                            value=9.1,
                             marks={0: "0%", 15: "15%", 30: "30%"},
                             className="weight-slider"
                         ),
@@ -1200,8 +1200,8 @@ app.layout = html.Div([
                             id="vix-weight",
                             min=0,
                             max=30,
-                            step=1,
-                            value=10,
+                            step=0.1,
+                            value=9.0,
                             marks={0: "0%", 15: "15%", 30: "30%"},
                             className="weight-slider"
                         ),
