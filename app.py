@@ -1299,11 +1299,11 @@ app.layout = html.Div([
                 dcc.Tab(label="Real GDP & PCE", children=[
                     html.Div([
                         html.H3("Real GDP Growth (YoY %)", className="graph-title"),
-                        dcc.Graph(id="gdp-graph")
+                        html.Div(id="gdp-container", className="insights-enabled-container")
                     ], className="graph-container"),
                     html.Div([
                         html.H3("Personal Consumption Expenditures (YoY %)", className="graph-title"),
-                        dcc.Graph(id="pce-graph")
+                        html.Div(id="pce-container", className="insights-enabled-container")
                     ], className="graph-container")
                 ], className="custom-tab", selected_className="custom-tab--selected"),
                 
@@ -1782,12 +1782,9 @@ def update_indicator_trends(n):
     
     return gdp_trend, pce_trend, unemployment_trend, inflation_trend, pcepi_trend, interest_rate_trend, nasdaq_trend, software_ppi_trend, data_ppi_trend, treasury_yield_trend, vix_trend
 
-# Update GDP Graph
-@app.callback(
-    Output("gdp-graph", "figure"),
-    [Input("interval-component", "n_intervals")]
-)
+# Update GDP Graph function (generates figure only)
 def update_gdp_graph(n):
+    """Generate the GDP chart figure"""
     if gdp_data.empty or 'yoy_growth' not in gdp_data.columns:
         return go.Figure().update_layout(
             title="No data available",
@@ -1801,22 +1798,63 @@ def update_gdp_graph(n):
     # Create figure
     fig = go.Figure()
     
-    # Add GDP Growth line
+    # Add GDP Growth line with consistent color scheme
     fig.add_trace(go.Scatter(
         x=filtered_data['date'],
         y=filtered_data['yoy_growth'],
         mode='lines+markers',
         name='Real GDP Growth (YoY %)',
-        line=dict(color='royalblue', width=3),
+        line=dict(color=color_scheme["growth"], width=3),
         marker=dict(size=8)
     ))
     
-    # Add recession shading (if data available)
-    # This would require recession date data which is not included
+    # Add zero reference line
+    fig.add_shape(
+        type="line",
+        x0=filtered_data['date'].min(),
+        x1=filtered_data['date'].max(),
+        y0=0,
+        y1=0,
+        line=dict(
+            color=color_scheme["neutral"],
+            width=1.5,
+            dash="dot",
+        ),
+    )
     
-    # Update layout
+    # Add current value annotation
+    if len(filtered_data) >= 2:
+        current_value = filtered_data['yoy_growth'].iloc[-1]
+        previous_value = filtered_data['yoy_growth'].iloc[-2]
+        change = current_value - previous_value
+        
+        # Using absolute value change (not percentage) to match key indicators
+        arrow_color = color_scheme["positive"] if change > 0 else color_scheme["negative"]
+        arrow_symbol = "▲" if change > 0 else "▼"
+        
+        current_value_annotation = f"Current: {current_value:.1f}% {arrow_symbol} {abs(change):.1f}%"
+        
+        fig.add_annotation(
+            x=0.02,
+            y=0.95,
+            xref="paper",
+            yref="paper",
+            text=current_value_annotation,
+            showarrow=False,
+            font=dict(size=14, color=arrow_color),
+            align="left",
+            bgcolor="rgba(255, 255, 255, 0.9)",
+            bordercolor=arrow_color,
+            borderwidth=1,
+            borderpad=4,
+            opacity=0.9
+        )
+    
+    # Update layout with custom template
     fig.update_layout(
+        template=custom_template,
         height=400,
+        title=None,
         margin=dict(l=40, r=40, t=40, b=40),
         xaxis_title="",
         yaxis_title="Year-over-Year % Change",
@@ -1837,12 +1875,36 @@ def update_gdp_graph(n):
     
     return fig
 
-# Update PCE Graph
+# Update GDP Container with chart and insights panel
 @app.callback(
-    Output("pce-graph", "figure"),
+    Output("gdp-container", "children"),
     [Input("interval-component", "n_intervals")]
 )
+def update_gdp_container(n):
+    """Update the GDP container to include both the graph and insights panel"""
+    # Get the chart figure
+    figure = update_gdp_graph(n)
+    
+    # Create insights panel with GDP data
+    insights_panel = create_insights_panel("gdp", gdp_data)
+    
+    # Return container with graph and insights panel
+    return [
+        dcc.Graph(id="gdp-graph", figure=figure),
+        insights_panel
+    ]
+
+# Update GDP Graph (for backward compatibility)
+@app.callback(
+    Output("gdp-graph", "figure"),
+    [Input("interval-component", "n_intervals")]
+)
+def update_gdp_graph_callback(n):
+    return update_gdp_graph(n)
+
+# Update PCE Graph (generates figure only)
 def update_pce_graph(n):
+    """Generate the PCE chart figure"""
     if pce_data.empty or 'yoy_growth' not in pce_data.columns:
         return go.Figure().update_layout(
             title="No data available",
@@ -1856,19 +1918,63 @@ def update_pce_graph(n):
     # Create figure
     fig = go.Figure()
     
-    # Add PCE Growth line
+    # Add PCE Growth line with consistent color scheme
     fig.add_trace(go.Scatter(
         x=filtered_data['date'],
         y=filtered_data['yoy_growth'],
         mode='lines+markers',
         name='PCE Growth (YoY %)',
-        line=dict(color='#e74c3c', width=3),  # Different color from GDP
+        line=dict(color=color_scheme["consumption"], width=3),
         marker=dict(size=8)
     ))
     
-    # Update layout
+    # Add zero reference line
+    fig.add_shape(
+        type="line",
+        x0=filtered_data['date'].min(),
+        x1=filtered_data['date'].max(),
+        y0=0,
+        y1=0,
+        line=dict(
+            color=color_scheme["neutral"],
+            width=1.5,
+            dash="dot",
+        ),
+    )
+    
+    # Add current value annotation
+    if len(filtered_data) >= 2:
+        current_value = filtered_data['yoy_growth'].iloc[-1]
+        previous_value = filtered_data['yoy_growth'].iloc[-2]
+        change = current_value - previous_value
+        
+        # Using absolute value change (not percentage) to match key indicators
+        arrow_color = color_scheme["positive"] if change > 0 else color_scheme["negative"]
+        arrow_symbol = "▲" if change > 0 else "▼"
+        
+        current_value_annotation = f"Current: {current_value:.1f}% {arrow_symbol} {abs(change):.1f}%"
+        
+        fig.add_annotation(
+            x=0.02,
+            y=0.95,
+            xref="paper",
+            yref="paper",
+            text=current_value_annotation,
+            showarrow=False,
+            font=dict(size=14, color=arrow_color),
+            align="left",
+            bgcolor="rgba(255, 255, 255, 0.9)",
+            bordercolor=arrow_color,
+            borderwidth=1,
+            borderpad=4,
+            opacity=0.9
+        )
+    
+    # Update layout with custom template
     fig.update_layout(
+        template=custom_template,
         height=400,
+        title=None,
         margin=dict(l=40, r=40, t=40, b=40),
         xaxis_title="",
         yaxis_title="Year-over-Year % Change",
@@ -1888,6 +1994,33 @@ def update_pce_graph(n):
     )
     
     return fig
+
+# Update PCE Container with chart and insights panel
+@app.callback(
+    Output("pce-container", "children"),
+    [Input("interval-component", "n_intervals")]
+)
+def update_pce_container(n):
+    """Update the PCE container to include both the graph and insights panel"""
+    # Get the chart figure
+    figure = update_pce_graph(n)
+    
+    # Create insights panel with PCE data
+    insights_panel = create_insights_panel("pce", pce_data)
+    
+    # Return container with graph and insights panel
+    return [
+        dcc.Graph(id="pce-graph", figure=figure),
+        insights_panel
+    ]
+
+# Update PCE Graph (for backward compatibility)
+@app.callback(
+    Output("pce-graph", "figure"),
+    [Input("interval-component", "n_intervals")]
+)
+def update_pce_graph_callback(n):
+    return update_pce_graph(n)
 
 # Update Unemployment Graph
 @app.callback(
