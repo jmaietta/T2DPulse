@@ -893,9 +893,9 @@ app.layout = html.Div([
                 # PCE
                 html.Div([
                     html.Div([
-                        html.H4("PCE Growth"),
+                        html.H4("PCE"),
                         html.P(id="pce-value", 
-                              children=f"{pce_data.sort_values('date', ascending=False).iloc[0]['yoy_growth']:.2f}%" 
+                              children=f"{pce_data.sort_values('date', ascending=False).iloc[0]['yoy_growth']:.1f}%" 
                               if not pce_data.empty and 'yoy_growth' in pce_data.columns else "N/A",
                               className="indicator-value")
                     ], className="indicator-text"),
@@ -1427,6 +1427,7 @@ def update_sentiment_components(score, category, custom_weights, document_data):
 # Update all indicator trends
 @app.callback(
     [Output("gdp-trend", "children"),
+     Output("pce-trend", "children"),
      Output("unemployment-trend", "children"),
      Output("inflation-trend", "children"),
      Output("interest-rate-trend", "children"),
