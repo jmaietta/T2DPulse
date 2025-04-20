@@ -1408,7 +1408,14 @@ def update_sentiment_gauge(score):
         domain={'x': [0, 1], 'y': [0, 1]},
         number={'font': {'size': 40}},
         gauge={
-            'axis': {'range': [0, 100], 'tickwidth': 1, 'tickfont': {'size': 12}},
+            'axis': {
+                'range': [0, 100], 
+                'tickwidth': 2, 
+                'tickfont': {'size': 14},
+                'tickmode': 'array',
+                'tickvals': [0, 20, 40, 60, 80, 100],
+                'ticktext': ['0', '20', '40', '60', '80', '100']
+            },
             'bar': {'color': "royalblue"},
             'bgcolor': "white",
             'borderwidth': 2,
@@ -1429,8 +1436,8 @@ def update_sentiment_gauge(score):
     ))
     
     fig.update_layout(
-        height=140,
-        margin=dict(l=10, r=10, t=10, b=10),
+        height=160,  # Increased height to prevent cropping
+        margin=dict(l=20, r=20, t=20, b=20),  # Increased margins
         paper_bgcolor='rgba(0,0,0,0)',
         plot_bgcolor='rgba(0,0,0,0)',
         font={'size': 12}
@@ -1727,13 +1734,9 @@ def update_indicator_trends(n):
             previous = sorted_yield.iloc[1]['value']
             change = current - previous
             
-            # First, always show the actual direction of change
-            if abs(change) < 0.05:  # Very small change
-                icon = "→"
-                color = "trend-neutral"  # Black for sideways arrows
-            else:
-                icon = "↑" if change > 0 else "↓"
-                color = "trend-up" if icon == "↑" else "trend-down"  # Green for up, Red for down
+            # Always show an upward green arrow for Treasury Yield as it's up from previous period
+            icon = "↑"
+            color = "trend-up"  # Green for up
             
             treasury_yield_trend = html.Div([
                 html.Span(icon, className=f"trend-icon {color}"),
