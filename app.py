@@ -18,10 +18,8 @@ from api_keys import FRED_API_KEY, BEA_API_KEY, BLS_API_KEY
 # Import document analysis functionality
 import document_analysis
 
-# Import chart styling components
+# Import chart styling and market insights components
 from chart_styling import custom_template, color_scheme
-
-# Import market insights panel
 from market_insights import create_insights_panel
 
 # Data directory
@@ -1331,7 +1329,7 @@ app.layout = html.Div([
                 dcc.Tab(label="Markets", children=[
                     html.Div([
                         html.H3("NASDAQ Composite Index", className="graph-title"),
-                        dcc.Graph(id="nasdaq-graph")
+                        html.Div(id="nasdaq-container", className="insights-enabled-container")
                     ], className="graph-container")
                 ], className="custom-tab", selected_className="custom-tab--selected"),
                 
@@ -1340,11 +1338,11 @@ app.layout = html.Div([
                     html.Div([
                         # Software PPI Graph
                         html.H3("PPI: Software Publishers (YoY %)", className="graph-title"),
-                        dcc.Graph(id="software-ppi-graph"),
+                        html.Div(id="software-ppi-container", className="insights-enabled-container"),
                         
                         # Data Processing PPI Graph
                         html.H3("PPI: Data Processing Services (YoY %)", className="graph-title"),
-                        dcc.Graph(id="data-ppi-graph")
+                        html.Div(id="data-ppi-container", className="insights-enabled-container")
                     ], className="graph-container")
                 ], className="custom-tab", selected_className="custom-tab--selected"),
                 
@@ -2307,12 +2305,9 @@ def update_pcepi_container(n):
         insights_panel
     ]
 
-# Update NASDAQ Graph
-@app.callback(
-    Output("nasdaq-graph", "figure"),
-    [Input("interval-component", "n_intervals")]
-)
+# Update NASDAQ Graph (This function now only generates the figure)
 def update_nasdaq_graph(n):
+    """Generate the NASDAQ Composite chart figure"""
     if nasdaq_data.empty:
         return go.Figure().update_layout(
             title="No data available",
@@ -2356,7 +2351,9 @@ def update_nasdaq_graph(n):
     
     # Update layout
     fig.update_layout(
+        template=custom_template,
         height=400,
+        title=None,
         margin=dict(l=40, r=40, t=40, b=40),
         xaxis_title="",
         hovermode="x unified",
@@ -2375,12 +2372,32 @@ def update_nasdaq_graph(n):
     
     return fig
 
-# Update Software PPI Graph
+# Update NASDAQ Container with chart and insights
 @app.callback(
-    Output("software-ppi-graph", "figure"),
+    Output("nasdaq-container", "children"),
     [Input("interval-component", "n_intervals")]
 )
+def update_nasdaq_container(n):
+    """Update the NASDAQ container to include both the graph and insights panel"""
+    # Get the chart figure
+    figure = update_nasdaq_graph(n)
+    
+    # Filter data for insights panel (same filtering as in chart function)
+    cutoff_date = datetime.now() - timedelta(days=2*365)
+    filtered_data = nasdaq_data[nasdaq_data['date'] >= cutoff_date].copy()
+    
+    # Create insights panel with the filtered data
+    insights_panel = create_insights_panel("nasdaq", filtered_data)
+    
+    # Return container with graph and insights panel
+    return [
+        dcc.Graph(id="nasdaq-graph", figure=figure),
+        insights_panel
+    ]
+
+# Update Software PPI Graph (Figure only function)
 def update_software_ppi_graph(n):
+    """Generate the Software Publishers PPI chart figure"""
     if software_ppi_data.empty or 'yoy_pct_change' not in software_ppi_data.columns:
         return go.Figure().update_layout(
             title="No data available",
@@ -2419,7 +2436,9 @@ def update_software_ppi_graph(n):
     
     # Update layout
     fig.update_layout(
+        template=custom_template,
         height=300,
+        title=None,
         margin=dict(l=40, r=40, t=40, b=40),
         xaxis_title="",
         yaxis_title="Year-over-Year % Change",
@@ -2440,12 +2459,32 @@ def update_software_ppi_graph(n):
     
     return fig
 
-# Update Data Processing PPI Graph
+# Update Software PPI Container with chart and insights
 @app.callback(
-    Output("data-ppi-graph", "figure"),
+    Output("software-ppi-container", "children"),
     [Input("interval-component", "n_intervals")]
 )
+def update_software_ppi_container(n):
+    """Update the Software PPI container to include both the graph and insights panel"""
+    # Get the chart figure
+    figure = update_software_ppi_graph(n)
+    
+    # Filter data for insights panel (same filtering as in chart function)
+    cutoff_date = datetime.now() - timedelta(days=5*365)
+    filtered_data = software_ppi_data[software_ppi_data['date'] >= cutoff_date].copy()
+    
+    # Create insights panel with the filtered data
+    insights_panel = create_insights_panel("software_ppi", filtered_data)
+    
+    # Return container with graph and insights panel
+    return [
+        dcc.Graph(id="software-ppi-graph", figure=figure),
+        insights_panel
+    ]
+
+# Update Data Processing PPI Graph (Figure only function)
 def update_data_ppi_graph(n):
+    """Generate the Data Processing Services PPI chart figure"""
     if data_processing_ppi_data.empty or 'yoy_pct_change' not in data_processing_ppi_data.columns:
         return go.Figure().update_layout(
             title="No data available",
@@ -2484,7 +2523,9 @@ def update_data_ppi_graph(n):
     
     # Update layout
     fig.update_layout(
+        template=custom_template,
         height=300,
+        title=None,
         margin=dict(l=40, r=40, t=40, b=40),
         xaxis_title="",
         yaxis_title="Year-over-Year % Change",
@@ -2504,6 +2545,29 @@ def update_data_ppi_graph(n):
     )
     
     return fig
+
+# Update Data Processing PPI Container with chart and insights
+@app.callback(
+    Output("data-ppi-container", "children"),
+    [Input("interval-component", "n_intervals")]
+)
+def update_data_ppi_container(n):
+    """Update the Data Processing PPI container to include both the graph and insights panel"""
+    # Get the chart figure
+    figure = update_data_ppi_graph(n)
+    
+    # Filter data for insights panel (same filtering as in chart function)
+    cutoff_date = datetime.now() - timedelta(days=5*365)
+    filtered_data = data_processing_ppi_data[data_processing_ppi_data['date'] >= cutoff_date].copy()
+    
+    # Create insights panel with the filtered data
+    insights_panel = create_insights_panel("data_ppi", filtered_data)
+    
+    # Return container with graph and insights panel
+    return [
+        dcc.Graph(id="data-ppi-graph", figure=figure),
+        insights_panel
+    ]
 
 # Update Interest Rate Graph (generates figure only)
 def update_interest_rate_graph(n):
