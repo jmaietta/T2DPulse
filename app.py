@@ -2397,12 +2397,12 @@ def update_treasury_yield_graph(n):
     current_value = filtered_data['value'].iloc[-1]
     previous_value = filtered_data['value'].iloc[-2]
     change = current_value - previous_value
-    change_pct = (change / previous_value) * 100
     
+    # Using absolute value change (not percentage) to match key indicators
     arrow_color = color_scheme["positive"] if change > 0 else color_scheme["negative"]
     arrow_symbol = "▲" if change > 0 else "▼"
     
-    current_value_annotation = f"Current: {current_value:.2f}% {arrow_symbol} {abs(change_pct):.2f}%"
+    current_value_annotation = f"Current: {current_value:.2f}% {arrow_symbol} {abs(change):.2f}%"
     
     fig.add_annotation(
         x=0.02,
