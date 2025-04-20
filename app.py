@@ -225,17 +225,18 @@ def calculate_sentiment_index(custom_weights=None, proprietary_data=None, docume
     """
     # Default weights (equal percentages that sum to 100%)
     default_weights = {
-        'Real GDP % Change': 9.1,
-        'PCE': 9.1,
-        'Unemployment Rate': 9.1,
-        'CPI': 9.1,
-        'PCEPI': 9.1,
-        'NASDAQ Trend': 9.1,
-        'PPI: Data Processing Services': 9.1,
-        'PPI: Software Publishers': 9.1,
-        'Federal Funds Rate': 9.1,
-        'Treasury Yield': 9.1,
-        'VIX Volatility': 9.0
+        'Real GDP % Change': 8.33,
+        'PCE': 8.33,
+        'Unemployment Rate': 8.33,
+        'CPI': 8.33,
+        'PCEPI': 8.33,
+        'NASDAQ Trend': 8.33,
+        'PPI: Data Processing Services': 8.33,
+        'PPI: Software Publishers': 8.33,
+        'Federal Funds Rate': 8.33,
+        'Treasury Yield': 8.33,
+        'VIX Volatility': 8.33,
+        'Software Job Postings': 8.37  # Slightly higher to make it exactly 100%
     }
     
     # Validate default weights sum to 100
@@ -440,6 +441,43 @@ def calculate_sentiment_index(custom_weights=None, proprietary_data=None, docume
             'weight': weights['VIX Volatility']
         })
         
+    # 10. Software Job Postings - higher YoY growth is better for tech sector
+    if not job_postings_data.empty and 'yoy_growth' in job_postings_data.columns:
+        latest_job_posting = job_postings_data.sort_values('date', ascending=False).iloc[0]
+        
+        # Score based on YoY growth rate:
+        # > 20%: Excellent (90-100)
+        # 5-20%: Good (70-90)
+        # 0-5%: Moderate (50-70)
+        # -5-0%: Concerning (30-50)
+        # -20-(-5)%: Poor (10-30)
+        # < -20%: Very Poor (0-10)
+        
+        growth_rate = latest_job_posting['yoy_growth']
+        
+        if growth_rate >= 20:
+            job_posting_score = 90 + (min(growth_rate - 20, 10) / 10) * 10  # 90-100
+        elif growth_rate >= 5:
+            job_posting_score = 70 + ((growth_rate - 5) / 15) * 20  # 70-90
+        elif growth_rate >= 0:
+            job_posting_score = 50 + (growth_rate / 5) * 20  # 50-70
+        elif growth_rate >= -5:
+            job_posting_score = 30 + ((growth_rate + 5) / 5) * 20  # 30-50
+        elif growth_rate >= -20:
+            job_posting_score = 10 + ((growth_rate + 20) / 15) * 20  # 10-30
+        else:
+            job_posting_score = max(0, 10 + (growth_rate + 20))  # 0-10
+            
+        # Ensure score is in 0-100 range
+        job_posting_score = min(max(job_posting_score, 0), 100)
+        
+        sentiment_components.append({
+            'indicator': 'Software Job Postings',
+            'value': growth_rate,
+            'score': job_posting_score,
+            'weight': weights['Software Job Postings']
+        })
+        
     # 10. Add proprietary data if provided
     if proprietary_data and 'value' in proprietary_data and 'weight' in proprietary_data:
         # Value should be a score from 0-100
@@ -536,6 +574,9 @@ treasury_yield_data = load_data_from_csv('treasury_yield_data.csv')
 
 # Add NASDAQ Composite data from FRED (NASDAQCOM)
 nasdaq_data = load_data_from_csv('nasdaq_data.csv')
+
+# Add Software Job Postings from FRED (IHLIDXUSTPSOFTDEVE)
+job_postings_data = load_data_from_csv('job_postings_data.csv')
 
 # If no existing data or data is old, fetch new data
 if nasdaq_data.empty or (datetime.now() - pd.to_datetime(nasdaq_data['date'].max())).days > 7:
@@ -813,6 +854,39 @@ if vix_data.empty or (datetime.now() - pd.to_datetime(vix_data['date'].max())).d
     else:
         print("Failed to fetch VIX data")
 
+# Add Software Job Postings data
+if job_postings_data.empty or (datetime.now() - pd.to_datetime(job_postings_data['date'].max() if not job_postings_data.empty else '2000-01-01')).days > 30:
+    # Fetch U.S. Software Job Postings on Indeed (IHLIDXUSTPSOFTDEVE)
+    job_postings_temp = fetch_fred_data('IHLIDXUSTPSOFTDEVE')
+    
+    if not job_postings_temp.empty:
+        # Calculate year-over-year growth
+        job_postings_temp = job_postings_temp.sort_values('date')
+        
+        # Create a dataframe shifted by 12 months to calculate YoY change
+        postings_yoy = job_postings_temp.copy()
+        postings_yoy['date'] = postings_yoy['date'] + pd.DateOffset(months=12)
+        postings_yoy = postings_yoy.rename(columns={'value': 'year_ago_value'})
+        
+        # Merge current and year-ago values
+        job_postings_data = pd.merge(
+            job_postings_temp, 
+            postings_yoy[['date', 'year_ago_value']], 
+            on='date', 
+            how='left'
+        )
+        
+        # Calculate YoY growth
+        job_postings_data['yoy_growth'] = ((job_postings_data['value'] - job_postings_data['year_ago_value']) / 
+                              job_postings_data['year_ago_value'] * 100)
+        
+        # Save data
+        save_data_to_csv(job_postings_data, 'job_postings_data.csv')
+        
+        print(f"Software Job Postings data updated with {len(job_postings_data)} observations")
+    else:
+        print("Failed to fetch Software Job Postings data")
+
 # Calculate initial sentiment index
 sentiment_index = calculate_sentiment_index()
 
@@ -1076,7 +1150,7 @@ app.layout = html.Div([
                             min=0,
                             max=30,
                             step=0.1,
-                            value=9.1,
+                            value=8.33,
                             marks={0: "0%", 15: "15%", 30: "30%"},
                             className="weight-slider"
                         ),
@@ -1089,7 +1163,7 @@ app.layout = html.Div([
                             min=0,
                             max=30,
                             step=0.1,
-                            value=9.1,
+                            value=8.33,
                             marks={0: "0%", 15: "15%", 30: "30%"},
                             className="weight-slider"
                         ),
@@ -1102,7 +1176,7 @@ app.layout = html.Div([
                             min=0,
                             max=30,
                             step=0.1,
-                            value=9.1,
+                            value=8.33,
                             marks={0: "0%", 15: "15%", 30: "30%"},
                             className="weight-slider"
                         ),
@@ -1115,7 +1189,7 @@ app.layout = html.Div([
                             min=0,
                             max=30,
                             step=0.1,
-                            value=9.1,
+                            value=8.33,
                             marks={0: "0%", 15: "15%", 30: "30%"},
                             className="weight-slider"
                         ),
@@ -1128,7 +1202,7 @@ app.layout = html.Div([
                             min=0,
                             max=30,
                             step=0.1,
-                            value=9.1,
+                            value=8.33,
                             marks={0: "0%", 15: "15%", 30: "30%"},
                             className="weight-slider"
                         ),
@@ -1141,7 +1215,7 @@ app.layout = html.Div([
                             min=0,
                             max=30,
                             step=0.1,
-                            value=9.1,
+                            value=8.33,
                             marks={0: "0%", 15: "15%", 30: "30%"},
                             className="weight-slider"
                         ),
@@ -1154,7 +1228,7 @@ app.layout = html.Div([
                             min=0,
                             max=30,
                             step=0.1,
-                            value=9.1,
+                            value=8.33,
                             marks={0: "0%", 15: "15%", 30: "30%"},
                             className="weight-slider"
                         ),
@@ -1167,7 +1241,7 @@ app.layout = html.Div([
                             min=0,
                             max=30,
                             step=0.1,
-                            value=9.1,
+                            value=8.33,
                             marks={0: "0%", 15: "15%", 30: "30%"},
                             className="weight-slider"
                         ),
@@ -1180,7 +1254,7 @@ app.layout = html.Div([
                             min=0,
                             max=30,
                             step=0.1,
-                            value=9.1,
+                            value=8.33,
                             marks={0: "0%", 15: "15%", 30: "30%"},
                             className="weight-slider"
                         ),
@@ -1193,7 +1267,7 @@ app.layout = html.Div([
                             min=0,
                             max=30,
                             step=0.1,
-                            value=9.1,
+                            value=8.33,
                             marks={0: "0%", 15: "15%", 30: "30%"},
                             className="weight-slider"
                         ),
@@ -1206,7 +1280,20 @@ app.layout = html.Div([
                             min=0,
                             max=30,
                             step=0.1,
-                            value=9.0,
+                            value=8.33,
+                            marks={0: "0%", 15: "15%", 30: "30%"},
+                            className="weight-slider"
+                        ),
+                    ], className="weight-control"),
+                    
+                    html.Div([
+                        html.Label("Software Job Postings"),
+                        dcc.Slider(
+                            id="job-postings-weight",
+                            min=0,
+                            max=30,
+                            step=0.1,
+                            value=8.37,
                             marks={0: "0%", 15: "15%", 30: "30%"},
                             className="weight-slider"
                         ),
@@ -1310,6 +1397,10 @@ app.layout = html.Div([
                     html.Div([
                         html.H3("Unemployment Rate", className="graph-title"),
                         html.Div(id="unemployment-container", className="insights-enabled-container")
+                    ], className="graph-container"),
+                    html.Div([
+                        html.H3("U.S. Software Job Postings on Indeed", className="graph-title"),
+                        html.Div(id="job-postings-container", className="insights-enabled-container")
                     ], className="graph-container")
                 ], className="custom-tab", selected_className="custom-tab--selected"),
                 
@@ -2107,6 +2198,154 @@ def update_unemployment_container(n):
         insights_panel
     ]
 
+# Software Job Postings Graph (Figure only function)
+def update_job_postings_graph(n):
+    """Generate the Software Job Postings chart figure"""
+    if job_postings_data.empty or 'yoy_growth' not in job_postings_data.columns:
+        return go.Figure().update_layout(
+            title="No data available",
+            height=400
+        )
+    
+    # Filter for last 3 years
+    cutoff_date = datetime.now() - timedelta(days=3*365)
+    filtered_data = job_postings_data[job_postings_data['date'] >= cutoff_date].copy()
+    
+    # Create figure
+    fig = go.Figure()
+    
+    # Add Job Postings YoY line
+    fig.add_trace(go.Scatter(
+        x=filtered_data['date'],
+        y=filtered_data['yoy_growth'],
+        mode='lines',
+        name='YoY % Change',
+        line=dict(color='#4C78A8', width=3),  # Blue color for tech jobs
+    ))
+    
+    # Add reference lines for key thresholds
+    x_range = [filtered_data['date'].min(), filtered_data['date'].max()]
+    
+    # Add +20% Growth threshold line
+    fig.add_trace(go.Scatter(
+        x=x_range,
+        y=[20, 20],
+        mode='lines',
+        line=dict(color='green', width=1, dash='dash'),
+        name='Hiring Boom (20%)'
+    ))
+    
+    # Add +5% Growth threshold line
+    fig.add_trace(go.Scatter(
+        x=x_range,
+        y=[5, 5],
+        mode='lines',
+        line=dict(color='lightgreen', width=1, dash='dash'),
+        name='Healthy Recovery (5%)'
+    ))
+    
+    # Add 0% Growth threshold line
+    fig.add_trace(go.Scatter(
+        x=x_range,
+        y=[0, 0],
+        mode='lines',
+        line=dict(color='gray', width=1),
+        name='Neutral'
+    ))
+    
+    # Add -5% Growth threshold line
+    fig.add_trace(go.Scatter(
+        x=x_range,
+        y=[-5, -5],
+        mode='lines',
+        line=dict(color='orange', width=1, dash='dash'),
+        name='Slowdown (-5%)'
+    ))
+    
+    # Add -20% Growth threshold line
+    fig.add_trace(go.Scatter(
+        x=x_range,
+        y=[-20, -20],
+        mode='lines',
+        line=dict(color='red', width=1, dash='dash'),
+        name='Hiring Recession (-20%)'
+    ))
+    
+    # Add current value annotation
+    current_value = filtered_data['yoy_growth'].iloc[-1]
+    previous_value = filtered_data['yoy_growth'].iloc[-2]
+    change = current_value - previous_value
+    
+    # Using absolute value change (not percentage)
+    arrow_color = 'green' if change > 0 else 'red'
+    arrow_symbol = "▲" if change > 0 else "▼"
+    
+    current_value_annotation = f"Current: {current_value:.2f}% {arrow_symbol} {abs(change):.2f}%"
+    
+    fig.add_annotation(
+        x=0.02,
+        y=0.95,
+        xref="paper",
+        yref="paper",
+        text=current_value_annotation,
+        showarrow=False,
+        font=dict(size=14, color=arrow_color),
+        align="left",
+        bgcolor="rgba(255, 255, 255, 0.9)",
+        bordercolor=arrow_color,
+        borderwidth=1,
+        borderpad=4,
+        opacity=0.9
+    )
+    
+    # Update layout
+    fig.update_layout(
+        template=custom_template,
+        height=400,
+        title=None,
+        margin=dict(l=40, r=40, t=40, b=40),
+        xaxis_title="",
+        yaxis_title="Year-over-Year % Change",
+        yaxis=dict(
+            ticksuffix="%",
+            zeroline=True,
+            zerolinecolor='rgba(0,0,0,0.2)',
+        ),
+        hovermode="x unified",
+        legend=dict(
+            orientation="h",
+            yanchor="bottom",
+            y=1.02,
+            xanchor="right",
+            x=1
+        )
+    )
+    
+    return fig
+
+# Update Job Postings Container with chart and insights
+@app.callback(
+    Output("job-postings-container", "children"),
+    [Input("interval-component", "n_intervals")]
+)
+def update_job_postings_container(n):
+    """Update the Job Postings container to include both the graph and insights panel"""
+    # Get the chart figure
+    figure = update_job_postings_graph(n)
+    
+    # Filter data for insights panel
+    cutoff_date = datetime.now() - timedelta(days=3*365)
+    filtered_data = job_postings_data[job_postings_data['date'] >= cutoff_date].copy() if not job_postings_data.empty else pd.DataFrame()
+    
+    # Create insights panel with the filtered data
+    insights_panel = create_insights_panel("job_postings", filtered_data)
+    
+    # Return container with graph and insights panel
+    return [
+        dcc.Graph(id="job-postings-graph", figure=figure),
+        insights_panel
+    ]
+
 # Update Inflation Graph (generates figure only)
 def update_inflation_graph(n):
     """Generate the CPI inflation chart figure"""
@@ -2847,17 +3086,18 @@ def update_treasury_yield_container(n):
      Input("software-ppi-weight", "value"),
      Input("interest-rate-weight", "value"),
      Input("treasury-yield-weight", "value"),
-     Input("vix-weight", "value")],
+     Input("vix-weight", "value"),
+     Input("job-postings-weight", "value")],
     [State("document-data-store", "data")]
 )
-def update_total_weight(gdp, pce, unemployment, cpi, pcepi, nasdaq, data_ppi, software_ppi, interest_rate, treasury_yield, vix, document_data_store):
+def update_total_weight(gdp, pce, unemployment, cpi, pcepi, nasdaq, data_ppi, software_ppi, interest_rate, treasury_yield, vix, job_postings, document_data_store):
     # Get document weight if it exists
     document_weight = 0
     if document_data_store and isinstance(document_data_store, dict) and 'weight' in document_data_store:
         document_weight = float(document_data_store['weight'])
     
     # Calculate total of economic indicators only
-    economic_indicators_total = gdp + pce + unemployment + cpi + pcepi + nasdaq + data_ppi + software_ppi + interest_rate + treasury_yield + vix
+    economic_indicators_total = gdp + pce + unemployment + cpi + pcepi + nasdaq + data_ppi + software_ppi + interest_rate + treasury_yield + vix + job_postings
     
     # If document weight is present, the economic indicators should sum to (100 - document_weight)
     if document_weight > 0:
@@ -2900,12 +3140,13 @@ def update_total_weight(gdp, pce, unemployment, cpi, pcepi, nasdaq, data_ppi, so
      State("interest-rate-weight", "value"),
      State("treasury-yield-weight", "value"),
      State("vix-weight", "value"),
+     State("job-postings-weight", "value"),
      State("proprietary-data-store", "data"),
      State("document-data-store", "data")],
     prevent_initial_call=True
 )
 def apply_custom_weights(n_clicks, gdp, pce, unemployment, cpi, pcepi, nasdaq, 
-                         data_ppi, software_ppi, interest_rate, treasury_yield, vix, proprietary_data, document_data):
+                         data_ppi, software_ppi, interest_rate, treasury_yield, vix, job_postings, proprietary_data, document_data):
     if n_clicks is None:
         # Initial load, use default weights
         sentiment_index = calculate_sentiment_index(proprietary_data=proprietary_data, document_data=document_data)
@@ -2918,7 +3159,7 @@ def apply_custom_weights(n_clicks, gdp, pce, unemployment, cpi, pcepi, nasdaq,
         document_weight = max(0, min(50, document_weight))  # Enforce 0-50% range
     
     # Create custom weights dictionary
-    total_economic_weight = gdp + pce + unemployment + cpi + pcepi + nasdaq + data_ppi + software_ppi + interest_rate + treasury_yield + vix
+    total_economic_weight = gdp + pce + unemployment + cpi + pcepi + nasdaq + data_ppi + software_ppi + interest_rate + treasury_yield + vix + job_postings
     
     # If total economic weight plus document weight isn't 100%, adjust the economic indicators
     if abs(total_economic_weight + document_weight - 100) > 0.1:
@@ -2944,6 +3185,7 @@ def apply_custom_weights(n_clicks, gdp, pce, unemployment, cpi, pcepi, nasdaq,
         interest_rate = round(interest_rate * scaling_factor, 1)
         treasury_yield = round(treasury_yield * scaling_factor, 1)
         vix = round(vix * scaling_factor, 1)
+        job_postings = round(job_postings * scaling_factor, 1)
         
         print(f"After scaling: VIX weight = {vix}")
     
@@ -2958,7 +3200,8 @@ def apply_custom_weights(n_clicks, gdp, pce, unemployment, cpi, pcepi, nasdaq,
         'PPI: Software Publishers': software_ppi,
         'Federal Funds Rate': interest_rate,
         'Treasury Yield': treasury_yield,
-        'VIX Volatility': vix
+        'VIX Volatility': vix,
+        'Job Postings': job_postings
     }
     
     # Calculate using both custom weights and document data
@@ -3049,7 +3292,7 @@ def apply_proprietary_data(n_clicks, weight, value, custom_weights, document_dat
 def refresh_data(n_clicks):
     # Define variables as global at the top of the function
     global gdp_data, unemployment_data, inflation_data, interest_rate_data
-    global nasdaq_data, software_ppi_data, data_processing_ppi_data, pcepi_data
+    global nasdaq_data, software_ppi_data, data_processing_ppi_data, pcepi_data, job_postings_data
     
     if n_clicks is None:
         # Initial load
@@ -3161,6 +3404,32 @@ def refresh_data(n_clicks):
         nasdaq_temp['pct_change'] = nasdaq_temp['value'].pct_change() * 100
         nasdaq_data = nasdaq_temp
         save_data_to_csv(nasdaq_data, 'nasdaq_data.csv')
+        
+    # Software Job Postings
+    job_postings_temp = fetch_fred_data('IHLIDXUSTPSOFTDEVE')
+    if not job_postings_temp.empty:
+        # Calculate year-over-year growth
+        job_postings_temp = job_postings_temp.sort_values('date')
+        
+        # Create a dataframe shifted by 12 months to calculate YoY change
+        postings_yoy = job_postings_temp.copy()
+        postings_yoy['date'] = postings_yoy['date'] + pd.DateOffset(months=12)
+        postings_yoy = postings_yoy.rename(columns={'value': 'year_ago_value'})
+        
+        # Merge current and year-ago values
+        job_postings_data = pd.merge(
+            job_postings_temp, 
+            postings_yoy[['date', 'year_ago_value']], 
+            on='date', 
+            how='left'
+        )
+        
+        # Calculate YoY growth
+        job_postings_data['yoy_growth'] = ((job_postings_data['value'] - job_postings_data['year_ago_value']) / 
+                              job_postings_data['year_ago_value'] * 100)
+        
+        # Save data
+        save_data_to_csv(job_postings_data, 'job_postings_data.csv')
     
     # Update indicator values for display
     return (
@@ -3226,7 +3495,7 @@ def initialize_sentiment_index(_):
     prevent_initial_call=True
 )
 def update_document_weight_display(weight, contents, n_clicks, document_data,
-                                gdp, pce, unemployment, cpi, pcepi, nasdaq, data_ppi, software_ppi, interest_rate, treasury_yield, vix_weight):
+                                gdp, pce, unemployment, cpi, pcepi, nasdaq, data_ppi, software_ppi, interest_rate, treasury_yield, vix_weight, job_postings_weight):
     ctx = dash.callback_context  # Get the callback context to determine what triggered the callback
     trigger_id = ctx.triggered[0]['prop_id'].split('.')[0] if ctx.triggered else None
     
@@ -3415,7 +3684,8 @@ def update_document_preview(contents, filename):
      Output("software-ppi-weight", "value", allow_duplicate=True),
      Output("interest-rate-weight", "value", allow_duplicate=True),
      Output("treasury-yield-weight", "value", allow_duplicate=True),
-     Output("vix-weight", "value", allow_duplicate=True)],
+     Output("vix-weight", "value", allow_duplicate=True),
+     Output("job-postings-weight", "value", allow_duplicate=True)],
     [Input("apply-document", "n_clicks")],
     [State("document-weight", "value"),
      State("upload-document", "contents"),
@@ -3432,11 +3702,12 @@ def update_document_preview(contents, filename):
      State("software-ppi-weight", "value"),
      State("interest-rate-weight", "value"),
      State("treasury-yield-weight", "value"),
-     State("vix-weight", "value")],
+     State("vix-weight", "value"),
+     State("job-postings-weight", "value")],
     prevent_initial_call=True
 )
 def apply_document_analysis(n_clicks, weight, contents, filename, custom_weights, proprietary_data,
-                          gdp, pce, unemployment, cpi, pcepi, nasdaq, data_ppi, software_ppi, interest_rate, treasury_yield, vix_weight):
+                          gdp, pce, unemployment, cpi, pcepi, nasdaq, data_ppi, software_ppi, interest_rate, treasury_yield, vix_weight, job_postings_weight):
     # Document weight should not be applied until a document is uploaded and analyzed
     if n_clicks is None:
         # Return document weight of 0 and no updates to other components
@@ -3483,7 +3754,7 @@ def apply_document_analysis(n_clicks, weight, contents, filename, custom_weights
             
             # Calculate appropriate scaling for economic indicators to ensure all weights sum to 100%
             remaining_weight = 100 - weight
-            economic_indicators_total = gdp + pce + unemployment + cpi + pcepi + nasdaq + data_ppi + software_ppi + interest_rate + treasury_yield + vix_weight
+            economic_indicators_total = gdp + pce + unemployment + cpi + pcepi + nasdaq + data_ppi + software_ppi + interest_rate + treasury_yield + vix_weight + job_postings_weight
             
             # Check if economic indicators are already the correct sum
             if abs(economic_indicators_total - remaining_weight) < 0.1:
@@ -3560,15 +3831,16 @@ def apply_document_analysis(n_clicks, weight, contents, filename, custom_weights
                 new_interest_rate = round(interest_rate * scaling_factor, 1)
                 new_treasury_yield = round(treasury_yield * scaling_factor, 1)
                 new_vix = round(vix_weight * scaling_factor, 1)
+                new_job_postings = round(job_postings_weight * scaling_factor, 1)
                 
                 print(f"Document apply - After scaling: VIX weight = {new_vix}")
                 
                 # If rounding causes total to differ from remaining weight, adjust the largest value
-                new_total = new_gdp + new_pce + new_unemployment + new_cpi + new_pcepi + new_nasdaq + new_data_ppi + new_software_ppi + new_interest_rate + new_treasury_yield + new_vix
+                new_total = new_gdp + new_pce + new_unemployment + new_cpi + new_pcepi + new_nasdaq + new_data_ppi + new_software_ppi + new_interest_rate + new_treasury_yield + new_vix + new_job_postings
                 print(f"After scaling: economic weights = {new_total:.1f}, remaining weight = {remaining_weight:.1f}")
                 if abs(new_total - remaining_weight) > 0.1:
                     # Find the largest value and adjust it
-                    values = [new_gdp, new_pce, new_unemployment, new_cpi, new_pcepi, new_nasdaq, new_data_ppi, new_software_ppi, new_interest_rate, new_treasury_yield, new_vix]
+                    values = [new_gdp, new_pce, new_unemployment, new_cpi, new_pcepi, new_nasdaq, new_data_ppi, new_software_ppi, new_interest_rate, new_treasury_yield, new_vix, new_job_postings]
                     max_index = values.index(max(values))
                     if max_index == 0:
                         new_gdp += (remaining_weight - new_total)
@@ -3592,6 +3864,8 @@ def apply_document_analysis(n_clicks, weight, contents, filename, custom_weights
                         new_treasury_yield += (remaining_weight - new_total)
                     elif max_index == 10:
                         new_vix += (remaining_weight - new_total)
+                    elif max_index == 11:
+                        new_job_postings += (remaining_weight - new_total)
             else:
                 # No document weight, keep original values
                 new_gdp = gdp
@@ -3605,6 +3879,7 @@ def apply_document_analysis(n_clicks, weight, contents, filename, custom_weights
                 new_interest_rate = interest_rate
                 new_treasury_yield = treasury_yield
                 new_vix = vix_weight
+                new_job_postings = job_postings_weight
             
             # Return document data, analysis display, sentiment score and category, weight display, and updated economic indicator values
             return (
@@ -3613,7 +3888,7 @@ def apply_document_analysis(n_clicks, weight, contents, filename, custom_weights
                 f"{sentiment_index['score']:.1f}" if sentiment_index else "N/A", 
                 sentiment_index['category'] if sentiment_index else "N/A", 
                 total_weight_display,
-                new_gdp, new_pce, new_unemployment, new_cpi, new_pcepi, new_nasdaq, new_data_ppi, new_software_ppi, new_interest_rate, new_treasury_yield, new_vix
+                new_gdp, new_pce, new_unemployment, new_cpi, new_pcepi, new_nasdaq, new_data_ppi, new_software_ppi, new_interest_rate, new_treasury_yield, new_vix, new_job_postings
             )
         else:
             # Document processing failed
