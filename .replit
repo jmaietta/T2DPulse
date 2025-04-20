@@ -20,6 +20,14 @@ args = "Economic Dashboard Server"
 task = "workflow.run"
 args = "Chart Mockup Demo"
 
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "Sentiment Glow Mockup"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "Simple Glow Mockup"
+
 [[workflows.workflow]]
 name = "Economic Dashboard Server"
 author = "agent"
@@ -50,6 +58,36 @@ task = "shell.exec"
 args = "python chart_mockup.py"
 waitForPort = 5000
 
+[[workflows.workflow]]
+name = "Sentiment Glow Mockup"
+author = "agent"
+
+[workflows.workflow.metadata]
+agentRequireRestartOnSave = false
+
+[[workflows.workflow.tasks]]
+task = "packager.installForAll"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "python sentiment_glow_mockup.py"
+waitForPort = 5002
+
+[[workflows.workflow]]
+name = "Simple Glow Mockup"
+author = "agent"
+
+[workflows.workflow.metadata]
+agentRequireRestartOnSave = false
+
+[[workflows.workflow.tasks]]
+task = "packager.installForAll"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "python simple_glow_mockup.py"
+waitForPort = 5003
+
 [deployment]
 run = ["sh", "-c", "python wsgi.py"]
 deploymentTarget = "cloudrun"
@@ -61,3 +99,7 @@ externalPort = 80
 [[ports]]
 localPort = 5001
 externalPort = 3000
+
+[[ports]]
+localPort = 5003
+externalPort = 3001
