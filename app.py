@@ -3485,10 +3485,16 @@ from plotly.subplots import make_subplots
     [Output("sentiment-score", "children"),
      Output("sentiment-category", "children")],
     [Input("_", "children")],
+    [State("custom-weights-store", "data"),
+     State("document-data-store", "data")],
     prevent_initial_call=False
 )
-def initialize_sentiment_index(_):
-    sentiment_index = calculate_sentiment_index()
+def initialize_sentiment_index(_, custom_weights, document_data):
+    # Use the current custom weights and document data if they exist
+    sentiment_index = calculate_sentiment_index(
+        custom_weights=custom_weights,
+        document_data=document_data
+    )
     return (
         f"{sentiment_index['score']:.1f}" if sentiment_index else "N/A", 
         sentiment_index['category'] if sentiment_index else "N/A"
