@@ -37,24 +37,32 @@ app.layout = html.Div([
         })
     ]),
     
-    # Mockup matching the provided image
+    # Mockup matching the provided image exactly
     html.Div([
-        # Main rectangular sentiment display with glow
+        # Main white rectangular card with colored glow border (like image provided)
         html.Div([
-            html.H3("T2D Pulse Sentiment", style={"textAlign": "center", "fontWeight": "bold", "marginBottom": "10px"}),
-            html.Div("58.7", style={"fontSize": "56px", "textAlign": "center", "fontWeight": "bold", "color": "#E67E22"}),
-            html.Div("Moderate Growth", style={"fontSize": "22px", "textAlign": "center", "color": "#E67E22", "marginTop": "5px"})
+            # Content container (keeps content in center)
+            html.Div([
+                html.H3("T2D Pulse Sentiment", style={"textAlign": "center", "fontWeight": "bold", "marginBottom": "10px"}),
+                html.Div("58.7", style={"fontSize": "56px", "textAlign": "center", "fontWeight": "bold", "color": "#E67E22"}),
+                html.Div("Moderate Growth", style={"fontSize": "22px", "textAlign": "center", "color": "#E67E22", "marginTop": "5px"})
+            ], style={
+                "display": "flex",
+                "flexDirection": "column",
+                "justifyContent": "center",
+                "alignItems": "center",
+                "width": "100%",
+                "height": "100%",
+                "backgroundColor": "white",
+                "padding": "20px 0"
+            })
         ], style={
-            "padding": "20px 30px",
             "backgroundColor": "white",
             "borderRadius": "12px",
             "boxShadow": "0 0 15px rgba(230, 126, 34, 0.6)",  # Medium orange glow
             "border": "2px solid #E67E22",  # Matching border color
             "width": "800px",
             "height": "140px",
-            "display": "flex",
-            "flexDirection": "column",
-            "justifyContent": "center",
             "margin": "0 auto 40px auto"
         })
     ]),
@@ -65,57 +73,84 @@ app.layout = html.Div([
         html.Div([
             html.H3("Light Glow", style={"textAlign": "center", "marginBottom": "10px"}),
             html.Div([
-                html.H3("T2D Pulse Sentiment", style={"textAlign": "center", "fontWeight": "bold", "marginBottom": "10px"}),
-                html.Div("58.7", style={"fontSize": "48px", "textAlign": "center", "fontWeight": "bold", "color": "#E67E22"}),
-                html.Div("Moderate Growth", style={"fontSize": "20px", "textAlign": "center", "color": "#E67E22", "marginTop": "5px"})
+                # Nested content container
+                html.Div([
+                    html.H3("T2D Pulse Sentiment", style={"textAlign": "center", "fontWeight": "bold", "marginBottom": "10px"}),
+                    html.Div("58.7", style={"fontSize": "48px", "textAlign": "center", "fontWeight": "bold", "color": "#E67E22"}),
+                    html.Div("Moderate Growth", style={"fontSize": "20px", "textAlign": "center", "color": "#E67E22", "marginTop": "5px"})
+                ], style={
+                    "display": "flex",
+                    "flexDirection": "column",
+                    "justifyContent": "center",
+                    "alignItems": "center",
+                    "width": "100%",
+                    "height": "100%",
+                    "backgroundColor": "white",
+                    "padding": "10px 0"
+                })
             ], style={
-                "padding": "20px",
                 "backgroundColor": "white",
                 "borderRadius": "12px",
                 "boxShadow": "0 0 10px rgba(230, 126, 34, 0.4)",  # Light transparent glow
                 "border": "2px solid #E67E22",  # Matching border color
                 "height": "140px",
-                "display": "flex",
-                "flexDirection": "column",
-                "justifyContent": "center"
+                "width": "100%"
             })
         ], style={"width": "30%", "margin": "0 1.5%"}),
         
         html.Div([
             html.H3("Medium Glow", style={"textAlign": "center", "marginBottom": "10px"}),
             html.Div([
-                html.H3("T2D Pulse Sentiment", style={"textAlign": "center", "fontWeight": "bold", "marginBottom": "10px"}),
-                html.Div("58.7", style={"fontSize": "48px", "textAlign": "center", "fontWeight": "bold", "color": "#E67E22"}),
-                html.Div("Moderate Growth", style={"fontSize": "20px", "textAlign": "center", "color": "#E67E22", "marginTop": "5px"})
+                # Nested content container
+                html.Div([
+                    html.H3("T2D Pulse Sentiment", style={"textAlign": "center", "fontWeight": "bold", "marginBottom": "10px"}),
+                    html.Div("58.7", style={"fontSize": "48px", "textAlign": "center", "fontWeight": "bold", "color": "#E67E22"}),
+                    html.Div("Moderate Growth", style={"fontSize": "20px", "textAlign": "center", "color": "#E67E22", "marginTop": "5px"})
+                ], style={
+                    "display": "flex",
+                    "flexDirection": "column",
+                    "justifyContent": "center",
+                    "alignItems": "center",
+                    "width": "100%",
+                    "height": "100%",
+                    "backgroundColor": "white",
+                    "padding": "10px 0"
+                })
             ], style={
-                "padding": "20px",
                 "backgroundColor": "white",
                 "borderRadius": "12px",
                 "boxShadow": "0 0 15px rgba(230, 126, 34, 0.6)",  # Medium transparent glow
                 "border": "2px solid #E67E22",  # Matching border color
                 "height": "140px",
-                "display": "flex",
-                "flexDirection": "column",
-                "justifyContent": "center"
+                "width": "100%"
             })
         ], style={"width": "30%", "margin": "0 1.5%"}),
         
         html.Div([
             html.H3("Strong Glow", style={"textAlign": "center", "marginBottom": "10px"}),
             html.Div([
-                html.H3("T2D Pulse Sentiment", style={"textAlign": "center", "fontWeight": "bold", "marginBottom": "10px"}),
-                html.Div("58.7", style={"fontSize": "48px", "textAlign": "center", "fontWeight": "bold", "color": "#E67E22"}),
-                html.Div("Moderate Growth", style={"fontSize": "20px", "textAlign": "center", "color": "#E67E22", "marginTop": "5px"})
+                # Nested content container
+                html.Div([
+                    html.H3("T2D Pulse Sentiment", style={"textAlign": "center", "fontWeight": "bold", "marginBottom": "10px"}),
+                    html.Div("58.7", style={"fontSize": "48px", "textAlign": "center", "fontWeight": "bold", "color": "#E67E22"}),
+                    html.Div("Moderate Growth", style={"fontSize": "20px", "textAlign": "center", "color": "#E67E22", "marginTop": "5px"})
+                ], style={
+                    "display": "flex",
+                    "flexDirection": "column",
+                    "justifyContent": "center",
+                    "alignItems": "center",
+                    "width": "100%",
+                    "height": "100%",
+                    "backgroundColor": "white",
+                    "padding": "10px 0"
+                })
             ], style={
-                "padding": "20px",
                 "backgroundColor": "white",
                 "borderRadius": "12px",
                 "boxShadow": "0 0 20px rgba(230, 126, 34, 0.8)",  # Strong transparent glow
                 "border": "2px solid #E67E22",  # Matching border color
                 "height": "140px",
-                "display": "flex",
-                "flexDirection": "column",
-                "justifyContent": "center"
+                "width": "100%"
             })
         ], style={"width": "30%", "margin": "0 1.5%"})
     ], style={"display": "flex", "marginBottom": "40px", "maxWidth": "1200px", "margin": "0 auto"}),
@@ -125,19 +160,28 @@ app.layout = html.Div([
     html.Div([
         html.Div([
             html.Div([
-                html.H3("T2D Pulse Sentiment", style={"textAlign": "center", "fontWeight": "bold", "marginBottom": "15px"}),
-                html.Div(f"{70 - i*15}", style={"fontSize": "48px", "textAlign": "center", "fontWeight": "bold", "color": category["color"]}),
-                html.Div(category["name"], style={"fontSize": "22px", "textAlign": "center", "color": category["color"], "marginTop": "10px"})
+                # Nested content container
+                html.Div([
+                    html.H3("T2D Pulse Sentiment", style={"textAlign": "center", "fontWeight": "bold", "marginBottom": "15px"}),
+                    html.Div(f"{70 - i*15}", style={"fontSize": "48px", "textAlign": "center", "fontWeight": "bold", "color": category["color"]}),
+                    html.Div(category["name"], style={"fontSize": "22px", "textAlign": "center", "color": category["color"], "marginTop": "10px"})
+                ], style={
+                    "display": "flex",
+                    "flexDirection": "column",
+                    "justifyContent": "center",
+                    "alignItems": "center",
+                    "width": "100%",
+                    "height": "100%",
+                    "backgroundColor": "white",
+                    "padding": "20px 0"
+                })
             ], style={
-                "padding": "30px",
                 "backgroundColor": "white",
-                "borderRadius": "8px",
+                "borderRadius": "12px",
                 "boxShadow": f"0 0 15px {category['color']}",  # Matching glow
-                "border": f"1px solid {category['color']}",  # Matching border color
-                "height": "250px",
-                "display": "flex",
-                "flexDirection": "column",
-                "justifyContent": "center"
+                "border": f"2px solid {category['color']}",  # Matching border color
+                "height": "140px",
+                "width": "100%"
             })
         ], style={"width": "18%", "margin": "0 1%"})
         for i, category in enumerate(sentiment_categories)
