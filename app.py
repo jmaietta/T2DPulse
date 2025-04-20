@@ -1593,7 +1593,7 @@ def update_sentiment_gauge(score):
             "backgroundColor": "white",
             "borderRadius": "8px",
             "padding": "15px",
-            "boxShadow": f"0 0 15px rgba({int(color[1:3], 16)}, {int(color[3:5], 16)}, {int(color[5:7], 16)}, 0.6)",  # Color-matched glow
+            "boxShadow": f"0 0 10px rgba({int(color[1:3], 16)}, {int(color[3:5], 16)}, {int(color[5:7], 16)}, 0.4)",  # Light color-matched glow
             "border": f"1px solid {color}",  # Color-matched border
             "transition": "all 0.3s ease"  # Smooth transition when color changes
         }
