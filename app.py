@@ -2191,6 +2191,7 @@ def update_treasury_yield_graph(n):
 @app.callback(
     Output("total-weight", "children"),
     [Input("gdp-weight", "value"),
+     Input("pce-weight", "value"),
      Input("unemployment-weight", "value"),
      Input("cpi-weight", "value"),
      Input("nasdaq-weight", "value"),
@@ -2201,14 +2202,14 @@ def update_treasury_yield_graph(n):
      Input("vix-weight", "value")],
     [State("document-data-store", "data")]
 )
-def update_total_weight(gdp, unemployment, cpi, nasdaq, data_ppi, software_ppi, interest_rate, treasury_yield, vix, document_data_store):
+def update_total_weight(gdp, pce, unemployment, cpi, nasdaq, data_ppi, software_ppi, interest_rate, treasury_yield, vix, document_data_store):
     # Get document weight if it exists
     document_weight = 0
     if document_data_store and isinstance(document_data_store, dict) and 'weight' in document_data_store:
         document_weight = float(document_data_store['weight'])
     
     # Calculate total of economic indicators only
-    economic_indicators_total = gdp + unemployment + cpi + nasdaq + data_ppi + software_ppi + interest_rate + treasury_yield + vix
+    economic_indicators_total = gdp + pce + unemployment + cpi + nasdaq + data_ppi + software_ppi + interest_rate + treasury_yield + vix
     
     # If document weight is present, the economic indicators should sum to (100 - document_weight)
     if document_weight > 0:
@@ -2241,6 +2242,7 @@ def update_total_weight(gdp, unemployment, cpi, nasdaq, data_ppi, software_ppi, 
      Output("sentiment-category", "children", allow_duplicate=True)],
     [Input("apply-weights", "n_clicks")],
     [State("gdp-weight", "value"),
+     State("pce-weight", "value"),
      State("unemployment-weight", "value"),
      State("cpi-weight", "value"),
      State("nasdaq-weight", "value"),
@@ -2253,7 +2255,7 @@ def update_total_weight(gdp, unemployment, cpi, nasdaq, data_ppi, software_ppi, 
      State("document-data-store", "data")],
     prevent_initial_call=True
 )
-def apply_custom_weights(n_clicks, gdp, unemployment, cpi, nasdaq, 
+def apply_custom_weights(n_clicks, gdp, pce, unemployment, cpi, nasdaq, 
                          data_ppi, software_ppi, interest_rate, treasury_yield, vix, proprietary_data, document_data):
     if n_clicks is None:
         # Initial load, use default weights
@@ -2267,7 +2269,7 @@ def apply_custom_weights(n_clicks, gdp, unemployment, cpi, nasdaq,
         document_weight = max(0, min(50, document_weight))  # Enforce 0-50% range
     
     # Create custom weights dictionary
-    total_economic_weight = gdp + unemployment + cpi + nasdaq + data_ppi + software_ppi + interest_rate + treasury_yield + vix
+    total_economic_weight = gdp + pce + unemployment + cpi + nasdaq + data_ppi + software_ppi + interest_rate + treasury_yield + vix
     
     # If total economic weight plus document weight isn't 100%, adjust the economic indicators
     if abs(total_economic_weight + document_weight - 100) > 0.1:
@@ -2277,6 +2279,7 @@ def apply_custom_weights(n_clicks, gdp, unemployment, cpi, nasdaq,
         # Scale the economic indicators to use exactly the available weight
         scaling_factor = available_weight / total_economic_weight
         gdp = gdp * scaling_factor
+        pce = pce * scaling_factor
         unemployment = unemployment * scaling_factor
         cpi = cpi * scaling_factor
         nasdaq = nasdaq * scaling_factor
@@ -2288,6 +2291,7 @@ def apply_custom_weights(n_clicks, gdp, unemployment, cpi, nasdaq,
     
     custom_weights = {
         'Real GDP % Change': gdp,
+        'PCE': pce,
         'Unemployment Rate': unemployment,
         'CPI': cpi,
         'NASDAQ Trend': nasdaq,
@@ -2506,6 +2510,7 @@ def initialize_sentiment_index(_):
      Output("total-weight", "children", allow_duplicate=True),  # Update the total weight display
      # Add outputs to update the Economic Indicators section when document weight changes
      Output("gdp-weight", "value", allow_duplicate=True),
+     Output("pce-weight", "value", allow_duplicate=True),
      Output("unemployment-weight", "value", allow_duplicate=True),
      Output("cpi-weight", "value", allow_duplicate=True),
      Output("nasdaq-weight", "value", allow_duplicate=True),
