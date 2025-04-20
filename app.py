@@ -1363,7 +1363,7 @@ app.layout = html.Div([
                 dcc.Tab(label="Market Volatility", children=[
                     html.Div([
                         html.H3("CBOE Volatility Index (VIX)", className="graph-title"),
-                        dcc.Graph(id="vix-graph")
+                        html.Div(id="vix-container", className="insights-enabled-container")
                     ], className="graph-container")
                 ], className="custom-tab", selected_className="custom-tab--selected"),
             ], className="custom-tabs")
@@ -3260,12 +3260,9 @@ def apply_document_analysis(n_clicks, weight, contents, filename, custom_weights
         # Return all dash.no_update for the economic indicators
         return None, error_message, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update
 
-# Update VIX Graph
-@app.callback(
-    Output("vix-graph", "figure"),
-    [Input("interval-component", "n_intervals")]
-)
+# Update VIX Graph (This function now only generates the figure)
 def update_vix_graph(n):
+    """Generate the VIX chart figure"""
     if vix_data.empty:
         return go.Figure().update_layout(
             title="No data available",
@@ -3337,9 +3334,38 @@ def update_vix_graph(n):
         line=dict(color='black', width=2, dash='dot'),
     ))
     
+    # Add current value annotation
+    current_value = filtered_data['value'].iloc[-1]
+    previous_value = filtered_data['value'].iloc[-2]
+    change = current_value - previous_value
+    
+    # For VIX, up is negative (fear) and down is positive (calm)
+    arrow_color = color_scheme["negative"] if change > 0 else color_scheme["positive"]
+    arrow_symbol = "▲" if change > 0 else "▼"
+    
+    current_value_annotation = f"Current: {current_value:.2f} {arrow_symbol} {abs(change):.2f}"
+    
+    fig.add_annotation(
+        x=0.02,
+        y=0.95,
+        xref="paper",
+        yref="paper",
+        text=current_value_annotation,
+        showarrow=False,
+        font=dict(size=14, color=arrow_color),
+        align="left",
+        bgcolor="rgba(255, 255, 255, 0.9)",
+        bordercolor=arrow_color,
+        borderwidth=1,
+        borderpad=4,
+        opacity=0.9
+    )
+    
     # Update layout
     fig.update_layout(
+        template=custom_template,
         height=400,
+        title=None,
         margin=dict(l=40, r=40, t=40, b=40),
         xaxis_title="",
         yaxis_title="VIX",
@@ -3358,6 +3384,29 @@ def update_vix_graph(n):
     )
     
     return fig
+
+# Update VIX Container with chart and insights panel
+@app.callback(
+    Output("vix-container", "children"),
+    [Input("interval-component", "n_intervals")]
+)
+def update_vix_container(n):
+    """Update the VIX container to include both the graph and insights panel"""
+    # Get the chart figure
+    figure = update_vix_graph(n)
+    
+    # Filter data for insights panel (same filtering as in chart function)
+    cutoff_date = datetime.now() - timedelta(days=2*365)
+    filtered_data = vix_data[vix_data['date'] >= cutoff_date].copy()
+    
+    # Create insights panel with the filtered data
+    insights_panel = create_insights_panel("vix", filtered_data)
+    
+    # Return container with graph and insights panel
+    return [
+        dcc.Graph(id="vix-graph", figure=figure),
+        insights_panel
+    ]
 
 # Add this at the end of the file if running directly
 if __name__ == "__main__":
