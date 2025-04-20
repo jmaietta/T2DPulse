@@ -1309,7 +1309,7 @@ app.layout = html.Div([
                 dcc.Tab(label="Labor Market", children=[
                     html.Div([
                         html.H3("Unemployment Rate", className="graph-title"),
-                        dcc.Graph(id="unemployment-graph")
+                        html.Div(id="unemployment-container", className="insights-enabled-container")
                     ], className="graph-container")
                 ], className="custom-tab", selected_className="custom-tab--selected"),
                 
@@ -2020,12 +2020,9 @@ def update_pce_container(n):
 def update_pce_graph_callback(n):
     return update_pce_graph(n)
 
-# Update Unemployment Graph
-@app.callback(
-    Output("unemployment-graph", "figure"),
-    [Input("interval-component", "n_intervals")]
-)
+# Update Unemployment Graph (Figure only function)
 def update_unemployment_graph(n):
+    """Generate the Unemployment Rate chart figure"""
     if unemployment_data.empty:
         return go.Figure().update_layout(
             title="No data available",
@@ -2064,7 +2061,9 @@ def update_unemployment_graph(n):
     
     # Update layout
     fig.update_layout(
+        template=custom_template,
         height=400,
+        title=None,
         margin=dict(l=40, r=40, t=40, b=40),
         xaxis_title="",
         yaxis_title="Unemployment Rate (%)",
@@ -2084,6 +2083,29 @@ def update_unemployment_graph(n):
     )
     
     return fig
+
+# Update Unemployment Container with chart and insights
+@app.callback(
+    Output("unemployment-container", "children"),
+    [Input("interval-component", "n_intervals")]
+)
+def update_unemployment_container(n):
+    """Update the Unemployment container to include both the graph and insights panel"""
+    # Get the chart figure
+    figure = update_unemployment_graph(n)
+    
+    # Filter data for insights panel (same filtering as in chart function)
+    cutoff_date = datetime.now() - timedelta(days=5*365)
+    filtered_data = unemployment_data[unemployment_data['date'] >= cutoff_date].copy()
+    
+    # Create insights panel with the filtered data
+    insights_panel = create_insights_panel("unemployment", filtered_data)
+    
+    # Return container with graph and insights panel
+    return [
+        dcc.Graph(id="unemployment-graph", figure=figure),
+        insights_panel
+    ]
 
 # Update Inflation Graph (generates figure only)
 def update_inflation_graph(n):
