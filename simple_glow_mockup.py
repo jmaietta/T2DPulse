@@ -15,23 +15,66 @@ app = dash.Dash(__name__)
 
 # Create the layout
 app.layout = html.Div([
-    html.H1("T2D Pulse Sentiment - Glow Border Concept", style={"textAlign": "center", "margin": "20px 0"}),
+    html.H1("T2D Pulse Sentiment - Rectangular Glow Concept", style={"textAlign": "center", "margin": "20px 0"}),
     
-    # Three mockups with different glow intensities
+    # Header with T2D logo and tagline (similar to the image)
     html.Div([
         html.Div([
-            html.H3("Light Glow Effect", style={"textAlign": "center", "marginBottom": "10px"}),
             html.Div([
-                html.H3("T2D Pulse Sentiment", style={"textAlign": "center", "fontWeight": "bold", "marginBottom": "15px"}),
+                html.Span("T2D", style={"color": "#E41E26", "fontWeight": "bold", "fontSize": "28px"}),
+                html.Span(" Pulse", style={"color": "#3A4F66", "fontWeight": "bold", "fontSize": "28px"})
+            ], style={"display": "inline-block"}),
+            html.Div("Powering investment decisions with macro data and proprietary intelligence", 
+                     style={"color": "#777", "fontSize": "14px", "marginTop": "5px"})
+        ], style={
+            "padding": "15px 20px",
+            "backgroundColor": "white",
+            "borderRadius": "8px",
+            "boxShadow": "0 2px 5px rgba(0,0,0,0.1)",
+            "width": "100%",
+            "maxWidth": "800px",
+            "margin": "0 auto 30px auto"
+        })
+    ]),
+    
+    # Mockup matching the provided image
+    html.Div([
+        # Main rectangular sentiment display with glow
+        html.Div([
+            html.H3("T2D Pulse Sentiment", style={"textAlign": "center", "fontWeight": "bold", "marginBottom": "10px"}),
+            html.Div("58.7", style={"fontSize": "56px", "textAlign": "center", "fontWeight": "bold", "color": "#E67E22"}),
+            html.Div("Moderate Growth", style={"fontSize": "22px", "textAlign": "center", "color": "#E67E22", "marginTop": "5px"})
+        ], style={
+            "padding": "20px 30px",
+            "backgroundColor": "white",
+            "borderRadius": "12px",
+            "boxShadow": "0 0 15px rgba(230, 126, 34, 0.6)",  # Medium orange glow
+            "border": "2px solid #E67E22",  # Matching border color
+            "width": "800px",
+            "height": "140px",
+            "display": "flex",
+            "flexDirection": "column",
+            "justifyContent": "center",
+            "margin": "0 auto 40px auto"
+        })
+    ]),
+    
+    # Different glow intensity options
+    html.H2("Glow Intensity Options", style={"textAlign": "center", "margin": "30px 0 20px"}),
+    html.Div([
+        html.Div([
+            html.H3("Light Glow", style={"textAlign": "center", "marginBottom": "10px"}),
+            html.Div([
+                html.H3("T2D Pulse Sentiment", style={"textAlign": "center", "fontWeight": "bold", "marginBottom": "10px"}),
                 html.Div("58.7", style={"fontSize": "48px", "textAlign": "center", "fontWeight": "bold", "color": "#E67E22"}),
-                html.Div("Moderate Growth", style={"fontSize": "22px", "textAlign": "center", "color": "#E67E22", "marginTop": "10px"})
+                html.Div("Moderate Growth", style={"fontSize": "20px", "textAlign": "center", "color": "#E67E22", "marginTop": "5px"})
             ], style={
-                "padding": "30px",
+                "padding": "20px",
                 "backgroundColor": "white",
-                "borderRadius": "8px",
+                "borderRadius": "12px",
                 "boxShadow": "0 0 10px rgba(230, 126, 34, 0.4)",  # Light transparent glow
-                "border": "1px solid #E67E22",  # Matching border color
-                "height": "250px",
+                "border": "2px solid #E67E22",  # Matching border color
+                "height": "140px",
                 "display": "flex",
                 "flexDirection": "column",
                 "justifyContent": "center"
@@ -39,18 +82,18 @@ app.layout = html.Div([
         ], style={"width": "30%", "margin": "0 1.5%"}),
         
         html.Div([
-            html.H3("Medium Glow Effect", style={"textAlign": "center", "marginBottom": "10px"}),
+            html.H3("Medium Glow", style={"textAlign": "center", "marginBottom": "10px"}),
             html.Div([
-                html.H3("T2D Pulse Sentiment", style={"textAlign": "center", "fontWeight": "bold", "marginBottom": "15px"}),
+                html.H3("T2D Pulse Sentiment", style={"textAlign": "center", "fontWeight": "bold", "marginBottom": "10px"}),
                 html.Div("58.7", style={"fontSize": "48px", "textAlign": "center", "fontWeight": "bold", "color": "#E67E22"}),
-                html.Div("Moderate Growth", style={"fontSize": "22px", "textAlign": "center", "color": "#E67E22", "marginTop": "10px"})
+                html.Div("Moderate Growth", style={"fontSize": "20px", "textAlign": "center", "color": "#E67E22", "marginTop": "5px"})
             ], style={
-                "padding": "30px",
+                "padding": "20px",
                 "backgroundColor": "white",
-                "borderRadius": "8px",
+                "borderRadius": "12px",
                 "boxShadow": "0 0 15px rgba(230, 126, 34, 0.6)",  # Medium transparent glow
-                "border": "1px solid #E67E22",  # Matching border color
-                "height": "250px",
+                "border": "2px solid #E67E22",  # Matching border color
+                "height": "140px",
                 "display": "flex",
                 "flexDirection": "column",
                 "justifyContent": "center"
@@ -58,18 +101,18 @@ app.layout = html.Div([
         ], style={"width": "30%", "margin": "0 1.5%"}),
         
         html.Div([
-            html.H3("Strong Glow Effect", style={"textAlign": "center", "marginBottom": "10px"}),
+            html.H3("Strong Glow", style={"textAlign": "center", "marginBottom": "10px"}),
             html.Div([
-                html.H3("T2D Pulse Sentiment", style={"textAlign": "center", "fontWeight": "bold", "marginBottom": "15px"}),
+                html.H3("T2D Pulse Sentiment", style={"textAlign": "center", "fontWeight": "bold", "marginBottom": "10px"}),
                 html.Div("58.7", style={"fontSize": "48px", "textAlign": "center", "fontWeight": "bold", "color": "#E67E22"}),
-                html.Div("Moderate Growth", style={"fontSize": "22px", "textAlign": "center", "color": "#E67E22", "marginTop": "10px"})
+                html.Div("Moderate Growth", style={"fontSize": "20px", "textAlign": "center", "color": "#E67E22", "marginTop": "5px"})
             ], style={
-                "padding": "30px",
+                "padding": "20px",
                 "backgroundColor": "white",
-                "borderRadius": "8px",
+                "borderRadius": "12px",
                 "boxShadow": "0 0 20px rgba(230, 126, 34, 0.8)",  # Strong transparent glow
-                "border": "1px solid #E67E22",  # Matching border color
-                "height": "250px",
+                "border": "2px solid #E67E22",  # Matching border color
+                "height": "140px",
                 "display": "flex",
                 "flexDirection": "column",
                 "justifyContent": "center"
