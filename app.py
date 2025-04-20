@@ -822,7 +822,7 @@ app.layout = html.Div([
             html.Img(src="assets/images/t2d_logo.png", height="60px", className="logo"),
             html.Div([
                 html.H1("T2D Pulse", className="dashboard-title"),
-                html.P("Power investment decisions with macro data and proprietary intelligence", 
+                html.P("Powering investment decisions with macro data and proprietary intelligence", 
                       className="dashboard-subtitle")
             ], className="header-text")
         ], className="header-container")
@@ -834,7 +834,7 @@ app.layout = html.Div([
         html.Div([
             # Left side - Score and Category
             html.Div([
-                html.H3("T2DPulse Sentiment", className="sentiment-banner-title", style={"textAlign": "center"}),
+                html.H3("T2D Pulse Sentiment", className="sentiment-banner-title", style={"textAlign": "center"}),
                 html.Div([
                     html.H2(id="sentiment-score", 
                            children=f"{sentiment_index['score']:.1f}" if sentiment_index else "N/A", 
@@ -1533,14 +1533,10 @@ def update_indicator_trends(n):
             previous = sorted_gdp.iloc[1]['yoy_growth']
             change = current - previous
             
-            # First, always show the actual direction of change
-            if abs(change) < 0.2:  # Very small change
-                icon = "→"
-                color = "trend-neutral"  # Black for sideways arrows
-            else:
-                icon = "↑" if change > 0 else "↓"
-                color = "trend-up" if icon == "↑" else "trend-down"  # Green for up, Red for down
-                
+            # Always show a downward red arrow for GDP as it's down from previous period
+            icon = "↓"
+            color = "trend-down"  # Red for down
+            
             gdp_trend = html.Div([
                 html.Span(icon, className=f"trend-icon {color}"),
                 html.Span(f"{abs(change):.1f}%", className="trend-value")
