@@ -1475,78 +1475,106 @@ def update_sentiment_gauge(score):
         color = "#C0392B"  # Contraction (0-19) - HEX #C0392B
         category = "Contraction"
     
-    # Just return the content to be placed in the existing card
+    # Vertically center-aligned content with proper tooltip positioning
     return html.Div([
-        html.H3("T2D Pulse Sentiment", 
-                style={
-                    "fontSize": "22px", 
-                    "fontWeight": "bold", 
-                    "marginBottom": "15px", 
-                    "textAlign": "center",
-                    "color": "#333333"
-                }),
+        # Container with vertical centering for all elements
         html.Div([
-            html.Span(f"{score_value:.1f}", 
-                    style={
-                        "fontSize": "54px", 
-                        "fontWeight": "bold", 
-                        "color": color
-                    }),
-        ], style={"textAlign": "center", "marginBottom": "10px"}),
-        html.Div([
-            html.Span(category, 
+            # Title 
+            html.H3("T2D Pulse Sentiment", 
                     style={
                         "fontSize": "22px", 
-                        "color": color,
-                        "marginRight": "5px",
-                        "display": "inline-block"
+                        "fontWeight": "bold", 
+                        "marginBottom": "15px", 
+                        "textAlign": "center",
+                        "color": "#333333"
                     }),
-            html.Span(
-                "ⓘ", 
-                id="sentiment-info-icon",
-                className="info-icon",
-                style={
-                    "cursor": "pointer", 
-                    "fontSize": "16px", 
-                    "display": "inline-block",
-                    "color": "#2c3e50",
-                    "verticalAlign": "text-top" 
-                }
-            ),
-            html.Div(
-                id="sentiment-info-tooltip",
-                style={"display": "none", "position": "absolute", "zIndex": "1000", 
-                      "backgroundColor": "white", "padding": "10px", "borderRadius": "5px", 
-                      "boxShadow": "0px 0px 10px rgba(0,0,0,0.1)", "maxWidth": "400px", 
-                      "top": "100%", "left": "50%", "transform": "translateX(-50%)",
-                      "marginTop": "10px"},
-                children=[
-                    html.H5("Sentiment Index Categories", style={"marginBottom": "10px"}),
-                    html.Div([
+            # Score value
+            html.Div([
+                html.Span(f"{score_value:.1f}", 
+                        style={
+                            "fontSize": "54px", 
+                            "fontWeight": "bold", 
+                            "color": color
+                        }),
+            ], style={"textAlign": "center", "marginBottom": "10px"}),
+            # Category and tooltip in a properly contained div
+            html.Div([
+                html.Span(category, 
+                        style={
+                            "fontSize": "22px", 
+                            "color": color,
+                            "marginRight": "5px",
+                            "display": "inline-block"
+                        }),
+                html.Span(
+                    "ⓘ", 
+                    id="sentiment-info-icon",
+                    className="info-icon",
+                    style={
+                        "cursor": "pointer", 
+                        "fontSize": "16px", 
+                        "display": "inline-block",
+                        "color": "#2c3e50",
+                        "verticalAlign": "text-top" 
+                    }
+                ),
+                # Positioned tooltip that won't overflow the container
+                html.Div(
+                    id="sentiment-info-tooltip",
+                    style={
+                        "display": "none", 
+                        "position": "absolute", 
+                        "zIndex": "1000", 
+                        "backgroundColor": "white", 
+                        "padding": "10px", 
+                        "borderRadius": "5px", 
+                        "boxShadow": "0px 0px 10px rgba(0,0,0,0.1)", 
+                        "maxWidth": "400px", 
+                        "top": "30px",  # Positioned below the info icon
+                        "left": "50%", 
+                        "transform": "translateX(-50%)"
+                    },
+                    children=[
+                        html.H5("Sentiment Index Categories", style={"marginBottom": "10px"}),
                         html.Div([
-                            html.Span("Boom (80-100): ", style={"fontWeight": "bold", "color": "#2ECC71"}),
-                            "Strong growth across indicators; economic expansion accelerating"
-                        ], style={"marginBottom": "5px"}),
-                        html.Div([
-                            html.Span("Expansion (60-79): ", style={"fontWeight": "bold", "color": "#F1C40F"}),
-                            "Solid growth with positive momentum; healthy economic conditions"
-                        ], style={"marginBottom": "5px"}),
-                        html.Div([
-                            html.Span("Moderate Growth (40-59): ", style={"fontWeight": "bold", "color": "#E67E22"}),
-                            "Steady but modest growth; economy performing adequately"
-                        ], style={"marginBottom": "5px"}),
-                        html.Div([
-                            html.Span("Slowdown (20-39): ", style={"fontWeight": "bold", "color": "#E74C3C"}),
-                            "Growth decelerating; potential economic challenges ahead"
-                        ], style={"marginBottom": "5px"}),
-                        html.Div([
-                            html.Span("Contraction (0-19): ", style={"fontWeight": "bold", "color": "#C0392B"}),
-                            "Economic indicators showing decline; recession risks elevated"
+                            html.Div([
+                                html.Span("Boom (80-100): ", style={"fontWeight": "bold", "color": "#2ECC71"}),
+                                "Strong growth across indicators; economic expansion accelerating"
+                            ], style={"marginBottom": "5px"}),
+                            html.Div([
+                                html.Span("Expansion (60-79): ", style={"fontWeight": "bold", "color": "#F1C40F"}),
+                                "Solid growth with positive momentum; healthy economic conditions"
+                            ], style={"marginBottom": "5px"}),
+                            html.Div([
+                                html.Span("Moderate Growth (40-59): ", style={"fontWeight": "bold", "color": "#E67E22"}),
+                                "Steady but modest growth; economy performing adequately"
+                            ], style={"marginBottom": "5px"}),
+                            html.Div([
+                                html.Span("Slowdown (20-39): ", style={"fontWeight": "bold", "color": "#E74C3C"}),
+                                "Growth decelerating; potential economic challenges ahead"
+                            ], style={"marginBottom": "5px"}),
+                            html.Div([
+                                html.Span("Contraction (0-19): ", style={"fontWeight": "bold", "color": "#C0392B"}),
+                                "Economic indicators showing decline; recession risks elevated"
+                            ])
                         ])
-                    ])
-                ]
-            )
-        ], style={"textAlign": "center", "display": "flex", "alignItems": "center", "justifyContent": "center", "position": "relative"})
+                    ]
+                )
+            ], style={
+                "textAlign": "center", 
+                "display": "flex", 
+                "alignItems": "center", 
+                "justifyContent": "center", 
+                "position": "relative",
+                "height": "30px"  # Fixed height to prevent layout shifts
+            })
+        ], style={
+            "display": "flex",
+            "flexDirection": "column",
+            "justifyContent": "center",
+            "alignItems": "center",
+            "padding": "20px 0"
+        })
     ])
 
 # Update sentiment components list
