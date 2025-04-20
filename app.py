@@ -2922,6 +2922,7 @@ def update_document_preview(contents, filename):
      Output("pce-weight", "value", allow_duplicate=True),
      Output("unemployment-weight", "value", allow_duplicate=True),
      Output("cpi-weight", "value", allow_duplicate=True),
+     Output("pcepi-weight", "value", allow_duplicate=True),
      Output("nasdaq-weight", "value", allow_duplicate=True),
      Output("data-ppi-weight", "value", allow_duplicate=True),
      Output("software-ppi-weight", "value", allow_duplicate=True),
@@ -2952,12 +2953,12 @@ def apply_document_analysis(n_clicks, weight, contents, filename, custom_weights
     # Document weight should not be applied until a document is uploaded and analyzed
     if n_clicks is None:
         # Return document weight of 0 and no updates to other components
-        return {'weight': 0, 'value': 0}, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update
+        return {'weight': 0, 'value': 0}, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update
         
     # Document content is required
     if contents is None:
         error_message = html.Div("No document uploaded. Upload a document first.", style={"color": "red"})
-        return None, error_message, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update
+        return None, error_message, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update
     
     try:
         # Decode the file contents
@@ -3131,12 +3132,12 @@ def apply_document_analysis(n_clicks, weight, contents, filename, custom_weights
             # Document processing failed
             error_message = html.Div(f"Error: {result['message']}", style={"color": "red"})
             # Return all dash.no_update for the economic indicators
-            return None, error_message, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update
+            return None, error_message, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update
     except Exception as e:
         print(f"Error applying document analysis: {str(e)}")
         error_message = html.Div(f"Error processing document: {str(e)}", style={"color": "red"})
         # Return all dash.no_update for the economic indicators
-        return None, error_message, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update
+        return None, error_message, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update, dash.no_update
 
 # Update VIX Graph
 @app.callback(
