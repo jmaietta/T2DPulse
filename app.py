@@ -493,7 +493,7 @@ def generate_sector_drivers(macros):
         "Real_GDP_Growth_%_SAAR": "GDP {}%",
         "PPI_Software_Publishers_YoY_%": "SaaS PPI {}%",
         "PPI_Data_Processing_YoY_%": "PPI {}%",
-        "Consumer_Sentiment": "Sentiment {}"
+        "Consumer_Sentiment": "Consumer Sentiment {}"
     }
     
     # Generate drivers for each sector
@@ -504,8 +504,8 @@ def generate_sector_drivers(macros):
             if indicator in macros:
                 value = macros[indicator]
                 formatted_value = f"{value:+.1f}" if isinstance(value, (int, float)) else value
-                # Remove the '+' for VIX as it's not a growth rate
-                if indicator == "VIX":
+                # Remove the '+' for VIX and Consumer Sentiment as they're not growth rates
+                if indicator in ["VIX", "Consumer_Sentiment"]:
                     formatted_value = f"{value:.1f}"
                 
                 label = indicator_labels.get(indicator, indicator)
