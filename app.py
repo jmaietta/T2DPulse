@@ -217,36 +217,36 @@ def fetch_treasury_yield_data():
         return pd.DataFrame()
         
 def fetch_nasdaq_with_ema():
-    """Fetch NASDAQ data using yfinance and calculate the 10-day EMA
+    """Fetch NASDAQ data using yfinance and calculate the 20-day EMA
     
     Returns a DataFrame with:
     - date: the date of the observation
     - value: the NASDAQ Composite closing value
-    - ema10: the 10-day exponential moving average
+    - ema20: the 20-day exponential moving average
     - gap_pct: percentage difference between the current value and EMA (momentum indicator)
     """
     try:
-        print("Fetching NASDAQ data from Yahoo Finance with 10-day EMA...")
+        print("Fetching NASDAQ data from Yahoo Finance with 20-day EMA...")
         
-        # Get NASDAQ Composite data for the last 30 days (need extra days for EMA calculation)
+        # Get NASDAQ Composite data for the last 50 days (need extra days for EMA calculation)
         ixic = yf.Ticker("^IXIC")
-        data = ixic.history(period="30d")
+        data = ixic.history(period="50d")  # Increased to ensure enough data for 20-day EMA
         
         if data.empty:
             print("No NASDAQ data retrieved from Yahoo Finance")
             return pd.DataFrame()
         
-        # Calculate 10-day EMA
-        data['ema10'] = data['Close'].ewm(span=10, adjust=False).mean()
+        # Calculate 20-day EMA
+        data['ema20'] = data['Close'].ewm(span=20, adjust=False).mean()
         
         # Calculate gap percentage (current price vs EMA)
-        data['gap_pct'] = (data['Close'] / data['ema10'] - 1) * 100
+        data['gap_pct'] = (data['Close'] / data['ema20'] - 1) * 100
         
         # Create DataFrame with our standard format, plus the additional metrics
         df = pd.DataFrame({
             'date': data.index.tz_localize(None),  # Remove timezone to match FRED data
             'value': data['Close'],
-            'ema10': data['ema10'],
+            'ema20': data['ema20'],
             'gap_pct': data['gap_pct'],
             'pct_change': data['Close'].pct_change() * 100  # Keep this for compatibility
         })
@@ -258,7 +258,7 @@ def fetch_nasdaq_with_ema():
         latest_date = df.iloc[0]['date'].strftime('%Y-%m-%d')
         latest_value = df.iloc[0]['value']
         latest_gap = df.iloc[0]['gap_pct']
-        print(f"NASDAQ: {latest_value:.1f} on {latest_date}, Gap from 10-day EMA: {latest_gap:.2f}%")
+        print(f"NASDAQ: {latest_value:.1f} on {latest_date}, Gap from 20-day EMA: {latest_gap:.2f}%")
         print(f"Successfully retrieved NASDAQ data with EMA calculation")
         
         return df
@@ -413,10 +413,10 @@ def calculate_sector_sentiment():
         latest_vix = vix_data.sort_values('date', ascending=False).iloc[0]['value']
         macros["VIX"] = latest_vix
     
-    # NASDAQ gap from 10-day EMA
+    # NASDAQ gap from 20-day EMA
     if not nasdaq_data.empty and 'gap_pct' in nasdaq_data.columns:
         latest_gap = nasdaq_data.sort_values('date', ascending=False).iloc[0]['gap_pct']
-        macros["NASDAQ_10d_gap_%"] = latest_gap
+        macros["NASDAQ_10d_gap_%"] = latest_gap  # Keeping the same key name for compatibility with sentiment_engine.py
         
     # Fed Funds Rate
     if not interest_rate_data.empty:
@@ -688,7 +688,7 @@ def calculate_sentiment_index(custom_weights=None, proprietary_data=None, docume
     # 4. Market Performance - NASDAQ trend using EMA gap (if available) or traditional method
     if not nasdaq_data.empty:
         if 'gap_pct' in nasdaq_data.columns:
-            # New method: Use gap between current price and 10-day EMA as trend indicator
+            # New method: Use gap between current price and 20-day EMA as trend indicator
             latest_nasdaq = nasdaq_data.sort_values('date', ascending=False).iloc[0]
             gap_pct = latest_nasdaq['gap_pct']
             
@@ -718,7 +718,7 @@ def calculate_sentiment_index(custom_weights=None, proprietary_data=None, docume
                 'value': gap_pct,
                 'score': nasdaq_score,
                 'weight': weights['NASDAQ Trend'],
-                'description': 'Gap from 10-day EMA'
+                'description': 'Gap from 20-day EMA'
             })
         elif 'pct_change' in nasdaq_data.columns:
             # Legacy method: Use average of recent percent changes
@@ -2195,7 +2195,7 @@ def update_indicator_trends(n):
     if not nasdaq_data.empty:
         sorted_nasdaq = nasdaq_data.sort_values('date', ascending=False)
         if 'gap_pct' in sorted_nasdaq.columns:
-            # New approach: Using the gap between price and 10-day EMA
+            # New approach: Using the gap between price and 20-day EMA
             gap_pct = sorted_nasdaq.iloc[0]['gap_pct']
             
             # Determine trend direction and color
@@ -2209,7 +2209,7 @@ def update_indicator_trends(n):
             nasdaq_trend = html.Div([
                 html.Span(icon, className=f"trend-icon {color}"),
                 html.Span(f"{abs(gap_pct):.1f}%", className="trend-value"),
-                html.Span(" gap from 10-day EMA", style={"fontSize": "11px", "marginLeft": "3px", "color": "#777"})
+                html.Span(" gap from 20-day EMA", style={"fontSize": "11px", "marginLeft": "3px", "color": "#777"})
             ], className="trend")
         elif len(sorted_nasdaq) >= 2:
             # Legacy approach: Using day-to-day percent change
@@ -3047,14 +3047,14 @@ def update_nasdaq_graph(n):
         secondary_y=False
     )
     
-    # Add 10-day EMA line if available
-    if 'ema10' in filtered_data.columns:
+    # Add 20-day EMA line if available
+    if 'ema20' in filtered_data.columns:
         fig.add_trace(
             go.Scatter(
                 x=filtered_data['date'],
-                y=filtered_data['ema10'],
+                y=filtered_data['ema20'],
                 mode='lines',
-                name='10-Day EMA',
+                name='20-Day EMA',
                 line=dict(color='blue', width=2, dash='dash'),
             ),
             secondary_y=False
@@ -3113,7 +3113,7 @@ def update_nasdaq_graph(n):
             arrow_color = color_scheme["positive"] if current_gap > 0 else color_scheme["negative"]
             arrow_symbol = "▲" if current_gap > 0 else "▼"
             
-            annotation_text = f"Current: {current_value:.0f} ({arrow_symbol} {abs(current_gap):.1f}% from EMA)"
+            annotation_text = f"Current: {current_value:.0f} ({arrow_symbol} {abs(current_gap):.1f}% from 20-day EMA)"
         else:
             annotation_text = f"Current: {current_value:.0f}"
             arrow_color = "gray"
@@ -3153,7 +3153,7 @@ def update_nasdaq_graph(n):
     
     # Update y-axes
     fig.update_yaxes(title_text="NASDAQ Composite", secondary_y=False)
-    fig.update_yaxes(title_text="Gap from 10-day EMA", ticksuffix="%", secondary_y=True)
+    fig.update_yaxes(title_text="Gap from 20-day EMA", ticksuffix="%", secondary_y=True)
     
     return fig
 
