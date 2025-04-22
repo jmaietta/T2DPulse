@@ -1666,6 +1666,18 @@ app.layout = html.Div([
                     ], className="indicator-text"),
                     html.Div(id="vix-trend", className="indicator-trend")
                 ], className="indicator"),
+                
+                # Consumer Sentiment
+                html.Div([
+                    html.Div([
+                        html.H4("Consumer Sentiment"),
+                        html.P(id="consumer-sentiment-value", 
+                              children=f"{consumer_sentiment_data.sort_values('date', ascending=False).iloc[0]['value']:.1f}" 
+                              if not consumer_sentiment_data.empty else "N/A",
+                              className="indicator-value")
+                    ], className="indicator-text"),
+                    html.Div(id="consumer-sentiment-trend", className="indicator-trend")
+                ], className="indicator"),
             ], className="card indicators-card"),
             
             # Custom Weight Adjustment
@@ -2226,6 +2238,8 @@ def update_sentiment_components(score, category, custom_weights, document_data):
             value_text = f"{comp['value']:.1f}%"
         elif comp['indicator'] == 'VIX Volatility Index':
             value_text = f"{comp['value']:.1f}"
+        elif comp['indicator'] == 'Consumer Sentiment':
+            value_text = f"{comp['value']:.1f}"  # Display with one decimal place
         elif 'PPI' in comp['indicator'] or comp['indicator'] == 'Software Job Postings':
             value_text = f"{comp['value']:.1f}%"
         elif comp['indicator'] == 'Proprietary Data':
@@ -2268,7 +2282,8 @@ def update_sentiment_components(score, category, custom_weights, document_data):
      Output("software-ppi-trend", "children"),
      Output("data-ppi-trend", "children"),
      Output("treasury-yield-trend", "children"),
-     Output("vix-trend", "children")],
+     Output("vix-trend", "children"),
+     Output("consumer-sentiment-trend", "children")],
     [Input("interval-component", "n_intervals")]
 )
 def update_indicator_trends(n):
@@ -2554,7 +2569,30 @@ def update_indicator_trends(n):
                 html.Span(f"{abs(change):.2f}", className="trend-value")
             ], className="trend")
     
-    return gdp_trend, pce_trend, unemployment_trend, job_postings_trend, inflation_trend, pcepi_trend, interest_rate_trend, nasdaq_trend, software_ppi_trend, data_ppi_trend, treasury_yield_trend, vix_trend
+    # Consumer Sentiment Trend
+    consumer_sentiment_trend = html.Div("No data", className="trend-value")
+    if not consumer_sentiment_data.empty:
+        sorted_sentiment = consumer_sentiment_data.sort_values('date', ascending=False)
+        if len(sorted_sentiment) >= 2:
+            current = sorted_sentiment.iloc[0]['value']
+            previous = sorted_sentiment.iloc[1]['value']
+            change = current - previous
+            
+            # For Consumer Sentiment, increasing is positive for market sentiment
+            if abs(change) < 0.5:  # Very small change
+                icon = "→"
+                color = "trend-neutral"  # Black for sideways arrows
+            else:
+                icon = "↑" if change > 0 else "↓"
+                # For Consumer Sentiment, up is considered positive, down is negative
+                color = "trend-up" if icon == "↑" else "trend-down"  
+            
+            consumer_sentiment_trend = html.Div([
+                html.Span(icon, className=f"trend-icon {color}"),
+                html.Span(f"{abs(change):.1f}", className="trend-value")
+            ], className="trend")
+    
+    return gdp_trend, pce_trend, unemployment_trend, job_postings_trend, inflation_trend, pcepi_trend, interest_rate_trend, nasdaq_trend, software_ppi_trend, data_ppi_trend, treasury_yield_trend, vix_trend, consumer_sentiment_trend
 
 # Update GDP Graph function (generates figure only)
 def update_gdp_graph(n):
