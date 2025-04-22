@@ -607,9 +607,15 @@ def calculate_sector_sentiment():
         latest_software_ppi = software_ppi_data.sort_values('date', ascending=False).iloc[0]['yoy_pct_change']
         macros["PPI_Software_Publishers_YoY_%"] = latest_software_ppi
     
+    # Consumer Sentiment
+    if not consumer_sentiment_data.empty:
+        latest_consumer_sentiment = consumer_sentiment_data.sort_values('date', ascending=False).iloc[0]['value']
+        macros["Consumer_Sentiment"] = latest_consumer_sentiment
+        print(f"Added Consumer Sentiment to sector calculations: {latest_consumer_sentiment}")
+    
     # Check if we have enough data to calculate sector scores (need at least 6 indicators)
     if len(macros) < 6:
-        print(f"Not enough data to calculate sector sentiment scores (have {len(macros)}/12 indicators)")
+        print(f"Not enough data to calculate sector sentiment scores (have {len(macros)}/13 indicators)")
         return []
     
     try:
