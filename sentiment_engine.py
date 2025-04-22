@@ -52,7 +52,7 @@ IMPACT: Dict[str, Dict[str, int]] = {
 
 # ---------- 3) Importance weights (1‒4 shared across sectors) ----------
 IMPORTANCE = {
-    "NASDAQ_10d_gap_%": 4,
+    "NASDAQ_10d_gap_%": 3,  # Changed from 4 to 3 as requested
     "10Y_Treasury_Yield_%": 3,
     "VIX": 3,
     # all others default to 1
