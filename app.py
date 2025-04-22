@@ -3547,8 +3547,10 @@ def refresh_data(n_clicks):
         # First get the most recent date from Yahoo Finance
         latest_yahoo_date = treasury_temp['date'].max()
         
-        # Keep all historical FRED data from before the Yahoo data range
-        if not treasury_yield_data.empty:
+        # Access the global treasury_yield_data which was loaded earlier
+        # Add a check if it's defined and not empty
+        global treasury_yield_data
+        if 'treasury_yield_data' in globals() and not treasury_yield_data.empty:
             historical_data = treasury_yield_data[treasury_yield_data['date'] < latest_yahoo_date - timedelta(days=30)]
             # Append the Yahoo Finance data (more recent) to the historical data
             treasury_yield_data = pd.concat([historical_data, treasury_temp], ignore_index=True)
