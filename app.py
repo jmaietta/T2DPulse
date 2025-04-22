@@ -11,6 +11,7 @@ from dash import dcc, html, dash_table
 from dash.dependencies import Input, Output, State
 import plotly.graph_objs as go
 import plotly.express as px
+import yfinance as yf
 
 # Import API keys from the separate file
 from api_keys import FRED_API_KEY, BEA_API_KEY, BLS_API_KEY
@@ -169,6 +170,35 @@ def fetch_bea_data(table_name, frequency, start_year, end_year):
             return pd.DataFrame()
     except Exception as e:
         print(f"Exception while fetching BEA data: {str(e)}")
+        return pd.DataFrame()
+
+def fetch_treasury_yield_data():
+    """Fetch 10-Year Treasury Yield data from Yahoo Finance (^TNX)
+    
+    Returns a DataFrame with date and value columns formatted like FRED data
+    """
+    print("Fetching 10-Year Treasury Yield data from Yahoo Finance")
+    
+    try:
+        # Use Yahoo Finance to get the most recent data
+        treasury = yf.Ticker('^TNX')
+        # Get data for the last 30 days to ensure we have enough recent values
+        data = treasury.history(period='30d')
+        
+        if data.empty:
+            print("No Treasury Yield data retrieved from Yahoo Finance")
+            return pd.DataFrame()
+            
+        # Format data to match FRED format
+        df = pd.DataFrame({
+            'date': data.index.tz_localize(None),  # Remove timezone to match FRED data
+            'value': data['Close']
+        })
+        
+        print(f"Successfully retrieved {len(df)} days of Treasury Yield data from Yahoo Finance")
+        return df
+    except Exception as e:
+        print(f"Exception while fetching Treasury Yield data from Yahoo Finance: {str(e)}")
         return pd.DataFrame()
 
 def fetch_bls_data(series_id, start_year, end_year):
@@ -3499,12 +3529,24 @@ def refresh_data(n_clicks):
         save_data_to_csv(vix_data, 'vix_data.csv')
         print(f"VIX data updated with {len(vix_data)} observations")
     
-    # 10-Year Treasury Yield
-    treasury_temp = fetch_fred_data('DGS10')
+    # 10-Year Treasury Yield - Using Yahoo Finance for real-time data
+    treasury_temp = fetch_treasury_yield_data()
     if not treasury_temp.empty:
-        treasury_yield_data = treasury_temp
+        # Merge with existing data to maintain historical records
+        # First get the most recent date from Yahoo Finance
+        latest_yahoo_date = treasury_temp['date'].max()
+        
+        # Keep all historical FRED data from before the Yahoo data range
+        if not treasury_yield_data.empty:
+            historical_data = treasury_yield_data[treasury_yield_data['date'] < latest_yahoo_date - timedelta(days=30)]
+            # Append the Yahoo Finance data (more recent) to the historical data
+            treasury_yield_data = pd.concat([historical_data, treasury_temp], ignore_index=True)
+        else:
+            treasury_yield_data = treasury_temp
+            
+        # Save the merged data
         save_data_to_csv(treasury_yield_data, 'treasury_yield_data.csv')
-        print(f"Treasury Yield data updated with {len(treasury_yield_data)} observations")
+        print(f"Treasury Yield data updated with real-time data from Yahoo Finance")
         
     # Software Job Postings
     job_postings_temp = fetch_fred_data('IHLIDXUSTPSOFTDEVE')
