@@ -50,11 +50,11 @@ IMPACT: Dict[str, Dict[str, int]] = {
         "Cloud Infra": 3, "AI Infrastructure": 3},
     "Consumer_Sentiment": {
         "Consumer Internet": 3, "eCommerce": 3, "AdTech": 3,
-        "Fintech": 2, "Hardware / Devices": 2,
+        "Fintech": 2, "Hardware / Devices": 2, "Semiconductors": 2,
         "SMB SaaS": 1, "Enterprise SaaS": 1, "Vertical SaaS": 1,
         "Cloud Infra": 1, "AI Infrastructure": 1,
         "Cybersecurity": 1, "Dev Tools / Analytics": 1,
-        "Semiconductors": 1, "IT Services / Legacy Tech": 1
+        "IT Services / Legacy Tech": 1
     }
 }
 
