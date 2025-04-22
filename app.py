@@ -3485,6 +3485,14 @@ def refresh_data(n_clicks):
         nasdaq_temp['pct_change'] = nasdaq_temp['value'].pct_change() * 100
         nasdaq_data = nasdaq_temp
         save_data_to_csv(nasdaq_data, 'nasdaq_data.csv')
+        print(f"NASDAQ data updated with {len(nasdaq_data)} observations")
+    
+    # VIX (CBOE Volatility Index)
+    vix_temp = fetch_fred_data('VIXCLS')
+    if not vix_temp.empty:
+        vix_data = vix_temp
+        save_data_to_csv(vix_data, 'vix_data.csv')
+        print(f"VIX data updated with {len(vix_data)} observations")
         
     # Software Job Postings
     job_postings_temp = fetch_fred_data('IHLIDXUSTPSOFTDEVE')
