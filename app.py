@@ -270,20 +270,20 @@ def calculate_sentiment_index(custom_weights=None, proprietary_data=None, docume
         proprietary_data (dict, optional): Dictionary with proprietary data and its weight
         document_data (dict, optional): Dictionary with document analysis data and its weight
     """
-    # Default weights (equal percentages that sum to 100%)
+    # Default weights according to T2D Pulse Homepage requirements
     default_weights = {
-        'Real GDP % Change': 8.33,
-        'PCE': 8.33,
-        'Unemployment Rate': 8.33,
-        'CPI': 8.33,
-        'PCEPI': 8.33,
-        'NASDAQ Trend': 8.33,
-        'PPI: Data Processing Services': 8.33,
-        'PPI: Software Publishers': 8.33,
-        'Federal Funds Rate': 8.33,
-        'Treasury Yield': 8.33,
-        'VIX Volatility': 8.33,
-        'Software Job Postings': 8.37  # Slightly higher to make it exactly 100%
+        'Real GDP % Change': 7.0,
+        'PCE': 7.0,
+        'Unemployment Rate': 7.0,
+        'CPI': 7.0,
+        'PCEPI': 7.0,
+        'NASDAQ Trend': 17.0,
+        'PPI: Data Processing Services': 7.0,
+        'PPI: Software Publishers': 7.0,
+        'Federal Funds Rate': 7.0,
+        'Treasury Yield': 10.0,
+        'VIX Volatility': 10.0,
+        'Software Job Postings': 7.0
     }
     
     # Validate default weights sum to 100
@@ -1167,7 +1167,7 @@ app.layout = html.Div([
                             min=0,
                             max=30,
                             step=0.1,
-                            value=8.33,
+                            value=7.0,
                             marks={0: "0%", 15: "15%", 30: "30%"},
                             className="weight-slider"
                         ),
@@ -1180,7 +1180,7 @@ app.layout = html.Div([
                             min=0,
                             max=30,
                             step=0.1,
-                            value=8.33,
+                            value=7.0,
                             marks={0: "0%", 15: "15%", 30: "30%"},
                             className="weight-slider"
                         ),
@@ -1193,7 +1193,7 @@ app.layout = html.Div([
                             min=0,
                             max=30,
                             step=0.1,
-                            value=8.33,
+                            value=7.0,
                             marks={0: "0%", 15: "15%", 30: "30%"},
                             className="weight-slider"
                         ),
@@ -1206,7 +1206,7 @@ app.layout = html.Div([
                             min=0,
                             max=30,
                             step=0.1,
-                            value=8.33,
+                            value=7.0,
                             marks={0: "0%", 15: "15%", 30: "30%"},
                             className="weight-slider"
                         ),
@@ -1219,7 +1219,7 @@ app.layout = html.Div([
                             min=0,
                             max=30,
                             step=0.1,
-                            value=8.33,
+                            value=7.0,
                             marks={0: "0%", 15: "15%", 30: "30%"},
                             className="weight-slider"
                         ),
@@ -1232,7 +1232,7 @@ app.layout = html.Div([
                             min=0,
                             max=30,
                             step=0.1,
-                            value=8.33,
+                            value=7.0,
                             marks={0: "0%", 15: "15%", 30: "30%"},
                             className="weight-slider"
                         ),
@@ -1245,7 +1245,7 @@ app.layout = html.Div([
                             min=0,
                             max=30,
                             step=0.1,
-                            value=8.33,
+                            value=17.0,
                             marks={0: "0%", 15: "15%", 30: "30%"},
                             className="weight-slider"
                         ),
@@ -1258,7 +1258,7 @@ app.layout = html.Div([
                             min=0,
                             max=30,
                             step=0.1,
-                            value=8.33,
+                            value=7.0,
                             marks={0: "0%", 15: "15%", 30: "30%"},
                             className="weight-slider"
                         ),
@@ -1271,7 +1271,7 @@ app.layout = html.Div([
                             min=0,
                             max=30,
                             step=0.1,
-                            value=8.33,
+                            value=7.0,
                             marks={0: "0%", 15: "15%", 30: "30%"},
                             className="weight-slider"
                         ),
@@ -1284,7 +1284,7 @@ app.layout = html.Div([
                             min=0,
                             max=30,
                             step=0.1,
-                            value=8.33,
+                            value=7.0,
                             marks={0: "0%", 15: "15%", 30: "30%"},
                             className="weight-slider"
                         ),
@@ -1297,7 +1297,7 @@ app.layout = html.Div([
                             min=0,
                             max=30,
                             step=0.1,
-                            value=8.33,
+                            value=10.0,
                             marks={0: "0%", 15: "15%", 30: "30%"},
                             className="weight-slider"
                         ),
@@ -1310,7 +1310,7 @@ app.layout = html.Div([
                             min=0,
                             max=30,
                             step=0.1,
-                            value=8.33,
+                            value=10.0,
                             marks={0: "0%", 15: "15%", 30: "30%"},
                             className="weight-slider"
                         ),
