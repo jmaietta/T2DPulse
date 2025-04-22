@@ -59,12 +59,17 @@ def fetch_fred_data(series_id, start_date=None, end_date=None):
     
     # Build API URL
     url = f"https://api.stlouisfed.org/fred/series/observations"
+    # Get today's date for realtime parameters
+    today = datetime.now().strftime('%Y-%m-%d')
+    
     params = {
         "series_id": series_id,
         "api_key": FRED_API_KEY,
         "file_type": "json",
         "observation_start": start_date,
-        "observation_end": end_date
+        "observation_end": end_date,
+        "realtime_start": today,  # Request the most recent vintage of the data
+        "realtime_end": today     # Request the most recent vintage of the data
     }
     
     try:
