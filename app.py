@@ -3498,6 +3498,13 @@ def refresh_data(n_clicks):
         vix_data = vix_temp
         save_data_to_csv(vix_data, 'vix_data.csv')
         print(f"VIX data updated with {len(vix_data)} observations")
+    
+    # 10-Year Treasury Yield
+    treasury_temp = fetch_fred_data('DGS10')
+    if not treasury_temp.empty:
+        treasury_yield_data = treasury_temp
+        save_data_to_csv(treasury_yield_data, 'treasury_yield_data.csv')
+        print(f"Treasury Yield data updated with {len(treasury_yield_data)} observations")
         
     # Software Job Postings
     job_postings_temp = fetch_fred_data('IHLIDXUSTPSOFTDEVE')
