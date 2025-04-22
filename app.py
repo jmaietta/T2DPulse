@@ -26,6 +26,8 @@ import sentiment_engine
 from chart_styling import custom_template, color_scheme
 from market_insights import create_insights_panel
 
+# Consumer sentiment functions defined directly in app.py to avoid circular imports
+
 # Data directory
 DATA_DIR = 'data'
 os.makedirs(DATA_DIR, exist_ok=True)
@@ -266,6 +268,148 @@ def fetch_nasdaq_with_ema():
         print(f"Exception while fetching NASDAQ data with EMA: {str(e)}")
         print("Falling back to FRED data for NASDAQ")
         return pd.DataFrame()
+
+def fetch_consumer_sentiment_data():
+    """Fetch Consumer Confidence Composite Index data from FRED API
+    
+    Returns a DataFrame with date and value columns formatted like other FRED data.
+    Uses FRED series USACSCICP02STSAM: Consumer Opinion Surveys: Composite 
+    Consumer Confidence for United States
+    """
+    try:
+        # Use Consumer Opinion Surveys: Composite Consumer Confidence
+        series_id = "USACSCICP02STSAM"
+        
+        df = fetch_fred_data(series_id)
+        
+        if not df.empty:
+            print(f"Successfully retrieved {len(df)} observations for Consumer Confidence Index")
+            
+            # Calculate year-over-year change
+            df = df.sort_values('date')
+            df['yoy_change'] = df['value'].pct_change(periods=12) * 100
+            
+            return df
+        else:
+            print("Error retrieving Consumer Confidence data from FRED")
+            return pd.DataFrame()
+    except Exception as e:
+        print(f"Exception while fetching Consumer Confidence data: {str(e)}")
+        return pd.DataFrame()
+        
+def create_consumer_sentiment_graph(consumer_sentiment_data):
+    """Generate a graph of Consumer Sentiment data"""
+    if consumer_sentiment_data.empty:
+        return go.Figure().update_layout(
+            title="No Consumer Sentiment data available",
+            height=400
+        )
+    
+    # Filter for last 5 years
+    cutoff_date = datetime.now() - timedelta(days=5*365)
+    filtered_data = consumer_sentiment_data[consumer_sentiment_data['date'] >= cutoff_date].copy()
+    
+    # Create figure
+    fig = go.Figure()
+    
+    # Add Consumer Sentiment line
+    fig.add_trace(
+        go.Scatter(
+            x=filtered_data['date'],
+            y=filtered_data['value'],
+            mode='lines',
+            name='Consumer Sentiment Index',
+            line=dict(color=color_scheme['primary'], width=3)
+        )
+    )
+    
+    # Add YoY change if available
+    if 'yoy_change' in filtered_data.columns:
+        # Create second y-axis for YoY change
+        fig.add_trace(
+            go.Scatter(
+                x=filtered_data['date'],
+                y=filtered_data['yoy_change'],
+                mode='lines',
+                name='Year-over-Year Change',
+                line=dict(color=color_scheme['secondary'], width=2, dash='dot'),
+                yaxis='y2'
+            )
+        )
+        
+        # Add zero line for YoY change
+        fig.add_shape(
+            type="line",
+            x0=filtered_data['date'].min(),
+            x1=filtered_data['date'].max(),
+            y0=0,
+            y1=0,
+            line=dict(
+                color=color_scheme["neutral"],
+                width=1.5,
+                dash="dot",
+            ),
+            yref="y2"
+        )
+    
+    # Add current value annotation
+    if len(filtered_data) > 0:
+        current_value = filtered_data.sort_values('date', ascending=False).iloc[0]['value']
+        current_yoy = filtered_data.sort_values('date', ascending=False).iloc[0]['yoy_change'] if 'yoy_change' in filtered_data.columns else None
+        
+        if current_yoy is not None:
+            arrow_color = color_scheme["positive"] if current_yoy > 0 else color_scheme["negative"]
+            arrow_symbol = "▲" if current_yoy > 0 else "▼"
+            
+            annotation_text = f"Current: {current_value:.1f} ({arrow_symbol} {abs(current_yoy):.1f}% YoY)"
+        else:
+            annotation_text = f"Current: {current_value:.1f}"
+            arrow_color = "gray"
+        
+        fig.add_annotation(
+            x=0.02,
+            y=0.95,
+            xref="paper",
+            yref="paper",
+            text=annotation_text,
+            showarrow=False,
+            font=dict(size=14, color=arrow_color),
+            align="left",
+            bgcolor="rgba(255, 255, 255, 0.9)",
+            bordercolor=arrow_color,
+            borderwidth=1,
+            borderpad=4,
+            opacity=0.9
+        )
+    
+    # Update layout
+    fig.update_layout(
+        template=custom_template,
+        height=400,
+        title="Consumer Confidence Index",
+        margin=dict(l=40, r=40, t=60, b=40),
+        hovermode="x unified",
+        legend=dict(
+            orientation="h",
+            yanchor="bottom",
+            y=1.02,
+            xanchor="right",
+            x=1
+        ),
+        yaxis=dict(
+            title="Index Value"
+        ),
+        yaxis2=dict(
+            title="Year-over-Year Change (%)",
+            overlaying="y",
+            side="right",
+            showgrid=False,
+            zeroline=False,
+            ticksuffix="%"
+        )
+    )
+    
+    return fig
 
 def fetch_bls_data(series_id, start_year, end_year):
     """Fetch data from BLS API"""
@@ -522,15 +666,16 @@ def calculate_sentiment_index(custom_weights=None, proprietary_data=None, docume
         'Real GDP % Change': 7.0,
         'PCE': 7.0,
         'Unemployment Rate': 7.0,
-        'CPI': 7.0,
-        'PCEPI': 7.0,
-        'NASDAQ Trend': 17.0,
-        'PPI: Data Processing Services': 7.0,
-        'PPI: Software Publishers': 7.0,
-        'Federal Funds Rate': 7.0,
-        'Treasury Yield': 10.0,
-        'VIX Volatility': 10.0,
-        'Software Job Postings': 7.0
+        'CPI': 6.0,
+        'PCEPI': 6.0,
+        'NASDAQ Trend': 16.0,      # Adjusted from 17.0 to 16.0
+        'PPI: Data Processing Services': 6.0,
+        'PPI: Software Publishers': 6.0,
+        'Federal Funds Rate': 6.0,
+        'Treasury Yield': 9.0,
+        'VIX Volatility': 9.0,
+        'Software Job Postings': 6.0,
+        'Consumer Sentiment': 9.0   # Same weight as Treasury Yield and VIX
     }
     
     # Validate default weights sum to 100
@@ -807,6 +952,42 @@ def calculate_sentiment_index(custom_weights=None, proprietary_data=None, docume
             'weight': weights['VIX Volatility']
         })
         
+    # 10. Consumer Sentiment - higher is better (consumer confidence)
+    if not consumer_sentiment_data.empty:
+        latest_sentiment = consumer_sentiment_data.sort_values('date', ascending=False).iloc[0]
+        
+        # Consumer Sentiment is generally measured on a scale with 100 being the benchmark
+        # Higher values indicate more confidence (good for economic sentiment)
+        # Score based on absolute value:
+        # >100: Excellent (80-100)
+        # 90-100: Good (60-80)
+        # 80-90: Moderate (40-60)
+        # 70-80: Concerning (20-40)
+        # <70: Poor (0-20)
+        
+        sentiment_value = latest_sentiment['value']
+        
+        if sentiment_value >= 100:
+            consumer_sentiment_score = 80 + min((sentiment_value - 100) / 5, 20)  # 80-100
+        elif sentiment_value >= 90:
+            consumer_sentiment_score = 60 + ((sentiment_value - 90) / 10) * 20  # 60-80
+        elif sentiment_value >= 80:
+            consumer_sentiment_score = 40 + ((sentiment_value - 80) / 10) * 20  # 40-60
+        elif sentiment_value >= 70:
+            consumer_sentiment_score = 20 + ((sentiment_value - 70) / 10) * 20  # 20-40
+        else:
+            consumer_sentiment_score = max(0, 20 - ((70 - sentiment_value) / 5) * 20)  # 0-20
+            
+        # Ensure score is in 0-100 range
+        consumer_sentiment_score = min(max(consumer_sentiment_score, 0), 100)
+        
+        sentiment_components.append({
+            'indicator': 'Consumer Sentiment',
+            'value': sentiment_value,
+            'score': consumer_sentiment_score,
+            'weight': weights['Consumer Sentiment']
+        })
+        
 
         
     # 10. Add proprietary data if provided
@@ -905,6 +1086,9 @@ treasury_yield_data = load_data_from_csv('treasury_yield_data.csv')
 
 # Add NASDAQ Composite data from FRED (NASDAQCOM)
 nasdaq_data = load_data_from_csv('nasdaq_data.csv')
+
+# Add Consumer Sentiment data (USACSCICP02STSAM)
+consumer_sentiment_data = load_data_from_csv('consumer_sentiment_data.csv')
 
 # Add Software Job Postings from FRED (IHLIDXUSTPSOFTDEVE)
 job_postings_data = load_data_from_csv('job_postings_data.csv')
@@ -1193,6 +1377,20 @@ if vix_data.empty or (datetime.now() - pd.to_datetime(vix_data['date'].max())).d
         print(f"VIX data updated with {len(vix_data)} observations")
     else:
         print("Failed to fetch VIX data")
+
+# Add Consumer Sentiment data
+if consumer_sentiment_data.empty or (datetime.now() - pd.to_datetime(consumer_sentiment_data['date'].max() if not consumer_sentiment_data.empty else '2000-01-01')).days > 30:
+    # Fetch Consumer Confidence Composite Index (USACSCICP02STSAM)
+    consumer_sentiment_temp = fetch_consumer_sentiment_data()
+    
+    if not consumer_sentiment_temp.empty:
+        consumer_sentiment_data = consumer_sentiment_temp
+        # Save data
+        save_data_to_csv(consumer_sentiment_data, 'consumer_sentiment_data.csv')
+        
+        print(f"Consumer Sentiment data updated with {len(consumer_sentiment_data)} observations")
+    else:
+        print("Failed to fetch Consumer Sentiment data")
 
 # Add Software Job Postings data
 if job_postings_data.empty or (datetime.now() - pd.to_datetime(job_postings_data['date'].max() if not job_postings_data.empty else '2000-01-01')).days > 30:
@@ -1516,7 +1714,7 @@ app.layout = html.Div([
                             min=0,
                             max=30,
                             step=0.1,
-                            value=7.0,
+                            value=6.0,
                             marks={0: "0%", 15: "15%", 30: "30%"},
                             className="weight-slider"
                         ),
@@ -1542,7 +1740,7 @@ app.layout = html.Div([
                             min=0,
                             max=30,
                             step=0.1,
-                            value=17.0,
+                            value=16.0,
                             marks={0: "0%", 15: "15%", 30: "30%"},
                             className="weight-slider"
                         ),
@@ -1555,7 +1753,7 @@ app.layout = html.Div([
                             min=0,
                             max=30,
                             step=0.1,
-                            value=7.0,
+                            value=6.0,
                             marks={0: "0%", 15: "15%", 30: "30%"},
                             className="weight-slider"
                         ),
@@ -1568,7 +1766,7 @@ app.layout = html.Div([
                             min=0,
                             max=30,
                             step=0.1,
-                            value=7.0,
+                            value=6.0,
                             marks={0: "0%", 15: "15%", 30: "30%"},
                             className="weight-slider"
                         ),
@@ -1581,7 +1779,7 @@ app.layout = html.Div([
                             min=0,
                             max=30,
                             step=0.1,
-                            value=7.0,
+                            value=6.0,
                             marks={0: "0%", 15: "15%", 30: "30%"},
                             className="weight-slider"
                         ),
@@ -1594,7 +1792,7 @@ app.layout = html.Div([
                             min=0,
                             max=30,
                             step=0.1,
-                            value=10.0,
+                            value=9.0,
                             marks={0: "0%", 15: "15%", 30: "30%"},
                             className="weight-slider"
                         ),
@@ -1607,7 +1805,20 @@ app.layout = html.Div([
                             min=0,
                             max=30,
                             step=0.1,
-                            value=10.0,
+                            value=9.0,
+                            marks={0: "0%", 15: "15%", 30: "30%"},
+                            className="weight-slider"
+                        ),
+                    ], className="weight-control"),
+                    
+                    html.Div([
+                        html.Label("Consumer Sentiment"),
+                        dcc.Slider(
+                            id="consumer-sentiment-weight",
+                            min=0,
+                            max=30,
+                            step=0.1,
+                            value=9.0,
                             marks={0: "0%", 15: "15%", 30: "30%"},
                             className="weight-slider"
                         ),
@@ -1715,6 +1926,10 @@ app.layout = html.Div([
                     html.Div([
                         html.H3("U.S. Software Job Postings on Indeed", className="graph-title"),
                         html.Div(id="job-postings-container", className="insights-enabled-container")
+                    ], className="graph-container"),
+                    html.Div([
+                        html.H3("Consumer Sentiment Index", className="graph-title"),
+                        html.Div(id="consumer-sentiment-container", className="insights-enabled-container")
                     ], className="graph-container")
                 ], className="custom-tab", selected_className="custom-tab--selected"),
                 
@@ -3611,17 +3826,18 @@ def update_treasury_yield_container(n):
      Input("interest-rate-weight", "value"),
      Input("treasury-yield-weight", "value"),
      Input("vix-weight", "value"),
+     Input("consumer-sentiment-weight", "value"),
      Input("job-postings-weight", "value")],
     [State("document-data-store", "data")]
 )
-def update_total_weight(gdp, pce, unemployment, cpi, pcepi, nasdaq, data_ppi, software_ppi, interest_rate, treasury_yield, vix, job_postings, document_data_store):
+def update_total_weight(gdp, pce, unemployment, cpi, pcepi, nasdaq, data_ppi, software_ppi, interest_rate, treasury_yield, vix, consumer_sentiment, job_postings, document_data_store):
     # Get document weight if it exists
     document_weight = 0
     if document_data_store and isinstance(document_data_store, dict) and 'weight' in document_data_store:
         document_weight = float(document_data_store['weight'])
     
     # Calculate total of economic indicators only
-    economic_indicators_total = gdp + pce + unemployment + cpi + pcepi + nasdaq + data_ppi + software_ppi + interest_rate + treasury_yield + vix + job_postings
+    economic_indicators_total = gdp + pce + unemployment + cpi + pcepi + nasdaq + data_ppi + software_ppi + interest_rate + treasury_yield + vix + consumer_sentiment + job_postings
     
     # If document weight is present, the economic indicators should sum to (100 - document_weight)
     if document_weight > 0:
@@ -3664,13 +3880,14 @@ def update_total_weight(gdp, pce, unemployment, cpi, pcepi, nasdaq, data_ppi, so
      State("interest-rate-weight", "value"),
      State("treasury-yield-weight", "value"),
      State("vix-weight", "value"),
+     State("consumer-sentiment-weight", "value"),
      State("job-postings-weight", "value"),
      State("proprietary-data-store", "data"),
      State("document-data-store", "data")],
     prevent_initial_call=True
 )
 def apply_custom_weights(n_clicks, gdp, pce, unemployment, cpi, pcepi, nasdaq, 
-                         data_ppi, software_ppi, interest_rate, treasury_yield, vix, job_postings, proprietary_data, document_data):
+                         data_ppi, software_ppi, interest_rate, treasury_yield, vix, consumer_sentiment, job_postings, proprietary_data, document_data):
     if n_clicks is None:
         # Initial load, use default weights
         sentiment_index = calculate_sentiment_index(proprietary_data=proprietary_data, document_data=document_data)
@@ -3683,7 +3900,7 @@ def apply_custom_weights(n_clicks, gdp, pce, unemployment, cpi, pcepi, nasdaq,
         document_weight = max(0, min(50, document_weight))  # Enforce 0-50% range
     
     # Create custom weights dictionary
-    total_economic_weight = gdp + pce + unemployment + cpi + pcepi + nasdaq + data_ppi + software_ppi + interest_rate + treasury_yield + vix + job_postings
+    total_economic_weight = gdp + pce + unemployment + cpi + pcepi + nasdaq + data_ppi + software_ppi + interest_rate + treasury_yield + vix + consumer_sentiment + job_postings
     
     # If total economic weight plus document weight isn't 100%, adjust the economic indicators
     if abs(total_economic_weight + document_weight - 100) > 0.1:
@@ -3709,6 +3926,7 @@ def apply_custom_weights(n_clicks, gdp, pce, unemployment, cpi, pcepi, nasdaq,
         interest_rate = round(interest_rate * scaling_factor, 1)
         treasury_yield = round(treasury_yield * scaling_factor, 1)
         vix = round(vix * scaling_factor, 1)
+        consumer_sentiment = round(consumer_sentiment * scaling_factor, 1)
         job_postings = round(job_postings * scaling_factor, 1)
         
         print(f"After scaling: VIX weight = {vix}")
@@ -3725,6 +3943,7 @@ def apply_custom_weights(n_clicks, gdp, pce, unemployment, cpi, pcepi, nasdaq,
         'Federal Funds Rate': interest_rate,
         'Treasury Yield': treasury_yield,
         'VIX Volatility': vix,
+        'Consumer Sentiment': consumer_sentiment,
         'Software Job Postings': job_postings
     }
     
@@ -3804,6 +4023,47 @@ def apply_proprietary_data(n_clicks, weight, value, custom_weights, document_dat
     # Return the results
     return proprietary_data, f"{sentiment_index['score']:.1f}" if sentiment_index else "N/A", sentiment_index['category'] if sentiment_index else "N/A"
 
+# Consumer Sentiment Graph
+@app.callback(
+    Output("consumer-sentiment-graph", "figure"),
+    [Input("interval-component", "n_intervals")]
+)
+def update_consumer_sentiment_graph(n):
+    """Generate the Consumer Sentiment chart figure"""
+    # Create graph using the imported function
+    global consumer_sentiment_data
+    if consumer_sentiment_data is None or consumer_sentiment_data.empty:
+        consumer_sentiment_data = load_data_from_csv('consumer_sentiment_data.csv')
+    return create_consumer_sentiment_graph(consumer_sentiment_data)
+
+# Consumer Sentiment Container
+@app.callback(
+    Output("consumer-sentiment-container", "children"),
+    [Input("interval-component", "n_intervals")]
+)
+def update_consumer_sentiment_container(n):
+    """Update the Consumer Sentiment container to include both the graph and insights panel"""
+    global consumer_sentiment_data
+    if consumer_sentiment_data is None or consumer_sentiment_data.empty:
+        consumer_sentiment_data = load_data_from_csv('consumer_sentiment_data.csv')
+    
+    # Create the graph and insights panel
+    graph = dcc.Graph(
+        id="consumer-sentiment-graph",
+        figure=create_consumer_sentiment_graph(consumer_sentiment_data),
+        config={"displayModeBar": False},
+        className="dashboard-chart"
+    )
+    
+    # Create insights panel
+    insights_panel = create_insights_panel('consumer_sentiment', consumer_sentiment_data)
+    
+    # Return the container with graph and insights
+    return [
+        graph,
+        insights_panel
+    ]
+
 # Refresh data
 @app.callback(
     [Output("loading-refresh-output", "children"),
@@ -3817,6 +4077,7 @@ def refresh_data(n_clicks):
     # Define variables as global at the top of the function
     global gdp_data, unemployment_data, inflation_data, interest_rate_data
     global nasdaq_data, software_ppi_data, data_processing_ppi_data, pcepi_data, job_postings_data
+    global consumer_sentiment_data, vix_data
     
     if n_clicks is None:
         # Initial load
@@ -3947,6 +4208,13 @@ def refresh_data(n_clicks):
         vix_data = vix_temp
         save_data_to_csv(vix_data, 'vix_data.csv')
         print(f"VIX data updated with {len(vix_data)} observations")
+        
+    # Consumer Sentiment (Consumer Confidence Composite Index)
+    consumer_sentiment_temp = fetch_consumer_sentiment_data()
+    if not consumer_sentiment_temp.empty:
+        consumer_sentiment_data = consumer_sentiment_temp
+        save_data_to_csv(consumer_sentiment_data, 'consumer_sentiment_data.csv')
+        print(f"Consumer Sentiment data updated with {len(consumer_sentiment_data)} observations")
     
     # 10-Year Treasury Yield - Using Yahoo Finance for real-time data
     treasury_temp = fetch_treasury_yield_data()

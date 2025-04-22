@@ -47,7 +47,15 @@ IMPACT: Dict[str, Dict[str, int]] = {
     "PPI_Data_Processing_YoY_%": dict.fromkeys(SECTORS, 1) | {
         "Cloud Infra": 3, "AI Infrastructure": 3},
     "PPI_Software_Publishers_YoY_%": dict.fromkeys(SECTORS, 1) | {
-        "Cloud Infra": 3, "AI Infrastructure": 3}
+        "Cloud Infra": 3, "AI Infrastructure": 3},
+    "Consumer_Sentiment": {
+        "Consumer Internet": 3, "eCommerce": 3, "AdTech": 3,
+        "Fintech": 2, "Hardware / Devices": 2,
+        "SMB SaaS": 1, "Enterprise SaaS": 1, "Vertical SaaS": 1,
+        "Cloud Infra": 1, "AI Infrastructure": 1,
+        "Cybersecurity": 1, "Dev Tools / Analytics": 1,
+        "Semiconductors": 1, "IT Services / Legacy Tech": 1
+    }
 }
 
 # ---------- 3) Importance weights (1‒4 shared across sectors) ----------
@@ -55,6 +63,7 @@ IMPORTANCE = {
     "NASDAQ_20d_gap_%": 3,  # Changed from 4 to 3 as requested
     "10Y_Treasury_Yield_%": 3,
     "VIX": 3,
+    "Consumer_Sentiment": 3,  # Adding Consumer Sentiment with equal weight to VIX and Treasury
     # all others default to 1
 }
 
@@ -72,6 +81,7 @@ BANDS = {
     "Software_Dev_Job_Postings_YoY_%": ("higher", 5.0, 0.0),
     "PPI_Data_Processing_YoY_%": ("higher", 5.0, 0.0),
     "PPI_Software_Publishers_YoY_%": ("higher", 5.0, 0.0),
+    "Consumer_Sentiment":        ("higher", 100.0, 90.0),
 }
 
 # ---------- 5) Types ----------
@@ -162,6 +172,7 @@ if __name__ == "__main__":
         "Software_Dev_Job_Postings_YoY_%": -8.8,
         "PPI_Data_Processing_YoY_%": 9.0,
         "PPI_Software_Publishers_YoY_%": 8.1,
+        "Consumer_Sentiment": 97.1,
     }
 
     for row in score_sectors(latest_macros):
