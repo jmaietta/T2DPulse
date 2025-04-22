@@ -102,15 +102,46 @@ def score_sectors(macros: MacroDict) -> List[SectorScore]:
     """Compute average score for each sector."""
     sector_sum = {s: 0.0 for s in SECTORS}
     sector_weight = {s: 0.0 for s in SECTORS}
+    
+    # For debugging, track contribution of each indicator to AdTech
+    adtech_contributions = {}
 
     for ind, val in macros.items():
         raw = raw_signal(ind, val)
         imp = IMPORTANCE.get(ind, 1)
+        
+        # Debug print for AdTech
+        if ind == "NASDAQ_10d_gap_%":
+            print(f"NASDAQ importance weight: {imp}")
+        
         for sec in SECTORS:
             weight = IMPACT[ind][sec] * imp
-            sector_sum[sec] += raw * weight
+            contribution = raw * weight
+            sector_sum[sec] += contribution
             sector_weight[sec] += abs(weight)
-
+            
+            # Track contributions for AdTech
+            if sec == "AdTech":
+                adtech_contributions[ind] = {
+                    "raw_signal": raw,
+                    "impact": IMPACT[ind][sec],
+                    "importance": imp,
+                    "weight": weight,
+                    "contribution": contribution
+                }
+    
+    # Print AdTech contributions
+    if "AdTech" in SECTORS and macros:
+        print("\nAdTech indicator contributions:")
+        total_weight = sector_weight["AdTech"]
+        for ind, data in adtech_contributions.items():
+            weight_percent = (abs(data["weight"]) / total_weight) * 100
+            print(f"  {ind:<25}: signal={data['raw_signal']:+d}, " +
+                  f"impact={data['impact']}, imp={data['importance']}, " +
+                  f"weight={data['weight']:.1f} ({weight_percent:.1f}%), " +
+                  f"contribution={data['contribution']:+.2f}")
+        print(f"  Total AdTech score: {sector_sum['AdTech'] / sector_weight['AdTech']:.2f}")
+    
     return [
         {"sector": sec, "score": round(sector_sum[sec] / sector_weight[sec], 2)}
         for sec in SECTORS
