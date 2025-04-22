@@ -319,7 +319,7 @@ def create_consumer_sentiment_graph(consumer_sentiment_data):
             y=filtered_data['value'],
             mode='lines',
             name='Consumer Sentiment Index',
-            line=dict(color=color_scheme['primary'], width=3)
+            line=dict(color=color_scheme['consumption'], width=3)
         )
     )
     
@@ -663,19 +663,19 @@ def calculate_sentiment_index(custom_weights=None, proprietary_data=None, docume
     """
     # Default weights according to T2D Pulse Homepage requirements
     default_weights = {
-        'Real GDP % Change': 7.0,
-        'PCE': 7.0,
-        'Unemployment Rate': 7.0,
-        'CPI': 6.0,
-        'PCEPI': 6.0,
-        'NASDAQ Trend': 16.0,      # Adjusted from 17.0 to 16.0
-        'PPI: Data Processing Services': 6.0,
-        'PPI: Software Publishers': 6.0,
-        'Federal Funds Rate': 6.0,
-        'Treasury Yield': 9.0,
-        'VIX Volatility': 9.0,
-        'Software Job Postings': 6.0,
-        'Consumer Sentiment': 9.0   # Same weight as Treasury Yield and VIX
+        'Real GDP % Change': 6.36,  # Updated from provided defaults
+        'PCE': 6.36,                # Updated from provided defaults
+        'Unemployment Rate': 6.36,  # Updated from provided defaults
+        'CPI': 6.36,                # Updated from provided defaults
+        'PCEPI': 6.36,              # Updated from provided defaults
+        'NASDAQ Trend': 15.45,      # Updated from provided defaults
+        'PPI: Data Processing Services': 6.36,  # Updated from provided defaults
+        'PPI: Software Publishers': 6.36,       # Updated from provided defaults
+        'Federal Funds Rate': 6.36,  # Updated from provided defaults
+        'Treasury Yield': 9.09,      # Updated from provided defaults
+        'VIX Volatility': 9.09,      # Updated from provided defaults
+        'Software Job Postings': 6.36,  # Updated from provided defaults
+        'Consumer Sentiment': 9.09      # Updated from provided defaults
     }
     
     # Validate default weights sum to 100

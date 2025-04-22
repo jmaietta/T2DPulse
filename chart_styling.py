@@ -45,7 +45,8 @@ color_scheme = {
     "positive": "#109618",    # Green for positive trends
     "negative": "#DC3912",    # Red for negative trends
     "neutral": "#999999",     # Gray for neutral reference lines
-    "consumption": "#E67300"  # Orange/amber for consumption metrics
+    "consumption": "#E67300", # Orange/amber for consumption metrics
+    "secondary": "#5491F7"    # Light blue for secondary metrics/change indicators
 }
 
 # Market heuristics data
