@@ -1195,8 +1195,14 @@ app.layout = html.Div([
                     html.Div([
                         html.H4("NASDAQ Trend"),
                         html.P(id="nasdaq-value", 
-                              children=f"{nasdaq_data.sort_values('date', ascending=False).iloc[0]['value']:.0f}" 
-                              if not nasdaq_data.empty else "N/A",
+                              children=html.Span([
+                                  f"{nasdaq_data.sort_values('date', ascending=False).iloc[0]['value']:.0f}",
+                                  html.Span(" (Gap from EMA: ", style={"fontSize": "12px", "color": "#666"}),
+                                  html.Span(f"{nasdaq_data.sort_values('date', ascending=False).iloc[0]['gap_pct']:.1f}%" 
+                                          if not nasdaq_data.empty and 'gap_pct' in nasdaq_data.columns else "N/A", 
+                                          style={"fontSize": "12px", "fontWeight": "bold"}),
+                                  html.Span(")", style={"fontSize": "12px", "color": "#666"})
+                              ]) if not nasdaq_data.empty else "N/A",
                               className="indicator-value")
                     ], className="indicator-text"),
                     html.Div(id="nasdaq-trend", className="indicator-trend")
@@ -2816,11 +2822,11 @@ def update_nasdaq_graph(n):
             height=400
         )
     
-    # Filter for last 2 years
-    cutoff_date = datetime.now() - timedelta(days=2*365)
+    # Filter for last 6 months (more focused view for EMA analysis)
+    cutoff_date = datetime.now() - timedelta(days=180)
     filtered_data = nasdaq_data[nasdaq_data['date'] >= cutoff_date].copy()
     
-    # Create figure with both value and percent change
+    # Create figure with both value and EMA gap
     fig = make_subplots(specs=[[{"secondary_y": True}]])
     
     # Add NASDAQ value line
@@ -2835,8 +2841,48 @@ def update_nasdaq_graph(n):
         secondary_y=False
     )
     
-    # Add percent change line if available
-    if 'pct_change' in filtered_data.columns:
+    # Add 10-day EMA line if available
+    if 'ema10' in filtered_data.columns:
+        fig.add_trace(
+            go.Scatter(
+                x=filtered_data['date'],
+                y=filtered_data['ema10'],
+                mode='lines',
+                name='10-Day EMA',
+                line=dict(color='blue', width=2, dash='dash'),
+            ),
+            secondary_y=False
+        )
+        
+        # Add gap percentage (momentum indicator)
+        if 'gap_pct' in filtered_data.columns:
+            fig.add_trace(
+                go.Scatter(
+                    x=filtered_data['date'],
+                    y=filtered_data['gap_pct'],
+                    mode='lines',
+                    name='Gap from EMA (%)',
+                    line=dict(color='red', width=2),
+                ),
+                secondary_y=True
+            )
+            
+            # Add zero line for the gap percentage
+            fig.add_shape(
+                type="line",
+                x0=filtered_data['date'].min(),
+                x1=filtered_data['date'].max(),
+                y0=0,
+                y1=0,
+                line=dict(
+                    color=color_scheme["neutral"],
+                    width=1.5,
+                    dash="dot",
+                ),
+                yref="y2"
+            )
+    # Legacy: Show percent change if EMA not available
+    elif 'pct_change' in filtered_data.columns:
         # Calculate moving average for smoothing
         filtered_data['pct_change_ma'] = filtered_data['pct_change'].rolling(window=30).mean()
         
@@ -2849,6 +2895,37 @@ def update_nasdaq_graph(n):
                 line=dict(color='green', width=2, dash='dot'),
             ),
             secondary_y=True
+        )
+    
+    # Add current value annotation
+    if len(filtered_data) > 0:
+        current_value = filtered_data.sort_values('date', ascending=False).iloc[0]['value']
+        current_gap = filtered_data.sort_values('date', ascending=False).iloc[0]['gap_pct'] if 'gap_pct' in filtered_data.columns else None
+        
+        if current_gap is not None:
+            # Arrow color based on gap direction
+            arrow_color = color_scheme["positive"] if current_gap > 0 else color_scheme["negative"]
+            arrow_symbol = "▲" if current_gap > 0 else "▼"
+            
+            annotation_text = f"Current: {current_value:.0f} ({arrow_symbol} {abs(current_gap):.1f}% from EMA)"
+        else:
+            annotation_text = f"Current: {current_value:.0f}"
+            arrow_color = "gray"
+        
+        fig.add_annotation(
+            x=0.02,
+            y=0.95,
+            xref="paper",
+            yref="paper",
+            text=annotation_text,
+            showarrow=False,
+            font=dict(size=14, color=arrow_color),
+            align="left",
+            bgcolor="rgba(255, 255, 255, 0.9)",
+            bordercolor=arrow_color,
+            borderwidth=1,
+            borderpad=4,
+            opacity=0.9
         )
     
     # Update layout
@@ -2870,7 +2947,7 @@ def update_nasdaq_graph(n):
     
     # Update y-axes
     fig.update_yaxes(title_text="NASDAQ Composite", secondary_y=False)
-    fig.update_yaxes(title_text="30-Day Avg % Change", ticksuffix="%", secondary_y=True)
+    fig.update_yaxes(title_text="Gap from 10-day EMA", ticksuffix="%", secondary_y=True)
     
     return fig
 
