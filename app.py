@@ -966,37 +966,44 @@ def calculate_sentiment_index(custom_weights=None, proprietary_data=None, docume
     if not consumer_sentiment_data.empty:
         latest_sentiment = consumer_sentiment_data.sort_values('date', ascending=False).iloc[0]
         
-        # Consumer Sentiment is generally measured on a scale with 100 being the benchmark
-        # Higher values indicate more confidence (good for economic sentiment)
-        # Score based on absolute value:
-        # >100: Excellent (80-100)
-        # 90-100: Good (60-80)
-        # 80-90: Moderate (40-60)
-        # 70-80: Concerning (20-40)
-        # <70: Poor (0-20)
+        # Consumer Sentiment is measured on a scale that typically ranges from 50-120
+        # with recent data showing values between 60-80
+        # Adjusted scoring ranges to be more appropriate for current data:
+        # >90: Excellent (80-100)
+        # 80-90: Very Good (65-80)
+        # 70-80: Good (50-65)
+        # 60-70: Moderate (35-50)
+        # 50-60: Concerning (20-35)
+        # <50: Poor (0-20)
         
         sentiment_value = latest_sentiment['value']
         
-        if sentiment_value >= 100:
-            consumer_sentiment_score = 80 + min((sentiment_value - 100) / 5, 20)  # 80-100
-        elif sentiment_value >= 90:
-            consumer_sentiment_score = 60 + ((sentiment_value - 90) / 10) * 20  # 60-80
+        if sentiment_value >= 90:
+            consumer_sentiment_score = 80 + min((sentiment_value - 90) / 5, 20)  # 80-100
         elif sentiment_value >= 80:
-            consumer_sentiment_score = 40 + ((sentiment_value - 80) / 10) * 20  # 40-60
+            consumer_sentiment_score = 65 + ((sentiment_value - 80) / 10) * 15  # 65-80
         elif sentiment_value >= 70:
-            consumer_sentiment_score = 20 + ((sentiment_value - 70) / 10) * 20  # 20-40
+            consumer_sentiment_score = 50 + ((sentiment_value - 70) / 10) * 15  # 50-65
+        elif sentiment_value >= 60:
+            consumer_sentiment_score = 35 + ((sentiment_value - 60) / 10) * 15  # 35-50
+        elif sentiment_value >= 50:
+            consumer_sentiment_score = 20 + ((sentiment_value - 50) / 10) * 15  # 20-35
         else:
-            consumer_sentiment_score = max(0, 20 - ((70 - sentiment_value) / 5) * 20)  # 0-20
+            consumer_sentiment_score = max(0, 20 * (sentiment_value / 50))  # 0-20
             
         # Ensure score is in 0-100 range
         consumer_sentiment_score = min(max(consumer_sentiment_score, 0), 100)
         
+        # Add to sentiment components
         sentiment_components.append({
             'indicator': 'Consumer Sentiment',
             'value': sentiment_value,
             'score': consumer_sentiment_score,
             'weight': weights['Consumer Sentiment']
         })
+        
+        # Debug message to help diagnose contribution calculation
+        print(f"Consumer Sentiment: value={sentiment_value}, score={consumer_sentiment_score}, weight={weights['Consumer Sentiment']}, contribution={consumer_sentiment_score * weights['Consumer Sentiment'] / 100:.1f}")
         
 
         
