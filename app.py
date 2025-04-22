@@ -466,25 +466,25 @@ def generate_sector_drivers(macros):
     
     # Map of sectors to their key drivers (indicator names)
     sector_drivers = {
-        "SMB SaaS": ["NASDAQ_10d_gap_%", "Software_Dev_Job_Postings_YoY_%"],
-        "Enterprise SaaS": ["10Y_Treasury_Yield_%", "NASDAQ_10d_gap_%"],
+        "SMB SaaS": ["NASDAQ_20d_gap_%", "Software_Dev_Job_Postings_YoY_%"],
+        "Enterprise SaaS": ["10Y_Treasury_Yield_%", "NASDAQ_20d_gap_%"],
         "Cloud Infrastructure": ["PPI_Software_Publishers_YoY_%", "10Y_Treasury_Yield_%"],
-        "AdTech": ["VIX", "NASDAQ_10d_gap_%", "Real_PCE_YoY_%"],
-        "Fintech": ["Fed_Funds_Rate_%", "Real_PCE_YoY_%"],
-        "Consumer Internet": ["VIX", "Real_PCE_YoY_%"],
-        "eCommerce": ["Real_PCE_YoY_%", "NASDAQ_10d_gap_%"],
+        "AdTech": ["VIX", "NASDAQ_20d_gap_%", "Real_PCE_YoY_%", "Consumer_Sentiment"],
+        "Fintech": ["Fed_Funds_Rate_%", "Real_PCE_YoY_%", "Consumer_Sentiment"],
+        "Consumer Internet": ["VIX", "Real_PCE_YoY_%", "Consumer_Sentiment"],
+        "eCommerce": ["Real_PCE_YoY_%", "NASDAQ_20d_gap_%", "Consumer_Sentiment"],
         "Cybersecurity": ["Software_Dev_Job_Postings_YoY_%", "Fed_Funds_Rate_%"],
-        "Dev Tools / Analytics": ["Software_Dev_Job_Postings_YoY_%", "NASDAQ_10d_gap_%"],
+        "Dev Tools / Analytics": ["Software_Dev_Job_Postings_YoY_%", "NASDAQ_20d_gap_%"],
         "Semiconductors": ["PPI_Data_Processing_YoY_%", "10Y_Treasury_Yield_%"],
         "AI Infrastructure": ["PPI_Data_Processing_YoY_%", "Fed_Funds_Rate_%"],
-        "Vertical SaaS": ["NASDAQ_10d_gap_%", "Software_Dev_Job_Postings_YoY_%"],
+        "Vertical SaaS": ["NASDAQ_20d_gap_%", "Software_Dev_Job_Postings_YoY_%"],
         "IT Services / Legacy Tech": ["Fed_Funds_Rate_%", "Real_GDP_Growth_%_SAAR"],
-        "Hardware / Devices": ["PPI_Data_Processing_YoY_%", "Fed_Funds_Rate_%"]
+        "Hardware / Devices": ["PPI_Data_Processing_YoY_%", "Fed_Funds_Rate_%", "Consumer_Sentiment"]
     }
     
     # Human-readable labels and formatting for indicators
     indicator_labels = {
-        "NASDAQ_10d_gap_%": "NASDAQ {}%",
+        "NASDAQ_20d_gap_%": "NASDAQ {}%",
         "Software_Dev_Job_Postings_YoY_%": "Dev-jobs {}%",
         "10Y_Treasury_Yield_%": "10-Yr {}%",
         "Fed_Funds_Rate_%": "Rates {}%",
@@ -492,7 +492,8 @@ def generate_sector_drivers(macros):
         "Real_PCE_YoY_%": "Consumer {}%",
         "Real_GDP_Growth_%_SAAR": "GDP {}%",
         "PPI_Software_Publishers_YoY_%": "SaaS PPI {}%",
-        "PPI_Data_Processing_YoY_%": "PPI {}%"
+        "PPI_Data_Processing_YoY_%": "PPI {}%",
+        "Consumer_Sentiment": "Sentiment {}"
     }
     
     # Generate drivers for each sector
@@ -512,8 +513,10 @@ def generate_sector_drivers(macros):
         
         # Add a qualitative factor if we have less than 2 drivers
         if len(sector_driving_factors) < 2:
-            if "NASDAQ_10d_gap_%" in macros and macros["NASDAQ_10d_gap_%"] < -2:
+            if "NASDAQ_20d_gap_%" in macros and macros["NASDAQ_20d_gap_%"] < -2:
                 sector_driving_factors.append("NASDAQ weak")
+            elif "Consumer_Sentiment" in macros and macros["Consumer_Sentiment"] < 90:
+                sector_driving_factors.append("Sentiment low")
             elif "VIX" in macros and macros["VIX"] > 25:
                 sector_driving_factors.append("VIX elevated")
             elif "Fed_Funds_Rate_%" in macros and macros["Fed_Funds_Rate_%"] > 4:
