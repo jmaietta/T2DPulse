@@ -504,8 +504,8 @@ def generate_sector_drivers(macros):
             if indicator in macros:
                 value = macros[indicator]
                 formatted_value = f"{value:+.1f}" if isinstance(value, (int, float)) else value
-                # Remove the '+' for absolute values that aren't growth rates
-                if indicator in ["VIX", "Consumer_Sentiment", "Fed_Funds_Rate_%", "10Y_Treasury_Yield_%"]:
+                # Remove the '+' for absolute values that aren't growth rates or for display clarity
+                if indicator in ["VIX", "Consumer_Sentiment", "Fed_Funds_Rate_%", "10Y_Treasury_Yield_%", "Real_PCE_YoY_%"]:
                     formatted_value = f"{value:.1f}"
                 
                 label = indicator_labels.get(indicator, indicator)
