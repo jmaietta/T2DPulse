@@ -4955,7 +4955,11 @@ def update_sector_sentiment_container(n):
     
     # Create a scale legend
     scale_legend = html.Div([
-        html.Div("Sector Sentiment Scale:", className="scale-title"),
+        html.Div([
+            "Sector Sentiment Scale:",
+            html.Span(" (Sector-specific scores derived from macro factors, separate from the T2D Pulse Sentiment Index)", 
+                      className="scale-title-note")
+        ], className="scale-title"),
         html.Div([
             html.Div([
                 html.Span("-0.5", className="scale-min"),
