@@ -662,21 +662,31 @@ def calculate_sentiment_index(custom_weights=None, proprietary_data=None, docume
         document_data (dict, optional): Dictionary with document analysis data and its weight
     """
     # Default weights according to T2D Pulse Homepage requirements
+    # Weights exactly as specified in the Default Weights file
     default_weights = {
-        'Real GDP % Change': 6.36,  # Updated from provided defaults
-        'PCE': 6.36,                # Updated from provided defaults
-        'Unemployment Rate': 6.36,  # Updated from provided defaults
-        'CPI': 6.36,                # Updated from provided defaults
-        'PCEPI': 6.36,              # Updated from provided defaults
-        'NASDAQ Trend': 15.45,      # Updated from provided defaults
-        'PPI: Data Processing Services': 6.36,  # Updated from provided defaults
-        'PPI: Software Publishers': 6.36,       # Updated from provided defaults
-        'Federal Funds Rate': 6.36,  # Updated from provided defaults
-        'Treasury Yield': 9.09,      # Updated from provided defaults
-        'VIX Volatility': 9.09,      # Updated from provided defaults
-        'Software Job Postings': 6.36,  # Updated from provided defaults
-        'Consumer Sentiment': 9.09      # Updated from provided defaults
+        'Real GDP % Change': 6.36,              # Line 2: 6.36%
+        'PCE': 6.36,                            # Line 3: 6.36%
+        'Unemployment Rate': 6.36,              # Line 4: 6.36%
+        'Software Job Postings': 6.36,          # Line 5: 6.36%
+        'CPI': 6.36,                            # Line 6: 6.36% (Inflation (CPI))
+        'PCEPI': 6.36,                          # Line 7: 6.36% (PCEPI (YoY))
+        'Federal Funds Rate': 6.36,             # Line 8: 6.36% (Fed Funds Rate)
+        'NASDAQ Trend': 15.45,                  # Line 9: 15.45%
+        'PPI: Software Publishers': 6.36,       # Line 10: 6.36%
+        'PPI: Data Processing Services': 6.36,  # Line 11: 6.36%
+        'Treasury Yield': 9.09,                 # Line 12: 9.09% (10-Year Treasury Yield)
+        'Consumer Sentiment': 9.09,             # Line 13: 9.09%
+        'VIX Volatility': 9.09                  # Line 14: 9.09% (VIX Volatility Index)
     }
+    
+    # Verify weights sum to exactly 100%
+    weights_sum = sum(default_weights.values())
+    if abs(weights_sum - 100) > 0.001:
+        print(f"WARNING: Default weights sum to {weights_sum}%, not 100%")
+        # Adjust the largest weight to ensure total is exactly 100%
+        adjustment = 100 - weights_sum
+        default_weights['NASDAQ Trend'] += adjustment
+        print(f"Adjusted NASDAQ Trend by {adjustment} to make total exactly 100%")
     
     # Validate default weights sum to 100
     assert abs(sum(default_weights.values()) - 100) < 0.1, "Default weights must sum to 100%"
