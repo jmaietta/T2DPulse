@@ -5027,11 +5027,11 @@ def update_sector_sentiment_container(n):
         
         sector_cards.append(card)
     
-    # Combine the scale legend with the sector cards
-    return [
-        scale_legend,
-        html.Div(sector_cards, className="sector-cards-container")
-    ]
+    # Combine the scale legend with the sector cards in a single container
+    return html.Div([
+        scale_legend,  # Legend at the top
+        html.Div(sector_cards, className="sector-cards-container")  # Grid of cards below
+    ], className="sector-sentiment-container")
 
 # Update VIX Container with chart and insights panel
 @app.callback(
