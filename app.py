@@ -175,15 +175,17 @@ def fetch_bea_data(table_name, frequency, start_year, end_year):
 def fetch_treasury_yield_data():
     """Fetch 10-Year Treasury Yield data from Yahoo Finance (^TNX)
     
-    Returns a DataFrame with date and value columns formatted like FRED data
+    Returns a DataFrame with date and value columns formatted like FRED data.
+    This function fetches real-time Treasury yield data when FRED data is delayed.
     """
-    print("Fetching 10-Year Treasury Yield data from Yahoo Finance")
+    print("Fetching real-time 10-Year Treasury Yield data from Yahoo Finance...")
     
     try:
         # Use Yahoo Finance to get the most recent data
         treasury = yf.Ticker('^TNX')
-        # Get data for the last 30 days to ensure we have enough recent values
-        data = treasury.history(period='30d')
+        # Get data for the last 60 days to ensure we have enough recent values
+        # and smooth merging with historical data
+        data = treasury.history(period='60d')
         
         if data.empty:
             print("No Treasury Yield data retrieved from Yahoo Finance")
@@ -195,10 +197,19 @@ def fetch_treasury_yield_data():
             'value': data['Close']
         })
         
+        # Sort by date (newest first) for easier reporting and data merging
+        df = df.sort_values('date', ascending=False)
+        
+        # Report the latest value and date
+        latest_date = df.iloc[0]['date'].strftime('%Y-%m-%d')
+        latest_value = df.iloc[0]['value']
+        print(f"Latest Treasury Yield: {latest_value:.3f}% on {latest_date}")
         print(f"Successfully retrieved {len(df)} days of Treasury Yield data from Yahoo Finance")
+        
         return df
     except Exception as e:
         print(f"Exception while fetching Treasury Yield data from Yahoo Finance: {str(e)}")
+        print("Falling back to cached Treasury Yield data")
         return pd.DataFrame()
 
 def fetch_bls_data(series_id, start_year, end_year):
