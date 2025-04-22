@@ -487,9 +487,9 @@ def generate_sector_drivers(macros):
         "NASDAQ_20d_gap_%": "NASDAQ {}%",
         "Software_Dev_Job_Postings_YoY_%": "Dev-jobs {}%",
         "10Y_Treasury_Yield_%": "10-Yr {}%",
-        "Fed_Funds_Rate_%": "Rates {}%",
+        "Fed_Funds_Rate_%": "Fed Funds {}%",
         "VIX": "VIX {}",
-        "Real_PCE_YoY_%": "Consumer {}%",
+        "Real_PCE_YoY_%": "PCE {}%",
         "Real_GDP_Growth_%_SAAR": "GDP {}%",
         "PPI_Software_Publishers_YoY_%": "SaaS PPI {}%",
         "PPI_Data_Processing_YoY_%": "PPI {}%",
@@ -504,8 +504,8 @@ def generate_sector_drivers(macros):
             if indicator in macros:
                 value = macros[indicator]
                 formatted_value = f"{value:+.1f}" if isinstance(value, (int, float)) else value
-                # Remove the '+' for VIX and Consumer Sentiment as they're not growth rates
-                if indicator in ["VIX", "Consumer_Sentiment"]:
+                # Remove the '+' for absolute values that aren't growth rates
+                if indicator in ["VIX", "Consumer_Sentiment", "Fed_Funds_Rate_%", "10Y_Treasury_Yield_%"]:
                     formatted_value = f"{value:.1f}"
                 
                 label = indicator_labels.get(indicator, indicator)
@@ -520,7 +520,7 @@ def generate_sector_drivers(macros):
             elif "VIX" in macros and macros["VIX"] > 25:
                 sector_driving_factors.append("VIX elevated")
             elif "Fed_Funds_Rate_%" in macros and macros["Fed_Funds_Rate_%"] > 4:
-                sector_driving_factors.append("Rates headwind")
+                sector_driving_factors.append("Fed Funds headwind")
         
         drivers[sector] = sector_driving_factors
     
