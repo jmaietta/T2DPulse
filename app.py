@@ -176,9 +176,9 @@ def fetch_treasury_yield_data():
     """Fetch 10-Year Treasury Yield data from Yahoo Finance (^TNX)
     
     Returns a DataFrame with date and value columns formatted like FRED data.
-    This function fetches real-time Treasury yield data when FRED data is delayed.
+    Uses the opening price as the daily value rather than real-time intraday values.
     """
-    print("Fetching real-time 10-Year Treasury Yield data from Yahoo Finance...")
+    print("Fetching Treasury Yield data from Yahoo Finance (as of market open)...")
     
     try:
         # Use Yahoo Finance to get the most recent data
@@ -192,9 +192,10 @@ def fetch_treasury_yield_data():
             return pd.DataFrame()
             
         # Format data to match FRED format
+        # Using Open prices instead of Close to get market open values
         df = pd.DataFrame({
             'date': data.index.tz_localize(None),  # Remove timezone to match FRED data
-            'value': data['Close']
+            'value': data['Open']
         })
         
         # Sort by date (newest first) for easier reporting and data merging
@@ -203,7 +204,7 @@ def fetch_treasury_yield_data():
         # Report the latest value and date
         latest_date = df.iloc[0]['date'].strftime('%Y-%m-%d')
         latest_value = df.iloc[0]['value']
-        print(f"Latest Treasury Yield: {latest_value:.3f}% on {latest_date}")
+        print(f"Treasury Yield (market open): {latest_value:.3f}% on {latest_date}")
         print(f"Successfully retrieved {len(df)} days of Treasury Yield data from Yahoo Finance")
         
         return df
