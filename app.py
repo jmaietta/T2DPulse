@@ -212,6 +212,57 @@ def fetch_treasury_yield_data():
         print(f"Exception while fetching Treasury Yield data from Yahoo Finance: {str(e)}")
         print("Falling back to cached Treasury Yield data")
         return pd.DataFrame()
+        
+def fetch_nasdaq_with_ema():
+    """Fetch NASDAQ data using yfinance and calculate the 10-day EMA
+    
+    Returns a DataFrame with:
+    - date: the date of the observation
+    - value: the NASDAQ Composite closing value
+    - ema10: the 10-day exponential moving average
+    - gap_pct: percentage difference between the current value and EMA (momentum indicator)
+    """
+    try:
+        print("Fetching NASDAQ data from Yahoo Finance with 10-day EMA...")
+        
+        # Get NASDAQ Composite data for the last 30 days (need extra days for EMA calculation)
+        ixic = yf.Ticker("^IXIC")
+        data = ixic.history(period="30d")
+        
+        if data.empty:
+            print("No NASDAQ data retrieved from Yahoo Finance")
+            return pd.DataFrame()
+        
+        # Calculate 10-day EMA
+        data['ema10'] = data['Close'].ewm(span=10, adjust=False).mean()
+        
+        # Calculate gap percentage (current price vs EMA)
+        data['gap_pct'] = (data['Close'] / data['ema10'] - 1) * 100
+        
+        # Create DataFrame with our standard format, plus the additional metrics
+        df = pd.DataFrame({
+            'date': data.index.tz_localize(None),  # Remove timezone to match FRED data
+            'value': data['Close'],
+            'ema10': data['ema10'],
+            'gap_pct': data['gap_pct'],
+            'pct_change': data['Close'].pct_change() * 100  # Keep this for compatibility
+        })
+        
+        # Sort by date (newest first) for easier reporting
+        df = df.sort_values('date', ascending=False)
+        
+        # Report the latest values
+        latest_date = df.iloc[0]['date'].strftime('%Y-%m-%d')
+        latest_value = df.iloc[0]['value']
+        latest_gap = df.iloc[0]['gap_pct']
+        print(f"NASDAQ: {latest_value:.1f} on {latest_date}, Gap from 10-day EMA: {latest_gap:.2f}%")
+        print(f"Successfully retrieved NASDAQ data with EMA calculation")
+        
+        return df
+    except Exception as e:
+        print(f"Exception while fetching NASDAQ data with EMA: {str(e)}")
+        print("Falling back to FRED data for NASDAQ")
+        return pd.DataFrame()
 
 def fetch_bls_data(series_id, start_year, end_year):
     """Fetch data from BLS API"""
@@ -438,18 +489,53 @@ def calculate_sentiment_index(custom_weights=None, proprietary_data=None, docume
             'weight': weights['PCEPI']
         })
     
-    # 4. Market Performance - NASDAQ recent trend
-    if not nasdaq_data.empty and 'pct_change' in nasdaq_data.columns:
-        # Take average of last 3 months for trend
-        recent_nasdaq = nasdaq_data.sort_values('date', ascending=False).head(3)
-        avg_change = recent_nasdaq['pct_change'].mean()
-        nasdaq_score = min(max(50 + avg_change * 5, 0), 100)  # Scale: 0 to 100
-        sentiment_components.append({
-            'indicator': 'NASDAQ Trend',
-            'value': avg_change,
-            'score': nasdaq_score,
-            'weight': weights['NASDAQ Trend']
-        })
+    # 4. Market Performance - NASDAQ trend using EMA gap (if available) or traditional method
+    if not nasdaq_data.empty:
+        if 'gap_pct' in nasdaq_data.columns:
+            # New method: Use gap between current price and 10-day EMA as trend indicator
+            latest_nasdaq = nasdaq_data.sort_values('date', ascending=False).iloc[0]
+            gap_pct = latest_nasdaq['gap_pct']
+            
+            # Score based on EMA gap:
+            # > 2%: Very bullish (80-100)
+            # 0.5% to 2%: Bullish (60-80)
+            # -0.5% to 0.5%: Neutral (40-60)
+            # -2% to -0.5%: Bearish (20-40)
+            # < -2%: Very bearish (0-20)
+            
+            if gap_pct >= 2:
+                nasdaq_score = 80 + min((gap_pct - 2) * 10, 20)  # 80-100
+            elif gap_pct >= 0.5:
+                nasdaq_score = 60 + ((gap_pct - 0.5) / 1.5) * 20  # 60-80
+            elif gap_pct >= -0.5:
+                nasdaq_score = 40 + ((gap_pct + 0.5) / 1.0) * 20  # 40-60
+            elif gap_pct >= -2:
+                nasdaq_score = 20 + ((gap_pct + 2) / 1.5) * 20  # 20-40
+            else:
+                nasdaq_score = max(0, 20 + (gap_pct + 2) * 10)  # 0-20
+                
+            # Ensure score is in 0-100 range
+            nasdaq_score = min(max(nasdaq_score, 0), 100)
+            
+            sentiment_components.append({
+                'indicator': 'NASDAQ Trend',
+                'value': gap_pct,
+                'score': nasdaq_score,
+                'weight': weights['NASDAQ Trend'],
+                'description': 'Gap from 10-day EMA'
+            })
+        elif 'pct_change' in nasdaq_data.columns:
+            # Legacy method: Use average of recent percent changes
+            recent_nasdaq = nasdaq_data.sort_values('date', ascending=False).head(3)
+            avg_change = recent_nasdaq['pct_change'].mean()
+            nasdaq_score = min(max(50 + avg_change * 5, 0), 100)  # Scale: 0 to 100
+            sentiment_components.append({
+                'indicator': 'NASDAQ Trend',
+                'value': avg_change,
+                'score': nasdaq_score,
+                'weight': weights['NASDAQ Trend'],
+                'description': '3-day avg % change'
+            })
     
     # 5. Tech Sector Prices - PPI Data Processing YoY change
     if not data_processing_ppi_data.empty and 'yoy_pct_change' in data_processing_ppi_data.columns:
@@ -627,21 +713,30 @@ nasdaq_data = load_data_from_csv('nasdaq_data.csv')
 # Add Software Job Postings from FRED (IHLIDXUSTPSOFTDEVE)
 job_postings_data = load_data_from_csv('job_postings_data.csv')
 
-# If no existing data or data is old, fetch new data
-if nasdaq_data.empty or (datetime.now() - pd.to_datetime(nasdaq_data['date'].max())).days > 7:
-    nasdaq_data = fetch_fred_data('NASDAQCOM')
+# If no existing data or data is old, fetch NASDAQ data with EMA calculation
+if nasdaq_data.empty or (datetime.now() - pd.to_datetime(nasdaq_data['date'].max())).days > 1:
+    # Try to get real-time data with EMA first
+    new_nasdaq_data = fetch_nasdaq_with_ema()
     
-    if not nasdaq_data.empty:
-        # Calculate percent change
-        nasdaq_data = nasdaq_data.sort_values('date')
-        nasdaq_data['pct_change'] = nasdaq_data['value'].pct_change() * 100
-        
-        # Save data
+    if not new_nasdaq_data.empty and 'gap_pct' in new_nasdaq_data.columns:
+        nasdaq_data = new_nasdaq_data
         save_data_to_csv(nasdaq_data, 'nasdaq_data.csv')
-        
-        print(f"NASDAQ data updated with {len(nasdaq_data)} observations")
+        print(f"NASDAQ data updated with real-time EMA calculation, {len(nasdaq_data)} observations")
     else:
-        print("Failed to fetch NASDAQ data")
+        # Fall back to FRED data if real-time fails
+        print("Falling back to FRED for NASDAQ data")
+        fred_nasdaq_data = fetch_fred_data('NASDAQCOM')
+        
+        if not fred_nasdaq_data.empty:
+            # Calculate percent change
+            fred_nasdaq_data = fred_nasdaq_data.sort_values('date')
+            fred_nasdaq_data['pct_change'] = fred_nasdaq_data['value'].pct_change() * 100
+            
+            nasdaq_data = fred_nasdaq_data
+            save_data_to_csv(nasdaq_data, 'nasdaq_data.csv')
+            print(f"NASDAQ data updated from FRED with {len(nasdaq_data)} observations")
+        else:
+            print("Failed to fetch NASDAQ data from any source")
 
 # Add Producer Price Index for Software Publishers from FRED (PCU511210511210)
 software_ppi_data = load_data_from_csv('software_ppi_data.csv')
@@ -1883,16 +1978,34 @@ def update_indicator_trends(n):
                 html.Span(f"{abs(change):.2f}%", className="trend-value")
             ], className="trend")
     
-    # NASDAQ Trend
+    # NASDAQ Trend - Using EMA gap if available
     nasdaq_trend = html.Div("No data", className="trend-value")
     if not nasdaq_data.empty:
         sorted_nasdaq = nasdaq_data.sort_values('date', ascending=False)
-        if len(sorted_nasdaq) >= 2:
+        if 'gap_pct' in sorted_nasdaq.columns:
+            # New approach: Using the gap between price and 10-day EMA
+            gap_pct = sorted_nasdaq.iloc[0]['gap_pct']
+            
+            # Determine trend direction and color
+            if abs(gap_pct) < 0.1:  # Very small change
+                icon = "→"
+                color = "trend-neutral"  # Black for sideways arrows
+            else:
+                icon = "↑" if gap_pct > 0 else "↓"
+                color = "trend-up" if icon == "↑" else "trend-down"  # Green for up, Red for down
+            
+            nasdaq_trend = html.Div([
+                html.Span(icon, className=f"trend-icon {color}"),
+                html.Span(f"{abs(gap_pct):.1f}%", className="trend-value"),
+                html.Span(" gap from 10-day EMA", style={"fontSize": "11px", "marginLeft": "3px", "color": "#777"})
+            ], className="trend")
+        elif len(sorted_nasdaq) >= 2:
+            # Legacy approach: Using day-to-day percent change
             current = sorted_nasdaq.iloc[0]['value']
             previous = sorted_nasdaq.iloc[1]['value']
             change = ((current - previous) / previous) * 100  # Percent change
             
-            # First, always show the actual direction of change
+            # Determine trend direction and color
             if abs(change) < 0.1:  # Very small change
                 icon = "→"
                 color = "trend-neutral"  # Black for sideways arrows
@@ -3525,14 +3638,25 @@ def refresh_data(n_clicks):
         print(f"PCEPI data updated with {len(pcepi_data)} observations")
     
     # Also update other datasets
-    # NASDAQ
-    nasdaq_temp = fetch_fred_data('NASDAQCOM')
-    if not nasdaq_temp.empty:
-        nasdaq_temp = nasdaq_temp.sort_values('date')
-        nasdaq_temp['pct_change'] = nasdaq_temp['value'].pct_change() * 100
+    # NASDAQ with EMA calculation
+    nasdaq_temp = fetch_nasdaq_with_ema()
+    if not nasdaq_temp.empty and 'gap_pct' in nasdaq_temp.columns:
+        # Use the new EMA-based data
         nasdaq_data = nasdaq_temp
         save_data_to_csv(nasdaq_data, 'nasdaq_data.csv')
-        print(f"NASDAQ data updated with {len(nasdaq_data)} observations")
+        latest_date = nasdaq_data.sort_values('date', ascending=False).iloc[0]['date']
+        latest_gap = nasdaq_data.sort_values('date', ascending=False).iloc[0]['gap_pct']
+        print(f"NASDAQ data updated with EMA calculation, latest date: {latest_date}, EMA gap: {latest_gap:.2f}%")
+    else:
+        # Fall back to FRED data if real-time fails
+        print("Falling back to FRED for NASDAQ data")
+        fred_nasdaq_data = fetch_fred_data('NASDAQCOM')
+        if not fred_nasdaq_data.empty:
+            fred_nasdaq_data = fred_nasdaq_data.sort_values('date')
+            fred_nasdaq_data['pct_change'] = fred_nasdaq_data['value'].pct_change() * 100
+            nasdaq_data = fred_nasdaq_data
+            save_data_to_csv(nasdaq_data, 'nasdaq_data.csv')
+            print(f"NASDAQ data updated from FRED with {len(nasdaq_data)} observations")
     
     # VIX (CBOE Volatility Index)
     vix_temp = fetch_fred_data('VIXCLS')
