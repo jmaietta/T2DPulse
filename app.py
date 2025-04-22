@@ -4953,6 +4953,28 @@ def update_sector_sentiment_container(n):
     if not sector_scores:
         return html.Div("Insufficient data to calculate sector sentiment", className="no-data-message")
     
+    # Create a scale legend
+    scale_legend = html.Div([
+        html.Div("Sector Sentiment Scale:", className="scale-title"),
+        html.Div([
+            html.Div([
+                html.Span("-0.5", className="scale-min"),
+                html.Span("0", className="scale-mid"),
+                html.Span("+0.5", className="scale-max")
+            ], className="scale-numbers"),
+            html.Div([
+                html.Div(className="scale-bar-bearish"),
+                html.Div(className="scale-bar-neutral"),
+                html.Div(className="scale-bar-bullish")
+            ], className="scale-bars")
+        ], className="scale-container"),
+        html.Div([
+            html.Div(["Bearish", html.Span("< -0.25", className="scale-range")], className="scale-label bearish"),
+            html.Div(["Neutral", html.Span("-0.25 to +0.05", className="scale-range")], className="scale-label neutral"),
+            html.Div(["Bullish", html.Span("> +0.05", className="scale-range")], className="scale-label bullish")
+        ], className="scale-labels")
+    ], className="sector-scale-legend")
+    
     # Create cards for each sector
     sector_cards = []
     
@@ -5005,7 +5027,11 @@ def update_sector_sentiment_container(n):
         
         sector_cards.append(card)
     
-    return sector_cards
+    # Combine the scale legend with the sector cards
+    return [
+        scale_legend,
+        html.Div(sector_cards, className="sector-cards-container")
+    ]
 
 # Update VIX Container with chart and insights panel
 @app.callback(
