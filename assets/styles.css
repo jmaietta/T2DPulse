@@ -626,6 +626,8 @@
     border: 1px solid #ddd;
     background-color: #f8f9fa;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    min-height: 215px;
 }
 
 .sector-card-header {
@@ -696,7 +698,8 @@
     display: flex;
     flex-wrap: wrap;
     gap: 5px;
-    margin-top: 5px;
+    margin-top: auto;
+    padding-top: 10px;
 }
 
 .ticker-badge {
