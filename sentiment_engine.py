@@ -8,7 +8,7 @@ from typing import Dict, List, TypedDict
 
 # ---------- 1) Sector universe ----------
 SECTORS = [
-    "SMB SaaS", "Enterprise SaaS", "Cloud Infra", "AdTech", "Fintech",
+    "SMB SaaS", "Enterprise SaaS", "Cloud Infrastructure", "AdTech", "Fintech",
     "Consumer Internet", "eCommerce", "Cybersecurity", "Dev Tools / Analytics",
     "Semiconductors", "AI Infrastructure", "Vertical SaaS",
     "IT Services / Legacy Tech", "Hardware / Devices"
@@ -17,14 +17,14 @@ SECTORS = [
 # ---------- 2) Impact grid (1‒3) ----------
 IMPACT: Dict[str, Dict[str, int]] = {
     "10Y_Treasury_Yield_%":      dict.fromkeys(SECTORS, 2) | {
-        "SMB SaaS": 3, "Enterprise SaaS": 3, "Cloud Infra": 3,
+        "SMB SaaS": 3, "Enterprise SaaS": 3, "Cloud Infrastructure": 3,
         "Dev Tools / Analytics": 3, "AI Infrastructure": 3,
         "Vertical SaaS": 3, "IT Services / Legacy Tech": 1},
     "VIX":                       dict.fromkeys(SECTORS, 2),
     "NASDAQ_20d_gap_%":          dict.fromkeys(SECTORS, 3) | {
         "IT Services / Legacy Tech": 2, "Hardware / Devices": 2},
     "Fed_Funds_Rate_%":          dict.fromkeys(SECTORS, 2) | {
-        "SMB SaaS": 3, "Enterprise SaaS": 3, "Cloud Infra": 3,
+        "SMB SaaS": 3, "Enterprise SaaS": 3, "Cloud Infrastructure": 3,
         "Dev Tools / Analytics": 3, "AI Infrastructure": 3,
         "Vertical SaaS": 3, "Fintech": 3, "IT Services / Legacy Tech": 1},
     "CPI_YoY_%":                 dict.fromkeys(SECTORS, 2) | {
@@ -41,18 +41,18 @@ IMPACT: Dict[str, Dict[str, int]] = {
         "Semiconductors": 3, "Hardware / Devices": 3},
     "Unemployment_%":            dict.fromkeys(SECTORS, 2),
     "Software_Dev_Job_Postings_YoY_%": dict.fromkeys(SECTORS, 1) | {
-        "SMB SaaS": 3, "Enterprise SaaS": 3, "Cloud Infra": 3,
+        "SMB SaaS": 3, "Enterprise SaaS": 3, "Cloud Infrastructure": 3,
         "Cybersecurity": 3, "Dev Tools / Analytics": 3,
         "AI Infrastructure": 3, "Vertical SaaS": 3},
     "PPI_Data_Processing_YoY_%": dict.fromkeys(SECTORS, 1) | {
-        "Cloud Infra": 3, "AI Infrastructure": 3},
+        "Cloud Infrastructure": 3, "AI Infrastructure": 3},
     "PPI_Software_Publishers_YoY_%": dict.fromkeys(SECTORS, 1) | {
-        "Cloud Infra": 3, "AI Infrastructure": 3},
+        "Cloud Infrastructure": 3, "AI Infrastructure": 3},
     "Consumer_Sentiment": {
         "Consumer Internet": 3, "eCommerce": 3, "AdTech": 3,
         "Fintech": 2, "Hardware / Devices": 2, "Semiconductors": 2,
         "SMB SaaS": 1, "Enterprise SaaS": 1, "Vertical SaaS": 1,
-        "Cloud Infra": 1, "AI Infrastructure": 1,
+        "Cloud Infrastructure": 1, "AI Infrastructure": 1,
         "Cybersecurity": 1, "Dev Tools / Analytics": 1,
         "IT Services / Legacy Tech": 1
     }
