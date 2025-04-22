@@ -396,6 +396,13 @@
     color: #2c3e50;
 }
 
+.sector-subtitle {
+    font-size: 14px;
+    color: #7f8c8d;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
 /* Tabs styling */
 .custom-tabs {
     margin-bottom: 20px;
@@ -490,6 +497,114 @@
     .sentiment-gauge-container {
         height: 120px;
     }
+}
+
+/* Sector Sentiment Card Styles */
+.sector-sentiment-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.sector-card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    background-color: #f8f9fa;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.sector-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sector-name {
+    font-size: 16px;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.sector-score {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.score-positive {
+    color: #2ECC71;
+}
+
+.score-negative {
+    color: #E74C3C;
+}
+
+.score-neutral {
+    color: #F1C40F;
+}
+
+.sector-badge {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 15px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.badge-bullish {
+    background-color: rgba(46, 204, 113, 0.2);
+    color: #2ECC71;
+}
+
+.badge-bearish {
+    background-color: rgba(231, 76, 60, 0.2);
+    color: #E74C3C;
+}
+
+.badge-neutral {
+    background-color: rgba(241, 196, 15, 0.2);
+    color: #F1C40F;
+}
+
+.sector-takeaway {
+    font-size: 13px;
+    color: #5d6d7e;
+}
+
+.drivers-list {
+    margin: 0;
+    padding-left: 20px;
+    font-size: 13px;
+    color: #34495e;
+}
+
+.tickers-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-top: 5px;
+}
+
+.ticker-badge {
+    background-color: #ecf0f1;
+    color: #7f8c8d;
+    padding: 2px 7px;
+    border-radius: 4px;
+    font-size: 11px;
+}
+
+.no-data-message {
+    text-align: center;
+    padding: 30px;
+    color: #7f8c8d;
+    font-style: italic;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    border: 1px dashed #ddd;
 }
 
 /* Insights Panel Styles */

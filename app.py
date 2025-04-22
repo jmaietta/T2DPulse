@@ -19,6 +19,9 @@ from api_keys import FRED_API_KEY, BEA_API_KEY, BLS_API_KEY
 # Import document analysis functionality
 import document_analysis
 
+# Import sector sentiment scoring
+import sentiment_engine
+
 # Import chart styling and market insights components
 from chart_styling import custom_template, color_scheme
 from market_insights import create_insights_panel
@@ -312,6 +315,199 @@ def fetch_bls_data(series_id, start_year, end_year):
     except Exception as e:
         print(f"Exception while fetching BLS data: {str(e)}")
         return pd.DataFrame()
+
+def generate_sector_drivers(macros):
+    """Generate list of key drivers (factors) for each sector based on macro data"""
+    drivers = {}
+    
+    # Map of sectors to their key drivers (indicator names)
+    sector_drivers = {
+        "SMB SaaS": ["NASDAQ_10d_gap_%", "Software_Dev_Job_Postings_YoY_%"],
+        "Enterprise SaaS": ["10Y_Treasury_Yield_%", "NASDAQ_10d_gap_%"],
+        "Cloud Infrastructure": ["PPI_Software_Publishers_YoY_%", "10Y_Treasury_Yield_%"],
+        "AdTech": ["VIX", "NASDAQ_10d_gap_%", "Real_PCE_YoY_%"],
+        "Fintech": ["Fed_Funds_Rate_%", "Real_PCE_YoY_%"],
+        "Consumer Internet": ["VIX", "Real_PCE_YoY_%"],
+        "eCommerce": ["Real_PCE_YoY_%", "NASDAQ_10d_gap_%"],
+        "Cybersecurity": ["Software_Dev_Job_Postings_YoY_%", "Fed_Funds_Rate_%"],
+        "Dev Tools / Analytics": ["Software_Dev_Job_Postings_YoY_%", "NASDAQ_10d_gap_%"],
+        "Semiconductors": ["PPI_Data_Processing_YoY_%", "10Y_Treasury_Yield_%"],
+        "AI Infrastructure": ["PPI_Data_Processing_YoY_%", "Fed_Funds_Rate_%"],
+        "Vertical SaaS": ["NASDAQ_10d_gap_%", "Software_Dev_Job_Postings_YoY_%"],
+        "IT Services / Legacy Tech": ["Fed_Funds_Rate_%", "Real_GDP_Growth_%_SAAR"],
+        "Hardware / Devices": ["PPI_Data_Processing_YoY_%", "Fed_Funds_Rate_%"]
+    }
+    
+    # Human-readable labels and formatting for indicators
+    indicator_labels = {
+        "NASDAQ_10d_gap_%": "NASDAQ {}%",
+        "Software_Dev_Job_Postings_YoY_%": "Dev-jobs {}%",
+        "10Y_Treasury_Yield_%": "10-Yr {}%",
+        "Fed_Funds_Rate_%": "Rates {}%",
+        "VIX": "VIX {}",
+        "Real_PCE_YoY_%": "Consumer {}%",
+        "Real_GDP_Growth_%_SAAR": "GDP {}%",
+        "PPI_Software_Publishers_YoY_%": "SaaS PPI {}%",
+        "PPI_Data_Processing_YoY_%": "PPI {}%"
+    }
+    
+    # Generate drivers for each sector
+    for sector, indicators in sector_drivers.items():
+        sector_driving_factors = []
+        
+        for indicator in indicators:
+            if indicator in macros:
+                value = macros[indicator]
+                formatted_value = f"{value:+.1f}" if isinstance(value, (int, float)) else value
+                # Remove the '+' for VIX as it's not a growth rate
+                if indicator == "VIX":
+                    formatted_value = f"{value:.1f}"
+                
+                label = indicator_labels.get(indicator, indicator)
+                sector_driving_factors.append(label.format(formatted_value))
+        
+        # Add a qualitative factor if we have less than 2 drivers
+        if len(sector_driving_factors) < 2:
+            if "NASDAQ_10d_gap_%" in macros and macros["NASDAQ_10d_gap_%"] < -2:
+                sector_driving_factors.append("NASDAQ weak")
+            elif "VIX" in macros and macros["VIX"] > 25:
+                sector_driving_factors.append("VIX elevated")
+            elif "Fed_Funds_Rate_%" in macros and macros["Fed_Funds_Rate_%"] > 4:
+                sector_driving_factors.append("Rates headwind")
+        
+        drivers[sector] = sector_driving_factors
+    
+    return drivers
+
+def generate_sector_tickers():
+    """Generate representative ticker symbols for each sector"""
+    return {
+        "SMB SaaS": ["BILL", "PAYC", "DDOG"],
+        "Enterprise SaaS": ["CRM", "NOW", "ADBE"],
+        "Cloud Infrastructure": ["AMZN", "MSFT", "GOOGL"],
+        "AdTech": ["TTD", "PUBM", "GOOGL"],
+        "Fintech": ["SQ", "PYPL", "ADYEY"],
+        "Consumer Internet": ["META", "GOOGL", "PINS"],
+        "eCommerce": ["AMZN", "SHOP", "SE"],
+        "Cybersecurity": ["PANW", "FTNT", "CRWD"],
+        "Dev Tools / Analytics": ["SNOW", "DDOG", "ESTC"],
+        "Semiconductors": ["NVDA", "AMD", "AVGO"],
+        "AI Infrastructure": ["NVDA", "AMD", "SMCI"],
+        "Vertical SaaS": ["VEEV", "TYL", "WDAY"],
+        "IT Services / Legacy Tech": ["IBM", "ACN", "DXC"],
+        "Hardware / Devices": ["AAPL", "DELL", "HPQ"]
+    }
+
+def calculate_sector_sentiment():
+    """Calculate sentiment scores for each technology sector using the latest data"""
+    # Get latest values for all required indicators
+    macros = {}
+    
+    # Treasury Yield
+    if not treasury_yield_data.empty:
+        latest_yield = treasury_yield_data.sort_values('date', ascending=False).iloc[0]['value']
+        macros["10Y_Treasury_Yield_%"] = latest_yield
+        
+    # VIX
+    if not vix_data.empty:
+        latest_vix = vix_data.sort_values('date', ascending=False).iloc[0]['value']
+        macros["VIX"] = latest_vix
+    
+    # NASDAQ gap from 10-day EMA
+    if not nasdaq_data.empty and 'gap_pct' in nasdaq_data.columns:
+        latest_gap = nasdaq_data.sort_values('date', ascending=False).iloc[0]['gap_pct']
+        macros["NASDAQ_10d_gap_%"] = latest_gap
+        
+    # Fed Funds Rate
+    if not interest_rate_data.empty:
+        latest_rate = interest_rate_data.sort_values('date', ascending=False).iloc[0]['value']
+        macros["Fed_Funds_Rate_%"] = latest_rate
+        
+    # CPI YoY
+    if not inflation_data.empty and 'inflation' in inflation_data.columns:
+        latest_cpi = inflation_data.sort_values('date', ascending=False).iloc[0]['inflation']
+        macros["CPI_YoY_%"] = latest_cpi
+    
+    # PCEPI YoY
+    if not pcepi_data.empty and 'yoy_growth' in pcepi_data.columns:
+        latest_pcepi = pcepi_data.sort_values('date', ascending=False).iloc[0]['yoy_growth']
+        macros["PCEPI_YoY_%"] = latest_pcepi
+        
+    # Real GDP Growth
+    if not gdp_data.empty and 'yoy_growth' in gdp_data.columns:
+        latest_gdp = gdp_data.sort_values('date', ascending=False).iloc[0]['yoy_growth']
+        macros["Real_GDP_Growth_%_SAAR"] = latest_gdp
+        
+    # Real PCE YoY
+    if not pce_data.empty and 'yoy_growth' in pce_data.columns:
+        latest_pce = pce_data.sort_values('date', ascending=False).iloc[0]['yoy_growth']
+        macros["Real_PCE_YoY_%"] = latest_pce
+        
+    # Unemployment
+    if not unemployment_data.empty:
+        latest_unemployment = unemployment_data.sort_values('date', ascending=False).iloc[0]['value']
+        macros["Unemployment_%"] = latest_unemployment
+        
+    # Software Dev Job Postings YoY
+    if not job_postings_data.empty and 'yoy_growth' in job_postings_data.columns:
+        latest_job_postings = job_postings_data.sort_values('date', ascending=False).iloc[0]['yoy_growth']
+        macros["Software_Dev_Job_Postings_YoY_%"] = latest_job_postings
+        
+    # PPI Data Processing YoY
+    if not data_processing_ppi_data.empty and 'yoy_pct_change' in data_processing_ppi_data.columns:
+        latest_data_ppi = data_processing_ppi_data.sort_values('date', ascending=False).iloc[0]['yoy_pct_change']
+        macros["PPI_Data_Processing_YoY_%"] = latest_data_ppi
+        
+    # PPI Software Publishers YoY
+    if not software_ppi_data.empty and 'yoy_pct_change' in software_ppi_data.columns:
+        latest_software_ppi = software_ppi_data.sort_values('date', ascending=False).iloc[0]['yoy_pct_change']
+        macros["PPI_Software_Publishers_YoY_%"] = latest_software_ppi
+    
+    # Check if we have enough data to calculate sector scores (need at least 6 indicators)
+    if len(macros) < 6:
+        print(f"Not enough data to calculate sector sentiment scores (have {len(macros)}/12 indicators)")
+        return []
+    
+    try:
+        # Calculate sector scores
+        sector_scores = sentiment_engine.score_sectors(macros)
+        print(f"Successfully calculated sentiment scores for {len(sector_scores)} sectors")
+        
+        # Get driver factors and tickers for each sector
+        drivers = generate_sector_drivers(macros)
+        tickers = generate_sector_tickers()
+        
+        # Enhance sector data with drivers, tickers, and stance
+        enhanced_scores = []
+        for sector_data in sector_scores:
+            sector = sector_data["sector"]
+            score = sector_data["score"]
+            
+            # Determine stance based on score (similar to the React component)
+            if score <= -0.25:
+                stance = "Bearish"
+                takeaway = "Bearish macro setup"
+            elif score >= 0.05:
+                stance = "Bullish"
+                takeaway = "Outperforming peers"
+            else:
+                stance = "Neutral"
+                takeaway = "Neutral – monitor trends"
+                
+            # Add the enhanced data
+            enhanced_scores.append({
+                "sector": sector,
+                "score": score,
+                "stance": stance,
+                "takeaway": takeaway,
+                "drivers": drivers.get(sector, []),
+                "tickers": tickers.get(sector, [])
+            })
+            
+        return enhanced_scores
+    except Exception as e:
+        print(f"Error calculating sector sentiment scores: {str(e)}")
+        return []
 
 def calculate_sentiment_index(custom_weights=None, proprietary_data=None, document_data=None):
     """Calculate economic sentiment index from available indicators
@@ -1571,6 +1767,16 @@ app.layout = html.Div([
                     html.Div([
                         html.H3("CBOE Volatility Index (VIX)", className="graph-title"),
                         html.Div(id="vix-container", className="insights-enabled-container")
+                    ], className="graph-container")
+                ], className="custom-tab", selected_className="custom-tab--selected"),
+                
+                # Sector Sentiment Tab
+                dcc.Tab(label="Sector Sentiment", children=[
+                    html.Div([
+                        html.H3("Technology Sector Sentiment", className="graph-title"),
+                        html.P("Real-time sentiment scores based on current macroeconomic conditions", 
+                               className="sector-subtitle"),
+                        html.Div(id="sector-sentiment-container", className="sector-sentiment-container")
                     ], className="graph-container")
                 ], className="custom-tab", selected_className="custom-tab--selected"),
             ], className="custom-tabs")
@@ -4401,6 +4607,73 @@ def update_vix_graph(n):
     )
     
     return fig
+
+# Update Sector Sentiment Container
+@app.callback(
+    Output("sector-sentiment-container", "children"),
+    [Input("interval-component", "n_intervals")]
+)
+def update_sector_sentiment_container(n):
+    """Update the Sector Sentiment container with cards for each technology sector"""
+    # Calculate sector sentiment scores
+    sector_scores = calculate_sector_sentiment()
+    
+    if not sector_scores:
+        return html.Div("Insufficient data to calculate sector sentiment", className="no-data-message")
+    
+    # Create cards for each sector
+    sector_cards = []
+    
+    for sector_data in sector_scores:
+        # Extract data
+        sector = sector_data["sector"]
+        score = sector_data["score"]
+        stance = sector_data["stance"]
+        takeaway = sector_data["takeaway"]
+        drivers = sector_data["drivers"]
+        tickers = sector_data["tickers"]
+        
+        # Determine score and badge styling based on stance
+        if stance == "Bullish":
+            score_class = "score-positive"
+            badge_class = "badge-bullish"
+        elif stance == "Bearish":
+            score_class = "score-negative"
+            badge_class = "badge-bearish"
+        else:
+            score_class = "score-neutral"
+            badge_class = "badge-neutral"
+        
+        # Create the sector card
+        card = html.Div([
+            # Header with sector name and score
+            html.Div([
+                html.Span(sector, className="sector-name"),
+                html.Span(f"{score:+.2f}" if score > 0 else f"{score:.2f}", 
+                          className=f"sector-score {score_class}")
+            ], className="sector-card-header"),
+            
+            # Stance badge
+            html.Span(stance, className=f"sector-badge {badge_class}"),
+            
+            # Takeaway text
+            html.P(takeaway, className="sector-takeaway"),
+            
+            # Drivers list
+            html.Ul([
+                html.Li(driver) for driver in drivers
+            ], className="drivers-list"),
+            
+            # Tickers
+            html.Div([
+                html.Span(ticker, className="ticker-badge") for ticker in tickers
+            ], className="tickers-container")
+            
+        ], className="sector-card")
+        
+        sector_cards.append(card)
+    
+    return sector_cards
 
 # Update VIX Container with chart and insights panel
 @app.callback(
