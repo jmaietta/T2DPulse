@@ -531,7 +531,7 @@ def generate_sector_tickers():
     return {
         "SMB SaaS": ["BILL", "PAYC", "DDOG"],
         "Enterprise SaaS": ["CRM", "NOW", "ADBE"],
-        "Cloud Infrastructure": [],
+        "Cloud Infrastructure": ["AMZN", "MSFT", "GOOG"],
         "AdTech": ["TTD", "PUBM", "GOOGL"],
         "Fintech": ["SQ", "PYPL", "ADYEY"],
         "Consumer Internet": ["META", "GOOGL", "PINS"],
