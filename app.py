@@ -416,7 +416,7 @@ def calculate_sector_sentiment():
     # NASDAQ gap from 20-day EMA
     if not nasdaq_data.empty and 'gap_pct' in nasdaq_data.columns:
         latest_gap = nasdaq_data.sort_values('date', ascending=False).iloc[0]['gap_pct']
-        macros["NASDAQ_10d_gap_%"] = latest_gap  # Keeping the same key name for compatibility with sentiment_engine.py
+        macros["NASDAQ_20d_gap_%"] = latest_gap  # Updated to use 20-day EMA key
         
     # Fed Funds Rate
     if not interest_rate_data.empty:

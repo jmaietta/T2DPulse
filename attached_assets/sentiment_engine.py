@@ -21,7 +21,7 @@ IMPACT: Dict[str, Dict[str, int]] = {
         "Dev Tools / Analytics": 3, "AI Infrastructure": 3,
         "Vertical SaaS": 3, "IT Services / Legacy Tech": 1},
     "VIX":                       dict.fromkeys(SECTORS, 2),
-    "NASDAQ_10d_gap_%":          dict.fromkeys(SECTORS, 3) | {
+    "NASDAQ_20d_gap_%":          dict.fromkeys(SECTORS, 3) | {
         "IT Services / Legacy Tech": 2, "Hardware / Devices": 2},
     "Fed_Funds_Rate_%":          dict.fromkeys(SECTORS, 2) | {
         "SMB SaaS": 3, "Enterprise SaaS": 3, "Cloud Infra": 3,
@@ -52,7 +52,7 @@ IMPACT: Dict[str, Dict[str, int]] = {
 
 # ---------- 3) Importance weights (1‒4 shared across sectors) ----------
 IMPORTANCE = {
-    "NASDAQ_10d_gap_%": 4,
+    "NASDAQ_20d_gap_%": 4,
     "10Y_Treasury_Yield_%": 3,
     "VIX": 3,
     # all others default to 1
@@ -62,7 +62,7 @@ IMPORTANCE = {
 BANDS = {
     "10Y_Treasury_Yield_%":      ("lower", 3.25, 4.00),
     "VIX":                       ("lower", 18,   25),
-    "NASDAQ_10d_gap_%":          ("higher", 4.0, -4.0),
+    "NASDAQ_20d_gap_%":          ("higher", 4.0, -4.0),
     "Fed_Funds_Rate_%":          ("lower", 4.5,  5.25),
     "CPI_YoY_%":                 ("lower", 3.0,  4.0),
     "PCEPI_YoY_%":               ("lower", 3.0,  4.0),
@@ -115,7 +115,7 @@ if __name__ == "__main__":
     latest_macros: MacroDict = {
         "10Y_Treasury_Yield_%": 4.422,
         "VIX": 32.6,
-        "NASDAQ_10d_gap_%": -4.6,
+        "NASDAQ_20d_gap_%": -4.6,
         "Fed_Funds_Rate_%": 4.33,
         "CPI_YoY_%": 2.4,
         "PCEPI_YoY_%": 2.5,
