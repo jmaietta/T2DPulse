@@ -639,15 +639,15 @@
 }
 
 .score-positive {
-    color: #2ECC71;
+    color: #2ecc71;
 }
 
 .score-negative {
-    color: #E74C3C;
+    color: #e74c3c;
 }
 
 .score-neutral {
-    color: #F1C40F;
+    color: #f39c12;
 }
 
 .sector-badge {
@@ -660,17 +660,17 @@
 
 .badge-bullish {
     background-color: rgba(46, 204, 113, 0.2);
-    color: #2ECC71;
+    color: #2ecc71;
 }
 
 .badge-bearish {
     background-color: rgba(231, 76, 60, 0.2);
-    color: #E74C3C;
+    color: #e74c3c;
 }
 
 .badge-neutral {
-    background-color: rgba(241, 196, 15, 0.2);
-    color: #F1C40F;
+    background-color: rgba(243, 156, 18, 0.2);
+    color: #f39c12;
 }
 
 .sector-takeaway {
