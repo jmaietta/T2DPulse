@@ -41,7 +41,7 @@ IMPACT: Dict[str, Dict[str, int]] = {
         "Semiconductors": 3, "Hardware / Devices": 3},
     "Unemployment_%":            dict.fromkeys(SECTORS, 2),
     "Software_Dev_Job_Postings_YoY_%": dict.fromkeys(SECTORS, 1) | {
-        "SMB SaaS": 3, "Enterprise SaaS": 3, "Cloud Infrastructure": 3,
+        "SMB SaaS": 3, "Enterprise SaaS": 2, "Cloud Infrastructure": 3,
         "Cybersecurity": 3, "Dev Tools / Analytics": 3,
         "AI Infrastructure": 3, "Vertical SaaS": 3},
     "PPI_Data_Processing_YoY_%": dict.fromkeys(SECTORS, 1) | {
