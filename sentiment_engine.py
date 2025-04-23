@@ -51,7 +51,7 @@ IMPACT: Dict[str, Dict[str, int]] = {
     "Consumer_Sentiment": {
         "Consumer Internet": 3, "eCommerce": 3, "AdTech": 3,
         "Fintech": 2, "Hardware / Devices": 2, "Semiconductors": 2,
-        "SMB SaaS": 1, "Enterprise SaaS": 1, "Vertical SaaS": 1,
+        "SMB SaaS": 2, "Enterprise SaaS": 1, "Vertical SaaS": 1,
         "Cloud Infrastructure": 1, "AI Infrastructure": 1,
         "Cybersecurity": 1, "Dev Tools / Analytics": 1,
         "IT Services / Legacy Tech": 1
