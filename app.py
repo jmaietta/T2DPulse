@@ -123,8 +123,17 @@ def load_data_from_csv(filename):
         file_path = os.path.join(DATA_DIR, filename)
         if os.path.exists(file_path):
             df = pd.read_csv(file_path)
-            if 'date' in df.columns:
-                df['date'] = pd.to_datetime(df['date'])
+            
+            # Convert 'date' column to datetime, case-insensitive
+            date_columns = [col for col in df.columns if col.lower() == 'date']
+            if date_columns:
+                date_col = date_columns[0]
+                df[date_col] = pd.to_datetime(df[date_col])
+                
+                # Ensure the date column is consistently named 'date'
+                if date_col != 'date':
+                    df = df.rename(columns={date_col: 'date'})
+            
             print(f"Successfully loaded {len(df)} rows from {filename}")
             return df
         else:
@@ -3533,18 +3542,27 @@ def update_software_ppi_container(n):
     # Get the chart figure
     figure = update_software_ppi_graph(n)
     
-    # Filter data for insights panel (same filtering as in chart function)
-    cutoff_date = datetime.now() - timedelta(days=5*365)
-    filtered_data = software_ppi_data[software_ppi_data['date'] >= cutoff_date].copy()
+    if software_ppi_data.empty:
+        # Return just the graph without insights panel
+        return [dcc.Graph(id="software-ppi-graph", figure=figure)]
     
-    # Create insights panel with the filtered data
-    insights_panel = create_insights_panel("software_ppi", filtered_data)
-    
-    # Return container with graph and insights panel
-    return [
-        dcc.Graph(id="software-ppi-graph", figure=figure),
-        insights_panel
-    ]
+    try:
+        # Filter data for insights panel
+        cutoff_date = datetime.now() - timedelta(days=5*365)
+        filtered_data = software_ppi_data[software_ppi_data['date'] >= cutoff_date].copy()
+        
+        # Create insights panel with the filtered data
+        insights_panel = create_insights_panel("software_ppi", filtered_data)
+        
+        # Return container with graph and insights panel
+        return [
+            dcc.Graph(id="software-ppi-graph", figure=figure),
+            insights_panel
+        ]
+    except Exception as e:
+        print(f"Error generating software PPI insights: {str(e)}")
+        # Return just the graph if there's an error with the insights
+        return [dcc.Graph(id="software-ppi-graph", figure=figure)]
 
 # Update Data Processing PPI Graph (Figure only function)
 def update_data_ppi_graph(n):
@@ -3620,18 +3638,27 @@ def update_data_ppi_container(n):
     # Get the chart figure
     figure = update_data_ppi_graph(n)
     
-    # Filter data for insights panel (same filtering as in chart function)
-    cutoff_date = datetime.now() - timedelta(days=5*365)
-    filtered_data = data_processing_ppi_data[data_processing_ppi_data['date'] >= cutoff_date].copy()
+    if data_processing_ppi_data.empty or 'yoy_pct_change' not in data_processing_ppi_data.columns:
+        # Return just the graph without insights panel
+        return [dcc.Graph(id="data-ppi-graph", figure=figure)]
     
-    # Create insights panel with the filtered data
-    insights_panel = create_insights_panel("data_ppi", filtered_data)
-    
-    # Return container with graph and insights panel
-    return [
-        dcc.Graph(id="data-ppi-graph", figure=figure),
-        insights_panel
-    ]
+    try:
+        # Filter data for insights panel
+        cutoff_date = datetime.now() - timedelta(days=5*365)
+        filtered_data = data_processing_ppi_data[data_processing_ppi_data['date'] >= cutoff_date].copy()
+        
+        # Create insights panel with the filtered data
+        insights_panel = create_insights_panel("data_ppi", filtered_data)
+        
+        # Return container with graph and insights panel
+        return [
+            dcc.Graph(id="data-ppi-graph", figure=figure),
+            insights_panel
+        ]
+    except Exception as e:
+        print(f"Error generating Data Processing PPI insights: {str(e)}")
+        # Return just the graph if there's an error with the insights
+        return [dcc.Graph(id="data-ppi-graph", figure=figure)]
 
 # Update Interest Rate Graph (generates figure only)
 def update_interest_rate_graph(n):
@@ -3720,18 +3747,28 @@ def update_interest_rate_container(n):
     # Get the chart figure
     figure = update_interest_rate_graph(n)
     
-    # Filter data for insights panel
-    cutoff_date = datetime.now() - timedelta(days=5*365)
-    filtered_data = interest_rate_data[interest_rate_data['date'] >= cutoff_date].copy()
+    if interest_rate_data.empty:
+        # Return just the graph without insights panel
+        return [dcc.Graph(id="interest-rate-graph", figure=figure)]
     
     # Create insights panel with the filtered data
-    insights_panel = create_insights_panel("fed_funds", filtered_data)
-    
-    # Return container with graph and insights panel
-    return [
-        dcc.Graph(id="interest-rate-graph", figure=figure),
-        insights_panel
-    ]
+    try:
+        # Filter data for insights panel
+        cutoff_date = datetime.now() - timedelta(days=5*365)
+        filtered_data = interest_rate_data[interest_rate_data['date'] >= cutoff_date].copy()
+        
+        # Create insights panel with the filtered data
+        insights_panel = create_insights_panel("fed_funds", filtered_data)
+        
+        # Return container with graph and insights panel
+        return [
+            dcc.Graph(id="interest-rate-graph", figure=figure),
+            insights_panel
+        ]
+    except Exception as e:
+        print(f"Error generating interest rate insights: {str(e)}")
+        # Return just the graph if there's an error with the insights
+        return [dcc.Graph(id="interest-rate-graph", figure=figure)]
 
 # Update Treasury Yield Graph and Container
 @app.callback(
@@ -3863,18 +3900,27 @@ def update_treasury_yield_container(n):
     # Get the chart figure
     figure = update_treasury_yield_graph(n)
     
-    # Filter data for insights panel (same filtering as in chart function)
-    cutoff_date = datetime.now() - timedelta(days=5*365)
-    filtered_data = treasury_yield_data[treasury_yield_data['date'] >= cutoff_date].copy()
+    if treasury_yield_data.empty:
+        # Return just the graph without insights panel
+        return [dcc.Graph(id="treasury-yield-graph", figure=figure)]
     
-    # Create insights panel with the filtered data
-    insights_panel = create_insights_panel("treasury_yield", filtered_data)
-    
-    # Return container with graph and insights panel
-    return [
-        dcc.Graph(id="treasury-yield-graph", figure=figure),
-        insights_panel
-    ]
+    try:
+        # Filter data for insights panel
+        cutoff_date = datetime.now() - timedelta(days=5*365)
+        filtered_data = treasury_yield_data[treasury_yield_data['date'] >= cutoff_date].copy()
+        
+        # Create insights panel with the filtered data
+        insights_panel = create_insights_panel("treasury_yield", filtered_data)
+        
+        # Return container with graph and insights panel
+        return [
+            dcc.Graph(id="treasury-yield-graph", figure=figure),
+            insights_panel
+        ]
+    except Exception as e:
+        print(f"Error generating treasury yield insights: {str(e)}")
+        # Return just the graph if there's an error with the insights
+        return [dcc.Graph(id="treasury-yield-graph", figure=figure)]
 
 # Calculate total weights and validate
 @app.callback(
@@ -4111,7 +4157,7 @@ def update_consumer_sentiment_container(n):
     if consumer_sentiment_data is None or consumer_sentiment_data.empty:
         consumer_sentiment_data = load_data_from_csv('consumer_sentiment_data.csv')
     
-    # Create the graph and insights panel
+    # Create the graph
     graph = dcc.Graph(
         id="consumer-sentiment-graph",
         figure=create_consumer_sentiment_graph(consumer_sentiment_data),
@@ -4119,14 +4165,23 @@ def update_consumer_sentiment_container(n):
         className="dashboard-chart"
     )
     
-    # Create insights panel
-    insights_panel = create_insights_panel('consumer_sentiment', consumer_sentiment_data)
+    if consumer_sentiment_data.empty:
+        # Return just the graph without insights panel
+        return [graph]
     
-    # Return the container with graph and insights
-    return [
-        graph,
-        insights_panel
-    ]
+    try:
+        # Create insights panel
+        insights_panel = create_insights_panel('consumer_sentiment', consumer_sentiment_data)
+        
+        # Return the container with graph and insights
+        return [
+            graph,
+            insights_panel
+        ]
+    except Exception as e:
+        print(f"Error generating Consumer Sentiment insights: {str(e)}")
+        # Return just the graph if there's an error with the insights
+        return [graph]
 
 # Refresh data
 @app.callback(
