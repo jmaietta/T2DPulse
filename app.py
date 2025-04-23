@@ -57,16 +57,20 @@ def fetch_fred_data(series_id, start_date=None, end_date=None):
         print("Cannot fetch FRED data: No API key provided")
         return pd.DataFrame()
     
+    # Use a fixed safe date - 2023-12-31 - to avoid future date errors with FRED API
+    # FRED API returns an error if realtime_start is after today's date (their server date)
+    safe_date = "2023-12-31"
+    
     # Default to last 5 years if no dates specified
     if not end_date:
-        end_date = datetime.now().strftime('%Y-%m-%d')
+        end_date = safe_date
     if not start_date:
-        start_date = (datetime.now() - timedelta(days=5*365)).strftime('%Y-%m-%d')
+        # Calculate 5 years before the end date
+        end_date_obj = datetime.strptime(end_date, '%Y-%m-%d')
+        start_date = (end_date_obj - timedelta(days=5*365)).strftime('%Y-%m-%d')
     
     # Build API URL
     url = f"https://api.stlouisfed.org/fred/series/observations"
-    # Get today's date for realtime parameters
-    today = datetime.now().strftime('%Y-%m-%d')
     
     params = {
         "series_id": series_id,
@@ -74,8 +78,8 @@ def fetch_fred_data(series_id, start_date=None, end_date=None):
         "file_type": "json",
         "observation_start": start_date,
         "observation_end": end_date,
-        "realtime_start": today,  # Request the most recent vintage of the data
-        "realtime_end": today     # Request the most recent vintage of the data
+        "realtime_start": safe_date,  # Use fixed date to avoid future date errors
+        "realtime_end": safe_date     # Use fixed date to avoid future date errors
     }
     
     try:
@@ -2926,18 +2930,40 @@ def update_unemployment_container(n):
     # Get the chart figure
     figure = update_unemployment_graph(n)
     
-    # Filter data for insights panel (same filtering as in chart function)
-    cutoff_date = datetime.now() - timedelta(days=5*365)
-    filtered_data = unemployment_data[unemployment_data['date'] >= cutoff_date].copy()
+    # Check for valid data and required columns
+    if unemployment_data.empty or 'date' not in unemployment_data.columns:
+        # Return just the graph without insights panel
+        print("Unemployment data missing required columns or empty")
+        return [dcc.Graph(id="unemployment-graph", figure=figure)]
     
-    # Create insights panel with the filtered data
-    insights_panel = create_insights_panel("unemployment", filtered_data)
-    
-    # Return container with graph and insights panel
-    return [
-        dcc.Graph(id="unemployment-graph", figure=figure),
-        insights_panel
-    ]
+    try:
+        # Print debugging info
+        print(f"Unemployment data columns: {unemployment_data.columns.tolist()}")
+        
+        # Filter data for insights panel (same filtering as in chart function)
+        cutoff_date = datetime.now() - timedelta(days=5*365)
+        
+        # Ensure date is datetime type
+        if not pd.api.types.is_datetime64_any_dtype(unemployment_data['date']):
+            print("Converting unemployment date column to datetime")
+            unemployment_data['date'] = pd.to_datetime(unemployment_data['date'])
+            
+        filtered_data = unemployment_data[unemployment_data['date'] >= cutoff_date].copy()
+        
+        # Create insights panel with the filtered data
+        insights_panel = create_insights_panel("unemployment", filtered_data)
+        
+        # Return container with graph and insights panel
+        return [
+            dcc.Graph(id="unemployment-graph", figure=figure),
+            insights_panel
+        ]
+    except Exception as e:
+        print(f"Error generating unemployment insights: {str(e)}")
+        import traceback
+        traceback.print_exc()
+        # Return just the graph if there's an error with the insights
+        return [dcc.Graph(id="unemployment-graph", figure=figure)]
 
 # Software Job Postings Graph (Figure only function)
 def update_job_postings_graph(n):
@@ -3074,18 +3100,40 @@ def update_job_postings_container(n):
     # Get the chart figure
     figure = update_job_postings_graph(n)
     
-    # Filter data for insights panel
-    cutoff_date = datetime.now() - timedelta(days=3*365)
-    filtered_data = job_postings_data[job_postings_data['date'] >= cutoff_date].copy() if not job_postings_data.empty else pd.DataFrame()
+    # Check for valid data and required columns
+    if job_postings_data.empty or 'yoy_growth' not in job_postings_data.columns or 'date' not in job_postings_data.columns:
+        # Return just the graph without insights panel
+        print("Job Postings data missing required columns or empty")
+        return [dcc.Graph(id="job-postings-graph", figure=figure)]
     
-    # Create insights panel with the filtered data
-    insights_panel = create_insights_panel("job_postings", filtered_data)
-    
-    # Return container with graph and insights panel
-    return [
-        dcc.Graph(id="job-postings-graph", figure=figure),
-        insights_panel
-    ]
+    try:
+        # Print debugging info
+        print(f"Job Postings data columns: {job_postings_data.columns.tolist()}")
+        
+        # Filter data for insights panel
+        cutoff_date = datetime.now() - timedelta(days=3*365)
+        
+        # Ensure date is datetime type
+        if not pd.api.types.is_datetime64_any_dtype(job_postings_data['date']):
+            print("Converting job postings date column to datetime")
+            job_postings_data['date'] = pd.to_datetime(job_postings_data['date'])
+            
+        filtered_data = job_postings_data[job_postings_data['date'] >= cutoff_date].copy()
+        
+        # Create insights panel with the filtered data
+        insights_panel = create_insights_panel("job_postings", filtered_data)
+        
+        # Return container with graph and insights panel
+        return [
+            dcc.Graph(id="job-postings-graph", figure=figure),
+            insights_panel
+        ]
+    except Exception as e:
+        print(f"Error generating job postings insights: {str(e)}")
+        import traceback
+        traceback.print_exc()
+        # Return just the graph if there's an error with the insights
+        return [dcc.Graph(id="job-postings-graph", figure=figure)]
 
 # Update Inflation Graph (generates figure only)
 def update_inflation_graph(n):
@@ -3184,18 +3232,40 @@ def update_inflation_container(n):
     # Get the chart figure
     figure = update_inflation_graph(n)
     
-    # Filter data for insights panel
-    cutoff_date = datetime.now() - timedelta(days=5*365)
-    filtered_data = inflation_data[inflation_data['date'] >= cutoff_date].copy()
+    # Check for valid data and required columns
+    if inflation_data.empty or 'inflation' not in inflation_data.columns or 'date' not in inflation_data.columns:
+        # Return just the graph without insights panel
+        print("Inflation data missing required columns or empty")
+        return [dcc.Graph(id="inflation-graph", figure=figure)]
     
-    # Create insights panel with the filtered data
-    insights_panel = create_insights_panel("inflation", filtered_data)
-    
-    # Return container with graph and insights panel
-    return [
-        dcc.Graph(id="inflation-graph", figure=figure),
-        insights_panel
-    ]
+    try:
+        # Print debugging info
+        print(f"Inflation data columns: {inflation_data.columns.tolist()}")
+        
+        # Filter data for insights panel
+        cutoff_date = datetime.now() - timedelta(days=5*365)
+        
+        # Ensure date is datetime type
+        if not pd.api.types.is_datetime64_any_dtype(inflation_data['date']):
+            print("Converting inflation date column to datetime")
+            inflation_data['date'] = pd.to_datetime(inflation_data['date'])
+            
+        filtered_data = inflation_data[inflation_data['date'] >= cutoff_date].copy()
+        
+        # Create insights panel with the filtered data
+        insights_panel = create_insights_panel("inflation", filtered_data)
+        
+        # Return container with graph and insights panel
+        return [
+            dcc.Graph(id="inflation-graph", figure=figure),
+            insights_panel
+        ]
+    except Exception as e:
+        print(f"Error generating inflation insights: {str(e)}")
+        import traceback
+        traceback.print_exc()
+        # Return just the graph if there's an error with the insights
+        return [dcc.Graph(id="inflation-graph", figure=figure)]
 
 # Update PCEPI Graph (generates figure only)
 def update_pcepi_graph(n):
@@ -3294,18 +3364,40 @@ def update_pcepi_container(n):
     # Get the chart figure
     figure = update_pcepi_graph(n)
     
-    # Filter data for insights panel
-    cutoff_date = datetime.now() - timedelta(days=5*365)
-    filtered_data = pcepi_data[pcepi_data['date'] >= cutoff_date].copy()
+    # Check for valid data and required columns
+    if pcepi_data.empty or 'yoy_growth' not in pcepi_data.columns or 'date' not in pcepi_data.columns:
+        # Return just the graph without insights panel
+        print("PCEPI data missing required columns or empty")
+        return [dcc.Graph(id="pcepi-graph", figure=figure)]
     
-    # Create insights panel with the filtered data
-    insights_panel = create_insights_panel("pcepi", filtered_data)
-    
-    # Return container with graph and insights panel
-    return [
-        dcc.Graph(id="pcepi-graph", figure=figure),
-        insights_panel
-    ]
+    try:
+        # Print debugging info
+        print(f"PCEPI data columns: {pcepi_data.columns.tolist()}")
+        
+        # Filter data for insights panel
+        cutoff_date = datetime.now() - timedelta(days=5*365)
+        
+        # Ensure date is datetime type
+        if not pd.api.types.is_datetime64_any_dtype(pcepi_data['date']):
+            print("Converting PCEPI date column to datetime")
+            pcepi_data['date'] = pd.to_datetime(pcepi_data['date'])
+            
+        filtered_data = pcepi_data[pcepi_data['date'] >= cutoff_date].copy()
+        
+        # Create insights panel with the filtered data
+        insights_panel = create_insights_panel("pcepi", filtered_data)
+        
+        # Return container with graph and insights panel
+        return [
+            dcc.Graph(id="pcepi-graph", figure=figure),
+            insights_panel
+        ]
+    except Exception as e:
+        print(f"Error generating PCEPI insights: {str(e)}")
+        import traceback
+        traceback.print_exc()
+        # Return just the graph if there's an error with the insights
+        return [dcc.Graph(id="pcepi-graph", figure=figure)]
 
 # Update NASDAQ Graph (This function now only generates the figure)
 def update_nasdaq_graph(n):
@@ -3455,18 +3547,40 @@ def update_nasdaq_container(n):
     # Get the chart figure
     figure = update_nasdaq_graph(n)
     
-    # Filter data for insights panel (same filtering as in chart function)
-    cutoff_date = datetime.now() - timedelta(days=2*365)
-    filtered_data = nasdaq_data[nasdaq_data['date'] >= cutoff_date].copy()
+    # Check for valid data and required columns
+    if nasdaq_data.empty or 'date' not in nasdaq_data.columns or 'value' not in nasdaq_data.columns:
+        # Return just the graph without insights panel
+        print("NASDAQ data missing required columns or empty")
+        return [dcc.Graph(id="nasdaq-graph", figure=figure)]
     
-    # Create insights panel with the filtered data
-    insights_panel = create_insights_panel("nasdaq", filtered_data)
-    
-    # Return container with graph and insights panel
-    return [
-        dcc.Graph(id="nasdaq-graph", figure=figure),
-        insights_panel
-    ]
+    try:
+        # Print debugging info
+        print(f"NASDAQ data columns: {nasdaq_data.columns.tolist()}")
+        
+        # Filter data for insights panel (same filtering as in chart function)
+        cutoff_date = datetime.now() - timedelta(days=2*365)
+        
+        # Ensure date is datetime type
+        if not pd.api.types.is_datetime64_any_dtype(nasdaq_data['date']):
+            print("Converting NASDAQ date column to datetime")
+            nasdaq_data['date'] = pd.to_datetime(nasdaq_data['date'])
+            
+        filtered_data = nasdaq_data[nasdaq_data['date'] >= cutoff_date].copy()
+        
+        # Create insights panel with the filtered data
+        insights_panel = create_insights_panel("nasdaq", filtered_data)
+        
+        # Return container with graph and insights panel
+        return [
+            dcc.Graph(id="nasdaq-graph", figure=figure),
+            insights_panel
+        ]
+    except Exception as e:
+        print(f"Error generating NASDAQ insights: {str(e)}")
+        import traceback
+        traceback.print_exc()
+        # Return just the graph if there's an error with the insights
+        return [dcc.Graph(id="nasdaq-graph", figure=figure)]
 
 # Update Software PPI Graph (Figure only function)
 def update_software_ppi_graph(n):
@@ -3542,13 +3656,24 @@ def update_software_ppi_container(n):
     # Get the chart figure
     figure = update_software_ppi_graph(n)
     
-    if software_ppi_data.empty:
+    # Check for valid data and required columns
+    if software_ppi_data.empty or 'yoy_pct_change' not in software_ppi_data.columns or 'date' not in software_ppi_data.columns:
         # Return just the graph without insights panel
+        print("Software PPI data missing required columns or empty")
         return [dcc.Graph(id="software-ppi-graph", figure=figure)]
     
     try:
+        # Print debugging info
+        print(f"Software PPI data columns: {software_ppi_data.columns.tolist()}")
+        
         # Filter data for insights panel
         cutoff_date = datetime.now() - timedelta(days=5*365)
+        
+        # Ensure date is datetime type
+        if not pd.api.types.is_datetime64_any_dtype(software_ppi_data['date']):
+            print("Converting Software PPI date column to datetime")
+            software_ppi_data['date'] = pd.to_datetime(software_ppi_data['date'])
+            
         filtered_data = software_ppi_data[software_ppi_data['date'] >= cutoff_date].copy()
         
         # Create insights panel with the filtered data
@@ -3561,6 +3686,8 @@ def update_software_ppi_container(n):
         ]
     except Exception as e:
         print(f"Error generating software PPI insights: {str(e)}")
+        import traceback
+        traceback.print_exc()
         # Return just the graph if there's an error with the insights
         return [dcc.Graph(id="software-ppi-graph", figure=figure)]
 
@@ -3638,13 +3765,26 @@ def update_data_ppi_container(n):
     # Get the chart figure
     figure = update_data_ppi_graph(n)
     
-    if data_processing_ppi_data.empty or 'yoy_pct_change' not in data_processing_ppi_data.columns:
+    # Check for valid data and required columns
+    if (data_processing_ppi_data.empty or 
+        'yoy_pct_change' not in data_processing_ppi_data.columns or 
+        'date' not in data_processing_ppi_data.columns):
         # Return just the graph without insights panel
+        print("Data Processing PPI missing required columns or empty")
         return [dcc.Graph(id="data-ppi-graph", figure=figure)]
     
     try:
+        # Print debugging info
+        print(f"Data Processing PPI columns: {data_processing_ppi_data.columns.tolist()}")
+        print(f"First few rows: {data_processing_ppi_data.head(2)}")
+        
         # Filter data for insights panel
         cutoff_date = datetime.now() - timedelta(days=5*365)
+        # Ensure date is datetime type
+        if not pd.api.types.is_datetime64_any_dtype(data_processing_ppi_data['date']):
+            print("Converting date column to datetime")
+            data_processing_ppi_data['date'] = pd.to_datetime(data_processing_ppi_data['date'])
+            
         filtered_data = data_processing_ppi_data[data_processing_ppi_data['date'] >= cutoff_date].copy()
         
         # Create insights panel with the filtered data
@@ -3657,6 +3797,8 @@ def update_data_ppi_container(n):
         ]
     except Exception as e:
         print(f"Error generating Data Processing PPI insights: {str(e)}")
+        import traceback
+        traceback.print_exc()
         # Return just the graph if there's an error with the insights
         return [dcc.Graph(id="data-ppi-graph", figure=figure)]
 
@@ -3747,14 +3889,24 @@ def update_interest_rate_container(n):
     # Get the chart figure
     figure = update_interest_rate_graph(n)
     
-    if interest_rate_data.empty:
+    # Check for valid data and required columns
+    if interest_rate_data.empty or 'value' not in interest_rate_data.columns or 'date' not in interest_rate_data.columns:
         # Return just the graph without insights panel
+        print("Interest Rate data missing required columns or empty")
         return [dcc.Graph(id="interest-rate-graph", figure=figure)]
     
-    # Create insights panel with the filtered data
     try:
+        # Print debugging info
+        print(f"Interest Rate data columns: {interest_rate_data.columns.tolist()}")
+        
         # Filter data for insights panel
         cutoff_date = datetime.now() - timedelta(days=5*365)
+        
+        # Ensure date is datetime type
+        if not pd.api.types.is_datetime64_any_dtype(interest_rate_data['date']):
+            print("Converting Interest Rate date column to datetime")
+            interest_rate_data['date'] = pd.to_datetime(interest_rate_data['date'])
+            
         filtered_data = interest_rate_data[interest_rate_data['date'] >= cutoff_date].copy()
         
         # Create insights panel with the filtered data
@@ -3767,6 +3919,8 @@ def update_interest_rate_container(n):
         ]
     except Exception as e:
         print(f"Error generating interest rate insights: {str(e)}")
+        import traceback
+        traceback.print_exc()
         # Return just the graph if there's an error with the insights
         return [dcc.Graph(id="interest-rate-graph", figure=figure)]
 
@@ -3900,13 +4054,24 @@ def update_treasury_yield_container(n):
     # Get the chart figure
     figure = update_treasury_yield_graph(n)
     
-    if treasury_yield_data.empty:
+    # Check for valid data and required columns
+    if treasury_yield_data.empty or 'value' not in treasury_yield_data.columns or 'date' not in treasury_yield_data.columns:
         # Return just the graph without insights panel
+        print("Treasury Yield data missing required columns or empty")
         return [dcc.Graph(id="treasury-yield-graph", figure=figure)]
     
     try:
+        # Print debugging info
+        print(f"Treasury Yield data columns: {treasury_yield_data.columns.tolist()}")
+        
         # Filter data for insights panel
         cutoff_date = datetime.now() - timedelta(days=5*365)
+        
+        # Ensure date is datetime type
+        if not pd.api.types.is_datetime64_any_dtype(treasury_yield_data['date']):
+            print("Converting Treasury Yield date column to datetime")
+            treasury_yield_data['date'] = pd.to_datetime(treasury_yield_data['date'])
+            
         filtered_data = treasury_yield_data[treasury_yield_data['date'] >= cutoff_date].copy()
         
         # Create insights panel with the filtered data
@@ -3919,6 +4084,8 @@ def update_treasury_yield_container(n):
         ]
     except Exception as e:
         print(f"Error generating treasury yield insights: {str(e)}")
+        import traceback
+        traceback.print_exc()
         # Return just the graph if there's an error with the insights
         return [dcc.Graph(id="treasury-yield-graph", figure=figure)]
 
