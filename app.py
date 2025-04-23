@@ -493,7 +493,7 @@ def generate_sector_drivers(macros):
         "Real_GDP_Growth_%_SAAR": "GDP {}%",
         "PPI_Software_Publishers_YoY_%": "SaaS PPI {}%",
         "PPI_Data_Processing_YoY_%": "PPI {}%",
-        "Consumer_Sentiment": "Consumer Sentiment {}"
+        "Consumer_Sentiment": "Consumer Sentiment Low" if "Consumer_Sentiment" in macros and macros["Consumer_Sentiment"] < 90 else "Consumer Sentiment {}"
     }
     
     # Generate drivers for each sector
@@ -516,7 +516,7 @@ def generate_sector_drivers(macros):
             if "NASDAQ_20d_gap_%" in macros and macros["NASDAQ_20d_gap_%"] < -2:
                 sector_driving_factors.append("NASDAQ weak")
             elif "Consumer_Sentiment" in macros and macros["Consumer_Sentiment"] < 90:
-                sector_driving_factors.append("Sentiment low")
+                sector_driving_factors.append("Consumer Sentiment Low")
             elif "VIX" in macros and macros["VIX"] > 25:
                 sector_driving_factors.append("VIX elevated")
             elif "Fed_Funds_Rate_%" in macros and macros["Fed_Funds_Rate_%"] > 4:
