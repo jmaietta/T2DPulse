@@ -28,10 +28,10 @@ IMPACT: Dict[str, Dict[str, int]] = {
         "Dev Tools / Analytics": 3, "AI Infrastructure": 3,
         "Vertical SaaS": 3, "Fintech": 3, "IT Services / Legacy Tech": 1},
     "CPI_YoY_%":                 dict.fromkeys(SECTORS, 2) | {
-        "AdTech": 3, "Consumer Internet": 3, "eCommerce": 3,
+        "SMB SaaS": 3, "AdTech": 3, "Consumer Internet": 3, "eCommerce": 3,
         "Semiconductors": 3, "Hardware / Devices": 3},
     "PCEPI_YoY_%":               dict.fromkeys(SECTORS, 2) | {
-        "AdTech": 3, "Consumer Internet": 3, "eCommerce": 3,
+        "SMB SaaS": 3, "AdTech": 3, "Consumer Internet": 3, "eCommerce": 3,
         "Semiconductors": 3, "Hardware / Devices": 3},
     "Real_GDP_Growth_%_SAAR":    dict.fromkeys(SECTORS, 2) | {
         "AdTech": 3, "Consumer Internet": 3, "eCommerce": 3,
@@ -39,15 +39,18 @@ IMPACT: Dict[str, Dict[str, int]] = {
     "Real_PCE_YoY_%":            dict.fromkeys(SECTORS, 2) | {
         "AdTech": 3, "Consumer Internet": 3, "eCommerce": 3,
         "Semiconductors": 3, "Hardware / Devices": 3},
-    "Unemployment_%":            dict.fromkeys(SECTORS, 2),
+    "Unemployment_%":            dict.fromkeys(SECTORS, 2) | {
+        "SMB SaaS": 3, "AdTech": 3, "Consumer Internet": 3, "eCommerce": 3},
     "Software_Dev_Job_Postings_YoY_%": dict.fromkeys(SECTORS, 1) | {
         "SMB SaaS": 3, "Enterprise SaaS": 2, "Cloud Infrastructure": 3,
-        "Cybersecurity": 3, "Dev Tools / Analytics": 3,
+        "Cybersecurity": 3, "Dev Tools / Analytics": 3, "AdTech": 2,
+        "Fintech": 2, "Consumer Internet": 3, "eCommerce": 2,
         "AI Infrastructure": 3, "Vertical SaaS": 3},
     "PPI_Data_Processing_YoY_%": dict.fromkeys(SECTORS, 1) | {
         "Cloud Infrastructure": 3, "AI Infrastructure": 3},
     "PPI_Software_Publishers_YoY_%": dict.fromkeys(SECTORS, 1) | {
-        "Cloud Infrastructure": 3, "AI Infrastructure": 3},
+        "SMB SaaS": 2, "Enterprise SaaS": 2, "Cloud Infrastructure": 3, 
+        "Fintech": 2, "Dev Tools / Analytics": 2, "AI Infrastructure": 3},
     "Consumer_Sentiment": {
         "Consumer Internet": 3, "eCommerce": 3, "AdTech": 3,
         "Fintech": 2, "Hardware / Devices": 2, "Semiconductors": 2,
