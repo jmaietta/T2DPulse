@@ -3063,6 +3063,7 @@ def update_unemployment_container(n):
         return [dcc.Graph(id="unemployment-graph", figure=figure)]
 
 # Software Job Postings Graph (Figure only function)
+
 def update_job_postings_graph(n):
     """Generate the Software Job Postings chart figure"""
     if job_postings_data.empty or 'yoy_growth' not in job_postings_data.columns:
@@ -3085,6 +3086,7 @@ def update_job_postings_graph(n):
         mode='lines',
         name='YoY % Change',
         line=dict(color='#4C78A8', width=3),  # Blue color for tech jobs
+        hovertemplate='%{y:.1f}%<extra></extra>'  # Show only the YOY percentage value
     ))
     
     # Add reference lines for key thresholds
@@ -3096,7 +3098,8 @@ def update_job_postings_graph(n):
         y=[20, 20],
         mode='lines',
         line=dict(color='green', width=1, dash='dash'),
-        name='Hiring Boom (20%)'
+        name='Hiring Boom (20%)',
+        hoverinfo='skip'  # Don't show hover for threshold lines
     ))
     
     # Add +5% Growth threshold line
@@ -3105,7 +3108,8 @@ def update_job_postings_graph(n):
         y=[5, 5],
         mode='lines',
         line=dict(color='lightgreen', width=1, dash='dash'),
-        name='Healthy Recovery (5%)'
+        name='Healthy Recovery (5%)',
+        hoverinfo='skip'  # Don't show hover for threshold lines
     ))
     
     # Add 0% Growth threshold line
@@ -3114,7 +3118,8 @@ def update_job_postings_graph(n):
         y=[0, 0],
         mode='lines',
         line=dict(color='gray', width=1),
-        name='Neutral'
+        name='Neutral',
+        hoverinfo='skip'  # Don't show hover for threshold lines
     ))
     
     # Add -5% Growth threshold line
@@ -3122,8 +3127,9 @@ def update_job_postings_graph(n):
         x=x_range,
         y=[-5, -5],
         mode='lines',
-        line=dict(color='orange', width=1, dash='dash'),
-        name='Slowdown (-5%)'
+        line=dict(color='lightcoral', width=1, dash='dash'),
+        name='Moderate Decline (-5%)',
+        hoverinfo='skip'  # Don't show hover for threshold lines
     ))
     
     # Add -20% Growth threshold line
@@ -3132,35 +3138,44 @@ def update_job_postings_graph(n):
         y=[-20, -20],
         mode='lines',
         line=dict(color='red', width=1, dash='dash'),
-        name='Hiring Recession (-20%)'
+        name='Hiring Freeze (-20%)',
+        hoverinfo='skip'  # Don't show hover for threshold lines
     ))
     
-    # Add current value annotation
-    current_value = filtered_data['yoy_growth'].iloc[-1]
-    previous_value = filtered_data['yoy_growth'].iloc[-2]
-    change = current_value - previous_value
-    
-    # Using absolute value change (not percentage)
-    arrow_color = 'green' if change > 0 else 'red'
-    arrow_symbol = "▲" if change > 0 else "▼"
-    
-    current_value_annotation = f"Current: {current_value:.2f}% {arrow_symbol} {abs(change):.2f}%"
-    
-    fig.add_annotation(
-        x=0.02,
-        y=0.95,
-        xref="paper",
-        yref="paper",
-        text=current_value_annotation,
-        showarrow=False,
-        font=dict(size=14, color=arrow_color),
-        align="left",
-        bgcolor="rgba(255, 255, 255, 0.9)",
-        bordercolor=arrow_color,
-        borderwidth=1,
-        borderpad=4,
-        opacity=0.9
-    )
+    # Add current value annotation only showing YOY % change
+    if not filtered_data.empty:
+        current_value = filtered_data['yoy_growth'].iloc[-1]
+        
+        # If we have at least two data points, calculate the change
+        if len(filtered_data) >= 2:
+            previous_value = filtered_data['yoy_growth'].iloc[-2]
+            change = current_value - previous_value
+            
+            # Determine arrow direction and color
+            arrow_color = color_scheme["positive"] if change > 0 else color_scheme["negative"]
+            arrow_symbol = "▲" if change > 0 else "▼"
+            
+            # Only show the YOY percentage, not the change indicator
+            current_value_annotation = f"YoY Change: {current_value:.1f}%"
+        else:
+            current_value_annotation = f"YoY Change: {current_value:.1f}%"
+            arrow_color = color_scheme["neutral"]
+        
+        fig.add_annotation(
+            x=0.02,
+            y=0.95,
+            xref="paper",
+            yref="paper",
+            text=current_value_annotation,
+            showarrow=False,
+            font=dict(size=14, color=arrow_color),
+            align="left",
+            bgcolor="rgba(255, 255, 255, 1.0)",  # Full opacity white background
+            bordercolor=arrow_color,
+            borderwidth=1,
+            borderpad=4,
+            opacity=1.0  # Full opacity
+        )
     
     # Update layout
     fig.update_layout(
@@ -3176,6 +3191,14 @@ def update_job_postings_graph(n):
             zerolinecolor='rgba(0,0,0,0.2)',
         ),
         hovermode="x unified",
+        # Make hover label more legible with solid white background
+        hoverlabel=dict(
+            bgcolor="white",
+            font_size=14,
+            font_family="Arial",
+            bordercolor="#cccccc",
+            namelength=-1  # Show full variable name
+        ),
         legend=dict(
             orientation="h",
             yanchor="bottom",
@@ -3185,9 +3208,7 @@ def update_job_postings_graph(n):
         )
     )
     
-    return fig
-
-# Update Job Postings Container with chart and insights
+    return fig# Update Job Postings Container with chart and insights
 @app.callback(
     Output("job-postings-container", "children"),
     [Input("interval-component", "n_intervals")]
