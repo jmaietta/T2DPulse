@@ -568,9 +568,16 @@ def calculate_sector_sentiment():
         latest_yield = treasury_yield_data.sort_values('date', ascending=False).iloc[0]['value']
         macros["10Y_Treasury_Yield_%"] = latest_yield
         
-    # VIX
+    # VIX - Use 14-day EMA for more stable signal if available
     if not vix_data.empty:
-        latest_vix = vix_data.sort_values('date', ascending=False).iloc[0]['value']
+        latest_vix_row = vix_data.sort_values('date', ascending=False).iloc[0]
+        # Use the 14-day EMA for VIX if available, otherwise fallback to raw value
+        if 'vix_ema14' in latest_vix_row and not pd.isna(latest_vix_row['vix_ema14']):
+            latest_vix = latest_vix_row['vix_ema14']  # Use smoothed value
+            print(f"Using smoothed VIX (14-day EMA): {latest_vix:.2f} vs raw: {latest_vix_row['value']:.2f}")
+        else:
+            latest_vix = latest_vix_row['value']  # Fallback to raw value
+            print(f"Using raw VIX value: {latest_vix:.2f} (EMA not available)")
         macros["VIX"] = latest_vix
     
     # NASDAQ gap from 20-day EMA
@@ -961,25 +968,34 @@ def calculate_sentiment_index(custom_weights=None, proprietary_data=None, docume
     # 9. VIX Volatility Index - lower is better (market stability)
     if not vix_data.empty:
         latest_vix = vix_data.sort_values('date', ascending=False).iloc[0]
+        
+        # Use the 14-day EMA for VIX if available, otherwise fallback to raw value
+        if 'vix_ema14' in latest_vix and not pd.isna(latest_vix['vix_ema14']):
+            vix_value = latest_vix['vix_ema14']  # Use smoothed value
+            value_label = f"{latest_vix['value']:.2f} (EMA: {vix_value:.2f})"
+        else:
+            vix_value = latest_vix['value']  # Fallback to raw value
+            value_label = f"{vix_value:.2f}"
+        
         # VIX below 20 is generally considered low volatility (good)
         # VIX above 30 is generally considered high volatility (bad)
         # Scale inverted since lower VIX is better for market sentiment
-        if latest_vix['value'] <= 20:
+        if vix_value <= 20:
             # Low volatility (good): 70-100 score
-            vix_score = 100 - ((latest_vix['value'] - 10) / 10) * 30
-        elif latest_vix['value'] <= 30:
+            vix_score = 100 - ((vix_value - 10) / 10) * 30
+        elif vix_value <= 30:
             # Medium volatility: 30-70 score
-            vix_score = 70 - ((latest_vix['value'] - 20) / 10) * 40
+            vix_score = 70 - ((vix_value - 20) / 10) * 40
         else:
             # High volatility (bad): 0-30 score
-            vix_score = max(30 - ((latest_vix['value'] - 30) / 10) * 30, 0)
+            vix_score = max(30 - ((vix_value - 30) / 10) * 30, 0)
             
         # Ensure score is in 0-100 range
         vix_score = min(max(vix_score, 0), 100)
         
         sentiment_components.append({
             'indicator': 'VIX Volatility',
-            'value': latest_vix['value'],
+            'value': value_label,
             'score': vix_score,
             'weight': weights['VIX Volatility']
         })
@@ -1416,6 +1432,27 @@ if vix_data.empty or (datetime.now() - pd.to_datetime(vix_data['date'].max())).d
         print(f"VIX data updated with {len(vix_data)} observations")
     else:
         print("Failed to fetch VIX data")
+
+# Calculate 14-day EMA for VIX if we have data
+if not vix_data.empty and 'date' in vix_data.columns and 'value' in vix_data.columns:
+    # Sort data by date ascending (oldest to newest) for correct EMA calculation
+    vix_data = vix_data.sort_values('date')
+    
+    # Calculate 14-day EMA
+    vix_data['vix_ema14'] = vix_data['value'].ewm(span=14, adjust=False).mean()
+    
+    # Sort back to newest first for reporting
+    vix_data = vix_data.sort_values('date', ascending=False)
+    
+    # Print the latest values
+    if len(vix_data) > 0:
+        latest_date = vix_data.iloc[0]['date']
+        latest_vix = vix_data.iloc[0]['value']
+        latest_ema = vix_data.iloc[0]['vix_ema14']
+        print(f"VIX: {latest_vix:.2f} on {latest_date}, 14-day EMA: {latest_ema:.2f}")
+    
+    # Save updated data with EMA
+    save_data_to_csv(vix_data, 'vix_data.csv')
 
 # Add Consumer Sentiment data
 if consumer_sentiment_data.empty or (datetime.now() - pd.to_datetime(consumer_sentiment_data['date'].max() if not consumer_sentiment_data.empty else '2000-01-01')).days > 30:
@@ -5053,14 +5090,25 @@ def update_vix_graph(n):
     # Create figure
     fig = go.Figure()
     
-    # Add VIX line
+    # Add VIX line (raw values, with reduced opacity)
     fig.add_trace(go.Scatter(
         x=filtered_data['date'],
         y=filtered_data['value'],
         mode='lines',
         name='CBOE Volatility Index (VIX)',
-        line=dict(color='darkred', width=3),
+        line=dict(color='darkred', width=2),
+        opacity=0.7
     ))
+    
+    # Add 14-day EMA line (smoothed values, prominent line)
+    if 'vix_ema14' in filtered_data.columns:
+        fig.add_trace(go.Scatter(
+            x=filtered_data['date'],
+            y=filtered_data['vix_ema14'],
+            mode='lines',
+            name='14-Day EMA (Smoothed VIX)',
+            line=dict(color='darkred', width=3),
+        ))
     
     # Add volatility level zones
     x_range = [filtered_data['date'].min(), filtered_data['date'].max()]
@@ -5101,17 +5149,7 @@ def update_vix_graph(n):
         showlegend=True
     ))
     
-    # Add a moving average line for trend
-    filtered_data['ma_20'] = filtered_data['value'].rolling(window=20).mean()
-    fig.add_trace(go.Scatter(
-        x=filtered_data['date'],
-        y=filtered_data['ma_20'],
-        mode='lines',
-        name='20-Day Moving Average',
-        line=dict(color='black', width=2, dash='dot'),
-    ))
-    
-    # Add current value annotation
+    # Add current value annotations
     current_value = filtered_data['value'].iloc[-1]
     previous_value = filtered_data['value'].iloc[-2]
     change = current_value - previous_value
@@ -5120,7 +5158,12 @@ def update_vix_graph(n):
     arrow_color = color_scheme["negative"] if change > 0 else color_scheme["positive"]
     arrow_symbol = "▲" if change > 0 else "▼"
     
-    current_value_annotation = f"Current: {current_value:.2f} {arrow_symbol} {abs(change):.2f}"
+    # Show both raw VIX and smoothed EMA value
+    if 'vix_ema14' in filtered_data.columns:
+        current_ema = filtered_data['vix_ema14'].iloc[-1]
+        current_value_annotation = f"VIX: {current_value:.2f} {arrow_symbol} {abs(change):.2f}  |  14-Day EMA: {current_ema:.2f}"
+    else:
+        current_value_annotation = f"VIX: {current_value:.2f} {arrow_symbol} {abs(change):.2f}"
     
     fig.add_annotation(
         x=0.02,
