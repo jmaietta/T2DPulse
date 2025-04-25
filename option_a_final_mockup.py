@@ -141,8 +141,8 @@ def create_pulse_card(value):
         "boxShadow": f"0 0 20px {pulse_color}",  # Color-matched glow
         "border": f"1px solid {pulse_color}",     # Color-matched border
         "transition": "all 0.3s ease",
-        "maxWidth": "320px",
-        "height": "280px",
+        "width": "320px",
+        "height": "320px",
         "margin": "0 auto",
         "display": "flex",
         "alignItems": "center",
