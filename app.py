@@ -731,6 +731,41 @@ def calculate_sector_sentiment():
         print(f"Error calculating sector sentiment scores: {str(e)}")
         return []
 
+def calculate_t2d_pulse_from_sectors(sector_scores, sector_weights=None):
+    """Calculate T2D Pulse score as a weighted average of sector scores
+    
+    Args:
+        sector_scores (list): List of dictionaries with sector scores
+        sector_weights (dict, optional): Dictionary with custom weights for each sector
+        
+    Returns:
+        float: The weighted average T2D Pulse score (0-100 scale)
+    """
+    if not sector_scores:
+        return 50.0  # Default neutral score if no sector data
+    
+    # Create a dictionary for easier access
+    sector_data = {s['sector']: s['normalized_score'] for s in sector_scores}
+    
+    # Use equal weights if no custom weights provided
+    if not sector_weights:
+        num_sectors = len(sector_data)
+        sector_weights = {sector: 100.0 / num_sectors for sector in sector_data.keys()}
+    else:
+        # Normalize weights to sum to 100%
+        total_weight = sum(sector_weights.values())
+        sector_weights = {k: (v / total_weight * 100) for k, v in sector_weights.items()}
+    
+    # Calculate weighted average
+    weighted_sum = sum(sector_data[sector] * sector_weights[sector] 
+                       for sector in sector_data.keys() 
+                       if sector in sector_weights)
+    
+    # Divide by sum of weights
+    pulse_score = weighted_sum / 100.0
+    
+    return round(pulse_score, 1)
+
 def calculate_sentiment_index(custom_weights=None, proprietary_data=None, document_data=None):
     """Calculate economic sentiment index from available indicators
     
@@ -1602,13 +1637,8 @@ app.layout = html.Div([
     
     # Main content container - Two column layout
     html.Div([
-        # Left column - Contributing factors and key indicators
+        # Left column - Key indicators
         html.Div([
-            # Contributing Factors Card
-            html.Div([
-                html.H3("Contributing Factors", className="card-title"),
-                html.Div(id="sentiment-components", className="factors-container")
-            ], className="card factors-card"),
             
             # Key Indicators
             html.Div([
@@ -2173,22 +2203,16 @@ def create_pulse_card(value):
     except (ValueError, TypeError):
         score_value = 0
         
-    # Determine Pulse status based on score
-    if score_value >= 80:
-        pulse_status = "Boom"
+    # Determine Pulse status based on score using Bearish, Neutral, Bullish terminology
+    if score_value >= 60:
+        pulse_status = "Bullish"
         pulse_color = "#2ECC71"  # Green
-    elif score_value >= 60:
-        pulse_status = "Expansion"
-        pulse_color = "#F1C40F"  # Yellow
-    elif score_value >= 40:
-        pulse_status = "Moderate Growth"
-        pulse_color = "#E67E22"  # Orange
-    elif score_value >= 20:
-        pulse_status = "Slowdown"
-        pulse_color = "#E74C3C"  # Light Red
+    elif score_value >= 30:
+        pulse_status = "Neutral"
+        pulse_color = "#F1C40F"  # Yellow/Gold
     else:
-        pulse_status = "Contraction"
-        pulse_color = "#C0392B"  # Dark Red
+        pulse_status = "Bearish"
+        pulse_color = "#E74C3C"  # Red
     
     # Create the pulse card component
     pulse_card = html.Div([
@@ -2257,24 +2281,16 @@ def create_pulse_card(value):
                         html.H5("Sentiment Index Categories", style={"marginBottom": "10px"}),
                         html.Div([
                             html.Div([
-                                html.Span("Boom (80-100): ", style={"fontWeight": "bold", "color": "#2ECC71"}),
-                                "Strong growth across indicators; economic expansion accelerating"
+                                html.Span("Bullish (60-100): ", style={"fontWeight": "bold", "color": "#2ECC71"}),
+                                "Positive outlook; favorable growth conditions for technology sector"
                             ], style={"marginBottom": "5px"}),
                             html.Div([
-                                html.Span("Expansion (60-79): ", style={"fontWeight": "bold", "color": "#F1C40F"}),
-                                "Solid growth with positive momentum; healthy economic conditions"
+                                html.Span("Neutral (30-59): ", style={"fontWeight": "bold", "color": "#F1C40F"}),
+                                "Balanced outlook; mixed signals with both opportunities and challenges"
                             ], style={"marginBottom": "5px"}),
                             html.Div([
-                                html.Span("Moderate Growth (40-59): ", style={"fontWeight": "bold", "color": "#E67E22"}),
-                                "Steady but modest growth; economy performing adequately"
-                            ], style={"marginBottom": "5px"}),
-                            html.Div([
-                                html.Span("Slowdown (20-39): ", style={"fontWeight": "bold", "color": "#E74C3C"}),
-                                "Growth decelerating; potential economic challenges ahead"
-                            ], style={"marginBottom": "5px"}),
-                            html.Div([
-                                html.Span("Contraction (0-19): ", style={"fontWeight": "bold", "color": "#C0392B"}),
-                                "Economic indicators showing decline; recession risks elevated"
+                                html.Span("Bearish (0-29): ", style={"fontWeight": "bold", "color": "#E74C3C"}),
+                                "Negative outlook; economic headwinds likely impacting tech industry growth"
                             ])
                         ])
                     ]
