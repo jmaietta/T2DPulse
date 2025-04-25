@@ -32,6 +32,14 @@ args = "Simple Glow Mockup"
 task = "workflow.run"
 args = "Normalized Sector Scores Mockup"
 
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "Option A Mockup"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "Option C Mockup"
+
 [[workflows.workflow]]
 name = "Economic Dashboard Server"
 author = "agent"
@@ -101,6 +109,24 @@ task = "shell.exec"
 args = "python normalized_sector_sentiment.py"
 waitForPort = 5002
 
+[[workflows.workflow]]
+name = "Option A Mockup"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "python option_a_mockup.py"
+waitForPort = 5005
+
+[[workflows.workflow]]
+name = "Option C Mockup"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "python option_c_mockup.py"
+waitForPort = 5006
+
 [deployment]
 run = ["sh", "-c", "python wsgi.py"]
 deploymentTarget = "cloudrun"
@@ -120,3 +146,11 @@ externalPort = 3002
 [[ports]]
 localPort = 5003
 externalPort = 3001
+
+[[ports]]
+localPort = 5005
+externalPort = 3003
+
+[[ports]]
+localPort = 5006
+externalPort = 4200
