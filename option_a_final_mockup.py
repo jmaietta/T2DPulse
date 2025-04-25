@@ -70,7 +70,7 @@ def create_pulse_card(value):
         # Container with vertical centering for all elements
         html.Div([
             # Title 
-            html.H3("T2D Pulse Sentiment", 
+            html.H3("T2D Pulse", 
                     style={
                         "fontSize": "22px", 
                         "fontWeight": "bold", 
