@@ -84,9 +84,12 @@ def create_pulse_card(value):
                         style={
                             "fontSize": "64px", 
                             "fontWeight": "bold", 
-                            "color": pulse_color
+                            "color": pulse_color,
+                            "display": "block",
+                            "textAlign": "center",
+                            "width": "100%"
                         }),
-            ], style={"textAlign": "center", "marginBottom": "10px"}),
+            ], style={"textAlign": "center", "marginBottom": "10px", "display": "flex", "justifyContent": "center"}),
             # Status label
             html.Div([
                 html.Span(pulse_status, 
@@ -240,11 +243,11 @@ def create_sector_cards(sector_scores, weights):
             
             # Card body with all the details
             html.Div([
-                # Header and sentiment badge
+                # Header and sentiment badge - now with badge on the right
                 html.Div([
                     html.P(takeaway, className="sector-takeaway"),
                     html.Span(sentiment, className=f"sector-badge {badge_class}")
-                ], className="takeaway-badge-container"),
+                ], className="takeaway-badge-container", style={"display": "flex", "justifyContent": "space-between", "alignItems": "center"}),
                 
                 # Scale indicator
                 html.Div([
