@@ -3889,7 +3889,6 @@ def update_data_ppi_container(n):
         return [dcc.Graph(id="data-ppi-graph", figure=figure)]
 
 # Update Interest Rate Graph (generates figure only)
-        return [dcc.Graph(id="interest-rate-graph", figure=figure)]
 def update_interest_rate_graph(n):
     """Generate the Federal Funds Rate chart figure"""
     if interest_rate_data.empty:
@@ -3978,7 +3977,24 @@ def update_interest_rate_graph(n):
         )
     )
     
-    return fig    
+    return fig
+
+# Update Interest Rate Container with chart and insights panel
+@app.callback(
+    Output("interest-rate-container", "children"),
+    [Input("interval-component", "n_intervals")]
+)
+def update_interest_rate_container(n):
+    """Update the Federal Funds Rate container to include both the graph and insights panel"""
+    # Get the chart figure
+    figure = update_interest_rate_graph(n)
+    
+    # Check for valid data and required columns
+    if interest_rate_data.empty or 'value' not in interest_rate_data.columns or 'date' not in interest_rate_data.columns:
+        # Return just the graph without insights panel
+        print("Interest Rate data missing required columns or empty")
+        return [dcc.Graph(id="interest-rate-graph", figure=figure)]
+    
     try:
         # Print debugging info
         print(f"Interest Rate data columns: {interest_rate_data.columns.tolist()}")
