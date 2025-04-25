@@ -69,15 +69,15 @@ def create_pulse_card(value):
     pulse_card = html.Div([
         # Container with vertical centering for all elements
         html.Div([
-            # Title 
-            html.H3("T2D Pulse", 
-                    style={
-                        "fontSize": "22px", 
-                        "fontWeight": "bold", 
-                        "marginBottom": "15px", 
-                        "textAlign": "center",
-                        "color": "#333333"
-                    }),
+            # Logo image instead of text title
+            html.Img(
+                src="/assets/T2D Pulse logo.png",
+                style={
+                    "height": "40px",
+                    "marginBottom": "15px",
+                    "objectFit": "contain"
+                }
+            ),
             # Score value
             html.Div([
                 html.Span(f"{value}", 
@@ -388,11 +388,8 @@ app.layout = html.Div([
                 # Explanation Text
                 html.Div([
                     html.P(id="pulse-description", children="Based on weighted sector average", 
-                          className="pulse-note", style={"textAlign": "center"}),
-                    html.Div([
-                        html.P("Adjust sector weights to customize the T2D Pulse for your investment focus.", 
-                              className="pulse-instructions", style={"textAlign": "center"})
-                    ], className="pulse-description-container")
+                          className="pulse-note", style={"textAlign": "center"})
+                    # Removed "Adjust sector weights..." text - moved to Sector Sentiment section
                 ], className="pulse-explanation")
             ], className="pulse-content", style={"flexDirection": "column", "alignItems": "center"}),
             
@@ -408,8 +405,12 @@ app.layout = html.Div([
             html.Div([
                 html.H2("Sector Sentiment", className="section-title"),
                 html.Div([
-                    html.P("Sector scores are calculated from economic indicators weighted by their impact on each sector.", 
-                          className="section-description"),
+                    html.Div([
+                        html.P("Sector scores are calculated from economic indicators weighted by their impact on each sector.", 
+                              className="section-description"),
+                        html.P("Adjust sector weights to customize the T2D Pulse for your investment focus.", 
+                              className="section-description")
+                    ]),
                     html.Button("Reset to Equal Weights", id="reset-weights-button", className="reset-button")
                 ], className="section-controls")
             ], className="section-header"),
