@@ -71,7 +71,7 @@ def create_pulse_card(value):
         html.Div([
             # Logo image instead of text title
             html.Img(
-                src="/attached_assets/T2D Pulse logo.png",
+                src="/assets/T2D Pulse logo.png",
                 style={
                     "height": "80px",
                     "marginBottom": "15px",
@@ -792,10 +792,12 @@ app.index_string = '''
                 font-size: 22px;
                 font-weight: bold;
                 margin-bottom: 3px;
+                text-align: right;
             }
             
             .sector-sentiment {
                 font-size: 14px;
+                text-align: right;
             }
             
             .sector-card-body {
