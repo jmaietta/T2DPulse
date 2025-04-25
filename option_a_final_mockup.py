@@ -377,7 +377,7 @@ app.layout = html.Div([
     html.Div([
         # T2D Pulse and Summary Section
         html.Div([
-            html.H2("T2D Pulse", className="section-title"),
+            # Removed redundant section title
             
             html.Div([
                 # T2D Pulse Card with Glow - now centered on the page
