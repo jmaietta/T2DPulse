@@ -44,6 +44,10 @@ args = "Option C Mockup"
 task = "workflow.run"
 args = "Revised Layout Mockup"
 
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "Final Layout Mockup"
+
 [[workflows.workflow]]
 name = "Economic Dashboard Server"
 author = "agent"
@@ -140,6 +144,15 @@ task = "shell.exec"
 args = "python option_a_revised_mockup.py"
 waitForPort = 5007
 
+[[workflows.workflow]]
+name = "Final Layout Mockup"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "python option_a_final_mockup.py"
+waitForPort = 5008
+
 [deployment]
 run = ["sh", "-c", "python wsgi.py"]
 deploymentTarget = "cloudrun"
@@ -171,3 +184,7 @@ externalPort = 4200
 [[ports]]
 localPort = 5007
 externalPort = 5000
+
+[[ports]]
+localPort = 5008
+externalPort = 5173
