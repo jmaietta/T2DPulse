@@ -46,8 +46,8 @@ def generate_sample_data():
 # Get sample data
 sector_scores, default_weights = generate_sample_data()
 
-# Create gauge chart for T2D Pulse
-def create_gauge_chart(value):
+# Create pulse score card with glow effect
+def create_pulse_card(value):
     # Determine Pulse status based on score
     if value >= 80:
         pulse_status = "Boom"
@@ -64,38 +64,89 @@ def create_gauge_chart(value):
     else:
         pulse_status = "Contraction"
         pulse_color = "#c0392b"  # Dark Red
-        
-    fig = go.Figure(go.Indicator(
-        mode="gauge+number",
-        value=value,
-        domain={'x': [0, 1], 'y': [0, 1]},
-        number={"suffix": "",
-                "font": {"size": 28}},
-        title={'text': "T2D Pulse", "font": {"size": 24}},
-        gauge={
-            'axis': {'range': [0, 100], 'tickwidth': 1},
-            'bar': {'color': pulse_color},
-            'steps': [
-                {'range': [0, 20], 'color': "#c0392b"},  # Dark Red
-                {'range': [20, 40], 'color': "#e74c3c"},  # Light Red
-                {'range': [40, 60], 'color': "#f39c12"},  # Orange
-                {'range': [60, 80], 'color': "#f1c40f"},  # Yellow
-                {'range': [80, 100], 'color': "#2ecc71"}  # Green
-            ],
-            'threshold': {
-                'line': {'color': "white", 'width': 4},
-                'thickness': 0.75,
-                'value': value
-            }
-        }
-    ))
     
-    fig.update_layout(
-        height=350,
-        margin=dict(l=30, r=30, t=30, b=30)
-    )
+    # Create the pulse card component
+    pulse_card = html.Div([
+        # Container with vertical centering for all elements
+        html.Div([
+            # Title 
+            html.H3("T2D Pulse Sentiment", 
+                    style={
+                        "fontSize": "22px", 
+                        "fontWeight": "bold", 
+                        "marginBottom": "15px", 
+                        "textAlign": "center",
+                        "color": "#333333"
+                    }),
+            # Score value
+            html.Div([
+                html.Span(f"{value}", 
+                        style={
+                            "fontSize": "64px", 
+                            "fontWeight": "bold", 
+                            "color": pulse_color
+                        }),
+            ], style={"textAlign": "center", "marginBottom": "10px"}),
+            # Status label
+            html.Div([
+                html.Span(pulse_status, 
+                        style={
+                            "fontSize": "24px", 
+                            "color": pulse_color,
+                            "marginRight": "5px",
+                            "display": "inline-block",
+                            "fontWeight": "500"
+                        }),
+                html.Span(
+                    "ⓘ", 
+                    className="info-icon",
+                    style={
+                        "cursor": "pointer", 
+                        "fontSize": "16px", 
+                        "display": "inline-block",
+                        "color": "#2c3e50",
+                        "verticalAlign": "text-top" 
+                    }
+                )
+            ], style={
+                "textAlign": "center", 
+                "display": "flex", 
+                "alignItems": "center", 
+                "justifyContent": "center", 
+                "position": "relative",
+                "height": "30px"  # Fixed height to prevent layout shifts
+            }),
+            # Last updated text
+            html.Div([
+                html.Span(f"Last updated: April 25, 2025", 
+                        style={
+                            "fontSize": "12px", 
+                            "color": "#95a5a6",
+                            "marginTop": "15px"
+                        })
+            ], style={"textAlign": "center"})
+        ], style={
+            "display": "flex",
+            "flexDirection": "column",
+            "justifyContent": "center",
+            "alignItems": "center",
+            "padding": "25px 20px"
+        })
+    ], style={
+        "backgroundColor": "white",
+        "borderRadius": "8px",
+        "boxShadow": f"0 0 20px {pulse_color}",  # Color-matched glow
+        "border": f"1px solid {pulse_color}",     # Color-matched border
+        "transition": "all 0.3s ease",
+        "maxWidth": "320px",
+        "height": "280px",
+        "margin": "0 auto",
+        "display": "flex",
+        "alignItems": "center",
+        "justifyContent": "center"
+    })
     
-    return fig, pulse_status, pulse_color
+    return pulse_card, pulse_status, pulse_color
 
 # Generate sample tickers for mockup purposes
 def generate_sample_tickers(sector):
@@ -311,7 +362,7 @@ methodology_card = html.Div([
 
 # Initial T2D Pulse calculation
 initial_t2d_pulse = calculate_t2d_pulse(sector_scores, default_weights)
-initial_fig, initial_status, initial_color = create_gauge_chart(initial_t2d_pulse)
+initial_pulse_card, initial_status, initial_color = create_pulse_card(initial_t2d_pulse)
 
 # Create the layout
 app.layout = html.Div([
@@ -323,28 +374,23 @@ app.layout = html.Div([
     html.Div([
         # T2D Pulse and Summary Section
         html.Div([
-            html.H2("T2D Pulse Score", className="section-title"),
+            html.H2("T2D Pulse", className="section-title"),
             
             html.Div([
-                # T2D Pulse Gauge
+                # T2D Pulse Card with Glow
                 html.Div([
-                    dcc.Graph(
-                        id="pulse-gauge",
-                        figure=initial_fig,
-                        config={'displayModeBar': False}
-                    )
-                ], className="pulse-gauge-container"),
+                    html.Div(id="pulse-card-container", children=initial_pulse_card)
+                ], className="pulse-card-container"),
                 
-                # T2D Pulse Status and Details
+                # Explanation Text
                 html.Div([
-                    html.H3(id="pulse-status", children=initial_status, 
-                           className="pulse-status", style={"color": initial_color}),
-                    html.P(id="pulse-score", children=f"Score: {initial_t2d_pulse}", 
-                          className="pulse-score"),
                     html.P(id="pulse-description", children="Based on weighted sector average", 
                           className="pulse-note"),
-                    html.P(f"Last updated: April 25, 2025", className="update-date")
-                ], className="pulse-details")
+                    html.Div([
+                        html.P("Adjust sector weights to customize the T2D Pulse for your investment focus.", 
+                              className="pulse-instructions")
+                    ], className="pulse-description-container")
+                ], className="pulse-explanation")
             ], className="pulse-content"),
             
             # Sector Summary
@@ -486,10 +532,7 @@ def reset_weights(n_clicks):
 # Callback for updating weight displays and pulse score when weights change
 @app.callback(
     [Output({"type": "weight-display", "index": sector}, "children") for sector in sector_scores.keys()] +
-    [Output("pulse-gauge", "figure"),
-     Output("pulse-status", "children"),
-     Output("pulse-status", "style"),
-     Output("pulse-score", "children"),
+    [Output("pulse-card-container", "children"),
      Output("stored-pulse", "children")],
     Input("stored-weights", "children")
 )
@@ -500,18 +543,15 @@ def update_displays(weights_json):
     # Calculate new T2D Pulse score
     pulse_score = calculate_t2d_pulse(sector_scores, weights)
     
-    # Create new gauge chart
-    fig, status, color = create_gauge_chart(pulse_score)
+    # Create new pulse card with glow
+    pulse_card, _, _ = create_pulse_card(pulse_score)
     
     # Create outputs for each weight display
     weight_displays = [f"{weights[sector]:.1f}%" for sector in sector_scores.keys()]
     
     # Return all outputs
     return weight_displays + [
-        fig, 
-        status, 
-        {"color": color}, 
-        f"Score: {pulse_score}",
+        pulse_card,
         str(pulse_score)
     ]
 
