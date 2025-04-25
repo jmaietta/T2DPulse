@@ -2087,6 +2087,16 @@ app.layout = html.Div([
         html.Div([
             # Tabs for different graph groups
             dcc.Tabs([
+                # Sector Sentiment Tab - Moved to first position
+                dcc.Tab(label="Sector Sentiment", children=[
+                    html.Div([
+                        html.H3("Technology Sector Sentiment", className="graph-title"),
+                        html.P("Real-time sentiment scores based on current macroeconomic conditions", 
+                               className="sector-subtitle"),
+                        html.Div(id="sector-sentiment-container", className="sector-sentiment-container")
+                    ], className="graph-container")
+                ], className="custom-tab", selected_className="custom-tab--selected"),
+                
                 # Real GDP & PCE Tab
                 dcc.Tab(label="Real GDP & PCE", children=[
                     html.Div([
@@ -2166,16 +2176,6 @@ app.layout = html.Div([
                         html.Div(id="vix-container", className="insights-enabled-container")
                     ], className="graph-container")
                 ], className="custom-tab", selected_className="custom-tab--selected"),
-                
-                # Sector Sentiment Tab
-                dcc.Tab(label="Sector Sentiment", children=[
-                    html.Div([
-                        html.H3("Technology Sector Sentiment", className="graph-title"),
-                        html.P("Real-time sentiment scores based on current macroeconomic conditions", 
-                               className="sector-subtitle"),
-                        html.Div(id="sector-sentiment-container", className="sector-sentiment-container")
-                    ], className="graph-container")
-                ], className="custom-tab", selected_className="custom-tab--selected"),
             ], className="custom-tabs")
         ], className="column right-column")
     ], className="dashboard-content"),
@@ -2216,15 +2216,16 @@ def create_pulse_card(value):
         score_value = 0
         
     # Determine Pulse status based on score using Bearish, Neutral, Bullish terminology
+    # Using the same color scheme as the sector sentiment cards for consistency
     if score_value >= 60:
         pulse_status = "Bullish"
-        pulse_color = "#2ECC71"  # Green
+        pulse_color = "#2ecc71"  # Green - matching sector sentiment color
     elif score_value >= 30:
         pulse_status = "Neutral"
-        pulse_color = "#F1C40F"  # Yellow/Gold
+        pulse_color = "#f39c12"  # Orange - matching sector sentiment color
     else:
         pulse_status = "Bearish"
-        pulse_color = "#E74C3C"  # Red
+        pulse_color = "#e74c3c"  # Red - matching sector sentiment color
     
     # Create the pulse card component
     pulse_card = html.Div([
@@ -2294,15 +2295,15 @@ def create_pulse_card(value):
                         html.H5("Sentiment Index Categories", style={"marginBottom": "10px"}),
                         html.Div([
                             html.Div([
-                                html.Span("Bullish (60-100): ", style={"fontWeight": "bold", "color": "#2ECC71"}),
+                                html.Span("Bullish (60-100): ", style={"fontWeight": "bold", "color": "#2ecc71"}),
                                 "Positive outlook; favorable growth conditions for technology sector"
                             ], style={"marginBottom": "5px"}),
                             html.Div([
-                                html.Span("Neutral (30-59): ", style={"fontWeight": "bold", "color": "#F1C40F"}),
+                                html.Span("Neutral (30-60): ", style={"fontWeight": "bold", "color": "#f39c12"}),
                                 "Balanced outlook; mixed signals with both opportunities and challenges"
                             ], style={"marginBottom": "5px"}),
                             html.Div([
-                                html.Span("Bearish (0-29): ", style={"fontWeight": "bold", "color": "#E74C3C"}),
+                                html.Span("Bearish (0-30): ", style={"fontWeight": "bold", "color": "#e74c3c"}),
                                 "Negative outlook; economic headwinds likely impacting tech industry growth"
                             ])
                         ])
