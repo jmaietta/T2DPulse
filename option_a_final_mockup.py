@@ -73,7 +73,7 @@ def create_pulse_card(value):
             html.Img(
                 src="/assets/T2D Pulse logo.png",
                 style={
-                    "height": "40px",
+                    "height": "60px",
                     "marginBottom": "15px",
                     "objectFit": "contain"
                 }
@@ -236,8 +236,8 @@ def create_sector_cards(sector_scores, weights):
                     html.Div([
                         html.Span(f"{score:.1f}", className="sector-score"),
                         html.Div(sentiment, className="sector-sentiment", 
-                                style={"color": text_color})
-                    ], className="score-container")
+                                style={"color": text_color, "textAlign": "right"})
+                    ], className="score-container", style={"textAlign": "right"})
                 ], className="card-header-content")
             ], className="sector-card-header", style={"borderColor": border_color}),
             
@@ -304,32 +304,43 @@ def create_sector_summary():
     bottom_3 = sorted_sectors[-3:]
     
     top_sectors = html.Div([
-        html.H4("Strongest Sectors", className="summary-title"),
-        html.Ul([
-            html.Li([
-                html.Span(f"{sector}: ", className="sector-name"),
+        html.H4("Strongest Sectors", className="summary-title", 
+               style={"marginTop": "0", "marginBottom": "12px", "color": "#2c3e50", "fontWeight": "500"}),
+        html.Div([
+            html.Div([
+                html.Span(f"{sector}", className="sector-name", 
+                         style={"fontWeight": "500", "display": "inline-block", "width": "75%"}),
                 html.Span(f"{score:.1f}", 
                          className="sector-score-positive" if score >= 60 else 
                                   "sector-score-neutral" if score >= 40 else 
-                                  "sector-score-negative")
-            ]) for sector, score in top_3
-        ], className="sector-list")
-    ], className="summary-section")
+                                  "sector-score-negative",
+                         style={"fontWeight": "bold", "textAlign": "right", "display": "inline-block", "width": "25%"})
+            ], style={"display": "flex", "justifyContent": "space-between", 
+                     "padding": "8px 0", "borderBottom": "1px solid #f0f0f0"}) 
+            for sector, score in top_3
+        ])
+    ], className="summary-section", style={"backgroundColor": "#f8f9fa", "padding": "15px", "borderRadius": "6px"})
     
     bottom_sectors = html.Div([
-        html.H4("Weakest Sectors", className="summary-title"),
-        html.Ul([
-            html.Li([
-                html.Span(f"{sector}: ", className="sector-name"),
+        html.H4("Weakest Sectors", className="summary-title", 
+               style={"marginTop": "0", "marginBottom": "12px", "color": "#2c3e50", "fontWeight": "500"}),
+        html.Div([
+            html.Div([
+                html.Span(f"{sector}", className="sector-name", 
+                         style={"fontWeight": "500", "display": "inline-block", "width": "75%"}),
                 html.Span(f"{score:.1f}", 
                          className="sector-score-positive" if score >= 60 else 
                                   "sector-score-neutral" if score >= 40 else 
-                                  "sector-score-negative")
-            ]) for sector, score in bottom_3
-        ], className="sector-list")
-    ], className="summary-section")
+                                  "sector-score-negative",
+                         style={"fontWeight": "bold", "textAlign": "right", "display": "inline-block", "width": "25%"})
+            ], style={"display": "flex", "justifyContent": "space-between", 
+                     "padding": "8px 0", "borderBottom": "1px solid #f0f0f0"}) 
+            for sector, score in bottom_3
+        ])
+    ], className="summary-section", style={"backgroundColor": "#f8f9fa", "padding": "15px", "borderRadius": "6px"})
     
-    return html.Div([top_sectors, bottom_sectors], className="sector-summary-content")
+    return html.Div([top_sectors, bottom_sectors], className="sector-summary-content", 
+                   style={"display": "flex", "gap": "20px", "marginTop": "15px"})
 
 # Calculate T2D Pulse score from sector scores and weights
 def calculate_t2d_pulse(sector_scores, weights):
@@ -369,10 +380,7 @@ initial_pulse_card, initial_status, initial_color = create_pulse_card(initial_t2
 
 # Create the layout
 app.layout = html.Div([
-    html.Div([
-        html.Img(src="assets/images/t2d_pulse_logo.png", className="logo"),
-        html.H1("Economic Dashboard", className="dashboard-title")
-    ], className="header"),
+    # Header removed as requested
     
     html.Div([
         # T2D Pulse and Summary Section
@@ -395,9 +403,12 @@ app.layout = html.Div([
             
             # Sector Summary
             html.Div([
-                html.H3("Sector Summary", className="section-subtitle"),
+                html.H3("Sector Summary", className="section-subtitle", 
+                       style={"marginBottom": "15px", "fontWeight": "500", "color": "#2c3e50"}),
                 html.Div(id="sector-summary", children=create_sector_summary())
-            ], className="sector-summary-container")
+            ], className="sector-summary-container", 
+               style={"marginTop": "25px", "padding": "20px", "backgroundColor": "white", 
+                      "borderRadius": "8px", "boxShadow": "0 2px 4px rgba(0,0,0,0.05)"})
         ], className="pulse-summary-section"),
         
         # Sector Cards Section
