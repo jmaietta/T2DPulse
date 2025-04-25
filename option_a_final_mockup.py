@@ -189,8 +189,11 @@ def create_sector_cards(sector_scores, weights):
             
             # Card body with all the details
             html.Div([
-                # Stance badge
-                html.Span(sentiment, className=f"sector-badge {badge_class}"),
+                # Header and sentiment badge
+                html.Div([
+                    html.P(takeaway, className="sector-takeaway"),
+                    html.Span(sentiment, className=f"sector-badge {badge_class}")
+                ], className="takeaway-badge-container"),
                 
                 # Scale indicator
                 html.Div([
@@ -200,8 +203,7 @@ def create_sector_cards(sector_scores, weights):
                     ], className="scale-track")
                 ], className="sector-score-scale"),
                 
-                # Takeaway and drivers
-                html.P(takeaway, className="sector-takeaway"),
+                # Drivers section
                 
                 # Drivers list
                 html.Ul([
@@ -791,11 +793,20 @@ app.index_string = '''
                 z-index: 1;
             }
             
+            /* Takeaway Badge Container */
+            .takeaway-badge-container {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 10px;
+            }
+            
             /* Sector Takeaway */
             .sector-takeaway {
                 font-weight: 500;
-                margin: 0 0 12px 0;
+                margin: 0;
                 font-size: 14px;
+                flex: 1;
             }
             
             /* Drivers List */
