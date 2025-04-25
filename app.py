@@ -2217,6 +2217,15 @@ def create_sector_summary(sector_scores):
     top_3 = sorted_sectors[:3]
     bottom_3 = sorted_sectors[-3:]
     
+    # Function to get color based on score
+    def get_score_color(score):
+        if score >= 60:
+            return "#2ecc71"  # Green for Bullish
+        elif score >= 30:
+            return "#f39c12"  # Orange for Neutral
+        else:
+            return "#e74c3c"  # Red for Bearish
+    
     top_sectors = html.Div([
         html.H4("Strongest Sectors", className="summary-title", 
                style={"marginTop": "0", "marginBottom": "12px", "color": "#2c3e50", 
@@ -2227,15 +2236,24 @@ def create_sector_summary(sector_scores):
                 html.Span(f"{sector}", className="sector-name", 
                          style={"fontWeight": "500", "display": "inline-block", "width": "75%"}),
                 html.Span(f"{score:.1f}", 
-                         className="sector-score-positive" if score >= 60 else 
-                                  "sector-score-neutral" if score >= 30 else 
-                                  "sector-score-negative",
-                         style={"fontWeight": "bold", "textAlign": "right", "display": "inline-block", "width": "25%"})
+                         style={
+                             "fontWeight": "bold", 
+                             "textAlign": "right", 
+                             "display": "inline-block", 
+                             "width": "25%",
+                             "color": get_score_color(score)
+                         })
             ], style={"display": "flex", "justifyContent": "space-between", 
                      "padding": "8px 0", "borderBottom": "1px solid #f0f0f0"}) 
             for sector, score in top_3
         ])
-    ], className="summary-section", style={"backgroundColor": "#f8f9fa", "padding": "15px", "borderRadius": "6px"})
+    ], className="summary-section", style={
+        "backgroundColor": "white", 
+        "padding": "15px", 
+        "borderRadius": "6px",
+        "boxShadow": "0 1px 3px rgba(0,0,0,0.05)",
+        "width": "48%"
+    })
     
     bottom_sectors = html.Div([
         html.H4("Weakest Sectors", className="summary-title", 
@@ -2247,18 +2265,33 @@ def create_sector_summary(sector_scores):
                 html.Span(f"{sector}", className="sector-name", 
                          style={"fontWeight": "500", "display": "inline-block", "width": "75%"}),
                 html.Span(f"{score:.1f}", 
-                         className="sector-score-positive" if score >= 60 else 
-                                  "sector-score-neutral" if score >= 30 else 
-                                  "sector-score-negative",
-                         style={"fontWeight": "bold", "textAlign": "right", "display": "inline-block", "width": "25%"})
+                         style={
+                             "fontWeight": "bold", 
+                             "textAlign": "right", 
+                             "display": "inline-block", 
+                             "width": "25%",
+                             "color": get_score_color(score)
+                         })
             ], style={"display": "flex", "justifyContent": "space-between", 
                      "padding": "8px 0", "borderBottom": "1px solid #f0f0f0"}) 
             for sector, score in bottom_3
         ])
-    ], className="summary-section", style={"backgroundColor": "#f8f9fa", "padding": "15px", "borderRadius": "6px"})
+    ], className="summary-section", style={
+        "backgroundColor": "white", 
+        "padding": "15px", 
+        "borderRadius": "6px",
+        "boxShadow": "0 1px 3px rgba(0,0,0,0.05)",
+        "width": "48%"
+    })
     
     return html.Div([top_sectors, bottom_sectors], className="sector-summary-content", 
-                   style={"display": "flex", "gap": "20px", "marginTop": "15px", "flexWrap": "wrap"})
+                   style={
+                       "display": "flex", 
+                       "justifyContent": "space-between",
+                       "gap": "20px", 
+                       "marginTop": "15px", 
+                       "flexWrap": "wrap"
+                   })
 
 # Update sentiment gauge
 def create_pulse_card(value):
@@ -5543,25 +5576,21 @@ def update_sector_sentiment_container(n):
     # Create the sector summary component
     sector_summary = create_sector_summary(sector_score_dict)
     
-    # Combine the scale legend, sector summary, and sector cards in a single container
+    # Combine the scale legend and sector cards in a single container
     return html.Div([
-        # Top section with legend and summary side by side
+        # Scale legend at the top
+        scale_legend,
+        
+        # Sector summary in a card like in the mockup
         html.Div([
-            # Left side: Scale legend
-            html.Div([scale_legend], className="summary-column", style={"flex": "1"}),
-            
-            # Right side: Sector summary
-            html.Div([
-                html.H3("Sector Summary", className="section-subtitle", 
-                       style={"marginBottom": "15px", "fontWeight": "500", "color": "#2c3e50"}),
-                sector_summary
-            ], className="summary-column", style={"flex": "1"})
-        ], className="summary-row", style={
-            "display": "flex", 
-            "gap": "20px", 
-            "marginBottom": "20px",
-            "flexWrap": "wrap"
-        }),
+            html.H3("Sector Summary", className="section-subtitle", 
+                   style={"marginBottom": "15px", "fontWeight": "500", "color": "#2c3e50", 
+                          "textAlign": "center"}),
+            sector_summary
+        ], className="sector-summary-container", 
+           style={"marginTop": "25px", "marginBottom": "25px", "padding": "20px", 
+                  "backgroundColor": "white", "borderRadius": "8px", 
+                  "boxShadow": "0 2px 4px rgba(0,0,0,0.05)"}),
         
         # Sector cards below
         html.Div(sector_cards, className="sector-cards-container")
