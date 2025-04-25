@@ -380,10 +380,10 @@ app.layout = html.Div([
             html.H2("T2D Pulse", className="section-title"),
             
             html.Div([
-                # T2D Pulse Card with Glow
+                # T2D Pulse Card with Glow - now centered on the page
                 html.Div([
                     html.Div(id="pulse-card-container", children=initial_pulse_card)
-                ], className="pulse-card-container"),
+                ], className="pulse-card-container", style={"display": "flex", "justifyContent": "center", "width": "100%"}),
                 
                 # Explanation Text
                 html.Div([
@@ -394,7 +394,7 @@ app.layout = html.Div([
                               className="pulse-instructions")
                     ], className="pulse-description-container")
                 ], className="pulse-explanation")
-            ], className="pulse-content"),
+            ], className="pulse-content", style={"flexDirection": "column", "alignItems": "center"}),
             
             # Sector Summary
             html.Div([
