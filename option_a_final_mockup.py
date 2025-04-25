@@ -388,10 +388,10 @@ app.layout = html.Div([
                 # Explanation Text
                 html.Div([
                     html.P(id="pulse-description", children="Based on weighted sector average", 
-                          className="pulse-note"),
+                          className="pulse-note", style={"textAlign": "center"}),
                     html.Div([
                         html.P("Adjust sector weights to customize the T2D Pulse for your investment focus.", 
-                              className="pulse-instructions")
+                              className="pulse-instructions", style={"textAlign": "center"})
                     ], className="pulse-description-container")
                 ], className="pulse-explanation")
             ], className="pulse-content", style={"flexDirection": "column", "alignItems": "center"}),
