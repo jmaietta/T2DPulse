@@ -97,33 +97,85 @@ def create_gauge_chart(value):
     
     return fig, pulse_status, pulse_color
 
+# Generate sample tickers for mockup purposes
+def generate_sample_tickers(sector):
+    """Generate sample tickers for mockup purposes"""
+    if sector == "Cloud Infrastructure":
+        return ["AMZN", "MSFT", "GOOG"]
+    elif sector == "AI Infrastructure":
+        return ["NVDA", "AMD", "INTC"]
+    elif sector == "Cybersecurity":
+        return ["CRWD", "PANW", "ZS"]
+    elif sector == "Fintech":
+        return ["SQ", "PYPL", "COIN"]
+    elif sector == "Enterprise SaaS":
+        return ["CRM", "WDAY", "NOW"]
+    elif sector == "SMB SaaS":
+        return ["HUG", "DDOG", "ZM"]
+    elif sector == "AdTech":
+        return ["GOOG", "FB", "TTD"]
+    elif sector == "Consumer Internet":
+        return ["NFLX", "SPOT", "PINS"]
+    elif sector == "eCommerce":
+        return ["AMZN", "SHOP", "ETSY"]
+    elif sector == "Dev Tools / Analytics":
+        return ["TEAM", "TWLO", "SNOW"]
+    elif sector == "Semiconductors":
+        return ["NVDA", "INTC", "AMD"]
+    elif sector == "Vertical SaaS":
+        return ["VEEV", "TDOC", "REAL"]
+    elif sector == "IT Services / Legacy Tech":
+        return ["IBM", "CSCO", "ORCL"]
+    elif sector == "Hardware / Devices":
+        return ["AAPL", "SONO", "FIT"]
+    else:
+        # Generate random tickers for other sectors
+        return [f"{sector[0:2].upper()}{i}" for i in range(1, 4)]
+
 # Create sector cards with embedded weight controls
 def create_sector_cards(sector_scores, weights):
     cards = []
     
     for sector, score in sector_scores.items():
-        # Determine color based on score
+        # Determine color and sentiment based on score
         if score >= 60:
             sentiment = "Bullish"
             bg_color = "#ebf7f0"  # Light green background
             border_color = "#2ecc71"  # Green border
             text_color = "#27ae60"  # Darker green text
+            takeaway = "Outperforming peers"
+            badge_class = "badge-bullish"
         elif score >= 40:
             sentiment = "Neutral"
             bg_color = "#fef5e7"  # Light yellow background
             border_color = "#f39c12"  # Orange border
             text_color = "#d35400"  # Darker orange text
+            takeaway = "Neutral – monitor trends"
+            badge_class = "badge-neutral"
         else:
             sentiment = "Bearish"
             bg_color = "#fdedec"  # Light red background
             border_color = "#e74c3c"  # Red border  
             text_color = "#c0392b"  # Darker red text
+            takeaway = "Bearish macro setup"
+            badge_class = "badge-bearish"
+        
+        # Generate sample drivers based on sentiment
+        drivers = [
+            f"Strong signal from {'revenue growth' if score > 50 else 'market trends'}",
+            f"{'Positive' if score > 50 else 'Negative'} impact from economic indicators",
+            f"Monitor {'opportunities' if score > 50 else 'headwinds'} in coming quarter"
+        ]
+        
+        # Get sample tickers for this sector
+        tickers = generate_sample_tickers(sector)
         
         # Calculate percentage weight
         weight_pct = weights[sector]
         
-        # Create the sector card (styled like existing dashboard)
+        # Create the sector card with original format: comments, bullets and tickers
         card = html.Div([
+            # Header with sector name and score
             html.Div([
                 html.Div([
                     html.H3(sector, className="sector-card-title"),
@@ -135,7 +187,33 @@ def create_sector_cards(sector_scores, weights):
                 ], className="card-header-content")
             ], className="sector-card-header", style={"borderColor": border_color}),
             
+            # Card body with all the details
             html.Div([
+                # Stance badge
+                html.Span(sentiment, className=f"sector-badge {badge_class}"),
+                
+                # Scale indicator
+                html.Div([
+                    html.Div([
+                        html.Div(className="scale-marker", 
+                                 style={"left": f"{min(max(score, 0), 100)}%"})
+                    ], className="scale-track")
+                ], className="sector-score-scale"),
+                
+                # Takeaway and drivers
+                html.P(takeaway, className="sector-takeaway"),
+                
+                # Drivers list
+                html.Ul([
+                    html.Li(driver) for driver in drivers
+                ], className="drivers-list"),
+                
+                # Tickers
+                html.Div([
+                    html.Span(ticker, className="ticker-badge") for ticker in tickers
+                ], className="tickers-container"),
+                
+                # Weight controls
                 html.Div([
                     html.Div([
                         html.Span("Weight:", className="weight-label"),
@@ -662,10 +740,101 @@ app.index_string = '''
                 padding: 15px;
             }
             
+            /* Sector Badge */
+            .sector-badge {
+                display: inline-block;
+                padding: 4px 8px;
+                border-radius: 4px;
+                font-size: 12px;
+                font-weight: bold;
+                margin-bottom: 10px;
+            }
+            
+            .badge-bullish {
+                background-color: #2ecc71;
+                color: white;
+            }
+            
+            .badge-neutral {
+                background-color: #f39c12;
+                color: white;
+            }
+            
+            .badge-bearish {
+                background-color: #e74c3c;
+                color: white;
+            }
+            
+            /* Sector Score Scale */
+            .sector-score-scale {
+                height: 6px;
+                margin: 10px 0 15px;
+                position: relative;
+            }
+            
+            .scale-track {
+                height: 100%;
+                background: linear-gradient(to right, #e74c3c 0%, #e74c3c 30%, #f39c12 30%, #f39c12 60%, #2ecc71 60%, #2ecc71 100%);
+                border-radius: 3px;
+                position: relative;
+            }
+            
+            .scale-marker {
+                width: 10px;
+                height: 10px;
+                background-color: white;
+                border: 2px solid #34495e;
+                border-radius: 50%;
+                position: absolute;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                z-index: 1;
+            }
+            
+            /* Sector Takeaway */
+            .sector-takeaway {
+                font-weight: 500;
+                margin: 0 0 12px 0;
+                font-size: 14px;
+            }
+            
+            /* Drivers List */
+            .drivers-list {
+                margin: 0 0 15px 20px;
+                padding: 0;
+                font-size: 13px;
+                color: #555;
+            }
+            
+            .drivers-list li {
+                margin-bottom: 5px;
+            }
+            
+            /* Tickers Container */
+            .tickers-container {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 5px;
+                margin-bottom: 15px;
+            }
+            
+            .ticker-badge {
+                background-color: #eee;
+                color: #34495e;
+                padding: 3px 8px;
+                border-radius: 3px;
+                font-size: 12px;
+                font-weight: bold;
+            }
+            
+            /* Weight Controls */
             .weight-controls {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
+                border-top: 1px solid rgba(0,0,0,0.1);
+                padding-top: 10px;
+                margin-top: 5px;
             }
             
             .weight-display-container {
