@@ -236,8 +236,8 @@ initial_fig, initial_status, initial_color = create_gauge_chart(initial_t2d_puls
 # Create the layout
 app.layout = html.Div([
     html.Div([
-        html.Img(src="assets/images/t2d_logo.png", className="logo"),
-        html.H1("T2D Pulse Economic Dashboard", className="dashboard-title")
+        html.Img(src="assets/images/t2d_pulse_logo.png", className="logo"),
+        html.H1("Economic Dashboard", className="dashboard-title")
     ], className="header"),
     
     html.Div([
@@ -461,7 +461,7 @@ app.index_string = '''
             }
             
             .logo {
-                height: 40px;
+                height: 60px;
                 margin-right: 20px;
             }
             
