@@ -3488,8 +3488,8 @@ def update_nasdaq_graph(n):
     cutoff_date = datetime.now() - timedelta(days=180)
     filtered_data = nasdaq_data[nasdaq_data['date'] >= cutoff_date].copy()
     
-    # Create figure with both value and EMA gap
-    fig = make_subplots(specs=[[{"secondary_y": True}]])
+    # Create figure with NASDAQ and EMA only (no gap)
+    fig = go.Figure()
     
     # Add NASDAQ value line
     fig.add_trace(
@@ -3499,8 +3499,7 @@ def update_nasdaq_graph(n):
             mode='lines',
             name='NASDAQ Composite',
             line=dict(color='purple', width=3),
-        ),
-        secondary_y=False
+        )
     )
     
     # Add 20-day EMA line if available
@@ -3512,37 +3511,8 @@ def update_nasdaq_graph(n):
                 mode='lines',
                 name='20-Day EMA',
                 line=dict(color='blue', width=2, dash='dash'),
-            ),
-            secondary_y=False
+            )
         )
-        
-        # Add gap percentage (momentum indicator)
-        if 'gap_pct' in filtered_data.columns:
-            fig.add_trace(
-                go.Scatter(
-                    x=filtered_data['date'],
-                    y=filtered_data['gap_pct'],
-                    mode='lines',
-                    name='Gap from EMA (%)',
-                    line=dict(color='red', width=2),
-                ),
-                secondary_y=True
-            )
-            
-            # Add zero line for the gap percentage
-            fig.add_shape(
-                type="line",
-                x0=filtered_data['date'].min(),
-                x1=filtered_data['date'].max(),
-                y0=0,
-                y1=0,
-                line=dict(
-                    color=color_scheme["neutral"],
-                    width=1.5,
-                    dash="dot",
-                ),
-                yref="y2"
-            )
     # Legacy: Show percent change if EMA not available
     elif 'pct_change' in filtered_data.columns:
         # Calculate moving average for smoothing
@@ -3554,9 +3524,8 @@ def update_nasdaq_graph(n):
                 y=filtered_data['pct_change_ma'],
                 mode='lines',
                 name='30-Day Avg % Change',
-                line=dict(color='green', width=2, dash='dot'),
-            ),
-            secondary_y=True
+                line=dict(color='green', width=2, dash='dot')
+            )
         )
     
     # Add current value annotation
@@ -3607,9 +3576,8 @@ def update_nasdaq_graph(n):
         )
     )
     
-    # Update y-axes
-    fig.update_yaxes(title_text="NASDAQ Composite", secondary_y=False)
-    fig.update_yaxes(title_text="Gap from 20-day EMA", ticksuffix="%", secondary_y=True)
+    # Update y-axis
+    fig.update_yaxes(title_text="NASDAQ Composite")
     
     return fig
 
