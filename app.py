@@ -735,7 +735,7 @@ def calculate_t2d_pulse_from_sectors(sector_scores, sector_weights=None):
     """Calculate T2D Pulse score as a weighted average of sector scores
     
     Args:
-        sector_scores (list): List of dictionaries with sector scores
+        sector_scores (dict or list): Dictionary with sector scores {sector: score} or list of sector dictionaries
         sector_weights (dict, optional): Dictionary with custom weights for each sector
         
     Returns:
@@ -744,8 +744,13 @@ def calculate_t2d_pulse_from_sectors(sector_scores, sector_weights=None):
     if not sector_scores:
         return 50.0  # Default neutral score if no sector data
     
-    # Create a dictionary for easier access
-    sector_data = {s['sector']: s['normalized_score'] for s in sector_scores}
+    # Handle both dictionary and list input formats
+    if isinstance(sector_scores, list):
+        # Create a dictionary for easier access if input is a list
+        sector_data = {s['sector']: s['normalized_score'] for s in sector_scores}
+    else:
+        # If already a dictionary, use as is
+        sector_data = sector_scores
     
     # Use equal weights if no custom weights provided
     if not sector_weights:
@@ -754,17 +759,25 @@ def calculate_t2d_pulse_from_sectors(sector_scores, sector_weights=None):
     else:
         # Normalize weights to sum to 100%
         total_weight = sum(sector_weights.values())
-        sector_weights = {k: (v / total_weight * 100) for k, v in sector_weights.items()}
+        if total_weight > 0:  # Avoid division by zero
+            sector_weights = {k: (v / total_weight * 100) for k, v in sector_weights.items()}
     
     # Calculate weighted average
-    weighted_sum = sum(sector_data[sector] * sector_weights[sector] 
-                       for sector in sector_data.keys() 
-                       if sector in sector_weights)
+    weighted_sum = 0
+    total_applied_weight = 0
     
-    # Divide by sum of weights
-    pulse_score = weighted_sum / 100.0
+    for sector, score in sector_data.items():
+        if sector in sector_weights:
+            weight = sector_weights[sector]
+            weighted_sum += score * weight
+            total_applied_weight += weight
     
-    return round(pulse_score, 1)
+    # Return pulse score (divide by total applied weight to normalize)
+    if total_applied_weight > 0:
+        pulse_score = weighted_sum / 100.0
+        return round(pulse_score, 1)
+    else:
+        return 50.0  # Default neutral score if no weights could be applied
 
 def calculate_sentiment_index(custom_weights=None, proprietary_data=None, document_data=None):
     """Calculate economic sentiment index from available indicators
@@ -4713,16 +4726,49 @@ from plotly.subplots import make_subplots
     prevent_initial_call=False
 )
 def initialize_sentiment_index(_, custom_weights, document_data):
-    # Always use the current custom weights and document data
-    # This will respond to changes in the custom-weights-store
-    sentiment_index = calculate_sentiment_index(
-        custom_weights=custom_weights,
-        document_data=document_data
-    )
-    return (
-        f"{sentiment_index['score']:.1f}" if sentiment_index else "N/A", 
-        sentiment_index['category'] if sentiment_index else "N/A"
-    )
+    # Get sector scores - this is the new approach
+    sector_scores = calculate_sector_sentiment()
+    
+    # Calculate T2D Pulse score from sector scores
+    if sector_scores:
+        # Create a dictionary of sector scores for the pulse calculation
+        sector_scores_dict = {s['sector']: s['normalized_score'] for s in sector_scores}
+        
+        # Create default equal weights if none exist
+        sector_weights = {}
+        if sector_scores:
+            equal_weight = 100.0 / len(sector_scores)
+            sector_weights = {s['sector']: equal_weight for s in sector_scores}
+        
+        # Calculate the T2D Pulse score as weighted average of sector scores
+        pulse_score = calculate_t2d_pulse_from_sectors(sector_scores_dict, sector_weights)
+        
+        # Log what's happening
+        print(f"Calculating T2D Pulse score from {len(sector_scores)} sector scores")
+        print(f"Using following sector weights: {sector_weights}")
+        print(f"Calculated T2D Pulse Score: {pulse_score}")
+        
+        # Determine category based on score
+        if pulse_score >= 60:
+            category = "Bullish"
+        elif pulse_score >= 30:
+            category = "Neutral"
+        else:
+            category = "Bearish"
+        
+        # Return the data in the expected format
+        return (f"{pulse_score:.1f}", category)
+    else:
+        # Fallback to old method if sector scores aren't available
+        print("No sector scores available, falling back to economic indicators method")
+        sentiment_index = calculate_sentiment_index(
+            custom_weights=custom_weights,
+            document_data=document_data
+        )
+        return (
+            f"{sentiment_index['score']:.1f}" if sentiment_index else "N/A", 
+            sentiment_index['category'] if sentiment_index else "N/A"
+        )
 
 # Document weight display update
 @app.callback(
@@ -5400,9 +5446,16 @@ def update_sector_sentiment_container(n):
             html.Div([
                 html.Div(sector, className="sector-name"),
                 html.Div([
-                    html.Div(f"{norm_score:.1f}", className=f"sector-score {score_class}"),
-                    html.Div(stance, className="sector-sentiment", style={"color": color_scheme["positive"] if score_class == "score-positive" else (color_scheme["negative"] if score_class == "score-negative" else color_scheme["neutral"])})
-                ], className="score-container")
+                    html.Div(f"{norm_score:.1f}", className=f"sector-score {score_class}", 
+                             style={"textAlign": "left"}),
+                    html.Div(stance, className="sector-sentiment", 
+                             style={
+                                 "color": color_scheme["positive"] if score_class == "score-positive" 
+                                         else (color_scheme["negative"] if score_class == "score-negative" 
+                                               else color_scheme["neutral"]),
+                                 "textAlign": "left"
+                             })
+                ], className="score-container", style={"textAlign": "left"})
             ], className="sector-card-header"),
             
             # Score indicator bar (new)
