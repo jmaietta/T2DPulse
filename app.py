@@ -2693,6 +2693,7 @@ def update_indicator_trends(n):
     return gdp_trend, pce_trend, unemployment_trend, job_postings_trend, inflation_trend, pcepi_trend, interest_rate_trend, nasdaq_trend, software_ppi_trend, data_ppi_trend, treasury_yield_trend, vix_trend, consumer_sentiment_trend
 
 # Update GDP Graph function (generates figure only)
+
 def update_gdp_graph(n):
     """Generate the GDP chart figure"""
     if gdp_data.empty or 'yoy_growth' not in gdp_data.columns:
@@ -2753,11 +2754,11 @@ def update_gdp_graph(n):
             showarrow=False,
             font=dict(size=14, color=arrow_color),
             align="left",
-            bgcolor="rgba(255, 255, 255, 0.9)",
+            bgcolor="rgba(255, 255, 255, 1.0)",  # Full opacity white background
             bordercolor=arrow_color,
             borderwidth=1,
             borderpad=4,
-            opacity=0.9
+            opacity=1.0  # Full opacity
         )
     
     # Update layout with custom template
@@ -2768,12 +2769,27 @@ def update_gdp_graph(n):
         margin=dict(l=40, r=40, t=40, b=40),
         xaxis_title="",
         yaxis_title="Year-over-Year % Change",
+        # Format x-axis dates to show quarters
+        xaxis=dict(
+            tickformat="Q%q %Y",  # This formats as "Q1 2023", "Q2 2023", etc.
+            tickangle=-45,  # Angle the labels for better readability
+            tickmode="auto",
+            nticks=10,  # Limit number of ticks to avoid overcrowding
+        ),
         yaxis=dict(
             ticksuffix="%",
             zeroline=True,
             zerolinecolor='rgba(0,0,0,0.2)',
         ),
         hovermode="x unified",
+        # Make hover label more legible with solid white background
+        hoverlabel=dict(
+            bgcolor="white",
+            font_size=14,
+            font_family="Arial",
+            bordercolor="#cccccc",
+            namelength=-1  # Show full variable name
+        ),
         legend=dict(
             orientation="h",
             yanchor="bottom",
@@ -2783,9 +2799,7 @@ def update_gdp_graph(n):
         )
     )
     
-    return fig
-
-# Update GDP Container with chart and insights panel
+    return fig# Update GDP Container with chart and insights panel
 @app.callback(
     Output("gdp-container", "children"),
     [Input("interval-component", "n_intervals")]
@@ -2813,6 +2827,7 @@ def update_gdp_graph_callback(n):
     return update_gdp_graph(n)
 
 # Update PCE Graph (generates figure only)
+
 def update_pce_graph(n):
     """Generate the PCE chart figure"""
     if pce_data.empty or 'yoy_growth' not in pce_data.columns:
@@ -2833,8 +2848,8 @@ def update_pce_graph(n):
         x=filtered_data['date'],
         y=filtered_data['yoy_growth'],
         mode='lines+markers',
-        name='PCE Growth (YoY %)',
-        line=dict(color=color_scheme["consumption"], width=3),
+        name='Real PCE Growth (YoY %)',
+        line=dict(color=color_scheme["growth"], width=3),
         marker=dict(size=8)
     ))
     
@@ -2873,11 +2888,11 @@ def update_pce_graph(n):
             showarrow=False,
             font=dict(size=14, color=arrow_color),
             align="left",
-            bgcolor="rgba(255, 255, 255, 0.9)",
+            bgcolor="rgba(255, 255, 255, 1.0)",  # Full opacity white background
             bordercolor=arrow_color,
             borderwidth=1,
             borderpad=4,
-            opacity=0.9
+            opacity=1.0  # Full opacity
         )
     
     # Update layout with custom template
@@ -2894,6 +2909,14 @@ def update_pce_graph(n):
             zerolinecolor='rgba(0,0,0,0.2)',
         ),
         hovermode="x unified",
+        # Make hover label more legible with solid white background
+        hoverlabel=dict(
+            bgcolor="white",
+            font_size=14,
+            font_family="Arial",
+            bordercolor="#cccccc",
+            namelength=-1  # Show full variable name
+        ),
         legend=dict(
             orientation="h",
             yanchor="bottom",
@@ -2903,9 +2926,7 @@ def update_pce_graph(n):
         )
     )
     
-    return fig
-
-# Update PCE Container with chart and insights panel
+    return fig# Update PCE Container with chart and insights panel
 @app.callback(
     Output("pce-container", "children"),
     [Input("interval-component", "n_intervals")]
@@ -3847,6 +3868,7 @@ def update_data_ppi_container(n):
         return [dcc.Graph(id="data-ppi-graph", figure=figure)]
 
 # Update Interest Rate Graph (generates figure only)
+        return [dcc.Graph(id="interest-rate-graph", figure=figure)]
 def update_interest_rate_graph(n):
     """Generate the Federal Funds Rate chart figure"""
     if interest_rate_data.empty:
@@ -3855,48 +3877,56 @@ def update_interest_rate_graph(n):
             height=400
         )
     
-    # Filter for last 5 years
-    cutoff_date = datetime.now() - timedelta(days=5*365)
+    # Filter for last 3 years
+    cutoff_date = datetime.now() - timedelta(days=3*365)
     filtered_data = interest_rate_data[interest_rate_data['date'] >= cutoff_date].copy()
     
     # Create figure
     fig = go.Figure()
     
-    # Add Federal Funds Rate line with consistent color scheme
+    # Add Federal Funds Rate line
     fig.add_trace(go.Scatter(
         x=filtered_data['date'],
         y=filtered_data['value'],
-        mode='lines',
-        name='Federal Funds Rate',
-        line=dict(color=color_scheme["rates"], width=3),
+        mode='lines+markers',
+        name='Federal Funds Rate (%)',
+        line=dict(color=color_scheme["interest"], width=3),
+        marker=dict(size=8)
     ))
     
     # Add current value annotation
-    current_value = filtered_data['value'].iloc[-1]
-    previous_value = filtered_data['value'].iloc[-2]
-    change = current_value - previous_value
-    
-    # Using absolute value change (not percentage) to match key indicators
-    arrow_color = color_scheme["positive"] if change < 0 else color_scheme["negative"]
-    arrow_symbol = "▲" if change > 0 else "▼"
-    
-    current_value_annotation = f"Current: {current_value:.2f}% {arrow_symbol} {abs(change):.2f}%"
-    
-    fig.add_annotation(
-        x=0.02,
-        y=0.95,
-        xref="paper",
-        yref="paper",
-        text=current_value_annotation,
-        showarrow=False,
-        font=dict(size=14, color=arrow_color),
-        align="left",
-        bgcolor="rgba(255, 255, 255, 0.9)",
-        bordercolor=arrow_color,
-        borderwidth=1,
-        borderpad=4,
-        opacity=0.9
-    )
+    if not filtered_data.empty:
+        current_value = filtered_data['value'].iloc[-1]
+        
+        # If we have at least two data points, calculate the change
+        if len(filtered_data) >= 2:
+            previous_value = filtered_data['value'].iloc[-2]
+            change = current_value - previous_value
+            
+            # Determine arrow direction and color
+            arrow_color = color_scheme["positive"] if change < 0 else color_scheme["negative"]
+            arrow_symbol = "▼" if change < 0 else "▲"
+            
+            current_value_annotation = f"Current: {current_value:.2f}% {arrow_symbol} {abs(change):.2f}%"
+        else:
+            current_value_annotation = f"Current: {current_value:.2f}%"
+            arrow_color = color_scheme["neutral"]
+        
+        fig.add_annotation(
+            x=0.02,
+            y=0.95,
+            xref="paper",
+            yref="paper",
+            text=current_value_annotation,
+            showarrow=False,
+            font=dict(size=14, color=arrow_color),
+            align="left",
+            bgcolor="rgba(255, 255, 255, 1.0)",  # Full opacity white background
+            bordercolor=arrow_color,
+            borderwidth=1,
+            borderpad=4,
+            opacity=1.0  # Full opacity
+        )
     
     # Update layout with custom template
     fig.update_layout(
@@ -3905,13 +3935,19 @@ def update_interest_rate_graph(n):
         title=None,
         margin=dict(l=40, r=40, t=40, b=40),
         xaxis_title="",
-        yaxis_title="Rate (%)",
+        yaxis_title="Interest Rate (%)",
         yaxis=dict(
             ticksuffix="%",
-            zeroline=True,
-            zerolinecolor='rgba(0,0,0,0.2)',
         ),
         hovermode="x unified",
+        # Make hover label more legible with solid white background
+        hoverlabel=dict(
+            bgcolor="white",
+            font_size=14,
+            font_family="Arial",
+            bordercolor="#cccccc",
+            namelength=-1  # Show full variable name
+        ),
         legend=dict(
             orientation="h",
             yanchor="bottom",
@@ -3921,24 +3957,7 @@ def update_interest_rate_graph(n):
         )
     )
     
-    return fig
-
-# Update Interest Rate Container with chart and insights panel
-@app.callback(
-    Output("interest-rate-container", "children"),
-    [Input("interval-component", "n_intervals")]
-)
-def update_interest_rate_container(n):
-    """Update the Federal Funds Rate container to include both the graph and insights panel"""
-    # Get the chart figure
-    figure = update_interest_rate_graph(n)
-    
-    # Check for valid data and required columns
-    if interest_rate_data.empty or 'value' not in interest_rate_data.columns or 'date' not in interest_rate_data.columns:
-        # Return just the graph without insights panel
-        print("Interest Rate data missing required columns or empty")
-        return [dcc.Graph(id="interest-rate-graph", figure=figure)]
-    
+    return fig    
     try:
         # Print debugging info
         print(f"Interest Rate data columns: {interest_rate_data.columns.tolist()}")
