@@ -1833,7 +1833,7 @@ app.layout = html.Div([
                 ], className="indicator"),
             ], className="card indicators-card"),
             
-            # Custom Weight Adjustment
+            # Custom Weight Adjustment (Hidden as requested)
             html.Div([
                 html.H3("Customize Index Weights", className="card-title"),
                 html.Div([
@@ -2015,7 +2015,7 @@ app.layout = html.Div([
                     
                     html.Button("Apply Weights", id="apply-weights", className="apply-button"),
                 ], className="weights-container")
-            ], className="card weights-card"),
+            ], className="card weights-card", style={"display": "none"}),
             
             # Document Analysis Card
             html.Div([
