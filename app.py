@@ -5369,12 +5369,12 @@ def update_sector_sentiment_container(n):
         card = html.Div([
             # Header with sector name and normalized score
             html.Div([
-                html.Span(sector, className="sector-name"),
-                html.Span(f"{norm_score:.1f}", className=f"sector-score {score_class}")
+                html.Div(sector, className="sector-name"),
+                html.Div([
+                    html.Div(f"{norm_score:.1f}", className=f"sector-score {score_class}"),
+                    html.Div(stance, className="sector-sentiment", style={"color": color_scheme["positive"] if score_class == "score-positive" else (color_scheme["negative"] if score_class == "score-negative" else color_scheme["neutral"])})
+                ], className="score-container")
             ], className="sector-card-header"),
-            
-            # Stance badge
-            html.Span(stance, className=f"sector-badge {badge_class}"),
             
             # Score indicator bar (new)
             html.Div([
