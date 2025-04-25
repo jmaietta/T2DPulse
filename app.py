@@ -1126,6 +1126,9 @@ def calculate_sentiment_index(custom_weights=None, proprietary_data=None, docume
         # Scale score if missing indicators
         if available_weight_sum < 100:
             composite_score = composite_score * 100 / available_weight_sum
+            
+        # The current calculation already produces a score in the 0-100 range
+        # No additional normalization needed as it's already aligned with our desired scale
         
         # Determine sentiment category
         if composite_score >= 80:
