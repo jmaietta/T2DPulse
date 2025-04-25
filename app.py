@@ -695,21 +695,31 @@ def calculate_sector_sentiment():
             sector = sector_data["sector"]
             score = sector_data["score"]
             
-            # Determine stance based on score (similar to the React component)
-            if score <= -0.25:
+            # Normalize score from -1 to +1 scale to 0-100 scale
+            norm_score = ((score + 1.0) / 2.0) * 100
+            
+            # Round to 1 decimal place
+            norm_score = round(norm_score, 1)
+            
+            # Determine stance based on normalized score (0-100 scale)
+            # 0-30: Bearish (previously <= -0.25)
+            # 30-60: Neutral (previously between -0.25 and +0.05)
+            # 60-100: Bullish (previously >= +0.05)
+            if norm_score <= 30.0:
                 stance = "Bearish"
                 takeaway = "Bearish macro setup"
-            elif score >= 0.05:
+            elif norm_score >= 60.0:
                 stance = "Bullish"
                 takeaway = "Outperforming peers"
             else:
                 stance = "Neutral"
                 takeaway = "Neutral – monitor trends"
                 
-            # Add the enhanced data
+            # Add the enhanced data with both original and normalized scores
             enhanced_scores.append({
                 "sector": sector,
-                "score": score,
+                "score": score,  # Keep original score for compatibility
+                "normalized_score": norm_score,  # Add normalized score
                 "stance": stance,
                 "takeaway": takeaway,
                 "drivers": drivers.get(sector, []),
@@ -5284,18 +5294,42 @@ def update_sector_sentiment_container(n):
     if not sector_scores:
         return html.Div("Insufficient data to calculate sector sentiment", className="no-data-message")
     
-    # Create a scale legend
+    # Normalize sector scores from -1 to +1 scale to 0-100 scale
+    normalized_scores = []
+    for sector_data in sector_scores:
+        # Create a copy of the sector data
+        normalized_data = sector_data.copy()
+        
+        # Get the original score
+        orig_score = sector_data["score"]
+        
+        # Normalize to 0-100 scale using the formula ((score + 1.0) / 2.0) * 100
+        norm_score = ((orig_score + 1.0) / 2.0) * 100
+        
+        # Round to 1 decimal place
+        norm_score = round(norm_score, 1)
+        
+        # Store both scores
+        normalized_data["original_score"] = orig_score
+        normalized_data["normalized_score"] = norm_score
+        
+        # Update stance based on normalized score if needed
+        # (but we'll keep the existing stance for consistency)
+        
+        normalized_scores.append(normalized_data)
+    
+    # Create a normalized scale legend
     scale_legend = html.Div([
         html.Div([
-            "Sector Sentiment Scale:",
-            html.Span(" (Sector-specific scores derived from macro factors, separate from the T2D Pulse Sentiment Index)", 
+            "Sector Sentiment Scale (0-100):",
+            html.Span(" (Normalized to match T2D Pulse Sentiment Index scale)", 
                       className="scale-title-note")
         ], className="scale-title"),
         html.Div([
             html.Div([
-                html.Span("-0.5", className="scale-min"),
-                html.Span("0", className="scale-mid"),
-                html.Span("+0.5", className="scale-max")
+                html.Span("0", className="scale-min"),
+                html.Span("50", className="scale-mid"),
+                html.Span("100", className="scale-max")
             ], className="scale-numbers"),
             html.Div([
                 html.Div(className="scale-bar-bearish"),
@@ -5304,19 +5338,19 @@ def update_sector_sentiment_container(n):
             ], className="scale-bars")
         ], className="scale-container"),
         html.Div([
-            html.Div(["Bearish", html.Span("< -0.25", className="scale-range")], className="scale-label bearish"),
-            html.Div(["Neutral", html.Span("-0.25 to +0.05", className="scale-range")], className="scale-label neutral"),
-            html.Div(["Bullish", html.Span("> +0.05", className="scale-range")], className="scale-label bullish")
+            html.Div(["Bearish", html.Span("0-30", className="scale-range")], className="scale-label bearish"),
+            html.Div(["Neutral", html.Span("30-60", className="scale-range")], className="scale-label neutral"),
+            html.Div(["Bullish", html.Span("60-100", className="scale-range")], className="scale-label bullish")
         ], className="scale-labels")
     ], className="sector-scale-legend")
     
-    # Create cards for each sector
+    # Create cards for each sector using normalized scores
     sector_cards = []
     
-    for sector_data in sector_scores:
+    for sector_data in normalized_scores:
         # Extract data
         sector = sector_data["sector"]
-        score = sector_data["score"]
+        norm_score = sector_data["normalized_score"]
         stance = sector_data["stance"]
         takeaway = sector_data["takeaway"]
         drivers = sector_data["drivers"]
@@ -5333,17 +5367,24 @@ def update_sector_sentiment_container(n):
             score_class = "score-neutral"
             badge_class = "badge-neutral"
         
-        # Create the sector card
+        # Create the sector card with normalized score
         card = html.Div([
-            # Header with sector name and score
+            # Header with sector name and normalized score
             html.Div([
                 html.Span(sector, className="sector-name"),
-                html.Span(f"{score:+.2f}" if score > 0 else f"{score:.2f}", 
-                          className=f"sector-score {score_class}")
+                html.Span(f"{norm_score:.1f}", className=f"sector-score {score_class}")
             ], className="sector-card-header"),
             
             # Stance badge
             html.Span(stance, className=f"sector-badge {badge_class}"),
+            
+            # Score indicator bar (new)
+            html.Div([
+                html.Div([
+                    html.Div(className="scale-marker", 
+                             style={"left": f"{min(max(norm_score, 0), 100)}%"})
+                ], className="scale-track")
+            ], className="sector-score-scale"),
             
             # Takeaway text
             html.P(takeaway, className="sector-takeaway"),
