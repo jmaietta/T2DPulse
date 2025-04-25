@@ -3910,7 +3910,7 @@ def update_interest_rate_graph(n):
         y=filtered_data['value'],
         mode='lines+markers',
         name='Federal Funds Rate (%)',
-        line=dict(color=color_scheme["interest"], width=3),
+        line=dict(color=color_scheme["rates"], width=3),
         marker=dict(size=8)
     ))
     
