@@ -1599,9 +1599,8 @@ app.layout = html.Div([
     # Header
     html.Div([
         html.Div([
-            html.Img(src="assets/images/t2d_logo.png", height="60px", className="logo"),
+            html.Img(src="/assets/T2D Pulse logo.png", height="60px", className="logo"),
             html.Div([
-                html.H1("T2D Pulse", className="dashboard-title"),
                 html.P("Powering investment decisions with macro data and proprietary intelligence", 
                       className="dashboard-subtitle")
             ], className="header-text")
@@ -2235,10 +2234,10 @@ def create_pulse_card(value):
                             "fontWeight": "bold", 
                             "color": pulse_color,
                             "display": "block",
-                            "textAlign": "center",
+                            "textAlign": "left",
                             "width": "100%"
                         }),
-            ], style={"textAlign": "center", "marginBottom": "10px", "display": "flex", "justifyContent": "center"}),
+            ], style={"textAlign": "left", "marginBottom": "10px", "display": "flex", "justifyContent": "flex-start"}),
             # Status label
             html.Div([
                 html.Span(pulse_status, 
@@ -2247,7 +2246,8 @@ def create_pulse_card(value):
                             "color": pulse_color,
                             "marginRight": "5px",
                             "display": "inline-block",
-                            "fontWeight": "500"
+                            "fontWeight": "500",
+                            "textAlign": "left"
                         }),
                 html.Span(
                     "ⓘ", 
