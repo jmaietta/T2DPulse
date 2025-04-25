@@ -301,7 +301,7 @@ methodology_card = html.Div([
         "Each sector score is derived from underlying economic indicators, weighted according to their specific impact on that sector."
     ]),
     html.P([
-        "Adjust weights directly on each sector card to customize the T2D Pulse for your specific business or investment focus."
+        "Adjust weights directly on each sector card to customize the T2D Pulse for your investment focus."
     ]),
     html.Div([
         html.Strong("Formula: "),
@@ -920,19 +920,28 @@ app.index_string = '''
                 box-shadow: 0 2px 5px rgba(0,0,0,0.1);
             }
             
+            .methodology-section {
+                font-size: 13px;
+            }
+            
+            .methodology-section .section-subtitle {
+                font-size: 16px;
+            }
+            
             .methodology-section p {
                 color: #555;
                 line-height: 1.5;
-                margin-bottom: 15px;
+                margin-bottom: 12px;
+                font-size: 13px;
             }
             
             .formula-box {
                 background-color: #f8f9fa;
-                padding: 15px;
+                padding: 12px;
                 border-radius: 5px;
-                margin-top: 15px;
+                margin-top: 12px;
                 border-left: 4px solid #3498db;
-                font-size: 16px;
+                font-size: 13px;
             }
         </style>
     </head>
