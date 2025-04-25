@@ -2207,6 +2207,59 @@ app.layout = html.Div([
 def update_last_updated(n):
     return f"Last updated: {datetime.now().strftime('%Y-%m-%d %H:%M')}"
 
+# Create sector score summary
+def create_sector_summary(sector_scores):
+    """Create a summary of the strongest and weakest sectors based on scores"""
+    # Sort sectors by score (descending)
+    sorted_sectors = sorted(sector_scores.items(), key=lambda x: x[1], reverse=True)
+    
+    # Determine top 3 and bottom 3 sectors
+    top_3 = sorted_sectors[:3]
+    bottom_3 = sorted_sectors[-3:]
+    
+    top_sectors = html.Div([
+        html.H4("Strongest Sectors", className="summary-title", 
+               style={"marginTop": "0", "marginBottom": "12px", "color": "#2c3e50", 
+                     "fontWeight": "600", "fontSize": "18px", "textTransform": "uppercase", 
+                     "letterSpacing": "0.5px"}),
+        html.Div([
+            html.Div([
+                html.Span(f"{sector}", className="sector-name", 
+                         style={"fontWeight": "500", "display": "inline-block", "width": "75%"}),
+                html.Span(f"{score:.1f}", 
+                         className="sector-score-positive" if score >= 60 else 
+                                  "sector-score-neutral" if score >= 30 else 
+                                  "sector-score-negative",
+                         style={"fontWeight": "bold", "textAlign": "right", "display": "inline-block", "width": "25%"})
+            ], style={"display": "flex", "justifyContent": "space-between", 
+                     "padding": "8px 0", "borderBottom": "1px solid #f0f0f0"}) 
+            for sector, score in top_3
+        ])
+    ], className="summary-section", style={"backgroundColor": "#f8f9fa", "padding": "15px", "borderRadius": "6px"})
+    
+    bottom_sectors = html.Div([
+        html.H4("Weakest Sectors", className="summary-title", 
+               style={"marginTop": "0", "marginBottom": "12px", "color": "#2c3e50", 
+                     "fontWeight": "600", "fontSize": "18px", "textTransform": "uppercase", 
+                     "letterSpacing": "0.5px"}),
+        html.Div([
+            html.Div([
+                html.Span(f"{sector}", className="sector-name", 
+                         style={"fontWeight": "500", "display": "inline-block", "width": "75%"}),
+                html.Span(f"{score:.1f}", 
+                         className="sector-score-positive" if score >= 60 else 
+                                  "sector-score-neutral" if score >= 30 else 
+                                  "sector-score-negative",
+                         style={"fontWeight": "bold", "textAlign": "right", "display": "inline-block", "width": "25%"})
+            ], style={"display": "flex", "justifyContent": "space-between", 
+                     "padding": "8px 0", "borderBottom": "1px solid #f0f0f0"}) 
+            for sector, score in bottom_3
+        ])
+    ], className="summary-section", style={"backgroundColor": "#f8f9fa", "padding": "15px", "borderRadius": "6px"})
+    
+    return html.Div([top_sectors, bottom_sectors], className="sector-summary-content", 
+                   style={"display": "flex", "gap": "20px", "marginTop": "15px", "flexWrap": "wrap"})
+
 # Update sentiment gauge
 def create_pulse_card(value):
     """Create a square pulse card with glow effect based on score"""
@@ -5484,10 +5537,34 @@ def update_sector_sentiment_container(n):
         
         sector_cards.append(card)
     
-    # Combine the scale legend with the sector cards in a single container
+    # Create a dictionary of sector name to normalized score for the summary
+    sector_score_dict = {data["sector"]: data["normalized_score"] for data in normalized_scores}
+    
+    # Create the sector summary component
+    sector_summary = create_sector_summary(sector_score_dict)
+    
+    # Combine the scale legend, sector summary, and sector cards in a single container
     return html.Div([
-        scale_legend,  # Legend at the top
-        html.Div(sector_cards, className="sector-cards-container")  # Grid of cards below
+        # Top section with legend and summary side by side
+        html.Div([
+            # Left side: Scale legend
+            html.Div([scale_legend], className="summary-column", style={"flex": "1"}),
+            
+            # Right side: Sector summary
+            html.Div([
+                html.H3("Sector Summary", className="section-subtitle", 
+                       style={"marginBottom": "15px", "fontWeight": "500", "color": "#2c3e50"}),
+                sector_summary
+            ], className="summary-column", style={"flex": "1"})
+        ], className="summary-row", style={
+            "display": "flex", 
+            "gap": "20px", 
+            "marginBottom": "20px",
+            "flexWrap": "wrap"
+        }),
+        
+        # Sector cards below
+        html.Div(sector_cards, className="sector-cards-container")
     ], className="sector-sentiment-container")
 
 # Update VIX Container with chart and insights panel
