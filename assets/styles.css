@@ -726,6 +726,170 @@
     font-size: 11px;
 }
 
+/* Sector Card Weight Controls */
+.weight-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(0,0,0,0.1);
+    padding-top: 10px;
+    margin-top: 5px;
+}
+
+.weight-display-container {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.weight-label {
+    font-size: 14px;
+    color: #7f8c8d;
+}
+
+.weight-value {
+    font-weight: bold;
+    color: #3498db;
+    font-size: 15px;
+}
+
+.weight-buttons-container {
+    display: flex;
+    gap: 5px;
+}
+
+.weight-button {
+    width: 28px;
+    height: 28px;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    transition: opacity 0.2s;
+}
+
+.weight-button:hover {
+    opacity: 0.85;
+}
+
+.weight-decrease {
+    background-color: #e74c3c;
+}
+
+.weight-increase {
+    background-color: #2ecc71;
+}
+
+.reset-button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+.reset-button:hover {
+    background-color: #2980b9;
+}
+
+/* T2D Pulse Card */
+.pulse-card-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.pulse-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(41, 128, 185, 0.5);
+    border: 1px solid #3498db;
+    transition: all 0.3s ease;
+    width: 320px;
+    height: 320px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pulse-card-inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 25px 20px;
+}
+
+.pulse-score {
+    font-size: 64px;
+    font-weight: bold;
+    color: #3498db;
+    display: block;
+    text-align: center;
+    width: 100%;
+}
+
+.pulse-status {
+    font-size: 24px;
+    color: #3498db;
+    margin-right: 5px;
+    display: inline-block;
+    font-weight: 500;
+}
+
+.pulse-status-container {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 30px;
+}
+
+.last-updated {
+    font-size: 12px;
+    color: #95a5a6;
+    margin-top: 15px;
+}
+
+.sector-summary-container {
+    margin-top: 20px;
+}
+
+.summary-title {
+    margin-top: 0;
+    margin-bottom: 12px;
+    color: #2c3e50;
+    font-weight: 600;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.summary-section {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+}
+
+.takeaway-badge-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
 .no-data-message {
     text-align: center;
     padding: 30px;

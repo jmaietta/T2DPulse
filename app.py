@@ -2166,63 +2166,64 @@ def update_last_updated(n):
     return f"Last updated: {datetime.now().strftime('%Y-%m-%d %H:%M')}"
 
 # Update sentiment gauge
-@app.callback(
-    Output("sentiment-gauge", "children"),
-    [Input("sentiment-score", "children")]
-)
-def update_sentiment_gauge(score):
+def create_pulse_card(value):
+    """Create a square pulse card with glow effect based on score"""
     try:
-        score_value = float(score)
+        score_value = float(value)
     except (ValueError, TypeError):
         score_value = 0
-    
-    # Determine color based on score range using the exact HEX values provided
+        
+    # Determine Pulse status based on score
     if score_value >= 80:
-        color = "#2ECC71"  # Boom (80-100) - HEX #2ECC71
-        category = "Boom"
+        pulse_status = "Boom"
+        pulse_color = "#2ECC71"  # Green
     elif score_value >= 60:
-        color = "#F1C40F"  # Expansion (60-79) - HEX #F1C40F
-        category = "Expansion"
+        pulse_status = "Expansion"
+        pulse_color = "#F1C40F"  # Yellow
     elif score_value >= 40:
-        color = "#E67E22"  # Moderate Growth (40-59) - HEX #E67E22
-        category = "Moderate Growth"
+        pulse_status = "Moderate Growth"
+        pulse_color = "#E67E22"  # Orange
     elif score_value >= 20:
-        color = "#E74C3C"  # Slowdown (20-39) - HEX #E74C3C
-        category = "Slowdown"
+        pulse_status = "Slowdown"
+        pulse_color = "#E74C3C"  # Light Red
     else:
-        color = "#C0392B"  # Contraction (0-19) - HEX #C0392B
-        category = "Contraction"
+        pulse_status = "Contraction"
+        pulse_color = "#C0392B"  # Dark Red
     
-    # Fully centered content with fixed vertical centering
-    return html.Div(
+    # Create the pulse card component
+    pulse_card = html.Div([
         # Container with vertical centering for all elements
         html.Div([
-            # Title 
-            html.H3("T2D Pulse Sentiment", 
-                    style={
-                        "fontSize": "22px", 
-                        "fontWeight": "bold", 
-                        "marginBottom": "15px", 
-                        "textAlign": "center",
-                        "color": "#333333"
-                    }),
+            # Logo image instead of text title
+            html.Img(
+                src="/assets/T2D Pulse logo.png",
+                style={
+                    "height": "80px",
+                    "marginBottom": "15px",
+                    "objectFit": "contain"
+                }
+            ),
             # Score value
             html.Div([
                 html.Span(f"{score_value:.1f}", 
                         style={
-                            "fontSize": "54px", 
+                            "fontSize": "64px", 
                             "fontWeight": "bold", 
-                            "color": color
+                            "color": pulse_color,
+                            "display": "block",
+                            "textAlign": "center",
+                            "width": "100%"
                         }),
-            ], style={"textAlign": "center", "marginBottom": "10px"}),
-            # Category and tooltip in a properly contained div
+            ], style={"textAlign": "center", "marginBottom": "10px", "display": "flex", "justifyContent": "center"}),
+            # Status label
             html.Div([
-                html.Span(category, 
+                html.Span(pulse_status, 
                         style={
-                            "fontSize": "22px", 
-                            "color": color,
+                            "fontSize": "24px", 
+                            "color": pulse_color,
                             "marginRight": "5px",
-                            "display": "inline-block"
+                            "display": "inline-block",
+                            "fontWeight": "500"
                         }),
                 html.Span(
                     "ⓘ", 
@@ -2285,28 +2286,40 @@ def update_sentiment_gauge(score):
                 "justifyContent": "center", 
                 "position": "relative",
                 "height": "30px"  # Fixed height to prevent layout shifts
-            })
-        ], style={
-            "display": "flex",
-            "flexDirection": "column",
-            "justifyContent": "center",
-            "alignItems": "center",
-            "padding": "20px 0"
-        }),
-        # Add outer container styling with color-matched glow
-        style={
-            "display": "flex", 
-            "alignItems": "center", 
-            "justifyContent": "center",
-            "height": "100%",
-            "backgroundColor": "white",
-            "borderRadius": "8px",
-            "padding": "15px",
-            "boxShadow": f"0 0 10px rgba({int(color[1:3], 16)}, {int(color[3:5], 16)}, {int(color[5:7], 16)}, 0.4)",  # Light color-matched glow
-            "border": f"1px solid {color}",  # Color-matched border
-            "transition": "all 0.3s ease"  # Smooth transition when color changes
-        }
-    )
+            }),
+            # Last updated text
+            html.Div([
+                html.Span(f"Last updated: {datetime.now().strftime('%B %d, %Y')}", 
+                        style={
+                            "fontSize": "12px", 
+                            "color": "#95a5a6",
+                            "marginTop": "15px"
+                        })
+            ], style={"textAlign": "center"})
+        ], className="pulse-card-inner")
+    ], className="pulse-card", style={
+        "boxShadow": f"0 0 20px {pulse_color}",  # Color-matched glow
+        "border": f"1px solid {pulse_color}"     # Color-matched border
+    })
+    
+    return pulse_card, pulse_status, pulse_color
+
+@app.callback(
+    Output("sentiment-gauge", "children"),
+    [Input("sentiment-score", "children")]
+)
+def update_sentiment_gauge(score):
+    """Update the sentiment card based on the score"""
+    if not score:
+        return html.Div("Data unavailable", className="no-data-message")
+    
+    # Create the pulse card using the new function
+    pulse_card, pulse_status, pulse_color = create_pulse_card(score)
+    
+    # Return the pulse card in a container
+    return html.Div([
+        pulse_card
+    ], className="pulse-card-container")
 
 # Update sentiment components list
 @app.callback(
