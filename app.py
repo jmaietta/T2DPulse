@@ -5321,9 +5321,7 @@ def update_sector_sentiment_container(n):
     # Create a normalized scale legend
     scale_legend = html.Div([
         html.Div([
-            "Sector Sentiment Scale (0-100):",
-            html.Span(" (Normalized to match T2D Pulse Sentiment Index scale)", 
-                      className="scale-title-note")
+            "Sector Sentiment Scale (0-100):"
         ], className="scale-title"),
         html.Div([
             html.Div([
