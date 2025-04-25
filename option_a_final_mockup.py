@@ -234,10 +234,11 @@ def create_sector_cards(sector_scores, weights):
                 html.Div([
                     html.H3(sector, className="sector-card-title"),
                     html.Div([
-                        html.Span(f"{score:.1f}", className="sector-score"),
+                        html.Div(f"{score:.1f}", className="sector-score", 
+                                style={"width": "100%", "textAlign": "right", "display": "block"}),
                         html.Div(sentiment, className="sector-sentiment", 
-                                style={"color": text_color, "textAlign": "right"})
-                    ], className="score-container", style={"textAlign": "right"})
+                                style={"width": "100%", "color": text_color, "textAlign": "right", "display": "block"})
+                    ], className="score-container", style={"textAlign": "right", "minWidth": "80px"})
                 ], className="card-header-content")
             ], className="sector-card-header", style={"borderColor": border_color}),
             
@@ -774,6 +775,7 @@ app.index_string = '''
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
+                width: 100%;
             }
             
             .sector-card-title {
@@ -785,6 +787,8 @@ app.index_string = '''
             
             .score-container {
                 text-align: right;
+                flex-shrink: 0;
+                min-width: 80px;
             }
             
             .sector-score {
@@ -793,11 +797,13 @@ app.index_string = '''
                 font-weight: bold;
                 margin-bottom: 3px;
                 text-align: right;
+                width: 100%;
             }
             
             .sector-sentiment {
                 font-size: 14px;
                 text-align: right;
+                width: 100%;
             }
             
             .sector-card-body {
