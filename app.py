@@ -57,33 +57,37 @@ def fetch_fred_data(series_id, start_date=None, end_date=None):
         print("Cannot fetch FRED data: No API key provided")
         return pd.DataFrame()
     
-    # Use a fixed safe date - 2023-12-31 - to avoid future date errors with FRED API
+    # Use today's date minus 5 days as a safety buffer to avoid potential future date errors
     # FRED API returns an error if realtime_start is after today's date (their server date)
-    safe_date = "2023-12-31"
+    # The 5-day buffer helps account for any time zone differences or server clock variations
+    today = datetime.now().date()
+    safe_date = (today - timedelta(days=5)).strftime('%Y-%m-%d')
     
     # Default to last 5 years if no dates specified
     if not end_date:
-        end_date = safe_date
+        # Use today for most recent data
+        end_date = today.strftime('%Y-%m-%d')
     if not start_date:
         # Calculate 5 years before the end date
-        end_date_obj = datetime.strptime(end_date, '%Y-%m-%d')
+        end_date_obj = datetime.strptime(end_date, '%Y-%m-%d') if isinstance(end_date, str) else end_date
         start_date = (end_date_obj - timedelta(days=5*365)).strftime('%Y-%m-%d')
     
     # Build API URL
     url = f"https://api.stlouisfed.org/fred/series/observations"
     
+    # First try with current dates
     params = {
         "series_id": series_id,
         "api_key": FRED_API_KEY,
         "file_type": "json",
         "observation_start": start_date,
         "observation_end": end_date,
-        "realtime_start": safe_date,  # Use fixed date to avoid future date errors
-        "realtime_end": safe_date     # Use fixed date to avoid future date errors
+        "realtime_start": safe_date,
+        "realtime_end": end_date
     }
     
     try:
-        # Make API request
+        # Make first API request with current dates
         response = requests.get(url, params=params)
         
         if response.status_code == 200:
@@ -100,8 +104,43 @@ def fetch_fred_data(series_id, start_date=None, end_date=None):
             print(f"Successfully retrieved {len(df)} observations for {series_id}")
             return df
         else:
-            print(f"Failed to fetch data: {response.status_code} - {response.text}")
-            return pd.DataFrame()
+            # If current dates fail, try again with a more conservative approach
+            print(f"First FRED API attempt failed: {response.status_code} - {response.text}")
+            print("Trying again with more conservative date parameters...")
+            
+            # Get date from 30 days ago to be extra safe
+            safe_date = (today - timedelta(days=30)).strftime('%Y-%m-%d')
+            
+            # Update params with more conservative dates
+            params.update({
+                "observation_end": safe_date,
+                "realtime_start": safe_date,
+                "realtime_end": safe_date
+            })
+            
+            try:
+                # Make second API request with conservative dates
+                response = requests.get(url, params=params)
+                
+                if response.status_code == 200:
+                    data = response.json()
+                    
+                    # Convert to DataFrame
+                    df = pd.DataFrame(data['observations'])
+                    df['date'] = pd.to_datetime(df['date'])
+                    df['value'] = pd.to_numeric(df['value'], errors='coerce')
+                    
+                    # Handle missing values
+                    df = df.dropna(subset=['value'])
+                    
+                    print(f"Second attempt: Successfully retrieved {len(df)} observations for {series_id}")
+                    return df
+                else:
+                    print(f"Second FRED API attempt also failed: {response.status_code} - {response.text}")
+                    return pd.DataFrame()
+            except Exception as e:
+                print(f"Exception during second FRED API attempt: {str(e)}")
+                return pd.DataFrame()
     except Exception as e:
         print(f"Exception while fetching FRED data: {str(e)}")
         return pd.DataFrame()
