@@ -71,9 +71,9 @@ def create_pulse_card(value):
         html.Div([
             # Logo image instead of text title
             html.Img(
-                src="/assets/T2D Pulse logo.png",
+                src="/attached_assets/T2D Pulse logo.png",
                 style={
-                    "height": "60px",
+                    "height": "80px",
                     "marginBottom": "15px",
                     "objectFit": "contain"
                 }
@@ -305,7 +305,9 @@ def create_sector_summary():
     
     top_sectors = html.Div([
         html.H4("Strongest Sectors", className="summary-title", 
-               style={"marginTop": "0", "marginBottom": "12px", "color": "#2c3e50", "fontWeight": "500"}),
+               style={"marginTop": "0", "marginBottom": "12px", "color": "#2c3e50", 
+                     "fontWeight": "600", "fontSize": "18px", "textTransform": "uppercase", 
+                     "letterSpacing": "0.5px"}),
         html.Div([
             html.Div([
                 html.Span(f"{sector}", className="sector-name", 
@@ -323,7 +325,9 @@ def create_sector_summary():
     
     bottom_sectors = html.Div([
         html.H4("Weakest Sectors", className="summary-title", 
-               style={"marginTop": "0", "marginBottom": "12px", "color": "#2c3e50", "fontWeight": "500"}),
+               style={"marginTop": "0", "marginBottom": "12px", "color": "#2c3e50", 
+                     "fontWeight": "600", "fontSize": "18px", "textTransform": "uppercase", 
+                     "letterSpacing": "0.5px"}),
         html.Div([
             html.Div([
                 html.Span(f"{sector}", className="sector-name", 
@@ -404,7 +408,8 @@ app.layout = html.Div([
             # Sector Summary
             html.Div([
                 html.H3("Sector Summary", className="section-subtitle", 
-                       style={"marginBottom": "15px", "fontWeight": "500", "color": "#2c3e50"}),
+                       style={"marginBottom": "15px", "fontWeight": "500", "color": "#2c3e50", 
+                              "textAlign": "center"}),
                 html.Div(id="sector-summary", children=create_sector_summary())
             ], className="sector-summary-container", 
                style={"marginTop": "25px", "padding": "20px", "backgroundColor": "white", 
@@ -596,7 +601,7 @@ app.index_string = '''
             }
             
             .logo {
-                height: 60px;
+                height: 80px;
                 margin-right: 20px;
             }
             
