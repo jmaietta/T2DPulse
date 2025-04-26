@@ -741,7 +741,7 @@
 
 .tooltip-wrapper .tooltip-content {
   position: absolute;
-  bottom: 125%;
+  bottom: 150%;  /* Increased from 125% to move it further up */
   left: 50%;
   transform: translateX(-50%);        /* Better than margin-left for responsive designs */
   width: 300px;
