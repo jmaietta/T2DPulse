@@ -5508,11 +5508,13 @@ def update_sector_sentiment_container(n):
     # Create cards for each sector using normalized scores
     sector_cards = []
     
-    # Add a store for weights
-    if 'sector_weights' not in globals():
-        global sector_weights
+    # Get the global sector_weights dictionary or create it
+    global sector_weights
+    if not hasattr(app, '_sector_weights_initialized'):
+        app._sector_weights_initialized = True
         sector_weights = {}
     
+    # Calculate number of sectors and default weight
     num_sectors = len(normalized_scores)
     default_weight = 100 / num_sectors
     
@@ -5554,10 +5556,10 @@ def update_sector_sentiment_container(n):
                     html.H3(sector, className="sector-card-title"),
                     html.Div([
                         html.Div(f"{norm_score:.1f}", className="sector-score", 
-                                style={"width": "100%", "textAlign": "right", "display": "block"}),
+                                style={"width": "100%", "textAlign": "right", "display": "block", "fontWeight": "bold"}),
                         html.Div(stance, className="sector-sentiment", 
                                 style={"width": "100%", "color": text_color, "textAlign": "right", "display": "block"})
-                    ], className="score-container", style={"textAlign": "right", "minWidth": "80px"})
+                    ], className="score-container", style={"textAlign": "right", "minWidth": "80px", "display": "flex", "flexDirection": "column", "alignItems": "flex-end"})
                 ], className="card-header-content")
             ], className="sector-card-header", style={"borderColor": border_color}),
             
@@ -5667,8 +5669,10 @@ def update_sector_sentiment_container(n):
         # Sector cards below
         html.Div(sector_cards, className="sector-cards-container"),
         
-        # Hidden div to store weights
-        html.Div(id="stored-weights", style={"display": "none"})
+        # Hidden div to store weights, initially populated with JSON of sector weights
+        html.Div(id="stored-weights", 
+                 style={"display": "none"},
+                 children=json.dumps(sector_weights))
     ], className="sector-sentiment-container")
 
 # Update VIX Container with chart and insights panel
