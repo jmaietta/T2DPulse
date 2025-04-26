@@ -5926,11 +5926,16 @@ def apply_weight_on_enter(n_clicks_list, weight_values, weights_json):
     if input_index is None:
         raise PreventUpdate
     
-    # Map input index to sector
-    sectors = ["Cloud", "AI", "Cybersecurity", "AdTech", "FinTech", "EdTech", 
-              "HealthTech", "AR/VR", "Robotics", "Blockchain", "IoT", 
-              "CleanTech", "SmartHome", "Ecommerce"]
-    sector_to_update = sectors[input_index]
+    # Map input index to sector - use the sectors from sentiment_engine.py
+    from sentiment_engine import SECTORS
+    
+    # Make sure we don't go out of bounds
+    if input_index < len(SECTORS):
+        sector_to_update = SECTORS[input_index]
+    else:
+        # Use a safe fallback
+        print(f"Warning: Input index {input_index} exceeds SECTORS length {len(SECTORS)}")
+        sector_to_update = SECTORS[0]
     
     # Use stored weights if available
     if weights_json:
@@ -5944,7 +5949,8 @@ def apply_weight_on_enter(n_clicks_list, weight_values, weights_json):
     # Check if the sector exists in the weights dictionary
     if sector_to_update not in weights:
         # If sector doesn't exist, initialize it with default weight
-        num_sectors = len(sectors)
+        from sentiment_engine import SECTORS
+        num_sectors = len(SECTORS)
         weights[sector_to_update] = 100 / num_sectors if num_sectors > 0 else 0
         print(f"Added missing sector {sector_to_update} to weights dictionary with weight {weights[sector_to_update]}")
     
@@ -6072,6 +6078,9 @@ def update_input_styling(weights_json):
     Update input field styling to provide visual feedback when a weight is changed
     This shows a green glow around fields that were recently updated
     """
+    # Import the sectors from sentiment_engine to make sure we're using the right ones
+    from sentiment_engine import SECTORS
+    
     # Initialize a global dictionary to track highlighted sectors if it doesn't exist
     if 'highlighted_sectors' not in globals():
         global highlighted_sectors
@@ -6096,25 +6105,16 @@ def update_input_styling(weights_json):
         "transition": "box-shadow 0.3s ease-in-out"
     }
     
-    # Get list of sectors in the proper order
-    if weights_json:
-        try:
-            weights = json.loads(weights_json)
-            sectors = list(weights.keys())
-        except:
-            # If parsing fails, use an empty list
-            sectors = []
-    else:
-        # If no weights are stored, use an empty list
-        sectors = []
+    # Get list of enterprise sectors from the dashboard and create a mapping to displayed components
+    displayed_sectors = SECTORS
     
     # Current time to check for recent updates (highlight for 3 seconds)
     current_time = time.time()
     highlight_duration = 3  # seconds
     
-    # Generate styles for each sector
+    # Generate styles for each displayed sector
     styles = []
-    for sector in sectors:
+    for sector in displayed_sectors:
         # Check if this sector was recently updated
         if sector in highlighted_sectors and (current_time - highlighted_sectors[sector]) < highlight_duration:
             styles.append(highlight_style)
@@ -6124,8 +6124,8 @@ def update_input_styling(weights_json):
             if sector in highlighted_sectors and (current_time - highlighted_sectors[sector]) >= highlight_duration:
                 del highlighted_sectors[sector]
     
-    # Return either a list of styles (one per sector) or an empty list
-    return styles if styles else []
+    # Return the list of styles for all displayed sectors
+    return styles
 
 # Add this at the end of the file if running directly
 if __name__ == "__main__":
