@@ -1,194 +1,127 @@
-"""
-Debugging Fix for T2D Pulse Dashboard Weight Updates
 
-This is an isolated fix for the weight input callback mechanism.
-It creates a more reliable update process that doesn't cause UI issues.
+import dash
+from dash import dcc, html, Input, Output, State, ctx, ALL
+import json
+from datetime import datetime
 
-Steps taken:
-1. Removed the allow_duplicate=True tags from all outputs
-2. Added better debug output
-3. Improved error handling with clear feedback messages
-"""
+# Initialize app
+app = dash.Dash(__name__)
+server = app.server
 
-# Callback for Apply weight button
+# Mock sector data
+sectors = ["AdTech", "Cloud Infra", "Fintech", "SMB SaaS", "Enterprise SaaS", "Digital Media", "Consumer Tech", "IT Services", "Payments", "Comm. Infra", "Legacy Software", "Gaming"]
+
+# Initialize sector weights evenly
+sector_weights = {sector: round(100 / len(sectors), 2) for sector in sectors}
+
+# App layout
+app.layout = html.Div([
+    html.H1("T2D Pulse", style={"textAlign": "center", "fontWeight": "bold"}),
+    html.H2(id="t2d-pulse-value", style={"textAlign": "center", "marginBottom": "40px"}),
+
+    html.Div([
+        html.Div([
+            html.Div([
+                dcc.Input(
+                    id={"type": "weight-input", "index": sector},
+                    type="number",
+                    min=1,
+                    max=100,
+                    step=0.25,
+                    value=round(sector_weights[sector], 2),
+                    style={"width": "50px", "textAlign": "center", "fontWeight": "bold"}
+                ),
+                html.Span("%", style={"fontWeight": "bold", "fontSize": "14px", "marginLeft": "4px"}),
+                html.Button(
+                    "Apply", 
+                    id={"type": "apply-weight", "index": sector},
+                    style={"fontSize": "12px", "padding": "4px 8px", "backgroundColor": "#e74c3c", "color": "white", "border": "none", "borderRadius": "4px", "cursor": "pointer", "fontWeight": "bold", "marginLeft": "8px"}
+                )
+            ], style={"display": "flex", "alignItems": "center", "marginBottom": "10px"})
+        ]) for sector in sectors
+    ], style={"maxWidth": "600px", "margin": "auto"}),
+
+    html.Div(id="stored-weights", style={"display": "none"}),
+    html.Div(id="weight-update-notification", style={"opacity": "0", "textAlign": "center", "marginTop": "20px"}),
+])
+
+# Helper functions
+def calculate_sector_sentiment():
+    return {sector: 50 + (i % 5) * 10 for i, sector in enumerate(sectors)}
+
+def calculate_t2d_pulse_from_sectors(sector_scores, weights):
+    weighted_sum = sum(sector_scores[sector] * weights[sector] for sector in sectors)
+    return weighted_sum / 100.0
+
+# Callback: Apply weight update and refresh everything
 @app.callback(
-    Output("stored-weights", "children"),
-    Input({"type": "apply-weight", "index": ALL}, "n_clicks"),
-    State({"type": "weight-input", "index": ALL}, "value"),
-    State({"type": "weight-input", "index": ALL}, "id"),
-    State("stored-weights", "children"),
+    [Output({"type": "weight-input", "index": sectors[i]}, "value") for i in range(len(sectors))] +
+    [Output("t2d-pulse-value", "children"),
+     Output("stored-weights", "children"),
+     Output("weight-update-notification", "children"),
+     Output("weight-update-notification", "style")],
+    [Input({"type": "apply-weight", "index": ALL}, "n_clicks")],
+    [State({"type": "weight-input", "index": ALL}, "value"),
+     State({"type": "weight-input", "index": ALL}, "id"),
+     State("stored-weights", "children")],
     prevent_initial_call=True
 )
-def update_weight_from_input(n_clicks_list, input_values, input_ids, weights_json):
+def update_weights(n_clicks_list, input_values, input_ids, weights_json):
     global sector_weights
-    
-    # Get trigger information
-    ctx = dash.callback_context
-    if not ctx.triggered:
-        raise PreventUpdate
-        
-    print("Triggered weight input callback")
-    print(f"Triggered by: {ctx.triggered}")
-    
-    # Extract trigger information to find which sector was changed
-    trigger_id = ctx.triggered[0]["prop_id"].split(".")[0]
-    
-    try:
-        # Parse the JSON to get the sector name
-        trigger_dict = json.loads(trigger_id)
-        changed_sector = trigger_dict["index"]
-        
-        # Use stored weights if available, otherwise use global
-        if weights_json:
-            try:
-                weights = json.loads(weights_json)
-            except Exception as e:
-                print(f"Error parsing weights_json: {e}")
-                weights = sector_weights
-        else:
-            weights = sector_weights
-        
-        # Log for debugging
-        print(f"Input values: {input_values}")
-        print(f"Input IDs: {input_ids}")
-        print(f"Changed sector: {changed_sector}")
-        
-        # Find the index of the changed sector in the input_ids list
-        changed_idx = None
-        for i, id_dict in enumerate(input_ids):
-            if id_dict["index"] == changed_sector:
-                changed_idx = i
-                break
-        
-        if changed_idx is None:
-            print("Could not find changed sector in input_ids")
-            raise PreventUpdate
-        
-        # Get the new value for the changed sector
-        new_value = input_values[changed_idx]
-        if new_value is None:
-            print("New value is None")
-            raise PreventUpdate
-        
-        # Ensure the value is valid (between 1 and 100)
-        new_value = float(max(1.0, min(100.0, new_value)))
-        old_value = weights[changed_sector]
-        
-        # If value is unchanged, do nothing
-        if abs(new_value - old_value) < 0.01:
-            print(f"Value unchanged: {old_value} vs {new_value}")
-            raise PreventUpdate
-        
-        print(f"Old value: {old_value}, New value: {new_value}")
-        
-        # IMPORTANT: Set the exact value the user entered, don't modify it
-        weights[changed_sector] = new_value
-        
-        # Calculate how much we need to adjust other weights to maintain 100 total
-        remaining_value = 100.0 - new_value
-        
-        # Calculate total of all other sectors
-        sectors_to_adjust = [s for s in weights.keys() if s != changed_sector]
-        total_other_weight = sum(weights[s] for s in sectors_to_adjust)
-        
-        # Adjust other sectors proportionally
-        if total_other_weight > 0:
-            scale_factor = remaining_value / total_other_weight
-            for s in sectors_to_adjust:
-                weights[s] = round(weights[s] * scale_factor, 2)
-        
-        # Ensure the total is exactly 100 by adjusting one weight if needed
-        total = sum(weights.values())
-        if abs(total - 100.0) > 0.01:  # If more than 0.01 off from 100
-            # Adjust the first sector that isn't the changed one
-            adjust_sector = next((s for s in weights.keys() if s != changed_sector), None)
-            if adjust_sector:
-                weights[adjust_sector] += round(100.0 - total, 2)
-        
-        print(f"Final weights: {weights}, Total: {sum(weights.values())}")
-        
-        # Update global weights
-        sector_weights = weights
-        
-        return json.dumps(weights)
-        
-    except Exception as e:
-        print(f"Error in update_weight_from_input: {e}")
-        import traceback
-        traceback.print_exc()
-        raise PreventUpdate
 
-# Callback for updating weight input values when weights change
-@app.callback(
-    [Output({"type": "weight-input", "index": ALL}, "value"),
-     Output("t2d-pulse-value", "children"),
-     Output({"type": "apply-weight", "index": ALL}, "style"),  # Add visual feedback for apply buttons
-     Output("weight-update-notification", "children"),  # Text of notification
-     Output("weight-update-notification", "style")],    # Style of notification (for visibility)
-    [Input("stored-weights", "children")]
-)
-def update_weight_inputs(weights_json):
-    if not weights_json:
-        # Initialize with equal weights
-        global sector_weights
-        weights = sector_weights
-    else:
-        # Use stored weights
+    if not ctx.triggered:
+        raise dash.exceptions.PreventUpdate
+
+    trigger = json.loads(ctx.triggered[0]["prop_id"].split(".")[0])
+    changed_sector = trigger["index"]
+
+    if weights_json:
         try:
             weights = json.loads(weights_json)
-        except Exception as e:
-            # If JSON parse fails, use global weights
-            print(f"Error parsing weights_json in update_weight_inputs: {e}")
+        except:
             weights = sector_weights
-    
-    # Generate values for each sector's input with 2 decimal places
-    weight_values = []
-    for sector in weights:
-        # Round to 2 decimal places for display
-        weight_values.append(round(weights[sector], 2))
-    
-    # Calculate the T2D Pulse score based on the new weights
-    try:
-        sector_scores_list = calculate_sector_sentiment()
-        t2d_pulse_score = calculate_t2d_pulse_from_sectors(sector_scores_list, weights)
-        
-        # Format as a string with 1 decimal place
-        t2d_pulse_display = f"{t2d_pulse_score:.1f}"
-    except Exception as e:
-        print(f"Error calculating T2D Pulse score: {e}")
-        t2d_pulse_display = "50.0"  # Default fallback
-    
-    # Create button styles with visual feedback
-    button_styles = []
-    for _ in range(len(weight_values)):
-        button_styles.append({
-            "fontSize": "12px",
-            "padding": "4px 8px",
-            "backgroundColor": "#e74c3c",  # Red highlight to draw attention
-            "color": "white",
-            "border": "none",
-            "borderRadius": "4px",
-            "cursor": "pointer",
-            "fontWeight": "bold",
-            "boxShadow": "0 2px 4px rgba(0,0,0,0.2)",
-            "transition": "all 0.3s ease"
-        })
-    
-    # Get current time for notification
+    else:
+        weights = sector_weights
+
+    changed_idx = next((i for i, idd in enumerate(input_ids) if idd["index"] == changed_sector), None)
+
+    if changed_idx is None:
+        raise dash.exceptions.PreventUpdate
+
+    new_value = input_values[changed_idx]
+    if new_value is None:
+        raise dash.exceptions.PreventUpdate
+
+    new_value = float(max(1.0, min(100.0, new_value)))
+
+    weights[changed_sector] = new_value
+    remaining_value = 100.0 - new_value
+    sectors_to_adjust = [s for s in weights if s != changed_sector]
+    total_other_weight = sum(weights[s] for s in sectors_to_adjust)
+
+    if total_other_weight > 0:
+        scale_factor = remaining_value / total_other_weight
+        for s in sectors_to_adjust:
+            weights[s] = round(weights[s] * scale_factor, 2)
+
+    total = sum(weights.values())
+    if abs(total - 100.0) > 0.01:
+        adjust_sector = next((s for s in weights if s != changed_sector), None)
+        if adjust_sector:
+            weights[adjust_sector] += round(100.0 - total, 2)
+
+    sector_weights = weights
+
+    updated_values = [round(sector_weights[sector], 2) for sector in sectors]
+    sector_scores_list = calculate_sector_sentiment()
+    t2d_pulse_score = calculate_t2d_pulse_from_sectors(sector_scores_list, sector_weights)
+    t2d_pulse_display = f"{t2d_pulse_score:.1f}"
+
     current_time = datetime.now().strftime("%H:%M:%S")
-    
-    # Create notification message and style
     notification_message = f"Weights updated at {current_time} - T2D Pulse score: {t2d_pulse_display}"
-    notification_style = {
-        "color": "green", 
-        "fontWeight": "bold", 
-        "marginRight": "20px",
-        "fontSize": "14px",
-        "padding": "8px 12px",
-        "backgroundColor": "#e8f5e9",
-        "borderRadius": "4px",
-        "opacity": 1,  # Make visible
-        "transition": "opacity 0.3s ease"
-    }
-    
-    return weight_values, t2d_pulse_display, button_styles, notification_message, notification_style
+    notification_style = {"color": "green", "fontWeight": "bold", "fontSize": "14px", "backgroundColor": "#e8f5e9", "borderRadius": "4px", "opacity": 1}
+
+    return updated_values + [t2d_pulse_display, json.dumps(sector_weights), notification_message, notification_style]
+
+if __name__ == "__main__":
+    app.run_server(debug=True)
