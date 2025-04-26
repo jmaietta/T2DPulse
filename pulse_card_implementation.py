@@ -33,13 +33,14 @@ def create_pulse_card(value):
     pulse_card = html.Div([
         # Container with vertical centering for all elements
         html.Div([
-            # Logo image instead of text title
+            # Logo image instead of text title - maintain original size
             html.Img(
                 src="/assets/T2D Pulse logo.png",
                 style={
-                    "height": "80px",
+                    "height": "60px",  # Reduced height to maintain original proportions
                     "marginBottom": "15px",
-                    "objectFit": "contain"
+                    "objectFit": "contain",
+                    "maxWidth": "100%"  # Ensure it doesn't overflow its container
                 }
             ),
             # Score value

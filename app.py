@@ -1752,11 +1752,11 @@ app.layout = html.Div([
                         html.P(id="nasdaq-value", 
                               children=html.Span([
                                   f"{nasdaq_data.sort_values('date', ascending=False).iloc[0]['value']:,.0f}",
-                                  html.Span(" (Gap from EMA: ", style={"fontSize": "12px", "color": "#666"}),
+                                  html.Span(" (", style={"fontSize": "12px", "color": "#666"}),
                                   html.Span(f"{nasdaq_data.sort_values('date', ascending=False).iloc[0]['gap_pct']:.1f}%" 
                                           if not nasdaq_data.empty and 'gap_pct' in nasdaq_data.columns else "N/A", 
                                           style={"fontSize": "12px", "fontWeight": "bold"}),
-                                  html.Span(")", style={"fontSize": "12px", "color": "#666"})
+                                  html.Span(" from EMA)", style={"fontSize": "12px", "color": "#666"})
                               ]) if not nasdaq_data.empty else "N/A",
                               className="indicator-value")
                     ], className="indicator-text"),
@@ -5469,12 +5469,12 @@ def update_sector_sentiment_container(n):
             # Header with sector name and score
             html.Div([
                 html.Div([
-                    html.H3(sector, className="sector-card-title"),
+                    html.H3(sector, className="sector-card-title", style={"flexGrow": 1}),
                     html.Div([
                         html.Div(f"{norm_score:.1f}", className="sector-score"),
                         html.Div(stance, className="sector-sentiment", style={"color": text_color})
                     ], className="score-container")
-                ], className="card-header-content", style={"display": "flex", "justifyContent": "space-between", "width": "100%"})
+                ], className="card-header-content", style={"display": "flex", "alignItems": "center", "justifyContent": "space-between", "width": "100%"})
             ], className="sector-card-header", style={"borderColor": border_color}),
             
             # Card body with all the details
@@ -5556,7 +5556,7 @@ def update_sector_sentiment_container(n):
                 html.Div([
                     html.Div([
                         html.P("Real-time sentiment scores based on current macroeconomic conditions. Sector scores are calculated from economic indicators weighted by their impact on each sector. Adjust sector weights to customize the T2D Pulse for your investment focus.", 
-                              className="section-description", style={"margin": "0", "fontSize": "14px"}),
+                              className="section-description", style={"margin": "0", "fontSize": "14px", "lineHeight": "1.5"}),
                     ]),
                 ], className="section-controls", style={"display": "flex", "justifyContent": "space-between", "alignItems": "center"})
             ], className="section-header", style={"marginBottom": "15px"})
