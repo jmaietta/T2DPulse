@@ -1,5 +1,13 @@
 // Wait for the page to fully load
 window.addEventListener('DOMContentLoaded', (event) => {
+  // Ensure we initialize the tooltip as hidden
+  setTimeout(function() {
+    const tooltip = document.getElementById('sentiment-info-tooltip');
+    if (tooltip) {
+      tooltip.style.display = 'none';
+    }
+  }, 500); // Short delay to ensure elements are rendered
+  
   // Add click event listener once the DOM is ready
   document.addEventListener('click', function(e) {
     // Find the sentiment info icon
@@ -8,9 +16,10 @@ window.addEventListener('DOMContentLoaded', (event) => {
     
     if (infoIcon && tooltip) {
       // If the clicked element is the info icon, toggle the tooltip
-      if (e.target === infoIcon) {
+      if (e.target === infoIcon || e.target.id === 'sentiment-info-icon') {
+        console.log('Info icon clicked');
         // Toggle display between 'none' and 'block'
-        if (tooltip.style.display === 'none') {
+        if (tooltip.style.display === 'none' || !tooltip.style.display) {
           tooltip.style.display = 'block';
         } else {
           tooltip.style.display = 'none';
