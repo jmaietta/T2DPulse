@@ -5553,7 +5553,7 @@ def update_sector_sentiment_container(n):
                             dcc.Input(
                                 id={"type": "weight-input", "index": sector},
                                 type="number",
-                                min=0.01,
+                                min=0,
                                 max=100,
                                 step=0.01,
                                 value=sector_weights[sector],
