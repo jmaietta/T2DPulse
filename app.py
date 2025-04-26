@@ -2175,7 +2175,7 @@ def create_sector_summary(sector_scores):
             html.Div([
                 html.Span(f"{sector}", className="sector-name", 
                          style={"fontWeight": "500", "display": "inline-block", "width": "75%",
-                                "fontSize": "13px"}),
+                                "fontSize": "13px", "textAlign": "left"}),
                 html.Span(f"{score:.1f}", 
                          style={
                              "fontWeight": "bold", 
@@ -2206,7 +2206,7 @@ def create_sector_summary(sector_scores):
             html.Div([
                 html.Span(f"{sector}", className="sector-name", 
                          style={"fontWeight": "500", "display": "inline-block", "width": "75%",
-                                "fontSize": "13px"}),
+                                "fontSize": "13px", "textAlign": "left"}),
                 html.Span(f"{score:.1f}", 
                          style={
                              "fontWeight": "bold", 
@@ -5516,7 +5516,8 @@ def update_sector_sentiment_container(n):
                 # Header and sentiment badge - with badge on the right
                 html.Div([
                     html.P(takeaway, className="sector-takeaway"),
-                    html.Span(stance, className=f"sector-badge {badge_class}")
+                    # Removed duplicate stance text from badge
+                    html.Span("", className=f"sector-badge {badge_class}")
                 ], className="takeaway-badge-container", style={"display": "flex", "justifyContent": "space-between", "alignItems": "center"}),
                 
                 # Scale indicator
@@ -5535,7 +5536,7 @@ def update_sector_sentiment_container(n):
                 # Tickers with label
                 html.Div([
                     html.Div(
-                        html.Strong("Representative Tickers:", style={"fontSize": "13px", "marginBottom": "5px", "display": "block"}),
+                        html.Span("Representative Tickers:", style={"fontSize": "13px", "marginBottom": "5px", "display": "block"}),
                         style={"marginBottom": "3px"}
                     ),
                     html.Div([
