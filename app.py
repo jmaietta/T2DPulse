@@ -5503,12 +5503,10 @@ def update_sector_sentiment_container(n):
                 html.Div([
                     html.H3(sector, className="sector-card-title"),
                     html.Div([
-                        html.Div(f"{norm_score:.1f}", className="sector-score", 
-                                style={"width": "100%", "textAlign": "right", "display": "block", "fontWeight": "bold", "paddingRight": "2px", "fontSize": "18px"}),
-                        html.Div(stance, className="sector-sentiment", 
-                                style={"width": "100%", "color": text_color, "textAlign": "right", "display": "block", "paddingRight": "2px", "fontSize": "14px"})
-                    ], className="score-container", style={"textAlign": "right", "minWidth": "100px", "display": "flex", "flexDirection": "column", "alignItems": "flex-end", "justifyContent": "flex-end"})
-                ], className="card-header-content")
+                        html.Div(f"{norm_score:.1f}", className="sector-score"),
+                        html.Div(stance, className="sector-sentiment", style={"color": text_color})
+                    ], className="score-container")
+                ], className="card-header-content", style={"display": "flex", "justifyContent": "space-between", "width": "100%"})
             ], className="sector-card-header", style={"borderColor": border_color}),
             
             # Card body with all the details
