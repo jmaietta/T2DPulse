@@ -2354,7 +2354,7 @@ def create_pulse_card(value):
             }),
             # Last updated text
             html.Div([
-                html.Span(f"Last updated: {datetime.now().strftime('%B %d, %Y')}", 
+                html.Span(f"Last updated: April 25, 2025", 
                         style={
                             "fontSize": "12px", 
                             "color": "#95a5a6",
@@ -5504,10 +5504,10 @@ def update_sector_sentiment_container(n):
                     html.H3(sector, className="sector-card-title"),
                     html.Div([
                         html.Div(f"{norm_score:.1f}", className="sector-score", 
-                                style={"width": "100%", "textAlign": "right", "display": "block", "fontWeight": "bold", "paddingRight": "2px"}),
+                                style={"width": "100%", "textAlign": "right", "display": "block", "fontWeight": "bold", "paddingRight": "2px", "fontSize": "18px"}),
                         html.Div(stance, className="sector-sentiment", 
-                                style={"width": "100%", "color": text_color, "textAlign": "right", "display": "block", "paddingRight": "2px"})
-                    ], className="score-container", style={"textAlign": "right", "minWidth": "90px", "display": "flex", "flexDirection": "column", "alignItems": "flex-end", "justifyContent": "flex-end"})
+                                style={"width": "100%", "color": text_color, "textAlign": "right", "display": "block", "paddingRight": "2px", "fontSize": "14px"})
+                    ], className="score-container", style={"textAlign": "right", "minWidth": "100px", "display": "flex", "flexDirection": "column", "alignItems": "flex-end", "justifyContent": "flex-end"})
                 ], className="card-header-content")
             ], className="sector-card-header", style={"borderColor": border_color}),
             
@@ -5548,7 +5548,7 @@ def update_sector_sentiment_container(n):
                 html.Div([
                     html.Div([
                         html.Span("Weight:", className="weight-label"),
-                        html.Span(f"{sector_weights[sector]:.1f}%", 
+                        html.Span(f"{sector_weights[sector]:.2f}%", 
                                  id={"type": "weight-display", "index": sector},
                                  className="weight-value")
                     ], className="weight-display-container"),
@@ -5618,8 +5618,8 @@ def update_sector_sentiment_container(n):
         # Sector summary in a card like in the mockup, more compact
         html.Div([
             html.H3("Sector Summary", className="section-subtitle", 
-                   style={"marginBottom": "10px", "fontWeight": "500", "color": "#2c3e50", 
-                          "textAlign": "center", "fontSize": "16px"}),
+                   style={"marginBottom": "10px", "fontWeight": "600", "color": "#2c3e50", 
+                          "textAlign": "center", "fontSize": "20px"}),
             sector_summary
         ], className="sector-summary-container", 
            style={"marginBottom": "20px", "padding": "12px", 
@@ -5682,7 +5682,7 @@ def update_weight_displays(weights_json):
     # Generate display text for each sector
     weight_displays = []
     for sector in weights:
-        weight_displays.append(f"{weights[sector]:.1f}%")
+        weight_displays.append(f"{weights[sector]:.2f}%")
     
     return weight_displays
 
