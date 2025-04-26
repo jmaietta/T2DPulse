@@ -5549,13 +5549,14 @@ def update_sector_sentiment_container(n):
                                       "color": "white",
                                       "border": "none",
                                       "borderRadius": "4px",
-                                      "padding": "5px 15px",
+                                      "padding": "5px 20px",   # Wider padding to show full text
                                       "fontWeight": "bold",
                                       "cursor": "pointer",
                                       "fontSize": "14px",
-                                      "lineHeight": "1.5",  # Fix text truncation
-                                      "height": "33px",     # Ensure proper height for text
-                                      "marginLeft": "5px",  # Add spacing from the % symbol
+                                      "lineHeight": "1.5",     # Fix text truncation
+                                      "height": "33px",        # Ensure proper height for text
+                                      "minWidth": "75px",      # Ensure minimum width to fit text
+                                      "marginLeft": "5px",     # Add spacing from the % symbol
                                       "boxShadow": "0 2px 4px rgba(0,0,0,0.1)"
                                   })
                     ], className="weight-display-container", style={"display": "flex", "alignItems": "center"})
@@ -5668,10 +5669,12 @@ def update_vix_container(n):
 
 # Callback for updating weight input fields when weights change
 @app.callback(
-    Output({"type": "weight-input", "index": ALL}, "value"),
-    [Input("stored-weights", "children")]
+    [Output({"type": "weight-input", "index": ALL}, "value"),
+     Output({"type": "input-container", "index": ALL}, "className")],
+    [Input("stored-weights", "children"),
+     State({"type": "weight-input", "index": ALL}, "value")]
 )
-def update_weight_displays(weights_json):
+def update_weight_displays(weights_json, current_values):
     if not weights_json:
         # Initialize with equal weights
         global sector_weights
@@ -5687,10 +5690,24 @@ def update_weight_displays(weights_json):
     # Generate weight values for each sector input (formatted to 2 decimal places)
     weight_values = []
     for sector in weights:
-        # Round to 2 decimal places for consistent display
-        weight_values.append(round(weights[sector], 2))
+        # Format to exactly 2 decimal places for consistent display
+        # Using string formatting to ensure exactly 2 decimal places
+        weight_values.append(float(f"{weights[sector]:.2f}"))
     
-    return weight_values
+    # Determine which inputs have changed values (for highlighting)
+    # For initial load, don't highlight anything
+    if not current_values:
+        # Initial load, no highlighting
+        class_names = ["weight-input-container"] * len(weight_values)
+    else:
+        class_names = []
+        for i, (current, new) in enumerate(zip(current_values, weight_values)):
+            if abs(float(current) - new) > 0.01:  # If value changed meaningfully
+                class_names.append("weight-input-container weight-value-changed")
+            else:
+                class_names.append("weight-input-container")
+    
+    return weight_values, class_names
 
 # Note: The plus/minus button callbacks have been removed 
 # and replaced with the manual input and apply button approach
