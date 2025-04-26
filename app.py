@@ -2304,11 +2304,11 @@ def create_pulse_card(value):
                     }),
                 # Tooltip container
                 html.Div([
-                    # The tooltip trigger icon
-                    html.Span("ⓘ", className="tooltip-icon"),
+                    # The tooltip trigger icon - added tabindex for keyboard accessibility
+                    html.Span("ⓘ", className="tooltip-icon", **{"tabindex": "0"}),
                     # Tooltip content
                     html.Div([
-                        html.H5("Sentiment Index Categories", style={"marginBottom": "10px"}),
+                        html.H5("Sentiment Index Categories", style={"marginBottom": "10px", "marginTop": "0"}),
                         html.Div([
                             html.Div([
                                 html.Span("Bullish (60-100): ", style={"fontWeight": "bold", "color": "#2ecc71"}),

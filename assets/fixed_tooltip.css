@@ -14,8 +14,8 @@
 
 .tooltip-wrapper .tooltip-content {
   visibility: hidden;
-  position: absolute;
-  z-index: 1000;
+  position: fixed; /* Change to fixed position to break free from containers */
+  z-index: 9999; /* Much higher z-index to ensure it's on top */
   width: 300px;
   background-color: white;
   color: #333;
@@ -27,10 +27,7 @@
   pointer-events: none; /* Fix for smooth transition */
   transition: opacity 0.3s;
   
-  /* Position the tooltip with transform for better centering */
-  bottom: 125%;
-  left: 50%;
-  transform: translateX(-50%); /* Better centering than margin-left */
+  /* We'll position this dynamically with JavaScript */
 }
 
 /* Make tooltip visible on hover AND keyboard focus */
