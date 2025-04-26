@@ -5469,12 +5469,15 @@ def update_sector_sentiment_container(n):
             # Header with sector name and score
             html.Div([
                 html.Div([
-                    html.H3(sector, className="sector-card-title", style={"flexGrow": 1}),
+                    html.Div(sector, className="sector-card-title", 
+                             style={"fontWeight": "500", "fontSize": "18px", "width": "75%"}),
                     html.Div([
-                        html.Div(f"{norm_score:.1f}", className="sector-score"),
-                        html.Div(stance, className="sector-sentiment", style={"color": text_color})
-                    ], className="score-container")
-                ], className="card-header-content", style={"display": "flex", "alignItems": "center", "justifyContent": "space-between", "width": "100%"})
+                        html.Div(f"{norm_score:.1f}", className="sector-score", 
+                                style={"fontWeight": "bold", "fontSize": "20px", "textAlign": "right"}),
+                        html.Div(stance, className="sector-sentiment", 
+                                style={"color": text_color, "fontSize": "14px", "textAlign": "right"})
+                    ], className="score-container", style={"width": "25%", "textAlign": "right"})
+                ], className="card-header-content", style={"display": "flex", "alignItems": "center", "width": "100%"})
             ], className="sector-card-header", style={"borderColor": border_color}),
             
             # Card body with all the details

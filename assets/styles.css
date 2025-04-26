@@ -817,8 +817,8 @@
     box-shadow: 0 0 20px rgba(41, 128, 185, 0.5);  /* Original glow effect */
     border: 1px solid #3498db;
     transition: all 0.3s ease;
-    width: 320px;  /* Original card size */
-    height: 320px;
+    width: 420px;  /* Increased card width for larger logo */
+    height: 420px;  /* Increased card height to maintain square proportion */
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -830,7 +830,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 25px 20px;
+    padding: 20px 10px;
+    width: 100%;
 }
 
 .pulse-score {

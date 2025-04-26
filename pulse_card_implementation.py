@@ -33,35 +33,37 @@ def create_pulse_card(value):
     pulse_card = html.Div([
         # Container with vertical centering for all elements
         html.Div([
-            # Logo image with original size
+            # Logo image with original size and proper width
             html.Img(
                 src="/assets/T2D Pulse logo.png",
                 style={
-                    "height": "80px",  # Original height
+                    "width": "380px",   # Further increased width for a much larger logo display
                     "marginBottom": "15px",
                     "objectFit": "contain",
-                    "maxWidth": "100%"  # Ensure it doesn't overflow its container
+                    "display": "block", # Ensures proper centering
+                    "marginLeft": "auto",
+                    "marginRight": "auto"
                 }
             ),
             # Score value
             html.Div([
                 html.Span(f"{score_value:.1f}", 
                         style={
-                            "fontSize": "64px", 
+                            "fontSize": "84px", 
                             "fontWeight": "bold", 
                             "color": pulse_color,
                             "display": "block",
                             "textAlign": "center",
                             "width": "100%"
                         }),
-            ], style={"textAlign": "center", "marginBottom": "10px", "display": "flex", "justifyContent": "center"}),
+            ], style={"textAlign": "center", "marginBottom": "25px", "display": "flex", "justifyContent": "center"}),
             # Status label
             html.Div([
                 html.Span(pulse_status, 
                         style={
-                            "fontSize": "24px", 
+                            "fontSize": "32px", 
                             "color": pulse_color,
-                            "marginRight": "5px",
+                            "marginRight": "10px",
                             "display": "inline-block",
                             "fontWeight": "500"
                         }),
@@ -71,7 +73,7 @@ def create_pulse_card(value):
                     className="info-icon",
                     style={
                         "cursor": "pointer", 
-                        "fontSize": "16px", 
+                        "fontSize": "22px", 
                         "display": "inline-block",
                         "color": "#2c3e50",
                         "verticalAlign": "text-top" 
