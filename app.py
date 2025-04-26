@@ -5789,6 +5789,13 @@ def apply_weight(n_clicks_list, weight_values, weights_json):
     else:
         weights = sector_weights.copy()
     
+    # Check if the sector exists in the weights dictionary
+    if sector_to_update not in weights:
+        # If sector doesn't exist, initialize it with default weight
+        num_sectors = len(ids)
+        weights[sector_to_update] = 100 / num_sectors if num_sectors > 0 else 0
+        print(f"Added missing sector {sector_to_update} to weights dictionary with weight {weights[sector_to_update]}")
+    
     # Get the new weight value from input (with None handling)
     input_value = weight_values[input_index]
     if input_value is None or str(input_value).strip() == '':
@@ -5850,8 +5857,6 @@ def apply_weight(n_clicks_list, weight_values, weights_json):
     for s in weights:
         weights[s] = round(weights[s], 2)
     
-    # Update highlighting to show visual feedback
-    update_sector_highlight(sector_to_update)
     # Update highlighting to show visual feedback
     update_sector_highlight(sector_to_update)
     return json.dumps(weights)
@@ -5935,6 +5940,13 @@ def apply_weight_on_enter(n_clicks_list, weight_values, weights_json):
             weights = sector_weights.copy()
     else:
         weights = sector_weights.copy()
+        
+    # Check if the sector exists in the weights dictionary
+    if sector_to_update not in weights:
+        # If sector doesn't exist, initialize it with default weight
+        num_sectors = len(sectors)
+        weights[sector_to_update] = 100 / num_sectors if num_sectors > 0 else 0
+        print(f"Added missing sector {sector_to_update} to weights dictionary with weight {weights[sector_to_update]}")
     
     # Get the new weight value from input (with None handling)
     input_value = weight_values[input_index]
