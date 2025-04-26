@@ -37,8 +37,8 @@ def create_pulse_card(value):
             html.Img(
                 src="/assets/T2D Pulse logo.png",
                 style={
-                    "width": "380px",   # Further increased width for a much larger logo display
-                    "marginBottom": "15px",
+                    "width": "290px",   # Large logo that fits within original card size
+                    "marginBottom": "10px",
                     "objectFit": "contain",
                     "display": "block", # Ensures proper centering
                     "marginLeft": "auto",
@@ -49,7 +49,7 @@ def create_pulse_card(value):
             html.Div([
                 html.Span(f"{score_value:.1f}", 
                         style={
-                            "fontSize": "84px", 
+                            "fontSize": "64px", 
                             "fontWeight": "bold", 
                             "color": pulse_color,
                             "display": "block",
@@ -177,7 +177,7 @@ def create_sector_summary(sector_scores):
         html.Div([
             html.Div([
                 html.Div(f"{sector}", className="sector-name", 
-                         style={"fontWeight": "500", "display": "inline-block", "width": "75%"}),
+                         style={"fontWeight": "500", "display": "inline-block", "width": "75%", "textAlign": "left"}),
                 html.Div(f"{score:.1f}", 
                          className="sector-score-positive" if score >= 60 else 
                                   "sector-score-neutral" if score >= 40 else 
@@ -197,7 +197,7 @@ def create_sector_summary(sector_scores):
         html.Div([
             html.Div([
                 html.Div(f"{sector}", className="sector-name", 
-                         style={"fontWeight": "500", "display": "inline-block", "width": "75%"}),
+                         style={"fontWeight": "500", "display": "inline-block", "width": "75%", "textAlign": "left"}),
                 html.Div(f"{score:.1f}", 
                          className="sector-score-positive" if score >= 60 else 
                                   "sector-score-neutral" if score >= 40 else 

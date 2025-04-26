@@ -817,12 +817,13 @@
     box-shadow: 0 0 20px rgba(41, 128, 185, 0.5);  /* Original glow effect */
     border: 1px solid #3498db;
     transition: all 0.3s ease;
-    width: 420px;  /* Increased card width for larger logo */
-    height: 420px;  /* Increased card height to maintain square proportion */
+    width: 320px;  /* Restored original card width */
+    height: 320px;  /* Restored original card height */
     margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden; /* To contain oversized logo */
 }
 
 .pulse-card-inner {

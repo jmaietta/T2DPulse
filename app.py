@@ -5470,7 +5470,7 @@ def update_sector_sentiment_container(n):
             html.Div([
                 html.Div([
                     html.Div(sector, className="sector-card-title", 
-                             style={"fontWeight": "500", "fontSize": "18px", "width": "75%"}),
+                             style={"fontWeight": "500", "fontSize": "18px", "width": "75%", "textAlign": "left"}),
                     html.Div([
                         html.Div(f"{norm_score:.1f}", className="sector-score", 
                                 style={"fontWeight": "bold", "fontSize": "20px", "textAlign": "right"}),
@@ -5516,11 +5516,13 @@ def update_sector_sentiment_container(n):
                 # Weight controls
                 html.Div([
                     html.Div([
-                        html.Span("Weight:", className="weight-label"),
-                        html.Span(f"{sector_weights[sector]:.2f}%", 
-                                 id={"type": "weight-display", "index": sector},
-                                 className="weight-value")
-                    ], className="weight-display-container"),
+                        html.Div("Weight:", className="weight-label", 
+                               style={"width": "75%", "textAlign": "left", "display": "inline-block"}),
+                        html.Div(f"{sector_weights[sector]:.2f}%", 
+                               id={"type": "weight-display", "index": sector},
+                               className="weight-value",
+                               style={"width": "25%", "textAlign": "right", "display": "inline-block"})
+                    ], className="weight-display-container", style={"display": "flex", "alignItems": "center", "width": "100%"}),
                     
                     html.Div([
                         html.Button("-", 
