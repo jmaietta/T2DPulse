@@ -5450,17 +5450,17 @@ def update_sector_sentiment_container(n):
         if stance == "Bullish":
             border_color = "#2ecc71"  # Green for Bullish
             text_color = "#27ae60"  # Darker green text (from mockup)
-            bg_color = "#ebf7f0"  # Light green background (from mockup)
+            bg_color = "white"     # White background for all cards
             badge_class = "badge-bullish"
         elif stance == "Bearish":
             border_color = "#e74c3c"  # Red for Bearish
             text_color = "#c0392b"  # Darker red text (from mockup)
-            bg_color = "#fdedec"  # Light red background (from mockup)
+            bg_color = "white"     # White background for all cards
             badge_class = "badge-bearish"
         else:
             border_color = "#f39c12"  # Orange for Neutral
             text_color = "#d35400"  # Darker orange text (from mockup)
-            bg_color = "#fef5e7"  # Light yellow/orange background (from mockup)
+            bg_color = "white"     # White background for all cards
             badge_class = "badge-neutral"
             
         # Create the sector card with original format from mockup including weight controls
@@ -5604,7 +5604,7 @@ def update_sector_sentiment_container(n):
                     "borderTop": "1px solid #eee"
                 })
                 
-            ], className="sector-card-body", style={"backgroundColor": bg_color})
+            ], className="sector-card-body", style={"backgroundColor": "white"})
         ], className="sector-card", style={"--card-colour": border_color})
         
         sector_cards.append(card)
