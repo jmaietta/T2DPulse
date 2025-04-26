@@ -632,6 +632,19 @@
     min-height: 215px;
 }
 
+/* Add full-height colored bar using pseudo-element instead of yellow border */
+.sector-card::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 6px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    background: var(--card-colour, #f39c12); /* Default to yellow if no variable set */
+}
+
 .sector-card-header {
     display: flex;
     justify-content: space-between;

@@ -5503,7 +5503,7 @@ def update_sector_sentiment_container(n):
                         "margin": "0"
                     })
                 ], className="card-header-content", style={"display": "flex", "alignItems": "center", "width": "100%"})
-            ], className="sector-card-header", style={"borderColor": border_color}),
+            ], className="sector-card-header"),
             
             # Card body with all the details
             html.Div([
@@ -5604,7 +5604,7 @@ def update_sector_sentiment_container(n):
                 })
                 
             ], className="sector-card-body", style={"backgroundColor": bg_color})
-        ], className="sector-card")
+        ], className="sector-card", style={"--card-colour": border_color})
         
         sector_cards.append(card)
     
