@@ -814,11 +814,11 @@
 .pulse-card {
     background-color: white;
     border-radius: 8px;
-    box-shadow: 0 0 15px rgba(41, 128, 185, 0.4);  /* Reduced glow effect */
+    box-shadow: 0 0 20px rgba(41, 128, 185, 0.5);  /* Original glow effect */
     border: 1px solid #3498db;
     transition: all 0.3s ease;
-    width: 300px;  /* Slightly smaller card */
-    height: 300px;
+    width: 320px;  /* Original card size */
+    height: 320px;
     margin: 0 auto;
     display: flex;
     align-items: center;

@@ -33,11 +33,11 @@ def create_pulse_card(value):
     pulse_card = html.Div([
         # Container with vertical centering for all elements
         html.Div([
-            # Logo image instead of text title - maintain original size
+            # Logo image with original size
             html.Img(
                 src="/assets/T2D Pulse logo.png",
                 style={
-                    "height": "60px",  # Reduced height to maintain original proportions
+                    "height": "80px",  # Original height
                     "marginBottom": "15px",
                     "objectFit": "contain",
                     "maxWidth": "100%"  # Ensure it doesn't overflow its container
@@ -138,7 +138,7 @@ def create_pulse_card(value):
             ], style={"textAlign": "center"})
         ], className="pulse-card-inner")
     ], className="pulse-card", style={
-        "boxShadow": f"0 0 15px {pulse_color}",  # Color-matched glow with reduced size
+        "boxShadow": f"0 0 20px {pulse_color}",  # Color-matched glow with original size
         "border": f"1px solid {pulse_color}"     # Color-matched border
     })
     
