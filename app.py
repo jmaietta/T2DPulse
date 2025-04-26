@@ -5557,15 +5557,24 @@ def update_sector_sentiment_container(n):
                                    "marginRight": "5px",
                                    "verticalAlign": "middle"
                                }),
-                        html.Div(f"{sector_weights[sector]:.2f}%", 
-                               id={"type": "weight-display", "index": sector},
-                               className="weight-value",
-                               style={
-                                   "display": "inline-block",
-                                   "textAlign": "left", 
-                                   "fontWeight": "bold",
-                                   "verticalAlign": "middle"
-                               })
+                        # Replace display div with an input
+                        dcc.Input(
+                            id={"type": "weight-input", "index": sector},
+                            type="number",
+                            min=1,
+                            max=100,
+                            step=0.25,
+                            value=sector_weights[sector],
+                            style={
+                                "width": "60px",
+                                "textAlign": "center",
+                                "fontWeight": "bold",
+                                "border": "1px solid #ddd",
+                                "borderRadius": "4px",
+                                "padding": "4px"
+                            }
+                        ),
+                        html.Span("%", style={"marginLeft": "2px"})
                     ], className="weight-display-container", style={"display": "flex", "alignItems": "center", "width": "100%"}),
                     
                     html.Div([
@@ -5680,12 +5689,12 @@ def update_vix_container(n):
         insights_panel
     ]
 
-# Callback for updating weight displays when weights change
+# Callback for updating weight input values when weights change
 @app.callback(
-    Output({"type": "weight-display", "index": ALL}, "children"),
+    Output({"type": "weight-input", "index": ALL}, "value"),
     [Input("stored-weights", "children")]
 )
-def update_weight_displays(weights_json):
+def update_weight_inputs(weights_json):
     if not weights_json:
         # Initialize with equal weights
         global sector_weights
@@ -5698,12 +5707,12 @@ def update_weight_displays(weights_json):
             # If JSON parse fails, use global weights
             weights = sector_weights
     
-    # Generate display text for each sector
-    weight_displays = []
+    # Generate values for each sector's input
+    weight_values = []
     for sector in weights:
-        weight_displays.append(f"{weights[sector]:.2f}%")
+        weight_values.append(weights[sector])
     
-    return weight_displays
+    return weight_values
 
 # Callback for increasing weight buttons
 @app.callback(
@@ -5738,8 +5747,8 @@ def increase_weight(n_clicks_list, weights_json):
     else:
         weights = sector_weights
     
-    # Increase the selected sector's weight by 1
-    increment_amount = 1.0
+    # Increase the selected sector's weight by 0.25
+    increment_amount = 0.25
     weights[sector] += increment_amount
     
     # Calculate the proportional decrease for other sectors
@@ -5800,8 +5809,8 @@ def decrease_weight(n_clicks_list, weights_json):
     if weights[sector] <= 1.0:
         raise PreventUpdate
     
-    # Decrease the selected sector's weight by 1
-    decrement_amount = 1.0
+    # Decrease the selected sector's weight by 0.25
+    decrement_amount = 0.25
     weights[sector] -= decrement_amount
     
     # Increase other weights proportionally
@@ -5823,6 +5832,90 @@ def decrease_weight(n_clicks_list, weights_json):
     
     return json.dumps(weights)
 
+# Callback for direct weight input
+@app.callback(
+    Output("stored-weights", "children", allow_duplicate=True),
+    Input({"type": "weight-input", "index": ALL}, "value"),
+    State({"type": "weight-input", "index": ALL}, "id"),
+    State("stored-weights", "children"),
+    prevent_initial_call=True
+)
+def update_weight_from_input(input_values, input_ids, weights_json):
+    global sector_weights
+    
+    # Get trigger information
+    ctx = dash.callback_context
+    if not ctx.triggered:
+        raise PreventUpdate
+    
+    # Extract trigger information to find which sector was changed
+    trigger_id = ctx.triggered[0]["prop_id"].split(".")[0]
+    
+    # If the trigger didn't come from a weight input, don't update
+    if not trigger_id.startswith('{"type":"weight-input"'):
+        raise PreventUpdate
+    
+    # Parse the JSON to get the sector name
+    trigger_dict = json.loads(trigger_id)
+    changed_sector = trigger_dict["index"]
+    
+    # Use stored weights if available, otherwise use global
+    if weights_json:
+        try:
+            weights = json.loads(weights_json)
+        except:
+            weights = sector_weights
+    else:
+        weights = sector_weights
+    
+    # Create a mapping of sector to input value
+    sector_to_value = {}
+    for i, id_dict in enumerate(input_ids):
+        sector = id_dict["index"]
+        # Ensure the value is valid (between 1 and 100)
+        value = max(1.0, min(100.0, input_values[i] if input_values[i] is not None else weights[sector]))
+        sector_to_value[sector] = value
+    
+    # Handle the changed sector differently
+    new_value = sector_to_value[changed_sector]
+    old_value = weights[changed_sector]
+    
+    # If value is unchanged, do nothing
+    if abs(new_value - old_value) < 0.01:
+        raise PreventUpdate
+    
+    # Update the changed sector's weight
+    weights[changed_sector] = new_value
+    
+    # Identify which sectors have been manually adjusted and which haven't
+    sectors_to_adjust = [s for s in weights.keys() if s != changed_sector]
+    total_other_weight = sum(weights[s] for s in sectors_to_adjust)
+    
+    # Calculate the adjustment needed for other sectors
+    adjustment = 100.0 - new_value
+    
+    if total_other_weight > 0:
+        # Proportionally distribute the remaining weight among other sectors
+        for s in sectors_to_adjust:
+            proportion = weights[s] / total_other_weight
+            weights[s] = adjustment * proportion
+    
+    # Round to 2 decimal places to avoid floating point issues
+    for s in weights:
+        weights[s] = round(weights[s], 2)
+    
+    # Make sure the sum is exactly 100
+    total = sum(weights.values())
+    if total != 100.0:
+        # Find a sector to adjust slightly to make total exactly 100
+        adjust_sector = next(iter(weights.keys()))
+        weights[adjust_sector] += (100.0 - total)
+    
+    # Update global weights
+    sector_weights = weights
+    
+    return json.dumps(weights)
+
 # Callback for reset weights button
 @app.callback(
     Output("stored-weights", "children", allow_duplicate=True),
@@ -5836,9 +5929,16 @@ def reset_weights(n_clicks):
     num_sectors = len(sector_weights)
     equal_weight = 100.0 / num_sectors
     
-    # Set all sectors to equal weight
+    # Set all sectors to equal weight (rounded to 2 decimal places)
     for sector in sector_weights:
-        sector_weights[sector] = equal_weight
+        sector_weights[sector] = round(equal_weight, 2)
+    
+    # Ensure total is exactly 100
+    total = sum(sector_weights.values())
+    if total != 100.0:
+        # Adjust the first sector slightly to make total exactly 100
+        adjust_sector = next(iter(sector_weights.keys()))
+        sector_weights[adjust_sector] += (100.0 - total)
     
     return json.dumps(sector_weights)
 
