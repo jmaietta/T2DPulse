@@ -5482,7 +5482,7 @@ def update_sector_sentiment_container(n):
                                 style={"fontWeight": "bold", "fontSize": "20px", "textAlign": "right", "width": "100%"}),
                         html.Div(stance, className="sector-sentiment", 
                                 style={"color": text_color, "fontSize": "14px", "textAlign": "right", "width": "100%"})
-                    ], className="score-container", style={"textAlign": "right", "minWidth": "80px"})
+                    ], className="score-container", style={"textAlign": "right", "minWidth": "80px", "display": "flex", "flexDirection": "column", "alignItems": "flex-end"})
                 ], className="card-header-content", style={"display": "flex", "alignItems": "center", "width": "100%"})
             ], className="sector-card-header", style={"borderColor": border_color}),
             
