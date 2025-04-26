@@ -5701,6 +5701,17 @@ def update_vix_container(n):
         insights_panel
     ]
 
+# Helper function to update sector highlighting
+def update_sector_highlight(sector_name):
+    """Update the highlighted sectors dictionary to show visual feedback when a weight is changed"""
+    # First ensure the highlighted_sectors global exists
+    if 'highlighted_sectors' not in globals():
+        global highlighted_sectors
+        highlighted_sectors = {}
+    
+    # Set current time as the highlight timestamp for this sector
+    highlighted_sectors[sector_name] = time.time()
+
 # Callback for updating weight input fields when weights change
 @app.callback(
     Output({"type": "weight-input", "index": ALL}, "value"),
@@ -5826,18 +5837,22 @@ def apply_weight(n_clicks_list, weight_values, weights_json):
     if total != 100 and total > 0:
         # Find the largest weight to adjust (that isn't fixed)
         unfixed_sectors = [s for s in weights.keys() if s != sector_to_update and s not in fixed_sectors]
-        if unfixed_sectors:
+        # Only adjust if there are unfixed sectors with weight > 0 (guard against all zeros)
+        if unfixed_sectors and sum(weights[s] for s in unfixed_sectors) > 0:
             largest_sector = max(unfixed_sectors, key=lambda x: weights[x])
         else:
-            # If all are fixed or none left with weight > 0, adjust the sector we just updated
+            # If all unfixed sectors are at 0% or none exist, adjust the sector we just updated
             largest_sector = sector_to_update
-        
         weights[largest_sector] += (100 - total)
     
     # Format all weights to 2 decimal places for display
     for s in weights:
         weights[s] = round(weights[s], 2)
     
+    # Update highlighting to show visual feedback
+    update_sector_highlight(sector_to_update)
+    # Update highlighting to show visual feedback
+    update_sector_highlight(sector_to_update)
     return json.dumps(weights)
 
 # Callback to update the T2D Pulse score when weights change
@@ -5969,10 +5984,11 @@ def apply_weight_on_enter(n_clicks_list, weight_values, weights_json):
     if total != 100 and total > 0:
         # Find the largest weight to adjust (that isn't fixed)
         unfixed_sectors = [s for s in weights.keys() if s != sector_to_update and s not in fixed_sectors]
-        if unfixed_sectors:
+        # Only adjust if there are unfixed sectors with weight > 0 (guard against all zeros)
+        if unfixed_sectors and sum(weights[s] for s in unfixed_sectors) > 0:
             largest_sector = max(unfixed_sectors, key=lambda x: weights[x])
         else:
-            # If all are fixed or none left with weight > 0, adjust the sector we just updated
+            # If all unfixed sectors are at 0% or none exist, adjust the sector we just updated
             largest_sector = sector_to_update
         
         weights[largest_sector] += (100 - total)
@@ -5980,6 +5996,9 @@ def apply_weight_on_enter(n_clicks_list, weight_values, weights_json):
     # Format all weights to 2 decimal places for display
     for s in weights:
         weights[s] = round(weights[s], 2)
+    
+    # Update highlighting to show visual feedback
+    update_sector_highlight(sector_to_update)
     
     return json.dumps(weights)
 
@@ -5990,7 +6009,6 @@ def apply_weight_on_enter(n_clicks_list, weight_values, weights_json):
     prevent_initial_call=True
 )
 def reset_weights(n_clicks):
-    global sector_weights
     global fixed_sectors
     
     # Initialize fixed_sectors if it doesn't exist
@@ -6000,22 +6018,37 @@ def reset_weights(n_clicks):
     # Clear the fixed sectors when resetting
     fixed_sectors.clear()
     
+    # Get sectors from the default weights
+    from sentiment_engine import DEFAULT_SECTOR_WEIGHTS
+    sectors = list(DEFAULT_SECTOR_WEIGHTS.keys())
+    
     # Calculate equal weights
-    num_sectors = len(sector_weights)
+    num_sectors = len(sectors)
     equal_weight = 100.0 / num_sectors
     
-    # Set all sectors to equal weight
-    for sector in sector_weights:
-        sector_weights[sector] = equal_weight
+    # Create a new dictionary with equal weights
+    equal_weights = {sector: equal_weight for sector in sectors}
     
-    return json.dumps(sector_weights)
+    return json.dumps(equal_weights)
 
 # Callback to provide visual feedback for updated input fields
-@app.callback(
-    Output({"type": "input-container", "index": ALL}, "style"),
-    Input("stored-weights", "children"),
-    prevent_initial_call=True
-)
+# Create a helper function to update the sector highlighting
+def update_sector_highlight(sector):
+    """
+    Update the highlighted sectors dictionary to show visual feedback when a weight is changed
+    This marks the sector as recently updated for the visual glow effect
+    
+    Args:
+        sector (str): The sector name to highlight
+    """
+    # Initialize highlighted_sectors if it doesn't exist
+    if 'highlighted_sectors' not in globals():
+        global highlighted_sectors
+        highlighted_sectors = {}
+    
+    # Update the timestamp for this sector
+    highlighted_sectors[sector] = time.time()
+
 def update_input_styling(weights_json):
     """
     Update input field styling to provide visual feedback when a weight is changed
