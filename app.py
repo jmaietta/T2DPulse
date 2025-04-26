@@ -6031,7 +6031,6 @@ def reset_weights(n_clicks):
     
     return json.dumps(equal_weights)
 
-# Callback to provide visual feedback for updated input fields
 # Create a helper function to update the sector highlighting
 def update_sector_highlight(sector):
     """
@@ -6049,6 +6048,12 @@ def update_sector_highlight(sector):
     # Update the timestamp for this sector
     highlighted_sectors[sector] = time.time()
 
+# Callback to provide visual feedback for updated input fields
+@app.callback(
+    Output({"type": "input-container", "index": ALL}, "style"),
+    Input("stored-weights", "children"),
+    prevent_initial_call=True
+)
 def update_input_styling(weights_json):
     """
     Update input field styling to provide visual feedback when a weight is changed

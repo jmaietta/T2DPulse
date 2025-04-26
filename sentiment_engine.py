@@ -87,7 +87,26 @@ BANDS = {
     "Consumer_Sentiment":        ("higher", 100.0, 90.0),
 }
 
-# ---------- 5) Types ----------
+# ---------- 5) Default sector weights ----------
+# This is used for resetting the sectors to default equal weights
+DEFAULT_SECTOR_WEIGHTS = {
+    "Cloud": 7.14,
+    "AI": 7.14,
+    "Cybersecurity": 7.14,
+    "AdTech": 7.14,
+    "FinTech": 7.14,
+    "EdTech": 7.14,
+    "HealthTech": 7.14,
+    "AR/VR": 7.14,
+    "Robotics": 7.14,
+    "Blockchain": 7.14,
+    "IoT": 7.14,
+    "CleanTech": 7.14,
+    "SmartHome": 7.14,
+    "Ecommerce": 7.14
+}
+
+# ---------- 6) Types ----------
 # Using Dict[str, float] instead of TypedDict for flexibility
 MacroDict = Dict[str, float]
 
