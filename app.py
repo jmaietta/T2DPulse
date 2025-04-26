@@ -824,11 +824,9 @@ def calculate_sentiment_index(custom_weights=None, proprietary_data=None, docume
     # Always start with a clean copy of weights
     working_weights = weights.copy() if weights else default_weights.copy()
     
-    # Get document weight if available (limit to 0-50%)
+    # Document sentiment analysis feature is now hidden
+    # Always set document weight to 0
     document_weight = 0
-    if document_data and 'value' in document_data and 'weight' in document_data:
-        document_weight = float(document_data['weight'])
-        document_weight = max(0, min(50, document_weight))  # Enforce 0-50% range
     
     # We no longer use proprietary data, but keep for backward compatibility
     proprietary_weight = 0
@@ -2018,69 +2016,10 @@ app.layout = html.Div([
                 ], className="weights-container")
             ], className="card weights-card", style={"display": "none"}),
             
-            # Document Analysis Card
+            # Document Analysis Card - HIDDEN
             html.Div([
-                html.H3("Document Sentiment Analysis", className="card-title"),
-                
-                # Document upload container
-                html.Div([
-                    html.P(
-                        "Upload documents (PDF, DOCX, TXT) for sentiment analysis. "
-                        "Earnings call transcripts, financial reports, and other text documents "
-                        "will be analyzed for financial sentiment and incorporated into the index.",
-                        className="tab-description"
-                    ),
-                    
-                    # Document upload component
-                    dcc.Upload(
-                        id="upload-document",
-                        children=html.Div([
-                            "Drag and Drop or ",
-                            html.A("Select Document", className="upload-link")
-                        ]),
-                        style={
-                            'width': '100%',
-                            'height': '60px',
-                            'lineHeight': '60px',
-                            'borderWidth': '1px',
-                            'borderStyle': 'dashed',
-                            'borderRadius': '5px',
-                            'textAlign': 'center',
-                            'margin': '10px 0px'
-                        },
-                        multiple=False
-                    ),
-                    
-                    # Document analysis preview
-                    html.Div(id="document-preview", className="document-preview"),
-                    
-                    # Document data weight
-                    html.Div([
-                        html.Label("Document Sentiment Weight", className="prop-label"),
-                        dcc.Slider(
-                            id="document-weight",
-                            min=0,
-                            max=50,
-                            step=1,
-                            value=0,
-                            marks={
-                                0: '0%',
-                                10: '10%',
-                                20: '20%',
-                                30: '30%',
-                                40: '40%',
-                                50: '50%'
-                            },
-                            className="weight-slider"
-                        ),
-                        html.Div(id="document-weight-display", className="weight-display"),
-                        html.Div(id="document-weight-debug", style={"fontSize": "10px", "color": "#999", "marginTop": "5px"})
-                    ], className="slider-container"),
-                    
-                    # Apply button
-                    html.Button("Apply Document Analysis", id="apply-document", className="apply-button"),
-                ], className="upload-container")
-            ], className="card upload-card"),
+                # Hidden document analysis section
+            ], className="card upload-card", style={"display": "none"}),
             
         ], className="column left-column"),
         
@@ -2289,14 +2228,19 @@ def create_sector_summary(sector_scores):
         "width": "48%"
     })
     
-    return html.Div([top_sectors, bottom_sectors], className="sector-summary-content", 
-                   style={
-                       "display": "flex", 
-                       "justifyContent": "space-between",
-                       "gap": "15px", 
-                       "marginTop": "10px", 
-                       "flexWrap": "wrap"
-                   })
+    return html.Div([
+        # Place top and bottom sectors side by side
+        html.Div([
+            html.Div([top_sectors], style={"width": "48%"}),
+            html.Div([bottom_sectors], style={"width": "48%"})
+        ], style={
+            "display": "flex",
+            "justifyContent": "space-between",
+            "width": "100%",
+            "gap": "15px",
+            "flexWrap": "nowrap"
+        })
+    ], className="sector-summary-content", style={"marginTop": "10px"})
 
 # Update sentiment gauge
 def create_pulse_card(value):
@@ -5588,9 +5532,15 @@ def update_sector_sentiment_container(n):
                     html.Li(driver) for driver in drivers
                 ], className="drivers-list"),
                 
-                # Tickers
+                # Tickers with label
                 html.Div([
-                    html.Span(ticker, className="ticker-badge") for ticker in tickers
+                    html.Div(
+                        html.Strong("Representative Tickers:", style={"fontSize": "13px", "marginBottom": "5px", "display": "block"}),
+                        style={"marginBottom": "3px"}
+                    ),
+                    html.Div([
+                        html.Span(ticker, className="ticker-badge", style={"fontWeight": "bold"}) for ticker in tickers
+                    ])
                 ], className="tickers-container"),
                 
                 # Weight controls
