@@ -1,35 +1,49 @@
-// Wait for the page to fully load
-window.addEventListener('DOMContentLoaded', (event) => {
-  // Ensure we initialize the tooltip as hidden
+// Simple tooltip functionality
+document.addEventListener('DOMContentLoaded', function() {
+  // Get the tooltip and info icon elements
+  let tooltipVisible = false;
+  
+  // Wait a bit to ensure all elements are loaded
   setTimeout(function() {
+    // Create a direct function to toggle tooltip
+    window.toggleSentimentTooltip = function() {
+      const tooltip = document.getElementById('sentiment-info-tooltip');
+      if (!tooltip) return;
+      
+      tooltipVisible = !tooltipVisible;
+      tooltip.style.display = tooltipVisible ? 'block' : 'none';
+      console.log('Tooltip toggled:', tooltipVisible ? 'visible' : 'hidden');
+    };
+    
+    // Add click handler to info icon
+    const infoIcon = document.getElementById('sentiment-info-icon');
+    if (infoIcon) {
+      infoIcon.addEventListener('click', function(e) {
+        console.log('Info icon clicked directly');
+        window.toggleSentimentTooltip();
+        e.stopPropagation();
+      });
+    }
+    
+    // Close tooltip when clicking elsewhere
+    document.addEventListener('click', function(e) {
+      const tooltip = document.getElementById('sentiment-info-tooltip');
+      if (!tooltip) return;
+      
+      if (tooltipVisible && 
+          e.target.id !== 'sentiment-info-icon' && 
+          !tooltip.contains(e.target)) {
+        tooltipVisible = false;
+        tooltip.style.display = 'none';
+        console.log('Tooltip closed by outside click');
+      }
+    });
+    
+    // Initialize tooltip state
     const tooltip = document.getElementById('sentiment-info-tooltip');
     if (tooltip) {
       tooltip.style.display = 'none';
+      console.log('Tooltip initialized to hidden state');
     }
-  }, 500); // Short delay to ensure elements are rendered
-  
-  // Add click event listener once the DOM is ready
-  document.addEventListener('click', function(e) {
-    // Find the sentiment info icon
-    const infoIcon = document.getElementById('sentiment-info-icon');
-    const tooltip = document.getElementById('sentiment-info-tooltip');
-    
-    if (infoIcon && tooltip) {
-      // If the clicked element is the info icon, toggle the tooltip
-      if (e.target === infoIcon || e.target.id === 'sentiment-info-icon') {
-        console.log('Info icon clicked');
-        // Toggle display between 'none' and 'block'
-        if (tooltip.style.display === 'none' || !tooltip.style.display) {
-          tooltip.style.display = 'block';
-        } else {
-          tooltip.style.display = 'none';
-        }
-        e.stopPropagation(); // Prevent event from bubbling to document
-      } 
-      // If the click is not on the tooltip or the icon, hide the tooltip
-      else if (!tooltip.contains(e.target) && tooltip.style.display === 'block') {
-        tooltip.style.display = 'none';
-      }
-    }
-  });
+  }, 300);
 });

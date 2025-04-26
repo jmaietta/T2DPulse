@@ -2310,17 +2310,21 @@ def create_pulse_card(value):
                     style={
                         "display": "none", 
                         "position": "absolute", 
-                        "zIndex": "1000", 
+                        "zIndex": "9999", 
                         "backgroundColor": "white", 
-                        "padding": "15px", 
-                        "borderRadius": "5px", 
-                        "boxShadow": "0px 0px 10px rgba(0,0,0,0.2)", 
+                        "padding": "20px", 
+                        "borderRadius": "8px", 
+                        "boxShadow": "0px 0px 15px rgba(0,0,0,0.3)", 
                         "maxWidth": "400px", 
-                        "top": "30px",  # Positioned below the info icon
+                        "minWidth": "280px",
+                        "top": "40px",  # Positioned further below the info icon
                         "left": "50%", 
                         "transform": "translateX(-50%)",
-                        "border": "1px solid #ddd",
-                        "width": "280px"
+                        "border": "1px solid #bbb",
+                        "textAlign": "left",
+                        "color": "#333",
+                        "fontSize": "14px",
+                        "lineHeight": "1.4"
                     },
                     children=[
                         html.H5("Sentiment Index Categories", style={"marginBottom": "10px"}),
