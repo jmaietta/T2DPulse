@@ -2331,7 +2331,8 @@ def create_pulse_card(value):
                 "alignItems": "center", 
                 "justifyContent": "center",
                 "position": "relative",
-                "height": "30px"  # Fixed height to prevent layout shifts
+                "height": "30px",  # Fixed height to prevent layout shifts
+                "overflow": "visible"  # Critical for tooltips to be visible
             }),
             
             # Last updated text
