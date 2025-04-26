@@ -1,34 +1,18 @@
-/* Main stylesheet for T2D Pulse dashboard */
-
-/* Weight input highlight animation */
+/* Additional CSS for weight input field highlight */
 @keyframes weightInputHighlight {
-    0% {
-        border-color: #2ecc71;
-        box-shadow: 0 0 0 3px rgba(46, 204, 113, 0.5);
+    0% { 
+        box-shadow: 0 0 0 3px rgba(46, 204, 113, 0.5); 
     }
-    50% {
-        border-color: #2ecc71;
-        box-shadow: 0 0 0 3px rgba(46, 204, 113, 0.3);
+    50% { 
+        box-shadow: 0 0 0 3px rgba(46, 204, 113, 0.3); 
     }
-    100% {
-        border-color: #ddd;
-        box-shadow: none;
+    100% { 
+        box-shadow: none; 
     }
 }
 
-/* Apply formatting to weight inputs */
-.weight-input-container input {
-    text-align: right;
-    width: 70px;
-    height: 30px;
-    padding: 5px;
-    border-radius: 4px;
-    border: 1px solid #ddd;
-    font-size: 14px;
-}
-
-/* Highlight class for weight input when value changes */
+/* Add visual highlight when weight is updated */
 .weight-value-changed input {
     animation: weightInputHighlight 1.5s ease-out;
-    border-color: #2ecc71;
+    border-color: #2ecc71 !important;
 }

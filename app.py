@@ -5694,18 +5694,18 @@ def update_weight_displays(weights_json, current_values):
         # Using string formatting to ensure exactly 2 decimal places
         weight_values.append(float(f"{weights[sector]:.2f}"))
     
-    # Determine which inputs have changed values (for highlighting)
-    # For initial load, don't highlight anything
+    # For initial load and unchanged values, return empty class string
+    # For changed values, add the highlight class
     if not current_values:
         # Initial load, no highlighting
-        class_names = ["weight-input-container"] * len(weight_values)
+        class_names = [""] * len(weight_values)
     else:
         class_names = []
         for i, (current, new) in enumerate(zip(current_values, weight_values)):
             if abs(float(current) - new) > 0.01:  # If value changed meaningfully
-                class_names.append("weight-input-container weight-value-changed")
+                class_names.append("weight-value-changed")
             else:
-                class_names.append("weight-input-container")
+                class_names.append("")
     
     return weight_values, class_names
 
