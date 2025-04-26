@@ -5559,38 +5559,42 @@ def update_sector_sentiment_container(n):
                                }),
                         # Replace display div with an input
                         html.Div([
-                            dcc.Input(
-                                id={"type": "weight-input", "index": sector},
-                                type="number",
-                                min=1,
-                                max=100,
-                                step=0.25,
-                                value=round(sector_weights[sector], 2),  # Display with 2 decimal places
-                                style={
-                                    "width": "50px",
-                                    "textAlign": "center",
-                                    "fontWeight": "bold",
-                                    "border": "1px solid #ddd",
-                                    "borderRadius": "4px",
-                                    "padding": "4px",
-                                    "marginRight": "4px"
-                                }
-                            ),
+                            html.Div([
+                                dcc.Input(
+                                    id={"type": "weight-input", "index": sector},
+                                    type="number",
+                                    min=1,
+                                    max=100,
+                                    step=0.25,
+                                    value=round(sector_weights[sector], 2),  # Display with 2 decimal places
+                                    style={
+                                        "width": "50px",
+                                        "textAlign": "center",
+                                        "fontWeight": "bold",
+                                        "border": "1px solid #ddd",
+                                        "borderRadius": "4px",
+                                        "padding": "4px",
+                                        "marginRight": "4px"
+                                    }
+                                ),
+                                html.Span("%", style={"fontWeight": "bold", "fontSize": "14px"})
+                            ], style={"display": "flex", "alignItems": "center", "marginRight": "4px"}),
                             html.Button(
                                 "Apply", 
                                 id={"type": "apply-weight", "index": sector},
                                 style={
-                                    "fontSize": "11px",
+                                    "fontSize": "12px",
                                     "padding": "4px 8px",
-                                    "backgroundColor": "#3498db",
+                                    "backgroundColor": "#e74c3c",  # Red highlight to draw attention
                                     "color": "white",
                                     "border": "none",
                                     "borderRadius": "4px",
-                                    "cursor": "pointer"
+                                    "cursor": "pointer",
+                                    "fontWeight": "bold",
+                                    "boxShadow": "0 2px 4px rgba(0,0,0,0.2)"
                                 }
                             )
-                        ], style={"display": "flex", "alignItems": "center"}),
-                        html.Span("%", style={"marginLeft": "2px"})
+                        ], style={"display": "flex", "alignItems": "center"})
                     ], className="weight-display-container", style={"display": "flex", "alignItems": "center", "width": "100%"}),
                     
                     html.Div([
