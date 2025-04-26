@@ -731,62 +731,7 @@
     font-size: 11px;
 }
 
-/* Tooltip styling - Directly copied from working pure_css_tooltip.css */
-.tooltip-wrapper {
-  position: relative;
-  display: inline-block;
-  cursor: pointer;
-  /* Add tabindex to make it focusable with keyboard */
-  outline: none;
-}
-
-.tooltip-wrapper .tooltip-icon {
-  font-size: 16px;
-  color: #3498db;
-}
-
-.tooltip-wrapper .tooltip-content {
-  visibility: hidden;
-  position: absolute;
-  z-index: 1000;
-  width: 300px;
-  background-color: white;
-  color: #333;
-  text-align: left;
-  border-radius: 6px;
-  padding: 15px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-  opacity: 0;
-  pointer-events: none; /* Fix for smooth transition */
-  transition: opacity 0.3s;
-  
-  /* Position the tooltip with transform for better centering */
-  bottom: 125%;
-  left: 50%;
-  transform: translateX(-50%); /* Better centering than margin-left */
-}
-
-/* Make tooltip visible on hover AND keyboard focus */
-.tooltip-wrapper:hover .tooltip-content,
-.tooltip-wrapper:focus .tooltip-content,
-.tooltip-wrapper:focus-within .tooltip-content {
-  visibility: visible;
-  opacity: 1;
-  pointer-events: auto;
-}
-
-/* Arrow pointing down */
-.tooltip-wrapper .tooltip-content::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  transform: translateX(-50%); /* Better centering than margin-left */
-  border-width: 5px;
-  border-style: solid;
-  /* Use currentColor to adapt to background changes */
-  border-color: white transparent transparent transparent;
-}
+/* Tooltip styling moved to fixed_tooltip.css */
 
 /* Sector Card Weight Controls */
 .weight-controls {
