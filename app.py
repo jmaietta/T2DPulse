@@ -5527,8 +5527,7 @@ def update_sector_sentiment_container(n):
                                     "borderRadius": "4px",
                                     "border": "1px solid #ddd",
                                     "fontSize": "14px",
-                                    "marginRight": "5px",
-                                    "textAlign": "right"
+                                    "marginRight": "5px"
                                 }
                             ),
                             # Hidden button triggered by Enter key press
@@ -5538,31 +5537,27 @@ def update_sector_sentiment_container(n):
                                 style={"display": "none"}
                             )
                         ], id={"type": "input-container", "index": sector}),
-                        html.Span("%", style={"marginRight": "10px"}),
-                        
-                        # Apply button moved inside the first div to be closer to the weight input
-                        html.Button("Apply", 
-                                  id={"type": "apply-weight", "index": sector},
-                                  className="weight-button weight-apply",
-                                  style={
-                                      "backgroundColor": "#2ecc71",  # Green button
-                                      "color": "white",
-                                      "border": "none",
-                                      "borderRadius": "4px",
-                                      "padding": "5px 20px",   # Wider padding to show full text
-                                      "fontWeight": "bold",
-                                      "cursor": "pointer",
-                                      "fontSize": "14px",
-                                      "lineHeight": "1.5",     # Fix text truncation
-                                      "height": "33px",        # Ensure proper height for text
-                                      "minWidth": "75px",      # Ensure minimum width to fit text
-                                      "marginLeft": "5px",     # Add spacing from the % symbol
-                                      "boxShadow": "0 2px 4px rgba(0,0,0,0.1)"
-                                  })
-                    ], className="weight-display-container", style={"display": "flex", "alignItems": "center"})
+                        html.Span("%", style={"marginRight": "10px"})
+                    ], className="weight-display-container", style={"display": "flex", "alignItems": "center"}),
+                    
+                    # Apply button
+                    html.Button("Apply", 
+                              id={"type": "apply-weight", "index": sector},
+                              className="weight-button weight-apply",
+                              style={
+                                  "backgroundColor": "#2ecc71",  # Green button
+                                  "color": "white",
+                                  "border": "none",
+                                  "borderRadius": "4px",
+                                  "padding": "5px 15px",
+                                  "fontWeight": "bold",
+                                  "cursor": "pointer",
+                                  "fontSize": "14px",
+                                  "boxShadow": "0 2px 4px rgba(0,0,0,0.1)"
+                              })
                 ], className="weight-controls", style={
                     "display": "flex",
-                    "justifyContent": "flex-start",
+                    "justifyContent": "space-between",
                     "alignItems": "center",
                     "marginTop": "15px",
                     "padding": "10px 0 0 0",
@@ -5669,12 +5664,10 @@ def update_vix_container(n):
 
 # Callback for updating weight input fields when weights change
 @app.callback(
-    [Output({"type": "weight-input", "index": ALL}, "value"),
-     Output({"type": "input-container", "index": ALL}, "className")],
-    [Input("stored-weights", "children"),
-     State({"type": "weight-input", "index": ALL}, "value")]
+    Output({"type": "weight-input", "index": ALL}, "value"),
+    [Input("stored-weights", "children")]
 )
-def update_weight_displays(weights_json, current_values):
+def update_weight_displays(weights_json):
     if not weights_json:
         # Initialize with equal weights
         global sector_weights
@@ -5690,24 +5683,10 @@ def update_weight_displays(weights_json, current_values):
     # Generate weight values for each sector input (formatted to 2 decimal places)
     weight_values = []
     for sector in weights:
-        # Format to exactly 2 decimal places for consistent display
-        # Using string formatting to ensure exactly 2 decimal places
-        weight_values.append(float(f"{weights[sector]:.2f}"))
+        # Round to 2 decimal places for display
+        weight_values.append(round(weights[sector], 2))
     
-    # For initial load and unchanged values, return empty class string
-    # For changed values, add the highlight class
-    if not current_values:
-        # Initial load, no highlighting
-        class_names = [""] * len(weight_values)
-    else:
-        class_names = []
-        for i, (current, new) in enumerate(zip(current_values, weight_values)):
-            if abs(float(current) - new) > 0.01:  # If value changed meaningfully
-                class_names.append("weight-value-changed")
-            else:
-                class_names.append("")
-    
-    return weight_values, class_names
+    return weight_values
 
 # Note: The plus/minus button callbacks have been removed 
 # and replaced with the manual input and apply button approach
