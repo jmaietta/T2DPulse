@@ -69,7 +69,7 @@ def create_pulse_card(value):
                             "display": "inline-block",
                             "fontWeight": "500"
                         }),
-                html.Span(
+                html.Button(
                     "ⓘ", 
                     id="sentiment-info-icon",
                     className="info-icon",
@@ -78,7 +78,11 @@ def create_pulse_card(value):
                         "fontSize": "22px", 
                         "display": "inline-block",
                         "color": "#2c3e50",
-                        "verticalAlign": "text-top" 
+                        "verticalAlign": "text-top",
+                        "background": "none",
+                        "border": "none",
+                        "padding": "0",
+                        "margin": "0"
                     }
                 ),
                 # Positioned tooltip that won't overflow the container

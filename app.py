@@ -2292,7 +2292,7 @@ def create_pulse_card(value):
                             "fontWeight": "500",
                             "textAlign": "left"
                         }),
-                html.Span(
+                html.Button(
                     "ⓘ", 
                     id="sentiment-info-icon",
                     className="info-icon",
@@ -2301,7 +2301,11 @@ def create_pulse_card(value):
                         "fontSize": "16px", 
                         "display": "inline-block",
                         "color": "#2c3e50",
-                        "verticalAlign": "text-top" 
+                        "verticalAlign": "text-top",
+                        "background": "none",
+                        "border": "none",
+                        "padding": "0",
+                        "margin": "0"
                     }
                 ),
                 # Positioned tooltip that won't overflow the container
@@ -2385,6 +2389,46 @@ def update_sentiment_gauge(score):
     return html.Div([
         pulse_card
     ], className="pulse-card-container")
+
+# Toggle sentiment tooltip
+@app.callback(
+    Output("sentiment-info-tooltip", "style"),
+    [Input("sentiment-info-icon", "n_clicks")],
+    [State("sentiment-info-tooltip", "style")]
+)
+def toggle_tooltip(n_clicks, current_style):
+    if n_clicks is None:
+        # Initial state - tooltip is hidden
+        return {"display": "none", 
+                "position": "absolute", 
+                "zIndex": "9999", 
+                "backgroundColor": "white", 
+                "padding": "20px", 
+                "borderRadius": "8px", 
+                "boxShadow": "0px 0px 15px rgba(0,0,0,0.3)", 
+                "maxWidth": "400px", 
+                "minWidth": "280px",
+                "top": "40px",
+                "left": "50%", 
+                "transform": "translateX(-50%)",
+                "border": "1px solid #bbb",
+                "textAlign": "left",
+                "color": "#333",
+                "fontSize": "14px",
+                "lineHeight": "1.4"}
+    
+    if current_style is None:
+        current_style = {}
+    
+    # Copy the current style to avoid modifying the original
+    new_style = dict(current_style)
+    
+    # Toggle the display property
+    new_style["display"] = "block" if current_style.get("display") == "none" else "none"
+    
+    print(f"Tooltip clicked, new display: {new_style['display']}")
+    
+    return new_style
 
 # Update sentiment components list
 @app.callback(
