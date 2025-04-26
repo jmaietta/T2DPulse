@@ -5780,6 +5780,45 @@ def apply_weight(n_clicks_list, weight_values, weights_json):
     
     return json.dumps(weights)
 
+# Callback to update the T2D Pulse score when weights change
+@app.callback(
+    Output("sentiment-gauge", "children"),
+    Input("stored-weights", "children")
+)
+def update_t2d_pulse_score(weights_json):
+    """
+    Update the T2D Pulse score when weights change
+    This callback is triggered whenever the stored weights are updated
+    """
+    # Default score if we can't calculate
+    if not weights_json:
+        return update_sentiment_gauge(50.0)
+    
+    try:
+        # Parse weights from JSON
+        weights = json.loads(weights_json)
+        
+        # Get sector scores
+        sector_scores = calculate_sector_sentiment()
+        
+        if not sector_scores:
+            return update_sentiment_gauge(50.0)
+        
+        # Create a dictionary of sector scores for the pulse calculation
+        sector_scores_dict = {s['sector']: s['normalized_score'] for s in sector_scores}
+        
+        # Calculate the T2D Pulse score 
+        pulse_score = calculate_t2d_pulse_from_sectors(sector_scores_dict, weights)
+        
+        print(f"Updated T2D Pulse score to {pulse_score} based on weight changes")
+        
+        # Update the gauge display
+        return update_sentiment_gauge(pulse_score)
+    except Exception as e:
+        print(f"Error updating T2D Pulse score: {str(e)}")
+        # Return default score on error
+        return update_sentiment_gauge(50.0)
+
 # Callback for hidden buttons (triggered by Enter key)
 @app.callback(
     Output("stored-weights", "children", allow_duplicate=True),
