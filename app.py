@@ -5904,34 +5904,31 @@ def update_weight_from_input(input_values, input_ids, weights_json):
         
         print(f"Old value: {old_value}, New value: {new_value}")
         
-        # Update the changed sector's weight
+        # IMPORTANT: Set the exact value the user entered, don't modify it
         weights[changed_sector] = new_value
         
-        # Identify which sectors have been manually adjusted and which haven't
+        # Calculate how much we need to adjust other weights to maintain 100 total
+        remaining_value = 100.0 - new_value
+        
+        # Calculate total of all other sectors
         sectors_to_adjust = [s for s in weights.keys() if s != changed_sector]
         total_other_weight = sum(weights[s] for s in sectors_to_adjust)
         
-        # Calculate the adjustment needed for other sectors
-        adjustment = 100.0 - new_value
-        
+        # Adjust other sectors proportionally
         if total_other_weight > 0:
-            # Proportionally distribute the remaining weight among other sectors
+            scale_factor = remaining_value / total_other_weight
             for s in sectors_to_adjust:
-                proportion = weights[s] / total_other_weight
-                weights[s] = adjustment * proportion
+                weights[s] = round(weights[s] * scale_factor, 2)
         
-        # Round to 2 decimal places to avoid floating point issues
-        for s in weights:
-            weights[s] = round(weights[s], 2)
-        
-        # Make sure the sum is exactly 100
+        # Ensure the total is exactly 100 by adjusting one weight if needed
         total = sum(weights.values())
-        if total != 100.0:
-            # Find a sector to adjust slightly to make total exactly 100
-            adjust_sector = next(iter(weights.keys()))
-            weights[adjust_sector] += (100.0 - total)
+        if abs(total - 100.0) > 0.01:  # If more than 0.01 off from 100
+            # Adjust the first sector that isn't the changed one
+            adjust_sector = next((s for s in weights.keys() if s != changed_sector), None)
+            if adjust_sector:
+                weights[adjust_sector] += round(100.0 - total, 2)
         
-        print(f"New weights: {weights}")
+        print(f"Final weights: {weights}, Total: {sum(weights.values())}")
         
         # Update global weights
         sector_weights = weights
