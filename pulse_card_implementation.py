@@ -138,9 +138,7 @@ def create_pulse_card(value):
         ], className="pulse-card-inner")
     ], className="pulse-card", style={
         "boxShadow": f"0 0 15px {pulse_color}",  # Color-matched glow with reduced size
-        "border": f"1px solid {pulse_color}",    # Color-matched border
-        "width": "90%",                          # Make the card slightly smaller 
-        "margin": "0 auto"                       # Center in parent container
+        "border": f"1px solid {pulse_color}"     # Color-matched border
     })
     
     return pulse_card, pulse_status, pulse_color

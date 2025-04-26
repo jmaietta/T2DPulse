@@ -1751,7 +1751,7 @@ app.layout = html.Div([
                         html.H4("NASDAQ Trend"),
                         html.P(id="nasdaq-value", 
                               children=html.Span([
-                                  f"{nasdaq_data.sort_values('date', ascending=False).iloc[0]['value']:.0f}",
+                                  f"{nasdaq_data.sort_values('date', ascending=False).iloc[0]['value']:,.0f}",
                                   html.Span(" (Gap from EMA: ", style={"fontSize": "12px", "color": "#666"}),
                                   html.Span(f"{nasdaq_data.sort_values('date', ascending=False).iloc[0]['gap_pct']:.1f}%" 
                                           if not nasdaq_data.empty and 'gap_pct' in nasdaq_data.columns else "N/A", 
