@@ -60,6 +60,14 @@ args = "Improved Tooltip Demo"
 task = "workflow.run"
 args = "Final Tooltip Solution"
 
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "Fixed Dashboard"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "Tooltip Only Example"
+
 [[workflows.workflow]]
 name = "Economic Dashboard Server"
 author = "agent"
@@ -192,6 +200,24 @@ task = "shell.exec"
 args = "python final_tooltip_solution.py"
 waitForPort = 5015
 
+[[workflows.workflow]]
+name = "Fixed Dashboard"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "python app_fixed.py"
+waitForPort = 5000
+
+[[workflows.workflow]]
+name = "Tooltip Only Example"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "python tooltip_only.py"
+waitForPort = 5050
+
 [deployment]
 run = ["sh", "-c", "python wsgi.py"]
 deploymentTarget = "cloudrun"
@@ -235,3 +261,7 @@ externalPort = 6000
 [[ports]]
 localPort = 5015
 externalPort = 6800
+
+[[ports]]
+localPort = 5050
+externalPort = 8000
