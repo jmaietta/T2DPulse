@@ -5707,7 +5707,8 @@ def update_vix_container(n):
 
 # Callback for updating weight input values when weights change
 @app.callback(
-    Output({"type": "weight-input", "index": ALL}, "value"),
+    [Output({"type": "weight-input", "index": ALL}, "value"),
+     Output("t2d-pulse-value", "children")],  # Also update the T2D Pulse score
     [Input("stored-weights", "children")]
 )
 def update_weight_inputs(weights_json):
@@ -5729,7 +5730,14 @@ def update_weight_inputs(weights_json):
         # Round to 2 decimal places for display
         weight_values.append(round(weights[sector], 2))
     
-    return weight_values
+    # Calculate the T2D Pulse score based on the new weights
+    sector_scores_list = calculate_sector_sentiment()
+    t2d_pulse_score = calculate_t2d_pulse_from_sectors(sector_scores_list, weights)
+    
+    # Format as a string with 1 decimal place
+    t2d_pulse_display = f"{t2d_pulse_score:.1f}"
+    
+    return weight_values, t2d_pulse_display
 
 # Callback for increasing weight buttons
 @app.callback(
