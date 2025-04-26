@@ -600,6 +600,7 @@ def generate_sector_tickers():
 
 def calculate_sector_sentiment():
     """Calculate sentiment scores for each technology sector using the latest data"""
+    print("Starting calculate_sector_sentiment function")
     # Get latest values for all required indicators
     macros = {}
     
@@ -5327,8 +5328,10 @@ def update_sector_sentiment_container(n):
     """Update the Sector Sentiment container with cards for each technology sector"""
     # Calculate sector sentiment scores
     sector_scores = calculate_sector_sentiment()
+    print(f"Sector sentiment update triggered. Results: {sector_scores is not None}")
     
     if not sector_scores:
+        print("WARNING: No sector scores available")
         return html.Div("Insufficient data to calculate sector sentiment", className="no-data-message")
     
     # Normalize sector scores from -1 to +1 scale to 0-100 scale
@@ -5782,8 +5785,9 @@ def apply_weight(n_clicks_list, weight_values, weights_json):
 
 # Callback to update the T2D Pulse score when weights change
 @app.callback(
-    Output("sentiment-gauge", "children"),
-    Input("stored-weights", "children")
+    Output("sentiment-gauge", "children", allow_duplicate=True),
+    Input("stored-weights", "children"),
+    prevent_initial_call=True
 )
 def update_t2d_pulse_score(weights_json):
     """
