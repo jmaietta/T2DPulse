@@ -270,13 +270,15 @@
     color: #000000; /* Black for sideways arrows */
 }
 
-.info-icon {
+.tooltip-icon {
     cursor: pointer;
     transition: color 0.3s;
+    font-size: 16px;
+    color: #3498db;
 }
 
-.info-icon:hover {
-    color: #3498db;
+.tooltip-icon:hover {
+    color: #2980b9;
 }
 
 .trend-value {
@@ -727,6 +729,57 @@
     padding: 2px 7px;
     border-radius: 4px;
     font-size: 11px;
+}
+
+/* Tooltip styling */
+.tooltip-wrapper {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none; /* Remove default focus outline */
+}
+
+.tooltip-wrapper .tooltip-content {
+  position: absolute;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);        /* Better than margin-left for responsive designs */
+  width: 300px;
+
+  background: white;
+  color: #333;
+  text-align: left;
+  border-radius: 6px;
+  padding: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0s 0.3s;
+  pointer-events: none;               /* keep hidden tooltip unclickable */
+  z-index: 1000;
+}
+
+/* show on hover OR keyboard focus */
+.tooltip-wrapper:hover .tooltip-content,
+.tooltip-wrapper:focus .tooltip-content,
+.tooltip-wrapper:focus-within .tooltip-content {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s;
+  pointer-events: auto;
+}
+
+/* arrow */
+.tooltip-wrapper .tooltip-content::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 5px;
+  border-style: solid;
+  border-color: white transparent transparent transparent; /* matches current background */
 }
 
 /* Sector Card Weight Controls */
