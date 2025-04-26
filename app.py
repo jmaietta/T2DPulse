@@ -2255,14 +2255,18 @@ def create_pulse_card(value):
     pulse_card = html.Div([
         # Container with vertical centering for all elements
         html.Div([
-            # Logo image instead of text title
+            # Logo image with responsive sizing
             html.Img(
                 src="/assets/T2D Pulse logo.png",
                 style={
-                    "height": "55px",
+                    "width": "100%",    # Fill container width
+                    "maxWidth": "350px", # Cap maximum size 
+                    "height": "auto",   # Maintain aspect ratio
                     "marginBottom": "8px",
                     "objectFit": "contain",
-                    "maxWidth": "80%" # Ensure logo fits within container
+                    "display": "block", # Ensures proper centering
+                    "marginLeft": "auto",
+                    "marginRight": "auto"
                 }
             ),
             # Score value
@@ -5473,16 +5477,37 @@ def update_sector_sentiment_container(n):
                              style={
                                  "fontWeight": "500", 
                                  "fontSize": "18px", 
-                                 "marginRight": "30px",
-                                 "paddingRight": "10px",
-                                 "textAlign": "left"
+                                 "marginRight": "10px",
+                                 "width": "calc(100% - 90px)",
+                                 "textAlign": "left",
+                                 "overflow": "hidden",
+                                 "textOverflow": "ellipsis"
                              }),
                     html.Div([
                         html.Div(f"{norm_score:.1f}", className="sector-score", 
-                                style={"fontWeight": "bold", "fontSize": "20px", "textAlign": "right", "width": "100%"}),
+                                style={
+                                    "fontWeight": "bold", 
+                                    "fontSize": "20px", 
+                                    "textAlign": "right", 
+                                    "width": "100%",
+                                    "display": "block",
+                                    "marginRight": "0"
+                                }),
                         html.Div(stance, className="sector-sentiment", 
-                                style={"color": text_color, "fontSize": "14px", "textAlign": "right", "width": "100%"})
-                    ], className="score-container", style={"textAlign": "right", "minWidth": "80px", "display": "flex", "flexDirection": "column", "alignItems": "flex-end"})
+                                style={
+                                    "color": text_color, 
+                                    "fontSize": "14px", 
+                                    "textAlign": "right", 
+                                    "width": "100%",
+                                    "display": "block", 
+                                    "marginRight": "0"
+                                })
+                    ], className="score-container", style={
+                        "width": "80px", 
+                        "float": "right",
+                        "textAlign": "right",
+                        "margin": "0"
+                    })
                 ], className="card-header-content", style={"display": "flex", "alignItems": "center", "width": "100%"})
             ], className="sector-card-header", style={"borderColor": border_color}),
             

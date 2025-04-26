@@ -33,11 +33,13 @@ def create_pulse_card(value):
     pulse_card = html.Div([
         # Container with vertical centering for all elements
         html.Div([
-            # Logo image with original size and proper width
+            # Logo image with responsive sizing
             html.Img(
                 src="/assets/T2D Pulse logo.png",
                 style={
-                    "width": "310px",   # Maximizing logo size while keeping within original container size
+                    "width": "100%",    # Fill container width
+                    "maxWidth": "350px", # Cap maximum size
+                    "height": "auto",   # Maintain aspect ratio
                     "marginBottom": "5px",
                     "objectFit": "contain",
                     "display": "block", # Ensures proper centering
