@@ -2309,19 +2309,18 @@ def create_pulse_card(value):
                     id="sentiment-info-tooltip",
                     style={
                         "display": "none", 
-                        "position": "fixed",  # Changed to fixed for better positioning
+                        "position": "absolute", 
                         "zIndex": "1000", 
                         "backgroundColor": "white", 
                         "padding": "15px", 
                         "borderRadius": "5px", 
                         "boxShadow": "0px 0px 10px rgba(0,0,0,0.2)", 
-                        "maxWidth": "300px", 
-                        "top": "50%",  # Centered vertically
+                        "maxWidth": "400px", 
+                        "top": "30px",  # Positioned below the info icon
                         "left": "50%", 
-                        "transform": "translate(-50%, -50%)", # Center both horizontally and vertically
+                        "transform": "translateX(-50%)",
                         "border": "1px solid #ddd",
-                        "width": "280px",
-                        "textAlign": "left"
+                        "width": "280px"
                     },
                     children=[
                         html.H5("Sentiment Index Categories", style={"marginBottom": "10px"}),
@@ -5557,44 +5556,15 @@ def update_sector_sentiment_container(n):
                                    "marginRight": "5px",
                                    "verticalAlign": "middle"
                                }),
-                        # Replace display div with an input
-                        html.Div([
-                            html.Div([
-                                dcc.Input(
-                                    id={"type": "weight-input", "index": sector},
-                                    type="number",
-                                    min=1,
-                                    max=100,
-                                    step=0.25,
-                                    value=round(sector_weights[sector], 2),  # Display with 2 decimal places
-                                    style={
-                                        "width": "50px",
-                                        "textAlign": "center",
-                                        "fontWeight": "bold",
-                                        "border": "1px solid #ddd",
-                                        "borderRadius": "4px",
-                                        "padding": "4px",
-                                        "marginRight": "4px"
-                                    }
-                                ),
-                                html.Span("%", style={"fontWeight": "bold", "fontSize": "14px"})
-                            ], style={"display": "flex", "alignItems": "center", "marginRight": "4px"}),
-                            html.Button(
-                                "Apply", 
-                                id={"type": "apply-weight", "index": sector},
-                                style={
-                                    "fontSize": "12px",
-                                    "padding": "4px 8px",
-                                    "backgroundColor": "#e74c3c",  # Red highlight to draw attention
-                                    "color": "white",
-                                    "border": "none",
-                                    "borderRadius": "4px",
-                                    "cursor": "pointer",
-                                    "fontWeight": "bold",
-                                    "boxShadow": "0 2px 4px rgba(0,0,0,0.2)"
-                                }
-                            )
-                        ], style={"display": "flex", "alignItems": "center"})
+                        html.Div(f"{sector_weights[sector]:.2f}%", 
+                               id={"type": "weight-display", "index": sector},
+                               className="weight-value",
+                               style={
+                                   "display": "inline-block",
+                                   "textAlign": "left", 
+                                   "fontWeight": "bold",
+                                   "verticalAlign": "middle"
+                               })
                     ], className="weight-display-container", style={"display": "flex", "alignItems": "center", "width": "100%"}),
                     
                     html.Div([
@@ -5653,19 +5623,6 @@ def update_sector_sentiment_container(n):
                 sector_summary
             ], style={"width": "100%"}),
             html.Div([
-                # Status notification for weight updates
-                html.Div(id="weight-update-notification", 
-                        style={
-                            "color": "green", 
-                            "fontWeight": "bold", 
-                            "marginRight": "20px",
-                            "fontSize": "14px",
-                            "padding": "8px 12px",
-                            "backgroundColor": "#e8f5e9",
-                            "borderRadius": "4px",
-                            "opacity": 0,
-                            "transition": "opacity 0.3s ease"
-                        }),
                 html.Button("Reset Equal Weights", 
                            id="reset-weights-button",
                            className="reset-button",
@@ -5680,7 +5637,7 @@ def update_sector_sentiment_container(n):
                                "boxShadow": "0 2px 4px rgba(0,0,0,0.1)",
                                "alignSelf": "flex-end"
                            })
-            ], style={"display": "flex", "justifyContent": "flex-end", "alignItems": "center", "marginTop": "10px"})
+            ], style={"display": "flex", "justifyContent": "flex-end", "marginTop": "10px"})
         ], className="sector-summary-container", 
            style={"marginBottom": "20px", "padding": "12px", 
                   "backgroundColor": "white", "borderRadius": "8px", 
@@ -5722,77 +5679,30 @@ def update_vix_container(n):
         insights_panel
     ]
 
-# We're keeping a simplified version as a fallback for other callbacks that might need it
-# This function is now only used for initial loading and other inputs
+# Callback for updating weight displays when weights change
 @app.callback(
-    [Output({"type": "weight-input", "index": ALL}, "value", allow_duplicate=True),
-     Output("t2d-pulse-value", "children", allow_duplicate=True),
-     Output({"type": "apply-weight", "index": ALL}, "style"),
-     Output("weight-update-notification", "children", allow_duplicate=True),
-     Output("weight-update-notification", "style", allow_duplicate=True)],
-    [Input("stored-weights", "children")],
-    prevent_initial_call='initial_duplicate'  # Required for allow_duplicate
+    Output({"type": "weight-display", "index": ALL}, "children"),
+    [Input("stored-weights", "children")]
 )
-def update_weight_inputs_for_other_changes(weights_json):
-    """
-    This simplified version is used as a fallback for other changes to stored-weights,
-    like reset button or initial page load
-    """
-    # Don't trigger for Apply button callbacks, only for other changes 
-    ctx_triggered = dash.callback_context.triggered
-    if ctx_triggered and ctx_triggered[0]['prop_id'] != 'stored-weights.children':
-        raise PreventUpdate
-        
-    # Only handle reset button or initial load
+def update_weight_displays(weights_json):
     if not weights_json:
-        # Default to global weights
+        # Initialize with equal weights
         global sector_weights
-        weights = sector_weights.copy()
+        weights = sector_weights
     else:
-        # Parse stored weights
+        # Use stored weights
         try:
             weights = json.loads(weights_json)
-        except Exception as e:
-            print(f"Error parsing weights in fallback: {e}")
-            weights = sector_weights.copy()
-            
-    # Create weight values for display
-    weight_values = []
+        except:
+            # If JSON parse fails, use global weights
+            weights = sector_weights
+    
+    # Generate display text for each sector
+    weight_displays = []
     for sector in weights:
-        weight_values.append(round(weights[sector], 2))
-        
-    # Calculate T2D Pulse score
-    try:
-        sector_scores_list = calculate_sector_sentiment()
-        t2d_pulse_score = calculate_t2d_pulse_from_sectors(sector_scores_list, weights)
-        t2d_pulse_display = f"{t2d_pulse_score:.1f}"
-    except Exception as e:
-        print(f"Error calculating score in fallback: {e}")
-        t2d_pulse_display = "50.0"
-        
-    # Create button styles
-    button_styles = []
-    for _ in range(len(weight_values)):
-        button_styles.append({
-            "fontSize": "12px",
-            "padding": "4px 8px",
-            "backgroundColor": "#e74c3c",
-            "color": "white",
-            "border": "none",
-            "borderRadius": "4px",
-            "cursor": "pointer",
-            "fontWeight": "bold",
-            "boxShadow": "0 2px 4px rgba(0,0,0,0.2)"
-        })
+        weight_displays.append(f"{weights[sector]:.2f}%")
     
-    # Create empty notification for clean state
-    notification_message = ""
-    notification_style = {
-        "opacity": 0,
-        "transition": "opacity 0.3s ease"
-    }
-    
-    return weight_values, t2d_pulse_display, button_styles, notification_message, notification_style
+    return weight_displays
 
 # Callback for increasing weight buttons
 @app.callback(
@@ -5827,8 +5737,8 @@ def increase_weight(n_clicks_list, weights_json):
     else:
         weights = sector_weights
     
-    # Increase the selected sector's weight by 0.25
-    increment_amount = 0.25
+    # Increase the selected sector's weight by 1
+    increment_amount = 1.0
     weights[sector] += increment_amount
     
     # Calculate the proportional decrease for other sectors
@@ -5854,7 +5764,7 @@ def increase_weight(n_clicks_list, weights_json):
 
 # Callback for decreasing weight buttons
 @app.callback(
-    Output("stored-weights", "children"),
+    Output("stored-weights", "children", allow_duplicate=True),
     Input({"type": "decrease-weight", "index": ALL}, "n_clicks"),
     State("stored-weights", "children"),
     prevent_initial_call=True
@@ -5889,8 +5799,8 @@ def decrease_weight(n_clicks_list, weights_json):
     if weights[sector] <= 1.0:
         raise PreventUpdate
     
-    # Decrease the selected sector's weight by 0.25
-    decrement_amount = 0.25
+    # Decrease the selected sector's weight by 1
+    decrement_amount = 1.0
     weights[sector] -= decrement_amount
     
     # Increase other weights proportionally
@@ -5912,114 +5822,9 @@ def decrease_weight(n_clicks_list, weights_json):
     
     return json.dumps(weights)
 
-# Callback for Apply weight button - DIRECT VERSION
-@app.callback(
-    [Output({"type": "weight-input", "index": ALL}, "value"),
-     Output("t2d-pulse-value", "children"),
-     Output("stored-weights", "children"),
-     Output("weight-update-notification", "children"),
-     Output("weight-update-notification", "style")],
-    [Input({"type": "apply-weight", "index": ALL}, "n_clicks")],
-    [State({"type": "weight-input", "index": ALL}, "value"),
-     State({"type": "weight-input", "index": ALL}, "id"),
-     State("stored-weights", "children")],
-    prevent_initial_call=True
-)
-def update_weights(n_clicks_list, input_values, input_ids, weights_json):
-    """
-    Direct callback for weight updates that handles the apply button click
-    """
-    global sector_weights
-
-    if not ctx.triggered:
-        from dash.exceptions import PreventUpdate
-        raise PreventUpdate
-
-    # Get trigger information
-    trigger = json.loads(ctx.triggered[0]["prop_id"].split(".")[0])
-    changed_sector = trigger["index"]
-
-    # Use stored weights if available
-    if weights_json:
-        try:
-            weights = json.loads(weights_json)
-        except:
-            weights = sector_weights
-    else:
-        weights = sector_weights.copy()  # Important to copy
-
-    # Find the index of the changed input
-    changed_idx = next((i for i, idd in enumerate(input_ids) if idd["index"] == changed_sector), None)
-    
-    # Handle cases where we can't find the changed sector
-    if changed_idx is None:
-        from dash.exceptions import PreventUpdate
-        raise PreventUpdate
-
-    # Get the new value
-    new_value = input_values[changed_idx]
-    if new_value is None:
-        from dash.exceptions import PreventUpdate
-        raise PreventUpdate
-
-    # Ensure value is between 1 and 100
-    new_value = float(max(1.0, min(100.0, new_value)))
-
-    # Update the weight for the changed sector
-    weights[changed_sector] = new_value
-
-    # Calculate how much to adjust other weights to maintain sum of 100
-    remaining_value = 100.0 - new_value
-    sectors_to_adjust = [s for s in weights if s != changed_sector]
-    total_other_weight = sum(weights[s] for s in sectors_to_adjust)
-
-    # Adjust other sectors proportionally
-    if total_other_weight > 0:
-        scale_factor = remaining_value / total_other_weight
-        for s in sectors_to_adjust:
-            weights[s] = round(weights[s] * scale_factor, 2)
-
-    # Fix rounding errors
-    total = sum(weights.values())
-    if abs(total - 100.0) > 0.01:
-        adjust_sector = next((s for s in weights if s != changed_sector), None)
-        if adjust_sector:
-            weights[adjust_sector] += round(100.0 - total, 2)
-
-    # Update global weights
-    sector_weights = weights
-
-    # Prepare outputs - weight values for all inputs
-    updated_values = []
-    for idd in input_ids:
-        sector = idd["index"]
-        updated_values.append(round(weights[sector], 2))
-
-    # Calculate T2D Pulse score
-    sector_scores = calculate_sector_sentiment()
-    t2d_pulse_score = calculate_t2d_pulse_from_sectors(sector_scores, weights)
-    t2d_pulse_display = f"{t2d_pulse_score:.1f}"
-
-    # Create notification
-    current_time = datetime.now().strftime("%H:%M:%S")
-    notification_message = f"Weights updated at {current_time} - T2D Pulse score: {t2d_pulse_display}"
-    notification_style = {
-        "color": "green", 
-        "fontWeight": "bold", 
-        "fontSize": "14px", 
-        "backgroundColor": "#e8f5e9", 
-        "borderRadius": "4px", 
-        "opacity": 1,
-        "textAlign": "center",
-        "marginTop": "20px",
-        "padding": "8px 12px"
-    }
-
-    return updated_values, t2d_pulse_display, json.dumps(weights), notification_message, notification_style
-
 # Callback for reset weights button
 @app.callback(
-    Output("stored-weights", "children"),
+    Output("stored-weights", "children", allow_duplicate=True),
     Input("reset-weights-button", "n_clicks"),
     prevent_initial_call=True
 )
@@ -6030,16 +5835,9 @@ def reset_weights(n_clicks):
     num_sectors = len(sector_weights)
     equal_weight = 100.0 / num_sectors
     
-    # Set all sectors to equal weight (rounded to 2 decimal places)
+    # Set all sectors to equal weight
     for sector in sector_weights:
-        sector_weights[sector] = round(equal_weight, 2)
-    
-    # Ensure total is exactly 100
-    total = sum(sector_weights.values())
-    if total != 100.0:
-        # Adjust the first sector slightly to make total exactly 100
-        adjust_sector = next(iter(sector_weights.keys()))
-        sector_weights[adjust_sector] += (100.0 - total)
+        sector_weights[sector] = equal_weight
     
     return json.dumps(sector_weights)
 
