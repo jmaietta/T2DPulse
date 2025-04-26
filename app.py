@@ -775,9 +775,10 @@ def calculate_t2d_pulse_from_sectors(sector_scores, sector_weights=None):
             weighted_sum += score * weight
             total_applied_weight += weight
     
-    # Return pulse score (divide by total applied weight to normalize)
+    # Return pulse score
     if total_applied_weight > 0:
-        pulse_score = weighted_sum / 100.0
+        # Correctly normalize by dividing by total applied weight
+        pulse_score = weighted_sum / total_applied_weight
         return round(pulse_score, 1)
     else:
         return 50.0  # Default neutral score if no weights could be applied
