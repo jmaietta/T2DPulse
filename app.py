@@ -2305,7 +2305,7 @@ def create_pulse_card(value):
                 # Tooltip container
                 html.Div([
                     # The tooltip trigger icon - added tabindex for keyboard accessibility
-                    html.Span("ⓘ", className="tooltip-icon", **{"tabindex": "0"}),
+                    html.Span("ⓘ", className="tooltip-icon", tabIndex="0"),
                     # Tooltip content
                     html.Div([
                         html.H5("Sentiment Index Categories", style={"marginBottom": "10px", "marginTop": "0"}),
