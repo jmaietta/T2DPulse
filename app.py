@@ -5535,21 +5535,21 @@ def update_sector_sentiment_container(n):
         if sector not in sector_weights:
             sector_weights[sector] = default_weight
         
-        # Determine styling based on stance
+        # Determine styling based on stance - match mockup styling more closely
         if stance == "Bullish":
             border_color = "#2ecc71"  # Green for Bullish
-            text_color = "#2ecc71"
-            bg_color = "rgba(46, 204, 113, 0.05)"
+            text_color = "#27ae60"  # Darker green text (from mockup)
+            bg_color = "#ebf7f0"  # Light green background (from mockup)
             badge_class = "badge-bullish"
         elif stance == "Bearish":
             border_color = "#e74c3c"  # Red for Bearish
-            text_color = "#e74c3c"
-            bg_color = "rgba(231, 76, 60, 0.05)"
+            text_color = "#c0392b"  # Darker red text (from mockup)
+            bg_color = "#fdedec"  # Light red background (from mockup)
             badge_class = "badge-bearish"
         else:
             border_color = "#f39c12"  # Orange for Neutral
-            text_color = "#f39c12"
-            bg_color = "rgba(243, 156, 18, 0.05)"
+            text_color = "#d35400"  # Darker orange text (from mockup)
+            bg_color = "#fef5e7"  # Light yellow/orange background (from mockup)
             badge_class = "badge-neutral"
             
         # Create the sector card with original format from mockup including weight controls
@@ -5630,34 +5630,39 @@ def update_sector_sentiment_container(n):
     # Create the sector summary component
     sector_summary = create_sector_summary(sector_score_dict)
     
-    # Combine the scale legend and sector cards in a single container
+    # Combine all elements in a layout similar to the mockup
     return html.Div([
-        # Top controls: Scale legend and reset weights button
+        # Section header content from mockup
         html.Div([
-            # Scale legend left
-            html.Div([scale_legend], className="scale-legend-container", style={"flex": "3"}),
-            
-            # Reset weights button right
             html.Div([
-                html.Button(
-                    "Reset Equal Weights", 
-                    id="reset-weights-button",
-                    className="reset-button",
-                    style={
-                        "backgroundColor": "#3498db",
-                        "color": "white",
-                        "border": "none",
-                        "borderRadius": "4px",
-                        "padding": "8px 16px",
-                        "cursor": "pointer",
-                        "fontWeight": "500",
-                        "boxShadow": "0 2px 4px rgba(0,0,0,0.1)"
-                    }
-                )
-            ], className="reset-button-container", 
-               style={"display": "flex", "justifyContent": "flex-end", "flex": "1"})
-        ], className="top-controls", 
-           style={"display": "flex", "justifyContent": "space-between", "alignItems": "center"}),
+                html.H2("Sector Sentiment", className="section-title"),
+                html.Div([
+                    html.Div([
+                        html.P("Sector scores are calculated from economic indicators weighted by their impact on each sector.", 
+                              className="section-description", style={"margin": "0 0 5px 0", "fontSize": "14px"}),
+                        html.P("Adjust sector weights to customize the T2D Pulse for your investment focus.", 
+                              className="section-description", style={"margin": "0", "fontSize": "14px"})
+                    ]),
+                    html.Button("Reset Equal Weights", 
+                               id="reset-weights-button",
+                               className="reset-button",
+                               style={
+                                   "backgroundColor": "#3498db",
+                                   "color": "white",
+                                   "border": "none",
+                                   "borderRadius": "4px",
+                                   "padding": "8px 16px",
+                                   "cursor": "pointer",
+                                   "fontWeight": "500",
+                                   "boxShadow": "0 2px 4px rgba(0,0,0,0.1)"
+                               })
+                ], className="section-controls", style={"display": "flex", "justifyContent": "space-between", "alignItems": "center"})
+            ], className="section-header", style={"marginBottom": "15px"})
+        ]),
+        
+        # Scale legend (moved from top controls to here for better context)
+        html.Div([scale_legend], className="scale-legend-container", 
+                style={"marginBottom": "15px"}),
         
         # Sector summary in a card like in the mockup, more compact
         html.Div([
@@ -5666,12 +5671,15 @@ def update_sector_sentiment_container(n):
                           "textAlign": "center", "fontSize": "16px"}),
             sector_summary
         ], className="sector-summary-container", 
-           style={"marginTop": "15px", "marginBottom": "15px", "padding": "12px", 
+           style={"marginBottom": "20px", "padding": "12px", 
                   "backgroundColor": "white", "borderRadius": "8px", 
                   "boxShadow": "0 1px 3px rgba(0,0,0,0.05)"}),
         
-        # Sector cards below
-        html.Div(sector_cards, className="sector-cards-container"),
+        # Sector cards in a grid like the mockup
+        html.Div(sector_cards, className="sector-cards-grid",
+                style={"display": "grid", 
+                       "gridTemplateColumns": "repeat(auto-fill, minmax(320px, 1fr))",
+                       "gap": "20px"}),
         
         # Hidden div to store weights, initially populated with JSON of sector weights
         html.Div(id="stored-weights", 
