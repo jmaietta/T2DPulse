@@ -7,8 +7,9 @@ import io
 import json
 from datetime import datetime, timedelta
 import dash
-from dash import dcc, html, dash_table
+from dash import dcc, html, dash_table, ALL, MATCH, ctx
 from dash.dependencies import Input, Output, State
+from dash.exceptions import PreventUpdate
 import plotly.graph_objs as go
 import plotly.express as px
 import yfinance as yf
@@ -5507,6 +5508,14 @@ def update_sector_sentiment_container(n):
     # Create cards for each sector using normalized scores
     sector_cards = []
     
+    # Add a store for weights
+    if 'sector_weights' not in globals():
+        global sector_weights
+        sector_weights = {}
+    
+    num_sectors = len(normalized_scores)
+    default_weight = 100 / num_sectors
+    
     for sector_data in normalized_scores:
         # Extract data
         sector = sector_data["sector"]
@@ -5516,56 +5525,95 @@ def update_sector_sentiment_container(n):
         drivers = sector_data["drivers"]
         tickers = sector_data["tickers"]
         
-        # Determine score and badge styling based on stance
+        # Initialize weight if not set
+        if sector not in sector_weights:
+            sector_weights[sector] = default_weight
+        
+        # Determine styling based on stance
         if stance == "Bullish":
-            score_class = "score-positive"
+            border_color = "#2ecc71"  # Green for Bullish
+            text_color = "#2ecc71"
+            bg_color = "rgba(46, 204, 113, 0.05)"
             badge_class = "badge-bullish"
         elif stance == "Bearish":
-            score_class = "score-negative"
+            border_color = "#e74c3c"  # Red for Bearish
+            text_color = "#e74c3c"
+            bg_color = "rgba(231, 76, 60, 0.05)"
             badge_class = "badge-bearish"
         else:
-            score_class = "score-neutral"
+            border_color = "#f39c12"  # Orange for Neutral
+            text_color = "#f39c12"
+            bg_color = "rgba(243, 156, 18, 0.05)"
             badge_class = "badge-neutral"
-        
-        # Create the sector card with normalized score
+            
+        # Create the sector card with original format from mockup including weight controls
         card = html.Div([
-            # Header with sector name and normalized score
-            html.Div([
-                html.Div(sector, className="sector-name"),
-                html.Div([
-                    html.Div(f"{norm_score:.1f}", className=f"sector-score {score_class}", 
-                             style={"textAlign": "left"}),
-                    html.Div(stance, className="sector-sentiment", 
-                             style={
-                                 "color": color_scheme["positive"] if score_class == "score-positive" 
-                                         else (color_scheme["negative"] if score_class == "score-negative" 
-                                               else color_scheme["neutral"]),
-                                 "textAlign": "left"
-                             })
-                ], className="score-container", style={"textAlign": "left"})
-            ], className="sector-card-header"),
-            
-            # Score indicator bar (new)
+            # Header with sector name and score
             html.Div([
                 html.Div([
-                    html.Div(className="scale-marker", 
-                             style={"left": f"{min(max(norm_score, 0), 100)}%"})
-                ], className="scale-track")
-            ], className="sector-score-scale"),
+                    html.H3(sector, className="sector-card-title"),
+                    html.Div([
+                        html.Div(f"{norm_score:.1f}", className="sector-score", 
+                                style={"width": "100%", "textAlign": "right", "display": "block"}),
+                        html.Div(stance, className="sector-sentiment", 
+                                style={"width": "100%", "color": text_color, "textAlign": "right", "display": "block"})
+                    ], className="score-container", style={"textAlign": "right", "minWidth": "80px"})
+                ], className="card-header-content")
+            ], className="sector-card-header", style={"borderColor": border_color}),
             
-            # Takeaway text
-            html.P(takeaway, className="sector-takeaway"),
-            
-            # Drivers list
-            html.Ul([
-                html.Li(driver) for driver in drivers
-            ], className="drivers-list"),
-            
-            # Tickers
+            # Card body with all the details
             html.Div([
-                html.Span(ticker, className="ticker-badge") for ticker in tickers
-            ], className="tickers-container")
-            
+                # Header and sentiment badge - with badge on the right
+                html.Div([
+                    html.P(takeaway, className="sector-takeaway"),
+                    html.Span(stance, className=f"sector-badge {badge_class}")
+                ], className="takeaway-badge-container", style={"display": "flex", "justifyContent": "space-between", "alignItems": "center"}),
+                
+                # Scale indicator
+                html.Div([
+                    html.Div([
+                        html.Div(className="scale-marker", 
+                                 style={"left": f"{min(max(norm_score, 0), 100)}%"})
+                    ], className="scale-track")
+                ], className="sector-score-scale"),
+                
+                # Drivers list
+                html.Ul([
+                    html.Li(driver) for driver in drivers
+                ], className="drivers-list"),
+                
+                # Tickers
+                html.Div([
+                    html.Span(ticker, className="ticker-badge") for ticker in tickers
+                ], className="tickers-container"),
+                
+                # Weight controls
+                html.Div([
+                    html.Div([
+                        html.Span("Weight:", className="weight-label"),
+                        html.Span(f"{sector_weights[sector]:.1f}%", 
+                                 id={"type": "weight-display", "index": sector},
+                                 className="weight-value")
+                    ], className="weight-display-container"),
+                    
+                    html.Div([
+                        html.Button("-", 
+                                   id={"type": "decrease-weight", "index": sector},
+                                   className="weight-button weight-decrease"),
+                        html.Button("+", 
+                                   id={"type": "increase-weight", "index": sector},
+                                   className="weight-button weight-increase")
+                    ], className="weight-buttons-container")
+                ], className="weight-controls", style={
+                    "display": "flex",
+                    "justifyContent": "space-between",
+                    "alignItems": "center",
+                    "marginTop": "15px",
+                    "padding": "10px 0 0 0",
+                    "borderTop": "1px solid #eee"
+                })
+                
+            ], className="sector-card-body", style={"backgroundColor": bg_color})
         ], className="sector-card")
         
         sector_cards.append(card)
@@ -5578,8 +5626,32 @@ def update_sector_sentiment_container(n):
     
     # Combine the scale legend and sector cards in a single container
     return html.Div([
-        # Scale legend at the top
-        scale_legend,
+        # Top controls: Scale legend and reset weights button
+        html.Div([
+            # Scale legend left
+            html.Div([scale_legend], className="scale-legend-container", style={"flex": "3"}),
+            
+            # Reset weights button right
+            html.Div([
+                html.Button(
+                    "Reset Equal Weights", 
+                    id="reset-weights-button",
+                    className="reset-button",
+                    style={
+                        "backgroundColor": "#3498db",
+                        "color": "white",
+                        "border": "none",
+                        "borderRadius": "4px",
+                        "padding": "8px 16px",
+                        "cursor": "pointer",
+                        "fontWeight": "500",
+                        "boxShadow": "0 2px 4px rgba(0,0,0,0.1)"
+                    }
+                )
+            ], className="reset-button-container", 
+               style={"display": "flex", "justifyContent": "flex-end", "flex": "1"})
+        ], className="top-controls", 
+           style={"display": "flex", "justifyContent": "space-between", "alignItems": "center"}),
         
         # Sector summary in a card like in the mockup
         html.Div([
@@ -5593,7 +5665,10 @@ def update_sector_sentiment_container(n):
                   "boxShadow": "0 2px 4px rgba(0,0,0,0.05)"}),
         
         # Sector cards below
-        html.Div(sector_cards, className="sector-cards-container")
+        html.Div(sector_cards, className="sector-cards-container"),
+        
+        # Hidden div to store weights
+        html.Div(id="stored-weights", style={"display": "none"})
     ], className="sector-sentiment-container")
 
 # Update VIX Container with chart and insights panel
@@ -5618,6 +5693,168 @@ def update_vix_container(n):
         dcc.Graph(id="vix-graph", figure=figure),
         insights_panel
     ]
+
+# Callback for updating weight displays when weights change
+@app.callback(
+    Output({"type": "weight-display", "index": ALL}, "children"),
+    [Input("stored-weights", "children")]
+)
+def update_weight_displays(weights_json):
+    if not weights_json:
+        # Initialize with equal weights
+        global sector_weights
+        weights = sector_weights
+    else:
+        # Use stored weights
+        try:
+            weights = json.loads(weights_json)
+        except:
+            # If JSON parse fails, use global weights
+            weights = sector_weights
+    
+    # Generate display text for each sector
+    weight_displays = []
+    for sector in weights:
+        weight_displays.append(f"{weights[sector]:.1f}%")
+    
+    return weight_displays
+
+# Callback for increasing weight buttons
+@app.callback(
+    Output("stored-weights", "children"),
+    Input({"type": "increase-weight", "index": ALL}, "n_clicks"),
+    State("stored-weights", "children"),
+    prevent_initial_call=True
+)
+def increase_weight(n_clicks_list, weights_json):
+    global sector_weights
+    
+    # Determine which button was clicked
+    if not any(click for click in n_clicks_list if click):
+        raise PreventUpdate
+    
+    # Get trigger information
+    ctx = dash.callback_context
+    if not ctx.triggered:
+        raise PreventUpdate
+    
+    # Extract sector from triggered ID
+    trigger_id = ctx.triggered[0]["prop_id"].split(".")[0]
+    trigger_dict = json.loads(trigger_id)
+    sector = trigger_dict["index"]
+    
+    # Use stored weights if available
+    if weights_json:
+        try:
+            weights = json.loads(weights_json)
+        except:
+            weights = sector_weights
+    else:
+        weights = sector_weights
+    
+    # Increase the selected sector's weight by 1
+    increment_amount = 1.0
+    weights[sector] += increment_amount
+    
+    # Calculate the proportional decrease for other sectors
+    sectors_to_adjust = [s for s in weights.keys() if s != sector]
+    total_other_weight = sum(weights[s] for s in sectors_to_adjust)
+    
+    if total_other_weight > 0:
+        # Distribute the decrement proportionally
+        for s in sectors_to_adjust:
+            proportion = weights[s] / total_other_weight
+            weights[s] -= increment_amount * proportion
+            # Ensure no negative weights
+            weights[s] = max(0, weights[s])
+    
+    # Normalize to ensure sum is 100
+    total = sum(weights.values())
+    weights = {k: (v/total)*100 for k, v in weights.items()}
+    
+    # Update global weights
+    sector_weights = weights
+    
+    return json.dumps(weights)
+
+# Callback for decreasing weight buttons
+@app.callback(
+    Output("stored-weights", "children", allow_duplicate=True),
+    Input({"type": "decrease-weight", "index": ALL}, "n_clicks"),
+    State("stored-weights", "children"),
+    prevent_initial_call=True
+)
+def decrease_weight(n_clicks_list, weights_json):
+    global sector_weights
+    
+    # Determine which button was clicked
+    if not any(click for click in n_clicks_list if click):
+        raise PreventUpdate
+    
+    # Get trigger information
+    ctx = dash.callback_context
+    if not ctx.triggered:
+        raise PreventUpdate
+    
+    # Extract sector from triggered ID
+    trigger_id = ctx.triggered[0]["prop_id"].split(".")[0]
+    trigger_dict = json.loads(trigger_id)
+    sector = trigger_dict["index"]
+    
+    # Use stored weights if available
+    if weights_json:
+        try:
+            weights = json.loads(weights_json)
+        except:
+            weights = sector_weights
+    else:
+        weights = sector_weights
+    
+    # Decrease weight if above minimum (ensure at least 1%)
+    if weights[sector] <= 1.0:
+        raise PreventUpdate
+    
+    # Decrease the selected sector's weight by 1
+    decrement_amount = 1.0
+    weights[sector] -= decrement_amount
+    
+    # Increase other weights proportionally
+    sectors_to_adjust = [s for s in weights.keys() if s != sector]
+    total_other_weight = sum(weights[s] for s in sectors_to_adjust)
+    
+    if total_other_weight > 0:
+        # Distribute the increment proportionally
+        for s in sectors_to_adjust:
+            proportion = weights[s] / total_other_weight
+            weights[s] += decrement_amount * proportion
+    
+    # Normalize to ensure sum is 100
+    total = sum(weights.values())
+    weights = {k: (v/total)*100 for k, v in weights.items()}
+    
+    # Update global weights
+    sector_weights = weights
+    
+    return json.dumps(weights)
+
+# Callback for reset weights button
+@app.callback(
+    Output("stored-weights", "children", allow_duplicate=True),
+    Input("reset-weights-button", "n_clicks"),
+    prevent_initial_call=True
+)
+def reset_weights(n_clicks):
+    global sector_weights
+    
+    # Calculate equal weights
+    num_sectors = len(sector_weights)
+    equal_weight = 100.0 / num_sectors
+    
+    # Set all sectors to equal weight
+    for sector in sector_weights:
+        sector_weights[sector] = equal_weight
+    
+    return json.dumps(sector_weights)
 
 # Add this at the end of the file if running directly
 if __name__ == "__main__":
