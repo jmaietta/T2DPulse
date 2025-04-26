@@ -1,0 +1,49 @@
+/* Pure CSS tooltip solution */
+.tooltip-wrapper {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.tooltip-wrapper .tooltip-icon {
+  font-size: 16px;
+  color: #3498db;
+}
+
+.tooltip-wrapper .tooltip-content {
+  visibility: hidden;
+  position: absolute;
+  z-index: 1000;
+  width: 300px;
+  background-color: white;
+  color: #333;
+  text-align: left;
+  border-radius: 6px;
+  padding: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  opacity: 0;
+  transition: opacity 0.3s;
+  
+  /* Position the tooltip */
+  bottom: 125%;
+  left: 50%;
+  margin-left: -150px; /* Half of width */
+}
+
+/* Make tooltip visible on hover */
+.tooltip-wrapper:hover .tooltip-content {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Arrow pointing down */
+.tooltip-wrapper .tooltip-content::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: white transparent transparent transparent;
+}

@@ -48,6 +48,18 @@ args = "Revised Layout Mockup"
 task = "workflow.run"
 args = "Final Layout Mockup"
 
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "Tooltip Demo"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "Improved Tooltip Demo"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "Final Tooltip Solution"
+
 [[workflows.workflow]]
 name = "Economic Dashboard Server"
 author = "agent"
@@ -153,6 +165,33 @@ task = "shell.exec"
 args = "python option_a_final_mockup.py"
 waitForPort = 5008
 
+[[workflows.workflow]]
+name = "Tooltip Demo"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "python simple_tooltip_demo.py"
+waitForPort = 5010
+
+[[workflows.workflow]]
+name = "Improved Tooltip Demo"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "python app_improved.py"
+waitForPort = 5001
+
+[[workflows.workflow]]
+name = "Final Tooltip Solution"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "python final_tooltip_solution.py"
+waitForPort = 5015
+
 [deployment]
 run = ["sh", "-c", "python wsgi.py"]
 deploymentTarget = "cloudrun"
@@ -188,3 +227,11 @@ externalPort = 5000
 [[ports]]
 localPort = 5008
 externalPort = 5173
+
+[[ports]]
+localPort = 5010
+externalPort = 6000
+
+[[ports]]
+localPort = 5015
+externalPort = 6800
