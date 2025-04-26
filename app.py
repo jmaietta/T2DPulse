@@ -5473,17 +5473,16 @@ def update_sector_sentiment_container(n):
                              style={
                                  "fontWeight": "500", 
                                  "fontSize": "18px", 
-                                 "width": "75%", 
-                                 "textAlign": "left",
-                                 "display": "flex",
-                                 "alignItems": "center"
+                                 "marginRight": "30px",
+                                 "paddingRight": "10px",
+                                 "textAlign": "left"
                              }),
                     html.Div([
                         html.Div(f"{norm_score:.1f}", className="sector-score", 
-                                style={"fontWeight": "bold", "fontSize": "20px", "textAlign": "right"}),
+                                style={"fontWeight": "bold", "fontSize": "20px", "textAlign": "right", "width": "100%"}),
                         html.Div(stance, className="sector-sentiment", 
-                                style={"color": text_color, "fontSize": "14px", "textAlign": "right"})
-                    ], className="score-container", style={"width": "25%", "textAlign": "right"})
+                                style={"color": text_color, "fontSize": "14px", "textAlign": "right", "width": "100%"})
+                    ], className="score-container", style={"textAlign": "right", "minWidth": "80px"})
                 ], className="card-header-content", style={"display": "flex", "alignItems": "center", "width": "100%"})
             ], className="sector-card-header", style={"borderColor": border_color}),
             
@@ -5525,18 +5524,19 @@ def update_sector_sentiment_container(n):
                     html.Div([
                         html.Div("Weight:", className="weight-label", 
                                style={
-                                   "width": "75%", 
                                    "textAlign": "left", 
-                                   "display": "flex", 
-                                   "alignItems": "center"
+                                   "display": "inline-block", 
+                                   "marginRight": "5px",
+                                   "verticalAlign": "middle"
                                }),
                         html.Div(f"{sector_weights[sector]:.2f}%", 
                                id={"type": "weight-display", "index": sector},
                                className="weight-value",
                                style={
-                                   "width": "25%", 
-                                   "textAlign": "right", 
-                                   "fontWeight": "bold"
+                                   "display": "inline-block",
+                                   "textAlign": "left", 
+                                   "fontWeight": "bold",
+                                   "verticalAlign": "middle"
                                })
                     ], className="weight-display-container", style={"display": "flex", "alignItems": "center", "width": "100%"}),
                     
