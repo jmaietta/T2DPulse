@@ -5558,23 +5558,38 @@ def update_sector_sentiment_container(n):
                                    "verticalAlign": "middle"
                                }),
                         # Replace display div with an input
-                        dcc.Input(
-                            id={"type": "weight-input", "index": sector},
-                            type="number",
-                            min=1,
-                            max=100,
-                            step=0.25,
-                            value=round(sector_weights[sector], 2),  # Display with 2 decimal places
-                            debounce=True,  # Process the value only after user stops typing
-                            style={
-                                "width": "60px",
-                                "textAlign": "center",
-                                "fontWeight": "bold",
-                                "border": "1px solid #ddd",
-                                "borderRadius": "4px",
-                                "padding": "4px"
-                            }
-                        ),
+                        html.Div([
+                            dcc.Input(
+                                id={"type": "weight-input", "index": sector},
+                                type="number",
+                                min=1,
+                                max=100,
+                                step=0.25,
+                                value=round(sector_weights[sector], 2),  # Display with 2 decimal places
+                                style={
+                                    "width": "50px",
+                                    "textAlign": "center",
+                                    "fontWeight": "bold",
+                                    "border": "1px solid #ddd",
+                                    "borderRadius": "4px",
+                                    "padding": "4px",
+                                    "marginRight": "4px"
+                                }
+                            ),
+                            html.Button(
+                                "Apply", 
+                                id={"type": "apply-weight", "index": sector},
+                                style={
+                                    "fontSize": "11px",
+                                    "padding": "4px 8px",
+                                    "backgroundColor": "#3498db",
+                                    "color": "white",
+                                    "border": "none",
+                                    "borderRadius": "4px",
+                                    "cursor": "pointer"
+                                }
+                            )
+                        ], style={"display": "flex", "alignItems": "center"}),
                         html.Span("%", style={"marginLeft": "2px"})
                     ], className="weight-display-container", style={"display": "flex", "alignItems": "center", "width": "100%"}),
                     
@@ -5834,15 +5849,16 @@ def decrease_weight(n_clicks_list, weights_json):
     
     return json.dumps(weights)
 
-# Callback for direct weight input
+# Callback for Apply weight button
 @app.callback(
     Output("stored-weights", "children", allow_duplicate=True),
-    Input({"type": "weight-input", "index": ALL}, "value"),
+    Input({"type": "apply-weight", "index": ALL}, "n_clicks"),
+    State({"type": "weight-input", "index": ALL}, "value"),
     State({"type": "weight-input", "index": ALL}, "id"),
     State("stored-weights", "children"),
     prevent_initial_call=True
 )
-def update_weight_from_input(input_values, input_ids, weights_json):
+def update_weight_from_input(n_clicks_list, input_values, input_ids, weights_json):
     global sector_weights
     
     # Get trigger information
