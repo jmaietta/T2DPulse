@@ -81,7 +81,7 @@ def create_pulse_card(score):
                     }),
                 # Tooltip container with icon and content
                 html.Div([
-                    html.Span("ⓘ", className="info-icon"),
+                    html.Span("ⓘ", className="tooltip-icon"),
                     html.Div([
                         html.H5("Sentiment Index Categories", style={"marginBottom": "10px"}),
                         html.Div([
@@ -99,7 +99,7 @@ def create_pulse_card(score):
                             ])
                         ])
                     ], className="tooltip-content")
-                ], className="tooltip-container")
+                ], className="tooltip-wrapper")
             ], style={
                 "textAlign": "center", 
                 "display": "flex", 
