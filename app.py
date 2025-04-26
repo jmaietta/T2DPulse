@@ -5722,71 +5722,73 @@ def update_vix_container(n):
         insights_panel
     ]
 
-# Callback for updating weight input values when weights change
+# We're keeping a simplified version as a fallback for other callbacks that might need it
+# This function is now only used for initial loading and other inputs
 @app.callback(
     [Output({"type": "weight-input", "index": ALL}, "value"),
      Output("t2d-pulse-value", "children"),
-     Output({"type": "apply-weight", "index": ALL}, "style"),  # Add visual feedback for apply buttons
-     Output("weight-update-notification", "children"),  # Text of notification
-     Output("weight-update-notification", "style")],    # Style of notification (for visibility)
-    [Input("stored-weights", "children")]
+     Output({"type": "apply-weight", "index": ALL}, "style"),
+     Output("weight-update-notification", "children"),
+     Output("weight-update-notification", "style")],
+    [Input("stored-weights", "children")],
+    prevent_initial_call=False  # Allow initial call for page load
 )
-def update_weight_inputs(weights_json):
+def update_weight_inputs_for_other_changes(weights_json):
+    """
+    This simplified version is used as a fallback for other changes to stored-weights,
+    like reset button or initial page load
+    """
+    # Don't trigger for Apply button callbacks, only for other changes 
+    ctx_triggered = dash.callback_context.triggered
+    if ctx_triggered and ctx_triggered[0]['prop_id'] != 'stored-weights.children':
+        raise PreventUpdate
+        
+    # Only handle reset button or initial load
     if not weights_json:
-        # Initialize with equal weights
+        # Default to global weights
         global sector_weights
-        weights = sector_weights
+        weights = sector_weights.copy()
     else:
-        # Use stored weights
+        # Parse stored weights
         try:
             weights = json.loads(weights_json)
-        except:
-            # If JSON parse fails, use global weights
-            weights = sector_weights
-    
-    # Generate values for each sector's input with 2 decimal places
+        except Exception as e:
+            print(f"Error parsing weights in fallback: {e}")
+            weights = sector_weights.copy()
+            
+    # Create weight values for display
     weight_values = []
     for sector in weights:
-        # Round to 2 decimal places for display
         weight_values.append(round(weights[sector], 2))
-    
-    # Calculate the T2D Pulse score based on the new weights
-    sector_scores_list = calculate_sector_sentiment()
-    t2d_pulse_score = calculate_t2d_pulse_from_sectors(sector_scores_list, weights)
-    
-    # Format as a string with 1 decimal place
-    t2d_pulse_display = f"{t2d_pulse_score:.1f}"
-    
-    # Create button styles with visual feedback
+        
+    # Calculate T2D Pulse score
+    try:
+        sector_scores_list = calculate_sector_sentiment()
+        t2d_pulse_score = calculate_t2d_pulse_from_sectors(sector_scores_list, weights)
+        t2d_pulse_display = f"{t2d_pulse_score:.1f}"
+    except Exception as e:
+        print(f"Error calculating score in fallback: {e}")
+        t2d_pulse_display = "50.0"
+        
+    # Create button styles
     button_styles = []
     for _ in range(len(weight_values)):
         button_styles.append({
             "fontSize": "12px",
             "padding": "4px 8px",
-            "backgroundColor": "#e74c3c",  # Red highlight to draw attention
+            "backgroundColor": "#e74c3c",
             "color": "white",
             "border": "none",
             "borderRadius": "4px",
             "cursor": "pointer",
             "fontWeight": "bold",
-            "boxShadow": "0 2px 4px rgba(0,0,0,0.2)",
-            "transition": "all 0.3s ease"
+            "boxShadow": "0 2px 4px rgba(0,0,0,0.2)"
         })
     
-    # Get current time for notification
-    current_time = datetime.now().strftime("%H:%M:%S")
-    
-    # Create notification message and style
-    notification_message = f"Weights updated at {current_time} - T2D Pulse score: {t2d_pulse_display}"
+    # Create empty notification for clean state
+    notification_message = ""
     notification_style = {
-        "color": "green", 
-        "fontWeight": "bold", 
-        "marginRight": "20px",
-        "fontSize": "14px",
-        "padding": "8px 12px",
-        "backgroundColor": "#e8f5e9",
-        "borderRadius": "4px",
-        "opacity": 1,  # Make visible
+        "opacity": 0,
         "transition": "opacity 0.3s ease"
     }
     
@@ -5852,7 +5854,7 @@ def increase_weight(n_clicks_list, weights_json):
 
 # Callback for decreasing weight buttons
 @app.callback(
-    Output("stored-weights", "children", allow_duplicate=True),
+    Output("stored-weights", "children"),
     Input({"type": "decrease-weight", "index": ALL}, "n_clicks"),
     State("stored-weights", "children"),
     prevent_initial_call=True
@@ -5910,16 +5912,25 @@ def decrease_weight(n_clicks_list, weights_json):
     
     return json.dumps(weights)
 
-# Callback for Apply weight button
+# Callback for Apply weight button - DIRECT VERSION
 @app.callback(
-    Output("stored-weights", "children", allow_duplicate=True),
-    Input({"type": "apply-weight", "index": ALL}, "n_clicks"),
-    State({"type": "weight-input", "index": ALL}, "value"),
-    State({"type": "weight-input", "index": ALL}, "id"),
-    State("stored-weights", "children"),
+    [Output({"type": "weight-input", "index": ALL}, "value"),
+     Output("t2d-pulse-value", "children"),
+     Output({"type": "apply-weight", "index": ALL}, "style"),
+     Output("weight-update-notification", "children"),
+     Output("weight-update-notification", "style"),
+     Output("stored-weights", "children")],
+    [Input({"type": "apply-weight", "index": ALL}, "n_clicks")],
+    [State({"type": "weight-input", "index": ALL}, "value"),
+     State({"type": "weight-input", "index": ALL}, "id"),
+     State("stored-weights", "children")],
     prevent_initial_call=True
 )
-def update_weight_from_input(n_clicks_list, input_values, input_ids, weights_json):
+def direct_weight_update(n_clicks_list, input_values, input_ids, weights_json):
+    """
+    Direct callback for weight updates that bypasses the intermediate stored-weights step
+    This eliminates the race condition between updating stored weights and reading them back
+    """
     global sector_weights
     
     # Get trigger information
@@ -5927,7 +5938,7 @@ def update_weight_from_input(n_clicks_list, input_values, input_ids, weights_jso
     if not ctx.triggered:
         raise PreventUpdate
         
-    print("Triggered weight input callback")
+    print("Triggered direct weight update callback")
     print(f"Triggered by: {ctx.triggered}")
     
     # Extract trigger information to find which sector was changed
@@ -5946,7 +5957,7 @@ def update_weight_from_input(n_clicks_list, input_values, input_ids, weights_jso
                 print(f"Error parsing weights_json: {e}")
                 weights = sector_weights
         else:
-            weights = sector_weights
+            weights = sector_weights.copy()  # Important to copy
         
         # Log for debugging
         print(f"Input values: {input_values}")
@@ -6007,20 +6018,71 @@ def update_weight_from_input(n_clicks_list, input_values, input_ids, weights_jso
         
         print(f"Final weights: {weights}, Total: {sum(weights.values())}")
         
-        # Update global weights
-        sector_weights = weights
+        # Update global weights for future reference
+        sector_weights = weights.copy()
         
-        return json.dumps(weights)
+        # Create directly updated weight values for display
+        weight_values = []
+        for id_dict in input_ids:
+            sector = id_dict["index"]
+            weight_values.append(round(weights[sector], 2))
+        
+        # Calculate the T2D Pulse score based on the new weights
+        try:
+            sector_scores_list = calculate_sector_sentiment()
+            t2d_pulse_score = calculate_t2d_pulse_from_sectors(sector_scores_list, weights)
+            
+            # Format as a string with 1 decimal place
+            t2d_pulse_display = f"{t2d_pulse_score:.1f}"
+        except Exception as e:
+            print(f"Error calculating T2D Pulse score: {e}")
+            t2d_pulse_display = "50.0"  # Default fallback
+        
+        # Create button styles with visual feedback
+        button_styles = []
+        for id_dict in input_ids:
+            button_styles.append({
+                "fontSize": "12px",
+                "padding": "4px 8px",
+                "backgroundColor": "#e74c3c",  # Red highlight to draw attention
+                "color": "white",
+                "border": "none",
+                "borderRadius": "4px",
+                "cursor": "pointer",
+                "fontWeight": "bold",
+                "boxShadow": "0 2px 4px rgba(0,0,0,0.2)",
+                "transition": "all 0.3s ease"
+            })
+        
+        # Get current time for notification
+        current_time = datetime.now().strftime("%H:%M:%S")
+        
+        # Create notification message and style
+        notification_message = f"Weights updated at {current_time} - Changed {changed_sector} to {new_value}%"
+        notification_style = {
+            "color": "green", 
+            "fontWeight": "bold", 
+            "marginRight": "20px",
+            "fontSize": "14px",
+            "padding": "8px 12px",
+            "backgroundColor": "#e8f5e9",
+            "borderRadius": "4px",
+            "opacity": 1,  # Make visible
+            "transition": "opacity 0.3s ease"
+        }
+        
+        # Return all values in one go
+        return weight_values, t2d_pulse_display, button_styles, notification_message, notification_style, json.dumps(weights)
         
     except Exception as e:
-        print(f"Error in update_weight_from_input: {e}")
+        print(f"Error in direct_weight_update: {e}")
         import traceback
         traceback.print_exc()
         raise PreventUpdate
 
 # Callback for reset weights button
 @app.callback(
-    Output("stored-weights", "children", allow_duplicate=True),
+    Output("stored-weights", "children"),
     Input("reset-weights-button", "n_clicks"),
     prevent_initial_call=True
 )
