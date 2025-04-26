@@ -5564,7 +5564,7 @@ def update_sector_sentiment_container(n):
                             min=1,
                             max=100,
                             step=0.25,
-                            value=sector_weights[sector],
+                            value=round(sector_weights[sector], 2),  # Display with 2 decimal places
                             debounce=True,  # Process the value only after user stops typing
                             style={
                                 "width": "60px",
@@ -5708,10 +5708,11 @@ def update_weight_inputs(weights_json):
             # If JSON parse fails, use global weights
             weights = sector_weights
     
-    # Generate values for each sector's input
+    # Generate values for each sector's input with 2 decimal places
     weight_values = []
     for sector in weights:
-        weight_values.append(weights[sector])
+        # Round to 2 decimal places for display
+        weight_values.append(round(weights[sector], 2))
     
     return weight_values
 
