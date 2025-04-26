@@ -2287,43 +2287,15 @@ def create_pulse_card(value):
                         style={
                             "fontSize": "24px", 
                             "color": pulse_color,
-                            "marginRight": "5px",
                             "display": "inline-block",
                             "fontWeight": "500",
                             "textAlign": "left"
-                        }),
-                html.Div([
-                    html.Span(
-                        "ⓘ", 
-                        className="info-icon"
-                    ),
-                    # Tooltip content that appears on hover
-                    html.Div(
-                        className="tooltip-content",
-                        children=[
-                        html.H5("Sentiment Index Categories", style={"marginBottom": "10px"}),
-                        html.Div([
-                            html.Div([
-                                html.Span("Bullish (60-100): ", style={"fontWeight": "bold", "color": "#2ecc71"}),
-                                "Positive outlook; favorable growth conditions for technology sector"
-                            ], style={"marginBottom": "5px"}),
-                            html.Div([
-                                html.Span("Neutral (30-60): ", style={"fontWeight": "bold", "color": "#f39c12"}),
-                                "Balanced outlook; mixed signals with both opportunities and challenges"
-                            ], style={"marginBottom": "5px"}),
-                            html.Div([
-                                html.Span("Bearish (0-30): ", style={"fontWeight": "bold", "color": "#e74c3c"}),
-                                "Negative outlook; economic headwinds likely impacting tech industry growth"
-                            ])
-                        ])
-                    ]
-                )
+                        })
             ], style={
                 "textAlign": "center", 
                 "display": "flex", 
                 "alignItems": "center", 
                 "justifyContent": "center", 
-                "position": "relative",
                 "height": "30px"  # Fixed height to prevent layout shifts
             }),
             # Last updated text
