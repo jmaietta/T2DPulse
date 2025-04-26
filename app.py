@@ -5,6 +5,7 @@ import requests
 import base64
 import io
 import json
+import time
 from datetime import datetime, timedelta
 import dash
 from dash import dcc, html, dash_table, ALL, MATCH, ctx
@@ -5573,24 +5574,26 @@ def update_sector_sentiment_container(n):
                                 style={"display": "none"}
                             )
                         ], id={"type": "input-container", "index": sector}),
-                        html.Span("%", style={"marginRight": "10px"})
+                        html.Span("%", style={"marginRight": "10px"}),
+                        
+                        # Apply button - moved inside the weight display container 
+                        html.Button("Apply", 
+                                  id={"type": "apply-weight", "index": sector},
+                                  className="weight-button weight-apply",
+                                  style={
+                                      "backgroundColor": "#2ecc71",  # Green button
+                                      "color": "white",
+                                      "border": "none",
+                                      "borderRadius": "4px",
+                                      "padding": "5px 18px",  # Wider padding
+                                      "fontWeight": "bold",
+                                      "cursor": "pointer",
+                                      "fontSize": "14px",
+                                      "minWidth": "80px",  # Ensuring enough width for "Apply"
+                                      "boxShadow": "0 2px 4px rgba(0,0,0,0.1)",
+                                      "marginLeft": "5px"  # Add spacing between % and button
+                                  })
                     ], className="weight-display-container", style={"display": "flex", "alignItems": "center"}),
-                    
-                    # Apply button
-                    html.Button("Apply", 
-                              id={"type": "apply-weight", "index": sector},
-                              className="weight-button weight-apply",
-                              style={
-                                  "backgroundColor": "#2ecc71",  # Green button
-                                  "color": "white",
-                                  "border": "none",
-                                  "borderRadius": "4px",
-                                  "padding": "5px 15px",
-                                  "fontWeight": "bold",
-                                  "cursor": "pointer",
-                                  "fontSize": "14px",
-                                  "boxShadow": "0 2px 4px rgba(0,0,0,0.1)"
-                              })
                 ], className="weight-controls", style={
                     "display": "flex",
                     "justifyContent": "space-between",
@@ -5719,8 +5722,8 @@ def update_weight_displays(weights_json):
     # Generate weight values for each sector input (formatted to 2 decimal places)
     weight_values = []
     for sector in weights:
-        # Round to 2 decimal places for display
-        weight_values.append(round(weights[sector], 2))
+        # Format to exactly 2 decimal places for consistent display
+        weight_values.append(float(f"{weights[sector]:.2f}"))
     
     return weight_values
 
@@ -5813,6 +5816,15 @@ def apply_weight(n_clicks_list, weight_values, weights_json):
     
     # Update global weights
     sector_weights = weights
+    
+    # Visual feedback for the updated input field
+    # Create a global dictionary to track which fields were recently updated
+    if 'highlighted_sectors' not in globals():
+        global highlighted_sectors
+        highlighted_sectors = {}
+    
+    # Store the sector that was updated along with the timestamp
+    highlighted_sectors[sector_to_update] = time.time()
     
     # Calculate new T2D Pulse score
     # (This updates the overall score based on new weights)
@@ -5947,6 +5959,14 @@ def apply_weight_on_enter(n_clicks_list, weight_values, weights_json):
     # Update global weights
     sector_weights = weights
     
+    # Visual feedback for the updated input field - same as in apply_weight
+    if 'highlighted_sectors' not in globals():
+        global highlighted_sectors
+        highlighted_sectors = {}
+    
+    # Store the sector that was updated along with the timestamp
+    highlighted_sectors[sector_to_update] = time.time()
+    
     # Calculate new T2D Pulse score
     # (This updates the overall score based on new weights)
     
@@ -5978,6 +5998,72 @@ def reset_weights(n_clicks):
         sector_weights[sector] = equal_weight
     
     return json.dumps(sector_weights)
+
+# Callback to provide visual feedback for updated input fields
+@app.callback(
+    Output({"type": "input-container", "index": ALL}, "style"),
+    Input("stored-weights", "children"),
+    prevent_initial_call=True
+)
+def update_input_styling(weights_json):
+    """
+    Update input field styling to provide visual feedback when a weight is changed
+    This shows a green glow around fields that were recently updated
+    """
+    # Initialize a global dictionary to track highlighted sectors if it doesn't exist
+    if 'highlighted_sectors' not in globals():
+        global highlighted_sectors
+        highlighted_sectors = {}
+    
+    # Default style for all input containers (no highlight)
+    default_style = {
+        "display": "flex",
+        "alignItems": "center",
+        "width": "70px",
+        "marginRight": "5px"
+    }
+    
+    # Style for highlighted input containers (with green glow)
+    highlight_style = {
+        "display": "flex",
+        "alignItems": "center",
+        "width": "70px",
+        "marginRight": "5px",
+        "boxShadow": "0 0 5px 2px rgba(46, 204, 113, 0.7)",
+        "borderRadius": "4px",
+        "transition": "box-shadow 0.3s ease-in-out"
+    }
+    
+    # Get list of sectors in the proper order
+    if weights_json:
+        try:
+            weights = json.loads(weights_json)
+            sectors = list(weights.keys())
+        except:
+            # If parsing fails, use an empty list
+            sectors = []
+    else:
+        # If no weights are stored, use an empty list
+        sectors = []
+    
+    # Current time to check for recent updates (highlight for 3 seconds)
+    current_time = time.time()
+    highlight_duration = 3  # seconds
+    
+    # Generate styles for each sector
+    styles = []
+    for sector in sectors:
+        # Check if this sector was recently updated
+        if sector in highlighted_sectors and (current_time - highlighted_sectors[sector]) < highlight_duration:
+            styles.append(highlight_style)
+        else:
+            styles.append(default_style)
+            # Remove expired highlights
+            if sector in highlighted_sectors and (current_time - highlighted_sectors[sector]) >= highlight_duration:
+                del highlighted_sectors[sector]
+    
+    # Return either a list of styles (one per sector) or an empty list
+    return styles if styles else []
 
 # Add this at the end of the file if running directly
 if __name__ == "__main__":
