@@ -5527,7 +5527,8 @@ def update_sector_sentiment_container(n):
                                     "borderRadius": "4px",
                                     "border": "1px solid #ddd",
                                     "fontSize": "14px",
-                                    "marginRight": "5px"
+                                    "marginRight": "5px",
+                                    "textAlign": "right"
                                 }
                             ),
                             # Hidden button triggered by Enter key press
@@ -5537,27 +5538,30 @@ def update_sector_sentiment_container(n):
                                 style={"display": "none"}
                             )
                         ], id={"type": "input-container", "index": sector}),
-                        html.Span("%", style={"marginRight": "10px"})
-                    ], className="weight-display-container", style={"display": "flex", "alignItems": "center"}),
-                    
-                    # Apply button
-                    html.Button("Apply", 
-                              id={"type": "apply-weight", "index": sector},
-                              className="weight-button weight-apply",
-                              style={
-                                  "backgroundColor": "#2ecc71",  # Green button
-                                  "color": "white",
-                                  "border": "none",
-                                  "borderRadius": "4px",
-                                  "padding": "5px 15px",
-                                  "fontWeight": "bold",
-                                  "cursor": "pointer",
-                                  "fontSize": "14px",
-                                  "boxShadow": "0 2px 4px rgba(0,0,0,0.1)"
-                              })
+                        html.Span("%", style={"marginRight": "10px"}),
+                        
+                        # Apply button moved inside the first div to be closer to the weight input
+                        html.Button("Apply", 
+                                  id={"type": "apply-weight", "index": sector},
+                                  className="weight-button weight-apply",
+                                  style={
+                                      "backgroundColor": "#2ecc71",  # Green button
+                                      "color": "white",
+                                      "border": "none",
+                                      "borderRadius": "4px",
+                                      "padding": "5px 15px",
+                                      "fontWeight": "bold",
+                                      "cursor": "pointer",
+                                      "fontSize": "14px",
+                                      "lineHeight": "1.5",  # Fix text truncation
+                                      "height": "33px",     # Ensure proper height for text
+                                      "marginLeft": "5px",  # Add spacing from the % symbol
+                                      "boxShadow": "0 2px 4px rgba(0,0,0,0.1)"
+                                  })
+                    ], className="weight-display-container", style={"display": "flex", "alignItems": "center"})
                 ], className="weight-controls", style={
                     "display": "flex",
-                    "justifyContent": "space-between",
+                    "justifyContent": "flex-start",
                     "alignItems": "center",
                     "marginTop": "15px",
                     "padding": "10px 0 0 0",
@@ -5683,7 +5687,7 @@ def update_weight_displays(weights_json):
     # Generate weight values for each sector input (formatted to 2 decimal places)
     weight_values = []
     for sector in weights:
-        # Round to 2 decimal places for display
+        # Round to 2 decimal places for consistent display
         weight_values.append(round(weights[sector], 2))
     
     return weight_values
