@@ -5525,12 +5525,6 @@ def update_sector_sentiment_container(n):
                                     "border": "1px solid #ddd",
                                     "fontSize": "14px",
                                     "marginRight": "5px"
-                                },
-                                # Add data attributes to help with Enter key handling
-                                **{
-                                    'data-sector': sector,
-                                    # This will help us identify the corresponding apply button
-                                    'data-enter-submit': 'true'
                                 }
                             ),
                             # Hidden button triggered by Enter key press

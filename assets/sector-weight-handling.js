@@ -1,43 +1,44 @@
 // Handle Enter Key press in sector weight inputs
 window.addEventListener('DOMContentLoaded', function() {
-    // Periodically check for inputs with data-enter-submit attribute
-    // This handles dynamically added inputs
-    setInterval(function() {
-        // Find all inputs with the data-enter-submit attribute
-        var inputs = document.querySelectorAll('input[data-enter-submit="true"]');
-        
-        // Add keydown event listeners to each input
-        inputs.forEach(function(input) {
-            // Skip inputs that already have the handler
-            if (input.dataset.enterHandlerAttached === "true") {
-                return;
-            }
+    // Add a global keydown event listener for Enter key press in weight inputs
+    document.addEventListener('keydown', function(event) {
+        // Only respond to Enter key
+        if (event.key === 'Enter') {
+            // Check if the active element is a weight input field
+            var activeElement = document.activeElement;
             
-            // Add event listener for keydown
-            input.addEventListener('keydown', function(event) {
-                // If Enter key is pressed
-                if (event.key === 'Enter') {
-                    event.preventDefault();
-                    
-                    // Get the sector from the data attribute
-                    var sector = input.dataset.sector;
-                    
-                    // Find and click the corresponding hidden button
-                    var hiddenButton = document.querySelector('button[id*="hidden-submit"][id*="' + sector + '"]');
-                    if (hiddenButton) {
-                        hiddenButton.click();
-                    } else {
-                        // Fallback: find and click the Apply button
-                        var applyButton = document.querySelector('button[id*="apply-weight"][id*="' + sector + '"]');
+            if (activeElement && 
+                activeElement.tagName === 'INPUT' && 
+                activeElement.id && 
+                activeElement.id.includes('weight-input')) {
+                
+                event.preventDefault();
+                
+                // Extract the sector from the input ID
+                // Format is {"type":"weight-input","index":"SectorName"}
+                try {
+                    var idObject = JSON.parse(activeElement.id);
+                    if (idObject && idObject.type === 'weight-input' && idObject.index) {
+                        var sector = idObject.index;
+                        
+                        // Find the corresponding Apply button and click it
+                        var applyButtonId = '{"type":"apply-weight","index":"' + sector + '"}';
+                        var applyButton = document.querySelector('button[id="' + applyButtonId.replace(/"/g, '\\"') + '"]');
+                        
                         if (applyButton) {
                             applyButton.click();
+                        } else {
+                            // Alternative approach: find buttons that include the sector name
+                            var buttons = document.querySelectorAll('button[id*="apply-weight"][id*="' + sector + '"]');
+                            if (buttons.length > 0) {
+                                buttons[0].click();
+                            }
                         }
                     }
+                } catch (e) {
+                    console.log("Error parsing input ID: ", e);
                 }
-            });
-            
-            // Mark this input as handled
-            input.dataset.enterHandlerAttached = "true";
-        });
-    }, 500); // Check every half second
+            }
+        }
+    });
 });
