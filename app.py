@@ -5849,89 +5849,100 @@ def update_weight_from_input(input_values, input_ids, weights_json):
     ctx = dash.callback_context
     if not ctx.triggered:
         raise PreventUpdate
+        
+    print("Triggered weight input callback")
+    print(f"Triggered by: {ctx.triggered}")
     
     # Extract trigger information to find which sector was changed
     trigger_id = ctx.triggered[0]["prop_id"].split(".")[0]
     
-    # If the trigger didn't come from a weight input, don't update
-    if not trigger_id.startswith('{"type":"weight-input"'):
-        raise PreventUpdate
-    
-    # Parse the JSON to get the sector name
-    trigger_dict = json.loads(trigger_id)
-    changed_sector = trigger_dict["index"]
-    
-    # Use stored weights if available, otherwise use global
-    if weights_json:
-        try:
-            weights = json.loads(weights_json)
-        except:
+    try:
+        # Parse the JSON to get the sector name
+        trigger_dict = json.loads(trigger_id)
+        changed_sector = trigger_dict["index"]
+        
+        # Use stored weights if available, otherwise use global
+        if weights_json:
+            try:
+                weights = json.loads(weights_json)
+            except Exception as e:
+                print(f"Error parsing weights_json: {e}")
+                weights = sector_weights
+        else:
             weights = sector_weights
-    else:
-        weights = sector_weights
-    
-    # Log for debugging
-    print(f"Input values: {input_values}")
-    print(f"Trigger: {trigger_id}, Changed sector: {changed_sector}")
-    
-    # Find the index of the changed sector in the input_ids list
-    changed_idx = None
-    for i, id_dict in enumerate(input_ids):
-        if id_dict["index"] == changed_sector:
-            changed_idx = i
-            break
-    
-    if changed_idx is None:
+        
+        # Log for debugging
+        print(f"Input values: {input_values}")
+        print(f"Input IDs: {input_ids}")
+        print(f"Changed sector: {changed_sector}")
+        
+        # Find the index of the changed sector in the input_ids list
+        changed_idx = None
+        for i, id_dict in enumerate(input_ids):
+            if id_dict["index"] == changed_sector:
+                changed_idx = i
+                break
+        
+        if changed_idx is None:
+            print("Could not find changed sector in input_ids")
+            raise PreventUpdate
+        
+        # Get the new value for the changed sector
+        new_value = input_values[changed_idx]
+        if new_value is None:
+            print("New value is None")
+            raise PreventUpdate
+        
+        # Ensure the value is valid (between 1 and 100)
+        new_value = float(max(1.0, min(100.0, new_value)))
+        old_value = weights[changed_sector]
+        
+        # If value is unchanged, do nothing
+        if abs(new_value - old_value) < 0.01:
+            print(f"Value unchanged: {old_value} vs {new_value}")
+            raise PreventUpdate
+        
+        print(f"Old value: {old_value}, New value: {new_value}")
+        
+        # Update the changed sector's weight
+        weights[changed_sector] = new_value
+        
+        # Identify which sectors have been manually adjusted and which haven't
+        sectors_to_adjust = [s for s in weights.keys() if s != changed_sector]
+        total_other_weight = sum(weights[s] for s in sectors_to_adjust)
+        
+        # Calculate the adjustment needed for other sectors
+        adjustment = 100.0 - new_value
+        
+        if total_other_weight > 0:
+            # Proportionally distribute the remaining weight among other sectors
+            for s in sectors_to_adjust:
+                proportion = weights[s] / total_other_weight
+                weights[s] = adjustment * proportion
+        
+        # Round to 2 decimal places to avoid floating point issues
+        for s in weights:
+            weights[s] = round(weights[s], 2)
+        
+        # Make sure the sum is exactly 100
+        total = sum(weights.values())
+        if total != 100.0:
+            # Find a sector to adjust slightly to make total exactly 100
+            adjust_sector = next(iter(weights.keys()))
+            weights[adjust_sector] += (100.0 - total)
+        
+        print(f"New weights: {weights}")
+        
+        # Update global weights
+        sector_weights = weights
+        
+        return json.dumps(weights)
+        
+    except Exception as e:
+        print(f"Error in update_weight_from_input: {e}")
+        import traceback
+        traceback.print_exc()
         raise PreventUpdate
-    
-    # Get the new value for the changed sector
-    new_value = input_values[changed_idx]
-    if new_value is None:
-        raise PreventUpdate
-    
-    # Ensure the value is valid (between 1 and 100)
-    new_value = max(1.0, min(100.0, new_value))
-    old_value = weights[changed_sector]
-    
-    # If value is unchanged, do nothing
-    if abs(new_value - old_value) < 0.01:
-        raise PreventUpdate
-    
-    print(f"Old value: {old_value}, New value: {new_value}")
-    
-    # Update the changed sector's weight
-    weights[changed_sector] = new_value
-    
-    # Identify which sectors have been manually adjusted and which haven't
-    sectors_to_adjust = [s for s in weights.keys() if s != changed_sector]
-    total_other_weight = sum(weights[s] for s in sectors_to_adjust)
-    
-    # Calculate the adjustment needed for other sectors
-    adjustment = 100.0 - new_value
-    
-    if total_other_weight > 0:
-        # Proportionally distribute the remaining weight among other sectors
-        for s in sectors_to_adjust:
-            proportion = weights[s] / total_other_weight
-            weights[s] = adjustment * proportion
-    
-    # Round to 2 decimal places to avoid floating point issues
-    for s in weights:
-        weights[s] = round(weights[s], 2)
-    
-    # Make sure the sum is exactly 100
-    total = sum(weights.values())
-    if total != 100.0:
-        # Find a sector to adjust slightly to make total exactly 100
-        adjust_sector = next(iter(weights.keys()))
-        weights[adjust_sector] += (100.0 - total)
-    
-    print(f"New weights: {weights}")
-    
-    # Update global weights
-    sector_weights = weights
-    
-    return json.dumps(weights)
 
 # Callback for reset weights button
 @app.callback(
