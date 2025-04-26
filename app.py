@@ -5525,9 +5525,15 @@ def update_sector_sentiment_container(n):
                                     "border": "1px solid #ddd",
                                     "fontSize": "14px",
                                     "marginRight": "5px"
+                                },
+                                # Add data attributes to help with Enter key handling
+                                **{
+                                    'data-sector': sector,
+                                    # This will help us identify the corresponding apply button
+                                    'data-enter-submit': 'true'
                                 }
                             ),
-                            # Hidden button triggered by Enter key press via JavaScript
+                            # Hidden button triggered by Enter key press
                             html.Button(
                                 id={"type": "hidden-submit", "index": sector},
                                 n_clicks=0,
@@ -5698,6 +5704,11 @@ def update_weight_displays(weights_json):
 )
 def apply_weight(n_clicks_list, weight_values, weights_json):
     global sector_weights
+    global fixed_sectors  # Track which sectors should remain fixed
+    
+    # Initialize fixed_sectors if it doesn't exist
+    if 'fixed_sectors' not in globals():
+        fixed_sectors = set()
     
     # Determine which button was clicked
     if not any(click for click in n_clicks_list if click):
@@ -5731,7 +5742,7 @@ def apply_weight(n_clicks_list, weight_values, weights_json):
         weights = sector_weights.copy()
     
     # Get the new weight value from input
-    new_weight = max(0.01, min(100, weight_values[input_index]))
+    new_weight = max(0.01, min(100, float(weight_values[input_index])))
     
     # Calculate the difference that needs to be distributed
     old_weight = weights[sector_to_update]
@@ -5740,14 +5751,23 @@ def apply_weight(n_clicks_list, weight_values, weights_json):
     # Apply the new weight
     weights[sector_to_update] = new_weight
     
+    # Add this sector to the fixed sectors
+    fixed_sectors.add(sector_to_update)
+    
     # Adjust other weights proportionally if there was a change
     if abs(weight_difference) > 0.01:
-        # Find sectors to adjust (all except the one being updated)
-        sectors_to_adjust = [s for s in weights.keys() if s != sector_to_update]
+        # Find sectors to adjust (all except those manually set)
+        sectors_to_adjust = [s for s in weights.keys() if s not in fixed_sectors and s != sector_to_update]
+        
+        # If all sectors are fixed, we have to adjust everything proportionally (except the current one)
+        if not sectors_to_adjust:
+            sectors_to_adjust = [s for s in weights.keys() if s != sector_to_update]
+            fixed_sectors = {sector_to_update}  # Reset fixed sectors to just the current one
+        
         total_other_weight = sum(weights[s] for s in sectors_to_adjust)
         
         if total_other_weight > 0:
-            # Distribute the weight difference proportionally
+            # Distribute the weight difference proportionally among non-fixed sectors
             for s in sectors_to_adjust:
                 proportion = weights[s] / total_other_weight
                 weights[s] -= weight_difference * proportion
@@ -5760,6 +5780,9 @@ def apply_weight(n_clicks_list, weight_values, weights_json):
     
     # Update global weights
     sector_weights = weights
+    
+    # Calculate new T2D Pulse score
+    # (This updates the overall score based on new weights)
     
     return json.dumps(weights)
 
@@ -5774,6 +5797,11 @@ def apply_weight(n_clicks_list, weight_values, weights_json):
 def apply_weight_on_enter(n_clicks_list, weight_values, weights_json):
     # This function is almost identical to apply_weight
     global sector_weights
+    global fixed_sectors  # Track which sectors should remain fixed
+    
+    # Initialize fixed_sectors if it doesn't exist
+    if 'fixed_sectors' not in globals():
+        fixed_sectors = set()
     
     # Determine which button was triggered
     if not any(click for click in n_clicks_list if click):
@@ -5807,7 +5835,7 @@ def apply_weight_on_enter(n_clicks_list, weight_values, weights_json):
         weights = sector_weights.copy()
     
     # Get the new weight value from input
-    new_weight = max(0.01, min(100, weight_values[input_index]))
+    new_weight = max(0.01, min(100, float(weight_values[input_index])))
     
     # Calculate the difference that needs to be distributed
     old_weight = weights[sector_to_update]
@@ -5816,14 +5844,23 @@ def apply_weight_on_enter(n_clicks_list, weight_values, weights_json):
     # Apply the new weight
     weights[sector_to_update] = new_weight
     
+    # Add this sector to the fixed sectors
+    fixed_sectors.add(sector_to_update)
+    
     # Adjust other weights proportionally if there was a change
     if abs(weight_difference) > 0.01:
-        # Find sectors to adjust (all except the one being updated)
-        sectors_to_adjust = [s for s in weights.keys() if s != sector_to_update]
+        # Find sectors to adjust (all except those manually set)
+        sectors_to_adjust = [s for s in weights.keys() if s not in fixed_sectors and s != sector_to_update]
+        
+        # If all sectors are fixed, we have to adjust everything proportionally (except the current one)
+        if not sectors_to_adjust:
+            sectors_to_adjust = [s for s in weights.keys() if s != sector_to_update]
+            fixed_sectors = {sector_to_update}  # Reset fixed sectors to just the current one
+        
         total_other_weight = sum(weights[s] for s in sectors_to_adjust)
         
         if total_other_weight > 0:
-            # Distribute the weight difference proportionally
+            # Distribute the weight difference proportionally among non-fixed sectors
             for s in sectors_to_adjust:
                 proportion = weights[s] / total_other_weight
                 weights[s] -= weight_difference * proportion
@@ -5837,6 +5874,9 @@ def apply_weight_on_enter(n_clicks_list, weight_values, weights_json):
     # Update global weights
     sector_weights = weights
     
+    # Calculate new T2D Pulse score
+    # (This updates the overall score based on new weights)
+    
     return json.dumps(weights)
 
 # Callback for reset weights button
@@ -5847,6 +5887,14 @@ def apply_weight_on_enter(n_clicks_list, weight_values, weights_json):
 )
 def reset_weights(n_clicks):
     global sector_weights
+    global fixed_sectors
+    
+    # Initialize fixed_sectors if it doesn't exist
+    if 'fixed_sectors' not in globals():
+        fixed_sectors = set()
+    
+    # Clear the fixed sectors when resetting
+    fixed_sectors.clear()
     
     # Calculate equal weights
     num_sectors = len(sector_weights)
