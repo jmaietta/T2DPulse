@@ -2030,7 +2030,6 @@ app.layout = html.Div([
                 # Sector Sentiment Tab - Moved to first position
                 dcc.Tab(label="Sector Sentiment", children=[
                     html.Div([
-                        html.H3("Technology Sector Sentiment", className="graph-title"),
                         html.Div(id="sector-sentiment-container", className="sector-sentiment-container")
                     ], className="graph-container")
                 ], className="custom-tab", selected_className="custom-tab--selected"),
@@ -2268,17 +2267,17 @@ def create_pulse_card(value):
             html.Img(
                 src="/assets/T2D Pulse logo.png",
                 style={
-                    "height": "65px",
-                    "marginBottom": "12px",
+                    "height": "55px",
+                    "marginBottom": "8px",
                     "objectFit": "contain",
-                    "maxWidth": "85%" # Ensure logo fits within container
+                    "maxWidth": "80%" # Ensure logo fits within container
                 }
             ),
             # Score value
             html.Div([
                 html.Span(f"{score_value:.1f}", 
                         style={
-                            "fontSize": "60px", 
+                            "fontSize": "52px", 
                             "fontWeight": "bold", 
                             "color": pulse_color,
                             "display": "block",
@@ -5591,19 +5590,6 @@ def update_sector_sentiment_container(n):
                         html.P("Adjust sector weights to customize the T2D Pulse for your investment focus.", 
                               className="section-description", style={"margin": "0", "fontSize": "14px"})
                     ]),
-                    html.Button("Reset Equal Weights", 
-                               id="reset-weights-button",
-                               className="reset-button",
-                               style={
-                                   "backgroundColor": "#3498db",
-                                   "color": "white",
-                                   "border": "none",
-                                   "borderRadius": "4px",
-                                   "padding": "8px 16px",
-                                   "cursor": "pointer",
-                                   "fontWeight": "500",
-                                   "boxShadow": "0 2px 4px rgba(0,0,0,0.1)"
-                               })
                 ], className="section-controls", style={"display": "flex", "justifyContent": "space-between", "alignItems": "center"})
             ], className="section-header", style={"marginBottom": "15px"})
         ]),
@@ -5614,10 +5600,28 @@ def update_sector_sentiment_container(n):
         
         # Sector summary in a card like in the mockup, more compact
         html.Div([
-            html.H3("Sector Summary", className="section-subtitle", 
-                   style={"marginBottom": "10px", "fontWeight": "600", "color": "#2c3e50", 
-                          "textAlign": "center", "fontSize": "20px"}),
-            sector_summary
+            html.Div([
+                html.H3("Sector Summary", className="section-subtitle", 
+                       style={"marginBottom": "10px", "fontWeight": "600", "color": "#2c3e50", 
+                              "textAlign": "center", "fontSize": "20px"}),
+                sector_summary
+            ], style={"width": "100%"}),
+            html.Div([
+                html.Button("Reset Equal Weights", 
+                           id="reset-weights-button",
+                           className="reset-button",
+                           style={
+                               "backgroundColor": "#3498db",
+                               "color": "white",
+                               "border": "none",
+                               "borderRadius": "4px",
+                               "padding": "8px 16px",
+                               "cursor": "pointer",
+                               "fontWeight": "500",
+                               "boxShadow": "0 2px 4px rgba(0,0,0,0.1)",
+                               "alignSelf": "flex-end"
+                           })
+            ], style={"display": "flex", "justifyContent": "flex-end", "marginTop": "10px"})
         ], className="sector-summary-container", 
            style={"marginBottom": "20px", "padding": "12px", 
                   "backgroundColor": "white", "borderRadius": "8px", 

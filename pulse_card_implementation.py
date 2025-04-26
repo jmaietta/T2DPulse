@@ -37,9 +37,10 @@ def create_pulse_card(value):
             html.Img(
                 src="/assets/T2D Pulse logo.png",
                 style={
-                    "height": "80px",
+                    "height": "60px",
                     "marginBottom": "15px",
-                    "objectFit": "contain"
+                    "objectFit": "contain",
+                    "maxWidth": "85%"
                 }
             ),
             # Score value
