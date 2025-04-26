@@ -2135,7 +2135,7 @@ app.layout = html.Div([
     [Input("interval-component", "n_intervals")]
 )
 def update_last_updated(n):
-    return f"Last updated: {datetime.now().strftime('%Y-%m-%d %H:%M')}"
+    return f"Last updated: {datetime.now().strftime('%B %d, %Y %H:%M')}"
 
 # Create compact sector score summary
 def create_sector_summary(sector_scores):
@@ -2336,7 +2336,7 @@ def create_pulse_card(value):
             
             # Last updated text
             html.Div([
-                html.Span(f"Last updated: April 25, 2025", 
+                html.Span(f"Last updated: April 26, 2025", 
                         style={
                             "fontSize": "12px", 
                             "color": "#95a5a6",

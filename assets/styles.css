@@ -731,55 +731,61 @@
     font-size: 11px;
 }
 
-/* Tooltip styling */
+/* Tooltip styling - Directly copied from working pure_css_tooltip.css */
 .tooltip-wrapper {
   position: relative;
   display: inline-block;
   cursor: pointer;
-  outline: none; /* Remove default focus outline */
+  /* Add tabindex to make it focusable with keyboard */
+  outline: none;
+}
+
+.tooltip-wrapper .tooltip-icon {
+  font-size: 16px;
+  color: #3498db;
 }
 
 .tooltip-wrapper .tooltip-content {
+  visibility: hidden;
   position: absolute;
-  bottom: 150%;  /* Increased from 125% to move it further up */
-  left: 50%;
-  transform: translateX(-50%);        /* Better than margin-left for responsive designs */
+  z-index: 1000;
   width: 300px;
-
-  background: white;
+  background-color: white;
   color: #333;
   text-align: left;
   border-radius: 6px;
   padding: 15px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-
   opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.3s, visibility 0s 0.3s;
-  pointer-events: none;               /* keep hidden tooltip unclickable */
-  z-index: 1000;
+  pointer-events: none; /* Fix for smooth transition */
+  transition: opacity 0.3s;
+  
+  /* Position the tooltip with transform for better centering */
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%); /* Better centering than margin-left */
 }
 
-/* show on hover OR keyboard focus */
+/* Make tooltip visible on hover AND keyboard focus */
 .tooltip-wrapper:hover .tooltip-content,
 .tooltip-wrapper:focus .tooltip-content,
 .tooltip-wrapper:focus-within .tooltip-content {
-  opacity: 1;
   visibility: visible;
-  transition: opacity 0.3s;
+  opacity: 1;
   pointer-events: auto;
 }
 
-/* arrow */
+/* Arrow pointing down */
 .tooltip-wrapper .tooltip-content::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 100%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%); /* Better centering than margin-left */
   border-width: 5px;
   border-style: solid;
-  border-color: white transparent transparent transparent; /* matches current background */
+  /* Use currentColor to adapt to background changes */
+  border-color: white transparent transparent transparent;
 }
 
 /* Sector Card Weight Controls */
