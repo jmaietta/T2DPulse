@@ -5509,23 +5509,31 @@ def update_sector_sentiment_container(n):
                                    "verticalAlign": "middle"
                                }),
                         # Input field for manually entering weight
-                        dcc.Input(
-                            id={"type": "weight-input", "index": sector},
-                            type="number",
-                            min=0.01,
-                            max=100,
-                            step=0.01,
-                            value=sector_weights[sector],
-                            style={
-                                "width": "70px",
-                                "height": "30px",
-                                "padding": "5px",
-                                "borderRadius": "4px",
-                                "border": "1px solid #ddd",
-                                "fontSize": "14px",
-                                "marginRight": "5px"
-                            }
-                        ),
+                        html.Div([
+                            dcc.Input(
+                                id={"type": "weight-input", "index": sector},
+                                type="number",
+                                min=0.01,
+                                max=100,
+                                step=0.01,
+                                value=sector_weights[sector],
+                                style={
+                                    "width": "70px",
+                                    "height": "30px",
+                                    "padding": "5px",
+                                    "borderRadius": "4px",
+                                    "border": "1px solid #ddd",
+                                    "fontSize": "14px",
+                                    "marginRight": "5px"
+                                }
+                            ),
+                            # Hidden button triggered by Enter key press via JavaScript
+                            html.Button(
+                                id={"type": "hidden-submit", "index": sector},
+                                n_clicks=0,
+                                style={"display": "none"}
+                            )
+                        ], id={"type": "input-container", "index": sector}),
                         html.Span("%", style={"marginRight": "10px"})
                     ], className="weight-display-container", style={"display": "flex", "alignItems": "center"}),
                     
@@ -5540,7 +5548,9 @@ def update_sector_sentiment_container(n):
                                   "borderRadius": "4px",
                                   "padding": "5px 15px",
                                   "fontWeight": "bold",
-                                  "cursor": "pointer"
+                                  "cursor": "pointer",
+                                  "fontSize": "14px",
+                                  "boxShadow": "0 2px 4px rgba(0,0,0,0.1)"
                               })
                 ], className="weight-controls", style={
                     "display": "flex",
@@ -5561,6 +5571,9 @@ def update_sector_sentiment_container(n):
     
     # Create the sector summary component
     sector_summary = create_sector_summary(sector_score_dict)
+    
+    # We'll handle the Enter key press with simpler approach
+    # The code for the clientside callback was causing issues
     
     # Combine all elements in a layout similar to the mockup
     return html.Div([
@@ -5700,10 +5713,86 @@ def apply_weight(n_clicks_list, weight_values, weights_json):
     trigger_dict = json.loads(trigger_id)
     sector_to_update = trigger_dict["index"]
     
-    # Find the index of the sector in the ALL pattern-matching callback
+    # Find the index of the sector in the weight_values list
     input_index = 0  # Default value in case we can't find a match
-    callback_ids = ctx.inputs_list[0]['id']
-    for i, callback_id in enumerate(callback_ids):
+    ids = [{'index': x['id']['index']} for x in ctx.states_list[0]]
+    for i, callback_id in enumerate(ids):
+        if callback_id["index"] == sector_to_update:
+            input_index = i
+            break
+    
+    # Use stored weights if available
+    if weights_json:
+        try:
+            weights = json.loads(weights_json)
+        except:
+            weights = sector_weights.copy()
+    else:
+        weights = sector_weights.copy()
+    
+    # Get the new weight value from input
+    new_weight = max(0.01, min(100, weight_values[input_index]))
+    
+    # Calculate the difference that needs to be distributed
+    old_weight = weights[sector_to_update]
+    weight_difference = new_weight - old_weight
+    
+    # Apply the new weight
+    weights[sector_to_update] = new_weight
+    
+    # Adjust other weights proportionally if there was a change
+    if abs(weight_difference) > 0.01:
+        # Find sectors to adjust (all except the one being updated)
+        sectors_to_adjust = [s for s in weights.keys() if s != sector_to_update]
+        total_other_weight = sum(weights[s] for s in sectors_to_adjust)
+        
+        if total_other_weight > 0:
+            # Distribute the weight difference proportionally
+            for s in sectors_to_adjust:
+                proportion = weights[s] / total_other_weight
+                weights[s] -= weight_difference * proportion
+                # Ensure no negative weights
+                weights[s] = max(0.01, weights[s])
+    
+    # Normalize to ensure sum is exactly 100%
+    total = sum(weights.values())
+    weights = {k: (v/total)*100 for k, v in weights.items()}
+    
+    # Update global weights
+    sector_weights = weights
+    
+    return json.dumps(weights)
+
+# Callback for hidden buttons (triggered by Enter key)
+@app.callback(
+    Output("stored-weights", "children", allow_duplicate=True),
+    Input({"type": "hidden-submit", "index": ALL}, "n_clicks"),
+    State({"type": "weight-input", "index": ALL}, "value"),
+    State("stored-weights", "children"),
+    prevent_initial_call=True
+)
+def apply_weight_on_enter(n_clicks_list, weight_values, weights_json):
+    # This function is almost identical to apply_weight
+    global sector_weights
+    
+    # Determine which button was triggered
+    if not any(click for click in n_clicks_list if click):
+        raise PreventUpdate
+    
+    # Get trigger information
+    ctx = dash.callback_context
+    if not ctx.triggered:
+        raise PreventUpdate
+    
+    # Extract sector from triggered ID
+    trigger_id = ctx.triggered[0]["prop_id"].split(".")[0]
+    trigger_dict = json.loads(trigger_id)
+    sector_to_update = trigger_dict["index"]
+    
+    # Find the index of the sector in the weight_values list
+    input_index = 0  # Default value in case we can't find a match
+    ids = [{'index': x['id']['index']} for x in ctx.states_list[0]]
+    for i, callback_id in enumerate(ids):
         if callback_id["index"] == sector_to_update:
             input_index = i
             break
