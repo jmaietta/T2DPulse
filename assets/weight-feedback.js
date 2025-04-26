@@ -1,6 +1,5 @@
 // Add client-side feedback for weight updates
 window.addEventListener('DOMContentLoaded', (event) => {
-    // Create a feedback message element
     const feedbackDiv = document.createElement('div');
     feedbackDiv.id = 'weight-update-feedback';
     feedbackDiv.style.position = 'fixed';
@@ -17,8 +16,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
     feedbackDiv.style.fontSize = '16px';
     feedbackDiv.style.fontWeight = 'bold';
     document.body.appendChild(feedbackDiv);
-    
-    // Add click handler for all Apply buttons
+
+    // Add click handler for all Apply buttons (immediate feedback)
     document.addEventListener('click', function(event) {
         // Check if the clicked element is an Apply button
         if (event.target && event.target.innerText === 'Apply') {
@@ -28,17 +27,50 @@ window.addEventListener('DOMContentLoaded', (event) => {
             
             if (inputDiv) {
                 const value = inputDiv.value;
-                const sector = event.target.id.match(/"index":"([^"]+)"/)[1];
                 
-                // Show feedback
-                feedbackDiv.innerText = `Updated ${sector} weight to ${value}%`;
-                feedbackDiv.style.opacity = '1';
-                
-                // Clear feedback after 3 seconds
-                setTimeout(() => {
-                    feedbackDiv.style.opacity = '0';
-                }, 3000);
+                try {
+                    const sector = event.target.id.match(/"index":"([^"]+)"/)[1];
+                    
+                    // Show feedback immediately on click
+                    feedbackDiv.innerText = `Updated ${sector} weight to ${value}%`;
+                    feedbackDiv.style.opacity = '1';
+                    
+                    // Clear feedback after 3 seconds
+                    setTimeout(() => {
+                        feedbackDiv.style.opacity = '0';
+                    }, 3000);
+                } catch (e) {
+                    console.error("Error parsing sector from ID:", e);
+                }
             }
         }
     });
+
+    // Also observe the notification div for changes
+    setTimeout(() => {
+        const notificationDiv = document.getElementById('weight-update-notification');
+        if (notificationDiv) {
+            const observer = new MutationObserver((mutationsList, observer) => {
+                for(const mutation of mutationsList) {
+                    if (mutation.type === 'childList' && notificationDiv.innerText.trim() !== '') {
+                        const updatedText = notificationDiv.innerText.trim();
+
+                        // Show popup with the same message
+                        feedbackDiv.innerText = updatedText;
+                        feedbackDiv.style.opacity = '1';
+
+                        // Clear after 3 seconds
+                        setTimeout(() => {
+                            feedbackDiv.style.opacity = '0';
+                        }, 3000);
+                    }
+                }
+            });
+
+            observer.observe(notificationDiv, { childList: true });
+            console.log("Observer attached to notification div");
+        } else {
+            console.log("Notification div not found");
+        }
+    }, 2000); // Wait for the div to be available
 });
