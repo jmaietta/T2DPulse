@@ -86,18 +86,19 @@ def create_pulse_card(value):
                     id="sentiment-info-tooltip",
                     style={
                         "display": "none", 
-                        "position": "absolute", 
-                        "zIndex": "1000", 
+                        "position": "fixed",  # Changed to fixed for better positioning
+                        "zIndex": "9999", 
                         "backgroundColor": "white", 
                         "padding": "15px", 
                         "borderRadius": "5px", 
                         "boxShadow": "0px 0px 10px rgba(0,0,0,0.2)", 
-                        "maxWidth": "400px", 
-                        "top": "30px",  # Positioned below the info icon
+                        "maxWidth": "300px", 
+                        "top": "50%",  # Centered vertically
                         "left": "50%", 
-                        "transform": "translateX(-50%)",
+                        "transform": "translate(-50%, -50%)", # Center both horizontally and vertically
                         "border": "1px solid #ddd",
-                        "width": "280px"
+                        "width": "280px",
+                        "textAlign": "left"
                     },
                     children=[
                         html.H5("Sentiment Index Categories", style={"marginBottom": "10px"}),
