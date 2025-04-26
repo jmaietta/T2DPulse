@@ -5565,6 +5565,7 @@ def update_sector_sentiment_container(n):
                             max=100,
                             step=0.25,
                             value=sector_weights[sector],
+                            debounce=True,  # Process the value only after user stops typing
                             style={
                                 "width": "60px",
                                 "textAlign": "center",
@@ -5868,21 +5869,34 @@ def update_weight_from_input(input_values, input_ids, weights_json):
     else:
         weights = sector_weights
     
-    # Create a mapping of sector to input value
-    sector_to_value = {}
-    for i, id_dict in enumerate(input_ids):
-        sector = id_dict["index"]
-        # Ensure the value is valid (between 1 and 100)
-        value = max(1.0, min(100.0, input_values[i] if input_values[i] is not None else weights[sector]))
-        sector_to_value[sector] = value
+    # Log for debugging
+    print(f"Input values: {input_values}")
+    print(f"Trigger: {trigger_id}, Changed sector: {changed_sector}")
     
-    # Handle the changed sector differently
-    new_value = sector_to_value[changed_sector]
+    # Find the index of the changed sector in the input_ids list
+    changed_idx = None
+    for i, id_dict in enumerate(input_ids):
+        if id_dict["index"] == changed_sector:
+            changed_idx = i
+            break
+    
+    if changed_idx is None:
+        raise PreventUpdate
+    
+    # Get the new value for the changed sector
+    new_value = input_values[changed_idx]
+    if new_value is None:
+        raise PreventUpdate
+    
+    # Ensure the value is valid (between 1 and 100)
+    new_value = max(1.0, min(100.0, new_value))
     old_value = weights[changed_sector]
     
     # If value is unchanged, do nothing
     if abs(new_value - old_value) < 0.01:
         raise PreventUpdate
+    
+    print(f"Old value: {old_value}, New value: {new_value}")
     
     # Update the changed sector's weight
     weights[changed_sector] = new_value
@@ -5910,6 +5924,8 @@ def update_weight_from_input(input_values, input_ids, weights_json):
         # Find a sector to adjust slightly to make total exactly 100
         adjust_sector = next(iter(weights.keys()))
         weights[adjust_sector] += (100.0 - total)
+    
+    print(f"New weights: {weights}")
     
     # Update global weights
     sector_weights = weights
