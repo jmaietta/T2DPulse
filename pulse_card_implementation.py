@@ -37,8 +37,8 @@ def create_pulse_card(value):
             html.Img(
                 src="/assets/T2D Pulse logo.png",
                 style={
-                    "width": "290px",   # Large logo that fits within original card size
-                    "marginBottom": "10px",
+                    "width": "310px",   # Maximizing logo size while keeping within original container size
+                    "marginBottom": "5px",
                     "objectFit": "contain",
                     "display": "block", # Ensures proper centering
                     "marginLeft": "auto",
