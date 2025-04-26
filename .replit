@@ -68,6 +68,14 @@ args = "Fixed Dashboard"
 task = "workflow.run"
 args = "Tooltip Only Example"
 
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "Zero Weight Dashboard"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "Zero Weight Test"
+
 [[workflows.workflow]]
 name = "Economic Dashboard Server"
 author = "agent"
@@ -216,6 +224,24 @@ author = "agent"
 [[workflows.workflow.tasks]]
 task = "shell.exec"
 args = "python tooltip_only.py"
+waitForPort = 5050
+
+[[workflows.workflow]]
+name = "Zero Weight Dashboard"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "python zero_weight_dashboard.py"
+waitForPort = 5050
+
+[[workflows.workflow]]
+name = "Zero Weight Test"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "python zero_weight_test.py"
 waitForPort = 5050
 
 [deployment]

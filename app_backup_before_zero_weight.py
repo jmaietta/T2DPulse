@@ -5777,18 +5777,8 @@ def apply_weight(n_clicks_list, weight_values, weights_json):
     else:
         weights = sector_weights.copy()
     
-    # Get the new weight value from input (with None handling)
-    input_value = weight_values[input_index]
-    if input_value is None or str(input_value).strip() == '':
-        # If input is empty, keep the old weight
-        new_weight = weights[sector_to_update]
-    else:
-        try:
-            # Allow 0 as minimum weight
-            new_weight = max(0, min(100, float(input_value)))
-        except (ValueError, TypeError):
-            # If conversion fails, keep the old weight
-            new_weight = weights[sector_to_update]
+    # Get the new weight value from input
+    new_weight = max(0, min(100, float(weight_values[input_index])))
     
     # Calculate the difference that needs to be distributed
     old_weight = weights[sector_to_update]
@@ -5800,43 +5790,44 @@ def apply_weight(n_clicks_list, weight_values, weights_json):
     # Add this sector to the fixed sectors
     fixed_sectors.add(sector_to_update)
     
-    # If there's a difference to distribute
-    if weight_difference != 0:
-        # Get all sectors except those that are fixed
-        adjustable_sectors = [s for s in weights.keys() if s != sector_to_update and s not in fixed_sectors]
+    # Adjust other weights proportionally if there was a change
+    if abs(weight_difference) > 0.01:
+        # Find sectors to adjust (all except those manually set)
+        sectors_to_adjust = [s for s in weights.keys() if s not in fixed_sectors and s != sector_to_update]
         
-        # If all sectors are fixed except the one we just updated, clear the fixed sectors to allow adjustment
-        if not adjustable_sectors:
-            fixed_sectors = {sector_to_update}
-            adjustable_sectors = [s for s in weights.keys() if s != sector_to_update]
+        # If all sectors are fixed, we have to adjust everything proportionally (except the current one)
+        if not sectors_to_adjust:
+            sectors_to_adjust = [s for s in weights.keys() if s != sector_to_update]
+            fixed_sectors = {sector_to_update}  # Reset fixed sectors to just the current one
         
-        # Calculate the sum of weights from adjustable sectors
-        adjustable_weight_sum = sum(weights[s] for s in adjustable_sectors)
+        total_other_weight = sum(weights[s] for s in sectors_to_adjust)
         
-        # Distribute the difference proportionally
-        if adjustable_weight_sum > 0:  # Avoid division by zero
-            for s in adjustable_sectors:
-                # Calculate proportional adjustment
-                proportion = weights[s] / adjustable_weight_sum
-                adjustment = -weight_difference * proportion
-                weights[s] = max(0, weights[s] + adjustment)
+        if total_other_weight > 0:
+            # Distribute the weight difference proportionally among non-fixed sectors
+            for s in sectors_to_adjust:
+                proportion = weights[s] / total_other_weight
+                weights[s] -= weight_difference * proportion
+                # Ensure no negative weights
+                weights[s] = max(0, weights[s])
     
-    # Ensure weights sum to exactly 100%
+    # Normalize to ensure sum is exactly 100%
     total = sum(weights.values())
-    if total != 100 and total > 0:
-        # Find the largest weight to adjust (that isn't fixed)
-        unfixed_sectors = [s for s in weights.keys() if s != sector_to_update and s not in fixed_sectors]
-        if unfixed_sectors:
-            largest_sector = max(unfixed_sectors, key=lambda x: weights[x])
-        else:
-            # If all are fixed or none left with weight > 0, adjust the sector we just updated
-            largest_sector = sector_to_update
-        
-        weights[largest_sector] += (100 - total)
+    weights = {k: (v/total)*100 for k, v in weights.items()}
     
-    # Format all weights to 2 decimal places for display
-    for s in weights:
-        weights[s] = round(weights[s], 2)
+    # Update global weights
+    sector_weights = weights
+    
+    # Visual feedback for the updated input field
+    # Create a global dictionary to track which fields were recently updated
+    if 'highlighted_sectors' not in globals():
+        global highlighted_sectors
+        highlighted_sectors = {}
+    
+    # Store the sector that was updated along with the timestamp
+    highlighted_sectors[sector_to_update] = time.time()
+    
+    # Calculate new T2D Pulse score
+    # (This updates the overall score based on new weights)
     
     return json.dumps(weights)
 
@@ -5889,6 +5880,7 @@ def update_t2d_pulse_score(weights_json):
     prevent_initial_call=True
 )
 def apply_weight_on_enter(n_clicks_list, weight_values, weights_json):
+    # This function is almost identical to apply_weight
     global sector_weights
     global fixed_sectors  # Track which sectors should remain fixed
     
@@ -5896,20 +5888,27 @@ def apply_weight_on_enter(n_clicks_list, weight_values, weights_json):
     if 'fixed_sectors' not in globals():
         fixed_sectors = set()
     
-    # Determine which input triggered the callback
+    # Determine which button was triggered
     if not any(click for click in n_clicks_list if click):
         raise PreventUpdate
-        
-    # Find which input had an n_submit value
-    input_index = next((i for i, n in enumerate(n_clicks_list) if n), None)
-    if input_index is None:
+    
+    # Get trigger information
+    ctx = dash.callback_context
+    if not ctx.triggered:
         raise PreventUpdate
     
-    # Map input index to sector
-    sectors = ["Cloud", "AI", "Cybersecurity", "AdTech", "FinTech", "EdTech", 
-              "HealthTech", "AR/VR", "Robotics", "Blockchain", "IoT", 
-              "CleanTech", "SmartHome", "Ecommerce"]
-    sector_to_update = sectors[input_index]
+    # Extract sector from triggered ID
+    trigger_id = ctx.triggered[0]["prop_id"].split(".")[0]
+    trigger_dict = json.loads(trigger_id)
+    sector_to_update = trigger_dict["index"]
+    
+    # Find the index of the sector in the weight_values list
+    input_index = 0  # Default value in case we can't find a match
+    ids = [{'index': x['id']['index']} for x in ctx.states_list[0]]
+    for i, callback_id in enumerate(ids):
+        if callback_id["index"] == sector_to_update:
+            input_index = i
+            break
     
     # Use stored weights if available
     if weights_json:
@@ -5920,18 +5919,8 @@ def apply_weight_on_enter(n_clicks_list, weight_values, weights_json):
     else:
         weights = sector_weights.copy()
     
-    # Get the new weight value from input (with None handling)
-    input_value = weight_values[input_index]
-    if input_value is None or str(input_value).strip() == '':
-        # If input is empty, keep the old weight
-        new_weight = weights[sector_to_update]
-    else:
-        try:
-            # Allow 0 as minimum weight
-            new_weight = max(0, min(100, float(input_value)))
-        except (ValueError, TypeError):
-            # If conversion fails, keep the old weight
-            new_weight = weights[sector_to_update]
+    # Get the new weight value from input
+    new_weight = max(0, min(100, float(weight_values[input_index])))
     
     # Calculate the difference that needs to be distributed
     old_weight = weights[sector_to_update]
@@ -5943,43 +5932,43 @@ def apply_weight_on_enter(n_clicks_list, weight_values, weights_json):
     # Add this sector to the fixed sectors
     fixed_sectors.add(sector_to_update)
     
-    # If there's a difference to distribute
-    if weight_difference != 0:
-        # Get all sectors except those that are fixed
-        adjustable_sectors = [s for s in weights.keys() if s != sector_to_update and s not in fixed_sectors]
+    # Adjust other weights proportionally if there was a change
+    if abs(weight_difference) > 0.01:
+        # Find sectors to adjust (all except those manually set)
+        sectors_to_adjust = [s for s in weights.keys() if s not in fixed_sectors and s != sector_to_update]
         
-        # If all sectors are fixed except the one we just updated, clear the fixed sectors to allow adjustment
-        if not adjustable_sectors:
-            fixed_sectors = {sector_to_update}
-            adjustable_sectors = [s for s in weights.keys() if s != sector_to_update]
+        # If all sectors are fixed, we have to adjust everything proportionally (except the current one)
+        if not sectors_to_adjust:
+            sectors_to_adjust = [s for s in weights.keys() if s != sector_to_update]
+            fixed_sectors = {sector_to_update}  # Reset fixed sectors to just the current one
         
-        # Calculate the sum of weights from adjustable sectors
-        adjustable_weight_sum = sum(weights[s] for s in adjustable_sectors)
+        total_other_weight = sum(weights[s] for s in sectors_to_adjust)
         
-        # Distribute the difference proportionally
-        if adjustable_weight_sum > 0:  # Avoid division by zero
-            for s in adjustable_sectors:
-                # Calculate proportional adjustment
-                proportion = weights[s] / adjustable_weight_sum
-                adjustment = -weight_difference * proportion
-                weights[s] = max(0, weights[s] + adjustment)
+        if total_other_weight > 0:
+            # Distribute the weight difference proportionally among non-fixed sectors
+            for s in sectors_to_adjust:
+                proportion = weights[s] / total_other_weight
+                weights[s] -= weight_difference * proportion
+                # Ensure no negative weights
+                weights[s] = max(0, weights[s])
     
-    # Ensure weights sum to exactly 100%
+    # Normalize to ensure sum is exactly 100%
     total = sum(weights.values())
-    if total != 100 and total > 0:
-        # Find the largest weight to adjust (that isn't fixed)
-        unfixed_sectors = [s for s in weights.keys() if s != sector_to_update and s not in fixed_sectors]
-        if unfixed_sectors:
-            largest_sector = max(unfixed_sectors, key=lambda x: weights[x])
-        else:
-            # If all are fixed or none left with weight > 0, adjust the sector we just updated
-            largest_sector = sector_to_update
-        
-        weights[largest_sector] += (100 - total)
+    weights = {k: (v/total)*100 for k, v in weights.items()}
     
-    # Format all weights to 2 decimal places for display
-    for s in weights:
-        weights[s] = round(weights[s], 2)
+    # Update global weights
+    sector_weights = weights
+    
+    # Visual feedback for the updated input field - same as in apply_weight
+    if 'highlighted_sectors' not in globals():
+        global highlighted_sectors
+        highlighted_sectors = {}
+    
+    # Store the sector that was updated along with the timestamp
+    highlighted_sectors[sector_to_update] = time.time()
+    
+    # Calculate new T2D Pulse score
+    # (This updates the overall score based on new weights)
     
     return json.dumps(weights)
 
