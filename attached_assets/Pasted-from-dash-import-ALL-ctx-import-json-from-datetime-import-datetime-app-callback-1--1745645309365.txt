@@ -1,0 +1,86 @@
+from dash import ALL, ctx
+import json
+from datetime import datetime
+
+@app.callback(
+    # 1️⃣ — every weight-input value (one Output per sector)
+    [Output({"type": "weight-input", "index": ALL}, "value"),
+    # 2️⃣ — Pulse score text
+     Output("t2d-pulse-value", "children"),
+    # 3️⃣ — hidden JSON store
+     Output("stored-weights", "children"),
+    # 4️⃣ — banner text + style
+     Output("weight-update-notification", "children"),
+     Output("weight-update-notification", "style")],
+
+    # Trigger: any Apply button click
+    Input({"type": "apply-weight", "index": ALL}, "n_clicks"),
+
+    # State: current values & ids of every input + stored JSON
+    State({"type": "weight-input", "index": ALL}, "value"),
+    State({"type": "weight-input", "index": ALL}, "id"),
+    State("stored-weights", "children"),
+    prevent_initial_call=True,
+)
+def update_weights(_, input_values, input_ids, weights_json):
+    """
+    Unified weight updater:
+      • finds which sector's Apply was clicked
+      • keeps weights summing to exactly 100 %
+      • returns fresh inputs, Pulse score, JSON, and banner
+    """
+    if not ctx.triggered:
+        raise dash.exceptions.PreventUpdate
+
+    # Which sector triggered?
+    changed_sector = json.loads(ctx.triggered[0]["prop_id"].split(".")[0])["index"]
+
+    # Current weights (from hidden store or first run)
+    weights = json.loads(weights_json) if weights_json else {
+        idd["index"]: val for idd, val in zip(input_ids, input_values)
+    }
+
+    # New value user typed
+    idx = next(i for i, idd in enumerate(input_ids) if idd["index"] == changed_sector)
+    new_val = float(max(1.0, min(100.0, input_values[idx])))
+
+    # Set changed weight
+    weights[changed_sector] = new_val
+
+    # Re-scale others proportionally to keep total = 100
+    remaining = 100.0 - new_val
+    others = [s for s in weights if s != changed_sector]
+    total_other = sum(weights[s] for s in others)
+    if total_other:
+        scale = remaining / total_other
+        for s in others:
+            weights[s] = round(weights[s] * scale, 2)
+
+    # Fix tiny rounding drift
+    drift = round(100.0 - sum(weights.values()), 2)
+    if abs(drift) > 0.01:
+        weights[others[0]] += drift
+
+    # ---- build outputs ----
+    weight_vals = [round(weights[idd["index"]], 2) for idd in input_ids]
+
+    sector_scores = calculate_sector_sentiment()
+    pulse = calculate_t2d_pulse_from_sectors(sector_scores, weights)
+    pulse_text = f"{pulse:.1f}"
+
+    banner_text = (
+        f"Weights updated at {datetime.now():%H:%M:%S} – T2D Pulse: {pulse_text}"
+    )
+    banner_style = {
+        "opacity": 1,
+        "textAlign": "center",
+        "marginTop": "20px",
+        "fontWeight": "bold",
+        "fontSize": "14px",
+        "color": "green",
+        "backgroundColor": "#e8f5e9",
+        "borderRadius": "4px",
+        "padding": "8px 12px",
+    }
+
+    return weight_vals, pulse_text, json.dumps(weights), banner_text, banner_style

@@ -5927,95 +5927,67 @@ def decrease_weight(n_clicks_list, weights_json):
 )
 def update_weights(n_clicks_list, input_values, input_ids, weights_json):
     """
-    Direct callback for weight updates that handles the apply button click
+    Unified weight updater:
+      • finds which sector's Apply was clicked
+      • keeps weights summing to exactly 100 %
+      • returns fresh inputs, Pulse score, JSON, and banner
     """
-    global sector_weights
-
     if not ctx.triggered:
         from dash.exceptions import PreventUpdate
         raise PreventUpdate
 
-    # Get trigger information
-    trigger = json.loads(ctx.triggered[0]["prop_id"].split(".")[0])
-    changed_sector = trigger["index"]
+    # Which sector triggered?
+    changed_sector = json.loads(ctx.triggered[0]["prop_id"].split(".")[0])["index"]
 
-    # Use stored weights if available
-    if weights_json:
-        try:
-            weights = json.loads(weights_json)
-        except:
-            weights = sector_weights
-    else:
-        weights = sector_weights.copy()  # Important to copy
+    # Current weights (from hidden store or first run)
+    weights = json.loads(weights_json) if weights_json else {
+        idd["index"]: val for idd, val in zip(input_ids, input_values)
+    }
 
-    # Find the index of the changed input
-    changed_idx = next((i for i, idd in enumerate(input_ids) if idd["index"] == changed_sector), None)
-    
-    # Handle cases where we can't find the changed sector
-    if changed_idx is None:
-        from dash.exceptions import PreventUpdate
-        raise PreventUpdate
+    # New value user typed
+    idx = next(i for i, idd in enumerate(input_ids) if idd["index"] == changed_sector)
+    new_val = float(max(1.0, min(100.0, input_values[idx])))
 
-    # Get the new value
-    new_value = input_values[changed_idx]
-    if new_value is None:
-        from dash.exceptions import PreventUpdate
-        raise PreventUpdate
+    # Set changed weight
+    weights[changed_sector] = new_val
 
-    # Ensure value is between 1 and 100
-    new_value = float(max(1.0, min(100.0, new_value)))
+    # Re-scale others proportionally to keep total = 100
+    remaining = 100.0 - new_val
+    others = [s for s in weights if s != changed_sector]
+    total_other = sum(weights[s] for s in others)
+    if total_other:
+        scale = remaining / total_other
+        for s in others:
+            weights[s] = round(weights[s] * scale, 2)
 
-    # Update the weight for the changed sector
-    weights[changed_sector] = new_value
+    # Fix tiny rounding drift
+    drift = round(100.0 - sum(weights.values()), 2)
+    if abs(drift) > 0.01:
+        weights[others[0]] += drift
 
-    # Calculate how much to adjust other weights to maintain sum of 100
-    remaining_value = 100.0 - new_value
-    sectors_to_adjust = [s for s in weights if s != changed_sector]
-    total_other_weight = sum(weights[s] for s in sectors_to_adjust)
+    # ---- build outputs ----
+    weight_vals = [round(weights[idd["index"]], 2) for idd in input_ids]
 
-    # Adjust other sectors proportionally
-    if total_other_weight > 0:
-        scale_factor = remaining_value / total_other_weight
-        for s in sectors_to_adjust:
-            weights[s] = round(weights[s] * scale_factor, 2)
-
-    # Fix rounding errors
-    total = sum(weights.values())
-    if abs(total - 100.0) > 0.01:
-        adjust_sector = next((s for s in weights if s != changed_sector), None)
-        if adjust_sector:
-            weights[adjust_sector] += round(100.0 - total, 2)
-
-    # Update global weights
-    sector_weights = weights
-
-    # Prepare outputs - weight values for all inputs
-    updated_values = []
-    for idd in input_ids:
-        sector = idd["index"]
-        updated_values.append(round(weights[sector], 2))
-
-    # Calculate T2D Pulse score
     sector_scores = calculate_sector_sentiment()
-    t2d_pulse_score = calculate_t2d_pulse_from_sectors(sector_scores, weights)
-    t2d_pulse_display = f"{t2d_pulse_score:.1f}"
+    pulse = calculate_t2d_pulse_from_sectors(sector_scores, weights)
+    pulse_text = f"{pulse:.1f}"
 
-    # Create notification
-    current_time = datetime.now().strftime("%H:%M:%S")
-    notification_message = f"Weights updated at {current_time} - T2D Pulse score: {t2d_pulse_display}"
-    notification_style = {
-        "color": "green", 
-        "fontWeight": "bold", 
-        "fontSize": "14px", 
-        "backgroundColor": "#e8f5e9", 
-        "borderRadius": "4px", 
+    banner_text = (
+        f"Weights updated at {datetime.now():%H:%M:%S} – T2D Pulse: {pulse_text}"
+    )
+    banner_style = {
         "opacity": 1,
         "textAlign": "center",
         "marginTop": "20px",
-        "padding": "8px 12px"
+        "fontWeight": "bold",
+        "fontSize": "14px",
+        "color": "green",
+        "backgroundColor": "#e8f5e9",
+        "borderRadius": "4px",
+        "padding": "8px 12px",
     }
 
-    return updated_values, t2d_pulse_display, json.dumps(weights), notification_message, notification_style
+    return weight_vals, pulse_text, json.dumps(weights), banner_text, banner_style
 
 # Callback for reset weights button
 @app.callback(
