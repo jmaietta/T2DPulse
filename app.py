@@ -5653,6 +5653,19 @@ def update_sector_sentiment_container(n):
                 sector_summary
             ], style={"width": "100%"}),
             html.Div([
+                # Status notification for weight updates
+                html.Div(id="weight-update-notification", 
+                        style={
+                            "color": "green", 
+                            "fontWeight": "bold", 
+                            "marginRight": "20px",
+                            "fontSize": "14px",
+                            "padding": "8px 12px",
+                            "backgroundColor": "#e8f5e9",
+                            "borderRadius": "4px",
+                            "opacity": 0,
+                            "transition": "opacity 0.3s ease"
+                        }),
                 html.Button("Reset Equal Weights", 
                            id="reset-weights-button",
                            className="reset-button",
@@ -5667,7 +5680,7 @@ def update_sector_sentiment_container(n):
                                "boxShadow": "0 2px 4px rgba(0,0,0,0.1)",
                                "alignSelf": "flex-end"
                            })
-            ], style={"display": "flex", "justifyContent": "flex-end", "marginTop": "10px"})
+            ], style={"display": "flex", "justifyContent": "flex-end", "alignItems": "center", "marginTop": "10px"})
         ], className="sector-summary-container", 
            style={"marginBottom": "20px", "padding": "12px", 
                   "backgroundColor": "white", "borderRadius": "8px", 
@@ -5712,7 +5725,10 @@ def update_vix_container(n):
 # Callback for updating weight input values when weights change
 @app.callback(
     [Output({"type": "weight-input", "index": ALL}, "value"),
-     Output("t2d-pulse-value", "children")],  # Also update the T2D Pulse score
+     Output("t2d-pulse-value", "children"),
+     Output({"type": "apply-weight", "index": ALL}, "style"),  # Add visual feedback for apply buttons
+     Output("weight-update-notification", "children"),  # Text of notification
+     Output("weight-update-notification", "style")],    # Style of notification (for visibility)
     [Input("stored-weights", "children")]
 )
 def update_weight_inputs(weights_json):
@@ -5741,7 +5757,40 @@ def update_weight_inputs(weights_json):
     # Format as a string with 1 decimal place
     t2d_pulse_display = f"{t2d_pulse_score:.1f}"
     
-    return weight_values, t2d_pulse_display
+    # Create button styles with visual feedback
+    button_styles = []
+    for _ in range(len(weight_values)):
+        button_styles.append({
+            "fontSize": "12px",
+            "padding": "4px 8px",
+            "backgroundColor": "#e74c3c",  # Red highlight to draw attention
+            "color": "white",
+            "border": "none",
+            "borderRadius": "4px",
+            "cursor": "pointer",
+            "fontWeight": "bold",
+            "boxShadow": "0 2px 4px rgba(0,0,0,0.2)",
+            "transition": "all 0.3s ease"
+        })
+    
+    # Get current time for notification
+    current_time = datetime.now().strftime("%H:%M:%S")
+    
+    # Create notification message and style
+    notification_message = f"Weights updated at {current_time} - T2D Pulse score: {t2d_pulse_display}"
+    notification_style = {
+        "color": "green", 
+        "fontWeight": "bold", 
+        "marginRight": "20px",
+        "fontSize": "14px",
+        "padding": "8px 12px",
+        "backgroundColor": "#e8f5e9",
+        "borderRadius": "4px",
+        "opacity": 1,  # Make visible
+        "transition": "opacity 0.3s ease"
+    }
+    
+    return weight_values, t2d_pulse_display, button_styles, notification_message, notification_style
 
 # Callback for increasing weight buttons
 @app.callback(
