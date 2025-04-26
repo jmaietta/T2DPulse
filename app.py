@@ -5508,25 +5508,40 @@ def update_sector_sentiment_container(n):
                                    "marginRight": "5px",
                                    "verticalAlign": "middle"
                                }),
-                        html.Div(f"{sector_weights[sector]:.2f}%", 
-                               id={"type": "weight-display", "index": sector},
-                               className="weight-value",
-                               style={
-                                   "display": "inline-block",
-                                   "textAlign": "left", 
-                                   "fontWeight": "bold",
-                                   "verticalAlign": "middle"
-                               })
-                    ], className="weight-display-container", style={"display": "flex", "alignItems": "center", "width": "100%"}),
+                        # Input field for manually entering weight
+                        dcc.Input(
+                            id={"type": "weight-input", "index": sector},
+                            type="number",
+                            min=0.01,
+                            max=100,
+                            step=0.01,
+                            value=sector_weights[sector],
+                            style={
+                                "width": "70px",
+                                "height": "30px",
+                                "padding": "5px",
+                                "borderRadius": "4px",
+                                "border": "1px solid #ddd",
+                                "fontSize": "14px",
+                                "marginRight": "5px"
+                            }
+                        ),
+                        html.Span("%", style={"marginRight": "10px"})
+                    ], className="weight-display-container", style={"display": "flex", "alignItems": "center"}),
                     
-                    html.Div([
-                        html.Button("-", 
-                                   id={"type": "decrease-weight", "index": sector},
-                                   className="weight-button weight-decrease"),
-                        html.Button("+", 
-                                   id={"type": "increase-weight", "index": sector},
-                                   className="weight-button weight-increase")
-                    ], className="weight-buttons-container")
+                    # Apply button
+                    html.Button("Apply", 
+                              id={"type": "apply-weight", "index": sector},
+                              className="weight-button weight-apply",
+                              style={
+                                  "backgroundColor": "#2ecc71",  # Green button
+                                  "color": "white",
+                                  "border": "none",
+                                  "borderRadius": "4px",
+                                  "padding": "5px 15px",
+                                  "fontWeight": "bold",
+                                  "cursor": "pointer"
+                              })
                 ], className="weight-controls", style={
                     "display": "flex",
                     "justifyContent": "space-between",
@@ -5631,9 +5646,9 @@ def update_vix_container(n):
         insights_panel
     ]
 
-# Callback for updating weight displays when weights change
+# Callback for updating weight input fields when weights change
 @app.callback(
-    Output({"type": "weight-display", "index": ALL}, "children"),
+    Output({"type": "weight-input", "index": ALL}, "value"),
     [Input("stored-weights", "children")]
 )
 def update_weight_displays(weights_json):
@@ -5649,79 +5664,26 @@ def update_weight_displays(weights_json):
             # If JSON parse fails, use global weights
             weights = sector_weights
     
-    # Generate display text for each sector
-    weight_displays = []
+    # Generate weight values for each sector input (formatted to 2 decimal places)
+    weight_values = []
     for sector in weights:
-        weight_displays.append(f"{weights[sector]:.2f}%")
+        # Round to 2 decimal places for display
+        weight_values.append(round(weights[sector], 2))
     
-    return weight_displays
+    return weight_values
 
-# Callback for increasing weight buttons
-@app.callback(
-    Output("stored-weights", "children"),
-    Input({"type": "increase-weight", "index": ALL}, "n_clicks"),
-    State("stored-weights", "children"),
-    prevent_initial_call=True
-)
-def increase_weight(n_clicks_list, weights_json):
-    global sector_weights
-    
-    # Determine which button was clicked
-    if not any(click for click in n_clicks_list if click):
-        raise PreventUpdate
-    
-    # Get trigger information
-    ctx = dash.callback_context
-    if not ctx.triggered:
-        raise PreventUpdate
-    
-    # Extract sector from triggered ID
-    trigger_id = ctx.triggered[0]["prop_id"].split(".")[0]
-    trigger_dict = json.loads(trigger_id)
-    sector = trigger_dict["index"]
-    
-    # Use stored weights if available
-    if weights_json:
-        try:
-            weights = json.loads(weights_json)
-        except:
-            weights = sector_weights
-    else:
-        weights = sector_weights
-    
-    # Increase the selected sector's weight by 1
-    increment_amount = 1.0
-    weights[sector] += increment_amount
-    
-    # Calculate the proportional decrease for other sectors
-    sectors_to_adjust = [s for s in weights.keys() if s != sector]
-    total_other_weight = sum(weights[s] for s in sectors_to_adjust)
-    
-    if total_other_weight > 0:
-        # Distribute the decrement proportionally
-        for s in sectors_to_adjust:
-            proportion = weights[s] / total_other_weight
-            weights[s] -= increment_amount * proportion
-            # Ensure no negative weights
-            weights[s] = max(0, weights[s])
-    
-    # Normalize to ensure sum is 100
-    total = sum(weights.values())
-    weights = {k: (v/total)*100 for k, v in weights.items()}
-    
-    # Update global weights
-    sector_weights = weights
-    
-    return json.dumps(weights)
+# Note: The plus/minus button callbacks have been removed 
+# and replaced with the manual input and apply button approach
 
-# Callback for decreasing weight buttons
+# Callback for apply weight button
 @app.callback(
     Output("stored-weights", "children", allow_duplicate=True),
-    Input({"type": "decrease-weight", "index": ALL}, "n_clicks"),
+    Input({"type": "apply-weight", "index": ALL}, "n_clicks"),
+    State({"type": "weight-input", "index": ALL}, "value"),
     State("stored-weights", "children"),
     prevent_initial_call=True
 )
-def decrease_weight(n_clicks_list, weights_json):
+def apply_weight(n_clicks_list, weight_values, weights_json):
     global sector_weights
     
     # Determine which button was clicked
@@ -5736,36 +5698,50 @@ def decrease_weight(n_clicks_list, weights_json):
     # Extract sector from triggered ID
     trigger_id = ctx.triggered[0]["prop_id"].split(".")[0]
     trigger_dict = json.loads(trigger_id)
-    sector = trigger_dict["index"]
+    sector_to_update = trigger_dict["index"]
+    
+    # Find the index of the sector in the ALL pattern-matching callback
+    input_index = 0  # Default value in case we can't find a match
+    callback_ids = ctx.inputs_list[0]['id']
+    for i, callback_id in enumerate(callback_ids):
+        if callback_id["index"] == sector_to_update:
+            input_index = i
+            break
     
     # Use stored weights if available
     if weights_json:
         try:
             weights = json.loads(weights_json)
         except:
-            weights = sector_weights
+            weights = sector_weights.copy()
     else:
-        weights = sector_weights
+        weights = sector_weights.copy()
     
-    # Decrease weight if above minimum (ensure at least 1%)
-    if weights[sector] <= 1.0:
-        raise PreventUpdate
+    # Get the new weight value from input
+    new_weight = max(0.01, min(100, weight_values[input_index]))
     
-    # Decrease the selected sector's weight by 1
-    decrement_amount = 1.0
-    weights[sector] -= decrement_amount
+    # Calculate the difference that needs to be distributed
+    old_weight = weights[sector_to_update]
+    weight_difference = new_weight - old_weight
     
-    # Increase other weights proportionally
-    sectors_to_adjust = [s for s in weights.keys() if s != sector]
-    total_other_weight = sum(weights[s] for s in sectors_to_adjust)
+    # Apply the new weight
+    weights[sector_to_update] = new_weight
     
-    if total_other_weight > 0:
-        # Distribute the increment proportionally
-        for s in sectors_to_adjust:
-            proportion = weights[s] / total_other_weight
-            weights[s] += decrement_amount * proportion
+    # Adjust other weights proportionally if there was a change
+    if abs(weight_difference) > 0.01:
+        # Find sectors to adjust (all except the one being updated)
+        sectors_to_adjust = [s for s in weights.keys() if s != sector_to_update]
+        total_other_weight = sum(weights[s] for s in sectors_to_adjust)
+        
+        if total_other_weight > 0:
+            # Distribute the weight difference proportionally
+            for s in sectors_to_adjust:
+                proportion = weights[s] / total_other_weight
+                weights[s] -= weight_difference * proportion
+                # Ensure no negative weights
+                weights[s] = max(0.01, weights[s])
     
-    # Normalize to ensure sum is 100
+    # Normalize to ensure sum is exactly 100%
     total = sum(weights.values())
     weights = {k: (v/total)*100 for k, v in weights.items()}
     
