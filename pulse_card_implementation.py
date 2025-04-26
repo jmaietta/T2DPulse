@@ -37,10 +37,9 @@ def create_pulse_card(value):
             html.Img(
                 src="/assets/T2D Pulse logo.png",
                 style={
-                    "height": "60px",
+                    "height": "80px",
                     "marginBottom": "15px",
-                    "objectFit": "contain",
-                    "maxWidth": "85%"
+                    "objectFit": "contain"
                 }
             ),
             # Score value
@@ -138,8 +137,10 @@ def create_pulse_card(value):
             ], style={"textAlign": "center"})
         ], className="pulse-card-inner")
     ], className="pulse-card", style={
-        "boxShadow": f"0 0 20px {pulse_color}",  # Color-matched glow
-        "border": f"1px solid {pulse_color}"     # Color-matched border
+        "boxShadow": f"0 0 15px {pulse_color}",  # Color-matched glow with reduced size
+        "border": f"1px solid {pulse_color}",    # Color-matched border
+        "width": "90%",                          # Make the card slightly smaller 
+        "margin": "0 auto"                       # Center in parent container
     })
     
     return pulse_card, pulse_status, pulse_color

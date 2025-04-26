@@ -1658,15 +1658,7 @@ app.layout = html.Div([
                     # Last updated timestamp
                     html.Div(id="last-updated", className="last-updated"),
                     
-                    # Refresh button
-                    html.Button("Refresh Data", id="refresh-data", className="refresh-button"),
-                    
-                    # Loading spinner for refresh operation
-                    dcc.Loading(
-                        id="loading-refresh",
-                        type="circle",
-                        children=html.Div(id="loading-refresh-output")
-                    )
+                    # Auto-refresh happens hourly via interval-component (removed manual refresh button)
                 ], className="refresh-container"),
                 
                 # GDP
@@ -4539,30 +4531,8 @@ def update_consumer_sentiment_container(n):
         # Return just the graph if there's an error with the insights
         return [graph]
 
-# Refresh data
-@app.callback(
-    [Output("loading-refresh-output", "children"),
-     Output("gdp-value", "children"),
-     Output("unemployment-value", "children"),
-     Output("inflation-value", "children"),
-     Output("interest-rate-value", "children")],
-    [Input("refresh-data", "n_clicks")]
-)
-def refresh_data(n_clicks):
-    # Define variables as global at the top of the function
-    global gdp_data, unemployment_data, inflation_data, interest_rate_data
-    global nasdaq_data, software_ppi_data, data_processing_ppi_data, pcepi_data, job_postings_data
-    global consumer_sentiment_data, vix_data
-    
-    if n_clicks is None:
-        # Initial load
-        return (
-            "",
-            f"{gdp_data.sort_values('date', ascending=False).iloc[0]['yoy_growth']:.1f}%" if not gdp_data.empty and 'yoy_growth' in gdp_data.columns else "N/A",
-            f"{unemployment_data.sort_values('date', ascending=False).iloc[0]['value']:.1f}%" if not unemployment_data.empty else "N/A",
-            f"{inflation_data.sort_values('date', ascending=False).iloc[0]['inflation']:.1f}%" if not inflation_data.empty and 'inflation' in inflation_data.columns else "N/A",
-            f"{interest_rate_data.sort_values('date', ascending=False).iloc[0]['value']:.2f}%" if not interest_rate_data.empty else "N/A"
-        )
+# Data auto-refreshes hourly through interval-component
+# Manual refresh button has been removed
     
     # Fetch new data for key indicators
     # GDP
@@ -5585,10 +5555,8 @@ def update_sector_sentiment_container(n):
                 html.H2("Technology Sector Sentiment", className="section-title"),
                 html.Div([
                     html.Div([
-                        html.P("Real-time sentiment scores based on current macroeconomic conditions. Sector scores are calculated from economic indicators weighted by their impact on each sector.", 
-                              className="section-description", style={"margin": "0 0 5px 0", "fontSize": "14px"}),
-                        html.P("Adjust sector weights to customize the T2D Pulse for your investment focus.", 
-                              className="section-description", style={"margin": "0", "fontSize": "14px"})
+                        html.P("Real-time sentiment scores based on current macroeconomic conditions. Sector scores are calculated from economic indicators weighted by their impact on each sector. Adjust sector weights to customize the T2D Pulse for your investment focus.", 
+                              className="section-description", style={"margin": "0", "fontSize": "14px"}),
                     ]),
                 ], className="section-controls", style={"display": "flex", "justifyContent": "space-between", "alignItems": "center"})
             ], className="section-header", style={"marginBottom": "15px"})
