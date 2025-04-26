@@ -2031,8 +2031,6 @@ app.layout = html.Div([
                 dcc.Tab(label="Sector Sentiment", children=[
                     html.Div([
                         html.H3("Technology Sector Sentiment", className="graph-title"),
-                        html.P("Real-time sentiment scores based on current macroeconomic conditions", 
-                               className="sector-subtitle"),
                         html.Div(id="sector-sentiment-container", className="sector-sentiment-container")
                     ], className="graph-container")
                 ], className="custom-tab", selected_className="custom-tab--selected"),
@@ -2270,16 +2268,17 @@ def create_pulse_card(value):
             html.Img(
                 src="/assets/T2D Pulse logo.png",
                 style={
-                    "height": "80px",
-                    "marginBottom": "15px",
-                    "objectFit": "contain"
+                    "height": "65px",
+                    "marginBottom": "12px",
+                    "objectFit": "contain",
+                    "maxWidth": "85%" # Ensure logo fits within container
                 }
             ),
             # Score value
             html.Div([
                 html.Span(f"{score_value:.1f}", 
                         style={
-                            "fontSize": "64px", 
+                            "fontSize": "60px", 
                             "fontWeight": "bold", 
                             "color": pulse_color,
                             "display": "block",
@@ -5584,10 +5583,10 @@ def update_sector_sentiment_container(n):
         # Section header content from mockup
         html.Div([
             html.Div([
-                html.H2("Sector Sentiment", className="section-title"),
+                html.H2("Technology Sector Sentiment", className="section-title"),
                 html.Div([
                     html.Div([
-                        html.P("Sector scores are calculated from economic indicators weighted by their impact on each sector.", 
+                        html.P("Real-time sentiment scores based on current macroeconomic conditions. Sector scores are calculated from economic indicators weighted by their impact on each sector.", 
                               className="section-description", style={"margin": "0 0 5px 0", "fontSize": "14px"}),
                         html.P("Adjust sector weights to customize the T2D Pulse for your investment focus.", 
                               className="section-description", style={"margin": "0", "fontSize": "14px"})
@@ -5622,7 +5621,8 @@ def update_sector_sentiment_container(n):
         ], className="sector-summary-container", 
            style={"marginBottom": "20px", "padding": "12px", 
                   "backgroundColor": "white", "borderRadius": "8px", 
-                  "boxShadow": "0 1px 3px rgba(0,0,0,0.05)"}),
+                  "boxShadow": "0 1px 3px rgba(0,0,0,0.1)",
+                  "border": "1px solid #ecf0f1"}),
         
         # Sector cards in a grid like the mockup
         html.Div(sector_cards, className="sector-cards-grid",
