@@ -6031,7 +6031,8 @@ def apply_weight_on_enter(n_clicks_list, weight_values, weights_json):
 
 # Callback for reset weights button
 @app.callback(
-    Output("stored-weights", "children", allow_duplicate=True),
+    [Output("stored-weights", "children", allow_duplicate=True),
+     Output("sentiment-score", "children", allow_duplicate=True)],
     Input("reset-weights-button", "n_clicks"),
     prevent_initial_call=True
 )
@@ -6056,7 +6057,20 @@ def reset_weights(n_clicks):
     # Create a new dictionary with equal weights
     equal_weights = {sector: equal_weight for sector in sectors}
     
-    return json.dumps(equal_weights)
+    # Force a clean calculation of the T2D Pulse score with default equal weights
+    sector_scores = calculate_sector_sentiment()
+    if sector_scores:
+        # Create a dictionary of sector scores for the pulse calculation
+        sector_scores_dict = {s['sector']: s['normalized_score'] for s in sector_scores}
+        
+        # Calculate the fresh T2D Pulse score with equal weights
+        pulse_score = calculate_t2d_pulse_from_sectors(sector_scores_dict, equal_weights)
+        print(f"Reset T2D Pulse score to {pulse_score} with equal weights")
+    else:
+        # Default score if sector data isn't available
+        pulse_score = 50.0
+    
+    return json.dumps(equal_weights), pulse_score
 
 # Create a helper function to update the sector highlighting
 def update_sector_highlight(sector):
