@@ -2133,11 +2133,18 @@ app.layout = html.Div([
 
 # Update Last Updated Timestamp
 @app.callback(
-    Output("last-updated", "children"),
+    [Output("last-updated", "children"),
+     Output("pulse-last-updated", "children")],
     [Input("interval-component", "n_intervals")]
 )
 def update_last_updated(n):
-    return f"Last updated: {datetime.now().strftime('%B %d, %Y %H:%M')}"
+    # Use server's current time to ensure date is always current
+    current_time = datetime.now()
+    formatted_date = current_time.strftime('%B %d, %Y %H:%M')
+    formatted_date_simple = current_time.strftime('%B %d, %Y')
+    
+    # Return both timestamp formats (one with time, one without)
+    return f"Last updated: {formatted_date}", f"Last updated: {formatted_date_simple}"
 
 # Create compact sector score summary
 def create_sector_summary(sector_scores):
@@ -2339,7 +2346,8 @@ def create_pulse_card(value):
             
             # Last updated text
             html.Div([
-                html.Span(f"Last updated: April 26, 2025", 
+                html.Span(id="pulse-last-updated", 
+                        children=f"Last updated: {datetime.now().strftime('%B %d, %Y')}", 
                         style={
                             "fontSize": "12px", 
                             "color": "#95a5a6",
