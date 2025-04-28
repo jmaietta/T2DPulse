@@ -542,7 +542,7 @@ def generate_sector_drivers(macros):
         "Software_Dev_Job_Postings_YoY_%": "Dev-jobs {}%",
         "10Y_Treasury_Yield_%": "10-Yr {}%",
         "Fed_Funds_Rate_%": "Fed Funds {}%",
-        "VIX": "VIX {}",
+        "VIX": "VIX (14-day EMA) {}",
         "Real_PCE_YoY_%": "PCE {}%",
         "Real_GDP_Growth_%_SAAR": "GDP {}%",
         "PPI_Software_Publishers_YoY_%": "SaaS PPI {}%",
@@ -6648,28 +6648,49 @@ def update_key_indicators(n):
                     html.Span(f"{abs(change):.2f}%", className="trend-value-small")
                 ], className="trend-small")
         
-        # 12. VIX Volatility Index
+        # 12. VIX Volatility Index (14-day EMA for smoother trend)
         vix_value = "N/A"
         vix_trend = ""
         if not vix_data.empty:
             sorted_vix = vix_data.sort_values('date', ascending=False)
-            latest_vix = sorted_vix.iloc[0]['value']
+            
+            # Use the 14-day EMA for VIX if available, otherwise fallback to raw value
+            if 'vix_ema14' in sorted_vix.columns and not pd.isna(sorted_vix.iloc[0]['vix_ema14']):
+                latest_vix = sorted_vix.iloc[0]['vix_ema14']  # Use smoothed value
+            else:
+                latest_vix = sorted_vix.iloc[0]['value']  # Fallback to raw value
+                
             vix_value = f"{latest_vix:.1f}"
             
-            # Add trend indicator
-            if len(sorted_vix) >= 2:
-                current = sorted_vix.iloc[0]['value']
-                previous = sorted_vix.iloc[1]['value']
-                change = current - previous
-                
-                # VIX is inverse: down is good (green), up is bad (red)
-                icon = "↓" if change <= 0 else "↑"
-                color = "trend-up" if change <= 0 else "trend-down"
-                
-                vix_trend = html.Span([
-                    html.Span(icon, className=f"trend-icon {color}"),
-                    html.Span(f"{abs(change):.1f}", className="trend-value-small")
-                ], className="trend-small")
+            # Add trend indicator using the EMA values for more stable trend detection
+            if len(sorted_vix) >= 2 and 'vix_ema14' in sorted_vix.columns:
+                if not pd.isna(sorted_vix.iloc[0]['vix_ema14']) and not pd.isna(sorted_vix.iloc[1]['vix_ema14']):
+                    current = sorted_vix.iloc[0]['vix_ema14']
+                    previous = sorted_vix.iloc[1]['vix_ema14']
+                    change = current - previous
+                    
+                    # VIX is inverse: down is good (green), up is bad (red)
+                    icon = "↓" if change <= 0 else "↑"
+                    color = "trend-up" if change <= 0 else "trend-down"
+                    
+                    vix_trend = html.Span([
+                        html.Span(icon, className=f"trend-icon {color}"),
+                        html.Span(f"{abs(change):.1f}", className="trend-value-small")
+                    ], className="trend-small")
+                else:
+                    # Fallback to raw values for trend if EMA is not available
+                    current = sorted_vix.iloc[0]['value']
+                    previous = sorted_vix.iloc[1]['value']
+                    change = current - previous
+                    
+                    # VIX is inverse: down is good (green), up is bad (red)
+                    icon = "↓" if change <= 0 else "↑"
+                    color = "trend-up" if change <= 0 else "trend-down"
+                    
+                    vix_trend = html.Span([
+                        html.Span(icon, className=f"trend-icon {color}"),
+                        html.Span(f"{abs(change):.1f}", className="trend-value-small")
+                    ], className="trend-small")
         
         # 13. Consumer Sentiment
         consumer_sentiment_value = "N/A"
