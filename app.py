@@ -1718,181 +1718,40 @@ app.layout = html.Div([
     
     # Main content container - Two column layout
     html.Div([
-        # Left column - Key indicators
+        # Left column - T2D Pulse visualization only
         html.Div([
+            # Last updated timestamp
+            html.Div(id="last-updated", className="last-updated"),
             
-            # Key Indicators
+            # Hidden divs to store values for indicators (needed for callbacks)
             html.Div([
-                html.H3("Key Indicators", className="card-title"),
-                html.Div([
-                    # Last updated timestamp
-                    html.Div(id="last-updated", className="last-updated"),
-                    
-                    # Auto-refresh happens hourly via interval-component (removed manual refresh button)
-                ], className="refresh-container"),
-                
-                # GDP
-                html.Div([
-                    html.Div([
-                        html.H4("Real GDP % Change"),
-                        html.P(id="gdp-value", 
-                              children=f"{gdp_data.sort_values('date', ascending=False).iloc[0]['yoy_growth']:.1f}%" 
-                              if not gdp_data.empty and 'yoy_growth' in gdp_data.columns else "N/A",
-                              className="indicator-value")
-                    ], className="indicator-text"),
-                    html.Div(id="gdp-trend", className="indicator-trend")
-                ], className="indicator"),
-                
-                # PCE
-                html.Div([
-                    html.Div([
-                        html.H4("PCE"),
-                        html.P(id="pce-value", 
-                              children=f"{pce_data.sort_values('date', ascending=False).iloc[0]['yoy_growth']:.1f}%" 
-                              if not pce_data.empty and 'yoy_growth' in pce_data.columns else "N/A",
-                              className="indicator-value")
-                    ], className="indicator-text"),
-                    html.Div(id="pce-trend", className="indicator-trend")
-                ], className="indicator"),
-                
-                # Unemployment
-                html.Div([
-                    html.Div([
-                        html.H4("Unemployment Rate"),
-                        html.P(id="unemployment-value", 
-                              children=f"{unemployment_data.sort_values('date', ascending=False).iloc[0]['value']:.1f}%" 
-                              if not unemployment_data.empty else "N/A",
-                              className="indicator-value")
-                    ], className="indicator-text"),
-                    html.Div(id="unemployment-trend", className="indicator-trend")
-                ], className="indicator"),
-                
-                # Software Job Postings
-                html.Div([
-                    html.Div([
-                        html.H4("Software Job Postings"),
-                        html.P(id="job-postings-value", 
-                              children=f"{job_postings_data.sort_values('date', ascending=False).iloc[0]['yoy_growth']:.1f}%" 
-                              if not job_postings_data.empty and 'yoy_growth' in job_postings_data.columns else "N/A",
-                              className="indicator-value")
-                    ], className="indicator-text"),
-                    html.Div(id="job-postings-trend", className="indicator-trend")
-                ], className="indicator"),
-                
-                # Inflation
-                html.Div([
-                    html.Div([
-                        html.H4("Inflation (CPI)"),
-                        html.P(id="inflation-value", 
-                              children=f"{inflation_data.sort_values('date', ascending=False).iloc[0]['inflation']:.1f}%" 
-                              if not inflation_data.empty and 'inflation' in inflation_data.columns else "N/A",
-                              className="indicator-value")
-                    ], className="indicator-text"),
-                    html.Div(id="inflation-trend", className="indicator-trend")
-                ], className="indicator"),
-                
-                # PCEPI
-                html.Div([
-                    html.Div([
-                        html.H4("PCEPI (YoY)"),
-                        html.P(id="pcepi-value", 
-                              children=f"{pcepi_data.sort_values('date', ascending=False).iloc[0]['yoy_growth']:.1f}%" 
-                              if not pcepi_data.empty and 'yoy_growth' in pcepi_data.columns else "N/A",
-                              className="indicator-value")
-                    ], className="indicator-text"),
-                    html.Div(id="pcepi-trend", className="indicator-trend")
-                ], className="indicator"),
-                
-                # Interest Rate
-                html.Div([
-                    html.Div([
-                        html.H4("Fed Funds Rate"),
-                        html.P(id="interest-rate-value", 
-                              children=f"{interest_rate_data.sort_values('date', ascending=False).iloc[0]['value']:.2f}%" 
-                              if not interest_rate_data.empty else "N/A",
-                              className="indicator-value")
-                    ], className="indicator-text"),
-                    html.Div(id="interest-rate-trend", className="indicator-trend")
-                ], className="indicator"),
-                
-                # NASDAQ
-                html.Div([
-                    html.Div([
-                        html.H4("NASDAQ Trend"),
-                        html.P(id="nasdaq-value", 
-                              children=html.Span([
-                                  f"{nasdaq_data.sort_values('date', ascending=False).iloc[0]['value']:,.0f}",
-                                  html.Span(" (", style={"fontSize": "12px", "color": "#666"}),
-                                  html.Span(f"{nasdaq_data.sort_values('date', ascending=False).iloc[0]['gap_pct']:.1f}%" 
-                                          if not nasdaq_data.empty and 'gap_pct' in nasdaq_data.columns else "N/A", 
-                                          style={"fontSize": "12px", "fontWeight": "bold"}),
-                                  html.Span(" from EMA)", style={"fontSize": "12px", "color": "#666"})
-                              ]) if not nasdaq_data.empty else "N/A",
-                              className="indicator-value")
-                    ], className="indicator-text"),
-                    html.Div(id="nasdaq-trend", className="indicator-trend")
-                ], className="indicator"),
-                
-                # PPI: Software Publishers
-                html.Div([
-                    html.Div([
-                        html.H4("PPI: Software Publishers"),
-                        html.P(id="software-ppi-value", 
-                              children=f"{software_ppi_data.sort_values('date', ascending=False).iloc[0]['yoy_pct_change']:.1f}%" 
-                              if not software_ppi_data.empty and 'yoy_pct_change' in software_ppi_data.columns else "N/A",
-                              className="indicator-value")
-                    ], className="indicator-text"),
-                    html.Div(id="software-ppi-trend", className="indicator-trend")
-                ], className="indicator"),
-                
-                # PPI: Data Processing Services
-                html.Div([
-                    html.Div([
-                        html.H4("PPI: Data Processing Services"),
-                        html.P(id="data-ppi-value", 
-                              children=f"{data_processing_ppi_data.sort_values('date', ascending=False).iloc[0]['yoy_pct_change']:.1f}%" 
-                              if not data_processing_ppi_data.empty and 'yoy_pct_change' in data_processing_ppi_data.columns else "N/A",
-                              className="indicator-value")
-                    ], className="indicator-text"),
-                    html.Div(id="data-ppi-trend", className="indicator-trend")
-                ], className="indicator"),
-                
-                # 10-Year Treasury Yield
-                html.Div([
-                    html.Div([
-                        html.H4("10-Year Treasury Yield"),
-                        html.P(id="treasury-yield-value", 
-                              children=f"{treasury_yield_data.sort_values('date', ascending=False).iloc[0]['value']:.2f}%" 
-                              if not treasury_yield_data.empty else "N/A",
-                              className="indicator-value")
-                    ], className="indicator-text"),
-                    html.Div(id="treasury-yield-trend", className="indicator-trend")
-                ], className="indicator"),
-                
-                # CBOE Volatility Index (VIX)
-                html.Div([
-                    html.Div([
-                        html.H4("VIX Volatility Index (14-day EMA)"),
-                        html.P(id="vix-value", 
-                              children=f"{vix_data.sort_values('date', ascending=False).iloc[0]['vix_ema14']:.2f}" 
-                              if not vix_data.empty and 'vix_ema14' in vix_data.columns else "N/A",
-                              className="indicator-value")
-                    ], className="indicator-text"),
-                    html.Div(id="vix-trend", className="indicator-trend")
-                ], className="indicator"),
-                
-                # Consumer Sentiment
-                html.Div([
-                    html.Div([
-                        html.H4("Consumer Sentiment"),
-                        html.P(id="consumer-sentiment-value", 
-                              children=f"{consumer_sentiment_data.sort_values('date', ascending=False).iloc[0]['value']:.1f}" 
-                              if not consumer_sentiment_data.empty else "N/A",
-                              className="indicator-value")
-                    ], className="indicator-text"),
-                    html.Div(id="consumer-sentiment-trend", className="indicator-trend")
-                ], className="indicator"),
-            ], className="card indicators-card"),
+                html.P(id="gdp-value", style={"display": "none"}),
+                html.Div(id="gdp-trend", style={"display": "none"}),
+                html.P(id="pce-value", style={"display": "none"}),
+                html.Div(id="pce-trend", style={"display": "none"}),
+                html.P(id="unemployment-value", style={"display": "none"}),
+                html.Div(id="unemployment-trend", style={"display": "none"}),
+                html.P(id="job-postings-value", style={"display": "none"}),
+                html.Div(id="job-postings-trend", style={"display": "none"}),
+                html.P(id="inflation-value", style={"display": "none"}),
+                html.Div(id="inflation-trend", style={"display": "none"}),
+                html.P(id="pcepi-value", style={"display": "none"}),
+                html.Div(id="pcepi-trend", style={"display": "none"}),
+                html.P(id="interest-rate-value", style={"display": "none"}),
+                html.Div(id="interest-rate-trend", style={"display": "none"}),
+                html.P(id="nasdaq-value", style={"display": "none"}),
+                html.Div(id="nasdaq-trend", style={"display": "none"}),
+                html.P(id="software-ppi-value", style={"display": "none"}),
+                html.Div(id="software-ppi-trend", style={"display": "none"}),
+                html.P(id="data-ppi-value", style={"display": "none"}),
+                html.Div(id="data-ppi-trend", style={"display": "none"}),
+                html.P(id="treasury-yield-value", style={"display": "none"}),
+                html.Div(id="treasury-yield-trend", style={"display": "none"}),
+                html.P(id="vix-value", style={"display": "none"}),
+                html.Div(id="vix-trend", style={"display": "none"}),
+                html.P(id="consumer-sentiment-value", style={"display": "none"}),
+                html.Div(id="consumer-sentiment-trend", style={"display": "none"}),
+            ], style={"display": "none"}),
             
             # Custom Weight Adjustment (Hidden as requested)
             html.Div([
@@ -2089,36 +1948,40 @@ app.layout = html.Div([
         html.Div([
             # Tabs for different graph groups
             dcc.Tabs([
-                # Sector Sentiment Tab - Moved to first position
+                # Sector Sentiment Tab - Cleaner layout with more whitespace
                 dcc.Tab(label="Sector Sentiment", children=[
                     html.Div([
                         # Main Sector Sentiment Container
-                        html.Div(id="sector-sentiment-container", className="sector-sentiment-container"),
+                        html.Div(id="sector-sentiment-container", className="sector-sentiment-container",
+                               style={"marginBottom": "30px"}),
                         
-                        # Toggle Button for Key Indicators
+                        # Divider
+                        html.Hr(style={"margin": "20px 0", "border": "none", "height": "1px", "backgroundColor": "#e0e0e0"}),
+                        
+                        # Toggle Button for Key Indicators with more whitespace around it
                         html.Div([
                             html.Button(
                                 "Show Key Indicators ▼",
                                 id="toggle-key-indicators-button",
                                 n_clicks=0,
                                 style={
-                                    "padding": "10px 20px",
-                                    "fontSize": "1em",
+                                    "padding": "12px 24px",
+                                    "fontSize": "1.1em",
                                     "borderRadius": "8px",
                                     "border": "none",
                                     "backgroundColor": "#007BFF",
                                     "color": "white",
                                     "cursor": "pointer",
-                                    "marginTop": "20px",
-                                    "marginBottom": "20px"
+                                    "boxShadow": "0 2px 4px rgba(0,0,0,0.1)",
+                                    "transition": "all 0.3s ease"
                                 }
                             )
-                        ], style={"textAlign": "center"}),
+                        ], style={"textAlign": "center", "margin": "30px auto"}),
                         
                         # Collapsible Key Indicators Section
                         html.Div([
                             html.H3("Key Economic Indicators", 
-                                   style={"textAlign": "center", "fontSize": "1.5em", "color": "#666", "marginTop": "10px", "marginBottom": "20px"}),
+                                   style={"textAlign": "center", "fontSize": "1.5em", "color": "#444", "marginTop": "20px", "marginBottom": "30px", "fontWeight": "500"}),
                             html.Div([
                                 # Grid of key indicator cards - exactly matching the sidebar indicators
                                 # Real GDP
@@ -2237,7 +2100,13 @@ app.layout = html.Div([
                                         html.Div(id="key-consumer-sentiment-trend", className="indicator-trend-small")
                                     ], className="indicator-value-container")
                                 ], className="indicator-card"),
-                            ], className="key-indicators-grid")
+                            ], className="key-indicators-grid", style={
+                                "display": "grid",
+                                "gridTemplateColumns": "repeat(auto-fill, minmax(280px, 1fr))",
+                                "gap": "20px",
+                                "marginTop": "20px",
+                                "width": "100%"
+                            })
                         ], id="key-indicators-section", style={
                             "height": "0px", 
                             "overflow": "hidden", 
