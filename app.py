@@ -1716,43 +1716,43 @@ app.layout = html.Div([
         ], className="sentiment-banner", style={"display": "flex", "alignItems": "center", "minHeight": "220px"})
     ], className="sentiment-section"),
     
-    # Main content container - Two column layout
+    # Main content container - Centered full-width layout
     html.Div([
-        # Left column - T2D Pulse visualization only
+        # Last updated timestamp centered at the top
+        html.Div(id="last-updated", className="last-updated", style={"textAlign": "center", "marginBottom": "15px"}),
+        
+        # Hidden divs to store values for indicators (needed for callbacks)
         html.Div([
-            # Last updated timestamp
-            html.Div(id="last-updated", className="last-updated"),
-            
-            # Hidden divs to store values for indicators (needed for callbacks)
-            html.Div([
-                html.P(id="gdp-value", style={"display": "none"}),
-                html.Div(id="gdp-trend", style={"display": "none"}),
-                html.P(id="pce-value", style={"display": "none"}),
-                html.Div(id="pce-trend", style={"display": "none"}),
-                html.P(id="unemployment-value", style={"display": "none"}),
-                html.Div(id="unemployment-trend", style={"display": "none"}),
-                html.P(id="job-postings-value", style={"display": "none"}),
-                html.Div(id="job-postings-trend", style={"display": "none"}),
-                html.P(id="inflation-value", style={"display": "none"}),
-                html.Div(id="inflation-trend", style={"display": "none"}),
-                html.P(id="pcepi-value", style={"display": "none"}),
-                html.Div(id="pcepi-trend", style={"display": "none"}),
-                html.P(id="interest-rate-value", style={"display": "none"}),
-                html.Div(id="interest-rate-trend", style={"display": "none"}),
-                html.P(id="nasdaq-value", style={"display": "none"}),
-                html.Div(id="nasdaq-trend", style={"display": "none"}),
-                html.P(id="software-ppi-value", style={"display": "none"}),
-                html.Div(id="software-ppi-trend", style={"display": "none"}),
-                html.P(id="data-ppi-value", style={"display": "none"}),
-                html.Div(id="data-ppi-trend", style={"display": "none"}),
-                html.P(id="treasury-yield-value", style={"display": "none"}),
-                html.Div(id="treasury-yield-trend", style={"display": "none"}),
-                html.P(id="vix-value", style={"display": "none"}),
-                html.Div(id="vix-trend", style={"display": "none"}),
-                html.P(id="consumer-sentiment-value", style={"display": "none"}),
-                html.Div(id="consumer-sentiment-trend", style={"display": "none"}),
-            ], style={"display": "none"}),
-            
+            html.P(id="gdp-value", style={"display": "none"}),
+            html.Div(id="gdp-trend", style={"display": "none"}),
+            html.P(id="pce-value", style={"display": "none"}),
+            html.Div(id="pce-trend", style={"display": "none"}),
+            html.P(id="unemployment-value", style={"display": "none"}),
+            html.Div(id="unemployment-trend", style={"display": "none"}),
+            html.P(id="job-postings-value", style={"display": "none"}),
+            html.Div(id="job-postings-trend", style={"display": "none"}),
+            html.P(id="inflation-value", style={"display": "none"}),
+            html.Div(id="inflation-trend", style={"display": "none"}),
+            html.P(id="pcepi-value", style={"display": "none"}),
+            html.Div(id="pcepi-trend", style={"display": "none"}),
+            html.P(id="interest-rate-value", style={"display": "none"}),
+            html.Div(id="interest-rate-trend", style={"display": "none"}),
+            html.P(id="nasdaq-value", style={"display": "none"}),
+            html.Div(id="nasdaq-trend", style={"display": "none"}),
+            html.P(id="software-ppi-value", style={"display": "none"}),
+            html.Div(id="software-ppi-trend", style={"display": "none"}),
+            html.P(id="data-ppi-value", style={"display": "none"}),
+            html.Div(id="data-ppi-trend", style={"display": "none"}),
+            html.P(id="treasury-yield-value", style={"display": "none"}),
+            html.Div(id="treasury-yield-trend", style={"display": "none"}),
+            html.P(id="vix-value", style={"display": "none"}),
+            html.Div(id="vix-trend", style={"display": "none"}),
+            html.P(id="consumer-sentiment-value", style={"display": "none"}),
+            html.Div(id="consumer-sentiment-trend", style={"display": "none"}),
+        ], style={"display": "none"}),
+        
+        # Centered main content
+        html.Div([
             # Custom Weight Adjustment (Hidden as requested)
             html.Div([
                 html.H3("Customize Index Weights", className="card-title"),
@@ -1942,9 +1942,9 @@ app.layout = html.Div([
                 # Hidden document analysis section
             ], className="card upload-card", style={"display": "none"}),
             
-        ], className="column left-column"),
+        ], style={"display": "none"}),
         
-        # Right column - Graphs
+        # Full width tabs container
         html.Div([
             # Tabs for different graph groups
             dcc.Tabs([
@@ -2202,9 +2202,21 @@ app.layout = html.Div([
                         html.Div(id="vix-container", className="insights-enabled-container")
                     ], className="graph-container")
                 ], className="custom-tab", selected_className="custom-tab--selected"),
-            ], className="custom-tabs")
-        ], className="column right-column")
-    ], className="dashboard-content"),
+            ], className="custom-tabs", style={
+                "width": "100%",
+                "maxWidth": "1400px",
+                "margin": "0 auto"
+            })
+        ], style={
+            "width": "100%",
+            "padding": "0 20px",
+            "boxSizing": "border-box"
+        })
+    ], className="dashboard-content", style={
+        "display": "flex",
+        "flexDirection": "column",
+        "width": "100%"
+    }),
     
     # Footer
     html.Footer([

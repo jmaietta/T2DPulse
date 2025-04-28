@@ -408,6 +408,9 @@
 /* Tabs styling */
 .custom-tabs {
     margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
 }
 
 .custom-tab {
@@ -420,6 +423,9 @@
     border-top: 1px solid #ddd;
     border-bottom: 1px solid #ddd;
     text-align: center !important; /* Center the text in tabs */
+    flex: 1;
+    max-width: 200px;
+    transition: all 0.2s ease-in-out;
 }
 
 .custom-tab--selected {
@@ -429,6 +435,9 @@
     border-top: 1px solid #ddd;
     border-bottom: 1px solid transparent;
     text-align: center !important; /* Maintain center alignment when selected */
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.05);
+    background-color: #fff;
+    font-weight: 600;
 }
 
 /* Specific style for all tabs including Monetary Policy tab */
