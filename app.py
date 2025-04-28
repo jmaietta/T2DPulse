@@ -2057,79 +2057,118 @@ app.layout = html.Div([
                                 # Real GDP
                                 html.Div([
                                     html.Div("Real GDP % Change", className="indicator-label"),
-                                    html.Div(id="key-gdp-value", className="indicator-value")
+                                    html.Div([
+                                        html.Div(id="key-gdp-value", className="indicator-value"),
+                                        html.Div(id="key-gdp-trend", className="indicator-trend-small")
+                                    ], className="indicator-value-container")
                                 ], className="indicator-card"),
                                 
                                 # PCE
                                 html.Div([
                                     html.Div("PCE", className="indicator-label"),
-                                    html.Div(id="key-pce-value", className="indicator-value")
+                                    html.Div([
+                                        html.Div(id="key-pce-value", className="indicator-value"),
+                                        html.Div(id="key-pce-trend", className="indicator-trend-small")
+                                    ], className="indicator-value-container")
                                 ], className="indicator-card"),
                                 
                                 # Unemployment Rate
                                 html.Div([
                                     html.Div("Unemployment Rate", className="indicator-label"),
-                                    html.Div(id="key-unemployment-value", className="indicator-value")
+                                    html.Div([
+                                        html.Div(id="key-unemployment-value", className="indicator-value"),
+                                        html.Div(id="key-unemployment-trend", className="indicator-trend-small")
+                                    ], className="indicator-value-container")
                                 ], className="indicator-card"),
                                 
                                 # Software Job Postings
                                 html.Div([
                                     html.Div("Software Job Postings", className="indicator-label"),
-                                    html.Div(id="key-job-postings-value", className="indicator-value")
+                                    html.Div([
+                                        html.Div(id="key-job-postings-value", className="indicator-value"),
+                                        html.Div(id="key-job-postings-trend", className="indicator-trend-small")
+                                    ], className="indicator-value-container")
                                 ], className="indicator-card"),
                                 
                                 # Inflation (CPI)
                                 html.Div([
                                     html.Div("Inflation (CPI)", className="indicator-label"),
-                                    html.Div(id="key-inflation-value", className="indicator-value")
+                                    html.Div([
+                                        html.Div(id="key-inflation-value", className="indicator-value"),
+                                        html.Div(id="key-inflation-trend", className="indicator-trend-small")
+                                    ], className="indicator-value-container")
                                 ], className="indicator-card"),
                                 
                                 # PCEPI (YoY)
                                 html.Div([
                                     html.Div("PCEPI (YoY)", className="indicator-label"),
-                                    html.Div(id="key-pcepi-value", className="indicator-value")
+                                    html.Div([
+                                        html.Div(id="key-pcepi-value", className="indicator-value"),
+                                        html.Div(id="key-pcepi-trend", className="indicator-trend-small")
+                                    ], className="indicator-value-container")
                                 ], className="indicator-card"),
                                 
                                 # Fed Funds Rate
                                 html.Div([
                                     html.Div("Fed Funds Rate", className="indicator-label"),
-                                    html.Div(id="key-interest-rate-value", className="indicator-value")
+                                    html.Div([
+                                        html.Div(id="key-interest-rate-value", className="indicator-value"),
+                                        html.Div(id="key-interest-rate-trend", className="indicator-trend-small")
+                                    ], className="indicator-value-container")
                                 ], className="indicator-card"),
                                 
                                 # NASDAQ Trend
                                 html.Div([
                                     html.Div("NASDAQ Trend", className="indicator-label"),
-                                    html.Div(id="key-nasdaq-value", className="indicator-value")
+                                    html.Div([
+                                        html.Div(id="key-nasdaq-value", className="indicator-value"),
+                                        html.Div(id="key-nasdaq-trend", className="indicator-trend-small")
+                                    ], className="indicator-value-container")
                                 ], className="indicator-card"),
                                 
                                 # PPI: Software Publishers
                                 html.Div([
                                     html.Div("PPI: Software Publishers", className="indicator-label"),
-                                    html.Div(id="key-software-ppi-value", className="indicator-value")
+                                    html.Div([
+                                        html.Div(id="key-software-ppi-value", className="indicator-value"),
+                                        html.Div(id="key-software-ppi-trend", className="indicator-trend-small")
+                                    ], className="indicator-value-container")
                                 ], className="indicator-card"),
                                 
                                 # PPI: Data Processing Services
                                 html.Div([
                                     html.Div("PPI: Data Processing Services", className="indicator-label"),
-                                    html.Div(id="key-data-ppi-value", className="indicator-value")
+                                    html.Div([
+                                        html.Div(id="key-data-ppi-value", className="indicator-value"),
+                                        html.Div(id="key-data-ppi-trend", className="indicator-trend-small")
+                                    ], className="indicator-value-container")
                                 ], className="indicator-card"),
                                 
                                 # 10-Year Treasury Yield
                                 html.Div([
                                     html.Div("10-Year Treasury Yield", className="indicator-label"),
-                                    html.Div(id="key-treasury-yield-value", className="indicator-value")
+                                    html.Div([
+                                        html.Div(id="key-treasury-yield-value", className="indicator-value"),
+                                        html.Div(id="key-treasury-yield-trend", className="indicator-trend-small")
+                                    ], className="indicator-value-container")
                                 ], className="indicator-card"),
                                 
                                 # VIX Volatility Index
                                 html.Div([
                                     html.Div("VIX Volatility Index", className="indicator-label"),
-                                    html.Div(id="key-vix-value", className="indicator-value")
+                                    html.Div([
+                                        html.Div(id="key-vix-value", className="indicator-value"),
+                                        html.Div(id="key-vix-trend", className="indicator-trend-small")
+                                    ], className="indicator-value-container")
                                 ], className="indicator-card"),
                                 
                                 # Consumer Sentiment
                                 html.Div([
                                     html.Div("Consumer Sentiment", className="indicator-label"),
-                                    html.Div(id="key-consumer-sentiment-value", className="indicator-value")
+                                    html.Div([
+                                        html.Div(id="key-consumer-sentiment-value", className="indicator-value"),
+                                        html.Div(id="key-consumer-sentiment-trend", className="indicator-trend-small")
+                                    ], className="indicator-value-container")
                                 ], className="indicator-card"),
                             ], className="key-indicators-grid")
                         ], id="key-indicators-section", style={
@@ -6314,18 +6353,31 @@ def toggle_key_indicators(n_clicks):
 # --- Update Key Indicator Values ---
 @app.callback(
     [Output("key-gdp-value", "children"),
+     Output("key-gdp-trend", "children"),
      Output("key-pce-value", "children"),
+     Output("key-pce-trend", "children"),
      Output("key-unemployment-value", "children"),
+     Output("key-unemployment-trend", "children"),
      Output("key-job-postings-value", "children"),
+     Output("key-job-postings-trend", "children"),
      Output("key-inflation-value", "children"),
+     Output("key-inflation-trend", "children"),
      Output("key-pcepi-value", "children"),
+     Output("key-pcepi-trend", "children"),
      Output("key-interest-rate-value", "children"),
+     Output("key-interest-rate-trend", "children"),
      Output("key-nasdaq-value", "children"),
+     Output("key-nasdaq-trend", "children"),
      Output("key-software-ppi-value", "children"),
+     Output("key-software-ppi-trend", "children"),
      Output("key-data-ppi-value", "children"),
+     Output("key-data-ppi-trend", "children"),
      Output("key-treasury-yield-value", "children"),
+     Output("key-treasury-yield-trend", "children"),
      Output("key-vix-value", "children"),
-     Output("key-consumer-sentiment-value", "children")],
+     Output("key-vix-trend", "children"),
+     Output("key-consumer-sentiment-value", "children"),
+     Output("key-consumer-sentiment-trend", "children")],
     [Input("interval-component", "n_intervals")]
 )
 def update_key_indicators(n):
@@ -6333,96 +6385,336 @@ def update_key_indicators(n):
     try:
         # 1. Real GDP % Change 
         gdp_value = "N/A"
+        gdp_trend = ""
+        
+        # Use the correct format that matches sidebar gdp-value for consistency
         if not gdp_data.empty:
-            latest_gdp = gdp_data.sort_values('date', ascending=False).iloc[0]['value']
-            gdp_value = f"{latest_gdp:.1f}%"
+            sorted_gdp = gdp_data.sort_values('date', ascending=False)
+            
+            # Calculate GDP quarterly growth rate (QoQ) - match exact format from sidebar
+            if 'value' in sorted_gdp.columns and len(sorted_gdp) >= 2:
+                current = sorted_gdp.iloc[0]['value']
+                previous = sorted_gdp.iloc[1]['value']
+                pct_change = ((current - previous) / previous) * 100
+                gdp_value = f"{pct_change:.1f}%"
+                
+                # Add trend indicator
+                if len(sorted_gdp) >= 3:
+                    prev_change = ((previous - sorted_gdp.iloc[2]['value']) / sorted_gdp.iloc[2]['value']) * 100
+                    change = pct_change - prev_change
+                    
+                    icon = "↑" if change >= 0 else "↓"
+                    color = "trend-up" if change >= 0 else "trend-down"
+                    
+                    gdp_trend = html.Span([
+                        html.Span(icon, className=f"trend-icon {color}"),
+                        html.Span(f"{abs(change):.1f}%", className="trend-value-small")
+                    ], className="trend-small")
         
         # 2. PCE
         pce_value = "N/A"
+        pce_trend = ""
+        
+        # Use the correct format that matches sidebar pce-value for consistency
         if not pce_data.empty:
-            latest_pce = pce_data.sort_values('date', ascending=False).iloc[0]['value']
-            pce_value = f"{latest_pce:.1f}%"
+            sorted_pce = pce_data.sort_values('date', ascending=False)
+            
+            # Calculate PCE growth rate (YoY) - match exact format from sidebar
+            if 'value' in sorted_pce.columns and len(sorted_pce) >= 12:
+                current = sorted_pce.iloc[0]['value']
+                year_ago = sorted_pce.iloc[11]['value']  # 12 months ago for YoY
+                pct_change = ((current - year_ago) / year_ago) * 100
+                pce_value = f"{pct_change:.1f}%"
+                
+                # Add trend indicator
+                if len(sorted_pce) >= 13:
+                    prev_current = sorted_pce.iloc[1]['value']
+                    prev_year_ago = sorted_pce.iloc[12]['value']
+                    prev_change = ((prev_current - prev_year_ago) / prev_year_ago) * 100
+                    change = pct_change - prev_change
+                    
+                    icon = "↑" if change >= 0 else "↓"
+                    color = "trend-up" if change >= 0 else "trend-down"
+                    
+                    pce_trend = html.Span([
+                        html.Span(icon, className=f"trend-icon {color}"),
+                        html.Span(f"{abs(change):.1f}%", className="trend-value-small")
+                    ], className="trend-small")
         
         # 3. Unemployment Rate
         unemployment_value = "N/A"
+        unemployment_trend = ""
         if not unemployment_data.empty:
-            latest_unemployment = unemployment_data.sort_values('date', ascending=False).iloc[0]['value']
+            sorted_unemployment = unemployment_data.sort_values('date', ascending=False)
+            latest_unemployment = sorted_unemployment.iloc[0]['value']
             unemployment_value = f"{latest_unemployment:.1f}%"
+            
+            # Add trend indicator
+            if len(sorted_unemployment) >= 2:
+                current = sorted_unemployment.iloc[0]['value']
+                previous = sorted_unemployment.iloc[1]['value']
+                change = current - previous
+                
+                # Unemployment is inverse: down is good (green), up is bad (red)
+                icon = "↓" if change <= 0 else "↑"
+                color = "trend-up" if change <= 0 else "trend-down"
+                
+                unemployment_trend = html.Span([
+                    html.Span(icon, className=f"trend-icon {color}"),
+                    html.Span(f"{abs(change):.1f}%", className="trend-value-small")
+                ], className="trend-small")
         
         # 4. Software Job Postings
         job_postings_value = "N/A"
+        job_postings_trend = ""
         if not job_postings_data.empty and 'yoy_growth' in job_postings_data.columns:
-            latest_job_postings = job_postings_data.sort_values('date', ascending=False).iloc[0]['yoy_growth']
+            sorted_job_postings = job_postings_data.sort_values('date', ascending=False)
+            latest_job_postings = sorted_job_postings.iloc[0]['yoy_growth']
             job_postings_value = f"{latest_job_postings:.1f}%"
+            
+            # Add trend indicator
+            if len(sorted_job_postings) >= 2 and 'yoy_growth' in sorted_job_postings.columns:
+                current = sorted_job_postings.iloc[0]['yoy_growth']
+                previous = sorted_job_postings.iloc[1]['yoy_growth']
+                change = current - previous
+                
+                icon = "↑" if change >= 0 else "↓"
+                color = "trend-up" if change >= 0 else "trend-down"
+                
+                job_postings_trend = html.Span([
+                    html.Span(icon, className=f"trend-icon {color}"),
+                    html.Span(f"{abs(change):.1f}%", className="trend-value-small")
+                ], className="trend-small")
         
         # 5. Inflation (CPI)
         inflation_value = "N/A"
+        inflation_trend = ""
         if not inflation_data.empty and 'inflation' in inflation_data.columns:
-            latest_inflation = inflation_data.sort_values('date', ascending=False).iloc[0]['inflation']
+            sorted_inflation = inflation_data.sort_values('date', ascending=False)
+            latest_inflation = sorted_inflation.iloc[0]['inflation']
             inflation_value = f"{latest_inflation:.1f}%"
+            
+            # Add trend indicator
+            if len(sorted_inflation) >= 2 and 'inflation' in sorted_inflation.columns:
+                current = sorted_inflation.iloc[0]['inflation']
+                previous = sorted_inflation.iloc[1]['inflation']
+                change = current - previous
+                
+                # CPI/Inflation is inverse: down is good (green), up is bad (red)
+                icon = "↓" if change <= 0 else "↑"
+                color = "trend-up" if change <= 0 else "trend-down"
+                
+                inflation_trend = html.Span([
+                    html.Span(icon, className=f"trend-icon {color}"),
+                    html.Span(f"{abs(change):.1f}%", className="trend-value-small")
+                ], className="trend-small")
         
         # 6. PCEPI (YoY)
         pcepi_value = "N/A"
+        pcepi_trend = ""
         if not pcepi_data.empty and 'yoy_growth' in pcepi_data.columns:
-            latest_pcepi = pcepi_data.sort_values('date', ascending=False).iloc[0]['yoy_growth']
+            sorted_pcepi = pcepi_data.sort_values('date', ascending=False)
+            latest_pcepi = sorted_pcepi.iloc[0]['yoy_growth']
             pcepi_value = f"{latest_pcepi:.1f}%"
+            
+            # Add trend indicator
+            if len(sorted_pcepi) >= 2 and 'yoy_growth' in sorted_pcepi.columns:
+                current = sorted_pcepi.iloc[0]['yoy_growth']
+                previous = sorted_pcepi.iloc[1]['yoy_growth']
+                change = current - previous
+                
+                # PCEPI is inverse: down is good (green), up is bad (red)
+                icon = "↓" if change <= 0 else "↑"
+                color = "trend-up" if change <= 0 else "trend-down"
+                
+                pcepi_trend = html.Span([
+                    html.Span(icon, className=f"trend-icon {color}"),
+                    html.Span(f"{abs(change):.1f}%", className="trend-value-small")
+                ], className="trend-small")
         
         # 7. Fed Funds Rate
         interest_rate_value = "N/A"
+        interest_rate_trend = ""
         if not interest_rate_data.empty:
-            latest_rate = interest_rate_data.sort_values('date', ascending=False).iloc[0]['value']
+            sorted_interest_rate = interest_rate_data.sort_values('date', ascending=False)
+            latest_rate = sorted_interest_rate.iloc[0]['value']
             interest_rate_value = f"{latest_rate:.2f}%"
+            
+            # Add trend indicator
+            if len(sorted_interest_rate) >= 2:
+                current = sorted_interest_rate.iloc[0]['value']
+                previous = sorted_interest_rate.iloc[1]['value']
+                change = current - previous
+                
+                # Neutral indicator for Fed Funds Rate
+                icon = "↑" if change >= 0 else "↓"
+                color = "" # Neutral color
+                
+                interest_rate_trend = html.Span([
+                    html.Span(icon, className=f"trend-icon {color}"),
+                    html.Span(f"{abs(change):.2f}%", className="trend-value-small")
+                ], className="trend-small")
         
         # 8. NASDAQ Trend
         nasdaq_value = "N/A"
+        nasdaq_trend = ""
         if not nasdaq_data.empty:
-            latest_nasdaq = nasdaq_data.sort_values('date', ascending=False).iloc[0]['value']
-            if 'gap_pct' in nasdaq_data.columns:
-                latest_gap = nasdaq_data.sort_values('date', ascending=False).iloc[0]['gap_pct']
+            sorted_nasdaq = nasdaq_data.sort_values('date', ascending=False)
+            latest_nasdaq = sorted_nasdaq.iloc[0]['value']
+            if 'gap_pct' in sorted_nasdaq.columns:
+                latest_gap = sorted_nasdaq.iloc[0]['gap_pct']
                 nasdaq_value = f"{int(latest_nasdaq):,} ({latest_gap:.1f}%)"
+                
+                # Add trend indicator
+                if len(sorted_nasdaq) >= 2:
+                    current = sorted_nasdaq.iloc[0]['value']
+                    previous = sorted_nasdaq.iloc[1]['value']
+                    pct_change = ((current - previous) / previous) * 100
+                    
+                    icon = "↑" if pct_change >= 0 else "↓"
+                    color = "trend-up" if pct_change >= 0 else "trend-down"
+                    
+                    nasdaq_trend = html.Span([
+                        html.Span(icon, className=f"trend-icon {color}"),
+                        html.Span(f"{abs(pct_change):.1f}%", className="trend-value-small")
+                    ], className="trend-small")
             else:
                 nasdaq_value = f"{int(latest_nasdaq):,}"
         
         # 9. PPI: Software Publishers
         software_ppi_value = "N/A"
+        software_ppi_trend = ""
         if not software_ppi_data.empty and 'yoy_pct_change' in software_ppi_data.columns:
-            latest_software_ppi = software_ppi_data.sort_values('date', ascending=False).iloc[0]['yoy_pct_change']
+            sorted_software_ppi = software_ppi_data.sort_values('date', ascending=False)
+            latest_software_ppi = sorted_software_ppi.iloc[0]['yoy_pct_change']
             software_ppi_value = f"{latest_software_ppi:.1f}%"
+            
+            # Add trend indicator
+            if len(sorted_software_ppi) >= 2 and 'yoy_pct_change' in sorted_software_ppi.columns:
+                current = sorted_software_ppi.iloc[0]['yoy_pct_change']
+                previous = sorted_software_ppi.iloc[1]['yoy_pct_change']
+                change = current - previous
+                
+                # PPI trend is industry specific - neutral coloring
+                icon = "↑" if change >= 0 else "↓"
+                color = "" # Neutral color
+                
+                software_ppi_trend = html.Span([
+                    html.Span(icon, className=f"trend-icon {color}"),
+                    html.Span(f"{abs(change):.1f}%", className="trend-value-small")
+                ], className="trend-small")
         
         # 10. PPI: Data Processing Services
         data_ppi_value = "N/A"
+        data_ppi_trend = ""
         if not data_processing_ppi_data.empty and 'yoy_pct_change' in data_processing_ppi_data.columns:
-            latest_data_ppi = data_processing_ppi_data.sort_values('date', ascending=False).iloc[0]['yoy_pct_change']
+            sorted_data_ppi = data_processing_ppi_data.sort_values('date', ascending=False)
+            latest_data_ppi = sorted_data_ppi.iloc[0]['yoy_pct_change']
             data_ppi_value = f"{latest_data_ppi:.1f}%"
+            
+            # Add trend indicator
+            if len(sorted_data_ppi) >= 2 and 'yoy_pct_change' in sorted_data_ppi.columns:
+                current = sorted_data_ppi.iloc[0]['yoy_pct_change']
+                previous = sorted_data_ppi.iloc[1]['yoy_pct_change']
+                change = current - previous
+                
+                # PPI trend is industry specific - neutral coloring
+                icon = "↑" if change >= 0 else "↓"
+                color = "" # Neutral color
+                
+                data_ppi_trend = html.Span([
+                    html.Span(icon, className=f"trend-icon {color}"),
+                    html.Span(f"{abs(change):.1f}%", className="trend-value-small")
+                ], className="trend-small")
         
         # 11. 10-Year Treasury Yield
         treasury_yield_value = "N/A"
+        treasury_yield_trend = ""
         if not treasury_yield_data.empty:
-            latest_treasury = treasury_yield_data.sort_values('date', ascending=False).iloc[0]['value']
+            sorted_treasury = treasury_yield_data.sort_values('date', ascending=False)
+            latest_treasury = sorted_treasury.iloc[0]['value']
             treasury_yield_value = f"{latest_treasury:.2f}%"
+            
+            # Add trend indicator
+            if len(sorted_treasury) >= 2:
+                current = sorted_treasury.iloc[0]['value']
+                previous = sorted_treasury.iloc[1]['value']
+                change = current - previous
+                
+                # Neutral indicator for Treasury Yield
+                icon = "↑" if change >= 0 else "↓"
+                color = "" # Neutral color
+                
+                treasury_yield_trend = html.Span([
+                    html.Span(icon, className=f"trend-icon {color}"),
+                    html.Span(f"{abs(change):.2f}%", className="trend-value-small")
+                ], className="trend-small")
         
         # 12. VIX Volatility Index
         vix_value = "N/A"
+        vix_trend = ""
         if not vix_data.empty:
-            latest_vix = vix_data.sort_values('date', ascending=False).iloc[0]['value']
+            sorted_vix = vix_data.sort_values('date', ascending=False)
+            latest_vix = sorted_vix.iloc[0]['value']
             vix_value = f"{latest_vix:.1f}"
+            
+            # Add trend indicator
+            if len(sorted_vix) >= 2:
+                current = sorted_vix.iloc[0]['value']
+                previous = sorted_vix.iloc[1]['value']
+                change = current - previous
+                
+                # VIX is inverse: down is good (green), up is bad (red)
+                icon = "↓" if change <= 0 else "↑"
+                color = "trend-up" if change <= 0 else "trend-down"
+                
+                vix_trend = html.Span([
+                    html.Span(icon, className=f"trend-icon {color}"),
+                    html.Span(f"{abs(change):.1f}", className="trend-value-small")
+                ], className="trend-small")
         
         # 13. Consumer Sentiment
         consumer_sentiment_value = "N/A"
+        consumer_sentiment_trend = ""
         if not consumer_sentiment_data.empty:
-            latest_cs = consumer_sentiment_data.sort_values('date', ascending=False).iloc[0]['value']
+            sorted_cs = consumer_sentiment_data.sort_values('date', ascending=False)
+            latest_cs = sorted_cs.iloc[0]['value']
             consumer_sentiment_value = f"{latest_cs:.1f}"
+            
+            # Add trend indicator
+            if len(sorted_cs) >= 2:
+                current = sorted_cs.iloc[0]['value']
+                previous = sorted_cs.iloc[1]['value']
+                change = current - previous
+                
+                # Consumer Sentiment: up is good (green), down is bad (red)
+                icon = "↑" if change >= 0 else "↓"
+                color = "trend-up" if change >= 0 else "trend-down"
+                
+                consumer_sentiment_trend = html.Span([
+                    html.Span(icon, className=f"trend-icon {color}"),
+                    html.Span(f"{abs(change):.1f}", className="trend-value-small")
+                ], className="trend-small")
         
         return (
-            gdp_value, pce_value, unemployment_value, job_postings_value, 
-            inflation_value, pcepi_value, interest_rate_value, nasdaq_value,
-            software_ppi_value, data_ppi_value, treasury_yield_value, 
-            vix_value, consumer_sentiment_value
+            gdp_value, gdp_trend, pce_value, pce_trend, 
+            unemployment_value, unemployment_trend, 
+            job_postings_value, job_postings_trend,
+            inflation_value, inflation_trend, 
+            pcepi_value, pcepi_trend,
+            interest_rate_value, interest_rate_trend, 
+            nasdaq_value, nasdaq_trend,
+            software_ppi_value, software_ppi_trend, 
+            data_ppi_value, data_ppi_trend,
+            treasury_yield_value, treasury_yield_trend, 
+            vix_value, vix_trend,
+            consumer_sentiment_value, consumer_sentiment_trend
         )
     
     except Exception as e:
         print(f"Error updating key indicators: {e}")
-        return "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A"
+        # Return empty values for all indicators and their trends
+        return "N/A", "", "N/A", "", "N/A", "", "N/A", "", "N/A", "", "N/A", "", "N/A", "", "N/A", "", "N/A", "", "N/A", "", "N/A", "", "N/A", "", "N/A", ""
 
 # Add this at the end of the file if running directly
 if __name__ == "__main__":
