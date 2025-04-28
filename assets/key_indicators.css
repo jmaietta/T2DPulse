@@ -1,0 +1,55 @@
+/* Key Indicators Section */
+.key-indicators-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.indicator-card {
+    flex: 1 1 130px;
+    max-width: 180px;
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    border: 1px solid #e0e0e0;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.indicator-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.indicator-label {
+    font-size: 0.9em;
+    color: #555;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.indicator-value {
+    font-size: 1.2em;
+    font-weight: 600;
+    color: #333;
+}
+
+/* Button hover effect */
+#toggle-key-indicators-button:hover {
+    background-color: #0056b3;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 768px) {
+    .key-indicators-grid {
+        gap: 10px;
+    }
+    
+    .indicator-card {
+        flex: 1 1 100%;
+        max-width: none;
+    }
+}

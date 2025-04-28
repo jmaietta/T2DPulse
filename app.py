@@ -2025,7 +2025,88 @@ app.layout = html.Div([
                 # Sector Sentiment Tab - Moved to first position
                 dcc.Tab(label="Sector Sentiment", children=[
                     html.Div([
-                        html.Div(id="sector-sentiment-container", className="sector-sentiment-container")
+                        # Main Sector Sentiment Container
+                        html.Div(id="sector-sentiment-container", className="sector-sentiment-container"),
+                        
+                        # Toggle Button for Key Indicators
+                        html.Div([
+                            html.Button(
+                                "Show Key Indicators ▼",
+                                id="toggle-key-indicators-button",
+                                n_clicks=0,
+                                style={
+                                    "padding": "10px 20px",
+                                    "fontSize": "1em",
+                                    "borderRadius": "8px",
+                                    "border": "none",
+                                    "backgroundColor": "#007BFF",
+                                    "color": "white",
+                                    "cursor": "pointer",
+                                    "marginTop": "20px",
+                                    "marginBottom": "20px"
+                                }
+                            )
+                        ], style={"textAlign": "center"}),
+                        
+                        # Collapsible Key Indicators Section
+                        html.Div([
+                            html.H3("Key Economic Indicators", 
+                                   style={"textAlign": "center", "fontSize": "1.5em", "color": "#666", "marginTop": "10px", "marginBottom": "20px"}),
+                            html.Div([
+                                # Grid of key indicator cards
+                                html.Div([
+                                    html.Div("GDP Growth", className="indicator-label"),
+                                    html.Div(id="key-gdp-value", className="indicator-value")
+                                ], className="indicator-card"),
+                                
+                                html.Div([
+                                    html.Div("10Y Treasury", className="indicator-label"),
+                                    html.Div(id="key-treasury-value", className="indicator-value")
+                                ], className="indicator-card"),
+                                
+                                html.Div([
+                                    html.Div("VIX", className="indicator-label"),
+                                    html.Div(id="key-vix-value", className="indicator-value")
+                                ], className="indicator-card"),
+                                
+                                html.Div([
+                                    html.Div("Unemployment", className="indicator-label"),
+                                    html.Div(id="key-unemployment-value", className="indicator-value")
+                                ], className="indicator-card"),
+                                
+                                html.Div([
+                                    html.Div("PCE Inflation", className="indicator-label"),
+                                    html.Div(id="key-pce-value", className="indicator-value")
+                                ], className="indicator-card"),
+                                
+                                html.Div([
+                                    html.Div("NASDAQ", className="indicator-label"),
+                                    html.Div(id="key-nasdaq-value", className="indicator-value")
+                                ], className="indicator-card"),
+                                
+                                html.Div([
+                                    html.Div("Consumer Sentiment", className="indicator-label"),
+                                    html.Div(id="key-consumer-sentiment-value", className="indicator-value")
+                                ], className="indicator-card"),
+                                
+                                html.Div([
+                                    html.Div("Fed Funds Rate", className="indicator-label"),
+                                    html.Div(id="key-fed-funds-value", className="indicator-value")
+                                ], className="indicator-card"),
+                            ], className="key-indicators-grid")
+                        ], id="key-indicators-section", style={
+                            "height": "0px", 
+                            "overflow": "hidden", 
+                            "opacity": 0,
+                            "transition": "height 0.6s ease, opacity 0.6s ease",
+                            "width": "100%", 
+                            "maxWidth": "1200px", 
+                            "margin": "0 auto",
+                            "backgroundColor": "#f9f9f9",
+                            "padding": "0 20px 20px 20px",
+                            "borderRadius": "8px",
+                            "boxShadow": "0 2px 5px rgba(0,0,0,0.1)"
+                        })
                     ], className="graph-container")
                 ], className="custom-tab", selected_className="custom-tab--selected"),
                 
@@ -6148,6 +6229,119 @@ def update_input_styling(weights_json):
     
     # Return the list of styles for all displayed sectors
     return styles
+
+# --- Key Indicators Toggle Callback ---
+@app.callback(
+    Output("key-indicators-section", "style"),
+    Output("toggle-key-indicators-button", "children"),
+    Input("toggle-key-indicators-button", "n_clicks"),
+)
+def toggle_key_indicators(n_clicks):
+    """Toggle the visibility of the Key Indicators section"""
+    # Default style keeps the section hidden
+    hidden_style = {
+        "height": "0px", 
+        "overflow": "hidden", 
+        "opacity": 0,
+        "transition": "height 0.6s ease, opacity 0.6s ease",
+        "width": "100%", 
+        "maxWidth": "1200px", 
+        "margin": "0 auto",
+        "backgroundColor": "#f9f9f9",
+        "padding": "0 20px 20px 20px",
+        "borderRadius": "8px",
+        "boxShadow": "0 2px 5px rgba(0,0,0,0.1)"
+    }
+    
+    # Visible style expands the section
+    visible_style = {
+        "height": "auto", 
+        "opacity": 1,
+        "transition": "height 0.6s ease, opacity 0.6s ease",
+        "width": "100%", 
+        "maxWidth": "1200px", 
+        "margin": "0 auto",
+        "backgroundColor": "#f9f9f9",
+        "padding": "20px",
+        "borderRadius": "8px",
+        "boxShadow": "0 2px 5px rgba(0,0,0,0.1)"
+    }
+    
+    # Toggle based on number of clicks (if odd, show it)
+    if n_clicks and n_clicks % 2 == 1:
+        return visible_style, "Hide Key Indicators ▲"
+    else:
+        return hidden_style, "Show Key Indicators ▼"
+
+# --- Update Key Indicator Values ---
+@app.callback(
+    [Output("key-gdp-value", "children"),
+     Output("key-treasury-value", "children"),
+     Output("key-vix-value", "children"),
+     Output("key-unemployment-value", "children"),
+     Output("key-pce-value", "children"),
+     Output("key-nasdaq-value", "children"),
+     Output("key-consumer-sentiment-value", "children"),
+     Output("key-fed-funds-value", "children")],
+    [Input("interval-component", "n_intervals")]
+)
+def update_key_indicators(n):
+    """Update all key indicator values with the latest data"""
+    try:
+        # GDP Growth (latest YoY %)
+        gdp_value = "N/A"
+        if not gdp_data.empty:
+            latest_gdp = gdp_data.sort_values('date', ascending=False).iloc[0]['value']
+            gdp_value = f"{latest_gdp:.1f}%"
+        
+        # 10-Year Treasury Yield
+        treasury_value = "N/A"
+        if not treasury_yield_data.empty:
+            latest_treasury = treasury_yield_data.sort_values('date', ascending=False).iloc[0]['value']
+            treasury_value = f"{latest_treasury:.2f}%"
+        
+        # VIX
+        vix_value = "N/A"
+        if not vix_data.empty:
+            latest_vix = vix_data.sort_values('date', ascending=False).iloc[0]['value']
+            vix_value = f"{latest_vix:.1f}"
+        
+        # Unemployment Rate
+        unemployment_value = "N/A"
+        if not unemployment_data.empty:
+            latest_unemployment = unemployment_data.sort_values('date', ascending=False).iloc[0]['value']
+            unemployment_value = f"{latest_unemployment:.1f}%"
+        
+        # PCE Inflation (YoY %)
+        pce_value = "N/A"
+        if not pcepi_data.empty and 'yoy_pct_change' in pcepi_data.columns:
+            latest_pcepi = pcepi_data.sort_values('date', ascending=False).iloc[0]['yoy_pct_change']
+            pce_value = f"{latest_pcepi:.1f}%"
+        
+        # NASDAQ Composite
+        nasdaq_value = "N/A"
+        if not nasdaq_data.empty:
+            latest_nasdaq = nasdaq_data.sort_values('date', ascending=False).iloc[0]['value']
+            # Format with commas for thousands
+            nasdaq_value = f"{int(latest_nasdaq):,}"
+        
+        # Consumer Sentiment
+        consumer_sentiment_value = "N/A"
+        if not consumer_sentiment_data.empty:
+            latest_cs = consumer_sentiment_data.sort_values('date', ascending=False).iloc[0]['value']
+            consumer_sentiment_value = f"{latest_cs:.1f}"
+        
+        # Fed Funds Rate
+        fed_funds_value = "N/A"
+        if not interest_rate_data.empty:
+            latest_rate = interest_rate_data.sort_values('date', ascending=False).iloc[0]['value']
+            fed_funds_value = f"{latest_rate:.2f}%"
+        
+        return gdp_value, treasury_value, vix_value, unemployment_value, pce_value, nasdaq_value, consumer_sentiment_value, fed_funds_value
+    
+    except Exception as e:
+        print(f"Error updating key indicators: {e}")
+        return "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A"
 
 # Add this at the end of the file if running directly
 if __name__ == "__main__":
