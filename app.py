@@ -272,6 +272,45 @@ def fetch_treasury_yield_data():
         print("Falling back to cached Treasury Yield data")
         return pd.DataFrame()
         
+def fetch_vix_from_yahoo():
+    """Fetch VIX Volatility Index data from Yahoo Finance (^VIX)
+    
+    Returns a DataFrame with date and value columns formatted like FRED data.
+    Uses the closing price as the daily value to get most recent data.
+    """
+    print("Fetching VIX data from Yahoo Finance for most recent values...")
+    
+    try:
+        # Use Yahoo Finance to get the most recent data
+        vix = yf.Ticker('^VIX')
+        # Get data for the last 60 days to ensure we have enough recent values
+        data = vix.history(period='60d')
+        
+        if data.empty:
+            print("No VIX data retrieved from Yahoo Finance")
+            return pd.DataFrame()
+            
+        # Format data to match FRED format
+        df = pd.DataFrame({
+            'date': data.index.tz_localize(None),  # Remove timezone to match FRED data
+            'value': data['Close']
+        })
+        
+        # Sort by date (newest first) for easier reporting and data merging
+        df = df.sort_values('date', ascending=False)
+        
+        # Report the latest value and date
+        latest_date = df.iloc[0]['date'].strftime('%Y-%m-%d')
+        latest_value = df.iloc[0]['value']
+        print(f"VIX (latest): {latest_value:.2f} on {latest_date}")
+        print(f"Successfully retrieved {len(df)} days of VIX data from Yahoo Finance")
+        
+        return df
+    except Exception as e:
+        print(f"Exception while fetching VIX data from Yahoo Finance: {str(e)}")
+        print("Falling back to FRED data for VIX")
+        return pd.DataFrame()
+
 def fetch_nasdaq_with_ema():
     """Fetch NASDAQ data using yfinance and calculate the 20-day EMA
     
@@ -1522,18 +1561,46 @@ if pcepi_data.empty or (datetime.now() - pd.to_datetime(pcepi_data['date'].max()
 # Add VIX volatility index data
 vix_data = load_data_from_csv('vix_data.csv')
 
-# If no existing data or data is old, fetch new data
-if vix_data.empty or (datetime.now() - pd.to_datetime(vix_data['date'].max())).days > 7:
-    # Fetch CBOE Volatility Index (VIXCLS)
-    vix_data = fetch_fred_data('VIXCLS')
+# Try to get recent data from Yahoo Finance first
+yahoo_vix_data = fetch_vix_from_yahoo()
+
+if not yahoo_vix_data.empty:
+    # If Yahoo Finance data is available, use it
+    print("Using Yahoo Finance for recent VIX data")
     
+    # If we already have some historical data from FRED, keep it and append the new data
     if not vix_data.empty:
+        # Find the latest date in the Yahoo data we want to use
+        yahoo_latest_date = yahoo_vix_data['date'].max()
+        
+        # Keep only FRED data older than our Yahoo data to avoid duplicates
+        vix_data = vix_data[vix_data['date'] < yahoo_latest_date - timedelta(days=1)]
+        
+        # Combine the datasets
+        combined_vix_data = pd.concat([vix_data, yahoo_vix_data])
+        vix_data = combined_vix_data
+    else:
+        # If no historical data, just use Yahoo data
+        vix_data = yahoo_vix_data
+    
+    # Sort and save the combined data
+    vix_data = vix_data.sort_values('date')
+    save_data_to_csv(vix_data, 'vix_data.csv')
+    print(f"VIX data updated with {len(vix_data)} observations combining Yahoo Finance and historical data")
+    
+elif vix_data.empty or (datetime.now() - pd.to_datetime(vix_data['date'].max())).days > 7:
+    # If Yahoo Finance failed and we have no data or old data, fall back to FRED
+    print("Yahoo Finance VIX data retrieval failed, falling back to FRED data")
+    fred_vix_data = fetch_fred_data('VIXCLS')
+    
+    if not fred_vix_data.empty:
         # Save data
+        vix_data = fred_vix_data
         save_data_to_csv(vix_data, 'vix_data.csv')
         
-        print(f"VIX data updated with {len(vix_data)} observations")
+        print(f"VIX data updated with {len(vix_data)} observations from FRED")
     else:
-        print("Failed to fetch VIX data")
+        print("Failed to fetch VIX data from both Yahoo Finance and FRED")
 
 # Calculate 14-day EMA for VIX if we have data
 if not vix_data.empty and 'date' in vix_data.columns and 'value' in vix_data.columns:
