@@ -6419,19 +6419,17 @@ def update_key_indicators(n):
         if not pce_data.empty:
             sorted_pce = pce_data.sort_values('date', ascending=False)
             
-            # Calculate PCE growth rate (YoY) - match exact format from sidebar
-            if 'value' in sorted_pce.columns and len(sorted_pce) >= 12:
-                current = sorted_pce.iloc[0]['value']
-                year_ago = sorted_pce.iloc[11]['value']  # 12 months ago for YoY
-                pct_change = ((current - year_ago) / year_ago) * 100
-                pce_value = f"{pct_change:.1f}%"
+            # Use the YoY growth percentage that's already calculated in the CSV file
+            if 'yoy_growth' in sorted_pce.columns and len(sorted_pce) >= 1:
+                # Use the pre-calculated YoY growth value
+                latest_pce_yoy = sorted_pce.iloc[0]['yoy_growth']
+                pce_value = f"{latest_pce_yoy:.1f}%"
                 
                 # Add trend indicator
-                if len(sorted_pce) >= 13:
-                    prev_current = sorted_pce.iloc[1]['value']
-                    prev_year_ago = sorted_pce.iloc[12]['value']
-                    prev_change = ((prev_current - prev_year_ago) / prev_year_ago) * 100
-                    change = pct_change - prev_change
+                if len(sorted_pce) >= 2 and 'yoy_growth' in sorted_pce.columns:
+                    current_yoy = sorted_pce.iloc[0]['yoy_growth']
+                    previous_yoy = sorted_pce.iloc[1]['yoy_growth']
+                    change = current_yoy - previous_yoy
                     
                     icon = "↑" if change >= 0 else "↓"
                     color = "trend-up" if change >= 0 else "trend-down"
