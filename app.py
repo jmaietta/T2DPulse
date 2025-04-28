@@ -1805,10 +1805,10 @@ app.layout = html.Div([
                 # CBOE Volatility Index (VIX)
                 html.Div([
                     html.Div([
-                        html.H4("VIX Volatility Index"),
+                        html.H4("VIX Volatility Index (14-day EMA)"),
                         html.P(id="vix-value", 
-                              children=f"{vix_data.sort_values('date', ascending=False).iloc[0]['value']:.2f}" 
-                              if not vix_data.empty else "N/A",
+                              children=f"{vix_data.sort_values('date', ascending=False).iloc[0]['vix_ema14']:.2f}" 
+                              if not vix_data.empty and 'vix_ema14' in vix_data.columns else "N/A",
                               className="indicator-value")
                     ], className="indicator-text"),
                     html.Div(id="vix-trend", className="indicator-trend")
@@ -1975,7 +1975,7 @@ app.layout = html.Div([
                     ], className="weight-control"),
                     
                     html.Div([
-                        html.Label("VIX Volatility Index"),
+                        html.Label("VIX Volatility Index (14-day EMA)"),
                         dcc.Slider(
                             id="vix-weight",
                             min=0,
@@ -2155,7 +2155,7 @@ app.layout = html.Div([
                                 
                                 # VIX Volatility Index
                                 html.Div([
-                                    html.Div("VIX Volatility Index", className="indicator-label"),
+                                    html.Div("VIX Volatility Index (14-day EMA)", className="indicator-label"),
                                     html.Div([
                                         html.Div(id="key-vix-value", className="indicator-value"),
                                         html.Div(id="key-vix-trend", className="indicator-trend-small")
@@ -2262,7 +2262,7 @@ app.layout = html.Div([
                 # Volatility Tab
                 dcc.Tab(label="Market Volatility", children=[
                     html.Div([
-                        html.H3("CBOE Volatility Index (VIX)", className="graph-title"),
+                        html.H3("CBOE Volatility Index (VIX) (14-day EMA)", className="graph-title"),
                         html.Div(id="vix-container", className="insights-enabled-container")
                     ], className="graph-container")
                 ], className="custom-tab", selected_className="custom-tab--selected"),
@@ -2578,7 +2578,7 @@ def update_sentiment_components(score, category, custom_weights, document_data):
             value_text = f"{comp['value']:.1f}%"
         elif comp['indicator'] == '10-Year Treasury Yield':
             value_text = f"{comp['value']:.1f}%"
-        elif comp['indicator'] == 'VIX Volatility Index':
+        elif comp['indicator'] == 'VIX Volatility Index (14-day EMA)':
             value_text = f"{comp['value']:.1f}"
         elif comp['indicator'] == 'Consumer Sentiment':
             value_text = f"{comp['value']:.1f}"  # Display with one decimal place
@@ -6560,8 +6560,8 @@ def update_key_indicators(n):
             sorted_nasdaq = nasdaq_data.sort_values('date', ascending=False)
             latest_nasdaq = sorted_nasdaq.iloc[0]['value']
             if 'gap_pct' in sorted_nasdaq.columns:
-                latest_gap = sorted_nasdaq.iloc[0]['gap_pct']
-                nasdaq_value = f"{int(latest_nasdaq):,} ({latest_gap:.1f}%)"
+                # No longer showing gap percentage in the indicator card per client request
+                nasdaq_value = f"{int(latest_nasdaq):,}"
                 
                 # Add trend indicator
                 if len(sorted_nasdaq) >= 2:
