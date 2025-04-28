@@ -2053,45 +2053,83 @@ app.layout = html.Div([
                             html.H3("Key Economic Indicators", 
                                    style={"textAlign": "center", "fontSize": "1.5em", "color": "#666", "marginTop": "10px", "marginBottom": "20px"}),
                             html.Div([
-                                # Grid of key indicator cards
+                                # Grid of key indicator cards - exactly matching the sidebar indicators
+                                # Real GDP
                                 html.Div([
-                                    html.Div("GDP Growth", className="indicator-label"),
+                                    html.Div("Real GDP % Change", className="indicator-label"),
                                     html.Div(id="key-gdp-value", className="indicator-value")
                                 ], className="indicator-card"),
                                 
+                                # PCE
                                 html.Div([
-                                    html.Div("10Y Treasury", className="indicator-label"),
-                                    html.Div(id="key-treasury-value", className="indicator-value")
-                                ], className="indicator-card"),
-                                
-                                html.Div([
-                                    html.Div("VIX", className="indicator-label"),
-                                    html.Div(id="key-vix-value", className="indicator-value")
-                                ], className="indicator-card"),
-                                
-                                html.Div([
-                                    html.Div("Unemployment", className="indicator-label"),
-                                    html.Div(id="key-unemployment-value", className="indicator-value")
-                                ], className="indicator-card"),
-                                
-                                html.Div([
-                                    html.Div("PCE Inflation", className="indicator-label"),
+                                    html.Div("PCE", className="indicator-label"),
                                     html.Div(id="key-pce-value", className="indicator-value")
                                 ], className="indicator-card"),
                                 
+                                # Unemployment Rate
                                 html.Div([
-                                    html.Div("NASDAQ", className="indicator-label"),
+                                    html.Div("Unemployment Rate", className="indicator-label"),
+                                    html.Div(id="key-unemployment-value", className="indicator-value")
+                                ], className="indicator-card"),
+                                
+                                # Software Job Postings
+                                html.Div([
+                                    html.Div("Software Job Postings", className="indicator-label"),
+                                    html.Div(id="key-job-postings-value", className="indicator-value")
+                                ], className="indicator-card"),
+                                
+                                # Inflation (CPI)
+                                html.Div([
+                                    html.Div("Inflation (CPI)", className="indicator-label"),
+                                    html.Div(id="key-inflation-value", className="indicator-value")
+                                ], className="indicator-card"),
+                                
+                                # PCEPI (YoY)
+                                html.Div([
+                                    html.Div("PCEPI (YoY)", className="indicator-label"),
+                                    html.Div(id="key-pcepi-value", className="indicator-value")
+                                ], className="indicator-card"),
+                                
+                                # Fed Funds Rate
+                                html.Div([
+                                    html.Div("Fed Funds Rate", className="indicator-label"),
+                                    html.Div(id="key-interest-rate-value", className="indicator-value")
+                                ], className="indicator-card"),
+                                
+                                # NASDAQ Trend
+                                html.Div([
+                                    html.Div("NASDAQ Trend", className="indicator-label"),
                                     html.Div(id="key-nasdaq-value", className="indicator-value")
                                 ], className="indicator-card"),
                                 
+                                # PPI: Software Publishers
+                                html.Div([
+                                    html.Div("PPI: Software Publishers", className="indicator-label"),
+                                    html.Div(id="key-software-ppi-value", className="indicator-value")
+                                ], className="indicator-card"),
+                                
+                                # PPI: Data Processing Services
+                                html.Div([
+                                    html.Div("PPI: Data Processing Services", className="indicator-label"),
+                                    html.Div(id="key-data-ppi-value", className="indicator-value")
+                                ], className="indicator-card"),
+                                
+                                # 10-Year Treasury Yield
+                                html.Div([
+                                    html.Div("10-Year Treasury Yield", className="indicator-label"),
+                                    html.Div(id="key-treasury-yield-value", className="indicator-value")
+                                ], className="indicator-card"),
+                                
+                                # VIX Volatility Index
+                                html.Div([
+                                    html.Div("VIX Volatility Index", className="indicator-label"),
+                                    html.Div(id="key-vix-value", className="indicator-value")
+                                ], className="indicator-card"),
+                                
+                                # Consumer Sentiment
                                 html.Div([
                                     html.Div("Consumer Sentiment", className="indicator-label"),
                                     html.Div(id="key-consumer-sentiment-value", className="indicator-value")
-                                ], className="indicator-card"),
-                                
-                                html.Div([
-                                    html.Div("Fed Funds Rate", className="indicator-label"),
-                                    html.Div(id="key-fed-funds-value", className="indicator-value")
                                 ], className="indicator-card"),
                             ], className="key-indicators-grid")
                         ], id="key-indicators-section", style={
@@ -6276,72 +6314,115 @@ def toggle_key_indicators(n_clicks):
 # --- Update Key Indicator Values ---
 @app.callback(
     [Output("key-gdp-value", "children"),
-     Output("key-treasury-value", "children"),
-     Output("key-vix-value", "children"),
-     Output("key-unemployment-value", "children"),
      Output("key-pce-value", "children"),
+     Output("key-unemployment-value", "children"),
+     Output("key-job-postings-value", "children"),
+     Output("key-inflation-value", "children"),
+     Output("key-pcepi-value", "children"),
+     Output("key-interest-rate-value", "children"),
      Output("key-nasdaq-value", "children"),
-     Output("key-consumer-sentiment-value", "children"),
-     Output("key-fed-funds-value", "children")],
+     Output("key-software-ppi-value", "children"),
+     Output("key-data-ppi-value", "children"),
+     Output("key-treasury-yield-value", "children"),
+     Output("key-vix-value", "children"),
+     Output("key-consumer-sentiment-value", "children")],
     [Input("interval-component", "n_intervals")]
 )
 def update_key_indicators(n):
-    """Update all key indicator values with the latest data"""
+    """Update all key indicator values with the latest data using the exact same labels from the sidebar"""
     try:
-        # GDP Growth (latest YoY %)
+        # 1. Real GDP % Change 
         gdp_value = "N/A"
         if not gdp_data.empty:
             latest_gdp = gdp_data.sort_values('date', ascending=False).iloc[0]['value']
             gdp_value = f"{latest_gdp:.1f}%"
         
-        # 10-Year Treasury Yield
-        treasury_value = "N/A"
-        if not treasury_yield_data.empty:
-            latest_treasury = treasury_yield_data.sort_values('date', ascending=False).iloc[0]['value']
-            treasury_value = f"{latest_treasury:.2f}%"
+        # 2. PCE
+        pce_value = "N/A"
+        if not pce_data.empty:
+            latest_pce = pce_data.sort_values('date', ascending=False).iloc[0]['value']
+            pce_value = f"{latest_pce:.1f}%"
         
-        # VIX
-        vix_value = "N/A"
-        if not vix_data.empty:
-            latest_vix = vix_data.sort_values('date', ascending=False).iloc[0]['value']
-            vix_value = f"{latest_vix:.1f}"
-        
-        # Unemployment Rate
+        # 3. Unemployment Rate
         unemployment_value = "N/A"
         if not unemployment_data.empty:
             latest_unemployment = unemployment_data.sort_values('date', ascending=False).iloc[0]['value']
             unemployment_value = f"{latest_unemployment:.1f}%"
         
-        # PCE Inflation (YoY %)
-        pce_value = "N/A"
-        if not pcepi_data.empty and 'yoy_pct_change' in pcepi_data.columns:
-            latest_pcepi = pcepi_data.sort_values('date', ascending=False).iloc[0]['yoy_pct_change']
-            pce_value = f"{latest_pcepi:.1f}%"
+        # 4. Software Job Postings
+        job_postings_value = "N/A"
+        if not job_postings_data.empty and 'yoy_growth' in job_postings_data.columns:
+            latest_job_postings = job_postings_data.sort_values('date', ascending=False).iloc[0]['yoy_growth']
+            job_postings_value = f"{latest_job_postings:.1f}%"
         
-        # NASDAQ Composite
+        # 5. Inflation (CPI)
+        inflation_value = "N/A"
+        if not inflation_data.empty and 'inflation' in inflation_data.columns:
+            latest_inflation = inflation_data.sort_values('date', ascending=False).iloc[0]['inflation']
+            inflation_value = f"{latest_inflation:.1f}%"
+        
+        # 6. PCEPI (YoY)
+        pcepi_value = "N/A"
+        if not pcepi_data.empty and 'yoy_growth' in pcepi_data.columns:
+            latest_pcepi = pcepi_data.sort_values('date', ascending=False).iloc[0]['yoy_growth']
+            pcepi_value = f"{latest_pcepi:.1f}%"
+        
+        # 7. Fed Funds Rate
+        interest_rate_value = "N/A"
+        if not interest_rate_data.empty:
+            latest_rate = interest_rate_data.sort_values('date', ascending=False).iloc[0]['value']
+            interest_rate_value = f"{latest_rate:.2f}%"
+        
+        # 8. NASDAQ Trend
         nasdaq_value = "N/A"
         if not nasdaq_data.empty:
             latest_nasdaq = nasdaq_data.sort_values('date', ascending=False).iloc[0]['value']
-            # Format with commas for thousands
-            nasdaq_value = f"{int(latest_nasdaq):,}"
+            if 'gap_pct' in nasdaq_data.columns:
+                latest_gap = nasdaq_data.sort_values('date', ascending=False).iloc[0]['gap_pct']
+                nasdaq_value = f"{int(latest_nasdaq):,} ({latest_gap:.1f}%)"
+            else:
+                nasdaq_value = f"{int(latest_nasdaq):,}"
         
-        # Consumer Sentiment
+        # 9. PPI: Software Publishers
+        software_ppi_value = "N/A"
+        if not software_ppi_data.empty and 'yoy_pct_change' in software_ppi_data.columns:
+            latest_software_ppi = software_ppi_data.sort_values('date', ascending=False).iloc[0]['yoy_pct_change']
+            software_ppi_value = f"{latest_software_ppi:.1f}%"
+        
+        # 10. PPI: Data Processing Services
+        data_ppi_value = "N/A"
+        if not data_processing_ppi_data.empty and 'yoy_pct_change' in data_processing_ppi_data.columns:
+            latest_data_ppi = data_processing_ppi_data.sort_values('date', ascending=False).iloc[0]['yoy_pct_change']
+            data_ppi_value = f"{latest_data_ppi:.1f}%"
+        
+        # 11. 10-Year Treasury Yield
+        treasury_yield_value = "N/A"
+        if not treasury_yield_data.empty:
+            latest_treasury = treasury_yield_data.sort_values('date', ascending=False).iloc[0]['value']
+            treasury_yield_value = f"{latest_treasury:.2f}%"
+        
+        # 12. VIX Volatility Index
+        vix_value = "N/A"
+        if not vix_data.empty:
+            latest_vix = vix_data.sort_values('date', ascending=False).iloc[0]['value']
+            vix_value = f"{latest_vix:.1f}"
+        
+        # 13. Consumer Sentiment
         consumer_sentiment_value = "N/A"
         if not consumer_sentiment_data.empty:
             latest_cs = consumer_sentiment_data.sort_values('date', ascending=False).iloc[0]['value']
             consumer_sentiment_value = f"{latest_cs:.1f}"
         
-        # Fed Funds Rate
-        fed_funds_value = "N/A"
-        if not interest_rate_data.empty:
-            latest_rate = interest_rate_data.sort_values('date', ascending=False).iloc[0]['value']
-            fed_funds_value = f"{latest_rate:.2f}%"
-        
-        return gdp_value, treasury_value, vix_value, unemployment_value, pce_value, nasdaq_value, consumer_sentiment_value, fed_funds_value
+        return (
+            gdp_value, pce_value, unemployment_value, job_postings_value, 
+            inflation_value, pcepi_value, interest_rate_value, nasdaq_value,
+            software_ppi_value, data_ppi_value, treasury_yield_value, 
+            vix_value, consumer_sentiment_value
+        )
     
     except Exception as e:
         print(f"Error updating key indicators: {e}")
-        return "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A"
+        return "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A"
 
 # Add this at the end of the file if running directly
 if __name__ == "__main__":
