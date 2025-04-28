@@ -5534,9 +5534,12 @@ def update_vix_graph(n):
         showlegend=True
     ))
     
-    # Add current value annotations
-    current_value = filtered_data['value'].iloc[-1]
-    previous_value = filtered_data['value'].iloc[-2]
+    # Sort data by date (newest first) for current values
+    sorted_data = filtered_data.sort_values('date', ascending=False)
+    
+    # Add current value annotations using newest data
+    current_value = sorted_data['value'].iloc[0]
+    previous_value = sorted_data['value'].iloc[1] if len(sorted_data) > 1 else current_value
     change = current_value - previous_value
     
     # For VIX, up is negative (fear) and down is positive (calm)
@@ -5544,8 +5547,8 @@ def update_vix_graph(n):
     arrow_symbol = "▲" if change > 0 else "▼"
     
     # Show both raw VIX and smoothed EMA value
-    if 'vix_ema14' in filtered_data.columns:
-        current_ema = filtered_data['vix_ema14'].iloc[-1]
+    if 'vix_ema14' in sorted_data.columns:
+        current_ema = sorted_data['vix_ema14'].iloc[0]
         current_value_annotation = f"VIX: {current_value:.2f} {arrow_symbol} {abs(change):.2f}  |  14-Day EMA: {current_ema:.2f}"
     else:
         current_value_annotation = f"VIX: {current_value:.2f} {arrow_symbol} {abs(change):.2f}"
