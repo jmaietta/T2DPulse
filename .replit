@@ -76,6 +76,22 @@ args = "Zero Weight Dashboard"
 task = "workflow.run"
 args = "Zero Weight Test"
 
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "Key Indicators Layout Mockup"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "Layout Options Mockup"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "Sidebar Mockup"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "Below Layout Mockup"
+
 [[workflows.workflow]]
 name = "Economic Dashboard Server"
 author = "agent"
@@ -244,6 +260,42 @@ task = "shell.exec"
 args = "python zero_weight_test.py"
 waitForPort = 5050
 
+[[workflows.workflow]]
+name = "Key Indicators Layout Mockup"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "python key_indicators_sidebar_mockup.py"
+waitForPort = 5000
+
+[[workflows.workflow]]
+name = "Layout Options Mockup"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "python layouts_mockup.py"
+waitForPort = 5000
+
+[[workflows.workflow]]
+name = "Sidebar Mockup"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "python mockup_sidebar.py"
+waitForPort = 5100
+
+[[workflows.workflow]]
+name = "Below Layout Mockup"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "python mockup_below.py"
+waitForPort = 5101
+
 [deployment]
 run = ["sh", "-c", "python wsgi.py"]
 deploymentTarget = "cloudrun"
@@ -291,3 +343,11 @@ externalPort = 6800
 [[ports]]
 localPort = 5050
 externalPort = 8000
+
+[[ports]]
+localPort = 5100
+externalPort = 8008
+
+[[ports]]
+localPort = 5101
+externalPort = 8080
