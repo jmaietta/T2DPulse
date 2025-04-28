@@ -6391,17 +6391,17 @@ def update_key_indicators(n):
         if not gdp_data.empty:
             sorted_gdp = gdp_data.sort_values('date', ascending=False)
             
-            # Calculate GDP quarterly growth rate (QoQ) - match exact format from sidebar
-            if 'value' in sorted_gdp.columns and len(sorted_gdp) >= 2:
-                current = sorted_gdp.iloc[0]['value']
-                previous = sorted_gdp.iloc[1]['value']
-                pct_change = ((current - previous) / previous) * 100
-                gdp_value = f"{pct_change:.1f}%"
+            # Use the YoY growth percentage that's already calculated in the CSV file
+            if 'yoy_growth' in sorted_gdp.columns and len(sorted_gdp) >= 1:
+                # Use the pre-calculated YoY growth value
+                latest_gdp_yoy = sorted_gdp.iloc[0]['yoy_growth']
+                gdp_value = f"{latest_gdp_yoy:.1f}%"
                 
                 # Add trend indicator
-                if len(sorted_gdp) >= 3:
-                    prev_change = ((previous - sorted_gdp.iloc[2]['value']) / sorted_gdp.iloc[2]['value']) * 100
-                    change = pct_change - prev_change
+                if len(sorted_gdp) >= 2 and 'yoy_growth' in sorted_gdp.columns:
+                    current_yoy = sorted_gdp.iloc[0]['yoy_growth']
+                    previous_yoy = sorted_gdp.iloc[1]['yoy_growth']
+                    change = current_yoy - previous_yoy
                     
                     icon = "↑" if change >= 0 else "↓"
                     color = "trend-up" if change >= 0 else "trend-down"
