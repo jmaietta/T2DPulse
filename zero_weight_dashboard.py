@@ -88,6 +88,87 @@ def create_sector_card(sector, score, weight=None):
     
     return card
 
+# Create a stylesheets folder and file if it doesn't exist
+import os
+if not os.path.exists('assets'):
+    os.makedirs('assets')
+    
+# Write the CSS to a file
+with open('assets/zero_weight_dashboard.css', 'w') as f:
+    f.write("""
+    .dashboard-container {
+        display: flex;
+        flex-direction: row;
+        font-family: Arial, sans-serif;
+    }
+    .settings-panel {
+        flex: 1;
+        padding: 20px;
+        background-color: #f5f5f5;
+        border-radius: 8px;
+        margin-right: 20px;
+    }
+    .results-panel {
+        flex: 1;
+        padding: 20px;
+        background-color: #f5f5f5;
+        border-radius: 8px;
+    }
+    .sector-cards {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+    .sector-card {
+        background-color: white;
+        border-radius: 5px;
+        padding: 10px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .sector-header {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+    }
+    .sector-name {
+        font-weight: bold;
+    }
+    .sector-score {
+        font-weight: bold;
+    }
+    .weight-controls {
+        display: flex;
+        align-items: center;
+    }
+    .weight-input {
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        padding: 5px;
+    }
+    .total-weight {
+        font-weight: bold;
+        margin-top: 10px;
+        font-size: 16px;
+    }
+    .weighted-score {
+        font-size: 48px;
+        font-weight: bold;
+        text-align: center;
+        margin-top: 20px;
+        padding: 20px;
+        border-radius: 8px;
+    }
+    .date-display {
+        margin-top: 20px;
+        font-style: italic;
+        color: #666;
+    }
+    .input-highlight {
+        box-shadow: 0 0 5px 2px rgba(46, 204, 113, 0.5);
+    }
+    """)
+
 # App layout
 app.layout = html.Div([
     html.H1("Zero Weight Sector Test"),
@@ -130,84 +211,8 @@ app.layout = html.Div([
             # Hidden div for storing weights
             html.Div(id="stored-weights", style={"display": "none"}),
         ], className="results-panel"),
-    ], className="dashboard-container"),
-    
-    # Add some basic styles using a style tag
-    html.Div([
-        html.Style("""
-        .dashboard-container {
-            display: flex;
-            flex-direction: row;
-            font-family: Arial, sans-serif;
-        }
-        .settings-panel {
-            flex: 1;
-            padding: 20px;
-            background-color: #f5f5f5;
-            border-radius: 8px;
-            margin-right: 20px;
-        }
-        .results-panel {
-            flex: 1;
-            padding: 20px;
-            background-color: #f5f5f5;
-            border-radius: 8px;
-        }
-        .sector-cards {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            margin-bottom: 20px;
-        }
-        .sector-card {
-            background-color: white;
-            border-radius: 5px;
-            padding: 10px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        .sector-header {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 10px;
-        }
-        .sector-name {
-            font-weight: bold;
-        }
-        .sector-score {
-            font-weight: bold;
-        }
-        .weight-controls {
-            display: flex;
-            align-items: center;
-        }
-        .weight-input {
-            border: 1px solid #ccc;
-            border-radius: 3px;
-            padding: 5px;
-        }
-        .total-weight {
-            font-weight: bold;
-            margin-top: 10px;
-            font-size: 16px;
-        }
-        .weighted-score {
-            font-size: 48px;
-            font-weight: bold;
-            text-align: center;
-            margin-top: 20px;
-            padding: 20px;
-            border-radius: 8px;
-        }
-        .date-display {
-            margin-top: 20px;
-            font-style: italic;
-            color: #666;
-        }
-        .input-highlight {
-            box-shadow: 0 0 5px 2px rgba(46, 204, 113, 0.5);
-        }
-    """)
-    ])
+    ], className="dashboard-container")
+])
 
 # Initialize the sector cards
 @app.callback(
@@ -358,4 +363,5 @@ def update_total_weight(weights_json):
 
 # Run the app
 if __name__ == "__main__":
-    app.run_server(debug=True, host="0.0.0.0", port=5050)
+    # Using app.run instead of app.run_server (which is deprecated in newer Dash versions)
+    app.run(debug=True, host="0.0.0.0", port=5252)

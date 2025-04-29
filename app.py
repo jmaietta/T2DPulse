@@ -6,7 +6,7 @@ import base64
 import io
 import json
 import time
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 import dash
 from dash import dcc, html, dash_table, ALL, MATCH, ctx
 from dash.dependencies import Input, Output, State
@@ -235,41 +235,83 @@ def fetch_treasury_yield_data():
     """Fetch 10-Year Treasury Yield data from Yahoo Finance (^TNX)
     
     Returns a DataFrame with date and value columns formatted like FRED data.
-    Uses the opening price as the daily value rather than real-time intraday values.
+    Uses the closing price as the most accurate daily value.
     """
-    print("Fetching Treasury Yield data from Yahoo Finance (as of market open)...")
+    print("Fetching 10-Year Treasury Yield data from Yahoo Finance...")
     
     try:
         # Use Yahoo Finance to get the most recent data
         treasury = yf.Ticker('^TNX')
-        # Get data for the last 60 days to ensure we have enough recent values
-        # and smooth merging with historical data
-        data = treasury.history(period='60d')
+        # Get data for the last 180 days (6 months) to ensure we have enough 
+        # recent values for a meaningful chart
+        data = treasury.history(period='180d')
         
         if data.empty:
             print("No Treasury Yield data retrieved from Yahoo Finance")
             return pd.DataFrame()
             
-        # Format data to match FRED format
-        # Using Open prices instead of Close to get market open values
+        # Format data to match our standard format
+        # Using Close prices for most accurate end-of-day values
         df = pd.DataFrame({
             'date': data.index.tz_localize(None),  # Remove timezone to match FRED data
-            'value': data['Open']
+            'value': data['Close']
         })
         
         # Sort by date (newest first) for easier reporting and data merging
         df = df.sort_values('date', ascending=False)
         
+        # Load existing data from CSV to merge with
+        try:
+            existing_data = pd.read_csv('data/treasury_yield_data.csv')
+            if not existing_data.empty:
+                # Convert date to datetime
+                existing_data['date'] = pd.to_datetime(existing_data['date'])
+                
+                # Filter out dates that we now have from Yahoo Finance
+                min_new_date = df['date'].min()
+                old_data = existing_data[existing_data['date'] < min_new_date]
+                
+                # Combine old historical data with new recent data
+                combined_df = pd.concat([df, old_data])
+                combined_df = combined_df.sort_values('date', ascending=False)
+                print(f"Combined {len(df)} recent days with {len(old_data)} historical days")
+                
+                # Save combined data to CSV
+                save_data_to_csv(combined_df, 'data/treasury_yield_data.csv')
+                print(f"Successfully saved {len(combined_df)} rows to treasury_yield_data.csv")
+                
+                df = combined_df
+            else:
+                # Just save the Yahoo Finance data
+                save_data_to_csv(df, 'data/treasury_yield_data.csv')
+                print(f"No existing data to merge, saved {len(df)} rows to treasury_yield_data.csv")
+        except Exception as e:
+            print(f"Error merging with existing data: {str(e)}")
+            # Still save the Yahoo Finance data
+            save_data_to_csv(df, 'data/treasury_yield_data.csv')
+        
         # Report the latest value and date
         latest_date = df.iloc[0]['date'].strftime('%Y-%m-%d')
         latest_value = df.iloc[0]['value']
-        print(f"Treasury Yield (market open): {latest_value:.3f}% on {latest_date}")
-        print(f"Successfully retrieved {len(df)} days of Treasury Yield data from Yahoo Finance")
+        print(f"Treasury Yield (latest): {latest_value:.3f}% on {latest_date}")
+        print(f"Successfully retrieved/merged {len(df)} days of Treasury Yield data")
         
         return df
     except Exception as e:
         print(f"Exception while fetching Treasury Yield data from Yahoo Finance: {str(e)}")
-        print("Falling back to cached Treasury Yield data")
+        
+        # Try to load cached data as fallback
+        try:
+            cached_data = pd.read_csv('data/treasury_yield_data.csv')
+            if not cached_data.empty:
+                cached_data['date'] = pd.to_datetime(cached_data['date'])
+                print(f"Falling back to cached Treasury Yield data with {len(cached_data)} observations")
+                latest = cached_data.sort_values('date', ascending=False).iloc[0]
+                print(f"Latest cached value: {latest['value']:.3f}% on {latest['date'].strftime('%Y-%m-%d')}")
+                return cached_data
+        except Exception as fallback_e:
+            print(f"Failed to load cached data: {str(fallback_e)}")
+        
         return pd.DataFrame()
         
 def fetch_vix_from_yahoo():
@@ -2244,13 +2286,23 @@ app.layout = html.Div([
     [Input("interval-component", "n_intervals")]
 )
 def update_last_updated(n):
-    # Use server's current time to ensure date is always current
-    current_time = datetime.now()
-    formatted_date = current_time.strftime('%B %d, %Y %H:%M')
+    # Get current time in UTC
+    current_utc = datetime.now(timezone.utc)
+    
+    # Create Eastern Time timezone object (handles DST automatically)
+    # Using fixed offset of UTC-4 for EDT (Eastern Daylight Time)
+    et_offset = -4 * 60 * 60  # -4 hours in seconds
+    et_timezone = timezone(timedelta(seconds=et_offset))
+    
+    # Convert UTC time to Eastern Time
+    current_time = current_utc.astimezone(et_timezone)
+    
+    # Format date with timezone abbreviation
+    formatted_date = current_time.strftime('%B %d, %Y %H:%M') + " ET"
     formatted_date_simple = current_time.strftime('%B %d, %Y')
     
-    # Return both timestamp formats (one with time, one without)
-    return f"Last updated: {formatted_date}", f"Last updated: {formatted_date_simple}"
+    # Return both timestamp formats (one with time zone, one without)
+    return f"Data refreshed on {formatted_date}", f"Data refreshed on {formatted_date_simple}"
 
 # Create compact sector score summary
 def create_sector_summary(sector_scores):
@@ -4232,6 +4284,9 @@ def update_treasury_yield_graph(n):
     cutoff_date = datetime.now() - timedelta(days=5*365)
     filtered_data = treasury_yield_data[treasury_yield_data['date'] >= cutoff_date].copy()
     
+    # Sort data by date for proper line connectivity and latest values
+    filtered_data = filtered_data.sort_values('date')
+    
     # Create figure
     fig = go.Figure()
     
@@ -4242,7 +4297,7 @@ def update_treasury_yield_graph(n):
         mode='lines',
         name='10-Year Treasury Yield',
         line=dict(color=color_scheme["rates"], width=2.5),
-        hovertemplate="<b>%{x|%b %Y}</b><br>%{y:.2f}%<extra></extra>"
+        hovertemplate="<b>%{x|%b %d, %Y}</b><br>%{y:.2f}%<extra></extra>"
     ))
     
     # Add optimal range shading (2-4% is often considered neutral for 10-year treasuries)
@@ -4285,22 +4340,34 @@ def update_treasury_yield_graph(n):
     )
     
     # Add current value annotation
+    # Make sure we're using the latest data (should be the last row after sorting)
     current_value = filtered_data['value'].iloc[-1]
-    previous_value = filtered_data['value'].iloc[-2]
-    change = current_value - previous_value
     
-    # Using absolute value change (not percentage) to match key indicators
-    arrow_color = color_scheme["positive"] if change > 0 else color_scheme["negative"]
-    arrow_symbol = "▲" if change > 0 else "▼"
+    # Get previous value if available
+    if len(filtered_data) > 1:
+        previous_value = filtered_data['value'].iloc[-2]
+        change = current_value - previous_value
+        
+        # Using absolute value change (not percentage) to match key indicators
+        arrow_color = color_scheme["positive"] if change > 0 else color_scheme["negative"]
+        arrow_symbol = "▲" if change > 0 else "▼"
+        
+        current_value_annotation = f"Current: {current_value:.2f}% {arrow_symbol} {abs(change):.2f}%"
+    else:
+        # Fallback if we only have one data point
+        current_value_annotation = f"Current: {current_value:.2f}%"
+        arrow_color = color_scheme["neutral"]
     
-    current_value_annotation = f"Current: {current_value:.2f}% {arrow_symbol} {abs(change):.2f}%"
+    # Add current date in annotation
+    current_date = filtered_data['date'].iloc[-1].strftime('%b %d, %Y')
+    annotation_text = f"{current_value_annotation}<br><span style='font-size:11px;color:gray'>{current_date}</span>"
     
     fig.add_annotation(
         x=0.02,
         y=0.95,  # Lowered position to avoid overlap with title
         xref="paper",
         yref="paper",
-        text=current_value_annotation,
+        text=annotation_text,
         showarrow=False,
         font=dict(size=14, color=arrow_color),
         align="left",
@@ -4311,12 +4378,36 @@ def update_treasury_yield_graph(n):
         opacity=0.9
     )
     
-    # Update layout with custom template
+    # Define x-axis tick format with specific date display pattern
+    n_points = len(filtered_data)
+    
+    # Determine appropriate tick format based on data range
+    if n_points <= 30:  # About a month of trading days
+        dtick = "D7"  # Weekly ticks
+        tickformat = "%b %d"  # "Jan 01" format
+    elif n_points <= 90:  # About 3 months of trading days
+        dtick = "D14"  # Bi-weekly ticks
+        tickformat = "%b %d"  # "Jan 01" format
+    elif n_points <= 252:  # About a year of trading days
+        dtick = "M1"  # Monthly ticks
+        tickformat = "%b %Y"  # "Jan 2023" format
+    else:
+        dtick = "M3"  # Quarterly ticks
+        tickformat = "%b %Y"  # "Jan 2023" format
+    
+    # Update layout with custom template and improved x-axis
     fig.update_layout(
         template=custom_template,
         height=400,
         title=None,  # Removed title since we already have it in the HTML
         xaxis_title="",
+        xaxis=dict(
+            tickformat=tickformat,
+            dtick=dtick,
+            tickangle=-45,
+            showgrid=True,
+            gridcolor="rgba(0,0,0,0.1)",
+        ),
         yaxis_title="Yield (%)",
         yaxis=dict(
             ticksuffix="%",

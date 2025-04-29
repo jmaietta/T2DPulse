@@ -261,4 +261,5 @@ for sector in sector_weights.keys():
 
 # Run the app
 if __name__ == "__main__":
-    app.run_server(debug=True, host="0.0.0.0", port=5050)
+    # Using app.run instead of app.run_server (which is deprecated in newer Dash versions)
+    app.run(debug=True, host="0.0.0.0", port=5151)
