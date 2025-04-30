@@ -139,7 +139,11 @@ def generate_realistic_history(sector_name, current_score, days=30):
     # If we couldn't get real market data, use a more dynamic random approach
     if not indicator_dfs:
         import random
-        random.seed(hash(sector_name))  # Use sector name as seed for reproducibility
+        print(f"No indicator data available for {sector_name}, using random walk approach")
+        
+        # Use sector name hash for unique but reproducible pattern
+        sector_hash = hash(sector_name)
+        random.seed(sector_hash)  # Different seed for each sector
         
         # Generate a series of dates
         dates = [today - timedelta(days=i) for i in range(days, 0, -1)]
@@ -148,26 +152,32 @@ def generate_realistic_history(sector_name, current_score, days=30):
         trend = []
         last_score = current_score
         
+        # Make each sector's volatility unique
+        base_volatility = 1.5
+        sector_volatility = base_volatility * (0.5 + ((sector_hash % 10) / 10))
+        
+        print(f"  Sector: {sector_name}, Hash: {sector_hash}, Volatility: {sector_volatility:.2f}")
+        
+        # Different trend directions based on sector hash
+        trend_direction = (sector_hash % 3) - 1  # -1, 0, or 1
+        
+        # Different cycle periods based on sector hash
+        cycle_period = 5 + (sector_hash % 7)  # 5 to 11 day cycles
+        
         # Create a more realistic random walk with momentum
         momentum = 0
-        volatility = 1.5  # Higher than before for more variation
         
         for i in range(len(dates)):
-            # Random component with momentum
-            momentum = momentum * 0.85 + random.uniform(-1, 1) * volatility
+            # Random component with momentum (unique to each sector due to seed)
+            momentum = momentum * 0.85 + random.uniform(-1, 1) * sector_volatility
             
-            # Add cyclical component (sine wave)
-            cyclical = np.sin(i / 5) * 2  # 5-day cycle with amplitude 2
+            # Add cyclical component (sine wave with sector-specific period)
+            cyclical = np.sin(i / cycle_period) * 2
             
-            # Add trend component based on sector (some trending up, others down)
-            if hash(sector_name) % 3 == 0:  # Trending up
-                trend_component = i * 0.1
-            elif hash(sector_name) % 3 == 1:  # Trending down
-                trend_component = -i * 0.1
-            else:  # No trend
-                trend_component = 0
+            # Add trend component based on sector hash
+            trend_component = i * 0.1 * trend_direction
                 
-            # Calculate new score
+            # Calculate new score 
             new_score = last_score + momentum + cyclical + trend_component
             
             # Ensure score is within bounds
@@ -254,6 +264,8 @@ def update_sentiment_history(sector_scores):
     # Get current date (no time component)
     today = datetime.now().replace(hour=0, minute=0, second=0, microsecond=0)
     
+    print(f"Updating sentiment history for {len(sector_scores)} sectors")
+    
     # Update history with new scores
     for sector_data in sector_scores:
         sector_name = sector_data['sector']
@@ -261,8 +273,16 @@ def update_sentiment_history(sector_scores):
         
         # Initialize history for new sectors
         if sector_name not in history:
+            print(f"Generating new history for {sector_name} with current score {score}")
             # Create initial history with realistic variations based on market data
             history[sector_name] = generate_realistic_history(sector_name, score)
+            
+            # Debug: Print the first and last few scores to verify unique patterns
+            if history[sector_name]:
+                scores = [f"{date.strftime('%m-%d')}: {score:.1f}" for date, score in history[sector_name][:3]]
+                scores += ["..."] 
+                scores += [f"{date.strftime('%m-%d')}: {score:.1f}" for date, score in history[sector_name][-3:]]
+                print(f"  {sector_name} history sample: {', '.join(scores)}")
         
         # Check if we already have an entry for today
         has_today = any(date.date() == today.date() for date, _ in history[sector_name])
@@ -270,6 +290,7 @@ def update_sentiment_history(sector_scores):
         if not has_today:
             # Add new data point
             history[sector_name].append((today, score))
+            print(f"Added today's score for {sector_name}: {score}")
             
             # Trim history to keep only the last HISTORY_LENGTH days
             if len(history[sector_name]) > HISTORY_LENGTH:
