@@ -11,6 +11,7 @@ import dash
 from dash import dcc, html, dash_table, ALL, MATCH, ctx
 from dash.dependencies import Input, Output, State
 from dash.exceptions import PreventUpdate
+import flask
 import plotly.graph_objs as go
 import plotly.express as px
 import yfinance as yf
@@ -6936,7 +6937,8 @@ def download_file(filename):
         export_sector_history.main()
     
     # Now serve the file (whether it existed before or was just created)
-    return flask.send_from_directory(
+    from flask import send_from_directory
+    return send_from_directory(
         directory="data",
         path=filename,
         as_attachment=True
