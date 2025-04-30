@@ -23,6 +23,11 @@ update_cache(data)
 # Now import the app (this will use the data we've already fetched from the cache)
 from app import app
 
+# Generate historical sector sentiment data for trend charts
+print("Generating historical sector trend data...")
+import historical_sector_scores
+historical_sector_scores.update_sector_history_with_historical_data()
+
 # Start the server
 print(f"Starting T2D Pulse server at {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
 print(f"Total initialization time: {time.time() - start_time:.2f} seconds")
