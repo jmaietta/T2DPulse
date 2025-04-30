@@ -5900,11 +5900,12 @@ def update_sector_sentiment_container(n):
             "flexDirection": "column",
             "height": "100%",
             "minHeight": "460px",  # Set a minimum height for consistent card size
-            "border": f"1px solid {border_color}",  # Explicit border
+            "border": f"2px solid {border_color}",  # Thicker border for emphasis
             "borderRadius": "8px",  # Rounded corners
-            "boxShadow": "0 2px 6px rgba(0,0,0,0.1)",  # Subtle shadow
+            "boxShadow": "0 4px 8px rgba(0,0,0,0.1)",  # Enhanced shadow
             "margin": "0",  # Reset margin
-            "overflow": "hidden"  # Ensure contents don't overflow
+            "overflow": "hidden",  # Ensure contents don't overflow
+            "backgroundColor": "#ffffff"  # Ensure white background
         })
         
         sector_cards.append(card)
@@ -5971,8 +5972,9 @@ def update_sector_sentiment_container(n):
         html.Div(sector_cards, className="sector-cards-grid",
                 style={"display": "grid", 
                        "gridTemplateColumns": "repeat(auto-fill, minmax(320px, 1fr))",
-                       "gap": "25px",  # Increased gap between cards
-                       "padding": "5px"}),  # Add padding to the grid container
+                       "gap": "40px",  # Significantly increased gap between cards
+                       "padding": "10px",  # Increased padding around the grid
+                       "marginBottom": "30px"}),  # Add bottom margin
         
         # Hidden div to store weights, initially populated with JSON of sector weights
         html.Div(id="stored-weights", 
