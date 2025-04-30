@@ -65,6 +65,30 @@ def get_authentic_sector_history(sector_name=None):
         print(f"Error loading authentic sector history: {e}")
         return {} if sector_name is None else None
 
+def update_authentic_history(sector_scores=None, force_update=False):
+    """
+    Update the authentic sector history with new scores or ensure it's loaded
+    
+    Args:
+        sector_scores (list, optional): List of sector dictionaries with 'sector' and 'score' keys
+        force_update (bool, optional): Whether to force update even if scores are None
+        
+    Returns:
+        bool: True if successful, False otherwise
+    """
+    if sector_scores:
+        # If we have new scores, save them
+        return save_authentic_sector_history(sector_scores)
+    elif force_update:
+        # Load the history if needed, but don't change it
+        history = get_authentic_sector_history()
+        if history:
+            print(f"Loaded authentic sector history for {len(history)} sectors")
+        else:
+            print("No authentic sector history found")
+        return True
+    return False
+
 def save_authentic_sector_history(sector_scores):
     """
     Save sector scores to authentic history file

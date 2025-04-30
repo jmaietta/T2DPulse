@@ -17,6 +17,11 @@ TREND_COLORS = {
     'highlight': '#F39C12'       # Highlight color (orange)
 }
 
+# Alias function name to match what's expected in app.py
+def create_sector_trend_chart(sector_name, height=50, show_axes=False, auto_range=True):
+    """Alias for create_mini_trend_chart to match the function name used in app.py"""
+    return create_mini_trend_chart(sector_name, height, show_axes, auto_range)
+    
 def create_mini_trend_chart(sector_name, height=50, show_axes=False, auto_range=True):
     """
     Create a mini trend chart for a sector using authentic historical data
