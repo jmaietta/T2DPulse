@@ -6,7 +6,7 @@
 import plotly.graph_objects as go
 import pandas as pd
 from datetime import datetime, timedelta
-from authentic_sector_history import get_sector_history_dataframe
+from predefined_sector_data import get_sector_history_dataframe
 
 def get_chart_color(score_value):
     """Get the appropriate color based on the sentiment score"""
