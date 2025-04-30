@@ -5823,7 +5823,7 @@ def update_sector_sentiment_container(n):
                                 style={"fontSize": "13px", "marginBottom": "5px", "color": "#666"}),
                         dcc.Graph(
                             id={"type": "sector-trend-chart", "index": sector},
-                            figure=sector_trend_chart.create_sector_trend_chart(sector),
+                            figure=sector_trend_chart.create_sector_trend_chart(sector_name=sector),
                             config={"displayModeBar": False, "staticPlot": True},
                             style={"height": "85px", "width": "100%"}
                         )
