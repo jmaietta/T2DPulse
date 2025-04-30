@@ -18,11 +18,11 @@ TREND_COLORS = {
 }
 
 # Alias function name to match what's expected in app.py
-def create_sector_trend_chart(sector_name, height=50, show_axes=False, auto_range=True):
+def create_sector_trend_chart(sector_name, height=50, show_axes=False, auto_range=True, show_value=False):
     """Alias for create_mini_trend_chart to match the function name used in app.py"""
-    return create_mini_trend_chart(sector_name, height, show_axes, auto_range)
+    return create_mini_trend_chart(sector_name, height, show_axes, auto_range, show_value)
     
-def create_mini_trend_chart(sector_name, height=50, show_axes=False, auto_range=True):
+def create_mini_trend_chart(sector_name, height=50, show_axes=False, auto_range=True, show_value=False):
     """
     Create a mini trend chart for a sector using authentic historical data
     
@@ -31,6 +31,7 @@ def create_mini_trend_chart(sector_name, height=50, show_axes=False, auto_range=
         height (int, optional): Height of the chart in pixels
         show_axes (bool, optional): Whether to show axes
         auto_range (bool, optional): Whether to auto-range the y-axis
+        show_value (bool, optional): Whether to show the latest value annotation
         
     Returns:
         dict: Plotly figure object
