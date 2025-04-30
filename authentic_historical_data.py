@@ -1,32 +1,20 @@
 #!/usr/bin/env python3
 # authentic_historical_data.py
 # -----------------------------------------------------------
-# Calculate authentic historical sector sentiment scores using direct API data
-# This uses real API calls to get historical data for each date (business days only)
+# Calculate authentic historical sector sentiment scores using real data
+# for business days only (excluding weekends)
 
 import os
 import pandas as pd
 import numpy as np
-from datetime import datetime, timedelta, date
+from datetime import datetime, timedelta
 import json
 from pandas.tseries.offsets import BDay
 import time
 
-# Import API functions from app.py
-from app import (
-    fetch_fred_data, 
-    fetch_bea_data, 
-    fetch_treasury_yield_data,
-    fetch_vix_from_yahoo,
-    fetch_nasdaq_with_ema,
-    fetch_consumer_sentiment_data,
-    fetch_bls_data,
-    calculate_sector_sentiment,
-    calculate_t2d_pulse_from_sectors
-)
-
 # Import sentiment engine components
 from sentiment_engine import SECTORS, IMPACT, IMPORTANCE, score_sectors
+from app import calculate_t2d_pulse_from_sectors
 
 # Constants
 HISTORY_LENGTH = 20  # Number of business days to keep in history
@@ -56,201 +44,98 @@ def get_business_days(days_back=HISTORY_LENGTH):
     
     return business_days
 
-def fetch_indicator_data_for_date(indicator, date_to_fetch):
+def fetch_indicator_value_from_file(indicator, date_to_fetch):
     """
-    Fetch a specific indicator's data for a specific date from the appropriate API
+    Get indicator value from local CSV files for a specific date
     
     Args:
-        indicator (str): The indicator to fetch (e.g., "10Y_Treasury_Yield_%")
-        date_to_fetch (datetime): The date to fetch data for
+        indicator (str): The indicator name
+        date_to_fetch (datetime): The date to get data for
     
     Returns:
-        float: The value for the indicator on the specified date
+        float: The indicator value, or None if not available
     """
-    # Format date for API calls
-    date_str = date_to_fetch.strftime('%Y-%m-%d')
+    # Map indicators to CSV files
+    file_mapping = {
+        "10Y_Treasury_Yield_%": "treasury_yield_data.csv",
+        "VIX": "vix_data.csv",
+        "NASDAQ_20d_gap_%": "nasdaq_data.csv",
+        "Fed_Funds_Rate_%": "interest_rate_data.csv",
+        "CPI_YoY_%": "inflation_data.csv",
+        "PCEPI_YoY_%": "pcepi_data.csv",
+        "Real_GDP_Growth_%_SAAR": "gdp_data.csv",
+        "Real_PCE_YoY_%": "pce_data.csv",
+        "Unemployment_%": "unemployment_data.csv",
+        "Software_Dev_Job_Postings_YoY_%": "job_postings_data.csv",
+        "PPI_Data_Processing_YoY_%": "data_processing_ppi_data.csv",
+        "PPI_Software_Publishers_YoY_%": "software_ppi_data.csv",
+        "Consumer_Sentiment": "consumer_sentiment_data.csv"
+    }
     
-    # Determine which API to call based on the indicator
+    # Map indicators to value column names in CSV
+    value_column_mapping = {
+        "NASDAQ_20d_gap_%": "gap_pct",
+        "CPI_YoY_%": "inflation",
+        "PCEPI_YoY_%": "yoy_growth",
+        "Software_Dev_Job_Postings_YoY_%": "yoy_growth",
+        "PPI_Data_Processing_YoY_%": "yoy_pct_change",
+        "PPI_Software_Publishers_YoY_%": "yoy_pct_change"
+    }
+    
+    # Get the file path for this indicator
+    file_name = file_mapping.get(indicator)
+    if not file_name:
+        print(f"No file mapping for indicator: {indicator}")
+        return None
+    
+    file_path = f"data/{file_name}"
+    if not os.path.exists(file_path):
+        print(f"Data file not found: {file_path}")
+        return None
+    
     try:
-        if indicator == "10Y_Treasury_Yield_%":
-            # For treasury yield, get data from Yahoo Finance via our function
-            df = fetch_treasury_yield_data()
-            if not df.empty and 'date' in df.columns and 'value' in df.columns:
-                # Find the closest date before or on our target date
-                df['date'] = pd.to_datetime(df['date'])
-                closest = df[df['date'] <= date_to_fetch].sort_values('date', ascending=False)
-                if not closest.empty:
-                    return closest.iloc[0]['value']
-                    
-        elif indicator == "VIX":
-            # For VIX, get data from Yahoo Finance via our function
-            df = fetch_vix_from_yahoo()
-            if not df.empty and 'date' in df.columns and 'value' in df.columns:
-                # Find the closest date before or on our target date
-                df['date'] = pd.to_datetime(df['date'])
-                closest = df[df['date'] <= date_to_fetch].sort_values('date', ascending=False)
-                if not closest.empty:
-                    return closest.iloc[0]['value']
-                    
-        elif indicator == "NASDAQ_20d_gap_%":
-            # For NASDAQ, get data from Yahoo Finance via our function including gap_pct
-            df = fetch_nasdaq_with_ema()
-            if not df.empty and 'date' in df.columns and 'gap_pct' in df.columns:
-                # Find the closest date before or on our target date
-                df['date'] = pd.to_datetime(df['date'])
-                closest = df[df['date'] <= date_to_fetch].sort_values('date', ascending=False)
-                if not closest.empty:
-                    return closest.iloc[0]['gap_pct']
-                    
-        elif indicator == "Fed_Funds_Rate_%":
-            # For Fed Funds Rate, use FRED API with series DFF (Daily Federal Funds Rate)
-            start_date = (date_to_fetch - timedelta(days=10)).strftime('%Y-%m-%d')
-            df = fetch_fred_data('DFF', start_date=start_date, end_date=date_str)
-            if not df.empty and 'date' in df.columns and 'value' in df.columns:
-                # Find the closest date before or on our target date
-                df['date'] = pd.to_datetime(df['date'])
-                closest = df[df['date'] <= date_to_fetch].sort_values('date', ascending=False)
-                if not closest.empty:
-                    return closest.iloc[0]['value']
-                    
-        elif indicator == "CPI_YoY_%":
-            # For CPI YoY, use FRED API with series CPIAUCSL
-            start_date = (date_to_fetch - timedelta(days=365)).strftime('%Y-%m-%d')
-            df = fetch_fred_data('CPIAUCSL', start_date=start_date, end_date=date_str)
-            if not df.empty and 'date' in df.columns and 'value' in df.columns:
-                # Calculate YoY growth using oldest available value within last year
-                df['date'] = pd.to_datetime(df['date'])
-                recent = df[df['date'] <= date_to_fetch].sort_values('date', ascending=False)
-                if not recent.empty:
-                    recent_value = recent.iloc[0]['value']
-                    # Get value from ~12 months ago
-                    year_ago = df[df['date'] <= (date_to_fetch - timedelta(days=350))].sort_values('date', ascending=False)
-                    if not year_ago.empty:
-                        year_ago_value = year_ago.iloc[0]['value']
-                        return ((recent_value / year_ago_value) - 1) * 100
-                    
-        elif indicator == "PCEPI_YoY_%":
-            # For PCEPI YoY, use FRED API with series PCEPI
-            start_date = (date_to_fetch - timedelta(days=365)).strftime('%Y-%m-%d')
-            df = fetch_fred_data('PCEPI', start_date=start_date, end_date=date_str)
-            if not df.empty and 'date' in df.columns and 'value' in df.columns:
-                # Calculate YoY growth using oldest available value within last year
-                df['date'] = pd.to_datetime(df['date'])
-                recent = df[df['date'] <= date_to_fetch].sort_values('date', ascending=False)
-                if not recent.empty:
-                    recent_value = recent.iloc[0]['value']
-                    # Get value from ~12 months ago
-                    year_ago = df[df['date'] <= (date_to_fetch - timedelta(days=350))].sort_values('date', ascending=False)
-                    if not year_ago.empty:
-                        year_ago_value = year_ago.iloc[0]['value']
-                        return ((recent_value / year_ago_value) - 1) * 100
-                        
-        elif indicator == "Real_GDP_Growth_%_SAAR":
-            # For GDP, use FRED API with series GDPC1
-            start_date = (date_to_fetch - timedelta(days=365)).strftime('%Y-%m-%d')
-            df = fetch_fred_data('GDPC1', start_date=start_date, end_date=date_str)
-            if not df.empty and 'date' in df.columns and 'value' in df.columns:
-                # Use most recent GDP value
-                df['date'] = pd.to_datetime(df['date'])
-                recent = df[df['date'] <= date_to_fetch].sort_values('date', ascending=False)
-                if not recent.empty:
-                    return recent.iloc[0]['value']
-                    
-        elif indicator == "Real_PCE_YoY_%":
-            # For Real PCE, use FRED API with series PCEC96
-            start_date = (date_to_fetch - timedelta(days=365)).strftime('%Y-%m-%d')
-            df = fetch_fred_data('PCEC96', start_date=start_date, end_date=date_str)
-            if not df.empty and 'date' in df.columns and 'value' in df.columns:
-                # Use most recent PCE value
-                df['date'] = pd.to_datetime(df['date'])
-                recent = df[df['date'] <= date_to_fetch].sort_values('date', ascending=False)
-                if not recent.empty:
-                    return recent.iloc[0]['value']
-                    
-        elif indicator == "Unemployment_%":
-            # For Unemployment Rate, use FRED API with series UNRATE
-            start_date = (date_to_fetch - timedelta(days=60)).strftime('%Y-%m-%d')
-            df = fetch_fred_data('UNRATE', start_date=start_date, end_date=date_str)
-            if not df.empty and 'date' in df.columns and 'value' in df.columns:
-                # Use most recent unemployment rate
-                df['date'] = pd.to_datetime(df['date'])
-                recent = df[df['date'] <= date_to_fetch].sort_values('date', ascending=False)
-                if not recent.empty:
-                    return recent.iloc[0]['value']
-                    
-        elif indicator == "Software_Dev_Job_Postings_YoY_%":
-            # For job postings, use FRED or historical CSV (may not be available via direct API)
-            # Use our app.py function to get the most recent data
-            df = None
-            # First check if we have the data in our job_postings_data.csv
-            if os.path.exists("data/job_postings_data.csv"):
-                df = pd.read_csv("data/job_postings_data.csv")
-                if 'date' in df.columns and 'yoy_growth' in df.columns:
-                    df['date'] = pd.to_datetime(df['date'])
-                    recent = df[df['date'] <= date_to_fetch].sort_values('date', ascending=False)
-                    if not recent.empty:
-                        return recent.iloc[0]['yoy_growth']
-                
-        elif indicator == "PPI_Data_Processing_YoY_%":
-            # For PPI Data Processing, use FRED API with series PCU518210518210
-            start_date = (date_to_fetch - timedelta(days=365)).strftime('%Y-%m-%d')
-            df = fetch_fred_data('PCU518210518210', start_date=start_date, end_date=date_str)
-            if not df.empty and 'date' in df.columns and 'value' in df.columns:
-                # Calculate YoY growth
-                df['date'] = pd.to_datetime(df['date'])
-                recent = df[df['date'] <= date_to_fetch].sort_values('date', ascending=False)
-                if not recent.empty:
-                    recent_value = recent.iloc[0]['value']
-                    # Get value from ~12 months ago
-                    year_ago = df[df['date'] <= (date_to_fetch - timedelta(days=350))].sort_values('date', ascending=False)
-                    if not year_ago.empty:
-                        year_ago_value = year_ago.iloc[0]['value']
-                        return ((recent_value / year_ago_value) - 1) * 100
-                        
-        elif indicator == "PPI_Software_Publishers_YoY_%":
-            # For PPI Software Publishers, use FRED API with series PCU511210511210
-            start_date = (date_to_fetch - timedelta(days=365)).strftime('%Y-%m-%d')
-            df = fetch_fred_data('PCU511210511210', start_date=start_date, end_date=date_str)
-            if not df.empty and 'date' in df.columns and 'value' in df.columns:
-                # Calculate YoY growth
-                df['date'] = pd.to_datetime(df['date'])
-                recent = df[df['date'] <= date_to_fetch].sort_values('date', ascending=False)
-                if not recent.empty:
-                    recent_value = recent.iloc[0]['value']
-                    # Get value from ~12 months ago
-                    year_ago = df[df['date'] <= (date_to_fetch - timedelta(days=350))].sort_values('date', ascending=False)
-                    if not year_ago.empty:
-                        year_ago_value = year_ago.iloc[0]['value']
-                        return ((recent_value / year_ago_value) - 1) * 100
-                        
-        elif indicator == "Consumer_Sentiment":
-            # For Consumer Sentiment, use our function to get the data
-            df = fetch_consumer_sentiment_data()
-            if not df.empty and 'date' in df.columns and 'value' in df.columns:
-                # Find the closest date before or on our target date
-                df['date'] = pd.to_datetime(df['date'])
-                closest = df[df['date'] <= date_to_fetch].sort_values('date', ascending=False)
-                if not closest.empty:
-                    return closest.iloc[0]['value']
+        # Load the CSV file
+        df = pd.read_csv(file_path)
+        if df.empty:
+            print(f"Empty data file for indicator: {indicator}")
+            return None
+        
+        # Ensure date column exists and is in datetime format
+        if 'date' not in df.columns:
+            print(f"Date column missing in {file_path}")
+            return None
+        
+        df['date'] = pd.to_datetime(df['date'])
+        
+        # Get the closest date on or before the target date
+        df = df[df['date'] <= date_to_fetch].sort_values('date', ascending=False)
+        if df.empty:
+            print(f"No data available for {indicator} on or before {date_to_fetch.strftime('%Y-%m-%d')}")
+            return None
+        
+        # Get the value from the appropriate column
+        value_column = value_column_mapping.get(indicator, 'value')
+        if value_column in df.columns:
+            return df.iloc[0][value_column]
+        else:
+            print(f"Value column '{value_column}' not found in {file_path}")
+            return None
     
     except Exception as e:
-        print(f"Error fetching {indicator} data for {date_str}: {e}")
-        
-    # If we reach here, we couldn't get data for this indicator
-    print(f"No data available for {indicator} on {date_str}")
-    return None
+        print(f"Error reading data for {indicator}: {e}")
+        return None
 
 def calculate_historical_sector_scores():
     """
-    Calculate authentic historical sector sentiment scores for business days
+    Calculate authentic historical sector sentiment scores for business days only
     
     Returns:
         dict: Dictionary with dates as keys and lists of sector scores as values
         dict: Dictionary with dates as keys and T2D Pulse scores as values
     """
-    print(f"Calculating authentic historical scores for the past {HISTORY_LENGTH} business days...")
+    print(f"Calculating authentic historical scores for past {HISTORY_LENGTH} business days...")
     
-    # Get business days going back from today
+    # Get business days going back from today (excluding weekends)
     business_days = get_business_days(days_back=HISTORY_LENGTH)
     
     # Initialize results dictionaries
@@ -262,11 +147,10 @@ def calculate_historical_sector_scores():
         date_str = business_day.strftime('%Y-%m-%d')
         print(f"\nCalculating scores for {date_str}:")
         
-        # Get indicator values for this date
+        # Get indicator values for this date from our CSV files
         indicator_values = {}
         for indicator in IMPACT.keys():
-            print(f"  Fetching {indicator}...")
-            value = fetch_indicator_data_for_date(indicator, business_day)
+            value = fetch_indicator_value_from_file(indicator, business_day)
             if value is not None:
                 indicator_values[indicator] = value
                 print(f"  {indicator}: {value}")
@@ -292,9 +176,10 @@ def calculate_historical_sector_scores():
             print(f"T2D Pulse score: {t2d_pulse_score:.1f}")
             
             # Log a few sector scores for verification
-            sample_sectors = [sector_scores[i]['sector'] for i in range(min(3, len(sector_scores)))]
-            sample_scores = [f"{sector_scores[i]['sector']}: {sector_scores[i]['score']:.1f}" for i in range(min(3, len(sector_scores)))]
-            print(f"Sample sector scores: {', '.join(sample_scores)}")
+            if len(sector_scores) > 0:
+                sample_scores = [f"{sector_scores[i]['sector']}: {sector_scores[i]['score']:.1f}" 
+                                for i in range(min(3, len(sector_scores)))]
+                print(f"Sample sector scores: {', '.join(sample_scores)}")
             
         except Exception as e:
             print(f"Error calculating scores for {date_str}: {e}")
@@ -312,16 +197,7 @@ def save_sector_history(sector_scores):
         # Convert datetime keys to ISO format strings for JSON serialization
         serialized_data = {}
         for date_val, scores in sector_scores.items():
-            # Convert each sector score entry to a dict if it's not already
-            processed_scores = []
-            for score_data in scores:
-                if isinstance(score_data, dict):
-                    processed_scores.append(score_data)
-                else:
-                    # Handle other formats if needed
-                    processed_scores.append({"sector": score_data[0], "score": score_data[1]})
-            
-            serialized_data[date_val.isoformat()] = processed_scores
+            serialized_data[date_val.isoformat()] = scores
             
         with open(HISTORY_FILE, 'w') as f:
             json.dump(serialized_data, f)

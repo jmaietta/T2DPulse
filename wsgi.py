@@ -24,9 +24,16 @@ update_cache(data)
 from app import app
 
 # Generate historical sector sentiment data for trend charts
-print("Updating real historical sector sentiment data...")
+print("Updating historical sector sentiment data...")
 import update_historical_data
+
+# First update the real historical data (using CSV files)
+print("Updating original historical sector data...")
 update_historical_data.update_real_historical_data()
+
+# Then update the authentic historical data (using direct API calls for business days)
+print("Updating authentic historical data for business days only...")
+update_historical_data.update_authentic_historical_data()
 
 # Start the server
 print(f"Starting T2D Pulse server at {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
