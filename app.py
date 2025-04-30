@@ -5747,7 +5747,7 @@ def update_sector_sentiment_container(n):
                 html.Div([
                     html.Div(sector, className="sector-card-title", 
                              style={
-                                 "fontWeight": "500", 
+                                 "fontWeight": "600", 
                                  "fontSize": "18px", 
                                  "marginRight": "10px",
                                  "width": "calc(100% - 90px)",
@@ -5772,8 +5772,19 @@ def update_sector_sentiment_container(n):
                         "textAlign": "right",
                         "margin": "0"
                     })
-                ], className="card-header-content", style={"display": "flex", "alignItems": "center", "width": "100%"})
-            ], className="sector-card-header"),
+                ], className="card-header-content", style={
+                    "display": "flex", 
+                    "alignItems": "center", 
+                    "width": "100%",
+                    "padding": "15px",
+                    "borderBottom": "1px solid #f1f1f1"
+                })
+            ], className="sector-card-header", style={
+                "backgroundColor": "#fcfcfc",
+                "borderBottom": f"2px solid {border_color}",
+                "borderTopLeftRadius": "8px",
+                "borderTopRightRadius": "8px"
+            }),
             
             # Card body with all the details - using flex column with space-between
             html.Div([
@@ -5888,7 +5899,12 @@ def update_sector_sentiment_container(n):
             "display": "flex", 
             "flexDirection": "column",
             "height": "100%",
-            "minHeight": "460px"  # Set a minimum height for consistent card size
+            "minHeight": "460px",  # Set a minimum height for consistent card size
+            "border": f"1px solid {border_color}",  # Explicit border
+            "borderRadius": "8px",  # Rounded corners
+            "boxShadow": "0 2px 6px rgba(0,0,0,0.1)",  # Subtle shadow
+            "margin": "0",  # Reset margin
+            "overflow": "hidden"  # Ensure contents don't overflow
         })
         
         sector_cards.append(card)
@@ -5955,7 +5971,8 @@ def update_sector_sentiment_container(n):
         html.Div(sector_cards, className="sector-cards-grid",
                 style={"display": "grid", 
                        "gridTemplateColumns": "repeat(auto-fill, minmax(320px, 1fr))",
-                       "gap": "20px"}),
+                       "gap": "25px",  # Increased gap between cards
+                       "padding": "5px"}),  # Add padding to the grid container
         
         # Hidden div to store weights, initially populated with JSON of sector weights
         html.Div(id="stored-weights", 
