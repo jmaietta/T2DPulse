@@ -6932,9 +6932,9 @@ def download_file(filename):
     filepath = os.path.join("data", filename)
     
     if not os.path.exists(filepath):
-        # The file doesn't exist yet, so run the export script to create it
-        import export_sector_history
-        export_sector_history.main()
+        # The file doesn't exist yet, so run the fixed export script to create it
+        import export_fixed_sentiment_history
+        export_fixed_sentiment_history.export_predefined_history_to_excel()
     
     # Now serve the file (whether it existed before or was just created)
     from flask import send_from_directory
