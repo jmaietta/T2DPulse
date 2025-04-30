@@ -179,7 +179,110 @@ def score_sectors(macros: MacroDict) -> List[SectorScore]:
         for sec in SECTORS
     ]
 
-# ---------- 7) Example run ----------
+# ---------- 7) Historical scoring ----------
+def get_historical_indicator_values(date):
+    """
+    Get historical indicator values for a specific date.
+    Uses existing CSV files stored in data directory.
+    
+    Args:
+        date (datetime): The date to get values for
+        
+    Returns:
+        dict: Dictionary with indicator values
+    """
+    import pandas as pd
+    import os
+    from datetime import datetime
+    
+    # Map indicators to CSV files
+    file_mapping = {
+        "10Y_Treasury_Yield_%": "data/treasury_yield_data.csv",
+        "VIX": "data/vix_data.csv",
+        "NASDAQ_20d_gap_%": "data/nasdaq_data.csv",
+        "Fed_Funds_Rate_%": "data/interest_rate_data.csv",
+        "CPI_YoY_%": "data/inflation_data.csv",
+        "PCEPI_YoY_%": "data/pcepi_data.csv",
+        "Real_GDP_Growth_%_SAAR": "data/gdp_data.csv",
+        "Real_PCE_YoY_%": "data/pce_data.csv",
+        "Unemployment_%": "data/unemployment_data.csv",
+        "Software_Dev_Job_Postings_YoY_%": "data/job_postings_data.csv",
+        "PPI_Data_Processing_YoY_%": "data/data_processing_ppi_data.csv",
+        "PPI_Software_Publishers_YoY_%": "data/software_ppi_data.csv",
+        "Consumer_Sentiment": "data/consumer_sentiment_data.csv"
+    }
+    
+    # Map indicators to value column names
+    value_column_mapping = {
+        "NASDAQ_20d_gap_%": "gap_pct",
+        "CPI_YoY_%": "inflation",
+        "PCEPI_YoY_%": "yoy_growth",
+        "Software_Dev_Job_Postings_YoY_%": "yoy_growth",
+        "PPI_Data_Processing_YoY_%": "yoy_pct_change",
+        "PPI_Software_Publishers_YoY_%": "yoy_pct_change"
+    }
+    
+    # Get values for each indicator
+    values = {}
+    for indicator, file_path in file_mapping.items():
+        try:
+            if os.path.exists(file_path):
+                # Load CSV file
+                df = pd.read_csv(file_path)
+                
+                # Convert date column to datetime
+                df['date'] = pd.to_datetime(df['date'])
+                
+                # Get data on or before the target date
+                df = df[df['date'] <= date].sort_values('date', ascending=False)
+                
+                if not df.empty:
+                    # Get value from appropriate column
+                    value_col = value_column_mapping.get(indicator, 'value')
+                    if value_col in df.columns:
+                        values[indicator] = float(df.iloc[0][value_col])
+                    else:
+                        print(f"Warning: Column '{value_col}' not found in {file_path}")
+        except Exception as e:
+            print(f"Error getting historical data for {indicator}: {e}")
+    
+    return values
+
+def score_sector_on_date(sector_name, date):
+    """
+    Score a specific sector based on historical data for a given date
+    
+    Args:
+        sector_name (str): The sector name
+        date (datetime): The date to score for
+        
+    Returns:
+        float: The raw sector score in range [-1, 1]
+    """
+    # Get historical macro indicator values for this date
+    macro_values = get_historical_indicator_values(date)
+    
+    if not macro_values:
+        print(f"No historical indicator data available for {date.strftime('%Y-%m-%d')}")
+        return 0.0
+    
+    print(f"\nScoring {sector_name} with {len(macro_values)} indicators for {date.strftime('%Y-%m-%d')}:")
+    for indicator, value in macro_values.items():
+        print(f"  {indicator}: {value}")
+    
+    # Score all sectors using the historical data
+    sector_scores = score_sectors(macro_values)
+    
+    # Find the score for the requested sector
+    for sector_data in sector_scores:
+        if sector_data['sector'] == sector_name:
+            return sector_data['score']
+    
+    # Default to 0 if sector not found
+    print(f"Warning: Sector '{sector_name}' not found in scoring results")
+    return 0.0
+
+# ---------- 8) Example run ----------
 if __name__ == "__main__":
     latest_macros: MacroDict = {
         "10Y_Treasury_Yield_%": 4.422,
@@ -199,3 +302,9 @@ if __name__ == "__main__":
 
     for row in score_sectors(latest_macros):
         print(f"{row['sector']:<25} {row['score']:>5.2f}")
+        
+    # Test historical scoring
+    from datetime import datetime, timedelta
+    yesterday = datetime.now() - timedelta(days=1)
+    score = score_sector_on_date("AdTech", yesterday)
+    print(f"\nHistorical score for AdTech on {yesterday.strftime('%Y-%m-%d')}: {score:.2f}")
