@@ -2372,12 +2372,13 @@ def update_last_updated(n):
 # Create compact sector score summary
 def create_sector_summary(sector_scores):
     """Create a summary of the strongest and weakest sectors based on scores"""
-    # Sort sectors by score (descending)
-    sorted_sectors = sorted(sector_scores.items(), key=lambda x: x[1], reverse=True)
+    # Sort sectors by score (descending for top, ascending for bottom)
+    sorted_sectors_desc = sorted(sector_scores.items(), key=lambda x: x[1], reverse=True)
+    sorted_sectors_asc = sorted(sector_scores.items(), key=lambda x: x[1], reverse=False)
     
-    # Determine top 3 and bottom 3 sectors
-    top_3 = sorted_sectors[:3]
-    bottom_3 = sorted_sectors[-3:]
+    # Determine top 3 (highest scores) and bottom 3 (lowest scores)
+    top_3 = sorted_sectors_desc[:3]
+    bottom_3 = sorted_sectors_asc[:3]
     
     # Function to get color based on score
     def get_score_color(score):
