@@ -746,6 +746,9 @@ def generate_sector_tickers():
 def calculate_sector_sentiment():
     """Calculate sentiment scores for each technology sector using the latest data"""
     print("Starting calculate_sector_sentiment function")
+    # Import sector sentiment history module
+    import sector_sentiment_history
+    
     # Get latest values for all required indicators
     macros = {}
     
@@ -872,6 +875,9 @@ def calculate_sector_sentiment():
                 "drivers": drivers.get(sector, []),
                 "tickers": tickers.get(sector, [])
             })
+        
+        # Update the historical sentiment data with today's scores
+        sector_sentiment_history.update_sentiment_history(enhanced_scores)
             
         return enhanced_scores
     except Exception as e:
@@ -5804,6 +5810,18 @@ def update_sector_sentiment_container(n):
                                     style={"left": f"{min(max(norm_score, 0), 100)}%"})
                         ], className="scale-track")
                     ], className="sector-score-scale"),
+                    
+                    # Trend chart
+                    html.Div([
+                        html.Div("30-Day Trend", className="trend-title", 
+                                style={"fontSize": "13px", "marginBottom": "5px", "color": "#666"}),
+                        dcc.Graph(
+                            id={"type": "sector-trend-chart", "index": sector},
+                            figure=sector_trend_chart.create_sector_trend_chart(sector),
+                            config={"displayModeBar": False, "staticPlot": True},
+                            style={"height": "85px", "width": "100%"}
+                        )
+                    ], className="sector-trend-container", style={"marginTop": "15px", "marginBottom": "15px"}),
                     
                     # Drivers list
                     html.Ul([
