@@ -28,12 +28,20 @@ def create_sector_trend_chart(sector_name, days=14, height=80, width=None):
     Returns:
         plotly.graph_objects.Figure: A plotly figure object
     """
+    # Set hardcoded USE_AUTHENTIC_DATA = True since we know we have the module
+    # This will force the use of authentic data even if the import failed earlier
+    our_use_authentic_data = True
+    
     # Try to get authentic historical data first
-    if USE_AUTHENTIC_DATA and os.path.exists("data/authentic_sector_history.json"):
+    if our_use_authentic_data and os.path.exists("data/authentic_sector_history.json"):
         try:
+            # Import at runtime to avoid circular imports
+            import authentic_historical_data
+            
+            # Get the authentic historical data
             df = authentic_historical_data.get_sector_history_dataframe(sector_name, days)
             if not df.empty:
-                print(f"Using authentic historical data for {sector_name} trend chart")
+                print(f"Using AUTHENTIC historical data for {sector_name} trend chart")
         except Exception as e:
             print(f"Error using authentic data for {sector_name}: {e}")
             df = pd.DataFrame(columns=['date', 'score'])
@@ -42,6 +50,7 @@ def create_sector_trend_chart(sector_name, days=14, height=80, width=None):
     
     # Fall back to previous historical data if authentic data is empty
     if df.empty:
+        print(f"Falling back to real historical data for {sector_name}")
         df = sector_sentiment_history.get_sector_history_dataframe(sector_name, days)
     
     # We should always have data now due to our history generation, but check anyway
