@@ -1,0 +1,40 @@
+SECTOR SENTIMENT STATISTICS
+===========================
+
+Date range: 2025-04-01 to 2025-04-30
+
+Sector Averages:
+---------------
+SMB SaaS: Avg=44.79, Min=37.90, Max=52.48, StdDev=4.45
+Enterprise SaaS: Avg=45.29, Min=38.40, Max=52.98, StdDev=4.45
+Cloud Infrastructure: Avg=47.79, Min=40.90, Max=55.48, StdDev=4.45
+AdTech: Avg=48.37, Min=33.50, Max=58.50, StdDev=6.64
+Fintech: Avg=46.45, Min=36.79, Max=54.58, StdDev=4.60
+Consumer Internet: Avg=47.37, Min=32.50, Max=57.50, StdDev=6.64
+eCommerce: Avg=48.37, Min=33.50, Max=58.50, StdDev=6.64
+Cybersecurity: Avg=47.37, Min=32.50, Max=57.50, StdDev=6.64
+Dev Tools / Analytics: Avg=44.29, Min=37.40, Max=51.98, StdDev=4.45
+Semiconductors: Avg=51.37, Min=36.50, Max=61.50, StdDev=6.64
+AI Infrastructure: Avg=47.79, Min=40.90, Max=55.48, StdDev=4.45
+Vertical SaaS: Avg=43.29, Min=36.40, Max=50.98, StdDev=4.45
+IT Services / Legacy Tech: Avg=52.37, Min=37.50, Max=62.50, StdDev=6.64
+Hardware / Devices: Avg=51.37, Min=36.50, Max=61.50, StdDev=6.64
+
+Correlation Matrix:
+-----------------
+Sector                    | SMB SaaS   | Enterprise | Cloud Infr | AdTech     | Fintech    | Consumer I | eCommerce  | Cybersecur | Dev Tools  | Semiconduc | AI Infrast | Vertical S | IT Service | Hardware /
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+SMB SaaS                  | 1.00       | 1.00       | 1.00       | 0.67       | 0.92       | 0.67       | 0.67       | 0.67       | 1.00       | 0.67       | 1.00       | 1.00       | 0.67       | 0.67      
+Enterprise SaaS           | 1.00       | 1.00       | 1.00       | 0.67       | 0.92       | 0.67       | 0.67       | 0.67       | 1.00       | 0.67       | 1.00       | 1.00       | 0.67       | 0.67      
+Cloud Infrastructure      | 1.00       | 1.00       | 1.00       | 0.67       | 0.92       | 0.67       | 0.67       | 0.67       | 1.00       | 0.67       | 1.00       | 1.00       | 0.67       | 0.67      
+AdTech                    | 0.67       | 0.67       | 0.67       | 1.00       | 0.89       | 1.00       | 1.00       | 1.00       | 0.67       | 1.00       | 0.67       | 0.67       | 1.00       | 1.00      
+Fintech                   | 0.92       | 0.92       | 0.92       | 0.89       | 1.00       | 0.89       | 0.89       | 0.89       | 0.92       | 0.89       | 0.92       | 0.92       | 0.89       | 0.89      
+Consumer Internet         | 0.67       | 0.67       | 0.67       | 1.00       | 0.89       | 1.00       | 1.00       | 1.00       | 0.67       | 1.00       | 0.67       | 0.67       | 1.00       | 1.00      
+eCommerce                 | 0.67       | 0.67       | 0.67       | 1.00       | 0.89       | 1.00       | 1.00       | 1.00       | 0.67       | 1.00       | 0.67       | 0.67       | 1.00       | 1.00      
+Cybersecurity             | 0.67       | 0.67       | 0.67       | 1.00       | 0.89       | 1.00       | 1.00       | 1.00       | 0.67       | 1.00       | 0.67       | 0.67       | 1.00       | 1.00      
+Dev Tools / Analytics     | 1.00       | 1.00       | 1.00       | 0.67       | 0.92       | 0.67       | 0.67       | 0.67       | 1.00       | 0.67       | 1.00       | 1.00       | 0.67       | 0.67      
+Semiconductors            | 0.67       | 0.67       | 0.67       | 1.00       | 0.89       | 1.00       | 1.00       | 1.00       | 0.67       | 1.00       | 0.67       | 0.67       | 1.00       | 1.00      
+AI Infrastructure         | 1.00       | 1.00       | 1.00       | 0.67       | 0.92       | 0.67       | 0.67       | 0.67       | 1.00       | 0.67       | 1.00       | 1.00       | 0.67       | 0.67      
+Vertical SaaS             | 1.00       | 1.00       | 1.00       | 0.67       | 0.92       | 0.67       | 0.67       | 0.67       | 1.00       | 0.67       | 1.00       | 1.00       | 0.67       | 0.67      
+IT Services / Legacy Tech | 0.67       | 0.67       | 0.67       | 1.00       | 0.89       | 1.00       | 1.00       | 1.00       | 0.67       | 1.00       | 0.67       | 0.67       | 1.00       | 1.00      
+Hardware / Devices        | 0.67       | 0.67       | 0.67       | 1.00       | 0.89       | 1.00       | 1.00       | 1.00       | 0.67       | 1.00       | 0.67       | 0.67       | 1.00       | 1.00      
