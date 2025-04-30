@@ -709,25 +709,37 @@
 
 .sector-badge {
     display: inline-block;
-    padding: 4px 10px;
-    border-radius: 15px;
-    font-size: 12px;
-    font-weight: 500;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: all 0.2s ease;
+}
+
+.sector-badge:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
 }
 
 .badge-bullish {
-    background-color: rgba(46, 204, 113, 0.2);
-    color: #2ecc71;
+    background: linear-gradient(135deg, rgba(46, 204, 113, 0.2) 0%, rgba(46, 204, 113, 0.3) 100%);
+    color: #27ae60;
+    border: 1px solid rgba(46, 204, 113, 0.3);
 }
 
 .badge-bearish {
-    background-color: rgba(231, 76, 60, 0.2);
-    color: #e74c3c;
+    background: linear-gradient(135deg, rgba(231, 76, 60, 0.2) 0%, rgba(231, 76, 60, 0.3) 100%);
+    color: #c0392b;
+    border: 1px solid rgba(231, 76, 60, 0.3);
 }
 
 .badge-neutral {
-    background-color: rgba(243, 156, 18, 0.2);
-    color: #f39c12;
+    background: linear-gradient(135deg, rgba(243, 156, 18, 0.2) 0%, rgba(243, 156, 18, 0.3) 100%);
+    color: #d35400;
+    border: 1px solid rgba(243, 156, 18, 0.3);
 }
 
 .sector-takeaway {
@@ -749,17 +761,31 @@
 .tickers-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 5px;
+    gap: 8px;
     margin-top: auto;
-    padding-top: 10px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(189, 195, 199, 0.3);
+    margin-top: 15px;
 }
 
 .ticker-badge {
     background-color: #ecf0f1;
-    color: #7f8c8d;
-    padding: 2px 7px;
+    color: #34495e;
+    padding: 4px 10px;
     border-radius: 4px;
-    font-size: 11px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid rgba(52, 152, 219, 0.1);
+    transition: all 0.2s ease;
+}
+
+.ticker-badge:hover {
+    background-color: #3498db;
+    color: white;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 /* Tooltip styling moved to fixed_tooltip.css */
@@ -910,31 +936,45 @@
 }
 
 .sector-summary-container {
-    margin-top: 20px;
+    margin-top: 30px;
+    border-top: 1px solid rgba(189, 195, 199, 0.5);
+    padding-top: 25px;
 }
 
 .summary-title {
     margin-top: 0;
-    margin-bottom: 12px;
+    margin-bottom: 15px;
     color: #2c3e50;
-    font-weight: 600;
-    font-size: 18px;
+    font-weight: 700;
+    font-size: 22px;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.7px;
+    text-align: center;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.05);
 }
 
 .summary-section {
     background-color: #f8f9fa;
-    padding: 15px;
-    border-radius: 6px;
-    margin-bottom: 15px;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+    border: 1px solid rgba(52, 152, 219, 0.2);
+    transition: all 0.3s ease;
+}
+
+.summary-section:hover {
+    box-shadow: 0 5px 15px rgba(52, 152, 219, 0.15);
+    transform: translateY(-2px);
 }
 
 .takeaway-badge-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed rgba(189, 195, 199, 0.5);
 }
 
 .no-data-message {
