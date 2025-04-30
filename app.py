@@ -114,7 +114,9 @@ def fetch_fred_data(series_id, start_date=None, end_date=None):
         "file_type": "json",
         "observation_start": start_date,
         "observation_end": current_date,
-        "sort_order": "desc"  # Get newest observations first
+        "sort_order": "desc",  # Get newest observations first
+        "realtime_start": current_date,  # Use latest vintage data
+        "realtime_end": current_date     # Avoid using older vintages
     }
     
     try:
@@ -1741,7 +1743,9 @@ if consumer_sentiment_data.empty or (datetime.now() - pd.to_datetime(consumer_se
         print("Failed to fetch Consumer Sentiment data")
 
 # Add Software Job Postings data
-if job_postings_data.empty or (datetime.now() - pd.to_datetime(job_postings_data['date'].max() if not job_postings_data.empty else '2000-01-01')).days > 30:
+if job_postings_data.empty or (datetime.now() - pd.to_datetime(job_postings_data['date'].max() if not job_postings_data.empty else '2000-01-01')).days > 7:
+    # Force a refresh to get the most recent data (should update more frequently than 30 days)
+    print("Refreshing Software Job Postings data to get latest observations...")
     # Fetch U.S. Software Job Postings on Indeed (IHLIDXUSTPSOFTDEVE)
     job_postings_temp = fetch_fred_data('IHLIDXUSTPSOFTDEVE')
     
