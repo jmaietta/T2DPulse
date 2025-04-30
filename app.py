@@ -5787,8 +5787,8 @@ def update_sector_sentiment_container(n):
                 # Header and sentiment badge - with badge on the right
                 html.Div([
                     html.P(takeaway, className="sector-takeaway"),
-                    # Removed duplicate stance text from badge
-                    html.Span("", className=f"sector-badge {badge_class}")
+                    # Restored stance text in badge
+                    html.Span(stance, className=f"sector-badge {badge_class}")
                 ], className="takeaway-badge-container", style={"display": "flex", "justifyContent": "space-between", "alignItems": "center"}),
                 
                 # Scale indicator
