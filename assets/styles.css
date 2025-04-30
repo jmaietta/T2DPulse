@@ -988,37 +988,7 @@
 }
 
 /* Normalized Sector Score Scale */
-.sector-score-scale {
-    width: 100%;
-    padding: 8px 0;
-    margin: 5px 0;
-}
-
-.scale-track {
-    height: 6px;
-    width: 100%;
-    background: linear-gradient(to right, 
-        #e74c3c 0%, 
-        #e74c3c 30%, 
-        #f39c12 30%, 
-        #f39c12 60%, 
-        #2ecc71 60%, 
-        #2ecc71 100%);
-    border-radius: 3px;
-    position: relative;
-}
-
-.scale-marker {
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    background-color: #333;
-    border: 2px solid white;
-    border-radius: 50%;
-    top: -2px;
-    transform: translateX(-50%);
-    box-shadow: 0 1px 3px rgba(0,0,0,0.3);
-}
+/* Removed pill-shaped scale indicators as requested */
 
 /* Insights Panel Styles */
 .insights-enabled-container {

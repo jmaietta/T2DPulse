@@ -5791,13 +5791,7 @@ def update_sector_sentiment_container(n):
                     html.Span("", className=f"sector-badge {badge_class}")
                 ], className="takeaway-badge-container", style={"display": "flex", "justifyContent": "space-between", "alignItems": "center"}),
                 
-                # Scale indicator
-                html.Div([
-                    html.Div([
-                        html.Div(className="scale-marker", 
-                                 style={"left": f"{min(max(norm_score, 0), 100)}%"})
-                    ], className="scale-track")
-                ], className="sector-score-scale"),
+                # Scale indicator removed as requested
                 
                 # Drivers list
                 html.Ul([
