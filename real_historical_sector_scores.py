@@ -33,13 +33,13 @@ def get_indicator_value_for_date(indicator_name, target_date):
         "VIX": "vix",
         "NASDAQ_20d_gap_%": "nasdaq",
         "Fed_Funds_Rate_%": "interest_rate",
-        "CPI_YoY_%": "cpi",
+        "CPI_YoY_%": "inflation",  # Actual file is inflation_data.csv
         "PCEPI_YoY_%": "pcepi",
         "Real_GDP_Growth_%_SAAR": "gdp",
         "Real_PCE_YoY_%": "pce",
         "Unemployment_%": "unemployment",
         "Software_Dev_Job_Postings_YoY_%": "job_postings",
-        "PPI_Data_Processing_YoY_%": "data_ppi",
+        "PPI_Data_Processing_YoY_%": "data_processing_ppi",  # Actual file is data_processing_ppi_data.csv
         "PPI_Software_Publishers_YoY_%": "software_ppi",
         "Consumer_Sentiment": "consumer_sentiment"
     }
