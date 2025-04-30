@@ -5775,40 +5775,43 @@ def update_sector_sentiment_container(n):
                 ], className="card-header-content", style={"display": "flex", "alignItems": "center", "width": "100%"})
             ], className="sector-card-header"),
             
-            # Card body with all the details
+            # Card body with all the details - using flex column with space-between
             html.Div([
-                # Header and sentiment badge - with badge on the right
+                # Top content section - all elements except weight controls
                 html.Div([
-                    html.P(takeaway, className="sector-takeaway"),
-                    # Restored stance text in badge
-                    html.Span(stance, className=f"sector-badge {badge_class}")
-                ], className="takeaway-badge-container", style={"display": "flex", "justifyContent": "space-between", "alignItems": "center"}),
-                
-                # Scale indicator
-                html.Div([
+                    # Header and sentiment badge - with badge on the right
                     html.Div([
-                        html.Div(className="scale-marker", 
-                                 style={"left": f"{min(max(norm_score, 0), 100)}%"})
-                    ], className="scale-track")
-                ], className="sector-score-scale"),
-                
-                # Drivers list
-                html.Ul([
-                    html.Li(driver) for driver in drivers
-                ], className="drivers-list"),
-                
-                # Tickers with label
-                html.Div([
-                    html.Div(
-                        html.Span("Representative Tickers:", style={"fontSize": "13px", "marginBottom": "5px", "display": "block"}),
-                        style={"marginBottom": "3px"}
-                    ),
+                        html.P(takeaway, className="sector-takeaway"),
+                        # Restored stance text in badge
+                        html.Span(stance, className=f"sector-badge {badge_class}")
+                    ], className="takeaway-badge-container", style={"display": "flex", "justifyContent": "space-between", "alignItems": "center"}),
+                    
+                    # Scale indicator
                     html.Div([
-                        html.Span(ticker, className="ticker-badge", style={"fontWeight": "bold"}) for ticker in tickers
-                    ])
-                ], className="tickers-container"),
+                        html.Div([
+                            html.Div(className="scale-marker", 
+                                    style={"left": f"{min(max(norm_score, 0), 100)}%"})
+                        ], className="scale-track")
+                    ], className="sector-score-scale"),
+                    
+                    # Drivers list
+                    html.Ul([
+                        html.Li(driver) for driver in drivers
+                    ], className="drivers-list"),
+                    
+                    # Tickers with label
+                    html.Div([
+                        html.Div(
+                            html.Span("Representative Tickers:", style={"fontSize": "13px", "marginBottom": "5px", "display": "block"}),
+                            style={"marginBottom": "3px"}
+                        ),
+                        html.Div([
+                            html.Span(ticker, className="ticker-badge", style={"fontWeight": "bold"}) for ticker in tickers
+                        ])
+                    ], className="tickers-container"),
+                ], style={"flex": "1"}),
                 
-                # Weight controls
+                # Bottom section - weight controls, always at bottom
                 html.Div([
                     html.Div([
                         html.Div("Weight:", className="weight-label", 
@@ -5873,8 +5876,20 @@ def update_sector_sentiment_container(n):
                     "borderTop": "1px solid #eee"
                 })
                 
-            ], className="sector-card-body", style={"backgroundColor": "white"})
-        ], className="sector-card", style={"--card-colour": border_color})
+            ], className="sector-card-body", style={
+                "backgroundColor": "white", 
+                "display": "flex", 
+                "flexDirection": "column", 
+                "justifyContent": "space-between",
+                "height": "100%"
+            })
+        ], className="sector-card", style={
+            "--card-colour": border_color,
+            "display": "flex", 
+            "flexDirection": "column",
+            "height": "100%",
+            "minHeight": "460px"  # Set a minimum height for consistent card size
+        })
         
         sector_cards.append(card)
     
