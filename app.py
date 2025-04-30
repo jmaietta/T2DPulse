@@ -28,6 +28,9 @@ import sentiment_engine
 from chart_styling import custom_template, color_scheme
 from market_insights import create_insights_panel
 
+# Import sector trend chart for historical visualizations
+import sector_trend_chart
+
 # Import data cache for fast data access
 from data_cache import get_data, get_all_data
 
