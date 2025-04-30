@@ -14,7 +14,7 @@ import sentiment_engine
 SECTORS = sentiment_engine.SECTORS
 
 # Number of business days to include
-DAYS = 20
+DAYS = 10  # Reduced from 20 to improve performance
 
 # Paths for storing data
 DATA_DIR = "data"

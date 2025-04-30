@@ -27,13 +27,40 @@ from app import app
 print("Updating historical sector sentiment data...")
 import update_historical_data
 
-# First update the real historical data (using CSV files)
-print("Updating original historical sector data...")
-update_historical_data.update_real_historical_data()
+# For improved startup time, we'll import the modules but NOT run the updates here
+# These will be run on a background thread after the app starts
+print("Preparing historical data modules...")
+import authentic_sector_history
+print("Imported authentic_sector_history module")
 
-# Then update the authentic historical data (using direct API calls for business days)
-print("Updating authentic historical data for business days only...")
-update_historical_data.update_authentic_historical_data()
+# Process data asynchronously after the app starts
+import threading
+
+def update_historical_data_async():
+    """Update historical data in a background thread"""
+    print("Background thread started for historical data generation")
+    
+    try:
+        # First update the authentic historical data (highest priority)
+        print("Generating authentic historical sector sentiment data...")
+        authentic_sector_history.update_authentic_history()
+        print("Authentic historical data generation complete")
+    except Exception as e:
+        print(f"Error generating authentic sector history: {e}")
+        
+        # As fallback, update the real historical data
+        try:
+            print("Falling back to original historical sector data...")
+            update_historical_data.update_real_historical_data()
+            print("Original historical data update complete")
+        except Exception as e2:
+            print(f"Error updating original historical data: {e2}")
+
+# Start the background thread to update historical data without blocking the app
+history_thread = threading.Thread(target=update_historical_data_async)
+history_thread.daemon = True  # Thread will exit when main thread exits
+print("Starting background thread for historical data updates")
+history_thread.start()
 
 # Start the server
 print(f"Starting T2D Pulse server at {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")

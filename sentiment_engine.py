@@ -259,28 +259,35 @@ def score_sector_on_date(sector_name, date):
     Returns:
         float: The raw sector score in range [-1, 1]
     """
-    # Get historical macro indicator values for this date
-    macro_values = get_historical_indicator_values(date)
-    
-    if not macro_values:
-        print(f"No historical indicator data available for {date.strftime('%Y-%m-%d')}")
+    try:
+        # Get historical macro indicator values for this date
+        macro_values = get_historical_indicator_values(date)
+        
+        if not macro_values:
+            print(f"No historical indicator data available for {date.strftime('%Y-%m-%d')}")
+            return 0.0
+        
+        # Only print detailed debug info for one sector (AdTech) to reduce log spam
+        if sector_name == "AdTech":
+            print(f"\nScoring {sector_name} with {len(macro_values)} indicators for {date.strftime('%Y-%m-%d')}:")
+            for indicator, value in macro_values.items():
+                print(f"  {indicator}: {value}")
+        
+        # Score all sectors using the historical data
+        sector_scores = score_sectors(macro_values)
+        
+        # Find the score for the requested sector
+        for sector_data in sector_scores:
+            if sector_data['sector'] == sector_name:
+                return sector_data['score']
+        
+        # Default to 0 if sector not found
+        print(f"Warning: Sector '{sector_name}' not found in scoring results")
         return 0.0
     
-    print(f"\nScoring {sector_name} with {len(macro_values)} indicators for {date.strftime('%Y-%m-%d')}:")
-    for indicator, value in macro_values.items():
-        print(f"  {indicator}: {value}")
-    
-    # Score all sectors using the historical data
-    sector_scores = score_sectors(macro_values)
-    
-    # Find the score for the requested sector
-    for sector_data in sector_scores:
-        if sector_data['sector'] == sector_name:
-            return sector_data['score']
-    
-    # Default to 0 if sector not found
-    print(f"Warning: Sector '{sector_name}' not found in scoring results")
-    return 0.0
+    except Exception as e:
+        print(f"Error scoring {sector_name} for {date.strftime('%Y-%m-%d')}: {e}")
+        return 0.0
 
 # ---------- 8) Example run ----------
 if __name__ == "__main__":
