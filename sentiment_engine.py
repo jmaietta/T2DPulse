@@ -84,7 +84,7 @@ BANDS = {
     "Software_Dev_Job_Postings_YoY_%": ("higher", 5.0, 0.0),
     "PPI_Data_Processing_YoY_%": ("higher", 5.0, 0.0),
     "PPI_Software_Publishers_YoY_%": ("higher", 5.0, 0.0),
-    "Consumer_Sentiment":        ("higher", 100.0, 90.0),
+    "Consumer_Sentiment":        ("higher", 80.0, 70.0),  # Updated bands to better reflect typical range
 }
 
 # ---------- 5) Default sector weights ----------
