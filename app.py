@@ -5758,20 +5758,12 @@ def update_sector_sentiment_container(n):
                         html.Div(f"{norm_score:.1f}", className="sector-score", 
                                 style={
                                     "fontWeight": "bold", 
-                                    "fontSize": "20px", 
+                                    "fontSize": "24px", 
                                     "textAlign": "right", 
                                     "width": "100%",
                                     "display": "block",
-                                    "marginRight": "0"
-                                }),
-                        html.Div(stance, className="sector-sentiment", 
-                                style={
-                                    "color": text_color, 
-                                    "fontSize": "14px", 
-                                    "textAlign": "right", 
-                                    "width": "100%",
-                                    "display": "block", 
-                                    "marginRight": "0"
+                                    "marginRight": "0",
+                                    "color": text_color
                                 })
                     ], className="score-container", style={
                         "width": "80px", 
