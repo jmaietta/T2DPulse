@@ -271,11 +271,44 @@ def update_sentiment_history(sector_scores):
         sector_name = sector_data['sector']
         score = sector_data['normalized_score']
         
+        # Check for real historical data
+        real_data_file = f"data/real_sector_sentiment_history_{today.strftime('%Y-%m-%d')}.csv"
+        use_real_data = False
+        
         # Initialize history for new sectors
         if sector_name not in history:
-            print(f"Generating new history for {sector_name} with current score {score}")
-            # Create initial history with realistic variations based on market data
-            history[sector_name] = generate_realistic_history(sector_name, score)
+            print(f"Setting up history for {sector_name} with current score {score}")
+            history[sector_name] = []
+            
+            # Try to load real historical data first
+            if os.path.exists(real_data_file):
+                try:
+                    # Load real historical data
+                    real_df = pd.read_csv(real_data_file)
+                    if sector_name in real_df.columns:
+                        use_real_data = True
+                        print(f"Using real historical data for {sector_name}")
+                        
+                        # Process all historical dates from the real data
+                        for _, row in real_df.iterrows():
+                            try:
+                                hist_date = datetime.fromisoformat(row['date'])
+                                if not pd.isna(row[sector_name]):
+                                    history[sector_name].append((hist_date, row[sector_name]))
+                            except Exception as e:
+                                print(f"Error processing real data point: {e}")
+                except Exception as e:
+                    print(f"Error loading real historical data: {e}")
+            
+            # If no real data available or loading failed, fall back to synthetic data
+            if not use_real_data:
+                print(f"Real historical data not available for {sector_name}, generating synthetic history")
+                history[sector_name] = generate_realistic_history(sector_name, score)
+            
+            # Sort by date and keep only the last HISTORY_LENGTH days
+            history[sector_name] = sorted(history[sector_name], key=lambda x: x[0])
+            if len(history[sector_name]) > HISTORY_LENGTH:
+                history[sector_name] = history[sector_name][-HISTORY_LENGTH:]
             
             # Debug: Print the first and last few scores to verify unique patterns
             if history[sector_name]:
@@ -292,7 +325,8 @@ def update_sentiment_history(sector_scores):
             history[sector_name].append((today, score))
             print(f"Added today's score for {sector_name}: {score}")
             
-            # Trim history to keep only the last HISTORY_LENGTH days
+            # Re-sort and trim history to keep only the last HISTORY_LENGTH days
+            history[sector_name] = sorted(history[sector_name], key=lambda x: x[0])
             if len(history[sector_name]) > HISTORY_LENGTH:
                 history[sector_name] = history[sector_name][-HISTORY_LENGTH:]
     
@@ -312,6 +346,42 @@ def get_sector_history_dataframe(sector_name, days=HISTORY_LENGTH):
     Returns:
         DataFrame: DataFrame with 'date' and 'score' columns
     """
+    # Check if we can get data directly from real historical data
+    today = datetime.now().replace(hour=0, minute=0, second=0, microsecond=0)
+    real_data_file = f"data/real_sector_sentiment_history_{today.strftime('%Y-%m-%d')}.csv"
+    
+    if os.path.exists(real_data_file):
+        try:
+            # Load real historical data
+            real_df = pd.read_csv(real_data_file)
+            
+            # Check if the sector is in the data
+            if sector_name in real_df.columns:
+                # Convert dates to datetime
+                real_df['date'] = pd.to_datetime(real_df['date'])
+                
+                # Filter to just the required columns and days
+                filtered_df = real_df[['date', sector_name]].rename(columns={sector_name: 'score'})
+                end_date = today
+                start_date = end_date - timedelta(days=days-1)
+                filtered_df = filtered_df[filtered_df['date'] >= start_date]
+                
+                # Ensure we have data for all days in range
+                date_range = pd.date_range(start=start_date, end=end_date)
+                full_df = pd.DataFrame({'date': date_range})
+                merged_df = pd.merge(full_df, filtered_df, on='date', how='left')
+                
+                # Fill any missing values
+                if merged_df['score'].isna().all():
+                    merged_df['score'] = 50
+                else:
+                    merged_df['score'] = merged_df['score'].ffill().bfill()
+                
+                return merged_df
+        except Exception as e:
+            print(f"Error loading real historical data for {sector_name}: {e}")
+    
+    # Fall back to stored history data if real data not available
     history = load_sentiment_history()
     
     if sector_name not in history:
