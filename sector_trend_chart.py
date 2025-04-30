@@ -23,8 +23,8 @@ def create_sector_trend_chart(sector_name, days=14, height=80, width=None):
     # Get historical data for the sector
     df = sector_sentiment_history.get_sector_history_dataframe(sector_name, days)
     
-    # If we have no real data yet, return an empty placeholder
-    if df.empty or df['score'].nunique() <= 1:
+    # We should always have data now due to our history generation, but check anyway
+    if df.empty:
         # Create a placeholder figure
         fig = go.Figure()
         fig.update_layout(

@@ -34,6 +34,9 @@ import sector_trend_chart
 # Import data cache for fast data access
 from data_cache import get_data, get_all_data
 
+# Import historical sector score generation
+import historical_sector_scores
+
 # Consumer sentiment functions defined directly in app.py to avoid circular imports
 
 # Data directory
