@@ -5998,7 +5998,31 @@ def update_sector_sentiment_container(n):
                        "gridTemplateColumns": "repeat(auto-fill, minmax(320px, 1fr))",
                        "gap": "40px",  # Significantly increased gap between cards
                        "padding": "10px",  # Increased padding around the grid
-                       "marginBottom": "30px"}),  # Add bottom margin
+                       "marginBottom": "20px"}),  # Add bottom margin
+        
+        # Export button
+        html.Div([
+            html.A(
+                html.Button("Export Sector History to Excel",
+                          id="export-excel-button",
+                          className="export-button",
+                          style={
+                              "backgroundColor": "#3498db",
+                              "color": "white",
+                              "border": "none",
+                              "borderRadius": "4px",
+                              "padding": "10px 20px",
+                              "cursor": "pointer",
+                              "fontWeight": "500",
+                              "boxShadow": "0 2px 4px rgba(0,0,0,0.1)",
+                              "margin": "0 auto",
+                              "display": "block"
+                          }),
+                id="download-excel-link",
+                href=f"/download/sector_sentiment_history_{datetime.now().strftime('%Y-%m-%d')}.xlsx",
+                download=f"sector_sentiment_history_{datetime.now().strftime('%Y-%m-%d')}.xlsx"
+            ),
+        ], style={"marginBottom": "30px", "textAlign": "center"}),
         
         # Hidden div to store weights, initially populated with JSON of sector weights
         html.Div(id="stored-weights", 
@@ -6895,6 +6919,28 @@ def update_key_indicators(n):
         print(f"Error updating key indicators: {e}")
         # Return empty values for all indicators and their trends
         return "N/A", "", "N/A", "", "N/A", "", "N/A", "", "N/A", "", "N/A", "", "N/A", "", "N/A", "", "N/A", "", "N/A", "", "N/A", "", "N/A", "", "N/A", ""
+
+# Add a download route for Excel files
+@app.server.route("/download/<path:filename>")
+def download_file(filename):
+    """
+    Serve files from the data directory for download
+    This is used to provide downloadable Excel exports of sector sentiment history
+    """
+    # Generate file on request if it doesn't exist yet
+    filepath = os.path.join("data", filename)
+    
+    if not os.path.exists(filepath):
+        # The file doesn't exist yet, so run the export script to create it
+        import export_sector_history
+        export_sector_history.main()
+    
+    # Now serve the file (whether it existed before or was just created)
+    return flask.send_from_directory(
+        directory="data",
+        path=filename,
+        as_attachment=True
+    )
 
 # Add this at the end of the file if running directly
 if __name__ == "__main__":
