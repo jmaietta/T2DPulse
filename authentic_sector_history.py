@@ -45,75 +45,18 @@ def compute_authentic_sector_history():
     
     print(f"Computing authentic historical data for {len(business_days)} business days...")
     
-    # Define sector behavior profiles to create more realistic variations
-    # Each sector responds differently to economic changes
-    sector_profiles = {
-        "SMB SaaS": {"volatility": 0.8, "trend_factor": 0.2},
-        "Enterprise SaaS": {"volatility": 0.6, "trend_factor": 0.4},
-        "Cloud Infrastructure": {"volatility": 0.5, "trend_factor": 0.6},
-        "AdTech": {"volatility": 1.0, "trend_factor": 0.3},
-        "Fintech": {"volatility": 0.9, "trend_factor": 0.4},
-        "Consumer Internet": {"volatility": 0.7, "trend_factor": 0.3},
-        "eCommerce": {"volatility": 0.8, "trend_factor": 0.3},
-        "Cybersecurity": {"volatility": 0.6, "trend_factor": 0.6},
-        "Dev Tools / Analytics": {"volatility": 0.5, "trend_factor": 0.5},
-        "Semiconductors": {"volatility": 1.1, "trend_factor": 0.3},
-        "AI Infrastructure": {"volatility": 0.9, "trend_factor": 0.7},
-        "Vertical SaaS": {"volatility": 0.7, "trend_factor": 0.3},
-        "IT Services / Legacy Tech": {"volatility": 0.4, "trend_factor": 0.8},
-        "Hardware / Devices": {"volatility": 0.8, "trend_factor": 0.3}
-    }
-    
-    # Add a few market events to create more realistic patterns
-    # These are dates with significant market movements
-    market_events = {
-        # Format: "YYYY-MM-DD": {"description": "...", "impact": -0.1 to +0.1}
-        "2025-04-21": {"description": "Treasury yield spike", "impact": -0.08},
-        "2025-04-25": {"description": "Q1 earnings beat", "impact": 0.12},
-        "2025-04-29": {"description": "Positive GDP report", "impact": 0.10}
-    }
-    
     # Process each sector
     for sector in SECTORS:
         sector_name = sector
         print(f"Computing history for {sector_name}...")
         scores = []
         
-        # Get sector profile (or use default)
-        profile = sector_profiles.get(sector_name, {"volatility": 0.7, "trend_factor": 0.5})
-        volatility = profile["volatility"]
-        trend_factor = profile["trend_factor"]
-        
-        # Previous score to create smoother transitions
-        prev_score = None
-        
         # Calculate scores for each business day
         for day in business_days:
             try:
                 # Get raw score from sentiment engine (already in [-1,1] range)
+                # This uses only authentic API data for the calculation
                 raw_score = sentiment_engine.score_sector_on_date(sector_name, day)
-                
-                # Apply sector-specific variance - more volatile sectors show more day-to-day change
-                # but maintain consistent overall trends based on the actual economic data
-                if prev_score is not None:
-                    # Mix previous score with new score for smoother transitions
-                    # Higher trend_factor = smoother transitions with stronger trends
-                    raw_score = (prev_score * trend_factor) + (raw_score * (1 - trend_factor))
-                
-                # Check if the day has a market event and apply the impact
-                day_str = day.strftime("%Y-%m-%d")
-                if day_str in market_events:
-                    event = market_events[day_str]
-                    
-                    # Different sectors respond differently to market events
-                    # Scale the impact based on sector volatility
-                    impact = event["impact"] * volatility
-                    
-                    # Apply the impact, but ensure scores remain within valid range
-                    raw_score = max(-0.99, min(0.99, raw_score + impact))
-                
-                # Store the raw score for next iteration
-                prev_score = raw_score
                 
                 # Convert raw score from [-1,1] to [0,100] scale for display
                 normalized_score = ((raw_score + 1.0) / 2.0) * 100
