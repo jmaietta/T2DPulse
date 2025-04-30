@@ -1,65 +1,70 @@
 #!/usr/bin/env python3
 # predefined_sector_data.py
 # -----------------------------------------------------------
-# Use predefined authentic data for sector sentiment history 
-# This avoids issues with recalculating historical values
+# Use predefined authentic historical sector sentiment data
+# instead of calculating it on the fly
 
 import os
 import pandas as pd
-from datetime import datetime, timedelta
 
-# Path to the predefined data file
-PREDEFINED_DATA_PATH = "data/predefined_sector_history.csv"
-
-def get_sector_history_dataframe(sector_name, days=10):
+def get_predefined_sector_history(all_sectors=True):
     """
-    Get historical data for a sector using predefined values
+    Load the predefined sector history from CSV file
     
     Args:
-        sector_name (str): Name of the sector
-        days (int): Number of days to include
+        all_sectors (bool): Whether to return all sectors or just the ones in sentiment_engine.SECTORS
         
     Returns:
-        DataFrame: DataFrame with 'date' and 'score' columns
+        dict: Dictionary with date-indexed DataFrames for each sector
     """
-    try:
-        # Check if the predefined data file exists
-        if not os.path.exists(PREDEFINED_DATA_PATH):
-            print(f"Predefined sector data file not found: {PREDEFINED_DATA_PATH}")
-            return pd.DataFrame(columns=["date", "score"])
+    csv_path = "data/predefined_sector_history.csv"
+    
+    # If the predefined data doesn't exist yet, return empty dictionary
+    if not os.path.exists(csv_path):
+        print(f"Warning: Predefined sector history file not found at {csv_path}")
+        return {}
         
-        # Load the predefined data
-        all_sectors_df = pd.read_csv(PREDEFINED_DATA_PATH)
+    try:
+        # Read the CSV file
+        df = pd.read_csv(csv_path)
         
         # Convert date column to datetime
-        all_sectors_df['date'] = pd.to_datetime(all_sectors_df['date'])
+        df['date'] = pd.to_datetime(df['date'])
         
-        # Check if this sector exists in the data
-        if sector_name not in all_sectors_df.columns:
-            print(f"Sector {sector_name} not found in predefined data")
-            return pd.DataFrame(columns=["date", "score"])
+        # Dictionary to store results
+        sector_history = {}
         
-        # Create a dataframe with just this sector's data
-        df = pd.DataFrame({
-            'date': all_sectors_df['date'],
-            'score': all_sectors_df[sector_name]
-        })
+        # Get all column names except 'date'
+        sector_columns = [col for col in df.columns if col != 'date']
         
-        # Sort by date to ensure proper display
-        df = df.sort_values('date')
+        # Create a DataFrame for each sector
+        for sector in sector_columns:
+            sector_df = df[['date', sector]].copy()
+            sector_df.columns = ['date', 'value']  # Rename for consistency
+            sector_df = sector_df.set_index('date')
+            sector_history[sector] = sector_df
+            
+        return sector_history
         
-        # Keep only the requested number of days
-        if len(df) > days:
-            df = df.tail(days)
-        
-        return df
-    
     except Exception as e:
-        print(f"Error getting predefined sector history for {sector_name}: {e}")
-        return pd.DataFrame(columns=["date", "score"])
-
-# For testing
-if __name__ == "__main__":
-    # Test the function
-    df = get_sector_history_dataframe("AdTech")
-    print(df.head())
+        print(f"Error loading predefined sector history: {e}")
+        return {}
+        
+def get_sector_history_dates():
+    """
+    Get the list of dates for which we have sector history data
+    
+    Returns:
+        list: List of date strings in YYYY-MM-DD format
+    """
+    csv_path = "data/predefined_sector_history.csv"
+    
+    if not os.path.exists(csv_path):
+        return []
+        
+    try:
+        df = pd.read_csv(csv_path)
+        dates = df['date'].tolist()
+        return dates
+    except:
+        return []

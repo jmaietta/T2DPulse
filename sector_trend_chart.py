@@ -1,196 +1,227 @@
 #!/usr/bin/env python3
 # sector_trend_chart.py
 # -----------------------------------------------------------
-# Generate mini time series charts for historical sector sentiment
+# Create mini trend charts for sector sentiment history using authentic data
 
+import os
 import plotly.graph_objects as go
 import pandas as pd
 from datetime import datetime, timedelta
-from predefined_sector_data import get_sector_history_dataframe
+import predefined_sector_data
 
-def get_chart_color(score_value):
-    """Get the appropriate color based on the sentiment score"""
-    if score_value >= 60:
-        return "#2ecc71"  # Green for bullish (60-100)
-    elif score_value >= 30:
-        return "#f39c12"  # Orange for neutral (30-60)
-    else:
-        return "#e74c3c"  # Red for bearish (0-30)
+# Color scheme for trend charts
+TREND_COLORS = {
+    'line': '#2E86C1',           # Main line color (blue)
+    'fill': 'rgba(46,134,193,0.2)',  # Fill color (light blue)
+    'marker': '#2471A3',         # Point marker color (darker blue)
+    'highlight': '#F39C12'       # Highlight color (orange)
+}
 
-def create_sector_trend_chart(sector_name, days=10, height=85, width=200):
+def create_mini_trend_chart(sector_name, height=50, show_axes=False, auto_range=True):
     """
-    Create a mini time series chart for a specific sector using authentic historical data
+    Create a mini trend chart for a sector using authentic historical data
     
     Args:
         sector_name (str): Name of the sector
-        days (int): Number of days to include in the chart (defaults to 10 for better performance)
-        height (int): Height of the chart in pixels
-        width (int): Width of the chart in pixels
+        height (int, optional): Height of the chart in pixels
+        show_axes (bool, optional): Whether to show axes
+        auto_range (bool, optional): Whether to auto-range the y-axis
         
     Returns:
-        go.Figure: Plotly figure with the trend chart
+        dict: Plotly figure object
     """
-    try:
-        # Get authentic historical data for this sector
-        df = get_sector_history_dataframe(sector_name, days)
-        
-        # If no data, try to get it from historical_sector_scores as a fallback
-        if df.empty:
-            try:
-                import historical_sector_scores
-                print(f"No authentic data for {sector_name}, trying legacy historical data")
-                df = historical_sector_scores.get_historical_scores(sector_name, days)
-            except Exception as e:
-                print(f"Error getting fallback historical data for {sector_name}: {e}")
-        
-        # If still no data, return an empty chart with a message
-        if df.empty:
-            fig = go.Figure()
-            fig.update_layout(
-                margin=dict(l=0, r=0, t=0, b=0),
-                height=height,
-                width=width,
-                annotations=[
-                    dict(
-                        text="Historical data loading...",
-                        xref="paper",
-                        yref="paper",
-                        x=0.5,
-                        y=0.5,
-                        showarrow=False,
-                        font=dict(size=10, color="#777777")
-                    )
-                ]
-            )
-            return fig
-    except Exception as e:
-        print(f"Error in create_sector_trend_chart for {sector_name}: {e}")
+    # Get authentic historical data from predefined file
+    sector_history = predefined_sector_data.get_predefined_sector_history()
+    
+    if not sector_history or sector_name not in sector_history:
+        # Return empty chart if no data available
         fig = go.Figure()
-        fig.update_layout(
-            margin=dict(l=0, r=0, t=0, b=0),
-            height=height,
-            width=width,
-            annotations=[
-                dict(
-                    text="Chart loading...",
-                    xref="paper",
-                    yref="paper",
-                    x=0.5,
-                    y=0.5,
-                    showarrow=False,
-                    font=dict(size=10, color="#777777")
-                )
-            ]
-        )
+        fig.update_layout(height=height, margin=dict(l=0, r=0, t=0, b=0))
         return fig
     
-    # Get the most recent score to determine line color
-    latest_score = df["score"].iloc[-1] if not df.empty else 50
-    line_color = get_chart_color(latest_score)
+    # Get data for this sector
+    df = sector_history[sector_name]
     
-    # Create the line chart
+    # Sort by date (just to be safe)
+    df = df.sort_index()
+    
+    # Convert index to list for plotting
+    dates = df.index.tolist()
+    values = df['value'].tolist()
+    
+    # Create figure
     fig = go.Figure()
     
-    # Add the score line
-    fig.add_trace(
-        go.Scatter(
-            x=df["date"],
-            y=df["score"],
-            mode="lines",
-            line=dict(width=2, color=line_color),
-            hovertemplate="%{y:.1f}",
+    # Add area fill
+    fig.add_trace(go.Scatter(
+        x=dates,
+        y=values,
+        fill='tozeroy',
+        fillcolor=TREND_COLORS['fill'],
+        line=dict(color=TREND_COLORS['line'], width=2),
+        mode='lines',
+        hoverinfo='none',
+        showlegend=False
+    ))
+    
+    # Add markers for each point (we'll hide them with opacity 0 but they enable hover)
+    fig.add_trace(go.Scatter(
+        x=dates,
+        y=values,
+        mode='markers',
+        marker=dict(color=TREND_COLORS['marker'], size=3, opacity=0),
+        hoverinfo='text',
+        hovertext=[f"{d.strftime('%Y-%m-%d')}: {v:.1f}" for d, v in zip(dates, values)],
+        showlegend=False
+    ))
+    
+    # Set layout
+    fig.update_layout(
+        height=height,
+        margin=dict(l=0, r=0, t=0, b=0),
+        plot_bgcolor='rgba(0,0,0,0)',
+        paper_bgcolor='rgba(0,0,0,0)',
+        hovermode='closest'
+    )
+    
+    # Hide axes if requested
+    if not show_axes:
+        fig.update_xaxes(visible=False)
+        fig.update_yaxes(visible=False)
+    
+    # Set y-axis range to focus on differences
+    if auto_range:
+        # Let Plotly handle the auto-ranging
+        pass
+    else:
+        # Fixed range from 0-100 for consistent visualization
+        fig.update_yaxes(range=[0, 100])
+    
+    return fig
+
+def create_combined_sector_chart(sector_names, title=None, height=400):
+    """
+    Create a combined chart for multiple sectors using authentic historical data
+    
+    Args:
+        sector_names (list): List of sector names
+        title (str, optional): Chart title
+        height (int, optional): Height of the chart in pixels
+        
+    Returns:
+        dict: Plotly figure object
+    """
+    # Get authentic historical data from predefined file
+    sector_history = predefined_sector_data.get_predefined_sector_history()
+    
+    if not sector_history:
+        # Return empty chart if no data available
+        fig = go.Figure()
+        fig.update_layout(height=height, title=title)
+        return fig
+    
+    # Create figure
+    fig = go.Figure()
+    
+    # Color palette for multiple sectors
+    colors = ['#1f77b4', '#ff7f0e', '#2ca02c', '#d62728', '#9467bd', 
+              '#8c564b', '#e377c2', '#7f7f7f', '#bcbd22', '#17becf']
+    
+    # Add each sector
+    for i, sector_name in enumerate(sector_names):
+        if sector_name not in sector_history:
+            continue
+            
+        # Get data for this sector
+        df = sector_history[sector_name]
+        
+        # Sort by date
+        df = df.sort_index()
+        
+        # Convert index to list for plotting
+        dates = df.index.tolist()
+        values = df['value'].tolist()
+        
+        # Add line
+        fig.add_trace(go.Scatter(
+            x=dates,
+            y=values,
+            name=sector_name,
+            line=dict(color=colors[i % len(colors)], width=2),
+            mode='lines+markers',
+            marker=dict(size=6),
+            hovertemplate="%{x|%Y-%m-%d}: %{y:.1f}<extra>" + sector_name + "</extra>"
+        ))
+    
+    # Set layout
+    fig.update_layout(
+        height=height,
+        title=title,
+        margin=dict(l=40, r=40, t=40, b=40),
+        plot_bgcolor='rgba(240,240,240,0.8)',
+        paper_bgcolor='white',
+        hovermode='closest',
+        legend=dict(
+            orientation="h",
+            yanchor="bottom",
+            y=1.02,
+            xanchor="right",
+            x=1
         )
     )
     
-    # Add a reference line at 50 (the midpoint)
-    fig.add_shape(
-        type="line",
-        x0=df["date"].min(),
-        x1=df["date"].max(),
-        y0=50,
-        y1=50,
-        line=dict(color="#cccccc", width=1, dash="dot"),
+    # Format axes
+    fig.update_xaxes(
+        title='Date',
+        showgrid=True,
+        gridcolor='rgba(200,200,200,0.4)'
     )
     
-    # Format the chart with a focused y-axis range to highlight differences
-    # Default range is between 30-70 to highlight differences
-    # Most scores are in the 40-60 range, so this will make differences more visible
-    min_val = max(0, min(df["score"].min() - 5, 30)) if not df.empty else 30
-    max_val = min(100, max(df["score"].max() + 5, 70)) if not df.empty else 70
-    
-    fig.update_layout(
-        margin=dict(l=0, r=0, t=0, b=0),
-        height=height,
-        width=width,
-        showlegend=False,
-        xaxis=dict(visible=False, showgrid=False),
-        yaxis=dict(visible=False, showgrid=False, range=[min_val, max_val]),
-        plot_bgcolor="rgba(0,0,0,0)",
-        paper_bgcolor="rgba(0,0,0,0)",
-        hovermode="x unified",
+    fig.update_yaxes(
+        title='Sentiment Score',
+        showgrid=True,
+        gridcolor='rgba(200,200,200,0.4)',
+        range=[0, 100]
     )
     
     return fig
 
-def create_sector_trend_div(sector_name, sector_score):
-    """
-    Create a div with the sector name, score, and trend chart
-    
-    Args:
-        sector_name (str): Name of the sector
-        sector_score (float): Current sentiment score for the sector
-        
-    Returns:
-        html.Div: Div with the sector card
-    """
-    from dash import html, dcc
-    import dash_bootstrap_components as dbc
-    
-    # Convert score to 0-100 scale if it's in -1 to 1 range
-    if -1 <= sector_score <= 1:
-        normalized_score = ((sector_score + 1) / 2) * 100
-    else:
-        normalized_score = sector_score
-    
-    # Get color based on the score
-    score_color = get_chart_color(normalized_score)
-    
-    # Create the card
-    return dbc.Card(
-        [
-            dbc.CardHeader(
-                [
-                    html.Div(
-                        sector_name,
-                        style={"fontWeight": "bold", "fontSize": "0.9rem"}
-                    ),
-                    html.Div(
-                        f"{normalized_score:.1f}",
-                        style={
-                            "fontWeight": "bold",
-                            "color": score_color,
-                            "fontSize": "1.1rem"
-                        }
-                    )
-                ],
-                style={"display": "flex", "justifyContent": "space-between", "alignItems": "center"}
-            ),
-            dbc.CardBody(
-                [
-                    dcc.Graph(
-                        figure=create_sector_trend_chart(sector_name),
-                        config={"displayModeBar": False},
-                        style={"height": "85px", "width": "100%"}
-                    )
-                ],
-                style={"padding": "0.5rem"}
-            ),
-        ],
-        style={"width": "200px", "margin": "5px", "height": "150px"}
-    )
-
-# Example usage
 if __name__ == "__main__":
-    # Test the chart creation
-    fig = create_sector_trend_chart("AdTech")
-    fig.show()
+    # Test the trend chart
+    import dash
+    import dash_bootstrap_components as dbc
+    from dash import html, dcc
+    
+    app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
+    
+    # Create layout
+    app.layout = dbc.Container([
+        html.H1("Sector Trend Charts"),
+        
+        # Mini trend charts
+        html.H2("Mini Trend Charts"),
+        dbc.Row([
+            dbc.Col([
+                html.H4("Enterprise SaaS"),
+                dcc.Graph(figure=create_mini_trend_chart("Enterprise SaaS"))
+            ], width=4),
+            dbc.Col([
+                html.H4("AdTech"),
+                dcc.Graph(figure=create_mini_trend_chart("AdTech"))
+            ], width=4),
+            dbc.Col([
+                html.H4("Cybersecurity"),
+                dcc.Graph(figure=create_mini_trend_chart("Cybersecurity"))
+            ], width=4)
+        ]),
+        
+        # Combined chart
+        html.H2("Combined Chart"),
+        dcc.Graph(figure=create_combined_sector_chart(
+            ["Enterprise SaaS", "AdTech", "Cybersecurity", "AI Infrastructure"],
+            title="Sector Comparison"
+        ))
+    ])
+    
+    # Run the app
+    app.run_server(host='0.0.0.0', port=5002, debug=True)
