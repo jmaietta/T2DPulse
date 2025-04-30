@@ -21,6 +21,7 @@ dependencies = [
     # Remove transformers dependency as it's causing conflicts
     # The app works without it, as we're only using basic document analysis
     "yfinance>=0.2.55",
+    "trafilatura>=2.0.0",
 ]
 
 [[tool.uv.index]]

@@ -37,6 +37,35 @@ from data_cache import get_data, get_all_data
 DATA_DIR = 'data'
 os.makedirs(DATA_DIR, exist_ok=True)
 
+# Define series IDs for FRED data
+FRED_SERIES = {
+    "gdp": "GDPC1",              # Real GDP
+    "unemployment": "UNRATE",    # Unemployment Rate
+    "cpi": "CPIAUCSL",          # Consumer Price Index
+    "pcepi": "PCEPI",           # Personal Consumption Expenditures Price Index
+    "interest_rate": "FEDFUNDS", # Federal Funds Rate
+    "pce": "PCE",               # Personal Consumption Expenditures
+    "consumer_sentiment": "USACSCICP02STSAM", # Consumer Sentiment
+    "software_ppi": "PCU511210511210", # Software Publishers PPI
+    "data_ppi": "PCU518210518210"  # Data Processing Services PPI
+}
+
+# Define data file paths
+DATA_FILES = {
+    "gdp": "data/gdp_data.csv",
+    "unemployment": "data/unemployment_data.csv",
+    "cpi": "data/inflation_data.csv",
+    "pcepi": "data/pcepi_data.csv",
+    "interest_rate": "data/interest_rate_data.csv",
+    "pce": "data/pce_data.csv",
+    "treasury_yield": "data/treasury_yield_data.csv",
+    "vix": "data/vix_data.csv",
+    "nasdaq": "data/nasdaq_data.csv",
+    "consumer_sentiment": "data/consumer_sentiment_data.csv",
+    "software_ppi": "data/software_ppi_data.csv",
+    "data_ppi": "data/data_processing_ppi_data.csv"
+}
+
 # Initialize the Dash app with external stylesheets
 app = dash.Dash(
     __name__,
@@ -62,16 +91,14 @@ def fetch_fred_data(series_id, start_date=None, end_date=None):
         print("Cannot fetch FRED data: No API key provided")
         return pd.DataFrame()
     
-    # Use today's date minus 5 days as a safety buffer to avoid potential future date errors
-    # FRED API returns an error if realtime_start is after today's date (their server date)
-    # The 5-day buffer helps account for any time zone differences or server clock variations
+    # Use today's date for most current data
     today = datetime.now().date()
-    safe_date = (today - timedelta(days=5)).strftime('%Y-%m-%d')
+    current_date = today.strftime('%Y-%m-%d')
     
     # Default to last 5 years if no dates specified
     if not end_date:
         # Use today for most recent data
-        end_date = today.strftime('%Y-%m-%d')
+        end_date = current_date
     if not start_date:
         # Calculate 5 years before the end date
         end_date_obj = datetime.strptime(end_date, '%Y-%m-%d') if isinstance(end_date, str) else end_date
@@ -80,19 +107,18 @@ def fetch_fred_data(series_id, start_date=None, end_date=None):
     # Build API URL
     url = f"https://api.stlouisfed.org/fred/series/observations"
     
-    # First try with current dates
+    # Use current dates for most recent data
     params = {
         "series_id": series_id,
         "api_key": FRED_API_KEY,
         "file_type": "json",
         "observation_start": start_date,
-        "observation_end": end_date,
-        "realtime_start": safe_date,
-        "realtime_end": end_date
+        "observation_end": current_date,
+        "sort_order": "desc"  # Get newest observations first
     }
     
     try:
-        # Make first API request with current dates
+        # Make API request with current dates
         response = requests.get(url, params=params)
         
         if response.status_code == 200:
@@ -106,25 +132,27 @@ def fetch_fred_data(series_id, start_date=None, end_date=None):
             # Handle missing values
             df = df.dropna(subset=['value'])
             
+            # Sort by date (newest first)
+            df = df.sort_values('date', ascending=False)
+            
+            # Report most recent value
+            if not df.empty:
+                latest = df.iloc[0]
+                print(f"Latest {series_id} value: {latest['value']} on {latest['date'].strftime('%Y-%m-%d')}")
+            
             print(f"Successfully retrieved {len(df)} observations for {series_id}")
             return df
         else:
-            # If current dates fail, try again with a more conservative approach
-            print(f"First FRED API attempt failed: {response.status_code} - {response.text}")
-            print("Trying again with more conservative date parameters...")
+            # If current parameters fail, try again with slightly modified approach
+            print(f"FRED API request failed: {response.status_code} - {response.text}")
+            print("Trying alternate approach to get most recent data...")
             
-            # Get date from 30 days ago to be extra safe
-            safe_date = (today - timedelta(days=30)).strftime('%Y-%m-%d')
-            
-            # Update params with more conservative dates
-            params.update({
-                "observation_end": safe_date,
-                "realtime_start": safe_date,
-                "realtime_end": safe_date
-            })
+            # Try without specifying realtime parameters
+            params.pop("realtime_start", None)
+            params.pop("realtime_end", None)
             
             try:
-                # Make second API request with conservative dates
+                # Make second API request with simplified parameters
                 response = requests.get(url, params=params)
                 
                 if response.status_code == 200:
@@ -138,10 +166,32 @@ def fetch_fred_data(series_id, start_date=None, end_date=None):
                     # Handle missing values
                     df = df.dropna(subset=['value'])
                     
+                    # Sort by date (newest first)
+                    df = df.sort_values('date', ascending=False)
+                    
+                    # Report most recent value
+                    if not df.empty:
+                        latest = df.iloc[0]
+                        print(f"Latest {series_id} value: {latest['value']} on {latest['date'].strftime('%Y-%m-%d')}")
+                    
                     print(f"Second attempt: Successfully retrieved {len(df)} observations for {series_id}")
                     return df
                 else:
                     print(f"Second FRED API attempt also failed: {response.status_code} - {response.text}")
+                    
+                    # Try to load cached data if available
+                    filename = None
+                    for key, fname in DATA_FILES.items():
+                        if series_id == FRED_SERIES.get(key):
+                            filename = fname
+                            break
+                    
+                    if filename and os.path.exists(filename):
+                        print(f"Loading cached data from {filename} as fallback")
+                        cached_df = pd.read_csv(filename)
+                        cached_df['date'] = pd.to_datetime(cached_df['date'])
+                        return cached_df
+                    
                     return pd.DataFrame()
             except Exception as e:
                 print(f"Exception during second FRED API attempt: {str(e)}")
@@ -157,7 +207,15 @@ def save_data_to_csv(df, filename):
         return False
         
     try:
-        file_path = os.path.join(DATA_DIR, filename)
+        # Handle case where the filename already includes the data directory
+        if filename.startswith('data/'):
+            file_path = filename
+        else:
+            file_path = os.path.join(DATA_DIR, filename)
+            
+        # Ensure directory exists
+        os.makedirs(os.path.dirname(file_path), exist_ok=True)
+        
         df.to_csv(file_path, index=False)
         print(f"Successfully saved {len(df)} rows to {filename}")
         return True
