@@ -112,14 +112,19 @@ def create_sector_trend_chart(sector_name, days=10, height=85, width=200):
         line=dict(color="#cccccc", width=1, dash="dot"),
     )
     
-    # Format the chart
+    # Format the chart with a focused y-axis range to highlight differences
+    # Default range is between 30-70 to highlight differences
+    # Most scores are in the 40-60 range, so this will make differences more visible
+    min_val = max(0, min(df["score"].min() - 5, 30)) if not df.empty else 30
+    max_val = min(100, max(df["score"].max() + 5, 70)) if not df.empty else 70
+    
     fig.update_layout(
         margin=dict(l=0, r=0, t=0, b=0),
         height=height,
         width=width,
         showlegend=False,
         xaxis=dict(visible=False, showgrid=False),
-        yaxis=dict(visible=False, showgrid=False, range=[0, 100]),
+        yaxis=dict(visible=False, showgrid=False, range=[min_val, max_val]),
         plot_bgcolor="rgba(0,0,0,0)",
         paper_bgcolor="rgba(0,0,0,0)",
         hovermode="x unified",
