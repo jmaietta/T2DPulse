@@ -38,6 +38,10 @@ from data_cache import get_data, get_all_data
 # Import historical sector score generation
 import historical_sector_scores
 
+# Import authentic sector history for trend charts
+import authentic_sector_history
+import predefined_sector_data
+
 # Consumer sentiment functions defined directly in app.py to avoid circular imports
 
 # Data directory
@@ -6929,12 +6933,22 @@ def download_file(filename):
     This is used to provide downloadable Excel exports of sector sentiment history
     """
     # Generate file on request if it doesn't exist yet
+    # If it's a sector sentiment history export, ensure we're using authentic data
+    if filename.startswith('sector_sentiment_history_'):
+        import export_fixed_sentiment_history
+        if filename.endswith('.xlsx'):
+            export_fixed_sentiment_history.export_sentiment_history('excel')
+        elif filename.endswith('.csv'):
+            export_fixed_sentiment_history.export_sentiment_history('csv')
     filepath = os.path.join("data", filename)
     
     if not os.path.exists(filepath):
-        # The file doesn't exist yet, so run the fixed export script to create it
+        # The file doesn't exist yet, so create it now
         import export_fixed_sentiment_history
-        export_fixed_sentiment_history.export_predefined_history_to_excel()
+        if filename.endswith('.xlsx'):
+            export_fixed_sentiment_history.export_sentiment_history('excel')
+        elif filename.endswith('.csv'):
+            export_fixed_sentiment_history.export_sentiment_history('csv')
     
     # Now serve the file (whether it existed before or was just created)
     from flask import send_from_directory

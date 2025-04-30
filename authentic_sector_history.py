@@ -1,201 +1,143 @@
 #!/usr/bin/env python3
 # authentic_sector_history.py
 # -----------------------------------------------------------
-# Generate authentic historical sector sentiment data by replaying the
-# scoring routine for past business days
+# Integrates authentic historical sector sentiment data with the dashboard
 
 import os
 import json
 import pandas as pd
-from datetime import datetime, timedelta
-import sentiment_engine
+from datetime import datetime
 
-# Use the SECTORS list directly from sentiment_engine
-SECTORS = sentiment_engine.SECTORS
-
-# Number of business days to include
-DAYS = 10  # Reduced from 20 to improve performance
-
-# Paths for storing data
-DATA_DIR = "data"
-HISTORY_FILE = os.path.join(DATA_DIR, "authentic_sector_history.json")
-CSV_EXPORT_FILE = os.path.join(DATA_DIR, f"authentic_sector_history_{datetime.now().strftime('%Y-%m-%d')}.csv")
-
-# Ensure data directory exists
-os.makedirs(DATA_DIR, exist_ok=True)
-
-def get_business_days(days_back=DAYS):
-    """Get a list of business days (Mon-Fri) going back from today"""
-    today = datetime.today().replace(hour=0, minute=0, second=0, microsecond=0)
-    dates = []
-    curr = today
-    
-    # Collect the last `days_back` weekdays
-    while len(dates) < days_back:
-        if curr.weekday() < 5:  # Mon-Fri only
-            dates.append(curr)
-        curr -= timedelta(days=1)
-    
-    return sorted(dates)  # Return dates in chronological order
-
-def compute_authentic_sector_history():
-    """Compute authentic sector sentiment history for all sectors"""
-    business_days = get_business_days(DAYS)
-    sector_history = {}
-    
-    print(f"Computing authentic historical data for {len(business_days)} business days...")
-    
-    # Process each sector
-    for sector in SECTORS:
-        sector_name = sector
-        print(f"Computing history for {sector_name}...")
-        scores = []
-        
-        # Calculate scores for each business day
-        for day in business_days:
-            try:
-                # Get raw score from sentiment engine (already in [-1,1] range)
-                # This uses only authentic API data for the calculation
-                raw_score = sentiment_engine.score_sector_on_date(sector_name, day)
-                
-                # Convert raw score from [-1,1] to [0,100] scale for display
-                normalized_score = ((raw_score + 1.0) / 2.0) * 100
-                
-                # Store the sector data with both scores
-                scores.append({
-                    "date": day.isoformat(),
-                    "raw_score": raw_score,
-                    "normalized_score": normalized_score  # 0-100 scale for display
-                })
-                
-            except Exception as e:
-                print(f"Error calculating score for {sector_name} on {day.strftime('%Y-%m-%d')}: {e}")
-        
-        # Store history for this sector
-        if scores:
-            sector_history[sector_name] = scores
-    
-    return sector_history
-
-def save_history(sector_history):
-    """Save the computed history to a JSON file"""
-    try:
-        with open(HISTORY_FILE, 'w') as f:
-            json.dump(sector_history, f)
-        print(f"Saved authentic sector history to {HISTORY_FILE}")
-        return True
-    except Exception as e:
-        print(f"Error saving sector history: {e}")
-        return False
-
-def export_to_csv(sector_history):
-    """Export the history to a CSV file for verification"""
-    try:
-        # Extract all dates from all sectors
-        all_dates = set()
-        for sector, scores in sector_history.items():
-            for item in scores:
-                all_dates.add(item["date"])
-        
-        # Create rows for each date
-        rows = []
-        for date_str in sorted(all_dates):
-            row = {"date": date_str}
-            
-            # Add normalized scores for each sector
-            for sector, scores in sector_history.items():
-                for item in scores:
-                    if item["date"] == date_str:
-                        row[sector] = item["normalized_score"]
-                        break
-            
-            rows.append(row)
-        
-        # Create DataFrame and save to CSV
-        if rows:
-            df = pd.DataFrame(rows)
-            df.to_csv(CSV_EXPORT_FILE, index=False)
-            print(f"Exported authentic sector history to {CSV_EXPORT_FILE}")
-            return True
-        else:
-            print("No data to export")
-            return False
-    
-    except Exception as e:
-        print(f"Error exporting to CSV: {e}")
-        return False
-
-def load_history():
-    """Load the authentic sector history from JSON file"""
-    try:
-        if os.path.exists(HISTORY_FILE):
-            with open(HISTORY_FILE, 'r') as f:
-                return json.load(f)
-        return {}
-    except Exception as e:
-        print(f"Error loading sector history: {e}")
-        return {}
-
-def get_sector_history_dataframe(sector_name, days=DAYS):
+def get_authentic_sector_history(sector_name=None):
     """
-    Get a pandas DataFrame with authentic historical sentiment scores for a sector
+    Get authentic historical sector sentiment scores
     
     Args:
-        sector_name (str): Name of the sector
-        days (int): Number of days to include
+        sector_name (str, optional): Name of the sector to get history for
         
     Returns:
-        DataFrame: DataFrame with 'date' and 'score' columns
+        dict or DataFrame: If sector_name is None, returns a dictionary with
+        sector names as keys and DataFrames as values. If sector_name is provided,
+        returns a DataFrame for just that sector.
     """
-    # Load the authentic history
-    sector_history = load_history()
+    csv_path = "data/authentic_sector_history.csv"
     
-    # Check if we have data for this sector
-    if sector_name not in sector_history:
-        print(f"No authentic history data for {sector_name}")
-        return pd.DataFrame(columns=["date", "score"])
-    
-    # Create rows from the history data
-    rows = []
-    for item in sector_history[sector_name]:
-        rows.append({
-            "date": datetime.fromisoformat(item["date"]),
-            "score": item["normalized_score"]
-        })
-    
-    # Create DataFrame
-    if not rows:
-        return pd.DataFrame(columns=["date", "score"])
-    
-    df = pd.DataFrame(rows)
-    
-    # Sort by date and keep only requested number of days
-    df = df.sort_values("date")
-    if len(df) > days:
-        df = df.tail(days)
-    
-    return df
-
-def update_authentic_history():
-    """Update the authentic sector history"""
+    if not os.path.exists(csv_path):
+        print(f"Warning: Authentic sector history file not found at {csv_path}")
+        return {} if sector_name is None else None
+        
     try:
-        # Compute new history
-        sector_history = compute_authentic_sector_history()
+        # Read the CSV file
+        df = pd.read_csv(csv_path)
         
-        if not sector_history:
-            print("No authentic history was computed")
-            return False
+        # Convert date to datetime
+        df['date'] = pd.to_datetime(df['date'])
         
-        # Save and export
-        save_success = save_history(sector_history)
-        export_success = export_to_csv(sector_history)
-        
-        return save_success and export_success
-    
+        if sector_name is None:
+            # Dictionary to store results for all sectors
+            sector_history = {}
+            
+            # Get all column names except 'date'
+            sector_columns = [col for col in df.columns if col != 'date']
+            
+            # Create a DataFrame for each sector
+            for sector in sector_columns:
+                sector_df = df[['date', sector]].copy()
+                sector_df.columns = ['date', 'value']  # Rename for consistency
+                sector_df = sector_df.set_index('date')
+                sector_history[sector] = sector_df
+                
+            return sector_history
+            
+        else:
+            # Return DataFrame for just the requested sector
+            if sector_name not in df.columns:
+                print(f"Warning: Sector '{sector_name}' not found in authentic history")
+                return None
+                
+            sector_df = df[['date', sector_name]].copy()
+            sector_df.columns = ['date', 'value']  # Rename for consistency
+            sector_df = sector_df.set_index('date')
+            
+            return sector_df
+            
     except Exception as e:
-        print(f"Error updating authentic history: {e}")
-        return False
+        print(f"Error loading authentic sector history: {e}")
+        return {} if sector_name is None else None
 
-# Run the update if this script is executed directly
-if __name__ == "__main__":
-    update_authentic_history()
+def save_authentic_sector_history(sector_scores):
+    """
+    Save sector scores to authentic history file
+    
+    Args:
+        sector_scores (list): List of sector dictionaries with 'sector' and 'score' keys
+        
+    Returns:
+        bool: True if successful, False otherwise
+    """
+    try:
+        # Load existing data
+        csv_path = "data/authentic_sector_history.csv"
+        
+        if os.path.exists(csv_path):
+            df = pd.read_csv(csv_path)
+            df['date'] = pd.to_datetime(df['date'])
+        else:
+            # Create new DataFrame
+            df = pd.DataFrame(columns=['date'])
+        
+        # Today's date
+        today = datetime.now().strftime('%Y-%m-%d')
+        
+        # Check if we already have an entry for today
+        if today in df['date'].dt.strftime('%Y-%m-%d').values:
+            # Update existing row
+            idx = df[df['date'].dt.strftime('%Y-%m-%d') == today].index[0]
+        else:
+            # Add new row
+            df = df.append({'date': today}, ignore_index=True)
+            idx = len(df) - 1
+        
+        # Update values
+        for sector_data in sector_scores:
+            sector_name = sector_data['sector']
+            
+            # Convert raw score from [-1,1] to [0-100] for display
+            raw_score = sector_data['score']
+            normalized_score = ((raw_score + 1.0) / 2.0) * 100
+            
+            # Add column if it doesn't exist
+            if sector_name not in df.columns:
+                df[sector_name] = None
+            
+            # Update value
+            df.at[idx, sector_name] = normalized_score
+        
+        # Save to CSV
+        df.to_csv(csv_path, index=False)
+        
+        # Also export as JSON for easier access
+        json_path = "data/authentic_sector_history.json"
+        
+        # Convert to dictionary
+        history_dict = {}
+        for _, row in df.iterrows():
+            date_str = row['date'].strftime('%Y-%m-%d')
+            history_dict[date_str] = {sector: row[sector] for sector in df.columns if sector != 'date'}
+        
+        # Save to JSON
+        with open(json_path, 'w') as f:
+            json.dump(history_dict, f, indent=2)
+        
+        # Export today's data to date-specific CSV for direct download
+        today_csv_path = f"data/authentic_sector_history_{today}.csv"
+        df.to_csv(today_csv_path, index=False)
+        
+        print(f"Saved authentic sector history to {json_path}")
+        print(f"Exported authentic sector history to {today_csv_path}")
+        
+        return True
+        
+    except Exception as e:
+        print(f"Error saving authentic sector history: {e}")
+        return False
