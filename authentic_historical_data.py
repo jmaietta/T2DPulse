@@ -297,9 +297,14 @@ def get_sector_history_dataframe(sector_name, days=HISTORY_LENGTH):
     for date_val, sector_scores in history_data.items():
         for sector_data in sector_scores:
             if sector_data['sector'] == sector_name:
+                # Normalize score from [-1,1] range to [0,100] range
+                normalized_score = 50 + (sector_data['score'] * 50)
+                # Ensure score is within bounds
+                normalized_score = max(0, min(100, normalized_score))
+                
                 rows.append({
                     'date': date_val,
-                    'score': sector_data['score']
+                    'score': normalized_score
                 })
                 break
     
@@ -379,7 +384,12 @@ def export_authentic_history():
                 for sector_name in all_sectors:
                     for sector_data in sector_history[current_date]:
                         if sector_data['sector'] == sector_name:
-                            row[sector_name] = sector_data['score']
+                            # Normalize score from [-1,1] range to [0,100] range for CSV export
+                            normalized_score = 50 + (sector_data['score'] * 50)
+                            # Ensure score is within bounds
+                            normalized_score = max(0, min(100, normalized_score))
+                            # Round to 1 decimal place
+                            row[sector_name] = round(normalized_score, 1)
                             break
                 
                 rows.append(row)
