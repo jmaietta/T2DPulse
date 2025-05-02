@@ -4227,9 +4227,19 @@ def update_interest_rate_graph(n):
             height=400
         )
     
-    # Filter for last 3 years
+    # Get the latest value for the annotation (most recent data point)
+    latest_data = interest_rate_data.sort_values('date', ascending=False)
+    if not latest_data.empty:
+        latest_value = latest_data.iloc[0]['value']
+        latest_date = latest_data.iloc[0]['date']
+    else:
+        latest_value = None
+        latest_date = None
+    
+    # Filter for last 3 years for the chart
     cutoff_date = datetime.now() - timedelta(days=3*365)
     filtered_data = interest_rate_data[interest_rate_data['date'] >= cutoff_date].copy()
+    filtered_data = filtered_data.sort_values('date', ascending=True)  # Important: sort by date ascending for chart
     
     # Create figure
     fig = go.Figure()
@@ -4245,21 +4255,19 @@ def update_interest_rate_graph(n):
     ))
     
     # Add current value annotation
-    if not filtered_data.empty:
-        current_value = filtered_data['value'].iloc[-1]
-        
-        # If we have at least two data points, calculate the change
-        if len(filtered_data) >= 2:
-            previous_value = filtered_data['value'].iloc[-2]
-            change = current_value - previous_value
+    if latest_value is not None:
+        # If we have at least two data points in the full dataset, calculate the change
+        if len(latest_data) >= 2:
+            previous_value = latest_data.iloc[1]['value']
+            change = latest_value - previous_value
             
             # Determine arrow direction and color
             arrow_color = color_scheme["positive"] if change < 0 else color_scheme["negative"]
             arrow_symbol = "▼" if change < 0 else "▲"
             
-            current_value_annotation = f"Current: {current_value:.2f}% {arrow_symbol} {abs(change):.2f}%"
+            current_value_annotation = f"Current: {latest_value:.2f}% {arrow_symbol} {abs(change):.2f}%"
         else:
-            current_value_annotation = f"Current: {current_value:.2f}%"
+            current_value_annotation = f"Current: {latest_value:.2f}%"
             arrow_color = color_scheme["neutral"]
         
         fig.add_annotation(
