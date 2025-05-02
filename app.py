@@ -759,6 +759,7 @@ def calculate_sector_sentiment():
     print("Starting calculate_sector_sentiment function")
     # Import sector sentiment history module
     import sector_sentiment_history
+    import sector_market_indices
     
     # Get latest values for all required indicators
     macros = {}
@@ -835,6 +836,40 @@ def calculate_sector_sentiment():
         latest_consumer_sentiment = consumer_sentiment_data.sort_values('date', ascending=False).iloc[0]['value']
         macros["Consumer_Sentiment"] = latest_consumer_sentiment
         print(f"Added Consumer Sentiment to sector calculations: {latest_consumer_sentiment}")
+        
+    # Add sector-specific market momentum indicators
+    try:
+        # Define mapping between our sector names and sector_tickers names
+        sector_mapping = {
+            "SMB SaaS": "Vertical SaaS",  # Map SMB SaaS to Vertical SaaS tickers
+            "Enterprise SaaS": "Enterprise SaaS",
+            "Cloud Infrastructure": "Cloud",
+            "AdTech": "AdTech",
+            "Fintech": "Fintech",
+            "Consumer Internet": "Consumer Internet",
+            "eCommerce": "eCommerce",
+            "Cybersecurity": "Cybersecurity",
+            "Dev Tools / Analytics": "Dev Tools / Analytics",
+            "Semiconductors": "Semiconductors",
+            "AI Infrastructure": "AI Infrastructure",
+            "Vertical SaaS": "Vertical SaaS",
+            "IT Services / Legacy Tech": "IT Services / Legacy Tech",
+            "Hardware / Devices": "Hardware / Devices"
+        }
+        
+        # Get all sector momentum values
+        sector_momentums = sector_market_indices.get_all_sector_momentums(use_cache=True)
+        print(f"Retrieved sector momentum data for {len(sector_momentums)} sectors")
+        
+        # Add sector-specific momentum to macros for use in sentiment calculation
+        for sector, ticker_sector in sector_mapping.items():
+            if ticker_sector in sector_momentums:
+                momentum = sector_momentums[ticker_sector]
+                # Add sector-specific momentum as a separate indicator for each sector
+                macros[f"{sector}_Momentum"] = momentum
+                print(f"Added {sector} momentum: {momentum:.2f}%")
+    except Exception as e:
+        print(f"Error adding sector momentum data: {e}")
     
     # Check if we have enough data to calculate sector scores (need at least 6 indicators)
     if len(macros) < 6:
