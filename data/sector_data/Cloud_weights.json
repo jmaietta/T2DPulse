@@ -1,0 +1,37 @@
+{
+  "sector": "Cloud",
+  "tickers": [
+    {
+      "ticker": "AMZN",
+      "weight": 0.24793648120633358
+    },
+    {
+      "ticker": "CRM",
+      "weight": 0.03174199473165916
+    },
+    {
+      "ticker": "CSCO",
+      "weight": 0.028401306432737958
+    },
+    {
+      "ticker": "GOOGL",
+      "weight": 0.24142560374623637
+    },
+    {
+      "ticker": "MSFT",
+      "weight": 0.38837478556556193
+    },
+    {
+      "ticker": "NET",
+      "weight": 0.005219219704074979
+    },
+    {
+      "ticker": "ORCL",
+      "weight": 0.050114462187160785
+    },
+    {
+      "ticker": "SNOW",
+      "weight": 0.006786146426235285
+    }
+  ]
+}

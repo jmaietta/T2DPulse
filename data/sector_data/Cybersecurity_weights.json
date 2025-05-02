@@ -1,0 +1,41 @@
+{
+  "sector": "Cybersecurity",
+  "tickers": [
+    {
+      "ticker": "CHKP",
+      "weight": 0.051056280842781056
+    },
+    {
+      "ticker": "CRWD",
+      "weight": 0.2356469337560041
+    },
+    {
+      "ticker": "CYBR",
+      "weight": 0.038333474957212704
+    },
+    {
+      "ticker": "FTNT",
+      "weight": 0.1763967320935629
+    },
+    {
+      "ticker": "NET",
+      "weight": 0.0935316828622127
+    },
+    {
+      "ticker": "OKTA",
+      "weight": 0.042746594955529175
+    },
+    {
+      "ticker": "PANW",
+      "weight": 0.27147882563865305
+    },
+    {
+      "ticker": "S",
+      "weight": 0.01347546140543715
+    },
+    {
+      "ticker": "ZS",
+      "weight": 0.0773340134886072
+    }
+  ]
+}

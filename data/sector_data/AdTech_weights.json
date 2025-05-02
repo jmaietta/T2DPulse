@@ -1,0 +1,41 @@
+{
+  "sector": "AdTech",
+  "tickers": [
+    {
+      "ticker": "APP",
+      "weight": 0.026736576362007953
+    },
+    {
+      "ticker": "APPS",
+      "weight": 8.935964263420171e-05
+    },
+    {
+      "ticker": "CRTO",
+      "weight": 0.0005068114378530521
+    },
+    {
+      "ticker": "DV",
+      "weight": 0.0006086492959022989
+    },
+    {
+      "ticker": "GOOGL",
+      "weight": 0.5556786353407016
+    },
+    {
+      "ticker": "META",
+      "weight": 0.4083936052242068
+    },
+    {
+      "ticker": "MGNI",
+      "weight": 0.00047723983900181677
+    },
+    {
+      "ticker": "PUBM",
+      "weight": 0.00013503303282590753
+    },
+    {
+      "ticker": "TTD",
+      "weight": 0.007374089824866317
+    }
+  ]
+}

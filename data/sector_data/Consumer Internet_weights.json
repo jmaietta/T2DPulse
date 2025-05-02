@@ -1,0 +1,45 @@
+{
+  "sector": "Consumer Internet",
+  "tickers": [
+    {
+      "ticker": "ABNB",
+      "weight": 0.017947882404645774
+    },
+    {
+      "ticker": "BKNG",
+      "weight": 0.03866701563636842
+    },
+    {
+      "ticker": "GOOGL",
+      "weight": 0.4578193958975235
+    },
+    {
+      "ticker": "META",
+      "weight": 0.33647238123078343
+    },
+    {
+      "ticker": "NFLX",
+      "weight": 0.11235934990443658
+    },
+    {
+      "ticker": "PINS",
+      "weight": 0.004014995200490293
+    },
+    {
+      "ticker": "SNAP",
+      "weight": 0.003076250125937779
+    },
+    {
+      "ticker": "SPOT",
+      "weight": 0.028766278082679012
+    },
+    {
+      "ticker": "TRIP",
+      "weight": 0.0003490644046391119
+    },
+    {
+      "ticker": "YELP",
+      "weight": 0.0005273871124960626
+    }
+  ]
+}

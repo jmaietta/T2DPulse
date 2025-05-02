@@ -28,12 +28,22 @@ CACHE_TIMEOUT_SECONDS = 86400
 TICKER_LIST_CSV = 'attached_assets/Formatted_Sector_Ticker_List.csv'
 
 # Mapping for sector names (if needed)
+# This maps from CSV names to the internal sector names used in the app
 SECTOR_MAPPING = {
-    "SMB SaaS": "Vertical SaaS",  # Map SMB SaaS to Vertical SaaS for compatibility
-    "Dev Tools": "Dev Tools / Analytics",  # Map to code's naming convention
-    "IT Services": "IT Services / Legacy Tech",  # Map to code's naming convention
-    "Hardware/Devices": "Hardware / Devices",  # Map to code's naming convention
-    # Other sectors match exactly
+    "SMB SaaS": "SMB SaaS",  # Use the exact name from the CSV
+    "Enterprise SaaS": "Enterprise SaaS",
+    "Cloud": "Cloud Infrastructure",  # App uses 'Cloud Infrastructure'
+    "AdTech": "AdTech",
+    "Fintech": "Fintech",
+    "Consumer Internet": "Consumer Internet",
+    "eCommerce": "eCommerce",
+    "Cybersecurity": "Cybersecurity",
+    "Dev Tools": "Dev Tools / Analytics",  # App uses 'Dev Tools / Analytics'
+    "Semiconductors": "Semiconductors",
+    "AI Infrastructure": "AI Infrastructure",
+    "Vertical SaaS": "Vertical SaaS",
+    "IT Services": "IT Services / Legacy Tech",  # App uses 'IT Services / Legacy Tech'
+    "Hardware/Devices": "Hardware / Devices"  # App uses 'Hardware / Devices' with spaces
 }
 
 def load_ticker_list():
@@ -382,8 +392,10 @@ def get_all_sector_momentums(use_cache=True):
             # Map sector name if needed for consistency with application
             mapped_sector = SECTOR_MAPPING.get(sector, sector)
             
-            # Store momentum
-            momentums[mapped_sector] = momentum
+            # Store momentum - use both original and mapped names
+            momentums[sector] = momentum  # Original name from CSV
+            if mapped_sector != sector:
+                momentums[mapped_sector] = momentum  # Also store with app's internal name
             
         except Exception as e:
             print(f"Error processing {sector}: {str(e)}")

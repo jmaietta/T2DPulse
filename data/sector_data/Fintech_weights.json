@@ -1,0 +1,37 @@
+{
+  "sector": "Fintech",
+  "tickers": [
+    {
+      "ticker": "ADYEY",
+      "weight": 0.19276631801973346
+    },
+    {
+      "ticker": "AFRM",
+      "weight": 0.0601301424521755
+    },
+    {
+      "ticker": "BILL",
+      "weight": 0.017510879052294714
+    },
+    {
+      "ticker": "COIN",
+      "weight": 0.19353627648425265
+    },
+    {
+      "ticker": "FIS",
+      "weight": 0.15428720142829275
+    },
+    {
+      "ticker": "GPN",
+      "weight": 0.07109664134425246
+    },
+    {
+      "ticker": "PYPL",
+      "weight": 0.24019617082924494
+    },
+    {
+      "ticker": "SSNC",
+      "weight": 0.07047637038975355
+    }
+  ]
+}

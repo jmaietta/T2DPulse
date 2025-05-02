@@ -1,0 +1,25 @@
+{
+  "sector": "Dev Tools",
+  "tickers": [
+    {
+      "ticker": "DDOG",
+      "weight": 0.28813914376724
+    },
+    {
+      "ticker": "ESTC",
+      "weight": 0.07071529075216533
+    },
+    {
+      "ticker": "GTLB",
+      "weight": 0.060439360838442736
+    },
+    {
+      "ticker": "MDB",
+      "weight": 0.1097099637549269
+    },
+    {
+      "ticker": "TEAM",
+      "weight": 0.470996240887225
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "sector": "Semiconductors",
+  "tickers": [
+    {
+      "ticker": "AMAT",
+      "weight": 0.023353128038194455
+    },
+    {
+      "ticker": "AMD",
+      "weight": 0.030299806837889638
+    },
+    {
+      "ticker": "ARM",
+      "weight": 0.023470912511710157
+    },
+    {
+      "ticker": "AVGO",
+      "weight": 0.1790418971149162
+    },
+    {
+      "ticker": "INTC",
+      "weight": 0.01681762470269498
+    },
+    {
+      "ticker": "NVDA",
+      "weight": 0.5255045386684261
+    },
+    {
+      "ticker": "QCOM",
+      "weight": 0.028648026214868675
+    },
+    {
+      "ticker": "TSM",
+      "weight": 0.17286406591129982
+    }
+  ]
+}

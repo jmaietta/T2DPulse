@@ -1,0 +1,37 @@
+{
+  "sector": "Vertical SaaS",
+  "tickers": [
+    {
+      "ticker": "CCCS",
+      "weight": 0.02413343936038119
+    },
+    {
+      "ticker": "CPRT",
+      "weight": 0.23318592562514823
+    },
+    {
+      "ticker": "CSGP",
+      "weight": 0.12889603154848295
+    },
+    {
+      "ticker": "GWRE",
+      "weight": 0.06847262107830436
+    },
+    {
+      "ticker": "ICE",
+      "weight": 0.3915669931363708
+    },
+    {
+      "ticker": "PCOR",
+      "weight": 0.03761191293040179
+    },
+    {
+      "ticker": "SSNC",
+      "weight": 0.07446530933655943
+    },
+    {
+      "ticker": "TTAN",
+      "weight": 0.04166776698435126
+    }
+  ]
+}

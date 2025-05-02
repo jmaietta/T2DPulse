@@ -1,0 +1,29 @@
+{
+  "sector": "SMB SaaS",
+  "tickers": [
+    {
+      "ticker": "ADBE",
+      "weight": 0.042224822687641606
+    },
+    {
+      "ticker": "BILL",
+      "weight": 0.001226428465773642
+    },
+    {
+      "ticker": "GOOGL",
+      "weight": 0.5197791577360267
+    },
+    {
+      "ticker": "HUBS",
+      "weight": 0.008686734679728978
+    },
+    {
+      "ticker": "INTU",
+      "weight": 0.04607341671561245
+    },
+    {
+      "ticker": "META",
+      "weight": 0.3820094397152166
+    }
+  ]
+}

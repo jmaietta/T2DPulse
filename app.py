@@ -842,9 +842,9 @@ def calculate_sector_sentiment():
         
     # Add sector-specific market momentum indicators
     try:
-        # Define mapping between our sector names and sector_tickers names
+        # Define mapping between our sector names and the CSV ticker sectors
         sector_mapping = {
-            "SMB SaaS": "Vertical SaaS",  # Map SMB SaaS to Vertical SaaS tickers
+            "SMB SaaS": "SMB SaaS",  # Use SMB SaaS tickers from CSV
             "Enterprise SaaS": "Enterprise SaaS",
             "Cloud Infrastructure": "Cloud",
             "AdTech": "AdTech",
@@ -852,23 +852,29 @@ def calculate_sector_sentiment():
             "Consumer Internet": "Consumer Internet",
             "eCommerce": "eCommerce",
             "Cybersecurity": "Cybersecurity",
-            "Dev Tools / Analytics": "Dev Tools / Analytics",
+            "Dev Tools / Analytics": "Dev Tools",  # CSV uses 'Dev Tools' not 'Dev Tools / Analytics'
             "Semiconductors": "Semiconductors",
             "AI Infrastructure": "AI Infrastructure",
             "Vertical SaaS": "Vertical SaaS",
-            "IT Services / Legacy Tech": "IT Services / Legacy Tech",
-            "Hardware / Devices": "Hardware / Devices"
+            "IT Services / Legacy Tech": "IT Services",  # CSV uses 'IT Services'
+            "Hardware / Devices": "Hardware/Devices"  # CSV uses 'Hardware/Devices' without spaces
         }
         
         # Use Yahoo Finance with proper caching to avoid rate limits
         sector_momentums = {}
-        data_source_used = "Yahoo Finance"
+        data_source_used = "Yahoo Finance (Authentic Data)"
         
         try:
             # Get all sector momentum values from Yahoo Finance with caching
             sector_momentums = sector_yahoo_indices.get_all_sector_momentums(use_cache=True)
             if sector_momentums and len(sector_momentums) > 0:
-                print(f"Retrieved sector momentum data from Yahoo Finance for {len(sector_momentums)} sectors")
+                print(f"Retrieved authentic sector momentum data from Yahoo Finance for {len(sector_momentums)} sectors")
+                print(f"Using market-cap weighted ticker list data from attached_assets/Formatted_Sector_Ticker_List.csv")
+                
+                # Print out the sector momentum values for debugging
+                for sector, momentum in sector_momentums.items():
+                    if sector in sector_mapping.values():
+                        print(f"  {sector}: {momentum:.2f}%")
             else:
                 print("Yahoo Finance API returned no data")
         except Exception as e:
