@@ -13,6 +13,7 @@ from datetime import datetime, timedelta
 import pytz
 import yfinance as yf
 import random
+import threading
 
 # Data directory for caching sector data
 DATA_DIR = 'data'
@@ -114,12 +115,65 @@ def is_cache_valid(filename):
     # Valid if less than 24 hours old
     return age_seconds < CACHE_TIMEOUT_SECONDS
 
-def fetch_ticker_data(ticker, period='30d'):
-    """Fetch historical data for a ticker with caching.
+# Global counter for rate limiting requests to Yahoo Finance
+request_counter = 0
+MAX_REQUESTS_PER_MINUTE = 30
+last_request_time = time.time()
+request_lock = threading.Lock()
+
+def exponential_backoff_with_jitter(attempt):
+    """Implement exponential backoff with jitter for API requests
+    
+    Args:
+        attempt (int): Current attempt number (starting at 1)
+        
+    Returns:
+        float: Time to sleep in seconds
+    """
+    # Base delay (in seconds) - 2^attempt with max of 60 seconds
+    delay = min(60, 2 ** attempt)
+    # Add jitter (±20% of delay)
+    jitter = delay * 0.2 * random.uniform(-1, 1)
+    # Return delay with jitter
+    return delay + jitter
+
+def rate_limit_request():
+    """Implement rate limiting for Yahoo Finance API requests.
+    
+    This helps avoid 'Too Many Requests' errors by throttling our requests.
+    """
+    global request_counter, last_request_time
+    
+    with request_lock:
+        current_time = time.time()
+        elapsed = current_time - last_request_time
+        
+        # Reset counter if a minute has passed
+        if elapsed > 60:
+            request_counter = 0
+            last_request_time = current_time
+        
+        # If we're approaching the limit, sleep until the minute is up
+        if request_counter >= MAX_REQUESTS_PER_MINUTE:
+            sleep_time = max(0, 60 - elapsed)
+            print(f"Rate limit reached, sleeping for {sleep_time:.2f} seconds")
+            time.sleep(sleep_time)
+            request_counter = 0
+            last_request_time = time.time()
+        
+        # Increment the counter and add a small delay between requests
+        request_counter += 1
+        # Random delay between 0.2 and 1.5 seconds to avoid rate limiting
+        delay = random.uniform(0.2, 1.5) 
+        time.sleep(delay)
+
+def fetch_ticker_data(ticker, period='30d', max_retries=5):
+    """Fetch historical data for a ticker with caching and rate limiting.
     
     Args:
         ticker (str): The ticker symbol
         period (str, optional): Period of historical data to fetch
+        max_retries (int, optional): Maximum number of retries on failure
         
     Returns:
         dict: Dictionary with ticker data
@@ -134,49 +188,64 @@ def fetch_ticker_data(ticker, period='30d'):
             print(f"Error reading cache for {ticker}: {str(e)}")
             # Continue with fetching fresh data
     
-    try:
-        # Random delay between 0.1 and 1.0 seconds to avoid rate limiting
-        time.sleep(random.uniform(0.1, 1.0))
-        
-        # Fetch historical data from Yahoo Finance
-        ticker_obj = yf.Ticker(ticker)
-        hist = ticker_obj.history(period=period)
-        
-        if hist.empty:
-            print(f"No historical data found for {ticker}")
-            return None
-            
-        # Get market cap (for weighting)
+    for attempt in range(1, max_retries + 1):
         try:
-            market_cap = ticker_obj.info.get('marketCap')
-            if not market_cap or market_cap <= 0:
+            # Apply rate limiting
+            rate_limit_request()
+            
+            # Fetch historical data from Yahoo Finance
+            ticker_obj = yf.Ticker(ticker)
+            hist = ticker_obj.history(period=period)
+            
+            if hist.empty:
+                print(f"No historical data found for {ticker}")
+                return None
+                
+            # Get market cap (for weighting)
+            # Apply rate limiting before getting info
+            rate_limit_request()
+            try:
+                market_cap = ticker_obj.info.get('marketCap')
+                if not market_cap or market_cap <= 0:
+                    market_cap = None
+            except Exception as e:
+                print(f"Error fetching market cap for {ticker}: {str(e)}")
                 market_cap = None
-        except Exception as e:
-            print(f"Error fetching market cap for {ticker}: {str(e)}")
-            market_cap = None
+                
+            # Prepare result dictionary
+            result = {
+                'ticker': ticker,
+                'market_cap': market_cap,
+                'last_price': float(hist['Close'].iloc[-1]),
+                'prices': hist['Close'].tolist(),
+                'dates': [d.strftime('%Y-%m-%d') for d in hist.index.tolist()],
+                'fetch_time': datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+            }
             
-        # Prepare result dictionary
-        result = {
-            'ticker': ticker,
-            'market_cap': market_cap,
-            'last_price': float(hist['Close'].iloc[-1]),
-            'prices': hist['Close'].tolist(),
-            'dates': [d.strftime('%Y-%m-%d') for d in hist.index.tolist()],
-            'fetch_time': datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-        }
-        
-        # Cache the result
-        try:
-            with open(cache_file, 'w') as f:
-                json.dump(result, f)
-        except Exception as e:
-            print(f"Error saving cache for {ticker}: {str(e)}")
+            # Cache the result
+            try:
+                with open(cache_file, 'w') as f:
+                    json.dump(result, f)
+            except Exception as e:
+                print(f"Error saving cache for {ticker}: {str(e)}")
+                
+            return result
             
-        return result
-        
-    except Exception as e:
-        print(f"Error fetching data for {ticker}: {str(e)}")
-        return None
+        except Exception as e:
+            if "Too Many Requests" in str(e) or "Unauthorized" in str(e):
+                # For rate limiting errors, use exponential backoff
+                if attempt < max_retries:
+                    sleep_time = exponential_backoff_with_jitter(attempt)
+                    print(f"Rate limit error for {ticker}, retrying in {sleep_time:.2f} seconds (attempt {attempt}/{max_retries})")
+                    time.sleep(sleep_time)
+                else:
+                    print(f"Failed to fetch {ticker} after {max_retries} attempts due to rate limiting")
+            else:
+                print(f"Error fetching data for {ticker}: {str(e)}")
+                # For non-rate-limiting errors, no need to retry
+                break
+    
+    return None
 
 def calculate_ema(prices, span=20):
     """Calculate Exponential Moving Average for a price series.
@@ -366,15 +435,20 @@ def get_sector_momentum(sector_name, use_cache=True):
     
     return gap_pct
 
-def get_all_sector_momentums(use_cache=True):
+def get_all_sector_momentums(use_cache=True, force_cache=False):
     """Get momentum indicators for all sectors.
     
     Args:
         use_cache (bool, optional): Whether to use cached data
+        force_cache (bool, optional): Force using cached data even if expired
         
     Returns:
         dict: Dictionary mapping sector names to their momentum values
     """
+    # If Yahoo API is rate limiting us, use the force_cache option
+    if force_cache:
+        print("Forcing use of cached sector data due to API rate limits")
+    
     # Load ticker list to get all sector names
     sector_tickers = load_ticker_list()
     if not sector_tickers:
@@ -382,12 +456,29 @@ def get_all_sector_momentums(use_cache=True):
         return {}
     
     momentums = {}
+    api_errors = 0
+    max_api_errors = 5  # Number of API errors before forcing cache use
     
     # Process each sector
     for sector in sector_tickers.keys():
         try:
-            # Calculate sector momentum
-            momentum = get_sector_momentum(sector, use_cache=use_cache)
+            # If we've had multiple API errors, switch to force_cache mode
+            current_force_cache = force_cache or (api_errors >= max_api_errors)
+            
+            if current_force_cache:
+                # Try to load data directly from cache
+                cache_file = get_sector_cache_filename(sector)
+                if os.path.exists(cache_file):
+                    with open(cache_file, 'r') as f:
+                        index_data = json.load(f)
+                        momentum = index_data.get('gap_pct', 0.0)
+                        print(f"Using cached data for {sector} (momentum: {momentum:.2f}%)")
+                else:
+                    print(f"No cached data available for {sector}, using default value")
+                    momentum = 0.0  # Default value if no cached data
+            else:
+                # Try regular approach first
+                momentum = get_sector_momentum(sector, use_cache=use_cache)
             
             # Map sector name if needed for consistency with application
             mapped_sector = SECTOR_MAPPING.get(sector, sector)
@@ -398,7 +489,26 @@ def get_all_sector_momentums(use_cache=True):
                 momentums[mapped_sector] = momentum  # Also store with app's internal name
             
         except Exception as e:
-            print(f"Error processing {sector}: {str(e)}")
+            # Count API errors to detect when we need to switch strategy
+            if "Too Many Requests" in str(e) or "Unauthorized" in str(e):
+                api_errors += 1
+                print(f"API error for {sector} ({api_errors}/{max_api_errors}): {str(e)}")
+                
+                # If we're starting to hit rate limits, retry with force_cache=True
+                if api_errors >= max_api_errors and not force_cache:
+                    print(f"Too many API errors, switching to cached data for remaining sectors")
+                    # Recursively call self with force_cache=True
+                    remaining_sectors = list(set(sector_tickers.keys()) - set(momentums.keys()))
+                    print(f"Remaining sectors to process: {remaining_sectors}")
+                    
+                    # Call self with force_cache=True to process remaining sectors
+                    if remaining_sectors:
+                        forced_momentums = get_all_sector_momentums(use_cache=True, force_cache=True)
+                        # Merge results
+                        momentums.update(forced_momentums)
+                        return momentums
+            else:
+                print(f"Error processing {sector}: {str(e)}")
     
     print(f"Retrieved sector momentums for {len(momentums)} sectors")
     return momentums

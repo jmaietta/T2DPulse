@@ -865,8 +865,8 @@ def calculate_sector_sentiment():
         data_source_used = "Yahoo Finance (Authentic Data)"
         
         try:
-            # Get all sector momentum values from Yahoo Finance with caching
-            sector_momentums = sector_yahoo_indices.get_all_sector_momentums(use_cache=True)
+            # Get all sector momentum values from Yahoo Finance with caching and force_cache fallback
+            sector_momentums = sector_yahoo_indices.get_all_sector_momentums(use_cache=True, force_cache=False)
             if sector_momentums and len(sector_momentums) > 0:
                 print(f"Retrieved authentic sector momentum data from Yahoo Finance for {len(sector_momentums)} sectors")
                 print(f"Using market-cap weighted ticker list data from attached_assets/Formatted_Sector_Ticker_List.csv")
@@ -876,10 +876,26 @@ def calculate_sector_sentiment():
                     if sector in sector_mapping.values():
                         print(f"  {sector}: {momentum:.2f}%")
             else:
-                print("Yahoo Finance API returned no data")
+                print("Yahoo Finance API returned no data, trying with forced cache option")
+                # If first attempt failed, try again with force_cache=True
+                sector_momentums = sector_yahoo_indices.get_all_sector_momentums(use_cache=True, force_cache=True)
+                if sector_momentums and len(sector_momentums) > 0:
+                    print(f"Retrieved {len(sector_momentums)} sectors using cached data")
+                    data_source_used = "Yahoo Finance (Cached Data)"
+                else:
+                    print("Failed to get sector data from cache as well")
         except Exception as e:
             print(f"Error reading Yahoo Finance data: {str(e)}")
-            print("WARNING: Failed to get sector data from Yahoo Finance")
+            print("WARNING: Failed to get sector data from Yahoo Finance, trying forced cache")
+            try:
+                sector_momentums = sector_yahoo_indices.get_all_sector_momentums(use_cache=True, force_cache=True)
+                if sector_momentums and len(sector_momentums) > 0:
+                    print(f"Retrieved {len(sector_momentums)} sectors using cached data as fallback")
+                    data_source_used = "Yahoo Finance (Cached Data)"
+            except Exception as e2:
+                print(f"Error using cached data: {str(e2)}")
+                print("Cannot retrieve sector data")
+                return []
         
         # Use NASDAQ importance weight of 3 in sentiment engine
         print(f"NASDAQ importance weight: 3")
