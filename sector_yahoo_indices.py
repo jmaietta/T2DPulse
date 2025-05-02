@@ -22,8 +22,11 @@ TICKER_DATA_DIR = os.path.join(DATA_DIR, 'ticker_data')
 os.makedirs(SECTOR_DATA_DIR, exist_ok=True)
 os.makedirs(TICKER_DATA_DIR, exist_ok=True)
 
-# Cache timeout (24 hours in seconds)
+# Cache timeout (24 hours in seconds by default)
 CACHE_TIMEOUT_SECONDS = 86400
+
+# Extend cache lifetime when force_cache=True (7 days in seconds)
+EXTENDED_CACHE_TIMEOUT = 604800
 
 # Path to the ticker list CSV file
 TICKER_LIST_CSV = 'attached_assets/Formatted_Sector_Ticker_List.csv'
@@ -96,11 +99,12 @@ def get_sector_cache_filename(sector):
     """
     return os.path.join(SECTOR_DATA_DIR, f"{sector.replace('/', '_')}_index.json")
 
-def is_cache_valid(filename):
+def is_cache_valid(filename, extended=False):
     """Check if cached data is still valid (not expired).
     
     Args:
         filename (str): Path to the cache file
+        extended (bool, optional): Whether to use the extended cache timeout
         
     Returns:
         bool: True if cache is valid, False otherwise
@@ -112,8 +116,11 @@ def is_cache_valid(filename):
     mod_time = os.path.getmtime(filename)
     age_seconds = time.time() - mod_time
     
-    # Valid if less than 24 hours old
-    return age_seconds < CACHE_TIMEOUT_SECONDS
+    # Use extended timeout if requested, otherwise use default
+    timeout = EXTENDED_CACHE_TIMEOUT if extended else CACHE_TIMEOUT_SECONDS
+    
+    # Valid if less than timeout period old
+    return age_seconds < timeout
 
 # Global counter for rate limiting requests to Yahoo Finance
 request_counter = 0
@@ -275,12 +282,13 @@ def calculate_ema(prices, span=20):
     
     return ema.tolist()
 
-def calculate_sector_index(sector, use_cache=True):
+def calculate_sector_index(sector, use_cache=True, force_cache=False):
     """Calculate market-cap weighted index for a sector.
     
     Args:
         sector (str): The sector name
         use_cache (bool, optional): Whether to use cached data
+        force_cache (bool, optional): Whether to force using cache even if expired
         
     Returns:
         dict: Dictionary with sector index data
@@ -289,6 +297,19 @@ def calculate_sector_index(sector, use_cache=True):
     
     # Check sector cache if requested
     cache_file = get_sector_cache_filename(sector)
+    
+    # Use extended cache timeout when force_cache=True
+    if force_cache and os.path.exists(cache_file):
+        try:
+            with open(cache_file, 'r') as f:
+                data = json.load(f)
+                print(f"Force using cached sector data for {sector} (force_cache=True)")
+                return data
+        except Exception as e:
+            print(f"Error reading forced cache for {sector}: {str(e)}")
+            # Continue with normal cache or calculation
+    
+    # Check regular cache
     if use_cache and is_cache_valid(cache_file):
         try:
             with open(cache_file, 'r') as f:
@@ -405,12 +426,13 @@ def calculate_sector_index(sector, use_cache=True):
     
     return result
 
-def get_sector_momentum(sector_name, use_cache=True):
+def get_sector_momentum(sector_name, use_cache=True, force_cache=False):
     """Get the momentum (gap between current value and EMA) for a sector.
     
     Args:
         sector_name (str): Name of the sector
         use_cache (bool, optional): Whether to use cached data
+        force_cache (bool, optional): Whether to force using cache even if expired
         
     Returns:
         float: Gap percentage (momentum indicator)
@@ -423,8 +445,8 @@ def get_sector_momentum(sector_name, use_cache=True):
             print(f"Using original sector name {original_sector} for {sector_name}")
             break
     
-    # Calculate or retrieve the sector index
-    index_data = calculate_sector_index(original_sector, use_cache=use_cache)
+    # Calculate or retrieve the sector index with force_cache option
+    index_data = calculate_sector_index(original_sector, use_cache=use_cache, force_cache=force_cache)
     if not index_data:
         print(f"No index data available for sector: {original_sector}")
         return 0.0
@@ -478,7 +500,7 @@ def get_all_sector_momentums(use_cache=True, force_cache=False):
                     momentum = 0.0  # Default value if no cached data
             else:
                 # Try regular approach first
-                momentum = get_sector_momentum(sector, use_cache=use_cache)
+                momentum = get_sector_momentum(sector, use_cache=use_cache, force_cache=force_cache)
             
             # Map sector name if needed for consistency with application
             mapped_sector = SECTOR_MAPPING.get(sector, sector)
@@ -513,18 +535,19 @@ def get_all_sector_momentums(use_cache=True, force_cache=False):
     print(f"Retrieved sector momentums for {len(momentums)} sectors")
     return momentums
 
-def get_sector_index_dataframe(sector_name, use_cache=True):
+def get_sector_index_dataframe(sector_name, use_cache=True, force_cache=False):
     """Get sector index data as a pandas DataFrame.
     
     Args:
         sector_name (str): Name of the sector
         use_cache (bool, optional): Whether to use cached data
+        force_cache (bool, optional): Whether to force using cache even if expired
         
     Returns:
         pd.DataFrame: DataFrame with date, value, ema20, and gap_pct columns
     """
-    # Calculate or retrieve the sector index
-    index_data = calculate_sector_index(sector_name, use_cache=use_cache)
+    # Calculate or retrieve the sector index with force_cache option
+    index_data = calculate_sector_index(sector_name, use_cache=use_cache, force_cache=force_cache)
     if not index_data or 'values' not in index_data:
         print(f"No index data available for sector: {sector_name}")
         return pd.DataFrame()
