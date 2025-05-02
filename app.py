@@ -889,6 +889,9 @@ def calculate_sector_sentiment():
         
         # Update the historical sentiment data with today's scores
         sector_sentiment_history.update_sentiment_history(enhanced_scores)
+        
+        # Also update authentic sector history for trend charts
+        authentic_sector_history.update_authentic_history(enhanced_scores)
             
         return enhanced_scores
     except Exception as e:

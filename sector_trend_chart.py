@@ -7,7 +7,7 @@ import os
 import plotly.graph_objects as go
 import pandas as pd
 from datetime import datetime, timedelta
-import predefined_sector_data
+import authentic_sector_history
 
 # Color scheme for trend charts
 TREND_COLORS = {
