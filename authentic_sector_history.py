@@ -77,8 +77,16 @@ def update_authentic_history(sector_scores=None, force_update=False):
         bool: True if successful, False otherwise
     """
     if sector_scores:
+        # Create a properly formatted list with 'sector' and 'score' keys expected by save_authentic_sector_history
+        formatted_scores = []
+        for sector_data in sector_scores:
+            formatted_scores.append({
+                'sector': sector_data['sector'],
+                'score': (sector_data['normalized_score'] / 50.0) - 1.0  # Convert from 0-100 scale to -1 to +1 scale
+            })
+        print(f"Updating authentic history with {len(formatted_scores)} sector scores for today")
         # If we have new scores, save them
-        return save_authentic_sector_history(sector_scores)
+        return save_authentic_sector_history(formatted_scores)
     elif force_update:
         # Load the history if needed, but don't change it
         history = get_authentic_sector_history()
@@ -118,8 +126,9 @@ def save_authentic_sector_history(sector_scores):
             # Update existing row
             idx = df[df['date'].dt.strftime('%Y-%m-%d') == today].index[0]
         else:
-            # Add new row
-            df = df.append({'date': today}, ignore_index=True)
+            # Add new row - using concat instead of append which is deprecated
+            new_row = pd.DataFrame({'date': [pd.Timestamp(today)]}) 
+            df = pd.concat([df, new_row], ignore_index=True)
             idx = len(df) - 1
         
         # Update values
