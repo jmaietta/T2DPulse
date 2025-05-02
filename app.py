@@ -759,11 +759,10 @@ def calculate_sector_sentiment():
     print("Starting calculate_sector_sentiment function")
     # Import sector sentiment history module
     import sector_sentiment_history
-    import sector_finnhub_reader
-    import sector_market_indices
+    import sector_yahoo_indices
     
-    # No Google Sheet initialization needed
-    print("Initializing sector data sources")
+    # Initialize sector data sources
+    print("Initializing sector data sources using Yahoo Finance ticker data")
     
     # Get latest values for all required indicators
     macros = {}
@@ -861,40 +860,20 @@ def calculate_sector_sentiment():
             "Hardware / Devices": "Hardware / Devices"
         }
         
-        # Try data sources in priority order: Finnhub (primary) → Yahoo Finance (fallback)
+        # Use Yahoo Finance with proper caching to avoid rate limits
         sector_momentums = {}
-        data_source_used = ""
+        data_source_used = "Yahoo Finance"
         
-        # 1. Try Finnhub as primary data source
         try:
-            finnhub_api_key = os.environ.get('FINNHUB_API_KEY')
-            if finnhub_api_key:
-                # Get all sector momentum values from Finnhub
-                sector_momentums = sector_finnhub_reader.get_all_sector_momentums()
-                if sector_momentums and len(sector_momentums) > 0:
-                    print(f"Retrieved sector momentum data from Finnhub API for {len(sector_momentums)} sectors")
-                    data_source_used = "Finnhub API"
-                else:
-                    print("Finnhub API key provided but no data returned")
+            # Get all sector momentum values from Yahoo Finance with caching
+            sector_momentums = sector_yahoo_indices.get_all_sector_momentums(use_cache=True)
+            if sector_momentums and len(sector_momentums) > 0:
+                print(f"Retrieved sector momentum data from Yahoo Finance for {len(sector_momentums)} sectors")
             else:
-                print("No Finnhub API key provided, skipping Finnhub data source")
+                print("Yahoo Finance API returned no data")
         except Exception as e:
-            print(f"Error reading Finnhub data: {str(e)}")
-            # Will fall back to Yahoo Finance
-        
-        # 2. Fall back to Yahoo Finance as backup
-        if not sector_momentums or len(sector_momentums) == 0:
-            try:
-                # Get all sector momentum values from Yahoo Finance
-                sector_momentums = sector_market_indices.get_all_sector_momentums(use_cache=True)
-                if sector_momentums and len(sector_momentums) > 0:
-                    print(f"Retrieved sector momentum data from Yahoo Finance for {len(sector_momentums)} sectors")
-                    data_source_used = "Yahoo Finance"
-                else:
-                    print("Yahoo Finance API returned no data")
-            except Exception as e:
-                print(f"Error reading Yahoo Finance data: {str(e)}")
-                print("WARNING: All data sources failed for sector data")
+            print(f"Error reading Yahoo Finance data: {str(e)}")
+            print("WARNING: Failed to get sector data from Yahoo Finance")
         
         # Use NASDAQ importance weight of 3 in sentiment engine
         print(f"NASDAQ importance weight: 3")
