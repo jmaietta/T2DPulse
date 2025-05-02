@@ -36,8 +36,8 @@ def create_mini_trend_chart(sector_name, height=50, show_axes=False, auto_range=
     Returns:
         dict: Plotly figure object
     """
-    # Get authentic historical data from predefined file
-    sector_history = predefined_sector_data.get_predefined_sector_history()
+    # Get authentic historical data
+    sector_history = authentic_sector_history.get_authentic_sector_history()
     
     if not sector_history or sector_name not in sector_history:
         # Return empty chart if no data available
@@ -117,8 +117,8 @@ def create_combined_sector_chart(sector_names, title=None, height=400):
     Returns:
         dict: Plotly figure object
     """
-    # Get authentic historical data from predefined file
-    sector_history = predefined_sector_data.get_predefined_sector_history()
+    # Get authentic historical data
+    sector_history = authentic_sector_history.get_authentic_sector_history()
     
     if not sector_history:
         # Return empty chart if no data available
