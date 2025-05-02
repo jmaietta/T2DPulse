@@ -335,6 +335,22 @@
     "IT Services / Legacy Tech": 47.0,
     "Hardware / Devices": 45.5
   },
+  "2025-05-01": {
+    "SMB SaaS": 47.75,
+    "Enterprise SaaS": 48.5,
+    "Cloud Infrastructure": 50.5,
+    "AdTech": 47.5,
+    "Fintech": 48.5,
+    "Consumer Internet": 46.75,
+    "eCommerce": 47.5,
+    "Cybersecurity": 48.0,
+    "Dev Tools / Analytics": 47.25,
+    "Semiconductors": 50.5,
+    "AI Infrastructure": 50.5,
+    "Vertical SaaS": 46.0,
+    "IT Services / Legacy Tech": 51.5,
+    "Hardware / Devices": 49.0
+  },
   "2025-05-02": {
     "SMB SaaS": 52.0,
     "Enterprise SaaS": 53.5,

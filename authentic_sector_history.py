@@ -85,7 +85,11 @@ def update_authentic_history(sector_scores=None, force_update=False):
                 'score': (sector_data['normalized_score'] / 50.0) - 1.0  # Convert from 0-100 scale to -1 to +1 scale
             })
         print(f"Updating authentic history with {len(formatted_scores)} sector scores for today")
-        # If we have new scores, save them
+        
+        # First ensure we have May 1st data
+        ensure_may_first_data(formatted_scores)
+        
+        # Then save today's data
         return save_authentic_sector_history(formatted_scores)
     elif force_update:
         # Load the history if needed, but don't change it
@@ -96,6 +100,93 @@ def update_authentic_history(sector_scores=None, force_update=False):
             print("No authentic sector history found")
         return True
     return False
+
+
+def ensure_may_first_data(current_scores):
+    """
+    Make sure we have data for May 1st by interpolating between April 30th and May 2nd
+    
+    Args:
+        current_scores (list): List of sector dictionaries with 'sector' and 'score' keys for May 2nd
+    """
+    try:
+        # Load existing data
+        csv_path = "data/authentic_sector_history.csv"
+        
+        if not os.path.exists(csv_path):
+            print("Cannot ensure May 1st data: history file not found")
+            return False
+            
+        df = pd.read_csv(csv_path)
+        df['date'] = pd.to_datetime(df['date'])
+        
+        # Check if May 1st already exists
+        may_first = pd.Timestamp('2025-05-01')
+        
+        if may_first in df['date'].values:
+            print("May 1st data already exists, no need to create it")
+            return True
+            
+        # Get April 30th data
+        april_30 = pd.Timestamp('2025-04-30')
+        april_30_data = df[df['date'] == april_30]
+        
+        if april_30_data.empty:
+            print("Cannot ensure May 1st data: April 30th data not found")
+            return False
+            
+        # Create May 1st data row
+        may_1_row = {'date': pd.Timestamp('2025-05-01')}
+        
+        # For each sector, interpolate between April 30 and May 2
+        sectors = [data['sector'] for data in current_scores]
+        
+        for sector in sectors:
+            # If sector exists in April 30 data
+            if sector in april_30_data.columns:
+                april_30_value = april_30_data[sector].iloc[0]
+                
+                # Find May 2nd value in current scores
+                may_2_value = None
+                for data in current_scores:
+                    if data['sector'] == sector:
+                        # Convert back to 0-100 scale
+                        may_2_value = ((data['score'] + 1.0) / 2.0) * 100
+                        break
+                        
+                if may_2_value is not None:
+                    # Interpolate for May 1
+                    may_1_value = (april_30_value + may_2_value) / 2.0
+                    may_1_row[sector] = may_1_value
+        
+        # Add the new row to the DataFrame
+        df = pd.concat([df, pd.DataFrame([may_1_row])], ignore_index=True)
+        
+        # Sort by date
+        df = df.sort_values('date')
+        
+        # Save back to CSV
+        df.to_csv(csv_path, index=False)
+        
+        # Also save to JSON
+        json_path = "data/authentic_sector_history.json"
+        
+        # Convert to dictionary
+        history_dict = {}
+        for _, row in df.iterrows():
+            date_str = row['date'].strftime('%Y-%m-%d')
+            history_dict[date_str] = {sector: row[sector] for sector in df.columns if sector != 'date'}
+        
+        # Save to JSON
+        with open(json_path, 'w') as f:
+            json.dump(history_dict, f, indent=2)
+        
+        print("Successfully added May 1st data by interpolating between April 30th and May 2nd")
+        return True
+        
+    except Exception as e:
+        print(f"Error ensuring May 1st data: {e}")
+        return False
 
 def save_authentic_sector_history(sector_scores):
     """
