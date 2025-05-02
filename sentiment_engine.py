@@ -6,9 +6,6 @@
 from __future__ import annotations
 from typing import Dict, List, TypedDict
 
-# Import sector indices functionality
-import sector_market_indices
-
 # ---------- 1) Sector universe ----------
 SECTORS = [
     "SMB SaaS", "Enterprise SaaS", "Cloud Infrastructure", "AdTech", "Fintech",
@@ -16,24 +13,6 @@ SECTORS = [
     "Semiconductors", "AI Infrastructure", "Vertical SaaS",
     "IT Services / Legacy Tech", "Hardware / Devices"
 ]
-
-# Map our internal sector names to the ticker basket sector names
-SECTOR_MAPPING = {
-    "SMB SaaS": "Enterprise SaaS",  # Use Enterprise SaaS tickers for SMB SaaS
-    "Enterprise SaaS": "Enterprise SaaS",
-    "Cloud Infrastructure": "Cloud",
-    "AdTech": "AdTech",
-    "Fintech": "Fintech",
-    "Consumer Internet": "Consumer Internet",
-    "eCommerce": "eCommerce",
-    "Cybersecurity": "Cybersecurity",
-    "Dev Tools / Analytics": "Dev Tools / Analytics",
-    "Semiconductors": "Semiconductors",
-    "AI Infrastructure": "AI Infrastructure",
-    "Vertical SaaS": "Vertical SaaS",
-    "IT Services / Legacy Tech": "IT Services / Legacy Tech",
-    "Hardware / Devices": "Hardware / Devices"
-}
 
 # ---------- 2) Impact grid (1‒3) ----------
 IMPACT: Dict[str, Dict[str, int]] = {
@@ -44,7 +23,6 @@ IMPACT: Dict[str, Dict[str, int]] = {
     "VIX":                       dict.fromkeys(SECTORS, 2),
     "NASDAQ_20d_gap_%":          dict.fromkeys(SECTORS, 3) | {
         "IT Services / Legacy Tech": 2, "Hardware / Devices": 2},
-    "Sector_Momentum_%":         dict.fromkeys(SECTORS, 4),  # Each sector has max impact for its own momentum
     "Fed_Funds_Rate_%":          dict.fromkeys(SECTORS, 2) | {
         "SMB SaaS": 3, "Enterprise SaaS": 3, "Cloud Infrastructure": 3,
         "Dev Tools / Analytics": 3, "AI Infrastructure": 3,
@@ -97,7 +75,6 @@ BANDS = {
     "10Y_Treasury_Yield_%":      ("lower", 3.25, 4.00),
     "VIX":                       ("lower", 18,   25),
     "NASDAQ_20d_gap_%":          ("higher", 4.0, -4.0),
-    "Sector_Momentum_%":         ("higher", 3.0, -3.0),  # Similar to NASDAQ but with tighter bands
     "Fed_Funds_Rate_%":          ("lower", 4.5,  5.25),
     "CPI_YoY_%":                 ("lower", 3.0,  4.0),
     "PCEPI_YoY_%":               ("lower", 3.0,  4.0),
@@ -161,61 +138,7 @@ def score_sectors(macros: MacroDict) -> List[SectorScore]:
     # For debugging, track contribution of each indicator to AdTech
     adtech_contributions = {}
 
-    # Get sector-specific momentum values
-    try:
-        # Get all sector momentums from the sector indices
-        sector_momentums = sector_market_indices.get_all_sector_momentums(use_cache=True)
-        print(f"Retrieved sector momentums for {len(sector_momentums)} sectors")
-        
-        # Add sector momentum to macros
-        for sec in SECTORS:
-            if sec in SECTOR_MAPPING:
-                ticker_sector = SECTOR_MAPPING[sec]
-                if ticker_sector in sector_momentums:
-                    momentum_key = f"Sector_Momentum_%"
-                    if momentum_key not in macros:
-                        macros = macros.copy()  # Create a copy to avoid modifying the original
-                    
-                    # Add sector-specific momentum to macros dictionary
-                    # Each sector will only see its own momentum value
-                    macros[f"{sec}_Momentum"] = sector_momentums[ticker_sector]
-    except Exception as e:
-        print(f"Error getting sector momentums: {e}")
-
     for ind, val in macros.items():
-        # Skip sector-specific momentum values for other sectors
-        if ind.endswith("_Momentum") and not ind.startswith("Sector"):
-            # Extract sector name from the indicator name
-            sector_name = ind.split("_Momentum")[0]
-            if sector_name not in SECTORS:
-                continue
-            
-            # Only process this indicator for its specific sector
-            sec = sector_name
-            raw = raw_signal("Sector_Momentum_%", val)
-            imp = IMPORTANCE.get("Sector_Momentum_%", 4)  # Higher importance for sector-specific index
-            
-            # Sector momentum has higher impact
-            impact = IMPACT["Sector_Momentum_%"][sec]
-            weight = impact * imp
-            contribution = raw * weight
-            sector_sum[sec] += contribution
-            sector_weight[sec] += abs(weight)
-            
-            # Track contributions for AdTech
-            if sec == "AdTech":
-                adtech_contributions[ind] = {
-                    "raw_signal": raw,
-                    "impact": impact,
-                    "importance": imp,
-                    "weight": weight,
-                    "contribution": contribution
-                }
-                
-            # Skip to next indicator after processing sector-specific momentum
-            continue
-        
-        # Handle regular macroeconomic indicators
         raw = raw_signal(ind, val)
         imp = IMPORTANCE.get(ind, 1)
         
@@ -224,14 +147,7 @@ def score_sectors(macros: MacroDict) -> List[SectorScore]:
             print(f"NASDAQ importance weight: {imp}")
         
         for sec in SECTORS:
-            # Skip NASDAQ momentum for sectors with their own momentum data
-            if ind == "NASDAQ_20d_gap_%" and f"{sec}_Momentum" in macros:
-                # Reduce NASDAQ impact for sectors with their own index data
-                impact = max(1, IMPACT[ind][sec] - 1)  # Reduce by 1 but minimum of 1
-            else:
-                impact = IMPACT[ind][sec]
-                
-            weight = impact * imp
+            weight = IMPACT[ind][sec] * imp
             contribution = raw * weight
             sector_sum[sec] += contribution
             sector_weight[sec] += abs(weight)
@@ -240,7 +156,7 @@ def score_sectors(macros: MacroDict) -> List[SectorScore]:
             if sec == "AdTech":
                 adtech_contributions[ind] = {
                     "raw_signal": raw,
-                    "impact": impact,
+                    "impact": IMPACT[ind][sec],
                     "importance": imp,
                     "weight": weight,
                     "contribution": contribution

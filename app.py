@@ -759,10 +759,6 @@ def calculate_sector_sentiment():
     print("Starting calculate_sector_sentiment function")
     # Import sector sentiment history module
     import sector_sentiment_history
-    import sector_yahoo_indices
-    
-    # Initialize sector data sources
-    print("Initializing sector data sources using Yahoo Finance ticker data")
     
     # Get latest values for all required indicators
     macros = {}
@@ -839,78 +835,6 @@ def calculate_sector_sentiment():
         latest_consumer_sentiment = consumer_sentiment_data.sort_values('date', ascending=False).iloc[0]['value']
         macros["Consumer_Sentiment"] = latest_consumer_sentiment
         print(f"Added Consumer Sentiment to sector calculations: {latest_consumer_sentiment}")
-        
-    # Add sector-specific market momentum indicators
-    try:
-        # Define mapping between our sector names and the CSV ticker sectors
-        sector_mapping = {
-            "SMB SaaS": "SMB SaaS",  # Use SMB SaaS tickers from CSV
-            "Enterprise SaaS": "Enterprise SaaS",
-            "Cloud Infrastructure": "Cloud",
-            "AdTech": "AdTech",
-            "Fintech": "Fintech",
-            "Consumer Internet": "Consumer Internet",
-            "eCommerce": "eCommerce",
-            "Cybersecurity": "Cybersecurity",
-            "Dev Tools / Analytics": "Dev Tools",  # CSV uses 'Dev Tools' not 'Dev Tools / Analytics'
-            "Semiconductors": "Semiconductors",
-            "AI Infrastructure": "AI Infrastructure",
-            "Vertical SaaS": "Vertical SaaS",
-            "IT Services / Legacy Tech": "IT Services",  # CSV uses 'IT Services'
-            "Hardware / Devices": "Hardware/Devices"  # CSV uses 'Hardware/Devices' without spaces
-        }
-        
-        # Use Yahoo Finance with proper caching to avoid rate limits
-        sector_momentums = {}
-        data_source_used = "Yahoo Finance (Authentic Data)"
-        
-        try:
-            # Get all sector momentum values from Yahoo Finance with caching and force_cache fallback
-            sector_momentums = sector_yahoo_indices.get_all_sector_momentums(use_cache=True, force_cache=False)
-            if sector_momentums and len(sector_momentums) > 0:
-                print(f"Retrieved authentic sector momentum data from Yahoo Finance for {len(sector_momentums)} sectors")
-                print(f"Using market-cap weighted ticker list data from attached_assets/Formatted_Sector_Ticker_List.csv")
-                
-                # Print out the sector momentum values for debugging
-                for sector, momentum in sector_momentums.items():
-                    if sector in sector_mapping.values():
-                        print(f"  {sector}: {momentum:.2f}%")
-            else:
-                print("Yahoo Finance API returned no data, trying with forced cache option")
-                # If first attempt failed, try again with force_cache=True
-                sector_momentums = sector_yahoo_indices.get_all_sector_momentums(use_cache=True, force_cache=True)
-                if sector_momentums and len(sector_momentums) > 0:
-                    print(f"Retrieved {len(sector_momentums)} sectors using cached data")
-                    data_source_used = "Yahoo Finance (Cached Data)"
-                else:
-                    print("Failed to get sector data from cache as well")
-        except Exception as e:
-            print(f"Error reading Yahoo Finance data: {str(e)}")
-            print("WARNING: Failed to get sector data from Yahoo Finance, trying forced cache")
-            try:
-                sector_momentums = sector_yahoo_indices.get_all_sector_momentums(use_cache=True, force_cache=True)
-                if sector_momentums and len(sector_momentums) > 0:
-                    print(f"Retrieved {len(sector_momentums)} sectors using cached data as fallback")
-                    data_source_used = "Yahoo Finance (Cached Data)"
-            except Exception as e2:
-                print(f"Error using cached data: {str(e2)}")
-                print("Cannot retrieve sector data")
-                return []
-        
-        # Use NASDAQ importance weight of 3 in sentiment engine
-        print(f"NASDAQ importance weight: 3")
-        print(f"Using {data_source_used} as sector data source")
-        
-        # Add sector-specific momentum to macros for use in sentiment calculation
-        for sector, ticker_sector in sector_mapping.items():
-            if ticker_sector in sector_momentums:
-                momentum = sector_momentums[ticker_sector]
-                # Add sector-specific momentum as a separate indicator for each sector
-                macros[f"{sector}_Momentum"] = momentum
-                print(f"Added {sector} momentum: {momentum:.2f}%")
-    except Exception as e:
-        print(f"Error adding sector momentum data: {e}")
-        print(f"Continuing with other economic indicators only")
     
     # Check if we have enough data to calculate sector scores (need at least 6 indicators)
     if len(macros) < 6:
