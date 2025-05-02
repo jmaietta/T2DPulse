@@ -759,7 +759,13 @@ def calculate_sector_sentiment():
     print("Starting calculate_sector_sentiment function")
     # Import sector sentiment history module
     import sector_sentiment_history
-    import sector_market_indices
+    import sector_gsheet_reader
+    
+    # Initialize Google Sheet URL if provided via environment variable
+    google_sheet_url = os.environ.get('SECTOR_GOOGLE_SHEET_URL')
+    if google_sheet_url:
+        sector_gsheet_reader.set_google_sheet_url(google_sheet_url)
+        print(f"Using Google Sheet for sector data: {google_sheet_url}")
     
     # Get latest values for all required indicators
     macros = {}
@@ -857,19 +863,45 @@ def calculate_sector_sentiment():
             "Hardware / Devices": "Hardware / Devices"
         }
         
-        # Get all sector momentum values
-        sector_momentums = sector_market_indices.get_all_sector_momentums(use_cache=True)
-        print(f"Retrieved sector momentum data for {len(sector_momentums)} sectors")
-        
-        # Add sector-specific momentum to macros for use in sentiment calculation
-        for sector, ticker_sector in sector_mapping.items():
-            if ticker_sector in sector_momentums:
-                momentum = sector_momentums[ticker_sector]
-                # Add sector-specific momentum as a separate indicator for each sector
-                macros[f"{sector}_Momentum"] = momentum
-                print(f"Added {sector} momentum: {momentum:.2f}%")
+        # First check if we have Google Sheet data available
+        google_sheet_url = os.environ.get('SECTOR_GOOGLE_SHEET_URL')
+        if google_sheet_url:
+            try:
+                # Get sector momentum data from Google Sheet
+                sector_momentums = sector_gsheet_reader.get_all_sector_momentums()
+                print(f"Retrieved sector momentum data from Google Sheet for {len(sector_momentums)} sectors")
+                
+                # Use NASDAQ importance weight of 3 in sentiment engine
+                print(f"NASDAQ importance weight: 3")
+                
+                # Add sector-specific momentum to macros
+                for sector, ticker_sector in sector_mapping.items():
+                    if ticker_sector in sector_momentums:
+                        momentum = sector_momentums[ticker_sector]
+                        # Add sector-specific momentum as a separate indicator for each sector
+                        macros[f"{sector}_Momentum"] = momentum
+                        print(f"Added {sector} momentum: {momentum:.2f}%")
+            except Exception as e:
+                print(f"Error reading Google Sheet data: {str(e)}")
+                # Will fall back to Yahoo Finance data
+                
+        # If we don't have Google Sheet data or it failed, try Yahoo Finance
+        if not google_sheet_url or len(sector_momentums) == 0:
+            import sector_market_indices
+            # Get all sector momentum values from Yahoo Finance
+            sector_momentums = sector_market_indices.get_all_sector_momentums(use_cache=True)
+            print(f"Retrieved sector momentum data from Yahoo Finance for {len(sector_momentums)} sectors")
+            
+            # Add sector-specific momentum to macros for use in sentiment calculation
+            for sector, ticker_sector in sector_mapping.items():
+                if ticker_sector in sector_momentums:
+                    momentum = sector_momentums[ticker_sector]
+                    # Add sector-specific momentum as a separate indicator for each sector
+                    macros[f"{sector}_Momentum"] = momentum
+                    print(f"Added {sector} momentum: {momentum:.2f}%")
     except Exception as e:
         print(f"Error adding sector momentum data: {e}")
+        print(f"Continuing with other economic indicators only")
     
     # Check if we have enough data to calculate sector scores (need at least 6 indicators)
     if len(macros) < 6:
