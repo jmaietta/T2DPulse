@@ -1,0 +1,67 @@
+import requests
+import pandas as pd
+import time
+
+# Replace with your actual Finnhub API key
+API_KEY = 'YOUR_API_KEY_HERE'
+
+# Define your sector-wise tickers
+sector_tickers = {
+    "AdTech": ["APP", "APPS", "CRTO", "DV", "GOOGL", "IAD", "META", "MGNI", "PUBM", "TTD"],
+    "Cloud": ["AMZN", "CRM", "CSCO", "GOOGL", "MSFT", "NET", "ORCL", "SNOW"],
+    "Fintech": ["ADYEY", "AFRM", "BILL", "COIN", "FIS", "FISV", "GPN", "PYPL", "SQ", "SSNC"],
+    "eCommerce": ["AMZN", "BABA", "BKNG", "CHWY", "EBAY", "ETSY", "PDD", "SE", "SHOP", "WMT"],
+    "Consumer Internet": ["ABNB", "BKNG", "GOOGL", "META", "NFLX", "PINS", "SNAP", "SPOT", "TRIP", "YELP"],
+    "IT Services": ["ACN", "CTSH", "DXC", "HPQ", "IBM", "INFY", "PLTR", "WIT"],
+    "Hardware/Devices": ["AAPL", "DELL", "HPQ", "LOGI", "PSTG", "SMCI", "SSYS", "STX", "WDC"],
+    "Cybersecurity": ["CHKP", "CRWD", "CYBR", "FTNT", "NET", "OKTA", "PANW", "S", "ZS"],
+    "Dev Tools": ["DDOG", "ESTC", "GTLB", "MDB", "TEAM"],
+    "AI Infrastructure": ["AMZN", "GOOGL", "IBM", "META", "MSFT", "NVDA", "ORCL"],
+    "Semiconductors": ["AMAT", "AMD", "ARM", "AVGO", "INTC", "NVDA", "QCOM", "TSM"],
+    "Vertical SaaS": ["CCCS", "CPRT", "CSGP", "GWRE", "ICE", "PCOR", "SSNC", "TTAN"],
+    "Enterprise SaaS": ["ADSK", "AMZN", "CRM", "IBM", "MSFT", "NOW", "ORCL", "SAP", "WDAY"],
+    "SMB SaaS": ["ADBE", "BILL", "GOOGL", "HUBS", "INTU", "META"]
+}
+
+# Initialize list to store data
+data = []
+
+# Iterate over each sector and its tickers
+for sector, tickers in sector_tickers.items():
+    for ticker in tickers:
+        # Fetch current price
+        quote_url = f'https://finnhub.io/api/v1/quote?symbol={ticker}&token={API_KEY}'
+        quote_response = requests.get(quote_url)
+        if quote_response.status_code == 200:
+            quote_data = quote_response.json()
+            current_price = quote_data.get('c')
+        else:
+            current_price = None
+
+        # Fetch market capitalization
+        profile_url = f'https://finnhub.io/api/v1/stock/profile2?symbol={ticker}&token={API_KEY}'
+        profile_response = requests.get(profile_url)
+        if profile_response.status_code == 200:
+            profile_data = profile_response.json()
+            market_cap = profile_data.get('marketCapitalization')
+        else:
+            market_cap = None
+
+        # Append the data
+        data.append({
+            'Sector': sector,
+            'Ticker': ticker,
+            'Current Price': current_price,
+            'Market Cap': market_cap
+        })
+
+        # Respect API rate limits
+        time.sleep(0.5)  # Adjust as needed
+
+# Create a DataFrame
+df = pd.DataFrame(data)
+
+# Save to CSV
+df.to_csv('sector_ticker_data.csv', index=False)
+
+print("Data fetching complete. Saved to 'sector_ticker_data.csv'.")

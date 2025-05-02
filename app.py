@@ -759,13 +759,11 @@ def calculate_sector_sentiment():
     print("Starting calculate_sector_sentiment function")
     # Import sector sentiment history module
     import sector_sentiment_history
-    import sector_gsheet_reader
+    import sector_finnhub_reader
+    import sector_market_indices
     
-    # Initialize Google Sheet URL if provided via environment variable
-    google_sheet_url = os.environ.get('SECTOR_GOOGLE_SHEET_URL')
-    if google_sheet_url:
-        sector_gsheet_reader.set_google_sheet_url(google_sheet_url)
-        print(f"Using Google Sheet for sector data: {google_sheet_url}")
+    # No Google Sheet initialization needed
+    print("Initializing sector data sources")
     
     # Get latest values for all required indicators
     macros = {}
@@ -863,42 +861,52 @@ def calculate_sector_sentiment():
             "Hardware / Devices": "Hardware / Devices"
         }
         
-        # First check if we have Google Sheet data available
-        google_sheet_url = os.environ.get('SECTOR_GOOGLE_SHEET_URL')
-        if google_sheet_url:
+        # Try data sources in priority order: Finnhub (primary) → Yahoo Finance (fallback)
+        sector_momentums = {}
+        data_source_used = ""
+        
+        # 1. Try Finnhub as primary data source
+        try:
+            finnhub_api_key = os.environ.get('FINNHUB_API_KEY')
+            if finnhub_api_key:
+                # Get all sector momentum values from Finnhub
+                sector_momentums = sector_finnhub_reader.get_all_sector_momentums()
+                if sector_momentums and len(sector_momentums) > 0:
+                    print(f"Retrieved sector momentum data from Finnhub API for {len(sector_momentums)} sectors")
+                    data_source_used = "Finnhub API"
+                else:
+                    print("Finnhub API key provided but no data returned")
+            else:
+                print("No Finnhub API key provided, skipping Finnhub data source")
+        except Exception as e:
+            print(f"Error reading Finnhub data: {str(e)}")
+            # Will fall back to Yahoo Finance
+        
+        # 2. Fall back to Yahoo Finance as backup
+        if not sector_momentums or len(sector_momentums) == 0:
             try:
-                # Get sector momentum data from Google Sheet
-                sector_momentums = sector_gsheet_reader.get_all_sector_momentums()
-                print(f"Retrieved sector momentum data from Google Sheet for {len(sector_momentums)} sectors")
-                
-                # Use NASDAQ importance weight of 3 in sentiment engine
-                print(f"NASDAQ importance weight: 3")
-                
-                # Add sector-specific momentum to macros
-                for sector, ticker_sector in sector_mapping.items():
-                    if ticker_sector in sector_momentums:
-                        momentum = sector_momentums[ticker_sector]
-                        # Add sector-specific momentum as a separate indicator for each sector
-                        macros[f"{sector}_Momentum"] = momentum
-                        print(f"Added {sector} momentum: {momentum:.2f}%")
+                # Get all sector momentum values from Yahoo Finance
+                sector_momentums = sector_market_indices.get_all_sector_momentums(use_cache=True)
+                if sector_momentums and len(sector_momentums) > 0:
+                    print(f"Retrieved sector momentum data from Yahoo Finance for {len(sector_momentums)} sectors")
+                    data_source_used = "Yahoo Finance"
+                else:
+                    print("Yahoo Finance API returned no data")
             except Exception as e:
-                print(f"Error reading Google Sheet data: {str(e)}")
-                # Will fall back to Yahoo Finance data
-                
-        # If we don't have Google Sheet data or it failed, try Yahoo Finance
-        if not google_sheet_url or len(sector_momentums) == 0:
-            import sector_market_indices
-            # Get all sector momentum values from Yahoo Finance
-            sector_momentums = sector_market_indices.get_all_sector_momentums(use_cache=True)
-            print(f"Retrieved sector momentum data from Yahoo Finance for {len(sector_momentums)} sectors")
-            
-            # Add sector-specific momentum to macros for use in sentiment calculation
-            for sector, ticker_sector in sector_mapping.items():
-                if ticker_sector in sector_momentums:
-                    momentum = sector_momentums[ticker_sector]
-                    # Add sector-specific momentum as a separate indicator for each sector
-                    macros[f"{sector}_Momentum"] = momentum
-                    print(f"Added {sector} momentum: {momentum:.2f}%")
+                print(f"Error reading Yahoo Finance data: {str(e)}")
+                print("WARNING: All data sources failed for sector data")
+        
+        # Use NASDAQ importance weight of 3 in sentiment engine
+        print(f"NASDAQ importance weight: 3")
+        print(f"Using {data_source_used} as sector data source")
+        
+        # Add sector-specific momentum to macros for use in sentiment calculation
+        for sector, ticker_sector in sector_mapping.items():
+            if ticker_sector in sector_momentums:
+                momentum = sector_momentums[ticker_sector]
+                # Add sector-specific momentum as a separate indicator for each sector
+                macros[f"{sector}_Momentum"] = momentum
+                print(f"Added {sector} momentum: {momentum:.2f}%")
     except Exception as e:
         print(f"Error adding sector momentum data: {e}")
         print(f"Continuing with other economic indicators only")
