@@ -77,8 +77,8 @@ def recalculate_historical_scores(days_back=30):
                     print(f"Using average historical EMA factor: {avg_ema:.4f}")
             except Exception as e:
                 print(f"Error getting historical EMA factors: {e}")
-                # Use a neutral value
-                macro_values["Sector_EMA_Factor"] = 0.0
+                # Use a small positive value rather than neutral
+                macro_values["Sector_EMA_Factor"] = 0.05  # Small positive bias
             
             # Calculate sector scores with the updated methodology
             sector_scores = sentiment_engine.score_sectors(macro_values)

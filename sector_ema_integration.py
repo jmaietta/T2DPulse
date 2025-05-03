@@ -60,19 +60,40 @@ def get_historical_ema_factors(date):
             # We have history for this exact date - great!
             df = pd.read_csv(specific_file)
             
-            # Calculate factors from historical normalized scores
+            # Calculate factors from historical normalized scores (0-100)
             factors = {}
-            for _, row in df.iterrows():
-                sector = row['sector']
-                # Convert 0-100 score back to -1 to 1 scale
-                normalized_score = row['normalized_score']
-                raw_score = (normalized_score / 100 * 2) - 1
+            
+            # The data is stored with sectors as columns, not as rows
+            if 'date' in df.columns:
+                # Find the row for our date
+                date_row = df[df['date'] == date_str]
+                if not date_row.empty:
+                    # For each sector column, extract the score and convert to factor
+                    for sector in df.columns:
+                        if sector != 'date':
+                            # Get normalized score (0-100)
+                            normalized_score = date_row[sector].values[0] 
+                            # Convert 0-100 score back to -1 to 1 scale
+                            raw_score = (normalized_score / 100 * 2) - 1
+                            # Use this as the factor with some scaling
+                            factors[sector] = raw_score * 0.5  # Use 50% of the raw score as factor
+                    
+                    print(f"Using historical factors for {date_str}: {factors}")
+                    return factors
+            
+            # Legacy format (unlikely) - check for sector and normalized_score columns
+            if 'sector' in df.columns and 'normalized_score' in df.columns:
+                for _, row in df.iterrows():
+                    sector = row['sector']
+                    # Convert 0-100 score back to -1 to 1 scale
+                    normalized_score = row['normalized_score']
+                    raw_score = (normalized_score / 100 * 2) - 1
+                    
+                    # For historical data, use a simpler approach - the score itself
+                    # is influenced by many factors including past EMAs
+                    factors[sector] = raw_score * 0.5  # Scale down to be more conservative
                 
-                # For historical data, use a simpler approach - the score itself
-                # is influenced by many factors including past EMAs
-                factors[sector] = raw_score * 0.2  # Scale down to be more conservative
-                
-            return factors
+                return factors
             
         # If we don't have the exact date, use the main file and find closest date
         main_file = "data/authentic_sector_history.csv"
@@ -92,15 +113,22 @@ def get_historical_ema_factors(date):
                 
                 # Calculate factors
                 factors = {}
+                
+                # Process each row in closest_data (should be just one row)
                 for _, row in closest_data.iterrows():
-                    sector = row['sector']
-                    # Convert 0-100 score back to -1 to 1 scale
-                    normalized_score = row['normalized_score']
-                    raw_score = (normalized_score / 100 * 2) - 1
-                    
-                    # For historical data, use a simpler approach
-                    factors[sector] = raw_score * 0.2  # Scale down to be more conservative
-                    
+                    # For each sector column, extract the score and convert to factor
+                    for sector in df.columns:
+                        if sector != 'date':
+                            # Get normalized score (0-100)
+                            if sector in row:
+                                normalized_score = row[sector]
+                                # Convert 0-100 score back to -1 to 1 scale
+                                raw_score = (normalized_score / 100 * 2) - 1
+                                # Use this as the factor with some scaling
+                                factors[sector] = raw_score * 0.5  # Use 50% of the raw score as factor
+                
+                closest_date_str = closest_date.strftime('%Y-%m-%d')
+                print(f"Using closest historical factors from {closest_date_str}: {factors}")
                 return factors
     except Exception as e:
         print(f"Error getting historical EMA factors: {str(e)}")
@@ -112,8 +140,10 @@ def get_historical_ema_factors(date):
     except:
         pass
         
-    # Default to empty dict if all methods fail
-    return {}
+    # Default to small positive factors for all sectors if all methods fail
+    from sentiment_engine import SECTORS
+    print("Using small positive default EMA factors")
+    return {sector: 0.05 for sector in SECTORS}  # Small positive bias
 
 def apply_ema_factors_to_sector_scores(sector_scores, ema_factors=None):
     """
