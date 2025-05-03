@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-# option_a_mockup.py - Side by Side Layout
+# option_b_mockup.py - Enlarged Circle with Integrated Chart
 # -----------------------------------------------------------
-# Option A: Side-by-side layout with pulse circle on left, trend chart on right
+# Option B: Enlarged circle with integrated mini chart at the bottom
 
 import dash
 from dash import html, dcc
@@ -12,9 +12,6 @@ import numpy as np
 from datetime import datetime, timedelta
 import base64
 import os
-
-# Import the glowing circle component
-from simple_glow_mockup import create_pulse_glow_circle
 
 # T2D logo path
 T2D_LOGO_PATH = "attached_assets/T2D Pulse logo.png"
@@ -51,7 +48,46 @@ def generate_sample_pulse_data(days=30):
     
     return df
 
-# Create the trend chart
+# Create a mini trend chart for the circle
+def create_mini_trend_chart(pulse_data):
+    trace = go.Scatter(
+        x=pulse_data['date'],
+        y=pulse_data['pulse_score'],
+        mode='lines',
+        line=dict(
+            color='#f39c12',  # Orange color
+            width=2,
+            shape='spline'
+        ),
+        fill='tozeroy',
+        fillcolor='rgba(243, 156, 18, 0.2)',
+        hoverinfo='none'
+    )
+    
+    layout = go.Layout(
+        height=80,
+        margin=dict(l=0, r=0, t=0, b=0),
+        paper_bgcolor='rgba(0,0,0,0)',
+        plot_bgcolor='rgba(0,0,0,0)',
+        xaxis=dict(
+            showgrid=False,
+            zeroline=False,
+            showticklabels=False,
+            showline=False
+        ),
+        yaxis=dict(
+            showgrid=False,
+            zeroline=False,
+            showticklabels=False,
+            showline=False,
+            range=[0, 100]
+        )
+    )
+    
+    fig = go.Figure(data=[trace], layout=layout)
+    return fig
+
+# Create a full standalone trend chart
 def create_trend_chart(pulse_data):
     # Create trace for the line chart
     trace = go.Scatter(
@@ -70,7 +106,7 @@ def create_trend_chart(pulse_data):
     
     # Create layout with colored background regions
     layout = go.Layout(
-        height=280,
+        height=180,  # Shorter height for this option
         margin=dict(l=30, r=20, t=20, b=30),
         paper_bgcolor='rgba(0,0,0,0)',
         plot_bgcolor='rgba(0,0,0,0)',
@@ -120,41 +156,6 @@ def create_trend_chart(pulse_data):
                 line=dict(width=0)
             )
         ],
-        annotations=[
-            # Bearish label
-            dict(
-                x=0.02, y=15,
-                xref='paper', yref='y',
-                text='Bearish',
-                showarrow=False,
-                font=dict(
-                    color='rgba(192, 57, 43, 0.7)',
-                    size=12
-                )
-            ),
-            # Neutral label
-            dict(
-                x=0.02, y=45,
-                xref='paper', yref='y',
-                text='Neutral',
-                showarrow=False,
-                font=dict(
-                    color='rgba(211, 84, 0, 0.7)',
-                    size=12
-                )
-            ),
-            # Bullish label
-            dict(
-                x=0.02, y=80,
-                xref='paper', yref='y',
-                text='Bullish',
-                showarrow=False,
-                font=dict(
-                    color='rgba(39, 174, 96, 0.7)',
-                    size=12
-                )
-            )
-        ],
         hovermode='x unified'
     )
     
@@ -186,51 +187,93 @@ app.layout = html.Div([
             'paddingBottom': '10px'
         }),
         
-        # Option A: Side-by-side layout with circle on left, chart on right
+        # Option B: Enlarged circle with integrated chart at bottom
         html.Div([
+            # Center-aligned enlarged pulse circle
             html.Div([
-                # Left side - Pulse Circle
+                # Container for the circle
                 html.Div([
-                    # Using the glowing circle component
-                    create_pulse_glow_circle(55.7, size=240)  # Authentic T2D Pulse score
+                    # T2D Pulse Logo
+                    html.Img(src=encode_t2d_logo() or '',
+                             style={
+                                 'width': '120px',
+                                 'margin': '0 auto 15px auto',
+                                 'display': 'block'
+                             }),
+                    
+                    # Score and status
+                    html.Div([
+                        html.Div("55.7", style={
+                            'fontSize': '70px',
+                            'fontWeight': '600',
+                            'color': '#f39c12',  # Neutral orange
+                            'textAlign': 'center',
+                            'lineHeight': '1'
+                        }),
+                        html.Div("Neutral", style={
+                            'fontSize': '24px',
+                            'fontWeight': '400',
+                            'color': '#f39c12',
+                            'textAlign': 'center',
+                            'marginBottom': '20px'
+                        }),
+                        
+                        # Mini trend chart inside the circle
+                        html.Div([
+                            dcc.Graph(
+                                id='mini-chart',
+                                figure=create_mini_trend_chart(generate_sample_pulse_data()),
+                                config={'displayModeBar': False},
+                                style={'height': '80px'}
+                            )
+                        ], style={
+                            'width': '90%',
+                            'margin': '0 auto'
+                        })
+                    ], style={
+                        'display': 'flex',
+                        'flexDirection': 'column',
+                        'justifyContent': 'center'
+                    })
                 ], style={
-                    'flex': '0 0 auto',
-                    'marginRight': '20px',
+                    'width': '320px',
+                    'height': '320px',
+                    'borderRadius': '50%',
+                    'backgroundColor': 'white',
+                    'boxShadow': '0 0 20px #f39c12',
+                    'border': '3px solid #f39c12',
                     'display': 'flex',
-                    'alignItems': 'center',
-                    'justifyContent': 'center'
-                }),
-                
-                # Right side - Trend Chart
-                html.Div([
-                    html.Div("30-Day Trend", style={
-                        'fontSize': '16px',
-                        'fontWeight': '500',
-                        'marginBottom': '5px',
-                        'textAlign': 'center',
-                        'color': '#555'
-                    }),
-                    dcc.Graph(
-                        id='trend-chart',
-                        figure=create_trend_chart(generate_sample_pulse_data()),
-                        config={'displayModeBar': False}
-                    )
-                ], style={
-                    'flex': '1',
-                    'minWidth': '0',  # Allows the flex item to shrink below content size
-                    'height': '280px',
-                    'border': '1px solid #eee',
-                    'borderRadius': '5px',
-                    'padding': '10px',
-                    'backgroundColor': '#fff'
+                    'flexDirection': 'column',
+                    'justifyContent': 'center',
+                    'padding': '20px',
+                    'margin': '0 auto'
                 })
             ], style={
+                'marginBottom': '20px',
                 'display': 'flex',
-                'flexDirection': 'row',
-                'alignItems': 'center',
-                'justifyContent': 'space-between',
-                'width': '100%',
-                'marginBottom': '15px'
+                'justifyContent': 'center'
+            }),
+            
+            # Full width trend chart below the circle
+            html.Div([
+                html.Div("30-Day Trend", style={
+                    'fontSize': '16px',
+                    'fontWeight': '500',
+                    'marginBottom': '5px',
+                    'textAlign': 'center',
+                    'color': '#555'
+                }),
+                dcc.Graph(
+                    id='trend-chart',
+                    figure=create_trend_chart(generate_sample_pulse_data()),
+                    config={'displayModeBar': False}
+                )
+            ], style={
+                'border': '1px solid #eee',
+                'borderRadius': '5px',
+                'padding': '10px',
+                'backgroundColor': '#fff',
+                'width': '100%'
             })
         ]),
         
@@ -255,4 +298,4 @@ app.layout = html.Div([
 
 # Run the app
 if __name__ == '__main__':
-    app.run_server(debug=True, host='0.0.0.0', port=5050)
+    app.run_server(debug=True, host='0.0.0.0', port=5051)
