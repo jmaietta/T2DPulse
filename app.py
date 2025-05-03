@@ -28,6 +28,10 @@ import sentiment_engine
 
 # Import chart styling and market insights components
 from chart_styling import custom_template, color_scheme
+
+# Import T2D Pulse history tracking and trend chart
+from t2d_pulse_history import save_t2d_pulse_score, get_t2d_pulse_history
+from t2d_pulse_trend_chart import create_t2d_pulse_chart
 from market_insights import create_insights_panel
 
 # Import sector trend chart for historical visualizations
