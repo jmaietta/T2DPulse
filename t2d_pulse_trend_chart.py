@@ -74,7 +74,7 @@ def create_t2d_pulse_chart(pulse_color, height=80, show_axes=False, auto_range=T
                 x=dates,
                 y=values,
                 fill='tozeroy',
-                fillcolor=f"rgba{pulse_color[1:-1]}, 0.2)",  # Convert hex to rgba with opacity
+                fillcolor=f"rgba(188, 140, 0, 0.2)",  # Light orange with opacity
                 line=dict(color=pulse_color, width=2),
                 mode='lines',
                 hoverinfo='none',

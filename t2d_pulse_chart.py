@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+# Import the new simple glow mockup
+from simple_glow_mockup import create_pulse_glow_circle
 # t2d_pulse_chart.py
 # -----------------------------------------------------------
 # A mockup visualization of the 30-day T2D Pulse chart 
@@ -343,8 +345,8 @@ def create_mockup_layout():
                 # T2D Pulse Gauge Panel
                 dbc.Card([
                     dbc.CardBody([
-                        # Main T2D Pulse Gauge
-                        create_mock_pulse_gauge(latest_score)
+                        # Main T2D Pulse Gauge using the new glowing circle design
+                        create_pulse_glow_circle(55.7)  # Using authentic value
                     ])
                 ], className="mb-4 shadow-sm"),
                 

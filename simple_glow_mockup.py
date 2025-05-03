@@ -1,105 +1,156 @@
+#!/usr/bin/env python3
+# simple_glow_mockup.py
+# -----------------------------------------------------------
+# Create a simple glowing circle for the T2D Pulse score
+
 import dash
-from dash import dcc, html
-import plotly.graph_objs as go
+import dash_bootstrap_components as dbc
+from dash import html, dcc
+import os
+import base64
 
-# Define sentiment score categories with associated colors
-sentiment_categories = [
-    {"name": "Boom", "color": "#2ECC71"},  # Green
-    {"name": "Expansion", "color": "#F1C40F"},  # Yellow
-    {"name": "Moderate Growth", "color": "#E67E22"},  # Orange
-    {"name": "Slowdown", "color": "#E74C3C"},  # Light Red
-    {"name": "Contraction", "color": "#C0392B"}  # Dark Red
-]
+# Define color scheme for pulse scores
+PULSE_COLORS = {
+    'bearish': '#e74c3c',  # Red
+    'neutral': '#f39c12',  # Orange/Yellow
+    'bullish': '#2ecc71',  # Green
+}
 
-app = dash.Dash(__name__)
+# T2D logo path - ensure this exists
+T2D_LOGO_PATH = "attached_assets/T2D Pulse logo.png"
 
-# Create the layout
-app.layout = html.Div([
-    html.H1("T2D Pulse Sentiment - Glow Border Concept", style={"textAlign": "center", "margin": "20px 0"}),
+def create_pulse_glow_circle(value, size=280, include_logo=True):
+    """
+    Create a simple glowing circle for the T2D Pulse score
     
-    # Three mockups with different glow intensities
-    html.Div([
-        html.Div([
-            html.H3("Light Glow Effect", style={"textAlign": "center", "marginBottom": "10px"}),
-            html.Div([
-                html.H3("T2D Pulse Sentiment", style={"textAlign": "center", "fontWeight": "bold", "marginBottom": "15px"}),
-                html.Div("58.7", style={"fontSize": "48px", "textAlign": "center", "fontWeight": "bold", "color": "#E67E22"}),
-                html.Div("Moderate Growth", style={"fontSize": "22px", "textAlign": "center", "color": "#E67E22", "marginTop": "10px"})
-            ], style={
-                "padding": "30px",
-                "backgroundColor": "white",
-                "borderRadius": "8px",
-                "boxShadow": "0 0 10px rgba(230, 126, 34, 0.4)",  # Light transparent glow
-                "border": "1px solid #E67E22",  # Matching border color
-                "height": "250px",
-                "display": "flex",
-                "flexDirection": "column",
-                "justifyContent": "center"
-            })
-        ], style={"width": "30%", "margin": "0 1.5%"}),
+    Args:
+        value (float): The T2D Pulse score (0-100)
+        size (int): Size of the circle in pixels
+        include_logo (bool): Whether to include the T2D logo
         
-        html.Div([
-            html.H3("Medium Glow Effect", style={"textAlign": "center", "marginBottom": "10px"}),
-            html.Div([
-                html.H3("T2D Pulse Sentiment", style={"textAlign": "center", "fontWeight": "bold", "marginBottom": "15px"}),
-                html.Div("58.7", style={"fontSize": "48px", "textAlign": "center", "fontWeight": "bold", "color": "#E67E22"}),
-                html.Div("Moderate Growth", style={"fontSize": "22px", "textAlign": "center", "color": "#E67E22", "marginTop": "10px"})
-            ], style={
-                "padding": "30px",
-                "backgroundColor": "white",
-                "borderRadius": "8px",
-                "boxShadow": "0 0 15px rgba(230, 126, 34, 0.6)",  # Medium transparent glow
-                "border": "1px solid #E67E22",  # Matching border color
-                "height": "250px",
-                "display": "flex",
-                "flexDirection": "column",
-                "justifyContent": "center"
-            })
-        ], style={"width": "30%", "margin": "0 1.5%"}),
-        
-        html.Div([
-            html.H3("Strong Glow Effect", style={"textAlign": "center", "marginBottom": "10px"}),
-            html.Div([
-                html.H3("T2D Pulse Sentiment", style={"textAlign": "center", "fontWeight": "bold", "marginBottom": "15px"}),
-                html.Div("58.7", style={"fontSize": "48px", "textAlign": "center", "fontWeight": "bold", "color": "#E67E22"}),
-                html.Div("Moderate Growth", style={"fontSize": "22px", "textAlign": "center", "color": "#E67E22", "marginTop": "10px"})
-            ], style={
-                "padding": "30px",
-                "backgroundColor": "white",
-                "borderRadius": "8px",
-                "boxShadow": "0 0 20px rgba(230, 126, 34, 0.8)",  # Strong transparent glow
-                "border": "1px solid #E67E22",  # Matching border color
-                "height": "250px",
-                "display": "flex",
-                "flexDirection": "column",
-                "justifyContent": "center"
-            })
-        ], style={"width": "30%", "margin": "0 1.5%"})
-    ], style={"display": "flex", "marginBottom": "40px", "maxWidth": "1200px", "margin": "0 auto"}),
+    Returns:
+        dash component: The pulse circle component
+    """
+    # Determine status and color based on value
+    if value is None or not isinstance(value, (int, float)):
+        value = 0
+        status = "Bearish"
+        color = PULSE_COLORS['bearish']
+    else:
+        value = float(value)
+        if value < 40:
+            status = "Bearish"
+            color = PULSE_COLORS['bearish']
+        elif value > 60:
+            status = "Bullish"
+            color = PULSE_COLORS['bullish']
+        else:
+            status = "Neutral"
+            color = PULSE_COLORS['neutral']
+            
+    # Encode T2D logo in base64 if it exists
+    logo_img = None
+    if include_logo and os.path.exists(T2D_LOGO_PATH):
+        with open(T2D_LOGO_PATH, "rb") as image_file:
+            encoded_image = base64.b64encode(image_file.read()).decode('utf-8')
+            logo_img = f"data:image/png;base64,{encoded_image}"
     
-    # Show all sentiment categories with corresponding colors
-    html.H2("All Sentiment Categories", style={"textAlign": "center", "margin": "40px 0 20px"}),
-    html.Div([
+    # Create the glowing circle component
+    pulse_circle = html.Div([
+        # Container for the circle and its contents
         html.Div([
+            # T2D Logo at top (if available)
+            html.Img(
+                src=logo_img,
+                style={
+                    "width": "120px",
+                    "margin": "0 auto 15px auto",
+                    "display": "block" if logo_img else "none"
+                }
+            ) if logo_img else html.Div("T2D PULSE", style={
+                "fontSize": "18px",
+                "fontWeight": "500",
+                "color": "#e74c3c",  # T2D red branding
+                "textAlign": "center",
+                "marginBottom": "15px",
+                "fontFamily": "'Arial', sans-serif",
+                "letterSpacing": "1px"
+            }),
+            
+            # Inner circle with pulse value
             html.Div([
-                html.H3("T2D Pulse Sentiment", style={"textAlign": "center", "fontWeight": "bold", "marginBottom": "15px"}),
-                html.Div(f"{70 - i*15}", style={"fontSize": "48px", "textAlign": "center", "fontWeight": "bold", "color": category["color"]}),
-                html.Div(category["name"], style={"fontSize": "22px", "textAlign": "center", "color": category["color"], "marginTop": "10px"})
+                # Large score value
+                html.Div(
+                    f"{value:.1f}",
+                    style={
+                        "fontSize": "60px",
+                        "fontWeight": "600",
+                        "color": color,
+                        "textAlign": "center",
+                        "lineHeight": "1"
+                    }
+                ),
+                
+                # Status text (Bullish/Neutral/Bearish)
+                html.Div(
+                    status,
+                    style={
+                        "fontSize": "20px",
+                        "fontWeight": "400",
+                        "color": color,
+                        "textAlign": "center",
+                        "marginTop": "5px"
+                    }
+                ),
             ], style={
-                "padding": "30px",
-                "backgroundColor": "white",
-                "borderRadius": "8px",
-                "boxShadow": f"0 0 15px {category['color']}",  # Matching glow
-                "border": f"1px solid {category['color']}",  # Matching border color
-                "height": "250px",
                 "display": "flex",
                 "flexDirection": "column",
-                "justifyContent": "center"
-            })
-        ], style={"width": "18%", "margin": "0 1%"})
-        for i, category in enumerate(sentiment_categories)
-    ], style={"display": "flex", "maxWidth": "1200px", "margin": "0 auto"})
-], style={"fontFamily": "Arial, sans-serif", "padding": "20px", "backgroundColor": "#f8f9fa"})
+                "justifyContent": "center",
+                "alignItems": "center",
+                "width": f"{size-40}px",
+                "height": f"{size-40}px",
+                "borderRadius": "50%",
+                "backgroundColor": "white",
+                "boxShadow": f"0 0 20px {color}",
+                "border": f"3px solid {color}",
+                "margin": "auto"
+            }),
+        ], style={
+            "display": "flex",
+            "flexDirection": "column",
+            "justifyContent": "center",
+            "padding": "20px",
+            "width": f"{size}px",
+            "height": f"{size}px",
+            "margin": "0 auto"
+        })
+    ], className="pulse-circle-container")
+    
+    return pulse_circle
 
+# Test the design if run directly
 if __name__ == "__main__":
-    app.run(debug=True, host="0.0.0.0", port=5003)
+    app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
+    
+    # Create layout
+    app.layout = dbc.Container([
+        html.H1("T2D Pulse Circle Design", className="mt-4 mb-4"),
+        
+        dbc.Row([
+            dbc.Col([
+                html.H3("Neutral (55.7)"),
+                create_pulse_glow_circle(55.7)
+            ], width=4),
+            dbc.Col([
+                html.H3("Bearish (35.2)"),
+                create_pulse_glow_circle(35.2)
+            ], width=4),
+            dbc.Col([
+                html.H3("Bullish (72.5)"),
+                create_pulse_glow_circle(72.5)
+            ], width=4),
+        ]),
+    ], fluid=True)
+    
+    # Run the app
+    app.run_server(host='0.0.0.0', port=5050, debug=True)
