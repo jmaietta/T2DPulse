@@ -6,6 +6,7 @@
 import os
 import plotly.graph_objects as go
 import pandas as pd
+import pytz
 from datetime import datetime, timedelta
 import authentic_sector_history
 
@@ -51,8 +52,19 @@ def create_mini_trend_chart(sector_name, height=50, show_axes=False, auto_range=
     # Sort by date (just to be safe)
     df = df.sort_index()
     
-    # Convert index to list for plotting
-    dates = df.index.tolist()
+    # Filter out weekends (Saturday = 5, Sunday = 6)
+    df = df.reset_index()
+    df['is_weekday'] = df['date'].dt.dayofweek < 5  # Only keep weekdays (0-4)
+    df = df[df['is_weekday']]
+    
+    # Check if we still have data after filtering
+    if df.empty:
+        fig = go.Figure()
+        fig.update_layout(height=height, margin=dict(l=0, r=0, t=0, b=0))
+        return fig
+    
+    # Convert columns to lists for plotting
+    dates = df['date'].tolist()
     values = df['value'].tolist()
     
     # Create figure
@@ -144,8 +156,17 @@ def create_combined_sector_chart(sector_names, title=None, height=400):
         # Sort by date
         df = df.sort_index()
         
-        # Convert index to list for plotting
-        dates = df.index.tolist()
+        # Reset index and filter out weekends
+        df = df.reset_index()
+        df['is_weekday'] = df['date'].dt.dayofweek < 5  # Only keep weekdays (0-4)
+        df = df[df['is_weekday']]
+        
+        # Check if we still have data after filtering
+        if df.empty:
+            continue
+            
+        # Convert columns to lists for plotting
+        dates = df['date'].tolist()
         values = df['value'].tolist()
         
         # Add line
