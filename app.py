@@ -5747,9 +5747,9 @@ def update_sector_sentiment_container(n):
             sector_scores = authentic_scores
             # Skip all other calculations and go to final processing steps
             print(f"Using hardcoded May 2nd data specifically for {len(authentic_scores)} sectors")
-            # Print each sector's score for debugging
-            for sector_data in authentic_scores:
-                print(f"HARDCODED SECTOR: {sector_data['sector']} = {sector_data['normalized_score']:.1f}")
+            # Debug logs can be uncommented if needed in the future
+            # for sector_data in authentic_scores:
+            #     print(f"HARDCODED SECTOR: {sector_data['sector']} = {sector_data['normalized_score']:.1f}")
         else:
             # Calculate sentiment as fallback
             print("Hardcoded May 2nd data unavailable, falling back to calculation")
@@ -5768,7 +5768,6 @@ def update_sector_sentiment_container(n):
     
     # Normalize sector scores from -1 to +1 scale to 0-100 scale
     normalized_scores = []
-    print("DEBUG: Normalizing sector scores...")
     for sector_data in sector_scores:
         # Create a copy of the sector data
         normalized_data = sector_data.copy()
@@ -5781,13 +5780,11 @@ def update_sector_sentiment_container(n):
         if "normalized_score" in sector_data:
             # Use the pre-calculated normalized score (hardcoded May 2nd data already has this)
             norm_score = sector_data["normalized_score"]
-            print(f"DEBUG: Using pre-calculated normalized score for {sector_data['sector']}: {norm_score}")
         else:
             # Normalize to 0-100 scale using the formula ((score + 1.0) / 2.0) * 100
             norm_score = ((orig_score + 1.0) / 2.0) * 100
             # Round to 1 decimal place
             norm_score = round(norm_score, 1)
-            print(f"DEBUG: Calculated normalized score for {sector_data['sector']}: {norm_score} (from {orig_score})")
         
         # Store both scores
         normalized_data["original_score"] = orig_score
@@ -5795,7 +5792,6 @@ def update_sector_sentiment_container(n):
         
         # Update stance based on normalized score if needed
         # (but we'll keep the existing stance for consistency)
-        print(f"DEBUG: Final normalized score for {sector_data['sector']}: {normalized_data['normalized_score']}")
         
         normalized_scores.append(normalized_data)
     

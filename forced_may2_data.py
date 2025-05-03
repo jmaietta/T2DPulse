@@ -5,26 +5,26 @@ import os
 # This ensures sector cards and T2D Pulse show the correct May 2nd data
 
 # Direct data from May 2nd file data/authentic_sector_history_2025-05-02.csv
-# Using HIGHER VALUES for testing to see if the cards are using this data
+# These are the authentic May 2nd values
 MAY_2ND_SECTOR_SCORES = {
-    'SMB SaaS': 72.0,
-    'Enterprise SaaS': 73.5,
-    'Cloud Infrastructure': 75.0,
-    'AdTech': 72.0,
-    'Fintech': 73.5,
-    'Consumer Internet': 71.0,
-    'eCommerce': 72.0,
-    'Cybersecurity': 73.5,
-    'Dev Tools / Analytics': 72.0,
-    'Semiconductors': 75.5,
-    'AI Infrastructure': 75.0,
-    'Vertical SaaS': 71.0,
-    'IT Services / Legacy Tech': 76.0,
-    'Hardware / Devices': 72.5
+    'SMB SaaS': 52.0,
+    'Enterprise SaaS': 53.5,
+    'Cloud Infrastructure': 55.0,
+    'AdTech': 52.0,
+    'Fintech': 53.5,
+    'Consumer Internet': 51.0,
+    'eCommerce': 52.0,
+    'Cybersecurity': 53.5,
+    'Dev Tools / Analytics': 52.0,
+    'Semiconductors': 55.5,
+    'AI Infrastructure': 55.0,
+    'Vertical SaaS': 51.0,
+    'IT Services / Legacy Tech': 56.0,
+    'Hardware / Devices': 52.5
 }
 
 # T2D Pulse score calculated using May 2nd data with equal weights
-MAY_2ND_T2D_PULSE_SCORE = 73.2
+MAY_2ND_T2D_PULSE_SCORE = 53.2
 
 def get_may2nd_sector_data():
     """
