@@ -2563,14 +2563,15 @@ def create_sector_summary(sector_scores):
 
 # Update sentiment gauge
 def create_pulse_card(value, include_chart=True):
-    """Create a side-by-side pulse card with score circle and trend chart
+    """Create a side-by-side pulse display with score circle and trend chart
+    that fits directly in the main sentiment banner without adding a separate card.
     
     Args:
         value (float or str): The T2D Pulse score value
         include_chart (bool): Whether to include the 30-day chart
         
     Returns:
-        tuple: (pulse_card, pulse_status, pulse_color)
+        tuple: (pulse_display, pulse_status, pulse_color)
     """
     print(f"Creating T2D Pulse card with value: {value}, type: {type(value)}")
     try:
@@ -2637,7 +2638,7 @@ def create_pulse_card(value, include_chart=True):
                 
                 # Create layout with colored background regions
                 layout = go.Layout(
-                    height=220,
+                    height=180,  # Reduced height to fit in banner
                     margin=dict(l=20, r=20, t=10, b=30),
                     paper_bgcolor='rgba(0,0,0,0)',
                     plot_bgcolor='rgba(0,0,0,0)',
@@ -2770,7 +2771,7 @@ def create_pulse_card(value, include_chart=True):
             
             # Create layout with colored background regions
             layout = go.Layout(
-                height=220,
+                height=180,  # Reduced height to fit in banner
                 margin=dict(l=20, r=20, t=10, b=30),
                 paper_bgcolor='rgba(0,0,0,0)',
                 plot_bgcolor='rgba(0,0,0,0)',
@@ -2860,25 +2861,32 @@ def create_pulse_card(value, include_chart=True):
             
             pulse_chart = go.Figure(data=[trace], layout=layout)
         
-        # Create the pulse circle
+        # Create the pulse circle - scaled to fit better in the banner
         pulse_circle = html.Div([
             html.Div([
                 html.Div(f"{score_value:.1f}", style={
-                    'fontSize': '42px',
+                    'fontSize': '36px',
                     'fontWeight': '600',
                     'color': pulse_color
                 }),
                 html.Div(pulse_status, style={
-                    'fontSize': '18px',
+                    'fontSize': '16px',
                     'color': pulse_color
+                }),
+                html.Div("T2D PULSE", style={
+                    'fontSize': '12px',
+                    'fontWeight': '700',
+                    'color': '#e74c3c',
+                    'letterSpacing': '0.5px',
+                    'marginTop': '5px'
                 })
             ], style={
                 'display': 'flex',
                 'flexDirection': 'column',
                 'alignItems': 'center',
                 'justifyContent': 'center',
-                'width': '180px',
-                'height': '180px',
+                'width': '160px',
+                'height': '160px',
                 'borderRadius': '50%',
                 'border': f'3px solid {pulse_color}',
                 'boxShadow': f'0 0 15px {pulse_color}',
@@ -2886,34 +2894,16 @@ def create_pulse_card(value, include_chart=True):
             })
         ])
 
-        # Create the side-by-side layout pulse card with integrated chart
-        # Following Option A's design
-        pulse_card = html.Div([
-            # Header with T2D Pulse title
-            html.Div([
-                # T2D PULSE branding with logo
-                html.Div([
-                    # Logo could be added here if available
-                    html.Div("T2D PULSE", style={
-                        'fontSize': '20px',
-                        'fontWeight': '600', 
-                        'color': '#e74c3c',
-                        'letterSpacing': '1px'
-                    })
-                ], style={
-                    'display': 'flex',
-                    'alignItems': 'center',
-                    'justifyContent': 'center',
-                    'marginBottom': '10px'
-                })
-            ]),
-            
-            # Main content row with side-by-side layout
+        # Create a responsive layout for the banner that works without a separate card
+        # Using Option A's side-by-side layout directly integrated into banner
+        pulse_display = html.Div([
+            # Container for all content with horizontal layout
             html.Div([
                 # Left side - Pulse Circle
                 html.Div([
                     pulse_circle
                 ], style={
+                    'flex': '0 0 auto',
                     'marginRight': '20px',
                     'display': 'flex',
                     'alignItems': 'center',
@@ -2923,7 +2913,7 @@ def create_pulse_card(value, include_chart=True):
                 # Right side - Trend Chart
                 html.Div([
                     html.Div("30-Day Trend", style={
-                        'fontSize': '16px',
+                        'fontSize': '14px',
                         'fontWeight': '500',
                         'marginBottom': '5px',
                         'textAlign': 'center',
@@ -2937,7 +2927,7 @@ def create_pulse_card(value, include_chart=True):
                 ], style={
                     'flex': '1',
                     'minWidth': '0',  # Allows the flex item to shrink below content size
-                    'height': '280px',
+                    'height': '180px',  # Shorter to fit in the banner
                     'border': '1px solid #eee',
                     'borderRadius': '5px',
                     'padding': '10px',
@@ -2948,46 +2938,28 @@ def create_pulse_card(value, include_chart=True):
                 'flexDirection': 'row',
                 'alignItems': 'center',
                 'justifyContent': 'space-between',
-                'width': '100%',
-                'marginBottom': '10px'
-            }),
-            
-            # Last updated text at bottom
-            html.Div(
-                f"Updated {datetime.now().strftime('%b %d, %Y')}",
-                style={
-                    "fontSize": "11px",
-                    "color": "#888",
-                    "textAlign": "center"
-                }
-            )
-        ], style={
-            "width": "100%",
-            "maxWidth": "800px",
-            "padding": "15px",
-            "borderRadius": "8px",
-            "backgroundColor": "white",
-            "boxShadow": "0 2px 6px rgba(0,0,0,0.1)",
-            "margin": "0 auto 20px"
-        })
+                'width': '100%'
+            })
+        ])
         
-        return pulse_card, pulse_status, pulse_color
+        return pulse_display, pulse_status, pulse_color
     
     except Exception as e:
-        print(f"Error creating T2D Pulse card with chart: {e}")
+        print(f"Error creating T2D Pulse display with chart: {e}")
         
-        # Fallback to a basic card without the chart if there's an error
-        basic_card = html.Div([
+        # Fallback to a basic display without the chart if there's an error
+        basic_display = html.Div([
+            # Simplified layout with just the pulse score
             html.Div([
                 # T2D PULSE branding at top
                 html.Div(
                     "T2D PULSE",
                     style={
-                        "fontSize": "18px",
+                        "fontSize": "16px",
                         "fontWeight": "500",
                         "color": "#e74c3c",  # Red T2D branding color
                         "textAlign": "center",
-                        "marginBottom": "20px",
+                        "marginBottom": "10px",
                         "fontFamily": "'Arial', sans-serif",
                         "letterSpacing": "1px"
                     }
@@ -2997,55 +2969,35 @@ def create_pulse_card(value, include_chart=True):
                 html.Div(
                     f"{score_value:.1f}",
                     style={
-                        "fontSize": "70px",
-                        "fontWeight": "600",
+                        "fontSize": "48px",
+                        "fontWeight": "bold",
                         "color": pulse_color,
                         "textAlign": "center",
-                        "lineHeight": "1",
-                        "marginBottom": "10px"
+                        "margin": "5px 0"
                     }
                 ),
                 
-                # Status text (Bullish/Neutral/Bearish)
+                # Pulse status
                 html.Div(
                     pulse_status,
                     style={
-                        "fontSize": "22px",
-                        "fontWeight": "400",
+                        "fontSize": "18px",
+                        "fontWeight": "500",
                         "color": pulse_color,
                         "textAlign": "center",
-                        "marginBottom": "40px"
-                    }
-                ),
-                
-                # Last updated text at bottom
-                html.Div(
-                    f"Updated {datetime.now().strftime('%b %d, %Y')}",
-                    style={
-                        "fontSize": "11px",
-                        "color": "#888",
-                        "textAlign": "center",
-                        "marginTop": "auto"
+                        "marginBottom": "10px"
                     }
                 )
             ], style={
-                "padding": "20px",
-                "height": "100%",
                 "display": "flex",
                 "flexDirection": "column",
-                "justifyContent": "center"
+                "justifyContent": "center",
+                "alignItems": "center",
+                "height": "100%"
             })
-        ], className="pulse-card", style={
-            "width": "280px",
-            "height": "280px",
-            "border": f"3px solid {pulse_color}",
-            "borderRadius": "4px",
-            "boxShadow": f"0 0 20px {pulse_color}",
-            "backgroundColor": "white",
-            "margin": "0 auto"
-        })
+        ])
         
-        return basic_card, pulse_status, pulse_color
+        return basic_display, pulse_status, pulse_color
 
 @app.callback(
     Output("sentiment-gauge", "children"),
@@ -3065,22 +3017,17 @@ def update_sentiment_gauge(score):
         print(f"ALWAYS USING AUTHENTIC T2D PULSE SCORE: {authentic_score}")
         pulse_score = authentic_score
         
-        # Create the pulse card using authentic score
-        pulse_card, pulse_status, pulse_color = create_pulse_card(pulse_score)
+        # Create the pulse display using authentic score - directly integrated into the banner
+        pulse_display, pulse_status, pulse_color = create_pulse_card(pulse_score)
         
-        # Return the pulse card in a container
-        return html.Div([
-            pulse_card
-        ], className="pulse-card-container")
+        # Return the pulse elements directly (no extra container)
+        return pulse_display
         
     # As a fallback, use the sentiment score from the input
-    # Create the pulse card using the new function
-    pulse_card, pulse_status, pulse_color = create_pulse_card(score)
+    pulse_display, pulse_status, pulse_color = create_pulse_card(score)
     
-    # Return the pulse card in a container
-    return html.Div([
-        pulse_card
-    ], className="pulse-card-container")
+    # Return the pulse elements directly (no extra container)
+    return pulse_display
 
 # Removed callback approach - using CSS hover instead
 
