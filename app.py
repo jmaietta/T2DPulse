@@ -5733,26 +5733,82 @@ def update_sector_sentiment_container(n):
     
     print(f"Updating sector sentiment container. Today ({today.strftime('%Y-%m-%d')}) is {'a weekend' if is_weekend else 'a weekday'}")
     
-    # If it's a weekend, use hardcoded May 2nd data to guarantee correct values
+    # If it's a weekend, use the most recent market session data for authentic display
     if is_weekend:
-        print("Today is a weekend - using hardcoded May 2nd data for sector cards")
-        # Import the forced_may2_data module to get reliable May 2nd data
-        import forced_may2_data
+        print("Today is a weekend - using most recent market session data for sector cards")
         
-        # Get May 2nd sector data directly from our hardcoded values
-        authentic_scores = forced_may2_data.get_may2nd_sector_data()
+        # Get most recent data from the authentic sector history
+        from datetime import datetime
+        eastern = pytz.timezone('US/Eastern')
+        today_str = datetime.now(eastern).strftime('%Y-%m-%d')
         
-        if authentic_scores:
-            print(f"Loaded {len(authentic_scores)} sector scores from hardcoded May 2nd data")
-            sector_scores = authentic_scores
-            # Skip all other calculations and go to final processing steps
-            print(f"Using hardcoded May 2nd data specifically for {len(authentic_scores)} sectors")
-            # Debug logs can be uncommented if needed in the future
-            # for sector_data in authentic_scores:
-            #     print(f"HARDCODED SECTOR: {sector_data['sector']} = {sector_data['normalized_score']:.1f}")
+        # Try to load the specific file for this date which should already contain the most recent market data
+        date_specific_file = f"data/authentic_sector_history_{today_str}.csv"
+        
+        if os.path.exists(date_specific_file):
+            # Load the pre-generated file that should contain the most recent market data
+            print(f"Loading most recent market session data from {date_specific_file}")
+            try:
+                import pandas as pd
+                recent_df = pd.read_csv(date_specific_file)
+                
+                # Convert to sector-formatted data for cards
+                authentic_scores = []
+                
+                # Get all sector columns except date
+                if not recent_df.empty:
+                    sector_columns = [col for col in recent_df.columns if col != 'date']
+                    
+                    # Get the most recent row
+                    latest_row = recent_df.iloc[0]
+                    
+                    # Create sector data objects in the expected format
+                    for sector in sector_columns:
+                        # Get normalized score (0-100 scale)
+                        norm_score = latest_row[sector]
+                        # Convert to raw score (-1 to +1 scale)
+                        raw_score = (norm_score / 50.0) - 1.0
+                        
+                        # Generate all the needed fields
+                        sector_data = {
+                            "sector": sector,
+                            "score": raw_score,
+                            "normalized_score": norm_score,
+                            "stance": "Bullish" if norm_score >= 60 else "Bearish" if norm_score <= 30 else "Neutral",
+                            "takeaway": "Outperforming peers" if norm_score >= 60 else 
+                                      "Bearish macro setup" if norm_score <= 30 else 
+                                      "Neutral – monitor trends",
+                            "drivers": [],  # Will be populated later if needed
+                            "tickers": []   # Will be populated later if needed
+                        }
+                        authentic_scores.append(sector_data)
+                    
+                    print(f"Loaded {len(authentic_scores)} sector scores from recent market session data")
+                    sector_scores = authentic_scores
+                    print(f"Using most recent market session data for {len(authentic_scores)} sectors")
+                    
+                    # Since we have authentic scores but no drivers/tickers, get those from May 2nd hardcoded data
+                    import forced_may2_data
+                    may2nd_sectors = forced_may2_data.get_may2nd_sector_data()
+                    
+                    # Create lookup dictionaries for drivers and tickers
+                    may2nd_drivers = {s['sector']: s['drivers'] for s in may2nd_sectors}
+                    may2nd_tickers = {s['sector']: s['tickers'] for s in may2nd_sectors}
+                    
+                    # Add drivers and tickers to our authentic scores
+                    for sector_data in sector_scores:
+                        sector = sector_data['sector']
+                        sector_data['drivers'] = may2nd_drivers.get(sector, [])
+                        sector_data['tickers'] = may2nd_tickers.get(sector, [])
+                else:
+                    print("Date-specific file exists but is empty or couldn't be processed")
+                    sector_scores = calculate_sector_sentiment()
+            except Exception as e:
+                print(f"Error loading weekend data: {e}")
+                sector_scores = calculate_sector_sentiment()
         else:
             # Calculate sentiment as fallback
-            print("Hardcoded May 2nd data unavailable, falling back to calculation")
+            print(f"Date-specific file {date_specific_file} not found, falling back to calculation")
             sector_scores = calculate_sector_sentiment()
     else:
         # Calculate sector sentiment scores on weekdays
@@ -6347,9 +6403,45 @@ def update_t2d_pulse_score(weights_json):
         today = datetime.now(eastern)
         is_weekend = today.weekday() >= 5  # Saturday = 5, Sunday = 6
         
-        # If it's a weekend, use hardcoded May 2nd data for guaranteed accurate results
+        # If it's a weekend, use the most recent market session data
         if is_weekend:
-            print("Weekend detected - using hardcoded May 2nd data for T2D Pulse calculation")
+            print("Weekend detected - using most recent market session data for T2D Pulse calculation")
+            
+            # Get the most recent data file
+            from datetime import datetime
+            eastern = pytz.timezone('US/Eastern')
+            today_str = datetime.now(eastern).strftime('%Y-%m-%d')
+            date_specific_file = f"data/authentic_sector_history_{today_str}.csv"
+            
+            if os.path.exists(date_specific_file):
+                # Load the recent market data from this file
+                try:
+                    import pandas as pd
+                    recent_df = pd.read_csv(date_specific_file)
+                    
+                    if not recent_df.empty:
+                        # Get sector columns from the dataframe
+                        sector_columns = [col for col in recent_df.columns if col != 'date']
+                        latest_row = recent_df.iloc[0]
+                        
+                        # Create dictionary of sector scores for T2D pulse calculation
+                        sector_scores_dict = {sector: latest_row[sector] for sector in sector_columns}
+                        
+                        print(f"Using most recent market session data for T2D Pulse calculation: {len(sector_scores_dict)} sectors")
+                        print(f"Using following sector weights: {weights}")
+                        
+                        # Calculate T2D Pulse score from the most recent data
+                        pulse_score = calculate_t2d_pulse_from_sectors(sector_scores_dict, weights)
+                        print(f"Calculated T2D Pulse Score from most recent market data: {pulse_score}")
+                        
+                        # Update the gauge display
+                        return update_sentiment_gauge(pulse_score)
+                except Exception as e:
+                    print(f"Error using most recent market data for T2D Pulse calculation: {e}")
+                    # Continue to fallback below
+            
+            # If we get here, use May 2nd data as a second fallback
+            print("Fallback to May 2nd data for T2D Pulse calculation")
             import forced_may2_data
             
             # Get the reliable May 2nd sector scores directly from our hardcoded values
@@ -6358,12 +6450,9 @@ def update_t2d_pulse_score(weights_json):
             if sector_scores_dict:
                 print(f"Using hardcoded May 2nd sector data for T2D Pulse calculation: {len(sector_scores_dict)} sectors")
                 print(f"Using following sector weights: {weights}")
-                # Use the pre-calculated value directly (less affected by rounding)
+                # Use the pre-calculated value directly
                 pulse_score = forced_may2_data.get_may2nd_t2d_pulse_score()
                 print(f"Using hardcoded May 2nd T2D Pulse score: {pulse_score}")
-                # Uncomment if recalculation is needed for debugging
-                # calculated_score = calculate_t2d_pulse_from_sectors(sector_scores_dict, weights)
-                # print(f"Calculated vs Hardcoded: {calculated_score} vs {pulse_score}")
                 print(f"Calculated T2D Pulse Score from May 2nd data: {pulse_score}")
                 # Update the gauge display
                 return update_sentiment_gauge(pulse_score)
@@ -6547,8 +6636,41 @@ def reset_weights(n_clicks):
     is_weekend = today.weekday() >= 5  # Saturday = 5, Sunday = 6
     
     if is_weekend:
-        # Use hardcoded May 2nd data if it's a weekend
-        print("Weekend detected - using hardcoded May 2nd data for T2D Pulse calculation")
+        # Use most recent market session data if it's a weekend
+        print("Weekend detected - using most recent market session data for T2D Pulse calculation")
+        
+        # Get the most recent data file
+        from datetime import datetime
+        eastern = pytz.timezone('US/Eastern')
+        today_str = datetime.now(eastern).strftime('%Y-%m-%d')
+        date_specific_file = f"data/authentic_sector_history_{today_str}.csv"
+        
+        if os.path.exists(date_specific_file):
+            # Load the recent market data from this file
+            try:
+                import pandas as pd
+                recent_df = pd.read_csv(date_specific_file)
+                
+                if not recent_df.empty:
+                    # Get sector columns from the dataframe
+                    sector_columns = [col for col in recent_df.columns if col != 'date']
+                    latest_row = recent_df.iloc[0]
+                    
+                    # Create dictionary of sector scores for T2D pulse calculation
+                    sector_scores_dict = {sector: latest_row[sector] for sector in sector_columns}
+                    
+                    print(f"Using most recent market session data for T2D Pulse score reset: {len(sector_scores_dict)} sectors")
+                    
+                    # Calculate T2D Pulse score from the most recent data with equal weights
+                    pulse_score = calculate_t2d_pulse_from_sectors(sector_scores_dict, equal_weights)
+                    print(f"Reset T2D Pulse score to {pulse_score} with equal weights using most recent market data")
+                    return json.dumps(equal_weights), f"{pulse_score:.1f}"
+            except Exception as e:
+                print(f"Error using most recent market data for T2D Pulse reset: {e}")
+                # Continue to fallback below
+        
+        # Fallback to May 2nd data if needed
+        print("Fallback to May 2nd data for T2D Pulse reset")
         import forced_may2_data
         
         # Get the reliable May 2nd sector scores directly from our hardcoded values
@@ -6557,7 +6679,7 @@ def reset_weights(n_clicks):
         if sector_scores_dict:
             # Use the pre-calculated May 2nd T2D Pulse score directly
             pulse_score = forced_may2_data.get_may2nd_t2d_pulse_score()
-            print(f"Reset T2D Pulse score to {pulse_score} with equal weights using May 2nd data")
+            print(f"Reset T2D Pulse score to {pulse_score} with equal weights using May 2nd data (fallback)")
             return json.dumps(equal_weights), f"{pulse_score:.1f}"
     
     # Regular calculation for weekdays or as fallback

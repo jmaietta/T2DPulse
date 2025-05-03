@@ -206,6 +206,7 @@ def ensure_may_first_data(current_scores):
 def export_date_specific_history(sector_scores, date_string):
     """
     Export sector scores to a date-specific CSV file without adding to main history
+    For weekends and holidays, this will use the most recent market session data.
     
     Args:
         sector_scores (list): List of sector dictionaries with 'sector' and 'score' keys
@@ -215,38 +216,7 @@ def export_date_specific_history(sector_scores, date_string):
         bool: True if successful, False otherwise
     """
     try:
-        # DIRECTLY USE THE MAY 2nd DATA for weekends rather than the most recent weekday
-        may_2nd_path = "data/authentic_sector_history_2025-05-02.csv"
-        
-        if os.path.exists(may_2nd_path):
-            print(f"Using May 2nd data directly from {may_2nd_path}")
-            # Read the May 2nd data
-            may_2nd_df = pd.read_csv(may_2nd_path)
-            may_2nd_df['date'] = pd.to_datetime(may_2nd_df['date'])
-            
-            # Find the May 2nd row
-            may_2nd_data = may_2nd_df[may_2nd_df['date'] == '2025-05-02']
-            
-            if not may_2nd_data.empty:
-                # Create export dataframe with the specific date
-                export_df = pd.DataFrame({'date': [pd.Timestamp(date_string)]})
-                
-                # Add columns from the May 2nd data row
-                for column in may_2nd_df.columns:
-                    if column != 'date':
-                        export_df[column] = may_2nd_data.iloc[0][column]
-                
-                # Export to date-specific CSV
-                today_csv_path = f"data/authentic_sector_history_{date_string}.csv"
-                export_df.to_csv(today_csv_path, index=False)
-                
-                print(f"Exported May 2nd data to {today_csv_path} for weekend display")
-                return True
-        
-        # Fallback to regular most recent weekday logic if May 2nd file doesn't exist
-        print("Falling back to general most recent weekday logic")
-        
-        # Load existing main history for reference values
+        # Load existing main history to get the most recent market session data
         csv_path = "data/authentic_sector_history.csv"
         if not os.path.exists(csv_path):
             print(f"Cannot export date-specific history: main history file not found")
@@ -269,7 +239,7 @@ def export_date_specific_history(sector_scores, date_string):
         latest_weekday_data = weekday_df.iloc[0]
         latest_date = latest_weekday_data['date'].strftime('%Y-%m-%d')
         
-        print(f"Using most recent weekday data from {latest_date}")
+        print(f"Using most recent market session data from {latest_date}")
         
         # Create export dataframe with this date's data
         export_df = pd.DataFrame({'date': [pd.Timestamp(date_string)]})
@@ -283,7 +253,7 @@ def export_date_specific_history(sector_scores, date_string):
         today_csv_path = f"data/authentic_sector_history_{date_string}.csv"
         export_df.to_csv(today_csv_path, index=False)
         
-        print(f"Exported most recent weekday data to {today_csv_path}")
+        print(f"Exported most recent market session data to {today_csv_path} for weekend/holiday display")
         return True
         
     except Exception as e:
