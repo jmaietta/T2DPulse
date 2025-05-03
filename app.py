@@ -6969,6 +6969,41 @@ def download_file(filename):
         as_attachment=True
     )
 
+# Add auto-refresh functionality to update data every 24 hours
+import threading
+import time
+
+def auto_refresh_data():
+    """Background thread that updates all data sources every 24 hours"""
+    while True:
+        # Sleep for 24 hours (86400 seconds)
+        time.sleep(86400)
+        
+        print("Auto-refresh: Updating economic data...")
+        # Fetch fresh data from all sources
+        global gdp_data, unemployment_data, inflation_data, pcepi_data
+        global interest_rate_data, treasury_yield_data, vix_data, nasdaq_data
+        global pce_data, consumer_sentiment_data, software_ppi_data, data_ppi_data
+        
+        # Fetch economic data from APIs
+        fetch_economic_data()
+        
+        # Re-calculate sector scores with fresh data
+        sector_scores = calculate_sector_sentiment()
+        
+        # Update T2D Pulse score
+        if sector_scores:
+            # Calculate the pulse score with current weights
+            sector_scores_dict = {s['sector']: s['normalized_score'] for s in sector_scores}
+            pulse_score = calculate_t2d_pulse_from_sectors(sector_scores_dict)
+            print(f"Auto-refresh: Updated T2D Pulse score to {pulse_score}")
+
 # Add this at the end of the file if running directly
 if __name__ == "__main__":
+    # Start the auto-refresh thread
+    refresh_thread = threading.Thread(target=auto_refresh_data, daemon=True)
+    refresh_thread.start()
+    print("Started auto-refresh thread to update data every 24 hours")
+    
+    # Run the dashboard
     app.run(host="0.0.0.0", port=5000, debug=False)

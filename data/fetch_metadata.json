@@ -1,1 +1,1 @@
-{"fetch_time": "2025-05-02T13:45:41.851033", "elapsed_seconds": 0.7102446556091309, "data_types": ["vix", "unemployment", "pce", "pcepi", "interest_rate", "gdp", "cpi", "nasdaq", "consumer_sentiment", "treasury_yield"]}
+{"fetch_time": "2025-05-03T04:01:05.843269", "elapsed_seconds": 0.4547464847564697, "data_types": ["vix", "nasdaq", "treasury_yield", "unemployment", "pcepi", "pce", "interest_rate", "gdp", "consumer_sentiment", "cpi"]}
