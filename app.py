@@ -2939,7 +2939,7 @@ def create_pulse_card(value, include_chart=True):
                     'paddingLeft': '0px'              # No padding from the edge
                 }),
                 
-                # Right side - Trend Chart - expanded to fill almost all remaining space
+                # Right side - Trend Chart - expanded to fill remaining space appropriately
                 html.Div([
                     html.Div("30-Day Trend", style={
                         'fontSize': '14px',
@@ -2955,8 +2955,7 @@ def create_pulse_card(value, include_chart=True):
                     )
                 ], style={
                     'flex': '1 1 auto',               # Grow and shrink as needed
-                    'minWidth': '85%',                # Ensure chart gets at least 85% width
-                    'width': '85%',                   # Force explicit width to be very wide
+                    'width': 'calc(100% - 200px)',    # Fit within bounds (100% - circle width - margins)
                     'height': '180px',                # Height for the banner
                     'border': '1px solid #eee',
                     'borderRadius': '5px',
@@ -2968,8 +2967,10 @@ def create_pulse_card(value, include_chart=True):
                 'display': 'flex',
                 'flexDirection': 'row',
                 'alignItems': 'center',
-                'justifyContent': 'flex-start',       # Start items from the left
-                'width': '100%'
+                'justifyContent': 'flex-start',    # Start items from the left
+                'width': '100%',
+                'maxWidth': '100%',               # Ensure it doesn't exceed available width
+                'overflow': 'hidden'              # Hide any overflow
             })
         ])
         
