@@ -6034,6 +6034,8 @@ def update_sector_sentiment_container(n):
     date_specific_file = f"data/authentic_sector_history_{today_str}.csv"
     found_authentic_data = False
     
+    print(f"DEBUG: Looking for sector data file: {date_specific_file}")
+    
     # First attempt to load today's authentic data if available
     if os.path.exists(date_specific_file):
         print(f"Found authentic sector data for current date: {today_str}")
@@ -6181,6 +6183,7 @@ def update_sector_sentiment_container(n):
         print("Could not find recent authentic sector data, looking for most recent historical file")
         # Look through data directory for most recent historical file
         historical_files = [f for f in os.listdir('data') if f.startswith('authentic_sector_history_')]
+        print(f"DEBUG: Found historical sector data files: {historical_files}")
         if historical_files:
             # Sort files by date (descending)
             sorted_files = sorted(historical_files, reverse=True)
