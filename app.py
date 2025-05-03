@@ -762,7 +762,7 @@ def calculate_sector_sentiment():
     print("Starting calculate_sector_sentiment function")
     # Import sector sentiment history module
     import sector_sentiment_history
-    import sector_ema_integration
+    from sector_ema_integration import get_sector_ema_factors
     
     # Get latest values for all required indicators
     macros = {}
@@ -842,20 +842,28 @@ def calculate_sector_sentiment():
     
     # Get sector EMA factors to include as a 14th indicator
     try:
-        ema_factors = sector_ema_integration.get_sector_ema_factors()
+        try:
+            ema_factors = get_sector_ema_factors()
+            print(f"Retrieved EMA factors for {len(ema_factors)} sectors")
+        except Exception as e:
+            print(f"Error getting sector EMA factors: {str(e)}")
+            # Create fallback EMA factors with small positive bias
+            ema_factors = {sector: 0.05 for sector in sentiment_engine.SECTORS}
+            print(f"Created fallback EMA factors with small positive bias (0.05) for {len(ema_factors)} sectors")
         
         # Add EMA factors for each sector to the macros dictionary
-        # This makes the EMA a first-class indicator in our sentiment model
+        # We'll store the original macros as a template
+        base_macros = macros.copy()
+        
+        # If we have EMA factors, we'll create a separate macros dict for each sector
+        # using its own specific EMA factor
         if ema_factors:
-            # Use the sector's own EMA factor for its calculation
-            for sector, factor in ema_factors.items():
-                # Skip sectors that don't exist in our model
-                if sector not in sentiment_engine.SECTORS:
-                    continue
-                    
-                # Add the sector's EMA factor to macros
-                macros["Sector_EMA_Factor"] = factor
-                break  # We only need one EMA factor for now
+            # For all sectors without a specific EMA factor, use a small positive bias
+            if len(ema_factors) < len(sentiment_engine.SECTORS):
+                print(f"Using small positive bias (0.05) for sectors without EMA data")
+                
+            # Use the default factor for the base macros (will be used for any missing sectors)
+            macros["Sector_EMA_Factor"] = 0.05  # Small positive bias by default
     except Exception as e:
         print(f"Error getting EMA factors: {str(e)}")
         # Continue without EMA factors if they're not available
@@ -866,9 +874,30 @@ def calculate_sector_sentiment():
         return []
     
     try:
-        # Calculate sector scores with the EMA factor included
-        sector_scores = sentiment_engine.score_sectors(macros)
-        print(f"Successfully calculated sentiment scores for {len(sector_scores)} sectors")
+        # Calculate sector scores - each sector using its own EMA factor
+        all_sector_scores = []
+        
+        for sector in sentiment_engine.SECTORS:
+            # Create a copy of the base macros to customize for this sector
+            sector_macros = macros.copy()
+            
+            # Use the sector-specific EMA factor if available, otherwise use default
+            if ema_factors and sector in ema_factors:
+                sector_macros["Sector_EMA_Factor"] = ema_factors[sector]
+                print(f"Using sector-specific EMA factor for {sector}: {ema_factors[sector]:.3f}")
+            
+            # Calculate scores using this sector's own EMA factor
+            sector_result = sentiment_engine.score_sectors(sector_macros)
+            
+            # Find this specific sector's score
+            for data in sector_result:
+                if data["sector"] == sector:
+                    all_sector_scores.append(data)
+                    break
+        
+        # Use these sector-specific scores
+        sector_scores = all_sector_scores
+        print(f"Successfully calculated sentiment scores for {len(sector_scores)} sectors with sector-specific EMA factors")
         
         # Get driver factors and tickers for each sector
         drivers = generate_sector_drivers(macros)
