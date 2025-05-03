@@ -2695,14 +2695,8 @@ def create_pulse_card(value, include_chart=True):
                         tickformat='%b %d',
                         tickangle=-30,       # Less steep angle
                         tickfont=dict(size=11),  # Slightly larger tick font
-                        rangeslider=dict(
-                            visible=True,
-                            borderwidth=1,
-                            thickness=0.05,  # Make it smaller
-                            bgcolor='rgba(211,211,211,0.2)'
-                            # Note: rangeslider yaxis doesn't support showticklabels in this version
-                        ),
-                        # Only show axis labels on the main chart, not on the slider
+                        # Remove rangeslider entirely
+                        rangeslider=dict(visible=False),
                         rangeselector=dict(visible=False)
                     ),
                     yaxis=dict(
@@ -2839,14 +2833,8 @@ def create_pulse_card(value, include_chart=True):
                     tickformat='%b %d',
                     tickangle=-30,       # Less steep angle
                     tickfont=dict(size=11),  # Slightly larger tick font
-                    rangeslider=dict(
-                        visible=True,
-                        borderwidth=1,
-                        thickness=0.05,  # Make it smaller
-                        bgcolor='rgba(211,211,211,0.2)'
-                        # Note: rangeslider yaxis doesn't support showticklabels in this version
-                    ),
-                    # Only show axis labels on the main chart, not on the slider
+                    # Remove rangeslider entirely
+                    rangeslider=dict(visible=False),
                     rangeselector=dict(visible=False)
                 ),
                 yaxis=dict(

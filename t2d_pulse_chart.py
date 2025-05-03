@@ -153,13 +153,8 @@ def create_pulse_chart(pulse_data):
             title='Date',
             tickformat='%b %d',
             gridcolor='#f5f5f5',
-            rangeslider=dict(
-                visible=True,
-                borderwidth=1,
-                thickness=0.05,  # Make it smaller
-                bgcolor='rgba(211,211,211,0.2)'
-                # Note: rangeslider yaxis doesn't support showticklabels in this version
-            ),
+            # Remove rangeslider entirely
+            rangeslider=dict(visible=False),
             # Only show axis labels on the main chart, not on the slider
             rangeselector=dict(visible=False)
         ),
