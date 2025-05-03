@@ -11,8 +11,75 @@ import pandas as pd
 import numpy as np
 from datetime import datetime, timedelta
 
-# Create a Dash app for the mockup
-app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
+# Initialize the Dash app with T2D Pulse styling
+app = dash.Dash(
+    __name__, 
+    external_stylesheets=[
+        dbc.themes.BOOTSTRAP,
+        # Custom font to match dashboard
+        'https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap'
+    ],
+    # Define custom CSS to exactly match the main dashboard
+    meta_tags=[
+        {"name": "viewport", "content": "width=device-width, initial-scale=1"},
+    ]
+)
+
+# Add custom CSS to match the main dashboard look and feel
+app.index_string = '''
+<!DOCTYPE html>
+<html>
+    <head>
+        {%metas%}
+        <title>T2D Pulse Chart Mockup</title>
+        {%favicon%}
+        {%css%}
+        <style>
+            body {
+                font-family: 'Roboto', sans-serif;
+                background-color: #f8f9fa;
+            }
+            .dashboard-container {
+                max-width: 1400px;
+                margin: 0 auto;
+                background-color: white;
+                border-radius: 8px;
+                box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+            }
+            .header-row {
+                border-bottom: 1px solid #eaeaea;
+            }
+            .shadow-sm {
+                box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
+            }
+            .border-dashed {
+                border: 2px dashed #dee2e6;
+                border-radius: 6px;
+            }
+            /* Additional styling for T2D Pulse Gauge */
+            .t2d-pulse-card {
+                border-radius: 8px;
+                overflow: hidden;
+            }
+            /* Footer styling */
+            .footer {
+                color: #6c757d;
+                font-size: 14px;
+                margin-top: 30px;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        {%app_entry%}
+        <footer>
+            {%config%}
+            {%scripts%}
+            {%renderer%}
+        </footer>
+    </body>
+</html>
+'''
 
 # Generate sample T2D Pulse score data for the last 30 days
 def generate_sample_pulse_data(days=30):
@@ -57,12 +124,14 @@ def create_pulse_chart(pulse_data):
         name='T2D Pulse Score',
         line=dict(
             color='#2c3e50',
-            width=3
+            width=3,
+            shape='spline'  # Smoothed line
         ),
         marker=dict(
             size=6,
             color='#2c3e50'
-        )
+        ),
+        hovertemplate='<b>%{x|%b %d, %Y}</b><br>T2D Pulse: %{y:.1f}<extra></extra>'
     )
     
     # Create layout with colored background regions for Bearish, Neutral, Bullish
@@ -183,7 +252,7 @@ def create_mock_pulse_gauge(score=60.8):
     gauge = html.Div([
         # Header with T2D logo and title
         html.Div([
-            html.Img(src='https://cdn.replit.com/attached_assets/T2D%20Pulse%20logo.png', 
+            html.Img(src='/assets/T2D Pulse logo.png', 
                     style={'height': '40px', 'marginRight': '10px'}),
             html.H4('T2D Pulse', style={'display': 'inline-block', 'marginBottom': '0px', 'verticalAlign': 'middle'})
         ], style={'display': 'flex', 'alignItems': 'center', 'justifyContent': 'center', 'marginBottom': '15px'}),
@@ -235,26 +304,51 @@ def create_mockup_layout():
     # Latest score (last value in our sample data)
     latest_score = pulse_data['pulse_score'].iloc[-1]
     
-    # Create the layout
+    # Create a realistic mockup showing the integration with the main dashboard
     layout = dbc.Container([
-        html.H2("T2D Pulse Economic Dashboard - Mockup", className="my-4"),
-        
-        # Explanation text
-        html.Div([
-            html.P("This is a mockup showing the recommended placement of the 30-day T2D Pulse chart below the main gauge",
-                  className="lead")
-        ], className="mb-4"),
-        
-        # Top section with T2D Pulse gauge
+        # Dashboard Header
         dbc.Row([
             dbc.Col([
-                create_mock_pulse_gauge(latest_score)
-            ], width=12)
+                html.Div([
+                    html.Img(src='/assets/T2D Pulse logo.png', height='60px', className="me-3"),
+                    html.H2('Economic Dashboard', className='d-inline align-middle')
+                ], className="d-flex align-items-center py-3")
+            ])
+        ], className="header-row border-bottom mb-4"),
+        
+        # Mockup Explanation Text
+        dbc.Row([
+            dbc.Col([
+                html.Div([
+                    html.H4("30-Day T2D Pulse Chart - Mockup", className="text-primary mb-3"),
+                    html.P(
+                        "This visualization shows how the 30-day T2D Pulse chart could be integrated "
+                        "directly below the main gauge for better trend visualization. The chart displays "
+                        "the daily T2D Pulse score over the last 30 market days with colored zones for "
+                        "Bearish, Neutral, and Bullish regions.",
+                        className="lead mb-4"
+                    )
+                ])
+            ])
         ]),
         
-        # Chart section right below the gauge
+        # Main Dashboard Section with Two Panels for Demo
         dbc.Row([
+            # Left Panel with T2D Pulse Score and Chart
             dbc.Col([
+                # Dashboard Title for Demo
+                html.H5("Main Gauge & 30-Day Chart Integration", 
+                        className="mb-4 text-center text-secondary"),
+                
+                # T2D Pulse Gauge Panel
+                dbc.Card([
+                    dbc.CardBody([
+                        # Main T2D Pulse Gauge
+                        create_mock_pulse_gauge(latest_score)
+                    ])
+                ], className="mb-4 shadow-sm"),
+                
+                # 30-Day T2D Pulse Chart Panel - THIS IS THE MAIN ADDITION
                 dbc.Card([
                     dbc.CardBody([
                         dcc.Graph(
@@ -263,21 +357,57 @@ def create_mockup_layout():
                             config={'displayModeBar': False}
                         )
                     ])
-                ])
-            ], width=12)
+                ], className="mb-4 shadow-sm")
+            ], width=9),
+            
+            # Right Panel with Note/Legend
+            dbc.Col([
+                # Dashboard title for Demo
+                html.H5("Implementation Notes", className="mb-4 text-center text-secondary"),
+                
+                # Notes Card
+                dbc.Card([
+                    dbc.CardHeader("Key Features", className="fw-bold"),
+                    dbc.CardBody([
+                        html.Ul([
+                            html.Li("Displays T2D Pulse score trend over 30 market days"),
+                            html.Li("Color-coded zones match T2D Pulse categories"),
+                            html.Li("Interactive hover information"),
+                            html.Li("Automatically filters out weekends"),
+                            html.Li("Handles gaps in data gracefully"),
+                            html.Li("Visually consistent with dashboard style")
+                        ])
+                    ])
+                ], className="mb-4 shadow-sm"),
+                
+                # Implementation Card
+                dbc.Card([
+                    dbc.CardHeader("Integration", className="fw-bold"),
+                    dbc.CardBody([
+                        html.P("The chart would be positioned immediately below the T2D Pulse gauge "
+                             "in the main dashboard layout, providing context and historical "
+                             "perspective for the current sentiment value.")
+                    ])
+                ], className="mb-4 shadow-sm")
+            ], width=3)
         ]),
         
-        # Other dashboard elements would follow
+        # Bottom Row showing where sector cards would follow
         dbc.Row([
             dbc.Col([
-                html.Div([
-                    html.H4("Sector Cards Would Follow Here", className="text-center mt-4"),
-                    html.P("The sector cards and other dashboard elements would be positioned below the T2D Pulse chart.",
-                          className="text-center text-muted")
-                ])
-            ], width=12)
-        ])
-    ], fluid=True)
+                dbc.Card([
+                    dbc.CardBody([
+                        html.H5("Sector Cards (Existing)", className="text-muted text-center"),
+                        html.Div([
+                            html.P("The existing sector cards would follow below this new chart component, "
+                                 "maintaining the current dashboard organization.", 
+                                 className="text-center text-muted")
+                        ])
+                    ])
+                ], className="border-dashed")
+            ])
+        ], className="mt-3")
+    ], fluid=True, className="dashboard-container py-3")
     
     return layout
 
