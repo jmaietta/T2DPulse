@@ -36,6 +36,85 @@ def get_sector_ema_factors():
         
     return factors
 
+def get_historical_ema_factors(date):
+    """
+    Get historical sector EMA factors for a specific date
+    
+    Args:
+        date (datetime): The date to get factors for
+        
+    Returns:
+        dict: Dictionary with sector factors {sector: factor}
+              where factor is a value between -1 and 1
+    """
+    import os
+    
+    # For historical dates, we'll use a simpler approach based on saved sector history
+    # Try to load from the authentic sector history file
+    try:
+        # First check if we have a CSV export for the specific date
+        date_str = date.strftime('%Y-%m-%d')
+        specific_file = f"data/authentic_sector_history_{date_str}.csv"
+        
+        if os.path.exists(specific_file):
+            # We have history for this exact date - great!
+            df = pd.read_csv(specific_file)
+            
+            # Calculate factors from historical normalized scores
+            factors = {}
+            for _, row in df.iterrows():
+                sector = row['sector']
+                # Convert 0-100 score back to -1 to 1 scale
+                normalized_score = row['normalized_score']
+                raw_score = (normalized_score / 100 * 2) - 1
+                
+                # For historical data, use a simpler approach - the score itself
+                # is influenced by many factors including past EMAs
+                factors[sector] = raw_score * 0.2  # Scale down to be more conservative
+                
+            return factors
+            
+        # If we don't have the exact date, use the main file and find closest date
+        main_file = "data/authentic_sector_history.csv"
+        if os.path.exists(main_file):
+            df = pd.read_csv(main_file)
+            
+            # Convert date column to datetime
+            df['date'] = pd.to_datetime(df['date'])
+            
+            # Find records on or before target date
+            historical_data = df[df['date'] <= date].sort_values('date', ascending=False)
+            
+            if not historical_data.empty:
+                # Get the closest date's data
+                closest_date = historical_data['date'].iloc[0]
+                closest_data = historical_data[historical_data['date'] == closest_date]
+                
+                # Calculate factors
+                factors = {}
+                for _, row in closest_data.iterrows():
+                    sector = row['sector']
+                    # Convert 0-100 score back to -1 to 1 scale
+                    normalized_score = row['normalized_score']
+                    raw_score = (normalized_score / 100 * 2) - 1
+                    
+                    # For historical data, use a simpler approach
+                    factors[sector] = raw_score * 0.2  # Scale down to be more conservative
+                    
+                return factors
+    except Exception as e:
+        print(f"Error getting historical EMA factors: {str(e)}")
+    
+    # Fallback: use current factors with smaller magnitude
+    try:
+        current_factors = get_sector_ema_factors()
+        return {k: v * 0.5 for k, v in current_factors.items()}  # Scale down by 50%
+    except:
+        pass
+        
+    # Default to empty dict if all methods fail
+    return {}
+
 def apply_ema_factors_to_sector_scores(sector_scores, ema_factors=None):
     """
     Apply EMA factors to sector scores

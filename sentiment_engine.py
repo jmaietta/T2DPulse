@@ -97,6 +97,7 @@ IMPORTANCE = {
 
 # ---------- 4) Macro favourability bands ----------
 BANDS = {
+    "Sector_EMA_Factor":         ("higher", 0.5, -0.5),  # Positive EMA trend is bullish
     "10Y_Treasury_Yield_%":      ("lower", 3.25, 4.00),
     "VIX":                       ("lower", 18,   25),
     "NASDAQ_20d_gap_%":          ("higher", 4.0, -4.0),
@@ -236,6 +237,7 @@ def get_historical_indicator_values(date):
         "PPI_Data_Processing_YoY_%": "data/data_processing_ppi_data.csv",
         "PPI_Software_Publishers_YoY_%": "data/software_ppi_data.csv",
         "Consumer_Sentiment": "data/consumer_sentiment_data.csv"
+        # Sector_EMA_Factor is handled separately below
     }
     
     # Map indicators to value column names
@@ -260,6 +262,7 @@ def get_historical_indicator_values(date):
     # but different results for different dates
     random.seed(int(date.timestamp()))
     
+    # Process standard indicators from CSV files
     for indicator, file_path in file_mapping.items():
         try:
             if os.path.exists(file_path):
@@ -297,6 +300,23 @@ def get_historical_indicator_values(date):
                         print(f"Warning: Column '{value_col}' not found in {file_path}")
         except Exception as e:
             print(f"Error getting historical data for {indicator}: {e}")
+    
+    # Add EMA factor for historical calculations
+    try:
+        import sector_ema_integration
+        # Get historical EMA factors for this date
+        ema_factors = sector_ema_integration.get_historical_ema_factors(date)
+        if ema_factors:
+            # Just use one representative EMA factor for simplicity
+            # This ensures historical trend charts reflect EMA influences consistently
+            for sector, factor in ema_factors.items():
+                if sector in SECTORS:
+                    values["Sector_EMA_Factor"] = factor
+                    break
+    except Exception as e:
+        print(f"Error getting historical EMA factors: {str(e)}")
+        # Use a neutral value if historical EMA factors aren't available
+        values["Sector_EMA_Factor"] = 0.0  # Neutral value
     
     return values
 

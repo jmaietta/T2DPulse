@@ -840,13 +840,33 @@ def calculate_sector_sentiment():
         macros["Consumer_Sentiment"] = latest_consumer_sentiment
         print(f"Added Consumer Sentiment to sector calculations: {latest_consumer_sentiment}")
     
+    # Get sector EMA factors to include as a 14th indicator
+    try:
+        ema_factors = sector_ema_integration.get_sector_ema_factors()
+        
+        # Add EMA factors for each sector to the macros dictionary
+        # This makes the EMA a first-class indicator in our sentiment model
+        if ema_factors:
+            # Use the sector's own EMA factor for its calculation
+            for sector, factor in ema_factors.items():
+                # Skip sectors that don't exist in our model
+                if sector not in sentiment_engine.SECTORS:
+                    continue
+                    
+                # Add the sector's EMA factor to macros
+                macros["Sector_EMA_Factor"] = factor
+                break  # We only need one EMA factor for now
+    except Exception as e:
+        print(f"Error getting EMA factors: {str(e)}")
+        # Continue without EMA factors if they're not available
+    
     # Check if we have enough data to calculate sector scores (need at least 6 indicators)
     if len(macros) < 6:
-        print(f"Not enough data to calculate sector sentiment scores (have {len(macros)}/13 indicators)")
+        print(f"Not enough data to calculate sector sentiment scores (have {len(macros)}/{len(macros) + 1} indicators)")
         return []
     
     try:
-        # Calculate sector scores
+        # Calculate sector scores with the EMA factor included
         sector_scores = sentiment_engine.score_sectors(macros)
         print(f"Successfully calculated sentiment scores for {len(sector_scores)} sectors")
         
@@ -891,19 +911,8 @@ def calculate_sector_sentiment():
                 "tickers": tickers.get(sector, [])
             })
         
-        # Apply Sector EMA factors to adjust the scores based on market cap trends
-        try:
-            # Get sector EMA factors
-            ema_factors = sector_ema_integration.get_sector_ema_factors()
-            if ema_factors:
-                print(f"Applying EMA factors to sector scores: {ema_factors}")
-                enhanced_scores = sector_ema_integration.apply_ema_factors_to_sector_scores(enhanced_scores, ema_factors)
-                print(f"Successfully applied EMA factors to {len(enhanced_scores)} sector scores")
-            else:
-                print("No EMA factors available, using base sentiment scores")
-        except Exception as e:
-            print(f"Error applying EMA factors to sector scores: {str(e)}")
-            # Continue with original scores if EMA integration fails
+        # EMA factors are now directly included in the sentiment calculation
+        # No need for post-processing adjustment
         
         # Update the historical sentiment data with today's scores
         sector_sentiment_history.update_sentiment_history(enhanced_scores)
