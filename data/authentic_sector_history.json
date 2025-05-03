@@ -368,19 +368,19 @@
     "Hardware / Devices": 52.5
   },
   "2025-05-03": {
-    "SMB SaaS": 52.0,
-    "Enterprise SaaS": 53.5,
-    "Cloud Infrastructure": 55.00000000000001,
-    "AdTech": 52.0,
-    "Fintech": 53.5,
-    "Consumer Internet": 51.0,
-    "eCommerce": 52.0,
-    "Cybersecurity": 53.5,
-    "Dev Tools / Analytics": 52.0,
-    "Semiconductors": 55.50000000000001,
-    "AI Infrastructure": 55.00000000000001,
-    "Vertical SaaS": 51.0,
-    "IT Services / Legacy Tech": 56.00000000000001,
-    "Hardware / Devices": 52.5
+    "SMB SaaS": 52.475579526971586,
+    "Enterprise SaaS": 54.11785279843063,
+    "Cloud Infrastructure": 55.4420374932741,
+    "AdTech": 52.56546616898316,
+    "Fintech": 54.03525905726732,
+    "Consumer Internet": 51.4709453676628,
+    "eCommerce": 52.395451357606646,
+    "Cybersecurity": 54.07645622052717,
+    "Dev Tools / Analytics": 52.97873451531987,
+    "Semiconductors": 56.16650666309939,
+    "AI Infrastructure": 55.679803246045125,
+    "Vertical SaaS": 51.6398569951403,
+    "IT Services / Legacy Tech": 56.69736225945372,
+    "Hardware / Devices": 52.85405948264494
   }
 }

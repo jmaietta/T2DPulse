@@ -762,6 +762,7 @@ def calculate_sector_sentiment():
     print("Starting calculate_sector_sentiment function")
     # Import sector sentiment history module
     import sector_sentiment_history
+    import sector_ema_integration
     
     # Get latest values for all required indicators
     macros = {}
@@ -889,6 +890,20 @@ def calculate_sector_sentiment():
                 "drivers": drivers.get(sector, []),
                 "tickers": tickers.get(sector, [])
             })
+        
+        # Apply Sector EMA factors to adjust the scores based on market cap trends
+        try:
+            # Get sector EMA factors
+            ema_factors = sector_ema_integration.get_sector_ema_factors()
+            if ema_factors:
+                print(f"Applying EMA factors to sector scores: {ema_factors}")
+                enhanced_scores = sector_ema_integration.apply_ema_factors_to_sector_scores(enhanced_scores, ema_factors)
+                print(f"Successfully applied EMA factors to {len(enhanced_scores)} sector scores")
+            else:
+                print("No EMA factors available, using base sentiment scores")
+        except Exception as e:
+            print(f"Error applying EMA factors to sector scores: {str(e)}")
+            # Continue with original scores if EMA integration fails
         
         # Update the historical sentiment data with today's scores
         sector_sentiment_history.update_sentiment_history(enhanced_scores)

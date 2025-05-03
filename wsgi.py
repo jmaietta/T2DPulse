@@ -1,6 +1,8 @@
 import time
 import pytz
-from datetime import datetime
+import os
+import threading
+from datetime import datetime, timedelta
 
 # Use Eastern time zone for all timestamps
 eastern = pytz.timezone('US/Eastern')
@@ -60,14 +62,61 @@ def update_historical_data_async():
         except Exception as e2:
             print(f"Error updating original historical data: {e2}")
 
+# Function to run the daily sector data collection
+def run_daily_sector_data_collection():
+    """Run the daily sector data collection once a day"""
+    print("Starting daily sector data collection thread")
+    while True:
+        try:
+            # First, check if we should run today
+            today = datetime.now(eastern).strftime("%Y-%m-%d")
+            last_run_path = "data/last_sector_run.txt"
+            
+            # Check when we last ran
+            last_run_date = None
+            if os.path.exists(last_run_path):
+                with open(last_run_path, "r") as f:
+                    last_run_date = f.read().strip()
+                    
+            # Only run if we haven't run today
+            if last_run_date != today:
+                # Import and run the daily collection
+                print(f"Running daily sector data collection for {today}...")
+                try:
+                    from run_daily import main as run_daily_main
+                    success = run_daily_main()
+                    if success:
+                        # Record that we ran today
+                        with open(last_run_path, "w") as f:
+                            f.write(today)
+                        print(f"Successfully ran daily sector data collection for {today}")
+                    else:
+                        print(f"Daily sector data collection failed for {today}")
+                except Exception as e:
+                    print(f"Error running daily sector data collection: {e}")
+            else:
+                print(f"Daily sector data already collected for {today}, skipping")
+                
+            # Sleep until tomorrow (check every hour just to be safe)
+            time.sleep(3600)  # 1 hour
+        except Exception as e:
+            print(f"Error in daily sector data collection thread: {e}")
+            time.sleep(3600)  # Wait an hour and try again
+
 # Start the background thread to update historical data without blocking the app
 history_thread = threading.Thread(target=update_historical_data_async)
 history_thread.daemon = True  # Thread will exit when main thread exits
 print("Starting background thread for historical data updates")
 history_thread.start()
 
+# Start the daily sector data collection thread
+sector_thread = threading.Thread(target=run_daily_sector_data_collection)
+sector_thread.daemon = True  # Thread will exit when main thread exits
+print("Starting background thread for daily sector data collection")
+sector_thread.start()
+
 # Start the server
-print(f"Starting T2D Pulse server at {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+print(f"Starting T2D Pulse server at {datetime.now(eastern).strftime('%Y-%m-%d %H:%M:%S')} EDT")
 print(f"Total initialization time: {time.time() - start_time:.2f} seconds")
 
 if __name__ == "__main__":
