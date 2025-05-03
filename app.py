@@ -5733,14 +5733,55 @@ def update_sector_sentiment_container(n):
     
     print(f"Updating sector sentiment container. Today ({today.strftime('%Y-%m-%d')}) is {'a weekend' if is_weekend else 'a weekday'}")
     
-    # Calculate sector sentiment scores
-    sector_scores = calculate_sector_sentiment()
-    
-    # If today is a weekend and we have data for Friday, use Friday's data
+    # If it's a weekend, get the most recent weekday sector data directly
     if is_weekend:
-        print("Using most recent weekday data instead of weekend data")
-        # We'll continue using the calculated scores, but make sure we're not 
-        # creating new records for weekend dates in our storage
+        print("Today is a weekend - loading authentic sector history instead of calculating new scores")
+        # Import the module here to prevent circular imports
+        import authentic_sector_history
+        
+        # Get authentic sector history for all sectors - this will return the most recent weekday data
+        sector_history = authentic_sector_history.get_authentic_sector_history()
+        if sector_history:
+            # Convert the historical data format to match our expected sector_scores format
+            authentic_scores = []
+            for sector, data in sector_history.items():
+                if not data.empty:
+                    # Get the most recent value
+                    latest_value = data.iloc[-1]['value']
+                    # Convert 0-100 score back to -1 to +1 scale
+                    raw_score = (latest_value / 50.0) - 1.0
+                    
+                    # Create sector data structure
+                    sector_data = {
+                        "sector": sector,
+                        "score": raw_score,
+                        "normalized_score": latest_value,  # Already in 0-100 scale
+                        "stance": "Bullish" if latest_value >= 60 else "Bearish" if latest_value <= 30 else "Neutral",
+                        "takeaway": "Outperforming peers" if latest_value >= 60 else 
+                                  "Bearish macro setup" if latest_value <= 30 else 
+                                  "Neutral – monitor trends",
+                        "drivers": [],  # Empty drivers for historical data
+                        "tickers": []   # Empty tickers for historical data
+                    }
+                    authentic_scores.append(sector_data)
+            
+            if authentic_scores:
+                print(f"Loaded {len(authentic_scores)} sector scores from authentic history")
+                sector_scores = authentic_scores
+            else:
+                # If we couldn't get historical data, fall back to calculation
+                print("Couldn't get historical sector data, falling back to calculation")
+                sector_scores = calculate_sector_sentiment()
+        else:
+            # If we couldn't get historical data, fall back to calculation
+            print("Couldn't get historical sector data, falling back to calculation")
+            sector_scores = calculate_sector_sentiment()
+    else:
+        # Calculate sector sentiment scores on weekdays
+        sector_scores = calculate_sector_sentiment()
+    
+    print(f"Sector sentiment update triggered. Results: {sector_scores is not None}")
+
     print(f"Sector sentiment update triggered. Results: {sector_scores is not None}")
     
     if not sector_scores:
