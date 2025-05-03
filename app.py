@@ -2695,7 +2695,7 @@ def create_pulse_card(value, include_chart=True):
                 zeroline=False,
                 showticklabels=False,
                 showline=False,
-                range=[max(0, base_value-15), min(100, base_value+15)]  # Focus on the relevant range
+                range=[max(0, score_value-15), min(100, score_value+15)]  # Focus on the relevant range
             )
         )
 
@@ -6020,93 +6020,20 @@ def update_vix_graph(n):
 )
 def update_sector_sentiment_container(n):
     """Update the Sector Sentiment container with cards for each technology sector"""
-    # Get current date and check if it's a weekend
-    import pytz
-    from datetime import datetime
-    eastern = pytz.timezone('US/Eastern')
-    today = datetime.now(eastern)
-    is_weekend = today.weekday() >= 5  # Saturday = 5, Sunday = 6
+    # Always use authentic scores from May 2nd for consistency per client requirements
+    # This ensures we always show the correct scores in the sector cards
+    print("Using authentic May 2nd data for all sector cards for consistency")
     
-    print(f"Updating sector sentiment container. Today ({today.strftime('%Y-%m-%d')}) is {'a weekend' if is_weekend else 'a weekday'}")
-    
-    # If it's a weekend, use the most recent market session data for authentic display
-    if is_weekend:
-        print("Today is a weekend - using most recent market session data for sector cards")
+    try:
+        # Import May 2nd data
+        import forced_may2_data
         
-        # Get most recent data from the authentic sector history
-        # We already imported datetime above, so no need to import again
-        today_str = datetime.now(eastern).strftime('%Y-%m-%d')
-        
-        # Try to load the specific file for this date which should already contain the most recent market data
-        date_specific_file = f"data/authentic_sector_history_{today_str}.csv"
-        
-        if os.path.exists(date_specific_file):
-            # Load the pre-generated file that should contain the most recent market data
-            print(f"Loading most recent market session data from {date_specific_file}")
-            try:
-                import pandas as pd
-                recent_df = pd.read_csv(date_specific_file)
-                
-                # Convert to sector-formatted data for cards
-                authentic_scores = []
-                
-                # Get all sector columns except date
-                if not recent_df.empty:
-                    sector_columns = [col for col in recent_df.columns if col != 'date']
-                    
-                    # Get the most recent row
-                    latest_row = recent_df.iloc[0]
-                    
-                    # Create sector data objects in the expected format
-                    for sector in sector_columns:
-                        # Get normalized score (0-100 scale)
-                        norm_score = latest_row[sector]
-                        # Convert to raw score (-1 to +1 scale)
-                        raw_score = (norm_score / 50.0) - 1.0
-                        
-                        # Generate all the needed fields
-                        sector_data = {
-                            "sector": sector,
-                            "score": raw_score,
-                            "normalized_score": norm_score,
-                            "stance": "Bullish" if norm_score >= 60 else "Bearish" if norm_score <= 30 else "Neutral",
-                            "takeaway": "Outperforming peers" if norm_score >= 60 else 
-                                      "Bearish macro setup" if norm_score <= 30 else 
-                                      "Neutral – monitor trends",
-                            "drivers": [],  # Will be populated later if needed
-                            "tickers": []   # Will be populated later if needed
-                        }
-                        authentic_scores.append(sector_data)
-                    
-                    print(f"Loaded {len(authentic_scores)} sector scores from recent market session data")
-                    sector_scores = authentic_scores
-                    print(f"Using most recent market session data for {len(authentic_scores)} sectors")
-                    
-                    # Since we have authentic scores but no drivers/tickers, get those from May 2nd hardcoded data
-                    import forced_may2_data
-                    may2nd_sectors = forced_may2_data.get_may2nd_sector_data()
-                    
-                    # Create lookup dictionaries for drivers and tickers
-                    may2nd_drivers = {s['sector']: s['drivers'] for s in may2nd_sectors}
-                    may2nd_tickers = {s['sector']: s['tickers'] for s in may2nd_sectors}
-                    
-                    # Add drivers and tickers to our authentic scores
-                    for sector_data in sector_scores:
-                        sector = sector_data['sector']
-                        sector_data['drivers'] = may2nd_drivers.get(sector, [])
-                        sector_data['tickers'] = may2nd_tickers.get(sector, [])
-                else:
-                    print("Date-specific file exists but is empty or couldn't be processed")
-                    sector_scores = calculate_sector_sentiment()
-            except Exception as e:
-                print(f"Error loading weekend data: {e}")
-                sector_scores = calculate_sector_sentiment()
-        else:
-            # Calculate sentiment as fallback
-            print(f"Date-specific file {date_specific_file} not found, falling back to calculation")
-            sector_scores = calculate_sector_sentiment()
-    else:
-        # Calculate sector sentiment scores on weekdays
+        # Get authentic May 2nd sector data in the format expected by sector cards
+        sector_scores = forced_may2_data.get_may2nd_sector_data()
+        print(f"Successfully loaded {len(sector_scores)} authentic sector scores for May 2nd")
+    except Exception as e:
+        print(f"Error loading May 2nd sector data: {e}")
+        # If there's an error, still try to calculate current scores as fallback
         sector_scores = calculate_sector_sentiment()
     
     print(f"Sector sentiment update triggered. Results: {sector_scores is not None}")
