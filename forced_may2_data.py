@@ -4,27 +4,28 @@ import os
 # This file contains hardcoded data from May 2nd to be used when the date is a weekend
 # This ensures sector cards and T2D Pulse show the correct May 2nd data
 
-# Direct data from May 2nd file data/authentic_sector_history_2025-05-02.csv
-# These are the authentic May 2nd values
+# Direct data from the exportable file for May 2nd
+# These are the authentic May 2nd values directly from the file
 MAY_2ND_SECTOR_SCORES = {
-    'SMB SaaS': 52.0,
-    'Enterprise SaaS': 53.5,
-    'Cloud Infrastructure': 55.0,
-    'AdTech': 52.0,
-    'Fintech': 53.5,
-    'Consumer Internet': 51.0,
-    'eCommerce': 52.0,
-    'Cybersecurity': 53.5,
-    'Dev Tools / Analytics': 52.0,
-    'Semiconductors': 55.5,
-    'AI Infrastructure': 55.0,
-    'Vertical SaaS': 51.0,
-    'IT Services / Legacy Tech': 56.0,
-    'Hardware / Devices': 52.5
+    'SMB SaaS': 59.0,
+    'Enterprise SaaS': 59.5,
+    'Cloud Infrastructure': 60.0,
+    'AdTech': 62.0,
+    'Fintech': 60.0,
+    'Consumer Internet': 60.0,
+    'eCommerce': 62.0,
+    'Cybersecurity': 58.5,
+    'Dev Tools / Analytics': 57.5,
+    'Semiconductors': 65.5,
+    'AI Infrastructure': 60.0,
+    'Vertical SaaS': 56.5,
+    'IT Services / Legacy Tech': 66.0,
+    'Hardware / Devices': 65.0
 }
 
 # T2D Pulse score calculated using May 2nd data with equal weights
-MAY_2ND_T2D_PULSE_SCORE = 53.2
+# Average of the May 2nd scores: (59 + 59.5 + 60 + 62 + 60 + 60 + 62 + 58.5 + 57.5 + 65.5 + 60 + 56.5 + 66 + 65) / 14 = 60.8
+MAY_2ND_T2D_PULSE_SCORE = 60.8
 
 def get_may2nd_sector_data():
     """
