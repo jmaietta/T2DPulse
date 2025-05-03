@@ -2562,6 +2562,30 @@ def create_sector_summary(sector_scores):
     ], className="sector-summary-content", style={"marginTop": "15px"})
 
 # Update sentiment gauge
+def hex_to_rgb(hex_color):
+    """Convert hex color to RGB tuple
+    
+    Args:
+        hex_color (str): Hex color code (e.g., '#FF0000' or '#F00')
+        
+    Returns:
+        tuple: RGB tuple (r, g, b)
+    """
+    # Remove the leading '#' if present
+    hex_color = hex_color.lstrip('#')
+    
+    # Handle both 3-digit and 6-digit hex codes
+    if len(hex_color) == 3:
+        # Convert 3-digit to 6-digit
+        hex_color = ''.join([c*2 for c in hex_color])
+    
+    # Convert to RGB
+    r = int(hex_color[0:2], 16)
+    g = int(hex_color[2:4], 16)
+    b = int(hex_color[4:6], 16)
+    
+    return (r, g, b)
+
 def create_pulse_card(value, include_chart=True):
     """Create a side-by-side pulse display with score circle and trend chart
     that fits directly in the main sentiment banner without adding a separate card.
@@ -2621,43 +2645,45 @@ def create_pulse_card(value, include_chart=True):
                 if len(history_df) > 30:
                     history_df = history_df.tail(30)
                     
-                # Create trace for the line chart with authentic data
+                # Create trace for the line chart with authentic data - improved styling
                 trace = go.Scatter(
                     x=history_df['date'],
                     y=history_df[score_column],
                     mode='lines',
                     line=dict(
                         color=pulse_color,  # Match the pulse status color
-                        width=3,
-                        shape='spline'  # Smoothed line
+                        width=4,            # Thicker line for better visibility
+                        shape='spline'      # Smoothed line
                     ),
                     fill='tozeroy',
-                    fillcolor='rgba(243, 156, 18, 0.2)',  # Light orange fill
+                    fillcolor=f'rgba{(*hex_to_rgb(pulse_color), 0.15)}',  # Dynamic fill based on status color
                     hovertemplate='<b>%{x|%b %d, %Y}</b><br>T2D Pulse: %{y:.1f}<extra></extra>'
                 )
                 
-                # Create layout with colored background regions
+                # Create layout with colored background regions - wider to fill more space
                 layout = go.Layout(
-                    height=180,  # Reduced height to fit in banner
-                    margin=dict(l=20, r=20, t=10, b=30),
+                    height=155,            # Height adjusted for banner fit
+                    margin=dict(l=30, r=10, t=5, b=30),  # Reduced margins for more content space
                     paper_bgcolor='rgba(0,0,0,0)',
-                    plot_bgcolor='rgba(0,0,0,0)',
+                    plot_bgcolor='rgba(255,255,255,0.5)',  # Slightly visible background
                     xaxis=dict(
                         title='',
                         showgrid=False,
                         showline=True,
                         linecolor='#ddd',
                         tickformat='%b %d',
-                        tickangle=-45
+                        tickangle=-30,       # Less steep angle
+                        tickfont=dict(size=11)  # Slightly larger tick font
                     ),
                     yaxis=dict(
                         title='',
                         range=[0, 100],
                         showgrid=True,
-                        gridcolor='#eee',
+                        gridcolor='rgba(0,0,0,0.1)',  # Lighter grid
                         tickvals=[0, 30, 60, 100],
                         showline=True,
-                        linecolor='#ddd'
+                        linecolor='#ddd',
+                        tickfont=dict(size=11)  # Slightly larger tick font
                     ),
                     shapes=[
                         # Bearish region (0-30)
@@ -2754,43 +2780,45 @@ def create_pulse_card(value, include_chart=True):
                 value = max(0, min(100, value))
                 trend_data.insert(0, value)
             
-            # Create trace for the line chart
+            # Create trace for the line chart with matching styling
             trace = go.Scatter(
                 x=dates,
                 y=trend_data,
                 mode='lines',
                 line=dict(
                     color=pulse_color,  # Match the pulse status color
-                    width=3,
-                    shape='spline'  # Smoothed line
+                    width=4,            # Thicker line for better visibility
+                    shape='spline'      # Smoothed line
                 ),
                 fill='tozeroy',
-                fillcolor='rgba(243, 156, 18, 0.2)',  # Light orange fill
+                fillcolor=f'rgba{(*hex_to_rgb(pulse_color), 0.15)}',  # Dynamic fill based on status color
                 hovertemplate='<b>%{x|%b %d, %Y}</b><br>T2D Pulse: %{y:.1f}<extra></extra>'
             )
             
-            # Create layout with colored background regions
+            # Create layout with colored background regions - consistent with primary styling
             layout = go.Layout(
-                height=180,  # Reduced height to fit in banner
-                margin=dict(l=20, r=20, t=10, b=30),
+                height=155,            # Height adjusted for banner fit
+                margin=dict(l=30, r=10, t=5, b=30),  # Reduced margins for more content space
                 paper_bgcolor='rgba(0,0,0,0)',
-                plot_bgcolor='rgba(0,0,0,0)',
+                plot_bgcolor='rgba(255,255,255,0.5)',  # Slightly visible background
                 xaxis=dict(
                     title='',
                     showgrid=False,
                     showline=True,
                     linecolor='#ddd',
                     tickformat='%b %d',
-                    tickangle=-45
+                    tickangle=-30,       # Less steep angle
+                    tickfont=dict(size=11)  # Slightly larger tick font
                 ),
                 yaxis=dict(
                     title='',
                     range=[0, 100],
                     showgrid=True,
-                    gridcolor='#eee',
+                    gridcolor='rgba(0,0,0,0.1)',  # Lighter grid
                     tickvals=[0, 30, 60, 100],
                     showline=True,
-                    linecolor='#ddd'
+                    linecolor='#ddd',
+                    tickfont=dict(size=11)  # Slightly larger tick font
                 ),
                 shapes=[
                     # Bearish region (0-30)
@@ -2861,16 +2889,16 @@ def create_pulse_card(value, include_chart=True):
             
             pulse_chart = go.Figure(data=[trace], layout=layout)
         
-        # Create the pulse circle - scaled to fit better in the banner
+        # Create the pulse circle - sized for banner with larger dimensions
         pulse_circle = html.Div([
             html.Div([
                 html.Div(f"{score_value:.1f}", style={
-                    'fontSize': '36px',
+                    'fontSize': '42px',  # Larger font size
                     'fontWeight': '600',
                     'color': pulse_color
                 }),
                 html.Div(pulse_status, style={
-                    'fontSize': '16px',
+                    'fontSize': '18px',  # Slightly larger font
                     'color': pulse_color
                 }),
                 html.Div("T2D PULSE", style={
@@ -2885,8 +2913,8 @@ def create_pulse_card(value, include_chart=True):
                 'flexDirection': 'column',
                 'alignItems': 'center',
                 'justifyContent': 'center',
-                'width': '160px',
-                'height': '160px',
+                'width': '180px',   # Larger circle width
+                'height': '180px',  # Larger circle height
                 'borderRadius': '50%',
                 'border': f'3px solid {pulse_color}',
                 'boxShadow': f'0 0 15px {pulse_color}',
@@ -2899,18 +2927,19 @@ def create_pulse_card(value, include_chart=True):
         pulse_display = html.Div([
             # Container for all content with horizontal layout
             html.Div([
-                # Left side - Pulse Circle
+                # Left side - Pulse Circle aligned to the left
                 html.Div([
                     pulse_circle
                 ], style={
-                    'flex': '0 0 auto',
-                    'marginRight': '20px',
+                    'flex': '0 0 auto',                # Don't grow or shrink
+                    'marginRight': '20px',            # Space between circle and chart
                     'display': 'flex',
                     'alignItems': 'center',
-                    'justifyContent': 'center'
+                    'justifyContent': 'flex-start',    # Align to the left
+                    'paddingLeft': '10px'              # Add some padding from the edge
                 }),
                 
-                # Right side - Trend Chart
+                # Right side - Trend Chart - expanded to fill remaining space
                 html.Div([
                     html.Div("30-Day Trend", style={
                         'fontSize': '14px',
@@ -2925,19 +2954,20 @@ def create_pulse_card(value, include_chart=True):
                         config={'displayModeBar': False}
                     )
                 ], style={
-                    'flex': '1',
-                    'minWidth': '0',  # Allows the flex item to shrink below content size
-                    'height': '180px',  # Shorter to fit in the banner
+                    'flex': '1 1 auto',               # Grow and shrink as needed
+                    'minWidth': '70%',                # Ensure chart gets at least 70% width
+                    'height': '180px',                # Height for the banner
                     'border': '1px solid #eee',
                     'borderRadius': '5px',
                     'padding': '10px',
-                    'backgroundColor': '#fff'
+                    'backgroundColor': '#fff',
+                    'marginRight': '10px'             # Right margin for spacing
                 })
             ], style={
                 'display': 'flex',
                 'flexDirection': 'row',
                 'alignItems': 'center',
-                'justifyContent': 'space-between',
+                'justifyContent': 'flex-start',       # Start items from the left
                 'width': '100%'
             })
         ])
