@@ -2662,8 +2662,8 @@ def create_pulse_card(value, include_chart=True):
                 
                 # Create layout with colored background regions - taller chart using more space
                 layout = go.Layout(
-                    height=160,            # Slightly taller chart (from 155 to 160)
-                    margin=dict(l=30, r=10, t=2, b=20),  # Reduced top and bottom margins
+                    height=165,            # Even taller chart (from 160 to 165)
+                    margin=dict(l=30, r=10, t=2, b=10),  # Further reduced bottom margin (from 20 to 10)
                     paper_bgcolor='rgba(0,0,0,0)',
                     plot_bgcolor='rgba(255,255,255,0.5)',  # Slightly visible background
                     xaxis=dict(
@@ -2797,8 +2797,8 @@ def create_pulse_card(value, include_chart=True):
             
             # Create layout with colored background regions - taller chart consistent with primary styling
             layout = go.Layout(
-                height=160,            # Slightly taller chart (from 155 to 160)
-                margin=dict(l=30, r=10, t=2, b=20),  # Reduced top and bottom margins
+                height=165,            # Even taller chart (from 160 to 165)
+                margin=dict(l=30, r=10, t=2, b=10),  # Further reduced bottom margin (from 20 to 10)
                 paper_bgcolor='rgba(0,0,0,0)',
                 plot_bgcolor='rgba(255,255,255,0.5)',  # Slightly visible background
                 xaxis=dict(
@@ -2959,7 +2959,7 @@ def create_pulse_card(value, include_chart=True):
                     'height': '180px',                # Height for the banner
                     'border': '1px solid #eee',
                     'borderRadius': '5px',
-                    'padding': '10px 10px 5px 10px',  # Reduced bottom padding
+                    'padding': '10px 10px 2px 10px',  # Further reduced bottom padding (from 5px to 2px)
                     'backgroundColor': '#fff',
                     'marginRight': '10px'             # Right margin for spacing
                 })
