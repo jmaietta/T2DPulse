@@ -97,13 +97,13 @@ IMPORTANCE = {
 
 # ---------- 4) Macro favourability bands ----------
 # These bands determine when an indicator is positive, neutral, or negative
-# Narrower bands = more sensitive to small changes = better daily variation
+# We're now using a proportional approach for key indicators to avoid the band problem
 BANDS = {
-    # Market indicators - more sensitive bands to ensure daily variability
-    "Sector_EMA_Factor":         ("higher", 0.1, -0.1),  # Much narrower band to be sensitive to daily changes
-    "10Y_Treasury_Yield_%":      ("lower", 3.75, 4.25),   # Narrower band sensitive to daily yield changes
-    "VIX":                       ("lower", 20,   28),     # Adjusted for better sensitivity to market volatility
-    "NASDAQ_20d_gap_%":          ("higher", 2.0, -2.0),   # Narrower band to detect smaller NASDAQ movements
+    # Market indicators - using proportional signals for daily variability
+    "Sector_EMA_Factor":         ("proportional", 0.1, -0.1),  # Any value will contribute proportionally
+    "10Y_Treasury_Yield_%":      ("proportional", 3.75, 4.25),  # Values outside this range contribute proportionally
+    "VIX":                       ("lower", 17.5, 20.0),         # Neutral only between 17.50-20.00 per client spec
+    "NASDAQ_20d_gap_%":          ("proportional", 2.0, -2.0),    # Values outside range contribute proportionally
     
     # Other macro indicators - can stay broader as they change less frequently
     "Fed_Funds_Rate_%":          ("lower", 4.5,  5.25),
@@ -146,8 +146,12 @@ class SectorScore(TypedDict):
     score: float
 
 # ---------- 6) Core functions ----------
-def raw_signal(name: str, value) -> int:
-    """Return +1, 0, -1 based on favourability band."""
+def raw_signal(name: str, value) -> float:
+    """Return signal value based on favourability band.
+    
+    For standard bands: Returns +1, 0, -1 (positive, neutral, negative)
+    For proportional bands: Returns a value between -1 and +1 based on intensity
+    """
     # Ensure value is float
     try:
         fvalue = float(value)
@@ -156,9 +160,57 @@ def raw_signal(name: str, value) -> int:
         return 0  # Neutral if can't parse the value
         
     dirn, fav_hi, unfav_lo = BANDS[name]
-    if dirn == "lower":
+    
+    # Handle proportional indicators (more nuanced than just -1, 0, +1)
+    if dirn == "proportional":
+        if name == "NASDAQ_20d_gap_%":
+            # For NASDAQ gap, scale the value to provide proportional signal
+            # Between fav_hi and unfav_lo, it's a linear interpolation from +1 to -1
+            if fvalue >= fav_hi:  # Strong positive
+                # Scale based on how much above the threshold
+                intensity = min(1.0, 0.75 + (fvalue - fav_hi) / (fav_hi * 4))
+                return intensity
+            elif fvalue <= unfav_lo:  # Strong negative
+                # Scale based on how much below the threshold
+                intensity = max(-1.0, -0.75 - (unfav_lo - fvalue) / (abs(unfav_lo) * 4))
+                return intensity
+            else:  # In the neutral zone, but with scaled strength
+                # Scale linearly from fav_hi (+1) to unfav_lo (-1)
+                return ((fvalue - unfav_lo) / (fav_hi - unfav_lo) * 2) - 1
+        
+        elif name == "10Y_Treasury_Yield_%":
+            # For treasury yield, lower is better (inverted relationship)
+            if fvalue <= fav_hi:  # Below favorable threshold (good)
+                intensity = min(1.0, 0.75 + (fav_hi - fvalue) / (fav_hi / 4))
+                return intensity
+            elif fvalue >= unfav_lo:  # Above unfavorable threshold (bad)
+                intensity = max(-1.0, -0.75 - (fvalue - unfav_lo) / (unfav_lo / 4))
+                return intensity
+            else:  # In neutral zone but with scaled strength
+                # Scale linearly from fav_hi (+1) to unfav_lo (-1)
+                return ((unfav_lo - fvalue) / (unfav_lo - fav_hi) * 2) - 1
+        
+        elif name == "Sector_EMA_Factor":
+            # EMA Factor is already a value between -1 and +1
+            # Just scale it to ensure values near zero still contribute
+            if abs(fvalue) < 0.1:  # Very small values
+                return fvalue * 5  # Amplify small signals to ensure they contribute
+            else:
+                return fvalue  # Already appropriately scaled
+                
+        else:  # Generic proportional handling for any new proportional indicators
+            if fvalue >= fav_hi:  # Strong positive
+                return 1.0
+            elif fvalue <= unfav_lo:  # Strong negative
+                return -1.0
+            else:  # In the neutral zone, but with scaled strength
+                # Scale linearly from fav_hi (+1) to unfav_lo (-1)
+                return ((fvalue - unfav_lo) / (fav_hi - unfav_lo) * 2) - 1
+    
+    # Standard discrete signaling for regular indicators
+    elif dirn == "lower":  # Lower values are better
         return 1 if fvalue <= fav_hi else -1 if fvalue >= unfav_lo else 0
-    else:
+    else:  # "higher" - higher values are better
         return 1 if fvalue >= fav_hi else -1 if fvalue <= unfav_lo else 0
 
 def score_sectors(macros: MacroDict) -> List[SectorScore]:
@@ -199,7 +251,14 @@ def score_sectors(macros: MacroDict) -> List[SectorScore]:
         total_weight = sector_weight["AdTech"]
         for ind, data in adtech_contributions.items():
             weight_percent = (abs(data["weight"]) / total_weight) * 100
-            print(f"  {ind:<25}: signal={data['raw_signal']:+d}, " +
+            # Format signal as float since we now use proportional values
+            signal_value = data['raw_signal']
+            if isinstance(signal_value, float) and not signal_value.is_integer():
+                signal_str = f"{signal_value:+.2f}"
+            else:
+                signal_str = f"{int(signal_value):+d}"
+                
+            print(f"  {ind:<25}: signal={signal_str}, " +
                   f"impact={data['impact']}, imp={data['importance']}, " +
                   f"weight={data['weight']:.1f} ({weight_percent:.1f}%), " +
                   f"contribution={data['contribution']:+.2f}")
