@@ -5727,6 +5727,7 @@ def update_sector_sentiment_container(n):
     """Update the Sector Sentiment container with cards for each technology sector"""
     # Get current date and check if it's a weekend
     import pytz
+    from datetime import datetime
     eastern = pytz.timezone('US/Eastern')
     today = datetime.now(eastern)
     is_weekend = today.weekday() >= 5  # Saturday = 5, Sunday = 6
@@ -5738,8 +5739,7 @@ def update_sector_sentiment_container(n):
         print("Today is a weekend - using most recent market session data for sector cards")
         
         # Get most recent data from the authentic sector history
-        from datetime import datetime
-        eastern = pytz.timezone('US/Eastern')
+        # We already imported datetime above, so no need to import again
         today_str = datetime.now(eastern).strftime('%Y-%m-%d')
         
         # Try to load the specific file for this date which should already contain the most recent market data
@@ -6399,6 +6399,7 @@ def update_t2d_pulse_score(weights_json):
         
         # Get current date and check if it's a weekend
         import pytz
+        from datetime import datetime
         eastern = pytz.timezone('US/Eastern')
         today = datetime.now(eastern)
         is_weekend = today.weekday() >= 5  # Saturday = 5, Sunday = 6
@@ -6631,6 +6632,7 @@ def reset_weights(n_clicks):
     
     # Check if it's a weekend to use May 2nd data
     import pytz
+    from datetime import datetime
     eastern = pytz.timezone('US/Eastern')
     today = datetime.now(eastern)
     is_weekend = today.weekday() >= 5  # Saturday = 5, Sunday = 6
