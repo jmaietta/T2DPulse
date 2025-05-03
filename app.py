@@ -5747,8 +5747,9 @@ def update_sector_sentiment_container(n):
                 may_2nd_df = pd.read_csv(may_2nd_path)
                 may_2nd_df['date'] = pd.to_datetime(may_2nd_df['date'])
                 
-                # Get the May 2nd row
-                may_2nd_row = may_2nd_df[may_2nd_df['date'] == '2025-05-02']
+                # Get the May 2nd row - match parsed datetime object
+                may_2nd_date = pd.Timestamp('2025-05-02')
+                may_2nd_row = may_2nd_df[may_2nd_df['date'] == may_2nd_date]
                 if not may_2nd_row.empty:
                     authentic_scores = []
                     # Process all columns except date
@@ -6424,8 +6425,9 @@ def update_t2d_pulse_score(weights_json):
                     may_2nd_df = pd.read_csv(may_2nd_path)
                     may_2nd_df['date'] = pd.to_datetime(may_2nd_df['date'])
                     
-                    # Get the May 2nd row specifically
-                    may_2nd_row = may_2nd_df[may_2nd_df['date'] == '2025-05-02']
+                    # Get the May 2nd row - using parsed datetime for proper comparison
+                    may_2nd_date = pd.Timestamp('2025-05-02')
+                    may_2nd_row = may_2nd_df[may_2nd_df['date'] == may_2nd_date]
                     if not may_2nd_row.empty:
                         # Create a dictionary of sector scores
                         sector_scores_dict = {}
