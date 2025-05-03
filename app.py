@@ -2927,19 +2927,19 @@ def create_pulse_card(value, include_chart=True):
         pulse_display = html.Div([
             # Container for all content with horizontal layout
             html.Div([
-                # Left side - Pulse Circle aligned to the left
+                # Left side - Pulse Circle aligned to the far left
                 html.Div([
                     pulse_circle
                 ], style={
                     'flex': '0 0 auto',                # Don't grow or shrink
-                    'marginRight': '20px',            # Space between circle and chart
+                    'marginRight': '10px',            # Smaller gap between circle and chart
                     'display': 'flex',
                     'alignItems': 'center',
                     'justifyContent': 'flex-start',    # Align to the left
-                    'paddingLeft': '10px'              # Add some padding from the edge
+                    'paddingLeft': '0px'              # No padding from the edge
                 }),
                 
-                # Right side - Trend Chart - expanded to fill remaining space
+                # Right side - Trend Chart - expanded to fill almost all remaining space
                 html.Div([
                     html.Div("30-Day Trend", style={
                         'fontSize': '14px',
@@ -2955,7 +2955,8 @@ def create_pulse_card(value, include_chart=True):
                     )
                 ], style={
                     'flex': '1 1 auto',               # Grow and shrink as needed
-                    'minWidth': '70%',                # Ensure chart gets at least 70% width
+                    'minWidth': '85%',                # Ensure chart gets at least 85% width
+                    'width': '85%',                   # Force explicit width to be very wide
                     'height': '180px',                # Height for the banner
                     'border': '1px solid #eee',
                     'borderRadius': '5px',
