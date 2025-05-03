@@ -153,6 +153,7 @@ def create_pulse_chart(pulse_data):
             title='Date',
             tickformat='%b %d',
             gridcolor='#f5f5f5',
+            showticklabels=False,  # Hide date labels entirely
             # Remove rangeslider entirely
             rangeslider=dict(visible=False),
             # Only show axis labels on the main chart, not on the slider

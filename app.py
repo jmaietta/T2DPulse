@@ -2695,6 +2695,7 @@ def create_pulse_card(value, include_chart=True):
                         tickformat='%b %d',
                         tickangle=-30,       # Less steep angle
                         tickfont=dict(size=11),  # Slightly larger tick font
+                        showticklabels=False,  # Hide date labels entirely
                         # Remove rangeslider entirely
                         rangeslider=dict(visible=False),
                         rangeselector=dict(visible=False)
@@ -2833,6 +2834,7 @@ def create_pulse_card(value, include_chart=True):
                     tickformat='%b %d',
                     tickangle=-30,       # Less steep angle
                     tickfont=dict(size=11),  # Slightly larger tick font
+                    showticklabels=False,  # Hide date labels entirely
                     # Remove rangeslider entirely
                     rangeslider=dict(visible=False),
                     rangeselector=dict(visible=False)
