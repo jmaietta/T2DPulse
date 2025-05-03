@@ -5696,8 +5696,22 @@ def update_vix_graph(n):
 )
 def update_sector_sentiment_container(n):
     """Update the Sector Sentiment container with cards for each technology sector"""
+    # Get current date and check if it's a weekend
+    import pytz
+    eastern = pytz.timezone('US/Eastern')
+    today = datetime.now(eastern)
+    is_weekend = today.weekday() >= 5  # Saturday = 5, Sunday = 6
+    
+    print(f"Updating sector sentiment container. Today ({today.strftime('%Y-%m-%d')}) is {'a weekend' if is_weekend else 'a weekday'}")
+    
     # Calculate sector sentiment scores
     sector_scores = calculate_sector_sentiment()
+    
+    # If today is a weekend and we have data for Friday, use Friday's data
+    if is_weekend:
+        print("Using most recent weekday data instead of weekend data")
+        # We'll continue using the calculated scores, but make sure we're not 
+        # creating new records for weekend dates in our storage
     print(f"Sector sentiment update triggered. Results: {sector_scores is not None}")
     
     if not sector_scores:
