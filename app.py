@@ -2674,111 +2674,42 @@ def create_pulse_card(value, include_chart=True):
                     line=dict(
                         color=pulse_color,  # Match the pulse status color
                         width=4,            # Thicker line for better visibility
-                        shape='spline'      # Smoothed line
+                        shape='linear'      # Linear line for better performance
                     ),
                     fill='tozeroy',
                     fillcolor=f'rgba{(*hex_to_rgb(pulse_color), 0.15)}',  # Dynamic fill based on status color
                     hovertemplate='<b>%{x|%b %d, %Y}</b><br>T2D Pulse: %{y:.1f}<extra></extra>'
                 )
                 
-                # Create layout with colored background regions - taller chart using more space
+                # Create optimized layout with improved performance
                 layout = go.Layout(
-                    height=165,            # Even taller chart (from 160 to 165)
-                    margin=dict(l=30, r=10, t=2, b=10),  # Further reduced bottom margin (from 20 to 10)
+                    height=165,
+                    margin=dict(l=30, r=10, t=2, b=10),
                     paper_bgcolor='rgba(0,0,0,0)',
-                    plot_bgcolor='rgba(255,255,255,0.5)',  # Slightly visible background
+                    plot_bgcolor='rgba(255,255,255,0.5)',
                     xaxis=dict(
-                        title='',
-                        showgrid=False,
-                        showline=False,  # Hide axis line
-                        linecolor='#ddd',
-                        # NASDAQ style settings
-                        rangeslider=dict(visible=False),  # No range slider
-                        rangeselector=dict(visible=False),  # No range selector
-                        # Completely hide all date labels
-                        tickmode='auto',
-                        nticks=0,  # Force no ticks
-                        showticklabels=False,  # Hide date labels entirely
-                        showspikes=False,  # No hover spikes
-                        ticks='',  # No tick marks
-                        zeroline=False,  # No zero line
-                        automargin=True
+                        visible=False,
+                        showticklabels=False,
+                        tickvals=[],
+                        ticktext=[],
+                        nticks=0,
+                        showspikes=False,
+                        rangeslider=dict(visible=False),
+                        rangeselector=dict(visible=False)
                     ),
                     yaxis=dict(
                         title='',
                         range=[0, 100],
                         showgrid=True,
-                        gridcolor='rgba(0,0,0,0.1)',  # Lighter grid
+                        gridcolor='rgba(0,0,0,0.1)',
                         tickvals=[0, 30, 60, 100],
-                        showline=True,
-                        linecolor='#ddd',
-                        tickfont=dict(size=11)  # Slightly larger tick font
+                        tickfont=dict(size=11)
                     ),
-                    shapes=[
-                        # Bearish region (0-30)
-                        dict(
-                            type='rect',
-                            xref='paper', yref='y',
-                            x0=0, x1=1,
-                            y0=0, y1=30,
-                            fillcolor='rgba(231, 76, 60, 0.1)',  # Light red
-                            line=dict(width=0)
-                        ),
-                        # Neutral region (30-60)
-                        dict(
-                            type='rect',
-                            xref='paper', yref='y',
-                            x0=0, x1=1,
-                            y0=30, y1=60,
-                            fillcolor='rgba(243, 156, 18, 0.1)',  # Light orange
-                            line=dict(width=0)
-                        ),
-                        # Bullish region (60-100)
-                        dict(
-                            type='rect',
-                            xref='paper', yref='y',
-                            x0=0, x1=1,
-                            y0=60, y1=100,
-                            fillcolor='rgba(46, 204, 113, 0.1)',  # Light green
-                            line=dict(width=0)
-                        )
-                    ],
-                    annotations=[
-                        # Bearish label
-                        dict(
-                            x=0.02, y=15,
-                            xref='paper', yref='y',
-                            text='Bearish',
-                            showarrow=False,
-                            font=dict(
-                                color='rgba(192, 57, 43, 0.7)',
-                                size=12
-                            )
-                        ),
-                        # Neutral label
-                        dict(
-                            x=0.02, y=45,
-                            xref='paper', yref='y',
-                            text='Neutral',
-                            showarrow=False,
-                            font=dict(
-                                color='rgba(211, 84, 0, 0.7)',
-                                size=12
-                            )
-                        ),
-                        # Bullish label
-                        dict(
-                            x=0.02, y=80,
-                            xref='paper', yref='y',
-                            text='Bullish',
-                            showarrow=False,
-                            font=dict(
-                                color='rgba(39, 174, 96, 0.7)',
-                                size=12
-                            )
-                        )
-                    ],
-                    hovermode='x unified'
+                    # Temporarily remove shapes for performance
+                    shapes=[],
+                    # Temporarily remove annotations for performance
+                    annotations=[],
+                    hovermode=False  # Disable hover to prevent date label artifacts
                 )
                 
                 pulse_chart = go.Figure(data=[trace], layout=layout)
@@ -2823,111 +2754,42 @@ def create_pulse_card(value, include_chart=True):
                 line=dict(
                     color=pulse_color,  # Match the pulse status color
                     width=4,            # Thicker line for better visibility
-                    shape='spline'      # Smoothed line
+                    shape='linear'      # Linear line for better performance
                 ),
                 fill='tozeroy',
                 fillcolor=f'rgba{(*hex_to_rgb(pulse_color), 0.15)}',  # Dynamic fill based on status color
                 hovertemplate='<b>%{x|%b %d, %Y}</b><br>T2D Pulse: %{y:.1f}<extra></extra>'
             )
             
-            # Create layout with colored background regions - taller chart consistent with primary styling
+            # Create optimized layout with improved performance (same as authentic chart)
             layout = go.Layout(
-                height=165,            # Even taller chart (from 160 to 165)
-                margin=dict(l=30, r=10, t=2, b=10),  # Further reduced bottom margin (from 20 to 10)
+                height=165,
+                margin=dict(l=30, r=10, t=2, b=10),
                 paper_bgcolor='rgba(0,0,0,0)',
-                plot_bgcolor='rgba(255,255,255,0.5)',  # Slightly visible background
+                plot_bgcolor='rgba(255,255,255,0.5)',
                 xaxis=dict(
-                    title='',
-                    showgrid=False,
-                    showline=False,  # Hide axis line
-                    linecolor='#ddd',
-                    # NASDAQ style settings 
-                    rangeslider=dict(visible=False),  # No range slider
-                    rangeselector=dict(visible=False),  # No range selector
-                    # Completely hide all date labels
-                    tickmode='auto',
-                    nticks=0,  # Force no ticks
-                    showticklabels=False,  # Hide date labels entirely
-                    showspikes=False,  # No hover spikes
-                    ticks='',  # No tick marks
-                    zeroline=False,  # No zero line
-                    automargin=True
+                    visible=False,
+                    showticklabels=False,
+                    tickvals=[],
+                    ticktext=[],
+                    nticks=0,
+                    showspikes=False,
+                    rangeslider=dict(visible=False),
+                    rangeselector=dict(visible=False)
                 ),
                 yaxis=dict(
                     title='',
                     range=[0, 100],
                     showgrid=True,
-                    gridcolor='rgba(0,0,0,0.1)',  # Lighter grid
+                    gridcolor='rgba(0,0,0,0.1)',
                     tickvals=[0, 30, 60, 100],
-                    showline=True,
-                    linecolor='#ddd',
-                    tickfont=dict(size=11)  # Slightly larger tick font
+                    tickfont=dict(size=11)
                 ),
-                shapes=[
-                    # Bearish region (0-30)
-                    dict(
-                        type='rect',
-                        xref='paper', yref='y',
-                        x0=0, x1=1,
-                        y0=0, y1=30,
-                        fillcolor='rgba(231, 76, 60, 0.1)',  # Light red
-                        line=dict(width=0)
-                    ),
-                    # Neutral region (30-60)
-                    dict(
-                        type='rect',
-                        xref='paper', yref='y',
-                        x0=0, x1=1,
-                        y0=30, y1=60,
-                        fillcolor='rgba(243, 156, 18, 0.1)',  # Light orange
-                        line=dict(width=0)
-                    ),
-                    # Bullish region (60-100)
-                    dict(
-                        type='rect',
-                        xref='paper', yref='y',
-                        x0=0, x1=1,
-                        y0=60, y1=100,
-                        fillcolor='rgba(46, 204, 113, 0.1)',  # Light green
-                        line=dict(width=0)
-                    )
-                ],
-                annotations=[
-                    # Bearish label
-                    dict(
-                        x=0.02, y=15,
-                        xref='paper', yref='y',
-                        text='Bearish',
-                        showarrow=False,
-                        font=dict(
-                            color='rgba(192, 57, 43, 0.7)',
-                            size=12
-                        )
-                    ),
-                    # Neutral label
-                    dict(
-                        x=0.02, y=45,
-                        xref='paper', yref='y',
-                        text='Neutral',
-                        showarrow=False,
-                        font=dict(
-                            color='rgba(211, 84, 0, 0.7)',
-                            size=12
-                        )
-                    ),
-                    # Bullish label
-                    dict(
-                        x=0.02, y=80,
-                        xref='paper', yref='y',
-                        text='Bullish',
-                        showarrow=False,
-                        font=dict(
-                            color='rgba(39, 174, 96, 0.7)',
-                            size=12
-                        )
-                    )
-                ],
-                hovermode='x unified'
+                # Temporarily remove shapes for performance
+                shapes=[],
+                # Temporarily remove annotations for performance
+                annotations=[],
+                hovermode=False  # Disable hover to prevent date label artifacts
             )
             
             pulse_chart = go.Figure(data=[trace], layout=layout)
