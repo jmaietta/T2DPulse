@@ -90,8 +90,22 @@ def update_authentic_history(sector_scores=None, force_update=False):
         # First ensure we have May 1st data
         ensure_may_first_data(formatted_scores)
         
-        # Then save today's data
-        return save_authentic_sector_history(formatted_scores)
+        # Get the current date in Eastern time
+        eastern = pytz.timezone('US/Eastern')
+        today_dt = datetime.now(eastern)
+        is_weekend = today_dt.weekday() >= 5  # Saturday = 5, Sunday = 6
+        
+        if is_weekend:
+            print(f"Today is a weekend - storing data but not updating primary history")
+            # Don't update the main historical file for weekends
+            # but still export a date-specific file for reference
+            export_date_specific_history(formatted_scores, today_dt.strftime('%Y-%m-%d'))
+            # Also indicate we're using recent weekday data instead
+            print("Using most recent weekday data instead of weekend data")
+            return True
+        else:    
+            # Then save today's data to the main history file
+            return save_authentic_sector_history(formatted_scores)
     elif force_update:
         # Load the history if needed, but don't change it
         history = get_authentic_sector_history()
@@ -187,6 +201,62 @@ def ensure_may_first_data(current_scores):
         
     except Exception as e:
         print(f"Error ensuring May 1st data: {e}")
+        return False
+
+def export_date_specific_history(sector_scores, date_string):
+    """
+    Export sector scores to a date-specific CSV file without adding to main history
+    
+    Args:
+        sector_scores (list): List of sector dictionaries with 'sector' and 'score' keys
+        date_string (str): Date in 'YYYY-MM-DD' format
+        
+    Returns:
+        bool: True if successful, False otherwise
+    """
+    try:
+        # Load existing main history for reference values
+        csv_path = "data/authentic_sector_history.csv"
+        if not os.path.exists(csv_path):
+            print(f"Cannot export date-specific history: main history file not found")
+            return False
+            
+        # Get the most recent weekday data
+        main_df = pd.read_csv(csv_path)
+        main_df['date'] = pd.to_datetime(main_df['date'])
+        
+        # Filter to weekdays only and sort by date
+        main_df['day_of_week'] = main_df['date'].dt.dayofweek
+        weekday_df = main_df[main_df['day_of_week'] < 5].sort_values('date', ascending=False)
+        weekday_df = weekday_df.drop(columns=['day_of_week'])  # Remove helper column
+        
+        if weekday_df.empty:
+            print("No weekday data found in main history")
+            return False
+            
+        # Get the latest weekday data row
+        latest_weekday_data = weekday_df.iloc[0]
+        latest_date = latest_weekday_data['date'].strftime('%Y-%m-%d')
+        
+        print(f"Using most recent weekday data from {latest_date}")
+        
+        # Create export dataframe with this date's data
+        export_df = pd.DataFrame({'date': [pd.Timestamp(date_string)]})
+        
+        # Add columns from the most recent weekday data
+        for column in weekday_df.columns:
+            if column != 'date':
+                export_df[column] = latest_weekday_data[column]
+        
+        # Export to date-specific CSV
+        today_csv_path = f"data/authentic_sector_history_{date_string}.csv"
+        export_df.to_csv(today_csv_path, index=False)
+        
+        print(f"Exported most recent weekday data to {today_csv_path}")
+        return True
+        
+    except Exception as e:
+        print(f"Error exporting date-specific history: {e}")
         return False
 
 def save_authentic_sector_history(sector_scores):
