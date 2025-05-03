@@ -2563,7 +2563,7 @@ def create_sector_summary(sector_scores):
 
 # Update sentiment gauge
 def create_pulse_card(value, include_chart=True):
-    """Create a square pulse card with glow effect based on score and integrated chart
+    """Create a side-by-side pulse card with score circle and trend chart
     
     Args:
         value (float or str): The T2D Pulse score value
@@ -2620,9 +2620,113 @@ def create_pulse_card(value, include_chart=True):
                 if len(history_df) > 30:
                     history_df = history_df.tail(30)
                     
-                # Create the plotly figure with authentic data using our consistent chart style
-                pulse_chart = create_t2d_pulse_chart(pulse_color)
-                print(f"Created authentic T2D Pulse history chart with the consistent sector card style")
+                # Create trace for the line chart with authentic data
+                trace = go.Scatter(
+                    x=history_df['date'],
+                    y=history_df[score_column],
+                    mode='lines',
+                    line=dict(
+                        color=pulse_color,  # Match the pulse status color
+                        width=3,
+                        shape='spline'  # Smoothed line
+                    ),
+                    fill='tozeroy',
+                    fillcolor=f'rgba({pulse_color.lstrip("#")[:2]}, {pulse_color.lstrip("#")[2:4]}, {pulse_color.lstrip("#")[4:6]}, 0.2)',
+                    hovertemplate='<b>%{x|%b %d, %Y}</b><br>T2D Pulse: %{y:.1f}<extra></extra>'
+                )
+                
+                # Create layout with colored background regions
+                layout = go.Layout(
+                    height=220,
+                    margin=dict(l=20, r=20, t=10, b=30),
+                    paper_bgcolor='rgba(0,0,0,0)',
+                    plot_bgcolor='rgba(0,0,0,0)',
+                    xaxis=dict(
+                        title='',
+                        showgrid=False,
+                        showline=True,
+                        linecolor='#ddd',
+                        tickformat='%b %d',
+                        tickangle=-45
+                    ),
+                    yaxis=dict(
+                        title='',
+                        range=[0, 100],
+                        showgrid=True,
+                        gridcolor='#eee',
+                        tickvals=[0, 30, 60, 100],
+                        showline=True,
+                        linecolor='#ddd'
+                    ),
+                    shapes=[
+                        # Bearish region (0-30)
+                        dict(
+                            type='rect',
+                            xref='paper', yref='y',
+                            x0=0, x1=1,
+                            y0=0, y1=30,
+                            fillcolor='rgba(231, 76, 60, 0.1)',  # Light red
+                            line=dict(width=0)
+                        ),
+                        # Neutral region (30-60)
+                        dict(
+                            type='rect',
+                            xref='paper', yref='y',
+                            x0=0, x1=1,
+                            y0=30, y1=60,
+                            fillcolor='rgba(243, 156, 18, 0.1)',  # Light orange
+                            line=dict(width=0)
+                        ),
+                        # Bullish region (60-100)
+                        dict(
+                            type='rect',
+                            xref='paper', yref='y',
+                            x0=0, x1=1,
+                            y0=60, y1=100,
+                            fillcolor='rgba(46, 204, 113, 0.1)',  # Light green
+                            line=dict(width=0)
+                        )
+                    ],
+                    annotations=[
+                        # Bearish label
+                        dict(
+                            x=0.02, y=15,
+                            xref='paper', yref='y',
+                            text='Bearish',
+                            showarrow=False,
+                            font=dict(
+                                color='rgba(192, 57, 43, 0.7)',
+                                size=12
+                            )
+                        ),
+                        # Neutral label
+                        dict(
+                            x=0.02, y=45,
+                            xref='paper', yref='y',
+                            text='Neutral',
+                            showarrow=False,
+                            font=dict(
+                                color='rgba(211, 84, 0, 0.7)',
+                                size=12
+                            )
+                        ),
+                        # Bullish label
+                        dict(
+                            x=0.02, y=80,
+                            xref='paper', yref='y',
+                            text='Bullish',
+                            showarrow=False,
+                            font=dict(
+                                color='rgba(39, 174, 96, 0.7)',
+                                size=12
+                            )
+                        )
+                    ],
+                    hovermode='x unified'
+                )
+                
+                pulse_chart = go.Figure(data=[trace], layout=layout)
+                print(f"Created authentic T2D Pulse history chart with the consistent style")
             else:
                 raise ValueError("History file missing required columns")
         else:
@@ -2649,106 +2753,222 @@ def create_pulse_card(value, include_chart=True):
                 value = max(0, min(100, value))
                 trend_data.insert(0, value)
             
-            # Create the plotly figure
-            pulse_chart = go.Figure()
-            
-            # Add the trend line
-            pulse_chart.add_trace(go.Scatter(
+            # Create trace for the line chart
+            trace = go.Scatter(
                 x=dates,
                 y=trend_data,
                 mode='lines',
                 line=dict(
-                    color=pulse_color,
-                    width=2,
-                    shape='spline'  # Smooth curve
+                    color=pulse_color,  # Match the pulse status color
+                    width=3,
+                    shape='spline'  # Smoothed line
                 ),
-                hoverinfo='none'
-            ))
-        
-        # No need to set layout - it's already set in the create_t2d_pulse_chart function
-
-        # Create the compact square pulse card with integrated chart
-        # Following the mockup design
-        pulse_card = html.Div([
-            # Inner container with all content
-            html.Div([
-                # T2D PULSE branding at top
-                html.Div(
-                    "T2D PULSE",
-                    style={
-                        "fontSize": "18px",
-                        "fontWeight": "500",
-                        "color": "#e74c3c",  # Red T2D branding color
-                        "textAlign": "center",
-                        "marginBottom": "15px",
-                        "fontFamily": "'Arial', sans-serif",
-                        "letterSpacing": "1px"
-                    }
+                fill='tozeroy',
+                fillcolor=f'rgba({pulse_color.lstrip("#")[:2]}, {pulse_color.lstrip("#")[2:4]}, {pulse_color.lstrip("#")[4:6]}, 0.2)',
+                hovertemplate='<b>%{x|%b %d, %Y}</b><br>T2D Pulse: %{y:.1f}<extra></extra>'
+            )
+            
+            # Create layout with colored background regions
+            layout = go.Layout(
+                height=220,
+                margin=dict(l=20, r=20, t=10, b=30),
+                paper_bgcolor='rgba(0,0,0,0)',
+                plot_bgcolor='rgba(0,0,0,0)',
+                xaxis=dict(
+                    title='',
+                    showgrid=False,
+                    showline=True,
+                    linecolor='#ddd',
+                    tickformat='%b %d',
+                    tickangle=-45
                 ),
-                
-                # Large score value
-                html.Div(
-                    f"{score_value:.1f}",
-                    style={
-                        "fontSize": "60px",
-                        "fontWeight": "600",
-                        "color": pulse_color,
-                        "textAlign": "center",
-                        "lineHeight": "1"
-                    }
+                yaxis=dict(
+                    title='',
+                    range=[0, 100],
+                    showgrid=True,
+                    gridcolor='#eee',
+                    tickvals=[0, 30, 60, 100],
+                    showline=True,
+                    linecolor='#ddd'
                 ),
-                
-                # Status text (Bullish/Neutral/Bearish)
-                html.Div(
-                    pulse_status,
-                    style={
-                        "fontSize": "20px",
-                        "fontWeight": "400",
-                        "color": pulse_color,
-                        "textAlign": "center",
-                        "marginBottom": "25px"
-                    }
-                ),
-                
-                # Minimal chart (if chart data is available)
-                html.Div([
-                    dcc.Graph(
-                        id="t2d-pulse-mini-chart",
-                        figure=pulse_chart,
-                        config={"displayModeBar": False},
-                        style={
-                            "height": "80px",
-                            "width": "100%"
-                        }
+                shapes=[
+                    # Bearish region (0-30)
+                    dict(
+                        type='rect',
+                        xref='paper', yref='y',
+                        x0=0, x1=1,
+                        y0=0, y1=30,
+                        fillcolor='rgba(231, 76, 60, 0.1)',  # Light red
+                        line=dict(width=0)
+                    ),
+                    # Neutral region (30-60)
+                    dict(
+                        type='rect',
+                        xref='paper', yref='y',
+                        x0=0, x1=1,
+                        y0=30, y1=60,
+                        fillcolor='rgba(243, 156, 18, 0.1)',  # Light orange
+                        line=dict(width=0)
+                    ),
+                    # Bullish region (60-100)
+                    dict(
+                        type='rect',
+                        xref='paper', yref='y',
+                        x0=0, x1=1,
+                        y0=60, y1=100,
+                        fillcolor='rgba(46, 204, 113, 0.1)',  # Light green
+                        line=dict(width=0)
                     )
+                ],
+                annotations=[
+                    # Bearish label
+                    dict(
+                        x=0.02, y=15,
+                        xref='paper', yref='y',
+                        text='Bearish',
+                        showarrow=False,
+                        font=dict(
+                            color='rgba(192, 57, 43, 0.7)',
+                            size=12
+                        )
+                    ),
+                    # Neutral label
+                    dict(
+                        x=0.02, y=45,
+                        xref='paper', yref='y',
+                        text='Neutral',
+                        showarrow=False,
+                        font=dict(
+                            color='rgba(211, 84, 0, 0.7)',
+                            size=12
+                        )
+                    ),
+                    # Bullish label
+                    dict(
+                        x=0.02, y=80,
+                        xref='paper', yref='y',
+                        text='Bullish',
+                        showarrow=False,
+                        font=dict(
+                            color='rgba(39, 174, 96, 0.7)',
+                            size=12
+                        )
+                    )
+                ],
+                hovermode='x unified'
+            )
+            
+            pulse_chart = go.Figure(data=[trace], layout=layout)
+        
+        # Create the pulse circle
+        pulse_circle = html.Div([
+            html.Div([
+                html.Div(f"{score_value:.1f}", style={
+                    'fontSize': '42px',
+                    'fontWeight': '600',
+                    'color': pulse_color
+                }),
+                html.Div(pulse_status, style={
+                    'fontSize': '18px',
+                    'color': pulse_color
+                })
+            ], style={
+                'display': 'flex',
+                'flexDirection': 'column',
+                'alignItems': 'center',
+                'justifyContent': 'center',
+                'width': '180px',
+                'height': '180px',
+                'borderRadius': '50%',
+                'border': f'3px solid {pulse_color}',
+                'boxShadow': f'0 0 15px {pulse_color}',
+                'backgroundColor': 'white'
+            })
+        ])
+
+        # Create the side-by-side layout pulse card with integrated chart
+        # Following Option A's design
+        pulse_card = html.Div([
+            # Header with T2D Pulse title
+            html.Div([
+                # T2D PULSE branding with logo
+                html.Div([
+                    # Logo could be added here if available
+                    html.Div("T2D PULSE", style={
+                        'fontSize': '20px',
+                        'fontWeight': '600', 
+                        'color': '#e74c3c',
+                        'letterSpacing': '1px'
+                    })
                 ], style={
-                    "marginBottom": "10px"
+                    'display': 'flex',
+                    'alignItems': 'center',
+                    'justifyContent': 'center',
+                    'marginBottom': '10px'
+                })
+            ]),
+            
+            # Main content row with side-by-side layout
+            html.Div([
+                # Left side - Pulse Circle
+                html.Div([
+                    pulse_circle
+                ], style={
+                    'marginRight': '20px',
+                    'display': 'flex',
+                    'alignItems': 'center',
+                    'justifyContent': 'center'
                 }),
                 
-                # Last updated text at bottom
-                html.Div(
-                    f"Updated {datetime.now().strftime('%b %d, %Y')}",
-                    style={
-                        "fontSize": "11px",
-                        "color": "#888",
-                        "textAlign": "center"
-                    }
-                )
+                # Right side - Trend Chart
+                html.Div([
+                    html.Div("30-Day Trend", style={
+                        'fontSize': '16px',
+                        'fontWeight': '500',
+                        'marginBottom': '5px',
+                        'textAlign': 'center',
+                        'color': '#555'
+                    }),
+                    dcc.Graph(
+                        id='t2d-pulse-trend-chart',
+                        figure=pulse_chart,
+                        config={'displayModeBar': False}
+                    )
+                ], style={
+                    'flex': '1',
+                    'minWidth': '0',  # Allows the flex item to shrink below content size
+                    'height': '280px',
+                    'border': '1px solid #eee',
+                    'borderRadius': '5px',
+                    'padding': '10px',
+                    'backgroundColor': '#fff'
+                })
             ], style={
-                "padding": "20px",
-                "height": "100%",
-                "display": "flex",
-                "flexDirection": "column",
-                "justifyContent": "space-between"
-            })
-        ], className="pulse-card", style={
-            "width": "280px",
-            "height": "280px",
-            "border": f"3px solid {pulse_color}",
-            "borderRadius": "4px",
-            "boxShadow": f"0 0 20px {pulse_color}",
+                'display': 'flex',
+                'flexDirection': 'row',
+                'alignItems': 'center',
+                'justifyContent': 'space-between',
+                'width': '100%',
+                'marginBottom': '10px'
+            }),
+            
+            # Last updated text at bottom
+            html.Div(
+                f"Updated {datetime.now().strftime('%b %d, %Y')}",
+                style={
+                    "fontSize": "11px",
+                    "color": "#888",
+                    "textAlign": "center"
+                }
+            )
+        ], style={
+            "width": "100%",
+            "maxWidth": "800px",
+            "padding": "15px",
+            "borderRadius": "8px",
             "backgroundColor": "white",
-            "margin": "0 auto"
+            "boxShadow": "0 2px 6px rgba(0,0,0,0.1)",
+            "margin": "0 auto 20px"
         })
         
         return pulse_card, pulse_status, pulse_color
