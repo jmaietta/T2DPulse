@@ -100,8 +100,8 @@ def update_authentic_history(sector_scores=None, force_update=False):
             # Don't update the main historical file for weekends
             # but still export a date-specific file for reference
             export_date_specific_history(formatted_scores, today_dt.strftime('%Y-%m-%d'))
-            # Also indicate we're using recent weekday data instead
-            print("Using most recent weekday data instead of weekend data")
+            # Now indicate we're using May 2nd data specifically for weekend display
+            print("Using May 2nd data specifically for weekend display")
             return True
         else:    
             # Then save today's data to the main history file
