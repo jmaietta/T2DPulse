@@ -2692,13 +2692,14 @@ def create_pulse_card(value, include_chart=True):
                         showgrid=False,
                         showline=True,
                         linecolor='#ddd',
-                        tickformat='%b %d',
-                        tickangle=-30,       # Less steep angle
-                        tickfont=dict(size=11),  # Slightly larger tick font
                         showticklabels=False,  # Hide date labels entirely
-                        # Remove rangeslider entirely
-                        rangeslider=dict(visible=False),
-                        rangeselector=dict(visible=False)
+                        # NASDAQ style settings
+                        rangeslider=dict(visible=False),  # No range slider
+                        rangeselector=dict(visible=False),  # No range selector
+                        # Completely hide all date labels
+                        tickmode='auto',
+                        zeroline=False,
+                        automargin=True
                     ),
                     yaxis=dict(
                         title='',
@@ -2831,13 +2832,14 @@ def create_pulse_card(value, include_chart=True):
                     showgrid=False,
                     showline=True,
                     linecolor='#ddd',
-                    tickformat='%b %d',
-                    tickangle=-30,       # Less steep angle
-                    tickfont=dict(size=11),  # Slightly larger tick font
                     showticklabels=False,  # Hide date labels entirely
-                    # Remove rangeslider entirely
-                    rangeslider=dict(visible=False),
-                    rangeselector=dict(visible=False)
+                    # NASDAQ style settings 
+                    rangeslider=dict(visible=False),  # No range slider
+                    rangeselector=dict(visible=False),  # No range selector
+                    # Completely hide all date labels
+                    tickmode='auto',
+                    zeroline=False,
+                    automargin=True
                 ),
                 yaxis=dict(
                     title='',
