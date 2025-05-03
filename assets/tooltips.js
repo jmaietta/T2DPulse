@@ -1,29 +1,26 @@
-/* Custom tooltip handlers for T2D Pulse Dashboard */
+// JavaScript for tooltip functionality
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Wait for the document to be fully loaded
-    setTimeout(function() {
-        // Get the info icon and the tooltip
-        const infoIcon = document.getElementById('info-icon');
-        const tooltip = document.getElementById('sentiment-tooltip');
+    // Get the info icon and tooltip elements
+    const infoIcon = document.getElementById('info-icon');
+    const sentimentTooltip = document.getElementById('sentiment-tooltip');
+    
+    if (infoIcon && sentimentTooltip) {
+        // Show tooltip on hover
+        infoIcon.addEventListener('mouseenter', function() {
+            sentimentTooltip.style.display = 'block';
+        });
         
-        if (infoIcon && tooltip) {
-            // Show the tooltip when hovering over the info icon
-            infoIcon.addEventListener('mouseenter', function() {
-                tooltip.style.display = 'block';
-            });
-            
-            // Hide the tooltip when the mouse leaves the info icon
-            infoIcon.addEventListener('mouseleave', function() {
-                tooltip.style.display = 'none';
-            });
-            
-            // Also hide when clicking elsewhere on the page
-            document.addEventListener('click', function(event) {
-                if (event.target !== infoIcon && !tooltip.contains(event.target)) {
-                    tooltip.style.display = 'none';
-                }
-            });
-        }
-    }, 1000); // Give time for Dash to render the components
+        // Hide tooltip when mouse leaves
+        infoIcon.addEventListener('mouseleave', function() {
+            sentimentTooltip.style.display = 'none';
+        });
+        
+        // Also hide tooltip when clicked elsewhere on the page
+        document.addEventListener('click', function(event) {
+            if (event.target !== infoIcon && !sentimentTooltip.contains(event.target)) {
+                sentimentTooltip.style.display = 'none';
+            }
+        });
+    }
 });
