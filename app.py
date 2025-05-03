@@ -2572,9 +2572,12 @@ def create_pulse_card(value, include_chart=True):
     Returns:
         tuple: (pulse_card, pulse_status, pulse_color)
     """
+    print(f"Creating T2D Pulse card with value: {value}, type: {type(value)}")
     try:
         score_value = float(value)
-    except (ValueError, TypeError):
+        print(f"Successfully converted to float: {score_value}")
+    except (ValueError, TypeError) as e:
+        print(f"Error converting value to float: {e}, using default 0")
         score_value = 0
         
     # Determine Pulse status based on score using Bearish, Neutral, Bullish terminology
@@ -2865,9 +2868,27 @@ def create_pulse_card(value, include_chart=True):
 )
 def update_sentiment_gauge(score):
     """Update the sentiment card based on the score"""
+    print(f"update_sentiment_gauge called with score: {score}, type: {type(score)}")
+    
     if not score:
         return html.Div("Data unavailable", className="no-data-message")
     
+    # PRIORITY 1: First always try to use the authentic pulse score
+    # This is the most accurate source
+    authentic_score = get_authentic_pulse_score()
+    if authentic_score is not None:
+        print(f"ALWAYS USING AUTHENTIC T2D PULSE SCORE: {authentic_score}")
+        pulse_score = authentic_score
+        
+        # Create the pulse card using authentic score
+        pulse_card, pulse_status, pulse_color = create_pulse_card(pulse_score)
+        
+        # Return the pulse card in a container
+        return html.Div([
+            pulse_card
+        ], className="pulse-card-container")
+        
+    # As a fallback, use the sentiment score from the input
     # Create the pulse card using the new function
     pulse_card, pulse_status, pulse_color = create_pulse_card(score)
     
