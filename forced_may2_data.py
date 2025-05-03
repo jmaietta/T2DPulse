@@ -45,22 +45,22 @@ SECTOR_DRIVERS = {
     'Hardware / Devices': ['Consumer Electronics Demand', 'Component Costs', 'Supply Chain Health']
 }
 
-# Sector tickers mapping for representative stocks
+# Sector tickers mapping for representative stocks (limited to 5 per sector)
 SECTOR_TICKERS = {
-    'AdTech': ['APP', 'APPS', 'CRTO', 'DV', 'GOOGL', 'IAD', 'META', 'MGNI', 'PUBM', 'TTD'],
-    'Cloud Infrastructure': ['AMZN', 'CRM', 'CSCO', 'GOOGL', 'MSFT', 'NET', 'ORCL', 'SNOW'],
-    'Fintech': ['ADYEY', 'AFRM', 'BILL', 'COIN', 'FIS', 'FISV', 'GPN', 'PYPL', 'SQ', 'SSNC'],
-    'eCommerce': ['AMZN', 'BABA', 'BKNG', 'CHWY', 'EBAY', 'ETSY', 'PDD', 'SE', 'SHOP', 'WMT'],
-    'Consumer Internet': ['ABNB', 'BKNG', 'GOOGL', 'META', 'NFLX', 'PINS', 'SNAP', 'SPOT', 'TRIP', 'YELP'],
-    'IT Services / Legacy Tech': ['ACN', 'CTSH', 'DXC', 'HPQ', 'IBM', 'INFY', 'PLTR', 'WIT'],
-    'Hardware / Devices': ['AAPL', 'DELL', 'HPQ', 'LOGI', 'PSTG', 'SMCI', 'SSYS', 'STX', 'WDC'],
-    'Cybersecurity': ['CHKP', 'CRWD', 'CYBR', 'FTNT', 'NET', 'OKTA', 'PANW', 'S', 'ZS'],
+    'AdTech': ['GOOGL', 'META', 'MGNI', 'PUBM', 'TTD'],
+    'Cloud Infrastructure': ['AMZN', 'CRM', 'MSFT', 'NET', 'SNOW'],
+    'Fintech': ['AFRM', 'COIN', 'PYPL', 'SQ', 'FISV'],
+    'eCommerce': ['AMZN', 'ETSY', 'SHOP', 'WMT', 'BABA'],
+    'Consumer Internet': ['GOOGL', 'META', 'NFLX', 'SNAP', 'PINS'],
+    'IT Services / Legacy Tech': ['ACN', 'IBM', 'INFY', 'PLTR', 'CTSH'],
+    'Hardware / Devices': ['AAPL', 'DELL', 'HPQ', 'LOGI', 'SMCI'],
+    'Cybersecurity': ['CRWD', 'OKTA', 'PANW', 'ZS', 'FTNT'],
     'Dev Tools / Analytics': ['DDOG', 'ESTC', 'GTLB', 'MDB', 'TEAM'],
-    'AI Infrastructure': ['AMZN', 'GOOGL', 'IBM', 'META', 'MSFT', 'NVDA', 'ORCL'],
-    'Semiconductors': ['AMAT', 'AMD', 'ARM', 'AVGO', 'INTC', 'NVDA', 'QCOM', 'TSM'],
-    'Vertical SaaS': ['CCCS', 'CPRT', 'CSGP', 'GWRE', 'ICE', 'PCOR', 'SSNC', 'TTAN'],
-    'Enterprise SaaS': ['ADSK', 'AMZN', 'CRM', 'IBM', 'MSFT', 'NOW', 'ORCL', 'SAP', 'WDAY'],
-    'SMB SaaS': ['ADBE', 'BILL', 'GOOGL', 'HUBS', 'INTU', 'META']
+    'AI Infrastructure': ['AMZN', 'GOOGL', 'MSFT', 'NVDA', 'META'],
+    'Semiconductors': ['AMD', 'NVDA', 'INTC', 'TSM', 'AVGO'],
+    'Vertical SaaS': ['CCCS', 'CSGP', 'GWRE', 'PCOR', 'SSNC'],
+    'Enterprise SaaS': ['CRM', 'MSFT', 'NOW', 'WDAY', 'ADSK'],
+    'SMB SaaS': ['ADBE', 'BILL', 'GOOGL', 'HUBS', 'INTU']
 }
 
 def get_may2nd_sector_data():
