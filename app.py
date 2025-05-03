@@ -1883,8 +1883,38 @@ app.layout = html.Div([
         html.Div([
             html.Img(src="/assets/T2D Pulse logo.png", height="60px", className="logo"),
             html.Div([
-                html.P("Powering investment decisions with macro data and proprietary intelligence", 
-                      className="dashboard-subtitle")
+                html.P(["Powering investment decisions with macro data and proprietary intelligence ",
+                      html.Span([
+                          html.I(className="fas fa-info-circle", id="info-icon")
+                      ], style={"fontSize": "16px", "verticalAlign": "middle", "cursor": "pointer"})
+                     ], className="dashboard-subtitle"),
+                
+                # Tooltip for sentiment definitions
+                html.Div([
+                    html.H4("T2D Pulse Score Definitions", style={"marginTop": "10px", "marginBottom": "10px"}),
+                    html.Div([
+                        html.Div(["80.0 - 100.0: ", html.Span("Very Bullish", style={"color": "#388e3c"})]),
+                        html.Div(["65.0 - 79.9: ", html.Span("Bullish", style={"color": "#7cb342"})]),
+                        html.Div(["50.0 - 64.9: ", html.Span("Neutral", style={"color": "#fbc02d"})]),
+                        html.Div(["35.0 - 49.9: ", html.Span("Bearish", style={"color": "#f57c00"})]),
+                        html.Div(["0.0 - 34.9: ", html.Span("Very Bearish", style={"color": "#d32f2f"})]),
+                    ], style={"lineHeight": "1.6"}),
+                    html.P(["The T2D Pulse score is calculated using proprietary economic indicators "
+                           "weighted by their impact on technology sector performance."],
+                           style={"marginTop": "10px", "fontSize": "12px", "fontStyle": "italic"})
+                ], id="sentiment-tooltip", style={
+                    "display": "none",
+                    "position": "absolute",
+                    "backgroundColor": "white",
+                    "border": "1px solid #ddd",
+                    "padding": "10px",
+                    "borderRadius": "4px",
+                    "zIndex": "1000",
+                    "boxShadow": "2px 2px 10px rgba(0,0,0,0.1)",
+                    "width": "300px",
+                    "top": "80px",
+                    "right": "10px"
+                })
             ], className="header-text")
         ], className="header-container")
     ], className="header"),

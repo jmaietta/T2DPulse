@@ -1,0 +1,33 @@
+/* Custom CSS for T2D Pulse Dashboard */
+
+/* Tooltip styles */
+.info-tooltip {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.sentiment-tooltip {
+    position: absolute;
+    z-index: 1000;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    width: 320px;
+    top: 30px;
+    right: 0;
+    display: none;
+}
+
+/* Font Awesome icon styles */
+.fa-info-circle {
+    color: #555;
+    font-size: 16px;
+    margin-left: 5px;
+}
+
+.fa-info-circle:hover {
+    color: #2196F3;
+}
