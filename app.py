@@ -5236,6 +5236,20 @@ from plotly.subplots import make_subplots
     prevent_initial_call=False
 )
 def initialize_sentiment_index(_, custom_weights, document_data):
+    # PRIORITY 1: First always try to use the authentic pulse score 
+    # This is the most accurate source for initialization
+    authentic_score = get_authentic_pulse_score()
+    if authentic_score is not None:
+        print(f"INITIALIZATION: USING AUTHENTIC T2D PULSE SCORE: {authentic_score}")
+        # Determine category based on score
+        if authentic_score >= 60:
+            category = "Bullish"
+        elif authentic_score >= 30:
+            category = "Neutral"
+        else:
+            category = "Bearish"
+        return f"{authentic_score:.1f}", category
+    
     # Check if it's a weekend to use the most recent market session data
     import pytz
     from datetime import datetime
@@ -5243,7 +5257,7 @@ def initialize_sentiment_index(_, custom_weights, document_data):
     today = datetime.now(eastern)
     is_weekend = today.weekday() >= 5  # Saturday = 5, Sunday = 6
     
-    # If it's a weekend, use the most recent market session data first
+    # If it's a weekend and no authentic score, use the most recent market session data 
     if is_weekend:
         print("Weekend detected during initialization - using most recent market session data for T2D Pulse calculation")
         
@@ -6635,6 +6649,14 @@ def update_t2d_pulse_score(weights_json):
         # Parse weights from JSON
         weights = json.loads(weights_json)
         
+        # PRIORITY 1: First always try to use the authentic pulse score from data/current_pulse_score.txt
+        # This is the most accurate source and should be used regardless of weekend/weekday
+        authentic_score = get_authentic_pulse_score()
+        if authentic_score is not None:
+            print(f"ALWAYS USING AUTHENTIC T2D PULSE SCORE: {authentic_score}")
+            pulse_score = authentic_score
+            return update_sentiment_gauge(pulse_score)
+            
         # Get current date and check if it's a weekend
         import pytz
         from datetime import datetime
@@ -6642,7 +6664,7 @@ def update_t2d_pulse_score(weights_json):
         today = datetime.now(eastern)
         is_weekend = today.weekday() >= 5  # Saturday = 5, Sunday = 6
         
-        # If it's a weekend, use the most recent market session data
+        # If it's a weekend and authentic score not available, try using the most recent market session data
         if is_weekend:
             print("Weekend detected - using most recent market session data for T2D Pulse calculation")
             
@@ -6679,15 +6701,8 @@ def update_t2d_pulse_score(weights_json):
                     print(f"Error using most recent market data for T2D Pulse calculation: {e}")
                     # Continue to fallback below
             
-            # First try to use the authentic pulse score from data/current_pulse_score.txt
-            authentic_score = get_authentic_pulse_score()
-            if authentic_score is not None:
-                print(f"Using authentic T2D Pulse score: {authentic_score}")
-                pulse_score = authentic_score
-                return update_sentiment_gauge(pulse_score)
-            
-            # If authentic score not available, use May 2nd data as fallback
-            print("Authentic score not available. Fallback to May 2nd data for T2D Pulse calculation")
+            # If recent market data not available, use May 2nd data as fallback
+            print("Recent market data not available. Fallback to May 2nd data for T2D Pulse calculation")
             import forced_may2_data
             
             # Get the reliable May 2nd sector scores directly from our hardcoded values
@@ -6875,6 +6890,14 @@ def reset_weights(n_clicks):
     # Create a new dictionary with equal weights
     equal_weights = {sector: equal_weight for sector in sectors}
     
+    # PRIORITY 1: First always try to use the authentic pulse score
+    # This is the most accurate source and should be used regardless of weekend/weekday
+    authentic_score = get_authentic_pulse_score()
+    if authentic_score is not None:
+        print(f"RESET: USING AUTHENTIC T2D PULSE SCORE: {authentic_score}")
+        return json.dumps(equal_weights), update_sentiment_gauge(authentic_score)
+        
+    # If no authentic score found, continue with normal logic
     # Check if it's a weekend to use May 2nd data
     import pytz
     from datetime import datetime
