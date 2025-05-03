@@ -2590,49 +2590,92 @@ def create_pulse_card(value, include_chart=True):
         pulse_color = "#e74c3c"  # Red - matching sector sentiment color
     
     try:
-        # Create a simple placeholder trend line with mock data for visualization
-        # This ensures we always have a nice looking trend chart even with limited data points
-        import numpy as np
+        # Use authentic historical T2D Pulse score data instead of mock data
+        history_file = "data/t2d_pulse_history.csv"
         
-        # Create dummy x values (30 days)
-        days = 30
-        dates = [(datetime.now() - timedelta(days=i)) for i in range(days, 0, -1)]
-        
-        # Create a realistic looking trend based on the current score
-        # with some random fluctuation
-        np.random.seed(42)  # For consistent results
-        base_value = score_value
-        trend_data = []
-        
-        # Start with slightly lower value and trend toward current
-        starting_value = base_value - 5 + (np.random.random() * 4)
-        
-        for i in range(days):
-            # Create a gradual trend toward the current value with some random noise
-            progress = i / days
-            smooth_trend = starting_value + (base_value - starting_value) * progress
-            # Add some randomness that increases toward the middle of the time period
-            randomness = np.random.normal(0, 2) * (1 - abs(progress - 0.5))
-            value = smooth_trend + randomness
-            # Ensure value stays within range
-            value = max(0, min(100, value))
-            trend_data.append(value)
-        
-        # Create the plotly figure
-        pulse_chart = go.Figure()
-        
-        # Add the trend line
-        pulse_chart.add_trace(go.Scatter(
-            x=dates,
-            y=trend_data,
-            mode='lines',
-            line=dict(
-                color=pulse_color,
-                width=2,
-                shape='spline'  # Smooth curve
-            ),
-            hoverinfo='none'
-        ))
+        if os.path.exists(history_file):
+            print("Using authentic T2D Pulse history for chart")
+            # Read the history file
+            import pandas as pd
+            history_df = pd.read_csv(history_file)
+            
+            # Check if we have the required columns
+            if 'date' in history_df.columns and ('T2D Pulse Score' in history_df.columns or 'pulse_score' in history_df.columns):
+                # Convert date column to datetime
+                history_df['date'] = pd.to_datetime(history_df['date'])
+                
+                # Determine which column has the data (pulse_score or T2D Pulse Score)
+                score_column = 'T2D Pulse Score' if not history_df['T2D Pulse Score'].isna().all() else 'pulse_score'
+                
+                # Drop rows with missing scores
+                history_df = history_df.dropna(subset=[score_column])
+                
+                # Sort by date ascending
+                history_df = history_df.sort_values('date')
+                
+                # Get the last 30 days of data or all data if less than 30 days
+                if len(history_df) > 30:
+                    history_df = history_df.tail(30)
+                    
+                # Create the plotly figure with authentic data
+                pulse_chart = go.Figure()
+                
+                # Add the authentic trend line
+                pulse_chart.add_trace(go.Scatter(
+                    x=history_df['date'],
+                    y=history_df[score_column],
+                    mode='lines',
+                    line=dict(
+                        color=pulse_color,
+                        width=2,
+                        shape='spline'  # Smooth curve
+                    ),
+                    hoverinfo='text',
+                    hovertext=[f"Date: {d.strftime('%Y-%m-%d')}<br>Score: {s:.1f}" 
+                               for d, s in zip(history_df['date'], history_df[score_column])]
+                ))
+                print(f"Created authentic T2D Pulse history chart with {len(history_df)} data points")
+            else:
+                raise ValueError("History file missing required columns")
+        else:
+            print("T2D Pulse history file not found, using fallback data")
+            # Fallback to generic placeholder if history file doesn't exist
+            import numpy as np
+            
+            # Create dummy x values (30 days)
+            days = 30
+            dates = [(datetime.now() - timedelta(days=i)) for i in range(days, 0, -1)]
+            
+            # Start with current value and work backward with minimal variation
+            # This is still a placeholder but less random than before
+            base_value = score_value
+            trend_data = [base_value]
+            
+            # Create a simple declining trend from current with small variations
+            for i in range(1, days):
+                # Add a small decreasing trend with tiny random component
+                prev_value = trend_data[-1]
+                small_trend = prev_value - (0.1 * i/days)
+                value = small_trend + np.random.normal(0, 0.05)  # Very minimal randomness
+                # Ensure value stays within range
+                value = max(0, min(100, value))
+                trend_data.insert(0, value)
+            
+            # Create the plotly figure
+            pulse_chart = go.Figure()
+            
+            # Add the trend line
+            pulse_chart.add_trace(go.Scatter(
+                x=dates,
+                y=trend_data,
+                mode='lines',
+                line=dict(
+                    color=pulse_color,
+                    width=2,
+                    shape='spline'  # Smooth curve
+                ),
+                hoverinfo='none'
+            ))
         
         # Set up the layout for minimal display
         pulse_chart.update_layout(
