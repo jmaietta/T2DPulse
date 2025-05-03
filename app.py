@@ -2631,7 +2631,7 @@ def create_pulse_card(value, include_chart=True):
                         shape='spline'  # Smoothed line
                     ),
                     fill='tozeroy',
-                    fillcolor=f'rgba({pulse_color.lstrip("#")[:2]}, {pulse_color.lstrip("#")[2:4]}, {pulse_color.lstrip("#")[4:6]}, 0.2)',
+                    fillcolor='rgba(243, 156, 18, 0.2)',  # Light orange fill
                     hovertemplate='<b>%{x|%b %d, %Y}</b><br>T2D Pulse: %{y:.1f}<extra></extra>'
                 )
                 
@@ -2764,7 +2764,7 @@ def create_pulse_card(value, include_chart=True):
                     shape='spline'  # Smoothed line
                 ),
                 fill='tozeroy',
-                fillcolor=f'rgba({pulse_color.lstrip("#")[:2]}, {pulse_color.lstrip("#")[2:4]}, {pulse_color.lstrip("#")[4:6]}, 0.2)',
+                fillcolor='rgba(243, 156, 18, 0.2)',  # Light orange fill
                 hovertemplate='<b>%{x|%b %d, %Y}</b><br>T2D Pulse: %{y:.1f}<extra></extra>'
             )
             
