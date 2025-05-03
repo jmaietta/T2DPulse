@@ -5085,7 +5085,85 @@ from plotly.subplots import make_subplots
     prevent_initial_call=False
 )
 def initialize_sentiment_index(_, custom_weights, document_data):
-    # Get sector scores - this is the new approach
+    # Check if it's a weekend to use the most recent market session data
+    import pytz
+    from datetime import datetime
+    eastern = pytz.timezone('US/Eastern')
+    today = datetime.now(eastern)
+    is_weekend = today.weekday() >= 5  # Saturday = 5, Sunday = 6
+    
+    # If it's a weekend, use the most recent market session data first
+    if is_weekend:
+        print("Weekend detected during initialization - using most recent market session data for T2D Pulse calculation")
+        
+        # Get the most recent data file
+        today_str = datetime.now(eastern).strftime('%Y-%m-%d')
+        date_specific_file = f"data/authentic_sector_history_{today_str}.csv"
+        
+        if os.path.exists(date_specific_file):
+            # Load the recent market data from this file
+            try:
+                import pandas as pd
+                recent_df = pd.read_csv(date_specific_file)
+                
+                if not recent_df.empty:
+                    # Get sector columns from the dataframe
+                    sector_columns = [col for col in recent_df.columns if col != 'date']
+                    latest_row = recent_df.iloc[0]
+                    
+                    # Create dictionary of sector scores for T2D pulse calculation
+                    sector_scores_dict = {sector: latest_row[sector] for sector in sector_columns}
+                    
+                    # Create default equal weights
+                    equal_weight = 100.0 / len(sector_columns)
+                    sector_weights = {sector: equal_weight for sector in sector_columns}
+                    
+                    print(f"Using most recent market session data for initial T2D Pulse calculation: {len(sector_scores_dict)} sectors")
+                    
+                    # Calculate T2D Pulse score from the most recent data
+                    pulse_score = calculate_t2d_pulse_from_sectors(sector_scores_dict, sector_weights)
+                    print(f"Calculated T2D Pulse Score from most recent market data: {pulse_score}")
+                    
+                    # Determine category
+                    if pulse_score >= 60:
+                        category = "Bullish"
+                    elif pulse_score >= 30:
+                        category = "Neutral"
+                    else:
+                        category = "Bearish"
+                    
+                    return (f"{pulse_score:.1f}", category)
+            except Exception as e:
+                print(f"Error using most recent market data for initial T2D Pulse calculation: {e}")
+                # Continue to fallback below
+        
+        # Fallback to May 2nd data from forced_may2_data.py if CSV not found
+        try:
+            print("Fallback to May 2nd data for initial T2D Pulse calculation")
+            import forced_may2_data
+            
+            # Get the reliable May 2nd sector scores directly
+            sector_scores_dict = forced_may2_data.get_may2nd_sector_dict()
+            
+            if sector_scores_dict:
+                # Get a pre-calculated score
+                pulse_score = forced_may2_data.get_may2nd_t2d_pulse_score()
+                print(f"Using hardcoded May 2nd T2D Pulse score for initialization: {pulse_score}")
+                
+                # Determine category
+                if pulse_score >= 60:
+                    category = "Bullish"
+                elif pulse_score >= 30:
+                    category = "Neutral"
+                else:
+                    category = "Bearish"
+                
+                return (f"{pulse_score:.1f}", category)
+        except Exception as e:
+            print(f"Error using May 2nd data for initialization: {e}")
+            # Continue to default method below
+    
+    # Regular weekday calculation or fallback if weekend methods fail
     sector_scores = calculate_sector_sentiment()
     
     # Calculate T2D Pulse score from sector scores
