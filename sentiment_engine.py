@@ -96,11 +96,16 @@ IMPORTANCE = {
 }
 
 # ---------- 4) Macro favourability bands ----------
+# These bands determine when an indicator is positive, neutral, or negative
+# Narrower bands = more sensitive to small changes = better daily variation
 BANDS = {
-    "Sector_EMA_Factor":         ("higher", 0.5, -0.5),  # Positive EMA trend is bullish
-    "10Y_Treasury_Yield_%":      ("lower", 3.25, 4.00),
-    "VIX":                       ("lower", 18,   25),
-    "NASDAQ_20d_gap_%":          ("higher", 4.0, -4.0),
+    # Market indicators - more sensitive bands to ensure daily variability
+    "Sector_EMA_Factor":         ("higher", 0.1, -0.1),  # Much narrower band to be sensitive to daily changes
+    "10Y_Treasury_Yield_%":      ("lower", 3.75, 4.25),   # Narrower band sensitive to daily yield changes
+    "VIX":                       ("lower", 20,   28),     # Adjusted for better sensitivity to market volatility
+    "NASDAQ_20d_gap_%":          ("higher", 2.0, -2.0),   # Narrower band to detect smaller NASDAQ movements
+    
+    # Other macro indicators - can stay broader as they change less frequently
     "Fed_Funds_Rate_%":          ("lower", 4.5,  5.25),
     "CPI_YoY_%":                 ("lower", 3.0,  4.0),
     "PCEPI_YoY_%":               ("lower", 3.0,  4.0),
@@ -110,7 +115,7 @@ BANDS = {
     "Software_Dev_Job_Postings_YoY_%": ("higher", 5.0, 0.0),
     "PPI_Data_Processing_YoY_%": ("higher", 5.0, 0.0),
     "PPI_Software_Publishers_YoY_%": ("higher", 5.0, 0.0),
-    "Consumer_Sentiment":        ("higher", 80.0, 70.0),  # Updated bands to better reflect typical range
+    "Consumer_Sentiment":        ("higher", 80.0, 70.0),
 }
 
 # ---------- 5) Default sector weights ----------
@@ -219,8 +224,8 @@ def get_historical_indicator_values(date):
     """
     import pandas as pd
     import os
-    import random
     from datetime import datetime, timedelta
+    # No random imports - using only authentic market data
     
     # Map indicators to CSV files
     file_mapping = {
