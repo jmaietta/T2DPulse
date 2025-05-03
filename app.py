@@ -2549,8 +2549,16 @@ def create_sector_summary(sector_scores):
     ], className="sector-summary-content", style={"marginTop": "15px"})
 
 # Update sentiment gauge
-def create_pulse_card(value):
-    """Create a square pulse card with glow effect based on score"""
+def create_pulse_card(value, include_chart=True):
+    """Create a square pulse card with glow effect based on score
+    
+    Args:
+        value (float or str): The T2D Pulse score value
+        include_chart (bool): Whether to include the 30-day chart below the gauge
+        
+    Returns:
+        tuple: (pulse_card, pulse_status, pulse_color)
+    """
     try:
         score_value = float(value)
     except (ValueError, TypeError):
@@ -2568,8 +2576,8 @@ def create_pulse_card(value):
         pulse_status = "Bearish"
         pulse_color = "#e74c3c"  # Red - matching sector sentiment color
     
-    # Create the pulse card component
-    pulse_card = html.Div([
+    # Create the main pulse gauge component (without the chart)
+    gauge_component = html.Div([
         # Container with vertical centering for all elements
         html.Div([
             # Logo image with responsive sizing
@@ -2667,7 +2675,40 @@ def create_pulse_card(value):
         "border": f"1px solid {pulse_color}"     # Color-matched border
     })
     
-    return pulse_card, pulse_status, pulse_color
+    # If we don't want to include the chart, just return the gauge component
+    if not include_chart:
+        return gauge_component, pulse_status, pulse_color
+    
+    # Add the 30-day trend chart below the gauge
+    # We'll create a container that has both the gauge and chart
+    try:
+        # Get the 30-day pulse history data
+        pulse_chart = create_t2d_pulse_chart(days=30)
+        
+        # Full component with gauge and chart
+        pulse_card = html.Div([
+            # Top section - main gauge
+            gauge_component,
+            
+            # Middle section - small gap/separator
+            html.Div(style={"height": "20px"}),
+            
+            # Bottom section - 30-day trend chart
+            html.Div([
+                dcc.Graph(
+                    id="t2d-pulse-chart",
+                    figure=pulse_chart,
+                    config={"displayModeBar": False}
+                )
+            ], className="t2d-pulse-chart-container")
+        ], className="pulse-full-container")
+        
+        return pulse_card, pulse_status, pulse_color
+    
+    except Exception as e:
+        print(f"Error creating T2D Pulse trend chart: {e}")
+        # If there's an error creating the chart, just return the gauge component
+        return gauge_component, pulse_status, pulse_color
 
 @app.callback(
     Output("sentiment-gauge", "children"),
@@ -5128,6 +5169,9 @@ def initialize_sentiment_index(_, custom_weights, document_data):
                     pulse_score = calculate_t2d_pulse_from_sectors(sector_scores_dict, sector_weights)
                     print(f"Calculated T2D Pulse Score from most recent market data: {pulse_score}")
                     
+                    # Save the T2D Pulse score to history
+                    save_t2d_pulse_score(pulse_score, sector_scores_dict)
+                    
                     # Determine category
                     if pulse_score >= 60:
                         category = "Bullish"
@@ -5153,6 +5197,9 @@ def initialize_sentiment_index(_, custom_weights, document_data):
                 # Get a pre-calculated score
                 pulse_score = forced_may2_data.get_may2nd_t2d_pulse_score()
                 print(f"Using hardcoded May 2nd T2D Pulse score for initialization: {pulse_score}")
+                
+                # Save the T2D Pulse score to history
+                save_t2d_pulse_score(pulse_score, sector_scores_dict)
                 
                 # Determine category
                 if pulse_score >= 60:
@@ -5188,6 +5235,9 @@ def initialize_sentiment_index(_, custom_weights, document_data):
         print(f"Calculating T2D Pulse score from {len(sector_scores)} sector scores")
         print(f"Using following sector weights: {sector_weights}")
         print(f"Calculated T2D Pulse Score: {pulse_score}")
+        
+        # Save the T2D Pulse score to history
+        save_t2d_pulse_score(pulse_score, sector_scores_dict)
         
         # Determine category based on score
         if pulse_score >= 60:
