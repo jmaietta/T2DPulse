@@ -2660,10 +2660,10 @@ def create_pulse_card(value, include_chart=True):
                     hovertemplate='<b>%{x|%b %d, %Y}</b><br>T2D Pulse: %{y:.1f}<extra></extra>'
                 )
                 
-                # Create layout with colored background regions - wider to fill more space
+                # Create layout with colored background regions - taller chart using more space
                 layout = go.Layout(
-                    height=155,            # Height adjusted for banner fit
-                    margin=dict(l=30, r=10, t=5, b=30),  # Reduced margins for more content space
+                    height=160,            # Slightly taller chart (from 155 to 160)
+                    margin=dict(l=30, r=10, t=2, b=20),  # Reduced top and bottom margins
                     paper_bgcolor='rgba(0,0,0,0)',
                     plot_bgcolor='rgba(255,255,255,0.5)',  # Slightly visible background
                     xaxis=dict(
@@ -2795,10 +2795,10 @@ def create_pulse_card(value, include_chart=True):
                 hovertemplate='<b>%{x|%b %d, %Y}</b><br>T2D Pulse: %{y:.1f}<extra></extra>'
             )
             
-            # Create layout with colored background regions - consistent with primary styling
+            # Create layout with colored background regions - taller chart consistent with primary styling
             layout = go.Layout(
-                height=155,            # Height adjusted for banner fit
-                margin=dict(l=30, r=10, t=5, b=30),  # Reduced margins for more content space
+                height=160,            # Slightly taller chart (from 155 to 160)
+                margin=dict(l=30, r=10, t=2, b=20),  # Reduced top and bottom margins
                 paper_bgcolor='rgba(0,0,0,0)',
                 plot_bgcolor='rgba(255,255,255,0.5)',  # Slightly visible background
                 xaxis=dict(
@@ -2944,7 +2944,7 @@ def create_pulse_card(value, include_chart=True):
                     html.Div("30-Day Trend", style={
                         'fontSize': '14px',
                         'fontWeight': '500',
-                        'marginBottom': '5px',
+                        'marginBottom': '2px',  # Reduced from 5px to 2px
                         'textAlign': 'center',
                         'color': '#555'
                     }),
@@ -2959,7 +2959,7 @@ def create_pulse_card(value, include_chart=True):
                     'height': '180px',                # Height for the banner
                     'border': '1px solid #eee',
                     'borderRadius': '5px',
-                    'padding': '10px',
+                    'padding': '10px 10px 5px 10px',  # Reduced bottom padding
                     'backgroundColor': '#fff',
                     'marginRight': '10px'             # Right margin for spacing
                 })
