@@ -181,7 +181,12 @@ def create_mock_pulse_gauge(score=60.8):
     
     # Create the mock gauge
     gauge = html.Div([
-        html.H4('T2D Pulse', style={'textAlign': 'center', 'marginBottom': '5px'}),
+        # Header with T2D logo and title
+        html.Div([
+            html.Img(src='https://cdn.replit.com/attached_assets/T2D%20Pulse%20logo.png', 
+                    style={'height': '40px', 'marginRight': '10px'}),
+            html.H4('T2D Pulse', style={'display': 'inline-block', 'marginBottom': '0px', 'verticalAlign': 'middle'})
+        ], style={'display': 'flex', 'alignItems': 'center', 'justifyContent': 'center', 'marginBottom': '15px'}),
         html.Div([
             html.Div([
                 html.H2(f"{score:.1f}", style={
