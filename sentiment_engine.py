@@ -250,17 +250,8 @@ def get_historical_indicator_values(date):
         "PPI_Software_Publishers_YoY_%": "yoy_pct_change"
     }
     
-    # Get values for each indicator
+    # Get values for each indicator - using only authentic market data
     values = {}
-    
-    # Calculate a date offset factor (0-9) based on the date to create visible variation
-    # This creates different values for different days without resorting to random data
-    # The date.day % 10 gives a value between 0-9 that repeats each month
-    day_offset = date.day % 10
-    
-    # Apply a time-based seed for random factor - this ensures consistent results for the same date
-    # but different results for different dates
-    random.seed(int(date.timestamp()))
     
     # Process standard indicators from CSV files
     for indicator, file_path in file_mapping.items():
