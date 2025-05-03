@@ -51,8 +51,11 @@ import predefined_sector_data
 def get_authentic_pulse_score():
     """Get the most recent authentic T2D Pulse score calculated from sector data"""
     try:
+        print("Attempting to read authentic pulse score from data/current_pulse_score.txt")
         with open("data/current_pulse_score.txt", "r") as f:
-            return float(f.read().strip())
+            score = float(f.read().strip())
+            print(f"Successfully read authentic pulse score: {score}")
+            return score
     except Exception as e:
         print(f"Error reading authentic pulse score: {e}")
         return None
