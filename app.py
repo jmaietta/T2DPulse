@@ -1893,9 +1893,12 @@ app.layout = html.Div([
                         html.Div([
                             html.H4("T2D Pulse Score Definitions", style={"marginTop": "0px", "marginBottom": "10px", "fontSize": "16px"}),
                             html.Div([
-                                html.Div(["80.0 - 100.0: ", html.Span("Bullish", style={"color": "#388e3c"})]),
-                                html.Div(["50.0 - 79.9: ", html.Span("Neutral", style={"color": "#fbc02d"})]),
-                                html.Div(["0.0 - 49.9: ", html.Span("Bearish", style={"color": "#d32f2f"})]),
+                                html.Div(["60.0 - 100.0: ", html.Span("Bullish", style={"color": "#388e3c"}), 
+                                          ": Positive outlook; favorable growth conditions for technology sector"]),
+                                html.Div(["30.0 - 59.9: ", html.Span("Neutral", style={"color": "#fbc02d"}), 
+                                          ": Balanced outlook; mixed signals with both opportunities and challenges"]),
+                                html.Div(["0.0 - 29.9: ", html.Span("Bearish", style={"color": "#d32f2f"}), 
+                                          ": Negative outlook; economic headwinds likely impacting tech industry growth"]),
                             ], style={"lineHeight": "1.6", "fontSize": "14px"}),
                             html.P(["The T2D Pulse score is calculated using proprietary economic indicators "
                                    "weighted by their impact on technology sector performance."],
