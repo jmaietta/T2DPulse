@@ -2895,19 +2895,14 @@ def create_pulse_card(value, include_chart=True):
                 html.Div(f"{score_value:.1f}", style={
                     'fontSize': '42px',  # Larger font size
                     'fontWeight': '600',
-                    'color': pulse_color
+                    'color': pulse_color,
+                    'marginBottom': '5px'  # Small gap between score and status
                 }),
                 html.Div(pulse_status, style={
                     'fontSize': '18px',  # Slightly larger font
                     'color': pulse_color
-                }),
-                html.Div("T2D PULSE", style={
-                    'fontSize': '12px',
-                    'fontWeight': '700',
-                    'color': '#e74c3c',
-                    'letterSpacing': '0.5px',
-                    'marginTop': '5px'
                 })
+                # Removed "T2D PULSE" text as requested to improve vertical alignment
             ], style={
                 'display': 'flex',
                 'flexDirection': 'column',
@@ -2981,19 +2976,7 @@ def create_pulse_card(value, include_chart=True):
         basic_display = html.Div([
             # Simplified layout with just the pulse score
             html.Div([
-                # T2D PULSE branding at top
-                html.Div(
-                    "T2D PULSE",
-                    style={
-                        "fontSize": "16px",
-                        "fontWeight": "500",
-                        "color": "#e74c3c",  # Red T2D branding color
-                        "textAlign": "center",
-                        "marginBottom": "10px",
-                        "fontFamily": "'Arial', sans-serif",
-                        "letterSpacing": "1px"
-                    }
-                ),
+                # Removed T2D PULSE branding at top to match the main design
                 
                 # Large score value
                 html.Div(
