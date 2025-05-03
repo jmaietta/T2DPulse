@@ -6358,10 +6358,12 @@ def update_t2d_pulse_score(weights_json):
             if sector_scores_dict:
                 print(f"Using hardcoded May 2nd sector data for T2D Pulse calculation: {len(sector_scores_dict)} sectors")
                 print(f"Using following sector weights: {weights}")
-                # Calculate the T2D Pulse score from the May 2nd data
-                pulse_score = calculate_t2d_pulse_from_sectors(sector_scores_dict, weights)
-                # Alternatively, use the pre-calculated value directly (less affected by rounding)
-                # pulse_score = forced_may2_data.get_may2nd_t2d_pulse_score()
+                # Use the pre-calculated value directly (less affected by rounding)
+                pulse_score = forced_may2_data.get_may2nd_t2d_pulse_score()
+                print(f"Using hardcoded May 2nd T2D Pulse score: {pulse_score}")
+                # Uncomment if recalculation is needed for debugging
+                # calculated_score = calculate_t2d_pulse_from_sectors(sector_scores_dict, weights)
+                # print(f"Calculated vs Hardcoded: {calculated_score} vs {pulse_score}")
                 print(f"Calculated T2D Pulse Score from May 2nd data: {pulse_score}")
                 # Update the gauge display
                 return update_sentiment_gauge(pulse_score)
@@ -6553,8 +6555,8 @@ def reset_weights(n_clicks):
         sector_scores_dict = forced_may2_data.get_may2nd_sector_dict()
         
         if sector_scores_dict:
-            # Calculate the T2D Pulse score from the May 2nd data with equal weights
-            pulse_score = calculate_t2d_pulse_from_sectors(sector_scores_dict, equal_weights)
+            # Use the pre-calculated May 2nd T2D Pulse score directly
+            pulse_score = forced_may2_data.get_may2nd_t2d_pulse_score()
             print(f"Reset T2D Pulse score to {pulse_score} with equal weights using May 2nd data")
             return json.dumps(equal_weights), f"{pulse_score:.1f}"
     
