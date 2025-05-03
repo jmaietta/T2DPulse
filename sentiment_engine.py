@@ -16,6 +16,7 @@ SECTORS = [
 
 # ---------- 2) Impact grid (1‒3) ----------
 IMPACT: Dict[str, Dict[str, int]] = {
+    "Sector_EMA_Factor":         dict.fromkeys(SECTORS, 3),  # Highest impact for all sectors
     "10Y_Treasury_Yield_%":      dict.fromkeys(SECTORS, 2) | {
         "SMB SaaS": 3, "Enterprise SaaS": 3, "Cloud Infrastructure": 3,
         "Dev Tools / Analytics": 3, "AI Infrastructure": 3,
@@ -62,12 +63,36 @@ IMPACT: Dict[str, Dict[str, int]] = {
 }
 
 # ---------- 3) Importance weights (1‒4 shared across sectors) ----------
+# These weights are designed to align with the requested weights:
+# - Sector Market Cap-Weighted 20-day EMA: 19.50%
+# - 10Y_Treasury_Yield_%: 11.75%
+# - VIX: 11.75%
+# - NASDAQ_20d_gap_%: 3.90%
+# - Fed_Funds_Rate_%: 3.90%
+# - CPI_YoY_%: 5.90%
+# - PCEPI_YoY_%: 5.90%
+# - Real_GDP_Growth_%_SAAR: 5.90%
+# - Real_PCE_YoY_%: 5.90%
+# - Unemployment_%: 5.90%
+# - Software_Dev_Job_Postings_YoY_%: 3.90%
+# - PPI_Data_Processing_YoY_%: 2.00%
+# - PPI_Software_Publishers_YoY_%: 2.00%
+# - Consumer_Sentiment: 11.80%
 IMPORTANCE = {
-    "NASDAQ_20d_gap_%": 3,  # Changed from 4 to 3 as requested
-    "10Y_Treasury_Yield_%": 3,
-    "VIX": 3,
-    "Consumer_Sentiment": 3,  # Adding Consumer Sentiment with equal weight to VIX and Treasury
-    # all others default to 1
+    "Sector_EMA_Factor": 3.25,  # High importance to achieve 19.50% weight
+    "10Y_Treasury_Yield_%": 2.35, # Medium-high importance to achieve 11.75% weight
+    "VIX": 2.35,               # Medium-high importance to achieve 11.75% weight
+    "NASDAQ_20d_gap_%": 0.65,  # Lower importance to achieve 3.90% weight
+    "Fed_Funds_Rate_%": 0.975, # Medium-low importance to achieve 3.90% weight
+    "CPI_YoY_%": 1.475,        # Medium importance to achieve 5.90% weight
+    "PCEPI_YoY_%": 1.475,      # Medium importance to achieve 5.90% weight
+    "Real_GDP_Growth_%_SAAR": 1.475, # Medium importance to achieve 5.90% weight
+    "Real_PCE_YoY_%": 1.475,   # Medium importance to achieve 5.90% weight
+    "Unemployment_%": 1.475,   # Medium importance to achieve 5.90% weight
+    "Software_Dev_Job_Postings_YoY_%": 1.95, # Medium importance to achieve 3.90% weight
+    "PPI_Data_Processing_YoY_%": 1.0, # Standard importance to achieve 2.00% weight
+    "PPI_Software_Publishers_YoY_%": 1.0, # Standard importance to achieve 2.00% weight
+    "Consumer_Sentiment": 1.97  # Medium-high importance to achieve 11.80% weight
 }
 
 # ---------- 4) Macro favourability bands ----------
