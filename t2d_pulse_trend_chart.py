@@ -1,150 +1,163 @@
 #!/usr/bin/env python3
 # t2d_pulse_trend_chart.py
 # -----------------------------------------------------------
-# Creates and updates the 30-day T2D Pulse trend chart for the dashboard
+# Create mini trend charts for T2D Pulse score history using authentic data
 
-import plotly.graph_objs as go
-from t2d_pulse_history import get_t2d_pulse_history
+import os
+import plotly.graph_objects as go
+import pandas as pd
+import pytz
+from datetime import datetime, timedelta
 
-def create_t2d_pulse_chart(days=30):
+# Color scheme for trend charts
+TREND_COLORS = {
+    'line': '#2E86C1',           # Main line color (blue)
+    'fill': 'rgba(46,134,193,0.2)',  # Fill color (light blue)
+    'marker': '#2471A3',         # Point marker color (darker blue)
+    'highlight': '#F39C12'       # Highlight color (orange)
+}
+
+def create_t2d_pulse_chart(pulse_color, height=80, show_axes=False, auto_range=True, show_value=False):
     """
-    Create a 30-day T2D Pulse trend chart
+    Create a mini trend chart for T2D Pulse using authentic historical data
     
     Args:
-        days (int): Number of days of history to include
+        pulse_color (str): Color for the pulse trend line
+        height (int, optional): Height of the chart in pixels
+        show_axes (bool, optional): Whether to show axes
+        auto_range (bool, optional): Whether to auto-range the y-axis
+        show_value (bool, optional): Whether to show the latest value annotation
         
     Returns:
-        Figure: Plotly figure object for the chart
+        dict: Plotly figure object
     """
-    # Get historical data
-    pulse_data = get_t2d_pulse_history(days)
+    # Read the authentic T2D Pulse history file
+    history_file = "data/t2d_pulse_history.csv"
     
-    if pulse_data.empty:
-        # Return empty figure with message if no data
+    if not os.path.exists(history_file):
+        # Return empty chart if no data available
         fig = go.Figure()
-        fig.update_layout(
-            title="No T2D Pulse history data available",
-            height=300,
-            xaxis_title="Date",
-            yaxis_title="Pulse Score"
-        )
+        fig.update_layout(height=height, margin=dict(l=0, r=0, t=0, b=0))
         return fig
     
-    # Create trace for the line chart
-    trace = go.Scatter(
-        x=pulse_data['date'],
-        y=pulse_data['pulse_score'],
-        mode='lines+markers',
-        name='T2D Pulse Score',
-        line=dict(
-            color='#2c3e50',
-            width=3,
-            shape='spline'  # Smoothed line
-        ),
-        marker=dict(
-            size=6,
-            color='#2c3e50'
-        ),
-        hovertemplate='<b>%{x|%b %d, %Y}</b><br>T2D Pulse: %{y:.1f}<extra></extra>'
-    )
-    
-    # Create layout with colored background regions for Bearish, Neutral, Bullish
-    layout = go.Layout(
-        title={
-            'text': 'T2D Pulse Score - 30 Day Trend',
-            'font': {
-                'size': 16,
-                'color': '#333'
-            },
-            'x': 0.01,  # Title aligned to left
-            'xanchor': 'left'
-        },
-        height=300,
-        margin=dict(l=50, r=30, t=60, b=50),
-        xaxis=dict(
-            title='Date',
-            tickformat='%b %d',
-            gridcolor='#f5f5f5'
-        ),
-        yaxis=dict(
-            title='Pulse Score',
-            range=[0, 100],
-            tickvals=[0, 30, 60, 100],
-            gridcolor='#f5f5f5'
-        ),
-        shapes=[
-            # Bearish region (0-30)
-            dict(
-                type='rect',
-                xref='paper', yref='y',
-                x0=0, x1=1,
-                y0=0, y1=30,
-                fillcolor='rgba(231, 76, 60, 0.15)',
-                line=dict(width=0)
-            ),
-            # Neutral region (30-60)
-            dict(
-                type='rect',
-                xref='paper', yref='y',
-                x0=0, x1=1,
-                y0=30, y1=60,
-                fillcolor='rgba(243, 156, 18, 0.15)',
-                line=dict(width=0)
-            ),
-            # Bullish region (60-100)
-            dict(
-                type='rect',
-                xref='paper', yref='y',
-                x0=0, x1=1,
-                y0=60, y1=100,
-                fillcolor='rgba(46, 204, 113, 0.15)',
-                line=dict(width=0)
+    try:
+        # Read the history file
+        df = pd.read_csv(history_file)
+        
+        # Check if we have the required columns
+        if 'date' in df.columns and ('T2D Pulse Score' in df.columns or 'pulse_score' in df.columns):
+            # Convert date column to datetime
+            df['date'] = pd.to_datetime(df['date'])
+            
+            # Determine which column has the data (pulse_score or T2D Pulse Score)
+            score_column = 'T2D Pulse Score' if 'T2D Pulse Score' in df.columns and not df['T2D Pulse Score'].isna().all() else 'pulse_score'
+            
+            # Drop rows with missing scores
+            df = df.dropna(subset=[score_column])
+            
+            # Sort by date ascending
+            df = df.sort_values('date')
+            
+            # Get the last 30 days of data or all data if less than 30 days
+            if len(df) > 30:
+                df = df.tail(30)
+                
+            # Convert columns to lists for plotting
+            dates = df['date'].tolist()
+            values = df[score_column].tolist()
+            
+            # Create figure
+            fig = go.Figure()
+            
+            # Add area fill
+            fig.add_trace(go.Scatter(
+                x=dates,
+                y=values,
+                fill='tozeroy',
+                fillcolor=f"rgba{pulse_color[1:-1]}, 0.2)",  # Convert hex to rgba with opacity
+                line=dict(color=pulse_color, width=2),
+                mode='lines',
+                hoverinfo='none',
+                showlegend=False
+            ))
+            
+            # Add markers for each point (for hover info)
+            fig.add_trace(go.Scatter(
+                x=dates,
+                y=values,
+                mode='markers',
+                marker=dict(color=pulse_color, size=4, opacity=0),  # Invisible markers for hover
+                hoverinfo='text',
+                hovertext=[f"Date: {d.strftime('%Y-%m-%d')}<br>Score: {v:.1f}" 
+                           for d, v in zip(dates, values)],
+                showlegend=False
+            ))
+            
+            # Set layout
+            fig.update_layout(
+                height=height,
+                margin=dict(l=5, r=5, t=0, b=20),
+                plot_bgcolor='rgba(0,0,0,0)',
+                paper_bgcolor='rgba(0,0,0,0)',
+                hovermode='closest'
             )
-        ],
-        annotations=[
-            # Bearish label
-            dict(
-                x=0.01, y=15,
-                xref='paper', yref='y',
-                text='Bearish',
-                showarrow=False,
-                font=dict(
-                    color='rgba(192, 57, 43, 0.7)',
-                    size=12
+            
+            # Hide axes if requested
+            if not show_axes:
+                fig.update_xaxes(
+                    showgrid=False,
+                    zeroline=False,
+                    showticklabels=False,
+                    showline=False
                 )
-            ),
-            # Neutral label
-            dict(
-                x=0.01, y=45,
-                xref='paper', yref='y',
-                text='Neutral',
-                showarrow=False,
-                font=dict(
-                    color='rgba(211, 84, 0, 0.7)',
-                    size=12
+                fig.update_yaxes(
+                    showgrid=False,
+                    zeroline=False,
+                    showticklabels=False,
+                    showline=False
                 )
-            ),
-            # Bullish label
-            dict(
-                x=0.01, y=80,
-                xref='paper', yref='y',
-                text='Bullish',
-                showarrow=False,
-                font=dict(
-                    color='rgba(39, 174, 96, 0.7)',
-                    size=12
-                )
-            )
-        ],
-        hovermode='x unified',
-        legend=dict(
-            orientation='h',
-            yanchor='bottom',
-            y=1.02,
-            xanchor='right',
-            x=1
-        )
-    )
+            
+            # Set y-axis range to focus on differences
+            if auto_range:
+                # Let Plotly handle auto-ranging but with padding
+                y_min = min(values) - 10 if values else 0
+                y_max = max(values) + 10 if values else 100
+                fig.update_yaxes(range=[max(0, y_min), min(100, y_max)])
+            else:
+                # Fixed range from 0-100 for consistent visualization
+                fig.update_yaxes(range=[0, 100])
+            
+            return fig
+        else:
+            raise ValueError("History file missing required columns")
+            
+    except Exception as e:
+        print(f"Error creating T2D Pulse trend chart: {e}")
+        # Return empty chart if there's an error
+        fig = go.Figure()
+        fig.update_layout(height=height, margin=dict(l=0, r=0, t=0, b=0))
+        return fig
+
+if __name__ == "__main__":
+    # Test the trend chart
+    import dash
+    import dash_bootstrap_components as dbc
+    from dash import html, dcc
     
-    fig = go.Figure(data=[trace], layout=layout)
-    return fig
+    app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
+    
+    # Create layout
+    app.layout = dbc.Container([
+        html.H1("T2D Pulse Trend Chart"),
+        
+        # Mini trend chart
+        dbc.Row([
+            dbc.Col([
+                html.H4("T2D Pulse Score"),
+                dcc.Graph(figure=create_t2d_pulse_chart("#f39c12"))
+            ], width=6),
+        ]),
+    ])
+    
+    # Run the app
+    app.run_server(host='0.0.0.0', port=5050, debug=True)

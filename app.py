@@ -2620,24 +2620,9 @@ def create_pulse_card(value, include_chart=True):
                 if len(history_df) > 30:
                     history_df = history_df.tail(30)
                     
-                # Create the plotly figure with authentic data
-                pulse_chart = go.Figure()
-                
-                # Add the authentic trend line
-                pulse_chart.add_trace(go.Scatter(
-                    x=history_df['date'],
-                    y=history_df[score_column],
-                    mode='lines',
-                    line=dict(
-                        color=pulse_color,
-                        width=2,
-                        shape='spline'  # Smooth curve
-                    ),
-                    hoverinfo='text',
-                    hovertext=[f"Date: {d.strftime('%Y-%m-%d')}<br>Score: {s:.1f}" 
-                               for d, s in zip(history_df['date'], history_df[score_column])]
-                ))
-                print(f"Created authentic T2D Pulse history chart with {len(history_df)} data points")
+                # Create the plotly figure with authentic data using our consistent chart style
+                pulse_chart = create_t2d_pulse_chart(pulse_color)
+                print(f"Created authentic T2D Pulse history chart with the consistent sector card style")
             else:
                 raise ValueError("History file missing required columns")
         else:
@@ -2680,27 +2665,7 @@ def create_pulse_card(value, include_chart=True):
                 hoverinfo='none'
             ))
         
-        # Set up the layout for minimal display
-        pulse_chart.update_layout(
-            height=80,
-            margin=dict(l=5, r=5, t=0, b=20),
-            showlegend=False,
-            paper_bgcolor='rgba(0,0,0,0)',
-            plot_bgcolor='rgba(0,0,0,0)',
-            xaxis=dict(
-                showgrid=False,
-                zeroline=False,
-                showticklabels=False,
-                showline=False
-            ),
-            yaxis=dict(
-                showgrid=False,
-                zeroline=False,
-                showticklabels=False,
-                showline=False,
-                range=[max(0, score_value-15), min(100, score_value+15)]  # Focus on the relevant range
-            )
-        )
+        # No need to set layout - it's already set in the create_t2d_pulse_chart function
 
         # Create the compact square pulse card with integrated chart
         # Following the mockup design
