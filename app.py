@@ -2896,7 +2896,7 @@ def create_pulse_card(value, include_chart=True):
                 html.Img(
                     src='/assets/pulse_logo.png',  # Path to the logo image
                     style={
-                        'height': '25px',  # Control the height
+                        'height': '35px',  # Increased height from 25px to 35px
                         'marginBottom': '10px',  # Space below the logo
                         'marginTop': '-10px'  # Pull up slightly to maintain overall sizing
                     }
@@ -2990,7 +2990,7 @@ def create_pulse_card(value, include_chart=True):
                 html.Img(
                     src='/assets/pulse_logo.png',
                     style={
-                        'height': '25px',
+                        'height': '35px',  # Increased to match main design
                         'marginBottom': '10px',
                         'marginTop': '5px'
                     }
