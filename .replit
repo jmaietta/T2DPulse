@@ -20,6 +20,26 @@ args = "Economic Dashboard Server"
 task = "workflow.run"
 args = "T2D Pulse Chart Mockup"
 
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "Option A Mockup"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "Option A Revised Mockup"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "Option B Revised Mockup"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "Option C Revised Mockup"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "Option D Revised Mockup"
+
 [[workflows.workflow]]
 name = "Economic Dashboard Server"
 author = "agent"
@@ -43,6 +63,51 @@ author = "agent"
 task = "shell.exec"
 args = "python t2d_pulse_chart.py"
 waitForPort = 5050
+
+[[workflows.workflow]]
+name = "Option A Mockup"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "python option_a_mockup.py"
+waitForPort = 5000
+
+[[workflows.workflow]]
+name = "Option A Revised Mockup"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "python option_a_revised_mockup.py"
+waitForPort = 5001
+
+[[workflows.workflow]]
+name = "Option B Revised Mockup"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "python option_b_revised_mockup.py"
+waitForPort = 5002
+
+[[workflows.workflow]]
+name = "Option C Revised Mockup"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "python option_c_revised_mockup.py"
+waitForPort = 5003
+
+[[workflows.workflow]]
+name = "Option D Revised Mockup"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "python option_d_revised_mockup.py"
+waitForPort = 5004
 
 [deployment]
 run = ["sh", "-c", "python wsgi.py"]

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# option_c_mockup.py - Card Layout with Sectors Integration
+# option_c_revised_mockup.py - Card Layout with Sectors Integration
 # -----------------------------------------------------------
 # Option C: Horizontal card layout with sectors preview
 
@@ -12,9 +12,6 @@ import numpy as np
 from datetime import datetime, timedelta
 import base64
 import os
-
-# Import the glowing circle component
-from simple_glow_mockup import create_pulse_glow_circle
 
 # T2D logo path
 T2D_LOGO_PATH = "attached_assets/T2D Pulse logo.png"
@@ -30,7 +27,7 @@ def generate_sample_pulse_data(days=30):
     # Generate dates
     date_range = pd.date_range(start=start_date, end=end_date, freq='D')
     
-    # Generate scores using a sine wave pattern with noise
+    # Generate scores with trend around the authentic value of 55.7
     baseline = 55.7  # Current authentic score
     x = np.linspace(0, 3*np.pi, len(date_range))
     trend = 5 * np.sin(x) + np.random.normal(0, 2, len(date_range))
@@ -254,6 +251,47 @@ def create_sector_preview():
         'overflowY': 'auto'
     })
 
+# Create pulse circle
+def create_pulse_circle(score=55.7, size=180):
+    # Determine color based on score
+    if score >= 60:
+        color = '#2ecc71'  # Green for Bullish
+        status = 'Bullish'
+    elif score <= 30:
+        color = '#e74c3c'  # Red for Bearish
+        status = 'Bearish'
+    else:
+        color = '#f39c12'  # Orange for Neutral
+        status = 'Neutral'
+    
+    # Create the circle component
+    circle = html.Div([
+        html.Div([
+            html.Div(f"{score:.1f}", style={
+                'fontSize': '42px',
+                'fontWeight': '600',
+                'color': color
+            }),
+            html.Div(status, style={
+                'fontSize': '18px',
+                'color': color
+            })
+        ], style={
+            'display': 'flex',
+            'flexDirection': 'column',
+            'alignItems': 'center',
+            'justifyContent': 'center',
+            'width': f"{size}px",
+            'height': f"{size}px",
+            'borderRadius': '50%',
+            'border': f'3px solid {color}',
+            'boxShadow': f'0 0 15px {color}',
+            'backgroundColor': 'white'
+        })
+    ])
+    
+    return circle
+
 # Encode T2D logo in base64 if it exists
 def encode_t2d_logo():
     if os.path.exists(T2D_LOGO_PATH):
@@ -265,129 +303,146 @@ def encode_t2d_logo():
 # Define the layout
 app.layout = html.Div([
     html.Div([
-        # T2D Pulse header with logo
-        html.Div([
-            html.Img(src=encode_t2d_logo() or '', 
-                   style={'height': '40px', 'marginRight': '10px'}),
-            html.H4('T2D PULSE', style={'margin': '0', 'color': '#e74c3c'})
-        ], style={
-            'display': 'flex',
-            'alignItems': 'center',
-            'justifyContent': 'center',
-            'marginBottom': '15px',
-            'borderBottom': '1px solid #eee',
-            'paddingBottom': '10px'
-        }),
+        # Title with explanation
+        html.H3("Option C: Card Layout with Sectors Integration", 
+                style={'textAlign': 'center', 'marginBottom': '20px'}),
         
-        # Option C: Horizontal card layout with sectors preview
+        html.P("This layout presents a horizontal card with three main sections: "
+               "T2D Pulse circle on the left, 30-day trend chart in the middle, and "
+               "top sector scores on the right. This integrated approach combines the pulse "
+               "visualization with relevant sector-level information.",
+               style={'textAlign': 'center', 'marginBottom': '30px', 'maxWidth': '800px', 'margin': '0 auto'}),
+        
+        # Main content
         html.Div([
-            # Card with pulse score circle, trend chart, and sector preview
-            dbc.Card([
-                dbc.CardBody([
-                    # Main content row
-                    html.Div([
-                        # Left column - Pulse Circle with title
+            # Header with T2D logo
+            html.Div([
+                html.Img(src=encode_t2d_logo() or '', 
+                       style={'height': '40px', 'marginRight': '10px'}),
+                html.H4('T2D PULSE', style={'margin': '0', 'color': '#e74c3c'})
+            ], style={
+                'display': 'flex',
+                'alignItems': 'center',
+                'justifyContent': 'center',
+                'marginBottom': '15px',
+                'borderBottom': '1px solid #eee',
+                'paddingBottom': '10px'
+            }),
+            
+            # Option C: Horizontal card layout with sectors preview
+            html.Div([
+                # Card with pulse score circle, trend chart, and sector preview
+                dbc.Card([
+                    dbc.CardBody([
+                        # Main content row
                         html.Div([
-                            # Section title
-                            html.Div("Current Sentiment", style={
-                                'fontSize': '16px',
-                                'fontWeight': '500',
-                                'marginBottom': '10px',
-                                'color': '#555',
-                                'textAlign': 'center'
-                            }),
-                            
-                            # Circle
+                            # Left column - Pulse Circle with title
                             html.Div([
-                                create_pulse_glow_circle(55.7, size=200)
-                            ], style={
-                                'display': 'flex',
-                                'justifyContent': 'center'
-                            })
-                        ], style={
-                            'width': '200px',
-                            'marginRight': '20px'
-                        }),
-                        
-                        # Middle column - Trend Chart
-                        html.Div([
-                            # Section title
-                            html.Div("30-Day Trend", style={
-                                'fontSize': '16px',
-                                'fontWeight': '500',
-                                'marginBottom': '10px',
-                                'color': '#555'
-                            }),
-                            
-                            # Chart
-                            dcc.Graph(
-                                id='trend-chart',
-                                figure=create_trend_chart(generate_sample_pulse_data()),
-                                config={'displayModeBar': False}
-                            )
-                        ], style={
-                            'flex': '1',
-                            'minWidth': '400px'
-                        }),
-                        
-                        # Right column - Top Sectors Preview
-                        html.Div([
-                            # Section title
-                            html.Div("Top Sectors", style={
-                                'fontSize': '16px',
-                                'fontWeight': '500',
-                                'marginBottom': '10px',
-                                'color': '#555'
-                            }),
-                            
-                            # Sector preview list
-                            create_sector_preview(),
-                            
-                            # View all link
-                            html.Div([
-                                html.A("View All Sectors", href="#", style={
-                                    'fontSize': '13px',
-                                    'color': '#3498db',
-                                    'textDecoration': 'none'
+                                # Section title
+                                html.Div("Current Sentiment", style={
+                                    'fontSize': '16px',
+                                    'fontWeight': '500',
+                                    'marginBottom': '10px',
+                                    'color': '#555',
+                                    'textAlign': 'center'
+                                }),
+                                
+                                # Circle
+                                html.Div([
+                                    create_pulse_circle(55.7, 180)
+                                ], style={
+                                    'display': 'flex',
+                                    'justifyContent': 'center'
                                 })
                             ], style={
-                                'textAlign': 'right',
-                                'marginTop': '8px',
-                                'paddingRight': '5px'
+                                'width': '200px',
+                                'marginRight': '20px'
+                            }),
+                            
+                            # Middle column - Trend Chart
+                            html.Div([
+                                # Section title
+                                html.Div("30-Day Trend", style={
+                                    'fontSize': '16px',
+                                    'fontWeight': '500',
+                                    'marginBottom': '10px',
+                                    'color': '#555'
+                                }),
+                                
+                                # Chart
+                                dcc.Graph(
+                                    id='trend-chart',
+                                    figure=create_trend_chart(generate_sample_pulse_data()),
+                                    config={'displayModeBar': False}
+                                )
+                            ], style={
+                                'flex': '1',
+                                'minWidth': '400px'
+                            }),
+                            
+                            # Right column - Top Sectors Preview
+                            html.Div([
+                                # Section title
+                                html.Div("Top Sectors", style={
+                                    'fontSize': '16px',
+                                    'fontWeight': '500',
+                                    'marginBottom': '10px',
+                                    'color': '#555'
+                                }),
+                                
+                                # Sector preview list
+                                create_sector_preview(),
+                                
+                                # View all link
+                                html.Div([
+                                    html.A("View All Sectors", href="#", style={
+                                        'fontSize': '13px',
+                                        'color': '#3498db',
+                                        'textDecoration': 'none'
+                                    })
+                                ], style={
+                                    'textAlign': 'right',
+                                    'marginTop': '8px',
+                                    'paddingRight': '5px'
+                                })
+                            ], style={
+                                'width': '250px',
+                                'marginLeft': '20px',
+                                'borderLeft': '1px solid #eee',
+                                'paddingLeft': '15px'
                             })
                         ], style={
-                            'width': '250px',
-                            'marginLeft': '20px',
-                            'borderLeft': '1px solid #eee',
-                            'paddingLeft': '15px'
+                            'display': 'flex',
+                            'flexWrap': 'wrap'
                         })
-                    ], style={
-                        'display': 'flex',
-                        'flexWrap': 'wrap'
-                    })
-                ])
-            ], className="shadow-sm"),
-        ]),
-        
-        # Last updated text
-        html.Div([
-            f"Data refreshed on {datetime.now().strftime('%b %d, %Y')}"
+                    ])
+                ], className="shadow-sm"),
+            ]),
+            
+            # Last updated text
+            html.Div([
+                f"Data refreshed on {datetime.now().strftime('%b %d, %Y')}"
+            ], style={
+                'textAlign': 'center',
+                'color': '#888',
+                'fontSize': '12px',
+                'marginTop': '15px'
+            })
         ], style={
-            'textAlign': 'center',
-            'color': '#888',
-            'fontSize': '12px',
-            'marginTop': '15px'
+            'maxWidth': '1000px',
+            'margin': '0 auto',
+            'padding': '20px',
+            'backgroundColor': '#fff',
+            'borderRadius': '8px',
+            'boxShadow': '0 2px 4px rgba(0, 0, 0, 0.05)'
         })
     ], style={
-        'maxWidth': '1200px',
-        'margin': '0 auto',
         'padding': '20px',
         'backgroundColor': '#f8f9fa',
-        'borderRadius': '8px',
-        'boxShadow': '0 2px 4px rgba(0, 0, 0, 0.05)'
+        'minHeight': '100vh'
     })
 ])
 
 # Run the app
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0', port=5002)
+    app.run(debug=True, host='0.0.0.0', port=5003)
