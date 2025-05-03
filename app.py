@@ -6358,7 +6358,42 @@ def update_t2d_pulse_score(weights_json):
         # Parse weights from JSON
         weights = json.loads(weights_json)
         
-        # Get sector scores
+        # Get current date and check if it's a weekend
+        import pytz
+        eastern = pytz.timezone('US/Eastern')
+        today = datetime.now(eastern)
+        is_weekend = today.weekday() >= 5  # Saturday = 5, Sunday = 6
+        
+        # If it's a weekend, get the most recent weekday sector data directly
+        if is_weekend:
+            print("Today is a weekend - loading authentic sector history for T2D Pulse calculation")
+            # Import the module here to prevent circular imports
+            import authentic_sector_history
+            
+            # Get authentic sector history for all sectors - this will return the most recent weekday data
+            sector_history = authentic_sector_history.get_authentic_sector_history()
+            if sector_history:
+                # Create a dictionary of sector names to their most recent values
+                sector_scores_dict = {}
+                for sector, data in sector_history.items():
+                    if not data.empty:
+                        # Get the most recent value (already in 0-100 scale)
+                        latest_value = data.iloc[-1]['value']
+                        sector_scores_dict[sector] = latest_value
+                
+                if sector_scores_dict:
+                    print(f"Calculating T2D Pulse score from {len(sector_scores_dict)} sector scores")
+                    print(f"Using following sector weights: {weights}")
+                    # Calculate the T2D Pulse score from the historical data
+                    pulse_score = calculate_t2d_pulse_from_sectors(sector_scores_dict, weights)
+                    print(f"Calculated T2D Pulse Score: {pulse_score}")
+                    # Update the gauge display
+                    return update_sentiment_gauge(pulse_score)
+            
+            # If we couldn't get historical data, fall back to regular calculation
+            print("Couldn't get historical sector data for T2D Pulse, falling back to calculation")
+        
+        # Get sector scores through regular calculation on weekdays or as fallback
         sector_scores = calculate_sector_sentiment()
         
         if not sector_scores:
