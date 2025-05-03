@@ -2946,11 +2946,16 @@ def create_pulse_card(value, include_chart=True):
                     dcc.Graph(
                         id='t2d-pulse-trend-chart',
                         figure=pulse_chart,
-                        config={'displayModeBar': False}
+                        config={
+                            'displayModeBar': False,
+                            'responsive': True,  # Make the graph responsive
+                            'staticPlot': False  # Allow zooming/panning but improve initial render
+                        },
+                        style={'width': '100%', 'height': '100%'}  # Ensure graph fills its container
                     )
                 ], style={
                     'flex': '1 1 auto',               # Grow and shrink as needed
-                    'minWidth': '77%',                # Increased from 70% to 77% (10% wider)
+                    'width': '77%',                   # Use fixed width instead of minWidth
                     'height': '180px',                # Height for the banner
                     'border': '1px solid #eee',
                     'borderRadius': '5px',
