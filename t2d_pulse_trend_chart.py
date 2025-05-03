@@ -96,13 +96,10 @@ def create_t2d_pulse_chart(pulse_color, height=80, show_axes=False, auto_range=T
             # Set layout
             fig.update_layout(
                 height=height,
-                autosize=True,                    # Make chart automatically size to container
                 margin=dict(l=5, r=5, t=0, b=20),
                 plot_bgcolor='rgba(0,0,0,0)',
                 paper_bgcolor='rgba(0,0,0,0)',
-                hovermode='closest',
-                transition_duration=0,            # No transition animation
-                uirevision=True                   # Preserve UI state on updates
+                hovermode='closest'
             )
             
             # Hide axes if requested
