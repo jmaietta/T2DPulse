@@ -6020,21 +6020,229 @@ def update_vix_graph(n):
 )
 def update_sector_sentiment_container(n):
     """Update the Sector Sentiment container with cards for each technology sector"""
-    # Always use authentic scores from May 2nd for consistency per client requirements
-    # This ensures we always show the correct scores in the sector cards
-    print("Using authentic May 2nd data for all sector cards for consistency")
+    # Get current date and check if it's a weekend
+    import pytz
+    from datetime import datetime
+    eastern = pytz.timezone('US/Eastern')
+    today = datetime.now(eastern)
+    today_str = today.strftime('%Y-%m-%d')
+    is_weekend = today.weekday() >= 5  # Saturday = 5, Sunday = 6
     
-    try:
-        # Import May 2nd data
-        import forced_may2_data
+    print(f"Updating sector sentiment container. Today ({today_str}) is {'a weekend' if is_weekend else 'a weekday'}")
+    
+    # Try to load the latest authentic sector data
+    date_specific_file = f"data/authentic_sector_history_{today_str}.csv"
+    found_authentic_data = False
+    
+    # First attempt to load today's authentic data if available
+    if os.path.exists(date_specific_file):
+        print(f"Found authentic sector data for current date: {today_str}")
+        try:
+            import pandas as pd
+            recent_df = pd.read_csv(date_specific_file)
+            
+            # Check if file has valid data
+            if not recent_df.empty and 'date' in recent_df.columns:
+                # Get sector columns (all except date)
+                sector_columns = [col for col in recent_df.columns if col != 'date']
+                
+                if sector_columns:
+                    print(f"Using authentic sector data for {today_str} with {len(sector_columns)} sectors")
+                    # Create sector data objects in the expected format
+                    authentic_scores = []
+                    latest_row = recent_df.iloc[0]  # Most recent row
+                    
+                    for sector in sector_columns:
+                        # Get normalized score (0-100 scale)
+                        norm_score = latest_row[sector]
+                        # Convert to raw score (-1 to +1 scale)
+                        raw_score = (norm_score / 50.0) - 1.0
+                        
+                        # Generate all the needed fields
+                        sector_data = {
+                            "sector": sector,
+                            "score": raw_score,
+                            "normalized_score": norm_score,
+                            "stance": "Bullish" if norm_score >= 60 else "Bearish" if norm_score <= 30 else "Neutral",
+                            "takeaway": "Outperforming peers" if norm_score >= 60 else 
+                                      "Bearish macro setup" if norm_score <= 30 else 
+                                      "Neutral – monitor trends",
+                            "drivers": [],  # Will be populated later
+                            "tickers": []   # Will be populated later
+                        }
+                        authentic_scores.append(sector_data)
+                    
+                    # We found authentic data for today
+                    sector_scores = authentic_scores
+                    found_authentic_data = True
+                    print(f"Successfully loaded {len(authentic_scores)} authentic sector scores for {today_str}")
+            else:
+                print(f"Authentic sector data file for {today_str} exists but is empty or invalid")
+        except Exception as e:
+            print(f"Error loading authentic sector data for {today_str}: {e}")
+    
+    # If today's data not found, try to use the most recent authentic data available
+    if not found_authentic_data:
+        print("Today's authentic sector data not found, trying to find most recent authentic data")
+        # If it's a weekend, look for most recent Friday data
+        # Otherwise, for weekdays, try to use yesterday's data if available
         
-        # Get authentic May 2nd sector data in the format expected by sector cards
+        # Import forced_may2_data as our ultimate fallback
+        import forced_may2_data
         sector_scores = forced_may2_data.get_may2nd_sector_data()
-        print(f"Successfully loaded {len(sector_scores)} authentic sector scores for May 2nd")
-    except Exception as e:
-        print(f"Error loading May 2nd sector data: {e}")
-        # If there's an error, still try to calculate current scores as fallback
-        sector_scores = calculate_sector_sentiment()
+        
+        # Check for Friday's data if it's a weekend
+        if is_weekend:
+            from datetime import timedelta
+            # Calculate most recent Friday's date
+            days_since_friday = (today.weekday() - 4) % 7
+            friday_date = today - timedelta(days=days_since_friday)
+            friday_str = friday_date.strftime('%Y-%m-%d')
+            friday_file = f"data/authentic_sector_history_{friday_str}.csv"
+            
+            if os.path.exists(friday_file):
+                try:
+                    print(f"Found Friday's authentic sector data: {friday_str}")
+                    import pandas as pd
+                    friday_df = pd.read_csv(friday_file)
+                    
+                    if not friday_df.empty and 'date' in friday_df.columns:
+                        sector_columns = [col for col in friday_df.columns if col != 'date']
+                        if sector_columns:
+                            authentic_scores = []
+                            latest_row = friday_df.iloc[0]  # Most recent row
+                            
+                            for sector in sector_columns:
+                                norm_score = latest_row[sector]
+                                raw_score = (norm_score / 50.0) - 1.0
+                                
+                                sector_data = {
+                                    "sector": sector,
+                                    "score": raw_score,
+                                    "normalized_score": norm_score,
+                                    "stance": "Bullish" if norm_score >= 60 else "Bearish" if norm_score <= 30 else "Neutral",
+                                    "takeaway": "Outperforming peers" if norm_score >= 60 else 
+                                              "Bearish macro setup" if norm_score <= 30 else 
+                                              "Neutral – monitor trends",
+                                    "drivers": [],
+                                    "tickers": []
+                                }
+                                authentic_scores.append(sector_data)
+                            
+                            sector_scores = authentic_scores
+                            found_authentic_data = True
+                            print(f"Using Friday's authentic sector data ({friday_str}) with {len(authentic_scores)} sectors")
+                except Exception as e:
+                    print(f"Error loading Friday's authentic data: {e}")
+        elif not is_weekend:
+            # On weekdays, try yesterday's data if today's isn't available
+            from datetime import timedelta
+            yesterday = today - timedelta(days=1)
+            yesterday_str = yesterday.strftime('%Y-%m-%d')
+            yesterday_file = f"data/authentic_sector_history_{yesterday_str}.csv"
+            
+            if os.path.exists(yesterday_file):
+                try:
+                    print(f"Found yesterday's authentic sector data: {yesterday_str}")
+                    import pandas as pd
+                    yesterday_df = pd.read_csv(yesterday_file)
+                    
+                    if not yesterday_df.empty and 'date' in yesterday_df.columns:
+                        sector_columns = [col for col in yesterday_df.columns if col != 'date']
+                        if sector_columns:
+                            authentic_scores = []
+                            latest_row = yesterday_df.iloc[0]  # Most recent row
+                            
+                            for sector in sector_columns:
+                                norm_score = latest_row[sector]
+                                raw_score = (norm_score / 50.0) - 1.0
+                                
+                                sector_data = {
+                                    "sector": sector,
+                                    "score": raw_score,
+                                    "normalized_score": norm_score,
+                                    "stance": "Bullish" if norm_score >= 60 else "Bearish" if norm_score <= 30 else "Neutral",
+                                    "takeaway": "Outperforming peers" if norm_score >= 60 else 
+                                              "Bearish macro setup" if norm_score <= 30 else 
+                                              "Neutral – monitor trends",
+                                    "drivers": [],
+                                    "tickers": []
+                                }
+                                authentic_scores.append(sector_data)
+                            
+                            sector_scores = authentic_scores
+                            found_authentic_data = True
+                            print(f"Using yesterday's authentic sector data ({yesterday_str}) with {len(authentic_scores)} sectors")
+                except Exception as e:
+                    print(f"Error loading yesterday's authentic data: {e}")
+    
+    # Last resort: try to find the most recent historical file
+    if not found_authentic_data:
+        print("Could not find recent authentic sector data, looking for most recent historical file")
+        # Look through data directory for most recent historical file
+        historical_files = [f for f in os.listdir('data') if f.startswith('authentic_sector_history_')]
+        if historical_files:
+            # Sort files by date (descending)
+            sorted_files = sorted(historical_files, reverse=True)
+            if sorted_files:
+                most_recent_file = f"data/{sorted_files[0]}"
+                try:
+                    print(f"Found most recent historical file: {sorted_files[0]}")
+                    import pandas as pd
+                    historical_df = pd.read_csv(most_recent_file)
+                    
+                    if not historical_df.empty and 'date' in historical_df.columns:
+                        sector_columns = [col for col in historical_df.columns if col != 'date']
+                        if sector_columns:
+                            authentic_scores = []
+                            latest_row = historical_df.iloc[0]  # Most recent row
+                            
+                            for sector in sector_columns:
+                                norm_score = latest_row[sector]
+                                raw_score = (norm_score / 50.0) - 1.0
+                                
+                                sector_data = {
+                                    "sector": sector,
+                                    "score": raw_score,
+                                    "normalized_score": norm_score,
+                                    "stance": "Bullish" if norm_score >= 60 else "Bearish" if norm_score <= 30 else "Neutral",
+                                    "takeaway": "Outperforming peers" if norm_score >= 60 else 
+                                              "Bearish macro setup" if norm_score <= 30 else 
+                                              "Neutral – monitor trends",
+                                    "drivers": [],
+                                    "tickers": []
+                                }
+                                authentic_scores.append(sector_data)
+                            
+                            sector_scores = authentic_scores
+                            found_authentic_data = True
+                            print(f"Using most recent historical data from {sorted_files[0]} with {len(authentic_scores)} sectors")
+                except Exception as e:
+                    print(f"Error loading most recent historical data: {e}")
+    
+    # If we still don't have authentic data, use May 2nd as the fallback
+    if not found_authentic_data:
+        print("No authentic sector data found, using May 2nd data as fallback")
+        import forced_may2_data
+        sector_scores = forced_may2_data.get_may2nd_sector_data()
+        print(f"Using May 2nd data with {len(sector_scores)} sectors as fallback")
+    
+    # Add drivers and tickers to our sector scores (if they're missing)
+    # Get drivers and tickers from May 2nd data which has complete information
+    import forced_may2_data
+    may2nd_sectors = forced_may2_data.get_may2nd_sector_data()
+    
+    # Create lookup dictionaries for drivers and tickers
+    may2nd_drivers = {s['sector']: s['drivers'] for s in may2nd_sectors}
+    may2nd_tickers = {s['sector']: s['tickers'] for s in may2nd_sectors}
+    
+    # Add drivers and tickers to our authentic scores if they're missing
+    for sector_data in sector_scores:
+        sector = sector_data['sector']
+        if not sector_data.get('drivers') or len(sector_data['drivers']) == 0:
+            sector_data['drivers'] = may2nd_drivers.get(sector, [])
+        if not sector_data.get('tickers') or len(sector_data['tickers']) == 0:
+            sector_data['tickers'] = may2nd_tickers.get(sector, [])
     
     print(f"Sector sentiment update triggered. Results: {sector_scores is not None}")
 
