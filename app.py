@@ -2690,15 +2690,18 @@ def create_pulse_card(value, include_chart=True):
                     xaxis=dict(
                         title='',
                         showgrid=False,
-                        showline=True,
+                        showline=False,  # Hide axis line
                         linecolor='#ddd',
-                        showticklabels=False,  # Hide date labels entirely
                         # NASDAQ style settings
                         rangeslider=dict(visible=False),  # No range slider
                         rangeselector=dict(visible=False),  # No range selector
                         # Completely hide all date labels
                         tickmode='auto',
-                        zeroline=False,
+                        nticks=0,  # Force no ticks
+                        showticklabels=False,  # Hide date labels entirely
+                        showspikes=False,  # No hover spikes
+                        ticks='',  # No tick marks
+                        zeroline=False,  # No zero line
                         automargin=True
                     ),
                     yaxis=dict(
@@ -2830,15 +2833,18 @@ def create_pulse_card(value, include_chart=True):
                 xaxis=dict(
                     title='',
                     showgrid=False,
-                    showline=True,
+                    showline=False,  # Hide axis line
                     linecolor='#ddd',
-                    showticklabels=False,  # Hide date labels entirely
                     # NASDAQ style settings 
                     rangeslider=dict(visible=False),  # No range slider
                     rangeselector=dict(visible=False),  # No range selector
                     # Completely hide all date labels
                     tickmode='auto',
-                    zeroline=False,
+                    nticks=0,  # Force no ticks
+                    showticklabels=False,  # Hide date labels entirely
+                    showspikes=False,  # No hover spikes
+                    ticks='',  # No tick marks
+                    zeroline=False,  # No zero line
                     automargin=True
                 ),
                 yaxis=dict(
