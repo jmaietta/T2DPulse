@@ -2782,7 +2782,13 @@ def create_pulse_card(value, include_chart=True):
                 )
                 
                 pulse_chart = go.Figure(data=[trace], layout=layout)
-                print(f"Created authentic T2D Pulse history chart with the consistent style")
+                
+                # Apply even more aggressive date hiding technique
+                pulse_chart.update_xaxes(
+                    visible=False,  # Make entire axis invisible
+                    showticklabels=False
+                )
+                print(f"Created authentic T2D Pulse history chart with the consistent style and hidden date axis")
             else:
                 raise ValueError("History file missing required columns")
         else:
@@ -2925,6 +2931,12 @@ def create_pulse_card(value, include_chart=True):
             )
             
             pulse_chart = go.Figure(data=[trace], layout=layout)
+            
+            # Apply even more aggressive date hiding technique to fallback chart
+            pulse_chart.update_xaxes(
+                visible=False,  # Make entire axis invisible
+                showticklabels=False
+            )
         
         # Create the pulse circle - sized for banner with larger dimensions
         pulse_circle = html.Div([
