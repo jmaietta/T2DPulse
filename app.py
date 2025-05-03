@@ -2684,7 +2684,7 @@ def create_pulse_card(value, include_chart=True):
                 # Create optimized layout with improved performance
                 layout = go.Layout(
                     height=165,
-                    margin=dict(l=30, r=10, t=2, b=10),
+                    margin=dict(l=30, r=10, t=2, b=20),  # Increased bottom margin from 10 to 20
                     paper_bgcolor='rgba(0,0,0,0)',
                     plot_bgcolor='rgba(255,255,255,0.5)',
                     xaxis=dict(
@@ -2764,7 +2764,7 @@ def create_pulse_card(value, include_chart=True):
             # Create optimized layout with improved performance (same as authentic chart)
             layout = go.Layout(
                 height=165,
-                margin=dict(l=30, r=10, t=2, b=10),
+                margin=dict(l=30, r=10, t=2, b=20),  # Increased bottom margin from 10 to 20
                 paper_bgcolor='rgba(0,0,0,0)',
                 plot_bgcolor='rgba(255,255,255,0.5)',
                 xaxis=dict(
