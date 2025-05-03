@@ -27,6 +27,42 @@ MAY_2ND_SECTOR_SCORES = {
 # Average of the May 2nd scores: (59 + 59.5 + 60 + 62 + 60 + 60 + 62 + 58.5 + 57.5 + 65.5 + 60 + 56.5 + 66 + 65) / 14 = 60.8
 MAY_2ND_T2D_PULSE_SCORE = 60.8
 
+# Sector drivers mapping - key macro factors influencing each sector
+SECTOR_DRIVERS = {
+    'SMB SaaS': ['Interest Rates', 'Small Business Confidence', 'Job Market'],
+    'Enterprise SaaS': ['Corporate IT Spending', 'Digital Transformation', 'Interest Rates'],
+    'Cloud Infrastructure': ['Data Center Expansion', 'Enterprise Cloud Migration', 'AI Adoption'],
+    'AdTech': ['Digital Ad Spending', 'Privacy Regulations', 'Retail Sales'],
+    'Fintech': ['Consumer Spending', 'Interest Rates', 'Payment Volumes'],
+    'Consumer Internet': ['User Engagement', 'Ad Spending', 'Subscription Growth'],
+    'eCommerce': ['Retail Sales', 'Consumer Confidence', 'Shipping Costs'],
+    'Cybersecurity': ['Security Breaches', 'Compliance Requirements', 'Corporate IT Budgets'],
+    'Dev Tools / Analytics': ['Software Development Trends', 'Cloud Adoption', 'Engineering Hiring'],
+    'Semiconductors': ['Global Chip Demand', 'AI Demand', 'Supply Chain Health'],
+    'AI Infrastructure': ['Cloud Compute Growth', 'AI Adoption', 'Enterprise Digital Transformation'],
+    'Vertical SaaS': ['Industry-Specific Adoption', 'Regulatory Changes', 'Operating Efficiency'],
+    'IT Services / Legacy Tech': ['Enterprise IT Spending', 'Digital Transformation', 'Outsourcing Trends'],
+    'Hardware / Devices': ['Consumer Electronics Demand', 'Component Costs', 'Supply Chain Health']
+}
+
+# Sector tickers mapping for representative stocks
+SECTOR_TICKERS = {
+    'AdTech': ['APP', 'APPS', 'CRTO', 'DV', 'GOOGL', 'IAD', 'META', 'MGNI', 'PUBM', 'TTD'],
+    'Cloud Infrastructure': ['AMZN', 'CRM', 'CSCO', 'GOOGL', 'MSFT', 'NET', 'ORCL', 'SNOW'],
+    'Fintech': ['ADYEY', 'AFRM', 'BILL', 'COIN', 'FIS', 'FISV', 'GPN', 'PYPL', 'SQ', 'SSNC'],
+    'eCommerce': ['AMZN', 'BABA', 'BKNG', 'CHWY', 'EBAY', 'ETSY', 'PDD', 'SE', 'SHOP', 'WMT'],
+    'Consumer Internet': ['ABNB', 'BKNG', 'GOOGL', 'META', 'NFLX', 'PINS', 'SNAP', 'SPOT', 'TRIP', 'YELP'],
+    'IT Services / Legacy Tech': ['ACN', 'CTSH', 'DXC', 'HPQ', 'IBM', 'INFY', 'PLTR', 'WIT'],
+    'Hardware / Devices': ['AAPL', 'DELL', 'HPQ', 'LOGI', 'PSTG', 'SMCI', 'SSYS', 'STX', 'WDC'],
+    'Cybersecurity': ['CHKP', 'CRWD', 'CYBR', 'FTNT', 'NET', 'OKTA', 'PANW', 'S', 'ZS'],
+    'Dev Tools / Analytics': ['DDOG', 'ESTC', 'GTLB', 'MDB', 'TEAM'],
+    'AI Infrastructure': ['AMZN', 'GOOGL', 'IBM', 'META', 'MSFT', 'NVDA', 'ORCL'],
+    'Semiconductors': ['AMAT', 'AMD', 'ARM', 'AVGO', 'INTC', 'NVDA', 'QCOM', 'TSM'],
+    'Vertical SaaS': ['CCCS', 'CPRT', 'CSGP', 'GWRE', 'ICE', 'PCOR', 'SSNC', 'TTAN'],
+    'Enterprise SaaS': ['ADSK', 'AMZN', 'CRM', 'IBM', 'MSFT', 'NOW', 'ORCL', 'SAP', 'WDAY'],
+    'SMB SaaS': ['ADBE', 'BILL', 'GOOGL', 'HUBS', 'INTU', 'META']
+}
+
 def get_may2nd_sector_data():
     """
     Return a list of sector data dictionaries with May 2nd values
@@ -47,8 +83,8 @@ def get_may2nd_sector_data():
             "takeaway": "Outperforming peers" if score_value >= 60 else 
                       "Bearish macro setup" if score_value <= 30 else 
                       "Neutral – monitor trends",
-            "drivers": [],  # Empty drivers for historical data
-            "tickers": []   # Empty tickers for historical data
+            "drivers": SECTOR_DRIVERS.get(sector, []),  # Key drivers for this sector
+            "tickers": SECTOR_TICKERS.get(sector, [])  # Representative tickers for this sector
         }
         authentic_scores.append(sector_data)
     
