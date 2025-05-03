@@ -129,6 +129,9 @@ if __name__ == "__main__":
     # Compare with provided scores
     compare_with_provided_scores()
     
+    # Make sure the data directory exists
+    os.makedirs("data", exist_ok=True)
+    
     # Save the current score
     save_authentic_current_score()
     

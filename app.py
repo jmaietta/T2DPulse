@@ -47,6 +47,16 @@ import historical_sector_scores
 import authentic_sector_history
 import predefined_sector_data
 
+# Get the authentic T2D Pulse score
+def get_authentic_pulse_score():
+    """Get the most recent authentic T2D Pulse score calculated from sector data"""
+    try:
+        with open("data/current_pulse_score.txt", "r") as f:
+            return float(f.read().strip())
+    except Exception as e:
+        print(f"Error reading authentic pulse score: {e}")
+        return None
+
 # Consumer sentiment functions defined directly in app.py to avoid circular imports
 
 # Data directory
@@ -6666,8 +6676,15 @@ def update_t2d_pulse_score(weights_json):
                     print(f"Error using most recent market data for T2D Pulse calculation: {e}")
                     # Continue to fallback below
             
-            # If we get here, use May 2nd data as a second fallback
-            print("Fallback to May 2nd data for T2D Pulse calculation")
+            # First try to use the authentic pulse score from data/current_pulse_score.txt
+            authentic_score = get_authentic_pulse_score()
+            if authentic_score is not None:
+                print(f"Using authentic T2D Pulse score: {authentic_score}")
+                pulse_score = authentic_score
+                return update_sentiment_gauge(pulse_score)
+            
+            # If authentic score not available, use May 2nd data as fallback
+            print("Authentic score not available. Fallback to May 2nd data for T2D Pulse calculation")
             import forced_may2_data
             
             # Get the reliable May 2nd sector scores directly from our hardcoded values
@@ -6676,7 +6693,7 @@ def update_t2d_pulse_score(weights_json):
             if sector_scores_dict:
                 print(f"Using hardcoded May 2nd sector data for T2D Pulse calculation: {len(sector_scores_dict)} sectors")
                 print(f"Using following sector weights: {weights}")
-                # Use the pre-calculated value directly
+                # Use the pre-calculated authentic value directly
                 pulse_score = forced_may2_data.get_may2nd_t2d_pulse_score()
                 print(f"Using hardcoded May 2nd T2D Pulse score: {pulse_score}")
                 print(f"Calculated T2D Pulse Score from May 2nd data: {pulse_score}")

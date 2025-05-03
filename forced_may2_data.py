@@ -24,8 +24,8 @@ MAY_2ND_SECTOR_SCORES = {
 }
 
 # T2D Pulse score calculated using May 2nd data with equal weights
-# Average of the May 2nd scores: (59 + 59.5 + 60 + 62 + 60 + 60 + 62 + 58.5 + 57.5 + 65.5 + 60 + 56.5 + 66 + 65) / 14 = 60.8
-MAY_2ND_T2D_PULSE_SCORE = 60.8
+# Authentic score using the calculation from authentic_historical_data.py
+MAY_2ND_T2D_PULSE_SCORE = 55.7
 
 # Sector drivers mapping - key macro factors influencing each sector
 SECTOR_DRIVERS = {
