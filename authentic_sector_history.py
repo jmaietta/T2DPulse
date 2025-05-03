@@ -258,7 +258,24 @@ def save_authentic_sector_history(sector_scores):
         
         # Export today's data to date-specific CSV for direct download
         today_csv_path = f"data/authentic_sector_history_{today}.csv"
-        df.to_csv(today_csv_path, index=False)
+        
+        # Check if today is a weekend
+        today_dt = pd.Timestamp(today)
+        is_weekend = today_dt.dayofweek >= 5  # Saturday = 5, Sunday = 6
+        
+        if is_weekend:
+            # For weekend exports, filter out the weekend dates
+            export_df = df.copy()
+            export_df['day_of_week'] = export_df['date'].dt.dayofweek
+            export_df = export_df[export_df['day_of_week'] < 5]  # Only keep weekdays (0-4)
+            export_df = export_df.drop(columns=['day_of_week'])  # Remove helper column
+            
+            # Save filtered data
+            export_df.to_csv(today_csv_path, index=False)
+            print(f"Exported authentic sector history (weekdays only) to {today_csv_path}")
+        else:
+            # For weekday exports, use the full dataset
+            df.to_csv(today_csv_path, index=False)
         
         print(f"Saved authentic sector history to {json_path}")
         print(f"Exported authentic sector history to {today_csv_path}")

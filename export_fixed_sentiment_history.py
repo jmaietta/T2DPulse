@@ -28,9 +28,16 @@ def export_sentiment_history(output_format='excel'):
         # Read the CSV file
         df = pd.read_csv(csv_path)
         
-        # Format date column (if it's not already in the right format)
-        if pd.api.types.is_datetime64_dtype(df['date']):
-            df['date'] = df['date'].dt.strftime('%Y-%m-%d')
+        # Convert date column to datetime for filtering weekends
+        df['date'] = pd.to_datetime(df['date'])
+        
+        # Filter out weekend dates (Saturday = 5, Sunday = 6)
+        df['day_of_week'] = df['date'].dt.dayofweek
+        df = df[df['day_of_week'] < 5]  # Only keep weekdays (0-4)
+        df = df.drop(columns=['day_of_week'])  # Remove helper column
+        
+        # Format date column to string for output
+        df['date'] = df['date'].dt.strftime('%Y-%m-%d')
             
         # Create the data directory if it doesn't exist
         os.makedirs('data', exist_ok=True)
