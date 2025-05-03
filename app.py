@@ -2892,17 +2892,27 @@ def create_pulse_card(value, include_chart=True):
         # Create the pulse circle - sized for banner with larger dimensions
         pulse_circle = html.Div([
             html.Div([
+                # PULSE logo at the top
+                html.Img(
+                    src='/assets/pulse_logo.png',  # Path to the logo image
+                    style={
+                        'height': '25px',  # Control the height
+                        'marginBottom': '10px',  # Space below the logo
+                        'marginTop': '-10px'  # Pull up slightly to maintain overall sizing
+                    }
+                ),
                 html.Div(f"{score_value:.1f}", style={
                     'fontSize': '42px',  # Larger font size
                     'fontWeight': '600',
                     'color': pulse_color,
-                    'marginBottom': '5px'  # Small gap between score and status
+                    'marginBottom': '5px',  # Small gap between score and status
+                    'marginTop': '-5px'  # Negative margin to compensate for logo space
                 }),
                 html.Div(pulse_status, style={
                     'fontSize': '18px',  # Slightly larger font
                     'color': pulse_color
                 })
-                # Removed "T2D PULSE" text as requested to improve vertical alignment
+                # Added PULSE logo instead of text label
             ], style={
                 'display': 'flex',
                 'flexDirection': 'column',
@@ -2976,7 +2986,15 @@ def create_pulse_card(value, include_chart=True):
         basic_display = html.Div([
             # Simplified layout with just the pulse score
             html.Div([
-                # Removed T2D PULSE branding at top to match the main design
+                # PULSE logo at the top (consistent with main design)
+                html.Img(
+                    src='/assets/pulse_logo.png',
+                    style={
+                        'height': '25px',
+                        'marginBottom': '10px',
+                        'marginTop': '5px'
+                    }
+                ),
                 
                 # Large score value
                 html.Div(
