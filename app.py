@@ -2550,7 +2550,7 @@ def create_sector_summary(sector_scores):
 
 # Update sentiment gauge
 def create_pulse_card(value, include_chart=True):
-    """Create a circular pulse card with glow effect based on score and stretched chart
+    """Create a square pulse card with glow effect based on score and integrated chart
     
     Args:
         value (float or str): The T2D Pulse score value
@@ -2576,189 +2576,201 @@ def create_pulse_card(value, include_chart=True):
         pulse_status = "Bearish"
         pulse_color = "#e74c3c"  # Red - matching sector sentiment color
     
-    # Create a smaller circular gauge component with just the score and status
-    circular_gauge = html.Div([
-        # Circular container for score
-        html.Div([
-            # Score value
-            html.Div(
-                f"{score_value:.1f}",
-                style={
-                    "fontSize": "38px",
-                    "fontWeight": "600",
-                    "color": pulse_color,
-                    "lineHeight": "1",
-                    "position": "absolute",
-                    "top": "50%",
-                    "left": "50%",
-                    "transform": "translate(-50%, -65%)"
-                }
-            ),
-            # Status text below score
-            html.Div(
-                pulse_status,
-                style={
-                    "fontSize": "16px",
-                    "fontWeight": "500",
-                    "color": pulse_color,
-                    "position": "absolute",
-                    "bottom": "23%",
-                    "left": "50%",
-                    "transform": "translateX(-50%)"
-                }
-            )
-        ], style={
-            "position": "relative",
-            "width": "120px",
-            "height": "120px",
-            "borderRadius": "50%",
-            "border": f"2px solid {pulse_color}",
-            "boxShadow": f"0 0 20px {pulse_color}",
-            "margin": "0 auto",
-            "backgroundColor": "white"
-        }),
-        
-        # Sentiment Index label with tooltip
-        html.Div([
-            html.Div(
-                "Sentiment Index",
-                style={
-                    "fontSize": "14px", 
-                    "fontWeight": "500",
-                    "marginRight": "5px",
-                    "display": "inline-block"
-                }),
-            # Tooltip container
-            html.Div([
-                # The tooltip trigger icon - added tabindex for keyboard accessibility
-                html.Span("ⓘ", className="tooltip-icon", tabIndex="0", style={"fontSize": "14px"}),
-                # Tooltip content
-                html.Div([
-                    html.H5("Sentiment Index Categories", style={"marginBottom": "10px", "marginTop": "0"}),
-                    html.Div([
-                        html.Div([
-                            html.Span("Bullish (60-100): ", style={"fontWeight": "bold", "color": "#2ecc71"}),
-                            "Positive outlook; favorable growth conditions for technology sector"
-                        ], style={"marginBottom": "5px"}),
-                        html.Div([
-                            html.Span("Neutral (30-60): ", style={"fontWeight": "bold", "color": "#f39c12"}),
-                            "Balanced outlook; mixed signals with both opportunities and challenges"
-                        ], style={"marginBottom": "5px"}),
-                        html.Div([
-                            html.Span("Bearish (0-30): ", style={"fontWeight": "bold", "color": "#e74c3c"}),
-                            "Negative outlook; economic headwinds likely impacting tech industry growth"
-                        ])
-                    ])
-                ], className="tooltip-content")
-            ], className="tooltip-wrapper")
-        ], style={
-            "textAlign": "center", 
-            "display": "flex", 
-            "alignItems": "center", 
-            "justifyContent": "center",
-            "position": "relative",
-            "height": "25px",
-            "marginTop": "10px",
-            "overflow": "visible"  # Critical for tooltips to be visible
-        }),
-        
-        # Last updated text
-        html.Div([
-            html.Span(id="pulse-last-updated", 
-                    children=f"Last updated: {datetime.now().strftime('%B %d, %Y')}", 
-                    style={
-                        "fontSize": "11px", 
-                        "color": "#95a5a6"
-                    })
-        ], style={"textAlign": "center", "marginTop": "5px"})
-    ], className="circular-pulse-gauge", style={"width": "150px", "padding": "10px 0"})
-    
-    # If we don't want to include the chart, just return the circular gauge
-    if not include_chart:
-        return circular_gauge, pulse_status, pulse_color
-    
-    # Get the T2D logo for header section
-    logo_section = html.Div([
-        html.Img(
-            src="/assets/T2D Pulse logo.png",
-            style={
-                "maxWidth": "100%",
-                "height": "auto",
-                "maxHeight": "50px",
-                "margin": "auto",
-                "display": "block"
-            }
-        )
-    ], style={"textAlign": "center", "marginBottom": "15px"})
-    
     try:
-        # Get the 30-day pulse history data
+        # Get the 30-day pulse history data for the miniature chart
         pulse_chart = create_t2d_pulse_chart(days=30)
         
-        # Create a row layout with circular gauge on left, chart on right
+        # Simplify the chart for the compact display
+        pulse_chart.update_layout(
+            height=80,
+            margin=dict(l=5, r=5, t=0, b=20),
+            showlegend=False,
+            paper_bgcolor='rgba(0,0,0,0)',
+            plot_bgcolor='rgba(0,0,0,0)',
+            # Remove all grid lines
+            xaxis=dict(
+                showgrid=False,
+                zeroline=False,
+                showticklabels=False,
+                showline=False
+            ),
+            yaxis=dict(
+                showgrid=False,
+                zeroline=False,
+                showticklabels=False,
+                showline=False,
+                range=[0, 100]
+            ),
+            # Remove colored background regions
+            shapes=[]
+        )
+        
+        # Update the trace style for simpler presentation
+        if 'data' in pulse_chart and len(pulse_chart['data']) > 0:
+            pulse_chart['data'][0]['line']['color'] = pulse_color
+            pulse_chart['data'][0]['line']['width'] = 2
+            pulse_chart['data'][0]['mode'] = 'lines'
+            pulse_chart['data'][0]['hoverinfo'] = 'none'
+
+        # Create the compact square pulse card with integrated chart
+        # Following the mockup design
         pulse_card = html.Div([
-            # Top section - T2D Logo
-            logo_section,
-            
-            # Main content row with gauge and chart side by side
+            # Inner container with all content
             html.Div([
-                # Left column - circular gauge
-                html.Div([
-                    circular_gauge
-                ], className="pulse-gauge-column", style={
-                    "width": "150px",
-                    "display": "inline-block",
-                    "verticalAlign": "middle"
-                }),
+                # T2D PULSE branding at top
+                html.Div(
+                    "T2D PULSE",
+                    style={
+                        "fontSize": "18px",
+                        "fontWeight": "500",
+                        "color": "#e74c3c",  # Red T2D branding color
+                        "textAlign": "center",
+                        "marginBottom": "15px",
+                        "fontFamily": "'Arial', sans-serif",
+                        "letterSpacing": "1px"
+                    }
+                ),
                 
-                # Right column - trend chart
+                # Large score value
+                html.Div(
+                    f"{score_value:.1f}",
+                    style={
+                        "fontSize": "60px",
+                        "fontWeight": "600",
+                        "color": pulse_color,
+                        "textAlign": "center",
+                        "lineHeight": "1"
+                    }
+                ),
+                
+                # Status text (Bullish/Neutral/Bearish)
+                html.Div(
+                    pulse_status,
+                    style={
+                        "fontSize": "20px",
+                        "fontWeight": "400",
+                        "color": pulse_color,
+                        "textAlign": "center",
+                        "marginBottom": "25px"
+                    }
+                ),
+                
+                # Minimal chart (if chart data is available)
                 html.Div([
                     dcc.Graph(
-                        id="t2d-pulse-chart",
+                        id="t2d-pulse-mini-chart",
                         figure=pulse_chart,
                         config={"displayModeBar": False},
-                        style={"height": "250px"}
+                        style={
+                            "height": "80px",
+                            "width": "100%"
+                        }
                     )
-                ], className="t2d-pulse-chart-column", style={
-                    "width": "calc(100% - 160px)",
-                    "display": "inline-block",
-                    "verticalAlign": "middle",
-                    "paddingLeft": "10px"
-                })
-            ], className="pulse-content-row", style={
+                ], style={
+                    "marginBottom": "10px"
+                }),
+                
+                # Last updated text at bottom
+                html.Div(
+                    f"Updated {datetime.now().strftime('%b %d, %Y')}",
+                    style={
+                        "fontSize": "11px",
+                        "color": "#888",
+                        "textAlign": "center"
+                    }
+                )
+            ], style={
+                "padding": "20px",
+                "height": "100%",
                 "display": "flex",
-                "alignItems": "center",
-                "justifyContent": "space-between",
-                "width": "100%"
+                "flexDirection": "column",
+                "justifyContent": "space-between"
             })
-        ], className="pulse-full-container", style={
-            "border": f"1px solid {pulse_color}",
-            "borderRadius": "8px",
-            "boxShadow": f"0 0 15px {pulse_color}",
-            "padding": "15px"
+        ], className="pulse-card", style={
+            "width": "280px",
+            "height": "280px",
+            "border": f"3px solid {pulse_color}",
+            "borderRadius": "4px",
+            "boxShadow": f"0 0 20px {pulse_color}",
+            "backgroundColor": "white",
+            "margin": "0 auto"
         })
         
         return pulse_card, pulse_status, pulse_color
     
     except Exception as e:
-        print(f"Error creating T2D Pulse trend chart: {e}")
-        # If there's an error creating the chart, create a basic layout
-        fallback_card = html.Div([
-            logo_section,
-            circular_gauge,
-            html.Div("Error loading chart data", style={
-                "textAlign": "center",
-                "color": "#e74c3c",
-                "marginTop": "15px"
+        print(f"Error creating T2D Pulse card with chart: {e}")
+        
+        # Fallback to a basic card without the chart if there's an error
+        basic_card = html.Div([
+            html.Div([
+                # T2D PULSE branding at top
+                html.Div(
+                    "T2D PULSE",
+                    style={
+                        "fontSize": "18px",
+                        "fontWeight": "500",
+                        "color": "#e74c3c",  # Red T2D branding color
+                        "textAlign": "center",
+                        "marginBottom": "20px",
+                        "fontFamily": "'Arial', sans-serif",
+                        "letterSpacing": "1px"
+                    }
+                ),
+                
+                # Large score value
+                html.Div(
+                    f"{score_value:.1f}",
+                    style={
+                        "fontSize": "70px",
+                        "fontWeight": "600",
+                        "color": pulse_color,
+                        "textAlign": "center",
+                        "lineHeight": "1",
+                        "marginBottom": "10px"
+                    }
+                ),
+                
+                # Status text (Bullish/Neutral/Bearish)
+                html.Div(
+                    pulse_status,
+                    style={
+                        "fontSize": "22px",
+                        "fontWeight": "400",
+                        "color": pulse_color,
+                        "textAlign": "center",
+                        "marginBottom": "40px"
+                    }
+                ),
+                
+                # Last updated text at bottom
+                html.Div(
+                    f"Updated {datetime.now().strftime('%b %d, %Y')}",
+                    style={
+                        "fontSize": "11px",
+                        "color": "#888",
+                        "textAlign": "center",
+                        "marginTop": "auto"
+                    }
+                )
+            ], style={
+                "padding": "20px",
+                "height": "100%",
+                "display": "flex",
+                "flexDirection": "column",
+                "justifyContent": "center"
             })
-        ], className="pulse-full-container", style={
-            "border": f"1px solid {pulse_color}",
-            "borderRadius": "8px",
-            "boxShadow": f"0 0 15px {pulse_color}",
-            "padding": "15px"
+        ], className="pulse-card", style={
+            "width": "280px",
+            "height": "280px",
+            "border": f"3px solid {pulse_color}",
+            "borderRadius": "4px",
+            "boxShadow": f"0 0 20px {pulse_color}",
+            "backgroundColor": "white",
+            "margin": "0 auto"
         })
         
-        return fallback_card, pulse_status, pulse_color
+        return basic_card, pulse_status, pulse_color
 
 @app.callback(
     Output("sentiment-gauge", "children"),
