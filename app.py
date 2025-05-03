@@ -2605,7 +2605,7 @@ def create_pulse_card(value, include_chart=True):
                 history_df['date'] = pd.to_datetime(history_df['date'])
                 
                 # Determine which column has the data (pulse_score or T2D Pulse Score)
-                score_column = 'T2D Pulse Score' if not history_df['T2D Pulse Score'].isna().all() else 'pulse_score'
+                score_column = 'T2D Pulse Score' if 'T2D Pulse Score' in history_df.columns and not history_df['T2D Pulse Score'].isna().all() else 'pulse_score'
                 
                 # Drop rows with missing scores
                 history_df = history_df.dropna(subset=[score_column])
