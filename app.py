@@ -5733,13 +5733,61 @@ def update_sector_sentiment_container(n):
     
     print(f"Updating sector sentiment container. Today ({today.strftime('%Y-%m-%d')}) is {'a weekend' if is_weekend else 'a weekday'}")
     
-    # If it's a weekend, get the most recent weekday sector data directly
+    # If it's a weekend, use May 2nd data specifically
     if is_weekend:
-        print("Today is a weekend - loading authentic sector history instead of calculating new scores")
+        print("Today is a weekend - loading May 2nd data for sector cards")
+        # Try to load May 2nd data directly
+        may_2nd_path = "data/authentic_sector_history_2025-05-02.csv"
+        
+        if os.path.exists(may_2nd_path):
+            try:
+                print(f"Loading May 2nd data directly from {may_2nd_path}")
+                import pandas as pd
+                # Read the May 2nd data file
+                may_2nd_df = pd.read_csv(may_2nd_path)
+                may_2nd_df['date'] = pd.to_datetime(may_2nd_df['date'])
+                
+                # Get the May 2nd row
+                may_2nd_row = may_2nd_df[may_2nd_df['date'] == '2025-05-02']
+                if not may_2nd_row.empty:
+                    authentic_scores = []
+                    # Process all columns except date
+                    for col in may_2nd_row.columns:
+                        if col != 'date':
+                            # Get score value (already 0-100)
+                            score_value = may_2nd_row.iloc[0][col]
+                            # Convert to -1 to +1 scale for consistency
+                            raw_score = (score_value / 50.0) - 1.0
+                            
+                            # Create sector data structure
+                            sector_data = {
+                                "sector": col,
+                                "score": raw_score,
+                                "normalized_score": score_value,  # Already in 0-100 scale
+                                "stance": "Bullish" if score_value >= 60 else "Bearish" if score_value <= 30 else "Neutral",
+                                "takeaway": "Outperforming peers" if score_value >= 60 else 
+                                          "Bearish macro setup" if score_value <= 30 else 
+                                          "Neutral – monitor trends",
+                                "drivers": [],  # Empty drivers for historical data
+                                "tickers": []   # Empty tickers for historical data
+                            }
+                            authentic_scores.append(sector_data)
+                    
+                    if authentic_scores:
+                        print(f"Loaded {len(authentic_scores)} sector scores from May 2nd data")
+                        sector_scores = authentic_scores
+                        # Skip all other calculations and go to final processing steps
+                        print(f"Using May 2nd data specifically for {len(authentic_scores)} sectors")
+                        # Sort sectors by score (highest to lowest) and continue with normal display logic
+            except Exception as e:
+                print(f"Error loading May 2nd data: {e}")
+        
+        # Fall back to general authentic history if direct May 2nd load failed
+        print("Falling back to authentic sector history")
         # Import the module here to prevent circular imports
         import authentic_sector_history
         
-        # Get authentic sector history for all sectors - this will return the most recent weekday data
+        # Get authentic sector history for all sectors
         sector_history = authentic_sector_history.get_authentic_sector_history()
         if sector_history:
             # Convert the historical data format to match our expected sector_scores format
@@ -6364,13 +6412,45 @@ def update_t2d_pulse_score(weights_json):
         today = datetime.now(eastern)
         is_weekend = today.weekday() >= 5  # Saturday = 5, Sunday = 6
         
-        # If it's a weekend, get the most recent weekday sector data directly
+        # If it's a weekend, use specifically May 2nd data (not most recent data in general)
         if is_weekend:
-            print("Today is a weekend - loading authentic sector history for T2D Pulse calculation")
-            # Import the module here to prevent circular imports
+            # First try to load May 2nd data directly from the CSV file
+            may_2nd_path = "data/authentic_sector_history_2025-05-02.csv"
+            if os.path.exists(may_2nd_path):
+                try:
+                    print(f"Loading May 2nd data directly from {may_2nd_path} for T2D Pulse calculation")
+                    import pandas as pd
+                    # Read the May 2nd data file
+                    may_2nd_df = pd.read_csv(may_2nd_path)
+                    may_2nd_df['date'] = pd.to_datetime(may_2nd_df['date'])
+                    
+                    # Get the May 2nd row specifically
+                    may_2nd_row = may_2nd_df[may_2nd_df['date'] == '2025-05-02']
+                    if not may_2nd_row.empty:
+                        # Create a dictionary of sector scores
+                        sector_scores_dict = {}
+                        # Process all columns except date
+                        for col in may_2nd_row.columns:
+                            if col != 'date':
+                                # Get score value (already 0-100 scale)
+                                sector_scores_dict[col] = may_2nd_row.iloc[0][col]
+                        
+                        if sector_scores_dict:
+                            print(f"Calculating T2D Pulse score from {len(sector_scores_dict)} sector scores from May 2nd data")
+                            print(f"Using following sector weights: {weights}")
+                            # Calculate the T2D Pulse score from the May 2nd data
+                            pulse_score = calculate_t2d_pulse_from_sectors(sector_scores_dict, weights)
+                            print(f"Calculated T2D Pulse Score from May 2nd data: {pulse_score}")
+                            # Update the gauge display
+                            return update_sentiment_gauge(pulse_score)
+                except Exception as e:
+                    print(f"Error loading May 2nd data for T2D Pulse calculation: {e}")
+            
+            # If direct May 2nd load failed, fall back to general authentic history
+            print("Falling back to general authentic history for T2D Pulse calculation")
             import authentic_sector_history
             
-            # Get authentic sector history for all sectors - this will return the most recent weekday data
+            # Get authentic sector history for all sectors
             sector_history = authentic_sector_history.get_authentic_sector_history()
             if sector_history:
                 # Create a dictionary of sector names to their most recent values
@@ -6390,7 +6470,7 @@ def update_t2d_pulse_score(weights_json):
                     # Update the gauge display
                     return update_sentiment_gauge(pulse_score)
             
-            # If we couldn't get historical data, fall back to regular calculation
+            # If we couldn't get any historical data, fall back to regular calculation
             print("Couldn't get historical sector data for T2D Pulse, falling back to calculation")
         
         # Get sector scores through regular calculation on weekdays or as fallback
