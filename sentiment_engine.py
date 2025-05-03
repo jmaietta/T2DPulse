@@ -315,8 +315,9 @@ def get_historical_indicator_values(date):
                     break
     except Exception as e:
         print(f"Error getting historical EMA factors: {str(e)}")
-        # Use a neutral value if historical EMA factors aren't available
-        values["Sector_EMA_Factor"] = 0.0  # Neutral value
+        # Use a small positive bias value if historical EMA factors aren't available
+        values["Sector_EMA_Factor"] = 0.05  # Small positive bias instead of neutral 0.0
+        print(f"Using small positive bias (0.05) for Sector_EMA_Factor instead of neutral value")
     
     return values
 

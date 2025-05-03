@@ -212,11 +212,20 @@ def save_authentic_sector_history(sector_scores):
         
         # Today's date in EDT
         eastern = pytz.timezone('US/Eastern')
-        today = datetime.now(eastern).strftime('%Y-%m-%d')
+        today_dt = datetime.now(eastern)
+        today = today_dt.strftime('%Y-%m-%d')
+        is_weekend = today_dt.weekday() >= 5  # Saturday = 5, Sunday = 6
+        
         print(f"Using Eastern time for sector history date: {today}")
         
+        # Check if we're on a weekend - if so, don't add a new row
+        # We'll still save the data to the date-specific export for traceability
+        if is_weekend:
+            print(f"Today ({today}) is a weekend - not adding to primary history")
+            # Don't create a new row, but export the data for reference
+            idx = None
         # Check if we already have an entry for today
-        if today in df['date'].dt.strftime('%Y-%m-%d').values:
+        elif today in df['date'].dt.strftime('%Y-%m-%d').values:
             # Update existing row
             idx = df[df['date'].dt.strftime('%Y-%m-%d') == today].index[0]
         else:
