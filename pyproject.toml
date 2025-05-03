@@ -22,6 +22,7 @@ dependencies = [
     # The app works without it, as we're only using basic document analysis
     "yfinance>=0.2.55",
     "trafilatura>=2.0.0",
+    "pytz>=2025.2",
 ]
 
 [[tool.uv.index]]

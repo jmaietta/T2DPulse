@@ -103,9 +103,11 @@ def fetch_fred_data(series_id, start_date=None, end_date=None):
         print("Cannot fetch FRED data: No API key provided")
         return pd.DataFrame()
     
-    # Use today's date for most current data
-    today = datetime.now().date()
+    # Use today's date in EDT time zone for most current data
+    eastern = pytz.timezone('US/Eastern')
+    today = datetime.now(eastern).date()
     current_date = today.strftime('%Y-%m-%d')
+    print(f"Using Eastern time date: {current_date}")
     
     # Default to last 5 years if no dates specified
     if not end_date:
@@ -6974,17 +6976,53 @@ def download_file(filename):
 import threading
 import time
 
+# Define function to get current date in Eastern time
+def get_eastern_date():
+    """Get the current date in US Eastern Time"""
+    eastern = pytz.timezone('US/Eastern')
+    return datetime.now(eastern).date()
+
 def auto_refresh_data():
     """Background thread that updates all data sources every 24 hours"""
     while True:
         # Sleep for 24 hours (86400 seconds)
         time.sleep(86400)
         
-        print("Auto-refresh: Updating economic data...")
+        # Use Eastern time for date display
+        eastern_date = get_eastern_date()
+        print(f"Auto-refresh: Updating economic data on {eastern_date}...")
+        
         # Fetch fresh data from all sources
         global gdp_data, unemployment_data, inflation_data, pcepi_data
         global interest_rate_data, treasury_yield_data, vix_data, nasdaq_data
         global pce_data, consumer_sentiment_data, software_ppi_data, data_ppi_data
+        
+        # Define fetch_economic_data to update all data sources
+        def fetch_economic_data():
+            # Fetch new data for all indicators
+            print("Fetching fresh economic data from all sources...")
+            
+            # FRED data
+            global gdp_data, unemployment_data, inflation_data, pcepi_data
+            global interest_rate_data, pce_data, consumer_sentiment_data
+            global software_ppi_data, data_ppi_data
+            
+            # Get data from FRED API
+            gdp_data = fetch_fred_data(FRED_SERIES["gdp"])
+            unemployment_data = fetch_fred_data(FRED_SERIES["unemployment"])
+            inflation_data = fetch_fred_data(FRED_SERIES["cpi"])
+            pcepi_data = fetch_fred_data(FRED_SERIES["pcepi"])
+            interest_rate_data = fetch_fred_data(FRED_SERIES["interest_rate"])
+            pce_data = fetch_fred_data(FRED_SERIES["pce"])
+            software_ppi_data = fetch_fred_data(FRED_SERIES["software_ppi"])
+            data_ppi_data = fetch_fred_data(FRED_SERIES["data_ppi"])
+            consumer_sentiment_data = fetch_fred_data(FRED_SERIES["consumer_sentiment"])
+            
+            # Get data from Yahoo Finance
+            global treasury_yield_data, vix_data, nasdaq_data
+            treasury_yield_data = fetch_treasury_yield_data()
+            vix_data = fetch_vix_from_yahoo()
+            nasdaq_data = fetch_nasdaq_with_ema()
         
         # Fetch economic data from APIs
         fetch_economic_data()
@@ -6997,7 +7035,7 @@ def auto_refresh_data():
             # Calculate the pulse score with current weights
             sector_scores_dict = {s['sector']: s['normalized_score'] for s in sector_scores}
             pulse_score = calculate_t2d_pulse_from_sectors(sector_scores_dict)
-            print(f"Auto-refresh: Updated T2D Pulse score to {pulse_score}")
+            print(f"Auto-refresh: Updated T2D Pulse score to {pulse_score} on {eastern_date}")
 
 # Add this at the end of the file if running directly
 if __name__ == "__main__":

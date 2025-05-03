@@ -1,8 +1,12 @@
 import time
+import pytz
 from datetime import datetime
 
+# Use Eastern time zone for all timestamps
+eastern = pytz.timezone('US/Eastern')
+
 # First, initialize data in parallel to speed up startup
-print(f"Starting T2D Pulse Dashboard initialization at {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+print(f"Starting T2D Pulse Dashboard initialization at {datetime.now(eastern).strftime('%Y-%m-%d %H:%M:%S')} EDT")
 start_time = time.time()
 
 # Import and run the parallel data fetcher first

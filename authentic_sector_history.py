@@ -6,6 +6,7 @@
 import os
 import json
 import pandas as pd
+import pytz
 from datetime import datetime
 
 def get_authentic_sector_history(sector_name=None):
@@ -209,8 +210,10 @@ def save_authentic_sector_history(sector_scores):
             # Create new DataFrame
             df = pd.DataFrame(columns=['date'])
         
-        # Today's date
-        today = datetime.now().strftime('%Y-%m-%d')
+        # Today's date in EDT
+        eastern = pytz.timezone('US/Eastern')
+        today = datetime.now(eastern).strftime('%Y-%m-%d')
+        print(f"Using Eastern time for sector history date: {today}")
         
         # Check if we already have an entry for today
         if today in df['date'].dt.strftime('%Y-%m-%d').values:
