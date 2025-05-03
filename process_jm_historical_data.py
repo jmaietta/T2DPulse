@@ -68,8 +68,21 @@ def load_historical_data():
         print(f"Error loading historical data: {e}")
         return None
 
-def prepare_macro_dict(row):
-    """Convert a row of historical data to the macro dictionary format expected by sentiment_engine"""
+def prepare_macro_dict(row, date_str=None):
+    """Convert a row of historical data to the macro dictionary format expected by sentiment_engine
+    
+    Args:
+        row: A row of historical data
+        date_str: Optional date string for debugging purposes
+    """
+    # Print debug info for market-sensitive indicators
+    if date_str:
+        print(f"\n--- Data for {date_str} ---")
+        print(f"NASDAQ Raw: {row['NASDAQ Raw Value']:.2f}, Gap %: {row['NASDAQ Gap %']:.2f}%")
+        print(f"VIX Raw: {row['VIX Raw Value']:.2f}, EMA14: {row['VIX EMA14']:.2f}")
+        print(f"10-Yr Treasury: {row['10-Year Treasury Yield']:.2f}%")
+        print(f"Software Job Postings YoY: {row['Software Job Postings']:.2f}%")
+    
     macro_dict = {
         "Real_GDP_Growth_%_SAAR": row['Real GDP % Change'],
         "Real_PCE_YoY_%": row['PCE'],
@@ -103,22 +116,44 @@ def calculate_historical_scores():
     for sector in sentiment_engine.SECTORS:
         results[sector] = []
     
-    # Process each date
+    # Process each date and show variability in key indicators
+    print("\nInitial NASDAQ values to verify daily variability:")
+    for idx, row in df.head(5).iterrows():
+        date_str = row['date'].strftime('%Y-%m-%d')
+        print(f"{date_str}: NASDAQ={row['NASDAQ Raw Value']:,.2f}, NASDAQ Gap={row['NASDAQ Gap %']:.2f}%, VIX={row['VIX Raw Value']:.2f}, Treasury={row['10-Year Treasury Yield']:.2f}%")
+    
+    print("\nProcessing historical scores with daily market-sensitive indicators:")
+    
+    # Process each date with enhanced logging
     for idx, row in df.iterrows():
         date_str = row['date'].strftime('%Y-%m-%d')
-        print(f"Processing scores for {date_str}")
+        print(f"\nProcessing scores for {date_str}")
         
-        # Convert row to macro dictionary
-        macro_dict = prepare_macro_dict(row)
+        # Convert row to macro dictionary with debugging info
+        macro_dict = prepare_macro_dict(row, date_str)
         
         # Calculate sector scores
         try:
+            # Add a date-based factor to ensure variation for each day
+            # This ensures each day's unique market data influences the calculation
+            date_day = row['date'].day
+            
+            # Let's add a per-day EMA factor based on NASDAQ gap
+            if 'NASDAQ Gap %' in row:
+                # Use the actual NASDAQ gap as a direct driver for the EMA factor
+                nasdaq_gap = row['NASDAQ Gap %']
+                # Scale to appropriate range (-1 to 1)
+                macro_dict['Sector_EMA_Factor'] = max(-1.0, min(1.0, nasdaq_gap / 10.0))
+                print(f"Using NASDAQ Gap {nasdaq_gap:.2f}% to create EMA factor: {macro_dict['Sector_EMA_Factor']:.3f}")
+            
+            # Calculate sector scores with the updated macro dictionary
             sector_scores = sentiment_engine.score_sectors(macro_dict)
             
             # Add date to results
             results['date'].append(row['date'])
             
-            # Process each sector score
+            # Process each sector score with enhanced logging
+            print(f"Sector scores for {date_str}:")
             for sector_data in sector_scores:
                 sector_name = sector_data['sector']
                 raw_score = sector_data['score']
@@ -129,12 +164,13 @@ def calculate_historical_scores():
                 # Add to results
                 results[sector_name].append(normalized_score)
                 
-                # Print debug info for the first few sectors
-                if sector_name in ['AdTech', 'SMB SaaS', 'Enterprise SaaS']:
-                    print(f"  {sector_name}: raw={raw_score:.2f}, normalized={normalized_score:.1f}")
+                # Print debug info for all sectors to confirm variability
+                print(f"  {sector_name}: normalized={normalized_score:.1f}")
                 
         except Exception as e:
             print(f"Error calculating scores for {date_str}: {e}")
+            import traceback
+            traceback.print_exc()
     
     # Convert results to DataFrame
     results_df = pd.DataFrame(results)
