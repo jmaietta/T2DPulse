@@ -1,5 +1,8 @@
 # Configuration for Finnhub API and sector definitions
-FINNHUB_API_KEY = "your_finnhub_api_key_here"
+import os
+
+# Get Finnhub API key from environment variable
+FINNHUB_API_KEY = os.environ.get("FINNHUB_API_KEY", "")
 
 SECTORS = {
     "AdTech": ["APP", "APPS", "CRTO", "DV", "GOOGL", "IAD", "META", "MGNI", "PUBM", "TTD"],
