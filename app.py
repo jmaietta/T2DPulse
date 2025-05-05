@@ -6404,6 +6404,10 @@ def update_sector_sentiment_container(n):
     ], className="sector-scale-legend")
     
     # Create cards for each sector using normalized scores
+    # Filter out any "T2D Pulse" sector that might be included (it should only appear at the top)
+    normalized_scores = [s for s in normalized_scores if s["sector"] != "T2D Pulse"]
+    
+    # Create the card list
     sector_cards = []
     
     # Get the global sector_weights dictionary or create it
