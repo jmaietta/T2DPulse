@@ -6877,36 +6877,34 @@ def apply_weight(n_clicks_list, weight_values, weights_json):
             # If conversion fails, keep the old weight
             new_weight = weights[sector_to_update]
     
-    # Calculate the difference that needs to be distributed
-    old_weight = weights[sector_to_update]
-    weight_difference = new_weight - old_weight
-    
     # Apply the new weight
     weights[sector_to_update] = new_weight
     
     # Add this sector to the fixed sectors
     fixed_sectors.add(sector_to_update)
     
-    # If there's a difference to distribute
-    if weight_difference != 0:
-        # Get all sectors except those that are fixed
-        adjustable_sectors = [s for s in weights.keys() if s != sector_to_update and s not in fixed_sectors]
+    # Get all sectors except those that are fixed (sectors the user has not interacted with)
+    adjustable_sectors = [s for s in weights.keys() if s != sector_to_update and s not in fixed_sectors]
+    
+    # If all sectors are fixed except the one we just updated, reset fixed sectors
+    if not adjustable_sectors:
+        fixed_sectors = {sector_to_update}
+        adjustable_sectors = [s for s in weights.keys() if s != sector_to_update]
+    
+    # Calculate total weight allocated to fixed sectors (including current sector)
+    fixed_weight = sum(weights[s] for s in weights if s in fixed_sectors or s == sector_to_update)
+    
+    # Calculate how much weight remains for adjustable sectors
+    remaining_weight = 100 - fixed_weight
+    
+    # If we have adjustable sectors and there's weight to distribute
+    if adjustable_sectors and remaining_weight >= 0:
+        # Calculate equal weight for each adjustable sector
+        equal_weight = remaining_weight / len(adjustable_sectors)
         
-        # If all sectors are fixed except the one we just updated, clear the fixed sectors to allow adjustment
-        if not adjustable_sectors:
-            fixed_sectors = {sector_to_update}
-            adjustable_sectors = [s for s in weights.keys() if s != sector_to_update]
-        
-        # Calculate the sum of weights from adjustable sectors
-        adjustable_weight_sum = sum(weights[s] for s in adjustable_sectors)
-        
-        # Distribute the difference proportionally
-        if adjustable_weight_sum > 0:  # Avoid division by zero
-            for s in adjustable_sectors:
-                # Calculate proportional adjustment
-                proportion = weights[s] / adjustable_weight_sum
-                adjustment = -weight_difference * proportion
-                weights[s] = max(0, weights[s] + adjustment)
+        # Assign equal weight to all adjustable sectors
+        for s in adjustable_sectors:
+            weights[s] = equal_weight
     
     # Ensure weights sum to exactly 100%
     total = sum(weights.values())
@@ -7117,26 +7115,28 @@ def apply_weight_on_enter(n_clicks_list, weight_values, weights_json):
     # Add this sector to the fixed sectors
     fixed_sectors.add(sector_to_update)
     
-    # If there's a difference to distribute
-    if weight_difference != 0:
-        # Get all sectors except those that are fixed
-        adjustable_sectors = [s for s in weights.keys() if s != sector_to_update and s not in fixed_sectors]
+    # Get all sectors except those that are fixed (sectors the user has not interacted with)
+    adjustable_sectors = [s for s in weights.keys() if s != sector_to_update and s not in fixed_sectors]
+    
+    # If all sectors are fixed except the one we just updated, reset fixed sectors
+    if not adjustable_sectors:
+        fixed_sectors = {sector_to_update}
+        adjustable_sectors = [s for s in weights.keys() if s != sector_to_update]
+    
+    # Calculate total weight allocated to fixed sectors (including current sector)
+    fixed_weight = sum(weights[s] for s in weights if s in fixed_sectors or s == sector_to_update)
+    
+    # Calculate how much weight remains for adjustable sectors
+    remaining_weight = 100 - fixed_weight
+    
+    # If we have adjustable sectors and there's weight to distribute
+    if adjustable_sectors and remaining_weight >= 0:
+        # Calculate equal weight for each adjustable sector
+        equal_weight = remaining_weight / len(adjustable_sectors)
         
-        # If all sectors are fixed except the one we just updated, clear the fixed sectors to allow adjustment
-        if not adjustable_sectors:
-            fixed_sectors = {sector_to_update}
-            adjustable_sectors = [s for s in weights.keys() if s != sector_to_update]
-        
-        # Calculate the sum of weights from adjustable sectors
-        adjustable_weight_sum = sum(weights[s] for s in adjustable_sectors)
-        
-        # Distribute the difference proportionally
-        if adjustable_weight_sum > 0:  # Avoid division by zero
-            for s in adjustable_sectors:
-                # Calculate proportional adjustment
-                proportion = weights[s] / adjustable_weight_sum
-                adjustment = -weight_difference * proportion
-                weights[s] = max(0, weights[s] + adjustment)
+        # Assign equal weight to all adjustable sectors
+        for s in adjustable_sectors:
+            weights[s] = equal_weight
     
     # Ensure weights sum to exactly 100%
     total = sum(weights.values())
