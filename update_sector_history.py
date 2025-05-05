@@ -119,28 +119,42 @@ def load_sector_values():
         return None
 
 def convert_to_sentiment_scores(sector_values_df):
-    """Convert market cap values to sentiment scores using trend analysis"""
+    """Convert market cap values to sentiment scores with consistency with historical data"""
     try:
         if sector_values_df is None or sector_values_df.empty:
             return None
         
-        # Sort by date to ensure proper ordering
+        # Load the existing authentic sector history
+        history_path = "data/authentic_sector_history.csv"
+        if not os.path.exists(history_path):
+            print(f"Error: Authentic sector history file not found at {history_path}")
+            return None
+        
+        history_df = pd.read_csv(history_path)
+        history_df['date'] = pd.to_datetime(history_df['date'])
+        
+        # Get the most recent scores to maintain consistency
+        last_date = history_df['date'].max()
+        last_scores = history_df[history_df['date'] == last_date].iloc[0]
+        print(f"Using historical reference scores from {last_date}")
+        
+        # Sort by date to ensure proper ordering of market cap data
         sector_values_df = sector_values_df.sort_values('Date')
         
-        # Get the latest date
+        # Get the latest date and previous date for market cap data
         latest_date = sector_values_df['Date'].max()
-        latest_data = sector_values_df[sector_values_df['Date'] == latest_date]
-        
-        # Get previous date's data (typically 3 days prior for weekends)
         previous_date = sector_values_df['Date'].sort_values(ascending=False).iloc[1]
+        
+        latest_data = sector_values_df[sector_values_df['Date'] == latest_date]
         previous_data = sector_values_df[sector_values_df['Date'] == previous_date]
         
-        print(f"Using latest data from {latest_date} and previous data from {previous_date}")
+        print(f"Using market cap data from {latest_date} and {previous_date}")
         
         # For each sector, calculate a score based on growth from previous date
+        # but maintain consistency with historical scores
         scores = []
         for column in latest_data.columns:
-            if column != 'Date':
+            if column != 'Date' and column in history_df.columns:
                 # Get the values for this sector
                 latest_value = latest_data[column].iloc[0]
                 previous_value = previous_data[column].iloc[0]
@@ -149,10 +163,10 @@ def convert_to_sentiment_scores(sector_values_df):
                 
                 # Skip sectors with zero market cap in either period
                 if latest_value == 0 or previous_value == 0:
-                    print(f"  Skipping sector {column} due to zero values")
+                    print(f"  Skipping {column} due to zero values")
                     scores.append({
                         'sector': column,
-                        'score': 0.0  # Default neutral score
+                        'score': 0.0
                     })
                     continue
                 
@@ -160,29 +174,38 @@ def convert_to_sentiment_scores(sector_values_df):
                 percent_change = (latest_value - previous_value) / previous_value * 100
                 print(f"  Percent change: {percent_change:.2f}%")
                 
-                # Map percent change to a score between -1 and 1
-                # Using a sigmoid-like function to handle outliers
-                # Consider: 
-                # - 0% change = neutral (0.0 score)
-                # - 1-3% change = moderately positive/negative (±0.5 score)
-                # - 5%+ change = strongly positive/negative (approaching ±1.0 score)
-                raw_score = min(1.0, max(-1.0, percent_change / 5.0))
+                # Get the previous score from historical data for this sector
+                previous_score = last_scores[column]
+                print(f"  Previous score: {previous_score:.2f}")
                 
-                # Apply smoothing using our generate_score function
-                normalized_score = generate_score({
-                    'raw_value': raw_score,
-                    'band_1': -0.2,  # Slightly negative
-                    'band_2': 0.2,   # Slightly positive
-                    'signal_cap': 2.0 # Cap for extreme values
-                })
+                # Apply a mild adjustment to the previous score based on percent change
+                # Small modulation (0.5-1.5 points) to maintain consistency
+                # Typical sector scores are in the 50-60 range, so this is a small change
+                score_adjustment = percent_change / 2.0  # Convert percent to score points
                 
-                print(f"  Final score: {normalized_score:.3f}")
+                # Cap the adjustment to maintain stability
+                score_adjustment = min(1.5, max(-1.5, score_adjustment))
+                
+                # Apply adjustment to previous score
+                new_score = previous_score + score_adjustment
+                
+                # Ensure scores stay in the typical 40-70 range seen in historical data
+                new_score = min(70.0, max(40.0, new_score))
+                
+                print(f"  Score adjustment: {score_adjustment:.2f}")
+                print(f"  New score: {new_score:.2f}")
+                
+                # In the authentic_sector_history.csv file, scores are in 0-100 range
+                # but our internal score representation is -1 to +1, so convert for storage
+                internal_score = (new_score / 50.0) - 1.0
                 
                 # Append to scores list
                 scores.append({
                     'sector': column,
-                    'score': normalized_score
+                    'score': internal_score
                 })
+            elif column != 'Date':
+                print(f"Warning: Sector {column} not found in historical data")
         
         return scores
     except Exception as e:

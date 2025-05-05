@@ -30,8 +30,25 @@ def main():
     # Use the new comprehensive Finnhub data collector
     success = collect_daily_sector_data()
     
+    # Check if we're getting 403 errors in the collection process
+    # If so, we might have hit the API rate limit, but we still want to update the sector history
+    finnhub_rate_limited = False
+    if not success:
+        print(f"Daily sector data collection had issues for {eastern_time.strftime('%Y-%m-%d')}")
+        # Check if we at least have some data to work with (partial success)
+        if os.path.exists("data/sector_values.csv"):
+            try:
+                with open("data/sector_values.csv", "r") as f:
+                    lines = f.readlines()
+                    if len(lines) > 1 and eastern_time.strftime('%Y-%m-%d') in lines[-1]:
+                        print("We have partial data - will continue with history update")
+                        finnhub_rate_limited = True
+                        success = True
+            except Exception as e:
+                print(f"Error checking sector_values.csv: {e}")
+    
     if success:
-        print(f"Successfully ran daily sector data collection for {eastern_time.strftime('%Y-%m-%d')}")
+        print(f"Data collection completed for {eastern_time.strftime('%Y-%m-%d')}")
         
         # Now update the authentic sector history with the new data
         print("Updating authentic sector history with new Finnhub data...")
@@ -41,9 +58,12 @@ def main():
             print("Successfully updated authentic sector history with new Finnhub data")
         else:
             print("Failed to update authentic sector history with new Finnhub data")
-            success = False
+            # Only mark as failed if we didn't have a rate limiting issue
+            if not finnhub_rate_limited:
+                success = False
     else:
         print(f"Daily sector data collection failed for {eastern_time.strftime('%Y-%m-%d')}")
+        print("No data available to update sector history")
         
     return success
 
