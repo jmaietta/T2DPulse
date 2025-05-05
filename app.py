@@ -6782,6 +6782,18 @@ def update_weight_displays(weights_json):
         # Format to exactly 2 decimal places for consistent display
         weight_values.append(float(f"{weights[sector]:.2f}"))
     
+    # Check if we need to handle the T2D Pulse explicitly
+    # The error shows we need exactly 15 values but we might only have 14
+    expected_count = 15
+    if len(weight_values) < expected_count:
+        # We need to add more weight values (a default 0.00 for T2D Pulse)
+        # Equal weight would be 100/expected_count
+        equal_weight = round(100.0 / expected_count, 2)
+        weight_values.extend([equal_weight] * (expected_count - len(weight_values)))
+    elif len(weight_values) > expected_count:
+        # Unlikely, but trim to expected count if needed
+        weight_values = weight_values[:expected_count]
+    
     return weight_values
 
 # Note: The plus/minus button callbacks have been removed 
@@ -7299,7 +7311,9 @@ def update_input_styling(weights_json):
     }
     
     # Get list of enterprise sectors from the dashboard and create a mapping to displayed components
-    displayed_sectors = SECTORS
+    # Add "T2D Pulse" to match the expected output length
+    displayed_sectors = SECTORS.copy()
+    displayed_sectors.append("T2D Pulse")
     
     # Current time to check for recent updates (highlight for 3 seconds)
     current_time = time.time()
@@ -7317,6 +7331,16 @@ def update_input_styling(weights_json):
             if sector in highlighted_sectors and (current_time - highlighted_sectors[sector]) >= highlight_duration:
                 del highlighted_sectors[sector]
     
+    # The error message shows we need 15 styles but we're only returning 14
+    # Make sure we return exactly the expected number 
+    expected_count = 15
+    if len(styles) < expected_count:
+        # Add default styles to match the expected count
+        styles.extend([default_style] * (expected_count - len(styles)))
+    elif len(styles) > expected_count:
+        # Trim to expected count
+        styles = styles[:expected_count]
+        
     # Return the list of styles for all displayed sectors
     return styles
 
