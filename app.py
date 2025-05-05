@@ -7822,14 +7822,29 @@ def get_eastern_date():
     return datetime.now(eastern).date()
 
 def auto_refresh_data():
-    """Background thread that updates all data sources every 24 hours"""
+    """Background thread that updates all data sources at 5:00pm ET daily"""
     while True:
-        # Sleep for 24 hours (86400 seconds)
-        time.sleep(86400)
+        # Get current time in Eastern Time
+        eastern = pytz.timezone('US/Eastern')
+        now = datetime.now(eastern)
+        
+        # Calculate time until 5:00pm ET today
+        target = now.replace(hour=17, minute=0, second=0, microsecond=0)
+        
+        # If it's already past 5:00pm, set target to 5:00pm tomorrow
+        if now >= target:
+            target = target + timedelta(days=1)
+            
+        # Calculate seconds until target time
+        seconds_until_target = (target - now).total_seconds()
+        print(f"Next data refresh scheduled at {target.strftime('%Y-%m-%d %H:%M:%S %Z')}, which is {seconds_until_target:.1f} seconds from now")
+        
+        # Sleep until target time
+        time.sleep(seconds_until_target)
         
         # Use Eastern time for date display
-        eastern_date = get_eastern_date()
-        print(f"Auto-refresh: Updating economic data on {eastern_date}...")
+        eastern_date = target.strftime('%Y-%m-%d')
+        print(f"Auto-refresh: Updating economic data at 5:00pm ET on {eastern_date}...")
         
         # Fetch fresh data from all sources
         global gdp_data, unemployment_data, inflation_data, pcepi_data
