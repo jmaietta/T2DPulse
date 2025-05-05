@@ -119,7 +119,7 @@ def load_sector_values():
         return None
 
 def convert_to_sentiment_scores(sector_values_df):
-    """Convert market cap values to sentiment scores using momentum"""
+    """Convert market cap values to sentiment scores using trend analysis"""
     try:
         if sector_values_df is None or sector_values_df.empty:
             return None
@@ -131,50 +131,64 @@ def convert_to_sentiment_scores(sector_values_df):
         latest_date = sector_values_df['Date'].max()
         latest_data = sector_values_df[sector_values_df['Date'] == latest_date]
         
-        # If we don't have prior data for calculating momentum, use a simple approach
-        # otherwise we would use the momentum calculation for each sector
+        # Get previous date's data (typically 3 days prior for weekends)
+        previous_date = sector_values_df['Date'].sort_values(ascending=False).iloc[1]
+        previous_data = sector_values_df[sector_values_df['Date'] == previous_date]
         
-        # For now, generate a score for each sector based on the raw values
-        # We're using a simple transformation here that produces consistent scores
+        print(f"Using latest data from {latest_date} and previous data from {previous_date}")
+        
+        # For each sector, calculate a score based on growth from previous date
         scores = []
         for column in latest_data.columns:
             if column != 'Date':
-                # Get the value for this sector
-                value = latest_data[column].iloc[0]
+                # Get the values for this sector
+                latest_value = latest_data[column].iloc[0]
+                previous_value = previous_data[column].iloc[0]
                 
-                # Skip sectors with zero market cap (API errors or rate limiting)
-                if value == 0:
+                print(f"Sector {column}: Latest={latest_value}, Previous={previous_value}")
+                
+                # Skip sectors with zero market cap in either period
+                if latest_value == 0 or previous_value == 0:
+                    print(f"  Skipping sector {column} due to zero values")
+                    scores.append({
+                        'sector': column,
+                        'score': 0.0  # Default neutral score
+                    })
                     continue
                 
-                # Generate a score for this sector between -1 and 1 using log scale since market caps vary widely
-                # This is a temporary placeholder until we develop a more sophisticated model
-                # We'll use a normalized approach to make scores consistent
-                market_cap_billions = value / 1000000000  # Convert to billions for readability
+                # Calculate percent change from previous period
+                percent_change = (latest_value - previous_value) / previous_value * 100
+                print(f"  Percent change: {percent_change:.2f}%")
                 
-                # Normalize large values using log
-                if market_cap_billions > 0:
-                    log_value = np.log10(max(market_cap_billions, 0.1))
-                    # Normalize to [-1, 1] range assuming log values typically between -1 and 6
-                    normalized_score = min(1, max(-1, (log_value - 2.5) / 3.5))
-                else:
-                    normalized_score = -1  # Default for zero or negative values
+                # Map percent change to a score between -1 and 1
+                # Using a sigmoid-like function to handle outliers
+                # Consider: 
+                # - 0% change = neutral (0.0 score)
+                # - 1-3% change = moderately positive/negative (±0.5 score)
+                # - 5%+ change = strongly positive/negative (approaching ±1.0 score)
+                raw_score = min(1.0, max(-1.0, percent_change / 5.0))
                 
-                # Convert to sentiment score with smoothing
-                # Use the same approach as sentiment_engine.generate_score but simplified
-                sentiment_score = generate_score({'raw_value': normalized_score, 
-                                                 'band_1': -0.5, 
-                                                 'band_2': 0.5, 
-                                                 'signal_cap': 2.0})
+                # Apply smoothing using our generate_score function
+                normalized_score = generate_score({
+                    'raw_value': raw_score,
+                    'band_1': -0.2,  # Slightly negative
+                    'band_2': 0.2,   # Slightly positive
+                    'signal_cap': 2.0 # Cap for extreme values
+                })
+                
+                print(f"  Final score: {normalized_score:.3f}")
                 
                 # Append to scores list
                 scores.append({
                     'sector': column,
-                    'score': sentiment_score
+                    'score': normalized_score
                 })
         
         return scores
     except Exception as e:
         print(f"Error converting to sentiment scores: {e}")
+        import traceback
+        traceback.print_exc()
         return None
 
 def update_authentic_sector_history(scores):
