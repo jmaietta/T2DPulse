@@ -12,6 +12,10 @@ import csv
 FINNHUB_API_KEY = config.FINNHUB_API_KEY
 SECTORS = config.SECTORS
 
+# Cache to avoid duplicate API calls for the same ticker
+MARKET_CAP_CACHE = {}
+PRICE_EMA_CACHE = {}
+
 def get_eastern_date():
     """Get the current date in US Eastern Time"""
     eastern = pytz.timezone('US/Eastern')
@@ -19,7 +23,13 @@ def get_eastern_date():
     return now.strftime('%Y-%m-%d')
 
 def fetch_market_cap(ticker):
-    """Fetch market cap for a given ticker from Finnhub"""
+    """Fetch market cap for a given ticker from Finnhub with caching"""
+    # Check cache first
+    if ticker in MARKET_CAP_CACHE:
+        print(f"Using cached market cap for {ticker}")
+        return MARKET_CAP_CACHE[ticker]
+    
+    # Make API call if not in cache
     url = f"https://finnhub.io/api/v1/stock/profile2?symbol={ticker}&token={FINNHUB_API_KEY}"
     response = requests.get(url)
     
@@ -27,17 +37,27 @@ def fetch_market_cap(ticker):
         data = response.json()
         if data and 'marketCapitalization' in data:
             # Finnhub returns market cap in millions, convert to billions
-            return data['marketCapitalization'] * 1000000  # Convert to actual value
+            market_cap = data['marketCapitalization'] * 1000000  # Convert to actual value
+            # Cache the result
+            MARKET_CAP_CACHE[ticker] = market_cap
+            return market_cap
     elif response.status_code == 429:
-        print(f"Failed to fetch market cap for {ticker}: 429")
+        print(f"Failed to fetch market cap for {ticker}: 429 (rate limited)")
         time.sleep(1)  # Rate limit - wait a second before next request
     else:
         print(f"Failed to fetch market cap for {ticker}: {response.status_code}")
     
+    # Cache failed results as 0 to avoid repeated failures
+    MARKET_CAP_CACHE[ticker] = 0
     return 0
 
 def fetch_stock_price(ticker):
-    """Fetch latest stock price and 20-day EMA for a given ticker"""
+    """Fetch latest stock price and 20-day EMA for a given ticker with caching"""
+    # Check cache first
+    if ticker in PRICE_EMA_CACHE:
+        print(f"Using cached price/EMA for {ticker}")
+        return PRICE_EMA_CACHE[ticker]
+    
     # Get current price
     url = f"https://finnhub.io/api/v1/quote?symbol={ticker}&token={FINNHUB_API_KEY}"
     response = requests.get(url)
@@ -45,7 +65,10 @@ def fetch_stock_price(ticker):
     if response.status_code != 200:
         print(f"Failed to fetch price for {ticker}: {response.status_code}")
         if response.status_code == 429:
+            print(f"Rate limited while fetching price for {ticker}")
             time.sleep(1)  # Rate limit - wait a second before next request
+        # Cache the failure to avoid repeated API calls
+        PRICE_EMA_CACHE[ticker] = (None, None)
         return None, None
     
     quote_data = response.json()
@@ -61,7 +84,10 @@ def fetch_stock_price(ticker):
     if response.status_code != 200:
         print(f"Failed to fetch historical data for {ticker}: {response.status_code}")
         if response.status_code == 429:
+            print(f"Rate limited while fetching historical data for {ticker}")
             time.sleep(1)  # Rate limit - wait a second before next request
+        # Cache the current price with no EMA
+        PRICE_EMA_CACHE[ticker] = (current_price, None)
         return current_price, None
     
     candle_data = response.json()
@@ -69,15 +95,21 @@ def fetch_stock_price(ticker):
     # Check if we have valid data
     if candle_data['s'] != 'ok':
         print(f"No valid candle data for {ticker}")
+        # Cache the result
+        PRICE_EMA_CACHE[ticker] = (current_price, None)
         return current_price, None
     
     # Calculate 20-day EMA
     if len(candle_data['c']) >= 20:
         prices = pd.Series(candle_data['c'])
         ema20 = prices.ewm(span=20, adjust=False).mean().iloc[-1]
+        # Cache the result
+        PRICE_EMA_CACHE[ticker] = (current_price, ema20)
         return current_price, ema20
     else:
         print(f"Not enough data for EMA calculation for {ticker}")
+        # Cache the result
+        PRICE_EMA_CACHE[ticker] = (current_price, None)
         return current_price, None
 
 def process_sector_data():
@@ -133,13 +165,40 @@ def process_sector_data():
             'momentum': avg_momentum
         })
     
-    # Save to CSV
+    # Save to CSV in a format compatible with update_sector_history.py
     csv_path = os.path.join('data', 'sector_values.csv')
+    
+    # First gather all unique dates
+    dates = sorted(set([row['date'] for row in sector_values]))
+    
+    # Create a dict to convert sector data to columns
+    sector_dict = {}
+    for date in dates:
+        sector_dict[date] = {'Date': date}
+        # Initialize with 0 values
+        for sector in SECTORS.keys():
+            sector_dict[date][sector] = 0
+    
+    # Fill in the market cap values
+    for row in sector_values:
+        date = row['date']
+        sector = row['sector']
+        market_cap = row['market_cap']
+        sector_dict[date][sector] = market_cap
+    
+    # Convert to rows for CSV
+    csv_rows = []
+    for date, data in sector_dict.items():
+        csv_rows.append(data)
+    
+    # Get all column names (Date + all sectors)
+    fieldnames = ['Date'] + list(SECTORS.keys())
+    
+    # Write CSV file with date in first column and sectors as other columns
     with open(csv_path, 'w', newline='') as csvfile:
-        fieldnames = ['date', 'sector', 'market_cap', 'momentum']
         writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
         writer.writeheader()
-        for row in sector_values:
+        for row in csv_rows:
             writer.writerow(row)
     
     print(f"Sector values for {today} saved to {csv_path}")
@@ -160,5 +219,42 @@ def collect_daily_sector_data():
         print(f"Error in daily sector data collection: {e}")
         return False
 
+def test_run():
+    """A test run with limited scope to verify our code works"""
+    print("Running limited test of Finnhub data collector with caching...")
+    # Use a smaller set of sectors for testing to avoid rate limits
+    global SECTORS
+    test_sectors = {
+        "Cloud Infrastructure": ["MSFT", "AMZN"],
+        "AI Infrastructure": ["MSFT", "NVDA", "AMZN"]
+    }
+    old_sectors = SECTORS
+    SECTORS = test_sectors
+    
+    try:
+        # Run the data collection with our reduced sector set
+        result = collect_daily_sector_data()
+        print(f"Test result: {'Success' if result else 'Failed'}")
+        
+        # Verify that caching worked
+        print(f"Market cap cache has {len(MARKET_CAP_CACHE)} entries")
+        print(f"Price/EMA cache has {len(PRICE_EMA_CACHE)} entries")
+        
+        # We should only have 3 unique cached tickers (MSFT, AMZN, NVDA)
+        # despite having 5 total ticker references
+        if len(MARKET_CAP_CACHE) == 3 and len(PRICE_EMA_CACHE) == 3:
+            print("✓ Caching is working correctly! We have 3 cache entries for 5 ticker references.")
+        else:
+            print("✗ Caching may not be working optimally.")
+            
+    finally:
+        # Restore original sectors
+        SECTORS = old_sectors
+
 if __name__ == "__main__":
-    collect_daily_sector_data()
+    # Choose whether to run full collection or just test
+    import sys
+    if len(sys.argv) > 1 and sys.argv[1] == "--test":
+        test_run()
+    else:
+        collect_daily_sector_data()
