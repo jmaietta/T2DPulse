@@ -6781,22 +6781,28 @@ def update_weight_displays(weights_json):
             # If JSON parse fails, use global weights
             weights = sector_weights
     
+    # Import the sectors list to ensure we're only using valid sectors displayed on page
+    from sentiment_engine import SECTORS
+    
     # Generate weight values for each sector input (formatted to 2 decimal places)
     weight_values = []
-    for sector in weights:
-        # Format to exactly 2 decimal places for consistent display
-        weight_values.append(float(f"{weights[sector]:.2f}"))
+    for sector in SECTORS:
+        if sector in weights:
+            # Format to exactly 2 decimal places for consistent display
+            weight_values.append(float(f"{weights[sector]:.2f}"))
+        else:
+            # Default equal weight if sector not found
+            equal_weight = round(100.0 / len(SECTORS), 2)
+            weight_values.append(equal_weight)
     
-    # Check if we need to handle the T2D Pulse explicitly
-    # The error shows we need exactly 15 values but we might only have 14
-    expected_count = 15
+    # Ensure the list has exactly the expected number of values
+    expected_count = len(SECTORS)
     if len(weight_values) < expected_count:
-        # We need to add more weight values (a default 0.00 for T2D Pulse)
-        # Equal weight would be 100/expected_count
+        # Add default weights for any missing sectors
         equal_weight = round(100.0 / expected_count, 2)
         weight_values.extend([equal_weight] * (expected_count - len(weight_values)))
     elif len(weight_values) > expected_count:
-        # Unlikely, but trim to expected count if needed
+        # Trim to expected count if needed
         weight_values = weight_values[:expected_count]
     
     return weight_values
@@ -7316,18 +7322,13 @@ def update_input_styling(weights_json):
         "border": "1px solid #ddd"
     }
     
-    # Get list of enterprise sectors from the dashboard and create a mapping to displayed components
-    # Add "T2D Pulse" to match the expected output length
-    displayed_sectors = SECTORS.copy()
-    displayed_sectors.append("T2D Pulse")
-    
     # Current time to check for recent updates (highlight for 3 seconds)
     current_time = time.time()
     highlight_duration = 3  # seconds
     
     # Generate styles for each displayed sector
     styles = []
-    for sector in displayed_sectors:
+    for sector in SECTORS:
         # Check if this sector was recently updated
         if sector in highlighted_sectors and (current_time - highlighted_sectors[sector]) < highlight_duration:
             styles.append(highlight_style)
@@ -7337,9 +7338,8 @@ def update_input_styling(weights_json):
             if sector in highlighted_sectors and (current_time - highlighted_sectors[sector]) >= highlight_duration:
                 del highlighted_sectors[sector]
     
-    # The error message shows we need 15 styles but we're only returning 14
-    # Make sure we return exactly the expected number 
-    expected_count = 15
+    # Ensure we're returning exactly the expected number of styles
+    expected_count = len(SECTORS)
     if len(styles) < expected_count:
         # Add default styles to match the expected count
         styles.extend([default_style] * (expected_count - len(styles)))
