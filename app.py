@@ -6562,13 +6562,14 @@ def update_sector_sentiment_container(n):
                                 min=0,
                                 max=100,
                                 step=0.01,
-                                value=sector_weights[sector],
+                                # Format value to exactly 2 decimal places
+                                value=float(f"{sector_weights[sector]:.2f}"),
                                 style={
                                     "width": "70px",
                                     "height": "30px",
                                     "padding": "5px",
                                     "borderRadius": "4px",
-                                    "border": "1px solid #ddd",
+                                    "border": "1px solid #ddd", # Light gray border
                                     "fontSize": "14px",
                                     "marginRight": "5px"
                                 }
@@ -7303,7 +7304,7 @@ def update_input_styling(weights_json):
         "marginRight": "5px"
     }
     
-    # Style for highlighted input containers (with green glow)
+    # Style for highlighted input containers (with green glow, but keeping light gray border)
     highlight_style = {
         "display": "flex",
         "alignItems": "center",
@@ -7311,7 +7312,8 @@ def update_input_styling(weights_json):
         "marginRight": "5px",
         "boxShadow": "0 0 5px 2px rgba(46, 204, 113, 0.7)",
         "borderRadius": "4px",
-        "transition": "box-shadow 0.3s ease-in-out"
+        "transition": "box-shadow 0.3s ease-in-out",
+        "border": "1px solid #ddd"
     }
     
     # Get list of enterprise sectors from the dashboard and create a mapping to displayed components
