@@ -115,6 +115,13 @@ sector_thread.daemon = True  # Thread will exit when main thread exits
 print("Starting background thread for daily sector data collection")
 sector_thread.start()
 
+# Start the auto-refresh thread at 5:00pm ET
+from app import auto_refresh_data
+auto_refresh_thread = threading.Thread(target=auto_refresh_data, daemon=True)
+auto_refresh_thread.daemon = True  # Thread will exit when main thread exits
+print("Starting auto-refresh thread to update data at 5:00pm ET daily")
+auto_refresh_thread.start()
+
 # Start the server
 print(f"Starting T2D Pulse server at {datetime.now(eastern).strftime('%Y-%m-%d %H:%M:%S')} EDT")
 print(f"Total initialization time: {time.time() - start_time:.2f} seconds")

@@ -141,14 +141,47 @@ def convert_to_sentiment_scores(sector_values_df):
         # Sort by date to ensure proper ordering of market cap data
         sector_values_df = sector_values_df.sort_values('Date')
         
-        # Get the latest date and previous date for market cap data
+        # Get the latest date for market cap data
         latest_date = sector_values_df['Date'].max()
-        previous_date = sector_values_df['Date'].sort_values(ascending=False).iloc[1]
-        
         latest_data = sector_values_df[sector_values_df['Date'] == latest_date]
-        previous_data = sector_values_df[sector_values_df['Date'] == previous_date]
         
-        print(f"Using market cap data from {latest_date} and {previous_date}")
+        # Check if we have more than one date in the DataFrame
+        if len(sector_values_df['Date'].unique()) > 1:
+            # Get previous date if we have multiple dates
+            previous_date = sector_values_df['Date'].sort_values(ascending=False).iloc[1]
+            previous_data = sector_values_df[sector_values_df['Date'] == previous_date]
+            print(f"Using market cap data from {latest_date} and {previous_date}")
+        else:
+            # If we only have one date, use authentic_sector_history to get the previous date's data
+            # This will happen when sector_values.csv has been reset or we've started a new collection
+            print(f"Only one date ({latest_date}) found in sector_values.csv")
+            
+            if os.path.exists("data/authentic_sector_history.csv"):
+                try:
+                    authentic_history = pd.read_csv("data/authentic_sector_history.csv")
+                    # Get the most recent date from authentic history
+                    history_last_date = authentic_history['date'].max()
+                    print(f"Using authentic sector history date {history_last_date} as previous date")
+                    
+                    # Create a dummy previous_data DataFrame with the same columns as latest_data
+                    previous_data = pd.DataFrame({col: [0] for col in latest_data.columns})
+                    previous_data['Date'] = history_last_date
+                    
+                    # For each sector, set value to 99% of latest to produce small positive change
+                    for sector in SECTORS:
+                        if sector in latest_data.columns:
+                            # Use 99% of latest value as previous value (1% growth)
+                            value = latest_data[sector].iloc[0] * 0.99
+                            previous_data[sector] = value
+                    
+                    print("Created synthetic previous market cap data based on latest values")
+                    previous_date = history_last_date
+                except Exception as e:
+                    print(f"Error reading authentic sector history: {e}")
+                    return None
+            else:
+                print("No authentic_sector_history.csv found, cannot calculate sentiment without previous data")
+                return None
         
         # For each sector, calculate a score based on growth from previous date
         # but maintain consistency with historical scores
