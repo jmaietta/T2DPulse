@@ -247,8 +247,13 @@ def convert_to_sentiment_scores(sector_values_df):
         traceback.print_exc()
         return None
 
-def update_authentic_sector_history(scores):
-    """Update the authentic sector history with new scores"""
+def update_authentic_sector_history(scores, force_date=None):
+    """Update the authentic sector history with new scores
+    
+    Args:
+        scores: List of sector sentiment scores
+        force_date: Optional date string to force update for (YYYY-MM-DD) 
+    """
     try:
         if scores is None or len(scores) == 0:
             print("No scores to update")
@@ -264,7 +269,14 @@ def update_authentic_sector_history(scores):
         
         # Get today's date in Eastern time
         eastern = pytz.timezone('US/Eastern')
-        today = datetime.now(eastern).strftime('%Y-%m-%d')
+        
+        # Use the forced date if provided, otherwise use today's date
+        if force_date:
+            today = force_date
+            print(f"Using forced date: {today}")
+        else:
+            today = datetime.now(eastern).strftime('%Y-%m-%d')
+            print(f"Using current date: {today}")
         
         # Check if we already have an entry for today
         if today in df['date'].dt.strftime('%Y-%m-%d').values:

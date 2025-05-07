@@ -54,13 +54,15 @@ def update_historical_data_async():
     except Exception as e:
         print(f"Error generating authentic sector history: {e}")
         
-        # As fallback, update the real historical data
+        # As fallback, update the historical data manually
         try:
-            print("Falling back to original historical sector data...")
-            update_historical_data.update_real_historical_data()
-            print("Original historical data update complete")
+            print("Falling back to manual historical sector data update...")
+            # Run the direct update script
+            import subprocess
+            subprocess.run(["python", "update_historical_data.py"])
+            print("Manual historical data update attempted")
         except Exception as e2:
-            print(f"Error updating original historical data: {e2}")
+            print(f"Error with manual historical data update: {e2}")
 
 # Function to run the daily sector data collection
 def run_daily_sector_data_collection():
@@ -115,12 +117,62 @@ sector_thread.daemon = True  # Thread will exit when main thread exits
 print("Starting background thread for daily sector data collection")
 sector_thread.start()
 
-# Start the auto-refresh thread at 5:00pm ET
-from app import auto_refresh_data
-auto_refresh_thread = threading.Thread(target=auto_refresh_data, daemon=True)
-auto_refresh_thread.daemon = True  # Thread will exit when main thread exits
-print("Starting auto-refresh thread to update data at 5:00pm ET daily")
-auto_refresh_thread.start()
+# Create a dedicated function to run the market update at exactly 5:00pm ET
+def run_market_close_update():
+    """Run a dedicated update function at exactly 5:00pm ET after market close"""
+    while True:
+        # Get current time in Eastern Time
+        eastern = pytz.timezone('US/Eastern')
+        now = datetime.now(eastern)
+        
+        # Calculate time until 5:00pm ET today
+        target = now.replace(hour=17, minute=0, second=0, microsecond=0)
+        
+        # If it's already past 5:00pm, set target to 5:00pm tomorrow
+        if now >= target:
+            target = target + timedelta(days=1)
+            
+        # Calculate seconds until target time
+        seconds_until_target = (target - now).total_seconds()
+        print(f"Next market close update scheduled at {target.strftime('%Y-%m-%d %H:%M:%S %Z')}, which is {seconds_until_target:.1f} seconds from now")
+        
+        # Sleep until target time
+        time.sleep(seconds_until_target)
+        
+        # Use Eastern time for date display
+        eastern_date = target.strftime('%Y-%m-%d')
+        print(f"Market close update: Running at exactly 5:00pm ET on {eastern_date}...")
+        
+        try:
+            # Run daily sector data collection using Finnhub API
+            print(f"Market close update: Running daily sector data collection...")
+            from run_daily import main as run_daily_collection
+            daily_collection_success = run_daily_collection()
+            
+            if daily_collection_success:
+                print(f"Market close update: Successfully collected fresh sector data on {eastern_date}")
+                
+                # Calculate the authentic T2D Pulse score
+                print(f"Market close update: Calculating authentic T2D Pulse score...")
+                from calculate_authentic_pulse import calculate_pulse_scores_from_sectors, save_authentic_current_score
+                pulse_df = calculate_pulse_scores_from_sectors()
+                if pulse_df is not None:
+                    latest_score = save_authentic_current_score()
+                    print(f"Market close update: Updated T2D Pulse score to {latest_score} on {eastern_date}")
+                else:
+                    print(f"Market close update: Failed to calculate authentic T2D Pulse score")
+            else:
+                print(f"Market close update: Failed to collect fresh sector data on {eastern_date}")
+        except Exception as e:
+            print(f"Market close update: Error in update process: {str(e)}")
+            import traceback
+            traceback.print_exc()
+
+# Start the 5:00pm ET market close update thread
+market_update_thread = threading.Thread(target=run_market_close_update, daemon=True)
+market_update_thread.daemon = True  # Thread will exit when main thread exits
+print("Starting dedicated market close update thread (runs at exactly 5:00pm ET daily)")
+market_update_thread.start()
 
 # Start the server
 print(f"Starting T2D Pulse server at {datetime.now(eastern).strftime('%Y-%m-%d %H:%M:%S')} EDT")
