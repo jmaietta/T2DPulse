@@ -148,10 +148,11 @@ def ensure_consistent_sector_data():
         'sectors': {}
     }
     
-    # Add each sector's data
+    # Add each sector's data, ensuring values are properly converted to float
     for column in df_history.columns:
         if column != 'date':
-            data['sectors'][column] = df_history[column].tolist()
+            # Convert column values to float to ensure consistent type
+            data['sectors'][column] = [float(value) for value in df_history[column].tolist()]
     
     # Save the JSON data
     json_file = "data/sector_history.json"
