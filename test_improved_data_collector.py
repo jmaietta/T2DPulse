@@ -30,19 +30,19 @@ def test_market_cap_sources(ticker):
     start_time = time.time()
     market_cap = fetch_market_cap_finnhub(ticker)
     finnhub_time = time.time() - start_time
-    print(f"  Finnhub: {market_cap:,.2f if market_cap else None} ({finnhub_time:.2f}s)")
+    print(f"  Finnhub: {market_cap:,.2f if market_cap is not None else None} ({finnhub_time:.2f}s)")
     
     # Test Yahoo Finance
     start_time = time.time()
     market_cap = fetch_market_cap_yfinance(ticker)
     yahoo_time = time.time() - start_time
-    print(f"  Yahoo Finance: {market_cap:,.2f if market_cap else None} ({yahoo_time:.2f}s)")
+    print(f"  Yahoo Finance: {market_cap:,.2f if market_cap is not None else None} ({yahoo_time:.2f}s)")
     
     # Test AlphaVantage
     start_time = time.time()
     market_cap = fetch_market_cap_alphavantage(ticker)
     alpha_time = time.time() - start_time
-    print(f"  AlphaVantage: {market_cap:,.2f if market_cap else None} ({alpha_time:.2f}s)")
+    print(f"  AlphaVantage: {market_cap:,.2f if market_cap is not None else None} ({alpha_time:.2f}s)")
 
 def test_price_sources(ticker):
     """Test all price data sources for a ticker"""
@@ -52,19 +52,19 @@ def test_price_sources(ticker):
     start_time = time.time()
     price = fetch_price_finnhub(ticker)
     finnhub_time = time.time() - start_time
-    print(f"  Finnhub: {price:.2f if price else None} ({finnhub_time:.2f}s)")
+    print(f"  Finnhub: {price:.2f if price is not None else None} ({finnhub_time:.2f}s)")
     
     # Test Yahoo Finance
     start_time = time.time()
     price = fetch_price_yfinance(ticker)
     yahoo_time = time.time() - start_time
-    print(f"  Yahoo Finance: {price:.2f if price else None} ({yahoo_time:.2f}s)")
+    print(f"  Yahoo Finance: {price:.2f if price is not None else None} ({yahoo_time:.2f}s)")
     
     # Test AlphaVantage
     start_time = time.time()
     price = fetch_price_alphavantage(ticker)
     alpha_time = time.time() - start_time
-    print(f"  AlphaVantage: {price:.2f if price else None} ({alpha_time:.2f}s)")
+    print(f"  AlphaVantage: {price:.2f if price is not None else None} ({alpha_time:.2f}s)")
 
 def load_previous_sector_scores():
     """Test loading previous sector scores for fallback"""
