@@ -7788,20 +7788,23 @@ def download_file(filename):
     # Generate file on request if it doesn't exist yet
     # If it's a sector sentiment history export, ensure we're using authentic data
     if filename.startswith('sector_sentiment_history_'):
-        import export_fixed_sentiment_history
+        # Use improved exporter with better error handling
+        import improved_export_fixed_sentiment_history as exporter
         if filename.endswith('.xlsx'):
-            export_fixed_sentiment_history.export_sentiment_history('excel')
+            exporter.export_sentiment_history('excel')
         elif filename.endswith('.csv'):
-            export_fixed_sentiment_history.export_sentiment_history('csv')
+            exporter.export_sentiment_history('csv')
     filepath = os.path.join("data", filename)
     
     if not os.path.exists(filepath):
         # The file doesn't exist yet, so create it now
-        import export_fixed_sentiment_history
-        if filename.endswith('.xlsx'):
-            export_fixed_sentiment_history.export_sentiment_history('excel')
-        elif filename.endswith('.csv'):
-            export_fixed_sentiment_history.export_sentiment_history('csv')
+        try:
+            # Run the export script explicitly with our new improved version
+            import improved_export_fixed_sentiment_history as exporter
+            format_type = 'excel' if filename.endswith('.xlsx') else 'csv'
+            exporter.export_sentiment_history(format_type)
+        except Exception as e:
+            print(f"Error in export: {e}")
     
     # Now serve the file (whether it existed before or was just created)
     from flask import send_from_directory
