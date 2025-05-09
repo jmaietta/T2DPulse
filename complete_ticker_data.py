@@ -42,8 +42,12 @@ def get_null_tickers(price_df, marketcap_df):
     
     return price_nulls, marketcap_nulls
 
-def fill_missing_data():
-    """Fill in missing data for tickers with null values"""
+def fill_missing_data(max_tickers=None):
+    """Fill in missing data for tickers with null values
+    
+    Args:
+        max_tickers (int, optional): Maximum number of tickers to process. If None, process all.
+    """
     price_df, marketcap_df = load_data()
     
     # Get tickers with null values
@@ -59,6 +63,11 @@ def fill_missing_data():
     # Get all dates in the dataframes
     all_dates = sorted(price_df.index)
     latest_date = all_dates[-1]
+    
+    # Limit number of tickers if specified
+    if max_tickers and max_tickers < len(null_tickers):
+        print(f"Limiting to {max_tickers} tickers out of {len(null_tickers)}")
+        null_tickers = list(null_tickers)[:max_tickers]
     
     print(f"Processing {len(null_tickers)} tickers with null values...")
     
@@ -106,19 +115,49 @@ def fill_missing_data():
         # If we don't have any data, fetch it
         if latest_price is None or latest_marketcap is None:
             print(f"  Fetching data for {ticker}...")
-            try:
-                ticker_data = fetch_ticker_data(ticker)
-                
-                if ticker_data["price"] is not None:
-                    latest_price = ticker_data["price"]
-                    print(f"  Got new price: {latest_price}")
-                
-                if ticker_data["market_cap"] is not None:
-                    latest_marketcap = ticker_data["market_cap"]
-                    print(f"  Got new market cap: {latest_marketcap}")
-                
-            except Exception as e:
-                print(f"  Error fetching data for {ticker}: {e}")
+            max_retries = 3
+            retry_delay = 5  # seconds
+            
+            for attempt in range(max_retries):
+                try:
+                    ticker_data = fetch_ticker_data(ticker)
+                    
+                    if ticker_data["price"] is not None:
+                        latest_price = ticker_data["price"]
+                        print(f"  Got new price: {latest_price}")
+                    
+                    if ticker_data["market_cap"] is not None:
+                        latest_marketcap = ticker_data["market_cap"]
+                        print(f"  Got new market cap: {latest_marketcap}")
+                    
+                    # If we got both price and market cap, break out of retry loop
+                    if latest_price is not None and latest_marketcap is not None:
+                        break
+                        
+                    # If we're missing one or both, try again
+                    if attempt < max_retries - 1:
+                        missing_data = []
+                        if latest_price is None:
+                            missing_data.append("price")
+                        if latest_marketcap is None:
+                            missing_data.append("market cap")
+                        
+                        print(f"  Missing {', '.join(missing_data)} data. Retrying in {retry_delay} seconds...")
+                        time.sleep(retry_delay)
+                    
+                except Exception as e:
+                    print(f"  Error fetching data for {ticker} (attempt {attempt+1}/{max_retries}): {e}")
+                    
+                    # Check if it's a rate limiting error
+                    if "rate limit" in str(e).lower() or "too many requests" in str(e).lower():
+                        wait_time = retry_delay * (attempt + 1)  # Exponential backoff
+                        print(f"  Rate limit hit. Waiting {wait_time} seconds before retrying...")
+                        time.sleep(wait_time)
+                    elif attempt < max_retries - 1:
+                        print(f"  Retrying in {retry_delay} seconds...")
+                        time.sleep(retry_delay)
+                    else:
+                        print(f"  Failed to fetch data for {ticker} after {max_retries} attempts.")
         
         # Fill in null values with the latest data
         if latest_price is not None:
@@ -175,7 +214,15 @@ def fill_missing_data():
 
 if __name__ == "__main__":
     print("Starting to fill missing ticker data...")
-    success = fill_missing_data()
+    # Check for command line arguments
+    import argparse
+    parser = argparse.ArgumentParser(description='Fill missing ticker data in historical datasets')
+    parser.add_argument('--max', type=int, help='Maximum number of tickers to process')
+    args = parser.parse_args()
+    
+    # Use command line argument if provided
+    success = fill_missing_data(max_tickers=args.max)
+    
     if success:
         print("Successfully filled all missing ticker data!")
         sys.exit(0)
