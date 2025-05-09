@@ -48,30 +48,85 @@ def parse_args() -> argparse.Namespace:
 def shares_outstanding(ticker: str) -> int | float | None:
     """Fetch shares‑outstanding once per ticker (cached)."""
     try:
+        # Add delay to avoid rate limits
+        time.sleep(0.5)
         return yf.Ticker(ticker).info.get("sharesOutstanding")
     except Exception as e:
         print(f"[WARN] {ticker}: failed to fetch shares outstanding – {e}", file=sys.stderr)
         return None
 
 
+def download_prices_batch(ticker_batch: List[str], start_date: str) -> pd.DataFrame:
+    """Download prices for a batch of tickers with rate limiting."""
+    try:
+        df = yf.download(
+            tickers=" ".join(ticker_batch),
+            start=start_date,
+            progress=False,
+            auto_adjust=True,
+            group_by="ticker",
+            threads=False,  # Disable threading to better control rate limiting
+        )
+        
+        # Check if the DataFrame is empty or None
+        if df is None or df.empty:
+            print(f"[WARN] Empty data returned for batch {ticker_batch}", file=sys.stderr)
+            return pd.DataFrame()
+        
+        if len(ticker_batch) == 1:
+            # Special case for single ticker
+            if "Close" in df.columns:
+                result = pd.DataFrame(df["Close"])
+                result.columns = ticker_batch
+                return result
+            else:
+                print(f"[WARN] No Close prices for {ticker_batch[0]}", file=sys.stderr)
+                return pd.DataFrame()
+        else:
+            # Extract just the Close prices from multi-index DataFrame
+            if "Close" in df.columns:
+                return df["Close"]
+            else:
+                print(f"[WARN] No Close prices for batch", file=sys.stderr)
+                return pd.DataFrame()
+    except Exception as e:
+        print(f"[ERROR] Batch download failed: {e}", file=sys.stderr)
+        return pd.DataFrame()
+
+
 def download_prices(tickers: List[str], start_date: str) -> pd.DataFrame:
     """
-    Returns a MultiIndex DataFrame:
-        index  -> Date
-        level0-> Price field ('Close')
-        level1-> Ticker
+    Returns a DataFrame with ticker closing prices, with rate limiting
+    to handle Yahoo Finance API restrictions
     """
-    df = yf.download(
-        tickers=" ".join(tickers),
-        start=start_date,
-        progress=False,
-        auto_adjust=True,        # back‑adjust for splits/divs
-        group_by="ticker",
-        threads=True,
-    )
-    if df.empty:
+    # Split tickers into smaller batches
+    batch_size = 5
+    batches = [tickers[i:i+batch_size] for i in range(0, len(tickers), batch_size)]
+    
+    # Create an empty DataFrame to store results
+    result_df = pd.DataFrame()
+    
+    # Process each batch with delays between requests
+    for i, batch in enumerate(batches):
+        print(f"[INFO] Processing batch {i+1}/{len(batches)} with {len(batch)} tickers", file=sys.stderr)
+        
+        # Add delay between batches to avoid rate limiting
+        if i > 0:
+            time.sleep(2.0)
+        
+        batch_df = download_prices_batch(batch, start_date)
+        
+        # Merge with the main result DataFrame
+        if result_df.empty and not batch_df.empty:
+            result_df = batch_df
+        elif not batch_df.empty:
+            # Join on index (date)
+            result_df = pd.concat([result_df, batch_df], axis=1)
+    
+    if result_df.empty:
         raise RuntimeError("Yahoo returned no data; check tickers or date range.")
-    return df["Close"]          # keep only Close prices
+        
+    return result_df
 
 
 # --------------------------------------------------------------------------- #
