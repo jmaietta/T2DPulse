@@ -30,16 +30,6 @@ import numpy as np
 import requests
 from tqdm import tqdm
 
-# Manual overrides for stocks with known share count discrepancies
-# These values come from the most authoritative sources (SEC filings)
-SHARE_COUNT_OVERRIDES = {
-    "GOOGL": 12_291_000_000,  # Alphabet Inc.
-    "META": 2_590_000_000,    # Meta Platforms Inc.
-    # Add others as needed
-}
-
-
-
 # Set up logging
 logging.basicConfig(
     level=logging.INFO,
@@ -221,16 +211,6 @@ def get_shares_outstanding(client: PolygonClient, tickers: List[str], verbose: b
         else:
             ticker_iter = missing_tickers
             
-        # Apply manual overrides for stocks with known share count discrepancies
-        for ticker, override_count in SHARE_COUNT_OVERRIDES.items():
-            if ticker in tickers:
-                shares_dict[ticker] = override_count
-                if verbose:
-                    print(f"Applied manual override for {ticker}: {override_count:,} shares")
-                # Remove from list to avoid API call
-                if ticker in remaining_tickers:
-                    remaining_tickers.remove(ticker)
-
         for ticker in ticker_iter:
             try:
                 details = client.get_ticker_details(ticker)
