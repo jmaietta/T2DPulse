@@ -1,0 +1,16 @@
+{
+    "SMB SaaS": ["BILL", "PAYC", "DDOG"],
+    "Enterprise SaaS": ["CRM", "NOW", "ADBE"],
+    "Cloud Infrastructure": ["AMZN", "MSFT", "GOOG"],
+    "AdTech": ["TTD", "PUBM", "GOOGL"],
+    "Fintech": ["SQ", "PYPL", "ADYEY"],
+    "Consumer Internet": ["META", "GOOGL", "PINS"],
+    "eCommerce": ["AMZN", "SHOP", "SE"],
+    "Cybersecurity": ["PANW", "FTNT", "CRWD"],
+    "Dev Tools / Analytics": ["SNOW", "DDOG", "ESTC"],
+    "Semiconductors": ["NVDA", "AMD", "AVGO"],
+    "AI Infrastructure": ["NVDA", "AMD", "SMCI"],
+    "Vertical SaaS": ["VEEV", "TYL", "WDAY"],
+    "IT Services / Legacy Tech": ["IBM", "ACN", "DXC"],
+    "Hardware / Devices": ["AAPL", "DELL", "HPQ"]
+}
