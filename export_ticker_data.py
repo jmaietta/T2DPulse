@@ -113,7 +113,25 @@ def create_formatted_export(output_file='ticker_data_export.csv'):
     complete_tickers = len(export_df[export_df['Data Status'] == 'Complete'])
     coverage_pct = complete_tickers / total_tickers * 100
     
-    print(f"Coverage: {complete_tickers}/{total_tickers} tickers ({coverage_pct:.1f}%)")
+    # Count sectors with 100% coverage
+    sector_totals = {}
+    sector_complete = {}
+    
+    for _, row in export_df.iterrows():
+        sector = row['Sector']
+        sector_totals[sector] = sector_totals.get(sector, 0) + 1
+        if row['Data Status'] == 'Complete':
+            sector_complete[sector] = sector_complete.get(sector, 0) + 1
+    
+    complete_sectors = 0
+    total_sectors = len(sector_totals)
+    
+    for sector, total in sector_totals.items():
+        if sector_complete.get(sector, 0) == total:
+            complete_sectors += 1
+    
+    print(f"Overall Coverage: {complete_tickers}/{total_tickers} tickers ({coverage_pct:.1f}%)")
+    print(f"Sectors at 100%: {complete_sectors}/{total_sectors} sectors ({complete_sectors/total_sectors*100:.1f}%)")
     
     # Sort by sector and ticker
     export_df = export_df.sort_values(['Sector', 'Ticker'])
