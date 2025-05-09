@@ -1,140 +1,163 @@
 #!/usr/bin/env python3
 # notification_utils.py
 # -----------------------------------------------------------
-# Utilities for sending notifications about data issues
+# Utilities for sending notifications when data issues are detected
 
 import os
 import sys
+import pandas as pd
 from datetime import datetime
 import pytz
 from sendgrid import SendGridAPIClient
-from sendgrid.helpers.mail import Mail, Email, To, Content
+from sendgrid.helpers.mail import Mail
 
-# Ensure we have the SendGrid API key
-SENDGRID_API_KEY = os.environ.get('SENDGRID_API_KEY')
+def get_sendgrid_key():
+    """Get SendGrid API key from environment variables"""
+    return os.environ.get('SENDGRID_API_KEY')
 
-def get_eastern_time():
-    """Get current time in US Eastern timezone"""
-    eastern = pytz.timezone('US/Eastern')
-    return datetime.now(eastern)
-
-def send_data_issue_notification(subject, message, to_email='josh@techtwodegrees.com'):
+def send_missing_data_alert(missing_tickers, admin_email="admin@example.com", from_email="t2dpulse@example.com"):
     """
-    Send a notification email for data issues
+    Send an email alert about missing ticker data
     
     Args:
-        subject (str): Email subject line
-        message (str): Email body content
-        to_email (str): Recipient email address
+        missing_tickers (list): List of tickers with missing data
+        admin_email (str): Email address to send the alert to
+        from_email (str): Email address to send the alert from
     
     Returns:
-        bool: True if email was sent successfully, False otherwise
+        bool: True if the email was sent successfully, False otherwise
     """
-    if not SENDGRID_API_KEY:
-        print("WARNING: SendGrid API key not set, cannot send notification")
+    if not missing_tickers:
+        print("No missing tickers to report")
+        return True
+    
+    # Get SendGrid API key
+    sendgrid_key = get_sendgrid_key()
+    if not sendgrid_key:
+        print("SendGrid API key not found. Cannot send email alert.")
         return False
     
-    # Create the email
-    email = Mail(
-        from_email=Email('t2dpulse@notifications.replit.app'),
-        to_emails=To(to_email),
+    # Get current date in Eastern time (US market timezone)
+    eastern = pytz.timezone('US/Eastern')
+    today = datetime.now(eastern).strftime('%Y-%m-%d')
+    
+    # Prepare email content
+    subject = f"T2D Pulse: Missing Ticker Data Alert - {today}"
+    
+    # Convert the missing tickers list to HTML format
+    tickers_html = "<ul>"
+    for ticker in missing_tickers:
+        tickers_html += f"<li>{ticker}</li>"
+    tickers_html += "</ul>"
+    
+    # Create the HTML content
+    html_content = f"""
+    <h1>T2D Pulse: Missing Ticker Data Alert</h1>
+    <p><strong>Date:</strong> {today}</p>
+    <p>The system has detected missing price or market cap data for the following tickers:</p>
+    {tickers_html}
+    <p>Please take action to ensure 100% ticker coverage as required for accurate sector sentiment calculation.</p>
+    <p>This is an automated alert from the T2D Pulse system.</p>
+    """
+    
+    # Create the email message
+    message = Mail(
+        from_email=from_email,
+        to_emails=admin_email,
         subject=subject,
-        html_content=Content("text/html", message)
+        html_content=html_content
     )
     
+    # Send the email
     try:
-        sg = SendGridAPIClient(SENDGRID_API_KEY)
-        response = sg.send(email)
-        print(f"Notification email sent to {to_email}, status code: {response.status_code}")
-        return True
+        sg = SendGridAPIClient(sendgrid_key)
+        response = sg.send(message)
+        print(f"Email alert sent with status code: {response.status_code}")
+        return response.status_code == 202
     except Exception as e:
-        print(f"ERROR: Failed to send notification email: {e}")
+        print(f"Error sending email alert: {e}")
         return False
 
-def send_market_cap_alert(missing_tickers, sector_data):
+def check_data_and_send_alerts(admin_email="admin@example.com", from_email="t2dpulse@example.com"):
     """
-    Send alert for missing market cap data
+    Check for missing ticker data and send an alert if needed
     
     Args:
-        missing_tickers (dict): Dictionary of tickers with missing data by sector
-        sector_data (dict): Dictionary of sector data with available tickers
+        admin_email (str): Email address to send the alert to
+        from_email (str): Email address to send the alert from
     
     Returns:
-        bool: True if email was sent successfully, False otherwise
+        bool: True if there is no missing data or if the alert was sent successfully,
+              False if there is missing data and the alert failed to send
     """
-    # Format the current time
-    eastern_time = get_eastern_time()
-    time_str = eastern_time.strftime('%Y-%m-%d %H:%M:%S %Z')
+    # Import the check_ticker_data function
+    try:
+        from check_missing_ticker_data_revised import get_all_tickers
+    except ImportError:
+        print("Error importing check_missing_ticker_data_revised.py")
+        return False
     
-    # Create the email content
-    subject = f"T2D Pulse Alert: Missing Market Cap Data - {time_str}"
+    # Get all tickers
+    all_tickers = get_all_tickers()
     
-    # Build the HTML message
-    message = f"""
-    <html>
-    <body>
-        <h2>T2D Pulse Data Alert</h2>
-        <p>The following tickers have missing market cap data as of {time_str}:</p>
-        <table border="1" cellpadding="5" cellspacing="0">
-            <tr>
-                <th>Sector</th>
-                <th>Missing Tickers</th>
-                <th>Available Tickers</th>
-                <th>Completion %</th>
-            </tr>
-    """
+    # File paths
+    price_file = "data/historical_ticker_prices.csv"
+    marketcap_file = "data/historical_ticker_marketcap.csv"
     
-    # Add info for each sector with missing tickers
-    for sector, tickers in missing_tickers.items():
-        if sector in sector_data:
-            total_tickers = sector_data[sector].get('total_tickers', 0)
-            tickers_with_data = sector_data[sector].get('tickers_with_data', 0)
+    # Get the current date in Eastern time (US market timezone)
+    eastern = pytz.timezone('US/Eastern')
+    today = datetime.now(eastern).strftime('%Y-%m-%d')
+    
+    # Check if files exist
+    if not os.path.exists(price_file) or not os.path.exists(marketcap_file):
+        print("Missing data files, need to collect data")
+        # Send alert about completely missing data files
+        return send_missing_data_alert(all_tickers, admin_email, from_email)
+    
+    # Load data files
+    try:
+        price_df = pd.read_csv(price_file, index_col=0)
+        marketcap_df = pd.read_csv(marketcap_file, index_col=0)
+        
+        # Check if today's data exists
+        if today not in price_df.index or today not in marketcap_df.index:
+            print(f"No data for today ({today}) in one or both files")
+            # Send alert about missing today's data
+            return send_missing_data_alert(all_tickers, admin_email, from_email)
+        
+        # Check coverage for each ticker
+        missing_tickers = []
+        
+        for ticker in all_tickers:
+            has_price = ticker in price_df.columns and not pd.isna(price_df.loc[today, ticker])
+            has_marketcap = ticker in marketcap_df.columns and not pd.isna(marketcap_df.loc[today, ticker])
             
-            if total_tickers > 0:
-                completion_pct = (tickers_with_data / total_tickers) * 100
-            else:
-                completion_pct = 0
-            
-            message += f"""
-            <tr>
-                <td>{sector}</td>
-                <td>{', '.join(tickers)}</td>
-                <td>{tickers_with_data} / {total_tickers}</td>
-                <td>{completion_pct:.1f}%</td>
-            </tr>
-            """
-    
-    message += """
-        </table>
-        <p>Please check API limits and data sources to ensure complete data collection.</p>
-        <p>This is an automated notification from the T2D Pulse economic dashboard.</p>
-    </body>
-    </html>
-    """
-    
-    return send_data_issue_notification(subject, message)
+            if not has_price or not has_marketcap:
+                missing_tickers.append(ticker)
+        
+        if missing_tickers:
+            print(f"Missing data for {len(missing_tickers)} tickers")
+            # Send alert about missing ticker data
+            return send_missing_data_alert(missing_tickers, admin_email, from_email)
+        
+        # If we got here, we have 100% coverage
+        print(f"Verified 100% data coverage for all {len(all_tickers)} tickers on {today}")
+        return True
+        
+    except Exception as e:
+        print(f"Error checking data coverage: {e}")
+        # Send alert about error checking data coverage
+        return send_missing_data_alert(all_tickers, admin_email, from_email)
 
 if __name__ == "__main__":
-    # Test sending an alert
-    test_missing_tickers = {
-        "IT Services / Legacy Tech": ["IBM", "ORCL", "DXC"],
-        "Cybersecurity": ["CRWD", "PANW"]
-    }
+    # Example usage
+    admin_email = sys.argv[1] if len(sys.argv) > 1 else "admin@example.com"
+    from_email = sys.argv[2] if len(sys.argv) > 2 else "t2dpulse@example.com"
     
-    test_sector_data = {
-        "IT Services / Legacy Tech": {
-            "tickers_with_data": 2,
-            "total_tickers": 5,
-            "market_cap": 1000000000,
-            "momentum": 1.5
-        },
-        "Cybersecurity": {
-            "tickers_with_data": 3, 
-            "total_tickers": 5,
-            "market_cap": 2000000000,
-            "momentum": -0.5
-        }
-    }
-    
-    success = send_market_cap_alert(test_missing_tickers, test_sector_data)
-    print(f"Test email sent: {success}")
+    success = check_data_and_send_alerts(admin_email, from_email)
+    if success:
+        print("Data check successful or alert sent")
+        sys.exit(0)
+    else:
+        print("Data check failed and alert failed to send")
+        sys.exit(1)

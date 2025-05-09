@@ -3,16 +3,22 @@
 # -----------------------------------------------------------
 # Daily script to collect sector market capitalization values and momentum (EMA gap)
 # Enhanced with multi-source approach (Finnhub, Yahoo Finance, AlphaVantage)
+# Integrated with complete ticker data collection to ensure 100% coverage
 
 import os
 import time
 import datetime
 import pytz
 import pandas as pd
+import sys
 from config import SECTORS, FINNHUB_API_KEY
 # Using improved data collector with historical persistence and fallback mechanisms
 from improved_finnhub_data_collector import collect_daily_sector_data
 from update_sector_history import main as update_sector_history_main
+# Import the ensure_complete_data module to ensure 100% ticker coverage
+from ensure_complete_data import check_data_coverage, run_collection_if_needed
+# Import the notification system for missing ticker data alerts
+from notification_utils import check_data_and_send_alerts
 
 def get_eastern_time():
     """Get current time in US Eastern timezone"""
@@ -81,6 +87,14 @@ def main():
     previous_scores = get_previous_sector_scores()
     print(f"Loaded {len(previous_scores)} previous sector scores for fallback")
     
+    # First ensure we have 100% ticker coverage
+    print("Checking and ensuring 100% ticker data coverage...")
+    ticker_coverage_success = run_collection_if_needed()
+    if ticker_coverage_success:
+        print("Successfully ensured 100% ticker data coverage!")
+    else:
+        print("WARNING: Failed to ensure complete ticker data coverage. Will continue with available data.")
+    
     # Use the enhanced multi-source data collector
     success = collect_daily_sector_data()
     
@@ -147,6 +161,16 @@ def main():
     else:
         print(f"All data collection sources failed for {today_date}")
         print("No data available to update sector history")
+    
+    # Check for missing ticker data and send alerts if needed
+    print("\nChecking for missing ticker data...")
+    admin_email = os.environ.get("ADMIN_EMAIL", "admin@example.com")
+    alert_from_email = os.environ.get("ALERT_FROM_EMAIL", "t2dpulse@example.com")
+    alert_result = check_data_and_send_alerts(admin_email, alert_from_email)
+    if alert_result:
+        print("Ticker data check complete - alert sent if needed")
+    else:
+        print("WARNING: Ticker data check failed and alert could not be sent")
         
     return success
 
