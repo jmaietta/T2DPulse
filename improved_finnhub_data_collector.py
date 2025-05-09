@@ -12,6 +12,7 @@ import os
 import requests
 import time
 import pandas as pd
+from pandas import DatetimeIndex
 import json
 import csv
 from datetime import datetime, timedelta
@@ -295,6 +296,15 @@ def update_historical_data(all_tickers):
     # Load existing historical data
     historical_price_data = load_historical_price_data()
     historical_marketcap_data = load_historical_marketcap_data()
+    
+    # Initialize DataFrames if empty
+    if historical_price_data.empty:
+        print("Creating new price history dataframe")
+        historical_price_data = pd.DataFrame(index=pd.DatetimeIndex([today]), columns=all_tickers)
+    
+    if historical_marketcap_data.empty:
+        print("Creating new market cap history dataframe")
+        historical_marketcap_data = pd.DataFrame(index=pd.DatetimeIndex([today]), columns=all_tickers)
     
     # Create today's empty records if they don't exist
     if today not in historical_price_data.index:
