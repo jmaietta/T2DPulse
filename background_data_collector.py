@@ -15,6 +15,9 @@ from config import SECTORS
 from process_sector_tickers import process_sector
 from ensure_complete_data import get_sector_coverage
 
+# Path to the official ticker list
+OFFICIAL_TICKERS_FILE = "official_tickers.csv"
+
 # Configure logging
 logging.basicConfig(
     level=logging.INFO,
