@@ -17,6 +17,8 @@ import flask
 import plotly.graph_objs as go
 import plotly.express as px
 import yfinance as yf
+import logging
+from functools import lru_cache
 
 # Import API keys from the separate file
 from api_keys import FRED_API_KEY, BEA_API_KEY, BLS_API_KEY
@@ -47,6 +49,41 @@ import historical_sector_scores
 # Import authentic sector history for trend charts
 import authentic_sector_history
 import predefined_sector_data
+
+# Import data reader with enhanced sector data reading functionality
+from data_reader import read_sector_data, read_pulse_score
+
+# Configure logging
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+)
+logger = logging.getLogger(__name__)
+
+# Global data caching for expensive operations
+# Load T2D Pulse history once at startup
+T2D_PULSE_HISTORY = None
+try:
+    history_file = "data/t2d_pulse_history.csv"
+    parquet_history_file = "data/t2d_pulse_history.parquet"
+    
+    if os.path.exists(parquet_history_file):
+        logger.info(f"Loading T2D Pulse history from Parquet file: {parquet_history_file}")
+        T2D_PULSE_HISTORY = pd.read_parquet(parquet_history_file)
+    elif os.path.exists(history_file):
+        logger.info(f"Loading T2D Pulse history from CSV file: {history_file}")
+        T2D_PULSE_HISTORY = pd.read_csv(history_file)
+        
+    if T2D_PULSE_HISTORY is not None:
+        # Ensure date column is properly formatted
+        if 'date' in T2D_PULSE_HISTORY.columns:
+            T2D_PULSE_HISTORY['date'] = pd.to_datetime(T2D_PULSE_HISTORY['date'])
+            logger.info(f"Successfully loaded T2D Pulse history with {len(T2D_PULSE_HISTORY)} records")
+        else:
+            logger.warning("T2D Pulse history missing date column")
+except Exception as e:
+    logger.error(f"Error loading T2D Pulse history: {e}")
+    T2D_PULSE_HISTORY = None
 
 # Get the authentic T2D Pulse score
 def get_authentic_pulse_score():
