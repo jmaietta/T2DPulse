@@ -29,6 +29,7 @@ dependencies = [
     "fastparquet>=2024.11.0",
     "finnhub-python>=2.4.23",
     "tqdm>=4.67.1",
+    "tenacity>=9.1.2",
 ]
 
 [[tool.uv.index]]
