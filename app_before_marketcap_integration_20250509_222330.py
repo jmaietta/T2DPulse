@@ -1037,52 +1037,44 @@ def calculate_t2d_pulse_from_sectors(sector_scores, sector_weights=None):
     Returns:
         float: The weighted average T2D Pulse score (0-100 scale)
     """
-    # Convert sector scores to a dictionary if it's a list
+    if not sector_scores:
+        return 50.0  # Default neutral score if no sector data
+    
+    # Handle both dictionary and list input formats
     if isinstance(sector_scores, list):
-        sector_dict = {}
-        for item in sector_scores:
-            sector_dict.update(item)
-        sector_scores = sector_dict
+        # Create a dictionary for easier access if input is a list
+        sector_data = {s['sector']: s['normalized_score'] for s in sector_scores}
+    else:
+        # If already a dictionary, use as is
+        sector_data = sector_scores
     
-    # Try to get authentic market cap weights
-    try:
-        from authentic_marketcap_reader import get_sector_weightings
-        authentic_weights = get_sector_weightings()
-        
-        # If we have authentic weights and no custom weights specified, use the authentic weights
-        if authentic_weights and not sector_weights:
-            logging.info("Using authentic market cap weights for T2D Pulse calculation")
-            sector_weights = authentic_weights
-    except (ImportError, Exception) as e:
-        logging.warning(f"Could not load authentic market cap weights: {e}")
-    
-    # If no weights are provided, use equal weighting
+    # Use equal weights if no custom weights provided
     if not sector_weights:
-        sector_weights = {sector: 100 / len(sector_scores) for sector in sector_scores}
-        logging.info("Using equal weights for T2D Pulse calculation (no weights provided)")
-    
-    # Normalize the weights to sum to 100
-    total_weight = sum(sector_weights.values())
-    normalized_weights = {sector: weight * 100 / total_weight for sector, weight in sector_weights.items()}
+        num_sectors = len(sector_data)
+        sector_weights = {sector: 100.0 / num_sectors for sector in sector_data.keys()}
+    else:
+        # Normalize weights to sum to 100%
+        total_weight = sum(sector_weights.values())
+        if total_weight > 0:  # Avoid division by zero
+            sector_weights = {k: (v / total_weight * 100) for k, v in sector_weights.items()}
     
     # Calculate weighted average
     weighted_sum = 0
     total_applied_weight = 0
     
-    for sector, score in sector_scores.items():
-        if sector in normalized_weights:
-            weight = normalized_weights[sector]
+    for sector, score in sector_data.items():
+        if sector in sector_weights:
+            weight = sector_weights[sector]
             weighted_sum += score * weight
             total_applied_weight += weight
     
-    # Handle case where no weights were applied
-    if total_applied_weight == 0:
-        logging.warning("No weights applied in T2D Pulse calculation, returning simple average")
-        return sum(sector_scores.values()) / len(sector_scores)
-    
-    # Return normalized weighted score
-    pulse_score = weighted_sum / total_applied_weight
-    return round(pulse_score, 1)
+    # Return pulse score
+    if total_applied_weight > 0:
+        # Correctly normalize by dividing by total applied weight
+        pulse_score = weighted_sum / total_applied_weight
+        return round(pulse_score, 1)
+    else:
+        return 50.0  # Default neutral score if no weights could be applied
 
 def calculate_sentiment_index(custom_weights=None, proprietary_data=None, document_data=None):
     """Calculate economic sentiment index from available indicators
