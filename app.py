@@ -6125,21 +6125,30 @@ def update_sector_sentiment_container(n):
     
     print(f"Updating sector sentiment container. Today ({today_str}) is {'a weekend' if is_weekend else 'a weekday'}")
     
-    # Try to load the latest authentic sector data
-    date_specific_file = f"data/authentic_sector_history_{today_str}.csv"
+    # Use our fix_sector_charts module to ensure we have the latest, properly formatted data
+    try:
+        import fix_sector_charts
+        fix_sector_charts.fix_sector_charts()
+    except Exception as e:
+        print(f"Error running sector charts fix: {e}")
+    
+    # Try to load the latest authentic sector data (with proper column names)
+    authentic_data_file = f"data/sector_sentiment_history_{today_str}.csv"
+    json_history_file = "data/sector_history.json"
+    
     found_authentic_data = False
     
-    print(f"DEBUG: Looking for sector data file: {date_specific_file}")
+    print(f"Looking for sector data file: {authentic_data_file}")
     
     # First attempt to load today's authentic data if available
-    if os.path.exists(date_specific_file):
-        print(f"Found authentic sector data for current date: {today_str}")
+    if os.path.exists(authentic_data_file):
+        print(f"Found sector data for current date: {today_str}")
         try:
             import pandas as pd
-            recent_df = pd.read_csv(date_specific_file)
+            recent_df = pd.read_csv(authentic_data_file)
             
             # Check if file has valid data
-            if not recent_df.empty and 'date' in recent_df.columns:
+            if not recent_df.empty and 'Date' in recent_df.columns:
                 # Get sector columns (all except date)
                 sector_columns = [col for col in recent_df.columns if col != 'date']
                 
@@ -7788,23 +7797,36 @@ def download_file(filename):
     # Generate file on request if it doesn't exist yet
     # If it's a sector sentiment history export, ensure we're using authentic data
     if filename.startswith('sector_sentiment_history_'):
-        # Use improved exporter with better error handling
-        import improved_export_fixed_sentiment_history as exporter
-        if filename.endswith('.xlsx'):
-            exporter.export_sentiment_history('excel')
-        elif filename.endswith('.csv'):
-            exporter.export_sentiment_history('csv')
+        # Use the fix_sector_charts module to generate proper export files
+        try:
+            import fix_sector_charts
+            if fix_sector_charts.fix_sector_charts():
+                print(f"Successfully regenerated sector history export files")
+            else:
+                print(f"Error regenerating sector history export files")
+        except Exception as e:
+            print(f"Error running sector charts fix: {e}")
+    
     filepath = os.path.join("data", filename)
     
+    # If the file still doesn't exist, try one more approach
     if not os.path.exists(filepath):
-        # The file doesn't exist yet, so create it now
-        try:
-            # Run the export script explicitly with our new improved version
-            import improved_export_fixed_sentiment_history as exporter
-            format_type = 'excel' if filename.endswith('.xlsx') else 'csv'
-            exporter.export_sentiment_history(format_type)
-        except Exception as e:
-            print(f"Error in export: {e}")
+        print(f"File {filepath} not found, trying to generate...")
+        
+        # Create the basic file name without date if requested file has a date
+        today = datetime.now().strftime('%Y-%m-%d')
+        if today in filename:
+            base_filename = filename.replace(today, "")
+            base_filepath = os.path.join("data", base_filename)
+            
+            if os.path.exists(base_filepath):
+                # Copy the base file to the dated version
+                import shutil
+                try:
+                    shutil.copy2(base_filepath, filepath)
+                    print(f"Copied {base_filepath} to {filepath}")
+                except Exception as e:
+                    print(f"Error copying file: {e}")
     
     # Now serve the file (whether it existed before or was just created)
     from flask import send_from_directory
