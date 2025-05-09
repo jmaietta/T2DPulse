@@ -23,6 +23,7 @@ dependencies = [
     "yfinance>=0.2.55",
     "trafilatura>=2.0.0",
     "pytz>=2025.2",
+    "flask>=3.0.3",
 ]
 
 [[tool.uv.index]]
