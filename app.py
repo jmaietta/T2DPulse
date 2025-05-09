@@ -89,13 +89,13 @@ except Exception as e:
 def get_authentic_pulse_score():
     """Get the most recent authentic T2D Pulse score calculated from sector data"""
     try:
-        print("Attempting to read authentic pulse score from data/current_pulse_score.txt")
+        logger.debug("Attempting to read authentic pulse score from data/current_pulse_score.txt")
         with open("data/current_pulse_score.txt", "r") as f:
             score = float(f.read().strip())
-            print(f"Successfully read authentic pulse score: {score}")
+            logger.info(f"Successfully read authentic pulse score: {score}")
             return score
     except Exception as e:
-        print(f"Error reading authentic pulse score: {e}")
+        logger.error(f"Error reading authentic pulse score: {e}")
         return None
 
 # Consumer sentiment functions defined directly in app.py to avoid circular imports
@@ -152,17 +152,17 @@ app.title = "T2D Pulse"
 # Function to fetch data from FRED
 def fetch_fred_data(series_id, start_date=None, end_date=None):
     """Fetch data from FRED API for a given series"""
-    print(f"Fetching FRED data for series {series_id}")
+    logger.info(f"Fetching FRED data for series {series_id}")
     
     if not FRED_API_KEY:
-        print("Cannot fetch FRED data: No API key provided")
+        logger.error("Cannot fetch FRED data: No API key provided")
         return pd.DataFrame()
     
     # Use today's date in EDT time zone for most current data
     eastern = pytz.timezone('US/Eastern')
     today = datetime.now(eastern).date()
     current_date = today.strftime('%Y-%m-%d')
-    print(f"Using Eastern time date: {current_date}")
+    logger.debug(f"Using Eastern time date: {current_date}")
     
     # Default to last 5 years if no dates specified
     if not end_date:
@@ -2644,6 +2644,7 @@ def hex_to_rgb(hex_color):
     
     return (r, g, b)
 
+@lru_cache(maxsize=1)
 def create_pulse_card(value, include_chart=True):
     """Create a side-by-side pulse display with score circle and trend chart
     that fits directly in the main sentiment banner without adding a separate card.
@@ -2676,20 +2677,14 @@ def create_pulse_card(value, include_chart=True):
         pulse_color = "#e74c3c"  # Red - matching sector sentiment color
     
     try:
-        # Use authentic historical T2D Pulse score data instead of mock data
-        history_file = "data/t2d_pulse_history.csv"
-        
-        if os.path.exists(history_file):
-            print("Using authentic T2D Pulse history for chart")
-            # Read the history file
-            import pandas as pd
-            history_df = pd.read_csv(history_file)
+        # Use our cached T2D Pulse history data instead of reading the file every time
+        if T2D_PULSE_HISTORY is not None:
+            logger.info("Using cached T2D Pulse history for chart")
+            # Work with a copy to avoid modifying the global data
+            history_df = T2D_PULSE_HISTORY.copy()
             
             # Check if we have the required columns
             if 'date' in history_df.columns and ('T2D Pulse Score' in history_df.columns or 'pulse_score' in history_df.columns):
-                # Convert date column to datetime
-                history_df['date'] = pd.to_datetime(history_df['date'])
-                
                 # Determine which column has the data (pulse_score or T2D Pulse Score)
                 score_column = 'T2D Pulse Score' if 'T2D Pulse Score' in history_df.columns and not history_df['T2D Pulse Score'].isna().all() else 'pulse_score'
                 
@@ -2760,9 +2755,8 @@ def create_pulse_card(value, include_chart=True):
             else:
                 raise ValueError("History file missing required columns")
         else:
-            print("T2D Pulse history file not found, using fallback data")
-            # Fallback to generic placeholder if history file doesn't exist
-            import numpy as np
+            logger.warning("T2D Pulse history not available in cache or files, using fallback data")
+            # No need to re-import numpy here, it's already imported at the top level
             
             # Create dummy x values (30 days)
             days = 30
@@ -2928,7 +2922,7 @@ def create_pulse_card(value, include_chart=True):
         return pulse_display, pulse_status, pulse_color
     
     except Exception as e:
-        print(f"Error creating T2D Pulse display with chart: {e}")
+        logger.error(f"Error creating T2D Pulse display with chart: {e}")
         
         # Fallback to a basic display without the chart if there's an error
         basic_display = html.Div([
@@ -2984,7 +2978,7 @@ def create_pulse_card(value, include_chart=True):
 )
 def update_sentiment_gauge(score):
     """Update the sentiment card based on the score"""
-    print(f"update_sentiment_gauge called with score: {score}, type: {type(score)}")
+    logger.debug(f"update_sentiment_gauge called with score: {score}, type: {type(score)}")
     
     if not score:
         return html.Div("Data unavailable", className="no-data-message")
@@ -2993,7 +2987,7 @@ def update_sentiment_gauge(score):
     # This is the most accurate source
     authentic_score = get_authentic_pulse_score()
     if authentic_score is not None:
-        print(f"ALWAYS USING AUTHENTIC T2D PULSE SCORE: {authentic_score}")
+        logger.info(f"Using authentic T2D Pulse score: {authentic_score}")
         pulse_score = authentic_score
         
         # Create the pulse display using authentic score - directly integrated into the banner
