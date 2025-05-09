@@ -584,8 +584,9 @@ def process_sector_data(historical_price_data, historical_marketcap_data):
                 avg_momentum = 0  # Neutral momentum
                 
                 # Make sure we pass the previous score to sentiment_engine.py
-                # Store the previous score directly in the sector data
-                sectors_data[sector]['previous_score'] = previous_sector_scores[sector]
+                # Initialize sector data first if it doesn't exist
+                if sector not in sectors_data:
+                    sectors_data[sector] = {}
             else:
                 # No historical data either, use minimum fallback
                 print(f"No previous data available for {sector}, using minimum fallback values")

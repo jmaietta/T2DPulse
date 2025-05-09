@@ -241,6 +241,16 @@ def score_sectors(macros: MacroDict, previous_scores=None, sector_data=None) -> 
                     print(f"WARNING: Using previous score for {sec} due to API data issues")
                     # Mark this sector to use previous score
                     use_previous_score.add(sec)
+            
+            # Also check if sector data already includes a previous_score to use
+            elif sec in sector_data and 'previous_score' in sector_data[sec] and sector_data[sec]['previous_score'] is not None:
+                print(f"INFO: Using provided previous score for {sec} from sector_data")
+                # Mark this sector to use the previous score from sector_data
+                use_previous_score.add(sec)
+                # Make sure the previous_score is available in previous_scores dict
+                if previous_scores is None:
+                    previous_scores = {}
+                previous_scores[sec] = sector_data[sec]['previous_score']
 
     for ind, val in macros.items():
         raw = raw_signal(ind, val)
