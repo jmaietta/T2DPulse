@@ -6125,32 +6125,31 @@ def update_sector_sentiment_container(n):
     
     print(f"Updating sector sentiment container. Today ({today_str}) is {'a weekend' if is_weekend else 'a weekday'}")
     
-    # Use our fix_sector_charts module to ensure we have the latest, properly formatted data
+    # Always run the sector display fix on every update to ensure consistency
     try:
-        import fix_sector_charts
-        fix_sector_charts.fix_sector_charts()
+        import fix_sector_display
+        fix_sector_display.ensure_consistent_sector_data()
+        print("Successfully updated sector display with consistent data")
     except Exception as e:
-        print(f"Error running sector charts fix: {e}")
+        print(f"Error running sector display fix: {e}")
     
-    # Try to load the latest authentic sector data (with proper column names)
-    authentic_data_file = f"data/sector_sentiment_history_{today_str}.csv"
-    json_history_file = "data/sector_history.json"
-    
+    # Load the definitive sector scores (guaranteed to be in 0-100 scale)
+    definitive_file = "data/definitive_sector_scores.csv"
     found_authentic_data = False
     
-    print(f"Looking for sector data file: {authentic_data_file}")
+    print(f"Loading definitive sector data from: {definitive_file}")
     
-    # First attempt to load today's authentic data if available
-    if os.path.exists(authentic_data_file):
-        print(f"Found sector data for current date: {today_str}")
+    # First attempt to load from our definitive source
+    if os.path.exists(definitive_file):
+        print(f"Found definitive sector data file")
         try:
             import pandas as pd
-            recent_df = pd.read_csv(authentic_data_file)
+            recent_df = pd.read_csv(definitive_file)
             
             # Check if file has valid data
             if not recent_df.empty and 'Date' in recent_df.columns:
-                # Get sector columns (all except date)
-                sector_columns = [col for col in recent_df.columns if col != 'date']
+                # Get sector columns (all except Date)
+                sector_columns = [col for col in recent_df.columns if col != 'Date']
                 
                 if sector_columns:
                     print(f"Using authentic sector data for {today_str} with {len(sector_columns)} sectors")
