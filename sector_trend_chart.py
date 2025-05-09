@@ -52,8 +52,17 @@ def create_mini_trend_chart(sector_name, height=50, show_axes=False, auto_range=
     # Sort by date (just to be safe)
     df = df.sort_index()
     
-    # Filter out weekends (Saturday = 5, Sunday = 6)
+    # Reset index to handle both formats (where date might be index or column)
     df = df.reset_index()
+    
+    # Ensure date column is properly named (handle both 'date' and 'index' as date column)
+    if 'date' not in df.columns and 'index' in df.columns:
+        df = df.rename(columns={'index': 'date'})
+    
+    # Ensure date is datetime type
+    df['date'] = pd.to_datetime(df['date'])
+    
+    # Filter out weekends (Saturday = 5, Sunday = 6)
     df['is_weekday'] = df['date'].dt.dayofweek < 5  # Only keep weekdays (0-4)
     df = df[df['is_weekday']]
     
@@ -156,8 +165,17 @@ def create_combined_sector_chart(sector_names, title=None, height=400):
         # Sort by date
         df = df.sort_index()
         
-        # Reset index and filter out weekends
+        # Reset index to handle both formats (where date might be index or column)
         df = df.reset_index()
+        
+        # Ensure date column is properly named (handle both 'date' and 'index' as date column)
+        if 'date' not in df.columns and 'index' in df.columns:
+            df = df.rename(columns={'index': 'date'})
+        
+        # Ensure date is datetime type
+        df['date'] = pd.to_datetime(df['date'])
+        
+        # Filter out weekends
         df['is_weekday'] = df['date'].dt.dayofweek < 5  # Only keep weekdays (0-4)
         df = df[df['is_weekday']]
         
