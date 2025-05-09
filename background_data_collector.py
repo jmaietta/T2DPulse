@@ -2,21 +2,19 @@
 # background_data_collector.py
 # -----------------------------------------------------------
 # Background process to continuously collect ticker data
-# Runs in the background and progressively improves data coverage
+# Runs in the background and maintains market data coverage
+# Uses batch_ticker_collector for more efficient API usage
 
 import os
 import sys
 import time
 import pandas as pd
+import numpy as np
 import datetime
 import pytz
 import logging
+import batch_ticker_collector
 from config import SECTORS
-from process_sector_tickers import process_sector
-from ensure_complete_data import get_sector_coverage
-
-# Path to the official ticker list
-OFFICIAL_TICKERS_FILE = "official_tickers.csv"
 
 # Configure logging
 logging.basicConfig(
@@ -33,15 +31,65 @@ def get_eastern_time():
     eastern = pytz.timezone('US/Eastern')
     return datetime.datetime.now(eastern)
 
-def run_continuous_collection(max_tickers_per_sector=3, sleep_between_sectors=30):
+def check_ticker_coverage():
+    """
+    Check the current coverage of ticker data to determine if an update is needed
+    
+    Returns:
+        dict: Coverage statistics with the following keys:
+            - total_tickers: Total number of tickers being tracked
+            - covered_tickers: Number of tickers with current data
+            - coverage_pct: Percentage of tickers with current data
+            - latest_date: Latest date in the data
+            - days_behind: Number of trading days behind current date
+    """
+    try:
+        # Use batch_ticker_collector's function to get latest date
+        latest_date = batch_ticker_collector.get_latest_date()
+        
+        # Get all tickers being tracked
+        all_tickers = batch_ticker_collector.load_sector_tickers()
+        total_tickers = len(all_tickers)
+        
+        # Get current date
+        current_date = datetime.datetime.now().date()
+        
+        # Calculate days behind
+        days_behind = (current_date - latest_date).days
+        
+        # Check for weekend (don't count weekends as "behind")
+        current_weekday = current_date.weekday()
+        if current_weekday < 5:  # Weekday (Monday = 0, Friday = 4)
+            # If we're on a weekday, calculate business days behind
+            days_behind = max(0, days_behind)
+        else:
+            # If we're on weekend, calculate from Friday
+            days_to_friday = current_weekday - 4
+            adjusted_days_behind = days_behind - days_to_friday
+            days_behind = max(0, adjusted_days_behind)
+        
+        return {
+            "total_tickers": total_tickers,
+            "latest_date": latest_date,
+            "days_behind": days_behind
+        }
+    except Exception as e:
+        logging.error(f"Error checking ticker coverage: {e}")
+        logging.exception("Exception details:")
+        return None
+
+def run_continuous_collection(check_interval=30, update_interval=60):
     """
     Run a continuous background process to collect ticker data
     
     Args:
-        max_tickers_per_sector (int): Maximum number of tickers to process per sector per iteration
-        sleep_between_sectors (int): Seconds to sleep between processing sectors
+        check_interval (int): Minutes between coverage checks
+        update_interval (int): Minutes between forced updates during market hours
     """
     logging.info("Starting background ticker data collection process...")
+    
+    # Variables to track last update
+    last_update_time = None
     
     # Main loop - run continuously
     while True:
@@ -49,115 +97,74 @@ def run_continuous_collection(max_tickers_per_sector=3, sleep_between_sectors=30
             eastern_time = get_eastern_time()
             current_hour = eastern_time.hour
             
-            # Only run between 9 AM and 6 PM Eastern time on weekdays
-            if eastern_time.weekday() < 5 and 9 <= current_hour < 18:
-                logging.info(f"Starting collection cycle at {eastern_time.strftime('%Y-%m-%d %H:%M:%S %Z')}")
+            # Check if we need to run an update
+            run_update = False
+            
+            # Check if we've never updated
+            if last_update_time is None:
+                run_update = True
+                reason = "Initial run"
+            
+            # Check if we're during market hours (9 AM to 6 PM Eastern on weekdays)
+            is_market_hours = eastern_time.weekday() < 5 and 9 <= current_hour < 18
+            
+            # Check if we need to force an update during market hours
+            if is_market_hours and last_update_time is not None:
+                minutes_since_update = (eastern_time - last_update_time).total_seconds() / 60
+                if minutes_since_update >= update_interval:
+                    run_update = True
+                    reason = f"Scheduled update during market hours (every {update_interval} minutes)"
+            
+            # Check current coverage status
+            coverage = check_ticker_coverage()
+            if coverage:
+                if coverage["days_behind"] > 0:
+                    run_update = True
+                    reason = f"Data is {coverage['days_behind']} trading days behind"
+            
+            # Run the batch update if needed
+            if run_update:
+                logging.info(f"Running batch ticker collection. Reason: {reason}")
+                success = batch_ticker_collector.run_batch_collection()
                 
-                # Get current coverage
-                coverage = get_sector_coverage()
-                if not coverage:
-                    logging.error("Failed to get sector coverage. Will retry later.")
-                    time.sleep(300)  # Sleep for 5 minutes before retrying
-                    continue
-                
-                # Calculate overall coverage based on unique official tickers
-                # Get the official list from file
-                official_tickers = []
-                try:
-                    with open(OFFICIAL_TICKERS_FILE, 'r') as f:
-                        for line in f:
-                            ticker = line.strip()
-                            if ticker:
-                                official_tickers.append(ticker)
-                except Exception as e:
-                    logging.error(f"Error reading official tickers file: {e}")
-                    official_tickers = []
-                
-                if not official_tickers:
-                    # Fallback to sum of sectors if official file not available
-                    total_tickers = sum(data["total_tickers"] for _, data in coverage.items())
-                    total_covered = sum(data["price_coverage"] for _, data in coverage.items())
-                    logging.warning("Using sector sum for coverage (not unique tickers)")
+                if success:
+                    logging.info("Batch collection completed successfully")
+                    last_update_time = eastern_time
                 else:
-                    # Use official list for proper unique ticker counting
-                    total_tickers = len(official_tickers)
-                    
-                    # Load data files to check actual coverage
-                    try:
-                        price_df = pd.read_csv('data/historical_ticker_prices.csv', index_col=0)
-                        mcap_df = pd.read_csv('data/historical_ticker_marketcap.csv', index_col=0)
-                        latest_date = price_df.index[-1]
-                        
-                        # Count tickers with complete data
-                        total_covered = 0
-                        for ticker in official_tickers:
-                            price_complete = ticker in price_df.columns and pd.notna(price_df.loc[latest_date, ticker])
-                            mcap_complete = ticker in mcap_df.columns and pd.notna(mcap_df.loc[latest_date, ticker])
-                            if price_complete and mcap_complete:
-                                total_covered += 1
-                    except Exception as e:
-                        logging.error(f"Error calculating official coverage: {e}")
-                        # Fallback to sector sum
-                        total_tickers = sum(data["total_tickers"] for _, data in coverage.items())
-                        total_covered = sum(data["price_coverage"] for _, data in coverage.items())
-                        logging.warning("Using sector sum for coverage due to error")
+                    logging.error("Batch collection failed")
                 
-                coverage_pct = total_covered / total_tickers * 100
-                
-                logging.info(f"Current coverage: {total_covered}/{total_tickers} ({coverage_pct:.1f}%)")
-                
-                # If we have 100% coverage, we can sleep longer
-                if coverage_pct >= 100:
-                    logging.info("Already at 100% coverage. Will check again in 30 minutes.")
-                    time.sleep(1800)  # Sleep for 30 minutes
-                    continue
-                
-                # Sort sectors by coverage (lowest first)
-                sorted_sectors = sorted(
-                    coverage.items(), 
-                    key=lambda x: (x[1]["price_pct"] + x[1]["marketcap_pct"]) / 2
-                )
-                
-                # Process each sector, starting with the lowest coverage
-                for sector_name, sector_data in sorted_sectors:
-                    if len(sector_data["missing_tickers"]) == 0:
-                        logging.info(f"Sector {sector_name} already has 100% coverage. Skipping.")
-                        continue
-                    
-                    logging.info(f"Processing sector: {sector_name} ({sector_data['price_pct']:.1f}% coverage)")
-                    logging.info(f"Missing tickers: {len(sector_data['missing_tickers'])}")
-                    
-                    # Process this sector with the maximum tickers limit
-                    process_sector(sector_name, max_tickers=max_tickers_per_sector)
-                    
-                    # Sleep between sectors to avoid API rate limits
-                    logging.info(f"Sleeping for {sleep_between_sectors} seconds to avoid API rate limits")
-                    time.sleep(sleep_between_sectors)
-                
-                # After processing all sectors, sleep for 10 minutes before the next cycle
-                logging.info("Completed collection cycle. Sleeping for 10 minutes before next cycle.")
-                time.sleep(600)
-            else:
-                # Outside of market hours, sleep for 30 minutes
-                if eastern_time.weekday() >= 5:
-                    logging.info("Weekend detected. Sleeping for 1 hour.")
-                    time.sleep(3600)  # 1 hour on weekends
+                # Log coverage stats after update
+                new_coverage = check_ticker_coverage()
+                if new_coverage:
+                    logging.info(f"Latest data: {new_coverage['latest_date']}")
+                    logging.info(f"Days behind: {new_coverage['days_behind']}")
+                    logging.info(f"Total tickers: {new_coverage['total_tickers']}")
+            
+            # Sleep before next check
+            sleep_time = check_interval * 60  # Convert minutes to seconds
+            
+            # Sleep longer outside market hours
+            if not is_market_hours:
+                if eastern_time.weekday() >= 5:  # Weekend
+                    sleep_time = 60 * 60  # 1 hour on weekends
                 else:
-                    logging.info("Outside market hours. Sleeping for 30 minutes.")
-                    time.sleep(1800)  # 30 minutes on weekdays outside market hours
+                    sleep_time = 30 * 60  # 30 minutes on weekdays outside market hours
+            
+            logging.info(f"Sleeping for {sleep_time/60:.1f} minutes before next check")
+            time.sleep(sleep_time)
         
         except Exception as e:
             logging.error(f"Error in background collection process: {e}")
             logging.exception("Exception details:")
-            logging.info("Sleeping for 5 minutes before retrying.")
+            logging.info("Sleeping for 5 minutes before retrying")
             time.sleep(300)  # Sleep for 5 minutes before retrying
 
 if __name__ == "__main__":
     import argparse
     parser = argparse.ArgumentParser(description='Background process to continuously collect ticker data')
-    parser.add_argument('--max', type=int, default=3, help='Maximum tickers to process per sector per iteration')
-    parser.add_argument('--sleep', type=int, default=30, help='Seconds to sleep between processing sectors')
+    parser.add_argument('--check', type=int, default=30, help='Minutes between coverage checks')
+    parser.add_argument('--update', type=int, default=60, help='Minutes between forced updates during market hours')
     args = parser.parse_args()
     
-    logging.info(f"Starting background collector with max={args.max}, sleep={args.sleep}")
-    run_continuous_collection(max_tickers_per_sector=args.max, sleep_between_sectors=args.sleep)
+    logging.info(f"Starting background collector with check_interval={args.check}, update_interval={args.update}")
+    run_continuous_collection(check_interval=args.check, update_interval=args.update)

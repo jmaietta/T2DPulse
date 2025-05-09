@@ -41,7 +41,7 @@ author = "agent"
 
 [[workflows.workflow.tasks]]
 task = "shell.exec"
-args = "python background_data_collector.py --max 2 --sleep 30"
+args = "python background_data_collector.py --check 15 --update 30"
 
 [deployment]
 run = ["sh", "-c", "python wsgi.py"]

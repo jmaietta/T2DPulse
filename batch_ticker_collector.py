@@ -157,6 +157,9 @@ def fetch_batch_data(tickers, start_date, end_date=None):
         end_date = end_date.strftime("%Y-%m-%d")
     
     try:
+        # Add extra delay to respect rate limits
+        time.sleep(2)
+        
         # Use yfinance to download data for all tickers at once
         data = yf.download(
             tickers=tickers,
@@ -174,6 +177,10 @@ def fetch_batch_data(tickers, start_date, end_date=None):
         # Return the raw data for processing
         return data
     except Exception as e:
+        if "Rate limited" in str(e):
+            logging.warning(f"Rate limited. Waiting longer before retry...")
+            # Add extra delay for rate limiting
+            time.sleep(10)
         logging.error(f"Error fetching batch data: {e}")
         raise  # Re-raise for retry
 
@@ -379,8 +386,9 @@ def run_batch_collection():
         
         logging.info(f"Fetching data from {start_date} to {end_date} for {len(all_tickers)} tickers")
         
-        # Split tickers into batches of 20 (yfinance recommendation)
-        batch_size = 20
+        # Split tickers into smaller batches to reduce rate limiting issues
+        # Smaller batch size is more likely to succeed with rate limits
+        batch_size = 5
         ticker_batches = [all_tickers[i:i+batch_size] for i in range(0, len(all_tickers), batch_size)]
         
         # Process each batch
@@ -404,7 +412,8 @@ def run_batch_collection():
                     all_mcap_data.append(mcap_df)
                 
                 # Sleep to avoid rate limiting
-                time.sleep(1)
+                # Use a longer sleep between batches (5 seconds)
+                time.sleep(5)
             except Exception as e:
                 logging.error(f"Error processing batch {i+1}: {e}")
                 logging.exception("Exception details:")
