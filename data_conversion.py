@@ -168,8 +168,57 @@ def convert_market_data():
                     logging.info(f"Found alternate ticker file: {alt_path}")
                     
                     try:
-                        # Read the ticker data
-                        df = pd.read_csv(alt_path)
+                        # Let's check the file content for debugging
+                        with open(alt_path, 'r') as f:
+                            sample_lines = f.readlines()[:15]  # Get the first 15 lines
+                            
+                        logging.info(f"Sample of {alt_path} content:")
+                        for i, line in enumerate(sample_lines):
+                            logging.info(f"Line {i}: {line.strip()}")
+                            
+                        # Extract only the header row and data
+                        header_line = None
+                        data_start_line = None
+                        
+                        for i, line in enumerate(sample_lines):
+                            if "Date,Ticker," in line:
+                                header_line = i
+                                data_start_line = i + 1
+                                break
+                        
+                        if header_line is None:
+                            logging.warning(f"Could not find header line in {alt_path}")
+                            continue
+                            
+                        # Read the file using pandas, skipping the header info
+                        logging.info(f"Reading {alt_path} from line {header_line}")
+                        
+                        # Read the file as a text file to handle the irregular format
+                        with open(alt_path, 'r') as f:
+                            all_lines = f.readlines()
+                            
+                        # Extract the header and data section
+                        header = all_lines[header_line].strip()
+                        data_lines = [all_lines[header_line]] + all_lines[data_start_line:]
+                        
+                        # Write to a temporary file that pandas can read cleanly
+                        import tempfile
+                        with tempfile.NamedTemporaryFile(mode='w', delete=False, suffix='.csv') as tmp:
+                            tmp.writelines(data_lines)
+                            tmp_filename = tmp.name
+                        
+                        # Read the data with pandas
+                        try:
+                            df = pd.read_csv(tmp_filename)
+                            logging.info(f"Successfully read {len(df)} rows from {alt_path}")
+                            
+                            # Clean up temp file
+                            os.unlink(tmp_filename)
+                        except Exception as e:
+                            logging.error(f"Error reading extracted data from {alt_path}: {e}")
+                            # Clean up temp file
+                            os.unlink(tmp_filename)
+                            continue
                         
                         # Normalize column names
                         df.columns = [col.lower() for col in df.columns]
