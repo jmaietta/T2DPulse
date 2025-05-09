@@ -14,8 +14,35 @@ OUTPUT_FILE = 'ticker_history_tables.html'
 def load_ticker_data():
     """Load the historical price and market cap data"""
     try:
-        price_df = pd.read_csv('recent_price_data.csv', index_col='Date')
-        mcap_df = pd.read_csv('recent_marketcap_data.csv', index_col='Date')
+        # Read CSV files without specifying the index column first
+        price_df = pd.read_csv('recent_price_data.csv')
+        mcap_df = pd.read_csv('recent_marketcap_data.csv')
+        
+        # Check the column names to identify the index column
+        if 'Unnamed: 0' in price_df.columns:
+            price_df = price_df.set_index('Unnamed: 0')
+            price_df.index.name = 'Date'
+        elif 'Date' in price_df.columns:
+            price_df = price_df.set_index('Date')
+        else:
+            # If columns don't match expected format, use the first column as index
+            price_df = price_df.set_index(price_df.columns[0])
+            price_df.index.name = 'Date'
+            
+        if 'Unnamed: 0' in mcap_df.columns:
+            mcap_df = mcap_df.set_index('Unnamed: 0')
+            mcap_df.index.name = 'Date'
+        elif 'Date' in mcap_df.columns:
+            mcap_df = mcap_df.set_index('Date')
+        else:
+            # If columns don't match expected format, use the first column as index
+            mcap_df = mcap_df.set_index(mcap_df.columns[0])
+            mcap_df.index.name = 'Date'
+            
+        # Print some debug information
+        print(f"Price data shape: {price_df.shape}, columns: {list(price_df.columns[:5])}...")
+        print(f"Market cap data shape: {mcap_df.shape}, columns: {list(mcap_df.columns[:5])}...")
+        
         return price_df, mcap_df
     except Exception as e:
         print(f"Error loading data: {e}")
