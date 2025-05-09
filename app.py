@@ -369,7 +369,7 @@ def fetch_treasury_yield_data():
     Returns a DataFrame with date and value columns formatted like FRED data.
     Uses the closing price as the most accurate daily value.
     """
-    print("Fetching 10-Year Treasury Yield data from Yahoo Finance...")
+    logger.info("Fetching 10-Year Treasury Yield data from Yahoo Finance...")
     
     try:
         # Use Yahoo Finance to get the most recent data
@@ -379,7 +379,7 @@ def fetch_treasury_yield_data():
         data = treasury.history(period='180d')
         
         if data.empty:
-            print("No Treasury Yield data retrieved from Yahoo Finance")
+            logger.warning("No Treasury Yield data retrieved from Yahoo Finance")
             return pd.DataFrame()
             
         # Format data to match our standard format
@@ -406,43 +406,43 @@ def fetch_treasury_yield_data():
                 # Combine old historical data with new recent data
                 combined_df = pd.concat([df, old_data])
                 combined_df = combined_df.sort_values('date', ascending=False)
-                print(f"Combined {len(df)} recent days with {len(old_data)} historical days")
+                logger.info(f"Combined {len(df)} recent days with {len(old_data)} historical days")
                 
                 # Save combined data to CSV
                 save_data_to_csv(combined_df, 'data/treasury_yield_data.csv')
-                print(f"Successfully saved {len(combined_df)} rows to treasury_yield_data.csv")
+                logger.info(f"Successfully saved {len(combined_df)} rows to treasury_yield_data.csv")
                 
                 df = combined_df
             else:
                 # Just save the Yahoo Finance data
                 save_data_to_csv(df, 'data/treasury_yield_data.csv')
-                print(f"No existing data to merge, saved {len(df)} rows to treasury_yield_data.csv")
+                logger.info(f"No existing data to merge, saved {len(df)} rows to treasury_yield_data.csv")
         except Exception as e:
-            print(f"Error merging with existing data: {str(e)}")
+            logger.error(f"Error merging with existing data: {str(e)}")
             # Still save the Yahoo Finance data
             save_data_to_csv(df, 'data/treasury_yield_data.csv')
         
         # Report the latest value and date
         latest_date = df.iloc[0]['date'].strftime('%Y-%m-%d')
         latest_value = df.iloc[0]['value']
-        print(f"Treasury Yield (latest): {latest_value:.3f}% on {latest_date}")
-        print(f"Successfully retrieved/merged {len(df)} days of Treasury Yield data")
+        logger.info(f"Treasury Yield (latest): {latest_value:.3f}% on {latest_date}")
+        logger.info(f"Successfully retrieved/merged {len(df)} days of Treasury Yield data")
         
         return df
     except Exception as e:
-        print(f"Exception while fetching Treasury Yield data from Yahoo Finance: {str(e)}")
+        logger.error(f"Exception while fetching Treasury Yield data from Yahoo Finance: {str(e)}")
         
         # Try to load cached data as fallback
         try:
             cached_data = pd.read_csv('data/treasury_yield_data.csv')
             if not cached_data.empty:
                 cached_data['date'] = pd.to_datetime(cached_data['date'])
-                print(f"Falling back to cached Treasury Yield data with {len(cached_data)} observations")
+                logger.warning(f"Falling back to cached Treasury Yield data with {len(cached_data)} observations")
                 latest = cached_data.sort_values('date', ascending=False).iloc[0]
-                print(f"Latest cached value: {latest['value']:.3f}% on {latest['date'].strftime('%Y-%m-%d')}")
+                logger.info(f"Latest cached value: {latest['value']:.3f}% on {latest['date'].strftime('%Y-%m-%d')}")
                 return cached_data
         except Exception as fallback_e:
-            print(f"Failed to load cached data: {str(fallback_e)}")
+            logger.error(f"Failed to load cached data: {str(fallback_e)}")
         
         return pd.DataFrame()
         
@@ -452,7 +452,7 @@ def fetch_vix_from_yahoo():
     Returns a DataFrame with date and value columns formatted like FRED data.
     Uses the closing price as the daily value to get most recent data.
     """
-    print("Fetching VIX data from Yahoo Finance for most recent values...")
+    logger.info("Fetching VIX data from Yahoo Finance for most recent values...")
     
     try:
         # Use Yahoo Finance to get the most recent data
@@ -461,7 +461,7 @@ def fetch_vix_from_yahoo():
         data = vix.history(period='60d')
         
         if data.empty:
-            print("No VIX data retrieved from Yahoo Finance")
+            logger.warning("No VIX data retrieved from Yahoo Finance")
             return pd.DataFrame()
             
         # Format data to match FRED format
@@ -476,13 +476,13 @@ def fetch_vix_from_yahoo():
         # Report the latest value and date
         latest_date = df.iloc[0]['date'].strftime('%Y-%m-%d')
         latest_value = df.iloc[0]['value']
-        print(f"VIX (latest): {latest_value:.2f} on {latest_date}")
-        print(f"Successfully retrieved {len(df)} days of VIX data from Yahoo Finance")
+        logger.info(f"VIX (latest): {latest_value:.2f} on {latest_date}")
+        logger.info(f"Successfully retrieved {len(df)} days of VIX data from Yahoo Finance")
         
         return df
     except Exception as e:
-        print(f"Exception while fetching VIX data from Yahoo Finance: {str(e)}")
-        print("Falling back to FRED data for VIX")
+        logger.error(f"Exception while fetching VIX data from Yahoo Finance: {str(e)}")
+        logger.warning("Falling back to FRED data for VIX")
         return pd.DataFrame()
 
 def fetch_nasdaq_with_ema():
@@ -495,14 +495,14 @@ def fetch_nasdaq_with_ema():
     - gap_pct: percentage difference between the current value and EMA (momentum indicator)
     """
     try:
-        print("Fetching NASDAQ data from Yahoo Finance with 20-day EMA...")
+        logger.info("Fetching NASDAQ data from Yahoo Finance with 20-day EMA...")
         
         # Get NASDAQ Composite data for the last 50 days (need extra days for EMA calculation)
         ixic = yf.Ticker("^IXIC")
         data = ixic.history(period="50d")  # Increased to ensure enough data for 20-day EMA
         
         if data.empty:
-            print("No NASDAQ data retrieved from Yahoo Finance")
+            logger.warning("No NASDAQ data retrieved from Yahoo Finance")
             return pd.DataFrame()
         
         # Calculate 20-day EMA
@@ -527,13 +527,13 @@ def fetch_nasdaq_with_ema():
         latest_date = df.iloc[0]['date'].strftime('%Y-%m-%d')
         latest_value = df.iloc[0]['value']
         latest_gap = df.iloc[0]['gap_pct']
-        print(f"NASDAQ: {latest_value:.1f} on {latest_date}, Gap from 20-day EMA: {latest_gap:.2f}%")
-        print(f"Successfully retrieved NASDAQ data with EMA calculation")
+        logger.info(f"NASDAQ: {latest_value:.1f} on {latest_date}, Gap from 20-day EMA: {latest_gap:.2f}%")
+        logger.info(f"Successfully retrieved NASDAQ data with EMA calculation")
         
         return df
     except Exception as e:
-        print(f"Exception while fetching NASDAQ data with EMA: {str(e)}")
-        print("Falling back to FRED data for NASDAQ")
+        logger.error(f"Exception while fetching NASDAQ data with EMA: {str(e)}")
+        logger.warning("Falling back to FRED data for NASDAQ")
         return pd.DataFrame()
 
 def fetch_consumer_sentiment_data():
@@ -550,7 +550,7 @@ def fetch_consumer_sentiment_data():
         df = fetch_fred_data(series_id)
         
         if not df.empty:
-            print(f"Successfully retrieved {len(df)} observations for Consumer Confidence Index")
+            logger.info(f"Successfully retrieved {len(df)} observations for Consumer Confidence Index")
             
             # Calculate year-over-year change
             df = df.sort_values('date')
@@ -558,10 +558,10 @@ def fetch_consumer_sentiment_data():
             
             return df
         else:
-            print("Error retrieving Consumer Confidence data from FRED")
+            logger.error("Error retrieving Consumer Confidence data from FRED")
             return pd.DataFrame()
     except Exception as e:
-        print(f"Exception while fetching Consumer Confidence data: {str(e)}")
+        logger.error(f"Exception while fetching Consumer Confidence data: {str(e)}")
         return pd.DataFrame()
         
 def create_consumer_sentiment_graph(consumer_sentiment_data):
@@ -680,10 +680,10 @@ def create_consumer_sentiment_graph(consumer_sentiment_data):
 
 def fetch_bls_data(series_id, start_year, end_year):
     """Fetch data from BLS API"""
-    print(f"Fetching BLS data for series {series_id}")
+    logger.info(f"Fetching BLS data for series {series_id}")
     
     if not BLS_API_KEY:
-        print("Cannot fetch BLS data: No API key provided")
+        logger.error("Cannot fetch BLS data: No API key provided")
         return pd.DataFrame()
     
     url = "https://api.bls.gov/publicAPI/v2/timeseries/data/"
@@ -715,16 +715,16 @@ def fetch_bls_data(series_id, start_year, end_year):
                 # Convert value to numeric
                 df['value'] = pd.to_numeric(df['value'], errors='coerce')
                 
-                print(f"Successfully retrieved BLS data with {len(df)} rows")
+                logger.info(f"Successfully retrieved BLS data with {len(df)} rows")
                 return df
             else:
-                print(f"BLS API request failed: {result['message']}")
+                logger.error(f"BLS API request failed: {result['message']}")
                 return pd.DataFrame()
         else:
-            print(f"Failed to fetch BLS data: {response.status_code} - {response.text}")
+            logger.error(f"Failed to fetch BLS data: {response.status_code} - {response.text}")
             return pd.DataFrame()
     except Exception as e:
-        print(f"Exception while fetching BLS data: {str(e)}")
+        logger.error(f"Exception while fetching BLS data: {str(e)}")
         return pd.DataFrame()
 
 def generate_sector_drivers(macros):
@@ -814,7 +814,7 @@ def generate_sector_tickers():
 
 def calculate_sector_sentiment():
     """Calculate sentiment scores for each technology sector using the latest data"""
-    print("Starting calculate_sector_sentiment function")
+    logger.info("Starting calculate_sector_sentiment function")
     # Import sector sentiment history module
     import sector_sentiment_history
     from sector_ema_integration import get_sector_ema_factors
@@ -833,10 +833,10 @@ def calculate_sector_sentiment():
         # Use the 14-day EMA for VIX if available, otherwise fallback to raw value
         if 'vix_ema14' in latest_vix_row and not pd.isna(latest_vix_row['vix_ema14']):
             latest_vix = latest_vix_row['vix_ema14']  # Use smoothed value
-            print(f"Using smoothed VIX (14-day EMA): {latest_vix:.2f} vs raw: {latest_vix_row['value']:.2f}")
+            logger.info(f"Using smoothed VIX (14-day EMA): {latest_vix:.2f} vs raw: {latest_vix_row['value']:.2f}")
         else:
             latest_vix = latest_vix_row['value']  # Fallback to raw value
-            print(f"Using raw VIX value: {latest_vix:.2f} (EMA not available)")
+            logger.info(f"Using raw VIX value: {latest_vix:.2f} (EMA not available)")
         macros["VIX"] = latest_vix
     
     # NASDAQ gap from 20-day EMA
@@ -893,7 +893,7 @@ def calculate_sector_sentiment():
     if not consumer_sentiment_data.empty:
         latest_consumer_sentiment = consumer_sentiment_data.sort_values('date', ascending=False).iloc[0]['value']
         macros["Consumer_Sentiment"] = latest_consumer_sentiment
-        print(f"Added Consumer Sentiment to sector calculations: {latest_consumer_sentiment}")
+        logger.info(f"Added Consumer Sentiment to sector calculations: {latest_consumer_sentiment}")
     
     # Get sector EMA factors to include as a 14th indicator
     try:
