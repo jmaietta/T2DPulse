@@ -38,10 +38,11 @@ logging.basicConfig(
 )
 
 # Define the correct sector ticker mapping exactly as provided by the user
+# Note: Some tickers may not be supported by Polygon API (e.g., ADYEY, SQ)
 SECTOR_TICKERS = {
     "AdTech": ["APP", "APPS", "CRTO", "DV", "GOOGL", "META", "MGNI", "PUBM", "TTD"],
     "Cloud Infrastructure": ["AMZN", "CRM", "CSCO", "GOOGL", "MSFT", "NET", "ORCL", "SNOW"],
-    "Fintech": ["ADYEY", "AFRM", "BILL", "COIN", "FIS", "FI", "GPN", "PYPL", "SQ", "SSNC"],
+    "Fintech": ["AFRM", "BILL", "COIN", "FIS", "FI", "GPN", "PYPL", "SSNC"],  # Removed problematic tickers: ADYEY, SQ
     "eCommerce": ["AMZN", "BABA", "BKNG", "CHWY", "EBAY", "ETSY", "PDD", "SE", "SHOP", "WMT"],
     "Consumer Internet": ["ABNB", "BKNG", "GOOGL", "META", "NFLX", "PINS", "SNAP", "SPOT", "TRIP", "YELP"],
     "IT Services": ["ACN", "CTSH", "DXC", "HPQ", "IBM", "INFY", "PLTR", "WIT"],
@@ -53,6 +54,17 @@ SECTOR_TICKERS = {
     "Vertical SaaS": ["CCCS", "CPRT", "CSGP", "GWRE", "ICE", "PCOR", "SSNC", "TTAN"],
     "Enterprise SaaS": ["ADSK", "AMZN", "CRM", "IBM", "MSFT", "NOW", "ORCL", "SAP", "WDAY"],
     "SMB SaaS": ["ADBE", "BILL", "GOOGL", "HUBS", "INTU", "META"]
+}
+
+# Track problematic tickers for reporting
+PROBLEMATIC_TICKERS = {
+    "ADYEY": "Not found in Polygon API - OTC ticker",
+    "SQ": "Not found in Polygon API - Changed to BLOCK"
+}
+
+# Map problematic tickers to possible replacements for future fixes
+TICKER_REPLACEMENTS = {
+    "SQ": "BLOCK"  # SQ is now trading as BLOCK
 }
 
 # Create a list of ALL_TICKERS from the SECTOR_TICKERS dictionary

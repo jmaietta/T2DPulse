@@ -1,0 +1,86 @@
+{
+  "AdTech": {
+    "tickers_available": 9,
+    "tickers_total": 9,
+    "coverage_pct": 100.0,
+    "tickers_missing": []
+  },
+  "Cloud Infrastructure": {
+    "tickers_available": 8,
+    "tickers_total": 8,
+    "coverage_pct": 100.0,
+    "tickers_missing": []
+  },
+  "Fintech": {
+    "tickers_available": 8,
+    "tickers_total": 8,
+    "coverage_pct": 100.0,
+    "tickers_missing": []
+  },
+  "eCommerce": {
+    "tickers_available": 10,
+    "tickers_total": 10,
+    "coverage_pct": 100.0,
+    "tickers_missing": []
+  },
+  "Consumer Internet": {
+    "tickers_available": 10,
+    "tickers_total": 10,
+    "coverage_pct": 100.0,
+    "tickers_missing": []
+  },
+  "IT Services": {
+    "tickers_available": 8,
+    "tickers_total": 8,
+    "coverage_pct": 100.0,
+    "tickers_missing": []
+  },
+  "Hardware/Devices": {
+    "tickers_available": 9,
+    "tickers_total": 9,
+    "coverage_pct": 100.0,
+    "tickers_missing": []
+  },
+  "Cybersecurity": {
+    "tickers_available": 9,
+    "tickers_total": 9,
+    "coverage_pct": 100.0,
+    "tickers_missing": []
+  },
+  "Dev Tools": {
+    "tickers_available": 5,
+    "tickers_total": 5,
+    "coverage_pct": 100.0,
+    "tickers_missing": []
+  },
+  "AI Infrastructure": {
+    "tickers_available": 7,
+    "tickers_total": 7,
+    "coverage_pct": 100.0,
+    "tickers_missing": []
+  },
+  "Semiconductors": {
+    "tickers_available": 8,
+    "tickers_total": 8,
+    "coverage_pct": 100.0,
+    "tickers_missing": []
+  },
+  "Vertical SaaS": {
+    "tickers_available": 8,
+    "tickers_total": 8,
+    "coverage_pct": 100.0,
+    "tickers_missing": []
+  },
+  "Enterprise SaaS": {
+    "tickers_available": 9,
+    "tickers_total": 9,
+    "coverage_pct": 100.0,
+    "tickers_missing": []
+  },
+  "SMB SaaS": {
+    "tickers_available": 6,
+    "tickers_total": 6,
+    "coverage_pct": 100.0,
+    "tickers_missing": []
+  }
+}

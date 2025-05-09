@@ -1,0 +1,16 @@
+{
+  "AdTech_weight_pct": 4.51,
+  "Cloud Infrastructure_weight_pct": 14.06,
+  "Fintech_weight_pct": 0.6,
+  "eCommerce_weight_pct": 8.05,
+  "Consumer Internet_weight_pct": 5.93,
+  "IT Services_weight_pct": 1.7,
+  "Hardware/Devices_weight_pct": 6.05,
+  "Cybersecurity_weight_pct": 0.87,
+  "Dev Tools_weight_pct": 0.19,
+  "AI Infrastructure_weight_pct": 21.41,
+  "Semiconductors_weight_pct": 17.68,
+  "Vertical SaaS_weight_pct": 0.5,
+  "Enterprise SaaS_weight_pct": 13.45,
+  "SMB SaaS_weight_pct": 4.98
+}
