@@ -106,7 +106,88 @@ def convert_market_data():
     """Convert stock price and market cap data to Parquet format"""
     logging.info("Converting market data to Parquet format")
 
-    # Handle the combined ticker data
+    # First, let's check for the actual historical ticker data files
+    price_path = os.path.join(DATA_DIR, "historical_ticker_prices.csv")
+    marketcap_path = os.path.join(DATA_DIR, "historical_ticker_marketcap.csv")
+    
+    if os.path.exists(price_path) and os.path.exists(marketcap_path):
+        logging.info("Found historical ticker data files")
+        
+        try:
+            # Read the price and market cap data
+            price_df = pd.read_csv(price_path, index_col=0)
+            marketcap_df = pd.read_csv(marketcap_path, index_col=0)
+            
+            # Convert index to datetime if it's not already
+            price_df.index = pd.to_datetime(price_df.index)
+            marketcap_df.index = pd.to_datetime(marketcap_df.index)
+            
+            # Make sure they have the same indices
+            common_dates = price_df.index.intersection(marketcap_df.index)
+            price_df = price_df.loc[common_dates]
+            marketcap_df = marketcap_df.loc[common_dates]
+            
+            # Get list of all tickers
+            all_tickers = list(set(price_df.columns) | set(marketcap_df.columns))
+            logging.info(f"Found {len(all_tickers)} unique tickers across both files")
+            
+            # Convert wide format to long format for easier partitioning
+            price_long = price_df.reset_index().melt(
+                id_vars=['index'], 
+                value_vars=price_df.columns,
+                var_name='ticker',
+                value_name='price'
+            ).rename(columns={'index': 'date'})
+            
+            marketcap_long = marketcap_df.reset_index().melt(
+                id_vars=['index'], 
+                value_vars=marketcap_df.columns,
+                var_name='ticker',
+                value_name='market_cap'
+            ).rename(columns={'index': 'date'})
+            
+            # Merge the price and market cap data
+            merged_df = pd.merge(
+                price_long, 
+                marketcap_long, 
+                on=['date', 'ticker'], 
+                how='outer'
+            )
+            
+            # Get the last date with data for each ticker
+            latest_data = merged_df.groupby('ticker')['date'].max().reset_index()
+            latest_data = latest_data.rename(columns={'date': 'latest_date'})
+            
+            # Merge the latest date information back
+            merged_df = pd.merge(merged_df, latest_data, on='ticker', how='left')
+            
+            # Flag rows that have the latest data for each ticker
+            merged_df['is_latest'] = merged_df['date'] == merged_df['latest_date']
+            
+            # Remove the latest_date column
+            merged_df = merged_df.drop(columns=['latest_date'])
+            
+            # Convert to PyArrow table
+            table = pa.Table.from_pandas(merged_df)
+            
+            # Add schema version metadata
+            table = add_schema_version(table)
+            
+            # Write to Parquet, partitioned by ticker for efficient queries
+            pq.write_to_dataset(
+                table, 
+                root_path=os.path.join(MARKET_DIR, "ticker_data"), 
+                partition_cols=['ticker']
+            )
+            
+            logging.info(f"Converted historical ticker data to Parquet dataset with {len(merged_df)} rows across {len(all_tickers)} tickers")
+            return  # Early return since we successfully converted the data
+        except Exception as e:
+            logging.error(f"Error converting historical ticker data: {e}")
+            logging.exception("Exception details:")
+    
+    # If we get here, we need to try the alternative files
+    # Handle the summary ticker data files
     try:
         # Check if the main ticker history file exists (first in data dir, then in root)
         ticker_file = "T2D_Pulse_Full_Ticker_History.csv"
@@ -146,7 +227,7 @@ def convert_market_data():
                 # Write to Parquet, partitioned by ticker for efficient queries
                 pq.write_to_dataset(
                     table, 
-                    root_path=os.path.join(MARKET_DIR, "prices"), 
+                    root_path=os.path.join(MARKET_DIR, "summary"), 
                     partition_cols=['ticker']
                 )
                 
