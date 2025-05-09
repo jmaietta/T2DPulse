@@ -6146,10 +6146,16 @@ def update_sector_sentiment_container(n):
             import pandas as pd
             recent_df = pd.read_csv(definitive_file)
             
-            # Check if file has valid data
-            if not recent_df.empty and 'Date' in recent_df.columns:
-                # Get sector columns (all except Date)
-                sector_columns = [col for col in recent_df.columns if col != 'Date']
+            # Check if file has valid data (use case-insensitive check for 'date' column)
+            date_col = None
+            for col in recent_df.columns:
+                if col.lower() == 'date':
+                    date_col = col
+                    break
+                
+            if not recent_df.empty and date_col is not None:
+                # Get sector columns (all except date column)
+                sector_columns = [col for col in recent_df.columns if col != date_col]
                 
                 if sector_columns:
                     print(f"Using authentic sector data for {today_str} with {len(sector_columns)} sectors")
@@ -6211,8 +6217,15 @@ def update_sector_sentiment_container(n):
                     import pandas as pd
                     friday_df = pd.read_csv(friday_file)
                     
-                    if not friday_df.empty and 'date' in friday_df.columns:
-                        sector_columns = [col for col in friday_df.columns if col != 'date']
+                    # Find date column (case-insensitive)
+                    date_col = None
+                    for col in friday_df.columns:
+                        if col.lower() == 'date':
+                            date_col = col
+                            break
+                            
+                    if not friday_df.empty and date_col is not None:
+                        sector_columns = [col for col in friday_df.columns if col != date_col]
                         if sector_columns:
                             authentic_scores = []
                             latest_row = friday_df.iloc[0]  # Most recent row
@@ -6252,8 +6265,15 @@ def update_sector_sentiment_container(n):
                     import pandas as pd
                     yesterday_df = pd.read_csv(yesterday_file)
                     
-                    if not yesterday_df.empty and 'date' in yesterday_df.columns:
-                        sector_columns = [col for col in yesterday_df.columns if col != 'date']
+                    # Find date column (case-insensitive)
+                    date_col = None
+                    for col in yesterday_df.columns:
+                        if col.lower() == 'date':
+                            date_col = col
+                            break
+                            
+                    if not yesterday_df.empty and date_col is not None:
+                        sector_columns = [col for col in yesterday_df.columns if col != date_col]
                         if sector_columns:
                             authentic_scores = []
                             latest_row = yesterday_df.iloc[0]  # Most recent row
@@ -6297,8 +6317,15 @@ def update_sector_sentiment_container(n):
                     import pandas as pd
                     historical_df = pd.read_csv(most_recent_file)
                     
-                    if not historical_df.empty and 'date' in historical_df.columns:
-                        sector_columns = [col for col in historical_df.columns if col != 'date']
+                    # Find date column (case-insensitive)
+                    date_col = None
+                    for col in historical_df.columns:
+                        if col.lower() == 'date':
+                            date_col = col
+                            break
+                            
+                    if not historical_df.empty and date_col is not None:
+                        sector_columns = [col for col in historical_df.columns if col != date_col]
                         if sector_columns:
                             authentic_scores = []
                             latest_row = historical_df.iloc[0]  # Most recent row
