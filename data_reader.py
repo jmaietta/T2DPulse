@@ -19,6 +19,50 @@ logging.basicConfig(
     datefmt='%Y-%m-%d %H:%M:%S'
 )
 
+def read_data_file(filename, index_col=0, date_col=None):
+    """
+    Read data from a file, auto-detecting the format.
+    
+    Args:
+        filename (str): Path to the data file
+        index_col (int, optional): Column to use as index
+        date_col (str, optional): Column containing dates to parse
+        
+    Returns:
+        pd.DataFrame: Data from the file
+    """
+    _, ext = os.path.splitext(filename)
+    
+    try:
+        if ext.lower() == '.parquet':
+            df = pd.read_parquet(filename)
+        elif ext.lower() == '.csv':
+            if date_col:
+                df = pd.read_csv(filename, index_col=index_col, parse_dates=[date_col])
+            else:
+                df = pd.read_csv(filename, index_col=index_col)
+        else:
+            logging.error(f"Unsupported file format: {ext}")
+            return pd.DataFrame()
+            
+        logging.info(f"Successfully loaded {len(df)} rows from {filename}")
+        return df
+    except Exception as e:
+        logging.error(f"Failed to read file {filename}: {e}")
+        return pd.DataFrame()
+
+def read_sector_data(filename):
+    """Legacy function for read_data_file, kept for backward compatibility"""
+    return read_data_file(filename)
+
+def read_pulse_score(filename):
+    """Legacy function for read_data_file, kept for backward compatibility"""
+    return read_data_file(filename)
+
+def read_market_data(filename):
+    """Legacy function for read_data_file, kept for backward compatibility"""
+    return read_data_file(filename)
+
 def read_data(file_path, fallback_path=None, index_col=0, date_col=None):
     """
     Read data from a file, trying Parquet first and falling back to CSV.
