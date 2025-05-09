@@ -37,23 +37,30 @@ logging.basicConfig(
     datefmt='%Y-%m-%d %H:%M:%S'
 )
 
-# Define sector ticker mapping (same as in app.py)
+# Define the correct sector ticker mapping exactly as provided by the user
 SECTOR_TICKERS = {
-    "SMB SaaS": ["BILL", "PAYC", "DDOG"],
-    "Enterprise SaaS": ["CRM", "NOW", "ADBE"],
-    "Cloud Infrastructure": ["AMZN", "MSFT", "GOOG"],
-    "AdTech": ["TTD", "PUBM", "GOOGL"],
-    "Fintech": ["SQ", "PYPL", "ADYEY"],
-    "Consumer Internet": ["META", "GOOGL", "PINS"],
-    "eCommerce": ["AMZN", "SHOP", "SE"],
-    "Cybersecurity": ["PANW", "FTNT", "CRWD"],
-    "Dev Tools / Analytics": ["SNOW", "DDOG", "ESTC"],
-    "Semiconductors": ["NVDA", "AMD", "AVGO"],
-    "AI Infrastructure": ["NVDA", "AMD", "SMCI"],
-    "Vertical SaaS": ["VEEV", "TYL", "WDAY"],
-    "IT Services / Legacy Tech": ["IBM", "ACN", "DXC"],
-    "Hardware / Devices": ["AAPL", "DELL", "HPQ"]
+    "AdTech": ["APP", "APPS", "CRTO", "DV", "GOOGL", "META", "MGNI", "PUBM", "TTD"],
+    "Cloud Infrastructure": ["AMZN", "CRM", "CSCO", "GOOGL", "MSFT", "NET", "ORCL", "SNOW"],
+    "Fintech": ["ADYEY", "AFRM", "BILL", "COIN", "FIS", "FISV", "GPN", "PYPL", "SQ", "SSNC"],
+    "eCommerce": ["AMZN", "BABA", "BKNG", "CHWY", "EBAY", "ETSY", "PDD", "SE", "SHOP", "WMT"],
+    "Consumer Internet": ["ABNB", "BKNG", "GOOGL", "META", "NFLX", "PINS", "SNAP", "SPOT", "TRIP", "YELP"],
+    "IT Services": ["ACN", "CTSH", "DXC", "HPQ", "IBM", "INFY", "PLTR", "WIT"],
+    "Hardware/Devices": ["AAPL", "DELL", "HPQ", "LOGI", "PSTG", "SMCI", "SSYS", "STX", "WDC"],
+    "Cybersecurity": ["CHKP", "CRWD", "CYBR", "FTNT", "NET", "OKTA", "PANW", "S", "ZS"],
+    "Dev Tools": ["DDOG", "ESTC", "GTLB", "MDB", "TEAM"],
+    "AI Infrastructure": ["AMZN", "GOOGL", "IBM", "META", "MSFT", "NVDA", "ORCL"],
+    "Semiconductors": ["AMAT", "AMD", "ARM", "AVGO", "INTC", "NVDA", "QCOM", "TSM"],
+    "Vertical SaaS": ["CCCS", "CPRT", "CSGP", "GWRE", "ICE", "PCOR", "SSNC", "TTAN"],
+    "Enterprise SaaS": ["ADSK", "AMZN", "CRM", "IBM", "MSFT", "NOW", "ORCL", "SAP", "WDAY"],
+    "SMB SaaS": ["ADBE", "BILL", "GOOGL", "HUBS", "INTU", "META"]
 }
+
+# Create a list of ALL_TICKERS from the SECTOR_TICKERS dictionary
+ALL_TICKERS = []
+for tickers in SECTOR_TICKERS.values():
+    ALL_TICKERS.extend(tickers)
+ALL_TICKERS = sorted(list(set(ALL_TICKERS)))  # Remove duplicates and sort
+logging.info(f"Using {len(ALL_TICKERS)} unique tickers across {len(SECTOR_TICKERS)} sectors")
 
 class PolygonClient:
     """Client for interacting with the Polygon.io API"""
@@ -153,6 +160,150 @@ def get_unique_tickers() -> List[str]:
             unique_tickers.add(ticker)
     return sorted(list(unique_tickers))
 
+def get_shares_outstanding(client: PolygonClient, tickers: List[str], verbose: bool = False) -> Dict[str, int]:
+    """
+    Get shares outstanding for a list of tickers
+    
+    Args:
+        client (PolygonClient): Polygon client
+        tickers (List[str]): List of tickers
+        verbose (bool): Whether to print verbose output
+        
+    Returns:
+        Dict[str, int]: Dictionary mapping tickers to shares outstanding
+    """
+    shares_dict = {}
+    
+    # Create cache directory if it doesn't exist
+    os.makedirs("data/cache", exist_ok=True)
+    
+    # Try to load cached data
+    cache_file = "data/cache/shares_outstanding.json"
+    if os.path.exists(cache_file):
+        try:
+            with open(cache_file, 'r') as f:
+                shares_dict = json.load(f)
+                
+            if verbose:
+                logging.info(f"Loaded shares outstanding data for {len(shares_dict)} tickers from cache")
+        except Exception as e:
+            logging.error(f"Error loading cached shares outstanding data: {e}")
+    
+    # Get missing tickers
+    missing_tickers = [t for t in tickers if t not in shares_dict]
+    
+    if missing_tickers:
+        if verbose:
+            logging.info(f"Fetching shares outstanding data for {len(missing_tickers)} tickers...")
+            ticker_iter = tqdm(missing_tickers)
+        else:
+            ticker_iter = missing_tickers
+            
+        for ticker in ticker_iter:
+            try:
+                details = client.get_ticker_details(ticker)
+                
+                if "results" in details and details["results"]:
+                    shares = details["results"].get("share_class_shares_outstanding")
+                    if shares:
+                        shares_dict[ticker] = shares
+                    else:
+                        logging.warning(f"No shares outstanding data for {ticker}")
+                else:
+                    logging.warning(f"No details found for {ticker}")
+                    
+            except Exception as e:
+                logging.error(f"Error getting details for {ticker}: {e}")
+                
+            # Save cache after each ticker to avoid losing progress
+            try:
+                with open(cache_file, 'w') as f:
+                    json.dump(shares_dict, f)
+            except Exception as e:
+                logging.error(f"Error saving shares outstanding cache: {e}")
+    
+    if verbose:
+        logging.info(f"Got shares outstanding data for {len(shares_dict)} of {len(tickers)} tickers")
+        
+    return shares_dict
+
+def get_historical_prices(client: PolygonClient, tickers: List[str], start_date: str, end_date: str, verbose: bool = False) -> pd.DataFrame:
+    """
+    Get historical prices for a list of tickers
+    
+    Args:
+        client (PolygonClient): Polygon client
+        tickers (List[str]): List of tickers
+        start_date (str): Start date in 'YYYY-MM-DD' format
+        end_date (str): End date in 'YYYY-MM-DD' format
+        verbose (bool): Whether to print verbose output
+        
+    Returns:
+        pd.DataFrame: DataFrame with historical prices
+    """
+    all_prices = {}
+    
+    # Create cache directory if it doesn't exist
+    os.makedirs("data/cache", exist_ok=True)
+    
+    # Try to load cached data
+    cache_file = "data/cache/historical_prices.pkl"
+    if os.path.exists(cache_file):
+        try:
+            all_prices = pd.read_pickle(cache_file)
+            
+            if verbose:
+                logging.info(f"Loaded historical price data for {len(all_prices)} tickers from cache")
+        except Exception as e:
+            logging.error(f"Error loading cached historical price data: {e}")
+    
+    # Get missing tickers
+    missing_tickers = [t for t in tickers if t not in all_prices]
+    
+    if missing_tickers:
+        if verbose:
+            logging.info(f"Fetching historical price data for {len(missing_tickers)} tickers...")
+            ticker_iter = tqdm(missing_tickers)
+        else:
+            ticker_iter = missing_tickers
+            
+        for ticker in ticker_iter:
+            try:
+                prices = client.get_historical_prices(ticker, start_date, end_date)
+                
+                if prices:
+                    # Extract dates and closing prices
+                    dates = [datetime.fromtimestamp(p['t']/1000).strftime('%Y-%m-%d') for p in prices]
+                    closes = [p['c'] for p in prices]
+                    
+                    # Create Series
+                    ticker_prices = pd.Series(closes, index=dates)
+                    all_prices[ticker] = ticker_prices
+                else:
+                    logging.warning(f"No price data for {ticker}")
+                    
+            except Exception as e:
+                logging.error(f"Error getting prices for {ticker}: {e}")
+                
+            # Save cache after each ticker to avoid losing progress
+            try:
+                pd.to_pickle(all_prices, cache_file)
+            except Exception as e:
+                logging.error(f"Error saving historical price cache: {e}")
+    
+    if verbose:
+        logging.info(f"Got price data for {len(all_prices)} of {len(tickers)} tickers")
+    
+    # Create price DataFrame
+    price_df = pd.DataFrame(all_prices)
+    
+    # Remove weekends (should already be excluded from API response, but just to be sure)
+    price_df.index = pd.to_datetime(price_df.index)
+    # Filter out weekends (Saturday=5, Sunday=6)
+    price_df = price_df[~price_df.index.isin(price_df.index[price_df.index.weekday >= 5])]
+    
+    return price_df
+
 def get_historical_data(api_key: str, days: int = 30, verbose: bool = False) -> tuple:
     """
     Get historical price and shares outstanding data
@@ -184,67 +335,10 @@ def get_historical_data(api_key: str, days: int = 30, verbose: bool = False) -> 
         logging.info(f"Found {len(tickers)} unique tickers across {len(SECTOR_TICKERS)} sectors")
     
     # Get shares outstanding for each ticker
-    shares_dict = {}
-    if verbose:
-        logging.info("Fetching shares outstanding data...")
-        ticker_iter = tqdm(tickers)
-    else:
-        ticker_iter = tickers
-        
-    for ticker in ticker_iter:
-        try:
-            details = client.get_ticker_details(ticker)
-            
-            if "results" in details and details["results"]:
-                shares = details["results"].get("share_class_shares_outstanding")
-                if shares:
-                    shares_dict[ticker] = shares
-                else:
-                    logging.warning(f"No shares outstanding data for {ticker}")
-            else:
-                logging.warning(f"No details found for {ticker}")
-                
-        except Exception as e:
-            logging.error(f"Error getting details for {ticker}: {e}")
-    
-    if verbose:
-        logging.info(f"Got shares outstanding data for {len(shares_dict)} of {len(tickers)} tickers")
+    shares_dict = get_shares_outstanding(client, tickers, verbose)
     
     # Get historical prices for each ticker
-    all_prices = {}
-    if verbose:
-        logging.info("Fetching historical price data...")
-        ticker_iter = tqdm(tickers)
-    else:
-        ticker_iter = tickers
-        
-    for ticker in ticker_iter:
-        try:
-            prices = client.get_historical_prices(ticker, start_str, end_str)
-            
-            if prices:
-                # Extract dates and closing prices
-                dates = [datetime.fromtimestamp(p['t']/1000).strftime('%Y-%m-%d') for p in prices]
-                closes = [p['c'] for p in prices]
-                
-                # Create Series
-                ticker_prices = pd.Series(closes, index=dates)
-                all_prices[ticker] = ticker_prices
-            else:
-                logging.warning(f"No price data for {ticker}")
-                
-        except Exception as e:
-            logging.error(f"Error getting prices for {ticker}: {e}")
-    
-    if verbose:
-        logging.info(f"Got price data for {len(all_prices)} of {len(tickers)} tickers")
-    
-    # Create price DataFrame
-    price_df = pd.DataFrame(all_prices)
-    
-    # Remove weekends (should already be excluded from API response, but just to be sure)
-    price_df.index = pd.to_datetime(price_df.index)
-    price_df = price_df[price_df.index.dayofweek < 5]
+    price_df = get_historical_prices(client, tickers, start_str, end_str, verbose)
     
     # Create shares outstanding DataFrame
     shares_df = pd.Series(shares_dict).to_frame().T
