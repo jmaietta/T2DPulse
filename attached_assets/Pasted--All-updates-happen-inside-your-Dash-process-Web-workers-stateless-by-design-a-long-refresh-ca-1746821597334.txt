@@ -1,0 +1,62 @@
+| All updates happen inside your Dash process | Web workers = stateless by design; a long refresh can block callbacks | Move the ETL into a **cron / Celery beat** task that drops fresh Parquet files; the Dash app just `read_parquet()` on startup or on demand. |
+
+---
+
+### 3  Operational & design nits  
+
+1. **Threading in Gunicorn / Flask** – the `auto_refresh_data()` background thread runs inside the web worker :contentReference[oaicite:4]{index=4}:contentReference[oaicite:5]{index=5}. In production it’s safer to:
+   * run a scheduled script (cron, GitHub Action, or Replit “Deployments”) that ends after it finishes; or  
+   * use Celery + Redis/CloudAMQP so Dash never blocks.
+
+2. **Timezone consistency** – you convert Yahoo timestamps with `tz_localize(None)` :contentReference[oaicite:6]{index=6}:contentReference[oaicite:7]{index=7}.  Keep them in UTC inside storage and convert to US/Eastern only for display to avoid DST edge‑cases.
+
+3. **Corporate‑action safety** – call `auto_adjust=True` in `yf.download`; it back‑adjusts for splits/dividends so historical EMAs stay correct.
+
+4. **Schema versioning** – add a `__schema_version__` key in the Parquet metadata or place it in a tiny `schema.json`.  When you add new columns (e.g. VWAP, turnover) your loader can branch cleanly.
+
+5. **Unit tests for ETL** – write a pytest that:
+   * creates a temp Parquet,  
+   * runs the incremental updater twice,  
+   * asserts that row‑count increases once and stays flat the second time (idempotence).
+
+---
+
+### Drop‑in code sketch (incremental batch download & Parquet)
+
+```python
+import pandas as pd, yfinance as yf, pyarrow.parquet as pq, pyarrow as pa, pathlib, datetime as dt
+
+DATA = pathlib.Path("data/market"); DATA.mkdir(parents=True, exist_ok=True)
+PARQUET = DATA / "prices.parquet"
+
+TICKERS = ["AAPL","MSFT","NVDA", ...]          # build from generate_sector_tickers()
+
+def latest_date():
+    if PARQUET.exists():
+        return pq.read_table(PARQUET, columns=["date"]).to_pandas()["date"].max()
+    return None
+
+def fetch_and_append():
+    start = (latest_date() + pd.Timedelta("1D")).strftime("%Y-%m-%d") if latest_date() else "2015-01-01"
+    df = yf.download(TICKERS, start=start, progress=False, group_by="ticker", auto_adjust=True, threads=True)
+    if df.empty:
+        return
+    # reshape to long
+    df = (df["Close"]
+            .stack(level=0)  # MultiIndex → long
+            .rename("close")
+            .reset_index()
+            .rename(columns={"level_1":"ticker", "Date":"date"}))
+    # attach market cap
+    caps = {t: yf.Ticker(t).info.get("sharesOutstanding") for t in TICKERS}
+    df["mkt_cap"] = df.apply(lambda r: r.close * caps.get(r.ticker, float("nan")), axis=1)
+    # write / append
+    table = pa.Table.from_pandas(df)
+    pq.write_to_dataset(table, root_path=str(PARQUET), partition_cols=["ticker"], append=True)
+
+if __name__ == "__main__":
+    from tenacity import retry, stop_after_attempt, wait_random_exponential
+    @retry(stop=stop_after_attempt(5), wait=wait_random_exponential(multiplier=1, max=60))
+    def run():
+        fetch_and_append()
+    run()
