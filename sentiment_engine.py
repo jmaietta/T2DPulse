@@ -229,6 +229,9 @@ def score_sectors(macros: MacroDict, previous_scores=None, sector_data=None) -> 
     adtech_contributions = {}
 
     # Process special case for sectors with no market data
+    # Store which sectors should use previous scores
+    use_previous_score = set()
+    
     if sector_data:
         # Check for sectors with no tickers reporting data
         for sec in SECTORS:
@@ -236,12 +239,8 @@ def score_sectors(macros: MacroDict, previous_scores=None, sector_data=None) -> 
             if sec in sector_data and sector_data[sec].get('tickers_with_data', -1) == 0:
                 if previous_scores and sec in previous_scores:
                     print(f"WARNING: Using previous score for {sec} due to API data issues")
-                    # Skip normal scoring for this sector and use previous known score
-                    return [
-                        {"sector": s, "score": previous_scores[s] if s == sec and s in previous_scores else 
-                                   round(sector_sum[s] / max(sector_weight[s], 1.0), 2)}
-                        for s in SECTORS
-                    ]
+                    # Mark this sector to use previous score
+                    use_previous_score.add(sec)
 
     for ind, val in macros.items():
         raw = raw_signal(ind, val)
@@ -286,9 +285,12 @@ def score_sectors(macros: MacroDict, previous_scores=None, sector_data=None) -> 
                   f"contribution={data['contribution']:+.2f}")
         print(f"  Total AdTech score: {sector_sum['AdTech'] / sector_weight['AdTech']:.2f}")
     
-    # Make sure we don't divide by zero 
+    # Make sure we don't divide by zero, and use previous scores for sectors with API issues
     return [
-        {"sector": sec, "score": round(sector_sum[sec] / max(sector_weight[sec], 1.0), 2)}
+        {"sector": sec, 
+         "score": (previous_scores.get(sec, 0) if previous_scores is not None else 0) if sec in use_previous_score else 
+                  round(sector_sum[sec] / max(sector_weight[sec], 1.0), 2)
+        }
         for sec in SECTORS
     ]
 
@@ -351,7 +353,7 @@ def get_historical_indicator_values(date):
                 df['date'] = pd.to_datetime(df['date'])
                 
                 # Get data on or before the target date
-                df = df[df['date'] <= date].sort_values('date', ascending=False)
+                df = df[df['date'] <= date].sort_values(by='date', ascending=False)
                 
                 if not df.empty:
                     # Get value from appropriate column

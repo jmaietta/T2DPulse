@@ -583,8 +583,9 @@ def process_sector_data(historical_price_data, historical_marketcap_data):
                 total_market_cap = max(1000000, total_market_cap)  # At least $1M
                 avg_momentum = 0  # Neutral momentum
                 
-                # In this case we're going to use the previous day's sentiment score later
-                # in sentiment_engine.py by preserving the previous value
+                # Make sure we pass the previous score to sentiment_engine.py
+                # Store the previous score directly in the sector data
+                sectors_data[sector]['previous_score'] = previous_sector_scores[sector]
             else:
                 # No historical data either, use minimum fallback
                 print(f"No previous data available for {sector}, using minimum fallback values")
