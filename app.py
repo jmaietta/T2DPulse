@@ -7919,14 +7919,14 @@ def auto_refresh_data():
             
         # Calculate seconds until target time
         seconds_until_target = (target - now).total_seconds()
-        print(f"Next data refresh scheduled at {target.strftime('%Y-%m-%d %H:%M:%S %Z')}, which is {seconds_until_target:.1f} seconds from now")
+        logger.info(f"Next data refresh scheduled at {target.strftime('%Y-%m-%d %H:%M:%S %Z')}, which is {seconds_until_target:.1f} seconds from now")
         
         # Sleep until target time
         time.sleep(seconds_until_target)
         
         # Use Eastern time for date display
         eastern_date = target.strftime('%Y-%m-%d')
-        print(f"Auto-refresh: Updating economic data at 5:00pm ET on {eastern_date}...")
+        logger.info(f"Auto-refresh: Updating economic data at 5:00pm ET on {eastern_date}...")
         
         # Fetch fresh data from all sources
         global gdp_data, unemployment_data, inflation_data, pcepi_data
@@ -7936,7 +7936,7 @@ def auto_refresh_data():
         # Define fetch_economic_data to update all data sources
         def fetch_economic_data():
             # Fetch new data for all indicators
-            print("Fetching fresh economic data from all sources...")
+            logger.info("Fetching fresh economic data from all sources...")
             
             # FRED data
             global gdp_data, unemployment_data, inflation_data, pcepi_data
@@ -7965,15 +7965,15 @@ def auto_refresh_data():
         
         # Run daily sector data collection using Finnhub API
         try:
-            print(f"Auto-refresh: Running daily sector data collection using Finnhub API...")
+            logger.info(f"Auto-refresh: Running daily sector data collection using Finnhub API...")
             from run_daily import main as run_daily_collection
             daily_collection_success = run_daily_collection()
             if daily_collection_success:
-                print(f"Auto-refresh: Successfully collected fresh sector data on {eastern_date}")
+                logger.info(f"Auto-refresh: Successfully collected fresh sector data on {eastern_date}")
             else:
-                print(f"Auto-refresh: Failed to collect fresh sector data on {eastern_date}")
+                logger.error(f"Auto-refresh: Failed to collect fresh sector data on {eastern_date}")
         except Exception as e:
-            print(f"Auto-refresh: Error in daily sector data collection: {str(e)}")
+            logger.error(f"Auto-refresh: Error in daily sector data collection: {str(e)}")
         
         # Re-calculate sector scores with fresh data
         sector_scores = calculate_sector_sentiment()
@@ -7983,25 +7983,25 @@ def auto_refresh_data():
             # Calculate the pulse score with current weights
             sector_scores_dict = {s['sector']: s['normalized_score'] for s in sector_scores}
             pulse_score = calculate_t2d_pulse_from_sectors(sector_scores_dict)
-            print(f"Auto-refresh: Updated T2D Pulse score to {pulse_score} on {eastern_date}")
+            logger.info(f"Auto-refresh: Updated T2D Pulse score to {pulse_score} on {eastern_date}")
             
             # Save the authentic pulse score to a file for future reference
             try:
                 os.makedirs('data', exist_ok=True)
                 with open('data/current_pulse_score.txt', 'w') as f:
                     f.write(str(pulse_score))
-                print(f"Auto-refresh: Saved authentic pulse score {pulse_score} to data/current_pulse_score.txt")
+                logger.info(f"Auto-refresh: Saved authentic pulse score {pulse_score} to data/current_pulse_score.txt")
             except Exception as e:
-                print(f"Auto-refresh: Error saving authentic pulse score: {str(e)}")
+                logger.error(f"Auto-refresh: Error saving authentic pulse score: {str(e)}")
         else:
-            print(f"Auto-refresh: No sector scores available, couldn't update T2D Pulse score")
+            logger.warning(f"Auto-refresh: No sector scores available, couldn't update T2D Pulse score")
 
 # Add this at the end of the file if running directly
 if __name__ == "__main__":
     # Start the auto-refresh thread
     refresh_thread = threading.Thread(target=auto_refresh_data, daemon=True)
     refresh_thread.start()
-    print("Started auto-refresh thread to update data every 24 hours")
+    logger.info("Started auto-refresh thread to update data every 24 hours")
     
     # Run the dashboard
     app.run(host="0.0.0.0", port=5000, debug=False)
