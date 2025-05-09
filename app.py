@@ -899,12 +899,12 @@ def calculate_sector_sentiment():
     try:
         try:
             ema_factors = get_sector_ema_factors()
-            print(f"Retrieved EMA factors for {len(ema_factors)} sectors")
+            logger.info(f"Retrieved EMA factors for {len(ema_factors)} sectors")
         except Exception as e:
-            print(f"Error getting sector EMA factors: {str(e)}")
+            logger.error(f"Error getting sector EMA factors: {str(e)}")
             # Create fallback EMA factors with small positive bias
             ema_factors = {sector: 0.05 for sector in sentiment_engine.SECTORS}
-            print(f"Created fallback EMA factors with small positive bias (0.05) for {len(ema_factors)} sectors")
+            logger.info(f"Created fallback EMA factors with small positive bias (0.05) for {len(ema_factors)} sectors")
         
         # Add EMA factors for each sector to the macros dictionary
         # We'll store the original macros as a template
@@ -915,17 +915,17 @@ def calculate_sector_sentiment():
         if ema_factors:
             # For all sectors without a specific EMA factor, use a small positive bias
             if len(ema_factors) < len(sentiment_engine.SECTORS):
-                print(f"Using small positive bias (0.05) for sectors without EMA data")
+                logger.info(f"Using small positive bias (0.05) for sectors without EMA data")
                 
             # Use the default factor for the base macros (will be used for any missing sectors)
             macros["Sector_EMA_Factor"] = 0.05  # Small positive bias by default
     except Exception as e:
-        print(f"Error getting EMA factors: {str(e)}")
+        logger.error(f"Error getting EMA factors: {str(e)}")
         # Continue without EMA factors if they're not available
     
     # Check if we have enough data to calculate sector scores (need at least 6 indicators)
     if len(macros) < 6:
-        print(f"Not enough data to calculate sector sentiment scores (have {len(macros)}/{len(macros) + 1} indicators)")
+        logger.warning(f"Not enough data to calculate sector sentiment scores (have {len(macros)}/{len(macros) + 1} indicators)")
         return []
     
     try:
@@ -939,7 +939,7 @@ def calculate_sector_sentiment():
             # Use the sector-specific EMA factor if available, otherwise use default
             if ema_factors and sector in ema_factors:
                 sector_macros["Sector_EMA_Factor"] = ema_factors[sector]
-                print(f"Using sector-specific EMA factor for {sector}: {ema_factors[sector]:.3f}")
+                logger.info(f"Using sector-specific EMA factor for {sector}: {ema_factors[sector]:.3f}")
             
             # Calculate scores using this sector's own EMA factor
             sector_result = sentiment_engine.score_sectors(sector_macros)
@@ -952,7 +952,7 @@ def calculate_sector_sentiment():
         
         # Use these sector-specific scores
         sector_scores = all_sector_scores
-        print(f"Successfully calculated sentiment scores for {len(sector_scores)} sectors with sector-specific EMA factors")
+        logger.info(f"Successfully calculated sentiment scores for {len(sector_scores)} sectors with sector-specific EMA factors")
         
         # Get driver factors and tickers for each sector
         drivers = generate_sector_drivers(macros)
@@ -1006,7 +1006,7 @@ def calculate_sector_sentiment():
             
         return enhanced_scores
     except Exception as e:
-        print(f"Error calculating sector sentiment scores: {str(e)}")
+        logger.error(f"Error calculating sector sentiment scores: {str(e)}")
         return []
 
 def calculate_t2d_pulse_from_sectors(sector_scores, sector_weights=None):
@@ -1087,11 +1087,11 @@ def calculate_sentiment_index(custom_weights=None, proprietary_data=None, docume
     # Verify weights sum to exactly 100%
     weights_sum = sum(default_weights.values())
     if abs(weights_sum - 100) > 0.001:
-        print(f"WARNING: Default weights sum to {weights_sum}%, not 100%")
+        logger.warning(f"Default weights sum to {weights_sum}%, not 100%")
         # Adjust the largest weight to ensure total is exactly 100%
         adjustment = 100 - weights_sum
         default_weights['NASDAQ Trend'] += adjustment
-        print(f"Adjusted NASDAQ Trend by {adjustment} to make total exactly 100%")
+        logger.info(f"Adjusted NASDAQ Trend by {adjustment} to make total exactly 100%")
     
     # Validate default weights sum to 100
     assert abs(sum(default_weights.values()) - 100) < 0.1, "Default weights must sum to 100%"
@@ -1130,17 +1130,17 @@ def calculate_sentiment_index(custom_weights=None, proprietary_data=None, docume
     # Final check - make sure weights sum exactly to 100%
     final_total = sum(working_weights.values())
     if abs(final_total - 100) > 0.001:
-        print(f"Weights before final adjustment: {working_weights}, Total: {final_total}")
+        logger.debug(f"Weights before final adjustment: {working_weights}, Total: {final_total}")
         
         # Find the largest weight and adjust it to make the total exactly 100
         sorted_keys = sorted(working_weights.keys(), key=lambda k: working_weights[k], reverse=True)
         if sorted_keys:
             largest_key = sorted_keys[0]
             working_weights[largest_key] += (100 - final_total)
-            print(f"Adjusted {largest_key} weight by {100 - final_total} to make total exactly 100%")
+            logger.info(f"Adjusted {largest_key} weight by {100 - final_total} to make total exactly 100%")
         
         # Verify after adjustment
-        print(f"Weights after adjustment: {working_weights}, Total: {sum(working_weights.values())}")
+        logger.debug(f"Weights after adjustment: {working_weights}, Total: {sum(working_weights.values())}")
     
     # Use the adjusted weights for the rest of the calculation
     weights = working_weights
