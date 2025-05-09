@@ -377,6 +377,9 @@ def calculate_sector_market_caps(market_caps: pd.DataFrame) -> pd.DataFrame:
     """
     sector_caps = pd.DataFrame(index=market_caps.index)
     
+    # Dictionary to track coverage for each sector
+    sector_coverage = {}
+    
     for sector, tickers in SECTOR_TICKERS.items():
         # Get tickers with data
         available_tickers = [t for t in tickers if t in market_caps.columns]
@@ -384,8 +387,59 @@ def calculate_sector_market_caps(market_caps: pd.DataFrame) -> pd.DataFrame:
         if available_tickers:
             # Sum market caps
             sector_caps[sector] = market_caps[available_tickers].sum(axis=1)
+            
+            # Track coverage percentage
+            coverage_pct = len(available_tickers) / len(tickers) * 100
+            sector_coverage[sector] = {
+                'tickers_available': len(available_tickers),
+                'tickers_total': len(tickers),
+                'coverage_pct': coverage_pct,
+                'tickers_missing': [t for t in tickers if t not in available_tickers]
+            }
+            
+            # Log warning if coverage is less than 100%
+            if coverage_pct < 100:
+                missing_tickers = [t for t in tickers if t not in available_tickers]
+                logging.warning(f"Sector {sector} has {coverage_pct:.1f}% coverage ({len(available_tickers)}/{len(tickers)} tickers). Missing: {missing_tickers}")
         else:
             logging.warning(f"No data available for sector {sector}")
+            sector_caps[sector] = np.nan
+            sector_coverage[sector] = {
+                'tickers_available': 0,
+                'tickers_total': len(tickers),
+                'coverage_pct': 0,
+                'tickers_missing': tickers
+            }
+    
+    # Save coverage report
+    try:
+        os.makedirs("data", exist_ok=True)
+        with open("data/sector_coverage_report.json", 'w') as f:
+            json.dump(sector_coverage, f, indent=2)
+        logging.info(f"Saved sector coverage report to data/sector_coverage_report.json")
+    except Exception as e:
+        logging.error(f"Error saving sector coverage report: {e}")
+    
+    # Calculate total market cap for all sectors
+    sector_caps['Total'] = sector_caps.sum(axis=1)
+    
+    # Calculate sector weights (% of total market cap)
+    weight_cols = []
+    for sector in SECTOR_TICKERS.keys():
+        if sector in sector_caps.columns:
+            weight_col = f"{sector}_weight_pct"
+            weight_cols.append(weight_col)
+            sector_caps[weight_col] = (sector_caps[sector] / sector_caps['Total'] * 100).round(2)
+    
+    # Also calculate and save the most recent weights (latest date)
+    try:
+        latest_date = sector_caps.index.max()
+        latest_weights = sector_caps.loc[latest_date, weight_cols].to_dict()
+        with open("data/sector_weights_latest.json", 'w') as f:
+            json.dump(latest_weights, f, indent=2)
+        logging.info(f"Saved latest sector weights to data/sector_weights_latest.json")
+    except Exception as e:
+        logging.error(f"Error saving latest sector weights: {e}")
     
     return sector_caps
 
