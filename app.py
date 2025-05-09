@@ -29,6 +29,9 @@ import document_analysis
 # Import sector sentiment scoring
 import sentiment_engine
 
+# Import efficient data reading functionality
+from data_reader import read_data_file, read_sector_data, read_pulse_score, read_market_data
+
 # Import chart styling and market insights components
 from chart_styling import custom_template, color_scheme
 
@@ -50,8 +53,7 @@ import historical_sector_scores
 import authentic_sector_history
 import predefined_sector_data
 
-# Import data reader with enhanced sector data reading functionality
-from data_reader import read_sector_data, read_pulse_score
+# Data reader for efficient file operations is already imported
 
 # Configure logging
 logging.basicConfig(
@@ -89,10 +91,17 @@ except Exception as e:
 def get_authentic_pulse_score():
     """Get the most recent authentic T2D Pulse score calculated from sector data"""
     try:
-        logger.debug("Attempting to read authentic pulse score from data/current_pulse_score.txt")
+        # Use the data_reader's optimized implementation
+        score = read_pulse_score()
+        if score is not None:
+            logger.info(f"Successfully read authentic pulse score: {score}")
+            return score
+            
+        # Fall back to original method if data_reader fails
+        logger.debug("Falling back to direct file reading for pulse score")
         with open("data/current_pulse_score.txt", "r") as f:
             score = float(f.read().strip())
-            logger.info(f"Successfully read authentic pulse score: {score}")
+            logger.info(f"Successfully read authentic pulse score via fallback: {score}")
             return score
     except Exception as e:
         logger.error(f"Error reading authentic pulse score: {e}")
@@ -295,29 +304,38 @@ def save_data_to_csv(df, filename):
         return False
 
 def load_data_from_csv(filename):
-    """Load DataFrame from CSV file"""
+    """Load DataFrame from CSV file or Parquet equivalent using the data_reader"""
     try:
-        file_path = os.path.join(DATA_DIR, filename)
-        if os.path.exists(file_path):
-            df = pd.read_csv(file_path)
-            
-            # Convert 'date' column to datetime, case-insensitive
-            date_columns = [col for col in df.columns if col.lower() == 'date']
-            if date_columns:
-                date_col = date_columns[0]
-                df[date_col] = pd.to_datetime(df[date_col])
-                
-                # Ensure the date column is consistently named 'date'
-                if date_col != 'date':
-                    df = df.rename(columns={date_col: 'date'})
-            
-            print(f"Successfully loaded {len(df)} rows from {filename}")
+        # Use data_reader's efficient implementation which tries Parquet first
+        df = read_data_file(os.path.basename(filename))
+        
+        if df is not None and not df.empty:
+            # The data_reader already handles date conversion
+            logger.info(f"Successfully loaded {len(df)} rows from {filename}")
             return df
         else:
-            print(f"File {filename} does not exist")
-            return pd.DataFrame()
+            # Fall back to old method if data_reader fails
+            file_path = os.path.join(DATA_DIR, filename)
+            if os.path.exists(file_path):
+                df = pd.read_csv(file_path)
+                
+                # Convert 'date' column to datetime, case-insensitive
+                date_columns = [col for col in df.columns if col.lower() == 'date']
+                if date_columns:
+                    date_col = date_columns[0]
+                    df[date_col] = pd.to_datetime(df[date_col])
+                    
+                    # Ensure the date column is consistently named 'date'
+                    if date_col != 'date':
+                        df = df.rename(columns={date_col: 'date'})
+                
+                logger.info(f"Fallback: Successfully loaded {len(df)} rows from {filename}")
+                return df
+            else:
+                logger.warning(f"File {filename} does not exist")
+                return pd.DataFrame()
     except Exception as e:
-        print(f"Failed to load data from {filename}: {str(e)}")
+        logger.error(f"Failed to load data from {filename}: {str(e)}")
         return pd.DataFrame()
 
 def fetch_bea_data(table_name, frequency, start_year, end_year):
