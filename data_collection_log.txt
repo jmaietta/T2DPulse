@@ -1,0 +1,187 @@
+Checking current ticker data coverage...
+Checking data for 94 unique tickers
+Loaded price data with shape (30, 94)
+Loaded market cap data with shape (30, 94)
+
+--- Missing Data Summary ---
+
+All tickers have both price and market cap data! 🎉
+
+--- Checking for null values in existing ticker data ---
+WARNING: Ticker MDB has null price values
+WARNING: Ticker ZS has null price values
+WARNING: Ticker CHKP has null price values
+WARNING: Ticker YELP has null price values
+WARNING: Ticker ORCL has null price values
+WARNING: Ticker TTAN has null price values
+WARNING: Ticker SAP has null price values
+WARNING: Ticker DXC has null price values
+WARNING: Ticker HPQ has null price values
+WARNING: Ticker TRIP has null price values
+WARNING: Ticker EBAY has null price values
+WARNING: Ticker SSNC has null price values
+WARNING: Ticker AMAT has null price values
+WARNING: Ticker ARM has null price values
+WARNING: Ticker GPN has null price values
+WARNING: Ticker BKNG has null price values
+WARNING: Ticker DELL has null price values
+WARNING: Ticker IAD has null price values
+WARNING: Ticker CCCS has null price values
+WARNING: Ticker APP has null price values
+WARNING: Ticker PDD has null price values
+WARNING: Ticker APPS has null price values
+WARNING: Ticker DV has null price values
+WARNING: Ticker PCOR has null price values
+WARNING: Ticker AVGO has null price values
+WARNING: Ticker AFRM has null price values
+WARNING: Ticker GTLB has null price values
+WARNING: Ticker META has null price values
+WARNING: Ticker SPOT has null price values
+WARNING: Ticker SMCI has null price values
+WARNING: Ticker TTD has null price values
+WARNING: Ticker PUBM has null price values
+WARNING: Ticker ADYEY has null price values
+WARNING: Ticker TSM has null price values
+WARNING: Ticker WDC has null price values
+WARNING: Ticker ICE has null price values
+WARNING: Ticker SNAP has null price values
+WARNING: Ticker NOW has null price values
+WARNING: Ticker PANW has null price values
+WARNING: Ticker INTC has null price values
+WARNING: Ticker ADBE has null price values
+WARNING: Ticker FISV has null price values
+WARNING: Ticker SHOP has null price values
+WARNING: Ticker CRM has null price values
+WARNING: Ticker CRWD has null price values
+WARNING: Ticker CHWY has null price values
+WARNING: Ticker SNOW has null price values
+WARNING: Ticker NFLX has null price values
+WARNING: Ticker BILL has null price values
+WARNING: Ticker SE has null price values
+WARNING: Ticker QCOM has null price values
+WARNING: Ticker CTSH has null price values
+WARNING: Ticker CSGP has null price values
+WARNING: Ticker INFY has null price values
+WARNING: Ticker ESTC has null price values
+WARNING: Ticker COIN has null price values
+WARNING: Ticker PSTG has null price values
+WARNING: Ticker FIS has null price values
+WARNING: Ticker CRTO has null price values
+WARNING: Ticker PINS has null price values
+WARNING: Ticker INTU has null price values
+WARNING: Ticker CYBR has null price values
+WARNING: Ticker HUBS has null price values
+WARNING: Ticker BABA has null price values
+WARNING: Ticker ETSY has null price values
+WARNING: Ticker NET has null price values
+WARNING: Ticker SQ has null price values
+WARNING: Ticker FTNT has null price values
+WARNING: Ticker WIT has null price values
+WARNING: Ticker LOGI has null price values
+WARNING: Ticker WDAY has null price values
+WARNING: Ticker PLTR has null price values
+WARNING: Ticker STX has null price values
+WARNING: Ticker WMT has null price values
+WARNING: Ticker AMD has null price values
+WARNING: Ticker GWRE has null price values
+WARNING: Ticker MGNI has null price values
+WARNING: Ticker SSYS has null price values
+WARNING: Ticker CPRT has null price values
+WARNING: Ticker ADSK has null price values
+WARNING: Ticker IBM has null price values
+WARNING: Ticker S has null price values
+WARNING: Ticker PYPL has null price values
+WARNING: Ticker CSCO has null price values
+WARNING: Ticker OKTA has null price values
+WARNING: Ticker MDB has null market cap values
+WARNING: Ticker ZS has null market cap values
+WARNING: Ticker CHKP has null market cap values
+WARNING: Ticker YELP has null market cap values
+WARNING: Ticker ORCL has null market cap values
+WARNING: Ticker TTAN has null market cap values
+WARNING: Ticker SAP has null market cap values
+WARNING: Ticker DXC has null market cap values
+WARNING: Ticker HPQ has null market cap values
+WARNING: Ticker TRIP has null market cap values
+WARNING: Ticker EBAY has null market cap values
+WARNING: Ticker SSNC has null market cap values
+WARNING: Ticker AMAT has null market cap values
+WARNING: Ticker ARM has null market cap values
+WARNING: Ticker GPN has null market cap values
+WARNING: Ticker BKNG has null market cap values
+WARNING: Ticker DELL has null market cap values
+WARNING: Ticker IAD has null market cap values
+WARNING: Ticker CCCS has null market cap values
+WARNING: Ticker APP has null market cap values
+WARNING: Ticker PDD has null market cap values
+WARNING: Ticker APPS has null market cap values
+WARNING: Ticker DV has null market cap values
+WARNING: Ticker PCOR has null market cap values
+WARNING: Ticker AVGO has null market cap values
+WARNING: Ticker AFRM has null market cap values
+WARNING: Ticker GTLB has null market cap values
+WARNING: Ticker META has null market cap values
+WARNING: Ticker SPOT has null market cap values
+WARNING: Ticker SMCI has null market cap values
+WARNING: Ticker TTD has null market cap values
+WARNING: Ticker PUBM has null market cap values
+WARNING: Ticker ADYEY has null market cap values
+WARNING: Ticker TSM has null market cap values
+WARNING: Ticker WDC has null market cap values
+WARNING: Ticker ICE has null market cap values
+WARNING: Ticker SNAP has null market cap values
+WARNING: Ticker NOW has null market cap values
+WARNING: Ticker PANW has null market cap values
+WARNING: Ticker INTC has null market cap values
+WARNING: Ticker ADBE has null market cap values
+WARNING: Ticker FISV has null market cap values
+WARNING: Ticker SHOP has null market cap values
+WARNING: Ticker CRM has null market cap values
+WARNING: Ticker CRWD has null market cap values
+WARNING: Ticker CHWY has null market cap values
+WARNING: Ticker SNOW has null market cap values
+WARNING: Ticker NFLX has null market cap values
+WARNING: Ticker BILL has null market cap values
+WARNING: Ticker SE has null market cap values
+WARNING: Ticker QCOM has null market cap values
+WARNING: Ticker CTSH has null market cap values
+WARNING: Ticker CSGP has null market cap values
+WARNING: Ticker INFY has null market cap values
+WARNING: Ticker ESTC has null market cap values
+WARNING: Ticker COIN has null market cap values
+WARNING: Ticker PSTG has null market cap values
+WARNING: Ticker FIS has null market cap values
+WARNING: Ticker CRTO has null market cap values
+WARNING: Ticker PINS has null market cap values
+WARNING: Ticker INTU has null market cap values
+WARNING: Ticker CYBR has null market cap values
+WARNING: Ticker HUBS has null market cap values
+WARNING: Ticker BABA has null market cap values
+WARNING: Ticker ETSY has null market cap values
+WARNING: Ticker NET has null market cap values
+WARNING: Ticker SQ has null market cap values
+WARNING: Ticker FTNT has null market cap values
+WARNING: Ticker WIT has null market cap values
+WARNING: Ticker LOGI has null market cap values
+WARNING: Ticker WDAY has null market cap values
+WARNING: Ticker PLTR has null market cap values
+WARNING: Ticker STX has null market cap values
+WARNING: Ticker WMT has null market cap values
+WARNING: Ticker AMD has null market cap values
+WARNING: Ticker GWRE has null market cap values
+WARNING: Ticker MGNI has null market cap values
+WARNING: Ticker SSYS has null market cap values
+WARNING: Ticker CPRT has null market cap values
+WARNING: Ticker ADSK has null market cap values
+WARNING: Ticker IBM has null market cap values
+WARNING: Ticker S has null market cap values
+WARNING: Ticker PYPL has null market cap values
+WARNING: Ticker CSCO has null market cap values
+WARNING: Ticker OKTA has null market cap values
+
+--- Sector Data Coverage ---
+AdTech: 100.0% coverage (10/10 tickers)
+Cloud Infrastructure: 100.0% coverage (8/8 tickers)
+Fintech: 100.0% coverage (10/10 tickers)
+eCommerce: 100.0% coverage (10/10 tickers)
+Consumer Internet: 100.0% coverage (10/10 tickers)
