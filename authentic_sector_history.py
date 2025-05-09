@@ -8,6 +8,8 @@ import json
 import pandas as pd
 import pytz
 from datetime import datetime
+import logging
+import data_reader
 
 def get_authentic_sector_history(sector_name=None):
     """
@@ -21,18 +23,17 @@ def get_authentic_sector_history(sector_name=None):
         sector names as keys and DataFrames as values. If sector_name is provided,
         returns a DataFrame for just that sector.
     """
-    csv_path = "data/authentic_sector_history.csv"
-    
-    if not os.path.exists(csv_path):
-        print(f"Warning: Authentic sector history file not found at {csv_path}")
-        return {} if sector_name is None else None
-        
     try:
-        # Read the CSV file
-        df = pd.read_csv(csv_path)
+        # Use data_reader to access data from Parquet if available, with fallback to CSV
+        df = data_reader.read_data_file("authentic_sector_history.csv")
         
-        # Convert date to datetime
-        df['date'] = pd.to_datetime(df['date'])
+        if df is None or df.empty:
+            logging.warning("Authentic sector history data not found or empty")
+            return {} if sector_name is None else None
+        
+        # Convert date to datetime if needed
+        if not pd.api.types.is_datetime64_any_dtype(df['date']):
+            df['date'] = pd.to_datetime(df['date'])
         
         if sector_name is None:
             # Dictionary to store results for all sectors
@@ -53,7 +54,7 @@ def get_authentic_sector_history(sector_name=None):
         else:
             # Return DataFrame for just the requested sector
             if sector_name not in df.columns:
-                print(f"Warning: Sector '{sector_name}' not found in authentic history")
+                logging.warning(f"Sector '{sector_name}' not found in authentic history")
                 return None
                 
             sector_df = df[['date', sector_name]].copy()
@@ -63,7 +64,7 @@ def get_authentic_sector_history(sector_name=None):
             return sector_df
             
     except Exception as e:
-        print(f"Error loading authentic sector history: {e}")
+        logging.error(f"Error loading authentic sector history: {e}")
         return {} if sector_name is None else None
 
 def update_authentic_history(sector_scores=None, force_update=False):

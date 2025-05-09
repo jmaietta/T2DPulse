@@ -71,6 +71,44 @@ def create_mini_trend_chart(sector_name, height=50, show_axes=False, auto_range=
         fig = go.Figure()
         fig.update_layout(height=height, margin=dict(l=0, r=0, t=0, b=0))
         return fig
+        
+    # If we have only a single data point, still render it as a marker
+    if len(df) < 2:
+        # Get the single point
+        date = df['date'].iloc[0]
+        value = df['value'].iloc[0]
+        
+        # Create a simple figure with just the marker
+        fig = go.Figure()
+        fig.add_trace(go.Scatter(
+            x=[date], 
+            y=[value], 
+            mode="markers",
+            marker=dict(color=TREND_COLORS['marker'], size=6),
+            hoverinfo='text',
+            hovertext=f"{date.strftime('%Y-%m-%d')}: {value:.1f}",
+            showlegend=False
+        ))
+        
+        # Set layout
+        fig.update_layout(
+            height=height, 
+            margin=dict(l=0, r=0, t=0, b=0),
+            plot_bgcolor='rgba(0,0,0,0)',
+            paper_bgcolor='rgba(0,0,0,0)',
+            hovermode='closest'
+        )
+        
+        # Hide axes if requested
+        if not show_axes:
+            fig.update_xaxes(visible=False)
+            fig.update_yaxes(visible=False)
+            
+        # Set y-axis range
+        if not auto_range:
+            fig.update_yaxes(range=[0, 100])
+            
+        return fig
     
     # Convert columns to lists for plotting
     dates = df['date'].tolist()
@@ -187,16 +225,28 @@ def create_combined_sector_chart(sector_names, title=None, height=400):
         dates = df['date'].tolist()
         values = df['value'].tolist()
         
-        # Add line
-        fig.add_trace(go.Scatter(
-            x=dates,
-            y=values,
-            name=sector_name,
-            line=dict(color=colors[i % len(colors)], width=2),
-            mode='lines+markers',
-            marker=dict(size=6),
-            hovertemplate="%{x|%Y-%m-%d}: %{y:.1f}<extra>" + sector_name + "</extra>"
-        ))
+        # Add line or marker (handle single point case)
+        if len(df) < 2:
+            # For a single data point, add just a marker
+            fig.add_trace(go.Scatter(
+                x=dates,
+                y=values,
+                name=sector_name,
+                mode='markers',
+                marker=dict(color=colors[i % len(colors)], size=8),
+                hovertemplate="%{x|%Y-%m-%d}: %{y:.1f}<extra>" + sector_name + "</extra>"
+            ))
+        else:
+            # For multiple points, add a line
+            fig.add_trace(go.Scatter(
+                x=dates,
+                y=values,
+                name=sector_name,
+                line=dict(color=colors[i % len(colors)], width=2),
+                mode='lines+markers',
+                marker=dict(size=6),
+                hovertemplate="%{x|%Y-%m-%d}: %{y:.1f}<extra>" + sector_name + "</extra>"
+            ))
     
     # Set layout
     fig.update_layout(
