@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Download T2D Pulse Ticker Data</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            line-height: 1.6;
+        }
+        .download-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .download-button {
+            display: inline-block;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        .file-info {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-left: 3px solid #4CAF50;
+        }
+    </style>
+</head>
+<body>
+    <div class="download-container">
+        <h1>T2D Pulse Ticker Data Downloads</h1>
+        <p>Below are direct download links to the CSV files containing ticker data with 100% coverage for all 93 tickers across all 13 sectors.</p>
+        
+        <div class="file-info">
+            <h3>T2D_Pulse_Full_Ticker_History.csv</h3>
+            <p>Complete report with coverage statistics for all tickers including latest price and market cap data.</p>
+            <a href="T2D_Pulse_Full_Ticker_History.csv" class="download-button" download>Download Full Report</a>
+        </div>
+        
+        <div class="file-info">
+            <h3>recent_price_data.csv</h3>
+            <p>30 days of historical price data for all tickers (March 31, 2025 to May 9, 2025).</p>
+            <a href="recent_price_data.csv" class="download-button" download>Download Price Data</a>
+        </div>
+        
+        <div class="file-info">
+            <h3>recent_marketcap_data.csv</h3>
+            <p>30 days of historical market cap data (in billions) for all tickers (March 31, 2025 to May 9, 2025).</p>
+            <a href="recent_marketcap_data.csv" class="download-button" download>Download Market Cap Data</a>
+        </div>
+        
+        <div class="file-info">
+            <h3>All Files (Packaged)</h3>
+            <p>All CSV files packaged together in a single archive.</p>
+            <a href="ticker_data.tar.gz" class="download-button" download>Download All Files (tar.gz)</a>
+        </div>
+    </div>
+</body>
+</html>
