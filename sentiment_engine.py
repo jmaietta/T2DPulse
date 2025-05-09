@@ -213,13 +213,35 @@ def raw_signal(name: str, value) -> float:
     else:  # "higher" - higher values are better
         return 1 if fvalue >= fav_hi else -1 if fvalue <= unfav_lo else 0
 
-def score_sectors(macros: MacroDict) -> List[SectorScore]:
-    """Compute average score for each sector."""
+def score_sectors(macros: MacroDict, previous_scores=None, sector_data=None) -> List[SectorScore]:
+    """
+    Compute average score for each sector.
+    
+    Args:
+        macros: Dictionary of macro indicators and their values
+        previous_scores: Optional dictionary of previous scores by sector name
+        sector_data: Optional dictionary with additional sector data like ticker counts
+    """
     sector_sum = {s: 0.0 for s in SECTORS}
     sector_weight = {s: 0.0 for s in SECTORS}
     
     # For debugging, track contribution of each indicator to AdTech
     adtech_contributions = {}
+
+    # Process special case for sectors with no market data
+    if sector_data:
+        # Check for sectors with no tickers reporting data
+        for sec in SECTORS:
+            # If this sector is in sector_data and has tickers_with_data=0
+            if sec in sector_data and sector_data[sec].get('tickers_with_data', -1) == 0:
+                if previous_scores and sec in previous_scores:
+                    print(f"WARNING: Using previous score for {sec} due to API data issues")
+                    # Skip normal scoring for this sector and use previous known score
+                    return [
+                        {"sector": s, "score": previous_scores[s] if s == sec and s in previous_scores else 
+                                   round(sector_sum[s] / max(sector_weight[s], 1.0), 2)}
+                        for s in SECTORS
+                    ]
 
     for ind, val in macros.items():
         raw = raw_signal(ind, val)
@@ -264,8 +286,9 @@ def score_sectors(macros: MacroDict) -> List[SectorScore]:
                   f"contribution={data['contribution']:+.2f}")
         print(f"  Total AdTech score: {sector_sum['AdTech'] / sector_weight['AdTech']:.2f}")
     
+    # Make sure we don't divide by zero 
     return [
-        {"sector": sec, "score": round(sector_sum[sec] / sector_weight[sec], 2)}
+        {"sector": sec, "score": round(sector_sum[sec] / max(sector_weight[sec], 1.0), 2)}
         for sec in SECTORS
     ]
 

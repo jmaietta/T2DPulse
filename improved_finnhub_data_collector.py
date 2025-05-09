@@ -21,8 +21,9 @@ import config
 import yfinance as yf
 import random
 
-# Ensure we have the Finnhub API key
+# Ensure we have the API keys
 FINNHUB_API_KEY = config.FINNHUB_API_KEY
+ALPHAVANTAGE_API_KEY = os.environ.get("ALPHAVANTAGE_API_KEY", "")
 SECTORS = config.SECTORS
 
 # Cache to avoid duplicate API calls for the same ticker within a session
@@ -140,6 +141,36 @@ def fetch_market_cap_yfinance(ticker):
         print(f"Error fetching market cap for {ticker} from Yahoo Finance: {e}")
         return None
 
+def fetch_market_cap_alphavantage(ticker):
+    """Fetch market cap for a given ticker from Alpha Vantage as a second fallback"""
+    if not ALPHAVANTAGE_API_KEY:
+        print("Alpha Vantage API key not available")
+        return None
+        
+    try:
+        url = f"https://www.alphavantage.co/query?function=OVERVIEW&symbol={ticker}&apikey={ALPHAVANTAGE_API_KEY}"
+        response = requests.get(url)
+        
+        if response.status_code == 200:
+            data = response.json()
+            if data and 'MarketCapitalization' in data:
+                market_cap = float(data['MarketCapitalization'])
+                print(f"Retrieved market cap for {ticker} from Alpha Vantage: {market_cap}")
+                return market_cap
+            else:
+                print(f"No market cap data available for {ticker} from Alpha Vantage")
+                return None
+        elif response.status_code == 429:
+            print(f"Rate limited while fetching market cap for {ticker} from Alpha Vantage")
+            time.sleep(random.uniform(2.0, 3.0))  # Longer backoff for Alpha Vantage
+            return None
+        else:
+            print(f"Failed to fetch market cap for {ticker} from Alpha Vantage: {response.status_code}")
+            return None
+    except Exception as e:
+        print(f"Error fetching market cap for {ticker} from Alpha Vantage: {e}")
+        return None
+
 def fetch_market_cap(ticker, historical_marketcap_data, today):
     """
     Fetch market cap for a ticker with multiple sources and fallbacks
@@ -159,7 +190,11 @@ def fetch_market_cap(ticker, historical_marketcap_data, today):
     if market_cap is None:
         market_cap = fetch_market_cap_yfinance(ticker)
     
-    # If both failed, use most recent historical data if available
+    # If Yahoo Finance failed, try Alpha Vantage as third option
+    if market_cap is None:
+        market_cap = fetch_market_cap_alphavantage(ticker)
+    
+    # If all API sources failed, use most recent historical data if available
     if market_cap is None and not historical_marketcap_data.empty:
         if ticker in historical_marketcap_data.columns:
             # Get the most recent non-NaN value
@@ -230,6 +265,36 @@ def fetch_price_yfinance(ticker):
         print(f"Error fetching price for {ticker} from Yahoo Finance: {e}")
         return None
 
+def fetch_price_alphavantage(ticker):
+    """Fetch current stock price from Alpha Vantage as a second fallback"""
+    if not ALPHAVANTAGE_API_KEY:
+        print("Alpha Vantage API key not available")
+        return None
+        
+    try:
+        url = f"https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol={ticker}&apikey={ALPHAVANTAGE_API_KEY}"
+        response = requests.get(url)
+        
+        if response.status_code == 200:
+            data = response.json()
+            if data and 'Global Quote' in data and '05. price' in data['Global Quote']:
+                current_price = float(data['Global Quote']['05. price'])
+                print(f"Retrieved price for {ticker} from Alpha Vantage: {current_price}")
+                return current_price
+            else:
+                print(f"No price data available for {ticker} from Alpha Vantage")
+                return None
+        elif response.status_code == 429:
+            print(f"Rate limited while fetching price for {ticker} from Alpha Vantage")
+            time.sleep(random.uniform(2.0, 3.0))  # Longer backoff for Alpha Vantage
+            return None
+        else:
+            print(f"Failed to fetch price for {ticker} from Alpha Vantage: {response.status_code}")
+            return None
+    except Exception as e:
+        print(f"Error fetching price for {ticker} from Alpha Vantage: {e}")
+        return None
+
 def fetch_price(ticker, historical_price_data, today):
     """
     Fetch price for a ticker with multiple sources and fallbacks
@@ -249,7 +314,11 @@ def fetch_price(ticker, historical_price_data, today):
     if price is None:
         price = fetch_price_yfinance(ticker)
     
-    # If both failed, use most recent historical data if available
+    # If Yahoo Finance failed, try Alpha Vantage as third option
+    if price is None:
+        price = fetch_price_alphavantage(ticker)
+    
+    # If all API sources failed, use most recent historical data if available
     if price is None and not historical_price_data.empty:
         if ticker in historical_price_data.columns:
             # Get the most recent non-NaN value
@@ -354,8 +423,31 @@ def process_sector_data(historical_price_data, historical_marketcap_data):
         dict: Sector data with market caps and momentum values
     """
     today = get_eastern_date()
+    yesterday = (datetime.strptime(today, '%Y-%m-%d') - timedelta(days=1)).strftime('%Y-%m-%d')
     sectors_data = {}
     sector_values = []
+    
+    # Load previous authentic sector history if available for better fallbacks
+    authentic_history_file = os.path.join('data', 'authentic_sector_history.csv')
+    previous_sector_scores = {}
+    
+    if os.path.exists(authentic_history_file):
+        try:
+            # Load the authentic sector history to get previous day's scores
+            authentic_df = pd.read_csv(authentic_history_file)
+            # Find the most recent date
+            if not authentic_df.empty and 'Date' in authentic_df.columns:
+                authentic_df['Date'] = pd.to_datetime(authentic_df['Date'])
+                authentic_df = authentic_df.sort_values('Date', ascending=False)
+                
+                if not authentic_df.empty:
+                    latest_row = authentic_df.iloc[0]
+                    for sector in SECTORS.keys():
+                        if sector in latest_row:
+                            previous_sector_scores[sector] = latest_row[sector]
+                    print(f"Loaded previous sector scores from {authentic_history_file}")
+        except Exception as e:
+            print(f"Error loading authentic sector history: {e}")
     
     print(f"Processing sector data for {today}...")
     
@@ -364,6 +456,7 @@ def process_sector_data(historical_price_data, historical_marketcap_data):
         total_market_cap = 0
         weighted_momentum = 0
         valid_momentum_count = 0
+        tickers_with_data = 0  # Count how many tickers have valid data
         
         for ticker in tickers:
             # Get market cap for today
@@ -383,6 +476,9 @@ def process_sector_data(historical_price_data, historical_marketcap_data):
             if market_cap is None or pd.isna(market_cap):
                 print(f"WARNING: No market cap data for {ticker} in {sector}, skipping from sector total")
                 continue
+            
+            # We have valid data for this ticker
+            tickers_with_data += 1
             
             # Add to sector total
             total_market_cap += market_cap
@@ -404,14 +500,34 @@ def process_sector_data(historical_price_data, historical_marketcap_data):
                         momentum = ((current_price - ema) / ema) * 100
                         weighted_momentum += momentum * market_cap  # Weight by market cap
                         valid_momentum_count += 1
+        
+        # If we didn't get data for ANY tickers in this sector, we have an API problem
+        if tickers_with_data == 0:
+            print(f"ERROR: No tickers in {sector} returned valid market cap data!")
+            print(f"This is likely due to API rate limits or connectivity issues.")
             
-        # Calculate market-cap weighted momentum
-        if total_market_cap > 0 and valid_momentum_count > 0:
-            avg_momentum = weighted_momentum / total_market_cap
+            # Check if we have historical authentic score for this sector
+            if sector in previous_sector_scores:
+                print(f"Using previous authentic score for {sector}: {previous_sector_scores[sector]}")
+                # Use last known market cap (minimum 1M) and neutral momentum
+                total_market_cap = max(1000000, total_market_cap)  # At least $1M
+                avg_momentum = 0  # Neutral momentum
+                
+                # In this case we're going to use the previous day's sentiment score later
+                # in sentiment_engine.py by preserving the previous value
+            else:
+                # No historical data either, use minimum fallback
+                print(f"No previous data available for {sector}, using minimum fallback values")
+                total_market_cap = 1000000  # $1M minimum
+                avg_momentum = 0  # Neutral momentum
         else:
-            # If we have market cap but no valid momentum, use 0
-            # This is better than using None/NaN which would cause problems
-            avg_momentum = 0
+            # Calculate market-cap weighted momentum
+            if total_market_cap > 0 and valid_momentum_count > 0:
+                avg_momentum = weighted_momentum / total_market_cap
+            else:
+                # If we have market cap but no valid momentum, use 0
+                # This is better than using None/NaN which would cause problems
+                avg_momentum = 0
         
         # Never allow total_market_cap to be 0 or None
         if total_market_cap <= 0:
@@ -424,10 +540,13 @@ def process_sector_data(historical_price_data, historical_marketcap_data):
         # Store sector data
         sectors_data[sector] = {
             'market_cap': total_market_cap,
-            'momentum': avg_momentum
+            'momentum': avg_momentum,
+            'tickers_with_data': tickers_with_data,
+            'total_tickers': len(tickers),
+            'previous_score': previous_sector_scores.get(sector, None)
         }
         
-        print(f"{sector}: {total_market_cap:.2f} USD | Momentum: {avg_momentum:.2f}%")
+        print(f"{sector}: {total_market_cap:.2f} USD | Momentum: {avg_momentum:.2f}% | Data: {tickers_with_data}/{len(tickers)} tickers")
         
         # Add to sector_values list for CSV export
         sector_values.append({
