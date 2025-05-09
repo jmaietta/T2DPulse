@@ -60,9 +60,48 @@ def run_continuous_collection(max_tickers_per_sector=3, sleep_between_sectors=30
                     time.sleep(300)  # Sleep for 5 minutes before retrying
                     continue
                 
-                # Calculate overall coverage
-                total_tickers = sum(data["total_tickers"] for _, data in coverage.items())
-                total_covered = sum(data["price_coverage"] for _, data in coverage.items())
+                # Calculate overall coverage based on unique official tickers
+                # Get the official list from file
+                official_tickers = []
+                try:
+                    with open(OFFICIAL_TICKERS_FILE, 'r') as f:
+                        for line in f:
+                            ticker = line.strip()
+                            if ticker:
+                                official_tickers.append(ticker)
+                except Exception as e:
+                    logging.error(f"Error reading official tickers file: {e}")
+                    official_tickers = []
+                
+                if not official_tickers:
+                    # Fallback to sum of sectors if official file not available
+                    total_tickers = sum(data["total_tickers"] for _, data in coverage.items())
+                    total_covered = sum(data["price_coverage"] for _, data in coverage.items())
+                    logging.warning("Using sector sum for coverage (not unique tickers)")
+                else:
+                    # Use official list for proper unique ticker counting
+                    total_tickers = len(official_tickers)
+                    
+                    # Load data files to check actual coverage
+                    try:
+                        price_df = pd.read_csv('data/historical_ticker_prices.csv', index_col=0)
+                        mcap_df = pd.read_csv('data/historical_ticker_marketcap.csv', index_col=0)
+                        latest_date = price_df.index[-1]
+                        
+                        # Count tickers with complete data
+                        total_covered = 0
+                        for ticker in official_tickers:
+                            price_complete = ticker in price_df.columns and pd.notna(price_df.loc[latest_date, ticker])
+                            mcap_complete = ticker in mcap_df.columns and pd.notna(mcap_df.loc[latest_date, ticker])
+                            if price_complete and mcap_complete:
+                                total_covered += 1
+                    except Exception as e:
+                        logging.error(f"Error calculating official coverage: {e}")
+                        # Fallback to sector sum
+                        total_tickers = sum(data["total_tickers"] for _, data in coverage.items())
+                        total_covered = sum(data["price_coverage"] for _, data in coverage.items())
+                        logging.warning("Using sector sum for coverage due to error")
+                
                 coverage_pct = total_covered / total_tickers * 100
                 
                 logging.info(f"Current coverage: {total_covered}/{total_tickers} ({coverage_pct:.1f}%)")
