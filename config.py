@@ -7,7 +7,7 @@ FINNHUB_API_KEY = os.environ.get("FINNHUB_API_KEY", "")
 SECTORS = {
     "AdTech": ["APP", "APPS", "CRTO", "DV", "GOOGL", "IAD", "META", "MGNI", "PUBM", "TTD"],
     "Cloud Infrastructure": ["AMZN", "CRM", "CSCO", "GOOGL", "MSFT", "NET", "ORCL", "SNOW"],
-    "Fintech": ["ADYEY", "AFRM", "BILL", "COIN", "FIS", "FISV", "GPN", "PYPL", "SQ", "SSNC"],
+    "Fintech": ["ADYEY", "AFRM", "BILL", "COIN", "FIS", "FISV", "GPN", "PYPL", "XYZ", "SSNC"],
     "eCommerce": ["AMZN", "BABA", "BKNG", "CHWY", "EBAY", "ETSY", "PDD", "SE", "SHOP", "WMT"],
     "Consumer Internet": ["ABNB", "BKNG", "GOOGL", "META", "NFLX", "PINS", "SNAP", "SPOT", "TRIP", "YELP"],
     "IT Services / Legacy Tech": ["ACN", "CTSH", "DXC", "HPQ", "IBM", "INFY", "PLTR", "WIT"],

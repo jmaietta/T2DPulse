@@ -8,6 +8,7 @@ import pandas as pd
 import numpy as np
 from datetime import datetime, timedelta
 import sys
+import time
 
 def get_official_tickers():
     """Get the complete list of official tickers"""
@@ -69,7 +70,8 @@ def create_formatted_export(output_file='ticker_data_export.csv'):
     
     # Get latest date
     latest_date = price_df.index[-1]
-    print(f"Exporting data for date: {latest_date}")
+    timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    print(f"Exporting data for date: {latest_date} (Generated: {timestamp})")
     
     # Create a new dataframe for the export
     export_data = []
@@ -95,6 +97,16 @@ def create_formatted_export(output_file='ticker_data_export.csv'):
         # Get sector
         sector = sector_mapping.get(ticker, "Unknown")
         
+        # Determine data status
+        if pd.notna(price) and pd.notna(mcap):
+            status = 'Complete'
+        elif pd.notna(price) and pd.isna(mcap):
+            status = 'Missing Market Cap'
+        elif pd.isna(price) and pd.notna(mcap):
+            status = 'Missing Price'
+        else:
+            status = 'Missing All Data'
+        
         # Add row to export data
         export_data.append({
             'Date': latest_date,
@@ -102,7 +114,7 @@ def create_formatted_export(output_file='ticker_data_export.csv'):
             'Sector': sector,
             'Price': price,
             'Market Cap': mcap,
-            'Data Status': 'Complete' if (pd.notna(price) and pd.notna(mcap)) else 'Missing'
+            'Data Status': status
         })
     
     # Create DataFrame from export data
@@ -139,8 +151,21 @@ def create_formatted_export(output_file='ticker_data_export.csv'):
     # Format market cap as millions
     export_df['Market Cap (M)'] = export_df['Market Cap'].apply(lambda x: x / 1000000 if pd.notna(x) else np.nan)
     
-    # Save to CSV
-    export_df.to_csv(output_file, index=False)
+    # Add summary information at the start of the CSV
+    # Create a metadata dataframe with summary information
+    metadata = pd.DataFrame([
+        {'Summary': f"T2D Pulse Ticker Coverage Report"},
+        {'Summary': f"Generated: {timestamp}"},
+        {'Summary': f"Data Date: {latest_date}"},
+        {'Summary': f"Overall Coverage: {complete_tickers}/{total_tickers} tickers ({coverage_pct:.1f}%)"},
+        {'Summary': f"Sectors at 100%: {complete_sectors}/{total_sectors} sectors ({complete_sectors/total_sectors*100:.1f}%)"},
+        {'Summary': ""}
+    ])
+    
+    # Save metadata and main data to CSV
+    metadata.to_csv(output_file, index=False)
+    export_df.to_csv(output_file, index=False, mode='a')
+    
     print(f"Exported ticker data to {output_file}")
     
     # Print sector coverage
@@ -156,11 +181,23 @@ def create_formatted_export(output_file='ticker_data_export.csv'):
         cov_pct = row['Complete'] / row['Total'] * 100
         coverage.append((sector, row['Complete'], row['Total'], cov_pct))
     
-    # Sort by coverage percentage
+    # Sort by coverage percentage (ascending)
     coverage.sort(key=lambda x: x[3])
     
+    # Create a list of missing tickers by sector for documentation
+    missing_by_sector = {}
+    for _, row in export_df.iterrows():
+        if row['Data Status'] != 'Complete':
+            sector = row['Sector']
+            if sector not in missing_by_sector:
+                missing_by_sector[sector] = []
+            missing_by_sector[sector].append(row['Ticker'])
+    
+    # Print sector coverage
     for sector, complete, total, cov_pct in coverage:
         print(f"{sector}: {complete}/{total} ({cov_pct:.1f}%)")
+        if sector in missing_by_sector and len(missing_by_sector[sector]) > 0:
+            print(f"  Missing: {', '.join(missing_by_sector[sector])}")
     
     return True
 
