@@ -16,7 +16,7 @@ from config import SECTORS, FINNHUB_API_KEY
 from improved_finnhub_data_collector import collect_daily_sector_data
 from update_sector_history import main as update_sector_history_main
 # Import the ensure_complete_data module to ensure 100% ticker coverage
-from ensure_complete_data import check_data_coverage, run_collection_if_needed
+from ensure_complete_data import ensure_complete_data
 # Import the notification system for missing ticker data alerts
 from notification_utils import check_data_and_send_alerts
 
@@ -89,7 +89,11 @@ def main():
     
     # First ensure we have 100% ticker coverage
     print("Checking and ensuring 100% ticker data coverage...")
-    ticker_coverage_success = run_collection_if_needed()
+    today_date_str = today_date  # Already formatted as YYYY-MM-DD
+    
+    # Try to ensure complete data for today's date
+    ticker_coverage_success = ensure_complete_data(date=today_date_str, max_per_sector=3)
+    
     if ticker_coverage_success:
         print("Successfully ensured 100% ticker data coverage!")
     else:
