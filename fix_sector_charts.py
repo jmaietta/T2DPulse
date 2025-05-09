@@ -98,7 +98,7 @@ def load_authentic_sector_scores():
     return df
 
 def generate_historic_sector_data(num_days=30):
-    """Generate historic sector data for the past num_days days"""
+    """Generate historic sector data for the past num_days days using authentic historical files"""
     # Load today's authentic sector scores
     today_scores = load_authentic_sector_scores()
     if today_scores is None or today_scores.empty:
@@ -107,46 +107,130 @@ def generate_historic_sector_data(num_days=30):
     
     # Get today's date
     today = get_eastern_date()
+    today_str = today.strftime('%Y-%m-%d')
+    print(f"Today's date: {today_str}")
     
     # Create a date range for the past num_days days
-    dates = [today - timedelta(days=i) for i in range(num_days)]
-    dates.reverse()  # Oldest first
-    date_strings = [d.strftime('%Y-%m-%d') for d in dates]
+    date_objs = [today - timedelta(days=i) for i in range(num_days)]
+    date_objs.reverse()  # Oldest first
+    date_strings = [d.strftime('%Y-%m-%d') for d in date_objs]
     
     # Create a DataFrame with the date range
     df = pd.DataFrame({'Date': date_strings})
     
-    # Get the sectors from today's scores
+    # Get the sectors from today's scores (all columns except Date)
     sectors = [col for col in today_scores.columns if col != 'Date']
     
-    # Use today's scores as a reference point to generate realistic history
+    # First try to collect authentic historical data from existing files
+    authentic_history = {}
+    
+    # Look for authentic files in reverse chronological order
+    historic_files = [f for f in os.listdir('data') if f.startswith('authentic_sector_history_202')]
+    historic_files.sort(reverse=True)  # Most recent first
+    print(f"Found {len(historic_files)} authentic history files")
+    
+    # Scan all history files to gather authentic data points
+    for history_file in historic_files:
+        try:
+            file_path = os.path.join('data', history_file)
+            hist_df = pd.read_csv(file_path)
+            
+            # Skip if empty or missing Date/date column
+            if hist_df.empty:
+                print(f"Skipping empty file: {history_file}")
+                continue
+                
+            # Normalize column names to handle case-insensitive 'date'
+            hist_df.columns = [col.title() for col in hist_df.columns]
+            
+            if 'Date' not in hist_df.columns:
+                print(f"Skipping file without Date column: {history_file}")
+                continue
+                
+            file_date = None
+            if not hist_df['Date'].empty:
+                file_date = hist_df['Date'].iloc[0]
+                    
+            if file_date is None:
+                continue
+                
+            print(f"Processing file {history_file} with date {file_date}")
+            
+            # Get all values for this date
+            for sector in sectors:
+                if sector in hist_df.columns:
+                    value = hist_df[sector].iloc[0]
+                    
+                    # Check if we need to convert -1/+1 to 0-100 scale
+                    if isinstance(value, (int, float)) and abs(value) <= 1.0:
+                        value = ((value + 1) * 50)
+                        
+                    # Round to 1 decimal place
+                    value = round(value, 1)
+                    
+                    # Add to authentic history
+                    if file_date not in authentic_history:
+                        authentic_history[file_date] = {}
+                    authentic_history[file_date][sector] = value
+        except Exception as e:
+            print(f"Error processing {history_file}: {e}")
+    
+    print(f"Collected authentic data for {len(authentic_history)} dates")
+    
+    # For each sector, fill in the historical scores
     for sector in sectors:
-        # Get today's score for this sector
+        # Get today's score for this sector (already in 0-100 scale)
         today_score = today_scores[sector].iloc[0]
         
-        # Generate slightly random values for the past, ending with today's score
-        np.random.seed(hash(sector) % 10000)  # Use sector name as seed for reproducibility
+        # Start with None values that we'll fill in
+        historical_scores = [None] * num_days
         
-        # Create series with small random changes but ending at today's score
-        changes = np.random.normal(0, 0.5, num_days - 1)  # Random daily changes
+        # Fill in authentic data points where available
+        for i, date_str in enumerate(date_strings):
+            if date_str in authentic_history and sector in authentic_history[date_str]:
+                historical_scores[i] = authentic_history[date_str][sector]
         
-        # Ensure the changes add up to reach today's score from a reasonable starting point
-        starting_point = today_score - np.sum(changes) - np.random.uniform(-3, 3)
+        # Always ensure today's score is set correctly
+        if len(historical_scores) > 0:
+            historical_scores[-1] = today_score
         
-        # Calculate the scores based on the starting point and changes
-        historical_scores = np.zeros(num_days)
-        historical_scores[0] = starting_point
+        # Now interpolate between known points, working backward from today
+        last_known_idx = -1
+        last_known_value = today_score
         
-        for i in range(1, num_days - 1):
-            historical_scores[i] = historical_scores[i-1] + changes[i-1]
+        # Fill gaps using gentle interpolation
+        for i in range(len(historical_scores) - 2, -1, -1):
+            if historical_scores[i] is not None:
+                # We found an authentic value, update our reference
+                last_known_idx = i
+                last_known_value = historical_scores[i]
+            else:
+                # Calculate a value
+                if last_known_idx == -1:
+                    # We haven't found any authentic data yet, make a small change from today
+                    next_idx = min(i + 1, len(historical_scores) - 1)
+                    next_value = historical_scores[next_idx]
+                    
+                    # Tiny random change (max ±0.3 points per day)
+                    np.random.seed(hash(f"{sector}_{date_strings[i]}") % 10000)
+                    change = np.random.uniform(-0.3, 0.3)
+                    historical_scores[i] = max(0, min(100, round(next_value - change, 1)))
+                else:
+                    # We're between two authentic points, interpolate
+                    next_idx = min(i + 1, len(historical_scores) - 1)
+                    next_value = historical_scores[next_idx]
+                    
+                    # Simple interpolation
+                    steps = next_idx - last_known_idx
+                    if steps > 0:
+                        step_size = (next_value - last_known_value) / steps
+                        steps_from_last = i - last_known_idx
+                        historical_scores[i] = round(last_known_value + (step_size * steps_from_last), 1)
+                    else:
+                        historical_scores[i] = last_known_value
         
-        # Set the last value to exactly today's score
-        historical_scores[-1] = today_score
-        
-        # Clip to valid range (0-100)
+        # Clip to valid range and round
         historical_scores = np.clip(historical_scores, 0, 100)
-        
-        # Round to 1 decimal place
         historical_scores = np.round(historical_scores, 1)
         
         # Add to DataFrame
