@@ -2,7 +2,7 @@ modules = ["python-3.11", "python3"]
 
 [nix]
 channel = "stable-24_05"
-packages = ["glibcLocales"]
+packages = ["arrow-cpp", "glibcLocales", "pkg-config"]
 
 [workflows]
 runButton = "Project"
