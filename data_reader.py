@@ -434,7 +434,7 @@ def read_sector_data():
     if parquet_path.exists():
         try:
             df = pd.read_parquet(parquet_path)
-            logging.debug(f"Read {len(df)} sector scores from {parquet_path}")
+            logging.info(f"Read {len(df)} sector scores from {parquet_path}")
             return df
         except Exception as e:
             logging.warning(f"Error reading sector data from Parquet: {e}")
@@ -445,12 +445,40 @@ def read_sector_data():
     if csv_path.exists():
         try:
             df = pd.read_csv(csv_path)
-            logging.debug(f"Read {len(df)} sector scores from {csv_path}")
+            logging.info(f"Read {len(df)} sector scores from {csv_path}")
             return df
         except Exception as e:
-            logging.error(f"Error reading sector data from CSV: {e}")
+            logging.warning(f"Error reading sector data from CSV: {e}")
     
-    logging.warning("No sector data found")
+    # Try authentic sector history Parquet as another fallback
+    history_parquet_path = DERIVED_DIR / "authentic_sector_history.parquet"
+    
+    if history_parquet_path.exists():
+        try:
+            history_df = pd.read_parquet(history_parquet_path)
+            # Get the latest date's data
+            latest_date = history_df['date'].max()
+            latest_df = history_df[history_df['date'] == latest_date]
+            logging.info(f"Read fallback sector data from {history_parquet_path} for date {latest_date}")
+            return latest_df
+        except Exception as e:
+            logging.warning(f"Error reading authentic sector history from Parquet: {e}")
+    
+    # Last fallback to authentic sector history CSV
+    history_csv_path = DATA_DIR / "authentic_sector_history.csv"
+    
+    if history_csv_path.exists():
+        try:
+            history_df = pd.read_csv(history_csv_path)
+            # Get the latest date's data
+            latest_date = history_df['date'].max()
+            latest_df = history_df[history_df['date'] == latest_date]
+            logging.info(f"Read fallback sector data from {history_csv_path} for date {latest_date}")
+            return latest_df
+        except Exception as e:
+            logging.warning(f"Error reading authentic sector history from CSV: {e}")
+    
+    logging.error("No sector data found in any source")
     return None
 
 def read_pulse_score():
@@ -464,15 +492,32 @@ def read_pulse_score():
             pulse_path = DATA_DIR / "current_pulse_score.txt"
         
         if pulse_path.exists():
-            with open(pulse_path, 'r') as f:
-                score_str = f.read().strip()
-                score = float(score_str)
-                return score
-        else:
-            logging.warning("Pulse score file not found")
-            return None
+            try:
+                with open(pulse_path, 'r') as f:
+                    score_str = f.read().strip()
+                    score = float(score_str)
+                    logging.info(f"Successfully read pulse score: {score} from {pulse_path}")
+                    return score
+            except (ValueError, IOError) as e:
+                logging.warning(f"Error parsing pulse score from {pulse_path}: {e}")
+                # Fall through to try another method
+        
+        # If direct file reading failed, try calculating from sector data
+        logging.info("Attempting to calculate pulse score from sector data")
+        sector_data = read_sector_data()
+        if sector_data is not None and 'score' in sector_data.columns:
+            try:
+                # Calculate the average of all sector scores
+                avg_score = sector_data['score'].mean()
+                logging.info(f"Calculated pulse score from sector data: {avg_score}")
+                return avg_score
+            except Exception as e:
+                logging.warning(f"Error calculating pulse score from sector data: {e}")
+        
+        logging.error("All attempts to read pulse score failed")
+        return None
     except Exception as e:
-        logging.error(f"Error reading pulse score: {e}")
+        logging.error(f"Unexpected error reading pulse score: {e}")
         return None
 
 # Example usage
