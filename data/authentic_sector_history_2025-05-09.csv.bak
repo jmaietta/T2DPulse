@@ -1,15 +1,2 @@
-date,sector,score
-2025-05-09,AdTech,53.5
-2025-05-09,Cloud Infrastructure,53.0
-2025-05-09,Fintech,52.0
-2025-05-09,eCommerce,53.5
-2025-05-09,Consumer Internet,51.5
-2025-05-09,IT Services,50.0
-2025-05-09,Hardware/Devices,50.0
-2025-05-09,Cybersecurity,49.0
-2025-05-09,Dev Tools,50.0
-2025-05-09,AI Infrastructure,53.0
-2025-05-09,Semiconductors,57.5
-2025-05-09,Vertical SaaS,48.0
-2025-05-09,Enterprise SaaS,52.0
-2025-05-09,SMB SaaS,52.0
+date,SMB SaaS,Enterprise SaaS,Cloud Infrastructure,AdTech,Fintech,Consumer Internet,eCommerce,Cybersecurity,Dev Tools / Analytics,Semiconductors,AI Infrastructure,Vertical SaaS,IT Services / Legacy Tech,Hardware / Devices
+2025-05-09,52.0,52.0,53.0,53.5,52.0,51.5,53.5,49.0,49.5,57.49999999999999,53.0,48.0,57.49999999999999,57.49999999999999
