@@ -11,12 +11,13 @@ from datetime import datetime
 import logging
 import data_reader
 
-def get_authentic_sector_history(sector_name=None):
+def get_authentic_sector_history(sector_name=None, filter_weekends=True):
     """
     Get authentic historical sector sentiment scores
     
     Args:
         sector_name (str, optional): Name of the sector to get history for
+        filter_weekends (bool, optional): Whether to filter out weekends from the data
         
     Returns:
         dict or DataFrame: If sector_name is None, returns a dictionary with
@@ -34,6 +35,11 @@ def get_authentic_sector_history(sector_name=None):
         # Convert date to datetime if needed
         if not pd.api.types.is_datetime64_any_dtype(df['date']):
             df['date'] = pd.to_datetime(df['date'])
+        
+        # Filter out weekends if requested (Saturday = 5, Sunday = 6)
+        if filter_weekends:
+            df = df[df['date'].dt.dayofweek < 5]
+            logging.info(f"Filtered weekends from sector history, {len(df)} rows remaining")
         
         if sector_name is None:
             # Dictionary to store results for all sectors
