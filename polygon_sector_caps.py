@@ -41,7 +41,7 @@ logging.basicConfig(
 SECTOR_TICKERS = {
     "AdTech": ["APP", "APPS", "CRTO", "DV", "GOOGL", "META", "MGNI", "PUBM", "TTD"],
     "Cloud Infrastructure": ["AMZN", "CRM", "CSCO", "GOOGL", "MSFT", "NET", "ORCL", "SNOW"],
-    "Fintech": ["ADYEY", "AFRM", "BILL", "COIN", "FIS", "FISV", "GPN", "PYPL", "SQ", "SSNC"],
+    "Fintech": ["ADYEY", "AFRM", "BILL", "COIN", "FIS", "FI", "GPN", "PYPL", "SQ", "SSNC"],
     "eCommerce": ["AMZN", "BABA", "BKNG", "CHWY", "EBAY", "ETSY", "PDD", "SE", "SHOP", "WMT"],
     "Consumer Internet": ["ABNB", "BKNG", "GOOGL", "META", "NFLX", "PINS", "SNAP", "SPOT", "TRIP", "YELP"],
     "IT Services": ["ACN", "CTSH", "DXC", "HPQ", "IBM", "INFY", "PLTR", "WIT"],

@@ -814,20 +814,20 @@ def generate_sector_drivers(macros):
 def generate_sector_tickers():
     """Generate representative ticker symbols for each sector"""
     return {
-        "SMB SaaS": ["BILL", "PAYC", "DDOG"],
-        "Enterprise SaaS": ["CRM", "NOW", "ADBE"],
-        "Cloud Infrastructure": ["AMZN", "MSFT", "GOOG"],
-        "AdTech": ["TTD", "PUBM", "GOOGL"],
-        "Fintech": ["SQ", "PYPL", "ADYEY"],
-        "Consumer Internet": ["META", "GOOGL", "PINS"],
+        "SMB SaaS": ["ADBE", "BILL", "HUBS"],
+        "Enterprise SaaS": ["CRM", "MSFT", "SAP"],
+        "Cloud Infrastructure": ["AMZN", "MSFT", "NET"],
+        "AdTech": ["TTD", "PUBM", "META"],
+        "Fintech": ["FI", "PYPL", "SQ"],
+        "Consumer Internet": ["META", "NFLX", "SNAP"],
         "eCommerce": ["AMZN", "SHOP", "SE"],
-        "Cybersecurity": ["PANW", "FTNT", "CRWD"],
-        "Dev Tools / Analytics": ["SNOW", "DDOG", "ESTC"],
-        "Semiconductors": ["NVDA", "AMD", "AVGO"],
-        "AI Infrastructure": ["NVDA", "AMD", "SMCI"],
-        "Vertical SaaS": ["VEEV", "TYL", "WDAY"],
-        "IT Services / Legacy Tech": ["IBM", "ACN", "DXC"],
-        "Hardware / Devices": ["AAPL", "DELL", "HPQ"]
+        "Cybersecurity": ["PANW", "CRWD", "OKTA"],
+        "Dev Tools": ["DDOG", "MDB", "TEAM"],
+        "Semiconductors": ["NVDA", "AMD", "TSM"],
+        "AI Infrastructure": ["NVDA", "GOOGL", "MSFT"],
+        "Vertical SaaS": ["PCOR", "CSGP", "CCCS"],
+        "IT Services": ["IBM", "ACN", "PLTR"],
+        "Hardware/Devices": ["AAPL", "DELL", "HPQ"]
     }
 
 def calculate_sector_sentiment():
