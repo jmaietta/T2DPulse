@@ -1,0 +1,107 @@
+TICKER DATA SUMMARY (Sorted Alphabetically)
+=========================================
+Total tickers with complete data: 93
+Coverage period: 2025-03-31 to 2025-05-09
+=========================================
+TICKER | SECTOR | PRICE | MARKET CAP (B) | STATUS
+----------------------------------------
+AAPL   | Hardware / Devices   | $198.1    | $2965.359010645682 | Complete
+ABNB   | Consumer Internet    | $125.28   | $78.48952043958066 | Complete
+ACN    | IT Services / Legacy Tech | $308.41   | $194.45608001873362 | Complete
+ADBE   | SMB SaaS             | $384.695  | $164.3640305272696 | Complete
+ADSK   | Enterprise SaaS      | $288.89   | $61.72299710562116 | Complete
+ADYEY  | Fintech              | $17.59    | $49.206472902   | Complete
+AFRM   | Fintech              | $47.86    | $16.17818899794969 | Complete
+AMAT   | Semiconductors       | $155.735  | $127.66695625890691 | Complete
+AMD    | Semiconductors       | $102.82   | $164.96977523516992 | Complete
+AMZN   | Enterprise SaaS      | $192.12   | $2039.188827564 | Complete
+APP    | AdTech               | $334.575  | $117.84322189058572 | Complete
+APPS   | AdTech               | $4.145    | $0.4452288997578693 | Complete
+ARM    | Semiconductors       | $116.35   | $123.161636452  | Complete
+AVGO   | Semiconductors       | $207.835  | $982.754324363672 | Complete
+BABA   | eCommerce            | $125.68   | $298.21931330804796 | Complete
+BILL   | SMB SaaS             | $45.56    | $4.898038750910868 | Complete
+BKNG   | Consumer Internet    | $5085.355 | $166.7780116417254 | Complete
+CCCS   | Vertical SaaS        | $9.065    | $5.888702991    | Complete
+CHKP   | Cybersecurity        | $217.57   | $23.901219312999572 | Complete
+CHWY   | eCommerce            | $39.32    | $16.315960609302692 | Complete
+COIN   | Fintech              | $204.46   | $53.696507562646474 | Complete
+Complete Data Tickers: 93 |                      | $         | $               | 
+CPRT   | Vertical SaaS        | $61.5891  | $59.44369844163613 | Complete
+CRM    | Enterprise SaaS      | $275.12   | $269.0795564434888 | Complete
+CRTO   | AdTech               | $28.64    | $1.519772916    | Complete
+CRWD   | Cybersecurity        | $410.18   | $104.05567380567192 | Complete
+CSCO   | Cloud Infrastructure | $59.685   | $238.3593903129929 | Complete
+CSGP   | Vertical SaaS        | $74.685   | $31.79548731912406 | Complete
+CTSH   | IT Services / Legacy Tech | $79.32    | $39.134661399976146 | Complete
+CYBR   | Cybersecurity        | $356.18   | $18.02201290757212 | Complete
+DDOG   | Dev Tools / Analytics | $107.575  | $37.700163596   | Complete
+DELL   | Hardware / Devices   | $96.17    | $67.85106395182903 | Complete
+DV     | AdTech               | $13.43    | $2.264126438847133 | Complete
+DXC    | IT Services / Legacy Tech | $15.9     | $2.8913455801298866 | Complete
+EBAY   | eCommerce            | $69.33    | $32.41804173798554 | Complete
+ESTC   | Dev Tools / Analytics | $85.07    | $9.09644442962142 | Complete
+ETSY   | eCommerce            | $46.83    | $4.988863242831592 | Complete
+FI     | Fintech              | $183.49   | $100.96240154057942 | Complete
+FIS    | Fintech              | $78.205   | $41.21198915147639 | Complete
+FTNT   | Cybersecurity        | $97.26    | $74.11756315839979 | Complete
+GOOGL  | SMB SaaS             | $153.2    | $1880.212521851 | Complete
+GPN    | Fintech              | $80.6     | $19.615269944514772 | Complete
+GTLB   | Dev Tools / Analytics | $48.65    | $8.2936094120618 | Complete
+GWRE   | Vertical SaaS        | $212.95   | $17.933277184635998 | Complete
+HPQ    | Hardware / Devices   | $26.51    | $25.113607925058872 | Complete
+HUBS   | SMB SaaS             | $605.91   | $31.79231475466715 | Complete
+IBM    | Enterprise SaaS      | $248.6032 | $234.4681599126908 | Complete
+ICE    | Vertical SaaS        | $178.95   | $101.85594058401666 | Complete
+INFY   | IT Services / Legacy Tech | $17.475   | $6276.619724121 | Complete
+INTC   | Semiconductors       | $21.065   | $91.66743       | Complete
+INTU   | SMB SaaS             | $653.28   | $182.9425896138888 | Complete
+LOGI   | Hardware / Devices   | $80.455   | $9.80211638     | Complete
+MDB    | Dev Tools / Analytics | $177.81   | $14.768036328544017 | Complete
+META   | SMB SaaS             | $594.61   | $1514.925013020756 | Complete
+MGNI   | AdTech               | $15.075   | $2.264824623384822 | Complete
+MSFT   | Enterprise SaaS      | $436.915  | $3256.71788032  | Complete
+NET    | Cybersecurity        | $133.12   | $46.294313961592664 | Complete
+NFLX   | Consumer Internet    | $1142.01  | $487.7047201551864 | Complete
+NOW    | Enterprise SaaS      | $977.9    | $203.48306796133028 | Complete
+NVDA   | Semiconductors       | $116.58   | $2862.3678191309996 | Complete
+OKTA   | Cybersecurity        | $119.04   | $21.03549528052869 | Complete
+ORCL   | Enterprise SaaS      | $150.3222 | $422.8784787038297 | Complete
+PANW   | Cybersecurity        | $186.475  | $124.61383559818432 | Complete
+PCOR   | Vertical SaaS        | $65.535   | $9.951079910984488 | Complete
+PDD    | eCommerce            | $109.54   | $152.996898298  | Complete
+PINS   | Consumer Internet    | $29.2769  | $20.855046164752086 | Complete
+PLTR   | IT Services / Legacy Tech | $115.7099 | $276.8465000323869 | Complete
+PSTG   | Hardware / Devices   | $48.6225  | $16.255734268981424 | Complete
+PUBM   | AdTech               | $11.03    | $0.5748888885627272 | Complete
+PYPL   | Fintech              | $70.2     | $69.26379194358967 | Complete
+QCOM   | Semiconductors       | $145.66   | $160.97010077142184 | Complete
+SAP    | Enterprise SaaS      | $293.95   | $306.718478868  | Complete
+S      | Cybersecurity        | $19.165   | $6.444666565321093 | Complete
+SE     | eCommerce            | $139.27   | $85.90431703    | Complete
+SHOP   | eCommerce            | $91.365   | $120.8974076767698 | Complete
+SMCI   | Hardware / Devices   | $31.76    | $19.443336300513852 | Complete
+SNAP   | Consumer Internet    | $8.275    | $14.26350573452737 | Complete
+SNOW   | Cloud Infrastructure | $173.04   | $58.410704477266776 | Complete
+SPOT   | Consumer Internet    | $650.325  | $132.38587589560223 | Complete
+SSNC   | Vertical SaaS        | $77.77    | $19.099068170285808 | Complete
+SSYS   | Hardware / Devices   | $11.025   | $0.8086299707978438 | Complete
+STX    | Hardware / Devices   | $96.25    | $20.640271616985046 | Complete
+TEAM   | Dev Tools / Analytics | $206.97   | $54.814530104   | Complete
+TRIP   | Consumer Internet    | $15.135   | $1.9725439076606424 | Complete
+TSM    | Semiconductors       | $177.225  | $23806.25015625 | Complete
+TTAN   | Vertical SaaS        | $120.02   | $10.680173175268855 | Complete
+TTD    | AdTech               | $70.28    | $36.730397237028384 | Complete
+WDAY   | Enterprise SaaS      | $258.54   | $69.14626685480657 | Complete
+WDC    | Hardware / Devices   | $44.05    | $15.622773921093456 | Complete
+WIT    | IT Services / Legacy Tech | $2.815    | $2524.297229004 | Complete
+WMT    | eCommerce            | $96.982   | $773.7658042158916 | Complete
+XYZ    | Fintech              | $50.32    | $31.004669696216517 | Complete
+YELP   | Consumer Internet    | $39.29    | $2.519139252020145 | Complete
+ZS     | Cybersecurity        | $231.8    | $36.074109326   | Complete
+
+
+
+COVERAGE BY SECTOR
+=================
+
