@@ -2,11 +2,13 @@
 # run_daily.py
 # -----------------------------------------------------------
 # Daily script to collect sector market capitalization values and momentum (EMA gap)
+# Enhanced with multi-source approach (Finnhub, Yahoo Finance, AlphaVantage)
 
 import os
 import time
 import datetime
 import pytz
+import pandas as pd
 from config import SECTORS, FINNHUB_API_KEY
 # Using improved data collector with historical persistence and fallback mechanisms
 from improved_finnhub_data_collector import collect_daily_sector_data
@@ -17,27 +19,76 @@ def get_eastern_time():
     eastern = pytz.timezone('US/Eastern')
     return datetime.datetime.now(eastern)
 
+def get_previous_sector_scores():
+    """
+    Get previous sector scores from authentic sector history
+    Returns a dictionary of sector names to scores
+    """
+    authentic_history_file = os.path.join('data', 'authentic_sector_history.csv')
+    previous_sector_scores = {}
+    
+    if os.path.exists(authentic_history_file):
+        try:
+            # Load the authentic sector history to get previous day's scores
+            authentic_df = pd.read_csv(authentic_history_file)
+            # Find the most recent date
+            if not authentic_df.empty and 'Date' in authentic_df.columns:
+                authentic_df['Date'] = pd.to_datetime(authentic_df['Date'])
+                authentic_df = authentic_df.sort_values('Date', ascending=False)
+                
+                if not authentic_df.empty:
+                    latest_row = authentic_df.iloc[0]
+                    for sector in SECTORS:
+                        if sector in latest_row:
+                            previous_sector_scores[sector] = latest_row[sector]
+                    print(f"Loaded previous sector scores from {authentic_history_file}")
+        except Exception as e:
+            print(f"Error loading authentic sector history: {e}")
+    
+    return previous_sector_scores
+
+def check_api_keys():
+    """Check if we have the necessary API keys for market data"""
+    missing_keys = []
+    
+    if not FINNHUB_API_KEY or FINNHUB_API_KEY == "":
+        missing_keys.append("FINNHUB_API_KEY")
+    
+    # Check for AlphaVantage API key in environment
+    if not os.environ.get("ALPHAVANTAGE_API_KEY"):
+        missing_keys.append("ALPHAVANTAGE_API_KEY")
+    
+    if missing_keys:
+        print(f"Warning: Missing API keys: {', '.join(missing_keys)}")
+        print("The system will use available sources and fallbacks")
+        return False
+    
+    return True
+
 def main():
     """
     Main function to collect sector values, momentum, update sector history
-    and recalculate the T2D Pulse score
+    and recalculate the T2D Pulse score using multi-source approach
     """
-    if not FINNHUB_API_KEY or FINNHUB_API_KEY == "":
-        print("Error: Please set a valid Finnhub API key in config.py")
-        return False
+    # Check API keys but continue even if some are missing
+    check_api_keys()
     
     eastern_time = get_eastern_time()
     today_date = eastern_time.strftime('%Y-%m-%d')
-    print(f"Starting daily sector data collection at {eastern_time.strftime('%Y-%m-%d %H:%M:%S %Z')}...")
+    print(f"Starting multi-source sector data collection at {eastern_time.strftime('%Y-%m-%d %H:%M:%S %Z')}...")
     
-    # Use the new comprehensive Finnhub data collector
+    # Get previous sector scores for fallback
+    previous_scores = get_previous_sector_scores()
+    print(f"Loaded {len(previous_scores)} previous sector scores for fallback")
+    
+    # Use the enhanced multi-source data collector
     success = collect_daily_sector_data()
     
     # Check if we're getting 403 errors in the collection process
     # If so, we might have hit the API rate limit, but we still want to update the sector history
-    finnhub_rate_limited = False
+    data_collection_issues = False
     if not success:
-        print(f"Daily sector data collection had issues for {today_date}")
+        print(f"Multi-source sector data collection had issues for {today_date}")
         # Check if we at least have some data to work with (partial success)
         if os.path.exists("data/sector_values.csv"):
             try:
@@ -45,7 +96,7 @@ def main():
                     lines = f.readlines()
                     if len(lines) > 1 and today_date in lines[-1]:
                         print("We have partial data - will continue with history update")
-                        finnhub_rate_limited = True
+                        data_collection_issues = True
                         success = True
             except Exception as e:
                 print(f"Error checking sector_values.csv: {e}")
@@ -54,11 +105,11 @@ def main():
         print(f"Data collection completed for {today_date}")
         
         # Now update the authentic sector history with the new data
-        print("Updating authentic sector history with new Finnhub data...")
+        print("Updating authentic sector history with collected market data...")
         history_success = update_sector_history_main()
         
         if history_success:
-            print("Successfully updated authentic sector history with new Finnhub data")
+            print("Successfully updated authentic sector history")
             
             # Calculate authentic T2D Pulse score from sector data
             try:
@@ -89,12 +140,12 @@ def main():
                 import traceback
                 traceback.print_exc()
         else:
-            print("Failed to update authentic sector history with new Finnhub data")
-            # Only mark as failed if we didn't have a rate limiting issue
-            if not finnhub_rate_limited:
+            print("Failed to update authentic sector history with new market data")
+            # Only mark as failed if we didn't have data collection issues (partial success)
+            if not data_collection_issues:
                 success = False
     else:
-        print(f"Daily sector data collection failed for {today_date}")
+        print(f"All data collection sources failed for {today_date}")
         print("No data available to update sector history")
         
     return success

@@ -24,6 +24,7 @@ dependencies = [
     "trafilatura>=2.0.0",
     "pytz>=2025.2",
     "flask>=3.0.3",
+    "twilio>=9.6.0",
 ]
 
 [[tool.uv.index]]

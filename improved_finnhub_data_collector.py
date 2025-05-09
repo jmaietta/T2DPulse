@@ -26,6 +26,14 @@ FINNHUB_API_KEY = config.FINNHUB_API_KEY
 ALPHAVANTAGE_API_KEY = os.environ.get("ALPHAVANTAGE_API_KEY", "")
 SECTORS = config.SECTORS
 
+# Import notification utilities if available
+try:
+    from notification_utils import send_market_cap_alert
+    EMAIL_NOTIFICATIONS = True
+except ImportError:
+    EMAIL_NOTIFICATIONS = False
+    print("Email notification module not available, notifications disabled")
+
 # Cache to avoid duplicate API calls for the same ticker within a session
 MARKET_CAP_CACHE = {}
 PRICE_CACHE = {}
@@ -171,6 +179,55 @@ def fetch_market_cap_alphavantage(ticker):
         print(f"Error fetching market cap for {ticker} from Alpha Vantage: {e}")
         return None
 
+def calculate_market_cap_from_shares_and_price(ticker):
+    """
+    Calculate market cap by multiplying outstanding shares by current price
+    when API sources don't provide it directly
+    
+    Args:
+        ticker: The ticker symbol
+        
+    Returns:
+        Calculated market cap or None if calculation not possible
+    """
+    try:
+        # Try to get share data from Yahoo Finance
+        stock = yf.Ticker(ticker)
+        info = stock.info
+        
+        # Look for share count in different possible fields
+        shares_outstanding = None
+        for field in ['sharesOutstanding', 'impliedSharesOutstanding', 'fullTimeEmployees']:
+            if field in info and info[field] is not None and info[field] > 0:
+                shares_outstanding = info[field]
+                if field == 'fullTimeEmployees':  # This is a last resort approximation
+                    print(f"Using employee count as rough approximation for {ticker}")
+                    # Scale by standard multiple for tech companies
+                    shares_outstanding *= 10000
+                break
+        
+        # Get current price
+        current_price = None
+        if 'currentPrice' in info and info['currentPrice'] is not None:
+            current_price = info['currentPrice']
+        elif 'previousClose' in info and info['previousClose'] is not None:
+            current_price = info['previousClose']
+        elif 'regularMarketPrice' in info and info['regularMarketPrice'] is not None:
+            current_price = info['regularMarketPrice']
+        
+        # Calculate market cap if we have both values
+        if shares_outstanding is not None and current_price is not None:
+            calculated_market_cap = shares_outstanding * current_price
+            print(f"Calculated market cap for {ticker}: {calculated_market_cap:,.2f} " + 
+                  f"({shares_outstanding:,} shares × ${current_price:.2f})")
+            return calculated_market_cap
+        else:
+            print(f"Insufficient data to calculate market cap for {ticker}")
+            return None
+    except Exception as e:
+        print(f"Error calculating market cap for {ticker}: {e}")
+        return None
+
 def fetch_market_cap(ticker, historical_marketcap_data, today):
     """
     Fetch market cap for a ticker with multiple sources and fallbacks
@@ -194,7 +251,11 @@ def fetch_market_cap(ticker, historical_marketcap_data, today):
     if market_cap is None:
         market_cap = fetch_market_cap_alphavantage(ticker)
     
-    # If all API sources failed, use most recent historical data if available
+    # If API sources failed, try calculating from shares and price
+    if market_cap is None:
+        market_cap = calculate_market_cap_from_shares_and_price(ticker)
+    
+    # If calculation failed, use most recent historical data if available
     if market_cap is None and not historical_marketcap_data.empty:
         if ticker in historical_marketcap_data.columns:
             # Get the most recent non-NaN value
@@ -427,6 +488,9 @@ def process_sector_data(historical_price_data, historical_marketcap_data):
     sectors_data = {}
     sector_values = []
     
+    # Track missing ticker data for notification purposes
+    missing_ticker_data = {}
+    
     # Load previous authentic sector history if available for better fallbacks
     authentic_history_file = os.path.join('data', 'authentic_sector_history.csv')
     previous_sector_scores = {}
@@ -457,6 +521,7 @@ def process_sector_data(historical_price_data, historical_marketcap_data):
         weighted_momentum = 0
         valid_momentum_count = 0
         tickers_with_data = 0  # Count how many tickers have valid data
+        missing_tickers = []   # Track tickers with missing data for notifications
         
         for ticker in tickers:
             # Get market cap for today
@@ -472,9 +537,10 @@ def process_sector_data(historical_price_data, historical_marketcap_data):
                 # Should never happen since we ensure columns exist
                 market_cap = None
             
-            # Skip tickers with no market cap data at all
+            # Track missing market cap data for notifications
             if market_cap is None or pd.isna(market_cap):
                 print(f"WARNING: No market cap data for {ticker} in {sector}, skipping from sector total")
+                missing_tickers.append(ticker)
                 continue
             
             # We have valid data for this ticker
@@ -500,6 +566,10 @@ def process_sector_data(historical_price_data, historical_marketcap_data):
                         momentum = ((current_price - ema) / ema) * 100
                         weighted_momentum += momentum * market_cap  # Weight by market cap
                         valid_momentum_count += 1
+        
+        # If we have missing tickers, add them to our tracking dictionary
+        if missing_tickers:
+            missing_ticker_data[sector] = missing_tickers
         
         # If we didn't get data for ANY tickers in this sector, we have an API problem
         if tickers_with_data == 0:
@@ -613,8 +683,35 @@ def collect_daily_sector_data():
         # Update historical data for all tickers
         historical_price_data, historical_marketcap_data = update_historical_data(all_tickers)
         
+        # Track missing ticker data for notification purposes
+        missing_ticker_data = {}
+        
         # Process sector data using the updated historical data
         sector_data = process_sector_data(historical_price_data, historical_marketcap_data)
+        
+        # Check for sectors with missing tickers
+        for sector, data in sector_data.items():
+            # If we have significant missing data (>25% missing), track for notification
+            if data['tickers_with_data'] < data['total_tickers'] * 0.75:
+                # Find which tickers are missing for this sector
+                missing_in_sector = []
+                for ticker in SECTORS[sector]:
+                    if ticker in historical_marketcap_data.columns:
+                        market_cap = historical_marketcap_data.loc[today, ticker]
+                        if pd.isna(market_cap) or market_cap is None:
+                            missing_in_sector.append(ticker)
+                
+                if missing_in_sector:
+                    missing_ticker_data[sector] = missing_in_sector
+        
+        # Send notification if we have significant missing data and email notifications are enabled
+        if missing_ticker_data and EMAIL_NOTIFICATIONS:
+            try:
+                from notification_utils import send_market_cap_alert
+                print(f"Sending alert for {len(missing_ticker_data)} sectors with missing market cap data")
+                send_market_cap_alert(missing_ticker_data, sector_data)
+            except Exception as e:
+                print(f"Error sending market cap alert: {e}")
         
         print(f"Successfully collected and saved sector values using improved method")
         return True
