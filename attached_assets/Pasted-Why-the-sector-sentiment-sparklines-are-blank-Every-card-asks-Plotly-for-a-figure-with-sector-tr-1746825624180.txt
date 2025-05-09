@@ -1,0 +1,43 @@
+Why the sector sentiment sparklines are blank
+•	Every card asks Plotly for a figure with
+sector_trend_chart.create_sector_trend_chart(sector_name=sector) .
+•	That helper pulls historical scores written by authentic_sector_history.update_authentic_history(...), but the history file is empty the very first time the dashboard is shown (it is only written after calculate_sector_sentiment() finishes).
+•	When the helper sees fewer than two rows it returns an empty go.Figure, so the dcc.Graph renders a white box and you see “no chart”.
+
+Python:
+# inside sector_trend_chart.create_sector_trend_chart(...)
+if history_df.empty or len(history_df) < 2:
+    # fallback – show at least today’s point
+    return go.Figure(
+        data=[go.Scatter(
+                x=[datetime.today()], y=[today_score], mode="markers",
+                marker=dict(color="#888", size=6))],
+        layout=go.Layout(height=85, margin=dict(l=0, r=0, t=2, b=2))
+    )
+
+Two quick fixes:
+1.	Prime the history once at app start
+Python:
+enhanced_scores = calculate_sector_sentiment()
+authentic_sector_history.update_authentic_history(enhanced_scores)   # ensures ≥1 row
+
+2.	Let the chart draw even a single point series (code above).
+That makes the sparkline visible on the very first page load and it will “grow” once tomorrow’s run adds another row.
+
+Why the T2D Pulse chart feels slow
+The pulse banner callback rereads the entire history file, sorts and rebuilds a go.Figure every refresh . With a multi year Parquet that I/O alone can add ~2 s.
+from functools import lru_cache
+@lru_cache(maxsize=1)
+def get_pulse_history():
+    return pd.read_parquet("data/t2d_pulse_history.parquet")
+def create_t2d_pulse_chart(force=False):
+    if force:
+        get_pulse_history.cache_clear()          # invalidate after a new score is written
+    history = get_pulse_history().tail(30)
+    ...
+Feed the cached figure into dcc.Graph (or store it in a dcc.Store) and the banner appears almost instantly.
+Additional Quick Wins:
+Hot spot	Issue	Recommendation
+calculate_sector_sentiment()	Heavy macro look ups and file writes on every hourly callback	Memoise the result for an hour (or run in a background thread) and buffer disk writes; switch to SQLite/Parquet append instead of CSV overwrite.
+File I/O	Dozens of pd.read_csv/read_parquet per page refresh	Centralise in a tiny data access layer with lru_cache; invalidate from the overnight auto_refresh_data thread.
+Sparklines	Full Plotly objects for 85 px tall charts	Generate static SVG paths (Dash dash_svg) or pre render PNGs; reduces layout JSON and draw time 5 10×.
