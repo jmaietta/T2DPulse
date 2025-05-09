@@ -49,7 +49,7 @@ def ensure_consistent_sector_data():
     create_directory_if_needed('data')
     
     # 1. Create the definitive current sector scores file
-    df_today = pd.DataFrame({'Date': [today_str]})
+    df_today = pd.DataFrame({'date': [today_str]})
     for sector, score in definitive_sectors.items():
         df_today[sector] = score
     
@@ -70,7 +70,7 @@ def ensure_consistent_sector_data():
     
     # Create the new file with definitive scores
     # For historical compatibility, save in -1 to +1 format
-    df_history = pd.DataFrame({'Date': [today_str]})
+    df_history = pd.DataFrame({'date': [today_str]})
     for sector, score in definitive_sectors.items():
         # Convert from 0-100 to -1/+1 scale
         raw_score = (score / 50.0) - 1.0
@@ -90,7 +90,7 @@ def ensure_consistent_sector_data():
     date_strings = [d.strftime('%Y-%m-%d') for d in dates]
     
     # Create dataframe with all dates
-    df_history = pd.DataFrame({'Date': date_strings})
+    df_history = pd.DataFrame({'date': date_strings})
     
     # For each sector, create a smooth transition to today's value
     for sector, final_score in definitive_sectors.items():
@@ -144,13 +144,13 @@ def ensure_consistent_sector_data():
     
     # 4. Create JSON format for charts
     data = {
-        'dates': df_history['Date'].tolist(),
+        'dates': df_history['date'].tolist(),
         'sectors': {}
     }
     
     # Add each sector's data
     for column in df_history.columns:
-        if column != 'Date':
+        if column != 'date':
             data['sectors'][column] = df_history[column].tolist()
     
     # Save the JSON data
