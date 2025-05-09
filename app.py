@@ -1802,7 +1802,7 @@ yahoo_vix_data = fetch_vix_from_yahoo()
 
 if not yahoo_vix_data.empty:
     # If Yahoo Finance data is available, use it
-    print("Using Yahoo Finance for recent VIX data")
+    logger.info("Using Yahoo Finance for recent VIX data")
     
     # If we already have some historical data from FRED, keep it and append the new data
     if not vix_data.empty:
@@ -1822,11 +1822,11 @@ if not yahoo_vix_data.empty:
     # Sort and save the combined data
     vix_data = vix_data.sort_values('date')
     save_data_to_csv(vix_data, 'vix_data.csv')
-    print(f"VIX data updated with {len(vix_data)} observations combining Yahoo Finance and historical data")
+    logger.info(f"VIX data updated with {len(vix_data)} observations combining Yahoo Finance and historical data")
     
 elif vix_data.empty or (datetime.now() - pd.to_datetime(vix_data['date'].max())).days > 7:
     # If Yahoo Finance failed and we have no data or old data, fall back to FRED
-    print("Yahoo Finance VIX data retrieval failed, falling back to FRED data")
+    logger.info("Yahoo Finance VIX data retrieval failed, falling back to FRED data")
     fred_vix_data = fetch_fred_data('VIXCLS')
     
     if not fred_vix_data.empty:
@@ -1834,9 +1834,9 @@ elif vix_data.empty or (datetime.now() - pd.to_datetime(vix_data['date'].max()))
         vix_data = fred_vix_data
         save_data_to_csv(vix_data, 'vix_data.csv')
         
-        print(f"VIX data updated with {len(vix_data)} observations from FRED")
+        logger.info(f"VIX data updated with {len(vix_data)} observations from FRED")
     else:
-        print("Failed to fetch VIX data from both Yahoo Finance and FRED")
+        logger.error("Failed to fetch VIX data from both Yahoo Finance and FRED")
 
 # Calculate 14-day EMA for VIX if we have data
 if not vix_data.empty and 'date' in vix_data.columns and 'value' in vix_data.columns:
@@ -1854,7 +1854,7 @@ if not vix_data.empty and 'date' in vix_data.columns and 'value' in vix_data.col
         latest_date = vix_data.iloc[0]['date']
         latest_vix = vix_data.iloc[0]['value']
         latest_ema = vix_data.iloc[0]['vix_ema14']
-        print(f"VIX: {latest_vix:.2f} on {latest_date}, 14-day EMA: {latest_ema:.2f}")
+        logger.info(f"VIX: {latest_vix:.2f} on {latest_date}, 14-day EMA: {latest_ema:.2f}")
     
     # Save updated data with EMA
     save_data_to_csv(vix_data, 'vix_data.csv')
@@ -1869,14 +1869,14 @@ if consumer_sentiment_data.empty or (datetime.now() - pd.to_datetime(consumer_se
         # Save data
         save_data_to_csv(consumer_sentiment_data, 'consumer_sentiment_data.csv')
         
-        print(f"Consumer Sentiment data updated with {len(consumer_sentiment_data)} observations")
+        logger.info(f"Consumer Sentiment data updated with {len(consumer_sentiment_data)} observations")
     else:
-        print("Failed to fetch Consumer Sentiment data")
+        logger.error("Failed to fetch Consumer Sentiment data")
 
 # Add Software Job Postings data
 if job_postings_data.empty or (datetime.now() - pd.to_datetime(job_postings_data['date'].max() if not job_postings_data.empty else '2000-01-01')).days > 7:
     # Force a refresh to get the most recent data (should update more frequently than 30 days)
-    print("Refreshing Software Job Postings data to get latest observations...")
+    logger.info("Refreshing Software Job Postings data to get latest observations...")
     # Fetch U.S. Software Job Postings on Indeed (IHLIDXUSTPSOFTDEVE)
     job_postings_temp = fetch_fred_data('IHLIDXUSTPSOFTDEVE')
     
@@ -1904,9 +1904,9 @@ if job_postings_data.empty or (datetime.now() - pd.to_datetime(job_postings_data
         # Save data
         save_data_to_csv(job_postings_data, 'job_postings_data.csv')
         
-        print(f"Software Job Postings data updated with {len(job_postings_data)} observations")
+        logger.info(f"Software Job Postings data updated with {len(job_postings_data)} observations")
     else:
-        print("Failed to fetch Software Job Postings data")
+        logger.error("Failed to fetch Software Job Postings data")
 
 # Calculate initial sentiment index
 sentiment_index = calculate_sentiment_index()
