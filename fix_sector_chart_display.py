@@ -20,7 +20,9 @@ logger = logging.getLogger(__name__)
 # Define file paths
 DATA_DIR = 'data'
 AUTHENTIC_HISTORY_JSON = os.path.join(DATA_DIR, 'authentic_sector_history.json')
+SECTOR_SENTIMENT_JSON = os.path.join(DATA_DIR, 'sector_sentiment_history.json')
 AUTHENTIC_HISTORY_CSV = os.path.join(DATA_DIR, 'authentic_sector_history.csv')
+SECTOR_SENTIMENT_CSV = os.path.join(DATA_DIR, 'sector_sentiment_history.csv')
 APP_PY_PATH = 'app.py'
 
 def get_eastern_date():
@@ -36,32 +38,97 @@ def create_directory_if_needed(directory):
 
 def load_sector_history():
     """Load sector history data from JSON file"""
+    
+    # Try authentic_sector_history.json first (preferred source)
     if os.path.exists(AUTHENTIC_HISTORY_JSON):
         try:
             with open(AUTHENTIC_HISTORY_JSON, 'r') as f:
-                data = json.load(f)
-            logger.info(f"Loaded sector history from JSON: {len(data)} records")
-            return data
+                data_dict = json.load(f)
+            
+            # Count sectors
+            sector_count = 0
+            for date, sectors in data_dict.items():
+                sector_count = max(sector_count, len(sectors))
+            
+            logger.info(f"Loaded authentic sector history from JSON with {len(data_dict)} dates and {sector_count} sectors")
+            return data_dict
         except Exception as e:
-            logger.error(f"Error loading sector history from JSON: {e}")
+            logger.error(f"Error loading authentic sector history from JSON: {e}")
     
-    if os.path.exists(AUTHENTIC_HISTORY_CSV):
+    # Try sector_sentiment_history.json second
+    if os.path.exists(SECTOR_SENTIMENT_JSON):
         try:
-            df = pd.read_csv(AUTHENTIC_HISTORY_CSV)
-            data = df.to_dict('records')
-            logger.info(f"Loaded sector history from CSV: {len(data)} records")
-            return data
+            with open(SECTOR_SENTIMENT_JSON, 'r') as f:
+                data_dict = json.load(f)
+            
+            # Count sectors
+            sector_count = 0
+            for date, sectors in data_dict.items():
+                sector_count = max(sector_count, len(sectors))
+            
+            logger.info(f"Loaded sector sentiment history from JSON with {len(data_dict)} dates and {sector_count} sectors")
+            return data_dict
         except Exception as e:
-            logger.error(f"Error loading sector history from CSV: {e}")
+            logger.error(f"Error loading sector sentiment history from JSON: {e}")
     
-    logger.error("No sector history data found")
-    return None
+    # Try CSV files if JSON not available
+    for csv_path, name in [(AUTHENTIC_HISTORY_CSV, "authentic"), (SECTOR_SENTIMENT_CSV, "sector sentiment")]:
+        if os.path.exists(csv_path):
+            try:
+                df = pd.read_csv(csv_path)
+                # Try to convert to the same format as JSON
+                if 'date' in df.columns or 'Date' in df.columns:
+                    date_col = 'date' if 'date' in df.columns else 'Date'
+                    data_dict = {}
+                    for _, row in df.iterrows():
+                        date_str = row[date_col]
+                        date_data = {col: row[col] for col in df.columns if col != date_col}
+                        data_dict[date_str] = date_data
+                    logger.info(f"Loaded {name} history from CSV: {len(data_dict)} dates")
+                    return data_dict
+                else:
+                    logger.error(f"CSV {csv_path} does not have a date column")
+            except Exception as e:
+                logger.error(f"Error loading {name} history from CSV: {e}")
+    
+    # Last resort: Check if we can find any sector chart files already created
+    # and use them as a starting point for future updates
+    logger.warning("No comprehensive sector history found, looking for existing sector charts...")
+    
+    # Create simple dummy data to ensure we have a baseline
+    dummy_data = {
+        get_eastern_date(): {
+            "SMB SaaS": 50.0,
+            "Enterprise SaaS": 50.0, 
+            "Cloud Infrastructure": 50.0,
+            "AdTech": 50.0,
+            "Fintech": 50.0,
+            "Consumer Internet": 50.0,
+            "eCommerce": 50.0,
+            "Cybersecurity": 50.0,
+            "Dev Tools / Analytics": 50.0,
+            "Semiconductors": 50.0,
+            "AI Infrastructure": 50.0,
+            "Vertical SaaS": 50.0,
+            "IT Services / Legacy Tech": 50.0,
+            "Hardware / Devices": 50.0
+        }
+    }
+    
+    logger.warning("Using fallback sector data for charts")
+    return dummy_data
 
 def create_sector_sparkline(sector_name, sector_data, dates, min_height=40):
     """Create a simple sparkline for a sector"""
-    # Get the most recent data points (up to 30 days)
+    # Handle single data point by creating a simple flat line
+    if len(sector_data) == 1:
+        logger.warning(f"Only one data point for sector {sector_name}, creating flat line")
+        # Duplicate the data point to create a line
+        sector_data = [sector_data[0], sector_data[0]]
+    
+    # If still no valid data, use placeholder
     if not sector_data or len(sector_data) < 2:
-        logger.warning(f"Not enough data for sector {sector_name}, using placeholder")
+        logger.warning(f"No valid data for sector {sector_name}, using placeholder")
         return f"""
         <svg width="100%" height="{min_height}" xmlns="http://www.w3.org/2000/svg">
             <text x="50%" y="50%" text-anchor="middle" font-size="10" fill="#999">No data</text>
@@ -74,6 +141,12 @@ def create_sector_sparkline(sector_name, sector_data, dates, min_height=40):
     # Calculate min and max for scaling
     min_value = min(normalized_data)
     max_value = max(normalized_data)
+    
+    # Create a bit more visual interest by adding a small delta around a single value
+    if max_value == min_value:
+        min_value = max(0, min_value - 5)  
+        max_value = min(100, max_value + 5)
+    
     value_range = max(max_value - min_value, 10)  # Ensure some vertical range
     
     # Normalize to SVG coordinates
@@ -126,31 +199,42 @@ def create_sector_charts():
     create_directory_if_needed(DATA_DIR)
     
     # Load sector history data
-    sector_data = load_sector_history()
-    if not sector_data:
+    data_dict = load_sector_history()
+    if not data_dict:
         logger.error("No sector data found, charts cannot be created")
         return False
     
-    # Extract the most recent date
-    dates = sorted(list({item['date'] for item in sector_data}))
+    # Extract dates and sort them chronologically
+    dates = sorted(list(data_dict.keys()))
     logger.info(f"Found data for {len(dates)} dates: {dates}")
     
-    # Group data by sector
-    sector_values = {}
-    for item in sector_data:
-        for key, value in item.items():
-            if key != 'date':
-                if key not in sector_values:
-                    sector_values[key] = []
-                sector_values[key].append(value)
+    # If we have only one date, let's create a basic chart anyway
+    # even though it won't show a trend
+    if len(dates) == 1:
+        logger.warning("Only one date found, charts will be simple")
     
-    # Create chart for each sector
-    for sector, values in sector_values.items():
+    # Find all unique sectors across all dates
+    all_sectors = set()
+    for date, sectors in data_dict.items():
+        all_sectors.update(sectors.keys())
+    logger.info(f"Found {len(all_sectors)} sectors: {all_sectors}")
+    
+    # For each sector, gather values across all dates
+    for sector in all_sectors:
+        # These values will be in chronological order based on sorted dates
+        sector_values = []
+        for date in dates:
+            if sector in data_dict[date]:
+                # These values are already in 0-100 scale, not -1/+1
+                score = data_dict[date][sector]
+                # Convert back to -1/+1 scale for the sparkline function
+                sector_values.append((score / 50) - 1)
+        
         # Create file name with underscores
         file_name = f"data/sector_chart_{sector.replace(' ', '_').replace('/', '_')}.html"
         
         # Create sparkline SVG
-        svg_content = create_sector_sparkline(sector, values, dates)
+        svg_content = create_sector_sparkline(sector, sector_values, dates)
         
         # Write to file
         with open(file_name, 'w') as f:

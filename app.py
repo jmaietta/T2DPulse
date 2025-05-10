@@ -6623,6 +6623,21 @@ def update_sector_sentiment_container(n):
                     html.Ul([
                         html.Li(driver) for driver in drivers
                     ], className="drivers-list"),
+                    # Sector chart
+                    html.Div([
+                        html.Iframe(
+                            srcDoc=open(f"data/sector_chart_{sector.replace(' ', '_').replace('/', '_')}.html", 'r').read() if os.path.exists(f"data/sector_chart_{sector.replace(' ', '_').replace('/', '_')}.html") else "",
+                            style={
+                                'width': '100%',
+                                'height': '40px',
+                                'border': 'none',
+                                'padding': '0',
+                                'margin': '0 0 10px 0',
+                                'overflow': 'hidden',
+                            }
+                        )
+                    ], className="sector-chart-container"),
+                    
                     
                     # Tickers with label
                     html.Div([
