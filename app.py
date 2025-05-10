@@ -6715,7 +6715,22 @@ def update_sector_sentiment_container(n):
                     "marginTop": "15px",
                     "padding": "10px 0 0 0",
                     "borderTop": "1px solid #eee"
-                })
+                }),
+                
+                # Add sector chart directly in iframe
+                html.Div([
+                    html.Iframe(
+                        id=f"sector-chart-frame-{sector_id}",
+                        src=f"/data/sector_chart_{sector.replace(' ', '_').replace('/', '_')}.html",
+                        style={
+                            "width": "100%",
+                            "height": "200px",
+                            "border": "none",
+                            "overflow": "hidden",
+                            "marginTop": "10px"
+                        }
+                    )
+                ], className="sector-chart-container")
                 
             ], className="sector-card-body", style={
                 "backgroundColor": "white", 
