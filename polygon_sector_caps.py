@@ -53,7 +53,7 @@ logging.basicConfig(
 SECTOR_TICKERS = {
     "AdTech": ["APP", "APPS", "CRTO", "DV", "GOOGL", "META", "MGNI", "PUBM", "TTD"],
     "Cloud Infrastructure": ["AMZN", "CRM", "CSCO", "GOOGL", "MSFT", "NET", "ORCL", "SNOW"],
-    "Fintech": ["AFRM", "BILL", "COIN", "FIS", "FI", "GPN", "PYPL", "SSNC"],  # Removed problematic tickers: ADYEY, SQ
+    "Fintech": ["AFRM", "BILL", "COIN", "FIS", "FI", "GPN", "PYPL", "SSNC", "XYZ"],  # Updated tickers: FISV->FI, SQ->XYZ
     "eCommerce": ["AMZN", "BABA", "BKNG", "CHWY", "EBAY", "ETSY", "PDD", "SE", "SHOP", "WMT"],
     "Consumer Internet": ["ABNB", "BKNG", "GOOGL", "META", "NFLX", "PINS", "SNAP", "SPOT", "TRIP", "YELP"],
     "IT Services": ["ACN", "CTSH", "DXC", "HPQ", "IBM", "INFY", "PLTR", "WIT"],
@@ -70,12 +70,14 @@ SECTOR_TICKERS = {
 # Track problematic tickers for reporting
 PROBLEMATIC_TICKERS = {
     "ADYEY": "Not found in Polygon API - OTC ticker",
-    "SQ": "Not found in Polygon API - Changed to BLOCK"
+    "SQ": "Not found in Polygon API - Changed to XYZ",
+    "FISV": "Changed ticker symbol to FI (Fiserv)"
 }
 
 # Map problematic tickers to possible replacements for future fixes
 TICKER_REPLACEMENTS = {
-    "SQ": "BLOCK"  # SQ is now trading as BLOCK
+    "SQ": "XYZ",     # SQ is now trading as XYZ (formerly BLOCK)
+    "FISV": "FI"     # FISV is now trading as FI (Fiserv)
 }
 
 # Create a list of ALL_TICKERS from the SECTOR_TICKERS dictionary
