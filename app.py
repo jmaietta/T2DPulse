@@ -812,22 +812,22 @@ def generate_sector_drivers(macros):
     return drivers
 
 def generate_sector_tickers():
-    """Generate representative ticker symbols for each sector"""
+    """Generate representative ticker symbols for each sector using authentic tickers from T2D_Pulse coverage"""
     return {
         "SMB SaaS": ["ADBE", "BILL", "HUBS"],
-        "Enterprise SaaS": ["CRM", "MSFT", "SAP"],
-        "Cloud Infrastructure": ["AMZN", "MSFT", "NET"],
+        "Enterprise SaaS": ["CRM", "MSFT", "ORCL"],
+        "Cloud Infrastructure": ["CSCO", "SNOW", "AMZN"],
         "AdTech": ["TTD", "PUBM", "META"],
-        "Fintech": ["FI", "PYPL", "SQ"],
+        "Fintech": ["XYZ", "PYPL", "COIN"],
         "Consumer Internet": ["META", "NFLX", "SNAP"],
-        "eCommerce": ["AMZN", "SHOP", "SE"],
+        "eCommerce": ["ETSY", "SHOP", "SE"],
         "Cybersecurity": ["PANW", "CRWD", "OKTA"],
-        "Dev Tools": ["DDOG", "MDB", "TEAM"],
+        "Dev Tools / Analytics": ["DDOG", "MDB", "TEAM"],
         "Semiconductors": ["NVDA", "AMD", "TSM"],
-        "AI Infrastructure": ["NVDA", "GOOGL", "MSFT"],
+        "AI Infrastructure": ["GOOGL", "META", "NVDA"],
         "Vertical SaaS": ["PCOR", "CSGP", "CCCS"],
-        "IT Services": ["IBM", "ACN", "PLTR"],
-        "Hardware/Devices": ["AAPL", "DELL", "HPQ"]
+        "IT Services / Legacy Tech": ["ACN", "PLTR", "CTSH"],
+        "Hardware / Devices": ["AAPL", "DELL", "SMCI"]
     }
 
 def calculate_sector_sentiment():

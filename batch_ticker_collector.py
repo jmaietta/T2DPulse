@@ -43,24 +43,24 @@ MARKET_DIR.mkdir(exist_ok=True)
 TICKER_DATA_DIR.mkdir(exist_ok=True)
 
 def generate_sector_tickers():
-    """Generate representative ticker symbols for each sector
+    """Generate representative ticker symbols for each sector using authentic tickers from T2D_Pulse coverage
     This is the same function as in app.py to ensure consistency
     """
     return {
-        "SMB SaaS": ["BILL", "PAYC", "DDOG"],
-        "Enterprise SaaS": ["CRM", "NOW", "ADBE"],
-        "Cloud Infrastructure": ["AMZN", "MSFT", "GOOG"],
-        "AdTech": ["TTD", "PUBM", "GOOGL"],
-        "Fintech": ["SQ", "PYPL", "ADYEY"],
-        "Consumer Internet": ["META", "GOOGL", "PINS"],
-        "eCommerce": ["AMZN", "SHOP", "SE"],
-        "Cybersecurity": ["PANW", "FTNT", "CRWD"],
-        "Dev Tools / Analytics": ["SNOW", "DDOG", "ESTC"],
-        "Semiconductors": ["NVDA", "AMD", "AVGO"],
-        "AI Infrastructure": ["NVDA", "AMD", "SMCI"],
-        "Vertical SaaS": ["VEEV", "TYL", "WDAY"],
-        "IT Services / Legacy Tech": ["IBM", "ACN", "DXC"],
-        "Hardware / Devices": ["AAPL", "DELL", "HPQ"]
+        "SMB SaaS": ["ADBE", "BILL", "HUBS"],
+        "Enterprise SaaS": ["CRM", "MSFT", "ORCL"],
+        "Cloud Infrastructure": ["CSCO", "SNOW", "AMZN"],
+        "AdTech": ["TTD", "PUBM", "META"],
+        "Fintech": ["XYZ", "PYPL", "COIN"],
+        "Consumer Internet": ["META", "NFLX", "SNAP"],
+        "eCommerce": ["ETSY", "SHOP", "SE"],
+        "Cybersecurity": ["PANW", "CRWD", "OKTA"],
+        "Dev Tools / Analytics": ["DDOG", "MDB", "TEAM"],
+        "Semiconductors": ["NVDA", "AMD", "TSM"],
+        "AI Infrastructure": ["GOOGL", "META", "NVDA"],
+        "Vertical SaaS": ["PCOR", "CSGP", "CCCS"],
+        "IT Services / Legacy Tech": ["ACN", "PLTR", "CTSH"],
+        "Hardware / Devices": ["AAPL", "DELL", "SMCI"]
     }
 
 def load_sector_tickers():
