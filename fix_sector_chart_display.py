@@ -1,283 +1,265 @@
 #!/usr/bin/env python3
 # fix_sector_chart_display.py
-# -----------------------------------------------------------
-# Create small historical sparklines for sector cards
+"""
+Fix sector chart display by generating authentic charts from sector sentiment history
+"""
 
 import os
 import sys
-import json
 import pandas as pd
-import numpy as np
-import plotly.graph_objects as go
-from plotly.subplots import make_subplots
+import json
 import logging
-from datetime import datetime, timedelta
+from datetime import datetime
 import pytz
+import re
 
+# Set up logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
+
+# Define file paths
+DATA_DIR = 'data'
+AUTHENTIC_HISTORY_JSON = os.path.join(DATA_DIR, 'authentic_sector_history.json')
+AUTHENTIC_HISTORY_CSV = os.path.join(DATA_DIR, 'authentic_sector_history.csv')
+APP_PY_PATH = 'app.py'
 
 def get_eastern_date():
     """Get the current date in US Eastern Time"""
     eastern = pytz.timezone('US/Eastern')
-    return datetime.now(eastern)
+    today = datetime.now(eastern)
+    return today.strftime('%Y-%m-%d')
 
 def create_directory_if_needed(directory):
     """Create directory if it doesn't exist"""
-    if not os.path.exists(directory):
-        os.makedirs(directory, exist_ok=True)
-        logger.info(f"Created directory: {directory}")
+    os.makedirs(directory, exist_ok=True)
+    logger.info(f"Ensured directory exists: {directory}")
 
 def load_sector_history():
     """Load sector history data from JSON file"""
-    json_file = "data/sector_history.json"
+    if os.path.exists(AUTHENTIC_HISTORY_JSON):
+        try:
+            with open(AUTHENTIC_HISTORY_JSON, 'r') as f:
+                data = json.load(f)
+            logger.info(f"Loaded sector history from JSON: {len(data)} records")
+            return data
+        except Exception as e:
+            logger.error(f"Error loading sector history from JSON: {e}")
     
-    if not os.path.exists(json_file):
-        logger.error(f"Error: {json_file} not found")
-        return None
+    if os.path.exists(AUTHENTIC_HISTORY_CSV):
+        try:
+            df = pd.read_csv(AUTHENTIC_HISTORY_CSV)
+            data = df.to_dict('records')
+            logger.info(f"Loaded sector history from CSV: {len(data)} records")
+            return data
+        except Exception as e:
+            logger.error(f"Error loading sector history from CSV: {e}")
     
-    with open(json_file, 'r') as f:
-        data = json.load(f)
-    
-    return data
+    logger.error("No sector history data found")
+    return None
 
 def create_sector_sparkline(sector_name, sector_data, dates, min_height=40):
     """Create a simple sparkline for a sector"""
-    try:
-        # Create a Plotly figure with transparent background
-        fig = go.Figure()
+    # Get the most recent data points (up to 30 days)
+    if not sector_data or len(sector_data) < 2:
+        logger.warning(f"Not enough data for sector {sector_name}, using placeholder")
+        return f"""
+        <svg width="100%" height="{min_height}" xmlns="http://www.w3.org/2000/svg">
+            <text x="50%" y="50%" text-anchor="middle" font-size="10" fill="#999">No data</text>
+        </svg>
+        """
+    
+    # Convert from -1/+1 scale to 0-100 scale for display
+    normalized_data = [(d + 1) * 50 for d in sector_data]
+    
+    # Calculate min and max for scaling
+    min_value = min(normalized_data)
+    max_value = max(normalized_data)
+    value_range = max(max_value - min_value, 10)  # Ensure some vertical range
+    
+    # Normalize to SVG coordinates
+    height = max(min_height, 40)  # Minimum height of 40px
+    width = 150  # Fixed width for consistency
+    
+    # Calculate points with even spacing on x-axis
+    num_points = len(normalized_data)
+    x_step = width / (num_points - 1) if num_points > 1 else width
+    
+    # Create path data
+    points = []
+    for i, value in enumerate(normalized_data):
+        x = i * x_step
+        # Map value to SVG y-coordinate (invert because SVG y-axis goes down)
+        y = height - ((value - min_value) / value_range * height * 0.8 + height * 0.1)
+        points.append(f"{x},{y}")
+    
+    path_data = " ".join([f"L{p}" for p in points])
+    path_data = "M" + path_data[1:]  # Replace first L with M
+    
+    # Get color based on latest score
+    latest_score = normalized_data[-1]
+    if latest_score >= 60:
+        stroke_color = "#27ae60"  # Green
+    elif latest_score >= 40:
+        stroke_color = "#f39c12"  # Yellow/Orange
+    else:
+        stroke_color = "#e74c3c"  # Red
+    
+    # Create SVG with path
+    svg = f"""
+    <svg width="100%" height="{height}" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+        <!-- Background -->
+        <rect width="100%" height="100%" fill="transparent" />
         
-        # Add the line trace
-        fig.add_trace(go.Scatter(
-            x=dates,
-            y=sector_data,
-            mode='lines',
-            line=dict(
-                color='rgba(0, 128, 255, 0.8)',  # Semi-transparent blue
-                width=2,
-            ),
-            hoverinfo='none',  # Disable hover tooltip
-        ))
+        <!-- Sparkline -->
+        <path d="{path_data}" stroke="{stroke_color}" stroke-width="2" fill="none" vector-effect="non-scaling-stroke" />
         
-        # Get min and max values for the y-axis range with a little padding
-        y_min = max(0, min(sector_data) - 2)
-        y_max = min(100, max(sector_data) + 2)
-        
-        # Set layout with no axes, grid, or background
-        fig.update_layout(
-            showlegend=False,
-            autosize=True,
-            margin=dict(l=0, r=0, t=0, b=0),
-            height=min_height,
-            plot_bgcolor='rgba(0,0,0,0)',  # Transparent background
-            paper_bgcolor='rgba(0,0,0,0)',  # Transparent background
-            xaxis=dict(
-                showgrid=False,
-                showticklabels=False,
-                zeroline=False,
-                visible=False,
-            ),
-            yaxis=dict(
-                showgrid=False,
-                showticklabels=False,
-                zeroline=False,
-                visible=False,
-                range=[y_min, y_max],  # Set consistent y-axis range
-            ),
-        )
-        
-        # Save the chart as HTML to include in the sector card
-        chart_file = f"data/sector_chart_{sector_name.replace(' ', '_').replace('/', '_')}.html"
-        fig.write_html(chart_file, include_plotlyjs='cdn', full_html=False, config={'displayModeBar': False})
-        
-        logger.info(f"Created sparkline for {sector_name}")
-        return chart_file
-    except Exception as e:
-        logger.error(f"Error creating sparkline for {sector_name}: {e}")
-        return None
+        <!-- Point for most recent value -->
+        <circle cx="{width}" cy="{points[-1].split(',')[1]}" r="3" fill="{stroke_color}" />
+    </svg>
+    """
+    
+    return svg
 
 def create_sector_charts():
     """Create sparklines for all sectors"""
-    logger.info("Creating sector sparklines...")
+    # Create data directory if it doesn't exist
+    create_directory_if_needed(DATA_DIR)
     
-    # Create data directory if needed
-    create_directory_if_needed('data')
-    
-    # Load sector history
-    history_data = load_sector_history()
-    if history_data is None:
-        logger.error("Failed to load sector history data")
+    # Load sector history data
+    sector_data = load_sector_history()
+    if not sector_data:
+        logger.error("No sector data found, charts cannot be created")
         return False
     
-    dates = history_data.get('dates', [])
-    sectors_data = history_data.get('sectors', {})
+    # Extract the most recent date
+    dates = sorted(list({item['date'] for item in sector_data}))
+    logger.info(f"Found data for {len(dates)} dates: {dates}")
     
-    if not dates or not sectors_data:
-        logger.error("Sector history data is empty or invalid")
-        return False
+    # Group data by sector
+    sector_values = {}
+    for item in sector_data:
+        for key, value in item.items():
+            if key != 'date':
+                if key not in sector_values:
+                    sector_values[key] = []
+                sector_values[key].append(value)
     
-    # Count how many sparklines we created
-    chart_count = 0
+    # Create chart for each sector
+    for sector, values in sector_values.items():
+        # Create file name with underscores
+        file_name = f"data/sector_chart_{sector.replace(' ', '_').replace('/', '_')}.html"
+        
+        # Create sparkline SVG
+        svg_content = create_sector_sparkline(sector, values, dates)
+        
+        # Write to file
+        with open(file_name, 'w') as f:
+            f.write(svg_content)
+        
+        logger.info(f"Created chart for sector: {sector}")
     
-    # Generate sparklines for each sector
-    for sector_name, sector_data in sectors_data.items():
-        chart_file = create_sector_sparkline(sector_name, sector_data, dates)
-        if chart_file:
-            chart_count += 1
-    
-    logger.info(f"Created {chart_count} sector sparklines")
-    return chart_count > 0
+    return True
 
 def modify_sector_cards_code():
     """Add code to app.py to display the sector charts"""
+    # Read app.py
     try:
-        with open('app.py', 'r') as f:
-            app_code = f.read()
-        
-        # Look for the sector card creation section
-        if "Create a sector card without an image" not in app_code:
-            logger.error("Couldn't find sector card creation code in app.py")
-            return False
-        
-        # Check if our fix is already applied
-        if "sector_chart_html = None" in app_code:
-            logger.info("Sector chart code already present in app.py")
-            return True
-        
-        # Find the sector card creation code
-        sector_card_code = """
-        # Create a sector card without an image
-        def create_sector_card(sector_data):
-            sector = sector_data["sector"]
-            score = sector_data["normalized_score"]
-            stance = sector_data["stance"]
-            drivers = sector_data.get("drivers", [])
-            tickers = sector_data.get("tickers", [])
-            
-            # Determine color based on score
-            if score >= 60:
-                sentiment_color = "#28A745"  # Green
-            elif score <= 30:
-                sentiment_color = "#DC3545"  # Red
-            else:
-                sentiment_color = "#FFC107"  # Yellow
-"""
-        
-        # Create updated code with sparkline chart
-        updated_card_code = """
-        # Create a sector card without an image
-        def create_sector_card(sector_data):
-            sector = sector_data["sector"]
-            score = sector_data["normalized_score"]
-            stance = sector_data["stance"]
-            drivers = sector_data.get("drivers", [])
-            tickers = sector_data.get("tickers", [])
-            
-            # Determine color based on score
-            if score >= 60:
-                sentiment_color = "#28A745"  # Green
-            elif score <= 30:
-                sentiment_color = "#DC3545"  # Red
-            else:
-                sentiment_color = "#FFC107"  # Yellow
-                
-            # Try to load sector chart HTML
-            sector_chart_html = None
-            chart_file = f"data/sector_chart_{sector.replace(' ', '_').replace('/', '_')}.html"
-            if os.path.exists(chart_file):
-                try:
-                    with open(chart_file, 'r') as f:
-                        sector_chart_html = f.read()
-                except Exception as e:
-                    print(f"Error loading sector chart for {sector}: {e}")
-"""
-        
-        # Replace the code
-        updated_app_code = app_code.replace(sector_card_code, updated_card_code)
-        
-        # Now find where the sector card content is defined
-        card_content_code = """
-            # Content of the card
-            card_content = [
-                # Title and score row
-                html.Div([
-                    # Title
-                    html.Div([
-                        html.H5(sector, className="sector-title"),
-                    ], className="sector-title-column"),
-                    
-                    # Score
-                    html.Div([
-                        html.P([
-                            html.Span(f"{score}", className="sector-score"),
-                        ], className="sector-score-container")
-                    ], className="sector-score-column"),
-                ], className="sector-header-row"),
-"""
-        
-        # Updated card content with sparkline chart
-        updated_content_code = """
-            # Content of the card
-            card_content = [
-                # Title and score row
-                html.Div([
-                    # Title
-                    html.Div([
-                        html.H5(sector, className="sector-title"),
-                    ], className="sector-title-column"),
-                    
-                    # Score
-                    html.Div([
-                        html.P([
-                            html.Span(f"{score}", className="sector-score"),
-                        ], className="sector-score-container")
-                    ], className="sector-score-column"),
-                ], className="sector-header-row"),
-                
-                # Sparkline chart (if available)
-                html.Div([
+        with open(APP_PY_PATH, 'r') as f:
+            content = f.read()
+    except Exception as e:
+        logger.error(f"Error reading app.py: {e}")
+        return False
+    
+    # Check if sector charts are already included
+    if 'sector-chart-container' in content:
+        logger.info("Sector charts are already in app.py")
+        return True
+    
+    # Find the right place to insert the chart code
+    pattern = r'(\s+# Tickers with label\s+html\.Div\(\[\s+html\.Div\(\s+html\.Span\("Representative Tickers:", style=\{"fontSize": "13px", "marginBottom": "5px", "display": "block"\}\),\s+style=\{"marginBottom": "3px"\}\s+\),)'
+    
+    chart_code = """
+                    # Sector chart
                     html.Div([
                         html.Iframe(
-                            srcDoc=sector_chart_html,
+                            srcDoc=open(f"data/sector_chart_{sector.replace(' ', '_').replace('/', '_')}.html", 'r').read() if os.path.exists(f"data/sector_chart_{sector.replace(' ', '_').replace('/', '_')}.html") else "",
                             style={
                                 'width': '100%',
                                 'height': '40px',
                                 'border': 'none',
                                 'padding': '0',
-                                'margin': '0 0 8px 0',
+                                'margin': '0 0 10px 0',
+                                'overflow': 'hidden',
                             }
-                        ) if sector_chart_html else None
+                        )
                     ], className="sector-chart-container"),
-                ], className="sector-chart-row") if sector_chart_html else None,
-"""
+                    """
+    
+    # Replace with chart code + original pattern
+    if re.search(pattern, content):
+        modified_content = re.sub(pattern, chart_code + r"\1", content)
         
-        # Replace the card content code
-        updated_app_code = updated_app_code.replace(card_content_code, updated_content_code)
+        # Write back to app.py
+        try:
+            with open(APP_PY_PATH, 'w') as f:
+                f.write(modified_content)
+            logger.info("Successfully added sector charts to app.py")
+            return True
+        except Exception as e:
+            logger.error(f"Error writing to app.py: {e}")
+            return False
+    else:
+        logger.error("Could not find the right pattern to insert chart code")
         
-        # Write the updated code back to app.py
-        with open('app.py', 'w') as f:
-            f.write(updated_app_code)
+        # Try a simpler approach instead
+        simpler_pattern = '# Tickers with label'
+        if simpler_pattern in content:
+            # Determine the indentation level
+            lines = content.split('\n')
+            for i, line in enumerate(lines):
+                if simpler_pattern in line:
+                    indent = line[:line.find('#')]
+                    
+                    # Insert our chart code before this line with same indentation
+                    chart_lines = chart_code.split('\n')
+                    indented_chart_code = '\n'.join([indent + line.lstrip() for line in chart_lines if line.strip()])
+                    
+                    lines.insert(i, indented_chart_code)
+                    
+                    # Write back to app.py
+                    try:
+                        with open(APP_PY_PATH, 'w') as f:
+                            f.write('\n'.join(lines))
+                        logger.info("Successfully added sector charts to app.py using simple approach")
+                        return True
+                    except Exception as e:
+                        logger.error(f"Error writing to app.py: {e}")
+                        return False
         
-        logger.info("Successfully updated app.py to display sector charts")
-        return True
-    except Exception as e:
-        logger.error(f"Error modifying app.py: {e}")
+        logger.error("Could not find a way to insert chart code")
         return False
 
-if __name__ == "__main__":
-    # Create sparklines for all sectors
+def fix_sector_display():
+    """Fix sector display functionality"""
+    logger.info("Starting sector display fix")
+    
+    # Create sector charts
     if create_sector_charts():
         logger.info("Successfully created sector charts")
     else:
         logger.error("Failed to create sector charts")
-        sys.exit(1)
+        return False
     
-    # Update app.py to display the charts
+    # Modify app.py to display the charts
     if modify_sector_cards_code():
-        logger.info("Successfully updated app.py")
+        logger.info("Successfully modified app.py to display sector charts")
     else:
-        logger.error("Failed to update app.py")
-        sys.exit(1)
+        logger.error("Failed to modify app.py")
+        return False
     
-    logger.info("Sector chart fix completed successfully!")
-    sys.exit(0)
+    logger.info("Sector display fix completed successfully")
+    return True
+
+if __name__ == '__main__':
+    success = fix_sector_display()
+    sys.exit(0 if success else 1)
