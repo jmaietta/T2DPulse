@@ -1,389 +1,543 @@
-#!/usr/bin/env python3
 """
-Fix Market Cap Collection
-Generate proper market cap data for all sectors with daily changes
-and 30-day history
+Fix market cap data to show proper daily changes over the 30-day period.
+
+This script calculates accurate daily market caps based on:
+1. Shares outstanding data from Polygon API
+2. Historical daily price data for each ticker
+3. Sector allocations for all tickers
+
+The results are aggregated by sector and exported to CSV and text formats.
 """
+
 import os
-import csv
+import pandas as pd
+import numpy as np
 import json
-import time
-import logging
+import sqlite3
+from datetime import datetime, timedelta
 import requests
-from io import StringIO
-from datetime import datetime, date, timedelta
-from threading import Thread
-from sqlalchemy import create_engine, text
+import time
+import random
+
+# API Keys
+POLYGON_API_KEY = os.environ.get('POLYGON_API_KEY')
 
 # Configure logging
+import logging
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s',
-    handlers=[
-        logging.FileHandler("fix_market_caps.log"),
-        logging.StreamHandler()
-    ]
+    filename='fix_market_caps.log'
 )
-logger = logging.getLogger(__name__)
 
-# Configuration
-POLYGON_API_KEY = os.environ.get("POLYGON_API_KEY")
-HIST_CSV = "data/market_caps.csv"
-SECTOR_CSV = "data/sector_market_caps.csv"
-DB_URL = "sqlite:///data/t2d_pulse.db"
+# Database connection
+def get_db_connection():
+    conn = sqlite3.connect('data/t2d_pulse.db')
+    conn.row_factory = sqlite3.Row
+    return conn
 
-# Helper functions
-def load_sectors():
-    """Load sectors from config.py or JSON file"""
+# Create tables if they don't exist
+def create_tables():
+    conn = get_db_connection()
+    cursor = conn.cursor()
+    
+    # Create share_counts table
+    cursor.execute('''
+    CREATE TABLE IF NOT EXISTS share_counts (
+        ticker TEXT PRIMARY KEY,
+        shares INTEGER,
+        last_updated TEXT
+    )
+    ''')
+    
+    # Create ticker_prices table
+    cursor.execute('''
+    CREATE TABLE IF NOT EXISTS ticker_prices (
+        ticker TEXT,
+        date TEXT,
+        close_price REAL,
+        PRIMARY KEY (ticker, date)
+    )
+    ''')
+    
+    # Create ticker_market_caps table
+    cursor.execute('''
+    CREATE TABLE IF NOT EXISTS ticker_market_caps (
+        ticker TEXT,
+        date TEXT,
+        market_cap REAL,
+        PRIMARY KEY (ticker, date)
+    )
+    ''')
+    
+    # Create sector_tickers table
+    cursor.execute('''
+    CREATE TABLE IF NOT EXISTS sector_tickers (
+        ticker TEXT,
+        sector TEXT,
+        PRIMARY KEY (ticker, sector)
+    )
+    ''')
+    
+    # Create sector_market_caps table
+    cursor.execute('''
+    CREATE TABLE IF NOT EXISTS sector_market_caps (
+        date TEXT,
+        sector TEXT,
+        market_cap REAL,
+        PRIMARY KEY (date, sector)
+    )
+    ''')
+    
+    conn.commit()
+    conn.close()
+
+# Get all unique tickers from the sector assignments
+def get_all_tickers():
     try:
-        # Try to import from config.py first
-        from config import SECTORS
-        return SECTORS
-    except (ImportError, AttributeError):
-        # Fall back to JSON file
+        # Read from CSV first if available (main source)
+        sector_tickers_df = pd.read_csv('data/sector_tickers.csv')
+        return sector_tickers_df['ticker'].unique().tolist()
+    except Exception as e:
+        logging.error(f"Error reading sector tickers from CSV: {e}")
+        
+        # Fall back to database if CSV fails
         try:
-            with open('data/sectors.json', 'r') as f:
-                return json.load(f)
+            conn = get_db_connection()
+            cursor = conn.cursor()
+            cursor.execute('SELECT DISTINCT ticker FROM sector_tickers')
+            tickers = [row[0] for row in cursor.fetchall()]
+            conn.close()
+            return tickers
         except Exception as e:
-            logger.error(f"Failed to load sectors: {e}")
+            logging.error(f"Error reading sector tickers from database: {e}")
+            
+            # Hard-coded fallback list of 92 tickers
+            return [
+                "AFRM", "AAPL", "ADBE", "ADSK", "AMD", "AMZN", "ABNB", "APP", "APPS", 
+                "ARM", "AVGO", "BABA", "BILL", "BKNG", "CCCS", "CHKP", "CHWY", "COIN", 
+                "CPRT", "CRM", "CRTO", "CRWD", "CSGP", "CSCO", "CTSH", "CYBR", "DDOG", 
+                "DELL", "DV", "DXC", "EBAY", "ESTC", "ETSY", "FI", "FIS", "FISV", "FTNT", 
+                "GPN", "GOOGL", "GTLB", "GWRE", "HUBS", "IBM", "ICE", "INFY", "INTC", 
+                "INTU", "LOGI", "MDB", "META", "MGNI", "MSFT", "NET", "NFLX", "NOW", 
+                "NVDA", "OKTA", "ORCL", "PANW", "PCOR", "PDD", "PINS", "PLTR", "PSTG", 
+                "PUBM", "PYPL", "QCOM", "S", "SAP", "SE", "SHOP", "SMCI", "SNAP", "SNOW", 
+                "SPOT", "SSNC", "SSYS", "STX", "TEAM", "TSM", "TTAN", "TTD", "TRIP", 
+                "WDC", "WIT", "WMT", "WDAY", "XYZ", "YELP", "ZS", "ACN", "AMAT"
+            ]
+
+# Get sector assignments for each ticker
+def get_sector_assignments():
+    try:
+        # Try to read from CSV first
+        sector_tickers_df = pd.read_csv('data/sector_tickers.csv')
+        sector_assignments = {}
+        
+        for _, row in sector_tickers_df.iterrows():
+            ticker = row['ticker']
+            sector = row['sector']
+            
+            if ticker not in sector_assignments:
+                sector_assignments[ticker] = []
+            
+            sector_assignments[ticker].append(sector)
+        
+        return sector_assignments
+    
+    except Exception as e:
+        logging.error(f"Error reading sector assignments from CSV: {e}")
+        
+        # Fall back to database
+        try:
+            conn = get_db_connection()
+            cursor = conn.cursor()
+            cursor.execute('SELECT ticker, sector FROM sector_tickers')
+            rows = cursor.fetchall()
+            conn.close()
+            
+            sector_assignments = {}
+            for row in rows:
+                ticker = row[0]
+                sector = row[1]
+                
+                if ticker not in sector_assignments:
+                    sector_assignments[ticker] = []
+                
+                sector_assignments[ticker].append(sector)
+            
+            return sector_assignments
+        
+        except Exception as e:
+            logging.error(f"Error reading sector assignments from database: {e}")
+            
+            # Return an empty dict if all else fails
             return {}
 
-def get_polygon_fully_diluted_shares(ticker):
-    """Get fully diluted shares outstanding from Polygon API"""
-    if not POLYGON_API_KEY:
-        logger.error("POLYGON_API_KEY environment variable not set")
-        return None
+# Get shares outstanding for tickers from database
+def get_shares_outstanding():
+    conn = get_db_connection()
+    cursor = conn.cursor()
+    cursor.execute('SELECT ticker, shares FROM share_counts')
+    shares_data = cursor.fetchall()
+    conn.close()
     
-    url = f"https://api.polygon.io/v3/reference/tickers/{ticker}?apiKey={POLYGON_API_KEY}"
+    shares_dict = {}
+    for row in shares_data:
+        ticker = row[0]
+        shares = row[1]
+        shares_dict[ticker] = shares
     
+    return shares_dict
+
+# Get shares from Polygon API for tickers missing from the database
+def fetch_shares_from_polygon(ticker):
     try:
+        url = f"https://api.polygon.io/v3/reference/tickers/{ticker}?apiKey={POLYGON_API_KEY}"
         response = requests.get(url)
-        if response.status_code != 200:
-            logger.warning(f"Failed to get data for {ticker}: {response.status_code}")
-            return None
-        
         data = response.json()
         
-        # Extract the share count from the response
-        if 'results' in data and data['results']:
-            results = data['results']
-            
-            # Try weighted shares outstanding first
-            if 'weighted_shares_outstanding' in results and results['weighted_shares_outstanding']:
-                return int(results['weighted_shares_outstanding'])
-            
-            # Fall back to shares outstanding
-            if 'shares_outstanding' in results and results['shares_outstanding']:
-                return int(results['shares_outstanding'])
+        # Check if we have the data
+        if data.get('status') == 'OK' and 'results' in data:
+            # Check for weighted shares outstanding (fully diluted)
+            if 'weighted_shares_outstanding' in data['results']:
+                return data['results']['weighted_shares_outstanding']
+            # Fall back to regular shares outstanding
+            elif 'share_class_shares_outstanding' in data['results']:
+                return data['results']['share_class_shares_outstanding']
+            # If neither is available, use the total shares value
+            elif 'total_shares_outstanding' in data['results']:
+                return data['results']['total_shares_outstanding']
         
-        logger.warning(f"No share count data available for {ticker}")
+        # If none of the above, try the ticker details endpoint
+        url = f"https://api.polygon.io/v3/reference/tickers/{ticker}/snapshot?apiKey={POLYGON_API_KEY}"
+        response = requests.get(url)
+        data = response.json()
+        
+        if data.get('results') and data['results'].get('shares_outstanding'):
+            return data['results']['shares_outstanding']
+        
+        # If still not found, return None
         return None
     
     except Exception as e:
-        logger.error(f"Error fetching fully diluted shares for {ticker}: {e}")
+        logging.error(f"Error fetching shares for {ticker} from Polygon: {e}")
         return None
 
-def get_polygon_price(ticker, date_str):
-    """Get closing price from Polygon API for a specific date"""
-    if not POLYGON_API_KEY:
-        logger.error("POLYGON_API_KEY environment variable not set")
-        return None
-    
-    url = f"https://api.polygon.io/v2/aggs/ticker/{ticker}/range/1/day/{date_str}/{date_str}?apiKey={POLYGON_API_KEY}"
-    
+# Fetch historical prices for a ticker within a date range
+def fetch_historical_prices(ticker, start_date, end_date):
+    logging.info(f"Fetching historical prices for {ticker} from {start_date} to {end_date}")
     try:
+        url = f"https://api.polygon.io/v2/aggs/ticker/{ticker}/range/1/day/{start_date}/{end_date}?apiKey={POLYGON_API_KEY}"
         response = requests.get(url)
-        if response.status_code != 200:
-            logger.warning(f"Failed to get price for {ticker} on {date_str}: {response.status_code}")
-            return None
-        
         data = response.json()
         
-        # Extract the closing price from the response
-        if 'results' in data and data['results']:
-            return data['results'][0]['c']  # Closing price
+        if data.get('results'):
+            # Convert timestamp to date and extract close price
+            price_data = []
+            for result in data['results']:
+                # Convert milliseconds timestamp to date
+                date = datetime.fromtimestamp(result['t'] / 1000).strftime('%Y-%m-%d')
+                close_price = result['c']
+                price_data.append({
+                    'ticker': ticker,
+                    'date': date,
+                    'close_price': close_price
+                })
+            
+            # Return as DataFrame
+            return pd.DataFrame(price_data)
         
-        logger.warning(f"No price data available for {ticker} on {date_str}")
-        return None
+        return pd.DataFrame(columns=['ticker', 'date', 'close_price'])
     
     except Exception as e:
-        logger.error(f"Error fetching price for {ticker} on {date_str}: {e}")
-        return None
+        logging.error(f"Error fetching historical prices for {ticker}: {e}")
+        return pd.DataFrame(columns=['ticker', 'date', 'close_price'])
 
-def get_business_days(start_date, end_date):
-    """Get a list of business days between start_date and end_date (inclusive)"""
-    days = []
-    current = datetime.strptime(start_date, '%Y-%m-%d')
-    end = datetime.strptime(end_date, '%Y-%m-%d')
-    
-    while current <= end:
-        # Skip weekends (0=Monday, 6=Sunday)
-        if current.weekday() < 5:
-            days.append(current.strftime('%Y-%m-%d'))
-        current += timedelta(days=1)
-    
-    return days
-
-def ensure_db():
-    """Ensure database exists and has required tables"""
-    os.makedirs("data", exist_ok=True)
-    engine = create_engine(DB_URL)
-    with engine.begin() as conn:
-        # Table for ticker market caps
-        conn.execute(text(
-            "CREATE TABLE IF NOT EXISTS ticker_market_caps ("
-            "ticker TEXT, date TEXT, market_cap REAL, "
-            "PRIMARY KEY(ticker, date))"
-        ))
-        
-        # Table for sector market caps
-        conn.execute(text(
-            "CREATE TABLE IF NOT EXISTS sector_market_caps ("
-            "sector TEXT, date TEXT, market_cap REAL, "
-            "PRIMARY KEY(sector, date))"
-        ))
-        
-        # Table for T2D Pulse values
-        conn.execute(text(
-            "CREATE TABLE IF NOT EXISTS pulse_values ("
-            "date TEXT PRIMARY KEY, score REAL)"
-        ))
-        
-        # Table for share counts
-        conn.execute(text(
-            "CREATE TABLE IF NOT EXISTS share_counts ("
-            "ticker TEXT PRIMARY KEY, count INTEGER, updated_at TEXT)"
-        ))
-    
-    return engine
-
-def get_share_count(ticker):
-    """Get share count for a ticker, fetching from API if not in database"""
-    engine = ensure_db()
-    
-    # Check if we already have the share count in the database
-    with engine.connect() as conn:
-        result = conn.execute(text(
-            "SELECT count FROM share_counts WHERE ticker = :ticker"
-        ), {"ticker": ticker}).fetchone()
-        
-        if result and result[0] > 0:
-            return result[0]
-    
-    # If not in database, fetch from API
-    share_count = get_polygon_fully_diluted_shares(ticker)
-    
-    if share_count and share_count > 0:
-        # Save to database
-        with engine.begin() as conn:
-            conn.execute(text(
-                "INSERT OR REPLACE INTO share_counts (ticker, count, updated_at) "
-                "VALUES (:ticker, :count, :updated_at)"
-            ), {"ticker": ticker, "count": share_count, "updated_at": datetime.now().isoformat()})
-        
-        return share_count
-    
-    logger.warning(f"Could not get share count for {ticker}")
-    return None
-
-def collect_market_caps(date_str=None):
-    """Collect market cap data for a specific date"""
-    if date_str is None:
-        date_str = date.today().isoformat()
-    
-    logger.info(f"Collecting market cap data for {date_str}")
-    
-    sectors = load_sectors()
-    if not sectors:
-        logger.error("No sectors found")
-        return False
-    
-    engine = ensure_db()
-    
-    # Get all unique tickers across all sectors
-    all_tickers = set()
-    for tickers in sectors.values():
-        all_tickers.update(tickers)
-    
-    # Collect market cap data for each ticker
-    ticker_data = []
-    for ticker in all_tickers:
-        # Add rate limiting to avoid API throttling
-        time.sleep(0.2)
-        
-        # Get share count
-        share_count = get_share_count(ticker)
-        if not share_count or share_count <= 0:
-            logger.warning(f"Skipping {ticker} - no share count available")
-            continue
-        
-        # Get price for the date
-        price = get_polygon_price(ticker, date_str)
-        if not price:
-            logger.warning(f"Skipping {ticker} - no price available for {date_str}")
-            continue
-        
-        # Calculate market cap
-        market_cap = price * share_count
-        
-        ticker_data.append({
-            "ticker": ticker,
-            "date": date_str,
-            "price": price,
-            "share_count": share_count,
-            "market_cap": market_cap
-        })
-        
-        # Store in database
-        with engine.begin() as conn:
-            conn.execute(text(
-                "INSERT OR REPLACE INTO ticker_market_caps (ticker, date, market_cap) "
-                "VALUES (:ticker, :date, :market_cap)"
-            ), {"ticker": ticker, "date": date_str, "market_cap": market_cap})
-        
-        logger.info(f"Processed {ticker}: ${market_cap/1e9:.2f}B market cap on {date_str}")
-    
-    # Calculate sector market caps
-    sector_data = []
-    for sector, tickers in sectors.items():
-        # Sum market caps for all tickers in the sector
-        sector_market_cap = 0
-        for ticker_info in ticker_data:
-            if ticker_info["ticker"] in tickers:
-                sector_market_cap += ticker_info["market_cap"]
-        
-        sector_data.append({
-            "sector": sector,
-            "date": date_str,
-            "market_cap": sector_market_cap
-        })
-        
-        # Store in database
-        with engine.begin() as conn:
-            conn.execute(text(
-                "INSERT OR REPLACE INTO sector_market_caps (sector, date, market_cap) "
-                "VALUES (:sector, :date, :market_cap)"
-            ), {"sector": sector, "date": date_str, "market_cap": sector_market_cap})
-        
-        logger.info(f"Sector {sector}: ${sector_market_cap/1e12:.2f}T market cap on {date_str}")
-    
-    # Calculate T2D Pulse (sum of all sector market caps)
-    total_market_cap = sum(sector["market_cap"] for sector in sector_data)
-    
-    # Store T2D Pulse in database
-    with engine.begin() as conn:
-        conn.execute(text(
-            "INSERT OR REPLACE INTO pulse_values (date, score) "
-            "VALUES (:date, :score)"
-        ), {"date": date_str, "score": total_market_cap})
-    
-    logger.info(f"T2D Pulse: ${total_market_cap/1e12:.2f}T total market cap on {date_str}")
-    
-    # Also store all data in CSV for backup and historical tracking
-    csv_exists = os.path.exists(HIST_CSV)
-    with open(HIST_CSV, "a", newline="") as f:
-        fieldnames = ["date", "ticker", "price", "share_count", "market_cap"]
-        writer = csv.DictWriter(f, fieldnames=fieldnames)
-        
-        if not csv_exists:
-            writer.writeheader()
-        
-        for data in ticker_data:
-            # Remove any fields not in fieldnames
-            row = {k: data[k] for k in fieldnames if k in data}
-            writer.writerow(row)
-    
-    # Update the sector market cap CSV for dashboard compatibility
-    update_sector_csv()
-    
-    return True
-
-def backfill_market_caps(days=30):
-    """Backfill market cap data for the specified number of days"""
-    end_date = date.today().isoformat()
-    start_date = (date.today() - timedelta(days=days)).isoformat()
-    
-    logger.info(f"Backfilling market cap data from {start_date} to {end_date}")
-    
-    # Get business days in the range
-    business_days = get_business_days(start_date, end_date)
-    
-    # Process each date
-    for date_str in reversed(business_days):
-        logger.info(f"Processing {date_str}")
-        collect_market_caps(date_str)
-        # Add a small delay between dates
-        time.sleep(1)
-    
-    logger.info(f"Backfill complete for {len(business_days)} business days")
-    return True
-
-def update_sector_csv():
-    """Update the sector market cap CSV file for dashboard compatibility"""
-    engine = ensure_db()
-    
-    # Get all sector market cap data
-    with engine.connect() as conn:
-        results = conn.execute(text(
-            "SELECT sector, date, market_cap FROM sector_market_caps "
-            "ORDER BY date, sector"
-        )).fetchall()
-    
-    if not results:
-        logger.warning("No sector market cap data available")
+# Save historical prices to database
+def save_prices_to_db(prices_df):
+    if prices_df.empty:
         return
     
-    # Group by date
-    data_by_date = {}
-    for row in results:
-        sector, date_str, market_cap = row
-        if date_str not in data_by_date:
-            data_by_date[date_str] = {}
-        data_by_date[date_str][sector] = market_cap
+    conn = get_db_connection()
+    cursor = conn.cursor()
     
-    # Convert to DataFrame
-    import pandas as pd
-    df = pd.DataFrame.from_dict(data_by_date, orient='index')
+    for _, row in prices_df.iterrows():
+        try:
+            cursor.execute(
+                'INSERT OR REPLACE INTO ticker_prices (ticker, date, close_price) VALUES (?, ?, ?)',
+                (row['ticker'], row['date'], row['close_price'])
+            )
+        except Exception as e:
+            logging.error(f"Error saving price for {row['ticker']} on {row['date']}: {e}")
     
-    # Save to CSV
-    df.to_csv(SECTOR_CSV)
-    logger.info(f"Updated sector market cap CSV at {SECTOR_CSV}")
+    conn.commit()
+    conn.close()
 
-def schedule_daily(hour=17, minute=0):
-    """Schedule daily collection at market close (5:00 PM ET)"""
-    def job():
-        while True:
-            now = datetime.now()
-            run_at = now.replace(hour=hour, minute=minute, second=0, microsecond=0)
-            wait = (run_at - now).total_seconds()
-            if wait < 0:
-                wait += 86400  # Wait until tomorrow
-            logger.info(f"Scheduled collection in {wait/3600:.1f} hours")
-            time.sleep(wait)
-            collect_market_caps()
+# Calculate market cap for each ticker and date
+def calculate_market_caps(tickers, shares_dict, start_date, end_date):
+    logging.info(f"Calculating market caps for {len(tickers)} tickers from {start_date} to {end_date}")
     
-    # Start in a background thread
-    Thread(target=job, daemon=True).start()
-    logger.info(f"Scheduled daily collection at {hour}:{minute:02d}")
+    # Get dates in the range
+    conn = get_db_connection()
+    cursor = conn.cursor()
+    
+    # Clear existing market cap data for the date range
+    cursor.execute(
+        'DELETE FROM ticker_market_caps WHERE date BETWEEN ? AND ?', 
+        (start_date, end_date)
+    )
+    
+    # Process each ticker
+    for ticker in tickers:
+        # Skip if we don't have share count
+        if ticker not in shares_dict:
+            logging.warning(f"No share count available for {ticker}, skipping market cap calculation")
+            continue
+        
+        # Get historical prices for this ticker
+        cursor.execute(
+            'SELECT date, close_price FROM ticker_prices WHERE ticker = ? AND date BETWEEN ? AND ?',
+            (ticker, start_date, end_date)
+        )
+        prices = cursor.fetchall()
+        
+        for price_row in prices:
+            date = price_row[0]
+            close_price = price_row[1]
+            shares = shares_dict[ticker]
+            
+            # Calculate market cap (price * shares)
+            market_cap = close_price * shares
+            
+            # Save to database
+            try:
+                cursor.execute(
+                    'INSERT OR REPLACE INTO ticker_market_caps (ticker, date, market_cap) VALUES (?, ?, ?)',
+                    (ticker, date, market_cap)
+                )
+            except Exception as e:
+                logging.error(f"Error saving market cap for {ticker} on {date}: {e}")
+    
+    conn.commit()
+    conn.close()
 
+# Calculate sector market caps (aggregate ticker market caps by sector)
+def calculate_sector_market_caps(sector_assignments, start_date, end_date):
+    logging.info(f"Calculating sector market caps from {start_date} to {end_date}")
+    
+    conn = get_db_connection()
+    cursor = conn.cursor()
+    
+    # Clear existing sector market cap data for the date range
+    cursor.execute(
+        'DELETE FROM sector_market_caps WHERE date BETWEEN ? AND ?', 
+        (start_date, end_date)
+    )
+    
+    # Get all dates in the range
+    cursor.execute(
+        'SELECT DISTINCT date FROM ticker_market_caps WHERE date BETWEEN ? AND ?',
+        (start_date, end_date)
+    )
+    dates = [row[0] for row in cursor.fetchall()]
+    
+    # Get list of sectors
+    unique_sectors = set()
+    for sectors in sector_assignments.values():
+        unique_sectors.update(sectors)
+    
+    for date in dates:
+        for sector in unique_sectors:
+            sector_mcap = 0
+            
+            # Get tickers in this sector
+            tickers_in_sector = [ticker for ticker, sectors in sector_assignments.items() if sector in sectors]
+            
+            for ticker in tickers_in_sector:
+                # Get market cap for this ticker on this date
+                cursor.execute(
+                    'SELECT market_cap FROM ticker_market_caps WHERE ticker = ? AND date = ?',
+                    (ticker, date)
+                )
+                result = cursor.fetchone()
+                
+                if result:
+                    market_cap = result[0]
+                    sector_mcap += market_cap
+            
+            # Save sector market cap to database
+            try:
+                cursor.execute(
+                    'INSERT OR REPLACE INTO sector_market_caps (date, sector, market_cap) VALUES (?, ?, ?)',
+                    (date, sector, sector_mcap)
+                )
+            except Exception as e:
+                logging.error(f"Error saving sector market cap for {sector} on {date}: {e}")
+    
+    conn.commit()
+    conn.close()
+
+# Export sector market caps to CSV
+def export_sector_market_caps(start_date, end_date):
+    logging.info(f"Exporting sector market caps from {start_date} to {end_date}")
+    
+    conn = get_db_connection()
+    cursor = conn.cursor()
+    
+    # Get all dates in the range
+    cursor.execute(
+        'SELECT DISTINCT date FROM sector_market_caps WHERE date BETWEEN ? AND ? ORDER BY date',
+        (start_date, end_date)
+    )
+    dates = [row[0] for row in cursor.fetchall()]
+    
+    # Get all sectors
+    cursor.execute('SELECT DISTINCT sector FROM sector_market_caps')
+    sectors = [row[0] for row in cursor.fetchall()]
+    
+    # Create a DataFrame to hold the data
+    data = {'Date': dates}
+    
+    for sector in sectors:
+        sector_mcaps = []
+        
+        for date in dates:
+            cursor.execute(
+                'SELECT market_cap FROM sector_market_caps WHERE date = ? AND sector = ?',
+                (date, sector)
+            )
+            result = cursor.fetchone()
+            
+            if result:
+                sector_mcaps.append(result[0])
+            else:
+                sector_mcaps.append(None)
+        
+        data[sector] = sector_mcaps
+    
+    conn.close()
+    
+    # Create DataFrame and export to CSV
+    df = pd.DataFrame(data)
+    df.to_csv('sector_marketcap_table.csv', index=False)
+    
+    # Also export to a well-formatted text file
+    with open('30day_sector_marketcap_table.txt', 'w') as f:
+        # Write header
+        f.write('Historical Sector Market Capitalization Data (Last 30 Market Days, Values in Billions USD)\n\n')
+        
+        # Create a nice table
+        header = f"{'Date':<12}"
+        for sector in sectors:
+            header += f"{sector:<18}"
+        f.write(header + '\n')
+        
+        # Add separator line
+        f.write('-' * (12 + 18 * len(sectors)) + '\n')
+        
+        # Write data rows
+        for i, date in enumerate(dates):
+            line = f"{date:<12}"
+            for sector in sectors:
+                market_cap = data[sector][i]
+                if market_cap is not None:
+                    line += f"{market_cap/1000000000:.2f}{'B':<15}"
+                else:
+                    line += f"{'N/A':<18}"
+            f.write(line + '\n')
+    
+    logging.info(f"Exported sector market caps to CSV and text file")
+    return df
+
+# Main function
 def main():
-    """Main function to fix market cap data"""
-    logger.info("Starting market cap data fix")
+    logging.info("Starting market cap fix process")
     
-    # Ensure database structure
-    ensure_db()
+    # Make sure data directory exists
+    os.makedirs('data', exist_ok=True)
     
-    # Backfill 30 days of market cap data
-    backfill_market_caps(days=30)
+    # Create database tables if needed
+    create_tables()
     
-    # Schedule daily updates at market close
-    schedule_daily(hour=17, minute=0)
+    # Get all tickers
+    tickers = get_all_tickers()
+    logging.info(f"Found {len(tickers)} tickers to process")
     
-    logger.info("Market cap collection initialized. Press Ctrl+C to exit.")
+    # Get sector assignments
+    sector_assignments = get_sector_assignments()
+    logging.info(f"Found sector assignments for {len(sector_assignments)} tickers")
     
-    # Keep the script running
-    while True:
-        time.sleep(3600)  # Sleep for an hour
+    # Get shares outstanding
+    shares_dict = get_shares_outstanding()
+    logging.info(f"Found shares outstanding for {len(shares_dict)} tickers")
+    
+    # Fetch shares for tickers missing from database
+    for ticker in tickers:
+        if ticker not in shares_dict:
+            logging.info(f"Fetching shares for {ticker} from Polygon API")
+            shares = fetch_shares_from_polygon(ticker)
+            
+            if shares:
+                shares_dict[ticker] = shares
+                
+                # Save to database
+                conn = get_db_connection()
+                cursor = conn.cursor()
+                cursor.execute(
+                    'INSERT OR REPLACE INTO share_counts (ticker, shares, last_updated) VALUES (?, ?, ?)',
+                    (ticker, shares, datetime.now().strftime('%Y-%m-%d'))
+                )
+                conn.commit()
+                conn.close()
+                
+                logging.info(f"Saved shares for {ticker}: {shares}")
+            
+            # Sleep briefly to avoid API rate limits
+            time.sleep(0.12)
+    
+    # Calculate date range (last 30 business days)
+    end_date = datetime.now()
+    # If today is weekend, use last Friday
+    if end_date.weekday() >= 5:  # Saturday or Sunday
+        end_date = end_date - timedelta(days=end_date.weekday() - 4)
+    
+    # Go back 42 calendar days to ensure we get 30 business days
+    start_date = end_date - timedelta(days=42)
+    
+    # Format dates
+    start_date_str = start_date.strftime('%Y-%m-%d')
+    end_date_str = end_date.strftime('%Y-%m-%d')
+    
+    # Fetch historical prices for each ticker
+    for ticker in tickers:
+        # Check if we have shares data
+        if ticker not in shares_dict:
+            logging.warning(f"No share count data for {ticker}, skipping price fetch")
+            continue
+        
+        # Fetch prices from Polygon
+        price_df = fetch_historical_prices(ticker, start_date_str, end_date_str)
+        
+        if not price_df.empty:
+            # Save to database
+            save_prices_to_db(price_df)
+            logging.info(f"Saved {len(price_df)} days of price data for {ticker}")
+        else:
+            logging.warning(f"No price data returned for {ticker}")
+        
+        # Sleep briefly to avoid API rate limits
+        time.sleep(0.12)
+    
+    # Calculate market caps
+    calculate_market_caps(tickers, shares_dict, start_date_str, end_date_str)
+    
+    # Calculate sector market caps
+    calculate_sector_market_caps(sector_assignments, start_date_str, end_date_str)
+    
+    # Export to CSV and text file
+    export_sector_market_caps(start_date_str, end_date_str)
+    
+    logging.info("Market cap fix process completed successfully")
 
 if __name__ == "__main__":
     main()
