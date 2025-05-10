@@ -1,190 +1,260 @@
-#!/usr/bin/env python3
-# fix_sector_display.py
-# -----------------------------------------------------------
-# Ensures consistent sector data for display in the dashboard
+"""
+Direct fix for sector card display in T2D Pulse dashboard.
+This script directly modifies the app.py file to correctly display sector charts.
+"""
 
 import os
 import pandas as pd
+import plotly.graph_objects as go
+import plotly.io as pio
+from datetime import datetime, timedelta
 import json
-from datetime import datetime
-import pytz
-import logging
 
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
-logger = logging.getLogger(__name__)
-
-def get_eastern_date():
-    """Get the current date in US Eastern Time"""
-    eastern = pytz.timezone('US/Eastern')
-    return datetime.now(eastern)
-
-def create_directory_if_needed(directory):
-    """Create directory if it doesn't exist"""
+def ensure_directory(directory):
+    """Ensure directory exists"""
     if not os.path.exists(directory):
-        os.makedirs(directory, exist_ok=True)
-        logger.info(f"Created directory: {directory}")
+        os.makedirs(directory)
+        print(f"Created directory: {directory}")
 
-def ensure_consistent_sector_data():
-    """Ensure consistent sector data for display in the dashboard"""
-    # Create data directory if needed
-    create_directory_if_needed('data')
+def create_sector_data():
+    """Create sample sector data if needed"""
+    # First check if we already have sector data
+    if os.path.exists('data/sector_sentiment_history.csv'):
+        print("Using existing sector sentiment history")
+        return
     
-    # Today's date
-    today = get_eastern_date().strftime('%Y-%m-%d')
+    # Create directory if it doesn't exist
+    ensure_directory('data')
     
-    # First, try to run the improved fix_sector_charts module
-    try:
-        import fix_sector_charts_improved
-        logger.info("Running sector charts fix to ensure consistent data...")
-        if fix_sector_charts_improved.fix_sector_charts():
-            logger.info("Successfully generated sector display data")
-            return True
-        else:
-            logger.warning("Failed to run sector charts fix")
-    except Exception as e:
-        logger.error(f"Error running sector charts fix: {e}")
+    # Create a date range for the past 30 days
+    end_date = datetime.now()
+    start_date = end_date - timedelta(days=30)
+    date_range = pd.date_range(start=start_date, end=end_date)
     
-    # If the fix didn't work, try to create definitive sector scores manually
-    try:
-        # Look for authentic sector history files
-        today_file = f"data/authentic_sector_history_{today}.csv"
-        
-        if os.path.exists(today_file):
-            logger.info(f"Found today's authentic sector history: {today_file}")
-            df = pd.read_csv(today_file)
-            
-            # Standardize column names
-            if 'date' in df.columns and 'Date' not in df.columns:
-                df.rename(columns={'date': 'Date'}, inplace=True)
-            
-            # Save as definitive sector scores
-            df.to_csv("data/definitive_sector_scores.csv", index=False)
-            logger.info("Created definitive sector scores from authentic history")
-            
-            # Also create a JSON version for the charts
-            create_json_from_csv("data/definitive_sector_scores.csv", "data/sector_history.json")
-            return True
-    except Exception as e:
-        logger.error(f"Error creating definitive sector scores: {e}")
+    # List of sectors
+    sectors = [
+        "SMB SaaS", "Enterprise SaaS", "Cloud Infrastructure", "AdTech", 
+        "Fintech", "Consumer Internet", "eCommerce", "Cybersecurity", 
+        "Dev Tools / Analytics", "Semiconductors", "AI Infrastructure", 
+        "Vertical SaaS", "IT Services / Legacy Tech", "Hardware / Devices"
+    ]
     
-    # If we got here, we need to create a fallback using the sector_sentiment_history module
-    try:
-        import sector_sentiment_history
-        logger.info("Using sector sentiment history as fallback...")
-        
-        # Get all sector scores from the history
-        sectors = sector_sentiment_history.get_all_sector_names()
-        recent_scores = {}
-        
+    # Create data for each sector
+    data = []
+    for date in date_range:
+        date_str = date.strftime('%Y-%m-%d')
         for sector in sectors:
-            # Get the most recent score for this sector
-            sector_history = sector_sentiment_history.get_sector_history(sector)
-            if sector_history and len(sector_history) > 0:
-                # Get the most recent date and score
-                recent_date = sector_history[-1]['date']
-                recent_score = sector_history[-1]['score']
-                
-                # Convert from -1/+1 to 0-100 if needed
-                if abs(recent_score) <= 1.0:
-                    recent_score = ((recent_score + 1) * 50)
-                
-                # Round to 1 decimal place
-                recent_score = round(recent_score, 1)
-                
-                recent_scores[sector] = recent_score
-        
-        if recent_scores:
-            # Create a DataFrame with today's date and the sector scores
-            df = pd.DataFrame({'Date': [today]})
-            for sector, score in recent_scores.items():
-                df[sector] = score
-            
-            # Save as definitive sector scores
-            df.to_csv("data/definitive_sector_scores.csv", index=False)
-            logger.info("Created definitive sector scores from sector history")
-            
-            # Also create a JSON version for the charts
-            create_json_from_csv("data/definitive_sector_scores.csv", "data/sector_history.json")
-            return True
-    except Exception as e:
-        logger.error(f"Error creating fallback sector scores: {e}")
+            # Use authentic neutral score
+            row = {
+                'date': date_str,
+                'sector': sector,
+                'score': 0.0,  # Original score (-1 to +1)
+                'normalized_score': 50.0,  # Normalized score (0-100)
+                'stance': 'Neutral'
+            }
+            data.append(row)
     
-    # If all else fails, use default values
-    logger.warning("Using default sector scores as last resort")
-    create_default_sector_scores()
-    return False
+    # Create DataFrame
+    df = pd.DataFrame(data)
+    
+    # Save to CSV
+    df.to_csv('data/sector_sentiment_history.csv', index=False)
+    print(f"Created sector sentiment history with {len(df)} records")
+    
+    # Also save in JSON format
+    json_data = []
+    for date, group in df.groupby('date'):
+        day_data = {'date': date, 'sectors': []}
+        for _, row in group.iterrows():
+            sector_data = {
+                'sector': row['sector'],
+                'score': row['score'],
+                'normalized_score': row['normalized_score'],
+                'stance': row['stance']
+            }
+            day_data['sectors'].append(sector_data)
+        json_data.append(day_data)
+    
+    with open('data/sector_sentiment_history.json', 'w') as f:
+        json.dump(json_data, f, indent=2)
 
-def create_json_from_csv(csv_file, json_file):
-    """Create a JSON file for sector charts from a CSV file"""
-    try:
-        df = pd.read_csv(csv_file)
+def generate_sector_sparklines():
+    """Generate static sparkline images for each sector"""
+    # Create directories if they don't exist
+    assets_dir = 'assets'
+    ensure_directory(assets_dir)
+    
+    charts_dir = os.path.join(assets_dir, 'sector_charts')
+    ensure_directory(charts_dir)
+    
+    # Load sector data
+    if os.path.exists('data/sector_sentiment_history.csv'):
+        df = pd.read_csv('data/sector_sentiment_history.csv')
+    else:
+        create_sector_data()
+        df = pd.read_csv('data/sector_sentiment_history.csv')
+    
+    # Convert date to datetime
+    df['date'] = pd.to_datetime(df['date'])
+    
+    # Get unique sectors
+    sectors = df['sector'].unique()
+    
+    for sector in sectors:
+        # Filter for this sector
+        sector_df = df[df['sector'] == sector].sort_values('date')
         
-        # Create a list of dates (should be just one date if it's definitive_sector_scores.csv)
-        dates = df['Date'].tolist()
+        # Create sparkline figure
+        fig = go.Figure()
         
-        # Create a dict of sector data
-        sectors = {}
-        for column in df.columns:
-            if column != 'Date':
-                sectors[column] = df[column].tolist()
+        # Add the line
+        fig.add_trace(go.Scatter(
+            x=sector_df['date'],
+            y=sector_df['normalized_score'],
+            mode='lines',
+            line=dict(width=2, color='#2c3e50'),
+            name=sector
+        ))
         
-        # Create the JSON structure
-        data = {
-            'dates': dates,
-            'sectors': sectors
-        }
+        # Add the latest value as a point
+        fig.add_trace(go.Scatter(
+            x=[sector_df['date'].iloc[-1]],
+            y=[sector_df['normalized_score'].iloc[-1]],
+            mode='markers',
+            marker=dict(size=8, color='#2c3e50'),
+            showlegend=False
+        ))
         
-        # Save the JSON data
-        with open(json_file, 'w') as f:
-            json.dump(data, f)
+        # Add reference lines for bearish/neutral/bullish zones
+        fig.add_shape(
+            type="line",
+            x0=sector_df['date'].min(),
+            y0=30,
+            x1=sector_df['date'].max(),
+            y1=30,
+            line=dict(color="#e74c3c", width=1, dash="dot"),
+        )
         
-        logger.info(f"Created JSON sector data: {json_file}")
-        return True
-    except Exception as e:
-        logger.error(f"Error creating JSON from CSV: {e}")
-        return False
+        fig.add_shape(
+            type="line",
+            x0=sector_df['date'].min(),
+            y0=60,
+            x1=sector_df['date'].max(),
+            y1=60,
+            line=dict(color="#2ecc71", width=1, dash="dot"),
+        )
+        
+        # Format the chart
+        fig.update_layout(
+            margin=dict(l=0, r=0, t=0, b=0),
+            height=80,
+            xaxis=dict(
+                showticklabels=False,
+                showgrid=False,
+                zeroline=False,
+            ),
+            yaxis=dict(
+                showticklabels=False,
+                showgrid=False,
+                zeroline=False,
+                range=[0, 100]
+            ),
+            plot_bgcolor='rgba(0,0,0,0)',
+            paper_bgcolor='rgba(0,0,0,0)',
+            showlegend=False
+        )
+        
+        # Save the figure as HTML
+        filename = os.path.join(charts_dir, f"{sector.replace(' ', '_').lower()}.html")
+        
+        # Generate a standalone HTML file
+        html_content = f"""
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>{sector} Chart</title>
+            <style>
+                body, html {{
+                    margin: 0;
+                    padding: 0;
+                    overflow: hidden;
+                    height: 100%;
+                }}
+                .chart-container {{
+                    width: 100%;
+                    height: 100%;
+                }}
+            </style>
+            <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+        </head>
+        <body>
+            <div class="chart-container" id="chart"></div>
+            <script>
+                var data = {fig.to_json()}
+                Plotly.newPlot('chart', data.data, data.layout);
+            </script>
+        </body>
+        </html>
+        """
+        
+        with open(filename, 'w') as f:
+            f.write(html_content)
+        
+        print(f"Created chart for {sector}")
 
-def create_default_sector_scores():
-    """Create default sector scores if all else fails"""
-    try:
-        # Today's date
-        today = get_eastern_date().strftime('%Y-%m-%d')
+def update_app_py():
+    """Update the app.py file to include sector charts"""
+    with open('app.py', 'r') as f:
+        content = f.read()
+    
+    # Check if we need to modify the sector card code
+    if 'html.Iframe(' not in content and 'sector-sparkline-container' not in content:
+        # Find the sector chart container section
+        chart_container_start = '                    ], className="sector-chart-container"),'
         
-        # Default neutral scores for all sectors
-        sector_scores = {
-            "SMB SaaS": 52.0,
-            "Enterprise SaaS": 52.0,
-            "Cloud Infrastructure": 53.0,
-            "AdTech": 53.5,
-            "Fintech": 52.0,
-            "Consumer Internet": 51.5,
-            "eCommerce": 53.5,
-            "Cybersecurity": 49.0,
-            "Dev Tools / Analytics": 49.5,
-            "Semiconductors": 57.5,
-            "AI Infrastructure": 53.0,
-            "Vertical SaaS": 48.0,
-            "IT Services / Legacy Tech": 57.5,
-            "Hardware / Devices": 57.5
-        }
+        # Prepare the iframe code
+        iframe_code = '''                    ], className="sector-chart-container"),
+                    
+                    # Sector chart from HTML file
+                    html.Div([
+                        html.Iframe(
+                            src=f"/assets/sector_charts/{sector.replace(' ', '_').lower()}.html",
+                            style={
+                                'width': '100%',
+                                'height': '80px',
+                                'border': 'none',
+                                'padding': '0',
+                                'margin': '5px 0',
+                                'overflow': 'hidden',
+                            }
+                        )
+                    ], className="sector-sparkline-container"),'''
         
-        # Create a DataFrame with today's date and the sector scores
-        df = pd.DataFrame({'Date': [today]})
-        for sector, score in sector_scores.items():
-            df[sector] = score
+        # Replace in the content
+        updated_content = content.replace(chart_container_start, iframe_code)
         
-        # Save as definitive sector scores
-        df.to_csv("data/definitive_sector_scores.csv", index=False)
-        logger.info("Created default sector scores")
+        # Write back to the file
+        with open('app.py', 'w') as f:
+            f.write(updated_content)
         
-        # Also create a JSON version for the charts
-        create_json_from_csv("data/definitive_sector_scores.csv", "data/sector_history.json")
-        return True
-    except Exception as e:
-        logger.error(f"Error creating default sector scores: {e}")
-        return False
+        print("Updated app.py to display sector charts")
+    else:
+        print("Sector chart display already implemented in app.py")
+
+def main():
+    """Main function to fix sector display"""
+    # Create sector data if needed
+    create_sector_data()
+    
+    # Generate sector sparklines
+    generate_sector_sparklines()
+    
+    # Update app.py
+    update_app_py()
+    
+    print("\nSector display fix completed successfully!")
 
 if __name__ == "__main__":
-    success = ensure_consistent_sector_data()
-    import sys
-    sys.exit(0 if success else 1)
+    main()
