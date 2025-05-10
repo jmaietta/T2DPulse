@@ -7880,15 +7880,22 @@ def download_file(filename):
     # Generate file on request if it doesn't exist yet
     # If it's a sector sentiment history export, ensure we're using authentic data
     if filename.startswith('sector_sentiment_history_'):
-        # Use the fix_sector_charts module to generate proper export files
+        # Use the improved fix_sector_charts module to generate proper export files
         try:
-            import fix_sector_charts
-            if fix_sector_charts.fix_sector_charts():
+            import fix_sector_charts_improved
+            if fix_sector_charts_improved.fix_sector_charts():
                 print(f"Successfully regenerated sector history export files")
             else:
                 print(f"Error regenerating sector history export files")
         except Exception as e:
             print(f"Error running sector charts fix: {e}")
+            # Try the original module as fallback
+            try:
+                import fix_sector_charts
+                if fix_sector_charts.fix_sector_charts():
+                    print(f"Successfully regenerated sector history export files using original module")
+            except Exception as e2:
+                print(f"Error with fallback sector charts fix: {e2}")
     
     filepath = os.path.join("data", filename)
     
