@@ -118,371 +118,173 @@ def load_shares_cache():
                 return json.load(f)
         except Exception as e:
             logging.error(f"Error loading shares cache: {e}")
-            return {}
-    else:
-        return {}
+    
+    # Create cache directory if it doesn't exist
+    Path(CACHE_DIR).mkdir(exist_ok=True)
+    return {}
 
-def save_shares_cache(shares_dict):
+def save_shares_cache(cache):
     """Save the shares outstanding cache"""
     try:
-        # Create backup of existing file
-        if os.path.exists(SHARES_CACHE_FILE):
-            backup_file = f"{SHARES_CACHE_FILE}.bak"
-            with open(backup_file, 'w') as f:
-                json.dump(shares_dict, f)
-            logging.info(f"Created backup of shares cache at {backup_file}")
-        
-        # Save updated file
         with open(SHARES_CACHE_FILE, 'w') as f:
-            json.dump(shares_dict, f)
-        return True
+            json.dump(cache, f, indent=2)
+        logging.info(f"Saved shares cache to {SHARES_CACHE_FILE}")
     except Exception as e:
         logging.error(f"Error saving shares cache: {e}")
-        return False
 
-def update_ticker_share_count(ticker, api_key=None):
+def get_fully_diluted_share_count(ticker, use_cache=True, update_cache=True):
     """
-    Update share count for a single ticker
+    Get fully diluted share count for a ticker
     
     Args:
         ticker (str): The ticker symbol
-        api_key (str, optional): The Polygon API key
+        use_cache (bool): Whether to use cached data if available
+        update_cache (bool): Whether to update the cache with new data
         
     Returns:
-        dict: Dictionary with old and new share counts
+        int or None: The fully diluted shares outstanding, or None if unavailable
     """
-    # Get API key if not provided
-    if not api_key:
-        api_key = get_api_key()
-        if not api_key:
-            return None
+    # Check for manual override first
+    if ticker in SHARE_COUNT_OVERRIDES:
+        return SHARE_COUNT_OVERRIDES[ticker]
     
-    # Load current share counts
-    shares_dict = load_shares_cache()
+    # Check cache if enabled
+    if use_cache:
+        cache = load_shares_cache()
+        if ticker in cache:
+            cache_entry = cache[ticker]
+            # Check if cache entry is recent (less than 7 days old)
+            cached_date = datetime.fromisoformat(cache_entry.get("date", "2000-01-01"))
+            if datetime.now() - cached_date < timedelta(days=7):
+                logging.info(f"Using cached share count for {ticker}: {cache_entry.get('shares'):,}")
+                return cache_entry.get("shares")
     
-    # Get current value
-    current_value = shares_dict.get(ticker)
-    
-    # Get fully diluted shares from Polygon
-    fully_diluted_shares, name, market_cap = fetch_fully_diluted_shares(ticker, api_key)
-    
-    if fully_diluted_shares:
-        # Record change if there is one
-        if current_value != fully_diluted_shares:
-            old_value = current_value
-            shares_dict[ticker] = fully_diluted_shares
-            
-            # Save updated shares
-            save_shares_cache(shares_dict)
-            
-            # Calculate percent change
-            if old_value:
-                percent_change = (fully_diluted_shares / old_value - 1) * 100
-                change_str = f"{percent_change:.2f}%"
-            else:
-                change_str = "New"
-            
-            logging.info(f"Updated {ticker} share count: {old_value or 'None'} -> {fully_diluted_shares} ({change_str})")
-            
-            return {
-                "ticker": ticker,
-                "name": name,
-                "old_value": old_value,
-                "new_value": fully_diluted_shares,
-                "percent_change": change_str
-            }
-        else:
-            logging.info(f"No change for {ticker}: {current_value}")
-            return None
-    else:
-        logging.warning(f"Failed to get share count data for {ticker}")
-        return None
-
-def update_all_ticker_share_counts(tickers):
-    """
-    Update share counts for multiple tickers
-    
-    Args:
-        tickers (list): List of ticker symbols
-        
-    Returns:
-        dict: Dictionary of tickers with their old and new share counts
-    """
-    # Get API key
+    # Fetch fresh data
     api_key = get_api_key()
     if not api_key:
-        return {}
+        return None
     
-    changes = {}
+    shares, name, market_cap = fetch_fully_diluted_shares(ticker, api_key)
     
-    # Process each ticker
-    for ticker in tickers:
-        change = update_ticker_share_count(ticker, api_key)
-        if change:
-            changes[ticker] = change
-        # Sleep briefly to avoid rate limits
-        time.sleep(0.1)
+    # Update cache if enabled and we got data
+    if update_cache and shares is not None:
+        cache = load_shares_cache()
+        cache[ticker] = {
+            "shares": shares,
+            "name": name,
+            "date": datetime.now().isoformat(),
+            "market_cap": market_cap
+        }
+        save_shares_cache(cache)
     
-    return changes
+    return shares
 
-def get_sector_tickers():
-    """Get tickers for each sector"""
-    return {
-        "AdTech": ["APP", "APPS", "CRTO", "DV", "GOOGL", "META", "MGNI", "PUBM", "TTD"],
-        "Cloud Infrastructure": ["AMZN", "CRM", "CSCO", "GOOGL", "MSFT", "NET", "ORCL", "SNOW"],
-        "Fintech": ["AFRM", "BILL", "COIN", "FIS", "FI", "GPN", "PYPL", "SSNC"],
-        "eCommerce": ["AMZN", "BABA", "BKNG", "CHWY", "EBAY", "ETSY", "PDD", "SE", "SHOP", "WMT"],
-        "Consumer Internet": ["ABNB", "BKNG", "GOOGL", "META", "NFLX", "PINS", "SNAP", "SPOT", "TRIP", "YELP"],
-        "IT Services": ["ACN", "CTSH", "DXC", "HPQ", "IBM", "INFY", "PLTR", "WIT"],
-        "Hardware/Devices": ["AAPL", "DELL", "HPQ", "LOGI", "PSTG", "SMCI", "SSYS", "STX", "WDC"],
-        "Cybersecurity": ["CHKP", "CRWD", "CYBR", "FTNT", "NET", "OKTA", "PANW", "S", "ZS"],
-        "Dev Tools": ["DDOG", "ESTC", "GTLB", "MDB", "TEAM"],
-        "AI Infrastructure": ["AMZN", "GOOGL", "IBM", "META", "MSFT", "NVDA", "ORCL"],
-        "Semiconductors": ["AMAT", "AMD", "ARM", "AVGO", "INTC", "NVDA", "QCOM", "TSM"],
-        "Vertical SaaS": ["CCCS", "CPRT", "CSGP", "GWRE", "ICE", "PCOR", "SSNC", "TTAN"],
-        "Enterprise SaaS": ["ADSK", "AMZN", "CRM", "IBM", "MSFT", "NOW", "ORCL", "SAP", "WDAY"],
-        "SMB SaaS": ["ADBE", "BILL", "GOOGL", "HUBS", "INTU", "META"]
-    }
-
-def get_all_unique_tickers():
-    """Get a list of all unique tickers"""
-    sectors = get_sector_tickers()
-    all_tickers = set()
-    for tickers in sectors.values():
-        all_tickers.update(tickers)
-    return sorted(list(all_tickers))
-
-def update_all_shares_data():
-    """Update share count data for all tickers"""
-    # Get all unique tickers
-    all_tickers = get_all_unique_tickers()
-    logging.info(f"Updating share counts for {len(all_tickers)} unique tickers")
-    
-    # Update share counts
-    changes = update_all_ticker_share_counts(all_tickers)
-    
-    # Print summary
-    if changes:
-        print(f"\nUpdated share counts for {len(changes)} tickers:")
-        for ticker, change in changes.items():
-            print(f"  {ticker} ({change['name']}): {change['old_value'] or 'None'} -> {change['new_value']} ({change['percent_change']})")
-    else:
-        print("No share count changes made")
-    
-    return len(changes) > 0
-
-def calculate_market_caps():
+def ensure_fully_diluted_shares():
     """
-    Calculate market caps for all tickers and sectors
+    Ensure that fully diluted shares are being used for all market cap calculations
+    by updating the cache with the latest data
+    """
+    logging.info("Ensuring fully diluted shares for all tickers")
+    
+    # Load or create the cache
+    cache = load_shares_cache()
+    
+    # Check if we have the override tickers in the cache
+    for ticker, shares in SHARE_COUNT_OVERRIDES.items():
+        if ticker not in cache or cache[ticker].get("shares") != shares:
+            logging.info(f"Updating cache with override for {ticker}: {shares:,}")
+            cache[ticker] = {
+                "shares": shares,
+                "name": f"{ticker} (Manual Override)",
+                "date": datetime.now().isoformat(),
+                "market_cap": None
+            }
+    
+    # Save the updated cache
+    save_shares_cache(cache)
+    
+    logging.info("Fully diluted shares enforcement completed")
+    return True
+
+def update_share_counts():
+    """
+    Update share counts for all tickers in the system 
+    to ensure fully diluted shares are used
+    """
+    logging.info("Starting update of all share counts with fully diluted values")
+    
+    try:
+        # Load the list of tickers from the coverage file
+        coverage_file = "T2D_Pulse_93_tickers_coverage.csv"
+        if not os.path.exists(coverage_file):
+            logging.error(f"Coverage file not found: {coverage_file}")
+            return False
+            
+        # Load the CSV, skipping the header rows
+        df = pd.read_csv(coverage_file, skiprows=7)
+        
+        # Get unique tickers
+        tickers = df['Ticker'].unique()
+        logging.info(f"Found {len(tickers)} unique tickers in coverage file")
+        
+        # Get API key
+        api_key = get_api_key()
+        if not api_key:
+            return False
+            
+        # Load the cache
+        cache = load_shares_cache()
+        
+        # Update each ticker
+        success_count = 0
+        for ticker in tickers:
+            shares = get_fully_diluted_share_count(ticker, use_cache=True, update_cache=True)
+            if shares is not None:
+                success_count += 1
+                
+        logging.info(f"Successfully updated {success_count}/{len(tickers)} tickers with fully diluted shares")
+        return success_count == len(tickers)
+        
+    except Exception as e:
+        logging.error(f"Error updating share counts: {e}")
+        return False
+    
+def get_all_share_counts():
+    """
+    Get all share counts as a dictionary mapping ticker to share count
     
     Returns:
-        tuple: (ticker_market_caps, sector_market_caps)
+        dict: Dictionary mapping ticker to share count
     """
-    # Load share counts
-    shares_dict = load_shares_cache()
-    if not shares_dict:
-        logging.error("No share count data available")
-        return None, None
+    # Load the cache
+    cache = load_shares_cache()
     
-    # Load price data from cache
-    price_cache = os.path.join(CACHE_DIR, "historical_prices.pkl")
-    if not os.path.exists(price_cache):
-        logging.error(f"Price cache file not found: {price_cache}")
-        return None, None
+    # Extract share counts
+    share_counts = {}
+    for ticker, entry in cache.items():
+        share_counts[ticker] = entry.get("shares")
     
-    try:
-        # Load price data
-        price_dict = pd.read_pickle(price_cache)
-        
-        # Create price DataFrame
-        price_df = pd.DataFrame(price_dict)
-        price_df.index = pd.to_datetime(price_df.index)
-        price_df = price_df.sort_index()
-        
-        # Calculate market caps for each ticker
-        market_caps = pd.DataFrame(index=price_df.index)
-        for ticker in price_df.columns:
-            if ticker in shares_dict:
-                market_caps[ticker] = price_df[ticker] * shares_dict[ticker]
-        
-        # Calculate sector market caps
-        sector_tickers = get_sector_tickers()
-        sector_caps = pd.DataFrame(index=market_caps.index)
-        total_market_cap = pd.Series(0, index=market_caps.index)
-        
-        for sector, tickers in sector_tickers.items():
-            available_tickers = [t for t in tickers if t in market_caps.columns]
-            if available_tickers:
-                sector_caps[sector] = market_caps[available_tickers].sum(axis=1)
-                total_market_cap += sector_caps[sector]
-            else:
-                sector_caps[sector] = pd.Series(0, index=market_caps.index)
-        
-        # Add total
-        sector_caps["Total"] = total_market_cap
-        
-        # Calculate weight percentages
-        for sector in sector_tickers.keys():
-            weight_col = f"{sector}_weight_pct"
-            sector_caps[weight_col] = (sector_caps[sector] / sector_caps["Total"]) * 100
-        
-        return market_caps, sector_caps
+    # Add any missing overrides
+    for ticker, shares in SHARE_COUNT_OVERRIDES.items():
+        if ticker not in share_counts:
+            share_counts[ticker] = shares
     
-    except Exception as e:
-        logging.error(f"Error calculating market caps: {e}")
-        return None, None
-
-def save_market_cap_data(ticker_caps, sector_caps):
-    """
-    Save market cap data to files
-    
-    Args:
-        ticker_caps (DataFrame): Market caps for each ticker
-        sector_caps (DataFrame): Market caps for each sector
-    """
-    try:
-        # Save ticker market caps
-        ticker_file = os.path.join(DATA_DIR, "ticker_market_caps.parquet")
-        ticker_caps.to_parquet(ticker_file)
-        logging.info(f"Saved ticker market caps to {ticker_file}")
-        
-        # Save sector market caps
-        sector_file = os.path.join(DATA_DIR, "sector_market_caps.parquet")
-        sector_csv = os.path.join(DATA_DIR, "sector_market_caps.csv")
-        
-        # Create backups if files exist
-        if os.path.exists(sector_file):
-            backup_file = f"{sector_file}.bak"
-            sector_caps.to_parquet(backup_file)
-            logging.info(f"Created backup of sector market caps at {backup_file}")
-        
-        # Save new files
-        sector_caps.to_parquet(sector_file)
-        sector_caps.to_csv(sector_csv)
-        logging.info(f"Saved sector market caps to {sector_file} and {sector_csv}")
-        
-        # Print latest sector stats
-        latest_date = sector_caps.index.max()
-        print(f"\nSector Market Caps as of {latest_date.strftime('%Y-%m-%d')}:")
-        
-        # Convert to billions for display
-        latest_sectors = sector_caps.loc[latest_date].copy()
-        sector_names = [s for s in sector_caps.columns if "_weight_pct" not in s and s != "Total"]
-        
-        for sector in sector_names:
-            cap_billions = latest_sectors[sector] / 1_000_000_000
-            weight_pct = latest_sectors.get(f"{sector}_weight_pct", 0)
-            print(f"  {sector}: ${cap_billions:.2f} billion ({weight_pct:.1f}%)")
-        
-        # Print total
-        total_billions = latest_sectors["Total"] / 1_000_000_000
-        print(f"  Total: ${total_billions:.2f} billion")
-        
-        return True
-    
-    except Exception as e:
-        logging.error(f"Error saving market cap data: {e}")
-        return False
-
-def print_detailed_sector_report(sector_name, ticker_caps):
-    """
-    Print detailed report for a specific sector
-    
-    Args:
-        sector_name (str): The sector name
-        ticker_caps (DataFrame): Market caps for each ticker
-    """
-    print(f"\nDetailed report for {sector_name} sector:")
-    
-    # Get tickers for this sector
-    sector_tickers = get_sector_tickers().get(sector_name, [])
-    if not sector_tickers:
-        print(f"  No tickers defined for {sector_name} sector")
-        return
-    
-    # Get latest date
-    latest_date = ticker_caps.index.max()
-    
-    # Print header
-    print(f"  Market caps as of {latest_date.strftime('%Y-%m-%d')}:")
-    
-    # Calculate total sector market cap
-    available_tickers = [t for t in sector_tickers if t in ticker_caps.columns]
-    total_sector_cap = ticker_caps.loc[latest_date, available_tickers].sum()
-    
-    # Sort tickers by market cap
-    ticker_values = []
-    for ticker in available_tickers:
-        if ticker in ticker_caps.columns:
-            market_cap = ticker_caps.loc[latest_date, ticker]
-            ticker_values.append((ticker, market_cap))
-    
-    # Sort by market cap (descending)
-    ticker_values.sort(key=lambda x: x[1], reverse=True)
-    
-    # Print each ticker
-    for ticker, market_cap in ticker_values:
-        cap_billions = market_cap / 1_000_000_000
-        percentage = (market_cap / total_sector_cap) * 100
-        print(f"    {ticker}: ${cap_billions:.2f} billion ({percentage:.1f}% of sector)")
-    
-    # Print total
-    total_billions = total_sector_cap / 1_000_000_000
-    print(f"    Total: ${total_billions:.2f} billion")
-
-def main():
-    """Main function"""
-    import argparse
-    
-    parser = argparse.ArgumentParser(description="Update fully diluted share counts and calculate market caps")
-    parser.add_argument("--update-shares", action="store_true", help="Update share counts for all tickers")
-    parser.add_argument("--calculate-caps", action="store_true", help="Calculate market caps using current share counts")
-    parser.add_argument("--ticker", type=str, help="Update share count for a specific ticker")
-    parser.add_argument("--sector", type=str, help="Print detailed report for a specific sector")
-    parser.add_argument("--all", action="store_true", help="Update shares and calculate market caps")
-    args = parser.parse_args()
-    
-    # Default to --all if no arguments provided
-    if not (args.update_shares or args.calculate_caps or args.ticker or args.sector or args.all):
-        args.all = True
-    
-    # Update share for a single ticker
-    if args.ticker:
-        change = update_ticker_share_count(args.ticker)
-        if change:
-            print(f"Updated {args.ticker} share count: {change['old_value'] or 'None'} -> {change['new_value']} ({change['percent_change']})")
-        else:
-            print(f"No change for {args.ticker}")
-    
-    # Update all share counts
-    if args.update_shares or args.all:
-        updated = update_all_shares_data()
-        
-        # Only calculate market caps if shares were updated or explicitly requested
-        if updated or args.calculate_caps or args.all:
-            ticker_caps, sector_caps = calculate_market_caps()
-            if ticker_caps is not None and sector_caps is not None:
-                save_market_cap_data(ticker_caps, sector_caps)
-                
-                # Print detailed sector report if requested
-                if args.sector and ticker_caps is not None:
-                    print_detailed_sector_report(args.sector, ticker_caps)
-    
-    # Calculate market caps without updating shares
-    elif args.calculate_caps:
-        ticker_caps, sector_caps = calculate_market_caps()
-        if ticker_caps is not None and sector_caps is not None:
-            save_market_cap_data(ticker_caps, sector_caps)
-            
-            # Print detailed sector report if requested
-            if args.sector and ticker_caps is not None:
-                print_detailed_sector_report(args.sector, ticker_caps)
-    
-    # Print detailed sector report only
-    elif args.sector:
-        ticker_caps, _ = calculate_market_caps()
-        if ticker_caps is not None:
-            print_detailed_sector_report(args.sector, ticker_caps)
+    return share_counts
 
 if __name__ == "__main__":
-    main()
+    print("Polygon Fully Diluted Shares Utility")
+    print("------------------------------------")
+    
+    if len(sys.argv) > 1:
+        ticker = sys.argv[1].upper()
+        shares = get_fully_diluted_share_count(ticker, use_cache=False, update_cache=True)
+        if shares:
+            print(f"{ticker}: {shares:,} shares (fully diluted)")
+        else:
+            print(f"No share data available for {ticker}")
+    else:
+        print("Updating all share counts with fully diluted values...")
+        if update_share_counts():
+            print("Successfully updated all share counts")
+        else:
+            print("Failed to update some share counts")
