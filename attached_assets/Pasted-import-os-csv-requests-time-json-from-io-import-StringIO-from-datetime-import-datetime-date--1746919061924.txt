@@ -1,0 +1,97 @@
+import os, csv, requests, time, json
+from io import StringIO
+from datetime import datetime, date, timedelta
+from threading import Thread
+from sqlalchemy import create_engine, text
+
+# --- Configuration ---
+FINNHUB_API_KEY = os.getenv("FINNHUB_API_KEY")
+SHEET_CSV_URL = (
+    "https://docs.google.com/spreadsheets/"
+    "d/1DqyRcp_UyKB72z0uN9yClnRRIXDtq8U7x6jEODw3as4"
+    "/export?format=csv&gid=0"
+)
+HIST_CSV = "data/market_caps.csv"
+DB_URL  = "sqlite:///data/t2d_pulse.db"
+
+# --- Helpers ---
+def load_sectors():
+    r = requests.get(SHEET_CSV_URL, timeout=10)
+    r.raise_for_status()
+    reader = csv.DictReader(StringIO(r.text))
+    m = {}
+    for row in reader:
+        sec  = row["sector"].strip()
+        tick = row["ticker"].strip().upper()
+        m.setdefault(sec, []).append(tick)
+    return m
+
+def fetch_market_cap(ticker):
+    url = (
+        f"https://finnhub.io/api/v1/stock/metric"
+        f"?symbol={ticker}&metric=all&token={FINNHUB_API_KEY}"
+    )
+    data = requests.get(url).json().get("metric", {})
+    return data.get("marketCapitalization", 0) * 1_000_000
+
+def ensure_db():
+    os.makedirs("data", exist_ok=True)
+    engine = create_engine(DB_URL)
+    with engine.begin() as conn:
+        conn.execute(text(
+            "CREATE TABLE IF NOT EXISTS sector_values (sector TEXT, date TEXT, score REAL, PRIMARY KEY(sector,date))"
+        ))
+        conn.execute(text(
+            "CREATE TABLE IF NOT EXISTS pulse_values  (date TEXT PRIMARY KEY, score REAL)"
+        ))
+    return engine
+
+# --- Ingestion & Backfill ---
+def ingest():
+    today = date.today().isoformat()
+    sectors = load_sectors()
+    engine  = ensure_db()
+
+    csv_rows = []
+    sector_totals = {}
+    for sec, ticks in sectors.items():
+        total = 0
+        for t in ticks:
+            cap = fetch_market_cap(t)
+            total += cap
+            csv_rows.append({"date": today, "ticker": t, "market_cap": cap})
+        sector_totals[sec] = total
+
+    write_header = not os.path.exists(HIST_CSV) or os.path.getsize(HIST_CSV) == 0
+    with open(HIST_CSV, "a", newline="") as f:
+        w = csv.DictWriter(f, fieldnames=["date","ticker","market_cap"])
+        if write_header: w.writeheader()
+        w.writerows(csv_rows)
+
+    with engine.begin() as conn:
+        for sec, tot in sector_totals.items():
+            conn.execute(text(
+                "INSERT OR REPLACE INTO sector_values (sector,date,score) VALUES (:s,:d,:v)"
+            ), {"s":sec, "d":today, "v":tot})
+        pulse = sum(sector_totals.values())
+        conn.execute(text(
+            "INSERT OR REPLACE INTO pulse_values (date,score) VALUES (:d,:v)"
+        ), {"d":today, "v":pulse})
+    print(f"[{datetime.now()}] Ingested Pulse={pulse:,}")
+
+def schedule_daily(hour=17, minute=0):
+    def job():
+        while True:
+            now = datetime.now()
+            run_at = now.replace(hour=hour, minute=minute, second=0, microsecond=0)
+            wait = (run_at - now).total_seconds()
+            if wait < 0: wait += 86400
+            time.sleep(wait)
+            ingest()
+    Thread(target=job, daemon=True).start()
+
+if __name__ == "__main__":
+    ingest()
+    schedule_daily()
+    while True:
+        time.sleep(3600)
