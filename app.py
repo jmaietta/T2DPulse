@@ -155,6 +155,30 @@ app = dash.Dash(
 # Set the server for production deployment
 server = app.server
 
+# Add a route to download the sector market cap CSV file
+@server.route('/download/sector_marketcap.csv')
+def download_sector_marketcap():
+    """Create a direct download route for the sector market cap data"""
+    try:
+        return flask.send_file('data/sector_marketcap_30day_table.csv',
+                     mimetype='text/csv',
+                     download_name='sector_marketcap_30day_table.csv',
+                     as_attachment=True)
+    except Exception as e:
+        return str(e)
+
+# Add a route to download the Excel file
+@server.route('/download/sector_marketcap.xlsx')
+def download_sector_marketcap_excel():
+    """Create a direct download route for the sector market cap Excel data"""
+    try:
+        return flask.send_file('30day_sector_marketcap_analysis.xlsx',
+                     mimetype='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
+                     download_name='30day_sector_marketcap_analysis.xlsx',
+                     as_attachment=True)
+    except Exception as e:
+        return str(e)
+
 # Set page title
 app.title = "T2D Pulse"
 
