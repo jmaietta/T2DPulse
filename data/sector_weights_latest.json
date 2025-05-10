@@ -1,18 +1,18 @@
 {
   "weights": {
-    "AdTech": 6.16,
-    "Cloud_Infrastructure": 14.36,
-    "Fintech": 0.56,
-    "eCommerce": 7.26,
-    "Consumer_Internet": 7.45,
-    "IT_Services": 1.5,
-    "Hardware/Devices": 5.49,
-    "Cybersecurity": 0.78,
-    "Dev_Tools": 0.18,
-    "AI_Infrastructure": 21.3,
-    "Semiconductors": 15.87,
-    "Vertical_SaaS": 0.45,
-    "Enterprise_SaaS": 12.09,
-    "SMB_SaaS": 6.56
+    "AI_Infrastructure": 5.18,
+    "AdTech": 5.43,
+    "Cloud_Infrastructure": 0.45,
+    "Consumer_Internet": 6.56,
+    "Cybersecurity": 0.69,
+    "Dev_Tools_/_Analytics": 0.19,
+    "Enterprise_SaaS": 10.47,
+    "Fintech": 0.38,
+    "Hardware_/_Devices": 4.79,
+    "IT_Services_/_Legacy_Tech": 14.21,
+    "SMB_SaaS": 5.77,
+    "Semiconductors": 43.21,
+    "Vertical_SaaS": 0.39,
+    "eCommerce": 2.27
   }
 }
