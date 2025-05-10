@@ -1,0 +1,100 @@
+# backend/ingest.py
+
+import os
+import sqlite3
+import requests
+from datetime import date, datetime
+from threading import Thread
+from fastapi import FastAPI
+
+# --- Configuration ---
+DB_PATH = os.path.join(os.path.dirname(__file__), "data", "t2d_pulse.db")
+FINNHUB_API_KEY = os.getenv("FINNHUB_API_KEY")
+
+# Define your 14 sectors here, each as a list of tickers
+SECTORS = {
+    "AdTech": ["GOOGL", "META", "APP", "TTD", "DV", "MGNI", "CRTO", "PUBM", "APPS"],
+    "Cloud Infra": ["AMZN", "MSFT", "SNOW"],
+    # ... add the other 12 sectors ...
+}
+
+# --- DB Helpers ---
+def get_db():
+    os.makedirs(os.path.dirname(DB_PATH), exist_ok=True)
+    conn = sqlite3.connect(DB_PATH)
+    conn.row_factory = sqlite3.Row
+    return conn
+
+def migrate():
+    db = get_db()
+    c = db.cursor()
+    c.execute("""
+      CREATE TABLE IF NOT EXISTS sector_values (
+        sector TEXT,
+        date   TEXT,
+        score  REAL,
+        PRIMARY KEY (sector, date)
+      )
+    """)
+    c.execute("""
+      CREATE TABLE IF NOT EXISTS pulse_values (
+        date  TEXT PRIMARY KEY,
+        score REAL
+      )
+    """)
+    db.commit()
+    db.close()
+
+def upsert(table, columns, values):
+    db = get_db()
+    cols = ",".join(columns)
+    placeholders = ",".join("?" for _ in values)
+    sql = f"INSERT OR REPLACE INTO {table} ({cols}) VALUES ({placeholders})"
+    db.execute(sql, values)
+    db.commit()
+    db.close()
+
+# --- Fetch Logic ---
+def fetch_market_cap(symbol):
+    """Fetch today’s market cap (in USD) via Finnhub metrics API."""
+    url = (f"https://finnhub.io/api/v1/stock/metric"
+           f"?symbol={symbol}&metric=all&token={FINNHUB_API_KEY}")
+    r = requests.get(url)
+    j = r.json().get("metric", {})
+    # Finnhub returns cap in *millions* USD
+    return j.get("marketCapitalization", 0) * 1_000_000
+
+def ingest_once():
+    today = date.today().isoformat()
+    sector_totals = {}
+    for sec, tickers in SECTORS.items():
+        caps = [fetch_market_cap(t) for t in tickers]
+        total = sum(caps)
+        sector_totals[sec] = total
+        upsert("sector_values", ["sector","date","score"], [sec, today, total])
+    # Pulse = sum of all sectors
+    pulse_score = sum(sector_totals.values())
+    upsert("pulse_values", ["date","score"], [today, pulse_score])
+    print(f"[{datetime.now()}] Ingested Pulse={pulse_score:,} and {len(SECTORS)} sectors")
+
+def schedule_daily(hour=17, minute=0):
+    def runner():
+        while True:
+            now = datetime.now()
+            run_at = now.replace(hour=hour, minute=minute, second=0, microsecond=0)
+            wait = (run_at - now).total_seconds()
+            if wait < 0:
+                wait += 86400
+            time.sleep(wait)
+            ingest_once()
+    Thread(target=runner, daemon=True).start()
+
+# --- FastAPI Startup ---
+app = FastAPI()
+@app.on_event("startup")
+def startup():
+    migrate()
+    ingest_once()
+    schedule_daily()
+
+# (define your /api/pulse and /api/sectors endpoints below)
