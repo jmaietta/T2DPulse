@@ -45,22 +45,22 @@ SECTOR_DRIVERS = {
     'Hardware / Devices': ['Consumer Sentiment', 'Supply Chain Health', 'NASDAQ Trend']
 }
 
-# Representative ticker symbols for each sector
+# Representative ticker symbols for each sector - using authentic T2D Pulse tickers
 SECTOR_TICKERS = {
-    'SMB SaaS': ['ZM', 'DOCU', 'WDAY', 'BILL', 'HUBS'],
-    'Enterprise SaaS': ['CRM', 'NOW', 'MSFT', 'ORCL', 'TEAM'],
-    'Cloud Infrastructure': ['AMZN', 'MSFT', 'GOOGL', 'NET', 'DDOG'],
-    'AdTech': ['TTD', 'ROKU', 'CRTO', 'MGNI', 'APPS'],
-    'Fintech': ['SQ', 'PYPL', 'AFRM', 'COIN', 'HOOD'],
-    'Consumer Internet': ['META', 'SNAP', 'PINS', 'GOOGL', 'TWTR'],
-    'eCommerce': ['AMZN', 'SHOP', 'ETSY', 'W', 'BABA'],
-    'Cybersecurity': ['CRWD', 'PANW', 'ZS', 'OKTA', 'S'],
-    'Dev Tools / Analytics': ['DDOG', 'MDB', 'PD', 'SPLK', 'ESTC'],
-    'Semiconductors': ['NVDA', 'AMD', 'AVGO', 'TSM', 'QCOM'],
-    'AI Infrastructure': ['NVDA', 'GOOGL', 'MSFT', 'IBM', 'AMZN'],
-    'Vertical SaaS': ['VEEV', 'PCTY', 'PTON', 'REAL', 'ATVI'],
-    'IT Services / Legacy Tech': ['IBM', 'ACN', 'CSCO', 'HPQ', 'DELL'],
-    'Hardware / Devices': ['AAPL', 'MSFT', 'SONO', 'HEAR', 'FIT']
+    'SMB SaaS': ['ADBE', 'BILL', 'HUBS'],
+    'Enterprise SaaS': ['CRM', 'MSFT', 'ORCL'],
+    'Cloud Infrastructure': ['CSCO', 'SNOW', 'AMZN'],
+    'AdTech': ['TTD', 'PUBM', 'META'],
+    'Fintech': ['XYZ', 'PYPL', 'COIN'],
+    'Consumer Internet': ['META', 'NFLX', 'SNAP'],
+    'eCommerce': ['ETSY', 'SHOP', 'SE'],
+    'Cybersecurity': ['PANW', 'CRWD', 'OKTA'],
+    'Dev Tools / Analytics': ['DDOG', 'MDB', 'TEAM'],
+    'Semiconductors': ['NVDA', 'AMD', 'TSM'],
+    'AI Infrastructure': ['GOOGL', 'META', 'NVDA'],
+    'Vertical SaaS': ['PCOR', 'CSGP', 'CCCS'],
+    'IT Services / Legacy Tech': ['ACN', 'PLTR', 'CTSH'],
+    'Hardware / Devices': ['AAPL', 'DELL', 'SMCI']
 }
 
 def get_may2nd_sector_data():
