@@ -11,6 +11,15 @@ import logging
 import pandas as pd
 from datetime import datetime, timedelta
 import pytz
+from pathlib import Path
+from filelock import FileLock
+from functools import lru_cache
+
+# Define consistent data directory path - can be overridden with environment variable
+DATA_DIR = Path(os.getenv("DATA_DIR", "data")).resolve()
+
+# Create data directory if it doesn't exist
+DATA_DIR.mkdir(exist_ok=True)
 
 # Set up logging
 logging.basicConfig(
@@ -52,8 +61,29 @@ def read_data_file(filename, index_col=0, date_col=None):
         return pd.DataFrame()
 
 def read_sector_data(filename):
-    """Legacy function for read_data_file, kept for backward compatibility"""
-    return read_data_file(filename)
+    """
+    Read sector data from file and raise descriptive exception if missing
+    
+    Args:
+        filename (str): Path to the sector data file
+        
+    Returns:
+        pd.DataFrame: Sector data
+        
+    Raises:
+        FileNotFoundError: If the file doesn't exist
+    """
+    # Check if file exists before attempting to read
+    if not os.path.exists(filename):
+        raise FileNotFoundError(f"Critical sector data file not found: {filename}")
+    
+    df = read_data_file(filename)
+    
+    # If dataframe is empty after reading, something went wrong
+    if df.empty:
+        raise ValueError(f"Failed to load sector data from {filename} - file may be corrupted")
+        
+    return df
 
 def read_pulse_score(filename):
     """Legacy function for read_data_file, kept for backward compatibility"""
