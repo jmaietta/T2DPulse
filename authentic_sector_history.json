@@ -1,100 +1,18 @@
 {
-  "AdTech": {
-    "score": 53.5,
-    "market_cap": 2315373356600.0,
-    "history": {
-      "2025-05-09": 53.5
-    }
-  },
-  "Cloud Infrastructure": {
-    "score": 53.0,
-    "market_cap": 7221704535900.0,
-    "history": {
-      "2025-05-09": 53.0
-    }
-  },
-  "Fintech": {
-    "score": 52.0,
-    "market_cap": 310004971600.0,
-    "history": {
-      "2025-05-09": 52.0
-    }
-  },
-  "eCommerce": {
-    "score": 53.5,
-    "market_cap": 4132866076300.0,
-    "history": {
-      "2025-05-09": 53.5
-    }
-  },
-  "Consumer Internet": {
-    "score": 51.5,
-    "market_cap": 3045986596400.0,
-    "history": {
-      "2025-05-09": 51.5
-    }
-  },
-  "IT Services": {
-    "score": 50.0,
-    "market_cap": 875000708500.0,
-    "history": {
-      "2025-05-09": 50.0
-    }
-  },
-  "Hardware/Devices": {
-    "score": 50.0,
-    "market_cap": 3108788576200.0,
-    "history": {
-      "2025-05-09": 50.0
-    }
-  },
-  "Cybersecurity": {
-    "score": 49.0,
-    "market_cap": 444944238400.0,
-    "history": {
-      "2025-05-09": 49.0
-    }
-  },
-  "Dev Tools": {
-    "score": 50.0,
-    "market_cap": 99358816600.0,
-    "history": {
-      "2025-05-09": 50.0
-    }
-  },
-  "AI Infrastructure": {
-    "score": 53.0,
-    "market_cap": 10993650185900.0,
-    "history": {
-      "2025-05-09": 53.0
-    }
-  },
-  "Semiconductors": {
-    "score": 57.5,
-    "market_cap": 9079549584000.0,
-    "history": {
-      "2025-05-09": 57.5
-    }
-  },
-  "Vertical SaaS": {
-    "score": 48.0,
-    "market_cap": 255570076700.0,
-    "history": {
-      "2025-05-09": 48.0
-    }
-  },
-  "Enterprise SaaS": {
-    "score": 52.0,
-    "market_cap": 6908945366000.0,
-    "history": {
-      "2025-05-09": 52.0
-    }
-  },
-  "SMB SaaS": {
-    "score": 52.0,
-    "market_cap": 2557846048300.0,
-    "history": {
-      "2025-05-09": 52.0
-    }
+  "2025-05-09": {
+    "SMB SaaS": 52.0,
+    "Enterprise SaaS": 52.0,
+    "Cloud Infrastructure": 53.0,
+    "AdTech": 53.5,
+    "Fintech": 52.0,
+    "Consumer Internet": 51.5,
+    "eCommerce": 53.5,
+    "Cybersecurity": 49.0,
+    "Dev Tools / Analytics": 49.5,
+    "Semiconductors": 57.49999999999999,
+    "AI Infrastructure": 53.0,
+    "Vertical SaaS": 48.0,
+    "IT Services / Legacy Tech": 57.49999999999999,
+    "Hardware / Devices": 57.49999999999999
   }
 }
