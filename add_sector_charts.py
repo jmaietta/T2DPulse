@@ -8,7 +8,7 @@ with open('app.py', 'r') as f:
     app_content = f.read()
 
 # Define pattern to find
-target_pattern = 'html.Div(["Trend:", '
+target_pattern = '# Tickers with label'
 
 # Check if pattern exists
 if target_pattern not in app_content:
