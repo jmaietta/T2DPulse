@@ -18,16 +18,7 @@ def load_shares_outstanding():
     
     if os.path.exists(shares_cache):
         with open(shares_cache, 'r') as f:
-            shares_data = json.load(f)
-            
-            # Use fully diluted shares for all market cap calculations
-            # Override with accurate share counts from SEC filings
-            if "META" in shares_data:
-                shares_data["META"] = 2590000000  # Override with fully diluted shares
-            if "GOOGL" in shares_data:
-                shares_data["GOOGL"] = 12291000000  # Override with fully diluted shares
-                
-            return shares_data
+            return json.load(f)
     else:
         print(f"Shares cache not found: {shares_cache}")
         return None

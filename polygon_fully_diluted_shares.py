@@ -230,17 +230,79 @@ def update_share_counts():
         # Get API key
         api_key = get_api_key()
         if not api_key:
+            logging.error("POLYGON_API_KEY not set in environment. Cannot fetch share data.")
             return False
             
-        # Load the cache
-        cache = load_shares_cache()
+        # Initialize cache if it doesn't exist
+        if not os.path.exists(SHARES_CACHE_FILE):
+            cache = {}
+            Path(CACHE_DIR).mkdir(exist_ok=True)
+            with open(SHARES_CACHE_FILE, 'w') as f:
+                json.dump(cache, f)
+        else:
+            # Load the cache
+            with open(SHARES_CACHE_FILE, 'r') as f:
+                try:
+                    cache = json.load(f)
+                except json.JSONDecodeError:
+                    logging.error("Invalid JSON in cache file. Creating new cache.")
+                    cache = {}
+        
+        # First, ensure all override tickers are in the cache
+        for ticker, shares in SHARE_COUNT_OVERRIDES.items():
+            if ticker not in cache or cache[ticker].get('shares') != shares:
+                logging.info(f"Adding override for {ticker}: {shares:,} shares")
+                cache[ticker] = {
+                    "shares": shares,
+                    "name": f"{ticker} (Manual Override)",
+                    "date": datetime.now().isoformat(),
+                    "market_cap": None
+                }
+        
+        # Save the updated cache with overrides
+        with open(SHARES_CACHE_FILE, 'w') as f:
+            json.dump(cache, f, indent=2)
         
         # Update each ticker
         success_count = 0
         for ticker in tickers:
-            shares = get_fully_diluted_share_count(ticker, use_cache=True, update_cache=True)
-            if shares is not None:
-                success_count += 1
+            try:
+                # Check if it's an override ticker
+                if ticker in SHARE_COUNT_OVERRIDES:
+                    success_count += 1
+                    continue
+                    
+                # Check if ticker is already in cache and recent
+                if ticker in cache:
+                    entry = cache[ticker]
+                    if "date" in entry and "shares" in entry:
+                        cache_date = datetime.fromisoformat(entry["date"])
+                        if datetime.now() - cache_date < timedelta(days=7):
+                            # Cache is recent, no need to update
+                            success_count += 1
+                            continue
+                
+                # Fetch the fully diluted share count
+                shares, name, market_cap = fetch_fully_diluted_shares(ticker, api_key)
+                
+                if shares is not None:
+                    # Update the cache
+                    cache[ticker] = {
+                        "shares": shares,
+                        "name": name,
+                        "date": datetime.now().isoformat(),
+                        "market_cap": market_cap
+                    }
+                    success_count += 1
+                    logging.info(f"Updated {ticker} with {shares:,} shares")
+                else:
+                    logging.warning(f"Could not get shares for {ticker}")
+            except Exception as e:
+                logging.error(f"Error processing {ticker}: {e}")
+                
+        # Save the final updated cache
+        with open(SHARES_CACHE_FILE, 'w') as f:
+            json.dump(cache, f, indent=2)
                 
         logging.info(f"Successfully updated {success_count}/{len(tickers)} tickers with fully diluted shares")
         return success_count == len(tickers)

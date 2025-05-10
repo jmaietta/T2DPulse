@@ -32,9 +32,10 @@ from tqdm import tqdm
 
 # Manual overrides for stocks with known share count discrepancies
 # These values come from the most authoritative sources (SEC filings)
+# BUSINESS RULE: Always use fully diluted share counts for all market cap calculations
 SHARE_COUNT_OVERRIDES = {
-    "GOOGL": 12_291_000_000,  # Alphabet Inc.
-    "META": 2_590_000_000,    # Meta Platforms Inc.
+    "GOOGL": 12_291_000_000,  # Alphabet Inc. (fully diluted)
+    "META": 2_590_000_000,    # Meta Platforms Inc. (fully diluted)
     # Add others as needed
 }
 
