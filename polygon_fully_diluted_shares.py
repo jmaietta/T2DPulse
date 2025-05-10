@@ -153,11 +153,18 @@ def get_fully_diluted_share_count(ticker, use_cache=True, update_cache=True):
         cache = load_shares_cache()
         if ticker in cache:
             cache_entry = cache[ticker]
-            # Check if cache entry is recent (less than 7 days old)
-            cached_date = datetime.fromisoformat(cache_entry.get("date", "2000-01-01"))
-            if datetime.now() - cached_date < timedelta(days=7):
-                logging.info(f"Using cached share count for {ticker}: {cache_entry.get('shares'):,}")
-                return cache_entry.get("shares")
+            # Handle both dictionary and integer formats in cache
+            if isinstance(cache_entry, dict):
+                # Dictionary format (new style)
+                # Check if cache entry is recent (less than 7 days old)
+                cached_date = datetime.fromisoformat(cache_entry.get("date", "2000-01-01"))
+                if datetime.now() - cached_date < timedelta(days=7):
+                    logging.info(f"Using cached share count for {ticker}: {cache_entry.get('shares'):,}")
+                    return cache_entry.get("shares")
+            elif isinstance(cache_entry, (int, float)) and cache_entry > 0:
+                # Integer format (old style) - still a valid share count
+                logging.info(f"Using cached share count for {ticker}: {cache_entry:,}")
+                return cache_entry
     
     # Fetch fresh data
     api_key = get_api_key()

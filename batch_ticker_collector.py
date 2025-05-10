@@ -239,7 +239,12 @@ def process_yf_data(data):
                     # Get the fully diluted share count
                     shares_outstanding = get_fully_diluted_share_count(ticker)
                     
-                    if shares_outstanding and 'Close' in data[ticker].columns and not data[ticker]['Close'].empty:
+                    # Handle both integer and dictionary responses from get_fully_diluted_share_count
+                    if isinstance(shares_outstanding, dict) and 'shares' in shares_outstanding:
+                        # Extract shares from dictionary if it's in that format
+                        shares_outstanding = shares_outstanding['shares']
+                    
+                    if shares_outstanding and isinstance(shares_outstanding, (int, float)) and shares_outstanding > 0 and 'Close' in data[ticker].columns and not data[ticker]['Close'].empty:
                         # Market cap = price * fully diluted outstanding shares (accurate)
                         mcap_data[ticker] = data[ticker]['Close'] * shares_outstanding
                         logging.info(f"Calculated market cap for {ticker} using fully diluted shares: {shares_outstanding:,}")

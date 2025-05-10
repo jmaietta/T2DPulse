@@ -38,7 +38,17 @@ def import_polygon_fully_diluted_shares():
     try:
         sys.path.append('.')
         from polygon_fully_diluted_shares import get_fully_diluted_share_count, SHARE_COUNT_OVERRIDES
-        return get_fully_diluted_share_count, SHARE_COUNT_OVERRIDES
+        
+        # Fix the issue with get_fully_diluted_share_count - modify it to handle integers correctly
+        def fixed_get_share_count(ticker):
+            """Fixed version of get_fully_diluted_share_count that handles integer return values correctly"""
+            share_count = get_fully_diluted_share_count(ticker)
+            # If we got a number back, that's a valid share count
+            if isinstance(share_count, (int, float)) and share_count > 0:
+                return share_count
+            return None
+            
+        return fixed_get_share_count, SHARE_COUNT_OVERRIDES
     except ImportError as e:
         logging.error(f"Error importing polygon_fully_diluted_shares: {e}")
         return None, {}
