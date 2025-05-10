@@ -1,0 +1,340 @@
+{
+  "date": "2025-05-10",
+  "market_caps": {
+    "AdTech": {
+      "total_market_cap": 3.0,
+      "tickers": [
+        "APP",
+        "APPS",
+        "CRTO",
+        "DV",
+        "GOOGL",
+        "META",
+        "MGNI",
+        "PUBM",
+        "TTD"
+      ],
+      "ticker_market_caps": {
+        "APP": 111.0,
+        "APPS": 436.0,
+        "CRTO": 1.0,
+        "DV": 2.0,
+        "GOOGL": 1.0,
+        "META": 1.0,
+        "MGNI": 2.0,
+        "PUBM": 536.0,
+        "TTD": 34.0
+      }
+    },
+    "": {
+      "total_market_cap": 0,
+      "tickers": [],
+      "ticker_market_caps": {}
+    },
+    "IT_Services____Legacy_Tech": {
+      "total_market_cap": 872.0,
+      "tickers": [
+        "ACN",
+        "CTSH",
+        "DXC",
+        "HPQ",
+        "IBM",
+        "INFY",
+        "PLTR",
+        "WIT"
+      ],
+      "ticker_market_caps": {
+        "ACN": 192.0,
+        "CTSH": 39.0,
+        "DXC": 2.0,
+        "HPQ": 24.0,
+        "IBM": 231.0,
+        "INFY": 73.0,
+        "PLTR": 276.0,
+        "WIT": 29.0
+      }
+    },
+    "Semiconductors": {
+      "total_market_cap": 5.0,
+      "tickers": [
+        "AMAT",
+        "AMD",
+        "ARM",
+        "AVGO",
+        "INTC",
+        "NVDA",
+        "QCOM",
+        "TSM"
+      ],
+      "ticker_market_caps": {
+        "AMAT": 126.0,
+        "AMD": 166.0,
+        "ARM": 122.0,
+        "AVGO": 978.0,
+        "INTC": 93.0,
+        "NVDA": 2.0,
+        "QCOM": 159.0,
+        "TSM": 789.0
+      }
+    },
+    "Cloud_Infrastructure": {
+      "total_market_cap": 8.0,
+      "tickers": [
+        "AMZN",
+        "CRM",
+        "CSCO",
+        "GOOGL",
+        "MSFT",
+        "NET",
+        "ORCL",
+        "SNOW"
+      ],
+      "ticker_market_caps": {
+        "AMZN": 2.0,
+        "CRM": 264.0,
+        "CSCO": 237.0,
+        "GOOGL": 1.0,
+        "MSFT": 3.0,
+        "NET": 45.0,
+        "ORCL": 421.0,
+        "SNOW": 58.0
+      }
+    },
+    "Hardware_Devices": {
+      "total_market_cap": 3.0,
+      "tickers": [
+        "AAPL",
+        "DELL",
+        "HPQ",
+        "LOGI",
+        "PSTG",
+        "SMCI",
+        "SSYS",
+        "STX",
+        "WDC"
+      ],
+      "ticker_market_caps": {
+        "AAPL": 2.0,
+        "DELL": 66.0,
+        "HPQ": 24.0,
+        "LOGI": 13.0,
+        "PSTG": 15.0,
+        "SMCI": 19.0,
+        "SSYS": 789.0,
+        "STX": 20.0,
+        "WDC": 15.0
+      }
+    },
+    "Vertical_SasS": {
+      "total_market_cap": 257.0,
+      "tickers": [
+        "CCCS",
+        "CPRT",
+        "CSGP",
+        "GWRE",
+        "ICE",
+        "PCOR",
+        "SSNC",
+        "TTAN"
+      ],
+      "ticker_market_caps": {
+        "CCCS": 5.0,
+        "CPRT": 59.0,
+        "CSGP": 31.0,
+        "GWRE": 17.0,
+        "ICE": 102.0,
+        "PCOR": 9.0,
+        "SSNC": 19.0,
+        "TTAN": 11.0
+      }
+    },
+    "FinTech": {
+      "total_market_cap": 401.0,
+      "tickers": [
+        "ADYEY",
+        "AFRM",
+        "BILL",
+        "COIN",
+        "FIS",
+        "FI",
+        "GPN",
+        "PYPL",
+        "SSNC",
+        "XYZ"
+      ],
+      "ticker_market_caps": {
+        "ADYEY": 49.0,
+        "AFRM": 14.0,
+        "BILL": 4.0,
+        "COIN": 50.0,
+        "FIS": 41.0,
+        "FI": 102.0,
+        "GPN": 19.0,
+        "PYPL": 68.0,
+        "SSNC": 19.0,
+        "XYZ": 30.0
+      }
+    },
+    "Cybersecurity": {
+      "total_market_cap": 451.0,
+      "tickers": [
+        "CHKP",
+        "CRWD",
+        "CYBR",
+        "FTNT",
+        "NET",
+        "OKTA",
+        "PANW",
+        "S",
+        "ZS"
+      ],
+      "ticker_market_caps": {
+        "CHKP": 23.0,
+        "CRWD": 102.0,
+        "CYBR": 17.0,
+        "FTNT": 74.0,
+        "NET": 45.0,
+        "OKTA": 20.0,
+        "PANW": 123.0,
+        "S": 6.0,
+        "ZS": 36.0
+      }
+    },
+    "Enterprise_SaaS": {
+      "total_market_cap": 6.0,
+      "tickers": [
+        "ADSK",
+        "AMZN",
+        "CRM",
+        "IBM",
+        "MSFT",
+        "NOW",
+        "ORCL",
+        "SAP",
+        "WDAY"
+      ],
+      "ticker_market_caps": {
+        "ADSK": 61.0,
+        "AMZN": 2.0,
+        "CRM": 264.0,
+        "IBM": 231.0,
+        "MSFT": 3.0,
+        "NOW": 202.0,
+        "ORCL": 421.0,
+        "SAP": 364.0,
+        "WDAY": 69.0
+      }
+    },
+    "eCommerce": {
+      "total_market_cap": 3.0,
+      "tickers": [
+        "AMZN",
+        "BABA",
+        "BKNG",
+        "CHWY",
+        "EBAY",
+        "ETSY",
+        "PDD",
+        "SE",
+        "SHOP",
+        "WMT"
+      ],
+      "ticker_market_caps": {
+        "AMZN": 2.0,
+        "BABA": 299.0,
+        "BKNG": 165.0,
+        "CHWY": 16.0,
+        "EBAY": 32.0,
+        "ETSY": 4.0,
+        "PDD": 155.0,
+        "SE": 82.0,
+        "SHOP": 119.0,
+        "WMT": 773.0
+      }
+    },
+    "Dev_Tools____Analytics": {
+      "total_market_cap": 123.0,
+      "tickers": [
+        "DDOG",
+        "ESTC",
+        "GTLB",
+        "MDB",
+        "TEAM"
+      ],
+      "ticker_market_caps": {
+        "DDOG": 37.0,
+        "ESTC": 8.0,
+        "GTLB": 8.0,
+        "MDB": 14.0,
+        "TEAM": 54.0
+      }
+    },
+    "SMB_SaaS": {
+      "total_market_cap": 3.0,
+      "tickers": [
+        "ADBE",
+        "BILL",
+        "GOOGL",
+        "HUBS",
+        "INTU",
+        "META"
+      ],
+      "ticker_market_caps": {
+        "ADBE": 163.0,
+        "BILL": 4.0,
+        "GOOGL": 1.0,
+        "HUBS": 31.0,
+        "INTU": 182.0,
+        "META": 1.0
+      }
+    },
+    "Consumer_Internet": {
+      "total_market_cap": 4.0,
+      "tickers": [
+        "ABNB",
+        "BKNG",
+        "GOOGL",
+        "META",
+        "NFLX",
+        "PINS",
+        "SNAP",
+        "SPOT",
+        "TRIP",
+        "YELP"
+      ],
+      "ticker_market_caps": {
+        "ABNB": 78.0,
+        "BKNG": 165.0,
+        "GOOGL": 1.0,
+        "META": 1.0,
+        "NFLX": 485.0,
+        "PINS": 19.0,
+        "SNAP": 13.0,
+        "SPOT": 132.0,
+        "TRIP": 1.0,
+        "YELP": 2.0
+      }
+    },
+    "AI_Infrastructure": {
+      "total_market_cap": 12.0,
+      "tickers": [
+        "AMZN",
+        "GOOGL",
+        "IBM",
+        "META",
+        "MSFT",
+        "NVDA",
+        "ORCL"
+      ],
+      "ticker_market_caps": {
+        "AMZN": 2.0,
+        "GOOGL": 1.0,
+        "IBM": 231.0,
+        "META": 1.0,
+        "MSFT": 3.0,
+        "NVDA": 2.0,
+        "ORCL": 421.0
+      }
+    }
+  }
+}
