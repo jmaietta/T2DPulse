@@ -8061,4 +8061,7 @@ if __name__ == "__main__":
     logger.info("Started auto-refresh thread to update data every 24 hours")
     
     # Run the dashboard
-    app.run(host="0.0.0.0", port=5000, debug=False)
+    # Use Replit's standard port 5000 for proper workflow recognition
+    port = 5000
+    print(f"Starting T2D Pulse dashboard on port {port}")
+    app.run(host="0.0.0.0", port=port, debug=False)
