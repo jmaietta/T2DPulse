@@ -206,10 +206,29 @@ def process_yf_data(data):
         if 'Close' in data.columns:
             price_data[ticker] = data['Close']
         
-        # Calculate market cap if we have both Close and Volume
-        if 'Close' in data.columns and 'Volume' in data.columns:
-            # Market cap = price * outstanding shares (approximated by volume)
-            mcap_data[ticker] = data['Close'] * data['Volume']
+        # Calculate market cap using fully diluted share counts instead of volume
+        try:
+            from polygon_fully_diluted_shares import get_fully_diluted_share_count
+            
+            # Get the fully diluted share count
+            shares_outstanding = get_fully_diluted_share_count(ticker)
+            
+            if shares_outstanding and 'Close' in data.columns and not data['Close'].empty:
+                # Market cap = price * fully diluted outstanding shares (accurate)
+                mcap_data[ticker] = data['Close'] * shares_outstanding
+                logging.info(f"Calculated market cap for {ticker} using fully diluted shares: {shares_outstanding:,}")
+            else:
+                logging.warning(f"Missing fully diluted share count for {ticker}, market cap calculation may be inaccurate")
+                # Fallback: use price * volume as approximation
+                if 'Close' in data.columns and 'Volume' in data.columns:
+                    mcap_data[ticker] = data['Close'] * data['Volume']
+                    logging.warning(f"Using volume as a fallback for {ticker} market cap - this is not accurate")
+        except Exception as e:
+            logging.error(f"Error calculating fully diluted market cap for {ticker}: {e}")
+            # Fallback: use price * volume as rough approximation
+            if 'Close' in data.columns and 'Volume' in data.columns:
+                mcap_data[ticker] = data['Close'] * data['Volume']
+                logging.warning(f"Using volume as a fallback for {ticker} market cap due to error - this is not accurate")
     else:
         # Multi-ticker case
         for ticker in data.columns.levels[0]:
@@ -218,11 +237,31 @@ def process_yf_data(data):
                 if ('Close' in data[ticker].columns) and (not data[ticker]['Close'].empty):
                     price_data[ticker] = data[ticker]['Close']
                 
-                # Calculate market cap if we have both Close and Volume
-                if ('Close' in data[ticker].columns and 'Volume' in data[ticker].columns and 
-                    not data[ticker]['Close'].empty and not data[ticker]['Volume'].empty):
-                    # Market cap = price * outstanding shares (approximated by volume)
-                    mcap_data[ticker] = data[ticker]['Close'] * data[ticker]['Volume']
+                # Calculate market cap using fully diluted share counts instead of volume
+                try:
+                    from polygon_fully_diluted_shares import get_fully_diluted_share_count
+                    
+                    # Get the fully diluted share count
+                    shares_outstanding = get_fully_diluted_share_count(ticker)
+                    
+                    if shares_outstanding and 'Close' in data[ticker].columns and not data[ticker]['Close'].empty:
+                        # Market cap = price * fully diluted outstanding shares (accurate)
+                        mcap_data[ticker] = data[ticker]['Close'] * shares_outstanding
+                        logging.info(f"Calculated market cap for {ticker} using fully diluted shares: {shares_outstanding:,}")
+                    else:
+                        logging.warning(f"Missing fully diluted share count for {ticker}, market cap calculation may be inaccurate")
+                        # Fallback: use price * volume as approximation
+                        if ('Close' in data[ticker].columns and 'Volume' in data[ticker].columns and 
+                            not data[ticker]['Close'].empty and not data[ticker]['Volume'].empty):
+                            mcap_data[ticker] = data[ticker]['Close'] * data[ticker]['Volume']
+                            logging.warning(f"Using volume as a fallback for {ticker} market cap - this is not accurate")
+                except Exception as e:
+                    logging.error(f"Error calculating fully diluted market cap for {ticker}: {e}")
+                    # Fallback: use price * volume as rough approximation
+                    if ('Close' in data[ticker].columns and 'Volume' in data[ticker].columns and 
+                        not data[ticker]['Close'].empty and not data[ticker]['Volume'].empty):
+                        mcap_data[ticker] = data[ticker]['Close'] * data[ticker]['Volume']
+                        logging.warning(f"Using volume as a fallback for {ticker} market cap due to error - this is not accurate")
             except Exception as e:
                 logging.error(f"Error processing ticker {ticker}: {e}")
     
