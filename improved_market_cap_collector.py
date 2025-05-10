@@ -418,7 +418,7 @@ def load_historical_market_caps() -> pd.DataFrame:
         logger.error(f"Error loading historical market caps: {e}")
         return pd.DataFrame()
 
-def update_historical_market_caps(sector_market_caps: Dict[str, float], date: str = None) -> None:
+def update_historical_market_caps(sector_market_caps: Dict[str, float], date: Optional[str] = None) -> None:
     """
     Update historical market cap data with new values
     
@@ -426,19 +426,18 @@ def update_historical_market_caps(sector_market_caps: Dict[str, float], date: st
         sector_market_caps: Dict mapping sectors to their market caps
         date: Date string in YYYY-MM-DD format (default: latest business day)
     """
-    if date is None:
-        date = get_latest_business_day()
+    current_date = get_latest_business_day() if date is None else date
         
     try:
         # Load existing data
         df = load_historical_market_caps()
         
         # Create a new row with the updated values
-        new_row = pd.Series(sector_market_caps, name=date)
+        new_row = pd.Series(sector_market_caps, name=current_date)
         
         # Update the dataframe (replace if date exists, append if not)
-        if date in df.index:
-            df.loc[date] = new_row
+        if current_date in df.index:
+            df.loc[current_date] = new_row
         else:
             df = df.append(new_row)
             
@@ -449,7 +448,7 @@ def update_historical_market_caps(sector_market_caps: Dict[str, float], date: st
         with FileLock(MARKET_CAPS_LOCK):
             df.to_csv(MARKET_CAPS_FILE)
             
-        logger.info(f"Updated historical market caps for {date}")
+        logger.info(f"Updated historical market caps for {current_date}")
     except Exception as e:
         logger.error(f"Error updating historical market caps: {e}")
 

@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 # background_data_collector.py
 # -----------------------------------------------------------
-# Background process to continuously collect ticker data
+# Background process to continuously collect ticker data and market caps
 # Runs in the background and maintains market data coverage
-# Uses batch_ticker_collector for more efficient API usage
+# Uses batch_ticker_collector for price data and market_cap_ingest for market caps
 
 import os
 import sys
@@ -14,6 +14,7 @@ import datetime
 import pytz
 import logging
 import batch_ticker_collector
+import market_cap_ingest
 from config import SECTORS
 
 # Configure logging
@@ -80,7 +81,7 @@ def check_ticker_coverage():
 
 def run_continuous_collection(check_interval=30, update_interval=60):
     """
-    Run a continuous background process to collect ticker data
+    Run a continuous background process to collect ticker data and market caps
     
     Args:
         check_interval (int): Minutes between coverage checks
@@ -88,8 +89,16 @@ def run_continuous_collection(check_interval=30, update_interval=60):
     """
     logging.info("Starting background ticker data collection process...")
     
+    # Initialize database schema for market cap collection
+    try:
+        market_cap_ingest.migrate()
+        logging.info("Market cap database initialized successfully")
+    except Exception as e:
+        logging.error(f"Error initializing market cap database: {e}")
+    
     # Variables to track last update
     last_update_time = None
+    last_market_cap_update = None
     
     # Main loop - run continuously
     while True:
@@ -99,10 +108,13 @@ def run_continuous_collection(check_interval=30, update_interval=60):
             
             # Check if we need to run an update
             run_update = False
+            run_market_cap_update = False
+            reason = ""
             
             # Check if we've never updated
             if last_update_time is None:
                 run_update = True
+                run_market_cap_update = True
                 reason = "Initial run"
             
             # Check if we're during market hours (9 AM to 6 PM Eastern on weekdays)
@@ -115,12 +127,19 @@ def run_continuous_collection(check_interval=30, update_interval=60):
                     run_update = True
                     reason = f"Scheduled update during market hours (every {update_interval} minutes)"
             
+            # Check if we need to update market caps 
+            # Do this once per day after market close (after 4:00 PM Eastern)
+            is_after_market_close = eastern_time.weekday() < 5 and current_hour >= 16
+            
+            if is_after_market_close and (last_market_cap_update is None or 
+                                         last_market_cap_update.date() < eastern_time.date()):
+                run_market_cap_update = True
+            
             # Check current coverage status
             coverage = check_ticker_coverage()
-            if coverage:
-                if coverage["days_behind"] > 0:
-                    run_update = True
-                    reason = f"Data is {coverage['days_behind']} trading days behind"
+            if coverage and coverage["days_behind"] > 0:
+                run_update = True
+                reason = f"Data is {coverage['days_behind']} trading days behind"
             
             # Run the batch update if needed
             if run_update:
@@ -139,6 +158,22 @@ def run_continuous_collection(check_interval=30, update_interval=60):
                     logging.info(f"Latest data: {new_coverage['latest_date']}")
                     logging.info(f"Days behind: {new_coverage['days_behind']}")
                     logging.info(f"Total tickers: {new_coverage['total_tickers']}")
+            
+            # Run market cap update if needed
+            if run_market_cap_update:
+                logging.info("Running market cap data collection")
+                try:
+                    today_str = eastern_time.date().isoformat()
+                    market_cap_ingest.collect_market_data(today_str)
+                    logging.info(f"Market cap data collection completed for {today_str}")
+                    last_market_cap_update = eastern_time
+                    
+                    # Export to CSV for dashboard compatibility
+                    market_cap_ingest.export_to_csv()
+                    logging.info("Exported market cap data to CSV")
+                except Exception as e:
+                    logging.error(f"Error collecting market cap data: {e}")
+                    logging.exception("Exception details:")
             
             # Sleep before next check
             sleep_time = check_interval * 60  # Convert minutes to seconds
