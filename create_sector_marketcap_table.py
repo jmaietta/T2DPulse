@@ -41,6 +41,22 @@ def extract_sector_market_caps():
     # Dictionary to store sector market caps by date
     sector_data = {}
     
+    # Target sector names (standardized)
+    target_sectors = [
+        'SMB SaaS', 'Enterprise SaaS', 'Cloud Infrastructure', 'AdTech', 
+        'Fintech', 'Consumer Internet', 'eCommerce', 'Cybersecurity', 
+        'Dev Tools / Analytics', 'Semiconductors', 'AI Infrastructure', 
+        'Vertical SaaS', 'IT Services / Legacy Tech', 'Hardware / Devices'
+    ]
+    
+    # Mapping for sector name variations
+    sector_mapping = {
+        'IT Services': 'IT Services / Legacy Tech',
+        'Hardware/Devices': 'Hardware / Devices',
+        'Dev Tools': 'Dev Tools / Analytics',
+        'Dev Tools___Analytics': 'Dev Tools / Analytics'
+    }
+    
     # Process each file
     for file_path in market_cap_files:
         try:
@@ -54,57 +70,127 @@ def extract_sector_market_caps():
             
             print(f"Processing {file_path}, columns: {df.columns.tolist()}")
             
-            # Check if this file has the data we need
+            # Look for date column or similar
+            date_col = None
+            if 'date' in df.columns:
+                date_col = 'date'
+            elif 'Date' in df.columns:
+                date_col = 'Date'
+            elif 'Unnamed: 0' in df.columns and pd.to_datetime(df['Unnamed: 0'], errors='coerce').notna().all():
+                date_col = 'Unnamed: 0'
+                
+            # Skip if no date column
+            if date_col is None:
+                print(f"No date column found in {file_path}, skipping")
+                continue
+                
+            # Standardize date format
+            df[date_col] = pd.to_datetime(df[date_col], errors='coerce')
+            # Skip if date parsing failed
+            if df[date_col].isna().all():
+                print(f"Failed to parse dates in {file_path}, skipping")
+                continue
+                
+            df[date_col] = df[date_col].dt.strftime('%Y-%m-%d')
+            
+            # Format 1: sector/market_cap columns
             if 'sector' in df.columns and ('market_cap' in df.columns or 'marketcap' in df.columns):
-                print(f"Found market cap data in {file_path}")
+                print(f"Found sector/market_cap format in {file_path}")
                 
                 # Standardize column names
                 if 'marketcap' in df.columns and 'market_cap' not in df.columns:
                     df['market_cap'] = df['marketcap']
                 
-                # Ensure date column exists
-                if 'date' not in df.columns:
-                    print(f"No date column in {file_path}, skipping")
-                    continue
-                
-                # Convert date to string format
-                df['date'] = pd.to_datetime(df['date']).dt.strftime('%Y-%m-%d')
-                
                 # Process each sector in the file
                 for sector_name, sector_group in df.groupby('sector'):
+                    # Standardize sector name if needed
+                    if sector_name in sector_mapping:
+                        sector_name = sector_mapping[sector_name]
+                        
                     if sector_name not in sector_data:
                         sector_data[sector_name] = {}
                     
                     # Add market cap for each date
                     for _, row in sector_group.iterrows():
-                        date_str = row['date']
+                        date_str = row[date_col]
                         market_cap = row['market_cap']
                         sector_data[sector_name][date_str] = market_cap
             
-            # Alternative format with date as index and sectors as columns
-            elif len(df.columns) > 1 and 'date' in df.columns:
-                # Check if any column name looks like a sector
-                sectors = [col for col in df.columns if col not in ['date', 'Day', 'Month', 'Year']]
-                if sectors:
-                    print(f"Found date-indexed market cap data in {file_path}")
+            # Format 2: Sector names as columns (wide format)
+            else:
+                # Find sector columns
+                sector_cols = []
+                for col in df.columns:
+                    # Skip date and metadata columns
+                    if col == date_col or col in ['Day', 'Month', 'Year', 'Total']:
+                        continue
                     
-                    # Convert date to string format
-                    df['date'] = pd.to_datetime(df['date']).dt.strftime('%Y-%m-%d')
+                    # Skip weight columns
+                    if '_weight_' in col or '_pct' in col:
+                        continue
+                        
+                    # Check if it's a sector name or variation
+                    normalized_col = col
+                    if col in sector_mapping:
+                        normalized_col = sector_mapping[col]
+                        
+                    if normalized_col in target_sectors or any(s in col for s in ['SaaS', 'Tech', 'Security', 'Commerce', 'Internet', 'Infrastructure']):
+                        sector_cols.append(col)
+                
+                if sector_cols:
+                    print(f"Found {len(sector_cols)} sector columns in {file_path}")
                     
                     # Process each sector column
-                    for sector in sectors:
-                        if sector not in sector_data:
-                            sector_data[sector] = {}
+                    for sector_col in sector_cols:
+                        # Get standardized sector name
+                        sector_name = sector_col
+                        if sector_col in sector_mapping:
+                            sector_name = sector_mapping[sector_col]
+                            
+                        if sector_name not in sector_data:
+                            sector_data[sector_name] = {}
                         
-                        # Add market cap for each date
+                        # Process rows
                         for _, row in df.iterrows():
-                            date_str = row['date']
-                            if pd.notna(row[sector]):
-                                market_cap = row[sector]
-                                # Convert from trillions if needed
-                                if isinstance(market_cap, str) and 'T' in market_cap:
-                                    market_cap = float(market_cap.replace('T', '')) * 1_000_000_000_000
-                                sector_data[sector][date_str] = market_cap
+                            date_str = row[date_col]
+                            
+                            # Skip if date is invalid
+                            if not isinstance(date_str, str) or len(date_str) < 8:
+                                continue
+                                
+                            # Skip if sector value is missing
+                            if pd.isna(row[sector_col]):
+                                continue
+                                
+                            # Get market cap value
+                            market_cap = row[sector_col]
+                            
+                            # Handle string formats like '1.23T'
+                            if isinstance(market_cap, str):
+                                market_cap = market_cap.strip()
+                                if market_cap.endswith('T'):
+                                    try:
+                                        market_cap = float(market_cap.replace('T', '')) * 1_000_000_000_000
+                                    except ValueError:
+                                        continue
+                                elif market_cap.endswith('B'):
+                                    try:
+                                        market_cap = float(market_cap.replace('B', '')) * 1_000_000_000
+                                    except ValueError:
+                                        continue
+                                elif market_cap.endswith('M'):
+                                    try:
+                                        market_cap = float(market_cap.replace('M', '')) * 1_000_000
+                                    except ValueError:
+                                        continue
+                                else:
+                                    try:
+                                        market_cap = float(market_cap)
+                                    except ValueError:
+                                        continue
+                            
+                            # Store in sector data
+                            sector_data[sector_name][date_str] = market_cap
         
         except Exception as e:
             print(f"Error processing {file_path}: {e}")
