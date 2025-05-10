@@ -1,0 +1,1529 @@
+[
+  {
+    "timestamp": "2025-05-09 18:11:12",
+    "date": "2025-05-09",
+    "total": 94,
+    "covered": 56,
+    "pct": 59.57446808510638,
+    "covered_tickers": [
+      "AAPL",
+      "ABNB",
+      "ACN",
+      "ADBE",
+      "ADSK",
+      "ADYEY",
+      "AFRM",
+      "AMAT",
+      "AMD",
+      "AMZN",
+      "APP",
+      "APPS",
+      "ARM",
+      "AVGO",
+      "BABA",
+      "BILL",
+      "BKNG",
+      "CCCS",
+      "CHKP",
+      "CHWY",
+      "COIN",
+      "CPRT",
+      "CRM",
+      "CRTO",
+      "CRWD",
+      "CSCO",
+      "CSGP",
+      "CTSH",
+      "CYBR",
+      "DDOG",
+      "DELL",
+      "DV",
+      "DXC",
+      "EBAY",
+      "ESTC",
+      "ETSY",
+      "FIS",
+      "FTNT",
+      "GOOGL",
+      "GTLB",
+      "GWRE",
+      "HPQ",
+      "HUBS",
+      "IBM",
+      "ICE",
+      "INTU",
+      "LOGI",
+      "META",
+      "MSFT",
+      "NET",
+      "NFLX",
+      "NVDA",
+      "ORCL",
+      "PSTG",
+      "SMCI",
+      "TEAM"
+    ],
+    "sectors": {
+      "AdTech": {
+        "covered": 6,
+        "total": 10,
+        "pct": 60.0
+      },
+      "Cloud Infrastructure": {
+        "covered": 7,
+        "total": 8,
+        "pct": 87.5
+      },
+      "Fintech": {
+        "covered": 5,
+        "total": 10,
+        "pct": 50.0
+      },
+      "eCommerce": {
+        "covered": 6,
+        "total": 10,
+        "pct": 60.0
+      },
+      "Consumer Internet": {
+        "covered": 5,
+        "total": 10,
+        "pct": 50.0
+      },
+      "IT Services / Legacy Tech": {
+        "covered": 5,
+        "total": 8,
+        "pct": 62.5
+      },
+      "Hardware / Devices": {
+        "covered": 6,
+        "total": 9,
+        "pct": 66.66666666666666
+      },
+      "Cybersecurity": {
+        "covered": 5,
+        "total": 9,
+        "pct": 55.55555555555556
+      },
+      "Dev Tools / Analytics": {
+        "covered": 4,
+        "total": 5,
+        "pct": 80.0
+      },
+      "AI Infrastructure": {
+        "covered": 7,
+        "total": 7,
+        "pct": 100.0
+      },
+      "Semiconductors": {
+        "covered": 5,
+        "total": 8,
+        "pct": 62.5
+      },
+      "Vertical SaaS": {
+        "covered": 5,
+        "total": 8,
+        "pct": 62.5
+      },
+      "Enterprise SaaS": {
+        "covered": 6,
+        "total": 9,
+        "pct": 66.66666666666666
+      },
+      "SMB SaaS": {
+        "covered": 6,
+        "total": 6,
+        "pct": 100.0
+      }
+    }
+  },
+  {
+    "timestamp": "2025-05-09 18:11:17",
+    "date": "2025-05-09",
+    "total": 94,
+    "covered": 56,
+    "pct": 59.57446808510638,
+    "covered_tickers": [
+      "AAPL",
+      "ABNB",
+      "ACN",
+      "ADBE",
+      "ADSK",
+      "ADYEY",
+      "AFRM",
+      "AMAT",
+      "AMD",
+      "AMZN",
+      "APP",
+      "APPS",
+      "ARM",
+      "AVGO",
+      "BABA",
+      "BILL",
+      "BKNG",
+      "CCCS",
+      "CHKP",
+      "CHWY",
+      "COIN",
+      "CPRT",
+      "CRM",
+      "CRTO",
+      "CRWD",
+      "CSCO",
+      "CSGP",
+      "CTSH",
+      "CYBR",
+      "DDOG",
+      "DELL",
+      "DV",
+      "DXC",
+      "EBAY",
+      "ESTC",
+      "ETSY",
+      "FIS",
+      "FTNT",
+      "GOOGL",
+      "GTLB",
+      "GWRE",
+      "HPQ",
+      "HUBS",
+      "IBM",
+      "ICE",
+      "INTU",
+      "LOGI",
+      "META",
+      "MSFT",
+      "NET",
+      "NFLX",
+      "NVDA",
+      "ORCL",
+      "PSTG",
+      "SMCI",
+      "TEAM"
+    ],
+    "sectors": {
+      "AdTech": {
+        "covered": 6,
+        "total": 10,
+        "pct": 60.0
+      },
+      "Cloud Infrastructure": {
+        "covered": 7,
+        "total": 8,
+        "pct": 87.5
+      },
+      "Fintech": {
+        "covered": 5,
+        "total": 10,
+        "pct": 50.0
+      },
+      "eCommerce": {
+        "covered": 6,
+        "total": 10,
+        "pct": 60.0
+      },
+      "Consumer Internet": {
+        "covered": 5,
+        "total": 10,
+        "pct": 50.0
+      },
+      "IT Services / Legacy Tech": {
+        "covered": 5,
+        "total": 8,
+        "pct": 62.5
+      },
+      "Hardware / Devices": {
+        "covered": 6,
+        "total": 9,
+        "pct": 66.66666666666666
+      },
+      "Cybersecurity": {
+        "covered": 5,
+        "total": 9,
+        "pct": 55.55555555555556
+      },
+      "Dev Tools / Analytics": {
+        "covered": 4,
+        "total": 5,
+        "pct": 80.0
+      },
+      "AI Infrastructure": {
+        "covered": 7,
+        "total": 7,
+        "pct": 100.0
+      },
+      "Semiconductors": {
+        "covered": 5,
+        "total": 8,
+        "pct": 62.5
+      },
+      "Vertical SaaS": {
+        "covered": 5,
+        "total": 8,
+        "pct": 62.5
+      },
+      "Enterprise SaaS": {
+        "covered": 6,
+        "total": 9,
+        "pct": 66.66666666666666
+      },
+      "SMB SaaS": {
+        "covered": 6,
+        "total": 6,
+        "pct": 100.0
+      }
+    }
+  },
+  {
+    "timestamp": "2025-05-09 18:19:21",
+    "date": "2025-05-09",
+    "total": 94,
+    "covered": 66,
+    "pct": 70.2127659574468,
+    "covered_tickers": [
+      "AAPL",
+      "ABNB",
+      "ACN",
+      "ADBE",
+      "ADSK",
+      "ADYEY",
+      "AFRM",
+      "AMAT",
+      "AMD",
+      "AMZN",
+      "APP",
+      "APPS",
+      "ARM",
+      "AVGO",
+      "BABA",
+      "BILL",
+      "BKNG",
+      "CCCS",
+      "CHKP",
+      "CHWY",
+      "COIN",
+      "CPRT",
+      "CRM",
+      "CRTO",
+      "CRWD",
+      "CSCO",
+      "CSGP",
+      "CTSH",
+      "CYBR",
+      "DDOG",
+      "DELL",
+      "DV",
+      "DXC",
+      "EBAY",
+      "ESTC",
+      "ETSY",
+      "FIS",
+      "FTNT",
+      "GOOGL",
+      "GPN",
+      "GTLB",
+      "GWRE",
+      "HPQ",
+      "HUBS",
+      "IBM",
+      "ICE",
+      "INFY",
+      "INTU",
+      "LOGI",
+      "META",
+      "MGNI",
+      "MSFT",
+      "NET",
+      "NFLX",
+      "NVDA",
+      "OKTA",
+      "ORCL",
+      "PANW",
+      "PDD",
+      "PINS",
+      "PLTR",
+      "PSTG",
+      "SE",
+      "SMCI",
+      "SNAP",
+      "TEAM"
+    ],
+    "sectors": {
+      "AdTech": {
+        "covered": 7,
+        "total": 10,
+        "pct": 70.0
+      },
+      "Cloud Infrastructure": {
+        "covered": 7,
+        "total": 8,
+        "pct": 87.5
+      },
+      "Fintech": {
+        "covered": 6,
+        "total": 10,
+        "pct": 60.0
+      },
+      "eCommerce": {
+        "covered": 8,
+        "total": 10,
+        "pct": 80.0
+      },
+      "Consumer Internet": {
+        "covered": 7,
+        "total": 10,
+        "pct": 70.0
+      },
+      "IT Services / Legacy Tech": {
+        "covered": 7,
+        "total": 8,
+        "pct": 87.5
+      },
+      "Hardware / Devices": {
+        "covered": 6,
+        "total": 9,
+        "pct": 66.66666666666666
+      },
+      "Cybersecurity": {
+        "covered": 7,
+        "total": 9,
+        "pct": 77.77777777777779
+      },
+      "Dev Tools / Analytics": {
+        "covered": 4,
+        "total": 5,
+        "pct": 80.0
+      },
+      "AI Infrastructure": {
+        "covered": 7,
+        "total": 7,
+        "pct": 100.0
+      },
+      "Semiconductors": {
+        "covered": 5,
+        "total": 8,
+        "pct": 62.5
+      },
+      "Vertical SaaS": {
+        "covered": 5,
+        "total": 8,
+        "pct": 62.5
+      },
+      "Enterprise SaaS": {
+        "covered": 6,
+        "total": 9,
+        "pct": 66.66666666666666
+      },
+      "SMB SaaS": {
+        "covered": 6,
+        "total": 6,
+        "pct": 100.0
+      }
+    }
+  },
+  {
+    "timestamp": "2025-05-09 18:19:41",
+    "date": "2025-05-09",
+    "total": 94,
+    "covered": 66,
+    "pct": 70.2127659574468,
+    "covered_tickers": [
+      "AAPL",
+      "ABNB",
+      "ACN",
+      "ADBE",
+      "ADSK",
+      "ADYEY",
+      "AFRM",
+      "AMAT",
+      "AMD",
+      "AMZN",
+      "APP",
+      "APPS",
+      "ARM",
+      "AVGO",
+      "BABA",
+      "BILL",
+      "BKNG",
+      "CCCS",
+      "CHKP",
+      "CHWY",
+      "COIN",
+      "CPRT",
+      "CRM",
+      "CRTO",
+      "CRWD",
+      "CSCO",
+      "CSGP",
+      "CTSH",
+      "CYBR",
+      "DDOG",
+      "DELL",
+      "DV",
+      "DXC",
+      "EBAY",
+      "ESTC",
+      "ETSY",
+      "FIS",
+      "FTNT",
+      "GOOGL",
+      "GPN",
+      "GTLB",
+      "GWRE",
+      "HPQ",
+      "HUBS",
+      "IBM",
+      "ICE",
+      "INFY",
+      "INTU",
+      "LOGI",
+      "META",
+      "MGNI",
+      "MSFT",
+      "NET",
+      "NFLX",
+      "NVDA",
+      "OKTA",
+      "ORCL",
+      "PANW",
+      "PDD",
+      "PINS",
+      "PLTR",
+      "PSTG",
+      "SE",
+      "SMCI",
+      "SNAP",
+      "TEAM"
+    ],
+    "sectors": {
+      "AdTech": {
+        "covered": 7,
+        "total": 10,
+        "pct": 70.0
+      },
+      "Cloud Infrastructure": {
+        "covered": 7,
+        "total": 8,
+        "pct": 87.5
+      },
+      "Fintech": {
+        "covered": 6,
+        "total": 10,
+        "pct": 60.0
+      },
+      "eCommerce": {
+        "covered": 8,
+        "total": 10,
+        "pct": 80.0
+      },
+      "Consumer Internet": {
+        "covered": 7,
+        "total": 10,
+        "pct": 70.0
+      },
+      "IT Services / Legacy Tech": {
+        "covered": 7,
+        "total": 8,
+        "pct": 87.5
+      },
+      "Hardware / Devices": {
+        "covered": 6,
+        "total": 9,
+        "pct": 66.66666666666666
+      },
+      "Cybersecurity": {
+        "covered": 7,
+        "total": 9,
+        "pct": 77.77777777777779
+      },
+      "Dev Tools / Analytics": {
+        "covered": 4,
+        "total": 5,
+        "pct": 80.0
+      },
+      "AI Infrastructure": {
+        "covered": 7,
+        "total": 7,
+        "pct": 100.0
+      },
+      "Semiconductors": {
+        "covered": 5,
+        "total": 8,
+        "pct": 62.5
+      },
+      "Vertical SaaS": {
+        "covered": 5,
+        "total": 8,
+        "pct": 62.5
+      },
+      "Enterprise SaaS": {
+        "covered": 6,
+        "total": 9,
+        "pct": 66.66666666666666
+      },
+      "SMB SaaS": {
+        "covered": 6,
+        "total": 6,
+        "pct": 100.0
+      }
+    }
+  },
+  {
+    "timestamp": "2025-05-09 18:20:24",
+    "date": "2025-05-09",
+    "total": 94,
+    "covered": 68,
+    "pct": 72.3404255319149,
+    "covered_tickers": [
+      "AAPL",
+      "ABNB",
+      "ACN",
+      "ADBE",
+      "ADSK",
+      "ADYEY",
+      "AFRM",
+      "AMAT",
+      "AMD",
+      "AMZN",
+      "APP",
+      "APPS",
+      "ARM",
+      "AVGO",
+      "BABA",
+      "BILL",
+      "BKNG",
+      "CCCS",
+      "CHKP",
+      "CHWY",
+      "COIN",
+      "CPRT",
+      "CRM",
+      "CRTO",
+      "CRWD",
+      "CSCO",
+      "CSGP",
+      "CTSH",
+      "CYBR",
+      "DDOG",
+      "DELL",
+      "DV",
+      "DXC",
+      "EBAY",
+      "ESTC",
+      "ETSY",
+      "FIS",
+      "FTNT",
+      "GOOGL",
+      "GPN",
+      "GTLB",
+      "GWRE",
+      "HPQ",
+      "HUBS",
+      "IBM",
+      "ICE",
+      "INFY",
+      "INTC",
+      "INTU",
+      "LOGI",
+      "META",
+      "MGNI",
+      "MSFT",
+      "NET",
+      "NFLX",
+      "NVDA",
+      "OKTA",
+      "ORCL",
+      "PANW",
+      "PDD",
+      "PINS",
+      "PLTR",
+      "PSTG",
+      "QCOM",
+      "SE",
+      "SMCI",
+      "SNAP",
+      "TEAM"
+    ],
+    "sectors": {
+      "AdTech": {
+        "covered": 7,
+        "total": 10,
+        "pct": 70.0
+      },
+      "Cloud Infrastructure": {
+        "covered": 7,
+        "total": 8,
+        "pct": 87.5
+      },
+      "Fintech": {
+        "covered": 6,
+        "total": 10,
+        "pct": 60.0
+      },
+      "eCommerce": {
+        "covered": 8,
+        "total": 10,
+        "pct": 80.0
+      },
+      "Consumer Internet": {
+        "covered": 7,
+        "total": 10,
+        "pct": 70.0
+      },
+      "IT Services / Legacy Tech": {
+        "covered": 7,
+        "total": 8,
+        "pct": 87.5
+      },
+      "Hardware / Devices": {
+        "covered": 6,
+        "total": 9,
+        "pct": 66.66666666666666
+      },
+      "Cybersecurity": {
+        "covered": 7,
+        "total": 9,
+        "pct": 77.77777777777779
+      },
+      "Dev Tools / Analytics": {
+        "covered": 4,
+        "total": 5,
+        "pct": 80.0
+      },
+      "AI Infrastructure": {
+        "covered": 7,
+        "total": 7,
+        "pct": 100.0
+      },
+      "Semiconductors": {
+        "covered": 7,
+        "total": 8,
+        "pct": 87.5
+      },
+      "Vertical SaaS": {
+        "covered": 5,
+        "total": 8,
+        "pct": 62.5
+      },
+      "Enterprise SaaS": {
+        "covered": 6,
+        "total": 9,
+        "pct": 66.66666666666666
+      },
+      "SMB SaaS": {
+        "covered": 6,
+        "total": 6,
+        "pct": 100.0
+      }
+    }
+  },
+  {
+    "timestamp": "2025-05-09 18:21:01",
+    "date": "2025-05-09",
+    "total": 94,
+    "covered": 69,
+    "pct": 73.40425531914893,
+    "covered_tickers": [
+      "AAPL",
+      "ABNB",
+      "ACN",
+      "ADBE",
+      "ADSK",
+      "ADYEY",
+      "AFRM",
+      "AMAT",
+      "AMD",
+      "AMZN",
+      "APP",
+      "APPS",
+      "ARM",
+      "AVGO",
+      "BABA",
+      "BILL",
+      "BKNG",
+      "CCCS",
+      "CHKP",
+      "CHWY",
+      "COIN",
+      "CPRT",
+      "CRM",
+      "CRTO",
+      "CRWD",
+      "CSCO",
+      "CSGP",
+      "CTSH",
+      "CYBR",
+      "DDOG",
+      "DELL",
+      "DV",
+      "DXC",
+      "EBAY",
+      "ESTC",
+      "ETSY",
+      "FIS",
+      "FTNT",
+      "GOOGL",
+      "GPN",
+      "GTLB",
+      "GWRE",
+      "HPQ",
+      "HUBS",
+      "IBM",
+      "ICE",
+      "INFY",
+      "INTC",
+      "INTU",
+      "LOGI",
+      "META",
+      "MGNI",
+      "MSFT",
+      "NET",
+      "NFLX",
+      "NVDA",
+      "OKTA",
+      "ORCL",
+      "PANW",
+      "PCOR",
+      "PDD",
+      "PINS",
+      "PLTR",
+      "PSTG",
+      "QCOM",
+      "SE",
+      "SMCI",
+      "SNAP",
+      "TEAM"
+    ],
+    "sectors": {
+      "AdTech": {
+        "covered": 7,
+        "total": 10,
+        "pct": 70.0
+      },
+      "Cloud Infrastructure": {
+        "covered": 7,
+        "total": 8,
+        "pct": 87.5
+      },
+      "Fintech": {
+        "covered": 6,
+        "total": 10,
+        "pct": 60.0
+      },
+      "eCommerce": {
+        "covered": 8,
+        "total": 10,
+        "pct": 80.0
+      },
+      "Consumer Internet": {
+        "covered": 7,
+        "total": 10,
+        "pct": 70.0
+      },
+      "IT Services / Legacy Tech": {
+        "covered": 7,
+        "total": 8,
+        "pct": 87.5
+      },
+      "Hardware / Devices": {
+        "covered": 6,
+        "total": 9,
+        "pct": 66.66666666666666
+      },
+      "Cybersecurity": {
+        "covered": 7,
+        "total": 9,
+        "pct": 77.77777777777779
+      },
+      "Dev Tools / Analytics": {
+        "covered": 4,
+        "total": 5,
+        "pct": 80.0
+      },
+      "AI Infrastructure": {
+        "covered": 7,
+        "total": 7,
+        "pct": 100.0
+      },
+      "Semiconductors": {
+        "covered": 7,
+        "total": 8,
+        "pct": 87.5
+      },
+      "Vertical SaaS": {
+        "covered": 6,
+        "total": 8,
+        "pct": 75.0
+      },
+      "Enterprise SaaS": {
+        "covered": 6,
+        "total": 9,
+        "pct": 66.66666666666666
+      },
+      "SMB SaaS": {
+        "covered": 6,
+        "total": 6,
+        "pct": 100.0
+      }
+    }
+  },
+  {
+    "timestamp": "2025-05-09 18:21:59",
+    "date": "2025-05-09",
+    "total": 94,
+    "covered": 69,
+    "pct": 73.40425531914893,
+    "covered_tickers": [
+      "AAPL",
+      "ABNB",
+      "ACN",
+      "ADBE",
+      "ADSK",
+      "ADYEY",
+      "AFRM",
+      "AMAT",
+      "AMD",
+      "AMZN",
+      "APP",
+      "APPS",
+      "ARM",
+      "AVGO",
+      "BABA",
+      "BILL",
+      "BKNG",
+      "CCCS",
+      "CHKP",
+      "CHWY",
+      "COIN",
+      "CPRT",
+      "CRM",
+      "CRTO",
+      "CRWD",
+      "CSCO",
+      "CSGP",
+      "CTSH",
+      "CYBR",
+      "DDOG",
+      "DELL",
+      "DV",
+      "DXC",
+      "EBAY",
+      "ESTC",
+      "ETSY",
+      "FIS",
+      "FTNT",
+      "GOOGL",
+      "GPN",
+      "GTLB",
+      "GWRE",
+      "HPQ",
+      "HUBS",
+      "IBM",
+      "ICE",
+      "INFY",
+      "INTC",
+      "INTU",
+      "LOGI",
+      "META",
+      "MGNI",
+      "MSFT",
+      "NET",
+      "NFLX",
+      "NVDA",
+      "OKTA",
+      "ORCL",
+      "PANW",
+      "PCOR",
+      "PDD",
+      "PINS",
+      "PLTR",
+      "PSTG",
+      "QCOM",
+      "SE",
+      "SMCI",
+      "SNAP",
+      "TEAM"
+    ],
+    "sectors": {
+      "AdTech": {
+        "covered": 7,
+        "total": 10,
+        "pct": 70.0
+      },
+      "Cloud Infrastructure": {
+        "covered": 7,
+        "total": 8,
+        "pct": 87.5
+      },
+      "Fintech": {
+        "covered": 6,
+        "total": 10,
+        "pct": 60.0
+      },
+      "eCommerce": {
+        "covered": 8,
+        "total": 10,
+        "pct": 80.0
+      },
+      "Consumer Internet": {
+        "covered": 7,
+        "total": 10,
+        "pct": 70.0
+      },
+      "IT Services / Legacy Tech": {
+        "covered": 7,
+        "total": 8,
+        "pct": 87.5
+      },
+      "Hardware / Devices": {
+        "covered": 6,
+        "total": 9,
+        "pct": 66.66666666666666
+      },
+      "Cybersecurity": {
+        "covered": 7,
+        "total": 9,
+        "pct": 77.77777777777779
+      },
+      "Dev Tools / Analytics": {
+        "covered": 4,
+        "total": 5,
+        "pct": 80.0
+      },
+      "AI Infrastructure": {
+        "covered": 7,
+        "total": 7,
+        "pct": 100.0
+      },
+      "Semiconductors": {
+        "covered": 7,
+        "total": 8,
+        "pct": 87.5
+      },
+      "Vertical SaaS": {
+        "covered": 6,
+        "total": 8,
+        "pct": 75.0
+      },
+      "Enterprise SaaS": {
+        "covered": 6,
+        "total": 9,
+        "pct": 66.66666666666666
+      },
+      "SMB SaaS": {
+        "covered": 6,
+        "total": 6,
+        "pct": 100.0
+      }
+    }
+  },
+  {
+    "timestamp": "2025-05-09 18:38:10",
+    "date": "2025-05-09",
+    "total": 94,
+    "covered": 88,
+    "pct": 93.61702127659575,
+    "covered_tickers": [
+      "AAPL",
+      "ABNB",
+      "ACN",
+      "ADBE",
+      "ADSK",
+      "ADYEY",
+      "AFRM",
+      "AMAT",
+      "AMD",
+      "AMZN",
+      "APP",
+      "APPS",
+      "ARM",
+      "AVGO",
+      "BABA",
+      "BILL",
+      "BKNG",
+      "CCCS",
+      "CHKP",
+      "CHWY",
+      "COIN",
+      "CPRT",
+      "CRM",
+      "CRTO",
+      "CRWD",
+      "CSCO",
+      "CSGP",
+      "CTSH",
+      "CYBR",
+      "DDOG",
+      "DELL",
+      "DV",
+      "DXC",
+      "EBAY",
+      "ESTC",
+      "ETSY",
+      "FIS",
+      "FTNT",
+      "GOOGL",
+      "GPN",
+      "GTLB",
+      "GWRE",
+      "HPQ",
+      "HUBS",
+      "IBM",
+      "ICE",
+      "INFY",
+      "INTC",
+      "INTU",
+      "LOGI",
+      "MDB",
+      "META",
+      "MGNI",
+      "MSFT",
+      "NET",
+      "NFLX",
+      "NOW",
+      "NVDA",
+      "OKTA",
+      "ORCL",
+      "PANW",
+      "PCOR",
+      "PDD",
+      "PINS",
+      "PLTR",
+      "PSTG",
+      "PUBM",
+      "PYPL",
+      "QCOM",
+      "S",
+      "SAP",
+      "SE",
+      "SHOP",
+      "SMCI",
+      "SNAP",
+      "SNOW",
+      "SPOT",
+      "SSNC",
+      "SSYS",
+      "STX",
+      "TEAM",
+      "TRIP",
+      "TSM",
+      "TTAN",
+      "WDC",
+      "WIT",
+      "WMT",
+      "ZS"
+    ],
+    "sectors": {
+      "AdTech": {
+        "covered": 8,
+        "total": 10,
+        "pct": 80.0
+      },
+      "Cloud Infrastructure": {
+        "covered": 8,
+        "total": 8,
+        "pct": 100.0
+      },
+      "Fintech": {
+        "covered": 8,
+        "total": 10,
+        "pct": 80.0
+      },
+      "eCommerce": {
+        "covered": 10,
+        "total": 10,
+        "pct": 100.0
+      },
+      "Consumer Internet": {
+        "covered": 9,
+        "total": 10,
+        "pct": 90.0
+      },
+      "IT Services / Legacy Tech": {
+        "covered": 8,
+        "total": 8,
+        "pct": 100.0
+      },
+      "Hardware / Devices": {
+        "covered": 9,
+        "total": 9,
+        "pct": 100.0
+      },
+      "Cybersecurity": {
+        "covered": 9,
+        "total": 9,
+        "pct": 100.0
+      },
+      "Dev Tools / Analytics": {
+        "covered": 5,
+        "total": 5,
+        "pct": 100.0
+      },
+      "AI Infrastructure": {
+        "covered": 7,
+        "total": 7,
+        "pct": 100.0
+      },
+      "Semiconductors": {
+        "covered": 8,
+        "total": 8,
+        "pct": 100.0
+      },
+      "Vertical SaaS": {
+        "covered": 8,
+        "total": 8,
+        "pct": 100.0
+      },
+      "Enterprise SaaS": {
+        "covered": 8,
+        "total": 9,
+        "pct": 88.88888888888889
+      },
+      "SMB SaaS": {
+        "covered": 6,
+        "total": 6,
+        "pct": 100.0
+      }
+    }
+  },
+  {
+    "timestamp": "2025-05-09 18:38:35",
+    "date": "2025-05-09",
+    "total": 94,
+    "covered": 89,
+    "pct": 94.68085106382979,
+    "covered_tickers": [
+      "AAPL",
+      "ABNB",
+      "ACN",
+      "ADBE",
+      "ADSK",
+      "ADYEY",
+      "AFRM",
+      "AMAT",
+      "AMD",
+      "AMZN",
+      "APP",
+      "APPS",
+      "ARM",
+      "AVGO",
+      "BABA",
+      "BILL",
+      "BKNG",
+      "CCCS",
+      "CHKP",
+      "CHWY",
+      "COIN",
+      "CPRT",
+      "CRM",
+      "CRTO",
+      "CRWD",
+      "CSCO",
+      "CSGP",
+      "CTSH",
+      "CYBR",
+      "DDOG",
+      "DELL",
+      "DV",
+      "DXC",
+      "EBAY",
+      "ESTC",
+      "ETSY",
+      "FIS",
+      "FTNT",
+      "GOOGL",
+      "GPN",
+      "GTLB",
+      "GWRE",
+      "HPQ",
+      "HUBS",
+      "IBM",
+      "ICE",
+      "INFY",
+      "INTC",
+      "INTU",
+      "LOGI",
+      "MDB",
+      "META",
+      "MGNI",
+      "MSFT",
+      "NET",
+      "NFLX",
+      "NOW",
+      "NVDA",
+      "OKTA",
+      "ORCL",
+      "PANW",
+      "PCOR",
+      "PDD",
+      "PINS",
+      "PLTR",
+      "PSTG",
+      "PUBM",
+      "PYPL",
+      "QCOM",
+      "S",
+      "SAP",
+      "SE",
+      "SHOP",
+      "SMCI",
+      "SNAP",
+      "SNOW",
+      "SPOT",
+      "SSNC",
+      "SSYS",
+      "STX",
+      "TEAM",
+      "TRIP",
+      "TSM",
+      "TTAN",
+      "WDAY",
+      "WDC",
+      "WIT",
+      "WMT",
+      "ZS"
+    ],
+    "sectors": {
+      "AdTech": {
+        "covered": 8,
+        "total": 10,
+        "pct": 80.0
+      },
+      "Cloud Infrastructure": {
+        "covered": 8,
+        "total": 8,
+        "pct": 100.0
+      },
+      "Fintech": {
+        "covered": 8,
+        "total": 10,
+        "pct": 80.0
+      },
+      "eCommerce": {
+        "covered": 10,
+        "total": 10,
+        "pct": 100.0
+      },
+      "Consumer Internet": {
+        "covered": 9,
+        "total": 10,
+        "pct": 90.0
+      },
+      "IT Services / Legacy Tech": {
+        "covered": 8,
+        "total": 8,
+        "pct": 100.0
+      },
+      "Hardware / Devices": {
+        "covered": 9,
+        "total": 9,
+        "pct": 100.0
+      },
+      "Cybersecurity": {
+        "covered": 9,
+        "total": 9,
+        "pct": 100.0
+      },
+      "Dev Tools / Analytics": {
+        "covered": 5,
+        "total": 5,
+        "pct": 100.0
+      },
+      "AI Infrastructure": {
+        "covered": 7,
+        "total": 7,
+        "pct": 100.0
+      },
+      "Semiconductors": {
+        "covered": 8,
+        "total": 8,
+        "pct": 100.0
+      },
+      "Vertical SaaS": {
+        "covered": 8,
+        "total": 8,
+        "pct": 100.0
+      },
+      "Enterprise SaaS": {
+        "covered": 9,
+        "total": 9,
+        "pct": 100.0
+      },
+      "SMB SaaS": {
+        "covered": 6,
+        "total": 6,
+        "pct": 100.0
+      }
+    }
+  },
+  {
+    "timestamp": "2025-05-09 18:41:00",
+    "date": "2025-05-09",
+    "total": 94,
+    "covered": 90,
+    "pct": 95.74468085106383,
+    "covered_tickers": [
+      "AAPL",
+      "ABNB",
+      "ACN",
+      "ADBE",
+      "ADSK",
+      "ADYEY",
+      "AFRM",
+      "AMAT",
+      "AMD",
+      "AMZN",
+      "APP",
+      "APPS",
+      "ARM",
+      "AVGO",
+      "BABA",
+      "BILL",
+      "BKNG",
+      "CCCS",
+      "CHKP",
+      "CHWY",
+      "COIN",
+      "CPRT",
+      "CRM",
+      "CRTO",
+      "CRWD",
+      "CSCO",
+      "CSGP",
+      "CTSH",
+      "CYBR",
+      "DDOG",
+      "DELL",
+      "DV",
+      "DXC",
+      "EBAY",
+      "ESTC",
+      "ETSY",
+      "FIS",
+      "FTNT",
+      "GOOGL",
+      "GPN",
+      "GTLB",
+      "GWRE",
+      "HPQ",
+      "HUBS",
+      "IBM",
+      "ICE",
+      "INFY",
+      "INTC",
+      "INTU",
+      "LOGI",
+      "MDB",
+      "META",
+      "MGNI",
+      "MSFT",
+      "NET",
+      "NFLX",
+      "NOW",
+      "NVDA",
+      "OKTA",
+      "ORCL",
+      "PANW",
+      "PCOR",
+      "PDD",
+      "PINS",
+      "PLTR",
+      "PSTG",
+      "PUBM",
+      "PYPL",
+      "QCOM",
+      "S",
+      "SAP",
+      "SE",
+      "SHOP",
+      "SMCI",
+      "SNAP",
+      "SNOW",
+      "SPOT",
+      "SSNC",
+      "SSYS",
+      "STX",
+      "TEAM",
+      "TRIP",
+      "TSM",
+      "TTAN",
+      "TTD",
+      "WDAY",
+      "WDC",
+      "WIT",
+      "WMT",
+      "ZS"
+    ],
+    "sectors": {
+      "AdTech": {
+        "covered": 9,
+        "total": 10,
+        "pct": 90.0
+      },
+      "Cloud Infrastructure": {
+        "covered": 8,
+        "total": 8,
+        "pct": 100.0
+      },
+      "Fintech": {
+        "covered": 8,
+        "total": 10,
+        "pct": 80.0
+      },
+      "eCommerce": {
+        "covered": 10,
+        "total": 10,
+        "pct": 100.0
+      },
+      "Consumer Internet": {
+        "covered": 9,
+        "total": 10,
+        "pct": 90.0
+      },
+      "IT Services / Legacy Tech": {
+        "covered": 8,
+        "total": 8,
+        "pct": 100.0
+      },
+      "Hardware / Devices": {
+        "covered": 9,
+        "total": 9,
+        "pct": 100.0
+      },
+      "Cybersecurity": {
+        "covered": 9,
+        "total": 9,
+        "pct": 100.0
+      },
+      "Dev Tools / Analytics": {
+        "covered": 5,
+        "total": 5,
+        "pct": 100.0
+      },
+      "AI Infrastructure": {
+        "covered": 7,
+        "total": 7,
+        "pct": 100.0
+      },
+      "Semiconductors": {
+        "covered": 8,
+        "total": 8,
+        "pct": 100.0
+      },
+      "Vertical SaaS": {
+        "covered": 8,
+        "total": 8,
+        "pct": 100.0
+      },
+      "Enterprise SaaS": {
+        "covered": 9,
+        "total": 9,
+        "pct": 100.0
+      },
+      "SMB SaaS": {
+        "covered": 6,
+        "total": 6,
+        "pct": 100.0
+      }
+    }
+  }
+]

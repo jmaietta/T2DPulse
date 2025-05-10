@@ -1,0 +1,56 @@
+/* General tooltip styles - Improved by OpenAI */
+.tooltip-wrapper {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+/* scoped children */
+.tooltip-wrapper .tooltip-icon {
+  font-size: 16px;
+  color: #3498db;
+}
+
+.tooltip-wrapper .tooltip-content {
+  position: absolute;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);        /* replaces margin-left hack */
+  width: 300px;
+
+  background: white;
+  color: #333;
+  text-align: left;
+  border-radius: 6px;
+  padding: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0s 0.3s;
+  pointer-events: none;               /* keep hidden tooltip unclickable */
+  z-index: 1000;
+}
+
+/* show on hover OR keyboard focus */
+.tooltip-wrapper:hover .tooltip-content,
+.tooltip-wrapper:focus .tooltip-content,
+.tooltip-wrapper:focus-within .tooltip-content {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s;
+  pointer-events: auto;
+}
+
+/* arrow */
+.tooltip-wrapper .tooltip-content::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 5px;
+  border-style: solid;
+  border-color: white transparent transparent transparent; /* matches current background */
+  /* For dynamic matching, you'll need JavaScript to compute the actual background color */
+}

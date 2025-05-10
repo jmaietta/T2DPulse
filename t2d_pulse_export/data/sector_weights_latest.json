@@ -1,0 +1,19 @@
+{
+  "weights": {
+    "AdTech": 0.14,
+    "": 0.0,
+    "IT_Services____Legacy_Tech": 40.54,
+    "Semiconductors": 0.23,
+    "Cloud_Infrastructure": 0.37,
+    "Hardware_Devices": 0.14,
+    "Vertical_SasS": 11.95,
+    "FinTech": 18.64,
+    "Cybersecurity": 20.97,
+    "Enterprise_SaaS": 0.28,
+    "eCommerce": 0.14,
+    "Dev_Tools____Analytics": 5.72,
+    "SMB_SaaS": 0.14,
+    "Consumer_Internet": 0.19,
+    "AI_Infrastructure": 0.56
+  }
+}
