@@ -29,8 +29,11 @@ import document_analysis
 # Import sector sentiment scoring
 import sentiment_engine
 
+# Import pulse score reader
+from read_authentic_pulse import read_pulse_score, calculate_pulse_from_sectors
+
 # Import efficient data reading functionality
-from data_reader import read_data_file, read_sector_data, read_pulse_score, read_market_data
+from data_reader import read_data_file, read_sector_data, read_market_data
 
 # Import chart styling and market insights components
 from chart_styling import custom_template, color_scheme
@@ -91,21 +94,30 @@ except Exception as e:
 def get_authentic_pulse_score():
     """Get the most recent authentic T2D Pulse score calculated from sector data"""
     try:
-        # Use the data_reader's optimized implementation
-        score = read_pulse_score()
+        # Use the authentic_pulse_reader implementation
+        score = read_pulse_score("data/authentic_pulse_history.csv")
         if score is not None:
-            logger.info(f"Successfully read authentic pulse score: {score}")
+            print(f"Successfully read authentic pulse score: {score}")
             return score
             
-        # Fall back to original method if data_reader fails
-        logger.debug("Falling back to direct file reading for pulse score")
-        with open("data/current_pulse_score.txt", "r") as f:
-            score = float(f.read().strip())
-            logger.info(f"Successfully read authentic pulse score via fallback: {score}")
-            return score
+        # Fall back to sector history if pulse history fails
+        print("Falling back to sector history for pulse score calculation")
+        try:
+            # Load sector history
+            sector_df = read_data_file("data/authentic_sector_history.csv")
+            if sector_df is not None and not sector_df.empty:
+                # Calculate average score from sectors
+                score = calculate_pulse_from_sectors(sector_df)
+                print(f"Calculated authentic pulse score from sectors: {score}")
+                return score
+        except Exception as inner_e:
+            print(f"Error calculating pulse score from sectors: {inner_e}")
+            
+        # Final fallback
+        return 50.0
     except Exception as e:
-        logger.error(f"Error reading authentic pulse score: {e}")
-        return None
+        print(f"Error reading authentic pulse score: {e}")
+        return 50.0
 
 # Consumer sentiment functions defined directly in app.py to avoid circular imports
 
@@ -8013,38 +8025,32 @@ def create_sector_sparkline(sector_name, current_score=50):
         Figure: A plotly figure object for the sparkline
     """
     try:
-        # Load authentic sector market cap history data
-        market_cap_history_file = 'historical_sector_market_caps.csv'
+        # Load authentic sector history data
+        authentic_history_file = 'data/authentic_sector_history.csv'
         
-        if os.path.exists(market_cap_history_file):
-            # Load market cap history
-            logging.info(f"Loading authentic sector market cap history from {market_cap_history_file}")
-            df = pd.read_csv(market_cap_history_file)
+        if os.path.exists(authentic_history_file):
+            # Load sector history
+            print(f"Loading authentic sector history from {authentic_history_file}")
+            df = pd.read_csv(authentic_history_file)
             
-            # Filter for this sector
-            sector_data = df[df['sector'] == sector_name].copy()
-            
-            if len(sector_data) > 0:
+            # Check if the sector exists in the data
+            if sector_name in df.columns:
                 # Convert date column to datetime
-                sector_data['date'] = pd.to_datetime(sector_data['date'])
+                df['date'] = pd.to_datetime(df['date'])
                 
                 # Sort by date
-                sector_data = sector_data.sort_values('date')
+                df = df.sort_values('date')
                 
-                # Calculate normalized score (0-100) based on min/max market cap
-                min_cap = sector_data['market_cap'].min()
-                max_cap = sector_data['market_cap'].max()
+                # Create a sector data dataframe with date and score columns
+                sector_data = pd.DataFrame({
+                    'date': df['date'],
+                    'score': df[sector_name]
+                }).dropna()
                 
-                # Avoid division by zero if min=max
-                if max_cap > min_cap:
-                    sector_data['score'] = 25 + 50 * (sector_data['market_cap'] - min_cap) / (max_cap - min_cap)
-                else:
-                    sector_data['score'] = [current_score] * len(sector_data)
-                
-                logging.info(f"Found {len(sector_data)} data points for sector {sector_name}")
+                print(f"Found {len(sector_data)} data points for sector {sector_name}")
             else:
                 # If sector not found in data, create flat line
-                logging.warning(f"No historical market cap data found for sector: {sector_name}")
+                print(f"No authentic history data found for sector: {sector_name}")
                 dates = pd.date_range(end=pd.Timestamp.now(), periods=30)
                 sector_data = pd.DataFrame({
                     'date': dates,
@@ -8052,7 +8058,7 @@ def create_sector_sparkline(sector_name, current_score=50):
                 })
         else:
             # If history file doesn't exist, create flat line
-            logging.warning(f"No historical market cap file found: {market_cap_history_file}")
+            print(f"No authentic sector history file found: {authentic_history_file}")
             dates = pd.date_range(end=pd.Timestamp.now(), periods=30)
             sector_data = pd.DataFrame({
                 'date': dates,
@@ -8151,7 +8157,7 @@ def create_sector_sparkline(sector_name, current_score=50):
         
     except Exception as e:
         # Create a basic chart if error occurs
-        logging.error(f"Error creating sector sparkline for {sector_name}: {e}")
+        print(f"Error creating sector sparkline for {sector_name}: {e}")
         
         # Create date range for the last 30 days
         dates = pd.date_range(end=pd.Timestamp.now(), periods=30)
