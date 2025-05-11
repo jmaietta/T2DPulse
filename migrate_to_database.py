@@ -9,9 +9,8 @@ import os
 import sys
 import pandas as pd
 import numpy as np
-import psycopg2
 import logging
-from psycopg2.extras import execute_values
+import sqlite3
 from datetime import datetime
 
 # Configure logging
@@ -22,24 +21,40 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 def get_db_connection():
-    """Connect to the PostgreSQL database server using environment variables"""
+    """Connect to the SQLite database"""
     try:
-        # Connect to the PostgreSQL server
-        logger.info("Connecting to the PostgreSQL database...")
-        conn = psycopg2.connect(os.environ.get('DATABASE_URL'))
+        # Connect to the SQLite database (create it if it doesn't exist)
+        db_path = 'market_cap_data.db'
+        logger.info(f"Connecting to SQLite database at {db_path}...")
+        conn = sqlite3.connect(db_path)
         
         # Create a cursor
         cur = conn.cursor()
         
         # Execute a version check
-        cur.execute('SELECT version()')
+        cur.execute('SELECT sqlite_version()')
         db_version = cur.fetchone()
-        logger.info(f"PostgreSQL database version: {db_version}")
+        logger.info(f"SQLite database version: {db_version[0]}")
         
         return conn
-    except (Exception, psycopg2.DatabaseError) as error:
+    except Exception as error:
         logger.error(f"Error connecting to the database: {error}")
         sys.exit(1)
+
+def create_database_tables(conn):
+    """Create the database tables using the schema file"""
+    logger.info("Creating database tables...")
+    
+    cursor = conn.cursor()
+    
+    with open('sqlite_schema.sql', 'r') as f:
+        sql_script = f.read()
+    
+    # SQLite can execute multiple statements at once
+    cursor.executescript(sql_script)
+    conn.commit()
+    
+    logger.info("Database tables created successfully")
 
 def import_sectors(conn):
     """Import sectors into the database"""
@@ -69,7 +84,7 @@ def import_sectors(conn):
     for sector in sectors:
         try:
             cursor.execute(
-                "INSERT INTO sectors (name) VALUES (%s) ON CONFLICT (name) DO NOTHING",
+                "INSERT OR IGNORE INTO sectors (name) VALUES (?)",
                 (sector,)
             )
         except Exception as e:
@@ -106,7 +121,7 @@ def import_tickers(conn):
         for ticker in tickers:
             try:
                 cursor.execute(
-                    "INSERT INTO tickers (symbol) VALUES (%s) ON CONFLICT (symbol) DO NOTHING",
+                    "INSERT OR IGNORE INTO tickers (symbol) VALUES (?)",
                     (ticker,)
                 )
             except Exception as e:
