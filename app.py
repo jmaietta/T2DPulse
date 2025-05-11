@@ -8022,57 +8022,52 @@ def create_sector_sparkline(sector_name, current_score=50):
         Figure: A plotly figure object for the sparkline
     """
     try:
-        # Load authentic sector history data - simplified version
+        # Load authentic sector history data using simpler approach
         authentic_history_file = 'data/authentic_sector_history.csv'
         
+        # Default to flat line data if anything goes wrong
+        dates = pd.date_range(end=pd.Timestamp.now(), periods=30)
+        sector_data = pd.DataFrame({
+            'date': dates,
+            'score': [current_score] * 30
+        })
+        
         if os.path.exists(authentic_history_file):
-            # Load sector history - with date as the first column
+            # Load the data and find the right sector column
             df = pd.read_csv(authentic_history_file)
             
-            # Find matching sector - case insensitive comparison
-            sector_map = {col.lower(): col for col in df.columns if col.lower() != 'date'}
-            matched_sector = sector_map.get(sector_name.lower())
+            # First check if we have the sector as an exact match
+            if sector_name in df.columns:
+                matched_sector = sector_name
+            else:
+                # Try case-insensitive matching
+                sector_map = {col.lower(): col for col in df.columns if col.lower() != 'date'}
+                matched_sector = sector_map.get(sector_name.lower())
             
             if matched_sector:
-                # We found the sector in our data
+                print(f"Found sector data for {matched_sector}")
                 # Convert date column to datetime
                 df['date'] = pd.to_datetime(df['date'])
                 
                 # Sort by date
                 df = df.sort_values('date')
                 
-                # Create a sector data dataframe with date and score columns
-                sector_data = pd.DataFrame({
+                # Build a clean dataframe for plotting
+                clean_data = {
                     'date': df['date'],
                     'score': df[matched_sector]
-                }).dropna()
+                }
+                clean_df = pd.DataFrame(clean_data).dropna()
                 
-                # If we have data, use it
-                if not sector_data.empty:
-                    print(f"Using {len(sector_data)} authentic data points for {matched_sector}")
+                if len(clean_df) > 1:  # Need at least 2 points to make a meaningful line
+                    print(f"Using {len(clean_df)} authentic data points for {matched_sector}")
+                    sector_data = clean_df  # Replace default with real data
                 else:
-                    # Create flat line if no data points
-                    dates = pd.date_range(end=pd.Timestamp.now(), periods=30)
-                    sector_data = pd.DataFrame({
-                        'date': dates,
-                        'score': [current_score] * 30
-                    })
-                    print(f"No data for {sector_name}, using flat line")
+                    print(f"Not enough data points for {sector_name}")
             else:
-                # Sector not found in data
-                dates = pd.date_range(end=pd.Timestamp.now(), periods=30)
-                sector_data = pd.DataFrame({
-                    'date': dates,
-                    'score': [current_score] * 30
-                })
                 print(f"No sector match for: {sector_name}")
         else:
-            # If history file doesn't exist, create flat line
-            dates = pd.date_range(end=pd.Timestamp.now(), periods=30)
-            sector_data = pd.DataFrame({
-                'date': dates,
-                'score': [current_score] * 30
-            })
+            print(f"History file not found: {authentic_history_file}")
                 
         # Create sparkline figure
         fig = go.Figure()
