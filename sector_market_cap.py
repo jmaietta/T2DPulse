@@ -282,31 +282,57 @@ def fetch_market_cap(ticker: str, fh_client) -> Optional[float]:
 
 
 def calculate_sector_caps(sectors: Dict[str, List[str]]) -> pd.DataFrame:
-    """Return DataFrame with today's sector market‑cap totals & missing tickers."""
+    """Return DataFrame with today's sector market‑cap totals & missing tickers.
+    
+    IMPORTANT: This function correctly handles tickers that are in multiple sectors.
+    Each company's full market cap is counted in every sector it belongs to.
+    """
     api_key = os.getenv("FINNHUB_API_KEY")
     fh_client = finnhub.Client(api_key=api_key) if finnhub and api_key else None
 
     today = dt.date.today().isoformat()
     records: List[Tuple[str, str, float, str]] = []
     missing_any = []
-
+    
+    # First, fetch market cap for all unique tickers
+    all_tickers = set()
+    for tickers in sectors.values():
+        all_tickers.update(tickers)
+    
+    print(f"Fetching market caps for {len(all_tickers)} unique tickers...")
+    
+    # Create a cache of market caps to avoid refetching the same ticker
+    ticker_market_caps = {}
+    for tkr in all_tickers:
+        cap = fetch_market_cap(tkr, fh_client)
+        if cap is None:
+            missing_any.append(tkr)
+        else:
+            ticker_market_caps[tkr] = cap
+    
+    # Now calculate sector totals using the cached market caps
     for sector, tickers in sectors.items():
         total_cap = 0.0
         missing = []
         for tkr in tickers:
-            cap = fetch_market_cap(tkr, fh_client)
-            if cap is None:
-                missing.append(tkr)
+            if tkr in ticker_market_caps:
+                # Add the FULL market cap to every sector the ticker belongs to
+                total_cap += ticker_market_caps[tkr]
             else:
-                total_cap += cap
+                missing.append(tkr)
+        
         records.append((today, sector, total_cap, ";".join(missing)))
-        if missing:
-            missing_any.extend(missing)
-
+    
     if missing_any:
         # Open in append mode to add to the log
         with open(MISSING_LOG, 'a') as f:
             f.write(f"{today}: {', '.join(missing_any)}\n")
+    
+    # Log the total market cap summed across all sectors (with double-counting)
+    total_across_sectors = sum(record[2] for record in records)
+    print(f"Total market cap across all sectors: ${total_across_sectors/1e12:.2f}T")
+    print(f"Note: This includes double-counting for companies in multiple sectors")
+    
     return pd.DataFrame(records, columns=["date", "sector", "market_cap", "missing_tickers"])
 
 
