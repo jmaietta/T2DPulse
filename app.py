@@ -6264,6 +6264,7 @@ def update_sector_sentiment_container(n):
         print(f"Error running sector display fix: {e}")
     
     # Load the authentic sector scores from the most recently produced data file - simplified
+    import pandas as pd
     authentic_file = "data/authentic_sector_history.csv"
     found_authentic_data = False
     
