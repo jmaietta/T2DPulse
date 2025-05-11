@@ -44,7 +44,7 @@ from t2d_pulse_trend_chart import create_t2d_pulse_chart
 from market_insights import create_insights_panel
 
 # Import sector trend chart for historical visualizations
-import sector_trend_chart
+
 
 # Import data cache for fast data access
 from data_cache import get_data, get_all_data
@@ -6683,7 +6683,7 @@ def update_sector_sentiment_container(n):
                                 style={"fontSize": "13px", "marginBottom": "5px", "color": "#666"}),
                         dcc.Graph(
                             id={"type": "sector-trend-chart", "index": sector},
-                            figure=sector_trend_chart.create_sector_trend_chart(sector_name=sector),
+                            figure=create_sector_sparkline(sector, norm_score),
                             config={"displayModeBar": False, "staticPlot": True},
                             style={"height": "85px", "width": "100%"}
                         )
@@ -8021,6 +8021,118 @@ def create_sector_sparkline(sector_name, current_score=50):
     Returns:
         Figure: A plotly figure object for the sparkline
     """
+    import plotly.graph_objects as go
+    import pandas as pd
+    import os
+    from datetime import datetime, timedelta
+    
+    # Try to load historical data for this sector from authentic_sector_history.csv
+    try:
+        # First check if the file exists
+        history_path = 'data/authentic_sector_history.csv'
+        if not os.path.exists(history_path):
+            # Return empty chart if file doesn't exist
+            fig = go.Figure()
+            fig.update_layout(
+                height=70, 
+                margin=dict(l=0, r=0, t=0, b=0),
+                plot_bgcolor='rgba(0,0,0,0)',
+                paper_bgcolor='rgba(0,0,0,0)'
+            )
+            return fig
+            
+        # Read the CSV file
+        df = pd.read_csv(history_path)
+        
+        # Make sure sector exists in the data
+        if sector_name not in df.columns:
+            # Return empty chart if sector isn't in the data
+            fig = go.Figure()
+            fig.update_layout(
+                height=70, 
+                margin=dict(l=0, r=0, t=0, b=0),
+                plot_bgcolor='rgba(0,0,0,0)',
+                paper_bgcolor='rgba(0,0,0,0)'
+            )
+            return fig
+            
+        # Convert date to datetime
+        df['date'] = pd.to_datetime(df['date'])
+        
+        # Filter to last 30 days
+        cutoff_date = datetime.now() - timedelta(days=30)
+        df = df[df['date'] >= cutoff_date]
+        
+        # If we have data for this sector
+        if len(df) > 0:
+            # Sort by date (ascending)
+            df = df.sort_values('date')
+            
+            # Get dates and values
+            dates = df['date']
+            values = df[sector_name]
+            
+            # Create the sparkline
+            fig = go.Figure()
+            
+            # Add area under line
+            fig.add_trace(go.Scatter(
+                x=dates,
+                y=values,
+                fill='tozeroy',
+                fillcolor='rgba(46,134,193,0.2)',
+                line=dict(color='#2E86C1', width=2),
+                mode='lines',
+                hoverinfo='none',
+                showlegend=False
+            ))
+            
+            # Add a marker for the latest point
+            if len(dates) > 0:
+                fig.add_trace(go.Scatter(
+                    x=[dates.iloc[-1]],
+                    y=[values.iloc[-1]],
+                    mode='markers',
+                    marker=dict(color='#F39C12', size=6),
+                    hoverinfo='text',
+                    hovertext=f"{dates.iloc[-1].strftime('%Y-%m-%d')}: {values.iloc[-1]:.1f}",
+                    showlegend=False
+                ))
+            
+            # Update layout
+            fig.update_layout(
+                height=70,
+                margin=dict(l=0, r=0, t=0, b=0),
+                plot_bgcolor='rgba(0,0,0,0)',
+                paper_bgcolor='rgba(0,0,0,0)',
+                hovermode='closest',
+                xaxis=dict(visible=False),
+                yaxis=dict(visible=False)
+            )
+            
+            return fig
+        else:
+            # Return empty chart
+            fig = go.Figure()
+            fig.update_layout(
+                height=70, 
+                margin=dict(l=0, r=0, t=0, b=0),
+                plot_bgcolor='rgba(0,0,0,0)',
+                paper_bgcolor='rgba(0,0,0,0)'
+            )
+            return fig
+    
+    except Exception as e:
+        print(f"Error creating sector sparkline for {sector_name}: {e}")
+        # Return empty chart on error
+        fig = go.Figure()
+        fig.update_layout(
+            height=70, 
+            margin=dict(l=0, r=0, t=0, b=0),
+            plot_bgcolor='rgba(0,0,0,0)',
+            paper_bgcolor='rgba(0,0,0,0)'
+        )
+        return fig
     try:
         # Load authentic sector history data using simpler approach
         authentic_history_file = 'data/authentic_sector_history.csv'
