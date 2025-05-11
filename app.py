@@ -8013,6 +8013,24 @@ def download_file(filename):
 import threading
 import time
 
+# Helper function to get color based on sentiment score
+def get_score_color(score):
+    """
+    Get a color based on the sentiment score
+    
+    Args:
+        score (float): A sentiment score between 0 and 100
+        
+    Returns:
+        str: A color string in hex format
+    """
+    if score >= 60:  # Bullish
+        return '#4CAF50'  # Green
+    elif score >= 30:  # Neutral
+        return '#FFC107'  # Amber
+    else:  # Bearish
+        return '#F44336'  # Red
+
 # Define function to get current date in Eastern time
 def create_sector_sparkline(sector_name, current_score=50):
     """
