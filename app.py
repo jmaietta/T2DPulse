@@ -8046,28 +8046,19 @@ def create_sector_sparkline(sector_name, current_score=50):
         # Convert date to datetime
         df['date'] = pd.to_datetime(df['date'])
         
-        # Filter out weekends (Saturday = 5, Sunday = 6)
-        df = df[df['date'].dt.dayofweek < 5].copy()
-        
-        # Filter out specific placeholder date ranges:
-        # 1. April 12th through May 1st
-        # 2. May 4th (single day)
-        # 3. May 11th (single day)
-        april_may1_mask = (df['date'] >= '2025-04-12') & (df['date'] <= '2025-05-01')
+        # Filter out weekends (Saturday = 5, Sunday = 6) and specific placeholder dates (May 4th, May 11th)
+        weekend_mask = df['date'].dt.dayofweek >= 5
         may4_mask = df['date'].dt.strftime('%Y-%m-%d') == '2025-05-04'
         may11_mask = df['date'].dt.strftime('%Y-%m-%d') == '2025-05-11'
         
-        # Combine all the masks to filter out these dates
-        df = df[~(april_may1_mask | may4_mask | may11_mask)].copy()
+        # Filter out weekends and specific placeholder dates, but keep business days between April 12th and May 1st
+        df = df[~(weekend_mask | may4_mask | may11_mask)].copy()
         
-        # Keep only days with real data (exclude any rows where all sectors have score=50)
-        sector_cols = [col for col in df.columns if col != 'date']
+        # Keep all business days regardless of values, even if they're placeholder values
+        # We only filtered weekends and specific placeholder dates (May 4th and May 11th) earlier
+        df_filtered = df.copy()
         
-        # If ALL sectors have value 50.0, it's likely a placeholder date
-        df['all_fifty'] = (df[sector_cols] == 50.0).all(axis=1)
-        df_filtered = df[~df['all_fifty']].copy()
-        
-        print(f"Filtered to {len(df_filtered)} market days from {len(df)} total rows for {sector_name}")
+        print(f"Using {len(df_filtered)} market days for {sector_name}")
         
         # Filter to last 30 days
         cutoff_date = datetime.now() - timedelta(days=30)
@@ -8078,36 +8069,8 @@ def create_sector_sparkline(sector_name, current_score=50):
         
         # If we have enough data points for this sector
         if len(df_filtered) > 1:  # Need at least 2 points to draw a line
-            # Check if this specific sector has meaningful variation
-            sector_vals = df_filtered[sector_name].unique()
-            if len(sector_vals) == 1 and sector_vals[0] == 50.0:
-                print(f"Warning: Sector {sector_name} has only constant values of 50.0")
-                
-                # For sectors with all 50.0 values (like AI Infrastructure),
-                # create a dashed line chart that's visually distinct
-                fig = go.Figure()
-                
-                # Create a date range for the x-axis (business days only)
-                dates = pd.bdate_range(end=pd.Timestamp.now(), periods=10)
-                
-                # Add a dashed gray line to indicate placeholder data
-                fig.add_trace(go.Scatter(
-                    x=dates,
-                    y=[50.0] * len(dates),
-                    mode='lines',
-                    line=dict(color='gray', width=1, dash='dash'),
-                    showlegend=False
-                ))
-                
-                fig.update_layout(
-                    height=70, 
-                    margin=dict(l=0, r=0, t=0, b=0),
-                    plot_bgcolor='rgba(0,0,0,0)',
-                    paper_bgcolor='rgba(0,0,0,0)',
-                    xaxis=dict(visible=False),
-                    yaxis=dict(visible=False, range=[0, 100])
-                )
-                return fig
+            # We're keeping all business days with authentic data,
+            # regardless of what values they contain
             
             # Get dates and values for sectors with variation
             dates = df_filtered['date']
