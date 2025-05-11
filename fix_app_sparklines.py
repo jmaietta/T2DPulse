@@ -99,7 +99,7 @@ def fix_create_sector_sparkline():
     
     # Create the updated function
     new_function = """def create_sector_sparkline(sector_name, current_score=50):
-    """
+    \"\"\"
     Create a simple sparkline chart for a sector showing 30-day trend
     
     Args:
@@ -108,7 +108,7 @@ def fix_create_sector_sparkline():
         
     Returns:
         Figure: A plotly figure object for the sparkline
-    """
+    \"\"\"
     # Use pre-generated sparkline data if available
     if hasattr(sector_sparkline_data, 'SECTOR_SPARKLINE_DATA') and sector_name in sector_sparkline_data.SECTOR_SPARKLINE_DATA:
         # Get data from the pre-generated module
