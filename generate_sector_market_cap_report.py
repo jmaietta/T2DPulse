@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Generate a sector market cap report for the last 30 days
+Generate a comprehensive 30-day sector market cap history report
 """
 
 import pandas as pd
@@ -18,99 +18,92 @@ def main():
     # Load sector market cap data
     df = pd.read_csv('sector_market_caps.csv')
     
-    # Get unique sectors and dates
+    # Create pivot table with date on rows and sectors on columns
+    # This gives us exactly what the user wants: date on left, sectors at top, values in middle
+    pivot_df = df.pivot(index='date', columns='sector', values='market_cap')
+    
+    # Format pivot table for display
+    formatted_pivot = pivot_df.copy()
+    for col in formatted_pivot.columns:
+        formatted_pivot[col] = formatted_pivot[col].apply(lambda x: format_marketcap(x) if pd.notnull(x) else 'N/A')
+    
+    # Save to Excel (dates as rows, sectors as columns)
+    formatted_pivot.to_excel('30day_sector_marketcap_analysis.xlsx')
+    print(f"Saved Excel report to 30day_sector_marketcap_analysis.xlsx")
+    
+    # Print the table with date on left, sectors on top
+    # First get list of sectors and dates
     sectors = sorted(df['sector'].unique())
     dates = sorted(df['date'].unique())
     
-    print("======================= T2D PULSE SECTOR MARKET CAP REPORT =======================")
-    print(f"Report generated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
-    print(f"Data timespan: {dates[0]} to {dates[-1]}")
-    print("===============================================================================\n")
-    
-    # Print the latest market cap for each sector
-    print("LATEST SECTOR MARKET CAPS:\n")
-    latest_date = dates[-1]
-    latest_data = df[df['date'] == latest_date].sort_values(by='market_cap', ascending=False)
-    
-    for _, row in latest_data.iterrows():
-        sector = row['sector']
-        market_cap = row['market_cap']
-        print(f"{sector:<25}: {format_marketcap(market_cap)}")
-    
-    print("\n30-DAY HISTORY FOR KEY SECTORS:\n")
-    
-    # Key sectors to highlight
-    key_sectors = ['AI Infrastructure', 'Cloud Infrastructure', 'Enterprise SaaS', 'Semiconductors', 'Consumer Internet']
-    
-    for sector in key_sectors:
-        sector_data = df[df['sector'] == sector].sort_values('date')
-        if len(sector_data) == 0:
-            print(f"No data available for {sector}")
-            continue
-            
-        print(f"{sector} 30-Day Market Cap History:")
-        
-        # Calculate first and last values to show percentage change
-        first_cap = None
-        last_cap = None
-        
-        # Print the data for every 3rd date (for brevity)
-        for i, (_, row) in enumerate(sector_data.iterrows()):
-            if i == 0:
-                first_cap = row['market_cap']
-            if i == len(sector_data) - 1:
-                last_cap = row['market_cap']
-                
-            date = row['date']
-            cap = row['market_cap']
-            
-            # Print only every 3rd date for brevity, but always print first and last
-            if i % 3 == 0 or i == len(sector_data) - 1:
-                print(f"  {date}: {format_marketcap(cap)}")
-        
-        # Calculate percent change
-        if first_cap and last_cap:
-            pct_change = (last_cap - first_cap) / first_cap * 100
-            print(f"  30-Day Change: {pct_change:.1f}%\n")
-        else:
-            print("  Insufficient data to calculate change\n")
-    
-    # Summary table for all sectors on key dates
-    print("\nSECTOR MARKET CAP SUMMARY TABLE (in Trillions):\n")
-    
-    # Choose dates (first, middle, last)
-    if len(dates) >= 3:
-        display_dates = [dates[0], dates[len(dates)//2], dates[-1]]
-    else:
-        display_dates = dates
-    
-    # Print header
-    print(f"{'Sector':<25}", end="")
-    for date in display_dates:
-        print(f"{date:>12}", end="")
+    # Print header row with sector names
+    print(f"{'DATE':<12}", end="")
+    for sector in sectors:
+        # Abbreviate sector names to fit more columns
+        abbrev = sector[:12]
+        print(f"{abbrev:>12}", end="")
     print()
     
-    print("-" * 25, end="")
-    for _ in display_dates:
+    # Print a separator line
+    print("-" * 12, end="")
+    for _ in sectors:
         print("-" * 12, end="")
     print()
     
-    # Print data for each sector
-    for sector in sectors:
-        sector_data = df[df['sector'] == sector]
-        print(f"{sector:<25}", end="")
-        
-        for date in display_dates:
-            date_data = sector_data[sector_data['date'] == date]
-            if len(date_data) > 0:
-                value = date_data['market_cap'].values[0]
+    # Print each date with its sector values
+    for date in dates:
+        print(f"{date:<12}", end="")
+        date_data = df[df['date'] == date]
+        for sector in sectors:
+            sector_data = date_data[date_data['sector'] == sector]
+            if len(sector_data) > 0:
+                value = sector_data['market_cap'].values[0]
                 if value >= 1e12:
-                    print(f"{value/1e12:>12.2f}", end="")
+                    print(f"${value/1e12:>11.2f}T", end="")
                 else:
-                    print(f"{value/1e9:>12.2f}B", end="")
+                    print(f"${value/1e9:>11.2f}B", end="")
             else:
                 print(f"{'N/A':>12}", end="")
         print()
+    
+    # Also save as plain text format
+    with open('30day_sector_marketcap_table.txt', 'w') as f:
+        # Write header
+        f.write(f"{'DATE':<12}")
+        for sector in sectors:
+            abbrev = sector[:12]
+            f.write(f"{abbrev:>12}")
+        f.write("\n")
+        
+        # Write separator
+        f.write("-" * 12)
+        for _ in sectors:
+            f.write("-" * 12)
+        f.write("\n")
+        
+        # Write data rows
+        for date in dates:
+            f.write(f"{date:<12}")
+            date_data = df[df['date'] == date]
+            for sector in sectors:
+                sector_data = date_data[date_data['sector'] == sector]
+                if len(sector_data) > 0:
+                    value = sector_data['market_cap'].values[0]
+                    if value >= 1e12:
+                        f.write(f"${value/1e12:>11.2f}T")
+                    else:
+                        f.write(f"${value/1e9:>11.2f}B")
+                else:
+                    f.write(f"{'N/A':>12}")
+            f.write("\n")
+    
+    print(f"Saved text report to 30day_sector_marketcap_table.txt")
+    
+    # Print AI Infrastructure data specifically to verify correctness
+    print("\nAI INFRASTRUCTURE MARKET CAP HISTORY:\n")
+    ai_infra = df[df['sector'] == 'AI Infrastructure'].sort_values('date')
+    for _, row in ai_infra.iterrows():
+        print(f"{row['date']}: {format_marketcap(row['market_cap'])}")
 
 if __name__ == "__main__":
     main()
