@@ -67,7 +67,7 @@ NASDAQ_API_KEY = os.environ.get("NASDAQ_DATA_LINK_API_KEY")
 SECTORS: Dict[str, List[str]] = {
     "AdTech": ["APP", "APPS", "CRTO", "DV", "GOOGL", "META", "MGNI", "PUBM", "TTD"],
     "Cloud Infrastructure": ["AMZN", "CRM", "CSCO", "GOOGL", "MSFT", "NET", "ORCL", "SNOW"],
-    "Fintech": ["AFRM", "BILL", "COIN", "FIS", "FI", "GPN", "PYPL", "SSNC"],
+    "Fintech": ["ADYEY", "AFRM", "BILL", "COIN", "FIS", "FI", "GPN", "PYPL", "SSNC", "XYZ"],
     "eCommerce": ["AMZN", "BABA", "BKNG", "CHWY", "EBAY", "ETSY", "PDD", "SE", "SHOP", "WMT"],
     "Consumer Internet": ["ABNB", "BKNG", "GOOGL", "META", "NFLX", "PINS", "SNAP", "SPOT", "TRIP", "YELP"],
     "IT Services / Legacy Tech": ["ACN", "CTSH", "DXC", "HPQ", "IBM", "INFY", "PLTR", "WIT"],
