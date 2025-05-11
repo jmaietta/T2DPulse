@@ -1,140 +1,72 @@
 #!/usr/bin/env python3
-# fix_sector_trends.py
-# -----------------------------------------------------------
-# Ensures sector trend charts have enough data to display a proper trend line
+"""
+Fix sector trend visualizations in T2D Pulse dashboard
 
+This script creates a bridge between the data/sector_30day_history.csv file
+which contains the authentic market cap trend data and the
+authentic_sector_history.csv file which is used by the dashboard
+for rendering the sector trend charts.
+
+The issue is that sector_30day_history.csv is being updated by convert_sector_data.py
+but authentic_sector_history.csv is not being updated, so the charts remain blank.
+"""
+
+import pandas as pd
 import os
-import pandas as pd 
-import random
-import numpy as np
-from datetime import datetime, timedelta
-
-# File paths for historical data
-HISTORY_FILE = 'data/authentic_sector_history.csv'
-
-def ensure_data_directory():
-    """Make sure the data directory exists"""
-    os.makedirs('data', exist_ok=True)
-    return True
-
-def fill_sector_history_with_authentic_data():
-    """
-    Fill the sector history with enough authentic data points 
-    to display a proper trend (at least 10 days)
-    """
-    try:
-        print("Filling sector history with authentic data...")
-        
-        # Check if data file exists
-        if not os.path.exists(HISTORY_FILE):
-            print(f"Data file not found: {HISTORY_FILE}")
-            # Create a new blank file with the right columns
-            columns = [
-                'date', 'SMB SaaS', 'Enterprise SaaS', 'Cloud Infrastructure', 
-                'AdTech', 'Fintech', 'Consumer Internet', 'eCommerce',
-                'Cybersecurity', 'Dev Tools / Analytics', 'Semiconductors',
-                'AI Infrastructure', 'Vertical SaaS', 'IT Services / Legacy Tech',
-                'Hardware / Devices'
-            ]
-            df = pd.DataFrame(columns=columns)
-        else:
-            # Load existing data
-            df = pd.read_csv(HISTORY_FILE)
-            
-        # Convert date to datetime
-        df['date'] = pd.to_datetime(df['date'])
-        
-        # Get sectors from columns excluding date
-        sectors = [col for col in df.columns if col != 'date']
-        
-        # Get the date range we need to fill
-        # Start from 30 days back
-        end_date = datetime.now()
-        start_date = end_date - timedelta(days=30)
-        
-        # Create all dates in range (business days only)
-        all_dates = []
-        current_date = start_date
-        while current_date <= end_date:
-            # Only add weekdays (0=Monday, 4=Friday)
-            if current_date.weekday() < 5:
-                all_dates.append(current_date.date())
-            current_date += timedelta(days=1)
-        
-        # Get the dates we already have
-        existing_dates = set(df['date'].dt.date)
-        
-        # Find dates we need to add
-        dates_to_add = [date for date in all_dates if date not in existing_dates]
-        
-        if not dates_to_add:
-            print("All required dates already exist in the data file")
-            return True
-        
-        print(f"Adding {len(dates_to_add)} missing business days to history")
-        
-        # Get seed values for each sector from existing data
-        seed_values = {}
-        if not df.empty:
-            for sector in sectors:
-                # Get the last value for this sector or a default
-                if sector in df.columns:
-                    last_value = df[sector].dropna().iloc[-1] if not df[sector].dropna().empty else 50.0
-                else:
-                    last_value = 50.0
-                seed_values[sector] = last_value
-        else:
-            # Default seed values for a new file
-            for sector in sectors:
-                seed_values[sector] = random.uniform(45, 55)
-                
-        # Now generate realistic data for each missing date
-        for date in dates_to_add:
-            date_row = {'date': pd.Timestamp(date)}
-            
-            for sector in sectors:
-                # For realistic data, each day moves slightly from the previous day's value
-                # Use the seed value for the first day or the most recent day's value
-                prev_value = seed_values.get(sector, 50.0)
-                
-                # Add a small random change (market caps don't change drastically day-to-day)
-                new_value = prev_value + np.random.normal(0, 0.5)
-                
-                # Keep values in a realistic range
-                new_value = min(max(new_value, 30), 70)
-                
-                # Update the seed for the next day
-                seed_values[sector] = new_value
-                
-                # Add to the row
-                date_row[sector] = new_value
-                
-            # Add the row to the DataFrame
-            df = pd.concat([df, pd.DataFrame([date_row])], ignore_index=True)
-        
-        # Sort by date
-        df = df.sort_values('date')
-        
-        # Save back to CSV
-        df.to_csv(HISTORY_FILE, index=False)
-        
-        # Verify the data has enough points for a trend line
-        if len(df) >= 10:
-            print(f"Successfully filled sector history with {len(df)} data points")
-            return True
-        else:
-            print(f"Warning: Only {len(df)} data points in history, trends may not display properly")
-            return False
-            
-    except Exception as e:
-        print(f"Error filling sector history: {e}")
-        return False
+import json
+from datetime import datetime
 
 def main():
-    """Main function to fix sector trends"""
-    ensure_data_directory()
-    fill_sector_history_with_authentic_data()
-    print("Sector trends fix completed - restart the app to see the changes")
+    print("Fixing sector trend visualizations...")
+    
+    # Load the authentic market cap data
+    try:
+        sector_30day_df = pd.read_csv('data/sector_30day_history.csv')
+        print(f"Loaded authentic data from sector_30day_history.csv with {len(sector_30day_df)} entries")
+    except Exception as e:
+        print(f"Error loading sector_30day_history.csv: {e}")
+        return False
+    
+    # Create the data directory if it doesn't exist
+    os.makedirs('data', exist_ok=True)
+    
+    # Convert to authentic_sector_history.csv format
+    authentic_df = sector_30day_df.copy()
+    
+    # Ensure date is in proper format
+    authentic_df['date'] = pd.to_datetime(authentic_df['Date'])
+    authentic_df = authentic_df.drop(columns=['Date'])  # Remove original Date column
+    
+    # Save to authentic_sector_history.csv
+    authentic_csv_path = "data/authentic_sector_history.csv"
+    authentic_df.to_csv(authentic_csv_path, index=False)
+    print(f"Saved authentic data to {authentic_csv_path}")
+    
+    # Also create a JSON version for easier access
+    json_path = "data/authentic_sector_history.json"
+    
+    # Convert to dictionary format
+    history_dict = {}
+    for _, row in authentic_df.iterrows():
+        date_str = row['date'].strftime('%Y-%m-%d')
+        history_dict[date_str] = {sector: row[sector] for sector in authentic_df.columns if sector != 'date'}
+    
+    # Save to JSON
+    with open(json_path, 'w') as f:
+        json.dump(history_dict, f, indent=2)
+    print(f"Saved authentic JSON data to {json_path}")
+    
+    # Also create a date-specific CSV for today
+    today = datetime.now().strftime('%Y-%m-%d')
+    today_csv_path = f"data/authentic_sector_history_{today}.csv"
+    authentic_df.to_csv(today_csv_path, index=False)
+    print(f"Saved date-specific authentic data to {today_csv_path}")
+    
+    return True
 
 if __name__ == "__main__":
-    main()
+    success = main()
+    if success:
+        print("✅ Successfully fixed sector trend visualizations!")
+    else:
+        print("❌ Failed to fix sector trend visualizations")
