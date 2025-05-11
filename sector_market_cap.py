@@ -38,6 +38,9 @@ with open(chart_path) as f:
 import os
 import sys
 import datetime as dt
+import time
+import json
+import requests
 from pathlib import Path
 from typing import Dict, List, Optional, Tuple
 
@@ -48,6 +51,15 @@ try:
     import finnhub
 except ImportError:
     finnhub = None  # Finnhub optional – yfinance works without it
+
+try:
+    import nasdaqdatalink
+except ImportError:
+    nasdaqdatalink = None  # NASDAQ Data Link optional
+
+# For more reliable market cap data
+POLYGON_API_KEY = os.environ.get("POLYGON_API_KEY")
+NASDAQ_API_KEY = os.environ.get("NASDAQ_DATA_LINK_API_KEY")
 
 ################################################################################
 # 🗄️  CONFIG –‑ EDIT YOUR SECTOR LISTS HERE (no other file touch‑points)
@@ -74,20 +86,105 @@ CHART_PATH = Path("sector_caps_chart.html")
 MISSING_LOG = Path("missing_tickers.log")
 ################################################################################
 
+def _polygon_market_cap(ticker: str) -> Optional[float]:
+    """Source 1 (Primary) – Polygon.io API for most reliable market cap data."""
+    if not POLYGON_API_KEY:
+        return None
+    
+    url = f"https://api.polygon.io/v3/reference/tickers/{ticker}?apiKey={POLYGON_API_KEY}"
+    
+    try:
+        response = requests.get(url, timeout=10)
+        if response.status_code != 200:
+            print(f"Polygon API error for {ticker}: {response.status_code}")
+            return None
+            
+        data = response.json()
+        
+        if data.get("results"):
+            # Get market cap from Polygon data
+            market_cap = data["results"].get("market_cap")
+            if market_cap:
+                return float(market_cap)
+            
+            # If no direct market cap, try calculating from shares * price
+            shares = data["results"].get("share_class_shares_outstanding")
+            price = data["results"].get("price")
+            if not price:
+                # If price not in ticker details, try quotes endpoint
+                quote_url = f"https://api.polygon.io/v2/snapshot/locale/us/markets/stocks/tickers/{ticker}?apiKey={POLYGON_API_KEY}"
+                quote_response = requests.get(quote_url, timeout=10)
+                if quote_response.status_code == 200:
+                    quote_data = quote_response.json()
+                    if quote_data.get("ticker") and quote_data.get("ticker", {}).get("day"):
+                        price = quote_data["ticker"]["day"].get("c")  # close price
+                        
+            if shares and price:
+                return float(shares) * float(price)
+                
+        return None
+    except Exception as e:
+        print(f"Polygon API error for {ticker}: {e}")
+        return None
+
+
+def _nasdaq_market_cap(ticker: str) -> Optional[float]:
+    """Source 2 – NASDAQ Data Link API for fundamental data."""
+    if not NASDAQ_API_KEY:
+        return None
+    
+    try:
+        headers = {
+            "X-API-KEY": NASDAQ_API_KEY,
+            "Accept": "application/json"
+        }
+        # Try Sharadar Core US Fundamentals (SF1) for market cap
+        url = f"https://data.nasdaq.com/api/v3/datatables/SHARADAR/SF1?ticker={ticker}&dimension=MRQ&api_key={NASDAQ_API_KEY}"
+        
+        response = requests.get(url, headers=headers, timeout=10)
+        if response.status_code != 200:
+            print(f"NASDAQ API error for {ticker}: {response.status_code}")
+            return None
+            
+        data = response.json()
+        
+        # Check if we have valid data
+        if data.get("datatable") and data["datatable"].get("data") and len(data["datatable"]["data"]) > 0:
+            # Find the marketcap column index
+            columns = data["datatable"]["columns"]
+            marketcap_idx = None
+            
+            for i, col in enumerate(columns):
+                if col.get("name") == "marketcap":
+                    marketcap_idx = i
+                    break
+                    
+            if marketcap_idx is not None and len(data["datatable"]["data"][0]) > marketcap_idx:
+                marketcap = data["datatable"]["data"][0][marketcap_idx]
+                if marketcap:
+                    return float(marketcap) * 1_000_000  # Convert to raw dollars
+        
+        return None
+    except Exception as e:
+        print(f"NASDAQ API error for {ticker}: {e}")
+        return None
+
+
 def _yf_market_cap(ticker: str) -> Optional[float]:
-    """Primary source – yfinance fast_info then fallback to infodict."""
+    """Source 3 – yfinance fast_info then fallback to infodict."""
     try:
         tk = yf.Ticker(ticker)
         mc = tk.fast_info.get("market_cap")
         if mc is None:
             mc = tk.info.get("marketCap")
         return float(mc) if mc else None
-    except Exception:
+    except Exception as e:
+        print(f"YFinance error for {ticker}: {e}")
         return None
 
 
 def _fh_market_cap(ticker: str, fh_client) -> Optional[float]:
-    """Secondary source – Finnhub metric endpoint."""
+    """Source 4 – Finnhub metric endpoint."""
     if fh_client is None:
         return None
     try:
@@ -101,17 +198,57 @@ def _fh_market_cap(ticker: str, fh_client) -> Optional[float]:
         shares = metric.get("metric", {}).get("sharesOutstanding")
         if price and shares:
             return float(price) * float(shares)
-    except Exception:
+    except Exception as e:
+        print(f"Finnhub error for {ticker}: {e}")
         return None
     return None
 
 
 def fetch_market_cap(ticker: str, fh_client) -> Optional[float]:
-    """Return market cap using yfinance → Finnhub cascade.  None if both fail."""
+    """Return market cap using cascading data sources, prioritizing most reliable.
+    
+    Data sources in order of preference:
+    1. Polygon.io API (most reliable)
+    2. NASDAQ Data Link API
+    3. yfinance API
+    4. Finnhub API
+    
+    Returns None only if all sources fail.
+    """
+    # Try each source in order, logging each attempt
+    print(f"Fetching market cap for {ticker}...")
+    
+    # 1. Polygon API (most reliable)
+    mc = _polygon_market_cap(ticker)
+    if mc is not None:
+        print(f"  ✓ Polygon: ${mc/1_000_000_000:.2f}B")
+        return mc
+    print(f"  ✗ Polygon: Failed")
+    
+    # 2. NASDAQ Data Link
+    mc = _nasdaq_market_cap(ticker)
+    if mc is not None:
+        print(f"  ✓ NASDAQ: ${mc/1_000_000_000:.2f}B")
+        return mc
+    print(f"  ✗ NASDAQ: Failed")
+    
+    # 3. YFinance
     mc = _yf_market_cap(ticker)
-    if mc is None:
-        mc = _fh_market_cap(ticker, fh_client)
-    return mc
+    if mc is not None:
+        print(f"  ✓ YFinance: ${mc/1_000_000_000:.2f}B")
+        return mc
+    print(f"  ✗ YFinance: Failed")
+    
+    # 4. Finnhub (last resort)
+    mc = _fh_market_cap(ticker, fh_client)
+    if mc is not None:
+        print(f"  ✓ Finnhub: ${mc/1_000_000_000:.2f}B")
+        return mc
+    print(f"  ✗ Finnhub: Failed")
+    
+    # All sources failed
+    print(f"  ✗ All sources failed for {ticker}")
+    return None
 
 
 def calculate_sector_caps(sectors: Dict[str, List[str]]) -> pd.DataFrame:
