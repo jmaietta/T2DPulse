@@ -42,16 +42,63 @@ def get_db_connection():
         sys.exit(1)
 
 def create_database_tables(conn):
-    """Create the database tables using the schema file"""
+    """Create the database tables directly in the code"""
     logger.info("Creating database tables...")
     
     cursor = conn.cursor()
     
-    with open('sqlite_schema.sql', 'r') as f:
-        sql_script = f.read()
+    # Define schema directly in code to avoid file reading issues
+    schema = """
+    -- Create table for sectors
+    CREATE TABLE IF NOT EXISTS sectors (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        name TEXT UNIQUE NOT NULL,
+        description TEXT
+    );
     
-    # SQLite can execute multiple statements at once
-    cursor.executescript(sql_script)
+    -- Create table for tickers
+    CREATE TABLE IF NOT EXISTS tickers (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        symbol TEXT UNIQUE NOT NULL,
+        name TEXT
+    );
+    
+    -- Create junction table for ticker-sector relationships (many-to-many)
+    CREATE TABLE IF NOT EXISTS ticker_sectors (
+        ticker_id INTEGER,
+        sector_id INTEGER,
+        PRIMARY KEY (ticker_id, sector_id),
+        FOREIGN KEY (ticker_id) REFERENCES tickers(id) ON DELETE CASCADE,
+        FOREIGN KEY (sector_id) REFERENCES sectors(id) ON DELETE CASCADE
+    );
+    
+    -- Create table for ticker market cap data
+    CREATE TABLE IF NOT EXISTS ticker_market_caps (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        ticker_id INTEGER,
+        date DATE NOT NULL,
+        price REAL,
+        market_cap REAL,
+        shares_outstanding REAL,
+        data_source TEXT,
+        UNIQUE (ticker_id, date),
+        FOREIGN KEY (ticker_id) REFERENCES tickers(id) ON DELETE CASCADE
+    );
+    
+    -- Create table for sector market cap history
+    CREATE TABLE IF NOT EXISTS sector_market_caps (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        sector_id INTEGER,
+        date DATE NOT NULL,
+        market_cap REAL,
+        sentiment_score REAL,
+        UNIQUE (sector_id, date),
+        FOREIGN KEY (sector_id) REFERENCES sectors(id) ON DELETE CASCADE
+    );
+    """
+    
+    # Execute the schema script
+    cursor.executescript(schema)
     conn.commit()
     
     logger.info("Database tables created successfully")
