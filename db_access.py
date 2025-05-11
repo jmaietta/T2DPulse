@@ -1,14 +1,16 @@
 #!/usr/bin/env python3
 """
 Database access module for T2D Pulse.
-This module provides functions to access the SQLite database containing market cap data.
+This module provides a standardized interface for accessing ticker, sector, and market cap data
+from the PostgreSQL database.
 """
-
 import os
-import sqlite3
 import pandas as pd
-from datetime import datetime, timedelta
+import psycopg2
+from psycopg2.extras import RealDictCursor
 import logging
+from typing import Dict, List, Tuple, Optional, Any, Union
+from datetime import datetime, date, timedelta
 
 # Configure logging
 logging.basicConfig(
@@ -17,247 +19,525 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-# Database path
-DB_PATH = 'market_cap_data.db'
+# Get database connection information from environment variables
+DB_URL = os.environ.get('DATABASE_URL')
 
-def get_connection():
-    """Get a connection to the SQLite database"""
+def get_db_connection():
+    """Get a connection to the PostgreSQL database"""
     try:
-        conn = sqlite3.connect(DB_PATH)
+        conn = psycopg2.connect(DB_URL)
         return conn
-    except sqlite3.Error as e:
-        logger.error(f"Error connecting to the database: {e}")
-        return None
+    except Exception as e:
+        logger.error(f"Error connecting to database: {e}")
+        raise
 
-def get_sectors():
-    """Get a list of all sectors"""
-    conn = get_connection()
-    if not conn:
-        return []
-    
+def get_sectors() -> List[Dict[str, Any]]:
+    """Get all sectors from the database"""
     try:
-        cursor = conn.cursor()
-        cursor.execute("SELECT name FROM sectors ORDER BY name")
-        sectors = [row[0] for row in cursor.fetchall()]
+        conn = get_db_connection()
+        cursor = conn.cursor(cursor_factory=RealDictCursor)
+        
+        cursor.execute("SELECT id, name, description FROM sectors ORDER BY name")
+        sectors = cursor.fetchall()
+        
+        cursor.close()
+        conn.close()
+        
         return sectors
-    except sqlite3.Error as e:
+    except Exception as e:
         logger.error(f"Error getting sectors: {e}")
         return []
-    finally:
-        conn.close()
 
-def get_sector_market_caps(days=30):
-    """
-    Get sector market caps for the past N days
-    
-    Args:
-        days (int): Number of days to get data for
-        
-    Returns:
-        DataFrame: DataFrame with date and sector columns
-    """
-    conn = get_connection()
-    if not conn:
-        return pd.DataFrame()
-    
+def get_tickers() -> List[Dict[str, Any]]:
+    """Get all tickers from the database"""
     try:
-        # Calculate the date N days ago
-        end_date = datetime.now()
-        start_date = end_date - timedelta(days=days)
-        start_date_str = start_date.strftime('%Y-%m-%d')
+        conn = get_db_connection()
+        cursor = conn.cursor(cursor_factory=RealDictCursor)
         
-        # Query the database
-        query = """
-        SELECT s.name as sector, smc.date, smc.market_cap
-        FROM sector_market_caps smc
-        JOIN sectors s ON smc.sector_id = s.id
-        WHERE smc.date >= ?
-        ORDER BY smc.date, s.name
-        """
+        cursor.execute("SELECT id, symbol, name FROM tickers ORDER BY symbol")
+        tickers = cursor.fetchall()
         
-        # Load into a pandas DataFrame
-        params = {"start_date": start_date_str}
-        df = pd.read_sql_query(query, conn, params=params)
+        cursor.close()
+        conn.close()
         
-        # Pivot the DataFrame to get sectors as columns
-        pivot_df = df.pivot(index='date', columns='sector', values='market_cap')
-        
-        # Reset the index to make date a column
-        pivot_df.reset_index(inplace=True)
-        
-        return pivot_df
+        return tickers
     except Exception as e:
-        logger.error(f"Error getting sector market caps: {e}")
-        return pd.DataFrame()
-    finally:
-        conn.close()
+        logger.error(f"Error getting tickers: {e}")
+        return []
 
-def get_sector_sentiment_scores(days=30):
+def get_sector_tickers(sector_id: Optional[int] = None) -> List[Dict[str, Any]]:
     """
-    Get sector sentiment scores for the past N days
+    Get tickers for a specific sector or all sector-ticker relationships
     
     Args:
-        days (int): Number of days to get data for
+        sector_id: Optional sector ID to filter by
         
     Returns:
-        DataFrame: DataFrame with date and sector columns
+        List of dictionaries with sector_id, ticker_id, sector_name, ticker_symbol
     """
-    conn = get_connection()
-    if not conn:
-        return pd.DataFrame()
-    
     try:
-        # Calculate the date N days ago
-        end_date = datetime.now()
-        start_date = end_date - timedelta(days=days)
-        start_date_str = start_date.strftime('%Y-%m-%d')
+        conn = get_db_connection()
+        cursor = conn.cursor(cursor_factory=RealDictCursor)
         
-        # Query the database
-        query = """
-        SELECT s.name as sector, smc.date, smc.sentiment_score
-        FROM sector_market_caps smc
-        JOIN sectors s ON smc.sector_id = s.id
-        WHERE smc.date >= ? AND smc.sentiment_score IS NOT NULL
-        ORDER BY smc.date, s.name
-        """
+        if sector_id is not None:
+            cursor.execute("""
+                SELECT ts.sector_id, ts.ticker_id, s.name as sector_name, t.symbol as ticker_symbol
+                FROM ticker_sectors ts
+                JOIN sectors s ON ts.sector_id = s.id
+                JOIN tickers t ON ts.ticker_id = t.id
+                WHERE ts.sector_id = %s
+                ORDER BY t.symbol
+            """, (sector_id,))
+        else:
+            cursor.execute("""
+                SELECT ts.sector_id, ts.ticker_id, s.name as sector_name, t.symbol as ticker_symbol
+                FROM ticker_sectors ts
+                JOIN sectors s ON ts.sector_id = s.id
+                JOIN tickers t ON ts.ticker_id = t.id
+                ORDER BY s.name, t.symbol
+            """)
         
-        # Load into a pandas DataFrame
-        params = {"start_date": start_date_str}
-        df = pd.read_sql_query(query, conn, params=params)
+        sector_tickers = cursor.fetchall()
         
-        # Pivot the DataFrame to get sectors as columns
-        pivot_df = df.pivot(index='date', columns='sector', values='sentiment_score')
+        cursor.close()
+        conn.close()
         
-        # Reset the index to make date a column
-        pivot_df.reset_index(inplace=True)
-        
-        return pivot_df
+        return sector_tickers
     except Exception as e:
-        logger.error(f"Error getting sector sentiment scores: {e}")
-        return pd.DataFrame()
-    finally:
-        conn.close()
+        logger.error(f"Error getting sector tickers: {e}")
+        return []
 
-def get_ticker_market_caps(ticker_symbol, days=30):
+def get_ticker_market_caps(ticker_symbols: Optional[List[str]] = None, 
+                          start_date: Optional[str] = None,
+                          end_date: Optional[str] = None) -> pd.DataFrame:
     """
-    Get market cap data for a specific ticker for the past N days
+    Get market cap data for specific tickers and date range
     
     Args:
-        ticker_symbol (str): The ticker symbol
-        days (int): Number of days to get data for
+        ticker_symbols: Optional list of ticker symbols to filter by
+        start_date: Optional start date in YYYY-MM-DD format
+        end_date: Optional end date in YYYY-MM-DD format
         
     Returns:
-        DataFrame: DataFrame with date and market_cap columns
+        DataFrame with ticker_symbol, date, market_cap columns
     """
-    conn = get_connection()
-    if not conn:
-        return pd.DataFrame()
-    
     try:
-        # Calculate the date N days ago
-        end_date = datetime.now()
-        start_date = end_date - timedelta(days=days)
-        start_date_str = start_date.strftime('%Y-%m-%d')
+        conn = get_db_connection()
         
-        # Query the database
+        # Build the query with optional filters
         query = """
-        SELECT tmc.date, tmc.market_cap
-        FROM ticker_market_caps tmc
-        JOIN tickers t ON tmc.ticker_id = t.id
-        WHERE t.symbol = ? AND tmc.date >= ?
-        ORDER BY tmc.date
+            SELECT t.symbol as ticker_symbol, tmc.date, tmc.market_cap
+            FROM ticker_market_caps tmc
+            JOIN tickers t ON tmc.ticker_id = t.id
+            WHERE 1=1
         """
+        params = []
         
-        # Load into a pandas DataFrame using a dictionary for params
-        cursor = conn.cursor()
-        cursor.execute(query, (ticker_symbol, start_date_str))
+        if ticker_symbols:
+            placeholders = ', '.join(['%s'] * len(ticker_symbols))
+            query += f" AND t.symbol IN ({placeholders})"
+            params.extend(ticker_symbols)
         
-        # Convert results to DataFrame
-        columns = ['date', 'market_cap']
-        results = cursor.fetchall()
-        df = pd.DataFrame(results, columns=columns)
+        if start_date:
+            query += " AND tmc.date >= %s"
+            params.append(start_date)
+        
+        if end_date:
+            query += " AND tmc.date <= %s"
+            params.append(end_date)
+        
+        query += " ORDER BY t.symbol, tmc.date"
+        
+        # Execute the query and get results as a DataFrame
+        df = pd.read_sql_query(query, conn, params=params)
+        conn.close()
         
         return df
     except Exception as e:
         logger.error(f"Error getting ticker market caps: {e}")
         return pd.DataFrame()
-    finally:
-        conn.close()
 
-def get_all_ticker_data(days=30):
+def get_sector_market_caps(sector_names: Optional[List[str]] = None,
+                          start_date: Optional[str] = None,
+                          end_date: Optional[str] = None) -> pd.DataFrame:
     """
-    Get market cap data for all tickers for the past N days
+    Get market cap data for specific sectors and date range
     
     Args:
-        days (int): Number of days to get data for
+        sector_names: Optional list of sector names to filter by
+        start_date: Optional start date in YYYY-MM-DD format
+        end_date: Optional end date in YYYY-MM-DD format
         
     Returns:
-        DataFrame: DataFrame with ticker, date and market_cap columns
+        DataFrame with sector_name, date, market_cap columns
     """
-    conn = get_connection()
-    if not conn:
-        return pd.DataFrame()
-    
     try:
-        # Calculate the date N days ago
-        end_date = datetime.now()
-        start_date = end_date - timedelta(days=days)
-        start_date_str = start_date.strftime('%Y-%m-%d')
+        conn = get_db_connection()
         
-        # Query the database
+        # Build the query with optional filters
         query = """
-        SELECT t.symbol as ticker, tmc.date, tmc.market_cap
-        FROM ticker_market_caps tmc
-        JOIN tickers t ON tmc.ticker_id = t.id
-        WHERE tmc.date >= ?
-        ORDER BY t.symbol, tmc.date
+            SELECT s.name as sector_name, smc.date, smc.market_cap
+            FROM sector_market_caps smc
+            JOIN sectors s ON smc.sector_id = s.id
+            WHERE 1=1
         """
+        params = []
         
-        # Execute the query manually
-        cursor = conn.cursor()
-        cursor.execute(query, (start_date_str,))
+        if sector_names:
+            placeholders = ', '.join(['%s'] * len(sector_names))
+            query += f" AND s.name IN ({placeholders})"
+            params.extend(sector_names)
         
-        # Convert to DataFrame
-        columns = ['ticker', 'date', 'market_cap']
-        results = cursor.fetchall()
-        df = pd.DataFrame(results, columns=columns)
+        if start_date:
+            query += " AND smc.date >= %s"
+            params.append(start_date)
+        
+        if end_date:
+            query += " AND smc.date <= %s"
+            params.append(end_date)
+        
+        query += " ORDER BY s.name, smc.date"
+        
+        # Execute the query and get results as a DataFrame
+        df = pd.read_sql_query(query, conn, params=params)
+        conn.close()
         
         return df
     except Exception as e:
-        logger.error(f"Error getting all ticker data: {e}")
+        logger.error(f"Error getting sector market caps: {e}")
         return pd.DataFrame()
-    finally:
-        conn.close()
 
-def get_sector_tickers(sector_name):
+def get_latest_market_caps() -> Dict[str, float]:
     """
-    Get all tickers in a specific sector
+    Get the latest market cap for each sector
+    
+    Returns:
+        Dictionary mapping sector names to market cap values
+    """
+    try:
+        conn = get_db_connection()
+        cursor = conn.cursor()
+        
+        # Get the most recent date with data
+        cursor.execute("SELECT MAX(date) FROM sector_market_caps")
+        latest_date = cursor.fetchone()[0]
+        
+        if not latest_date:
+            logger.warning("No market cap data found in database")
+            return {}
+        
+        # Get all sector market caps for the latest date
+        cursor.execute("""
+            SELECT s.name, smc.market_cap
+            FROM sector_market_caps smc
+            JOIN sectors s ON smc.sector_id = s.id
+            WHERE smc.date = %s
+        """, (latest_date,))
+        
+        results = cursor.fetchall()
+        
+        cursor.close()
+        conn.close()
+        
+        # Convert to dictionary
+        market_caps = {sector: market_cap for sector, market_cap in results}
+        
+        logger.info(f"Retrieved latest market caps from {latest_date}")
+        return market_caps
+    except Exception as e:
+        logger.error(f"Error getting latest market caps: {e}")
+        return {}
+
+def get_latest_sector_data() -> pd.DataFrame:
+    """
+    Get the latest data for all sectors including market cap and optional sentiment score
+    
+    Returns:
+        DataFrame with sector_name, market_cap, sentiment_score columns
+    """
+    try:
+        conn = get_db_connection()
+        
+        # Get the most recent date with data
+        cursor = conn.cursor()
+        cursor.execute("SELECT MAX(date) FROM sector_market_caps")
+        latest_date = cursor.fetchone()[0]
+        
+        if not latest_date:
+            logger.warning("No market cap data found in database")
+            return pd.DataFrame()
+        
+        # Get all sector data for the latest date
+        query = """
+            SELECT s.name as sector_name, smc.market_cap, smc.sentiment_score
+            FROM sector_market_caps smc
+            JOIN sectors s ON smc.sector_id = s.id
+            WHERE smc.date = %s
+            ORDER BY s.name
+        """
+        
+        df = pd.read_sql_query(query, conn, params=(latest_date,))
+        conn.close()
+        
+        logger.info(f"Retrieved latest sector data from {latest_date}")
+        return df
+    except Exception as e:
+        logger.error(f"Error getting latest sector data: {e}")
+        return pd.DataFrame()
+
+def get_sector_sparkline_data(days: int = 30) -> Dict[str, List[float]]:
+    """
+    Get data for sector sparklines showing trends over the specified number of days
     
     Args:
-        sector_name (str): The name of the sector
+        days: Number of days to include in the sparkline data
         
     Returns:
-        list: List of ticker symbols
+        Dictionary mapping sector names to lists of market cap values
     """
-    conn = get_connection()
-    if not conn:
-        return []
-    
     try:
+        conn = get_db_connection()
+        
+        # Calculate the start date
         cursor = conn.cursor()
+        cursor.execute("SELECT MAX(date) FROM sector_market_caps")
+        latest_date = cursor.fetchone()[0]
+        
+        if not latest_date:
+            logger.warning("No market cap data found in database")
+            return {}
+        
+        start_date = latest_date - timedelta(days=days)
+        
+        # Get sector market caps for the date range
         query = """
-        SELECT t.symbol
-        FROM tickers t
-        JOIN ticker_sectors ts ON t.id = ts.ticker_id
-        JOIN sectors s ON ts.sector_id = s.id
-        WHERE s.name = ?
-        ORDER BY t.symbol
+            SELECT s.name as sector_name, smc.date, smc.market_cap
+            FROM sector_market_caps smc
+            JOIN sectors s ON smc.sector_id = s.id
+            WHERE smc.date BETWEEN %s AND %s
+            ORDER BY s.name, smc.date
         """
-        cursor.execute(query, (sector_name,))
-        tickers = [row[0] for row in cursor.fetchall()]
-        return tickers
-    except sqlite3.Error as e:
-        logger.error(f"Error getting tickers for sector {sector_name}: {e}")
-        return []
-    finally:
+        
+        df = pd.read_sql_query(query, conn, params=(start_date, latest_date))
         conn.close()
+        
+        if df.empty:
+            logger.warning(f"No sector market cap data found between {start_date} and {latest_date}")
+            return {}
+        
+        # Convert to dictionary of lists
+        sparkline_data = {}
+        for sector, group in df.groupby('sector_name'):
+            sparkline_data[sector] = group['market_cap'].tolist()
+        
+        logger.info(f"Retrieved sparkline data for {len(sparkline_data)} sectors")
+        return sparkline_data
+    except Exception as e:
+        logger.error(f"Error getting sector sparkline data: {e}")
+        return {}
+
+def insert_ticker_market_cap(ticker_symbol: str, date_str: str, market_cap: float) -> bool:
+    """
+    Insert or update a ticker market cap value
+    
+    Args:
+        ticker_symbol: Ticker symbol
+        date_str: Date in YYYY-MM-DD format
+        market_cap: Market cap value
+        
+    Returns:
+        True if successful, False otherwise
+    """
+    try:
+        conn = get_db_connection()
+        cursor = conn.cursor()
+        
+        # Get the ticker ID
+        cursor.execute("SELECT id FROM tickers WHERE symbol = %s", (ticker_symbol,))
+        result = cursor.fetchone()
+        
+        if not result:
+            logger.warning(f"Ticker {ticker_symbol} not found in database")
+            return False
+        
+        ticker_id = result[0]
+        
+        # Insert or update the market cap
+        cursor.execute("""
+            INSERT INTO ticker_market_caps (ticker_id, date, market_cap)
+            VALUES (%s, %s, %s)
+            ON CONFLICT (ticker_id, date) 
+            DO UPDATE SET market_cap = EXCLUDED.market_cap
+        """, (ticker_id, date_str, market_cap))
+        
+        conn.commit()
+        cursor.close()
+        conn.close()
+        
+        logger.info(f"Updated market cap for {ticker_symbol} on {date_str}: ${market_cap:,.2f}")
+        return True
+    except Exception as e:
+        logger.error(f"Error inserting ticker market cap: {e}")
+        return False
+
+def insert_sector_market_cap(sector_name: str, date_str: str, market_cap: float, 
+                             sentiment_score: Optional[float] = None) -> bool:
+    """
+    Insert or update a sector market cap value
+    
+    Args:
+        sector_name: Sector name
+        date_str: Date in YYYY-MM-DD format
+        market_cap: Market cap value
+        sentiment_score: Optional sentiment score
+        
+    Returns:
+        True if successful, False otherwise
+    """
+    try:
+        conn = get_db_connection()
+        cursor = conn.cursor()
+        
+        # Get the sector ID
+        cursor.execute("SELECT id FROM sectors WHERE name = %s", (sector_name,))
+        result = cursor.fetchone()
+        
+        if not result:
+            logger.warning(f"Sector {sector_name} not found in database")
+            return False
+        
+        sector_id = result[0]
+        
+        # Insert or update the market cap
+        if sentiment_score is not None:
+            cursor.execute("""
+                INSERT INTO sector_market_caps (sector_id, date, market_cap, sentiment_score)
+                VALUES (%s, %s, %s, %s)
+                ON CONFLICT (sector_id, date) 
+                DO UPDATE SET market_cap = EXCLUDED.market_cap, sentiment_score = EXCLUDED.sentiment_score
+            """, (sector_id, date_str, market_cap, sentiment_score))
+        else:
+            cursor.execute("""
+                INSERT INTO sector_market_caps (sector_id, date, market_cap)
+                VALUES (%s, %s, %s)
+                ON CONFLICT (sector_id, date) 
+                DO UPDATE SET market_cap = EXCLUDED.market_cap
+            """, (sector_id, date_str, market_cap))
+        
+        conn.commit()
+        cursor.close()
+        conn.close()
+        
+        logger.info(f"Updated market cap for {sector_name} on {date_str}: ${market_cap:,.2f}")
+        return True
+    except Exception as e:
+        logger.error(f"Error inserting sector market cap: {e}")
+        return False
+
+def calculate_sector_market_caps(date_str: str) -> bool:
+    """
+    Calculate market caps for all sectors on a specific date based on ticker market caps
+    
+    Args:
+        date_str: Date in YYYY-MM-DD format
+        
+    Returns:
+        True if successful, False otherwise
+    """
+    try:
+        conn = get_db_connection()
+        
+        # Get all sector-ticker relationships
+        cursor = conn.cursor()
+        cursor.execute("""
+            SELECT s.id as sector_id, s.name as sector_name, t.id as ticker_id, t.symbol as ticker_symbol
+            FROM ticker_sectors ts
+            JOIN sectors s ON ts.sector_id = s.id
+            JOIN tickers t ON ts.ticker_id = t.id
+        """)
+        sector_tickers = cursor.fetchall()
+        
+        # Get all ticker market caps for the date
+        cursor.execute("""
+            SELECT ticker_id, market_cap
+            FROM ticker_market_caps
+            WHERE date = %s
+        """, (date_str,))
+        ticker_market_caps = {tid: mc for tid, mc in cursor.fetchall()}
+        
+        # Calculate sector market caps
+        sector_data = {}
+        for sector_id, sector_name, ticker_id, ticker_symbol in sector_tickers:
+            if sector_id not in sector_data:
+                sector_data[sector_id] = {
+                    'name': sector_name,
+                    'total_market_cap': 0,
+                    'tickers': []
+                }
+            
+            # Add the ticker market cap to the sector total
+            if ticker_id in ticker_market_caps:
+                market_cap = ticker_market_caps[ticker_id]
+                sector_data[sector_id]['total_market_cap'] += market_cap
+                sector_data[sector_id]['tickers'].append({
+                    'symbol': ticker_symbol,
+                    'market_cap': market_cap
+                })
+        
+        # Insert the sector market caps
+        success_count = 0
+        for sector_id, data in sector_data.items():
+            cursor.execute("""
+                INSERT INTO sector_market_caps (sector_id, date, market_cap)
+                VALUES (%s, %s, %s)
+                ON CONFLICT (sector_id, date) 
+                DO UPDATE SET market_cap = EXCLUDED.market_cap
+            """, (sector_id, date_str, data['total_market_cap']))
+            success_count += 1
+        
+        conn.commit()
+        cursor.close()
+        conn.close()
+        
+        logger.info(f"Calculated market caps for {success_count} sectors on {date_str}")
+        return True
+    except Exception as e:
+        logger.error(f"Error calculating sector market caps: {e}")
+        return False
+
+def ensure_market_cap_consistency() -> bool:
+    """
+    Check and fix any inconsistencies between ticker and sector market caps
+    
+    Returns:
+        True if successful, False otherwise
+    """
+    try:
+        conn = get_db_connection()
+        cursor = conn.cursor()
+        
+        # Get all dates with ticker market caps
+        cursor.execute("SELECT DISTINCT date FROM ticker_market_caps ORDER BY date")
+        dates = [row[0] for row in cursor.fetchall()]
+        
+        if not dates:
+            logger.warning("No ticker market cap data found")
+            return False
+        
+        # For each date, recalculate sector market caps
+        for date_str in dates:
+            # Check if we already have sector data for this date
+            cursor.execute("SELECT COUNT(*) FROM sector_market_caps WHERE date = %s", (date_str,))
+            count = cursor.fetchone()[0]
+            
+            # If we don't have sector data or we want to force recalculation
+            if count == 0:
+                logger.info(f"Calculating sector market caps for {date_str}")
+                calculate_sector_market_caps(date_str.strftime('%Y-%m-%d'))
+        
+        conn.close()
+        logger.info("Ensured market cap consistency for all dates")
+        return True
+    except Exception as e:
+        logger.error(f"Error ensuring market cap consistency: {e}")
+        return False

@@ -307,7 +307,46 @@ def chart_sector_caps(path: Path = CSV_PATH, out: Path = CHART_PATH) -> Path:
 
 
 def get_latest_sector_caps() -> Dict[str, float]:
-    """Return dictionary of latest market caps for each sector (for app.py integration)."""
+    """Return dictionary of latest market caps for each sector (for app.py integration).
+    
+    This function has been updated to use the PostgreSQL database instead of CSV files.
+    It connects to the PostgreSQL database using the DATABASE_URL environment variable.
+    """
+    import psycopg2
+    import os
+    from datetime import date, timedelta
+    
+    # Try to get data from PostgreSQL database first
+    try:
+        database_url = os.environ.get('DATABASE_URL')
+        if database_url:
+            conn = psycopg2.connect(database_url)
+            cursor = conn.cursor()
+            
+            # Get the latest date with data
+            cursor.execute("SELECT MAX(date) FROM sector_market_caps")
+            latest_date = cursor.fetchone()[0]
+            
+            if latest_date:
+                # Get sector market caps for the latest date
+                cursor.execute("""
+                    SELECT s.name, smc.market_cap 
+                    FROM sector_market_caps smc
+                    JOIN sectors s ON smc.sector_id = s.id
+                    WHERE smc.date = %s
+                """, (latest_date,))
+                
+                results = cursor.fetchall()
+                conn.close()
+                
+                if results:
+                    print(f"Using database data from {latest_date}")
+                    return {sector: market_cap for sector, market_cap in results}
+    except Exception as e:
+        print(f"Error getting data from database: {e}")
+        # Fall back to CSV if database access fails
+    
+    # Fall back to CSV if database is empty or not available
     if not CSV_PATH.exists():
         return {}
     
