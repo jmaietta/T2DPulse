@@ -6260,6 +6260,17 @@ def update_sector_sentiment_container(n):
     
     # Always run the sector display fix on every update to ensure consistency
     try:
+        # Import the sector_market_cap module to get the latest market caps
+        try:
+            import sector_market_cap
+            # Get the latest sector market caps
+            latest_sector_caps = sector_market_cap.get_latest_sector_caps()
+            formatted_caps = sector_market_cap.format_sector_caps_for_display()
+            print(f"Successfully loaded latest sector market caps: {formatted_caps}")
+        except Exception as e:
+            print(f"Error loading sector market caps: {e}")
+            
+        # Import and run the sector display fix
         import fix_sector_display
         fix_sector_display.ensure_consistent_sector_data()
         print("Successfully updated sector display with consistent data")
