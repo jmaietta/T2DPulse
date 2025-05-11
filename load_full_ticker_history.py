@@ -33,12 +33,13 @@ def insert_ticker_market_caps(conn, ticker_data, ticker_mapping):
     """Insert ticker market cap data into the database."""
     cursor = conn.cursor()
     
-    # Clear existing data first
-    cursor.execute("DELETE FROM ticker_market_caps")
-    conn.commit()
+    # Get existing ticker-date combinations to avoid duplicates
+    cursor.execute("SELECT ticker_id, date FROM ticker_market_caps")
+    existing_entries = set((tid, date) for tid, date in cursor.fetchall())
     
     # Prepare data for insertion
     insert_data = []
+    update_data = []
     missing_tickers = set()
     
     for _, row in ticker_data.iterrows():
@@ -47,27 +48,54 @@ def insert_ticker_market_caps(conn, ticker_data, ticker_mapping):
             ticker_id = ticker_mapping[ticker]
             date = row['date']
             market_cap = row['market_cap']
-            insert_data.append((ticker_id, date, market_cap))
+            
+            # Check if this ticker-date combination already exists
+            if (ticker_id, date) in existing_entries:
+                update_data.append((market_cap, ticker_id, date))
+            else:
+                insert_data.append((ticker_id, date, market_cap))
         else:
             missing_tickers.add(ticker)
     
     if missing_tickers:
         print(f"WARNING: The following tickers are in the CSV but not in the database: {missing_tickers}")
     
-    # Insert in batches
-    batch_size = 1000
-    for i in range(0, len(insert_data), batch_size):
-        batch = insert_data[i:i+batch_size]
-        cursor.executemany(
-            """
-            INSERT INTO ticker_market_caps (ticker_id, date, market_cap)
-            VALUES (?, ?, ?)
-            """,
-            batch
-        )
-        conn.commit()
+    # Insert new data in batches
+    if insert_data:
+        batch_size = 1000
+        inserted_count = 0
+        for i in range(0, len(insert_data), batch_size):
+            batch = insert_data[i:i+batch_size]
+            cursor.executemany(
+                """
+                INSERT INTO ticker_market_caps (ticker_id, date, market_cap)
+                VALUES (?, ?, ?)
+                """,
+                batch
+            )
+            conn.commit()
+            inserted_count += len(batch)
+        print(f"Inserted {inserted_count} new ticker market cap entries")
     
-    print(f"Inserted {len(insert_data)} ticker market cap entries into the database")
+    # Update existing data in batches
+    if update_data:
+        batch_size = 1000
+        updated_count = 0
+        for i in range(0, len(update_data), batch_size):
+            batch = update_data[i:i+batch_size]
+            cursor.executemany(
+                """
+                UPDATE ticker_market_caps
+                SET market_cap = ?
+                WHERE ticker_id = ? AND date = ?
+                """,
+                batch
+            )
+            conn.commit()
+            updated_count += len(batch)
+        print(f"Updated {updated_count} existing ticker market cap entries")
+    
+    print(f"Total ticker market cap entries processed: {len(insert_data) + len(update_data)}")
 
 def recalculate_sector_market_caps(conn):
     """Recalculate all sector market caps based on ticker data."""
