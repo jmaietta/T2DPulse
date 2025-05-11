@@ -28,6 +28,10 @@ args = "Market Cap Download Server"
 task = "workflow.run"
 args = "Sector Market Cap Updater"
 
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "Polygon 30-Day History Collector"
+
 [[workflows.workflow]]
 name = "Background Data Collection"
 author = "agent"
@@ -61,6 +65,14 @@ author = "agent"
 [[workflows.workflow.tasks]]
 task = "shell.exec"
 args = "python sector_market_cap.py"
+
+[[workflows.workflow]]
+name = "Polygon 30-Day History Collector"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "python fetch_polygon_30day_ticker_history.py"
 
 [deployment]
 run = ["sh", "-c", "python app.py"]
