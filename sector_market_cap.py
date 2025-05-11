@@ -137,7 +137,9 @@ def calculate_sector_caps(sectors: Dict[str, List[str]]) -> pd.DataFrame:
             missing_any.extend(missing)
 
     if missing_any:
-        MISSING_LOG.write_text(f"{today}: {', '.join(missing_any)}\n", append=True)
+        # Open in append mode to add to the log
+        with open(MISSING_LOG, 'a') as f:
+            f.write(f"{today}: {', '.join(missing_any)}\n")
     return pd.DataFrame(records, columns=["date", "sector", "market_cap", "missing_tickers"])
 
 
