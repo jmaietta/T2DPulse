@@ -8069,92 +8069,66 @@ def create_sector_sparkline(sector_name, current_score=50):
         else:
             print(f"History file not found: {authentic_history_file}")
                 
-        # Create sparkline figure
+        # Create a VERY basic sparkline chart for reliability
         fig = go.Figure()
         
-        # Add trace for sector score over time
+        # Basic line trace - super simplified 
         fig.add_trace(go.Scatter(
             x=sector_data['date'],
             y=sector_data['score'],
             mode='lines',
             line=dict(
-                width=2,
-                color='#2c3e50',
+                width=2, 
+                color='#1f77b4',  # Use standard blue
             ),
-            hoverinfo='text',
-            hovertext=[f"{d.strftime('%Y-%m-%d')}: {s:.1f}" 
-                       for d, s in zip(
-                           sector_data['date'], 
-                           sector_data['score']
-                       )],
-        ))
-        
-        # Add endpoint marker
-        last_date = sector_data['date'].iloc[-1]
-        last_score = sector_data['score'].iloc[-1]
-        
-        # Get color based on the score
-        if last_score >= 60:
-            point_color = '#2ecc71'  # Green for bullish
-        elif last_score <= 30:
-            point_color = '#e74c3c'  # Red for bearish
-        else:
-            point_color = '#f39c12'  # Yellow for neutral
-            
-        fig.add_trace(go.Scatter(
-            x=[last_date],
-            y=[last_score],
-            mode='markers',
-            marker=dict(
-                size=8,
-                color=point_color,
-                line=dict(width=2, color='#2c3e50')
-            ),
-            hoverinfo='text',
-            hovertext=f"Current: {last_score:.1f}",
-        ))
-        
-        # Add reference lines for bearish/neutral/bullish zones
-        fig.add_shape(
-            type="line",
-            x0=sector_data['date'].min(),
-            y0=30,
-            x1=sector_data['date'].max(),
-            y1=30,
-            line=dict(color="#e74c3c", width=1, dash="dot"),
-        )
-        
-        fig.add_shape(
-            type="line",
-            x0=sector_data['date'].min(),
-            y0=60,
-            x1=sector_data['date'].max(),
-            y1=60,
-            line=dict(color="#2ecc71", width=1, dash="dot"),
-        )
-        
-        # Format the layout
-        fig.update_layout(
-            margin=dict(l=0, r=0, t=0, b=0),
-            height=60,
-            width=280,
             showlegend=False,
+        ))
+        
+        # Add a single endpoint marker with a simple fixed size
+        if len(sector_data) > 0:
+            last_date = sector_data['date'].iloc[-1]
+            last_score = sector_data['score'].iloc[-1]
+            
+            # Set marker color
+            if last_score >= 60:
+                point_color = 'green'  # Simplified color scheme
+            elif last_score <= 30:
+                point_color = 'red'
+            else:
+                point_color = 'orange'
+                
+            # Add simple end marker
+            fig.add_trace(go.Scatter(
+                x=[last_date],
+                y=[last_score],
+                mode='markers',
+                marker=dict(
+                    size=8,
+                    color=point_color,
+                ),
+                showlegend=False,
+            ))
+        
+        # Extremely minimal layout
+        fig.update_layout(
+            height=60,
+            width=180,
+            margin=dict(l=0, r=0, t=0, b=0, pad=0),
+            paper_bgcolor='rgba(0,0,0,0)',
+            plot_bgcolor='rgba(0,0,0,0)', 
             xaxis=dict(
                 showticklabels=False,
                 showgrid=False,
                 zeroline=False,
-                fixedrange=True,
+                visible=False,
             ),
             yaxis=dict(
                 showticklabels=False,
                 showgrid=False,
                 zeroline=False,
-                range=[0, 100],
-                fixedrange=True,
+                visible=False,
+                range=[0, 100],  # Fixed range for standard scale
             ),
-            plot_bgcolor='rgba(0,0,0,0)',
-            paper_bgcolor='rgba(0,0,0,0)',
-            hovermode='closest',
         )
         
         return fig
@@ -8174,61 +8148,43 @@ def create_sector_sparkline(sector_name, current_score=50):
             x=dates,
             y=[current_score] * 30,
             mode='lines',
-            line=dict(width=2, color='#2c3e50'),
+            line=dict(width=2, color='#1f77b4'),
+            showlegend=False,
         ))
         
-        # Add endpoint marker
+        # Add a single color marker at the end
         fig.add_trace(go.Scatter(
             x=[dates[-1]],
             y=[current_score],
             mode='markers',
             marker=dict(
                 size=8,
-                color='#3498db',
-                line=dict(width=2, color='#2c3e50')
+                color='orange',
             ),
+            showlegend=False,
         ))
         
-        # Add reference lines
-        fig.add_shape(
-            type="line",
-            x0=dates[0],
-            y0=30,
-            x1=dates[-1],
-            y1=30,
-            line=dict(color="#e74c3c", width=1, dash="dot"),
-        )
-        
-        fig.add_shape(
-            type="line",
-            x0=dates[0],
-            y0=60,
-            x1=dates[-1],
-            y1=60,
-            line=dict(color="#2ecc71", width=1, dash="dot"),
-        )
-        
-        # Format the layout
+        # Minimal layout in error state
         fig.update_layout(
-            margin=dict(l=0, r=0, t=0, b=0),
             height=60,
-            width=280,
-            showlegend=False,
+            width=180, 
+            margin=dict(l=0, r=0, t=0, b=0, pad=0),
+            paper_bgcolor='rgba(0,0,0,0)',
+            plot_bgcolor='rgba(0,0,0,0)',
             xaxis=dict(
                 showticklabels=False,
                 showgrid=False,
                 zeroline=False,
-                fixedrange=True,
+                visible=False,
             ),
             yaxis=dict(
                 showticklabels=False,
                 showgrid=False,
                 zeroline=False,
+                visible=False,
                 range=[0, 100],
                 fixedrange=True,
             ),
-            plot_bgcolor='rgba(0,0,0,0)',
-            paper_bgcolor='rgba(0,0,0,0)',
         )
         
         return fig
