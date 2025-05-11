@@ -64,22 +64,52 @@ NASDAQ_API_KEY = os.environ.get("NASDAQ_DATA_LINK_API_KEY")
 ################################################################################
 # 🗄️  CONFIG –‑ EDIT YOUR SECTOR LISTS HERE (no other file touch‑points)
 ################################################################################
-SECTORS: Dict[str, List[str]] = {
-    "AdTech": ["APP", "APPS", "CRTO", "DV", "GOOGL", "META", "MGNI", "PUBM", "TTD"],
-    "Cloud Infrastructure": ["AMZN", "CRM", "CSCO", "GOOGL", "MSFT", "NET", "ORCL", "SNOW"],
-    "Fintech": ["AFRM", "BILL", "COIN", "FIS", "FI", "GPN", "PYPL", "SSNC", "XYZ"],
-    "eCommerce": ["AMZN", "BABA", "BKNG", "CHWY", "EBAY", "ETSY", "PDD", "SE", "SHOP", "WMT"],
-    "Consumer Internet": ["ABNB", "BKNG", "GOOGL", "META", "NFLX", "PINS", "SNAP", "SPOT", "TRIP", "YELP"],
-    "IT Services / Legacy Tech": ["ACN", "CTSH", "DXC", "HPQ", "IBM", "INFY", "PLTR", "WIT"],
-    "Hardware / Devices": ["AAPL", "DELL", "HPQ", "LOGI", "PSTG", "SMCI", "SSYS", "STX", "WDC"],
-    "Cybersecurity": ["CHKP", "CRWD", "CYBR", "FTNT", "NET", "OKTA", "PANW", "S", "ZS"],
-    "Dev Tools / Analytics": ["DDOG", "ESTC", "GTLB", "MDB", "TEAM"],
-    "AI Infrastructure": ["AMZN", "GOOGL", "IBM", "META", "MSFT", "NVDA", "ORCL"],
-    "Semiconductors": ["AMAT", "AMD", "ARM", "AVGO", "INTC", "NVDA", "QCOM", "TSM"],
-    "Vertical SaaS": ["CCCS", "CPRT", "CSGP", "GWRE", "ICE", "PCOR", "SSNC", "TTAN"],
-    "Enterprise SaaS": ["ADSK", "AMZN", "CRM", "IBM", "MSFT", "NOW", "ORCL", "SAP", "WDAY"],
-    "SMB SaaS": ["ADBE", "BILL", "GOOGL", "HUBS", "INTU", "META"]
-}
+# Load sectors and tickers from the authentic source file
+def load_sectors_from_file(file_path="attached_assets/Pasted-AdTech-APP-AdTech-APPS-AdTech-CRTO-AdTech-DV-AdTech-GOOGL-AdTech-META-AdTech-MGNI-AdTech-PUBM-1746992995643.txt"):
+    """Load sector-ticker mappings from the authentic file source"""
+    sectors = {}
+    try:
+        with open(file_path, 'r') as f:
+            for line in f:
+                line = line.strip()
+                if not line:
+                    continue
+                    
+                parts = line.split('\t')
+                if len(parts) != 2:
+                    continue
+                    
+                sector, ticker = parts[0].strip(), parts[1].strip()
+                
+                if sector not in sectors:
+                    sectors[sector] = []
+                    
+                if ticker not in sectors[sector]:
+                    sectors[sector].append(ticker)
+                    
+        return sectors
+    except Exception as e:
+        logger.error(f"Error loading sectors from file: {e}")
+        # Fall back to hard-coded sectors only if file access fails
+        return {
+            "AdTech": ["APP", "APPS", "CRTO", "DV", "GOOGL", "META", "MGNI", "PUBM", "TTD"],
+            "Cloud Infrastructure": ["AMZN", "CRM", "CSCO", "GOOGL", "MSFT", "NET", "ORCL", "SNOW"],
+            "FinTech": ["AFRM", "BILL", "COIN", "FIS", "FI", "GPN", "PYPL", "SSNC", "XYZ"],
+            "eCommerce": ["AMZN", "BABA", "BKNG", "CHWY", "EBAY", "ETSY", "PDD", "SE", "SHOP", "WMT"],
+            "Consumer Internet": ["ABNB", "BKNG", "GOOGL", "META", "NFLX", "PINS", "SNAP", "SPOT", "TRIP", "YELP"],
+            "IT Services /  Legacy Tech": ["ACN", "CTSH", "DXC", "HPQ", "IBM", "INFY", "PLTR", "WIT"],
+            "Hardware Devices": ["AAPL", "DELL", "HPQ", "LOGI", "PSTG", "SMCI", "SSYS", "STX", "WDC"],
+            "Cybersecurity": ["CHKP", "CRWD", "CYBR", "FTNT", "NET", "OKTA", "PANW", "S", "ZS"],
+            "Dev Tools /  Analytics": ["DDOG", "ESTC", "GTLB", "MDB", "TEAM"],
+            "AI Infrastructure": ["AMZN", "GOOGL", "IBM", "META", "MSFT", "NVDA", "ORCL"],
+            "Semiconductors": ["AMAT", "AMD", "ARM", "AVGO", "INTC", "NVDA", "QCOM", "TSM"],
+            "Vertical SasS": ["CCCS", "CPRT", "CSGP", "GWRE", "ICE", "PCOR", "SSNC", "TTAN"],
+            "Enterprise SaaS": ["ADSK", "AMZN", "CRM", "IBM", "MSFT", "NOW", "ORCL", "SAP", "WDAY"],
+            "SMB SaaS": ["ADBE", "BILL", "GOOGL", "HUBS", "INTU", "META"]
+        }
+
+# Load sectors from the authentic source file
+SECTORS = load_sectors_from_file()
 ################################################################################
 CSV_PATH = Path("sector_market_caps.csv")
 CHART_PATH = Path("sector_caps_chart.html")
