@@ -64,6 +64,14 @@ NASDAQ_API_KEY = os.environ.get("NASDAQ_DATA_LINK_API_KEY")
 ################################################################################
 # 🗄️  CONFIG –‑ EDIT YOUR SECTOR LISTS HERE (no other file touch‑points)
 ################################################################################
+# Configure logging for module
+import logging
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s'
+)
+module_logger = logging.getLogger(__name__)
+
 # Load sectors and tickers from the authentic source file
 def load_sectors_from_file(file_path="attached_assets/Pasted-AdTech-APP-AdTech-APPS-AdTech-CRTO-AdTech-DV-AdTech-GOOGL-AdTech-META-AdTech-MGNI-AdTech-PUBM-1746992995643.txt"):
     """Load sector-ticker mappings from the authentic file source"""
@@ -86,10 +94,11 @@ def load_sectors_from_file(file_path="attached_assets/Pasted-AdTech-APP-AdTech-A
                     
                 if ticker not in sectors[sector]:
                     sectors[sector].append(ticker)
-                    
+        
+        print(f"Successfully loaded {len(sectors)} sectors with tickers from {file_path}")
         return sectors
     except Exception as e:
-        logger.error(f"Error loading sectors from file: {e}")
+        print(f"Error loading sectors from file: {e}")
         # Fall back to hard-coded sectors only if file access fails
         return {
             "AdTech": ["APP", "APPS", "CRTO", "DV", "GOOGL", "META", "MGNI", "PUBM", "TTD"],
@@ -365,44 +374,9 @@ def chart_sector_caps(path: Path = CSV_PATH, out: Path = CHART_PATH) -> Path:
 def get_latest_sector_caps() -> Dict[str, float]:
     """Return dictionary of latest market caps for each sector (for app.py integration).
     
-    This function has been updated to use the PostgreSQL database instead of CSV files.
-    It connects to the PostgreSQL database using the DATABASE_URL environment variable.
+    This function loads market cap data from CSV files without requiring database access.
     """
-    import psycopg2
-    import os
-    from datetime import date, timedelta
-    
-    # Try to get data from PostgreSQL database first
-    try:
-        database_url = os.environ.get('DATABASE_URL')
-        if database_url:
-            conn = psycopg2.connect(database_url)
-            cursor = conn.cursor()
-            
-            # Get the latest date with data
-            cursor.execute("SELECT MAX(date) FROM sector_market_caps")
-            latest_date = cursor.fetchone()[0]
-            
-            if latest_date:
-                # Get sector market caps for the latest date
-                cursor.execute("""
-                    SELECT s.name, smc.market_cap 
-                    FROM sector_market_caps smc
-                    JOIN sectors s ON smc.sector_id = s.id
-                    WHERE smc.date = %s
-                """, (latest_date,))
-                
-                results = cursor.fetchall()
-                conn.close()
-                
-                if results:
-                    print(f"Using database data from {latest_date}")
-                    return {sector: market_cap for sector, market_cap in results}
-    except Exception as e:
-        print(f"Error getting data from database: {e}")
-        # Fall back to CSV if database access fails
-    
-    # Fall back to CSV if database is empty or not available
+    # Check for CSV file first
     if not CSV_PATH.exists():
         return {}
     
