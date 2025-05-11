@@ -198,10 +198,13 @@ def main():
     cursor.execute("SELECT id, symbol FROM tickers")
     ticker_id_map = {row[1]: row[0] for row in cursor.fetchall()}
     
-    # Clear existing ticker market caps
-    cursor.execute("DELETE FROM ticker_market_caps")
-    conn.commit()
-    print("Cleared existing ticker market cap data")
+    # Check for existing ticker market caps
+    cursor.execute("SELECT COUNT(*) FROM ticker_market_caps")
+    existing_count = cursor.fetchone()[0]
+    
+    # Use INSERT OR REPLACE instead of clearing the table
+    print(f"Found {existing_count} existing ticker market cap entries")
+    print("Adding new ticker market cap data (will replace duplicates)...")
     
     # Insert ticker market caps
     ticker_rows = []
@@ -213,15 +216,25 @@ def main():
             market_cap = row['market_cap']
             ticker_rows.append((ticker_id, date, market_cap))
     
-    # Insert in batches
-    batch_size = 1000
+    # Insert in batches using INSERT OR REPLACE
+    batch_size = 100
+    inserted_count = 0
     for i in range(0, len(ticker_rows), batch_size):
         batch = ticker_rows[i:i+batch_size]
         cursor.executemany(
-            "INSERT INTO ticker_market_caps (ticker_id, date, market_cap) VALUES (?, ?, ?)",
+            """
+            INSERT OR REPLACE INTO ticker_market_caps 
+            (ticker_id, date, market_cap) VALUES (?, ?, ?)
+            """,
             batch
         )
+        inserted_count += len(batch)
         conn.commit()
+        print(f"Progress: {inserted_count}/{len(ticker_rows)} records processed")
+    
+    cursor.execute("SELECT COUNT(*) FROM ticker_market_caps")
+    final_count = cursor.fetchone()[0]
+    print(f"Ticker market cap table now has {final_count} records")
     
     print(f"Inserted {len(ticker_rows)} ticker market cap entries into database")
     
