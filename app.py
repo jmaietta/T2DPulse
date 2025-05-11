@@ -8025,53 +8025,93 @@ def create_sector_sparkline(sector_name, current_score=50):
     import plotly.graph_objects as go
     import pandas as pd
     import os
+    import numpy as np
     from datetime import datetime, timedelta
     
-    # Try to load historical data for this sector from authentic_sector_history.csv
     try:
         # First check if the file exists
         history_path = 'data/authentic_sector_history.csv'
         if not os.path.exists(history_path):
-            # Return empty chart if file doesn't exist
-            fig = go.Figure()
-            fig.update_layout(
-                height=70, 
-                margin=dict(l=0, r=0, t=0, b=0),
-                plot_bgcolor='rgba(0,0,0,0)',
-                paper_bgcolor='rgba(0,0,0,0)'
-            )
-            return fig
+            print(f"Error: History file not found at {history_path}")
+            raise FileNotFoundError(f"History file not found at {history_path}")
             
         # Read the CSV file
         df = pd.read_csv(history_path)
         
         # Make sure sector exists in the data
         if sector_name not in df.columns:
-            # Return empty chart if sector isn't in the data
-            fig = go.Figure()
-            fig.update_layout(
-                height=70, 
-                margin=dict(l=0, r=0, t=0, b=0),
-                plot_bgcolor='rgba(0,0,0,0)',
-                paper_bgcolor='rgba(0,0,0,0)'
-            )
-            return fig
+            print(f"Error: Sector {sector_name} not found in historical data")
+            raise ValueError(f"Sector {sector_name} not found in historical data")
             
         # Convert date to datetime
         df['date'] = pd.to_datetime(df['date'])
         
+        # Filter out weekends (Saturday = 5, Sunday = 6)
+        df = df[df['date'].dt.dayofweek < 5].copy()
+        
+        # Filter out specific placeholder date ranges:
+        # 1. April 12th through May 1st
+        # 2. May 4th (single day)
+        # 3. May 11th (single day)
+        april_may1_mask = (df['date'] >= '2025-04-12') & (df['date'] <= '2025-05-01')
+        may4_mask = df['date'].dt.strftime('%Y-%m-%d') == '2025-05-04'
+        may11_mask = df['date'].dt.strftime('%Y-%m-%d') == '2025-05-11'
+        
+        # Combine all the masks to filter out these dates
+        df = df[~(april_may1_mask | may4_mask | may11_mask)].copy()
+        
+        # Keep only days with real data (exclude any rows where all sectors have score=50)
+        sector_cols = [col for col in df.columns if col != 'date']
+        
+        # If ALL sectors have value 50.0, it's likely a placeholder date
+        df['all_fifty'] = (df[sector_cols] == 50.0).all(axis=1)
+        df_filtered = df[~df['all_fifty']].copy()
+        
+        print(f"Filtered to {len(df_filtered)} market days from {len(df)} total rows for {sector_name}")
+        
         # Filter to last 30 days
         cutoff_date = datetime.now() - timedelta(days=30)
-        df = df[df['date'] >= cutoff_date]
+        df_filtered = df_filtered[df_filtered['date'] >= cutoff_date]
         
-        # If we have data for this sector
-        if len(df) > 0:
-            # Sort by date (ascending)
-            df = df.sort_values('date')
+        # Sort by date (ascending)
+        df_filtered = df_filtered.sort_values('date')
+        
+        # If we have enough data points for this sector
+        if len(df_filtered) > 1:  # Need at least 2 points to draw a line
+            # Check if this specific sector has meaningful variation
+            sector_vals = df_filtered[sector_name].unique()
+            if len(sector_vals) == 1 and sector_vals[0] == 50.0:
+                print(f"Warning: Sector {sector_name} has only constant values of 50.0")
+                
+                # For sectors with all 50.0 values (like AI Infrastructure),
+                # create a dashed line chart that's visually distinct
+                fig = go.Figure()
+                
+                # Create a date range for the x-axis (business days only)
+                dates = pd.bdate_range(end=pd.Timestamp.now(), periods=10)
+                
+                # Add a dashed gray line to indicate placeholder data
+                fig.add_trace(go.Scatter(
+                    x=dates,
+                    y=[50.0] * len(dates),
+                    mode='lines',
+                    line=dict(color='gray', width=1, dash='dash'),
+                    showlegend=False
+                ))
+                
+                fig.update_layout(
+                    height=70, 
+                    margin=dict(l=0, r=0, t=0, b=0),
+                    plot_bgcolor='rgba(0,0,0,0)',
+                    paper_bgcolor='rgba(0,0,0,0)',
+                    xaxis=dict(visible=False),
+                    yaxis=dict(visible=False, range=[0, 100])
+                )
+                return fig
             
-            # Get dates and values
-            dates = df['date']
-            values = df[sector_name]
+            # Get dates and values for sectors with variation
+            dates = df_filtered['date']
+            values = df_filtered[sector_name]
             
             # Create the sparkline
             fig = go.Figure()
@@ -8090,13 +8130,25 @@ def create_sector_sparkline(sector_name, current_score=50):
             
             # Add a marker for the latest point
             if len(dates) > 0:
+                # Get the latest non-weekend, non-placeholder data point
+                latest_date = dates.iloc[-1]
+                latest_value = values.iloc[-1]
+                
+                # Set marker color based on the latest value (using production categories)
+                if latest_value >= 60:
+                    point_color = 'green'  # Bullish (60-100)
+                elif latest_value <= 30:
+                    point_color = 'red'    # Bearish (0-30)
+                else:
+                    point_color = 'orange' # Neutral (30-60)
+                
                 fig.add_trace(go.Scatter(
-                    x=[dates.iloc[-1]],
-                    y=[values.iloc[-1]],
+                    x=[latest_date],
+                    y=[latest_value],
                     mode='markers',
-                    marker=dict(color='#F39C12', size=6),
+                    marker=dict(color=point_color, size=8),
                     hoverinfo='text',
-                    hovertext=f"{dates.iloc[-1].strftime('%Y-%m-%d')}: {values.iloc[-1]:.1f}",
+                    hovertext=f"{latest_date.strftime('%Y-%m-%d')}: {latest_value:.1f}",
                     showlegend=False
                 ))
             
@@ -8108,198 +8160,65 @@ def create_sector_sparkline(sector_name, current_score=50):
                 paper_bgcolor='rgba(0,0,0,0)',
                 hovermode='closest',
                 xaxis=dict(visible=False),
-                yaxis=dict(visible=False)
+                yaxis=dict(visible=False, range=[0, 100])
             )
             
             return fig
         else:
-            # Return empty chart
+            # Not enough meaningful data points
+            print(f"Not enough meaningful data points for {sector_name} after filtering")
+            
+            # Create a visually distinct dashed line for sectors without enough data
             fig = go.Figure()
+            
+            # Create a date range for the x-axis (using business days only)
+            dates = pd.bdate_range(end=pd.Timestamp.now(), periods=10)
+            
+            # Add a dashed gray line
+            fig.add_trace(go.Scatter(
+                x=dates,
+                y=[50.0] * len(dates),
+                mode='lines',
+                line=dict(color='darkgray', width=1, dash='dot'),
+                showlegend=False
+            ))
+            
             fig.update_layout(
                 height=70, 
                 margin=dict(l=0, r=0, t=0, b=0),
                 plot_bgcolor='rgba(0,0,0,0)',
-                paper_bgcolor='rgba(0,0,0,0)'
+                paper_bgcolor='rgba(0,0,0,0)',
+                xaxis=dict(visible=False),
+                yaxis=dict(visible=False, range=[0, 100])
             )
             return fig
     
     except Exception as e:
         print(f"Error creating sector sparkline for {sector_name}: {e}")
-        # Return empty chart on error
+        
+        # Create a visually distinct error state chart
         fig = go.Figure()
+        
+        # Create a date range for the x-axis (business days only)
+        dates = pd.bdate_range(end=pd.Timestamp.now(), periods=10)
+        
+        # Add a red dashed line to indicate error
+        fig.add_trace(go.Scatter(
+            x=dates,
+            y=[50.0] * len(dates),
+            mode='lines',
+            line=dict(color='rgba(255,0,0,0.3)', width=1, dash='dot'),
+            showlegend=False
+        ))
+        
         fig.update_layout(
             height=70, 
             margin=dict(l=0, r=0, t=0, b=0),
             plot_bgcolor='rgba(0,0,0,0)',
-            paper_bgcolor='rgba(0,0,0,0)'
-        )
-        return fig
-    try:
-        # Load authentic sector history data using simpler approach
-        authentic_history_file = 'data/authentic_sector_history.csv'
-        
-        # Default to flat line data if anything goes wrong
-        dates = pd.date_range(end=pd.Timestamp.now(), periods=30)
-        sector_data = pd.DataFrame({
-            'date': dates,
-            'score': [current_score] * 30
-        })
-        
-        if os.path.exists(authentic_history_file):
-            # Load the data and find the right sector column
-            df = pd.read_csv(authentic_history_file)
-            
-            # First check if we have the sector as an exact match
-            if sector_name in df.columns:
-                matched_sector = sector_name
-            else:
-                # Try case-insensitive matching
-                sector_map = {col.lower(): col for col in df.columns if col.lower() != 'date'}
-                matched_sector = sector_map.get(sector_name.lower())
-            
-            if matched_sector:
-                print(f"Found sector data for {matched_sector}")
-                # Convert date column to datetime
-                df['date'] = pd.to_datetime(df['date'])
-                
-                # Sort by date
-                df = df.sort_values('date')
-                
-                # Build a clean dataframe for plotting
-                clean_data = {
-                    'date': df['date'],
-                    'score': df[matched_sector]
-                }
-                clean_df = pd.DataFrame(clean_data).dropna()
-                
-                if len(clean_df) > 1:  # Need at least 2 points to make a meaningful line
-                    print(f"Using {len(clean_df)} authentic data points for {matched_sector}")
-                    sector_data = clean_df  # Replace default with real data
-                else:
-                    print(f"Not enough data points for {sector_name}")
-            else:
-                print(f"No sector match for: {sector_name}")
-        else:
-            print(f"History file not found: {authentic_history_file}")
-                
-        # Create a VERY basic sparkline chart for reliability
-        fig = go.Figure()
-        
-        # Basic line trace - super simplified 
-        fig.add_trace(go.Scatter(
-            x=sector_data['date'],
-            y=sector_data['score'],
-            mode='lines',
-            line=dict(
-                width=2, 
-                color='#1f77b4',  # Use standard blue
-            ),
-            showlegend=False,
-        ))
-        
-        # Add a single endpoint marker with a simple fixed size
-        if len(sector_data) > 0:
-            last_date = sector_data['date'].iloc[-1]
-            last_score = sector_data['score'].iloc[-1]
-            
-            # Set marker color
-            if last_score >= 60:
-                point_color = 'green'  # Simplified color scheme
-            elif last_score <= 30:
-                point_color = 'red'
-            else:
-                point_color = 'orange'
-                
-            # Add simple end marker
-            fig.add_trace(go.Scatter(
-                x=[last_date],
-                y=[last_score],
-                mode='markers',
-                marker=dict(
-                    size=8,
-                    color=point_color,
-                ),
-                showlegend=False,
-            ))
-        
-        # Extremely minimal layout
-        fig.update_layout(
-            height=60,
-            width=180,
-            margin=dict(l=0, r=0, t=0, b=0, pad=0),
             paper_bgcolor='rgba(0,0,0,0)',
-            plot_bgcolor='rgba(0,0,0,0)', 
-            xaxis=dict(
-                showticklabels=False,
-                showgrid=False,
-                zeroline=False,
-                visible=False,
-            ),
-            yaxis=dict(
-                showticklabels=False,
-                showgrid=False,
-                zeroline=False,
-                visible=False,
-                range=[0, 100],  # Fixed range for standard scale
-            ),
+            xaxis=dict(visible=False),
+            yaxis=dict(visible=False, range=[0, 100])
         )
-        
-        return fig
-        
-    except Exception as e:
-        # Create a basic chart if error occurs
-        print(f"Error creating sector sparkline for {sector_name}: {e}")
-        
-        # Create date range for the last 30 days
-        dates = pd.date_range(end=pd.Timestamp.now(), periods=30)
-        
-        # Create empty figure with fallback design
-        fig = go.Figure()
-        
-        # Add a flat line at the current score
-        fig.add_trace(go.Scatter(
-            x=dates,
-            y=[current_score] * 30,
-            mode='lines',
-            line=dict(width=2, color='#1f77b4'),
-            showlegend=False,
-        ))
-        
-        # Add a single color marker at the end
-        fig.add_trace(go.Scatter(
-            x=[dates[-1]],
-            y=[current_score],
-            mode='markers',
-            marker=dict(
-                size=8,
-                color='orange',
-            ),
-            showlegend=False,
-        ))
-        
-        # Minimal layout in error state
-        fig.update_layout(
-            height=60,
-            width=180, 
-            margin=dict(l=0, r=0, t=0, b=0, pad=0),
-            paper_bgcolor='rgba(0,0,0,0)',
-            plot_bgcolor='rgba(0,0,0,0)',
-            xaxis=dict(
-                showticklabels=False,
-                showgrid=False,
-                zeroline=False,
-                visible=False,
-            ),
-            yaxis=dict(
-                showticklabels=False,
-                showgrid=False,
-                zeroline=False,
-                visible=False,
-                range=[0, 100],
-                fixedrange=True,
-            ),
-        )
-        
         return fig
 
 def get_eastern_date():
