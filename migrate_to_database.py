@@ -153,24 +153,24 @@ def import_ticker_sectors(conn, df, ticker_map):
         cursor.execute("SELECT id, name FROM sectors")
         sector_map = {name: id for id, name in cursor.fetchall()}
         
-        # Prepare relationships data
-        relationships = []
+        # Insert relationships one by one (SQLite doesn't support bulk inserts as easily as PostgreSQL)
+        count = 0
         for _, row in df.iterrows():
             ticker = row['Ticker']
             sector = row['Sector']
             
             if ticker in ticker_map and sector in sector_map:
-                relationships.append((ticker_map[ticker], sector_map[sector]))
+                try:
+                    cursor.execute(
+                        "INSERT OR IGNORE INTO ticker_sectors (ticker_id, sector_id) VALUES (?, ?)",
+                        (ticker_map[ticker], sector_map[sector])
+                    )
+                    count += 1
+                except Exception as e:
+                    logger.error(f"Error inserting relationship for {ticker}-{sector}: {e}")
         
-        # Insert relationships in batches
-        if relationships:
-            args = ','.join(cursor.mogrify("(%s,%s)", r).decode('utf-8') for r in relationships)
-            cursor.execute(
-                f"INSERT INTO ticker_sectors (ticker_id, sector_id) VALUES {args} "
-                f"ON CONFLICT (ticker_id, sector_id) DO NOTHING"
-            )
-            conn.commit()
-            logger.info(f"Imported {len(relationships)} ticker-sector relationships")
+        conn.commit()
+        logger.info(f"Imported {count} ticker-sector relationships")
         
     except Exception as e:
         logger.error(f"Error importing ticker-sector relationships: {e}")
@@ -192,36 +192,42 @@ def import_ticker_market_caps(conn, ticker_map):
         # Convert date column to datetime
         df['date'] = pd.to_datetime(df['date'])
         
-        # Prepare data for insertion
-        data = []
+        cursor = conn.cursor()
+        
+        # Insert records one by one (SQLite prefers this over batching for complex inserts)
+        count = 0
         for _, row in df.iterrows():
             ticker = row['ticker']
             if ticker in ticker_map:
-                data.append((
-                    ticker_map[ticker],
-                    row['date'].strftime('%Y-%m-%d'),
-                    None,  # price (not available in this file)
-                    row['market_cap'],
-                    None,  # shares outstanding (not available)
-                    'Polygon API'  # data source
-                ))
+                try:
+                    # Using SQLite's INSERT OR REPLACE which is equivalent to ON CONFLICT DO UPDATE
+                    cursor.execute(
+                        """
+                        INSERT OR REPLACE INTO ticker_market_caps 
+                        (ticker_id, date, price, market_cap, shares_outstanding, data_source) 
+                        VALUES (?, ?, ?, ?, ?, ?)
+                        """,
+                        (
+                            ticker_map[ticker],
+                            row['date'].strftime('%Y-%m-%d'),
+                            None,  # price (not available in this file)
+                            row['market_cap'],
+                            None,  # shares outstanding (not available)
+                            'Polygon API'  # data source
+                        )
+                    )
+                    count += 1
+                    
+                    # Commit every 100 records to avoid large transactions
+                    if count % 100 == 0:
+                        conn.commit()
+                        logger.info(f"Imported {count} ticker market cap records")
+                except Exception as e:
+                    logger.error(f"Error inserting market cap for {ticker} on {row['date']}: {e}")
         
-        cursor = conn.cursor()
-        
-        # Insert market cap data in batches
-        batch_size = 1000
-        for i in range(0, len(data), batch_size):
-            batch = data[i:i+batch_size]
-            args = ','.join(cursor.mogrify("(%s,%s,%s,%s,%s,%s)", r).decode('utf-8') for r in batch)
-            cursor.execute(
-                f"INSERT INTO ticker_market_caps (ticker_id, date, price, market_cap, shares_outstanding, data_source) "
-                f"VALUES {args} ON CONFLICT (ticker_id, date) DO UPDATE SET "
-                f"market_cap = EXCLUDED.market_cap, updated_at = CURRENT_TIMESTAMP"
-            )
-            conn.commit()
-            logger.info(f"Imported batch {i//batch_size + 1} of ticker market caps ({len(batch)} records)")
-        
-        logger.info(f"Imported {len(data)} ticker market cap records")
+        # Final commit for any remaining records
+        conn.commit()
+        logger.info(f"Imported {count} ticker market cap records")
         return True
     
     except Exception as e:
@@ -232,14 +238,24 @@ def import_sector_market_caps(conn, sector_map):
     """Import sector market cap data into the database"""
     logger.info("Importing sector market cap data into the database...")
     
+    # First try the corrected file
     sector_market_cap_file = 'corrected_sector_market_caps.csv'
     
+    # If not found, try the authentic file
     if not os.path.exists(sector_market_cap_file):
-        logger.error(f"Sector market cap file not found: {sector_market_cap_file}")
+        sector_market_cap_file = 'authentic_sector_market_caps.csv'
+        
+    # If still not found, try the data folder
+    if not os.path.exists(sector_market_cap_file):
+        sector_market_cap_file = 'data/authentic_sector_market_caps.csv'
+        
+    if not os.path.exists(sector_market_cap_file):
+        logger.error(f"Sector market cap file not found: checked corrected_sector_market_caps.csv, authentic_sector_market_caps.csv, and data/authentic_sector_market_caps.csv")
         return False
     
     try:
         # Load the CSV file
+        logger.info(f"Loading sector market caps from {sector_market_cap_file}")
         df = pd.read_csv(sector_market_cap_file)
         
         # Convert date column to datetime
@@ -247,14 +263,22 @@ def import_sector_market_caps(conn, sector_map):
         
         # Get sentiment scores
         sentiment_df = None
-        if os.path.exists('data/authentic_sector_history.csv'):
-            sentiment_df = pd.read_csv('data/authentic_sector_history.csv')
+        sentiment_file = 'data/authentic_sector_history.csv'
+        if os.path.exists(sentiment_file):
+            logger.info(f"Loading sector sentiment scores from {sentiment_file}")
+            sentiment_df = pd.read_csv(sentiment_file)
             sentiment_df['date'] = pd.to_datetime(sentiment_df['date'])
+        else:
+            logger.warning(f"Sentiment score file not found: {sentiment_file}")
         
-        # Prepare data for insertion
-        data = []
+        cursor = conn.cursor()
+        
+        # Process and insert sector market caps
+        count = 0
         for sector_name, sector_id in sector_map.items():
             if sector_name in df.columns:
+                logger.info(f"Processing {len(df)} market cap records for sector: {sector_name}")
+                
                 for _, row in df.iterrows():
                     date = row['date']
                     market_cap = row[sector_name]
@@ -266,30 +290,35 @@ def import_sector_market_caps(conn, sector_map):
                         if not matching_rows.empty and sector_name in matching_rows.columns:
                             sentiment_score = matching_rows[sector_name].iloc[0]
                     
-                    data.append((
-                        sector_id,
-                        date.strftime('%Y-%m-%d'),
-                        market_cap,
-                        sentiment_score
-                    ))
+                    try:
+                        # Using SQLite's INSERT OR REPLACE which is equivalent to ON CONFLICT DO UPDATE
+                        cursor.execute(
+                            """
+                            INSERT OR REPLACE INTO sector_market_caps 
+                            (sector_id, date, market_cap, sentiment_score) 
+                            VALUES (?, ?, ?, ?)
+                            """,
+                            (
+                                sector_id,
+                                date.strftime('%Y-%m-%d'),
+                                market_cap,
+                                sentiment_score
+                            )
+                        )
+                        count += 1
+                        
+                        # Commit every 100 records to avoid large transactions
+                        if count % 100 == 0:
+                            conn.commit()
+                            logger.info(f"Imported {count} sector market cap records")
+                    except Exception as e:
+                        logger.error(f"Error inserting market cap for sector {sector_name} on {date}: {e}")
+            else:
+                logger.warning(f"Sector {sector_name} not found in market cap data")
         
-        cursor = conn.cursor()
-        
-        # Insert sector market cap data in batches
-        batch_size = 500
-        for i in range(0, len(data), batch_size):
-            batch = data[i:i+batch_size]
-            args = ','.join(cursor.mogrify("(%s,%s,%s,%s)", r).decode('utf-8') for r in batch)
-            cursor.execute(
-                f"INSERT INTO sector_market_caps (sector_id, date, market_cap, sentiment_score) "
-                f"VALUES {args} ON CONFLICT (sector_id, date) DO UPDATE SET "
-                f"market_cap = EXCLUDED.market_cap, sentiment_score = EXCLUDED.sentiment_score, "
-                f"updated_at = CURRENT_TIMESTAMP"
-            )
-            conn.commit()
-            logger.info(f"Imported batch {i//batch_size + 1} of sector market caps ({len(batch)} records)")
-        
-        logger.info(f"Imported {len(data)} sector market cap records")
+        # Final commit for any remaining records
+        conn.commit()
+        logger.info(f"Imported {count} sector market cap records")
         return True
     
     except Exception as e:
@@ -349,12 +378,15 @@ def verify_data_migration(conn):
 
 def main():
     """Main function to migrate data from CSV files to the database"""
-    logger.info("Starting data migration from CSV files to PostgreSQL database...")
+    logger.info("Starting data migration from CSV files to SQLite database...")
     
     conn = None
     try:
         # Connect to the database
         conn = get_db_connection()
+        
+        # Create the database tables
+        create_database_tables(conn)
         
         # Import sectors
         sector_map = import_sectors(conn)
