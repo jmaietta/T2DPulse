@@ -8073,7 +8073,6 @@ def create_sector_sparkline(sector_name, current_score=50):
             # regardless of what values they contain
             
             # Get dates and values for sectors with variation
-            logger.info(f"Sector {sector_name} values: {values.iloc[0:5].values} ... {values.iloc[-5:].values}")
             dates = df_filtered['date']
             values = df_filtered[sector_name]
             

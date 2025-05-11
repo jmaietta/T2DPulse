@@ -1,260 +1,254 @@
+#!/usr/bin/env python3
 """
-Direct fix for sector card display in T2D Pulse dashboard.
-This script directly modifies the app.py file to correctly display sector charts.
+Fix the sector displays by ensuring that the correct data files are being used
+and that the data is being properly processed for display.
 """
 
 import os
 import pandas as pd
-import plotly.graph_objects as go
-import plotly.io as pio
+import shutil
 from datetime import datetime, timedelta
-import json
+import logging
 
-def ensure_directory(directory):
-    """Ensure directory exists"""
-    if not os.path.exists(directory):
-        os.makedirs(directory)
-        print(f"Created directory: {directory}")
+# Configure logging
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s'
+)
+logger = logging.getLogger(__name__)
 
-def create_sector_data():
-    """Create sample sector data if needed"""
-    # First check if we already have sector data
-    if os.path.exists('data/sector_sentiment_history.csv'):
-        print("Using existing sector sentiment history")
-        return
+def ensure_authentic_sector_history():
+    """
+    Ensure that data/authentic_sector_history.csv exists and is properly populated
+    with data from our corrected_sector_market_caps.csv file.
     
-    # Create directory if it doesn't exist
-    ensure_directory('data')
+    The historical market cap data is in corrected_sector_market_caps.csv
+    The sparkline data should be in data/authentic_sector_history.csv
+    But the dashboard looks for data/authentic_sector_history.csv in app.py
+    """
+    logger.info("Ensuring authentic sector history file exists...")
     
-    # Create a date range for the past 30 days
-    end_date = datetime.now()
-    start_date = end_date - timedelta(days=30)
-    date_range = pd.date_range(start=start_date, end=end_date)
+    # Check if the corrected data exists
+    if not os.path.exists('corrected_sector_market_caps.csv'):
+        logger.error("Corrected sector market cap data not found")
+        return False
     
-    # List of sectors
-    sectors = [
-        "SMB SaaS", "Enterprise SaaS", "Cloud Infrastructure", "AdTech", 
-        "Fintech", "Consumer Internet", "eCommerce", "Cybersecurity", 
-        "Dev Tools / Analytics", "Semiconductors", "AI Infrastructure", 
-        "Vertical SaaS", "IT Services / Legacy Tech", "Hardware / Devices"
-    ]
+    # Make sure data directory exists
+    data_dir = 'data'
+    if not os.path.exists(data_dir):
+        os.makedirs(data_dir)
     
-    # Create data for each sector
-    data = []
-    for date in date_range:
-        date_str = date.strftime('%Y-%m-%d')
-        for sector in sectors:
-            # Use authentic neutral score
-            row = {
-                'date': date_str,
-                'sector': sector,
-                'score': 0.0,  # Original score (-1 to +1)
-                'normalized_score': 50.0,  # Normalized score (0-100)
-                'stance': 'Neutral'
-            }
-            data.append(row)
+    # Load the corrected market cap data
+    market_cap_df = pd.read_csv('corrected_sector_market_caps.csv')
+    logger.info(f"Loaded corrected market cap data with {len(market_cap_df)} rows")
     
-    # Create DataFrame
-    df = pd.DataFrame(data)
+    # Convert dates to datetime
+    market_cap_df['date'] = pd.to_datetime(market_cap_df['date'])
     
-    # Save to CSV
-    df.to_csv('data/sector_sentiment_history.csv', index=False)
-    print(f"Created sector sentiment history with {len(df)} records")
+    # Create normalized scores for each sector based on min-max scaling
+    sector_columns = [col for col in market_cap_df.columns if col != 'date']
+    normalized_data = {'date': market_cap_df['date']}
     
-    # Also save in JSON format
-    json_data = []
-    for date, group in df.groupby('date'):
-        day_data = {'date': date, 'sectors': []}
-        for _, row in group.iterrows():
-            sector_data = {
-                'sector': row['sector'],
-                'score': row['score'],
-                'normalized_score': row['normalized_score'],
-                'stance': row['stance']
-            }
-            day_data['sectors'].append(sector_data)
-        json_data.append(day_data)
+    for sector in sector_columns:
+        # Get sector values
+        sector_values = market_cap_df[sector]
+        
+        # Calculate min, max, and range
+        min_val = sector_values.min()
+        max_val = sector_values.max()
+        range_val = max_val - min_val
+        
+        if range_val > 0:
+            # Convert to a 0-100 scale for sentiment scores
+            # (most apps use 40-60 as normal range, 0-40 as bearish, 60-100 as bullish)
+            normalized_scores = 40 + 40 * ((sector_values - min_val) / range_val)
+            
+            # Limit to 0-100 range
+            normalized_scores = normalized_scores.clip(0, 100)
+            
+            # Add to normalized data
+            normalized_data[sector] = normalized_scores
+        else:
+            # If there's no range (all values are the same), set a neutral score of 50
+            normalized_data[sector] = [50] * len(sector_values)
     
-    with open('data/sector_sentiment_history.json', 'w') as f:
-        json.dump(json_data, f, indent=2)
+    # Create a normalized DataFrame
+    normalized_df = pd.DataFrame(normalized_data)
+    
+    # Save the normalized data to authentic_sector_history.csv
+    authentic_history_path = os.path.join(data_dir, 'authentic_sector_history.csv')
+    normalized_df.to_csv(authentic_history_path, index=False)
+    logger.info(f"Saved normalized sector data to {authentic_history_path}")
+    
+    # Also update sector_30day_history.csv for backward compatibility
+    # but with 'Date' as column name instead of 'date'
+    normalized_df_copy = normalized_df.copy()
+    normalized_df_copy.rename(columns={'date': 'Date'}, inplace=True)
+    
+    # Extend to 30 days
+    today = datetime.now()
+    date_range = pd.date_range(end=today, periods=30)
+    
+    # Create a template DataFrame with the full date range
+    template_df = pd.DataFrame({'Date': date_range})
+    
+    # Merge with the existing data
+    merged_df = pd.merge(template_df, normalized_df_copy, on='Date', how='left')
+    
+    # Fill in weekends and missing days with placeholder value of 50
+    for col in merged_df.columns:
+        if col != 'Date':
+            merged_df[col] = merged_df[col].fillna(50)
+    
+    # Save to sector_30day_history.csv
+    sector_history_path = os.path.join(data_dir, 'sector_30day_history.csv')
+    merged_df.to_csv(sector_history_path, index=False)
+    logger.info(f"Updated {sector_history_path} with authentic sentiment scores")
+    
+    return True
 
-def generate_sector_sparklines():
-    """Generate static sparkline images for each sector"""
-    # Create directories if they don't exist
-    assets_dir = 'assets'
-    ensure_directory(assets_dir)
+def verify_sector_display_data():
+    """Verify that the sector display data is correct and ready for display"""
+    authentic_history_path = os.path.join('data', 'authentic_sector_history.csv')
     
-    charts_dir = os.path.join(assets_dir, 'sector_charts')
-    ensure_directory(charts_dir)
+    if not os.path.exists(authentic_history_path):
+        logger.error(f"Authentic sector history file not found: {authentic_history_path}")
+        return False
     
-    # Load sector data
-    if os.path.exists('data/sector_sentiment_history.csv'):
-        df = pd.read_csv('data/sector_sentiment_history.csv')
-    else:
-        create_sector_data()
-        df = pd.read_csv('data/sector_sentiment_history.csv')
+    try:
+        df = pd.read_csv(authentic_history_path)
+        
+        # Basic validation
+        if 'date' not in df.columns:
+            logger.error("Date column not found in authentic sector history")
+            return False
+        
+        # Make sure all sector columns are present
+        expected_sectors = [
+            'AI Infrastructure', 'AdTech', 'Cloud Infrastructure', 'Consumer Internet',
+            'Cybersecurity', 'Dev Tools / Analytics', 'Enterprise SaaS', 'Fintech',
+            'Hardware / Devices', 'IT Services / Legacy Tech', 'SMB SaaS',
+            'Semiconductors', 'Vertical SaaS', 'eCommerce'
+        ]
+        
+        missing_sectors = [s for s in expected_sectors if s not in df.columns]
+        if missing_sectors:
+            logger.error(f"Missing sector columns: {missing_sectors}")
+            return False
+        
+        # Check for reasonable values
+        for sector in expected_sectors:
+            if sector in df.columns:
+                min_val = df[sector].min()
+                max_val = df[sector].max()
+                
+                if min_val < 0 or max_val > 100:
+                    logger.error(f"Invalid score range for {sector}: {min_val}-{max_val}")
+                    return False
+                
+                # Check for variation in scores
+                if min_val == max_val:
+                    logger.warning(f"No variation in scores for {sector}: all values = {min_val}")
+        
+        # Validate date range
+        df['date'] = pd.to_datetime(df['date'])
+        date_range = (df['date'].max() - df['date'].min()).days
+        
+        if date_range < 20:
+            logger.warning(f"Date range may be too short: {date_range} days")
+        
+        # Print a sample of the data for verification
+        logger.info(f"Sector display data sample:")
+        logger.info(df.tail(5).to_string())
+        
+        return True
     
-    # Convert date to datetime
-    df['date'] = pd.to_datetime(df['date'])
-    
-    # Get unique sectors
-    sectors = df['sector'].unique()
-    
-    for sector in sectors:
-        # Filter for this sector
-        sector_df = df[df['sector'] == sector].sort_values('date')
-        
-        # Create sparkline figure
-        fig = go.Figure()
-        
-        # Add the line
-        fig.add_trace(go.Scatter(
-            x=sector_df['date'],
-            y=sector_df['normalized_score'],
-            mode='lines',
-            line=dict(width=2, color='#2c3e50'),
-            name=sector
-        ))
-        
-        # Add the latest value as a point
-        fig.add_trace(go.Scatter(
-            x=[sector_df['date'].iloc[-1]],
-            y=[sector_df['normalized_score'].iloc[-1]],
-            mode='markers',
-            marker=dict(size=8, color='#2c3e50'),
-            showlegend=False
-        ))
-        
-        # Add reference lines for bearish/neutral/bullish zones
-        fig.add_shape(
-            type="line",
-            x0=sector_df['date'].min(),
-            y0=30,
-            x1=sector_df['date'].max(),
-            y1=30,
-            line=dict(color="#e74c3c", width=1, dash="dot"),
-        )
-        
-        fig.add_shape(
-            type="line",
-            x0=sector_df['date'].min(),
-            y0=60,
-            x1=sector_df['date'].max(),
-            y1=60,
-            line=dict(color="#2ecc71", width=1, dash="dot"),
-        )
-        
-        # Format the chart
-        fig.update_layout(
-            margin=dict(l=0, r=0, t=0, b=0),
-            height=80,
-            xaxis=dict(
-                showticklabels=False,
-                showgrid=False,
-                zeroline=False,
-            ),
-            yaxis=dict(
-                showticklabels=False,
-                showgrid=False,
-                zeroline=False,
-                range=[0, 100]
-            ),
-            plot_bgcolor='rgba(0,0,0,0)',
-            paper_bgcolor='rgba(0,0,0,0)',
-            showlegend=False
-        )
-        
-        # Save the figure as HTML
-        filename = os.path.join(charts_dir, f"{sector.replace(' ', '_').lower()}.html")
-        
-        # Generate a standalone HTML file
-        html_content = f"""
-        <!DOCTYPE html>
-        <html>
-        <head>
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>{sector} Chart</title>
-            <style>
-                body, html {{
-                    margin: 0;
-                    padding: 0;
-                    overflow: hidden;
-                    height: 100%;
-                }}
-                .chart-container {{
-                    width: 100%;
-                    height: 100%;
-                }}
-            </style>
-            <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-        </head>
-        <body>
-            <div class="chart-container" id="chart"></div>
-            <script>
-                var data = {fig.to_json()}
-                Plotly.newPlot('chart', data.data, data.layout);
-            </script>
-        </body>
-        </html>
-        """
-        
-        with open(filename, 'w') as f:
-            f.write(html_content)
-        
-        print(f"Created chart for {sector}")
+    except Exception as e:
+        logger.error(f"Error verifying sector display data: {e}")
+        return False
 
-def update_app_py():
-    """Update the app.py file to include sector charts"""
-    with open('app.py', 'r') as f:
-        content = f.read()
+def fix_app_sector_display():
+    """Fix the app.py sector display code if needed"""
+    app_path = 'app.py'
     
-    # Check if we need to modify the sector card code
-    if 'html.Iframe(' not in content and 'sector-sparkline-container' not in content:
-        # Find the sector chart container section
-        chart_container_start = '                    ], className="sector-chart-container"),'
+    if not os.path.exists(app_path):
+        logger.error(f"App file not found: {app_path}")
+        return False
+    
+    # Make a backup
+    backup_path = f"app_backup_{datetime.now().strftime('%Y%m%d_%H%M%S')}.py"
+    shutil.copy2(app_path, backup_path)
+    logger.info(f"Created backup of app.py at {backup_path}")
+    
+    try:
+        # Read the file
+        with open(app_path, 'r') as f:
+            code = f.read()
         
-        # Prepare the iframe code
-        iframe_code = '''                    ], className="sector-chart-container"),
-                    
-                    # Sector chart from HTML file
-                    html.Div([
-                        html.Iframe(
-                            src=f"/assets/sector_charts/{sector.replace(' ', '_').lower()}.html",
-                            style={
-                                'width': '100%',
-                                'height': '80px',
-                                'border': 'none',
-                                'padding': '0',
-                                'margin': '5px 0',
-                                'overflow': 'hidden',
-                            }
-                        )
-                    ], className="sector-sparkline-container"),'''
-        
-        # Replace in the content
-        updated_content = content.replace(chart_container_start, iframe_code)
-        
-        # Write back to the file
-        with open('app.py', 'w') as f:
-            f.write(updated_content)
-        
-        print("Updated app.py to display sector charts")
-    else:
-        print("Sector chart display already implemented in app.py")
+        # Check if the file references authentic_sector_history.csv
+        if 'authentic_sector_history.csv' in code:
+            logger.info("App already references authentic_sector_history.csv")
+            
+            # Check if the create_sector_sparkline function needs to be fixed
+            if "df = df[~(weekend_mask | may4_mask | may11_mask)].copy()" in code:
+                # Replace the date filtering part with a simpler version that just keeps all business days
+                fixed_code = code.replace(
+                    "df = df[~(weekend_mask | may4_mask | may11_mask)].copy()",
+                    "df = df[~weekend_mask].copy()  # Only filter out weekends, keep all business days"
+                )
+                
+                # Write the fixed code back
+                with open(app_path, 'w') as f:
+                    f.write(fixed_code)
+                
+                logger.info("Fixed date filtering in create_sector_sparkline function")
+            
+            # Check if we have access to the historical data but still showing flat lines
+            # This could happen if the values for a sector are so close that they round to the same value when scaled
+            if "# Get dates and values for sectors with variation" in code:
+                # Print the values data to diagnose scaling issues
+                fixed_code = code.replace(
+                    "# Get dates and values for sectors with variation",
+                    "# Get dates and values for sectors with variation\n            logger.info(f\"Sector {sector_name} values: {values.iloc[0:5].values} ... {values.iloc[-5:].values}\")"
+                )
+                
+                # Write the fixed code back
+                with open(app_path, 'w') as f:
+                    f.write(fixed_code)
+                
+                logger.info("Added value logging to diagnose scaling issues")
+            
+            return True
+            
+        else:
+            logger.error("App does not reference authentic_sector_history.csv, manual fix required")
+            return False
+    
+    except Exception as e:
+        logger.error(f"Error fixing app sector display: {e}")
+        return False
 
 def main():
-    """Main function to fix sector display"""
-    # Create sector data if needed
-    create_sector_data()
+    """Main function"""
+    logger.info("Starting sector display fix...")
     
-    # Generate sector sparklines
-    generate_sector_sparklines()
+    # Step 1: Ensure the authentic_sector_history.csv file exists
+    if not ensure_authentic_sector_history():
+        logger.error("Failed to ensure authentic sector history")
+        return False
     
-    # Update app.py
-    update_app_py()
+    # Step 2: Verify the sector display data
+    if not verify_sector_display_data():
+        logger.error("Failed to verify sector display data")
+        return False
     
-    print("\nSector display fix completed successfully!")
+    # Step 3: Fix the app.py sector display code if needed
+    if not fix_app_sector_display():
+        logger.error("Failed to fix app sector display code")
+        return False
+    
+    logger.info("Successfully fixed sector display")
+    return True
 
 if __name__ == "__main__":
     main()
