@@ -1,0 +1,20 @@
+{
+  "generated_at": "2025-05-11T00:36:26.583092",
+  "description": "Calibration factors to adjust calculated market caps to match expected values",
+  "factors": {
+    "Enterprise SaaS": 1.3446619874399703,
+    "Semiconductors": 1.1616414565079536,
+    "SMB SaaS": 1.5951715986234454,
+    "Consumer Internet": 1.3816957552003575,
+    "AI Infrastructure": 1.453471471261962,
+    "Hardware / Devices": 1.3541004049704932,
+    "AdTech": 1.1661224761777838,
+    "IT Services / Legacy Tech": 3.5579706629146246,
+    "eCommerce": 1.3463389677619135,
+    "Cybersecurity": 1.5399507215769095,
+    "Cloud Infrastructure": 1.347845132594265,
+    "Vertical SaaS": 1.5585427625170467,
+    "Fintech": 1.6053296945860256,
+    "Dev Tools / Analytics": 1.6042351808775166
+  }
+}

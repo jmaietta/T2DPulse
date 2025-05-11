@@ -1557,6 +1557,43 @@ def parse_uploaded_data(contents, filename):
         print(f"Error parsing uploaded file: {e}")
         return None
 
+
+def apply_market_cap_calibration(sector_data):
+    """
+    Apply calibration factors to sector market cap data
+    
+    Args:
+        sector_data (DataFrame): DataFrame with sector market cap data
+        
+    Returns:
+        DataFrame: Adjusted sector market cap data
+    """
+    calibration_file = os.path.join("data", "sector_calibration_factors.json")
+    if not os.path.exists(calibration_file):
+        return sector_data
+    
+    try:
+        with open(calibration_file, "r") as f:
+            calibration_data = json.load(f)
+            
+        # Get calibration factors
+        factors = calibration_data.get("factors", {})
+        
+        # Create a copy to avoid modifying the original
+        adjusted_data = sector_data.copy()
+        
+        # Apply calibration to each sector
+        for sector in adjusted_data.columns:
+            if sector in factors:
+                factor = float(factors[sector])
+                # Apply the calibration factor
+                adjusted_data[sector] *= factor
+                print(f"Applied calibration factor of {factor:.2f} to {sector}")
+        
+        return adjusted_data
+    except Exception as e:
+        print(f"Error applying calibration factors: {e}")
+        return sector_data
 # Pre-load all data at startup
 print("Loading economic data...")
 gdp_data = load_data_from_csv('gdp_data.csv')
