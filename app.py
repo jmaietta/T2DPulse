@@ -8042,199 +8042,214 @@ def create_sector_sparkline(sector_name, current_score=50):
         Figure: A plotly figure object for the sparkline
     """
     try:
-        # Load sector history data
-        history_file = 'data/sector_30day_history.csv'
-        if os.path.exists(history_file):
-            df = pd.read_csv(history_file)
+        # Load authentic sector market cap history data
+        market_cap_history_file = 'historical_sector_market_caps.csv'
+        
+        if os.path.exists(market_cap_history_file):
+            # Load market cap history
+            logging.info(f"Loading authentic sector market cap history from {market_cap_history_file}")
+            df = pd.read_csv(market_cap_history_file)
             
-            # Convert Date column to datetime
-            df['Date'] = pd.to_datetime(df['Date'])
+            # Filter for this sector
+            sector_data = df[df['sector'] == sector_name].copy()
             
-            # Sort by date
-            df = df.sort_values('Date')
-            
-            # Get data for this sector (handle column name variations)
-            if sector_name in df.columns:
-                sector_data = df[['Date', sector_name]].copy()
+            if len(sector_data) > 0:
+                # Convert date column to datetime
+                sector_data['date'] = pd.to_datetime(sector_data['date'])
+                
+                # Sort by date
+                sector_data = sector_data.sort_values('date')
+                
+                # Calculate normalized score (0-100) based on min/max market cap
+                min_cap = sector_data['market_cap'].min()
+                max_cap = sector_data['market_cap'].max()
+                
+                # Avoid division by zero if min=max
+                if max_cap > min_cap:
+                    sector_data['score'] = 25 + 50 * (sector_data['market_cap'] - min_cap) / (max_cap - min_cap)
+                else:
+                    sector_data['score'] = [current_score] * len(sector_data)
+                
+                logging.info(f"Found {len(sector_data)} data points for sector {sector_name}")
             else:
-                # If sector name not found, create flat line at current score
+                # If sector not found in data, create flat line
+                logging.warning(f"No historical market cap data found for sector: {sector_name}")
                 dates = pd.date_range(end=pd.Timestamp.now(), periods=30)
                 sector_data = pd.DataFrame({
-                    'Date': dates,
+                    'date': dates,
                     'score': [current_score] * 30
                 })
-                
-            # Create sparkline figure
-            fig = go.Figure()
-            
-            # Add trace for sector score over time
-            fig.add_trace(go.Scatter(
-                x=sector_data['Date'],
-                y=sector_data[sector_name] if sector_name in df.columns else sector_data['score'],
-                mode='lines',
-                line=dict(
-                    width=2,
-                    color='#2c3e50',
-                ),
-                hoverinfo='text',
-                hovertext=[f"{d.strftime('%Y-%m-%d')}: {s:.1f}" 
-                           for d, s in zip(
-                               sector_data['Date'], 
-                               sector_data[sector_name] if sector_name in df.columns else sector_data['score']
-                           )],
-            ))
-            
-            # Add endpoint marker
-            last_date = sector_data['Date'].iloc[-1]
-            last_score = sector_data[sector_name].iloc[-1] if sector_name in df.columns else sector_data['score'].iloc[-1]
-            
-            # Get color based on the score
-            if last_score >= 60:
-                point_color = '#2ecc71'  # Green for bullish
-            elif last_score <= 30:
-                point_color = '#e74c3c'  # Red for bearish
-            else:
-                point_color = '#f39c12'  # Yellow for neutral
-                
-            fig.add_trace(go.Scatter(
-                x=[last_date],
-                y=[last_score],
-                mode='markers',
-                marker=dict(
-                    size=8,
-                    color=point_color,
-                    line=dict(width=2, color='#2c3e50')
-                ),
-                hoverinfo='text',
-                hovertext=f"Current: {last_score:.1f}",
-            ))
-            
-            # Add reference lines for bearish/neutral/bullish zones
-            fig.add_shape(
-                type="line",
-                x0=sector_data['Date'].min(),
-                y0=30,
-                x1=sector_data['Date'].max(),
-                y1=30,
-                line=dict(color="#e74c3c", width=1, dash="dot"),
-            )
-            
-            fig.add_shape(
-                type="line",
-                x0=sector_data['Date'].min(),
-                y0=60,
-                x1=sector_data['Date'].max(),
-                y1=60,
-                line=dict(color="#2ecc71", width=1, dash="dot"),
-            )
-            
-            # Format the layout
-            fig.update_layout(
-                margin=dict(l=0, r=0, t=0, b=0),
-                height=60,
-                width=280,
-                showlegend=False,
-                xaxis=dict(
-                    showticklabels=False,
-                    showgrid=False,
-                    zeroline=False,
-                    fixedrange=True,
-                ),
-                yaxis=dict(
-                    showticklabels=False,
-                    showgrid=False,
-                    zeroline=False,
-                    range=[0, 100],
-                    fixedrange=True,
-                ),
-                plot_bgcolor='rgba(0,0,0,0)',
-                paper_bgcolor='rgba(0,0,0,0)',
-                hovermode='closest',
-            )
-            
-            return fig
-            
         else:
-            # Create a basic chart if no history data is available
-            fig = go.Figure()
-            
-            # Create date range for the last 30 days
+            # If history file doesn't exist, create flat line
+            logging.warning(f"No historical market cap file found: {market_cap_history_file}")
             dates = pd.date_range(end=pd.Timestamp.now(), periods=30)
-            
-            # Add a flat line at the current score
-            fig.add_trace(go.Scatter(
-                x=dates,
-                y=[current_score] * 30,
-                mode='lines',
-                line=dict(width=2, color='#2c3e50'),
-            ))
-            
-            # Add endpoint marker
-            fig.add_trace(go.Scatter(
-                x=[dates[-1]],
-                y=[current_score],
-                mode='markers',
-                marker=dict(
-                    size=8,
-                    color='#3498db',
-                    line=dict(width=2, color='#2c3e50')
-                ),
-            ))
-            
-            # Add reference lines
-            fig.add_shape(
-                type="line",
-                x0=dates[0],
-                y0=30,
-                x1=dates[-1],
-                y1=30,
-                line=dict(color="#e74c3c", width=1, dash="dot"),
-            )
-            
-            fig.add_shape(
-                type="line",
-                x0=dates[0],
-                y0=60,
-                x1=dates[-1],
-                y1=60,
-                line=dict(color="#2ecc71", width=1, dash="dot"),
-            )
-            
-            # Format the layout
-            fig.update_layout(
-                margin=dict(l=0, r=0, t=0, b=0),
-                height=60,
-                width=280,
-                showlegend=False,
-                xaxis=dict(
-                    showticklabels=False,
-                    showgrid=False,
-                    zeroline=False,
-                    fixedrange=True,
-                ),
-                yaxis=dict(
-                    showticklabels=False,
-                    showgrid=False,
-                    zeroline=False,
-                    range=[0, 100],
-                    fixedrange=True,
-                ),
-                plot_bgcolor='rgba(0,0,0,0)',
-                paper_bgcolor='rgba(0,0,0,0)',
-            )
-            
-            return fig
-            
-    except Exception as e:
-        print(f"Error creating sector sparkline for {sector_name}: {str(e)}")
-        # Create empty figure
+            sector_data = pd.DataFrame({
+                'date': dates,
+                'score': [current_score] * 30
+            })
+                
+        # Create sparkline figure
         fig = go.Figure()
+        
+        # Add trace for sector score over time
+        fig.add_trace(go.Scatter(
+            x=sector_data['date'],
+            y=sector_data['score'],
+            mode='lines',
+            line=dict(
+                width=2,
+                color='#2c3e50',
+            ),
+            hoverinfo='text',
+            hovertext=[f"{d.strftime('%Y-%m-%d')}: {s:.1f}" 
+                       for d, s in zip(
+                           sector_data['date'], 
+                           sector_data['score']
+                       )],
+        ))
+        
+        # Add endpoint marker
+        last_date = sector_data['date'].iloc[-1]
+        last_score = sector_data['score'].iloc[-1]
+        
+        # Get color based on the score
+        if last_score >= 60:
+            point_color = '#2ecc71'  # Green for bullish
+        elif last_score <= 30:
+            point_color = '#e74c3c'  # Red for bearish
+        else:
+            point_color = '#f39c12'  # Yellow for neutral
+            
+        fig.add_trace(go.Scatter(
+            x=[last_date],
+            y=[last_score],
+            mode='markers',
+            marker=dict(
+                size=8,
+                color=point_color,
+                line=dict(width=2, color='#2c3e50')
+            ),
+            hoverinfo='text',
+            hovertext=f"Current: {last_score:.1f}",
+        ))
+        
+        # Add reference lines for bearish/neutral/bullish zones
+        fig.add_shape(
+            type="line",
+            x0=sector_data['date'].min(),
+            y0=30,
+            x1=sector_data['date'].max(),
+            y1=30,
+            line=dict(color="#e74c3c", width=1, dash="dot"),
+        )
+        
+        fig.add_shape(
+            type="line",
+            x0=sector_data['date'].min(),
+            y0=60,
+            x1=sector_data['date'].max(),
+            y1=60,
+            line=dict(color="#2ecc71", width=1, dash="dot"),
+        )
+        
+        # Format the layout
         fig.update_layout(
+            margin=dict(l=0, r=0, t=0, b=0),
             height=60,
             width=280,
+            showlegend=False,
+            xaxis=dict(
+                showticklabels=False,
+                showgrid=False,
+                zeroline=False,
+                fixedrange=True,
+            ),
+            yaxis=dict(
+                showticklabels=False,
+                showgrid=False,
+                zeroline=False,
+                range=[0, 100],
+                fixedrange=True,
+            ),
+            plot_bgcolor='rgba(0,0,0,0)',
+            paper_bgcolor='rgba(0,0,0,0)',
+            hovermode='closest',
+        )
+        
+        return fig
+        
+    except Exception as e:
+        # Create a basic chart if error occurs
+        logging.error(f"Error creating sector sparkline for {sector_name}: {e}")
+        
+        # Create date range for the last 30 days
+        dates = pd.date_range(end=pd.Timestamp.now(), periods=30)
+        
+        # Create empty figure with fallback design
+        fig = go.Figure()
+        
+        # Add a flat line at the current score
+        fig.add_trace(go.Scatter(
+            x=dates,
+            y=[current_score] * 30,
+            mode='lines',
+            line=dict(width=2, color='#2c3e50'),
+        ))
+        
+        # Add endpoint marker
+        fig.add_trace(go.Scatter(
+            x=[dates[-1]],
+            y=[current_score],
+            mode='markers',
+            marker=dict(
+                size=8,
+                color='#3498db',
+                line=dict(width=2, color='#2c3e50')
+            ),
+        ))
+        
+        # Add reference lines
+        fig.add_shape(
+            type="line",
+            x0=dates[0],
+            y0=30,
+            x1=dates[-1],
+            y1=30,
+            line=dict(color="#e74c3c", width=1, dash="dot"),
+        )
+        
+        fig.add_shape(
+            type="line",
+            x0=dates[0],
+            y0=60,
+            x1=dates[-1],
+            y1=60,
+            line=dict(color="#2ecc71", width=1, dash="dot"),
+        )
+        
+        # Format the layout
+        fig.update_layout(
+            margin=dict(l=0, r=0, t=0, b=0),
+            height=60,
+            width=280,
+            showlegend=False,
+            xaxis=dict(
+                showticklabels=False,
+                showgrid=False,
+                zeroline=False,
+                fixedrange=True,
+            ),
+            yaxis=dict(
+                showticklabels=False,
+                showgrid=False,
+                zeroline=False,
+                range=[0, 100],
+                fixedrange=True,
+            ),
             plot_bgcolor='rgba(0,0,0,0)',
             paper_bgcolor='rgba(0,0,0,0)',
         )
+        
         return fig
 
 def get_eastern_date():
