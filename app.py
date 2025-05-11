@@ -6684,7 +6684,7 @@ def update_sector_sentiment_container(n):
                                 style={"fontSize": "13px", "marginBottom": "5px", "color": "#666"}),
                         dcc.Graph(
                             id={"type": "sector-trend-chart", "index": sector},
-                            figure=create_sector_sparkline(sector, norm_score),
+                            figure=create_sector_sparkline(sector_name=sector, current_score=norm_score),
                             config={"displayModeBar": False, "staticPlot": True},
                             style={"height": "85px", "width": "100%"}
                         )
