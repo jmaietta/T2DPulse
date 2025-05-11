@@ -1,0 +1,20 @@
+Sector Market Capitalization Comparison (Billions USD)
+
+Sector                    Our Calculation      User Value      Difference      % Difference   
+-------------------------------------------------------------------------------------
+Enterprise SaaS           $6767.50             $9100.00        $2332.50        25.63         %
+Semiconductors            $5251.19             $6100.00        $848.81         13.91         %
+SMB SaaS                  $3824.04             $6100.00        $2275.96        37.31         %
+Consumer Internet         $4342.49             $6000.00        $1657.51        27.63         %
+AI Infrastructure         $3440.04             $5000.00        $1559.96        31.20         %
+Hardware / Devices        $3175.54             $4300.00        $1124.46        26.15         %
+AdTech                    $3601.68             $4200.00        $598.32         14.25         %
+IT Services / Legacy Tech $618.33              $2200.00        $1581.67        71.89         %
+eCommerce                 $1485.51             $2000.00        $514.49         25.72         %
+Cybersecurity             $454.56              $700.00         $245.44         35.06         %
+Cloud Infrastructure      $296.77              $400.00         $103.23         25.81         %
+Vertical SaaS             $256.65              $400.00         $143.35         35.84         %
+Fintech                   $249.17              $400.00         $150.83         37.71         %
+Dev Tools / Analytics     $124.67              $200.00         $75.33          37.66         %
+-------------------------------------------------------------------------------------
+TOTAL                     $33888.14            $47100.00       $13211.86       28.05         %
