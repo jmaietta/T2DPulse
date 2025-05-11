@@ -6684,35 +6684,6 @@ def update_sector_sentiment_container(n):
                     html.Ul([
                         html.Li(driver) for driver in drivers
                     ], className="drivers-list"),
-                    # Sector chart
-                    html.Div([
-                        html.Iframe(
-                            srcDoc=open(f"data/sector_chart_{sector.replace(' ', '_').replace('/', '_')}.html", 'r').read() if os.path.exists(f"data/sector_chart_{sector.replace(' ', '_').replace('/', '_')}.html") else "",
-                            style={
-                                'width': '100%',
-                                'height': '40px',
-                                'border': 'none',
-                                'padding': '0',
-                                'margin': '0 0 10px 0',
-                                'overflow': 'hidden',
-                            }
-                        )
-                    ], className="sector-chart-container"),
-                    
-                    # Sector chart
-                    html.Div([
-                        # Create a simple sparkline chart for this sector
-                        dcc.Graph(
-                            figure=create_sector_sparkline(sector, norm_score),
-                            config={'displayModeBar': False},
-                            style={
-                                'width': '100%',
-                                'height': '60px',
-                                'padding': '0',
-                                'margin': '0 0 10px 0'
-                            }
-                        )
-                    ], className="sector-sparkline-container"),
                     
                     # Tickers with label
                     html.Div([
