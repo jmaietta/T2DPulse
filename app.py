@@ -6263,7 +6263,7 @@ def update_sector_sentiment_container(n):
     except Exception as e:
         print(f"Error running sector display fix: {e}")
     
-    # Load the authentic sector scores from the most recently produced data file
+    # Load the authentic sector scores from the most recently produced data file - simplified
     authentic_file = "data/authentic_sector_history.csv"
     found_authentic_data = False
     
@@ -6271,66 +6271,49 @@ def update_sector_sentiment_container(n):
     
     # Attempt to load from our authentic source
     if os.path.exists(authentic_file):
-        print(f"Found authentic sector data file")
         try:
-            import pandas as pd
+            # Read the CSV as-is - date should be the first column
             sector_df = pd.read_csv(authentic_file)
-            print(f"Successfully loaded {len(sector_df)} rows from authentic_sector_history.csv")
             
-            # Ensure the date column is recognized correctly
-            if 'date' in sector_df.columns:
-                date_col = 'date'
-            else:
-                # Try to find the date column regardless of case
-                for col in sector_df.columns:
-                    if col.lower() == 'date':
-                        date_col = col
-                        break
-                else:
-                    # If no date column found, print columns and raise error
-                    print(f"Available columns: {sector_df.columns.tolist()}")
-                    raise KeyError("No date column found in authentic sector history")
-            
-            # Sort by date to get most recent data
-            sector_df['date'] = pd.to_datetime(sector_df[date_col])
-            sector_df = sector_df.sort_values('date', ascending=False)
-            
-            if not sector_df.empty:
-                # Get sector columns (all except date column)
-                sector_columns = [col for col in sector_df.columns if col.lower() != 'date']
+            if len(sector_df) > 0:
+                # Sort by date to get the most recent values
+                sector_df['date'] = pd.to_datetime(sector_df['date'])
+                sector_df = sector_df.sort_values('date', ascending=False)
                 
-                if sector_columns:
-                    print(f"Using authentic sector data with {len(sector_columns)} sectors")
-                    # Create sector data objects in the expected format
-                    authentic_scores = []
-                    latest_row = sector_df.iloc[0]  # Most recent row
-                    latest_date = latest_row['date'].strftime('%Y-%m-%d')
-                    print(f"Latest authentic sector data from: {latest_date}")
+                # Get the first (most recent) row
+                latest_row = sector_df.iloc[0]
+                latest_date = latest_row['date'].strftime('%Y-%m-%d')
+                print(f"Using authentic sector data from: {latest_date}")
+                
+                # All columns except 'date' are sector columns
+                sector_columns = [col for col in sector_df.columns if col != 'date']
+                
+                # Process each sector
+                authentic_scores = []
+                for sector in sector_columns:
+                    # Get values on 0-100 scale directly from data
+                    norm_score = float(latest_row[sector])
+                    # Convert to raw score (-1 to +1 scale)
+                    raw_score = (norm_score / 50.0) - 1.0
                     
-                    for sector in sector_columns:
-                        # Get normalized score (0-100 scale)
-                        norm_score = float(latest_row[sector])
-                        # Convert to raw score (-1 to +1 scale)
-                        raw_score = (norm_score / 50.0) - 1.0
-                        
-                        # Generate all the needed fields
-                        sector_data = {
-                            "sector": sector,
-                            "score": raw_score,
-                            "normalized_score": norm_score,
-                            "stance": "Bullish" if norm_score >= 60 else "Bearish" if norm_score <= 30 else "Neutral",
-                            "takeaway": "Outperforming peers" if norm_score >= 60 else 
-                                      "Bearish macro setup" if norm_score <= 30 else 
-                                      "Neutral – monitor trends",
-                            "drivers": [],  # Will be populated later
-                            "tickers": []   # Will be populated later
-                        }
-                        authentic_scores.append(sector_data)
-                    
-                    # We found authentic data
-                    sector_scores = authentic_scores
-                    found_authentic_data = True
-                    print(f"Successfully loaded {len(authentic_scores)} authentic sector scores")
+                    # Generate all the needed fields
+                    sector_data = {
+                        "sector": sector,
+                        "score": raw_score,
+                        "normalized_score": norm_score,
+                        "stance": "Bullish" if norm_score >= 60 else "Bearish" if norm_score <= 30 else "Neutral",
+                        "takeaway": "Outperforming peers" if norm_score >= 60 else 
+                                  "Bearish macro setup" if norm_score <= 30 else 
+                                  "Neutral – monitor trends",
+                        "drivers": [],  # Will be populated later
+                        "tickers": []   # Will be populated later
+                    }
+                    authentic_scores.append(sector_data)
+                
+                # We found authentic data
+                sector_scores = authentic_scores
+                found_authentic_data = True
+                print(f"Successfully loaded {len(authentic_scores)} authentic sector scores")
             else:
                 print(f"Authentic sector data file exists but is empty")
         except Exception as e:
@@ -8039,66 +8022,52 @@ def create_sector_sparkline(sector_name, current_score=50):
         Figure: A plotly figure object for the sparkline
     """
     try:
-        # Load authentic sector history data
+        # Load authentic sector history data - simplified version
         authentic_history_file = 'data/authentic_sector_history.csv'
         
         if os.path.exists(authentic_history_file):
-            # Load sector history
-            print(f"Loading authentic sector history from {authentic_history_file}")
+            # Load sector history - with date as the first column
+            df = pd.read_csv(authentic_history_file)
             
-            try:
-                df = pd.read_csv(authentic_history_file)
-                print(f"Columns found in sector history: {df.columns.tolist()}")
+            # Find matching sector - case insensitive comparison
+            sector_map = {col.lower(): col for col in df.columns if col.lower() != 'date'}
+            matched_sector = sector_map.get(sector_name.lower())
+            
+            if matched_sector:
+                # We found the sector in our data
+                # Convert date column to datetime
+                df['date'] = pd.to_datetime(df['date'])
                 
-                # Fix the sector name to match the exact column name case if needed
-                available_sectors = [col for col in df.columns if col.lower() != 'date']
-                matched_sector = None
+                # Sort by date
+                df = df.sort_values('date')
                 
-                for sector in available_sectors:
-                    if sector.lower() == sector_name.lower():
-                        matched_sector = sector
-                        break
+                # Create a sector data dataframe with date and score columns
+                sector_data = pd.DataFrame({
+                    'date': df['date'],
+                    'score': df[matched_sector]
+                }).dropna()
                 
-                if matched_sector is not None:
-                    print(f"Found matching sector: {matched_sector}")
-                    # Ensure date column is identified
-                    date_col = None
-                    for col in df.columns:
-                        if col.lower() == 'date':
-                            date_col = col
-                            break
-                    
-                    if date_col is not None:
-                        # Convert date column to datetime
-                        df[date_col] = pd.to_datetime(df[date_col])
-                        
-                        # Sort by date
-                        df = df.sort_values(date_col)
-                        
-                        # Create a sector data dataframe with date and score columns
-                        sector_data = pd.DataFrame({
-                            'date': df[date_col],
-                            'score': df[matched_sector]
-                        }).dropna()
-                        
-                        print(f"Found {len(sector_data)} data points for sector {sector_name}")
-                    else:
-                        raise ValueError(f"No date column found in sector history file")
+                # If we have data, use it
+                if not sector_data.empty:
+                    print(f"Using {len(sector_data)} authentic data points for {matched_sector}")
                 else:
-                    # Sector not found in data
-                    print(f"No matching sector for: {sector_name} in {available_sectors}")
-                    raise ValueError(f"Sector {sector_name} not found in authentic history data")
-            except Exception as e:
-                print(f"Error processing sector data: {e}")
-                # If there's an error, create flat line
+                    # Create flat line if no data points
+                    dates = pd.date_range(end=pd.Timestamp.now(), periods=30)
+                    sector_data = pd.DataFrame({
+                        'date': dates,
+                        'score': [current_score] * 30
+                    })
+                    print(f"No data for {sector_name}, using flat line")
+            else:
+                # Sector not found in data
                 dates = pd.date_range(end=pd.Timestamp.now(), periods=30)
                 sector_data = pd.DataFrame({
                     'date': dates,
                     'score': [current_score] * 30
                 })
+                print(f"No sector match for: {sector_name}")
         else:
             # If history file doesn't exist, create flat line
-            print(f"No authentic sector history file found: {authentic_history_file}")
             dates = pd.date_range(end=pd.Timestamp.now(), periods=30)
             sector_data = pd.DataFrame({
                 'date': dates,
