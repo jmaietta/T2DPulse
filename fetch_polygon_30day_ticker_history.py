@@ -155,28 +155,9 @@ def main():
     # Load ticker list
     tickers, ticker_to_sector, sector_to_tickers = load_ticker_list()
     
-    # Check if we already have some ticker history to avoid duplicate work
-    if os.path.exists('T2D_Pulse_Full_Ticker_History.csv'):
-        logging.info("Existing ticker history found. Checking for missing data...")
-        existing_df = pd.read_csv('T2D_Pulse_Full_Ticker_History.csv')
-        
-        # Calculate which tickers need data
-        existing_tickers = existing_df['ticker'].unique()
-        missing_tickers = [t for t in tickers if t not in existing_tickers]
-        
-        if missing_tickers:
-            logging.info(f"Found {len(missing_tickers)} tickers missing from history. Will fetch their data.")
-            new_history = fetch_all_ticker_histories(missing_tickers)
-            
-            # Combine with existing data
-            all_ticker_history = existing_df.to_dict('records') + new_history
-        else:
-            logging.info("All tickers already have some history. Using existing data.")
-            all_ticker_history = existing_df.to_dict('records')
-    else:
-        # No existing data, fetch all ticker histories
-        logging.info(f"No existing ticker history found. Fetching data for all {len(tickers)} tickers...")
-        all_ticker_history = fetch_all_ticker_histories(tickers)
+    # Get all ticker histories
+    logging.info(f"Fetching market cap data for all {len(tickers)} tickers...")
+    all_ticker_history = fetch_all_ticker_histories(tickers)
     
     # Aggregate by sector
     sector_history = aggregate_by_sector(all_ticker_history, ticker_to_sector)
