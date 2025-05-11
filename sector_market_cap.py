@@ -67,7 +67,7 @@ NASDAQ_API_KEY = os.environ.get("NASDAQ_DATA_LINK_API_KEY")
 SECTORS: Dict[str, List[str]] = {
     "AdTech": ["APP", "APPS", "CRTO", "DV", "GOOGL", "META", "MGNI", "PUBM", "TTD"],
     "Cloud Infrastructure": ["AMZN", "CRM", "CSCO", "GOOGL", "MSFT", "NET", "ORCL", "SNOW"],
-    "Fintech": ["ADYEY", "AFRM", "BILL", "COIN", "FIS", "FI", "GPN", "PYPL", "SSNC", "XYZ"],
+    "Fintech": ["AFRM", "BILL", "COIN", "FIS", "FI", "GPN", "PYPL", "SSNC", "XYZ"],
     "eCommerce": ["AMZN", "BABA", "BKNG", "CHWY", "EBAY", "ETSY", "PDD", "SE", "SHOP", "WMT"],
     "Consumer Internet": ["ABNB", "BKNG", "GOOGL", "META", "NFLX", "PINS", "SNAP", "SPOT", "TRIP", "YELP"],
     "IT Services / Legacy Tech": ["ACN", "CTSH", "DXC", "HPQ", "IBM", "INFY", "PLTR", "WIT"],
@@ -88,11 +88,6 @@ MISSING_LOG = Path("missing_tickers.log")
 
 def _polygon_market_cap(ticker: str) -> Optional[float]:
     """Source 1 (Primary) – Polygon.io API for most reliable market cap data."""
-    # Special handling for ADYEY - known ADR with incomplete data in some APIs
-    if ticker == "ADYEY":
-        # Adyen market cap is approximately 52.7B USD (as specified by user)
-        return 52.7 * 1_000_000_000
-    
     if not POLYGON_API_KEY:
         return None
     
