@@ -21,6 +21,11 @@ FINTECH_TICKERS = ["ADYEY", "AFRM", "BILL", "COIN", "FIS", "FI", "GPN", "PYPL", 
 
 def get_market_cap(ticker):
     """Get market cap for ticker from Polygon API"""
+    # Special handling for ADYEY - known ADR with incomplete data in some APIs
+    if ticker == "ADYEY":
+        # Adyen market cap is approximately 52.7B USD (as specified by user)
+        return 52.7 * 1_000_000_000
+        
     url = f"https://api.polygon.io/v3/reference/tickers/{ticker}?apiKey={POLYGON_API_KEY}"
     
     try:
