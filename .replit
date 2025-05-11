@@ -24,6 +24,10 @@ args = "Economic Dashboard Server"
 task = "workflow.run"
 args = "Market Cap Download Server"
 
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "Sector Market Cap Updater"
+
 [[workflows.workflow]]
 name = "Background Data Collection"
 author = "agent"
@@ -49,6 +53,14 @@ author = "agent"
 task = "shell.exec"
 args = "python market_cap_download_server.py"
 waitForPort = 5001
+
+[[workflows.workflow]]
+name = "Sector Market Cap Updater"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "python sector_market_cap.py"
 
 [deployment]
 run = ["sh", "-c", "python app.py"]
