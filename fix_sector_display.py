@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
 """
-Fix the sector displays by ensuring that the correct data files are being used
-and that the data is being properly processed for display.
+Fix the sector display issue in the T2D Pulse dashboard
+by ensuring consistent data formatting and proper data loading
+for sector sparklines.
 """
 
 import os
 import pandas as pd
-import shutil
+import numpy as np
 from datetime import datetime, timedelta
 import logging
 
@@ -17,238 +18,153 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-def ensure_authentic_sector_history():
-    """
-    Ensure that data/authentic_sector_history.csv exists and is properly populated
-    with data from our corrected_sector_market_caps.csv file.
-    
-    The historical market cap data is in corrected_sector_market_caps.csv
-    The sparkline data should be in data/authentic_sector_history.csv
-    But the dashboard looks for data/authentic_sector_history.csv in app.py
-    """
-    logger.info("Ensuring authentic sector history file exists...")
-    
-    # Check if the corrected data exists
-    if not os.path.exists('corrected_sector_market_caps.csv'):
-        logger.error("Corrected sector market cap data not found")
-        return False
-    
-    # Make sure data directory exists
-    data_dir = 'data'
-    if not os.path.exists(data_dir):
-        os.makedirs(data_dir)
-    
-    # Load the corrected market cap data
-    market_cap_df = pd.read_csv('corrected_sector_market_caps.csv')
-    logger.info(f"Loaded corrected market cap data with {len(market_cap_df)} rows")
-    
-    # Convert dates to datetime
-    market_cap_df['date'] = pd.to_datetime(market_cap_df['date'])
-    
-    # Create normalized scores for each sector based on min-max scaling
-    sector_columns = [col for col in market_cap_df.columns if col != 'date']
-    normalized_data = {'date': market_cap_df['date']}
-    
-    for sector in sector_columns:
-        # Get sector values
-        sector_values = market_cap_df[sector]
-        
-        # Calculate min, max, and range
-        min_val = sector_values.min()
-        max_val = sector_values.max()
-        range_val = max_val - min_val
-        
-        if range_val > 0:
-            # Convert to a 0-100 scale for sentiment scores
-            # (most apps use 40-60 as normal range, 0-40 as bearish, 60-100 as bullish)
-            normalized_scores = 40 + 40 * ((sector_values - min_val) / range_val)
-            
-            # Limit to 0-100 range
-            normalized_scores = normalized_scores.clip(0, 100)
-            
-            # Add to normalized data
-            normalized_data[sector] = normalized_scores
-        else:
-            # If there's no range (all values are the same), set a neutral score of 50
-            normalized_data[sector] = [50] * len(sector_values)
-    
-    # Create a normalized DataFrame
-    normalized_df = pd.DataFrame(normalized_data)
-    
-    # Save the normalized data to authentic_sector_history.csv
-    authentic_history_path = os.path.join(data_dir, 'authentic_sector_history.csv')
-    normalized_df.to_csv(authentic_history_path, index=False)
-    logger.info(f"Saved normalized sector data to {authentic_history_path}")
-    
-    # Also update sector_30day_history.csv for backward compatibility
-    # but with 'Date' as column name instead of 'date'
-    normalized_df_copy = normalized_df.copy()
-    normalized_df_copy.rename(columns={'date': 'Date'}, inplace=True)
-    
-    # Extend to 30 days
-    today = datetime.now()
-    date_range = pd.date_range(end=today, periods=30)
-    
-    # Create a template DataFrame with the full date range
-    template_df = pd.DataFrame({'Date': date_range})
-    
-    # Merge with the existing data
-    merged_df = pd.merge(template_df, normalized_df_copy, on='Date', how='left')
-    
-    # Fill in weekends and missing days with placeholder value of 50
-    for col in merged_df.columns:
-        if col != 'Date':
-            merged_df[col] = merged_df[col].fillna(50)
-    
-    # Save to sector_30day_history.csv
-    sector_history_path = os.path.join(data_dir, 'sector_30day_history.csv')
-    merged_df.to_csv(sector_history_path, index=False)
-    logger.info(f"Updated {sector_history_path} with authentic sentiment scores")
-    
-    return True
+# Try to use the database access module if available
+try:
+    import db_access
+    USE_DATABASE = True
+    logger.info("Using database for market cap data")
+except ImportError:
+    USE_DATABASE = False
+    logger.info("Database module not available, using CSV files")
 
-def verify_sector_display_data():
-    """Verify that the sector display data is correct and ready for display"""
-    authentic_history_path = os.path.join('data', 'authentic_sector_history.csv')
+def ensure_consistent_sector_data():
+    """
+    Ensure that sector data is consistently formatted and available
+    for all visualization components in the dashboard
+    """
+    # Get the latest 30 days of market cap data
+    if USE_DATABASE:
+        # Use database access module
+        sector_data = db_access.get_sector_market_caps(days=30)
+        sentiment_data = db_access.get_sector_sentiment_scores(days=30)
+    else:
+        # Fallback to CSV files
+        sector_data = load_sector_market_caps_from_csv()
+        sentiment_data = load_sector_sentiment_from_csv()
     
-    if not os.path.exists(authentic_history_path):
-        logger.error(f"Authentic sector history file not found: {authentic_history_path}")
-        return False
+    # Ensure data is properly formatted
+    sector_data = format_sector_data(sector_data)
+    sentiment_data = format_sector_data(sentiment_data)
     
-    try:
-        df = pd.read_csv(authentic_history_path)
-        
-        # Basic validation
-        if 'date' not in df.columns:
-            logger.error("Date column not found in authentic sector history")
-            return False
-        
-        # Make sure all sector columns are present
-        expected_sectors = [
-            'AI Infrastructure', 'AdTech', 'Cloud Infrastructure', 'Consumer Internet',
-            'Cybersecurity', 'Dev Tools / Analytics', 'Enterprise SaaS', 'Fintech',
-            'Hardware / Devices', 'IT Services / Legacy Tech', 'SMB SaaS',
-            'Semiconductors', 'Vertical SaaS', 'eCommerce'
-        ]
-        
-        missing_sectors = [s for s in expected_sectors if s not in df.columns]
-        if missing_sectors:
-            logger.error(f"Missing sector columns: {missing_sectors}")
-            return False
-        
-        # Check for reasonable values
-        for sector in expected_sectors:
-            if sector in df.columns:
-                min_val = df[sector].min()
-                max_val = df[sector].max()
-                
-                if min_val < 0 or max_val > 100:
-                    logger.error(f"Invalid score range for {sector}: {min_val}-{max_val}")
-                    return False
-                
-                # Check for variation in scores
-                if min_val == max_val:
-                    logger.warning(f"No variation in scores for {sector}: all values = {min_val}")
-        
-        # Validate date range
+    # Save formatted data for dashboard use
+    save_formatted_data(sector_data, 'data/sector_30day_history.csv')
+    save_formatted_data(sentiment_data, 'data/sector_sentiment_30day.csv')
+    
+    logger.info(f"Saved formatted sector data with {len(sector_data)} days of data")
+    return sector_data, sentiment_data
+
+def load_sector_market_caps_from_csv():
+    """Load sector market cap data from CSV file"""
+    # Try different file paths
+    file_paths = [
+        'authentic_sector_market_caps.csv',
+        'data/authentic_sector_market_caps.csv',
+        'corrected_sector_market_caps.csv'
+    ]
+    
+    for file_path in file_paths:
+        if os.path.exists(file_path):
+            logger.info(f"Loading sector market caps from {file_path}")
+            df = pd.read_csv(file_path)
+            df['date'] = pd.to_datetime(df['date'])
+            return df
+    
+    logger.error("No sector market cap file found")
+    return pd.DataFrame()
+
+def load_sector_sentiment_from_csv():
+    """Load sector sentiment data from CSV file"""
+    # Try different file paths
+    file_paths = [
+        'data/authentic_sector_history.csv',
+        'authentic_sector_history.csv',
+        'sector_sentiment_history.csv'
+    ]
+    
+    for file_path in file_paths:
+        if os.path.exists(file_path):
+            logger.info(f"Loading sector sentiment from {file_path}")
+            df = pd.read_csv(file_path)
+            df['date'] = pd.to_datetime(df['date'])
+            return df
+    
+    logger.error("No sector sentiment file found")
+    return pd.DataFrame()
+
+def format_sector_data(df):
+    """Format sector data with consistent columns and date format"""
+    if df.empty:
+        logger.warning("Empty data frame provided for formatting")
+        return df
+    
+    # Ensure date is datetime type
+    if 'date' in df.columns:
         df['date'] = pd.to_datetime(df['date'])
-        date_range = (df['date'].max() - df['date'].min()).days
-        
-        if date_range < 20:
-            logger.warning(f"Date range may be too short: {date_range} days")
-        
-        # Print a sample of the data for verification
-        logger.info(f"Sector display data sample:")
-        logger.info(df.tail(5).to_string())
-        
-        return True
     
-    except Exception as e:
-        logger.error(f"Error verifying sector display data: {e}")
-        return False
+    # Sort by date
+    if 'date' in df.columns:
+        df = df.sort_values('date')
+    
+    # Filter for business days only (exclude weekends)
+    if 'date' in df.columns:
+        df = df[df['date'].dt.dayofweek < 5]  # Monday-Friday are 0-4
+    
+    # Remove any duplicate dates
+    if 'date' in df.columns:
+        df = df.drop_duplicates(subset=['date'], keep='last')
+    
+    # Limit to last 30 days if more data is available
+    if 'date' in df.columns and len(df) > 30:
+        end_date = df['date'].max()
+        start_date = end_date - timedelta(days=30)
+        df = df[df['date'] >= start_date]
+    
+    return df
 
-def fix_app_sector_display():
-    """Fix the app.py sector display code if needed"""
-    app_path = 'app.py'
+def save_formatted_data(df, output_path):
+    """Save formatted data to CSV file"""
+    # Create parent directory if it doesn't exist
+    os.makedirs(os.path.dirname(output_path), exist_ok=True)
     
-    if not os.path.exists(app_path):
-        logger.error(f"App file not found: {app_path}")
-        return False
-    
-    # Make a backup
-    backup_path = f"app_backup_{datetime.now().strftime('%Y%m%d_%H%M%S')}.py"
-    shutil.copy2(app_path, backup_path)
-    logger.info(f"Created backup of app.py at {backup_path}")
-    
-    try:
-        # Read the file
-        with open(app_path, 'r') as f:
-            code = f.read()
-        
-        # Check if the file references authentic_sector_history.csv
-        if 'authentic_sector_history.csv' in code:
-            logger.info("App already references authentic_sector_history.csv")
-            
-            # Check if the create_sector_sparkline function needs to be fixed
-            if "df = df[~(weekend_mask | may4_mask | may11_mask)].copy()" in code:
-                # Replace the date filtering part with a simpler version that just keeps all business days
-                fixed_code = code.replace(
-                    "df = df[~(weekend_mask | may4_mask | may11_mask)].copy()",
-                    "df = df[~weekend_mask].copy()  # Only filter out weekends, keep all business days"
-                )
-                
-                # Write the fixed code back
-                with open(app_path, 'w') as f:
-                    f.write(fixed_code)
-                
-                logger.info("Fixed date filtering in create_sector_sparkline function")
-            
-            # Check if we have access to the historical data but still showing flat lines
-            # This could happen if the values for a sector are so close that they round to the same value when scaled
-            if "# Get dates and values for sectors with variation" in code:
-                # Print the values data to diagnose scaling issues
-                fixed_code = code.replace(
-                    "# Get dates and values for sectors with variation",
-                    "# Get dates and values for sectors with variation\n            logger.info(f\"Sector {sector_name} values: {values.iloc[0:5].values} ... {values.iloc[-5:].values}\")"
-                )
-                
-                # Write the fixed code back
-                with open(app_path, 'w') as f:
-                    f.write(fixed_code)
-                
-                logger.info("Added value logging to diagnose scaling issues")
-            
-            return True
-            
-        else:
-            logger.error("App does not reference authentic_sector_history.csv, manual fix required")
-            return False
-    
-    except Exception as e:
-        logger.error(f"Error fixing app sector display: {e}")
-        return False
+    # Save to CSV
+    df.to_csv(output_path, index=False)
+    logger.info(f"Saved formatted data to {output_path}")
 
-def main():
-    """Main function"""
-    logger.info("Starting sector display fix...")
+def create_sector_sparkline_data():
+    """Create properly formatted data for sector sparklines"""
+    # Get consistent sector data
+    sector_data, sentiment_data = ensure_consistent_sector_data()
     
-    # Step 1: Ensure the authentic_sector_history.csv file exists
-    if not ensure_authentic_sector_history():
-        logger.error("Failed to ensure authentic sector history")
-        return False
+    # Format as a dictionary for easy access in the dashboard
+    sparkline_data = {}
     
-    # Step 2: Verify the sector display data
-    if not verify_sector_display_data():
-        logger.error("Failed to verify sector display data")
-        return False
+    if 'date' in sector_data.columns:
+        # For each sector, create a list of values for the sparkline
+        sectors = [col for col in sector_data.columns if col != 'date']
+        for sector in sectors:
+            # Use market cap data
+            values = sector_data[sector].tolist()
+            dates = sector_data['date'].dt.strftime('%Y-%m-%d').tolist()
+            sparkline_data[sector] = {
+                'values': values,
+                'dates': dates
+            }
     
-    # Step 3: Fix the app.py sector display code if needed
-    if not fix_app_sector_display():
-        logger.error("Failed to fix app sector display code")
-        return False
+    # Save to a Python file for easy import
+    with open('sector_sparkline_data.py', 'w') as f:
+        f.write("#!/usr/bin/env python3\n")
+        f.write('"""\nSector sparkline data for T2D Pulse dashboard\n"""\n\n')
+        f.write(f"# Generated on {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n\n")
+        f.write("SECTOR_SPARKLINE_DATA = {\n")
+        for sector, data in sparkline_data.items():
+            f.write(f"    '{sector}': {{\n")
+            f.write(f"        'values': {data['values']},\n")
+            f.write(f"        'dates': {data['dates']},\n")
+            f.write("    },\n")
+        f.write("}\n")
     
-    logger.info("Successfully fixed sector display")
-    return True
+    logger.info(f"Created sector sparkline data for {len(sparkline_data)} sectors")
+    return sparkline_data
 
 if __name__ == "__main__":
-    main()
+    create_sector_sparkline_data()
