@@ -2,7 +2,7 @@
 """
 Add historical data for the AI Infrastructure sector to the database.
 
-The AI Infrastructure sector consists of GOOGL and META tickers.
+The AI Infrastructure sector consists of AMZN, GOOGL, IBM, META, MSFT, NVDA, and ORCL tickers.
 This script will calculate the historical sector market cap from these tickers
 and add it to the sector_market_caps table for all the dates between April 11 and May 9, 2025.
 """
@@ -53,7 +53,7 @@ def calculate_ai_infrastructure_market_caps(conn, sector_id):
             'date': date,
             'sector_id': sector_id,
             'market_cap': market_cap,
-            'data_source': 'calculated'
+            'sentiment_score': None  # Set to None as we don't have sentiment data
         })
     
     return market_cap_data
@@ -83,13 +83,13 @@ def insert_historical_market_caps(conn, market_cap_data):
     for entry in market_cap_data:
         cursor.execute("""
             INSERT INTO sector_market_caps 
-            (sector_id, date, market_cap, data_source) 
+            (sector_id, date, market_cap, sentiment_score) 
             VALUES (?, ?, ?, ?)
         """, (
             entry['sector_id'],
             entry['date'],
             entry['market_cap'],
-            entry['data_source']
+            entry['sentiment_score']
         ))
     
     conn.commit()
