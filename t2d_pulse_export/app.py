@@ -8104,8 +8104,8 @@ if __name__ == "__main__":
     refresh_thread.start()
     logger.info("Started auto-refresh thread to update data every 24 hours")
 
-    # Run the dashboard on Render’s assigned port (or 5000 locally)
+    # Choose the port from the environment (Render provides $PORT)
     import os
     port = int(os.environ.get("PORT", 5000))
-    logger.info(f"Starting T2D Pulse dashboard on port {port}")
+    print(f"Starting T2D Pulse dashboard on port {port}")
     app.run(host="0.0.0.0", port=port, debug=False)
