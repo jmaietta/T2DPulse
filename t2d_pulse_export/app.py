@@ -91,12 +91,23 @@ except Exception as e:
 def get_authentic_pulse_score():
     """Get the most recent authentic T2D Pulse score calculated from sector data"""
     try:
-        # Use the data_reader's optimized implementation
-        score = read_pulse_score()
-        # Use the data_reader's optimized implementation
-        # Supply the path to your pulse-history CSV
+        # Use the data_reader's optimized implementation with explicit filename
         pulse_history_file = os.path.join("data", "t2d_pulse_history.csv")
         score = read_pulse_score(pulse_history_file)
+        if score is not None:
+            logger.info(f"Successfully read authentic pulse score: {score}")
+            return score
+
+        # Fall back to original method if data_reader fails
+        logger.debug("Falling back to direct file reading for pulse score")
+        with open(os.path.join("data", "current_pulse_score.txt"), "r") as f:
+            score = float(f.read().strip())
+            logger.info(f"Successfully read authentic pulse score via fallback: {score}")
+            return score
+
+    except Exception as e:
+        logger.error(f"Error reading authentic pulse score: {e}")
+        return None
         if score is not None:
             logger.info(f"Successfully read authentic pulse score: {score}")
             return score
