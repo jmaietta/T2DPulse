@@ -10,18 +10,40 @@ def load_mapping(path="T2DPulse_ticker_sector_mapping.txt"):
     return { sector: group["Ticker"].tolist()
              for sector, group in df.groupby("Sector") }
 
+from polygon import RESTClient
+import pandas as pd
+import os
+
+API_KEY = os.environ["POLYGON_API_KEY"]  # or however you load it
+
 def fetch_market_caps(tickers, start, end):
+    """Fetch daily market-cap estimates (close × volume) for each ticker."""
     client = RESTClient(API_KEY)
     all_data = {}
+
     for symbol in tickers:
-        resp = client.stocks_equities_aggregates(
-            symbol, 1, "day", start, end, unadjusted=False
+        # 🎯 Use the modern get_aggs() method
+        bars = client.get_aggs(
+            symbol=symbol,
+            multiplier=1,
+            timespan="day",
+            _from=start,
+            to=end,
+            unadjusted=False
         )
-        df = pd.DataFrame(resp.results)
+
+        # Bars come back as a list of dicts
+        df = pd.DataFrame(bars)
+        if df.empty:
+            continue
+
+        # Convert ms‐epoch to date index
         df["date"] = pd.to_datetime(df["t"], unit="ms").dt.date
         df.set_index("date", inplace=True)
-        # Approximate market cap = close price * volume
+
+        # Approximate market cap = price × volume
         all_data[symbol] = df["c"] * df["v"]
+
     return pd.DataFrame(all_data)
 
 def build_sector_history(mapping, start, end):
