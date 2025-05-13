@@ -14,34 +14,30 @@ from polygon import RESTClient
 import pandas as pd
 import os
 
-API_KEY = os.environ["POLYGON_API_KEY"]  # or however you load it
+API_KEY = os.environ["POLYGON_API_KEY"]
 
 def fetch_market_caps(tickers, start, end):
-    """Fetch daily market-cap estimates (close × volume) for each ticker."""
+    """Fetch daily market‐cap estimates (close × volume) for each ticker."""
     client = RESTClient(API_KEY)
     all_data = {}
 
     for symbol in tickers:
-        # 🎯 Use the modern get_aggs() method
+        # Positional args: ticker, multiplier, timespan, _from, to
         bars = client.get_aggs(
-            symbol=symbol,
-            multiplier=1,
-            timespan="day",
-            _from=start,
-            to=end,
-            unadjusted=False
+            symbol,     # 1st positional arg
+            1,          # multiplier
+            "day",      # timespan
+            start,      # _from (YYYY-MM-DD)
+            end,        # to   (YYYY-MM-DD)
+            unadjusted=False  # this keyword is accepted
         )
 
-        # Bars come back as a list of dicts
         df = pd.DataFrame(bars)
         if df.empty:
             continue
 
-        # Convert ms‐epoch to date index
         df["date"] = pd.to_datetime(df["t"], unit="ms").dt.date
         df.set_index("date", inplace=True)
-
-        # Approximate market cap = price × volume
         all_data[symbol] = df["c"] * df["v"]
 
     return pd.DataFrame(all_data)
