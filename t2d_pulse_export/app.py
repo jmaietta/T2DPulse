@@ -93,6 +93,10 @@ def get_authentic_pulse_score():
     try:
         # Use the data_reader's optimized implementation
         score = read_pulse_score()
+        # Use the data_reader's optimized implementation
+        # Supply the path to your pulse-history CSV
+        pulse_history_file = os.path.join("data", "t2d_pulse_history.csv")
+        score = read_pulse_score(pulse_history_file)
         if score is not None:
             logger.info(f"Successfully read authentic pulse score: {score}")
             return score
