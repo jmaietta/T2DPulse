@@ -2697,6 +2697,14 @@ def create_pulse_card(value, include_chart=True):
         tuple: (pulse_display, pulse_status, pulse_color)
     """
     print(f"Creating T2D Pulse card with value: {value}, type: {type(value)}")
+    
+    # ───── Extract scalar from DataFrame/Series ─────
+    import pandas as pd, numpy as np
+    if isinstance(value, (pd.DataFrame, pd.Series)):
+        vals = value.dropna().values.flatten()
+        value = float(vals[-1]) if len(vals) else np.nan
+    # ────────────────────────────────────────────────
+    
     try:
         score_value = float(value)
         print(f"Successfully converted to float: {score_value}")
