@@ -26,4 +26,4 @@ trafilatura
 twilio
 yfinance
 psycopg2-binary
-polygon-api-client
+polygon-api-client>=1.14.5
