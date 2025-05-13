@@ -3016,11 +3016,21 @@ def create_pulse_card(value, include_chart=True):
     Output("sentiment-gauge", "children"),
     [Input("sentiment-score", "children")]
 )
-def update_sentiment_gauge(score):
+def update_sentiment_gauge(pulse_score):
     """Update the sentiment card based on the score"""
-    logger.debug(f"update_sentiment_gauge called with score: {score}, type: {type(score)}")
-    
-    if not score:
+    # ─────────── Coerce DataFrame/Series to single float ───────────
+    import pandas as pd, numpy as np
+
+    # If someone accidentally passed a DataFrame/Series, grab last numeric
+    if isinstance(pulse_score, (pd.DataFrame, pd.Series)):
+        vals = pulse_score.dropna().values.flatten()
+        pulse_score = float(vals[-1]) if len(vals) else np.nan
+
+    # Now log the *actual* scalar
+    logger.debug(f"update_sentiment_gauge called with score: {pulse_score}, type: {type(pulse_score)}")
+
+    # ─────────── Handle missing or zero data ───────────
+    if pulse_score is None or (isinstance(pulse_score, float) and np.isnan(pulse_score)):
         return html.Div("Data unavailable", className="no-data-message")
     
     # PRIORITY 1: First always try to use the authentic pulse score
