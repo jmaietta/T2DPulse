@@ -2538,8 +2538,8 @@ app.layout = html.Div([
 
 # Update Last Updated Timestamp
 @app.callback(
-    Output("pulse-last-updated", "children")],
-    [Input("interval-component", "n_intervals")]
+    Output("pulse-last-updated", "children"),
+    Input("interval-component", "n_intervals")
 )
 def update_last_updated(n):
     # Get current time in UTC
