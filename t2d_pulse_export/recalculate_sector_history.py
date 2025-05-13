@@ -24,12 +24,11 @@ def fetch_market_caps(tickers, start, end):
     for symbol in tickers:
         # Positional args: ticker, multiplier, timespan, _from, to
         bars = client.get_aggs(
-            symbol,     # 1st positional arg
-            1,          # multiplier
-            "day",      # timespan
-            start,      # _from (YYYY-MM-DD)
-            end,        # to   (YYYY-MM-DD)
-            unadjusted=False  # this keyword is accepted
+            symbol,   # ticker
+            1,        # multiplier
+            "day",    # timespan
+            start,    # from-date
+            end       # to-date
         )
 
         df = pd.DataFrame(bars)
