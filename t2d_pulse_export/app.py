@@ -2018,7 +2018,7 @@ app.layout = html.Div([
     # Main content container - Centered full-width layout
     html.Div([
         # Last updated timestamp centered at the top
-        html.Div(id="last-updated", className="last-updated", style={"textAlign": "center", "marginBottom": "15px"}),
+        html.Div(id="pulse-last-updated", className="pulse-last-updated", style={"textAlign": "center", "marginBottom": "15px"}),
         
         # Hidden divs to store values for indicators (needed for callbacks)
         html.Div([
