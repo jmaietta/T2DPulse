@@ -1,81 +1,94 @@
 import os
 import pandas as pd
-from polygon import RESTClient  # polygon.io Python SDK
+from polygon import RESTClient
 
-API_KEY = os.environ.get("POLYGON_API_KEY")  # Set this in Render’s ENV
+API_KEY = os.environ.get("POLYGON_API_KEY")
+MAPPING_FILE = "T2DPulse_ticker_sector_mapping.txt"
+OUTPUT_PATH = os.path.join("data", "sector_history.parquet")
 
-def load_mapping(path="T2DPulse_ticker_sector_mapping.txt"):
-    # Reads your comma-delimited text as CSV
+
+def load_mapping(path=MAPPING_FILE):
+    """
+    Load the sector-to-ticker mapping from a CSV file.
+    Expects two columns: 'Sector' and 'Ticker'.
+    """
     df = pd.read_csv(path)
-    return { sector: group["Ticker"].tolist()
-             for sector, group in df.groupby("Sector") }
+    mapping = df.groupby("Sector")["Ticker"].apply(list).to_dict()
+    return mapping
 
-from polygon import RESTClient
-import pandas as pd
-import os
-
-API_KEY = os.environ["POLYGON_API_KEY"]
-
-from polygon import RESTClient
-import pandas as pd
-import os
-
-API_KEY = os.environ["POLYGON_API_KEY"]
 
 def fetch_market_caps(tickers, start, end):
-    """Fetch daily market-cap estimates (close × volume) for each ticker."""
+    """
+    Fetch daily market-cap estimates (close price × volume) for each ticker
+    between start and end dates (YYYY-MM-DD).
+    """
     client = RESTClient(API_KEY)
-    all_data = {}
+    all_series = {}
 
     for symbol in tickers:
-        # Get the raw bars
+        # Request daily aggregates: 1-day bars
         bars = client.get_aggs(symbol, 1, "day", start, end)
+        if not bars:
+            continue
 
-        # Build a list of dicts with only t, c, v
+        # Extract t, c, v fields
         records = []
         for bar in bars:
-            # bar may be a namedtuple or dict
-            t = getattr(bar, "t", None) or bar.get("t")
-            c = getattr(bar, "c", None) or bar.get("c")
-            v = getattr(bar, "v", None) or bar.get("v")
+            t = getattr(bar, "t", None)
+            c = getattr(bar, "c", None)
+            v = getattr(bar, "v", None)
             if t is None or c is None or v is None:
                 continue
             records.append({"t": t, "c": c, "v": v})
 
-        # Create DataFrame from those records
         df = pd.DataFrame.from_records(records)
         if df.empty:
             continue
 
-        # Convert ms-epoch → date
+        # Convert epoch ms to date index
         df["date"] = pd.to_datetime(df["t"], unit="ms").dt.date
         df.set_index("date", inplace=True)
 
-        # Approximate market cap = close price × volume
-        all_data[symbol] = df["c"] * df["v"]
+        # Market cap = close * volume
+        all_series[symbol] = df["c"] * df["v"]
 
-    return pd.DataFrame(all_data)
+    return pd.DataFrame(all_series)
+
 
 def build_sector_history(mapping, start, end):
+    """
+    Build a DataFrame of cumulative sector market caps over business days.
+
+    Returns:
+        DataFrame indexed by date with sectors as columns.
+    """
     dates = pd.date_range(start, end, freq="B")  # business days
-    sector_dfs = []
+    sector_frames = []
+
     for sector, tickers in mapping.items():
-        df = fetch_market_caps(tickers, start.isoformat(), end.isoformat())
-        total = df.reindex(dates).sum(axis=1).rename(sector)
-        sector_dfs.append(total)
-    return pd.concat(sector_dfs, axis=1)
+        df = fetch_market_caps(tickers, start, end)
+        # Sum across tickers for each date, reindex to include missing business days
+        totals = df.reindex(dates).sum(axis=1).rename(sector)
+        sector_frames.append(totals)
+
+    history = pd.concat(sector_frames, axis=1)
+    return history
+
 
 if __name__ == "__main__":
+    # Calculate the date range: last 365 calendar days up to yesterday
     from datetime import date, timedelta
 
-    # Define your period (last 365 days)
     end = date.today() - timedelta(days=1)
     start = end - timedelta(days=365)
 
-    # Make sure paths are relative to this script
+    # Ensure script runs from its containing folder
     os.chdir(os.path.dirname(__file__))
 
+    # Load mapping, build history, and write to Parquet
     mapping = load_mapping()
-    history = build_sector_history(mapping, start, end)
-    history.to_parquet("data/sector_history.parquet")
-    print("✔ Wrote updated sector_history.parquet")
+    sector_history = build_sector_history(mapping, start.isoformat(), end.isoformat())
+    sector_history.to_parquet(OUTPUT_PATH)
+
+    print(f"✔ Wrote updated sector_history.parquet at {OUTPUT_PATH}")
+
