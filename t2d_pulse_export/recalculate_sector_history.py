@@ -16,27 +16,42 @@ import os
 
 API_KEY = os.environ["POLYGON_API_KEY"]
 
+from polygon import RESTClient
+import pandas as pd
+import os
+
+API_KEY = os.environ["POLYGON_API_KEY"]
+
 def fetch_market_caps(tickers, start, end):
-    """Fetch daily market‐cap estimates (close × volume) for each ticker."""
+    """Fetch daily market-cap estimates (close × volume) for each ticker."""
     client = RESTClient(API_KEY)
     all_data = {}
 
     for symbol in tickers:
-        # Positional args: ticker, multiplier, timespan, _from, to
-        bars = client.get_aggs(
-            symbol,   # ticker
-            1,        # multiplier
-            "day",    # timespan
-            start,    # from-date
-            end       # to-date
-        )
+        # Get the raw bars
+        bars = client.get_aggs(symbol, 1, "day", start, end)
 
-        df = pd.DataFrame(bars)
+        # Build a list of dicts with only t, c, v
+        records = []
+        for bar in bars:
+            # bar may be a namedtuple or dict
+            t = getattr(bar, "t", None) or bar.get("t")
+            c = getattr(bar, "c", None) or bar.get("c")
+            v = getattr(bar, "v", None) or bar.get("v")
+            if t is None or c is None or v is None:
+                continue
+            records.append({"t": t, "c": c, "v": v})
+
+        # Create DataFrame from those records
+        df = pd.DataFrame.from_records(records)
         if df.empty:
             continue
 
+        # Convert ms-epoch → date
         df["date"] = pd.to_datetime(df["t"], unit="ms").dt.date
         df.set_index("date", inplace=True)
+
+        # Approximate market cap = close price × volume
         all_data[symbol] = df["c"] * df["v"]
 
     return pd.DataFrame(all_data)
