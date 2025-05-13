@@ -89,25 +89,37 @@ except Exception as e:
 
 # Get the authentic T2D Pulse score
 def get_authentic_pulse_score():
-    """Get the most recent authentic T2D Pulse score calculated from sector data"""
+    """Get the most recent authentic T2D Pulse score as a single float."""
     try:
-        # Use the data_reader's optimized implementation with explicit filename
         pulse_history_file = os.path.join("data", "t2d_pulse_history.csv")
-        score = read_pulse_score(pulse_history_file)
-        if score is not None:
-            logger.info(f"Successfully read authentic pulse score: {score}")
-            return score
+        result = read_pulse_score(pulse_history_file)
 
-        # Fall back to original method if data_reader fails
-        logger.debug("Falling back to direct file reading for pulse score")
-        with open(os.path.join("data", "current_pulse_score.txt"), "r") as f:
-            score = float(f.read().strip())
-            logger.info(f"Successfully read authentic pulse score via fallback: {score}")
-            return score
+        # If result is a DataFrame or Series, grab its last numeric value
+        if hasattr(result, "iloc"):
+            last_row = result.iloc[-1]
+            # If that row is itself iterable, take its first element
+            if hasattr(last_row, "__len__") and not isinstance(last_row, (int, float)):
+                last_row = last_row.iloc[0]
+            score = float(last_row)
+        else:
+            # Single value case
+            score = float(result)
+
+        logger.info(f"Successfully read authentic pulse score: {score}")
+        return score
 
     except Exception as e:
         logger.error(f"Error reading authentic pulse score: {e}")
-        return None
+        # Fallback to the text file if CSV-based reader fails
+        try:
+            with open(os.path.join("data", "current_pulse_score.txt"), "r") as f:
+                score = float(f.read().strip())
+                logger.info(f"Fallback pulse score via text: {score}")
+                return score
+        except Exception as e2:
+            logger.error(f"Error reading fallback pulse score: {e2}")
+            return None
+
         if score is not None:
             logger.info(f"Successfully read authentic pulse score: {score}")
             return score
