@@ -63,28 +63,23 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 # Global data caching for expensive operations
-# Load T2D Pulse history once at startup
+# Load the T2D Pulse history from Parquet only
 T2D_PULSE_HISTORY = None
 try:
-    history_file = "data/t2d_pulse_history.csv"
-    parquet_history_file = "data/t2d_pulse_history.parquet"
-    
-    if os.path.exists(parquet_history_file):
-        logger.info(f"Loading T2D Pulse history from Parquet file: {parquet_history_file}")
-        T2D_PULSE_HISTORY = pd.read_parquet(parquet_history_file)
-    elif os.path.exists(history_file):
-        logger.info(f"Loading T2D Pulse history from CSV file: {history_file}")
-        T2D_PULSE_HISTORY = pd.read_csv(history_file)
-        
-    if T2D_PULSE_HISTORY is not None:
-        # Ensure date column is properly formatted
-        if 'date' in T2D_PULSE_HISTORY.columns:
-            T2D_PULSE_HISTORY['date'] = pd.to_datetime(T2D_PULSE_HISTORY['date'])
-            logger.info(f"Successfully loaded T2D Pulse history with {len(T2D_PULSE_HISTORY)} records")
-        else:
-            logger.warning("T2D Pulse history missing date column")
+    parquet_history_file = os.path.join("data", "t2d_pulse_history.parquet")
+    logger.info(f"Loading T2D Pulse history from Parquet: {parquet_history_file}")
+    T2D_PULSE_HISTORY = pd.read_parquet(parquet_history_file)
+
+    # Ensure date column is properly formatted
+    if "date" in T2D_PULSE_HISTORY.columns:
+        T2D_PULSE_HISTORY["date"] = pd.to_datetime(T2D_PULSE_HISTORY["date"])
+    else:
+        logger.warning("T2D Pulse history missing 'date' column")
+
+    logger.info(f"Successfully loaded T2D Pulse history with {len(T2D_PULSE_HISTORY)} records")
+
 except Exception as e:
-    logger.error(f"Error loading T2D Pulse history: {e}")
+    logger.error(f"Error loading T2D Pulse history from Parquet: {e}")
     T2D_PULSE_HISTORY = None
 
 # Get the authentic T2D Pulse score
