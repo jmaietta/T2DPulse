@@ -1,116 +1,123 @@
 import os
 import json
+import logging
+from datetime import date, timedelta
+
 import pandas as pd
 from polygon import RESTClient
-import logging
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-# Configuration
-try:
-    API_KEY = os.environ["POLYGON_API_KEY"]
-except KeyError:
-    logger.error("POLYGON_API_KEY is not set in environment variables.")
-    API_KEY = None
+# Paths and configuration
+data_dir = os.path.join(os.path.dirname(__file__), "data")
+mapping_file = os.path.join(data_dir, "sector_ticker_mapping.json")
+output_file = os.path.join(data_dir, "sector_history.parquet")
+API_KEY = os.getenv("POLYGON_API_KEY")
 
-DATA_DIR = os.path.join(os.path.dirname(__file__), "data")
-MAPPING_FILE = os.path.join(DATA_DIR, "sector_ticker_mapping.json")
-OUTPUT_PATH = os.path.join(DATA_DIR, "sector_history.parquet")
+# Date range for 30 trading days (approx. 45 calendar days back)
+end_date = date.today() - timedelta(days=1)
+start_date = end_date - timedelta(days=45)
 
 
-def load_mapping(path=MAPPING_FILE):
+def load_mapping(path=mapping_file):
     """
-    Load the sector-to-ticker mapping from a JSON file.
-    JSON shape: {"Sector Name": ["TICKER1", ...], ...}
+    Load sector-to-ticker mapping from JSON.
+    Returns dict: {sector: [tickers]}
     """
     logger.info(f"Loading sector mapping from {path}")
-    with open(path, "r") as f:
+    with open(path, 'r') as f:
         mapping = json.load(f)
     logger.info(f"Loaded mapping for {len(mapping)} sectors")
     return mapping
 
 
-def fetch_market_caps(tickers, start, end):
+def fetch_ticker_market_cap(symbol, start, end):
     """
-    Fetch daily market-cap estimates directly from Polygon's ticker details.
-    Uses the 'market_cap' field from Polygon's reference endpoint for each symbol.
-    Since historical market_cap isn't provided, this will use the latest market cap
-    for all dates in the range (or you can fetch snapshots per date if available).
-    Returns a DataFrame indexed by date with tickers as columns and constant market cap values.
+    Fetch daily market cap for a single ticker over the date range.
+    Market cap = closing price × fully diluted shares outstanding.
+    Returns a Series indexed by date.
     """
     client = RESTClient(API_KEY)
-    all_series = {}
+    # 1) Fetch outstanding shares
+    try:
+        details = client.reference_ticker_details(symbol)
+        shares = (getattr(details, 'share_class_shares_outstanding', None)
+                  or getattr(details, 'outstanding_shares', None))
+        if not shares:
+            logger.warning(f"No share count for {symbol}")
+            return pd.Series(dtype=float)
+    except Exception as e:
+        logger.error(f"Error fetching share count for {symbol}: {e}")
+        return pd.Series(dtype=float)
 
-    # Determine business-day dates
-    dates = pd.date_range(start, end, freq="B").date
+    # 2) Fetch daily close prices
+    try:
+        bars = client.get_aggs(symbol, 1, 'day', start.isoformat(), end.isoformat())
+    except Exception as e:
+        logger.error(f"Error fetching price bars for {symbol}: {e}")
+        return pd.Series(dtype=float)
+    if not bars:
+        logger.warning(f"No price data for {symbol}")
+        return pd.Series(dtype=float)
 
-    for symbol in tickers:
-        # Fetch ticker overview with market cap
-        try:
-            details = client.reference_ticker_details(symbol)
-            market_cap_val = getattr(details, "market_cap", None)
-            if market_cap_val is None:
-                logger.warning(f"No 'market_cap' field for {symbol}; skipping")
-                continue
-        except Exception as e:
-            logger.warning(f"Failed to fetch ticker overview for {symbol}: {e}")
-            continue
+    records = []
+    for bar in bars:
+        dt = pd.to_datetime(bar.t, unit='ms').date()
+        price = bar.c
+        records.append((dt, price * shares))
 
-        # Create a constant series over the date range
-        series = pd.Series(market_cap_val, index=dates, name=symbol)
-        all_series[symbol] = series
-        logger.info(f"Loaded market cap for {symbol}: {market_cap_val}")
+    if not records:
+        return pd.Series(dtype=float)
 
-    if not all_series:
-        logger.error("No market cap series collected; cannot build history.")
-        return pd.DataFrame()
-
-    return pd.DataFrame(all_series)(all_series)
+    s = pd.Series({dt: mc for dt, mc in records})
+    s.index = pd.to_datetime(s.index)
+    return s.sort_index()
 
 
 def build_sector_history(mapping, start, end):
     """
-    Build a DataFrame of daily sector market caps over business days
-    by summing individual ticker market caps.
-    Returns DataFrame indexed by date with sectors as columns.
+    Build a DataFrame of sector market caps over trading days.
+    Sums individual ticker market caps per date.
     """
-    dates = pd.date_range(start, end, freq="B")
-    sector_frames = []
+    logger.info(f"Building sector history from {start} to {end}")
+    # Determine business days in range
+    dates = pd.date_range(start, end, freq='B')
+    frames = []
 
     for sector, tickers in mapping.items():
-        logger.info(f"Building history for sector '{sector}' with {len(tickers)} tickers")
-        df = fetch_market_caps(tickers, start, end)
-        if df.empty:
-            logger.warning(f"Empty market cap data for sector '{sector}'")
+        logger.info(f"Processing sector '{sector}' with {len(tickers)} tickers")
+        ticker_caps = []
+        for sym in tickers:
+            series = fetch_ticker_market_cap(sym, start, end)
+            if not series.empty:
+                ticker_caps.append(series)
+        if not ticker_caps:
+            logger.warning(f"No data for sector '{sector}'")
             continue
-        totals = df.reindex(dates).sum(axis=1).rename(sector)
-        sector_frames.append(totals)
+        df_t = pd.concat(ticker_caps, axis=1)
+        df_t = df_t.reindex(dates).fillna(method='ffill').fillna(0)
+        sector_total = df_t.sum(axis=1).rename(sector)
+        frames.append(sector_total)
 
-    if not sector_frames:
-        logger.error("No sector data frames created; nothing to merge")
+    if not frames:
+        logger.error("No sector frames; nothing to write")
         return pd.DataFrame()
 
-    history = pd.concat(sector_frames, axis=1)
+    history = pd.concat(frames, axis=1)
     return history
 
 
-if __name__ == "__main__":
-    from datetime import date, timedelta
-
-    # Define the 30-day business window ending yesterday
-    end = date.today() - timedelta(days=1)
-    start = end - timedelta(days=45)
-
+if __name__ == '__main__':
     # Ensure working directory
     os.chdir(os.path.dirname(__file__))
 
-    # Execute rebuild
     mapping = load_mapping()
-    sector_history = build_sector_history(mapping, start.isoformat(), end.isoformat())
-    if not sector_history.empty:
-        sector_history.to_parquet(OUTPUT_PATH)
-        logger.info(f"Wrote updated sector_history.parquet at {OUTPUT_PATH}")
+    history = build_sector_history(mapping, start_date, end_date)
+
+    if history.empty:
+        logger.error("Sector history is empty; aborting write")
     else:
-        logger.error("sector_history DataFrame is empty; aborted write")
+        history.to_parquet(output_file)
+        logger.info(f"Wrote sector history to {output_file}")
