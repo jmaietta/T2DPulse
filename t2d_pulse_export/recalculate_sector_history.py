@@ -34,57 +34,40 @@ def load_mapping(path=MAPPING_FILE):
 
 def fetch_market_caps(tickers, start, end):
     """
-    Fetch daily market-cap for each ticker (close price × fully diluted shares).
-    Uses Polygon's ticker details to get outstanding shares, then daily aggregates for price.
-    Returns a DataFrame indexed by date, columns=tickers with market cap values.
+    Fetch daily market-cap estimates directly from Polygon's ticker details.
+    Uses the 'market_cap' field from Polygon's reference endpoint for each symbol.
+    Since historical market_cap isn't provided, this will use the latest market cap
+    for all dates in the range (or you can fetch snapshots per date if available).
+    Returns a DataFrame indexed by date with tickers as columns and constant market cap values.
     """
     client = RESTClient(API_KEY)
     all_series = {}
 
+    # Determine business-day dates
+    dates = pd.date_range(start, end, freq="B").date
+
     for symbol in tickers:
-        # Get share count
+        # Fetch ticker overview with market cap
         try:
             details = client.reference_ticker_details(symbol)
-            shares_outstanding = getattr(details, 'share_class_shares_outstanding', None) or getattr(details, 'outstanding_shares', None)
-            if not shares_outstanding:
-                logger.warning(f"No outstanding shares data for {symbol}; skipping")
+            market_cap_val = getattr(details, "market_cap", None)
+            if market_cap_val is None:
+                logger.warning(f"No 'market_cap' field for {symbol}; skipping")
                 continue
         except Exception as e:
-            logger.warning(f"Failed to fetch ticker details for {symbol}: {e}")
+            logger.warning(f"Failed to fetch ticker overview for {symbol}: {e}")
             continue
 
-        # Fetch daily price aggregates
-        try:
-            bars = client.get_aggs(symbol, 1, "day", start, end)
-        except Exception as e:
-            logger.warning(f"API error fetching aggregates for {symbol}: {e}")
-            continue
-        if not bars:
-            logger.warning(f"No aggregate data for {symbol}")
-            continue
-
-        records = []
-        for bar in bars:
-            price = getattr(bar, 'c', None)
-            ts = getattr(bar, 't', None)
-            if price is None or ts is None:
-                continue
-            date = pd.to_datetime(ts, unit='ms').date()
-            records.append({'date': date, 'price': price})
-
-        if not records:
-            logger.warning(f"No valid price records for {symbol}")
-            continue
-
-        df = pd.DataFrame(records).set_index('date')
-        # Calculate market cap
-        df['market_cap'] = df['price'] * shares_outstanding
-        all_series[symbol] = df['market_cap']
-        logger.info(f"Processed {len(df)} days for {symbol}")
+        # Create a constant series over the date range
+        series = pd.Series(market_cap_val, index=dates, name=symbol)
+        all_series[symbol] = series
+        logger.info(f"Loaded market cap for {symbol}: {market_cap_val}")
 
     if not all_series:
-        logger.error("No market cap series collected for any tickers")
-    return pd.DataFrame(all_series)
+        logger.error("No market cap series collected; cannot build history.")
+        return pd.DataFrame()
+
+    return pd.DataFrame(all_series)(all_series)
 
 
 def build_sector_history(mapping, start, end):
