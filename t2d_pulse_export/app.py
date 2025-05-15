@@ -63,24 +63,22 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 # Global data caching for expensive operations
-# Load the T2D Pulse history from Parquet only
+# Load T2D Pulse history exclusively from Parquet
 T2D_PULSE_HISTORY = None
 try:
-    parquet_history_file = os.path.join("data", "t2d_pulse_history.parquet")
-    logger.info(f"Loading T2D Pulse history from Parquet: {parquet_history_file}")
-    T2D_PULSE_HISTORY = pd.read_parquet(parquet_history_file)
+    parquet_file = os.path.join("data", "t2d_pulse_history.parquet")
+    logger.info(f"Loading T2D Pulse history from Parquet: {parquet_file}")
+    T2D_PULSE_HISTORY = pd.read_parquet(parquet_file)
 
-    # Ensure date column is properly formatted
+    # Ensure we have a proper datetime index
     if "date" in T2D_PULSE_HISTORY.columns:
         T2D_PULSE_HISTORY["date"] = pd.to_datetime(T2D_PULSE_HISTORY["date"])
-    else:
-        logger.warning("T2D Pulse history missing 'date' column")
-
-    logger.info(f"Successfully loaded T2D Pulse history with {len(T2D_PULSE_HISTORY)} records")
+        T2D_PULSE_HISTORY.set_index("date", inplace=True)
+    logger.info(f"Loaded {len(T2D_PULSE_HISTORY)} records of Pulse history")
 
 except Exception as e:
-    logger.error(f"Error loading T2D Pulse history from Parquet: {e}")
-    T2D_PULSE_HISTORY = None
+    logger.error(f"Failed to load T2D Pulse history from Parquet: {e}")
+    T2D_PULSE_HISTORY = pd.DataFrame()
 
 # Get the authentic T2D Pulse score
 def get_authentic_pulse_score():
