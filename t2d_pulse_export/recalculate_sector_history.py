@@ -20,8 +20,8 @@ def load_mapping(path=MAPPING_FILE):
     Load sector-to-ticker mapping from JSON file.
     Returns dict: {sector: [ticker symbols]}
     """
-    with open(path, 'r') as f:
-        return pd.read_json(f, typ='series').to_dict()
+    mapping = pd.read_json(path, typ='series').to_dict()
+    return mapping
 
 
 def fetch_market_caps(tickers, start, end):
@@ -34,19 +34,24 @@ def fetch_market_caps(tickers, start, end):
     for symbol in tickers:
         try:
             bars = client.get_aggs(symbol, 1, 'day', start.isoformat(), end.isoformat())
-        except Exception:
+        except Exception as e:
+            print(f"Error fetching bars for {symbol}: {e}")
             continue
         records = []
         for bar in bars:
-            if bar.c is None or bar.v is None:
+            # Polygon Agg object may have 'c'/'v' or 'close'/'volume'
+            close = getattr(bar, 'c', getattr(bar, 'close', None))
+            volume = getattr(bar, 'v', getattr(bar, 'volume', None))
+            timestamp = getattr(bar, 't', getattr(bar, 'timestamp', None))
+            if close is None or volume is None or timestamp is None:
                 continue
-            date_idx = pd.to_datetime(bar.t, unit='ms').date()
-            records.append((date_idx, bar.c * bar.v))
+            date_idx = pd.to_datetime(timestamp, unit='ms').date()
+            records.append((date_idx, close * volume))
         if not records:
             continue
-        ser = pd.Series({dt: cap for dt, cap in records})
-        ser.index = pd.to_datetime(ser.index)
-        all_caps[symbol] = ser
+        series = pd.Series({dt: cap for dt, cap in records})
+        series.index = pd.to_datetime(series.index)
+        all_caps[symbol] = series
     return pd.DataFrame(all_caps)
 
 
@@ -60,10 +65,11 @@ def build_sector_history(mapping, start, end):
     for sector, tickers in mapping.items():
         df = fetch_market_caps(tickers, start, end)
         if df.empty:
+            print(f"No data for sector '{sector}'")
             continue
         df = df.reindex(dates).fillna(method='ffill').fillna(0)
-        sector_totals = df.sum(axis=1).rename(sector)
-        sector_frames.append(sector_totals)
+        totals = df.sum(axis=1).rename(sector)
+        sector_frames.append(totals)
     if not sector_frames:
         raise RuntimeError("No sector data generated")
     history = pd.concat(sector_frames, axis=1)
