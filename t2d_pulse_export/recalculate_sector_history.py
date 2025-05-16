@@ -42,7 +42,8 @@ def fetch_ticker_market_cap(symbol, start, end):
     """
     client = RESTClient(API_KEY)
     try:
-        details = client.reference_ticker_details(symbol)
+        # Polygon Python client uses reference_ticker() for ticker details
+details = client.reference_ticker(symbol)
         shares = getattr(details, 'share_class_shares_outstanding', None) \
                  or getattr(details, 'outstanding_shares', None)
         if not shares:
