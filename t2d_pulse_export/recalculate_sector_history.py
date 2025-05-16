@@ -41,7 +41,6 @@ def fetch_ticker_market_cap(symbol, start, end):
     Returns a pandas Series indexed by date.
     """
     client = RESTClient(API_KEY)
-    # Fetch share count
     try:
         details = client.reference_ticker_details(symbol)
         shares = getattr(details, 'share_class_shares_outstanding', None) \
@@ -53,7 +52,6 @@ def fetch_ticker_market_cap(symbol, start, end):
         logger.error(f"Error fetching details for {symbol}: {e}")
         return pd.Series(dtype=float)
 
-    # Fetch daily aggregates
     try:
         bars = client.get_aggs(symbol, 1, 'day', start.isoformat(), end.isoformat())
     except Exception as e:
@@ -63,16 +61,14 @@ def fetch_ticker_market_cap(symbol, start, end):
         logger.warning(f"No price bars for {symbol}")
         return pd.Series(dtype=float)
 
-    # Build series of market caps
-    records = []
+    data = []
     for bar in bars:
         dt = pd.to_datetime(bar.t, unit='ms').date()
-        mc = bar.c * shares
-        records.append((dt, mc))
-    if not records:
+        data.append((dt, bar.c * shares))
+    if not data:
         return pd.Series(dtype=float)
 
-    series = pd.Series({dt: mc for dt, mc in records})
+    series = pd.Series({dt: mc for dt, mc in data})
     series.index = pd.to_datetime(series.index)
     return series.sort_index()
 
@@ -87,34 +83,24 @@ def build_sector_history(mapping, start, end):
 
     for sector, tickers in mapping.items():
         logger.info(f"Building history for sector '{sector}'")
-        series_list = []
+        frames = []
         for ticker in tickers:
             s = fetch_ticker_market_cap(ticker, start, end)
             if not s.empty:
-                # Reindex each series to fill missing dates
                 s = s.reindex(dates).fillna(method='ffill').fillna(0)
-                series_list.append(s)
-        if not series_list:
+                frames.append(s)
+        if frames:
+            df = pd.concat(frames, axis=1)
+            sector_data.append(df.sum(axis=1).rename(sector))
+        else:
             logger.warning(f"No data for sector '{sector}'")
-            continue
-        df = pd.concat(series_list, axis=1)
-        total = df.sum(axis=1).rename(sector)
-        sector_data.append(total)
 
     if not sector_data:
         logger.error("No sector data available; aborting.")
         return pd.DataFrame()
 
     history = pd.concat(sector_data, axis=1)
-            # Debug: log a data sample for inspection
-    try:
-        sample = history.head().to_string()
-        logger.info("Sector history sample (first 5 rows):
-%s", sample)
-    except Exception as e:
-        logger.error(f"Failed to log history sample: {e}")
-
-    history.to_parquet(OUTPUT_FILE)(OUTPUT_FILE)
+    history.to_parquet(OUTPUT_FILE)
     logger.info(f"Wrote updated sector history to {OUTPUT_FILE}")
     return history
 
