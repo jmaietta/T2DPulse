@@ -41,11 +41,11 @@ def fetch_ticker_market_cap(symbol, start, end):
     Returns a pandas Series indexed by date.
     """
     client = RESTClient(API_KEY)
+    # 1) Get share count
     try:
         # Polygon Python client uses reference_ticker() for ticker details
-details = client.reference_ticker(symbol)
-        shares = getattr(details, 'share_class_shares_outstanding', None) \
-                 or getattr(details, 'outstanding_shares', None)
+        details = client.reference_ticker(symbol)
+        shares = getattr(details, 'share_class_shares_outstanding', None) or getattr(details, 'outstanding_shares', None)
         if not shares:
             logger.warning(f"No share count for {symbol}")
             return pd.Series(dtype=float)
@@ -53,6 +53,7 @@ details = client.reference_ticker(symbol)
         logger.error(f"Error fetching details for {symbol}: {e}")
         return pd.Series(dtype=float)
 
+    # 2) Get daily price bars
     try:
         bars = client.get_aggs(symbol, 1, 'day', start.isoformat(), end.isoformat())
     except Exception as e:
@@ -62,14 +63,17 @@ details = client.reference_ticker(symbol)
         logger.warning(f"No price bars for {symbol}")
         return pd.Series(dtype=float)
 
-    data = []
+    # 3) Build market cap series
+    records = []
     for bar in bars:
         dt = pd.to_datetime(bar.t, unit='ms').date()
-        data.append((dt, bar.c * shares))
-    if not data:
+        if bar.c is None:
+            continue
+        records.append((dt, bar.c * shares))
+    if not records:
         return pd.Series(dtype=float)
 
-    series = pd.Series({dt: mc for dt, mc in data})
+    series = pd.Series({dt: mc for dt, mc in records})
     series.index = pd.to_datetime(series.index)
     return series.sort_index()
 
