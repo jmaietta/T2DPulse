@@ -106,18 +106,14 @@ def build_sector_history(mapping, start, end):
         return pd.DataFrame()
 
     history = pd.concat(sector_data, axis=1)
-    # Debug: log a data sample for inspection
+        # Debug: log a data sample for inspection
     try:
+        sample = history.head().to_string()
         logger.info("Sector history sample (first 5 rows):
-%s", history.head().to_string())
+%s", sample)
     except Exception as e:
         logger.error(f"Failed to log history sample: {e}")
-    # Debug: log a data sample for inspection
-    try:
-        logger.info("Sector history sample (first 5 rows):
-%s", history.head().to_string())
-    except Exception as e:
-        logger.error(f"Failed to log history sample: {e}")
+
     history.to_parquet(OUTPUT_FILE)
     logger.info(f"Wrote updated sector history to {OUTPUT_FILE}")
     return history
