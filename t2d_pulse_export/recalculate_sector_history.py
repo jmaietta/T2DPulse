@@ -111,3 +111,11 @@ if __name__ == '__main__':
     history = build_sector_history(mapping, START_DATE, END_DATE)
     if history.empty:
         logger.error("Sector history DataFrame is empty; no file written.")
+    else:
+        # For diagnostic: print a sample of the generated history
+        print("
+=== Sector History Sample ===")
+        print(history.head().to_string())
+        print("=== End Sample ===
+")
+        logger.error("Sector history DataFrame is empty; no file written.")
