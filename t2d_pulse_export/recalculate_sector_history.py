@@ -113,9 +113,6 @@ if __name__ == '__main__':
         logger.error("Sector history DataFrame is empty; no file written.")
     else:
         # For diagnostic: print a sample of the generated history
-        print("
-=== Sector History Sample ===")
+        print("=== Sector History Sample ===")
         print(history.head().to_string())
-        print("=== End Sample ===
-")
-        logger.error("Sector history DataFrame is empty; no file written.")
+        print("=== End Sample ===")
