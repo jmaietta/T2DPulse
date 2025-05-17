@@ -28,7 +28,7 @@ logging.basicConfig(
 
 # ───────────────────────  LOAD STATIC DATA  ─────────────────── #
 
-client = RESTClient(API_KEY, timeout=30)
+client = RESTClient(API_KEY)
 
 with open(SHARES_FILE, "r") as f:
     SHARES = json.load(f)                     # {ticker: floats}
