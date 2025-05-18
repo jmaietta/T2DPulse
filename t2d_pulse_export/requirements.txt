@@ -27,3 +27,4 @@ twilio
 yfinance
 psycopg2-binary
 polygon-api-client>=1.14.5
+SQLAlchemy==2.0.*
