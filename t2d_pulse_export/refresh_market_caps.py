@@ -101,7 +101,6 @@ TICKERS = [
     ("SAP",   "Enterprise SaaS"),
     ("WDAY",  "Enterprise SaaS"),
 
-    ("AMZN",  "eCommerce"),
     ("BABA",  "eCommerce"),
     ("BKNG",  "eCommerce"),
     ("CHWY",  "eCommerce"),
@@ -119,16 +118,12 @@ TICKERS = [
     ("TEAM",  "Dev Tools Analytics"),
 
     ("ADBE",  "SMB SaaS"),
-    ("BILL",  "SMB SaaS"),
     ("GOOGL", "SMB SaaS"),
     ("HUBS",  "SMB SaaS"),
     ("INTU",  "SMB SaaS"),
     ("META",  "SMB SaaS"),
 
     ("ABNB",  "Consumer Internet"),
-    ("BKNG",  "Consumer Internet"),
-    ("GOOGL", "Consumer Internet"),
-    ("META",  "Consumer Internet"),
     ("NFLX",  "Consumer Internet"),
     ("PINS",  "Consumer Internet"),
     ("SNAP",  "Consumer Internet"),
@@ -137,10 +132,7 @@ TICKERS = [
     ("YELP",  "Consumer Internet"),
 
     ("AMZN",  "AI Infrastructure"),
-    ("GOOGL", "AI Infrastructure"),
     ("IBM",   "AI Infrastructure"),
-    ("META",  "AI Infrastructure"),
-    ("MSFT",  "AI Infrastructure"),
     ("NVDA",  "AI Infrastructure"),
     ("ORCL",  "AI Infrastructure"),
 ]
@@ -193,7 +185,8 @@ def main(days_back: int = 30):
         df["ticker"] = ticker
         df["sector"] = sector
         df["shares_outstanding"] = scount
-        df["market_cap"] = df["close_price"].to_numpy() * df["shares_outstanding"].to_numpy()
+        # Correct 1D multiplication of close_price and shares_outstanding
+        df["market_cap"] = df["close_price"] * df["shares_outstanding"]
 
         rows.append(df[["date", "ticker", "sector", "close_price", "shares_outstanding", "market_cap"]])
 
