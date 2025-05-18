@@ -1,76 +1,94 @@
-#!/usr/bin/env python3
-"""
-Fetch current shares outstanding for each tracked ticker
-and regenerate t2d_pulse_export/data/shares.json
-
-Usage:
-    python t2d_pulse_export/maintenance/refresh_shares_json.py
-"""
-
-from __future__ import annotations
-
-import json, os, time, requests, pathlib, sys
-from typing import Dict, List, Optional
-
-FINNHUB_KEY = os.getenv("FINNHUB_API_KEY")
-if not FINNHUB_KEY:
-    sys.exit("❌  FINNHUB_API_KEY not set")
-
-# ----------------------------------------------------------------------
-# 1) Where to save the JSON
-JSON_PATH = pathlib.Path("t2d_pulse_export/data/shares.json")
-
-# 2) Where to read the tickers
-TICKER_FILE = pathlib.Path("t2d_pulse_export/data/tickers.txt")
-if not TICKER_FILE.exists():
-    sys.exit("❌  ticker list missing → t2d_pulse_export/data/tickers.txt")
-
-TICKERS: List[str] = [t.strip().upper() for t in TICKER_FILE.read_text().splitlines() if t.strip()]
-if not TICKERS:
-    sys.exit("❌  ticker list was empty")
-
-# ----------------------------------------------------------------------
-def fetch_shares_finnhub(ticker: str) -> Optional[int]:
-    """Return shares outstanding in **millions**, rounded, or None if not found."""
-    url = "https://finnhub.io/api/v1/stock/metric"
-    params = {"symbol": ticker, "metric": "company", "token": FINNHUB_KEY}
-    try:
-        r = requests.get(url, params=params, timeout=10)
-        r.raise_for_status()
-        shares = r.json()["metric"].get("sharesOutstanding")
-        if shares:
-            return round(shares / 1_000_000)  # keep same unit as legacy file
-    except (requests.RequestException, ValueError, KeyError):
-        pass
-    return None
-
-def main() -> None:
-    new_data: Dict[str, int] = {}
-    missing: List[str] = []
-
-    for i, tkr in enumerate(TICKERS, 1):
-        so = fetch_shares_finnhub(tkr)
-        if so is None:
-            missing.append(tkr)
-        else:
-            new_data[tkr] = so
-
-        # Finnhub free tier → 60 calls/min → small sleep
-        time.sleep(0.25)
-
-        # tiny heartbeat in CI logs
-        if i % 20 == 0:
-            print(f"…{i}/{len(TICKERS)} tickers fetched")
-
-    if missing:
-        raise RuntimeError(
-            f"Did not get share counts for: {', '.join(missing)}"
-        )
-
-    # write prettified JSON
-    JSON_PATH.parent.mkdir(parents=True, exist_ok=True)
-    JSON_PATH.write_text(json.dumps(new_data, indent=2))
-    print(f"✅  Wrote {len(new_data)} tickers to {JSON_PATH}")
-
-if __name__ == "__main__":
-    main()
+{
+  "AAPL": 15,700.00,
+  "ABNB":  431.00,
+  "ACN" :  632.00,
+  "ADBE":  454.00,
+  "ADSK":  214.00,
+  "AFRM":  294.00,
+  "AMAT":  846.00,
+  "AMD" : 1,613.00,
+  "AMZN": 10,295.00,
+  "APP" :  371.00,
+  "APPS":   95.00,
+  "ARM" : 1,031.00,
+  "AVGO": 1,051.00,
+  "BABA": 2,543.00,
+  "BILL":  132.00,
+  "BKNG":   37.00,
+  "CCCS":  668.00,
+  "CHKP":  123.00,
+  "CHWY":  427.00,
+  "COIN":  487.00,
+  "CPRT":  960.00,
+  "CRM" : 1,017.00,
+  "CRTO":   61.00,
+  "CRWD":  239.00,
+  "CSCO": 4,088.00,
+  "CSGP":  410.00,
+  "CTSH":  510.00,
+  "CYBR":   49.00,
+  "DDOG":  330.00,
+  "DELL":  734.00,
+  "DV"  :  137.00,
+  "DXC" :  206.00,
+  "EBAY": 1,002.00,
+  "ESTC":  100.00,
+  "ETSY":  122.00,
+  "FI"  :  981.00,
+  "FIS" : 1,485.00,
+  "FTNT":  789.00,
+  "GOOGL": 12,424.00,
+  "GPN" :  526.00,
+  "GTLB":  153.00,
+  "GWRE":   82.00,
+  "HPQ" : 1,001.00,
+  "HUBS":   50.00,
+  "IBM" :   915.00,
+  "ICE" :   574.00,
+  "INFY": 4,155.00,
+  "INTC": 4,252.00,
+  "INTU":  282.00,
+  "LOGI":  160.00,
+  "MDB" :  232.00,
+  "META": 2,561.00,
+  "MGNI":  140.00,
+  "MSFT": 7,441.00,
+  "NET" :  346.00,
+  "NFLX":  443.00,
+  "NOW" :  207.00,
+  "NVDA": 2,471.00,
+  "OKTA":  173.00,
+  "ORCL": 2,721.00,
+  "PANW": 1,014.00,
+  "PCOR":  168.00,
+  "PDD" : 1,302.00,
+  "PINS":  681.00,
+  "PLTR": 2,337.00,
+  "PSTG":  319.00,
+  "PUBM":   52.00,
+  "PYPL": 1,097.00,
+  "QCOM": 1,113.00,
+  "S"   :  305.00,
+  "SAP" : 1,225.00,
+  "SE"  :  561.00,
+  "SHOP": 1,154.00,
+  "SMCI":   57.00,
+  "SNAP": 1,660.00,
+  "SNOW":  340.00,
+  "SPOT":  194.00,
+  "SSNC":  260.00,
+  "SSYS":   69.00,
+  "STX" :  206.00,
+  "TEAM":  254.00,
+  "TRIP":  124.00,
+  "TSM" : 5,169.00,
+  "TTAN":   75.00,
+  "TTD" :  494.00,
+  "WDAY":  521.00,
+  "WDC" :  324.00,
+  "WIT" : 5,221.00,
+  "WMT" : 2,690.00,
+  "XYZ" :    635,
+  "YELP":   70.00,
+  "ZS"  :  156.00
+}
