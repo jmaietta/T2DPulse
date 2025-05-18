@@ -81,61 +81,33 @@ except Exception as e:
     T2D_PULSE_HISTORY = pd.DataFrame()
 
 # Get the authentic T2D Pulse score
-def get_authentic_pulse_score():
-        """Get the most recent authentic T2D Pulse score from Postgres."""
-    try:
-        # ------------------------------------------------------------------
-        # 1. pull today’s/most‑recent score from the pulse_history table
-        # ------------------------------------------------------------------
-        import sqlalchemy, os, pandas as pd
+def get_authentic_pulse_score() -> float | None:
+    """Return the latest T2D Pulse score from Postgres, or None if unavailable."""
+    import sqlalchemy, os, pandas as pd
 
+    try:
         engine = sqlalchemy.create_engine(os.getenv("DATABASE_URL"))
 
         df = pd.read_sql(
             """
-            SELECT date, pulse_score
+            SELECT pulse_score
             FROM   pulse_history
             ORDER  BY date DESC
             LIMIT  1
             """,
-            engine,
-            parse_dates=["date"]
+            engine
         )
 
         if df.empty:
-            raise ValueError("pulse_history table is empty")
-
-        score = float(df["pulse_score"].iloc[0])
-        logger.info(f"Successfully read authentic pulse score: {score:.1f}")
-        return score
-
-    # ----------------------------------------------------------------------
-    # Fallback section – only used if the DB query fails
-    # ----------------------------------------------------------------------
-    except Exception as e:
-        logger.error(f"Error reading authentic pulse score from DB: {e}")
-
-        try:
-            with open(os.path.join("data", "current_pulse_score.txt"), "r") as f:
-                score = float(f.read().strip())
-                logger.info(f"Fallback pulse score via text: {score:.1f}")
-                return score
-        except Exception as e2:
-            logger.error(f"Error reading fallback pulse score: {e2}")
+            logger.warning("pulse_history table is empty – no Pulse score available.")
             return None
 
-        if score is not None:
-            logger.info(f"Successfully read authentic pulse score: {score}")
-            return score
-            
-        # Fall back to original method if data_reader fails
-        logger.debug("Falling back to direct file reading for pulse score")
-        with open("data/current_pulse_score.txt", "r") as f:
-            score = float(f.read().strip())
-            logger.info(f"Successfully read authentic pulse score via fallback: {score}")
-            return score
+        score = float(df.iloc[0, 0])
+        logger.info(f"Pulse score fetched from DB: {score:.1f}")
+        return score
+
     except Exception as e:
-        logger.error(f"Error reading authentic pulse score: {e}")
+        logger.error(f"Failed to read Pulse score from DB: {e}")
         return None
 
 # Consumer sentiment functions defined directly in app.py to avoid circular imports
