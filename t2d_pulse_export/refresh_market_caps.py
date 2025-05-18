@@ -186,6 +186,7 @@ def main(days_back: int = 30):
         df["sector"] = sector
         df["shares_outstanding"] = scount
         df["market_cap"] = df.apply(lambda r: r["close_price"] * r["shares_outstanding"], axis=1)
+        rows.append(df[["date", "ticker", "sector", "close_price", "shares_outstanding", "market_cap"]])
 
     if not rows:
         print("❌ No market cap records to insert")
