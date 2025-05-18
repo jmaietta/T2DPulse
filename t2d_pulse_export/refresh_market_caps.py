@@ -3,7 +3,6 @@
 
 import os
 import datetime as dt
-
 import pandas as pd
 import yfinance as yf
 import finnhub
@@ -86,10 +85,7 @@ def share_count(ticker: str) -> int:
     shares = metric.get("shareOutstanding") or metric.get("sharesOutstanding")
     if not shares:
         t = yf.Ticker(ticker)
-        shares = (
-            t.fast_info.get("sharesOutstanding") or
-            t.info.get("sharesOutstanding") or 0
-        )
+        shares = (t.fast_info.get("sharesOutstanding") or t.info.get("sharesOutstanding") or 0)
     try:
         return int(shares)
     except Exception:
@@ -107,6 +103,7 @@ def main(days_back: int = 30):
 
     rows = []
     for ticker, sector in TICKERS:
+        # 1) Fetch price history
         df = yf.download(
             ticker,
             start=start_date.isoformat(),
@@ -118,16 +115,22 @@ def main(days_back: int = 30):
             print(f"⚠️ no price data for {ticker}")
             continue
 
+        # 2) Get share count and broadcast
         scount = share_count(ticker)
         df = df.reset_index().rename(columns={"Date": "date", "Close": "close_price"})
         df["ticker"] = ticker
         df["sector"] = sector
-        # Broadcast shares count to each row
         df["shares_outstanding"] = scount
-        # Compute market cap per row with vectorized multiplication
-        df["market_cap"] = df["close_price"].to_numpy() * scount
+
+        # 3) Compute market cap per row
+        df["market_cap"] = df.apply(
+            lambda r: r["close_price"] * r["shares_outstanding"], axis=1
+        )
+
+        # 4) Collect only the needed columns
         rows.append(df[["date", "ticker", "sector", "close_price", "shares_outstanding", "market_cap"]])
 
+    # 5) Insert into Postgres
     if not rows:
         print("❌ No market cap records to insert")
         return
