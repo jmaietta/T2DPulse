@@ -185,13 +185,10 @@ def main(days_back: int = 30):
         df["ticker"] = ticker
         df["sector"] = sector
         df["shares_outstanding"] = scount
-        # Correct 1D multiplication of close_price and shares_outstanding
-        df["market_cap"] = df["close_price"] * df["shares_outstanding"]
-
-        rows.append(df[["date", "ticker", "sector", "close_price", "shares_outstanding", "market_cap"]])
+        df["market_cap"] = df.apply(lambda r: r["close_price"] * r["shares_outstanding"], axis=1)
 
     if not rows:
-        print("❌ No data fetched; exiting.")
+        print("❌ No market cap records to insert")
         return
 
     all_data = pd.concat(rows)
