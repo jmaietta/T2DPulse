@@ -185,6 +185,7 @@ def main(days_back: int = 30):
         df["ticker"] = ticker
         df["sector"] = sector
         df["shares_outstanding"] = scount
+        # Compute market cap per row
         df["market_cap"] = df.apply(lambda r: r["close_price"] * r["shares_outstanding"], axis=1)
         rows.append(df[["date", "ticker", "sector", "close_price", "shares_outstanding", "market_cap"]])
 
