@@ -1,112 +1,171 @@
 #!/usr/bin/env python3
 """
-Rebuild sector‑level market‑cap history (30 business days) directly from Polygon.
-• uses a static shares‑outstanding file:  data/shares.json
-• writes ticker‑level prices  -> data/price_history.parquet
-• writes sector‑level caps    -> data/sector_history.parquet
+Rebuild the rolling 30‑day sector market‑cap history and save it to
+t2d_pulse_export/data/sector_history.parquet.
+
+Prereqs
+-------
+* POLYGON_API_KEY set in the environment (Render → Environment tab)
+* t2d_pulse_export/data/shares.json
+    • keys  : ticker symbols (upper‑case)
+    • values: *millions* of shares outstanding  (plain integers)
+* t2d_pulse_export/data/ticker_sector_map.json
+    • keys  : ticker symbols
+    • values: sector name (one of the 14 T2D Pulse sectors)
+
+The script:
+1. Builds a clean 30‑day window that never points “from” a date after “to”.
+2. Fetches adjusted daily close prices from Polygon.
+3. Multiplies price × shares_outstanding to get daily market‑cap.
+4. Sums market‑cap by sector for every day in the window.
+5. Writes the result to Parquet.
+
+If **any** ticker is missing a share count or sector mapping, or an API call
+fails, the script exits with a clear fatal error so CI fails fast.
 """
 
-import os, json, logging
-from datetime import date, timedelta
+from __future__ import annotations
+
+import json
+import logging
+import os
+import pathlib
+import sys
+from collections import defaultdict
+from datetime import date, datetime, timedelta
+from typing import Dict, List, Tuple
 
 import pandas as pd
 from polygon import RESTClient
 
-# ──────────────────────────  CONFIG  ────────────────────────── #
+# ---------------------------------------------------------------------------
+# Configuration paths
+ROOT = pathlib.Path(__file__).parent
+DATA_DIR = ROOT / "data"
 
-API_KEY = os.environ.get("POLYGON_API_KEY")
-SHARES_FILE = os.path.join("data", "shares.json")
-MAPPING_FILE = os.path.join("data", "sector_ticker_mapping.json")  # {sector: [tickers]}
-N_DAYS = 30                                   # business‑day window
-OUT_PRICE = os.path.join("data", "price_history.parquet")
-OUT_SECTOR = os.path.join("data", "sector_history.parquet")
+SHARES_JSON = DATA_DIR / "shares.json"               # millions of shares
+SECTOR_MAP_JSON = DATA_DIR / "ticker_sector_map.json"
+OUTPUT_PARQUET = DATA_DIR / "sector_history.parquet"
+WINDOW_DAYS = 30
 
+# ---------------------------------------------------------------------------
+# Logging
 logging.basicConfig(
     level=logging.INFO,
-    format="%(levelname)s | %(message)s",
+    format="%(asctime)s | %(levelname)7s | %(message)s",
+    datefmt="%H:%M:%S",
 )
+log = logging.getLogger("sector-history")
 
-# ───────────────────────  LOAD STATIC DATA  ─────────────────── #
+# ---------------------------------------------------------------------------
+# Date helpers
+def last_trading_day(ref: date) -> date:
+    """Return the most recent weekday ≤ `ref` (Fri if today is Sat/Sun)."""
+    while ref.weekday() >= 5:  # 5 = Sat, 6 = Sun
+        ref -= timedelta(days=1)
+    return ref
 
-client = RESTClient(API_KEY)
 
-with open(SHARES_FILE, "r") as f:
-    SHARES = json.load(f)                     # {ticker: floats}
+def price_window(days: int = WINDOW_DAYS) -> Tuple[str, str]:
+    """
+    Return (start_iso, end_iso) spanning the most recent *completed*
+    trading day and `days`‑1 calendar days before that, guaranteed start < end.
+    """
+    end_dt = last_trading_day(date.today() - timedelta(days=1))  # yesterday or Fri
+    start_dt = end_dt - timedelta(days=days - 1)
+    return start_dt.isoformat(), end_dt.isoformat()
 
-with open(MAPPING_FILE, "r") as f:
-    SECTOR_MAP = json.load(f)                 # {sector: [tickers]}
 
-end   = date.today() - timedelta(days=1)
-start = pd.bdate_range(end, periods=N_DAYS)[0].date()   # first of the 30 BD window
-start_iso, end_iso = start.isoformat(), end.isoformat()
+# ---------------------------------------------------------------------------
+# I/O helpers
+def load_json(path: pathlib.Path, desc: str) -> Dict:
+    try:
+        with path.open() as f:
+            return json.load(f)
+    except FileNotFoundError:
+        sys.exit(f"❌  Missing {desc} at {path}")
+    except json.JSONDecodeError as e:
+        sys.exit(f"❌  Malformed {desc}: {e}")
 
-# ───────────────────────  HELPER FUNCTIONS  ─────────────────── #
 
-def fetch_close_prices(ticker: str) -> pd.Series:
-    """Return a Series(date -> close) for `ticker` over the configured window."""
-    bars = client.get_aggs(ticker, 1, "day", start_iso, end_iso, adjusted=True)
+def fetch_close_prices(
+    client: RESTClient, ticker: str, start_iso: str, end_iso: str
+) -> List[Tuple[str, float]]:
+    """Return list of (ISO‑date, close_price)."""
+    try:
+        bars = client.get_aggs(
+            ticker=ticker,
+            multiplier=1,
+            timespan="day",
+            from_=start_iso,
+            to=end_iso,
+            adjusted=True,
+        )
+    except Exception as e:
+        raise RuntimeError(f"Polygon API error for {ticker}: {e}") from e
+
     if not bars:
-        logging.warning(f"no bars for {ticker}")
-        return pd.Series(dtype=float)
+        raise RuntimeError(f"No price data returned for {ticker}")
 
-    data = {pd.to_datetime(bar.t, unit="ms").date(): bar.c for bar in bars if bar.c is not None}
-    return pd.Series(data, name=ticker)
-
-
-def build_price_history() -> pd.DataFrame:
-    """Concatenate Series for every ticker that has a shares entry."""
-    frames = []
-    for tkr in SHARES.keys():
-        s = fetch_close_prices(tkr)
-        if not s.empty:
-            frames.append(s)
-
-    if not frames:
-        raise RuntimeError("no price data retrieved")
-
-    price_df = pd.concat(frames, axis=1).sort_index()          # index = date
-    price_df.index = pd.to_datetime(price_df.index)            # ensure DateTimeIndex
-    return price_df
+    out: List[Tuple[str, float]] = []
+    for bar in bars:
+        # Polygon timestamps are ms since epoch UTC
+        iso_day = datetime.utcfromtimestamp(bar["t"] / 1000).date().isoformat()
+        out.append((iso_day, float(bar["c"])))
+    return out
 
 
-def price_to_mcap(price_df: pd.DataFrame) -> pd.DataFrame:
-    """Multiply each ticker column by its static shares outstanding."""
-    mcap = price_df.copy()
-    for tkr in mcap.columns:
-        shares = SHARES.get(tkr)
-        if shares is None:
-            logging.warning(f"missing shares for {tkr}; column dropped")
-            mcap.drop(columns=tkr, inplace=True)
-            continue
-        mcap[tkr] = mcap[tkr] * shares
-    return mcap
+# ---------------------------------------------------------------------------
+def main() -> None:
+    log.info("Loading static reference data …")
+    shares_mil = load_json(SHARES_JSON, "shares.json")          # {ticker: int}
+    sector_map = load_json(SECTOR_MAP_JSON, "ticker‑sector map")  # {ticker: sector}
 
+    missing_sector = sorted(set(shares_mil) - set(sector_map))
+    if missing_sector:
+        sys.exit(
+            f"❌  {len(missing_sector)} tickers lack sector mapping: {', '.join(missing_sector)}"
+        )
 
-def aggregate_sectors(mcap_df: pd.DataFrame) -> pd.DataFrame:
-    """Sum ticker caps per sector."""
-    sector_frames = []
-    for sector, tickers in SECTOR_MAP.items():
-        cols = [t for t in tickers if t in mcap_df.columns]
-        if not cols:
-            logging.warning(f"sector {sector} has no valid tickers")
-            continue
-        sector_frames.append(mcap_df[cols].sum(axis=1).rename(sector))
+    api_key = os.getenv("POLYGON_API_KEY")
+    if not api_key:
+        sys.exit("❌  POLYGON_API_KEY not set in environment")
 
-    if not sector_frames:
-        raise RuntimeError("no sector columns built")
+    client = RESTClient(api_key)
 
-    return pd.concat(sector_frames, axis=1)
+    start_iso, end_iso = price_window()
+    log.info("Building %s‑day history %s → %s", WINDOW_DAYS, start_iso, end_iso)
 
+    # {date_iso: {sector: market_cap}}
+    daily_sector_cap: Dict[str, Dict[str, float]] = defaultdict(lambda: defaultdict(float))
 
-# ──────────────────────────  MAIN  ──────────────────────────── #
+    for idx, ticker in enumerate(sorted(shares_mil), 1):
+        sector = sector_map[ticker]
+        shares = shares_mil[ticker] * 1_000_000  # convert to absolute shares
+
+        try:
+            prices = fetch_close_prices(client, ticker, start_iso, end_iso)
+        except RuntimeError as e:
+            sys.exit(f"❌  {e}")
+
+        for day_iso, close_px in prices:
+            daily_sector_cap[day_iso][sector] += close_px * shares
+
+        if idx % 20 == 0 or idx == len(shares_mil):
+            log.info("  processed %3d / %d tickers …", idx, len(shares_mil))
+
+    # -----------------------------------------------------------------------
+    log.info("Transforming to DataFrame …")
+    df = (
+        pd.DataFrame(daily_sector_cap)  # columns = date, rows = sector
+        .transpose()                    # rows = date,  cols = sector
+        .sort_index()
+    )
+
+    OUTPUT_PARQUET.parent.mkdir(parents=True, exist_ok=True)
+    df.to_parquet(OUTPUT_PARQUET)
+    log.info("✅  Wrote %s (%d rows × %d sectors)", OUTPUT_PARQUET, *df.shape)
+
 
 if __name__ == "__main__":
-    logging.info(f"Building {N_DAYS}‑day price history {start_iso} → {end_iso}")
-    price_hist = build_price_history()
-    price_hist.to_parquet(OUT_PRICE)
-    logging.info(f"✓ wrote {OUT_PRICE}")
-
-    mcap_hist = price_to_mcap(price_hist)
-    sector_hist = aggregate_sectors(mcap_hist)
-    sector_hist.to_parquet(OUT_SECTOR)
-    logging.info(f"✓ wrote {OUT_SECTOR}  ({sector_hist.shape[0]} rows × {sector_hist.shape[1]} sectors)")
+    main()
