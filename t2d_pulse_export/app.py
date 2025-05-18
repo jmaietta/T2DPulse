@@ -82,32 +82,43 @@ except Exception as e:
 
 # Get the authentic T2D Pulse score
 def get_authentic_pulse_score():
-    """Get the most recent authentic T2D Pulse score as a single float."""
+        """Get the most recent authentic T2D Pulse score from Postgres."""
     try:
-        pulse_history_file = os.path.join("data", "t2d_pulse_history.csv")
-        result = read_pulse_score(pulse_history_file)
+        # ------------------------------------------------------------------
+        # 1. pull today’s/most‑recent score from the pulse_history table
+        # ------------------------------------------------------------------
+        import sqlalchemy, os, pandas as pd
 
-        # If result is a DataFrame or Series, grab its last numeric value
-        if hasattr(result, "iloc"):
-            last_row = result.iloc[-1]
-            # If that row is itself iterable, take its first element
-            if hasattr(last_row, "__len__") and not isinstance(last_row, (int, float)):
-                last_row = last_row.iloc[0]
-            score = float(last_row)
-        else:
-            # Single value case
-            score = float(result)
+        engine = sqlalchemy.create_engine(os.getenv("DATABASE_URL"))
 
-        logger.info(f"Successfully read authentic pulse score: {score}")
+        df = pd.read_sql(
+            """
+            SELECT date, pulse_score
+            FROM   pulse_history
+            ORDER  BY date DESC
+            LIMIT  1
+            """,
+            engine,
+            parse_dates=["date"]
+        )
+
+        if df.empty:
+            raise ValueError("pulse_history table is empty")
+
+        score = float(df["pulse_score"].iloc[0])
+        logger.info(f"Successfully read authentic pulse score: {score:.1f}")
         return score
 
+    # ----------------------------------------------------------------------
+    # Fallback section – only used if the DB query fails
+    # ----------------------------------------------------------------------
     except Exception as e:
-        logger.error(f"Error reading authentic pulse score: {e}")
-        # Fallback to the text file if CSV-based reader fails
+        logger.error(f"Error reading authentic pulse score from DB: {e}")
+
         try:
             with open(os.path.join("data", "current_pulse_score.txt"), "r") as f:
                 score = float(f.read().strip())
-                logger.info(f"Fallback pulse score via text: {score}")
+                logger.info(f"Fallback pulse score via text: {score:.1f}")
                 return score
         except Exception as e2:
             logger.error(f"Error reading fallback pulse score: {e2}")
