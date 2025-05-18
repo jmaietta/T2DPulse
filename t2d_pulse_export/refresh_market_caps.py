@@ -1,44 +1,86 @@
 # refresh_market_caps.py
-import os, datetime as dt
+# ETL script: fetch historical and current market caps and store in Postgres
+
+import os
+import datetime as dt
+
 import pandas as pd
-import finnhub, sqlalchemy
+import yfinance as yf
+import finnhub
+import sqlalchemy
 
-# --- settings ---
-TICKERS = ["AAPL", "MSFT", "GOOGL", "AMZN", "META"]   # add more tickers here
+# --- Configuration: list your tickers and their sectors here ---
+TICKERS = {
+    # 'TICKER': 'Sector Name',
+    'AAPL': 'Large-Cap Software',
+    'MSFT': 'Large-Cap Software',
+    'GOOGL': 'AdTech',
+    'AMZN': 'Cloud Infra',
+    'META': 'AdTech',
+    # add more tickers as needed
+}
+
+# Number of days of history to fetch
 DAYS_BACK = 30
-DB_URL = os.getenv("DATABASE_URL")
-FINN = finnhub.Client(api_key=os.getenv("FINNHUB_KEY"))
 
-# --- helpers ---
-def share_count(ticker: str) -> int:
-    data = FINN.company_basic_financials(ticker, 'all')
-    return int(data["metric"]["shareOutstanding"])
+# 1) Setup connections
+db_url = os.getenv('DATABASE_URL')
+if not db_url:
+    raise RuntimeError('DATABASE_URL environment variable is missing')
+engine = sqlalchemy.create_engine(db_url)
 
-def price_on(ticker: str, date: str) -> float:
-    q = FINN.quote(ticker)          # Finnhub gives only latest price; acceptable for 30‑day history
-    return q["c"]
+# 2) Setup Finnhub client for share counts
+finn = finnhub.Client(api_key=os.getenv('FINNHUB_KEY'))
 
-# --- build dataframe ---
-today = dt.date.today()
-dates = [today - dt.timedelta(days=i) for i in range(DAYS_BACK)]
-rows = []
-for tkr in TICKERS:
-    shares = share_count(tkr)
-    for d in dates:
-        close = price_on(tkr, d.isoformat())
-        rows.append({
-            "date": d,
-            "ticker": tkr,
-            "sector": "N/A",
-            "close_price": close,
-            "shares_outstanding": shares,
-            "market_cap": close * shares
+# 3) Define date range for historical data
+end_date = dt.date.today() + dt.timedelta(days=1)
+start_date = end_date - dt.timedelta(days=DAYS_BACK)
+
+records = []
+for ticker, sector in TICKERS.items():
+    # Fetch history of close prices
+    hist = yf.download(
+        ticker,
+        start=start_date.isoformat(),
+        end=end_date.isoformat(),
+        progress=False,
+        auto_adjust=False
+    )
+    if hist.empty:
+        print(f"⚠️  No price data for {ticker}")
+        continue
+
+    # Fetch share count
+    metrics = finn.company_basic_financials(ticker, 'all')
+    shares = metrics.get('metric', {}).get('shareOutstanding')
+    if not shares:
+        print(f"⚠️  No share count for {ticker}")
+        continue
+
+    # Build records
+    hist = hist.reset_index()[['Date', 'Close']]
+    hist['ticker'] = ticker
+    hist['sector'] = sector
+    hist['shares_outstanding'] = int(shares)
+    hist['market_cap'] = hist['Close'] * shares
+    for _, row in hist.iterrows():
+        records.append({
+            'date': row['Date'].date(),
+            'ticker': row['ticker'],
+            'sector': row['sector'],
+            'close_price': float(row['Close']),
+            'shares_outstanding': row['shares_outstanding'],
+            'market_cap': float(row['market_cap'])
         })
 
-df = pd.DataFrame(rows)
-print(f"Loaded {len(df)} rows.")
+# 4) Load into Postgres
+if not records:
+    print('❌ No market cap records to insert')
+    raise SystemExit
 
-# --- store in Postgres ---
-engine = sqlalchemy.create_engine(DB_URL)
-df.to_sql("market_caps", engine, if_exists="append", index=False)
-print("✅  market_caps table updated.")
+df = pd.DataFrame(records)
+# Append or update existing rows
+# Assumes market_caps table exists with primary key (date, ticker)
+df.to_sql('market_caps', engine, if_exists='append', index=False, method='multi')
+
+print(f"✅ Inserted {len(df)} market cap rows into market_caps table")
