@@ -24,7 +24,7 @@ TICKERS = [
     ("MGNI",  "AdTech"),
     ("PUBM",  "AdTech"),
     ("TTD",   "AdTech"),
-    
+
     ("ACN",   "IT Services Legacy Tech"),
     ("CTSH",  "IT Services Legacy Tech"),
     ("DXC",   "IT Services Legacy Tech"),
@@ -33,7 +33,7 @@ TICKERS = [
     ("INFY",  "IT Services Legacy Tech"),
     ("PLTR",  "IT Services Legacy Tech"),
     ("WIT",   "IT Services Legacy Tech"),
-    
+
     ("AMAT",  "Semiconductors"),
     ("AMD",   "Semiconductors"),
     ("ARM",   "Semiconductors"),
@@ -42,7 +42,7 @@ TICKERS = [
     ("NVDA",  "Semiconductors"),
     ("QCOM",  "Semiconductors"),
     ("TSM",   "Semiconductors"),
-    
+
     ("AMZN",  "Cloud Infrastructure"),
     ("CRM",   "Cloud Infrastructure"),
     ("CSCO",  "Cloud Infrastructure"),
@@ -51,7 +51,7 @@ TICKERS = [
     ("NET",   "Cloud Infrastructure"),
     ("ORCL",  "Cloud Infrastructure"),
     ("SNOW",  "Cloud Infrastructure"),
-    
+
     ("AAPL",  "Hardware Devices"),
     ("DELL",  "Hardware Devices"),
     ("HPQ",   "Hardware Devices"),
@@ -61,7 +61,7 @@ TICKERS = [
     ("SSYS",  "Hardware Devices"),
     ("STX",   "Hardware Devices"),
     ("WDC",   "Hardware Devices"),
-    
+
     ("CCCS",  "Vertical SaaS"),
     ("CPRT",  "Vertical SaaS"),
     ("CSGP",  "Vertical SaaS"),
@@ -70,7 +70,7 @@ TICKERS = [
     ("PCOR",  "Vertical SaaS"),
     ("SSNC",  "Vertical SaaS"),
     ("TTAN",  "Vertical SaaS"),
-    
+
     ("AFRM",  "FinTech"),
     ("BILL",  "FinTech"),
     ("COIN",  "FinTech"),
@@ -80,7 +80,7 @@ TICKERS = [
     ("PYPL",  "FinTech"),
     ("SSNC",  "FinTech"),
     ("XYZ",   "FinTech"),
-    
+
     ("CHKP",  "Cybersecurity"),
     ("CRWD",  "Cybersecurity"),
     ("CYBR",  "Cybersecurity"),
@@ -90,7 +90,7 @@ TICKERS = [
     ("PANW",  "Cybersecurity"),
     ("S",     "Cybersecurity"),
     ("ZS",    "Cybersecurity"),
-    
+
     ("ADSK",  "Enterprise SaaS"),
     ("AMZN",  "Enterprise SaaS"),
     ("CRM",   "Enterprise SaaS"),
@@ -100,7 +100,7 @@ TICKERS = [
     ("ORCL",  "Enterprise SaaS"),
     ("SAP",   "Enterprise SaaS"),
     ("WDAY",  "Enterprise SaaS"),
-    
+
     ("AMZN",  "eCommerce"),
     ("BABA",  "eCommerce"),
     ("BKNG",  "eCommerce"),
@@ -111,20 +111,20 @@ TICKERS = [
     ("SE",    "eCommerce"),
     ("SHOP",  "eCommerce"),
     ("WMT",   "eCommerce"),
-    
+
     ("DDOG",  "Dev Tools Analytics"),
     ("ESTC",  "Dev Tools Analytics"),
     ("GTLB",  "Dev Tools Analytics"),
     ("MDB",   "Dev Tools Analytics"),
     ("TEAM",  "Dev Tools Analytics"),
-    
+
     ("ADBE",  "SMB SaaS"),
     ("BILL",  "SMB SaaS"),
     ("GOOGL", "SMB SaaS"),
     ("HUBS",  "SMB SaaS"),
     ("INTU",  "SMB SaaS"),
     ("META",  "SMB SaaS"),
-    
+
     ("ABNB",  "Consumer Internet"),
     ("BKNG",  "Consumer Internet"),
     ("GOOGL", "Consumer Internet"),
@@ -135,7 +135,7 @@ TICKERS = [
     ("SPOT",  "Consumer Internet"),
     ("TRIP",  "Consumer Internet"),
     ("YELP",  "Consumer Internet"),
-    
+
     ("AMZN",  "AI Infrastructure"),
     ("GOOGL", "AI Infrastructure"),
     ("IBM",   "AI Infrastructure"),
@@ -193,7 +193,7 @@ def main(days_back: int = 30):
         df["ticker"] = ticker
         df["sector"] = sector
         df["shares_outstanding"] = scount
-        df["market_cap"] = df["close_price"] * df["shares_outstanding"]
+        df["market_cap"] = df["close_price"].to_numpy() * df["shares_outstanding"].to_numpy()
 
         rows.append(df[["date", "ticker", "sector", "close_price", "shares_outstanding", "market_cap"]])
 
