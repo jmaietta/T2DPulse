@@ -1599,7 +1599,23 @@ inflation_data = pd.read_sql(
 )
 logger.info(f"Loaded {len(inflation_data)} rows for CPI from macro_data")
 
-interest_rate_data = load_data_from_csv('interest_rate_data.csv')
+# --- Fed Funds Rate: load directly from Postgres ---
+import sqlalchemy, os
+macro_engine = sqlalchemy.create_engine(os.getenv("DATABASE_URL"))
+
+interest_rate_data = pd.read_sql(
+    """
+    SELECT date,
+           value AS fedfunds
+    FROM   macro_data
+    WHERE  series = 'FEDFUNDS'
+    ORDER  BY date
+    """,
+    macro_engine,
+    parse_dates=["date"]
+)
+logger.info(f"Loaded {len(interest_rate_data)} rows for Fed Funds Rate from macro_data")
+
 treasury_yield_data = load_data_from_csv('treasury_yield_data.csv')
 
 # Add NASDAQ Composite data from FRED (NASDAQCOM)
