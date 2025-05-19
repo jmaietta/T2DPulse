@@ -21,7 +21,7 @@ CSV_MAP = {
     "pcepi_data.csv":           "PCEPI",               # PCE Price Index
     "gdp_data.csv":             "GDPC1",               # Real GDP
     "nasdaq_data.csv":          "NASDAQ",              # NASDAQ Composite Index
-    "vix_data.csv":             "VIX",                 # CBOE VIX Index
+    "vix_data.csv":             "VIX",                 # CBOE VIX
     "job_postings_data.csv":    "IHLIDXUSTPSOFTDEVE",  # Software Job Postings Index
     "software_ppi_data.csv":    "PCU511210511210",     # Software PPI
     "data_processing_ppi_data.csv": "PCU5112105112105", # Data Processing PPI
@@ -30,7 +30,7 @@ CSV_MAP = {
 
 # 3) Process each CSV and load into macro_data table
 for csv_file, series in CSV_MAP.items():
-    # Attempt to locate the CSV
+    # Attempt to locate the CSV\    
     if os.path.exists(csv_file):
         path = csv_file
     elif os.path.exists(os.path.join("data", csv_file)):
@@ -39,15 +39,18 @@ for csv_file, series in CSV_MAP.items():
         print(f"⚠️  File not found: {csv_file}, skipping")
         continue
 
-    # Load file\    
-df = pd.read_csv(path)
+    # Load file
+    df = pd.read_csv(path)
     # Rename first two columns to 'date' and 'value'
     df.rename(columns={df.columns[0]: "date", df.columns[1]: "value"}, inplace=True)
+
     # Drop any duplicate columns created by rename
     df = df.loc[:, ~df.columns.duplicated()]
+
     # Parse 'date' column to datetime
-    df["date"]  = pd.to_datetime(df["date"], errors="coerce")
+    df["date"] = pd.to_datetime(df["date"], errors="coerce")
     df["series"] = series
+
     # Reorder and select
     df = df[["series", "date", "value"]]
 
