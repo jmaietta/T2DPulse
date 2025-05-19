@@ -6,10 +6,10 @@ import pandas as pd
 import sqlalchemy
 
 # 1) Connect to Postgres
-DB_URL = os.getenv("DATABASE_URL")
-if not DB_URL:
+db_url = os.getenv("DATABASE_URL")
+if not db_url:
     raise RuntimeError("DATABASE_URL environment variable not set")
-engine = sqlalchemy.create_engine(DB_URL)
+engine = sqlalchemy.create_engine(db_url)
 
 # 2) Map CSV filenames to series codes
 CSV_MAP = {
@@ -30,21 +30,25 @@ CSV_MAP = {
 
 # 3) Process each CSV and load into macro_data table
 for csv_file, series in CSV_MAP.items():
-    # Locate the CSV: check current directory, then 'data/' subfolder
+    # Attempt to locate the CSV
     if os.path.exists(csv_file):
         path = csv_file
     elif os.path.exists(os.path.join("data", csv_file)):
         path = os.path.join("data", csv_file)
     else:
-        print(f"⚠️  File not found: {csv_file} (searched cwd and data/), skipping")
+        print(f"⚠️  File not found: {csv_file}, skipping")
         continue
 
-    # Load and normalize
-    df = pd.read_csv(path)
-    # Expect first column as date, second as value
-    df = df.rename(columns={df.columns[0]: "date", df.columns[1]: "value"})
-    df["date"] = pd.to_datetime(df["date"])
+    # Load file\    
+df = pd.read_csv(path)
+    # Rename first two columns to 'date' and 'value'
+    df.rename(columns={df.columns[0]: "date", df.columns[1]: "value"}, inplace=True)
+    # Drop any duplicate columns created by rename
+    df = df.loc[:, ~df.columns.duplicated()]
+    # Parse 'date' column to datetime
+    df["date"]  = pd.to_datetime(df["date"], errors="coerce")
     df["series"] = series
+    # Reorder and select
     df = df[["series", "date", "value"]]
 
     # Insert into Postgres
