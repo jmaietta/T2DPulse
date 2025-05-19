@@ -3052,7 +3052,7 @@ def update_sentiment_gauge(pulse_score):
         return pulse_display
         
     # As a fallback, use the sentiment score from the input
-    pulse_display, pulse_status, pulse_color = create_pulse_card(score)
+    pulse_display, pulse_status, pulse_color = create_pulse_card(pulse_score)
     
     # Return the pulse elements directly (no extra container)
     return pulse_display
