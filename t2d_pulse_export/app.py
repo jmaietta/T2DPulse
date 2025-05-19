@@ -1637,7 +1637,22 @@ logger.info(f"Loaded {len(treasury_yield_data)} rows for 10Y Treasury Yield from
 nasdaq_data = load_data_from_csv('nasdaq_data.csv')
 
 # Add Consumer Sentiment data (USACSCICP02STSAM)
-consumer_sentiment_data = load_data_from_csv('consumer_sentiment_data.csv')
+# --- Consumer Sentiment: load directly from Postgres ---
+import sqlalchemy, os
+macro_engine = sqlalchemy.create_engine(os.getenv("DATABASE_URL"))
+
+consumer_sentiment_data = pd.read_sql(
+    """
+    SELECT date,
+           value AS consumer_confidence
+    FROM   macro_data
+    WHERE  series = 'USACSCICP02STSAM'
+    ORDER  BY date
+    """,
+    macro_engine,
+    parse_dates=["date"]
+)
+logger.info(f"Loaded {len(consumer_sentiment_data)} rows for Consumer Sentiment from macro_data")
 
 # Add Software Job Postings from FRED (IHLIDXUSTPSOFTDEVE)
 job_postings_data = load_data_from_csv('job_postings_data.csv')
