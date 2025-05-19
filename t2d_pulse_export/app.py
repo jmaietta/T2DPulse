@@ -1565,7 +1565,23 @@ pce_data = pd.read_sql(
 )
 logger.info(f"Loaded {len(pce_data)} rows for PCE from macro_data")
 
-unemployment_data = load_data_from_csv('unemployment_data.csv')
+# --- Unemployment Rate: load directly from Postgres ---
+import sqlalchemy, os
+macro_engine = sqlalchemy.create_engine(os.getenv("DATABASE_URL"))
+
+unemployment_data = pd.read_sql(
+    """
+    SELECT date,
+           value AS unrate
+    FROM   macro_data
+    WHERE  series = 'UNRATE'
+    ORDER  BY date
+    """,
+    macro_engine,
+    parse_dates=["date"]
+)
+logger.info(f"Loaded {len(unemployment_data)} rows for Unemployment Rate from macro_data")
+
 inflation_data = load_data_from_csv('inflation_data.csv')
 interest_rate_data = load_data_from_csv('interest_rate_data.csv')
 treasury_yield_data = load_data_from_csv('treasury_yield_data.csv')
