@@ -41,12 +41,21 @@ YF_INDICES = {
 end = dt.date.today()
 start = end - dt.timedelta(days=60)
 for series, name in FRED_SERIES.items():
+    # clear any existing rows in this window to avoid duplicates
+    with engine.begin() as conn:
+        conn.execute(
+            "DELETE FROM macro_data WHERE series = %s AND date BETWEEN %s AND %s",
+            (series, start, end)
+        )
     try:
-        # Use FredReader with explicit API key
-        df = FredReader(symbols=series,
-                         start=start,
-                         end=end,
-                         api_key=os.getenv('FRED_API_KEY')).read()
+        # Use DataReader with API key
+        df = pdr.DataReader(
+            series,
+            "fred",
+            start,
+            end,
+            api_key=os.getenv("FRED_API_KEY")
+        )
     except Exception as e:
         print(f"⚠️  Failed to fetch {series} from FRED: {e}")
         continue
@@ -57,7 +66,7 @@ for series, name in FRED_SERIES.items():
     df.to_sql('macro_data', engine, if_exists='append', index=False, method='multi')
     print(f"✅ Loaded {len(df)} rows for {series}")
 
-# --- 4) Fetch Yahoo Finance indices (last 60 days) ---
+# --- 4) Fetch Yahoo Finance indices (last 60 days) --- (last 60 days) ---
 for ticker, series in YF_INDICES.items():
     try:
         yf_df = yf.download(ticker, start=start, end=end, progress=False)
