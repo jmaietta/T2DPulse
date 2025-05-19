@@ -1582,7 +1582,23 @@ unemployment_data = pd.read_sql(
 )
 logger.info(f"Loaded {len(unemployment_data)} rows for Unemployment Rate from macro_data")
 
-inflation_data = load_data_from_csv('inflation_data.csv')
+# --- Inflation (CPI): load directly from Postgres ---
+import sqlalchemy, os
+macro_engine = sqlalchemy.create_engine(os.getenv("DATABASE_URL"))
+
+inflation_data = pd.read_sql(
+    """
+    SELECT date,
+           value AS cpi
+    FROM   macro_data
+    WHERE  series = 'CPIAUCSL'
+    ORDER  BY date
+    """,
+    macro_engine,
+    parse_dates=["date"]
+)
+logger.info(f"Loaded {len(inflation_data)} rows for CPI from macro_data")
+
 interest_rate_data = load_data_from_csv('interest_rate_data.csv')
 treasury_yield_data = load_data_from_csv('treasury_yield_data.csv')
 
