@@ -129,22 +129,6 @@ FRED_SERIES = {
     "data_ppi": "PCU518210518210"  # Data Processing Services PPI
 }
 
-# Define data file paths
-DATA_FILES = {
-    "gdp": "data/gdp_data.csv",
-    "unemployment": "data/unemployment_data.csv",
-    "cpi": "data/inflation_data.csv",
-    "pcepi": "data/pcepi_data.csv",
-    "interest_rate": "data/interest_rate_data.csv",
-    "pce": "data/pce_data.csv",
-    "treasury_yield": "data/treasury_yield_data.csv",
-    "vix": "data/vix_data.csv",
-    "nasdaq": "data/nasdaq_data.csv",
-    "consumer_sentiment": "data/consumer_sentiment_data.csv",
-    "software_ppi": "data/software_ppi_data.csv",
-    "data_ppi": "data/data_processing_ppi_data.csv"
-}
-
 # Initialize the Dash app with external stylesheets
 app = dash.Dash(
     __name__,
@@ -306,41 +290,6 @@ def save_data_to_csv(df, filename):
         print(f"Failed to save data to {filename}: {str(e)}")
         return False
 
-def load_data_from_csv(filename):
-    """Load DataFrame from CSV file or Parquet equivalent using the data_reader"""
-    try:
-        # Use data_reader's efficient implementation which tries Parquet first
-        df = read_data_file(os.path.basename(filename))
-        
-        if df is not None and not df.empty:
-            # The data_reader already handles date conversion
-            logger.info(f"Successfully loaded {len(df)} rows from {filename}")
-            return df
-        else:
-            # Fall back to old method if data_reader fails
-            file_path = os.path.join(DATA_DIR, filename)
-            if os.path.exists(file_path):
-                df = pd.read_csv(file_path)
-                
-                # Convert 'date' column to datetime, case-insensitive
-                date_columns = [col for col in df.columns if col.lower() == 'date']
-                if date_columns:
-                    date_col = date_columns[0]
-                    df[date_col] = pd.to_datetime(df[date_col])
-                    
-                    # Ensure the date column is consistently named 'date'
-                    if date_col != 'date':
-                        df = df.rename(columns={date_col: 'date'})
-                
-                logger.info(f"Fallback: Successfully loaded {len(df)} rows from {filename}")
-                return df
-            else:
-                logger.warning(f"File {filename} does not exist")
-                return pd.DataFrame()
-    except Exception as e:
-        logger.error(f"Failed to load data from {filename}: {str(e)}")
-        return pd.DataFrame()
-
 def fetch_bea_data(table_name, frequency, start_year, end_year):
     """Fetch data from BEA API"""
     print(f"Fetching BEA data for table {table_name}")
@@ -413,36 +362,6 @@ def fetch_treasury_yield_data():
         # Sort by date (newest first) for easier reporting and data merging
         df = df.sort_values('date', ascending=False)
         
-        # Load existing data from CSV to merge with
-        try:
-            existing_data = pd.read_csv('data/treasury_yield_data.csv')
-            if not existing_data.empty:
-                # Convert date to datetime
-                existing_data['date'] = pd.to_datetime(existing_data['date'])
-                
-                # Filter out dates that we now have from Yahoo Finance
-                min_new_date = df['date'].min()
-                old_data = existing_data[existing_data['date'] < min_new_date]
-                
-                # Combine old historical data with new recent data
-                combined_df = pd.concat([df, old_data])
-                combined_df = combined_df.sort_values('date', ascending=False)
-                logger.info(f"Combined {len(df)} recent days with {len(old_data)} historical days")
-                
-                # Save combined data to CSV
-                save_data_to_csv(combined_df, 'data/treasury_yield_data.csv')
-                logger.info(f"Successfully saved {len(combined_df)} rows to treasury_yield_data.csv")
-                
-                df = combined_df
-            else:
-                # Just save the Yahoo Finance data
-                save_data_to_csv(df, 'data/treasury_yield_data.csv')
-                logger.info(f"No existing data to merge, saved {len(df)} rows to treasury_yield_data.csv")
-        except Exception as e:
-            logger.error(f"Error merging with existing data: {str(e)}")
-            # Still save the Yahoo Finance data
-            save_data_to_csv(df, 'data/treasury_yield_data.csv')
-        
         # Report the latest value and date
         latest_date = df.iloc[0]['date'].strftime('%Y-%m-%d')
         latest_value = df.iloc[0]['value']
@@ -452,20 +371,6 @@ def fetch_treasury_yield_data():
         return df
     except Exception as e:
         logger.error(f"Exception while fetching Treasury Yield data from Yahoo Finance: {str(e)}")
-        
-        # Try to load cached data as fallback
-        try:
-            cached_data = pd.read_csv('data/treasury_yield_data.csv')
-            if not cached_data.empty:
-                cached_data['date'] = pd.to_datetime(cached_data['date'])
-                logger.warning(f"Falling back to cached Treasury Yield data with {len(cached_data)} observations")
-                latest = cached_data.sort_values('date', ascending=False).iloc[0]
-                logger.info(f"Latest cached value: {latest['value']:.3f}% on {latest['date'].strftime('%Y-%m-%d')}")
-                return cached_data
-        except Exception as fallback_e:
-            logger.error(f"Failed to load cached data: {str(fallback_e)}")
-        
-        return pd.DataFrame()
         
 def fetch_vix_from_yahoo():
     """Fetch VIX Volatility Index data from Yahoo Finance (^VIX)
@@ -1687,31 +1592,6 @@ job_postings_data = pd.read_sql(
 )
 logger.info(f"Loaded {len(job_postings_data)} rows for Job Postings from macro_data")
 
-# If no existing data or data is old, fetch NASDAQ data with EMA calculation
-if nasdaq_data.empty or (datetime.now() - pd.to_datetime(nasdaq_data['date'].max())).days > 1:
-    # Try to get real-time data with EMA first
-    new_nasdaq_data = fetch_nasdaq_with_ema()
-    
-    if not new_nasdaq_data.empty and 'gap_pct' in new_nasdaq_data.columns:
-        nasdaq_data = new_nasdaq_data
-        save_data_to_csv(nasdaq_data, 'nasdaq_data.csv')
-        print(f"NASDAQ data updated with real-time EMA calculation, {len(nasdaq_data)} observations")
-    else:
-        # Fall back to FRED data if real-time fails
-        print("Falling back to FRED for NASDAQ data")
-        fred_nasdaq_data = fetch_fred_data('NASDAQCOM')
-        
-        if not fred_nasdaq_data.empty:
-            # Calculate percent change
-            fred_nasdaq_data = fred_nasdaq_data.sort_values('date')
-            fred_nasdaq_data['pct_change'] = fred_nasdaq_data['value'].pct_change() * 100
-            
-            nasdaq_data = fred_nasdaq_data
-            save_data_to_csv(nasdaq_data, 'nasdaq_data.csv')
-            print(f"NASDAQ data updated from FRED with {len(nasdaq_data)} observations")
-        else:
-            print("Failed to fetch NASDAQ data from any source")
-
 # Add Producer Price Index for Software Publishers from FRED (PCU511210511210)
 # --- Software PPI: load directly from Postgres ---
 import sqlalchemy, os
@@ -1754,13 +1634,6 @@ if software_ppi_data.empty or (datetime.now() - pd.to_datetime(software_ppi_data
         # Calculate YoY percent change
         software_ppi_data['yoy_pct_change'] = ((software_ppi_data['value'] - software_ppi_data['year_ago_value']) / 
                                               software_ppi_data['year_ago_value'] * 100)
-        
-        # Save data
-        save_data_to_csv(software_ppi_data, 'software_ppi_data.csv')
-        
-        print(f"Software PPI data updated with {len(software_ppi_data)} observations")
-    else:
-        print("Failed to fetch Software PPI data")
 
 # Add Producer Price Index for Data Processing Services from FRED (PCU5112105112105)
 # --- Data-Processing PPI: load directly from Postgres ---
@@ -1804,13 +1677,6 @@ if data_processing_ppi_data.empty or (datetime.now() - pd.to_datetime(data_proce
         # Calculate YoY percent change
         data_processing_ppi_data['yoy_pct_change'] = ((data_processing_ppi_data['value'] - data_processing_ppi_data['year_ago_value']) / 
                                                      data_processing_ppi_data['year_ago_value'] * 100)
-        
-        # Save data
-        save_data_to_csv(data_processing_ppi_data, 'data_processing_ppi_data.csv')
-        
-        print(f"Data Processing PPI data updated with {len(data_processing_ppi_data)} observations")
-    else:
-        print("Failed to fetch Data Processing PPI data")
 
 # Fetch inflation data if needed
 if inflation_data.empty or (datetime.now() - pd.to_datetime(inflation_data['date'].max())).days > 30:
@@ -1837,13 +1703,6 @@ if inflation_data.empty or (datetime.now() - pd.to_datetime(inflation_data['date
         # Calculate YoY inflation
         inflation_data['inflation'] = ((inflation_data['value'] - inflation_data['year_ago_value']) / 
                                       inflation_data['year_ago_value'] * 100)
-        
-        # Save data
-        save_data_to_csv(inflation_data, 'inflation_data.csv')
-        
-        print(f"Inflation data updated with {len(inflation_data)} observations")
-    else:
-        print("Failed to fetch inflation data")
 
 # Add Personal Consumption Expenditures (PCE) data
 if pce_data.empty or (datetime.now() - pd.to_datetime(pce_data['date'].max() if not pce_data.empty else '2000-01-01')).days > 30:
@@ -1870,13 +1729,6 @@ if pce_data.empty or (datetime.now() - pd.to_datetime(pce_data['date'].max() if 
         # Calculate YoY growth
         pce_data['yoy_growth'] = ((pce_data['value'] - pce_data['year_ago_value']) / 
                                pce_data['year_ago_value'] * 100)
-        
-        # Save data
-        save_data_to_csv(pce_data, 'pce_data.csv')
-        
-        print(f"PCE data updated with {len(pce_data)} observations")
-    else:
-        print("Failed to fetch PCE data")
 
 # Add PCEPI (Personal Consumption Expenditures: Chain-type Price Index) data
 
@@ -1923,13 +1775,6 @@ if pcepi_data.empty or (datetime.now() - pd.to_datetime(pcepi_data['date'].max()
         # Calculate YoY growth
         pcepi_data['yoy_growth'] = ((pcepi_data['value'] - pcepi_data['year_ago_value']) / 
                                   pcepi_data['year_ago_value'] * 100)
-        
-        # Save data
-        save_data_to_csv(pcepi_data, 'pcepi_data.csv')
-        
-        print(f"PCEPI data updated with {len(pcepi_data)} observations")
-    else:
-        print("Failed to fetch PCEPI data")
 
 # Add VIX volatility index data
 # --- VIX Index: load directly from Postgres ---
@@ -1971,21 +1816,6 @@ if not yahoo_vix_data.empty:
         # If no historical data, just use Yahoo data
         vix_data = yahoo_vix_data
     
-    # Sort and save the combined data
-    vix_data = vix_data.sort_values('date')
-    save_data_to_csv(vix_data, 'vix_data.csv')
-    logger.info(f"VIX data updated with {len(vix_data)} observations combining Yahoo Finance and historical data")
-    
-elif vix_data.empty or (datetime.now() - pd.to_datetime(vix_data['date'].max())).days > 7:
-    # If Yahoo Finance failed and we have no data or old data, fall back to FRED
-    logger.info("Yahoo Finance VIX data retrieval failed, falling back to FRED data")
-    fred_vix_data = fetch_fred_data('VIXCLS')
-    
-    if not fred_vix_data.empty:
-        # Save data
-        vix_data = fred_vix_data
-        save_data_to_csv(vix_data, 'vix_data.csv')
-        
         logger.info(f"VIX data updated with {len(vix_data)} observations from FRED")
     else:
         logger.error("Failed to fetch VIX data from both Yahoo Finance and FRED")
@@ -2007,9 +1837,6 @@ if not vix_data.empty and 'date' in vix_data.columns and 'value' in vix_data.col
         latest_vix = vix_data.iloc[0]['value']
         latest_ema = vix_data.iloc[0]['vix_ema14']
         logger.info(f"VIX: {latest_vix:.2f} on {latest_date}, 14-day EMA: {latest_ema:.2f}")
-    
-    # Save updated data with EMA
-    save_data_to_csv(vix_data, 'vix_data.csv')
 
 # Add Software Job Postings data
 if job_postings_data.empty or (datetime.now() - pd.to_datetime(job_postings_data['date'].max() if not job_postings_data.empty else '2000-01-01')).days > 7:
@@ -2038,13 +1865,6 @@ if job_postings_data.empty or (datetime.now() - pd.to_datetime(job_postings_data
         # Calculate YoY growth
         job_postings_data['yoy_growth'] = ((job_postings_data['value'] - job_postings_data['year_ago_value']) / 
                               job_postings_data['year_ago_value'] * 100)
-        
-        # Save data
-        save_data_to_csv(job_postings_data, 'job_postings_data.csv')
-        
-        logger.info(f"Software Job Postings data updated with {len(job_postings_data)} observations")
-    else:
-        logger.error("Failed to fetch Software Job Postings data")
 
 # Calculate initial sentiment index
 sentiment_index = calculate_sentiment_index()
@@ -5318,10 +5138,6 @@ def apply_proprietary_data(n_clicks, weight, value, custom_weights, document_dat
 )
 def update_consumer_sentiment_graph(n):
     """Generate the Consumer Sentiment chart figure"""
-    # Create graph using the imported function
-    global consumer_sentiment_data
-    if consumer_sentiment_data is None or consumer_sentiment_data.empty:
-        consumer_sentiment_data = load_data_from_csv('consumer_sentiment_data.csv')
     return create_consumer_sentiment_graph(consumer_sentiment_data)
 
 # Consumer Sentiment Container
@@ -5332,8 +5148,6 @@ def update_consumer_sentiment_graph(n):
 def update_consumer_sentiment_container(n):
     """Update the Consumer Sentiment container to include both the graph and insights panel"""
     global consumer_sentiment_data
-    if consumer_sentiment_data is None or consumer_sentiment_data.empty:
-        consumer_sentiment_data = load_data_from_csv('consumer_sentiment_data.csv')
     
     # Create the graph
     graph = dcc.Graph(
@@ -5387,9 +5201,6 @@ def update_consumer_sentiment_container(n):
         # Calculate YoY growth
         gdp_data['yoy_growth'] = ((gdp_data['value'] - gdp_data['year_ago_value']) / 
                                  gdp_data['year_ago_value'] * 100)
-        
-        # Save data
-        save_data_to_csv(gdp_data, 'gdp_data.csv')
     
     # Inflation (CPI)
     cpi_temp = fetch_fred_data('CPIAUCSL')
@@ -5413,9 +5224,6 @@ def update_consumer_sentiment_container(n):
         # Calculate YoY inflation
         inflation_data['inflation'] = ((inflation_data['value'] - inflation_data['year_ago_value']) / 
                                       inflation_data['year_ago_value'] * 100)
-        
-        # Save data
-        save_data_to_csv(inflation_data, 'inflation_data.csv')
     
     # PCEPI (Personal Consumption Expenditures: Chain-type Price Index)
     pcepi_temp = fetch_fred_data('PCEPI')
@@ -5439,27 +5247,6 @@ def update_consumer_sentiment_container(n):
         # Calculate YoY growth
         pcepi_data['yoy_growth'] = ((pcepi_data['value'] - pcepi_data['year_ago_value']) / 
                                   pcepi_data['year_ago_value'] * 100)
-    
-    # Also update other datasets
-    # NASDAQ with EMA calculation
-    nasdaq_temp = fetch_nasdaq_with_ema()
-    if not nasdaq_temp.empty and 'gap_pct' in nasdaq_temp.columns:
-        # Use the new EMA-based data
-        nasdaq_data = nasdaq_temp
-        save_data_to_csv(nasdaq_data, 'nasdaq_data.csv')
-        latest_date = nasdaq_data.sort_values('date', ascending=False).iloc[0]['date']
-        latest_gap = nasdaq_data.sort_values('date', ascending=False).iloc[0]['gap_pct']
-        print(f"NASDAQ data updated with EMA calculation, latest date: {latest_date}, EMA gap: {latest_gap:.2f}%")
-    else:
-        # Fall back to FRED data if real-time fails
-        print("Falling back to FRED for NASDAQ data")
-        fred_nasdaq_data = fetch_fred_data('NASDAQCOM')
-        if not fred_nasdaq_data.empty:
-            fred_nasdaq_data = fred_nasdaq_data.sort_values('date')
-            fred_nasdaq_data['pct_change'] = fred_nasdaq_data['value'].pct_change() * 100
-            nasdaq_data = fred_nasdaq_data
-            save_data_to_csv(nasdaq_data, 'nasdaq_data.csv')
-            print(f"NASDAQ data updated from FRED with {len(nasdaq_data)} observations")
     
     # Update indicator values for display
     return (
@@ -5496,91 +5283,7 @@ def initialize_sentiment_index(_, custom_weights, document_data):
         else:
             category = "Bearish"
         return f"{authentic_score:.1f}", category
-    
-    # Check if it's a weekend to use the most recent market session data
-    import pytz
-    from datetime import datetime
-    eastern = pytz.timezone('US/Eastern')
-    today = datetime.now(eastern)
-    is_weekend = today.weekday() >= 5  # Saturday = 5, Sunday = 6
-    
-    # If it's a weekend and no authentic score, use the most recent market session data 
-    if is_weekend:
-        print("Weekend detected during initialization - using most recent market session data for T2D Pulse calculation")
         
-        # Get the most recent data file
-        today_str = datetime.now(eastern).strftime('%Y-%m-%d')
-        date_specific_file = f"data/authentic_sector_history_{today_str}.csv"
-        
-        if os.path.exists(date_specific_file):
-            # Load the recent market data from this file
-            try:
-                import pandas as pd
-                recent_df = pd.read_csv(date_specific_file)
-                
-                if not recent_df.empty:
-                    # Get sector columns from the dataframe
-                    sector_columns = [col for col in recent_df.columns if col != 'date']
-                    latest_row = recent_df.iloc[0]
-                    
-                    # Create dictionary of sector scores for T2D pulse calculation
-                    sector_scores_dict = {sector: latest_row[sector] for sector in sector_columns}
-                    
-                    # Create default equal weights
-                    equal_weight = 100.0 / len(sector_columns)
-                    sector_weights = {sector: equal_weight for sector in sector_columns}
-                    
-                    print(f"Using most recent market session data for initial T2D Pulse calculation: {len(sector_scores_dict)} sectors")
-                    
-                    # Calculate T2D Pulse score from the most recent data
-                    pulse_score = calculate_t2d_pulse_from_sectors(sector_scores_dict, sector_weights)
-                    print(f"Calculated T2D Pulse Score from most recent market data: {pulse_score}")
-                    
-                    # Save the T2D Pulse score to history
-                    save_t2d_pulse_score(pulse_score, sector_scores_dict)
-                    
-                    # Determine category
-                    if pulse_score >= 60:
-                        category = "Bullish"
-                    elif pulse_score >= 30:
-                        category = "Neutral"
-                    else:
-                        category = "Bearish"
-                    
-                    return (f"{pulse_score:.1f}", category)
-            except Exception as e:
-                print(f"Error using most recent market data for initial T2D Pulse calculation: {e}")
-                # Continue to fallback below
-        
-        # Fallback to May 2nd data from forced_may2_data.py if CSV not found
-        try:
-            print("Fallback to May 2nd data for initial T2D Pulse calculation")
-            import forced_may2_data
-            
-            # Get the reliable May 2nd sector scores directly
-            sector_scores_dict = forced_may2_data.get_may2nd_sector_dict()
-            
-            if sector_scores_dict:
-                # Get a pre-calculated score
-                pulse_score = forced_may2_data.get_may2nd_t2d_pulse_score()
-                print(f"Using hardcoded May 2nd T2D Pulse score for initialization: {pulse_score}")
-                
-                # Save the T2D Pulse score to history
-                save_t2d_pulse_score(pulse_score, sector_scores_dict)
-                
-                # Determine category
-                if pulse_score >= 60:
-                    category = "Bullish"
-                elif pulse_score >= 30:
-                    category = "Neutral"
-                else:
-                    category = "Bearish"
-                
-                return (f"{pulse_score:.1f}", category)
-        except Exception as e:
-            print(f"Error using May 2nd data for initialization: {e}")
-            # Continue to default method below
-    
     # Regular weekday calculation or fallback if weekend methods fail
     sector_scores = calculate_sector_sentiment()
     
@@ -6242,12 +5945,6 @@ def update_sector_sentiment_container(n):
     except Exception as e:
         print(f"Error running sector display fix: {e}")
     
-    # Load the definitive sector scores (guaranteed to be in 0-100 scale)
-    definitive_file = "data/definitive_sector_scores.csv"
-    found_authentic_data = False
-    
-    print(f"Loading definitive sector data from: {definitive_file}")
-    
     # First attempt to load from our definitive source
     if os.path.exists(definitive_file):
         print(f"Found definitive sector data file")
@@ -6310,15 +6007,6 @@ def update_sector_sentiment_container(n):
         # Import forced_may2_data as our ultimate fallback
         import forced_may2_data
         sector_scores = forced_may2_data.get_may2nd_sector_data()
-        
-        # Check for Friday's data if it's a weekend
-        if is_weekend:
-            from datetime import timedelta
-            # Calculate most recent Friday's date
-            days_since_friday = (today.weekday() - 4) % 7
-            friday_date = today - timedelta(days=days_since_friday)
-            friday_str = friday_date.strftime('%Y-%m-%d')
-            friday_file = f"data/authentic_sector_history_{friday_str}.csv"
             
             if os.path.exists(friday_file):
                 try:
@@ -6361,12 +6049,6 @@ def update_sector_sentiment_container(n):
                             print(f"Using Friday's authentic sector data ({friday_str}) with {len(authentic_scores)} sectors")
                 except Exception as e:
                     print(f"Error loading Friday's authentic data: {e}")
-        elif not is_weekend:
-            # On weekdays, try yesterday's data if today's isn't available
-            from datetime import timedelta
-            yesterday = today - timedelta(days=1)
-            yesterday_str = yesterday.strftime('%Y-%m-%d')
-            yesterday_file = f"data/authentic_sector_history_{yesterday_str}.csv"
             
             if os.path.exists(yesterday_file):
                 try:
@@ -7124,12 +6806,6 @@ def update_t2d_pulse_score(weights_json):
         if is_weekend:
             print("Weekend detected - using most recent market session data for T2D Pulse calculation")
             
-            # Get the most recent data file
-            from datetime import datetime
-            eastern = pytz.timezone('US/Eastern')
-            today_str = datetime.now(eastern).strftime('%Y-%m-%d')
-            date_specific_file = f"data/authentic_sector_history_{today_str}.csv"
-            
             if os.path.exists(date_specific_file):
                 # Load the recent market data from this file
                 try:
@@ -7367,12 +7043,6 @@ def reset_weights(n_clicks):
         # Use most recent market session data if it's a weekend
         print("Weekend detected - using most recent market session data for T2D Pulse calculation")
         
-        # Get the most recent data file
-        from datetime import datetime
-        eastern = pytz.timezone('US/Eastern')
-        today_str = datetime.now(eastern).strftime('%Y-%m-%d')
-        date_specific_file = f"data/authentic_sector_history_{today_str}.csv"
-        
         if os.path.exists(date_specific_file):
             # Load the recent market data from this file
             try:
@@ -7396,19 +7066,6 @@ def reset_weights(n_clicks):
             except Exception as e:
                 print(f"Error using most recent market data for T2D Pulse reset: {e}")
                 # Continue to fallback below
-        
-        # Fallback to May 2nd data if needed
-        print("Fallback to May 2nd data for T2D Pulse reset")
-        import forced_may2_data
-        
-        # Get the reliable May 2nd sector scores directly from our hardcoded values
-        sector_scores_dict = forced_may2_data.get_may2nd_sector_dict()
-        
-        if sector_scores_dict:
-            # Use the pre-calculated May 2nd T2D Pulse score directly
-            pulse_score = forced_may2_data.get_may2nd_t2d_pulse_score()
-            print(f"Reset T2D Pulse score to {pulse_score} with equal weights using May 2nd data (fallback)")
-            return json.dumps(equal_weights), f"{pulse_score:.1f}"
     
     # Regular calculation for weekdays or as fallback
     sector_scores = calculate_sector_sentiment()
