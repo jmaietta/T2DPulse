@@ -1616,7 +1616,22 @@ interest_rate_data = pd.read_sql(
 )
 logger.info(f"Loaded {len(interest_rate_data)} rows for Fed Funds Rate from macro_data")
 
-treasury_yield_data = load_data_from_csv('treasury_yield_data.csv')
+# --- Treasury Yield (10Y): load directly from Postgres ---
+import sqlalchemy, os
+macro_engine = sqlalchemy.create_engine(os.getenv("DATABASE_URL"))
+
+treasury_yield_data = pd.read_sql(
+    """
+    SELECT date,
+           value AS dgs10
+    FROM   macro_data
+    WHERE  series = 'DGS10'
+    ORDER  BY date
+    """,
+    macro_engine,
+    parse_dates=["date"]
+)
+logger.info(f"Loaded {len(treasury_yield_data)} rows for 10Y Treasury Yield from macro_data")
 
 # Add NASDAQ Composite data from FRED (NASDAQCOM)
 nasdaq_data = load_data_from_csv('nasdaq_data.csv')
