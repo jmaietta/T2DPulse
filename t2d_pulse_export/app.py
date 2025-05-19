@@ -1794,32 +1794,6 @@ vix_data = pd.read_sql(
 )
 logger.info(f"Loaded {len(vix_data)} rows for VIX from macro_data")
 
-# Try to get recent data from Yahoo Finance first
-yahoo_vix_data = fetch_vix_from_yahoo()
-
-if not yahoo_vix_data.empty:
-    # If Yahoo Finance data is available, use it
-    logger.info("Using Yahoo Finance for recent VIX data")
-    
-    # If we already have some historical data from FRED, keep it and append the new data
-    if not vix_data.empty:
-        # Find the latest date in the Yahoo data we want to use
-        yahoo_latest_date = yahoo_vix_data['date'].max()
-        
-        # Keep only FRED data older than our Yahoo data to avoid duplicates
-        vix_data = vix_data[vix_data['date'] < yahoo_latest_date - timedelta(days=1)]
-        
-        # Combine the datasets
-        combined_vix_data = pd.concat([vix_data, yahoo_vix_data])
-        vix_data = combined_vix_data
-    else:
-        # If no historical data, just use Yahoo data
-        vix_data = yahoo_vix_data
-    
-        logger.info(f"VIX data updated with {len(vix_data)} observations from FRED")
-    else:
-        logger.error("Failed to fetch VIX data from both Yahoo Finance and FRED")
-
 # Calculate 14-day EMA for VIX if we have data
 if not vix_data.empty and 'date' in vix_data.columns and 'value' in vix_data.columns:
     # Sort data by date ascending (oldest to newest) for correct EMA calculation
