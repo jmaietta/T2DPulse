@@ -3,9 +3,9 @@
 
 import os
 import datetime as dt
-
 import pandas as pd
 import sqlalchemy
+from sqlalchemy import text
 from pandas_datareader import data as pdr
 from pandas_datareader.fred import FredReader
 import yfinance as yf
@@ -17,7 +17,6 @@ if not db_url:
 engine = sqlalchemy.create_engine(db_url)
 
 # --- 2) Define series to fetch ---
-# FRED series identifiers and their human-friendly names
 FRED_SERIES = {
     "CPIAUCSL": "Inflation (CPI)",
     "FEDFUNDS": "Fed Funds Rate",
@@ -31,10 +30,9 @@ FRED_SERIES = {
     "UNRATE": "Unemployment Rate",
     "IHLIDXUSTPSOFTDEVE": "Software Job Postings"
 }
-# Yahoo tickers for market indexes
 YF_INDICES = {
     "^IXIC": "NASDAQ",
-    "^VIX":  "VIX"
+    "^VIX": "VIX"
 }
 
 # --- 3) Fetch FRED series (last 60 days) ---
@@ -44,11 +42,10 @@ for series, name in FRED_SERIES.items():
     # clear any existing rows in this window to avoid duplicates
     with engine.begin() as conn:
         conn.execute(
-            "DELETE FROM macro_data WHERE series = %s AND date BETWEEN %s AND %s",
-            (series, start, end)
+            text("DELETE FROM macro_data WHERE series = :series AND date BETWEEN :start AND :end"),
+            {"series": series, "start": start, "end": end}
         )
     try:
-        # Use DataReader with API key
         df = pdr.DataReader(
             series,
             "fred",
@@ -66,7 +63,7 @@ for series, name in FRED_SERIES.items():
     df.to_sql('macro_data', engine, if_exists='append', index=False, method='multi')
     print(f"✅ Loaded {len(df)} rows for {series}")
 
-# --- 4) Fetch Yahoo Finance indices (last 60 days) --- (last 60 days) ---
+# --- 4) Fetch Yahoo Finance indices (last 60 days) ---
 for ticker, series in YF_INDICES.items():
     try:
         yf_df = yf.download(ticker, start=start, end=end, progress=False)
