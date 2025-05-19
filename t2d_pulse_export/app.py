@@ -1698,7 +1698,22 @@ if nasdaq_data.empty or (datetime.now() - pd.to_datetime(nasdaq_data['date'].max
             print("Failed to fetch NASDAQ data from any source")
 
 # Add Producer Price Index for Software Publishers from FRED (PCU511210511210)
-software_ppi_data = load_data_from_csv('software_ppi_data.csv')
+# --- Software PPI: load directly from Postgres ---
+import sqlalchemy, os
+engine = sqlalchemy.create_engine(os.getenv("DATABASE_URL"))
+
+software_ppi_data = pd.read_sql(
+    """
+    SELECT date,
+           value AS software_ppi
+    FROM   macro_data
+    WHERE  series = 'PCU511210511210'
+    ORDER  BY date
+    """,
+    engine,
+    parse_dates=["date"]
+)
+logger.info(f"Loaded {len(software_ppi_data)} rows for Software PPI from macro_data")
 
 # If no existing data or data is old, fetch new data
 if software_ppi_data.empty or (datetime.now() - pd.to_datetime(software_ppi_data['date'].max())).days > 30:
