@@ -1634,7 +1634,22 @@ treasury_yield_data = pd.read_sql(
 logger.info(f"Loaded {len(treasury_yield_data)} rows for 10Y Treasury Yield from macro_data")
 
 # Add NASDAQ Composite data from FRED (NASDAQCOM)
-nasdaq_data = load_data_from_csv('nasdaq_data.csv')
+# --- NASDAQ Index: load directly from Postgres ---
+import sqlalchemy, os
+engine = sqlalchemy.create_engine(os.getenv("DATABASE_URL"))
+
+nasdaq_data = pd.read_sql(
+    """
+    SELECT date,
+           value AS nasdaq
+    FROM   macro_data
+    WHERE  series = 'NASDAQ'
+    ORDER  BY date
+    """,
+    engine,
+    parse_dates=["date"]
+)
+logger.info(f"Loaded {len(nasdaq_data)} rows for NASDAQ from macro_data")
 
 # Add Consumer Sentiment data (USACSCICP02STSAM)
 # --- Consumer Sentiment: load directly from Postgres ---
