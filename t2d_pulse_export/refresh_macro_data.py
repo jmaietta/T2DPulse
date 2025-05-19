@@ -1,65 +1,70 @@
 # refresh_macro_data.py
-# ETL script: load macroeconomic CSV indicators into Postgres
+# ETL script: fetch macroeconomic and market indicators and store in Postgres
 
 import os
+import datetime as dt
+
 import pandas as pd
 import sqlalchemy
+from pandas_datareader import data as pdr
+import yfinance as yf
 
-# 1) Connect to Postgres
+# --- 1) Database connection ---
 db_url = os.getenv("DATABASE_URL")
 if not db_url:
     raise RuntimeError("DATABASE_URL environment variable not set")
 engine = sqlalchemy.create_engine(db_url)
 
-# 2) Map CSV filenames to series codes
-CSV_MAP = {
-    "inflation_data.csv":       "CPIAUCSL",            # Consumer Price Index
-    "interest_rate_data.csv":   "FEDFUNDS",            # Federal Funds Rate
-    "treasury_yield_data.csv":  "DGS10",               # 10-year Treasury Yield
-    "consumer_sentiment_data.csv": "USACSCICP02STSAM", # Consumer Confidence Index
-    "pce_data.csv":             "PCE",                 # Personal Consumption Expenditures
-    "pcepi_data.csv":           "PCEPI",               # PCE Price Index
-    "gdp_data.csv":             "GDPC1",               # Real GDP
-    "nasdaq_data.csv":          "NASDAQ",              # NASDAQ Composite Index
-    "vix_data.csv":             "VIX",                 # CBOE VIX
-    "job_postings_data.csv":    "IHLIDXUSTPSOFTDEVE",  # Software Job Postings Index
-    "software_ppi_data.csv":    "PCU511210511210",     # Software PPI
-    "data_processing_ppi_data.csv": "PCU5112105112105", # Data Processing PPI
-    "unemployment_data.csv":    "UNRATE",              # Unemployment Rate
+# --- 2) Define series to fetch ---
+# FRED series identifiers and their human-friendly names
+FRED_SERIES = {
+    "CPIAUCSL": "Inflation (CPI)",
+    "FEDFUNDS": "Fed Funds Rate",
+    "DGS10": "10Y Treasury Yield",
+    "USACSCICP02STSAM": "Consumer Sentiment",
+    "PCE": "Personal Consumption Expenditures",
+    "PCEPI": "PCE Price Index",
+    "GDPC1": "Real GDP",
+    "PCU511210511210": "Software PPI",
+    "PCU5112105112105": "Data Processing PPI",
+    "UNRATE": "Unemployment Rate",
+    "IHLIDXUSTPSOFTDEVE": "Software Job Postings"
+}
+# Yahoo tickers for market indexes
+YF_INDICES = {
+    "^IXIC": "NASDAQ",
+    "^VIX":  "VIX"
 }
 
-# 3) Process each CSV and load into macro_data table
-for csv_file, series in CSV_MAP.items():
-    # Attempt to locate the CSV\    
-    if os.path.exists(csv_file):
-        path = csv_file
-    elif os.path.exists(os.path.join("data", csv_file)):
-        path = os.path.join("data", csv_file)
-    else:
-        print(f"⚠️  File not found: {csv_file}, skipping")
+# --- 3) Fetch FRED series (last 60 days) ---
+end = dt.date.today()
+start = end - dt.timedelta(days=60)
+for series, name in FRED_SERIES.items():
+    try:
+        df = pdr.DataReader(series, 'fred', start, end)
+    except Exception as e:
+        print(f"⚠️  Failed to fetch {series} from FRED: {e}")
         continue
+    df = df.reset_index()
+    df.columns = ['date', 'value']
+    df['series'] = series
+    df = df[['series', 'date', 'value']]
+    df.to_sql('macro_data', engine, if_exists='append', index=False, method='multi')
+    print(f"✅ Loaded {len(df)} rows for {series}")
 
-    # Load file
-    df = pd.read_csv(path)
-    # Rename first two columns to 'date' and 'value'
-    df.rename(columns={df.columns[0]: "date", df.columns[1]: "value"}, inplace=True)
+# --- 4) Fetch Yahoo Finance indices (last 60 days) ---
+for ticker, series in YF_INDICES.items():
+    try:
+        yf_df = yf.download(ticker, start=start, end=end, progress=False)
+    except Exception as e:
+        print(f"⚠️  Failed to fetch {ticker} from Yahoo: {e}")
+        continue
+    yf_df = yf_df.reset_index()[['Date', 'Close']]
+    yf_df.columns = ['date', 'value']
+    yf_df['series'] = series
+    yf_df = yf_df[['series', 'date', 'value']]
+    yf_df.to_sql('macro_data', engine, if_exists='append', index=False, method='multi')
+    print(f"✅ Loaded {len(yf_df)} rows for {series}")
 
-    # Drop any duplicate columns created by rename
-    df = df.loc[:, ~df.columns.duplicated()]
-
-    # Parse 'date' column to datetime
-    df["date"] = pd.to_datetime(df["date"], errors="coerce")
-    df["series"] = series
-
-    # Reorder and select
-    df = df[["series", "date", "value"]]
-
-    # Insert into Postgres
-    df.to_sql(
-        "macro_data",
-        engine,
-        if_exists="append",
-        index=False,
-        method="multi"
-    )
-    print(f"✅ Loaded {len(df)} rows for {series} from {path}")
+# --- 5) Done ---
+print("🌐 Macro data ETL complete.")
