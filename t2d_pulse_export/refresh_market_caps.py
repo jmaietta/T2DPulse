@@ -38,23 +38,29 @@ TICKERS = [
     ("SSYS",  "Hardware Devices"), ("STX",   "Hardware Devices"),
     ("WDC",   "Hardware Devices"),
 
-    ("CCCS",  "Vertical SaaS"), ("CPRT",  "Vertical SaaS"), ("CSGP",  "Vertical SaaS"),
-    ("GWRE",  "Vertical SaaS"), ("ICE",   "Vertical SaaS"), ("PCOR",  "Vertical SaaS"),
+    ("CCCS",  "Vertical SaaS"), ("CPRT",  "Vertical SaaS"),
+    ("CSGP",  "Vertical SaaS"), ("GWRE",  "Vertical SaaS"),
+    ("ICE",   "Vertical SaaS"), ("PCOR",  "Vertical SaaS"),
     ("SSNC",  "Vertical SaaS"), ("TTAN",  "Vertical SaaS"),
 
-    ("AFRM",  "FinTech"), ("BILL",  "FinTech"), ("COIN",  "FinTech"), ("FIS",   "FinTech"),
-    ("FI",    "FinTech"), ("GPN",   "FinTech"), ("PYPL",  "FinTech"), ("SSNC",  "FinTech"),
-    ("XYZ",   "FinTech"),
+    ("AFRM",  "FinTech"), ("BILL",  "FinTech"), ("COIN",  "FinTech"),
+    ("FIS",   "FinTech"), ("FI",    "FinTech"), ("GPN",   "FinTech"),
+    ("PYPL",  "FinTech"), ("SSNC",  "FinTech"), ("XYZ",   "FinTech"),
 
-    ("CHKP",  "Cybersecurity"), ("CRWD",  "Cybersecurity"), ("CYBR",  "Cybersecurity"),
-    ("FTNT",  "Cybersecurity"), ("NET",   "Cybersecurity"), ("OKTA",  "Cybersecurity"),
-    ("PANW",  "Cybersecurity"), ("S",     "Cybersecurity"), ("ZS",    "Cybersecurity"),
+    ("CHKP",  "Cybersecurity"), ("CRWD",  "Cybersecurity"),
+    ("CYBR",  "Cybersecurity"), ("FTNT",  "Cybersecurity"),
+    ("NET",   "Cybersecurity"), ("OKTA",  "Cybersecurity"),
+    ("PANW",  "Cybersecurity"), ("S",     "Cybersecurity"),
+    ("ZS",    "Cybersecurity"),
 
-    ("ADSK",  "Enterprise SaaS"), ("AMZN",  "Enterprise SaaS"), ("CRM",   "Enterprise SaaS"),
-    ("IBM",   "Enterprise SaaS"), ("MSFT",  "Enterprise SaaS"), ("NOW",   "Enterprise SaaS"),
-    ("ORCL",  "Enterprise SaaS"), ("SAP",   "Enterprise SaaS"), ("WDAY",  "Enterprise SaaS"),
+    ("ADSK",  "Enterprise SaaS"), ("AMZN",  "Enterprise SaaS"),
+    ("CRM",   "Enterprise SaaS"), ("IBM",   "Enterprise SaaS"),
+    ("MSFT",  "Enterprise SaaS"), ("NOW",   "Enterprise SaaS"),
+    ("ORCL",  "Enterprise SaaS"), ("SAP",   "Enterprise SaaS"),
+    ("WDAY",  "Enterprise SaaS"),
 
-    ("BABA",  "eCommerce"), ("BKNG",  "eCommerce"), ("CHWY",  "eCommerce"), ("EBAY",  "eCommerce"),
+    ("BABA",  "eCommerce"), ("BKNG",  "eCommerce"),
+    ("CHWY",  "eCommerce"), ("EBAY",  "eCommerce"),
     ("ETSY",  "eCommerce"), ("PDD",   "eCommerce"), ("SE",    "eCommerce"),
     ("SHOP",  "eCommerce"), ("WMT",   "eCommerce"),
 
@@ -62,16 +68,19 @@ TICKERS = [
     ("GTLB",  "Dev Tools Analytics"), ("MDB",   "Dev Tools Analytics"),
     ("TEAM",  "Dev Tools Analytics"),
 
-    ("ADBE",  "SMB SaaS"), ("GOOGL", "SMB SaaS"), ("HUBS",  "SMB SaaS"),
-    ("INTU",  "SMB SaaS"), ("META",  "SMB SaaS"),
+    ("ADBE",  "SMB SaaS"), ("BILL",  "SMB SaaS"), ("GOOGL", "SMB SaaS"),
+    ("HUBS",  "SMB SaaS"), ("INTU",  "SMB SaaS"), ("META",  "SMB SaaS"),
 
-    ("ABNB",  "Consumer Internet"), ("NFLX",  "Consumer Internet"),
-    ("PINS",  "Consumer Internet"), ("SNAP",  "Consumer Internet"),
-    ("SPOT",  "Consumer Internet"), ("TRIP",  "Consumer Internet"),
-    ("YELP",  "Consumer Internet"),
+    ("ABNB",  "Consumer Internet"), ("BKNG",  "Consumer Internet"),
+    ("GOOGL", "Consumer Internet"), ("META",  "Consumer Internet"),
+    ("NFLX",  "Consumer Internet"), ("PINS",  "Consumer Internet"),
+    ("SNAP",  "Consumer Internet"), ("SPOT",  "Consumer Internet"),
+    ("TRIP",  "Consumer Internet"), ("YELP",  "Consumer Internet"),
 
-    ("AMZN",  "AI Infrastructure"), ("IBM",   "AI Infrastructure"),
-    ("NVDA",  "AI Infrastructure"), ("ORCL",  "AI Infrastructure"),
+    ("AMZN",  "AI Infrastructure"), ("GOOGL", "AI Infrastructure"),
+    ("IBM",   "AI Infrastructure"), ("META",  "AI Infrastructure"),
+    ("MSFT",  "AI Infrastructure"), ("NVDA",  "AI Infrastructure"),
+    ("ORCL",  "AI Infrastructure"),
 ]
 
 # --- Helper to retrieve total shares outstanding ---
