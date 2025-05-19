@@ -1813,7 +1813,24 @@ if pce_data.empty or (datetime.now() - pd.to_datetime(pce_data['date'].max() if 
         print("Failed to fetch PCE data")
 
 # Add PCEPI (Personal Consumption Expenditures: Chain-type Price Index) data
-pcepi_data = load_data_from_csv('pcepi_data.csv')
+
+# --- PCEPI: load directly from Postgres ---
+import sqlalchemy, os
+macro_engine = sqlalchemy.create_engine(os.getenv("DATABASE_URL"))
+
+pcepi_data = pd.read_sql(
+    """
+    SELECT date,
+           value AS pcepi
+    FROM   macro_data
+    WHERE  series = 'PCEPI'
+    ORDER  BY date
+    """,
+    macro_engine,
+    parse_dates=["date"]
+)
+logger.info(f"Loaded {len(pcepi_data)} rows for PCEPI from macro_data")
+
 
 # If no existing data or data is old, fetch new data
 if pcepi_data.empty or (datetime.now() - pd.to_datetime(pcepi_data['date'].max() if not pcepi_data.empty else '2000-01-01')).days > 30:
