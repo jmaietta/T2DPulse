@@ -1548,7 +1548,23 @@ gdp_data = pd.read_sql(
 )
 logger.info(f"Loaded {len(gdp_data)} rows for GDP from macro_data")
 
-pce_data = load_data_from_csv('pce_data.csv')
+# --- PCE: load directly from Postgres ---
+import sqlalchemy, os
+macro_engine = sqlalchemy.create_engine(os.getenv("DATABASE_URL"))
+
+pce_data = pd.read_sql(
+    """
+    SELECT date,
+           value AS pce
+    FROM   macro_data
+    WHERE  series = 'PCE'
+    ORDER  BY date
+    """,
+    macro_engine,
+    parse_dates=["date"]
+)
+logger.info(f"Loaded {len(pce_data)} rows for PCE from macro_data")
+
 unemployment_data = load_data_from_csv('unemployment_data.csv')
 inflation_data = load_data_from_csv('inflation_data.csv')
 interest_rate_data = load_data_from_csv('interest_rate_data.csv')
