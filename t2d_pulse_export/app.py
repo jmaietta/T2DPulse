@@ -1748,7 +1748,22 @@ if software_ppi_data.empty or (datetime.now() - pd.to_datetime(software_ppi_data
         print("Failed to fetch Software PPI data")
 
 # Add Producer Price Index for Data Processing Services from FRED (PCU5112105112105)
-data_processing_ppi_data = load_data_from_csv('data_processing_ppi_data.csv')
+# --- Data-Processing PPI: load directly from Postgres ---
+import sqlalchemy, os
+engine = sqlalchemy.create_engine(os.getenv("DATABASE_URL"))
+
+data_processing_ppi_data = pd.read_sql(
+    """
+    SELECT date,
+           value AS data_processing_ppi
+    FROM   macro_data
+    WHERE  series = 'PCU5112105112105'
+    ORDER  BY date
+    """,
+    engine,
+    parse_dates=["date"]
+)
+logger.info(f"Loaded {len(data_processing_ppi_data)} rows for Data-Processing PPI from macro_data")
 
 # If no existing data or data is old, fetch new data
 if data_processing_ppi_data.empty or (datetime.now() - pd.to_datetime(data_processing_ppi_data['date'].max())).days > 30:
