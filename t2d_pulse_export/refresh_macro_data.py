@@ -7,6 +7,7 @@ import datetime as dt
 import pandas as pd
 import sqlalchemy
 from pandas_datareader import data as pdr
+from pandas_datareader.fred import FredReader
 import yfinance as yf
 
 # --- 1) Database connection ---
@@ -41,7 +42,11 @@ end = dt.date.today()
 start = end - dt.timedelta(days=60)
 for series, name in FRED_SERIES.items():
     try:
-        df = pdr.DataReader(series, 'fred', start, end)
+        # Use FredReader with explicit API key
+        df = FredReader(symbols=series,
+                         start=start,
+                         end=end,
+                         api_key=os.getenv('FRED_API_KEY')).read()
     except Exception as e:
         print(f"⚠️  Failed to fetch {series} from FRED: {e}")
         continue
