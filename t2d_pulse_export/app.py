@@ -1655,7 +1655,22 @@ consumer_sentiment_data = pd.read_sql(
 logger.info(f"Loaded {len(consumer_sentiment_data)} rows for Consumer Sentiment from macro_data")
 
 # Add Software Job Postings from FRED (IHLIDXUSTPSOFTDEVE)
-job_postings_data = load_data_from_csv('job_postings_data.csv')
+# --- Software Job Postings: load directly from Postgres ---
+import sqlalchemy, os
+engine = sqlalchemy.create_engine(os.getenv("DATABASE_URL"))
+
+job_postings_data = pd.read_sql(
+    """
+    SELECT date,
+           value AS job_postings
+    FROM   macro_data
+    WHERE  series = 'IHLIDXUSTPSOFTDEVE'
+    ORDER  BY date
+    """,
+    engine,
+    parse_dates=["date"]
+)
+logger.info(f"Loaded {len(job_postings_data)} rows for Job Postings from macro_data")
 
 # If no existing data or data is old, fetch NASDAQ data with EMA calculation
 if nasdaq_data.empty or (datetime.now() - pd.to_datetime(nasdaq_data['date'].max())).days > 1:
