@@ -1538,7 +1538,16 @@ def parse_uploaded_data(contents, filename):
 
 # Pre-load all data at startup
 print("Loading economic data...")
-gdp_data = load_data_from_csv('gdp_data.csv')
+import sqlalchemy, os
+macro_engine = sqlalchemy.create_engine(os.getenv("DATABASE_URL"))
+
+gdp_data = pd.read_sql(
+    "SELECT date, value AS gdp FROM macro_data WHERE series='GDPC1' ORDER BY date",
+    macro_engine,
+    parse_dates=["date"]
+)
+logger.info(f"Loaded {len(gdp_data)} rows for GDP from macro_data")
+
 pce_data = load_data_from_csv('pce_data.csv')
 unemployment_data = load_data_from_csv('unemployment_data.csv')
 inflation_data = load_data_from_csv('inflation_data.csv')
