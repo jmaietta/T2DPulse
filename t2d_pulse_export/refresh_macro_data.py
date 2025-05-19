@@ -30,18 +30,24 @@ CSV_MAP = {
 
 # 3) Process each CSV and load into macro_data table
 for csv_file, series in CSV_MAP.items():
-    path = os.path.join("data", csv_file)
-    if not os.path.exists(path):
-        print(f"⚠️  File not found: {csv_file}, skipping")
+    # Locate the CSV: check current directory, then 'data/' subfolder
+    if os.path.exists(csv_file):
+        path = csv_file
+    elif os.path.exists(os.path.join("data", csv_file)):
+        path = os.path.join("data", csv_file)
+    else:
+        print(f"⚠️  File not found: {csv_file} (searched cwd and data/), skipping")
         continue
 
-    df = pd.read_csv(path, parse_dates=["date"] if "date" in pd.read_csv(path).columns else [0])
-    # ensure columns are series, date, value
-    # assume CSV has columns [date, value]
+    # Load and normalize
+    df = pd.read_csv(path)
+    # Expect first column as date, second as value
     df = df.rename(columns={df.columns[0]: "date", df.columns[1]: "value"})
+    df["date"] = pd.to_datetime(df["date"])
     df["series"] = series
     df = df[["series", "date", "value"]]
 
+    # Insert into Postgres
     df.to_sql(
         "macro_data",
         engine,
@@ -49,4 +55,4 @@ for csv_file, series in CSV_MAP.items():
         index=False,
         method="multi"
     )
-    print(f"✅ Loaded {len(df)} rows for {series} from {csv_file}")
+    print(f"✅ Loaded {len(df)} rows for {series} from {path}")
