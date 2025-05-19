@@ -1978,7 +1978,22 @@ if pcepi_data.empty or (datetime.now() - pd.to_datetime(pcepi_data['date'].max()
         print("Failed to fetch PCEPI data")
 
 # Add VIX volatility index data
-vix_data = load_data_from_csv('vix_data.csv')
+# --- VIX Index: load directly from Postgres ---
+import sqlalchemy, os
+engine = sqlalchemy.create_engine(os.getenv("DATABASE_URL"))
+
+vix_data = pd.read_sql(
+    """
+    SELECT date,
+           value AS vix
+    FROM   macro_data
+    WHERE  series = 'VIX'
+    ORDER  BY date
+    """,
+    engine,
+    parse_dates=["date"]
+)
+logger.info(f"Loaded {len(vix_data)} rows for VIX from macro_data")
 
 # Try to get recent data from Yahoo Finance first
 yahoo_vix_data = fetch_vix_from_yahoo()
