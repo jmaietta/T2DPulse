@@ -1812,52 +1812,6 @@ if data_processing_ppi_data.empty or (datetime.now() - pd.to_datetime(data_proce
     else:
         print("Failed to fetch Data Processing PPI data")
 
-# Fetch GDP data if needed
-if gdp_data.empty or (datetime.now() - pd.to_datetime(gdp_data['date'].max())).days > 90:
-    # Fetch real GDP (GDPC1)
-    gdp_temp = fetch_fred_data('GDPC1')
-    
-    if not gdp_temp.empty:
-        # Calculate year-over-year growth
-        gdp_temp = gdp_temp.sort_values('date')
-        
-        # Create a dataframe shifted by 4 quarters to calculate YoY change (GDP is quarterly)
-        gdp_yoy = gdp_temp.copy()
-        gdp_yoy['date'] = gdp_yoy['date'] + pd.DateOffset(months=12)
-        gdp_yoy = gdp_yoy.rename(columns={'value': 'year_ago_value'})
-        
-        # Merge current and year-ago values
-        gdp_data = pd.merge(
-            gdp_temp, 
-            gdp_yoy[['date', 'year_ago_value']], 
-            on='date', 
-            how='left'
-        )
-        
-        # Calculate YoY growth
-        gdp_data['yoy_growth'] = ((gdp_data['value'] - gdp_data['year_ago_value']) / 
-                                 gdp_data['year_ago_value'] * 100)
-        
-        # Save data
-        save_data_to_csv(gdp_data, 'gdp_data.csv')
-        
-        print(f"GDP data updated with {len(gdp_data)} observations")
-    else:
-        print("Failed to fetch GDP data")
-
-# Fetch unemployment data if needed
-if unemployment_data.empty or (datetime.now() - pd.to_datetime(unemployment_data['date'].max())).days > 30:
-    # Fetch unemployment rate (UNRATE)
-    unemployment_data = fetch_fred_data('UNRATE')
-    
-    if not unemployment_data.empty:
-        # Save data
-        save_data_to_csv(unemployment_data, 'unemployment_data.csv')
-        
-        print(f"Unemployment data updated with {len(unemployment_data)} observations")
-    else:
-        print("Failed to fetch unemployment data")
-
 # Fetch inflation data if needed
 if inflation_data.empty or (datetime.now() - pd.to_datetime(inflation_data['date'].max())).days > 30:
     # Fetch CPI (CPIAUCSL)
@@ -2056,20 +2010,6 @@ if not vix_data.empty and 'date' in vix_data.columns and 'value' in vix_data.col
     
     # Save updated data with EMA
     save_data_to_csv(vix_data, 'vix_data.csv')
-
-# Add Consumer Sentiment data
-if consumer_sentiment_data.empty or (datetime.now() - pd.to_datetime(consumer_sentiment_data['date'].max() if not consumer_sentiment_data.empty else '2000-01-01')).days > 30:
-    # Fetch Consumer Confidence Composite Index (USACSCICP02STSAM)
-    consumer_sentiment_temp = fetch_consumer_sentiment_data()
-    
-    if not consumer_sentiment_temp.empty:
-        consumer_sentiment_data = consumer_sentiment_temp
-        # Save data
-        save_data_to_csv(consumer_sentiment_data, 'consumer_sentiment_data.csv')
-        
-        logger.info(f"Consumer Sentiment data updated with {len(consumer_sentiment_data)} observations")
-    else:
-        logger.error("Failed to fetch Consumer Sentiment data")
 
 # Add Software Job Postings data
 if job_postings_data.empty or (datetime.now() - pd.to_datetime(job_postings_data['date'].max() if not job_postings_data.empty else '2000-01-01')).days > 7:
@@ -5451,12 +5391,6 @@ def update_consumer_sentiment_container(n):
         # Save data
         save_data_to_csv(gdp_data, 'gdp_data.csv')
     
-    # Unemployment
-    unemployment_temp = fetch_fred_data('UNRATE')
-    if not unemployment_temp.empty:
-        unemployment_data = unemployment_temp
-        save_data_to_csv(unemployment_data, 'unemployment_data.csv')
-    
     # Inflation (CPI)
     cpi_temp = fetch_fred_data('CPIAUCSL')
     if not cpi_temp.empty:
@@ -5483,12 +5417,6 @@ def update_consumer_sentiment_container(n):
         # Save data
         save_data_to_csv(inflation_data, 'inflation_data.csv')
     
-    # Interest rates
-    interest_temp = fetch_fred_data('FEDFUNDS')
-    if not interest_temp.empty:
-        interest_rate_data = interest_temp
-        save_data_to_csv(interest_rate_data, 'interest_rate_data.csv')
-    
     # PCEPI (Personal Consumption Expenditures: Chain-type Price Index)
     pcepi_temp = fetch_fred_data('PCEPI')
     if not pcepi_temp.empty:
@@ -5511,10 +5439,6 @@ def update_consumer_sentiment_container(n):
         # Calculate YoY growth
         pcepi_data['yoy_growth'] = ((pcepi_data['value'] - pcepi_data['year_ago_value']) / 
                                   pcepi_data['year_ago_value'] * 100)
-        
-        # Save data
-        save_data_to_csv(pcepi_data, 'pcepi_data.csv')
-        print(f"PCEPI data updated with {len(pcepi_data)} observations")
     
     # Also update other datasets
     # NASDAQ with EMA calculation
@@ -5536,67 +5460,6 @@ def update_consumer_sentiment_container(n):
             nasdaq_data = fred_nasdaq_data
             save_data_to_csv(nasdaq_data, 'nasdaq_data.csv')
             print(f"NASDAQ data updated from FRED with {len(nasdaq_data)} observations")
-    
-    # VIX (CBOE Volatility Index)
-    vix_temp = fetch_fred_data('VIXCLS')
-    if not vix_temp.empty:
-        vix_data = vix_temp
-        save_data_to_csv(vix_data, 'vix_data.csv')
-        print(f"VIX data updated with {len(vix_data)} observations")
-        
-    # Consumer Sentiment (Consumer Confidence Composite Index)
-    consumer_sentiment_temp = fetch_consumer_sentiment_data()
-    if not consumer_sentiment_temp.empty:
-        consumer_sentiment_data = consumer_sentiment_temp
-        save_data_to_csv(consumer_sentiment_data, 'consumer_sentiment_data.csv')
-        print(f"Consumer Sentiment data updated with {len(consumer_sentiment_data)} observations")
-    
-    # 10-Year Treasury Yield - Using Yahoo Finance for real-time data
-    treasury_temp = fetch_treasury_yield_data()
-    if not treasury_temp.empty:
-        # Merge with existing data to maintain historical records
-        # First get the most recent date from Yahoo Finance
-        latest_yahoo_date = treasury_temp['date'].max()
-        
-        # Access the global treasury_yield_data which was loaded earlier
-        # Add a check if it's defined and not empty
-        global treasury_yield_data
-        if 'treasury_yield_data' in globals() and not treasury_yield_data.empty:
-            historical_data = treasury_yield_data[treasury_yield_data['date'] < latest_yahoo_date - timedelta(days=30)]
-            # Append the Yahoo Finance data (more recent) to the historical data
-            treasury_yield_data = pd.concat([historical_data, treasury_temp], ignore_index=True)
-        else:
-            treasury_yield_data = treasury_temp
-            
-        # Save the merged data
-        save_data_to_csv(treasury_yield_data, 'treasury_yield_data.csv')
-        print(f"Treasury Yield data updated with real-time data from Yahoo Finance")
-        
-    # Software Job Postings
-    job_postings_temp = fetch_fred_data('IHLIDXUSTPSOFTDEVE')
-    if not job_postings_temp.empty:
-        # Calculate year-over-year growth
-        job_postings_temp = job_postings_temp.sort_values('date')
-        
-        # Create a dataframe shifted by 12 months to calculate YoY change
-        postings_yoy = job_postings_temp.copy()
-        postings_yoy['date'] = postings_yoy['date'] + pd.DateOffset(months=12)
-        postings_yoy = postings_yoy.rename(columns={'value': 'year_ago_value'})
-        
-        # Merge current and year-ago values
-        job_postings_data = pd.merge(
-            job_postings_temp, 
-            postings_yoy[['date', 'year_ago_value']], 
-            on='date', 
-            how='left'
-        )
-        
-        # Calculate YoY growth
-        job_postings_data['yoy_growth'] = ((job_postings_data['value'] - job_postings_data['year_ago_value']) / 
-                              job_postings_data['year_ago_value'] * 100)
-        
-        # Save data
-        save_data_to_csv(job_postings_data, 'job_postings_data.csv')
     
     # Update indicator values for display
     return (
