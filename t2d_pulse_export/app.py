@@ -1801,32 +1801,6 @@ if inflation_data.empty or (datetime.now() - pd.to_datetime(inflation_data['date
     else:
         print("Failed to fetch inflation data")
 
-# Fetch interest rate data if needed
-if interest_rate_data.empty or (datetime.now() - pd.to_datetime(interest_rate_data['date'].max())).days > 7:
-    # Fetch Federal Funds Rate (FEDFUNDS)
-    interest_rate_data = fetch_fred_data('FEDFUNDS')
-    
-    if not interest_rate_data.empty:
-        # Save data
-        save_data_to_csv(interest_rate_data, 'interest_rate_data.csv')
-        
-        print(f"Interest rate data updated with {len(interest_rate_data)} observations")
-    else:
-        print("Failed to fetch interest rate data")
-
-# Fetch 10-Year Treasury yield data if needed
-if treasury_yield_data.empty or (datetime.now() - pd.to_datetime(treasury_yield_data['date'].max())).days > 7:
-    # Fetch 10-Year Treasury Constant Maturity Rate (DGS10)
-    treasury_yield_data = fetch_fred_data('DGS10')
-    
-    if not treasury_yield_data.empty:
-        # Save data
-        save_data_to_csv(treasury_yield_data, 'treasury_yield_data.csv')
-        
-        print(f"Treasury yield data updated with {len(treasury_yield_data)} observations")
-    else:
-        print("Failed to fetch treasury yield data")
-
 # Add Personal Consumption Expenditures (PCE) data
 if pce_data.empty or (datetime.now() - pd.to_datetime(pce_data['date'].max() if not pce_data.empty else '2000-01-01')).days > 30:
     # Fetch PCE data (PCE)
