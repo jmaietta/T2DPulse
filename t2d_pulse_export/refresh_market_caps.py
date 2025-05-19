@@ -131,13 +131,12 @@ def main(days_back: int = 30):
         df["sector"] = sector
         df["shares_outstanding"] = scount
 
-        # 3) Compute market cap per row
-        df["market_cap"] = df.apply(
-            lambda r: r["close_price"] * r["shares_outstanding"], axis=1
-        )
+        # 3) Compute market cap per row (explicit list)
+        market_caps_list = (df["close_price"] * df["shares_outstanding"]).tolist()
+        df["market_cap"] = market_caps_list
 
         # 4) Collect only the needed columns
-        rows.append(df[["date", "ticker", "sector", "close_price", "shares_outstanding", "market_cap"]])
+        rows.append(df[["date", "ticker", "sector", "close_price", "shares_outstanding", "market_cap"]])(df[["date", "ticker", "sector", "close_price", "shares_outstanding", "market_cap"]])
 
     # 5) Insert into Postgres
     if not rows:
