@@ -1,7 +1,8 @@
 # compute_stock_sentiment.py
 # -------------------------------------------
 # Compute full historical stock-level sentiment as the 20-day EMA of daily market-cap returns,
-# normalize to 0–100 scale, dedupe to one row per ticker-date, and populate stock_sentiment_history table end-to-end.
+# normalize to 0–100 scale, dedupe one row per ticker-date, and populate stock_sentiment_history table.
+# Then display the most recent 20 trading-day sentiment for GOOGL.
 
 #!/usr/bin/env python3
 import os
@@ -15,7 +16,7 @@ if not db_url:
 engine = create_engine(db_url)
 
 # 2) Load deduplicated market-cap history as price proxy
-#    Select max market_cap per ticker-date to collapse duplicates across sectors
+#    Use MAX(market_cap) per ticker-date to collapse duplicates across sectors
 df = pd.read_sql(
     """
     SELECT date, ticker, MAX(market_cap) AS market_cap
@@ -43,14 +44,13 @@ df['raw_sentiment_score'] = (
 # 6) Normalize to 0–100 scale: percent form + 50 shift
 df['sentiment_score'] = df['raw_sentiment_score'] * 100 + 50
 
-# 7) Prepare final DataFrame: drop NaN, convert date to date-only, and dedupe
+# 7) Prepare final DataFrame: drop NaN, convert date to date-only, dedupe
 df_final = df[['date','ticker','sentiment_score','raw_sentiment_score']].dropna().copy()
-# Convert datetime to date
-df_final['date'] = df_final['date'].dt.date
-# Ensure one row per ticker-date
+df_final['date'] = df_final['date'].dt.date  # convert to date
+# ensure one entry per ticker-date
 df_final = df_final.drop_duplicates(subset=['date','ticker'])
 
-# 8) Persist into stock_sentiment_history end-to-end
+# 8) Persist into stock_sentiment_history
 with engine.begin() as conn:
     # Recreate the table
     conn.execute(text("DROP TABLE IF EXISTS stock_sentiment_history;"))
@@ -67,11 +67,11 @@ with engine.begin() as conn:
 
 print(f"Computed {len(df_final)} rows into stock_sentiment_history.")
 
-# 9) Bonus: Display the most recent 10-day sentiment for GOOGL
+# 9) Display the most recent 20 trading-day sentiment for GOOGL
 try:
     googl = df_final[df_final['ticker'] == 'GOOGL']
-    googl = googl.sort_values('date', ascending=False).head(10)
-    print("Last 10 Trading-Day Sentiment for GOOGL:")
+    googl = googl.sort_values('date', ascending=False).head(20)
+    print("\nLast 20 Trading-Day Sentiment for GOOGL:")
     print(googl[['date','sentiment_score']].to_string(index=False))
 except Exception as e:
     print(f"Could not display GOOGL history: {e}")
