@@ -1,8 +1,8 @@
 # compute_stock_sentiment.py
 # -------------------------------------------
-# Compute full historical stock-level sentiment as the 20-day EMA of daily market-cap returns,
-# normalize to 0–100 scale, dedupe one row per ticker-date, and populate stock_sentiment_history table.
-# Then display the most recent 20 trading-day sentiment for GOOGL.
+# Compute full historical stock-level sentiment as the 3-day EMA of daily market-cap returns,
+# normalize to a 0–100 scale, dedupe one row per ticker-date, and populate stock_sentiment_history table.
+# Then display the most recent 20 trading-day history of the 3-day EMA sentiment for GOOGL.
 
 #!/usr/bin/env python3
 import os
@@ -34,25 +34,25 @@ df = df.sort_values(['ticker', 'date']).reset_index(drop=True)
 # 4) Compute daily returns per ticker
 df['daily_return'] = df.groupby('ticker')['market_cap'].pct_change()
 
-# 5) Compute raw 20-day EMA of returns for sentiment proxy
-alpha = 2 / (20 + 1)
+# 5) Compute raw 3-day EMA of returns for sentiment proxy
+#    α = 2/(span+1) with span=3
 df['raw_sentiment_score'] = (
     df.groupby('ticker')['daily_return']
-      .transform(lambda x: x.ewm(span=20, adjust=False).mean())
+      .transform(lambda x: x.ewm(span=3, adjust=False).mean())
 )
 
-# 6) Normalize to 0–100 scale: percent form + 50 shift
+# 6) Normalize to 0–100 scale: percentage ×100 then +50 shift
 df['sentiment_score'] = df['raw_sentiment_score'] * 100 + 50
 
-# 7) Prepare final DataFrame: drop NaN, convert date to date-only, dedupe
+# 7) Prepare final DataFrame: drop NaN, convert date to date-only, and dedupe
 df_final = df[['date','ticker','sentiment_score','raw_sentiment_score']].dropna().copy()
-df_final['date'] = df_final['date'].dt.date  # convert to date
+df_final['date'] = df_final['date'].dt.date  # convert datetime to date
 # ensure one entry per ticker-date
 df_final = df_final.drop_duplicates(subset=['date','ticker'])
 
-# 8) Persist into stock_sentiment_history
+# 8) Persist into stock_sentiment_history table
 with engine.begin() as conn:
-    # Recreate the table
+    # Recreate the table\    
     conn.execute(text("DROP TABLE IF EXISTS stock_sentiment_history;"))
     conn.execute(text(
         "CREATE TABLE stock_sentiment_history ("
@@ -67,11 +67,11 @@ with engine.begin() as conn:
 
 print(f"Computed {len(df_final)} rows into stock_sentiment_history.")
 
-# 9) Display the most recent 20 trading-day sentiment for GOOGL
+# 9) Display the most recent 20 trading-day history of 3-day EMA sentiment for GOOGL
 try:
     googl = df_final[df_final['ticker'] == 'GOOGL']
     googl = googl.sort_values('date', ascending=False).head(20)
-    print("\nLast 20 Trading-Day Sentiment for GOOGL:")
+    print("\nLast 20 Trading-Day Sentiment History (3-day EMA) for GOOGL:")
     print(googl[['date','sentiment_score']].to_string(index=False))
 except Exception as e:
     print(f"Could not display GOOGL history: {e}")
