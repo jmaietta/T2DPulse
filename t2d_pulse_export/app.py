@@ -23,6 +23,7 @@ logger = logging.getLogger(__name__)
 
 import sqlalchemy
 from sqlalchemy import create_engine
+import sentiment_engine
 
 engine = sqlalchemy.create_engine(os.getenv("DATABASE_URL"))
 
@@ -46,6 +47,9 @@ def load_macro_series(series_id: str) -> pd.DataFrame:
     )
     logger.info(f"Loaded {len(df)} rows for {series_id} from macro_data")
     return df
+    
+# Compute initial T2D Pulse score so layout has something to show
+sentiment_index = sentiment_engine.calculate_sentiment_index()
 
 from functools import lru_cache
 
@@ -293,29 +297,6 @@ def fetch_fred_data(series_id, start_date=None, end_date=None):
     except Exception as e:
         print(f"Exception while fetching FRED data: {str(e)}")
         return pd.DataFrame()
-
-def save_data_to_csv(df, filename):
-    """Save DataFrame to CSV file"""
-    if df.empty:
-        print(f"No data to save to {filename}")
-        return False
-        
-    try:
-        # Handle case where the filename already includes the data directory
-        if filename.startswith('data/'):
-            file_path = filename
-        else:
-            file_path = os.path.join(DATA_DIR, filename)
-            
-        # Ensure directory exists
-        os.makedirs(os.path.dirname(file_path), exist_ok=True)
-        
-        df.to_csv(file_path, index=False)
-        print(f"Successfully saved {len(df)} rows to {filename}")
-        return True
-    except Exception as e:
-        print(f"Failed to save data to {filename}: {str(e)}")
-        return False
 
 def fetch_bea_data(table_name, frequency, start_year, end_year):
     """Fetch data from BEA API"""
