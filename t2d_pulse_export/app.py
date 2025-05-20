@@ -48,7 +48,7 @@ def load_macro_series(series_id: str) -> pd.DataFrame:
     return df
     
 # Compute initial T2D Pulse score so layout has something to show
-sentiment_index = calculate_sentiment_index()
+# sentiment_index = calculate_sentiment_index()
 
 from functools import lru_cache
 
