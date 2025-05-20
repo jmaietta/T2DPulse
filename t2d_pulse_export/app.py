@@ -1488,6 +1488,9 @@ pcepi_data = load_macro_series("PCEPI")
 # --- VIX Index: load directly from Postgres ---
 vix_data = load_macro_series("VIXCLS")
 
+# Calculate initial sentiment index
+sentiment_index = calculate_sentiment_index()
+
 # ---- Dashboard Layout ----
 app.layout = html.Div([
     # Hidden div for initialization callbacks
