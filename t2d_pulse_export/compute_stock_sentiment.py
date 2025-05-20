@@ -1,8 +1,8 @@
 # compute_stock_sentiment.py
 # -------------------------------------------
-# Derive stock-level sentiment_score as the 20-day EMA of daily market-cap returns,
-# normalize to a 0–100 scale (percentage plus 50 shift),
-# and load into stock_sentiment_history.
+# Incrementally update stock-level sentiment_score as the 20-day EMA of daily market-cap returns,
+# preserving continuity between trading days, normalizing to a 0–100 scale,
+# and appending only the new day's data to stock_sentiment_history.
 
 #!/usr/bin/env python3
 import os
@@ -15,57 +15,66 @@ if not db_url:
     raise RuntimeError("DATABASE_URL is not set")
 engine = create_engine(db_url)
 
-# 2) Load market-cap history as proxy for price
-#    Table: market_cap_history(date DATE, ticker TEXT, sector TEXT, market_cap DOUBLE PRECISION)
-df = pd.read_sql(
-    "SELECT date, ticker, market_cap FROM market_cap_history ORDER BY ticker, date",
+# 2) Fetch the previous day's raw_sentiment_score for each ticker
+prev_df = pd.read_sql(
+    """
+    SELECT ticker, raw_sentiment_score
+      FROM stock_sentiment_history
+     WHERE date = (
+         SELECT MAX(date) FROM stock_sentiment_history
+     )
+    """,
     engine
 )
+prev_raw = dict(zip(prev_df['ticker'], prev_df['raw_sentiment_score']))
 
-# 3) Normalize and sort
-df['date'] = pd.to_datetime(df['date'])
-df = df.sort_values(['ticker','date'])
-
-# 4) Compute daily returns per ticker
-#    daily_return = (mcap_t / mcap_{t-1}) - 1
-df['daily_return'] = df.groupby('ticker')['market_cap'].pct_change()
-
-# 5) Calculate 20-day EMA of returns as raw sentiment proxy
-raw_sentiment = (
-    df
-    .groupby('ticker')['daily_return']
-    .apply(lambda x: x.ewm(span=20, adjust=False).mean())
-    .reset_index(name='sentiment_score_raw')
+# 3) Get the latest market-cap and prior-day market-cap for each ticker
+mcap_df = pd.read_sql(
+    """
+    WITH mc AS (
+      SELECT date, ticker, market_cap,
+             LAG(market_cap) OVER (PARTITION BY ticker ORDER BY date) AS prev_mcap
+        FROM market_cap_history
+    ), latest AS (
+      SELECT * FROM mc
+       WHERE date = (SELECT MAX(date) FROM market_cap_history)
+    )
+    SELECT date, ticker, market_cap, prev_mcap
+      FROM latest
+     WHERE prev_mcap IS NOT NULL
+    """,
+    engine
 )
+# ensure date type
+mcap_df['date'] = pd.to_datetime(mcap_df['date']).dt.date
 
-# 6) Normalize to 0–100 scale: percentage plus 50 shift
-df_norm = raw_sentiment.copy()
-# percent form
-df_norm['sentiment_pct'] = df_norm['sentiment_score_raw'] * 100
-# shift to 0–100 range
-df_norm['sentiment_score'] = df_norm['sentiment_pct'] + 50
+# 4) Compute daily return
+mcap_df['daily_return'] = mcap_df['market_cap'] / mcap_df['prev_mcap'] - 1
 
-# 7) Merge normalized sentiment back with dates
-df_sent = df[['date','ticker']].reset_index(drop=True)
-df_sent = df_sent.merge(
-    df_norm[['ticker','date','sentiment_score']],
-    on=['ticker','date'],
-    how='left'
-)
+# 5) Update raw sentiment with 20-day EMA formula: EMA_new = α*R_new + (1–α)*EMA_prev
+alpha = 2 / (20 + 1)
 
-# 8) Prepare final DataFrame: one row per date,ticker
-df_final = df_sent[['date','ticker','sentiment_score']].dropna()
-#    Convert to date only
-df_final['date'] = df_final['date'].dt.date
+def compute_raw_ema(row):
+    prev = prev_raw.get(row['ticker'], 0.0)
+    return alpha * row['daily_return'] + (1 - alpha) * prev
 
-# 9) Persist into stock_sentiment_history
-table_sql = (
-    "CREATE TABLE IF NOT EXISTS stock_sentiment_history ("
-    "date DATE, ticker TEXT, sentiment_score DOUBLE PRECISION)"
-)
+mcap_df['raw_sentiment_score'] = mcap_df.apply(compute_raw_ema, axis=1)
+
+# 6) Normalize to 0–100: percent form + 50 shift
+mcap_df['sentiment_score'] = mcap_df['raw_sentiment_score'] * 100 + 50
+
+# 7) Persist only the new day's sentiment into stock_sentiment_history
 with engine.begin() as conn:
-    conn.execute(text("DROP TABLE IF EXISTS stock_sentiment_history;"))
-    conn.execute(text(table_sql))
-    df_final.to_sql('stock_sentiment_history', conn, if_exists='append', index=False)
+    # Ensure table exists with raw_sentiment_score column
+    conn.execute(text(
+        "CREATE TABLE IF NOT EXISTS stock_sentiment_history ("
+        "date DATE, ticker TEXT, sentiment_score DOUBLE PRECISION, raw_sentiment_score DOUBLE PRECISION)"
+    ))
+    # Insert today's records
+    insert_sql = text(
+        "INSERT INTO stock_sentiment_history(date, ticker, sentiment_score, raw_sentiment_score)"
+        " VALUES (:date, :ticker, :sentiment_score, :raw_sentiment_score)"
+    )
+    conn.execute(insert_sql, mcap_df.to_dict(orient='records'))
 
-print(f"Generated and loaded {len(df_final)} rows into stock_sentiment_history (0–100 scale).")
+print(f"Appended {len(mcap_df)} rows to stock_sentiment_history (incremental update).")
