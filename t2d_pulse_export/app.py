@@ -1473,394 +1473,40 @@ print("Loading economic data…")
 gdp_data = load_macro_series("GDPC1")
 
 # --- PCE: load directly from Postgres ---
-import sqlalchemy, os
-macro_engine = sqlalchemy.create_engine(os.getenv("DATABASE_URL"))
-
-pce_data = pd.read_sql(
-    """
-    SELECT date,
-           value AS pce
-    FROM   macro_data
-    WHERE  series = 'PCE'
-    ORDER  BY date
-    """,
-    macro_engine,
-    parse_dates=["date"]
-)
-logger.info(f"Loaded {len(pce_data)} rows for PCE from macro_data")
+pce_data = load_macro_series("PCE")
 
 # --- Unemployment Rate: load directly from Postgres ---
-import sqlalchemy, os
-macro_engine = sqlalchemy.create_engine(os.getenv("DATABASE_URL"))
-
-unemployment_data = pd.read_sql(
-    """
-    SELECT date,
-           value AS unrate
-    FROM   macro_data
-    WHERE  series = 'UNRATE'
-    ORDER  BY date
-    """,
-    macro_engine,
-    parse_dates=["date"]
-)
-logger.info(f"Loaded {len(unemployment_data)} rows for Unemployment Rate from macro_data")
+unemployment_data = load_macro_series("UNRATE")
 
 # --- Inflation (CPI): load directly from Postgres ---
-import sqlalchemy, os
-macro_engine = sqlalchemy.create_engine(os.getenv("DATABASE_URL"))
-
-inflation_data = pd.read_sql(
-    """
-    SELECT date,
-           value AS cpi
-    FROM   macro_data
-    WHERE  series = 'CPIAUCSL'
-    ORDER  BY date
-    """,
-    macro_engine,
-    parse_dates=["date"]
-)
-logger.info(f"Loaded {len(inflation_data)} rows for CPI from macro_data")
+inflation_data = load_macro_series("CPIAUCSL")
 
 # --- Fed Funds Rate: load directly from Postgres ---
-import sqlalchemy, os
-macro_engine = sqlalchemy.create_engine(os.getenv("DATABASE_URL"))
-
-interest_rate_data = pd.read_sql(
-    """
-    SELECT date,
-           value AS fedfunds
-    FROM   macro_data
-    WHERE  series = 'FEDFUNDS'
-    ORDER  BY date
-    """,
-    macro_engine,
-    parse_dates=["date"]
-)
-logger.info(f"Loaded {len(interest_rate_data)} rows for Fed Funds Rate from macro_data")
-
+interest_rate_data = load_macro_series("FEDFUNDS")
+    
 # --- Treasury Yield (10Y): load directly from Postgres ---
-import sqlalchemy, os
-macro_engine = sqlalchemy.create_engine(os.getenv("DATABASE_URL"))
+treasury_yield_data = load_macro_series("DGS10")
 
-treasury_yield_data = pd.read_sql(
-    """
-    SELECT date,
-           value AS dgs10
-    FROM   macro_data
-    WHERE  series = 'DGS10'
-    ORDER  BY date
-    """,
-    macro_engine,
-    parse_dates=["date"]
-)
-logger.info(f"Loaded {len(treasury_yield_data)} rows for 10Y Treasury Yield from macro_data")
-
-# Add NASDAQ Composite data from FRED (NASDAQCOM)
 # --- NASDAQ Index: load directly from Postgres ---
-import sqlalchemy, os
-engine = sqlalchemy.create_engine(os.getenv("DATABASE_URL"))
+nasdaq_data = load_macro_series("NASDAQCOM")
 
-nasdaq_data = pd.read_sql(
-    """
-    SELECT date,
-           value AS nasdaq
-    FROM   macro_data
-    WHERE  series = 'NASDAQ'
-    ORDER  BY date
-    """,
-    engine,
-    parse_dates=["date"]
-)
-logger.info(f"Loaded {len(nasdaq_data)} rows for NASDAQ from macro_data")
-
-# Add Consumer Sentiment data (USACSCICP02STSAM)
 # --- Consumer Sentiment: load directly from Postgres ---
-import sqlalchemy, os
-macro_engine = sqlalchemy.create_engine(os.getenv("DATABASE_URL"))
+consumer_sentiment_data = load_macro_series("USACSCICP02STSAM")
 
-consumer_sentiment_data = pd.read_sql(
-    """
-    SELECT date,
-           value AS consumer_confidence
-    FROM   macro_data
-    WHERE  series = 'USACSCICP02STSAM'
-    ORDER  BY date
-    """,
-    macro_engine,
-    parse_dates=["date"]
-)
-logger.info(f"Loaded {len(consumer_sentiment_data)} rows for Consumer Sentiment from macro_data")
-
-# Add Software Job Postings from FRED (IHLIDXUSTPSOFTDEVE)
 # --- Software Job Postings: load directly from Postgres ---
-import sqlalchemy, os
-engine = sqlalchemy.create_engine(os.getenv("DATABASE_URL"))
+job_postings_data = load_macro_series("IHLIDXUSTPSOFTDEVE")
 
-job_postings_data = pd.read_sql(
-    """
-    SELECT date,
-           value AS job_postings
-    FROM   macro_data
-    WHERE  series = 'IHLIDXUSTPSOFTDEVE'
-    ORDER  BY date
-    """,
-    engine,
-    parse_dates=["date"]
-)
-logger.info(f"Loaded {len(job_postings_data)} rows for Job Postings from macro_data")
-
-# Add Producer Price Index for Software Publishers from FRED (PCU511210511210)
 # --- Software PPI: load directly from Postgres ---
-import sqlalchemy, os
-engine = sqlalchemy.create_engine(os.getenv("DATABASE_URL"))
-
-software_ppi_data = pd.read_sql(
-    """
-    SELECT date,
-           value AS software_ppi
-    FROM   macro_data
-    WHERE  series = 'PCU511210511210'
-    ORDER  BY date
-    """,
-    engine,
-    parse_dates=["date"]
-)
-logger.info(f"Loaded {len(software_ppi_data)} rows for Software PPI from macro_data")
-
-# If no existing data or data is old, fetch new data
-if software_ppi_data.empty or (datetime.now() - pd.to_datetime(software_ppi_data['date'].max())).days > 30:
-    software_ppi_data = fetch_fred_data('PCU511210511210')
+software_ppi_data = load_macro_series("PCU511210511210")
     
-    if not software_ppi_data.empty:
-        # Calculate year-over-year percent change
-        software_ppi_data = software_ppi_data.sort_values('date')
-        
-        # Create a dataframe shifted by 12 months to calculate YoY change
-        software_ppi_yoy = software_ppi_data.copy()
-        software_ppi_yoy['date'] = software_ppi_yoy['date'] + pd.DateOffset(years=1)
-        software_ppi_yoy = software_ppi_yoy.rename(columns={'value': 'year_ago_value'})
-        
-        # Merge current and year-ago values
-        software_ppi_data = pd.merge(
-            software_ppi_data, 
-            software_ppi_yoy[['date', 'year_ago_value']], 
-            on='date', 
-            how='left'
-        )
-        
-        # Calculate YoY percent change
-        software_ppi_data['yoy_pct_change'] = ((software_ppi_data['value'] - software_ppi_data['year_ago_value']) / 
-                                              software_ppi_data['year_ago_value'] * 100)
-
-# Add Producer Price Index for Data Processing Services from FRED (PCU5112105112105)
 # --- Data-Processing PPI: load directly from Postgres ---
-import sqlalchemy, os
-engine = sqlalchemy.create_engine(os.getenv("DATABASE_URL"))
-
-data_processing_ppi_data = pd.read_sql(
-    """
-    SELECT date,
-           value AS data_processing_ppi
-    FROM   macro_data
-    WHERE  series = 'PCU5112105112105'
-    ORDER  BY date
-    """,
-    engine,
-    parse_dates=["date"]
-)
-logger.info(f"Loaded {len(data_processing_ppi_data)} rows for Data-Processing PPI from macro_data")
-
-# If no existing data or data is old, fetch new data
-if data_processing_ppi_data.empty or (datetime.now() - pd.to_datetime(data_processing_ppi_data['date'].max())).days > 30:
-    data_processing_ppi_data = fetch_fred_data('PCU5112105112105')
-    
-    if not data_processing_ppi_data.empty:
-        # Calculate year-over-year percent change
-        data_processing_ppi_data = data_processing_ppi_data.sort_values('date')
-        
-        # Create a dataframe shifted by 12 months to calculate YoY change
-        data_ppi_yoy = data_processing_ppi_data.copy()
-        data_ppi_yoy['date'] = data_ppi_yoy['date'] + pd.DateOffset(years=1)
-        data_ppi_yoy = data_ppi_yoy.rename(columns={'value': 'year_ago_value'})
-        
-        # Merge current and year-ago values
-        data_processing_ppi_data = pd.merge(
-            data_processing_ppi_data, 
-            data_ppi_yoy[['date', 'year_ago_value']], 
-            on='date', 
-            how='left'
-        )
-        
-        # Calculate YoY percent change
-        data_processing_ppi_data['yoy_pct_change'] = ((data_processing_ppi_data['value'] - data_processing_ppi_data['year_ago_value']) / 
-                                                     data_processing_ppi_data['year_ago_value'] * 100)
-
-# Fetch inflation data if needed
-if inflation_data.empty or (datetime.now() - pd.to_datetime(inflation_data['date'].max())).days > 30:
-    # Fetch CPI (CPIAUCSL)
-    cpi_temp = fetch_fred_data('CPIAUCSL')
-    
-    if not cpi_temp.empty:
-        # Calculate year-over-year inflation
-        cpi_temp = cpi_temp.sort_values('date')
-        
-        # Create a dataframe shifted by 12 months to calculate YoY change
-        cpi_yoy = cpi_temp.copy()
-        cpi_yoy['date'] = cpi_yoy['date'] + pd.DateOffset(months=12)
-        cpi_yoy = cpi_yoy.rename(columns={'value': 'year_ago_value'})
-        
-        # Merge current and year-ago values
-        inflation_data = pd.merge(
-            cpi_temp, 
-            cpi_yoy[['date', 'year_ago_value']], 
-            on='date', 
-            how='left'
-        )
-        
-        # Calculate YoY inflation
-        inflation_data['inflation'] = ((inflation_data['value'] - inflation_data['year_ago_value']) / 
-                                      inflation_data['year_ago_value'] * 100)
-
-# Add Personal Consumption Expenditures (PCE) data
-if pce_data.empty or (datetime.now() - pd.to_datetime(pce_data['date'].max() if not pce_data.empty else '2000-01-01')).days > 30:
-    # Fetch PCE data (PCE)
-    pce_temp = fetch_fred_data('PCE')
-    
-    if not pce_temp.empty:
-        # Calculate year-over-year growth
-        pce_temp = pce_temp.sort_values('date')
-        
-        # Create a dataframe shifted by 12 months to calculate YoY change
-        pce_yoy = pce_temp.copy()
-        pce_yoy['date'] = pce_yoy['date'] + pd.DateOffset(months=12)
-        pce_yoy = pce_yoy.rename(columns={'value': 'year_ago_value'})
-        
-        # Merge current and year-ago values
-        pce_data = pd.merge(
-            pce_temp, 
-            pce_yoy[['date', 'year_ago_value']], 
-            on='date', 
-            how='left'
-        )
-        
-        # Calculate YoY growth
-        pce_data['yoy_growth'] = ((pce_data['value'] - pce_data['year_ago_value']) / 
-                               pce_data['year_ago_value'] * 100)
-
-# Add PCEPI (Personal Consumption Expenditures: Chain-type Price Index) data
+data_processing_ppi_data = load_macro_series("PCU5112105112105")
 
 # --- PCEPI: load directly from Postgres ---
-import sqlalchemy, os
-macro_engine = sqlalchemy.create_engine(os.getenv("DATABASE_URL"))
+pcepi_data = load_macro_series("PCEPI")
 
-pcepi_data = pd.read_sql(
-    """
-    SELECT date,
-           value AS pcepi
-    FROM   macro_data
-    WHERE  series = 'PCEPI'
-    ORDER  BY date
-    """,
-    macro_engine,
-    parse_dates=["date"]
-)
-logger.info(f"Loaded {len(pcepi_data)} rows for PCEPI from macro_data")
-
-
-# If no existing data or data is old, fetch new data
-if pcepi_data.empty or (datetime.now() - pd.to_datetime(pcepi_data['date'].max() if not pcepi_data.empty else '2000-01-01')).days > 30:
-    # Fetch PCEPI data (PCEPI)
-    pcepi_temp = fetch_fred_data('PCEPI')
-    
-    if not pcepi_temp.empty:
-        # Calculate year-over-year growth
-        pcepi_temp = pcepi_temp.sort_values('date')
-        
-        # Create a dataframe shifted by 12 months to calculate YoY change
-        pcepi_yoy = pcepi_temp.copy()
-        pcepi_yoy['date'] = pcepi_yoy['date'] + pd.DateOffset(months=12)
-        pcepi_yoy = pcepi_yoy.rename(columns={'value': 'year_ago_value'})
-        
-        # Merge current and year-ago values
-        pcepi_data = pd.merge(
-            pcepi_temp, 
-            pcepi_yoy[['date', 'year_ago_value']], 
-            on='date', 
-            how='left'
-        )
-        
-        # Calculate YoY growth
-        pcepi_data['yoy_growth'] = ((pcepi_data['value'] - pcepi_data['year_ago_value']) / 
-                                  pcepi_data['year_ago_value'] * 100)
-
-# Add VIX volatility index data
 # --- VIX Index: load directly from Postgres ---
-import sqlalchemy, os
-engine = sqlalchemy.create_engine(os.getenv("DATABASE_URL"))
-
-vix_data = pd.read_sql(
-    """
-    SELECT date,
-           value AS vix
-    FROM   macro_data
-    WHERE  series = 'VIX'
-    ORDER  BY date
-    """,
-    engine,
-    parse_dates=["date"]
-)
-logger.info(f"Loaded {len(vix_data)} rows for VIX from macro_data")
-
-# Calculate 14-day EMA for VIX if we have data
-if not vix_data.empty and 'date' in vix_data.columns and 'value' in vix_data.columns:
-    # Sort data by date ascending (oldest to newest) for correct EMA calculation
-    vix_data = vix_data.sort_values('date')
-    
-    # Calculate 14-day EMA
-    vix_data['vix_ema14'] = vix_data['value'].ewm(span=14, adjust=False).mean()
-    
-    # Sort back to newest first for reporting
-    vix_data = vix_data.sort_values('date', ascending=False)
-    
-    # Print the latest values
-    if len(vix_data) > 0:
-        latest_date = vix_data.iloc[0]['date']
-        latest_vix = vix_data.iloc[0]['value']
-        latest_ema = vix_data.iloc[0]['vix_ema14']
-        logger.info(f"VIX: {latest_vix:.2f} on {latest_date}, 14-day EMA: {latest_ema:.2f}")
-
-# Add Software Job Postings data
-if job_postings_data.empty or (datetime.now() - pd.to_datetime(job_postings_data['date'].max() if not job_postings_data.empty else '2000-01-01')).days > 7:
-    # Force a refresh to get the most recent data (should update more frequently than 30 days)
-    logger.info("Refreshing Software Job Postings data to get latest observations...")
-    # Fetch U.S. Software Job Postings on Indeed (IHLIDXUSTPSOFTDEVE)
-    job_postings_temp = fetch_fred_data('IHLIDXUSTPSOFTDEVE')
-    
-    if not job_postings_temp.empty:
-        # Calculate year-over-year growth
-        job_postings_temp = job_postings_temp.sort_values('date')
-        
-        # Create a dataframe shifted by 12 months to calculate YoY change
-        postings_yoy = job_postings_temp.copy()
-        postings_yoy['date'] = postings_yoy['date'] + pd.DateOffset(months=12)
-        postings_yoy = postings_yoy.rename(columns={'value': 'year_ago_value'})
-        
-        # Merge current and year-ago values
-        job_postings_data = pd.merge(
-            job_postings_temp, 
-            postings_yoy[['date', 'year_ago_value']], 
-            on='date', 
-            how='left'
-        )
-        
-        # Calculate YoY growth
-        job_postings_data['yoy_growth'] = ((job_postings_data['value'] - job_postings_data['year_ago_value']) / 
-                              job_postings_data['year_ago_value'] * 100)
-
-# Calculate initial sentiment index
-sentiment_index = calculate_sentiment_index()
+vix_data = load_macro_series("VIXCLS")
 
 # ---- Dashboard Layout ----
 app.layout = html.Div([
