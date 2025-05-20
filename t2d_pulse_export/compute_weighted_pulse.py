@@ -1,7 +1,9 @@
 # compute_weighted_pulse.py
 # -------------------------------------------
-# Rebuild the full T2D Pulse history by market-cap weighting across sectors
-# using data from Postgres (no CSVs involved).
+# Rebuild the full T2D Pulse history by:
+# 1) Aggregating stock-level sentiment (20-day EMA of returns) into sector-level sentiment via market-cap weighting
+# 2) Computing the overall Pulse as the simple average of the 14 sector sentiment scores per day
+# All data flows through Postgres—no CSVs.
 
 #!/usr/bin/env python3
 import os
@@ -11,62 +13,59 @@ from sqlalchemy import create_engine, text
 # 1) Connect to Postgres
 db_url = os.getenv("DATABASE_URL")
 if not db_url:
-    raise RuntimeError("DATABASE_URL is not set")
+    raise RuntimeError("DATABASE_URL environment variable is not set")
 engine = create_engine(db_url)
 
-# 2) Build sector-level market-cap history if not present (or refresh)
+# 2) Load stock-level sentiment and market-cap history
+stock_sent = pd.read_sql(
+    "SELECT date, ticker, sentiment_score FROM stock_sentiment_history",
+    engine
+)
+market_cap = pd.read_sql(
+    "SELECT date, ticker, sector, market_cap FROM market_cap_history",
+    engine
+)
+# Normalize date types\stock_sent['date'] = pd.to_datetime(stock_sent['date']).dt.date
+market_cap['date']   = pd.to_datetime(market_cap['date']).dt.date
+
+# 3) Merge to compute weighted contribution per stock
+df = stock_sent.merge(market_cap, on=["date","ticker"])
+# Compute total market cap per date but scoped to that sector group
+total_cap_by_date = df.groupby(['date','sector'])['market_cap']
+merged = df.copy()
+merged['sector_total_cap'] = merged.groupby(['date','sector'])['market_cap'].transform('sum')
+# Weight each stock's sentiment within its sector
+merged['weight'] = merged['market_cap'] / merged['sector_total_cap']
+merged['weighted_sent'] = merged['sentiment_score'] * merged['weight']
+
+# 4) Aggregate to sector sentiment per date
+sector_sent = (
+    merged
+    .groupby(['date','sector'])['weighted_sent']
+    .sum()
+    .reset_index(name='sector_sentiment_score')
+)
+
+# Persist sector_sentiment_history
+df_sec = sector_sent.copy()
 with engine.begin() as conn:
-    # Drop old sector table and recreate
-    conn.execute(text("DROP TABLE IF EXISTS sector_market_cap_history;"))
+    conn.execute(text("DROP TABLE IF EXISTS sector_sentiment_history;"))
     conn.execute(text(
-        "CREATE TABLE sector_market_cap_history "
-        "(date DATE, sector TEXT, sector_cap DOUBLE PRECISION);"
+        "CREATE TABLE sector_sentiment_history ("
+        "date DATE, sector TEXT, sector_sentiment_score DOUBLE PRECISION)"
     ))
-# Aggregate from ticker-level data
-df_mcap = pd.read_sql(
-    "SELECT date, sector, SUM(market_cap) AS sector_cap "
-    "FROM market_cap_history GROUP BY date, sector", engine
-)
-# Persist sector caps
-df_mcap.to_sql("sector_market_cap_history", engine, if_exists="append", index=False)
-print(f"Built sector_market_cap_history with {len(df_mcap)} rows.")
+    df_sec.to_sql('sector_sentiment_history', conn, if_exists='append', index=False)
+print(f"Computed {len(df_sec)} rows into sector_sentiment_history.")
 
-# 3) Load sector sentiment history
-df_sent = pd.read_sql(
-    "SELECT date, sector, sector_sentiment_score FROM sector_sentiment_history", engine
-)
-# 4) Load sector market-cap history
-df_cap = pd.read_sql(
-    "SELECT date, sector, sector_cap FROM sector_market_cap_history", engine
-)
-
-# 5) Normalize date types
-df_sent['date'] = pd.to_datetime(df_sent['date']).dt.date
-df_cap['date']  = pd.to_datetime(df_cap['date']).dt.date
-
-# 6) Merge sentiment with market-cap
-df = df_sent.merge(df_cap, on=["date","sector"])
-
-# 7) Compute total sector_cap per date
-total_cap = (
-    df.groupby("date")["sector_cap"].sum()
-      .reset_index(name="total_cap")
-)
-# 8) Merge total_cap back
-df = df.merge(total_cap, on="date")
-
-# 9) Calculate sector weight and weighted sentiment
-df['weight'] = df['sector_cap'] / df['total_cap']
-df['weighted_sent'] = df['sector_sentiment_score'] * df['weight']
-
-# 10) Aggregate to get Pulse score per date
+# 5) Compute overall T2D Pulse as simple average of sector sentiment per date
 pulse_df = (
-    df.groupby("date")["weighted_sent"]
-      .sum()
-      .reset_index(name="pulse_score")
+    sector_sent
+    .groupby('date')['sector_sentiment_score']
+    .mean()
+    .reset_index(name='pulse_score')
 )
 
-# 11) Truncate and reload pulse_history table
+# 6) Persist pulse_history
 with engine.begin() as conn:
     conn.execute(text("TRUNCATE pulse_history;"))
     conn.execute(
@@ -74,4 +73,4 @@ with engine.begin() as conn:
         pulse_df.to_dict(orient='records')
     )
 
-print(f"Rebuilt pulse_history with {len(pulse_df)} dates (market-cap weighted across sectors).")
+print(f"Rebuilt pulse_history with {len(pulse_df)} dates (equal-weighted across sectors).")
