@@ -18,6 +18,30 @@ import plotly.graph_objs as go
 import plotly.express as px
 import yfinance as yf
 import logging
+import sqlalchemy
+from sqlalchemy import create_engine
+engine = sqlalchemy.create_engine(os.getenv("DATABASE_URL"))
+def load_macro_series(series_id: str) -> pd.DataFrame:
+    """
+    Pull a single macro series from Postgres.
+    Returns a DataFrame with exactly two columns: 'date' (datetime64) and 'value' (float).
+    """
+    df = pd.read_sql(
+        """
+        SELECT
+            date,
+            value
+        FROM macro_data
+        WHERE series = %(series)s
+        ORDER BY date
+        """,
+        engine,
+        params={"series": series_id},
+        parse_dates=["date"]
+    )
+    logger.info(f"Loaded {len(df)} rows for {series_id} from macro_data")
+    return df
+
 from functools import lru_cache
 
 # Import API keys from the separate file
@@ -83,11 +107,9 @@ except Exception as e:
 # Get the authentic T2D Pulse score
 def get_authentic_pulse_score() -> float | None:
     """Return the latest T2D Pulse score from Postgres, or None if unavailable."""
-    import sqlalchemy, os, pandas as pd
 
     try:
-        engine = sqlalchemy.create_engine(os.getenv("DATABASE_URL"))
-
+        
         df = pd.read_sql(
             """
             SELECT pulse_score
