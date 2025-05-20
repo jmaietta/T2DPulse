@@ -1,7 +1,8 @@
 # compute_stock_sentiment.py
 # -------------------------------------------
 # Derive stock-level sentiment_score as the 20-day EMA of daily market-cap returns,
-# using market_cap_history from Postgres (no CSVs), and load into stock_sentiment_history.
+# normalize to a 0–100 scale (percentage plus 50 shift),
+# and load into stock_sentiment_history.
 
 #!/usr/bin/env python3
 import os
@@ -29,29 +30,35 @@ df = df.sort_values(['ticker','date'])
 #    daily_return = (mcap_t / mcap_{t-1}) - 1
 df['daily_return'] = df.groupby('ticker')['market_cap'].pct_change()
 
-# 5) Calculate 20-day EMA of returns as sentiment proxy
-sentiment = (
+# 5) Calculate 20-day EMA of returns as raw sentiment proxy
+raw_sentiment = (
     df
     .groupby('ticker')['daily_return']
     .apply(lambda x: x.ewm(span=20, adjust=False).mean())
-    .reset_index(name='sentiment_score')
+    .reset_index(name='sentiment_score_raw')
 )
 
-# 6) Merge sentiment back with dates
+# 6) Normalize to 0–100 scale: percentage plus 50 shift
+df_norm = raw_sentiment.copy()
+# percent form
+df_norm['sentiment_pct'] = df_norm['sentiment_score_raw'] * 100
+# shift to 0–100 range
+df_norm['sentiment_score'] = df_norm['sentiment_pct'] + 50
+
+# 7) Merge normalized sentiment back with dates
 df_sent = df[['date','ticker']].reset_index(drop=True)
 df_sent = df_sent.merge(
-    sentiment,
-    left_on=['ticker', 'date'],
-    right_on=['ticker', 'date'],
+    df_norm[['ticker','date','sentiment_score']],
+    on=['ticker','date'],
     how='left'
 )
 
-# 7) Prepare final DataFrame: one row per date,ticker
+# 8) Prepare final DataFrame: one row per date,ticker
 df_final = df_sent[['date','ticker','sentiment_score']].dropna()
 #    Convert to date only
 df_final['date'] = df_final['date'].dt.date
 
-# 8) Persist into stock_sentiment_history
+# 9) Persist into stock_sentiment_history
 table_sql = (
     "CREATE TABLE IF NOT EXISTS stock_sentiment_history ("
     "date DATE, ticker TEXT, sentiment_score DOUBLE PRECISION)"
@@ -61,4 +68,4 @@ with engine.begin() as conn:
     conn.execute(text(table_sql))
     df_final.to_sql('stock_sentiment_history', conn, if_exists='append', index=False)
 
-print(f"Generated and loaded {len(df_final)} rows into stock_sentiment_history.")
+print(f"Generated and loaded {len(df_final)} rows into stock_sentiment_history (0–100 scale).")
