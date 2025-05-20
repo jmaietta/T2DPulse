@@ -6,10 +6,9 @@
 import os
 from datetime import date
 import pandas as pd
-yfinance_installed=True
 import yfinance as yf
 from pandas.tseries.offsets import BDay
-from sqlalchemy import create_engine
+from sqlalchemy import create_engine, text
 
 # 1) Define your 14 sectors & their tickers
 #    Tickers may appear in multiple sectors; that’s acceptable.
@@ -61,9 +60,12 @@ for sector, tickers in TICKERS_BY_SECTOR.items():
 # 5) Persist into market_cap_history table (replacing any existing table)
 df = pd.DataFrame(records)
 with engine.begin() as conn:
-    conn.execute("DROP TABLE IF EXISTS market_cap_history;")
-    conn.execute(
-        "CREATE TABLE market_cap_history (date DATE, ticker TEXT, sector TEXT, market_cap DOUBLE PRECISION);")
+    # Drop and recreate table
+    conn.execute(text("DROP TABLE IF EXISTS market_cap_history;"))
+    conn.execute(text(
+        "CREATE TABLE market_cap_history (date DATE, ticker TEXT, sector TEXT, market_cap DOUBLE PRECISION);"
+    ))
+    # Bulk insert
     df.to_sql("market_cap_history", conn, if_exists="append", index=False)
 
 print(f"Inserted {len(df)} rows into market_cap_history")
