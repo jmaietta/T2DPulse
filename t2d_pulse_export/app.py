@@ -23,7 +23,6 @@ logger = logging.getLogger(__name__)
 
 import sqlalchemy
 from sqlalchemy import create_engine
-import sentiment_engine
 
 engine = sqlalchemy.create_engine(os.getenv("DATABASE_URL"))
 
@@ -49,7 +48,7 @@ def load_macro_series(series_id: str) -> pd.DataFrame:
     return df
     
 # Compute initial T2D Pulse score so layout has something to show
-sentiment_index = sentiment_engine.calculate_sentiment_index()
+sentiment_index = calculate_sentiment_index()
 
 from functools import lru_cache
 
