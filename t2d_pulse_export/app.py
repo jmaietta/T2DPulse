@@ -17,10 +17,15 @@ import flask
 import plotly.graph_objs as go
 import plotly.express as px
 import yfinance as yf
+
 import logging
+logger = logging.getLogger(__name__)
+
 import sqlalchemy
 from sqlalchemy import create_engine
+
 engine = sqlalchemy.create_engine(os.getenv("DATABASE_URL"))
+
 def load_macro_series(series_id: str) -> pd.DataFrame:
     """
     Pull a single macro series from Postgres.
