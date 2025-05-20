@@ -22,17 +22,16 @@ df = pd.read_sql(
 )
 # Convert to datetime and sort
 df['date'] = pd.to_datetime(df['date'])
-df = df.sort_values(['ticker','date'])
+df = df.sort_values(['ticker', 'date']).reset_index(drop=True)
 
 # 3) Compute daily returns per ticker
 df['daily_return'] = df.groupby('ticker')['market_cap'].pct_change()
 
-# 4) Compute raw 20-day EMA of returns as sentiment proxy
+# 4) Compute raw 20-day EMA of returns as sentiment proxy using transform
 alpha = 2 / (20 + 1)
-# Use pandas ewm for full-series EMA
-df['raw_sentiment_score'] = df.groupby('ticker')['daily_return'].apply(
-    lambda x: x.ewm(span=20, adjust=False).mean()
-)
+def calc_ema(x):
+    return x.ewm(span=20, adjust=False).mean()
+df['raw_sentiment_score'] = df.groupby('ticker')['daily_return'].transform(calc_ema)
 
 # 5) Normalize to 0–100 scale: percentage plus 50 shift
 df['sentiment_score'] = df['raw_sentiment_score'] * 100 + 50
@@ -45,9 +44,7 @@ df_final['date'] = df_final['date'].dt.date
 # 7) Persist into stock_sentiment_history end-to-end
 with engine.begin() as conn:
     # Recreate the table
-    conn.execute(text(
-        "DROP TABLE IF EXISTS stock_sentiment_history;"
-    ))
+    conn.execute(text("DROP TABLE IF EXISTS stock_sentiment_history;"))
     conn.execute(text(
         "CREATE TABLE stock_sentiment_history ("
         "date DATE, ticker TEXT, sentiment_score DOUBLE PRECISION, raw_sentiment_score DOUBLE PRECISION)"
