@@ -2418,54 +2418,113 @@ def create_pulse_card(value, include_chart=True):
                 showticklabels=False
             )
         
-      # Create the pulse circle
-pulse_circle = html.Div([
-    html.Div([
-        html.Img(src='/assets/pulse_logo.png', style={
-            'height': '35px', 'marginBottom': '10px', 'marginTop': '-10px'
-        }),
-        html.Div(f"{score_value:.1f}", style={
-            'fontSize': '42px', 'fontWeight': '600', 'color': pulse_color,
-            'marginBottom': '5px', 'marginTop': '-5px'
-        }),
-        html.Div(pulse_status, style={
-            'fontSize': '18px', 'color': pulse_color
+      @lru_cache(maxsize=1)
+def create_pulse_card(value, include_chart=True):
+    """Create a side-by-side pulse display with score circle and trend chart
+    that fits directly in the main sentiment banner without adding a separate card.
+
+    Returns:
+        tuple: (pulse_display, pulse_status, pulse_color)
+    """
+    # Convert possible DataFrame/Series to scalar
+    import pandas as pd, numpy as np
+    if isinstance(value, (pd.DataFrame, pd.Series)):
+        vals = value.dropna().values.flatten()
+        value = float(vals[-1]) if len(vals) else np.nan
+
+    # Determine numeric score
+    try:
+        score_value = float(value)
+    except (ValueError, TypeError):
+        score_value = 0
+
+    # Determine status + color
+    if score_value >= 60:
+        pulse_status = "Bullish"
+        pulse_color  = "#2ecc71"
+    elif score_value >= 30:
+        pulse_status = "Neutral"
+        pulse_color  = "#f39c12"
+    else:
+        pulse_status = "Bearish"
+        pulse_color  = "#e74c3c"
+
+    try:
+        # ─── Build the circle ───
+        pulse_circle = html.Div([
+            html.Div([
+                html.Img(src='/assets/pulse_logo.png', style={
+                    'height': '35px', 'marginBottom': '10px', 'marginTop': '-10px'
+                }),
+                html.Div(f"{score_value:.1f}", style={
+                    'fontSize': '42px', 'fontWeight': '600', 'color': pulse_color,
+                    'marginBottom': '5px', 'marginTop': '-5px'
+                }),
+                html.Div(pulse_status, style={
+                    'fontSize': '18px', 'color': pulse_color
+                })
+            ], style={
+                'display': 'flex', 'flexDirection': 'column', 'alignItems': 'center',
+                'justifyContent': 'center', 'width': '180px', 'height': '180px',
+                'borderRadius': '50%', 'border': f'3px solid {pulse_color}',
+                'boxShadow': f'0 0 15px {pulse_color}', 'backgroundColor': 'white'
+            })
+        ])
+
+        # ─── Assemble banner ───
+        pulse_display = html.Div([
+            html.Div([pulse_circle], style={
+                'flex': '0 0 auto', 'marginRight': '15px',
+                'display': 'flex', 'alignItems': 'center', 'justifyContent': 'flex-start',
+                'paddingLeft': '5px'
+            }),
+            html.Div([
+                html.Div("30-Day Trend", style={
+                    'fontSize': '14px', 'fontWeight': '500', 'marginBottom': '2px',
+                    'textAlign': 'center', 'color': '#555'
+                }),
+                dcc.Graph(
+                    id='t2d-pulse-trend-chart',
+                    figure=pulse_chart,
+                    config={'displayModeBar': False}
+                )
+            ], style={
+                'flex': '1 1 auto', 'minWidth': '77%', 'height': '180px',
+                'border': '1px solid #eee', 'borderRadius': '5px',
+                'padding': '10px 10px 2px 10px', 'backgroundColor': '#fff',
+                'marginRight': '10px'
+            })
+        ], style={
+            'display': 'flex', 'flexDirection': 'row', 'alignItems': 'center',
+            'width': '100%'
         })
-    ], style={
-        'display': 'flex', 'flexDirection': 'column', 'alignItems': 'center',
-        'justifyContent': 'center', 'width': '180px', 'height': '180px',
-        'borderRadius': '50%', 'border': f'3px solid {pulse_color}',
-        'boxShadow': f'0 0 15px {pulse_color}', 'backgroundColor': 'white'
-    })
-])
 
-# Assemble the banner with trend chart
-pulse_display = html.Div([
-    html.Div([pulse_circle], style={
-        'flex': '0 0 auto', 'marginRight': '15px',
-        'display': 'flex', 'alignItems': 'center', 'justifyContent': 'flex-start',
-        'paddingLeft': '5px'
-    }),
-    html.Div([
-        html.Div("30-Day Trend", style={
-            'fontSize': '14px', 'fontWeight': '500', 'marginBottom': '2px',
-            'textAlign': 'center', 'color': '#555'
-        }),
-        dcc.Graph(
-            id='t2d-pulse-trend-chart', figure=pulse_chart,
-            config={'displayModeBar': False}
-        )
-    ], style={
-        'flex': '1 1 auto', 'minWidth': '77%', 'height': '180px',
-        'border': '1px solid #eee', 'borderRadius': '5px',
-        'padding': '10px 10px 2px 10px', 'backgroundColor': '#fff',
-        'marginRight': '10px'
-    })
-], style={
-    'display': 'flex', 'flexDirection': 'row', 'alignItems': 'center', 'width': '100%'
-})
+        return pulse_display, pulse_status, pulse_color
 
-return pulse_display, pulse_status, pulse_color
+    except Exception as e:
+        logger.error(f"Error building pulse banner: {e}")
+        basic_display = html.Div([
+            html.Div([
+                html.Img(src='/assets/pulse_logo.png', style={
+                    'height': '35px', 'marginBottom': '10px', 'marginTop': '5px'
+                }),
+                html.Div(f"{score_value:.1f}", style={
+                    "fontSize": "48px", "fontWeight": "bold",
+                    "color": pulse_color, "textAlign": "center",
+                    "margin": "5px 0"
+                }),
+                html.Div(pulse_status, style={
+                    "fontSize": "18px", "fontWeight": "500",
+                    "color": pulse_color, "textAlign": "center",
+                    "marginBottom": "10px"
+                })
+            ], style={
+                "display": "flex", "flexDirection": "column",
+                "justifyContent": "center", "alignItems": "center",
+                "height": "100%"
+            })
+        ])
+        return basic_display, pulse_status, pulse_color
     
     except Exception as e:
         logger.error(f"Error creating T2D Pulse display with chart: {e}")
