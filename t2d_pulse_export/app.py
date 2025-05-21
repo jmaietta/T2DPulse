@@ -5352,423 +5352,85 @@ def update_vix_graph(n):
     return fig
 
 # Update Sector Sentiment Container
+from sqlalchemy import create_engine
+import pandas as pd
+import os
+import plotly.graph_objects as go
+
 @app.callback(
     Output("sector-sentiment-container", "children"),
     [Input("interval-component", "n_intervals")]
 )
 def update_sector_sentiment_container(n):
-    """Update the Sector Sentiment container with cards for each technology sector"""
+    """Fetch the latest 30-day sector sentiment from Postgres and render cards."""
+    # 1) Read all sectors' 30-day history
+    engine = create_engine(os.getenv("DATABASE_URL"))
+    sql = """
+        SELECT date, sector, sector_sentiment_score, stance, takeaway, drivers, tickers
+          FROM sector_sentiment_history
+         WHERE date >= (CURRENT_DATE - INTERVAL '29 days')
+      ORDER BY sector, date
+    """
+    df = pd.read_sql(sql, engine)
 
-    # Pull sector scores straight from Postgres
-    sector_scores = calculate_sector_sentiment()
+    # 2) Pick today’s (most recent) snapshot
+    latest_date = df["date"].max()
+    today_df    = df[df["date"] == latest_date]
 
-    # Build the graph
-    graph = dcc.Graph(
-        id="sector-sentiment-graph",
-        figure=create_mini_trend_chart(sector_name),
-        config={"displayModeBar": False},
-        className="dashboard-chart"
-    )
+    # 3) Build one card per sector
+    cards = []
+    for _, row in today_df.iterrows():
+        sector   = row["sector"]
+        score    = row["sector_sentiment_score"]
+        stance   = row["stance"]
+        takeaway = row["takeaway"]
+        drivers  = row["drivers"]  # assuming JSON array in DB
+        tickers  = row["tickers"]  # assuming JSON array in DB
 
-    # Build the insights panel
-    insights_panel = create_insights_panel('sector_sentiment', sector_scores)
+        # Sparkline for this sector
+        hist = df[df["sector"] == sector]
+        spark = go.Figure(go.Scatter(
+            x=hist["date"], y=hist["sector_sentiment_score"],
+            mode="lines", line=dict(width=2, color="#2E86C1")
+        ))
+        spark.update_layout(
+            margin=dict(l=0, r=0, t=0, b=0),
+            height=80,
+            xaxis=dict(visible=False),
+            yaxis=dict(visible=False)
+        )
 
-    # Return both elements
-    return [graph, insights_panel]
-    
-    # Normalize sector scores from -1 to +1 scale to 0-100 scale
-    normalized_scores = []
-    for sector_data in sector_scores:
-        # Create a copy of the sector data
-        normalized_data = sector_data.copy()
-        
-        # Get the original score (should be in -1 to +1 scale)
-        # If it's a weekend with hardcoded data, this may already be normalized
-        orig_score = sector_data["score"]
-        
-        # Check if normalized_score is already present in the data
-        if "normalized_score" in sector_data:
-            # Use the pre-calculated normalized score (hardcoded May 2nd data already has this)
-            norm_score = sector_data["normalized_score"]
-        else:
-            # Normalize to 0-100 scale using the formula ((score + 1.0) / 2.0) * 100
-            norm_score = ((orig_score + 1.0) / 2.0) * 100
-            # Round to 1 decimal place
-            norm_score = round(norm_score, 1)
-        
-        # Store both scores
-        normalized_data["original_score"] = orig_score
-        normalized_data["normalized_score"] = norm_score
-        
-        # Update stance based on normalized score if needed
-        # (but we'll keep the existing stance for consistency)
-        
-        normalized_scores.append(normalized_data)
-    
-    # Create a normalized scale legend
-    scale_legend = html.Div([
-        html.Div([
-            "Sector Sentiment Scale (0-100):"
-        ], className="scale-title"),
-        html.Div([
-            html.Div([
-                html.Span("0", className="scale-min"),
-                html.Span("50", className="scale-mid"),
-                html.Span("100", className="scale-max")
-            ], className="scale-numbers"),
-            html.Div([
-                html.Div(className="scale-bar-bearish"),
-                html.Div(className="scale-bar-neutral"),
-                html.Div(className="scale-bar-bullish")
-            ], className="scale-bars")
-        ], className="scale-container"),
-        html.Div([
-            html.Div(["Bearish", html.Span("0-30", className="scale-range")], className="scale-label bearish"),
-            html.Div(["Neutral", html.Span("30-60", className="scale-range")], className="scale-label neutral"),
-            html.Div(["Bullish", html.Span("60-100", className="scale-range")], className="scale-label bullish")
-        ], className="scale-labels")
-    ], className="sector-scale-legend")
-    
-    # Create cards for each sector using normalized scores
-    # Filter out any "T2D Pulse" sector that might be included (it should only appear at the top)
-    normalized_scores = [s for s in normalized_scores if s["sector"] != "T2D Pulse"]
-    
-    # Create the card list
-    sector_cards = []
-    
-    # Get the global sector_weights dictionary or create it
-    global sector_weights
-    if not hasattr(app, '_sector_weights_initialized'):
-        app._sector_weights_initialized = True
-        sector_weights = {}
-    
-    # Calculate number of sectors and default weight
-    num_sectors = len(normalized_scores)
-    default_weight = 100 / num_sectors
-    
-    for sector_data in normalized_scores:
-        # Extract data
-        sector = sector_data["sector"]
-        norm_score = sector_data["normalized_score"]
-        stance = sector_data["stance"]
-        takeaway = sector_data["takeaway"]
-        drivers = sector_data["drivers"]
-        tickers = sector_data["tickers"]
-        
-        # Initialize weight if not set
-        if sector not in sector_weights:
-            sector_weights[sector] = default_weight
-        
-        # Determine styling based on stance - match mockup styling more closely
-        if stance == "Bullish":
-            border_color = "#2ecc71"  # Green for Bullish
-            text_color = "#27ae60"  # Darker green text (from mockup)
-            bg_color = "white"     # White background for all cards
-            badge_class = "badge-bullish"
-        elif stance == "Bearish":
-            border_color = "#e74c3c"  # Red for Bearish
-            text_color = "#c0392b"  # Darker red text (from mockup)
-            bg_color = "white"     # White background for all cards
-            badge_class = "badge-bearish"
-        else:
-            border_color = "#f39c12"  # Orange for Neutral
-            text_color = "#d35400"  # Darker orange text (from mockup)
-            bg_color = "white"     # White background for all cards
-            badge_class = "badge-neutral"
-            
-        # Create the sector card with original format from mockup including weight controls
+        # Card layout
         card = html.Div([
-            # Header with sector name and score
             html.Div([
-                html.Div([
-                    html.Div(sector, className="sector-card-title", 
-                             style={
-                                 "fontWeight": "600", 
-                                 "fontSize": "18px", 
-                                 "marginRight": "10px",
-                                 "width": "calc(100% - 90px)",
-                                 "textAlign": "left",
-                                 "overflow": "hidden",
-                                 "textOverflow": "ellipsis"
-                             }),
-                    html.Div([
-                        html.Div(f"{norm_score:.1f}", className="sector-score", 
-                                style={
-                                    "fontWeight": "bold", 
-                                    "fontSize": "24px", 
-                                    "textAlign": "right", 
-                                    "width": "100%",
-                                    "display": "block",
-                                    "marginRight": "0",
-                                    "color": text_color
-                                })
-                    ], className="score-container", style={
-                        "width": "80px", 
-                        "float": "right",
-                        "textAlign": "right",
-                        "margin": "0"
-                    })
-                ], className="card-header-content", style={
-                    "display": "flex", 
-                    "alignItems": "center", 
-                    "width": "100%",
-                    "padding": "15px",
-                    "borderBottom": "1px solid #f1f1f1"
-                })
-            ], className="sector-card-header", style={
-                "backgroundColor": "#fcfcfc",
-                "borderBottom": f"2px solid {border_color}",
-                "borderTopLeftRadius": "8px",
-                "borderTopRightRadius": "8px"
-            }),
-            
-            # Card body with all the details - using flex column with space-between
-            html.Div([
-                # Top content section - all elements except weight controls
-                html.Div([
-                    # Header and sentiment badge - with badge on the right
-                    html.Div([
-                        html.P(takeaway, className="sector-takeaway"),
-                        # Restored stance text in badge
-                        html.Span(stance, className=f"sector-badge {badge_class}")
-                    ], className="takeaway-badge-container", style={"display": "flex", "justifyContent": "space-between", "alignItems": "center"}),
-                    
-                    # Scale indicator
-                    html.Div([
-                        html.Div([
-                            html.Div(className="scale-marker", 
-                                    style={"left": f"{min(max(norm_score, 0), 100)}%"})
-                        ], className="scale-track")
-                    ], className="sector-score-scale"),
-                    
-                    # Trend chart
-                    html.Div([
-                        html.Div("30-Day Trend", className="trend-title", 
-                                style={"fontSize": "13px", "marginBottom": "5px", "color": "#666"}),
-                        dcc.Graph(
-                            id={"type": "sector-trend-chart", "index": sector},
-                            figure=sector_trend_chart.create_sector_trend_chart(sector_name=sector),
-                            config={"displayModeBar": False, "staticPlot": True},
-                            style={"height": "85px", "width": "100%"}
-                        )
-                    ], className="sector-trend-container", style={"marginTop": "15px", "marginBottom": "15px"}),
-                    
-                    # Drivers list
-                    html.Ul([
-                        html.Li(driver) for driver in drivers
-                    ], className="drivers-list"),
-                    # Sector chart
-                    html.Div([
-                        html.Iframe(
-                            srcDoc=open(f"data/sector_chart_{sector.replace(' ', '_').replace('/', '_')}.html", 'r').read() if os.path.exists(f"data/sector_chart_{sector.replace(' ', '_').replace('/', '_')}.html") else "",
-                            style={
-                                'width': '100%',
-                                'height': '40px',
-                                'border': 'none',
-                                'padding': '0',
-                                'margin': '0 0 10px 0',
-                                'overflow': 'hidden',
-                            }
-                        )
-                    ], className="sector-chart-container"),
-                    
-                    
-                    # Tickers with label
-                    html.Div([
-                        html.Div(
-                            html.Span("Representative Tickers:", style={"fontSize": "13px", "marginBottom": "5px", "display": "block"}),
-                            style={"marginBottom": "3px"}
-                        ),
-                        html.Div([
-                            html.Span(ticker, className="ticker-badge", style={"fontWeight": "bold"}) for ticker in tickers
-                        ])
-                    ], className="tickers-container"),
-                ], style={"flex": "1"}),
-                
-                # Bottom section - weight controls, always at bottom
-                html.Div([
-                    html.Div([
-                        html.Div("Weight:", className="weight-label", 
-                               style={
-                                   "textAlign": "left", 
-                                   "display": "inline-block", 
-                                   "marginRight": "5px",
-                                   "verticalAlign": "middle"
-                               }),
-                        # Input field for manually entering weight
-                        html.Div([
-                            dcc.Input(
-                                id={"type": "weight-input", "index": sector},
-                                type="number",
-                                min=0,
-                                max=100,
-                                step=0.01,
-                                # Format value to exactly 2 decimal places
-                                value=float(f"{sector_weights[sector]:.2f}"),
-                                style={
-                                    "width": "70px",
-                                    "height": "30px",
-                                    "padding": "5px",
-                                    "borderRadius": "4px",
-                                    "border": "1px solid #ddd", # Light gray border
-                                    "fontSize": "14px",
-                                    "marginRight": "5px"
-                                }
-                            ),
-                            # Hidden button triggered by Enter key press
-                            html.Button(
-                                id={"type": "hidden-submit", "index": sector},
-                                n_clicks=0,
-                                style={"display": "none"}
-                            )
-                        ], id={"type": "input-container", "index": sector}),
-                        html.Span("%", style={"marginRight": "10px"}),
-                        
-                        # Apply button - moved inside the weight display container 
-                        html.Button("Apply", 
-                                  id={"type": "apply-weight", "index": sector},
-                                  className="weight-button weight-apply",
-                                  style={
-                                      "backgroundColor": "#2ecc71",  # Green button
-                                      "color": "white",
-                                      "border": "none",
-                                      "borderRadius": "4px",
-                                      "padding": "5px 18px",  # Wider padding
-                                      "fontWeight": "bold",
-                                      "cursor": "pointer",
-                                      "fontSize": "14px",
-                                      "minWidth": "80px",  # Ensuring enough width for "Apply"
-                                      "boxShadow": "0 2px 4px rgba(0,0,0,0.1)",
-                                      "marginLeft": "5px"  # Add spacing between % and button
-                                  })
-                    ], className="weight-display-container", style={"display": "flex", "alignItems": "center"}),
-                ], className="weight-controls", style={
-                    "display": "flex",
-                    "justifyContent": "space-between",
-                    "alignItems": "center",
-                    "marginTop": "15px",
-                    "padding": "10px 0 0 0",
-                    "borderTop": "1px solid #eee"
-                })
-                
-            ], className="sector-card-body", style={
-                "backgroundColor": "white", 
-                "display": "flex", 
-                "flexDirection": "column", 
-                "justifyContent": "space-between",
-                "height": "100%"
-            })
-        ], className="sector-card", style={
-            "--card-colour": border_color,
-            "display": "flex", 
-            "flexDirection": "column",
-            "height": "100%",
-            "minHeight": "460px",  # Set a minimum height for consistent card size
-            "border": f"2px solid {border_color}",  # Thicker border for emphasis
-            "borderRadius": "8px",  # Rounded corners
-            "boxShadow": "0 4px 8px rgba(0,0,0,0.1)",  # Enhanced shadow
-            "margin": "0",  # Reset margin
-            "overflow": "hidden",  # Ensure contents don't overflow
-            "backgroundColor": "#ffffff"  # Ensure white background
-        })
-        
-        sector_cards.append(card)
-    
-    # Create a dictionary of sector name to normalized score for the summary
-    sector_score_dict = {data["sector"]: data["normalized_score"] for data in normalized_scores}
-    
-    # Create the sector summary component
-    sector_summary = create_sector_summary(sector_score_dict)
-    
-    # We'll handle the Enter key press with simpler approach
-    # The code for the clientside callback was causing issues
-    
-    # Combine all elements in a layout similar to the mockup
-    return html.Div([
-        # Section header content from mockup
-        html.Div([
-            html.Div([
-                html.H2("Technology Sector Sentiment", className="section-title"),
-                html.Div([
-                    html.Div([
-                        html.P("Real-time sentiment scores based on current macroeconomic conditions. Sector scores are calculated from economic indicators weighted by their impact on each sector. Adjust sector weights to customize the T2D Pulse for your investment focus.", 
-                              className="section-description", style={"margin": "0", "fontSize": "14px", "lineHeight": "1.5"}),
-                    ]),
-                ], className="section-controls", style={"display": "flex", "justifyContent": "space-between", "alignItems": "center"})
-            ], className="section-header", style={"marginBottom": "15px"})
-        ]),
-        
-        # Scale legend (moved from top controls to here for better context)
-        html.Div([scale_legend], className="scale-legend-container", 
-                style={"marginBottom": "15px"}),
-        
-        # Sector summary in a card like in the mockup, more compact
-        html.Div([
-            html.Div([
-                html.H3("Sector Summary", className="section-subtitle", 
-                       style={"marginBottom": "10px", "fontWeight": "600", "color": "#2c3e50", 
-                              "textAlign": "center", "fontSize": "20px"}),
-                sector_summary
-            ], style={"width": "100%"}),
-            html.Div([
-                html.Button("Reset Equal Weights", 
-                           id="reset-weights-button",
-                           className="reset-button",
-                           style={
-                               "backgroundColor": "#3498db",
-                               "color": "white",
-                               "border": "none",
-                               "borderRadius": "4px",
-                               "padding": "8px 16px",
-                               "cursor": "pointer",
-                               "fontWeight": "500",
-                               "boxShadow": "0 2px 4px rgba(0,0,0,0.1)",
-                               "alignSelf": "flex-end"
-                           })
-            ], style={"display": "flex", "justifyContent": "flex-end", "marginTop": "10px"})
-        ], className="sector-summary-container", 
-           style={"marginBottom": "20px", "padding": "12px", 
-                  "backgroundColor": "white", "borderRadius": "8px", 
-                  "boxShadow": "0 1px 3px rgba(0,0,0,0.1)",
-                  "border": "1px solid #ecf0f1"}),
-        
-        # Sector cards in a grid like the mockup
-        html.Div(sector_cards, className="sector-cards-grid",
-                style={"display": "grid", 
-                       "gridTemplateColumns": "repeat(auto-fill, minmax(320px, 1fr))",
-                       "gap": "40px",  # Significantly increased gap between cards
-                       "padding": "10px",  # Increased padding around the grid
-                       "marginBottom": "20px"}),  # Add bottom margin
-        
-        # Export button
-        html.Div([
-            html.A(
-                html.Button("Export Sector History to Excel",
-                          id="export-excel-button",
-                          className="export-button",
-                          style={
-                              "backgroundColor": "#3498db",
-                              "color": "white",
-                              "border": "none",
-                              "borderRadius": "4px",
-                              "padding": "10px 20px",
-                              "cursor": "pointer",
-                              "fontWeight": "500",
-                              "boxShadow": "0 2px 4px rgba(0,0,0,0.1)",
-                              "margin": "0 auto",
-                              "display": "block"
-                          }),
-                id="download-excel-link",
-                href=f"/download/sector_sentiment_history_{datetime.now().strftime('%Y-%m-%d')}.xlsx",
-                download=f"sector_sentiment_history_{datetime.now().strftime('%Y-%m-%d')}.xlsx"
+                html.Div(sector, style={"fontWeight": "600", "fontSize": "18px"}),
+                html.Div(f"{score:.1f} ({stance})", style={"fontSize": "16px", "marginTop": "4px"})
+            ], style={"marginBottom": "8px"}),
+
+            dcc.Graph(
+                figure=spark,
+                config={"displayModeBar": False},
+                style={"height": "80px"}
             ),
-        ], style={"marginBottom": "30px", "textAlign": "center"}),
-        
-        # Hidden div to store weights, initially populated with JSON of sector weights
-        html.Div(id="stored-weights", 
-                 style={"display": "none"},
-                 children=json.dumps(sector_weights))
-    ], className="sector-sentiment-container")
+
+            html.P(takeaway, style={"fontSize": "12px", "margin": "8px 0"}),
+
+            html.Ul([html.Li(d) for d in drivers], style={"fontSize": "12px", "margin": "4px 0"}),
+
+            html.Div([html.Span(t, style={"marginRight": "6px", "fontSize": "12px"}) for t in tickers])
+        ], className="sector-card", style={
+            "border": "1px solid #ddd", "borderRadius": "6px", "padding": "12px",
+            "boxShadow": "0 1px 3px rgba(0,0,0,0.1)", "backgroundColor": "#fff"
+        })
+
+        cards.append(card)
+
+    # 4) Return grid of cards
+    return html.Div(cards, className="sector-cards-grid", style={
+        "display": "grid",
+        "gridTemplateColumns": "repeat(auto-fill, minmax(300px, 1fr))",
+        "gap": "20px"
+    })
 
 # Update VIX Container with chart and insights panel
 @app.callback(
