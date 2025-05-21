@@ -33,15 +33,16 @@ def create_mini_trend_chart(sector_name, height=50, show_axes=False, auto_range=
     engine = create_engine(os.getenv("DATABASE_URL"))
 
     # 1) Load the last 30 trading days for this sector
-    sql = """
-    SELECT date, sector_sentiment_score
-      FROM sector_sentiment_history
-     WHERE sector = :sector
-     ORDER BY date ASC
-     LIMIT 30
-    """
+    sql = (
+        "SELECT date, sector_sentiment_score "
+        "FROM sector_sentiment_history "
+        "WHERE sector = :sector "
+        "ORDER BY date ASC "
+        "LIMIT 30"
+    )
     df = pd.read_sql(sql, engine, params={"sector": sector_name})
     df["date"] = pd.to_datetime(df["date"])
+
 
     # 2) If no data, return empty figure
     if df.empty:
