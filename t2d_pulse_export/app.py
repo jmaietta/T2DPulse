@@ -2224,33 +2224,34 @@ def hex_to_rgb(hex_color):
     return (r, g, b)
 
 @lru_cache(maxsize=1)
-def create_pulse_card(value, include_chart=True):
+def create_pulse_card(value, pulse_chart_figure=None, include_chart=True):
     """Create a side-by-side pulse display with score circle and trend chart
     that fits directly in the main sentiment banner without adding a separate card.
-    
+
     Args:
-        value (float or str): The T2D Pulse score value
-        include_chart (bool): Whether to include the 30-day chart
-        
+        value (float or str): The T2D Pulse score value.
+        pulse_chart_figure (plotly.graph_objs._figure.Figure, optional): The Plotly figure for the 30-day trend chart.
+                                                                        Required if include_chart is True and chart is to be shown.
+        include_chart (bool): Whether to include the 30-day chart.
+
     Returns:
         tuple: (pulse_display, pulse_status, pulse_color)
     """
-    print(f"Creating T2D Pulse card with value: {value}, type: {type(value)}")
-    
-    # ───── Extract scalar from DataFrame/Series ─────
-    import pandas as pd, numpy as np
+    logger.info(f"Creating T2D Pulse card with value: {value}, type: {type(value)}")
+
+    # Convert possible DataFrame/Series to scalar (assuming pd and np are imported globally)
     if isinstance(value, (pd.DataFrame, pd.Series)):
         vals = value.dropna().values.flatten()
         value = float(vals[-1]) if len(vals) else np.nan
-    # ────────────────────────────────────────────────
-    
+
+    # Determine numeric score
     try:
         score_value = float(value)
-        print(f"Successfully converted to float: {score_value}")
+        logger.info(f"Successfully converted T2D Pulse value to float: {score_value}")
     except (ValueError, TypeError) as e:
-        print(f"Error converting value to float: {e}, using default 0")
+        logger.error(f"Error converting value to float: {e}, using default 0")
         score_value = 0
-        
+
     # Determine Pulse status based on score using Bearish, Neutral, Bullish terminology
     # Using the same color scheme as the sector sentiment cards for consistency
     if score_value >= 60:
@@ -2262,197 +2263,9 @@ def create_pulse_card(value, include_chart=True):
     else:
         pulse_status = "Bearish"
         pulse_color = "#e74c3c"  # Red - matching sector sentiment color
-    
-    try:
-        # Use our cached T2D Pulse history data instead of reading the file every time
-        if T2D_PULSE_HISTORY is not None:
-            logger.info("Using cached T2D Pulse history for chart")
-            # Work with a copy to avoid modifying the global data
-            history_df = T2D_PULSE_HISTORY.copy()
-            
-            # Check if we have the required columns
-            if 'date' in history_df.columns and ('T2D Pulse Score' in history_df.columns or 'pulse_score' in history_df.columns):
-                # Determine which column has the data (pulse_score or T2D Pulse Score)
-                score_column = 'T2D Pulse Score' if 'T2D Pulse Score' in history_df.columns and not history_df['T2D Pulse Score'].isna().all() else 'pulse_score'
-                
-                # Drop rows with missing scores
-                history_df = history_df.dropna(subset=[score_column])
-                
-                # Sort by date ascending
-                history_df = history_df.sort_values('date')
-                
-                # Get the last 30 days of data or all data if less than 30 days
-                if len(history_df) > 30:
-                    history_df = history_df.tail(30)
-                    
-                # Create trace for the line chart with authentic data - improved styling
-                trace = go.Scatter(
-                    x=history_df['date'],
-                    y=history_df[score_column],
-                    mode='lines',
-                    line=dict(
-                        color=pulse_color,  # Match the pulse status color
-                        width=4,            # Thicker line for better visibility
-                        shape='linear'      # Linear line for better performance
-                    ),
-                    fill='tozeroy',
-                    fillcolor=f'rgba{(*hex_to_rgb(pulse_color), 0.15)}',  # Dynamic fill based on status color
-                    hovertemplate='<b>%{x|%b %d, %Y}</b><br>T2D Pulse: %{y:.1f}<extra></extra>'
-                )
-                
-                # Create optimized layout with improved performance
-                layout = go.Layout(
-                    height=165,
-                    margin=dict(l=30, r=10, t=2, b=20),  # Increased bottom margin from 10 to 20
-                    paper_bgcolor='rgba(0,0,0,0)',
-                    plot_bgcolor='rgba(255,255,255,0.5)',
-                    xaxis=dict(
-                        visible=False,
-                        showticklabels=False,
-                        tickvals=[],
-                        ticktext=[],
-                        nticks=0,
-                        showspikes=False,
-                        rangeslider=dict(visible=False),
-                        rangeselector=dict(visible=False)
-                    ),
-                    yaxis=dict(
-                        title='',
-                        range=[0, 100],
-                        showgrid=True,
-                        gridcolor='rgba(0,0,0,0.1)',
-                        tickvals=[0, 30, 60, 100],
-                        tickfont=dict(size=11)
-                    ),
-                    # Temporarily remove shapes for performance
-                    shapes=[],
-                    # Temporarily remove annotations for performance
-                    annotations=[],
-                    hovermode=False  # Disable hover to prevent date label artifacts
-                )
-                
-                pulse_chart = go.Figure(data=[trace], layout=layout)
-                
-                # Apply even more aggressive date hiding technique
-                pulse_chart.update_xaxes(
-                    visible=False,  # Make entire axis invisible
-                    showticklabels=False
-                )
-                print(f"Created authentic T2D Pulse history chart with the consistent style and hidden date axis")
-            else:
-                raise ValueError("History file missing required columns")
-        else:
-            logger.warning("T2D Pulse history not available in cache or files, using fallback data")
-            # No need to re-import numpy here, it's already imported at the top level
-            
-            # Create dummy x values (30 days)
-            days = 30
-            dates = [(datetime.now() - timedelta(days=i)) for i in range(days, 0, -1)]
-            
-            # Start with current value and work backward with minimal variation
-            # This is still a placeholder but less random than before
-            base_value = score_value
-            trend_data = [base_value]
-            
-            # Create a simple declining trend from current with small variations
-            for i in range(1, days):
-                # Add a small decreasing trend with tiny random component
-                prev_value = trend_data[-1]
-                small_trend = prev_value - (0.1 * i/days)
-                value = small_trend + np.random.normal(0, 0.05)  # Very minimal randomness
-                # Ensure value stays within range
-                value = max(0, min(100, value))
-                trend_data.insert(0, value)
-            
-            # Create trace for the line chart with matching styling
-            trace = go.Scatter(
-                x=dates,
-                y=trend_data,
-                mode='lines',
-                line=dict(
-                    color=pulse_color,  # Match the pulse status color
-                    width=4,            # Thicker line for better visibility
-                    shape='linear'      # Linear line for better performance
-                ),
-                fill='tozeroy',
-                fillcolor=f'rgba{(*hex_to_rgb(pulse_color), 0.15)}',  # Dynamic fill based on status color
-                hovertemplate='<b>%{x|%b %d, %Y}</b><br>T2D Pulse: %{y:.1f}<extra></extra>'
-            )
-            
-            # Create optimized layout with improved performance (same as authentic chart)
-            layout = go.Layout(
-                height=165,
-                margin=dict(l=30, r=10, t=2, b=20),  # Increased bottom margin from 10 to 20
-                paper_bgcolor='rgba(0,0,0,0)',
-                plot_bgcolor='rgba(255,255,255,0.5)',
-                xaxis=dict(
-                    visible=False,
-                    showticklabels=False,
-                    tickvals=[],
-                    ticktext=[],
-                    nticks=0,
-                    showspikes=False,
-                    rangeslider=dict(visible=False),
-                    rangeselector=dict(visible=False)
-                ),
-                yaxis=dict(
-                    title='',
-                    range=[0, 100],
-                    showgrid=True,
-                    gridcolor='rgba(0,0,0,0.1)',
-                    tickvals=[0, 30, 60, 100],
-                    tickfont=dict(size=11)
-                ),
-                # Temporarily remove shapes for performance
-                shapes=[],
-                # Temporarily remove annotations for performance
-                annotations=[],
-                hovermode=False  # Disable hover to prevent date label artifacts
-            )
-            
-            pulse_chart = go.Figure(data=[trace], layout=layout)
-            
-            # Apply even more aggressive date hiding technique to fallback chart
-            pulse_chart.update_xaxes(
-                visible=False,  # Make entire axis invisible
-                showticklabels=False
-            )
-        
-def create_pulse_card(value, pulse_chart_figure=None, include_chart=True):
-    """Create a side-by-side pulse display with score circle and trend chart that fits directly in the main sentiment banner without adding a separate card.
-    Args:
-        value (float or str): The T2D Pulse score value
-        pulse_chart_figure (go.Figure or None): The Plotly figure for the trend chart.
-        include_chart (bool): Whether to include the 30-day chart
-    Returns:
-        tuple: (pulse_display, pulse_status, pulse_color)
-    """
-    # Convert possible DataFrame/Series to scalar
-    import pandas as pd, numpy as np
-    if isinstance(value, (pd.DataFrame, pd.Series)):
-        vals = value.dropna().values.flatten()
-        value = float(vals[-1]) if len(vals) else np.nan
-    # Determine numeric score
-    try:
-        score_value = float(value)
-        print(f"Successfully converted to float: {score_value}")
-    except (ValueError, TypeError) as e:
-        print(f"Error converting value to float: {e}, using default 0")
-        score_value = 0
-
-    # Determine status + color
-    if score_value >= 60:
-        pulse_status = "Bullish"
-        pulse_color  = "#2ecc71"
-    elif score_value >= 30:
-        pulse_status = "Neutral"
-        pulse_color  = "#f39c12"
-    else:
-        pulse_status = "Bearish"
-        pulse_color  = "#e74c3c"
 
     try:
-        # ─── Build the circle ───
+        # --- Build the circle ---
         pulse_circle = html.Div([
             html.Div([
                 html.Img(src='/assets/pulse_logo.png', style={
@@ -2473,21 +2286,17 @@ def create_pulse_card(value, pulse_chart_figure=None, include_chart=True):
             })
         ])
 
-        # ─── Assemble banner ───
-        pulse_display = html.Div([
-            html.Div([pulse_circle], style={
-                'flex': '0 0 auto', 'marginRight': '15px',
-                'display': 'flex', 'alignItems': 'center', 'justifyContent': 'flex-start',
-                'paddingLeft': '5px'
-            }),
-            html.Div([
+        # --- Build the chart section conditionally ---
+        chart_section = None
+        if include_chart and pulse_chart_figure is not None:
+            chart_section = html.Div([
                 html.Div("30-Day Trend", style={
                     'fontSize': '14px', 'fontWeight': '500', 'marginBottom': '2px',
                     'textAlign': 'center', 'color': '#555'
                 }),
                 dcc.Graph(
                     id='t2d-pulse-trend-chart',
-                    figure=pulse_chart,
+                    figure=pulse_chart_figure, # Use the passed argument here
                     config={'displayModeBar': False}
                 )
             ], style={
@@ -2496,7 +2305,17 @@ def create_pulse_card(value, pulse_chart_figure=None, include_chart=True):
                 'padding': '10px 10px 2px 10px', 'backgroundColor': '#fff',
                 'marginRight': '10px'
             })
-        ], style={
+
+        # --- Assemble banner ---
+        children_elements = [html.Div([pulse_circle], style={
+            'flex': '0 0 auto', 'marginRight': '15px',
+            'display': 'flex', 'alignItems': 'center', 'justifyContent': 'flex-start',
+            'paddingLeft': '5px'
+        })]
+        if chart_section: # Add chart section only if it was created
+            children_elements.append(chart_section)
+
+        pulse_display = html.Div(children_elements, style={
             'display': 'flex', 'flexDirection': 'row', 'alignItems': 'center',
             'width': '100%'
         })
@@ -2504,48 +2323,19 @@ def create_pulse_card(value, pulse_chart_figure=None, include_chart=True):
         return pulse_display, pulse_status, pulse_color
 
     except Exception as e:
-        logger.error(f"Error building pulse banner: {e}")
-        basic_display = html.Div([
-            html.Div([
-                html.Img(src='/assets/pulse_logo.png', style={
-                    'height': '35px', 'marginBottom': '10px', 'marginTop': '5px'
-                }),
-                html.Div(f"{score_value:.1f}", style={
-                    "fontSize": "48px", "fontWeight": "bold",
-                    "color": pulse_color, "textAlign": "center",
-                    "margin": "5px 0"
-                }),
-                html.Div(pulse_status, style={
-                    "fontSize": "18px", "fontWeight": "500",
-                    "color": pulse_color, "textAlign": "center",
-                    "marginBottom": "10px"
-                })
-            ], style={
-                "display": "flex", "flexDirection": "column",
-                "justifyContent": "center", "alignItems": "center",
-                "height": "100%"
-            })
-        ])
-        return basic_display, pulse_status, pulse_color
-    
-    except Exception as e:
-        logger.error(f"Error creating T2D Pulse display with chart: {e}")
-        
+        logger.error(f"Error building T2D Pulse display with chart: {e}")
+
         # Fallback to a basic display without the chart if there's an error
         basic_display = html.Div([
-            # Simplified layout with just the pulse score
             html.Div([
-                # PULSE logo at the top (consistent with main design)
                 html.Img(
                     src='/assets/pulse_logo.png',
                     style={
-                        'height': '35px',  # Increased to match main design
+                        'height': '35px',
                         'marginBottom': '10px',
                         'marginTop': '5px'
                     }
                 ),
-                
-                # Large score value
                 html.Div(
                     f"{score_value:.1f}",
                     style={
@@ -2556,8 +2346,6 @@ def create_pulse_card(value, pulse_chart_figure=None, include_chart=True):
                         "margin": "5px 0"
                     }
                 ),
-                
-                # Pulse status
                 html.Div(
                     pulse_status,
                     style={
@@ -2576,9 +2364,9 @@ def create_pulse_card(value, pulse_chart_figure=None, include_chart=True):
                 "height": "100%"
             })
         ])
-        
+        # The function must always return 3 values as per its signature
         return basic_display, pulse_status, pulse_color
-
+        
 @app.callback(
     Output("sentiment-gauge", "children"),
     [Input("sentiment-score", "children")]
