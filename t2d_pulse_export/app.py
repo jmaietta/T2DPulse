@@ -2418,14 +2418,12 @@ def create_pulse_card(value, include_chart=True):
                 showticklabels=False
             )
         
-def create_pulse_card(value, include_chart=True):
-    """Create a side-by-side pulse display with score circle and trend chart
-    that fits directly in the main sentiment banner without adding a separate card.
-
+def create_pulse_card(value, pulse_chart_figure=None, include_chart=True):
+    """Create a side-by-side pulse display with score circle and trend chart that fits directly in the main sentiment banner without adding a separate card.
     Args:
         value (float or str): The T2D Pulse score value
+        pulse_chart_figure (go.Figure or None): The Plotly figure for the trend chart.
         include_chart (bool): Whether to include the 30-day chart
-    
     Returns:
         tuple: (pulse_display, pulse_status, pulse_color)
     """
@@ -2434,7 +2432,6 @@ def create_pulse_card(value, include_chart=True):
     if isinstance(value, (pd.DataFrame, pd.Series)):
         vals = value.dropna().values.flatten()
         value = float(vals[-1]) if len(vals) else np.nan
-
     # Determine numeric score
     try:
         score_value = float(value)
