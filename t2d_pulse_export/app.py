@@ -5451,29 +5451,6 @@ def update_sector_sentiment_container(n):
         "gap": "20px"
     })
 
-# Update VIX Container with chart and insights panel
-@app.callback(
-    Output("vix-container", "children"),
-    [Input("interval-component", "n_intervals")]
-)
-def update_vix_container(n):
-    """Update the VIX container to include both the graph and insights panel"""
-    # Get the chart figure
-    figure = update_vix_graph(n)
-    
-    # Filter data for insights panel (same filtering as in chart function)
-    cutoff_date = datetime.now() - timedelta(days=2*365)
-    filtered_data = vix_data[vix_data['date'] >= cutoff_date].copy()
-    
-    # Create insights panel with the filtered data
-    insights_panel = create_insights_panel("vix", filtered_data)
-    
-    # Return container with graph and insights panel
-    return [
-        dcc.Graph(id="vix-graph", figure=figure),
-        insights_panel
-    ]
-
 # Helper function to update sector highlighting
 def update_sector_highlight(sector_name):
     """Update the highlighted sectors dictionary to show visual feedback when a weight is changed"""
