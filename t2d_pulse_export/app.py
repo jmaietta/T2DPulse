@@ -2418,7 +2418,6 @@ def create_pulse_card(value, include_chart=True):
                 showticklabels=False
             )
         
-@lru_cache(maxsize=1)
 def create_pulse_card(value, include_chart=True):
     """Create a side-by-side pulse display with score circle and trend chart
     that fits directly in the main sentiment banner without adding a separate card.
