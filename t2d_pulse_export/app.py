@@ -5391,6 +5391,14 @@ def update_sector_sentiment_container(n):
     for _, row in today_df.iterrows():
         sector   = row["sector"]
         score    = row["sector_sentiment_score"]
+
+        # Choose border color to match score-based stance
+        if score >= 60:
+            border_color = "#2ecc71"   # green
+        elif score <= 30:
+            border_color = "#e74c3c"   # red
+        else:
+            border_color = "#f39c12"   # orange
         
         # Sparkline for this sector
         hist = df[df["sector"] == sector]
