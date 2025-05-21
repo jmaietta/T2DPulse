@@ -897,6 +897,7 @@ def calculate_sector_sentiment():
         for sector_data in sector_scores:
             sector = sector_data["sector"]
             score = sector_data["score"]
+            stance = sector_data["stance"]
             
             # Normalize score from -1 to +1 scale to 0-100 scale
             norm_score = ((score + 1.0) / 2.0) * 100
@@ -917,6 +918,14 @@ def calculate_sector_sentiment():
             else:
                 stance = "Neutral"
                 takeaway = "Neutral – monitor trends"
+
+            # Choose border color to match stance
+            if stance == "Bullish":
+                border_color = "#2ecc71"
+            elif stance == "Bearish":
+                border_color = "#e74c3c"
+            else:
+                border_color = "#f39c12"
                 
             # Add the enhanced data with both original and normalized scores
             enhanced_scores.append({
@@ -5426,7 +5435,7 @@ def update_sector_sentiment_container(n):
             ),
             
         ], className="sector-card", style={
-            "border": "1px solid #ddd", 
+            "border": f"2px solid {border_color}", 
             "borderRadius": "6px", 
             "padding": "12px",
             "boxShadow": "0 1px 3px rgba(0,0,0,0.1)", 
