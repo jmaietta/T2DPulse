@@ -2439,7 +2439,9 @@ def create_pulse_card(value, include_chart=True):
     # Determine numeric score
     try:
         score_value = float(value)
-    except (ValueError, TypeError):
+        print(f"Successfully converted to float: {score_value}")
+    except (ValueError, TypeError) as e:
+        print(f"Error converting value to float: {e}, using default 0")
         score_value = 0
 
     # Determine status + color
