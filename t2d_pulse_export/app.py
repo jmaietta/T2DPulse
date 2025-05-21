@@ -74,6 +74,7 @@ from market_insights import create_insights_panel
 
 # Import sector trend chart for historical visualizations
 import sector_trend_chart
+from sector_trend_chart import create_mini_trend_chart
 
 # Import data cache for fast data access
 from data_cache import get_data, get_all_data
@@ -5364,7 +5365,7 @@ def update_sector_sentiment_container(n):
     # Build the graph
     graph = dcc.Graph(
         id="sector-sentiment-graph",
-        figure=create_mini_trend_chart(sector_scores),
+        figure=create_mini_trend_chart(sector_name),
         config={"displayModeBar": False},
         className="dashboard-chart"
     )
