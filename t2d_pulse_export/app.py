@@ -2418,10 +2418,15 @@ def create_pulse_card(value, include_chart=True):
                 showticklabels=False
             )
         
+@lru_cache(maxsize=1)
 def create_pulse_card(value, include_chart=True):
     """Create a side-by-side pulse display with score circle and trend chart
     that fits directly in the main sentiment banner without adding a separate card.
 
+    Args:
+        value (float or str): The T2D Pulse score value
+        include_chart (bool): Whether to include the 30-day chart
+    
     Returns:
         tuple: (pulse_display, pulse_status, pulse_color)
     """
