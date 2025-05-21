@@ -5364,7 +5364,7 @@ def update_sector_sentiment_container(n):
     # Build the graph
     graph = dcc.Graph(
         id="sector-sentiment-graph",
-        figure=create_sector_sentiment_graph(sector_scores),
+        figure=create_mini_trend_chart(sector_scores),
         config={"displayModeBar": False},
         className="dashboard-chart"
     )
