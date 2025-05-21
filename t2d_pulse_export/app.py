@@ -2418,95 +2418,54 @@ def create_pulse_card(value, include_chart=True):
                 showticklabels=False
             )
         
-        # Create the pulse circle - sized for banner with larger dimensions
-        pulse_circle = html.Div([
-            html.Div([
-                # PULSE logo at the top
-                html.Img(
-                    src='/assets/pulse_logo.png',  # Path to the logo image
-                    style={
-                        'height': '35px',  # Increased height from 25px to 35px
-                        'marginBottom': '10px',  # Space below the logo
-                        'marginTop': '-10px'  # Pull up slightly to maintain overall sizing
-                    }
-                ),
-                html.Div(f"{score_value:.1f}", style={
-                    'fontSize': '42px',  # Larger font size
-                    'fontWeight': '600',
-                    'color': pulse_color,
-                    'marginBottom': '5px',  # Small gap between score and status
-                    'marginTop': '-5px'  # Negative margin to compensate for logo space
-                }),
-                html.Div(pulse_status, style={
-                    'fontSize': '18px',  # Slightly larger font
-                    'color': pulse_color
-                })
-                # Added PULSE logo instead of text label
-            ], style={
-                'display': 'flex',
-                'flexDirection': 'column',
-                'alignItems': 'center',
-                'justifyContent': 'center',
-                'width': '180px',   # Larger circle width
-                'height': '180px',  # Larger circle height
-                'borderRadius': '50%',
-                'border': f'3px solid {pulse_color}',
-                'boxShadow': f'0 0 15px {pulse_color}',
-                'backgroundColor': 'white'
-            })
-        ])
+      # Create the pulse circle
+pulse_circle = html.Div([
+    html.Div([
+        html.Img(src='/assets/pulse_logo.png', style={
+            'height': '35px', 'marginBottom': '10px', 'marginTop': '-10px'
+        }),
+        html.Div(f"{score_value:.1f}", style={
+            'fontSize': '42px', 'fontWeight': '600', 'color': pulse_color,
+            'marginBottom': '5px', 'marginTop': '-5px'
+        }),
+        html.Div(pulse_status, style={
+            'fontSize': '18px', 'color': pulse_color
+        })
+    ], style={
+        'display': 'flex', 'flexDirection': 'column', 'alignItems': 'center',
+        'justifyContent': 'center', 'width': '180px', 'height': '180px',
+        'borderRadius': '50%', 'border': f'3px solid {pulse_color}',
+        'boxShadow': f'0 0 15px {pulse_color}', 'backgroundColor': 'white'
+    })
+])
 
-        # Create a responsive layout for the banner that works without a separate card
-        # Using Option A's side-by-side layout directly integrated into banner
-        pulse_display = html.Div([
-            # Container for all content with horizontal layout
-            html.Div([
-                # Left side - Pulse Circle aligned to the left with less spacing
-                html.Div([
-                    pulse_circle
-                ], style={
-                    'flex': '0 0 auto',                # Don't grow or shrink
-                    'marginRight': '15px',            # Reduced margin (from 20px to 15px)
-                    'display': 'flex',
-                    'alignItems': 'center',
-                    'justifyContent': 'flex-start',    # Align to the left
-                    'paddingLeft': '5px'              # Reduced padding (from 10px to 5px)
-                }),
-                
-                # Right side - Trend Chart - expanded to fill remaining space with 10% more width
-                html.Div([
-                    html.Div("30-Day Trend", style={
-                        'fontSize': '14px',
-                        'fontWeight': '500',
-                        'marginBottom': '2px',  # Reduced from 5px to 2px
-                        'textAlign': 'center',
-                        'color': '#555'
-                    }),
-                    dcc.Graph(
-                        id='t2d-pulse-trend-chart',
-                        figure=pulse_chart,
-                        config={'displayModeBar': False}
-                    )
-                ], style={
-                    'flex': '1 1 auto',               # Grow and shrink as needed
-                    'minWidth': '77%',                # Increased from 70% to 77% (10% wider)
-                    'height': '180px',                # Height for the banner
-                    'border': '1px solid #eee',
-                    'borderRadius': '5px',
-                    'padding': '10px 10px 2px 10px',  # Further reduced bottom padding (from 5px to 2px)
-                    'backgroundColor': '#fff',
-                    'marginRight': '10px'             # Right margin for spacing
-                })
-            ], style={
-                'display': 'flex',
-                'flexDirection': 'row',
-                'alignItems': 'center',
-                'justifyContent': 'flex-start',       # Start items from the left
-                'width': '100%'
-            })
-        ])
-        
-        return pulse_display, pulse_status, pulse_color
+# Assemble the banner with trend chart
+pulse_display = html.Div([
+    html.Div([pulse_circle], style={
+        'flex': '0 0 auto', 'marginRight': '15px',
+        'display': 'flex', 'alignItems': 'center', 'justifyContent': 'flex-start',
+        'paddingLeft': '5px'
+    }),
+    html.Div([
+        html.Div("30-Day Trend", style={
+            'fontSize': '14px', 'fontWeight': '500', 'marginBottom': '2px',
+            'textAlign': 'center', 'color': '#555'
+        }),
+        dcc.Graph(
+            id='t2d-pulse-trend-chart', figure=pulse_chart,
+            config={'displayModeBar': False}
+        )
+    ], style={
+        'flex': '1 1 auto', 'minWidth': '77%', 'height': '180px',
+        'border': '1px solid #eee', 'borderRadius': '5px',
+        'padding': '10px 10px 2px 10px', 'backgroundColor': '#fff',
+        'marginRight': '10px'
+    })
+], style={
+    'display': 'flex', 'flexDirection': 'row', 'alignItems': 'center', 'width': '100%'
+})
+
+return pulse_display, pulse_status, pulse_color
     
     except Exception as e:
         logger.error(f"Error creating T2D Pulse display with chart: {e}")
