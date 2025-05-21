@@ -25,143 +25,48 @@ def create_sector_trend_chart(sector_name, height=50, show_axes=False, auto_rang
     
 def create_mini_trend_chart(sector_name, height=50, show_axes=False, auto_range=True, show_value=False):
     """
-    Create a mini trend chart for a sector using authentic historical data
-    
-    Args:
-        sector_name (str): Name of the sector
-        height (int, optional): Height of the chart in pixels
-        show_axes (bool, optional): Whether to show axes
-        auto_range (bool, optional): Whether to auto-range the y-axis
-        show_value (bool, optional): Whether to show the latest value annotation
-        
-    Returns:
-        dict: Plotly figure object
+    # Connect to Postgres
+    from sqlalchemy import create_engine, text
+    import pandas as pd
+    import os
+
+    engine = create_engine(os.getenv("DATABASE_URL"))
+
+    # 1) Load the last 30 trading days for this sector
+    sql = """
+    SELECT date, sector_sentiment_score
+      FROM sector_sentiment_history
+     WHERE sector = :sector
+     ORDER BY date ASC
+     LIMIT 30
     """
-    # Get authentic historical data
-    sector_history = authentic_sector_history.get_authentic_sector_history()
-    
-    if not sector_history or sector_name not in sector_history:
-        # Return empty chart if no data available
-        fig = go.Figure()
-        fig.update_layout(height=height, margin=dict(l=0, r=0, t=0, b=0))
-        return fig
-    
-    # Get data for this sector
-    df = sector_history[sector_name]
-    
-    # Sort by date (just to be safe)
-    df = df.sort_index()
-    
-    # Reset index to handle both formats (where date might be index or column)
-    df = df.reset_index()
-    
-    # Ensure date column is properly named (handle both 'date' and 'index' as date column)
-    if 'date' not in df.columns and 'index' in df.columns:
-        df = df.rename(columns={'index': 'date'})
-    
-    # Ensure date is datetime type
-    df['date'] = pd.to_datetime(df['date'])
-    
-    # Filter out weekends (Saturday = 5, Sunday = 6)
-    df['is_weekday'] = df['date'].dt.dayofweek < 5  # Only keep weekdays (0-4)
-    df = df[df['is_weekday']]
-    
-    # Check if we still have data after filtering
+    df = pd.read_sql(sql, engine, params={"sector": sector_name})
+    df["date"] = pd.to_datetime(df["date"])
+
+    # 2) If no data, return empty figure
     if df.empty:
         fig = go.Figure()
         fig.update_layout(height=height, margin=dict(l=0, r=0, t=0, b=0))
         return fig
-        
-    # If we have only a single data point, still render it as a marker
-    if len(df) < 2:
-        # Get the single point
-        date = df['date'].iloc[0]
-        value = df['value'].iloc[0]
-        
-        # Create a simple figure with just the marker
-        fig = go.Figure()
-        fig.add_trace(go.Scatter(
-            x=[date], 
-            y=[value], 
-            mode="markers",
-            marker=dict(color=TREND_COLORS['marker'], size=6),
-            hoverinfo='text',
-            hovertext=f"{date.strftime('%Y-%m-%d')}: {value:.1f}",
-            showlegend=False
-        ))
-        
-        # Set layout
-        fig.update_layout(
-            height=height, 
-            margin=dict(l=0, r=0, t=0, b=0),
-            plot_bgcolor='rgba(0,0,0,0)',
-            paper_bgcolor='rgba(0,0,0,0)',
-            hovermode='closest'
-        )
-        
-        # Hide axes if requested
-        if not show_axes:
-            fig.update_xaxes(visible=False)
-            fig.update_yaxes(visible=False)
-            
-        # Set y-axis range
-        if not auto_range:
-            fig.update_yaxes(range=[0, 100])
-            
-        return fig
-    
-    # Convert columns to lists for plotting
-    dates = df['date'].tolist()
-    values = df['value'].tolist()
-    
-    # Create figure
-    fig = go.Figure()
-    
-    # Add area fill
-    fig.add_trace(go.Scatter(
-        x=dates,
-        y=values,
-        fill='tozeroy',
-        fillcolor=TREND_COLORS['fill'],
-        line=dict(color=TREND_COLORS['line'], width=2),
-        mode='lines',
-        hoverinfo='none',
-        showlegend=False
+
+    # 3) Build the sparkline
+    y_min = df["sector_sentiment_score"].min() - 2
+    y_max = df["sector_sentiment_score"].max() + 2
+
+    fig = go.Figure(go.Scatter(
+        x=df["date"], y=df["sector_sentiment_score"],
+        mode="lines", line=dict(color=TREND_COLORS['line'], width=2),
+        hovertemplate="<b>%{x|%b %d}</b><br>Score: %{y:.1f}<extra></extra>"
     ))
-    
-    # Add markers for each point (we'll hide them with opacity 0 but they enable hover)
-    fig.add_trace(go.Scatter(
-        x=dates,
-        y=values,
-        mode='markers',
-        marker=dict(color=TREND_COLORS['marker'], size=3, opacity=0),
-        hoverinfo='text',
-        hovertext=[f"{d.strftime('%Y-%m-%d')}: {v:.1f}" for d, v in zip(dates, values)],
-        showlegend=False
-    ))
-    
-    # Set layout
     fig.update_layout(
         height=height,
         margin=dict(l=0, r=0, t=0, b=0),
         plot_bgcolor='rgba(0,0,0,0)',
-        paper_bgcolor='rgba(0,0,0,0)',
-        hovermode='closest'
+        paper_bgcolor='rgba(0,0,0,0)'
     )
-    
-    # Hide axes if requested
-    if not show_axes:
-        fig.update_xaxes(visible=False)
-        fig.update_yaxes(visible=False)
-    
-    # Set y-axis range to focus on differences
-    if auto_range:
-        # Let Plotly handle the auto-ranging
-        pass
-    else:
-        # Fixed range from 0-100 for consistent visualization
-        fig.update_yaxes(range=[0, 100])
-    
+    fig.update_xaxes(visible=False)
+    fig.update_yaxes(range=[y_min, y_max], visible=False)
+
     return fig
 
 def create_combined_sector_chart(sector_names, title=None, height=400):
