@@ -5399,15 +5399,32 @@ def update_sector_sentiment_container(n):
         # Card layout
         card = html.Div([
             html.Div([
-                html.Div(sector, style={"fontWeight": "600", "fontSize": "18px"}),
-                html.Div(f"{score:.1f}", style={"fontSize": "16px", "marginTop": "4px"})
-            ], style={"marginBottom": "8px"}),
-
+                html.Div(
+                    sector,
+                    style={"fontWeight": "600", "fontSize": "18px", "flex": "1", "textAlign": "left"}
+                ),
+                html.Div(
+                    f"{score:.1f}",
+                    style={
+                        "fontWeight": "600",
+                        "fontSize": "18px",
+                        "color": border_color,
+                        "textAlign": "right",
+                        "flex": "0"
+                    }
+                ),
+            ], style={
+                "display": "flex",
+                "alignItems": "center",
+                "justifyContent": "space-between",
+                "marginBottom": "8px"
+            }),
             dcc.Graph(
                 figure=spark,
                 config={"displayModeBar": False},
                 style={"height": "80px"}
-            )
+            ),
+            
         ], className="sector-card", style={
             "border": "1px solid #ddd", 
             "borderRadius": "6px", 
