@@ -5366,7 +5366,7 @@ def update_sector_sentiment_container(n):
     # 1) Read all sectors' 30-day history
     engine = create_engine(os.getenv("DATABASE_URL"))
     sql = """
-        SELECT date, sector, sector_sentiment_score, stance, takeaway, drivers, tickers
+        SELECT date, sector, sector_sentiment_score
           FROM sector_sentiment_history
          WHERE date >= (CURRENT_DATE - INTERVAL '29 days')
       ORDER BY sector, date
@@ -5382,11 +5382,7 @@ def update_sector_sentiment_container(n):
     for _, row in today_df.iterrows():
         sector   = row["sector"]
         score    = row["sector_sentiment_score"]
-        stance   = row["stance"]
-        takeaway = row["takeaway"]
-        drivers  = row["drivers"]  # assuming JSON array in DB
-        tickers  = row["tickers"]  # assuming JSON array in DB
-
+        
         # Sparkline for this sector
         hist = df[df["sector"] == sector]
         spark = go.Figure(go.Scatter(
@@ -5404,23 +5400,20 @@ def update_sector_sentiment_container(n):
         card = html.Div([
             html.Div([
                 html.Div(sector, style={"fontWeight": "600", "fontSize": "18px"}),
-                html.Div(f"{score:.1f} ({stance})", style={"fontSize": "16px", "marginTop": "4px"})
+                html.Div(f"{score:.1f}", style={"fontSize": "16px", "marginTop": "4px"})
             ], style={"marginBottom": "8px"}),
 
             dcc.Graph(
                 figure=spark,
                 config={"displayModeBar": False},
                 style={"height": "80px"}
-            ),
-
-            html.P(takeaway, style={"fontSize": "12px", "margin": "8px 0"}),
-
-            html.Ul([html.Li(d) for d in drivers], style={"fontSize": "12px", "margin": "4px 0"}),
-
-            html.Div([html.Span(t, style={"marginRight": "6px", "fontSize": "12px"}) for t in tickers])
+            )
         ], className="sector-card", style={
-            "border": "1px solid #ddd", "borderRadius": "6px", "padding": "12px",
-            "boxShadow": "0 1px 3px rgba(0,0,0,0.1)", "backgroundColor": "#fff"
+            "border": "1px solid #ddd", 
+            "borderRadius": "6px", 
+            "padding": "12px",
+            "boxShadow": "0 1px 3px rgba(0,0,0,0.1)", 
+            "backgroundColor": "#fff"
         })
 
         cards.append(card)
