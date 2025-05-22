@@ -5413,12 +5413,17 @@ def update_sector_sentiment_container(n):
             last_scores = sector_hist["sector_sentiment_score"].iloc[-4:].values
             # compute the three daily changes
             diffs = [last_scores[i+1] - last_scores[i] for i in range(3)]
+           
             if all(d > 0 for d in diffs):
-                momentum_icon = html.I(className="fas fa-arrow-up text-success",
-                                       style={"marginLeft": "8px"})
+                momentum_icon = html.I(
+                    className="fas fa-arrow-up",
+                    style={"marginLeft": "8px", "color": "green"}
+                )
             elif all(d < 0 for d in diffs):
-                momentum_icon = html.I(className="fas fa-arrow-down text-danger",
-                                       style={"marginLeft": "8px"})
+                momentum_icon = html.I(
+                    className="fas fa-arrow-down",
+                    style={"marginLeft": "8px", "color": "red"}
+                )
         # ————————————————————————
 
         spark = go.Figure(go.Scatter(
