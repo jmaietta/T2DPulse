@@ -5391,6 +5391,7 @@ def update_sector_sentiment_container(n):
     for _, row in today_df.iterrows():
         sector   = row["sector"]
         score    = row["sector_sentiment_score"]
+        raw_pct = score - 50    # gives you (raw_ema * 100), e.g. 0.23 for +0.23%
 
         # Choose border color to match score-based stance
         if score >= 60:
@@ -5452,7 +5453,7 @@ def update_sector_sentiment_container(n):
                     }
                 ),
                 html.Div(
-                    f"{score:.1f}",
+                    f"{score:.2f}%",
                     style={
                         "fontWeight": "600",
                         "fontSize": "18px",
