@@ -5403,12 +5403,22 @@ def update_sector_sentiment_container(n):
         # Sparkline for this sector
         hist = df[df["sector"] == sector]
         
-        # ——— Add momentum arrow ———
+        # ——— 3-day sentiment momentum arrow ———
         sector_hist = df[df["sector"] == sector].sort_values("date")
-        if len(sector_hist) > 1 and score >= sector_hist.iloc[-2]["sector_sentiment_score"]:
-            momentum_icon = html.I(className="fas fa-arrow-up text-success")
-        else:
-            momentum_icon = html.I(className="fas fa-arrow-down text-danger")
+        # default to empty span so we still get spacing
+        momentum_icon = html.Span("", style={"marginLeft": "8px"})
+
+        # need at least 4 days to get 3 consecutive day-to-day changes
+        if len(sector_hist) >= 4:
+            last_scores = sector_hist["sector_sentiment_score"].iloc[-4:].values
+            # compute the three daily changes
+            diffs = [last_scores[i+1] - last_scores[i] for i in range(3)]
+            if all(d > 0 for d in diffs):
+                momentum_icon = html.I(className="fas fa-arrow-up text-success",
+                                       style={"marginLeft": "8px"})
+            elif all(d < 0 for d in diffs):
+                momentum_icon = html.I(className="fas fa-arrow-down text-danger",
+                                       style={"marginLeft": "8px"})
         # ————————————————————————
 
         spark = go.Figure(go.Scatter(
