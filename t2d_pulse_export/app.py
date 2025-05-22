@@ -5376,11 +5376,12 @@ def update_sector_sentiment_container(n):
     engine = create_engine(os.getenv("DATABASE_URL"))
     sql = """
         SELECT date, sector, sector_raw_ema
-          FROM sector_sentiment_raw_history
+          FROM sector_sentiment_history
          WHERE date >= (CURRENT_DATE - INTERVAL '29 days')
       ORDER BY sector, date
     """
     df = pd.read_sql(sql, engine)
+    df['date'] = pd.to_datetime(df['date'])
 
     # 2) Pick today’s (most recent) snapshot
     latest_date = df["date"].max()
