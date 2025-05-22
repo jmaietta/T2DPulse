@@ -1,145 +1,44 @@
 {
   "AdTech": [
-    "APP",
-    "APPS",
-    "CRTO",
-    "DV",
-    "GOOGL",
-    "META",
-    "MGNI",
-    "PUBM",
-    "TTD"
+    "APP","APPS","CRTO","DV","GOOGL","META","MGNI","PUBM","TTD"
   ],
   "Cloud Infrastructure": [
-    "AMZN",
-    "CRM",
-    "CSCO",
-    "GOOGL",
-    "MSFT",
-    "NET",
-    "ORCL",
-    "SNOW"
+    "AMZN","CRM","CSCO","GOOGL","MSFT","NET","ORCL","SNOW"
   ],
   "Fintech": [
-    "AFRM",
-    "BILL",
-    "COIN",
-    "FIS",
-    "GPN",
-    "PYPL",
-    "SSNC",
-    "FI",
-    "XYZ"
+    "AFRM","BILL","COIN","FIS","GPN","PYPL","SSNC","FI","XYZ"
   ],
   "eCommerce": [
-    "AMZN",
-    "BABA",
-    "BKNG",
-    "CHWY",
-    "EBAY",
-    "ETSY",
-    "PDD",
-    "SE",
-    "SHOP",
-    "WMT"
+    "AMZN","BABA","BKNG","CHWY","EBAY","ETSY","PDD","SE","SHOP","WMT"
   ],
   "Consumer Internet": [
-    "ABNB",
-    "BKNG",
-    "GOOGL",
-    "META",
-    "NFLX",
-    "PINS",
-    "SNAP",
-    "SPOT",
-    "TRIP",
-    "YELP"
+    "ABNB","BKNG","GOOGL","META","NFLX","PINS","SNAP","SPOT","TRIP","YELP"
   ],
   "IT Services": [
-    "ACN",
-    "CTSH",
-    "DXC",
-    "HPQ",
-    "IBM",
-    "INFY",
-    "PLTR",
-    "WIT"
+    "ACN","CTSH","DXC","HPQ","IBM","INFY","PLTR","WIT"
   ],
   "Hardware/Devices": [
-    "AAPL",
-    "DELL",
-    "HPQ",
-    "LOGI",
-    "PSTG",
-    "SMCI",
-    "SSYS",
-    "STX",
-    "WDC"
+    "AAPL","DELL","HPQ","LOGI","PSTG","SMCI","SSYS","STX","WDC"
   ],
   "Cybersecurity": [
-    "CHKP",
-    "CRWD",
-    "CYBR",
-    "FTNT",
-    "NET",
-    "OKTA",
-    "PANW",
-    "S",
-    "ZS"
+    "CHKP","CRWD","CYBR","FTNT","NET","OKTA","PANW","S","ZS"
   ],
   "Dev Tools": [
-    "DDOG",
-    "ESTC",
-    "GTLB",
-    "MDB",
-    "TEAM"
+    "DDOG","ESTC","GTLB","MDB","TEAM"
   ],
   "AI Infrastructure": [
-    "AMZN",
-    "GOOGL",
-    "IBM",
-    "META",
-    "MSFT",
-    "NVDA",
-    "ORCL"
+    "AMZN","GOOGL","IBM","META","MSFT","NVDA","ORCL"
   ],
   "Semiconductors": [
-    "AMAT",
-    "AMD",
-    "ARM",
-    "AVGO",
-    "INTC",
-    "NVDA",
-    "QCOM",
-    "TSM"
+    "AMAT","AMD","ARM","AVGO","INTC","NVDA","QCOM","TSM"
   ],
   "Vertical SaaS": [
-    "CCCS",
-    "CPRT",
-    "CSGP",
-    "GWRE",
-    "ICE",
-    "PCOR",
-    "SSNC",
-    "TTAN"
+    "CCCS","CPRT","CSGP","GWRE","ICE","PCOR","SSNC","TTAN"
   ],
   "Enterprise SaaS": [
-    "ADSK",
-    "AMZN",
-    "CRM",
-    "IBM",
-    "MSFT",
-    "NOW",
-    "ORCL",
-    "SAP",
-    "WDAY"
+    "ADSK","AMZN","CRM","IBM","MSFT","NOW","ORCL","SAP","WDAY"
   ],
   "SMB SaaS": [
-    "ADBE",
-    "BILL",
-    "GOOGL",
-    "HUBS",
-    "INTU",
-    "META"
+    "ADBE","BILL","GOOGL","HUBS","INTU","META"
   ]
 }
