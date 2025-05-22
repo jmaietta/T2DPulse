@@ -16,24 +16,25 @@ def main():
     stock_df = pd.read_sql(stock_sql, engine)
     stock_df['date'] = pd.to_datetime(stock_df['date'])
 
-    # 2) Map tickers to sectors
+    # 2) Map tickers to sectors and build each sector’s EMA independently
     with open("sector_ticker_mapping.json", "r") as f:
         sector_to_tickers = json.load(f)
-    # build ticker→sector lookup, taking the first sector that mentions each ticker
-    ticker_to_sector = {}
-    for sector, tickers in sector_to_tickers.items():
-        for ticker in tickers:
-            if ticker not in ticker_to_sector:
-                ticker_to_sector[ticker] = sector
-    stock_df['sector'] = stock_df['ticker'].map(ticker_to_sector)
 
-    # 3) Aggregate into sector raw EMA
-    sector_df = (
-        stock_df
-          .groupby(['date','sector'])['raw_sentiment_score']
-          .mean()
-          .reset_index(name='sector_raw_ema')
-    )
+    sector_frames = []
+    for sector, tickers in sector_to_tickers.items():
+        df_s = stock_df[stock_df['ticker'].isin(tickers)]
+        if not df_s.empty:
+            df_s = (
+                df_s
+                  .groupby('date')['raw_sentiment_score']
+                  .mean()
+                  .reset_index(name='sector_raw_ema')
+            )
+            df_s['sector'] = sector
+            sector_frames.append(df_s)
+
+    # 3) Put all sectors back together
+    sector_df = pd.concat(sector_frames, ignore_index=True)
 
     # 4) Truncate & write to sector_sentiment_history
     with engine.begin() as conn:
