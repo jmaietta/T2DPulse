@@ -5402,6 +5402,15 @@ def update_sector_sentiment_container(n):
         
         # Sparkline for this sector
         hist = df[df["sector"] == sector]
+        
+        # ——— Add momentum arrow ———
+        sector_hist = df[df["sector"] == sector].sort_values("date")
+        if len(sector_hist) > 1 and score >= sector_hist.iloc[-2]["sector_sentiment_score"]:
+            momentum_icon = html.I(className="fas fa-arrow-up text-success")
+        else:
+            momentum_icon = html.I(className="fas fa-arrow-down text-danger")
+        # ————————————————————————
+
         spark = go.Figure(go.Scatter(
             x=hist["date"], y=hist["sector_sentiment_score"],
             mode="lines", line=dict(width=2, color="#2E86C1")
@@ -5417,8 +5426,15 @@ def update_sector_sentiment_container(n):
         card = html.Div([
             html.Div([
                 html.Div(
-                    sector,
-                    style={"fontWeight": "600", "fontSize": "18px", "flex": "1", "textAlign": "left"}
+                    [ sector, momentum_icon ],
+                    style={
+                        "fontWeight": "600",
+                        "fontSize": "18px",
+                        "flex": "1",
+                        "textAlign": "left",
+                        "display": "flex",
+                        "alignItems": "center"
+                    }
                 ),
                 html.Div(
                     f"{score:.1f}",
