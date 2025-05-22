@@ -5375,8 +5375,8 @@ def update_sector_sentiment_container(n):
     # 1) Read all sectors' 30-day history
     engine = create_engine(os.getenv("DATABASE_URL"))
     sql = """
-        SELECT date, sector, sector_sentiment_score
-          FROM sector_sentiment_history
+        SELECT date, sector, sector_raw_ema
+          FROM sector_sentiment_raw_history
          WHERE date >= (CURRENT_DATE - INTERVAL '29 days')
       ORDER BY sector, date
     """
@@ -5390,8 +5390,9 @@ def update_sector_sentiment_container(n):
     cards = []
     for _, row in today_df.iterrows():
         sector   = row["sector"]
-        score    = row["sector_sentiment_score"]
-        raw_pct = score - 50    # gives you (raw_ema * 100), e.g. 0.23 for +0.23%
+        #score    = row["sector_sentiment_score"]
+        ema   = row["sector_raw_ema"]
+        #raw_pct = score - 50    # gives you (raw_ema * 100), e.g. 0.23 for +0.23%
 
         # Choose border color to match score-based stance
         if score >= 60:
@@ -5411,10 +5412,8 @@ def update_sector_sentiment_container(n):
 
         # need at least 4 days to get 3 consecutive day-to-day changes
         if len(sector_hist) >= 4:
-            last_scores = sector_hist["sector_sentiment_score"].iloc[-4:].values
-            # compute the three daily changes
-            diffs = [last_scores[i+1] - last_scores[i] for i in range(3)]
-           
+            hist_vals = sector_hist["sector_raw_ema"].iloc[-4:].values
+            diffs     = [hist_vals[i+1] - hist_vals[i] for i in range(3)]
             if all(d > 0 for d in diffs):
                 momentum_icon = html.I(
                     className="fas fa-arrow-up",
@@ -5428,8 +5427,11 @@ def update_sector_sentiment_container(n):
         # ————————————————————————
 
         spark = go.Figure(go.Scatter(
-            x=hist["date"], y=hist["sector_sentiment_score"],
-            mode="lines", line=dict(width=2, color="#2E86C1")
+            x=hist["date"], 
+            y=hist["sector_raw_ema"],
+            mode="lines", 
+            line=dict(width=2, 
+            color="#2E86C1")
         ))
         spark.update_layout(
             margin=dict(l=0, r=0, t=0, b=0),
