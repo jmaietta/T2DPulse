@@ -5389,32 +5389,25 @@ def update_sector_sentiment_container(n):
 
     # 3) Build one card per sector
     cards = []
+
     for _, row in today_df.iterrows():
-        sector   = row["sector"]
-        #score    = row["sector_sentiment_score"]
-        ema   = row["sector_raw_ema"]
-        #raw_pct = score - 50    # gives you (raw_ema * 100), e.g. 0.23 for +0.23%
+        sector = row["sector"]
+        # grab the full history for this sector
+        sector_hist = df[df["sector"] == sector].sort_values("date").copy()
 
-        # Choose border color to match score-based stance
-        if score >= 60:
-            border_color = "#2ecc71"   # green
-        elif score <= 30:
-            border_color = "#e74c3c"   # red
-        else:
-            border_color = "#f39c12"   # orange
-        
-        # Sparkline for this sector
-        hist = df[df["sector"] == sector]
-        
-        # ——— 3-day sentiment momentum arrow ———
-        sector_hist = df[df["sector"] == sector].sort_values("date")
-        # default to empty span so we still get spacing
+        # 1) compute daily % change of your 3-day EMA
+        sector_hist["ema_pct_change"] = (
+            sector_hist["sector_raw_ema"]
+                .pct_change()    # (EMA_t – EMA_{t-1}) / EMA_{t-1}
+                .fillna(0)
+                * 100            # turn into percent
+        )
+
+        # 2) build arrow based on 3-day momentum
         momentum_icon = html.Span("", style={"marginLeft": "8px"})
-
-        # need at least 4 days to get 3 consecutive day-to-day changes
         if len(sector_hist) >= 4:
-            hist_vals = sector_hist["sector_raw_ema"].iloc[-4:].values
-            diffs     = [hist_vals[i+1] - hist_vals[i] for i in range(3)]
+            last4 = sector_hist["ema_pct_change"].iloc[-4:].values
+            diffs = [last4[i+1] - last4[i] for i in range(3)]
             if all(d > 0 for d in diffs):
                 momentum_icon = html.I(
                     className="fas fa-arrow-up",
@@ -5425,14 +5418,13 @@ def update_sector_sentiment_container(n):
                     className="fas fa-arrow-down",
                     style={"marginLeft": "8px", "color": "red"}
                 )
-        # ————————————————————————
 
+        # 3) sparkline of daily % changes
         spark = go.Figure(go.Scatter(
-            x=sector_hist["date"], 
-            y=sector_hist["sector_raw_ema"],
-            mode="lines", 
-            line=dict(width=2, 
-            color="#2E86C1")
+            x=sector_hist["date"],
+            y=sector_hist["ema_pct_change"],
+            mode="lines",
+            line=dict(width=2, color="#2E86C1")
         ))
         spark.update_layout(
             margin=dict(l=0, r=0, t=0, b=0),
@@ -5441,30 +5433,16 @@ def update_sector_sentiment_container(n):
             yaxis=dict(visible=False)
         )
 
-        # Card layout
+        # 4) assemble the card (neutral border)
         card = html.Div([
             html.Div([
-                html.Div(
-                    [ sector, momentum_icon ],
-                    style={
-                        "fontWeight": "600",
-                        "fontSize": "18px",
-                        "flex": "1",
-                        "textAlign": "left",
-                        "display": "flex",
-                        "alignItems": "center"
-                    }
-                ),
-                html.Div(
-                    f"{score:.2f}%",
-                    style={
-                        "fontWeight": "600",
-                        "fontSize": "18px",
-                        "color": border_color,
-                        "textAlign": "right",
-                        "flex": "0"
-                    }
-                ),
+                html.Div(sector, style={
+                    "fontWeight": "600",
+                    "fontSize": "18px",
+                    "flex": "1",
+                    "textAlign": "left"
+                }),
+                momentum_icon
             ], style={
                 "display": "flex",
                 "alignItems": "center",
@@ -5476,16 +5454,16 @@ def update_sector_sentiment_container(n):
                 config={"displayModeBar": False},
                 style={"height": "80px"}
             ),
-            
         ], className="sector-card", style={
-            "border": f"2px solid {border_color}", 
-            "borderRadius": "6px", 
+            "border": "2px solid #ddd",        # neutral gray
+            "borderRadius": "6px",
             "padding": "12px",
-            "boxShadow": "0 1px 3px rgba(0,0,0,0.1)", 
+            "boxShadow": "0 1px 3px rgba(0,0,0,0.1)",
             "backgroundColor": "#fff"
         })
 
         cards.append(card)
+    
 
     # 4) Return grid of cards
     return html.Div(cards, className="sector-cards-grid", style={
