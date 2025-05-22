@@ -1,0 +1,46 @@
+```diff
+*** Begin Patch: Fix Refresh Script and Add Fallback ***
+*** Update: data/run_full_refresh.sh ***
+@@ -1,5 +1,5 @@
+ #!/usr/bin/env bash
+ set -e  # exit on any error
+
+ # move into the data folder
+-cd "$(dirname "$0")"
++cd "$(dirname "$0")"
+
+ echo "Starting market-cap load…"
+-python market_cap_loader.py
++python ../market_cap_loader.py
+*** End Update ***
+
+*** Update:src/t2d_pulse_export/app.py ***
+@@ def update_sector_sentiment_container(n):
+-    engine = create_engine(os.getenv("DATABASE_URL"))
+-    df = pd.read_sql(sql, engine)
+-    latest_date = df["date"].max()
+-    today_df    = df[df["date"] == latest_date]
++    # Primary: load fresh data from Postgres
++    try:
++        engine = create_engine(os.getenv("DATABASE_URL"))
++        df = pd.read_sql(sql, engine)
++        latest_date = df["date"].max()
++        today_df    = df[df["date"] == latest_date]
++        if today_df.empty:
++            raise ValueError('No data for latest date')
++    except Exception:
++        # Fallback: static JSON snapshot
++        import json
++        with open("data/sector_sentiment_history.json", "r") as f:
++            hist = json.load(f)
++        rows = []
++        for sec, arr in hist.items():
++            dt, score = arr[-1]
++            rows.append({
++                'date': pd.to_datetime(dt).date(),
++                'sector': sec,
++                'sector_sentiment_score': score
++            })
++        today_df = pd.DataFrame(rows)
+*** End Update ***
+```
