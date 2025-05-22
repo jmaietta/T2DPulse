@@ -1,4 +1,5 @@
 import os
+import json
 import pandas as pd
 from sqlalchemy import create_engine, text
 
@@ -16,9 +17,8 @@ def main():
     stock_df['date'] = pd.to_datetime(stock_df['date'])
 
     # 2) Map tickers to sectors
-    ticker_to_sector = {
-        "AAPL":"Tech", "ABNB":"Travel", /* …all your tickers… */
-    }
+    with open("sector_ticker_mapping.json", "r") as f:
+        ticker_to_sector = json.load(f)
     stock_df['sector'] = stock_df['ticker'].map(ticker_to_sector)
 
     # 3) Aggregate into sector raw EMA
