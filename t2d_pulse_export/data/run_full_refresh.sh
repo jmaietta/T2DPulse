@@ -5,7 +5,7 @@ set -e  # exit on any error
 cd "$(dirname "$0")"
 
 echo "Starting market-cap load…"
-python market_cap_loader.py
+python ../market_cap_loader.py
 
 echo "Computing stock-level sentiment…"
 python compute_stock_sentiment.py
