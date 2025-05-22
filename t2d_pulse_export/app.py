@@ -5427,8 +5427,8 @@ def update_sector_sentiment_container(n):
         # ————————————————————————
 
         spark = go.Figure(go.Scatter(
-            x=hist["date"], 
-            y=hist["sector_raw_ema"],
+            x=sector_hist["date"], 
+            y=sector_hist["sector_raw_ema"],
             mode="lines", 
             line=dict(width=2, 
             color="#2E86C1")
