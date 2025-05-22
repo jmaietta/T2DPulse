@@ -19,12 +19,12 @@ def main():
     # 2) Map tickers to sectors
     with open("sector_ticker_mapping.json", "r") as f:
         sector_to_tickers = json.load(f)
-    # build ticker→sector lookup
-    ticker_to_sector = {
-        ticker: sector
-        for sector, tickers in sector_to_tickers.items()
-        for ticker in tickers
-    }
+    # build ticker→sector lookup, taking the first sector that mentions each ticker
+    ticker_to_sector = {}
+    for sector, tickers in sector_to_tickers.items():
+        for ticker in tickers:
+            if ticker not in ticker_to_sector:
+                ticker_to_sector[ticker] = sector
     stock_df['sector'] = stock_df['ticker'].map(ticker_to_sector)
 
     # 3) Aggregate into sector raw EMA
