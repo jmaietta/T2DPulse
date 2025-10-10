@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>TEK2day Pulse</title>
 
-  <!-- PWA + icons (ALL paths are relative to docs/index.html) -->
+  <!-- PWA + icons (paths are relative to docs/index.html) -->
   <meta name="theme-color" content="#0f172a" />
   <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png" />
@@ -22,15 +22,34 @@
     }
     *{box-sizing:border-box}
     body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
-    /* Header */
-    header.site{max-width:960px;margin:1.25rem auto .25rem;padding:0 1rem;display:flex;align-items:center;gap:.75rem}
+
+    /* Sticky header */
+    header.site{
+      position: sticky;       /* sticks to top */
+      top: 0;
+      z-index: 50;
+      max-width: 960px;
+      margin: 0 auto;         /* flush with top */
+      padding: .6rem 1rem;
+      display: flex;
+      align-items: center;
+      gap: .75rem;
+      background: rgba(248,250,252,.85);    /* var(--bg) w/ translucency */
+      backdrop-filter: saturate(180%) blur(8px);
+      -webkit-backdrop-filter: saturate(180%) blur(8px);
+      border-bottom: 1px solid var(--line);
+      transition: box-shadow .2s ease;
+    }
+    header.site.shadow{ box-shadow: 0 6px 20px rgba(15,23,42,.08) }
     header.site img{width:40px;height:40px;border-radius:10px}
     header.site h1{font-size:1.25rem;margin:0}
     header.site .tag{color:var(--muted);font-size:.95rem}
     .install{display:none;margin-left:auto}
     .install button{background:#0f172a;color:#fff;border:0;border-radius:999px;padding:.5rem .85rem;font-weight:600;cursor:pointer}
+
     /* Container */
     #app{max-width:960px;margin:0 auto 2rem;padding:0 1rem}
+
     /* Section */
     #tek2day-pulse{background:var(--bg);border:1px solid var(--line);border-radius:calc(var(--r)+2px);padding:1rem}
     .stack{display:grid;gap:1rem}
@@ -56,7 +75,7 @@
 </head>
 
 <body>
-  <!-- Site header with logo + install button -->
+  <!-- Sticky site header with logo + install button -->
   <header class="site">
     <img src="./icons/logo-48.png" alt="TEK2day logo" />
     <div>
@@ -98,7 +117,7 @@
     </section>
   </div>
 
-  <!-- PWA bootstrap -->
+  <!-- PWA + sticky shadow script -->
   <script>
     // “Install” prompt
     let deferredPrompt;
@@ -123,6 +142,14 @@
         navigator.serviceWorker.register('./sw.js', { scope: './' });
       });
     }
+
+    // Add soft shadow once the user scrolls a bit
+    window.addEventListener('scroll', () => {
+      const h = document.querySelector('header.site');
+      if (!h) return;
+      if (window.scrollY > 8) h.classList.add('shadow');
+      else h.classList.remove('shadow');
+    });
   </script>
 </body>
 </html>
