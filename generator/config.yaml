@@ -23,11 +23,7 @@ sources:
     fintech:
       - '(fintech OR payments OR "digital banking" OR crypto OR blockchain OR "open banking") site:(pymnts.com OR wsj.com OR nytimes.com OR ft.com OR bloomberg.com/technology OR theverge.com OR venturebeat.com OR techcrunch.com)'
 
-  hacker_news:
-    include_front_page: true
-    include_new: true
-    lookback_hours: 24
-
+# Global domain filters (applied to *all* items)
 exclude_domains_suffix:
   - "substack.com"
   - "x.com"
