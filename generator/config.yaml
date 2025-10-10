@@ -25,9 +25,12 @@ sources:
 
 # Global domain filters (applied to *all* items)
 exclude_domains_suffix:
+  - "news.ycombinator.com"  # block Hacker News
+  - "ycombinator.com"
   - "substack.com"
   - "x.com"
   - "twitter.com"
+  - "youtube.com" 
 
 utm:
   source: "tek2day"
