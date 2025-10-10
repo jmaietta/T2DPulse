@@ -6,7 +6,7 @@
 #
 # Changes in this version:
 # - Titles/summaries now decode HTML entities first (fixes &#8217; → ’).
-# - Dropped Hacker News completely.
+# - Dropped Hacker News completely
 # - Optional domain blocklist applied to *all* items (e.g., substack.com).
 
 import os, re, json, html
