@@ -1,0 +1,38 @@
+timezone: "America/New_York"
+run_window_hours: 24
+max_items_per_category: 15
+
+sources:
+  rss:
+    - name: "VentureBeat"
+      url: "https://venturebeat.com/feed"
+    - name: "The Verge"
+      url: "https://www.theverge.com/rss/index.xml"
+    - name: "OpenAI News"
+      url: "https://openai.com/blog/rss.xml"
+    - name: "Anthropic News"
+      url: "https://www.anthropic.com/news/rss.xml"
+    - name: "PYMNTS"
+      url: "https://www.pymnts.com/feed"
+
+  google_news_queries:
+    ai:
+      - '("artificial intelligence" OR AI OR "large language model" OR LLM OR "generative AI") site:(theverge.com OR venturebeat.com OR wired.com OR arstechnica.com OR bloomberg.com/technology OR wsj.com OR nytimes.com OR ft.com OR techcrunch.com OR ieee.org OR theregister.com)'
+    software:
+      - '(software OR "developer tools" OR devops OR "platform engineering" OR SaaS) site:(theverge.com OR venturebeat.com OR wired.com OR arstechnica.com OR bloomberg.com/technology OR wsj.com OR nytimes.com OR ft.com OR techcrunch.com OR github.blog OR ieee.org OR theregister.com)'
+    fintech:
+      - '(fintech OR payments OR "digital banking" OR crypto OR blockchain OR "open banking") site:(pymnts.com OR wsj.com OR nytimes.com OR ft.com OR bloomberg.com/technology OR theverge.com OR venturebeat.com OR techcrunch.com)'
+
+  hacker_news:
+    include_front_page: true
+    include_new: true
+    lookback_hours: 24
+
+exclude_domains_suffix:
+  - "substack.com"
+  - "x.com"
+  - "twitter.com"
+
+utm:
+  source: "tek2day"
+  medium: "email"
