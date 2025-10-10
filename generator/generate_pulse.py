@@ -2,10 +2,11 @@
 # generator/generate_pulse.py
 #
 # Website-only generator for TEK2day Pulse (AI → Software → FinTech)
-# – NO Hacker News (blocked at fetch + at Google News resolution)
-# – Google News links resolved to real publisher domains
-# – Clean titles/summaries (HTML stripped, entities decoded)
-# – Consistent, human-friendly source names
+# ✅ No Hacker News (blocked at domain level; GN redirects resolved)
+# ✅ Google News links resolved to real publisher domains
+# ✅ Clean titles/summaries (HTML stripped, entities decoded)
+# ✅ Filters out deals/consumer shopping posts (e.g., TV discounts)
+# ✅ Requires at least one AI/Software/FinTech keyword match
 
 import os, re, json, html, urllib.parse
 import feedparser, requests, tldextract
@@ -26,10 +27,10 @@ MAX_ITEMS = int(CFG.get("max_items_per_category", 15))
 UTM = CFG.get("utm", {"source": "tek2day", "medium": "email"})
 BLOCK_SUFFIXES = [s.lower() for s in CFG.get("exclude_domains_suffix", [])]
 
-# Always block these (Hacker News arrives via Google News sometimes)
+# Always block these (HN sometimes arrives via Google News)
 ALWAYS_BLOCK = {"news.ycombinator.com", "ycombinator.com"}
 
-# Map domains → clean outlet names
+# Optional: map domains → clean brand names
 SOURCE_NAME_MAP = {
     "theverge.com": "The Verge",
     "venturebeat.com": "VentureBeat",
@@ -46,7 +47,7 @@ SOURCE_NAME_MAP = {
     "computing.co.uk": "Computing",
     "openai.com": "OpenAI",
     "anthropic.com": "Anthropic",
-    "news.google.com": "Google News",  # used only if resolution fails
+    "news.google.com": "Google News",
 }
 
 # ----------------- helpers -----------------
@@ -71,7 +72,6 @@ def nice_source_for(url):
         return "Google News"
     if d in SOURCE_NAME_MAP:
         return SOURCE_NAME_MAP[d]
-    # Fallback: title-case core domain (e.g., computerworld → Computerworld)
     core = d.split(".")[-2] if d.count(".") >= 1 else d
     return core.capitalize()
 
@@ -79,11 +79,7 @@ def is_blocked(url):
     d = domain_of(url)
     if not d:
         return False
-    if d in ALWAYS_BLOCK:
-        return True
-    if any(d.endswith(suf) for suf in BLOCK_SUFFIXES):
-        return True
-    return False
+    return (d in ALWAYS_BLOCK) or any(d.endswith(suf) for suf in BLOCK_SUFFIXES)
 
 def clean_text(s, limit=None):
     s = html.unescape(s or "")
@@ -112,11 +108,32 @@ def parse_pubdate(entry):
                 pass
     return now_et()
 
+# ---- “deals/consumer shopping” filter ----
+DEAL_WORDS = [
+    "deal", "deals", "discount", "sale", "promo", "coupon", "price",
+    "off", "lowest price", "snag", "save", "prime day", "black friday",
+    "cyber monday", "preorder", "$"
+]
+CONSUMER_GADGET_WORDS = [
+    "tv", "headphones", "earbuds", "soundbar", "monitor", "iphone",
+    "ipad", "apple watch", "pixel", "galaxy", "laptop", "camera",
+    "console", "playstation", "xbox", "nintendo", "vacuum", "robot vacuum"
+]
+DEAL_PATH_HINTS = ["/deals/", "/deal/", "/the-verge-deals", "/coupon", "/shop", "/store"]
+
+def contains_any(haystack, needles):
+    h = haystack.lower()
+    return any(n in h for n in needles)
+
+def is_deals_or_consumer_shopping(title, url):
+    t = f"{title} {url}".lower()
+    if contains_any(t, DEAL_WORDS) or contains_any(t, CONSUMER_GADGET_WORDS):
+        return True
+    return any(p in t for p in DEAL_PATH_HINTS)
+
 # ----------------- fetchers -----------------
 def fetch_rss(feed_name, url):
-    """For direct outlet RSS (Verge, VB, PYMNTS, OpenAI, Anthropic).
-       We trust the feed; we still clean summaries and block domains for safety.
-    """
+    """Direct outlet RSS (Verge, VB, PYMNTS, OpenAI, Anthropic)."""
     try:
         d = feedparser.parse(url)
         items = []
@@ -142,7 +159,7 @@ def fetch_rss(feed_name, url):
                 "title": title,
                 "url": link,
                 "published_at": dt_local.isoformat(),
-                "source": feed_name,  # keep brand name from config for direct feeds
+                "source": feed_name,  # trust the configured brand for direct feeds
                 "summary": summary,
                 "content_html": content_html,
             })
@@ -151,9 +168,8 @@ def fetch_rss(feed_name, url):
         return []
 
 def google_news_rss(query):
-    """Fetch Google News RSS, resolve to canonical, drop blocked domains,
-       and set source to the final publisher (never HN/Google News unless resolution fails).
-    """
+    """Google News RSS → resolve to publisher URL, drop blocked domains,
+       fix summaries, and label with real publisher (never HN/Google News)."""
     q = urllib.parse.quote(query)
     url = f"https://news.google.com/rss/search?q={q}&hl=en-US&gl=US&ceid=US:en"
     d = feedparser.parse(url)
@@ -167,11 +183,10 @@ def google_news_rss(query):
         if not within_window(dt_local):
             continue
 
-        # Clean the feed-provided summary
         raw_sum = getattr(e, "summary", "") or getattr(e, "description", "")
         summary = clean_text(strip_html_to_text(raw_sum), 400)
 
-        # Resolve the Google News redirect to the publisher URL
+        # Resolve redirect to final publisher
         final_url = link
         try:
             resp = requests.get(link, timeout=15, allow_redirects=True, headers={"User-Agent":"Mozilla/5.0"})
@@ -180,11 +195,8 @@ def google_news_rss(query):
         except Exception:
             pass
 
-        # Block unwanted domains (HN/Substack/X/etc.)
         if is_blocked(final_url):
             continue
-
-        # If we somehow failed to resolve and still sit on news.google.com, skip it (messy source)
         if domain_of(final_url) == "news.google.com":
             continue
 
@@ -192,7 +204,7 @@ def google_news_rss(query):
             "title": title,
             "url": final_url,
             "published_at": dt_local.isoformat(),
-            "source": nice_source_for(final_url),  # publisher name, not "Hacker News"
+            "source": nice_source_for(final_url),
             "summary": summary,
             "content_html": "",
         })
@@ -215,21 +227,21 @@ CATEGORY_KEYWORDS = {
     ],
 }
 
-def categorize(title, url):
+def categorize_with_score(title, url):
     t = f"{title} {url}".lower()
     score = {"ai":0,"software":0,"fintech":0}
     for cat, kws in CATEGORY_KEYWORDS.items():
         for w in kws:
             if w in t:
                 score[cat] += 1
-    cat = max(score, key=score.get)
-    return cat if score[cat] > 0 else "ai"
+    best = max(score, key=score.get)
+    return best, score[best]
 
 # ----------------- pipeline -----------------
 def dedupe(items):
     out, seen = [], set()
     for it in items:
-        key = re.sub(r"[^a-z0-9]+","", it["title"].lower())
+        key = re.sub(r"[^a-z0-9]+", "", it["title"].lower())
         if key in seen:
             continue
         seen.add(key)
@@ -237,16 +249,12 @@ def dedupe(items):
     return out
 
 def summarize(item):
-    # Prefer feed summary; otherwise try OG/description at the page
     if item.get("summary"):
         return clean_text(item["summary"], 260)
     try:
         r = requests.get(item["url"], timeout=12, headers={"User-Agent":"Mozilla/5.0"})
         soup = BeautifulSoup(r.text, "html5lib")
-        for sel in [
-            ("meta", {"property":"og:description"}),
-            ("meta", {"name":"description"}),
-        ]:
+        for sel in [("meta", {"property":"og:description"}), ("meta", {"name":"description"})]:
             m = soup.find(*sel)
             if m and m.get("content"):
                 return clean_text(m["content"], 260)
@@ -270,14 +278,11 @@ def build_section(date_str, by_cat):
             except Exception:
                 dt_str = date_str
             summary = html.escape(it.get("summary_text",""))
-            quote = html.escape(it.get("quote","")) if it.get("quote") else ""
             top_cls = " top" if idx == 0 else ""
-            quote_html = f'<p class="quote">“{quote}”</p>' if quote else ""
             parts.append(f'''<article class="{top_cls.strip()}">
   <h3><a href="{url}">{title}</a></h3>
   <div class="meta">{src} - {dt_str}</div>
   <p>{summary}</p>
-  {quote_html}
 </article>''')
         return "\n        ".join(parts)
 
@@ -291,25 +296,30 @@ def build_section(date_str, by_cat):
 def main():
     all_items = []
 
-    # Direct RSS feeds (trusted brands)
+    # Direct RSS
     for s in CFG["sources"]["rss"]:
         all_items.extend(fetch_rss(s["name"], s["url"]))
 
-    # Google News bundles (resolve to publishers, block HN/Substack/X)
+    # Google News queries
     for _, queries in CFG["sources"]["google_news_queries"].items():
         for q in queries:
             all_items.extend(google_news_rss(q))
 
-    # Global dedupe
+    # Dedupe
     all_items = dedupe(all_items)
 
-    # Summarize, categorize, final domain block
+    # Final filtering, relevance, enrichment
     pruned = []
     for it in all_items:
         if is_blocked(it["url"]):
             continue
+        if is_deals_or_consumer_shopping(it["title"], it["url"]):
+            continue
+        cat, score = categorize_with_score(it["title"], it["url"])
+        if score == 0:
+            continue  # drop unrelated items
         it["summary_text"] = summarize(it)
-        it["category"] = categorize(it["title"], it["url"])
+        it["category"] = cat
         pruned.append(it)
     all_items = pruned
 
@@ -330,10 +340,11 @@ def main():
         except Exception:
             by_cat[it["category"]].append(it)
 
-    # Render HTML + JSON
+    # Render
     date_str = now_et().strftime("%b %-d, %Y")
     section = build_section(date_str, by_cat)
 
+    # Write outputs
     docs = os.path.join(REPO, "docs")
     os.makedirs(docs, exist_ok=True)
     with open(os.path.join(docs, "index.html"), "w", encoding="utf-8") as f:
