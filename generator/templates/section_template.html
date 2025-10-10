@@ -5,6 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>T2D Pulse</title>
 
+  <!-- Social share (OG + Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="T2D Pulse — Daily AI, Software & FinTech Headlines">
+  <meta property="og:description" content="Fast, curated updates across AI, Software, and FinTech.">
+  <meta property="og:url" content="https://pulse.tek2dayholdings.com/">
+  <meta property="og:image" content="https://pulse.tek2dayholdings.com/icons/T2D_Pulse_Banner.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="T2D Pulse — Daily AI, Software & FinTech Headlines">
+  <meta name="twitter:description" content="Fast, curated updates across AI, Software, and FinTech.">
+  <meta name="twitter:image" content="https://pulse.tek2dayholdings.com/icons/T2D_Pulse_Banner.png">
+
   <!-- PWA + icons (paths are relative to docs/index.html) -->
   <meta name="theme-color" content="#0f172a" />
   <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png" />
@@ -13,6 +27,11 @@
   <link rel="manifest" href="./manifest.webmanifest" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+  <!-- Orbitron font for the headline -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700;800&display=swap" rel="stylesheet">
 
   <style>
     :root{
@@ -25,16 +44,10 @@
 
     /* Sticky header */
     header.site{
-      position: sticky;       /* sticks to top */
-      top: 0;
-      z-index: 50;
-      max-width: 960px;
-      margin: 0 auto;         /* flush with top */
-      padding: .6rem 1rem;
-      display: flex;
-      align-items: center;
-      gap: .75rem;
-      background: rgba(248,250,252,.85);    /* var(--bg) w/ translucency */
+      position: sticky; top: 0; z-index: 50;
+      max-width: 960px; margin: 0 auto; padding: .6rem 1rem;
+      display: flex; align-items: center; gap: .75rem;
+      background: rgba(248,250,252,.85);
       backdrop-filter: saturate(180%) blur(8px);
       -webkit-backdrop-filter: saturate(180%) blur(8px);
       border-bottom: 1px solid var(--line);
@@ -42,7 +55,10 @@
     }
     header.site.shadow{ box-shadow: 0 6px 20px rgba(15,23,42,.08) }
     header.site img{width:40px;height:40px;border-radius:10px}
-    header.site h1{font-size:1.25rem;margin:0}
+    header.site h1{
+      font-family: 'Orbitron', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 700; letter-spacing: .5px; font-size:1.25rem; margin:0;
+    }
     header.site .tag{color:var(--muted);font-size:.95rem}
     .install{display:none;margin-left:auto}
     .install button{background:#0f172a;color:#fff;border:0;border-radius:999px;padding:.5rem .85rem;font-weight:600;cursor:pointer}
