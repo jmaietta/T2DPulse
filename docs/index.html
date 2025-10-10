@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>TEK2day Pulse</title>
 
-  <!-- PWA + icons (ALL paths are relative to docs/index.html) -->
+  <!-- PWA + icons (paths are relative to docs/index.html) -->
   <meta name="theme-color" content="#0f172a" />
   <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png" />
@@ -22,15 +22,34 @@
     }
     *{box-sizing:border-box}
     body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
-    /* Header */
-    header.site{max-width:960px;margin:1.25rem auto .25rem;padding:0 1rem;display:flex;align-items:center;gap:.75rem}
+
+    /* Sticky header */
+    header.site{
+      position: sticky;       /* sticks to top */
+      top: 0;
+      z-index: 50;
+      max-width: 960px;
+      margin: 0 auto;         /* flush with top */
+      padding: .6rem 1rem;
+      display: flex;
+      align-items: center;
+      gap: .75rem;
+      background: rgba(248,250,252,.85);    /* var(--bg) w/ translucency */
+      backdrop-filter: saturate(180%) blur(8px);
+      -webkit-backdrop-filter: saturate(180%) blur(8px);
+      border-bottom: 1px solid var(--line);
+      transition: box-shadow .2s ease;
+    }
+    header.site.shadow{ box-shadow: 0 6px 20px rgba(15,23,42,.08) }
     header.site img{width:40px;height:40px;border-radius:10px}
     header.site h1{font-size:1.25rem;margin:0}
     header.site .tag{color:var(--muted);font-size:.95rem}
     .install{display:none;margin-left:auto}
     .install button{background:#0f172a;color:#fff;border:0;border-radius:999px;padding:.5rem .85rem;font-weight:600;cursor:pointer}
+
     /* Container */
     #app{max-width:960px;margin:0 auto 2rem;padding:0 1rem}
+
     /* Section */
     #tek2day-pulse{background:var(--bg);border:1px solid var(--line);border-radius:calc(var(--r)+2px);padding:1rem}
     .stack{display:grid;gap:1rem}
@@ -56,7 +75,7 @@
 </head>
 
 <body>
-  <!-- Site header with logo + install button -->
+  <!-- Sticky site header with logo + install button -->
   <header class="site">
     <img src="./icons/logo-48.png" alt="TEK2day logo" />
     <div>
@@ -74,6 +93,11 @@
           <summary><span class="label"><i class="dot" style="background:var(--ai)"></i>AI</span><span class="count">15 items</span></summary>
           <div class="items">
             <article class="top">
+  <h3><a href="https://news.google.com/rss/articles/CBMijAFBVV95cUxOSVh1aXBPUm5ZWHEza0hXenlicXpXWmR2V1RTOU4xWEp3SDBTYURJa2J4dDViRVhwczRVNnc0WUlSaVNOVXNGbjNpdFgtUl9PeVppYm5MdWZ5UjRDbjlNeWlIcjJ0M180YWdaME93UENIdHdHV3pFZzlzVW5tTEVycVltSmxTS3dqNmlwRg?oc=5&hl=en-US&gl=US&ceid=US:en&utm_source=tek2day&utm_medium=email">What the Arrival of A.I. Video Generators Like Sora Means for Us - The New York Times</a></h3>
+  <div class="meta">Google - Oct 10, 2025</div>
+  <p>What the Arrival of A.I. Video Generators Like Sora Means for Us The New York Times</p>
+</article>
+        <article class="">
   <h3><a href="https://www.pymnts.com/artificial-intelligence-2/2025/klarna-ceo-says-ai-will-drive-massive-shift-in-employment/?utm_source=tek2day&utm_medium=email">Klarna CEO Says AI Will Drive ‘Massive Shift’ in Employment</a></h3>
   <div class="meta">PYMNTS - Oct 10, 2025</div>
   <p>Artificial intelligence is set to drive a “massive shift” in employment in banking and other knowledge worker fields, according to Klarna CEO Sebastian Siemiatkowski. In a Friday (Oct. 10) interview with Bloomberg Television, Siemiatkowski offered as an examp…</p>
@@ -94,19 +118,9 @@
   <p>Adversaries from cybercrime gangs to nation-state cyberattack squads are fine-tuning weaponized AI with the goal of defeating new patches in 3 days or less. The quicker the attack, the more time to explore a victim’s network, exfiltrate data, install ransomwa…</p>
 </article>
         <article class="">
-  <h3><a href="https://news.google.com/rss/articles/CBMiiANBVV95cUxQQ3RZcTRPSXFkeWJsUEdyZnIxMXB0aXNtelB4TFZmLWl5N0RnWWI5UTJ4dUx3YU1XSzNid2o0Y3hxY3J4NWltQ015TUV5X2VPc1REWW9iM1BGTU9VRnZqTWpCdngwYjlncjI1N0hsejVtUVJxa2NCd2Y4TlllbmFRV3FuenRfMjNzS3J3S1Q2LWVaQ2pCTEFmb29mLWx4S1o0Z2NLUFVsNnF3OFpXNUk2M0RsdnNDSU9UMkpnZUpVdGdUWVpSSzNOekxubUtPbjZYUEtLMFBwYThXR0NieHRsUi14Y2lBQUo5VXBicVlLeVk3OWZkU3VaY04zOUFKcmtRcU9lYUNNNmprN2ZmX05JWm9BeWhDVFppd3l5S2dINGRTNU1oQXd0WGkxb2x6ZWoyZERPaUVoTnRBNEEwcjZPRVFwRXJaMFhwRnVDV2VHd2tWUWMwSktrdUV4NmUwdFdxTjR1RzlRaHVQMlczNmRVYm9EWnFZR1dBMXBPejhic0trYkRFMkZ1UQ?oc=5&hl=en-US&gl=US&ceid=US:en&utm_source=tek2day&utm_medium=email">A Mystery Trader Scored With Prescient Bets on the Nobel Peace Prize - The Wall Street Journal</a></h3>
-  <div class="meta">Google - Oct 10, 2025</div>
-  <p>A Mystery Trader Scored With Prescient Bets on the Nobel Peace Prize The Wall Street Journal</p>
-</article>
-        <article class="">
   <h3><a href="https://www.theverge.com/news/798148/edifier-huazai-new-cyber-speaker-bluetooth-gaming-pc?utm_source=tek2day&utm_medium=email">Edifier’s new wireless speaker looks like a gaming PC</a></h3>
   <div class="meta">The Verge - Oct 10, 2025</div>
   <p>With RGB lighting, exposed electronics, and a full color screen inside a transparent enclosure, Edifier’s latest desktop accessory can easily be mistaken for a decked out gaming PC. In reality, it’s primarily a speaker that can connect to sources over Bluetoo…</p>
-</article>
-        <article class="">
-  <h3><a href="https://news.google.com/rss/articles/CBMijAFBVV95cUxOSVh1aXBPUm5ZWHEza0hXenlicXpXWmR2V1RTOU4xWEp3SDBTYURJa2J4dDViRVhwczRVNnc0WUlSaVNOVXNGbjNpdFgtUl9PeVppYm5MdWZ5UjRDbjlNeWlIcjJ0M180YWdaME93UENIdHdHV3pFZzlzVW5tTEVycVltSmxTS3dqNmlwRg?oc=5&hl=en-US&gl=US&ceid=US:en&utm_source=tek2day&utm_medium=email">What the Arrival of A.I. Video Generators Like Sora Means for Us - The New York Times</a></h3>
-  <div class="meta">Google - Oct 10, 2025</div>
-  <p>What the Arrival of A.I. Video Generators Like Sora Means for Us The New York Times</p>
 </article>
         <article class="">
   <h3><a href="https://www.theverge.com/column/797938/optimizer-newsletter-wearable-hell-smart-glasses-smart-rings-ai-hardware?utm_source=tek2day&utm_medium=email">We’re all about to be in wearable hell</a></h3>
@@ -144,9 +158,14 @@
   <p>‘Tron: Ares’ Wants to Gaslight You About the Future of AI WIRED</p>
 </article>
         <article class="">
-  <h3><a href="https://news.google.com/rss/articles/CBMinwNBVV95cUxQRTJGM0RENUFkZ2pSTWxQaEtBSkNNUjJ4WEI2RzIzNmJDRWNic1lxTFdUVFZ4WThQaWdQdDcwT0psek9KUFc1ZktXTGZ5RjA4SDlRZ195Q3JfejI4b0ZWWHRsSG5qOFo5dHRRZ3czYnNHbUZsZm1aQ1V4Y3NxSEVQU0J2RmNGYl9tYmwzQU9WVEpXVWEzTWo1VnNFbktmTlJnUmtrNVNVaHRzVV9UTE5oN3Y0RkNxLUlNOVo0cGR0VnZqVFloallmYUNXV0ZMdVVtRlltSTF5bXZKUWtNLUhSN3MtUW1fWHJRY1gxLXk4eFVVeFFBT2luUmlXT1VHWGg5bnU0X21qREtlcXllbFVfcEpIVXRxaV9xNnFtX2lJNmZSTmh6c2NiMHNkdVN2LTI0WGg2Tm1lS0YwcjZmSnBwMWxDRmg0c2FQMXJ2Z3pqLWZYSE1uRFU4cEJ1QUFkQVJuVFN0d0lMVmJ2U3N0WmlHM3JwUi1sY2RHZGRmdk9GRW9QZDRIR0c2LTdxN21fR1JqWUtic1cxQVBFVzQwYkpB?oc=5&hl=en-US&gl=US&ceid=US:en&utm_source=tek2day&utm_medium=email">Google Labeled U.K. Tech Gatekeeper Under New Competition Law - The Wall Street Journal</a></h3>
+  <h3><a href="https://news.google.com/rss/articles/CBMicEFVX3lxTFB4b1QzUGNCWVJrT0R1TmNhaVBnWDczU1F3eW9pQ0lzUU5TS21sMGVNcndPdDNmRUk2QmlWMFRIOGx1U0JIQzJhM2ZQeHlMeEc1aEtyZE8zcEttQWFrWEM0VGc5MDBKOUt2aEg2UFpvTE4?oc=5&hl=en-US&gl=US&ceid=US:en&utm_source=tek2day&utm_medium=email">Nobel Peace Prize awarded to Venezuelan opposition leader María Corina Machado - Financial Times</a></h3>
   <div class="meta">Google - Oct 10, 2025</div>
-  <p>Google Labeled U.K. Tech Gatekeeper Under New Competition Law The Wall Street Journal</p>
+  <p>Nobel Peace Prize awarded to Venezuelan opposition leader María Corina Machado Financial Times</p>
+</article>
+        <article class="">
+  <h3><a href="https://news.google.com/rss/articles/CBMicEFVX3lxTE5TMVY0dDYxeUZlRnRBQk5vYTdjMWR0V01oZWhwWnZKMUNnUFJCcUx2bzV1OGJVTDBpLWxMQzdNTEd4MVI3cUNXMjExSFg2eV9NazFmclVGTXVsbEhaNUhGYURjbVFMY19KSDROOUlWQlc?oc=5&hl=en-US&gl=US&ceid=US:en&utm_source=tek2day&utm_medium=email">Russian air strikes disable 60% of Ukraine’s gas production ahead of winter - Financial Times</a></h3>
+  <div class="meta">Google - Oct 10, 2025</div>
+  <p>Russian air strikes disable 60% of Ukraine’s gas production ahead of winter Financial Times</p>
 </article>
           </div>
         </details>
@@ -178,6 +197,11 @@
           <summary><span class="label"><i class="dot" style="background:var(--ft)"></i>FinTech</span><span class="count">6 items</span></summary>
           <div class="items">
             <article class="top">
+  <h3><a href="https://www.pymnts.com/news/b2b-payments/2025/uncertainty-is-complicated-working-capital-strategies-should-be-simple/?utm_source=tek2day&utm_medium=email">Uncertainty Is Complicated, but Working Capital Strategies Should Be Simple</a></h3>
+  <div class="meta">PYMNTS - Oct 10, 2025</div>
+  <p>For the past few years, the business landscape has been defined by two words that rarely coexist comfortably: uncertainty and innovation. Across sectors, volatility in supply chains, capital costs and customer demand continues to test the resilience of mid-si…</p>
+</article>
+        <article class="">
   <h3><a href="https://www.pymnts.com/digital-payments/2025/block-adds-new-incentives-draw-customers-away-from-card-networks/?utm_source=tek2day&utm_medium=email">Block Adds New Incentives to Draw Customers Away From Card Networks</a></h3>
   <div class="meta">PYMNTS - Oct 10, 2025</div>
   <p>Some of the new features offered by Block’s Square and Cash App brands take direct aim at the fees charged by card networks, Bloomberg reported Friday (Oct. 10). The company is offering the local businesses that use its payment network a payment processing ra…</p>
@@ -198,11 +222,6 @@
   <p>Crypto exchange Coinbase and payments giant Mastercard are reportedly in advanced negotiations to acquire BVNK, a London-based FinTech company specializing in stablecoin payment infrastructure, according to Fortune. The outlet cited six individuals familiar w…</p>
 </article>
         <article class="">
-  <h3><a href="https://www.pymnts.com/consumer-finance/2025/credit-limit-denials-undermine-cardholder-trust/?utm_source=tek2day&utm_medium=email">Credit Limit Denials Undermine Cardholder Trust</a></h3>
-  <div class="meta">PYMNTS - Oct 10, 2025</div>
-  <p>When consumers ask for more credit, they’re not just seeking spending power—they’re testing trust. The new PYMNTS Intelligence and Elan Credit Card report reveals how a single “yes” or “no” can redefine customer loyalty, shape financial confidence and even sh…</p>
-</article>
-        <article class="">
   <h3><a href="https://news.google.com/rss/articles/CBMifEFVX3lxTE1YdnBYVUQ4cWFDWEM2dTFMVi1wS0pxeXpwVkVrLXh5N3FXWGdQNzkza2pScUhxMU5Ib3NOblJ5Vk1OWGlHSlJ4Z2l4VXdPR1hxMWJBclhuOEc3U0ZrY1RmX0NwVFdrU2Q3bFZCT0x3LWlRYlR2X250WUhGZkY?oc=5&hl=en-US&gl=US&ceid=US:en&utm_source=tek2day&utm_medium=email">Riding the Wild Wave of Crypto Coverage - The New York Times</a></h3>
   <div class="meta">Google - Oct 10, 2025</div>
   <p>Riding the Wild Wave of Crypto Coverage The New York Times</p>
@@ -215,7 +234,7 @@
     </section>
   </div>
 
-  <!-- PWA bootstrap -->
+  <!-- PWA + sticky shadow script -->
   <script>
     // “Install” prompt
     let deferredPrompt;
@@ -240,6 +259,14 @@
         navigator.serviceWorker.register('./sw.js', { scope: './' });
       });
     }
+
+    // Add soft shadow once the user scrolls a bit
+    window.addEventListener('scroll', () => {
+      const h = document.querySelector('header.site');
+      if (!h) return;
+      if (window.scrollY > 8) h.classList.add('shadow');
+      else h.classList.remove('shadow');
+    });
   </script>
 </body>
 </html>
