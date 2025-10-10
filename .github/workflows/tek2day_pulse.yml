@@ -5,6 +5,8 @@ on:
     # Runs daily at 11:30 UTC (~7:30 AM ET; adjust for DST as needed)
     - cron: '30 11 * * *'
   workflow_dispatch: {}
+  push:
+    branches: [ "main" ]
 
 permissions:
   contents: write
