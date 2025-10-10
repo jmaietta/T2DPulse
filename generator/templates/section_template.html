@@ -1,63 +1,75 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>TEK2day Pulse</title>
-  <meta name="theme-color" content="#0f172a">
-  <link rel="icon" type="image/png" sizes="32x32" href="../docs/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="../docs/favicon-16x16.png">
-  <link rel="apple-touch-icon" href="../docs/icons/icon-180x180.png">
-  <link rel="manifest" href="../docs/manifest.webmanifest">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  <!-- PWA + icons (ALL paths are relative to docs/index.html) -->
+  <meta name="theme-color" content="#0f172a" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png" />
+  <link rel="apple-touch-icon" href="./icons/icon-180x180.png" />
+  <link rel="manifest" href="./manifest.webmanifest" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
   <style>
-    :root{--ai:#e11d48;--sw:#00a87e;--ft:#ff7a59;--ink:#0f172a;--muted:#64748b;--line:#e2e8f0;--card:#fff;--bg:#f8fafc;--r:14px}
+    :root{
+      --ai:#6b8afd; --sw:#00a87e; --ft:#ff7a59;
+      --ink:#0f172a; --muted:#64748b; --line:#e2e8f0; --card:#fff; --bg:#f8fafc;
+      --r:14px
+    }
+    *{box-sizing:border-box}
     body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
+    /* Header */
     header.site{max-width:960px;margin:1.25rem auto .25rem;padding:0 1rem;display:flex;align-items:center;gap:.75rem}
     header.site img{width:40px;height:40px;border-radius:10px}
     header.site h1{font-size:1.25rem;margin:0}
     header.site .tag{color:var(--muted);font-size:.95rem}
-    #app{max-width:960px;margin:0 auto 2rem;padding:0 1rem}
     .install{display:none;margin-left:auto}
     .install button{background:#0f172a;color:#fff;border:0;border-radius:999px;padding:.5rem .85rem;font-weight:600;cursor:pointer}
+    /* Container */
+    #app{max-width:960px;margin:0 auto 2rem;padding:0 1rem}
+    /* Section */
+    #tek2day-pulse{background:var(--bg);border:1px solid var(--line);border-radius:calc(var(--r)+2px);padding:1rem}
+    .stack{display:grid;gap:1rem}
+    details.cat{background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+    details.cat summary{list-style:none;cursor:pointer;padding:.85rem 1rem;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}
+    details.cat summary::-webkit-details-marker{display:none}
+    .label{display:flex;gap:.6rem;align-items:center;font-weight:700;color:var(--ink)}
+    .dot{width:.6rem;height:.6rem;border-radius:999px;display:inline-block}
+    .count{color:#64748b;font-size:.9rem}
+    .ai summary{box-shadow:inset 4px 0 0 var(--ai)}
+    .sw summary{box-shadow:inset 4px 0 0 var(--sw)}
+    .ft summary{box-shadow:inset 4px 0 0 var(--ft)}
+    .items{padding:.5rem 1rem 1rem}
+    article{padding:.8rem .2rem;border-bottom:1px dashed var(--line)}
+    article:last-child{border-bottom:0}
+    h3{margin:0 0 .25rem;font-size:1.02rem;line-height:1.36}
+    a{color:var(--ink);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .meta{color:#64748b;font-size:.85rem;margin-bottom:.35rem}
+    .top{background:#fcfcff;border:1px solid #e7eaff;border-radius:12px;padding:.8rem}
+    .foot{margin-top:1rem;color:#6b7280;font-size:.9rem}
   </style>
 </head>
+
 <body>
+  <!-- Site header with logo + install button -->
   <header class="site">
-    <img src="../docs/icons/logo-48.png" alt="TEK2day logo">
+    <img src="./icons/logo-48.png" alt="TEK2day logo" />
     <div>
       <h1>TEK2day Pulse</h1>
-      <div class="tag">Snapshot for {{DATE_STR}} — AI curated: AI, Software, and FinTech news.</div>
+      <div class="tag">Snapshot for {{DATE_STR}} — curated AI, Software, and FinTech headlines.</div>
     </div>
     <div class="install"><button id="btnInstall" aria-label="Install app">Install</button></div>
   </header>
 
   <div id="app">
     <section id="tek2day-pulse" aria-labelledby="tek2day-title">
-      <style>
-        :root{--ai:#6b8afd;--sw:#00a87e;--ft:#ff7a59;--ink:#0f172a;--muted:#64748b;--line:#e2e8f0;--card:#fff;--bg:#f8fafc;--r:14px}
-        #tek2day-pulse{background:var(--bg);border:1px solid var(--line);border-radius:calc(var(--r)+2px);padding:1rem}
-        header h1{font-size:1.6rem;margin:.25rem 0}
-        .stack{display:grid;gap:1rem}
-        details.cat{background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
-        details.cat summary{list-style:none;cursor:pointer;padding:.85rem 1rem;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}
-        details.cat summary::-webkit-details-marker{display:none}
-        .label{display:flex;gap:.6rem;align-items:center;font-weight:700;color:var(--ink)}
-        .dot{width:.6rem;height:.6rem;border-radius:999px;display:inline-block}
-        .count{color:#64748b;font-size:.9rem}
-        .ai summary{box-shadow:inset 4px 0 0 var(--ai)} .sw summary{box-shadow:inset 4px 0 0 var(--sw)} .ft summary{box-shadow:inset 4px 0 0 var(--ft)}
-        .items{padding:.5rem 1rem 1rem}
-        article{padding:.8rem .2rem;border-bottom:1px dashed var(--line)}
-        article:last-child{border-bottom:0}
-        h3{margin:0 0 .25rem;font-size:1.02rem;line-height:1.36}
-        a{color:var(--ink);text-decoration:none} a:hover{text-decoration:underline}
-        .meta{color:#64748b;font-size:.85rem;margin-bottom:.35rem}
-        .top{background:#fcfcff;border:1px solid #e7eaff;border-radius:12px;padding:.8rem}
-        .foot{margin-top:1rem;color:#6b7280;font-size:.9rem}
-      </style>
-
       <div class="stack">
+        <!-- AI -->
         <details class="cat ai" open>
           <summary><span class="label"><i class="dot" style="background:var(--ai)"></i>AI</span><span class="count">{{AI_COUNT}} items</span></summary>
           <div class="items">
@@ -65,6 +77,7 @@
           </div>
         </details>
 
+        <!-- Software -->
         <details class="cat sw" open>
           <summary><span class="label"><i class="dot" style="background:var(--sw)"></i>Software</span><span class="count">{{SW_COUNT}} items</span></summary>
           <div class="items">
@@ -72,6 +85,7 @@
           </div>
         </details>
 
+        <!-- FinTech -->
         <details class="cat ft" open>
           <summary><span class="label"><i class="dot" style="background:var(--ft)"></i>FinTech</span><span class="count">{{FT_COUNT}} items</span></summary>
           <div class="items">
@@ -84,7 +98,9 @@
     </section>
   </div>
 
+  <!-- PWA bootstrap -->
   <script>
+    // “Install” prompt
     let deferredPrompt;
     window.addEventListener('beforeinstallprompt', (e) => {
       e.preventDefault();
@@ -97,8 +113,11 @@
       deferredPrompt.prompt();
       await deferredPrompt.userChoice;
       deferredPrompt = null;
-      document.querySelector('.install').style.display = 'none';
+      const wrap = document.querySelector('.install');
+      if (wrap) wrap.style.display = 'none';
     });
+
+    // Service worker
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
         navigator.serviceWorker.register('./sw.js', { scope: './' });
