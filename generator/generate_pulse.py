@@ -211,31 +211,99 @@ def google_news_rss(query):
     return out
 
 # ----------------- categorization -----------------
+# (Legacy list left for reference; new logic below does not rely on it directly.)
 CATEGORY_KEYWORDS = {
     "ai": [
         "ai","artificial intelligence","large language model","llm","gpt","openai",
         "anthropic","deepmind","sora","transformer","diffusion","ml","machine learning",
-        "neural","chip","npu"
+        "neural","npu","tpu","cuda","rocm","inference","llama","mistral"
     ],
     "software": [
         "software","developer","devops","platform","sdk","api","apps","app","release",
-        "github","cloud","saas","microservices","kubernetes","langchain"
+        "github","cloud","saas","microservices","kubernetes","langchain","runtime","framework"
     ],
     "fintech": [
         "fintech","payments","payment","bank","banking","crypto","blockchain","defi",
-        "lending","card","visa","mastercard","stripe","paypal","square","nubank"
+        "lending","card","visa","mastercard","stripe","paypal","square","nubank","aml","kyc"
     ],
 }
 
-def categorize_with_score(title, url):
-    t = f"{title} {url}".lower()
-    score = {"ai":0,"software":0,"fintech":0}
-    for cat, kws in CATEGORY_KEYWORDS.items():
-        for w in kws:
-            if w in t:
-                score[cat] += 1
-    best = max(score, key=score.get)
-    return best, score[best]
+# --- Improved categorization: stricter AI, weighted by field ---
+AI_STRONG = [
+    " ai ", "artificial intelligence", "llm", "gpt", "transformer", "diffusion",
+    "inference", "fine-tun", "multimodal", "rlhf", "prompting", "agentic",
+    "embedding", "vector db", "tokenization", "pretrain", "checkpoint", "weights",
+    "npu", "tpu", "cuda", "rocm", "tensor", "accelerator",
+    "openai", "anthropic", "deepmind", "mistral", "cohere", "perplexity", "hugging face",
+]
+AI_WEAK = [
+    "model", "models", "neural", "dataset", "benchmark", "hallucination",
+    "safety", "guardrail", "alignment", "generation", "genai", "gen ai"
+]
+AI_NEGATIVE = [
+    " deal", " deals", "discount", "sale", "prime day", "coupon", "snag", "lowest price",
+    " tv", "headphone", "earbuds", "soundbar", "smartphone", "iphone", "galaxy",
+    "movie", "celebrity", "gossip", "trailer"
+]
+SW_STRONG = [
+    "software", "developer", "sdk", "api", "release", "version", "kubernetes", "docker",
+    "github", "vscode", "framework", "runtime", "serverless", "cloud", "saas",
+    "microservices", "observability", "database", "postgres", "mysql", "redis"
+]
+FT_STRONG = [
+    "fintech", "payments", "payment", "bank", "banking", "visa", "mastercard", "stripe",
+    "paypal", "plaid", "lending", "loan", "crypto", "bitcoin", "ethereum", "stablecoin",
+    "defi", "aml", "kyc", "sec", "fdic", "treasury", "card", "merchant"
+]
+
+def _count_hits(text: str, terms: list[str]) -> int:
+    if not text:
+        return 0
+    t = f" {text.lower()} "  # pad to catch word-ish boundaries
+    return sum(1 for w in terms if w in t)
+
+def categorize_with_score(title: str, url: str, summary: str = ""):
+    """
+    Weighted scoring:
+      - Title has 3x weight, Summary 2x, URL 1x.
+      - AI uses strong + weak lists; negatives subtract.
+      - To label as AI: ai_score >= 2 and ai_score >= max(other) + 1
+    """
+    title_l = title or ""
+    summary_l = summary or ""
+    url_l = url or ""
+
+    # AI scoring
+    ai = (
+        3 * _count_hits(title_l, AI_STRONG)
+      + 2 * _count_hits(summary_l, AI_STRONG)
+      + 1 * _count_hits(url_l, AI_STRONG)
+      + 1 * _count_hits(title_l, AI_WEAK)
+      + 1 * _count_hits(summary_l, AI_WEAK)
+    )
+    ai -= min(2, _count_hits(f"{title_l} {summary_l} {url_l}", AI_NEGATIVE))  # cap penalty at 2
+
+    # Software and FinTech
+    sw = (
+        2 * _count_hits(title_l, SW_STRONG)
+      + 1 * _count_hits(summary_l, SW_STRONG)
+      + 1 * _count_hits(url_l, SW_STRONG)
+    )
+    ft = (
+        2 * _count_hits(title_l, FT_STRONG)
+      + 1 * _count_hits(summary_l, FT_STRONG)
+      + 1 * _count_hits(url_l, FT_STRONG)
+    )
+
+    # Decide with threshold and margin
+    other_max = max(sw, ft)
+    if ai >= 2 and ai >= other_max + 1:
+        return "ai", ai
+    # else pick between software/fintech
+    if sw >= ft:
+        return "software", sw
+    else:
+        return "fintech", ft
 
 # ----------------- pipeline -----------------
 def dedupe(items):
@@ -315,10 +383,11 @@ def main():
             continue
         if is_deals_or_consumer_shopping(it["title"], it["url"]):
             continue
-        cat, score = categorize_with_score(it["title"], it["url"])
+        # Compute summary first so categorizer can use it
+        it["summary_text"] = summarize(it)
+        cat, score = categorize_with_score(it["title"], it["url"], it.get("summary_text", ""))
         if score == 0:
             continue  # drop unrelated items
-        it["summary_text"] = summarize(it)
         it["category"] = cat
         pruned.append(it)
     all_items = pruned
