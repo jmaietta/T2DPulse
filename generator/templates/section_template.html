@@ -21,7 +21,10 @@
 
   <!-- PWA + icons (paths are relative to docs/index.html) -->
   <meta name="theme-color" content="#0f172a" />
-<link rel="manifest" href="./manifest.webmanifest" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png" />
+  <link rel="apple-touch-icon" href="./icons/icon-180x180.png" />
+  <link rel="manifest" href="./manifest.webmanifest" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
@@ -64,7 +67,7 @@
     }
     
     /* keep an accessible title for SEO/screen readers, but visually hide it */
-    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}header .tag{color:var(--muted);font-size:.95rem; margin-top:.1rem}
+    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}header .tag{color:var(--muted); margin-top:.1rem  line-height:1.5; font-size:20px; line-height:1.5;}
     .grow{flex:1}
     .hdr-actions{display:flex;gap:.5rem;margin-left:auto;align-items:center}
     .btn{
@@ -96,8 +99,7 @@
     .pill{
       display:inline-flex;align-items:center;gap:.5rem;padding:.25rem .6rem;border-radius:999px;font-size:.92rem;font-weight:800;color:#0b0b0b;
       background:#e9eefc;border:1px solid #dee6ff;
-    }@media (prefers-color-scheme: dark){
-      }
+    }
     .dot{width:.6rem;height:.6rem;border-radius:999px;display:inline-block}
     .ai .pill{background:#e9edff;border-color:#dfe5ff;color:#2d3b8f}
     .sw .pill{background:#e7fbf3;border-color:#d9f5eb;color:#0f6b57}
@@ -123,7 +125,7 @@
     .foot{margin-top:1rem;color:var(--muted);font-size:.92rem}
 
     /* Sticky header shadow on scroll */
-    header.site.shadow{ box-shadow: 0 10px 56px rgba(15,23,42,.08) }
+    header.site.shadow{ box-shadow: 0 10px 58px rgba(15,23,42,.08) }
 
     /* Small screens */
     @media (max-width: 640px){
@@ -144,12 +146,9 @@
       text-decoration:none; cursor:pointer;
     }
     .share-btn:hover{ background:#f3f4f6; }
-  </style>
-  <link rel="icon" type="image/x-icon" href="./icons/favicon.ico">
-  <link rel="icon" type="image/png" sizes="32x32" href="./icons/t2d-pulse-32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="./icons/t2d-pulse-16.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="./icons/t2d-pulse-180.png">
-
+  
+@media (max-width: 560px){ .tag{ font-size:16px } }
+</style>
 </head>
 
 <body>
@@ -160,9 +159,7 @@
   <img class="brand-mark" src="./icons/T2D_Pulse_Logo_2.png" alt="T2D Pulse">
 </a>
 <h1 class="sr-only">T2D Pulse</h1>
-<div class="tag">
-  Snapshot for <span class="date">{{DATE_STR}}</span> — curated <strong>AI</strong>, <strong>Software</strong>, and <strong>FinTech</strong> headlines.
-</div>
+<div class="tag">Snapshot for {{DATE_STR}} — curated AI, Software, and FinTech headlines.</div>
     <div class="grow"></div>
       <div class="hdr-actions">
         <div class="install"><button class="btn" id="btnInstall" aria-label="Install app">Install</button></div>
