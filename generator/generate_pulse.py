@@ -50,6 +50,11 @@ SOURCE_NAME_MAP = {
     "news.google.com": "Google News",
 }
 
+# --- Force-category overrides ---
+# Domains/sources that should always be categorized as FinTech
+FORCE_FINTECH_DOMAINS = {"pymnts.com"}
+FORCE_FINTECH_SOURCES = {"pymnts"}  # compare to it["source"].lower()
+
 # ----------------- helpers -----------------
 def now_et():
     return datetime.now(TZ)
@@ -216,7 +221,7 @@ CATEGORY_KEYWORDS = {
     "ai": [
         "ai","artificial intelligence","large language model","llm","gpt","openai",
         "anthropic","deepmind","sora","transformer","diffusion","ml","machine learning",
-        "neural","npu","tpu","cuda","rocm","inference","llama","mistral"
+        "npu","tpu","cuda","rocm","inference","llama","mistral"
     ],
     "software": [
         "software","developer","devops","platform","sdk","api","apps","app","release",
@@ -389,6 +394,17 @@ def main():
         if score == 0:
             continue  # drop unrelated items
         it["category"] = cat
+
+        # --- Force FinTech for PYMNTS ---
+        try:
+            d = domain_of(it["url"])  # e.g., "pymnts.com"
+        except Exception:
+            d = ""
+        src_norm = (it.get("source") or "").strip().lower()  # e.g., "pymnts"
+        if d in FORCE_FINTECH_DOMAINS or src_norm in FORCE_FINTECH_SOURCES:
+            it["category"] = "fintech"
+        # --- end override ---
+
         pruned.append(it)
     all_items = pruned
 
