@@ -21,7 +21,10 @@
 
   <!-- PWA + icons (paths are relative to docs/index.html) -->
   <meta name="theme-color" content="#0f172a" />
-<link rel="manifest" href="./manifest.webmanifest" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png" />
+  <link rel="apple-touch-icon" href="./icons/icon-180x180.png" />
+  <link rel="manifest" href="./manifest.webmanifest" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
@@ -57,7 +60,7 @@
       max-width:1100px;margin:0 auto;padding:.65rem 1rem;
       display:flex;align-items:center;gap:.9rem;
     }
-    header.site img.brand-mark{height:66px;width:auto;border-radius:0}
+    header.site img.brand-mark{width:66px;height:66px;border-radius:12px}
     header.site h1{
       font-family:'Orbitron', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
       font-weight:700; letter-spacing:.4px; font-size:1.28rem; margin:0; color:var(--ink-soft);
@@ -96,6 +99,42 @@
     .pill{
       display:inline-flex;align-items:center;gap:.5rem;padding:.25rem .6rem;border-radius:999px;font-size:.92rem;font-weight:800;color:#0b0b0b;
       background:#e9eefc;border:1px solid #dee6ff;
+    }
+    
+
+    /* Header chip variants to match body pills */
+    .pill.pill-sm{ font-size:.82rem; padding:2px 8px; font-weight:700 }
+    .pill-ai{ 
+      color:#0b0b0b; 
+      background: color-mix(in srgb, var(--ai) 14%, #fff);
+      border-color: var(--ai);
+    }
+    .pill-sw{ 
+      color:#0b0b0b; 
+      background: color-mix(in srgb, var(--sw) 14%, #fff);
+      border-color: var(--sw);
+    }
+    .pill-ft{ 
+      color:#0b0b0b; 
+      background: color-mix(in srgb, var(--ft) 14%, #fff);
+      border-color: var(--ft);
+    }
+    @media (prefers-color-scheme: dark){
+      .pill-ai{ 
+        color:#f3f6f9;
+        background: color-mix(in srgb, var(--ai) 22%, #0b0b0b);
+        border-color: color-mix(in srgb, var(--ai) 70%, #0b0b0b);
+      }
+      .pill-sw{ 
+        color:#f3f6f9;
+        background: color-mix(in srgb, var(--sw) 22%, #0b0b0b);
+        border-color: color-mix(in srgb, var(--sw) 70%, #0b0b0b);
+      }
+      .pill-ft{ 
+        color:#f3f6f9;
+        background: color-mix(in srgb, var(--ft) 22%, #0b0b0b);
+        border-color: color-mix(in srgb, var(--ft) 70%, #0b0b0b);
+      }
     }
     .dot{width:.6rem;height:.6rem;border-radius:999px;display:inline-block}
     .ai .pill{background:#e9edff;border-color:#dfe5ff;color:#2d3b8f}
@@ -143,14 +182,7 @@
       text-decoration:none; cursor:pointer;
     }
     .share-btn:hover{ background:#f3f4f6; }
-  @media (max-width: 560px){
-  header.site img.brand-mark{height:56px}
-}
-</style>
-  <link rel="icon" type="image/x-icon" href="./icons/favicon.ico">
-  <link rel="icon" type="image/png" sizes="32x32" href="./icons/t2d-pulse-32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="./icons/t2d-pulse-16.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="./icons/t2d-pulse-180.png">
+  </style>
 </head>
 
 <body>
@@ -161,7 +193,14 @@
   <img class="brand-mark" src="./icons/T2D_Pulse_Logo_2.png" alt="T2D Pulse">
 </a>
 <h1 class="sr-only">T2D Pulse</h1>
-<div class="tag">Snapshot for Oct 11, 2025 — curated AI, Software, and FinTech headlines.</div>
+<div class="tag">
+  Snapshot for <span class="date">Oct 11, 2025</span> —
+  curated <span class="pill pill-sm pill-ai">AI</span>
+  <span class="middot">•</span>
+  <span class="pill pill-sm pill-sw">Software</span>
+  <span class="middot">•</span>
+  <span class="pill pill-sm pill-ft">FinTech</span> headlines.
+</div>
     <div class="grow"></div>
       <div class="hdr-actions">
         <div class="install"><button class="btn" id="btnInstall" aria-label="Install app">Install</button></div>
@@ -242,7 +281,7 @@
             <span class="label">
               <span class="pill"><i class="dot" style="background:var(--ft)"></i>FinTech</span>
             </span>
-            <span class="count">6 items</span>
+            <span class="count">5 items</span>
           </summary>
           <div class="items">
             <article class="top">
@@ -254,11 +293,6 @@
   <h3><a href="https://news.google.com/rss/articles/CBMiekFVX3lxTE9nbHh2WnVKczQxMzFSZEwzN0ZJbGZ1VHB6RG5FdGFYcy1tc1RiTkd4Vl85ZUJFOVBzQnRldGpISFNqckJsRnc2TzdDV1NJaTlEOXlET3p5VFZEOUZkczZ0bURGdU1jbFpWQUZUVmdqUWNmRmNwc3VMSktR?oc=5&hl=en-US&gl=US&ceid=US:en&utm_source=tek2day&utm_medium=email">How Churners Earn Money By Regularly Signing Up for Credit Cards - The New York Times</a></h3>
   <div class="meta">Google - Oct 11, 2025 <span class="badge">New</span></div>
   <p>How Churners Earn Money By Regularly Signing Up for Credit Cards The New York Times</p>
-</article>
-        <article class="">
-  <h3><a href="https://news.google.com/rss/articles/CBMi5wJBVV95cUxNX2hfaGdBZGdhMTd0cFJDaml1UF96b3BNdzR0ekkxM0VsS1EycXhGdHJieVJPS003RE9rSXIxRXZQQV84WE9CNXByMllpajhZb0cyTGRlMXhsRW4zWHFYT1JWeFVGcUhPT1lzcndFUDRYam5uUzNTQ21iMG5sb2JCa2dOSXAtMkZ0bHR6SjJDcUlWYnFkWkNWRlFMVFpZZ0YxVWw0bFI0S0hGWFJtanF2THZtRmRFUXRqX0VnX0RUeThLTXBHT3VTaUNBVXluZkNNUGE0RWVCR0ZMZk1YSUJYNGRXSjNabklqRl9VTEFLQlBNMXAwcHJ6ZmlpNmlnYmpUcXBWWjdvYXZKR0VMaGdYRGRpR1c4UW9ObEJ1ZnB3T2h2emxveDNIcldxal9obm9QQkFkTnRUVzZ6Z2RPWkVfNHVSUzMyNy1EVUtnd2l0RDlUb21sMEljZUx4MXpINDVacGgzMGpQNA?oc=5&hl=en-US&gl=US&ceid=US:en&utm_source=tek2day&utm_medium=email">Print Edition | Wall Street Journal - The Wall Street Journal</a></h3>
-  <div class="meta">Google - Oct 11, 2025 <span class="badge">New</span></div>
-  <p>Print Edition | Wall Street Journal The Wall Street Journal</p>
 </article>
         <article class="">
   <h3><a href="https://www.pymnts.com/acquisitions/2025/fis-says-issuer-solutions-acquisition-on-track-as-uk-regulator-seeks-more-information/?utm_source=tek2day&utm_medium=email">FIS Says Issuer Solutions Acquisition on Track as UK Regulator Seeks More Information</a></h3>
