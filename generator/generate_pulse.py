@@ -253,7 +253,7 @@ SW_STRONG = [
 FT_STRONG = [
     "fintech", "payments", "payment", "bank", "banking", "visa", "mastercard", "stripe",
     "paypal", "plaid", "lending", "loan", "crypto", "bitcoin", "ethereum", "stablecoin",
-    "defi", "aml", "kyc", "sec", "fdic", "treasury", "card", "merchant"
+    "defi", "aml", "kyc", "sec", "fdic", "treasury", "card", "tokenization", "stablecoin", "coinbase", "merchant"
 ]
 
 def _count_hits(text: str, terms: list[str]) -> int:
