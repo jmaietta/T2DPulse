@@ -1,37 +1,44 @@
-timezone: "America/New_York"
+timezone: America/New_York
 run_window_hours: 24
 max_items_per_category: 15
-
 sources:
   rss:
-    - name: "VentureBeat"
-      url: "https://venturebeat.com/feed"
-    - name: "The Verge"
-      url: "https://www.theverge.com/rss/index.xml"
-    - name: "OpenAI News"
-      url: "https://openai.com/blog/rss.xml"
-    - name: "Anthropic News"
-      url: "https://www.anthropic.com/news/rss.xml"
-    - name: "PYMNTS"
-      url: "https://www.pymnts.com/feed"
-
+  - name: VentureBeat
+    url: https://venturebeat.com/feed
+  - name: The Verge
+    url: https://www.theverge.com/rss/index.xml
+  - name: OpenAI News
+    url: https://openai.com/blog/rss.xml
+  - name: Anthropic News
+    url: https://www.anthropic.com/news/rss.xml
+  - name: PYMNTS
+    url: https://www.pymnts.com/feed
   google_news_queries:
     ai:
-      - '("artificial intelligence" OR AI OR "large language model" OR LLM OR "generative AI") site:(theverge.com OR venturebeat.com OR wired.com OR arstechnica.com OR bloomberg.com/technology OR wsj.com OR nytimes.com OR ft.com OR techcrunch.com OR ieee.org OR theregister.com)'
+    - ("artificial intelligence" OR AI OR "large language model" OR LLM OR "generative
+      AI") site:(theverge.com OR venturebeat.com OR wired.com OR arstechnica.com OR
+      bloomberg.com/technology OR wsj.com OR nytimes.com OR ft.com OR techcrunch.com
+      OR ieee.org OR theregister.com)
+    - site:bloomberg.com (AI OR "artificial intelligence" OR OpenAI OR Anthropic)
     software:
-      - '(software OR "developer tools" OR devops OR "platform engineering" OR SaaS) site:(theverge.com OR venturebeat.com OR wired.com OR arstechnica.com OR bloomberg.com/technology OR wsj.com OR nytimes.com OR ft.com OR techcrunch.com OR github.blog OR ieee.org OR theregister.com)'
+    - (software OR "developer tools" OR devops OR "platform engineering" OR SaaS)
+      site:(theverge.com OR venturebeat.com OR wired.com OR arstechnica.com OR bloomberg.com/technology
+      OR wsj.com OR nytimes.com OR ft.com OR techcrunch.com OR github.blog OR ieee.org
+      OR theregister.com)
+    - site:bloomberg.com (software OR cloud OR developer OR platform)
     fintech:
-      - '(fintech OR payments OR "digital banking" OR crypto OR blockchain OR "open banking") site:(pymnts.com OR wsj.com OR nytimes.com OR ft.com OR bloomberg.com/technology OR theverge.com OR venturebeat.com OR techcrunch.com)'
-
-# Global domain filters (applied to *all* items)
+    - (fintech OR payments OR "digital banking" OR crypto OR blockchain OR "open banking")
+      site:(pymnts.com OR wsj.com OR nytimes.com OR ft.com OR bloomberg.com/technology
+      OR theverge.com OR venturebeat.com OR techcrunch.com)
+    - site:bloomberg.com (fintech OR payments OR crypto OR banking OR Visa OR Mastercard
+      OR Stripe)
 exclude_domains_suffix:
-  - "news.ycombinator.com"  # block Hacker News
-  - "ycombinator.com"
-  - "substack.com"
-  - "x.com"
-  - "twitter.com"
-  - "youtube.com" 
-
+- news.ycombinator.com
+- ycombinator.com
+- substack.com
+- x.com
+- twitter.com
+- youtube.com
 utm:
-  source: "tek2day"
-  medium: "email"
+  source: tek2day
+  medium: email
