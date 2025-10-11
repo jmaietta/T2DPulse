@@ -132,6 +132,18 @@
       .items{padding:.45rem .6rem .8rem}
       article{padding:.8rem .75rem}
     }
+
+    /* ===== Share toolbar (minimal styles) ===== */
+    .share{
+      display:flex; gap:.5rem; margin-top:.35rem; flex-wrap:wrap;
+    }
+    .share-btn{
+      appearance:none; -webkit-appearance:none;
+      border:1px solid var(--line); background:#fff; color:var(--ink);
+      border-radius:999px; padding:.3rem .6rem; font-size:.85rem; font-weight:600;
+      text-decoration:none; cursor:pointer;
+    }
+    .share-btn:hover{ background:#f3f4f6; }
   </style>
 </head>
 
@@ -247,7 +259,7 @@
             <span class="label">
               <span class="pill"><i class="dot" style="background:var(--sw)"></i>Software</span>
             </span>
-            <span class="count">3 items</span>
+            <span class="count">4 items</span>
           </summary>
           <div class="items">
             <article class="top">
@@ -264,6 +276,11 @@
   <h3><a href="https://www.pymnts.com/economy/2025/inflation-clouds-consumer-sentiment-nudging-households-toward-credit/?utm_source=tek2day&utm_medium=email">Inflation Clouds Consumer Sentiment, Nudging Households Toward Credit</a></h3>
   <div class="meta">PYMNTS - Oct 10, 2025</div>
   <p>Consumer sentiment paused its late-summer slide in October, but the story behind the headline hasn’t changed: households remain fixated on high prices and a softening job outlook, and they don’t expect quick improvement. Pocketbook issues like high prices and…</p>
+</article>
+        <article class="">
+  <h3><a href="https://news.google.com/rss/articles/CBMicEFVX3lxTE41Q0tpUXpESGh6NWVLTi04WXdXeTBva1NKZ1dpUndObnlxOFQwbXd2Y21PN2taVG1EcGFaSmZVREozRFo1RTFqdU5tZDVWdzJ5RzNwVTRfc1Nya1ZOUWlNZDQxYkJoZmplYkNfalp4MTA?oc=5&hl=en-US&gl=US&ceid=US:en&utm_source=tek2day&utm_medium=email">EU capitals move to charge Temu and Shein over small packages - Financial Times</a></h3>
+  <div class="meta">Google - Oct 10, 2025</div>
+  <p>EU capitals move to charge Temu and Shein over small packages Financial Times</p>
 </article>
           </div>
         </details>
@@ -357,6 +374,61 @@
       if (window.scrollY > 8) h.classList.add('shadow');
       else h.classList.remove('shadow');
     });
+  </script>
+
+  <!-- ===== Tiny script to add Share buttons to each article card ===== -->
+  <script>
+    (function () {
+      const cards = document.querySelectorAll('#tek2day-pulse article');
+      if (!cards.length) return;
+
+      for (const card of cards) {
+        const a = card.querySelector('h3 a');
+        if (!a) continue;
+        const url = a.href;
+        const title = a.textContent.trim();
+        const shareText = `${title} — via T2D Pulse`;
+
+        // Build share URLs
+        const u = encodeURIComponent(url);
+        const t = encodeURIComponent(shareText);
+        const xShare  = `https://twitter.com/intent/tweet?url=${u}&text=${t}`;
+        const liShare = `https://www.linkedin.com/sharing/share-offsite/?url=${u}`;
+
+        // Toolbar
+        const bar = document.createElement('div');
+        bar.className = 'share';
+        bar.innerHTML = `
+          <a class="share-btn" href="${xShare}" target="_blank" rel="noopener">Share to X</a>
+          <a class="share-btn" href="${liShare}" target="_blank" rel="noopener">Share to LinkedIn</a>
+          <button class="share-btn" type="button" data-url="${url}">Copy URL</button>
+        `;
+        card.appendChild(bar);
+      }
+
+      // Copy URL handler (+ native Share on mobile if available)
+      document.addEventListener('click', async (e) => {
+        const btn = e.target.closest('.share-btn[type="button"]');
+        if (!btn) return;
+        const url = btn.getAttribute('data-url') || window.location.href;
+        const title = btn.closest('article')?.querySelector('h3')?.innerText?.trim() || 'T2D Pulse';
+
+        if (navigator.share) {
+          try { await navigator.share({ title, url }); return; } catch(_) {}
+        }
+        try {
+          await navigator.clipboard.writeText(url);
+          const old = btn.textContent; btn.textContent = 'Copied!';
+          setTimeout(() => btn.textContent = old, 1200);
+        } catch {
+          const ta = document.createElement('textarea'); ta.value = url;
+          document.body.appendChild(ta); ta.select(); document.execCommand('copy');
+          document.body.removeChild(ta);
+          const old = btn.textContent; btn.textContent = 'Copied!';
+          setTimeout(() => btn.textContent = old, 1200);
+        }
+      });
+    })();
   </script>
 </body>
 </html>
