@@ -36,69 +36,132 @@
   <style>
     :root{
       --ai:#6b8afd; --sw:#00a87e; --ft:#ff7a59;
-      --ink:#0f172a; --muted:#64748b; --line:#e2e8f0; --card:#fff; --bg:#f8fafc;
-      --r:14px
+      --ink:#0f172a; --muted:#5b6473; --line:#e6eaf0; --card:#ffffff; --bg:#f7f9fc;
+      --r:16px; --shadow:0 10px 30px rgba(15,23,42,.06);
+      --ink-soft:#1f2937;
     }
+    @media (prefers-color-scheme: dark){
+      :root{
+        --ink:#e5e7eb; --ink-soft:#f3f4f6; --muted:#94a3b8; --line:#1f2937; --card:#0f172a; --bg:#0b1220;
+        --shadow:0 8px 24px rgba(0,0,0,.35);
+      }
+    }
+    [data-theme="dark"]{
+      --ink:#e5e7eb; --ink-soft:#f3f4f6; --muted:#94a3b8; --line:#1f2937; --card:#0f172a; --bg:#0b1220;
+      --shadow:0 8px 24px rgba(0,0,0,.35);
+    }
+
     *{box-sizing:border-box}
-    body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
+    html,body{height:100%}
+    body{
+      margin:0;background:var(--bg);color:var(--ink);
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+      -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+    }
 
     /* Sticky header */
     header.site{
-      position: sticky; top: 0; z-index: 50;
-      max-width: 960px; margin: 0 auto; padding: .6rem 1rem;
-      display: flex; align-items: center; gap: .75rem;
-      background: rgba(248,250,252,.85);
-      backdrop-filter: saturate(180%) blur(8px);
-      -webkit-backdrop-filter: saturate(180%) blur(8px);
-      border-bottom: 1px solid var(--line);
-      transition: box-shadow .2s ease;
+      position:sticky; top:0; z-index:50;
+      backdrop-filter:saturate(160%) blur(10px); -webkit-backdrop-filter:saturate(160%) blur(10px);
+      background:color-mix(in srgb, var(--bg) 88%, transparent);
+      border-bottom:1px solid var(--line);
     }
-    header.site.shadow{ box-shadow: 0 6px 20px rgba(15,23,42,.08) }
-    header.site img{width:40px;height:40px;border-radius:10px}
+    .site-inner{
+      max-width:1100px;margin:0 auto;padding:.65rem 1rem;
+      display:flex;align-items:center;gap:.9rem;
+    }
+    header.site img{width:42px;height:42px;border-radius:12px}
     header.site h1{
-      font-family: 'Orbitron', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
-      font-weight: 700; letter-spacing: .5px; font-size:1.25rem; margin:0;
+      font-family:'Orbitron', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      font-weight:700; letter-spacing:.4px; font-size:1.28rem; margin:0; color:var(--ink-soft);
     }
-    header.site .tag{color:var(--muted);font-size:.95rem}
-    .install{display:none;margin-left:auto}
-    .install button{background:#0f172a;color:#fff;border:0;border-radius:999px;padding:.5rem .85rem;font-weight:600;cursor:pointer}
+    header .tag{color:var(--muted);font-size:.95rem; margin-top:.1rem}
+    .grow{flex:1}
+    .hdr-actions{display:flex;gap:.5rem;margin-left:auto;align-items:center}
+    .btn{
+      appearance:none;border:1px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer;
+      border-radius:999px;padding:.45rem .75rem;font-weight:700;font-size:.9rem; box-shadow:none;
+    }
+    .btn:hover{box-shadow:var(--shadow)}
+    .install{display:none}
+    .theme-toggle{width:38px;height:38px;display:grid;place-items:center;border-radius:999px}
 
     /* Container */
-    #app{max-width:960px;margin:0 auto 2rem;padding:0 1rem}
+    #app{max-width:1100px;margin:0 auto 2.2rem;padding:0 1rem}
 
-    /* Section */
-    #tek2day-pulse{background:var(--bg);border:1px solid var(--line);border-radius:calc(var(--r)+2px);padding:1rem}
+    /* Section & categories */
+    #tek2day-pulse{
+      background:var(--card);border:1px solid var(--line);border-radius:calc(var(--r) + 2px);
+      padding:1.1rem; box-shadow:var(--shadow); margin-top:1rem;
+    }
     .stack{display:grid;gap:1rem}
-    details.cat{background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
-    details.cat summary{list-style:none;cursor:pointer;padding:.85rem 1rem;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}
+    details.cat{
+      background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;
+    }
+    details.cat summary{
+      list-style:none;cursor:pointer;padding:.95rem 1rem;display:flex;align-items:center;justify-content:space-between;
+      border-bottom:1px solid var(--line); transition:background .15s ease;
+    }
+    details.cat[open] summary{background:color-mix(in srgb, var(--card) 90%, #fff 10%)}
     details.cat summary::-webkit-details-marker{display:none}
-    .label{display:flex;gap:.6rem;align-items:center;font-weight:700;color:var(--ink)}
+    .label{display:flex;gap:.6rem;align-items:center;font-weight:900;color:var(--ink)}
+    .pill{
+      display:inline-flex;align-items:center;gap:.5rem;padding:.25rem .6rem;border-radius:999px;font-size:.92rem;font-weight:800;color:#0b0b0b;
+      background:#e9eefc;border:1px solid #dee6ff;
+    }
     .dot{width:.6rem;height:.6rem;border-radius:999px;display:inline-block}
-    .count{color:#64748b;font-size:.9rem}
-    .ai summary{box-shadow:inset 4px 0 0 var(--ai)}
-    .sw summary{box-shadow:inset 4px 0 0 var(--sw)}
-    .ft summary{box-shadow:inset 4px 0 0 var(--ft)}
-    .items{padding:.5rem 1rem 1rem}
-    article{padding:.8rem .2rem;border-bottom:1px dashed var(--line)}
-    article:last-child{border-bottom:0}
-    h3{margin:0 0 .25rem;font-size:1.02rem;line-height:1.36}
-    a{color:var(--ink);text-decoration:none}
-    a:hover{text-decoration:underline}
-    .meta{color:#64748b;font-size:.85rem;margin-bottom:.35rem}
-    .top{background:#fcfcff;border:1px solid #e7eaff;border-radius:12px;padding:.8rem}
-    .foot{margin-top:1rem;color:#6b7280;font-size:.9rem}
+    .ai .pill{background:#e9edff;border-color:#dfe5ff;color:#2d3b8f}
+    .sw .pill{background:#e7fbf3;border-color:#d9f5eb;color:#0f6b57}
+    .ft .pill{background:#fff0ea;border-color:#ffe4d8;color:#a9441b}
+    .count{color:var(--muted);font-size:.9rem}
+
+    .items{padding:.55rem 1rem 1rem;display:grid;gap:.75rem}
+    article{
+      position:relative;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:.9rem .9rem;
+      transition:transform .06s ease, box-shadow .12s ease; will-change:transform;
+    }
+    article:hover{transform:translateY(-1px); box-shadow:var(--shadow)}
+    article.top{background:linear-gradient(180deg, color-mix(in srgb, var(--card) 92%, #fff 8%), var(--card)); border-width:1px}
+    h3{margin:0 0 .35rem;font-size:1.04rem;line-height:1.4}
+    h3 a{color:var(--ink);text-decoration:none}
+    h3 a:hover{text-decoration:underline}
+    .meta{color:var(--muted);font-size:.86rem;margin-bottom:.4rem;display:flex;gap:.4rem;align-items:center;flex-wrap:wrap}
+    .meta .src{font-weight:700;letter-spacing:.1px}
+    .meta .sep{opacity:.35}
+    p{margin:.25rem 0 0; color:var(--ink)}
+    .kbd{font:600 .78rem/1 monospace;background:color-mix(in srgb, var(--bg) 75%, #000 0%);padding:.1rem .35rem;border-radius:6px;border:1px solid var(--line);color:var(--muted)}
+
+    /* Footer note */
+    .foot{margin-top:1rem;color:var(--muted);font-size:.92rem}
+
+    /* Sticky header shadow on scroll */
+    header.site.shadow{ box-shadow: 0 10px 28px rgba(15,23,42,.08) }
+
+    /* Small screens */
+    @media (max-width: 640px){
+      header.site h1{font-size:1.12rem}
+      #tek2day-pulse{padding:.9rem}
+      .items{padding:.45rem .6rem .8rem}
+      article{padding:.8rem .75rem}
+    }
   </style>
 </head>
 
 <body>
-  <!-- Sticky site header with logo + install button -->
+  <!-- Sticky site header -->
   <header class="site">
-    <img src="./icons/logo-48.png" alt="TEK2day logo" />
-    <div>
-      <h1>T2D Pulse</h1>
-      <div class="tag">Snapshot for Oct 10, 2025 — curated AI, Software, and FinTech headlines.</div>
+    <div class="site-inner">
+      <img src="./icons/logo-48.png" alt="T2D logo" />
+      <div>
+        <h1>T2D Pulse</h1>
+        <div class="tag">Snapshot for Oct 11, 2025 — curated AI, Software, and FinTech headlines.</div>
+      </div>
+      <div class="grow"></div>
+      <div class="hdr-actions">
+        <button class="btn theme-toggle" id="themeBtn" aria-label="Toggle theme" title="Toggle light/dark">🌙</button>
+        <div class="install"><button class="btn" id="btnInstall" aria-label="Install app">Install</button></div>
+      </div>
     </div>
-    <div class="install"><button id="btnInstall" aria-label="Install app">Install</button></div>
   </header>
 
   <div id="app">
@@ -106,17 +169,17 @@
       <div class="stack">
         <!-- AI -->
         <details class="cat ai" open>
-          <summary><span class="label"><i class="dot" style="background:var(--ai)"></i>AI</span><span class="count">15 items</span></summary>
+          <summary>
+            <span class="label">
+              <span class="pill"><i class="dot" style="background:var(--ai)"></i>AI</span>
+            </span>
+            <span class="count">15 items</span>
+          </summary>
           <div class="items">
             <article class="top">
   <h3><a href="https://www.theverge.com/ai-artificial-intelligence/798496/hollywood-openai-training-netflix-paramount-warner?utm_source=tek2day&utm_medium=email">Hollywood has no idea what to do about AI</a></h3>
   <div class="meta">The Verge - Oct 10, 2025</div>
   <p>This is an excerpt of Sources by Alex Heath, a newsletter about AI and the tech industry, syndicated just for The Verge subscribers once a week. This week, I got an up-close look at how far apart Silicon Valley and Hollywood are on what to do about AI. First,…</p>
-</article>
-        <article class="">
-  <h3><a href="https://news.google.com/rss/articles/CBMijAFBVV95cUxOSVh1aXBPUm5ZWHEza0hXenlicXpXWmR2V1RTOU4xWEp3SDBTYURJa2J4dDViRVhwczRVNnc0WUlSaVNOVXNGbjNpdFgtUl9PeVppYm5MdWZ5UjRDbjlNeWlIcjJ0M180YWdaME93UENIdHdHV3pFZzlzVW5tTEVycVltSmxTS3dqNmlwRg?oc=5&hl=en-US&gl=US&ceid=US:en&utm_source=tek2day&utm_medium=email">What the Arrival of A.I. Video Generators Like Sora Means for Us - The New York Times</a></h3>
-  <div class="meta">Google - Oct 10, 2025</div>
-  <p>What the Arrival of A.I. Video Generators Like Sora Means for Us The New York Times</p>
 </article>
         <article class="">
   <h3><a href="https://www.pymnts.com/artificial-intelligence-2/2025/nvidia-tops-new-ai-inference-benchmark/?utm_source=tek2day&utm_medium=email">Nvidia Tops New AI Inference Benchmark</a></h3>
@@ -127,11 +190,6 @@
   <h3><a href="https://www.theverge.com/news/798523/openai-ai-regulation-advocates-subpoenas-police?utm_source=tek2day&utm_medium=email">OpenAI allegedly sent police to an AI regulation advocate’s door</a></h3>
   <div class="meta">The Verge - Oct 10, 2025</div>
   <p>Will OpenAI send police to your door if you advocate for AI regulation? Nathan Calvin, a lawyer who shapes policies surrounding the technology at Encode AI, claims OpenAI did just that. “One Tuesday night, as my wife and I sat down for dinner, a sheriff’s dep…</p>
-</article>
-        <article class="">
-  <h3><a href="https://news.google.com/rss/articles/CBMikANBVV95cUxOUEJoWkVVeVlpTUw5RnZ5ZnBQVnZpemp2MnNJZVcySXk5UU5NMlRjazJnZm94eEZPNVJpeE9PWFlfRzdtcVF3UkhscG51R3dES0xFb2RTTlhodi1RcXN4X190OUs1VHYyREdkcHFQbTFULU9QaFd0M1pEVVlzQVJmcXNWUFNTQ3dNTkt3SnM4ZjRQNE1kRVRHVWlHR2ljSGlkd0M3cXc1MEx0aFE5d2N3TzFORjRuVGVidjJkdXVEVGZwUl82aGVzNlduRHNmSlA0MG80RzJ1UGFPRmc2TXI3ZFpHc0toU2JKeUxtM0hCeGZNbk9KMGZ0RzlMcFB0R0tiQW4yQ0d0RjBOQ2QyUm10N2s5MXFtMU1Ud3Z4SldiMWRCLW1TSEstRC1xOWg5cUlYNzRRVlAtY1pIeU14bFVuaVl6ZkhmVGpicEdrOXNiOGdSRjNpc1pibmgzY2tWTUNKMkJkWmxjeWpsOWtYRGQ3XzBxaUxfbzJzUUNoSE1UQVk1TnExLVB0NWxHYUFMU1pm?oc=5&hl=en-US&gl=US&ceid=US:en&utm_source=tek2day&utm_medium=email">19 Missing in Deadly Blast at Tennessee Explosives Plant - The Wall Street Journal</a></h3>
-  <div class="meta">Google - Oct 10, 2025</div>
-  <p>19 Missing in Deadly Blast at Tennessee Explosives Plant The Wall Street Journal</p>
 </article>
         <article class="">
   <h3><a href="https://www.theverge.com/news/798388/openai-chatgpt-political-bias-eval?utm_source=tek2day&utm_medium=email">OpenAI is trying to clamp down on ‘bias’ in ChatGPT</a></h3>
@@ -149,24 +207,19 @@
   <p>CoreWeave has agreed to acquire Monolith AI, a London-based company that builds artificial intelligence tools to help engineers design and test products more efficiently. The company said the deal will allow it to “expand AI cloud platform into industrial inn…</p>
 </article>
         <article class="">
-  <h3><a href="https://www.pymnts.com/artificial-intelligence-2/2025/klarna-ceo-says-ai-will-drive-massive-shift-in-employment/?utm_source=tek2day&utm_medium=email">Klarna CEO Says AI Will Drive ‘Massive Shift’ in Employment</a></h3>
-  <div class="meta">PYMNTS - Oct 10, 2025</div>
-  <p>Artificial intelligence is set to drive a “massive shift” in employment in banking and other knowledge worker fields, according to Klarna CEO Sebastian Siemiatkowski. In a Friday (Oct. 10) interview with Bloomberg Television, Siemiatkowski offered as an examp…</p>
-</article>
-        <article class="">
   <h3><a href="https://venturebeat.com/security/weaponized-ai-can-dismantle-patches-in-72-hours-but-ivantis-kernel-defense?utm_source=tek2day&utm_medium=email">Weaponized AI can dismantle patches in 72 hours — but Ivanti&#x27;s kernel defense can help</a></h3>
   <div class="meta">VentureBeat - Oct 10, 2025</div>
   <p>Adversaries from cybercrime gangs to nation-state cyberattack squads are fine-tuning weaponized AI with the goal of defeating new patches in 3 days or less. The quicker the attack, the more time to explore a victim’s network, exfiltrate data, install ransomwa…</p>
 </article>
         <article class="">
+  <h3><a href="https://news.google.com/rss/articles/CBMijAFBVV95cUxOSVh1aXBPUm5ZWHEza0hXenlicXpXWmR2V1RTOU4xWEp3SDBTYURJa2J4dDViRVhwczRVNnc0WUlSaVNOVXNGbjNpdFgtUl9PeVppYm5MdWZ5UjRDbjlNeWlIcjJ0M180YWdaME93UENIdHdHV3pFZzlzVW5tTEVycVltSmxTS3dqNmlwRg?oc=5&hl=en-US&gl=US&ceid=US:en&utm_source=tek2day&utm_medium=email">What the Arrival of A.I. Video Generators Like Sora Means for Us - The New York Times</a></h3>
+  <div class="meta">Google - Oct 10, 2025</div>
+  <p>What the Arrival of A.I. Video Generators Like Sora Means for Us The New York Times</p>
+</article>
+        <article class="">
   <h3><a href="https://venturebeat.com/ai/together-ais-atlas-adaptive-speculator-delivers-400-inference-speedup-by?utm_source=tek2day&utm_medium=email">Together AI&#x27;s ATLAS adaptive speculator delivers 400% inference speedup by learning from workloads in real-time</a></h3>
   <div class="meta">VentureBeat - Oct 10, 2025</div>
   <p>Enterprises expanding AI deployments are hitting an invisible performance wall. The culprit? Static speculators that can&#x27;t keep up with shifting workloads. Speculators are smaller AI models that work alongside large language models during inference. They draf…</p>
-</article>
-        <article class="">
-  <h3><a href="https://news.google.com/rss/articles/CBMikwFBVV95cUxONFBhcXBSUTJBWHZQWVlBUnFGSzAzRWxHcXpJMmxYcldpSFJ2MjYyRExGbmhDSFQ3bFRDc1lnVWNvUV9Wd0k2eWtGYndrNUpfRThkRVd1bEE3TkVHT0ViVm1yNEs5dUNxSlN5cXhORmp4ZmFnZU9xYUlYREk2RjJrcW5EWlpqNFZfU0RmMzFoWTNkYWc?oc=5&hl=en-US&gl=US&ceid=US:en&utm_source=tek2day&utm_medium=email">Critics Say Select Investors Gained From US Aid to Argentina - The New York Times</a></h3>
-  <div class="meta">Google - Oct 10, 2025</div>
-  <p>Critics Say Select Investors Gained From US Aid to Argentina The New York Times</p>
 </article>
         <article class="">
   <h3><a href="https://news.google.com/rss/articles/CBMivAFBVV95cUxOVjNtZ0gza2RhT3BEa0R0OUtTZWxnRzh2dE8ydi1ycC0tZGh6ckEzbThURDVnZ2VpT1I1SDlQc05JSnNkbkNLY2d2V1B0dnpQZ0VOMzBHZDFFUnAzbkVNVXdYdUVSMldIYlVoQ2lSYVVyblY0UndsWmNaeHUwLXNVY3c1NmRLNXREbnhaU0lHZlJFTER5NG9peEdEWnhMME4tcHF1Y2ZtUGxRREJDV2lOYU0zdHZKM204dWlsTg?oc=5&hl=en-US&gl=US&ceid=US:en&utm_source=tek2day&utm_medium=email">“Like putting on glasses for the first time”—how AI improves earthquake detection - Ars Technica</a></h3>
@@ -183,14 +236,39 @@
   <div class="meta">Google - Oct 10, 2025</div>
   <p>Meta Tells Its Metaverse Workers to Use AI to ‘Go 5X Faster’ WIRED</p>
 </article>
+        <article class="">
+  <h3><a href="https://news.google.com/rss/articles/CBMiiwFBVV95cUxOX25RaVdsdXludGYzdlluRnc5YjV6STdveno2S1JHaUdkUzU3WW1SMkNCR0xkM1ZPSHhDNVZLa09aUWtxMUoxdnhkOE9UaTJVQ0FkeEtycnhER3Z4UzhSSmVBb3hDN1pteVVjZkF2YUNqT09LcC02S2JrTzNILWxma3owdFlDZTRHdXFF?oc=5&hl=en-US&gl=US&ceid=US:en&utm_source=tek2day&utm_medium=email">‘Tron: Ares’ Wants to Gaslight You About the Future of AI - WIRED</a></h3>
+  <div class="meta">Google - Oct 10, 2025</div>
+  <p>‘Tron: Ares’ Wants to Gaslight You About the Future of AI WIRED</p>
+</article>
+        <article class="">
+  <h3><a href="https://venturebeat.com/ai/will-updating-your-ai-agents-help-or-hamper-their-performance-raindrops-new?utm_source=tek2day&utm_medium=email">Will updating your AI agents help or hamper their performance? Raindrop&#x27;s new tool Experiments tells you</a></h3>
+  <div class="meta">VentureBeat - Oct 10, 2025</div>
+  <p>It seems like almost every week for the last two years since ChatGPT launched, new large language models (LLMs) from rival labs or from OpenAI itself have been released. Enterprises are hard pressed to keep up with the massive pace of change, let alone unders…</p>
+</article>
+        <article class="">
+  <h3><a href="https://news.google.com/rss/articles/CBMicEFVX3lxTE5TMVY0dDYxeUZlRnRBQk5vYTdjMWR0V01oZWhwWnZKMUNnUFJCcUx2bzV1OGJVTDBpLWxMQzdNTEd4MVI3cUNXMjExSFg2eV9NazFmclVGTXVsbEhaNUhGYURjbVFMY19KSDROOUlWQlc?oc=5&hl=en-US&gl=US&ceid=US:en&utm_source=tek2day&utm_medium=email">Russian air strikes disable 60% of Ukraine’s gas production ahead of winter - Financial Times</a></h3>
+  <div class="meta">Google - Oct 10, 2025</div>
+  <p>Russian air strikes disable 60% of Ukraine’s gas production ahead of winter Financial Times</p>
+</article>
           </div>
         </details>
 
         <!-- Software -->
         <details class="cat sw" open>
-          <summary><span class="label"><i class="dot" style="background:var(--sw)"></i>Software</span><span class="count">4 items</span></summary>
+          <summary>
+            <span class="label">
+              <span class="pill"><i class="dot" style="background:var(--sw)"></i>Software</span>
+            </span>
+            <span class="count">5 items</span>
+          </summary>
           <div class="items">
             <article class="top">
+  <h3><a href="https://www.pymnts.com/apple/2025/apple-reorganizes-health-and-fitness-divisions-ahead-of-former-coos-retirement/?utm_source=tek2day&utm_medium=email">Apple Reorganizes Health and Fitness Divisions Ahead of Former COO’s Retirement</a></h3>
+  <div class="meta">PYMNTS - Oct 10, 2025</div>
+  <p>Apple is reportedly reorganizing some of its divisions as the retirement of former Chief Operating Officer Jeff Williams nears. The company will move its health and fitness divisions and place them under the oversight of its services chief, Eddy Cue, Bloomber…</p>
+</article>
+        <article class="">
   <h3><a href="https://www.theverge.com/news/798501/bose-soundtouch-speakers-cloud-discontinue-shut-down?utm_source=tek2day&utm_medium=email">Bose is yanking key features from its SoundTouch speakers</a></h3>
   <div class="meta">The Verge - Oct 10, 2025</div>
   <p>Bose is discontinuing support for the cloud-based features available on its SoundTouch products on February 18th, 2026. “After February 18, certain features — including access to integrated music services like Spotify and TuneIn, as well as multi-room playbac…</p>
@@ -215,7 +293,12 @@
 
         <!-- FinTech -->
         <details class="cat ft" open>
-          <summary><span class="label"><i class="dot" style="background:var(--ft)"></i>FinTech</span><span class="count">6 items</span></summary>
+          <summary>
+            <span class="label">
+              <span class="pill"><i class="dot" style="background:var(--ft)"></i>FinTech</span>
+            </span>
+            <span class="count">6 items</span>
+          </summary>
           <div class="items">
             <article class="top">
   <h3><a href="https://www.pymnts.com/cryptocurrency/2025/morgan-stanley-allow-agents-sell-crypto-funds-any-clients/?utm_source=tek2day&utm_medium=email">Morgan Stanley to Allow Agents to Sell Crypto Funds to Any Clients</a></h3>
@@ -233,14 +316,14 @@
   <p>For the past few years, the business landscape has been defined by two words that rarely coexist comfortably: uncertainty and innovation. Across sectors, volatility in supply chains, capital costs and customer demand continues to test the resilience of mid-si…</p>
 </article>
         <article class="">
-  <h3><a href="https://www.pymnts.com/digital-payments/2025/block-adds-new-incentives-draw-customers-away-from-card-networks/?utm_source=tek2day&utm_medium=email">Block Adds New Incentives to Draw Customers Away From Card Networks</a></h3>
-  <div class="meta">PYMNTS - Oct 10, 2025</div>
-  <p>Some of the new features offered by Block’s Square and Cash App brands take direct aim at the fees charged by card networks, Bloomberg reported Friday (Oct. 10). The company is offering the local businesses that use its payment network a payment processing ra…</p>
-</article>
-        <article class="">
   <h3><a href="https://news.google.com/rss/articles/CBMiigFBVV95cUxOUV9IRVh2WjI5UlhkejRkTlFYT2FhbUpLcG12enlUWDRLbzEtTHF6b1RfLWpkVlJMT1hvRnY0U1JVT2RCaU5haXNvdkFJY0xRTFdoVmp3OXY0ck4yTndPMXZhYkNmN1A3LUNreWlyQjJlbDNMYXJiTEE3LUlSZ2w2THNKMWNPNEwzdEE?oc=5&hl=en-US&gl=US&ceid=US:en&utm_source=tek2day&utm_medium=email">Fintech Start-Ups and Investment Firms Are Battling Over Your 401(k) - The New York Times</a></h3>
   <div class="meta">Google - Oct 10, 2025</div>
   <p>Fintech Start-Ups and Investment Firms Are Battling Over Your 401(k) The New York Times</p>
+</article>
+        <article class="">
+  <h3><a href="https://news.google.com/rss/articles/CBMiiANBVV95cUxPS2xtaWxwUTF2SnZXZEI1WUc2azZfVWVnbjBBbnJ3N3hqM1haLVF5RmNrR01peDcwZVRQUVFxVVo4bHZLM3c3QWJnakhVOXRkQllGeW9WQmR5LTNZM1Vub1ktbm91dldvSU5zSlR2dUxNZnFrR2dwdHpOazBYM2g5SDFhRVV2NEViOEVHa1p2MWhuUzBkajh2aEdTeXNQbUJDT0FWVHZ5WjlHN3R4bXBXd2Z6N2R5YUJSMWt3WXlIZEo2eVdzd0dTdjVpNU13TFIwdzBzTWpZRzJLZ0h4RURlalV6YndJcEZoNzVaWTI2bkliWGw4LThiSl84NDJIMlBSd0FYdm9JQUczUm1vOXUwOEM0RmJkekpkdEZXdUl3emxGOWRDZWtIaDdTaTNreUdkT2VlTndIblB4NXdMS2c4YVg3UjZ2anBLREdJUENJbjlDU0h2R3h5bGNoYnItWHZ6V0hfOE1HZGtsd1BKMkR4TDBDYnVMNWgzdkg3OVFvWmJLWlNGck1tQQ?oc=5&hl=en-US&gl=US&ceid=US:en&utm_source=tek2day&utm_medium=email">Americans Are Falling Behind on Their Car Payments - The Wall Street Journal</a></h3>
+  <div class="meta">Google - Oct 10, 2025</div>
+  <p>Americans Are Falling Behind on Their Car Payments The Wall Street Journal</p>
 </article>
         <article class="">
   <h3><a href="https://news.google.com/rss/articles/CBMifEFVX3lxTE1YdnBYVUQ4cWFDWEM2dTFMVi1wS0pxeXpwVkVrLXh5N3FXWGdQNzkza2pScUhxMU5Ib3NOblJ5Vk1OWGlHSlJ4Z2l4VXdPR1hxMWJBclhuOEc3U0ZrY1RmX0NwVFdrU2Q3bFZCT0x3LWlRYlR2X250WUhGZkY?oc=5&hl=en-US&gl=US&ceid=US:en&utm_source=tek2day&utm_medium=email">Riding the Wild Wave of Crypto Coverage - The New York Times</a></h3>
@@ -255,9 +338,9 @@
     </section>
   </div>
 
-  <!-- PWA + sticky shadow script -->
+  <!-- Scripts: PWA + header shadow + theme toggle -->
   <script>
-    // “Install” prompt
+    // Install prompt
     let deferredPrompt;
     window.addEventListener('beforeinstallprompt', (e) => {
       e.preventDefault();
@@ -270,8 +353,7 @@
       deferredPrompt.prompt();
       await deferredPrompt.userChoice;
       deferredPrompt = null;
-      const wrap = document.querySelector('.install');
-      if (wrap) wrap.style.display = 'none';
+      document.querySelector('.install').style.display = 'none';
     });
 
     // Service worker
@@ -281,12 +363,30 @@
       });
     }
 
-    // Add soft shadow once the user scrolls a bit
+    // Header shadow on scroll
     window.addEventListener('scroll', () => {
       const h = document.querySelector('header.site');
       if (!h) return;
       if (window.scrollY > 8) h.classList.add('shadow');
       else h.classList.remove('shadow');
+    });
+
+    // Theme toggle (light/dark)
+    const root = document.documentElement;
+    const key = 't2d_theme';
+    const btn = document.getElementById('themeBtn');
+    const apply = (t) => {
+      if (t === 'dark') { root.setAttribute('data-theme','dark'); btn.textContent = '☀️'; }
+      else { root.removeAttribute('data-theme'); btn.textContent = '🌙'; }
+    };
+    const saved = localStorage.getItem(key);
+    if (saved) apply(saved);
+    else apply(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    btn?.addEventListener('click', () => {
+      const current = root.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+      const next = current === 'dark' ? 'light' : 'dark';
+      localStorage.setItem(key, next);
+      apply(next);
     });
   </script>
 </body>
