@@ -40,16 +40,6 @@
       --r:16px; --shadow:0 10px 30px rgba(15,23,42,.06);
       --ink-soft:#1f2937;
     }
-    @media (prefers-color-scheme: dark){
-      :root{
-        --ink:#e5e7eb; --ink-soft:#f3f4f6; --muted:#94a3b8; --line:#1f2937; --card:#0f172a; --bg:#0b1220;
-        --shadow:0 8px 24px rgba(0,0,0,.35);
-      }
-    }
-    [data-theme="dark"]{
-      --ink:#e5e7eb; --ink-soft:#f3f4f6; --muted:#94a3b8; --line:#1f2937; --card:#0f172a; --bg:#0b1220;
-      --shadow:0 8px 24px rgba(0,0,0,.35);
-    }
 
     *{box-sizing:border-box}
     html,body{height:100%}
@@ -84,7 +74,6 @@
     }
     .btn:hover{box-shadow:var(--shadow)}
     .install{display:none}
-    .theme-toggle{width:38px;height:38px;display:grid;place-items:center;border-radius:999px}
 
     /* Container */
     #app{max-width:1100px;margin:0 auto 2.2rem;padding:0 1rem}
@@ -129,7 +118,6 @@
     .meta .src{font-weight:700;letter-spacing:.1px}
     .meta .sep{opacity:.35}
     p{margin:.25rem 0 0; color:var(--ink)}
-    .kbd{font:600 .78rem/1 monospace;background:color-mix(in srgb, var(--bg) 75%, #000 0%);padding:.1rem .35rem;border-radius:6px;border:1px solid var(--line);color:var(--muted)}
 
     /* Footer note */
     .foot{margin-top:1rem;color:var(--muted);font-size:.92rem}
@@ -158,7 +146,6 @@
       </div>
       <div class="grow"></div>
       <div class="hdr-actions">
-        <button class="btn theme-toggle" id="themeBtn" aria-label="Toggle theme" title="Toggle light/dark">🌙</button>
         <div class="install"><button class="btn" id="btnInstall" aria-label="Install app">Install</button></div>
       </div>
     </div>
@@ -207,6 +194,11 @@
   <p>CoreWeave has agreed to acquire Monolith AI, a London-based company that builds artificial intelligence tools to help engineers design and test products more efficiently. The company said the deal will allow it to “expand AI cloud platform into industrial inn…</p>
 </article>
         <article class="">
+  <h3><a href="https://news.google.com/rss/articles/CBMilgNBVV95cUxNYURFNUtheVRDb3FqUVZRS0VSdms5M2pVa1M5eDFhcmpva0tmdnZ5aE1zM3RJSEtqQ3FBU1Y3RjdkeHpwWTFRaHNhNFNndWdQQTdDUVBYaGlXRFFZS2kwTTN2MExIQnVvTmRaMjNyRGN6Q1R4Q1lwc3RBSmpwR1djYWtrTmdQejVWZjc2TjdJaHViVFkzaFMtTGRoZWZxNXB1OVRTdU1VUUdrc3NoZlNETHVjWmh6M1NMNWlvUEllYlJXWE9WdXNiRGZnT2M0WXpOR245TlZVVEw3a3VmMlNleFFhRWlwQVRuUEtwSzd6QXdUWDlsTkVvWTZQREV5Tm5USHhHS01IOVF4UzlGUGRHaGxnRmZQM0tNV0lkMDZIZU1rM2dVRWZWc29UOTBEU01mRGFoOENoM29hZThidWtaQ0F1NHkzSDhDcUpBOUVjcVhZYTJWSHowd3U5U2MxZG1veV9vY09PYUZUdlFrUVZHY3N1b2RiQnlWdTlONjFld2t1VWloeVBPZFNLeDF0TE1NN01seEpR?oc=5&hl=en-US&gl=US&ceid=US:en&utm_source=tek2day&utm_medium=email">Nobel Peace Prize Awarded to Venezuelan Opposition Leader María Corina Machado - The Wall Street Journal</a></h3>
+  <div class="meta">Google - Oct 10, 2025</div>
+  <p>Nobel Peace Prize Awarded to Venezuelan Opposition Leader María Corina Machado The Wall Street Journal</p>
+</article>
+        <article class="">
   <h3><a href="https://venturebeat.com/security/weaponized-ai-can-dismantle-patches-in-72-hours-but-ivantis-kernel-defense?utm_source=tek2day&utm_medium=email">Weaponized AI can dismantle patches in 72 hours — but Ivanti&#x27;s kernel defense can help</a></h3>
   <div class="meta">VentureBeat - Oct 10, 2025</div>
   <p>Adversaries from cybercrime gangs to nation-state cyberattack squads are fine-tuning weaponized AI with the goal of defeating new patches in 3 days or less. The quicker the attack, the more time to explore a victim’s network, exfiltrate data, install ransomwa…</p>
@@ -242,14 +234,9 @@
   <p>‘Tron: Ares’ Wants to Gaslight You About the Future of AI WIRED</p>
 </article>
         <article class="">
-  <h3><a href="https://venturebeat.com/ai/will-updating-your-ai-agents-help-or-hamper-their-performance-raindrops-new?utm_source=tek2day&utm_medium=email">Will updating your AI agents help or hamper their performance? Raindrop&#x27;s new tool Experiments tells you</a></h3>
-  <div class="meta">VentureBeat - Oct 10, 2025</div>
-  <p>It seems like almost every week for the last two years since ChatGPT launched, new large language models (LLMs) from rival labs or from OpenAI itself have been released. Enterprises are hard pressed to keep up with the massive pace of change, let alone unders…</p>
-</article>
-        <article class="">
-  <h3><a href="https://news.google.com/rss/articles/CBMicEFVX3lxTE5TMVY0dDYxeUZlRnRBQk5vYTdjMWR0V01oZWhwWnZKMUNnUFJCcUx2bzV1OGJVTDBpLWxMQzdNTEd4MVI3cUNXMjExSFg2eV9NazFmclVGTXVsbEhaNUhGYURjbVFMY19KSDROOUlWQlc?oc=5&hl=en-US&gl=US&ceid=US:en&utm_source=tek2day&utm_medium=email">Russian air strikes disable 60% of Ukraine’s gas production ahead of winter - Financial Times</a></h3>
+  <h3><a href="https://news.google.com/rss/articles/CBMinwNBVV95cUxNb09XVFZSNldZWjlubUhoUXpMUmVJN1B1UlNvanc5cDlUQmtMeVRWMmpLSnhEWElSaEluelBRQzVCX3A2X1pHV3NaTUp2RGI4dXRyR0VlRVEweU1fLTUtSjJ6WjB5bnE0V2g5Z0dqWHljX0RVaG9FcERvY1hPT3RaZTNjbzlMdUpsTkRWSkdvVGIwRzkxbm9uemVTa3ViXy1PLU1FZlphMzZqdHhtUm1vaFdRYjVoUUZMdWMtNVdpQVdDUG0wOXRkMjg3NjcwemVWaGxfZzhmYVl0MVdhZjh0ZlNTdmJSUXF6amNOa29mWHFHZ0tzNEM3NXhtYm1aeEZ0cVVTMTc3QS1aVUJuWkh2OHVITTR5eTlybE9DdWRpTTRRSUFYZWZIWGJJTlh6bUpKVEdReHpMSzQwbEFlaDcyN3JUbm9iTml5SndzZklRQjktNjhCNldqRThBRHJOTHpCbUpRSE1Rc25fcFFFMXpBcUZEV1B4dE5PeExjWEJ4eFJ6QW1nRmlBQzBDNXhHUlRvZ0pqMmlqaUllYVdibG9N?oc=5&hl=en-US&gl=US&ceid=US:en&utm_source=tek2day&utm_medium=email">Google Labeled U.K. Tech Gatekeeper Under New Competition Law - The Wall Street Journal</a></h3>
   <div class="meta">Google - Oct 10, 2025</div>
-  <p>Russian air strikes disable 60% of Ukraine’s gas production ahead of winter Financial Times</p>
+  <p>Google Labeled U.K. Tech Gatekeeper Under New Competition Law The Wall Street Journal</p>
 </article>
           </div>
         </details>
@@ -297,7 +284,7 @@
             <span class="label">
               <span class="pill"><i class="dot" style="background:var(--ft)"></i>FinTech</span>
             </span>
-            <span class="count">6 items</span>
+            <span class="count">5 items</span>
           </summary>
           <div class="items">
             <article class="top">
@@ -321,11 +308,6 @@
   <p>Fintech Start-Ups and Investment Firms Are Battling Over Your 401(k) The New York Times</p>
 </article>
         <article class="">
-  <h3><a href="https://news.google.com/rss/articles/CBMiiANBVV95cUxPS2xtaWxwUTF2SnZXZEI1WUc2azZfVWVnbjBBbnJ3N3hqM1haLVF5RmNrR01peDcwZVRQUVFxVVo4bHZLM3c3QWJnakhVOXRkQllGeW9WQmR5LTNZM1Vub1ktbm91dldvSU5zSlR2dUxNZnFrR2dwdHpOazBYM2g5SDFhRVV2NEViOEVHa1p2MWhuUzBkajh2aEdTeXNQbUJDT0FWVHZ5WjlHN3R4bXBXd2Z6N2R5YUJSMWt3WXlIZEo2eVdzd0dTdjVpNU13TFIwdzBzTWpZRzJLZ0h4RURlalV6YndJcEZoNzVaWTI2bkliWGw4LThiSl84NDJIMlBSd0FYdm9JQUczUm1vOXUwOEM0RmJkekpkdEZXdUl3emxGOWRDZWtIaDdTaTNreUdkT2VlTndIblB4NXdMS2c4YVg3UjZ2anBLREdJUENJbjlDU0h2R3h5bGNoYnItWHZ6V0hfOE1HZGtsd1BKMkR4TDBDYnVMNWgzdkg3OVFvWmJLWlNGck1tQQ?oc=5&hl=en-US&gl=US&ceid=US:en&utm_source=tek2day&utm_medium=email">Americans Are Falling Behind on Their Car Payments - The Wall Street Journal</a></h3>
-  <div class="meta">Google - Oct 10, 2025</div>
-  <p>Americans Are Falling Behind on Their Car Payments The Wall Street Journal</p>
-</article>
-        <article class="">
   <h3><a href="https://news.google.com/rss/articles/CBMifEFVX3lxTE1YdnBYVUQ4cWFDWEM2dTFMVi1wS0pxeXpwVkVrLXh5N3FXWGdQNzkza2pScUhxMU5Ib3NOblJ5Vk1OWGlHSlJ4Z2l4VXdPR1hxMWJBclhuOEc3U0ZrY1RmX0NwVFdrU2Q3bFZCT0x3LWlRYlR2X250WUhGZkY?oc=5&hl=en-US&gl=US&ceid=US:en&utm_source=tek2day&utm_medium=email">Riding the Wild Wave of Crypto Coverage - The New York Times</a></h3>
   <div class="meta">Google - Oct 10, 2025</div>
   <p>Riding the Wild Wave of Crypto Coverage The New York Times</p>
@@ -338,7 +320,7 @@
     </section>
   </div>
 
-  <!-- Scripts: PWA + header shadow + theme toggle -->
+  <!-- Scripts: PWA + header shadow (no theme logic) -->
   <script>
     // Install prompt
     let deferredPrompt;
@@ -369,24 +351,6 @@
       if (!h) return;
       if (window.scrollY > 8) h.classList.add('shadow');
       else h.classList.remove('shadow');
-    });
-
-    // Theme toggle (light/dark)
-    const root = document.documentElement;
-    const key = 't2d_theme';
-    const btn = document.getElementById('themeBtn');
-    const apply = (t) => {
-      if (t === 'dark') { root.setAttribute('data-theme','dark'); btn.textContent = '☀️'; }
-      else { root.removeAttribute('data-theme'); btn.textContent = '🌙'; }
-    };
-    const saved = localStorage.getItem(key);
-    if (saved) apply(saved);
-    else apply(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-    btn?.addEventListener('click', () => {
-      const current = root.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
-      const next = current === 'dark' ? 'light' : 'dark';
-      localStorage.setItem(key, next);
-      apply(next);
     });
   </script>
 </body>
