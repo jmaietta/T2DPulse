@@ -1,4 +1,6 @@
-#!/usr/bin/env python3
+from pathlib import Path
+
+updated = """#!/usr/bin/env python3
 # generator/generate_pulse.py
 #
 # Website-only generator for TEK2day Pulse (AI → Software → FinTech)
@@ -50,10 +52,9 @@ SOURCE_NAME_MAP = {
     "news.google.com": "Google News",
 }
 
-# --- Force-category overrides ---
-# Domains/sources that should always be categorized as FinTech
-FORCE_FINTECH_DOMAINS = {"pymnts.com"}
-FORCE_FINTECH_SOURCES = {"pymnts"}  # compare to it["source"].lower()
+# --- Force-category overrides (base) ---
+FORCE_FINTECH_DOMAINS = {"pymnts.com"}     # normalized by domain_of()
+FORCE_FINTECH_SOURCES = {"pymnts"}         # lowercased source label
 
 # ----------------- helpers -----------------
 def now_et():
@@ -88,7 +89,7 @@ def is_blocked(url):
 
 def clean_text(s, limit=None):
     s = html.unescape(s or "")
-    s = re.sub(r"\s+", " ", s).strip()
+    s = re.sub(r"\\s+", " ", s).strip()
     if limit and len(s) > limit:
         return s[:limit - 1] + "…"
     return s
@@ -216,7 +217,7 @@ def google_news_rss(query):
     return out
 
 # ----------------- categorization -----------------
-# (Legacy list left for reference; new logic below does not rely on it directly.)
+# (Legacy reference; new logic below does not rely on it directly.)
 CATEGORY_KEYWORDS = {
     "ai": [
         "ai","artificial intelligence","large language model","llm","gpt","openai",
@@ -310,6 +311,33 @@ def categorize_with_score(title: str, url: str, summary: str = ""):
     else:
         return "fintech", ft
 
+# ---- Score exposer (for routing decisions) ----
+def compute_scores(title: str, url: str, summary: str = "") -> dict:
+    """Return raw category scores using the same logic as above (no thresholding)."""
+    title_l = title or ""
+    summary_l = summary or ""
+    url_l = url or ""
+
+    ai = (
+        3 * _count_hits(title_l, AI_STRONG)
+      + 2 * _count_hits(summary_l, AI_STRONG)
+      + 1 * _count_hits(url_l, AI_STRONG)
+      + 1 * _count_hits(title_l, AI_WEAK)
+      + 1 * _count_hits(summary_l, AI_WEAK)
+      - min(2, _count_hits(f"{title_l} {summary_l} {url_l}", AI_NEGATIVE))
+    )
+    sw = (
+        2 * _count_hits(title_l, SW_STRONG)
+      + 1 * _count_hits(summary_l, SW_STRONG)
+      + 1 * _count_hits(url_l, SW_STRONG)
+    )
+    ft = (
+        2 * _count_hits(title_l, FT_STRONG)
+      + 1 * _count_hits(summary_l, FT_STRONG)
+      + 1 * _count_hits(url_l, FT_STRONG)
+    )
+    return {"ai": ai, "software": sw, "fintech": ft}
+
 # ----------------- pipeline -----------------
 def dedupe(items):
     out, seen = [], set()
@@ -357,7 +385,7 @@ def build_section(date_str, by_cat):
   <div class="meta">{src} - {dt_str}</div>
   <p>{summary}</p>
 </article>''')
-        return "\n        ".join(parts)
+        return "\\n        ".join(parts)
 
     html_out = tpl.replace("{{DATE_STR}}", date_str)
     for cat_key, ph in (("ai","AI"),("software","SW"),("fintech","FT")):
@@ -395,15 +423,18 @@ def main():
             continue  # drop unrelated items
         it["category"] = cat
 
-        # --- Force FinTech for PYMNTS ---
+        # --- PYMNTS routing: FinTech unless clearly AI ---
         try:
             d = domain_of(it["url"])  # e.g., "pymnts.com"
         except Exception:
             d = ""
         src_norm = (it.get("source") or "").strip().lower()  # e.g., "pymnts"
         if d in FORCE_FINTECH_DOMAINS or src_norm in FORCE_FINTECH_SOURCES:
-            it["category"] = "fintech"
-        # --- end override ---
+            scores = compute_scores(it["title"], it["url"], it.get("summary_text",""))
+            # Only let PYMNTS land in AI if it's clearly AI (AI ≥ 3 and AI ≥ FinTech + 1)
+            if not (scores["ai"] >= 3 and scores["ai"] >= scores["fintech"] + 1):
+                it["category"] = "fintech"
+        # --- end routing ---
 
         pruned.append(it)
     all_items = pruned
@@ -439,3 +470,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
