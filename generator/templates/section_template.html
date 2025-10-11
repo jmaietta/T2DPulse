@@ -60,12 +60,14 @@
       max-width:1100px;margin:0 auto;padding:.65rem 1rem;
       display:flex;align-items:center;gap:.9rem;
     }
-    header.site img{width:42px;height:42px;border-radius:12px}
+    header.site img.brand-mark{width:42px;height:42px;border-radius:12px}
     header.site h1{
       font-family:'Orbitron', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
       font-weight:700; letter-spacing:.4px; font-size:1.28rem; margin:0; color:var(--ink-soft);
     }
-    header .tag{color:var(--muted);font-size:.95rem; margin-top:.1rem}
+    
+    /* keep an accessible title for SEO/screen readers, but visually hide it */
+    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}header .tag{color:var(--muted);font-size:.95rem; margin-top:.1rem}
     .grow{flex:1}
     .hdr-actions{display:flex;gap:.5rem;margin-left:auto;align-items:center}
     .btn{
@@ -151,12 +153,12 @@
   <!-- Sticky site header -->
   <header class="site">
     <div class="site-inner">
-      <img src="./icons/logo-48.png" alt="T2D logo" />
-      <div>
-        <h1>T2D Pulse</h1>
-        <div class="tag">Snapshot for {{DATE_STR}} — curated AI, Software, and FinTech headlines.</div>
-      </div>
-      <div class="grow"></div>
+      <a href="/" aria-label="T2D Pulse Home">
+  <img class="brand-mark" src="./icons/T2D_Pulse_Logo_2.png" alt="T2D Pulse">
+</a>
+<h1 class="sr-only">T2D Pulse</h1>
+<div class="tag">Snapshot for {{DATE_STR}} — curated AI, Software, and FinTech headlines.</div>
+    <div class="grow"></div>
       <div class="hdr-actions">
         <div class="install"><button class="btn" id="btnInstall" aria-label="Install app">Install</button></div>
       </div>
