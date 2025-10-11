@@ -1,8 +1,5 @@
-from pathlib import Path
-
-updated = """#!/usr/bin/env python3
+#!/usr/bin/env python3
 # generator/generate_pulse.py
-#
 # Website-only generator for TEK2day Pulse (AI → Software → FinTech)
 # ✅ No Hacker News (blocked at domain level; GN redirects resolved)
 # ✅ Google News links resolved to real publisher domains
