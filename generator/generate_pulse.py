@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 # generator/generate_pulse.py
-#
 # Website-only generator for TEK2day Pulse (AI → Software → FinTech)
 # ✅ No Hacker News (blocked at domain level; GN redirects resolved)
 # ✅ Google News links resolved to real publisher domains
@@ -50,7 +49,84 @@ SOURCE_NAME_MAP = {
     "news.google.com": "Google News",
 }
 
+# --- Force-category overrides (base) ---
+FORCE_FINTECH_DOMAINS = {"pymnts.com"}     # normalized by domain_of()
+FORCE_FINTECH_SOURCES = {"pymnts"}         # lowercased source label
+
 # ----------------- helpers -----------------
+# --- Freshness & diversity helpers (news-first policy) ---
+FRESH_WINDOW_DAYS = 3  # hard freshness window
+
+def safe_parse_dt(dt_str):
+    if not dt_str:
+        return None
+    try:
+        dt = dtparser.parse(dt_str)
+        if dt.tzinfo is None:
+            dt = dt.replace(tzinfo=timezone.utc)
+        return dt
+    except Exception:
+        return None
+
+def is_fresh(item, window_days=FRESH_WINDOW_DAYS, now=None):
+    now = now or datetime.now(timezone.utc)
+    dt = safe_parse_dt(item.get("published_at"))
+    if not dt:
+        return False
+    return (now - dt.astimezone(timezone.utc)) <= timedelta(days=window_days)
+
+def filter_fresh(items, window_days=FRESH_WINDOW_DAYS, now=None):
+    now = now or datetime.now(timezone.utc)
+    return [it for it in items if is_fresh(it, window_days, now)]
+
+from collections import defaultdict, deque
+import math, random
+
+def prefer_diverse_round_robin(items, max_total):
+    """Interleave by domain among fresh items without forcing stale content."""
+    if not items:
+        return []
+    buckets = defaultdict(list)
+    for it in items:
+        buckets[domain_of(it.get("url",""))].append(it)
+    # newest first inside each bucket; randomize ties
+    for d in buckets:
+        buckets[d].sort(key=lambda x: safe_parse_dt(x.get("published_at")) or datetime.min.replace(tzinfo=timezone.utc), reverse=True)
+        random.shuffle(buckets[d])
+    domains = list(buckets.keys())
+    soft_cap = max(1, math.ceil(max_total / max(1, len(domains))))
+    queues = [deque(v[:soft_cap]) for v in buckets.values() if v]
+    out = []
+    i = 0
+    while queues and len(out) < max_total:
+        q = queues[i % len(queues)]
+        if q:
+            out.append(q.popleft())
+        queues = [qq for qq in queues if qq]
+        i += 1
+    return out
+
+def sort_by_recency(items):
+    return sorted(
+        items,
+        key=lambda x: safe_parse_dt(x.get("published_at")) or datetime.min.replace(tzinfo=timezone.utc),
+        reverse=True
+    )
+
+def finalize_section_with_backfill(items, section_max, now=None, max_backfill_days=7):
+    now = now or datetime.now(timezone.utc)
+    fresh = filter_fresh(items, FRESH_WINDOW_DAYS, now=now)
+    if fresh:
+        interleaved = prefer_diverse_round_robin(fresh, max_total=section_max)
+        return sort_by_recency(interleaved)[:section_max]
+    # graceful backfill: up to N days older, clearly labeled later
+    cutoff = now - timedelta(days=max_backfill_days)
+    cands = [it for it in items if (dt := safe_parse_dt(it.get("published_at"))) and dt >= cutoff]
+    cands = sort_by_recency(cands)[:section_max]
+    for it in cands:
+        it["_older_than_fresh_window"] = True
+    return cands
+
 def now_et():
     return datetime.now(TZ)
 
@@ -211,12 +287,12 @@ def google_news_rss(query):
     return out
 
 # ----------------- categorization -----------------
-# (Legacy list left for reference; new logic below does not rely on it directly.)
+# (Legacy reference; new logic below does not rely on it directly.)
 CATEGORY_KEYWORDS = {
     "ai": [
         "ai","artificial intelligence","large language model","llm","gpt","openai",
         "anthropic","deepmind","sora","transformer","diffusion","ml","machine learning",
-        "neural","npu","tpu","cuda","rocm","inference","llama","mistral"
+        "npu","tpu","cuda","rocm","inference","llama","mistral"
     ],
     "software": [
         "software","developer","devops","platform","sdk","api","apps","app","release",
@@ -305,6 +381,33 @@ def categorize_with_score(title: str, url: str, summary: str = ""):
     else:
         return "fintech", ft
 
+# ---- Score exposer (for routing decisions) ----
+def compute_scores(title: str, url: str, summary: str = "") -> dict:
+    """Return raw category scores using the same logic as above (no thresholding)."""
+    title_l = title or ""
+    summary_l = summary or ""
+    url_l = url or ""
+
+    ai = (
+        3 * _count_hits(title_l, AI_STRONG)
+      + 2 * _count_hits(summary_l, AI_STRONG)
+      + 1 * _count_hits(url_l, AI_STRONG)
+      + 1 * _count_hits(title_l, AI_WEAK)
+      + 1 * _count_hits(summary_l, AI_WEAK)
+      - min(2, _count_hits(f"{title_l} {summary_l} {url_l}", AI_NEGATIVE))
+    )
+    sw = (
+        2 * _count_hits(title_l, SW_STRONG)
+      + 1 * _count_hits(summary_l, SW_STRONG)
+      + 1 * _count_hits(url_l, SW_STRONG)
+    )
+    ft = (
+        2 * _count_hits(title_l, FT_STRONG)
+      + 1 * _count_hits(summary_l, FT_STRONG)
+      + 1 * _count_hits(url_l, FT_STRONG)
+    )
+    return {"ai": ai, "software": sw, "fintech": ft}
+
 # ----------------- pipeline -----------------
 def dedupe(items):
     out, seen = [], set()
@@ -334,6 +437,22 @@ def build_section(date_str, by_cat):
     with open(os.path.join(ROOT, "templates/section_template.html"), "r", encoding="utf-8") as f:
         tpl = f.read()
 
+    def render_item_badges(it, now=None):
+        now = now or datetime.now(timezone.utc)
+        dt = safe_parse_dt(it.get("published_at"))
+        if not dt:
+            return ""
+        if it.get("_older_than_fresh_window"):
+            return '<span class="badge muted">Older</span>'
+        # mark <24h items as New
+        try:
+            age = (now - dt.astimezone(timezone.utc)).total_seconds()
+            if age < 24*3600:
+                return '<span class="badge">New</span>'
+        except Exception:
+            pass
+        return ""
+
     def render_items(items):
         parts = []
         for idx, it in enumerate(items):
@@ -349,7 +468,7 @@ def build_section(date_str, by_cat):
             top_cls = " top" if idx == 0 else ""
             parts.append(f'''<article class="{top_cls.strip()}">
   <h3><a href="{url}">{title}</a></h3>
-  <div class="meta">{src} - {dt_str}</div>
+  <div class="meta">{src} - {dt_str} {render_item_badges(it)}</div>
   <p>{summary}</p>
 </article>''')
         return "\n        ".join(parts)
@@ -389,6 +508,20 @@ def main():
         if score == 0:
             continue  # drop unrelated items
         it["category"] = cat
+
+        # --- PYMNTS routing: FinTech unless clearly AI ---
+        try:
+            d = domain_of(it["url"])  # e.g., "pymnts.com"
+        except Exception:
+            d = ""
+        src_norm = (it.get("source") or "").strip().lower()  # e.g., "pymnts"
+        if d in FORCE_FINTECH_DOMAINS or src_norm in FORCE_FINTECH_SOURCES:
+            scores = compute_scores(it["title"], it["url"], it.get("summary_text",""))
+            # Only let PYMNTS land in AI if it's clearly AI (AI ≥ 3 and AI ≥ FinTech + 1)
+            if not (scores["ai"] >= 3 and scores["ai"] >= scores["fintech"] + 1):
+                it["category"] = "fintech"
+        # --- end routing ---
+
         pruned.append(it)
     all_items = pruned
 
@@ -401,15 +534,21 @@ def main():
     all_items.sort(key=parsed_dt, reverse=True)
 
     # Bucket
-    by_cat = {"ai":[], "software":[], "fintech":[]}
+    by_cat = {"ai": [], "software": [], "fintech": []}
     for it in all_items:
-        try:
-            if within_window(dtparser.parse(it["published_at"]).astimezone(TZ)):
-                by_cat[it["category"]].append(it)
-        except Exception:
-            by_cat[it["category"]].append(it)
+        by_cat[it["category"]].append(it)
+
+    # Fresh-first + graceful backfill (never force a stale source)
+    for _k in ("ai", "software", "fintech"):
+        by_cat[_k] = finalize_section_with_backfill(
+            by_cat.get(_k, []),
+            section_max=MAX_ITEMS,
+            now=now_et(),
+            max_backfill_days=7
+        )
 
     # Render
+
     date_str = now_et().strftime("%b %-d, %Y")
     section = build_section(date_str, by_cat)
 
@@ -423,3 +562,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
