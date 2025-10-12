@@ -687,8 +687,8 @@ def build_section(date_str, by_cat):
 
 def main():
     # Weekend: reuse Friday snapshot if available
-    if _weekend_use_friday_payload_if_available():
-        return
+  # if _weekend_use_friday_payload_if_available():
+       # return
     all_items = []
 
     # Direct RSS
