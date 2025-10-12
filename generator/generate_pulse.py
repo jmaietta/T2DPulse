@@ -604,9 +604,15 @@ AI_NEGATIVE = [
     "movie", "celebrity", "gossip", "trailer"
 ]
 SW_STRONG = [
-    "software", "developer", "sdk", "api", "release", "version", "kubernetes", "docker",
+    "software", "developer", "sdk", "api", "kubernetes", "docker",
     "github", "vscode", "framework", "runtime", "serverless", "cloud", "saas",
-    "microservices", "observability", "database", "postgres", "mysql", "redis"
+    "microservices", "observability", "database", "postgres", "mysql", "redis",
+    "code", "programming", "devops", "ci/cd", "deployment"
+]
+SW_NEGATIVE = [
+    "movie", "movies", "film", "show", "shows", "series", "tv", "television",
+    "streaming", "netflix", "hulu", "disney+", "marvel", "dc comics",
+    "trailer", "premiere", "episode", "season", "actor", "actress"
 ]
 FT_STRONG = [
     "fintech", "payments", "payment", "bank", "banking", "visa", "mastercard", "stripe",
@@ -641,12 +647,15 @@ def categorize_with_score(title: str, url: str, summary: str = ""):
     )
     ai -= min(2, _count_hits(f"{title_l} {summary_l} {url_l}", AI_NEGATIVE))  # cap penalty at 2
 
-    # Software and FinTech
+    # Software scoring (with negatives)
     sw = (
         2 * _count_hits(title_l, SW_STRONG)
       + 1 * _count_hits(summary_l, SW_STRONG)
       + 1 * _count_hits(url_l, SW_STRONG)
     )
+    sw -= min(2, _count_hits(f"{title_l} {summary_l} {url_l}", SW_NEGATIVE))  # subtract entertainment content
+    
+    # FinTech scoring
     ft = (
         2 * _count_hits(title_l, FT_STRONG)
       + 1 * _count_hits(summary_l, FT_STRONG)
@@ -682,6 +691,7 @@ def compute_scores(title: str, url: str, summary: str = "") -> dict:
         2 * _count_hits(title_l, SW_STRONG)
       + 1 * _count_hits(summary_l, SW_STRONG)
       + 1 * _count_hits(url_l, SW_STRONG)
+      - min(2, _count_hits(f"{title_l} {summary_l} {url_l}", SW_NEGATIVE))
     )
     ft = (
         2 * _count_hits(title_l, FT_STRONG)
