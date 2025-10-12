@@ -271,15 +271,11 @@
         // Build share URLs
         const u = encodeURIComponent(url);
         const t = encodeURIComponent(shareText);
-        const xShare  = `https://twitter.com/intent/tweet?url=${u}&text=${t}`;
-        const liShare = `https://www.linkedin.com/sharing/share-offsite/?url=${u}`;
-
-        // Toolbar
+        const xShare  = `https://twitter.com/intent/tweet?url=${u}&text=${t}`;// Toolbar
         const bar = document.createElement('div');
         bar.className = 'share';
         bar.innerHTML = `
           <a class="share-btn" href="${xShare}" target="_blank" rel="noopener">Share to X</a>
-          <a class="share-btn" href="${liShare}" target="_blank" rel="noopener">Share to LinkedIn</a>
           <button class="share-btn" type="button" data-url="${url}">Copy URL</button>
         `;
         card.appendChild(bar);
@@ -291,16 +287,24 @@
         if (!btn) return;
         const url = btn.getAttribute('data-url') || window.location.href;
         const title = btn.closest('article')?.querySelector('h3')?.innerText?.trim() || 'T2D Pulse';
+        const brand = 'via T2D Pulse';
+        const payload = `${title}
 
+${url}
+
+${brand}`;
+
+        // Use Web Share API where available, including branded text
         if (navigator.share) {
-          try { await navigator.share({ title, url }); return; } catch(_) {}
+          try { await navigator.share({ title, text: `${title} — ${brand}`, url }); return; } catch(_) {}
         }
+        // Clipboard fallback with branding
         try {
-          await navigator.clipboard.writeText(url);
+          await navigator.clipboard.writeText(payload);
           const old = btn.textContent; btn.textContent = 'Copied!';
           setTimeout(() => btn.textContent = old, 1200);
         } catch {
-          const ta = document.createElement('textarea'); ta.value = url;
+          const ta = document.createElement('textarea'); ta.value = payload;
           document.body.appendChild(ta); ta.select(); document.execCommand('copy');
           document.body.removeChild(ta);
           const old = btn.textContent; btn.textContent = 'Copied!';
