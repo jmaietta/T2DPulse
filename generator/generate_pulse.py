@@ -333,7 +333,7 @@ def _render_template_string(tpl: str, **kv) -> str:
 def create_branded_og_image(source_url: str, permalink_dir: str) -> str:
     """
     Creates a branded OG image (1200x630):
-    - Primary: Fetch source article's og:image and overlay T2D logo (120x120, top-right, 20px padding)
+    - Primary: Fetch source article's og:image and overlay T2D logo (80x80, top-right, 20px padding)
     - Fallback: Use T2D banner if source image unavailable
     Returns relative path to the image or empty string on failure.
     """
@@ -693,15 +693,35 @@ def compute_scores(title: str, url: str, summary: str = "") -> dict:
 # ----------------- pipeline -----------------
 
 def dedupe(items):
-    out, seen = [], set()
+    """Dedupe by URL first, then by title+domain as fallback."""
+    out, seen_urls, seen_titles = [], set(), set()
     for it in items:
-        title_key = re.sub(r"[^a-z0-9]+", "", (it.get("title") or "").lower())
-        dom = domain_of(it.get("url", ""))
-        key = f"{title_key}::{dom}"
-        if key in seen:
+        url = it.get("url", "")
+        
+        # Normalize URL: remove query params, fragments, and trailing slashes
+        try:
+            from urllib.parse import urlparse
+            parsed = urlparse(url)
+            normalized_url = f"{parsed.netloc}{parsed.path}".lower().rstrip("/")
+        except Exception:
+            normalized_url = url.lower()
+        
+        # Primary deduplication: by URL
+        if normalized_url in seen_urls:
             continue
-        seen.add(key)
+        
+        # Secondary deduplication: by title+domain (catches rewrites/redirects)
+        title_key = re.sub(r"[^a-z0-9]+", "", (it.get("title") or "").lower())
+        dom = domain_of(url)
+        title_domain_key = f"{title_key}::{dom}"
+        
+        if title_domain_key in seen_titles:
+            continue
+        
+        seen_urls.add(normalized_url)
+        seen_titles.add(title_domain_key)
         out.append(it)
+    
     return out
 
 
