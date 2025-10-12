@@ -662,7 +662,7 @@ def build_section(date_str, by_cat):
         parts = []
         for idx, it in enumerate(items):
             title = html.escape(it["title"])
-            url = it.get("_abs_permalink") or add_utm(it["url"])
+            url = add_utm(it["url"])
             src = html.escape(it["source"])
             try:
                 dt_local = dtparser.parse(it["published_at"]).astimezone(TZ)
