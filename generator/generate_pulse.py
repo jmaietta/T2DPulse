@@ -703,10 +703,12 @@ def compute_scores(title: str, url: str, summary: str = "") -> dict:
 # ----------------- pipeline -----------------
 
 def dedupe(items):
-    """Dedupe by URL first, then by title+domain as fallback."""
-    out, seen_urls, seen_titles = [], set(), set()
+    """Dedupe by URL first, then by title+domain, then by similar titles across domains."""
+    out, seen_urls, seen_titles, seen_title_cores = [], set(), set(), set()
+    
     for it in items:
         url = it.get("url", "")
+        title = it.get("title", "")
         
         # Normalize URL: remove query params, fragments, and trailing slashes
         try:
@@ -721,12 +723,23 @@ def dedupe(items):
             continue
         
         # Secondary deduplication: by title+domain (catches rewrites/redirects)
-        title_key = re.sub(r"[^a-z0-9]+", "", (it.get("title") or "").lower())
+        title_key = re.sub(r"[^a-z0-9]+", "", title.lower())
         dom = domain_of(url)
         title_domain_key = f"{title_key}::{dom}"
         
         if title_domain_key in seen_titles:
             continue
+        
+        # Tertiary deduplication: similar titles across domains
+        # Extract core title (first 6 significant words, 40+ chars)
+        words = [w for w in re.findall(r'\b[a-z]{3,}\b', title.lower()) if w not in 
+                 {'the', 'and', 'for', 'with', 'that', 'this', 'from', 'will', 'are', 'was'}]
+        if len(words) >= 4:
+            core_title = ''.join(sorted(words[:6]))  # First 6 meaningful words, sorted
+            if len(core_title) >= 20:  # Only if substantial
+                if core_title in seen_title_cores:
+                    continue
+                seen_title_cores.add(core_title)
         
         seen_urls.add(normalized_url)
         seen_titles.add(title_domain_key)
