@@ -257,9 +257,6 @@
 
   <!-- ===== Tiny script to add Share buttons to each article card ===== -->
   <script>
-  // Minimal HTML-escape (used for the rich-text clipboard payload)
-  function escapeHtml(s){return s?.replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]))||''}
-
   (function () {
     const cards = document.querySelectorAll('#tek2day-pulse article');
     if (!cards.length) return;
@@ -268,72 +265,37 @@
       const a = card.querySelector('h3 a');
       if (!a) continue;
 
-      const url   = a.href;
-      const title = a.textContent.trim();
-      const brand = 'via T2D Pulse';
+      const url = a.href;
 
-      // Pull summary from the card's first paragraph, normalize & trim
-      const p = card.querySelector('p');
-      let summary = (p?.textContent || '').trim().replace(/\s+/g, ' ');
-      if (summary.length > 320) summary = summary.slice(0, 317) + '…'; // keep it tidy
-
-      const shareTitle = `${title} — ${brand}`;
-
-      // X share keeps just the title to avoid length issues
-      const u = encodeURIComponent(url);
-      const xShare = `https://twitter.com/intent/tweet?url=${u}&text=${encodeURIComponent(shareTitle)}`;
-
-      // Toolbar
+      // Toolbar (only a Copy URL button)
       const bar = document.createElement('div');
       bar.className = 'share';
-      bar.innerHTML = `
-        <a class="share-btn" href="${xShare}" target="_blank" rel="noopener">Share to X</a>
-        <button class="share-btn copy-url" type="button">Copy URL</button>
-      `;
+      bar.innerHTML = `<button class="share-btn copy-url" type="button">Copy URL</button>`;
       const btn = bar.querySelector('.copy-url');
       btn.dataset.url = url;
-      btn.dataset.title = title;
-      btn.dataset.summary = summary;
       card.appendChild(bar);
     }
 
-    // Copy URL handler (Web Share first; clipboard fallback with HTML + plain text)
+    // Copy URL handler (URL only; no extra text)
     document.addEventListener('click', async (e) => {
       const btn = e.target.closest('.copy-url');
       if (!btn) return;
 
-      const url     = btn.dataset.url;
-      const title   = btn.dataset.title;
-      const summary = btn.dataset.summary || '';
-      const brand   = 'via T2D Pulse';
+      const url = btn.dataset.url;
 
-      const plaintext = `${title} — ${brand}\n\n${summary}\n\n${url}`;
-      const html = `<p><strong>${escapeHtml(title)} — ${brand}</strong></p>
-                    <p>${escapeHtml(summary)}</p>
-                    <p><a href="${url}">${url}</a></p>`;
-
-      // Prefer native share on mobile
+      // Prefer native share on mobile (URL only)
       if (navigator.share) {
-        try { await navigator.share({ title, text: `${title} — ${brand}\n\n${summary}`, url }); return; } catch(_) {}
+        try { await navigator.share({ url }); return; } catch(_) {}
       }
 
       try {
-        if (navigator.clipboard && window.ClipboardItem) {
-          await navigator.clipboard.write([
-            new ClipboardItem({
-              'text/plain': new Blob([plaintext], { type: 'text/plain' }),
-              'text/html' : new Blob([html],     { type: 'text/html'  })
-            })
-          ]);
-        } else {
-          const ta = document.createElement('textarea');
-          ta.value = plaintext; document.body.appendChild(ta);
-          ta.select(); document.execCommand('copy'); ta.remove();
-        }
-        const old = btn.textContent; btn.textContent = 'Copied!'; setTimeout(() => btn.textContent = old, 1200);
+        await navigator.clipboard.writeText(url);
       } catch (err) {
-        console.error('Copy failed', err);
+        const ta = document.createElement('textarea');
+        ta.value = url; document.body.appendChild(ta);
+        ta.select(); document.execCommand('copy'); ta.remove();
       }
+      const old = btn.textContent; btn.textContent = 'Copied!'; setTimeout(() => btn.textContent = old, 1200);
     });
   })();
   </script>
