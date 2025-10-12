@@ -333,7 +333,7 @@ def _render_template_string(tpl: str, **kv) -> str:
 def create_branded_og_image(source_url: str, permalink_dir: str) -> str:
     """
     Creates a branded OG image (1200x630):
-    - Primary: Fetch source article's og:image and overlay T2D logo (80x80, top-right, 20px padding)
+    - Primary: Fetch source article's og:image and overlay T2D logo (120x120, top-right, 20px padding)
     - Fallback: Use T2D banner if source image unavailable
     Returns relative path to the image or empty string on failure.
     """
