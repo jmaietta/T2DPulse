@@ -661,7 +661,8 @@ def build_section(date_str, by_cat):
     def render_items(items):
         parts = []
         for idx, it in enumerate(items):
-            title = html.escape(it["title"])
+            title_raw = it["title"]
+            title = html.escape(title_raw)
             url = add_utm(it["url"])
             src = html.escape(it["source"])
             try:
@@ -669,14 +670,16 @@ def build_section(date_str, by_cat):
                 dt_str = dt_local.strftime("%b %-d, %Y")
             except Exception:
                 dt_str = date_str
-            summary = html.escape(it.get("summary_text",""))
+            summary_txt = clean_text(strip_html_to_text(it.get("summary_text","")), 240)
+            summary_html = html.escape(summary_txt)
             top_cls = " top" if idx == 0 else ""
-            parts.append(f'''<article class="{top_cls.strip()}">
-  <h3><a href="{url}">{title}</a></h3>
+            parts.append(f'''<article class="{top_cls.strip()}" data-card data-url="{url}" data-title="{html.escape(title_raw, quote=True)}" data-summary="{summary_html}">
+  <h3><a data-title-link href="{url}">{title}</a></h3>
   <div class="meta">{src} - {dt_str} {render_item_badges(it)}</div>
-  <p>{summary}</p>
+  <p data-summary>{summary_html}</p>
 </article>''')
-        return "\n        ".join(parts)
+        return "
+        ".join(parts)
 
     html_out = tpl.replace("{{DATE_STR}}", date_str)
     for cat_key, ph in (("ai","AI"),("software","SW"),("fintech","FT")):
