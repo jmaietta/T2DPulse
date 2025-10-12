@@ -678,8 +678,7 @@ def build_section(date_str, by_cat):
   <div class="meta">{src} - {dt_str} {render_item_badges(it)}</div>
   <p data-summary>{summary_html}</p>
 </article>''')
-        return "
-        ".join(parts)
+        return "\n".join(parts)
 
     html_out = tpl.replace("{{DATE_STR}}", date_str)
     for cat_key, ph in (("ai","AI"),("software","SW"),("fintech","FT")):
