@@ -13,6 +13,7 @@ from bs4 import BeautifulSoup
 from datetime import datetime, timedelta, timezone
 from dateutil import parser as dtparser
 import pytz, yaml
+import hashlib
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 REPO = os.path.dirname(ROOT)
@@ -300,6 +301,77 @@ def parse_pubdate(entry):
             except Exception:
                 pass
     return now_et()
+
+
+# ---- Permalink & summary helpers ----
+PERMA_ROOT = os.path.join(REPO, "docs", "p")  # docs/p/<id>/
+PERMA_TPL  = os.path.join(ROOT, "templates", "item_template.html")  # generator/templates/item_template.html
+
+def _stable_id(title: str, url: str, published_at: str) -> str:
+    key = f"{(title or '').strip()}|{(url or '').strip()}|{(published_at or '').strip()}"
+    return hashlib.sha1(key.encode("utf-8")).hexdigest()[:10]
+
+def _plain_text_summary(it: dict, limit: int = 240) -> str:
+    raw = it.get("summary_text") or it.get("summary") or it.get("description") or it.get("content_html") or it.get("title") or ""
+    txt = strip_html_to_text(raw)
+    txt = re.sub(r"\s+", " ", txt).strip()
+    if len(txt) <= limit:
+        return txt
+    cut = txt[:limit - 1]
+    if " " in cut:
+        cut = cut.rsplit(" ", 1)[0]
+    return cut + "…"
+
+def _render_template_string(tpl: str, **kv) -> str:
+    html_out = tpl
+    for k, v in kv.items():
+        html_out = html_out.replace(f"{{{{{k}}}}}", v or "")
+    return html_out
+
+def write_permalink_page(it: dict) -> str:
+    """Writes docs/p/<id>/index.html and returns the ABSOLUTE permalink URL."""
+    site_base = (CFG.get("site_base") or "").rstrip("/")
+
+    title = (it.get("title") or "").strip()
+    url   = (it.get("url")   or "").strip()
+    src   = (it.get("source") or "").strip()
+    dtstr = it.get("published_at") or ""
+    dom   = domain_of(url)
+    try:
+        date_fmt = dtparser.parse(dtstr).astimezone(TZ).strftime("%b %-d, %Y") if dtstr else ""
+    except Exception:
+        date_fmt = ""
+
+    pid = _stable_id(title, url, dtstr)
+    perma_dir = os.path.join(PERMA_ROOT, pid)
+    os.makedirs(perma_dir, exist_ok=True)
+
+    rel_permalink = f"/p/{pid}/"
+    abs_permalink = f"{site_base}{rel_permalink}" if site_base else rel_permalink
+
+    summary = _plain_text_summary(it, limit=240)
+
+    with open(PERMA_TPL, "r", encoding="utf-8") as f:
+        tpl = f.read()
+
+    page = _render_template_string(
+        tpl,
+        TITLE=title,
+        SOURCE=src,
+        SOURCE_URL=url,
+        DATE=date_fmt,
+        DOMAIN=dom,
+        ABS_PERMALINK=abs_permalink,
+        SUMMARY=summary,
+    )
+    with open(os.path.join(perma_dir, "index.html"), "w", encoding="utf-8") as f:
+        f.write(page)
+
+    it["_permalink"] = rel_permalink
+    it["_abs_permalink"] = abs_permalink
+    it["_summary_240"] = summary
+    return abs_permalink
+
 
 # ---- “deals/consumer shopping” filter ----
 DEAL_WORDS = [
@@ -590,7 +662,7 @@ def build_section(date_str, by_cat):
         parts = []
         for idx, it in enumerate(items):
             title = html.escape(it["title"])
-            url = add_utm(it["url"])
+            url = it.get("_abs_permalink") or add_utm(it["url"])
             src = html.escape(it["source"])
             try:
                 dt_local = dtparser.parse(it["published_at"]).astimezone(TZ)
@@ -682,6 +754,22 @@ def main():
             now=now_et(),
             max_backfill_days=7
         )
+
+
+    # Generate permalinks and concise summaries for today’s items
+    unique_items, _seen = [], set()
+    for cat in ("ai", "software", "fintech"):
+        for it in by_cat.get(cat, []):
+            key = f"{re.sub(r'[^a-z0-9]+', '', (it.get('title') or '').lower())}::{domain_of(it.get('url',''))}"
+            if key in _seen:
+                continue
+            _seen.add(key)
+            try:
+                write_permalink_page(it)
+            except Exception:
+                pass
+            unique_items.append(it)
+
 
     # Render
 
