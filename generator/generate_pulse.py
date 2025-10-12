@@ -373,7 +373,7 @@ def write_permalink_page(it: dict) -> str:
     return abs_permalink
 
 
-# ---- “deals/consumer shopping” filter ----
+# ---- "deals/consumer shopping" filter ----
 DEAL_WORDS = [
     "deal", "deals", "discount", "sale", "promo", "coupon", "price",
     "off", "lowest price", "snag", "save", "prime day", "black friday",
@@ -647,16 +647,6 @@ def build_section(date_str, by_cat):
         except Exception:
             pass
         return ""
-        if it.get("_older_than_fresh_window"):
-            return '<span class="badge muted">Older</span>'
-        # mark <24h items as New
-        try:
-            age = (now - dt.astimezone(timezone.utc)).total_seconds()
-            if age < 24*3600:
-                return '<span class="badge">New</span>'
-        except Exception:
-            pass
-        return ""
 
     def render_items(items):
         parts = []
@@ -664,6 +654,7 @@ def build_section(date_str, by_cat):
             title_raw = it["title"]
             title = html.escape(title_raw)
             url = add_utm(it["url"])
+            permalink = it.get("_abs_permalink", "")
             src = html.escape(it["source"])
             try:
                 dt_local = dtparser.parse(it["published_at"]).astimezone(TZ)
@@ -673,7 +664,7 @@ def build_section(date_str, by_cat):
             summary_txt = clean_text(strip_html_to_text(it.get("summary_text","")), 240)
             summary_html = html.escape(summary_txt)
             top_cls = " top" if idx == 0 else ""
-            parts.append(f'''<article class="{top_cls.strip()}" data-card data-url="{url}" data-title="{html.escape(title_raw, quote=True)}" data-summary="{summary_html}">
+            parts.append(f'''<article class="{top_cls.strip()}" data-card data-url="{url}" data-permalink="{permalink}" data-title="{html.escape(title_raw, quote=True)}" data-summary="{summary_html}">
   <h3><a data-title-link href="{url}">{title}</a></h3>
   <div class="meta">{src} - {dt_str} {render_item_badges(it)}</div>
   <p data-summary>{summary_html}</p>
@@ -758,7 +749,7 @@ def main():
         )
 
 
-    # Generate permalinks and concise summaries for today’s items
+    # Generate permalinks and concise summaries for today's items
     unique_items, _seen = [], set()
     for cat in ("ai", "software", "fintech"):
         for it in by_cat.get(cat, []):
@@ -801,4 +792,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
