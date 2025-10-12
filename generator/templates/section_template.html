@@ -255,7 +255,7 @@
     });
   </script>
 
-  <!-- ===== Tiny script to add Share buttons to each article card ===== -->
+  <!-- ===== Share buttons script ===== -->
   <script>
   (function () {
     const cards = document.querySelectorAll('#tek2day-pulse article');
@@ -265,18 +265,28 @@
       const a = card.querySelector('h3 a');
       if (!a) continue;
 
-      const url = a.href;
+      const originalUrl = a.href;
+      const permalink = card.dataset.permalink || originalUrl;  // Use permalink if available, fallback to original
+      const title = a.textContent.trim();
+      const brand = 'via T2D Pulse';
 
-      // Toolbar (only a Copy URL button)
+      const shareTitle = `${title} — ${brand}`;
+      const u = encodeURIComponent(permalink);
+      const xShare = `https://twitter.com/intent/tweet?url=${u}&text=${encodeURIComponent(shareTitle)}`;
+
+      // Toolbar with both Share to X and Copy URL buttons
       const bar = document.createElement('div');
       bar.className = 'share';
-      bar.innerHTML = `<button class="share-btn copy-url" type="button">Copy URL</button>`;
+      bar.innerHTML = `
+        <a class="share-btn" href="${xShare}" target="_blank" rel="noopener">Share to X</a>
+        <button class="share-btn copy-url" type="button">Copy URL</button>
+      `;
       const btn = bar.querySelector('.copy-url');
-      btn.dataset.url = url;
+      btn.dataset.url = permalink;  // Use permalink for copying
       card.appendChild(bar);
     }
 
-    // Copy URL handler (URL only; no extra text)
+    // Copy URL handler
     document.addEventListener('click', async (e) => {
       const btn = e.target.closest('.copy-url');
       if (!btn) return;
