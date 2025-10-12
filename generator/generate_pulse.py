@@ -14,6 +14,8 @@ from datetime import datetime, timedelta, timezone
 from dateutil import parser as dtparser
 import pytz, yaml
 import hashlib
+from PIL import Image
+from io import BytesIO
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 REPO = os.path.dirname(ROOT)
@@ -328,6 +330,92 @@ def _render_template_string(tpl: str, **kv) -> str:
         html_out = html_out.replace(f"{{{{{k}}}}}", v or "")
     return html_out
 
+def create_branded_og_image(source_url: str, permalink_dir: str) -> str:
+    """
+    Creates a branded OG image (1200x630):
+    - Primary: Fetch source article's og:image and overlay T2D logo (80x80, top-right, 20px padding)
+    - Fallback: Use T2D banner if source image unavailable
+    Returns relative path to the image or empty string on failure.
+    """
+    logo_path = os.path.join(REPO, "docs", "icons", "T2D_Pulse_Logo_2.png")
+    banner_path = os.path.join(REPO, "docs", "icons", "T2D_Pulse_Banner.png")
+    output_path = os.path.join(permalink_dir, "og-image.png")
+    
+    # Target dimensions
+    TARGET_WIDTH = 1200
+    TARGET_HEIGHT = 630
+    LOGO_SIZE = 80
+    PADDING = 20
+    
+    try:
+        # Try to fetch source article's og:image
+        source_og_url = None
+        try:
+            resp = requests.get(source_url, timeout=10, headers={"User-Agent": "Mozilla/5.0"})
+            soup = BeautifulSoup(resp.text, "html5lib")
+            og_img = soup.find("meta", property="og:image")
+            if og_img and og_img.get("content"):
+                source_og_url = og_img["content"]
+        except Exception:
+            pass
+        
+        # Try to create image from source
+        base_img = None
+        if source_og_url:
+            try:
+                img_resp = requests.get(source_og_url, timeout=10, headers={"User-Agent": "Mozilla/5.0"})
+                base_img = Image.open(BytesIO(img_resp.content)).convert("RGB")
+                
+                # Resize to 1200x630, maintaining aspect ratio and cropping
+                img_aspect = base_img.width / base_img.height
+                target_aspect = TARGET_WIDTH / TARGET_HEIGHT
+                
+                if img_aspect > target_aspect:
+                    # Image is wider, fit height and crop width
+                    new_height = TARGET_HEIGHT
+                    new_width = int(new_height * img_aspect)
+                    base_img = base_img.resize((new_width, new_height), Image.LANCZOS)
+                    # Crop center
+                    left = (new_width - TARGET_WIDTH) // 2
+                    base_img = base_img.crop((left, 0, left + TARGET_WIDTH, TARGET_HEIGHT))
+                else:
+                    # Image is taller, fit width and crop height
+                    new_width = TARGET_WIDTH
+                    new_height = int(new_width / img_aspect)
+                    base_img = base_img.resize((new_width, new_height), Image.LANCZOS)
+                    # Crop center
+                    top = (new_height - TARGET_HEIGHT) // 2
+                    base_img = base_img.crop((0, top, TARGET_WIDTH, top + TARGET_HEIGHT))
+                
+                # Overlay logo in top right
+                if os.path.exists(logo_path):
+                    logo = Image.open(logo_path).convert("RGBA")
+                    logo = logo.resize((LOGO_SIZE, LOGO_SIZE), Image.LANCZOS)
+                    
+                    # Position: top-right with padding
+                    logo_x = TARGET_WIDTH - LOGO_SIZE - PADDING
+                    logo_y = PADDING
+                    
+                    # Paste with alpha channel
+                    base_img.paste(logo, (logo_x, logo_y), logo)
+                
+                base_img.save(output_path, "PNG", optimize=True)
+                return "/p/" + os.path.basename(permalink_dir) + "/og-image.png"
+            except Exception:
+                pass
+        
+        # Fallback: use banner
+        if os.path.exists(banner_path):
+            banner = Image.open(banner_path).convert("RGB")
+            banner = banner.resize((TARGET_WIDTH, TARGET_HEIGHT), Image.LANCZOS)
+            banner.save(output_path, "PNG", optimize=True)
+            return "/p/" + os.path.basename(permalink_dir) + "/og-image.png"
+        
+    except Exception:
+        pass
+    
+    return ""
+
 def write_permalink_page(it: dict) -> str:
     """Writes docs/p/<id>/index.html and returns the ABSOLUTE permalink URL."""
     site_base = (CFG.get("site_base") or "").rstrip("/")
@@ -350,6 +438,10 @@ def write_permalink_page(it: dict) -> str:
     abs_permalink = f"{site_base}{rel_permalink}" if site_base else rel_permalink
 
     summary = _plain_text_summary(it, limit=240)
+    
+    # Create branded OG image
+    og_image_rel = create_branded_og_image(url, perma_dir)
+    og_image_abs = f"{site_base}{og_image_rel}" if og_image_rel and site_base else ""
 
     with open(PERMA_TPL, "r", encoding="utf-8") as f:
         tpl = f.read()
@@ -363,6 +455,7 @@ def write_permalink_page(it: dict) -> str:
         DOMAIN=dom,
         ABS_PERMALINK=abs_permalink,
         SUMMARY=summary,
+        OG_IMAGE=og_image_abs,
     )
     with open(os.path.join(perma_dir, "index.html"), "w", encoding="utf-8") as f:
         f.write(page)
