@@ -1,46 +1,54 @@
 name: Build TEK2day Pulse (Website Only)
 
 on:
-  push:
-    branches: [ "main" ]      # <-- change to your default branch if not 'main'
-    paths:
-      - "generator/**"
-      - "docs/**"
-      - ".github/workflows/tek2day_pulse.yml"
-      - "generator/requirements.txt"
+  # Run only on a weekday schedule + allow manual runs.
   schedule:
-    - cron: '30 11 * * *'     # 11:30 UTC daily (~7:30 AM ET)
-  workflow_dispatch: {}        # manual button still useful
+    # 7:30 AM Eastern. We include both 11:30 UTC (DST) and 12:30 UTC (Standard) and guard below.
+    - cron: '30 11 * * 1-5'
+    - cron: '30 12 * * 1-5'
+  workflow_dispatch: {}
 
 permissions:
   contents: write
 
-concurrency:
-  group: tek2day-pulse
-  cancel-in-progress: true
-
 jobs:
-  build-and-commit:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # Guard so this job only proceeds at 7:30 ET (handles DST cleanly)
+      - name: Guard — only run at 7:30 AM America/New_York
+        run: |
+          export TZ=America/New_York
+          now=$(date +'%H:%M')
+          if [ "${{ github.event_name }}" = "schedule" ] && [ "$now" != "07:30" ]; then
+            echo "Not 7:30 AM ET (now: $now). Exiting."
+            exit 0
+          fi
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - name: Install deps
+
+      - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install -r generator/requirements.txt
           pip install tldextract==5.1.2
+
       - name: Generate
         run: python generator/generate_pulse.py
+
       - name: Commit & push if changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           if [ -n "$(git status --porcelain)" ]; then
             git add docs/index.html docs/pulse.json
-            git commit -m "chore: daily TEK2day Pulse update"
+            git commit -m "chore: weekday TEK2day Pulse update"
             git push
           else
             echo "No changes to commit."
