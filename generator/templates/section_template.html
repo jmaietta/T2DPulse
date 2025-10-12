@@ -257,61 +257,85 @@
 
   <!-- ===== Tiny script to add Share buttons to each article card ===== -->
   <script>
-    (function () {
-      const cards = document.querySelectorAll('#tek2day-pulse article');
-      if (!cards.length) return;
+  // Minimal HTML-escape (used for the rich-text clipboard payload)
+  function escapeHtml(s){return s?.replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]))||''}
 
-      for (const card of cards) {
-        const a = card.querySelector('h3 a');
-        if (!a) continue;
-        const url = a.href;
-        const title = a.textContent.trim();
-        const shareText = `${title} — via T2D Pulse`;
+  (function () {
+    const cards = document.querySelectorAll('#tek2day-pulse article');
+    if (!cards.length) return;
 
-        // Build share URLs
-        const u = encodeURIComponent(url);
-        const t = encodeURIComponent(shareText);
-        const xShare  = `https://twitter.com/intent/tweet?url=${u}&text=${t}`;// Toolbar
-        const bar = document.createElement('div');
-        bar.className = 'share';
-        bar.innerHTML = `
-          <a class="share-btn" href="${xShare}" target="_blank" rel="noopener">Share to X</a>
-          <button class="share-btn" type="button" data-url="${url}">Copy URL</button>
-        `;
-        card.appendChild(bar);
+    for (const card of cards) {
+      const a = card.querySelector('h3 a');
+      if (!a) continue;
+
+      const url   = a.href;
+      const title = a.textContent.trim();
+      const brand = 'via T2D Pulse';
+
+      // Pull summary from the card's first paragraph, normalize & trim
+      const p = card.querySelector('p');
+      let summary = (p?.textContent || '').trim().replace(/\s+/g, ' ');
+      if (summary.length > 320) summary = summary.slice(0, 317) + '…'; // keep it tidy
+
+      const shareTitle = `${title} — ${brand}`;
+
+      // X share keeps just the title to avoid length issues
+      const u = encodeURIComponent(url);
+      const xShare = `https://twitter.com/intent/tweet?url=${u}&text=${encodeURIComponent(shareTitle)}`;
+
+      // Toolbar
+      const bar = document.createElement('div');
+      bar.className = 'share';
+      bar.innerHTML = `
+        <a class="share-btn" href="${xShare}" target="_blank" rel="noopener">Share to X</a>
+        <button class="share-btn copy-url" type="button">Copy URL</button>
+      `;
+      const btn = bar.querySelector('.copy-url');
+      btn.dataset.url = url;
+      btn.dataset.title = title;
+      btn.dataset.summary = summary;
+      card.appendChild(bar);
+    }
+
+    // Copy URL handler (Web Share first; clipboard fallback with HTML + plain text)
+    document.addEventListener('click', async (e) => {
+      const btn = e.target.closest('.copy-url');
+      if (!btn) return;
+
+      const url     = btn.dataset.url;
+      const title   = btn.dataset.title;
+      const summary = btn.dataset.summary || '';
+      const brand   = 'via T2D Pulse';
+
+      const plaintext = `${title} — ${brand}\n\n${summary}\n\n${url}`;
+      const html = `<p><strong>${escapeHtml(title)} — ${brand}</strong></p>
+                    <p>${escapeHtml(summary)}</p>
+                    <p><a href="${url}">${url}</a></p>`;
+
+      // Prefer native share on mobile
+      if (navigator.share) {
+        try { await navigator.share({ title, text: `${title} — ${brand}\n\n${summary}`, url }); return; } catch(_) {}
       }
 
-      // Copy URL handler (+ native Share on mobile if available)
-      document.addEventListener('click', async (e) => {
-        const btn = e.target.closest('.share-btn[type="button"]');
-        if (!btn) return;
-        const url = btn.getAttribute('data-url') || window.location.href;
-        const title = btn.closest('article')?.querySelector('h3')?.innerText?.trim() || 'T2D Pulse';
-        const brand = 'via T2D Pulse';
-        const payload = `${title}
-
-${url}
-
-${brand}`;
-
-        // Use Web Share API where available, including branded text
-        if (navigator.share) {
-          try { await navigator.share({ title, text: `${title} — ${brand}`, url }); return; } catch(_) {}
+      try {
+        if (navigator.clipboard && window.ClipboardItem) {
+          await navigator.clipboard.write([
+            new ClipboardItem({
+              'text/plain': new Blob([plaintext], { type: 'text/plain' }),
+              'text/html' : new Blob([html],     { type: 'text/html'  })
+            })
+          ]);
+        } else {
+          const ta = document.createElement('textarea');
+          ta.value = plaintext; document.body.appendChild(ta);
+          ta.select(); document.execCommand('copy'); ta.remove();
         }
-        // Clipboard fallback with branding
-        try {
-          await navigator.clipboard.writeText(payload);
-          const old = btn.textContent; btn.textContent = 'Copied!';
-          setTimeout(() => btn.textContent = old, 1200);
-        } catch {
-          const ta = document.createElement('textarea'); ta.value = payload;
-          document.body.appendChild(ta); ta.select(); document.execCommand('copy');
-          document.body.removeChild(ta);
-          const old = btn.textContent; btn.textContent = 'Copied!';
-          setTimeout(() => btn.textContent = old, 1200);
-        }
-      });
-    })();
+        const old = btn.textContent; btn.textContent = 'Copied!'; setTimeout(() => btn.textContent = old, 1200);
+      } catch (err) {
+        console.error('Copy failed', err);
+      }
+    });
+  })();
   </script>
 </body>
 </html>
