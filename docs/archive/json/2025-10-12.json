@@ -3,6 +3,19 @@
   "by_cat": {
     "ai": [
       {
+        "title": "We keep talking about AI agents, but do we ever know what they are?",
+        "url": "https://venturebeat.com/ai/we-keep-talking-about-ai-agents-but-do-we-ever-know-what-they-are",
+        "published_at": "2025-10-12T15:00:00-04:00",
+        "source": "VentureBeat",
+        "summary": "Imagine you do two things on a Monday morning. First, you ask a chatbot to summarize your new emails. Next, you ask an AI tool to figure out why your top competitor grew so fast last quarter. The AI silently gets to work . It scours financial reports, news articles and social media sentiment. It cross-references that data with your internal sales numbers, drafts a strategy outlining three potenti\u2026",
+        "content_html": "",
+        "summary_text": "Imagine you do two things on a Monday morning. First, you ask a chatbot to summarize your new emails. Next, you ask an AI tool to figure out why your top competitor grew so fast last quarter. The AI silently gets to work . It scours financial reports, news ar\u2026",
+        "category": "ai",
+        "_permalink": "/p/eed7b78c9e/",
+        "_abs_permalink": "https://pulse.tek2dayholdings.com/p/eed7b78c9e/",
+        "_summary_240": "Imagine you do two things on a Monday morning. First, you ask a chatbot to summarize your new emails. Next, you ask an AI tool to figure out why your top competitor grew so fast last quarter. The AI silently gets to work . It scours\u2026"
+      },
+      {
         "title": "Police are asking kids to stop pulling AI homeless man prank",
         "url": "https://www.theverge.com/news/798681/police-stop-pulling-ai-homeless-man-tiktok-prank",
         "published_at": "2025-10-12T09:30:00-04:00",
@@ -29,32 +42,6 @@
         "_summary_240": "Hi, friends! Welcome to Installer No. 101, your guide to the best and Verge-iest stuff in the world. (If you're new here, welcome, hope you like silly accessories, and also you can read all the old editions at the Installer homepage.)\u2026"
       },
       {
-        "title": "Here's what's slowing down your AI strategy \u2014 and how to fix it",
-        "url": "https://venturebeat.com/ai/heres-whats-slowing-down-your-ai-strategy-and-how-to-fix-it",
-        "published_at": "2025-10-12T03:00:00-04:00",
-        "source": "VentureBeat",
-        "summary": "Your best data science team just spent six months building a model that predicts customer churn with 90% accuracy. It\u2019s sitting on a server, unused. Why? Because it\u2019s been stuck in a risk review queue for a very long period of time, waiting for a committee that doesn\u2019t understand stochastic models to sign off. This isn\u2019t a hypothetical \u2014 it\u2019s the daily reality in most large companies. In AI, the \u2026",
-        "content_html": "",
-        "summary_text": "Your best data science team just spent six months building a model that predicts customer churn with 90% accuracy. It\u2019s sitting on a server, unused. Why? Because it\u2019s been stuck in a risk review queue for a very long period of time, waiting for a committee th\u2026",
-        "category": "ai",
-        "_permalink": "/p/f9bb25e065/",
-        "_abs_permalink": "https://pulse.tek2dayholdings.com/p/f9bb25e065/",
-        "_summary_240": "Your best data science team just spent six months building a model that predicts customer churn with 90% accuracy. It\u2019s sitting on a server, unused. Why? Because it\u2019s been stuck in a risk review queue for a very long period of time,\u2026"
-      },
-      {
-        "title": "Elon Musk\u2019s xAI joins race to build \u2018world models\u2019 to power video games - Financial Times",
-        "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFB5UzdGQ3gwZ2lqVVctaWpLYVpiZ2hmNGtoLVJ6OGNRTE9ORWoycVN3cUJNVV9WZ2M4Umc4Q0ZISkl0ZjFFbWlUQlFjWXpPbElSeFZyMXdWWS1mQTZHancwcmg2aWxWa1hwcElrRWpjZ3Y?oc=5&hl=en-US&gl=US&ceid=US:en",
-        "published_at": "2025-10-12T00:00:37-04:00",
-        "source": "Google",
-        "summary": "Elon Musk\u2019s xAI joins race to build \u2018world models\u2019 to power video games Financial Times",
-        "content_html": "",
-        "summary_text": "Elon Musk\u2019s xAI joins race to build \u2018world models\u2019 to power video games Financial Times",
-        "category": "ai",
-        "_permalink": "/p/eb632f099a/",
-        "_abs_permalink": "https://pulse.tek2dayholdings.com/p/eb632f099a/",
-        "_summary_240": "Elon Musk\u2019s xAI joins race to build \u2018world models\u2019 to power video games Financial Times"
-      },
-      {
         "title": "Musk\u2019s xAI joins race to build \u2018world models\u2019 to power video games",
         "url": "https://www.ft.com/content/ac566346-53dd-4490-8d4c-5269906c64ee",
         "published_at": "2025-10-12T00:00:17-04:00",
@@ -66,32 +53,6 @@
         "_permalink": "/p/13165ccae4/",
         "_abs_permalink": "https://pulse.tek2dayholdings.com/p/13165ccae4/",
         "_summary_240": "Artificial intelligence group hired staff from Nvidia to work on advanced AI that can design and navigate physical spaces"
-      },
-      {
-        "title": "Is vibe coding ruining a generation of engineers?",
-        "url": "https://venturebeat.com/ai/is-vibe-coding-ruining-a-generation-of-engineers",
-        "published_at": "2025-10-11T15:00:00-04:00",
-        "source": "VentureBeat",
-        "summary": "AI tools are revolutionizing software development by automating repetitive tasks, refactoring bloated code, and identifying bugs in real-time. Developers can now generate well-structured code from plain language prompts, saving hours of manual effort. These tools learn from vast codebases, offering context-aware recommendations that enhance productivity and reduce errors. Rather than starting fro\u2026",
-        "content_html": "",
-        "summary_text": "AI tools are revolutionizing software development by automating repetitive tasks, refactoring bloated code, and identifying bugs in real-time. Developers can now generate well-structured code from plain language prompts, saving hours of manual effort. These t\u2026",
-        "category": "ai",
-        "_permalink": "/p/387c8810ef/",
-        "_abs_permalink": "https://pulse.tek2dayholdings.com/p/387c8810ef/",
-        "_summary_240": "AI tools are revolutionizing software development by automating repetitive tasks, refactoring bloated code, and identifying bugs in real-time. Developers can now generate well-structured code from plain language prompts, saving hours of\u2026"
-      },
-      {
-        "title": "\u2018They wanted me to make myself obsolete\u2019: translators find themselves at the sharp end of AI - Financial Times",
-        "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9yZ3Fra0I1bV9QT3BBVWJ5MGlwVUhmM0QxSC1vckxaa2p0S0k0WXh2UWlwMGc5elpBQUE5MzZFSFJrYVlEX0o5Y1JmQzFlYklKWFdjWUVQY3hDLWtoOVN0NGxUSTJLMEk0U1g0LTBRSU4?oc=5&hl=en-US&gl=US&ceid=US:en",
-        "published_at": "2025-10-11T00:00:39-04:00",
-        "source": "Google",
-        "summary": "\u2018They wanted me to make myself obsolete\u2019: translators find themselves at the sharp end of AI Financial Times",
-        "content_html": "",
-        "summary_text": "\u2018They wanted me to make myself obsolete\u2019: translators find themselves at the sharp end of AI Financial Times",
-        "category": "ai",
-        "_permalink": "/p/6749b44222/",
-        "_abs_permalink": "https://pulse.tek2dayholdings.com/p/6749b44222/",
-        "_summary_240": "\u2018They wanted me to make myself obsolete\u2019: translators find themselves at the sharp end of AI Financial Times"
       },
       {
         "title": "Nvidia Tops New AI Inference Benchmark",
@@ -107,6 +68,32 @@
         "_summary_240": "Nvidia has taken the top spot in a new artificial intelligence benchmark, with its latest Blackwell chips delivering record performance and efficiency. The results highlight how AI infrastructure is becoming a race not just for speed but\u2026"
       },
       {
+        "title": "Weaponized AI can dismantle patches in 72 hours \u2014 but Ivanti's kernel defense can help",
+        "url": "https://venturebeat.com/security/weaponized-ai-can-dismantle-patches-in-72-hours-but-ivantis-kernel-defense",
+        "published_at": "2025-10-10T11:35:00-04:00",
+        "source": "VentureBeat",
+        "summary": "Adversaries from cybercrime gangs to nation-state cyberattack squads are fine-tuning weaponized AI with the goal of defeating new patches in 3 days or less. The quicker the attack, the more time to explore a victim\u2019s network, exfiltrate data, install ransomware or set up reconnaissance that will last for months or years. Traditional, manual patching is now a liability, rendering enter organizatio\u2026",
+        "content_html": "",
+        "summary_text": "Adversaries from cybercrime gangs to nation-state cyberattack squads are fine-tuning weaponized AI with the goal of defeating new patches in 3 days or less. The quicker the attack, the more time to explore a victim\u2019s network, exfiltrate data, install ransomwa\u2026",
+        "category": "ai",
+        "_permalink": "/p/aa6d31af73/",
+        "_abs_permalink": "https://pulse.tek2dayholdings.com/p/aa6d31af73/",
+        "_summary_240": "Adversaries from cybercrime gangs to nation-state cyberattack squads are fine-tuning weaponized AI with the goal of defeating new patches in 3 days or less. The quicker the attack, the more time to explore a victim\u2019s network, exfiltrate\u2026"
+      },
+      {
+        "title": "Debt Investors Grow Warier of Companies Getting Hit By AI - Bloomberg.com",
+        "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPNDBjYzNhQ1k3M1M3UG14dkhmTkpFVHZTOUIzUUpySHFwRGJQTkttOF9LM1FxSHdrZ3VWb25KOUtaYWtZc1liVXFWNHBaNzdPem4wMU9HSUluRTJpM2dQbUFyNVVaNkEzX2VKMktuWnhidjFqekktTXhRY3F5Zm1ZSGFCdlN4YnZxY3l3b3RuTHZ1NlkzS3M3VFBPRjduaUlNUTNpTjN0b05pX2hi?oc=5&hl=en-US&gl=US&ceid=US:en",
+        "published_at": "2025-10-10T10:22:18-04:00",
+        "source": "Google",
+        "summary": "Debt Investors Grow Warier of Companies Getting Hit By AI Bloomberg.com",
+        "content_html": "",
+        "summary_text": "Debt Investors Grow Warier of Companies Getting Hit By AI Bloomberg.com",
+        "category": "ai",
+        "_permalink": "/p/80af4935c0/",
+        "_abs_permalink": "https://pulse.tek2dayholdings.com/p/80af4935c0/",
+        "_summary_240": "Debt Investors Grow Warier of Companies Getting Hit By AI Bloomberg.com"
+      },
+      {
         "title": "ChatGPT\u2019s Platform Play + a Trillion-Dollar GPU Empire + the Queen of Slop",
         "url": "https://www.nytimes.com/2025/10/10/podcasts/hardfork-openai-devday-amd.html",
         "published_at": "2025-10-10T07:00:06-04:00",
@@ -120,30 +107,30 @@
         "_summary_240": "At DevDay, OpenAI signaled its ambition to take everything you can do on the internet and shove it inside ChatGPT."
       },
       {
-        "title": "Meta Tells Its Metaverse Workers to Use AI to \u2018Go 5X Faster\u2019 - WIRED",
-        "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE14aF94Zi1xWWFNLVRyQ0k1MXRvLUN0eDV0VGMyNzBpdURkSzlGZDVTbVpZQ0RRTFBYZVFDWDcyWGhjSVI4eFFmYWIwYWtPckE3MVlYUHZkR3pkT2lDVEVxSURkZTlzQVpHSzVpOVJRNkJoYjhENWc?oc=5&hl=en-US&gl=US&ceid=US:en",
-        "published_at": "2025-10-10T07:00:00-04:00",
+        "title": "\u2018Tron: Ares\u2019 Wants to Gaslight You About the Future of AI - WIRED",
+        "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOX25RaVdsdXludGYzdlluRnc5YjV6STdveno2S1JHaUdkUzU3WW1SMkNCR0xkM1ZPSHhDNVZLa09aUWtxMUoxdnhkOE9UaTJVQ0FkeEtycnhER3Z4UzhSSmVBb3hDN1pteVVjZkF2YUNqT09LcC02S2JrTzNILWxma3owdFlDZTRHdXFF?oc=5&hl=en-US&gl=US&ceid=US:en",
+        "published_at": "2025-10-10T06:30:00-04:00",
         "source": "Google",
-        "summary": "Meta Tells Its Metaverse Workers to Use AI to \u2018Go 5X Faster\u2019 WIRED",
+        "summary": "\u2018Tron: Ares\u2019 Wants to Gaslight You About the Future of AI WIRED",
         "content_html": "",
-        "summary_text": "Meta Tells Its Metaverse Workers to Use AI to \u2018Go 5X Faster\u2019 WIRED",
+        "summary_text": "\u2018Tron: Ares\u2019 Wants to Gaslight You About the Future of AI WIRED",
         "category": "ai",
-        "_permalink": "/p/48dcdce26f/",
-        "_abs_permalink": "https://pulse.tek2dayholdings.com/p/48dcdce26f/",
-        "_summary_240": "Meta Tells Its Metaverse Workers to Use AI to \u2018Go 5X Faster\u2019 WIRED"
+        "_permalink": "/p/1e25b41e91/",
+        "_abs_permalink": "https://pulse.tek2dayholdings.com/p/1e25b41e91/",
+        "_summary_240": "\u2018Tron: Ares\u2019 Wants to Gaslight You About the Future of AI WIRED"
       },
       {
-        "title": "Will updating your AI agents help or hamper their performance? Raindrop's new tool Experiments tells you",
-        "url": "https://venturebeat.com/ai/will-updating-your-ai-agents-help-or-hamper-their-performance-raindrops-new",
-        "published_at": "2025-10-10T03:35:00-04:00",
-        "source": "VentureBeat",
-        "summary": "It seems like almost every week for the last two years since ChatGPT launched, new large language models (LLMs) from rival labs or from OpenAI itself have been released. Enterprises are hard pressed to keep up with the massive pace of change, let alone understand how to adapt to it \u2014 which of these new models should they adopt, if any, to power their workflows and the custom AI agents they're bui\u2026",
+        "title": "AI Push Drives Record Job Cuts at Top India Private Employer TCS - Bloomberg.com",
+        "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPZGpSUTFnX2JmSDlKclNTZ1dZNDRKaF9BMUowZ3dtUDk0OHBWYlVfZmp0V2U1cjlvTjhWR2l3aTF1X0J2bkNNUU5uQXU0cmlIVmtETjBoQldSSC1YZWI0TFUwV0Y3elVPUGFqekxreU5qaDJqWHRjOW1nMG5DOVlqVllBX1h3cHd5dE4wTEhNYXYtaDRSMHFNd3pydjVHMXZEUzVudzgxX0w3OWQ3VnQwckNKQTNNdw?oc=5&hl=en-US&gl=US&ceid=US:en",
+        "published_at": "2025-10-10T03:00:36-04:00",
+        "source": "Google",
+        "summary": "AI Push Drives Record Job Cuts at Top India Private Employer TCS Bloomberg.com",
         "content_html": "",
-        "summary_text": "It seems like almost every week for the last two years since ChatGPT launched, new large language models (LLMs) from rival labs or from OpenAI itself have been released. Enterprises are hard pressed to keep up with the massive pace of change, let alone unders\u2026",
+        "summary_text": "AI Push Drives Record Job Cuts at Top India Private Employer TCS Bloomberg.com",
         "category": "ai",
-        "_permalink": "/p/860c1c96dc/",
-        "_abs_permalink": "https://pulse.tek2dayholdings.com/p/860c1c96dc/",
-        "_summary_240": "It seems like almost every week for the last two years since ChatGPT launched, new large language models (LLMs) from rival labs or from OpenAI itself have been released. Enterprises are hard pressed to keep up with the massive pace of\u2026"
+        "_permalink": "/p/75313e1a66/",
+        "_abs_permalink": "https://pulse.tek2dayholdings.com/p/75313e1a66/",
+        "_summary_240": "AI Push Drives Record Job Cuts at Top India Private Employer TCS Bloomberg.com"
       },
       {
         "title": "China launches customs crackdown on Nvidia AI chips",
@@ -170,6 +157,19 @@
         "_permalink": "/p/fff5670c85/",
         "_abs_permalink": "https://pulse.tek2dayholdings.com/p/fff5670c85/",
         "_summary_240": "HYGH speeds up software development and campaign delivery with ChatGPT Business, cutting turnaround times, scaling output, and driving revenue growth."
+      },
+      {
+        "title": "Nvidia researchers boost LLMs reasoning skills by getting them to 'think' during pre-training",
+        "url": "https://venturebeat.com/ai/nvidia-researchers-boost-llms-reasoning-skills-by-getting-them-to-think",
+        "published_at": "2025-10-09T19:00:00-04:00",
+        "source": "VentureBeat",
+        "summary": "Researchers at Nvidia have developed a new technique that flips the script on how large language models (LLMs) learn to reason. The method, called reinforcement learning pre-training (RLP), integrates RL into the initial training phase rather than saving it for the end. This approach encourages the model to \u201cthink for itself before predicting what comes next, thus teaching an independent thinking\u2026",
+        "content_html": "",
+        "summary_text": "Researchers at Nvidia have developed a new technique that flips the script on how large language models (LLMs) learn to reason. The method, called reinforcement learning pre-training (RLP), integrates RL into the initial training phase rather than saving it f\u2026",
+        "category": "ai",
+        "_permalink": "/p/44942d126b/",
+        "_abs_permalink": "https://pulse.tek2dayholdings.com/p/44942d126b/",
+        "_summary_240": "Researchers at Nvidia have developed a new technique that flips the script on how large language models (LLMs) learn to reason. The method, called reinforcement learning pre-training (RLP), integrates RL into the initial training phase\u2026"
       }
     ],
     "software": [
@@ -203,6 +203,19 @@
         "_summary_240": "Apple is reportedly preparing to acquire talent and technology from computer vision startup Prompt AI. The tech giant was in late stage talks on the deal, CNBC reported Friday (Oct. 10), with Prompt\u2019s leadership informing employees of the\u2026"
       },
       {
+        "title": "Stock Bubble Dread Grips Central Bankers in Washington - Bloomberg.com",
+        "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOT0FFdHRWVnh1c2NQaFdqVDJvdUlSczdsQWxiZjJJTENCWHZTbjJSRmRyMjZCRkxVd1JqT0RkMnNTZmRNaWNqNTBYUFZKeS1JZlJnTzctTEdNMzNJejNzM3FPRmh4anBGMG1WREU1M0JhdXFEUzlvbEYySXhhQklpbXpsTkJFOE1vV1FwcE14R0E5akxXZmg4bl80bkhMZEs2MmZhc0swbzc?oc=5&hl=en-US&gl=US&ceid=US:en",
+        "published_at": "2025-10-12T15:11:33-04:00",
+        "source": "Google",
+        "summary": "Stock Bubble Dread Grips Central Bankers in Washington Bloomberg.com",
+        "content_html": "",
+        "summary_text": "Stock Bubble Dread Grips Central Bankers in Washington Bloomberg.com",
+        "category": "fintech",
+        "_permalink": "/p/3df632eaec/",
+        "_abs_permalink": "https://pulse.tek2dayholdings.com/p/3df632eaec/",
+        "_summary_240": "Stock Bubble Dread Grips Central Bankers in Washington Bloomberg.com"
+      },
+      {
         "title": "Vance Says US Holds More Cards in Escalating China Trade Spat - Bloomberg.com",
         "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOUnlNajl1YTJZdWxnU3kzOWRQSnpmUWhDc09qYUNuaTA2b2tGZFNQNkJsaGtOYnllY3hyQ1VrU0tKMkRJZUdFUDJneUJtNmJIWUV6WmdPN1AyUm9NV05GaXlYclAwNk9oRnNDNUtEWHVDRFBJSnBkeERqVlA2RUFEcTZJRmNRcUxpQUR3c3V3dEVVcmF3UDI0c0RHdGVsWDQ5c0ExYVVmUmV6d09LbkU5MmpB?oc=5&hl=en-US&gl=US&ceid=US:en",
         "published_at": "2025-10-12T14:23:27-04:00",
@@ -214,19 +227,6 @@
         "_permalink": "/p/b3b2579686/",
         "_abs_permalink": "https://pulse.tek2dayholdings.com/p/b3b2579686/",
         "_summary_240": "Vance Says US Holds More Cards in Escalating China Trade Spat Bloomberg.com"
-      },
-      {
-        "title": "Business school case study: banking on the unbanked - Financial Times",
-        "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBtZmJBTW5QNU1oXy1HYU1YVzNIbU9haG1DdkNWV1E4Z2N4MENTM2xBc3REX1FBdEtPTjg4YVVNMXY4S0VCZlp2cHNudk5Wa25XMGlxeGV4NkRwNFB1NnRKa29iazN0ZEtQR2w1ZjRWdmw?oc=5&hl=en-US&gl=US&ceid=US:en",
-        "published_at": "2025-10-12T13:00:03-04:00",
-        "source": "Google",
-        "summary": "Business school case study: banking on the unbanked Financial Times",
-        "content_html": "",
-        "summary_text": "Business school case study: banking on the unbanked Financial Times",
-        "category": "fintech",
-        "_permalink": "/p/f0eafca989/",
-        "_abs_permalink": "https://pulse.tek2dayholdings.com/p/f0eafca989/",
-        "_summary_240": "Business school case study: banking on the unbanked Financial Times"
       },
       {
         "title": "How Churners Earn Money By Regularly Signing Up for Credit Cards - The New York Times",
@@ -268,19 +268,6 @@
         "_summary_240": "Banco Santander reportedly will facilitate the $20 billion currency swap framework to support Argentina\u2019s economy that was announced Thursday (Oct. 9) by U.S. Treasury Secretary Scott Bessent. The bank was selected by the Treasury\u2026"
       },
       {
-        "title": "The Score: Delta, AMD, Tesla and More Stocks That Defined the Week - The Wall Street Journal",
-        "url": "https://news.google.com/rss/articles/CBMikwNBVV95cUxOV3VJWm5IdkZWQUlSS21FR1pSbUpGUnFwOXROZzBXc1BMbWY0RDM4b3JZMjVVNTlremJqT2JSeXZqVTg1VHVfN3BzcGlEYUdDWDVuOGM4UGNBQ3JwelVnRFpWdUdDZ01kTXNLYXNPQzVfSWtlQ0JLZ3U5X2IxTml4OUtwaW1EZHNpbUxfaTRFazJLTFNTS3BUdVltb2FhaVBpMDlHTkVDdGhPcHoxTW1ObjdjSmlnZEEtcEVSODJ4VTN2ODZaaW45NE9tR2VCV3o4ZG9abnN6bHpHZGN4VHhKRlp6UUFUMENITk5RYWtiVVJCY2RGMldrUTl6QnFSbkxDaExlUDRtcGtrbXk3Zm5CeG9rejJQaF9oclZxeUNaOXN1a1ZCRmg0M3pzMC1CQUI3MWZWN3EzZHU5Qy1yYk10XzkweWt0ZXN1aFhjaHc2WVpwM2hmTWY1V3VUNExmMXJIM0JISDkxVEJZV21LNll0MWdNMlVrQy00eTlNZk1yOHZVcnVxR1FZUExjeWhIelNpZ253?oc=5&hl=en-US&gl=US&ceid=US:en",
-        "published_at": "2025-10-10T17:06:00-04:00",
-        "source": "Google",
-        "summary": "The Score: Delta, AMD, Tesla and More Stocks That Defined the Week The Wall Street Journal",
-        "content_html": "",
-        "summary_text": "The Score: Delta, AMD, Tesla and More Stocks That Defined the Week The Wall Street Journal",
-        "category": "fintech",
-        "_permalink": "/p/edbada2d5e/",
-        "_abs_permalink": "https://pulse.tek2dayholdings.com/p/edbada2d5e/",
-        "_summary_240": "The Score: Delta, AMD, Tesla and More Stocks That Defined the Week The Wall Street Journal"
-      },
-      {
         "title": "Morgan Stanley to Allow Agents to Sell Crypto Funds to Any Clients",
         "url": "https://www.pymnts.com/cryptocurrency/2025/morgan-stanley-allow-agents-sell-crypto-funds-any-clients/",
         "published_at": "2025-10-10T16:47:49-04:00",
@@ -294,30 +281,43 @@
         "_summary_240": "Morgan Stanley reportedly told its financial agents Friday (Oct. 10) that beginning Wednesday (Oct. 15), they will be able to sell cryptocurrency funds to any clients. The wealth management firm will also allow crypto investments in any\u2026"
       },
       {
-        "title": "Tokenization Firm Securitize Said to Be in Talks With Cantor SPAC - Bloomberg.com",
-        "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPYWNNblVXdkVTSUhSY0lmbW93Q2hYamtyVUYtZGt4QkRMbmo1SDZGaEtTZkgtdGc4ZldQZXVhQ2lnMFp4dm5ZaVJMUmxYMlpjUFNKb3RqZWswODVBVUx2NEM4NjBxNHJxNUpUUlhncGp4RklEc1BrajJ0UGpXbnFEUnh4aEQ1ZUd0SFBXcXp4cDNxQjMzTzZwWDFKd1VBejJ4eUN0dVEyYU84TS03cmlTX2lVVQ?oc=5&hl=en-US&gl=US&ceid=US:en",
-        "published_at": "2025-10-10T11:57:22-04:00",
+        "title": "Goldman, Santander Among Banks Exploring Blockchain-Based Money - Bloomberg.com",
+        "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxONmJHNjZaZE9KOWVDc2RTUTBudTFwNF9VRmVVaFdmZ3dLbnRJWkJ5QmRsZU4tY1lvTmhCbkRhQUNkS28wRnNHdFhkSkFTa095SHVxeHhKempiOGtsRFNGdUgwcUNrX0tIYmlpODV0SEtOTGJabEk3MFdJUG5mZ3pBMVJNanl3d1h1QzFHTHJYSi1OQjd3Z2hBdElOV1RsNkJlcHB6VEt2cmlOeTZqNE93Q1ZIYw?oc=5&hl=en-US&gl=US&ceid=US:en",
+        "published_at": "2025-10-10T13:12:22-04:00",
         "source": "Google",
-        "summary": "Tokenization Firm Securitize Said to Be in Talks With Cantor SPAC Bloomberg.com",
+        "summary": "Goldman, Santander Among Banks Exploring Blockchain-Based Money Bloomberg.com",
         "content_html": "",
-        "summary_text": "Tokenization Firm Securitize Said to Be in Talks With Cantor SPAC Bloomberg.com",
+        "summary_text": "Goldman, Santander Among Banks Exploring Blockchain-Based Money Bloomberg.com",
         "category": "fintech",
-        "_permalink": "/p/6479916a03/",
-        "_abs_permalink": "https://pulse.tek2dayholdings.com/p/6479916a03/",
-        "_summary_240": "Tokenization Firm Securitize Said to Be in Talks With Cantor SPAC Bloomberg.com"
+        "_permalink": "/p/f5bd9fbcbd/",
+        "_abs_permalink": "https://pulse.tek2dayholdings.com/p/f5bd9fbcbd/",
+        "_summary_240": "Goldman, Santander Among Banks Exploring Blockchain-Based Money Bloomberg.com"
       },
       {
-        "title": "Dimon, Solomon, Klarna CEO on How AI Is Reshaping Banking | Bloomberg Tech: Europe 10/10/2025 - Bloomberg.com",
-        "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNTlRhdkM1TUM0U2p1aWFSQnJXYlB5YUpqTUVCZEVEel9MRmdpWUN5NXp6QVJBcnR5bmVMTXlsSFhCOFZCR0E5U1ZmY0NXOVpraEtjMTlHZzRicUNFd1ltTmx6eGIwUXFhTUh3eFlBdXRUclM2YVBhcndyZkw4cEYwVEpjd3BGbEFFbXdCRUFfWkg?oc=5&hl=en-US&gl=US&ceid=US:en",
-        "published_at": "2025-10-10T04:46:53-04:00",
+        "title": "AI\u2019s Growth Leaves Financial Regulators Struggling to Catch Up - Bloomberg.com",
+        "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOdjlpUUF1VFI2d2lUWnFraFhtNWN1RWFzSG8yZXJuYUJVcHBKV1BoTDNPYmVNcWVKTE1vcW5IVDBIdGVGRkxtY2dfVXJLdUVQYXlmNVBfcGtSUFo3Q0NKUjlJMG8wODN0VVlENXdIZXRtRkJqeXlLa1ZWemY4OUJ5OE05WlIzUU44REtkSVZVLXJraEhNLTc5eU5tMllkeVkwaklXOUtUcHZMOXVTamllWHhNUQ?oc=5&hl=en-US&gl=US&ceid=US:en",
+        "published_at": "2025-10-10T10:01:44-04:00",
         "source": "Google",
-        "summary": "Dimon, Solomon, Klarna CEO on How AI Is Reshaping Banking | Bloomberg Tech: Europe 10/10/2025 Bloomberg.com",
+        "summary": "AI\u2019s Growth Leaves Financial Regulators Struggling to Catch Up Bloomberg.com",
         "content_html": "",
-        "summary_text": "Dimon, Solomon, Klarna CEO on How AI Is Reshaping Banking | Bloomberg Tech: Europe 10/10/2025 Bloomberg.com",
+        "summary_text": "AI\u2019s Growth Leaves Financial Regulators Struggling to Catch Up Bloomberg.com",
         "category": "fintech",
-        "_permalink": "/p/90acde6b68/",
-        "_abs_permalink": "https://pulse.tek2dayholdings.com/p/90acde6b68/",
-        "_summary_240": "Dimon, Solomon, Klarna CEO on How AI Is Reshaping Banking | Bloomberg Tech: Europe 10/10/2025 Bloomberg.com"
+        "_permalink": "/p/da887e5ee4/",
+        "_abs_permalink": "https://pulse.tek2dayholdings.com/p/da887e5ee4/",
+        "_summary_240": "AI\u2019s Growth Leaves Financial Regulators Struggling to Catch Up Bloomberg.com"
+      },
+      {
+        "title": "Google Labeled U.K. Tech Gatekeeper Under New Competition Law - The Wall Street Journal",
+        "url": "https://news.google.com/rss/articles/CBMinwNBVV95cUxOWktxNW00WGhEMUM1RTdiN2FsaE0yNXZSY1V6Q3VIamp0QWhEMU5jMFlpejIxcmhsLXlHMUt5dy11TWpKNDF3YnE2MTBudkJrMkRnQjZkVWJ6cThaSGpkaDhWdGxib0ZLUGJqRGR4NnhER2o5ZlJGcThjRUplZHRYcTJyX1hxOEVobHA0QklYMk5oVDlxUEZDNlR3ZmJnRnBwUHVqMHhMV01YVmlVQ2FDUWJWMHFTZ3prUEdubXJlSE5kOVJVaUtacU00Sk9rODVFUXg4bHNpNUJILXFZQTdLbkxEY011WVNTUEtld011S0N6ZTlQcnBnWkY4MzlFTmdxOXBDTmNhVUlHLTZTeVQ2NUVUY1FnNFdnU3NpWXpxMFFGMktLMjNsM1Q2aGVGOWtaODJ4QW1ZWFhTQmVrd0tlc1BLaTloNlhiM2JJRklxTFN6SzZMamlmLW8zN3pMN1NfVVhTMUQyc01wSWVxekc3MzJtYzJYWDZFMHdLUlBvUlkxRVJTZmpUYzJQZVE2bTRZa0dQS2xadmFoYXd1eFBj?oc=5&hl=en-US&gl=US&ceid=US:en",
+        "published_at": "2025-10-10T06:28:00-04:00",
+        "source": "Google",
+        "summary": "Google Labeled U.K. Tech Gatekeeper Under New Competition Law The Wall Street Journal",
+        "content_html": "",
+        "summary_text": "Google Labeled U.K. Tech Gatekeeper Under New Competition Law The Wall Street Journal",
+        "category": "fintech",
+        "_permalink": "/p/7588c89b87/",
+        "_abs_permalink": "https://pulse.tek2dayholdings.com/p/7588c89b87/",
+        "_summary_240": "Google Labeled U.K. Tech Gatekeeper Under New Competition Law The Wall Street Journal"
       },
       {
         "title": "Riding the Wild Wave of Crypto Coverage",
