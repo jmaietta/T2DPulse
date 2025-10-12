@@ -1,7 +1,7 @@
 timezone: America/New_York
 site_base: https://pulse.tek2dayholdings.com
 run_window_hours: 24
-max_items_per_category: 15
+max_items_per_category: 20
 sources:
   rss:
   - name: VentureBeat
@@ -14,6 +14,12 @@ sources:
     url: https://www.anthropic.com/news/rss.xml
   - name: PYMNTS
     url: https://www.pymnts.com/feed
+  - name: WSJ Technology (WSJD)
+    url: https://feeds.a.dj.com/rss/RSSWSJD.xml
+  - name: The New York Times — Technology
+    url: https://rss.nytimes.com/services/xml/rss/nyt/Technology.xml
+  - name: Financial Times — Technology
+    url: https://www.ft.com/companies/technology?format=rss
   google_news_queries:
     ai:
     - ("artificial intelligence" OR AI OR "large language model" OR LLM OR "generative
