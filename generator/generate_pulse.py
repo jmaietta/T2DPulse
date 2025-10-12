@@ -52,7 +52,7 @@ def _weekend_use_friday_payload_if_available():
             if cached.get("ref_date") == want_friday.strftime("%Y-%m-%d"):
                 # Re-render using cached by_cat and Friday header date
                 by_cat = cached.get("by_cat", {})
-                date_str = want_friday.strftime("%b %-d, %Y")
+                date_str = today.strftime("%b %-d, %Y")
                 section = build_section(date_str, by_cat)
 
                 docs = os.path.join(REPO, "docs")
@@ -118,6 +118,11 @@ FORCE_FINTECH_SOURCES = {"pymnts"}         # lowercased source label
 # --- Freshness & diversity helpers (news-first policy) ---
 FRESH_WINDOW_DAYS = 3  # hard freshness window
 
+# --- Backfill floors & window (quick hot-fix) ---
+BACKFILL_WINDOW_DAYS = 5  # backfill pool window
+FLOORS = {"ai": 10, "software": 6, "fintech": 6}  # minimum per category
+
+
 def safe_parse_dt(dt_str):
     if not dt_str:
         return None
@@ -174,6 +179,56 @@ def sort_by_recency(items):
         reverse=True
     )
 
+def _enforce_floors_with_backfill(by_cat: dict, all_items: list, now_local=None, floors=None, backfill_days=None):
+    # Ensure at least N items per category by topping up from the last X days.
+    # Today's items are preferred. Backfilled items get `_backfilled=True` (no badges).
+    now_local = now_local or now_et()
+    floors = floors or FLOORS
+    backfill_days = backfill_days or BACKFILL_WINDOW_DAYS
+
+    def _dt_local(it):
+        try:
+            return dtparser.parse(it["published_at"]).astimezone(TZ)
+        except Exception:
+            return now_local
+
+    def _is_today(dt):
+        return dt.date() == now_local.date()
+
+    pool_by_cat = {"ai": [], "software": [], "fintech": []}
+    for it in all_items:
+        try:
+            dtl = _dt_local(it)
+        except Exception:
+            continue
+        if dtl >= now_local - timedelta(days=backfill_days):
+            pool_by_cat.get(it.get("category"), []).append(it)
+
+    for k in pool_by_cat:
+        pool_by_cat[k].sort(key=_dt_local, reverse=True)
+
+    out = {}
+    for cat in ("ai", "software", "fintech"):
+        floor = int(floors.get(cat, 0))
+        pool = pool_by_cat.get(cat, [])
+        todays = [it for it in pool if _is_today(_dt_local(it))]
+
+        chosen = todays[:]
+        target = max(floor, min(MAX_ITEMS, len(todays)))
+
+        if len(chosen) < target:
+            backfill = [it for it in pool if it not in chosen]
+            need = target - len(chosen)
+            for it in backfill:
+                if len(chosen) >= target:
+                    break
+                it["_backfilled"] = True  # suppress badges
+                chosen.append(it)
+
+        out[cat] = chosen[:MAX_ITEMS]
+    return out
+
+
 def finalize_section_with_backfill(items, section_max, now=None, max_backfill_days=7):
     now = now or datetime.now(timezone.utc)
     fresh = filter_fresh(items, FRESH_WINDOW_DAYS, now=now)
@@ -192,7 +247,8 @@ def now_et():
     return datetime.now(TZ)
 
 def within_window(dt_local):
-    return dt_local >= (now_et() - timedelta(hours=RUN_WINDOW_HOURS))
+    # Accept items up to BACKFILL_WINDOW_DAYS old so we can top up thin sections.
+    return dt_local >= (now_et() - timedelta(days=BACKFILL_WINDOW_DAYS))
 
 def add_utm(url):
     return f"{url}{'&' if '?' in url else '?'}utm_source={UTM['source']}&utm_medium={UTM['medium']}"
@@ -470,15 +526,19 @@ def compute_scores(title: str, url: str, summary: str = "") -> dict:
     return {"ai": ai, "software": sw, "fintech": ft}
 
 # ----------------- pipeline -----------------
+
 def dedupe(items):
     out, seen = [], set()
     for it in items:
-        key = re.sub(r"[^a-z0-9]+", "", it["title"].lower())
+        title_key = re.sub(r"[^a-z0-9]+", "", (it.get("title") or "").lower())
+        dom = domain_of(it.get("url", ""))
+        key = f"{title_key}::{dom}"
         if key in seen:
             continue
         seen.add(key)
         out.append(it)
     return out
+
 
 def summarize(item):
     if item.get("summary"):
@@ -503,6 +563,18 @@ def build_section(date_str, by_cat):
         dt = safe_parse_dt(it.get("published_at"))
         if not dt:
             return ""
+        # Backfilled items: suppress 'New' and 'Older' badges
+        if it.get("_backfilled"):
+            return ""
+        if it.get("_older_than_fresh_window"):
+            return '<span class="badge muted">Older</span>'
+        try:
+            age = (now - dt.astimezone(timezone.utc)).total_seconds()
+            if age < 24*3600:
+                return '<span class="badge">New</span>'
+        except Exception:
+            pass
+        return ""
         if it.get("_older_than_fresh_window"):
             return '<span class="badge muted">Older</span>'
         # mark <24h items as New
@@ -626,6 +698,16 @@ def main():
         f.write(section)
     with open(os.path.join(docs, "pulse.json"), "w", encoding="utf-8") as f:
         json.dump(all_items, f, indent=2)
+
+    # Write daily snapshot to docs/archive/json/YYYY-MM-DD.json
+    try:
+        arch_dir = os.path.join(docs, "archive", "json")
+        os.makedirs(arch_dir, exist_ok=True)
+        snap_name = now_et().strftime("%Y-%m-%d") + ".json"
+        with open(os.path.join(arch_dir, snap_name), "w", encoding="utf-8") as f:
+            json.dump({"date": now_et().strftime("%Y-%m-%d"), "by_cat": by_cat}, f, indent=2)
+    except Exception:
+        pass
 
 if __name__ == "__main__":
     main()
