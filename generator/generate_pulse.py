@@ -20,6 +20,67 @@ REPO = os.path.dirname(ROOT)
 with open(os.path.join(ROOT, "config.yaml"), "r", encoding="utf-8") as f:
     CFG = yaml.safe_load(f)
 
+# ---- Weekend snapshot cache (reuse Friday content on Sat/Sun) ----
+from pathlib import Path as _Path
+
+CACHE_FILE = _Path(REPO) / "docs" / ".cache" / "friday_snapshot.json"
+CACHE_FILE.parent.mkdir(parents=True, exist_ok=True)
+
+def _now_et():
+    return now_et()
+
+def _last_friday(d):
+    # Return date of the most recent Friday relative to date d (d is ET date).
+    # Monday=0 ... Sunday=6; we want Friday=4
+    wd = d.weekday()
+    delta = (wd - 4) % 7  # days since Friday
+    return d - timedelta(days=delta)
+
+def _weekend_use_friday_payload_if_available():
+    """On Sat/Sun, use the cached Friday snapshot if available.
+    Writes docs/index.html and docs/pulse.json from cache and exits."""
+    today = _now_et().date()
+    wd = today.weekday()
+    if wd not in (5, 6):  # only weekends
+        return None
+
+    want_friday = _last_friday(today)
+    # read cache
+    if CACHE_FILE.exists():
+        try:
+            cached = json.loads(CACHE_FILE.read_text(encoding="utf-8"))
+            if cached.get("ref_date") == want_friday.strftime("%Y-%m-%d"):
+                # Re-render using cached by_cat and Friday header date
+                by_cat = cached.get("by_cat", {})
+                date_str = want_friday.strftime("%b %-d, %Y")
+                section = build_section(date_str, by_cat)
+
+                docs = os.path.join(REPO, "docs")
+                os.makedirs(docs, exist_ok=True)
+
+                with open(os.path.join(docs, "index.html"), "w", encoding="utf-8") as f:
+                    f.write(section)
+                with open(os.path.join(docs, "pulse.json"), "w", encoding="utf-8") as f:
+                    json.dump(cached.get("all_items", []), f, indent=2)
+                return True
+        except Exception:
+            pass
+    return False
+
+def _save_friday_snapshot_if_today(all_items, by_cat):
+    # If today is Friday, cache the snapshot for weekend reuse.
+    today = _now_et().date()
+    if today.weekday() == 4:  # Friday
+        payload = {
+            "ref_date": today.strftime("%Y-%m-%d"),
+            "all_items": all_items,
+            "by_cat": by_cat
+        }
+        try:
+            CACHE_FILE.write_text(json.dumps(payload, ensure_ascii=False), encoding="utf-8")
+        except Exception:
+            pass
+
 TZ = pytz.timezone(CFG.get("timezone", "America/New_York"))
 RUN_WINDOW_HOURS = int(CFG.get("run_window_hours", 24))
 MAX_ITEMS = int(CFG.get("max_items_per_category", 15))
@@ -481,6 +542,9 @@ def build_section(date_str, by_cat):
     return html_out
 
 def main():
+    # Weekend: reuse Friday snapshot if available
+    if _weekend_use_friday_payload_if_available():
+        return
     all_items = []
 
     # Direct RSS
@@ -551,6 +615,9 @@ def main():
 
     date_str = now_et().strftime("%b %-d, %Y")
     section = build_section(date_str, by_cat)
+
+    # Save Friday snapshot for weekend reuse
+    _save_friday_snapshot_if_today(all_items, by_cat)
 
     # Write outputs
     docs = os.path.join(REPO, "docs")
