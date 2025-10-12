@@ -344,7 +344,7 @@ def create_branded_og_image(source_url: str, permalink_dir: str) -> str:
     # Target dimensions
     TARGET_WIDTH = 1200
     TARGET_HEIGHT = 630
-    LOGO_SIZE = 80
+    LOGO_SIZE = 120
     PADDING = 20
     
     try:
