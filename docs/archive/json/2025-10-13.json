@@ -3,6 +3,34 @@
   "by_cat": {
     "ai": [
       {
+        "title": "Self-improving language models are becoming reality with MIT's updated SEAL technique",
+        "url": "https://venturebeat.com/ai/self-improving-language-models-are-becoming-reality-with-mits-updated-seal",
+        "published_at": "2025-10-13T18:51:00-04:00",
+        "source": "VentureBeat",
+        "summary": "Researchers at the Massachusetts Institute of Technology (MIT) are gaining renewed attention for developing and open sourcing a technique that allows large language models (LLMs) \u2014 like those underpinning ChatGPT and most modern AI chatbots \u2014 to improve themselves by generating synthetic data to fine-tune upon. The technique, known as SEAL (Self-Adapting LLMs), was first described in a paper publ\u2026",
+        "content_html": "",
+        "summary_text": "Researchers at the Massachusetts Institute of Technology (MIT) are gaining renewed attention for developing and open sourcing a technique that allows large language models (LLMs) \u2014 like those underpinning ChatGPT and most modern AI chatbots \u2014 to improve thems\u2026",
+        "category": "ai",
+        "_permalink": "/p/8ebb2104f5/",
+        "_abs_permalink": "https://pulse.tek2dayholdings.com/p/8ebb2104f5/",
+        "_summary_240": "Researchers at the Massachusetts Institute of Technology (MIT) are gaining renewed attention for developing and open sourcing a technique that allows large language models (LLMs)\u2026",
+        "_thumbnail": "https://pulse.tek2dayholdings.com/p/8ebb2104f5/thumbnail.png"
+      },
+      {
+        "title": "Researchers find that retraining only small parts of AI models can cut costs and prevent forgetting",
+        "url": "https://venturebeat.com/ai/researchers-find-that-retraining-only-small-parts-of-ai-models-can-cut-costs",
+        "published_at": "2025-10-13T18:39:00-04:00",
+        "source": "VentureBeat",
+        "summary": "Enterprises often find that when they fine-tune models , one effective approach to making a large language model (LLM) fit for purpose and grounded in data is to have the model lose some of its abilities. After fine-tuning, some models \u201cforget\u201d how to perform certain tasks or other tasks they already learned. Research from the University of Illinois Urbana-Champaign proposes a new method for retr\u2026",
+        "content_html": "",
+        "summary_text": "Enterprises often find that when they fine-tune models , one effective approach to making a large language model (LLM) fit for purpose and grounded in data is to have the model lose some of its abilities. After fine-tuning, some models \u201cforget\u201d how to perform\u2026",
+        "category": "ai",
+        "_permalink": "/p/3d91e74692/",
+        "_abs_permalink": "https://pulse.tek2dayholdings.com/p/3d91e74692/",
+        "_summary_240": "Enterprises often find that when they fine-tune models , one effective approach to making a large language model (LLM) fit for purpose and grounded in data is to have the model\u2026",
+        "_thumbnail": "https://pulse.tek2dayholdings.com/p/3d91e74692/thumbnail.png"
+      },
+      {
         "title": "LSEG and Microsoft Partner to Help Financial Institutions Build AI Agents",
         "url": "https://www.pymnts.com/news/artificial-intelligence/2025/lseg-microsoft-partner-help-financial-institutions-build-ai-agents/",
         "published_at": "2025-10-13T18:09:47-04:00",
@@ -45,18 +73,18 @@
         "_thumbnail": "https://pulse.tek2dayholdings.com/p/2302770a02/thumbnail.png"
       },
       {
-        "title": "Google\u2019s Nano Banana AI image editor is coming to search, Photos, and NotebookLM - Ars Technica",
+        "title": "Google\u2019s Photoshop-killer AI model is coming to search, Photos, and NotebookLM - Ars Technica",
         "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNR2lGTUdTZUdXOTRpUDAtU1l2RzVjT1lKdGhQTFRVekhBQjVpR2s2T09ST2Uydk45ZEgybG5MMlNGcTQ0dTZsLUNJUXpBbzRhMUp6UGNjaW1hYmZSeWNSSC1mWVNTU0FBeHkxU0hLVTFFQklGQTRlZ1JaM2ViOXdpT3NPYWNqRWUxUXRvVGZHS2l3bTlTMlVfdG4xOGxkaEdUUFhVWE1IamxUbW5PcEpBblVHM2dLSXdJ?oc=5&hl=en-US&gl=US&ceid=US:en",
         "published_at": "2025-10-13T15:52:23-04:00",
         "source": "Google",
-        "summary": "Google\u2019s Nano Banana AI image editor is coming to search, Photos, and NotebookLM Ars Technica",
+        "summary": "Google\u2019s Photoshop-killer AI model is coming to search, Photos, and NotebookLM Ars Technica",
         "content_html": "",
-        "summary_text": "Google\u2019s Nano Banana AI image editor is coming to search, Photos, and NotebookLM Ars Technica",
+        "summary_text": "Google\u2019s Photoshop-killer AI model is coming to search, Photos, and NotebookLM Ars Technica",
         "category": "ai",
-        "_permalink": "/p/477632a0be/",
-        "_abs_permalink": "https://pulse.tek2dayholdings.com/p/477632a0be/",
-        "_summary_240": "Google\u2019s Nano Banana AI image editor is coming to search, Photos, and NotebookLM Ars Technica",
-        "_thumbnail": "https://pulse.tek2dayholdings.com/p/477632a0be/thumbnail.png"
+        "_permalink": "/p/d549f0e92a/",
+        "_abs_permalink": "https://pulse.tek2dayholdings.com/p/d549f0e92a/",
+        "_summary_240": "Google\u2019s Photoshop-killer AI model is coming to search, Photos, and NotebookLM Ars Technica",
+        "_thumbnail": "https://pulse.tek2dayholdings.com/p/d549f0e92a/thumbnail.png"
       },
       {
         "title": "New California law requires AI to tell you it\u2019s AI",
@@ -113,6 +141,20 @@
         "_abs_permalink": "https://pulse.tek2dayholdings.com/p/2b1f3ac58b/",
         "_summary_240": "Musk\u2019s Boring Company Will Open \u2018Dubai Loop\u2019 Next Year, UAE AI Minister Says Bloomberg.com",
         "_thumbnail": "https://pulse.tek2dayholdings.com/p/2b1f3ac58b/thumbnail.png"
+      },
+      {
+        "title": "Why AI Will Widen the Gap Between Superstars and Everybody Else - The Wall Street Journal",
+        "url": "https://news.google.com/rss/articles/CBMijgNBVV95cUxOMGNac0EtaHNCSUJFYm9kNnZYSHZRT3pvSXhIM1NNSm9JS2ZCVVQ4Ukxxa0JMOFVzSGdaTHVGQlltRjZqMXplRlpZazRkaWhlYnUzQ2NmTkt0SXlualQxOG5aQWpzSWdkdHJSVnh5Mk9RbFNCNUR0WFAwQ09fS1V6NlZYTDJxekw3WnJXRWd0aVFDc2lIVjhySFY1Q050b3FmY1pyNUh1XzlSYThUR1hBcGplOV9zZFZPNnJpMnJEUXFPQ2dtd3pNUGQyTGhKNFNLLXBFY3c2NUUzSmE4ZGlqbW45OENKVnlnVEZvVnB5T0hmbFo1dU1mc0pDNDNRVkdCZUxEdnpBQmJvUmlvWFB1VGljX1ZBYjVINHJpcWd2R3h0TnJyUXhzT21tUGhMaGRIRHY0T1IwWnRNU0IwUTAxbFFxdmkyc0ZqRG1lc0gzYnpIRE0ySlhCZUpkb0I5Vldhc0lyRTMyOFN5ZlFmaElFZGJjVm1QeFNQU3Q4bE5hQUpQZHpDQnJRNUFVMDltdw?oc=5&hl=en-US&gl=US&ceid=US:en",
+        "published_at": "2025-10-13T09:01:41-04:00",
+        "source": "Google",
+        "summary": "Why AI Will Widen the Gap Between Superstars and Everybody Else The Wall Street Journal",
+        "content_html": "",
+        "summary_text": "Why AI Will Widen the Gap Between Superstars and Everybody Else The Wall Street Journal",
+        "category": "ai",
+        "_permalink": "/p/085928efc4/",
+        "_abs_permalink": "https://pulse.tek2dayholdings.com/p/085928efc4/",
+        "_summary_240": "Why AI Will Widen the Gap Between Superstars and Everybody Else The Wall Street Journal",
+        "_thumbnail": "https://pulse.tek2dayholdings.com/p/085928efc4/thumbnail.png"
       },
       {
         "title": "This new AI technique creates \u2018digital twin\u2019 consumers, and it could kill the traditional survey industry",
@@ -428,17 +470,17 @@
       },
       {
         "title": "Banks Poised for Strong Third Quarter, But Yellow Flags on Consumer Health Loom - The Wall Street Journal",
-        "url": "https://news.google.com/rss/articles/CBMixgNBVV95cUxOQm1JSklXUHpGQnJ0ZXdvT2Q0QWhJTFFlOHJNSHR2a3F5VFdHRUx5d3VjZlZDQkZ5allPNnJRaENDdXdBaDhxcThldFNFLU9uVFhxNllRUmdQVGJNOHdkbkVGTzFBSmxsTm1uMm1JSVBBUXlQSW9XZmlHVlpGU1AyazV3aTdfenp6SUFma3dLR1ZJNEI1YjlNWENVa1gtUzc3QmRvc2ZhU0FZaHgzNUJ0SzNkV0lHTWpLdU44STgydFMyZWNPVVQ1THpKbXphMllLRWI3OHBOMEt5QUhpRktDQ1ZjLThaeGJoMHl4LWFhZDE1NkFuTG01SU0xMC1kZGlRbnRsLUI5WHdlcVpWOFg4aWJRbWxaNUwteldHLVB0bG9pTGpJazVZR3VjSjNZU19fNWlXV2NDQzFORGxxQkJQdDBrNE5yYmRsX1A2eVRTMjR1Vl9ndUhxb0Q0cGNiNlFxc2ZOQVlFcWYwSEpNNlQ3ZGY4Ni1fM1c3U05xbjRiZzd3R0MxVi1IaWJfdmxvSUFJcVUtNTRIb0EzRWhRanZrdzk1NVMzLS1fRGp4N0xiOXpZcDFoZXpuTlpnQzRoYjkzWkhZaDVR?oc=5&hl=en-US&gl=US&ceid=US:en",
+        "url": "https://news.google.com/rss/articles/CBMixgNBVV95cUxNNW1sVy0zeThkV2oxSFlfU3JlaDc1RThWYnFPRFR1SjdqVnEtbXBBNnpvR253MnAyRE5xeVlLaC1YUzlKQmROUmczYWJrOVZNcGxnNm96NUxkbk54RGJXSVY1bS1qV3ktSnRveE1LNXdLeHEwM1pnZ2JNYTJ6NVRzaE9QdXNKMVZTZUlwWExTak1wVlBxUXFKNlRjX2VvdEVjT1ZSMVRBZnRNenNOQkhPdGF6dEJLYWhodG9fWmx2ZnY0enVlZ3VSY0xDTXVUNTdLWjU5VjFPU0lDRk1Rb3BnMHNlU2hqeE9OZzNwaGMwY3RWd09SY1Q1c3JFbzZCQ2FVX0VWbklEWTMwNGJWYy03dnl1cW5iQ3VIaXFucXc1LS1wVkFOa08yT1JqQjd3M2RraHYtNU9BVHc5RVU0UWpBMm1GQkJaMjMxdGdyNEpmTUVHbWhXeVJURTAtZmxkTXIxRUE3Y3R6bmozNm5vSXlfblVMOVhlem81X2Ytd3FvaXBJOG12V1ZJSFdWQTdKTjlyVUdnelR4TnZUMmRkcW5uVVB2ajZCY2FzVnlGYV9OVkNPZGNnNWxNc0NPTTJKSEN3dURldmRR?oc=5&hl=en-US&gl=US&ceid=US:en",
         "published_at": "2025-10-13T13:35:00-04:00",
         "source": "Google",
         "summary": "Banks Poised for Strong Third Quarter, But Yellow Flags on Consumer Health Loom The Wall Street Journal",
         "content_html": "",
         "summary_text": "Banks Poised for Strong Third Quarter, But Yellow Flags on Consumer Health Loom The Wall Street Journal",
         "category": "fintech",
-        "_permalink": "/p/327995fd84/",
-        "_abs_permalink": "https://pulse.tek2dayholdings.com/p/327995fd84/",
+        "_permalink": "/p/0eb8744cce/",
+        "_abs_permalink": "https://pulse.tek2dayholdings.com/p/0eb8744cce/",
         "_summary_240": "Banks Poised for Strong Third Quarter, But Yellow Flags on Consumer Health Loom The Wall Street Journal",
-        "_thumbnail": "https://pulse.tek2dayholdings.com/p/327995fd84/thumbnail.png"
+        "_thumbnail": "https://pulse.tek2dayholdings.com/p/0eb8744cce/thumbnail.png"
       },
       {
         "title": "Nigel Farage tells crypto conference \u2018I am your champion\u2019 - Financial Times",
@@ -509,20 +551,6 @@
         "_abs_permalink": "https://pulse.tek2dayholdings.com/p/f0eafca989/",
         "_summary_240": "Business school case study: banking on the unbanked Financial Times",
         "_thumbnail": "https://pulse.tek2dayholdings.com/p/f0eafca989/thumbnail.png"
-      },
-      {
-        "title": "Stock Bubble Dread Grips Central Bankers in Washington - Bloomberg.com",
-        "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOT0FFdHRWVnh1c2NQaFdqVDJvdUlSczdsQWxiZjJJTENCWHZTbjJSRmRyMjZCRkxVd1JqT0RkMnNTZmRNaWNqNTBYUFZKeS1JZlJnTzctTEdNMzNJejNzM3FPRmh4anBGMG1WREU1M0JhdXFEUzlvbEYySXhhQklpbXpsTkJFOE1vV1FwcE14R0E5akxXZmg4bl80bkhMZEs2MmZhc0swbzc?oc=5&hl=en-US&gl=US&ceid=US:en",
-        "published_at": "2025-10-11T16:00:00-04:00",
-        "source": "Google",
-        "summary": "Stock Bubble Dread Grips Central Bankers in Washington Bloomberg.com",
-        "content_html": "",
-        "summary_text": "Stock Bubble Dread Grips Central Bankers in Washington Bloomberg.com",
-        "category": "fintech",
-        "_permalink": "/p/6a4a95657a/",
-        "_abs_permalink": "https://pulse.tek2dayholdings.com/p/6a4a95657a/",
-        "_summary_240": "Stock Bubble Dread Grips Central Bankers in Washington Bloomberg.com",
-        "_thumbnail": "https://pulse.tek2dayholdings.com/p/6a4a95657a/thumbnail.png"
       },
       {
         "title": "Third-Largest Stablecoin Briefly Loses Dollar Peg in Crypto Rout - Bloomberg.com",
