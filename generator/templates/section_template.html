@@ -64,7 +64,38 @@
     }
     
     /* keep an accessible title for SEO/screen readers, but visually hide it */
-    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}header .tag{color:var(--muted);font-size:.95rem; margin-top:.1rem}
+    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
+    
+    /* Bloomberg-style header */
+    header .tag{
+      display:flex;
+      align-items:center;
+      gap:0.8rem;
+    }
+    header .tag .date{
+      font-size:0.8rem;
+      font-weight:600;
+      color:var(--ink);
+      padding:0.3rem 0.6rem;
+      background:var(--line);
+      border-radius:4px;
+      text-transform:uppercase;
+      letter-spacing:0.03em;
+    }
+    header .tag .divider{
+      width:1px;
+      height:20px;
+      background:var(--line);
+    }
+    header .tag .desc{
+      font-size:0.95rem;
+      color:var(--ink-soft);
+      font-weight:500;
+    }
+    header .tag .desc strong{
+      font-weight:700;
+      color:var(--ink);
+    }
     .grow{flex:1}
     .hdr-actions{display:flex;gap:.5rem;margin-left:auto;align-items:center}
     .btn{
@@ -139,6 +170,9 @@
     /* Small screens */
     @media (max-width: 640px){
       header.site h1{font-size:1.12rem}
+      header .tag{flex-wrap:wrap;gap:0.5rem;}
+      header .tag .divider{display:none;}
+      header .tag .desc{font-size:0.85rem;}
       #tek2day-pulse{padding:.9rem}
       .items{padding:.45rem .6rem .8rem}
       article{padding:.8rem;flex-direction:column;}
@@ -192,7 +226,9 @@
 </a>
 <h1 class="sr-only">T2D Pulse</h1>
 <div class="tag">
-  Snapshot: <span class="date">{{DATE_STR}}</span> — curated <strong>AI</strong>, <strong>Software</strong>, and <strong>FinTech</strong> News.
+  <span class="date">{{DATE_STR}}</span>
+  <span class="divider"></span>
+  <span class="desc">Curated <strong>AI</strong>, <strong>Software</strong> & <strong>FinTech</strong> News</span>
 </div>
     <div class="grow"></div>
       <div class="hdr-actions">
