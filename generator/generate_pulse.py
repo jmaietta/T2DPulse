@@ -330,20 +330,22 @@ def _render_template_string(tpl: str, **kv) -> str:
         html_out = html_out.replace(f"{{{{{k}}}}}", v or "")
     return html_out
 
-def create_branded_og_image(source_url: str, permalink_dir: str) -> str:
+def create_branded_og_image(source_url: str, permalink_dir: str) -> tuple[str, str]:
     """
-    Creates a branded OG image (1200x630):
-    - Primary: Fetch source article's og:image and overlay T2D logo (80x80, top-right, 20px padding)
+    Creates a branded OG image (1200x630) and thumbnail (300x300):
+    - Primary: Fetch source article's og:image and overlay T2D logo (120x120, top-right, 20px padding)
     - Fallback: Use T2D banner if source image unavailable
-    Returns relative path to the image or empty string on failure.
+    Returns tuple of (og_image_rel_path, thumbnail_rel_path) or empty strings on failure.
     """
     logo_path = os.path.join(REPO, "docs", "icons", "T2D_Pulse_Logo_2.png")
     banner_path = os.path.join(REPO, "docs", "icons", "T2D_Pulse_Banner.png")
     output_path = os.path.join(permalink_dir, "og-image.png")
+    thumbnail_path = os.path.join(permalink_dir, "thumbnail.png")
     
     # Target dimensions
     TARGET_WIDTH = 1200
     TARGET_HEIGHT = 630
+    THUMB_SIZE = 300
     LOGO_SIZE = 120
     PADDING = 20
     
@@ -374,18 +376,18 @@ def create_branded_og_image(source_url: str, permalink_dir: str) -> str:
                     # Image is wider, fit height and crop width
                     new_height = TARGET_HEIGHT
                     new_width = int(new_height * img_aspect)
-                    base_img = base_img.resize((new_width, new_height), Image.LANCZOS)
+                    resized = base_img.resize((new_width, new_height), Image.LANCZOS)
                     # Crop center
                     left = (new_width - TARGET_WIDTH) // 2
-                    base_img = base_img.crop((left, 0, left + TARGET_WIDTH, TARGET_HEIGHT))
+                    og_img = resized.crop((left, 0, left + TARGET_WIDTH, TARGET_HEIGHT))
                 else:
                     # Image is taller, fit width and crop height
                     new_width = TARGET_WIDTH
                     new_height = int(new_width / img_aspect)
-                    base_img = base_img.resize((new_width, new_height), Image.LANCZOS)
+                    resized = base_img.resize((new_width, new_height), Image.LANCZOS)
                     # Crop center
                     top = (new_height - TARGET_HEIGHT) // 2
-                    base_img = base_img.crop((0, top, TARGET_WIDTH, top + TARGET_HEIGHT))
+                    og_img = resized.crop((0, top, TARGET_WIDTH, top + TARGET_HEIGHT))
                 
                 # Overlay logo in top right
                 if os.path.exists(logo_path):
@@ -397,24 +399,48 @@ def create_branded_og_image(source_url: str, permalink_dir: str) -> str:
                     logo_y = PADDING
                     
                     # Paste with alpha channel
-                    base_img.paste(logo, (logo_x, logo_y), logo)
+                    og_img.paste(logo, (logo_x, logo_y), logo)
                 
-                base_img.save(output_path, "PNG", optimize=True)
-                return "/p/" + os.path.basename(permalink_dir) + "/og-image.png"
+                og_img.save(output_path, "PNG", optimize=True)
+                
+                # Create 300x300 thumbnail (center crop, no logo)
+                thumb = base_img.copy()
+                # Crop to square from center
+                min_dim = min(thumb.width, thumb.height)
+                left = (thumb.width - min_dim) // 2
+                top = (thumb.height - min_dim) // 2
+                thumb = thumb.crop((left, top, left + min_dim, top + min_dim))
+                thumb = thumb.resize((THUMB_SIZE, THUMB_SIZE), Image.LANCZOS)
+                thumb.save(thumbnail_path, "PNG", optimize=True)
+                
+                pid = os.path.basename(permalink_dir)
+                return (f"/p/{pid}/og-image.png", f"/p/{pid}/thumbnail.png")
             except Exception:
                 pass
         
         # Fallback: use banner
         if os.path.exists(banner_path):
             banner = Image.open(banner_path).convert("RGB")
-            banner = banner.resize((TARGET_WIDTH, TARGET_HEIGHT), Image.LANCZOS)
-            banner.save(output_path, "PNG", optimize=True)
-            return "/p/" + os.path.basename(permalink_dir) + "/og-image.png"
+            og_img = banner.resize((TARGET_WIDTH, TARGET_HEIGHT), Image.LANCZOS)
+            og_img.save(output_path, "PNG", optimize=True)
+            
+            # Create thumbnail from banner (center crop)
+            thumb = banner.copy()
+            # Crop to square from center
+            min_dim = min(thumb.width, thumb.height)
+            left = (thumb.width - min_dim) // 2
+            top = (thumb.height - min_dim) // 2
+            thumb = thumb.crop((left, top, left + min_dim, top + min_dim))
+            thumb = thumb.resize((THUMB_SIZE, THUMB_SIZE), Image.LANCZOS)
+            thumb.save(thumbnail_path, "PNG", optimize=True)
+            
+            pid = os.path.basename(permalink_dir)
+            return (f"/p/{pid}/og-image.png", f"/p/{pid}/thumbnail.png")
         
     except Exception:
         pass
     
-    return ""
+    return ("", "")
 
 def write_permalink_page(it: dict) -> str:
     """Writes docs/p/<id>/index.html and returns the ABSOLUTE permalink URL."""
@@ -439,9 +465,10 @@ def write_permalink_page(it: dict) -> str:
 
     summary = _plain_text_summary(it, limit=240)
     
-    # Create branded OG image
-    og_image_rel = create_branded_og_image(url, perma_dir)
+    # Create branded OG image and thumbnail
+    og_image_rel, thumbnail_rel = create_branded_og_image(url, perma_dir)
     og_image_abs = f"{site_base}{og_image_rel}" if og_image_rel and site_base else ""
+    thumbnail_abs = f"{site_base}{thumbnail_rel}" if thumbnail_rel and site_base else ""
 
     with open(PERMA_TPL, "r", encoding="utf-8") as f:
         tpl = f.read()
@@ -463,6 +490,7 @@ def write_permalink_page(it: dict) -> str:
     it["_permalink"] = rel_permalink
     it["_abs_permalink"] = abs_permalink
     it["_summary_240"] = summary
+    it["_thumbnail"] = thumbnail_abs
     return abs_permalink
 
 
@@ -791,6 +819,7 @@ def build_section(date_str, by_cat):
             title = html.escape(title_raw)
             url = add_utm(it["url"])
             permalink = it.get("_abs_permalink", "")
+            thumbnail = it.get("_thumbnail", "")
             src = html.escape(it["source"])
             try:
                 dt_local = dtparser.parse(it["published_at"]).astimezone(TZ)
@@ -800,10 +829,17 @@ def build_section(date_str, by_cat):
             summary_txt = clean_text(strip_html_to_text(it.get("summary_text","")), 240)
             summary_html = html.escape(summary_txt)
             top_cls = " top" if idx == 0 else ""
+            
+            # Build article card with optional thumbnail
+            thumb_html = f'<img src="{thumbnail}" alt="{html.escape(title_raw, quote=True)}" class="article-thumb">' if thumbnail else ''
+            
             parts.append(f'''<article class="{top_cls.strip()}" data-card data-url="{url}" data-permalink="{permalink}" data-title="{html.escape(title_raw, quote=True)}" data-summary="{summary_html}">
-  <h3><a data-title-link href="{url}">{title}</a></h3>
-  <div class="meta">{src} - {dt_str} {render_item_badges(it)}</div>
-  <p data-summary>{summary_html}</p>
+  {thumb_html}
+  <div class="article-content">
+    <h3><a data-title-link href="{url}">{title}</a></h3>
+    <div class="meta">{src} - {dt_str} {render_item_badges(it)}</div>
+    <p data-summary>{summary_html}</p>
+  </div>
 </article>''')
         return "\n".join(parts)
 
