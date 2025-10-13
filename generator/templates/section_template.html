@@ -106,17 +106,27 @@
 
     .items{padding:.55rem 1rem 1rem;display:grid;gap:.75rem}
     article{
-      position:relative;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:.9rem .9rem;
+      position:relative;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:.9rem;
       transition:transform .06s ease, box-shadow .12s ease; will-change:transform;
+      display:flex;gap:.9rem;align-items:flex-start;
     }
     article:hover{transform:translateY(-1px); box-shadow:var(--shadow)}
     article.top{background:linear-gradient(180deg, color-mix(in srgb, var(--card) 92%, #fff 8%), var(--card)); border-width:1px}
+    .article-thumb{
+      width:120px;height:120px;border-radius:8px;object-fit:cover;flex-shrink:0;
+    }
+    .article-content{flex:1;min-width:0;}
     h3{margin:0 0 .35rem;font-size:1.04rem;line-height:1.4}
     h3 a{color:var(--ink);text-decoration:none}
     h3 a:hover{text-decoration:underline}
     .meta{color:var(--muted);font-size:.86rem;margin-bottom:.4rem;display:flex;gap:.4rem;align-items:center;flex-wrap:wrap}
     .meta .src{font-weight:700;letter-spacing:.1px}
     .meta .sep{opacity:.35}
+    .badge{
+      display:inline-block;padding:.15rem .4rem;border-radius:4px;font-size:.75rem;font-weight:700;
+      background:var(--ai);color:white;margin-left:.25rem;
+    }
+    .badge.muted{background:var(--muted);opacity:.7;}
     p{margin:.25rem 0 0; color:var(--ink)}
 
     /* Footer note */
@@ -130,7 +140,8 @@
       header.site h1{font-size:1.12rem}
       #tek2day-pulse{padding:.9rem}
       .items{padding:.45rem .6rem .8rem}
-      article{padding:.8rem .75rem}
+      article{padding:.8rem;flex-direction:column;}
+      .article-thumb{width:100%;height:auto;max-height:200px;}
     }
 
     /* ===== Share toolbar (minimal styles) ===== */
