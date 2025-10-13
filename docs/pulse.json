@@ -1,5 +1,103 @@
 [
   {
+    "title": "AWS Turns AI Agents Into a Workhorse as Nvidia Sees a Threat",
+    "url": "https://www.pymnts.com/connectedeconomy/2025/aws-turns-ai-agents-into-a-workhorse-as-nvidia-sees-a-threat/",
+    "published_at": "2025-10-13T04:03:46-04:00",
+    "source": "PYMNTS",
+    "summary": "It\u2019s hard to get in and out of a conversation with a friend or even take a cursory look at a mainstream news source these days without a reference to some version of AI. Agentic AI has yet to crack the consumer attention case so far, but last week may have changed that. The [\u2026] The post AWS Turns AI Agents Into a Workhorse as Nvidia Sees a Threat appeared first on PYMNTS.com .",
+    "content_html": "<p>It\u2019s hard to get in and out of a conversation with a friend or even take a cursory look at a mainstream news source these days without a reference to some version of AI. Agentic AI has yet to crack the consumer attention case so far, but last week may have changed that.</p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p>The Prompt Economy had a big week for consumer exposure, new applications at work and use cases. The consumer exposure came courtesy of Time Magazine. It listed vibe coding, which is one of the foundations of the Prompt Economy, as one of its top 125 inventions of 2025. As is the case with most coverage of agentic AI, it came with equal parts excitement, intrigue and caution.</p>\n<p>\u201cThe trend of vibe coding\u2014 tech novices using AI to write and refine code\u2014hasn\u2019t come without catches,\u201d <a href=\"https://time.com/collections/best-inventions-2025/7318249/warp-agentic-development-environment/\" rel=\"noopener\" target=\"_blank\">Time wrote.</a> \u201cFor example: companies are now hiring engineers to fix errors in vibe-coded software. Warp (agentic infrastructure company) has taken a different approach with an\u00a0<a href=\"https://time.com/7312641/agentic-ai-era-humans/\" rel=\"noopener\" target=\"_blank\">agent-based</a>\u00a0alternative to traditional coding interfaces. Launched in June, Warp\u2019s agentic development environment (ADE) allows software engineers to task AI agents with developing their code, then intervene when they notice errors.\u201d</p>\n<h2>Autonomy Also May Create Vulnerabilities</h2>\n<p>Coding innovations were also the subject of news from Nvidia. <a href=\"https://developer.nvidia.com/blog/from-assistant-to-adversary-exploiting-agentic-ai-developer-tools/\" rel=\"noopener\" target=\"_blank\">Nvidia\u2019s latest technical blog</a> takes a stark look at the\u00a0security risks embedded in agentic AI development tools, warning that the same autonomy that makes these agents powerful can also make them vulnerable. The post titled\u00a0<a href=\"https://developer.nvidia.com/blog/from-assistant-to-adversary-exploiting-agentic-ai-developer-tools/\" rel=\"noopener\" target=\"_blank\">\u201cFrom Assistant to Adversary: Exploiting Agentic AI Developer Tools\u201d</a> details how attackers can manipulate large language model (LLM)-driven coding assistants like Cursor, Claude Code, and GitHub Copilot through\u00a0indirect prompt injection.</p>\n<p>By embedding malicious instructions in open-source repositories, threat actors can exploit computer-use agents that autonomously read and execute commands. The blog situates this threat within a growing challenge for the Prompt Economy, where agentic systems blur the line between assistance and execution, often without adequate oversight or containment. Nvidia recommends developers adopt an \u201cassume prompt injection\u201d mindset, limiting agent autonomy, enforcing human review of sensitive commands, and running autonomous agents only within isolated environments.</p>\n<p>\u201cAn overly privileged agent treating untrusted data as trusted can be turned into a tool working on behalf of the attacker,\u201d\u00a0<a href=\"https://developer.nvidia.com/blog/from-assistant-to-adversary-exploiting-agentic-ai-developer-tools/\" rel=\"noopener\" target=\"_blank\">the post reads.</a> It adds that while agentic coding workflows have \u201cunlocked rapid development capabilities across the industry,\u201d their power must be matched by \u201cmitigating policies\u201d to prevent misuse. Nvidia urges developers to test systems with its <a href=\"https://garak.ai/\" rel=\"noopener\" target=\"_blank\">garak vulnerability scanner</a>, use NeMo Guardrails to contain model behavior, and above all, recognize that as AI gains autonomy, the developer\u2019s own tools may become an adversary.</p>\n<p>Other news of the week came from more predictable and innovative sources. Perhaps the biggest provider announcement came from Amazon Web Services. AWS introduced\u00a0<a href=\"https://www.aboutamazon.com/news/aws/amazon-quick-suite-agentic-ai-aws-work\" rel=\"noopener\" target=\"_blank\">Amazon Quick Suite</a>, a new agentic AI platform designed to automate complex workplace tasks and bridge the gap between consumer AI convenience and enterprise-grade functionality. The suite allows employees to query data, generate insights, automate workflows and build specialized agents that operate securely across internal systems like S3, Redshift and SharePoint, as well as more than 1,000 external applications through its Model Context Protocol.</p>\n<p>AWS said the platform, which is already in use by Amazon employees and clients such as DXC Technology, Vertiv and Jabil, can cut multiday processes down to minutes, combining data analysis, automation and research capabilities into one workspace. Quick Suite marks Amazon\u2019s bid to anchor itself at the center of the Prompt Economy, where generative agents move from consumer novelty to business necessity by directly executing work across enterprise systems.</p>\n<p>As Swami Sivasubramanian, AWS\u2019s Vice President of Agentic AI, explained in the company\u2019s announcement:\u00a0\u201cWhat strikes me about these examples isn\u2019t just the time saved \u2014 it\u2019s how Quick is fundamentally changing our relationship with work. It\u2019s removing the busy work that used to consume valuable time and energy and gives us the time back to focus on what matters. It brings together all the data, metrics, and institutional knowledge you need to make decisions, and helps you act on these decisions to drive outcomes.\u201d</p>\n<h2>New Use Cases</h2>\n<p>New use cases also surfaced last week, notably IBM and S&amp;P Global <a href=\"https://newsroom.ibm.com/2025-10-08-s-p-global-and-ibm-deploy-agentic-ai-to-improve-enterprise-operations\" rel=\"noopener\" target=\"_blank\">have announced</a> a\u00a0strategic alliance to deploy agentic AI across enterprise operations, beginning with supply chain management. The partnership embeds IBM\u2019s\u00a0watsonx Orchestrate\u00a0framework into S&amp;P Global\u2019s Market Intelligence suite, combining S&amp;P\u2019s proprietary data with IBM\u2019s AI orchestration capabilities. The goal: to help businesses automate procurement, assess supplier and country risk, and make faster, better-informed decisions in increasingly complex global supply chains.</p>\n<p>Over time, the companies plan to expand the integration into finance, procurement, and insurance, using AI agents to convert data into actions that streamline operations. The collaboration positions both firms at the center of the\u00a0Prompt Economy\u2019s applied use cases, where agentic systems are moving from concept to enterprise infrastructure.</p>\n<p>As S&amp;P Global Market Intelligence President\u00a0Saugata Saha\u00a0<a href=\"https://newsroom.ibm.com/2025-10-08-s-p-global-and-ibm-deploy-agentic-ai-to-improve-enterprise-operations\" rel=\"noopener\" target=\"_blank\">explained,</a>\u00a0\u201cBy integrating IBM\u2019s innovative AI capabilities with S&amp;P Global\u2019s distinctive data and analytics offerings, we are creating an exciting combination that is set to advance actionable insights and streamline workflows.\u201d\u00a0IBM\u2019s Chief Commercial Officer\u00a0Rob Thomas\u00a0added that agentic AI can \u201cconnect data to action,\u201d helping companies \u201crestore control\u201d in the face of global supply chain complexity.</p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/connectedeconomy/2025/aws-turns-ai-agents-into-a-workhorse-as-nvidia-sees-a-threat/\">AWS Turns AI Agents Into a Workhorse as Nvidia Sees a Threat</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
+    "summary_text": "It\u2019s hard to get in and out of a conversation with a friend or even take a cursory look at a mainstream news source these days without a reference to some version of AI. Agentic AI has yet to crack the consumer attention case so far, but last week may have ch\u2026",
+    "category": "ai",
+    "_permalink": "/p/01561539ec/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/01561539ec/",
+    "_summary_240": "It\u2019s hard to get in and out of a conversation with a friend or even take a cursory look at a mainstream news source these days without a reference to some version of AI. Agentic\u2026",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/01561539ec/thumbnail.png"
+  },
+  {
+    "title": "Fleetio Says AI and Analytics Keep Fleet Costs in Check",
+    "url": "https://www.pymnts.com/artificial-intelligence-2/2025/fleetio-says-ai-and-analytics-keep-fleet-costs-in-check/",
+    "published_at": "2025-10-13T04:01:00-04:00",
+    "source": "PYMNTS",
+    "summary": "Watch more: Digital Shift: Fleetio, Stefano Daneri Today\u2019s fleet-based businesses are navigating both changing seas and seas of change. And they are being forced to operate smarter to manage. \u201cThe adage that you have to spend money to make money is especially true for fleet-based businesses,\u201d Stefano Daneri, fleet ecosystem strategist at Fleetio, told [\u2026] The post Fleetio Says AI and Analytics Ke\u2026",
+    "content_html": "<p><strong>Watch more:</strong> <a href=\"https://tv.pymnts.com/detail/video/6380742982112\" rel=\"noopener\" target=\"_blank\">Digital Shift: Fleetio, Stefano Daneri</a></p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p><span>Today\u2019s fleet-based businesses are navigating both changing seas and seas of change.</span></p>\n<p><span>And they are being forced to operate smarter to manage.</span></p>\n<p><span>\u201cThe adage that you have to spend money to make money is especially true for fleet-based businesses,\u201d <a href=\"https://www.linkedin.com/in/stefanodaneri/\" rel=\"noopener\" target=\"_blank\">Stefano Daneri</a>, fleet ecosystem strategist at <a href=\"https://www.fleetio.com/\" rel=\"noopener\" target=\"_blank\">Fleetio</a>, told PYMNTS.\u00a0 \u201cWhen vehicles and equipment and personnel are your revenue engines, every dollar has to be spent really strategically.\u201d</span></p>\n<p><span>Whether in logistics, construction, utilities, or public service, these firms increasingly discovering that, against a backdrop of uncertainty, the very definition of effective fleet management has been upended.</span></p>\n<p><span>\u201cCosts are up across the board,\u201d Daneri added. \u201cParts and labor, for example, are more than 10% year over year increase. And that\u2019s from filters down to transmissions and everything that goes into rebuilding engines.\u201d</span></p>\n<p><span>With vehicles harder to replace, fleets are keeping them longer, which introduces a hidden cost: downtime.</span> <span>The dilemma is clear: extending asset life saves capital but risks productivity. Breaking the cycle requires better visibility into where and how money is being spent, and how each piece of equipment performs over time.</span></p>\n<p><span>\u201cTraditional fleet management is reactive by nature,\u201d Daneri explained. \u201cBut industry data shows that 70% of breakdowns are actually preventable with proper preventative maintenance.\u201d</span></p>\n<p><span>That\u2019s where technological innovations like artificial intelligence and real-time data are stepping in to increasingly transform the fleet management game.</span></p>\n<p>&nbsp;</p>\n<div style=\"display: block;\">\n<div style=\"padding-top: 56.25%;\"></div>\n</div>\n<p>&nbsp;</p>\n<h2><b><span>Data\u2019s Big Moment is Making Machines Talk</span></b></h2>\n<p><span>Fleet management was once a paper-and-spreadsheet discipline. Now, every vehicle is a rolling data center.</span></p>\n<p><span>\u201cMost new vehicles today are coming connected with embedded telematics,\u201d says Daneri. \u201cYou have anything from a heated seat to seat belt sensors, and that wasn\u2019t the case five or ten years ago.\u201d</span></p>\n<p><span>\u201cIn some cases, we have 17 million pages of data in an hour that can get created from a single vehicle,\u201d he added.</span></p>\n<p><span>But the goal isn\u2019t more data, it\u2019s smarter data. That means, whether dispatching vehicles for disaster response or managing a delivery fleet, that AI has become the essential filter.</span></p>\n<p><span>\u201cWith AI, you\u2019re able to scale, you\u2019re able to automate at a lot faster pace, and those decisions can really make the difference for fleet teams,\u201d Daneri said. \u201cYou\u2019re not just overwhelming teams with information. You\u2019re actually giving them a solution to take action.\u201d</span></p>\n<p><span>Even in a world of predictive analytics, success still comes down to a few clear KPIs. Those include maintenance cost per mile or hour, planned versus unplanned maintenance, and preventative maintenance compliance \u2014 where high-performing fleets aim for 90\u201395%.</span></p>\n<p><span>\u201cThe most common metrics we hear from fleets are related to the financial side of things,\u201d Daneri said, noting that asset utilization is another crucial gauge.</span></p>\n<p><span>\u201cWhen these vehicles and equipment are revenue generators, the more you\u2019re maximizing uptime, the more you\u2019re making these assets available to work,\u201d he explained. \u201cYou have fewer expenses that are negative spend.\u201d</span></p>\n<p><span>Still, at the end of the day, fleet management success is less about cost reduction than value creation. It\u2019s about ensuring every vehicle, technician, and dollar is pulling in the same direction.</span></p>\n<h2><b><span>The Next Turn Will Be Balancing Tech and Talent</span></b></h2>\n<p><span>Technology\u2019s real promise lies in connecting people. Historically, frontline technicians and back-office teams have operated in silos. Modern systems are closing that gap.</span></p>\n<p><span>\u201cAt their best, these systems are aligning the frontline teams with the back-office teams,\u201d Daneri said. \u201cBecause fleets are mobile by nature, things are happening all of the time\u2026</span> <span>The best systems are helping bring together isolated teams.\u201d</span></p>\n<p><span>For technicians, that means access to diagnostic data that helps them plan their day and troubleshoot issues in real time. For finance teams, it means visibility.</span></p>\n<p><span>\u201cYou\u2019re giving your CFOs and controllers that true cost per mile or per hour for every single asset,\u201d Daneri said. \u201cThere\u2019s really no hiding the information you need to share to help control downtime.\u201d</span></p>\n<p><span>Looking ahead, Daneri envisions a dual focus: smarter machines and stronger people.</span></p>\n<p><span>\u201cThere\u2019s going to be a balance of technology and people,\u201d he said. \u201cWhen you work in an industry where you need trades professionals working on vehicles and equipment, you really need the balance.\u201d</span></p>\n<p><span>Manufacturers are embedding telematics in every machine, and AI is pushing insights from descriptive to predictive. \u201cYou won\u2019t just see what you spent,\u201d Daneri said. \u201cYou\u2019ll be able to calculate that more accurately around downtime and the preventable side of things on life cycles.\u201d</span></p>\n<p><span>But data alone isn\u2019t enough. \u201cFleets will need to invest in the skills and partnerships to act on the data,\u201d he cautioned. \u201cIt\u2019s one thing to get the data in, but it\u2019s another to collaborate with vendors and strategic partners to help improve your operation.\u201d</span></p>\n<p><span>And amid the digital transformation, human connection remains central. \u201cAs much as we operate in the technology space,\u201d Daneri concluded, \u201cthe fleet industry is still rooted in relationships \u2014 one-to-one interactions between individuals. And that investment will only continue from here on out.\u201d</span><span>\u00a0</span></p>\n<p>&nbsp;</p>\n<p><em><a href=\"https://www.linkedin.com/in/stefanodaneri/\" rel=\"noopener\" target=\"_blank\">Stefano Daneri</a> is fleet ecosystem strategist at <a href=\"https://www.fleetio.com/\" rel=\"noopener\" target=\"_blank\">Fleetio</a>, which builds simple, collaborative software that helps fleets track, analyze and improve operations.\u00a0</em></p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/artificial-intelligence-2/2025/fleetio-says-ai-and-analytics-keep-fleet-costs-in-check/\">Fleetio Says AI and Analytics Keep Fleet Costs in Check</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
+    "summary_text": "Watch more: Digital Shift: Fleetio, Stefano Daneri Today\u2019s fleet-based businesses are navigating both changing seas and seas of change. And they are being forced to operate smarter to manage. \u201cThe adage that you have to spend money to make money is especially\u2026",
+    "category": "ai",
+    "_permalink": "/p/6e91c59265/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/6e91c59265/",
+    "_summary_240": "Watch more: Digital Shift: Fleetio, Stefano Daneri Today\u2019s fleet-based businesses are navigating both changing seas and seas of change. And they are being forced to operate\u2026",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/6e91c59265/thumbnail.png"
+  },
+  {
+    "title": "AI Helps Credit Union Redefine Credit for Struggling Workers",
+    "url": "https://www.pymnts.com/artificial-intelligence-2/2025/ai-helps-credit-union-redefine-credit-for-struggling-workers/",
+    "published_at": "2025-10-13T04:00:48-04:00",
+    "source": "PYMNTS",
+    "summary": "For millions of working families, financial stability is a fragile balancing act. The paycheck arrives, the bills are paid, and the cycle begins again, until an unexpected expense tips the scales. For these households, credit isn\u2019t a luxury. It\u2019s a lifeline. Southern Chautauqua Federal Credit Union (SCFCU), based in Western New York, has been [\u2026] The post AI Helps Credit Union Redefine Credit for\u2026",
+    "content_html": "<p><span>For millions of working families, financial stability is a fragile balancing act. The paycheck arrives, the bills are paid, and the cycle begins again, until an unexpected expense tips the scales. For these households, credit isn\u2019t a luxury. It\u2019s a lifeline.</span></p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p><span><a href=\"https://www.665-7000.com/\" rel=\"noopener\" target=\"_blank\">Southern Chautauqua Federal Credit Union</a> (SCFCU), based in Western New York, has been building a mission around these members. Through a new partnership with FinTech <a href=\"https://www.salusfintech.com/\" rel=\"noopener\" target=\"_blank\">Salus</a>, the institution is using artificial intelligence (AI) to promote financial inclusion \u2014 helping the region\u2019s ALICE (Asset Limited, Income Constrained, Employed) households improve their financial realities and access credit safely and sustainably.</span></p>\n<h2><b><span>Redefining the ALICE Demographic</span></b></h2>\n<p><span>The term ALICE was originated by the United Way, explained <a href=\"https://www.linkedin.com/in/john-felton-40432041/\" rel=\"noopener\" target=\"_blank\">John Felton</a>, CEO of Southern Chautauqua FCU in an interview with PYMNTS. Felton noted that roughly 42% of U.S. households fall under the ALICE definition \u2014 families that live paycheck to paycheck and are often forced to make difficult trade-offs.</span></p>\n<p><span>\u201cALICE families are under more stress now than they have been in quite some time,\u201d he said. \u201cMany times, money runs out before the next paycheck comes. These are people who work hard but have to decide between putting gas in the tank or food on the table.\u201d</span></p>\n<p><span>Empathy, he said, underpins the credit union\u2019s mission of \u201cdoing well by doing good\u201d as it serves 20,000 members across Western New York.</span></p>\n<h2><b><span>Finding Grit in the Data</span></b></h2>\n<p><span>Where traditional lending models often rely on a static three-digit credit score, Felton believes that approach fails to capture the full story. \u201cThat score tells you about their past,\u201d he said. \u201cIt doesn\u2019t predict their future. It doesn\u2019t explain why they went through those struggles, and you can\u2019t tell from a traditional credit report if somebody has grit.\u201d</span></p>\n<p><span>Grit, in Felton\u2019s view, is the ability to recover \u2014 to \u201cfigure it out\u201d and keep moving forward. AI, he said, is allowing his team to quantify that resilience.</span></p>\n<p><span>The partnership leverages Salus\u2019 Sentinel platform, an analytics engine that uses advanced data modeling to identify positive lending patterns and expand affordable credit access. The system goes beyond credit scores to analyze cash-flow trends, repayment patterns and household priorities.</span></p>\n<p><span>\u201cThis is our first dive into using additional data points,\u201d Felton said. While lending officers may traditionally look at fewer than 30 factors, he told PYMNTS that \u201cwe want AI to read the credit report, recognize those individuals that had something happen \u2014 but they recovered. We want to look at trend analysis, what happened, and how they reacted. It\u2019s not how many times you get knocked down, it\u2019s how you get up.\u201d</span></p>\n<h2><b><span>Cash-Flow Intelligence and Human Touch</span></b></h2>\n<p><span>For now, Southern Chautauqua\u2019s use of AI is assistive, not autonomous. Loan officers still meet with members and review their household finances, often using their mobile banking app as a conversation starter. \u201cWe ask them to open up their home banking app and let us review their cash flow,\u201d Felton said. \u201cWe explain we\u2019re doing this because we want to find a way to help them so we can grant the loan.\u201d</span></p>\n<p><span>AI will soon help flag conversation points \u2014 identifying patterns such as recurring overdraft fees or the prioritization of certain bills (like always paying the cell phone before the car note). Those insights, Felton said, \u201chelp us understand financial values\u2026 and as fast as AI is going, we can take that next step \u2014 maybe using those insights to generate real solutions.\u201d</span></p>\n<h2><b><span>From Insight to Inclusion</span></b></h2>\n<p><span>Over time, said Felton, \u201cthe goal is to identify those families that do have light at the end of the tunnel and provide a pathway,\u201d Felton said. \u201cWe\u2019ll take bite-sized chunks of their high-interest credit card debt and refinance part of it at a fair rate. If they stay current, we take another portion later. Eventually we can eliminate that credit card debt.\u201d</span></p>\n<p><span>That structured, relationship-based approach helps members avoid payday loans and predatory products, which Felton views as \u201cunaffordable flexibility.\u201d The ultimate aim, he said, is to replace debt dependency with financial confidence.</span></p>\n<h2><b><span>Managing Risk While Expanding Access</span></b></h2>\n<p><span>From a portfolio perspective, the same data that supports inclusion also strengthens risk management. \u201cIt starts with members that have checking accounts with us,\u201d Felton said. \u201cWe\u2019ll be able to predict stress sooner, which allows the credit union to reach out sooner \u2014 to provide solutions before the bottom falls out.\u201d</span></p>\n<p><span>To ensure oversight and governance as the model evolves, Southern Chautauqua has dedicated internal leadership. \u201cWe have a point person \u2014 our CIO \u2014 who has a passion for artificial intelligence,\u201d Felton said.</span></p>\n<p><span>As for the Salus partnership, he said \u201cwe can\u2019t work with six FinTechs at once, so we chose one that matched our values and understood the importance of ALICE families.\u201d The collaboration with Salus remains the core focus, though the credit union also partners with Harness on debit-card data analytics and community reward programs.</span></p>\n<p><span>Debit activity, Felton added, is a valuable indicator of financial stress and spending behavior, showing whether members rely on credit for essentials or maintain balance through their checking accounts.</span></p>\n<h2><b><span>A Model for Mission-Driven Growth</span></b></h2>\n<p><span>Felton\u2019s perspective extends beyond technology. \u201cCredit union sustainability lives in ALICE families,\u201d he said. \u201cThese are the people that need credit unions the most. I see a lot of credit unions going after Gen Y, Gen Z, Gen X \u2014 but all of those gens are in ALICE. Go after ALICE, and all the generations will come to you.\u201d</span></p>\n<p>&nbsp;</p>\n<p><em> <a href=\"https://www.linkedin.com/in/john-felton-40432041/\" rel=\"noopener\" target=\"_blank\">John Felton</a> is CEO of <a href=\"https://www.665-7000.com/\" rel=\"noopener\" target=\"_blank\">Southern Chautauqua Federal Credit Union</a>.</em></p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/artificial-intelligence-2/2025/ai-helps-credit-union-redefine-credit-for-struggling-workers/\">AI Helps Credit Union Redefine Credit for Struggling Workers</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
+    "summary_text": "For millions of working families, financial stability is a fragile balancing act. The paycheck arrives, the bills are paid, and the cycle begins again, until an unexpected expense tips the scales. For these households, credit isn\u2019t a luxury. It\u2019s a lifeline. \u2026",
+    "category": "fintech",
+    "_permalink": "/p/10ede128fd/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/10ede128fd/",
+    "_summary_240": "For millions of working families, financial stability is a fragile balancing act. The paycheck arrives, the bills are paid, and the cycle begins again, until an unexpected\u2026",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/10ede128fd/thumbnail.png"
+  },
+  {
+    "title": "Nationwide and Safeco Rise in PYMNTS App Provider Rankings",
+    "url": "https://www.pymnts.com/mobile-applications/2025/nationwide-and-safeco-rise-in-pymnts-app-provider-rankings/",
+    "published_at": "2025-10-13T04:00:33-04:00",
+    "source": "PYMNTS",
+    "summary": "With the all-important holiday selling season coming up, it might be time for consumers to review their recurring debts. One of them is insurance payments, whether it\u2019s car, home or health. A check of the most recent PYMNTS app provider rankings shows some familiar names making big jumps in the top ten: Nationwide, Safeco and [\u2026] The post Nationwide and Safeco Rise in PYMNTS App Provider Rankings\u2026",
+    "content_html": "<p>With the all-important holiday selling season coming up, it might be time for consumers to review their recurring debts. One of them is insurance payments, whether it\u2019s car, home or health. A check of the most recent <a href=\"https://www.pymnts.com/insurance-apps/\" rel=\"noopener\" target=\"_blank\">PYMNTS app provider</a> rankings shows some familiar names making big jumps in the top ten: Nationwide, Safeco and Aetna.</p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p>The PYMNTS.com <a href=\"https://www.pymnts.com/insurance-apps/\" rel=\"noopener\" target=\"_blank\">Insurance Apps page</a> offers a monthly ranking of smartphone Insurance Apps, assessing them based on publicly available information and exclusive app usage data, helping users identify the top performers in the market. The ranking aims to provide precise insights into app performance, aiding stakeholders in making informed decisions. For Nationwide, it\u2019s a four-point jump to a total score of 35, which tied it with Safeco.</p>\n<p>That increase could be due to new enhancements. The\u00a0<a href=\"https://www.nationwide.com/personal/insurance/mobile-app-support/?utm_source=chatgpt.com\" rel=\"noopener\" target=\"_blank\">Nationwide Mobile\u00a0app</a> gives policyholders end-to-end access to core insurance functions. They can pay bills, view and manage policies and ID cards, file and track claims, and even make changes to coverage all from a smartphone. Recently, the app has been enhanced with real-time claim support features. For example, users can now track their tow truck\u2019s estimated arrival, see live status updates, and choose among service options like repair shops and rental cars directly in app. These upgrades, combined with strong consumer demand for seamless, transparent claim experiences, may account for a sharp uptick in usage and hence the four-point gain in provider rankings.</p>\n<p>\u201cWe\u2019re proud of our Technology team\u2019s commitment to continuous improvement to better serve our customers,\u201d said<a href=\"https://news.nationwide.com/mobile-app-enhancements-are-helping-better-support-members/?utm_source=chatgpt.com\" rel=\"noopener\" target=\"_blank\"> Misty Kuamoo</a>, Nationwide Chief Technology Officer, Corporate Technology. \u201cPersonally, it brings me comfort knowing that if something happens to one of my family members while they are on the road, we can track everything in real time, providing invaluable peace of mind.\u201d</p>\n<p>Safeco\u2019s four-point jump comes from more technologically-focused enhancements. The\u00a0Safeco Mobile\u00a0app allows customers to manage their insurance portfolios on the go: log in via Face ID / Touch ID, view and download ID cards, access policy documents, pay bills, contact their agent, and file and track claims (including damage photos, repair estimates, rental-vehicle coordination, and real-time status updates). A differentiator is its integration with Safeco\u2019s\u00a0<a href=\"https://wallethub.com/answers/ci/how-does-safeco-righttrack-work-1000305-2140793606/?utm_source=chatgpt.com\" rel=\"noopener\" target=\"_blank\">RightTrack </a>telematics program, which monitors driving behavior (hard braking, acceleration, mileage, night driving) and lets users earn discounts for safe driving (without penalizing for poorer behavior). In its latest version, the app has added \u201cAccident Assistance\u201d \u2014 alerting users following a detected crash and offering help \u2014 and improved visibility of repair and claims agent info. These enhancements (especially in claim-experience and telematics) may have driven higher engagement and adoption.</p>\n<p>Aetna Health\u00a0had a three-point to its industry leading score of 94. Its <a href=\"https://www.aetna.com/individuals-families/using-your-aetna-benefits/aetna-mobile.html?utm_source=chatgpt.com\" rel=\"noopener\" target=\"_blank\">app enables members</a> to manage benefits and care across a range of functions: access digital ID cards, view coverage and claims, pay or submit claims, track spending toward deductibles, find in-network providers (including via telehealth) and compare cost estimates for services. <a href=\"https://www.aetna.com/services/aetna-health.html?utm_source=chatgpt.com\" rel=\"noopener\" target=\"_blank\">More recently</a>, Aetna has emphasized improvements in search (natural-language queries), integration of \u201cCare Paths\u201d (personalized condition support), and accessibility enhancements such as dark mode. Its marketing also highlights that 83% of users find the top result within three search attempts, and that the updated navigation and layout elevate coverage visibility (e.g. real-time prior authorization) and user confidence. The app also supports capturing provider bills via photo upload to match claims, simplifying explanations of benefits.</p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/mobile-applications/2025/nationwide-and-safeco-rise-in-pymnts-app-provider-rankings/\">Nationwide and Safeco Rise in PYMNTS App Provider Rankings</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
+    "summary_text": "With the all-important holiday selling season coming up, it might be time for consumers to review their recurring debts. One of them is insurance payments, whether it\u2019s car, home or health. A check of the most recent PYMNTS app provider rankings shows some fa\u2026",
+    "category": "fintech",
+    "_permalink": "/p/2500545519/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/2500545519/",
+    "_summary_240": "With the all-important holiday selling season coming up, it might be time for consumers to review their recurring debts. One of them is insurance payments, whether it\u2019s car, home\u2026",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/2500545519/thumbnail.png"
+  },
+  {
+    "title": "Why SMBs Now See Software as the Engine of Expansion",
+    "url": "https://www.pymnts.com/smbs/2025/why-smbs-now-see-software-as-the-engine-of-expansion/",
+    "published_at": "2025-10-13T04:00:27-04:00",
+    "source": "PYMNTS",
+    "summary": "For small- to medium-sized businesses (SMBs), embedded finance is no longer a fringe feature. It\u2019s the price of admission. In addition to adoption, rising expectations are reshaping the competitive landscape. As SMBs fold payments, lending and other financial tools into their daily operations, they are demanding more from their software providers, like faster innovation, [\u2026] The post Why SMBs Now\u2026",
+    "content_html": "<p><span>For small- to medium-sized businesses (SMBs), embedded finance is no longer a fringe featur</span><span>e. </span><span>It\u2019s the price of admission.</span></p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p><span>In addition to adoption, rising expectations are reshaping the competitive landscape. </span><span>As SMBs </span><span>fold</span><span> payments, lending and other financial tools into their daily operations, they are demanding more from their software providers, </span><span>like</span><span> faster innovation, proactive service and tighter integration that mirrors what consumers expect from banks.</span></p>\n<p><span>The PYMNTS Intelligence report \u201c</span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/tracker_posts/platform-power-the-growing-importance-of-embedded-finance-to-smb-success/\" rel=\"noopener\" target=\"_blank\"><span>Platform Power: The Growing Importance of Embedded Finance to SMB Success</span></a><span>,\u201d created in collaboration with </span><a class=\"editor-rtfLink\" href=\"https://worldpay.com/en\" rel=\"noopener\" target=\"_blank\"><span>Worldpay</span></a><span>, 9 in 10 SMBs </span><span>say</span><span> access to embedded financial products </span><span>is</span><span> critical to their operations.</span></p>\n<p><span><img alt=\"\" class=\" wp-image-3120425 alignright\" height=\"190\" src=\"https://www.pymnts.com/wp-content/uploads/2025/10/Businesses-open-to-switching-software-providers.png\" width=\"308\" />What was once a differentiator is now a necessity.\u00a0</span><span>As businesses move from survival to expansion in 2025, software has become a financial command center. Vendors that can\u2019t keep up risk </span><span>being replaced</span><span>.</span></p>\n<p><span>SMBs that once viewed technology as a back-office tool now see it as the backbone of growth. Management platforms that combine operational software with embedded payments, lending and data analytics are becoming essential to running and scaling a modern business.</span></p>\n<p>Among the findings:</p>\n<ul>\n<li><span>Ninety percent of SMBs say access to embedded financial products and services is essential to </span><span>daily</span><span> operations, ranking financial tools second only to analytics among </span><span>desired</span><span> software integrations.</span></li>\n<li><span>Sixty-five percent of businesses say they are open to switching software providers, up from 55% a year ago, as they seek easier integration and better embedded features.</span></li>\n<li><span>SMBs using embedded financing tools report sales increases of 25% to 50%, underscoring the connection between digital finance capabilities and top-line growth.</span></li>\n</ul>\n<p><span>SMBs are forcing technology vendors to evolve from service providers into strategic partners. Businesses want software that can automate internal processes and improve customer engagement. They expect embedded tools to simplify credit access, consolidate data and provide insights that guide real-time decisions.</span></p>\n<p><span>That pressure is rippling across verticals. </span><span>Healthcare firms </span><span>need constant</span><span> innovation to </span><span>keep pace with regulations</span><span>.</span> <span>Retailers </span><span>want</span><span> omnichannel payment experiences that </span><span>match</span><span> consumer expectations.</span> <span>Logistics providers </span><span>seek</span><span> automation to optimize supply chains.</span></p>\n<p><span>Across sectors, SMBs are raising the bar, and 90% now want their tech providers to proactively alert them to new solutions, a signal that set-it-and-forget-it software no longer suffices.</span></p>\n<p><span>This new standard is transforming customer loyalty </span><span>dynamics</span><span>.</span> <span>While 65% are willing to switch, those who are satisfied with embedded payment experiences tend to stay put, a finding that underscores </span><span>how sticky</span><span> well-executed embedded finance </span><span>can be</span><span>.</span></p>\n<p><span>Nearly half of SMBs say they\u2019re unlikely to switch providers when payment tools meet expectations, up from 39% in 2023.</span></p>\n<p><span>Embedded finance, in other words, has become a retention strategy as much as a revenue driver. As Worldpay executive </span><a class=\"editor-rtfLink\" href=\"https://www.linkedin.com/in/mattdowns/\" rel=\"noopener\" target=\"_blank\"><span>Matt Downs</span></a><span> says in the report, the platforms that thrive \u201caren\u2019t just offering basic functionality; they\u2019re embedding comprehensive financial capabilities so seamlessly that their clients can\u2019t imagine operating without them.\u201d</span></p>\n<p><span>SMBs are no longer passive consumers of software. They are shaping its evolution, demanding tools that anticipate their financial needs, reduce friction and fuel growth. For providers, staying ahead will mean thinking less like coders and more like bankers.</span></p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/smbs/2025/why-smbs-now-see-software-as-the-engine-of-expansion/\">Why SMBs Now See Software as the Engine of Expansion</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
+    "summary_text": "For small- to medium-sized businesses (SMBs), embedded finance is no longer a fringe feature. It\u2019s the price of admission. In addition to adoption, rising expectations are reshaping the competitive landscape. As SMBs fold payments, lending and other financial\u2026",
+    "category": "fintech",
+    "_permalink": "/p/72d07dfb1f/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/72d07dfb1f/",
+    "_summary_240": "For small- to medium-sized businesses (SMBs), embedded finance is no longer a fringe feature. It\u2019s the price of admission. In addition to adoption, rising expectations are\u2026",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/72d07dfb1f/thumbnail.png"
+  },
+  {
+    "title": "The AI trade: do geopolitics matter?",
+    "url": "https://www.ft.com/content/45866e90-008d-41b7-b71f-61892d401700",
+    "published_at": "2025-10-13T01:30:03-04:00",
+    "source": "Financial Times \u2014 Technology",
+    "summary": "Plus, scepticism on the dealmaking rebound",
+    "content_html": "",
+    "summary_text": "Plus, scepticism on the dealmaking rebound",
+    "category": "ai",
+    "_permalink": "/p/64c23ba999/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/64c23ba999/",
+    "_summary_240": "Plus, scepticism on the dealmaking rebound",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/64c23ba999/thumbnail.png"
+  },
+  {
+    "title": "Crypto Bounces Back From Record Wipeout on Easing Trade Fears - Bloomberg.com",
+    "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxObHJ4d1pDcVVRY1hubzNvRW9odWQybVFyYVVMVFp6NmxBVkF3YVo5MmRMdTZpMzRJYWZXZjQ0T0RHQ3RKaVJJRERDbXQ0Rm9EQkxQeTZpbUdJVUtiaHgyYlhYd2ROSlYzVTlwbG4wWlJSeEN6VG9Jd2hWTU90eElaV0M1MjNJNzM2SWhubUpyMDc0M3FYX0pNUUNLa0pXZFVQS3ZZZUJXMUgyX3B5MWlqU0ln?oc=5&hl=en-US&gl=US&ceid=US:en",
+    "published_at": "2025-10-13T00:20:00-04:00",
+    "source": "Google",
+    "summary": "Crypto Bounces Back From Record Wipeout on Easing Trade Fears Bloomberg.com",
+    "content_html": "",
+    "summary_text": "Crypto Bounces Back From Record Wipeout on Easing Trade Fears Bloomberg.com",
+    "category": "fintech",
+    "_permalink": "/p/e610e32d55/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/e610e32d55/",
+    "_summary_240": "Crypto Bounces Back From Record Wipeout on Easing Trade Fears Bloomberg.com",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/e610e32d55/thumbnail.png"
+  },
+  {
     "title": "Strava plots Wall Street debut as running boom boosts fitness app",
     "url": "https://www.ft.com/content/62079f46-90c0-4c87-8bf2-ee5085627b99",
     "published_at": "2025-10-13T00:00:06-04:00",
@@ -12,34 +110,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/0111e344ac/",
     "_summary_240": "CEO Michael Martin targets US IPO to raise capital for deals to keep Strava ahead of rivals including Garmin and Nike",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/0111e344ac/thumbnail.png"
-  },
-  {
-    "title": "China Software Firm\u2019s Stock Surges on Government Use of Product - Bloomberg.com",
-    "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOSDhVLUxVUmRnREs0NzJvdTBCOGdrVE9HVjc2LUpUTm80ci1YelZ2TDI2a0I2bGVZY2VzYzUxVC1KeWZHRnhVUXVET3RsQVRwY2tDUXBXS1R3aVp2SmNuNDFsWW5xZDdKNDNwcjVYdUxDYV8zLXNvMnhEWUpYXy1QenNnYW5ralVkVDROVmZUM3BrcnpfdDZGdjd0TXdZd3h4MVprczVxbUxFRENhVmI4b1NpS1g?oc=5&hl=en-US&gl=US&ceid=US:en",
-    "published_at": "2025-10-12T22:39:00-04:00",
-    "source": "Google",
-    "summary": "China Software Firm\u2019s Stock Surges on Government Use of Product Bloomberg.com",
-    "content_html": "",
-    "summary_text": "China Software Firm\u2019s Stock Surges on Government Use of Product Bloomberg.com",
-    "category": "software",
-    "_permalink": "/p/20da34808c/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/20da34808c/",
-    "_summary_240": "China Software Firm\u2019s Stock Surges on Government Use of Product Bloomberg.com",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/20da34808c/thumbnail.png"
-  },
-  {
-    "title": "Crypto Bounces Back From Record Wipeout on Easing Trade Fears - Bloomberg.com",
-    "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxObHJ4d1pDcVVRY1hubzNvRW9odWQybVFyYVVMVFp6NmxBVkF3YVo5MmRMdTZpMzRJYWZXZjQ0T0RHQ3RKaVJJRERDbXQ0Rm9EQkxQeTZpbUdJVUtiaHgyYlhYd2ROSlYzVTlwbG4wWlJSeEN6VG9Jd2hWTU90eElaV0M1MjNJNzM2SWhubUpyMDc0M3FYX0pNUUNLa0pXZFVQS3ZZZUJXMUgyX3B5MWlqU0ln?oc=5&hl=en-US&gl=US&ceid=US:en",
-    "published_at": "2025-10-12T22:25:00-04:00",
-    "source": "Google",
-    "summary": "Crypto Bounces Back From Record Wipeout on Easing Trade Fears Bloomberg.com",
-    "content_html": "",
-    "summary_text": "Crypto Bounces Back From Record Wipeout on Easing Trade Fears Bloomberg.com",
-    "category": "fintech",
-    "_permalink": "/p/f095fa3c4f/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/f095fa3c4f/",
-    "_summary_240": "Crypto Bounces Back From Record Wipeout on Easing Trade Fears Bloomberg.com",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/f095fa3c4f/thumbnail.png"
   },
   {
     "title": "Ethena Stablecoin\u2019s Dollar Peg Slips Briefly Amid Crypto Upheaval",
@@ -84,34 +154,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/3601bc0331/thumbnail.png"
   },
   {
-    "title": "SEC Relaxes Rules for IPO Prep Amid Government Shutdown",
-    "url": "https://www.pymnts.com/news/ipo/2025/sec-relaxes-rules-for-ipo-prep-amid-government-shutdown/",
-    "published_at": "2025-10-12T18:35:58-04:00",
-    "source": "PYMNTS",
-    "summary": "American regulators are making it easier for companies to go public during the government shutdown. The last time there was a government shutdown, in October 2023, companies scrambled to get their initial public offerings (IPOs) off the ground. Businesses are typically blocked from listing on Wall Street during a shutdown, as Congress hasn\u2019t approved [\u2026] The post SEC Relaxes Rules for IPO Prep Am\u2026",
-    "content_html": "<p><span>American regulators are </span><span>making it easier</span><span> for companies to go public during the government shutdown.</span></p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p><span>The last time there was a government shutdown, in October 2023, companies </span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/news/ipo/2023/report-companies-rush-to-file-ipos-amid-looming-government-shutdown/\" rel=\"noopener\" target=\"_blank\"><span>scrambled</span></a><span> to </span><span>get</span><span> their initial public offerings (IPOs) </span><span>off the ground</span><span>.</span><span>\u00a0</span></p>\n<p><span>Businesses are typically blocked from listing on Wall Street during a </span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/economy/2025/trade-group-says-government-shutdown-costs-travel-industry-1-billion-a-week/\" rel=\"noopener\" target=\"_blank\"><span>shutdown</span></a><span>, as Congress hasn\u2019t approved funding that would allow regulators to approve their IPO plans.</span></p>\n<p><span>Still, businesses can allow their statements to become effective automatically, which involves determining their IPO pricing 20 days before going public </span><span>rather</span><span> than finalizing it the night before </span><span>following</span><span> a review by the </span><span>Securities and Exchange Commission</span><span> (SEC).</span></p>\n<p><span>In an </span><a class=\"editor-rtfLink\" href=\"https://www.sec.gov/newsroom/whats-new/updated-division-corporation-finance-actions-advance-potential-government-shutdown-october-09-2025\" rel=\"noopener\" target=\"_blank\"><span>announcement</span></a><span> posted to its website Thursday (Oct. 9), the Wall Street regulator said that because officials were not able to go over registration statements, the SEC would not look to penalize companies that left out pricing information from prospectuses filed during the shutdown and then </span><span>list</span><span> either during or after the shutdown.</span></p>\n<p><span>The SEC\u2019s change was flagged in a </span><a class=\"editor-rtfLink\" href=\"https://www.reuters.com/legal/government/wall-street-regulator-eases-ipo-path-during-government-shutdown-2025-10-09/\" rel=\"noopener\" target=\"_blank\"><span>report</span></a><span> by Reuters, which also noted a client alert from law firm Davis Polk </span><span>which</span><span> said the change had occurred in the wake of \u201cdiscussions\u201d the firm and others had held with the commission.</span></p>\n<p><span>The change comes as the IPO market for the FinTech space \u201chas roared back to life in 2025 after several quiet years,\u201d as PYMNTS wrote last week.</span></p>\n<p><span>However, that report said, there is </span><span>not the same</span><span> speculative surge present that was the hallmark of the last cycle. Early offerings from </span><a class=\"editor-rtfLink\" href=\"https://www.klarna.com/us/\" rel=\"noopener\" target=\"_blank\"><span>Klarna</span></a><span>, </span><a class=\"editor-rtfLink\" href=\"https://www.figure.com/\" rel=\"noopener\" target=\"_blank\"><span>Figure Technology Solutions</span></a><span>, </span><a class=\"editor-rtfLink\" href=\"https://www.circle.com/\" rel=\"noopener\" target=\"_blank\"><span>Circle</span></a> <span>and</span> <a class=\"editor-rtfLink\" href=\"https://www.chime.com/\" rel=\"noopener\" target=\"_blank\"><span>Chime</span></a><span> have largely been received with </span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/news/ipo/2025/figure-takes-in-787-million-after-pricing-ipo-at-25-per-share/\" rel=\"noopener\" target=\"_blank\"><span>optimism</span></a><span> and </span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/cryptocurrency/2025/circle-is-americas-first-publicly-traded-stablecoin-issuer-now-what/\" rel=\"noopener\" target=\"_blank\"><span>double-digit increases</span></a><span> from their offering prices, amid a sea change for these companies\u2019 business models.</span></p>\n<p><span>Before this year, \u201cI think most people were looking at FinTechs as firms that were trying to grow as quickly as possible to try to get as large a population\u201d of customers in place as possible, </span><a class=\"editor-rtfLink\" href=\"https://www.willkie.com/professionals/b/best-edward\" rel=\"noopener\" target=\"_blank\"><span>Edward Best</span></a><span>, co-chair of the capital markets practice at </span><a class=\"editor-rtfLink\" href=\"https://www.willkie.com/\" rel=\"noopener\" target=\"_blank\"><span>Willkie Farr &amp; Gallagher</span></a><span>, said in an interview with PYMNTS. \u201cThey were chasing numbers, and many of them were unprofitable for </span><span>a number of</span><span> years.\u201d</span></p>\n<p><span>He added that this year\u2019s listings and the investor response reflect a fundamentally different environment, with an \u201coverall market\u201d that \u201cis certainly much more mature.\u201d\u00a0</span></p>\n<p><span>Investors are focused on profitability and business plans that stress a rational approach to their respective markets, where, as Best put </span><span>it,</span><span> \u201cWe want to see growth, but we\u2019d like to see it be sustainable.\u201d</span></p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/news/ipo/2025/sec-relaxes-rules-for-ipo-prep-amid-government-shutdown/\">SEC Relaxes Rules for IPO Prep Amid Government Shutdown</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
-    "summary_text": "American regulators are making it easier for companies to go public during the government shutdown. The last time there was a government shutdown, in October 2023, companies scrambled to get their initial public offerings (IPOs) off the ground. Businesses are\u2026",
-    "category": "fintech",
-    "_permalink": "/p/84a1b9b7d9/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/84a1b9b7d9/",
-    "_summary_240": "American regulators are making it easier for companies to go public during the government shutdown. The last time there was a government shutdown, in October 2023, companies\u2026",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/84a1b9b7d9/thumbnail.png"
-  },
-  {
-    "title": "Apple Looks to Acquire Tech and Expertise From Prompt AI",
-    "url": "https://www.pymnts.com/apple/2025/apple-looks-to-acquire-tech-and-expertise-from-prompt-ai/",
-    "published_at": "2025-10-12T17:12:39-04:00",
-    "source": "PYMNTS",
-    "summary": "Apple is reportedly preparing to acquire talent and technology from computer vision startup Prompt AI. The tech giant was in late stage talks on the deal, CNBC reported Friday (Oct. 10), with Prompt\u2019s leadership informing employees of the pending transaction last week. Those employees were told that those who did not end up joining [\u2026] The post Apple Looks to Acquire Tech and Expertise From Promp\u2026",
-    "content_html": "<p><a class=\"editor-rtfLink\" href=\"https://www.apple.com/\" rel=\"noopener\" target=\"_blank\"><span>Apple</span></a><span> is reportedly preparing to acquire talent and technology from computer vision startup </span><a class=\"editor-rtfLink\" href=\"https://www.cnbc.com/2025/10/10/apple-nears-deal-to-acquire-talent-tech-from-ai-startup-prompt-ai.html\" rel=\"noopener\" target=\"_blank\"><span>Prompt AI</span></a><span>.</span></p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p><span>The tech giant was in </span><span>late stage</span><span> talks on the deal, CNBC </span><a class=\"editor-rtfLink\" href=\"https://www.cnbc.com/2025/06/10/zuckerberg-makes-metas-biggest-bet-on-ai-14-billion-scale-ai-deal.html\" rel=\"noopener\" target=\"_blank\"><span>reported</span></a><span> Friday (Oct. 10), with Prompt\u2019s leadership informing employees of the pending transaction last week.</span></p>\n<p><span>Those employees were told that those </span><span>who did not end up joining Apple </span><span>will</span><span> be paid a reduced salary</span><span>, </span><span>and encouraged to apply for open roles at the company, CNBC added, citing audio from the meeting </span><span>that was</span><span> accessed by the network.</span></p>\n<p><span>Executives also </span><span>told</span><span> the employees that Prompt had been approached by other potential buyers, including </span><a class=\"editor-rtfLink\" href=\"https://x.ai/\" rel=\"noopener\" target=\"_blank\"><span>xAI</span></a><span> and </span><a class=\"editor-rtfLink\" href=\"https://neuralink.com/\" rel=\"noopener\" target=\"_blank\"><span>Neuralink</span></a><span>, both </span><span>Elon</span><span> Musk </span><span>companies</span><span>.</span></p>\n<p><span>Founded in 2023, Prompt\u2019s flagship app is Seemour, which connects to home security cameras to help them detect specific people, pets </span><span>and and</span><span> objects around a household, and to send alerts and text-based descriptions when unusual activity occurs.</span></p>\n<p><span>According to CNBC, Prompt Co-Founder and CEO\u00a0<a href=\"https://www.linkedin.com/in/tete-xiao-ba2103120/\" rel=\"noopener\" target=\"_blank\">Tete Xiao</a> told employees at the meeting that although the app and the company\u2019s </span><span>tech </span><span>were</span><span> performing well, its business model i</span><span>s</span><span> struggling.</span></p>\n<p><span>The company is shuttering the Seemour app</span><span>, </span><span>and will inform users </span><span>their</span><span> data will be deleted and privacy protected, executives said.</span></p>\n<p><span>PYMNTS has contacted Apple and Prompt for comment </span><span>but</span><span> has not yet gotten a reply.</span></p>\n<p><span>The report noted that Apple\u2019s planned deal is part of a larger trend </span><span>of</span><span> U.S. tech giants </span><span>employing</span><span> \u201cacquihires\u201d to </span><span>pull in</span><span> artificial intelligence (AI) talent.</span><span> Other deals in this area include </span><a class=\"editor-rtfLink\" href=\"https://www.meta.com/?srsltid=AfmBOoqmbGdD6wWjWdBs-klKoGl1-TC3h_8c-pO64HFC0Y6tAH4GoAPF\" rel=\"noopener\" target=\"_blank\"><span>Meta\u2019s</span></a> <a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/artificial-intelligence-2/2025/meta-reportedly-exploring-10-billion-plus-investment-in-scale-ai/\" rel=\"noopener\" target=\"_blank\"><span>$14.3 billion investment in</span></a><span> Scale AI </span><span>that</span><span> brought</span><span> with it the company\u2019s founder and other executives, and Google\u2019s </span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/cpi-posts/google-lands-key-ai-talent-from-windsurf-in-2-4-billion-licensing-deal/\" rel=\"noopener\" target=\"_blank\"><span>$2.4 billion deal</span></a><span> for </span><a class=\"editor-rtfLink\" href=\"https://windsurf.com/\" rel=\"noopener\" target=\"_blank\"><span>Windsurf\u2019s</span></a><span> chief executive and other leaders.</span></p>\n<p><span>In other Apple AI news, PYMNTS wrote recently about the company\u2019s efforts to create a </span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/apple/2025/apple-trails-rivals-with-chatgpt-like-siri-app-still-in-testing/\" rel=\"noopener\" target=\"_blank\"><span>ChatGPT-like iPhone app</span></a><span> to test a revamped version of Siri. Still, the tool is restricted to internal testing only and will not be released to consumers.</span></p>\n<p><span>\u201cThe cautious stance was evident at the iPhone 17 launch, where executives emphasized chip performance and design upgrades,\u201d PYMNTS wrote.\u00a0</span></p>\n<p><span>\u201cAI features such as live translation in Messages, FaceTime, and visual recognition in Photos were mentioned briefly, but most had been previewed months earlier at Apple\u2019s developer conference. The shift </span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/apple/2025/apple-iphone-17-sees-strong-sales-first-day-availability/\" rel=\"noopener\" target=\"_blank\"><span>marked a reversal</span></a><span> from the iPhone 16 debut, when AI took center stage before delays slowed deployment.\u201d</span></p>\n<p><span>Apple\u2019s prolonged testing state could leave it behind when it comes to influencing consumer expectations, with recent reports showing the company\u2019s Siri losing relevance.\u00a0</span></p>\n<p><span>\u201cBy contrast, rivals are collecting vast consumer data from products already deployed at scale,\u201d PYMNTS added.</span></p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/apple/2025/apple-looks-to-acquire-tech-and-expertise-from-prompt-ai/\">Apple Looks to Acquire Tech and Expertise From Prompt AI</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
-    "summary_text": "Apple is reportedly preparing to acquire talent and technology from computer vision startup Prompt AI. The tech giant was in late stage talks on the deal, CNBC reported Friday (Oct. 10), with Prompt\u2019s leadership informing employees of the pending transaction \u2026",
-    "category": "fintech",
-    "_permalink": "/p/036531fe51/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/036531fe51/",
-    "_summary_240": "Apple is reportedly preparing to acquire talent and technology from computer vision startup Prompt AI. The tech giant was in late stage talks on the deal, CNBC reported Friday\u2026",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/036531fe51/thumbnail.png"
-  },
-  {
     "title": "Deloitte: AI Promises Productivity. It's Delivering \u2018Workslop\u2019 - Bloomberg.com",
     "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQUjJJZTlnbnI5eHdkbGRNckxBZXZ0RXBfQ25HWmp6OFZJYldJWDVpOHBMTi1HaDZRV0JOTDJ2T0lNRWZ0ZVhkOTJ1U3o0U0xVUG1UZHdqSjNzbERhdUE1cUpKTDFQS2xpMDhvaUR1cGh4MDFlTU54b3NIaVpuTHZGbHJVY0FRRTh5TGpYaWRSUlFSdktlSnR1bjMwaFZHQmNHYjhmZXFhXzJvaTcxN0xsZVln?oc=5&hl=en-US&gl=US&ceid=US:en",
     "published_at": "2025-10-12T16:00:10-04:00",
@@ -120,16 +162,6 @@
     "content_html": "",
     "summary_text": "Deloitte: AI Promises Productivity. It's Delivering \u2018Workslop\u2019 Bloomberg.com",
     "category": "ai"
-  },
-  {
-    "title": "Stock Bubble Dread Grips Central Bankers in Washington - Bloomberg.com",
-    "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOT0FFdHRWVnh1c2NQaFdqVDJvdUlSczdsQWxiZjJJTENCWHZTbjJSRmRyMjZCRkxVd1JqT0RkMnNTZmRNaWNqNTBYUFZKeS1JZlJnTzctTEdNMzNJejNzM3FPRmh4anBGMG1WREU1M0JhdXFEUzlvbEYySXhhQklpbXpsTkJFOE1vV1FwcE14R0E5akxXZmg4bl80bkhMZEs2MmZhc0swbzc?oc=5&hl=en-US&gl=US&ceid=US:en",
-    "published_at": "2025-10-12T15:11:33-04:00",
-    "source": "Google",
-    "summary": "Stock Bubble Dread Grips Central Bankers in Washington Bloomberg.com",
-    "content_html": "",
-    "summary_text": "Stock Bubble Dread Grips Central Bankers in Washington Bloomberg.com",
-    "category": "fintech"
   },
   {
     "title": "We keep talking about AI agents, but do we ever know what they are?",
@@ -146,6 +178,20 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/eed7b78c9e/thumbnail.png"
   },
   {
+    "title": "Hostage releases and upbeat US bank earnings herald a better few days - Financial Times",
+    "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9WamhLSWVoeFRHam5EYXFDZkhucHFtSFN0YWlhT2lhMjRtQjktb0Jlc3NQOHNyWmNFQVo5dTBfNnJJSmVGdDVubU9ISmdkVlh0Uy1fSG12MVZjblZoeWVvYTJEdHE0WWhLaUV0V29TY08?oc=5&hl=en-US&gl=US&ceid=US:en",
+    "published_at": "2025-10-12T13:15:01-04:00",
+    "source": "Google",
+    "summary": "Hostage releases and upbeat US bank earnings herald a better few days Financial Times",
+    "content_html": "",
+    "summary_text": "Hostage releases and upbeat US bank earnings herald a better few days Financial Times",
+    "category": "fintech",
+    "_permalink": "/p/c5a3080672/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/c5a3080672/",
+    "_summary_240": "Hostage releases and upbeat US bank earnings herald a better few days Financial Times",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/c5a3080672/thumbnail.png"
+  },
+  {
     "title": "Business school case study: banking on the unbanked - Financial Times",
     "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBtZmJBTW5QNU1oXy1HYU1YVzNIbU9haG1DdkNWV1E4Z2N4MENTM2xBc3REX1FBdEtPTjg4YVVNMXY4S0VCZlp2cHNudk5Wa25XMGlxeGV4NkRwNFB1NnRKa29iazN0ZEtQR2w1ZjRWdmw?oc=5&hl=en-US&gl=US&ceid=US:en",
     "published_at": "2025-10-12T13:00:03-04:00",
@@ -158,6 +204,20 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/f0eafca989/",
     "_summary_240": "Business school case study: banking on the unbanked Financial Times",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/f0eafca989/thumbnail.png"
+  },
+  {
+    "title": "Why AI Will Widen the Gap Between Superstars and Everybody Else - The Wall Street Journal",
+    "url": "https://news.google.com/rss/articles/CBMijgNBVV95cUxPLXlQQ1JucnRGS29ncmEwQWx4Q0hFNjBzNnNXcS1iUGZ3VFlHbFhYTXdWWThvdTdCUHZCTnpMaUV6RWZWdm1YRE1UcUZGc3otZElOOWNCQ1gyRW11ZnYtdHpaejd5dkdEc1JOOEJRZlBUajE2b0ZFZzhybFJjLWk0UGtxY0JhZWtxMWd6QmxpbDBxN2Z3MnRSY2h6RXRhaTQxSEhIR3F0QWpUc2FXMGZSUEVKcjJyWnVORFBYMnpTMHhvZm95ZkhSTzk5ODYtWnNXZDBWdG8xcjRydVdQTFYxQWpXLVBXVU53bmRFc0xUTi1MYmd5TG9ta0NPN0M4VEhFaEpDT1hEY0NvT1ZUbW9vU2hGU0w4U3dPVWh4dGFCcWtqdWJMUzJEUFBLeXNFMlRoU2hjY01VNnM4WkhkcDF2a0R3QTZyNUczeXkwdGZEMEs5WjRRVm16NkE5OG5ZTENySTBsaXZrSnJzNnNzb3dHZThrU3ZkQ3ZGZUtLU0o4c0RoX0d0Zy1SdDRMZkljdw?oc=5&hl=en-US&gl=US&ceid=US:en",
+    "published_at": "2025-10-12T10:00:00-04:00",
+    "source": "Google",
+    "summary": "Why AI Will Widen the Gap Between Superstars and Everybody Else The Wall Street Journal",
+    "content_html": "",
+    "summary_text": "Why AI Will Widen the Gap Between Superstars and Everybody Else The Wall Street Journal",
+    "category": "ai",
+    "_permalink": "/p/a256d9d361/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/a256d9d361/",
+    "_summary_240": "Why AI Will Widen the Gap Between Superstars and Everybody Else The Wall Street Journal",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/a256d9d361/thumbnail.png"
   },
   {
     "title": "Police are asking kids to stop pulling AI homeless man prank",
@@ -181,11 +241,7 @@
     "summary": "World Economy Faces Triple Risk of Tariffs, AI Bubble and Soaring Debt Bloomberg.com",
     "content_html": "",
     "summary_text": "World Economy Faces Triple Risk of Tariffs, AI Bubble and Soaring Debt Bloomberg.com",
-    "category": "ai",
-    "_permalink": "/p/d578ecd80a/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/d578ecd80a/",
-    "_summary_240": "World Economy Faces Triple Risk of Tariffs, AI Bubble and Soaring Debt Bloomberg.com",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/d578ecd80a/thumbnail.png"
+    "category": "ai"
   },
   {
     "title": "ChatGPT is becoming an everything app",
@@ -219,7 +275,11 @@
     "summary": "Your best data science team just spent six months building a model that predicts customer churn with 90% accuracy. It\u2019s sitting on a server, unused. Why? Because it\u2019s been stuck in a risk review queue for a very long period of time, waiting for a committee that doesn\u2019t understand stochastic models to sign off. This isn\u2019t a hypothetical \u2014 it\u2019s the daily reality in most large companies. In AI, the \u2026",
     "content_html": "",
     "summary_text": "Your best data science team just spent six months building a model that predicts customer churn with 90% accuracy. It\u2019s sitting on a server, unused. Why? Because it\u2019s been stuck in a risk review queue for a very long period of time, waiting for a committee th\u2026",
-    "category": "ai"
+    "category": "ai",
+    "_permalink": "/p/f9bb25e065/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/f9bb25e065/",
+    "_summary_240": "Your best data science team just spent six months building a model that predicts customer churn with 90% accuracy. It\u2019s sitting on a server, unused. Why? Because it\u2019s been stuck\u2026",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/f9bb25e065/thumbnail.png"
   },
   {
     "title": "Elon Musk\u2019s xAI joins race to build \u2018world models\u2019 to power video games - Financial Times",
@@ -248,6 +308,20 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/13165ccae4/",
     "_summary_240": "Artificial intelligence group hired staff from Nvidia to work on advanced AI that can design and navigate physical spaces",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/13165ccae4/thumbnail.png"
+  },
+  {
+    "title": "Stock Bubble Dread Grips Central Bankers in Washington - Bloomberg.com",
+    "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOT0FFdHRWVnh1c2NQaFdqVDJvdUlSczdsQWxiZjJJTENCWHZTbjJSRmRyMjZCRkxVd1JqT0RkMnNTZmRNaWNqNTBYUFZKeS1JZlJnTzctTEdNMzNJejNzM3FPRmh4anBGMG1WREU1M0JhdXFEUzlvbEYySXhhQklpbXpsTkJFOE1vV1FwcE14R0E5akxXZmg4bl80bkhMZEs2MmZhc0swbzc?oc=5&hl=en-US&gl=US&ceid=US:en",
+    "published_at": "2025-10-11T16:00:00-04:00",
+    "source": "Google",
+    "summary": "Stock Bubble Dread Grips Central Bankers in Washington Bloomberg.com",
+    "content_html": "",
+    "summary_text": "Stock Bubble Dread Grips Central Bankers in Washington Bloomberg.com",
+    "category": "fintech",
+    "_permalink": "/p/6a4a95657a/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/6a4a95657a/",
+    "_summary_240": "Stock Bubble Dread Grips Central Bankers in Washington Bloomberg.com",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/6a4a95657a/thumbnail.png"
   },
   {
     "title": "Is vibe coding ruining a generation of engineers? - VentureBeat",
@@ -285,7 +359,11 @@
     "summary": "Third-Largest Stablecoin Briefly Loses Dollar Peg in Crypto Rout Bloomberg.com",
     "content_html": "",
     "summary_text": "Third-Largest Stablecoin Briefly Loses Dollar Peg in Crypto Rout Bloomberg.com",
-    "category": "fintech"
+    "category": "fintech",
+    "_permalink": "/p/854ccc3782/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/854ccc3782/",
+    "_summary_240": "Third-Largest Stablecoin Briefly Loses Dollar Peg in Crypto Rout Bloomberg.com",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/854ccc3782/thumbnail.png"
   },
   {
     "title": "How Churners Earn Money By Regularly Signing Up for Credit Cards - The New York Times",
@@ -310,26 +388,6 @@
     "content_html": "",
     "summary_text": "I\u2019ve seen the future of shopping \u2014 and I\u2019m sold on AI Financial Times",
     "category": "ai"
-  },
-  {
-    "title": "\u2018They wanted me to make myself obsolete\u2019: translators find themselves at the sharp end of AI - Financial Times",
-    "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9yZ3Fra0I1bV9QT3BBVWJ5MGlwVUhmM0QxSC1vckxaa2p0S0k0WXh2UWlwMGc5elpBQUE5MzZFSFJrYVlEX0o5Y1JmQzFlYklKWFdjWUVQY3hDLWtoOVN0NGxUSTJLMEk0U1g0LTBRSU4?oc=5&hl=en-US&gl=US&ceid=US:en",
-    "published_at": "2025-10-11T00:00:39-04:00",
-    "source": "Google",
-    "summary": "\u2018They wanted me to make myself obsolete\u2019: translators find themselves at the sharp end of AI Financial Times",
-    "content_html": "",
-    "summary_text": "\u2018They wanted me to make myself obsolete\u2019: translators find themselves at the sharp end of AI Financial Times",
-    "category": "ai"
-  },
-  {
-    "title": "The Score: Delta, AMD, Tesla and More Stocks That Defined the Week - The Wall Street Journal",
-    "url": "https://news.google.com/rss/articles/CBMikwNBVV95cUxQeENQR0JEWmZUdzdEejI0dk1QT29BSGhfazZvU3hGRjNxX1duQ1dyS2JQVTkxUkl0UHAxcUFYeUZ0MXI3T2dRSmd3WGFqYTR6MGdrYTRzX3RsUW1vNGJja0ZoNGRkdHN6UzhZcElSZWFTeVZNYndpeDY1aXFiVWZ2LTZxblJXSTFYMkxBR0VRTi01MmpRSjJBV1JMZTQ3ZGNiZ1ZHbld3ZkdxWEdVY1hSNUpPenoydFRfc1d5d1dxR2wwTXZtbElVc3JQd25lam1pNkJUb1VsVWgySW5FVGQzYjBZaWd1SHJjR21QM21SekpxekctZGR5TTR1X2RnWC1HX0VpNF9TUE9fN3E0bS0wM3JDdVBGamlYdjZQd01ydXQxeXRSbFZ3UXMzZThEcXRnNWhoa2dmZVN6WmowNDR6aVBtWFNvOFdSejVCMjNVOHVmbk9vMHRyWWhtMFVqN3lNZ28zRGUwMDBsSFp0U0tDcklSTHhienpvaWloSHIyVVB2aWpNb3B6bXZfOUJ5TG5vcFZF?oc=5&hl=en-US&gl=US&ceid=US:en",
-    "published_at": "2025-10-10T17:06:00-04:00",
-    "source": "Google",
-    "summary": "The Score: Delta, AMD, Tesla and More Stocks That Defined the Week The Wall Street Journal",
-    "content_html": "",
-    "summary_text": "The Score: Delta, AMD, Tesla and More Stocks That Defined the Week The Wall Street Journal",
-    "category": "fintech"
   },
   {
     "title": "Goldman, Santander Among Banks Exploring Blockchain-Based Money - Bloomberg.com",
@@ -367,7 +425,11 @@
     "summary": "Adversaries from cybercrime gangs to nation-state cyberattack squads are fine-tuning weaponized AI with the goal of defeating new patches in 3 days or less. The quicker the attack, the more time to explore a victim\u2019s network, exfiltrate data, install ransomware or set up reconnaissance that will last for months or years. Traditional, manual patching is now a liability, rendering enter organizatio\u2026",
     "content_html": "",
     "summary_text": "Adversaries from cybercrime gangs to nation-state cyberattack squads are fine-tuning weaponized AI with the goal of defeating new patches in 3 days or less. The quicker the attack, the more time to explore a victim\u2019s network, exfiltrate data, install ransomwa\u2026",
-    "category": "ai"
+    "category": "ai",
+    "_permalink": "/p/aa6d31af73/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/aa6d31af73/",
+    "_summary_240": "Adversaries from cybercrime gangs to nation-state cyberattack squads are fine-tuning weaponized AI with the goal of defeating new patches in 3 days or less. The quicker the\u2026",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/aa6d31af73/thumbnail.png"
   },
   {
     "title": "Debt Investors Grow Warier of Companies Getting Hit By AI - Bloomberg.com",
@@ -377,7 +439,11 @@
     "summary": "Debt Investors Grow Warier of Companies Getting Hit By AI Bloomberg.com",
     "content_html": "",
     "summary_text": "Debt Investors Grow Warier of Companies Getting Hit By AI Bloomberg.com",
-    "category": "ai"
+    "category": "ai",
+    "_permalink": "/p/80af4935c0/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/80af4935c0/",
+    "_summary_240": "Debt Investors Grow Warier of Companies Getting Hit By AI Bloomberg.com",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/80af4935c0/thumbnail.png"
   },
   {
     "title": "AI\u2019s Growth Leaves Financial Regulators Struggling to Catch Up - Bloomberg.com",
@@ -387,21 +453,25 @@
     "summary": "AI\u2019s Growth Leaves Financial Regulators Struggling to Catch Up Bloomberg.com",
     "content_html": "",
     "summary_text": "AI\u2019s Growth Leaves Financial Regulators Struggling to Catch Up Bloomberg.com",
-    "category": "fintech"
+    "category": "fintech",
+    "_permalink": "/p/da887e5ee4/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/da887e5ee4/",
+    "_summary_240": "AI\u2019s Growth Leaves Financial Regulators Struggling to Catch Up Bloomberg.com",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/da887e5ee4/thumbnail.png"
   },
   {
     "title": "Fintech Start-Ups and Investment Firms Are Battling Over Your 401(k) - The New York Times",
     "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOUV9IRVh2WjI5UlhkejRkTlFYT2FhbUpLcG12enlUWDRLbzEtTHF6b1RfLWpkVlJMT1hvRnY0U1JVT2RCaU5haXNvdkFJY0xRTFdoVmp3OXY0ck4yTndPMXZhYkNmN1A3LUNreWlyQjJlbDNMYXJiTEE3LUlSZ2w2THNKMWNPNEwzdEE?oc=5&hl=en-US&gl=US&ceid=US:en",
-    "published_at": "2025-10-10T09:00:12-04:00",
+    "published_at": "2025-10-10T09:00:13-04:00",
     "source": "Google",
     "summary": "Fintech Start-Ups and Investment Firms Are Battling Over Your 401(k) The New York Times",
     "content_html": "",
     "summary_text": "Fintech Start-Ups and Investment Firms Are Battling Over Your 401(k) The New York Times",
     "category": "fintech",
-    "_permalink": "/p/bc1c95cf3d/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/bc1c95cf3d/",
+    "_permalink": "/p/1d8de166c3/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/1d8de166c3/",
     "_summary_240": "Fintech Start-Ups and Investment Firms Are Battling Over Your 401(k) The New York Times",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/bc1c95cf3d/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/1d8de166c3/thumbnail.png"
   },
   {
     "title": "Together AI's ATLAS adaptive speculator delivers 400% inference speedup by learning from workloads in real-time",
@@ -411,11 +481,7 @@
     "summary": "Enterprises expanding AI deployments are hitting an invisible performance wall. The culprit? Static speculators that can't keep up with shifting workloads. Speculators are smaller AI models that work alongside large language models during inference. They draft multiple tokens ahead, which the main model then verifies in parallel. This technique (called speculative decoding) has become essential f\u2026",
     "content_html": "",
     "summary_text": "Enterprises expanding AI deployments are hitting an invisible performance wall. The culprit? Static speculators that can't keep up with shifting workloads. Speculators are smaller AI models that work alongside large language models during inference. They draf\u2026",
-    "category": "ai",
-    "_permalink": "/p/a5c96797cd/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/a5c96797cd/",
-    "_summary_240": "Enterprises expanding AI deployments are hitting an invisible performance wall. The culprit? Static speculators that can't keep up with shifting workloads. Speculators are\u2026",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/a5c96797cd/thumbnail.png"
+    "category": "ai"
   },
   {
     "title": "ChatGPT\u2019s Platform Play + a Trillion-Dollar GPU Empire + the Queen of Slop",
@@ -425,11 +491,7 @@
     "summary": "At DevDay, OpenAI signaled its ambition to take everything you can do on the internet and shove it inside ChatGPT.",
     "content_html": "",
     "summary_text": "At DevDay, OpenAI signaled its ambition to take everything you can do on the internet and shove it inside ChatGPT.",
-    "category": "ai",
-    "_permalink": "/p/8a50e763b2/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/8a50e763b2/",
-    "_summary_240": "At DevDay, OpenAI signaled its ambition to take everything you can do on the internet and shove it inside ChatGPT.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/8a50e763b2/thumbnail.png"
+    "category": "ai"
   },
   {
     "title": "Meta Tells Its Metaverse Workers to Use AI to \u2018Go 5X Faster\u2019 - WIRED",
@@ -452,20 +514,6 @@
     "category": "ai"
   },
   {
-    "title": "EU capitals move to charge Temu and Shein over small packages - Financial Times",
-    "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE41Q0tpUXpESGh6NWVLTi04WXdXeTBva1NKZ1dpUndObnlxOFQwbXd2Y21PN2taVG1EcGFaSmZVREozRFo1RTFqdU5tZDVWdzJ5RzNwVTRfc1Nya1ZOUWlNZDQxYkJoZmplYkNfalp4MTA?oc=5&hl=en-US&gl=US&ceid=US:en",
-    "published_at": "2025-10-10T06:00:08-04:00",
-    "source": "Google",
-    "summary": "EU capitals move to charge Temu and Shein over small packages Financial Times",
-    "content_html": "",
-    "summary_text": "EU capitals move to charge Temu and Shein over small packages Financial Times",
-    "category": "software",
-    "_permalink": "/p/5eb7a272ea/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/5eb7a272ea/",
-    "_summary_240": "EU capitals move to charge Temu and Shein over small packages Financial Times",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/5eb7a272ea/thumbnail.png"
-  },
-  {
     "title": "Dimon, Solomon, Klarna CEO on How AI Is Reshaping Banking | Bloomberg Tech: Europe 10/10/2025 - Bloomberg.com",
     "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNTlRhdkM1TUM0U2p1aWFSQnJXYlB5YUpqTUVCZEVEel9MRmdpWUN5NXp6QVJBcnR5bmVMTXlsSFhCOFZCR0E5U1ZmY0NXOVpraEtjMTlHZzRicUNFd1ltTmx6eGIwUXFhTUh3eFlBdXRUclM2YVBhcndyZkw4cEYwVEpjd3BGbEFFbXdCRUFfWkg?oc=5&hl=en-US&gl=US&ceid=US:en",
     "published_at": "2025-10-10T04:46:53-04:00",
@@ -483,11 +531,7 @@
     "summary": "It seems like almost every week for the last two years since ChatGPT launched, new large language models (LLMs) from rival labs or from OpenAI itself have been released. Enterprises are hard pressed to keep up with the massive pace of change, let alone understand how to adapt to it \u2014 which of these new models should they adopt, if any, to power their workflows and the custom AI agents they're bui\u2026",
     "content_html": "",
     "summary_text": "It seems like almost every week for the last two years since ChatGPT launched, new large language models (LLMs) from rival labs or from OpenAI itself have been released. Enterprises are hard pressed to keep up with the massive pace of change, let alone unders\u2026",
-    "category": "ai",
-    "_permalink": "/p/860c1c96dc/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/860c1c96dc/",
-    "_summary_240": "It seems like almost every week for the last two years since ChatGPT launched, new large language models (LLMs) from rival labs or from OpenAI itself have been released.\u2026",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/860c1c96dc/thumbnail.png"
+    "category": "ai"
   },
   {
     "title": "AI Push Drives Record Job Cuts at Top India Private Employer TCS - Bloomberg.com",
@@ -517,11 +561,7 @@
     "summary": "David Yaffe-Bellany, a technology reporter who has covered the cryptocurrency industry since 2022, has come to embrace learning on the fly.",
     "content_html": "Sam Bankman-Fried, left, at a cryptocurrency conference in 2022. He was convicted in 2023 of seven counts of fraud and conspiracy.",
     "summary_text": "David Yaffe-Bellany, a technology reporter who has covered the cryptocurrency industry since 2022, has come to embrace learning on the fly.",
-    "category": "fintech",
-    "_permalink": "/p/8dc9858d8e/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/8dc9858d8e/",
-    "_summary_240": "David Yaffe-Bellany, a technology reporter who has covered the cryptocurrency industry since 2022, has come to embrace learning on the fly.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/8dc9858d8e/thumbnail.png"
+    "category": "fintech"
   },
   {
     "title": "Riding the Wild Wave of Crypto Coverage - The New York Times",
@@ -531,11 +571,7 @@
     "summary": "Riding the Wild Wave of Crypto Coverage The New York Times",
     "content_html": "",
     "summary_text": "Riding the Wild Wave of Crypto Coverage The New York Times",
-    "category": "fintech",
-    "_permalink": "/p/0591ef67ab/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/0591ef67ab/",
-    "_summary_240": "Riding the Wild Wave of Crypto Coverage The New York Times",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/0591ef67ab/thumbnail.png"
+    "category": "fintech"
   },
   {
     "title": "AI Jobs Shock Is Coming and Firms Aren\u2019t Ready, Klarna CEO Says - Bloomberg.com",
@@ -545,21 +581,7 @@
     "summary": "AI Jobs Shock Is Coming and Firms Aren\u2019t Ready, Klarna CEO Says Bloomberg.com",
     "content_html": "",
     "summary_text": "AI Jobs Shock Is Coming and Firms Aren\u2019t Ready, Klarna CEO Says Bloomberg.com",
-    "category": "ai",
-    "_permalink": "/p/244b7fa2fa/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/244b7fa2fa/",
-    "_summary_240": "AI Jobs Shock Is Coming and Firms Aren\u2019t Ready, Klarna CEO Says Bloomberg.com",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/244b7fa2fa/thumbnail.png"
-  },
-  {
-    "title": "Gold bubble should prompt central banks to sell the metal - Financial Times",
-    "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1Ob1pjT2hBUXdaSWRyYjkwZjlkZDhhTkRsZ2dDOTJXSms0NUNZNnhIREo0VDM4QXBCbnpjSDloeGZXc05XTEFGY1ZSMjhwTUg5LWcyeXlWamF5TWJvQ0ZKa1o0TUw1aXFqSzhOZ0hkM20?oc=5&hl=en-US&gl=US&ceid=US:en",
-    "published_at": "2025-10-10T00:00:57-04:00",
-    "source": "Google",
-    "summary": "Gold bubble should prompt central banks to sell the metal Financial Times",
-    "content_html": "",
-    "summary_text": "Gold bubble should prompt central banks to sell the metal Financial Times",
-    "category": "fintech"
+    "category": "ai"
   },
   {
     "title": "China launches customs crackdown on Nvidia AI chips",
@@ -580,16 +602,6 @@
     "content_html": "",
     "summary_text": "Senate Passes AI Chip Export Limits on Nvidia, AMD to China Bloomberg.com",
     "category": "ai"
-  },
-  {
-    "title": "China\u2019s Bond Traders Snap Up Treasury Bills as Liquidity Swells - Bloomberg.com",
-    "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPaFpzTjJwTnBpREFkV0hLNjZFTEh4bjh4UGJJYmg3ZVBaQVkySlZGOVBrenBsSTFXMGR1M3hjN001bklLWEJZWlU2OVBfTDNSWEtyUE16VFVEWW5CQjdIY1ZpQWliM25ZRVY5dnRpYUpxaFVRYUFoSG5wbHV5aEtqWXVZZGVpeTRlSkdDS2FqR1dkbFg0SzlaRFB5dVJuaFRVcnJpemZhS3c2MnlPcWhFRlhQN04?oc=5&hl=en-US&gl=US&ceid=US:en",
-    "published_at": "2025-10-09T21:07:00-04:00",
-    "source": "Google",
-    "summary": "China\u2019s Bond Traders Snap Up Treasury Bills as Liquidity Swells Bloomberg.com",
-    "content_html": "",
-    "summary_text": "China\u2019s Bond Traders Snap Up Treasury Bills as Liquidity Swells Bloomberg.com",
-    "category": "fintech"
   },
   {
     "title": "HYGH powers next-gen digital ads with ChatGPT Business",
@@ -692,6 +704,16 @@
     "category": "ai"
   },
   {
+    "title": "Winklevoss-Backed Crypto Company Eyes Expansion in Brazil - Bloomberg.com",
+    "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNaEtFdWtrLXFyc3FLbllZNVhvbzI2ZjhUU21tM2dKTjgtNUpvc2pQX0hSZGx4QTRtc2hXZVdJMFM5UDRSdFV0VFpzNy1zMGRxYmU0ZldlUE5PaEhUdl9XRThPRHBXZ01jNWltNEFIbThyMUxxeEpsZWlVejZRb2FpbEM5YnpRVG1YWkFqMGZ5LU1ReERaazVDUkdVWjZsRlo4XzNLNGhYQWhsVE9u?oc=5&hl=en-US&gl=US&ceid=US:en",
+    "published_at": "2025-10-09T09:40:13-04:00",
+    "source": "Google",
+    "summary": "Winklevoss-Backed Crypto Company Eyes Expansion in Brazil Bloomberg.com",
+    "content_html": "",
+    "summary_text": "Winklevoss-Backed Crypto Company Eyes Expansion in Brazil Bloomberg.com",
+    "category": "fintech"
+  },
+  {
     "title": "Defining and evaluating political bias in LLMs",
     "url": "https://openai.com/index/defining-and-evaluating-political-bias-in-llms",
     "published_at": "2025-10-09T09:00:00-04:00",
@@ -719,16 +741,6 @@
     "summary": "Lifeline for Millions of Americans Becomes Hot Potato for Banks Bloomberg.com",
     "content_html": "",
     "summary_text": "Lifeline for Millions of Americans Becomes Hot Potato for Banks Bloomberg.com",
-    "category": "fintech"
-  },
-  {
-    "title": "China Tightens Grip on Rare Earths Ahead of Expected Trump-Xi Meeting - The Wall Street Journal",
-    "url": "https://news.google.com/rss/articles/CBMingNBVV95cUxQWlVIWkNEUU5iaExOYmZCbE1vWU1pMU9Udm9ZamlVdkVQVlozTHhBVGxENlpCUlNQWWlqYjhhV3lCajE2OXI0U3J1c2cyTHhNVF9uaHBGelJfekRGaDhYUU9lNUJvd3JIMzhlc3g2Z3huUmZidnN0U29XQWE5SDlGYWFGMzQxOXl2ZVJ2X0paZlNtcm1PLUNRNXZyVmI2WWVtNVFuRlRUNG5yS1d1RlVUamk1R3pSdm5GcUt5TnZQa2VoMWdFU3VGaW9HUHVmWVp2TTN4YWhBME5PakpHOVBQS3B5QTNucXM4S0RYZVVMV2kyTC1OcWQtM0V2b2I3bWU0WFBMbURiVkV1S21QWEFxNG5pZG1DTm1aakZGa2l3Nml6X0JtU0xaQ2ZBY0hjZnA1c0VZM0JPaFNfUGlqUm8xdEFXeFd2RkI4UnJpNHVyMm9BNlhkM3haSzkzek9uWTd6TlNLME9OYnF1M1d6azB5NFEweXR4eFBvT3BhYWFLdHo3Z1JoRF9pekJFLVg0aUlkVnhHbGhVc3JFUWxNWUE?oc=5&hl=en-US&gl=US&ceid=US:en",
-    "published_at": "2025-10-09T06:39:00-04:00",
-    "source": "Google",
-    "summary": "China Tightens Grip on Rare Earths Ahead of Expected Trump-Xi Meeting The Wall Street Journal",
-    "content_html": "",
-    "summary_text": "China Tightens Grip on Rare Earths Ahead of Expected Trump-Xi Meeting The Wall Street Journal",
     "category": "fintech"
   },
   {
@@ -769,16 +781,6 @@
     "summary": "\u2018I Believe It\u2019s a Bubble\u2019: What Some Smart People Are Saying About AI Bloomberg.com",
     "content_html": "",
     "summary_text": "\u2018I Believe It\u2019s a Bubble\u2019: What Some Smart People Are Saying About AI Bloomberg.com",
-    "category": "ai"
-  },
-  {
-    "title": "China Markets Reopen to Show If AI Buzz Outshines Soft Spending - Bloomberg.com",
-    "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOdFlfcjBxVU5fQnBtMk4zSDRDSjdHaF9mQ2l2QW5NNmdWZ1JFbk9CQ0wxT1RNdk0zR2VGNHhwS3hCWTB4VUNhaFB5MzhoUXN5Qk5OeHdrZjkxTThPcEF2eHdRM2tCRGRkY3FNZmNpaXZydTBZMzY4S1c3QXl3eEtaSWszd2cyVnpBMU1kQy1rdEcxNXR2SVdCam5wN2tKQ2VMU1BJWUYtQTRkbHB0a0ZlUFRuU2s?oc=5&hl=en-US&gl=US&ceid=US:en",
-    "published_at": "2025-10-09T04:28:31-04:00",
-    "source": "Google",
-    "summary": "China Markets Reopen to Show If AI Buzz Outshines Soft Spending Bloomberg.com",
-    "content_html": "",
-    "summary_text": "China Markets Reopen to Show If AI Buzz Outshines Soft Spending Bloomberg.com",
     "category": "ai"
   },
   {
@@ -922,16 +924,6 @@
     "category": "ai"
   },
   {
-    "title": "Winklevoss-Backed Crypto Company Eyes Expansion in Brazil - Bloomberg.com",
-    "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNaEtFdWtrLXFyc3FLbllZNVhvbzI2ZjhUU21tM2dKTjgtNUpvc2pQX0hSZGx4QTRtc2hXZVdJMFM5UDRSdFV0VFpzNy1zMGRxYmU0ZldlUE5PaEhUdl9XRThPRHBXZ01jNWltNEFIbThyMUxxeEpsZWlVejZRb2FpbEM5YnpRVG1YWkFqMGZ5LU1ReERaazVDUkdVWjZsRlo4XzNLNGhYQWhsVE9u?oc=5&hl=en-US&gl=US&ceid=US:en",
-    "published_at": "2025-10-08T15:20:28-04:00",
-    "source": "Google",
-    "summary": "Winklevoss-Backed Crypto Company Eyes Expansion in Brazil Bloomberg.com",
-    "content_html": "",
-    "summary_text": "Winklevoss-Backed Crypto Company Eyes Expansion in Brazil Bloomberg.com",
-    "category": "fintech"
-  },
-  {
     "title": "Here\u2019s what Jony Ive and Sam Altman revealed about their secretive AI hardware project at OpenAI\u2019s Dev Day",
     "url": "https://venturebeat.com/ai/heres-what-jony-ive-and-sam-altman-revealed-about-their-secretive-ai",
     "published_at": "2025-10-08T14:40:00-04:00",
@@ -949,26 +941,6 @@
     "summary": "The trend of AI researchers developing new, small open source generative models that outperform far larger, proprietary peers continued this week with yet another staggering advancement. Alexia Jolicoeur-Martineau , Senior AI Researcher at Samsung's Advanced\u200b Institute of Technology (SAIT) in Montreal, Canada, \u200b has introduced the Tiny Recursion Model (TRM) \u2014 a neural network so small it contains\u2026",
     "content_html": "",
     "summary_text": "The trend of AI researchers developing new, small open source generative models that outperform far larger, proprietary peers continued this week with yet another staggering advancement. Alexia Jolicoeur-Martineau , Senior AI Researcher at Samsung's Advanced\u200b\u2026",
-    "category": "ai"
-  },
-  {
-    "title": "UK to Appoint \u2018Digital Markets Champion\u2019 For Tokenization Effort - Bloomberg.com",
-    "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNcGdWcGxzdzgzLWYzd0VYU0dnbDd5OFA3aS02NDctbWM1MHJ4Smd3QlA3N2pkUG5JS2t6V0VMLURMeENwb3pKQm94cnJsVUJVdmZQNGV5MTRSSlM2alpBWWowYThvYjJKbzIzS0tUR0Vla19LLWFiNXczalpnSV9aQi1xN3BpcnpEZF9LODlzNVlSazRyMDdQQVdBTi1IOTQ1emZ5U05PVEd1NzBZbDY0eG5acw?oc=5&hl=en-US&gl=US&ceid=US:en",
-    "published_at": "2025-10-08T12:31:58-04:00",
-    "source": "Google",
-    "summary": "UK to Appoint \u2018Digital Markets Champion\u2019 For Tokenization Effort Bloomberg.com",
-    "content_html": "",
-    "summary_text": "UK to Appoint \u2018Digital Markets Champion\u2019 For Tokenization Effort Bloomberg.com",
-    "category": "ai"
-  },
-  {
-    "title": "Growing impact and scale with ChatGPT",
-    "url": "https://openai.com/index/hibob",
-    "published_at": "2025-10-08T04:00:00-04:00",
-    "source": "OpenAI News",
-    "summary": "Discover how HiBob uses ChatGPT Enterprise and custom GPTs to scale AI adoption, boost revenue, streamline HR workflows, and deliver AI-powered features in the Bob platform.",
-    "content_html": "",
-    "summary_text": "Discover how HiBob uses ChatGPT Enterprise and custom GPTs to scale AI adoption, boost revenue, streamline HR workflows, and deliver AI-powered features in the Bob platform.",
     "category": "ai"
   }
 ]
