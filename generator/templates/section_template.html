@@ -145,17 +145,32 @@
       .article-thumb{width:100%;height:auto;aspect-ratio:16/9;}
     }
 
-    /* ===== Share toolbar (minimal styles) ===== */
+    /* ===== Share toolbar (FIXED - buttons stay horizontal) ===== */
     .share{
-      display:flex; gap:.5rem; margin-top:.35rem; flex-wrap:wrap;
+      display:flex; 
+      gap:.5rem; 
+      margin-top:.35rem; 
+      flex-wrap:nowrap;
+      align-items:center;
     }
     .share-btn{
-      appearance:none; -webkit-appearance:none;
-      border:1px solid var(--line); background:#fff; color:var(--ink);
-      border-radius:999px; padding:.3rem .6rem; font-size:.85rem; font-weight:600;
-      text-decoration:none; cursor:pointer;
+      appearance:none; 
+      -webkit-appearance:none;
+      border:1px solid var(--line); 
+      background:#fff; 
+      color:var(--ink);
+      border-radius:999px; 
+      padding:.3rem .6rem; 
+      font-size:.82rem; 
+      font-weight:600;
+      text-decoration:none; 
+      cursor:pointer;
+      white-space:nowrap;
+      flex-shrink:0;
     }
-    .share-btn:hover{ background:#f3f4f6; }
+    .share-btn:hover{ 
+      background:#f3f4f6; 
+    }
   </style>
   <link rel="icon" type="image/x-icon" href="./icons/favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="./icons/t2d-pulse-32.png">
@@ -278,7 +293,13 @@
       if (!a) continue;
 
       const originalUrl = a.href;
-      const permalink = card.dataset.permalink || originalUrl;  // Use permalink if available, fallback to original
+      let permalink = card.dataset.permalink || originalUrl;
+      
+      // Convert relative URLs to absolute URLs
+      if (permalink.startsWith('/')) {
+        permalink = window.location.origin + permalink;
+      }
+      
       const title = a.textContent.trim();
       const brand = 'via T2D Pulse';
 
@@ -294,7 +315,7 @@
         <button class="share-btn copy-url" type="button">Copy URL</button>
       `;
       const btn = bar.querySelector('.copy-url');
-      btn.dataset.url = permalink;  // Use permalink for copying
+      btn.dataset.url = permalink;
       card.appendChild(bar);
     }
 
