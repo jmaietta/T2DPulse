@@ -1,55 +1,73 @@
 name: Build TEK2day Pulse (Website Only)
 
 on:
-  # Run only on a weekday schedule + allow manual runs.
+  # Every 30 minutes, 11:30-23:00 UTC (covers 7:30am-6pm ET in both EST/EDT), Mon-Fri only
   schedule:
-    # 7:30 AM Eastern. We include both 11:30 UTC (DST) and 12:30 UTC (Standard) and guard below.
-    - cron: '30 11 * * 1-5'
-    - cron: '30 12 * * 1-5'
+    - cron: "30 11-22 * * 1-5"  # :30 minutes from 11:30-22:30 UTC
+    - cron: "0 12-23 * * 1-5"   # :00 minutes from 12:00-23:00 UTC
+  # Manual "Run workflow" button in Actions
   workflow_dispatch: {}
 
 permissions:
   contents: write
 
+# Prevent overlapping runs; newest run wins
+concurrency:
+  group: pulse-prod
+  cancel-in-progress: true
+
 jobs:
   build:
+    # Extra safety: only operate on main
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout
+      - name: Checkout main
         uses: actions/checkout@v4
+        with:
+          ref: main
 
-      # Guard so this job only proceeds at 7:30 ET (handles DST cleanly)
-      - name: Guard — only run at 7:30 AM America/New_York
-        run: |
-          export TZ=America/New_York
-          now=$(date +'%H:%M')
-          if [ "${{ github.event_name }}" = "schedule" ] && [ "$now" != "07:30" ]; then
-            echo "Not 7:30 AM ET (now: $now). Exiting."
-            exit 0
-          fi
-
-      - name: Set up Python
+      - name: Setup Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.11'
+          python-version: "3.11"
 
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install -r generator/requirements.txt
+          if [ -f generator/requirements.txt ]; then pip install -r generator/requirements.txt; fi
           pip install tldextract==5.1.2
 
-      - name: Generate
-        run: python generator/generate_pulse.py
+      # Safety check: verify we're in ET business hours (cron handles most filtering)
+      - name: ET weekday window verification
+        run: |
+          python - <<'PY'
+          from datetime import datetime, time
+          from zoneinfo import ZoneInfo
+          now = datetime.now(ZoneInfo("America/New_York"))
+          wd = now.weekday()  # 0=Mon, 6=Sun
+          start = time(7,30); end = time(18,0)
+          within = (0 <= wd <= 4) and (start <= now.time() <= end)
+          print(f"Now ET: {now.isoformat(timespec='seconds')}  weekday={wd}  within_window={within}")
+          if not within:
+            print("Outside business hours - exiting gracefully")
+            raise SystemExit(0)
+          PY
+
+      - name: Build site (writes to docs/)
+        run: |
+          python generator/generate_pulse.py
 
       - name: Commit & push if changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          if [ -n "$(git status --porcelain)" ]; then
-            git add docs/
-            git commit -m "chore: weekday TEK2day Pulse update"
-            git push
-          else
+          # stage only docs
+          git add docs/
+          if git diff --cached --quiet; then
             echo "No changes to commit."
+          else
+            git commit -m "chore: TEK2day Pulse auto-update (prod)"
+            git push origin HEAD:main
           fi
