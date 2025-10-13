@@ -19,13 +19,13 @@
   <meta name="twitter:description" content="AI, Software, and FinTech News.">
   <meta name="twitter:image" content="https://pulse.tek2dayholdings.com/og/social-card.png">
 
-  <!-- PWA + icons (paths are relative to docs/index.html) -->
+  <!-- PWA + icons -->
   <meta name="theme-color" content="#0f172a" />
-<link rel="manifest" href="./manifest.webmanifest" />
+  <link rel="manifest" href="./manifest.webmanifest" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-  <!-- Orbitron font for the headline -->
+  <!-- Orbitron font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700;800&display=swap" rel="stylesheet">
@@ -58,54 +58,36 @@
       display:flex;align-items:center;gap:.9rem;
     }
     header.site img.brand-mark{width:66px;height:66px;border-radius:12px}
-    header.site h1{
-      font-family:'Orbitron', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
-      font-weight:700; letter-spacing:.4px; font-size:1.28rem; margin:0; color:var(--ink-soft);
-    }
     
-    /* keep an accessible title for SEO/screen readers, but visually hide it */
     .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
+    
+    /* Bloomberg-style header */
     header .tag{
       display:flex;align-items:center;gap:0.8rem;
     }
     header .date-badge{
-      font-size:0.8rem;
-      font-weight:600;
-      color:var(--ink);
-      padding:0.3rem 0.6rem;
-      background:var(--line);
-      border-radius:4px;
-      text-transform:uppercase;
-      letter-spacing:0.03em;
+      font-size:0.8rem;font-weight:600;color:var(--ink);
+      padding:0.3rem 0.6rem;background:var(--line);border-radius:4px;
+      text-transform:uppercase;letter-spacing:0.03em;
     }
-    header .divider{
-      width:1px;height:20px;background:var(--line);
-    }
-    header .desc{
-      font-size:0.95rem;
-      color:var(--ink-soft);
-      font-weight:500;
-    }
-    header .desc strong{
-      font-weight:700;
-      color:var(--ink);
-    }
+    header .divider{width:1px;height:20px;background:var(--line);}
+    header .desc{font-size:0.95rem;color:var(--ink-soft);font-weight:500;}
+    header .desc strong{font-weight:700;color:var(--ink);}
+    
     .grow{flex:1}
     .hdr-actions{display:flex;gap:.5rem;margin-left:auto;align-items:center}
     .btn{
       appearance:none;border:1px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer;
-      border-radius:999px;padding:.45rem .75rem;font-weight:700;font-size:.9rem; box-shadow:none;
+      border-radius:999px;padding:.45rem .75rem;font-weight:700;font-size:.9rem;
     }
     .btn:hover{box-shadow:var(--shadow)}
     .install{display:none}
 
-    /* Container */
     #app{max-width:1100px;margin:0 auto 2.2rem;padding:0 1rem}
 
-    /* Section & categories */
     #tek2day-pulse{
       background:var(--card);border:1px solid var(--line);border-radius:calc(var(--r) + 2px);
-      padding:1.1rem; box-shadow:var(--shadow); margin-top:1rem;
+      padding:1.1rem;box-shadow:var(--shadow);margin-top:1rem;
     }
     .stack{display:grid;gap:1rem}
     details.cat{
@@ -113,57 +95,63 @@
     }
     details.cat summary{
       list-style:none;cursor:pointer;padding:.95rem 1rem;display:flex;align-items:center;justify-content:space-between;
-      border-bottom:1px solid var(--line); transition:background .15s ease;
+      border-bottom:1px solid var(--line);transition:background .15s ease;
     }
     details.cat[open] summary{background:color-mix(in srgb, var(--card) 90%, #fff 10%)}
     details.cat summary::-webkit-details-marker{display:none}
     .label{display:flex;gap:.6rem;align-items:center;font-weight:900;color:var(--ink)}
     .pill{
-      display:inline-flex;align-items:center;gap:.5rem;padding:.25rem .6rem;border-radius:999px;font-size:.92rem;font-weight:800;color:#0b0b0b;
-      background:#e9eefc;border:1px solid #dee6ff;
-    }@media (prefers-color-scheme: dark){
-      }
+      display:inline-flex;align-items:center;gap:.5rem;padding:.25rem .6rem;border-radius:999px;
+      font-size:.92rem;font-weight:800;color:#0b0b0b;background:#e9eefc;border:1px solid #dee6ff;
+    }
     .dot{width:.6rem;height:.6rem;border-radius:999px;display:inline-block}
     .ai .pill{background:#e9edff;border-color:#dfe5ff;color:#2d3b8f}
     .ft .pill{background:#e7fbf3;border-color:#d9f5eb;color:#0f6b57}
     .sw .pill{background:#fff0ea;border-color:#ffe4d8;color:#a9441b}
     .count{color:var(--muted);font-size:.9rem}
 
-    .items{padding:.55rem 1rem 1rem;display:grid;gap:.75rem;grid-template-columns:1fr;}
+    .items{padding:.55rem 1rem 1rem;display:grid;gap:.75rem}
     article{
       position:relative;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:.9rem;
-      transition:transform .06s ease, box-shadow .12s ease; will-change:transform;
+      transition:transform .06s ease, box-shadow .12s ease;
       display:flex;gap:.9rem;align-items:stretch;height:100%;
     }
-    article:hover{transform:translateY(-1px); box-shadow:var(--shadow)}
-    article.top{background:linear-gradient(180deg, color-mix(in srgb, var(--card) 92%, #fff 8%), var(--card)); border-width:1px}
+    article:hover{transform:translateY(-1px);box-shadow:var(--shadow)}
+    article.top{background:linear-gradient(180deg, color-mix(in srgb, var(--card) 92%, #fff 8%), var(--card));border-width:1px}
+    
     .article-thumb{
-      width:120px;height:67.5px;border-radius:8px;object-fit:cover;flex-shrink:0;
-      align-self:flex-start;
+      width:120px;height:67.5px;border-radius:8px;object-fit:cover;flex-shrink:0;align-self:flex-start;
     }
     .article-content{flex:1;min-width:0;display:flex;flex-direction:column;}
+    
     h3{margin:0 0 .35rem;font-size:1.04rem;line-height:1.4}
     h3 a{color:var(--ink);text-decoration:none}
     h3 a:hover{text-decoration:underline}
+    
     .meta{color:var(--muted);font-size:.86rem;margin-bottom:.4rem;display:flex;gap:.4rem;align-items:center;flex-wrap:wrap}
     .meta .src{font-weight:700;letter-spacing:.1px}
-    .meta .sep{opacity:.35}
     .badge{
       display:inline-block;padding:.15rem .4rem;border-radius:4px;font-size:.75rem;font-weight:700;
       background:var(--ai);color:white;margin-left:.25rem;
     }
     .badge.muted{background:var(--muted);opacity:.7;}
-    p{margin:.25rem 0 0; color:var(--ink);flex:1;}
+    
+    p{margin:.25rem 0 0;color:var(--ink);flex:1;}
 
-    /* Footer note */
     .foot{margin-top:1rem;color:var(--muted);font-size:12px;text-align:center}
+    header.site.shadow{box-shadow:0 10px 56px rgba(15,23,42,.08)}
 
-    /* Sticky header shadow on scroll */
-    header.site.shadow{ box-shadow: 0 10px 56px rgba(15,23,42,.08) }
+    /* Share toolbar */
+    .share{display:flex;gap:.5rem;margin-top:.5rem;flex-wrap:wrap;}
+    .share-btn{
+      appearance:none;-webkit-appearance:none;
+      border:1px solid var(--line);background:#fff;color:var(--ink);
+      border-radius:999px;padding:.3rem .6rem;font-size:.85rem;font-weight:600;
+      text-decoration:none;cursor:pointer;
+    }
+    .share-btn:hover{background:#f3f4f6;}
 
-    /* Small screens */
     @media (max-width: 640px){
-      header.site h1{font-size:1.12rem}
       #tek2day-pulse{padding:.9rem}
       .items{padding:.45rem .6rem .8rem}
       article{padding:.8rem;flex-direction:column;}
@@ -171,66 +159,39 @@
       header .tag{flex-wrap:wrap;gap:0.5rem;}
       header .divider{display:none;}
     }
-
-    /* ===== Share toolbar (minimal styles) ===== */
-    .share{
-      display:flex; gap:.5rem; margin-top:.5rem; flex-wrap:wrap;
-    }
-    .share-btn{
-      appearance:none; -webkit-appearance:none;
-      border:1px solid var(--line); background:#fff; color:var(--ink);
-      border-radius:999px; padding:.3rem .6rem; font-size:.85rem; font-weight:600;
-      text-decoration:none; cursor:pointer;
-    }
-    .share-btn:hover{ background:#f3f4f6; }
-
-    /* ===== Share toolbar (minimal styles) ===== */
-    .share{
-      display:flex; gap:.5rem; margin-top:.35rem; flex-wrap:wrap;
-    }
-    .share-btn{
-      appearance:none; -webkit-appearance:none;
-      border:1px solid var(--line); background:#fff; color:var(--ink);
-      border-radius:999px; padding:.3rem .6rem; font-size:.85rem; font-weight:600;
-      text-decoration:none; cursor:pointer;
-    }
-    .share-btn:hover{ background:#f3f4f6; }
   </style>
+  
   <link rel="icon" type="image/x-icon" href="./icons/favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="./icons/t2d-pulse-32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="./icons/t2d-pulse-16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="./icons/t2d-pulse-180.png">
-
   <link rel="canonical" href="https://pulse.tek2dayholdings.com/" />
   <meta property="og:site_name" content="T2D Pulse">
-  <meta property="og:image:alt" content="T2D Pulse — curated AI, Software & FinTech news">
   <meta name="description" content="AI, Software, and FinTech News.">
 </head>
 
 <body>
-  <!-- Sticky site header -->
   <header class="site">
     <div class="site-inner">
       <a href="/" aria-label="T2D Pulse Home">
-  <img class="brand-mark" src="./icons/T2D_Pulse_Logo_2.png" alt="T2D Pulse">
-</a>
-<h1 class="sr-only">T2D Pulse</h1>
-<div class="tag">
-  <span class="date-badge">Oct 12, 2025</span>
-  <span class="divider"></span>
-  <span class="desc">Curated <strong>AI</strong>, <strong>Software</strong> & <strong>FinTech</strong> News</span>
-</div>
-    <div class="grow"></div>
+        <img class="brand-mark" src="./icons/T2D_Pulse_Logo_2.png" alt="T2D Pulse">
+      </a>
+      <h1 class="sr-only">T2D Pulse</h1>
+      <div class="tag">
+        <span class="date-badge">Oct 12, 2025</span>
+        <span class="divider"></span>
+        <span class="desc">Curated <strong>AI</strong>, <strong>Software</strong> & <strong>FinTech</strong> News</span>
+      </div>
+      <div class="grow"></div>
       <div class="hdr-actions">
-        <div class="install"><button class="btn" id="btnInstall" aria-label="Install app">Install</button></div>
+        <div class="install"><button class="btn" id="btnInstall">Install</button></div>
       </div>
     </div>
   </header>
 
   <div id="app">
-    <section id="tek2day-pulse" aria-labelledby="tek2day-title">
+    <section id="tek2day-pulse">
       <div class="stack">
-        <!-- AI -->
         <details class="cat ai" open>
           <summary>
             <span class="label">
@@ -238,21 +199,12 @@
             </span>
             <span class="count">14 items</span>
           </summary>
-          <div class="items">
-            <article class="top" data-card data-url="https://www.pymnts.com/artificial-intelligence-2/2025/meta-taps-thinking-machines-co-founder-to-boost-ai-expertise/?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/3601bc0331/" data-title="Meta Taps Thinking Machines Co-Founder to Boost AI Expertise" data-summary="Meta has reportedly recruited one of the co-founders of artificial intelligence (AI) startup Thinking Machines. Andrew Tulloch, a high-profile AI researcher, confirmed his departu…">
+          <div class="items"><article class="top" data-card data-url="https://www.pymnts.com/artificial-intelligence-2/2025/meta-taps-thinking-machines-co-founder-to-boost-ai-expertise/?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/3601bc0331/" data-title="Meta Taps Thinking Machines Co-Founder to Boost AI Expertise" data-summary="Meta has reportedly recruited one of the co-founders of artificial intelligence (AI) startup Thinking Machines. Andrew Tulloch, a high-profile AI researcher, confirmed his departu…">
   <img src="https://pulse.tek2dayholdings.com/p/3601bc0331/thumbnail.png" alt="Meta Taps Thinking Machines Co-Founder to Boost AI Expertise" class="article-thumb">
   <div class="article-content">
     <h3><a data-title-link href="https://www.pymnts.com/artificial-intelligence-2/2025/meta-taps-thinking-machines-co-founder-to-boost-ai-expertise/?utm_source=tek2day&utm_medium=email">Meta Taps Thinking Machines Co-Founder to Boost AI Expertise</a></h3>
     <div class="meta">PYMNTS - Oct 12, 2025 <span class="badge">New</span></div>
     <p data-summary>Meta has reportedly recruited one of the co-founders of artificial intelligence (AI) startup Thinking Machines. Andrew Tulloch, a high-profile AI researcher, confirmed his departu…</p>
-  </div>
-</article>
-<article class="" data-card data-url="https://venturebeat.com/ai/we-keep-talking-about-ai-agents-but-do-we-ever-know-what-they-are?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/eed7b78c9e/" data-title="We keep talking about AI agents, but do we ever know what they are?" data-summary="Imagine you do two things on a Monday morning. First, you ask a chatbot to summarize your new emails. Next, you ask an AI tool to figure out why your top competitor grew so fast l…">
-  <img src="https://pulse.tek2dayholdings.com/p/eed7b78c9e/thumbnail.png" alt="We keep talking about AI agents, but do we ever know what they are?" class="article-thumb">
-  <div class="article-content">
-    <h3><a data-title-link href="https://venturebeat.com/ai/we-keep-talking-about-ai-agents-but-do-we-ever-know-what-they-are?utm_source=tek2day&utm_medium=email">We keep talking about AI agents, but do we ever know what they are?</a></h3>
-    <div class="meta">VentureBeat - Oct 12, 2025 <span class="badge">New</span></div>
-    <p data-summary>Imagine you do two things on a Monday morning. First, you ask a chatbot to summarize your new emails. Next, you ask an AI tool to figure out why your top competitor grew so fast l…</p>
   </div>
 </article>
 <article class="" data-card data-url="https://www.theverge.com/news/798681/police-stop-pulling-ai-homeless-man-tiktok-prank?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/21eda55546/" data-title="Police are asking kids to stop pulling AI homeless man prank" data-summary="We’ve been so worried about deepfaked politicians, AI musicians, virtual actresses, and phony satellite imagery that we didn’t even consider the dangers posed by precocious teenag…">
@@ -279,20 +231,20 @@
     <p data-summary>Your best data science team just spent six months building a model that predicts customer churn with 90% accuracy. It’s sitting on a server, unused. Why? Because it’s been stuck i…</p>
   </div>
 </article>
-<article class="" data-card data-url="https://news.google.com/rss/articles/CBMicEFVX3lxTFB5UzdGQ3gwZ2lqVVctaWpLYVpiZ2hmNGtoLVJ6OGNRTE9ORWoycVN3cUJNVV9WZ2M4Umc4Q0ZISkl0ZjFFbWlUQlFjWXpPbElSeFZyMXdWWS1mQTZHancwcmg2aWxWa1hwcElrRWpjZ3Y?oc=5&hl=en-US&gl=US&ceid=US:en&utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/eb632f099a/" data-title="Elon Musk’s xAI joins race to build ‘world models’ to power video games - Financial Times" data-summary="Elon Musk’s xAI joins race to build ‘world models’ to power video games Financial Times">
-  <img src="https://pulse.tek2dayholdings.com/p/eb632f099a/thumbnail.png" alt="Elon Musk’s xAI joins race to build ‘world models’ to power video games - Financial Times" class="article-thumb">
-  <div class="article-content">
-    <h3><a data-title-link href="https://news.google.com/rss/articles/CBMicEFVX3lxTFB5UzdGQ3gwZ2lqVVctaWpLYVpiZ2hmNGtoLVJ6OGNRTE9ORWoycVN3cUJNVV9WZ2M4Umc4Q0ZISkl0ZjFFbWlUQlFjWXpPbElSeFZyMXdWWS1mQTZHancwcmg2aWxWa1hwcElrRWpjZ3Y?oc=5&hl=en-US&gl=US&ceid=US:en&utm_source=tek2day&utm_medium=email">Elon Musk’s xAI joins race to build ‘world models’ to power video games - Financial Times</a></h3>
-    <div class="meta">Google - Oct 12, 2025 <span class="badge">New</span></div>
-    <p data-summary>Elon Musk’s xAI joins race to build ‘world models’ to power video games Financial Times</p>
-  </div>
-</article>
 <article class="" data-card data-url="https://www.ft.com/content/ac566346-53dd-4490-8d4c-5269906c64ee?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/13165ccae4/" data-title="Musk’s xAI joins race to build ‘world models’ to power video games" data-summary="Artificial intelligence group hired staff from Nvidia to work on advanced AI that can design and navigate physical spaces">
   <img src="https://pulse.tek2dayholdings.com/p/13165ccae4/thumbnail.png" alt="Musk’s xAI joins race to build ‘world models’ to power video games" class="article-thumb">
   <div class="article-content">
     <h3><a data-title-link href="https://www.ft.com/content/ac566346-53dd-4490-8d4c-5269906c64ee?utm_source=tek2day&utm_medium=email">Musk’s xAI joins race to build ‘world models’ to power video games</a></h3>
     <div class="meta">Financial Times — Technology - Oct 12, 2025 <span class="badge">New</span></div>
     <p data-summary>Artificial intelligence group hired staff from Nvidia to work on advanced AI that can design and navigate physical spaces</p>
+  </div>
+</article>
+<article class="" data-card data-url="https://news.google.com/rss/articles/CBMigAFBVV95cUxNeEs3Q0J4VWhEa0dHdXBhMGlOcHh2Q1dWWF9BSkJfRnBaV0M0SU1IMXNIekZKQ01HeUYzTm0wY1I5WnUxUlZ0eXdmX2wxbVh6c2NtbkpCSHRPQUdfRi1xOWNETlVMSWhjRGREWjAyVGg4S1FqaDNuWE9HVmQxOWxfNQ?oc=5&hl=en-US&gl=US&ceid=US:en&utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/12dbee4d18/" data-title="Is vibe coding ruining a generation of engineers? - VentureBeat" data-summary="Is vibe coding ruining a generation of engineers? VentureBeat">
+  <img src="https://pulse.tek2dayholdings.com/p/12dbee4d18/thumbnail.png" alt="Is vibe coding ruining a generation of engineers? - VentureBeat" class="article-thumb">
+  <div class="article-content">
+    <h3><a data-title-link href="https://news.google.com/rss/articles/CBMigAFBVV95cUxNeEs3Q0J4VWhEa0dHdXBhMGlOcHh2Q1dWWF9BSkJfRnBaV0M0SU1IMXNIekZKQ01HeUYzTm0wY1I5WnUxUlZ0eXdmX2wxbVh6c2NtbkpCSHRPQUdfRi1xOWNETlVMSWhjRGREWjAyVGg4S1FqaDNuWE9HVmQxOWxfNQ?oc=5&hl=en-US&gl=US&ceid=US:en&utm_source=tek2day&utm_medium=email">Is vibe coding ruining a generation of engineers? - VentureBeat</a></h3>
+    <div class="meta">Google - Oct 11, 2025 </div>
+    <p data-summary>Is vibe coding ruining a generation of engineers? VentureBeat</p>
   </div>
 </article>
 <article class="" data-card data-url="https://news.google.com/rss/articles/CBMicEFVX3lxTE5nclBBbF8yZnVDNUhHdngtSnYxaWJvbU5zQ0R0U2ludjBHQkpSUUd6bEpSbloxZnJZc1A4Um41eVRsakpZTkZmUVlNTE1ZQ2g2TzhMWVdpQmY1c2JTZGNaNjY2WFZwaGVtX09QUFM3enY?oc=5&hl=en-US&gl=US&ceid=US:en&utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/447122477e/" data-title="I’ve seen the future of shopping — and I’m sold on AI - Financial Times" data-summary="I’ve seen the future of shopping — and I’m sold on AI Financial Times">
@@ -309,6 +261,14 @@
     <h3><a data-title-link href="https://venturebeat.com/security/weaponized-ai-can-dismantle-patches-in-72-hours-but-ivantis-kernel-defense?utm_source=tek2day&utm_medium=email">Weaponized AI can dismantle patches in 72 hours — but Ivanti&#x27;s kernel defense can help</a></h3>
     <div class="meta">VentureBeat - Oct 10, 2025 </div>
     <p data-summary>Adversaries from cybercrime gangs to nation-state cyberattack squads are fine-tuning weaponized AI with the goal of defeating new patches in 3 days or less. The quicker the attack…</p>
+  </div>
+</article>
+<article class="" data-card data-url="https://venturebeat.com/ai/together-ais-atlas-adaptive-speculator-delivers-400-inference-speedup-by?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/a5c96797cd/" data-title="Together AI&#x27;s ATLAS adaptive speculator delivers 400% inference speedup by learning from workloads in real-time" data-summary="Enterprises expanding AI deployments are hitting an invisible performance wall. The culprit? Static speculators that can&#x27;t keep up with shifting workloads. Speculators are smaller…">
+  <img src="https://pulse.tek2dayholdings.com/p/a5c96797cd/thumbnail.png" alt="Together AI&#x27;s ATLAS adaptive speculator delivers 400% inference speedup by learning from workloads in real-time" class="article-thumb">
+  <div class="article-content">
+    <h3><a data-title-link href="https://venturebeat.com/ai/together-ais-atlas-adaptive-speculator-delivers-400-inference-speedup-by?utm_source=tek2day&utm_medium=email">Together AI&#x27;s ATLAS adaptive speculator delivers 400% inference speedup by learning from workloads in real-time</a></h3>
+    <div class="meta">VentureBeat - Oct 10, 2025 </div>
+    <p data-summary>Enterprises expanding AI deployments are hitting an invisible performance wall. The culprit? Static speculators that can&#x27;t keep up with shifting workloads. Speculators are smaller…</p>
   </div>
 </article>
 <article class="" data-card data-url="https://www.nytimes.com/2025/10/10/podcasts/hardfork-openai-devday-amd.html?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/8a50e763b2/" data-title="ChatGPT’s Platform Play + a Trillion-Dollar GPU Empire + the Queen of Slop" data-summary="At DevDay, OpenAI signaled its ambition to take everything you can do on the internet and shove it inside ChatGPT.">
@@ -335,12 +295,12 @@
     <p data-summary>It seems like almost every week for the last two years since ChatGPT launched, new large language models (LLMs) from rival labs or from OpenAI itself have been released. Enterpris…</p>
   </div>
 </article>
-<article class="" data-card data-url="https://news.google.com/rss/articles/CBMiswFBVV95cUxNVlVvUDZzclE5WTNWa2JqVm5sUE5PNnRpSjA5SVlWZHdvYnFmMjdZNUp4NGEwb2JXTzNrVmx6Sk5fSDdVM0pMaDNZSzdCSVNOd3VXUHZEcnJiME1xR3RlaVpReEFoNVllcjlVT3V5NFV5dEk2SzRhbEVYbTJRZTFwR1huSXhEdGFkeUNmN1lNUF9FYm4zTFVaSi12NDhodXRJX1ROeDF0Q1NRQWo5Z0Z2bWcwcw?oc=5&hl=en-US&gl=US&ceid=US:en&utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/244b7fa2fa/" data-title="AI Jobs Shock Is Coming and Firms Aren’t Ready, Klarna CEO Says - Bloomberg.com" data-summary="AI Jobs Shock Is Coming and Firms Aren’t Ready, Klarna CEO Says Bloomberg.com">
-  <img src="https://pulse.tek2dayholdings.com/p/244b7fa2fa/thumbnail.png" alt="AI Jobs Shock Is Coming and Firms Aren’t Ready, Klarna CEO Says - Bloomberg.com" class="article-thumb">
+<article class="" data-card data-url="https://news.google.com/rss/articles/CBMivgFBVV95cUxNeG1OeE9BWmZ5V0ZHcmotMjIwQlNjNGpJeFBEQ19rYmh1QUFUSjY0R2pPWkZ6V3FyVXNHeTRWSzBjajFvUDlSeXRpRDl4NnJPd3BSMlIwelZwdXBqdkVhQkE0U0JTM1NOR0lWc2g3ZUk0SEdHakJ4NEgtdjBBSFdBUld5NUY0MllMcDllYUdXZzJmMkJfbnhjYWs5OG9NbjNrT05IZzBCOHdoelk4TDMwLUlOVk9VVXR2R1dMR1V3?oc=5&hl=en-US&gl=US&ceid=US:en&utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/c0effac346/" data-title="The Real AI Risk is ‘Meh’ Technology That Takes Jobs and Annoys Us All - Bloomberg.com" data-summary="The Real AI Risk is ‘Meh’ Technology That Takes Jobs and Annoys Us All Bloomberg.com">
+  <img src="https://pulse.tek2dayholdings.com/p/c0effac346/thumbnail.png" alt="The Real AI Risk is ‘Meh’ Technology That Takes Jobs and Annoys Us All - Bloomberg.com" class="article-thumb">
   <div class="article-content">
-    <h3><a data-title-link href="https://news.google.com/rss/articles/CBMiswFBVV95cUxNVlVvUDZzclE5WTNWa2JqVm5sUE5PNnRpSjA5SVlWZHdvYnFmMjdZNUp4NGEwb2JXTzNrVmx6Sk5fSDdVM0pMaDNZSzdCSVNOd3VXUHZEcnJiME1xR3RlaVpReEFoNVllcjlVT3V5NFV5dEk2SzRhbEVYbTJRZTFwR1huSXhEdGFkeUNmN1lNUF9FYm4zTFVaSi12NDhodXRJX1ROeDF0Q1NRQWo5Z0Z2bWcwcw?oc=5&hl=en-US&gl=US&ceid=US:en&utm_source=tek2day&utm_medium=email">AI Jobs Shock Is Coming and Firms Aren’t Ready, Klarna CEO Says - Bloomberg.com</a></h3>
+    <h3><a data-title-link href="https://news.google.com/rss/articles/CBMivgFBVV95cUxNeG1OeE9BWmZ5V0ZHcmotMjIwQlNjNGpJeFBEQ19rYmh1QUFUSjY0R2pPWkZ6V3FyVXNHeTRWSzBjajFvUDlSeXRpRDl4NnJPd3BSMlIwelZwdXBqdkVhQkE0U0JTM1NOR0lWc2g3ZUk0SEdHakJ4NEgtdjBBSFdBUld5NUY0MllMcDllYUdXZzJmMkJfbnhjYWs5OG9NbjNrT05IZzBCOHdoelk4TDMwLUlOVk9VVXR2R1dMR1V3?oc=5&hl=en-US&gl=US&ceid=US:en&utm_source=tek2day&utm_medium=email">The Real AI Risk is ‘Meh’ Technology That Takes Jobs and Annoys Us All - Bloomberg.com</a></h3>
     <div class="meta">Google - Oct 10, 2025 </div>
-    <p data-summary>AI Jobs Shock Is Coming and Firms Aren’t Ready, Klarna CEO Says Bloomberg.com</p>
+    <p data-summary>The Real AI Risk is ‘Meh’ Technology That Takes Jobs and Annoys Us All Bloomberg.com</p>
   </div>
 </article>
 <article class="" data-card data-url="https://www.ft.com/content/8d5387f2-62b0-4830-b0e4-00ba0622a7c8?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/b622df73d7/" data-title="China launches customs crackdown on Nvidia AI chips" data-summary="Stringent border checks come after Beijing orders tech companies to stop ordering US processors">
@@ -350,11 +310,9 @@
     <div class="meta">Financial Times — Technology - Oct 10, 2025 </div>
     <p data-summary>Stringent border checks come after Beijing orders tech companies to stop ordering US processors</p>
   </div>
-</article>
-          </div>
+</article></div>
         </details>
 
-        <!-- Software -->
         <details class="cat sw" open>
           <summary>
             <span class="label">
@@ -362,19 +320,16 @@
             </span>
             <span class="count">1 items</span>
           </summary>
-          <div class="items">
-            <article class="top" data-card data-url="https://news.google.com/rss/articles/CBMicEFVX3lxTE41Q0tpUXpESGh6NWVLTi04WXdXeTBva1NKZ1dpUndObnlxOFQwbXd2Y21PN2taVG1EcGFaSmZVREozRFo1RTFqdU5tZDVWdzJ5RzNwVTRfc1Nya1ZOUWlNZDQxYkJoZmplYkNfalp4MTA?oc=5&hl=en-US&gl=US&ceid=US:en&utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/5eb7a272ea/" data-title="EU capitals move to charge Temu and Shein over small packages - Financial Times" data-summary="EU capitals move to charge Temu and Shein over small packages Financial Times">
-  <img src="https://pulse.tek2dayholdings.com/p/5eb7a272ea/thumbnail.png" alt="EU capitals move to charge Temu and Shein over small packages - Financial Times" class="article-thumb">
+          <div class="items"><article class="top" data-card data-url="https://news.google.com/rss/articles/CBMijwNBVV95cUxONkZNRFVrTlppRDBqLUFNS3FEYTZlRE1sWmh3b29CdVdod0pkd3BYbUt3ZzlCVXJtWFc4NjNRSDVoeHdNeXBVTzM4YzktNjFfVDFMZHBTdXhrWDVVRzVTUEJxbHY1T0daNk4zMnZlRWJZRXZ0ZVpVa3NmTFB0eGg5aXprVlJfOFdfbk8tcFk0c3hVMl9KUVdEdHJjd2RlbjUtNzJIT1d5SXE1cV9DYkZBTUN6UUpmN0xKX0Z3M2tOQ0VwXzdJWHZTUFRXb09aODR1TEZ5N2YxXzRtZWdtaHVxSEVMNHpDRXgzeVJ0a2prNHNPQWtQY3U0bmh5ZTlIMXZNYnhrM0o5RnJDalVyc0Y5VGJGWXN1bDhkOG1ESFFkT19hbnJjUGhfZDdjV1F2eWJ4b0FYOFhjanhRczhQVml3ekNUWTYwc2IzdFEwSE5NTDE5bFJZVTNLRDVXcUVId1pHWENlV25wSldqVVdnbnNmODJrS3Yzb0tJRkRSdkk5WjQ1QVFITGRJZS1COFgtcG8?oc=5&hl=en-US&gl=US&ceid=US:en&utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/0492bfbb1a/" data-title="More Working-Class Americans Than Ever Are Investing in the Stock Market - The Wall Street Journal" data-summary="More Working-Class Americans Than Ever Are Investing in the Stock Market The Wall Street Journal">
+  <img src="https://pulse.tek2dayholdings.com/p/0492bfbb1a/thumbnail.png" alt="More Working-Class Americans Than Ever Are Investing in the Stock Market - The Wall Street Journal" class="article-thumb">
   <div class="article-content">
-    <h3><a data-title-link href="https://news.google.com/rss/articles/CBMicEFVX3lxTE41Q0tpUXpESGh6NWVLTi04WXdXeTBva1NKZ1dpUndObnlxOFQwbXd2Y21PN2taVG1EcGFaSmZVREozRFo1RTFqdU5tZDVWdzJ5RzNwVTRfc1Nya1ZOUWlNZDQxYkJoZmplYkNfalp4MTA?oc=5&hl=en-US&gl=US&ceid=US:en&utm_source=tek2day&utm_medium=email">EU capitals move to charge Temu and Shein over small packages - Financial Times</a></h3>
+    <h3><a data-title-link href="https://news.google.com/rss/articles/CBMijwNBVV95cUxONkZNRFVrTlppRDBqLUFNS3FEYTZlRE1sWmh3b29CdVdod0pkd3BYbUt3ZzlCVXJtWFc4NjNRSDVoeHdNeXBVTzM4YzktNjFfVDFMZHBTdXhrWDVVRzVTUEJxbHY1T0daNk4zMnZlRWJZRXZ0ZVpVa3NmTFB0eGg5aXprVlJfOFdfbk8tcFk0c3hVMl9KUVdEdHJjd2RlbjUtNzJIT1d5SXE1cV9DYkZBTUN6UUpmN0xKX0Z3M2tOQ0VwXzdJWHZTUFRXb09aODR1TEZ5N2YxXzRtZWdtaHVxSEVMNHpDRXgzeVJ0a2prNHNPQWtQY3U0bmh5ZTlIMXZNYnhrM0o5RnJDalVyc0Y5VGJGWXN1bDhkOG1ESFFkT19hbnJjUGhfZDdjV1F2eWJ4b0FYOFhjanhRczhQVml3ekNUWTYwc2IzdFEwSE5NTDE5bFJZVTNLRDVXcUVId1pHWENlV25wSldqVVdnbnNmODJrS3Yzb0tJRkRSdkk5WjQ1QVFITGRJZS1COFgtcG8?oc=5&hl=en-US&gl=US&ceid=US:en&utm_source=tek2day&utm_medium=email">More Working-Class Americans Than Ever Are Investing in the Stock Market - The Wall Street Journal</a></h3>
     <div class="meta">Google - Oct 10, 2025 </div>
-    <p data-summary>EU capitals move to charge Temu and Shein over small packages Financial Times</p>
+    <p data-summary>More Working-Class Americans Than Ever Are Investing in the Stock Market The Wall Street Journal</p>
   </div>
-</article>
-          </div>
+</article></div>
         </details>
 
-        <!-- FinTech -->
         <details class="cat ft" open>
           <summary>
             <span class="label">
@@ -382,8 +337,7 @@
             </span>
             <span class="count">12 items</span>
           </summary>
-          <div class="items">
-            <article class="top" data-card data-url="https://www.pymnts.com/cryptocurrency/2025/ethena-stablecoins-dollar-peg-slips-briefly-amid-crypto-upheaval/?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/c791c96532/" data-title="Ethena Stablecoin’s Dollar Peg Slips Briefly Amid Crypto Upheaval" data-summary="The third-largest stablecoin reportedly lost its dollar peg briefly amid a wider market downturn. USDe, a “synthetic dollar” from cryptocurrency project Ethena, fell to 65 cents a…">
+          <div class="items"><article class="top" data-card data-url="https://www.pymnts.com/cryptocurrency/2025/ethena-stablecoins-dollar-peg-slips-briefly-amid-crypto-upheaval/?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/c791c96532/" data-title="Ethena Stablecoin’s Dollar Peg Slips Briefly Amid Crypto Upheaval" data-summary="The third-largest stablecoin reportedly lost its dollar peg briefly amid a wider market downturn. USDe, a “synthetic dollar” from cryptocurrency project Ethena, fell to 65 cents a…">
   <img src="https://pulse.tek2dayholdings.com/p/c791c96532/thumbnail.png" alt="Ethena Stablecoin’s Dollar Peg Slips Briefly Amid Crypto Upheaval" class="article-thumb">
   <div class="article-content">
     <h3><a data-title-link href="https://www.pymnts.com/cryptocurrency/2025/ethena-stablecoins-dollar-peg-slips-briefly-amid-crypto-upheaval/?utm_source=tek2day&utm_medium=email">Ethena Stablecoin’s Dollar Peg Slips Briefly Amid Crypto Upheaval</a></h3>
@@ -423,28 +377,12 @@
     <p data-summary>Stock Bubble Dread Grips Central Bankers in Washington Bloomberg.com</p>
   </div>
 </article>
-<article class="" data-card data-url="https://news.google.com/rss/articles/CBMicEFVX3lxTFBtZmJBTW5QNU1oXy1HYU1YVzNIbU9haG1DdkNWV1E4Z2N4MENTM2xBc3REX1FBdEtPTjg4YVVNMXY4S0VCZlp2cHNudk5Wa25XMGlxeGV4NkRwNFB1NnRKa29iazN0ZEtQR2w1ZjRWdmw?oc=5&hl=en-US&gl=US&ceid=US:en&utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/f0eafca989/" data-title="Business school case study: banking on the unbanked - Financial Times" data-summary="Business school case study: banking on the unbanked Financial Times">
-  <img src="https://pulse.tek2dayholdings.com/p/f0eafca989/thumbnail.png" alt="Business school case study: banking on the unbanked - Financial Times" class="article-thumb">
+<article class="" data-card data-url="https://news.google.com/rss/articles/CBMiekFVX3lxTE9nbHh2WnVKczQxMzFSZEwzN0ZJbGZ1VHB6RG5FdGFYcy1tc1RiTkd4Vl85ZUJFOVBzQnRldGpISFNqckJsRnc2TzdDV1NJaTlEOXlET3p5VFZEOUZkczZ0bURGdU1jbFpWQUZUVmdqUWNmRmNwc3VMSktR?oc=5&hl=en-US&gl=US&ceid=US:en&utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/9f38ea37ed/" data-title="How Churners Earn Money By Regularly Signing Up for Credit Cards - The New York Times" data-summary="How Churners Earn Money By Regularly Signing Up for Credit Cards The New York Times">
+  <img src="https://pulse.tek2dayholdings.com/p/9f38ea37ed/thumbnail.png" alt="How Churners Earn Money By Regularly Signing Up for Credit Cards - The New York Times" class="article-thumb">
   <div class="article-content">
-    <h3><a data-title-link href="https://news.google.com/rss/articles/CBMicEFVX3lxTFBtZmJBTW5QNU1oXy1HYU1YVzNIbU9haG1DdkNWV1E4Z2N4MENTM2xBc3REX1FBdEtPTjg4YVVNMXY4S0VCZlp2cHNudk5Wa25XMGlxeGV4NkRwNFB1NnRKa29iazN0ZEtQR2w1ZjRWdmw?oc=5&hl=en-US&gl=US&ceid=US:en&utm_source=tek2day&utm_medium=email">Business school case study: banking on the unbanked - Financial Times</a></h3>
-    <div class="meta">Google - Oct 12, 2025 <span class="badge">New</span></div>
-    <p data-summary>Business school case study: banking on the unbanked Financial Times</p>
-  </div>
-</article>
-<article class="" data-card data-url="https://news.google.com/rss/articles/CBMitgFBVV95cUxOVlp1cTZCandLaENCemtLTmc5NWt0YjRoQ25jRkR4NDBRLWJZc2IySFhNYzNZVmJPZ2RDSXA3MEhqSDJFQldTM3RseXlod0tBeVhxa09qVWxPdkhJRkdRdUJyZjlOc2l0ZGtRaVJEdXNrMFZPQnBwYjlwTjNPdzJ2blZNdWtSODhUWjB3ajRHQWVKbmJ5b0JSRkVYX2lMV2NmQmRjenVMVGxsZy1MRTBGcnU4TGJvQQ?oc=5&hl=en-US&gl=US&ceid=US:en&utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/854ccc3782/" data-title="Third-Largest Stablecoin Briefly Loses Dollar Peg in Crypto Rout - Bloomberg.com" data-summary="Third-Largest Stablecoin Briefly Loses Dollar Peg in Crypto Rout Bloomberg.com">
-  <img src="https://pulse.tek2dayholdings.com/p/854ccc3782/thumbnail.png" alt="Third-Largest Stablecoin Briefly Loses Dollar Peg in Crypto Rout - Bloomberg.com" class="article-thumb">
-  <div class="article-content">
-    <h3><a data-title-link href="https://news.google.com/rss/articles/CBMitgFBVV95cUxOVlp1cTZCandLaENCemtLTmc5NWt0YjRoQ25jRkR4NDBRLWJZc2IySFhNYzNZVmJPZ2RDSXA3MEhqSDJFQldTM3RseXlod0tBeVhxa09qVWxPdkhJRkdRdUJyZjlOc2l0ZGtRaVJEdXNrMFZPQnBwYjlwTjNPdzJ2blZNdWtSODhUWjB3ajRHQWVKbmJ5b0JSRkVYX2lMV2NmQmRjenVMVGxsZy1MRTBGcnU4TGJvQQ?oc=5&hl=en-US&gl=US&ceid=US:en&utm_source=tek2day&utm_medium=email">Third-Largest Stablecoin Briefly Loses Dollar Peg in Crypto Rout - Bloomberg.com</a></h3>
+    <h3><a data-title-link href="https://news.google.com/rss/articles/CBMiekFVX3lxTE9nbHh2WnVKczQxMzFSZEwzN0ZJbGZ1VHB6RG5FdGFYcy1tc1RiTkd4Vl85ZUJFOVBzQnRldGpISFNqckJsRnc2TzdDV1NJaTlEOXlET3p5VFZEOUZkczZ0bURGdU1jbFpWQUZUVmdqUWNmRmNwc3VMSktR?oc=5&hl=en-US&gl=US&ceid=US:en&utm_source=tek2day&utm_medium=email">How Churners Earn Money By Regularly Signing Up for Credit Cards - The New York Times</a></h3>
     <div class="meta">Google - Oct 11, 2025 </div>
-    <p data-summary>Third-Largest Stablecoin Briefly Loses Dollar Peg in Crypto Rout Bloomberg.com</p>
-  </div>
-</article>
-<article class="" data-card data-url="https://news.google.com/rss/articles/CBMikwNBVV95cUxOcGN3NWwxWWpEcVlobnIxUTRmemFrYnB4eldfMFUxX0d3N19rS3AzTlJhY1R6aDZ6R1BTWDF6MnEwWVhYUTlEd3M0ZFJHMVR1Nnp0NDQwR3RwOWJJWXFERzVzenk3MEsxUTJraW14SElJTWYySldMQXVaZktKQTNvSWc4M2R3NGNXR0hKYm11QU1WcGMxTm9JYms2SlF1WTAwSmtCb3h0NTItNXdiMzF4R1hEVmgxWXZfa1lYR3ZHZWowamgwOFptLVotUVEwRzV4Uk5YZ094cDRjMTQ1b3E2QU1fZ1lIQ2VpU3I2eHZzU0gtYmt0bGlHdHZ5cUFiMWdIbUZtdWRTSW1tRVdEbGdvdUo0TDJ3Uzloc3BpVWdIYUFRSE8xQ2NNYV9uUWoya3A0Y2kxMEFzOVlLRVZKZlh5QkNKM3RaMjlQQjV0UjFHQ0t5ekdJcnlVU09mM3NXcklBbHpnZEJ5eHZQVXd6TER5NnJzc1o5TW9DX1VZc3FWdFU3Mnhvdm9JLVo1Q0lDODNiUVY0?oc=5&hl=en-US&gl=US&ceid=US:en&utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/45bebd20bf/" data-title="The Score: Delta, AMD, Tesla and More Stocks That Defined the Week - The Wall Street Journal" data-summary="The Score: Delta, AMD, Tesla and More Stocks That Defined the Week The Wall Street Journal">
-  <img src="https://pulse.tek2dayholdings.com/p/45bebd20bf/thumbnail.png" alt="The Score: Delta, AMD, Tesla and More Stocks That Defined the Week - The Wall Street Journal" class="article-thumb">
-  <div class="article-content">
-    <h3><a data-title-link href="https://news.google.com/rss/articles/CBMikwNBVV95cUxOcGN3NWwxWWpEcVlobnIxUTRmemFrYnB4eldfMFUxX0d3N19rS3AzTlJhY1R6aDZ6R1BTWDF6MnEwWVhYUTlEd3M0ZFJHMVR1Nnp0NDQwR3RwOWJJWXFERzVzenk3MEsxUTJraW14SElJTWYySldMQXVaZktKQTNvSWc4M2R3NGNXR0hKYm11QU1WcGMxTm9JYms2SlF1WTAwSmtCb3h0NTItNXdiMzF4R1hEVmgxWXZfa1lYR3ZHZWowamgwOFptLVotUVEwRzV4Uk5YZ094cDRjMTQ1b3E2QU1fZ1lIQ2VpU3I2eHZzU0gtYmt0bGlHdHZ5cUFiMWdIbUZtdWRTSW1tRVdEbGdvdUo0TDJ3Uzloc3BpVWdIYUFRSE8xQ2NNYV9uUWoya3A0Y2kxMEFzOVlLRVZKZlh5QkNKM3RaMjlQQjV0UjFHQ0t5ekdJcnlVU09mM3NXcklBbHpnZEJ5eHZQVXd6TER5NnJzc1o5TW9DX1VZc3FWdFU3Mnhvdm9JLVo1Q0lDODNiUVY0?oc=5&hl=en-US&gl=US&ceid=US:en&utm_source=tek2day&utm_medium=email">The Score: Delta, AMD, Tesla and More Stocks That Defined the Week - The Wall Street Journal</a></h3>
-    <div class="meta">Google - Oct 10, 2025 </div>
-    <p data-summary>The Score: Delta, AMD, Tesla and More Stocks That Defined the Week The Wall Street Journal</p>
+    <p data-summary>How Churners Earn Money By Regularly Signing Up for Credit Cards The New York Times</p>
   </div>
 </article>
 <article class="" data-card data-url="https://news.google.com/rss/articles/CBMiswFBVV95cUxONmJHNjZaZE9KOWVDc2RTUTBudTFwNF9VRmVVaFdmZ3dLbnRJWkJ5QmRsZU4tY1lvTmhCbkRhQUNkS28wRnNHdFhkSkFTa095SHVxeHhKempiOGtsRFNGdUgwcUNrX0tIYmlpODV0SEtOTGJabEk3MFdJUG5mZ3pBMVJNanl3d1h1QzFHTHJYSi1OQjd3Z2hBdElOV1RsNkJlcHB6VEt2cmlOeTZqNE93Q1ZIYw?oc=5&hl=en-US&gl=US&ceid=US:en&utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/f5bd9fbcbd/" data-title="Goldman, Santander Among Banks Exploring Blockchain-Based Money - Bloomberg.com" data-summary="Goldman, Santander Among Banks Exploring Blockchain-Based Money Bloomberg.com">
@@ -463,12 +401,20 @@
     <p data-summary>AI’s Growth Leaves Financial Regulators Struggling to Catch Up Bloomberg.com</p>
   </div>
 </article>
-<article class="" data-card data-url="https://www.nytimes.com/2025/10/10/insider/cryptocurrency-reporting.html?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/8dc9858d8e/" data-title="Riding the Wild Wave of Crypto Coverage" data-summary="David Yaffe-Bellany, a technology reporter who has covered the cryptocurrency industry since 2022, has come to embrace learning on the fly.">
-  <img src="https://pulse.tek2dayholdings.com/p/8dc9858d8e/thumbnail.png" alt="Riding the Wild Wave of Crypto Coverage" class="article-thumb">
+<article class="" data-card data-url="https://news.google.com/rss/articles/CBMiigFBVV95cUxOUV9IRVh2WjI5UlhkejRkTlFYT2FhbUpLcG12enlUWDRLbzEtTHF6b1RfLWpkVlJMT1hvRnY0U1JVT2RCaU5haXNvdkFJY0xRTFdoVmp3OXY0ck4yTndPMXZhYkNmN1A3LUNreWlyQjJlbDNMYXJiTEE3LUlSZ2w2THNKMWNPNEwzdEE?oc=5&hl=en-US&gl=US&ceid=US:en&utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/bc1c95cf3d/" data-title="Fintech Start-Ups and Investment Firms Are Battling Over Your 401(k) - The New York Times" data-summary="Fintech Start-Ups and Investment Firms Are Battling Over Your 401(k) The New York Times">
+  <img src="https://pulse.tek2dayholdings.com/p/bc1c95cf3d/thumbnail.png" alt="Fintech Start-Ups and Investment Firms Are Battling Over Your 401(k) - The New York Times" class="article-thumb">
   <div class="article-content">
-    <h3><a data-title-link href="https://www.nytimes.com/2025/10/10/insider/cryptocurrency-reporting.html?utm_source=tek2day&utm_medium=email">Riding the Wild Wave of Crypto Coverage</a></h3>
-    <div class="meta">The New York Times — Technology - Oct 10, 2025 </div>
-    <p data-summary>David Yaffe-Bellany, a technology reporter who has covered the cryptocurrency industry since 2022, has come to embrace learning on the fly.</p>
+    <h3><a data-title-link href="https://news.google.com/rss/articles/CBMiigFBVV95cUxOUV9IRVh2WjI5UlhkejRkTlFYT2FhbUpLcG12enlUWDRLbzEtTHF6b1RfLWpkVlJMT1hvRnY0U1JVT2RCaU5haXNvdkFJY0xRTFdoVmp3OXY0ck4yTndPMXZhYkNmN1A3LUNreWlyQjJlbDNMYXJiTEE3LUlSZ2w2THNKMWNPNEwzdEE?oc=5&hl=en-US&gl=US&ceid=US:en&utm_source=tek2day&utm_medium=email">Fintech Start-Ups and Investment Firms Are Battling Over Your 401(k) - The New York Times</a></h3>
+    <div class="meta">Google - Oct 10, 2025 </div>
+    <p data-summary>Fintech Start-Ups and Investment Firms Are Battling Over Your 401(k) The New York Times</p>
+  </div>
+</article>
+<article class="" data-card data-url="https://news.google.com/rss/articles/CBMikAFBVV95cUxNTlRhdkM1TUM0U2p1aWFSQnJXYlB5YUpqTUVCZEVEel9MRmdpWUN5NXp6QVJBcnR5bmVMTXlsSFhCOFZCR0E5U1ZmY0NXOVpraEtjMTlHZzRicUNFd1ltTmx6eGIwUXFhTUh3eFlBdXRUclM2YVBhcndyZkw4cEYwVEpjd3BGbEFFbXdCRUFfWkg?oc=5&hl=en-US&gl=US&ceid=US:en&utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/90acde6b68/" data-title="Dimon, Solomon, Klarna CEO on How AI Is Reshaping Banking | Bloomberg Tech: Europe 10/10/2025 - Bloomberg.com" data-summary="Dimon, Solomon, Klarna CEO on How AI Is Reshaping Banking | Bloomberg Tech: Europe 10/10/2025 Bloomberg.com">
+  <img src="https://pulse.tek2dayholdings.com/p/90acde6b68/thumbnail.png" alt="Dimon, Solomon, Klarna CEO on How AI Is Reshaping Banking | Bloomberg Tech: Europe 10/10/2025 - Bloomberg.com" class="article-thumb">
+  <div class="article-content">
+    <h3><a data-title-link href="https://news.google.com/rss/articles/CBMikAFBVV95cUxNTlRhdkM1TUM0U2p1aWFSQnJXYlB5YUpqTUVCZEVEel9MRmdpWUN5NXp6QVJBcnR5bmVMTXlsSFhCOFZCR0E5U1ZmY0NXOVpraEtjMTlHZzRicUNFd1ltTmx6eGIwUXFhTUh3eFlBdXRUclM2YVBhcndyZkw4cEYwVEpjd3BGbEFFbXdCRUFfWkg?oc=5&hl=en-US&gl=US&ceid=US:en&utm_source=tek2day&utm_medium=email">Dimon, Solomon, Klarna CEO on How AI Is Reshaping Banking | Bloomberg Tech: Europe 10/10/2025 - Bloomberg.com</a></h3>
+    <div class="meta">Google - Oct 10, 2025 </div>
+    <p data-summary>Dimon, Solomon, Klarna CEO on How AI Is Reshaping Banking | Bloomberg Tech: Europe 10/10/2025 Bloomberg.com</p>
   </div>
 </article>
 <article class="" data-card data-url="https://news.google.com/rss/articles/CBMifEFVX3lxTE1YdnBYVUQ4cWFDWEM2dTFMVi1wS0pxeXpwVkVrLXh5N3FXWGdQNzkza2pScUhxMU5Ib3NOblJ5Vk1OWGlHSlJ4Z2l4VXdPR1hxMWJBclhuOEc3U0ZrY1RmX0NwVFdrU2Q3bFZCT0x3LWlRYlR2X250WUhGZkY?oc=5&hl=en-US&gl=US&ceid=US:en&utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/0591ef67ab/" data-title="Riding the Wild Wave of Crypto Coverage - The New York Times" data-summary="Riding the Wild Wave of Crypto Coverage The New York Times">
@@ -479,17 +425,22 @@
     <p data-summary>Riding the Wild Wave of Crypto Coverage The New York Times</p>
   </div>
 </article>
-          </div>
+<article class="" data-card data-url="https://www.nytimes.com/2025/10/10/insider/cryptocurrency-reporting.html?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/8dc9858d8e/" data-title="Riding the Wild Wave of Crypto Coverage" data-summary="David Yaffe-Bellany, a technology reporter who has covered the cryptocurrency industry since 2022, has come to embrace learning on the fly.">
+  <img src="https://pulse.tek2dayholdings.com/p/8dc9858d8e/thumbnail.png" alt="Riding the Wild Wave of Crypto Coverage" class="article-thumb">
+  <div class="article-content">
+    <h3><a data-title-link href="https://www.nytimes.com/2025/10/10/insider/cryptocurrency-reporting.html?utm_source=tek2day&utm_medium=email">Riding the Wild Wave of Crypto Coverage</a></h3>
+    <div class="meta">The New York Times — Technology - Oct 10, 2025 </div>
+    <p data-summary>David Yaffe-Bellany, a technology reporter who has covered the cryptocurrency industry since 2022, has come to embrace learning on the fly.</p>
+  </div>
+</article></div>
         </details>
       </div>
-
       <p class="foot">T2D Pulse 2025.</p>
     </section>
   </div>
 
-  <!-- Scripts: PWA + header shadow (no theme logic) -->
   <script>
-    // Install prompt
+    // PWA install
     let deferredPrompt;
     window.addEventListener('beforeinstallprompt', (e) => {
       e.preventDefault();
@@ -512,7 +463,7 @@
       });
     }
 
-    // Header shadow on scroll
+    // Header shadow
     window.addEventListener('scroll', () => {
       const h = document.querySelector('header.site');
       if (!h) return;
@@ -521,8 +472,8 @@
     });
   </script>
 
-  <!-- ===== Share buttons script ===== -->
   <script>
+  // Share buttons
   (function () {
     const cards = document.querySelectorAll('#tek2day-pulse article');
     if (!cards.length) return;
@@ -532,7 +483,7 @@
       if (!a) continue;
 
       const originalUrl = a.href;
-      const permalink = card.dataset.permalink || originalUrl;  // Use permalink if available, fallback to original
+      const permalink = card.dataset.permalink || originalUrl;
       const title = a.textContent.trim();
       const brand = 'via T2D Pulse';
 
@@ -540,7 +491,6 @@
       const u = encodeURIComponent(permalink);
       const xShare = `https://twitter.com/intent/tweet?url=${u}&text=${encodeURIComponent(shareTitle)}`;
 
-      // Toolbar with both Share to X and Copy URL buttons
       const bar = document.createElement('div');
       bar.className = 'share';
       bar.innerHTML = `
@@ -548,18 +498,16 @@
         <button class="share-btn copy-url" type="button">Copy URL</button>
       `;
       const btn = bar.querySelector('.copy-url');
-      btn.dataset.url = permalink;  // Use permalink for copying
+      btn.dataset.url = permalink;
       card.appendChild(bar);
     }
 
-    // Copy URL handler
     document.addEventListener('click', async (e) => {
       const btn = e.target.closest('.copy-url');
       if (!btn) return;
 
       const url = btn.dataset.url;
 
-      // Prefer native share on mobile (URL only)
       if (navigator.share) {
         try { await navigator.share({ url }); return; } catch(_) {}
       }
