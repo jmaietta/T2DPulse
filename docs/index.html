@@ -106,17 +106,27 @@
 
     .items{padding:.55rem 1rem 1rem;display:grid;gap:.75rem}
     article{
-      position:relative;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:.9rem .9rem;
+      position:relative;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:.9rem;
       transition:transform .06s ease, box-shadow .12s ease; will-change:transform;
+      display:flex;gap:.9rem;align-items:flex-start;
     }
     article:hover{transform:translateY(-1px); box-shadow:var(--shadow)}
     article.top{background:linear-gradient(180deg, color-mix(in srgb, var(--card) 92%, #fff 8%), var(--card)); border-width:1px}
+    .article-thumb{
+      width:120px;height:120px;border-radius:8px;object-fit:cover;flex-shrink:0;
+    }
+    .article-content{flex:1;min-width:0;}
     h3{margin:0 0 .35rem;font-size:1.04rem;line-height:1.4}
     h3 a{color:var(--ink);text-decoration:none}
     h3 a:hover{text-decoration:underline}
     .meta{color:var(--muted);font-size:.86rem;margin-bottom:.4rem;display:flex;gap:.4rem;align-items:center;flex-wrap:wrap}
     .meta .src{font-weight:700;letter-spacing:.1px}
     .meta .sep{opacity:.35}
+    .badge{
+      display:inline-block;padding:.15rem .4rem;border-radius:4px;font-size:.75rem;font-weight:700;
+      background:var(--ai);color:white;margin-left:.25rem;
+    }
+    .badge.muted{background:var(--muted);opacity:.7;}
     p{margin:.25rem 0 0; color:var(--ink)}
 
     /* Footer note */
@@ -130,7 +140,8 @@
       header.site h1{font-size:1.12rem}
       #tek2day-pulse{padding:.9rem}
       .items{padding:.45rem .6rem .8rem}
-      article{padding:.8rem .75rem}
+      article{padding:.8rem;flex-direction:column;}
+      .article-thumb{width:100%;height:auto;max-height:200px;}
     }
 
     /* ===== Share toolbar (minimal styles) ===== */
@@ -183,73 +194,120 @@
             <span class="label">
               <span class="pill"><i class="dot" style="background:var(--ai)"></i>AI</span>
             </span>
-            <span class="count">13 items</span>
+            <span class="count">14 items</span>
           </summary>
           <div class="items">
-            <article class="top" data-card data-url="https://venturebeat.com/ai/we-keep-talking-about-ai-agents-but-do-we-ever-know-what-they-are?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/eed7b78c9e/" data-title="We keep talking about AI agents, but do we ever know what they are?" data-summary="Imagine you do two things on a Monday morning. First, you ask a chatbot to summarize your new emails. Next, you ask an AI tool to figure out why your top competitor grew so fast last quarter. The AI silently gets to work . It scours financ…">
-  <h3><a data-title-link href="https://venturebeat.com/ai/we-keep-talking-about-ai-agents-but-do-we-ever-know-what-they-are?utm_source=tek2day&utm_medium=email">We keep talking about AI agents, but do we ever know what they are?</a></h3>
-  <div class="meta">VentureBeat - Oct 12, 2025 <span class="badge">New</span></div>
-  <p data-summary>Imagine you do two things on a Monday morning. First, you ask a chatbot to summarize your new emails. Next, you ask an AI tool to figure out why your top competitor grew so fast last quarter. The AI silently gets to work . It scours financ…</p>
+            <article class="top" data-card data-url="https://www.pymnts.com/artificial-intelligence-2/2025/meta-taps-thinking-machines-co-founder-to-boost-ai-expertise/?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/3601bc0331/" data-title="Meta Taps Thinking Machines Co-Founder to Boost AI Expertise" data-summary="Meta has reportedly recruited one of the co-founders of artificial intelligence (AI) startup Thinking Machines. Andrew Tulloch, a high-profile AI researcher, confirmed his departure in a message to workers on Friday (Oct. 10), The Wall Str…">
+  <img src="https://pulse.tek2dayholdings.com/p/3601bc0331/thumbnail.png" alt="Meta Taps Thinking Machines Co-Founder to Boost AI Expertise" class="article-thumb">
+  <div class="article-content">
+    <h3><a data-title-link href="https://www.pymnts.com/artificial-intelligence-2/2025/meta-taps-thinking-machines-co-founder-to-boost-ai-expertise/?utm_source=tek2day&utm_medium=email">Meta Taps Thinking Machines Co-Founder to Boost AI Expertise</a></h3>
+    <div class="meta">PYMNTS - Oct 12, 2025 <span class="badge">New</span></div>
+    <p data-summary>Meta has reportedly recruited one of the co-founders of artificial intelligence (AI) startup Thinking Machines. Andrew Tulloch, a high-profile AI researcher, confirmed his departure in a message to workers on Friday (Oct. 10), The Wall Str…</p>
+  </div>
+</article>
+<article class="" data-card data-url="https://venturebeat.com/ai/we-keep-talking-about-ai-agents-but-do-we-ever-know-what-they-are?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/eed7b78c9e/" data-title="We keep talking about AI agents, but do we ever know what they are?" data-summary="Imagine you do two things on a Monday morning. First, you ask a chatbot to summarize your new emails. Next, you ask an AI tool to figure out why your top competitor grew so fast last quarter. The AI silently gets to work . It scours financ…">
+  <img src="https://pulse.tek2dayholdings.com/p/eed7b78c9e/thumbnail.png" alt="We keep talking about AI agents, but do we ever know what they are?" class="article-thumb">
+  <div class="article-content">
+    <h3><a data-title-link href="https://venturebeat.com/ai/we-keep-talking-about-ai-agents-but-do-we-ever-know-what-they-are?utm_source=tek2day&utm_medium=email">We keep talking about AI agents, but do we ever know what they are?</a></h3>
+    <div class="meta">VentureBeat - Oct 12, 2025 <span class="badge">New</span></div>
+    <p data-summary>Imagine you do two things on a Monday morning. First, you ask a chatbot to summarize your new emails. Next, you ask an AI tool to figure out why your top competitor grew so fast last quarter. The AI silently gets to work . It scours financ…</p>
+  </div>
 </article>
 <article class="" data-card data-url="https://www.theverge.com/news/798681/police-stop-pulling-ai-homeless-man-tiktok-prank?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/21eda55546/" data-title="Police are asking kids to stop pulling AI homeless man prank" data-summary="We’ve been so worried about deepfaked politicians, AI musicians, virtual actresses, and phony satellite imagery that we didn’t even consider the dangers posed by precocious teenagers. Kids are using AI to create images of a disheveled, see…">
-  <h3><a data-title-link href="https://www.theverge.com/news/798681/police-stop-pulling-ai-homeless-man-tiktok-prank?utm_source=tek2day&utm_medium=email">Police are asking kids to stop pulling AI homeless man prank</a></h3>
-  <div class="meta">The Verge - Oct 12, 2025 <span class="badge">New</span></div>
-  <p data-summary>We’ve been so worried about deepfaked politicians, AI musicians, virtual actresses, and phony satellite imagery that we didn’t even consider the dangers posed by precocious teenagers. Kids are using AI to create images of a disheveled, see…</p>
+  <img src="https://pulse.tek2dayholdings.com/p/21eda55546/thumbnail.png" alt="Police are asking kids to stop pulling AI homeless man prank" class="article-thumb">
+  <div class="article-content">
+    <h3><a data-title-link href="https://www.theverge.com/news/798681/police-stop-pulling-ai-homeless-man-tiktok-prank?utm_source=tek2day&utm_medium=email">Police are asking kids to stop pulling AI homeless man prank</a></h3>
+    <div class="meta">The Verge - Oct 12, 2025 <span class="badge">New</span></div>
+    <p data-summary>We’ve been so worried about deepfaked politicians, AI musicians, virtual actresses, and phony satellite imagery that we didn’t even consider the dangers posed by precocious teenagers. Kids are using AI to create images of a disheveled, see…</p>
+  </div>
 </article>
 <article class="" data-card data-url="https://www.theverge.com/tech/798368/chatgpt-everything-app-chair-company-installer?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/c515891445/" data-title="ChatGPT is becoming an everything app" data-summary="Hi, friends! Welcome to Installer No. 101, your guide to the best and Verge-iest stuff in the world. (If you&#x27;re new here, welcome, hope you like silly accessories, and also you can read all the old editions at the Installer homepage.) This…">
-  <h3><a data-title-link href="https://www.theverge.com/tech/798368/chatgpt-everything-app-chair-company-installer?utm_source=tek2day&utm_medium=email">ChatGPT is becoming an everything app</a></h3>
-  <div class="meta">The Verge - Oct 12, 2025 <span class="badge">New</span></div>
-  <p data-summary>Hi, friends! Welcome to Installer No. 101, your guide to the best and Verge-iest stuff in the world. (If you&#x27;re new here, welcome, hope you like silly accessories, and also you can read all the old editions at the Installer homepage.) This…</p>
+  <img src="https://pulse.tek2dayholdings.com/p/c515891445/thumbnail.png" alt="ChatGPT is becoming an everything app" class="article-thumb">
+  <div class="article-content">
+    <h3><a data-title-link href="https://www.theverge.com/tech/798368/chatgpt-everything-app-chair-company-installer?utm_source=tek2day&utm_medium=email">ChatGPT is becoming an everything app</a></h3>
+    <div class="meta">The Verge - Oct 12, 2025 <span class="badge">New</span></div>
+    <p data-summary>Hi, friends! Welcome to Installer No. 101, your guide to the best and Verge-iest stuff in the world. (If you&#x27;re new here, welcome, hope you like silly accessories, and also you can read all the old editions at the Installer homepage.) This…</p>
+  </div>
+</article>
+<article class="" data-card data-url="https://news.google.com/rss/articles/CBMilAFBVV95cUxPazliU2ktUjQ3YjVPS0NhVjloOVpuY1Zja1djd0c3c3kyYjJlR1dnd01jMlpCZm1xbWp1b2t0T0lyYV80RTlrNkhWMzVsaTdZb3V0d2NKYmprNnM5OUI0STlHaHRUbGdxMjFJelBGYXZoOUpRb2U5Q0tONnMxUW1QWHdQUzJNZkRObVNqb3NIN2Y0RlZ5?oc=5&hl=en-US&gl=US&ceid=US:en&utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/cbace919a4/" data-title="What Would an AI Crash Look Like? - Bloomberg.com" data-summary="What Would an AI Crash Look Like? Bloomberg.com">
+  <img src="https://pulse.tek2dayholdings.com/p/cbace919a4/thumbnail.png" alt="What Would an AI Crash Look Like? - Bloomberg.com" class="article-thumb">
+  <div class="article-content">
+    <h3><a data-title-link href="https://news.google.com/rss/articles/CBMilAFBVV95cUxPazliU2ktUjQ3YjVPS0NhVjloOVpuY1Zja1djd0c3c3kyYjJlR1dnd01jMlpCZm1xbWp1b2t0T0lyYV80RTlrNkhWMzVsaTdZb3V0d2NKYmprNnM5OUI0STlHaHRUbGdxMjFJelBGYXZoOUpRb2U5Q0tONnMxUW1QWHdQUzJNZkRObVNqb3NIN2Y0RlZ5?oc=5&hl=en-US&gl=US&ceid=US:en&utm_source=tek2day&utm_medium=email">What Would an AI Crash Look Like? - Bloomberg.com</a></h3>
+    <div class="meta">Google - Oct 12, 2025 <span class="badge">New</span></div>
+    <p data-summary>What Would an AI Crash Look Like? Bloomberg.com</p>
+  </div>
+</article>
+<article class="" data-card data-url="https://venturebeat.com/ai/heres-whats-slowing-down-your-ai-strategy-and-how-to-fix-it?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/f9bb25e065/" data-title="Here&#x27;s what&#x27;s slowing down your AI strategy — and how to fix it" data-summary="Your best data science team just spent six months building a model that predicts customer churn with 90% accuracy. It’s sitting on a server, unused. Why? Because it’s been stuck in a risk review queue for a very long period of time, waitin…">
+  <img src="https://pulse.tek2dayholdings.com/p/f9bb25e065/thumbnail.png" alt="Here&#x27;s what&#x27;s slowing down your AI strategy — and how to fix it" class="article-thumb">
+  <div class="article-content">
+    <h3><a data-title-link href="https://venturebeat.com/ai/heres-whats-slowing-down-your-ai-strategy-and-how-to-fix-it?utm_source=tek2day&utm_medium=email">Here&#x27;s what&#x27;s slowing down your AI strategy — and how to fix it</a></h3>
+    <div class="meta">VentureBeat - Oct 12, 2025 <span class="badge">New</span></div>
+    <p data-summary>Your best data science team just spent six months building a model that predicts customer churn with 90% accuracy. It’s sitting on a server, unused. Why? Because it’s been stuck in a risk review queue for a very long period of time, waitin…</p>
+  </div>
+</article>
+<article class="" data-card data-url="https://news.google.com/rss/articles/CBMicEFVX3lxTFB5UzdGQ3gwZ2lqVVctaWpLYVpiZ2hmNGtoLVJ6OGNRTE9ORWoycVN3cUJNVV9WZ2M4Umc4Q0ZISkl0ZjFFbWlUQlFjWXpPbElSeFZyMXdWWS1mQTZHancwcmg2aWxWa1hwcElrRWpjZ3Y?oc=5&hl=en-US&gl=US&ceid=US:en&utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/eb632f099a/" data-title="Elon Musk’s xAI joins race to build ‘world models’ to power video games - Financial Times" data-summary="Elon Musk’s xAI joins race to build ‘world models’ to power video games Financial Times">
+  <img src="https://pulse.tek2dayholdings.com/p/eb632f099a/thumbnail.png" alt="Elon Musk’s xAI joins race to build ‘world models’ to power video games - Financial Times" class="article-thumb">
+  <div class="article-content">
+    <h3><a data-title-link href="https://news.google.com/rss/articles/CBMicEFVX3lxTFB5UzdGQ3gwZ2lqVVctaWpLYVpiZ2hmNGtoLVJ6OGNRTE9ORWoycVN3cUJNVV9WZ2M4Umc4Q0ZISkl0ZjFFbWlUQlFjWXpPbElSeFZyMXdWWS1mQTZHancwcmg2aWxWa1hwcElrRWpjZ3Y?oc=5&hl=en-US&gl=US&ceid=US:en&utm_source=tek2day&utm_medium=email">Elon Musk’s xAI joins race to build ‘world models’ to power video games - Financial Times</a></h3>
+    <div class="meta">Google - Oct 12, 2025 <span class="badge">New</span></div>
+    <p data-summary>Elon Musk’s xAI joins race to build ‘world models’ to power video games Financial Times</p>
+  </div>
 </article>
 <article class="" data-card data-url="https://www.ft.com/content/ac566346-53dd-4490-8d4c-5269906c64ee?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/13165ccae4/" data-title="Musk’s xAI joins race to build ‘world models’ to power video games" data-summary="Artificial intelligence group hired staff from Nvidia to work on advanced AI that can design and navigate physical spaces">
-  <h3><a data-title-link href="https://www.ft.com/content/ac566346-53dd-4490-8d4c-5269906c64ee?utm_source=tek2day&utm_medium=email">Musk’s xAI joins race to build ‘world models’ to power video games</a></h3>
-  <div class="meta">Financial Times — Technology - Oct 12, 2025 <span class="badge">New</span></div>
-  <p data-summary>Artificial intelligence group hired staff from Nvidia to work on advanced AI that can design and navigate physical spaces</p>
+  <img src="https://pulse.tek2dayholdings.com/p/13165ccae4/thumbnail.png" alt="Musk’s xAI joins race to build ‘world models’ to power video games" class="article-thumb">
+  <div class="article-content">
+    <h3><a data-title-link href="https://www.ft.com/content/ac566346-53dd-4490-8d4c-5269906c64ee?utm_source=tek2day&utm_medium=email">Musk’s xAI joins race to build ‘world models’ to power video games</a></h3>
+    <div class="meta">Financial Times — Technology - Oct 12, 2025 <span class="badge">New</span></div>
+    <p data-summary>Artificial intelligence group hired staff from Nvidia to work on advanced AI that can design and navigate physical spaces</p>
+  </div>
 </article>
-<article class="" data-card data-url="https://www.pymnts.com/artificial-intelligence-2/2025/nvidia-tops-new-ai-inference-benchmark/?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/c889afbda3/" data-title="Nvidia Tops New AI Inference Benchmark" data-summary="Nvidia has taken the top spot in a new artificial intelligence benchmark, with its latest Blackwell chips delivering record performance and efficiency. The results highlight how AI infrastructure is becoming a race not just for speed but f…">
-  <h3><a data-title-link href="https://www.pymnts.com/artificial-intelligence-2/2025/nvidia-tops-new-ai-inference-benchmark/?utm_source=tek2day&utm_medium=email">Nvidia Tops New AI Inference Benchmark</a></h3>
-  <div class="meta">PYMNTS - Oct 10, 2025 </div>
-  <p data-summary>Nvidia has taken the top spot in a new artificial intelligence benchmark, with its latest Blackwell chips delivering record performance and efficiency. The results highlight how AI infrastructure is becoming a race not just for speed but f…</p>
+<article class="" data-card data-url="https://venturebeat.com/ai/is-vibe-coding-ruining-a-generation-of-engineers?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/387c8810ef/" data-title="Is vibe coding ruining a generation of engineers?" data-summary="AI tools are revolutionizing software development by automating repetitive tasks, refactoring bloated code, and identifying bugs in real-time. Developers can now generate well-structured code from plain language prompts, saving hours of ma…">
+  <img src="https://pulse.tek2dayholdings.com/p/387c8810ef/thumbnail.png" alt="Is vibe coding ruining a generation of engineers?" class="article-thumb">
+  <div class="article-content">
+    <h3><a data-title-link href="https://venturebeat.com/ai/is-vibe-coding-ruining-a-generation-of-engineers?utm_source=tek2day&utm_medium=email">Is vibe coding ruining a generation of engineers?</a></h3>
+    <div class="meta">VentureBeat - Oct 11, 2025 </div>
+    <p data-summary>AI tools are revolutionizing software development by automating repetitive tasks, refactoring bloated code, and identifying bugs in real-time. Developers can now generate well-structured code from plain language prompts, saving hours of ma…</p>
+  </div>
 </article>
-<article class="" data-card data-url="https://venturebeat.com/security/weaponized-ai-can-dismantle-patches-in-72-hours-but-ivantis-kernel-defense?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/aa6d31af73/" data-title="Weaponized AI can dismantle patches in 72 hours — but Ivanti&#x27;s kernel defense can help" data-summary="Adversaries from cybercrime gangs to nation-state cyberattack squads are fine-tuning weaponized AI with the goal of defeating new patches in 3 days or less. The quicker the attack, the more time to explore a victim’s network, exfiltrate da…">
-  <h3><a data-title-link href="https://venturebeat.com/security/weaponized-ai-can-dismantle-patches-in-72-hours-but-ivantis-kernel-defense?utm_source=tek2day&utm_medium=email">Weaponized AI can dismantle patches in 72 hours — but Ivanti&#x27;s kernel defense can help</a></h3>
-  <div class="meta">VentureBeat - Oct 10, 2025 </div>
-  <p data-summary>Adversaries from cybercrime gangs to nation-state cyberattack squads are fine-tuning weaponized AI with the goal of defeating new patches in 3 days or less. The quicker the attack, the more time to explore a victim’s network, exfiltrate da…</p>
-</article>
-<article class="" data-card data-url="https://news.google.com/rss/articles/CBMirAFBVV95cUxPNDBjYzNhQ1k3M1M3UG14dkhmTkpFVHZTOUIzUUpySHFwRGJQTkttOF9LM1FxSHdrZ3VWb25KOUtaYWtZc1liVXFWNHBaNzdPem4wMU9HSUluRTJpM2dQbUFyNVVaNkEzX2VKMktuWnhidjFqekktTXhRY3F5Zm1ZSGFCdlN4YnZxY3l3b3RuTHZ1NlkzS3M3VFBPRjduaUlNUTNpTjN0b05pX2hi?oc=5&hl=en-US&gl=US&ceid=US:en&utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/80af4935c0/" data-title="Debt Investors Grow Warier of Companies Getting Hit By AI - Bloomberg.com" data-summary="Debt Investors Grow Warier of Companies Getting Hit By AI Bloomberg.com">
-  <h3><a data-title-link href="https://news.google.com/rss/articles/CBMirAFBVV95cUxPNDBjYzNhQ1k3M1M3UG14dkhmTkpFVHZTOUIzUUpySHFwRGJQTkttOF9LM1FxSHdrZ3VWb25KOUtaYWtZc1liVXFWNHBaNzdPem4wMU9HSUluRTJpM2dQbUFyNVVaNkEzX2VKMktuWnhidjFqekktTXhRY3F5Zm1ZSGFCdlN4YnZxY3l3b3RuTHZ1NlkzS3M3VFBPRjduaUlNUTNpTjN0b05pX2hi?oc=5&hl=en-US&gl=US&ceid=US:en&utm_source=tek2day&utm_medium=email">Debt Investors Grow Warier of Companies Getting Hit By AI - Bloomberg.com</a></h3>
-  <div class="meta">Google - Oct 10, 2025 </div>
-  <p data-summary>Debt Investors Grow Warier of Companies Getting Hit By AI Bloomberg.com</p>
+<article class="" data-card data-url="https://venturebeat.com/ai/together-ais-atlas-adaptive-speculator-delivers-400-inference-speedup-by?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/a5c96797cd/" data-title="Together AI&#x27;s ATLAS adaptive speculator delivers 400% inference speedup by learning from workloads in real-time" data-summary="Enterprises expanding AI deployments are hitting an invisible performance wall. The culprit? Static speculators that can&#x27;t keep up with shifting workloads. Speculators are smaller AI models that work alongside large language models during …">
+  <img src="https://pulse.tek2dayholdings.com/p/a5c96797cd/thumbnail.png" alt="Together AI&#x27;s ATLAS adaptive speculator delivers 400% inference speedup by learning from workloads in real-time" class="article-thumb">
+  <div class="article-content">
+    <h3><a data-title-link href="https://venturebeat.com/ai/together-ais-atlas-adaptive-speculator-delivers-400-inference-speedup-by?utm_source=tek2day&utm_medium=email">Together AI&#x27;s ATLAS adaptive speculator delivers 400% inference speedup by learning from workloads in real-time</a></h3>
+    <div class="meta">VentureBeat - Oct 10, 2025 </div>
+    <p data-summary>Enterprises expanding AI deployments are hitting an invisible performance wall. The culprit? Static speculators that can&#x27;t keep up with shifting workloads. Speculators are smaller AI models that work alongside large language models during …</p>
+  </div>
 </article>
 <article class="" data-card data-url="https://www.nytimes.com/2025/10/10/podcasts/hardfork-openai-devday-amd.html?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/8a50e763b2/" data-title="ChatGPT’s Platform Play + a Trillion-Dollar GPU Empire + the Queen of Slop" data-summary="At DevDay, OpenAI signaled its ambition to take everything you can do on the internet and shove it inside ChatGPT.">
-  <h3><a data-title-link href="https://www.nytimes.com/2025/10/10/podcasts/hardfork-openai-devday-amd.html?utm_source=tek2day&utm_medium=email">ChatGPT’s Platform Play + a Trillion-Dollar GPU Empire + the Queen of Slop</a></h3>
-  <div class="meta">The New York Times — Technology - Oct 10, 2025 </div>
-  <p data-summary>At DevDay, OpenAI signaled its ambition to take everything you can do on the internet and shove it inside ChatGPT.</p>
+  <img src="https://pulse.tek2dayholdings.com/p/8a50e763b2/thumbnail.png" alt="ChatGPT’s Platform Play + a Trillion-Dollar GPU Empire + the Queen of Slop" class="article-thumb">
+  <div class="article-content">
+    <h3><a data-title-link href="https://www.nytimes.com/2025/10/10/podcasts/hardfork-openai-devday-amd.html?utm_source=tek2day&utm_medium=email">ChatGPT’s Platform Play + a Trillion-Dollar GPU Empire + the Queen of Slop</a></h3>
+    <div class="meta">The New York Times — Technology - Oct 10, 2025 </div>
+    <p data-summary>At DevDay, OpenAI signaled its ambition to take everything you can do on the internet and shove it inside ChatGPT.</p>
+  </div>
 </article>
-<article class="" data-card data-url="https://news.google.com/rss/articles/CBMiiwFBVV95cUxOX25RaVdsdXludGYzdlluRnc5YjV6STdveno2S1JHaUdkUzU3WW1SMkNCR0xkM1ZPSHhDNVZLa09aUWtxMUoxdnhkOE9UaTJVQ0FkeEtycnhER3Z4UzhSSmVBb3hDN1pteVVjZkF2YUNqT09LcC02S2JrTzNILWxma3owdFlDZTRHdXFF?oc=5&hl=en-US&gl=US&ceid=US:en&utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/1e25b41e91/" data-title="‘Tron: Ares’ Wants to Gaslight You About the Future of AI - WIRED" data-summary="‘Tron: Ares’ Wants to Gaslight You About the Future of AI WIRED">
-  <h3><a data-title-link href="https://news.google.com/rss/articles/CBMiiwFBVV95cUxOX25RaVdsdXludGYzdlluRnc5YjV6STdveno2S1JHaUdkUzU3WW1SMkNCR0xkM1ZPSHhDNVZLa09aUWtxMUoxdnhkOE9UaTJVQ0FkeEtycnhER3Z4UzhSSmVBb3hDN1pteVVjZkF2YUNqT09LcC02S2JrTzNILWxma3owdFlDZTRHdXFF?oc=5&hl=en-US&gl=US&ceid=US:en&utm_source=tek2day&utm_medium=email">‘Tron: Ares’ Wants to Gaslight You About the Future of AI - WIRED</a></h3>
-  <div class="meta">Google - Oct 10, 2025 </div>
-  <p data-summary>‘Tron: Ares’ Wants to Gaslight You About the Future of AI WIRED</p>
-</article>
-<article class="" data-card data-url="https://news.google.com/rss/articles/CBMitgFBVV95cUxPZGpSUTFnX2JmSDlKclNTZ1dZNDRKaF9BMUowZ3dtUDk0OHBWYlVfZmp0V2U1cjlvTjhWR2l3aTF1X0J2bkNNUU5uQXU0cmlIVmtETjBoQldSSC1YZWI0TFUwV0Y3elVPUGFqekxreU5qaDJqWHRjOW1nMG5DOVlqVllBX1h3cHd5dE4wTEhNYXYtaDRSMHFNd3pydjVHMXZEUzVudzgxX0w3OWQ3VnQwckNKQTNNdw?oc=5&hl=en-US&gl=US&ceid=US:en&utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/75313e1a66/" data-title="AI Push Drives Record Job Cuts at Top India Private Employer TCS - Bloomberg.com" data-summary="AI Push Drives Record Job Cuts at Top India Private Employer TCS Bloomberg.com">
-  <h3><a data-title-link href="https://news.google.com/rss/articles/CBMitgFBVV95cUxPZGpSUTFnX2JmSDlKclNTZ1dZNDRKaF9BMUowZ3dtUDk0OHBWYlVfZmp0V2U1cjlvTjhWR2l3aTF1X0J2bkNNUU5uQXU0cmlIVmtETjBoQldSSC1YZWI0TFUwV0Y3elVPUGFqekxreU5qaDJqWHRjOW1nMG5DOVlqVllBX1h3cHd5dE4wTEhNYXYtaDRSMHFNd3pydjVHMXZEUzVudzgxX0w3OWQ3VnQwckNKQTNNdw?oc=5&hl=en-US&gl=US&ceid=US:en&utm_source=tek2day&utm_medium=email">AI Push Drives Record Job Cuts at Top India Private Employer TCS - Bloomberg.com</a></h3>
-  <div class="meta">Google - Oct 10, 2025 </div>
-  <p data-summary>AI Push Drives Record Job Cuts at Top India Private Employer TCS Bloomberg.com</p>
+<article class="" data-card data-url="https://news.google.com/rss/articles/CBMivgFBVV95cUxNeG1OeE9BWmZ5V0ZHcmotMjIwQlNjNGpJeFBEQ19rYmh1QUFUSjY0R2pPWkZ6V3FyVXNHeTRWSzBjajFvUDlSeXRpRDl4NnJPd3BSMlIwelZwdXBqdkVhQkE0U0JTM1NOR0lWc2g3ZUk0SEdHakJ4NEgtdjBBSFdBUld5NUY0MllMcDllYUdXZzJmMkJfbnhjYWs5OG9NbjNrT05IZzBCOHdoelk4TDMwLUlOVk9VVXR2R1dMR1V3?oc=5&hl=en-US&gl=US&ceid=US:en&utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/c0effac346/" data-title="The Real AI Risk is ‘Meh’ Technology That Takes Jobs and Annoys Us All - Bloomberg.com" data-summary="The Real AI Risk is ‘Meh’ Technology That Takes Jobs and Annoys Us All Bloomberg.com">
+  <img src="https://pulse.tek2dayholdings.com/p/c0effac346/thumbnail.png" alt="The Real AI Risk is ‘Meh’ Technology That Takes Jobs and Annoys Us All - Bloomberg.com" class="article-thumb">
+  <div class="article-content">
+    <h3><a data-title-link href="https://news.google.com/rss/articles/CBMivgFBVV95cUxNeG1OeE9BWmZ5V0ZHcmotMjIwQlNjNGpJeFBEQ19rYmh1QUFUSjY0R2pPWkZ6V3FyVXNHeTRWSzBjajFvUDlSeXRpRDl4NnJPd3BSMlIwelZwdXBqdkVhQkE0U0JTM1NOR0lWc2g3ZUk0SEdHakJ4NEgtdjBBSFdBUld5NUY0MllMcDllYUdXZzJmMkJfbnhjYWs5OG9NbjNrT05IZzBCOHdoelk4TDMwLUlOVk9VVXR2R1dMR1V3?oc=5&hl=en-US&gl=US&ceid=US:en&utm_source=tek2day&utm_medium=email">The Real AI Risk is ‘Meh’ Technology That Takes Jobs and Annoys Us All - Bloomberg.com</a></h3>
+    <div class="meta">Google - Oct 10, 2025 </div>
+    <p data-summary>The Real AI Risk is ‘Meh’ Technology That Takes Jobs and Annoys Us All Bloomberg.com</p>
+  </div>
 </article>
 <article class="" data-card data-url="https://www.ft.com/content/8d5387f2-62b0-4830-b0e4-00ba0622a7c8?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/b622df73d7/" data-title="China launches customs crackdown on Nvidia AI chips" data-summary="Stringent border checks come after Beijing orders tech companies to stop ordering US processors">
-  <h3><a data-title-link href="https://www.ft.com/content/8d5387f2-62b0-4830-b0e4-00ba0622a7c8?utm_source=tek2day&utm_medium=email">China launches customs crackdown on Nvidia AI chips</a></h3>
-  <div class="meta">Financial Times — Technology - Oct 10, 2025 </div>
-  <p data-summary>Stringent border checks come after Beijing orders tech companies to stop ordering US processors</p>
+  <img src="https://pulse.tek2dayholdings.com/p/b622df73d7/thumbnail.png" alt="China launches customs crackdown on Nvidia AI chips" class="article-thumb">
+  <div class="article-content">
+    <h3><a data-title-link href="https://www.ft.com/content/8d5387f2-62b0-4830-b0e4-00ba0622a7c8?utm_source=tek2day&utm_medium=email">China launches customs crackdown on Nvidia AI chips</a></h3>
+    <div class="meta">Financial Times — Technology - Oct 10, 2025 </div>
+    <p data-summary>Stringent border checks come after Beijing orders tech companies to stop ordering US processors</p>
+  </div>
 </article>
-<article class="" data-card data-url="https://openai.com/index/hygh?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/fff5670c85/" data-title="HYGH powers next-gen digital ads with ChatGPT Business" data-summary="HYGH speeds up software development and campaign delivery with ChatGPT Business, cutting turnaround times, scaling output, and driving revenue growth.">
-  <h3><a data-title-link href="https://openai.com/index/hygh?utm_source=tek2day&utm_medium=email">HYGH powers next-gen digital ads with ChatGPT Business</a></h3>
-  <div class="meta">OpenAI News - Oct 9, 2025 </div>
-  <p data-summary>HYGH speeds up software development and campaign delivery with ChatGPT Business, cutting turnaround times, scaling output, and driving revenue growth.</p>
-</article>
-<article class="" data-card data-url="https://venturebeat.com/ai/nvidia-researchers-boost-llms-reasoning-skills-by-getting-them-to-think?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/44942d126b/" data-title="Nvidia researchers boost LLMs reasoning skills by getting them to &#x27;think&#x27; during pre-training" data-summary="Researchers at Nvidia have developed a new technique that flips the script on how large language models (LLMs) learn to reason. The method, called reinforcement learning pre-training (RLP), integrates RL into the initial training phase rat…">
-  <h3><a data-title-link href="https://venturebeat.com/ai/nvidia-researchers-boost-llms-reasoning-skills-by-getting-them-to-think?utm_source=tek2day&utm_medium=email">Nvidia researchers boost LLMs reasoning skills by getting them to &#x27;think&#x27; during pre-training</a></h3>
-  <div class="meta">VentureBeat - Oct 9, 2025 </div>
-  <p data-summary>Researchers at Nvidia have developed a new technique that flips the script on how large language models (LLMs) learn to reason. The method, called reinforcement learning pre-training (RLP), integrates RL into the initial training phase rat…</p>
+<article class="" data-card data-url="https://news.google.com/rss/articles/CBMirgFBVV95cUxPR0V3U0JxUTIydVp0aEVoVkhoUEN6RGpRcUtPNkx6UE1fVlFMYUVGQUNReURwWjhNeUh1cVUyREFUbHViamQxeG0zWDh6NE9rNDdIeTAzTWJSWnNrTGk0b0U1cnI1aW1yMzZMS3J0b2VlLWN0TlltQlN3SV9wWjR1Rl9FUlFaMVVBNmdCVVJXQUZoVk5WRVdzOW9tZGhWMG5QV2QtTndzLWZUM0VHTFE?oc=5&hl=en-US&gl=US&ceid=US:en&utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/df1e738106/" data-title="Senate Passes AI Chip Export Limits on Nvidia, AMD to China - Bloomberg.com" data-summary="Senate Passes AI Chip Export Limits on Nvidia, AMD to China Bloomberg.com">
+  <img src="https://pulse.tek2dayholdings.com/p/df1e738106/thumbnail.png" alt="Senate Passes AI Chip Export Limits on Nvidia, AMD to China - Bloomberg.com" class="article-thumb">
+  <div class="article-content">
+    <h3><a data-title-link href="https://news.google.com/rss/articles/CBMirgFBVV95cUxPR0V3U0JxUTIydVp0aEVoVkhoUEN6RGpRcUtPNkx6UE1fVlFMYUVGQUNReURwWjhNeUh1cVUyREFUbHViamQxeG0zWDh6NE9rNDdIeTAzTWJSWnNrTGk0b0U1cnI1aW1yMzZMS3J0b2VlLWN0TlltQlN3SV9wWjR1Rl9FUlFaMVVBNmdCVVJXQUZoVk5WRVdzOW9tZGhWMG5QV2QtTndzLWZUM0VHTFE?oc=5&hl=en-US&gl=US&ceid=US:en&utm_source=tek2day&utm_medium=email">Senate Passes AI Chip Export Limits on Nvidia, AMD to China - Bloomberg.com</a></h3>
+    <div class="meta">Google - Oct 9, 2025 </div>
+    <p data-summary>Senate Passes AI Chip Export Limits on Nvidia, AMD to China Bloomberg.com</p>
+  </div>
 </article>
           </div>
         </details>
@@ -263,10 +321,13 @@
             <span class="count">1 items</span>
           </summary>
           <div class="items">
-            <article class="top" data-card data-url="https://www.ft.com/content/c753e570-78ef-4a6a-9cdd-bdb7efa5ad50?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/480da64158/" data-title="Global investors stage cautious return to Chinese start-ups" data-summary="Venture capital funds close to raising $1.1bn this year in first signs of thaw for sector hit by geopolitical tensions">
-  <h3><a data-title-link href="https://www.ft.com/content/c753e570-78ef-4a6a-9cdd-bdb7efa5ad50?utm_source=tek2day&utm_medium=email">Global investors stage cautious return to Chinese start-ups</a></h3>
-  <div class="meta">Financial Times — Technology - Oct 8, 2025 <span class="badge muted">Older</span></div>
-  <p data-summary>Venture capital funds close to raising $1.1bn this year in first signs of thaw for sector hit by geopolitical tensions</p>
+            <article class="top" data-card data-url="https://news.google.com/rss/articles/CBMicEFVX3lxTE41Q0tpUXpESGh6NWVLTi04WXdXeTBva1NKZ1dpUndObnlxOFQwbXd2Y21PN2taVG1EcGFaSmZVREozRFo1RTFqdU5tZDVWdzJ5RzNwVTRfc1Nya1ZOUWlNZDQxYkJoZmplYkNfalp4MTA?oc=5&hl=en-US&gl=US&ceid=US:en&utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/5eb7a272ea/" data-title="EU capitals move to charge Temu and Shein over small packages - Financial Times" data-summary="EU capitals move to charge Temu and Shein over small packages Financial Times">
+  <img src="https://pulse.tek2dayholdings.com/p/5eb7a272ea/thumbnail.png" alt="EU capitals move to charge Temu and Shein over small packages - Financial Times" class="article-thumb">
+  <div class="article-content">
+    <h3><a data-title-link href="https://news.google.com/rss/articles/CBMicEFVX3lxTE41Q0tpUXpESGh6NWVLTi04WXdXeTBva1NKZ1dpUndObnlxOFQwbXd2Y21PN2taVG1EcGFaSmZVREozRFo1RTFqdU5tZDVWdzJ5RzNwVTRfc1Nya1ZOUWlNZDQxYkJoZmplYkNfalp4MTA?oc=5&hl=en-US&gl=US&ceid=US:en&utm_source=tek2day&utm_medium=email">EU capitals move to charge Temu and Shein over small packages - Financial Times</a></h3>
+    <div class="meta">Google - Oct 10, 2025 </div>
+    <p data-summary>EU capitals move to charge Temu and Shein over small packages Financial Times</p>
+  </div>
 </article>
           </div>
         </details>
@@ -277,68 +338,112 @@
             <span class="label">
               <span class="pill"><i class="dot" style="background:var(--ft)"></i>FinTech</span>
             </span>
-            <span class="count">12 items</span>
+            <span class="count">13 items</span>
           </summary>
           <div class="items">
-            <article class="top" data-card data-url="https://www.pymnts.com/apple/2025/apple-looks-to-acquire-tech-and-expertise-from-prompt-ai/?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/036531fe51/" data-title="Apple Looks to Acquire Tech and Expertise From Prompt AI" data-summary="Apple is reportedly preparing to acquire talent and technology from computer vision startup Prompt AI. The tech giant was in late stage talks on the deal, CNBC reported Friday (Oct. 10), with Prompt’s leadership informing employees of the …">
-  <h3><a data-title-link href="https://www.pymnts.com/apple/2025/apple-looks-to-acquire-tech-and-expertise-from-prompt-ai/?utm_source=tek2day&utm_medium=email">Apple Looks to Acquire Tech and Expertise From Prompt AI</a></h3>
-  <div class="meta">PYMNTS - Oct 12, 2025 <span class="badge">New</span></div>
-  <p data-summary>Apple is reportedly preparing to acquire talent and technology from computer vision startup Prompt AI. The tech giant was in late stage talks on the deal, CNBC reported Friday (Oct. 10), with Prompt’s leadership informing employees of the …</p>
+            <article class="top" data-card data-url="https://www.pymnts.com/cryptocurrency/2025/ethena-stablecoins-dollar-peg-slips-briefly-amid-crypto-upheaval/?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/c791c96532/" data-title="Ethena Stablecoin’s Dollar Peg Slips Briefly Amid Crypto Upheaval" data-summary="The third-largest stablecoin reportedly lost its dollar peg briefly amid a wider market downturn. USDe, a “synthetic dollar” from cryptocurrency project Ethena, fell to 65 cents against the U.S. dollar on Binance’s exchange, Bloomberg News…">
+  <img src="https://pulse.tek2dayholdings.com/p/c791c96532/thumbnail.png" alt="Ethena Stablecoin’s Dollar Peg Slips Briefly Amid Crypto Upheaval" class="article-thumb">
+  <div class="article-content">
+    <h3><a data-title-link href="https://www.pymnts.com/cryptocurrency/2025/ethena-stablecoins-dollar-peg-slips-briefly-amid-crypto-upheaval/?utm_source=tek2day&utm_medium=email">Ethena Stablecoin’s Dollar Peg Slips Briefly Amid Crypto Upheaval</a></h3>
+    <div class="meta">PYMNTS - Oct 12, 2025 <span class="badge">New</span></div>
+    <p data-summary>The third-largest stablecoin reportedly lost its dollar peg briefly amid a wider market downturn. USDe, a “synthetic dollar” from cryptocurrency project Ethena, fell to 65 cents against the U.S. dollar on Binance’s exchange, Bloomberg News…</p>
+  </div>
 </article>
-<article class="" data-card data-url="https://news.google.com/rss/articles/CBMiqAFBVV95cUxOT0FFdHRWVnh1c2NQaFdqVDJvdUlSczdsQWxiZjJJTENCWHZTbjJSRmRyMjZCRkxVd1JqT0RkMnNTZmRNaWNqNTBYUFZKeS1JZlJnTzctTEdNMzNJejNzM3FPRmh4anBGMG1WREU1M0JhdXFEUzlvbEYySXhhQklpbXpsTkJFOE1vV1FwcE14R0E5akxXZmg4bl80bkhMZEs2MmZhc0swbzc?oc=5&hl=en-US&gl=US&ceid=US:en&utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/3df632eaec/" data-title="Stock Bubble Dread Grips Central Bankers in Washington - Bloomberg.com" data-summary="Stock Bubble Dread Grips Central Bankers in Washington Bloomberg.com">
-  <h3><a data-title-link href="https://news.google.com/rss/articles/CBMiqAFBVV95cUxOT0FFdHRWVnh1c2NQaFdqVDJvdUlSczdsQWxiZjJJTENCWHZTbjJSRmRyMjZCRkxVd1JqT0RkMnNTZmRNaWNqNTBYUFZKeS1JZlJnTzctTEdNMzNJejNzM3FPRmh4anBGMG1WREU1M0JhdXFEUzlvbEYySXhhQklpbXpsTkJFOE1vV1FwcE14R0E5akxXZmg4bl80bkhMZEs2MmZhc0swbzc?oc=5&hl=en-US&gl=US&ceid=US:en&utm_source=tek2day&utm_medium=email">Stock Bubble Dread Grips Central Bankers in Washington - Bloomberg.com</a></h3>
-  <div class="meta">Google - Oct 12, 2025 <span class="badge">New</span></div>
-  <p data-summary>Stock Bubble Dread Grips Central Bankers in Washington Bloomberg.com</p>
+<article class="" data-card data-url="https://www.pymnts.com/supply-chain/2025/car-industry-feels-distress-as-suppliers-face-tariffs/?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/f98474a54f/" data-title="Car Industry Feels ‘Distress’ as Suppliers Face Tariffs" data-summary="The White House has argued its tariffs were designed to help the American car industry. But as the Financial Times (FT) reported Sunday (Oct. 12), the levies have ushered in turmoil for the sector, with the three biggest carmakers — Ford, …">
+  <img src="https://pulse.tek2dayholdings.com/p/f98474a54f/thumbnail.png" alt="Car Industry Feels ‘Distress’ as Suppliers Face Tariffs" class="article-thumb">
+  <div class="article-content">
+    <h3><a data-title-link href="https://www.pymnts.com/supply-chain/2025/car-industry-feels-distress-as-suppliers-face-tariffs/?utm_source=tek2day&utm_medium=email">Car Industry Feels ‘Distress’ as Suppliers Face Tariffs</a></h3>
+    <div class="meta">PYMNTS - Oct 12, 2025 <span class="badge">New</span></div>
+    <p data-summary>The White House has argued its tariffs were designed to help the American car industry. But as the Financial Times (FT) reported Sunday (Oct. 12), the levies have ushered in turmoil for the sector, with the three biggest carmakers — Ford, …</p>
+  </div>
 </article>
-<article class="" data-card data-url="https://news.google.com/rss/articles/CBMisgFBVV95cUxOUnlNajl1YTJZdWxnU3kzOWRQSnpmUWhDc09qYUNuaTA2b2tGZFNQNkJsaGtOYnllY3hyQ1VrU0tKMkRJZUdFUDJneUJtNmJIWUV6WmdPN1AyUm9NV05GaXlYclAwNk9oRnNDNUtEWHVDRFBJSnBkeERqVlA2RUFEcTZJRmNRcUxpQUR3c3V3dEVVcmF3UDI0c0RHdGVsWDQ5c0ExYVVmUmV6d09LbkU5MmpB?oc=5&hl=en-US&gl=US&ceid=US:en&utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/b3b2579686/" data-title="Vance Says US Holds More Cards in Escalating China Trade Spat - Bloomberg.com" data-summary="Vance Says US Holds More Cards in Escalating China Trade Spat Bloomberg.com">
-  <h3><a data-title-link href="https://news.google.com/rss/articles/CBMisgFBVV95cUxOUnlNajl1YTJZdWxnU3kzOWRQSnpmUWhDc09qYUNuaTA2b2tGZFNQNkJsaGtOYnllY3hyQ1VrU0tKMkRJZUdFUDJneUJtNmJIWUV6WmdPN1AyUm9NV05GaXlYclAwNk9oRnNDNUtEWHVDRFBJSnBkeERqVlA2RUFEcTZJRmNRcUxpQUR3c3V3dEVVcmF3UDI0c0RHdGVsWDQ5c0ExYVVmUmV6d09LbkU5MmpB?oc=5&hl=en-US&gl=US&ceid=US:en&utm_source=tek2day&utm_medium=email">Vance Says US Holds More Cards in Escalating China Trade Spat - Bloomberg.com</a></h3>
-  <div class="meta">Google - Oct 12, 2025 <span class="badge">New</span></div>
-  <p data-summary>Vance Says US Holds More Cards in Escalating China Trade Spat Bloomberg.com</p>
+<article class="" data-card data-url="https://www.pymnts.com/news/ipo/2025/sec-relaxes-rules-for-ipo-prep-amid-government-shutdown/?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/84a1b9b7d9/" data-title="SEC Relaxes Rules for IPO Prep Amid Government Shutdown" data-summary="American regulators are making it easier for companies to go public during the government shutdown. The last time there was a government shutdown, in October 2023, companies scrambled to get their initial public offerings (IPOs) off the gr…">
+  <img src="https://pulse.tek2dayholdings.com/p/84a1b9b7d9/thumbnail.png" alt="SEC Relaxes Rules for IPO Prep Amid Government Shutdown" class="article-thumb">
+  <div class="article-content">
+    <h3><a data-title-link href="https://www.pymnts.com/news/ipo/2025/sec-relaxes-rules-for-ipo-prep-amid-government-shutdown/?utm_source=tek2day&utm_medium=email">SEC Relaxes Rules for IPO Prep Amid Government Shutdown</a></h3>
+    <div class="meta">PYMNTS - Oct 12, 2025 <span class="badge">New</span></div>
+    <p data-summary>American regulators are making it easier for companies to go public during the government shutdown. The last time there was a government shutdown, in October 2023, companies scrambled to get their initial public offerings (IPOs) off the gr…</p>
+  </div>
+</article>
+<article class="" data-card data-url="https://www.pymnts.com/apple/2025/apple-looks-to-acquire-tech-and-expertise-from-prompt-ai/?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/036531fe51/" data-title="Apple Looks to Acquire Tech and Expertise From Prompt AI" data-summary="Apple is reportedly preparing to acquire talent and technology from computer vision startup Prompt AI. The tech giant was in late stage talks on the deal, CNBC reported Friday (Oct. 10), with Prompt’s leadership informing employees of the …">
+  <img src="https://pulse.tek2dayholdings.com/p/036531fe51/thumbnail.png" alt="Apple Looks to Acquire Tech and Expertise From Prompt AI" class="article-thumb">
+  <div class="article-content">
+    <h3><a data-title-link href="https://www.pymnts.com/apple/2025/apple-looks-to-acquire-tech-and-expertise-from-prompt-ai/?utm_source=tek2day&utm_medium=email">Apple Looks to Acquire Tech and Expertise From Prompt AI</a></h3>
+    <div class="meta">PYMNTS - Oct 12, 2025 <span class="badge">New</span></div>
+    <p data-summary>Apple is reportedly preparing to acquire talent and technology from computer vision startup Prompt AI. The tech giant was in late stage talks on the deal, CNBC reported Friday (Oct. 10), with Prompt’s leadership informing employees of the …</p>
+  </div>
+</article>
+<article class="" data-card data-url="https://news.google.com/rss/articles/CBMitgFBVV95cUxOVlp1cTZCandLaENCemtLTmc5NWt0YjRoQ25jRkR4NDBRLWJZc2IySFhNYzNZVmJPZ2RDSXA3MEhqSDJFQldTM3RseXlod0tBeVhxa09qVWxPdkhJRkdRdUJyZjlOc2l0ZGtRaVJEdXNrMFZPQnBwYjlwTjNPdzJ2blZNdWtSODhUWjB3ajRHQWVKbmJ5b0JSRkVYX2lMV2NmQmRjenVMVGxsZy1MRTBGcnU4TGJvQQ?oc=5&hl=en-US&gl=US&ceid=US:en&utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/854ccc3782/" data-title="Third-Largest Stablecoin Briefly Loses Dollar Peg in Crypto Rout - Bloomberg.com" data-summary="Third-Largest Stablecoin Briefly Loses Dollar Peg in Crypto Rout Bloomberg.com">
+  <img src="https://pulse.tek2dayholdings.com/p/854ccc3782/thumbnail.png" alt="Third-Largest Stablecoin Briefly Loses Dollar Peg in Crypto Rout - Bloomberg.com" class="article-thumb">
+  <div class="article-content">
+    <h3><a data-title-link href="https://news.google.com/rss/articles/CBMitgFBVV95cUxOVlp1cTZCandLaENCemtLTmc5NWt0YjRoQ25jRkR4NDBRLWJZc2IySFhNYzNZVmJPZ2RDSXA3MEhqSDJFQldTM3RseXlod0tBeVhxa09qVWxPdkhJRkdRdUJyZjlOc2l0ZGtRaVJEdXNrMFZPQnBwYjlwTjNPdzJ2blZNdWtSODhUWjB3ajRHQWVKbmJ5b0JSRkVYX2lMV2NmQmRjenVMVGxsZy1MRTBGcnU4TGJvQQ?oc=5&hl=en-US&gl=US&ceid=US:en&utm_source=tek2day&utm_medium=email">Third-Largest Stablecoin Briefly Loses Dollar Peg in Crypto Rout - Bloomberg.com</a></h3>
+    <div class="meta">Google - Oct 11, 2025 </div>
+    <p data-summary>Third-Largest Stablecoin Briefly Loses Dollar Peg in Crypto Rout Bloomberg.com</p>
+  </div>
 </article>
 <article class="" data-card data-url="https://news.google.com/rss/articles/CBMiekFVX3lxTE9nbHh2WnVKczQxMzFSZEwzN0ZJbGZ1VHB6RG5FdGFYcy1tc1RiTkd4Vl85ZUJFOVBzQnRldGpISFNqckJsRnc2TzdDV1NJaTlEOXlET3p5VFZEOUZkczZ0bURGdU1jbFpWQUZUVmdqUWNmRmNwc3VMSktR?oc=5&hl=en-US&gl=US&ceid=US:en&utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/9f38ea37ed/" data-title="How Churners Earn Money By Regularly Signing Up for Credit Cards - The New York Times" data-summary="How Churners Earn Money By Regularly Signing Up for Credit Cards The New York Times">
-  <h3><a data-title-link href="https://news.google.com/rss/articles/CBMiekFVX3lxTE9nbHh2WnVKczQxMzFSZEwzN0ZJbGZ1VHB6RG5FdGFYcy1tc1RiTkd4Vl85ZUJFOVBzQnRldGpISFNqckJsRnc2TzdDV1NJaTlEOXlET3p5VFZEOUZkczZ0bURGdU1jbFpWQUZUVmdqUWNmRmNwc3VMSktR?oc=5&hl=en-US&gl=US&ceid=US:en&utm_source=tek2day&utm_medium=email">How Churners Earn Money By Regularly Signing Up for Credit Cards - The New York Times</a></h3>
-  <div class="meta">Google - Oct 11, 2025 </div>
-  <p data-summary>How Churners Earn Money By Regularly Signing Up for Credit Cards The New York Times</p>
+  <img src="https://pulse.tek2dayholdings.com/p/9f38ea37ed/thumbnail.png" alt="How Churners Earn Money By Regularly Signing Up for Credit Cards - The New York Times" class="article-thumb">
+  <div class="article-content">
+    <h3><a data-title-link href="https://news.google.com/rss/articles/CBMiekFVX3lxTE9nbHh2WnVKczQxMzFSZEwzN0ZJbGZ1VHB6RG5FdGFYcy1tc1RiTkd4Vl85ZUJFOVBzQnRldGpISFNqckJsRnc2TzdDV1NJaTlEOXlET3p5VFZEOUZkczZ0bURGdU1jbFpWQUZUVmdqUWNmRmNwc3VMSktR?oc=5&hl=en-US&gl=US&ceid=US:en&utm_source=tek2day&utm_medium=email">How Churners Earn Money By Regularly Signing Up for Credit Cards - The New York Times</a></h3>
+    <div class="meta">Google - Oct 11, 2025 </div>
+    <p data-summary>How Churners Earn Money By Regularly Signing Up for Credit Cards The New York Times</p>
+  </div>
 </article>
 <article class="" data-card data-url="https://www.pymnts.com/acquisitions/2025/fis-says-issuer-solutions-acquisition-on-track-as-uk-regulator-seeks-more-information/?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/26e521c3a4/" data-title="FIS Says Issuer Solutions Acquisition on Track as UK Regulator Seeks More Information" data-summary="FIS said Friday (Oct. 10) that its planned acquisition of Global Payments’ Issuer Solutions business remains on track despite the company’s need to refile information with a U.K. regulator. “In the normal course of the UK Competition and M…">
-  <h3><a data-title-link href="https://www.pymnts.com/acquisitions/2025/fis-says-issuer-solutions-acquisition-on-track-as-uk-regulator-seeks-more-information/?utm_source=tek2day&utm_medium=email">FIS Says Issuer Solutions Acquisition on Track as UK Regulator Seeks More Information</a></h3>
-  <div class="meta">PYMNTS - Oct 10, 2025 </div>
-  <p data-summary>FIS said Friday (Oct. 10) that its planned acquisition of Global Payments’ Issuer Solutions business remains on track despite the company’s need to refile information with a U.K. regulator. “In the normal course of the UK Competition and M…</p>
-</article>
-<article class="" data-card data-url="https://www.pymnts.com/news/international/2025/santander-helps-united-states-support-argentina-economy/?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/8845a47dc0/" data-title="Santander Helps US Support Argentina’s Economy" data-summary="Banco Santander reportedly will facilitate the $20 billion currency swap framework to support Argentina’s economy that was announced Thursday (Oct. 9) by U.S. Treasury Secretary Scott Bessent. The bank was selected by the Treasury Departme…">
-  <h3><a data-title-link href="https://www.pymnts.com/news/international/2025/santander-helps-united-states-support-argentina-economy/?utm_source=tek2day&utm_medium=email">Santander Helps US Support Argentina’s Economy</a></h3>
-  <div class="meta">PYMNTS - Oct 10, 2025 </div>
-  <p data-summary>Banco Santander reportedly will facilitate the $20 billion currency swap framework to support Argentina’s economy that was announced Thursday (Oct. 9) by U.S. Treasury Secretary Scott Bessent. The bank was selected by the Treasury Departme…</p>
-</article>
-<article class="" data-card data-url="https://www.pymnts.com/cryptocurrency/2025/morgan-stanley-allow-agents-sell-crypto-funds-any-clients/?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/12421de8e8/" data-title="Morgan Stanley to Allow Agents to Sell Crypto Funds to Any Clients" data-summary="Morgan Stanley reportedly told its financial agents Friday (Oct. 10) that beginning Wednesday (Oct. 15), they will be able to sell cryptocurrency funds to any clients. The wealth management firm will also allow crypto investments in any ty…">
-  <h3><a data-title-link href="https://www.pymnts.com/cryptocurrency/2025/morgan-stanley-allow-agents-sell-crypto-funds-any-clients/?utm_source=tek2day&utm_medium=email">Morgan Stanley to Allow Agents to Sell Crypto Funds to Any Clients</a></h3>
-  <div class="meta">PYMNTS - Oct 10, 2025 </div>
-  <p data-summary>Morgan Stanley reportedly told its financial agents Friday (Oct. 10) that beginning Wednesday (Oct. 15), they will be able to sell cryptocurrency funds to any clients. The wealth management firm will also allow crypto investments in any ty…</p>
-</article>
-<article class="" data-card data-url="https://news.google.com/rss/articles/CBMiswFBVV95cUxONmJHNjZaZE9KOWVDc2RTUTBudTFwNF9VRmVVaFdmZ3dLbnRJWkJ5QmRsZU4tY1lvTmhCbkRhQUNkS28wRnNHdFhkSkFTa095SHVxeHhKempiOGtsRFNGdUgwcUNrX0tIYmlpODV0SEtOTGJabEk3MFdJUG5mZ3pBMVJNanl3d1h1QzFHTHJYSi1OQjd3Z2hBdElOV1RsNkJlcHB6VEt2cmlOeTZqNE93Q1ZIYw?oc=5&hl=en-US&gl=US&ceid=US:en&utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/f5bd9fbcbd/" data-title="Goldman, Santander Among Banks Exploring Blockchain-Based Money - Bloomberg.com" data-summary="Goldman, Santander Among Banks Exploring Blockchain-Based Money Bloomberg.com">
-  <h3><a data-title-link href="https://news.google.com/rss/articles/CBMiswFBVV95cUxONmJHNjZaZE9KOWVDc2RTUTBudTFwNF9VRmVVaFdmZ3dLbnRJWkJ5QmRsZU4tY1lvTmhCbkRhQUNkS28wRnNHdFhkSkFTa095SHVxeHhKempiOGtsRFNGdUgwcUNrX0tIYmlpODV0SEtOTGJabEk3MFdJUG5mZ3pBMVJNanl3d1h1QzFHTHJYSi1OQjd3Z2hBdElOV1RsNkJlcHB6VEt2cmlOeTZqNE93Q1ZIYw?oc=5&hl=en-US&gl=US&ceid=US:en&utm_source=tek2day&utm_medium=email">Goldman, Santander Among Banks Exploring Blockchain-Based Money - Bloomberg.com</a></h3>
-  <div class="meta">Google - Oct 10, 2025 </div>
-  <p data-summary>Goldman, Santander Among Banks Exploring Blockchain-Based Money Bloomberg.com</p>
+  <img src="https://pulse.tek2dayholdings.com/p/26e521c3a4/thumbnail.png" alt="FIS Says Issuer Solutions Acquisition on Track as UK Regulator Seeks More Information" class="article-thumb">
+  <div class="article-content">
+    <h3><a data-title-link href="https://www.pymnts.com/acquisitions/2025/fis-says-issuer-solutions-acquisition-on-track-as-uk-regulator-seeks-more-information/?utm_source=tek2day&utm_medium=email">FIS Says Issuer Solutions Acquisition on Track as UK Regulator Seeks More Information</a></h3>
+    <div class="meta">PYMNTS - Oct 10, 2025 </div>
+    <p data-summary>FIS said Friday (Oct. 10) that its planned acquisition of Global Payments’ Issuer Solutions business remains on track despite the company’s need to refile information with a U.K. regulator. “In the normal course of the UK Competition and M…</p>
+  </div>
 </article>
 <article class="" data-card data-url="https://news.google.com/rss/articles/CBMiswFBVV95cUxOdjlpUUF1VFI2d2lUWnFraFhtNWN1RWFzSG8yZXJuYUJVcHBKV1BoTDNPYmVNcWVKTE1vcW5IVDBIdGVGRkxtY2dfVXJLdUVQYXlmNVBfcGtSUFo3Q0NKUjlJMG8wODN0VVlENXdIZXRtRkJqeXlLa1ZWemY4OUJ5OE05WlIzUU44REtkSVZVLXJraEhNLTc5eU5tMllkeVkwaklXOUtUcHZMOXVTamllWHhNUQ?oc=5&hl=en-US&gl=US&ceid=US:en&utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/da887e5ee4/" data-title="AI’s Growth Leaves Financial Regulators Struggling to Catch Up - Bloomberg.com" data-summary="AI’s Growth Leaves Financial Regulators Struggling to Catch Up Bloomberg.com">
-  <h3><a data-title-link href="https://news.google.com/rss/articles/CBMiswFBVV95cUxOdjlpUUF1VFI2d2lUWnFraFhtNWN1RWFzSG8yZXJuYUJVcHBKV1BoTDNPYmVNcWVKTE1vcW5IVDBIdGVGRkxtY2dfVXJLdUVQYXlmNVBfcGtSUFo3Q0NKUjlJMG8wODN0VVlENXdIZXRtRkJqeXlLa1ZWemY4OUJ5OE05WlIzUU44REtkSVZVLXJraEhNLTc5eU5tMllkeVkwaklXOUtUcHZMOXVTamllWHhNUQ?oc=5&hl=en-US&gl=US&ceid=US:en&utm_source=tek2day&utm_medium=email">AI’s Growth Leaves Financial Regulators Struggling to Catch Up - Bloomberg.com</a></h3>
-  <div class="meta">Google - Oct 10, 2025 </div>
-  <p data-summary>AI’s Growth Leaves Financial Regulators Struggling to Catch Up Bloomberg.com</p>
+  <img src="https://pulse.tek2dayholdings.com/p/da887e5ee4/thumbnail.png" alt="AI’s Growth Leaves Financial Regulators Struggling to Catch Up - Bloomberg.com" class="article-thumb">
+  <div class="article-content">
+    <h3><a data-title-link href="https://news.google.com/rss/articles/CBMiswFBVV95cUxOdjlpUUF1VFI2d2lUWnFraFhtNWN1RWFzSG8yZXJuYUJVcHBKV1BoTDNPYmVNcWVKTE1vcW5IVDBIdGVGRkxtY2dfVXJLdUVQYXlmNVBfcGtSUFo3Q0NKUjlJMG8wODN0VVlENXdIZXRtRkJqeXlLa1ZWemY4OUJ5OE05WlIzUU44REtkSVZVLXJraEhNLTc5eU5tMllkeVkwaklXOUtUcHZMOXVTamllWHhNUQ?oc=5&hl=en-US&gl=US&ceid=US:en&utm_source=tek2day&utm_medium=email">AI’s Growth Leaves Financial Regulators Struggling to Catch Up - Bloomberg.com</a></h3>
+    <div class="meta">Google - Oct 10, 2025 </div>
+    <p data-summary>AI’s Growth Leaves Financial Regulators Struggling to Catch Up Bloomberg.com</p>
+  </div>
 </article>
-<article class="" data-card data-url="https://news.google.com/rss/articles/CBMinwNBVV95cUxOWktxNW00WGhEMUM1RTdiN2FsaE0yNXZSY1V6Q3VIamp0QWhEMU5jMFlpejIxcmhsLXlHMUt5dy11TWpKNDF3YnE2MTBudkJrMkRnQjZkVWJ6cThaSGpkaDhWdGxib0ZLUGJqRGR4NnhER2o5ZlJGcThjRUplZHRYcTJyX1hxOEVobHA0QklYMk5oVDlxUEZDNlR3ZmJnRnBwUHVqMHhMV01YVmlVQ2FDUWJWMHFTZ3prUEdubXJlSE5kOVJVaUtacU00Sk9rODVFUXg4bHNpNUJILXFZQTdLbkxEY011WVNTUEtld011S0N6ZTlQcnBnWkY4MzlFTmdxOXBDTmNhVUlHLTZTeVQ2NUVUY1FnNFdnU3NpWXpxMFFGMktLMjNsM1Q2aGVGOWtaODJ4QW1ZWFhTQmVrd0tlc1BLaTloNlhiM2JJRklxTFN6SzZMamlmLW8zN3pMN1NfVVhTMUQyc01wSWVxekc3MzJtYzJYWDZFMHdLUlBvUlkxRVJTZmpUYzJQZVE2bTRZa0dQS2xadmFoYXd1eFBj?oc=5&hl=en-US&gl=US&ceid=US:en&utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/7588c89b87/" data-title="Google Labeled U.K. Tech Gatekeeper Under New Competition Law - The Wall Street Journal" data-summary="Google Labeled U.K. Tech Gatekeeper Under New Competition Law The Wall Street Journal">
-  <h3><a data-title-link href="https://news.google.com/rss/articles/CBMinwNBVV95cUxOWktxNW00WGhEMUM1RTdiN2FsaE0yNXZSY1V6Q3VIamp0QWhEMU5jMFlpejIxcmhsLXlHMUt5dy11TWpKNDF3YnE2MTBudkJrMkRnQjZkVWJ6cThaSGpkaDhWdGxib0ZLUGJqRGR4NnhER2o5ZlJGcThjRUplZHRYcTJyX1hxOEVobHA0QklYMk5oVDlxUEZDNlR3ZmJnRnBwUHVqMHhMV01YVmlVQ2FDUWJWMHFTZ3prUEdubXJlSE5kOVJVaUtacU00Sk9rODVFUXg4bHNpNUJILXFZQTdLbkxEY011WVNTUEtld011S0N6ZTlQcnBnWkY4MzlFTmdxOXBDTmNhVUlHLTZTeVQ2NUVUY1FnNFdnU3NpWXpxMFFGMktLMjNsM1Q2aGVGOWtaODJ4QW1ZWFhTQmVrd0tlc1BLaTloNlhiM2JJRklxTFN6SzZMamlmLW8zN3pMN1NfVVhTMUQyc01wSWVxekc3MzJtYzJYWDZFMHdLUlBvUlkxRVJTZmpUYzJQZVE2bTRZa0dQS2xadmFoYXd1eFBj?oc=5&hl=en-US&gl=US&ceid=US:en&utm_source=tek2day&utm_medium=email">Google Labeled U.K. Tech Gatekeeper Under New Competition Law - The Wall Street Journal</a></h3>
-  <div class="meta">Google - Oct 10, 2025 </div>
-  <p data-summary>Google Labeled U.K. Tech Gatekeeper Under New Competition Law The Wall Street Journal</p>
+<article class="" data-card data-url="https://news.google.com/rss/articles/CBMiigFBVV95cUxOUV9IRVh2WjI5UlhkejRkTlFYT2FhbUpLcG12enlUWDRLbzEtTHF6b1RfLWpkVlJMT1hvRnY0U1JVT2RCaU5haXNvdkFJY0xRTFdoVmp3OXY0ck4yTndPMXZhYkNmN1A3LUNreWlyQjJlbDNMYXJiTEE3LUlSZ2w2THNKMWNPNEwzdEE?oc=5&hl=en-US&gl=US&ceid=US:en&utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/bc1c95cf3d/" data-title="Fintech Start-Ups and Investment Firms Are Battling Over Your 401(k) - The New York Times" data-summary="Fintech Start-Ups and Investment Firms Are Battling Over Your 401(k) The New York Times">
+  <img src="https://pulse.tek2dayholdings.com/p/bc1c95cf3d/thumbnail.png" alt="Fintech Start-Ups and Investment Firms Are Battling Over Your 401(k) - The New York Times" class="article-thumb">
+  <div class="article-content">
+    <h3><a data-title-link href="https://news.google.com/rss/articles/CBMiigFBVV95cUxOUV9IRVh2WjI5UlhkejRkTlFYT2FhbUpLcG12enlUWDRLbzEtTHF6b1RfLWpkVlJMT1hvRnY0U1JVT2RCaU5haXNvdkFJY0xRTFdoVmp3OXY0ck4yTndPMXZhYkNmN1A3LUNreWlyQjJlbDNMYXJiTEE3LUlSZ2w2THNKMWNPNEwzdEE?oc=5&hl=en-US&gl=US&ceid=US:en&utm_source=tek2day&utm_medium=email">Fintech Start-Ups and Investment Firms Are Battling Over Your 401(k) - The New York Times</a></h3>
+    <div class="meta">Google - Oct 10, 2025 </div>
+    <p data-summary>Fintech Start-Ups and Investment Firms Are Battling Over Your 401(k) The New York Times</p>
+  </div>
+</article>
+<article class="" data-card data-url="https://news.google.com/rss/articles/CBMiiANBVV95cUxQNFh0ZVBpU29weVlqN0ZDR0JnazRDdy1ET2FMeDNYbEdwTmxKcnQ3S1gzNzl2SHM0NVVKcUhhcDUwd0VXeFlqMjNKd0xsVDVHZ2hQRTFrbGc1d0ZCZzFyUWpzTExCTEszVVdCZVg0U3Y0STRYd3J5V1lMN0o4U0FaY2tkVDQzNS00VnBQaE5kUl9vMmdoS3REcmdlZFBrOE14bEtlTEpDT2xLVmdxbGV0MmVpNzlvM2NXbWFXc2tPUTMtYW5ZSFRPWEY2OENSeWYzdi1tdGlVekIwWFdyUjhkRkdfR25oZ3RvWUM2VEF4MzhDcmJRLVYyUU9lQXNTcGdrSjcxd2lZMEFzLTU0V05ieF9vMHI0OERweS16UG1PbklBb3hWMDc2VC1LaWFoQ2xUZ2tiMUZBVHJPcm1ISU9Ecml1WVdaOUJqTmhLNmpuV1dXOWNMOVJyVDgtOWtLa2VfZTR5ZVFfM0JqYzRocXhFZDhBVTBBWWF3b3V2LUVOQ0FjdjFSd2x6NA?oc=5&hl=en-US&gl=US&ceid=US:en&utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/c2f49c6ac6/" data-title="Americans Are Falling Behind on Their Car Payments - The Wall Street Journal" data-summary="Americans Are Falling Behind on Their Car Payments The Wall Street Journal">
+  <img src="https://pulse.tek2dayholdings.com/p/c2f49c6ac6/thumbnail.png" alt="Americans Are Falling Behind on Their Car Payments - The Wall Street Journal" class="article-thumb">
+  <div class="article-content">
+    <h3><a data-title-link href="https://news.google.com/rss/articles/CBMiiANBVV95cUxQNFh0ZVBpU29weVlqN0ZDR0JnazRDdy1ET2FMeDNYbEdwTmxKcnQ3S1gzNzl2SHM0NVVKcUhhcDUwd0VXeFlqMjNKd0xsVDVHZ2hQRTFrbGc1d0ZCZzFyUWpzTExCTEszVVdCZVg0U3Y0STRYd3J5V1lMN0o4U0FaY2tkVDQzNS00VnBQaE5kUl9vMmdoS3REcmdlZFBrOE14bEtlTEpDT2xLVmdxbGV0MmVpNzlvM2NXbWFXc2tPUTMtYW5ZSFRPWEY2OENSeWYzdi1tdGlVekIwWFdyUjhkRkdfR25oZ3RvWUM2VEF4MzhDcmJRLVYyUU9lQXNTcGdrSjcxd2lZMEFzLTU0V05ieF9vMHI0OERweS16UG1PbklBb3hWMDc2VC1LaWFoQ2xUZ2tiMUZBVHJPcm1ISU9Ecml1WVdaOUJqTmhLNmpuV1dXOWNMOVJyVDgtOWtLa2VfZTR5ZVFfM0JqYzRocXhFZDhBVTBBWWF3b3V2LUVOQ0FjdjFSd2x6NA?oc=5&hl=en-US&gl=US&ceid=US:en&utm_source=tek2day&utm_medium=email">Americans Are Falling Behind on Their Car Payments - The Wall Street Journal</a></h3>
+    <div class="meta">Google - Oct 10, 2025 </div>
+    <p data-summary>Americans Are Falling Behind on Their Car Payments The Wall Street Journal</p>
+  </div>
+</article>
+<article class="" data-card data-url="https://news.google.com/rss/articles/CBMikAFBVV95cUxNTlRhdkM1TUM0U2p1aWFSQnJXYlB5YUpqTUVCZEVEel9MRmdpWUN5NXp6QVJBcnR5bmVMTXlsSFhCOFZCR0E5U1ZmY0NXOVpraEtjMTlHZzRicUNFd1ltTmx6eGIwUXFhTUh3eFlBdXRUclM2YVBhcndyZkw4cEYwVEpjd3BGbEFFbXdCRUFfWkg?oc=5&hl=en-US&gl=US&ceid=US:en&utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/90acde6b68/" data-title="Dimon, Solomon, Klarna CEO on How AI Is Reshaping Banking | Bloomberg Tech: Europe 10/10/2025 - Bloomberg.com" data-summary="Dimon, Solomon, Klarna CEO on How AI Is Reshaping Banking | Bloomberg Tech: Europe 10/10/2025 Bloomberg.com">
+  <img src="https://pulse.tek2dayholdings.com/p/90acde6b68/thumbnail.png" alt="Dimon, Solomon, Klarna CEO on How AI Is Reshaping Banking | Bloomberg Tech: Europe 10/10/2025 - Bloomberg.com" class="article-thumb">
+  <div class="article-content">
+    <h3><a data-title-link href="https://news.google.com/rss/articles/CBMikAFBVV95cUxNTlRhdkM1TUM0U2p1aWFSQnJXYlB5YUpqTUVCZEVEel9MRmdpWUN5NXp6QVJBcnR5bmVMTXlsSFhCOFZCR0E5U1ZmY0NXOVpraEtjMTlHZzRicUNFd1ltTmx6eGIwUXFhTUh3eFlBdXRUclM2YVBhcndyZkw4cEYwVEpjd3BGbEFFbXdCRUFfWkg?oc=5&hl=en-US&gl=US&ceid=US:en&utm_source=tek2day&utm_medium=email">Dimon, Solomon, Klarna CEO on How AI Is Reshaping Banking | Bloomberg Tech: Europe 10/10/2025 - Bloomberg.com</a></h3>
+    <div class="meta">Google - Oct 10, 2025 </div>
+    <p data-summary>Dimon, Solomon, Klarna CEO on How AI Is Reshaping Banking | Bloomberg Tech: Europe 10/10/2025 Bloomberg.com</p>
+  </div>
 </article>
 <article class="" data-card data-url="https://www.nytimes.com/2025/10/10/insider/cryptocurrency-reporting.html?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/8dc9858d8e/" data-title="Riding the Wild Wave of Crypto Coverage" data-summary="David Yaffe-Bellany, a technology reporter who has covered the cryptocurrency industry since 2022, has come to embrace learning on the fly.">
-  <h3><a data-title-link href="https://www.nytimes.com/2025/10/10/insider/cryptocurrency-reporting.html?utm_source=tek2day&utm_medium=email">Riding the Wild Wave of Crypto Coverage</a></h3>
-  <div class="meta">The New York Times — Technology - Oct 10, 2025 </div>
-  <p data-summary>David Yaffe-Bellany, a technology reporter who has covered the cryptocurrency industry since 2022, has come to embrace learning on the fly.</p>
+  <img src="https://pulse.tek2dayholdings.com/p/8dc9858d8e/thumbnail.png" alt="Riding the Wild Wave of Crypto Coverage" class="article-thumb">
+  <div class="article-content">
+    <h3><a data-title-link href="https://www.nytimes.com/2025/10/10/insider/cryptocurrency-reporting.html?utm_source=tek2day&utm_medium=email">Riding the Wild Wave of Crypto Coverage</a></h3>
+    <div class="meta">The New York Times — Technology - Oct 10, 2025 </div>
+    <p data-summary>David Yaffe-Bellany, a technology reporter who has covered the cryptocurrency industry since 2022, has come to embrace learning on the fly.</p>
+  </div>
 </article>
 <article class="" data-card data-url="https://news.google.com/rss/articles/CBMitAFBVV95cUxPaFpzTjJwTnBpREFkV0hLNjZFTEh4bjh4UGJJYmg3ZVBaQVkySlZGOVBrenBsSTFXMGR1M3hjN001bklLWEJZWlU2OVBfTDNSWEtyUE16VFVEWW5CQjdIY1ZpQWliM25ZRVY5dnRpYUpxaFVRYUFoSG5wbHV5aEtqWXVZZGVpeTRlSkdDS2FqR1dkbFg0SzlaRFB5dVJuaFRVcnJpemZhS3c2MnlPcWhFRlhQN04?oc=5&hl=en-US&gl=US&ceid=US:en&utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/2e202e72c5/" data-title="China’s Bond Traders Snap Up Treasury Bills as Liquidity Swells - Bloomberg.com" data-summary="China’s Bond Traders Snap Up Treasury Bills as Liquidity Swells Bloomberg.com">
-  <h3><a data-title-link href="https://news.google.com/rss/articles/CBMitAFBVV95cUxPaFpzTjJwTnBpREFkV0hLNjZFTEh4bjh4UGJJYmg3ZVBaQVkySlZGOVBrenBsSTFXMGR1M3hjN001bklLWEJZWlU2OVBfTDNSWEtyUE16VFVEWW5CQjdIY1ZpQWliM25ZRVY5dnRpYUpxaFVRYUFoSG5wbHV5aEtqWXVZZGVpeTRlSkdDS2FqR1dkbFg0SzlaRFB5dVJuaFRVcnJpemZhS3c2MnlPcWhFRlhQN04?oc=5&hl=en-US&gl=US&ceid=US:en&utm_source=tek2day&utm_medium=email">China’s Bond Traders Snap Up Treasury Bills as Liquidity Swells - Bloomberg.com</a></h3>
-  <div class="meta">Google - Oct 9, 2025 </div>
-  <p data-summary>China’s Bond Traders Snap Up Treasury Bills as Liquidity Swells Bloomberg.com</p>
+  <img src="https://pulse.tek2dayholdings.com/p/2e202e72c5/thumbnail.png" alt="China’s Bond Traders Snap Up Treasury Bills as Liquidity Swells - Bloomberg.com" class="article-thumb">
+  <div class="article-content">
+    <h3><a data-title-link href="https://news.google.com/rss/articles/CBMitAFBVV95cUxPaFpzTjJwTnBpREFkV0hLNjZFTEh4bjh4UGJJYmg3ZVBaQVkySlZGOVBrenBsSTFXMGR1M3hjN001bklLWEJZWlU2OVBfTDNSWEtyUE16VFVEWW5CQjdIY1ZpQWliM25ZRVY5dnRpYUpxaFVRYUFoSG5wbHV5aEtqWXVZZGVpeTRlSkdDS2FqR1dkbFg0SzlaRFB5dVJuaFRVcnJpemZhS3c2MnlPcWhFRlhQN04?oc=5&hl=en-US&gl=US&ceid=US:en&utm_source=tek2day&utm_medium=email">China’s Bond Traders Snap Up Treasury Bills as Liquidity Swells - Bloomberg.com</a></h3>
+    <div class="meta">Google - Oct 9, 2025 </div>
+    <p data-summary>China’s Bond Traders Snap Up Treasury Bills as Liquidity Swells Bloomberg.com</p>
+  </div>
 </article>
           </div>
         </details>
