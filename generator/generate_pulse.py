@@ -313,7 +313,7 @@ def _stable_id(title: str, url: str, published_at: str) -> str:
     key = f"{(title or '').strip()}|{(url or '').strip()}|{(published_at or '').strip()}"
     return hashlib.sha1(key.encode("utf-8")).hexdigest()[:10]
 
-def _plain_text_summary(it: dict, limit: int = 240) -> str:
+def _plain_text_summary(it: dict, limit: int = 180) -> str:
     raw = it.get("summary_text") or it.get("summary") or it.get("description") or it.get("content_html") or it.get("title") or ""
     txt = strip_html_to_text(raw)
     txt = re.sub(r"\s+", " ", txt).strip()
@@ -491,7 +491,7 @@ def write_permalink_page(it: dict) -> str:
     rel_permalink = f"/p/{pid}/"
     abs_permalink = f"{site_base}{rel_permalink}" if site_base else rel_permalink
 
-    summary = _plain_text_summary(it, limit=240)
+    summary = _plain_text_summary(it, limit=180)
     
     # Create branded OG image and thumbnail
     og_image_rel, thumbnail_rel = create_branded_og_image(url, perma_dir)
@@ -854,7 +854,7 @@ def build_section(date_str, by_cat):
                 dt_str = dt_local.strftime("%b %-d, %Y")
             except Exception:
                 dt_str = date_str
-            summary_txt = clean_text(strip_html_to_text(it.get("summary_text","")), 240)
+            summary_txt = clean_text(strip_html_to_text(it.get("summary_text","")), 180)
             summary_html = html.escape(summary_txt)
             top_cls = " top" if idx == 0 else ""
             
