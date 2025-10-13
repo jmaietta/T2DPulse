@@ -3,6 +3,34 @@
   "by_cat": {
     "ai": [
       {
+        "title": "Slack is turning Slackbot into an AI assistant",
+        "url": "https://www.theverge.com/news/797890/slack-slackbot-ai-assistant-upgrade",
+        "published_at": "2025-10-13T08:00:00-04:00",
+        "source": "The Verge",
+        "summary": "Slack is testing an update for Slackbot that transforms it into an AI assistant. Presently, it operates as a tool for delivering reminders and notifications. With the update, Slackbot can create custom plans tailored to your workspace, sift through a mountain of messages, gather information from a range of Slack channels, and more. \u201cSlackbot today [\u2026]",
+        "content_html": "<figure>\n\n<img alt=\"An image of an AI-upgraded Slackbot\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/10/slackbot-ai.png?quality=90&#038;strip=all&#038;crop=0,0,100,100\" />\n\t<figcaption>\n\t\t</figcaption>\n</figure>\n<p class=\"has-text-align-none\">Slack is testing an update for Slackbot that transforms it into an AI assistant. Presently, it operates as a tool for delivering reminders and notifications. With the update, Slackbot can create custom plans tailored to your workspace, sift through a mountain of messages, gather information from a range of Slack channels, and more.</p>\n\n<p class=\"has-text-align-none\">\u201cSlackbot today is fairly rudimentary,\u201d Rob Seaman, Slack\u2019s senior vice president of enterprise product, tells <em>The Verge</em>. \u201cBut what we&#8217;ve done is we&#8217;ve actually rebuilt it from the ground up as a personalized AI companion.\u201d</p>\n\n<p class=\"has-text-align-none\">As part of the pilot, Slackbot will appear as an icon next to the search bar at the top of the workspace. Clicking into it will open a DM-like panel on the right side of the screen where you can enter prompts like \u201cWhat are my priorities for today?\u201d or \u201cFind the latest updates on a project.\u201d The new Slackbot will draw from your conversations, files, and workspace to provide personalized assistance.</p>\n<img alt=\"\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/10/slackbot-ai-task.png?quality=90&#038;strip=all&#038;crop=0,0,100,100\" title=\"\" />\n<p class=\"has-text-align-none\">In a demo seen by <em>The Verge</em>, Slack showed how the AI-upgraded Slackbot can perform more complex tasks, such as organizing a product\u2019s launch plan inside a Canvas by gathering information across different Slack channels, as well as help create a social media campaign using a brand\u2019s tone. </p>\n\n<p class=\"has-text-align-none\">But what seems even more helpful is the new Slackbot\u2019s ability to search through a workspace using natural language. That means if you\u2019re looking for a document but can\u2019t nail down the specific keyword it was attached to, you can ask Slackbot something like \u201cFind me the document that Jay shared in our last meeting.\u201d It can also tap into Microsoft Outlook and Google Calendar to coordinate and schedule meetings with colleagues.\u00a0</p>\n\n<p class=\"has-text-align-none\">This adds to the other AI-powered features Slack has integrated into the platform, which can <a href=\"https://www.theverge.com/2024/2/14/24070590/slack-ai-launch-thread-summaries-search-recap\">already summarize threads and channels</a> as well as <a href=\"https://www.theverge.com/news/708820/slack-ai-message-context-canvas-writing-assistant\">decode company jargon</a>. \u201cWe&#8217;ll keep putting those little touches there where they make sense, to save users a click,\u201d Seaman said when asked about the future of these features. Slackbot\u2019s existing features \u2014 like its automated messages or custom functions in response to commands \u2014\u00a0will remain available as well.</p>\n\n<p class=\"has-text-align-none\">Companies can choose to opt out of using an AI Slackbot, but individuals in the workspace can\u2019t. Slack\u2019s AI features operate through Amazon Web Services\u2019 virtual private cloud, \u201cmeaning that no data leaves the firewall, no data is used in the training of the models at all,\u201d according to Seaman.</p>\n\n<p class=\"has-text-align-none\">The upgraded Slackbot is already available for 70,000 employees at Salesforce (Slack\u2019s parent company), and now the company is testing it with other customers as well. It plans to introduce the new feature to everyone at the end of the year.</p>",
+        "summary_text": "Slack is testing an update for Slackbot that transforms it into an AI assistant. Presently, it operates as a tool for delivering reminders and notifications. With the update, Slackbot can create custom plans tailored to your workspace, sift through a mountain\u2026",
+        "category": "ai",
+        "_permalink": "/p/98a28127ff/",
+        "_abs_permalink": "https://pulse.tek2dayholdings.com/p/98a28127ff/",
+        "_summary_240": "Slack is testing an update for Slackbot that transforms it into an AI assistant. Presently, it operates as a tool for delivering reminders and notifications. With the update,\u2026",
+        "_thumbnail": "https://pulse.tek2dayholdings.com/p/98a28127ff/thumbnail.png"
+      },
+      {
+        "title": "Programming in Assembly Is Brutal, Beautiful, and Maybe Even a Path to Better AI - WIRED",
+        "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE1RLVZkV2pVOWs3X1VyWHo0c250QkRjeHBfUm95MFgzUnJKVGl0ek1jaUlGam4wM0ZVN2txUFk1Um9jZm0tdWg0UjJUVl9kWXZUMW44LWliV2ZiR0xCV2pKX1VUenRKaHM4RlRYQ1lTSTZEbm1VTnVCS2VNQ0lXQQ?oc=5&hl=en-US&gl=US&ceid=US:en",
+        "published_at": "2025-10-13T07:00:00-04:00",
+        "source": "Google",
+        "summary": "Programming in Assembly Is Brutal, Beautiful, and Maybe Even a Path to Better AI WIRED",
+        "content_html": "",
+        "summary_text": "Programming in Assembly Is Brutal, Beautiful, and Maybe Even a Path to Better AI WIRED",
+        "category": "ai",
+        "_permalink": "/p/ef8b0a6ae3/",
+        "_abs_permalink": "https://pulse.tek2dayholdings.com/p/ef8b0a6ae3/",
+        "_summary_240": "Programming in Assembly Is Brutal, Beautiful, and Maybe Even a Path to Better AI WIRED",
+        "_thumbnail": "https://pulse.tek2dayholdings.com/p/ef8b0a6ae3/thumbnail.png"
+      },
+      {
         "title": "AWS Turns AI Agents Into a Workhorse as Nvidia Sees a Threat",
         "url": "https://www.pymnts.com/connectedeconomy/2025/aws-turns-ai-agents-into-a-workhorse-as-nvidia-sees-a-threat/",
         "published_at": "2025-10-13T04:03:46-04:00",
@@ -29,6 +57,20 @@
         "_abs_permalink": "https://pulse.tek2dayholdings.com/p/6e91c59265/",
         "_summary_240": "Watch more: Digital Shift: Fleetio, Stefano Daneri Today\u2019s fleet-based businesses are navigating both changing seas and seas of change. And they are being forced to operate\u2026",
         "_thumbnail": "https://pulse.tek2dayholdings.com/p/6e91c59265/thumbnail.png"
+      },
+      {
+        "title": "OpenAI and Broadcom announce strategic collaboration",
+        "url": "https://openai.com/index/openai-and-broadcom-announce-strategic-collaboration",
+        "published_at": "2025-10-13T02:00:00-04:00",
+        "source": "OpenAI News",
+        "summary": "OpenAI and Broadcom announce a multi-year partnership to deploy 10 gigawatts of OpenAI-designed AI accelerators, co-developing next-generation systems and Ethernet solutions to power scalable, energy-efficient AI infrastructure by 2029.",
+        "content_html": "",
+        "summary_text": "OpenAI and Broadcom announce a multi-year partnership to deploy 10 gigawatts of OpenAI-designed AI accelerators, co-developing next-generation systems and Ethernet solutions to power scalable, energy-efficient AI infrastructure by 2029.",
+        "category": "ai",
+        "_permalink": "/p/b217724cfb/",
+        "_abs_permalink": "https://pulse.tek2dayholdings.com/p/b217724cfb/",
+        "_summary_240": "OpenAI and Broadcom announce a multi-year partnership to deploy 10 gigawatts of OpenAI-designed AI accelerators, co-developing next-generation systems and Ethernet solutions to\u2026",
+        "_thumbnail": "https://pulse.tek2dayholdings.com/p/b217724cfb/thumbnail.png"
       },
       {
         "title": "The AI trade: do geopolitics matter?",
@@ -59,6 +101,20 @@
         "_thumbnail": "https://pulse.tek2dayholdings.com/p/3601bc0331/thumbnail.png"
       },
       {
+        "title": "Deloitte: AI Promises Productivity. It's Delivering \u2018Workslop\u2019 - Bloomberg.com",
+        "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQUjJJZTlnbnI5eHdkbGRNckxBZXZ0RXBfQ25HWmp6OFZJYldJWDVpOHBMTi1HaDZRV0JOTDJ2T0lNRWZ0ZVhkOTJ1U3o0U0xVUG1UZHdqSjNzbERhdUE1cUpKTDFQS2xpMDhvaUR1cGh4MDFlTU54b3NIaVpuTHZGbHJVY0FRRTh5TGpYaWRSUlFSdktlSnR1bjMwaFZHQmNHYjhmZXFhXzJvaTcxN0xsZVln?oc=5&hl=en-US&gl=US&ceid=US:en",
+        "published_at": "2025-10-12T16:00:10-04:00",
+        "source": "Google",
+        "summary": "Deloitte: AI Promises Productivity. It's Delivering \u2018Workslop\u2019 Bloomberg.com",
+        "content_html": "",
+        "summary_text": "Deloitte: AI Promises Productivity. It's Delivering \u2018Workslop\u2019 Bloomberg.com",
+        "category": "ai",
+        "_permalink": "/p/95bba8b96c/",
+        "_abs_permalink": "https://pulse.tek2dayholdings.com/p/95bba8b96c/",
+        "_summary_240": "Deloitte: AI Promises Productivity. It's Delivering \u2018Workslop\u2019 Bloomberg.com",
+        "_thumbnail": "https://pulse.tek2dayholdings.com/p/95bba8b96c/thumbnail.png"
+      },
+      {
         "title": "We keep talking about AI agents, but do we ever know what they are?",
         "url": "https://venturebeat.com/ai/we-keep-talking-about-ai-agents-but-do-we-ever-know-what-they-are",
         "published_at": "2025-10-12T15:00:00-04:00",
@@ -71,20 +127,6 @@
         "_abs_permalink": "https://pulse.tek2dayholdings.com/p/eed7b78c9e/",
         "_summary_240": "Imagine you do two things on a Monday morning. First, you ask a chatbot to summarize your new emails. Next, you ask an AI tool to figure out why your top competitor grew so fast\u2026",
         "_thumbnail": "https://pulse.tek2dayholdings.com/p/eed7b78c9e/thumbnail.png"
-      },
-      {
-        "title": "Why AI Will Widen the Gap Between Superstars and Everybody Else - The Wall Street Journal",
-        "url": "https://news.google.com/rss/articles/CBMijgNBVV95cUxPLXlQQ1JucnRGS29ncmEwQWx4Q0hFNjBzNnNXcS1iUGZ3VFlHbFhYTXdWWThvdTdCUHZCTnpMaUV6RWZWdm1YRE1UcUZGc3otZElOOWNCQ1gyRW11ZnYtdHpaejd5dkdEc1JOOEJRZlBUajE2b0ZFZzhybFJjLWk0UGtxY0JhZWtxMWd6QmxpbDBxN2Z3MnRSY2h6RXRhaTQxSEhIR3F0QWpUc2FXMGZSUEVKcjJyWnVORFBYMnpTMHhvZm95ZkhSTzk5ODYtWnNXZDBWdG8xcjRydVdQTFYxQWpXLVBXVU53bmRFc0xUTi1MYmd5TG9ta0NPN0M4VEhFaEpDT1hEY0NvT1ZUbW9vU2hGU0w4U3dPVWh4dGFCcWtqdWJMUzJEUFBLeXNFMlRoU2hjY01VNnM4WkhkcDF2a0R3QTZyNUczeXkwdGZEMEs5WjRRVm16NkE5OG5ZTENySTBsaXZrSnJzNnNzb3dHZThrU3ZkQ3ZGZUtLU0o4c0RoX0d0Zy1SdDRMZkljdw?oc=5&hl=en-US&gl=US&ceid=US:en",
-        "published_at": "2025-10-12T10:00:00-04:00",
-        "source": "Google",
-        "summary": "Why AI Will Widen the Gap Between Superstars and Everybody Else The Wall Street Journal",
-        "content_html": "",
-        "summary_text": "Why AI Will Widen the Gap Between Superstars and Everybody Else The Wall Street Journal",
-        "category": "ai",
-        "_permalink": "/p/a256d9d361/",
-        "_abs_permalink": "https://pulse.tek2dayholdings.com/p/a256d9d361/",
-        "_summary_240": "Why AI Will Widen the Gap Between Superstars and Everybody Else The Wall Street Journal",
-        "_thumbnail": "https://pulse.tek2dayholdings.com/p/a256d9d361/thumbnail.png"
       },
       {
         "title": "Police are asking kids to stop pulling AI homeless man prank",
@@ -113,6 +155,20 @@
         "_abs_permalink": "https://pulse.tek2dayholdings.com/p/c515891445/",
         "_summary_240": "Hi, friends! Welcome to Installer No. 101, your guide to the best and Verge-iest stuff in the world. (If you're new here, welcome, hope you like silly accessories, and also you\u2026",
         "_thumbnail": "https://pulse.tek2dayholdings.com/p/c515891445/thumbnail.png"
+      },
+      {
+        "title": "What Would an AI Crash Look Like? - Bloomberg.com",
+        "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPazliU2ktUjQ3YjVPS0NhVjloOVpuY1Zja1djd0c3c3kyYjJlR1dnd01jMlpCZm1xbWp1b2t0T0lyYV80RTlrNkhWMzVsaTdZb3V0d2NKYmprNnM5OUI0STlHaHRUbGdxMjFJelBGYXZoOUpRb2U5Q0tONnMxUW1QWHdQUzJNZkRObVNqb3NIN2Y0RlZ5?oc=5&hl=en-US&gl=US&ceid=US:en",
+        "published_at": "2025-10-12T04:00:08-04:00",
+        "source": "Google",
+        "summary": "What Would an AI Crash Look Like? Bloomberg.com",
+        "content_html": "",
+        "summary_text": "What Would an AI Crash Look Like? Bloomberg.com",
+        "category": "ai",
+        "_permalink": "/p/cbace919a4/",
+        "_abs_permalink": "https://pulse.tek2dayholdings.com/p/cbace919a4/",
+        "_summary_240": "What Would an AI Crash Look Like? Bloomberg.com",
+        "_thumbnail": "https://pulse.tek2dayholdings.com/p/cbace919a4/thumbnail.png"
       },
       {
         "title": "Here's what's slowing down your AI strategy \u2014 and how to fix it",
@@ -157,20 +213,6 @@
         "_thumbnail": "https://pulse.tek2dayholdings.com/p/13165ccae4/thumbnail.png"
       },
       {
-        "title": "Is vibe coding ruining a generation of engineers? - VentureBeat",
-        "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNeEs3Q0J4VWhEa0dHdXBhMGlOcHh2Q1dWWF9BSkJfRnBaV0M0SU1IMXNIekZKQ01HeUYzTm0wY1I5WnUxUlZ0eXdmX2wxbVh6c2NtbkpCSHRPQUdfRi1xOWNETlVMSWhjRGREWjAyVGg4S1FqaDNuWE9HVmQxOWxfNQ?oc=5&hl=en-US&gl=US&ceid=US:en",
-        "published_at": "2025-10-11T15:00:14-04:00",
-        "source": "Google",
-        "summary": "Is vibe coding ruining a generation of engineers? VentureBeat",
-        "content_html": "",
-        "summary_text": "Is vibe coding ruining a generation of engineers? VentureBeat",
-        "category": "ai",
-        "_permalink": "/p/12dbee4d18/",
-        "_abs_permalink": "https://pulse.tek2dayholdings.com/p/12dbee4d18/",
-        "_summary_240": "Is vibe coding ruining a generation of engineers? VentureBeat",
-        "_thumbnail": "https://pulse.tek2dayholdings.com/p/12dbee4d18/thumbnail.png"
-      },
-      {
         "title": "Is vibe coding ruining a generation of engineers?",
         "url": "https://venturebeat.com/ai/is-vibe-coding-ruining-a-generation-of-engineers",
         "published_at": "2025-10-11T15:00:00-04:00",
@@ -197,20 +239,6 @@
         "_abs_permalink": "https://pulse.tek2dayholdings.com/p/aa6d31af73/",
         "_summary_240": "Adversaries from cybercrime gangs to nation-state cyberattack squads are fine-tuning weaponized AI with the goal of defeating new patches in 3 days or less. The quicker the\u2026",
         "_thumbnail": "https://pulse.tek2dayholdings.com/p/aa6d31af73/thumbnail.png"
-      },
-      {
-        "title": "Debt Investors Grow Warier of Companies Getting Hit By AI - Bloomberg.com",
-        "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPNDBjYzNhQ1k3M1M3UG14dkhmTkpFVHZTOUIzUUpySHFwRGJQTkttOF9LM1FxSHdrZ3VWb25KOUtaYWtZc1liVXFWNHBaNzdPem4wMU9HSUluRTJpM2dQbUFyNVVaNkEzX2VKMktuWnhidjFqekktTXhRY3F5Zm1ZSGFCdlN4YnZxY3l3b3RuTHZ1NlkzS3M3VFBPRjduaUlNUTNpTjN0b05pX2hi?oc=5&hl=en-US&gl=US&ceid=US:en",
-        "published_at": "2025-10-10T10:22:18-04:00",
-        "source": "Google",
-        "summary": "Debt Investors Grow Warier of Companies Getting Hit By AI Bloomberg.com",
-        "content_html": "",
-        "summary_text": "Debt Investors Grow Warier of Companies Getting Hit By AI Bloomberg.com",
-        "category": "ai",
-        "_permalink": "/p/80af4935c0/",
-        "_abs_permalink": "https://pulse.tek2dayholdings.com/p/80af4935c0/",
-        "_summary_240": "Debt Investors Grow Warier of Companies Getting Hit By AI Bloomberg.com",
-        "_thumbnail": "https://pulse.tek2dayholdings.com/p/80af4935c0/thumbnail.png"
       }
     ],
     "software": [
@@ -371,18 +399,18 @@
         "_thumbnail": "https://pulse.tek2dayholdings.com/p/854ccc3782/thumbnail.png"
       },
       {
-        "title": "How Churners Earn Money By Regularly Signing Up for Credit Cards - The New York Times",
+        "title": "They Each Own 50 Credit Cards. Should You? - The New York Times",
         "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE9nbHh2WnVKczQxMzFSZEwzN0ZJbGZ1VHB6RG5FdGFYcy1tc1RiTkd4Vl85ZUJFOVBzQnRldGpISFNqckJsRnc2TzdDV1NJaTlEOXlET3p5VFZEOUZkczZ0bURGdU1jbFpWQUZUVmdqUWNmRmNwc3VMSktR?oc=5&hl=en-US&gl=US&ceid=US:en",
         "published_at": "2025-10-11T05:01:44-04:00",
         "source": "Google",
-        "summary": "How Churners Earn Money By Regularly Signing Up for Credit Cards The New York Times",
+        "summary": "They Each Own 50 Credit Cards. Should You? The New York Times",
         "content_html": "",
-        "summary_text": "How Churners Earn Money By Regularly Signing Up for Credit Cards The New York Times",
+        "summary_text": "They Each Own 50 Credit Cards. Should You? The New York Times",
         "category": "fintech",
-        "_permalink": "/p/9f38ea37ed/",
-        "_abs_permalink": "https://pulse.tek2dayholdings.com/p/9f38ea37ed/",
-        "_summary_240": "How Churners Earn Money By Regularly Signing Up for Credit Cards The New York Times",
-        "_thumbnail": "https://pulse.tek2dayholdings.com/p/9f38ea37ed/thumbnail.png"
+        "_permalink": "/p/e314ee43aa/",
+        "_abs_permalink": "https://pulse.tek2dayholdings.com/p/e314ee43aa/",
+        "_summary_240": "They Each Own 50 Credit Cards. Should You? The New York Times",
+        "_thumbnail": "https://pulse.tek2dayholdings.com/p/e314ee43aa/thumbnail.png"
       },
       {
         "title": "Goldman, Santander Among Banks Exploring Blockchain-Based Money - Bloomberg.com",
@@ -425,20 +453,6 @@
         "_abs_permalink": "https://pulse.tek2dayholdings.com/p/da887e5ee4/",
         "_summary_240": "AI\u2019s Growth Leaves Financial Regulators Struggling to Catch Up Bloomberg.com",
         "_thumbnail": "https://pulse.tek2dayholdings.com/p/da887e5ee4/thumbnail.png"
-      },
-      {
-        "title": "Fintech Start-Ups and Investment Firms Are Battling Over Your 401(k) - The New York Times",
-        "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOUV9IRVh2WjI5UlhkejRkTlFYT2FhbUpLcG12enlUWDRLbzEtTHF6b1RfLWpkVlJMT1hvRnY0U1JVT2RCaU5haXNvdkFJY0xRTFdoVmp3OXY0ck4yTndPMXZhYkNmN1A3LUNreWlyQjJlbDNMYXJiTEE3LUlSZ2w2THNKMWNPNEwzdEE?oc=5&hl=en-US&gl=US&ceid=US:en",
-        "published_at": "2025-10-10T09:00:13-04:00",
-        "source": "Google",
-        "summary": "Fintech Start-Ups and Investment Firms Are Battling Over Your 401(k) The New York Times",
-        "content_html": "",
-        "summary_text": "Fintech Start-Ups and Investment Firms Are Battling Over Your 401(k) The New York Times",
-        "category": "fintech",
-        "_permalink": "/p/1d8de166c3/",
-        "_abs_permalink": "https://pulse.tek2dayholdings.com/p/1d8de166c3/",
-        "_summary_240": "Fintech Start-Ups and Investment Firms Are Battling Over Your 401(k) The New York Times",
-        "_thumbnail": "https://pulse.tek2dayholdings.com/p/1d8de166c3/thumbnail.png"
       }
     ]
   }
