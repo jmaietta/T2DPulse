@@ -345,7 +345,8 @@ def create_branded_og_image(source_url: str, permalink_dir: str) -> tuple[str, s
     # Target dimensions
     TARGET_WIDTH = 1200
     TARGET_HEIGHT = 630
-    THUMB_SIZE = 300
+    THUMB_WIDTH = 240
+    THUMB_HEIGHT = 135
     LOGO_SIZE = 120
     PADDING = 20
     
@@ -403,14 +404,28 @@ def create_branded_og_image(source_url: str, permalink_dir: str) -> tuple[str, s
                 
                 og_img.save(output_path, "PNG", optimize=True)
                 
-                # Create 300x300 thumbnail (center crop, no logo)
+                # Create 240x135 thumbnail (16:9 ratio, center crop, no logo)
                 thumb = base_img.copy()
-                # Crop to square from center
-                min_dim = min(thumb.width, thumb.height)
-                left = (thumb.width - min_dim) // 2
-                top = (thumb.height - min_dim) // 2
-                thumb = thumb.crop((left, top, left + min_dim, top + min_dim))
-                thumb = thumb.resize((THUMB_SIZE, THUMB_SIZE), Image.LANCZOS)
+                thumb_aspect = thumb.width / thumb.height
+                target_thumb_aspect = THUMB_WIDTH / THUMB_HEIGHT
+                
+                if thumb_aspect > target_thumb_aspect:
+                    # Image is wider, fit height and crop width
+                    new_height = THUMB_HEIGHT * 2  # Scale up for quality
+                    new_width = int(new_height * thumb_aspect)
+                    thumb = thumb.resize((new_width, new_height), Image.LANCZOS)
+                    left = (new_width - THUMB_WIDTH * 2) // 2
+                    thumb = thumb.crop((left, 0, left + THUMB_WIDTH * 2, THUMB_HEIGHT * 2))
+                else:
+                    # Image is taller, fit width and crop height
+                    new_width = THUMB_WIDTH * 2
+                    new_height = int(new_width / thumb_aspect)
+                    thumb = thumb.resize((new_width, new_height), Image.LANCZOS)
+                    top = (new_height - THUMB_HEIGHT * 2) // 2
+                    thumb = thumb.crop((0, top, THUMB_WIDTH * 2, top + THUMB_HEIGHT * 2))
+                
+                # Final resize to exact dimensions
+                thumb = thumb.resize((THUMB_WIDTH, THUMB_HEIGHT), Image.LANCZOS)
                 thumb.save(thumbnail_path, "PNG", optimize=True)
                 
                 pid = os.path.basename(permalink_dir)
@@ -424,14 +439,27 @@ def create_branded_og_image(source_url: str, permalink_dir: str) -> tuple[str, s
             og_img = banner.resize((TARGET_WIDTH, TARGET_HEIGHT), Image.LANCZOS)
             og_img.save(output_path, "PNG", optimize=True)
             
-            # Create thumbnail from banner (center crop)
+            # Create thumbnail from banner (16:9 center crop)
             thumb = banner.copy()
-            # Crop to square from center
-            min_dim = min(thumb.width, thumb.height)
-            left = (thumb.width - min_dim) // 2
-            top = (thumb.height - min_dim) // 2
-            thumb = thumb.crop((left, top, left + min_dim, top + min_dim))
-            thumb = thumb.resize((THUMB_SIZE, THUMB_SIZE), Image.LANCZOS)
+            thumb_aspect = thumb.width / thumb.height
+            target_thumb_aspect = THUMB_WIDTH / THUMB_HEIGHT
+            
+            if thumb_aspect > target_thumb_aspect:
+                # Image is wider, fit height and crop width
+                new_height = THUMB_HEIGHT * 2
+                new_width = int(new_height * thumb_aspect)
+                thumb = thumb.resize((new_width, new_height), Image.LANCZOS)
+                left = (new_width - THUMB_WIDTH * 2) // 2
+                thumb = thumb.crop((left, 0, left + THUMB_WIDTH * 2, THUMB_HEIGHT * 2))
+            else:
+                # Image is taller, fit width and crop height
+                new_width = THUMB_WIDTH * 2
+                new_height = int(new_width / thumb_aspect)
+                thumb = thumb.resize((new_width, new_height), Image.LANCZOS)
+                top = (new_height - THUMB_HEIGHT * 2) // 2
+                thumb = thumb.crop((0, top, THUMB_WIDTH * 2, top + THUMB_HEIGHT * 2))
+            
+            thumb = thumb.resize((THUMB_WIDTH, THUMB_HEIGHT), Image.LANCZOS)
             thumb.save(thumbnail_path, "PNG", optimize=True)
             
             pid = os.path.basename(permalink_dir)
