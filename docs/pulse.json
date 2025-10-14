@@ -1,5 +1,33 @@
 [
   {
+    "title": "Big Tech Deepens Its Control Across the AI Stack",
+    "url": "https://www.pymnts.com/artificial-intelligence-2/2025/big-tech-deepens-its-control-across-the-ai-stack/",
+    "published_at": "2025-10-14T11:08:24-04:00",
+    "source": "PYMNTS",
+    "summary": "The week\u2019s developments from Microsoft, Nvidia, Amazon, Google and OpenAI show how major tech firms are expanding across every layer of the artificial intelligence stack, from infrastructure to applications. Microsoft Builds In-House Image Model Microsoft\u2019s MAI-Image-1 became the company\u2019s first image-generation model built entirely in-house. Microsoft has long relied on external models such as [\u2026",
+    "content_html": "<p style=\"font-weight: 400;\">The week\u2019s developments from Microsoft, Nvidia, Amazon, Google and OpenAI show how major tech firms are expanding across every layer of the artificial intelligence stack, from infrastructure to applications.</p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<h2 style=\"font-weight: 400;\"><strong>Microsoft Builds In-House Image Model</strong></h2>\n<p style=\"font-weight: 400;\"><a href=\"https://microsoft.ai/news/introducing-mai-image-1-debuting-in-the-top-10-on-lmarena/\" rel=\"noopener\" target=\"_blank\">Microsoft\u2019s MAI-Image-1</a> became the company\u2019s first image-generation model built entirely in-house. Microsoft has long relied on external models such as OpenAI\u2019s DALL\u00b7E for Copilot and Designer, but MAI-Image-1 brings that capability under its own roof. The model is already ranked among the top 10 performers on <a href=\"https://lmarena.ai/\" rel=\"noopener\" target=\"_blank\">LMArena</a> (an open platform for evaluating AI models) and was trained to generate visuals with greater accuracy, color balance and contextual understanding. By owning the model, Microsoft can tune performance for its software ecosystem and maintain tighter control over safety and content standards. The release places Microsoft alongside Google and Stability AI, both of which already develop proprietary visual systems.</p>\n<h2 style=\"font-weight: 400;\"><strong>Nvidia Announces Networking and Data Center Updates</strong></h2>\n<p style=\"font-weight: 400;\">Nvidia\u2019s <a href=\"https://nvidianews.nvidia.com/news/nvidia-spectrum-x-ethernet-switches-speed-up-networks-for-meta-and-oracle\" rel=\"noopener\" target=\"_blank\">Spectrum-X Ethernet switches</a> target a part of AI infrastructure that rarely makes headlines: the networks that connect thousands of processors inside data centers. When large models are trained, each graphics processing unit (GPU) handles a fraction of the workload and must constantly exchange results with others. Standard Ethernet hardware was built for conventional data traffic like file transfers, but AI requires millions of rapid, low-latency updates between chips. Spectrum-X is tuned for that pattern, reducing congestion so GPUs spend more time computing and less time waiting. Meta and Oracle plan to deploy the hardware to improve efficiency across their AI infrastructure, where even small gains in utilization can yield significant cost savings.</p>\n<p style=\"font-weight: 400;\">Nvidia also introduced its <a href=\"https://blogs.nvidia.com/blog/gigawatt-ai-factories-ocp-vera-rubin/\" rel=\"noopener\" target=\"_blank\">Vera Rubin NVL144 architecture</a>, a new blueprint for building AI data centers. Traditional facilities are assembled rack by rack, with separate systems for power, cooling and networking. Vera Rubin replaces that piecemeal approach with standardized modules that bundle all three functions into liquid-cooled, high-voltage units. Operators can expand capacity by adding pre-built modules rather than redesigning layouts from scratch, enabling faster deployment of what Nvidia calls \u201cgigawatt-scale\u201d AI factories. The architecture aims to make massive AI workloads more efficient and sustainable as demand accelerates.</p>\n<h2 style=\"font-weight: 400;\"><strong>Agents and Consumer AI Gain Ground</strong></h2>\n<p style=\"font-weight: 400;\"><a href=\"https://aws.amazon.com/blogs/machine-learning/amazon-bedrock-agentcore-is-now-generally-available/\" rel=\"noopener\" target=\"_blank\">Amazon Web Services\u2019 Bedrock AgentCore</a> added another piece to this ecosystem. Bedrock already gives enterprises access to foundation AI models from multiple providers through a managed interface. AgentCore extends that platform by letting customers create agents, AI systems that can plan tasks, remember previous actions and interact with data or APIs autonomously. It introduces built-in memory, monitoring and governance so businesses can operationalize generative artificial intelligence without engineering new infrastructure for each use case. The release aligns with <a href=\"https://www.pymnts.com/news/artificial-intelligence/2025/openai-aims-standardize-how-build-ai-agents/\" rel=\"noopener\" target=\"_blank\">OpenAI\u2019s AgentKit</a>, which offers similar tools for building and standardizing agent workflows.</p>\n<p style=\"font-weight: 400;\"><a href=\"http://blog.google/technology/ai/nano-banana-google-products/\" rel=\"noopener\" target=\"_blank\">Google\u2019s Nano Banana</a> update extended this shift further into the consumer layer. Built on the Gemini 2.5 Flash model, Nano Banana now brings image creation and editing directly into Search, NotebookLM and soon Photos. In Search, users can upload a picture and instantly generate alternate versions such as turning a photo of a living room into a redecorated space or a travel snapshot into a postcard. In NotebookLM, writers and researchers can create quick visual summaries of their notes or draft concept illustrations alongside text. The feature will also expand to Photos, allowing users to make context-aware edits within the app without switching tools. The rollout shows how generative functions are being folded into everyday experiences instead of existing as separate AI demonstrations.</p>\n<div>\n<p class=\"elementtoproof\"><i>For all PYMNTS AI coverage, subscribe to the daily<span class=\"apple-converted-space\">\u00a0</span></i><a href=\"https://www.pymnts.com/subscribe/\" rel=\"noopener\" target=\"_blank\" title=\"https://www.pymnts.com/subscribe/\">AI\u00a0Newsletter</a><i>.</i></p>\n</div>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/artificial-intelligence-2/2025/big-tech-deepens-its-control-across-the-ai-stack/\">Big Tech Deepens Its Control Across the AI Stack</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
+    "summary_text": "The week\u2019s developments from Microsoft, Nvidia, Amazon, Google and OpenAI show how major tech firms are expanding across every layer of the artificial intelligence stack, from infrastructure to applications. Microsoft Builds In-House Image Model Microsoft\u2019s M\u2026",
+    "category": "ai",
+    "_permalink": "/p/e2ec71a017/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/e2ec71a017/",
+    "_summary_240": "The week\u2019s developments from Microsoft, Nvidia, Amazon, Google and OpenAI show how major tech firms are expanding across every layer of the artificial intelligence stack, from\u2026",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/e2ec71a017/thumbnail.png"
+  },
+  {
+    "title": "Tokenization and Treasury Innovation Shaped Citi\u2019s Record Third Quarter",
+    "url": "https://www.pymnts.com/earnings/2025/tokenization-treasury-innovation-shaped-citi-record-third-quarter/",
+    "published_at": "2025-10-14T11:04:11-04:00",
+    "source": "PYMNTS",
+    "summary": "Citigroup CEO Jane Fraser\u2019s multiyear effort to rebuild the once-sprawling bank into a leaner, technology-driven institution is beginning to deliver results. The bank reported its third-quarter 2025 earnings results Tuesday (Oct. 14), sharing that each of Citi\u2019s five core businesses (Services, Markets, Banking, Wealth and U.S. Personal Banking) posted record quarterly revenues. \u201cInvestments in [\u2026\u2026",
+    "content_html": "<p><a class=\"editor-rtfLink\" href=\"https://www.citigroup.com/global\" rel=\"noopener\" target=\"_blank\"><span>Citigroup</span></a><span> CEO </span><a class=\"editor-rtfLink\" href=\"https://www.linkedin.com/in/jane-fraser-3292068/\" rel=\"noopener\" target=\"_blank\"><span>Jane Fraser</span></a><span>\u2019s multiyear effort to rebuild the once-sprawling bank into a leaner, technology-driven institution is beginning to deliver results.</span></p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p><span>The bank reported its third-quarter 2025 </span><a class=\"editor-rtfLink\" href=\"https://www.citigroup.com/rcs/citigpa/storage/public/Earnings/Q32025/2025prqtr3rslt.pdf\" rel=\"noopener\" target=\"_blank\"><span>earnings</span></a><span> results Tuesday (Oct. 14), sharing that each of Citi\u2019s five core businesses (Services, Markets, Banking, Wealth and U.S. Personal Banking) posted record quarterly revenues.</span></p>\n<p><span>\u201cInvestments in new products, digital assets and AI are driving innovation and improved capabilities across the franchise,\u201d Fraser said in a press release, adding that this has put Citi \u201cin a materially different place in terms of our ability to compete.\u201d</span></p>\n<p><span>Revenues climbed 9% year over year to $22.1 billion, Citi\u2019s best third-quarter performance in a decade.</span></p>\n<p><span>\u201cServices posted its best quarter ever with revenues up 7%,\u201d Fraser said. \u201cDespite low volatility, Markets delivered its best third quarter ever with revenues up 15%. Banking revenues were up 34%, and we continue to improve our Investment Banking market share across key sectors. Our Wealth strategy continues to play out positively with record net new investment assets of $18.6 billion for the quarter, and USPB saw a record quarter with revenues up 7%.\u201d</span></p>\n<p><span>As global commerce accelerates toward automation, instant payments and tokenized finance, Citi is repositioning its Treasury and Trade Solutions (TTS) segment, historically its backbone business for global cash management, as a platform at the intersection of corporate banking and next-generation financial technology.</span></p>\n<p><strong><span>Read also:</span></strong> <a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/earnings/2025/jane-fraser-citi-ready-to-disrupt-itself-with-tokenized-treasury-tools/\" rel=\"noopener\" target=\"_blank\"><span>Citi CEO Says Token Services Are \u2018Superior Platform\u2019 for Digital Assets</span></a></p>\n<h2><strong><span>Digital Infrastructure as a Growth Multiplier</span></strong></h2>\n<p><span>Over the past two years, TTS has emerged as a focal point for the bank\u2019s digital asset strategy, integrating blockchain, tokenization and programmable money capabilities directly into institutional treasury operations. The company\u2019s Q3 2025 data showed the strategy beginning to translate into measurable financial strength and expanded digital capability.</span></p>\n<p><span>In 2025, Citi launched several initiatives through its </span><a class=\"editor-rtfLink\" href=\"https://www.citigroup.com/global/businesses/digital-assets\" rel=\"noopener\" target=\"_blank\"><span>Digital Assets Group</span></a><span> that extend TTS\u2019s functionality into distributed ledger environments. One of the most visible is </span><a class=\"editor-rtfLink\" href=\"https://www.citigroup.com/global/businesses/services/services-digital-assets\" rel=\"noopener\" target=\"_blank\"><span>Citi Token Services</span></a><span>, which uses blockchain technology to facilitate instantaneous cross-border payments and liquidity transfers between Citi branches and client treasuries.</span></p>\n<p><span>The system replaces traditional correspondent banking steps, which can take hours or days, with programmable digital tokens representing deposits held at Citi. The tokens move across Citi\u2019s private blockchain, enabling 24/7 liquidity management for multinational corporates.</span></p>\n<p><span>Operational metrics underscore the scale. Cross-border transaction value rose 10%, U.S.-dollar clearing volume increased 5%, and assets under custody and administration reached $30 trillion, up 13% year on year. Deposit balances within Services grew 8% to $893 billion, reinforcing Citi\u2019s position as a leading liquidity manager for multinationals.</span></p>\n<p><span>During the third quarter, the bank also expanded Citi Token Services beyond pilot mode, introducing new use cases in cash concentration and automated trade settlement. The service has now been deployed for institutional clients across the U.S. and Europe, positioning Citi as one of the first major global banks to apply blockchain at production scale within its own balance sheet operations.</span></p>\n<p><strong><span>See also:</span></strong> <a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/cryptocurrency/2025/citi-plans-crypto-custody-service-launch-2026/\" rel=\"noopener\" target=\"_blank\"><span>Citi Plans Crypto Custody Service Launch for 2026</span></a></p>\n<h2><strong><span>Integrating Tokenization and Custody</span></strong></h2>\n<p><span>During the third quarter, Citi expanded its API connectivity and instant payment corridors across key markets, enabling clients to automate cash positioning and trade flows directly from their own treasury systems. Cross-border transaction growth reflects that integration. Corporate clients increasingly access Citi\u2019s network programmatically rather than through manual channels.</span></p>\n<p><span>Beyond payments, Citi is extending tokenization into its Securities Services business, which administers more than $30 trillion in client assets. The bank has begun adapting that infrastructure for tokenized bonds, funds and trade receivables, offering custody and settlement within the same regulatory perimeter as traditional securities.</span></p>\n<p><span>The focus on institutional, balance-sheet-backed tokenization distinguishes Citi from peers pursuing retail cryptocurrency initiatives. The goal is to use distributed-ledger technology to enhance the speed, transparency and resiliency of existing financial plumbing.</span></p>\n<p><span>Custody of </span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/cryptocurrency/2025/sec-no-action-letter-gives-traditional-banks-nudge-toward-crypto-custody/\" rel=\"noopener\" target=\"_blank\"><span>crypto</span></a><span> assets \u201cis fast becoming one of the defining battlegrounds in the broader institutionalization of digital finance,\u201d PYMNTS wrote Oct. 1 in the wake of a letter from the </span><a class=\"editor-rtfLink\" href=\"https://www.sec.gov/\" rel=\"noopener\" target=\"_blank\"><span>Securities and Exchange Commission</span></a><span>.</span></p>\n<p><span>Digitalization is reinforcing Citi\u2019s competitive moat. Once a client integrates its treasury operations via Citi\u2019s APIs or token platform, the bank effectively becomes an embedded counterparty for daily liquidity management. Each incremental digital connection deepens relationships and drives recurring fee revenue without significant capital consumption.</span></p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/earnings/2025/tokenization-treasury-innovation-shaped-citi-record-third-quarter/\">Tokenization and Treasury Innovation Shaped Citi\u2019s Record Third Quarter</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
+    "summary_text": "Citigroup CEO Jane Fraser\u2019s multiyear effort to rebuild the once-sprawling bank into a leaner, technology-driven institution is beginning to deliver results. The bank reported its third-quarter 2025 earnings results Tuesday (Oct. 14), sharing that each of Cit\u2026",
+    "category": "fintech",
+    "_permalink": "/p/22d9a418a6/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/22d9a418a6/",
+    "_summary_240": "Citigroup CEO Jane Fraser\u2019s multiyear effort to rebuild the once-sprawling bank into a leaner, technology-driven institution is beginning to deliver results. The bank reported\u2026",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/22d9a418a6/thumbnail.png"
+  },
+  {
     "title": "JPMorgan Traders, Bankers Crush Estimates for Quarterly Haul - Bloomberg.com",
     "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNM0tyY0E1dVR5SkVOVVRFelVHTDd2c25rZ0FaTjFraWpENGdiSGdPekRVb1B0YVRLOUVOR3d3T3FDM25hT01jYTdfb255djhock5FLThYX1lySVhuOEFXYjZPYS1raEc2LUNrbko4RGF1UHBYc3dMLWNqdjh2cXQzMk91REhNS2otSmVPQWFmdURYbXkxZjlFdlR3U2xqZHV1WEs1TmljM21QblprVkhnNDM1ZEs?oc=5&hl=en-US&gl=US&ceid=US:en",
     "published_at": "2025-10-14T10:13:16-04:00",
@@ -12,6 +40,20 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/d7d33cd29e/",
     "_summary_240": "JPMorgan Traders, Bankers Crush Estimates for Quarterly Haul Bloomberg.com",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/d7d33cd29e/thumbnail.png"
+  },
+  {
+    "title": "Crypto Slump Continues as China Hits Back Against the US - Bloomberg.com",
+    "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPMmZLWVRBVFlHOFl2OU9zeWdVNm5KcGJWeWE1VnFkOXlkOHpndXZsa2NFSW9uU0U3YS1lckhEM2pDQXpLLWlwRHRNX0NldF92MktHOFZyVmRBOHpJQzlLWEstbUNlVmNJamUxY0N1RlZRdWpfUS1lNDFYUUNkLWFxaXNuMFRmUDNRZnF2aktyNjVOZU45dmdjRnFfMFhDS3ZUd25HNVgxajk0Szg?oc=5&hl=en-US&gl=US&ceid=US:en",
+    "published_at": "2025-10-14T10:03:23-04:00",
+    "source": "Google",
+    "summary": "Crypto Slump Continues as China Hits Back Against the US Bloomberg.com",
+    "content_html": "",
+    "summary_text": "Crypto Slump Continues as China Hits Back Against the US Bloomberg.com",
+    "category": "fintech",
+    "_permalink": "/p/50d450a559/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/50d450a559/",
+    "_summary_240": "Crypto Slump Continues as China Hits Back Against the US Bloomberg.com",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/50d450a559/thumbnail.png"
   },
   {
     "title": "SteelSeries\u2019 refreshed Nova 7 gaming headset gets a big battery life boost",
@@ -98,34 +140,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/3f26cf9bb0/thumbnail.png"
   },
   {
-    "title": "Crypto Slump Continues as China Hits Back Against the US - Bloomberg.com",
-    "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPMmZLWVRBVFlHOFl2OU9zeWdVNm5KcGJWeWE1VnFkOXlkOHpndXZsa2NFSW9uU0U3YS1lckhEM2pDQXpLLWlwRHRNX0NldF92MktHOFZyVmRBOHpJQzlLWEstbUNlVmNJamUxY0N1RlZRdWpfUS1lNDFYUUNkLWFxaXNuMFRmUDNRZnF2aktyNjVOZU45dmdjRnFfMFhDS3ZUd25HNVgxajk0Szg?oc=5&hl=en-US&gl=US&ceid=US:en",
-    "published_at": "2025-10-14T05:55:23-04:00",
-    "source": "Google",
-    "summary": "Crypto Slump Continues as China Hits Back Against the US Bloomberg.com",
-    "content_html": "",
-    "summary_text": "Crypto Slump Continues as China Hits Back Against the US Bloomberg.com",
-    "category": "fintech",
-    "_permalink": "/p/5e75c507ac/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/5e75c507ac/",
-    "_summary_240": "Crypto Slump Continues as China Hits Back Against the US Bloomberg.com",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/5e75c507ac/thumbnail.png"
-  },
-  {
-    "title": "Why Broadcom\u2019s Bet on OpenAI Is a Big Risk - The Wall Street Journal",
-    "url": "https://news.google.com/rss/articles/CBMimgNBVV95cUxNRFNMenRLeXNFS0JmdUQtODhIcXlJVVhyc3o1Ni1fd05LYzBfU1Q0UGFEZDRfc0YzUEZ6STRBQTg1OHNuU3hqUms4VmtfMFJHMjd2ZjU0VEV1czNBZUNzX1ctdW44aGljd282aGUwLVUzZmlTQlh2WjV3Z2ZQSk5hN2wxMkJjYVVRU0RQT01MUTA3eWsxcld2SkNHa2VidnRfejZzOS1lMUtBYVdPV0piRk1leGdON1VqdmlNMDJPaGxybW1oenhuTXJ6SEJMUzZxNUV6ckhiWi1CYnZuelI5ZHNjNkRLMkFRM0ZMVmFYLWUtT2x3OXg0QmZkazNXd3I0WFZpRWJwLWZ5NVFfNFhGei1VQng3OWNZMGJLaWVTcW9TSDFIeFM1dmdDQ0FpeHFTMV93eDZNQXl1Y3BVNnB2aHJpdFI5WmtCZ29rcHZDTW43Z0x4X1JVZWtIVi1UU1l3MEQ4elNydXVYeDZFMmdndHRsUWJtNWYtU2pBQ0dCOENlOElJM3NQMjRxZmlyWTRpTTJCVXpURHBsUQ?oc=5&hl=en-US&gl=US&ceid=US:en",
-    "published_at": "2025-10-14T05:30:00-04:00",
-    "source": "Google",
-    "summary": "Why Broadcom\u2019s Bet on OpenAI Is a Big Risk The Wall Street Journal",
-    "content_html": "",
-    "summary_text": "Why Broadcom\u2019s Bet on OpenAI Is a Big Risk The Wall Street Journal",
-    "category": "ai",
-    "_permalink": "/p/326824987c/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/326824987c/",
-    "_summary_240": "Why Broadcom\u2019s Bet on OpenAI Is a Big Risk The Wall Street Journal",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/326824987c/thumbnail.png"
-  },
-  {
     "title": "Metaplanet\u2019s Enterprise Value Sinks Below Bitcoin Holdings - Bloomberg.com",
     "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNRjhPc1FUeW81LUFKWk9UVVpCUTAyRVprRGlNdGdJNkNNXzhydWhfTS0zZWFTTzJ6dlZ3ODZqNXFhQ0I5azMzNE5MUjhFYmJ3NFIyT2RubTJVN0ZYQUhRcGdzWDlMaXY3d0dwNFB4dUExMXh3MEdmTG95S3QyaXY5SWQtbHNCTjlrVWdUMnFkX1JWc0VLLTBWbnRDUnh1RUtEY09ZYkQxd0s2RWg1SGc?oc=5&hl=en-US&gl=US&ceid=US:en",
     "published_at": "2025-10-14T05:15:08-04:00",
@@ -166,34 +180,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/d6b9b2accd/",
     "_summary_240": "Watch more: Prompt Economy: Visa, Rob Cameron \u201cAgentic AI is going to unlock a lot more commerce,\u201d Rob Cameron, global head of Visa Acceptance Solutions, told PYMNTS CEO Karen\u2026",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/d6b9b2accd/thumbnail.png"
-  },
-  {
-    "title": "Firms Tap Orchestration to Tame Chaos of Too Many Payment Options",
-    "url": "https://www.pymnts.com/news/payments-innovation/2025/firms-tap-orchestration-tame-chaos-too-many-payment-options/",
-    "published_at": "2025-10-14T04:00:42-04:00",
-    "source": "PYMNTS",
-    "summary": "Watch more: Need to Know: Priority, Sean Kiewiet Modern commerce has never offered customers more ways to pay or get paid. From cards, ACH, wires, real-time payments, wallets, cryptocurrency and cross-border rails, the menu keeps expanding. For merchants and platforms, that optionality is a competitive requirement. It is also, increasingly, an operational drag. \u201cI [\u2026] The post Firms Tap Orchestra\u2026",
-    "content_html": "<p><strong>Watch more:</strong> <a href=\"https://tv.pymnts.com/detail/video/6380577606112\" rel=\"noopener\" target=\"_blank\">Need to Know: Priority, Sean Kiewiet</a></p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p><span>Modern commerce has never offered customers more </span><span>ways to pay</span><span> or </span><span>get paid</span><span>.</span></p>\n<p><span>From cards, ACH, wires, real-time payments, wallets, cryptocurrency and cross-border rails, the menu keeps expanding.</span></p>\n<p><span>For merchants and platforms, that optionality is a competitive requirement. It is also, increasingly, an operational drag.</span></p>\n<p><span>\u201cI call it doing empty work; it\u2019s like eating empty calories,\u201d </span><a class=\"editor-rtfLink\" href=\"https://prioritycommerce.com/\" rel=\"noopener\" target=\"_blank\"><span>Priority</span></a><span> Chief Strategy Officer </span><a class=\"editor-rtfLink\" href=\"https://www.linkedin.com/in/skiewiet/\" rel=\"noopener\" target=\"_blank\"><span>Sean Kiewiet</span></a><span> told PYMNTS. \u201cThese systems are not connected, but they all have to work together.\u201d</span></p>\n<p><span>The sprawling constellation of providers, banks, ledgers, treasury tools and risk systems has created what many finance leaders now experience as fragmentation. Duplicated workflows, mismatched settlement clocks, inconsistent risk signals and brittle integrations siphon time from product teams and cash from profits and losses.</span></p>\n<p><span>\u201cYou have a person or a team of people that end up orchestrating \u2026 all the different systems,\u201d Kiewiet said. \u201cIt\u2019s not efficient \u2026 but it\u2019s necessary.\u201d</span></p>\n<p><span>The consequences are tangible. One processor funds at 7 p.m. the same day; another settles the next morning; a treasury portal posts balances on a different cadence; payouts can sit in approval queues over a long weekend</span><span>. The</span><span> inefficiency compounds with scale. In smaller firms, the pain </span><span>is sometimes masked</span><span> by generalists absorbing the work into their broader </span><span>remit</span><span>.</span></p>\n<p><span>This friction sits at the heart of payments strategy in 2025: the paradox of choice. The more ways you give a customer to pay or </span><span>be paid</span><span>, the more complexity you inherit. </span><span>And the more complexity you inherit, the harder it becomes to deliver the qualities customers </span><span>feel</span><span>, </span><span>like</span><span> speed, transparency and reliability.</span></p>\n<p><span>Increasingly, leaders are </span><span>hunting for</span><span> an operating model that can eliminate </span><span>the \u201c</span><span>empty work\u201d without sacrificing the choices </span><span>that</span><span> their customers demand.</span><span> The benefit is not just cleaner dashboards. It is resilience against the future. New rails will emerge; regulators will change rules; M&amp;A will add systems; sovereigns will mandate domestic schemes; and crypto will wax and wane. An orchestration-first model absorbs those shocks.</span></p>\n<p><span>\u201cHaving a system that\u2019s all in one place and can do all the modalities you need and connect with everything you need, that\u2019s an ideal situation,\u201d Kiewiet said.</span></p>\n<p><strong>Read also:</strong>\u00a0<a href=\"https://www.pymnts.com/smbs/2025/small-businesses-embrace-simplicity-as-managing-cashflow-becomes-more-complex/\" rel=\"noopener\" target=\"_blank\">Small Businesses Embrace Simplicity as Managing Cash Flow Becomes More Complex</a></p>\n<p>&nbsp;</p>\n<div style=\"display: block;\">\n<div style=\"padding-top: 56.25%;\"></div>\n</div>\n<p>&nbsp;</p>\n<h2><strong><span>How Fragmentation Happens and What to Do About It</span></strong></h2>\n<p><span>Fragmentation is rarely the result of a single decision. It accumulates. Kiewiet pointed to three recurrent patterns. </span><span>First, industry-mandated anchor systems, </span><span>like</span><span> the ERP in manufacturing, the patient management system in healthcare and the practice system in professional services, often define data models and workflows that payment layers must accommodate.</span></p>\n<p><span>\u201cYou build in this automatic fragmentation except for the integrated source,\u201d he said, because everything else lives adjacent to, rather than inside, the core system.</span></p>\n<p><span>Second, mergers and acquisitions create \u201ctwo different ways to do the same thing.\u201d The acquired team is comfortable with its stack and loath to switch under operational pressure. Rationalizing contracts and adapting upstream integrations take time, and the near-term business case can be hard to prove.</span></p>\n<p><span>\u201cThey need a reason to do that,\u201d Kiewiet said, especially when switching means change management for embedded processes.</span></p>\n<p><span>Third, there\u2019s what Kiewiet called \u201cstaff familiarity.\u201d People champion what they know.</span></p>\n<p><span>\u201cThis is, \u2018I\u2019ve always used </span><a class=\"editor-rtfLink\" href=\"https://www.netsuite.com/portal/home.shtml\" rel=\"noopener\" target=\"_blank\"><span>NetSuite</span></a><span>, I\u2019ve always used this accounting platform,\u2019\u201d he said. \u201cWherever they go, that\u2019s what they promote. And so, any change to that is</span><span> \u2026 </span><span>met with resistance.\u201d</span></p>\n<p><span>Over time, those local optimizations create global inconsistency. Every team can reconcile its own provider; few can reconcile the enterprise. These forces are not going away. If anything, they intensify as firms expand geographies, add lines of business, and widen customer payment choices.</span></p>\n<p><span>There is urgency to enacting effective orchestration, and customer expectations, not internal preferences, may set the tempo.</span></p>\n<p><span>\u201cThe modern mind does not comprehend\u201d waiting for money over weekends and holidays, Kiewiet said.</span></p>\n<p><span>Businesses that cling to fragmented, human-orchestrated processes may spend more on maintenance, trigger more risk noise and fall behind on experience. </span><span>Those </span><span>that</span><span> redesign for orchestration can turn the same complexity and </span><span>the same</span><span> optionality into an advantage.</span></p>\n<p><strong>See also:</strong>\u00a0<a href=\"https://www.pymnts.com/accounts-payable/2024/the-cash-flow-management-secret-weapon-cfos-didnt-know-they-had/\" rel=\"noopener\" target=\"_blank\">The Cash Flow Management Secret Weapon CFOs Didn\u2019t Know They Had</a></p>\n<h2><strong><span>The Case for Orchestration and Not Just Aggregation</span></strong></h2>\n<p><span>If fragmentation is a structural consequence of optionality, what can replace it? Kiewiet advocated for an orchestration-first operating model. The goal is not a single vendor for everything, but rather a unified control plane for money movement, treasury and risk across whichever rails and banks an enterprise requires.</span></p>\n<p><span>Such a model </span><span>offers</span> <span>full</span><span> visibility into the life cycle of money, </span><span>or taking payments</span><span>, </span><span>making disbursements</span><span>, </span><span>managing</span><span> accounts receivable and accounts payable, and </span><span>monitoring</span><span> cash </span><span>at rest</span><span>.</span></p>\n<p><span>\u201cThere\u2019s almost always a capital component,\u201d Kiewiet said. \u201cI have to have money to move money.\u201d</span></p>\n<p><span>Orchestration platforms that combine payments with embedded capital can smooth these peaks and valleys, allowing operations to \u201ckeep the trains running on time \u2026 [without] a call with your banker every time,\u201d he said.</span></p>\n<p><span>The journey starts with the customer, Kiewiet said. Map the next five years of expectations backward to today\u2019s operating gaps. </span><span>The goal is not to rip and replace </span><span>but</span><span> to sit above a firm\u2019s banks, providers </span><span>and</span><span> rails with a single pane of glass </span><span>through</span><span> which </span><span>any rail can be plugged in</span><span> or swapped out.</span></p>\n<p><span>Treasury and risk leaders, meanwhile, should anchor the business case in measurable outcomes, </span><span>like</span><span> reduced false positives and hold times, faster cycle </span><span>time</span><span> from authorization to availability, improved reserve transparency by rail and region, and lower effective cost of goods sold for money movement, inclusive of capital.</span></p>\n<p><span>This approach also reframes what \u201cpayments strategy\u201d means, he said. In fragmented environments, payment </span><span>is often treated</span><span> as a compliance and integration program, where success is measured by how little breaks. </span><span>In an orchestrated environment, payments become </span><span>an instrument</span><span> for product velocity and <a href=\"https://www.pymnts.com/tag/working-capital/\" rel=\"noopener\" target=\"_blank\">working capital</a> advantage.</span></p>\n<p><span>\u201cDo you want your money to move,\u201d Kiewiet said, \u201cor do you want your money to work?\u201d</span></p>\n<p><span>\u00a0</span></p>\n<p><em><a class=\"editor-rtfLink\" href=\"https://www.linkedin.com/in/skiewiet/\" rel=\"noopener\" target=\"_blank\">Sean Kiewiet</a> is the chief strategy officer at Priority, which combines payables, merchant services, and banking and treasury solutions into one commerce engine, so finance leaders can accelerate cash flow and optimize working capital.</em></p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/news/payments-innovation/2025/firms-tap-orchestration-tame-chaos-too-many-payment-options/\">Firms Tap Orchestration to Tame Chaos of Too Many Payment Options</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
-    "summary_text": "Watch more: Need to Know: Priority, Sean Kiewiet Modern commerce has never offered customers more ways to pay or get paid. From cards, ACH, wires, real-time payments, wallets, cryptocurrency and cross-border rails, the menu keeps expanding. For merchants and \u2026",
-    "category": "fintech",
-    "_permalink": "/p/5ac3533ef9/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/5ac3533ef9/",
-    "_summary_240": "Watch more: Need to Know: Priority, Sean Kiewiet Modern commerce has never offered customers more ways to pay or get paid. From cards, ACH, wires, real-time payments, wallets,\u2026",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/5ac3533ef9/thumbnail.png"
-  },
-  {
-    "title": "Mobile Accounts for 59% of Long-Distance Travel Bookings",
-    "url": "https://www.pymnts.com/travel-payments/2025/mobile-accounts-for-59-percent-of-long-distance-travel-bookings/",
-    "published_at": "2025-10-14T04:00:21-04:00",
-    "source": "PYMNTS",
-    "summary": "When it comes to travel, Generation Z consumers and baby boomers, two groups at opposite ends of the digital age spectrum, are behaving more alike than anyone expected. Both are holding onto their computers even as most consumers now reach for their phones to book a trip. The finding from the PYMNTS Intelligence report [\u2026] The post Mobile Accounts for 59% of Long-Distance Travel Bookings appeared\u2026",
-    "content_html": "<p><span>When it comes to travel, Generation Z consumers and baby boomers, two groups at opposite ends of the digital age spectrum, are behaving more alike than anyone expected.</span></p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p><span>Both are holding onto their computers even as most consumers now reach for their phones to book a trip.</span></p>\n<p><span>The </span><span>finding</span><span> from the PYMNTS Intelligence report \u201c</span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/study_posts/consumers-go-mobile-first-on-travel-purchases/\" rel=\"noopener\" target=\"_blank\"><span>Consumers Go Mobile-First on Travel Purchases</span></a><span>\u201d </span><span>upends</span><span> the popular idea that mobile-first travel is strictly a Gen Z phenomenon </span><span>and</span><span> instead </span><span>suggests</span><span> that device choice depends as much on circumstance and convenience as on age.</span></p>\n<p><span>Smartphones have become the </span><span>default way to pay</span><span> for transportation. More than 7 in 10 U.S. consumers prefer to buy local rides or transit tickets on mobile devices, and nearly 6 in 10 do so for long-distance trips and rental cars. The mobile-first pattern is more pronounced for travel than for retail, restaurants or groceries.</span></p>\n<p><span>Yet beneath those broad gains are unexpected similarities between the youngest and oldest travelers. </span><span>Gen Z\u2019s partial retreat to computers (40% still prefer them for booking) </span><span>puts</span><span> them closer to baby boomers than to millennials or </span><span>bridge</span><span> millennials.</span></p>\n<p><span>Both groups appear to value the structure and perceived security of browser-based purchases. For boomers, that stems from habit; for Gen Z, it may simply reflect that laptops are already open for school or work.</span></p>\n<ul>\n<li><span>Seventy-three percent of consumers who paid for taxis, rideshares or mass-transit fares prefer to use a mobile device, compared with 37% who favor computers.</span></li>\n<li><span>For long-distance travel, the split narrows to 59% on mobile versus 54% on computers. It\u2019s evidence that complex bookings still drive many consumers to larger screens.</span></li>\n<li><span>Seventy-three percent of digital-first travelers research online before </span><span>purchasing</span><span>, but only about half check credit card perks or rewards, leaving potential savings untouched.</span></li>\n</ul>\n<p><span>Those patterns suggest that while mobile has won the overall booking war, desktop loyalty lingers at the edges where travelers perceive complexity, risk or high cost. Young consumers\u2019 continued reliance on laptops also underscores a subtle shift in the meaning of \u201cmobile.\u201d</span></p>\n<p><span>Rather than being a single-device identity, it\u2019s an ecosystem of apps, browsers and voice assistants that travelers toggle between depending on the task. About 1 in 10 consumers even use voice-activated devices to complete bookings.</span></p>\n<p><span>Travel also stands out for </span><span>how decisively it leads</span><span> mobile adoption across categories. The report shows that 51% of consumers prefer to buy travel on phones, versus 45% for retail, 42% for restaurant orders and 26% for groceries. Even 28% of baby boomers, which is a high share for any digital-commerce segment, favor their phones for travel transactions.</span></p>\n<p><span>Still, not all demographics are equal in participation. Only 21% of consumers rented a car in the past year, compared with 36% each for local and long-distance transport. Boomers and Gen Z were the least active buyers overall, likely reflecting life-stage realities, such as retirement on one side, and tight budgets or campus life on the other.</span></p>\n<p><span>What unites travelers across generations, however, is </span><span>preparation</span><span>. Nearly three-quarters research routes, fares and reviews before clicking \u201cbuy.\u201d</span></p>\n<p><span>Yet with </span><span>just</span><span> half exploring rewards or financing options, airlines, hotels and credit card issuers may have room to capture </span><span>more</span><span> share by linking loyalty perks directly into mobile checkout flows.</span></p>\n<p><span>For now, the generational gap in travel technology looks narrower than ever. The smartphone may be the ticket to modern mobility, but the keyboard is still along for the ride.</span></p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/travel-payments/2025/mobile-accounts-for-59-percent-of-long-distance-travel-bookings/\">Mobile Accounts for 59% of Long-Distance Travel Bookings</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
-    "summary_text": "When it comes to travel, Generation Z consumers and baby boomers, two groups at opposite ends of the digital age spectrum, are behaving more alike than anyone expected. Both are holding onto their computers even as most consumers now reach for their phones to\u2026",
-    "category": "fintech",
-    "_permalink": "/p/1fd36057c4/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/1fd36057c4/",
-    "_summary_240": "When it comes to travel, Generation Z consumers and baby boomers, two groups at opposite ends of the digital age spectrum, are behaving more alike than anyone expected. Both are\u2026",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/1fd36057c4/thumbnail.png"
   },
   {
     "title": "China slaps sanctions on Korean shipbuilder accused of helping US - Financial Times",
@@ -294,6 +280,34 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/1b482eec3a/thumbnail.png"
   },
   {
+    "title": "How Rose Rock Bridge is building the future of energy in Tulsa, Oklahoma",
+    "url": "https://venturebeat.com/energy/how-rose-rock-bridge-is-building-the-future-of-energy-in-tulsa-oklahoma",
+    "published_at": "2025-10-14T00:00:00-04:00",
+    "source": "VentureBeat",
+    "summary": "Presented by Tulsa Innovation Labs Tulsa was once called \"the oil capital of the world,\u201d and since its launch in 2022, Rose Rock Bridge (RRB), a Tulsa-based non-profit startup incubator led by Tulsa Innovation Labs, has been capitalizing on this heritage, aiming to source and support emerging technologies targeting the energy sector. To create a tech economy that becomes foundational to the futur\u2026",
+    "content_html": "",
+    "summary_text": "Presented by Tulsa Innovation Labs Tulsa was once called \"the oil capital of the world,\u201d and since its launch in 2022, Rose Rock Bridge (RRB), a Tulsa-based non-profit startup incubator led by Tulsa Innovation Labs, has been capitalizing on this heritage, aim\u2026",
+    "category": "software",
+    "_permalink": "/p/b19ee1d946/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/b19ee1d946/",
+    "_summary_240": "Presented by Tulsa Innovation Labs Tulsa was once called \"the oil capital of the world,\u201d and since its launch in 2022, Rose Rock Bridge (RRB), a Tulsa-based non-profit startup\u2026",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/b19ee1d946/thumbnail.png"
+  },
+  {
+    "title": "Satellites Are Leaking the World\u2019s Secrets: Calls, Texts, Military and Corporate Data - WIRED",
+    "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQeVd2dXliMWNwOWNWUW04S04tMm81bVMzOFRRR29qaHNHTmFJMkFYb3hNUHhZZ3BYdE0yNkttN0s1TkxwQXhXMENxQ2swOWp6blhsZnBQc21KdTF4T0s3clNPdnRLai1YNENJa0VIemt3Sko1WHhGenRXUHh4cDZCaWZ3d2ZjdWliR1k0MS1hR0xxU2pIRFpXXzVid0NWQm5KUkFCWTA0cGR2MUlwUmNz?oc=5&hl=en-US&gl=US&ceid=US:en",
+    "published_at": "2025-10-13T21:00:00-04:00",
+    "source": "Google",
+    "summary": "Satellites Are Leaking the World\u2019s Secrets: Calls, Texts, Military and Corporate Data WIRED",
+    "content_html": "",
+    "summary_text": "Satellites Are Leaking the World\u2019s Secrets: Calls, Texts, Military and Corporate Data WIRED",
+    "category": "fintech",
+    "_permalink": "/p/1063a0801e/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/1063a0801e/",
+    "_summary_240": "Satellites Are Leaking the World\u2019s Secrets: Calls, Texts, Military and Corporate Data WIRED",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/1063a0801e/thumbnail.png"
+  },
+  {
     "title": "Self-improving language models are becoming reality with MIT's updated SEAL technique",
     "url": "https://venturebeat.com/ai/self-improving-language-models-are-becoming-reality-with-mits-updated-seal",
     "published_at": "2025-10-13T18:51:00-04:00",
@@ -348,6 +362,20 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/d549f0e92a/",
     "_summary_240": "Google\u2019s Photoshop-killer AI model is coming to search, Photos, and NotebookLM Ars Technica",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/d549f0e92a/thumbnail.png"
+  },
+  {
+    "title": "Banks Poised for Strong Third Quarter, But Yellow Flags on Consumer Health Loom - The Wall Street Journal",
+    "url": "https://news.google.com/rss/articles/CBMixgNBVV95cUxPY1E2TFI5SjFqbmNrRWs4QXhqRlZhWEF2T2FwQkVJeWt3a1B0V1R4M2VHSm5ZS3lOQ3dQblcyWXNOa0pmMjVKcHhsY0dXcVd5Z01ubVNhYW16NE1YSGhSc2pxM0h1STg0UF8zWkhxWFNSUVlFbS1nRWxYRkxBNWxEZ3NvekI1S0J1NjEtSUMzZDFhX3lEM1d3a0duTExCRC14TXVXY09vVjl6MHhnTC1CdnVGbWZIY1pxSklqT3ZQUGpuRVFwU2RHMTE4UWx6NGpSMGxPQ0xYNnlHbWlhNFlYemZEdVFwU0V4ekVNVkJFbDNEMlYwcHgxQXg1d2I1cVZSQnMyR2FhbmtRbnkyX1ZDM3BFbUpITnBRQ0I1bHRPUGQ1bHl0OFlVSnpuTkNyUnVlNzgxUWtJbGI5a1FhQnViemdsbkRTSXBYSk9UdS1BOXR1U1RScW0taVh6U2hUS0tfRlhUR1Q2SzNkUENYQlZXVnhydXB2VFJ0c1JLdkpkZU5zMVM5ZlVnNzlvelFPcEJZa1dwSFhta0NWYVVId25SdTg4LUtqc01VTEJlc1lwa2ZDNWNGZUdDZUc3R3ZfYWNQaFBMMjd3?oc=5&hl=en-US&gl=US&ceid=US:en",
+    "published_at": "2025-10-13T13:35:00-04:00",
+    "source": "Google",
+    "summary": "Banks Poised for Strong Third Quarter, But Yellow Flags on Consumer Health Loom The Wall Street Journal",
+    "content_html": "",
+    "summary_text": "Banks Poised for Strong Third Quarter, But Yellow Flags on Consumer Health Loom The Wall Street Journal",
+    "category": "fintech",
+    "_permalink": "/p/c5af6693a5/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/c5af6693a5/",
+    "_summary_240": "Banks Poised for Strong Third Quarter, But Yellow Flags on Consumer Health Loom The Wall Street Journal",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/c5af6693a5/thumbnail.png"
   },
   {
     "title": "Measuring risk in the AI financing boom",
@@ -560,18 +588,18 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/8cc554e04b/thumbnail.png"
   },
   {
-    "title": "Deloitte: AI Promises Productivity. It's Delivering \u2018Workslop\u2019 - Bloomberg.com",
+    "title": "Deloitte: AI Promises Productivity. It's Delivering \u2018Workslop.\u2019 - Bloomberg.com",
     "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQUjJJZTlnbnI5eHdkbGRNckxBZXZ0RXBfQ25HWmp6OFZJYldJWDVpOHBMTi1HaDZRV0JOTDJ2T0lNRWZ0ZVhkOTJ1U3o0U0xVUG1UZHdqSjNzbERhdUE1cUpKTDFQS2xpMDhvaUR1cGh4MDFlTU54b3NIaVpuTHZGbHJVY0FRRTh5TGpYaWRSUlFSdktlSnR1bjMwaFZHQmNHYjhmZXFhXzJvaTcxN0xsZVln?oc=5&hl=en-US&gl=US&ceid=US:en",
     "published_at": "2025-10-12T16:00:10-04:00",
     "source": "Google",
-    "summary": "Deloitte: AI Promises Productivity. It's Delivering \u2018Workslop\u2019 Bloomberg.com",
+    "summary": "Deloitte: AI Promises Productivity. It's Delivering \u2018Workslop.\u2019 Bloomberg.com",
     "content_html": "",
-    "summary_text": "Deloitte: AI Promises Productivity. It's Delivering \u2018Workslop\u2019 Bloomberg.com",
+    "summary_text": "Deloitte: AI Promises Productivity. It's Delivering \u2018Workslop.\u2019 Bloomberg.com",
     "category": "ai",
-    "_permalink": "/p/95bba8b96c/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/95bba8b96c/",
-    "_summary_240": "Deloitte: AI Promises Productivity. It's Delivering \u2018Workslop\u2019 Bloomberg.com",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/95bba8b96c/thumbnail.png"
+    "_permalink": "/p/094c62aac0/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/094c62aac0/",
+    "_summary_240": "Deloitte: AI Promises Productivity. It's Delivering \u2018Workslop.\u2019 Bloomberg.com",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/094c62aac0/thumbnail.png"
   },
   {
     "title": "We keep talking about AI agents, but do we ever know what they are?",
@@ -616,20 +644,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/f0eafca989/thumbnail.png"
   },
   {
-    "title": "Why AI Will Widen the Gap Between Superstars and Everybody Else - The Wall Street Journal",
-    "url": "https://news.google.com/rss/articles/CBMijgNBVV95cUxOUW9zSDRKSThnMU92TmVPMUd0R1pjSUdmYXljelZuNUR2Y1E3Q3hyeU55ZGpkOWI1VlppU0JuWWljUGhrYUVqMm1zSU1nSG9UenFleXk4UXlUaWNsaTRnLWw0WllBamRiak5HeUFnMk9CaVZvb0lUdzhIanhWcU1ZWDdlMFRyTTJoakFFSjdlSlphOVBOYjRrN3JGcVlocF9nTUxBbTY4TGJkdEpUMVFhWVJoZ3hfa2JtQ01mTXBxbVRHR2cxWl9IcnRXM2twUWwtYnMxUnZVMFllWVF2Q0R3REM0cWhTd2VJUkN5dUI1ekJDUk5MS2xjX0pSQ3BnSmZlM1pWRnpRTzN1MEkwMzRKVzdlbTlMQmRkanhpNmVTNGNGdkxkT1VMSUNJb2FCaTZ2ajdmRDdTaE5KWW1KRWtxRWlvTjEyV2llZlJlOFNZaWNESU1XV0FGQ2lzMXVUWUFBTEEwYWl3ajFjQWhOd3Uya2VEeUQ4anM2SWF6aGJRSnI2UkNmT1RhQWNJRHVudw?oc=5&hl=en-US&gl=US&ceid=US:en",
-    "published_at": "2025-10-12T10:00:00-04:00",
-    "source": "Google",
-    "summary": "Why AI Will Widen the Gap Between Superstars and Everybody Else The Wall Street Journal",
-    "content_html": "",
-    "summary_text": "Why AI Will Widen the Gap Between Superstars and Everybody Else The Wall Street Journal",
-    "category": "ai",
-    "_permalink": "/p/1695246485/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/1695246485/",
-    "_summary_240": "Why AI Will Widen the Gap Between Superstars and Everybody Else The Wall Street Journal",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/1695246485/thumbnail.png"
-  },
-  {
     "title": "World Economy Faces Triple Risk of Tariffs, AI Bubble and Soaring Debt - Bloomberg.com",
     "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQbG5DMkc4MnR1YUhkSER5MkplLWJla3d1M3hTQ1UzQVRlZktHRWR4bnlNSWhra2d2YVlHT3FqcG05eHBScVNFd0YwcFM1eGZVajhPZ2hJbFNOQktjSm82UE00QVR4QUFDWG1GSV9VMU1VeUlTbVVTR1NremUzakVCaUtNQlpudWxSMGRSRm5WY3p0LVpaYVROQzB1bEtRelRwSXZfUlNKMkNXZlJQbHZaMS1paUhXcUozQWRCWg?oc=5&hl=en-US&gl=US&ceid=US:en",
     "published_at": "2025-10-12T08:30:00-04:00",
@@ -670,20 +684,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/f9bb25e065/",
     "_summary_240": "Your best data science team just spent six months building a model that predicts customer churn with 90% accuracy. It\u2019s sitting on a server, unused. Why? Because it\u2019s been stuck\u2026",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/f9bb25e065/thumbnail.png"
-  },
-  {
-    "title": "Elon Musk\u2019s xAI joins race to build \u2018world models\u2019 to power video games - Financial Times",
-    "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFB5UzdGQ3gwZ2lqVVctaWpLYVpiZ2hmNGtoLVJ6OGNRTE9ORWoycVN3cUJNVV9WZ2M4Umc4Q0ZISkl0ZjFFbWlUQlFjWXpPbElSeFZyMXdWWS1mQTZHancwcmg2aWxWa1hwcElrRWpjZ3Y?oc=5&hl=en-US&gl=US&ceid=US:en",
-    "published_at": "2025-10-12T00:00:37-04:00",
-    "source": "Google",
-    "summary": "Elon Musk\u2019s xAI joins race to build \u2018world models\u2019 to power video games Financial Times",
-    "content_html": "",
-    "summary_text": "Elon Musk\u2019s xAI joins race to build \u2018world models\u2019 to power video games Financial Times",
-    "category": "ai",
-    "_permalink": "/p/eb632f099a/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/eb632f099a/",
-    "_summary_240": "Elon Musk\u2019s xAI joins race to build \u2018world models\u2019 to power video games Financial Times",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/eb632f099a/thumbnail.png"
   },
   {
     "title": "Musk\u2019s xAI joins race to build \u2018world models\u2019 to power video games",
@@ -755,16 +755,6 @@
     "summary": "Trump Tariffs Upend Crypto Market, Trigger Record Liquidations Bloomberg.com",
     "content_html": "",
     "summary_text": "Trump Tariffs Upend Crypto Market, Trigger Record Liquidations Bloomberg.com",
-    "category": "fintech"
-  },
-  {
-    "title": "Trump to Hit China With Additional 100% Tariff, Citing Restrictions on Rare-Earth Elements - The Wall Street Journal",
-    "url": "https://news.google.com/rss/articles/CBMilgNBVV95cUxQTzUzUWRodmY3bmpfeUxNbzVQQjFkWnNtUmFMaTM2VXZlaXNmN0NZQk03Q3Q4VWNtS0pxOUU3R2E3YWg0M3pkUklWdWtGNFdlNXUwRWU2amk2VVdqcUctUXdNemo1a1VIX0Zlb1BPd0g4dVowa180akRzOXNGamFuSVQ1SXhHdUw1SEUtWDBBOU9EWlpTUU1ESnd6WHl6dGtCNFp1VnRFMkpIRi1uakxBQVBCLVYzUVpLSWZlYVlmSFB2Z0lUbFAzZ3gzSk9lMzNpOUk4SHhkcS1DaWw1c2MzSmllaXNfVU5qQWgtSnhzSEVuSkhZajVRV0luRkR2OHprSHdjUVhRYUNmOG1QdVZ5WmxUaGg5UXJFS2o5clkycEN4RHpxWE1rTy0waHhSejh0VjZsLWhfeVNYV1dDYWgxejlxd2h3MXp6MUtHdGhiLWdDZjlobUU5c0xIaHBXS1hVblBCYlRtS3JaNEd2N1QyN2pxLXRIT2xsOWJ6Qi1vSDlQUEJmNTU4amFxZl9CSmtSbzd0SUV3?oc=5&hl=en-US&gl=US&ceid=US:en",
-    "published_at": "2025-10-10T19:00:00-04:00",
-    "source": "Google",
-    "summary": "Trump to Hit China With Additional 100% Tariff, Citing Restrictions on Rare-Earth Elements The Wall Street Journal",
-    "content_html": "",
-    "summary_text": "Trump to Hit China With Additional 100% Tariff, Citing Restrictions on Rare-Earth Elements The Wall Street Journal",
     "category": "fintech"
   },
   {
@@ -856,16 +846,6 @@
     "content_html": "",
     "summary_text": "Meta Tells Its Metaverse Workers to Use AI to \u2018Go 5X Faster\u2019 WIRED",
     "category": "ai"
-  },
-  {
-    "title": "Americans Are Falling Behind on Their Car Payments - The Wall Street Journal",
-    "url": "https://news.google.com/rss/articles/CBMiiANBVV95cUxOblA1NHZGVkhHWkV4dG54OFI5TFBJeGR6STNJTU15WjBCMTRmNGhfQ3dtN0gzWnZrOUVYN1lyc1Y3QjFweWRzTnlQdWlXUGRDOXFpWG5SUGVrcFNQM3hPRnRpc2dUeGZYUTB6VU4tb2ZqQnotazRTcHFnRHdJY3c2R2k1WjAxVnJqZDBqNEpSdVJkNlRHMENxRFJseXMzNERoX29aTFN3d2dmVUxQQkUxUjFaS2M2VUpwUk9PWWViNktYS09kMkJKV3dFekZ1MWg4anRDQWNEdFp3UXNMeGtRZXY4eHR6VDg1VHZYV052Z1NSZDZ5M3BIU3FYb2ZkVTBNd01mU3Y3RGRVeDhrZTJ2eGhMdXRGVVIzb2tqanViMkNwQzFGR19VeVZ5VWtPNkkyT3hjSXNlc1V4cDlhdXdGVEl4WksyM1lMdXgxQUpRNm5jV0RsWkdVdEZGamQzSmtTeV9zeXZhaGprNUJmX05GNkEwcmRkekF6YVB3MEhiTXdVTnNCaXJnRA?oc=5&hl=en-US&gl=US&ceid=US:en",
-    "published_at": "2025-10-10T05:30:00-04:00",
-    "source": "Google",
-    "summary": "Americans Are Falling Behind on Their Car Payments The Wall Street Journal",
-    "content_html": "",
-    "summary_text": "Americans Are Falling Behind on Their Car Payments The Wall Street Journal",
-    "category": "fintech"
   },
   {
     "title": "Will updating your AI agents help or hamper their performance? Raindrop's new tool Experiments tells you",
@@ -978,16 +958,6 @@
     "category": "ai"
   },
   {
-    "title": "How Much Pay Will Workers Sacrifice for Remote Work? - The Wall Street Journal",
-    "url": "https://news.google.com/rss/articles/CBMihANBVV95cUxOOVE2RjBDazBYMzB5MEhXVF82VWY3eXZhcGVzNVdVbzRvamtGRU9fc0FJdk9oNFM4UTdWMEY5OEtFY0JGOUpWSHhwTEU2anhDSEJPN1lCVXlxSkRaVnAzS244c190MTJlYmdnWXVRMVhWdnpLcmlucjdEWDFhR0l4TklsYVNMUERQdHpUM25FRWRpRDJWdUNESGE4SU53NlVBYWZTdDN0NkoxU0ZlYUdtaGNOamlfNm10OTB6MVdTMjNCUUdBQ05ocjFOUDhabE1UbDA2MjV1OUwwNGRWQmZTLUlUazVXWl9jbGdrWGRLOHBtcFBVQ1J1ejczcFRka0NfZGFiZFMxTjkyaHpjZWotaXF1LUxqd296eXNXbGt4aEU5eC1DWlp5Mm94RDRaWHZpWGFjMnFuZ1RWY20yLVpQa05lYkY5bHlfMVRjMGJqTHJULWZYcUlvTWhTelRZTE9VYnhUbGtxYWRYT1pHZUpLdUpZel92YjBFRGhOdEVEQnVwRFhY?oc=5&hl=en-US&gl=US&ceid=US:en",
-    "published_at": "2025-10-09T13:00:00-04:00",
-    "source": "Google",
-    "summary": "How Much Pay Will Workers Sacrifice for Remote Work? The Wall Street Journal",
-    "content_html": "",
-    "summary_text": "How Much Pay Will Workers Sacrifice for Remote Work? The Wall Street Journal",
-    "category": "fintech"
-  },
-  {
     "title": "Crypto Kingpin Silbert Launches AI-Crypto Asset Manager - Bloomberg.com",
     "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNamtUc3JyenM4TFpleFkzMEVCRmtTZFhBUUpjUlZQMUxhcUk3NkY2RnU1TlRrNHhnTU9zZE0yYk5wTEtuSmtKdmNGV1Q5YVhQSGlJOTFCSmRHVDE4dkE0b3REMl8zSHNkT3RWX2tudnU1eE5WMXo5MHNuakVraTdwOXpyT1ExTXkxMDNFbEJ6c1JFOE9VSS00UVhjOUR5Q1RmeU5HNUlXcW9KVjR6V05sN1pKQQ?oc=5&hl=en-US&gl=US&ceid=US:en",
     "published_at": "2025-10-09T11:54:33-04:00",
@@ -996,15 +966,5 @@
     "content_html": "",
     "summary_text": "Crypto Kingpin Silbert Launches AI-Crypto Asset Manager Bloomberg.com",
     "category": "fintech"
-  },
-  {
-    "title": "Echelon's AI agents take aim at Accenture and Deloitte consulting models",
-    "url": "https://venturebeat.com/ai/echelons-ai-agents-take-aim-at-accenture-and-deloitte-consulting-models",
-    "published_at": "2025-10-09T11:00:00-04:00",
-    "source": "VentureBeat",
-    "summary": "Echelon , an artificial intelligence startup that automates enterprise software implementations, emerged from stealth mode today with $4.75 million in seed funding led by Bain Capital Ventures , targeting a fundamental shift in how companies deploy and maintain critical business systems. The San Francisco-based company has developed AI agents specifically trained to handle end-to-end ServiceNow i\u2026",
-    "content_html": "",
-    "summary_text": "Echelon , an artificial intelligence startup that automates enterprise software implementations, emerged from stealth mode today with $4.75 million in seed funding led by Bain Capital Ventures , targeting a fundamental shift in how companies deploy and mainta\u2026",
-    "category": "ai"
   }
 ]
