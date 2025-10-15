@@ -66,6 +66,18 @@ def _weekend_use_friday_payload_if_available():
                     f.write(section)
                 with open(os.path.join(docs, "pulse.json"), "w", encoding="utf-8") as f:
                     json.dump(cached.get("all_items", []), f, indent=2)
+                    # Timestamped snapshot so items persist across runs (3-day retention)
+                    try:
+                        ts_dir = os.path.join(docs, "archive", "timestamped")
+                        os.makedirs(ts_dir, exist_ok=True)
+                        ts_name = now_et().strftime("%Y-%m-%d_%H%M%S") + ".json"
+                        ts_path = os.path.join(ts_dir, ts_name)
+                        with open(ts_path, "x", encoding="utf-8") as f:
+                            json.dump({"items": cached.get("all_items", [])}, f, indent=2)
+                    except FileExistsError:
+                        pass
+                    except Exception:
+                        pass
                 return True
         except Exception:
             pass
@@ -1013,14 +1025,28 @@ def main():
         f.write(section)
     with open(os.path.join(docs, "pulse.json"), "w", encoding="utf-8") as f:
         json.dump(all_items, f, indent=2)
+        # Timestamped snapshot so items persist across runs (3-day retention)
+        try:
+            ts_dir = os.path.join(docs, "archive", "timestamped")
+            os.makedirs(ts_dir, exist_ok=True)
+            ts_name = now_et().strftime("%Y-%m-%d_%H%M%S") + ".json"
+            ts_path = os.path.join(ts_dir, ts_name)
+            with open(ts_path, "x", encoding="utf-8") as f:
+                json.dump({"items": all_items}, f, indent=2)
+        except FileExistsError:
+            pass
+        except Exception:
+            pass
 
     # Write daily snapshot to docs/archive/json/YYYY-MM-DD.json
     try:
         arch_dir = os.path.join(docs, "archive", "json")
         os.makedirs(arch_dir, exist_ok=True)
         snap_name = now_et().strftime("%Y-%m-%d") + ".json"
-        with open(os.path.join(arch_dir, snap_name), "w", encoding="utf-8") as f:
-            json.dump({"date": now_et().strftime("%Y-%m-%d"), "by_cat": by_cat}, f, indent=2)
+        arch_path = os.path.join(arch_dir, snap_name)
+        if not os.path.exists(arch_path):
+            with open(arch_path, "x", encoding="utf-8") as f:
+                json.dump({"date": now_et().strftime("%Y-%m-%d"), "by_cat": by_cat}, f, indent=2)
     except Exception:
         pass
 
