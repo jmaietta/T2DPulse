@@ -18,6 +18,53 @@ import hashlib
 from PIL import Image
 from io import BytesIO
 
+
+import html, re
+
+GOOGLE_HOSTS = ("news.google.com", "google.com", "www.google.com")
+
+def is_google_link(url: str) -> bool:
+    return any(h in (url or "") for h in GOOGLE_HOSTS)
+
+def extract_original_url(entry) -> str | None:
+    try:
+        for link in (entry.get("links") or []):
+            href = (link.get("href") or "").strip()
+            if href.startswith("http") and not is_google_link(href):
+                return href
+    except Exception:
+        pass
+    try:
+        summary = entry.get("summary", "") or entry.get("description", "") or ""
+        m = re.search(r'href="(https?://[^"]+)"', summary)
+        if m:
+            href = html.unescape(m.group(1))
+            if href and not is_google_link(href):
+                return href
+    except Exception:
+        pass
+    return (entry.get("link") or "").strip() or None
+
+def extract_image_url(entry) -> str | None:
+    try:
+        for key in ("media_content", "media_thumbnail", "enclosures"):
+            for it in (entry.get(key) or []):
+                url = ""
+                if isinstance(it, dict):
+                    url = (it.get("url") or it.get("href") or "").strip()
+                if url.startswith("http"):
+                    return url
+    except Exception:
+        pass
+    try:
+        summary = entry.get("summary", "") or entry.get("description", "") or ""
+        m = re.search(r'<img[^>]+src="([^"]+)"', summary)
+        if m:
+            return html.unescape(m.group(1))
+    except Exception:
+        pass
+    return None
+
 ROOT = os.path.dirname(os.path.abspath(__file__))
 REPO = os.path.dirname(ROOT)
 
@@ -230,8 +277,8 @@ def build_preferred_today_with_floors(all_items, now_local=None, floors=None, ba
     
     # Combine with current run's items
     all_combined = archived_items + all_items
-    
-    # Dedupe by URL
+    # Collapse Google wrapper vs publisher duplicates across runs
+    all_combined = dedupe_story_variants(all_combined)# Dedupe by URL
     seen_urls = set()
     unique_items = []
     for it in all_combined:
@@ -798,6 +845,69 @@ def compute_scores(title: str, url: str, summary: str = "") -> dict:
     return {"ai": ai, "software": sw, "fintech": ft}
 
 # ----------------- pipeline -----------------
+
+
+# ---- Cross-run duplicate collapse (Google wrapper vs publisher) ----
+from urllib.parse import urlparse
+
+AGG_DOMAINS = {"news.google.com", "news.yahoo.com", "news.ycombinator.com"}
+
+def _strip_publisher_suffix(title: str) -> str:
+    """Remove trailing ' - Publisher' or ' | Publisher' to normalize titles for dedupe."""
+    if not title: return ""
+    t = html.unescape(title)
+    t = re.sub(r"[\u2018\u2019]", "'", t)  # curly → straight
+    t = re.sub(r'[\u201C\u201D]', '"', t)
+    t = re.sub(r"\s+", " ", t).strip()
+    for sep in (" - ", " | "):
+        if sep in t:
+            left, right = t.rsplit(sep, 1)
+            if any(c.isalpha() for c in right) and len(right) <= 40:
+                t = left
+                break
+    return t
+
+def _host(u: str) -> str:
+    try:
+        h = urlparse(u or "").netloc.lower()
+        return h[4:] if h.startswith("www.") else h
+    except Exception:
+        return ""
+
+def dedupe_story_variants(items: list) -> list:
+    """Collapse same-story variants across runs by normalized title; prefer publisher host, image, recency."""
+    best = {}
+    for it in items:
+        title = (it.get("title") or it.get("headline") or "").strip()
+        key = _strip_publisher_suffix(title).lower()
+        if not key:
+            key = (it.get("id") or it.get("url") or it.get("permalink") or "").lower()
+        if not key:
+            continue
+
+        prev = best.get(key)
+        if not prev:
+            best[key] = it
+            continue
+
+        host_new = _host(it.get("permalink") or it.get("url"))
+        host_old = _host(prev.get("permalink") or prev.get("url"))
+
+        score_new = (
+            (0 if host_new in AGG_DOMAINS else 2) +           # prefer non-aggregator
+            (1 if it.get("image_url") or it.get("_thumbnail") else 0) +
+            (1 if (it.get("published_at") or "") > (prev.get("published_at") or "") else 0)
+        )
+        score_old = (
+            (0 if host_old in AGG_DOMAINS else 2) +
+            (1 if prev.get("image_url") or prev.get("_thumbnail") else 0)
+        )
+
+        if score_new >= score_old:
+            best[key] = it
+
+    return list(best.values())
+
 
 def dedupe(items):
     """Dedupe by URL first, then by title+domain, then by similar titles across domains."""
