@@ -6,6 +6,7 @@
 # ✅ Clean titles/summaries (HTML stripped, entities decoded)
 # ✅ Filters out deals/consumer shopping posts (e.g., TV discounts)
 # ✅ Requires at least one AI/Software/FinTech keyword match
+# ✅ Force-routes OpenAI and Anthropic content to AI category
 
 import os, re, json, html, urllib.parse
 import feedparser, requests, tldextract
@@ -86,7 +87,7 @@ def _save_friday_snapshot_if_today(all_items, by_cat):
 
 TZ = pytz.timezone(CFG.get("timezone", "America/New_York"))
 RUN_WINDOW_HOURS = int(CFG.get("run_window_hours", 24))
-MAX_ITEMS = int(CFG.get("max_items_per_category", 15))
+MAX_ITEMS = int(CFG.get("max_items_per_category", 150))  # Cap per category to purge old articles
 UTM = CFG.get("utm", {"source": "tek2day", "medium": "email"})
 BLOCK_SUFFIXES = [s.lower() for s in CFG.get("exclude_domains_suffix", [])]
 
@@ -111,11 +112,15 @@ SOURCE_NAME_MAP = {
     "openai.com": "OpenAI",
     "anthropic.com": "Anthropic",
     "news.google.com": "Google News",
+    "youtube.com": "YouTube",
 }
 
-# --- Force-category overrides (base) ---
+# --- Force-category overrides ---
 FORCE_FINTECH_DOMAINS = {"pymnts.com"}     # normalized by domain_of()
 FORCE_FINTECH_SOURCES = {"pymnts"}         # lowercased source label
+
+# NEW: Force AI routing for OpenAI and Anthropic
+FORCE_AI_SOURCES = {"openai", "anthropic"}  # lowercased source label
 
 # ----------------- helpers -----------------
 # --- Freshness & diversity helpers (news-first policy) ---
@@ -182,53 +187,77 @@ def sort_by_recency(items):
         reverse=True
     )
 
-def _enforce_floors_with_backfill(by_cat: dict, all_items: list, now_local=None, floors=None, backfill_days=None):
-    # Ensure at least N items per category by topping up from the last X days.
-    # Today's items are preferred. Backfilled items get `_backfilled=True` (no badges).
+def build_preferred_today_with_floors(all_items, now_local=None, floors=None, backfill_days=None):
+    """
+    Load articles from last 3 days by reading timestamped archive files.
+    Merge with current run's articles, dedupe, sort newest first, cap at 150 per category.
+    """
     now_local = now_local or now_et()
-    floors = floors or FLOORS
-    backfill_days = backfill_days or BACKFILL_WINDOW_DAYS
-
+    
+    # Load archived articles from last 3 days
+    arch_dir = os.path.join(REPO, "docs", "archive", "timestamped")
+    cutoff_date = (now_local - timedelta(days=3)).date()
+    
+    archived_items = []
+    if os.path.exists(arch_dir):
+        for filename in os.listdir(arch_dir):
+            if not filename.endswith(".json"):
+                continue
+            try:
+                # Parse date from filename: YYYY-MM-DD_HHMMSS.json
+                date_part = filename.split("_")[0]
+                file_date = datetime.strptime(date_part, "%Y-%m-%d").date()
+                
+                if file_date >= cutoff_date:
+                    filepath = os.path.join(arch_dir, filename)
+                    with open(filepath, "r", encoding="utf-8") as f:
+                        data = json.load(f)
+                        archived_items.extend(data.get("items", []))
+            except Exception:
+                continue
+    
+    # Combine with current run's items
+    all_combined = archived_items + all_items
+    
+    # Dedupe by URL
+    seen_urls = set()
+    unique_items = []
+    for it in all_combined:
+        url = it.get("url", "")
+        if url and url not in seen_urls:
+            seen_urls.add(url)
+            unique_items.append(it)
+    
+    # Helper to parse datetime
     def _dt_local(it):
         try:
             return dtparser.parse(it["published_at"]).astimezone(TZ)
         except Exception:
             return now_local
-
-    def _is_today(dt):
-        return dt.date() == now_local.date()
-
+    
+    # Group by category
     pool_by_cat = {"ai": [], "software": [], "fintech": []}
-    for it in all_items:
+    for it in unique_items:
         try:
             dtl = _dt_local(it)
         except Exception:
             continue
-        if dtl >= now_local - timedelta(days=backfill_days):
-            pool_by_cat.get(it.get("category"), []).append(it)
-
+        # Only include articles from last 3 days
+        if dtl >= now_local - timedelta(days=3):
+            cat = it.get("category")
+            if cat in pool_by_cat:
+                pool_by_cat[cat].append(it)
+    
+    # Sort newest first within each category
     for k in pool_by_cat:
         pool_by_cat[k].sort(key=_dt_local, reverse=True)
-
+    
+    # Cap at MAX_ITEMS per category (150)
     out = {}
     for cat in ("ai", "software", "fintech"):
-        floor = int(floors.get(cat, 0))
         pool = pool_by_cat.get(cat, [])
-        todays = [it for it in pool if _is_today(_dt_local(it))]
-
-        chosen = todays[:]
-        target = max(floor, min(MAX_ITEMS, len(todays)))
-
-        if len(chosen) < target:
-            backfill = [it for it in pool if it not in chosen]
-            need = target - len(chosen)
-            for it in backfill:
-                if len(chosen) >= target:
-                    break
-                it["_backfilled"] = True  # suppress badges
-                chosen.append(it)
-
-        out[cat] = chosen[:MAX_ITEMS]
+        out[cat] = pool[:MAX_ITEMS]
+    
     return out
 
 
@@ -910,13 +939,19 @@ def main():
             continue  # drop unrelated items
         it["category"] = cat
 
-        # --- PYMNTS routing: FinTech unless clearly AI ---
+        # --- OpenAI/Anthropic routing: Always AI (they are definitionally AI companies) ---
         try:
-            d = domain_of(it["url"])  # e.g., "pymnts.com"
+            d = domain_of(it["url"])
         except Exception:
             d = ""
-        src_norm = (it.get("source") or "").strip().lower()  # e.g., "pymnts"
-        if d in FORCE_FINTECH_DOMAINS or src_norm in FORCE_FINTECH_SOURCES:
+        src_norm = (it.get("source") or "").strip().lower()
+        
+        # Force AI for OpenAI and Anthropic content
+        if src_norm in FORCE_AI_SOURCES:
+            it["category"] = "ai"
+        
+        # --- PYMNTS routing: FinTech unless clearly AI ---
+        elif d in FORCE_FINTECH_DOMAINS or src_norm in FORCE_FINTECH_SOURCES:
             scores = compute_scores(it["title"], it["url"], it.get("summary_text",""))
             # Only let PYMNTS land in AI if it's clearly AI (AI ≥ 3 and AI ≥ FinTech + 1)
             if not (scores["ai"] >= 3 and scores["ai"] >= scores["fintech"] + 1):
@@ -939,14 +974,13 @@ def main():
     for it in all_items:
         by_cat[it["category"]].append(it)
 
-    # Fresh-first + graceful backfill (never force a stale source)
-    for _k in ("ai", "software", "fintech"):
-        by_cat[_k] = finalize_section_with_backfill(
-            by_cat.get(_k, []),
-            section_max=MAX_ITEMS,
-            now=now_et(),
-            max_backfill_days=7
-        )
+    # Use new simplified logic: show last 3 days, cap at 150 per category
+    by_cat = build_preferred_today_with_floors(
+        all_items,
+        now_local=now_et(),
+        floors=None,
+        backfill_days=BACKFILL_WINDOW_DAYS
+    )
 
 
     # Generate permalinks and concise summaries for today's items
