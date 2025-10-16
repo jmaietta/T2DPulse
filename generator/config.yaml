@@ -12,6 +12,8 @@ sources:
     url: https://openai.com/blog/rss.xml
   - name: Anthropic News
     url: https://www.anthropic.com/news/rss.xml
+  - name: NVIDIA
+    url: https://nvidianews.nvidia.com/releases.xml
   - name: PYMNTS
     url: https://www.pymnts.com/feed
   - name: WSJ Technology (WSJD)
