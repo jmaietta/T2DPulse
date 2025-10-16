@@ -1,19 +1,27 @@
 timezone: America/New_York
 site_base: https://pulse.tek2dayholdings.com
 run_window_hours: 24
-max_items_per_category: 150
+max_items_per_category: null
 sources:
   rss:
   - name: VentureBeat
     url: https://venturebeat.com/feed
+  - name: NVIDIA News
+    url: https://nvidianews.nvidia.com/releases.xml
   - name: The Verge
     url: https://www.theverge.com/rss/index.xml
   - name: OpenAI News
     url: https://openai.com/blog/rss.xml
   - name: Anthropic News
     url: https://www.anthropic.com/news/rss.xml
-  - name: NVIDIA
-    url: https://nvidianews.nvidia.com/releases.xml
+  - name: Apple News
+    url: https://www.apple.com/ca/newsroom/rss-feed.rss
+  - name: Microsoft News
+    url: https://news.microsoft.com/source/feed/
+  - name: OpenAI YouTube
+    url: https://www.youtube.com/feeds/videos.xml?channel_id=UCXZCJLdBC09xxGZ6gcdrc6A
+  - name: Anthropic YouTube
+    url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrDwWp7EBBv4NwvScIpBDOA
   - name: PYMNTS
     url: https://www.pymnts.com/feed
   - name: WSJ Technology (WSJD)
@@ -47,7 +55,26 @@ exclude_domains_suffix:
 - substack.com
 - x.com
 - twitter.com
-- youtube.com
 utm:
   source: tek2day
   medium: email
+companies:
+- name: Apple Inc.
+  ticker: AAPL
+  domains:
+  - apple.com/newsroom
+  rss: https://www.apple.com/ca/newsroom/rss-feed.rss
+- name: Microsoft
+  ticker: MSFT
+  domains:
+  - news.microsoft.com
+  rss: https://news.microsoft.com/source/feed/
+- name: NVIDIA
+  ticker: NVDA
+  domains:
+  - nvidianews.nvidia.com
+  - blogs.nvidia.com
+  rss: https://nvidianews.nvidia.com/releases.xml
+youtube_feeds:
+- name: YouTube (T2D Pulse)
+  url: https://www.youtube.com/feeds/videos.xml?channel_id=UCV6aM1V38dsdo3KTHt_SSNw
