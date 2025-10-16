@@ -7,7 +7,7 @@
 
   <!-- Social share (OG + Twitter) -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="T2D Pulse — AI, Software & FinTech News">
+  <meta property="og:title" content="T2D Pulse - AI, Software & FinTech News">
   <meta property="og:description" content="AI, Software, and FinTech News.">
   <meta property="og:url" content="https://pulse.tek2dayholdings.com/">
   <meta property="og:image" content="https://pulse.tek2dayholdings.com/icons/T2D_Pulse_Banner.png">
@@ -15,13 +15,13 @@
   <meta property="og:image:height" content="630">
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="T2D Pulse — AI, Software & FinTech News">
+  <meta name="twitter:title" content="T2D Pulse - AI, Software & FinTech News">
   <meta name="twitter:description" content="AI, Software, and FinTech News.">
   <meta name="twitter:image" content="https://pulse.tek2dayholdings.com/icons/T2D_Pulse_Banner.png">
 
   <!-- PWA + icons (paths are relative to docs/index.html) -->
   <meta name="theme-color" content="#0f172a" />
-<link rel="manifest" href="./manifest.webmanifest" />
+  <link rel="manifest" href="./manifest.webmanifest" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
@@ -108,34 +108,14 @@
     /* Container */
     #app{max-width:1100px;margin:0 auto 2.2rem;padding:0 1rem}
 
-    /* Section & categories */
+    /* Section - simplified without category tabs */
     #tek2day-pulse{
       background:var(--card);border:1px solid var(--line);border-radius:calc(var(--r) + 2px);
       padding:1.1rem; box-shadow:var(--shadow); margin-top:1rem;
     }
-    .stack{display:grid;gap:1rem}
-    details.cat{
-      background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;
-    }
-    details.cat summary{
-      list-style:none;cursor:pointer;padding:.95rem 1rem;display:flex;align-items:center;justify-content:space-between;
-      border-bottom:1px solid var(--line); transition:background .15s ease;
-    }
-    details.cat[open] summary{background:color-mix(in srgb, var(--card) 90%, #fff 10%)}
-    details.cat summary::-webkit-details-marker{display:none}
-    .label{display:flex;gap:.6rem;align-items:center;font-weight:900;color:var(--ink)}
-    .pill{
-      display:inline-flex;align-items:center;gap:.5rem;padding:.25rem .6rem;border-radius:999px;font-size:.92rem;font-weight:800;color:#0b0b0b;
-      background:#e9eefc;border:1px solid #dee6ff;
-    }@media (prefers-color-scheme: dark){
-      }
-    .dot{width:.6rem;height:.6rem;border-radius:999px;display:inline-block}
-    .ai .pill{background:#e9edff;border-color:#dfe5ff;color:#2d3b8f}
-    .ft .pill{background:#e7fbf3;border-color:#d9f5eb;color:#0f6b57}
-    .sw .pill{background:#fff0ea;border-color:#ffe4d8;color:#a9441b}
-    .count{color:var(--muted);font-size:.9rem}
-
-    .items{padding:.55rem 1rem 1rem;display:grid;gap:.75rem;grid-template-columns:1fr;}
+    
+    .items{display:grid;gap:.75rem;grid-template-columns:1fr;}
+    
     article{
       position:relative;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:.9rem;
       transition:transform .06s ease, box-shadow .12s ease; will-change:transform;
@@ -179,7 +159,7 @@
       .article-thumb{width:100%;height:auto;aspect-ratio:16/9;}
     }
 
-    /* ===== Share toolbar (FIXED - buttons stay horizontal) ===== */
+    /* Share toolbar */
     .share{
       display:flex; 
       gap:.5rem; 
@@ -206,6 +186,7 @@
       background:#f3f4f6; 
     }
   </style>
+  
   <link rel="icon" type="image/x-icon" href="./icons/favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="./icons/t2d-pulse-32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="./icons/t2d-pulse-16.png">
@@ -213,60 +194,57 @@
 
   <link rel="canonical" href="https://pulse.tek2dayholdings.com/" />
   <meta property="og:site_name" content="T2D Pulse">
-  <meta property="og:image:alt" content="T2D Pulse — AI, Software & FinTech news">
+  <meta property="og:image:alt" content="T2D Pulse - AI, Software & FinTech news">
   <meta name="description" content="AI, Software, and FinTech News.">
 
-<style id="t2d-mobile-final">
-/* Final mobile-hardening without changing any copy */
-@media (max-width: 720px){
-  header.site .site-inner{ display:flex; flex-wrap:wrap; align-items:center; }
-  header.site .site-inner > *{ min-width:0; } /* allow shrink */
-  header.site .tag{ flex:1 1 100%; order:3; min-width:0; }
-  header.site .hdr-actions{ order:2; display:flex; align-items:center; gap:.5rem; flex:0 1 auto; }
-  header.site .hdr-actions .search{ flex: 1 1 auto; max-width: 64vw; overflow:hidden; }
-  header.site .hdr-actions .search input{ width:100%; font-size:16px; line-height:1.2; } /* prevent iOS zoom */
-  header.site img.brand-mark{ width:52px; height:52px; } /* slightly smaller logo on tight screens */
-  header.site .grow{ display:none; } /* remove spacer that can cause awkward wraps */
-}
-@media (max-width: 400px){
-  header.site .hdr-actions .search{ max-width: 72vw; }
-  header.site img.brand-mark{ width:48px; height:48px; }
-}
-</style>
+  <style id="t2d-mobile-final">
+    /* Mobile-hardening */
+    @media (max-width: 720px){
+      header.site .site-inner{ display:flex; flex-wrap:wrap; align-items:center; }
+      header.site .site-inner > *{ min-width:0; }
+      header.site .tag{ flex:1 1 100%; order:3; min-width:0; }
+      header.site .hdr-actions{ order:2; display:flex; align-items:center; gap:.5rem; flex:0 1 auto; }
+      header.site .hdr-actions .search{ flex: 1 1 auto; max-width: 64vw; overflow:hidden; }
+      header.site .hdr-actions .search input{ width:100%; font-size:16px; line-height:1.2; }
+      header.site img.brand-mark{ width:52px; height:52px; }
+      header.site .grow{ display:none; }
+    }
+    @media (max-width: 400px){
+      header.site .hdr-actions .search{ max-width: 72vw; }
+      header.site img.brand-mark{ width:48px; height:48px; }
+    }
+  </style>
 
-
-<style id="t2d-search-css-rescue">
-/* Ensure search is visible and compact, without icons */
-.hdr-actions{ display:flex; align-items:center; gap:.5rem; }
-.hdr-actions .search{
-  display:flex; align-items:center; gap:.35rem;
-  border:1px solid var(--line); background:var(--card);
-  border-radius:999px; padding:.34rem .6rem;
-}
-.hdr-actions .search input{
-  width:18ch; max-width:40vw;
-  border:0; outline:0; background:transparent;
-  font:inherit; color:var(--ink);
-}
-/* Remove native clear/decoration icons for consistency */
-.hdr-actions .search input[type="search"]::-webkit-search-decoration,
-.hdr-actions .search input[type="search"]::-webkit-search-cancel-button,
-.hdr-actions .search input[type="search"]::-webkit-search-results-button,
-.hdr-actions .search input[type="search"]::-webkit-search-results-decoration{ display:none; }
-.hdr-actions .search input[type="search"]{ -webkit-appearance:none; appearance:none; }
-.hdr-actions .search input[type="search"]::-ms-clear,
-.hdr-actions .search input[type="search"]::-ms-reveal{ display:none; width:0; height:0; }
-/* Mobile */
-@media (max-width:720px){
-  header.site .site-inner{ flex-wrap: wrap; }
-  header.site .hdr-actions{ flex: 0 1 auto; }
-  header.site .hdr-actions .search{ flex: 1 1 auto; max-width: 64vw; overflow:hidden; }
-  header.site .hdr-actions .search input{ width:100%; font-size:16px; line-height:1.2; }
-}
-/* a11y helper */
-.sr-only{ position:absolute !important; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
-</style>
-
+  <style id="t2d-search-css-rescue">
+    /* Search styling */
+    .hdr-actions{ display:flex; align-items:center; gap:.5rem; }
+    .hdr-actions .search{
+      display:flex; align-items:center; gap:.35rem;
+      border:1px solid var(--line); background:var(--card);
+      border-radius:999px; padding:.34rem .6rem;
+    }
+    .hdr-actions .search input{
+      width:18ch; max-width:40vw;
+      border:0; outline:0; background:transparent;
+      font:inherit; color:var(--ink);
+    }
+    .hdr-actions .search input[type="search"]::-webkit-search-decoration,
+    .hdr-actions .search input[type="search"]::-webkit-search-cancel-button,
+    .hdr-actions .search input[type="search"]::-webkit-search-results-button,
+    .hdr-actions .search input[type="search"]::-webkit-search-results-decoration{ display:none; }
+    .hdr-actions .search input[type="search"]{ -webkit-appearance:none; appearance:none; }
+    .hdr-actions .search input[type="search"]::-ms-clear,
+    .hdr-actions .search input[type="search"]::-ms-reveal{ display:none; width:0; height:0; }
+    
+    @media (max-width:720px){
+      header.site .site-inner{ flex-wrap: wrap; }
+      header.site .hdr-actions{ flex: 0 1 auto; }
+      header.site .hdr-actions .search{ flex: 1 1 auto; max-width: 64vw; overflow:hidden; }
+      header.site .hdr-actions .search input{ width:100%; font-size:16px; line-height:1.2; }
+    }
+    
+    .sr-only{ position:absolute !important; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+  </style>
 </head>
 
 <body>
@@ -274,21 +252,20 @@
   <header class="site">
     <div class="site-inner">
       <a href="/" aria-label="T2D Pulse Home">
-  <img class="brand-mark" src="./icons/T2D_Pulse_Logo_2.png" alt="T2D Pulse">
-</a>
-<h1 class="sr-only">T2D Pulse</h1>
-<div class="tag">
-  <span class="date">{{DATE_STR}}</span>
-  <span class="divider"></span>
-  <span class="desc"><strong>AI</strong>, <strong>Software</strong> & <strong>FinTech</strong> News</span>
-</div>
-    <div class="grow"></div>
+        <img class="brand-mark" src="./icons/T2D_Pulse_Logo_2.png" alt="T2D Pulse">
+      </a>
+      <h1 class="sr-only">T2D Pulse</h1>
+      <div class="tag">
+        <span class="date">{{DATE_STR}}</span>
+        <span class="divider"></span>
+        <span class="desc"><strong>AI</strong>, <strong>Software</strong> & <strong>FinTech</strong> News</span>
+      </div>
+      <div class="grow"></div>
       <div class="hdr-actions">
-      <form class="search" role="search" method="GET" action="/">
-        <label for="t2d-q" class="sr-only">Search</label>
-        <input id="t2d-q" name="q" type="search" placeholder="Search" enterkeyhint="search" autocapitalize="off" autocomplete="off" />
-      </form>
-
+        <form class="search" role="search" method="GET" action="/">
+          <label for="t2d-q" class="sr-only">Search</label>
+          <input id="t2d-q" name="q" type="search" placeholder="Search" enterkeyhint="search" autocapitalize="off" autocomplete="off" />
+        </form>
         <div class="install"><button class="btn" id="btnInstall" aria-label="Install app">Install</button></div>
       </div>
     </div>
@@ -296,52 +273,16 @@
 
   <div id="app">
     <section id="tek2day-pulse" aria-labelledby="tek2day-title">
-      <div class="stack">
-        <!-- AI -->
-        <details class="cat ai" open>
-          <summary>
-            <span class="label">
-              <span class="pill"><i class="dot" style="background:var(--ai)"></i>AI</span>
-            </span>
-            <span class="count">{{AI_COUNT}} items</span>
-          </summary>
-          <div class="items">
-            {{AI_ITEMS}}
-          </div>
-        </details>
-
-        <!-- Software -->
-        <details class="cat sw" open>
-          <summary>
-            <span class="label">
-              <span class="pill"><i class="dot" style="background:var(--sw)"></i>Software</span>
-            </span>
-            <span class="count">{{SW_COUNT}} items</span>
-          </summary>
-          <div class="items">
-            {{SW_ITEMS}}
-          </div>
-        </details>
-
-        <!-- FinTech -->
-        <details class="cat ft" open>
-          <summary>
-            <span class="label">
-              <span class="pill"><i class="dot" style="background:var(--ft)"></i>FinTech</span>
-            </span>
-            <span class="count">{{FT_COUNT}} items</span>
-          </summary>
-          <div class="items">
-            {{FT_ITEMS}}
-          </div>
-        </details>
+      <div class="items">
+        {{AI_ITEMS}}
+        {{SW_ITEMS}}
+        {{FT_ITEMS}}
       </div>
-
       <p class="foot">T2D Pulse 2025.</p>
     </section>
   </div>
 
-  <!-- Scripts: PWA + header shadow (no theme logic) -->
+  <!-- Scripts: PWA + header shadow -->
   <script>
     // Install prompt
     let deferredPrompt;
@@ -375,7 +316,7 @@
     });
   </script>
 
-  <!-- ===== Share buttons script ===== -->
+  <!-- Share buttons script -->
   <script>
   (function () {
     const cards = document.querySelectorAll('#tek2day-pulse article');
@@ -396,7 +337,7 @@
       const title = a.textContent.trim();
       const brand = 'via T2D Pulse';
 
-      const shareTitle = `${title} — ${brand}`;
+      const shareTitle = `${title} - ${brand}`;
       const u = encodeURIComponent(permalink);
       const xShare = `https://twitter.com/intent/tweet?url=${u}&text=${encodeURIComponent(shareTitle)}`;
 
@@ -436,85 +377,72 @@
   })();
   </script>
 
+  <!-- Search logic -->
+  <script id="t2d-search-logic">
+  (function(){
+    const $  = (sel, ctx=document) => ctx.querySelector(sel);
+    const $$ = (sel, ctx=document) => Array.from(ctx.querySelectorAll(sel));
+    const container = $('#tek2day-pulse') || document.body;
+    const form  = $('.hdr-actions .search');
+    const input = $('#t2d-q') || (form && form.querySelector('input[type="search"]'));
+    if (!form || !input) return;
 
-<script id="t2d-search-logic">
-(function(){
-  const $  = (sel, ctx=document) => ctx.querySelector(sel);
-  const $$ = (sel, ctx=document) => Array.from(ctx.querySelectorAll(sel));
-  const container = $('#tek2day-pulse') || document.body;
-  const form  = $('.hdr-actions .search');
-  const input = $('#t2d-q') || (form && form.querySelector('input[type="search"]'));
-  if (!form || !input) return;
-
-  function buildHaystack(card){
-    const clone = card.cloneNode(true);
-    clone.querySelectorAll('.meta, .source, .src, .host-pill, .byline, .count, .date, .publisher').forEach(n => n.remove());
-    const sels = ['h3','h2','.title','.headline','.desc','.dek','.summary','.snippet','.copy','.body','p'];
-    const parts = [];
-    for (const s of sels){ clone.querySelectorAll(s).forEach(n => parts.push(n.textContent || '')); }
-    ['data-tickers','data-companies','data-keywords'].forEach(a => {
-      const v = card.getAttribute(a); if (v) parts.push(v);
-    });
-    return parts.join(' ').replace(/\s+/g,' ').trim().toLowerCase();
-  }
-
-  const catNodes = $$('#tek2day-pulse details.cat');
-  const itemsContainers = catNodes.length ? catNodes.map(d => d.querySelector('.items')) : $$('#tek2day-pulse .items');
-  const counts = new Map();
-  catNodes.forEach(cat => { const c = cat.querySelector('.count'); if (c) counts.set(c, c.textContent.trim()); });
-
-  function tokenize(q){ return (q||'').toLowerCase().trim().split(/\s+/).filter(Boolean); }
-  function cardList(container){ return container ? Array.from(container.children) : []; }
-
-  function applyFilter(q){
-    const toks = tokenize(q);
-    let total = 0;
-
-    itemsContainers.forEach((box, idx) => {
-      if (!box) return;
-      let shown = 0;
-      cardList(box).forEach(card => {
-        const hay = buildHaystack(card);
-        const ok = toks.every(t => hay.includes(t));
-        card.style.display = ok ? '' : 'none';
-        if (ok) shown++;
+    function buildHaystack(card){
+      const clone = card.cloneNode(true);
+      clone.querySelectorAll('.meta, .source, .src, .host-pill, .byline, .count, .date, .publisher').forEach(n => n.remove());
+      const sels = ['h3','h2','.title','.headline','.desc','.dek','.summary','.snippet','.copy','.body','p'];
+      const parts = [];
+      for (const s of sels){ clone.querySelectorAll(s).forEach(n => parts.push(n.textContent || '')); }
+      ['data-tickers','data-companies','data-keywords'].forEach(a => {
+        const v = card.getAttribute(a); if (v) parts.push(v);
       });
-      total += shown;
-      const cat = catNodes[idx];
-      if (cat){
-        const countEl = cat.querySelector('.count');
-        if (countEl) countEl.textContent = toks.length ? (shown + (shown===1 ? ' item' : ' items')) : (counts.get(countEl) || countEl.textContent);
-        if (toks.length) cat.open = shown > 0;
-      }
-    });
-
-    let empty = $('#search-empty');
-    if (!empty){
-      empty = document.createElement('div');
-      empty.id = 'search-empty';
-      empty.style.display = 'none';
-      empty.style.padding = '1rem';
-      empty.style.color = 'var(--muted)';
-      empty.setAttribute('role', 'status');
-      empty.textContent = 'No results.';
-      container.prepend(empty);
+      return parts.join(' ').replace(/\s+/g,' ').trim().toLowerCase();
     }
-    empty.style.display = toks.length && total === 0 ? 'block' : 'none';
-  }
 
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    applyFilter(input.value);
-    if (window.innerWidth > 720) { container.scrollIntoView({behavior:'smooth', block:'start'}); }
-  }, {passive:false});
-  input.addEventListener('input', () => applyFilter(input.value), {passive:true});
+    const itemsContainer = $('.items');
+    
+    function tokenize(q){ return (q||'').toLowerCase().trim().split(/\s+/).filter(Boolean); }
+    function cardList(container){ return container ? Array.from(container.children) : []; }
 
-  try {
-    const q0 = new URLSearchParams(location.search).get('q');
-    if (q0) { input.value = q0; applyFilter(q0); }
-  } catch(_) {}
-})();
-</script>
+    function applyFilter(q){
+      const toks = tokenize(q);
+      let total = 0;
 
+      if (itemsContainer) {
+        cardList(itemsContainer).forEach(card => {
+          const hay = buildHaystack(card);
+          const ok = toks.every(t => hay.includes(t));
+          card.style.display = ok ? '' : 'none';
+          if (ok) total++;
+        });
+      }
+
+      let empty = $('#search-empty');
+      if (!empty){
+        empty = document.createElement('div');
+        empty.id = 'search-empty';
+        empty.style.display = 'none';
+        empty.style.padding = '1rem';
+        empty.style.color = 'var(--muted)';
+        empty.setAttribute('role', 'status');
+        empty.textContent = 'No results.';
+        container.prepend(empty);
+      }
+      empty.style.display = toks.length && total === 0 ? 'block' : 'none';
+    }
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      applyFilter(input.value);
+      if (window.innerWidth > 720) { container.scrollIntoView({behavior:'smooth', block:'start'}); }
+    }, {passive:false});
+    input.addEventListener('input', () => applyFilter(input.value), {passive:true});
+
+    try {
+      const q0 = new URLSearchParams(location.search).get('q');
+      if (q0) { input.value = q0; applyFilter(q0); }
+    } catch(_) {}
+  })();
+  </script>
 </body>
 </html>
