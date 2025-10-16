@@ -436,6 +436,7 @@
   })();
   </script>
 
+
 <script id="t2d-search-logic">
 (function(){
   const $  = (sel, ctx=document) => ctx.querySelector(sel);
@@ -445,21 +446,27 @@
   const input = $('#t2d-q') || (form && form.querySelector('input[type="search"]'));
   if (!form || !input) return;
 
+  function buildHaystack(card){
+    const clone = card.cloneNode(true);
+    clone.querySelectorAll('.meta, .source, .src, .host-pill, .byline, .count, .date, .publisher').forEach(n => n.remove());
+    const sels = ['h3','h2','.title','.headline','.desc','.dek','.summary','.snippet','.copy','.body','p'];
+    const parts = [];
+    for (const s of sels){ clone.querySelectorAll(s).forEach(n => parts.push(n.textContent || '')); }
+    ['data-tickers','data-companies','data-keywords'].forEach(a => {
+      const v = card.getAttribute(a); if (v) parts.push(v);
+    });
+    return parts.join(' ').replace(/\s+/g,' ').trim().toLowerCase();
+  }
+
   const catNodes = $$('#tek2day-pulse details.cat');
   const itemsContainers = catNodes.length ? catNodes.map(d => d.querySelector('.items')) : $$('#tek2day-pulse .items');
   const counts = new Map();
-  catNodes.forEach(cat => {
-    const c = cat.querySelector('.count');
-    if (c) counts.set(c, c.textContent.trim());
-  });
+  catNodes.forEach(cat => { const c = cat.querySelector('.count'); if (c) counts.set(c, c.textContent.trim()); });
 
-  function tokenize(q) { return (q||'').toLowerCase().trim().split(/\s+/).filter(Boolean); }
-  function cardList(container) {
-    if (!container) return [];
-    return Array.from(container.children);
-  }
+  function tokenize(q){ return (q||'').toLowerCase().trim().split(/\s+/).filter(Boolean); }
+  function cardList(container){ return container ? Array.from(container.children) : []; }
 
-  function applyFilter(q) {
+  function applyFilter(q){
     const toks = tokenize(q);
     let total = 0;
 
@@ -467,14 +474,14 @@
       if (!box) return;
       let shown = 0;
       cardList(box).forEach(card => {
-        const hay = (card.textContent || '').toLowerCase();
+        const hay = buildHaystack(card);
         const ok = toks.every(t => hay.includes(t));
         card.style.display = ok ? '' : 'none';
         if (ok) shown++;
       });
       total += shown;
       const cat = catNodes[idx];
-      if (cat) {
+      if (cat){
         const countEl = cat.querySelector('.count');
         if (countEl) countEl.textContent = toks.length ? (shown + (shown===1 ? ' item' : ' items')) : (counts.get(countEl) || countEl.textContent);
         if (toks.length) cat.open = shown > 0;
@@ -482,7 +489,7 @@
     });
 
     let empty = $('#search-empty');
-    if (!empty) {
+    if (!empty){
       empty = document.createElement('div');
       empty.id = 'search-empty';
       empty.style.display = 'none';
@@ -498,18 +505,16 @@
   form.addEventListener('submit', (e) => {
     e.preventDefault();
     applyFilter(input.value);
-    if (window.innerWidth > 720) {
-      container.scrollIntoView({behavior:'smooth', block:'start'});
-    }
+    if (window.innerWidth > 720) { container.scrollIntoView({behavior:'smooth', block:'start'}); }
   }, {passive:false});
-
   input.addEventListener('input', () => applyFilter(input.value), {passive:true});
 
   try {
     const q0 = new URLSearchParams(location.search).get('q');
     if (q0) { input.value = q0; applyFilter(q0); }
-  } catch(_){}
+  } catch(_) {}
 })();
 </script>
+
 </body>
 </html>
