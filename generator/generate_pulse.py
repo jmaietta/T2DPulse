@@ -71,6 +71,19 @@ REPO = os.path.dirname(ROOT)
 with open(os.path.join(ROOT, "config.yaml"), "r", encoding="utf-8") as f:
     CFG = yaml.safe_load(f)
 
+
+
+# Inject NVIDIA Press Releases RSS if not already present
+try:
+    _rss = CFG.setdefault("sources", {}).setdefault("rss", [])
+    _names = { (x.get("name") or "").strip().lower() for x in _rss if isinstance(x, dict) }
+    _urls  = { (x.get("url") or "").strip().lower() for x in _rss if isinstance(x, dict) }
+    _nv_url = "https://nvidianews.nvidia.com/releases.xml"
+    if "nvidia" not in _names and _nv_url not in _urls:
+        _rss.append({"name": "NVIDIA", "url": _nv_url})
+except Exception:
+    # Non-fatal: if config is missing/"sources" malformed, we skip the injection.
+    pass
 # ---- Weekend snapshot cache (reuse Friday content on Sat/Sun) ----
 from pathlib import Path as _Path
 
@@ -174,12 +187,20 @@ SOURCE_NAME_MAP = {
     "youtube.com": "YouTube",
 }
 
+# Ensure NVIDIA hosts are labeled nicely
+SOURCE_NAME_MAP.update({
+    "nvidianews.nvidia.com": "NVIDIA",
+    "blogs.nvidia.com": "NVIDIA",
+    "nvidia.com": "NVIDIA",
+})
+
+
 # --- Force-category overrides ---
 FORCE_FINTECH_DOMAINS = {"pymnts.com"}     # normalized by domain_of()
 FORCE_FINTECH_SOURCES = {"pymnts"}         # lowercased source label
 
 # NEW: Force AI routing for OpenAI and Anthropic
-FORCE_AI_SOURCES = {"openai", "anthropic"}  # lowercased source label
+FORCE_AI_SOURCES = {"anthropic", "nvidia", "openai"}  # lowercased source label
 
 # ----------------- helpers -----------------
 # --- Freshness & diversity helpers (news-first policy) ---
