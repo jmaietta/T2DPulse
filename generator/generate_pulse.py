@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 # generator/generate_pulse.py
-# Website-only generator for TEK2day Pulse (AI → Software → FinTech)
-# ✅ No Hacker News (blocked at domain level; GN redirects resolved)
-# ✅ Google News links resolved to real publisher domains
-# ✅ Clean titles/summaries (HTML stripped, entities decoded)
-# ✅ Filters out deals/consumer shopping posts (e.g., TV discounts)
-# ✅ Requires at least one AI/Software/FinTech keyword match
-# ✅ Force-routes OpenAI and Anthropic content to AI category
+# Website-only generator for TEK2day Pulse (AI -> Software -> FinTech)
+# [OK] No Hacker News (blocked at domain level; GN redirects resolved)
+# [OK] Google News links resolved to real publisher domains
+# [OK] Clean titles/summaries (HTML stripped, entities decoded)
+# [OK] Filters out deals/consumer shopping posts (e.g., TV discounts)
+# [OK] Requires at least one AI/Software/FinTech keyword match
+# [OK] Force-routes OpenAI and Anthropic content to AI category
 
 import os, re, json, html, urllib.parse
 import feedparser, requests, tldextract
@@ -72,17 +72,46 @@ with open(os.path.join(ROOT, "config.yaml"), "r", encoding="utf-8") as f:
     CFG = yaml.safe_load(f)
 
 
-
-# Inject NVIDIA Press Releases RSS if not already present
+# Ensure Apple and Microsoft companies + RSS are present; merge optional YouTube feeds.
 try:
+    companies = CFG.setdefault("companies", [])
+    def _ensure_company(name, ticker, newsroom_domain_or_path, rss_url):
+        exists = False
+        for c in companies:
+            if (c.get("ticker","").upper() == ticker) or (c.get("name","").strip().lower() == name.lower()):
+                exists = True
+                c.setdefault("domains", [])
+                if newsroom_domain_or_path and newsroom_domain_or_path not in c["domains"]:
+                    c["domains"].append(newsroom_domain_or_path)
+                if rss_url and not c.get("rss"):
+                    c["rss"] = rss_url
+                break
+        if not exists:
+            companies.append({"name": name, "ticker": ticker, "domains": [newsroom_domain_or_path] if newsroom_domain_or_path else [], "rss": rss_url})
+    _ensure_company("Apple Inc.", "AAPL", "apple.com/newsroom", "https://www.apple.com/ca/newsroom/rss-feed.rss")
+    _ensure_company("Microsoft", "MSFT", "news.microsoft.com", "https://news.microsoft.com/source/feed/")
+
     _rss = CFG.setdefault("sources", {}).setdefault("rss", [])
-    _names = { (x.get("name") or "").strip().lower() for x in _rss if isinstance(x, dict) }
-    _urls  = { (x.get("url") or "").strip().lower() for x in _rss if isinstance(x, dict) }
-    _nv_url = "https://nvidianews.nvidia.com/releases.xml"
-    if "nvidia" not in _names and _nv_url not in _urls:
-        _rss.append({"name": "NVIDIA", "url": _nv_url})
+    def _ensure_rss(name, url):
+        if not url: return
+        have = any((isinstance(x, dict) and (x.get("url","").strip().lower()==url.lower())) for x in _rss)
+        if not have:
+            _rss.append({"name": name, "url": url})
+    _ensure_rss("Apple", "https://www.apple.com/ca/newsroom/rss-feed.rss")
+    _ensure_rss("Microsoft", "https://news.microsoft.com/source/feed/")
+
+    # Optional YouTube feeds (list of feed URLs or objects with name/url) -> merge into sources.rss
+    yts = CFG.get("youtube_feeds") or []
+    for y in yts:
+        if isinstance(y, dict):
+            nm = (y.get("name") or "YouTube").strip()
+            url = (y.get("url") or "").strip()
+        else:
+            nm = "YouTube"
+            url = str(y).strip()
+        if url and not any((isinstance(x, dict) and x.get("url","").strip().lower()==url.lower()) for x in _rss):
+            _rss.append({"name": nm, "url": url})
 except Exception:
-    # Non-fatal: if config is missing/"sources" malformed, we skip the injection.
     pass
 # ---- Weekend snapshot cache (reuse Friday content on Sat/Sun) ----
 from pathlib import Path as _Path
@@ -159,14 +188,25 @@ def _save_friday_snapshot_if_today(all_items, by_cat):
 
 TZ = pytz.timezone(CFG.get("timezone", "America/New_York"))
 RUN_WINDOW_HOURS = int(CFG.get("run_window_hours", 24))
-MAX_ITEMS = int(CFG.get("max_items_per_category", 150))  # Cap per category to purge old articles
+# Allow null/None/"none" to mean "no cap"
+_raw_max = CFG.get("max_items_per_category", 150)
+if (_raw_max is None) or (isinstance(_raw_max, str) and _raw_max.strip().lower() in ("none", "null", "")):
+    MAX_ITEMS = None
+else:
+    try:
+        MAX_ITEMS = int(_raw_max)
+        if MAX_ITEMS <= 0:
+            MAX_ITEMS = None
+    except (TypeError, ValueError):
+        MAX_ITEMS = None
+# (When MAX_ITEMS is None, slices like list[:MAX_ITEMS] simply return the full list.)
 UTM = CFG.get("utm", {"source": "tek2day", "medium": "email"})
 BLOCK_SUFFIXES = [s.lower() for s in CFG.get("exclude_domains_suffix", [])]
 
 # Always block these (HN sometimes arrives via Google News)
 ALWAYS_BLOCK = {"news.ycombinator.com", "ycombinator.com"}
 
-# Optional: map domains → clean brand names
+# Optional: map domains -> clean brand names
 SOURCE_NAME_MAP = {
     "theverge.com": "The Verge",
     "venturebeat.com": "VentureBeat",
@@ -187,20 +227,15 @@ SOURCE_NAME_MAP = {
     "youtube.com": "YouTube",
 }
 
-# Ensure NVIDIA hosts are labeled nicely
-SOURCE_NAME_MAP.update({
-    "nvidianews.nvidia.com": "NVIDIA",
-    "blogs.nvidia.com": "NVIDIA",
-    "nvidia.com": "NVIDIA",
-})
-
-
 # --- Force-category overrides ---
 FORCE_FINTECH_DOMAINS = {"pymnts.com"}     # normalized by domain_of()
 FORCE_FINTECH_SOURCES = {"pymnts"}         # lowercased source label
 
 # NEW: Force AI routing for OpenAI and Anthropic
-FORCE_AI_SOURCES = {"anthropic", "nvidia", "openai"}  # lowercased source label
+FORCE_AI_SOURCES = {"openai", "anthropic"}  # lowercased source label
+
+# Force-include sources (always keep even with zero score)
+FORCE_INCLUDE_SOURCES = set()  # Add sources here if needed
 
 # ----------------- helpers -----------------
 # --- Freshness & diversity helpers (news-first policy) ---
@@ -390,7 +425,7 @@ def clean_text(s, limit=None):
     s = html.unescape(s or "")
     s = re.sub(r"\s+", " ", s).strip()
     if limit and len(s) > limit:
-        return s[:limit - 1] + "…"
+        return s[:limit - 1] + "..."
     return s
 
 def strip_html_to_text(s):
@@ -431,7 +466,7 @@ def _plain_text_summary(it: dict, limit: int = 180) -> str:
     cut = txt[:limit - 1]
     if " " in cut:
         cut = cut.rsplit(" ", 1)[0]
-    return cut + "…"
+    return cut + "..."
 
 def _render_template_string(tpl: str, **kv) -> str:
     html_out = tpl
@@ -581,7 +616,9 @@ def create_branded_og_image(source_url: str, permalink_dir: str) -> tuple[str, s
 
 def write_permalink_page(it: dict) -> str:
     """Writes docs/p/<id>/index.html and returns the ABSOLUTE permalink URL."""
-    site_base = (CFG.get("site_base") or "").rstrip("/")
+    # Use environment variable if available, otherwise use config
+    site_base = os.environ.get("SITE_BASE_URL") or (CFG.get("site_base") or "")
+    site_base = site_base.rstrip("/")
 
     title = (it.get("title") or "").strip()
     url   = (it.get("url")   or "").strip()
@@ -604,8 +641,8 @@ def write_permalink_page(it: dict) -> str:
     
     # Create branded OG image and thumbnail
     og_image_rel, thumbnail_rel = create_branded_og_image(url, perma_dir)
-    og_image_abs = f"{site_base}{og_image_rel}" if og_image_rel and site_base else ""
-    thumbnail_abs = f"{site_base}{thumbnail_rel}" if thumbnail_rel and site_base else ""
+    og_image_abs = f"{site_base}{og_image_rel}" if og_image_rel and site_base else og_image_rel
+    thumbnail_abs = f"{site_base}{thumbnail_rel}" if thumbnail_rel and site_base else thumbnail_rel
 
     with open(PERMA_TPL, "r", encoding="utf-8") as f:
         tpl = f.read()
@@ -665,7 +702,8 @@ def fetch_rss(feed_name, url):
             link = getattr(e, "link", "")
             if not title or not link:
                 continue
-            if is_blocked(link):
+            # Allowlist YouTube channel feed items even if domain is globally blocked
+            if is_blocked(link) and "youtube.com/feeds/videos.xml" not in (url or ""):
                 continue
             dt_local = parse_pubdate(e)
             if not within_window(dt_local):
@@ -691,7 +729,7 @@ def fetch_rss(feed_name, url):
         return []
 
 def google_news_rss(query):
-    """Google News RSS → resolve to publisher URL, drop blocked domains,
+    """Google News RSS -> resolve to publisher URL, drop blocked domains,
        fix summaries, and label with real publisher (never HN/Google News)."""
     q = urllib.parse.quote(query)
     url = f"https://news.google.com/rss/search?q={q}&hl=en-US&gl=US&ceid=US:en"
@@ -877,7 +915,7 @@ def _strip_publisher_suffix(title: str) -> str:
     """Remove trailing ' - Publisher' or ' | Publisher' to normalize titles for dedupe."""
     if not title: return ""
     t = html.unescape(title)
-    t = re.sub(r"[\u2018\u2019]", "'", t)  # curly → straight
+    t = re.sub(r"[\u2018\u2019]", "'", t)  # curly -> straight
     t = re.sub(r'[\u201C\u201D]', '"', t)
     t = re.sub(r"\s+", " ", t).strip()
     for sep in (" - ", " | "):
@@ -1044,10 +1082,18 @@ def build_section(date_str, by_cat):
         return "\n".join(parts)
 
     html_out = tpl.replace("{{DATE_STR}}", date_str)
-    for cat_key, ph in (("ai","AI"),("software","SW"),("fintech","FT")):
-        items = by_cat.get(cat_key, [])[:MAX_ITEMS]
+    total_count = sum(len(by_cat.get(k, [])) for k in ("ai", "software", "fintech"))
+
+    for cat_key, ph in (("ai", "AI"), ("software", "SW"), ("fintech", "FT")):
+        items = by_cat.get(cat_key, [])[:MAX_ITEMS]  # OK even if MAX_ITEMS is None
         html_out = html_out.replace(f"{{{{{ph}_COUNT}}}}", str(len(items)))
-        html_out = html_out.replace(f"{{{{{ph}_ITEMS}}}}", render_items(items) if items else "<p>No items today.</p>")
+        html_out = html_out.replace(
+            f"{{{{{ph}_ITEMS}}}}",
+            render_items(items) if items else "<p>No items today.</p>"
+        )
+
+    html_out = html_out.replace("{{TOTAL_COUNT}}", str(total_count))
+    html_out = html_out.replace("{{COUNT}}", str(total_count))
     return html_out
 
 def main():
@@ -1075,10 +1121,14 @@ def main():
             continue
         if is_deals_or_consumer_shopping(it["title"], it["url"]):
             continue
+        # Normalize source for routing/force-include
+        src_norm = (it.get("source") or "").strip().lower()
         # Compute summary first so categorizer can use it
         it["summary_text"] = summarize(it)
         cat, score = categorize_with_score(it["title"], it["url"], it.get("summary_text", ""))
-        if score == 0:
+        is_youtube_src = ("youtube" in src_norm)
+        # Keep zero-score items if forced (AI/YouTube) or if the source name includes 'youtube'
+        if score == 0 and (src_norm not in FORCE_AI_SOURCES) and (not is_youtube_src) and (src_norm not in FORCE_INCLUDE_SOURCES):
             continue  # drop unrelated items
         it["category"] = cat
 
@@ -1090,13 +1140,13 @@ def main():
         src_norm = (it.get("source") or "").strip().lower()
         
         # Force AI for OpenAI and Anthropic content
-        if src_norm in FORCE_AI_SOURCES:
+        if ("youtube" in src_norm) or (src_norm in FORCE_AI_SOURCES) or (src_norm in FORCE_INCLUDE_SOURCES):
             it["category"] = "ai"
         
         # --- PYMNTS routing: FinTech unless clearly AI ---
         elif d in FORCE_FINTECH_DOMAINS or src_norm in FORCE_FINTECH_SOURCES:
             scores = compute_scores(it["title"], it["url"], it.get("summary_text",""))
-            # Only let PYMNTS land in AI if it's clearly AI (AI ≥ 3 and AI ≥ FinTech + 1)
+            # Only let PYMNTS land in AI if it's clearly AI (AI >= 3 and AI >= FinTech + 1)
             if not (scores["ai"] >= 3 and scores["ai"] >= scores["fintech"] + 1):
                 it["category"] = "fintech"
         # --- end routing ---
@@ -1136,8 +1186,8 @@ def main():
             _seen.add(key)
             try:
                 write_permalink_page(it)
-            except Exception:
-                pass
+            except Exception as e:
+                print(f"Warning: Failed to create permalink for '{it.get('title', 'Unknown')}': {e}")
             unique_items.append(it)
 
 
