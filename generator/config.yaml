@@ -26,29 +26,23 @@ sources:
     url: https://www.pymnts.com/feed
   - name: WSJ Technology (WSJD)
     url: https://feeds.a.dj.com/rss/RSSWSJD.xml
-  - name: The New York Times — Technology
+  - name: The New York Times - Technology
     url: https://rss.nytimes.com/services/xml/rss/nyt/Technology.xml
-  - name: Financial Times — Technology
+  - name: Financial Times - Technology
     url: https://www.ft.com/companies/technology?format=rss
+  - name: Bloomberg Technology
+    url: https://feeds.bloomberg.com/technology/news.rss
+  - name: Wired
+    url: https://www.wired.com/feed/category/business/latest/rss
+  - name: Ars Technica
+    url: https://feeds.arstechnica.com/arstechnica/technology-lab
+  - name: TechCrunch
+    url: https://techcrunch.com/feed/
   google_news_queries:
-    ai:
-    - ("artificial intelligence" OR AI OR "large language model" OR LLM OR "generative
-      AI") site:(theverge.com OR venturebeat.com OR wired.com OR arstechnica.com OR
-      bloomberg.com/technology OR wsj.com OR nytimes.com OR ft.com OR techcrunch.com
-      OR ieee.org OR theregister.com)
-    - site:bloomberg.com (AI OR "artificial intelligence" OR OpenAI OR Anthropic)
-    software:
-    - (software OR "developer tools" OR devops OR "platform engineering" OR SaaS)
-      site:(theverge.com OR venturebeat.com OR wired.com OR arstechnica.com OR bloomberg.com/technology
-      OR wsj.com OR nytimes.com OR ft.com OR techcrunch.com OR github.blog OR ieee.org
-      OR theregister.com)
-    - site:bloomberg.com (software OR cloud OR developer OR platform)
-    fintech:
-    - (fintech OR payments OR "digital banking" OR crypto OR blockchain OR "open banking")
-      site:(pymnts.com OR wsj.com OR nytimes.com OR ft.com OR bloomberg.com/technology
-      OR theverge.com OR venturebeat.com OR techcrunch.com)
-    - site:bloomberg.com (fintech OR payments OR crypto OR banking OR Visa OR Mastercard
-      OR Stripe)
+    # Google News queries disabled - using direct RSS feeds only
+    ai: []
+    software: []
+    fintech: []
 exclude_domains_suffix:
 - news.ycombinator.com
 - ycombinator.com
