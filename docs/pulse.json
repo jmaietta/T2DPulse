@@ -1,5 +1,33 @@
 [
   {
+    "title": "Developers can now add live Google Maps data to Gemini-powered AI app outputs",
+    "url": "https://venturebeat.com/ai/developers-can-now-add-live-google-maps-data-to-gemini-powered-ai-app",
+    "published_at": "2025-10-17T18:31:00-04:00",
+    "source": "VentureBeat",
+    "summary": "Google is adding a new feature for third-party developers building atop its Gemini AI models that rivals like OpenAI's ChatGPT, Anthropic's Claude, and the growing array of Chinese open source options are unlikely to get anytime soon: grounding with Google Maps. This addition allows developers to connect Google's Gemini AI models' reasoning capabilities with live geospatial data from Google Maps,...",
+    "content_html": "",
+    "summary_text": "Google is adding a new feature for third-party developers building atop its Gemini AI models that rivals like OpenAI's ChatGPT, Anthropic's Claude, and the growing array of Chinese open source options are unlikely to get anytime soon: grounding with Google Ma...",
+    "category": "ai",
+    "_permalink": "/p/7a6544b36a/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/7a6544b36a/",
+    "_summary_240": "Google is adding a new feature for third-party developers building atop its Gemini AI models that rivals like OpenAI's ChatGPT, Anthropic's Claude, and the growing array of...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/7a6544b36a/thumbnail.png"
+  },
+  {
+    "title": "Trump Talks US-China Trade, Crypto Billions Vanish | Bloomberg Tech 10/17/2025",
+    "url": "https://www.bloomberg.com/news/videos/2025-10-17/bloomberg-tech-10-17-2025-video",
+    "published_at": "2025-10-17T18:09:10-04:00",
+    "source": "Bloomberg Technology",
+    "summary": "Bloomberg Tech's Caroline Hyde discusses the growing China-US trade tensions as President Donald Trump gets set to meet China's Xi Jinping. Plus, billions of dollars in the crypto markets disappear as altcoins fall. And, Apple gets into touch with plans to revamp its MacBook lineup with touch displays. (Source: Bloomberg)",
+    "content_html": "",
+    "summary_text": "Bloomberg Tech's Caroline Hyde discusses the growing China-US trade tensions as President Donald Trump gets set to meet China's Xi Jinping. Plus, billions of dollars in the crypto markets disappear as altcoins fall. And, Apple gets into touch with plans to re...",
+    "category": "fintech",
+    "_permalink": "/p/bc2fb1c276/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/bc2fb1c276/",
+    "_summary_240": "Bloomberg Tech's Caroline Hyde discusses the growing China-US trade tensions as President Donald Trump gets set to meet China's Xi Jinping. Plus, billions of dollars in the...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/bc2fb1c276/thumbnail.png"
+  },
+  {
     "title": "Verily Launches Consumer Health App with AI Companion That Answers Questions",
     "url": "https://www.pymnts.com/artificial-intelligence-2/2025/verily-launches-consumer-health-app-with-ai-companion-that-answers-questions/",
     "published_at": "2025-10-17T17:32:30-04:00",
@@ -238,16 +266,6 @@
     "content_html": "",
     "summary_text": "A timeline of ChatGPT product updates and releases, starting with the latest, which we\u2019ve been updating throughout the year.",
     "category": "ai"
-  },
-  {
-    "title": "Romance Fraud Reports Increase 9% in UK",
-    "url": "https://www.pymnts.com/fraud-prevention/2025/romance-fraud-reports-increase-9percent-in-uk/",
-    "published_at": "2025-10-17T12:00:20-04:00",
-    "source": "PYMNTS",
-    "summary": "Payment service providers and online platforms have roles to play in combating romance fraud, the United Kingdom\u2019s Financial Conduct Authority said Friday (Oct. 17). The regulator released a romance fraud review that is based on its review of six firms, including retail banks and payment firms, it said in a Friday press release. \u201cWe [\u2026] The post Romance Fraud Reports Increase 9% in UK appeared fi...",
-    "content_html": "<p style=\"font-weight: 400;\">Payment service providers and online platforms have roles to play in combating romance fraud, the United Kingdom\u2019s <a href=\"https://www.fca.org.uk/\" rel=\"noopener\" target=\"_blank\">Financial Conduct Authority</a> said Friday (Oct. 17).</p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p style=\"font-weight: 400;\">The regulator released a <a href=\"https://www.fca.org.uk/publications/multi-firm-reviews/combating-romance-fraud-prevention-detection-and-supporting-victims\" rel=\"noopener\" target=\"_blank\">romance fraud review</a> that is based on its review of six firms, including retail banks and payment firms, it said in a Friday <a href=\"https://www.fca.org.uk/news/press-releases/banks-need-to-help-break-spell-romance-scams\" rel=\"noopener\" target=\"_blank\">press release</a>.</p>\n<p style=\"font-weight: 400;\">\u201cWe recognize the challenge banks and payment firms have in combating this complex crime and this review aims to help them stay one step ahead of the criminals,\u201d <a href=\"https://uk.linkedin.com/in/stephen-smart-68284826\" rel=\"noopener\" target=\"_blank\">Steve Smart</a>, executive director of enforcement and market oversight at the FCA, said in the release.</p>\n<p style=\"font-weight: 400;\">Romance fraud is a growing financial crime in which fraudsters develop false romantic relationships or friendships with victims and then deceive the victims into sending them money, according to the release.</p>\n<p style=\"font-weight: 400;\">In the U.K., romance fraud reports increased 9% in financial year 2024/2025, generated losses of over 106 million pounds (about $142 million) and cost victims an average loss of 11,222 pounds (about $15,037), the review said.</p>\n<p style=\"font-weight: 400;\">The true scale of romance fraud may be greater because victims often don\u2019t report the crime, per the report.</p>\n<p style=\"font-weight: 400;\">Because 85% of the cases of romance fraud start online, social media websites, dating sites and other online platforms can play a role in preventing this form of fraud, the release said.</p>\n<p style=\"font-weight: 400;\">The steps these platforms can take include raising user awareness, promoting safe online behaviors, and detecting and removing fraudulent content, according to the review.</p>\n<p style=\"font-weight: 400;\">Banks, building societies and other businesses that provide payment accounts can take several measures to combat romance fraud, the review said.</p>\n<p style=\"font-weight: 400;\">These payment service providers can detect high-risk payments and create a temporary block by requiring customers to interact with a staff member; capture detail information about fraud events and share it between sending and receiving firms to help improve anti-fraud systems and controls; engage with victims to help them recognize they were being defrauded; identify customers who may be at heightened risk of fraud to enable earlier intervention; and launch campaigns and educational resources to raise awareness of romance fraud, per the review.</p>\n<p style=\"font-weight: 400;\">\u201cFirms must continue to ensure their systems can detect relevant risk indicators and that staff are equipped to engage meaningfully with customers, identify red flags and respond appropriately, particularly where customers show signs of vulnerability,\u201d the review said.</p>\n<p style=\"font-weight: 400;\">PYMNTS reported in February 2024 that digital tools like artificial intelligence deepfake images have helped drive the rising tide of online <a href=\"https://www.pymnts.com/news/security-and-risk/2024/online-romance-scams-grow-more-sophisticated-with-deepfakes-advanced-tech/\" rel=\"noopener\" target=\"_blank\">romance fraud</a> by making these scams more sophisticated and convincing.</p>\n<p style=\"font-weight: 400;\">The PYMNTS Intelligence and <a href=\"https://www.featurespace.com/\" rel=\"noopener\" target=\"_blank\">Featurespace</a> collaboration \u201c<a href=\"https://www.pymnts.com/wp-content/uploads/2024/10/PYMNTS-The-Impact-of-Financial-Scams-on-Consumers-Finances-and-Banking-Habits-October-2024.pdf\" rel=\"noopener\" target=\"_blank\">The Impact of Financial Scams on Consumers\u2019 Finances and Banking Habits</a>\u201d found that romance scams cause more financial damage than other forms of fraud, with a median loss of $1,996.</p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/fraud-prevention/2025/romance-fraud-reports-increase-9percent-in-uk/\">Romance Fraud Reports Increase 9% in UK</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
-    "summary_text": "Payment service providers and online platforms have roles to play in combating romance fraud, the United Kingdom\u2019s Financial Conduct Authority said Friday (Oct. 17). The regulator released a romance fraud review that is based on its review of six firms, inclu...",
-    "category": "fintech"
   },
   {
     "title": "Stellantis teams up with Pony AI to develop robotaxis in Europe",
