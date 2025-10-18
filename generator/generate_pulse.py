@@ -1,4 +1,3 @@
-
 #!/usr/bin/env python3
 # generator/generate_pulse.py
 # Website-only generator for TEK2day Pulse (AI -> Software -> FinTech)
@@ -19,6 +18,11 @@ import hashlib
 from PIL import Image
 from io import BytesIO
 
+# Google Trends (pytrends) optional import with fallback
+try:
+    from pytrends.request import TrendReq
+except Exception:
+    TrendReq = None  # pytrends not installed; trending will gracefully degrade
 
 import html, re
 
@@ -260,7 +264,7 @@ FORCE_FINTECH_DOMAINS = {"pymnts.com"}     # normalized by domain_of()
 FORCE_FINTECH_SOURCES = {"pymnts"}         # lowercased source label
 
 # NEW: Force AI routing for OpenAI and Anthropic
-FORCE_AI_SOURCES = {"openai", "anthropic"}  # lowercased source label
+FORCE_AI_SOURCES = {"openai", "anthropic", "claude"}  # lowercased source label
 
 # Force-include sources (always keep even with zero score)
 FORCE_INCLUDE_SOURCES = {"tek2day"}  # Your own content always included
@@ -361,8 +365,8 @@ def build_preferred_today_with_floors(all_items, now_local=None, floors=None, ba
     
     # Combine with current run's items
     all_combined = archived_items + all_items
-    # Keep all stories from different sources (no Google News wrappers to collapse)
-    # all_combined = dedupe_story_variants(all_combined)  # DISABLED
+    # Collapse Google wrapper vs publisher duplicates across runs
+    all_combined = dedupe_story_variants(all_combined)# Dedupe by URL
     seen_urls = set()
     unique_items = []
     for it in all_combined:
@@ -806,7 +810,9 @@ def fetch_rss(feed_name, url):
                 print(f"  [DEBUG] Parsed date: {dt_local}")
                 print(f"  [DEBUG] within_window check: {within_window(dt_local)}")
             
-            if not within_window(dt_local):
+            # Allow YouTube channel items regardless of BACKFILL_WINDOW
+            is_youtube_feed = 'youtube.com/feeds/videos.xml' in (url or '')
+            if (not is_youtube_feed) and (not within_window(dt_local)):
                 if is_tek2day:
                     print(f"  [DEBUG] ❌ Skipped: Outside {BACKFILL_WINDOW_DAYS}-day window")
                 continue
@@ -857,52 +863,77 @@ def fetch_rss(feed_name, url):
             traceback.print_exc()
         return []
 
-def google_news_rss(query):
-    """Google News RSS -> resolve to publisher URL, drop blocked domains,
-       fix summaries, and label with real publisher (never HN/Google News)."""
-    q = urllib.parse.quote(query)
-    url = f"https://news.google.com/rss/search?q={q}&hl=en-US&gl=US&ceid=US:en"
-    d = feedparser.parse(url)
+
+# ----------------- Google Trends integration -----------------
+def get_trending_tech_keywords(max_keywords: int = 25) -> list[str]:
+    """
+    Fetch a list of trending *tech-related* keywords using Google Trends via pytrends.
+    Falls back to a curated list if pytrends is unavailable or fetch fails.
+    """
+    fallback = [
+        "ai","openai","anthropic","claude","chatgpt","gpt","llm","deepmind","mistral",
+        "nvidia","h100","gpu","cuda","rocm","tensor","transformer","agent","genai",
+        "google","microsoft","apple","meta","amazon","cloud","saas","kubernetes","k8s",
+        "stripe","paypal","fintech","bitcoin","ethereum","stablecoin","vector db","embedding","llama"
+    ]
+    try:
+        if TrendReq is None:
+            return fallback[:max_keywords]
+        pytrends = TrendReq(hl="en-US", tz=360)
+        df = pytrends.trending_searches(pn="united_states")
+        trends = [str(x).strip() for x in df.iloc[:,0].dropna().tolist()]
+        seeds = ["AI","OpenAI","Nvidia","Claude","ChatGPT","Llama","GPU","Cloud","Fintech","Stripe","Microsoft","Google","Apple"]
+        enriched = []
+        for seed in seeds:
+            try:
+                pytrends.build_payload([seed], timeframe="now 7-d", geo="US")
+                rq = pytrends.related_queries()
+                for _, v in (rq or {}).items():
+                    if not v: 
+                        continue
+                    for col in ("rising","top"):
+                        if v.get(col) is not None:
+                            enriched += [str(x).strip() for x in v[col]["query"].dropna().tolist()]
+            except Exception:
+                continue
+        tech_hints = set([
+            "ai","gpt","llm","model","chip","gpu","npu","cuda","rocm","nvidia","openai","anthropic","claude",
+            "deepmind","mistral","llama","meta","microsoft","azure","google","cloud","saas",
+            "apple","iphone","mac","silicon","tensorflow","pytorch","transformer","diffusion",
+            "agent","prompt","vector","database","fintech","payments","stripe","paypal","bitcoin","ethereum","stablecoin"
+        ])
+        def is_techy(q: str) -> bool:
+            ql = q.lower()
+            return any(h in ql for h in tech_hints)
+        merged = [t for t in (trends + enriched) if t and is_techy(t)]
+        seen = set()
+        uniq = []
+        for t in merged:
+            tl = t.lower()
+            if tl not in seen:
+                seen.add(tl)
+                uniq.append(tl)
+        if not uniq:
+            return fallback[:max_keywords]
+        return uniq[:max_keywords]
+    except Exception:
+        return fallback[:max_keywords]
+
+
+def _match_trending_keywords(text: str, keywords: list[str]) -> list[str]:
+    """Return all trending keywords that appear (case-insensitive substring) in text."""
+    if not text:
+        return []
+    tl = text.lower()
     out = []
-    for e in d.entries[:60]:
-        title = clean_text(getattr(e, "title", ""))
-        link = getattr(e, "link", "")
-        if not title or not link:
-            continue
-        dt_local = parse_pubdate(e)
-        if not within_window(dt_local):
-            continue
-
-        raw_sum = getattr(e, "summary", "") or getattr(e, "description", "")
-        summary = clean_text(strip_html_to_text(raw_sum), 400)
-
-        # Resolve redirect to final publisher
-        final_url = link
-        try:
-            resp = requests.get(link, timeout=15, allow_redirects=True, headers={"User-Agent":"Mozilla/5.0"})
-            if resp.url:
-                final_url = resp.url
-        except Exception:
-            pass
-
-        if is_blocked(final_url):
-            continue
-        if domain_of(final_url) == "news.google.com":
-            continue
-
-        # Extract image from Google News RSS feed
-        image_url = extract_image_url(e)
-
-        out.append({
-            "title": title,
-            "url": final_url,
-            "published_at": dt_local.isoformat(),
-            "source": nice_source_for(final_url),
-            "summary": summary,
-            "content_html": "",
-            "image_url": image_url,  # Add image from feed
-        })
+    seen = set()
+    for kw in keywords:
+        k = kw.lower()
+        if k and k in tl and k not in seen:
+            seen.add(k)
+            out.append(k)
     return out
+# ----------------- end Google Trends integration -----------------
 
 # ----------------- categorization -----------------
 # (Legacy reference; new logic below does not rely on it directly.)
@@ -1186,6 +1217,17 @@ def build_section(date_str, by_cat):
     def render_items(items):
         parts = []
         for idx, it in enumerate(items):
+            trending_badge = '<span class="trending-indicator">Trending</span>' if it.get("_trending_tags") else ''
+            trending_chips_html = ''
+            if it.get("_trending_tags"):
+                try:
+                    trending_chips_html = ' '.join([
+                        f'<span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">{html.escape(tag)}</span>'
+                        for tag in it.get("_trending_tags", [])
+                    ])
+                except Exception:
+                    trending_chips_html = ''
+
             title_raw = it["title"]
             title = html.escape(title_raw)
             url_raw = it["url"]
@@ -1227,7 +1269,7 @@ def build_section(date_str, by_cat):
   {thumb_html}
   <div class="article-content">
     <h3><a data-title-link href="{url}">{title}</a></h3>
-    <div class="meta">{src} - {dt_str} {render_item_badges(it)}</div>
+    <div class="meta">{src} - {dt_str} {render_item_badges(it)} {trending_badge}</div><div class="trend-chips">{trending_chips_html}</div><div class="trend-chips">{trending_chips_html}</div><div class="trend-chips">{trending_chips_html}</div>
     <p data-summary>{summary_html}</p>
   </div>
 </article>''')
@@ -1249,12 +1291,17 @@ def build_section(date_str, by_cat):
     return html_out
 
 def main():
-    # Weekend: reuse Friday snapshot if available
-    if _weekend_use_friday_payload_if_available():
-        return
+    # Weekend: reuse Friday snapshot if available (env guard)
+    if os.environ.get('DISABLE_WEEKEND_CACHE', '0') != '1':
+        if _weekend_use_friday_payload_if_available():
+            return
     
     print("=== Starting T2D Pulse Generation ===")
     all_items = []
+
+    # Fetch trending tech keywords from Google Trends
+    trending_keywords = get_trending_tech_keywords(max_keywords=30)
+    print(f"Fetched {len(trending_keywords)} trending tech keywords from Google Trends.")
 
     # Direct RSS
     print(f"\n--- Fetching {len(CFG['sources']['rss'])} RSS feeds ---")
@@ -1263,12 +1310,6 @@ def main():
         fetched = fetch_rss(s["name"], s["url"])
         print(f"  → Got {len(fetched)} articles")
         all_items.extend(fetched)
-
-    # Google News queries
-    print(f"\n--- Processing Google News queries ---")
-    for _, queries in CFG["sources"]["google_news_queries"].items():
-        for q in queries:
-            all_items.extend(google_news_rss(q))
 
     # Dedupe
     print(f"\n--- Before dedupe: {len(all_items)} total articles ---")
@@ -1330,7 +1371,16 @@ def main():
             continue  # drop unrelated items
             
         it["category"] = cat
-        
+
+        # Tag with trending keywords based on title + summary
+        try:
+            tags = set(_match_trending_keywords(it.get("title",""), trending_keywords))
+            tags.update(_match_trending_keywords(it.get("summary_text",""), trending_keywords))
+            if tags:
+                it["_trending_tags"] = sorted(tags)
+        except Exception:
+            pass
+
         if is_tek2day:
             print(f"  ✅ PASSED all filters!")
 
@@ -1426,6 +1476,51 @@ def main():
             pass
         except Exception:
             pass
+
+
+    # Generate trending analytics JSON
+    try:
+        analytics = {
+            "generated_at": now_et().isoformat(),
+            "total_keywords": len(trending_keywords),
+            "keyword_counts": {},
+            "sources_per_keyword": {},
+            "top_articles_per_keyword": {},
+        }
+        items_for_stats = unique_items
+        kw_to_items = {kw: [] for kw in trending_keywords}
+        for it in items_for_stats:
+            for kw in (it.get("_trending_tags") or []):
+                kw_to_items.setdefault(kw, []).append(it)
+        for kw, items in kw_to_items.items():
+            if not items:
+                continue
+            analytics["keyword_counts"][kw] = len(items)
+            srcs = sorted({(it.get("source") or "").strip() for it in items if it.get("source")})
+            doms = sorted({domain_of(it.get("url","")) for it in items if it.get("url")})
+            analytics["sources_per_keyword"][kw] = {"sources": srcs, "domains": doms}
+            def _dt(it):
+                try:
+                    return dtparser.parse(it.get("published_at","")).astimezone(TZ)
+                except Exception:
+                    return now_et()
+            top = sorted(items, key=_dt, reverse=True)[:5]
+            analytics["top_articles_per_keyword"][kw] = [
+                {
+                    "title": it.get("title"),
+                    "url": it.get("url"),
+                    "source": it.get("source"),
+                    "published_at": it.get("published_at"),
+                    "category": it.get("category"),
+                    "_permalink": it.get("_abs_permalink") or it.get("_permalink"),
+                } for it in top
+            ]
+        nonzero = {k:v for k,v in analytics["keyword_counts"].items() if v > 0}
+        analytics["keyword_counts"] = dict(sorted(nonzero.items(), key=lambda kv: (-kv[1], kv[0])))
+        with open(os.path.join(docs, "trending_analytics.json"), "w", encoding="utf-8") as f:
+            json.dump(analytics, f, indent=2)
+    except Exception as e:
+        print(f"Warning: failed to write trending_analytics.json: {e}")
 
     # Write daily snapshot to docs/archive/json/YYYY-MM-DD.json
     try:
