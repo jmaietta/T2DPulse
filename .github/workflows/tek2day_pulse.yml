@@ -18,6 +18,8 @@ concurrency:
 
 jobs:
   build:
+    env:
+      DISABLE_WEEKEND_CACHE: "1"
     # Extra safety: only operate on main
     if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
