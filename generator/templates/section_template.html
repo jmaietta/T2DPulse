@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -140,6 +139,30 @@
       background:var(--ai);color:white;margin-left:.25rem;
     }
     .badge.muted{background:var(--muted);opacity:.7;}
+    
+    /* Trending indicator - Option 2: Subtle variant */
+    .trending-indicator {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      margin-left: 6px;
+      padding: 2px 6px;
+      background: rgba(91, 100, 115, 0.06);
+      border: 1px solid rgba(91, 100, 115, 0.15);
+      border-radius: 4px;
+      font-size: 0.7rem;
+      font-weight: 600;
+      color: var(--muted);
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+    }
+
+    .trending-indicator::before {
+      content: "↗";
+      font-size: 0.75rem;
+      font-weight: 700;
+    }
+    
     p{margin:.25rem 0 0; color:var(--ink)}
 
     /* Footer note */
@@ -158,6 +181,10 @@
       .items{padding:.45rem .6rem .8rem}
       article{padding:.8rem;flex-direction:column;}
       .article-thumb{width:100%;height:auto;aspect-ratio:16/9;}
+      .trending-indicator {
+        padding: 1px 4px;
+        font-size: 0.65rem;
+      }
     }
 
     /* Share toolbar */
@@ -186,7 +213,22 @@
     .share-btn:hover{ 
       background:#f3f4f6; 
     }
-  </style>
+  
+    /* De-duplicate trend chips rendered by multiple responsive blocks & hide empties */
+    article .trend-chips ~ .trend-chips, [data-card] .trend-chips ~ .trend-chips { display: none; }
+    article .trend-chips:empty,           [data-card] .trend-chips:empty           { display: none; }
+
+    /* Trend chip tooltips + interactivity */
+    .trend-chip{ position:relative; cursor:pointer; }
+    .trend-chip:focus-visible{ outline:2px solid rgba(107,138,253,.6); outline-offset:2px; border-radius:999px; }
+    .trend-chip[data-tip]::after{
+      display:none; position:absolute; z-index:30; left:50%; transform:translateX(-50%);
+      bottom:calc(100% + 8px); background:#111; color:#fff; padding:6px 8px; border-radius:6px;
+      font-size:12px; white-space:nowrap; box-shadow:0 4px 12px rgba(0,0,0,.2);
+      content: attr(data-tip);
+    }
+    .trend-chip:hover::after, .trend-chip:focus-visible::after{ display:block; }
+</style>
   
   <link rel="icon" type="image/x-icon" href="./icons/favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="./icons/t2d-pulse-32.png">
@@ -442,6 +484,49 @@
       const q0 = new URLSearchParams(location.search).get('q');
       if (q0) { input.value = q0; applyFilter(q0); }
     } catch(_) {}
+  })();
+  </script>
+
+  <script>
+  (function(){
+    // Choose where chips should link: 'trends' or 'site'
+    const MODE = 'trends';                 // change to 'site' if you want internal search instead
+    const GEO = 'US';                      // Google Trends GEO
+    const TIME = 'now 7-d';                // Google Trends window
+    const SITE_SEARCH_URL = '/?q=';        // your site search base, if MODE === 'site'
+
+    const chips = document.querySelectorAll('.trend-chip');
+    chips.forEach(chip => {
+      const kw = (chip.textContent || '').trim();
+      if (!kw) return;
+      // Tooltip text
+      chip.setAttribute('data-tip', 'Trending keyword: "' + kw + '"');
+      chip.setAttribute('role', 'link');
+      chip.setAttribute('tabindex', '0');
+
+      function targetUrl() {
+        if (MODE === 'trends') {
+          const u = new URL('https://trends.google.com/trends/explore');
+          u.searchParams.set('date', TIME);
+          u.searchParams.set('geo', GEO);
+          u.searchParams.set('q', kw);
+          return u.toString();
+        } else {
+          return SITE_SEARCH_URL + encodeURIComponent(kw);
+        }
+      }
+
+      chip.addEventListener('click', (e) => {
+        const url = targetUrl();
+        window.open(url, '_blank', 'noopener');
+      });
+      chip.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          chip.click();
+        }
+      });
+    });
   })();
   </script>
 </body>
