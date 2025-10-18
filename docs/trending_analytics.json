@@ -1,0 +1,491 @@
+{
+  "generated_at": "2025-10-18T19:24:40.206917-04:00",
+  "total_keywords": 30,
+  "keyword_counts": {
+    "ai": 34,
+    "agent": 8,
+    "openai": 6,
+    "anthropic": 3,
+    "claude": 3,
+    "google": 3,
+    "gpt": 3,
+    "apple": 2,
+    "chatgpt": 2,
+    "cloud": 2,
+    "microsoft": 2,
+    "llm": 1,
+    "nvidia": 1
+  },
+  "sources_per_keyword": {
+    "ai": {
+      "sources": [
+        "Anthropic YouTube",
+        "Ars Technica",
+        "Bloomberg Technology",
+        "Financial Times - Technology",
+        "NVIDIA News",
+        "PYMNTS",
+        "TechCrunch",
+        "The New York Times - Technology",
+        "VentureBeat",
+        "Wired"
+      ],
+      "domains": [
+        "arstechnica.com",
+        "bloomberg.com",
+        "ft.com",
+        "nvidia.com",
+        "nytimes.com",
+        "pymnts.com",
+        "techcrunch.com",
+        "venturebeat.com",
+        "wired.com",
+        "youtube.com"
+      ]
+    },
+    "openai": {
+      "sources": [
+        "Ars Technica",
+        "Bloomberg Technology",
+        "TechCrunch",
+        "The New York Times - Technology",
+        "VentureBeat"
+      ],
+      "domains": [
+        "arstechnica.com",
+        "bloomberg.com",
+        "nytimes.com",
+        "techcrunch.com",
+        "venturebeat.com"
+      ]
+    },
+    "anthropic": {
+      "sources": [
+        "Anthropic YouTube",
+        "VentureBeat"
+      ],
+      "domains": [
+        "venturebeat.com",
+        "youtube.com"
+      ]
+    },
+    "claude": {
+      "sources": [
+        "Anthropic YouTube",
+        "VentureBeat"
+      ],
+      "domains": [
+        "venturebeat.com",
+        "youtube.com"
+      ]
+    },
+    "chatgpt": {
+      "sources": [
+        "VentureBeat"
+      ],
+      "domains": [
+        "venturebeat.com"
+      ]
+    },
+    "gpt": {
+      "sources": [
+        "Bloomberg Technology",
+        "VentureBeat"
+      ],
+      "domains": [
+        "bloomberg.com",
+        "venturebeat.com"
+      ]
+    },
+    "llm": {
+      "sources": [
+        "VentureBeat"
+      ],
+      "domains": [
+        "venturebeat.com"
+      ]
+    },
+    "nvidia": {
+      "sources": [
+        "NVIDIA News"
+      ],
+      "domains": [
+        "nvidia.com"
+      ]
+    },
+    "agent": {
+      "sources": [
+        "Anthropic YouTube",
+        "PYMNTS",
+        "VentureBeat"
+      ],
+      "domains": [
+        "pymnts.com",
+        "venturebeat.com",
+        "youtube.com"
+      ]
+    },
+    "google": {
+      "sources": [
+        "PYMNTS",
+        "VentureBeat"
+      ],
+      "domains": [
+        "pymnts.com",
+        "venturebeat.com"
+      ]
+    },
+    "microsoft": {
+      "sources": [
+        "PYMNTS",
+        "VentureBeat"
+      ],
+      "domains": [
+        "pymnts.com",
+        "venturebeat.com"
+      ]
+    },
+    "apple": {
+      "sources": [
+        "Bloomberg Technology"
+      ],
+      "domains": [
+        "bloomberg.com"
+      ]
+    },
+    "cloud": {
+      "sources": [
+        "Bloomberg Technology",
+        "PYMNTS"
+      ],
+      "domains": [
+        "bloomberg.com",
+        "pymnts.com"
+      ]
+    }
+  },
+  "top_articles_per_keyword": {
+    "ai": [
+      {
+        "title": "Wikipedia says traffic is falling due to AI search summaries and social video",
+        "url": "https://techcrunch.com/2025/10/18/wikipedia-says-traffic-is-falling-due-to-ai-search-summaries-and-social-video/",
+        "source": "TechCrunch",
+        "published_at": "2025-10-18T15:00:00-04:00",
+        "category": "ai",
+        "_permalink": "https://pulse.tek2dayholdings.com/p/b1ca596071/"
+      },
+      {
+        "title": "Blackstone says Wall Street is complacent about AI disruption",
+        "url": "https://www.ft.com/content/35d80b4d-eecd-424b-9350-8da138036d7e",
+        "source": "Financial Times - Technology",
+        "published_at": "2025-10-18T07:00:02-04:00",
+        "category": "software",
+        "_permalink": "https://pulse.tek2dayholdings.com/p/0cd30c67aa/"
+      },
+      {
+        "title": "Abstract or die: Why AI enterprises can't afford rigid vector stacks",
+        "url": "https://venturebeat.com/ai/abstract-or-die-why-ai-enterprises-cant-afford-rigid-vector-stacks",
+        "source": "VentureBeat",
+        "published_at": "2025-10-18T05:00:00-04:00",
+        "category": "ai",
+        "_permalink": "https://pulse.tek2dayholdings.com/p/1cdab51cad/"
+      },
+      {
+        "title": "Silicon Valley spooks the AI safety advocates",
+        "url": "https://techcrunch.com/2025/10/17/silicon-valley-spooks-the-ai-safety-advocates/",
+        "source": "TechCrunch",
+        "published_at": "2025-10-17T21:21:30-04:00",
+        "category": "ai",
+        "_permalink": "https://pulse.tek2dayholdings.com/p/38008af6b0/"
+      },
+      {
+        "title": "CVS Pharmacy Says It Gained 9 Million Former Rite Aid Customers",
+        "url": "https://www.pymnts.com/acquisitions/2025/cvs-pharmacy-says-it-gained-9-million-former-rite-aid-customers/",
+        "source": "PYMNTS",
+        "published_at": "2025-10-17T19:39:35-04:00",
+        "category": "fintech",
+        "_permalink": "https://pulse.tek2dayholdings.com/p/dd82af9da2/"
+      }
+    ],
+    "openai": [
+      {
+        "title": "Silicon Valley spooks the AI safety advocates",
+        "url": "https://techcrunch.com/2025/10/17/silicon-valley-spooks-the-ai-safety-advocates/",
+        "source": "TechCrunch",
+        "published_at": "2025-10-17T21:21:30-04:00",
+        "category": "ai",
+        "_permalink": "https://pulse.tek2dayholdings.com/p/38008af6b0/"
+      },
+      {
+        "title": "Developers can now add live Google Maps data to Gemini-powered AI app outputs",
+        "url": "https://venturebeat.com/ai/developers-can-now-add-live-google-maps-data-to-gemini-powered-ai-app",
+        "source": "VentureBeat",
+        "published_at": "2025-10-17T18:31:00-04:00",
+        "category": "ai",
+        "_permalink": "https://pulse.tek2dayholdings.com/p/7a6544b36a/"
+      },
+      {
+        "title": "California Regulates A.I. Companions + OpenAI Investigates Its Critics + The Hard Fork Review of Slop",
+        "url": "https://www.nytimes.com/2025/10/17/podcasts/california-regulates-ai-companions-openai-investigates-its-critics-the-hard-fork-review-of-slop.html",
+        "source": "The New York Times - Technology",
+        "published_at": "2025-10-17T07:00:06-04:00",
+        "category": "ai",
+        "_permalink": "https://pulse.tek2dayholdings.com/p/1cfd1a0570/"
+      },
+      {
+        "title": "OpenAI Halts Depictions of MLK After \u2018Disrespectful\u2019 Videos",
+        "url": "https://www.bloomberg.com/news/articles/2025-10-17/openai-halts-mlk-depictions-in-sora-after-disrespectful-videos",
+        "source": "Bloomberg Technology",
+        "published_at": "2025-10-17T04:54:43-04:00",
+        "category": "ai",
+        "_permalink": "https://pulse.tek2dayholdings.com/p/97ea77afc4/"
+      },
+      {
+        "title": "Ars Live recap: Is the AI bubble about to pop? Ed Zitron weighs in.",
+        "url": "https://arstechnica.com/ai/2025/10/ars-live-recap-is-the-ai-bubble-about-to-pop-ed-zitron-weighs-in/",
+        "source": "Ars Technica",
+        "published_at": "2025-10-16T16:25:08-04:00",
+        "category": "ai",
+        "_permalink": "https://pulse.tek2dayholdings.com/p/39ff1c1514/"
+      }
+    ],
+    "anthropic": [
+      {
+        "title": "Developers can now add live Google Maps data to Gemini-powered AI app outputs",
+        "url": "https://venturebeat.com/ai/developers-can-now-add-live-google-maps-data-to-gemini-powered-ai-app",
+        "source": "VentureBeat",
+        "published_at": "2025-10-17T18:31:00-04:00",
+        "category": "ai",
+        "_permalink": "https://pulse.tek2dayholdings.com/p/7a6544b36a/"
+      },
+      {
+        "title": "Building more effective AI agents",
+        "url": "https://www.youtube.com/watch?v=uhJJgc-0iTQ",
+        "source": "Anthropic YouTube",
+        "published_at": "2025-10-17T12:01:56-04:00",
+        "category": "ai",
+        "_permalink": "https://pulse.tek2dayholdings.com/p/9e4dde3143/"
+      },
+      {
+        "title": "How Anthropic\u2019s \u2018Skills\u2019 make Claude faster, cheaper, and more consistent for business workflows",
+        "url": "https://venturebeat.com/ai/how-anthropics-skills-make-claude-faster-cheaper-and-more-consistent-for",
+        "source": "VentureBeat",
+        "published_at": "2025-10-16T12:00:00-04:00",
+        "category": "ai",
+        "_permalink": "https://pulse.tek2dayholdings.com/p/43b8a2c25d/"
+      }
+    ],
+    "claude": [
+      {
+        "title": "Developers can now add live Google Maps data to Gemini-powered AI app outputs",
+        "url": "https://venturebeat.com/ai/developers-can-now-add-live-google-maps-data-to-gemini-powered-ai-app",
+        "source": "VentureBeat",
+        "published_at": "2025-10-17T18:31:00-04:00",
+        "category": "ai",
+        "_permalink": "https://pulse.tek2dayholdings.com/p/7a6544b36a/"
+      },
+      {
+        "title": "Building more effective AI agents",
+        "url": "https://www.youtube.com/watch?v=uhJJgc-0iTQ",
+        "source": "Anthropic YouTube",
+        "published_at": "2025-10-17T12:01:56-04:00",
+        "category": "ai",
+        "_permalink": "https://pulse.tek2dayholdings.com/p/9e4dde3143/"
+      },
+      {
+        "title": "How Anthropic\u2019s \u2018Skills\u2019 make Claude faster, cheaper, and more consistent for business workflows",
+        "url": "https://venturebeat.com/ai/how-anthropics-skills-make-claude-faster-cheaper-and-more-consistent-for",
+        "source": "VentureBeat",
+        "published_at": "2025-10-16T12:00:00-04:00",
+        "category": "ai",
+        "_permalink": "https://pulse.tek2dayholdings.com/p/43b8a2c25d/"
+      }
+    ],
+    "chatgpt": [
+      {
+        "title": "Developers can now add live Google Maps data to Gemini-powered AI app outputs",
+        "url": "https://venturebeat.com/ai/developers-can-now-add-live-google-maps-data-to-gemini-powered-ai-app",
+        "source": "VentureBeat",
+        "published_at": "2025-10-17T18:31:00-04:00",
+        "category": "ai",
+        "_permalink": "https://pulse.tek2dayholdings.com/p/7a6544b36a/"
+      },
+      {
+        "title": "Google vs. OpenAI vs. Visa: competing agent protocols threaten the future of AI commerce",
+        "url": "https://venturebeat.com/ai/google-vs-openai-vs-visa-competing-agent-protocols-threaten-the-future-of-ai",
+        "source": "VentureBeat",
+        "published_at": "2025-10-16T00:00:00-04:00",
+        "category": "ai",
+        "_permalink": "https://pulse.tek2dayholdings.com/p/39d250028f/"
+      }
+    ],
+    "gpt": [
+      {
+        "title": "Developers can now add live Google Maps data to Gemini-powered AI app outputs",
+        "url": "https://venturebeat.com/ai/developers-can-now-add-live-google-maps-data-to-gemini-powered-ai-app",
+        "source": "VentureBeat",
+        "published_at": "2025-10-17T18:31:00-04:00",
+        "category": "ai",
+        "_permalink": "https://pulse.tek2dayholdings.com/p/7a6544b36a/"
+      },
+      {
+        "title": "\u2018VikingGPT\u2019 Helps Hedge Fund Giant Wrestle With Trade Ideas",
+        "url": "https://www.bloomberg.com/news/articles/2025-10-17/-vikinggpt-helps-hedge-fund-giant-wrestle-with-trade-ideas",
+        "source": "Bloomberg Technology",
+        "published_at": "2025-10-17T13:24:20-04:00",
+        "category": "ai",
+        "_permalink": "https://pulse.tek2dayholdings.com/p/73463e2471/"
+      },
+      {
+        "title": "Google vs. OpenAI vs. Visa: competing agent protocols threaten the future of AI commerce",
+        "url": "https://venturebeat.com/ai/google-vs-openai-vs-visa-competing-agent-protocols-threaten-the-future-of-ai",
+        "source": "VentureBeat",
+        "published_at": "2025-10-16T00:00:00-04:00",
+        "category": "ai",
+        "_permalink": "https://pulse.tek2dayholdings.com/p/39d250028f/"
+      }
+    ],
+    "llm": [
+      {
+        "title": "Researchers find adding this one simple sentence to prompts makes AI models way more creative",
+        "url": "https://venturebeat.com/ai/researchers-find-adding-this-one-simple-sentence-to-prompts-makes-ai-models",
+        "source": "VentureBeat",
+        "published_at": "2025-10-16T22:40:00-04:00",
+        "category": "ai",
+        "_permalink": "https://pulse.tek2dayholdings.com/p/58f4826234/"
+      }
+    ],
+    "nvidia": [
+      {
+        "title": "The Engines of American-Made Intelligence: NVIDIA and TSMC Celebrate First NVIDIA Blackwell Wafer Produced in the US",
+        "url": "https://blogs.nvidia.com/blog/tsmc-blackwell-manufacturing/",
+        "source": "NVIDIA News",
+        "published_at": "2025-10-17T17:27:00-04:00",
+        "category": "ai",
+        "_permalink": "https://pulse.tek2dayholdings.com/p/442c043ccd/"
+      }
+    ],
+    "agent": [
+      {
+        "title": "Google Cloud Report Says Generative AI Is Delivering Real Returns In Healthcare",
+        "url": "https://www.pymnts.com/artificial-intelligence-2/2025/generative-ai-in-healthcare/",
+        "source": "PYMNTS",
+        "published_at": "2025-10-17T16:37:17-04:00",
+        "category": "ai",
+        "_permalink": "https://pulse.tek2dayholdings.com/p/44241a7398/"
+      },
+      {
+        "title": "Microsoft: Developers Lead Next Enterprise AI Wave",
+        "url": "https://www.pymnts.com/artificial-intelligence-2/2025/microsoft-developers-lead-next-enterprise-ai-wave/",
+        "source": "PYMNTS",
+        "published_at": "2025-10-17T14:42:32-04:00",
+        "category": "ai",
+        "_permalink": "https://pulse.tek2dayholdings.com/p/6b7cc9a7ec/"
+      },
+      {
+        "title": "Codev lets enterprises avoid vibe coding hangovers with a team of agents that generate and document code",
+        "url": "https://venturebeat.com/ai/codev-lets-enterprises-avoid-vibe-coding-hangovers-with-a-team-of-agents",
+        "source": "VentureBeat",
+        "published_at": "2025-10-17T13:45:00-04:00",
+        "category": "software",
+        "_permalink": "https://pulse.tek2dayholdings.com/p/4c43bc8d79/"
+      },
+      {
+        "title": "Building more effective AI agents",
+        "url": "https://www.youtube.com/watch?v=uhJJgc-0iTQ",
+        "source": "Anthropic YouTube",
+        "published_at": "2025-10-17T12:01:56-04:00",
+        "category": "ai",
+        "_permalink": "https://pulse.tek2dayholdings.com/p/9e4dde3143/"
+      },
+      {
+        "title": "Microsoft launches 'Hey Copilot' voice assistant and autonomous agents for all Windows 11 PCs",
+        "url": "https://venturebeat.com/ai/microsoft-launches-hey-copilot-voice-assistant-and-autonomous-agents-for-all",
+        "source": "VentureBeat",
+        "published_at": "2025-10-16T09:00:00-04:00",
+        "category": "ai",
+        "_permalink": "https://pulse.tek2dayholdings.com/p/80824c5371/"
+      }
+    ],
+    "google": [
+      {
+        "title": "Developers can now add live Google Maps data to Gemini-powered AI app outputs",
+        "url": "https://venturebeat.com/ai/developers-can-now-add-live-google-maps-data-to-gemini-powered-ai-app",
+        "source": "VentureBeat",
+        "published_at": "2025-10-17T18:31:00-04:00",
+        "category": "ai",
+        "_permalink": "https://pulse.tek2dayholdings.com/p/7a6544b36a/"
+      },
+      {
+        "title": "Google Cloud Report Says Generative AI Is Delivering Real Returns In Healthcare",
+        "url": "https://www.pymnts.com/artificial-intelligence-2/2025/generative-ai-in-healthcare/",
+        "source": "PYMNTS",
+        "published_at": "2025-10-17T16:37:17-04:00",
+        "category": "ai",
+        "_permalink": "https://pulse.tek2dayholdings.com/p/44241a7398/"
+      },
+      {
+        "title": "Google vs. OpenAI vs. Visa: competing agent protocols threaten the future of AI commerce",
+        "url": "https://venturebeat.com/ai/google-vs-openai-vs-visa-competing-agent-protocols-threaten-the-future-of-ai",
+        "source": "VentureBeat",
+        "published_at": "2025-10-16T00:00:00-04:00",
+        "category": "ai",
+        "_permalink": "https://pulse.tek2dayholdings.com/p/39d250028f/"
+      }
+    ],
+    "microsoft": [
+      {
+        "title": "Microsoft: Developers Lead Next Enterprise AI Wave",
+        "url": "https://www.pymnts.com/artificial-intelligence-2/2025/microsoft-developers-lead-next-enterprise-ai-wave/",
+        "source": "PYMNTS",
+        "published_at": "2025-10-17T14:42:32-04:00",
+        "category": "ai",
+        "_permalink": "https://pulse.tek2dayholdings.com/p/6b7cc9a7ec/"
+      },
+      {
+        "title": "Microsoft launches 'Hey Copilot' voice assistant and autonomous agents for all Windows 11 PCs",
+        "url": "https://venturebeat.com/ai/microsoft-launches-hey-copilot-voice-assistant-and-autonomous-agents-for-all",
+        "source": "VentureBeat",
+        "published_at": "2025-10-16T09:00:00-04:00",
+        "category": "ai",
+        "_permalink": "https://pulse.tek2dayholdings.com/p/80824c5371/"
+      }
+    ],
+    "apple": [
+      {
+        "title": "Trump Talks US-China Trade, Crypto Billions Vanish | Bloomberg Tech 10/17/2025",
+        "url": "https://www.bloomberg.com/news/videos/2025-10-17/bloomberg-tech-10-17-2025-video",
+        "source": "Bloomberg Technology",
+        "published_at": "2025-10-17T18:09:10-04:00",
+        "category": "fintech",
+        "_permalink": "https://pulse.tek2dayholdings.com/p/bc2fb1c276/"
+      },
+      {
+        "title": "Apple Wins Formula One US Streaming Rights, Besting ESPN",
+        "url": "https://www.bloomberg.com/news/articles/2025-10-17/apple-wins-formula-one-us-streaming-rights-besting-espn",
+        "source": "Bloomberg Technology",
+        "published_at": "2025-10-17T10:00:48-04:00",
+        "category": "fintech",
+        "_permalink": "https://pulse.tek2dayholdings.com/p/8651104cca/"
+      }
+    ],
+    "cloud": [
+      {
+        "title": "Google Cloud Report Says Generative AI Is Delivering Real Returns In Healthcare",
+        "url": "https://www.pymnts.com/artificial-intelligence-2/2025/generative-ai-in-healthcare/",
+        "source": "PYMNTS",
+        "published_at": "2025-10-17T16:37:17-04:00",
+        "category": "ai",
+        "_permalink": "https://pulse.tek2dayholdings.com/p/44241a7398/"
+      },
+      {
+        "title": "Oracle Declines on Concerns About Fulfilling AI Cloud Demand",
+        "url": "https://www.bloomberg.com/news/articles/2025-10-16/oracle-rallies-after-saying-ai-cloud-gross-margin-can-be-35",
+        "source": "Bloomberg Technology",
+        "published_at": "2025-10-16T13:30:28-04:00",
+        "category": "ai",
+        "_permalink": "https://pulse.tek2dayholdings.com/p/1b6c15cd5b/"
+      }
+    ]
+  }
+}
