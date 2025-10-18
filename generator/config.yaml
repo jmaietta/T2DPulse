@@ -6,7 +6,7 @@ sources:
   rss:
   - name: VentureBeat
     url: https://venturebeat.com/feed
-  - name: Claude YouTube
+  - name: Anthropic YouTube
     url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrDwWp7EBBv4NwvScIpBDOA
   - name: NVIDIA News
     url: https://nvidianews.nvidia.com/releases.xml
@@ -41,7 +41,6 @@ sources:
   - name: TEK2day (Substack)
     url: https://tek2day.substack.com/feed
   google_news_queries:
-    # Google News queries disabled - using direct RSS feeds only
     ai: []
     software: []
     fintech: []
@@ -73,3 +72,7 @@ companies:
 youtube_feeds:
 - name: YouTube (T2D Pulse)
   url: https://www.youtube.com/feeds/videos.xml?channel_id=UCV6aM1V38dsdo3KTHt_SSNw
+- name: Anthropic YouTube
+  channel_id: UCrDwWp7EBBv4NwvScIpBDOA
+- name: OpenAI YouTube
+  channel_id: UCXZCJLdBC09xxGZ6gcdrc6A
