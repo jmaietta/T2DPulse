@@ -6,6 +6,8 @@ sources:
   rss:
   - name: VentureBeat
     url: https://venturebeat.com/feed
+  - name: Claude YouTube
+    url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrDwWp7EBBv4NwvScIpBDOA
   - name: NVIDIA News
     url: https://nvidianews.nvidia.com/releases.xml
   - name: The Verge
@@ -20,8 +22,6 @@ sources:
     url: https://news.microsoft.com/source/feed/
   - name: OpenAI YouTube
     url: https://www.youtube.com/feeds/videos.xml?channel_id=UCXZCJLdBC09xxGZ6gcdrc6A
-  - name: Anthropic YouTube
-    url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrDwWp7EBBv4NwvScIpBDOA
   - name: PYMNTS
     url: https://www.pymnts.com/feed
   - name: WSJ Technology (WSJD)
@@ -38,6 +38,8 @@ sources:
     url: https://feeds.arstechnica.com/arstechnica/technology-lab
   - name: TechCrunch
     url: https://techcrunch.com/feed/
+  - name: TEK2day (Substack)
+    url: https://tek2day.substack.com/feed
   google_news_queries:
     # Google News queries disabled - using direct RSS feeds only
     ai: []
@@ -46,7 +48,6 @@ sources:
 exclude_domains_suffix:
 - news.ycombinator.com
 - ycombinator.com
-- substack.com
 - x.com
 - twitter.com
 utm:
