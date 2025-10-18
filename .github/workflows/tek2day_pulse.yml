@@ -3,8 +3,8 @@ name: Build TEK2day Pulse (Website Only)
 on:
   # Every 30 minutes, 11:30-23:00 UTC (covers 7:30am-6pm ET in both EST/EDT), Mon-Fri only
   schedule:
-    - cron: "30 11-22 * * 1-5"  # :30 minutes from 11:30-22:30 UTC
-    - cron: "0 12-23 * * 1-5"   # :00 minutes from 12:00-23:00 UTC
+    - cron: "30 11-22 * * 0-6"  # :30 minutes from 11:30-22:30 UTC
+    - cron: "0 12-23 * * 0-6"   # :00 minutes from 12:00-23:00 UTC
   # Manual "Run workflow" button in Actions
   workflow_dispatch: {}
 
