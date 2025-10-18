@@ -1,3 +1,4 @@
+
 #!/usr/bin/env python3
 # generator/generate_pulse.py
 # Website-only generator for TEK2day Pulse (AI -> Software -> FinTech)
@@ -46,6 +47,8 @@ def extract_original_url(entry) -> str | None:
     return (entry.get("link") or "").strip() or None
 
 def extract_image_url(entry) -> str | None:
+    """Extract image URL from RSS feed entry, with YouTube thumbnail support."""
+    # First try standard RSS image fields
     try:
         for key in ("media_content", "media_thumbnail", "enclosures"):
             for it in (entry.get(key) or []):
@@ -56,13 +59,38 @@ def extract_image_url(entry) -> str | None:
                     return url
     except Exception:
         pass
+    
+    # Try finding image in summary/description HTML
     try:
         summary = entry.get("summary", "") or entry.get("description", "") or ""
         m = re.search(r'<img[^>]+src="([^"]+)"', summary)
         if m:
-            return html.unescape(m.group(1))
+            img_url = html.unescape(m.group(1))
+            # Don't return YouTube channel icons - we want video thumbnails
+            if "yt3.ggpht.com" not in img_url and "ytimg.com/vi/" not in img_url:
+                return img_url
     except Exception:
         pass
+    
+    # Special handling for YouTube: extract video ID and construct thumbnail URL
+    try:
+        link = entry.get("link", "")
+        if "youtube.com" in link or "youtu.be" in link:
+            # Extract video ID from various YouTube URL formats
+            video_id = None
+            if "watch?v=" in link:
+                video_id = link.split("watch?v=")[1].split("&")[0]
+            elif "youtu.be/" in link:
+                video_id = link.split("youtu.be/")[1].split("?")[0]
+            elif "/v/" in link:
+                video_id = link.split("/v/")[1].split("?")[0]
+            
+            if video_id:
+                # Return video thumbnail URL
+                return f"https://i.ytimg.com/vi/{video_id}/maxresdefault.jpg"
+    except Exception:
+        pass
+    
     return None
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
@@ -235,7 +263,7 @@ FORCE_FINTECH_SOURCES = {"pymnts"}         # lowercased source label
 FORCE_AI_SOURCES = {"openai", "anthropic"}  # lowercased source label
 
 # Force-include sources (always keep even with zero score)
-FORCE_INCLUDE_SOURCES = set()  # Add sources here if needed
+FORCE_INCLUDE_SOURCES = {"tek2day"}  # Your own content always included
 
 # ----------------- helpers -----------------
 # --- Freshness & diversity helpers (news-first policy) ---
@@ -333,8 +361,8 @@ def build_preferred_today_with_floors(all_items, now_local=None, floors=None, ba
     
     # Combine with current run's items
     all_combined = archived_items + all_items
-    # Collapse Google wrapper vs publisher duplicates across runs
-    all_combined = dedupe_story_variants(all_combined)# Dedupe by URL
+    # Keep all stories from different sources (no Google News wrappers to collapse)
+    # all_combined = dedupe_story_variants(all_combined)  # DISABLED
     seen_urls = set()
     unique_items = []
     for it in all_combined:
@@ -395,7 +423,9 @@ def now_et():
 
 def within_window(dt_local):
     # Accept items up to BACKFILL_WINDOW_DAYS old so we can top up thin sections.
-    return dt_local >= (now_et() - timedelta(days=BACKFILL_WINDOW_DAYS))
+    cutoff = now_et() - timedelta(days=BACKFILL_WINDOW_DAYS)
+    result = dt_local >= cutoff
+    return result
 
 def add_utm(url):
     return f"{url}{'&' if '?' in url else '?'}utm_source={UTM['source']}&utm_medium={UTM['medium']}"
@@ -443,8 +473,9 @@ def parse_pubdate(entry):
                 dt = dtparser.parse(entry[key])
                 if not dt.tzinfo:
                     dt = dt.replace(tzinfo=timezone.utc)
-                return dt.astimezone(TZ)
-            except Exception:
+                dt_tz = dt.astimezone(TZ)
+                return dt_tz
+            except Exception as e:
                 pass
     return now_et()
 
@@ -476,7 +507,7 @@ def _render_template_string(tpl: str, **kv) -> str:
 
 def create_branded_og_image(source_url: str, permalink_dir: str) -> tuple[str, str]:
     """
-    Creates a branded OG image (1200x630) and thumbnail (300x300):
+    Creates a branded OG image (1200x630) and thumbnail (240x135):
     - Primary: Fetch source article's og:image and overlay T2D logo (120x120, top-right, 20px padding)
     - Fallback: Use T2D banner if source image unavailable
     Returns tuple of (og_image_rel_path, thumbnail_rel_path) or empty strings on failure.
@@ -498,19 +529,41 @@ def create_branded_og_image(source_url: str, permalink_dir: str) -> tuple[str, s
         # Try to fetch source article's og:image
         source_og_url = None
         try:
-            resp = requests.get(source_url, timeout=10, headers={"User-Agent": "Mozilla/5.0"})
+            headers = {
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+            }
+            resp = requests.get(source_url, timeout=10, headers=headers, allow_redirects=True)
             soup = BeautifulSoup(resp.text, "html5lib")
-            og_img = soup.find("meta", property="og:image")
-            if og_img and og_img.get("content"):
-                source_og_url = og_img["content"]
-        except Exception:
-            pass
+            
+            # Try multiple meta tag variations
+            og_img = (soup.find("meta", property="og:image") or 
+                     soup.find("meta", attrs={"name": "og:image"}) or
+                     soup.find("meta", property="twitter:image") or
+                     soup.find("meta", attrs={"name": "twitter:image"}))
+            
+            if og_img:
+                img_url = og_img.get("content") or og_img.get("value")
+                if img_url:
+                    # Handle relative URLs
+                    if img_url.startswith("//"):
+                        img_url = "https:" + img_url
+                    elif img_url.startswith("/"):
+                        from urllib.parse import urlparse
+                        parsed = urlparse(source_url)
+                        img_url = f"{parsed.scheme}://{parsed.netloc}{img_url}"
+                    source_og_url = img_url
+        except Exception as e:
+            print(f"Could not fetch og:image from {source_url}: {e}")
         
         # Try to create image from source
         base_img = None
         if source_og_url:
             try:
-                img_resp = requests.get(source_og_url, timeout=10, headers={"User-Agent": "Mozilla/5.0"})
+                headers = {
+                    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
+                    "Referer": source_url
+                }
+                img_resp = requests.get(source_og_url, timeout=10, headers=headers)
                 base_img = Image.open(BytesIO(img_resp.content)).convert("RGB")
                 
                 # Resize to 1200x630, maintaining aspect ratio and cropping
@@ -574,8 +627,8 @@ def create_branded_og_image(source_url: str, permalink_dir: str) -> tuple[str, s
                 
                 pid = os.path.basename(permalink_dir)
                 return (f"/p/{pid}/og-image.png", f"/p/{pid}/thumbnail.png")
-            except Exception:
-                pass
+            except Exception as e:
+                print(f"Could not process image from {source_og_url}: {e}")
         
         # Fallback: use banner
         if os.path.exists(banner_path):
@@ -609,8 +662,8 @@ def create_branded_og_image(source_url: str, permalink_dir: str) -> tuple[str, s
             pid = os.path.basename(permalink_dir)
             return (f"/p/{pid}/og-image.png", f"/p/{pid}/thumbnail.png")
         
-    except Exception:
-        pass
+    except Exception as e:
+        print(f"Failed to create branded image: {e}")
     
     return ("", "")
 
@@ -640,7 +693,9 @@ def write_permalink_page(it: dict) -> str:
     summary = _plain_text_summary(it, limit=180)
     
     # Create branded OG image and thumbnail
-    og_image_rel, thumbnail_rel = create_branded_og_image(url, perma_dir)
+    # Use the actual article URL (already resolved from Google News redirects)
+    article_url = url  # This is already the final resolved URL
+    og_image_rel, thumbnail_rel = create_branded_og_image(article_url, perma_dir)
     og_image_abs = f"{site_base}{og_image_rel}" if og_image_rel and site_base else og_image_rel
     thumbnail_abs = f"{site_base}{thumbnail_rel}" if thumbnail_rel and site_base else thumbnail_rel
 
@@ -695,19 +750,67 @@ def is_deals_or_consumer_shopping(title, url):
 def fetch_rss(feed_name, url):
     """Direct outlet RSS (Verge, VB, PYMNTS, OpenAI, Anthropic)."""
     try:
-        d = feedparser.parse(url)
+        # Use a proper User-Agent to avoid blocking
+        import urllib.request
+        req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'})
+        
+        is_tek2day = "tek2day" in feed_name.lower()
+        
+        if is_tek2day:
+            print(f"  [DEBUG] Fetching URL: {url}")
+        
+        # Parse with User-Agent
+        try:
+            response = urllib.request.urlopen(req, timeout=15)
+            feed_content = response.read()
+            if is_tek2day:
+                print(f"  [DEBUG] Downloaded {len(feed_content)} bytes")
+            d = feedparser.parse(feed_content)
+        except Exception as e:
+            if is_tek2day:
+                print(f"  [DEBUG] Download failed, trying direct parse: {e}")
+            # Fallback to direct parse
+            d = feedparser.parse(url)
+        
         items = []
+        
+        if is_tek2day:
+            print(f"  [DEBUG] TEK2day feed has {len(d.entries)} total entries")
+            print(f"  [DEBUG] Feed status: {d.get('status', 'unknown')}")
+            print(f"  [DEBUG] Feed bozo: {d.get('bozo', False)}")
+            if d.get('bozo'):
+                print(f"  [DEBUG] Feed exception: {d.get('bozo_exception', 'none')}")
+        
         for e in d.entries[:60]:
             title = clean_text(getattr(e, "title", ""))
             link = getattr(e, "link", "")
+            
+            if is_tek2day:
+                print(f"  [DEBUG] Entry: {title[:50]}")
+                print(f"  [DEBUG] Link: {link}")
+            
             if not title or not link:
+                if is_tek2day:
+                    print(f"  [DEBUG] ❌ Skipped: No title or link")
                 continue
+                
             # Allowlist YouTube channel feed items even if domain is globally blocked
             if is_blocked(link) and "youtube.com/feeds/videos.xml" not in (url or ""):
+                if is_tek2day:
+                    print(f"  [DEBUG] ❌ Skipped: Blocked domain")
                 continue
+                
             dt_local = parse_pubdate(e)
+            
+            if is_tek2day:
+                print(f"  [DEBUG] Parsed date: {dt_local}")
+                print(f"  [DEBUG] within_window check: {within_window(dt_local)}")
+            
             if not within_window(dt_local):
+                if is_tek2day:
+                    print(f"  [DEBUG] ❌ Skipped: Outside {BACKFILL_WINDOW_DAYS}-day window")
                 continue
+                
             raw_sum = getattr(e, "summary", "") or getattr(e, "description", "")
             summary = clean_text(strip_html_to_text(raw_sum), 400)
             content_html = ""
@@ -716,6 +819,27 @@ def fetch_rss(feed_name, url):
                     content_html = e.content[0].value
                 except Exception:
                     pass
+            
+            # Extract image from RSS feed
+            image_url = extract_image_url(e)
+            
+            # Override with YouTube video thumbnail if this is a YouTube feed
+            if "youtube.com/feeds/videos.xml" in (url or ""):
+                try:
+                    video_id = None
+                    if "watch?v=" in link:
+                        video_id = link.split("watch?v=")[1].split("&")[0]
+                    elif "youtu.be/" in link:
+                        video_id = link.split("youtu.be/")[1].split("?")[0]
+                    
+                    if video_id:
+                        image_url = f"https://i.ytimg.com/vi/{video_id}/maxresdefault.jpg"
+                except Exception:
+                    pass
+            
+            if is_tek2day:
+                print(f"  [DEBUG] ✅ Added to items!")
+            
             items.append({
                 "title": title,
                 "url": link,
@@ -723,9 +847,14 @@ def fetch_rss(feed_name, url):
                 "source": feed_name,  # trust the configured brand for direct feeds
                 "summary": summary,
                 "content_html": content_html,
+                "image_url": image_url,  # Add RSS image
             })
         return items
-    except Exception:
+    except Exception as e:
+        if "tek2day" in feed_name.lower():
+            print(f"  [DEBUG] ❌ EXCEPTION: {e}")
+            import traceback
+            traceback.print_exc()
         return []
 
 def google_news_rss(query):
@@ -761,6 +890,9 @@ def google_news_rss(query):
         if domain_of(final_url) == "news.google.com":
             continue
 
+        # Extract image from Google News RSS feed
+        image_url = extract_image_url(e)
+
         out.append({
             "title": title,
             "url": final_url,
@@ -768,6 +900,7 @@ def google_news_rss(query):
             "source": nice_source_for(final_url),
             "summary": summary,
             "content_html": "",
+            "image_url": image_url,  # Add image from feed
         })
     return out
 
@@ -1055,9 +1188,28 @@ def build_section(date_str, by_cat):
         for idx, it in enumerate(items):
             title_raw = it["title"]
             title = html.escape(title_raw)
-            url = add_utm(it["url"])
+            url_raw = it["url"]
+            url = add_utm(url_raw)
             permalink = it.get("_abs_permalink", "")
-            thumbnail = it.get("_thumbnail", "")
+            
+            # For YouTube videos, ALWAYS use the direct video thumbnail, skip permalink thumbnail
+            if "youtube.com" in url_raw or "youtu.be" in url_raw:
+                thumbnail = ""
+                try:
+                    video_id = None
+                    if "watch?v=" in url_raw:
+                        video_id = url_raw.split("watch?v=")[1].split("&")[0]
+                    elif "youtu.be/" in url_raw:
+                        video_id = url_raw.split("youtu.be/")[1].split("?")[0]
+                    
+                    if video_id:
+                        thumbnail = f"https://i.ytimg.com/vi/{video_id}/mqdefault.jpg"
+                except Exception:
+                    pass
+            else:
+                # For non-YouTube, use permalink thumbnail or RSS image
+                thumbnail = it.get("_thumbnail") or it.get("image_url") or ""
+            
             src = html.escape(it["source"])
             try:
                 dt_local = dtparser.parse(it["published_at"]).astimezone(TZ)
@@ -1100,37 +1252,87 @@ def main():
     # Weekend: reuse Friday snapshot if available
     if _weekend_use_friday_payload_if_available():
         return
+    
+    print("=== Starting T2D Pulse Generation ===")
     all_items = []
 
     # Direct RSS
+    print(f"\n--- Fetching {len(CFG['sources']['rss'])} RSS feeds ---")
     for s in CFG["sources"]["rss"]:
-        all_items.extend(fetch_rss(s["name"], s["url"]))
+        print(f"Fetching: {s['name']} from {s['url']}")
+        fetched = fetch_rss(s["name"], s["url"])
+        print(f"  → Got {len(fetched)} articles")
+        all_items.extend(fetched)
 
     # Google News queries
+    print(f"\n--- Processing Google News queries ---")
     for _, queries in CFG["sources"]["google_news_queries"].items():
         for q in queries:
             all_items.extend(google_news_rss(q))
 
     # Dedupe
+    print(f"\n--- Before dedupe: {len(all_items)} total articles ---")
     all_items = dedupe(all_items)
+    print(f"--- After dedupe: {len(all_items)} unique articles ---")
 
     # Final filtering, relevance, enrichment
     pruned = []
+    tek2day_count = 0
+    tek2day_filtered = 0
+    
     for it in all_items:
+        is_tek2day = "tek2day" in (it.get("source") or "").lower()
+        
+        if is_tek2day:
+            tek2day_count += 1
+            print(f"\n[TEK2DAY] Processing article: {it.get('title', 'NO TITLE')[:60]}")
+            print(f"  Source: {it.get('source')}")
+            print(f"  URL: {it.get('url')}")
+        
         if is_blocked(it["url"]):
+            if is_tek2day:
+                print(f"  ❌ BLOCKED by domain filter")
+                tek2day_filtered += 1
             continue
+            
         if is_deals_or_consumer_shopping(it["title"], it["url"]):
+            if is_tek2day:
+                print(f"  ❌ BLOCKED by deals/shopping filter")
+                tek2day_filtered += 1
             continue
+            
         # Normalize source for routing/force-include
         src_norm = (it.get("source") or "").strip().lower()
+        
+        if is_tek2day:
+            print(f"  Normalized source: '{src_norm}'")
+            print(f"  FORCE_INCLUDE_SOURCES: {FORCE_INCLUDE_SOURCES}")
+        
         # Compute summary first so categorizer can use it
         it["summary_text"] = summarize(it)
         cat, score = categorize_with_score(it["title"], it["url"], it.get("summary_text", ""))
+        
+        if is_tek2day:
+            print(f"  Category: {cat}, Score: {score}")
+        
         is_youtube_src = ("youtube" in src_norm)
-        # Keep zero-score items if forced (AI/YouTube) or if the source name includes 'youtube'
-        if score == 0 and (src_norm not in FORCE_AI_SOURCES) and (not is_youtube_src) and (src_norm not in FORCE_INCLUDE_SOURCES):
+        # Keep zero-score items if forced (AI/YouTube) or if the source name includes force-include terms
+        is_force_included = any(term in src_norm for term in FORCE_INCLUDE_SOURCES)
+        
+        if is_tek2day:
+            print(f"  is_force_included: {is_force_included}")
+            print(f"  Checking if 'tek2day' in '{src_norm}': {'tek2day' in src_norm}")
+        
+        if score == 0 and (src_norm not in FORCE_AI_SOURCES) and (not is_youtube_src) and (not is_force_included):
+            if is_tek2day:
+                print(f"  ❌ BLOCKED by zero-score filter")
+                tek2day_filtered += 1
             continue  # drop unrelated items
+            
         it["category"] = cat
+        
+        if is_tek2day:
+            print(f"  ✅ PASSED all filters!")
 
         # --- OpenAI/Anthropic routing: Always AI (they are definitionally AI companies) ---
         try:
@@ -1152,6 +1354,12 @@ def main():
         # --- end routing ---
 
         pruned.append(it)
+    
+    print(f"\n=== TEK2DAY SUMMARY ===")
+    print(f"TEK2day articles found: {tek2day_count}")
+    print(f"TEK2day articles filtered out: {tek2day_filtered}")
+    print(f"TEK2day articles passed: {tek2day_count - tek2day_filtered}")
+    
     all_items = pruned
 
     # Sort newest first
