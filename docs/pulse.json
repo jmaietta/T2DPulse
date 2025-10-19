@@ -1,5 +1,25 @@
 [
   {
+    "title": "OpenAI\u2019s \u2018embarrassing\u2019 math",
+    "url": "https://techcrunch.com/2025/10/19/openais-embarrassing-math/",
+    "published_at": "2025-10-19T14:56:58-04:00",
+    "source": "TechCrunch",
+    "summary": "No, GPT-5 did not solve a bunch of previously unsolved math problems.",
+    "content_html": "",
+    "image_url": "",
+    "summary_text": "No, GPT-5 did not solve a bunch of previously unsolved math problems.",
+    "category": "ai",
+    "_trending_tags": [
+      "ai",
+      "gpt",
+      "openai"
+    ],
+    "_permalink": "/p/18375dcd63/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/18375dcd63/",
+    "_summary_240": "No, GPT-5 did not solve a bunch of previously unsolved math problems.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/18375dcd63/thumbnail.png"
+  },
+  {
     "title": "Organizers say over 7 million showed up to No Kings protests",
     "url": "https://www.theverge.com/news/802321/organizers-say-over-7-million-showed-up-to-no-kings-protests",
     "published_at": "2025-10-19T10:50:06-04:00",
@@ -49,26 +69,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/bda607cf75/",
     "_summary_240": "This is The Stepback, a weekly newsletter breaking down one essential story from the tech world. For more on AI and the industry's power dynamics and societal implications,...",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/bda607cf75/thumbnail.png"
-  },
-  {
-    "title": "The teacher is the new engineer: Inside the rise of AI enablement and PromptOps",
-    "url": "https://venturebeat.com/ai/the-teacher-is-the-new-engineer-inside-the-rise-of-ai-enablement-and",
-    "published_at": "2025-10-18T23:45:00-04:00",
-    "source": "VentureBeat",
-    "summary": "As more companies quickly begin using gen AI, it\u2019s important to avoid a big mistake that could impact its effectiveness: Proper onboarding. Companies spend time and money training new human workers to succeed, but when they use large language model (LLM) helpers, many treat them like simple tools that need no explanation. This isn't just a waste of resources; it's risky. Research shows that AI ha...",
-    "content_html": "",
-    "image_url": "https://images.ctfassets.net/jdtwqhzvc2n1/3LM1cCj4dJrbJGr6K5iiIe/b18688f1a0faf3befb7be85063da4801/u7277289442_A_sophisticated_AI_agent_is_standing_at_the_front_a862de2f-78d6-4330-8b28-8957b27aa9e0_0.png",
-    "summary_text": "As more companies quickly begin using gen AI, it\u2019s important to avoid a big mistake that could impact its effectiveness: Proper onboarding. Companies spend time and money training new human workers to succeed, but when they use large language model (LLM) help...",
-    "category": "ai",
-    "_trending_tags": [
-      "ai",
-      "genai",
-      "llm"
-    ],
-    "_permalink": "/p/dec173b1d6/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/dec173b1d6/",
-    "_summary_240": "As more companies quickly begin using gen AI, it\u2019s important to avoid a big mistake that could impact its effectiveness: Proper onboarding. Companies spend time and money...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/dec173b1d6/thumbnail.png"
   },
   {
     "title": "Wikipedia says traffic is falling due to AI search summaries and social video",
@@ -139,25 +139,6 @@
     ]
   },
   {
-    "title": "Abstract or die: Why AI enterprises can't afford rigid vector stacks",
-    "url": "https://venturebeat.com/ai/abstract-or-die-why-ai-enterprises-cant-afford-rigid-vector-stacks",
-    "published_at": "2025-10-18T05:00:00-04:00",
-    "source": "VentureBeat",
-    "summary": "Vector databases (DBs), once specialist research instruments, have become widely used infrastructure in just a few years. They power today's semantic search, recommendation engines, anti-fraud measures and gen AI applications across industries. There are a deluge of options: PostgreSQL with pgvector, MySQL HeatWave, DuckDB VSS, SQLite VSS, Pinecone, Weaviate, Milvus and several others. The riches...",
-    "content_html": "",
-    "image_url": "https://images.ctfassets.net/jdtwqhzvc2n1/2Xu1YqwqTUMJMVWnRrKy7M/23b8a69e94d864a0306f259b1cd29397/u7277289442_A_rendering_of_animated_friendly_AI_agents_with_h_9b63c83c-c489-4154-a498-3bdfdc3a5c5b_3.png",
-    "summary_text": "Vector databases (DBs), once specialist research instruments, have become widely used infrastructure in just a few years. They power today's semantic search, recommendation engines, anti-fraud measures and gen AI applications across industries. There are a de...",
-    "category": "ai",
-    "_trending_tags": [
-      "ai",
-      "genai"
-    ],
-    "_permalink": "/p/1cdab51cad/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/1cdab51cad/",
-    "_summary_240": "Vector databases (DBs), once specialist research instruments, have become widely used infrastructure in just a few years. They power today's semantic search, recommendation...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/1cdab51cad/thumbnail.png"
-  },
-  {
     "title": "Every Screen on the Planet: The Secret story of TikTok \u2014 a power grab, one clip at a time",
     "url": "https://www.ft.com/content/e29b8e1d-b716-4fae-be77-70566b3fefe2",
     "published_at": "2025-10-18T00:00:12-04:00",
@@ -200,30 +181,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/dd82af9da2/",
     "_summary_240": "CVS Pharmacy said it is now serving more than 9 million former Rite Aid and Bartell Drugs patients after completing its acquisition of select assets of the now-closed Rite Aid....",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/dd82af9da2/thumbnail.png"
-  },
-  {
-    "title": "Developers can now add live Google Maps data to Gemini-powered AI app outputs",
-    "url": "https://venturebeat.com/ai/developers-can-now-add-live-google-maps-data-to-gemini-powered-ai-app",
-    "published_at": "2025-10-17T18:31:00-04:00",
-    "source": "VentureBeat",
-    "summary": "Google is adding a new feature for third-party developers building atop its Gemini AI models that rivals like OpenAI's ChatGPT, Anthropic's Claude, and the growing array of Chinese open source options are unlikely to get anytime soon: grounding with Google Maps. This addition allows developers to connect Google's Gemini AI models' reasoning capabilities with live geospatial data from Google Maps,...",
-    "content_html": "",
-    "image_url": "https://images.ctfassets.net/jdtwqhzvc2n1/2ehvkDsQ7NC7wQuECOcDGS/cb89da9ccaf13f2888f005ac93cecffa/cfr0z3n_realistic_graphic_novel_hyper_detailed_flat_illustratio_8aae43d5-1e50-4ebd-8760-ea28dbc0f328.png",
-    "summary_text": "Google is adding a new feature for third-party developers building atop its Gemini AI models that rivals like OpenAI's ChatGPT, Anthropic's Claude, and the growing array of Chinese open source options are unlikely to get anytime soon: grounding with Google Ma...",
-    "category": "ai",
-    "_trending_tags": [
-      "ai",
-      "anthropic",
-      "chatgpt",
-      "claude",
-      "google",
-      "gpt",
-      "openai"
-    ],
-    "_permalink": "/p/7a6544b36a/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/7a6544b36a/",
-    "_summary_240": "Google is adding a new feature for third-party developers building atop its Gemini AI models that rivals like OpenAI's ChatGPT, Anthropic's Claude, and the growing array of...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/7a6544b36a/thumbnail.png"
   },
   {
     "title": "Trump Talks US-China Trade, Crypto Billions Vanish | Bloomberg Tech 10/17/2025",
@@ -399,43 +356,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/6b7cc9a7ec/thumbnail.png"
   },
   {
-    "title": "Cisco warns enterprises: Without tapping machine data, your AI strategy is incomplete",
-    "url": "https://venturebeat.com/security/cisco-warns-enterprises-without-tapping-machine-data-your-ai-strategy-is",
-    "published_at": "2025-10-17T14:10:00-04:00",
-    "source": "VentureBeat",
-    "summary": "Cisco executives make the case that the distinction between product and model companies is disappearing, and that accessing the 55% of enterprise data growth that current AI ignores will separate winners from losers. VentureBeat recently caught up with Jeetu Patel, Cisco's President and Chief Product Officer and DJ Sampath, Senior Vice President of AI Software and Platform, to gain new insights i...",
-    "content_html": "",
-    "image_url": "https://images.ctfassets.net/jdtwqhzvc2n1/1ooehT0PzSVnkDAGGhBfos/f7f832028725f8f1ca1af654c398ae7a/hero_2.jpg",
-    "summary_text": "Cisco executives make the case that the distinction between product and model companies is disappearing, and that accessing the 55% of enterprise data growth that current AI ignores will separate winners from losers. VentureBeat recently caught up with Jeetu ...",
-    "category": "ai",
-    "_trending_tags": [
-      "ai"
-    ],
-    "_permalink": "/p/09e7080f7e/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/09e7080f7e/",
-    "_summary_240": "Cisco executives make the case that the distinction between product and model companies is disappearing, and that accessing the 55% of enterprise data growth that current AI...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/09e7080f7e/thumbnail.png"
-  },
-  {
-    "title": "Codev lets enterprises avoid vibe coding hangovers with a team of agents that generate and document code",
-    "url": "https://venturebeat.com/ai/codev-lets-enterprises-avoid-vibe-coding-hangovers-with-a-team-of-agents",
-    "published_at": "2025-10-17T13:45:00-04:00",
-    "source": "VentureBeat",
-    "summary": "For many software developers using generative AI, vibe coding is a double-edged sword. The process delivers rapid prototypes but often leaves a trail of brittle, undocumented code that creates significant technical debt. A new open-source platform, Codev , addresses this by proposing a fundamental shift: treating the natural language conversation with an AI as part of the actual source code. Code...",
-    "content_html": "",
-    "image_url": "https://images.ctfassets.net/jdtwqhzvc2n1/74nSfOtaxxWUY7F5d25vJp/2f602a8058b366f3bdd73cd30d00cf58/AI-human_coding.jpg",
-    "summary_text": "For many software developers using generative AI, vibe coding is a double-edged sword. The process delivers rapid prototypes but often leaves a trail of brittle, undocumented code that creates significant technical debt. A new open-source platform, Codev , ad...",
-    "category": "software",
-    "_trending_tags": [
-      "agent",
-      "ai"
-    ],
-    "_permalink": "/p/4c43bc8d79/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/4c43bc8d79/",
-    "_summary_240": "For many software developers using generative AI, vibe coding is a double-edged sword. The process delivers rapid prototypes but often leaves a trail of brittle, undocumented...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/4c43bc8d79/thumbnail.png"
-  },
-  {
     "title": "Ex-Builder.ai CFO subpoenaed as US authorities probe its collapse",
     "url": "https://www.ft.com/content/177dd03a-bffe-4248-9c75-db2f54dd35a4",
     "published_at": "2025-10-17T13:39:10-04:00",
@@ -537,20 +457,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/9e4dde3143/thumbnail.png"
   },
   {
-    "title": "Stellantis teams up with Pony AI to develop robotaxis in Europe",
-    "url": "https://techcrunch.com/2025/10/17/stellantis-teams-up-with-pony-ai-to-develop-robotaxis-in-europe/",
-    "published_at": "2025-10-17T11:12:55-04:00",
-    "source": "TechCrunch",
-    "summary": "The collaboration will integrate Pony\u2019s self-driving software into Stellantis\u2019 electric medium-size van platform, which is built with advanced sensors to support autonomous vehicles.",
-    "content_html": "",
-    "image_url": "",
-    "summary_text": "The collaboration will integrate Pony\u2019s self-driving software into Stellantis\u2019 electric medium-size van platform, which is built with advanced sensors to support autonomous vehicles.",
-    "category": "ai",
-    "_trending_tags": [
-      "ai"
-    ]
-  },
-  {
     "title": "Can AI Avoid the Enshittification Trap?",
     "url": "https://www.wired.com/story/can-ai-escape-enshittification-trap/",
     "published_at": "2025-10-17T11:00:00-04:00",
@@ -567,24 +473,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/18d77a5ea5/",
     "_summary_240": "Cory Doctorow\u2019s theory of \u201censhittification\u201d explains how tech platforms rot from within. As AI grows more profitable\u2014and powerful\u2014it risks the same fate.",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/18d77a5ea5/thumbnail.png"
-  },
-  {
-    "title": "World's largest open-source multimodal dataset delivers 17x training efficiency, unlocking enterprise AI that connects documents, audio and video",
-    "url": "https://venturebeat.com/data-infrastructure/worlds-largest-open-source-multimodal-dataset-delivers-17x-training",
-    "published_at": "2025-10-17T09:00:00-04:00",
-    "source": "VentureBeat",
-    "summary": "AI models are only as good as the data they're trained on. That data generally needs to be labeled, curated and organized before models can learn from it in an effective way. One of the big missing links in the AI ecosystem has been the availability of a large high-quality open-source multimodal dataset. That changes today with the debut of the EMM-1 dataset which is comprised of 1 billion data p...",
-    "content_html": "",
-    "image_url": "https://images.ctfassets.net/jdtwqhzvc2n1/79Sf3Ti0NPEcvRc7c5dqV9/695d4798edd273cafd650056133fdfe7/multimodal-dataset-smk.png",
-    "summary_text": "AI models are only as good as the data they're trained on. That data generally needs to be labeled, curated and organized before models can learn from it in an effective way. One of the big missing links in the AI ecosystem has been the availability of a larg...",
-    "category": "ai",
-    "_trending_tags": [
-      "ai"
-    ],
-    "_permalink": "/p/3be49d96f5/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/3be49d96f5/",
-    "_summary_240": "AI models are only as good as the data they're trained on. That data generally needs to be labeled, curated and organized before models can learn from it in an effective way. One...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/3be49d96f5/thumbnail.png"
   },
   {
     "title": "California Regulates A.I. Companions + OpenAI Investigates Its Critics + The Hard Fork Review of Slop",
@@ -650,25 +538,6 @@
     "_trending_tags": [
       "ai"
     ]
-  },
-  {
-    "title": "Researchers find adding this one simple sentence to prompts makes AI models way more creative",
-    "url": "https://venturebeat.com/ai/researchers-find-adding-this-one-simple-sentence-to-prompts-makes-ai-models",
-    "published_at": "2025-10-16T22:40:00-04:00",
-    "source": "VentureBeat",
-    "summary": "One of the coolest things about generative AI models \u2014 both large language models (LLMs) and diffusion-based image generators \u2014 is that they are \"non-deterministic.\" That is, despite their reputation among some critics as being \"fancy autocorrect,\" generative AI models actually generate their outputs by choosing from a distribution of the most probable next tokens (units of information) to fill o...",
-    "content_html": "",
-    "image_url": "https://images.ctfassets.net/jdtwqhzvc2n1/6muOslUgOQCou8M10zFbHv/b0015ffd123a52616f65bc2a26b14b05/cfr0z3n_Simple_refined_corporate_memphis_flat_illustration_isom_73fd3864-fe47-4408-bdec-76e8596ca810.png",
-    "summary_text": "One of the coolest things about generative AI models \u2014 both large language models (LLMs) and diffusion-based image generators \u2014 is that they are \"non-deterministic.\" That is, despite their reputation among some critics as being \"fancy autocorrect,\" generative...",
-    "category": "ai",
-    "_trending_tags": [
-      "ai",
-      "llm"
-    ],
-    "_permalink": "/p/58f4826234/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/58f4826234/",
-    "_summary_240": "One of the coolest things about generative AI models \u2014 both large language models (LLMs) and diffusion-based image generators \u2014 is that they are \"non-deterministic.\" That is,...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/58f4826234/thumbnail.png"
   },
   {
     "title": "Nation-state hackers deliver malware from \u201cbulletproof\u201d blockchains",
@@ -783,22 +652,6 @@
     ]
   },
   {
-    "title": "How Anthropic\u2019s \u2018Skills\u2019 make Claude faster, cheaper, and more consistent for business workflows",
-    "url": "https://venturebeat.com/ai/how-anthropics-skills-make-claude-faster-cheaper-and-more-consistent-for",
-    "published_at": "2025-10-16T12:00:00-04:00",
-    "source": "VentureBeat",
-    "summary": "Anthropic launched a new capability on Thursday that allows its Claude AI assistant to tap into specialized expertise on demand, marking the company's latest effort to make artificial intelligence more practical for enterprise workflows as it chases rival OpenAI in the intensifying competition over AI-powered software development. The feature, called Skills , enables users to create folders conta...",
-    "content_html": "",
-    "image_url": "https://images.ctfassets.net/jdtwqhzvc2n1/5KwMYU2hucZ0L584A3lOVV/e7cd9bb4ab6fa04669f700eaa8ee6c74/nuneybits_Vector_art_of_a_retro_personal_computer_image_in_burn_55247853-b50a-4330-b1f1-3185f079bb17.webp",
-    "summary_text": "Anthropic launched a new capability on Thursday that allows its Claude AI assistant to tap into specialized expertise on demand, marking the company's latest effort to make artificial intelligence more practical for enterprise workflows as it chases rival Ope...",
-    "category": "ai",
-    "_trending_tags": [
-      "ai",
-      "anthropic",
-      "claude"
-    ]
-  },
-  {
     "title": "How UK financial services giant L&G is reinventing customer care with AI from Microsoft",
     "url": "https://ukstories.microsoft.com/features/how-lg-is-reinventing-customer-care-with-ai/",
     "published_at": "2025-10-16T11:55:53-04:00",
@@ -858,37 +711,6 @@
     ]
   },
   {
-    "title": "Microsoft launches 'Hey Copilot' voice assistant and autonomous agents for all Windows 11 PCs",
-    "url": "https://venturebeat.com/ai/microsoft-launches-hey-copilot-voice-assistant-and-autonomous-agents-for-all",
-    "published_at": "2025-10-16T09:00:00-04:00",
-    "source": "VentureBeat",
-    "summary": "Microsoft is fundamentally reimagining how people interact with their computers, announcing Thursday a sweeping transformation of Windows 11 that brings voice-activated AI assistants, autonomous software agents, and contextual intelligence to every PC running the operating system \u2014 not just premium devices with specialized chips. The announcement represents Microsoft's most aggressive push yet to...",
-    "content_html": "",
-    "image_url": "https://images.ctfassets.net/jdtwqhzvc2n1/1LtYH6GIABRoimOmrndJLF/cc718a2cc21b1fef4c64bebfe4a3a965/nuneybits_Vector_art_of_Microsoft_Windows_desktop_computer_mode_02e6a80a-72d4-467e-94ba-e6dfdd7d49c5.webp",
-    "summary_text": "Microsoft is fundamentally reimagining how people interact with their computers, announcing Thursday a sweeping transformation of Windows 11 that brings voice-activated AI assistants, autonomous software agents, and contextual intelligence to every PC running...",
-    "category": "ai",
-    "_trending_tags": [
-      "agent",
-      "ai",
-      "microsoft"
-    ]
-  },
-  {
-    "title": "ACE prevents context collapse with \u2018evolving playbooks\u2019 for self-improving AI agents",
-    "url": "https://venturebeat.com/ai/ace-prevents-context-collapse-with-evolving-playbooks-for-self-improving-ai",
-    "published_at": "2025-10-16T08:00:00-04:00",
-    "source": "VentureBeat",
-    "summary": "A new framework from Stanford University and SambaNova addresses a critical challenge in building robust AI agents: context engineering. Called Agentic Context Engineering (ACE), the framework automatically populates and modifies the context window of large language model (LLM) applications by treating it as an \u201cevolving playbook\u201d that creates and refines strategies as the agent gains experience ...",
-    "content_html": "",
-    "image_url": "https://images.ctfassets.net/jdtwqhzvc2n1/4EJUoAdNGN4myXdb69GnMD/f8ab6aaf2305a72ad84dcc5e4afb1beb/agentic_context_engineering.jpg",
-    "summary_text": "A new framework from Stanford University and SambaNova addresses a critical challenge in building robust AI agents: context engineering. Called Agentic Context Engineering (ACE), the framework automatically populates and modifies the context window of large l...",
-    "category": "ai",
-    "_trending_tags": [
-      "agent",
-      "ai"
-    ]
-  },
-  {
     "title": "\u2018Of course it\u2019s a bubble\u2019: AI start-up valuations soar in investor frenzy",
     "url": "https://www.ft.com/content/59baba74-c039-4fa7-9d63-b14f8b2bb9e2",
     "published_at": "2025-10-16T00:00:14-04:00",
@@ -901,41 +723,6 @@
     "_trending_tags": [
       "ai",
       "openai"
-    ]
-  },
-  {
-    "title": "Google vs. OpenAI vs. Visa: competing agent protocols threaten the future of AI commerce",
-    "url": "https://venturebeat.com/ai/google-vs-openai-vs-visa-competing-agent-protocols-threaten-the-future-of-ai",
-    "published_at": "2025-10-16T00:00:00-04:00",
-    "source": "VentureBeat",
-    "summary": "When Walmart and OpenAI announced that the retailer would integrate with ChatGPT, the question became how quickly OpenAI could deliver on the promise of agents buying things for people. In the battle of AI-enabled commerce, getting agents to securely complete transactions is one of the biggest hurdles. More and more, chat platforms like ChatGPT are replacing browsers and getting very good at surf...",
-    "content_html": "",
-    "image_url": "https://images.ctfassets.net/jdtwqhzvc2n1/1V6XILFC2iVvqfh58LXNkm/d7375489aa11c0096efb78642ca1c7a5/crimedy7_illustration_of_robot_paying_for_groceries_--ar_169__3d2a2c22-022a-4104-9070-fab8f94d73d5_1.png",
-    "summary_text": "When Walmart and OpenAI announced that the retailer would integrate with ChatGPT, the question became how quickly OpenAI could deliver on the promise of agents buying things for people. In the battle of AI-enabled commerce, getting agents to securely complete...",
-    "category": "ai",
-    "_trending_tags": [
-      "agent",
-      "ai",
-      "chatgpt",
-      "google",
-      "gpt",
-      "openai"
-    ]
-  },
-  {
-    "title": "Under the hood of AI agents: A technical guide to the next frontier of gen AI",
-    "url": "https://venturebeat.com/ai/under-the-hood-of-ai-agents-a-technical-guide-to-the-next-frontier-of-gen-ai",
-    "published_at": "2025-10-15T22:25:00-04:00",
-    "source": "VentureBeat",
-    "summary": "Agents are the trendiest topic in AI today, and with good reason. AI agents act on their users\u2019 behalf, autonomously handling tasks like making online purchases, building software, researching business trends or booking travel. By taking generative AI out of the sandbox of the chat interface and allowing it to act directly on the world, agentic AI represents a leap forward in the power and utilit...",
-    "content_html": "",
-    "image_url": "https://images.ctfassets.net/jdtwqhzvc2n1/5uEgR8k5xDLaMIS0le17hv/595a27e9dc71acf83cc362c433942ce6/AI_agents.png",
-    "summary_text": "Agents are the trendiest topic in AI today, and with good reason. AI agents act on their users\u2019 behalf, autonomously handling tasks like making online purchases, building software, researching business trends or booking travel. By taking generative AI out of ...",
-    "category": "ai",
-    "_trending_tags": [
-      "agent",
-      "ai",
-      "genai"
     ]
   },
   {
@@ -953,23 +740,6 @@
     ]
   },
   {
-    "title": "Anthropic is giving away its powerful Claude Haiku 4.5 AI for free to take on OpenAI",
-    "url": "https://venturebeat.com/ai/anthropic-is-giving-away-its-powerful-claude-haiku-4-5-ai-for-free-to-take",
-    "published_at": "2025-10-15T15:00:00-04:00",
-    "source": "VentureBeat",
-    "summary": "Anthropic released Claude Haiku 4.5 on Wednesday, a smaller and significantly cheaper artificial intelligence model that matches the coding capabilities of systems that were considered cutting-edge just months ago, marking the latest salvo in an intensifying competition to dominate enterprise AI. The model costs $1 per million input tokens and $5 per million output tokens \u2014 roughly one-third the ...",
-    "content_html": "",
-    "image_url": "https://images.ctfassets.net/jdtwqhzvc2n1/2zkV6Ua9HruRsjBAfq9oS2/3c44bad93ee87a4a9c84b418279acccb/nuneybits_Vector_art_of_a_computer_image_in_burnt_orange_58827742-c30a-4256-9cf3-c7802772a6c7.webp",
-    "summary_text": "Anthropic released Claude Haiku 4.5 on Wednesday, a smaller and significantly cheaper artificial intelligence model that matches the coding capabilities of systems that were considered cutting-edge just months ago, marking the latest salvo in an intensifying ...",
-    "category": "ai",
-    "_trending_tags": [
-      "ai",
-      "anthropic",
-      "claude",
-      "openai"
-    ]
-  },
-  {
     "title": "Anthropic\u2019s Claude Haiku 4.5 matches May\u2019s frontier model at fraction of cost",
     "url": "https://arstechnica.com/ai/2025/10/anthropics-claude-haiku-4-5-matches-mays-frontier-model-at-fraction-of-cost/",
     "published_at": "2025-10-15T14:53:00-04:00",
@@ -984,21 +754,6 @@
       "anthropic",
       "claude",
       "gpt"
-    ]
-  },
-  {
-    "title": "Google releases new AI video model Veo 3.1 in Flow and API: what it means for enterprises",
-    "url": "https://venturebeat.com/ai/google-releases-new-ai-video-model-veo-3-1-in-flow-and-api-what-it-means-for",
-    "published_at": "2025-10-15T14:50:00-04:00",
-    "source": "VentureBeat",
-    "summary": "As expected after days of leaks and rumors online, Google has unveiled Veo 3.1 , its latest AI video generation model, bringing a suite of creative and technical upgrades aimed at improving narrative control, audio integration, and realism in AI-generated video. While the updates expand possibilities for hobbyists and content creators using Google\u2019s online AI creation app, Flow , the release also...",
-    "content_html": "",
-    "image_url": "https://images.ctfassets.net/jdtwqhzvc2n1/4tvp7qfEbQOW0pucNGc3oW/21a8f215813133c934f9e71c0acff280/Screenshot_2025-10-15_at_2.53.23\u00e2__PM.png",
-    "summary_text": "As expected after days of leaks and rumors online, Google has unveiled Veo 3.1 , its latest AI video generation model, bringing a suite of creative and technical upgrades aimed at improving narrative control, audio integration, and realism in AI-generated vid...",
-    "category": "ai",
-    "_trending_tags": [
-      "ai",
-      "google"
     ]
   },
   {
@@ -1077,20 +832,6 @@
     ]
   },
   {
-    "title": "Dfinity launches Caffeine, an AI platform that builds production apps from natural language prompts",
-    "url": "https://venturebeat.com/ai/dfinity-launches-caffeine-an-ai-platform-that-builds-production-apps-from",
-    "published_at": "2025-10-15T05:00:00-04:00",
-    "source": "VentureBeat",
-    "summary": "The Dfinity Foundation on Wednesday released Caffeine , an artificial intelligence platform that allows users to build and deploy web applications through natural language conversation alone, bypassing traditional coding entirely. The system, which became publicly available today, represents a fundamental departure from existing AI coding assistants by building applications on a specialized decen...",
-    "content_html": "",
-    "image_url": "https://images.ctfassets.net/jdtwqhzvc2n1/4KtYR3vJAj9O1BxMtYqm9e/aad83e291aadf8fd2f12e6cf45aeede9/nuneybits_Vector_art_of_coffee_made_of_computer_code_87b3e7a8-f103-4de0-ae47-d17717e023f9.webp",
-    "summary_text": "The Dfinity Foundation on Wednesday released Caffeine , an artificial intelligence platform that allows users to build and deploy web applications through natural language conversation alone, bypassing traditional coding entirely. The system, which became pub...",
-    "category": "ai",
-    "_trending_tags": [
-      "ai"
-    ]
-  },
-  {
     "title": "Capita fined \u00a314mn over theft of personal data in cyber attack",
     "url": "https://www.ft.com/content/25741917-e42c-494f-8b47-6f1a37eec805",
     "published_at": "2025-10-15T03:42:22-04:00",
@@ -1102,24 +843,6 @@
     "category": "software",
     "_trending_tags": [
       "ai"
-    ]
-  },
-  {
-    "title": "EAGLET boosts AI agent performance on longer-horizon tasks by generating custom plans",
-    "url": "https://venturebeat.com/ai/eaglet-boosts-ai-agent-performance-on-longer-horizon-tasks-by-generating",
-    "published_at": "2025-10-14T18:27:00-04:00",
-    "source": "VentureBeat",
-    "summary": "2025 was supposed to be the year of \"AI agents,\" according to Nvidia CEO Jensen Huang, and other AI industry personnel. And it has been, in many ways, with numerous leading AI model providers such as OpenAI , Google , and even Chinese competitors like Alibaba releasing fine-tuned AI models or applications designed to focus on a narrow set of tasks, such as web search and report writing. But one b...",
-    "content_html": "",
-    "image_url": "https://images.ctfassets.net/jdtwqhzvc2n1/1FsFs77cl1uzCE3JPEBnrk/7541c62def835191ff404046af4030c7/cfr0z3n_graphic_novel_hyper_detailed_close_up_on_a_cybernetic_b_9624e28f-5392-4c92-a115-0520c6058152.png",
-    "summary_text": "2025 was supposed to be the year of \"AI agents,\" according to Nvidia CEO Jensen Huang, and other AI industry personnel. And it has been, in many ways, with numerous leading AI model providers such as OpenAI , Google , and even Chinese competitors like Alibaba...",
-    "category": "ai",
-    "_trending_tags": [
-      "agent",
-      "ai",
-      "google",
-      "nvidia",
-      "openai"
     ]
   }
 ]
