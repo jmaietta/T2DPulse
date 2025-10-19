@@ -482,21 +482,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/73463e2471/thumbnail.png"
   },
   {
-    "title": "'CrossCode' Makers Look to Follow Up on an Indie Masterpiece",
-    "url": "https://www.bloomberg.com/news/newsletters/2025-10-17/with-alabaster-dawn-the-makers-of-crosscode-follow-up-on-an-indie-hit",
-    "published_at": "2025-10-17T13:09:05-04:00",
-    "source": "Bloomberg Technology",
-    "summary": "'Alabaster Dawn' will build on the combat and puzzles of 'CrossCode' but present an entirely new setting",
-    "content_html": "Alabaster Dawn, the next game from the makers of CrossCode, looks to follow up on the success Photographer: Radical Fish Games",
-    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iqOn9c9PYVTI/v0/1200x-1.jpg",
-    "summary_text": "'Alabaster Dawn' will build on the combat and puzzles of 'CrossCode' but present an entirely new setting",
-    "category": "software",
-    "_permalink": "/p/eb08abda8a/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/eb08abda8a/",
-    "_summary_240": "'Alabaster Dawn' will build on the combat and puzzles of 'CrossCode' but present an entirely new setting",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/eb08abda8a/thumbnail.png"
-  },
-  {
     "title": "ChatGPT\u2019s mobile app is seeing slowing download growth and daily use, analysis shows",
     "url": "https://techcrunch.com/2025/10/17/chatgpts-mobile-app-is-seeing-slowing-download-growth-and-daily-use-analysis-shows/",
     "published_at": "2025-10-17T12:26:22-04:00",
@@ -580,24 +565,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/18d77a5ea5/",
     "_summary_240": "Cory Doctorow\u2019s theory of \u201censhittification\u201d explains how tech platforms rot from within. As AI grows more profitable\u2014and powerful\u2014it risks the same fate.",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/18d77a5ea5/thumbnail.png"
-  },
-  {
-    "title": "Apple Wins Formula One US Streaming Rights, Besting ESPN",
-    "url": "https://www.bloomberg.com/news/articles/2025-10-17/apple-wins-formula-one-us-streaming-rights-besting-espn",
-    "published_at": "2025-10-17T10:00:48-04:00",
-    "source": "Bloomberg Technology",
-    "summary": "Apple Inc. secured exclusive television rights to Formula One races in the US, adding to a sports streaming slate that already includes Major League Soccer and Major League Baseball.",
-    "content_html": "The F1 Grand Prix of Singapore on Oct. 5.",
-    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ijHUQdXykPqU/v1/1200x-1.jpg",
-    "summary_text": "Apple Inc. secured exclusive television rights to Formula One races in the US, adding to a sports streaming slate that already includes Major League Soccer and Major League Baseball.",
-    "category": "fintech",
-    "_trending_tags": [
-      "apple"
-    ],
-    "_permalink": "/p/8651104cca/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/8651104cca/",
-    "_summary_240": "Apple Inc. secured exclusive television rights to Formula One races in the US, adding to a sports streaming slate that already includes Major League Soccer and Major League...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/8651104cca/thumbnail.png"
   },
   {
     "title": "World's largest open-source multimodal dataset delivers 17x training efficiency, unlocking enterprise AI that connects documents, audio and video",
@@ -1155,21 +1122,6 @@
       "google",
       "nvidia",
       "openai"
-    ]
-  },
-  {
-    "title": "Nvidia sells tiny new computer that puts big AI on your desktop",
-    "url": "https://arstechnica.com/ai/2025/10/nvidia-sells-tiny-new-computer-that-puts-big-ai-on-your-desktop/",
-    "published_at": "2025-10-14T12:58:21-04:00",
-    "source": "Ars Technica",
-    "summary": "The 1 petaflop DGX Spark system runs AI models with 200 billion parameters locally for $4K.",
-    "content_html": "<p>On Tuesday, Nvidia <a href=\"https://nvidianews.nvidia.com/news/nvidia-dgx-spark-arrives-for-worlds-ai-developers\">announced</a> it will begin taking orders for the DGX Spark, a $4,000 desktop AI computer that wraps one petaflop of computing performance and 128GB of unified memory into a form factor small enough to sit on a desk. Its biggest selling point is likely its large integrated memory that can run larger AI models than consumer GPUs.</p>\n<p>Nvidia will begin taking orders for the DGX Spark on Wednesday, October 15, <a href=\"https://www.nvidia.com/en-us/products/workstations/dgx-spark/\">through its website</a>, with systems also available from manufacturing partners and select US retail stores.</p>\n<p>The DGX Spark, which Nvidia <a href=\"https://arstechnica.com/ai/2025/01/nvidias-first-desktop-pc-can-run-local-ai-models-for-3000/\">previewed as \u201cProject DIGITS\u201d</a> in January and <a href=\"https://arstechnica.com/ai/2025/03/nvidia-announces-dgx-desktop-personal-ai-supercomputers/\">formally named</a> in May, represents Nvidia\u2019s attempt to create a new category of desktop computer workstation specifically for AI development.</p><p><a href=\"https://arstechnica.com/ai/2025/10/nvidia-sells-tiny-new-computer-that-puts-big-ai-on-your-desktop/\">Read full article</a></p>\n<p><a href=\"https://arstechnica.com/ai/2025/10/nvidia-sells-tiny-new-computer-that-puts-big-ai-on-your-desktop/#comments\">Comments</a></p>",
-    "image_url": "https://cdn.arstechnica.net/wp-content/uploads/2025/10/dgx_spark-1152x648.jpg",
-    "summary_text": "The 1 petaflop DGX Spark system runs AI models with 200 billion parameters locally for $4K.",
-    "category": "ai",
-    "_trending_tags": [
-      "ai",
-      "nvidia"
     ]
   }
 ]

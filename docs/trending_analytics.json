@@ -1,13 +1,13 @@
 {
-  "generated_at": "2025-10-19T12:41:49.180537-04:00",
+  "generated_at": "2025-10-19T13:16:35.136632-04:00",
   "total_keywords": 30,
   "keyword_counts": {
-    "ai": 80,
-    "openai": 11,
+    "ai": 75,
+    "openai": 10,
     "agent": 6,
-    "gpt": 6,
-    "chatgpt": 5,
+    "gpt": 5,
     "anthropic": 4,
+    "chatgpt": 4,
     "google": 4,
     "microsoft": 4,
     "claude": 3,
@@ -31,7 +31,6 @@
         "Financial Times - Technology",
         "Financial Times \u2014 Technology",
         "Google",
-        "Microsoft News",
         "NVIDIA News",
         "OpenAI YouTube",
         "PYMNTS",
@@ -46,7 +45,6 @@
         "bloomberg.com",
         "ft.com",
         "google.com",
-        "microsoft.com",
         "nvidia.com",
         "nytimes.com",
         "pymnts.com",
@@ -61,7 +59,6 @@
       "sources": [
         "Ars Technica",
         "Bloomberg Technology",
-        "Financial Times \u2014 Technology",
         "OpenAI YouTube",
         "TechCrunch",
         "The New York Times - Technology",
@@ -71,7 +68,6 @@
       "domains": [
         "arstechnica.com",
         "bloomberg.com",
-        "ft.com",
         "nytimes.com",
         "techcrunch.com",
         "theverge.com",
@@ -107,13 +103,11 @@
     },
     "chatgpt": {
       "sources": [
-        "Financial Times \u2014 Technology",
         "OpenAI YouTube",
         "TechCrunch",
         "VentureBeat"
       ],
       "domains": [
-        "ft.com",
         "techcrunch.com",
         "venturebeat.com",
         "youtube.com"
@@ -122,14 +116,12 @@
     "gpt": {
       "sources": [
         "Bloomberg Technology",
-        "Financial Times \u2014 Technology",
         "OpenAI YouTube",
         "TechCrunch",
         "VentureBeat"
       ],
       "domains": [
         "bloomberg.com",
-        "ft.com",
         "techcrunch.com",
         "venturebeat.com",
         "youtube.com"
@@ -441,14 +433,6 @@
         "published_at": "2025-10-17T12:05:12-04:00",
         "category": "ai",
         "_permalink": "https://pulse.tek2dayholdings.com/p/5d653203e3/"
-      },
-      {
-        "title": "OpenAI wants to own it all",
-        "url": "https://www.ft.com/content/5859c6f2-d89b-4958-bcee-bb2b548c6c35",
-        "source": "Financial Times \u2014 Technology",
-        "published_at": "2025-10-16T12:39:55-04:00",
-        "category": "ai",
-        "_permalink": "https://pulse.tek2dayholdings.com/p/6a214b597b/"
       }
     ],
     "gpt": [
