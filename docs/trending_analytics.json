@@ -1,19 +1,19 @@
 {
-  "generated_at": "2025-10-19T08:58:04.088542-04:00",
+  "generated_at": "2025-10-19T09:24:40.572983-04:00",
   "total_keywords": 30,
   "keyword_counts": {
     "ai": 29,
-    "agent": 5,
     "openai": 5,
+    "agent": 4,
     "anthropic": 3,
     "claude": 3,
     "apple": 2,
     "cloud": 2,
     "google": 2,
     "gpt": 2,
-    "microsoft": 2,
     "chatgpt": 1,
     "llm": 1,
+    "microsoft": 1,
     "nvidia": 1
   },
   "sources_per_keyword": {
@@ -139,12 +139,10 @@
     },
     "microsoft": {
       "sources": [
-        "PYMNTS",
-        "VentureBeat"
+        "PYMNTS"
       ],
       "domains": [
-        "pymnts.com",
-        "venturebeat.com"
+        "pymnts.com"
       ]
     },
     "apple": {
@@ -168,6 +166,14 @@
   },
   "top_articles_per_keyword": {
     "ai": [
+      {
+        "title": "Opera\u2019s Neon shows just how confusing AI browsers still are",
+        "url": "https://www.theverge.com/tech/801899/opera-neon-ai-browser-trial-run",
+        "source": "The Verge",
+        "published_at": "2025-10-19T09:00:00-04:00",
+        "category": "ai",
+        "_permalink": "https://pulse.tek2dayholdings.com/p/c23cd1e5a2/"
+      },
       {
         "title": "The AI sexting era has arrived",
         "url": "https://www.theverge.com/column/802022/ai-sexting-openai-chatbot-chatgpt",
@@ -199,14 +205,6 @@
         "published_at": "2025-10-18T05:00:00-04:00",
         "category": "ai",
         "_permalink": "https://pulse.tek2dayholdings.com/p/1cdab51cad/"
-      },
-      {
-        "title": "Silicon Valley spooks the AI safety advocates",
-        "url": "https://techcrunch.com/2025/10/17/silicon-valley-spooks-the-ai-safety-advocates/",
-        "source": "TechCrunch",
-        "published_at": "2025-10-17T21:21:30-04:00",
-        "category": "ai",
-        "_permalink": "https://pulse.tek2dayholdings.com/p/38008af6b0/"
       }
     ],
     "openai": [
@@ -383,14 +381,6 @@
         "published_at": "2025-10-17T12:01:56-04:00",
         "category": "ai",
         "_permalink": "https://pulse.tek2dayholdings.com/p/9e4dde3143/"
-      },
-      {
-        "title": "Microsoft launches 'Hey Copilot' voice assistant and autonomous agents for all Windows 11 PCs",
-        "url": "https://venturebeat.com/ai/microsoft-launches-hey-copilot-voice-assistant-and-autonomous-agents-for-all",
-        "source": "VentureBeat",
-        "published_at": "2025-10-16T09:00:00-04:00",
-        "category": "ai",
-        "_permalink": "https://pulse.tek2dayholdings.com/p/80824c5371/"
       }
     ],
     "google": [
@@ -419,14 +409,6 @@
         "published_at": "2025-10-17T14:42:32-04:00",
         "category": "ai",
         "_permalink": "https://pulse.tek2dayholdings.com/p/6b7cc9a7ec/"
-      },
-      {
-        "title": "Microsoft launches 'Hey Copilot' voice assistant and autonomous agents for all Windows 11 PCs",
-        "url": "https://venturebeat.com/ai/microsoft-launches-hey-copilot-voice-assistant-and-autonomous-agents-for-all",
-        "source": "VentureBeat",
-        "published_at": "2025-10-16T09:00:00-04:00",
-        "category": "ai",
-        "_permalink": "https://pulse.tek2dayholdings.com/p/80824c5371/"
       }
     ],
     "apple": [
