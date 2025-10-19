@@ -1,18 +1,18 @@
 {
-  "generated_at": "2025-10-18T19:24:40.206917-04:00",
+  "generated_at": "2025-10-19T07:33:44.082066-04:00",
   "total_keywords": 30,
   "keyword_counts": {
-    "ai": 34,
-    "agent": 8,
-    "openai": 6,
+    "ai": 29,
+    "agent": 6,
+    "openai": 5,
     "anthropic": 3,
     "claude": 3,
-    "google": 3,
-    "gpt": 3,
     "apple": 2,
-    "chatgpt": 2,
     "cloud": 2,
+    "google": 2,
+    "gpt": 2,
     "microsoft": 2,
+    "chatgpt": 1,
     "llm": 1,
     "nvidia": 1
   },
@@ -309,14 +309,6 @@
         "published_at": "2025-10-17T18:31:00-04:00",
         "category": "ai",
         "_permalink": "https://pulse.tek2dayholdings.com/p/7a6544b36a/"
-      },
-      {
-        "title": "Google vs. OpenAI vs. Visa: competing agent protocols threaten the future of AI commerce",
-        "url": "https://venturebeat.com/ai/google-vs-openai-vs-visa-competing-agent-protocols-threaten-the-future-of-ai",
-        "source": "VentureBeat",
-        "published_at": "2025-10-16T00:00:00-04:00",
-        "category": "ai",
-        "_permalink": "https://pulse.tek2dayholdings.com/p/39d250028f/"
       }
     ],
     "gpt": [
@@ -335,14 +327,6 @@
         "published_at": "2025-10-17T13:24:20-04:00",
         "category": "ai",
         "_permalink": "https://pulse.tek2dayholdings.com/p/73463e2471/"
-      },
-      {
-        "title": "Google vs. OpenAI vs. Visa: competing agent protocols threaten the future of AI commerce",
-        "url": "https://venturebeat.com/ai/google-vs-openai-vs-visa-competing-agent-protocols-threaten-the-future-of-ai",
-        "source": "VentureBeat",
-        "published_at": "2025-10-16T00:00:00-04:00",
-        "category": "ai",
-        "_permalink": "https://pulse.tek2dayholdings.com/p/39d250028f/"
       }
     ],
     "llm": [
@@ -423,14 +407,6 @@
         "published_at": "2025-10-17T16:37:17-04:00",
         "category": "ai",
         "_permalink": "https://pulse.tek2dayholdings.com/p/44241a7398/"
-      },
-      {
-        "title": "Google vs. OpenAI vs. Visa: competing agent protocols threaten the future of AI commerce",
-        "url": "https://venturebeat.com/ai/google-vs-openai-vs-visa-competing-agent-protocols-threaten-the-future-of-ai",
-        "source": "VentureBeat",
-        "published_at": "2025-10-16T00:00:00-04:00",
-        "category": "ai",
-        "_permalink": "https://pulse.tek2dayholdings.com/p/39d250028f/"
       }
     ],
     "microsoft": [
