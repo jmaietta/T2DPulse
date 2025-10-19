@@ -127,6 +127,20 @@
     "category": "software"
   },
   {
+    "title": "Blackstone says Wall Street is complacent about AI disruption",
+    "url": "https://www.ft.com/content/35d80b4d-eecd-424b-9350-8da138036d7e",
+    "published_at": "2025-10-18T07:00:02-04:00",
+    "source": "Financial Times - Technology",
+    "summary": "Jonathan Gray says private capital group has put risks from the technology \u2018top of our list\u2019 when evaluating deals",
+    "content_html": "",
+    "image_url": "",
+    "summary_text": "Jonathan Gray says private capital group has put risks from the technology \u2018top of our list\u2019 when evaluating deals",
+    "category": "software",
+    "_trending_tags": [
+      "ai"
+    ]
+  },
+  {
     "title": "Does A.I. Count as Art? Ask the Curators",
     "url": "https://www.nytimes.com/2025/10/18/arts/design/artificial-intelligence-art-museums.html",
     "published_at": "2025-10-18T05:01:30-04:00",
@@ -158,6 +172,17 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/1cdab51cad/",
     "_summary_240": "Vector databases (DBs), once specialist research instruments, have become widely used infrastructure in just a few years. They power today's semantic search, recommendation...",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/1cdab51cad/thumbnail.png"
+  },
+  {
+    "title": "Every Screen on the Planet: The Secret story of TikTok \u2014 a power grab, one clip at a time",
+    "url": "https://www.ft.com/content/e29b8e1d-b716-4fae-be77-70566b3fefe2",
+    "published_at": "2025-10-18T00:00:12-04:00",
+    "source": "Financial Times - Technology",
+    "summary": "Emily Baker-White examines how the pioneers of an addictive app ended up outwitting the geopolitical superpowers",
+    "content_html": "",
+    "image_url": "",
+    "summary_text": "Emily Baker-White examines how the pioneers of an addictive app ended up outwitting the geopolitical superpowers",
+    "category": "fintech"
   },
   {
     "title": "Silicon Valley spooks the AI safety advocates",
@@ -370,26 +395,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/69a9720b28/thumbnail.png"
   },
   {
-    "title": "Microsoft: Developers Lead Next Enterprise AI Wave",
-    "url": "https://www.pymnts.com/artificial-intelligence-2/2025/microsoft-developers-lead-next-enterprise-ai-wave/",
-    "published_at": "2025-10-17T14:42:32-04:00",
-    "source": "PYMNTS",
-    "summary": "Microsoft believes developers will lead the next wave of enterprise transformation. The tech firm\u2019s recent FYAI blog post outlines how artificial intelligence copilots and agents are redefining the software lifecycle, turning what was once a series of handoffs into a continuous feedback loop. \u201cAI doesn\u2019t just change how we code. It redefines who gets [\u2026] The post Microsoft: Developers Lead Next E...",
-    "content_html": "<p style=\"font-weight: 400;\">Microsoft believes developers will lead the next wave of enterprise transformation. The tech firm\u2019s recent <a href=\"https://www.microsoft.com/en-us/microsoft-cloud/blog/2025/10/13/fyai-why-developers-will-lead-ai-transformation-across-the-enterprise/\" rel=\"noopener\" target=\"_blank\">FYAI blog post</a> outlines how artificial intelligence copilots and agents are redefining the software lifecycle, turning what was once a series of handoffs into a continuous feedback loop.</p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p style=\"font-weight: 400;\">\u201cAI doesn\u2019t just change how we code. It redefines who gets to lead innovation,\u201d said <a href=\"https://www.linkedin.com/in/amandaksilver\" rel=\"noopener\" target=\"_blank\">Amanda Silver</a>, corporate vice president and head of product for apps and agents at Microsoft. \u201cDevelopers are becoming the orchestrators of intelligent systems.\u201d</p>\n<p style=\"font-weight: 400;\">In Microsoft\u2019s vision, generative AI collapses traditional development stages from requirements and design to testing and deployment. Copilots translate natural language into working code, while agents handle updates, refactoring, and telemetry. That shift, Silver said in the Tuesday (Oct. 13) blog post, is comparable to how cloud computing automated infrastructure provisioning. \u201cCloud removed friction in managing resources. AI is now removing friction between ideas and implementation,\u201d she said.</p>\n<h2 style=\"font-weight: 400;\"><strong>AI Ambition Meets Enterprise Reality</strong></h2>\n<p style=\"font-weight: 400;\">The developer-first narrative is compelling, but organizations face a more complicated picture when applying it. As <a href=\"https://www.pymnts.com/artificial-intelligence-2/2025/ai-explained-what-businesses-need-to-know-for-enterprise-ai-adoption/\" rel=\"noopener\" target=\"_blank\">PYMNTS</a> reported in its enterprise AI guide, many firms still operate under tight cost, compliance and data-governance constraints. Building AI-driven workflows requires not just new tools but entirely new accountability frameworks.</p>\n<p style=\"font-weight: 400;\">\u201cAI has to live where governance lives,\u201d Silver said. That is why Microsoft has introduced its <a href=\"https://ai.azure.com/\" rel=\"noopener\" target=\"_blank\">Azure AI Foundry</a> and Model Connector Protocol, which aim to let developers integrate agents into enterprise systems while maintaining observability and control.</p>\n<p style=\"font-weight: 400;\">The same theme runs through the broader market. Enterprise leaders increasingly see artificial intelligence not as a single product but as a system-wide capability that needs structure. Developers are being asked to balance innovation with verification to build faster without compromising oversight. \u201cVelocity has to come with verifiability,\u201d Silver said.</p>\n<p style=\"font-weight: 400;\">Even smaller firms face trade-offs. <a href=\"https://www.pymnts.com/artificial-intelligence-2/2025/ai-coding-assistants-give-tech-powers-to-small-businesses/\" rel=\"noopener\" target=\"_blank\">PYMNTS</a> found that AI coding assistants are giving startups and small businesses capabilities once reserved for large engineering teams. Yet democratization brings new risks if teams adopt tools without proper quality or security controls. AI may help generate code quickly, but scaling it safely still depends on disciplined developers and strong governance.</p>\n<h2 style=\"font-weight: 400;\"><strong>Platform Power and the Question of Control</strong></h2>\n<p style=\"font-weight: 400;\">AI\u2019s growing influence also raises questions about concentration of power. In a <a href=\"https://www.bloomberg.com/news/features/2025-09-03/the-ai-pioneer-trying-to-save-artificial-intelligence-from-big-tech\" rel=\"noopener\" target=\"_blank\">Bloomberg feature</a> published Sept. 3, <a href=\"https://www.linkedin.com/in/ashish-vaswani-99892181/\" rel=\"noopener\" target=\"_blank\">Ashish Vaswani</a>, who helped create the transformer neural network, cautioned that the industry\u2019s dependence on a handful of large platforms could narrow innovation. He warned that focusing only on massive models and proprietary ecosystems might overshadow smaller, more efficient approaches.</p>\n<p style=\"font-weight: 400;\">Microsoft\u2019s response has been to emphasize openness and interoperability. Silver said the company\u2019s strategy is guided by \u201cfreedom within a framework\u201d giving developers flexibility while embedding security, compliance, and transparency standards into its architecture. That principle, she added, is critical as AI systems become part of core enterprise infrastructure.</p>\n<h2 style=\"font-weight: 400;\"><strong>From Writing Code to Supervising Agents</strong></h2>\n<p style=\"font-weight: 400;\">What emerges from these intersecting trends is a redefinition of what it means to be a developer. The role is shifting from writing code to designing and supervising AI-driven behavior. Developers now oversee continuous systems that adapt, self-monitor and respond to feedback in real time.</p>\n<p style=\"font-weight: 400;\">Silver sees that evolution as both empowering and demanding. \u201cAI will not replace developers. It will amplify them,\u201d she said. \u201cBut amplification comes with responsibility. Developers have to understand how these systems think, not just what they output.\u201d</p>\n<div>\n<p class=\"elementtoproof\"><i>For all PYMNTS AI coverage, subscribe to the daily<span class=\"apple-converted-space\">\u00a0</span></i><a href=\"https://www.pymnts.com/subscribe/\" rel=\"noopener\" target=\"_blank\" title=\"https://www.pymnts.com/subscribe/\">AI\u00a0Newsletter</a><i>.</i></p>\n</div>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/artificial-intelligence-2/2025/microsoft-developers-lead-next-enterprise-ai-wave/\">Microsoft: Developers Lead Next Enterprise AI Wave</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
-    "image_url": "https://www.pymnts.com/wp-content/uploads/2025/10/Microsoft-developers-AI.png?w=457",
-    "summary_text": "Microsoft believes developers will lead the next wave of enterprise transformation. The tech firm\u2019s recent FYAI blog post outlines how artificial intelligence copilots and agents are redefining the software lifecycle, turning what was once a series of handoff...",
-    "category": "ai",
-    "_trending_tags": [
-      "agent",
-      "ai",
-      "microsoft"
-    ],
-    "_permalink": "/p/6b7cc9a7ec/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/6b7cc9a7ec/",
-    "_summary_240": "Microsoft believes developers will lead the next wave of enterprise transformation. The tech firm\u2019s recent FYAI blog post outlines how artificial intelligence copilots and agents...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/6b7cc9a7ec/thumbnail.png"
-  },
-  {
     "title": "Cisco warns enterprises: Without tapping machine data, your AI strategy is incomplete",
     "url": "https://venturebeat.com/security/cisco-warns-enterprises-without-tapping-machine-data-your-ai-strategy-is",
     "published_at": "2025-10-17T14:10:00-04:00",
@@ -425,6 +430,21 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/4c43bc8d79/",
     "_summary_240": "For many software developers using generative AI, vibe coding is a double-edged sword. The process delivers rapid prototypes but often leaves a trail of brittle, undocumented...",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/4c43bc8d79/thumbnail.png"
+  },
+  {
+    "title": "Ex-Builder.ai CFO subpoenaed as US authorities probe its collapse",
+    "url": "https://www.ft.com/content/177dd03a-bffe-4248-9c75-db2f54dd35a4",
+    "published_at": "2025-10-17T13:39:10-04:00",
+    "source": "Financial Times - Technology",
+    "summary": "Microsoft-backed start-up fell into insolvency soon after prosecutors asked for documents around its finances",
+    "content_html": "",
+    "image_url": "",
+    "summary_text": "Microsoft-backed start-up fell into insolvency soon after prosecutors asked for documents around its finances",
+    "category": "fintech",
+    "_trending_tags": [
+      "ai",
+      "microsoft"
+    ]
   },
   {
     "title": "Facebook\u2019s AI can now suggest edits to the photos still on your phone",
@@ -586,6 +606,34 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/12d3da6858/thumbnail.png"
   },
   {
+    "title": "Silicon Valley takes stock of the AI bubble",
+    "url": "https://www.ft.com/content/9b9a50c2-b704-4b7b-8676-e640ce136ac0",
+    "published_at": "2025-10-17T00:00:22-04:00",
+    "source": "Financial Times - Technology",
+    "summary": "Plus, Karel Kom\u00e1rek, the man bringing the fight to US gambling giants",
+    "content_html": "",
+    "image_url": "",
+    "summary_text": "Plus, Karel Kom\u00e1rek, the man bringing the fight to US gambling giants",
+    "category": "ai",
+    "_trending_tags": [
+      "ai"
+    ]
+  },
+  {
+    "title": "AI has a cargo cult problem",
+    "url": "https://www.ft.com/content/f2025ac7-a71f-464f-a3a6-1e39c98612c7",
+    "published_at": "2025-10-17T00:00:14-04:00",
+    "source": "Financial Times - Technology",
+    "summary": "Spending vast sums and inflating an investment bubble is no guarantee of unleashing technological magic",
+    "content_html": "",
+    "image_url": "",
+    "summary_text": "Spending vast sums and inflating an investment bubble is no guarantee of unleashing technological magic",
+    "category": "ai",
+    "_trending_tags": [
+      "ai"
+    ]
+  },
+  {
     "title": "Researchers find adding this one simple sentence to prompts makes AI models way more creative",
     "url": "https://venturebeat.com/ai/researchers-find-adding-this-one-simple-sentence-to-prompts-makes-ai-models",
     "published_at": "2025-10-16T22:40:00-04:00",
@@ -616,11 +664,7 @@
     "category": "fintech",
     "_trending_tags": [
       "ai"
-    ],
-    "_permalink": "/p/9d1d9f8f63/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/9d1d9f8f63/",
-    "_summary_240": "Malicious payloads stored on Ethereum and BNB blockchains are immune to takedowns.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/9d1d9f8f63/thumbnail.png"
+    ]
   },
   {
     "title": "Ars Live recap: Is the AI bubble about to pop? Ed Zitron weighs in.",
@@ -638,18 +682,18 @@
     ]
   },
   {
-    "title": "Oracle Declines on Concerns About Fulfilling AI Cloud Demand",
-    "url": "https://www.bloomberg.com/news/articles/2025-10-16/oracle-rallies-after-saying-ai-cloud-gross-margin-can-be-35",
-    "published_at": "2025-10-16T13:30:28-04:00",
-    "source": "Bloomberg Technology",
-    "summary": "Oracle Corp. fell the most in almost nine months after giving its long-range financial outlook, suggesting investors anticipated a bigger boost from its investment in AI infrastructure.",
-    "content_html": "The Oracle offices in Redwood City, California, US, on Monday, June 2, 2025. Oracle Corp. is expected to release earnings figures on June 11.",
-    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/i8OjKMYL0Rvs/v1/1200x-1.jpg",
-    "summary_text": "Oracle Corp. fell the most in almost nine months after giving its long-range financial outlook, suggesting investors anticipated a bigger boost from its investment in AI infrastructure.",
+    "title": "What GPU pricing can tell us about how the AI bubble will pop",
+    "url": "https://www.ft.com/content/d49707ae-5d6b-473e-9e2b-487d318e6fe9",
+    "published_at": "2025-10-16T14:21:31-04:00",
+    "source": "Financial Times - Technology",
+    "summary": "Rental health awareness",
+    "content_html": "",
+    "image_url": "",
+    "summary_text": "Rental health awareness",
     "category": "ai",
     "_trending_tags": [
       "ai",
-      "cloud"
+      "gpu"
     ]
   },
   {
@@ -664,6 +708,23 @@
     "category": "ai",
     "_trending_tags": [
       "ai"
+    ]
+  },
+  {
+    "title": "OpenAI wants to own it all",
+    "url": "https://www.ft.com/content/5859c6f2-d89b-4958-bcee-bb2b548c6c35",
+    "published_at": "2025-10-16T12:39:55-04:00",
+    "source": "Financial Times - Technology",
+    "summary": "ChatGPT maker has boundless ambition, but how much can it achieve before suffering a serious case of indigestion?",
+    "content_html": "",
+    "image_url": "",
+    "summary_text": "ChatGPT maker has boundless ambition, but how much can it achieve before suffering a serious case of indigestion?",
+    "category": "ai",
+    "_trending_tags": [
+      "ai",
+      "chatgpt",
+      "gpt",
+      "openai"
     ]
   },
   {
@@ -784,6 +845,21 @@
     "_trending_tags": [
       "agent",
       "ai"
+    ]
+  },
+  {
+    "title": "\u2018Of course it\u2019s a bubble\u2019: AI start-up valuations soar in investor frenzy",
+    "url": "https://www.ft.com/content/59baba74-c039-4fa7-9d63-b14f8b2bb9e2",
+    "published_at": "2025-10-16T00:00:14-04:00",
+    "source": "Financial Times - Technology",
+    "summary": "Unprecedented funding leads 10 groups including OpenAI and Elon Musk\u2019s xAI to gain almost $1tn in value in past year",
+    "content_html": "",
+    "image_url": "",
+    "summary_text": "Unprecedented funding leads 10 groups including OpenAI and Elon Musk\u2019s xAI to gain almost $1tn in value in past year",
+    "category": "ai",
+    "_trending_tags": [
+      "ai",
+      "openai"
     ]
   },
   {
@@ -915,6 +991,20 @@
     ]
   },
   {
+    "title": "US approves new bank backed by billionaires with ties to Trump",
+    "url": "https://www.ft.com/content/202d68bd-629e-42da-a938-c612bc839bdf",
+    "published_at": "2025-10-15T10:11:26-04:00",
+    "source": "Financial Times - Technology",
+    "summary": "Target market for Erebor will be businesses that are part of America\u2019s \u2018innovation economy\u2019",
+    "content_html": "",
+    "image_url": "",
+    "summary_text": "Target market for Erebor will be businesses that are part of America\u2019s \u2018innovation economy\u2019",
+    "category": "fintech",
+    "_trending_tags": [
+      "ai"
+    ]
+  },
+  {
     "title": "Apple unleashes M5, the next big leap in AI performance for Apple silicon",
     "url": "https://www.apple.com/ca/newsroom/2025/10/apple-unleashes-m5-the-next-big-leap-in-ai-performance-for-apple-silicon/",
     "published_at": "2025-10-15T09:09:34.097000-04:00",
@@ -955,6 +1045,20 @@
     "image_url": "https://images.ctfassets.net/jdtwqhzvc2n1/4KtYR3vJAj9O1BxMtYqm9e/aad83e291aadf8fd2f12e6cf45aeede9/nuneybits_Vector_art_of_coffee_made_of_computer_code_87b3e7a8-f103-4de0-ae47-d17717e023f9.webp",
     "summary_text": "The Dfinity Foundation on Wednesday released Caffeine , an artificial intelligence platform that allows users to build and deploy web applications through natural language conversation alone, bypassing traditional coding entirely. The system, which became pub...",
     "category": "ai",
+    "_trending_tags": [
+      "ai"
+    ]
+  },
+  {
+    "title": "Capita fined \u00a314mn over theft of personal data in cyber attack",
+    "url": "https://www.ft.com/content/25741917-e42c-494f-8b47-6f1a37eec805",
+    "published_at": "2025-10-15T03:42:22-04:00",
+    "source": "Financial Times - Technology",
+    "summary": "Hackers stole data of 6.6mn people in 2023 incident",
+    "content_html": "",
+    "image_url": "",
+    "summary_text": "Hackers stole data of 6.6mn people in 2023 incident",
+    "category": "software",
     "_trending_tags": [
       "ai"
     ]

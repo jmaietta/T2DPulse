@@ -1,33 +1,31 @@
 {
-  "generated_at": "2025-10-19T16:37:30.431399-04:00",
+  "generated_at": "2025-10-19T17:17:16.240950-04:00",
   "total_keywords": 30,
   "keyword_counts": {
-    "ai": 65,
+    "ai": 60,
     "openai": 9,
-    "agent": 6,
     "gpt": 6,
+    "agent": 5,
     "anthropic": 4,
     "chatgpt": 4,
-    "microsoft": 4,
     "claude": 3,
     "llm": 3,
     "meta": 3,
+    "microsoft": 3,
     "amazon": 2,
     "apple": 2,
-    "cloud": 2,
     "fintech": 2,
     "genai": 2,
     "google": 2,
+    "cloud": 1,
     "nvidia": 1
   },
   "sources_per_keyword": {
     "ai": {
       "sources": [
         "Anthropic YouTube",
-        "Ars Technica",
         "Bloomberg Technology",
         "Financial Times - Technology",
-        "Google",
         "NVIDIA News",
         "OpenAI YouTube",
         "PYMNTS",
@@ -38,10 +36,8 @@
         "Wired"
       ],
       "domains": [
-        "arstechnica.com",
         "bloomberg.com",
         "ft.com",
-        "google.com",
         "nvidia.com",
         "nytimes.com",
         "pymnts.com",
@@ -173,13 +169,11 @@
     "microsoft": {
       "sources": [
         "Financial Times - Technology",
-        "Google",
         "PYMNTS",
         "The Verge"
       ],
       "domains": [
         "ft.com",
-        "google.com",
         "pymnts.com",
         "theverge.com"
       ]
@@ -214,11 +208,9 @@
     },
     "cloud": {
       "sources": [
-        "Google",
         "PYMNTS"
       ],
       "domains": [
-        "google.com",
         "pymnts.com"
       ]
     },
@@ -590,14 +582,6 @@
         "published_at": "2025-10-17T04:53:02-04:00",
         "category": "ai",
         "_permalink": "https://pulse.tek2dayholdings.com/p/c4935af765/"
-      },
-      {
-        "title": "Microsoft\u2019s vision for AI PCs looks a lot like another crack at Cortana - Ars Technica",
-        "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOX1RqZlcyU1pjSUNqckZpNm1oZldaM0tGc29pOWw2cWpSaWtaWm9UZ3NUYXZFZHZLUWhoQl9sX0NnSGc2R3dvclhnRWpRcHBCZDBIelM1Z0xJQ3ZMWGxvWm1iNzgyY1RJZHZUcDJYRFNWVXZiQlFRaDFac0FIbGxIeDNaT29vblBFaHVYdjVIQ1d6QkhjbFJocjZHU0ZNNldvRk5na1VRaE5mOE9qb29xbg?oc=5&hl=en-US&gl=US&ceid=US:en",
-        "source": "Google",
-        "published_at": "2025-10-16T17:12:48-04:00",
-        "category": "ai",
-        "_permalink": "https://pulse.tek2dayholdings.com/p/2fa6679170/"
       }
     ],
     "apple": [
@@ -670,14 +654,6 @@
         "published_at": "2025-10-17T16:37:17-04:00",
         "category": "ai",
         "_permalink": "https://pulse.tek2dayholdings.com/p/44241a7398/"
-      },
-      {
-        "title": "Oracle Rallies After Saying AI Cloud Gross Margin Can Be 35% - Bloomberg.com",
-        "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPT1ZkSG9LdHo1WkhFT19VeEl5YWZjRDNlV1lLTnFaNVE0R3FzZnFHMnZjc2RVMVlMZW5GNkl4LU1YVjNibENVMXFkSHRiSkU2bTRQZHI1OHkybzIyNnE5clo2NW0wQVg3eFpPb0UweWV6YzlxaW1xNVJJMld5YUE5OGdIYkZhRERldmZmdEE1Z3RTNFI5QjdfQWM4TGxlajluMkxZbDVSMndKb1c2T09F?oc=5&hl=en-US&gl=US&ceid=US:en",
-        "source": "Google",
-        "published_at": "2025-10-16T16:58:15-04:00",
-        "category": "ai",
-        "_permalink": "https://pulse.tek2dayholdings.com/p/d20ef67a15/"
       }
     ],
     "fintech": [
