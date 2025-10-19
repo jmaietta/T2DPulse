@@ -1,9 +1,9 @@
 {
-  "generated_at": "2025-10-19T07:33:44.082066-04:00",
+  "generated_at": "2025-10-19T08:37:21.156484-04:00",
   "total_keywords": 30,
   "keyword_counts": {
     "ai": 29,
-    "agent": 6,
+    "agent": 5,
     "openai": 5,
     "anthropic": 3,
     "claude": 3,
@@ -27,6 +27,7 @@
         "PYMNTS",
         "TechCrunch",
         "The New York Times - Technology",
+        "The Verge",
         "VentureBeat",
         "Wired"
       ],
@@ -38,6 +39,7 @@
         "nytimes.com",
         "pymnts.com",
         "techcrunch.com",
+        "theverge.com",
         "venturebeat.com",
         "wired.com",
         "youtube.com"
@@ -167,6 +169,14 @@
   "top_articles_per_keyword": {
     "ai": [
       {
+        "title": "The AI sexting era has arrived",
+        "url": "https://www.theverge.com/column/802022/ai-sexting-openai-chatbot-chatgpt",
+        "source": "The Verge",
+        "published_at": "2025-10-19T08:00:00-04:00",
+        "category": "ai",
+        "_permalink": "https://pulse.tek2dayholdings.com/p/bda607cf75/"
+      },
+      {
         "title": "Wikipedia says traffic is falling due to AI search summaries and social video",
         "url": "https://techcrunch.com/2025/10/18/wikipedia-says-traffic-is-falling-due-to-ai-search-summaries-and-social-video/",
         "source": "TechCrunch",
@@ -197,14 +207,6 @@
         "published_at": "2025-10-17T21:21:30-04:00",
         "category": "ai",
         "_permalink": "https://pulse.tek2dayholdings.com/p/38008af6b0/"
-      },
-      {
-        "title": "CVS Pharmacy Says It Gained 9 Million Former Rite Aid Customers",
-        "url": "https://www.pymnts.com/acquisitions/2025/cvs-pharmacy-says-it-gained-9-million-former-rite-aid-customers/",
-        "source": "PYMNTS",
-        "published_at": "2025-10-17T19:39:35-04:00",
-        "category": "fintech",
-        "_permalink": "https://pulse.tek2dayholdings.com/p/dd82af9da2/"
       }
     ],
     "openai": [
