@@ -1,8 +1,8 @@
 {
-  "generated_at": "2025-10-19T13:16:35.136632-04:00",
+  "generated_at": "2025-10-19T13:34:57.662745-04:00",
   "total_keywords": 30,
   "keyword_counts": {
-    "ai": 75,
+    "ai": 73,
     "openai": 10,
     "agent": 6,
     "gpt": 5,
@@ -11,10 +11,10 @@
     "google": 4,
     "microsoft": 4,
     "claude": 3,
-    "cloud": 3,
     "meta": 3,
     "amazon": 2,
     "apple": 2,
+    "cloud": 2,
     "fintech": 2,
     "llm": 2,
     "deepmind": 1,
@@ -237,12 +237,10 @@
     },
     "cloud": {
       "sources": [
-        "Bloomberg Technology",
         "Google",
         "PYMNTS"
       ],
       "domains": [
-        "bloomberg.com",
         "google.com",
         "pymnts.com"
       ]
@@ -723,14 +721,6 @@
         "published_at": "2025-10-16T16:58:15-04:00",
         "category": "ai",
         "_permalink": "https://pulse.tek2dayholdings.com/p/d20ef67a15/"
-      },
-      {
-        "title": "Oracle Declines on Concerns About Fulfilling AI Cloud Demand",
-        "url": "https://www.bloomberg.com/news/articles/2025-10-16/oracle-rallies-after-saying-ai-cloud-gross-margin-can-be-35",
-        "source": "Bloomberg Technology",
-        "published_at": "2025-10-16T13:30:28-04:00",
-        "category": "ai",
-        "_permalink": "https://pulse.tek2dayholdings.com/p/1b6c15cd5b/"
       }
     ],
     "fintech": [
