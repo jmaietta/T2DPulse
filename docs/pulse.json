@@ -582,17 +582,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/18d77a5ea5/thumbnail.png"
   },
   {
-    "title": "Crypto\u2019s next chapter with Solana\u2019s Anatoly Yakovenko at TechCrunch Disrupt 2025",
-    "url": "https://techcrunch.com/2025/10/17/cryptos-next-chapter-with-solanas-anatoly-yakovenko-at-techcrunch-disrupt-2025/",
-    "published_at": "2025-10-17T11:00:00-04:00",
-    "source": "TechCrunch",
-    "summary": "Solana's Anatoly Yakovenko joins the Disrupt Stage at TechCrunch Disrupt 2025 to discuss the future of crypto \u2014 from memecoins to real-world finance. Don\u2019t miss this must-see session. Register now to save up to $624 before today's flash sale ends.",
-    "content_html": "",
-    "image_url": "",
-    "summary_text": "Solana's Anatoly Yakovenko joins the Disrupt Stage at TechCrunch Disrupt 2025 to discuss the future of crypto \u2014 from memecoins to real-world finance. Don\u2019t miss this must-see session. Register now to save up to $624 before today's flash sale ends.",
-    "category": "fintech"
-  },
-  {
     "title": "Apple Wins Formula One US Streaming Rights, Besting ESPN",
     "url": "https://www.bloomberg.com/news/articles/2025-10-17/apple-wins-formula-one-us-streaming-rights-besting-espn",
     "published_at": "2025-10-17T10:00:48-04:00",
@@ -826,11 +815,7 @@
     "category": "ai",
     "_trending_tags": [
       "ai"
-    ],
-    "_permalink": "/p/5dcbbf0800/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/5dcbbf0800/",
-    "_summary_240": "An AI chatbot developed by TikTok's parent company, ByteDance, is now more popular than DeepSeek. The feat proves that user-friendly design often matters more than having the...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/5dcbbf0800/thumbnail.png"
+    ]
   },
   {
     "title": "How Anthropic\u2019s \u2018Skills\u2019 make Claude faster, cheaper, and more consistent for business workflows",
@@ -846,11 +831,7 @@
       "ai",
       "anthropic",
       "claude"
-    ],
-    "_permalink": "/p/43b8a2c25d/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/43b8a2c25d/",
-    "_summary_240": "Anthropic launched a new capability on Thursday that allows its Claude AI assistant to tap into specialized expertise on demand, marking the company's latest effort to make...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/43b8a2c25d/thumbnail.png"
+    ]
   },
   {
     "title": "How UK financial services giant L&G is reinventing customer care with AI from Microsoft",
@@ -1189,21 +1170,6 @@
     "_trending_tags": [
       "ai",
       "nvidia"
-    ]
-  },
-  {
-    "title": "\u2018Sovereign AI\u2019 Has Become a New Front in the US-China Tech War",
-    "url": "https://www.wired.com/story/openai-sovereign-ai-us-china-tech-war/",
-    "published_at": "2025-10-14T12:00:00-04:00",
-    "source": "Wired",
-    "summary": "OpenAI has announced \u201cAI sovereignty\" partnerships with governments around the world, but can proprietary models compete with Beijing\u2019s open source offerings?",
-    "content_html": "",
-    "image_url": "https://media.wired.com/photos/68ed60d1bfe13206c9ff9d9f/master/pass/Biz-model-behavior-stargate-uae-2236543888.jpg",
-    "summary_text": "OpenAI has announced \u201cAI sovereignty\" partnerships with governments around the world, but can proprietary models compete with Beijing\u2019s open source offerings?",
-    "category": "ai",
-    "_trending_tags": [
-      "ai",
-      "openai"
     ]
   }
 ]

@@ -1,16 +1,16 @@
 {
-  "generated_at": "2025-10-19T11:45:51.320437-04:00",
+  "generated_at": "2025-10-19T12:22:55.517191-04:00",
   "total_keywords": 30,
   "keyword_counts": {
-    "ai": 86,
+    "ai": 80,
     "openai": 11,
-    "agent": 7,
-    "anthropic": 6,
+    "agent": 6,
     "gpt": 6,
     "chatgpt": 5,
-    "claude": 5,
-    "microsoft": 5,
+    "anthropic": 4,
     "google": 4,
+    "microsoft": 4,
+    "claude": 3,
     "cloud": 3,
     "meta": 3,
     "amazon": 2,
@@ -173,12 +173,10 @@
       "sources": [
         "Anthropic YouTube",
         "PYMNTS",
-        "The Verge",
         "VentureBeat"
       ],
       "domains": [
         "pymnts.com",
-        "theverge.com",
         "venturebeat.com",
         "youtube.com"
       ]
@@ -207,14 +205,12 @@
       "sources": [
         "Financial Times - Technology",
         "Google",
-        "Microsoft News",
         "PYMNTS",
         "The Verge"
       ],
       "domains": [
         "ft.com",
         "google.com",
-        "microsoft.com",
         "pymnts.com",
         "theverge.com"
       ]
@@ -385,14 +381,6 @@
         "published_at": "2025-10-17T04:53:02-04:00",
         "category": "ai",
         "_permalink": "https://pulse.tek2dayholdings.com/p/c4935af765/"
-      },
-      {
-        "title": "How Anthropic\u2019s \u2018Skills\u2019 make Claude faster, cheaper, and more consistent for business workflows",
-        "url": "https://venturebeat.com/ai/how-anthropics-skills-make-claude-faster-cheaper-and-more-consistent-for",
-        "source": "VentureBeat",
-        "published_at": "2025-10-16T12:00:00-04:00",
-        "category": "ai",
-        "_permalink": "https://pulse.tek2dayholdings.com/p/43b8a2c25d/"
       }
     ],
     "claude": [
@@ -419,22 +407,6 @@
         "published_at": "2025-10-17T04:53:02-04:00",
         "category": "ai",
         "_permalink": "https://pulse.tek2dayholdings.com/p/c4935af765/"
-      },
-      {
-        "title": "How Anthropic\u2019s \u2018Skills\u2019 make Claude faster, cheaper, and more consistent for business workflows",
-        "url": "https://venturebeat.com/ai/how-anthropics-skills-make-claude-faster-cheaper-and-more-consistent-for",
-        "source": "VentureBeat",
-        "published_at": "2025-10-16T12:00:00-04:00",
-        "category": "ai",
-        "_permalink": "https://pulse.tek2dayholdings.com/p/43b8a2c25d/"
-      },
-      {
-        "title": "Anthropic turns to \u2018skills\u2019 to make Claude more useful at work",
-        "url": "https://www.theverge.com/ai-artificial-intelligence/800868/anthropic-claude-skills-ai-agents",
-        "source": "The Verge",
-        "published_at": "2025-10-16T12:00:00-04:00",
-        "category": "ai",
-        "_permalink": "https://pulse.tek2dayholdings.com/p/5bcd3c904c/"
       }
     ],
     "chatgpt": [
@@ -687,14 +659,6 @@
         "published_at": "2025-10-16T17:12:48-04:00",
         "category": "ai",
         "_permalink": "https://pulse.tek2dayholdings.com/p/2fa6679170/"
-      },
-      {
-        "title": "How UK financial services giant L&G is reinventing customer care with AI from Microsoft",
-        "url": "https://ukstories.microsoft.com/features/how-lg-is-reinventing-customer-care-with-ai/",
-        "source": "Microsoft News",
-        "published_at": "2025-10-16T11:55:53-04:00",
-        "category": "ai",
-        "_permalink": "https://pulse.tek2dayholdings.com/p/0c7912c6c2/"
       }
     ],
     "apple": [
