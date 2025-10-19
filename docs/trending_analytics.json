@@ -1,10 +1,10 @@
 {
-  "generated_at": "2025-10-19T10:36:42.795745-04:00",
+  "generated_at": "2025-10-19T11:18:33.711558-04:00",
   "total_keywords": 30,
   "keyword_counts": {
-    "ai": 29,
-    "openai": 5,
+    "ai": 28,
     "agent": 4,
+    "openai": 4,
     "anthropic": 3,
     "claude": 3,
     "apple": 2,
@@ -48,14 +48,12 @@
     "openai": {
       "sources": [
         "Ars Technica",
-        "Bloomberg Technology",
         "TechCrunch",
         "The New York Times - Technology",
         "VentureBeat"
       ],
       "domains": [
         "arstechnica.com",
-        "bloomberg.com",
         "nytimes.com",
         "techcrunch.com",
         "venturebeat.com"
@@ -231,14 +229,6 @@
         "published_at": "2025-10-17T07:00:06-04:00",
         "category": "ai",
         "_permalink": "https://pulse.tek2dayholdings.com/p/1cfd1a0570/"
-      },
-      {
-        "title": "OpenAI Halts Depictions of MLK After \u2018Disrespectful\u2019 Videos",
-        "url": "https://www.bloomberg.com/news/articles/2025-10-17/openai-halts-mlk-depictions-in-sora-after-disrespectful-videos",
-        "source": "Bloomberg Technology",
-        "published_at": "2025-10-17T04:54:43-04:00",
-        "category": "ai",
-        "_permalink": "https://pulse.tek2dayholdings.com/p/97ea77afc4/"
       },
       {
         "title": "Ars Live recap: Is the AI bubble about to pop? Ed Zitron weighs in.",
