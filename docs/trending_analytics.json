@@ -1,25 +1,23 @@
 {
-  "generated_at": "2025-10-19T13:34:57.662745-04:00",
+  "generated_at": "2025-10-19T14:26:01.149461-04:00",
   "total_keywords": 30,
   "keyword_counts": {
-    "ai": 73,
+    "ai": 70,
     "openai": 10,
     "agent": 6,
     "gpt": 5,
     "anthropic": 4,
     "chatgpt": 4,
-    "google": 4,
     "microsoft": 4,
     "claude": 3,
+    "llm": 3,
     "meta": 3,
     "amazon": 2,
     "apple": 2,
     "cloud": 2,
     "fintech": 2,
-    "llm": 2,
-    "deepmind": 1,
-    "genai": 1,
-    "gpu": 1,
+    "genai": 2,
+    "google": 2,
     "nvidia": 1
   },
   "sources_per_keyword": {
@@ -29,7 +27,6 @@
         "Ars Technica",
         "Bloomberg Technology",
         "Financial Times - Technology",
-        "Financial Times \u2014 Technology",
         "Google",
         "NVIDIA News",
         "OpenAI YouTube",
@@ -137,28 +134,12 @@
         "venturebeat.com"
       ]
     },
-    "deepmind": {
-      "sources": [
-        "TechCrunch"
-      ],
-      "domains": [
-        "techcrunch.com"
-      ]
-    },
     "nvidia": {
       "sources": [
         "NVIDIA News"
       ],
       "domains": [
         "nvidia.com"
-      ]
-    },
-    "gpu": {
-      "sources": [
-        "Financial Times \u2014 Technology"
-      ],
-      "domains": [
-        "ft.com"
       ]
     },
     "agent": {
@@ -184,12 +165,10 @@
     "google": {
       "sources": [
         "PYMNTS",
-        "TechCrunch",
         "VentureBeat"
       ],
       "domains": [
         "pymnts.com",
-        "techcrunch.com",
         "venturebeat.com"
       ]
     },
@@ -273,6 +252,14 @@
         "_permalink": "https://pulse.tek2dayholdings.com/p/bda607cf75/"
       },
       {
+        "title": "The teacher is the new engineer: Inside the rise of AI enablement and PromptOps",
+        "url": "https://venturebeat.com/ai/the-teacher-is-the-new-engineer-inside-the-rise-of-ai-enablement-and",
+        "source": "VentureBeat",
+        "published_at": "2025-10-18T23:45:00-04:00",
+        "category": "ai",
+        "_permalink": "https://pulse.tek2dayholdings.com/p/dec173b1d6/"
+      },
+      {
         "title": "Wikipedia says traffic is falling due to AI search summaries and social video",
         "url": "https://techcrunch.com/2025/10/18/wikipedia-says-traffic-is-falling-due-to-ai-search-summaries-and-social-video/",
         "source": "TechCrunch",
@@ -287,14 +274,6 @@
         "published_at": "2025-10-18T07:00:02-04:00",
         "category": "software",
         "_permalink": "https://pulse.tek2dayholdings.com/p/0cd30c67aa/"
-      },
-      {
-        "title": "Does A.I. Count as Art? Ask the Curators",
-        "url": "https://www.nytimes.com/2025/10/18/arts/design/artificial-intelligence-art-museums.html",
-        "source": "The New York Times - Technology",
-        "published_at": "2025-10-18T05:01:30-04:00",
-        "category": "ai",
-        "_permalink": "https://pulse.tek2dayholdings.com/p/e1e8737445/"
       }
     ],
     "openai": [
@@ -477,6 +456,14 @@
     ],
     "llm": [
       {
+        "title": "The teacher is the new engineer: Inside the rise of AI enablement and PromptOps",
+        "url": "https://venturebeat.com/ai/the-teacher-is-the-new-engineer-inside-the-rise-of-ai-enablement-and",
+        "source": "VentureBeat",
+        "published_at": "2025-10-18T23:45:00-04:00",
+        "category": "ai",
+        "_permalink": "https://pulse.tek2dayholdings.com/p/dec173b1d6/"
+      },
+      {
         "title": "Credit Platforms Pull FinTech IPO Index Lower Despite AI Buzz",
         "url": "https://www.pymnts.com/news/fintech-investments/2025/credit-platforms-pull-fintech-ipo-index-lower-despite-ai-buzz/",
         "source": "PYMNTS",
@@ -493,16 +480,6 @@
         "_permalink": "https://pulse.tek2dayholdings.com/p/58f4826234/"
       }
     ],
-    "deepmind": [
-      {
-        "title": "The real reason Google DeepMind is working with a fusion energy startup",
-        "url": "https://techcrunch.com/2025/10/16/the-real-reason-google-deepmind-is-working-with-a-fusion-energy-startup/",
-        "source": "TechCrunch",
-        "published_at": "2025-10-16T14:06:08-04:00",
-        "category": "ai",
-        "_permalink": "https://pulse.tek2dayholdings.com/p/83f7a85433/"
-      }
-    ],
     "nvidia": [
       {
         "title": "The Engines of American-Made Intelligence: NVIDIA and TSMC Celebrate First NVIDIA Blackwell Wafer Produced in the US",
@@ -511,16 +488,6 @@
         "published_at": "2025-10-17T17:27:00-04:00",
         "category": "ai",
         "_permalink": "https://pulse.tek2dayholdings.com/p/442c043ccd/"
-      }
-    ],
-    "gpu": [
-      {
-        "title": "What GPU pricing can tell us about how the AI bubble will pop",
-        "url": "https://www.ft.com/content/d49707ae-5d6b-473e-9e2b-487d318e6fe9",
-        "source": "Financial Times \u2014 Technology",
-        "published_at": "2025-10-16T14:21:31-04:00",
-        "category": "ai",
-        "_permalink": "https://pulse.tek2dayholdings.com/p/0fd16280fb/"
       }
     ],
     "agent": [
@@ -567,6 +534,14 @@
     ],
     "genai": [
       {
+        "title": "The teacher is the new engineer: Inside the rise of AI enablement and PromptOps",
+        "url": "https://venturebeat.com/ai/the-teacher-is-the-new-engineer-inside-the-rise-of-ai-enablement-and",
+        "source": "VentureBeat",
+        "published_at": "2025-10-18T23:45:00-04:00",
+        "category": "ai",
+        "_permalink": "https://pulse.tek2dayholdings.com/p/dec173b1d6/"
+      },
+      {
         "title": "Abstract or die: Why AI enterprises can't afford rigid vector stacks",
         "url": "https://venturebeat.com/ai/abstract-or-die-why-ai-enterprises-cant-afford-rigid-vector-stacks",
         "source": "VentureBeat",
@@ -591,22 +566,6 @@
         "published_at": "2025-10-17T16:37:17-04:00",
         "category": "ai",
         "_permalink": "https://pulse.tek2dayholdings.com/p/44241a7398/"
-      },
-      {
-        "title": "The real reason Google DeepMind is working with a fusion energy startup",
-        "url": "https://techcrunch.com/2025/10/16/the-real-reason-google-deepmind-is-working-with-a-fusion-energy-startup/",
-        "source": "TechCrunch",
-        "published_at": "2025-10-16T14:06:08-04:00",
-        "category": "ai",
-        "_permalink": "https://pulse.tek2dayholdings.com/p/83f7a85433/"
-      },
-      {
-        "title": "Google Uses Gemma AI Model to Identify Potential New Cancer Therapies",
-        "url": "https://www.pymnts.com/google/2025/google-uses-gemma-ai-model-to-identify-potential-new-cancer-therapies/",
-        "source": "PYMNTS",
-        "published_at": "2025-10-16T13:50:47-04:00",
-        "category": "ai",
-        "_permalink": "https://pulse.tek2dayholdings.com/p/2b47257656/"
       }
     ],
     "microsoft": [
