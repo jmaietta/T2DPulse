@@ -1,9 +1,12 @@
-
 #!/usr/bin/env python3
 # generator/generate_pulse.py
-# Website-only generator for TEK2day Pulse (AI -> Software -> FinTech)
+# (excerpted + maintained whole file)
+# - Robust static image extraction (no Selenium) with NYTimes-friendly headers and retries
+# - Canonical trending keyword chips (aliases) + backfill into archive
+# - In-memory chip apply so older items in today's view show chips immediately
 
-import os, re, json, html, urllib.parse
+import os, re, json, html, time, random
+import urllib.parse
 import feedparser, requests, tldextract
 from bs4 import BeautifulSoup
 from datetime import datetime, timedelta, timezone
@@ -12,6 +15,8 @@ import pytz, yaml
 import hashlib
 from PIL import Image
 from io import BytesIO
+from urllib.parse import urlparse, urljoin
+from pathlib import Path
 
 # Google Trends (pytrends) optional import with fallback
 try:
@@ -19,78 +24,12 @@ try:
 except Exception:
     TrendReq = None  # pytrends not installed; trending will gracefully degrade
 
+# ---- Global config/paths
 ROOT = os.path.dirname(os.path.abspath(__file__))
 REPO = os.path.dirname(ROOT)
 
 with open(os.path.join(ROOT, "config.yaml"), "r", encoding="utf-8") as f:
     CFG = yaml.safe_load(f)
-
-# ---- Weekend snapshot cache (reuse Friday content on Sat/Sun) ----
-from pathlib import Path as _Path
-
-CACHE_FILE = _Path(REPO) / "docs" / ".cache" / "friday_snapshot.json"
-CACHE_FILE.parent.mkdir(parents=True, exist_ok=True)
-
-def _now_et():
-    return now_et()
-
-def _last_friday(d):
-    wd = d.weekday()
-    delta = (wd - 4) % 7  # days since Friday
-    return d - timedelta(days=delta)
-
-def _weekend_use_friday_payload_if_available():
-    """On Sat/Sun, use the cached Friday snapshot if available.
-    Writes docs/index.html and docs/pulse.json from cache and exits."""
-    today = _now_et().date()
-    wd = today.weekday()
-    if wd not in (5, 6):  # only weekends
-        return None
-
-    want_friday = _last_friday(today)
-    if CACHE_FILE.exists():
-        try:
-            cached = json.loads(CACHE_FILE.read_text(encoding="utf-8"))
-            if cached.get("ref_date") == want_friday.strftime("%Y-%m-%d"):
-                by_cat = cached.get("by_cat", {})
-                date_str = today.strftime("%b %-d, %Y")
-                section = build_section(date_str, by_cat)
-
-                docs = os.path.join(REPO, "docs")
-                os.makedirs(docs, exist_ok=True)
-
-                with open(os.path.join(docs, "index.html"), "w", encoding="utf-8") as f:
-                    f.write(section)
-                with open(os.path.join(docs, "pulse.json"), "w", encoding="utf-8") as f:
-                    json.dump(cached.get("all_items", []), f, indent=2)
-                    try:
-                        ts_dir = os.path.join(docs, "archive", "timestamped")
-                        os.makedirs(ts_dir, exist_ok=True)
-                        ts_name = now_et().strftime("%Y-%m-%d_%H%M%S") + ".json"
-                        ts_path = os.path.join(ts_dir, ts_name)
-                        with open(ts_path, "x", encoding="utf-8") as tf:
-                            json.dump({"items": cached.get("all_items", [])}, tf, indent=2)
-                    except FileExistsError:
-                        pass
-                    except Exception:
-                        pass
-                return True
-        except Exception:
-            pass
-    return False
-
-def _save_friday_snapshot_if_today(all_items, by_cat):
-    today = _now_et().date()
-    if today.weekday() == 4:  # Friday
-        payload = {
-            "ref_date": today.strftime("%Y-%m-%d"),
-            "all_items": all_items,
-            "by_cat": by_cat
-        }
-        try:
-            CACHE_FILE.write_text(json.dumps(payload, ensure_ascii=False), encoding="utf-8")
-        except Exception:
-            pass
 
 TZ = pytz.timezone(CFG.get("timezone", "America/New_York"))
 RUN_WINDOW_HOURS = int(CFG.get("run_window_hours", 24))
@@ -109,6 +48,364 @@ UTM = CFG.get("utm", {"source": "tek2day", "medium": "email"})
 BLOCK_SUFFIXES = [s.lower() for s in CFG.get("exclude_domains_suffix", [])]
 ALWAYS_BLOCK = {"news.ycombinator.com", "ycombinator.com"}
 
+# ---- Cache file for weekend reuse
+CACHE_DIR = Path(os.path.join(REPO, "cache"))
+CACHE_DIR.mkdir(exist_ok=True)
+CACHE_FILE = CACHE_DIR / "friday_snapshot.json"
+
+# ---- Shared HTTP session (browser-y headers) ----
+SESSION = requests.Session()
+SESSION.headers.update({
+    # Use a modern desktop Chrome UA
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+                  "(KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
+    "Accept-Language": "en-US,en;q=0.9",
+    "Connection": "keep-alive",
+})
+
+def fetch_html(url: str, referer: str | None = None, timeout: int = 15) -> str:
+    """Fetch HTML with shared session + optional Referer."""
+    headers = {}
+    if referer:
+        headers["Referer"] = referer
+    r = SESSION.get(url, headers=headers, allow_redirects=True, timeout=timeout)
+    r.raise_for_status()
+    return r.text
+
+def _abs_url(u: str, base: str) -> str:
+    if not u:
+        return ""
+    if u.startswith("//"):
+        return "https:" + u
+    if u.startswith("/"):
+        p = urlparse(base)
+        return f"{p.scheme}://{p.netloc}{u}"
+    return u
+
+# ---- Helper functions (early definitions to avoid forward references) ----
+def _domain(u: str) -> str:
+    try:
+        return tldextract.extract(u).registered_domain.lower()
+    except Exception:
+        return ""
+
+def domain_of(url):
+    ext = tldextract.extract(url or "")
+    if not ext.domain:
+        return ""
+    return f"{ext.domain}.{ext.suffix}".lower() if ext.suffix else ext.domain.lower()
+
+def _host(u: str) -> str:
+    try:
+        h = urlparse(u or "").netloc.lower()
+        return h[4:] if h.startswith("www.") else h
+    except Exception:
+        return ""
+
+# ---- NYTimes helpers ----
+def _nyt_prefer_super_jumbo(u: str) -> str:
+    """Prefer largest NYT size suffix (superJumbo) when present."""
+    return re.sub(r'-(?:thumbLarge|threeByTwoSmallAt2X|threeByTwoLargeAt2X|articleLeft|articleLarge)\.(jpg|jpeg|png|webp)$',
+                  r'-superJumbo.\1', u)
+
+def _nyt_force_jpeg(u: str) -> str:
+    """Coerce NYT image URL to JPEG to avoid AVIF/WEBP incompatibilities in CI."""
+    try:
+        # Normalize common query params
+        u = re.sub(r'([?&])(auto|format|fm)=(webp|avif)', r'\1\2=jpg', u, flags=re.I)
+        # Convert extension
+        u = re.sub(r'\.(webp|avif)(\?.*)?$', r'.jpg\2', u, flags=re.I)
+        # If no explicit format param present, add one (harmless if already jpg)
+        if ('format=' not in u.lower()) and ('fm=' not in u.lower()) and ('auto=' not in u.lower()):
+            u = u + ('&' if '?' in u else '?') + 'format=jpg'
+    except Exception:
+        pass
+    return u
+
+def _nyt_candidates(u: str) -> list[str]:
+    """Return a small ladder of NYT image URLs to try (largest first)."""
+    sizes = ["superJumbo", "threeByTwoLargeAt2X", "articleLarge"]
+    out = []
+    m = re.search(r'-(\w+)\.(jpg|jpeg|png|webp)$', u)
+    if m:
+        ext = m.group(2)
+        base = u[:m.start()]
+        for s in sizes:
+            out.append(f"{base}-{s}.{ext}")
+        out.append(u)  # original as last resort
+    else:
+        out.append(u)
+    # de-dup preserve order
+    seen, uniq = set(), []
+    for x in out:
+        if x not in seen:
+            seen.add(x)
+            uniq.append(x)
+    return uniq
+
+def _pick_from_srcset(srcset: str) -> str:
+    best_url, best_w = "", -1
+    for part in (srcset or "").split(","):
+        seg = part.strip().split()
+        if not seg:
+            continue
+        u = seg[0]
+        w = 0
+        if len(seg) > 1 and seg[1].endswith("w"):
+            try:
+                w = int(seg[1][:-1])
+            except Exception:
+                w = 0
+        if w > best_w:
+            best_url, best_w = u, w
+    return best_url
+
+def _extract_json_ld_images(soup: BeautifulSoup) -> list[str]:
+    import json as _json
+    out = []
+    for tag in soup.find_all("script", {"type": "application/ld+json"}):
+        try:
+            data = _json.loads(tag.string or "")
+        except Exception:
+            continue
+        def walk(obj):
+            if isinstance(obj, dict):
+                if "image" in obj:
+                    img = obj["image"]
+                    if isinstance(img, str):
+                        out.append(img)
+                    elif isinstance(img, dict) and "url" in img:
+                        out.append(img["url"])
+                    elif isinstance(img, list):
+                        for i in img:
+                            if isinstance(i, str):
+                                out.append(i)
+                            elif isinstance(i, dict) and "url" in i:
+                                out.append(i["url"])
+                for v in obj.values():
+                    walk(v)
+            elif isinstance(obj, list):
+                for v in obj:
+                    walk(v)
+        walk(data)
+    return out
+
+def find_best_image_in_soup(soup: BeautifulSoup, page_url: str) -> str:
+    """Return a best-guess absolute image URL for a page, with NYT-friendly adjustments."""
+    # 0) JSON-LD (often richest on NYT)
+    try:
+        for script in soup.find_all("script", type=lambda v: v and "ld+json" in v):
+            try:
+                data = json.loads(script.string or "{}")
+            except Exception:
+                continue
+            # Normalize to list
+            blocks = data if isinstance(data, list) else [data]
+            for block in blocks:
+                if not isinstance(block, dict):
+                    continue
+                # The NewsArticle/image field can be a URL string, list, or ImageObject(s)
+                if block.get("@type") in ("NewsArticle", "Article", "NewsItem"):
+                    imgs = block.get("image")
+                    candidates = []
+                    if isinstance(imgs, str):
+                        candidates = [imgs]
+                    elif isinstance(imgs, dict):
+                        # ImageObject
+                        candidates = [imgs.get("contentUrl") or imgs.get("url") or ""]
+                    elif isinstance(imgs, list):
+                        for im in imgs:
+                            if isinstance(im, str):
+                                candidates.append(im)
+                            elif isinstance(im, dict):
+                                candidates.append(im.get("contentUrl") or im.get("url") or "")
+                    for u in [c for c in candidates if c]:
+                        u = _abs_url(u, page_url)
+                        if "static01.nyt.com" in u:
+                            u = _nyt_prefer_super_jumbo(u)
+                        if u:
+                            return u
+    except Exception:
+        pass
+
+    # 1) Meta tags (og/twitter)
+    for sel in [
+        ("meta", {"property": "og:image:secure_url"}),
+        ("meta", {"property": "og:image"}),
+        ("meta", {"name": "og:image"}),
+        ("meta", {"property": "twitter:image:src"}),
+        ("meta", {"name": "twitter:image"}),
+    ]:
+        m = soup.find(*sel)
+        if m:
+            u = m.get("content") or m.get("value")
+            if u:
+                u = _abs_url(u, page_url)
+                if "static01.nyt.com" in u:
+                    u = _nyt_prefer_super_jumbo(u)
+                return u
+
+    # 2) link rel=image_src
+    l = soup.find("link", rel=lambda v: v and "image_src" in v)
+    if l and l.get("href"):
+        u = _abs_url(l["href"], page_url)
+        if "static01.nyt.com" in u:
+            u = _nyt_prefer_super_jumbo(u)
+        return u
+
+    # 3) First reasonable <img> with width hints/srcset
+    for img in soup.find_all("img"):
+        cand = (img.get("data-src") or img.get("data-original") or img.get("data-url") or
+                img.get("data-asset-url") or img.get("src") or "")
+        if not cand and img.get("srcset"):
+            cand = _pick_from_srcset(img.get("srcset") or "")
+        cand = _abs_url(cand, page_url)
+        if cand:
+            if "static01.nyt.com" in cand:
+                cand = _nyt_prefer_super_jumbo(cand)
+            return cand
+
+    # 4) AMP page as a fallback
+    amp = soup.find("link", rel="amphtml")
+    if amp and amp.get("href"):
+        try:
+            amp_html = fetch_html(_abs_url(amp["href"], page_url), referer=page_url)
+            amp_soup = BeautifulSoup(amp_html, "html.parser")
+            aimg = amp_soup.find("meta", {"property": "og:image"}) or amp_soup.find("meta", {"name": "og:image"})
+            if aimg and aimg.get("content"):
+                u = _abs_url(aimg["content"], page_url)
+                if "static01.nyt.com" in u:
+                    u = _nyt_prefer_super_jumbo(u)
+                return u
+        except Exception:
+            pass
+
+    return ""
+
+def _download_image_with_retries(img_url: str, referer: str | None, attempts: int = 3, timeout: int = 15) -> bytes:
+    """Download image with domain-aware headers and backoff. Handles AVIF gracefully."""
+    last_exc = None
+    base_sleep = 0.35 + random.random() * 0.2
+
+    for i in range(attempts):
+        try:
+            hdrs = {
+                "Accept": "image/webp,image/jpeg,image/png,image/*;q=0.8",
+                "User-Agent": SESSION.headers.get("User-Agent"),
+                "Accept-Language": "en-US,en;q=0.9",
+            }
+            if referer:
+                hdrs["Referer"] = referer
+
+            is_nyt = "static01.nyt.com" in img_url
+            if is_nyt:
+                hdrs["Referer"] = "https://www.nytimes.com/"
+                hdrs["Origin"] = "https://www.nytimes.com"
+
+            r = SESSION.get(img_url, headers=hdrs, stream=True, timeout=timeout, allow_redirects=True)
+            status = r.status_code
+            ct = (r.headers.get("content-type") or "").lower()
+            try_sz = int(r.headers.get("content-length", "0") or 0)
+            print(f"[IMG] GET {status} {try_sz}B ct={ct} url={img_url[:100]}")
+
+            if status == 429:
+                ra = r.headers.get("Retry-After")
+                wait = float(ra) if ra and ra.isdigit() else (base_sleep * (2 ** i))
+                time.sleep(wait)
+                continue
+
+            if status >= 500:
+                time.sleep(base_sleep * (2 ** i))
+                continue
+
+            if status != 200:
+                time.sleep(base_sleep * (1 + i * 0.25))
+                continue
+
+            data = r.content if r.raw is None else r.raw.read()
+
+            if len(data or b"") < 4096:  # too small
+                time.sleep(base_sleep * (1 + i * 0.25))
+                continue
+
+            # Try to decode the image; if AVIF fails, retry with stricter Accept
+            try:
+                img = Image.open(BytesIO(data)).convert("RGB")
+                return data
+            except Exception as decode_err:
+                err_str = str(decode_err).lower()
+                if "avif" in err_str or "unsupported" in err_str:
+                    # Retry with stricter Accept, asking for JPEG/PNG only
+                    try_hdrs = dict(hdrs)
+                    try_hdrs["Accept"] = "image/jpeg,image/png,image/*"
+                    rr = SESSION.get(img_url, headers=try_hdrs, stream=True, timeout=timeout, allow_redirects=True)
+                    if rr.status_code == 200:
+                        data_retry = rr.content if rr.raw is None else rr.raw.read()
+                        try:
+                            img_retry = Image.open(BytesIO(data_retry)).convert("RGB")
+                            return data_retry
+                        except Exception:
+                            pass
+                # Decode failed; sleep and retry
+                time.sleep(base_sleep * (1 + i * 0.25))
+                continue
+
+        except Exception as e:
+            last_exc = e
+            print(f"[IMG] Error on attempt {i+1}: {e}")
+            time.sleep(base_sleep * (2 ** i))
+            continue
+
+    if last_exc:
+        raise last_exc
+    raise RuntimeError(f"Failed to download image: {img_url}")
+
+def now_et():
+    return datetime.now(TZ)
+
+def _now_et():
+    return now_et()
+
+def _last_friday(d):
+    wd = d.weekday()
+    delta = (wd - 4) % 7
+    return d - timedelta(days=delta)
+
+def _weekend_use_friday_payload_if_available():
+    today = _now_et().date()
+    wd = today.weekday()
+    if wd not in (5, 6):
+        return None
+    want_friday = _last_friday(today)
+    if CACHE_FILE.exists():
+        try:
+            cached = json.loads(CACHE_FILE.read_text(encoding="utf-8"))
+            if cached.get("ref_date") == want_friday.strftime("%Y-%m-%d"):
+                by_cat = cached.get("by_cat", {})
+                date_str = today.strftime("%b %-d, %Y")
+                section = build_section(date_str, by_cat)
+                docs = os.path.join(REPO, "docs")
+                os.makedirs(docs, exist_ok=True)
+                with open(os.path.join(docs, "index.html"), "w", encoding="utf-8") as f:
+                    f.write(section)
+                with open(os.path.join(docs, "pulse.json"), "w", encoding="utf-8") as f:
+                    json.dump(cached.get("all_items", []), f, indent=2)
+                return True
+        except Exception:
+            pass
+    return False
+
+def _save_friday_snapshot_if_today(all_items, by_cat):
+    today = _now_et().date()
+    if today.weekday() == 4:
+        payload = {"ref_date": today.strftime("%Y-%m-%d"), "all_items": all_items, "by_cat": by_cat}
+        try:
+            CACHE_FILE.write_text(json.dumps(payload, ensure_ascii=False), encoding="utf-8")
+        except Exception:
+            pass
+
+# ---- Source name mapping, etc.
 SOURCE_NAME_MAP = {
     "theverge.com": "The Verge",
     "venturebeat.com": "VentureBeat",
@@ -134,6 +431,7 @@ FORCE_FINTECH_SOURCES = {"pymnts"}
 FORCE_AI_SOURCES = {"openai", "anthropic", "claude"}
 FORCE_INCLUDE_SOURCES = {"tek2day"}
 
+# --- Freshness & diversity helpers
 FRESH_WINDOW_DAYS = 3
 BACKFILL_WINDOW_DAYS = 5
 FLOORS = {"ai": 10, "software": 6, "fintech": 6}
@@ -161,7 +459,7 @@ def filter_fresh(items, window_days=FRESH_WINDOW_DAYS, now=None):
     return [it for it in items if is_fresh(it, window_days, now)]
 
 from collections import defaultdict, deque
-import math, random
+import math, random as _random
 
 def prefer_diverse_round_robin(items, max_total):
     if not items:
@@ -171,7 +469,7 @@ def prefer_diverse_round_robin(items, max_total):
         buckets[domain_of(it.get("url",""))].append(it)
     for d in buckets:
         buckets[d].sort(key=lambda x: safe_parse_dt(x.get("published_at")) or datetime.min.replace(tzinfo=timezone.utc), reverse=True)
-        random.shuffle(buckets[d])
+        _random.shuffle(buckets[d])
     domains = list(buckets.keys())
     soft_cap = max(1, math.ceil(max_total / max(1, len(domains))))
     queues = [deque(v[:soft_cap]) for v in buckets.values() if v]
@@ -186,11 +484,7 @@ def prefer_diverse_round_robin(items, max_total):
     return out
 
 def sort_by_recency(items):
-    return sorted(
-        items,
-        key=lambda x: safe_parse_dt(x.get("published_at")) or datetime.min.replace(tzinfo=timezone.utc),
-        reverse=True
-    )
+    return sorted(items, key=lambda x: safe_parse_dt(x.get("published_at")) or datetime.min.replace(tzinfo=timezone.utc), reverse=True)
 
 def build_preferred_today_with_floors(all_items, now_local=None, floors=None, backfill_days=None):
     now_local = now_local or now_et()
@@ -256,22 +550,12 @@ def finalize_section_with_backfill(items, section_max, now=None, max_backfill_da
         it["_older_than_fresh_window"] = True
     return cands
 
-def now_et():
-    return datetime.now(TZ)
-
 def within_window(dt_local):
     cutoff = now_et() - timedelta(days=BACKFILL_WINDOW_DAYS)
-    result = dt_local >= cutoff
-    return result
+    return dt_local >= cutoff
 
 def add_utm(url):
     return f"{url}{'&' if '?' in url else '?'}utm_source={UTM['source']}&utm_medium={UTM['medium']}"
-
-def domain_of(url):
-    ext = tldextract.extract(url or "")
-    if not ext.domain:
-        return ""
-    return f"{ext.domain}.{ext.suffix}".lower() if ext.suffix else ext.domain.lower()
 
 def nice_source_for(url):
     d = domain_of(url)
@@ -310,8 +594,7 @@ def parse_pubdate(entry):
                 dt = dtparser.parse(entry[key])
                 if not dt.tzinfo:
                     dt = dt.replace(tzinfo=timezone.utc)
-                dt_tz = dt.astimezone(TZ)
-                return dt_tz
+                return dt.astimezone(TZ)
             except Exception:
                 pass
     return now_et()
@@ -319,7 +602,6 @@ def parse_pubdate(entry):
 # ---- Image extraction helper (RSS) ----
 def extract_image_url(entry) -> str:
     try:
-        # media:content / media:thumbnail
         if hasattr(entry, "media_content") and entry.media_content:
             m = entry.media_content[0]
             if isinstance(m, dict) and m.get("url"):
@@ -328,13 +610,11 @@ def extract_image_url(entry) -> str:
             m = entry.media_thumbnail[0]
             if isinstance(m, dict) and m.get("url"):
                 return m["url"]
-        # enclosures
         if hasattr(entry, "enclosures") and entry.enclosures:
             for enc in entry.enclosures:
                 url = getattr(enc, "href", None) or enc.get("href") if isinstance(enc, dict) else None
                 if url and any(url.lower().endswith(ext) for ext in (".jpg",".jpeg",".png",".webp",".gif")):
                     return url
-        # content html image
         if hasattr(entry, "content"):
             try:
                 html_blob = entry.content[0].value
@@ -343,7 +623,6 @@ def extract_image_url(entry) -> str:
                     return m.group(1)
             except Exception:
                 pass
-        # summary image
         if hasattr(entry, "summary"):
             m = re.search(r'<img[^>]+src=["\']([^"\']+)', entry.summary, re.I)
             if m:
@@ -354,7 +633,7 @@ def extract_image_url(entry) -> str:
 
 # ---- Permalink & summary helpers ----
 PERMA_ROOT = os.path.join(REPO, "docs", "p")  # docs/p/<id>/
-PERMA_TPL  = os.path.join(ROOT, "templates", "item_template.html")  # generator/templates/item_template.html
+PERMA_TPL  = os.path.join(ROOT, "templates", "item_template.html")
 
 def _stable_id(title: str, url: str, published_at: str) -> str:
     key = f"{(title or '').strip()}|{(url or '').strip()}|{(published_at or '').strip()}"
@@ -377,141 +656,106 @@ def _render_template_string(tpl: str, **kv) -> str:
         html_out = html_out.replace(f"{{{{{k}}}}}", v or "")
     return html_out
 
-def create_branded_og_image(source_url: str, permalink_dir: str) -> tuple[str, str]:
+# ---- Branded OG image + thumbnail (robust fetch for NYT/CDNs) ----
+def create_branded_og_image(source_url: str, permalink_dir: str, pre_extracted_image_url: str = "") -> tuple[str, str]:
     """
     Creates a branded OG image (1200x630) and thumbnail (240x135):
-    - Primary: Fetch source article's og:image and overlay T2D logo (120x120, top-right, 20px padding)
-    - Fallback: Use T2D banner if source image unavailable
-    Returns tuple of (og_image_rel_path, thumbnail_rel_path) or empty strings on failure.
+    - Use pre-extracted image if provided (from RSS)
+    - Otherwise try to extract from source HTML
+    - Download with domain-aware headers/retries
+    - Overlay T2D logo top-right; fallback to banner if anything fails
+    Returns (og_rel_path, thumb_rel_path) or ("","") on failure.
     """
     logo_path = os.path.join(REPO, "docs", "icons", "T2D_Pulse_Logo_2.png")
     banner_path = os.path.join(REPO, "docs", "icons", "T2D_Pulse_Banner.png")
     output_path = os.path.join(permalink_dir, "og-image.png")
     thumbnail_path = os.path.join(permalink_dir, "thumbnail.png")
-    
-    TARGET_WIDTH = 1200
-    TARGET_HEIGHT = 630
-    THUMB_WIDTH = 240
-    THUMB_HEIGHT = 135
-    LOGO_SIZE = 120
-    PADDING = 20
-    
-    try:
-        source_og_url = None
+
+    TARGET_WIDTH, TARGET_HEIGHT = 1200, 630
+    THUMB_WIDTH, THUMB_HEIGHT = 240, 135
+    LOGO_SIZE, PADDING = 120, 20
+
+    def _compose_and_save(base_img: Image.Image) -> tuple[str, str]:
+        img_aspect = base_img.width / base_img.height
+        target_aspect = TARGET_WIDTH / TARGET_HEIGHT
+        if img_aspect > target_aspect:
+            new_height = TARGET_HEIGHT
+            new_width = int(new_height * img_aspect)
+            resized = base_img.resize((new_width, new_height), Image.LANCZOS)
+            left = (new_width - TARGET_WIDTH) // 2
+            og_img = resized.crop((left, 0, left + TARGET_WIDTH, TARGET_HEIGHT))
+        else:
+            new_width = TARGET_WIDTH
+            new_height = int(new_width / img_aspect)
+            resized = base_img.resize((new_width, new_height), Image.LANCZOS)
+            top = (new_height - TARGET_HEIGHT) // 2
+            og_img = resized.crop((0, top, TARGET_WIDTH, top + TARGET_HEIGHT))
+
         try:
-            headers = {
-                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
-            }
-            resp = requests.get(source_url, timeout=10, headers=headers, allow_redirects=True)
-            soup = BeautifulSoup(resp.text, "html5lib")
-            og_img = (soup.find("meta", property="og:image") or 
-                     soup.find("meta", attrs={"name": "og:image"}) or
-                     soup.find("meta", property="twitter:image") or
-                     soup.find("meta", attrs={"name": "twitter:image"}))
-            if og_img:
-                img_url = og_img.get("content") or og_img.get("value")
-                if img_url:
-                    if img_url.startswith("//"):
-                        img_url = "https:" + img_url
-                    elif img_url.startswith("/"):
-                        from urllib.parse import urlparse
-                        parsed = urlparse(source_url)
-                        img_url = f"{parsed.scheme}://{parsed.netloc}{img_url}"
-                    source_og_url = img_url
+            if os.path.exists(logo_path):
+                logo = Image.open(logo_path).convert("RGBA")
+                logo = logo.resize((LOGO_SIZE, LOGO_SIZE), Image.LANCZOS)
+                logo_x = TARGET_WIDTH - LOGO_SIZE - PADDING
+                logo_y = PADDING
+                og_img.paste(logo, (logo_x, logo_y), logo)
+        except Exception:
+            pass
+
+        og_img.save(output_path, "PNG", optimize=True)
+
+        thumb = base_img.copy()
+        t_as = thumb.width / thumb.height
+        tgt_as = THUMB_WIDTH / THUMB_HEIGHT
+        if t_as > tgt_as:
+            nh = THUMB_HEIGHT * 2
+            nw = int(nh * t_as)
+            thumb = thumb.resize((nw, nh), Image.LANCZOS)
+            left = (nw - THUMB_WIDTH * 2) // 2
+            thumb = thumb.crop((left, 0, left + THUMB_WIDTH * 2, THUMB_HEIGHT * 2))
+        else:
+            nw = THUMB_WIDTH * 2
+            nh = int(nw / t_as)
+            thumb = thumb.resize((nw, nh), Image.LANCZOS)
+            top = (nh - THUMB_HEIGHT * 2) // 2
+            thumb = thumb.crop((0, top, THUMB_WIDTH * 2, top + THUMB_HEIGHT * 2))
+        thumb = thumb.resize((THUMB_WIDTH, THUMB_HEIGHT), Image.LANCZOS)
+        thumb.save(thumbnail_path, "PNG", optimize=True)
+
+        pid = os.path.basename(permalink_dir)
+        return (f"/p/{pid}/og-image.png", f"/p/{pid}/thumbnail.png")
+
+    # Priority 1: Use pre-extracted image from RSS if provided
+    if pre_extracted_image_url:
+        try:
+            print(f"[OG] Using pre-extracted image: {pre_extracted_image_url[:80]}")
+            img_bytes = _download_image_with_retries(pre_extracted_image_url, referer=source_url, attempts=3, timeout=25)
+            base_img = Image.open(BytesIO(img_bytes)).convert("RGB")
+            return _compose_and_save(base_img)
         except Exception as e:
-            print(f"Could not fetch og:image from {source_url}: {e}")
-        
-        base_img = None
-        if source_og_url:
-            try:
-                headers = {
-                    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
-                    "Referer": source_url
-                }
-                img_resp = requests.get(source_og_url, timeout=10, headers=headers)
-                base_img = Image.open(BytesIO(img_resp.content)).convert("RGB")
-                
-                img_aspect = base_img.width / base_img.height
-                target_aspect = TARGET_WIDTH / TARGET_HEIGHT
-                
-                if img_aspect > target_aspect:
-                    new_height = TARGET_HEIGHT
-                    new_width = int(new_height * img_aspect)
-                    resized = base_img.resize((new_width, new_height), Image.LANCZOS)
-                    left = (new_width - TARGET_WIDTH) // 2
-                    og_img = resized.crop((left, 0, left + TARGET_WIDTH, TARGET_HEIGHT))
-                else:
-                    new_width = TARGET_WIDTH
-                    new_height = int(new_width / img_aspect)
-                    resized = base_img.resize((new_width, new_height), Image.LANCZOS)
-                    top = (new_height - TARGET_HEIGHT) // 2
-                    og_img = resized.crop((0, top, TARGET_WIDTH, top + TARGET_HEIGHT))
-                
-                if os.path.exists(logo_path):
-                    logo = Image.open(logo_path).convert("RGBA")
-                    logo = logo.resize((LOGO_SIZE, LOGO_SIZE), Image.LANCZOS)
-                    logo_x = TARGET_WIDTH - LOGO_SIZE - PADDING
-                    logo_y = PADDING
-                    og_img.paste(logo, (logo_x, logo_y), logo)
-                
-                og_img.save(output_path, "PNG", optimize=True)
-                
-                thumb = base_img.copy()
-                thumb_aspect = thumb.width / thumb.height
-                target_thumb_aspect = THUMB_WIDTH / THUMB_HEIGHT
-                
-                if thumb_aspect > target_thumb_aspect:
-                    new_height = THUMB_HEIGHT * 2
-                    new_width = int(new_height * thumb_aspect)
-                    thumb = thumb.resize((new_width, new_height), Image.LANCZOS)
-                    left = (new_width - THUMB_WIDTH * 2) // 2
-                    thumb = thumb.crop((left, 0, left + THUMB_WIDTH * 2, THUMB_HEIGHT * 2))
-                else:
-                    new_width = THUMB_WIDTH * 2
-                    new_height = int(new_width / thumb_aspect)
-                    thumb = thumb.resize((new_width, new_height), Image.LANCZOS)
-                    top = (new_height - THUMB_HEIGHT * 2) // 2
-                    thumb = thumb.crop((0, top, THUMB_WIDTH * 2, top + THUMB_HEIGHT * 2))
-                
-                thumb = thumb.resize((THUMB_WIDTH, THUMB_HEIGHT), Image.LANCZOS)
-                thumb.save(thumbnail_path, "PNG", optimize=True)
-                
-                pid = os.path.basename(permalink_dir)
-                return (f"/p/{pid}/og-image.png", f"/p/{pid}/thumbnail.png")
-            except Exception as e:
-                print(f"Could not process image from {source_og_url}: {e}")
-        
-        if os.path.exists(banner_path):
-            banner = Image.open(banner_path).convert("RGB")
-            og_img = banner.resize((TARGET_WIDTH, TARGET_HEIGHT), Image.LANCZOS)
-            og_img.save(output_path, "PNG", optimize=True)
-            
-            thumb = banner.copy()
-            thumb_aspect = thumb.width / thumb.height
-            target_thumb_aspect = THUMB_WIDTH / THUMB_HEIGHT
-            
-            if thumb_aspect > target_thumb_aspect:
-                new_height = THUMB_HEIGHT * 2
-                new_width = int(new_height * thumb_aspect)
-                thumb = thumb.resize((new_width, new_height), Image.LANCZOS)
-                left = (new_width - THUMB_WIDTH * 2) // 2
-                thumb = thumb.crop((left, 0, left + THUMB_WIDTH * 2, THUMB_HEIGHT * 2))
-            else:
-                new_width = THUMB_WIDTH * 2
-                new_height = int(new_width / thumb_aspect)
-                thumb = thumb.resize((new_width, new_height), Image.LANCZOS)
-                top = (new_height - THUMB_HEIGHT * 2) // 2
-                thumb = thumb.crop((0, top, THUMB_WIDTH * 2, top + THUMB_HEIGHT * 2))
-            
-            thumb = thumb.resize((THUMB_WIDTH, THUMB_HEIGHT), Image.LANCZOS)
-            thumb.save(thumbnail_path, "PNG", optimize=True)
-            
-            pid = os.path.basename(permalink_dir)
-            return (f"/p/{pid}/og-image.png", f"/p/{pid}/thumbnail.png")
-        
+            print(f"[OG] Pre-extracted image failed: {e}, trying page scrape")
+
+    # Priority 2: Try to fetch and parse the article page (may fail on 403/429)
+    try:
+        html_text = fetch_html(source_url, referer=source_url, timeout=10)
+        soup = BeautifulSoup(html_text, "html5lib")
+        source_img_url = find_best_image_in_soup(soup, source_url)
+        if source_img_url:
+            print(f"[OG] Scraped image from page: {source_img_url[:80]}")
+            img_bytes = _download_image_with_retries(source_img_url, referer=source_url, attempts=3, timeout=25)
+            base_img = Image.open(BytesIO(img_bytes)).convert("RGB")
+            return _compose_and_save(base_img)
     except Exception as e:
-        print(f"Failed to create branded image: {e}")
-    
+        print(f"[OG] Could not build branded image from page: {e}")
+
+    # Priority 3: Fallback to placeholder banner
+    try:
+        if os.path.exists(banner_path):
+            print(f"[OG] Using fallback banner")
+            banner = Image.open(banner_path).convert("RGB")
+            return _compose_and_save(banner)
+    except Exception as e:
+        print(f"[OG] Fallback banner failed: {e}")
+
     return ("", "")
 
 def write_permalink_page(it: dict) -> str:
@@ -536,9 +780,7 @@ def write_permalink_page(it: dict) -> str:
     abs_permalink = f"{site_base}{rel_permalink}" if site_base else rel_permalink
 
     summary = _plain_text_summary(it, limit=180)
-    
-    article_url = url
-    og_image_rel, thumbnail_rel = create_branded_og_image(article_url, perma_dir)
+    og_image_rel, thumbnail_rel = create_branded_og_image(url, perma_dir, pre_extracted_image_url=it.get("image_url", ""))
     og_image_abs = f"{site_base}{og_image_rel}" if og_image_rel and site_base else og_image_rel
     thumbnail_abs = f"{site_base}{thumbnail_rel}" if thumbnail_rel and site_base else thumbnail_rel
 
@@ -565,6 +807,7 @@ def write_permalink_page(it: dict) -> str:
     it["_thumbnail"] = thumbnail_abs
     return abs_permalink
 
+# ---- Deals/consumer filter ----
 DEAL_WORDS = [
     "deal", "deals", "discount", "sale", "promo", "coupon", "price",
     "off", "lowest price", "snag", "save", "prime day", "black friday",
@@ -587,68 +830,25 @@ def is_deals_or_consumer_shopping(title, url):
         return True
     return any(p in t for p in DEAL_PATH_HINTS)
 
-# ----------------- fetchers -----------------
+# ---- Fetch RSS with fallback image scraping ----
 def fetch_rss(feed_name, url):
-    """Direct outlet RSS (Verge, VB, PYMNTS, OpenAI, Anthropic)."""
+    """Direct outlet RSS with aggressive fallback page scraping for missing images."""
     try:
         import urllib.request
-        req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'})
-        
-        is_tek2day = "tek2day" in feed_name.lower()
-        
-        if is_tek2day:
-            print(f"  [DEBUG] Fetching URL: {url}")
-        
-        try:
-            response = urllib.request.urlopen(req, timeout=15)
-            feed_content = response.read()
-            if is_tek2day:
-                print(f"  [DEBUG] Downloaded {len(feed_content)} bytes")
-            d = feedparser.parse(feed_content)
-        except Exception as e:
-            if is_tek2day:
-                print(f"  [DEBUG] Download failed, trying direct parse: {e}")
-            d = feedparser.parse(url)
-        
+        req = urllib.request.Request(url, headers={'User-Agent': SESSION.headers["User-Agent"]})
+        d = feedparser.parse(url)
         items = []
-        
-        if is_tek2day:
-            print(f"  [DEBUG] TEK2day feed has {len(d.entries)} total entries")
-            print(f"  [DEBUG] Feed status: {d.get('status', 'unknown')}")
-            print(f"  [DEBUG] Feed bozo: {d.get('bozo', False)}")
-            if d.get('bozo'):
-                print(f"  [DEBUG] Feed exception: {d.get('bozo_exception', 'none')}")
-        
         for e in d.entries[:60]:
             title = clean_text(getattr(e, "title", ""))
             link = getattr(e, "link", "")
-            
-            if is_tek2day:
-                print(f"  [DEBUG] Entry: {title[:50]}")
-                print(f"  [DEBUG] Link: {link}")
-            
             if not title or not link:
-                if is_tek2day:
-                    print(f"  [DEBUG] ❌ Skipped: No title or link")
                 continue
-                
             if is_blocked(link) and "youtube.com/feeds/videos.xml" not in (url or ""):
-                if is_tek2day:
-                    print(f"  [DEBUG] ❌ Skipped: Blocked domain")
                 continue
-                
             dt_local = parse_pubdate(e)
-            
-            if is_tek2day:
-                print(f"  [DEBUG] Parsed date: {dt_local}")
-                print(f"  [DEBUG] within_window check: {within_window(dt_local)}")
-            
             is_youtube_feed = 'youtube.com/feeds/videos.xml' in (url or '')
             if (not is_youtube_feed) and (not within_window(dt_local)):
-                if is_tek2day:
-                    print(f"  [DEBUG] ❌ Skipped: Outside {BACKFILL_WINDOW_DAYS}-day window")
                 continue
-                
             raw_sum = getattr(e, "summary", "") or getattr(e, "description", "")
             summary = clean_text(strip_html_to_text(raw_sum), 400)
             content_html = ""
@@ -657,8 +857,25 @@ def fetch_rss(feed_name, url):
                     content_html = e.content[0].value
                 except Exception:
                     pass
-            
             image_url = extract_image_url(e)
+            
+            # Debug: log what we found from RSS
+            if image_url:
+                print(f"[RSS] {feed_name}: found image in entry: {image_url[:80]}")
+            
+            # Fallback: if no image in RSS entry, try scraping the article page
+            if not image_url and link:
+                try:
+                    print(f"[RSS] {feed_name}: no image in entry, scraping page: {link[:80]}")
+                    page_html = fetch_html(link, referer=link, timeout=10)
+                    page_soup = BeautifulSoup(page_html, "html.parser")
+                    image_url = find_best_image_in_soup(page_soup, link)
+                    if image_url:
+                        print(f"[RSS] {feed_name}: scraped image: {image_url[:80]}")
+                    else:
+                        print(f"[RSS] {feed_name}: no image found after scraping")
+                except Exception as scrape_err:
+                    print(f"[RSS] {feed_name}: scraping failed: {scrape_err}")
             
             if "youtube.com/feeds/videos.xml" in (url or ""):
                 try:
@@ -667,15 +884,10 @@ def fetch_rss(feed_name, url):
                         video_id = link.split("watch?v=")[1].split("&")[0]
                     elif "youtu.be/" in link:
                         video_id = link.split("youtu.be/")[1].split("?")[0]
-                    
                     if video_id:
                         image_url = f"https://i.ytimg.com/vi/{video_id}/maxresdefault.jpg"
                 except Exception:
                     pass
-            
-            if is_tek2day:
-                print(f"  [DEBUG] ✅ Added to items!")
-            
             items.append({
                 "title": title,
                 "url": link,
@@ -687,13 +899,10 @@ def fetch_rss(feed_name, url):
             })
         return items
     except Exception as e:
-        if "tek2day" in feed_name.lower():
-            print(f"  [DEBUG] ❌ EXCEPTION: {e}")
-            import traceback
-            traceback.print_exc()
+        print(f"[RSS] Error fetching {feed_name} from {url}: {e}")
         return []
 
-# ----------------- Google Trends integration -----------------
+# ---- Google Trends integration ----
 def get_trending_tech_keywords(max_keywords: int = 25) -> list[str]:
     fallback = [
         "ai","openai","anthropic","claude","chatgpt","gpt","llm","deepmind","mistral",
@@ -766,19 +975,13 @@ ALIAS_TO_CANON: dict[str, str] = {
 }
 
 def _match_trending_keywords(text: str, keywords: list[str]) -> list[str]:
-    """
-    Return canonical trending chips that appear in text.
-    - Case-insensitive.
-    - Punctuation-insensitive (e.g., 'A.I.' matches 'ai').
-    - Variations collapse to a single canonical chip via ALIAS_TO_CANON.
-    """
     if not text:
         return []
     tl = (text or "").lower()
     tn = _norm_keyword(text)
 
     out: set[str] = set()
-    for kw in keywords or []:
+    for kw in (keywords or []):
         if not kw:
             continue
         kw_lower = kw.lower().strip()
@@ -790,23 +993,7 @@ def _match_trending_keywords(text: str, keywords: list[str]) -> list[str]:
         out.add(canonical)
     return sorted(out)
 
-# ----------------- categorization -----------------
-CATEGORY_KEYWORDS = {
-    "ai": [
-        "ai","artificial intelligence","large language model","llm","gpt","openai",
-        "anthropic","deepmind","sora","transformer","diffusion","ml","machine learning",
-        "npu","tpu","cuda","rocm","inference","llama","mistral"
-    ],
-    "software": [
-        "software","developer","devops","platform","sdk","api","apps","app","release",
-        "github","cloud","saas","microservices","kubernetes","langchain","runtime","framework"
-    ],
-    "fintech": [
-        "fintech","payments","payment","bank","banking","crypto","blockchain","defi",
-        "lending","card","visa","mastercard","stripe","paypal","square","nubank","aml","kyc"
-    ],
-}
-
+# ---- Categorization (scores) ----
 AI_STRONG = [
     " ai ", "artificial intelligence", "llm", "gpt", "transformer", "diffusion",
     "inference", "fine-tun", "multimodal", "rlhf", "prompting", "agentic",
@@ -908,15 +1095,13 @@ def compute_scores(title: str, url: str, summary: str = "") -> dict:
     return {"ai": ai, "software": sw, "fintech": ft}
 
 # ---- Cross-run duplicate collapse ----
-from urllib.parse import urlparse
-
 AGG_DOMAINS = {"news.google.com", "news.yahoo.com", "news.ycombinator.com"}
 
 def _strip_publisher_suffix(title: str) -> str:
     if not title: return ""
     t = html.unescape(title)
-    t = re.sub("[‘’]", "'", t)  # curly -> straight
-    t = re.sub('[“”]', '"', t)
+    t = re.sub("[â€˜â€™]", "'", t)
+    t = re.sub('[â€œâ€]', '"', t)
     t = re.sub(r"\s+", " ", t).strip()
     for sep in (" - ", " | "):
         if sep in t:
@@ -925,13 +1110,6 @@ def _strip_publisher_suffix(title: str) -> str:
                 t = left
                 break
     return t
-
-def _host(u: str) -> str:
-    try:
-        h = urlparse(u or "").netloc.lower()
-        return h[4:] if h.startswith("www.") else h
-    except Exception:
-        return ""
 
 def dedupe_story_variants(items: list) -> list:
     best = {}
@@ -1000,7 +1178,7 @@ def summarize(item):
     if item.get("summary"):
         return clean_text(item["summary"], 260)
     try:
-        r = requests.get(item["url"], timeout=12, headers={"User-Agent":"Mozilla/5.0"})
+        r = SESSION.get(item["url"], timeout=12)
         soup = BeautifulSoup(r.text, "html5lib")
         for sel in [("meta", {"property":"og:description"}), ("meta", {"name":"description"})]:
             m = soup.find(*sel)
@@ -1050,7 +1228,6 @@ def build_section(date_str, by_cat):
             url_raw = it["url"]
             url = add_utm(url_raw)
             permalink = it.get("_abs_permalink", "")
-            
             if "youtube.com" in url_raw or "youtu.be" in url_raw:
                 thumbnail = ""
                 try:
@@ -1065,7 +1242,6 @@ def build_section(date_str, by_cat):
                     pass
             else:
                 thumbnail = it.get("_thumbnail") or it.get("image_url") or ""
-            
             src = html.escape(it["source"])
             try:
                 dt_local = dtparser.parse(it["published_at"]).astimezone(TZ)
@@ -1075,9 +1251,7 @@ def build_section(date_str, by_cat):
             summary_txt = clean_text(strip_html_to_text(it.get("summary_text","")), 180)
             summary_html = html.escape(summary_txt)
             top_cls = " top" if idx == 0 else ""
-            
             thumb_html = f'<img src="{thumbnail}" alt="{html.escape(title_raw, quote=True)}" class="article-thumb">' if thumbnail else ''
-            
             parts.append(f"""<article class="{top_cls.strip()}" data-card data-url="{url}" data-permalink="{permalink}" data-title="{html.escape(title_raw, quote=True)}" data-summary="{summary_html}">
   {thumb_html}
   <div class="article-content">
@@ -1095,16 +1269,12 @@ def build_section(date_str, by_cat):
     for cat_key, ph in (("ai", "AI"), ("software", "SW"), ("fintech", "FT")):
         items = by_cat.get(cat_key, [])[:MAX_ITEMS]
         html_out = html_out.replace(f"{{{{{ph}_COUNT}}}}", str(len(items)))
-        html_out = html_out.replace(
-            f"{{{{{ph}_ITEMS}}}}",
-            render_items(items) if items else "<p>No items today.</p>"
-        )
+        html_out = html_out.replace(f"{{{{{ph}_ITEMS}}}}", render_items(items) if items else "<p>No items today.</p>")
 
     html_out = html_out.replace("{{TOTAL_COUNT}}", str(total_count))
     html_out = html_out.replace("{{COUNT}}", str(total_count))
     return html_out
 
-# ---- Helper: ensure chips exist for items being rendered right now ----
 def _apply_trend_chips_inplace(it: dict, trending_keywords: list[str]) -> None:
     title = it.get("title", "") or ""
     summary_raw = it.get("summary_text") or it.get("summary") or it.get("description") or ""
@@ -1115,6 +1285,7 @@ def _apply_trend_chips_inplace(it: dict, trending_keywords: list[str]) -> None:
         it["_trending_tags"] = sorted(tags)
 
 def main():
+    # Weekend: reuse Friday snapshot if available
     if os.environ.get('DISABLE_WEEKEND_CACHE', '0') != '1':
         if _weekend_use_friday_payload_if_available():
             return
@@ -1125,6 +1296,7 @@ def main():
     trending_keywords = get_trending_tech_keywords(max_keywords=30)
     print(f"Fetched {len(trending_keywords)} trending tech keywords from Google Trends.")
 
+    # Direct RSS
     print(f"\n--- Fetching {len(CFG['sources']['rss'])} RSS feeds ---")
     for s in CFG["sources"]["rss"]:
         print(f"Fetching: {s['name']} from {s['url']}")
@@ -1132,62 +1304,29 @@ def main():
         print(f"  → Got {len(fetched)} articles")
         all_items.extend(fetched)
 
+    # Dedupe
     print(f"\n--- Before dedupe: {len(all_items)} total articles ---")
     all_items = dedupe(all_items)
     print(f"--- After dedupe: {len(all_items)} unique articles ---")
 
+    # Final filtering, relevance, enrichment
     pruned = []
-    tek2day_count = 0
-    tek2day_filtered = 0
-    
     for it in all_items:
-        is_tek2day = "tek2day" in (it.get("source") or "").lower()
-        
-        if is_tek2day:
-            tek2day_count += 1
-            print(f"\n[TEK2DAY] Processing article: {it.get('title', 'NO TITLE')[:60]}")
-            print(f"  Source: {it.get('source')}")
-            print(f"  URL: {it.get('url')}")
-        
         if is_blocked(it["url"]):
-            if is_tek2day:
-                print(f"  ❌ BLOCKED by domain filter")
-                tek2day_filtered += 1
             continue
-            
         if is_deals_or_consumer_shopping(it["title"], it["url"]):
-            if is_tek2day:
-                print(f"  ❌ BLOCKED by deals/shopping filter")
-                tek2day_filtered += 1
             continue
-            
-        src_norm = (it.get("source") or "").strip().lower()
-        
-        if is_tek2day:
-            print(f"  Normalized source: '{src_norm}'")
-            print(f"  FORCE_INCLUDE_SOURCES: {FORCE_INCLUDE_SOURCES}")
-        
         it["summary_text"] = summarize(it)
         cat, score = categorize_with_score(it["title"], it["url"], it.get("summary_text", ""))
-        
-        if is_tek2day:
-            print(f"  Category: {cat}, Score: {score}")
-        
+        # Drop unrelated items unless forced include
+        src_norm = (it.get("source") or "").strip().lower()
         is_youtube_src = ("youtube" in src_norm)
         is_force_included = any(term in src_norm for term in FORCE_INCLUDE_SOURCES)
-        
-        if is_tek2day:
-            print(f"  is_force_included: {is_force_included}")
-            print(f"  Checking if 'tek2day' in '{src_norm}': {'tek2day' in src_norm}")
-        
         if score == 0 and (src_norm not in FORCE_AI_SOURCES) and (not is_youtube_src) and (not is_force_included):
-            if is_tek2day:
-                print(f"  ❌ BLOCKED by zero-score filter")
-                tek2day_filtered += 1
             continue
-            
         it["category"] = cat
 
+        # Tag with canonical trending chips
         try:
             tags = set(_match_trending_keywords(it.get("title",""), trending_keywords))
             tags.update(_match_trending_keywords(it.get("summary_text",""), trending_keywords))
@@ -1196,15 +1335,11 @@ def main():
         except Exception:
             pass
 
-        if is_tek2day:
-            print(f"  ✅ PASSED all filters!")
-
+        # Force-routing for certain sources/domains
         try:
             d = domain_of(it["url"])
         except Exception:
             d = ""
-        src_norm = (it.get("source") or "").strip().lower()
-        
         if ("youtube" in src_norm) or (src_norm in FORCE_AI_SOURCES) or (src_norm in FORCE_INCLUDE_SOURCES):
             it["category"] = "ai"
         elif d in FORCE_FINTECH_DOMAINS or src_norm in FORCE_FINTECH_SOURCES:
@@ -1214,13 +1349,9 @@ def main():
 
         pruned.append(it)
     
-    print(f"\n=== TEK2DAY SUMMARY ===")
-    print(f"TEK2day articles found: {tek2day_count}")
-    print(f"TEK2day articles filtered out: {tek2day_filtered}")
-    print(f"TEK2day articles passed: {tek2day_count - tek2day_filtered}")
-    
     all_items = pruned
 
+    # Sort newest first
     def parsed_dt(it):
         try:
             return dtparser.parse(it["published_at"]).astimezone(TZ)
@@ -1228,10 +1359,7 @@ def main():
             return now_et()
     all_items.sort(key=parsed_dt, reverse=True)
 
-    by_cat = {"ai": [], "software": [], "fintech": []}
-    for it in all_items:
-        by_cat[it["category"]].append(it)
-
+    # Bucket
     by_cat = build_preferred_today_with_floors(
         all_items,
         now_local=now_et(),
@@ -1245,6 +1373,7 @@ def main():
             if not it.get("_trending_tags"):
                 _apply_trend_chips_inplace(it, trending_keywords)
 
+    # Generate permalinks and concise summaries for today's items
     unique_items, _seen = [], set()
     for cat in ("ai", "software", "fintech"):
         for it in by_cat.get(cat, []):
@@ -1258,17 +1387,21 @@ def main():
                 print(f"Warning: Failed to create permalink for '{it.get('title', 'Unknown')}': {e}")
             unique_items.append(it)
 
+    # Render
     date_str = now_et().strftime("%b %-d, %Y")
     section = build_section(date_str, by_cat)
 
+    # Save Friday snapshot for weekend reuse
     _save_friday_snapshot_if_today(all_items, by_cat)
 
+    # Write outputs
     docs = os.path.join(REPO, "docs")
     os.makedirs(docs, exist_ok=True)
     with open(os.path.join(docs, "index.html"), "w", encoding="utf-8") as f:
         f.write(section)
     with open(os.path.join(docs, "pulse.json"), "w", encoding="utf-8") as f:
         json.dump(all_items, f, indent=2)
+        # Timestamped snapshot so items persist across runs (3-day retention)
         try:
             ts_dir = os.path.join(docs, "archive", "timestamped")
             os.makedirs(ts_dir, exist_ok=True)
@@ -1281,6 +1414,7 @@ def main():
         except Exception:
             pass
 
+    # Trending analytics JSON (optional)
     try:
         analytics = {
             "generated_at": now_et().isoformat(),
@@ -1290,33 +1424,12 @@ def main():
             "top_articles_per_keyword": {},
         }
         items_for_stats = unique_items
-        kw_to_items = {kw: [] for kw in trending_keywords}
+        kw_to_items = {}
         for it in items_for_stats:
             for kw in (it.get("_trending_tags") or []):
                 kw_to_items.setdefault(kw, []).append(it)
         for kw, items in kw_to_items.items():
-            if not items:
-                continue
             analytics["keyword_counts"][kw] = len(items)
-            srcs = sorted({(it.get("source") or "").strip() for it in items if it.get("source")})
-            doms = sorted({domain_of(it.get("url","")) for it in items if it.get("url")})
-            analytics["sources_per_keyword"][kw] = {"sources": srcs, "domains": doms}
-            def _dt(it):
-                try:
-                    return dtparser.parse(it.get("published_at","")).astimezone(TZ)
-                except Exception:
-                    return now_et()
-            top = sorted(items, key=_dt, reverse=True)[:5]
-            analytics["top_articles_per_keyword"][kw] = [
-                {
-                    "title": it.get("title"),
-                    "url": it.get("url"),
-                    "source": it.get("source"),
-                    "published_at": it.get("published_at"),
-                    "category": it.get("category"),
-                    "_permalink": it.get("_abs_permalink") or it.get("_permalink"),
-                } for it in top
-            ]
         nonzero = {k:v for k,v in analytics["keyword_counts"].items() if v > 0}
         analytics["keyword_counts"] = dict(sorted(nonzero.items(), key=lambda kv: (-kv[1], kv[0])))
         with open(os.path.join(docs, "trending_analytics.json"), "w", encoding="utf-8") as f:
@@ -1324,6 +1437,7 @@ def main():
     except Exception as e:
         print(f"Warning: failed to write trending_analytics.json: {e}")
 
+    # Daily snapshot
     try:
         arch_dir = os.path.join(docs, "archive", "json")
         os.makedirs(arch_dir, exist_ok=True)
@@ -1357,10 +1471,8 @@ def main():
                     title = it.get("title", "")
                     summary_raw = it.get("summary_text") or it.get("summary") or it.get("description") or ""
                     summary_txt = strip_html_to_text(summary_raw)
-
                     tags = set(_match_trending_keywords(title, trending_keywords))
                     tags.update(_match_trending_keywords(summary_txt, trending_keywords))
-
                     if tags:
                         new_tags = sorted(tags)
                         if new_tags != (it.get("_trending_tags") or []):
