@@ -127,20 +127,6 @@
     "category": "software"
   },
   {
-    "title": "Blackstone says Wall Street is complacent about AI disruption",
-    "url": "https://www.ft.com/content/35d80b4d-eecd-424b-9350-8da138036d7e",
-    "published_at": "2025-10-18T07:00:02-04:00",
-    "source": "Financial Times - Technology",
-    "summary": "Jonathan Gray says private capital group has put risks from the technology \u2018top of our list\u2019 when evaluating deals",
-    "content_html": "",
-    "image_url": "",
-    "summary_text": "Jonathan Gray says private capital group has put risks from the technology \u2018top of our list\u2019 when evaluating deals",
-    "category": "software",
-    "_trending_tags": [
-      "ai"
-    ]
-  },
-  {
     "title": "Does A.I. Count as Art? Ask the Curators",
     "url": "https://www.nytimes.com/2025/10/18/arts/design/artificial-intelligence-art-museums.html",
     "published_at": "2025-10-18T05:01:30-04:00",
@@ -172,17 +158,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/1cdab51cad/",
     "_summary_240": "Vector databases (DBs), once specialist research instruments, have become widely used infrastructure in just a few years. They power today's semantic search, recommendation...",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/1cdab51cad/thumbnail.png"
-  },
-  {
-    "title": "Every Screen on the Planet: The Secret story of TikTok \u2014 a power grab, one clip at a time",
-    "url": "https://www.ft.com/content/e29b8e1d-b716-4fae-be77-70566b3fefe2",
-    "published_at": "2025-10-18T00:00:12-04:00",
-    "source": "Financial Times - Technology",
-    "summary": "Emily Baker-White examines how the pioneers of an addictive app ended up outwitting the geopolitical superpowers",
-    "content_html": "",
-    "image_url": "",
-    "summary_text": "Emily Baker-White examines how the pioneers of an addictive app ended up outwitting the geopolitical superpowers",
-    "category": "fintech"
   },
   {
     "title": "Silicon Valley spooks the AI safety advocates",
@@ -452,21 +427,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/4c43bc8d79/thumbnail.png"
   },
   {
-    "title": "Ex-Builder.ai CFO subpoenaed as US authorities probe its collapse",
-    "url": "https://www.ft.com/content/177dd03a-bffe-4248-9c75-db2f54dd35a4",
-    "published_at": "2025-10-17T13:39:10-04:00",
-    "source": "Financial Times - Technology",
-    "summary": "Microsoft-backed start-up fell into insolvency soon after prosecutors asked for documents around its finances",
-    "content_html": "",
-    "image_url": "",
-    "summary_text": "Microsoft-backed start-up fell into insolvency soon after prosecutors asked for documents around its finances",
-    "category": "fintech",
-    "_trending_tags": [
-      "ai",
-      "microsoft"
-    ]
-  },
-  {
     "title": "Facebook\u2019s AI can now suggest edits to the photos still on your phone",
     "url": "https://techcrunch.com/2025/10/17/facebooks-ai-can-now-suggest-edits-to-the-photos-still-on-your-phone/",
     "published_at": "2025-10-17T13:29:47-04:00",
@@ -626,34 +586,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/12d3da6858/thumbnail.png"
   },
   {
-    "title": "Silicon Valley takes stock of the AI bubble",
-    "url": "https://www.ft.com/content/9b9a50c2-b704-4b7b-8676-e640ce136ac0",
-    "published_at": "2025-10-17T00:00:22-04:00",
-    "source": "Financial Times - Technology",
-    "summary": "Plus, Karel Kom\u00e1rek, the man bringing the fight to US gambling giants",
-    "content_html": "",
-    "image_url": "",
-    "summary_text": "Plus, Karel Kom\u00e1rek, the man bringing the fight to US gambling giants",
-    "category": "ai",
-    "_trending_tags": [
-      "ai"
-    ]
-  },
-  {
-    "title": "AI has a cargo cult problem",
-    "url": "https://www.ft.com/content/f2025ac7-a71f-464f-a3a6-1e39c98612c7",
-    "published_at": "2025-10-17T00:00:14-04:00",
-    "source": "Financial Times - Technology",
-    "summary": "Spending vast sums and inflating an investment bubble is no guarantee of unleashing technological magic",
-    "content_html": "",
-    "image_url": "",
-    "summary_text": "Spending vast sums and inflating an investment bubble is no guarantee of unleashing technological magic",
-    "category": "ai",
-    "_trending_tags": [
-      "ai"
-    ]
-  },
-  {
     "title": "Researchers find adding this one simple sentence to prompts makes AI models way more creative",
     "url": "https://venturebeat.com/ai/researchers-find-adding-this-one-simple-sentence-to-prompts-makes-ai-models",
     "published_at": "2025-10-16T22:40:00-04:00",
@@ -703,25 +635,6 @@
     "_trending_tags": [
       "ai",
       "openai"
-    ],
-    "_permalink": "/p/39ff1c1514/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/39ff1c1514/",
-    "_summary_240": "Despite connection hiccups, we covered OpenAI's finances, nuclear power, and Sam Altman.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/39ff1c1514/thumbnail.png"
-  },
-  {
-    "title": "What GPU pricing can tell us about how the AI bubble will pop",
-    "url": "https://www.ft.com/content/d49707ae-5d6b-473e-9e2b-487d318e6fe9",
-    "published_at": "2025-10-16T14:21:31-04:00",
-    "source": "Financial Times - Technology",
-    "summary": "Rental health awareness",
-    "content_html": "",
-    "image_url": "",
-    "summary_text": "Rental health awareness",
-    "category": "ai",
-    "_trending_tags": [
-      "ai",
-      "gpu"
     ]
   },
   {
@@ -751,23 +664,6 @@
     "category": "ai",
     "_trending_tags": [
       "ai"
-    ]
-  },
-  {
-    "title": "OpenAI wants to own it all",
-    "url": "https://www.ft.com/content/5859c6f2-d89b-4958-bcee-bb2b548c6c35",
-    "published_at": "2025-10-16T12:39:55-04:00",
-    "source": "Financial Times - Technology",
-    "summary": "ChatGPT maker has boundless ambition, but how much can it achieve before suffering a serious case of indigestion?",
-    "content_html": "",
-    "image_url": "",
-    "summary_text": "ChatGPT maker has boundless ambition, but how much can it achieve before suffering a serious case of indigestion?",
-    "category": "ai",
-    "_trending_tags": [
-      "ai",
-      "chatgpt",
-      "gpt",
-      "openai"
     ]
   },
   {
@@ -888,21 +784,6 @@
     "_trending_tags": [
       "agent",
       "ai"
-    ]
-  },
-  {
-    "title": "\u2018Of course it\u2019s a bubble\u2019: AI start-up valuations soar in investor frenzy",
-    "url": "https://www.ft.com/content/59baba74-c039-4fa7-9d63-b14f8b2bb9e2",
-    "published_at": "2025-10-16T00:00:14-04:00",
-    "source": "Financial Times - Technology",
-    "summary": "Unprecedented funding leads 10 groups including OpenAI and Elon Musk\u2019s xAI to gain almost $1tn in value in past year",
-    "content_html": "",
-    "image_url": "",
-    "summary_text": "Unprecedented funding leads 10 groups including OpenAI and Elon Musk\u2019s xAI to gain almost $1tn in value in past year",
-    "category": "ai",
-    "_trending_tags": [
-      "ai",
-      "openai"
     ]
   },
   {
@@ -1034,20 +915,6 @@
     ]
   },
   {
-    "title": "US approves new bank backed by billionaires with ties to Trump",
-    "url": "https://www.ft.com/content/202d68bd-629e-42da-a938-c612bc839bdf",
-    "published_at": "2025-10-15T10:11:26-04:00",
-    "source": "Financial Times - Technology",
-    "summary": "Target market for Erebor will be businesses that are part of America\u2019s \u2018innovation economy\u2019",
-    "content_html": "",
-    "image_url": "",
-    "summary_text": "Target market for Erebor will be businesses that are part of America\u2019s \u2018innovation economy\u2019",
-    "category": "fintech",
-    "_trending_tags": [
-      "ai"
-    ]
-  },
-  {
     "title": "Apple unleashes M5, the next big leap in AI performance for Apple silicon",
     "url": "https://www.apple.com/ca/newsroom/2025/10/apple-unleashes-m5-the-next-big-leap-in-ai-performance-for-apple-silicon/",
     "published_at": "2025-10-15T09:09:34.097000-04:00",
@@ -1088,20 +955,6 @@
     "image_url": "https://images.ctfassets.net/jdtwqhzvc2n1/4KtYR3vJAj9O1BxMtYqm9e/aad83e291aadf8fd2f12e6cf45aeede9/nuneybits_Vector_art_of_coffee_made_of_computer_code_87b3e7a8-f103-4de0-ae47-d17717e023f9.webp",
     "summary_text": "The Dfinity Foundation on Wednesday released Caffeine , an artificial intelligence platform that allows users to build and deploy web applications through natural language conversation alone, bypassing traditional coding entirely. The system, which became pub...",
     "category": "ai",
-    "_trending_tags": [
-      "ai"
-    ]
-  },
-  {
-    "title": "Capita fined \u00a314mn over theft of personal data in cyber attack",
-    "url": "https://www.ft.com/content/25741917-e42c-494f-8b47-6f1a37eec805",
-    "published_at": "2025-10-15T03:42:22-04:00",
-    "source": "Financial Times - Technology",
-    "summary": "Hackers stole data of 6.6mn people in 2023 incident",
-    "content_html": "",
-    "image_url": "",
-    "summary_text": "Hackers stole data of 6.6mn people in 2023 incident",
-    "category": "software",
     "_trending_tags": [
       "ai"
     ]

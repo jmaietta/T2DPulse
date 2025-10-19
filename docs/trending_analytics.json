@@ -1,9 +1,9 @@
 {
-  "generated_at": "2025-10-19T16:21:14.129206-04:00",
+  "generated_at": "2025-10-19T16:37:30.431399-04:00",
   "total_keywords": 30,
   "keyword_counts": {
-    "ai": 68,
-    "openai": 11,
+    "ai": 65,
+    "openai": 9,
     "agent": 6,
     "gpt": 6,
     "anthropic": 4,
@@ -54,7 +54,6 @@
     },
     "openai": {
       "sources": [
-        "Ars Technica",
         "Bloomberg Technology",
         "OpenAI YouTube",
         "TechCrunch",
@@ -63,7 +62,6 @@
         "VentureBeat"
       ],
       "domains": [
-        "arstechnica.com",
         "bloomberg.com",
         "nytimes.com",
         "techcrunch.com",
