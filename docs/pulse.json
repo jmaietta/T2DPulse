@@ -1,5 +1,38 @@
 [
   {
+    "title": "Adobe launches a foundry service that builds custom generative AI models for enteprises",
+    "url": "https://techcrunch.com/2025/10/20/adobe-launches-a-foundry-service-that-builds-custom-generative-ai-models-for-enteprises/",
+    "published_at": "2025-10-20T09:00:00-04:00",
+    "source": "TechCrunch",
+    "summary": "Adobe will build custom AI models by training its Firefly model family on a brand's intellectual property.",
+    "content_html": "",
+    "image_url": "https://techcrunch.com/wp-content/uploads/2023/08/Adobe.jpg?w=1200",
+    "summary_text": "Adobe will build custom AI models by training its Firefly model family on a brand's intellectual property.",
+    "category": "ai",
+    "_trending_tags": [
+      "ai"
+    ],
+    "_permalink": "/p/40587cae67/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/40587cae67/",
+    "_summary_240": "Adobe will build custom AI models by training its Firefly model family on a brand's intellectual property.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/40587cae67/thumbnail.png"
+  },
+  {
+    "title": "Amazon says most cloud services restored after widespread outage",
+    "url": "https://www.ft.com/content/f9d13a0e-9378-429c-9be0-5f15f649cc3f",
+    "published_at": "2025-10-20T08:52:12-04:00",
+    "source": "Financial Times - Technology",
+    "summary": "US cryptocurrency exchange Coinbase and London Stock Exchange Group data services among those affected by AWS problems",
+    "content_html": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/59950bbd-8eb9-47af-bd2f-fe21637a9fca.jpg",
+    "summary_text": "US cryptocurrency exchange Coinbase and London Stock Exchange Group data services among those affected by AWS problems",
+    "category": "software",
+    "_trending_tags": [
+      "amazon",
+      "cloud"
+    ]
+  },
+  {
     "title": "Amazon DNS outage breaks much of the internet",
     "url": "https://techcrunch.com/2025/10/20/amazon-dns-outage-breaks-much-of-the-internet/",
     "published_at": "2025-10-20T07:21:17-04:00",
@@ -16,25 +49,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/ac24e24c14/",
     "_summary_240": "The outage affected websites like Coinbase and Fortnite, and disrupted services like Signal, Zoom and Amazon's own products, including Ring.",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/ac24e24c14/thumbnail.png"
-  },
-  {
-    "title": "Amazon\u2019s cloud business hit by widespread outage",
-    "url": "https://www.ft.com/content/f9d13a0e-9378-429c-9be0-5f15f649cc3f",
-    "published_at": "2025-10-20T07:03:25-04:00",
-    "source": "Financial Times - Technology",
-    "summary": "US cryptocurrency exchange Coinbase and London Stock Exchange Group data services among those affected by AWS issue",
-    "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/59950bbd-8eb9-47af-bd2f-fe21637a9fca.jpg",
-    "summary_text": "US cryptocurrency exchange Coinbase and London Stock Exchange Group data services among those affected by AWS issue",
-    "category": "software",
-    "_trending_tags": [
-      "amazon",
-      "cloud"
-    ],
-    "_permalink": "/p/43c39bdc39/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/43c39bdc39/",
-    "_summary_240": "US cryptocurrency exchange Coinbase and London Stock Exchange Group data services among those affected by AWS issue",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/43c39bdc39/thumbnail.png"
   },
   {
     "title": "Worldpay to Provide Food Retailer Kroger With Payment Processing Services",
@@ -340,24 +354,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/fa6f074b51/thumbnail.png"
   },
   {
-    "title": "Opera\u2019s Neon shows just how confusing AI browsers still are",
-    "url": "https://www.theverge.com/tech/801899/opera-neon-ai-browser-trial-run",
-    "published_at": "2025-10-19T09:00:00-04:00",
-    "source": "The Verge",
-    "summary": "The trick to understanding Opera's Neon browser is recognizing that it's not just a browser with an AI bot added to it, but a browser with three AI bots all living side by side. This is both a strength and a weakness, because while you don't have to leave to do all the AI things [\u2026]",
-    "content_html": "<figure>\n\n<img alt=\"\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/09/neon_Start_Page_light02.png?quality=90&#038;strip=all&#038;crop=0,0,100,100\" />\n\t<figcaption>\n\t\t</figcaption>\n</figure>\n<p class=\"has-text-align-none\">The trick to understanding Opera's Neon browser is recognizing that it's not just a browser with an AI bot added to it, but a browser with three AI bots all living side by side. This is both a strength and a weakness, because while you don't have to leave to do all the AI things you want, knowing where to go for which AI tasks can be really confusing. </p>\n<p class=\"has-text-align-none\">Opera began taking people off the waitlist for its <a href=\"https://www.theverge.com/news/787707/opera-neon-ai-browser-launch-monthly-cost\">AI browser, Neon, last month</a>. It's entering an increasingly crowded market of AI-powered browsers including Google's <a href=\"https://www.theverge.com/google/673659/gemini-google-chrome-integration-agentic-era\">Gemini-infused Chrome</a>, <a href=\"https://www.theverge.com/news/790419/perplexity-comet-available-everyone-free\">Perplexity's Comet</a>, and <a href=\"https://www.theverge.com/web/685232/dia-browser-ai-arc\">The Browser Company's Dia</a>. Unlike many of these competitors, Opera is charging \u2026</p>\n<p><a href=\"https://www.theverge.com/tech/801899/opera-neon-ai-browser-trial-run\">Read the full story at The Verge.</a></p>",
-    "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/09/neon_Start_Page_light02.png?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "summary_text": "The trick to understanding Opera's Neon browser is recognizing that it's not just a browser with an AI bot added to it, but a browser with three AI bots all living side by side. This is both a strength and a weakness, because while you don't have to leave to ...",
-    "category": "ai",
-    "_trending_tags": [
-      "ai"
-    ],
-    "_permalink": "/p/c23cd1e5a2/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/c23cd1e5a2/",
-    "_summary_240": "The trick to understanding Opera's Neon browser is recognizing that it's not just a browser with an AI bot added to it, but a browser with three AI bots all living side by side....",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/c23cd1e5a2/thumbnail.png"
-  },
-  {
     "title": "The teacher is the new engineer: Inside the rise of AI enablement and PromptOps",
     "url": "https://venturebeat.com/ai/the-teacher-is-the-new-engineer-inside-the-rise-of-ai-enablement-and",
     "published_at": "2025-10-18T23:45:00-04:00",
@@ -572,41 +568,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/841ee7dd89/thumbnail.png"
   },
   {
-    "title": "Trump DOE decides to keep at least one Biden-era energy program",
-    "url": "https://techcrunch.com/2025/10/17/trump-doe-decides-to-keep-at-least-one-biden-era-energy-program/",
-    "published_at": "2025-10-17T15:16:02-04:00",
-    "source": "TechCrunch",
-    "summary": "The loan guarantee will backstop $1.6 billion for AEP, one of the nation's largest utilities, as it seeks to modernize a portion of its transmissions lines.",
-    "content_html": "",
-    "image_url": "https://techcrunch.com/wp-content/uploads/2024/02/critical-infrastructure.jpg?resize=1200,675",
-    "summary_text": "The loan guarantee will backstop $1.6 billion for AEP, one of the nation's largest utilities, as it seeks to modernize a portion of its transmissions lines.",
-    "category": "fintech",
-    "_permalink": "/p/d409744090/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/d409744090/",
-    "_summary_240": "The loan guarantee will backstop $1.6 billion for AEP, one of the nation's largest utilities, as it seeks to modernize a portion of its transmissions lines.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/d409744090/thumbnail.png"
-  },
-  {
-    "title": "Should AI do everything? OpenAI thinks so",
-    "url": "https://techcrunch.com/video/should-ai-do-everything-openai-thinks-so/",
-    "published_at": "2025-10-17T15:00:00-04:00",
-    "source": "TechCrunch",
-    "summary": "Silicon Valley\u2019s rule? It\u2019s not cool to be cautious. As OpenAI removes guardrails and VCs criticize companies like Anthropic for supporting AI safety regulations, it\u2019s becoming clearer who the industry thinks should shape AI development. On this episode of Equity, Kirsten Korosec, Anthony Ha, and Max Zeff discuss how the line between innovation and responsibility [\u2026]",
-    "content_html": "",
-    "image_url": "https://techcrunch.com/wp-content/uploads/2025/09/GettyImages-2214107176.jpg?resize=1200,800",
-    "summary_text": "Silicon Valley\u2019s rule? It\u2019s not cool to be cautious. As OpenAI removes guardrails and VCs criticize companies like Anthropic for supporting AI safety regulations, it\u2019s becoming clearer who the industry thinks should shape AI development. On this episode of Eq...",
-    "category": "ai",
-    "_trending_tags": [
-      "ai",
-      "anthropic",
-      "openai"
-    ],
-    "_permalink": "/p/f311088551/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/f311088551/",
-    "_summary_240": "Silicon Valley\u2019s rule? It\u2019s not cool to be cautious. As OpenAI removes guardrails and VCs criticize companies like Anthropic for supporting AI safety regulations, it\u2019s becoming...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/f311088551/thumbnail.png"
-  },
-  {
     "title": "Cisco warns enterprises: Without tapping machine data, your AI strategy is incomplete",
     "url": "https://venturebeat.com/security/cisco-warns-enterprises-without-tapping-machine-data-your-ai-strategy-is",
     "published_at": "2025-10-17T14:10:00-04:00",
@@ -661,25 +622,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/ac0c10bdae/",
     "_summary_240": "Microsoft-backed start-up fell into insolvency soon after prosecutors asked for documents around its finances",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/ac0c10bdae/thumbnail.png"
-  },
-  {
-    "title": "Facebook\u2019s AI can now suggest edits to the photos still on your phone",
-    "url": "https://techcrunch.com/2025/10/17/facebooks-ai-can-now-suggest-edits-to-the-photos-still-on-your-phone/",
-    "published_at": "2025-10-17T13:29:47-04:00",
-    "source": "TechCrunch",
-    "summary": "Facebook is rolling out a new Meta AI photo suggestion feature across the U.S. and Canada that lets its AI recommend edits to images stored on users\u2019 camera rolls \u2014 even if they haven\u2019t been shared. The feature is currently opt-in only.",
-    "content_html": "",
-    "image_url": "https://techcrunch.com/wp-content/uploads/2025/02/GettyImages-2195497483.jpg?resize=1200,800",
-    "summary_text": "Facebook is rolling out a new Meta AI photo suggestion feature across the U.S. and Canada that lets its AI recommend edits to images stored on users\u2019 camera rolls \u2014 even if they haven\u2019t been shared. The feature is currently opt-in only.",
-    "category": "ai",
-    "_trending_tags": [
-      "ai",
-      "meta"
-    ],
-    "_permalink": "/p/6235430650/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/6235430650/",
-    "_summary_240": "Facebook is rolling out a new Meta AI photo suggestion feature across the U.S. and Canada that lets its AI recommend edits to images stored on users\u2019 camera rolls \u2014 even if they...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/6235430650/thumbnail.png"
   },
   {
     "title": "Open Source AI Week \u2014 How Developers and Contributors Are Advancing AI Innovation",
@@ -750,11 +692,7 @@
     "category": "ai",
     "_trending_tags": [
       "ai"
-    ],
-    "_permalink": "/p/3be49d96f5/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/3be49d96f5/",
-    "_summary_240": "AI models are only as good as the data they're trained on. That data generally needs to be labeled, curated and organized before models can learn from it in an effective way. One...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/3be49d96f5/thumbnail.png"
+    ]
   },
   {
     "title": "California Regulates A.I. Companions + OpenAI Investigates Its Critics + The Hard Fork Review of Slop",
@@ -864,7 +802,7 @@
     "source": "Financial Times - Technology",
     "summary": "Rental health awareness",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/5669c5b6-5122-4015-b478-78d152f7474d.png",
+    "image_url": "",
     "summary_text": "Rental health awareness",
     "category": "ai",
     "_trending_tags": [
@@ -893,7 +831,7 @@
     "source": "Financial Times - Technology",
     "summary": "ChatGPT maker has boundless ambition, but how much can it achieve before suffering a serious case of indigestion?",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/6a772ccf-a439-4458-9696-c0678e7edc80.jpg",
+    "image_url": "",
     "summary_text": "ChatGPT maker has boundless ambition, but how much can it achieve before suffering a serious case of indigestion?",
     "category": "ai",
     "_trending_tags": [
@@ -1030,7 +968,7 @@
     "source": "Financial Times - Technology",
     "summary": "Unprecedented funding leads 10 groups including OpenAI and Elon Musk\u2019s xAI to gain almost $1tn in value in past year",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/9d8f5a25-1d48-4376-b0c2-71a1e0d3821c.jpg",
+    "image_url": "",
     "summary_text": "Unprecedented funding leads 10 groups including OpenAI and Elon Musk\u2019s xAI to gain almost $1tn in value in past year",
     "category": "ai",
     "_trending_tags": [
@@ -1173,7 +1111,7 @@
     "source": "Financial Times - Technology",
     "summary": "Target market for Erebor will be businesses that are part of America\u2019s \u2018innovation economy\u2019",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/942fddd0-f9f8-42af-ae9d-a38b8e17f4ee.jpg",
+    "image_url": "",
     "summary_text": "Target market for Erebor will be businesses that are part of America\u2019s \u2018innovation economy\u2019",
     "category": "fintech",
     "_trending_tags": [
@@ -1193,22 +1131,6 @@
     "_trending_tags": [
       "ai",
       "apple"
-    ]
-  },
-  {
-    "title": "How Starcloud Is Bringing Data Centers to Outer Space",
-    "url": "https://blogs.nvidia.com/blog/starcloud/",
-    "published_at": "2025-10-15T09:00:55-04:00",
-    "source": "NVIDIA News",
-    "summary": "The NVIDIA Inception startup projects that space-based data centers will offer 10x lower energy costs and reduce the need for energy consumption on Earth.",
-    "content_html": "",
-    "image_url": "https://s3.amazonaws.com/cms.ipressroom.com/219/files/202510/68ef9b223d6332290d09999a_starcloud-featured-video-still-1280x680-1-842x450/starcloud-featured-video-still-1280x680-1-842x450_thmb.jpg",
-    "summary_text": "The NVIDIA Inception startup projects that space-based data centers will offer 10x lower energy costs and reduce the need for energy consumption on Earth.",
-    "category": "software",
-    "_trending_tags": [
-      "ai",
-      "cloud",
-      "nvidia"
     ]
   }
 ]
