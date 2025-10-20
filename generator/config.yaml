@@ -1,3 +1,4 @@
+
 timezone: America/New_York
 site_base: https://pulse.tek2dayholdings.com
 run_window_hours: 24
@@ -40,6 +41,8 @@ sources:
     url: https://techcrunch.com/feed/
   - name: TEK2day (Substack)
     url: https://tek2day.substack.com/feed
+  - name: Cointelegraph
+    url: https://cointelegraph.com/rss
   google_news_queries:
     ai: []
     software: []
