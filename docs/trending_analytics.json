@@ -1,5 +1,5 @@
 {
-  "generated_at": "2025-10-20T13:18:49.211900-04:00",
+  "generated_at": "2025-10-20T13:39:08.897850-04:00",
   "total_keywords": 30,
   "keyword_counts": {
     "ai": 52,
@@ -10,15 +10,14 @@
     "openai": 5,
     "claude": 4,
     "google": 4,
-    "gpt": 4,
+    "microsoft": 4,
     "apple": 3,
     "genai": 3,
-    "microsoft": 3,
-    "chatgpt": 2,
+    "gpt": 2,
     "nvidia": 2,
+    "chatgpt": 1,
     "fintech": 1,
-    "llm": 1,
-    "meta": 1
+    "llm": 1
   },
   "sources_per_keyword": {},
   "top_articles_per_keyword": {}
