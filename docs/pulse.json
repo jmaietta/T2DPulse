@@ -1,5 +1,60 @@
 [
   {
+    "title": "Amazon\u2019s AWS Disruption Creates Outages for Hundreds of Websites for Hours",
+    "url": "https://www.nytimes.com/2025/10/20/business/aws-down-internet-outage.html",
+    "published_at": "2025-10-20T13:13:33-04:00",
+    "source": "The New York Times - Technology",
+    "summary": "Amazon Web Services, a major provider of cloud services, cited a problem at its data center in Northern Virginia. The outage highlighted the fragility of global internet infrastructure.",
+    "content_html": "The Amazon Web Services pavilion at a trade fair in Hanover, Germany, in March.",
+    "image_url": "https://static01.nyt.com/images/2025/10/20/world/20xp-outage-paol/20xp-outage-paol-mediumSquareAt3X-v3.jpg",
+    "summary_text": "Amazon Web Services, a major provider of cloud services, cited a problem at its data center in Northern Virginia. The outage highlighted the fragility of global internet infrastructure.",
+    "category": "software",
+    "_trending_tags": [
+      "amazon",
+      "cloud"
+    ],
+    "_permalink": "/p/92d649fb5d/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/92d649fb5d/",
+    "_summary_240": "Amazon Web Services, a major provider of cloud services, cited a problem at its data center in Northern Virginia. The outage highlighted the fragility of global internet...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/92d649fb5d/thumbnail.png"
+  },
+  {
+    "title": "Growing with educators: AI tools and training support learners and teachers",
+    "url": "https://unlocked.microsoft.com/skilling-wa/",
+    "published_at": "2025-10-20T13:01:25-04:00",
+    "source": "Microsoft News",
+    "summary": "The post Growing with educators: AI tools and training support learners and teachers appeared first on Source .",
+    "content_html": "<article class=\"mssrc-posts font-- has--theme\" id=\"single-22549\">\n\t<div class=\"acf-innerblocks-container\"></div>\t\t\t<section class=\"post-tags\">\n\t\t\t\t<div class=\"post-tags__content wp-block-columns\">\n\t\t\t\t\t<div class=\"post-tags__header wp-block-column flex-basis-25 has-text-align-right\">\n\t\t\t\t\t\t<h4 class=\"sr-only\">Tags: </h4>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"post-tags__body wp-block-column flex-basis-60\">\n\t\t\t\t\t\t<ul class=\"post-tags__list\"><li class=\"post-tags__item\"><a class=\"kicker inline-block post__meta--tags\" href=\"https://news.microsoft.com/source/tag/education/\">Education</a></li></ul>\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</section>\n\t\t\t</article><p>The post <a href=\"https://unlocked.microsoft.com/skilling-wa/\">Growing with educators: AI tools and training support learners and teachers</a> appeared first on <a href=\"https://news.microsoft.com/source\">Source</a>.</p>",
+    "image_url": "https://unlocked.microsoft.com/wp-content/uploads/2025/10/WaEDU-story-image-landscape.jpg",
+    "summary_text": "The post Growing with educators: AI tools and training support learners and teachers appeared first on Source .",
+    "category": "ai",
+    "_trending_tags": [
+      "ai"
+    ],
+    "_permalink": "/p/b86dd8032a/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/b86dd8032a/",
+    "_summary_240": "The post Growing with educators: AI tools and training support learners and teachers appeared first on Source .",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/b86dd8032a/thumbnail.png"
+  },
+  {
+    "title": "FTC removes Lina Khan-era posts about AI risks and open source",
+    "url": "https://techcrunch.com/2025/10/20/ftc-removes-lina-khan-era-posts-about-ai-risks-and-open-source/",
+    "published_at": "2025-10-20T12:49:58-04:00",
+    "source": "TechCrunch",
+    "summary": "One post, authored by Khan\u2019s staff, was published on January 3, 2025 with the title \u201cAI and the Risk of Consumer Harm.\u201d It noted that the FTC was \u201ctaking note of AI\u2019s potential for real-world instances of harm \u2013 from incentivizing commercial surveillance to enabling fraud and impersonation to perpetuating illegal discrimination.\u201d",
+    "content_html": "",
+    "image_url": "https://techcrunch.com/wp-content/uploads/2021/06/GettyImages-1232440387.jpg?resize=1200,800",
+    "summary_text": "One post, authored by Khan\u2019s staff, was published on January 3, 2025 with the title \u201cAI and the Risk of Consumer Harm.\u201d It noted that the FTC was \u201ctaking note of AI\u2019s potential for real-world instances of harm \u2013 from incentivizing commercial surveillance to e...",
+    "category": "ai",
+    "_trending_tags": [
+      "ai"
+    ],
+    "_permalink": "/p/5213a20772/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/5213a20772/",
+    "_summary_240": "One post, authored by Khan\u2019s staff, was published on January 3, 2025 with the title \u201cAI and the Risk of Consumer Harm.\u201d It noted that the FTC was \u201ctaking note of AI\u2019s potential...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/5213a20772/thumbnail.png"
+  },
+  {
     "title": "WIRED Roundup: Satellites Data Leak, Cybertrucks, Politicized Federal Workers",
     "url": "https://www.wired.com/story/uncanny-valley-podcast-wired-roundup-satellites-data-leak-cybertrucks-politicized-federal-workers/",
     "published_at": "2025-10-20T12:38:11-04:00",
@@ -13,25 +68,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/42393a8eee/",
     "_summary_240": "In this episode of Uncanny Valley, we run through the top stories of the week, including security concerns from satellites leaking sensitive data and the experiences of...",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/42393a8eee/thumbnail.png"
-  },
-  {
-    "title": "Amazon\u2019s AWS Disruption Creates Outages for Hundreds of Websites for Hours",
-    "url": "https://www.nytimes.com/2025/10/20/business/aws-down-internet-outage.html",
-    "published_at": "2025-10-20T12:37:10-04:00",
-    "source": "The New York Times - Technology",
-    "summary": "Amazon Web Services, a major provider of cloud services, cited a problem at its data center in Northern Virginia. The outage highlighted the fragility of global internet infrastructure.",
-    "content_html": "The Amazon Web Services pavilion at a trade fair in Hanover, Germany, in March.",
-    "image_url": "https://static01.nyt.com/images/2025/10/20/world/20xp-outage-paol/20xp-outage-paol-mediumSquareAt3X-v3.jpg",
-    "summary_text": "Amazon Web Services, a major provider of cloud services, cited a problem at its data center in Northern Virginia. The outage highlighted the fragility of global internet infrastructure.",
-    "category": "software",
-    "_trending_tags": [
-      "amazon",
-      "cloud"
-    ],
-    "_permalink": "/p/1cb9438468/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/1cb9438468/",
-    "_summary_240": "Amazon Web Services, a major provider of cloud services, cited a problem at its data center in Northern Virginia. The outage highlighted the fragility of global internet...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/1cb9438468/thumbnail.png"
   },
   {
     "title": "Introducing Claude for Life Sciences",
@@ -166,19 +202,19 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/27ffb35ddf/thumbnail.png"
   },
   {
-    "title": "San Francisco Mayor Daniel Lurie is coming to TechCrunch Disrupt 2025",
+    "title": "San Francisco mayor Daniel Lurie is coming to TechCrunch Disrupt 2025",
     "url": "https://techcrunch.com/2025/10/20/san-francisco-mayor-daniel-lurie-is-coming-to-techcrunch-disrupt-2025/",
     "published_at": "2025-10-20T11:00:00-04:00",
     "source": "TechCrunch",
-    "summary": "Newly elected Mayor Daniel Lurie steps onto the Disrupt stage at TechCrunch Disrupt 2025, October 27-29 at Moscone West, in a homecoming of sorts for both tech and the city that helped define it. Register now to save and catch this live discussion.",
+    "summary": "Newly elected mayor Daniel Lurie steps onto the Disrupt Stage at TechCrunch Disrupt 2025, October 27-29 at Moscone West, in a homecoming of sorts for both tech and the city that helped define it. Register now to save and catch this live discussion.",
     "content_html": "",
     "image_url": "https://techcrunch.com/wp-content/uploads/2025/10/TC25_Mayor-Daniel-Lurie-Speaker-16x9-Dark.png?resize=1200,675",
-    "summary_text": "Newly elected Mayor Daniel Lurie steps onto the Disrupt stage at TechCrunch Disrupt 2025, October 27-29 at Moscone West, in a homecoming of sorts for both tech and the city that helped define it. Register now to save and catch this live discussion.",
+    "summary_text": "Newly elected mayor Daniel Lurie steps onto the Disrupt Stage at TechCrunch Disrupt 2025, October 27-29 at Moscone West, in a homecoming of sorts for both tech and the city that helped define it. Register now to save and catch this live discussion.",
     "category": "fintech",
-    "_permalink": "/p/4ad0649e13/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/4ad0649e13/",
-    "_summary_240": "Newly elected Mayor Daniel Lurie steps onto the Disrupt stage at TechCrunch Disrupt 2025, October 27-29 at Moscone West, in a homecoming of sorts for both tech and the city that...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/4ad0649e13/thumbnail.png"
+    "_permalink": "/p/2609678e2d/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/2609678e2d/",
+    "_summary_240": "Newly elected mayor Daniel Lurie steps onto the Disrupt Stage at TechCrunch Disrupt 2025, October 27-29 at Moscone West, in a homecoming of sorts for both tech and the city that...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/2609678e2d/thumbnail.png"
   },
   {
     "title": "S&P 500 Extends Rally as Apple Touches a Record, Earnings Beat",
@@ -530,24 +566,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/dec173b1d6/",
     "_summary_240": "As more companies quickly begin using gen AI, it\u2019s important to avoid a big mistake that could impact its effectiveness: Proper onboarding. Companies spend time and money...",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/dec173b1d6/thumbnail.png"
-  },
-  {
-    "title": "Wikipedia says traffic is falling due to AI search summaries and social video",
-    "url": "https://techcrunch.com/2025/10/18/wikipedia-says-traffic-is-falling-due-to-ai-search-summaries-and-social-video/",
-    "published_at": "2025-10-18T15:00:00-04:00",
-    "source": "TechCrunch",
-    "summary": "Looks like Wikipedia isn't immune to broader online trends.",
-    "content_html": "",
-    "image_url": "https://techcrunch.com/wp-content/uploads/2024/11/GettyImages-1873370000.jpg?resize=1200,800",
-    "summary_text": "Looks like Wikipedia isn't immune to broader online trends.",
-    "category": "ai",
-    "_trending_tags": [
-      "ai"
-    ],
-    "_permalink": "/p/b1ca596071/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/b1ca596071/",
-    "_summary_240": "Looks like Wikipedia isn't immune to broader online trends.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/b1ca596071/thumbnail.png"
   },
   {
     "title": "Hackers Had Been Lurking in Cyber Firm F5 Systems Since 2023",
