@@ -1,5 +1,44 @@
 [
   {
+    "title": "OpenAI Launches ChatGPT Atlas Browser, Creating a Workspace",
+    "url": "https://www.pymnts.com/artificial-intelligence-2/2025/openai-launches-chatgpt-atlas-browser-creating-a-workspace/",
+    "published_at": "2025-10-21T17:25:23-04:00",
+    "source": "PYMNTS",
+    "summary": "OpenAI introduced ChatGPT Atlas, a new browser that embeds its AI assistant directly into the web interface. The browser enables users to browse, summarize and act on content in real time. It includes an optional \u201cbrowser memories\u201d feature that preserves context across sessions. Additionally, there\u2019s an agent mode that allows the AI to open tabs [\u2026] The post OpenAI Launches ChatGPT Atlas Browser,...",
+    "content_html": "<p>OpenAI introduced <a href=\"https://openai.com/index/introducing-chatgpt-atlas/\" rel=\"noopener\" target=\"_blank\">ChatGPT Atlas</a>, a new browser that embeds its AI assistant directly into the web interface. The browser enables users to browse, summarize and act on content in real time. It includes an optional \u201cbrowser memories\u201d feature that preserves context across sessions. Additionally, there&#8217;s an agent mode that allows the AI to open tabs or complete multi-step workflows.</p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p>The launch marks a major shift in OpenAI\u2019s platform strategy, extending its technology from standalone chatbots into the core layer. This layer is where search, work and productivity converge. It also signals a direct challenge to incumbents such as Google Chrome and Apple Safari. OpenAI aims to redefine the browser as an intelligent workspace rather than a static portal.</p>\n<h2><strong>From Chatbot to Platform</strong></h2>\n<p>By placing ChatGPT inside the browser itself, the company removes the need for users to toggle between tools, allowing them to interact with web pages contextually, perform actions and retain memory across sessions.</p>\n<p>The launch follows a growing wave of AI-first browsers that treat the interface as an active participant. PYMNTS recently covered <a href=\"https://www.pymnts.com/artificial-intelligence-2/2025/perplexity-takes-on-google-with-ai-powered-browser-comet/\" rel=\"noopener\" target=\"_blank\">Perplexity AI\u2019s Comet browser</a>. This browser uses similar agentic capabilities to compete with Google in the search and browsing market. Atlas brings that same model to OpenAI\u2019s ecosystem. It integrates enterprise-grade AI capabilities with everyday browsing.</p>\n<p>For businesses, Atlas could streamline workflows such as research, compliance checks and document analysis. This is achieved by merging browsing and AI execution. The rollout begins globally on MacOS, with Windows, iOS and Android versions expected later this year.</p>\n<h2><strong>Ecosystem Implications and What Comes Next</strong></h2>\n<p>OpenAI has not disclosed monetization details. However, the browser opens new strategic avenues from premium subscriptions to enterprise integrations and developer tools for in-browser automation. Persistent context and agentic task execution could transform how information is consumed. They could also change how companies measure productivity gains from AI.</p>\n<p>Meanwhile, OpenAI\u2019s growing infrastructure footprint underscores the scale of this transition. PYMNTS recently reported that the company\u2019s computing deals have surpassed the <a href=\"https://www.pymnts.com/artificial-intelligence-2/2025/openai-computing-deals-pass-trillion-dollar-mark/\" rel=\"noopener\" target=\"_blank\">trillion-dollar mark</a>. This reflects the resources required to power agentic systems like Atlas. It also further builds on OpenAI\u2019s earlier expansion of its AgentKit framework. <a href=\"https://www.pymnts.com/news/artificial-intelligence/2025/openai-aims-standardize-how-build-ai-agents/\" rel=\"noopener\" target=\"_blank\">PYMNTS reported</a> that it was designed to bridge ChatGPT with real-world applications.</p>\n<p>If widely adopted, Atlas could redefine the browser itself, turning it into an intelligent workspace that understands intent, manages context, and powers the next phase of AI-driven interaction on the web.</p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/artificial-intelligence-2/2025/openai-launches-chatgpt-atlas-browser-creating-a-workspace/\">OpenAI Launches ChatGPT Atlas Browser, Creating a Workspace</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
+    "image_url": "https://www.pymnts.com/wp-content/uploads/2025/10/openai-eu-regulation-artificial-intelligence-ec.jpg?w=457",
+    "summary_text": "OpenAI introduced ChatGPT Atlas, a new browser that embeds its AI assistant directly into the web interface. The browser enables users to browse, summarize and act on content in real time. It includes an optional \u201cbrowser memories\u201d feature that preserves cont...",
+    "category": "ai",
+    "_trending_tags": [
+      "ai",
+      "chatgpt",
+      "gpt",
+      "openai"
+    ],
+    "_permalink": "/p/41bb00100a/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/41bb00100a/",
+    "_summary_240": "OpenAI introduced ChatGPT Atlas, a new browser that embeds its AI assistant directly into the web interface. The browser enables users to browse, summarize and act on content in...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/41bb00100a/thumbnail.png"
+  },
+  {
+    "title": "Ethereum enters final testnet phase ahead of Dec. 3 Fusaka upgrade",
+    "url": "https://cointelegraph.com/news/ethereum-fusaka-gas-cap-testnets-parallel-execution?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "published_at": "2025-10-21T17:18:44-04:00",
+    "source": "Cointelegraph",
+    "summary": "The cap on individual transactions aims to improve block efficiency, reduce DoS risks and lay the groundwork for parallel execution in future upgrades like Glamsterdam.",
+    "content_html": "",
+    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMDkvMDE5OTMyMmYtM2U0NC03NTg3LTllMmItZTBjZjJiMmJjNDA0.jpg",
+    "summary_text": "The cap on individual transactions aims to improve block efficiency, reduce DoS risks and lay the groundwork for parallel execution in future upgrades like Glamsterdam.",
+    "category": "fintech",
+    "_trending_tags": [
+      "ai"
+    ],
+    "_permalink": "/p/98ee35dabd/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/98ee35dabd/",
+    "_summary_240": "The cap on individual transactions aims to improve block efficiency, reduce DoS risks and lay the groundwork for parallel execution in future upgrades like Glamsterdam.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/98ee35dabd/thumbnail.png"
+  },
+  {
     "title": "OpenAI\u2019s new browser is a broadside shot at Google",
     "url": "https://techcrunch.com/2025/10/21/openais-new-browser-is-a-broadside-shot-at-google/",
     "published_at": "2025-10-21T17:17:50-04:00",
@@ -358,21 +397,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/fca5c20ebe/",
     "_summary_240": "Artificial intelligence startup Cohere is looking to launch an initial public offering \u201csoon,\u201d according to Cohere CEO Aidan Gomez. During an interview at Bloomberg Tech in...",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/fca5c20ebe/thumbnail.png"
-  },
-  {
-    "title": "NYDFS Issues Guidance on 3rd Party Cybersecurity Risks",
-    "url": "https://www.pymnts.com/cybersecurity/2025/nydfs-issues-guidance-on-3rd-party-cybersecurity-risks/",
-    "published_at": "2025-10-21T14:20:46-04:00",
-    "source": "PYMNTS",
-    "summary": "New York\u2019s financial watchdog has issued new guidance on cybersecurity risks connected to third-party service providers. The guidance, announced Tuesday (Oct. 21) by the New York State Department of Financial Services (DFS), comes as organizations become increasingly dependent on such providers, and cyberattacks involving third-party entities continue to grow. \u201cWhile third-party service providers...",
-    "content_html": "<p><span style=\"font-weight: 400;\">New York\u2019s financial watchdog has issued new guidance on cybersecurity risks connected to third-party service providers.</span></p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p><span style=\"font-weight: 400;\">The guidance, </span><a href=\"https://www.dfs.ny.gov/reports_and_publications/press_releases/pr20251021\" rel=\"noopener\" target=\"_blank\"><span style=\"font-weight: 400;\">announced</span></a><span style=\"font-weight: 400;\"> Tuesday (Oct. 21) by the </span><a href=\"https://www.dfs.ny.gov/\" rel=\"noopener\" target=\"_blank\"><span style=\"font-weight: 400;\">New York State Department of Financial Services</span></a><span style=\"font-weight: 400;\"> (DFS), comes as organizations become increasingly dependent on such providers, and cyberattacks involving third-party entities continue to grow.</span></p>\n<p><span style=\"font-weight: 400;\">\u201cWhile third-party service providers have driven innovation and enabled significant efficiencies in our financial system, regulated entities are still ultimately accountable for protecting consumers and managing risk,\u201d </span><a href=\"https://www.linkedin.com/in/kaitlin-asrow-01528b23\" rel=\"noopener\" target=\"_blank\"><span style=\"font-weight: 400;\">Kaitlin Asrow</span></a><span style=\"font-weight: 400;\">, acting superintendent of the NYDFS, said in a news release.</span></p>\n<p><span style=\"font-weight: 400;\">\u201cTo ensure the safe and secure operation of financial services and the protection of nonpublic information, entities must establish and maintain appropriate internal risk management controls when using third-party service providers.\u201d</span></p>\n<p><span style=\"font-weight: 400;\">According to the release, the guidance does not impose new requirements or obligations on DFS-regulated entities but is designed to clarify requirements under DFS\u2019s cybersecurity regulation and share best practices that entities should think about implementing.</span></p>\n<p><span style=\"font-weight: 400;\">As covered here last month, the number of attacks on major corporations\u2019 </span><a href=\"https://www.pymnts.com/news/security-and-risk/2025/hacks-third-party-supply-chains-expected-rise-2025/\" rel=\"noopener\" target=\"_blank\"><span style=\"font-weight: 400;\">third-party suppliers</span></a><span style=\"font-weight: 400;\"> doubled in 2024, with cybersecurity experts predicting that the problem will only worsen.</span></p>\n<p><span style=\"font-weight: 400;\"><a href=\"https://www.linkedin.com/in/tim-erridge-453617/\" rel=\"noopener\" target=\"_blank\">Tim Erridge</a>, vice president of Europe, the Middle East and Africa at Unit 42 at Palo Alto Networks, told the Financial Times cybercriminals are going after supply chains in search of a \u201cweak link\u201d in corporate security defenses.</span></p>\n<p><span style=\"font-weight: 400;\">\u201cIf you \u2018breach\u2019 a supplier and it\u2019s got access into many, many top-end organizations that are consuming their services or connected into them, you\u2019re getting a many-for-one return on investment,\u201d he said.</span></p>\n<p><span style=\"font-weight: 400;\">And as PYMNTS wrote in May, the problem presents a </span><a href=\"https://www.pymnts.com/cybersecurity/2025/firms-eye-vendor-vulnerabilities-as-enterprise-cybersecurity-risks-surge/\" rel=\"noopener\" target=\"_blank\"><span style=\"font-weight: 400;\">simple equation</span></a><span style=\"font-weight: 400;\"> for many organizations: More third-party integrations + more human error = more breach opportunity.</span></p>\n<p><span style=\"font-weight: 400;\">\u201cIn 2021, there were </span><a href=\"https://www.pymnts.com/legal/2025/digital-blind-spots-leave-fintech-firms-exposed-as-cyber-litigation-explodes/\" rel=\"noopener\" target=\"_blank\"><span style=\"font-weight: 400;\">400 data breach lawsuits</span></a><span style=\"font-weight: 400;\"> filed,\u201d </span><a href=\"https://www.blankrome.com/people/philip-n-yannella\" rel=\"noopener\" target=\"_blank\"><span style=\"font-weight: 400;\">Philip Yannella</span></a><span style=\"font-weight: 400;\">, co-chair of the privacy, security and data protection practice at Blank Rome and the author of \u201cCyber Litigation: Data Breach, Data Privacy &amp; Digital Rights,\u201d 2025 edition, said in an interview with PYMNTS. \u201cLast year, there were over 2,000.\u201d</span></p>\n<p><span style=\"font-weight: 400;\">In other NYDFS news, PYMNTS CEO Karen Webster spoke earlier this week with </span><a href=\"https://www.linkedin.com/in/adrienneaharris\" rel=\"noopener\" target=\"_blank\"><span style=\"font-weight: 400;\">Adrienne Harris</span></a><span style=\"font-weight: 400;\">, the regulator\u2019s outgoing superintendent.</span></p>\n<p><span style=\"font-weight: 400;\">Harris pointed out that Asrow \u201chas been a big part of what we\u2019ve built over the past four years,\u201d giving stakeholders confidence that DFS\u2019s </span><a href=\"https://www.pymnts.com/bank-regulation/2025/adrienne-harris-reflects-on-four-years-of-redefining-financial-regulation-in-new-york/\" rel=\"noopener\" target=\"_blank\"><span style=\"font-weight: 400;\">digital finance leadership</span></a><span style=\"font-weight: 400;\"> will continue.</span></p>\n<p><span style=\"font-weight: 400;\">That continuity is critical as the agency makes its way through a financial landscape transformed by the \u201cInternet of money.\u201d Harris added that stablecoins will be key to that transformation.</span></p>\n<p><span style=\"font-weight: 400;\">\u201cThinking about how we might make especially wholesale payments and treasury functions more efficient for businesses \u2026 could really be a game changer,\u201d she told Webster.</span></p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/cybersecurity/2025/nydfs-issues-guidance-on-3rd-party-cybersecurity-risks/\">NYDFS Issues Guidance on 3rd Party Cybersecurity Risks</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
-    "image_url": "https://www.pymnts.com/wp-content/uploads/2025/10/cybersecurity-nydfs-new-york-state-department-of-financial-services-third-party-providers-kaitlin-asrow-adrienne-harris.jpg?w=457",
-    "summary_text": "New York\u2019s financial watchdog has issued new guidance on cybersecurity risks connected to third-party service providers. The guidance, announced Tuesday (Oct. 21) by the New York State Department of Financial Services (DFS), comes as organizations become incr...",
-    "category": "fintech",
-    "_permalink": "/p/68811800c2/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/68811800c2/",
-    "_summary_240": "New York\u2019s financial watchdog has issued new guidance on cybersecurity risks connected to third-party service providers. The guidance, announced Tuesday (Oct. 21) by the New York...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/68811800c2/thumbnail.png"
   },
   {
     "title": "I see your Haribo gummy bear battery and raise you a Pocket Rocket instead",
@@ -783,24 +807,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/4222e98272/thumbnail.png"
   },
   {
-    "title": "UnitedHealth\u2019s \u2018Optum Real\u2019 Uses AI to Speed Up Medical Claims",
-    "url": "https://www.bloomberg.com/news/articles/2025-10-21/unitedhealth-s-optum-real-uses-ai-to-speed-up-medical-claims",
-    "published_at": "2025-10-21T07:00:00-04:00",
-    "source": "Bloomberg Technology",
-    "summary": "UnitedHealth Group Inc. is testing a new system to streamline how medical claims are processed, an early example of what the company says is the potential for artificial intelligence to smooth out friction in billing.",
-    "content_html": "The UnitedHealth logo on a laptop arranged in New York, US, on Friday, July 7, 2023. UnitedHealth Group Inc. is scheduled to release earnings figures on July 14.",
-    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iKkVHCe_5DZg/v1/1200x-1.jpg",
-    "summary_text": "UnitedHealth Group Inc. is testing a new system to streamline how medical claims are processed, an early example of what the company says is the potential for artificial intelligence to smooth out friction in billing.",
-    "category": "ai",
-    "_trending_tags": [
-      "ai"
-    ],
-    "_permalink": "/p/f070da1671/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/f070da1671/",
-    "_summary_240": "UnitedHealth Group Inc. is testing a new system to streamline how medical claims are processed, an early example of what the company says is the potential for artificial...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/f070da1671/thumbnail.png"
-  },
-  {
     "title": "AI Mania Risks Spoiling a Classic Haven as Utility Yields Crash",
     "url": "https://www.bloomberg.com/news/articles/2025-10-21/ai-boom-transforms-utilities-from-haven-to-soaring-growth-stocks",
     "published_at": "2025-10-21T06:30:14-04:00",
@@ -937,25 +943,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/9e218e9ac8/",
     "_summary_240": "British Columbia is moving to ban new crypto mining connections to protect its Hydro power grid. For years, analysts have argued this is the wrong approach.",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/9e218e9ac8/thumbnail.png"
-  },
-  {
-    "title": "How to turn crypto headlines into trade signals with ChatGPT",
-    "url": "https://cointelegraph.com/news/how-to-use-chatgpt-to-turn-crypto-news-into-trade-signals?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-    "published_at": "2025-10-21T01:57:00-04:00",
-    "source": "Cointelegraph",
-    "summary": "Crypto traders can use ChatGPT to decode crypto headlines and generate actionable trade setups \u2014 fast, flexible and surprisingly accurate (subject to human verification).",
-    "content_html": "",
-    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMDQvMDE5NjE1M2QtYzExNC03Mzg1LWJmZDktMDEwYTM2OWVkNWFl.jpg",
-    "summary_text": "Crypto traders can use ChatGPT to decode crypto headlines and generate actionable trade setups \u2014 fast, flexible and surprisingly accurate (subject to human verification).",
-    "category": "ai",
-    "_trending_tags": [
-      "chatgpt",
-      "gpt"
-    ],
-    "_permalink": "/p/4d6d4dde69/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/4d6d4dde69/",
-    "_summary_240": "Crypto traders can use ChatGPT to decode crypto headlines and generate actionable trade setups \u2014 fast, flexible and surprisingly accurate (subject to human verification).",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/4d6d4dde69/thumbnail.png"
   },
   {
     "title": "New 'Markovian Thinking' technique unlocks a path to million-token AI reasoning",
@@ -1446,7 +1433,7 @@
     "source": "Financial Times - Technology",
     "summary": "Emily Baker-White examines how the pioneers of an addictive app ended up outwitting the geopolitical superpowers",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/9ac815b7-4bee-4d3f-a99a-7b5e31a48899.jpg",
+    "image_url": "",
     "summary_text": "Emily Baker-White examines how the pioneers of an addictive app ended up outwitting the geopolitical superpowers",
     "category": "fintech"
   },
@@ -1521,7 +1508,7 @@
     "source": "Financial Times - Technology",
     "summary": "Microsoft-backed start-up fell into insolvency soon after prosecutors asked for documents around its finances",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/21574937-3510-48a4-993b-e9256a3c9433.jpg",
+    "image_url": "",
     "summary_text": "Microsoft-backed start-up fell into insolvency soon after prosecutors asked for documents around its finances",
     "category": "fintech",
     "_trending_tags": [
@@ -1607,7 +1594,7 @@
     "source": "Financial Times - Technology",
     "summary": "Plus, Karel Kom\u00e1rek, the man bringing the fight to US gambling giants",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/e4f8a71a-06b7-4870-9bd0-3ba8f6d30b6a.jpg",
+    "image_url": "",
     "summary_text": "Plus, Karel Kom\u00e1rek, the man bringing the fight to US gambling giants",
     "category": "ai",
     "_trending_tags": [
@@ -1621,7 +1608,7 @@
     "source": "Financial Times - Technology",
     "summary": "Spending vast sums and inflating an investment bubble is no guarantee of unleashing technological magic",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/0d761b7c-7323-425d-afe0-d430cfebc956.jpg",
+    "image_url": "",
     "summary_text": "Spending vast sums and inflating an investment bubble is no guarantee of unleashing technological magic",
     "category": "ai",
     "_trending_tags": [
