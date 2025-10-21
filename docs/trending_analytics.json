@@ -1,13 +1,13 @@
 {
-  "generated_at": "2025-10-21T13:20:38.401917-04:00",
+  "generated_at": "2025-10-21T13:40:48.913472-04:00",
   "total_keywords": 30,
   "keyword_counts": {
-    "ai": 97,
+    "ai": 98,
     "amazon": 11,
     "openai": 11,
+    "gpt": 10,
+    "chatgpt": 9,
     "cloud": 9,
-    "gpt": 9,
-    "chatgpt": 8,
     "apple": 7,
     "google": 7,
     "agent": 6,
