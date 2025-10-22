@@ -1,5 +1,41 @@
 [
   {
+    "title": "Reddit Sues Perplexity Over Alleged Data Scraping",
+    "url": "https://www.pymnts.com/legal/2025/reddit-lawsuit-perplexity-data-scraping/",
+    "published_at": "2025-10-22T17:27:18-04:00",
+    "source": "PYMNTS",
+    "summary": "Reddit has filed a lawsuit against Perplexity AI and three data scraping firms. It\u2019s accusing them of harvesting Reddit content without authorization. The complaint, filed in the U.S. District Court for the Southern District of New York, alleges that the companies collected and resold data from Reddit\u2019s discussion forums through automated tools. It reflects growing [\u2026] The post Reddit Sues Perple...",
+    "content_html": "<p><a href=\"https://www.reddit.com/\" rel=\"noopener\" target=\"_blank\">Reddit</a> has <a href=\"https://www.bloomberg.com/news/articles/2025-10-22/reddit-sues-perplexity-others-over-alleged-data-scraping\" rel=\"noopener\" target=\"_blank\">filed a lawsuit</a> against Perplexity AI and three data scraping firms. It&#8217;s accusing them of harvesting Reddit content without authorization. <a href=\"https://news.bloomberglaw.com/artificial-intelligence/reddit-sues-perplexity-others-over-alleged-data-scraping\" rel=\"noopener\" target=\"_blank\">The complaint</a>, filed in the U.S. District Court for the Southern District of New York, alleges that the companies collected and resold data from Reddit\u2019s discussion forums through automated tools. It reflects growing tensions between online platforms and artificial intelligence developers.</p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p>The suit names Perplexity AI, Oxylabs UAB, AWMProxy and SerpApi as defendants. Reddit said the firms allegedly obtained its data through Google search results. They then resold it to AI companies without consent or compensation. According to the filing, Perplexity purchased Reddit data from at least one of the scraping firms.</p>\n<p>Reddit Chief Legal Officer <a href=\"https://investor.redditinc.com/governance/board-of-directors/person-details/default.aspx?ItemId=c994983e-fef3-4f55-8b65-58e4790fb48a\" rel=\"noopener\" target=\"_blank\">Ben Lee</a> said the lawsuit represents a wider challenge for the industry. AI models depend increasingly on high-quality, human-generated text. \u201cAI companies are locked in an arms race for quality human content, and that pressure has fueled an industrial-scale data laundering economy,\u201d Lee said in a statement quoted by Bloomberg.</p>\n<h2><strong>AI\u2019s Growing Appetite for Human Data</strong></h2>\n<p>Reddit\u2019s repository of public conversations has become a critical resource for training generative AI models. The company has already signed paid <a href=\"https://www.pymnts.com/partnerships/2024/openai-and-reddit-partner-on-data-licensing-ai-powered-features-advertising/\" rel=\"noopener\" target=\"_blank\">data-licensing deals</a> with OpenAI and Google. These grants offer structured access to its posts and comment threads. But Reddit claims other firms are exploiting its data without authorization. The company says this practice undermines fair competition and creator rights.</p>\n<p>Earlier this year, Reddit filed a similar case against Anthropic, alleging that the AI startup unlawfully used Reddit data to train its large language models. As <a href=\"https://www.pymnts.com/artificial-intelligence-2/2025/reddit-sues-anthropic-alleging-unlawful-use-of-data/\" rel=\"noopener\" target=\"_blank\">PYMNTS</a> reported, that lawsuit signaled Reddit\u2019s effort to assert ownership over its collection of human conversation as the AI industry races to secure training data.</p>\n<h2><strong>Data Scraping Governance and Legal Implications</strong></h2>\n<p>The case, Reddit Inc. v. SerpApi LLC, 25-cv-08736, could help define how U.S. courts interpret the legality of web-scraped content used in AI model training. Spokespeople for Perplexity, SerpApi and Oxylabs did not respond to requests for comment</p>\n<p>Legal experts say Reddit\u2019s lawsuit is part of a growing wave of disputes shaping data governance and compliance. As law firm <a href=\"https://www.nelsonmullins.com/insights/blogs/corporate-governance-insights/all/from-copyright-case-to-ai-data-crisis-how-the-new-york-times-v-openai-reshapes-companies-data-governance-and-ediscovery-strategy\" rel=\"noopener\" target=\"_blank\">Nelson Mullins</a> noted, cases such as The New York Times v. OpenAI are forcing companies to reassess how they manage content ownership, consent and data provenance.</p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/legal/2025/reddit-lawsuit-perplexity-data-scraping/\">Reddit Sues Perplexity Over Alleged Data Scraping</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
+    "image_url": "https://www.pymnts.com/wp-content/uploads/2025/10/pexels-brettjordan-5437588.jpg?w=425",
+    "summary_text": "Reddit has filed a lawsuit against Perplexity AI and three data scraping firms. It\u2019s accusing them of harvesting Reddit content without authorization. The complaint, filed in the U.S. District Court for the Southern District of New York, alleges that the comp...",
+    "category": "ai",
+    "_trending_tags": [
+      "ai"
+    ],
+    "_permalink": "/p/1624f8aaf8/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/1624f8aaf8/",
+    "_summary_240": "Reddit has filed a lawsuit against Perplexity AI and three data scraping firms. It\u2019s accusing them of harvesting Reddit content without authorization. The complaint, filed in the...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/1624f8aaf8/thumbnail.png"
+  },
+  {
+    "title": "Snapchat makes its first open prompt AI Lens available for free in the US",
+    "url": "https://techcrunch.com/2025/10/22/snapchat-makes-its-first-open-prompt-ai-lens-available-for-free-in-the-us/",
+    "published_at": "2025-10-22T17:25:30-04:00",
+    "source": "TechCrunch",
+    "summary": "Snapchat is expanding access to its AI-powered \u201cImagine Lens,\u201d allowing all users to generate and edit images with custom prompts for free.",
+    "content_html": "",
+    "image_url": "https://techcrunch.com/wp-content/uploads/2025/10/Imagine_Lens_16x9.jpg?resize=1200,675",
+    "summary_text": "Snapchat is expanding access to its AI-powered \u201cImagine Lens,\u201d allowing all users to generate and edit images with custom prompts for free.",
+    "category": "ai",
+    "_trending_tags": [
+      "ai"
+    ],
+    "_permalink": "/p/47974d418d/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/47974d418d/",
+    "_summary_240": "Snapchat is expanding access to its AI-powered \u201cImagine Lens,\u201d allowing all users to generate and edit images with custom prompts for free.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/47974d418d/thumbnail.png"
+  },
+  {
     "title": "DeepSeek\u2019s Surge in Africa Reveals China\u2019s AI Power Grab",
     "url": "https://www.bloomberg.com/news/features/2025-10-22/china-s-deepseek-pushes-into-africa-making-ai-accessible-to-millions",
     "published_at": "2025-10-22T17:00:07-04:00",
@@ -68,7 +104,11 @@
     "category": "ai",
     "_trending_tags": [
       "ai"
-    ]
+    ],
+    "_permalink": "/p/2629d05ace/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/2629d05ace/",
+    "_summary_240": "Social media group claims the start-up harvested user conversations to train its artificial intelligence models",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/2629d05ace/thumbnail.png"
   },
   {
     "title": "Modern Treasury Acquires Beam to Add Stablecoins to Money Movement Platform",
@@ -606,26 +646,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/9be5701486/thumbnail.png"
   },
   {
-    "title": "Several users reportedly complain to FTC that ChatGPT is causing psychological harm",
-    "url": "https://techcrunch.com/2025/10/22/several-users-reportedly-complain-to-ftc-that-chatgpt-is-causing-psychological-harm/",
-    "published_at": "2025-10-22T10:16:45-04:00",
-    "source": "TechCrunch",
-    "summary": "At least seven people have complained to the U.S. Federal Trade Commission that ChatGPT caused them to experience severe delusions, paranoia, and emotional crises, Wired reported.",
-    "content_html": "",
-    "image_url": "https://techcrunch.com/wp-content/uploads/2025/02/GettyImages-2195918462.jpg?w=1024",
-    "summary_text": "At least seven people have complained to the U.S. Federal Trade Commission that ChatGPT caused them to experience severe delusions, paranoia, and emotional crises, Wired reported.",
-    "category": "ai",
-    "_trending_tags": [
-      "ai",
-      "chatgpt",
-      "gpt"
-    ],
-    "_permalink": "/p/397b4672df/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/397b4672df/",
-    "_summary_240": "At least seven people have complained to the U.S. Federal Trade Commission that ChatGPT caused them to experience severe delusions, paranoia, and emotional crises, Wired reported.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/397b4672df/thumbnail.png"
-  },
-  {
     "title": "China\u2019s budget AIs are trouncing ChatGPT and Grok at crypto trading",
     "url": "https://cointelegraph.com/news/chinese-ai-deepseek-qwen-chatgpt-grok-autonomous-crypto-trading?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
     "published_at": "2025-10-22T09:58:27-04:00",
@@ -781,24 +801,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/9e6123e02d/",
     "_summary_240": "AI tools, onchain data and community signals are influencing how traders spot tokens before they hit major exchanges.",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/9e6123e02d/thumbnail.png"
-  },
-  {
-    "title": "Shield AI Debuts Plans for New AI-Powered Fighter Jet",
-    "url": "https://www.bloomberg.com/news/articles/2025-10-22/shield-ai-debuts-plans-for-new-ai-powered-fighter-jet",
-    "published_at": "2025-10-22T06:00:10-04:00",
-    "source": "Bloomberg Technology",
-    "summary": "No runways required.",
-    "content_html": "Shield AI\u2019s planned X-BAT fighter jet is compact, with a range of more than 2,000 nautical miles.",
-    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iFniMNjF1o3Y/v1/1200x-1.png",
-    "summary_text": "No runways required.",
-    "category": "ai",
-    "_trending_tags": [
-      "ai"
-    ],
-    "_permalink": "/p/4c9c8868d7/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/4c9c8868d7/",
-    "_summary_240": "No runways required.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/4c9c8868d7/thumbnail.png"
   },
   {
     "title": "How to Scan, Edit and Sign PDF Files on Your Phone or Tablet",
@@ -1646,21 +1648,6 @@
       "google",
       "gpt",
       "openai"
-    ]
-  },
-  {
-    "title": "The Engines of American-Made Intelligence: NVIDIA and TSMC Celebrate First NVIDIA Blackwell Wafer Produced in the US",
-    "url": "https://blogs.nvidia.com/blog/tsmc-blackwell-manufacturing/",
-    "published_at": "2025-10-17T17:27:00-04:00",
-    "source": "NVIDIA News",
-    "summary": "AI has ignited a new industrial revolution. NVIDIA and TSMC are working together to build the infrastructure that powers the world\u2019s AI factories, right here in America. NVIDIA founder and CEO Jensen Huang today visited TSMC\u2019s semiconductor manufacturing facility in Phoenix to celebrate the first NVIDIA Blackwell wafer produced on U.S. soil, representing that Blackwell Read Article",
-    "content_html": "",
-    "image_url": "https://s3.amazonaws.com/cms.ipressroom.com/219/files/20259/202510172149/68f2ba0f3d63325f34e7739a_tsmc-flag-1280x680/tsmc-flag-1280x680_thmb.jpg",
-    "summary_text": "AI has ignited a new industrial revolution. NVIDIA and TSMC are working together to build the infrastructure that powers the world\u2019s AI factories, right here in America. NVIDIA founder and CEO Jensen Huang today visited TSMC\u2019s semiconductor manufacturing faci...",
-    "category": "ai",
-    "_trending_tags": [
-      "ai",
-      "nvidia"
     ]
   }
 ]
