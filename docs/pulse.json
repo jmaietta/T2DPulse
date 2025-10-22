@@ -1,5 +1,23 @@
 [
   {
+    "title": "DC\u2019s shutdown is hurting government tech workers \u2014 and everyone else",
+    "url": "https://www.theverge.com/policy/804252/government-shutdown-tech-workers-usds",
+    "published_at": "2025-10-22T09:39:52-04:00",
+    "source": "The Verge",
+    "summary": "Kin Lane fondly remembers working on the Free Application for Federal Student Aid in 2013. FAFSA is used by millions of college students each year to help access scholarship money, and Lane, an API expert, had an up-close look at the system. He saw the importance of ensuring financial data remains stored securely and can [\u2026]",
+    "content_html": "<figure>\n\n<img alt=\"\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/10/258011_Tech_workers_government_shutdown_CVirginia2.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100\" />\n\t<figcaption>\n\t\t</figcaption>\n</figure>\n<p class=\"has-drop-cap has-text-align-none\">Kin Lane fondly remembers working on the Free Application for Federal Student Aid in 2013. FAFSA is used by millions of college students each year to help access scholarship money, and Lane, an API expert, had an up-close look at the system. He saw the importance of ensuring financial data remains stored securely and can be accessed by Internal Revenue Service tools. The job wasn't flashy, but it was tangibly meaningful - when his own daughter went to college, he would use FAFSA himself.</p>\n<p class=\"has-text-align-none\">Lane wasn't a veteran employee. He had recently joined the government as a Presidential Innovation Fellow and, in some ways, a skeptic. He was raised quest \u2026</p>\n<p><a href=\"https://www.theverge.com/policy/804252/government-shutdown-tech-workers-usds\">Read the full story at The Verge.</a></p>",
+    "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/10/258011_Tech_workers_government_shutdown_CVirginia2.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "summary_text": "Kin Lane fondly remembers working on the Free Application for Federal Student Aid in 2013. FAFSA is used by millions of college students each year to help access scholarship money, and Lane, an API expert, had an up-close look at the system. He saw the import...",
+    "category": "software",
+    "_trending_tags": [
+      "ai"
+    ],
+    "_permalink": "/p/3c96b25c46/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/3c96b25c46/",
+    "_summary_240": "Kin Lane fondly remembers working on the Free Application for Federal Student Aid in 2013. FAFSA is used by millions of college students each year to help access scholarship...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/3c96b25c46/thumbnail.png"
+  },
+  {
     "title": "Open banking will keep America at the forefront of financial innovation",
     "url": "https://cointelegraph.com/news/lummis-open-banking?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
     "published_at": "2025-10-22T09:30:00-04:00",
@@ -604,24 +622,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/fb11532f8e/",
     "_summary_240": "OpenAI's new browser announcement made it clear exactly how much Google has to lose in the AI era.",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/fb11532f8e/thumbnail.png"
-  },
-  {
-    "title": "YouTube\u2019s AI \u2018likeness detection\u2019 tool is searching for deepfakes of popular creators",
-    "url": "https://www.theverge.com/news/803818/youtube-ai-likeness-detection-deepfake",
-    "published_at": "2025-10-21T17:17:15-04:00",
-    "source": "The Verge",
-    "summary": "Starting today, creators in YouTube\u2019s Partner Program are getting access to a new AI detection feature that will allow them to find and report unauthorized uploads using their likeness. As shown in this video from YouTube, after verifying their identity, creators can review flagged videos in the Content Detection tab on YouTube Studio. If a [\u2026]",
-    "content_html": "<figure>\n\n<img alt=\"\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/09/STK414_AI_CVIRGINIA_I__0002_10.png?quality=90&#038;strip=all&#038;crop=0,0,100,100\" />\n\t<figcaption>\n\t\t</figcaption>\n</figure>\n<p class=\"has-text-align-none\">Starting today, creators in YouTube\u2019s Partner Program are getting access to a new AI detection feature that will allow them to find and report unauthorized uploads using their likeness. As shown in <a href=\"https://www.youtube.com/watch?v=zVqQiBb0F-w\">this video from YouTube</a>, after verifying their identity, creators can review flagged videos in the Content Detection tab on YouTube Studio. If a video looks like unauthorized, AI-generated content, creators can submit a request for it to be removed.\u00a0</p>\n\n<p class=\"has-text-align-none\">The first wave of eligible creators was notified via email this morning, and the feature will roll out to more creators over the next few months. YouTube warned early users in <a href=\"https://support.google.com/youtube/answer/16440338\">a guide on the feature</a> that, in its current in-development state, it \u201cmay display videos featuring your actual face, not altered or synthetic versions,\u201d such as clips of a creator\u2019s own content. It works similarly to Content ID, which YouTube uses to detect copyrighted audio and video content.&nbsp;</p>\n<div class=\"youtube-embed\"></div><img alt=\"\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/10/youtube-likeness-detection-demo-screenshot.png?quality=90&#038;strip=all&#038;crop=1.2244897959184,0,97.551020408163,100\" title=\"\" />\n<p class=\"has-text-align-none\">YouTube originally <a href=\"https://www.theverge.com/2024/9/5/24236841/youtube-ai-detection-tools-creators-singing-deepfakes\">announced this feature last year</a> and began testing it in December <a href=\"https://blog.youtube/news-and-events/creative-artists-agency-responsible-ai-tools-for-talent/\">through a pilot program</a> with talent represented by Creative Artists Agency (CAA). YouTube\u2019s blog post at the time said, \u201cThrough this collaboration, several of the world\u2019s most influential figures will have access to early-stage technology designed to identify and manage AI-generated content that features their likeness, including their face, on YouTube at scale.\u201d</p>\n\n<p class=\"has-text-align-none\">YouTube and Google are among many tech firms pushing AI video generation and editing tools, and the likeness detection tool isn\u2019t their only feature in development to deal with AI-generated content on the platform. Last March, YouTube also began <a href=\"https://www.theverge.com/2024/3/18/24104743/youtube-ai-generated-content-disclosure-label\">requiring creators to label uploads</a> that include content generated or altered using AI and announced a strict policy around <a href=\"https://www.theverge.com/2023/11/14/23959658/google-youtube-generative-ai-labels-music-copyright\">AI-generated music</a> \u201cthat mimics an artist\u2019s unique singing or rapping voice.\u201d</p>",
-    "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/09/STK414_AI_CVIRGINIA_I__0002_10.png?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "summary_text": "Starting today, creators in YouTube\u2019s Partner Program are getting access to a new AI detection feature that will allow them to find and report unauthorized uploads using their likeness. As shown in this video from YouTube, after verifying their identity, crea...",
-    "category": "ai",
-    "_trending_tags": [
-      "ai"
-    ],
-    "_permalink": "/p/f52c5e643b/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/f52c5e643b/",
-    "_summary_240": "Starting today, creators in YouTube\u2019s Partner Program are getting access to a new AI detection feature that will allow them to find and report unauthorized uploads using their...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/f52c5e643b/thumbnail.png"
   },
   {
     "title": "Today, I shared my annual letter to shareholders, which is linked below. It\u2019s amazing to reflect that 50 years after our founding, Microsoft is once again in the thick of a generational shift in technology. AI is radically changing every layer of the tech stack, and we\u2019re changing with it. Thank you for being part of our journey to shape a future that empowers us all.",
