@@ -2,17 +2,17 @@
   {
     "title": "Trump Pardons Founder of the Crypto Exchange Binance",
     "url": "https://www.nytimes.com/2025/10/23/technology/trump-pardons-cz-binance.html",
-    "published_at": "2025-10-23T13:14:14-04:00",
+    "published_at": "2025-10-23T13:25:02-04:00",
     "source": "The New York Times - Technology",
     "summary": "Changpeng Zhao, the richest man in crypto, had admitted to money-laundering violations that allowed terrorists and other criminals to move money on Binance.",
     "content_html": "Changpeng Zhao, the co-founder and former chief executive of Binance at the Token 2049 event in Dubai in April.",
     "image_url": "https://static01.nyt.com/images/2025/10/23/multimedia/00biz-czpardon-hfo-kmqf/00biz-czpardon-hfo-kmqf-mediumSquareAt3X.jpg",
     "summary_text": "Changpeng Zhao, the richest man in crypto, had admitted to money-laundering violations that allowed terrorists and other criminals to move money on Binance.",
     "category": "fintech",
-    "_permalink": "/p/3deaad5fb4/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/3deaad5fb4/",
+    "_permalink": "/p/fdb949482d/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/fdb949482d/",
     "_summary_240": "Changpeng Zhao, the richest man in crypto, had admitted to money-laundering violations that allowed terrorists and other criminals to move money on Binance.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/3deaad5fb4/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/fdb949482d/thumbnail.png"
   },
   {
     "title": "Microsoft\u2019s Mico is a \u2018Clippy\u2019 for the AI era",
@@ -140,7 +140,11 @@
     "category": "software",
     "_trending_tags": [
       "apple"
-    ]
+    ],
+    "_permalink": "/p/ec43889a3b/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/ec43889a3b/",
+    "_summary_240": "Apple Inc. lost a class-action in the UK after a court ruled that it abused its dominant position to charge excessive commission from app developers.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/ec43889a3b/thumbnail.png"
   },
   {
     "title": "Meet Copilot Mode in Edge: Your AI browser",
@@ -888,11 +892,7 @@
       "chatgpt",
       "gpt",
       "openai"
-    ],
-    "_permalink": "/p/644d870648/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/644d870648/",
-    "_summary_240": "OpenAI has acquired Software Applications Incorporated, maker of Sky\u2014a natural language interface for Mac that brings AI directly into your desktop experience. Together, we\u2019re...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/644d870648/thumbnail.png"
+    ]
   },
   {
     "title": "CZ calls Peter Schiff\u2019s tokenized gold a \u2018trust me bro\u2019 asset",
@@ -943,25 +943,6 @@
       "gpt",
       "openai"
     ]
-  },
-  {
-    "title": "Intelligent Agents Are Teaching B2B Payments to Think",
-    "url": "https://www.pymnts.com/artificial-intelligence-2/2025/intelligent-agents-are-teaching-b2b-payments-to-think/",
-    "published_at": "2025-10-23T04:02:19-04:00",
-    "source": "PYMNTS",
-    "summary": "The plumbing of B2B finance isn\u2019t exactly cutting edge. In fact, the only \u201ccutting edge\u201d many of the traditional pipes that facilitate enterprise payments can boast is their rusty bits. But the rise of autonomous agents, or artificial intelligence (AI) systems empowered to decide, initiate, and complete transactions, is set to polish up this legacy [\u2026] The post Intelligent Agents Are Teaching B2B...",
-    "content_html": "<p><span>The plumbing of B2B finance isn\u2019t exactly </span><span>cutting edge</span><span>. In fact, the only \u201ccutting edge\u201d many of the traditional pipes that facilitate enterprise payments can boast is their rusty bits. </span></p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p><span>But</span><span> the rise of\u00a0autonomous agents, or artificial intelligence (AI) systems empowered to decide, initiate, and complete transactions, is </span><span>set</span><span> to </span><span>polish up</span><span> this legacy reality.</span></p>\n<p><span>\u201cAI is going to have an impact widely across what I would call the procure-to-pay process,\u201d <a href=\"https://www.linkedin.com/in/nabilfmanji/?originalSubdomain=uk\" rel=\"noopener\" target=\"_blank\">Nabil Manji</a>, SVP head of FinTech Growth &amp; Financial Partnerships at </span><a class=\"editor-rtfLink\" href=\"https://worldpay.com/\" rel=\"noopener\" target=\"_blank\"><span>Worldpay,</span></a><span> told PYMNTS during a discussion for\u00a0the\u00a0B2B PYMNTS 2025 event, \u201c</span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/events/b2b-payments-2025/\" rel=\"noopener\" target=\"_blank\"><span>B2B.AI: The Architecture of Intelligent Money Movement</span></a><span>.\u201d</span></p>\n<p><span>\u201cIf you think about reconciliation, it\u2019s about as repetitive and unambiguous </span><span>of</span><span> a task as you can get in payments. \u2026 It\u2019s a perfect use case for AI,\u201d he said. </span></p>\n<p><span>Over the last decade, automation chipped away at repetitive finance tasks. But traditional software still relied on\u00a0rules written by humans\u00a0and needed human intervention for exceptions.</span></p>\n<p><span>Agentic AI flips that model.\u00a0Instead of simply following scripts, these agents learn from data patterns, anticipate liquidity needs, reconcile mismatches at scale, and act in near real time. This makes them particularly well-suited for B2B payments, where vast transaction volumes, timing sensitivities, and cross-border flows can overwhelm manual oversight.</span></p>\n<p><span>\u201cMaking sure your data foundation is strong, your controls are in place, and your systems are ready for agents to interact with them,\u201d Manji said. \u201cThose are the things that will separate the early winners from the laggards.\u201d</span></p>\n<h2>The Case\u00a0for Agentic AI in B2B</h2>\n<p><span>The idea that software could act as a corporate buyer once felt like a futurist\u2019s provocation. Today, it\u2019s looking </span><span>to be</span><span> an inevitability.\u00a0</span></p>\n<p><span>The first wave of enterprise AI adoption is clustering in two familiar but stubborn pain points: reconciliation and liquidity forecasting. Matching invoices, payments and accounting entries has long consumed time and labor without adding much strategic value. Forecasting cash needs and optimizing working capital, by contrast, has always been strategically important but fraught with uncertainty. Both functions depend on collecting and interpreting data faster than humans can.</span></p>\n<p><span>Accurate cash forecasts can reduce reliance on expensive lines of credit and increase interest income on idle funds. </span><span>Faster reconciliation and payment execution can lower </span><span>days sales outstanding</span><span> (DSO), improving liquidity.</span><span> For platform businesses, such as marketplaces or gig-economy firms, more reliable and timely payouts to sellers or contractors can lift satisfaction and retention.</span></p>\n<p><span>\u201cThat\u2019s essentially a forecasting exercise \u2026 and forecasting is an exercise that\u2019s being driven by data today,\u201d Manji said.</span></p>\n<p><span>That\u2019s why, for all the attention on advanced models, he urged CFOs to start with the fundamentals. </span></p>\n<p><span>\u201cEverybody just assumes that the data is there and of sufficient quality today, when in </span><span>reality</span><span> at many large </span><span>enterprises</span><span> it\u2019s not. Until it is, the applications can only go so far,\u201d Manji said. \u201cNo matter how good an AI application is, it\u2019s going to be limited by the quality and quantity of data.\u201d </span></p>\n<p><span>That means ensuring the data lakes and warehouses that autonomous agents depend on are collecting information from every relevant system \u2014 procurement, treasury, payment networks, even order fulfillment \u2014 in near </span><span>real time</span><span>.</span> <span>It also means investing in data quality</span><span>: </span><span>scrubbing errors, filling gaps, and integrating adjacent datasets that provide context for decision-making.</span></p>\n<h2>Infrastructure for an Agentic Era</h2>\n<p><span>Even with data pipelines in place, adoption hinges on trust. Finance leaders are trained to measure risk as carefully as return, and delegating decisions to software demands a new compact between human oversight and machine agency.</span></p>\n<p><span>\u201cUnlike a lot of other emerging technologies or new things, I think there\u2019s </span><span>broad</span><span> consensus that AI </span><span>is applicable</span><span> to their remit or their function,\u201d Manji said. \u201cAnd so everyone\u2019s focused on the how and where rather than the why.\u201d</span></p>\n<p><span>Equally important is the principle of\u00a0least-privilege access</span><span>: giving</span><span> an AI agent access only to the data and systems it </span><span>needs</span><span> for its specific task.</span> <span>But</span><span> beyond data readiness and trust controls, Manji also </span><span>flagged</span><span> two other pillars of infrastructure.</span></p>\n<p><span>The first was\u00a0auditability. \u201cWhatever application you\u2019re using \u2026 there needs to be some sort of documentation for why the agent is making certain decisions,\u201d he said. \u201cToday, we just go interview a human. \u2026 We need that same kind of function for an agent.\u201d</span></p>\n<p><span>The second is\u00a0system interface redesign, a movement gaining traction under the label of\u00a0model context protocols (MCPs). Without such adjustments, even the most advanced AI could be bottlenecked by legacy system design.</span></p>\n<p><span>\u201cHow do you redesign or augment the interface of a system so that it\u2019s able to be more efficiently interacted with by an agent?\u201d Manji asked, noting that the data view or execution flow an agent requires often differs from what a human operator would prefer.</span></p>\n<p><span>Finance leaders must become fluent in both the technical and operational demands of agentic AI. As Manji put it, success will depend less on abstract algorithms and more on\u00a0plumbing, policy </span><span>and</span><span> partnership.</span></p>\n<p><span>\u201cUnless you are in big tech or in a very well-resourced company, you\u2019re unlikely to have the talent pool </span><span>to actually go and dig into a model</span><span>. It\u2019s changing so quickly these days,\u201d he said. \u201cFocus on the application bits.\u201d</span></p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/artificial-intelligence-2/2025/intelligent-agents-are-teaching-b2b-payments-to-think/\">Intelligent Agents Are Teaching B2B Payments to Think</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
-    "image_url": "https://www.pymnts.com/wp-content/uploads/2025/10/Worldpay-AI-B2B-with-overlay.jpg?w=457",
-    "summary_text": "The plumbing of B2B finance isn\u2019t exactly cutting edge. In fact, the only \u201ccutting edge\u201d many of the traditional pipes that facilitate enterprise payments can boast is their rusty bits. But the rise of autonomous agents, or artificial intelligence (AI) system...",
-    "category": "fintech",
-    "_trending_tags": [
-      "agent",
-      "ai"
-    ],
-    "_permalink": "/p/48f0766398/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/48f0766398/",
-    "_summary_240": "The plumbing of B2B finance isn\u2019t exactly cutting edge. In fact, the only \u201ccutting edge\u201d many of the traditional pipes that facilitate enterprise payments can boast is their...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/48f0766398/thumbnail.png"
   },
   {
     "title": "If Bitcoin isn\u2019t \u2018crypto,\u2019 what makes it different?",
@@ -1136,12 +1117,16 @@
     "source": "Financial Times - Technology",
     "summary": "Social media group claims the start-up harvested user conversations to train its artificial intelligence models",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/eab26d1c-4bd7-49b2-b3da-2f7400c5aa2d.jpg",
     "summary_text": "Social media group claims the start-up harvested user conversations to train its artificial intelligence models",
     "category": "ai",
     "_trending_tags": [
       "ai"
-    ]
+    ],
+    "_permalink": "/p/2629d05ace/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/2629d05ace/",
+    "_summary_240": "Social media group claims the start-up harvested user conversations to train its artificial intelligence models",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/2629d05ace/thumbnail.png"
   },
   {
     "title": "\u2018The Next Generation of Compute Is Driving AI,\u2019 Technology Leader Says at NVIDIA AI Day Sydney",
@@ -1307,12 +1292,16 @@
     "source": "Financial Times - Technology",
     "summary": "Poorly generated content underlines need for clear policies and increased monitoring of technology",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/c8c7b19f-0053-4c2a-8acb-2de57ca176a5.jpg",
     "summary_text": "Poorly generated content underlines need for clear policies and increased monitoring of technology",
     "category": "ai",
     "_trending_tags": [
       "ai"
-    ]
+    ],
+    "_permalink": "/p/7ba46a51a1/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/7ba46a51a1/",
+    "_summary_240": "Poorly generated content underlines need for clear policies and increased monitoring of technology",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/7ba46a51a1/thumbnail.png"
   },
   {
     "title": "People Who Say They\u2019re Experiencing AI Psychosis Beg the FTC for Help",
@@ -1356,12 +1345,16 @@
     "source": "Financial Times - Technology",
     "summary": "Companies must rethink what AI will do to their relevance",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://images.ft.com/v3/image/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F3be8cbbe-f1d4-40c5-8ce2-ae12ac48bd22.jpg?source=next-article&fit=scale-down&quality=highest&width=700&dpr=1",
     "summary_text": "Companies must rethink what AI will do to their relevance",
     "category": "ai",
     "_trending_tags": [
       "ai"
-    ]
+    ],
+    "_permalink": "/p/7e2bcbb8cd/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/7e2bcbb8cd/",
+    "_summary_240": "Companies must rethink what AI will do to their relevance",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/7e2bcbb8cd/thumbnail.png"
   },
   {
     "title": "How Chile Embodies A.I.\u2019s No-Win Politics",
@@ -1384,12 +1377,16 @@
     "source": "Financial Times - Technology",
     "summary": "Politicians, corporate bosses, tech experts, celebrities and religious leaders call for \u2018prohibition\u2019 on advanced AI systems",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/0e90444a-a6c6-45bc-b5ce-295b3c2e6404.jpg",
     "summary_text": "Politicians, corporate bosses, tech experts, celebrities and religious leaders call for \u2018prohibition\u2019 on advanced AI systems",
     "category": "ai",
     "_trending_tags": [
       "ai"
-    ]
+    ],
+    "_permalink": "/p/0459b82e7d/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/0459b82e7d/",
+    "_summary_240": "Politicians, corporate bosses, tech experts, celebrities and religious leaders call for \u2018prohibition\u2019 on advanced AI systems",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/0459b82e7d/thumbnail.png"
   },
   {
     "title": "Simplifying the AI stack: The key to scalable, portable intelligence from cloud to edge",
@@ -1555,7 +1552,7 @@
     "source": "Financial Times - Technology",
     "summary": "ChatGPT-maker\u2019s tool will integrate popular chatbot in challenge to Google and Microsoft",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/b4d5aff5-4a7b-4691-965d-53afc67a444a.jpg",
     "summary_text": "ChatGPT-maker\u2019s tool will integrate popular chatbot in challenge to Google and Microsoft",
     "category": "ai",
     "_trending_tags": [
@@ -1565,7 +1562,11 @@
       "gpt",
       "microsoft",
       "openai"
-    ]
+    ],
+    "_permalink": "/p/4fa271aa7d/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/4fa271aa7d/",
+    "_summary_240": "ChatGPT-maker\u2019s tool will integrate popular chatbot in challenge to Google and Microsoft",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/4fa271aa7d/thumbnail.png"
   },
   {
     "title": "Google's new vibe coding AI Studio experience lets anyone build, deploy apps live in minutes",
