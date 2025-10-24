@@ -1,5 +1,63 @@
 [
   {
+    "title": "AI Demand Is Fueling the Rise of Neoclouds",
+    "url": "https://www.pymnts.com/artificial-intelligence-2/2025/ai-demand-is-fueling-the-rise-of-neoclouds/",
+    "published_at": "2025-10-24T09:00:13-04:00",
+    "source": "PYMNTS",
+    "summary": "As demand for artificial intelligence (AI) training large models rises, traditional providers such as Amazon Web Services, Microsoft Azure and Google Cloud are facing limits in available capacity. A group of smaller infrastructure firms known as \u201cneoclouds\u201d has started to fill that gap. These companies lease clusters of graphics processing units, or GPUs, to [\u2026] The post AI Demand Is Fueling the ...",
+    "content_html": "<p><span>As demand for artificial intelligence (AI) training </span><span>large</span><span> models rises, traditional providers such as Amazon Web Services, Microsoft Azure </span><span>and</span><span> Google Cloud are facing limits in available capacity. </span></p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p><span>A group of smaller infrastructure firms known as \u201cneoclouds\u201d has started to fill that gap. These companies lease clusters of graphics processing units, or GPUs, to AI developers and enterprises that need computing resources on short notice. Rather than offering full software platforms, they specialize in the raw compute that powers AI systems.</span></p>\n<p><span>Training and deploying modern AI models requires far more computing power than most data centers were built to handle. Each GPU draws substantial electricity and generates heat that demands advanced cooling and network systems. Existing facilities, designed for mixed workloads such as databases and storage, are not optimized for such high-density use.</span></p>\n<p><span>A </span><a class=\"editor-rtfLink\" href=\"https://kpmg.com/ie/en/insights/strategy/investing-in-gpus-strategy.html\" rel=\"noopener\" target=\"_blank\"><span>KPMG</span></a><span> analysis found that investment in GPUs and related hardware is increasing about five times </span><span>faster than</span><span> new data-center construction.</span> <a class=\"editor-rtfLink\" href=\"https://www.jll.com/en-us/insights/the-rise-of-neocloud-in-the-ai-landscape\" rel=\"noopener\" target=\"_blank\"><span>Research by JLL</span></a><span> shows that neoclouds can deploy high-density GPU infrastructure within months, compared with the multiyear build times for hyperscale data centers. </span><span>JLL also </span><span>said</span><span> these providers offer \u201ctime-to-market advantages for organizations needing rapid AI development,\u201d often by </span><span>reusing</span><span> industrial sites near existing energy infrastructure.</span></p>\n<h2>Response to Scarcity</h2>\n<p><span>Neoclouds </span><span>operate</span><span> smaller facilities focused solely on compute. That narrower scope allows faster setup and denser configurations of GPUs. Many lease capacity by the hour or month, giving customers flexibility to handle short bursts of model training without long-term contracts.</span></p>\n<p><span>The approach has found early traction with AI startups, research institutions </span><span>and</span><span> companies running pilot projects. These clients typically use major cloud providers for deployment but rely on neoclouds for temporary training runs. The model is similar to contracting short-term capacity in logistics or energy markets when supply tightens.</span></p>\n<p><a class=\"editor-rtfLink\" href=\"https://www.datacenterdynamics.com/en/news/neocloud-segment-sees-five-year-revenue-cagr-hit-82-jll/?utm_source=chatgpt.com\" rel=\"noopener\" target=\"_blank\"><span>JLL</span></a><span> data shows the neocloud segment has grown at a five-year compound annual rate of 82% since 2021, outpacing broader </span><span>data-center</span><span> investment.</span></p>\n<p><span>The sector has attracted major clients and investors. </span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/artificial-intelligence-2/2025/openai-coreweave-partnership-ai-hyperscalers/\" rel=\"noopener\" target=\"_blank\"><span>CoreWeave</span></a><span> reached a $22.4 billion agreement with </span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/artificial-intelligence-2/2025/openai-coreweave-partnership-ai-hyperscalers/\" rel=\"noopener\" target=\"_blank\"><span>OpenAI</span></a><span> to provide dedicated GPU clusters. </span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/artificial-intelligence-2/2025/nebius-raises-3-7-billion-in-wake-of-microsoft-ai-deal/\" rel=\"noopener\" target=\"_blank\"><span>Nebius </span></a><span>raised</span><span> $3.75 billion </span><span>following a long-term </span><span>compute</span><span> supply deal with Microsoft.</span> <a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/news/artificial-intelligence/2025/nvidia-invest-maximum-100-billion-dollars-openai-setting-private-funding-record/\" rel=\"noopener\" target=\"_blank\"><span>PYMNTS</span></a><span> reported that Nvidia plans to invest up to $100 billion in OpenAI-linked data centers.</span></p>\n<p><span>These deals </span><span>show</span><span> how computing power has become </span><span>part of</span><span> supply planning for AI companies.</span><span> As building their own facilities is taking time and large investments, in the meantime, large firms are securing access through long-term contracts.</span></p>\n<h2>How Neoclouds Fit In</h2>\n<p><span>Partnerships between hyperscalers and neoclouds are driven by immediate need rather than strategy shifts</span><span>. Building a hyperscale data center can take several years and requires local approvals and grid connections. Renting from specialized providers gives large companies access to GPUs without new capital spending.</span></p>\n<p><a class=\"editor-rtfLink\" href=\"https://www.wsj.com/tech/ai/microsoft-signs-17-4-billion-ai-deal-with-nebius-f92d0ea6\" rel=\"noopener\" target=\"_blank\"><span>The Wall Street Journal</span></a><span> reported that Microsoft\u2019s $17.4 billion deal with Nebius is one of the largest AI infrastructure contracts to date. For neoclouds, such anchor clients provide steady revenue and stronger financing terms.</span></p>\n<p><span>KPMG</span><span> expects global spending on AI-related </span><span>data-center</span><span> infrastructure to exceed $250 billion </span><span>annually by 2026, with GPU-based systems driving most of the growth.</span> <a class=\"editor-rtfLink\" href=\"https://www.datacenterdynamics.com/en/news/neocloud-segment-sees-five-year-revenue-cagr-hit-82-jll\" rel=\"noopener\" target=\"_blank\"><span>JLL forecasts</span></a><span> that the high-density compute market will continue expanding through 2027, led by North America and Western Europe.</span></p>\n<p><span>Neoclouds are unlikely to replace the major cloud platforms. Instead, they serve as an additional source of compute for companies caught between limited supply and growing AI demand. Their presence signals a more practical shift in the market: As AI workloads rise, access to power and hardware is becoming as important as access to data or algorithms.</span></p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/artificial-intelligence-2/2025/ai-demand-is-fueling-the-rise-of-neoclouds/\">AI Demand Is Fueling the Rise of Neoclouds</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
+    "image_url": "https://www.pymnts.com/wp-content/uploads/2025/10/neoclouds-AI-data-center.jpg?w=457",
+    "summary_text": "As demand for artificial intelligence (AI) training large models rises, traditional providers such as Amazon Web Services, Microsoft Azure and Google Cloud are facing limits in available capacity. A group of smaller infrastructure firms known as \u201cneoclouds\u201d h...",
+    "category": "ai",
+    "_trending_tags": [
+      "ai",
+      "amazon",
+      "cloud",
+      "google",
+      "microsoft"
+    ],
+    "_permalink": "/p/a6aff70247/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/a6aff70247/",
+    "_summary_240": "As demand for artificial intelligence (AI) training large models rises, traditional providers such as Amazon Web Services, Microsoft Azure and Google Cloud are facing limits in...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/a6aff70247/thumbnail.png"
+  },
+  {
+    "title": "Bitcoin treasuries can earn more Bitcoin, says Willem Schro\u00e9",
+    "url": "https://cointelegraph.com/news/bitcoin-treasuries-earn-more-bitcoin-willem-schroe-botanix?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "published_at": "2025-10-24T08:59:11-04:00",
+    "source": "Cointelegraph",
+    "summary": "Corporate Bitcoin reserves now rival ETFs, and Botanix Labs founder Willem Schro\u00e9 wants to turn those dormant holdings into active, yield-generating assets.",
+    "content_html": "",
+    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMDcvMDE5ODI0YjQtMmU5Ny03OTA0LWI0MWMtYTRjZWVmNmRmMmU1.jpg",
+    "summary_text": "Corporate Bitcoin reserves now rival ETFs, and Botanix Labs founder Willem Schro\u00e9 wants to turn those dormant holdings into active, yield-generating assets.",
+    "category": "fintech",
+    "_permalink": "/p/b2410bafee/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/b2410bafee/",
+    "_summary_240": "Corporate Bitcoin reserves now rival ETFs, and Botanix Labs founder Willem Schro\u00e9 wants to turn those dormant holdings into active, yield-generating assets.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/b2410bafee/thumbnail.png"
+  },
+  {
+    "title": "OpenAI made ChatGPT better at sifting through your work or school information",
+    "url": "https://www.theverge.com/news/806046/openai-chatgpt-company-knowledge-update",
+    "published_at": "2025-10-24T08:58:06-04:00",
+    "source": "The Verge",
+    "summary": "OpenAI has launched a new ChatGPT feature that makes it easier to search for workspace information without switching between apps. The \u201ccompany knowledge\u201d ChatGPT update for Business, Enterprise, and Education users is powered by a version of GPT\u20115 that directly connects with tools like Slack, SharePoint, Google Drive, and GitHub, allowing the chatbot to sift [\u2026]",
+    "content_html": "<figure>\n\n<img alt=\"\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/10/HowItWorks_16x9_desktop.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100\" />\n\t<figcaption>\n\tHere are some of the third-party workspace apps that are available for company knowledge.\t</figcaption>\n</figure>\n<p class=\"has-text-align-none\">OpenAI has launched a new ChatGPT feature that makes it easier to search for workspace information without switching between apps. The <a href=\"https://openai.com/index/introducing-company-knowledge/\">\u201ccompany knowledge\u201d ChatGPT update</a> for Business, Enterprise, and Education users is powered by a version of GPT\u20115 that directly connects with tools like Slack, SharePoint, Google Drive, and GitHub, allowing the chatbot to sift through more sources to find the answers you need.</p>\n\n<p class=\"has-text-align-none\">The goal is to enable business users to utilize ChatGPT as a conversational search engine of sorts that can scour through all available workplace data to find what they need. <a href=\"https://www.theverge.com/ai-artificial-intelligence/800868/anthropic-claude-skills-ai-agents\">Anthropic launched a similar \u201cSkills\u201d tool</a> for its own Claude AI earlier this month that aims to improve AI agent capabilities for specific work tasks.</p>\n\n<p class=\"has-text-align-none\">This builds on <a href=\"https://openai.com/business/updates-to-chatgpt-business-plans-livestream-june-2025/\">beta features introduced in June</a> and provides a more comprehensive experience than previous app connections for ChatGPT. OpenAI says the GPT\u20115-powered company knowledge update was specifically trained to search multiple sources simultaneously to provide more comprehensive and accurate answers.</p>\n\n<p class=\"has-text-align-none\">\u201cEvery response includes clear citations so you can see where the information came from and trust the results,\u201d OpenAI said in its announcement. \u201cFor example, if you have an upcoming client call, ChatGPT can create a briefing for you based on recent messages from your account channel in Slack, key details from emails with your client, the last call notes in Google Docs, and any escalations from Intercom support tickets since your last meeting.\u201d</p>\n<div class=\"youtube-embed\"></div>\n<p class=\"has-text-align-none\">OpenAI says the company knowledge feature can handle ambiguous questions, such as \u201cwhere did we land on company goals for next year?\u201d by running multiple searches for different sources and viewpoints to resolve conflicting details. The tool uses date filters and can \u201cthink while it searches,\u201d according to OpenAI, allowing it to find time-based information.</p>\n\n<p class=\"has-text-align-none\">Company knowledge must be manually selected when starting new conversations, and ChatGPT can\u2019t search the web or create charts and images while the feature is enabled. OpenAI says ChatGPT may still answer questions using connected apps without company knowledge being activated, but \u201cresponses won\u2019t include the same depth or detailed citations.\u201d Updates in the coming months are expected to expand company knowledge support to other ChatGPT capabilities.</p>",
+    "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/10/HowItWorks_16x9_desktop.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "summary_text": "OpenAI has launched a new ChatGPT feature that makes it easier to search for workspace information without switching between apps. The \u201ccompany knowledge\u201d ChatGPT update for Business, Enterprise, and Education users is powered by a version of GPT\u20115 that direc...",
+    "category": "ai",
+    "_trending_tags": [
+      "ai",
+      "chatgpt",
+      "gpt",
+      "openai"
+    ],
+    "_permalink": "/p/6efad01bd2/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/6efad01bd2/",
+    "_summary_240": "OpenAI has launched a new ChatGPT feature that makes it easier to search for workspace information without switching between apps. The \u201ccompany knowledge\u201d ChatGPT update for...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/6efad01bd2/thumbnail.png"
+  },
+  {
     "title": "Can the biggest Bitcoin whales really decide when the market turns green or red?",
     "url": "https://cointelegraph.com/news/can-the-biggest-bitcoin-whales-really-decide-when-the-market-turns-green-or-red?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
     "published_at": "2025-10-24T08:00:00-04:00",
@@ -533,24 +591,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/a8e08ef99d/thumbnail.png"
   },
   {
-    "title": "California Tops States for AI and Social Platforms Accountability Rules",
-    "url": "https://www.pymnts.com/artificial-intelligence-2/2025/california-tops-states-for-ai-and-social-platforms-accountability-rules/",
-    "published_at": "2025-10-23T18:19:28-04:00",
-    "source": "PYMNTS",
-    "summary": "California has passed a series of artificial intelligence and social-media bills establishing the nation\u2019s most extensive state-level safeguards for minors and requiring AI developers to disclose their training data. Governor Gavin Newsom this month signed five bills addressing child online safety and AI accountability, introducing new standards for chatbot oversight, age verification and content...",
-    "content_html": "<p><span>California has </span><a href=\"https://www.cnbc.com/2025/10/14/heres-what-californias-new-ai-social-media-laws-mean-for-big-tech.html\" rel=\"noopener\" target=\"_blank\"><span>passed</span></a><span> a series of artificial intelligence and social-media bills establishing the nation\u2019s most extensive state-level safeguards for minors and requiring AI developers to disclose their training data.</span></p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p><span>Governor Gavin Newsom this month </span><a href=\"https://www.cnbc.com/2025/10/14/heres-what-californias-new-ai-social-media-laws-mean-for-big-tech.html\" rel=\"noopener\" target=\"_blank\"><span>signed five bills</span></a><span> addressing child online safety and AI accountability, introducing new standards for chatbot oversight, age verification and content liability. The laws mark the most comprehensive attempt yet by a U.S. state to regulate how generative AI and social platforms interact with users.</span></p>\n<h2><b><span>California Sets New Rules for AI and Social Platforms</span></b></h2>\n<p><span>According to </span><a href=\"https://www.gov.ca.gov/2025/10/13/governor-newsom-signs-bills-to-further-strengthen-californias-leadership-in-protecting-children-online/\" rel=\"noopener\" target=\"_blank\"><span>California\u2019s official announcement</span></a><span>, the legislation creates new guardrails for technology companies, including requirements for chatbot disclosures, suicide-prevention protocols and social media warning labels. The </span><a href=\"https://legiscan.com/CA/text/SB243/id/3260569\" rel=\"noopener\" target=\"_blank\"><span>Companion Chatbot Safety Act (SB 243)</span></a><span> mandates that AI \u201ccompanion chatbot\u201d platforms detect and respond to users expressing self-harm, disclose that conversations are artificially generated, and restrict minors from viewing explicit material. Chatbots must remind minors to take a break at least every three hours, and beginning in 2027, they must publish annual reports on safety and intervention protocols.</span></p>\n<p><span>As </span><a href=\"https://www.pymnts.com/artificial-intelligence-2/2025/california-advances-bill-regulating-ai-companions-amid-concerns-over-mental-health-issues/\" rel=\"noopener\" target=\"_blank\"><span>PYMNTS reported</span></a><span>, the new rules follow mounting concerns about AI\u2019s psychological impact on young users and the increasing use of chatbots for emotional support.</span></p>\n<p><span>Another measure, AB 56, requires social media apps such as Instagram and Snapchat to display mental health warnings, while AB 1043 compels device makers like Apple and Google to implement age-verification tools in their app stores. The </span><a href=\"https://legiscan.com/CA/text/AB621/id/3268979\" rel=\"noopener\" target=\"_blank\"><span>deepfake liability law (AB 621)</span></a><span> strengthens penalties for distributing nonconsensual sexually explicit AI-generated material, allowing civil damages up to $50,000 for non-malicious and $250,000 for malicious violations.</span></p>\n<p><span>Separately, the </span><a href=\"https://www.pymnts.com/artificial-intelligence-2/2025/california-law-will-require-ai-developers-to-disclose-training-data/\" rel=\"noopener\" target=\"_blank\"><span>Generative Artificial Intelligence: Training Data Transparency Act (AB 2013)</span></a><span> as covered by PYMNTS, will take effect on January 1, 2026, requiring AI developers to disclose summaries of the datasets used to train their models. Developers must indicate whether data sources are proprietary or public, describe how information was collected, and make this documentation publicly available.</span></p>\n<h2><b><span>Market and Policy Responses Reflect Growing Scrutiny</span></b></h2>\n<p><span>The business implications for major technology firms are immediate, given that many of the affected companies, including OpenAI, Meta, Google and Apple, are based in California. </span><a href=\"https://www.cnbc.com/2025/10/14/heres-what-californias-new-ai-social-media-laws-mean-for-big-tech.html\"><span>CNBC</span></a><span> reported that OpenAI called the legislation a \u201cmeaningful move forward\u201d for AI safety, while Google\u2019s senior director of government affairs described AB 1043 as a \u201cthoughtful approach\u201d to protecting children online. Analysts said the rules are likely to have a distributed impact, as all companies must comply simultaneously.</span></p>\n<p><span>The state\u2019s regulatory momentum mirrors a broader global tightening of AI oversight. The European Union\u2019s AI Act imposes fines for risk violations, and U.S. states such as Utah and Texas have passed age-verification and parental-consent laws. In California, momentum could build further: </span><a href=\"https://www.politico.com/news/2025/10/22/former-biden-surgeon-general-california-ballot-initiative-ai-chatbots-kids-00618868\" rel=\"noopener\" target=\"_blank\"><span>Politico</span></a><span> reported that former U.S. Surgeon General Vivek Murthy and Common Sense Media CEO Jim Steyer launched a \u201cCalifornia Kids AI Safety Act\u201d ballot initiative that would require independent audits of youth-focused AI tools, ban the sale of minors\u2019 data and introduce AI literacy programs in schools.</span></p>\n<h2><b><span>Strategic Implications for Technology Governance</span></b></h2>\n<p><span>California\u2019s legislative package represents a structural shift in how governments define AI accountability. A </span><a href=\"https://www.cnbc.com/2025/10/14/heres-what-californias-new-ai-social-media-laws-mean-for-big-tech.html\" rel=\"noopener\" target=\"_blank\"><span>CNBC-cited survey</span></a><span> found that one in six Americans rely on chatbots for emotional support, and more than 20% say they\u2019ve formed personal attachments to them\u2014a sign that digital interactions are becoming psychologically significant. That reality is pushing lawmakers to expand compliance frameworks beyond privacy and content moderation toward behavioral safety and liability.</span></p>\n<p><span>For enterprises, the new standards could accelerate the adoption of \u201csafety by design\u201d principles and make compliance readiness a prerequisite for market entry. Companies able to demonstrate responsible data use and transparent model documentation may gain a competitive advantage as regulators and consumers scrutinize AI governance practices more closely.</span></p>\n<p><span>For policymakers and investors, the framework illustrates how innovation ecosystems are evolving under a new premise: that long-term growth in AI depends on public trust and verifiable safety. As Newsom said, \u201cOur children\u2019s safety is not for sale.\u201d With that position now enshrined in law, California is setting a benchmark for AI accountability that other jurisdictions are likely to follow.</span></p>\n<p><i><span>For all PYMNTS AI coverage, subscribe to the daily </span></i><a href=\"https://pymnts.com/subscribe/\" rel=\"noopener\" target=\"_blank\"><i><span>AI Newsletter</span></i></a><i><span>.</span></i></p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/artificial-intelligence-2/2025/california-tops-states-for-ai-and-social-platforms-accountability-rules/\">California Tops States for AI and Social Platforms Accountability Rules</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
-    "image_url": "https://www.pymnts.com/wp-content/uploads/2025/10/california-ai-artificial-intelligence-regulation-safety-security.jpg?w=457",
-    "summary_text": "California has passed a series of artificial intelligence and social-media bills establishing the nation\u2019s most extensive state-level safeguards for minors and requiring AI developers to disclose their training data. Governor Gavin Newsom this month signed fi...",
-    "category": "ai",
-    "_trending_tags": [
-      "ai"
-    ],
-    "_permalink": "/p/d13660d57c/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/d13660d57c/",
-    "_summary_240": "California has passed a series of artificial intelligence and social-media bills establishing the nation\u2019s most extensive state-level safeguards for minors and requiring AI...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/d13660d57c/thumbnail.png"
-  },
-  {
     "title": "OpenAI launches company knowledge in ChatGPT, letting you access your firm's data from Google Drive, Slack, GitHub",
     "url": "https://venturebeat.com/ai/openai-launches-company-knowledge-in-chatgpt-letting-you-access-your-firms",
     "published_at": "2025-10-23T18:19:00-04:00",
@@ -638,24 +678,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/c1f425f023/",
     "_summary_240": "OpenAI has acquired Software Applications, Inc., the startup behind Sky \u2014 an AI-powered natural language interface for Mac that can view your screen and take actions in your apps.",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/c1f425f023/thumbnail.png"
-  },
-  {
-    "title": "Here\u2019s what happened in crypto today",
-    "url": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-    "published_at": "2025-10-23T16:42:06-04:00",
-    "source": "Cointelegraph",
-    "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, NFTs, Web3 and crypto regulation.",
-    "content_html": "",
-    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMDYvMDE5Nzk0MjMtZWY4ZS03YzYwLWI5MzctYjlkZGY3NWZlOGFk.jpg",
-    "summary_text": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, NFTs, Web3 and crypto regulation.",
-    "category": "fintech",
-    "_trending_tags": [
-      "ai"
-    ],
-    "_permalink": "/p/40a506b801/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/40a506b801/",
-    "_summary_240": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, NFTs, Web3 and crypto regulation.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/40a506b801/thumbnail.png"
   },
   {
     "title": "AI Creators Are Already Taking Over Social Platforms and Getting Paid",
@@ -1144,16 +1166,12 @@
     "source": "Financial Times - Technology",
     "summary": "Social media group claims the start-up harvested user conversations to train its artificial intelligence models",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/eab26d1c-4bd7-49b2-b3da-2f7400c5aa2d.jpg",
+    "image_url": "",
     "summary_text": "Social media group claims the start-up harvested user conversations to train its artificial intelligence models",
     "category": "ai",
     "_trending_tags": [
       "ai"
-    ],
-    "_permalink": "/p/2629d05ace/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/2629d05ace/",
-    "_summary_240": "Social media group claims the start-up harvested user conversations to train its artificial intelligence models",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/2629d05ace/thumbnail.png"
+    ]
   },
   {
     "title": "\u2018The Next Generation of Compute Is Driving AI,\u2019 Technology Leader Says at NVIDIA AI Day Sydney",
@@ -1319,16 +1337,12 @@
     "source": "Financial Times - Technology",
     "summary": "Poorly generated content underlines need for clear policies and increased monitoring of technology",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/c8c7b19f-0053-4c2a-8acb-2de57ca176a5.jpg",
+    "image_url": "",
     "summary_text": "Poorly generated content underlines need for clear policies and increased monitoring of technology",
     "category": "ai",
     "_trending_tags": [
       "ai"
-    ],
-    "_permalink": "/p/7ba46a51a1/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/7ba46a51a1/",
-    "_summary_240": "Poorly generated content underlines need for clear policies and increased monitoring of technology",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/7ba46a51a1/thumbnail.png"
+    ]
   },
   {
     "title": "People Who Say They\u2019re Experiencing AI Psychosis Beg the FTC for Help",
@@ -1372,16 +1386,12 @@
     "source": "Financial Times - Technology",
     "summary": "Companies must rethink what AI will do to their relevance",
     "content_html": "",
-    "image_url": "https://images.ft.com/v3/image/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F3be8cbbe-f1d4-40c5-8ce2-ae12ac48bd22.jpg?source=next-article&fit=scale-down&quality=highest&width=700&dpr=1",
+    "image_url": "",
     "summary_text": "Companies must rethink what AI will do to their relevance",
     "category": "ai",
     "_trending_tags": [
       "ai"
-    ],
-    "_permalink": "/p/7e2bcbb8cd/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/7e2bcbb8cd/",
-    "_summary_240": "Companies must rethink what AI will do to their relevance",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/7e2bcbb8cd/thumbnail.png"
+    ]
   },
   {
     "title": "How Chile Embodies A.I.\u2019s No-Win Politics",
@@ -1404,16 +1414,12 @@
     "source": "Financial Times - Technology",
     "summary": "Politicians, corporate bosses, tech experts, celebrities and religious leaders call for \u2018prohibition\u2019 on advanced AI systems",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/0e90444a-a6c6-45bc-b5ce-295b3c2e6404.jpg",
+    "image_url": "",
     "summary_text": "Politicians, corporate bosses, tech experts, celebrities and religious leaders call for \u2018prohibition\u2019 on advanced AI systems",
     "category": "ai",
     "_trending_tags": [
       "ai"
-    ],
-    "_permalink": "/p/0459b82e7d/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/0459b82e7d/",
-    "_summary_240": "Politicians, corporate bosses, tech experts, celebrities and religious leaders call for \u2018prohibition\u2019 on advanced AI systems",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/0459b82e7d/thumbnail.png"
+    ]
   },
   {
     "title": "Simplifying the AI stack: The key to scalable, portable intelligence from cloud to edge",
