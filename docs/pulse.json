@@ -1,5 +1,93 @@
 [
   {
+    "title": "Sygnum Bank bets on Bitcoin lending with multisign custody model",
+    "url": "https://cointelegraph.com/news/sygnum-bank-debifi-bitcoin-multisig-loan?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "published_at": "2025-10-24T16:17:32-04:00",
+    "source": "Cointelegraph",
+    "summary": "The new product is expected to launch in the first half of 2026 and will let clients borrow fiat against Bitcoin held in multisignature wallets.",
+    "content_html": "",
+    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMDUvMDE5NmFhMDMtODM4Ny03MWVmLTk5NGItNWZiNzEyYmYyZjdl.jpg",
+    "summary_text": "The new product is expected to launch in the first half of 2026 and will let clients borrow fiat against Bitcoin held in multisignature wallets.",
+    "category": "fintech",
+    "_trending_tags": [
+      "ai"
+    ],
+    "_permalink": "/p/eacded9c67/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/eacded9c67/",
+    "_summary_240": "The new product is expected to launch in the first half of 2026 and will let clients borrow fiat against Bitcoin held in multisignature wallets.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/eacded9c67/thumbnail.png"
+  },
+  {
+    "title": "Making Sense of the Liquidity Hub Treasury Model",
+    "url": "https://www.pymnts.com/news/b2b-payments/2025/making-sense-of-the-liquidity-hub-treasury-model/",
+    "published_at": "2025-10-24T16:04:40-04:00",
+    "source": "PYMNTS",
+    "summary": "Controlling for what\u2019s controllable is often the best enterprise strategy in times of uncertainty. And that puts the finance department on the front line. Supply chain shocks, interest-rate whiplash, tariff turmoil and fluctuating capital markets have made the once-staid domain of liquidity management a center of strategic urgency. Visibility into funds is no longer [\u2026] The post Making Sense of t...",
+    "content_html": "<p style=\"font-weight: 400;\">Controlling for what\u2019s controllable is often the best enterprise strategy in times of uncertainty. And that puts the finance department on the front line.</p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p style=\"font-weight: 400;\">Supply chain shocks, interest-rate whiplash, tariff turmoil and fluctuating capital markets have made the once-staid domain of liquidity management a center of strategic urgency. Visibility into funds is no longer a back-office convenience; it is a front-line <a href=\"https://www.pymnts.com/study/time-to-cash-new-measure-business-resilience/\" rel=\"noopener\" target=\"_blank\">defense mechanism</a>, and corporate treasurers are under pressure to see, move and optimize cash faster than ever before.</p>\n<p style=\"font-weight: 400;\">Agility, in the language of treasury, depends on real-time data and the ability to act on it. This can be seen in the Wednesday (Oct. 22) news that <a href=\"https://www.truist.com/\" rel=\"noopener\" target=\"_blank\">Truist</a>\u00a0is <a href=\"https://www.pymnts.com/news/banking/2025/truist-pilots-embedded-banking-solution-for-several-leading-erps/\" rel=\"noopener\" target=\"_blank\">piloting</a> an embedded banking solution that enables treasury workflows like reconciliation and reporting, real-time payments and approvals within supported enterprise resource planning systems (ERPs).</p>\n<p style=\"font-weight: 400;\">But the Truist pilot is just one data point in an ongoing architectural shift that is quietly transforming corporate finance: the rise of the liquidity hub.</p>\n<p style=\"font-weight: 400;\"><strong>Read more:</strong> <a href=\"https://www.pymnts.com/earnings/2025/bank-earnings-spotlight-treasury-innovation-growth-engine/\" rel=\"noopener\" target=\"_blank\">Bank Earnings Spotlight Treasury Innovation as a Growth Engine</a><strong>\u00a0</strong></p>\n<h2 style=\"font-weight: 400;\"><strong>From Visibility to Mobilization</strong></h2>\n<p style=\"font-weight: 400;\">Liquidity hubs are centralized digital platforms that can consolidate a corporation\u2019s cash positions, bank accounts and intercompany flows. The concept is simple: replace the patchwork of disconnected bank portals and spreadsheet reconciliations with a unified layer of connectivity, analytics and control. Behind that simplicity lies a complex rethinking of how global liquidity itself is orchestrated.</p>\n<p style=\"font-weight: 400;\">Traditional treasury systems have long aspired to this, but most have been constrained by data latency, fragmented interfaces and the lack of standardized connectivity. Every bank has its own portal, every ERP system its own workflow. The liquidity hub model collapses these silos by sitting above them. Using open-banking APIs, SWIFT connectivity and host-to-host integrations, the hub functions as a real-time nerve center for treasury operations.</p>\n<p style=\"font-weight: 400;\">\u201cOne thing that all\u00a0<a href=\"https://www.pymnts.com/news/international/global-payments/2025/bank-of-america-puts-ai-and-data-at-the-core-of-treasury/\" rel=\"noopener\" target=\"_blank\">treasury</a>\u00a0organizations are looking for is visibility into their global activity,\u201d\u00a0<a href=\"https://www.linkedin.com/in/sebastian-sintes-8317a81/\" rel=\"noopener\" target=\"_blank\">Sebastian Sintes</a>, director of transactional FX at\u00a0<a href=\"https://www.bankofamerica.com/\" rel=\"noopener\" target=\"_blank\">Bank of America</a>, told PYMNTS in an interview posted Sept. 8.</p>\n<p style=\"font-weight: 400;\">PYMNTS reported Tuesday (Oct. 21) that bank earnings reports show strong performance in\u00a0<a href=\"https://www.pymnts.com/earnings/2025/bank-earnings-spotlight-treasury-innovation-growth-engine/\">treasury</a>\u00a0and payments divisions. And global banks have been among the first to formalize this treasury architecture, increasingly positioning themselves as ecosystem orchestrators rather than just transaction providers. Multi-bank liquidity management platforms from firms like Citi, Bank of America and HSBC offer clients consolidated views of balances across institutions, often directly integrated with ERP and treasury management systems (TMS) software.</p>\n<p style=\"font-weight: 400;\"><strong>Read also:</strong>\u00a0<a href=\"https://www.pymnts.com/cfo/2025/ai-cyber-risk-and-payments-monetization-put-treasury-at-the-center-of-finance/\" rel=\"noopener\" target=\"_blank\">AI, Cyber Risk and Payments Monetization Put Treasury at the Center of Finance</a></p>\n<h2 style=\"font-weight: 400;\"><strong>The New Economics of Treasury Connectivity</strong></h2>\n<p style=\"font-weight: 400;\">To understand why liquidity hubs matter, it helps to think of corporate cash not as a single pool but as a network of nodes \u2014 accounts, subsidiaries, currencies and instruments \u2014 that must all be connected, visible and responsive. Historically, that network was stitched together manually through daily reconciliations, batch data transfers and static reports.</p>\n<p style=\"font-weight: 400;\">But in volatile markets, a day-old balance is a blind spot.</p>\n<p style=\"font-weight: 400;\">This shift mirrors broader enterprise trends toward real-time decisioning. Just as supply chain managers rely on live logistics feeds and marketers on instant campaign analytics, treasurers are adopting streaming data architectures. Liquidity hubs are the infrastructure that makes that possible \u2014 aggregating, normalizing and securing high-frequency financial data across the corporate footprint.</p>\n<p style=\"font-weight: 400;\">While most liquidity hubs began as visibility tools, the direction of travel is unmistakable: from monitoring to optimization. Once treasurers can see liquidity across the enterprise in real time, the logical next step is to deploy it more intelligently.</p>\n<p style=\"font-weight: 400;\">J.P. Morgan\u2019s Onyx platform and Citi\u2019s Token Services hint at a future where tokenized deposits and programmable payments could be native to corporate liquidity systems. In such a scenario, liquidity hubs could evolve into \u201ctreasury control towers\u201d orchestrating both traditional and digital assets.</p>\n<p style=\"font-weight: 400;\">The technical challenge lies in harmonizing heterogeneous data sources: bank APIs, ERP tables, Swift messages and legacy file formats. A liquidity hub\u2019s value is proportional to its ability to reconcile these into coherent, actionable intelligence.</p>\n<p style=\"font-weight: 400;\">But as macro trends such as open banking, API standardization, digital treasury transformation and the broader enterprise shift toward real-time intelligence converge, liquidity hubs are becoming less a niche innovation and more a structural necessity.</p>\n<p style=\"font-weight: 400;\">In five years, many treasuries may no longer think of \u201cliquidity hubs\u201d as standalone systems at all. Instead, they will be embedded layers within broader enterprise data architectures \u2014 coordinating cash, credit and digital assets with the same fluidity that supply chains or cloud networks now exhibit.</p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/news/b2b-payments/2025/making-sense-of-the-liquidity-hub-treasury-model/\">Making Sense of the Liquidity Hub Treasury Model</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
+    "image_url": "https://www.pymnts.com/wp-content/uploads/2025/10/liquidity-hub-treasury.png?w=457",
+    "summary_text": "Controlling for what\u2019s controllable is often the best enterprise strategy in times of uncertainty. And that puts the finance department on the front line. Supply chain shocks, interest-rate whiplash, tariff turmoil and fluctuating capital markets have made th...",
+    "category": "fintech",
+    "_trending_tags": [
+      "ai"
+    ],
+    "_permalink": "/p/a6c78e2725/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/a6c78e2725/",
+    "_summary_240": "Controlling for what\u2019s controllable is often the best enterprise strategy in times of uncertainty. And that puts the finance department on the front line. Supply chain shocks,...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/a6c78e2725/thumbnail.png"
+  },
+  {
+    "title": "Crypto Biz: Bitcoin whales trade keys for comfort",
+    "url": "https://cointelegraph.com/news/crypto-biz-bitcoin-whales-trade-keys-for-comfort?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "published_at": "2025-10-24T16:00:00-04:00",
+    "source": "Cointelegraph",
+    "summary": "Early BTC whales shift to ETFs, giving up keys for TradFi perks, as BlackRock conversions rise and onchain self-custody breaks a 15-year uptrend.",
+    "content_html": "",
+    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjQtMTEvMDE5Mzc2YTEtOWNhZC03YmFkLWJhZDItOWRkMjdhZjZiMWJl.jpg",
+    "summary_text": "Early BTC whales shift to ETFs, giving up keys for TradFi perks, as BlackRock conversions rise and onchain self-custody breaks a 15-year uptrend.",
+    "category": "fintech",
+    "_trending_tags": [
+      "ai"
+    ],
+    "_permalink": "/p/dfc4c7070c/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/dfc4c7070c/",
+    "_summary_240": "Early BTC whales shift to ETFs, giving up keys for TradFi perks, as BlackRock conversions rise and onchain self-custody breaks a 15-year uptrend.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/dfc4c7070c/thumbnail.png"
+  },
+  {
+    "title": "Intel Earnings Signal Possible Comeback | Bloomberg Tech 10/24/2025",
+    "url": "https://www.bloomberg.com/news/videos/2025-10-24/bloomberg-tech-10-24-2025-video",
+    "published_at": "2025-10-24T15:57:32-04:00",
+    "source": "Bloomberg Technology",
+    "summary": "Bloomberg\u2019s Caroline Hyde and Ed Ludlow discuss Intel\u2019s earnings, as the chipmaker returned to profitability and gave an upbeat revenue forecast. Plus, banks are preparing to launch a $38 billion debt offering to help fund data centers tied to Oracle. That comes as the Bank of England begins to probe data center lending amid fears of an AI bubble. And, Mistral CEO Arthur Mensch discusses the comp...",
+    "content_html": "",
+    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ibb_3dyVIT9g/v3/1200x-1.jpg",
+    "summary_text": "Bloomberg\u2019s Caroline Hyde and Ed Ludlow discuss Intel\u2019s earnings, as the chipmaker returned to profitability and gave an upbeat revenue forecast. Plus, banks are preparing to launch a $38 billion debt offering to help fund data centers tied to Oracle. That co...",
+    "category": "fintech",
+    "_permalink": "/p/e5c9bf7cde/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/e5c9bf7cde/",
+    "_summary_240": "Bloomberg\u2019s Caroline Hyde and Ed Ludlow discuss Intel\u2019s earnings, as the chipmaker returned to profitability and gave an upbeat revenue forecast. Plus, banks are preparing to...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/e5c9bf7cde/thumbnail.png"
+  },
+  {
+    "title": "OpenAI's Sora Loses Its Top App Store Ranking to Dave's Hot Chicken",
+    "url": "https://www.wired.com/story/sora-app-store-daves-hot-chicken/",
+    "published_at": "2025-10-24T15:30:26-04:00",
+    "source": "Wired",
+    "summary": "Dave\u2019s Hot Chicken is the top app in the iOS App Store, ending Sora\u2019s weeks-long reign.",
+    "content_html": "",
+    "image_url": "https://media.wired.com/photos/68fba1020ccbd1fff4e3c0ea/master/pass/biz-sora-daveshotchicken-2217857004.jpg",
+    "summary_text": "Dave\u2019s Hot Chicken is the top app in the iOS App Store, ending Sora\u2019s weeks-long reign.",
+    "category": "ai",
+    "_trending_tags": [
+      "ai",
+      "openai"
+    ],
+    "_permalink": "/p/d1bfcc707e/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/d1bfcc707e/",
+    "_summary_240": "Dave\u2019s Hot Chicken is the top app in the iOS App Store, ending Sora\u2019s weeks-long reign.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/d1bfcc707e/thumbnail.png"
+  },
+  {
     "title": "How to use the new ChatGPT app integrations, including Spotify, Figma, Canva, and others",
     "url": "https://techcrunch.com/2025/10/24/how-to-use-the-new-chatgpt-app-integrations-including-spotify-figma-canva-and-others/",
     "published_at": "2025-10-24T15:08:10-04:00",
@@ -609,39 +697,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/84568f2794/thumbnail.png"
   },
   {
-    "title": "JOOR CFO: Virtual Cards and AI Help Retailers Bridge Cash Flow Gaps",
-    "url": "https://www.pymnts.com/working-capital/2025/joor-cfo-virtual-cards-and-ai-help-retailers-bridge-cash-flow-gaps/",
-    "published_at": "2025-10-24T04:02:16-04:00",
-    "source": "PYMNTS",
-    "summary": "Watch more: Visa WCI: JOOR, Rich Rein Retailers and suppliers are finding that the key to unlocking millions in savings lies in how they manage working capital. According to PYMNTS Intelligence commissioned by Visa, 4 in 5 CFOs and treasurers studied for the 2025/2026 Working Capital Index have unlocked about $19 million in average [\u2026] The post JOOR CFO: Virtual Cards and AI Help Retailers Bridge...",
-    "content_html": "<p><strong>Watch more:</strong> <a href=\"https://tv.pymnts.com/detail/video/6382122619112\" rel=\"noopener\" target=\"_blank\">Visa WCI: JOOR, Rich Rein</a></p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p><span>Retailers and suppliers are finding that the key to unlocking millions in savings lies in how they manage working capital. </span><span>According to PYMNTS </span><span>Intelligence</span><span> commissioned by Visa, 4 in 5 CFOs and </span><span>treasurers studied for</span><span> the 2025/2026 Working Capital Index have </span><span>unlocked about</span><span> $19 million in </span><span>average</span><span> savings </span><span>thanks to</span><span> the efficient use of external </span><span>working capital</span><span> solutions.</span></p>\n<p><span>For <a href=\"https://www.joor.com/\" rel=\"noopener\" target=\"_blank\">JOOR</a> CFO <a href=\"https://www.linkedin.com/in/rich-rein/\" rel=\"noopener\" target=\"_blank\">Rich Rein</a>, that figure reflects how embedded finance is reshaping relationships between brands and retailers. \u201cThe retail industry is really a classic example of how important working capital and working capital management is,\u201d Rein told PYMNTS\u2019 Karen Webster. \u201cIt\u2019s a textbook case.\u201d</span></p>\n<h2>Cash Flow: Retail Balancing Act</h2>\n<p><span>Payments between buyers and suppliers in retail are a study in complexity. Cash flow often stalls midway through the supply chain, leaving brands waiting to collect and retailers hesitant to pay before inventory sells.</span></p>\n<p><span>Rein said brands want to get paid quickly, while retailers want to pay as late as possible. Bridging that gap increasingly depends on </span>embedded working capital solutions<span> that create flexibility on both sides of the ledger.</span></p>\n<p><span>While large enterprises enjoy ready access to bank credit lines, Rein said the \u201cSMB [small and mid-size businesses] and middle-market part of the world\u201d has seen slower innovation. Credit card and virtual card usage has grown, but other lending tools \u201chave been slower to evolve.\u201d</span></p>\n<p><span>Traditional banks\u2019 underwriting frameworks, Rein added, \u201cdon\u2019t really fit\u201d the cash flow realities of small and mid-sized retailers. \u201cIt\u2019s not due to fundamental creditworthiness \u2026 it\u2019s much more that these types of entities \u2026 don\u2019t fit in the traditional underwriting models that banks have used.\u201d As a result, he said, \u201c</span><span>you</span><span> have seen a proliferation of alternative lenders trying to step in and fill that void.\u201d</span></p>\n<h2>Embedded Finance and the Rise of JOOR Pay</h2>\n<p><span>That market gap has created new demand for </span>embedded finance<span> and digital payments tools that can simplify transactions between buyers and suppliers. JOOR\u2019s answer to that demand is </span><a href=\"https://www.joor.com/joor-pay\" rel=\"noopener\" target=\"_blank\">JOOR Pay</a><span>, which Rein said was designed \u201cto make embedded payments easier.\u201d</span></p>\n<p><span>Its goal, he explained, is to streamline transactions \u201cfor both sides,\u201d recognizing that brand-retailer relationships \u201care critically important \u2014 no one wants it to be an adversarial relationship.\u201d</span></p>\n<p><span>One core feature of JOOR Pay is the ability for a brand or retailer to </span>pay or get paid in any currency<span>. That flexibility, Rein noted, improves liquidity for both parties and speeds cash conversion cycles.</span></p>\n<p><span>Rein said JOOR\u2019s brand and retail clients are adopting digital tools \u201cto improve the overall efficiency of their AR [accounts receivable] or AP [accounts payable] processes.\u201d On average, brands on JOOR experience about an </span>80% reduction in operational costs<span> when adopting a digital solution like JOOR Pay to manage their wholesale business rather than relying on more traditional, manual processes.</span></p>\n<h2>Working Capital as a Relationship Tool</h2>\n<p><span>Working capital solutions are evolving beyond simple cost-saving mechanisms. For Rein, they are also about </span>maintaining trust and partnership<span> between brands and retailers.</span></p>\n<p><span>\u201cMaintaining those good, true partnerships \u2026 can often be overlooked when you\u2019re thinking about trying to maximize your own working capital efficiency,\u201d he said.</span></p>\n<p><span>Retailers that pay promptly often gain preferential access to inventory: \u201cFinancial stability and willingness to pay \u2026 has become increasingly important when a brand is looking at who they want to be working with,\u201d Rein told Webster.</span></p>\n<p><span>Webster observed that the healthiest supplier ecosystems share that same dynamic: \u201cIf a supplier can send inventory to multiple places, why not start with those who pay the fastest?\u201d Liquidity and reliability, she noted, have become competitive advantages.</span></p>\n<h2>AI, Data and Smarter Forecasting</h2>\n<p><span>Both executives highlighted the growing role of artificial intelligence (</span>AI) and data-driven forecasting<span> in how retailers manage working capital. Rein said JOOR is applying advanced analytics \u201cto help us surface insights that otherwise just simply may not be as evident.\u201d</span></p>\n<p><span>AI, he explained, enhances forecasting, inventory planning, and even supplier production schedules. \u201cYou can leverage data \u2026 to better inform expectations of supply and demand \u2026 to drive efficiency in all aspects of the supply chain,\u201d Rein said.</span></p>\n<p><span>That visibility is also changing how retailers structure their purchasing cycles. Rein noted that brands are shifting to \u201csmaller upfront orders, but then more frequent reorders,\u201d a pattern that now accounts for </span>almost 35% of JOOR\u2019s platform gross merchandise value.</p>\n<p><span>Such strategies, he said, show how companies \u201care adapting their business strategies to optimize their working capital overall.\u201d</span></p>\n<p><span>Looking ahead to 2026, Rein said retailers will need to balance caution with progress. \u201cIt\u2019s very easy to look at the retail landscape and say, yes, people are in a defensive posture,\u201d he said. \u201cBut the reality is they\u2019re shifting strategies to enable working capital efficiency. \u2026 It\u2019s really all about finding that balance.\u201d</span></p>\n<p><span>Ultimately, Rein said, \u201cbrands will do business with retailers who are easy to do business with, and vice versa.\u201d</span></p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/working-capital/2025/joor-cfo-virtual-cards-and-ai-help-retailers-bridge-cash-flow-gaps/\">JOOR CFO: Virtual Cards and AI Help Retailers Bridge Cash Flow Gaps</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
-    "image_url": "https://www.pymnts.com/wp-content/uploads/2025/10/Joor-store.jpg?w=457",
-    "summary_text": "Watch more: Visa WCI: JOOR, Rich Rein Retailers and suppliers are finding that the key to unlocking millions in savings lies in how they manage working capital. According to PYMNTS Intelligence commissioned by Visa, 4 in 5 CFOs and treasurers studied for the ...",
-    "category": "fintech",
-    "_trending_tags": [
-      "ai"
-    ],
-    "_permalink": "/p/c08a9b0e6d/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/c08a9b0e6d/",
-    "_summary_240": "Watch more: Visa WCI: JOOR, Rich Rein Retailers and suppliers are finding that the key to unlocking millions in savings lies in how they manage working capital. According to...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/c08a9b0e6d/thumbnail.png"
-  },
-  {
-    "title": "Trump\u2019s CZ pardon draws fury from Maxine Waters over \u2018pay-to-play\u2019 crypto ties",
-    "url": "https://cointelegraph.com/news/trump-accused-of-rewarding-crypto-criminals-after-pardoning-binance-s-cz?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-    "published_at": "2025-10-24T04:01:30-04:00",
-    "source": "Cointelegraph",
-    "summary": "Representative Maxine Waters slammed US President Donald Trump\u2019s pardon of Binance co-founder Changpeng Zhao, calling it a corrupt favor.",
-    "content_html": "",
-    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMDMvMDE5NWQzMTEtNDEyNy03ZTNhLTkxODEtZTMwMzIwNDEyNWJm.jpg",
-    "summary_text": "Representative Maxine Waters slammed US President Donald Trump\u2019s pardon of Binance co-founder Changpeng Zhao, calling it a corrupt favor.",
-    "category": "fintech",
-    "_permalink": "/p/831f23ab9f/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/831f23ab9f/",
-    "_summary_240": "Representative Maxine Waters slammed US President Donald Trump\u2019s pardon of Binance co-founder Changpeng Zhao, calling it a corrupt favor.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/831f23ab9f/thumbnail.png"
-  },
-  {
     "title": "Mistral launches its own AI Studio for quick development with its European open source, proprietary models",
     "url": "https://venturebeat.com/ai/mistral-launches-its-own-ai-studio-for-quick-development-with-its-european",
     "published_at": "2025-10-24T02:55:00-04:00",
@@ -655,11 +710,7 @@
       "agent",
       "ai",
       "mistral"
-    ],
-    "_permalink": "/p/67bdb9579c/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/67bdb9579c/",
-    "_summary_240": "The next big trend in AI providers appears to be \"studio\" environments on the web that allow users to spin up agents and AI applications within minutes. Case in point, today the...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/67bdb9579c/thumbnail.png"
+    ]
   },
   {
     "title": "Ex-UBS Chairman Weber Warns AI Ushering In New Era of Inequality",
@@ -678,24 +729,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/6c3ded13c4/",
     "_summary_240": "Former UBS Group AG Chairman Axel Weber has warned the coming disruption from artificial intelligence could usher in the rise of a new global elite that profits...",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/6c3ded13c4/thumbnail.png"
-  },
-  {
-    "title": "US energy secretary floats faster direct grid access for AI and crypto miners",
-    "url": "https://cointelegraph.com/news/us-secretary-expedite-grid-access-ai-bitcoin-mining?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-    "published_at": "2025-10-24T02:10:56-04:00",
-    "source": "Cointelegraph",
-    "summary": "S. Matthew Schultz, the CEO of Bitcoin mining company CleanSpark, said the new rules would create expedited connections for Bitcoin mining and data centers.",
-    "content_html": "",
-    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMDEvMDE5NDg4MjQtZDQxMi03ZjE5LTg5ZGItZmMyNWYwODgwY2U3.jpg",
-    "summary_text": "S. Matthew Schultz, the CEO of Bitcoin mining company CleanSpark, said the new rules would create expedited connections for Bitcoin mining and data centers.",
-    "category": "fintech",
-    "_trending_tags": [
-      "ai"
-    ],
-    "_permalink": "/p/ea77c8b4a8/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/ea77c8b4a8/",
-    "_summary_240": "S. Matthew Schultz, the CEO of Bitcoin mining company CleanSpark, said the new rules would create expedited connections for Bitcoin mining and data centers.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/ea77c8b4a8/thumbnail.png"
   },
   {
     "title": "AI Models Lacking African Dialects Curb Uptake, Mobile Body Says",
@@ -789,24 +822,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/c1f425f023/",
     "_summary_240": "OpenAI has acquired Software Applications, Inc., the startup behind Sky \u2014 an AI-powered natural language interface for Mac that can view your screen and take actions in your apps.",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/c1f425f023/thumbnail.png"
-  },
-  {
-    "title": "20-year-old dropouts built AI notetaker Turbo AI to 5 million users",
-    "url": "https://techcrunch.com/2025/10/23/20-year-old-dropouts-built-ai-notetaker-turbo-ai-to-5-million-users/",
-    "published_at": "2025-10-23T15:25:00-04:00",
-    "source": "TechCrunch",
-    "summary": "Rudy Arora and Sarthak Dhawan, two 20-year-old college dropouts, grew an AI note-taker app to five million users and an eight-figure ARR, they say.",
-    "content_html": "",
-    "image_url": "https://techcrunch.com/wp-content/uploads/2025/10/IMG_2422.jpeg?resize=1200,742",
-    "summary_text": "Rudy Arora and Sarthak Dhawan, two 20-year-old college dropouts, grew an AI note-taker app to five million users and an eight-figure ARR, they say.",
-    "category": "ai",
-    "_trending_tags": [
-      "ai"
-    ],
-    "_permalink": "/p/5b4d7b77f0/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/5b4d7b77f0/",
-    "_summary_240": "Rudy Arora and Sarthak Dhawan, two 20-year-old college dropouts, grew an AI note-taker app to five million users and an eight-figure ARR, they say.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/5b4d7b77f0/thumbnail.png"
   },
   {
     "title": "Microsoft Copilot gets 12 big updates for fall, including new AI assistant character Mico",
@@ -1145,16 +1160,12 @@
     "source": "Financial Times - Technology",
     "summary": "Social media group claims the start-up harvested user conversations to train its artificial intelligence models",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/eab26d1c-4bd7-49b2-b3da-2f7400c5aa2d.jpg",
+    "image_url": "",
     "summary_text": "Social media group claims the start-up harvested user conversations to train its artificial intelligence models",
     "category": "ai",
     "_trending_tags": [
       "ai"
-    ],
-    "_permalink": "/p/2629d05ace/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/2629d05ace/",
-    "_summary_240": "Social media group claims the start-up harvested user conversations to train its artificial intelligence models",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/2629d05ace/thumbnail.png"
+    ]
   },
   {
     "title": "\u2018The Next Generation of Compute Is Driving AI,\u2019 Technology Leader Says at NVIDIA AI Day Sydney",
@@ -1305,16 +1316,12 @@
     "source": "Financial Times - Technology",
     "summary": "Poorly generated content underlines need for clear policies and increased monitoring of technology",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/c8c7b19f-0053-4c2a-8acb-2de57ca176a5.jpg",
+    "image_url": "",
     "summary_text": "Poorly generated content underlines need for clear policies and increased monitoring of technology",
     "category": "ai",
     "_trending_tags": [
       "ai"
-    ],
-    "_permalink": "/p/7ba46a51a1/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/7ba46a51a1/",
-    "_summary_240": "Poorly generated content underlines need for clear policies and increased monitoring of technology",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/7ba46a51a1/thumbnail.png"
+    ]
   },
   {
     "title": "People Who Say They\u2019re Experiencing AI Psychosis Beg the FTC for Help",
@@ -1358,16 +1365,12 @@
     "source": "Financial Times - Technology",
     "summary": "Companies must rethink what AI will do to their relevance",
     "content_html": "",
-    "image_url": "https://images.ft.com/v3/image/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F3be8cbbe-f1d4-40c5-8ce2-ae12ac48bd22.jpg?source=next-article&fit=scale-down&quality=highest&width=700&dpr=1",
+    "image_url": "",
     "summary_text": "Companies must rethink what AI will do to their relevance",
     "category": "ai",
     "_trending_tags": [
       "ai"
-    ],
-    "_permalink": "/p/7e2bcbb8cd/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/7e2bcbb8cd/",
-    "_summary_240": "Companies must rethink what AI will do to their relevance",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/7e2bcbb8cd/thumbnail.png"
+    ]
   },
   {
     "title": "How Chile Embodies A.I.\u2019s No-Win Politics",
