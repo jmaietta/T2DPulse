@@ -642,6 +642,26 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/831f23ab9f/thumbnail.png"
   },
   {
+    "title": "Mistral launches its own AI Studio for quick development with its European open source, proprietary models",
+    "url": "https://venturebeat.com/ai/mistral-launches-its-own-ai-studio-for-quick-development-with-its-european",
+    "published_at": "2025-10-24T02:55:00-04:00",
+    "source": "VentureBeat",
+    "summary": "The next big trend in AI providers appears to be \"studio\" environments on the web that allow users to spin up agents and AI applications within minutes. Case in point, today the well-funded French AI startup Mistral launched its own Mistral AI Studio , a new production platform designed to help enterprises build, observe, and operationalize AI applications at scale atop Mistral's growing family o...",
+    "content_html": "",
+    "image_url": "",
+    "summary_text": "The next big trend in AI providers appears to be \"studio\" environments on the web that allow users to spin up agents and AI applications within minutes. Case in point, today the well-funded French AI startup Mistral launched its own Mistral AI Studio , a new ...",
+    "category": "ai",
+    "_trending_tags": [
+      "agent",
+      "ai",
+      "mistral"
+    ],
+    "_permalink": "/p/67bdb9579c/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/67bdb9579c/",
+    "_summary_240": "The next big trend in AI providers appears to be \"studio\" environments on the web that allow users to spin up agents and AI applications within minutes. Case in point, today the...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/67bdb9579c/thumbnail.png"
+  },
+  {
     "title": "Ex-UBS Chairman Weber Warns AI Ushering In New Era of Inequality",
     "url": "https://www.bloomberg.com/news/articles/2025-10-24/ex-bundesbank-chief-weber-warns-on-ai-aristocrats-in-job-shock",
     "published_at": "2025-10-24T02:29:26-04:00",
@@ -972,6 +992,20 @@
     ]
   },
   {
+    "title": "Research finds that 77% of data engineers have heavier workloads despite AI tools: Here's why and what to do about it",
+    "url": "https://venturebeat.com/data-infrastructure/research-finds-that-77-of-data-engineers-have-heavier-workloads-despite-ai",
+    "published_at": "2025-10-23T09:00:00-04:00",
+    "source": "VentureBeat",
+    "summary": "Data engineers should be working faster than ever. AI-powered tools promise to automate pipeline optimization, accelerate data integration and handle the repetitive grunt work that has defined the profession for decades. Yet, according to a new survey of 400 senior technology executives by MIT Technology Review Insights in partnership with Snowflake , 77% say their data engineering teams' workloa...",
+    "content_html": "",
+    "image_url": "",
+    "summary_text": "Data engineers should be working faster than ever. AI-powered tools promise to automate pipeline optimization, accelerate data integration and handle the repetitive grunt work that has defined the profession for decades. Yet, according to a new survey of 400 ...",
+    "category": "ai",
+    "_trending_tags": [
+      "ai"
+    ]
+  },
+  {
     "title": "Sakana AI's CTO says he's 'absolutely sick' of transformers, the tech that powers every major AI model",
     "url": "https://venturebeat.com/ai/sakana-ais-cto-says-hes-absolutely-sick-of-transformers-the-tech-that-powers",
     "published_at": "2025-10-23T09:00:00-04:00",
@@ -987,20 +1021,6 @@
       "claude",
       "gpt",
       "transformer"
-    ]
-  },
-  {
-    "title": "Research finds that 77% of data engineers have heavier workloads despite AI tools: Here's why and what to do about it",
-    "url": "https://venturebeat.com/data-infrastructure/research-finds-that-77-of-data-engineers-have-heavier-workloads-despite-ai",
-    "published_at": "2025-10-23T09:00:00-04:00",
-    "source": "VentureBeat",
-    "summary": "Data engineers should be working faster than ever. AI-powered tools promise to automate pipeline optimization, accelerate data integration and handle the repetitive grunt work that has defined the profession for decades. Yet, according to a new survey of 400 senior technology executives by MIT Technology Review Insights in partnership with Snowflake , 77% say their data engineering teams' workloa...",
-    "content_html": "",
-    "image_url": "",
-    "summary_text": "Data engineers should be working faster than ever. AI-powered tools promise to automate pipeline optimization, accelerate data integration and handle the repetitive grunt work that has defined the profession for decades. Yet, according to a new survey of 400 ...",
-    "category": "ai",
-    "_trending_tags": [
-      "ai"
     ]
   },
   {
@@ -1405,11 +1425,7 @@
     "category": "fintech",
     "_trending_tags": [
       "ai"
-    ],
-    "_permalink": "/p/9a32b16fc5/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/9a32b16fc5/",
-    "_summary_240": "The first lady of the United States became a pawn in an intricate memecoin scam that resulted in millions of dollars in losses, crypto investors have alleged.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/9a32b16fc5/thumbnail.png"
+    ]
   },
   {
     "title": "OpenAI Unveils Atlas Web Browser Built to Work Closely With ChatGPT",
@@ -1426,11 +1442,7 @@
       "chatgpt",
       "gpt",
       "openai"
-    ],
-    "_permalink": "/p/e8bccfb173/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/e8bccfb173/",
-    "_summary_240": "The new browser, called Atlas, is designed to work closely with OpenAI products like ChatGPT.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/e8bccfb173/thumbnail.png"
+    ]
   },
   {
     "title": "OpenAI\u2019s Atlas Browser Takes Direct Aim at Google Chrome",
