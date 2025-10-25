@@ -1301,12 +1301,16 @@
     "source": "Financial Times - Technology",
     "summary": "Social media group claims the start-up harvested user conversations to train its artificial intelligence models",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/eab26d1c-4bd7-49b2-b3da-2f7400c5aa2d.jpg",
     "summary_text": "Social media group claims the start-up harvested user conversations to train its artificial intelligence models",
     "category": "ai",
     "_trending_tags": [
       "ai"
-    ]
+    ],
+    "_permalink": "/p/2629d05ace/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/2629d05ace/",
+    "_summary_240": "Social media group claims the start-up harvested user conversations to train its artificial intelligence models",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/2629d05ace/thumbnail.png"
   },
   {
     "title": "\u2018The Next Generation of Compute Is Driving AI,\u2019 Technology Leader Says at NVIDIA AI Day Sydney",
@@ -1340,11 +1344,7 @@
     "category": "ai",
     "_trending_tags": [
       "ai"
-    ],
-    "_permalink": "/p/efd84bc130/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/efd84bc130/",
-    "_summary_240": "Drivers will be able to converse with an artificial intelligence assistant while cars largely drive themselves in certain situations, the company said.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/efd84bc130/thumbnail.png"
+    ]
   },
   {
     "title": "AI Models Get Brain Rot, Too",
@@ -1358,11 +1358,7 @@
     "category": "ai",
     "_trending_tags": [
       "ai"
-    ],
-    "_permalink": "/p/44a6118bdb/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/44a6118bdb/",
-    "_summary_240": "A new study shows that feeding large language models low-quality, high-engagement content from social media lowers their cognitive abilities.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/44a6118bdb/thumbnail.png"
+    ]
   },
   {
     "title": "New Microsoft Security Store unites partners and innovation",
@@ -1376,11 +1372,7 @@
     "category": "fintech",
     "_trending_tags": [
       "microsoft"
-    ],
-    "_permalink": "/p/b85534093b/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/b85534093b/",
-    "_summary_240": "The post New Microsoft Security Store unites partners and innovation appeared first on Source .",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/b85534093b/thumbnail.png"
+    ]
   },
   {
     "title": "Google\u2019s Quantum Computer Makes a Big Technical Leap",
@@ -1449,7 +1441,7 @@
     "source": "Financial Times - Technology",
     "summary": "Poorly generated content underlines need for clear policies and increased monitoring of technology",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/c8c7b19f-0053-4c2a-8acb-2de57ca176a5.jpg",
     "summary_text": "Poorly generated content underlines need for clear policies and increased monitoring of technology",
     "category": "ai",
     "_trending_tags": [
@@ -1490,7 +1482,7 @@
     "source": "Financial Times - Technology",
     "summary": "Companies must rethink what AI will do to their relevance",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://images.ft.com/v3/image/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F3be8cbbe-f1d4-40c5-8ce2-ae12ac48bd22.jpg?source=next-article&fit=scale-down&quality=highest&width=700&dpr=1",
     "summary_text": "Companies must rethink what AI will do to their relevance",
     "category": "ai",
     "_trending_tags": [
@@ -1768,22 +1760,6 @@
     "category": "ai",
     "_trending_tags": [
       "ai"
-    ]
-  },
-  {
-    "title": "Claude Code comes to web and mobile, letting devs launch parallel jobs on Anthropic\u2019s managed infra",
-    "url": "https://venturebeat.com/ai/claude-code-comes-to-web-and-mobile-letting-devs-launch-parallel-jobs-on",
-    "published_at": "2025-10-20T14:15:00-04:00",
-    "source": "VentureBeat",
-    "summary": "Vibe coding is evolving and with it are the leading AI-powered coding services and tools, including Anthropic \u2019s Claude Code. As of today, the service will be available via the web and, in preview, on the Claude iOS app, giving developers access to additional asynchronous capabilities. Previously, it was available through the terminal on developers' PCs with support for Git, Docker, Kubernetes, n...",
-    "content_html": "",
-    "image_url": "",
-    "summary_text": "Vibe coding is evolving and with it are the leading AI-powered coding services and tools, including Anthropic \u2019s Claude Code. As of today, the service will be available via the web and, in preview, on the Claude iOS app, giving developers access to additional...",
-    "category": "software",
-    "_trending_tags": [
-      "ai",
-      "anthropic",
-      "claude"
     ]
   }
 ]
