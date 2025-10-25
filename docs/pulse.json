@@ -1283,12 +1283,16 @@
     "source": "Financial Times - Technology",
     "summary": "Social media group claims the start-up harvested user conversations to train its artificial intelligence models",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/eab26d1c-4bd7-49b2-b3da-2f7400c5aa2d.jpg",
     "summary_text": "Social media group claims the start-up harvested user conversations to train its artificial intelligence models",
     "category": "ai",
     "_trending_tags": [
       "ai"
-    ]
+    ],
+    "_permalink": "/p/2629d05ace/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/2629d05ace/",
+    "_summary_240": "Social media group claims the start-up harvested user conversations to train its artificial intelligence models",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/2629d05ace/thumbnail.png"
   },
   {
     "title": "\u2018The Next Generation of Compute Is Driving AI,\u2019 Technology Leader Says at NVIDIA AI Day Sydney",
@@ -1376,11 +1380,7 @@
     "category": "software",
     "_trending_tags": [
       "google"
-    ],
-    "_permalink": "/p/7b8da91cb9/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/7b8da91cb9/",
-    "_summary_240": "Designed to accelerate advances in medicine and other fields, the tech giant\u2019s quantum algorithm runs 13,000 times as fast as software written for a traditional supercomputer.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/7b8da91cb9/thumbnail.png"
+    ]
   },
   {
     "title": "This Open Source Robot Brain Thinks in 3D",
@@ -1394,11 +1394,7 @@
     "category": "ai",
     "_trending_tags": [
       "ai"
-    ],
-    "_permalink": "/p/850c7dd05f/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/850c7dd05f/",
-    "_summary_240": "Open source language models are crucial to AI innovation. Can open robotics models do the same for physical machines?",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/850c7dd05f/thumbnail.png"
+    ]
   },
   {
     "title": "The next chapter for UK sovereign AI",
@@ -1439,7 +1435,7 @@
     "source": "Financial Times - Technology",
     "summary": "Poorly generated content underlines need for clear policies and increased monitoring of technology",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/c8c7b19f-0053-4c2a-8acb-2de57ca176a5.jpg",
     "summary_text": "Poorly generated content underlines need for clear policies and increased monitoring of technology",
     "category": "ai",
     "_trending_tags": [
@@ -1480,7 +1476,7 @@
     "source": "Financial Times - Technology",
     "summary": "Companies must rethink what AI will do to their relevance",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://images.ft.com/v3/image/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F3be8cbbe-f1d4-40c5-8ce2-ae12ac48bd22.jpg?source=next-article&fit=scale-down&quality=highest&width=700&dpr=1",
     "summary_text": "Companies must rethink what AI will do to their relevance",
     "category": "ai",
     "_trending_tags": [
@@ -1786,23 +1782,5 @@
     "image_url": "https://media.wired.com/photos/68f16b5af35e2b5038d3c8f8/master/pass/Uncanny-Valley-Federal-Workers-Pawns-Business-1363781664.jpg",
     "summary_text": "In this episode of Uncanny Valley, we run through the top stories of the week, including security concerns from satellites leaking sensitive data and the experiences of undeterred Cybertruck owners.",
     "category": "fintech"
-  },
-  {
-    "title": "NVIDIA and Google Cloud Accelerate Enterprise AI and Industrial Digitalization",
-    "url": "https://blogs.nvidia.com/blog/nvidia-google-cloud-enterprise-ai-industrial-digitalization/",
-    "published_at": "2025-10-20T12:00:53-04:00",
-    "source": "NVIDIA News",
-    "summary": "NVIDIA and Google Cloud are expanding access to accelerated computing to transform the full spectrum of enterprise workloads, from visual computing to agentic and physical AI. Google Cloud today announced the general availability of G4 VMs, powered by NVIDIA RTX PRO 6000 Blackwell Server Edition GPUs. Plus, NVIDIA Omniverse and NVIDIA Isaac Sim are now Read Article",
-    "content_html": "",
-    "image_url": "https://s3.amazonaws.com/cms.ipressroom.com/219/files/202510/68f65cd33d63321c4e7299e5_partner-promo-google-cloudg4-blog-1920x1080-1-842x450/partner-promo-google-cloudg4-blog-1920x1080-1-842x450_thmb.jpg",
-    "summary_text": "NVIDIA and Google Cloud are expanding access to accelerated computing to transform the full spectrum of enterprise workloads, from visual computing to agentic and physical AI. Google Cloud today announced the general availability of G4 VMs, powered by NVIDIA ...",
-    "category": "ai",
-    "_trending_tags": [
-      "agent",
-      "ai",
-      "cloud",
-      "google",
-      "nvidia"
-    ]
   }
 ]
