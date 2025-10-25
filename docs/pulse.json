@@ -270,11 +270,7 @@
     "category": "ai",
     "_trending_tags": [
       "ai"
-    ],
-    "_permalink": "/p/f34cfea9bc/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/f34cfea9bc/",
-    "_summary_240": "Remember when browsers were simple? You clicked a link, a page loaded, maybe you filled out a form. Those days feel ancient now that AI browsers like Perplexity's Comet promise...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/f34cfea9bc/thumbnail.png"
+    ]
   },
   {
     "title": "Bored Ape Yacht Club is making a comeback \u2014 as a metaverse",
@@ -1361,11 +1357,7 @@
     "content_html": "<p>The makers of BIND, the Internet\u2019s most widely used software for resolving domain names, are warning of two vulnerabilities that allow attackers to poison entire caches of results and send users to malicious destinations that are indistinguishable from the real ones.</p>\n<p>The vulnerabilities, tracked as <a href=\"https://kb.isc.org/docs/cve-2025-40778\">CVE-2025-40778</a> and <a href=\"https://kb.isc.org/docs/cve-2025-40780\">CVE-2025-40780</a>, stem from a logic error and a weakness in generating pseudo-random numbers, respectively. They each carry a severity rating of 8.6. Separately, makers of the Domain Name System resolver software Unbound <a href=\"https://www.nlnetlabs.nl/downloads/unbound/CVE-2025-11411.txt\">warned</a> of similar vulnerabilities that were reported by the same researchers. The unbound vulnerability severity score is 5.6</p>\n<h2>Revisiting Kaminsky\u2019s cache poisoning attack</h2>\n<p>The vulnerabilities can be exploited to cause DNS resolvers located inside thousands of organizations to replace valid results for domain lookups with corrupted ones. The corrupted results would replace the IP addresses controlled by the domain name operator (for instance, 3.15.119.63 for arstechnica.com) with malicious ones controlled by the attacker. Patches for all three vulnerabilities became available on Wednesday.</p><p><a href=\"https://arstechnica.com/security/2025/10/bind-warns-of-bugs-that-could-bring-dns-cache-attack-back-from-the-dead/\">Read full article</a></p>\n<p><a href=\"https://arstechnica.com/security/2025/10/bind-warns-of-bugs-that-could-bring-dns-cache-attack-back-from-the-dead/#comments\">Comments</a></p>",
     "image_url": "https://cdn.arstechnica.net/wp-content/uploads/2025/06/browser-security-threat-1152x627.jpg",
     "summary_text": "At least one CVE could weaken defenses put in place following 2008 disclosure.",
-    "category": "fintech",
-    "_permalink": "/p/e8b0b872ea/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/e8b0b872ea/",
-    "_summary_240": "At least one CVE could weaken defenses put in place following 2008 disclosure.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/e8b0b872ea/thumbnail.png"
+    "category": "fintech"
   },
   {
     "title": "Reddit sues AI search engine Perplexity for scraping its data",
