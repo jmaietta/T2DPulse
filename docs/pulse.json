@@ -1165,11 +1165,7 @@
     "content_html": "<article class=\"mssrc-posts font-- has--theme\" id=\"single-22600\">\n\t<div class=\"acf-innerblocks-container\"></div>\t\t\t<section class=\"post-tags\">\n\t\t\t\t<div class=\"post-tags__content wp-block-columns\">\n\t\t\t\t\t<div class=\"post-tags__header wp-block-column flex-basis-25 has-text-align-right\">\n\t\t\t\t\t\t<h4 class=\"sr-only\">Tags: </h4>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"post-tags__body wp-block-column flex-basis-60\">\n\t\t\t\t\t\t<ul class=\"post-tags__list\"><li class=\"post-tags__item\"><a class=\"kicker inline-block post__meta--tags\" href=\"https://news.microsoft.com/source/tag/security/\">Security</a></li></ul>\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</section>\n\t\t\t</article><p>The post <a href=\"https://www.microsoft.com/en-us/startups/blog/contraforce-democratizing-cybersecurity-for-the-frontline/\">New tools to help startups defend themselves from cybercriminals</a> appeared first on <a href=\"https://news.microsoft.com/source\">Source</a>.</p>",
     "image_url": "https://www.microsoft.com/en-us/startups/blog/wp-content/uploads/2025/10/ContraForce-Democratizing-cybersecurity-for-the-frontline-Social.jpg",
     "summary_text": "The post New tools to help startups defend themselves from cybercriminals appeared first on Source .",
-    "category": "fintech",
-    "_permalink": "/p/e003a019f4/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/e003a019f4/",
-    "_summary_240": "The post New tools to help startups defend themselves from cybercriminals appeared first on Source .",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/e003a019f4/thumbnail.png"
+    "category": "fintech"
   },
   {
     "title": "\u2018AI is tearing companies apart\u2019: Writer AI CEO slams Fortune 500 leaders for mismanaging tech",
@@ -1454,20 +1450,6 @@
     "_trending_tags": [
       "ai",
       "llm"
-    ]
-  },
-  {
-    "title": "How employers can prevent AI \u2018work slop\u2019",
-    "url": "https://www.ft.com/content/88245052-1e68-41e1-9678-fcbbc5889e93",
-    "published_at": "2025-10-22T06:30:58-04:00",
-    "source": "Financial Times - Technology",
-    "summary": "Poorly generated content underlines need for clear policies and increased monitoring of technology",
-    "content_html": "",
-    "image_url": "https://images.ft.com/v3/image/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Fc8c7b19f-0053-4c2a-8acb-2de57ca176a5.jpg?source=next-article&fit=scale-down&quality=highest&width=700&dpr=1",
-    "summary_text": "Poorly generated content underlines need for clear policies and increased monitoring of technology",
-    "category": "ai",
-    "_trending_tags": [
-      "ai"
     ]
   },
   {
