@@ -215,11 +215,7 @@
     "_trending_tags": [
       "agent",
       "ai"
-    ],
-    "_permalink": "/p/a72ae210fd/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/a72ae210fd/",
-    "_summary_240": "For three decades, the web has been designed with one audience in mind: People. Pages are optimized for human eyes, clicks and intuition. But as AI-driven agents begin to browse...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/a72ae210fd/thumbnail.png"
+    ]
   },
   {
     "title": "Australia Unveils Cyber Security Push for Indo-Pacific Region",
@@ -1174,7 +1170,7 @@
     "source": "Financial Times - Technology",
     "summary": "Amazon\u2019s recent issue highlights how dependent the internet is on a handful of US Big Tech groups",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/bfcd09e9-1a56-45a4-a043-905f66d20229.jpg",
     "summary_text": "Amazon\u2019s recent issue highlights how dependent the internet is on a handful of US Big Tech groups",
     "category": "software",
     "_trending_tags": [
@@ -1281,7 +1277,7 @@
     "source": "Financial Times - Technology",
     "summary": "Social media group claims the start-up harvested user conversations to train its artificial intelligence models",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/eab26d1c-4bd7-49b2-b3da-2f7400c5aa2d.jpg",
     "summary_text": "Social media group claims the start-up harvested user conversations to train its artificial intelligence models",
     "category": "ai",
     "_trending_tags": [
@@ -1474,37 +1470,6 @@
     "category": "ai",
     "_trending_tags": [
       "ai",
-      "openai"
-    ]
-  },
-  {
-    "title": "Melania Trump Used as \u2018Window-Dressing\u2019 in Elaborate Memecoin Fraud, Legal Filing Claims",
-    "url": "https://www.wired.com/story/melania-trump-used-as-window-dressing-in-elaborate-memecoin-fraud-legal-filing-claims/",
-    "published_at": "2025-10-21T15:30:20-04:00",
-    "source": "Wired",
-    "summary": "The first lady of the United States became a pawn in an intricate memecoin scam that resulted in millions of dollars in losses, crypto investors have alleged.",
-    "content_html": "",
-    "image_url": "https://media.wired.com/photos/68f2c1e063f7ddf18419e89a/master/pass/Lawyers-File-New-Claim-Against-Melania-Coin-Business.jpg",
-    "summary_text": "The first lady of the United States became a pawn in an intricate memecoin scam that resulted in millions of dollars in losses, crypto investors have alleged.",
-    "category": "fintech",
-    "_trending_tags": [
-      "ai"
-    ]
-  },
-  {
-    "title": "OpenAI Unveils Atlas Web Browser Built to Work Closely With ChatGPT",
-    "url": "https://www.nytimes.com/2025/10/21/technology/openai-web-browser-atlas.html",
-    "published_at": "2025-10-21T15:21:05-04:00",
-    "source": "The New York Times - Technology",
-    "summary": "The new browser, called Atlas, is designed to work closely with OpenAI products like ChatGPT.",
-    "content_html": "OpenAI\u2019s chief executive, Sam Altman, has been looking for ways to level the playing field with his company\u2019s giant competitors.",
-    "image_url": "https://static01.nyt.com/images/2025/10/21/multimedia/21biz-openai-browser-tpwq/21biz-openai-browser-tpwq-mediumSquareAt3X.jpg",
-    "summary_text": "The new browser, called Atlas, is designed to work closely with OpenAI products like ChatGPT.",
-    "category": "ai",
-    "_trending_tags": [
-      "ai",
-      "chatgpt",
-      "gpt",
       "openai"
     ]
   }
