@@ -1,13 +1,13 @@
 {
-  "generated_at": "2025-10-26T13:37:13.381839-04:00",
+  "generated_at": "2025-10-26T14:28:45.903572-04:00",
   "total_keywords": 30,
   "keyword_counts": {
-    "ai": 88,
-    "openai": 13,
-    "agent": 6,
+    "ai": 85,
+    "openai": 12,
     "chatgpt": 6,
     "gpt": 6,
-    "microsoft": 6,
+    "agent": 5,
+    "microsoft": 5,
     "amazon": 4,
     "fintech": 4,
     "google": 3,
@@ -16,8 +16,8 @@
     "nvidia": 3,
     "apple": 2,
     "cloud": 2,
-    "gpu": 2,
     "anthropic": 1,
+    "gpu": 1,
     "mistral": 1
   },
   "sources_per_keyword": {},
