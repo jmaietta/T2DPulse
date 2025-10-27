@@ -1,3 +1,4 @@
+
 #!/usr/bin/env python3
 # generator/generate_pulse.py
 # (excerpted + maintained whole file)
@@ -534,7 +535,11 @@ def build_preferred_today_with_floors(all_items, now_local=None, floors=None, ba
     out = {}
     for cat in ("ai", "software", "fintech"):
         pool = pool_by_cat.get(cat, [])
+        # Ensure chronological order before slicing
+        pool.sort(key=_dt_local, reverse=True)
         out[cat] = pool[:MAX_ITEMS]
+        # Sort again after slicing to be absolutely sure
+        out[cat].sort(key=_dt_local, reverse=True)
     return out
 
 def finalize_section_with_backfill(items, section_max, now=None, max_backfill_days=7):
@@ -1142,7 +1147,15 @@ def dedupe_story_variants(items: list) -> list:
         if score_new >= score_old:
             best[key] = it
 
-    return list(best.values())
+    # Sort by published date (newest first) to maintain chronological order
+    result = list(best.values())
+    def _sort_dt(it):
+        try:
+            return dtparser.parse(it.get("published_at", ""))
+        except Exception:
+            return datetime.min.replace(tzinfo=timezone.utc)
+    result.sort(key=_sort_dt, reverse=True)
+    return result
 
 def dedupe(items):
     out, seen_urls, seen_titles, seen_title_cores = [], set(), set(), set()
@@ -1172,6 +1185,14 @@ def dedupe(items):
         seen_urls.add(normalized_url)
         seen_titles.add(title_domain_key)
         out.append(it)
+    
+    # Sort by published date to maintain chronological order
+    def _dedupe_sort_dt(it):
+        try:
+            return dtparser.parse(it.get("published_at", ""))
+        except Exception:
+            return datetime.min.replace(tzinfo=timezone.utc)
+    out.sort(key=_dedupe_sort_dt, reverse=True)
     return out
 
 def summarize(item):
@@ -1266,10 +1287,32 @@ def build_section(date_str, by_cat):
     html_out = tpl.replace("{{DATE_STR}}", date_str)
     total_count = sum(len(by_cat.get(k, [])) for k in ("ai", "software", "fintech"))
 
-    for cat_key, ph in (("ai", "AI"), ("software", "SW"), ("fintech", "FT")):
+    # Helper to parse dates for final sort
+    def _final_sort_dt(it):
+        try:
+            return dtparser.parse(it["published_at"]).astimezone(TZ)
+        except Exception:
+            return datetime.min.replace(tzinfo=TZ)
+
+    # COMBINE ALL ARTICLES FROM ALL CATEGORIES INTO ONE CHRONOLOGICAL LIST
+    all_articles = []
+    for cat_key in ("ai", "software", "fintech"):
         items = by_cat.get(cat_key, [])[:MAX_ITEMS]
-        html_out = html_out.replace(f"{{{{{ph}_COUNT}}}}", str(len(items)))
-        html_out = html_out.replace(f"{{{{{ph}_ITEMS}}}}", render_items(items) if items else "<p>No items today.</p>")
+        all_articles.extend(items)
+    
+    # Sort the combined list chronologically (newest first)
+    all_articles.sort(key=_final_sort_dt, reverse=True)
+    
+    # Render all articles as one unified list
+    all_items_html = render_items(all_articles) if all_articles else "<p>No items today.</p>"
+    
+    # Replace placeholders - use the combined list for all three
+    html_out = html_out.replace("{{AI_ITEMS}}", all_items_html)
+    html_out = html_out.replace("{{SW_ITEMS}}", "")  # Empty - already in AI_ITEMS
+    html_out = html_out.replace("{{FT_ITEMS}}", "")  # Empty - already in AI_ITEMS
+    html_out = html_out.replace("{{AI_COUNT}}", str(len(all_articles)))
+    html_out = html_out.replace("{{SW_COUNT}}", "0")
+    html_out = html_out.replace("{{FT_COUNT}}", "0")
 
     html_out = html_out.replace("{{TOTAL_COUNT}}", str(total_count))
     html_out = html_out.replace("{{COUNT}}", str(total_count))
