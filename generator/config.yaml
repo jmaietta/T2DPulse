@@ -39,8 +39,8 @@ sources:
     url: https://feeds.arstechnica.com/arstechnica/technology-lab
   - name: TechCrunch
     url: https://techcrunch.com/feed/
-  - name: TEK2day (Substack)
-    url: https://tek2day.substack.com/feed
+  - name: T2D Newsletter
+    url: https://newsletter.tek2dayholdings.com/feed
   - name: Cointelegraph
     url: https://cointelegraph.com/rss
   google_news_queries:
