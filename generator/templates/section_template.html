@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -432,11 +431,13 @@
 
     function buildHaystack(card){
       const clone = card.cloneNode(true);
-      clone.querySelectorAll('.meta, .source, .src, .host-pill, .byline, .count, .date, .publisher').forEach(n => n.remove());
-      const sels = ['h3','h2','.title','.headline','.desc','.dek','.summary','.snippet','.copy','.body','p'];
+      // Remove metadata elements we don't want to search
+      clone.querySelectorAll('.host-pill, .byline, .count, .date, .publisher').forEach(n => n.remove());
+      const sels = ['h3','h2','.title','.headline','.desc','.dek','.summary','.snippet','.copy','.body','p','.src'];
       const parts = [];
       for (const s of sels){ clone.querySelectorAll(s).forEach(n => parts.push(n.textContent || '')); }
-      ['data-tickers','data-companies','data-keywords'].forEach(a => {
+      // Include data attributes including the new data-source
+      ['data-tickers','data-companies','data-keywords','data-source'].forEach(a => {
         const v = card.getAttribute(a); if (v) parts.push(v);
       });
       return parts.join(' ').replace(/\s+/g,' ').trim().toLowerCase();
