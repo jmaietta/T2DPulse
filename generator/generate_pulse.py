@@ -1,4 +1,3 @@
-
 #!/usr/bin/env python3
 # generator/generate_pulse.py
 # (excerpted + maintained whole file)
@@ -430,7 +429,7 @@ SOURCE_NAME_MAP = {
 FORCE_FINTECH_DOMAINS = {"pymnts.com"}
 FORCE_FINTECH_SOURCES = {"pymnts"}
 FORCE_AI_SOURCES = {"openai", "anthropic", "claude"}
-FORCE_INCLUDE_SOURCES = {"tek2day"}
+FORCE_INCLUDE_SOURCES = {"tek2day", "tek2day newsletter"}  # Support both variants
 
 # --- Freshness & diversity helpers
 FRESH_WINDOW_DAYS = 3
@@ -1273,11 +1272,11 @@ def build_section(date_str, by_cat):
             summary_html = html.escape(summary_txt)
             top_cls = " top" if idx == 0 else ""
             thumb_html = f'<img src="{thumbnail}" alt="{html.escape(title_raw, quote=True)}" class="article-thumb">' if thumbnail else ''
-            parts.append(f"""<article class="{top_cls.strip()}" data-card data-url="{url}" data-permalink="{permalink}" data-title="{html.escape(title_raw, quote=True)}" data-summary="{summary_html}">
+            parts.append(f"""<article class="{top_cls.strip()}" data-card data-url="{url}" data-permalink="{permalink}" data-title="{html.escape(title_raw, quote=True)}" data-summary="{summary_html}" data-source="{src}">
   {thumb_html}
   <div class="article-content">
     <h3><a data-title-link href="{url}">{title}</a></h3>
-    <div class="meta">{src} - {dt_str} {render_item_badges(it)} {trending_badge}</div>
+    <div class="meta"><span class="src">{src}</span> - {dt_str} {render_item_badges(it)} {trending_badge}</div>
     <div class="trend-chips">{trending_chips_html}</div>
     <p data-summary>{summary_html}</p>
   </div>
@@ -1363,8 +1362,18 @@ def main():
         cat, score = categorize_with_score(it["title"], it["url"], it.get("summary_text", ""))
         # Drop unrelated items unless forced include
         src_norm = (it.get("source") or "").strip().lower()
+        
+        # Debug logging for TEK2day articles
+        if "tek2day" in src_norm:
+            print(f"[DEBUG] TEK2day article found: '{it.get('title', 'Unknown')}' | Source: '{it.get('source')}' | Score: {score}")
+        
         is_youtube_src = ("youtube" in src_norm)
-        is_force_included = any(term in src_norm for term in FORCE_INCLUDE_SOURCES)
+        # Check if any FORCE_INCLUDE_SOURCES term appears in the source name
+        is_force_included = any(term.lower() in src_norm for term in FORCE_INCLUDE_SOURCES)
+        
+        if "tek2day" in src_norm:
+            print(f"[DEBUG] TEK2day article - is_force_included: {is_force_included}, will keep: {score > 0 or is_force_included}")
+        
         if score == 0 and (src_norm not in FORCE_AI_SOURCES) and (not is_youtube_src) and (not is_force_included):
             continue
         it["category"] = cat
@@ -1383,7 +1392,10 @@ def main():
             d = domain_of(it["url"])
         except Exception:
             d = ""
-        if ("youtube" in src_norm) or (src_norm in FORCE_AI_SOURCES) or (src_norm in FORCE_INCLUDE_SOURCES):
+        # Check if source should be force-included (case-insensitive substring match)
+        is_force_included_src = any(term.lower() in src_norm for term in FORCE_INCLUDE_SOURCES)
+        
+        if ("youtube" in src_norm) or (src_norm in FORCE_AI_SOURCES) or is_force_included_src:
             it["category"] = "ai"
         elif d in FORCE_FINTECH_DOMAINS or src_norm in FORCE_FINTECH_SOURCES:
             scores = compute_scores(it["title"], it["url"], it.get("summary_text",""))
