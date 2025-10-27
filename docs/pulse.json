@@ -1,13 +1,46 @@
 [
   {
+    "title": "X is getting closer to removing the last reminders of Twitter",
+    "url": "https://www.theverge.com/news/807011/twitter-com-x-com-login-security-key-passkey-domain",
+    "published_at": "2025-10-27T11:13:00-04:00",
+    "source": "The Verge",
+    "summary": "X is preparing to put Twitter.com out to pasture, and the official @Safety account posted on Friday warning anyone using physical security keys or passkeys for 2FA that they will need to re-enroll them. According to X, if the login methods aren\u2019t updated by November 10th, the associated accounts will be locked until the update [\u2026]",
+    "content_html": "<figure>\n\n<img alt=\"\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/24805886/STK160_X_Twitter_004.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100\" />\n\t<figcaption>\n\t\t</figcaption>\n</figure>\n<p class=\"has-text-align-none\">X is preparing to put Twitter.com out to pasture, and the official @Safety account posted on Friday warning anyone using physical security keys or passkeys for 2FA that they will need to re-enroll them. According to X, if the login methods aren\u2019t updated by November 10th, the associated accounts <a href=\"https://x.com/Safety/status/1981764503298777326\">will be locked</a> until the update process is completed, and abandoned accounts could <a href=\"https://www.theverge.com/news/802474/x-is-launching-a-marketplace-for-inactive-handles\">possibly be sold</a>.</p>\n\n<p class=\"has-text-align-none\">Active users with keys attached to their accounts have been getting notifications about the impending change for a while, and the X Safety team explained the process in a <a href=\"https://x.com/Safety/status/1982278858457174522\">clarification post</a>: \u201cThis change is not related to any security concern, and only impacts Yubikeys and passkeys &#8211; not other 2FA methods (such as authenticator apps). Security keys enrolled as a 2FA method are currently tied to the twitter[.]com domain. Re-enrolling your security key will associate them with x[.]com, allowing us to retire the Twitter domain.\u201d</p>\n\n<figure class=\"wp-block-embed is-type-rich is-provider-twitter wp-block-embed-twitter\"><div class=\"wp-block-embed__wrapper\">\n<blockquote class=\"twitter-tweet\"><p dir=\"ltr\" lang=\"en\">To clarify: this change is not related to any security concern, and only impacts Yubikeys and passkeys &#8211; not other 2FA methods (such as authenticator apps). Security keys enrolled as a 2FA method are currently tied to the twitter[.]com domain. Re-enrolling your security key will\u2026 <a href=\"https://t.co/PlXOTnNXPM\">https://t.co/PlXOTnNXPM</a></p>&mdash; Safety (@Safety) <a href=\"https://twitter.com/Safety/status/1982278858457174522?ref_src=twsrc%5Etfw\">October 26, 2025</a></blockquote>\n</div></figure>\n\n<p class=\"has-text-align-none\">Authentication methods like hardware keys and passkeys have to be updated for the <a href=\"https://www.theverge.com/2023/2/18/23605852/its-always-a-good-day-to-replace-passwords-and-sms-2fa-with-something-stronger\">same reason</a> they help protect against phishing attacks that try to dupe you with fake Unicode characters or long addresses pointing to another website. They&#8217;re tied to the domain they were originally set up with, and won&#8217;t recognize another one, like a link using a &#8220;|&#8221; character to look like a lower-case L, or X.com instead of Twitter.com.</p>\n\n<p class=\"has-text-align-none\">The security keys and passkeys are among the few remaining holdouts since X officially <a href=\"https://www.theverge.com/2024/5/17/23829098/twitter-x-com-url-links-switch\">changed its domain</a> over a year ago and abandoned its <a href=\"https://www.theverge.com/2023/7/24/23804973/twitter-x-logo-brand-replacement\">iconic blue bird mascot</a> a year before that. There are still some last shreds of the old Twitter domain hanging on, though, like the page for embedding X posts.</p>",
+    "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/24805886/STK160_X_Twitter_004.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "summary_text": "X is preparing to put Twitter.com out to pasture, and the official @Safety account posted on Friday warning anyone using physical security keys or passkeys for 2FA that they will need to re-enroll them. According to X, if the login methods aren\u2019t updated by N...",
+    "category": "fintech",
+    "_permalink": "/p/dc572d49c0/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/dc572d49c0/",
+    "_summary_240": "X is preparing to put Twitter.com out to pasture, and the official @Safety account posted on Friday warning anyone using physical security keys or passkeys for 2FA that they will...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/dc572d49c0/thumbnail.png"
+  },
+  {
+    "title": "How Changpeng Zhao regained power between prison and pardon",
+    "url": "https://cointelegraph.com/news/changpeng-zhao-regained-power-between-prison-pardon?utm_source=rss_feed&utm_medium=rss%3Fvfff%3D1761578440%26_nocache%3D1761578440683%26sid%3De0e42b979ffe9f20&utm_campaign=rss_partner_inbound",
+    "published_at": "2025-10-27T11:06:51-04:00",
+    "source": "Cointelegraph",
+    "summary": "With his Binance executive ban in place, Zhao found new channels to shape markets and policy across the crypto world.",
+    "content_html": "",
+    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMDcvMDE5ODA1ODUtNjU5YS03Zjc1LWIxOTktNDA0NzhlNDQ4YWYx.jpg",
+    "summary_text": "With his Binance executive ban in place, Zhao found new channels to shape markets and policy across the crypto world.",
+    "category": "fintech",
+    "_trending_tags": [
+      "ai"
+    ],
+    "_permalink": "/p/cfda7b558e/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/cfda7b558e/",
+    "_summary_240": "With his Binance executive ban in place, Zhao found new channels to shape markets and policy across the crypto world.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/cfda7b558e/thumbnail.png"
+  },
+  {
     "title": "Qualcomm Takes Aim at Nvidia",
     "url": "https://www.bloomberg.com/news/videos/2025-10-27/qualcomm-takes-aim-at-nvidia-video",
     "published_at": "2025-10-27T10:39:06-04:00",
     "source": "Bloomberg Technology",
-    "summary": "Qualcomm is taking its shot at Nvidia, unveiling new AI data-center chips built on its mobile roots. The company says its first customer, Saudi Arabia\u2019s Humain, will deploy massive computing power starting in 2026. Bloomberg's Ed Ludlow joins \"Bloomberg Open Interest\" to discuss how Qualcomm plans to muscle into the hottest market in tech. (Source: Bloomberg)",
+    "summary": "Qualcomm is taking its shot at Nvidia, unveiling new AI data-center chips built on its mobile roots. The company says its first customer, Saudi Arabia\u2019s Humain, will deploy massive computing power starting in 2026. Bloomberg\u2019s Ed Ludlow joined \u201cBloomberg Open Interest\u201d to discuss how Qualcomm plans to muscle into the hottest market in tech.",
     "content_html": "",
     "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/i.jznaWc7xhk/v3/1200x-1.jpg",
-    "summary_text": "Qualcomm is taking its shot at Nvidia, unveiling new AI data-center chips built on its mobile roots. The company says its first customer, Saudi Arabia\u2019s Humain, will deploy massive computing power starting in 2026. Bloomberg's Ed Ludlow joins \"Bloomberg Open ...",
+    "summary_text": "Qualcomm is taking its shot at Nvidia, unveiling new AI data-center chips built on its mobile roots. The company says its first customer, Saudi Arabia\u2019s Humain, will deploy massive computing power starting in 2026. Bloomberg\u2019s Ed Ludlow joined \u201cBloomberg Open...",
     "category": "ai",
     "_trending_tags": [
       "ai",
@@ -20,7 +53,7 @@
   },
   {
     "title": "Ant Group files \u2018Antcoin\u2019 trademark as China tightens crypto crackdown",
-    "url": "https://cointelegraph.com/news/ant-group-files-antcoin-trademark-as-china-tightens-crypto-crackdown?utm_source=rss_feed&utm_medium=rss%3F_t%3D1761575998531%26_nocache%3D1761575998531&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/ant-group-files-antcoin-trademark-as-china-tightens-crypto-crackdown?utm_source=rss_feed&utm_medium=rss%3Fvfff%3D1761578440%26_nocache%3D1761578440683%26sid%3De0e42b979ffe9f20&utm_campaign=rss_partner_inbound",
     "published_at": "2025-10-27T10:12:38-04:00",
     "source": "Cointelegraph",
     "summary": "Ant Group has filed to trademark \u201cAntcoin\u201d in Hong Kong through a Cayman Islands subsidiary while Beijing intensifies its crypto crackdown.",
@@ -28,10 +61,10 @@
     "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjQtMTEvMDE5MzYxYmMtYzc1NC03MDI4LTk2ZDUtODBiODI2ZTUyMmE5.jpg",
     "summary_text": "Ant Group has filed to trademark \u201cAntcoin\u201d in Hong Kong through a Cayman Islands subsidiary while Beijing intensifies its crypto crackdown.",
     "category": "fintech",
-    "_permalink": "/p/2bffb18ffa/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/2bffb18ffa/",
+    "_permalink": "/p/43b86ddaa1/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/43b86ddaa1/",
     "_summary_240": "Ant Group has filed to trademark \u201cAntcoin\u201d in Hong Kong through a Cayman Islands subsidiary while Beijing intensifies its crypto crackdown.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/2bffb18ffa/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/43b86ddaa1/thumbnail.png"
   },
   {
     "title": "If you can\u2019t afford a vacation, an AI app will sell you pictures of one",
@@ -68,7 +101,7 @@
   },
   {
     "title": "Uptober? Strategy logs slowest monthly Bitcoin buys of the year at 778 BTC",
-    "url": "https://cointelegraph.com/news/strategy-buys-778-bitcoin-october-buying-activity-slowdown?utm_source=rss_feed&utm_medium=rss%3F_t%3D1761575998531%26_nocache%3D1761575998531&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/strategy-buys-778-bitcoin-october-buying-activity-slowdown?utm_source=rss_feed&utm_medium=rss%3Fvfff%3D1761578440%26_nocache%3D1761578440683%26sid%3De0e42b979ffe9f20&utm_campaign=rss_partner_inbound",
     "published_at": "2025-10-27T10:01:34-04:00",
     "source": "Cointelegraph",
     "summary": "Strategy posted one of its slowest months for buying BTC, with a total of 778 BTC purchased in October, down 78% from 3,526 BTC in September.",
@@ -76,10 +109,10 @@
     "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMDcvMDE5ODJjYzYtNjM3ZS03NTBlLTgyZWUtYTRiNTc2MDg4Njc4.jpg",
     "summary_text": "Strategy posted one of its slowest months for buying BTC, with a total of 778 BTC purchased in October, down 78% from 3,526 BTC in September.",
     "category": "fintech",
-    "_permalink": "/p/f551a6b62a/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/f551a6b62a/",
+    "_permalink": "/p/6c2e4274d0/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/6c2e4274d0/",
     "_summary_240": "Strategy posted one of its slowest months for buying BTC, with a total of 778 BTC purchased in October, down 78% from 3,526 BTC in September.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/f551a6b62a/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/6c2e4274d0/thumbnail.png"
   },
   {
     "title": "\u2018Clinical-grade AI\u2019: a new buzzy AI word that means absolutely nothing",
@@ -100,23 +133,19 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/2f18a703cf/thumbnail.png"
   },
   {
-    "title": "Qualcomm Debuts Chip to Rival Nvidia in AI Accelerator Market",
+    "title": "Qualcomm Soars After Taking Aim at Nvidia With New AI Chips",
     "url": "https://www.bloomberg.com/news/articles/2025-10-27/qualcomm-unveils-chip-to-rival-nvidia-in-ai-accelerator-market",
     "published_at": "2025-10-27T10:00:00-04:00",
     "source": "Bloomberg Technology",
-    "summary": "Qualcomm Inc., the top maker of mobile phone processors, is entering the lucrative AI data center market with new chips and computers, aiming to challenge Nvidia Corp. in the fastest-growing part of the industry.",
+    "summary": "Qualcomm Inc. kicked off its biggest stock rally since 2019 after unveiling chips and computers for the lucrative AI data center market, aiming to challenge Nvidia Corp. in the fastest-growing part of the industry.",
     "content_html": "Qualcomm headquarters in San Diego, California, US, on Monday, Oct. 30, 2023. Qualcomm Inc. is scheduled to release earnings figures on November 1.",
     "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ihv6_eBWuUaI/v1/1200x-1.jpg",
-    "summary_text": "Qualcomm Inc., the top maker of mobile phone processors, is entering the lucrative AI data center market with new chips and computers, aiming to challenge Nvidia Corp. in the fastest-growing part of the industry.",
+    "summary_text": "Qualcomm Inc. kicked off its biggest stock rally since 2019 after unveiling chips and computers for the lucrative AI data center market, aiming to challenge Nvidia Corp. in the fastest-growing part of the industry.",
     "category": "ai",
     "_trending_tags": [
       "ai",
       "nvidia"
-    ],
-    "_permalink": "/p/f00f3190db/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/f00f3190db/",
-    "_summary_240": "Qualcomm Inc., the top maker of mobile phone processors, is entering the lucrative AI data center market with new chips and computers, aiming to challenge Nvidia Corp. in the...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/f00f3190db/thumbnail.png"
+    ]
   },
   {
     "title": "Google\u2019s Quantum Computer Makes a Big Technical Leap",
@@ -138,7 +167,7 @@
   },
   {
     "title": "IBM\u2019s \u2018Digital Asset Haven\u2019 aims to turn crypto into corporate infrastructure",
-    "url": "https://cointelegraph.com/news/ibm-crypto-platform-for-governments-tradfi-adoption?utm_source=rss_feed&utm_medium=rss%3F_t%3D1761575998531%26_nocache%3D1761575998531&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/ibm-crypto-platform-for-governments-tradfi-adoption?utm_source=rss_feed&utm_medium=rss%3Fvfff%3D1761578440%26_nocache%3D1761578440683%26sid%3De0e42b979ffe9f20&utm_campaign=rss_partner_inbound",
     "published_at": "2025-10-27T09:31:32-04:00",
     "source": "Cointelegraph",
     "summary": "A growing demand for stablecoin payments and tokenized real-world assets is creating more institutional interest in blockchain-based services, according to IBM.",
@@ -149,14 +178,14 @@
     "_trending_tags": [
       "ai"
     ],
-    "_permalink": "/p/c7a6ca2e67/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/c7a6ca2e67/",
+    "_permalink": "/p/7c8b9b7d15/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/7c8b9b7d15/",
     "_summary_240": "A growing demand for stablecoin payments and tokenized real-world assets is creating more institutional interest in blockchain-based services, according to IBM.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/c7a6ca2e67/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/7c8b9b7d15/thumbnail.png"
   },
   {
     "title": "Retail must partner with fintechs or prepare to fail",
-    "url": "https://cointelegraph.com/news/retail-partner-fintechs-or-prepare-to-fail?utm_source=rss_feed&utm_medium=rss%3F_t%3D1761575998531%26_nocache%3D1761575998531&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/retail-partner-fintechs-or-prepare-to-fail?utm_source=rss_feed&utm_medium=rss%3Fvfff%3D1761578440%26_nocache%3D1761578440683%26sid%3De0e42b979ffe9f20&utm_campaign=rss_partner_inbound",
     "published_at": "2025-10-27T09:30:00-04:00",
     "source": "Cointelegraph",
     "summary": "Corporate scale has become an innovation liability as bureaucracy stalls retail payment evolution. Fintech partnerships offer the only escape from irrelevance.",
@@ -168,14 +197,14 @@
       "ai",
       "fintech"
     ],
-    "_permalink": "/p/1e403f37a4/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/1e403f37a4/",
+    "_permalink": "/p/3a8910e7dc/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/3a8910e7dc/",
     "_summary_240": "Corporate scale has become an innovation liability as bureaucracy stalls retail payment evolution. Fintech partnerships offer the only escape from irrelevance.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/1e403f37a4/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/3a8910e7dc/thumbnail.png"
   },
   {
     "title": "Here\u2019s what happened in crypto today",
-    "url": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss%3F_t%3D1761575998531%26_nocache%3D1761575998531&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss%3Fvfff%3D1761578440%26_nocache%3D1761578440683%26sid%3De0e42b979ffe9f20&utm_campaign=rss_partner_inbound",
     "published_at": "2025-10-27T09:13:30-04:00",
     "source": "Cointelegraph",
     "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, NFTs, Web3 and crypto regulation.",
@@ -186,10 +215,10 @@
     "_trending_tags": [
       "ai"
     ],
-    "_permalink": "/p/f905dc97e5/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/f905dc97e5/",
+    "_permalink": "/p/f504795ad0/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/f504795ad0/",
     "_summary_240": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, NFTs, Web3 and crypto regulation.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/f905dc97e5/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/f504795ad0/thumbnail.png"
   },
   {
     "title": "Bank of America Logs Record Adoption of CashPro Chat",
@@ -231,7 +260,7 @@
   },
   {
     "title": "ClearBank to become one of first EU banks to join Circle Payments Network",
-    "url": "https://cointelegraph.com/news/clearbank-circle-partnership-usdc-stablecoin-europe?utm_source=rss_feed&utm_medium=rss%3F_t%3D1761575998531%26_nocache%3D1761575998531&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/clearbank-circle-partnership-usdc-stablecoin-europe?utm_source=rss_feed&utm_medium=rss%3Fvfff%3D1761578440%26_nocache%3D1761578440683%26sid%3De0e42b979ffe9f20&utm_campaign=rss_partner_inbound",
     "published_at": "2025-10-27T08:43:29-04:00",
     "source": "Cointelegraph",
     "summary": "ClearBank and Circle\u2019s partnership involves scaling USDC and EURC operations through Circle Mint, which enables the minting and redemption of the tokens.",
@@ -239,14 +268,14 @@
     "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMDYvMDE5NzYxMzItNjYyYy03ODI0LTk5MGQtMzBkYzZjNDlkYzNm.jpg",
     "summary_text": "ClearBank and Circle\u2019s partnership involves scaling USDC and EURC operations through Circle Mint, which enables the minting and redemption of the tokens.",
     "category": "fintech",
-    "_permalink": "/p/ece61494a3/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/ece61494a3/",
+    "_permalink": "/p/a1ae396d63/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/a1ae396d63/",
     "_summary_240": "ClearBank and Circle\u2019s partnership involves scaling USDC and EURC operations through Circle Mint, which enables the minting and redemption of the tokens.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/ece61494a3/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/a1ae396d63/thumbnail.png"
   },
   {
     "title": "Bitcoin finds its footing as expected US-China tariff truce cools market panic",
-    "url": "https://cointelegraph.com/news/crypto-market-recovery-19b-correction-trump-tariff?utm_source=rss_feed&utm_medium=rss%3F_t%3D1761575998531%26_nocache%3D1761575998531&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/crypto-market-recovery-19b-correction-trump-tariff?utm_source=rss_feed&utm_medium=rss%3Fvfff%3D1761578440%26_nocache%3D1761578440683%26sid%3De0e42b979ffe9f20&utm_campaign=rss_partner_inbound",
     "published_at": "2025-10-27T08:19:07-04:00",
     "source": "Cointelegraph",
     "summary": "Growing optimism surrounding a potential trade deal is the main catalyst for a recovery in investor sentiment ahead of Thursday\u2019s tariff meeting, industry watchers told Cointelegraph.",
@@ -257,10 +286,10 @@
     "_trending_tags": [
       "ai"
     ],
-    "_permalink": "/p/3a263b42d9/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/3a263b42d9/",
+    "_permalink": "/p/74e3fb8780/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/74e3fb8780/",
     "_summary_240": "Growing optimism surrounding a potential trade deal is the main catalyst for a recovery in investor sentiment ahead of Thursday\u2019s tariff meeting, industry watchers told...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/3a263b42d9/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/74e3fb8780/thumbnail.png"
   },
   {
     "title": "IBM Launches Digital Assets Platform as Crypto Activity Jumps",
@@ -389,7 +418,7 @@
   },
   {
     "title": "From outflows to inflows: Bitcoin ETPs rally amid surprising economic update",
-    "url": "https://cointelegraph.com/news/crypto-funds-921-million-inflows-cpi-data-coinshares?utm_source=rss_feed&utm_medium=rss%3F_t%3D1761575998531%26_nocache%3D1761575998531&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/crypto-funds-921-million-inflows-cpi-data-coinshares?utm_source=rss_feed&utm_medium=rss%3Fvfff%3D1761578440%26_nocache%3D1761578440683%26sid%3De0e42b979ffe9f20&utm_campaign=rss_partner_inbound",
     "published_at": "2025-10-27T06:27:42-04:00",
     "source": "Cointelegraph",
     "summary": "Bitcoin, which had been the main driver of crypto ETP outflows a week earlier, almost fully recovered its losses with $931 million in inflows last week.",
@@ -400,14 +429,14 @@
     "_trending_tags": [
       "ai"
     ],
-    "_permalink": "/p/4e85cc4889/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/4e85cc4889/",
+    "_permalink": "/p/f5037d7629/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/f5037d7629/",
     "_summary_240": "Bitcoin, which had been the main driver of crypto ETP outflows a week earlier, almost fully recovered its losses with $931 million in inflows last week.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/4e85cc4889/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/f5037d7629/thumbnail.png"
   },
   {
     "title": "Mt. Gox pushes repayments to 2026 as decade-long saga drags on",
-    "url": "https://cointelegraph.com/news/mt-gox-pushes-repayments-to-2026-as-decade-long-saga-drags-on?utm_source=rss_feed&utm_medium=rss%3F_t%3D1761575998531%26_nocache%3D1761575998531&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/mt-gox-pushes-repayments-to-2026-as-decade-long-saga-drags-on?utm_source=rss_feed&utm_medium=rss%3Fvfff%3D1761578440%26_nocache%3D1761578440683%26sid%3De0e42b979ffe9f20&utm_campaign=rss_partner_inbound",
     "published_at": "2025-10-27T06:17:42-04:00",
     "source": "Cointelegraph",
     "summary": "Defunct crypto exchange Mt. Gox postponed some long-awaited customer repayments by another year to Oct. 31, 2026, citing incomplete creditor procedures.",
@@ -418,10 +447,10 @@
     "_trending_tags": [
       "ai"
     ],
-    "_permalink": "/p/9eaeffe703/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/9eaeffe703/",
+    "_permalink": "/p/a93aecb24d/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/a93aecb24d/",
     "_summary_240": "Defunct crypto exchange Mt. Gox postponed some long-awaited customer repayments by another year to Oct. 31, 2026, citing incomplete creditor procedures.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/9eaeffe703/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/a93aecb24d/thumbnail.png"
   },
   {
     "title": "Rise of the Killer Chatbots",
@@ -631,26 +660,8 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/4503fc3dcb/thumbnail.png"
   },
   {
-    "title": "Earnings Momentum Lifts the CE 100 as Banking, Payments and Enablers Lead Gains",
-    "url": "https://www.pymnts.com/connectedeconomy/2025/earnings-momentum-lifts-the-ce-100-as-banking-payments-and-enablers-lead-gains/",
-    "published_at": "2025-10-27T04:00:56-04:00",
-    "source": "PYMNTS",
-    "summary": "Earnings helped boost the fortunes of the CE 100 Index this past week, and overall, the gains came in at 2.7%. And amid the themes of those earnings reports: Consumers are withstanding some of the pressures of the macro economy and interest rates, as spending continues and loan demand is strong. The late week [\u2026] The post Earnings Momentum Lifts the CE 100 as Banking, Payments and Enablers Lead G...",
-    "content_html": "<p>Earnings helped boost the fortunes of the CE 100 Index this past week, and overall, the gains came in at 2.7%.\u00a0 And amid the themes of those earnings reports: Consumers are withstanding some of the pressures of the macro economy and interest rates, as spending continues and loan demand is strong.</p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p>The late week rally across the broader markets came as inflation came in a bit less aggressive than had been expected, opening the door for further rate cuts from the Federal Reserve.</p>\n<p><img alt=\"\" class=\"aligncenter size-full wp-image-3166983\" height=\"225\" src=\"https://www.pymnts.com/wp-content/uploads/2025/10/CE-100-Index-graphic-10-27.png\" width=\"620\" /></p>\n<p>Nearly all pillars gained ground. The Live pillar gathered 6.9%. iRobot shares got a 24% boost.</p>\n<p>The Banking segment was 5% higher.</p>\n<p>In that group, LendingClub shares soared 19.9%.</p>\n<p>The company reported strong account-opening momentum tied to LevelUp Checking, a rewards-driven checking account that offers cash-back on qualified everyday purchases (gas, groceries, pharmacies).\u00a0 <a href=\"https://www.pymnts.com/news/digital-banking/2025/levelup-checking-drives-lendingclub-account-openings/\" rel=\"noopener\" target=\"_blank\">PYMNTS reporting </a>on the quarter indicated loan origination growth stood at 37% to $2.6 billion, at the highest level in three years. Revenues of $266 million gained 32% year over year. During the conference call with analysts, CEO Scott Sanborn said that the loan growth reflected \u201cstrong demand from both consumers and loan investors, and our increased marketing efforts,\u201d adding that marketplace revenues were up 75% [to $108 million], and the structured certificate sales topped $1 billion.\u00a0 The CEO said that nearly 60% of new accounts being opened are being opened by borrowers.</p>\n<p>Goldman shares took on 4.4% through the week. PYMNTS reported that <a href=\"https://www.pymnts.com/acquisitions/2025/goldman-sachs-acquires-7-billion-vc-platform-industry-ventures/\" rel=\"noopener\" target=\"_blank\">Goldman Sachs</a> is acquiring Industry Ventures, a venture capital platform managing $7 billion.</p>\n<p>In the Payment realm, where companies focused on transactions were up 4.4% overall, Affirm\u2019s stock gained 11%.</p>\n<p>Affirm is stepping up its policy-stance this week, with CEO/co-founder Max Levchin calling on regulators to impose caps on <a href=\"https://www.pymnts.com/bnpl/2025/affirm-calls-for-new-caps-on-bnpl-late-fees/?utm_source=chatgpt.com\" rel=\"noopener\" target=\"_blank\">late fees </a>for buy-now-pay-later (BNPL) players. According to the PYMNTS piece, the logic is that limiting late-payment penalties will force BNPL providers to emphasize underwriting quality and sustainable revenue models rather than relying on fee income. The timing is notable, we\u2019d add, coming as holiday shopping season looms and competition in the BNPL space intensifies.</p>\n<p>Western Union\u2019s stock added 8.2%. The<a href=\"https://s21.q4cdn.com/100551446/files/doc_financials/2025/q3/3Q25-Presentation-FINAL.pdf\" rel=\"noopener\" target=\"_blank\"> company reported</a> an overall consolidated\u00a0 revenue decline of roughly 1%, while its digital branded business revenues gained 6%, and transactions added 12%.\u00a0 Adjusted operating margins were higher to 20%, up from 16% a year ago.\u00a0 Stablecoins offer an additional path for growth, according to company materials.</p>\n<p>The Have Fun group sank 1.7%, led by Netflix, where shares dipped 8.7%.</p>\n<p>Netflix is accelerating its investment in generative artificial intelligence across multiple business fronts, <a href=\"https://www.pymnts.com/artificial-intelligence-2/2025/netflix-expands-generative-ai-strategy-across-streaming-and-content-production/?utm_source=chatgpt.com\" rel=\"noopener\" target=\"_blank\">according to PYMNTS\u2019 reporting</a>. The announcement indicates Netflix is using Gen AI not only to assist in content production (e.g., storyboarding, editing) but also to enhance its advertising platform and user-experience personalization.</p>\n<h2><strong>Enables Gain Ground</strong></h2>\n<p>Enablers were 2.4% higher through the week, and Meta\u2019s stock added 3%.</p>\n<p>Meta is making a pivot in how it organizes its artificial intelligence unit, cutting roughly 600 roles in the AI group in a bid to \u201cmake it more agile,\u201d as <a href=\"https://www.pymnts.com/meta/2025/meta-cuts-600-roles-ai-unit-more-agile/?utm_source=chatgpt.com\" rel=\"noopener\" target=\"_blank\">reported by PYMNTS. </a>The roles targeted include parts of the FAIR AI research, product-AI and infrastructure segments. The newly formed TBD Lab is reportedly not affected.</p>\n<p>Walmart\u2019s stock was 1.4% lower, blunting some of the Shop pillar\u2019s overall gains, which came in at 3.2%.</p>\n<p><a href=\"https://www.pymnts.com/news/artificial-intelligence/2025/walmart-goes-conversational-amazon-computational-this-week/?utm_source=chatgpt.com\" rel=\"noopener\" target=\"_blank\">Walmart is upgrading </a>its checkout and commerce infrastructure via conversational AI tools, allowing customers to shop, plan meals, restock essentials and check out via chat-interfaces.\u00a0 The move is emblematic of a strategic push to fuse physical-store scale with digital convenience.</p>\n<p>&nbsp;</p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/connectedeconomy/2025/earnings-momentum-lifts-the-ce-100-as-banking-payments-and-enablers-lead-gains/\">Earnings Momentum Lifts the CE 100 as Banking, Payments and Enablers Lead Gains</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
-    "image_url": "https://www.pymnts.com/wp-content/uploads/2025/10/CE-100-index-for-1027.jpg?w=457",
-    "summary_text": "Earnings helped boost the fortunes of the CE 100 Index this past week, and overall, the gains came in at 2.7%. And amid the themes of those earnings reports: Consumers are withstanding some of the pressures of the macro economy and interest rates, as spending...",
-    "category": "fintech",
-    "_trending_tags": [
-      "ai"
-    ],
-    "_permalink": "/p/ff51da9d6b/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/ff51da9d6b/",
-    "_summary_240": "Earnings helped boost the fortunes of the CE 100 Index this past week, and overall, the gains came in at 2.7%. And amid the themes of those earnings reports: Consumers are...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/ff51da9d6b/thumbnail.png"
-  },
-  {
     "title": "What happens if you don\u2019t pay taxes on your crypto holdings?",
-    "url": "https://cointelegraph.com/news/what-happens-if-you-don-t-pay-taxes-on-your-crypto-holdings?utm_source=rss_feed&utm_medium=rss%3F_t%3D1761575998531%26_nocache%3D1761575998531&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/what-happens-if-you-don-t-pay-taxes-on-your-crypto-holdings?utm_source=rss_feed&utm_medium=rss%3Fvfff%3D1761578440%26_nocache%3D1761578440683%26sid%3De0e42b979ffe9f20&utm_campaign=rss_partner_inbound",
     "published_at": "2025-10-27T02:37:45-04:00",
     "source": "Cointelegraph",
     "summary": "Skipping crypto taxes can trigger hefty fines and legal issues. Find out what really happens if you fail to report or pay taxes on your holdings.",
@@ -661,14 +672,14 @@
     "_trending_tags": [
       "ai"
     ],
-    "_permalink": "/p/393cdebc57/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/393cdebc57/",
+    "_permalink": "/p/830488d3ce/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/830488d3ce/",
     "_summary_240": "Skipping crypto taxes can trigger hefty fines and legal issues. Find out what really happens if you fail to report or pay taxes on your holdings.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/393cdebc57/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/830488d3ce/thumbnail.png"
   },
   {
     "title": "Japan sees launch of its first yen-backed stablecoin, JPYC",
-    "url": "https://cointelegraph.com/news/yen-backed-stablecoin-launches-in-japan?utm_source=rss_feed&utm_medium=rss%3F_t%3D1761575998531%26_nocache%3D1761575998531&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/yen-backed-stablecoin-launches-in-japan?utm_source=rss_feed&utm_medium=rss%3Fvfff%3D1761578440%26_nocache%3D1761578440683%26sid%3De0e42b979ffe9f20&utm_campaign=rss_partner_inbound",
     "published_at": "2025-10-27T02:03:23-04:00",
     "source": "Cointelegraph",
     "summary": "JPYC President Noriyoshi Okabe said that the stablecoin has already garnered interest from seven companies that are looking to incorporate it into their services.",
@@ -679,14 +690,14 @@
     "_trending_tags": [
       "ai"
     ],
-    "_permalink": "/p/5811810bed/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/5811810bed/",
+    "_permalink": "/p/0f308c0303/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/0f308c0303/",
     "_summary_240": "JPYC President Noriyoshi Okabe said that the stablecoin has already garnered interest from seven companies that are looking to incorporate it into their services.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/5811810bed/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/0f308c0303/thumbnail.png"
   },
   {
     "title": "Australian crypto firms back draft laws, but \u2018critical questions\u2019 remain",
-    "url": "https://cointelegraph.com/news/australia-crypto-industry-backs-draft-laws-critical-questions-remain?utm_source=rss_feed&utm_medium=rss%3F_t%3D1761575998531%26_nocache%3D1761575998531&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/australia-crypto-industry-backs-draft-laws-critical-questions-remain?utm_source=rss_feed&utm_medium=rss%3Fvfff%3D1761578440%26_nocache%3D1761578440683%26sid%3De0e42b979ffe9f20&utm_campaign=rss_partner_inbound",
     "published_at": "2025-10-27T01:52:10-04:00",
     "source": "Cointelegraph",
     "summary": "Australia\u2019s crypto exchanges have been largely positive about the government\u2019s proposed crypto laws, but have told the Treasury that further clarity is needed.",
@@ -697,14 +708,14 @@
     "_trending_tags": [
       "ai"
     ],
-    "_permalink": "/p/f7ffd5c88b/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/f7ffd5c88b/",
+    "_permalink": "/p/94ccbb26cc/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/94ccbb26cc/",
     "_summary_240": "Australia\u2019s crypto exchanges have been largely positive about the government\u2019s proposed crypto laws, but have told the Treasury that further clarity is needed.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/f7ffd5c88b/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/94ccbb26cc/thumbnail.png"
   },
   {
     "title": "Bitcoin finally escapes \u2018fear\u2019 as confidence tiptoes back into crypto",
-    "url": "https://cointelegraph.com/news/bitcoin-fear-and-greed-out-of-fear-first-time-since-crypto-crash?utm_source=rss_feed&utm_medium=rss%3F_t%3D1761575998531%26_nocache%3D1761575998531&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/bitcoin-fear-and-greed-out-of-fear-first-time-since-crypto-crash?utm_source=rss_feed&utm_medium=rss%3Fvfff%3D1761578440%26_nocache%3D1761578440683%26sid%3De0e42b979ffe9f20&utm_campaign=rss_partner_inbound",
     "published_at": "2025-10-27T01:37:27-04:00",
     "source": "Cointelegraph",
     "summary": "The Crypto Fear & Greed Index has flipped to neutral, leaving \u201cfear\u201d behind for the first time since the mid-October market crash sparked by Trump\u2019s China tariffs.",
@@ -712,10 +723,10 @@
     "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMDcvMDE5N2NhMTMtNWUzNS03ZDQ2LTkwYjYtNDEzYzQyYmI2ZDEw.jpg",
     "summary_text": "The Crypto Fear & Greed Index has flipped to neutral, leaving \u201cfear\u201d behind for the first time since the mid-October market crash sparked by Trump\u2019s China tariffs.",
     "category": "fintech",
-    "_permalink": "/p/7dc09d33f0/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/7dc09d33f0/",
+    "_permalink": "/p/3ad447f2e2/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/3ad447f2e2/",
     "_summary_240": "The Crypto Fear & Greed Index has flipped to neutral, leaving \u201cfear\u201d behind for the first time since the mid-October market crash sparked by Trump\u2019s China tariffs.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/7dc09d33f0/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/3ad447f2e2/thumbnail.png"
   },
   {
     "title": "Silicon Valley called \u2014 the 1990s are back",
@@ -752,7 +763,7 @@
   },
   {
     "title": "Javier Milei\u2019s crypto-friendly party wins Argentine midterm",
-    "url": "https://cointelegraph.com/news/javier-mileis-party-wins-argentinas-midterms?utm_source=rss_feed&utm_medium=rss%3F_t%3D1761575998531%26_nocache%3D1761575998531&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/javier-mileis-party-wins-argentinas-midterms?utm_source=rss_feed&utm_medium=rss%3Fvfff%3D1761578440%26_nocache%3D1761578440683%26sid%3De0e42b979ffe9f20&utm_campaign=rss_partner_inbound",
     "published_at": "2025-10-27T00:39:40-04:00",
     "source": "Cointelegraph",
     "summary": "Argentina\u2019s La Libertad Avanza party, led by President Javier Milei, has won the midterms, positioning Milei as the frontrunner for the 2027 elections.",
@@ -760,14 +771,14 @@
     "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTAvMDE5YTIzOGUtNTZhZi03ZTkzLWE4YzEtZmQyODEyNzY1NjRi.jpg",
     "summary_text": "Argentina\u2019s La Libertad Avanza party, led by President Javier Milei, has won the midterms, positioning Milei as the frontrunner for the 2027 elections.",
     "category": "fintech",
-    "_permalink": "/p/64003e3746/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/64003e3746/",
+    "_permalink": "/p/a18ad91954/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/a18ad91954/",
     "_summary_240": "Argentina\u2019s La Libertad Avanza party, led by President Javier Milei, has won the midterms, positioning Milei as the frontrunner for the 2027 elections.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/64003e3746/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/a18ad91954/thumbnail.png"
   },
   {
     "title": "\u2018Attack on Bitcoin\u2019 \u2014 Bitcoiners slam \u2018legal threats\u2019 in soft fork proposal",
-    "url": "https://cointelegraph.com/news/bitcoin-soft-fork-luke-dashjr-legal-threat-debate?utm_source=rss_feed&utm_medium=rss%3F_t%3D1761575998531%26_nocache%3D1761575998531&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/bitcoin-soft-fork-luke-dashjr-legal-threat-debate?utm_source=rss_feed&utm_medium=rss%3Fvfff%3D1761578440%26_nocache%3D1761578440683%26sid%3De0e42b979ffe9f20&utm_campaign=rss_partner_inbound",
     "published_at": "2025-10-27T00:37:36-04:00",
     "source": "Cointelegraph",
     "summary": "A new Bitcoin improvement proposal calls for a one-year soft fork for Bitcoin while developers resolve the transaction filtering debate, but the language within it has sparked controversy.",
@@ -775,14 +786,14 @@
     "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMDkvMDE5OTI3NmItYjAzNS03YzAwLTliYWMtZjIwODY0NzhlZGQ0.jpg",
     "summary_text": "A new Bitcoin improvement proposal calls for a one-year soft fork for Bitcoin while developers resolve the transaction filtering debate, but the language within it has sparked controversy.",
     "category": "fintech",
-    "_permalink": "/p/3a9a0df96c/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/3a9a0df96c/",
+    "_permalink": "/p/48067e8d52/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/48067e8d52/",
     "_summary_240": "A new Bitcoin improvement proposal calls for a one-year soft fork for Bitcoin while developers resolve the transaction filtering debate, but the language within it has sparked...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/3a9a0df96c/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/48067e8d52/thumbnail.png"
   },
   {
     "title": "Mt. Gox\u2019s security flaws cost millions. Could AI have spotted them?",
-    "url": "https://cointelegraph.com/news/mt-gox-s-security-flaws-cost-millions-could-ai-have-spotted-them?utm_source=rss_feed&utm_medium=rss%3F_t%3D1761575998531%26_nocache%3D1761575998531&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/mt-gox-s-security-flaws-cost-millions-could-ai-have-spotted-them?utm_source=rss_feed&utm_medium=rss%3Fvfff%3D1761578440%26_nocache%3D1761578440683%26sid%3De0e42b979ffe9f20&utm_campaign=rss_partner_inbound",
     "published_at": "2025-10-27T00:08:07-04:00",
     "source": "Cointelegraph",
     "summary": "Could AI have prevented the collapse of Mt. Gox if it had existed back then? An AI-powered post-mortem by the exchange\u2019s former CEO raises an intriguing \u201cwhat if.\u201d",
@@ -793,14 +804,14 @@
     "_trending_tags": [
       "ai"
     ],
-    "_permalink": "/p/a40ddb7c06/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/a40ddb7c06/",
+    "_permalink": "/p/eeb06d1dec/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/eeb06d1dec/",
     "_summary_240": "Could AI have prevented the collapse of Mt. Gox if it had existed back then? An AI-powered post-mortem by the exchange\u2019s former CEO raises an intriguing \u201cwhat if.\u201d",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/a40ddb7c06/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/eeb06d1dec/thumbnail.png"
   },
   {
     "title": "Major Iranian private bank goes bankrupt, roiling 42M customers",
-    "url": "https://cointelegraph.com/news/iranian-bank-bankruptcy-affecting-42-million-customers?utm_source=rss_feed&utm_medium=rss%3F_t%3D1761575998531%26_nocache%3D1761575998531&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/iranian-bank-bankruptcy-affecting-42-million-customers?utm_source=rss_feed&utm_medium=rss%3Fvfff%3D1761578440%26_nocache%3D1761578440683%26sid%3De0e42b979ffe9f20&utm_campaign=rss_partner_inbound",
     "published_at": "2025-10-26T22:19:01-04:00",
     "source": "Cointelegraph",
     "summary": "After accumulating around $8 billion worth of losses and debt, Iran\u2019s Ayandeh Bank has been dissolved, with customer assets absorbed by the state-owned Bank Melli.",
@@ -808,14 +819,14 @@
     "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTAvMDE5YTIzNTctYzU0ZS03OTA2LWIxYzgtMDU3NTYyM2RmNDdl.jpg",
     "summary_text": "After accumulating around $8 billion worth of losses and debt, Iran\u2019s Ayandeh Bank has been dissolved, with customer assets absorbed by the state-owned Bank Melli.",
     "category": "fintech",
-    "_permalink": "/p/71416a3392/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/71416a3392/",
+    "_permalink": "/p/a5a7351728/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/a5a7351728/",
     "_summary_240": "After accumulating around $8 billion worth of losses and debt, Iran\u2019s Ayandeh Bank has been dissolved, with customer assets absorbed by the state-owned Bank Melli.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/71416a3392/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/a5a7351728/thumbnail.png"
   },
   {
     "title": "Bitcoin is no inflation hedge but thrives when the dollar wobbles: NYDIG",
-    "url": "https://cointelegraph.com/news/bitcoin-no-inflation-hedge-but-weak-dollar-pushes-it-up-nydig?utm_source=rss_feed&utm_medium=rss%3F_t%3D1761575998531%26_nocache%3D1761575998531&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/bitcoin-no-inflation-hedge-but-weak-dollar-pushes-it-up-nydig?utm_source=rss_feed&utm_medium=rss%3Fvfff%3D1761578440%26_nocache%3D1761578440683%26sid%3De0e42b979ffe9f20&utm_campaign=rss_partner_inbound",
     "published_at": "2025-10-26T22:13:58-04:00",
     "source": "Cointelegraph",
     "summary": "Bitcoin doesn\u2019t consistently act as a hedge against inflation, but it has instead \u201cevolved into a liquidity barometer,\u201d says NYDIG\u2019s Greg Cipolaro.",
@@ -826,14 +837,14 @@
     "_trending_tags": [
       "ai"
     ],
-    "_permalink": "/p/3f5f865f08/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/3f5f865f08/",
+    "_permalink": "/p/530b3cd327/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/530b3cd327/",
     "_summary_240": "Bitcoin doesn\u2019t consistently act as a hedge against inflation, but it has instead \u201cevolved into a liquidity barometer,\u201d says NYDIG\u2019s Greg Cipolaro.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/3f5f865f08/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/530b3cd327/thumbnail.png"
   },
   {
     "title": "Money giant Western Union to pilot stablecoin-powered transfers",
-    "url": "https://cointelegraph.com/news/western-union-piloting-stablecoin-settlements?utm_source=rss_feed&utm_medium=rss%3F_t%3D1761575998531%26_nocache%3D1761575998531&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/western-union-piloting-stablecoin-settlements?utm_source=rss_feed&utm_medium=rss%3Fvfff%3D1761578440%26_nocache%3D1761578440683%26sid%3De0e42b979ffe9f20&utm_campaign=rss_partner_inbound",
     "published_at": "2025-10-26T20:10:20-04:00",
     "source": "Cointelegraph",
     "summary": "Western Union CEO said there are \u201csignificant opportunities\u201d to utilize stablecoins for sending and receiving money across borders.",
@@ -844,10 +855,10 @@
     "_trending_tags": [
       "ai"
     ],
-    "_permalink": "/p/1622f294e6/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/1622f294e6/",
+    "_permalink": "/p/df1abfdda4/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/df1abfdda4/",
     "_summary_240": "Western Union CEO said there are \u201csignificant opportunities\u201d to utilize stablecoins for sending and receiving money across borders.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/1622f294e6/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/df1abfdda4/thumbnail.png"
   },
   {
     "title": "NVIDIA Contributes to Open Frameworks for Next-Generation Robotics Development",
@@ -869,7 +880,7 @@
   },
   {
     "title": "\u2018The claim that L2s inherit ETH security is erroneous\u2019 \u2014 Solana co-founder",
-    "url": "https://cointelegraph.com/news/claim-l2s-inherit-eth-security-erroneous-solana-founder?utm_source=rss_feed&utm_medium=rss%3F_t%3D1761575998531%26_nocache%3D1761575998531&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/claim-l2s-inherit-eth-security-erroneous-solana-founder?utm_source=rss_feed&utm_medium=rss%3Fvfff%3D1761578440%26_nocache%3D1761578440683%26sid%3De0e42b979ffe9f20&utm_campaign=rss_partner_inbound",
     "published_at": "2025-10-26T17:52:50-04:00",
     "source": "Cointelegraph",
     "summary": "Ethereum layer-2 networks have glaring security and centralization issues, according to Anatoly Yakovenko, co-founder of the Solana blockchain.",
@@ -880,10 +891,10 @@
     "_trending_tags": [
       "ai"
     ],
-    "_permalink": "/p/7bab128bdb/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/7bab128bdb/",
+    "_permalink": "/p/9b8aeb7695/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/9b8aeb7695/",
     "_summary_240": "Ethereum layer-2 networks have glaring security and centralization issues, according to Anatoly Yakovenko, co-founder of the Solana blockchain.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/7bab128bdb/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/9b8aeb7695/thumbnail.png"
   },
   {
     "title": "Cal State Invited Tech Companies to Remake Learning With A.I.",
@@ -907,7 +918,7 @@
   },
   {
     "title": "Investors should be 'cautious' when using BTC stock-to-flow model: Analyst",
-    "url": "https://cointelegraph.com/news/investors-cautious-using-btc-stock-to-flow?utm_source=rss_feed&utm_medium=rss%3F_t%3D1761575998531%26_nocache%3D1761575998531&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/investors-cautious-using-btc-stock-to-flow?utm_source=rss_feed&utm_medium=rss%3Fvfff%3D1761578440%26_nocache%3D1761578440683%26sid%3De0e42b979ffe9f20&utm_campaign=rss_partner_inbound",
     "published_at": "2025-10-26T16:16:17-04:00",
     "source": "Cointelegraph",
     "summary": "The stock-to-flow model may not be the best framework to forecast Bitcoin prices, Bitwise investment analyst Andr\u00e9 Dragosch said.",
@@ -918,14 +929,14 @@
     "_trending_tags": [
       "ai"
     ],
-    "_permalink": "/p/dd2a31853e/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/dd2a31853e/",
+    "_permalink": "/p/ddf60e54c5/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/ddf60e54c5/",
     "_summary_240": "The stock-to-flow model may not be the best framework to forecast Bitcoin prices, Bitwise investment analyst Andr\u00e9 Dragosch said.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/dd2a31853e/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/ddf60e54c5/thumbnail.png"
   },
   {
     "title": "US Treasury chief Bessent says \u2018substantial\u2019 trade framework with China reached",
-    "url": "https://cointelegraph.com/news/bessent-substantial-trade-framework-china?utm_source=rss_feed&utm_medium=rss%3F_t%3D1761575998531%26_nocache%3D1761575998531&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/bessent-substantial-trade-framework-china?utm_source=rss_feed&utm_medium=rss%3Fvfff%3D1761578440%26_nocache%3D1761578440683%26sid%3De0e42b979ffe9f20&utm_campaign=rss_partner_inbound",
     "published_at": "2025-10-26T13:28:39-04:00",
     "source": "Cointelegraph",
     "summary": "Secretary Scott Bessent said the negotiations alleviate the need for the 100% additional tariffs announced by US president Trump in October.",
@@ -939,7 +950,7 @@
   },
   {
     "title": "The next era of crypto belongs to decentralized markets",
-    "url": "https://cointelegraph.com/news/crypto-belongs-to-decentralized-markets?utm_source=rss_feed&utm_medium=rss%3F_t%3D1761575998531%26_nocache%3D1761575998531&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/crypto-belongs-to-decentralized-markets?utm_source=rss_feed&utm_medium=rss%3Fvfff%3D1761578440%26_nocache%3D1761578440683%26sid%3De0e42b979ffe9f20&utm_campaign=rss_partner_inbound",
     "published_at": "2025-10-26T10:30:00-04:00",
     "source": "Cointelegraph",
     "summary": "DeFi trading volumes hit record ratios against CEXs as matured infrastructure and regulatory clarity shift power to transparent, code-driven platforms.",
@@ -950,10 +961,10 @@
     "_trending_tags": [
       "ai"
     ],
-    "_permalink": "/p/d7016ad300/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/d7016ad300/",
+    "_permalink": "/p/88788e9027/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/88788e9027/",
     "_summary_240": "DeFi trading volumes hit record ratios against CEXs as matured infrastructure and regulatory clarity shift power to transparent, code-driven platforms.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/d7016ad300/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/88788e9027/thumbnail.png"
   },
   {
     "title": "The next legal frontier is your face and AI",
@@ -975,7 +986,7 @@
   },
   {
     "title": "\u2018House is fine, but door is jammed\u2019: AWS outage shows crypto\u2019s weak spot",
-    "url": "https://cointelegraph.com/news/aws-outage-shows-crypto-decentralization-weakness?utm_source=rss_feed&utm_medium=rss%3F_t%3D1761575998531%26_nocache%3D1761575998531&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/aws-outage-shows-crypto-decentralization-weakness?utm_source=rss_feed&utm_medium=rss%3Fvfff%3D1761578440%26_nocache%3D1761578440683%26sid%3De0e42b979ffe9f20&utm_campaign=rss_partner_inbound",
     "published_at": "2025-10-26T07:53:24-04:00",
     "source": "Cointelegraph",
     "summary": "The 15-hour Amazon Web Services outage that halted Coinbase, Robinhood and MetaMask revealed how much of Web3 still relies on centralized servers.",
@@ -987,10 +998,10 @@
       "amazon",
       "meta"
     ],
-    "_permalink": "/p/5a93df60d9/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/5a93df60d9/",
+    "_permalink": "/p/6fa8b53216/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/6fa8b53216/",
     "_summary_240": "The 15-hour Amazon Web Services outage that halted Coinbase, Robinhood and MetaMask revealed how much of Web3 still relies on centralized servers.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/5a93df60d9/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/6fa8b53216/thumbnail.png"
   },
   {
     "title": "Australia Explores Copyright Law Changes to Meet AI Challenges",
@@ -1009,25 +1020,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/fbdabf4695/",
     "_summary_240": "The Australian government will convene a two-day meeting on Monday to explore changes to its copyright framework, as it seeks to meet the challenges posed by artificial...",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/fbdabf4695/thumbnail.png"
-  },
-  {
-    "title": "CZ\u2019s pardon came after costly Binance lobbying push in Washington: Politico",
-    "url": "https://cointelegraph.com/news/cz-pardon-binance-lobbying-trump-washington?utm_source=rss_feed&utm_medium=rss%3F_t%3D1761575998531%26_nocache%3D1761575998531&utm_campaign=rss_partner_inbound",
-    "published_at": "2025-10-26T05:37:20-04:00",
-    "source": "Cointelegraph",
-    "summary": "CZ\u2019s pardon by Trump followed a lobbying push that included $450,000 to Trump-linked lobbyists and $290,000 to former SEC chair contender Teresa Goody Guill\u00e9n.",
-    "content_html": "",
-    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMDYvMDE5NzJmYWEtZGRkNC03MDQ0LTliY2YtOGNjZDc1NTYwYmY0.jpg",
-    "summary_text": "CZ\u2019s pardon by Trump followed a lobbying push that included $450,000 to Trump-linked lobbyists and $290,000 to former SEC chair contender Teresa Goody Guill\u00e9n.",
-    "category": "fintech",
-    "_trending_tags": [
-      "ai",
-      "gpu"
-    ],
-    "_permalink": "/p/92708e142a/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/92708e142a/",
-    "_summary_240": "CZ\u2019s pardon by Trump followed a lobbying push that included $450,000 to Trump-linked lobbyists and $290,000 to former SEC chair contender Teresa Goody Guill\u00e9n.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/92708e142a/thumbnail.png"
   },
   {
     "title": "\u2018Do not trust your eyes\u2019: AI generates surge in expense fraud",
@@ -1251,11 +1243,7 @@
     "content_html": "",
     "image_url": "https://media.wired.com/photos/68fa75f840d57adab1938301/master/pass/Backchannel-What-Went-Down-With-Kryptos-Key-Business-564117411.jpg",
     "summary_text": "After 35 years, the secretive CIA sculpture finally gave up its mystery, thanks to a novelist, a playwright, and some misplaced documents. But the chase to decode continues.",
-    "category": "software",
-    "_permalink": "/p/cd0fde2583/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/cd0fde2583/",
-    "_summary_240": "After 35 years, the secretive CIA sculpture finally gave up its mystery, thanks to a novelist, a playwright, and some misplaced documents. But the chase to decode continues.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/cd0fde2583/thumbnail.png"
+    "category": "software"
   },
   {
     "title": "Adecco Group collaborates with Microsoft to launch free global AI learning initiative for jobseekers",
@@ -1270,11 +1258,7 @@
     "_trending_tags": [
       "ai",
       "microsoft"
-    ],
-    "_permalink": "/p/82f06b9406/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/82f06b9406/",
-    "_summary_240": "The post Adecco Group collaborates with Microsoft to launch free global AI learning initiative for jobseekers appeared first on Source .",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/82f06b9406/thumbnail.png"
+    ]
   },
   {
     "title": "NVIDIA GTC DC: Live Updates on What\u2019s Next in AI",
@@ -1289,11 +1273,7 @@
     "_trending_tags": [
       "ai",
       "nvidia"
-    ],
-    "_permalink": "/p/451d815a10/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/451d815a10/",
-    "_summary_240": "Countdown to GTC DC: What to Watch Next Week \ud83d\udd17 Next week, Washington, D.C., becomes the center of gravity for artificial intelligence. NVIDIA GTC Washington, D.C., lands at the...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/451d815a10/thumbnail.png"
+    ]
   },
   {
     "title": "Celebrities Fight Sora + Amazon\u2019s Secret Automation Plans + ChatGPT Gets a Browser",
