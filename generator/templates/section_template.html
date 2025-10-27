@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -527,6 +528,35 @@
         }
       });
     });
+  })();
+  </script>
+
+  <!-- Iframe communication: Send article clicks to parent dashboard -->
+  <script>
+  (function() {
+    // Only run if we're inside an iframe
+    if (window.self === window.top) return;
+    
+    // Listen for clicks on article links
+    document.addEventListener('click', function(e) {
+      // Find if the clicked element or its parent is an article link
+      const link = e.target.closest('h3 a');
+      if (!link) return;
+      
+      // Get the article URL
+      const articleUrl = link.href;
+      
+      // Prevent default navigation within iframe
+      e.preventDefault();
+      e.stopPropagation();
+      
+      // Send message to parent window (dashboard) to navigate there
+      window.parent.postMessage({
+        type: 'article-click',
+        url: articleUrl
+      }, 'https://dash.tek2dayholdings.com');
+      
+    }, true); // Use capture phase to catch it early
   })();
   </script>
 </body>
