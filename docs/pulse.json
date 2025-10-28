@@ -1,5 +1,73 @@
 [
   {
+    "title": "Crypto Custody Becomes Land Grab for FinTechs, Nonbanks",
+    "url": "https://www.pymnts.com/cryptocurrency/2025/crypto-custody-becomes-land-grab-fintechs-nonbanks/",
+    "published_at": "2025-10-28T17:12:55-04:00",
+    "source": "PYMNTS",
+    "summary": "In traditional finance, custody is almost invisible. A custodian bank can hold trillions of dollars in securities, ensuring that ownership records are accurate and assets can\u2019t be misappropriated. These institutions are regulated, insured and audited. Cryptocurrency custody has traditionally operated in a different universe. Across the blockchain, possession of digital assets means controlling a ...",
+    "content_html": "<p><span>In traditional finance, custody is almost invisible.</span></p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p><span>A custodian bank can hold trillions of dollars in securities, ensuring that ownership records are accurate and </span><span>assets can\u2019t be misappropriated</span><span>. These institutions are regulated, insured and audited.</span></p>\n<p><span>Cryptocurrency custody has traditionally operated in a different universe.</span></p>\n<p><span>Across the blockchain, possession of digital assets means controlling a private key, or a long, unique string of numbers that allows its holder to move assets recorded on the blockchain. Lose that key, and you lose the asset. No one can restore it; there\u2019s no forgot-password button to click on blockchain networks.</span></p>\n<p><span>For individual users, this is empowering but perilous. For institutions managing billions of dollars, it can be a governance nightmare.</span></p>\n<p><span>As crypto firms are </span><span>welcomed more and more</span><span> into the financial mainstream, with regulations in the United States opening the door, the question of who holds the keys has </span><span>kicked off</span><span> an arms race for </span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/cryptocurrency/2025/stablecoin-issuers-race-for-bank-charters-as-fed-weighs-access/\" rel=\"noopener\" target=\"_blank\"><span>charters</span></a><span> and trust.</span><span> Once the domain of traditional financial institutions, this scramble for federal and state trust charters now spans crypto exchanges, stablecoin issuers and payments companies seeking to prove they can meet institutional standards.</span></p>\n<p><span>Even legacy technology firms are entering the field. </span><a class=\"editor-rtfLink\" href=\"https://www.ibm.com/us-en\" rel=\"noopener\" target=\"_blank\"><span>IBM</span></a><span> announced Monday (Oct. 27) that it plans to launch a platform designed to provide </span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/blockchain/2025/ibm-launch-platform-managing-digital-assets/\" rel=\"noopener\" target=\"_blank\"><span>custody</span></a><span> and transaction services for institutional clients by the end of 2025.</span></p>\n<p><span>Taken together, these marketplace movements signal that crypto custody is increasingly being normalized </span><span>and not</span><span> marginalized, </span><span>no matter</span><span> the industry\u2019s allegations of \u201c</span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/news/banking/2024/crypto-and-fintech-cry-foul-over-debanking-could-real-issue-lie-in-risk/\" rel=\"noopener\" target=\"_blank\"><span>debanking</span></a><span>.\u201d</span></p>\n<p><strong><span>Read also: </span></strong><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/cryptocurrency/2025/institutional-grade-custody-remains-missing-link-crypto-mainstream-breakthrough/\" rel=\"noopener\" target=\"_blank\"><span>Custody Remains Missing Link in Crypto\u2019s Mainstream Breakthrough</span></a></p>\n<h2><strong><span>Crypto Custody Becomes a Legitimization Battleground</span></strong></h2>\n<p><span>Blockchain technology is not a single invention but two distinct ones. The first is the data structure, blockchain\u2019s immutable ledger of transactions, where each block of data </span><span>is cryptographically linked</span><span> to the one before it. The second, and arguably more </span><span>important</span><span> across the financial mainstream, is the trust model, or rather the removal of the need for one.</span></p>\n<p><span>Before blockchain, the act of trusting in the digital world always relied on intermediaries. Banks verified balances, governments issued currency and auditors reconciled ledgers. Blockchain inverted that logic. By distributing identical copies of a ledger across thousands of computers, it eliminated the need for a single trusted recordkeeper. Instead, trust became an emergent property of the system itself, enforced by consensus, transparency and computation.</span></p>\n<p><span>That new trust paradigm spawned an entire industry. However, as the system grew from a few thousand hobbyists to a multitrillion-dollar market, it collided with the simple fact that the human and institutional world still needs custody. Digital assets may live on a blockchain, but corporations, institutions and governments must still decide who holds the keys.</span></p>\n<p><span>The result to date of the crypto custody question has been a bifurcation of the crypto landscape. On one side are the self-custodians, or users and protocols that hold their own keys and trust the blockchain\u2019s code. </span><span>On the other are the custodial intermediaries, such as exchanges, wallet providers and regulated custodians, </span><span>that</span><span> reintroduce the very structures blockchain was designed to bypass.</span><span> Ironically, many of the </span><span>largest</span><span> players in crypto, from </span><a class=\"editor-rtfLink\" href=\"https://www.coinbase.com/\" rel=\"noopener\" target=\"_blank\"><span>Coinbase</span></a><span> to </span><a class=\"editor-rtfLink\" href=\"https://www.binance.com/en\" rel=\"noopener\" target=\"_blank\"><span>Binance</span></a><span>, now function as centralized custodians in all but name.</span></p>\n<p><span>Many crypto-native custodians also operate under a hybrid model. Assets remain on-chain, but access </span><span>is managed</span><span> through institutional-grade key management, multiparty computation (MPC) and compliance frameworks. In essence, they provide a centralized layer of operational trust </span><span>atop</span><span> a decentralized foundation.</span></p>\n<p><strong><span>See also: </span></strong><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/cryptocurrency/2025/4-questions-cfos-need-to-ask-as-wall-street-embraces-stablecoins/\" rel=\"noopener\" target=\"_blank\"><span>4 Questions CFOs Need to Ask as Wall Street Embraces Stablecoins</span></a></p>\n<h2><strong><span>The Charter and Trust Rush</span></strong></h2>\n<p><span>Over the past year, as the </span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/cryptocurrency/2025/crypto-companies-coming-to-america-as-regulators-relax/\" rel=\"noopener\" target=\"_blank\"><span>regulatory</span></a><span> posture of the U.S. has softened, applications for </span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/bank-regulation/2025/fintechs-pursue-direct-connections-to-the-fed-with-national-trust-bank-charters/\" rel=\"noopener\" target=\"_blank\"><span>national trust charters</span></a><span> have accelerated, with some of the </span><span>largest</span><span> names in FinTech and crypto among the applicants. Firms with their own charters could offer integrated custody, payments and tokenization services without relying on third-party banks.</span></p>\n<p><span>During the </span><a class=\"editor-rtfLink\" href=\"https://www.federalreserve.gov/\" rel=\"noopener\" target=\"_blank\"><span>Federal Reserve</span></a><span>\u2019s </span><a class=\"editor-rtfLink\" href=\"https://www.federalreserve.gov/conferences/payments-innovation-conference.htm\" rel=\"noopener\" target=\"_blank\"><span>Payments Innovation Conference</span></a><span> Oct. 21, Fed Governor </span><a class=\"editor-rtfLink\" href=\"https://www.federalreserve.gov/aboutthefed/bios/board/waller.htm\" rel=\"noopener\" target=\"_blank\"><span>Christopher Waller</span></a><span> advanced the notion of a \u201cskinny\u201d or \u201cstreamlined\u201d master account, a form of access to the Fed\u2019s settlement system tailored for nonbank payments firms, including </span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/cybersecurity/2025/this-week-in-stablecoins-winning-a-seat-at-the-banking-table/\" rel=\"noopener\" target=\"_blank\"><span>stablecoin</span></a><span> issuers.</span></p>\n<p><span>Under this proposal, firms would gain direct access to Fed payment rails, subject to tighter conditions, including no </span><span>discount-window</span><span> borrowing, no interest on reserve balances, capped balances and restricted operational features.</span><span> This access is limited to payment-centric activity, not full banking operations.</span></p>\n<p><span>At the same time, stablecoin issuers </span><span>like</span> <a class=\"editor-rtfLink\" href=\"https://www.circle.com/\" rel=\"noopener\" target=\"_blank\"><span>Circle Internet Group</span></a><span>, </span><a class=\"editor-rtfLink\" href=\"https://www.kraken.com/\" rel=\"noopener\" target=\"_blank\"><span>Kraken</span></a><span>, </span><a class=\"editor-rtfLink\" href=\"https://www.bridge.xyz/\" rel=\"noopener\" target=\"_blank\"><span>Bridge</span></a><span> (</span><a class=\"editor-rtfLink\" href=\"https://stripe.com/\" rel=\"noopener\" target=\"_blank\"><span>Stripe</span></a><span>), </span><a class=\"editor-rtfLink\" href=\"https://ripple.com/\" rel=\"noopener\" target=\"_blank\"><span>Ripple</span></a><span> and </span><span>more</span><span> are </span><span>racing</span><span> for </span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/cryptocurrency/2025/stablecoin-issuers-race-for-bank-charters-as-fed-weighs-access/\" rel=\"noopener\" target=\"_blank\"><span>federal trust or bank charters</span></a><span> under the </span><a class=\"editor-rtfLink\" href=\"https://www.occ.treas.gov/\" rel=\"noopener\" target=\"_blank\"><span>Office of the Comptroller of the Currency</span></a><span>.</span></p>\n<p><span>A national trust charter allows companies to operate across state lines under a single regulatory regime, rather than maintaining dozens of separate licenses. </span><span>Unlike full national bank charters, trust charters do not permit deposit-taking or lending, </span><span>but</span><span> they allow custody, fiduciary services and settlement</span><span>, </span><span>functions increasingly critical to digital asset businesses.</span></p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/cryptocurrency/2025/crypto-custody-becomes-land-grab-fintechs-nonbanks/\">Crypto Custody Becomes Land Grab for FinTechs, Nonbanks</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
+    "image_url": "https://www.pymnts.com/wp-content/uploads/2025/10/crypto-custody-FinTechs-nonbanks.jpg?w=457",
+    "summary_text": "In traditional finance, custody is almost invisible. A custodian bank can hold trillions of dollars in securities, ensuring that ownership records are accurate and assets can\u2019t be misappropriated. These institutions are regulated, insured and audited. Cryptoc...",
+    "category": "fintech",
+    "_trending_tags": [
+      "fintech"
+    ],
+    "_permalink": "/p/ba48067063/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/ba48067063/",
+    "_summary_240": "In traditional finance, custody is almost invisible. A custodian bank can hold trillions of dollars in securities, ensuring that ownership records are accurate and assets can\u2019t...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/ba48067063/thumbnail.png"
+  },
+  {
+    "title": "Super fun conversation with Jordi Hays and John Coogan. Thanks for bringing TBPN to GitHub Universe. Work\u2019s not done!",
+    "url": "https://www.linkedin.com/posts/satyanadella_super-fun-conversation-with-jordi-hays-and-activity-7389037496279609345-y4a1",
+    "published_at": "2025-10-28T17:04:29-04:00",
+    "source": "Microsoft News",
+    "summary": "The post Super fun conversation with Jordi Hays and John Coogan. Thanks for bringing TBPN to GitHub Universe. Work\u2019s not done! appeared first on Source .",
+    "content_html": "<article class=\"mssrc-posts font-- has--theme\" id=\"single-22667\">\n\t<div class=\"acf-innerblocks-container\"></div>\t\t\t<section class=\"post-tags\">\n\t\t\t\t<div class=\"post-tags__content wp-block-columns\">\n\t\t\t\t\t<div class=\"post-tags__header wp-block-column flex-basis-25 has-text-align-right\">\n\t\t\t\t\t\t<h4 class=\"sr-only\">Tags: </h4>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"post-tags__body wp-block-column flex-basis-60\">\n\t\t\t\t\t\t<ul class=\"post-tags__list\"><li class=\"post-tags__item\"><a class=\"kicker inline-block post__meta--tags\" href=\"https://news.microsoft.com/source/tag/linkedin-post/\">LinkedIn Post</a></li></ul>\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</section>\n\t\t\t</article><p>The post <a href=\"https://www.linkedin.com/posts/satyanadella_super-fun-conversation-with-jordi-hays-and-activity-7389037496279609345-y4a1\">Super fun conversation with Jordi Hays and John Coogan. Thanks for bringing TBPN to GitHub Universe. Work&#8217;s not done!</a> appeared first on <a href=\"https://news.microsoft.com/source\">Source</a>.</p>",
+    "image_url": "https://dms.licdn.com/playlist/vid/v2/D5605AQFGUv2UejWqJA/thumbnail-with-play-button-overlay-high/B56ZosiWmDKEDM-/0/1761683801650?e=2147483647&v=beta&t=RA3vUQjBpGmaalOSekjBK9ilHuTSGzkASEtXGTVeiCQ",
+    "summary_text": "The post Super fun conversation with Jordi Hays and John Coogan. Thanks for bringing TBPN to GitHub Universe. Work\u2019s not done! appeared first on Source .",
+    "category": "software",
+    "_permalink": "/p/b3a4c7c73e/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/b3a4c7c73e/",
+    "_summary_240": "The post Super fun conversation with Jordi Hays and John Coogan. Thanks for bringing TBPN to GitHub Universe. Work\u2019s not done! appeared first on Source .",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/b3a4c7c73e/thumbnail.png"
+  },
+  {
+    "title": "Great to be back at GitHub Universe today! Thanks for the conversation, Jared Palmer and Mario Rodriguez. Nothing beats the energy of being surrounded by people building the future of software.",
+    "url": "https://www.linkedin.com/posts/satyanadella_great-to-be-back-at-github-universe-today-activity-7389024818098212864-9_qt",
+    "published_at": "2025-10-28T17:03:05-04:00",
+    "source": "Microsoft News",
+    "summary": "The post Great to be back at GitHub Universe today! Thanks for the conversation, Jared Palmer and Mario Rodriguez. Nothing beats the energy of being surrounded by people building the future of software. appeared first on Source .",
+    "content_html": "<article class=\"mssrc-posts font-- has--theme\" id=\"single-22666\">\n\t<div class=\"acf-innerblocks-container\"></div>\t\t\t<section class=\"post-tags\">\n\t\t\t\t<div class=\"post-tags__content wp-block-columns\">\n\t\t\t\t\t<div class=\"post-tags__header wp-block-column flex-basis-25 has-text-align-right\">\n\t\t\t\t\t\t<h4 class=\"sr-only\">Tags: </h4>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"post-tags__body wp-block-column flex-basis-60\">\n\t\t\t\t\t\t<ul class=\"post-tags__list\"><li class=\"post-tags__item\"><a class=\"kicker inline-block post__meta--tags\" href=\"https://news.microsoft.com/source/tag/linkedin-post/\">LinkedIn Post</a></li></ul>\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</section>\n\t\t\t</article><p>The post <a href=\"https://www.linkedin.com/posts/satyanadella_great-to-be-back-at-github-universe-today-activity-7389024818098212864-9_qt\">Great to be back at GitHub Universe today! Thanks for the conversation, Jared Palmer and Mario Rodriguez. Nothing beats the energy of being surrounded by people building the future of software.</a> appeared first on <a href=\"https://news.microsoft.com/source\">Source</a>.</p>",
+    "image_url": "https://dms.licdn.com/playlist/vid/v2/D5605AQEka7ExeR0eiQ/thumbnail-with-play-button-overlay-high/B56ZosWz0oJoDM-/0/1761680778874?e=2147483647&v=beta&t=RYa-PPimv1Pd-6E3F2WbQG-PoHcBWQikDUeLGL16c-E",
+    "summary_text": "The post Great to be back at GitHub Universe today! Thanks for the conversation, Jared Palmer and Mario Rodriguez. Nothing beats the energy of being surrounded by people building the future of software. appeared first on Source .",
+    "category": "software",
+    "_permalink": "/p/8b5441b8ff/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/8b5441b8ff/",
+    "_summary_240": "The post Great to be back at GitHub Universe today! Thanks for the conversation, Jared Palmer and Mario Rodriguez. Nothing beats the energy of being surrounded by people building...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/8b5441b8ff/thumbnail.png"
+  },
+  {
+    "title": "Microsoft\u2019s Copilot can now build apps and automate your job \u2014 here\u2019s how it works",
+    "url": "https://venturebeat.com/ai/microsofts-copilot-can-now-build-apps-and-automate-your-job-heres-how-it",
+    "published_at": "2025-10-28T16:30:00-04:00",
+    "source": "VentureBeat",
+    "summary": "Microsoft is launching a significant expansion of its Copilot AI assistant on Tuesday, introducing tools that let employees build applications, automate workflows, and create specialized AI agents using only conversational prompts \u2014 no coding required. The new capabilities, called App Builder and Workflows , mark Microsoft's most aggressive attempt yet to merge artificial intelligence with softwa...",
+    "content_html": "",
+    "image_url": "",
+    "summary_text": "Microsoft is launching a significant expansion of its Copilot AI assistant on Tuesday, introducing tools that let employees build applications, automate workflows, and create specialized AI agents using only conversational prompts \u2014 no coding required. The ne...",
+    "category": "ai",
+    "_trending_tags": [
+      "agent",
+      "ai",
+      "microsoft"
+    ],
+    "_permalink": "/p/3210699bae/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/3210699bae/",
+    "_summary_240": "Microsoft is launching a significant expansion of its Copilot AI assistant on Tuesday, introducing tools that let employees build applications, automate workflows, and create...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/3210699bae/thumbnail.png"
+  },
+  {
     "title": "OpenAI\u2019s For-Profit Path Cleared | Bloomberg Tech 10/28/2025",
     "url": "https://www.bloomberg.com/news/videos/2025-10-28/bloomberg-tech-10-28-2025-video",
     "published_at": "2025-10-28T16:14:05-04:00",
@@ -464,25 +532,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/337d0f7859/thumbnail.png"
   },
   {
-    "title": "BILL Debuts AI Agents Focused on Small Business Needs",
-    "url": "https://www.pymnts.com/artificial-intelligence-2/2025/bill-debuts-ai-agents-focused-on-small-business-needs/",
-    "published_at": "2025-10-28T13:44:24-04:00",
-    "source": "PYMNTS",
-    "summary": "Finance platform BILL has launched a suite of AI agents for small businesses. The new offering, announced Tuesday (Oct. 28) includes features that autonomously collect and validate W-9s, reconcile receipts, accelerate user onboarding, and carry out routine tasks for what BILL calls \u201cFortune 5 Million\u201d companies saddled with manual workflows. \u201cFor example, more than [\u2026] The post BILL Debuts AI Age...",
-    "content_html": "<p><span style=\"font-weight: 400;\">Finance platform </span><a href=\"https://www.bill.com/\" rel=\"noopener\" target=\"_blank\"><span style=\"font-weight: 400;\">BILL</span></a><span style=\"font-weight: 400;\"> has launched a suite of AI agents for small businesses.</span></p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p><span style=\"font-weight: 400;\">The new offering, </span><a href=\"https://investor.bill.com/news/news-details/2025/BILL-Launches-New-AI-Agents-to-Power-Touchless-Transactions-for-the-Fortune-5-Million/default.aspx\" rel=\"noopener\" target=\"_blank\"><span style=\"font-weight: 400;\">announced</span></a><span style=\"font-weight: 400;\"> Tuesday (Oct. 28) includes features that autonomously collect and validate W-9s, reconcile receipts, accelerate user onboarding, and carry out routine tasks for what BILL calls \u201cFortune 5 Million\u201d companies saddled with manual workflows.</span></p>\n<p><span style=\"font-weight: 400;\">\u201cFor example, more than 90% of businesses say collecting W-9s is the most painful part of doing taxes, and many spend too much time on </span><a href=\"https://www.pymnts.com/news/b2b-payments/2024/expense-management-is-undergoing-revolution-legacy-systems-hold-firms-back/\" rel=\"noopener\" target=\"_blank\"><span style=\"font-weight: 400;\">expense management</span></a><span style=\"font-weight: 400;\">,\u201d BILL said in a news release. \u201cThese inefficiencies force leaders into trade-offs between running the back office and growing their business. BILL AI agents eliminate these workflows, freeing teams to focus on growth and serving their customers.\u201d</span></p>\n<p><span style=\"font-weight: 400;\">According to the release, the new agents include the BILL W-9 Agent, which the company says eliminates more than 80% of manual steps involved in collecting W-9s by autonomously requesting and pre-validating W-9s from vendors.</span></p>\n<p><span style=\"font-weight: 400;\">\u201cIt can erase most of the work associated with collecting up to 3 million W-9s, saving BILL customers an estimated 650,000 hours,\u201d the release said.</span></p>\n<p><span style=\"font-weight: 400;\">Meanwhile, the BILL Reconciliation Agent is a \u201ctouchless receipts agent that automatically codes transactions, so receipts </span><a href=\"https://www.pymnts.com/tag/payment-reconciliation/\" rel=\"noopener\" target=\"_blank\"><span style=\"font-weight: 400;\">reconcile</span></a><span style=\"font-weight: 400;\"> themselves,\u201d and while offering \u201cfull visibility into expenses, helping finance teams stay organized and compliant.\u201d</span></p>\n<p><span style=\"font-weight: 400;\">PYMNTS wrote earlier this year about the way artificial intelligence (AI) is allowing the \u201cFortune 5 million\u201d to enjoy some of the technological perks of the Fortune 500.</span></p>\n<p><span style=\"font-weight: 400;\">\u201cSmall and medium-sized businesses (</span><a href=\"https://www.pymnts.com/news/artificial-intelligence/2025/how-smbs-are-building-diy-back-offices-using-ai/\" rel=\"noopener\" target=\"_blank\"><span style=\"font-weight: 400;\">SMBs</span></a><span style=\"font-weight: 400;\">) across the country are embracing artificial intelligence (AI) as a way to compete against large enterprises,\u201d that report said.</span></p>\n<p><span style=\"font-weight: 400;\">\u201cBy automating processes, augmenting talent, and accelerating decision-making, AI enables smaller firms to bypass legacy systems and leap directly into an AI-first business model \u2014 one that </span><a href=\"https://www.pymnts.com/artificial-intelligence-2/2025/small-business-big-ai-how-smbs-are-leveling-the-playing-field-with-enterprise-giants/\" rel=\"noopener\" target=\"_blank\"><span style=\"font-weight: 400;\">can rival what large incumbents offer</span></a><span style=\"font-weight: 400;\">.\u201d</span></p>\n<p><span style=\"font-weight: 400;\">That report also included comments from </span><a href=\"https://www.bill.com/leadership/mary-kay-bowman\" rel=\"noopener\" target=\"_blank\"><span style=\"font-weight: 400;\">Mary Kay Bowman</span></a><span style=\"font-weight: 400;\">, executive vice president and general manager of payments and financial services at BILL, who told PYMNTS that because smaller businesses can\u2019t compete with larger ones on scale they need to compete on smarts.</span></p>\n<p><span style=\"font-weight: 400;\">\u201cThe smartest thing small businesses can do is use AI to unlock top-tier finance expertise and tools that were only ever available to enterprise companies,\u201d she said, noting that the best AI tools for SMBs aren\u2019t flashy tech add-ons but designed with small business needs in mind.</span></p>\n<p><span style=\"font-weight: 400;\">\u201cSilicon Valley needs to be delivering AI that actually delivers tangible outcomes that small businesses need: saving time, improving accuracy, and freeing up bandwidth to focus on growth,\u201d Bowman said.</span></p>\n<p><i><span>For all PYMNTS AI coverage, subscribe to the daily </span></i><a href=\"https://pymnts.com/subscribe/\" rel=\"noopener\" target=\"_blank\"><i><span>AI Newsletter</span></i></a><i><span>.</span></i></p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/artificial-intelligence-2/2025/bill-debuts-ai-agents-focused-on-small-business-needs/\">BILL Debuts AI Agents Focused on Small Business Needs</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
-    "image_url": "https://www.pymnts.com/wp-content/uploads/2025/10/BILL-AI-artificial-intelligence-agentic-ai-payments-smbs-smes-w-9.jpg?w=457",
-    "summary_text": "Finance platform BILL has launched a suite of AI agents for small businesses. The new offering, announced Tuesday (Oct. 28) includes features that autonomously collect and validate W-9s, reconcile receipts, accelerate user onboarding, and carry out routine ta...",
-    "category": "ai",
-    "_trending_tags": [
-      "agent",
-      "ai"
-    ],
-    "_permalink": "/p/8244ba7746/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/8244ba7746/",
-    "_summary_240": "Finance platform BILL has launched a suite of AI agents for small businesses. The new offering, announced Tuesday (Oct. 28) includes features that autonomously collect and...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/8244ba7746/thumbnail.png"
-  },
-  {
     "title": "NVIDIA and US Manufacturing and Robotics Leaders Drive America\u2019s Reindustrialization With Physical AI",
     "url": "https://nvidianews.nvidia.com/news/nvidia-us-manufacturing-robotics-physical-ai",
     "published_at": "2025-10-28T13:40:00-04:00",
@@ -846,24 +895,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/edb7f77077/thumbnail.png"
   },
   {
-    "title": "Thiel-Backed Chip Startup Takes Aim at ASML\u2019s Dominance",
-    "url": "https://www.bloomberg.com/news/videos/2025-10-28/thiel-backed-chip-startup-takes-aim-at-asml-s-dominance-video",
-    "published_at": "2025-10-28T09:42:13-04:00",
-    "source": "Bloomberg Technology",
-    "summary": "A secretive American startup, Substrate, looks to challenge ASML Holding NV and Taiwan Semiconductor Manufacturing Co. after developing a new chipmaking machine that uses particle acceleration to handle the crucial process of etching microscopic circuitry onto silicon wafers. Ed Ludlow reports on Bloomberg Television.",
-    "content_html": "",
-    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/itsLlrBXI74o/v3/1200x-1.jpg",
-    "summary_text": "A secretive American startup, Substrate, looks to challenge ASML Holding NV and Taiwan Semiconductor Manufacturing Co. after developing a new chipmaking machine that uses particle acceleration to handle the crucial process of etching microscopic circuitry ont...",
-    "category": "fintech",
-    "_trending_tags": [
-      "ai"
-    ],
-    "_permalink": "/p/da8732a602/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/da8732a602/",
-    "_summary_240": "A secretive American startup, Substrate, looks to challenge ASML Holding NV and Taiwan Semiconductor Manufacturing Co. after developing a new chipmaking machine that uses...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/da8732a602/thumbnail.png"
-  },
-  {
     "title": "\u2018No BlackRock, no party\u2019 for Bitcoin, altcoin ETF investments: K33 Research",
     "url": "https://cointelegraph.com/news/no-blackrock-no-party-bitcoin-altcoin-etf?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
     "published_at": "2025-10-28T09:38:57-04:00",
@@ -1037,24 +1068,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/68b1fe870a/thumbnail.png"
   },
   {
-    "title": "Adobe launches AI assistants for Express and Photoshop",
-    "url": "https://techcrunch.com/2025/10/28/adobe-launches-ai-assistants-for-express-and-photoshop/",
-    "published_at": "2025-10-28T08:00:00-04:00",
-    "source": "TechCrunch",
-    "summary": "Adobe today released new AI assistants for Express and Photoshop that can help users with image creation and editing.",
-    "content_html": "",
-    "image_url": "https://techcrunch.com/wp-content/uploads/2025/10/Express-AI-Assistant.jpeg?resize=1200,676",
-    "summary_text": "Adobe today released new AI assistants for Express and Photoshop that can help users with image creation and editing.",
-    "category": "ai",
-    "_trending_tags": [
-      "ai"
-    ],
-    "_permalink": "/p/ff6e738f70/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/ff6e738f70/",
-    "_summary_240": "Adobe today released new AI assistants for Express and Photoshop that can help users with image creation and editing.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/ff6e738f70/thumbnail.png"
-  },
-  {
     "title": "F2Pool co-founder refuses BIP-444 Bitcoin soft fork, says it\u2019s \u2019a bad idea\u2019",
     "url": "https://cointelegraph.com/news/f2pool-co-founder-refuses-anti-spam-soft-fork?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
     "published_at": "2025-10-28T07:40:04-04:00",
@@ -1071,29 +1084,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/f2c224b63b/",
     "_summary_240": "F2Pool co-founder Chun Wang criticized Bitcoin\u2019s BIP-444 soft fork \u2014 seeking to curb arbitrary onchain data \u2014 as a \u201cbad idea\u201d that he will not support.",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/f2c224b63b/thumbnail.png"
-  },
-  {
-    "title": "PayPal partners with OpenAI to let users pay for their shopping within ChatGPT",
-    "url": "https://techcrunch.com/2025/10/28/paypal-partners-with-openai-to-let-users-pay-for-their-shopping-within-chatgpt/",
-    "published_at": "2025-10-28T06:47:43-04:00",
-    "source": "TechCrunch",
-    "summary": "PayPal is adopting the Agentic Commerce Protocol (ACP), an open source specification developed by OpenAI that lets merchants make their products available within AI apps, consequently enabling users to shop using AI agents.",
-    "content_html": "",
-    "image_url": "https://techcrunch.com/wp-content/uploads/2025/09/GettyImages-1231192043.jpg?resize=1200,800",
-    "summary_text": "PayPal is adopting the Agentic Commerce Protocol (ACP), an open source specification developed by OpenAI that lets merchants make their products available within AI apps, consequently enabling users to shop using AI agents.",
-    "category": "ai",
-    "_trending_tags": [
-      "agent",
-      "ai",
-      "chatgpt",
-      "gpt",
-      "openai",
-      "paypal"
-    ],
-    "_permalink": "/p/d489fffcd7/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/d489fffcd7/",
-    "_summary_240": "PayPal is adopting the Agentic Commerce Protocol (ACP), an open source specification developed by OpenAI that lets merchants make their products available within AI apps,...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/d489fffcd7/thumbnail.png"
   },
   {
     "title": "What happens if you don\u2019t pay taxes on your crypto holdings?",
@@ -1120,17 +1110,13 @@
     "source": "Financial Times - Technology",
     "summary": "Job losses come as chief oversees a cost-cutting drive amid increased AI spending",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/b19e3e4a-cee7-4b42-b687-4ec10d09180b.jpg",
+    "image_url": "",
     "summary_text": "Job losses come as chief oversees a cost-cutting drive amid increased AI spending",
     "category": "ai",
     "_trending_tags": [
       "ai",
       "amazon"
-    ],
-    "_permalink": "/p/0e03d238b1/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/0e03d238b1/",
-    "_summary_240": "Job losses come as chief oversees a cost-cutting drive amid increased AI spending",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/0e03d238b1/thumbnail.png"
+    ]
   },
   {
     "title": "Doppel\u2019s AI defense system stops attacks before they spread",
@@ -1347,14 +1333,18 @@
     "source": "Financial Times - Technology",
     "summary": "Vishal Shah takes on key role after Meta AI video service Vibes overshadowed by OpenAI\u2019s Sora",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/4cc66cf3-51d6-4246-bd49-2a029dc394ee.jpg",
     "summary_text": "Vishal Shah takes on key role after Meta AI video service Vibes overshadowed by OpenAI\u2019s Sora",
     "category": "ai",
     "_trending_tags": [
       "ai",
       "meta",
       "openai"
-    ]
+    ],
+    "_permalink": "/p/8a147e1c34/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/8a147e1c34/",
+    "_summary_240": "Vishal Shah takes on key role after Meta AI video service Vibes overshadowed by OpenAI\u2019s Sora",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/8a147e1c34/thumbnail.png"
   },
   {
     "title": "OpenAI Says Hundreds of Thousands of ChatGPT Users May Show Signs of Manic or Psychotic Crisis Every Week",
@@ -1384,17 +1374,13 @@
     "source": "Financial Times - Technology",
     "summary": "San Diego-based tech company strikes deal to sell new data centre processor to Saudi group Humain",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/2486766b-5a1f-48a2-8e14-6676a2bfb50a.jpg",
+    "image_url": "",
     "summary_text": "San Diego-based tech company strikes deal to sell new data centre processor to Saudi group Humain",
     "category": "ai",
     "_trending_tags": [
       "ai",
       "nvidia"
-    ],
-    "_permalink": "/p/8809aae146/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/8809aae146/",
-    "_summary_240": "San Diego-based tech company strikes deal to sell new data centre processor to Saudi group Humain",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/8809aae146/thumbnail.png"
+    ]
   },
   {
     "title": "Anthropic rolls out Claude AI for finance, integrates with Excel to rival Microsoft Copilot",
@@ -1868,21 +1854,6 @@
     "category": "software"
   },
   {
-    "title": "Adecco Group collaborates with Microsoft to launch free global AI learning initiative for jobseekers",
-    "url": "https://news.microsoft.com/source/emea/2025/10/the-adecco-group-launches-free-global-ai-learning-initiative-for-jobseekers-in-collaboration-with-microsoft/",
-    "published_at": "2025-10-24T11:06:03-04:00",
-    "source": "Microsoft News",
-    "summary": "The post Adecco Group collaborates with Microsoft to launch free global AI learning initiative for jobseekers appeared first on Source .",
-    "content_html": "<article class=\"mssrc-posts font-- has--theme\" id=\"single-22629\">\n\t<div class=\"acf-innerblocks-container\"></div>\t\t\t<section class=\"post-tags\">\n\t\t\t\t<div class=\"post-tags__content wp-block-columns\">\n\t\t\t\t\t<div class=\"post-tags__header wp-block-column flex-basis-25 has-text-align-right\">\n\t\t\t\t\t\t<h4 class=\"sr-only\">Tags: </h4>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"post-tags__body wp-block-column flex-basis-60\">\n\t\t\t\t\t\t<ul class=\"post-tags__list\"><li class=\"post-tags__item\"><a class=\"kicker inline-block post__meta--tags\" href=\"https://news.microsoft.com/source/tag/ai/\">AI</a></li></ul>\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</section>\n\t\t\t</article><p>The post <a href=\"https://news.microsoft.com/source/emea/2025/10/the-adecco-group-launches-free-global-ai-learning-initiative-for-jobseekers-in-collaboration-with-microsoft/\">Adecco Group collaborates with Microsoft to launch free global AI learning initiative for jobseekers\u00a0</a> appeared first on <a href=\"https://news.microsoft.com/source\">Source</a>.</p>",
-    "image_url": "https://news.microsoft.com/source/emea/wp-content/uploads/2025/10/image-45.png",
-    "summary_text": "The post Adecco Group collaborates with Microsoft to launch free global AI learning initiative for jobseekers appeared first on Source .",
-    "category": "ai",
-    "_trending_tags": [
-      "ai",
-      "microsoft"
-    ]
-  },
-  {
     "title": "Open Source FinTech Dashboard",
     "url": "https://newsletter.tek2dayholdings.com/p/open-source-fintech-dashboard",
     "published_at": "2025-10-24T10:28:46-04:00",
@@ -1952,7 +1923,7 @@
     "source": "Financial Times - Technology",
     "summary": "Investments from Nvidia, SoftBank and Trump administration strengthened chipmaker\u2019s finances",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/98d81b2f-8030-4758-82e7-3fe3b12ff4b7.jpg",
+    "image_url": "",
     "summary_text": "Investments from Nvidia, SoftBank and Trump administration strengthened chipmaker\u2019s finances",
     "category": "fintech",
     "_trending_tags": [
