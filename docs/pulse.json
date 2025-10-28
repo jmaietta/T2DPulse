@@ -1,5 +1,24 @@
 [
   {
+    "title": "NVIDIA and Nokia to Pioneer the AI Platform for 6G \u2014 Powering America\u2019s Return to Telecommunications Leadership",
+    "url": "https://nvidianews.nvidia.com/news/nvidia-nokia-ai-telecommunications",
+    "published_at": "2025-10-28T12:29:00-04:00",
+    "source": "NVIDIA News",
+    "summary": "NVIDIA and Nokia today announced a strategic partnership to add NVIDIA-powered, commercial-grade AI-RAN products to Nokia\u2019s industry-leading RAN portfolio, enabling communication service providers to launch AI-native 5G-Advanced and 6G networks on NVIDIA platforms.",
+    "content_html": "",
+    "image_url": "https://s3.amazonaws.com/cms.ipressroom.com/219/files/202510/68fff2dc3d6332fffbcd9d68_nvidia-and-nokia/nvidia-and-nokia_thmb.jpg",
+    "summary_text": "NVIDIA and Nokia today announced a strategic partnership to add NVIDIA-powered, commercial-grade AI-RAN products to Nokia\u2019s industry-leading RAN portfolio, enabling communication service providers to launch AI-native 5G-Advanced and 6G networks on NVIDIA plat...",
+    "category": "ai",
+    "_trending_tags": [
+      "ai",
+      "nvidia"
+    ],
+    "_permalink": "/p/a6f9730c29/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/a6f9730c29/",
+    "_summary_240": "NVIDIA and Nokia today announced a strategic partnership to add NVIDIA-powered, commercial-grade AI-RAN products to Nokia\u2019s industry-leading RAN portfolio, enabling communication...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/a6f9730c29/thumbnail.png"
+  },
+  {
     "title": "You\u2019ll be able to pay with PayPal in ChatGPT next year",
     "url": "https://www.theverge.com/news/808079/chatgpt-paypal-openai-acp-purchases",
     "published_at": "2025-10-28T12:13:25-04:00",
@@ -33,11 +52,7 @@
       "agent",
       "ai",
       "microsoft"
-    ],
-    "_permalink": "/p/71f773c036/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/71f773c036/",
-    "_summary_240": "GitHub is making a bold bet that enterprises don't need another proprietary coding agent. They need a way to manage all of them. At its Universe 2025 conference, the...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/71f773c036/thumbnail.png"
+    ]
   },
   {
     "title": "GitHub is launching a hub for multiple AI coding agents",
@@ -324,25 +339,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/c67a0dc8af/",
     "_summary_240": "BlackRock was the only reason Bitcoin ETF investments didn\u2019t turn negative in 2025, raising concerns for altcoin ETF performances without the asset manager.",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/c67a0dc8af/thumbnail.png"
-  },
-  {
-    "title": "Adobe Max 2025: all the latest creative tools and AI announcements",
-    "url": "https://www.theverge.com/news/807867/adobe-max-2025-all-the-latest-announcements",
-    "published_at": "2025-10-28T09:16:17-04:00",
-    "source": "The Verge",
-    "summary": "Adobe has kicked off its annual Max design conference, where it\u2019ll be giving us a first glimpse at the latest updates coming to its Creative Cloud apps and Firefly AI models. The creative software giant is launching new generative AI tools that make digital voiceovers and custom soundtracks for videos, and adding AI assistants to [\u2026]",
-    "content_html": "<figure>\n\n<img alt=\"\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/10/acastro_STK124_03.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100\" />\n\t<figcaption>\n\t\t</figcaption>\n</figure>\n<p class=\"has-text-align-none\">Adobe has kicked off its annual Max design conference, where it\u2019ll be giving us a first glimpse at the latest updates coming to its Creative Cloud apps and Firefly AI models. The creative software giant is launching new generative AI tools that make <a href=\"https://www.theverge.com/news/807809/adobe-firefly-ai-audio-generate-soundtrack-speech\">digital voiceovers and custom soundtracks</a> for videos, and <a href=\"https://www.theverge.com/news/807802/adobe-express-ai-assistant-prompt-editing-beta-max-2025\">adding AI assistants</a> to Express and Photoshop for web that edit entire projects using descriptive prompts. And that\u2019s just the start, because Adobe is planning to eventually bring AI assistants to all of its design apps.</p>\n\n<p class=\"has-text-align-none\">We should also see some experimental tech showcased during Adobe\u2019s \u201cSneaks\u201d preview, too. These are in-development projects that could make their way into Adobe\u2019s software products, like the Project Perfect Blend demo from Max 2024 that became <a href=\"https://www.theverge.com/news/715073/adobe-photoshop-ai-harmonize-composite-editing-feature\">Photoshop\u2019s Harmonize compositing feature</a> this year.</p>\n\n<p class=\"has-text-align-none\">We\u2019re collecting all of the biggest announcements below so you can easily follow along.</p>\n<ul>\n\t\t\t\t\t<li>\n\t\t\t\t<a href=\"https://www.theverge.com/news/807457/adobe-ai-agent-project-moonlight\">Adobe&#8217;s AI social media admin is here with &#8216;Project Moonlight&#8217;</a>\n\t\t\t</li>\n\t\t\t\t\t<li>\n\t\t\t\t<a href=\"https://www.theverge.com/news/807790/adobe-wants-to-make-editing-youtube-shorts-easier\">Adobe wants to make editing YouTube Shorts easier.</a>\n\t\t\t</li>\n\t\t\t\t\t<li>\n\t\t\t\t<a href=\"https://www.theverge.com/news/807802/adobe-express-ai-assistant-prompt-editing-beta-max-2025\">You can tell Adobe Express\u2019s new AI assistant to edit your designs for you</a>\n\t\t\t</li>\n\t\t\t\t\t<li>\n\t\t\t\t<a href=\"https://www.theverge.com/news/807809/adobe-firefly-ai-audio-generate-soundtrack-speech\">Adobe\u2019s new AI audio tools can add soundtracks and voice-overs to videos</a>\n\t\t\t</li>\n\t\t\t\t\t<li>\n\t\t\t\t<a href=\"https://www.theverge.com/news/807811/adobe-photoshop-lightroom-premiere-pro-ai-max-2025\">Photoshop and Premiere Pro\u2019s new AI tools can instantly edit more of your work</a>\n\t\t\t</li>\n\t\t\t</ul>",
-    "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/10/acastro_STK124_03.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "summary_text": "Adobe has kicked off its annual Max design conference, where it\u2019ll be giving us a first glimpse at the latest updates coming to its Creative Cloud apps and Firefly AI models. The creative software giant is launching new generative AI tools that make digital v...",
-    "category": "ai",
-    "_trending_tags": [
-      "ai",
-      "cloud"
-    ],
-    "_permalink": "/p/d18218a8b2/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/d18218a8b2/",
-    "_summary_240": "Adobe has kicked off its annual Max design conference, where it\u2019ll be giving us a first glimpse at the latest updates coming to its Creative Cloud apps and Firefly AI models. The...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/d18218a8b2/thumbnail.png"
   },
   {
     "title": "Regulated crypto yield wins as institutions demand substance",
@@ -811,24 +807,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/861fbc9225/",
     "_summary_240": "A government attempt to impose ethical guardrails on the use of artificial intelligence in Chile is drawing pushback from global technology giants, a debate that could set...",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/861fbc9225/thumbnail.png"
-  },
-  {
-    "title": "Experian Exec Says Trust Must Learn Like Machines",
-    "url": "https://www.pymnts.com/artificial-intelligence-2/2025/experian-exec-says-trust-must-learn-like-machines/",
-    "published_at": "2025-10-28T04:02:16-04:00",
-    "source": "PYMNTS",
-    "summary": "The question confronting global enterprises today is no longer whether AI can make transactions faster or smarter, but whether it can make them trustworthy. \u201cAI is starting to redefine the speed, scale and intelligence of how businesses interact and transact,\u201d Vijay Mehta, EVP/GM of Global Solutions and Analytics at Experian, told PYMNTS during a discussion [\u2026] The post Experian Exec Says Trust M...",
-    "content_html": "<p><span>The question confronting global enterprises today is no longer whether AI can make transactions faster or smarter, but whether it can make them\u202ftrustworthy.</span></p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p><span>\u201cAI is starting to redefine the speed, scale and intelligence of how businesses interact and transact,\u201d </span><a href=\"https://www.linkedin.com/in/vijaypmehta/\" rel=\"noopener\" target=\"_blank\"><span>Vijay Mehta</span></a><span>, EVP/GM of Global Solutions and Analytics at <a href=\"https://www.experian.com/\" rel=\"noopener\" target=\"_blank\">Experian</a>, told PYMNTS during a discussion for the</span><a href=\"https://www.pymnts.com/events/b2b-payments-2025/\" rel=\"noopener\" target=\"_blank\"><span> B2B Payments 2025 event</span></a><span> hosted by PYMNTS CEO Karen Webster.</span></p>\n<p><span>\u00a0\u201cIn the payment space, we\u2019re seeing AI move from back-office automation to frontline decisioning where agents can negotiate, validate and execute,\u201d Mehta added.</span></p>\n<p><span>As Webster framed it, \u201cAI plays on both sides of creating trust and destroying trust.\u201d The task for industry leaders, she suggested, is to stay firmly on the side of creation.</span></p>\n<p><span>That shift may ultimately demand a new conception of identity, one built not on static credentials but on dynamic, data-driven trust.</span></p>\n<h2><b><span>From Static Identity to Adaptive Trust</span></b></h2>\n<p><span>In the consumer world, identity verification has always been about the individual. In B2B, however, the landscape is far more complex. A \u201cbusiness\u201d can mean a network of people, CFOs, treasurers, AP clerks, and now AI-driven agents, all initiating or authorizing payments on behalf of an organization. Each interaction adds a new variable to the equation of trust.</span></p>\n<p><span>\u201cIdentity isn\u2019t static anymore,\u201d Mehta noted, stressing the importance of combining traditional identity verification (IDV) with behavioral analytics and device intelligence. \u201cIt\u2019s a network of roles, permissions, and now digital proxies with agentic AI. At Experian, we approach trust as dynamic. It\u2019s earned, verified and continuously reassessed.\u201d</span></p>\n<p><span>\u201cWhether it\u2019s a CFO approving a payment or an agent reconciling invoices,\u201d he added, \u201cevery action leaves some sort of footprint or breadcrumb that we can monitor. That\u2019s really where data-driven trust begins.\u201d</span></p>\n<p><span>This behavioral layer is the cornerstone of\u202fadaptive trust, or a system that learns and evolves in real time. By continuously analyzing user patterns and device interactions, businesses can identify anomalies before they escalate into losses. As agent-to-agent transactions reshape the role of AI in payments by scaling autonomous systems capable of negotiating, validating and executing deals on behalf of businesses, adaptive trust is likely to only become more important.</span></p>\n<p><span>In the past, a \u201cman in the middle\u201d attack targeted humans. Now, the threat is synthetic identities and social engineering at scale, with malicious code or cloned agents impersonating legitimate businesses. Fraudsters are no longer just breaching systems \u2014 they\u2019re manipulating the digital actors within them.</span></p>\n<p><span>\u201cAI can automate decisions and remove some of the human error that social engineering exploits. But if an attacker can manipulate an agent\u2019s prompts or training data, the risk shifts rather than disappears,\u201d explained Mehta. \u201cIn B2B, this could look like invoice redirection or compromised vendor accounts. Fraudsters are blending both real and fake business attributes to appear more legitimate.\u201d</span></p>\n<h2><b><span>Real-Time Monitoring Becomes Nonnegotiable</span></b></h2>\n<p><span>In the analog world, fraud discovery often happened months after the fact, during reconciliations. In a digital ecosystem operating at machine speed, that delay is unacceptable.</span></p>\n<p><span>As Webster observed, \u201cThe intelligence necessary to bring on a new business partner and extend credit to those business partners is not something you can shirk responsibility around.\u201d</span></p>\n<p><span>Still, one of the most delicate challenges in B2B payments is balancing fraud controls with growth. Set the defenses too tight, and legitimate businesses get caught in the net. Loosen them too much, and the doors open to fraudsters.</span></p>\n<p><span>Experian\u2019s own solution is to take a multi-layered approach. Within its Ascend ecosystem, businesses can design workflows that integrate traditional rules-based systems with advanced tools like behavioral intelligence and partner analytics.</span></p>\n<p><span>\u201cYou can create a set of strategies that use all sorts of different capabilities,\u201d Mehta explained, \u201cfrom traditional verification to continuous monitoring, ensuring that you\u2019re approving the right transactions and credits while stopping bad actors.\u201d</span></p>\n<p><span>\u201cTomorrow\u2019s payment space might be very different,\u201d he added. \u201cThe speed at which the machines are going to be operating means trust has to keep up with them.\u201d</span></p>\n<p><span>The goal is precision. Not just blocking fraud, but enabling legitimate commerce to flow unimpeded.</span></p>\n<p><span>\u201cTrust is the currency of digital commerce,\u201d Mehta said. \u201cIn a world where AI agents transact on our behalf, trust has to be earned \u2014 and it\u2019s continuous. It can\u2019t be assumed one time.\u201d</span></p>\n<p>&nbsp;</p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/artificial-intelligence-2/2025/experian-exec-says-trust-must-learn-like-machines/\">Experian Exec Says Trust Must Learn Like Machines</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
-    "image_url": "https://www.pymnts.com/wp-content/uploads/2025/10/Whats-Next-experian.png?w=457",
-    "summary_text": "The question confronting global enterprises today is no longer whether AI can make transactions faster or smarter, but whether it can make them trustworthy. \u201cAI is starting to redefine the speed, scale and intelligence of how businesses interact and transact,...",
-    "category": "fintech",
-    "_trending_tags": [
-      "ai"
-    ],
-    "_permalink": "/p/a538d5c7ed/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/a538d5c7ed/",
-    "_summary_240": "The question confronting global enterprises today is no longer whether AI can make transactions faster or smarter, but whether it can make them trustworthy. \u201cAI is starting to...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/a538d5c7ed/thumbnail.png"
   },
   {
     "title": "British crypto firm KR1 eyes London Stock Exchange as UK warms to industry: FT",
