@@ -1,5 +1,74 @@
 [
   {
+    "title": "Court Halts CFPB\u2019s Open Banking Rule as Banks, FinTechs Await Rewrite",
+    "url": "https://www.pymnts.com/bank-regulation/2025/court-halts-cfpbs-open-banking-rule-as-banks-fintechs-await-rewrite/",
+    "published_at": "2025-10-29T15:05:18-04:00",
+    "source": "PYMNTS",
+    "summary": "Open banking\u2019s path toward implementation took another turn on Wednesday (Oct. 29) when the U.S. District Court for the Eastern District of Kentucky enjoined the Consumer Financial Protection Bureau from enforcing its Personal Financial Data Rights Rule \u2014 the regulation built on Section 1033 of the Dodd-Frank Act \u2014 until the Bureau completes its ongoing [\u2026] The post Court Halts CFPB\u2019s Open Bankin...",
+    "content_html": "<p style=\"font-weight: 400;\">Open banking\u2019s path toward implementation took another turn on Wednesday (Oct. 29) when the U.S. District Court for the Eastern District of Kentucky enjoined the Consumer Financial Protection Bureau from enforcing its Personal Financial Data Rights Rule \u2014 the regulation built on Section 1033 of the Dodd-Frank Act \u2014 until the Bureau completes its ongoing reconsideration.</p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p style=\"font-weight: 400;\"><a href=\"https://bpi.com/wp-content/uploads/2025/10/2025-10-29-Order-Granting-Injunction.pdf\" rel=\"noopener\" target=\"_blank\">The ruling</a> freezes compliance deadlines that would have required some institutions to be ready as soon as June 2026, signaling that the years-long fight over who controls consumer-financial data is far from settled.</p>\n<h2 style=\"font-weight: 400;\"><strong>Why 1033 Matters</strong></h2>\n<p style=\"font-weight: 400;\">Section 1033 was intended to let consumers obtain and share their own financial information. The CFPB\u2019s now-paused rule would have required banks and credit unions to build standardized digital \u201cdeveloper interfaces\u201d allowing consumers and any third parties they authorize to access transaction histories, balances, and payment data at no charge.</p>\n<p style=\"font-weight: 400;\">Supporters called it a cornerstone for real-time data portability across mobile-banking apps and FinTech platforms. But banks argued the Bureau exceeded its legal authority and underestimated the security and cost burdens of transmitting sensitive data to outside aggregators.</p>\n<h2 style=\"font-weight: 400;\"><strong>The Court\u2019s Reasoning</strong></h2>\n<p style=\"font-weight: 400;\">Judge Danny Reeves held that plaintiffs \u2014 Forcht Bank, the Kentucky Bankers Association and the Bank Policy Institute \u2014 are likely to prevail on claims that the rule exceeded the CFPB\u2019s statutory authority and was arbitrary and capricious under the Administrative Procedure Act.</p>\n<p style=\"font-weight: 400;\">The opinion said Section 1033\u2019s text limits access to a consumer or a fiduciary-like agent, not commercial third parties, and faulted the Bureau for failing to weigh the cumulative data-security risks of mandatory open access. The court also questioned the CFPB\u2019s ban on interface fees and its fixed compliance dates.</p>\n<p style=\"font-weight: 400;\">\u201cThe plaintiffs raise a reasonable argument that the CFPB failed to address a key issue: How data providers are expected to comply with the Rule when the \u2018consensus standards\u2019 may not yet exist by the applicable deadlines,\u201d the judge wrote.\u00a0 Elsewhere, per the ruling, already-incurred \u201ccompliance costs are likely unrecoverable and, therefore, constitute irreparable harm under the facts presented here \u2026 it would be unreasonable to require the plaintiffs and their members to bear compliance expenses for a rule that the CFPB itself previously argued was unlawful and is now in the process of replacing through new rulemaking.\u201d</p>\n<h2 style=\"font-weight: 400;\"><strong>BPI Statement to PYMNTS</strong></h2>\n<p style=\"font-weight: 400;\">In a joint release provided to PYMNTS, the Bank Policy Institute, Kentucky Bankers Association and Forcht Bank welcomed the outcome. They contended that the rule \u201cis a common-sense procedural step that doesn\u2019t interfere with the rulemaking process but ensures banks won\u2019t be forced to invest time and resources preparing for a rule that is currently being rewritten.\u201d</p>\n<p style=\"font-weight: 400;\">That relief follows months of legal back and forth. The CFPB had already told the court it planned to re-examine the rule and publish an advance notice of proposed rulemaking. The new proceeding, launched August 22, 2025, sought public comment on definitions of \u201crepresentative,\u201d data-security obligations, cost-sharing, and whether compliance dates should be extended. Yet with no extension formally issued, banks moved again for injunctive relief \u2014 and won.</p>\n<h2 style=\"font-weight: 400;\"><strong>What the Stay Means Now</strong></h2>\n<p style=\"font-weight: 400;\">The injunction effectively freezes implementation nationwide until the CFPB finalizes a new version of the rule. The Bureau has said it intends to \u201ccomprehensively reexamine\u201d the framework, which could stretch well into 2026. That means banks, credit unions and FinTechs face continued uncertainty about technical standards, liability allocation and how consumer authorization will be verified across digital and mobile channels.</p>\n<p style=\"font-weight: 400;\">For traditional FIs, the pause relieves immediate pressure to fund API infrastructure projects that may soon change.</p>\n<p style=\"font-weight: 400;\">But it also delays clarity on work with FinTechs that already use data-sharing APIs voluntarily. For larger banks and aggregators, it extends the waiting game over whether fees for secure connections will be allowed.</p>\n<p style=\"font-weight: 400;\">Recent PYMNTS Intelligence studies show how consumers\u2019 appetite for connected financial experiences is shaping expectations for open banking. A PYMNTS Intelligence report, \u201c<a href=\"https://www.pymnts.com/study/pay-by-bank-consumer-adoption-hinges-on-security-concerns/\" rel=\"noopener\" target=\"_blank\">Pay by Bank: Consumer Adoption Hinges on Security Concerns</a>,\u201d found that security and clear protections drive adoption; nearly 6 in 10 consumers would switch some transactions to pay by bank when buyer protections and small rewards are offered. That signals demand for bank-to-bank options inside mobile and digital banking if risk, recourse and incentives are explicit.\u00a0 The court\u2019s ruling doesn\u2019t kill open banking. It simply resets the timeline.</p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/bank-regulation/2025/court-halts-cfpbs-open-banking-rule-as-banks-fintechs-await-rewrite/\">Court Halts CFPB\u2019s Open Banking Rule as Banks, FinTechs Await Rewrite</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
+    "image_url": "https://www.pymnts.com/wp-content/uploads/2025/10/court-CFPB-open-banking.png?w=457",
+    "summary_text": "Open banking\u2019s path toward implementation took another turn on Wednesday (Oct. 29) when the U.S. District Court for the Eastern District of Kentucky enjoined the Consumer Financial Protection Bureau from enforcing its Personal Financial Data Rights Rule \u2014 the...",
+    "category": "fintech",
+    "_trending_tags": [
+      "ai",
+      "fintech"
+    ],
+    "_permalink": "/p/8fa6c171a7/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/8fa6c171a7/",
+    "_summary_240": "Open banking\u2019s path toward implementation took another turn on Wednesday (Oct. 29) when the U.S. District Court for the Eastern District of Kentucky enjoined the Consumer...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/8fa6c171a7/thumbnail.png"
+  },
+  {
+    "title": "AI growth under scrutiny as Alphabet, Meta and Microsoft report results",
+    "url": "https://www.ft.com/content/32615d88-91a9-4fa8-8ad8-e6abb8e83397",
+    "published_at": "2025-10-29T15:04:21-04:00",
+    "source": "Financial Times - Technology",
+    "summary": "Investors watch for signs huge capital investments in AI are generating revenue amid concerns of sector bubble",
+    "content_html": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/3021ee09-9351-4394-b6e6-fbcc99429721.jpg",
+    "summary_text": "Investors watch for signs huge capital investments in AI are generating revenue amid concerns of sector bubble",
+    "category": "ai",
+    "_trending_tags": [
+      "ai",
+      "meta",
+      "microsoft"
+    ],
+    "_permalink": "/p/11fbfe905b/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/11fbfe905b/",
+    "_summary_240": "Investors watch for signs huge capital investments in AI are generating revenue amid concerns of sector bubble",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/11fbfe905b/thumbnail.png"
+  },
+  {
+    "title": "Fiserv\u2019s Argentine adventure results in tears",
+    "url": "https://www.ft.com/content/148bceaa-eaa3-4ffc-8278-da784cbec595",
+    "published_at": "2025-10-29T14:53:04-04:00",
+    "source": "Financial Times - Technology",
+    "summary": "The payments company has been overly reliant on overseas growth while its core business has slowed",
+    "content_html": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/d78fbe8f-8bb3-406f-b02b-523cbb97a88b.jpg",
+    "summary_text": "The payments company has been overly reliant on overseas growth while its core business has slowed",
+    "category": "fintech",
+    "_permalink": "/p/9928d0585c/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/9928d0585c/",
+    "_summary_240": "The payments company has been overly reliant on overseas growth while its core business has slowed",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/9928d0585c/thumbnail.png"
+  },
+  {
+    "title": "Lawmakers Call for Higher Deposit Insurance Limits for Big Banks",
+    "url": "https://www.pymnts.com/bank-regulation/2025/lawmakers-call-for-higher-deposit-insurance-limits-for-big-banks/",
+    "published_at": "2025-10-29T14:52:16-04:00",
+    "source": "PYMNTS",
+    "summary": "Democrats and Republicans alike want big banks to up their insured deposit limits. As the Wall Street Journal (WSJ) reported Wednesday (Oct. 29), both Treasury Secretary Scott Bessent and Sen. Elizabeth Warren \u2014 a Democrat from Massachusetts and longtime financial watchdog \u2014 are calling for raising the $250,000 limit on insured deposits. This alliance, [\u2026] The post Lawmakers Call for Higher Depos...",
+    "content_html": "<p><span style=\"font-weight: 400;\">Democrats and Republicans alike want big banks to up their insured deposit limits.</span></p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p><span style=\"font-weight: 400;\">As the Wall Street Journal (WSJ) </span><a href=\"https://www.wsj.com/finance/banking/fdic-cap-raise-bank-reactions-2162dd98?mod=hp_lead_pos11\" rel=\"noopener\" target=\"_blank\"><span style=\"font-weight: 400;\">reported</span></a><span style=\"font-weight: 400;\"> Wednesday (Oct. 29), both Treasury Secretary Scott Bessent and Sen. Elizabeth Warren <b>\u2014</b> a Democrat from Massachusetts and longtime financial watchdog <b>\u2014</b> are calling for raising the $250,000 limit on insured deposits.</span></p>\n<p><span style=\"font-weight: 400;\">This alliance, the report said, is helping fuel efforts from midsized banks who argue that higher caps would prevent </span><a href=\"https://www.pymnts.com/news/banking/2023/the-week-that-americans-watched-a-bank-run-in-real-time/\" rel=\"noopener\" target=\"_blank\"><span style=\"font-weight: 400;\">bank runs</span></a><span style=\"font-weight: 400;\"> like the ones seen at </span><a href=\"https://www.svb.com/\" rel=\"noopener\" target=\"_blank\"><span style=\"font-weight: 400;\">Silicon Valley Bank</span></a> (SVB)<span style=\"font-weight: 400;\"> and </span><a href=\"https://www.flagstar.com/private-bank.html\" rel=\"noopener\" target=\"_blank\"><span style=\"font-weight: 400;\">Signature Bank</span></a><span style=\"font-weight: 400;\"> in March of 2023. Their efforts have helped lead to a Senate bill that proposes increasing the insurance limit up to $10 million on certain accounts.</span></p>\n<p><span style=\"font-weight: 400;\">According to the WSJ, that bill <b>\u2014</b> co-sponsored by </span><a href=\"https://www.hagerty.senate.gov/\" rel=\"noopener\" target=\"_blank\"><span style=\"font-weight: 400;\">Sen. Bill Hagert</span></a><span style=\"font-weight: 400;\">y (R-TN) and </span><a href=\"https://www.alsobrooks.senate.gov/\" rel=\"noopener\" target=\"_blank\"><span style=\"font-weight: 400;\">Sen. Angela Alsobrooks</span></a><span style=\"font-weight: 400;\"> (D-MD) <b>\u2014</b> would apply the $10 million limit only to the type of accounts at the center of the 2023 bank collapses, or to those normally used by businesses for payroll and other operational expenses.</span></p>\n<p><span style=\"font-weight: 400;\">Silicon Valley Bank, which had a number of technology startups and high-net-worth venture capitalists as clients, held a high number of so-called non-interest-bearing transaction accounts. Before the run on that bank, more than 94% of its deposits were uninsured.</span></p>\n<p><span style=\"font-weight: 400;\">After the </span><a href=\"https://www.pymnts.com/news/banking/2024/silicon-valley-banks-downfall-lessons-learned-and-unanswered-questions/\" rel=\"noopener\" target=\"_blank\"><span style=\"font-weight: 400;\">collapse</span></a><span style=\"font-weight: 400;\">, the government said it would make an exception to the insurance policy and make all depositors whole, so as to keep the crisis contained. Under the proposed bill, larger banks would not be eligible for the additional insurance on those types of accounts, but would still have access to the $250,000 maximum payout for all accounts.</span></p>\n<p><span style=\"font-weight: 400;\">\u201cWe want to get back to leveling the playing field,\u201d Bessent said at a recent Federal Reserve conference on community banking.</span></p>\n<p><span style=\"font-weight: 400;\">While he hasn\u2019t endorsed any legislation, the WSJ said, Bessent has been campaigning for the Senate to advance the Hagerty-Alsobrooks bill.</span></p>\n<p><span style=\"font-weight: 400;\">The report adds that big banks have thus far been critical of the legislation, questioning the thinking behind the $10 million limit.</span></p>\n<p><span style=\"font-weight: 400;\">\u201cA massive expansion in FDIC insurance is unwarranted and would do little to improve the fundamental determinants of bank safety and resilience,\u201d said Sean Campbell, head of policy research at the lobby group </span><a href=\"https://fsforum.com/\" rel=\"noopener\" target=\"_blank\"><span style=\"font-weight: 400;\">Financial Services Forum</span></a><span style=\"font-weight: 400;\">.</span></p>\n<p><span style=\"font-weight: 400;\">Meanwhile <b>\u2014</b> as covered here last month <b>\u2014</b>\u00a0</span><a href=\"https://www.pymnts.com/bank-regulation/2025/bank-ceos-press-lawmakers-for-deposit-insurance-reform-amid-post-svb-challenges/\" rel=\"noopener\" target=\"_blank\"><span style=\"font-weight: 400;\">medium-sized banks</span></a><span style=\"font-weight: 400;\"> have been lobbying lawmakers for help following the SVB collapse.</span></p>\n<p><span style=\"font-weight: 400;\">Testifying before a Senate committee, Bob Harrison of the Mid-Size Bank Coalition of America, said there had been \u201crapid digital-age deposit flight\u201d in March of 2023, and said \u201cin an era of smartphones and social media, confidence can evaporate in hours or minutes\u2014depositors no longer wait in line outside a branch; they tap a screen and billions can vanish almost instantly.\u201d</span></p>\n<p><span style=\"font-weight: 400;\">Harrison, also CEO of </span><a href=\"https://www.fhb.com/en/personal\" rel=\"noopener\" target=\"_blank\"><span style=\"font-weight: 400;\">First Hawaiian Bank</span></a><span style=\"font-weight: 400;\">, added that \u201cthe 2023 turmoil did not see deposits leave the U.S. banking system \u2014 they left smaller banks for the perceived safety of larger ones,\u201d leading to a system where bigger banks have a backstop but smaller banks \u201cmust pay a premium to retain uninsured funds.\u201d</span></p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/bank-regulation/2025/lawmakers-call-for-higher-deposit-insurance-limits-for-big-banks/\">Lawmakers Call for Higher Deposit Insurance Limits for Big Banks</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
+    "image_url": "https://www.pymnts.com/wp-content/uploads/2025/10/banking-bank-runs-lawmakers-fdic-deposit-insurance-limits.jpg?w=457",
+    "summary_text": "Democrats and Republicans alike want big banks to up their insured deposit limits. As the Wall Street Journal (WSJ) reported Wednesday (Oct. 29), both Treasury Secretary Scott Bessent and Sen. Elizabeth Warren \u2014 a Democrat from Massachusetts and longtime fina...",
+    "category": "fintech",
+    "_permalink": "/p/2d26709a91/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/2d26709a91/",
+    "_summary_240": "Democrats and Republicans alike want big banks to up their insured deposit limits. As the Wall Street Journal (WSJ) reported Wednesday (Oct. 29), both Treasury Secretary Scott...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/2d26709a91/thumbnail.png"
+  },
+  {
     "title": "Box CEO Aaron Levie on how AI is changing the enterprise SaaS landscape",
     "url": "https://techcrunch.com/2025/10/29/box-ceo-aaron-levie-on-how-ai-is-changing-the-enterprise-saas-landscape/",
     "published_at": "2025-10-29T14:45:19-04:00",
@@ -945,24 +1014,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/5a7dc1d9a0/",
     "_summary_240": "The local industry has welcomed the Australian Securities and Investments Commission\u2019s expanded crypto guidance, but resourcing concerns remain.",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/5a7dc1d9a0/thumbnail.png"
-  },
-  {
-    "title": "Visa to start supporting stablecoins on four blockchains",
-    "url": "https://cointelegraph.com/news/visa-supporting-four-stablecoins-four-blockchains?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-    "published_at": "2025-10-29T00:58:51-04:00",
-    "source": "Cointelegraph",
-    "summary": "Visa CEO Ryan McInerney said the payments giant is adding support for four new stablecoins on four blockchains, and will allow banks to mint and burn.",
-    "content_html": "",
-    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMDYvMDE5Nzg4ZDQtYWMzMS03NTYxLThiOTMtYjJlMjk5Y2MyZTIz.jpg",
-    "summary_text": "Visa CEO Ryan McInerney said the payments giant is adding support for four new stablecoins on four blockchains, and will allow banks to mint and burn.",
-    "category": "fintech",
-    "_trending_tags": [
-      "ai"
-    ],
-    "_permalink": "/p/8121b95b08/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/8121b95b08/",
-    "_summary_240": "Visa CEO Ryan McInerney said the payments giant is adding support for four new stablecoins on four blockchains, and will allow banks to mint and burn.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/8121b95b08/thumbnail.png"
   },
   {
     "title": "Agentic AI is all about the context \u2014 engineering, that is",
@@ -1917,6 +1968,24 @@
     ]
   },
   {
+    "title": "Rise of the Killer Chatbots",
+    "url": "https://www.wired.com/story/ai-weapon-anduril-llms-drones/",
+    "published_at": "2025-10-27T06:00:00-04:00",
+    "source": "Wired",
+    "summary": "On an airstrip somewhere in Texas, a swarm of killer jets approaches\u2014controlled by, of all things, a large language model.",
+    "content_html": "",
+    "image_url": "https://media.wired.com/photos/68e037e07fa76797a839d2ea/master/pass/WIRED-AI-as_WEAPON_RED.jpg",
+    "summary_text": "On an airstrip somewhere in Texas, a swarm of killer jets approaches\u2014controlled by, of all things, a large language model.",
+    "category": "ai",
+    "_trending_tags": [
+      "ai"
+    ],
+    "_permalink": "/p/825206896e/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/825206896e/",
+    "_summary_240": "On an airstrip somewhere in Texas, a swarm of killer jets approaches\u2014controlled by, of all things, a large language model.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/825206896e/thumbnail.png"
+  },
+  {
     "title": "Ed Zitron Gets Paid to Love AI. He Also Gets Paid to Hate AI",
     "url": "https://www.wired.com/story/ai-pr-ed-zitron-profile/",
     "published_at": "2025-10-27T06:00:00-04:00",
@@ -1935,22 +2004,41 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/ba52f28adc/thumbnail.png"
   },
   {
-    "title": "Rise of the Killer Chatbots",
-    "url": "https://www.wired.com/story/ai-weapon-anduril-llms-drones/",
+    "title": "AI Is the Bubble to Burst Them All",
+    "url": "https://www.wired.com/story/ai-bubble-will-burst/",
     "published_at": "2025-10-27T06:00:00-04:00",
     "source": "Wired",
-    "summary": "On an airstrip somewhere in Texas, a swarm of killer jets approaches\u2014controlled by, of all things, a large language model.",
+    "summary": "I talked to the scholars who literally wrote the book on tech bubbles\u2014and applied their test.",
     "content_html": "",
-    "image_url": "https://media.wired.com/photos/68e037e07fa76797a839d2ea/master/pass/WIRED-AI-as_WEAPON_RED.jpg",
-    "summary_text": "On an airstrip somewhere in Texas, a swarm of killer jets approaches\u2014controlled by, of all things, a large language model.",
+    "image_url": "https://media.wired.com/photos/68e043992e3fc9a36ea8f485/master/pass/WIRED-AI-as_Bubble_Blue_ALT2.jpg",
+    "summary_text": "I talked to the scholars who literally wrote the book on tech bubbles\u2014and applied their test.",
     "category": "ai",
     "_trending_tags": [
       "ai"
     ],
-    "_permalink": "/p/825206896e/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/825206896e/",
-    "_summary_240": "On an airstrip somewhere in Texas, a swarm of killer jets approaches\u2014controlled by, of all things, a large language model.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/825206896e/thumbnail.png"
+    "_permalink": "/p/70007b0d7b/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/70007b0d7b/",
+    "_summary_240": "I talked to the scholars who literally wrote the book on tech bubbles\u2014and applied their test.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/70007b0d7b/thumbnail.png"
+  },
+  {
+    "title": "Why AI Breaks Bad",
+    "url": "https://www.wired.com/story/ai-black-box-interpretability-problem/",
+    "published_at": "2025-10-27T06:00:00-04:00",
+    "source": "Wired",
+    "summary": "Once in a while, LLMs turn evil\u2014and no one quite knows why.",
+    "content_html": "",
+    "image_url": "https://media.wired.com/photos/68fb1f5f2aa19db24bcdc4ab/master/pass/WIRED_AI-Blackbox_Opener_Final.jpg",
+    "summary_text": "Once in a while, LLMs turn evil\u2014and no one quite knows why.",
+    "category": "ai",
+    "_trending_tags": [
+      "ai",
+      "llm"
+    ],
+    "_permalink": "/p/dd1a849c7f/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/dd1a849c7f/",
+    "_summary_240": "Once in a while, LLMs turn evil\u2014and no one quite knows why.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/dd1a849c7f/thumbnail.png"
   },
   {
     "title": "The Argument for Letting AI Burn It All Down",
@@ -2022,43 +2110,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/b773212ee6/thumbnail.png"
   },
   {
-    "title": "AI Is the Bubble to Burst Them All",
-    "url": "https://www.wired.com/story/ai-bubble-will-burst/",
-    "published_at": "2025-10-27T06:00:00-04:00",
-    "source": "Wired",
-    "summary": "I talked to the scholars who literally wrote the book on tech bubbles\u2014and applied their test.",
-    "content_html": "",
-    "image_url": "https://media.wired.com/photos/68e043992e3fc9a36ea8f485/master/pass/WIRED-AI-as_Bubble_Blue_ALT2.jpg",
-    "summary_text": "I talked to the scholars who literally wrote the book on tech bubbles\u2014and applied their test.",
-    "category": "ai",
-    "_trending_tags": [
-      "ai"
-    ],
-    "_permalink": "/p/70007b0d7b/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/70007b0d7b/",
-    "_summary_240": "I talked to the scholars who literally wrote the book on tech bubbles\u2014and applied their test.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/70007b0d7b/thumbnail.png"
-  },
-  {
-    "title": "Why AI Breaks Bad",
-    "url": "https://www.wired.com/story/ai-black-box-interpretability-problem/",
-    "published_at": "2025-10-27T06:00:00-04:00",
-    "source": "Wired",
-    "summary": "Once in a while, LLMs turn evil\u2014and no one quite knows why.",
-    "content_html": "",
-    "image_url": "https://media.wired.com/photos/68fb1f5f2aa19db24bcdc4ab/master/pass/WIRED_AI-Blackbox_Opener_Final.jpg",
-    "summary_text": "Once in a while, LLMs turn evil\u2014and no one quite knows why.",
-    "category": "ai",
-    "_trending_tags": [
-      "ai",
-      "llm"
-    ],
-    "_permalink": "/p/dd1a849c7f/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/dd1a849c7f/",
-    "_summary_240": "Once in a while, LLMs turn evil\u2014and no one quite knows why.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/dd1a849c7f/thumbnail.png"
-  },
-  {
     "title": "Chatbots Are Pushing Sanctioned Russian Propaganda",
     "url": "https://www.wired.com/story/chatbots-are-pushing-sanctioned-russian-propaganda/",
     "published_at": "2025-10-27T05:00:00-04:00",
@@ -2099,7 +2150,7 @@
     "source": "Financial Times - Technology",
     "summary": "How today\u2019s artificial intelligence boom is both different from, and similar to, what came before",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/6797b570-716d-4254-867a-772360c71f5a.jpg",
+    "image_url": "https://images.ft.com/v3/image/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F6797b570-716d-4254-867a-772360c71f5a.jpg?source=next-article&fit=scale-down&quality=highest&width=700&dpr=1",
     "summary_text": "How today\u2019s artificial intelligence boom is both different from, and similar to, what came before",
     "category": "ai",
     "_permalink": "/p/bf103ce71f/",
@@ -2173,20 +2224,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/4b30111c76/",
     "_summary_240": "Spurred by titans like Amazon and OpenAI, California State wants to become the nation\u2019s \u201clargest A.I.-empowered\u201d university.",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/4b30111c76/thumbnail.png"
-  },
-  {
-    "title": "\u2018Do not trust your eyes\u2019: AI generates surge in expense fraud",
-    "url": "https://www.ft.com/content/0849f8fe-2674-4eae-a134-587340829a58",
-    "published_at": "2025-10-26T01:00:08-04:00",
-    "source": "Financial Times - Technology",
-    "summary": "Business software groups warn that top AI models are increasingly being used to create ultra-realistic fake receipts",
-    "content_html": "",
-    "image_url": "https://images.ft.com/v3/image/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F53a0eaef-3cff-4f89-9ebd-c8ad64dcd567.jpg?source=next-article&fit=scale-down&quality=highest&width=700&dpr=1",
-    "summary_text": "Business software groups warn that top AI models are increasingly being used to create ultra-realistic fake receipts",
-    "category": "ai",
-    "_trending_tags": [
-      "ai"
-    ]
   },
   {
     "title": "From human clicks to machine intent: Preparing the web for agentic AI",
