@@ -1,7 +1,79 @@
 [
   {
+    "title": "Here\u2019s what happened in crypto today",
+    "url": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss%3F_dc%3D1761751350810%26_ts%3D1761751350810&utm_campaign=rss_partner_inbound",
+    "published_at": "2025-10-29T11:12:33-04:00",
+    "source": "Cointelegraph",
+    "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, NFTs, Web3 and crypto regulation.",
+    "content_html": "",
+    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMDYvMDE5Nzk0MjMtZWY4ZS03YzYwLWI5MzctYjlkZGY3NWZlOGFk.jpg",
+    "summary_text": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, NFTs, Web3 and crypto regulation.",
+    "category": "fintech",
+    "_trending_tags": [
+      "ai"
+    ],
+    "_permalink": "/p/ab57a3e32f/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/ab57a3e32f/",
+    "_summary_240": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, NFTs, Web3 and crypto regulation.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/ab57a3e32f/thumbnail.png"
+  },
+  {
+    "title": "48 Hours Without A.I.",
+    "url": "https://www.nytimes.com/video/technology/100000010483638/48-hours-without-ai.html",
+    "published_at": "2025-10-29T11:00:45-04:00",
+    "source": "The New York Times - Technology",
+    "summary": "A.J. Jacobs went 48 hours without interacting with artificial intelligence. That meant more than just avoiding generative A.I. tools like ChatGPT \u2013 he did his best to not interact with any products that used any kind of machine-learning algorithms in their production, marketing or distribution. This was more limiting than expected; Jacobs needed to find ways around using electricity, running wate...",
+    "content_html": "",
+    "image_url": "https://static01.nyt.com/images/2025/10/29/arts/AJ-Jacobs_THUMBNAIL/AJ-Jacobs_THUMBNAIL-facebookJumbo.jpg?video-overlay",
+    "summary_text": "A.J. Jacobs went 48 hours without interacting with artificial intelligence. That meant more than just avoiding generative A.I. tools like ChatGPT \u2013 he did his best to not interact with any products that used any kind of machine-learning algorithms in their pr...",
+    "category": "ai",
+    "_trending_tags": [
+      "ai",
+      "chatgpt",
+      "gpt"
+    ],
+    "_permalink": "/p/fd897849fc/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/fd897849fc/",
+    "_summary_240": "A.J. Jacobs went 48 hours without interacting with artificial intelligence. That meant more than just avoiding generative A.I. tools like ChatGPT \u2013 he did his best to not...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/fd897849fc/thumbnail.png"
+  },
+  {
+    "title": "The missing data link in enterprise AI: Why agents need streaming context, not just better prompts",
+    "url": "https://venturebeat.com/data-infrastructure/the-missing-data-link-in-enterprise-ai-why-agents-need-streaming-context-not",
+    "published_at": "2025-10-29T11:00:00-04:00",
+    "source": "VentureBeat",
+    "summary": "Enterprise AI agents today face a fundamental timing problem: They can't easily act on critical business events because they aren't always aware of them in real-time. The challenge is infrastructure. Most enterprise data lives in databases fed by extract-transform-load (ETL) jobs that run hourly or daily \u2014 ultimately too slow for agents that must respond in real time. One potential way to tackle ...",
+    "content_html": "",
+    "image_url": "",
+    "summary_text": "Enterprise AI agents today face a fundamental timing problem: They can't easily act on critical business events because they aren't always aware of them in real-time. The challenge is infrastructure. Most enterprise data lives in databases fed by extract-tran...",
+    "category": "ai",
+    "_trending_tags": [
+      "agent",
+      "ai"
+    ],
+    "_permalink": "/p/210ac0c7f3/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/210ac0c7f3/",
+    "_summary_240": "Enterprise AI agents today face a fundamental timing problem: They can't easily act on critical business events because they aren't always aware of them in real-time. The...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/210ac0c7f3/thumbnail.png"
+  },
+  {
+    "title": "Grayscale debuts Solana ETF, joining Bitwise in SOL staking ETF race",
+    "url": "https://cointelegraph.com/news/grayscale-debuts-solana-etf-joining-bitwise-in-sol-staking-etf-race?utm_source=rss_feed&utm_medium=rss%3F_dc%3D1761751350810%26_ts%3D1761751350810&utm_campaign=rss_partner_inbound",
+    "published_at": "2025-10-29T10:54:40-04:00",
+    "source": "Cointelegraph",
+    "summary": "Grayscale Investments has launched its staking-enabled Solana ETF on NYSE Arca, backed by $103 million in seed capital, and is now the second Solana ETP manager in the US.",
+    "content_html": "",
+    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTAvMDE5YTJmZTgtZWU2Yi03YzgyLWE0YWYtNzY2NDkzMDU4NjM5.jpg",
+    "summary_text": "Grayscale Investments has launched its staking-enabled Solana ETF on NYSE Arca, backed by $103 million in seed capital, and is now the second Solana ETP manager in the US.",
+    "category": "software",
+    "_permalink": "/p/77fe829cba/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/77fe829cba/",
+    "_summary_240": "Grayscale Investments has launched its staking-enabled Solana ETF on NYSE Arca, backed by $103 million in seed capital, and is now the second Solana ETP manager in the US.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/77fe829cba/thumbnail.png"
+  },
+  {
     "title": "Binance Wallet partners with Bubblemaps to help fight insider crypto trading",
-    "url": "https://cointelegraph.com/news/binance-wallet-bubblemaps-insider-crypto-trading?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/binance-wallet-bubblemaps-insider-crypto-trading?utm_source=rss_feed&utm_medium=rss%3F_dc%3D1761751350810%26_ts%3D1761751350810&utm_campaign=rss_partner_inbound",
     "published_at": "2025-10-29T10:19:58-04:00",
     "source": "Cointelegraph",
     "summary": "Binance integrates Bubblemaps\u2019 blockchain data tools into its Web3 Wallet, giving users more transparency into token distribution and potential insider trading activity.",
@@ -12,10 +84,10 @@
     "_trending_tags": [
       "ai"
     ],
-    "_permalink": "/p/586fecbdb4/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/586fecbdb4/",
+    "_permalink": "/p/945170532d/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/945170532d/",
     "_summary_240": "Binance integrates Bubblemaps\u2019 blockchain data tools into its Web3 Wallet, giving users more transparency into token distribution and potential insider trading activity.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/586fecbdb4/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/945170532d/thumbnail.png"
   },
   {
     "title": "European Central Bank Aims to Launch Digital Euro in 2029",
@@ -37,7 +109,7 @@
   },
   {
     "title": "Trump\u2019s crypto pardons raise ethics and corruption concerns",
-    "url": "https://cointelegraph.com/news/trump-crypto-pardons-corruption-concerns?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/trump-crypto-pardons-corruption-concerns?utm_source=rss_feed&utm_medium=rss%3F_dc%3D1761751350810%26_ts%3D1761751350810&utm_campaign=rss_partner_inbound",
     "published_at": "2025-10-29T10:09:39-04:00",
     "source": "Cointelegraph",
     "summary": "President Donald Trump has pardoned CZ, marking another act of clemency for a prominent figure in the crypto industry that signals a concerning trend.",
@@ -48,14 +120,14 @@
     "_trending_tags": [
       "ai"
     ],
-    "_permalink": "/p/c9afdc80d9/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/c9afdc80d9/",
+    "_permalink": "/p/5240281376/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/5240281376/",
     "_summary_240": "President Donald Trump has pardoned CZ, marking another act of clemency for a prominent figure in the crypto industry that signals a concerning trend.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/c9afdc80d9/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/5240281376/thumbnail.png"
   },
   {
     "title": "Germany\u2019s AfD urges government to treat Bitcoin as strategic asset",
-    "url": "https://cointelegraph.com/news/germany-bitcoin-reserve-idea-mica-overreach?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/germany-bitcoin-reserve-idea-mica-overreach?utm_source=rss_feed&utm_medium=rss%3F_dc%3D1761751350810%26_ts%3D1761751350810&utm_campaign=rss_partner_inbound",
     "published_at": "2025-10-29T10:09:21-04:00",
     "source": "Cointelegraph",
     "summary": "Europe\u2019s MiCA framework is seen by Germany\u2019s main opposition party as a barrier to Bitcoin adoption, sparking calls for regulatory reform.",
@@ -66,10 +138,10 @@
     "_trending_tags": [
       "ai"
     ],
-    "_permalink": "/p/241e508f06/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/241e508f06/",
+    "_permalink": "/p/e7e5c8120f/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/e7e5c8120f/",
     "_summary_240": "Europe\u2019s MiCA framework is seen by Germany\u2019s main opposition party as a barrier to Bitcoin adoption, sparking calls for regulatory reform.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/241e508f06/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/e7e5c8120f/thumbnail.png"
   },
   {
     "title": "The Echo Dot Max is Amazon\u2019s biggest little speaker yet",
@@ -127,7 +199,7 @@
   },
   {
     "title": "DeFi needs smarter wallets to prevent overnight losses",
-    "url": "https://cointelegraph.com/news/stop-losing-sleep-over-crypto?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/stop-losing-sleep-over-crypto?utm_source=rss_feed&utm_medium=rss%3F_dc%3D1761751350810%26_ts%3D1761751350810&utm_campaign=rss_partner_inbound",
     "published_at": "2025-10-29T09:30:00-04:00",
     "source": "Cointelegraph",
     "summary": "Crypto markets that trade 24/7 demand automated wallet protections, not manual vigilance. Passive vaults leave people exposed to overnight liquidations.",
@@ -135,10 +207,10 @@
     "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTAvMDE5OWE0ZjEtZGEwNy03MmZkLTlmMjUtMjNhNWRmNGMyNDI5.jpg",
     "summary_text": "Crypto markets that trade 24/7 demand automated wallet protections, not manual vigilance. Passive vaults leave people exposed to overnight liquidations.",
     "category": "fintech",
-    "_permalink": "/p/e3e4ecea55/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/e3e4ecea55/",
+    "_permalink": "/p/2953fbbf9a/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/2953fbbf9a/",
     "_summary_240": "Crypto markets that trade 24/7 demand automated wallet protections, not manual vigilance. Passive vaults leave people exposed to overnight liquidations.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/e3e4ecea55/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/2953fbbf9a/thumbnail.png"
   },
   {
     "title": "When Machines Learn Our Language, What Do They Really Understand?",
@@ -250,42 +322,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/b51957ccac/thumbnail.png"
   },
   {
-    "title": "Character.AI is banning minors from AI character chats",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/808081/character-ai-under-18-chat-ban",
-    "published_at": "2025-10-29T09:00:00-04:00",
-    "source": "The Verge",
-    "summary": "Character.AI is gradually shutting down chats for people under 18 and rolling out new ways to figure out if users are adults. The company announced Wednesday that under-18 users will be immediately limited to two hours of \"open-ended chats\" with its AI characters, and that limit will shrink to a complete ban from chats by [\u2026]",
-    "content_html": "<figure>\n\n<img alt=\"\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/10/STK278_character_ai_C.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100\" />\n\t<figcaption>\n\t\t</figcaption>\n</figure>\n<p class=\"has-text-align-none\">Character.AI is gradually shutting down chats for people under 18 and rolling out new ways to figure out if users are adults. The company announced Wednesday that under-18 users will be immediately limited to two hours of \"open-ended chats\" with its AI characters, and that limit will shrink to a complete ban from chats by November 25th. </p>\n<p class=\"has-text-align-none\">In the same announcement, the company says it's rolling out a new in-house \"age assurance model\" that classifies a user's age based on the type of characters they choose to chat with, in combination with other on-site or third-party data information. Both new and existing users will be run through the age m \u2026</p>\n<p><a href=\"https://www.theverge.com/ai-artificial-intelligence/808081/character-ai-under-18-chat-ban\">Read the full story at The Verge.</a></p>",
-    "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/10/STK278_character_ai_C.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "summary_text": "Character.AI is gradually shutting down chats for people under 18 and rolling out new ways to figure out if users are adults. The company announced Wednesday that under-18 users will be immediately limited to two hours of \"open-ended chats\" with its AI charac...",
-    "category": "ai",
-    "_trending_tags": [
-      "ai"
-    ],
-    "_permalink": "/p/6fbc02b12d/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/6fbc02b12d/",
-    "_summary_240": "Character.AI is gradually shutting down chats for people under 18 and rolling out new ways to figure out if users are adults. The company announced Wednesday that under-18 users...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/6fbc02b12d/thumbnail.png"
-  },
-  {
-    "title": "YouTube will let you opt out of AI upscaling on low-res videos",
-    "url": "https://www.theverge.com/news/808717/youtube-automatic-ai-upscaling-shopping-updates",
-    "published_at": "2025-10-29T09:00:00-04:00",
-    "source": "The Verge",
-    "summary": "YouTube has announced several new features that aim to improve the viewing experience on TV screens, including an instant shopping tool and visual upgrades for low-resolution videos. Specifically, YouTube says it will start automatically upscaling videos uploaded below 1080p, using AI to bump them to HD resolution, and plans to support upscaling to 4K \u201cin [\u2026]",
-    "content_html": "<figure>\n\n<img alt=\"\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/23986640/acastro_STK092_04.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100\" />\n\t<figcaption>\n\tCreators can avoid YouTube remastering their old, low-resolution videos.\t</figcaption>\n</figure>\n<p class=\"has-text-align-none\">YouTube has announced several new features that aim to improve the viewing experience on TV screens, including an instant shopping tool and visual upgrades for low-resolution videos. Specifically, YouTube says it will start automatically upscaling videos uploaded below 1080p, using AI to bump them to HD resolution, and plans to support upscaling to 4K \u201cin the near future\u201d \u2014 but both creators and viewers will be able to opt out.</p>\n\n<p class=\"has-text-align-none\">\u201cCreators will retain complete control over their library, as both original files and original video resolution will be kept intact, with a clear option to opt-out of these enhancements,\u201d YouTube says in the announcement. \u201cAnd viewers will still be able to watch creators\u2019 videos in the original uploaded resolution, as super resolution will be clearly labeled under settings.\u201d</p>\n\n<p class=\"has-text-align-none\">The automatic upscaling will only apply to videos that have been uploaded in 240p to 720p resolutions, YouTube spokesperson Veronica Navarrete told <em>The Verge</em>. That means the feature won\u2019t be applied to older videos that creators or channels have already digitally remastered to 1080p themselves.</p>\n<img alt=\"A screenshot of YouTube\u2019s resolution settings.\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/10/YouTube-AI-upscaling-resolution.jpeg?quality=90&#038;strip=all&#038;crop=0,0,100,100\" title=\"A screenshot of YouTube\u2019s resolution settings.\" />\n<p class=\"has-text-align-none\">Almost every major TV brand offers its own form of AI upscaling, as screen sizes have increased and 4K resolution stopped being a novelty, and Nvidia provides a similar feature on its <a href=\"https://www.theverge.com/2020/8/26/21402819/nvidia-shield-tv-update-4k-upscaling-remote-customize\">Shield TV streaming devices</a>. YouTube\u2019s <a href=\"https://support.google.com/youtube/answer/16619284\">opt-out option</a> is notable, however, given <a href=\"https://www.theverge.com/youtube/765485/is-youtubes-shorts-experiment-using-ai-or-just-upscaling\">complaints from creators</a> that the platform was applying enhancements to their videos without consent, sometimes resulting in <a href=\"https://www.rollingstone.com/music/music-news/will-smith-ai-crowd-tour-video-1235415353/\">undesirable visual distortions</a>.</p>\n\n<p class=\"has-text-align-none\">YouTube is also expanding the current video thumbnail limit from 2MB to 50MB to support 4K images, and says it\u2019s currently testing larger video uploads with select creators. On videos with tagged shopping products, viewers will soon be able to quickly buy whatever catches their eye by using their phone to scan a QR code displayed on the TV,\u00a0 taking them directly to the product page. YouTube is also testing the ability for creators to feature products at specific, timed moments within their videos.</p>\n\n<p class=\"has-text-align-none\">More general viewing updates include immersive homepage previews that make it easier to flip through favored YouTube channels, and improvements to contextual search on TV when viewers search from a creator&#8217;s channel page, prioritizing videos from that channel instead of pulling in content from across the platform.</p>\n\n<p class=\"has-text-align-none\">\u201cThe TV screen is our fastest-growing surface, and we remain committed to delivering features that make creator content shine,\u201d YouTube says.</p>",
-    "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/23986640/acastro_STK092_04.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "summary_text": "YouTube has announced several new features that aim to improve the viewing experience on TV screens, including an instant shopping tool and visual upgrades for low-resolution videos. Specifically, YouTube says it will start automatically upscaling videos uplo...",
-    "category": "ai",
-    "_trending_tags": [
-      "ai"
-    ],
-    "_permalink": "/p/ada30742c2/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/ada30742c2/",
-    "_summary_240": "YouTube has announced several new features that aim to improve the viewing experience on TV screens, including an instant shopping tool and visual upgrades for low-resolution...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/ada30742c2/thumbnail.png"
-  },
-  {
     "title": "Grammarly rebrands to \u2018Superhuman,\u2019 launches a new AI assistant",
     "url": "https://techcrunch.com/2025/10/29/grammarly-rebrands-to-superhuman-launches-a-new-ai-assistant/",
     "published_at": "2025-10-29T09:00:00-04:00",
@@ -323,7 +359,7 @@
   },
   {
     "title": "BitGo expands institutional custody to Canton Network\u2019s native token",
-    "url": "https://cointelegraph.com/news/bitgo-canton-coin-custody-support?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/bitgo-canton-coin-custody-support?utm_source=rss_feed&utm_medium=rss%3F_dc%3D1761751350810%26_ts%3D1761751350810&utm_campaign=rss_partner_inbound",
     "published_at": "2025-10-29T09:00:00-04:00",
     "source": "Cointelegraph",
     "summary": "BitGo\u2019s new custody support for Canton Coin allows regulated institutions to securely hold the Canton Network\u2019s native token in the United States.",
@@ -331,14 +367,14 @@
     "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMDIvMDE5NTFiYWQtN2E1MC03ODVlLTgzYTItOTAwZTkxY2EyOWM2.jpg",
     "summary_text": "BitGo\u2019s new custody support for Canton Coin allows regulated institutions to securely hold the Canton Network\u2019s native token in the United States.",
     "category": "fintech",
-    "_permalink": "/p/7edff1043f/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/7edff1043f/",
+    "_permalink": "/p/2ad1d57530/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/2ad1d57530/",
     "_summary_240": "BitGo\u2019s new custody support for Canton Coin allows regulated institutions to securely hold the Canton Network\u2019s native token in the United States.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/7edff1043f/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/2ad1d57530/thumbnail.png"
   },
   {
     "title": "Brazilian solar firm Thopen considers Bitcoin mining to absorb surplus power",
-    "url": "https://cointelegraph.com/news/brazilian-solar-firm-thopen-considers-bitcoin-mining-to-absorb-surplus-power?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/brazilian-solar-firm-thopen-considers-bitcoin-mining-to-absorb-surplus-power?utm_source=rss_feed&utm_medium=rss%3F_dc%3D1761751350810%26_ts%3D1761751350810&utm_campaign=rss_partner_inbound",
     "published_at": "2025-10-29T08:46:13-04:00",
     "source": "Cointelegraph",
     "summary": "Brazilian solar energy company Thopen is reportedly exploring Bitcoin mining as a way to monetize excess renewable power and offset curtailment losses.",
@@ -349,10 +385,10 @@
     "_trending_tags": [
       "ai"
     ],
-    "_permalink": "/p/c330ca87e0/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/c330ca87e0/",
+    "_permalink": "/p/96370f1025/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/96370f1025/",
     "_summary_240": "Brazilian solar energy company Thopen is reportedly exploring Bitcoin mining as a way to monetize excess renewable power and offset curtailment losses.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/c330ca87e0/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/96370f1025/thumbnail.png"
   },
   {
     "title": "Phia\u2019s founders on how AI is changing online shopping",
@@ -374,7 +410,7 @@
   },
   {
     "title": "Avalanche attracts governments and funds in Q3, but token lags 86% below peak",
-    "url": "https://cointelegraph.com/news/avalanche-attracts-governments-and-funds-in-q3-but-token-lags-86-below-peak?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/avalanche-attracts-governments-and-funds-in-q3-but-token-lags-86-below-peak?utm_source=rss_feed&utm_medium=rss%3F_dc%3D1761751350810%26_ts%3D1761751350810&utm_campaign=rss_partner_inbound",
     "published_at": "2025-10-29T07:48:06-04:00",
     "source": "Cointelegraph",
     "summary": "Institutions are tokenizing hundreds of millions in capital on the Avalanche blockchain, which is turning government and TradFi integrations \u201cinto onchain reality,\u201d according to Nansen.",
@@ -385,14 +421,14 @@
     "_trending_tags": [
       "ai"
     ],
-    "_permalink": "/p/e24b9a465c/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/e24b9a465c/",
+    "_permalink": "/p/431accfac4/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/431accfac4/",
     "_summary_240": "Institutions are tokenizing hundreds of millions in capital on the Avalanche blockchain, which is turning government and TradFi integrations \u201cinto onchain reality,\u201d according to...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/e24b9a465c/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/431accfac4/thumbnail.png"
   },
   {
     "title": "Crypto ETP season? Safello, Deutsche Bank to launch first TAO ETP on SIX Swiss Exchange",
-    "url": "https://cointelegraph.com/news/safello-deutsche-bank-tao-etp-six-swiss-exchange?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/safello-deutsche-bank-tao-etp-six-swiss-exchange?utm_source=rss_feed&utm_medium=rss%3F_dc%3D1761751350810%26_ts%3D1761751350810&utm_campaign=rss_partner_inbound",
     "published_at": "2025-10-29T07:24:18-04:00",
     "source": "Cointelegraph",
     "summary": "Safello\u2019s TAO ETP joins a new wave of crypto ETFs hitting global markets, with fresh Solana, Litecoin and Hedera fund launches across the US and Hong Kong.",
@@ -400,10 +436,10 @@
     "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMDQvMDE5NjVjZDMtOTBiMC03ZWUwLWIxZTEtOTA4ODkzMmUwYzVm.jpg",
     "summary_text": "Safello\u2019s TAO ETP joins a new wave of crypto ETFs hitting global markets, with fresh Solana, Litecoin and Hedera fund launches across the US and Hong Kong.",
     "category": "fintech",
-    "_permalink": "/p/0f18d147e5/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/0f18d147e5/",
+    "_permalink": "/p/41a6a1267e/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/41a6a1267e/",
     "_summary_240": "Safello\u2019s TAO ETP joins a new wave of crypto ETFs hitting global markets, with fresh Solana, Litecoin and Hedera fund launches across the US and Hong Kong.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/0f18d147e5/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/41a6a1267e/thumbnail.png"
   },
   {
     "title": "Carvana\u2019s 9,000% Rally Faces Profit Test as Used-Car Woes Mount",
@@ -464,7 +500,7 @@
   },
   {
     "title": "Circle\u2019s Arc attracts South Korea\u2019s first won-backed stablecoin experiment",
-    "url": "https://cointelegraph.com/news/south-korea-bdacs-krw1-stablecoin-circle-arc?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/south-korea-bdacs-krw1-stablecoin-circle-arc?utm_source=rss_feed&utm_medium=rss%3F_dc%3D1761751350810%26_ts%3D1761751350810&utm_campaign=rss_partner_inbound",
     "published_at": "2025-10-29T05:25:28-04:00",
     "source": "Cointelegraph",
     "summary": "Circle\u2019s Arc has seen strong early adoption, with over 100 global financial and fintech giants, including BlackRock, Goldman Sachs, Visa and Mastercard, joining its public testnet.",
@@ -475,14 +511,14 @@
     "_trending_tags": [
       "fintech"
     ],
-    "_permalink": "/p/5dabac3b91/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/5dabac3b91/",
+    "_permalink": "/p/11e294198a/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/11e294198a/",
     "_summary_240": "Circle\u2019s Arc has seen strong early adoption, with over 100 global financial and fintech giants, including BlackRock, Goldman Sachs, Visa and Mastercard, joining its public testnet.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/5dabac3b91/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/11e294198a/thumbnail.png"
   },
   {
     "title": "Saylor\u2019s Strategy tipped for S&P 500 inclusion after Q3 earnings: 10X Research",
-    "url": "https://cointelegraph.com/news/michael-saylor-strategy-70-odds-s-p-500-q3-earnings?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/michael-saylor-strategy-70-odds-s-p-500-q3-earnings?utm_source=rss_feed&utm_medium=rss%3F_dc%3D1761751350810%26_ts%3D1761751350810&utm_campaign=rss_partner_inbound",
     "published_at": "2025-10-29T05:18:55-04:00",
     "source": "Cointelegraph",
     "summary": "Strategy may join the S&P 500 by year-end, even as Bitcoin buys slow and investor sentiment fades, 10x Research said.",
@@ -493,10 +529,10 @@
     "_trending_tags": [
       "ai"
     ],
-    "_permalink": "/p/b0af56645c/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/b0af56645c/",
+    "_permalink": "/p/3fe8f9d284/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/3fe8f9d284/",
     "_summary_240": "Strategy may join the S&P 500 by year-end, even as Bitcoin buys slow and investor sentiment fades, 10x Research said.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/b0af56645c/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/3fe8f9d284/thumbnail.png"
   },
   {
     "title": "Actis Eyes Joining Saudi Tech Rush With Data Center Investment",
@@ -614,21 +650,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/c30302c4e4/thumbnail.png"
   },
   {
-    "title": "Hanscom Federal Turns Banking Into a Game to Win Gen Z Business",
-    "url": "https://www.pymnts.com/credit-unions/2025/hanscom-federal-turns-banking-into-a-game-to-win-gen-z-business/",
-    "published_at": "2025-10-29T04:00:12-04:00",
-    "source": "PYMNTS",
-    "summary": "Consumers have grown used to managing nearly every aspect of their financial lives on their phones, but convenience alone is no longer enough. Many now expect digital banking to help them understand and improve their financial health. For credit unions, that expectation means balancing the personal trust that has long defined the cooperative model [\u2026] The post Hanscom Federal Turns Banking Into a...",
-    "content_html": "<p><span>Consumers have grown used to managing nearly every aspect of their financial lives on their phones, but convenience alone is no longer enough.</span></p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p><span>Many now expect digital banking to help them understand and improve their financial health. For credit unions, that expectation means balancing the personal trust that has long defined the cooperative model with the demand for modern technology.</span></p>\n<p><span>Massachusetts-based <a href=\"https://www.hfcu.org/\" rel=\"noopener\" target=\"_blank\">Hanscom Federal Credit Union</a> is working to deliver on both. It\u2019s centered on a mobile banking experience that integrates gamified tools for financial wellness. Hanscom\u2019s goal is to extend its long-standing commitment to member education through digital channels that engage younger, more mobile members while preserving the trust that has anchored the credit union for decades.</span></p>\n<p><span>\u201cPeople want to engage digitally; they don\u2019t want to walk into a branch,\u201d said <a href=\"https://www.linkedin.com/in/jared-silver-6125a660/\" rel=\"noopener\" target=\"_blank\">Jared Silver</a>, senior vice president of digital innovation and data strategy at Hanscom Federal Credit Union. \u201cWe have members all over the country and the world because we have a large presence within the military community. The only way to scale what we do is digitally.\u201d</span></p>\n<p><span>Hanscom\u2019s membership stretches across the United States and overseas. Silver said that shift, combined with a smaller branch footprint, made it essential to scale member services through technology.\u00a0 The credit union\u2019s service reps are financial wellness coaching certified, he said.</span></p>\n<p><span>That digital engagement also plays an important role in attracting new generations. \u201cCapturing the younger generations is absolutely part of our strategy,\u201d Silver said. \u201cMeeting folks with the technology where they\u2019re at has become so important within the gamified space.\u201d</span></p>\n<h2><b><span>Gamification With Purpose</span></b></h2>\n<p><span>Hanscom began experimenting with gamification before moving online. \u201cWe started our journey in gamification with our physical locations,\u201d Silver said. \u201cWe have one in Burlington, Massachusetts, and we recently opened one in downtown Boston. These are gamified financial wellness spaces\u2014almost like if you could imagine an escape room meets a bank.\u201d</span></p>\n<p><span>The physical installations, he said, focused on helping people learn about fraud, debt, and credit management through interactive play. \u201cOften people, especially younger generations, feel that financial wellness is wealth management and is inaccessible,\u201d Silver said. \u201cWe\u2019re trying to turn that paradigm on its head by saying financial wellness is part of overall wellness\u2014physical health, mental health, financial health. It all goes hand in hand.\u201d</span></p>\n<p><span>The app was developed with Alkami. Alkami\u2019s chief technology officer Deep Varma said the design of the new mobile experience builds on those ideas but ensures relevance. \u201cGamification works when it is relevant to someone,\u201d he said. \u201cIn the context of what the members want, it enables them to increase financial literacy and understand their potential.\u201d</span></p>\n<h2><b><span>Creating Together</span></b></h2>\n<p><span>The Hanscom\u2013Alkami partnership was formed as a co-creation rather than a standard vendor engagement. Varma noted to PYMNTS that \u201cour platform enables Hanscom to deliver their goals, and they build a layer on top of our platform because they understand their members.\u201d</span></p>\n<p><span>Silver described that collaboration as essential to creating an experience that feels personal. \u201cWe wanted to make the financial wellness user experience front and center,\u201d he said. \u201cYour traditional banking app is transactional and operational. In order to make things engaging, we wanted to own the user experience and build gamification and awareness to drive engagement.\u201d</span></p>\n<p><span>He said other institutions often treat wellness tools as add-ons that few members use. \u201cSo often financial wellness within other apps are bolt-ons,\u201d Silver said. \u201cYou bolt on a credit score or a wellness survey and it\u2019s not the primary function. Those get low engagement.\u201d</span></p>\n<h2><b><span>Trust as the Competitive Edge</span></b></h2>\n<p><span>Hanscom intends to make its new app available to members and nonmembers alike, using digital engagement to build awareness and credibility. \u201cOur mission is to be the trusted advisor that people turn to for financial advice,\u201d Silver said. \u201cWe want it to be so useful that you want to become a member.\u201d</span></p>\n<p><span>Silver said Hanscom serves about 100,000 members, with roughly 75 percent using its current mobile app. \u201cWe\u2019d love to increase that adoption,\u201d he said. \u201cWe\u2019d love to see user expansion, user adoption, and ultimately new member conversion.\u201d</span></p>\n<p><span>Silver said that focus on trust remains Hanscom\u2019s core differentiator. \u201cBanking itself is so commoditized,\u201d he said. \u201cYou can get a credit card from any bank, you can get a deposit account from any bank. What it comes down to is trust.\u201d</span><span>\u00a0</span></p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/credit-unions/2025/hanscom-federal-turns-banking-into-a-game-to-win-gen-z-business/\">Hanscom Federal Turns Banking Into a Game to Win Gen Z Business</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
-    "image_url": "https://www.pymnts.com/wp-content/uploads/2025/10/Hanscom-credit-union-mobile-banking-gaming-financial-wellness.jpg?w=457",
-    "summary_text": "Consumers have grown used to managing nearly every aspect of their financial lives on their phones, but convenience alone is no longer enough. Many now expect digital banking to help them understand and improve their financial health. For credit unions, that ...",
-    "category": "fintech",
-    "_permalink": "/p/25f88d7e70/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/25f88d7e70/",
-    "_summary_240": "Consumers have grown used to managing nearly every aspect of their financial lives on their phones, but convenience alone is no longer enough. Many now expect digital banking to...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/25f88d7e70/thumbnail.png"
-  },
-  {
     "title": "Nvidia supplier has already sold next year\u2019s chips on AI boom",
     "url": "https://www.ft.com/content/64e7dfb0-b32c-417e-b411-efc9098e1e3a",
     "published_at": "2025-10-29T03:51:13-04:00",
@@ -683,7 +704,7 @@
   },
   {
     "title": "Australian regulator gives long-awaited crypto guidance, but concerns remain",
-    "url": "https://cointelegraph.com/news/asic-crypto-guidance-australia-structural-bottlenecks?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/asic-crypto-guidance-australia-structural-bottlenecks?utm_source=rss_feed&utm_medium=rss%3F_dc%3D1761751350810%26_ts%3D1761751350810&utm_campaign=rss_partner_inbound",
     "published_at": "2025-10-29T02:16:11-04:00",
     "source": "Cointelegraph",
     "summary": "The local industry has welcomed the Australian Securities and Investments Commission\u2019s expanded crypto guidance, but resourcing concerns remain.",
@@ -694,10 +715,10 @@
     "_trending_tags": [
       "ai"
     ],
-    "_permalink": "/p/5a7dc1d9a0/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/5a7dc1d9a0/",
+    "_permalink": "/p/8ec65d6832/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/8ec65d6832/",
     "_summary_240": "The local industry has welcomed the Australian Securities and Investments Commission\u2019s expanded crypto guidance, but resourcing concerns remain.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/5a7dc1d9a0/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/8ec65d6832/thumbnail.png"
   },
   {
     "title": "AI Earnings Strength Widens to More Stocks to Allay Bubble Fears",
@@ -737,7 +758,7 @@
   },
   {
     "title": "Visa to start supporting stablecoins on four blockchains",
-    "url": "https://cointelegraph.com/news/visa-supporting-four-stablecoins-four-blockchains?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/visa-supporting-four-stablecoins-four-blockchains?utm_source=rss_feed&utm_medium=rss%3F_dc%3D1761751350810%26_ts%3D1761751350810&utm_campaign=rss_partner_inbound",
     "published_at": "2025-10-29T00:58:51-04:00",
     "source": "Cointelegraph",
     "summary": "Visa CEO Ryan McInerney said the payments giant is adding support for four new stablecoins on four blockchains, and will allow banks to mint and burn.",
@@ -748,14 +769,14 @@
     "_trending_tags": [
       "ai"
     ],
-    "_permalink": "/p/8121b95b08/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/8121b95b08/",
+    "_permalink": "/p/29480fdc60/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/29480fdc60/",
     "_summary_240": "Visa CEO Ryan McInerney said the payments giant is adding support for four new stablecoins on four blockchains, and will allow banks to mint and burn.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/8121b95b08/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/29480fdc60/thumbnail.png"
   },
   {
     "title": "Ethereum\u2019s Fusaka fork primed for mainnet after final testnet debut",
-    "url": "https://cointelegraph.com/news/ethereum-fusaka-fork-final-testnet-debut-before-mainnet?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/ethereum-fusaka-fork-final-testnet-debut-before-mainnet?utm_source=rss_feed&utm_medium=rss%3F_dc%3D1761751350810%26_ts%3D1761751350810&utm_campaign=rss_partner_inbound",
     "published_at": "2025-10-29T00:01:35-04:00",
     "source": "Cointelegraph",
     "summary": "Ethereum\u2019s Fusaka update has debuted on Hoodi, its final testnet, and is slated to bring several security and scalability improvements to the blockchain\u2019s mainnet.",
@@ -766,10 +787,10 @@
     "_trending_tags": [
       "ai"
     ],
-    "_permalink": "/p/64e3d5d082/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/64e3d5d082/",
+    "_permalink": "/p/023295609a/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/023295609a/",
     "_summary_240": "Ethereum\u2019s Fusaka update has debuted on Hoodi, its final testnet, and is slated to bring several security and scalability improvements to the blockchain\u2019s mainnet.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/64e3d5d082/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/023295609a/thumbnail.png"
   },
   {
     "title": "Security's AI dilemma: Moving faster while risking more",
@@ -832,7 +853,7 @@
   },
   {
     "title": "South Korea\u2019s bank-first stablecoin approach lacks logic, says Kaia chair",
-    "url": "https://cointelegraph.com/news/south-korea-banks-taking-lead-on-stablecoins-lacks-logic?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/south-korea-banks-taking-lead-on-stablecoins-lacks-logic?utm_source=rss_feed&utm_medium=rss%3F_dc%3D1761751350810%26_ts%3D1761751350810&utm_campaign=rss_partner_inbound",
     "published_at": "2025-10-28T22:45:40-04:00",
     "source": "Cointelegraph",
     "summary": "The Bank of Korea should make clear rules for stablecoin issuers, allowing banks and non-banks to issue the tokens, says Kaia DLT Foundation chair Dr. Sangmin Seo.",
@@ -843,10 +864,25 @@
     "_trending_tags": [
       "ai"
     ],
-    "_permalink": "/p/653828a23d/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/653828a23d/",
+    "_permalink": "/p/edf53f905b/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/edf53f905b/",
     "_summary_240": "The Bank of Korea should make clear rules for stablecoin issuers, allowing banks and non-banks to issue the tokens, says Kaia DLT Foundation chair Dr. Sangmin Seo.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/653828a23d/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/edf53f905b/thumbnail.png"
+  },
+  {
+    "title": "I love how easy it\u2019s becoming to learn on the go with podcasts in Copilot. I turned GitHub\u2019s latest Octoverse report into a 5-minute pod \u2014 short, smart and snappy. Packed with info on the seismic shifts happening in how people build software. Check it out!",
+    "url": "https://www.linkedin.com/posts/satyanadella_i-love-how-easy-its-becoming-to-learn-on-activity-7389085159972593664-d87n",
+    "published_at": "2025-10-28T22:12:00-04:00",
+    "source": "Microsoft News",
+    "summary": "The post I love how easy it\u2019s becoming to learn on the go with podcasts in Copilot. I turned GitHub\u2019s latest Octoverse report into a 5-minute pod \u2014 short, smart and snappy. Packed with info on the seismic shifts happening in how people build software. Check it out! appeared first on Source .",
+    "content_html": "<article class=\"mssrc-posts font-- has--theme\" id=\"single-22671\">\n\t<div class=\"acf-innerblocks-container\"></div>\t\t\t<section class=\"post-tags\">\n\t\t\t\t<div class=\"post-tags__content wp-block-columns\">\n\t\t\t\t\t<div class=\"post-tags__header wp-block-column flex-basis-25 has-text-align-right\">\n\t\t\t\t\t\t<h4 class=\"sr-only\">Tags: </h4>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"post-tags__body wp-block-column flex-basis-60\">\n\t\t\t\t\t\t<ul class=\"post-tags__list\"><li class=\"post-tags__item\"><a class=\"kicker inline-block post__meta--tags\" href=\"https://news.microsoft.com/source/tag/linkedin-post/\">LinkedIn Post</a></li></ul>\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</section>\n\t\t\t</article><p>The post <a href=\"https://www.linkedin.com/posts/satyanadella_i-love-how-easy-its-becoming-to-learn-on-activity-7389085159972593664-d87n\">I love how easy it\u2019s becoming to learn on the go with podcasts in Copilot. I turned GitHub\u2019s latest Octoverse report into a 5-minute pod \u2014 short, smart and snappy. Packed with info on the seismic shifts happening in how people build software. Check it out!</a> appeared first on <a href=\"https://news.microsoft.com/source\">Source</a>.</p>",
+    "image_url": "https://dms.licdn.com/playlist/vid/v2/D5605AQGW6A8IdabH-Q/thumbnail-with-play-button-overlay-high/B56ZotNn7dHIDM-/0/1761695145541?e=2147483647&v=beta&t=zl4XaGuUptt-Ht5Oj8Cs2weGcgPPuJDZ_Jzmvj2Gxww",
+    "summary_text": "The post I love how easy it\u2019s becoming to learn on the go with podcasts in Copilot. I turned GitHub\u2019s latest Octoverse report into a 5-minute pod \u2014 short, smart and snappy. Packed with info on the seismic shifts happening in how people build software. Check i...",
+    "category": "software",
+    "_permalink": "/p/041aa4a368/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/041aa4a368/",
+    "_summary_240": "The post I love how easy it\u2019s becoming to learn on the go with podcasts in Copilot. I turned GitHub\u2019s latest Octoverse report into a 5-minute pod \u2014 short, smart and snappy....",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/041aa4a368/thumbnail.png"
   },
   {
     "title": "Do We Get Points for Mentioning AI On Our Earnings Call?",
@@ -901,7 +937,7 @@
   },
   {
     "title": "Western Union picks Solana for its stablecoin and crypto network",
-    "url": "https://cointelegraph.com/news/western-union-stablecoin-crypto-network-solana?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/western-union-stablecoin-crypto-network-solana?utm_source=rss_feed&utm_medium=rss%3F_dc%3D1761751350810%26_ts%3D1761751350810&utm_campaign=rss_partner_inbound",
     "published_at": "2025-10-28T20:13:23-04:00",
     "source": "Cointelegraph",
     "summary": "Western Union has selected Solana for its Digital Asset Network and USDPT stablecoin, which it expects to be rolled out in the first half of 2026.",
@@ -909,10 +945,10 @@
     "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTAvMDE5YTIyOGMtMWU5ZC03YWZlLTkwYTYtMDRmNTI4NzNlYjcw.jpg",
     "summary_text": "Western Union has selected Solana for its Digital Asset Network and USDPT stablecoin, which it expects to be rolled out in the first half of 2026.",
     "category": "fintech",
-    "_permalink": "/p/4b50def735/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/4b50def735/",
+    "_permalink": "/p/822a0052f0/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/822a0052f0/",
     "_summary_240": "Western Union has selected Solana for its Digital Asset Network and USDPT stablecoin, which it expects to be rolled out in the first half of 2026.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/4b50def735/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/822a0052f0/thumbnail.png"
   },
   {
     "title": "Technical Report: Performance and baseline evaluations of gpt-oss-safeguard-120b and gpt-oss-safeguard-20b",
@@ -981,24 +1017,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/613ba87d5d/thumbnail.png"
   },
   {
-    "title": "Here\u2019s what happened in crypto today",
-    "url": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-    "published_at": "2025-10-28T18:21:14-04:00",
-    "source": "Cointelegraph",
-    "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, NFTs, Web3 and crypto regulation.",
-    "content_html": "",
-    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMDYvMDE5Nzk0MjMtZWY4ZS03YzYwLWI5MzctYjlkZGY3NWZlOGFk.jpg",
-    "summary_text": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, NFTs, Web3 and crypto regulation.",
-    "category": "fintech",
-    "_trending_tags": [
-      "ai"
-    ],
-    "_permalink": "/p/b38ba13213/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/b38ba13213/",
-    "_summary_240": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, NFTs, Web3 and crypto regulation.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/b38ba13213/thumbnail.png"
-  },
-  {
     "title": "Waabi unveils autonomous truck made in partnership with Volvo",
     "url": "https://techcrunch.com/2025/10/28/waabi-unveils-autonomous-truck-made-in-partnership-with-volvo/",
     "published_at": "2025-10-28T18:17:45-04:00",
@@ -1051,7 +1069,7 @@
   },
   {
     "title": "Norwegian tax authority sees 30% jump in crypto reporting",
-    "url": "https://cointelegraph.com/news/norwegian-tax-authority-crypto-reporting?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/norwegian-tax-authority-crypto-reporting?utm_source=rss_feed&utm_medium=rss%3F_dc%3D1761751350810%26_ts%3D1761751350810&utm_campaign=rss_partner_inbound",
     "published_at": "2025-10-28T17:33:51-04:00",
     "source": "Cointelegraph",
     "summary": "According to Norwegian authorities, more than 73,000 people in the country reported on $4 billion in crypto holdings for the 2024 tax year.",
@@ -1059,10 +1077,10 @@
     "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMDMvMDE5NTcxMzUtMmE5Ny03OTY5LTljMzYtMmEwYmViMTI3NzNk.jpg",
     "summary_text": "According to Norwegian authorities, more than 73,000 people in the country reported on $4 billion in crypto holdings for the 2024 tax year.",
     "category": "fintech",
-    "_permalink": "/p/0cb2da9971/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/0cb2da9971/",
+    "_permalink": "/p/b7e67d0211/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/b7e67d0211/",
     "_summary_240": "According to Norwegian authorities, more than 73,000 people in the country reported on $4 billion in crypto holdings for the 2024 tax year.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/0cb2da9971/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/b7e67d0211/thumbnail.png"
   },
   {
     "title": "Super fun conversation with Jordi Hays and John Coogan. Thanks for bringing TBPN to GitHub Universe. Work\u2019s not done!",
@@ -1141,25 +1159,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/24393d33e1/",
     "_summary_240": "As crypto-based prediction services attract a flood of attention and capital, the US president\u2019s social media platform has announced plans to muscle in.",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/24393d33e1/thumbnail.png"
-  },
-  {
-    "title": "Nvidia CEO Downplays AI Bubble Fears as He Enlists New Partners",
-    "url": "https://www.bloomberg.com/news/articles/2025-10-28/nvidia-s-huang-works-to-convince-investors-there-s-no-ai-bubble",
-    "published_at": "2025-10-28T14:44:58-04:00",
-    "source": "Bloomberg Technology",
-    "summary": "Nvidia Corp. Chief Executive Officer Jensen Huang announced a flurry of new partnerships and dismissed concerns about an AI bubble, saying the company\u2019s latest chips are on track to generate half a trillion dollars in revenue.",
-    "content_html": "Jensen Huang, chief executive officer of Nvidia Corp., during the keynote address at the Nvidia AI summit in Washington, DC, US, on Tuesday, Oct. 28, 2025. Nvidia Corp. plans to make a $1 billion equity investment in Nokia Oyj, an apparent vindication of the Finnish company's pivot from mobile networking kit into artificial intelligence by the sector's kingmaker.",
-    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ilfTcSPMWlok/v1/1200x-1.jpg",
-    "summary_text": "Nvidia Corp. Chief Executive Officer Jensen Huang announced a flurry of new partnerships and dismissed concerns about an AI bubble, saying the company\u2019s latest chips are on track to generate half a trillion dollars in revenue.",
-    "category": "ai",
-    "_trending_tags": [
-      "ai",
-      "nvidia"
-    ],
-    "_permalink": "/p/6d25672c73/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/6d25672c73/",
-    "_summary_240": "Nvidia Corp. Chief Executive Officer Jensen Huang announced a flurry of new partnerships and dismissed concerns about an AI bubble, saying the company\u2019s latest chips are on track...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/6d25672c73/thumbnail.png"
   },
   {
     "title": "OpenAI Restructures as For-Profit Company",
@@ -1791,21 +1790,6 @@
     ]
   },
   {
-    "title": "New Power BI tool streamlines datacentric storytelling",
-    "url": "https://powerbi.microsoft.com/en-us/blog/introducing-power-bi-controller-streamlining-storytelling-with-bulk-operations-preview/",
-    "published_at": "2025-10-27T14:38:21-04:00",
-    "source": "Microsoft News",
-    "summary": "The post New Power BI tool streamlines datacentric storytelling appeared first on Source .",
-    "content_html": "<article class=\"mssrc-posts font-- has--theme\" id=\"single-22652\">\n\t<div class=\"acf-innerblocks-container\"></div>\t\t\t<section class=\"post-tags\">\n\t\t\t\t<div class=\"post-tags__content wp-block-columns\">\n\t\t\t\t\t<div class=\"post-tags__header wp-block-column flex-basis-25 has-text-align-right\">\n\t\t\t\t\t\t<h4 class=\"sr-only\">Tags: </h4>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"post-tags__body wp-block-column flex-basis-60\">\n\t\t\t\t\t\t<ul class=\"post-tags__list\"><li class=\"post-tags__item\"><a class=\"kicker inline-block post__meta--tags\" href=\"https://news.microsoft.com/source/tag/technology/\">Technology</a></li></ul>\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</section>\n\t\t\t</article><p>The post <a href=\"https://powerbi.microsoft.com/en-us/blog/introducing-power-bi-controller-streamlining-storytelling-with-bulk-operations-preview/\">New Power BI tool streamlines datacentric storytelling</a> appeared first on <a href=\"https://news.microsoft.com/source\">Source</a>.</p>",
-    "image_url": "https://powerbi.microsoft.com/pictures/shared/social/social-default-image.png",
-    "summary_text": "The post New Power BI tool streamlines datacentric storytelling appeared first on Source .",
-    "category": "fintech",
-    "_permalink": "/p/5a34137e2e/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/5a34137e2e/",
-    "_summary_240": "The post New Power BI tool streamlines datacentric storytelling appeared first on Source .",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/5a34137e2e/thumbnail.png"
-  },
-  {
     "title": "Zuckerberg appoints former metaverse executive to boost AI efforts",
     "url": "https://www.ft.com/content/89a089db-432e-44eb-96e3-21f9ffce555c",
     "published_at": "2025-10-27T13:34:48-04:00",
@@ -1902,24 +1886,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/94aee2fb8e/",
     "_summary_240": "Anthropic's Alexander Bricken (Applied AI, Financial Services) and Nick Lin (Product Lead, Financial Services) break down Claude for Financial Services\u2014our end-to-end agentic...",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/94aee2fb8e/thumbnail.png"
-  },
-  {
-    "title": "Google\u2019s Quantum Computer Makes a Big Technical Leap",
-    "url": "https://www.nytimes.com/2025/10/22/technology/googles-quantum-computer-leap.html",
-    "published_at": "2025-10-27T09:35:21-04:00",
-    "source": "The New York Times - Technology",
-    "summary": "Designed to accelerate advances in medicine and other fields, the tech giant\u2019s quantum algorithm runs 13,000 times as fast as software written for a traditional supercomputer.",
-    "content_html": "A quantum computer at Google\u2019s quantum research facility near Santa Barbara, Calif.",
-    "image_url": "https://static01.nyt.com/images/2025/10/22/multimedia/22GOOGLE-QUANTUM-promo-bjtf/22GOOGLE-QUANTUM-promo-bjtf-mediumSquareAt3X.jpg",
-    "summary_text": "Designed to accelerate advances in medicine and other fields, the tech giant\u2019s quantum algorithm runs 13,000 times as fast as software written for a traditional supercomputer.",
-    "category": "software",
-    "_trending_tags": [
-      "google"
-    ],
-    "_permalink": "/p/07e91c7f16/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/07e91c7f16/",
-    "_summary_240": "Designed to accelerate advances in medicine and other fields, the tech giant\u2019s quantum algorithm runs 13,000 times as fast as software written for a traditional supercomputer.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/07e91c7f16/thumbnail.png"
   },
   {
     "title": "Seizing the AI opportunity",
@@ -2023,43 +1989,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/825206896e/thumbnail.png"
   },
   {
-    "title": "AI Is the Bubble to Burst Them All",
-    "url": "https://www.wired.com/story/ai-bubble-will-burst/",
-    "published_at": "2025-10-27T06:00:00-04:00",
-    "source": "Wired",
-    "summary": "I talked to the scholars who literally wrote the book on tech bubbles\u2014and applied their test.",
-    "content_html": "",
-    "image_url": "https://media.wired.com/photos/68e043992e3fc9a36ea8f485/master/pass/WIRED-AI-as_Bubble_Blue_ALT2.jpg",
-    "summary_text": "I talked to the scholars who literally wrote the book on tech bubbles\u2014and applied their test.",
-    "category": "ai",
-    "_trending_tags": [
-      "ai"
-    ],
-    "_permalink": "/p/70007b0d7b/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/70007b0d7b/",
-    "_summary_240": "I talked to the scholars who literally wrote the book on tech bubbles\u2014and applied their test.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/70007b0d7b/thumbnail.png"
-  },
-  {
-    "title": "Why AI Breaks Bad",
-    "url": "https://www.wired.com/story/ai-black-box-interpretability-problem/",
-    "published_at": "2025-10-27T06:00:00-04:00",
-    "source": "Wired",
-    "summary": "Once in a while, LLMs turn evil\u2014and no one quite knows why.",
-    "content_html": "",
-    "image_url": "https://media.wired.com/photos/68fb1f5f2aa19db24bcdc4ab/master/pass/WIRED_AI-Blackbox_Opener_Final.jpg",
-    "summary_text": "Once in a while, LLMs turn evil\u2014and no one quite knows why.",
-    "category": "ai",
-    "_trending_tags": [
-      "ai",
-      "llm"
-    ],
-    "_permalink": "/p/dd1a849c7f/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/dd1a849c7f/",
-    "_summary_240": "Once in a while, LLMs turn evil\u2014and no one quite knows why.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/dd1a849c7f/thumbnail.png"
-  },
-  {
     "title": "The Argument for Letting AI Burn It All Down",
     "url": "https://www.wired.com/story/ai-normal-after-ai-plateaus/",
     "published_at": "2025-10-27T06:00:00-04:00",
@@ -2127,6 +2056,43 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/b773212ee6/",
     "_summary_240": "In Brownsville, Texas, some families found a buzzy new school\u2019s methods\u2014surveillance of kids, software in lieu of teachers\u2014to be an education in and of itself.",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/b773212ee6/thumbnail.png"
+  },
+  {
+    "title": "AI Is the Bubble to Burst Them All",
+    "url": "https://www.wired.com/story/ai-bubble-will-burst/",
+    "published_at": "2025-10-27T06:00:00-04:00",
+    "source": "Wired",
+    "summary": "I talked to the scholars who literally wrote the book on tech bubbles\u2014and applied their test.",
+    "content_html": "",
+    "image_url": "https://media.wired.com/photos/68e043992e3fc9a36ea8f485/master/pass/WIRED-AI-as_Bubble_Blue_ALT2.jpg",
+    "summary_text": "I talked to the scholars who literally wrote the book on tech bubbles\u2014and applied their test.",
+    "category": "ai",
+    "_trending_tags": [
+      "ai"
+    ],
+    "_permalink": "/p/70007b0d7b/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/70007b0d7b/",
+    "_summary_240": "I talked to the scholars who literally wrote the book on tech bubbles\u2014and applied their test.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/70007b0d7b/thumbnail.png"
+  },
+  {
+    "title": "Why AI Breaks Bad",
+    "url": "https://www.wired.com/story/ai-black-box-interpretability-problem/",
+    "published_at": "2025-10-27T06:00:00-04:00",
+    "source": "Wired",
+    "summary": "Once in a while, LLMs turn evil\u2014and no one quite knows why.",
+    "content_html": "",
+    "image_url": "https://media.wired.com/photos/68fb1f5f2aa19db24bcdc4ab/master/pass/WIRED_AI-Blackbox_Opener_Final.jpg",
+    "summary_text": "Once in a while, LLMs turn evil\u2014and no one quite knows why.",
+    "category": "ai",
+    "_trending_tags": [
+      "ai",
+      "llm"
+    ],
+    "_permalink": "/p/dd1a849c7f/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/dd1a849c7f/",
+    "_summary_240": "Once in a while, LLMs turn evil\u2014and no one quite knows why.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/dd1a849c7f/thumbnail.png"
   },
   {
     "title": "Chatbots Are Pushing Sanctioned Russian Propaganda",
@@ -2237,7 +2203,7 @@
     "source": "Financial Times - Technology",
     "summary": "Business software groups warn that top AI models are increasingly being used to create ultra-realistic fake receipts",
     "content_html": "",
-    "image_url": "https://images.ft.com/v3/image/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F53a0eaef-3cff-4f89-9ebd-c8ad64dcd567.jpg?source=next-article&fit=scale-down&quality=highest&width=700&dpr=1",
+    "image_url": "",
     "summary_text": "Business software groups warn that top AI models are increasingly being used to create ultra-realistic fake receipts",
     "category": "ai",
     "_trending_tags": [
@@ -2302,17 +2268,6 @@
       "ai",
       "openai"
     ]
-  },
-  {
-    "title": "Inside the Messy, Accidental Kryptos Reveal",
-    "url": "https://www.wired.com/story/kryptos-code-reveal/",
-    "published_at": "2025-10-24T11:08:57-04:00",
-    "source": "Wired",
-    "summary": "After 35 years, the secretive CIA sculpture finally gave up its mystery, thanks to a novelist, a playwright, and some misplaced documents. But the chase to decode continues.",
-    "content_html": "",
-    "image_url": "https://media.wired.com/photos/68fa75f840d57adab1938301/master/pass/Backchannel-What-Went-Down-With-Kryptos-Key-Business-564117411.jpg",
-    "summary_text": "After 35 years, the secretive CIA sculpture finally gave up its mystery, thanks to a novelist, a playwright, and some misplaced documents. But the chase to decode continues.",
-    "category": "software"
   },
   {
     "title": "ChatGPT Atlas",
