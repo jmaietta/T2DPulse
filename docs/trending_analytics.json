@@ -1,11 +1,11 @@
 {
-  "generated_at": "2025-10-29T14:36:38.051040-04:00",
+  "generated_at": "2025-10-29T14:53:54.779569-04:00",
   "total_keywords": 30,
   "keyword_counts": {
-    "ai": 235,
-    "openai": 33,
+    "ai": 238,
+    "openai": 35,
     "nvidia": 32,
-    "agent": 27,
+    "agent": 28,
     "gpt": 21,
     "chatgpt": 17,
     "microsoft": 12,
@@ -21,6 +21,7 @@
     "llm": 3,
     "meta": 3,
     "genai": 1,
+    "saas": 1,
     "stripe": 1
   },
   "sources_per_keyword": {},
