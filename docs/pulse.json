@@ -1,5 +1,138 @@
 [
   {
+    "title": "Microsoft Says \u2018Problematic Configuration Change\u2019 Caused Outage of Cloud Services",
+    "url": "https://www.pymnts.com/safety-and-security/2025/microsoft-says-problematic-configuration-change-caused-outage-of-cloud-services/",
+    "published_at": "2025-10-29T17:16:32-04:00",
+    "source": "PYMNTS",
+    "summary": "Microsoft said Wednesday (Oct. 29) that it is working on issues that have been causing service degradation on Microsoft 365 (Business or Enterprise) productivity apps and Microsoft Azure cloud computing services. On Microsoft 365, users may encounter issues when trying to access some services and portals, the company said in an update posted at [\u2026] The post Microsoft Says \u2018Problematic Configurati...",
+    "content_html": "<p><a class=\"editor-rtfLink\" href=\"https://www.microsoft.com/en-us/\" rel=\"noopener\" target=\"_blank\"><span>Microsoft</span></a><span> said Wednesday (Oct. 29) that it is working on issues that have been causing service degradation on Microsoft 365 (Business or Enterprise) productivity apps and Microsoft Azure cloud computing services.</span></p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p><span>On Microsoft 365, users may encounter issues when trying to access some services and portals, the company said in an update posted at 9:30 p.m. UTC on its </span><a class=\"editor-rtfLink\" href=\"https://status.cloud.microsoft/m365/referrer=serviceStatusRedirect\" rel=\"noopener\" target=\"_blank\"><span>Service Health Status</span></a><span> page.</span></p>\n<p><span>The company said it is investigating the issues and that any users attempting to access Microsoft 365 services may be impacted by those issues. It said the preliminary root cause of the issues is that a \u201cproblematic configuration change was applied to a portion of Azure infrastructure.\u201d</span></p>\n<p><span>\u201cWe\u2019ve completed the deployment of the previously healthy configuration and are actively rebalancing traffic across healthy infrastructure to actualize recovery across the affected services,\u201d the update said.</span></p>\n<p><span>On Microsoft Azure, customers and Microsoft services leveraging Azure Front Door may have been experiencing issues beginning Wednesday around 16:00 UTC, the company said in an update posted at 7:57 p.m. UTC on the same Service Health Status Page.</span></p>\n<p><span>Azure Front Door is a cloud content delivery network service, according to a description in Google search results. The Azure Front Door website was down </span><span>Wednesday</span><span>.</span></p>\n<p><span>Microsoft said in the update that it confirmed that \u201can inadvertent configuration change was the trigger event for this issue.\u201d</span></p>\n<p><span>\u201cWe initiated the deployment of our \u2018last known good\u2019 configuration, which has now successfully been completed,\u201d the update said. \u201cCustomers may have begun to see initial signs of recovery. We are currently recovering nodes and routing traffic through healthy nodes, and as we make progress in this workstream, customers will continue to see improvement.\u201d</span></p>\n<p><span>Microsoft expects recovery to happen by 23:20 UTC on Wednesday, per the update.</span></p>\n<p><span>In a </span><a class=\"editor-rtfLink\" href=\"https://x.com/microsofthelps/status/1983609897817084045?s=43&amp;t=HX_ju0vgQxqA9hav5Ebegg\" rel=\"noopener\" target=\"_blank\"><span>reply</span></a><span> to a post on X that asked </span><span>by</span><span> Outlook is down, the Microsoft Support account said the company was aware of the outage affecting Microsoft websites.</span></p>\n<p><span>\u201cRest assured, an internal ticket has already been created, and our support engineers are actively working on a fix. This issue is being treated as a top priority, and we expect updates soon,\u201d Microsoft Support said.</span></p>\n<p><span>In </span><span>a </span><a class=\"editor-rtfLink\" href=\"https://x.com/microsofthelps/status/1983619206521278713?s=43&amp;t=HX_ju0vgQxqA9hav5Ebegg\" rel=\"noopener\" target=\"_blank\"><span>reply</span></a><span> to a post about the Microsoft Store and sites being down or </span><span>very slow</span><span>, the Microsoft Support account </span><span>said those</span><span> issues had been reported and are being </span><span>worked on</span><span> by its engineers.</span></p>\n<p><span>\u201cThere\u2019s no turnaround time yet, but they are hoping to have it fixed </span><span>the </span><span>soonest</span> <span>time</span><span> possible,\u201d Microsoft Support said.</span></p>\n<p><span>In an earlier, separate incident, Amazon Web Services </span><span>said</span><span> on </span><span>Oct.</span><span> 20 that it fixed a massive </span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/amazon/2025/aws-outage-briefly-shutters-broad-swaths-of-the-internet/\" rel=\"noopener\" target=\"_blank\"><span>outage</span></a><span> of its services </span><span>that</span><span> had impacted millions of people and large portions of the internet </span><span>around the world</span><span>.</span></p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/safety-and-security/2025/microsoft-says-problematic-configuration-change-caused-outage-of-cloud-services/\">Microsoft Says \u2018Problematic Configuration Change\u2019 Caused Outage of Cloud Services</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
+    "image_url": "https://www.pymnts.com/wp-content/uploads/2025/10/Microsoft-.jpg?w=457",
+    "summary_text": "Microsoft said Wednesday (Oct. 29) that it is working on issues that have been causing service degradation on Microsoft 365 (Business or Enterprise) productivity apps and Microsoft Azure cloud computing services. On Microsoft 365, users may encounter issues w...",
+    "category": "fintech",
+    "_trending_tags": [
+      "ai",
+      "cloud",
+      "microsoft"
+    ],
+    "_permalink": "/p/c29f7eb55a/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/c29f7eb55a/",
+    "_summary_240": "Microsoft said Wednesday (Oct. 29) that it is working on issues that have been causing service degradation on Microsoft 365 (Business or Enterprise) productivity apps and...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/c29f7eb55a/thumbnail.png"
+  },
+  {
+    "title": "Microsoft Increases Investments Amid A.I. Race",
+    "url": "https://www.nytimes.com/2025/10/29/business/microsoft-quarterly-earnings.html",
+    "published_at": "2025-10-29T17:13:16-04:00",
+    "source": "The New York Times - Technology",
+    "summary": "The company reported that it spent a higher-than-expected $34.9 billion in capital expenditures during its quarter.",
+    "content_html": "Microsoft has said that the demand for its cloud computing services outpaces its available data centers.",
+    "image_url": "https://static01.nyt.com/images/2025/10/29/multimedia/29biz-MICROSOFT-HFO-1-gjmb/29biz-MICROSOFT-HFO-1-gjmb-mediumSquareAt3X.jpg",
+    "summary_text": "The company reported that it spent a higher-than-expected $34.9 billion in capital expenditures during its quarter.",
+    "category": "software",
+    "_trending_tags": [
+      "ai",
+      "microsoft"
+    ],
+    "_permalink": "/p/59f9a9888c/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/59f9a9888c/",
+    "_summary_240": "The company reported that it spent a higher-than-expected $34.9 billion in capital expenditures during its quarter.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/59f9a9888c/thumbnail.png"
+  },
+  {
+    "title": "OpenAI Is Creating a Public Benefit Corporation. What Does That Mean?",
+    "url": "https://www.bloomberg.com/news/articles/2025-10-29/openai-s-public-benefit-corporation-plan-pbc-explained",
+    "published_at": "2025-10-29T16:53:24-04:00",
+    "source": "Bloomberg Technology",
+    "summary": "After months of back-and-forth with regulators and stakeholders, OpenAI said it has completed the process of restructuring as a more traditional, for-profit company \u2013 a key step in its bid to secure billions more in capital to build cutting-edge artificial intelligence products.",
+    "content_html": "Altman at the AI Action Summit in Paris, France, on Feb. 11, 2025.",
+    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iCmLinwMVrgk/v3/1200x-1.jpg",
+    "summary_text": "After months of back-and-forth with regulators and stakeholders, OpenAI said it has completed the process of restructuring as a more traditional, for-profit company \u2013 a key step in its bid to secure billions more in capital to build cutting-edge artificial in...",
+    "category": "ai",
+    "_trending_tags": [
+      "ai",
+      "openai"
+    ],
+    "_permalink": "/p/8b58c109d4/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/8b58c109d4/",
+    "_summary_240": "After months of back-and-forth with regulators and stakeholders, OpenAI said it has completed the process of restructuring as a more traditional, for-profit company \u2013 a key step...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/8b58c109d4/thumbnail.png"
+  },
+  {
+    "title": "Institutional traders now drive 80% of Bitget\u2019s volume: Report",
+    "url": "https://cointelegraph.com/news/institutional-traders-drive-bitget-volume-report?utm_source=rss_feed&utm_medium=rss%3F_t%3D1761772500196%26ttl%3D0&utm_campaign=rss_partner_inbound",
+    "published_at": "2025-10-29T16:50:10-04:00",
+    "source": "Cointelegraph",
+    "summary": "Bitget\u2019s liquidity gains mirror an industrywide shift as exchanges such as Binance, OKX and Crypto.com compete to attract professional and institutional traders.",
+    "content_html": "",
+    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTAvMDE5YTMxMWItOTFkZC03MmVkLTgxZWEtYjA1YjUxZjBlYTQ4.jpg",
+    "summary_text": "Bitget\u2019s liquidity gains mirror an industrywide shift as exchanges such as Binance, OKX and Crypto.com compete to attract professional and institutional traders.",
+    "category": "fintech",
+    "_trending_tags": [
+      "ai"
+    ],
+    "_permalink": "/p/5750d7bb48/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/5750d7bb48/",
+    "_summary_240": "Bitget\u2019s liquidity gains mirror an industrywide shift as exchanges such as Binance, OKX and Crypto.com compete to attract professional and institutional traders.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/5750d7bb48/thumbnail.png"
+  },
+  {
+    "title": "How one mountain town hopes AI can help it fight wildfires",
+    "url": "https://www.theverge.com/report/809348/ai-fire-detection-vail-hpe-smart-city-platform",
+    "published_at": "2025-10-29T16:48:30-04:00",
+    "source": "The Verge",
+    "summary": "A popular ski resort town in Colorado is adopting a new AI Smart City Solution from Hewlett Packard Enterprise (HPE) to help it better detect wildfires, as well as update a range of other city services. Vail is expanding its firefighting toolbox as hotter, more arid weather with climate change raises wildfire risk in the [\u2026]",
+    "content_html": "<figure>\n\n<img alt=\"\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/25824779/STK438_CLIMATE_CHANGE_B.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100\" />\n\t<figcaption>\n\t\t</figcaption>\n</figure>\n<p class=\"has-text-align-none\">A popular ski resort town in Colorado is adopting a new AI Smart City Solution from Hewlett Packard Enterprise (HPE) to help it better detect wildfires, as well as update a range of other city services.</p>\n<p class=\"has-text-align-none\">Vail is expanding its firefighting toolbox as hotter, more arid weather with <a href=\"https://www.c2es.org/content/wildfires-and-climate-change/\">climate change raises wildfire risk</a> in the western US. Colorado has suffered 11 of the 20 <a href=\"https://dfpc.colorado.gov/sections/wildfire-information-center/historical-wildfire-information\">largest fires</a> in state history just within the last five years. Researchers and first responders are increasingly exploring ways in which new AI tools might help them get ahead of blazes.</p>\n<p class=\"has-text-align-none\">\"Fires are part of our life [now] in the mountains, and we have to be prepared for them,\" \u2026</p>\n<p><a href=\"https://www.theverge.com/report/809348/ai-fire-detection-vail-hpe-smart-city-platform\">Read the full story at The Verge.</a></p>",
+    "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/25824779/STK438_CLIMATE_CHANGE_B.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "summary_text": "A popular ski resort town in Colorado is adopting a new AI Smart City Solution from Hewlett Packard Enterprise (HPE) to help it better detect wildfires, as well as update a range of other city services. Vail is expanding its firefighting toolbox as hotter, mo...",
+    "category": "ai",
+    "_trending_tags": [
+      "ai"
+    ],
+    "_permalink": "/p/fd84139a19/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/fd84139a19/",
+    "_summary_240": "A popular ski resort town in Colorado is adopting a new AI Smart City Solution from Hewlett Packard Enterprise (HPE) to help it better detect wildfires, as well as update a range...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/fd84139a19/thumbnail.png"
+  },
+  {
+    "title": "Santander\u2019s Digital Banking Business Helps Drive Record Quarter",
+    "url": "https://www.pymnts.com/news/banking/2025/santanders-digital-banking-business-helps-drive-record-quarter/",
+    "published_at": "2025-10-29T16:44:17-04:00",
+    "source": "PYMNTS",
+    "summary": "Santander says sustained customer growth and ongoing digital transformation helped drive a record quarter. Management said in releasing earnings Wednesday (Oct. 29) that the bank\u2019s long-term profitability hinges on streamlining its technology stack and strengthening its digital relationships with its 178 million customers, a 7 million year-over-year increase. Santander reported an attributable pr...",
+    "content_html": "<p><a class=\"editor-rtfLink\" href=\"https://www.santanderbank.com/\" rel=\"noopener\" target=\"_blank\"><span>Santander</span></a><span> says sustained customer growth and ongoing digital transformation helped drive a record quarter.</span></p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p><span>Management said in </span><a class=\"editor-rtfLink\" href=\"https://www.santander.com/en/press-room/press-releases/2025/10/q3-2025-santander-bank-results\" rel=\"noopener\" target=\"_blank\"><span>releasing earnings</span></a><span> Wednesday (Oct. 29) that the bank\u2019s long-term profitability hinges on streamlining its technology stack and strengthening its digital relationships with its 178 million customers, a 7 million year-over-year increase.</span></p>\n<p><span>Santander reported an attributable profit of</span><span> \u20ac</span><span>10.3 billion in the first nine months of 2025, up 11% from the same period last year, calling it \u201ca record performance for the period.\u201d </span></p>\n<p><span><a href=\"https://www.linkedin.com/in/hector-grisi-checa/?originalSubdomain=es\" rel=\"noopener\" target=\"_blank\">Hector Blas Grisi Checa</a>, Santander\u2019s CEO, highlighted the scale of the bank\u2019s ongoing structural change, telling analysts on an earnings call that simplification, automation, and tech capabilities are \u201cexceeding the level expected by the end of \u201925.\u201d</span></p>\n<p><span>The CEO also outlined Santander\u2019s core retail objective: \u201cIn retail, we are transforming the way we operate to become a digital bank with branches, combining cutting-edge technology with the expertise and proximity of our teams.\u201d</span></p>\n<p><span>Meanwhile, the bank says Openbank, Santander\u2019s digital banking unit, has attracted $6.75 billion in deposits and 162,000 new customers in </span><span>just</span><span> the U.S., its </span><span>fourth largest</span><span> market.</span><span> The company\u2019s other efforts stateside include a </span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/news/digital-banking/2025/santander-pitches-savings-plan-to-verizon-customers/\" rel=\"noopener\" target=\"_blank\"><span>partnership</span></a><span> with Verizon to bolster its deposit base.</span></p>\n<p><span>The bank also </span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/news/banking/2025/santander-merges-openbank-with-consumer-finance-unit/\" rel=\"noopener\" target=\"_blank\"><span>recently integrated</span></a><span> Santander Consumer Finance and Openbank in Europe to simplify operations, lower costs, and improve product offerings.\u00a0</span></p>\n<p><span>\u201cThis combination will strengthen our position in key markets like Germany and across Europe, enabling us to offer customers a broader range of products and a seamless digital and in-branch experience,\u201d <a href=\"https://www.linkedin.com/in/nitin-prabhu-3421799/?originalSubdomain=es\" rel=\"noopener\" target=\"_blank\">Nitin Prabhu</a>, head of Santander\u2019s Digital Consumer Bank global business, said in a news release earlier this month.</span></p>\n<p><span>\u201cBy leveraging Openbank\u2019s advanced technology and Santander\u2019s consumer finance expertise, we\u2019re creating a more efficient and innovative digital-first bank ready for the future.</span></p>\n<p><span>Also </span><span>Wednesday</span><span>, management said Santander\u2019s payments division, </span><a class=\"editor-rtfLink\" href=\"https://www.pagonxt.com/\" rel=\"noopener\" target=\"_blank\"><span>PagoNxt</span></a><span>, is performing strongly as well, with its EBITDA margin already exceeding the 2025 Investor Day target, reaching 32%.</span></p>\n<p><span>A </span><a class=\"editor-rtfLink\" href=\"https://www.wsj.com/business/earnings/santander-profit-rises-on-contained-costs-f835b0f6\" rel=\"noopener\" target=\"_blank\"><span>report</span></a><span> Wednesday by The Wall Street Journal (WSJ) noted that Santander\u2019s U.S. business also holds a substantial share of the auto finance sector, an area which has come under heightened scrutiny recently in the wake of two </span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/news/b2b-payments/2025/first-brands-collapse-puts-spotlight-on-rogue-receivables-supplier-financing/\" rel=\"noopener\" target=\"_blank\"><span>high-profile bankruptcies</span></a><span>: that of parts supplier First Brands and subprime lender </span><a class=\"editor-rtfLink\" href=\"https://www.tricolor.com/en-US/finance\" rel=\"noopener\" target=\"_blank\"><span>Tricolor</span></a><span>.</span></p>\n<p><span>WSJ said Santander floated a $77 million loan to First Brands </span><span>although</span><span> subsequent reports said that this exposure may be outside the bankrupt U.S. entity. When asked about it during the earnings call, Grisi said that this exposure wouldn\u2019t be material for the bank.</span></p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/news/banking/2025/santanders-digital-banking-business-helps-drive-record-quarter/\">Santander&#8217;s Digital Banking Business Helps Drive Record Quarter</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
+    "image_url": "https://www.pymnts.com/wp-content/uploads/2025/10/Santander-earnings.jpg?w=457",
+    "summary_text": "Santander says sustained customer growth and ongoing digital transformation helped drive a record quarter. Management said in releasing earnings Wednesday (Oct. 29) that the bank\u2019s long-term profitability hinges on streamlining its technology stack and streng...",
+    "category": "fintech",
+    "_trending_tags": [
+      "ai"
+    ],
+    "_permalink": "/p/4b2b1c258a/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/4b2b1c258a/",
+    "_summary_240": "Santander says sustained customer growth and ongoing digital transformation helped drive a record quarter. Management said in releasing earnings Wednesday (Oct. 29) that the...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/4b2b1c258a/thumbnail.png"
+  },
+  {
+    "title": "Tech earnings live: Alphabet rallies on record revenue while Meta sinks",
+    "url": "https://www.ft.com/content/32615d88-91a9-4fa8-8ad8-e6abb8e83397",
+    "published_at": "2025-10-29T16:26:41-04:00",
+    "source": "Financial Times - Technology",
+    "summary": "Shares of Facebook parent tumble as it increases AI spending while Microsoft cloud growth disappoints",
+    "content_html": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/3021ee09-9351-4394-b6e6-fbcc99429721.jpg",
+    "summary_text": "Shares of Facebook parent tumble as it increases AI spending while Microsoft cloud growth disappoints",
+    "category": "ai",
+    "_trending_tags": [
+      "ai",
+      "cloud",
+      "meta",
+      "microsoft"
+    ],
+    "_permalink": "/p/f83a3d8e87/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/f83a3d8e87/",
+    "_summary_240": "Shares of Facebook parent tumble as it increases AI spending while Microsoft cloud growth disappoints",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/f83a3d8e87/thumbnail.png"
+  },
+  {
     "title": "Adyen Gears Up for Agentic Commerce",
     "url": "https://www.pymnts.com/earnings/2025/adyen-gears-up-agentic-commerce/",
     "published_at": "2025-10-29T16:23:31-04:00",
@@ -19,23 +152,19 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/2a02af39f4/thumbnail.png"
   },
   {
-    "title": "Meta Projects Increasing Expenses; Takes One-Time Tax Charge",
+    "title": "Meta Projects Increasing Expenses, Takes One-Time Tax Charge",
     "url": "https://www.bloomberg.com/news/articles/2025-10-29/meta-projects-increasing-expenses-takes-one-time-tax-charge",
     "published_at": "2025-10-29T16:19:07-04:00",
     "source": "Bloomberg Technology",
-    "summary": "Meta Platforms Inc. said it expects total expenses to significantly increase in 2026, and will continue to invest at historic levels in artificial intelligence.",
+    "summary": "Meta Platforms Inc. said it expects total expenses to significantly increase in 2026, and the company will continue to spend at historic levels on data centers and other equipment to fuel its effort in artificial intelligence. The shares dropped in extended trading.",
     "content_html": "The Meta store in Burlingame, California. Photographer: David Paul Morris/Bloomberg",
     "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iVmVk33Wtt_w/v0/1200x-1.jpg",
-    "summary_text": "Meta Platforms Inc. said it expects total expenses to significantly increase in 2026, and will continue to invest at historic levels in artificial intelligence.",
+    "summary_text": "Meta Platforms Inc. said it expects total expenses to significantly increase in 2026, and the company will continue to spend at historic levels on data centers and other equipment to fuel its effort in artificial intelligence. The shares dropped in extended t...",
     "category": "ai",
     "_trending_tags": [
       "ai",
       "meta"
-    ],
-    "_permalink": "/p/bad55bfc1e/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/bad55bfc1e/",
-    "_summary_240": "Meta Platforms Inc. said it expects total expenses to significantly increase in 2026, and will continue to invest at historic levels in artificial intelligence.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/bad55bfc1e/thumbnail.png"
+    ]
   },
   {
     "title": "Microsoft Reports Spike in Data Center Spending; Shares Slip",
@@ -84,7 +213,7 @@
   },
   {
     "title": "Solana event shortened amid crypto crackdown in China: Report",
-    "url": "https://cointelegraph.com/news/solana-event-china-crypto-crackdown?utm_source=rss_feed&utm_medium=rss%3F_%3D1761770406440%26_rnd%3Dwbt18s%26noCache%3Dtrue&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/solana-event-china-crypto-crackdown?utm_source=rss_feed&utm_medium=rss%3F_t%3D1761772500196%26ttl%3D0&utm_campaign=rss_partner_inbound",
     "published_at": "2025-10-29T16:02:15-04:00",
     "source": "Cointelegraph",
     "summary": "A Chinese blockchain event was reportedly cut short on Tuesday due to overcrowding, but some attendees expressed concerns over the country's recent crackdowns.",
@@ -95,10 +224,10 @@
     "_trending_tags": [
       "ai"
     ],
-    "_permalink": "/p/0e2f710110/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/0e2f710110/",
+    "_permalink": "/p/3777972bf6/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/3777972bf6/",
     "_summary_240": "A Chinese blockchain event was reportedly cut short on Tuesday due to overcrowding, but some attendees expressed concerns over the country's recent crackdowns.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/0e2f710110/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/3777972bf6/thumbnail.png"
   },
   {
     "title": "Musk Lawyer Vows Legal Fight to Unwind OpenAI Restructuring",
@@ -289,24 +418,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/3a76837435/thumbnail.png"
   },
   {
-    "title": "Why Context, Not Prompts, Is Key to Enterprise Reliability",
-    "url": "https://www.pymnts.com/artificial-intelligence-2/2025/why-context-not-prompts-is-key-to-enterprise-reliability/",
-    "published_at": "2025-10-29T14:20:01-04:00",
-    "source": "PYMNTS",
-    "summary": "AI systems only perform as well as the information they are given. When inputs are scattered, incomplete or outdated, even advanced models can produce inconsistent or irrelevant results. Context engineering addresses that gap by structuring how information is organized, prioritized and refreshed so that models can interpret complex, interconnected data in real time. Prompt [\u2026] The post Why Contex...",
-    "content_html": "<p><span>AI systems only perform as well as the information they are given. When inputs are scattered, incomplete or outdated, even advanced models can produce inconsistent or irrelevant results. Context engineering addresses that gap by structuring how information is organized, prioritized and refreshed so that models can interpret complex, interconnected data in real time.</span></p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p><span>Prompt engineering used to be a hot topic in AI. Developers believed that better wording could unlock better answers, flooding forums with prompt tricks and tips. It worked for simple tasks, but not for complex workflows.</span></p>\n<p><span>For example, a customer service chatbot must pull from multiple data sources at once: previous support tickets, current account information, product documentation, and recent policy changes. For the bot to respond accurately, these inputs must be delivered in a consistent and meaningful order. If the model receives too much data or conflicting information, it may misinterpret the question or offer an outdated answer. This is where traditional prompting reaches its limits and structured context management becomes essential.</span></p>\n<p><span>IBM explains that an AI model\u2019s </span><a href=\"https://www.ibm.com/think/topics/context-window\" rel=\"noopener\" target=\"_blank\"><span>context window</span></a><span>, the portion of information it can process at one time, functions like its short-term working memory. The order and quality of that information determine how effectively a model understands a request. Context enforces that discipline, ensuring that models work from the most relevant and current details instead of being overwhelmed by raw, unfiltered data. As IBM noted, clarity and sequencing are the difference between an AI system that performs reliably and one that produces guesswork.</span></p>\n<h2><b><span>From Retrieval to Real-Time Awareness</span></b></h2>\n<p><span>Many of today\u2019s context-management methods evolved from </span><a href=\"https://aws.amazon.com/what-is/retrieval-augmented-generation/\" rel=\"noopener\" target=\"_blank\"><span>retrieval augmented generation</span></a> (RAG), <span>a technique that allows models to reference new information without retraining. Before RAG, developers had to fine-tune models on proprietary data whenever new documents or rules were introduced. With RAG, the model instead retrieves the most relevant pieces of information from external sources such as databases or document repositories and inserts them into its context window before responding.</span></p>\n<p><span>This shift made large language models far more practical for enterprise use. A financial institution, for example, can connect an AI system to its latest compliance bulletins or internal policy memos. When employees ask regulatory questions, the AI searches those documents, pulls relevant excerpts, and crafts an answer using the latest data. The model is not learning new information but applying its reasoning ability to the most current context.</span></p>\n<p><span>Modern frameworks such as </span><a href=\"https://blog.langchain.com/the-rise-of-context-engineering/\" rel=\"noopener\" target=\"_blank\"><span>LangChain</span></a><span> and Anthropic\u2019s </span><a href=\"https://www.anthropic.com/engineering/contextual-retrieval\" rel=\"noopener\" target=\"_blank\"><span>contextual retrieval research</span></a><span> refine this further. They break large files into smaller sections, rank them by relevance, and feed only the most useful fragments into the model. That makes it possible to handle dense, cross-referenced material such as product catalogs, transaction records or compliance reports without exceeding processing limits or introducing noise.</span></p>\n<p><span>Google Research has also shown how retrieval-based systems benefit from better context design. In its report on </span><a href=\"https://research.google/blog/deeper-insights-into-retrieval-augmented-generation-the-role-of-sufficient-context/\" rel=\"noopener\" target=\"_blank\"><span>the role of sufficient context in RAG</span></a><span>, Google found that accuracy improves when models are given only concise, structured inputs rather than long or loosely related data chunks.</span></p>\n<p><span>For banks and financial institutions, this capability means a model can respond to customer questions about fees or credit terms based on the most recent version of documentation rather than outdated text. In fraud detection, it allows agents to reference only recent transactions or active watch lists, reducing false alerts and increasing speed.</span></p>\n<h2><b><span>Dynamic Context for AI Agents</span></b></h2>\n<p><span>The next phase of development involves AI agents that manage their own context dynamically. Instead of passively receiving information, these agents can decide which data or external tools to access during a task. A treasury assistant, for example, can analyze liquidity data, recognize that it needs updated currency rates, call a financial API, and continue processing without human input.</span></p>\n<p><span>This approach has become more viable as token-processing costs fall. Enterprises can now deploy multiple specialized agents that share relevant summaries with each other rather than relying on a single large model. One agent might focus on compliance checks, another on risk scoring, and another on customer communication. Each maintains a narrow but accurate context and passes structured updates between systems. This coordination allows teams to manage complexity without overwhelming any single model.</span></p>\n<p><span>As </span><a href=\"https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents\" rel=\"noopener\" target=\"_blank\"><span>Anthropic</span></a><span> noted, context is the control surface for AI behavior. Managing that surface effectively turns general-purpose models into reliable, specialized tools. Poorly managed context leads to drift, inconsistency and error. In high-stakes environments such as finance and compliance, that distinction determines whether AI systems deliver measurable efficiency or introduce new forms of risk.</span></p>\n<p><i><span>For all PYMNTS AI coverage, subscribe to the daily </span></i><a href=\"https://pymnts.com/subscribe/\" rel=\"noopener\" target=\"_blank\"><i><span>AI Newsletter</span></i></a><i><span>.</span></i></p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/artificial-intelligence-2/2025/why-context-not-prompts-is-key-to-enterprise-reliability/\">Why Context, Not Prompts, Is Key to Enterprise Reliability</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
-    "image_url": "https://www.pymnts.com/wp-content/uploads/2025/10/AI-artificial-intelligence-context-engineering-large-language-models-llms.jpg?w=457",
-    "summary_text": "AI systems only perform as well as the information they are given. When inputs are scattered, incomplete or outdated, even advanced models can produce inconsistent or irrelevant results. Context engineering addresses that gap by structuring how information is...",
-    "category": "ai",
-    "_trending_tags": [
-      "ai"
-    ],
-    "_permalink": "/p/2b331de043/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/2b331de043/",
-    "_summary_240": "AI systems only perform as well as the information they are given. When inputs are scattered, incomplete or outdated, even advanced models can produce inconsistent or irrelevant...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/2b331de043/thumbnail.png"
-  },
-  {
     "title": "AI Agents Are Terrible Freelance Workers",
     "url": "https://www.wired.com/story/ai-agents-are-terrible-freelance-workers/",
     "published_at": "2025-10-29T14:00:00-04:00",
@@ -339,25 +450,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/f811c153a5/",
     "_summary_240": "Prosecutors confirmed Peter Williams, the former Trenchant boss, sold eight exploits to a Russian buyer. TechCrunch exclusively reported that the Trenchant division was...",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/f811c153a5/thumbnail.png"
-  },
-  {
-    "title": "Balance Debuts AI Communication Tool for B2B Transactions",
-    "url": "https://www.pymnts.com/artificial-intelligence-2/2025/balance-debuts-ai-communication-tool-for-b2b-transactions/",
-    "published_at": "2025-10-29T13:37:23-04:00",
-    "source": "PYMNTS",
-    "summary": "B2B commerce infrastructure platform Balance has a new tool for customers\u2019 artificial intelligence (AI) agents. The Balance Model Context Protocol (MCP) Server, now in beta, lets the AI communicate with Balance\u2019s payments, credit, and receivables APIs, the company said in a Wednesday (Oct. 29) news release. By connecting Balance to large language models through [\u2026] The post Balance Debuts AI Comm...",
-    "content_html": "<p><span style=\"font-weight: 400;\">B2B commerce infrastructure platform </span><a href=\"https://www.getbalance.com/\" rel=\"noopener\" target=\"_blank\"><span style=\"font-weight: 400;\">Balance</span></a><span style=\"font-weight: 400;\"> has a new tool for customers\u2019 artificial intelligence (AI) agents.</span></p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p><span style=\"font-weight: 400;\">The Balance Model Context Protocol (MCP) Server, now in beta, lets the AI communicate with Balance\u2019s payments, credit, and receivables APIs, the company said in a Wednesday (Oct. 29) </span><a href=\"https://www.businesswire.com/news/home/20251029268712/en/Balance-introduces-MCP-Server-enabling-AI-agents-to-analyze-and-manage-B2B-payments-in-real-time\" rel=\"noopener\" target=\"_blank\"><span style=\"font-weight: 400;\">news release</span></a><span style=\"font-weight: 400;\">.</span></p>\n<p><span style=\"font-weight: 400;\">By connecting Balance to large language models through MCP, merchants can tap into and act on real-time buyer intelligence leaving their preferred AI chat interface, the release added.</span></p>\n<p><span style=\"font-weight: 400;\">\u201cAgentic B2B commerce brings intelligence and autonomy to transactions between businesses,\u201d said <a href=\"https://www.linkedin.com/in/bar-geron/\" rel=\"noopener\" target=\"_blank\">Bar Geron</a>, Balance co-founder and CEO. \u201cAs </span><a href=\"https://www.pymnts.com/tag/b2b-ecommerce/\" rel=\"noopener\" target=\"_blank\"><span style=\"font-weight: 400;\">B2B eCommerce</span></a><span style=\"font-weight: 400;\"> continues expanding, incorporating the latest developments in AI is crucial to ensure that merchants and marketplaces can keep up.\u201d</span></p>\n<p><span style=\"font-weight: 400;\">According to the release, the MCP Server lets AI agents used by customers securely retrieve and act on live data using natural language prompts, from checking a buyer\u2019s credit status to generating qualification links.</span></p>\n<p><span style=\"font-weight: 400;\">It lets merchants do things like review payment history, open invoices, or order trends ahead of a customer call, or trigger onboarding, invoicing, and payment links from the chat interface.</span></p>\n<p><span style=\"font-weight: 400;\">\u201cB2B commerce shouldn\u2019t be slowed down by outdated and disjointed systems,\u201d added Yoni Shuster, Balance co-founder and chief technology officer. \u201cWhen AI agents can handle data retrieval and operational tasks instantly, businesses sell more, suppliers get paid faster, and cash flow becomes more predictable.\u201d</span></p>\n<p><span style=\"font-weight: 400;\">PYMNTS took a closer look at the role agentic AI plays in the B2B world last week in a conversation with </span><a href=\"https://uk.linkedin.com/in/nabilfmanji\" rel=\"noopener\" target=\"_blank\"><span style=\"font-weight: 400;\">Nabil Manji</span></a><span style=\"font-weight: 400;\">, senior vice president and head of FinTech growth and financial partnerships at Worldpay.</span></p>\n<p><span style=\"font-weight: 400;\">\u201cAI is going to have an </span><a href=\"https://www.pymnts.com/artificial-intelligence-2/2025/intelligent-agents-are-teaching-b2b-payments-to-think/\" rel=\"noopener\" target=\"_blank\"><span style=\"font-weight: 400;\">impact widely</span></a><span style=\"font-weight: 400;\"> across what I would call the procure-to-pay process,\u201d Manji, told PYMNTS during a discussion for the B2B PYMNTS 2025 event, </span><a href=\"https://events.pymnts.com/b2bpayments2025-b2b-ai/EP\" rel=\"noopener\" target=\"_blank\"><span style=\"font-weight: 400;\">\u201cB2B.AI: The Architecture of Intelligent Money Movement.\u201d</span></a></p>\n<p><span style=\"font-weight: 400;\">\u201cIf you think about reconciliation, it\u2019s about as repetitive and unambiguous of a task as you can get in payments. \u2026 It\u2019s a perfect use case for AI,\u201d he added.</span></p>\n<p><span style=\"font-weight: 400;\">Throughout the past decade, automation helped companies do away with </span><a href=\"https://www.pymnts.com/accounts-payable-automation/\" rel=\"noopener\" target=\"_blank\"><span style=\"font-weight: 400;\">repetitive finance tasks</span></a><span style=\"font-weight: 400;\">. But traditional software still needed rules written by humans and required human intervention for exceptions.</span></p>\n<p>\u201c<a href=\"https://www.pymnts.com/artificial-intelligence-2/2025/b2b-payments-get-their-ai-moment/\" rel=\"noopener\" target=\"_blank\"><span style=\"font-weight: 400;\">Agentic AI</span></a><span style=\"font-weight: 400;\"> flips that model. Instead of simply following scripts, these agents learn from data patterns, anticipate liquidity needs, reconcile mismatches at scale, and act in near real time,\u201d PYMNTS wrote. &#8220;This makes them particularly well-suited for B2B payments, where vast transaction volumes, timing sensitivities, and cross-border flows can overwhelm manual oversight.\u201d</span></p>\n<p><i><span>For all PYMNTS AI coverage, subscribe to the daily </span></i><a href=\"https://pymnts.com/subscribe/\" rel=\"noopener\" target=\"_blank\"><i><span>AI Newsletter</span></i></a><i><span>.</span></i></p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/artificial-intelligence-2/2025/balance-debuts-ai-communication-tool-for-b2b-transactions/\">Balance Debuts AI Communication Tool for B2B Transactions</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
-    "image_url": "https://www.pymnts.com/wp-content/uploads/2025/10/balance-ai-artificial-intelligence-agentic-ai-b2b-commerce-real-time-payments.jpg?w=457",
-    "summary_text": "B2B commerce infrastructure platform Balance has a new tool for customers\u2019 artificial intelligence (AI) agents. The Balance Model Context Protocol (MCP) Server, now in beta, lets the AI communicate with Balance\u2019s payments, credit, and receivables APIs, the co...",
-    "category": "ai",
-    "_trending_tags": [
-      "agent",
-      "ai"
-    ],
-    "_permalink": "/p/96ba83deeb/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/96ba83deeb/",
-    "_summary_240": "B2B commerce infrastructure platform Balance has a new tool for customers\u2019 artificial intelligence (AI) agents. The Balance Model Context Protocol (MCP) Server, now in beta, lets...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/96ba83deeb/thumbnail.png"
   },
   {
     "title": "48 Hours Without A.I.",
@@ -467,7 +559,7 @@
   },
   {
     "title": "Telegram\u2019s Pavel Durov unveils decentralized AI network built on TON",
-    "url": "https://cointelegraph.com/news/pavel-durov-cocoon-decentralized-ai-privacy?utm_source=rss_feed&utm_medium=rss%3F_%3D1761770406440%26_rnd%3Dwbt18s%26noCache%3Dtrue&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/pavel-durov-cocoon-decentralized-ai-privacy?utm_source=rss_feed&utm_medium=rss%3F_t%3D1761772500196%26ttl%3D0&utm_campaign=rss_partner_inbound",
     "published_at": "2025-10-29T12:49:26-04:00",
     "source": "Cointelegraph",
     "summary": "The new project, dubbed Cocoon, aims to give users access to AI tools without surrendering their data to centralized providers.",
@@ -478,14 +570,14 @@
     "_trending_tags": [
       "ai"
     ],
-    "_permalink": "/p/6476b9ae9b/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/6476b9ae9b/",
+    "_permalink": "/p/5ffbf5fc32/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/5ffbf5fc32/",
     "_summary_240": "The new project, dubbed Cocoon, aims to give users access to AI tools without surrendering their data to centralized providers.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/6476b9ae9b/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/5ffbf5fc32/thumbnail.png"
   },
   {
     "title": "The debasement trade has gone mainstream: What it means for Bitcoin",
-    "url": "https://cointelegraph.com/news/wall-street-debasement-trade-video?utm_source=rss_feed&utm_medium=rss%3F_%3D1761770406440%26_rnd%3Dwbt18s%26noCache%3Dtrue&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/wall-street-debasement-trade-video?utm_source=rss_feed&utm_medium=rss%3F_t%3D1761772500196%26ttl%3D0&utm_campaign=rss_partner_inbound",
     "published_at": "2025-10-29T12:33:55-04:00",
     "source": "Cointelegraph",
     "summary": "In the latest Cointelegraph interview, James Lavish explains why the \u201cdebasement trade\u201d is going mainstream, and what that could mean for Bitcoin.",
@@ -496,14 +588,14 @@
     "_trending_tags": [
       "ai"
     ],
-    "_permalink": "/p/aeb6892ef7/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/aeb6892ef7/",
+    "_permalink": "/p/97e09cf233/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/97e09cf233/",
     "_summary_240": "In the latest Cointelegraph interview, James Lavish explains why the \u201cdebasement trade\u201d is going mainstream, and what that could mean for Bitcoin.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/aeb6892ef7/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/97e09cf233/thumbnail.png"
   },
   {
     "title": "Ex-FTX US chief bets on \u2018perps\u2019 for traditional markets",
-    "url": "https://cointelegraph.com/news/ex-ftx-us-chief-perps-traditional-markets?utm_source=rss_feed&utm_medium=rss%3F_%3D1761770406440%26_rnd%3Dwbt18s%26noCache%3Dtrue&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/ex-ftx-us-chief-perps-traditional-markets?utm_source=rss_feed&utm_medium=rss%3F_t%3D1761772500196%26ttl%3D0&utm_campaign=rss_partner_inbound",
     "published_at": "2025-10-29T12:27:13-04:00",
     "source": "Cointelegraph",
     "summary": "Brett Harrison\u2019s new startup brings perpetual futures \u2014 crypto\u2019s signature high-leverage contracts \u2014 to stocks, currencies and commodities.",
@@ -511,10 +603,10 @@
     "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTAvMDE5YTMwZDAtMjZmYS03Njc2LTgwMDQtNjhjNWY5Y2E3NGRi.jpg",
     "summary_text": "Brett Harrison\u2019s new startup brings perpetual futures \u2014 crypto\u2019s signature high-leverage contracts \u2014 to stocks, currencies and commodities.",
     "category": "fintech",
-    "_permalink": "/p/f4b424dce7/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/f4b424dce7/",
+    "_permalink": "/p/6e7e435e07/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/6e7e435e07/",
     "_summary_240": "Brett Harrison\u2019s new startup brings perpetual futures \u2014 crypto\u2019s signature high-leverage contracts \u2014 to stocks, currencies and commodities.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/f4b424dce7/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/6e7e435e07/thumbnail.png"
   },
   {
     "title": "How AI labs use Mercor to get the data companies won\u2019t share",
@@ -533,21 +625,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/11962bc04b/",
     "_summary_240": "Mercor CEO Brendan Foody has built a $10 billion empire freeing up valuable data from legacy industries and making it available to AI labs.",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/11962bc04b/thumbnail.png"
-  },
-  {
-    "title": "Chrome is about to show even more safety warnings",
-    "url": "https://www.theverge.com/news/808108/google-chrome-insecure-websites-warnings-https-default",
-    "published_at": "2025-10-29T12:00:40-04:00",
-    "source": "The Verge",
-    "summary": "You\u2019re going to start seeing more warnings in Chrome when accessing insecure sites. Starting next October, Chrome will soon warn users when they visit a public website without an encrypted HTTPS connection. Chrome already issues a \u201cYour connection is not private\u201d message when you visit pages that have an HTTPS connection that\u2019s misconfigured. But this [\u2026]",
-    "content_html": "<figure>\n\n<img alt=\"\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/10/STK114_Google_Chrome_01.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100\" />\n\t<figcaption>\n\t\t</figcaption>\n</figure>\n<p class=\"has-text-align-none\">You&#8217;re going to start seeing more warnings in Chrome when accessing insecure sites. <a href=\"https://security.googleblog.com/2025/10/https-by-default.html\">Starting next October</a>, Chrome will soon warn users when they visit a public website without an encrypted HTTPS connection.</p>\n\n<p class=\"has-text-align-none\">Chrome already issues a \u201cYour connection is not private\u201d message when you visit pages that have an HTTPS connection that\u2019s misconfigured. But this will expand the warnings to websites that don\u2019t use HTTPS at all.</p>\n\n<p class=\"has-text-align-none\">Google first <a href=\"https://www.theverge.com/2021/7/14/22577151/google-chrome-https-first-mode-option-lock-icon-experiment\">offered insecure connections</a> warnings for HTTP pages in 2021, but users had to opt in to see them. HTTPS \u2014 or Hypertext Transfer Protocol Secure \u2014 <a href=\"https://www.cloudflare.com/learning/ssl/why-is-http-not-secure/\">uses encryption to establish</a> a secure connection with a website, preventing bad actors from snooping on the private information you enter.</p>\n<img alt=\"\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/10/chrome-http-insecure.png?quality=90&#038;strip=all&#038;crop=0,0,100,100\" title=\"\" />\n<p class=\"has-text-align-none\">HTTPS connections now make up around 95 to 99 percent of connections, Google says. \u201cThis level of adoption is what makes it possible to consider stronger mitigations against the remaining insecure HTTP,\u201d Google writes in its announcement.</p>\n\n<p class=\"has-text-align-none\">The company notes that \u201cthe largest contributor to insecure HTTP\u201d is private websites, adding that it remains complicated for them to get an HTTPS certification. \u201cHTTP navigations to private sites can still be risky, but are typically less dangerous than their public site counterparts because there are fewer ways for an attacker to take advantage of these HTTP navigations,\u201d Google says.</p>\n\n<p class=\"has-text-align-none\">Before making HTTPS the default for everyone, Google plans on rolling out the change to people who have enabled Enhanced Safe Browsing protections in Chrome starting in April 2026. Google adds that users will still be able to disable HTTP warnings by turning off the &#8220;Always Use Secure Connections&#8221; setting.</p>",
-    "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/10/STK114_Google_Chrome_01.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "summary_text": "You\u2019re going to start seeing more warnings in Chrome when accessing insecure sites. Starting next October, Chrome will soon warn users when they visit a public website without an encrypted HTTPS connection. Chrome already issues a \u201cYour connection is not priv...",
-    "category": "fintech",
-    "_permalink": "/p/705b70ba27/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/705b70ba27/",
-    "_summary_240": "You\u2019re going to start seeing more warnings in Chrome when accessing insecure sites. Starting next October, Chrome will soon warn users when they visit a public website without an...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/705b70ba27/thumbnail.png"
   },
   {
     "title": "AI Coding Leader Cursor Says New Agent Fields Tougher Tasks",
@@ -572,7 +649,7 @@
   },
   {
     "title": "Solana staking ETFs are 'missing part of puzzle': Bitwise CIO",
-    "url": "https://cointelegraph.com/news/solana-staking-etfs-missing-part-of-puzzle-bitwise-cio?utm_source=rss_feed&utm_medium=rss%3F_%3D1761770406440%26_rnd%3Dwbt18s%26noCache%3Dtrue&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/solana-staking-etfs-missing-part-of-puzzle-bitwise-cio?utm_source=rss_feed&utm_medium=rss%3F_t%3D1761772500196%26ttl%3D0&utm_campaign=rss_partner_inbound",
     "published_at": "2025-10-29T11:29:10-04:00",
     "source": "Cointelegraph",
     "summary": "Bitwise\u2019s Chief Investment Officer Matt Hougan says Solana\u2019s staking ETFs yield generation is a significant drawcard for institutional investors.",
@@ -580,10 +657,10 @@
     "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTAvMDE5YTMwODEtZGViNC03MDg2LWJlYzAtNzRkMTRlZjg3ZmZm.jpg",
     "summary_text": "Bitwise\u2019s Chief Investment Officer Matt Hougan says Solana\u2019s staking ETFs yield generation is a significant drawcard for institutional investors.",
     "category": "fintech",
-    "_permalink": "/p/042142c0fa/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/042142c0fa/",
+    "_permalink": "/p/1ef8cb599c/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/1ef8cb599c/",
     "_summary_240": "Bitwise\u2019s Chief Investment Officer Matt Hougan says Solana\u2019s staking ETFs yield generation is a significant drawcard for institutional investors.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/042142c0fa/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/1ef8cb599c/thumbnail.png"
   },
   {
     "title": "AI Frenzy Is Spreading Over to Caterpillar and Oil Frackers",
@@ -605,7 +682,7 @@
   },
   {
     "title": "Here\u2019s what happened in crypto today",
-    "url": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss%3F_%3D1761770406440%26_rnd%3Dwbt18s%26noCache%3Dtrue&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss%3F_t%3D1761772500196%26ttl%3D0&utm_campaign=rss_partner_inbound",
     "published_at": "2025-10-29T11:12:33-04:00",
     "source": "Cointelegraph",
     "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, NFTs, Web3 and crypto regulation.",
@@ -616,10 +693,10 @@
     "_trending_tags": [
       "ai"
     ],
-    "_permalink": "/p/ece9e8fb4e/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/ece9e8fb4e/",
+    "_permalink": "/p/bb3ad36249/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/bb3ad36249/",
     "_summary_240": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, NFTs, Web3 and crypto regulation.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/ece9e8fb4e/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/bb3ad36249/thumbnail.png"
   },
   {
     "title": "The missing data link in enterprise AI: Why agents need streaming context, not just better prompts",
@@ -638,7 +715,7 @@
   },
   {
     "title": "Grayscale debuts Solana ETF, joining Bitwise in SOL staking ETF race",
-    "url": "https://cointelegraph.com/news/grayscale-debuts-solana-etf-joining-bitwise-in-sol-staking-etf-race?utm_source=rss_feed&utm_medium=rss%3F_%3D1761770406440%26_rnd%3Dwbt18s%26noCache%3Dtrue&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/grayscale-debuts-solana-etf-joining-bitwise-in-sol-staking-etf-race?utm_source=rss_feed&utm_medium=rss%3F_t%3D1761772500196%26ttl%3D0&utm_campaign=rss_partner_inbound",
     "published_at": "2025-10-29T10:54:40-04:00",
     "source": "Cointelegraph",
     "summary": "Grayscale Investments has launched its staking-enabled Solana ETF on NYSE Arca, backed by $103 million in seed capital, and is now the second Solana ETP manager in the US.",
@@ -646,14 +723,14 @@
     "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTAvMDE5YTJmZTgtZWU2Yi03YzgyLWE0YWYtNzY2NDkzMDU4NjM5.jpg",
     "summary_text": "Grayscale Investments has launched its staking-enabled Solana ETF on NYSE Arca, backed by $103 million in seed capital, and is now the second Solana ETP manager in the US.",
     "category": "software",
-    "_permalink": "/p/ba073bffc6/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/ba073bffc6/",
+    "_permalink": "/p/df5b9a0243/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/df5b9a0243/",
     "_summary_240": "Grayscale Investments has launched its staking-enabled Solana ETF on NYSE Arca, backed by $103 million in seed capital, and is now the second Solana ETP manager in the US.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/ba073bffc6/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/df5b9a0243/thumbnail.png"
   },
   {
     "title": "Binance Wallet partners with Bubblemaps to help fight insider crypto trading",
-    "url": "https://cointelegraph.com/news/binance-wallet-bubblemaps-insider-crypto-trading?utm_source=rss_feed&utm_medium=rss%3F_%3D1761770406440%26_rnd%3Dwbt18s%26noCache%3Dtrue&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/binance-wallet-bubblemaps-insider-crypto-trading?utm_source=rss_feed&utm_medium=rss%3F_t%3D1761772500196%26ttl%3D0&utm_campaign=rss_partner_inbound",
     "published_at": "2025-10-29T10:19:58-04:00",
     "source": "Cointelegraph",
     "summary": "Binance integrates Bubblemaps\u2019 blockchain data tools into its Web3 Wallet, giving users more transparency into token distribution and potential insider trading activity.",
@@ -664,14 +741,14 @@
     "_trending_tags": [
       "ai"
     ],
-    "_permalink": "/p/c588c923fb/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/c588c923fb/",
+    "_permalink": "/p/0cf809febc/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/0cf809febc/",
     "_summary_240": "Binance integrates Bubblemaps\u2019 blockchain data tools into its Web3 Wallet, giving users more transparency into token distribution and potential insider trading activity.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/c588c923fb/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/0cf809febc/thumbnail.png"
   },
   {
     "title": "Trump\u2019s crypto pardons raise ethics and corruption concerns",
-    "url": "https://cointelegraph.com/news/trump-crypto-pardons-corruption-concerns?utm_source=rss_feed&utm_medium=rss%3F_%3D1761770406440%26_rnd%3Dwbt18s%26noCache%3Dtrue&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/trump-crypto-pardons-corruption-concerns?utm_source=rss_feed&utm_medium=rss%3F_t%3D1761772500196%26ttl%3D0&utm_campaign=rss_partner_inbound",
     "published_at": "2025-10-29T10:09:39-04:00",
     "source": "Cointelegraph",
     "summary": "President Donald Trump has pardoned CZ, marking another act of clemency for a prominent figure in the crypto industry that signals a concerning trend.",
@@ -682,14 +759,14 @@
     "_trending_tags": [
       "ai"
     ],
-    "_permalink": "/p/3709819ec2/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/3709819ec2/",
+    "_permalink": "/p/a8c947a1bc/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/a8c947a1bc/",
     "_summary_240": "President Donald Trump has pardoned CZ, marking another act of clemency for a prominent figure in the crypto industry that signals a concerning trend.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/3709819ec2/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/a8c947a1bc/thumbnail.png"
   },
   {
     "title": "Germany\u2019s AfD urges government to treat Bitcoin as strategic asset",
-    "url": "https://cointelegraph.com/news/germany-bitcoin-reserve-idea-mica-overreach?utm_source=rss_feed&utm_medium=rss%3F_%3D1761770406440%26_rnd%3Dwbt18s%26noCache%3Dtrue&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/germany-bitcoin-reserve-idea-mica-overreach?utm_source=rss_feed&utm_medium=rss%3F_t%3D1761772500196%26ttl%3D0&utm_campaign=rss_partner_inbound",
     "published_at": "2025-10-29T10:09:21-04:00",
     "source": "Cointelegraph",
     "summary": "Europe\u2019s MiCA framework is seen by Germany\u2019s main opposition party as a barrier to Bitcoin adoption, sparking calls for regulatory reform.",
@@ -700,10 +777,10 @@
     "_trending_tags": [
       "ai"
     ],
-    "_permalink": "/p/268934dbcb/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/268934dbcb/",
+    "_permalink": "/p/d8f69c68c2/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/d8f69c68c2/",
     "_summary_240": "Europe\u2019s MiCA framework is seen by Germany\u2019s main opposition party as a barrier to Bitcoin adoption, sparking calls for regulatory reform.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/268934dbcb/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/d8f69c68c2/thumbnail.png"
   },
   {
     "title": "New physical attacks are quickly diluting secure enclave defenses from Nvidia, AMD, and Intel",
@@ -725,7 +802,7 @@
   },
   {
     "title": "DeFi needs smarter wallets to prevent overnight losses",
-    "url": "https://cointelegraph.com/news/stop-losing-sleep-over-crypto?utm_source=rss_feed&utm_medium=rss%3F_%3D1761770406440%26_rnd%3Dwbt18s%26noCache%3Dtrue&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/stop-losing-sleep-over-crypto?utm_source=rss_feed&utm_medium=rss%3F_t%3D1761772500196%26ttl%3D0&utm_campaign=rss_partner_inbound",
     "published_at": "2025-10-29T09:30:00-04:00",
     "source": "Cointelegraph",
     "summary": "Crypto markets that trade 24/7 demand automated wallet protections, not manual vigilance. Passive vaults leave people exposed to overnight liquidations.",
@@ -733,10 +810,10 @@
     "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTAvMDE5OWE0ZjEtZGEwNy03MmZkLTlmMjUtMjNhNWRmNGMyNDI5.jpg",
     "summary_text": "Crypto markets that trade 24/7 demand automated wallet protections, not manual vigilance. Passive vaults leave people exposed to overnight liquidations.",
     "category": "fintech",
-    "_permalink": "/p/57f1767a19/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/57f1767a19/",
+    "_permalink": "/p/132e174a38/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/132e174a38/",
     "_summary_240": "Crypto markets that trade 24/7 demand automated wallet protections, not manual vigilance. Passive vaults leave people exposed to overnight liquidations.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/57f1767a19/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/132e174a38/thumbnail.png"
   },
   {
     "title": "Oracle Bond Risk Jumps on Concerns Over AI Spending Spree",
@@ -831,7 +908,7 @@
   },
   {
     "title": "BitGo expands institutional custody to Canton Network\u2019s native token",
-    "url": "https://cointelegraph.com/news/bitgo-canton-coin-custody-support?utm_source=rss_feed&utm_medium=rss%3F_%3D1761770406440%26_rnd%3Dwbt18s%26noCache%3Dtrue&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/bitgo-canton-coin-custody-support?utm_source=rss_feed&utm_medium=rss%3F_t%3D1761772500196%26ttl%3D0&utm_campaign=rss_partner_inbound",
     "published_at": "2025-10-29T09:00:00-04:00",
     "source": "Cointelegraph",
     "summary": "BitGo\u2019s new custody support for Canton Coin allows regulated institutions to securely hold the Canton Network\u2019s native token in the United States.",
@@ -839,14 +916,14 @@
     "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMDIvMDE5NTFiYWQtN2E1MC03ODVlLTgzYTItOTAwZTkxY2EyOWM2.jpg",
     "summary_text": "BitGo\u2019s new custody support for Canton Coin allows regulated institutions to securely hold the Canton Network\u2019s native token in the United States.",
     "category": "fintech",
-    "_permalink": "/p/5792d2cc7d/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/5792d2cc7d/",
+    "_permalink": "/p/ca6bc733de/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/ca6bc733de/",
     "_summary_240": "BitGo\u2019s new custody support for Canton Coin allows regulated institutions to securely hold the Canton Network\u2019s native token in the United States.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/5792d2cc7d/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/ca6bc733de/thumbnail.png"
   },
   {
     "title": "Brazilian solar firm Thopen considers Bitcoin mining to absorb surplus power",
-    "url": "https://cointelegraph.com/news/brazilian-solar-firm-thopen-considers-bitcoin-mining-to-absorb-surplus-power?utm_source=rss_feed&utm_medium=rss%3F_%3D1761770406440%26_rnd%3Dwbt18s%26noCache%3Dtrue&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/brazilian-solar-firm-thopen-considers-bitcoin-mining-to-absorb-surplus-power?utm_source=rss_feed&utm_medium=rss%3F_t%3D1761772500196%26ttl%3D0&utm_campaign=rss_partner_inbound",
     "published_at": "2025-10-29T08:46:13-04:00",
     "source": "Cointelegraph",
     "summary": "Brazilian solar energy company Thopen is reportedly exploring Bitcoin mining as a way to monetize excess renewable power and offset curtailment losses.",
@@ -857,10 +934,10 @@
     "_trending_tags": [
       "ai"
     ],
-    "_permalink": "/p/90830ab07e/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/90830ab07e/",
+    "_permalink": "/p/03a2e54f1e/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/03a2e54f1e/",
     "_summary_240": "Brazilian solar energy company Thopen is reportedly exploring Bitcoin mining as a way to monetize excess renewable power and offset curtailment losses.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/90830ab07e/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/03a2e54f1e/thumbnail.png"
   },
   {
     "title": "Phia\u2019s founders on how AI is changing online shopping",
@@ -882,7 +959,7 @@
   },
   {
     "title": "Avalanche attracts governments and funds in Q3, but token lags 86% below peak",
-    "url": "https://cointelegraph.com/news/avalanche-attracts-governments-and-funds-in-q3-but-token-lags-86-below-peak?utm_source=rss_feed&utm_medium=rss%3F_%3D1761770406440%26_rnd%3Dwbt18s%26noCache%3Dtrue&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/avalanche-attracts-governments-and-funds-in-q3-but-token-lags-86-below-peak?utm_source=rss_feed&utm_medium=rss%3F_t%3D1761772500196%26ttl%3D0&utm_campaign=rss_partner_inbound",
     "published_at": "2025-10-29T07:48:06-04:00",
     "source": "Cointelegraph",
     "summary": "Institutions are tokenizing hundreds of millions in capital on the Avalanche blockchain, which is turning government and TradFi integrations \u201cinto onchain reality,\u201d according to Nansen.",
@@ -893,14 +970,14 @@
     "_trending_tags": [
       "ai"
     ],
-    "_permalink": "/p/4be05432bd/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/4be05432bd/",
+    "_permalink": "/p/5e4b77a6e6/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/5e4b77a6e6/",
     "_summary_240": "Institutions are tokenizing hundreds of millions in capital on the Avalanche blockchain, which is turning government and TradFi integrations \u201cinto onchain reality,\u201d according to...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/4be05432bd/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/5e4b77a6e6/thumbnail.png"
   },
   {
     "title": "Crypto ETP season? Safello, Deutsche Digital Assets to launch first TAO ETP on SIX Swiss Exchange",
-    "url": "https://cointelegraph.com/news/safello-deutsche-bank-tao-etp-six-swiss-exchange?utm_source=rss_feed&utm_medium=rss%3F_%3D1761770406440%26_rnd%3Dwbt18s%26noCache%3Dtrue&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/safello-deutsche-bank-tao-etp-six-swiss-exchange?utm_source=rss_feed&utm_medium=rss%3F_t%3D1761772500196%26ttl%3D0&utm_campaign=rss_partner_inbound",
     "published_at": "2025-10-29T07:24:18-04:00",
     "source": "Cointelegraph",
     "summary": "Safello\u2019s TAO ETP joins a new wave of crypto ETFs hitting global markets, with fresh Solana, Litecoin and Hedera fund launches across the US and Hong Kong.",
@@ -908,10 +985,10 @@
     "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMDQvMDE5NjVjZDMtOTBiMC03ZWUwLWIxZTEtOTA4ODkzMmUwYzVm.jpg",
     "summary_text": "Safello\u2019s TAO ETP joins a new wave of crypto ETFs hitting global markets, with fresh Solana, Litecoin and Hedera fund launches across the US and Hong Kong.",
     "category": "fintech",
-    "_permalink": "/p/81e3291e89/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/81e3291e89/",
+    "_permalink": "/p/7e96b32168/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/7e96b32168/",
     "_summary_240": "Safello\u2019s TAO ETP joins a new wave of crypto ETFs hitting global markets, with fresh Solana, Litecoin and Hedera fund launches across the US and Hong Kong.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/81e3291e89/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/7e96b32168/thumbnail.png"
   },
   {
     "title": "OpenAI\u2019s chief gets a licence to play the field",
@@ -954,7 +1031,7 @@
   },
   {
     "title": "Circle\u2019s Arc attracts South Korea\u2019s first won-backed stablecoin experiment",
-    "url": "https://cointelegraph.com/news/south-korea-bdacs-krw1-stablecoin-circle-arc?utm_source=rss_feed&utm_medium=rss%3F_%3D1761770406440%26_rnd%3Dwbt18s%26noCache%3Dtrue&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/south-korea-bdacs-krw1-stablecoin-circle-arc?utm_source=rss_feed&utm_medium=rss%3F_t%3D1761772500196%26ttl%3D0&utm_campaign=rss_partner_inbound",
     "published_at": "2025-10-29T05:25:28-04:00",
     "source": "Cointelegraph",
     "summary": "Circle\u2019s Arc has seen strong early adoption, with over 100 global financial and fintech giants, including BlackRock, Goldman Sachs, Visa and Mastercard, joining its public testnet.",
@@ -965,14 +1042,14 @@
     "_trending_tags": [
       "fintech"
     ],
-    "_permalink": "/p/2008e32997/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/2008e32997/",
+    "_permalink": "/p/728f15da56/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/728f15da56/",
     "_summary_240": "Circle\u2019s Arc has seen strong early adoption, with over 100 global financial and fintech giants, including BlackRock, Goldman Sachs, Visa and Mastercard, joining its public testnet.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/2008e32997/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/728f15da56/thumbnail.png"
   },
   {
     "title": "Saylor\u2019s Strategy tipped for S&P 500 inclusion after Q3 earnings: 10X Research",
-    "url": "https://cointelegraph.com/news/michael-saylor-strategy-70-odds-s-p-500-q3-earnings?utm_source=rss_feed&utm_medium=rss%3F_%3D1761770406440%26_rnd%3Dwbt18s%26noCache%3Dtrue&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/michael-saylor-strategy-70-odds-s-p-500-q3-earnings?utm_source=rss_feed&utm_medium=rss%3F_t%3D1761772500196%26ttl%3D0&utm_campaign=rss_partner_inbound",
     "published_at": "2025-10-29T05:18:55-04:00",
     "source": "Cointelegraph",
     "summary": "Strategy may join the S&P 500 by year-end, even as Bitcoin buys slow and investor sentiment fades, 10x Research said.",
@@ -983,10 +1060,10 @@
     "_trending_tags": [
       "ai"
     ],
-    "_permalink": "/p/828f271f1b/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/828f271f1b/",
+    "_permalink": "/p/8bfc0f3e33/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/8bfc0f3e33/",
     "_summary_240": "Strategy may join the S&P 500 by year-end, even as Bitcoin buys slow and investor sentiment fades, 10x Research said.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/828f271f1b/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/8bfc0f3e33/thumbnail.png"
   },
   {
     "title": "Nvidia supplier has already sold next year\u2019s chips on AI boom",
@@ -1580,25 +1657,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/a9ec830f9e/thumbnail.png"
   },
   {
-    "title": "NVIDIA and Nokia to Pioneer the AI Platform for 6G \u2014 Powering America\u2019s Return to Telecommunications Leadership",
-    "url": "https://nvidianews.nvidia.com/news/nvidia-nokia-ai-telecommunications",
-    "published_at": "2025-10-28T12:29:00-04:00",
-    "source": "NVIDIA News",
-    "summary": "NVIDIA and Nokia today announced a strategic partnership to add NVIDIA-powered, commercial-grade AI-RAN products to Nokia\u2019s industry-leading RAN portfolio, enabling communication service providers to launch AI-native 5G-Advanced and 6G networks on NVIDIA platforms.",
-    "content_html": "",
-    "image_url": "https://s3.amazonaws.com/cms.ipressroom.com/219/files/202510/68fff2dc3d6332fffbcd9d68_nvidia-and-nokia/nvidia-and-nokia_thmb.jpg",
-    "summary_text": "NVIDIA and Nokia today announced a strategic partnership to add NVIDIA-powered, commercial-grade AI-RAN products to Nokia\u2019s industry-leading RAN portfolio, enabling communication service providers to launch AI-native 5G-Advanced and 6G networks on NVIDIA plat...",
-    "category": "ai",
-    "_trending_tags": [
-      "ai",
-      "nvidia"
-    ],
-    "_permalink": "/p/a6f9730c29/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/a6f9730c29/",
-    "_summary_240": "NVIDIA and Nokia today announced a strategic partnership to add NVIDIA-powered, commercial-grade AI-RAN products to Nokia\u2019s industry-leading RAN portfolio, enabling communication...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/a6f9730c29/thumbnail.png"
-  },
-  {
     "title": "GitHub's Agent HQ aims to solve enterprises' biggest AI coding problem: Too many agents, no central control",
     "url": "https://venturebeat.com/ai/githubs-agent-hq-aims-to-solve-enterprises-biggest-ai-coding-problem-too",
     "published_at": "2025-10-28T12:10:00-04:00",
@@ -1962,24 +2020,6 @@
     ]
   },
   {
-    "title": "Rise of the Killer Chatbots",
-    "url": "https://www.wired.com/story/ai-weapon-anduril-llms-drones/",
-    "published_at": "2025-10-27T06:00:00-04:00",
-    "source": "Wired",
-    "summary": "On an airstrip somewhere in Texas, a swarm of killer jets approaches\u2014controlled by, of all things, a large language model.",
-    "content_html": "",
-    "image_url": "https://media.wired.com/photos/68e037e07fa76797a839d2ea/master/pass/WIRED-AI-as_WEAPON_RED.jpg",
-    "summary_text": "On an airstrip somewhere in Texas, a swarm of killer jets approaches\u2014controlled by, of all things, a large language model.",
-    "category": "ai",
-    "_trending_tags": [
-      "ai"
-    ],
-    "_permalink": "/p/825206896e/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/825206896e/",
-    "_summary_240": "On an airstrip somewhere in Texas, a swarm of killer jets approaches\u2014controlled by, of all things, a large language model.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/825206896e/thumbnail.png"
-  },
-  {
     "title": "Ed Zitron Gets Paid to Love AI. He Also Gets Paid to Hate AI",
     "url": "https://www.wired.com/story/ai-pr-ed-zitron-profile/",
     "published_at": "2025-10-27T06:00:00-04:00",
@@ -1998,6 +2038,39 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/ba52f28adc/thumbnail.png"
   },
   {
+    "title": "Rise of the Killer Chatbots",
+    "url": "https://www.wired.com/story/ai-weapon-anduril-llms-drones/",
+    "published_at": "2025-10-27T06:00:00-04:00",
+    "source": "Wired",
+    "summary": "On an airstrip somewhere in Texas, a swarm of killer jets approaches\u2014controlled by, of all things, a large language model.",
+    "content_html": "",
+    "image_url": "https://media.wired.com/photos/68e037e07fa76797a839d2ea/master/pass/WIRED-AI-as_WEAPON_RED.jpg",
+    "summary_text": "On an airstrip somewhere in Texas, a swarm of killer jets approaches\u2014controlled by, of all things, a large language model.",
+    "category": "ai",
+    "_trending_tags": [
+      "ai"
+    ],
+    "_permalink": "/p/825206896e/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/825206896e/",
+    "_summary_240": "On an airstrip somewhere in Texas, a swarm of killer jets approaches\u2014controlled by, of all things, a large language model.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/825206896e/thumbnail.png"
+  },
+  {
+    "title": "Parents Fell in Love With Alpha School\u2019s Promise. Then They Wanted Out",
+    "url": "https://www.wired.com/story/ai-teacher-inside-alpha-school/",
+    "published_at": "2025-10-27T06:00:00-04:00",
+    "source": "Wired",
+    "summary": "In Brownsville, Texas, some families found a buzzy new school\u2019s methods\u2014surveillance of kids, software in lieu of teachers\u2014to be an education in and of itself.",
+    "content_html": "",
+    "image_url": "https://media.wired.com/photos/68fbfc150dc368eee7ad6cb9/master/pass/AA_Final-2.jpg",
+    "summary_text": "In Brownsville, Texas, some families found a buzzy new school\u2019s methods\u2014surveillance of kids, software in lieu of teachers\u2014to be an education in and of itself.",
+    "category": "software",
+    "_permalink": "/p/b773212ee6/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/b773212ee6/",
+    "_summary_240": "In Brownsville, Texas, some families found a buzzy new school\u2019s methods\u2014surveillance of kids, software in lieu of teachers\u2014to be an education in and of itself.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/b773212ee6/thumbnail.png"
+  },
+  {
     "title": "The Argument for Letting AI Burn It All Down",
     "url": "https://www.wired.com/story/ai-normal-after-ai-plateaus/",
     "published_at": "2025-10-27T06:00:00-04:00",
@@ -2014,39 +2087,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/9f8a483723/",
     "_summary_240": "When the AI bubble bursts, the nerds will do their best work.",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/9f8a483723/thumbnail.png"
-  },
-  {
-    "title": "The Worst Thing About AI Is That People Can\u2019t Shut Up About It",
-    "url": "https://www.wired.com/story/ai-journalism-worst-thing-about-ai/",
-    "published_at": "2025-10-27T06:00:00-04:00",
-    "source": "Wired",
-    "summary": "A plea from WIRED\u2019s top boss: Say less.",
-    "content_html": "",
-    "image_url": "https://media.wired.com/photos/68eec201eadc50eb0ecc7414/master/pass/WIRED-AI-as_JOURNALISM_SHADOW-ALT.jpg",
-    "summary_text": "A plea from WIRED\u2019s top boss: Say less.",
-    "category": "ai",
-    "_trending_tags": [
-      "ai"
-    ],
-    "_permalink": "/p/efbd60fc25/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/efbd60fc25/",
-    "_summary_240": "A plea from WIRED\u2019s top boss: Say less.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/efbd60fc25/thumbnail.png"
-  },
-  {
-    "title": "Parents Fell in Love With Alpha School\u2019s Promise. Then They Wanted Out",
-    "url": "https://www.wired.com/story/ai-teacher-inside-alpha-school/",
-    "published_at": "2025-10-27T06:00:00-04:00",
-    "source": "Wired",
-    "summary": "In Brownsville, Texas, some families found a buzzy new school\u2019s methods\u2014surveillance of kids, software in lieu of teachers\u2014to be an education in and of itself.",
-    "content_html": "",
-    "image_url": "https://media.wired.com/photos/68fbfc150dc368eee7ad6cb9/master/pass/AA_Final-2.jpg",
-    "summary_text": "In Brownsville, Texas, some families found a buzzy new school\u2019s methods\u2014surveillance of kids, software in lieu of teachers\u2014to be an education in and of itself.",
-    "category": "software",
-    "_permalink": "/p/b773212ee6/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/b773212ee6/",
-    "_summary_240": "In Brownsville, Texas, some families found a buzzy new school\u2019s methods\u2014surveillance of kids, software in lieu of teachers\u2014to be an education in and of itself.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/b773212ee6/thumbnail.png"
   },
   {
     "title": "Why AI Breaks Bad",
@@ -2102,6 +2142,24 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/70007b0d7b/",
     "_summary_240": "I talked to the scholars who literally wrote the book on tech bubbles\u2014and applied their test.",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/70007b0d7b/thumbnail.png"
+  },
+  {
+    "title": "The Worst Thing About AI Is That People Can\u2019t Shut Up About It",
+    "url": "https://www.wired.com/story/ai-journalism-worst-thing-about-ai/",
+    "published_at": "2025-10-27T06:00:00-04:00",
+    "source": "Wired",
+    "summary": "A plea from WIRED\u2019s top boss: Say less.",
+    "content_html": "",
+    "image_url": "https://media.wired.com/photos/68eec201eadc50eb0ecc7414/master/pass/WIRED-AI-as_JOURNALISM_SHADOW-ALT.jpg",
+    "summary_text": "A plea from WIRED\u2019s top boss: Say less.",
+    "category": "ai",
+    "_trending_tags": [
+      "ai"
+    ],
+    "_permalink": "/p/efbd60fc25/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/efbd60fc25/",
+    "_summary_240": "A plea from WIRED\u2019s top boss: Say less.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/efbd60fc25/thumbnail.png"
   },
   {
     "title": "Chatbots Are Pushing Sanctioned Russian Propaganda",
