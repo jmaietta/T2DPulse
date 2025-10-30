@@ -1,5 +1,91 @@
 [
   {
+    "title": "Are LLMs making us less productive?",
+    "url": "https://www.ft.com/content/24802151-1cd9-4a4b-b0b1-aa937a6a6606",
+    "published_at": "2025-10-30T08:30:08-04:00",
+    "source": "Financial Times - Technology",
+    "summary": "When it comes to assessing our own work performance we are not always reliable witnesses",
+    "content_html": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/cd3de883-d8ab-4985-a698-dd1e1a5b3bb1.jpg",
+    "summary_text": "When it comes to assessing our own work performance we are not always reliable witnesses",
+    "category": "ai",
+    "_trending_tags": [
+      "llm"
+    ],
+    "_permalink": "/p/9fa4c2e31a/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/9fa4c2e31a/",
+    "_summary_240": "When it comes to assessing our own work performance we are not always reliable witnesses",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/9fa4c2e31a/thumbnail.png"
+  },
+  {
+    "title": "OpenAI adds reusable \u2018characters\u2019 and video stitching to Sora",
+    "url": "https://www.theverge.com/news/809877/openai-sora-app-character-cameo-updates",
+    "published_at": "2025-10-30T08:20:45-04:00",
+    "source": "The Verge",
+    "summary": "OpenAI\u2019s Sora app will now let you turn almost anything into a reusable avatar for its AI-generated videos. These \u201ccharacter cameos\u201d are one of several new features that have been added to the Sora 2 video generator, alongside clip stitching and leaderboards that showcase the app\u2019s most popular videos and cameos. Character cameos were teased [\u2026]",
+    "content_html": "<figure>\n\n<img alt=\"\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/10/Sora-Character-Cameo.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100\" />\n\t<figcaption>\n\tSora can turn almost anything into a reusable AI video character.\t</figcaption>\n</figure>\n<p class=\"has-text-align-none\">OpenAI\u2019s Sora app will now let you turn almost anything into a reusable avatar for its AI-generated videos. These \u201c<a href=\"https://x.com/OpenAI/status/1983661036533379486\">character cameos</a>\u201d are one of several new features that have been added to the Sora 2 video generator, alongside clip stitching and leaderboards that showcase the app&#8217;s most popular videos and cameos.</p>\n\n<p class=\"has-text-align-none\">Character cameos were <a href=\"https://www.theverge.com/news/805061/sora-will-let-you-cameo-characters\">teased last week</a>, and build on the existing feature that allows Sora users to create AI deepfakes of themselves that can be used by everyone else on the platform, if permitted. Those same capabilities can now be used on other subjects, such as pets, illustrations, and toys, and the feature is launching with a selection of pre-made characters that users can add to videos.</p>\n\n<p class=\"has-text-align-none\">\u201cOnce created, each character comes with its own permissions, separate from your personal likeness: keep it just for yourself, share it with mutual followers, or open it to everyone on Sora,\u201d OpenAI says in the <a href=\"https://help.openai.com/en/articles/12593142-sora-release-notes\">latest Sora release notes</a>. \u201cGive your character a display name and handle, and tag it whenever you want it to appear in a video.\u201d</p>\n\n<figure class=\"wp-block-embed is-type-rich is-provider-instagram wp-block-embed-instagram\"><div class=\"wp-block-embed__wrapper\">\n<blockquote class=\"instagram-media\"><div> <a href=\"https://www.instagram.com/reel/DQaO9bdksOQ/?utm_source=ig_embed&#038;utm_campaign=loading\" target=\"_blank\"> <div> <div></div> <div> <div></div> <div></div></div></div><div></div> <div></div><div> <div>View this post on Instagram</div></div><div></div> <div><div> <div></div> <div></div> <div></div></div><div> <div></div> <div></div></div><div> <div></div> <div></div> <div></div></div></div> <div> <div></div> <div></div></div></a><p><a href=\"https://www.instagram.com/reel/DQaO9bdksOQ/?utm_source=ig_embed&#038;utm_campaign=loading\" target=\"_blank\">A post shared by Sora (@soraofficial)</a></p></div></blockquote>\n</div></figure>\n\n<p class=\"has-text-align-none\">OpenAI says that character cameos can be created using \u201can original persona&#8221; that users generate in Sora, but it&#8217;s unclear if the feature will accept fictional people generated using other AI tools, or how photorealistic they\u2019re permitted to be. If you can just upload any AI-generated person, OpenAI hasn\u2019t explained how Sora would distinguish these from images of real people. The update is being launched within days of celebrity video platform Cameo <a href=\"https://www.theverge.com/news/808750/openai-sora-cameo-celebrity-deepfake-trademark-lawsuit\">slapping OpenAI with a trademark infringement lawsuit</a> over its usage of \u201ccameo\u201d in Sora app features.</p>\n\n<p class=\"has-text-align-none\">Sora is also introducing video stitching capabilities that can connect multiple videos together to create longer, multi-scene clips, and leaderboards that show the most remixed videos and the most cameoed users and characters. OpenAI has temporarily made the <a href=\"https://x.com/OpenAI/status/1983662144437748181\">Sora app more accessible</a> to get people using these features, announcing yesterday that people in the US, Canada, Japan, and Korea can sign up without an invitation code for a \u201climited time.\u201d</p>",
+    "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/10/Sora-Character-Cameo.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "summary_text": "OpenAI\u2019s Sora app will now let you turn almost anything into a reusable avatar for its AI-generated videos. These \u201ccharacter cameos\u201d are one of several new features that have been added to the Sora 2 video generator, alongside clip stitching and leaderboards ...",
+    "category": "ai",
+    "_trending_tags": [
+      "ai",
+      "openai"
+    ],
+    "_permalink": "/p/218557dcbe/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/218557dcbe/",
+    "_summary_240": "OpenAI\u2019s Sora app will now let you turn almost anything into a reusable avatar for its AI-generated videos. These \u201ccharacter cameos\u201d are one of several new features that have...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/218557dcbe/thumbnail.png"
+  },
+  {
+    "title": "Bybit halts new user onboarding in Japan, citing \u2018emerging\u2019 regulations",
+    "url": "https://cointelegraph.com/news/bybit-pauses-new-user-registrations-japan-fsa-regulations?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "published_at": "2025-10-30T08:20:44-04:00",
+    "source": "Cointelegraph",
+    "summary": "Bybit\u2019s pause comes as Japan\u2019s FSA considers reforms that could allow banks to hold Bitcoin and operate licensed exchanges.",
+    "content_html": "",
+    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTAvMDE5YTM0ZmItODUzYS03MjJlLThiNGItZWY3YTJkYjEyMTNi.jpg",
+    "summary_text": "Bybit\u2019s pause comes as Japan\u2019s FSA considers reforms that could allow banks to hold Bitcoin and operate licensed exchanges.",
+    "category": "fintech",
+    "_permalink": "/p/671935e72a/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/671935e72a/",
+    "_summary_240": "Bybit\u2019s pause comes as Japan\u2019s FSA considers reforms that could allow banks to hold Bitcoin and operate licensed exchanges.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/671935e72a/thumbnail.png"
+  },
+  {
+    "title": "Mark Zuckerberg goes all in on the AI YOLO trade",
+    "url": "https://www.ft.com/content/7ccd3431-b50c-4474-8d79-90464b8b0263",
+    "published_at": "2025-10-30T07:42:19-04:00",
+    "source": "Financial Times - Technology",
+    "summary": "The prize of achieving so-called superintelligence outweighs the risks for Meta chief",
+    "content_html": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/24dcc5e7-828a-46c4-8622-27879a53b889.jpg",
+    "summary_text": "The prize of achieving so-called superintelligence outweighs the risks for Meta chief",
+    "category": "ai",
+    "_trending_tags": [
+      "ai",
+      "meta"
+    ],
+    "_permalink": "/p/7bf389e97d/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/7bf389e97d/",
+    "_summary_240": "The prize of achieving so-called superintelligence outweighs the risks for Meta chief",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/7bf389e97d/thumbnail.png"
+  },
+  {
+    "title": "Secondary Market Appetite for Musk Firms Cools After Trump Feud",
+    "url": "https://www.bloomberg.com/news/articles/2025-10-30/secondary-market-appetite-for-musk-firms-cools-after-trump-feud",
+    "published_at": "2025-10-30T07:04:24-04:00",
+    "source": "Bloomberg Technology",
+    "summary": "Investors are losing appetite for Elon Musk\u2019s portfolio of private companies, following the tycoon\u2019s spat with President Donald Trump, according to secondary market data.",
+    "content_html": "Investors are losing appetite for Musk's portfolio of private companies.",
+    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iVO.vT_BPqmc/v1/1200x-1.jpg",
+    "summary_text": "Investors are losing appetite for Elon Musk\u2019s portfolio of private companies, following the tycoon\u2019s spat with President Donald Trump, according to secondary market data.",
+    "category": "fintech",
+    "_permalink": "/p/fb829c19e3/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/fb829c19e3/",
+    "_summary_240": "Investors are losing appetite for Elon Musk\u2019s portfolio of private companies, following the tycoon\u2019s spat with President Donald Trump, according to secondary market data.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/fb829c19e3/thumbnail.png"
+  },
+  {
     "title": "Meta, Microsoft Spending in AI Race Starts to Rattle Investor Confidence",
     "url": "https://www.bloomberg.com/news/newsletters/2025-10-30/meta-microsoft-spending-in-ai-race-starts-to-rattle-investor-confidence",
     "published_at": "2025-10-30T07:02:05-04:00",
@@ -261,22 +347,15 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/464c654957/thumbnail.png"
   },
   {
-    "title": "Bitcoin Extends Losses as Powell Cautions Against Rate Cut Bets",
+    "title": "Bitcoin Drops Toward Low End of Trading Range Amid Mixed Outlook",
     "url": "https://www.bloomberg.com/news/articles/2025-10-30/bitcoin-btc-extends-losses-as-powell-cautions-against-rate-cut-bets",
     "published_at": "2025-10-30T02:36:24-04:00",
     "source": "Bloomberg Technology",
-    "summary": "Bitcoin continued to lose ground after hawkish remarks from Federal Reserve Chair Jerome Powell dampened expectations for another interest-rate cut this year.",
+    "summary": "Bitcoin edged toward the lower end of its recent trading range as record rallies in other risk assets falter amid a mixed outlook for global growth and interest rates.",
     "content_html": "",
     "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ikq9PnpPVuBQ/v2/1200x-1.png",
-    "summary_text": "Bitcoin continued to lose ground after hawkish remarks from Federal Reserve Chair Jerome Powell dampened expectations for another interest-rate cut this year.",
-    "category": "fintech",
-    "_trending_tags": [
-      "ai"
-    ],
-    "_permalink": "/p/bb9e742974/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/bb9e742974/",
-    "_summary_240": "Bitcoin continued to lose ground after hawkish remarks from Federal Reserve Chair Jerome Powell dampened expectations for another interest-rate cut this year.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/bb9e742974/thumbnail.png"
+    "summary_text": "Bitcoin edged toward the lower end of its recent trading range as record rallies in other risk assets falter amid a mixed outlook for global growth and interest rates.",
+    "category": "fintech"
   },
   {
     "title": "Frax, IQ launch Korean won-pegged KRWQ on Base amid stablecoin push",
@@ -856,22 +935,19 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/8b58c109d4/thumbnail.png"
   },
   {
-    "title": "Institutional traders now drive 80% of Bitget\u2019s volume: Report",
-    "url": "https://cointelegraph.com/news/institutional-traders-drive-bitget-volume-report?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-    "published_at": "2025-10-29T16:50:10-04:00",
-    "source": "Cointelegraph",
-    "summary": "Bitget\u2019s liquidity gains mirror an industrywide shift as exchanges such as Binance, OKX and Crypto.com compete to attract professional and institutional traders.",
-    "content_html": "",
-    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTAvMDE5YTMxMWItOTFkZC03MmVkLTgxZWEtYjA1YjUxZjBlYTQ4.jpg",
-    "summary_text": "Bitget\u2019s liquidity gains mirror an industrywide shift as exchanges such as Binance, OKX and Crypto.com compete to attract professional and institutional traders.",
-    "category": "fintech",
+    "title": "Meta\u2019s 2026 Plan to Spend Even More on AI Shakes Investors",
+    "url": "https://www.bloomberg.com/news/articles/2025-10-29/meta-projects-increasing-expenses-takes-one-time-tax-charge",
+    "published_at": "2025-10-29T16:19:07-04:00",
+    "source": "Bloomberg Technology",
+    "summary": "Mark Zuckerberg warned that Meta Platforms Inc. will need to spend even more aggressively on artificial intelligence in the year ahead, reigniting concerns from investors who sent its shares plunging on concerns that the massive investments won\u2019t pay off.",
+    "content_html": "The Meta store in Burlingame, California. Photographer: David Paul Morris/Bloomberg",
+    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iVmVk33Wtt_w/v0/1200x-1.jpg",
+    "summary_text": "Mark Zuckerberg warned that Meta Platforms Inc. will need to spend even more aggressively on artificial intelligence in the year ahead, reigniting concerns from investors who sent its shares plunging on concerns that the massive investments won\u2019t pay off.",
+    "category": "ai",
     "_trending_tags": [
-      "ai"
-    ],
-    "_permalink": "/p/0040a1f5fd/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/0040a1f5fd/",
-    "_summary_240": "Bitget\u2019s liquidity gains mirror an industrywide shift as exchanges such as Binance, OKX and Crypto.com compete to attract professional and institutional traders.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/0040a1f5fd/thumbnail.png"
+      "ai",
+      "meta"
+    ]
   },
   {
     "title": "Microsoft\u2019s Data Center Crunch Persists Despite Heavy Spending",
@@ -898,39 +974,6 @@
     "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/i3AhLrL_pHxo/v1/1200x-1.jpg",
     "summary_text": "MercadoLibre Inc.\u2019s third quarter net income missed analysts\u2019 estimates despite a jump in revenue from the company\u2019s expansion of its free shipping policies in Brazil and the ongoing growth of its credit card offerings.",
     "category": "fintech"
-  },
-  {
-    "title": "Solana event shortened amid crypto crackdown in China: Report",
-    "url": "https://cointelegraph.com/news/solana-event-china-crypto-crackdown?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-    "published_at": "2025-10-29T16:02:15-04:00",
-    "source": "Cointelegraph",
-    "summary": "A Chinese blockchain event was reportedly cut short on Tuesday due to overcrowding, but some attendees expressed concerns over the country's recent crackdowns.",
-    "content_html": "",
-    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTAvMDE5YTMwOGMtODI3NS03N2RmLWJmNWYtMTNjNzU2ZDdiZjM0.jpg",
-    "summary_text": "A Chinese blockchain event was reportedly cut short on Tuesday due to overcrowding, but some attendees expressed concerns over the country's recent crackdowns.",
-    "category": "fintech",
-    "_trending_tags": [
-      "ai"
-    ],
-    "_permalink": "/p/e001c1614a/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/e001c1614a/",
-    "_summary_240": "A Chinese blockchain event was reportedly cut short on Tuesday due to overcrowding, but some attendees expressed concerns over the country's recent crackdowns.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/e001c1614a/thumbnail.png"
-  },
-  {
-    "title": "Musk Lawyer Vows Legal Fight to Unwind OpenAI Restructuring",
-    "url": "https://www.bloomberg.com/news/articles/2025-10-29/musk-lawyer-vows-legal-fight-to-unwind-openai-s-restructuring",
-    "published_at": "2025-10-29T15:44:16-04:00",
-    "source": "Bloomberg Technology",
-    "summary": "Elon Musk\u2019s lawyer pledged to continue the billionaire\u2019s legal crusade against OpenAI as he slammed the attorneys general of California and Delaware for not blocking the artificial intelligence startup\u2019s restructuring as a for-profit company.",
-    "content_html": "The Open AI logo on a laptop arranged in Crockett, California, US, on Friday, Dec. 29, 2023. Microsoft has invested some $13 billion in OpenAI and integrated its products into its core businesses, quickly becoming the undisputed leader of AI among big tech firms. Photographer: David Paul Morris/Bloomberg",
-    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iW2MzHD3hD.4/v0/1200x-1.jpg",
-    "summary_text": "Elon Musk\u2019s lawyer pledged to continue the billionaire\u2019s legal crusade against OpenAI as he slammed the attorneys general of California and Delaware for not blocking the artificial intelligence startup\u2019s restructuring as a for-profit company.",
-    "category": "ai",
-    "_trending_tags": [
-      "ai",
-      "openai"
-    ]
   },
   {
     "title": "Vibe coding platform Cursor releases first in-house LLM, Composer, promising 4X speed boost",
@@ -1904,24 +1947,6 @@
     ]
   },
   {
-    "title": "Big tech\u2019s big gamble",
-    "url": "https://www.ft.com/content/fb3486e5-9513-401e-b87f-9e3e9d77376a",
-    "published_at": "2025-10-28T02:30:04-04:00",
-    "source": "Financial Times - Technology",
-    "summary": "How much AI is the market willing to finance?",
-    "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/84be6c30-e093-4ad1-9a35-b5c366605dd8.jpg",
-    "summary_text": "How much AI is the market willing to finance?",
-    "category": "ai",
-    "_trending_tags": [
-      "ai"
-    ],
-    "_permalink": "/p/87a7dfcb15/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/87a7dfcb15/",
-    "_summary_240": "How much AI is the market willing to finance?",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/87a7dfcb15/thumbnail.png"
-  },
-  {
     "title": "Built to benefit everyone",
     "url": "https://openai.com/index/built-to-benefit-everyone",
     "published_at": "2025-10-28T02:00:00-04:00",
@@ -2105,20 +2130,6 @@
     ]
   },
   {
-    "title": "Rise of the Killer Chatbots",
-    "url": "https://www.wired.com/story/ai-weapon-anduril-llms-drones/",
-    "published_at": "2025-10-27T06:00:00-04:00",
-    "source": "Wired",
-    "summary": "On an airstrip somewhere in Texas, a swarm of killer jets approaches\u2014controlled by, of all things, a large language model.",
-    "content_html": "",
-    "image_url": "https://media.wired.com/photos/68e037e07fa76797a839d2ea/master/pass/WIRED-AI-as_WEAPON_RED.jpg",
-    "summary_text": "On an airstrip somewhere in Texas, a swarm of killer jets approaches\u2014controlled by, of all things, a large language model.",
-    "category": "ai",
-    "_trending_tags": [
-      "ai"
-    ]
-  },
-  {
     "title": "Ed Zitron Gets Paid to Love AI. He Also Gets Paid to Hate AI",
     "url": "https://www.wired.com/story/ai-pr-ed-zitron-profile/",
     "published_at": "2025-10-27T06:00:00-04:00",
@@ -2133,28 +2144,14 @@
     ]
   },
   {
-    "title": "The Argument for Letting AI Burn It All Down",
-    "url": "https://www.wired.com/story/ai-normal-after-ai-plateaus/",
+    "title": "Rise of the Killer Chatbots",
+    "url": "https://www.wired.com/story/ai-weapon-anduril-llms-drones/",
     "published_at": "2025-10-27T06:00:00-04:00",
     "source": "Wired",
-    "summary": "When the AI bubble bursts, the nerds will do their best work.",
+    "summary": "On an airstrip somewhere in Texas, a swarm of killer jets approaches\u2014controlled by, of all things, a large language model.",
     "content_html": "",
-    "image_url": "https://media.wired.com/photos/68e83fefb02e55ff56b21b54/master/pass/WIRED-AI-as_Normal_Blue_2.jpg",
-    "summary_text": "When the AI bubble bursts, the nerds will do their best work.",
-    "category": "ai",
-    "_trending_tags": [
-      "ai"
-    ]
-  },
-  {
-    "title": "The Worst Thing About AI Is That People Can\u2019t Shut Up About It",
-    "url": "https://www.wired.com/story/ai-journalism-worst-thing-about-ai/",
-    "published_at": "2025-10-27T06:00:00-04:00",
-    "source": "Wired",
-    "summary": "A plea from WIRED\u2019s top boss: Say less.",
-    "content_html": "",
-    "image_url": "https://media.wired.com/photos/68eec201eadc50eb0ecc7414/master/pass/WIRED-AI-as_JOURNALISM_SHADOW-ALT.jpg",
-    "summary_text": "A plea from WIRED\u2019s top boss: Say less.",
+    "image_url": "https://media.wired.com/photos/68e037e07fa76797a839d2ea/master/pass/WIRED-AI-as_WEAPON_RED.jpg",
+    "summary_text": "On an airstrip somewhere in Texas, a swarm of killer jets approaches\u2014controlled by, of all things, a large language model.",
     "category": "ai",
     "_trending_tags": [
       "ai"
@@ -2170,6 +2167,20 @@
     "image_url": "https://media.wired.com/photos/68fbfc150dc368eee7ad6cb9/master/pass/AA_Final-2.jpg",
     "summary_text": "In Brownsville, Texas, some families found a buzzy new school\u2019s methods\u2014surveillance of kids, software in lieu of teachers\u2014to be an education in and of itself.",
     "category": "software"
+  },
+  {
+    "title": "The Argument for Letting AI Burn It All Down",
+    "url": "https://www.wired.com/story/ai-normal-after-ai-plateaus/",
+    "published_at": "2025-10-27T06:00:00-04:00",
+    "source": "Wired",
+    "summary": "When the AI bubble bursts, the nerds will do their best work.",
+    "content_html": "",
+    "image_url": "https://media.wired.com/photos/68e83fefb02e55ff56b21b54/master/pass/WIRED-AI-as_Normal_Blue_2.jpg",
+    "summary_text": "When the AI bubble bursts, the nerds will do their best work.",
+    "category": "ai",
+    "_trending_tags": [
+      "ai"
+    ]
   },
   {
     "title": "Why AI Breaks Bad",
@@ -2209,6 +2220,20 @@
     "content_html": "",
     "image_url": "https://media.wired.com/photos/68e043992e3fc9a36ea8f485/master/pass/WIRED-AI-as_Bubble_Blue_ALT2.jpg",
     "summary_text": "I talked to the scholars who literally wrote the book on tech bubbles\u2014and applied their test.",
+    "category": "ai",
+    "_trending_tags": [
+      "ai"
+    ]
+  },
+  {
+    "title": "The Worst Thing About AI Is That People Can\u2019t Shut Up About It",
+    "url": "https://www.wired.com/story/ai-journalism-worst-thing-about-ai/",
+    "published_at": "2025-10-27T06:00:00-04:00",
+    "source": "Wired",
+    "summary": "A plea from WIRED\u2019s top boss: Say less.",
+    "content_html": "",
+    "image_url": "https://media.wired.com/photos/68eec201eadc50eb0ecc7414/master/pass/WIRED-AI-as_JOURNALISM_SHADOW-ALT.jpg",
+    "summary_text": "A plea from WIRED\u2019s top boss: Say less.",
     "category": "ai",
     "_trending_tags": [
       "ai"
