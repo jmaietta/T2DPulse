@@ -1,5 +1,63 @@
 [
   {
+    "title": "Nvidia expands AI ties with Hyundai, Samsung, SK, Naver",
+    "url": "https://techcrunch.com/2025/10/31/nvidia-expands-ai-ties-with-hyundai-samsung-sk-naver/",
+    "published_at": "2025-10-31T09:29:44-04:00",
+    "source": "TechCrunch",
+    "summary": "NVIDIA CEO Jensen Huang is visiting South Korea to strengthen partnerships with Samsung, Hyundai, SK, and Naver, unveiling plans for AI-powered networks and next-generation intelligent systems.",
+    "content_html": "",
+    "image_url": "https://techcrunch.com/wp-content/uploads/2023/08/GettyImages-1598978057.jpg?w=1024",
+    "summary_text": "NVIDIA CEO Jensen Huang is visiting South Korea to strengthen partnerships with Samsung, Hyundai, SK, and Naver, unveiling plans for AI-powered networks and next-generation intelligent systems.",
+    "category": "ai",
+    "_trending_tags": [
+      "ai",
+      "nvidia"
+    ],
+    "_permalink": "/p/59fac1ddcb/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/59fac1ddcb/",
+    "_summary_240": "NVIDIA CEO Jensen Huang is visiting South Korea to strengthen partnerships with Samsung, Hyundai, SK, and Naver, unveiling plans for AI-powered networks and next-generation...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/59fac1ddcb/thumbnail.png"
+  },
+  {
+    "title": "Perplexity\u2019s new AI tool aims to simplify patent research",
+    "url": "https://www.theverge.com/news/811340/perplexity-ai-patent-research-tool",
+    "published_at": "2025-10-31T09:23:18-04:00",
+    "source": "The Verge",
+    "summary": "Patents are notoriously difficult to search for, but Perplexity has launched an AI-powered tool that\u2019s supposed to make the process a little easier. Its new patent research agent allows you to search for patents using natural language, rather than a string of keywords. As an example, Perplexity says you can enter something like, \u201cAre there [\u2026]",
+    "content_html": "<figure>\n\n<img alt=\"\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/25472503/STK271_PERPLEXITY_C.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100\" />\n\t<figcaption>\n\t\t</figcaption>\n</figure>\n<p class=\"has-text-align-none\">Patents are <a href=\"https://www.uspto.gov/patents/search/patent-search-strategy\">notoriously difficult</a> to search for, but <a href=\"https://www.perplexity.ai/hub/blog/introducing-perplexity-patents\">Perplexity has launched</a> an AI-powered tool that\u2019s supposed to make the process a little easier. Its new patent research agent allows you to search for patents using natural language, rather than a string of keywords.</p>\n\n<p class=\"has-text-align-none\">As an example, Perplexity says you can enter something like, \u201cAre there any patents on AI language learning?\u201d or &#8220;Key quantum computing patents since 2024,\u201d and Perplexity will return relevant results, along with AI-generated summaries of each one.</p>\n<img alt=\"\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/10/perplexity-ai-patent.png?quality=90&#038;strip=all&#038;crop=0,0,100,100\" title=\"\" />\n<p class=\"has-text-align-none\">Perplexity says its tool extends beyond exact keyword matches, too. That means if you search for \u201cfitness trackers,\u201d Perplexity will also surface patents filed under related terms, like \u201cactivity bands,\u201d \u201cstep-counting watches,\u201d and \u201chealth monitoring watches.\u201d Its tool can also search through academic papers, public software repositories, and other sources for prior art.</p>\n\n<p class=\"has-text-align-none\">Perplexity is making its patent research tool free for everyone to use while it\u2019s in beta, with Pro and Max subscribers getting additional usage quotas and configuration options. You can try out the tool by entering a search for a patent directly in Perplexity.</p>",
+    "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/25472503/STK271_PERPLEXITY_C.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "summary_text": "Patents are notoriously difficult to search for, but Perplexity has launched an AI-powered tool that\u2019s supposed to make the process a little easier. Its new patent research agent allows you to search for patents using natural language, rather than a string of...",
+    "category": "ai",
+    "_trending_tags": [
+      "agent",
+      "ai"
+    ],
+    "_permalink": "/p/7e53e83ef5/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/7e53e83ef5/",
+    "_summary_240": "Patents are notoriously difficult to search for, but Perplexity has launched an AI-powered tool that\u2019s supposed to make the process a little easier. Its new patent research agent...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/7e53e83ef5/thumbnail.png"
+  },
+  {
+    "title": "Amazon shares set to jump 14% as AI powers fastest cloud growth in years",
+    "url": "https://www.ft.com/content/71e29546-661e-4c9f-b401-0428585fbc42",
+    "published_at": "2025-10-31T09:18:50-04:00",
+    "source": "Financial Times - Technology",
+    "summary": "Ecommerce giant boosts capital expenditure as it builds more data centres",
+    "content_html": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/a4133c6d-cc7c-4cb4-843e-41269544fbb0.jpg",
+    "summary_text": "Ecommerce giant boosts capital expenditure as it builds more data centres",
+    "category": "software",
+    "_trending_tags": [
+      "ai",
+      "amazon",
+      "cloud"
+    ],
+    "_permalink": "/p/c64ec08462/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/c64ec08462/",
+    "_summary_240": "Ecommerce giant boosts capital expenditure as it builds more data centres",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/c64ec08462/thumbnail.png"
+  },
+  {
     "title": "Is Meta Placing an Unrealistic Bet on AI?",
     "url": "https://www.pymnts.com/meta/2025/is-meta-placing-an-unrealistic-bet-on-ai/",
     "published_at": "2025-10-31T09:00:28-04:00",
@@ -38,7 +96,7 @@
   },
   {
     "title": "Bitcoin white paper turns 17 as first red October in 7 years looms for BTC",
-    "url": "https://cointelegraph.com/news/bitcoin-white-paper-17-btc-red-october-7-years?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/bitcoin-white-paper-17-btc-red-october-7-years?utm_source=rss_feed&utm_medium=rss%3F_t%3D1761917191366%26_ts%3D1761917191366%26cachebust%3Dtrue&utm_campaign=rss_partner_inbound",
     "published_at": "2025-10-31T08:48:36-04:00",
     "source": "Cointelegraph",
     "summary": "Bitcoin has become a $2 trillion asset in the 17 years since Satoshi Nakamoto published the white paper, but it faces its first red October since 2018.",
@@ -46,10 +104,10 @@
     "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTAvMDE5YTNhMzQtOWI4Yy03Y2VkLWJmMzQtNjNlYjkxNjA5MTMw.jpg",
     "summary_text": "Bitcoin has become a $2 trillion asset in the 17 years since Satoshi Nakamoto published the white paper, but it faces its first red October since 2018.",
     "category": "fintech",
-    "_permalink": "/p/edaa3b7da5/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/edaa3b7da5/",
+    "_permalink": "/p/75ae91e1e8/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/75ae91e1e8/",
     "_summary_240": "Bitcoin has become a $2 trillion asset in the 17 years since Satoshi Nakamoto published the white paper, but it faces its first red October since 2018.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/edaa3b7da5/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/75ae91e1e8/thumbnail.png"
   },
   {
     "title": "God will be declared by a panel of experts",
@@ -71,28 +129,8 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/d7720af123/thumbnail.png"
   },
   {
-    "title": "Amazon shares set to jump 14% as AI powers fastest cloud growth in years",
-    "url": "https://www.ft.com/content/71e29546-661e-4c9f-b401-0428585fbc42",
-    "published_at": "2025-10-31T08:35:08-04:00",
-    "source": "Financial Times - Technology",
-    "summary": "Ecommerce giant boosts capital expenditure as it builds more data centres",
-    "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/a4133c6d-cc7c-4cb4-843e-41269544fbb0.jpg",
-    "summary_text": "Ecommerce giant boosts capital expenditure as it builds more data centres",
-    "category": "software",
-    "_trending_tags": [
-      "ai",
-      "amazon",
-      "cloud"
-    ],
-    "_permalink": "/p/91b3a07484/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/91b3a07484/",
-    "_summary_240": "Ecommerce giant boosts capital expenditure as it builds more data centres",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/91b3a07484/thumbnail.png"
-  },
-  {
     "title": "Canaan to supply Bitcoin mining rigs for Japan\u2019s electric grid stability project",
-    "url": "https://cointelegraph.com/news/canaan-supply-bitcoin-mining-rigs-japan-electric-grid-project?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/canaan-supply-bitcoin-mining-rigs-japan-electric-grid-project?utm_source=rss_feed&utm_medium=rss%3F_t%3D1761917191366%26_ts%3D1761917191366%26cachebust%3Dtrue&utm_campaign=rss_partner_inbound",
     "published_at": "2025-10-31T08:25:10-04:00",
     "source": "Cointelegraph",
     "summary": "Canaan will supply 4.5 megawatts of water-cooled Bitcoin mining ASICs to a Japanese engineering firm for real-time grid balancing and energy optimization.",
@@ -100,10 +138,10 @@
     "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMDQvMDE5NjNhYmYtYTAwNS03ZjVlLTlhMWItYjZhYzg2ZjAxMWE0.jpg",
     "summary_text": "Canaan will supply 4.5 megawatts of water-cooled Bitcoin mining ASICs to a Japanese engineering firm for real-time grid balancing and energy optimization.",
     "category": "fintech",
-    "_permalink": "/p/dd0deca6c1/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/dd0deca6c1/",
+    "_permalink": "/p/7a0e577422/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/7a0e577422/",
     "_summary_240": "Canaan will supply 4.5 megawatts of water-cooled Bitcoin mining ASICs to a Japanese engineering firm for real-time grid balancing and energy optimization.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/dd0deca6c1/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/7a0e577422/thumbnail.png"
   },
   {
     "title": "Adobe Struggles to Assure Investors That It Can Thrive in AI Era",
@@ -125,7 +163,7 @@
   },
   {
     "title": "Why is Zcash\u2019s ZEC the only crypto pumping right now?",
-    "url": "https://cointelegraph.com/news/why-is-zcash-zec-the-only-crypto-pumping-right-now?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/why-is-zcash-zec-the-only-crypto-pumping-right-now?utm_source=rss_feed&utm_medium=rss%3F_t%3D1761917191366%26_ts%3D1761917191366%26cachebust%3Dtrue&utm_campaign=rss_partner_inbound",
     "published_at": "2025-10-31T07:30:38-04:00",
     "source": "Cointelegraph",
     "summary": "Zcash\u2019s rally faces a test as a rising wedge pattern signals a possible 30% pullback toward the $260\u2013$270 support zone in November.",
@@ -133,10 +171,10 @@
     "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTAvMDE5YTM5YTMtN2IyYy03ZmI1LTkxOWUtOTFmNDAzM2EzN2Yy.jpg",
     "summary_text": "Zcash\u2019s rally faces a test as a rising wedge pattern signals a possible 30% pullback toward the $260\u2013$270 support zone in November.",
     "category": "fintech",
-    "_permalink": "/p/9949eb4550/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/9949eb4550/",
+    "_permalink": "/p/c6cc1aaed0/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/c6cc1aaed0/",
     "_summary_240": "Zcash\u2019s rally faces a test as a rising wedge pattern signals a possible 30% pullback toward the $260\u2013$270 support zone in November.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/9949eb4550/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/c6cc1aaed0/thumbnail.png"
   },
   {
     "title": "Sora now lets you pay extra to make more AI videos",
@@ -173,8 +211,26 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/0af0e5d978/thumbnail.png"
   },
   {
+    "title": "The AI Buildout Is So Big Even a Haunted House Owner Wants in",
+    "url": "https://www.bloomberg.com/news/videos/2025-10-31/the-ai-buildout-is-so-big-even-a-haunted-house-owner-wants-in",
+    "published_at": "2025-10-31T06:01:18-04:00",
+    "source": "Bloomberg Technology",
+    "summary": "From horror to hyperscale: The rush to build AI data centers is so intense that even the owner of a hospital-turned-haunted house wants in. Jeremy Hill explains. (Source: Bloomberg)",
+    "content_html": "",
+    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iKwuhm8D74mw/v3/1200x-1.jpg",
+    "summary_text": "From horror to hyperscale: The rush to build AI data centers is so intense that even the owner of a hospital-turned-haunted house wants in. Jeremy Hill explains. (Source: Bloomberg)",
+    "category": "ai",
+    "_trending_tags": [
+      "ai"
+    ],
+    "_permalink": "/p/6d8995bf85/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/6d8995bf85/",
+    "_summary_240": "From horror to hyperscale: The rush to build AI data centers is so intense that even the owner of a hospital-turned-haunted house wants in. Jeremy Hill explains. (Source:...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/6d8995bf85/thumbnail.png"
+  },
+  {
     "title": "Bitcoin set for first red October in seven years: What will November bring?",
-    "url": "https://cointelegraph.com/news/bitcoin-set-for-first-red-october-in-seven-years-what-will-november?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/bitcoin-set-for-first-red-october-in-seven-years-what-will-november?utm_source=rss_feed&utm_medium=rss%3F_t%3D1761917191366%26_ts%3D1761917191366%26cachebust%3Dtrue&utm_campaign=rss_partner_inbound",
     "published_at": "2025-10-31T05:10:26-04:00",
     "source": "Cointelegraph",
     "summary": "\u201cUptober\u201d has turned into a red month for Bitcoin, with Fed rate cut hopes and easing US-China trade tensions doing little to uphold BTC prices.",
@@ -182,10 +238,10 @@
     "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMDYvMDE5N2I3M2MtOTZkZS03MDYzLWE1YTctMjZlN2UwYzdkNTky.jpg",
     "summary_text": "\u201cUptober\u201d has turned into a red month for Bitcoin, with Fed rate cut hopes and easing US-China trade tensions doing little to uphold BTC prices.",
     "category": "fintech",
-    "_permalink": "/p/a5440df838/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/a5440df838/",
+    "_permalink": "/p/47c66c84ad/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/47c66c84ad/",
     "_summary_240": "\u201cUptober\u201d has turned into a red month for Bitcoin, with Fed rate cut hopes and easing US-China trade tensions doing little to uphold BTC prices.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/a5440df838/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/47c66c84ad/thumbnail.png"
   },
   {
     "title": "A.I. Spending Is Accelerating Among Tech\u2019s Biggest Companies",
@@ -211,7 +267,7 @@
   },
   {
     "title": "Deutsche Bank and DWS-backed EURAU stablecoin goes multichain with Chainlink",
-    "url": "https://cointelegraph.com/news/eu-regulated-stablecoin-eurau-goes-multichain-with-chainlink-partnership?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/eu-regulated-stablecoin-eurau-goes-multichain-with-chainlink-partnership?utm_source=rss_feed&utm_medium=rss%3F_t%3D1761917191366%26_ts%3D1761917191366%26cachebust%3Dtrue&utm_campaign=rss_partner_inbound",
     "published_at": "2025-10-31T04:32:57-04:00",
     "source": "Cointelegraph",
     "summary": "AllUnity\u2019s euro-pegged MiCA-compliant stablecoin, EURAU, is expanding across major blockchains using Chainlink\u2019s CCIP protocol.",
@@ -222,14 +278,14 @@
     "_trending_tags": [
       "ai"
     ],
-    "_permalink": "/p/44218781c1/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/44218781c1/",
+    "_permalink": "/p/7bbfdf4cfa/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/7bbfdf4cfa/",
     "_summary_240": "AllUnity\u2019s euro-pegged MiCA-compliant stablecoin, EURAU, is expanding across major blockchains using Chainlink\u2019s CCIP protocol.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/44218781c1/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/7bbfdf4cfa/thumbnail.png"
   },
   {
     "title": "The EU\u2019s two-tier encryption vision is digital feudalism",
-    "url": "https://cointelegraph.com/news/eu-encryption-digital-feudalism?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/eu-encryption-digital-feudalism?utm_source=rss_feed&utm_medium=rss%3F_t%3D1761917191366%26_ts%3D1761917191366%26cachebust%3Dtrue&utm_campaign=rss_partner_inbound",
     "published_at": "2025-10-31T04:30:00-04:00",
     "source": "Cointelegraph",
     "summary": "EU's ProtectEU mandates on-device scanning before encryption, creating a two-tier security system where states encrypt while citizens are surveilled. Digital feudalism codified.",
@@ -237,10 +293,10 @@
     "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTAvMDE5YTJmMDItYzEwNS03YzhmLThmYjEtYmM2ZTI1YTllMTNi.jpg",
     "summary_text": "EU's ProtectEU mandates on-device scanning before encryption, creating a two-tier security system where states encrypt while citizens are surveilled. Digital feudalism codified.",
     "category": "fintech",
-    "_permalink": "/p/a3ad51c7ae/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/a3ad51c7ae/",
+    "_permalink": "/p/682259dca7/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/682259dca7/",
     "_summary_240": "EU's ProtectEU mandates on-device scanning before encryption, creating a two-tier security system where states encrypt while citizens are surveilled. Digital feudalism codified.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/a3ad51c7ae/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/682259dca7/thumbnail.png"
   },
   {
     "title": "Taiwan Economy Rides AI Boom to Better-Than-Expected Growth",
@@ -385,7 +441,7 @@
   },
   {
     "title": "ETFs will usher institutions into altcoins, just like Bitcoin: Analyst",
-    "url": "https://cointelegraph.com/news/institutions-discover-altcoins-etfs-bitcoin-ethereum-analyst?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/institutions-discover-altcoins-etfs-bitcoin-ethereum-analyst?utm_source=rss_feed&utm_medium=rss%3F_t%3D1761917191366%26_ts%3D1761917191366%26cachebust%3Dtrue&utm_campaign=rss_partner_inbound",
     "published_at": "2025-10-31T03:25:14-04:00",
     "source": "Cointelegraph",
     "summary": "Spot Ether ETF inflows have surpassed Bitcoin ETFs during the third quarter of 2025, signaling dormant appetite for regulated altcoin investments.",
@@ -393,10 +449,10 @@
     "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTAvMDE5YTM1NzMtM2U3OC03MWNjLThhMzMtZDZiMGQ0NDU4Y2Nl.jpg",
     "summary_text": "Spot Ether ETF inflows have surpassed Bitcoin ETFs during the third quarter of 2025, signaling dormant appetite for regulated altcoin investments.",
     "category": "fintech",
-    "_permalink": "/p/68eaaae24c/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/68eaaae24c/",
+    "_permalink": "/p/0ba605d76a/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/0ba605d76a/",
     "_summary_240": "Spot Ether ETF inflows have surpassed Bitcoin ETFs during the third quarter of 2025, signaling dormant appetite for regulated altcoin investments.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/68eaaae24c/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/0ba605d76a/thumbnail.png"
   },
   {
     "title": "Tokyo Electron Gives Cautious Outlook While Eyeing AI Capex Boom",
@@ -418,7 +474,7 @@
   },
   {
     "title": "Bitwise exec says a bet on Solana gives \u2018two ways to win\u2019",
-    "url": "https://cointelegraph.com/news/matt-hougan-bullish-solana-growth-bitwise-investment?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/matt-hougan-bullish-solana-growth-bitwise-investment?utm_source=rss_feed&utm_medium=rss%3F_t%3D1761917191366%26_ts%3D1761917191366%26cachebust%3Dtrue&utm_campaign=rss_partner_inbound",
     "published_at": "2025-10-31T02:18:37-04:00",
     "source": "Cointelegraph",
     "summary": "Bitwise\u2019s Matt Hougan said Solana has good odds of winning a larger share of the stablecoin and tokenization market.",
@@ -429,10 +485,10 @@
     "_trending_tags": [
       "ai"
     ],
-    "_permalink": "/p/0f17ce27d8/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/0f17ce27d8/",
+    "_permalink": "/p/b686393de2/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/b686393de2/",
     "_summary_240": "Bitwise\u2019s Matt Hougan said Solana has good odds of winning a larger share of the stablecoin and tokenization market.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/0f17ce27d8/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/b686393de2/thumbnail.png"
   },
   {
     "title": "NVIDIA, South Korea Government and Industrial Giants Build AI Infrastructure and Ecosystem to Fuel Korea Innovation, Industries and Jobs",
@@ -534,7 +590,7 @@
   },
   {
     "title": "Revolut rolls out 1:1 USD-to-stablecoin swaps as fintechs warm to crypto",
-    "url": "https://cointelegraph.com/news/revolut-launches-1-to-1-usd-to-stable-swaps?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/revolut-launches-1-to-1-usd-to-stable-swaps?utm_source=rss_feed&utm_medium=rss%3F_t%3D1761917191366%26_ts%3D1761917191366%26cachebust%3Dtrue&utm_campaign=rss_partner_inbound",
     "published_at": "2025-10-31T00:41:16-04:00",
     "source": "Cointelegraph",
     "summary": "Revolut has made on and off-ramping to crypto easier by removing fees, spreads and other costs, allowing users to convert USD and stablecoins at a 1:1 ratio.",
@@ -545,14 +601,14 @@
     "_trending_tags": [
       "fintech"
     ],
-    "_permalink": "/p/59347cc5ab/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/59347cc5ab/",
+    "_permalink": "/p/8da60b1c45/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/8da60b1c45/",
     "_summary_240": "Revolut has made on and off-ramping to crypto easier by removing fees, spreads and other costs, allowing users to convert USD and stablecoins at a 1:1 ratio.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/59347cc5ab/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/8da60b1c45/thumbnail.png"
   },
   {
     "title": "Saylor says Strategy unlikely to buy up rivals, as there\u2019s too much uncertainty",
-    "url": "https://cointelegraph.com/news/michael-saylor-strategy-unlikely-acquire-rivals?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/michael-saylor-strategy-unlikely-acquire-rivals?utm_source=rss_feed&utm_medium=rss%3F_t%3D1761917191366%26_ts%3D1761917191366%26cachebust%3Dtrue&utm_campaign=rss_partner_inbound",
     "published_at": "2025-10-31T00:27:28-04:00",
     "source": "Cointelegraph",
     "summary": "Strategy is unlikely to make deals to acquire its Bitcoin-buying rivals, with founder Michael Saylor saying it\u2019s too risky.",
@@ -563,14 +619,14 @@
     "_trending_tags": [
       "ai"
     ],
-    "_permalink": "/p/ccdd6630e0/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/ccdd6630e0/",
+    "_permalink": "/p/393d55c42a/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/393d55c42a/",
     "_summary_240": "Strategy is unlikely to make deals to acquire its Bitcoin-buying rivals, with founder Michael Saylor saying it\u2019s too risky.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/ccdd6630e0/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/393d55c42a/thumbnail.png"
   },
   {
     "title": "Bitcoin not the \u2018end goal,\u2019 says Riot as BTC production jumps 27%",
-    "url": "https://cointelegraph.com/news/riot-platform-bitcoin-not-end-goal-mining-production-q3?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/riot-platform-bitcoin-not-end-goal-mining-production-q3?utm_source=rss_feed&utm_medium=rss%3F_t%3D1761917191366%26_ts%3D1761917191366%26cachebust%3Dtrue&utm_campaign=rss_partner_inbound",
     "published_at": "2025-10-30T23:05:42-04:00",
     "source": "Cointelegraph",
     "summary": "Riot Platforms sees Bitcoin mining as a \u201cmeans to an end,\u201d planning to pivot its power resources to build a 1-gigawatt AI data center campus.",
@@ -581,10 +637,10 @@
     "_trending_tags": [
       "ai"
     ],
-    "_permalink": "/p/188baead54/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/188baead54/",
+    "_permalink": "/p/987c0a7189/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/987c0a7189/",
     "_summary_240": "Riot Platforms sees Bitcoin mining as a \u201cmeans to an end,\u201d planning to pivot its power resources to build a 1-gigawatt AI data center campus.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/188baead54/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/987c0a7189/thumbnail.png"
   },
   {
     "title": "Microsoft\u2019s agent platform play",
@@ -644,7 +700,7 @@
   },
   {
     "title": "Here\u2019s what happened in crypto today",
-    "url": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss%3F_t%3D1761917191366%26_ts%3D1761917191366%26cachebust%3Dtrue&utm_campaign=rss_partner_inbound",
     "published_at": "2025-10-30T18:13:08-04:00",
     "source": "Cointelegraph",
     "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, NFTs, Web3 and crypto regulation.",
@@ -655,10 +711,10 @@
     "_trending_tags": [
       "ai"
     ],
-    "_permalink": "/p/1bf82d499b/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/1bf82d499b/",
+    "_permalink": "/p/3f4cdd1fcf/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/3f4cdd1fcf/",
     "_summary_240": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, NFTs, Web3 and crypto regulation.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/1bf82d499b/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/3f4cdd1fcf/thumbnail.png"
   },
   {
     "title": "Amazon\u2019s Profit Is Up 38% on Strong Performance",
@@ -682,7 +738,7 @@
   },
   {
     "title": "Crypto market bleeds despite rate cuts, US-China trade negotiations",
-    "url": "https://cointelegraph.com/news/crypto-markets-rate-cuts-us-china-negotiations?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/crypto-markets-rate-cuts-us-china-negotiations?utm_source=rss_feed&utm_medium=rss%3F_t%3D1761917191366%26_ts%3D1761917191366%26cachebust%3Dtrue&utm_campaign=rss_partner_inbound",
     "published_at": "2025-10-30T17:59:39-04:00",
     "source": "Cointelegraph",
     "summary": "Crypto prices remain depressed due to macroeconomic and geopolitical uncertainty, despite interest rate cuts and positive trade news.",
@@ -693,10 +749,10 @@
     "_trending_tags": [
       "ai"
     ],
-    "_permalink": "/p/be3a281a98/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/be3a281a98/",
+    "_permalink": "/p/857b1f3344/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/857b1f3344/",
     "_summary_240": "Crypto prices remain depressed due to macroeconomic and geopolitical uncertainty, despite interest rate cuts and positive trade news.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/be3a281a98/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/857b1f3344/thumbnail.png"
   },
   {
     "title": "Navan IPO tumbles 20% after historic debut under SEC shutdown workaround",
@@ -712,28 +768,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/18bdc7309f/",
     "_summary_240": "Navan finished its first day trading at an approximate valuation of $4.7 billion, which is about half of its last private valuation of $9.2 billion.",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/18bdc7309f/thumbnail.png"
-  },
-  {
-    "title": "Tim Cook says more AIs are coming to Apple Intelligence",
-    "url": "https://www.theverge.com/news/810735/tim-cook-ai-apple-intelligence-integrations",
-    "published_at": "2025-10-30T17:32:44-04:00",
-    "source": "The Verge",
-    "summary": "Tim Cook says Apple has plans to embed more third-party AI tools into the company\u2019s operating systems. \u201cOur intention is to integrate with more people over time,\u201d Cook said in an interview with CNBC. Apple has already embedded ChatGPT into Siri, with a Google Gemini integration said to be in the works, along with rumors [\u2026]",
-    "content_html": "<figure>\n\n<img alt=\"\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/10/DSC01507.webp?quality=90&#038;strip=all&#038;crop=0,0,100,100\" />\n\t<figcaption>\n\t\t</figcaption>\n</figure>\n<p class=\"has-text-align-none\">Tim Cook says Apple has plans to embed more third-party AI tools into the company\u2019s operating systems. \u201cOur intention is to integrate with more people over time,\u201d Cook said in <a href=\"https://www.cnbc.com/2025/10/30/apple-aapl-earnings-report-q4-2025.html\">an interview with CNBC</a>. Apple has already embedded ChatGPT into Siri, with a Google Gemini integration <a href=\"https://www.theverge.com/news/658770/google-gemini-apple-iphone-deal-ai\">said to be in the works</a>, along with rumors <a href=\"https://www.theverge.com/news/695461/apple-ai-siri-openai-chatgpt-powered\">swirling about a partnership with Anthropic</a> and <a href=\"https://www.theverge.com/news/662656/apple-ai-search-alternatives-eddy-cue-testimony\">Perplexity</a>.</p>\n\n<p class=\"has-text-align-none\">This isn\u2019t the first time we\u2019re hearing about third-party integrations, as Apple software SVP Craig Federighi <a href=\"https://9to5mac.com/2024/06/10/craig-federighi-says-apple-hopes-to-add-google-gemini-and-other-ai-models-to-ios-18/\">said last year that the company</a> \u201cmay look forward to doing integrations with different models like Google Gemini in the future.\u201d</p>\n\n<p class=\"has-text-align-none\">Cook also said that Apple is on track to release an AI-upgraded Siri next year, adding that \u201cour intention is to integrate with more people over time.\u201d Apple is \u201cmaking good progress\u201d on Siri, he added during an earnings call on Thursday, noting that AI acquisitions are still on the table. \u201cWe are open to pursuing M&amp;A [mergers and acquisitions] if we think that it will advance our roadmap,\u201d Cook said, <a href=\"https://www.theverge.com/news/716790/apple-earnings-q3-2025-ai-tim-cook\">echoing a statement from July</a>.</p>\n\n<p class=\"has-text-align-none\">The news comes as Apple releases its <a href=\"https://www.apple.com/newsroom/2025/10/apple-reports-fourth-quarter-results/\">fourth quarter earnings results</a>, which revealed that the company raked in a record $102.5 billion over the past few months, marking an eight percent increase when compared to the same time last year.&nbsp;</p>\n\n<p class=\"has-text-align-none\">Even with last month\u2019s launch of the iPhone 17, Apple <a href=\"https://www.theverge.com/apple-event/774963/apple-september-launch-event-ai-apple-intelligence\">has yet to realize its plans for AI</a>, which is supposed to bring an <a href=\"https://www.theverge.com/news/626035/apple-delays-upgraded-siri-intelligence-longer-than-we-thought\">enhanced Siri</a> across its devices. A recent <a href=\"https://www.bloomberg.com/news/articles/2025-09-03/apple-plans-ai-search-engine-for-siri-to-rival-openai-google-siri-talks-advance?embedded-checkout=true\">report from <em>Bloomberg</em></a> suggested that <a href=\"https://www.theverge.com/news/770712/apple-ai-search-tool-siri-google-gemini\">Apple could partner with Google</a> to build an AI search tool for Siri. Google CEO Sundar Pichai also confirmed last year that the <a href=\"https://www.theverge.com/news/658770/google-gemini-apple-iphone-deal-ai\">company is working on Gemini support</a> for the iPhone.</p>\n\n<p class=\"has-text-align-none\">Sales from the iPhone 17 lineup likely only make up a small portion of Apple\u2019s overall $49.03 billion in iPhone revenue. The new lineup includes the iPhone Air \u2014 Apple\u2019s <a href=\"https://www.theverge.com/tech/779588/apple-iphone-air-review-battery-camera\">thinnest device yet</a> \u2014&nbsp; along with the upgraded <a href=\"https://www.theverge.com/tech/779568/iphone-17-review-apple-best-features\">iPhone 17</a> and <a href=\"https://www.theverge.com/tech/779265/iphone-17-pro-max-review\">17 Pro</a>. This year, Apple brought some features previously reserved for its Pro-level iPhones to its entry-level device, including an always-on display with ProMotion support for smoother scrolling.</p>\n\n<p class=\"has-text-align-none\">Apple\u2019s Mac revenue rose to $8.72 billion, and it reported $6.95 billion in revenue from iPads. Apple\u2019s services division, which includes subscriptions to Apple TV, Apple Music, Apple Fitness Plus, and Apple Arcade, grew to $28.8 billion.</p>\n\n<p class=\"has-text-align-none\">Apple also just <a href=\"https://www.theverge.com/tech/803105/apple-ipad-pro-2025-review-fast-faster-fastest\">released an upgraded iPad Pro</a>, <a href=\"https://www.theverge.com/tech/803349/apple-macbook-pro-14-m5-2025-review\">MacBook Pro</a>, and a <a href=\"https://www.theverge.com/tech/807963/apple-vision-pro-m5-review-specs-release-date\">Vision Pro headset</a>, each with an M5-flavored spec bump. Rumors indicate that the company is getting ready to release a budget-friendly <a href=\"https://www.bloomberg.com/news/articles/2025-07-10/apple-plans-new-macbook-pro-iphone-17e-and-ipads-by-early-2026\">iPhone 17e next year</a>, too.</p>\n\n<p class=\"has-text-align-none\"><em><strong>Update, October 30th:</strong> Added context from Cook.</em></p>",
-    "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/10/DSC01507.webp?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "summary_text": "Tim Cook says Apple has plans to embed more third-party AI tools into the company\u2019s operating systems. \u201cOur intention is to integrate with more people over time,\u201d Cook said in an interview with CNBC. Apple has already embedded ChatGPT into Siri, with a Google...",
-    "category": "ai",
-    "_trending_tags": [
-      "ai",
-      "apple",
-      "chatgpt",
-      "google",
-      "gpt"
-    ],
-    "_permalink": "/p/beb23554ee/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/beb23554ee/",
-    "_summary_240": "Tim Cook says Apple has plans to embed more third-party AI tools into the company\u2019s operating systems. \u201cOur intention is to integrate with more people over time,\u201d Cook said in an...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/beb23554ee/thumbnail.png"
   },
   {
     "title": "WIRED Roundup: AI Psychosis, Missing FTC Files, and Google Bedbugs",
@@ -832,7 +866,7 @@
   },
   {
     "title": "Core Scientific falls short of shareholder votes for buyout by CoreWeave",
-    "url": "https://cointelegraph.com/news/core-scientific-shareholder-coreweave-buyout?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/core-scientific-shareholder-coreweave-buyout?utm_source=rss_feed&utm_medium=rss%3F_t%3D1761917191366%26_ts%3D1761917191366%26cachebust%3Dtrue&utm_campaign=rss_partner_inbound",
     "published_at": "2025-10-30T16:23:40-04:00",
     "source": "Cointelegraph",
     "summary": "CoreWeave has been trying to acquire Core Scientific for over a year in one of the most-watched M&A deals in crypto.",
@@ -840,10 +874,10 @@
     "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTAvMDE5YTM2N2YtZDUxZS03NzNjLTkxYWItOWI1MjM3MmIwNDY5.jpg",
     "summary_text": "CoreWeave has been trying to acquire Core Scientific for over a year in one of the most-watched M&A deals in crypto.",
     "category": "fintech",
-    "_permalink": "/p/5ed18bdf6d/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/5ed18bdf6d/",
+    "_permalink": "/p/405ecb8c64/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/405ecb8c64/",
     "_summary_240": "CoreWeave has been trying to acquire Core Scientific for over a year in one of the most-watched M&A deals in crypto.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/5ed18bdf6d/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/405ecb8c64/thumbnail.png"
   },
   {
     "title": "Amazon\u2019s Cloud Unit Posts Fastest Growth Since 2022 on AI Push",
@@ -882,14 +916,18 @@
   },
   {
     "title": "Lawmakers work to pass crypto market structure bill amid US government shutdown: Report",
-    "url": "https://cointelegraph.com/news/us-lawmakers-market-structure-bill-shutdown?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/us-lawmakers-market-structure-bill-shutdown?utm_source=rss_feed&utm_medium=rss%3F_t%3D1761917191366%26_ts%3D1761917191366%26cachebust%3Dtrue&utm_campaign=rss_partner_inbound",
     "published_at": "2025-10-30T15:00:26-04:00",
     "source": "Cointelegraph",
     "summary": "With the end of October approaching, Senate Republicans are in danger of going back on their previously announced deadline for a significant cryptocurrency bill.",
     "content_html": "",
     "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTAvMDE5YTM2NDQtMzM2ZS03NWMyLThjOWYtZTMwZDJlN2RlNWZh.jpg",
     "summary_text": "With the end of October approaching, Senate Republicans are in danger of going back on their previously announced deadline for a significant cryptocurrency bill.",
-    "category": "fintech"
+    "category": "fintech",
+    "_permalink": "/p/384eb11b31/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/384eb11b31/",
+    "_summary_240": "With the end of October approaching, Senate Republicans are in danger of going back on their previously announced deadline for a significant cryptocurrency bill.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/384eb11b31/thumbnail.png"
   },
   {
     "title": "In the AI boom, not all capex is created equal",
@@ -911,7 +949,7 @@
   },
   {
     "title": "Nigerian fintech plans African stablecoin payment system with Polygon: Report",
-    "url": "https://cointelegraph.com/news/flutterwave-polygon-africa-stablecoin-payments?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/flutterwave-polygon-africa-stablecoin-payments?utm_source=rss_feed&utm_medium=rss%3F_t%3D1761917191366%26_ts%3D1761917191366%26cachebust%3Dtrue&utm_campaign=rss_partner_inbound",
     "published_at": "2025-10-30T13:32:47-04:00",
     "source": "Cointelegraph",
     "summary": "Flutterwave partners with Polygon Labs to launch a stablecoin-powered cross-border payments network spanning 34 countries across Africa.",
@@ -922,14 +960,14 @@
     "_trending_tags": [
       "fintech"
     ],
-    "_permalink": "/p/f42e6ead4d/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/f42e6ead4d/",
+    "_permalink": "/p/aa69937ac0/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/aa69937ac0/",
     "_summary_240": "Flutterwave partners with Polygon Labs to launch a stablecoin-powered cross-border payments network spanning 34 countries across Africa.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/f42e6ead4d/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/aa69937ac0/thumbnail.png"
   },
   {
     "title": "US senator questions USD1 launch on Binance.US following CZ pardon",
-    "url": "https://cointelegraph.com/news/senator-usd1-binance-us-changpeng-zhao-pardon?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/senator-usd1-binance-us-changpeng-zhao-pardon?utm_source=rss_feed&utm_medium=rss%3F_t%3D1761917191366%26_ts%3D1761917191366%26cachebust%3Dtrue&utm_campaign=rss_partner_inbound",
     "published_at": "2025-10-30T13:20:00-04:00",
     "source": "Cointelegraph",
     "summary": "Senator Chris Murphy alleged corruption over the exchange \u201cpromoting Trump crypto\u201d shortly after the US president issued a pardon for Binance founder Changpeng Zhao.",
@@ -937,10 +975,10 @@
     "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjQtMTEvMDE5MzRhZDctZjYxNS03MmYxLWE1OGItY2QwYjE4ZWFkM2I4.jpg",
     "summary_text": "Senator Chris Murphy alleged corruption over the exchange \u201cpromoting Trump crypto\u201d shortly after the US president issued a pardon for Binance founder Changpeng Zhao.",
     "category": "fintech",
-    "_permalink": "/p/ea7333e6d8/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/ea7333e6d8/",
+    "_permalink": "/p/bba8fd3d8d/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/bba8fd3d8d/",
     "_summary_240": "Senator Chris Murphy alleged corruption over the exchange \u201cpromoting Trump crypto\u201d shortly after the US president issued a pardon for Binance founder Changpeng Zhao.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/ea7333e6d8/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/bba8fd3d8d/thumbnail.png"
   },
   {
     "title": "Claude Code updates: When to use Haiku 4.5, Claude Code on web, and more.",
@@ -997,24 +1035,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/b80dd35554/",
     "_summary_240": "AI companion app faces legal and regulatory pressure over child safety concerns.",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/b80dd35554/thumbnail.png"
-  },
-  {
-    "title": "\u2018Cut-throat\u2019 battle for crypto ETNs erupts in UK after retail ban lifted",
-    "url": "https://cointelegraph.com/news/uk-crypto-etn-fee-war-after-rule-change?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-    "published_at": "2025-10-30T11:45:17-04:00",
-    "source": "Cointelegraph",
-    "summary": "With retail access restored, crypto exchange-traded notes issuers slash fees to historic lows, signaling an intensifying battle for UK market dominance.",
-    "content_html": "",
-    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTAvMDE5YTM1YWUtNGYxNC03ODQ0LTlkOWYtM2RhNWE4ZmMyZTli.jpg",
-    "summary_text": "With retail access restored, crypto exchange-traded notes issuers slash fees to historic lows, signaling an intensifying battle for UK market dominance.",
-    "category": "fintech",
-    "_trending_tags": [
-      "ai"
-    ],
-    "_permalink": "/p/6ead9e4902/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/6ead9e4902/",
-    "_summary_240": "With retail access restored, crypto exchange-traded notes issuers slash fees to historic lows, signaling an intensifying battle for UK market dominance.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/6ead9e4902/thumbnail.png"
   },
   {
     "title": "Developer innovation takes center stage at GitHub Universe 2025",
@@ -1212,16 +1232,12 @@
     "source": "Financial Times - Technology",
     "summary": "Also in this newsletter: Merz visits Erdo\u011fan in Ankara",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/51952f74-4a41-472a-9fcf-b49faee0f450.jpg",
+    "image_url": "",
     "summary_text": "Also in this newsletter: Merz visits Erdo\u011fan in Ankara",
     "category": "ai",
     "_trending_tags": [
       "ai"
-    ],
-    "_permalink": "/p/68c9d730d6/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/68c9d730d6/",
-    "_summary_240": "Also in this newsletter: Merz visits Erdo\u011fan in Ankara",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/68c9d730d6/thumbnail.png"
+    ]
   },
   {
     "title": "10YR Marches Higher",
@@ -1248,13 +1264,9 @@
     "source": "Financial Times - Technology",
     "summary": "If we want to capitalise on applications in the next five years, we need to lay the groundwork now",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/2f2edb4b-67a0-4889-9e23-c5219c32b823.jpg",
+    "image_url": "",
     "summary_text": "If we want to capitalise on applications in the next five years, we need to lay the groundwork now",
-    "category": "software",
-    "_permalink": "/p/af066ad1e7/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/af066ad1e7/",
-    "_summary_240": "If we want to capitalise on applications in the next five years, we need to lay the groundwork now",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/af066ad1e7/thumbnail.png"
+    "category": "software"
   },
   {
     "title": "Trump Says Nvidia Chip Talks With Xi Didn\u2019t Cover Blackwell",
@@ -1441,7 +1453,7 @@
     "source": "Financial Times - Technology",
     "summary": "Shares of Facebook parent tumble as it increases capital expenditure while Microsoft cloud growth disappoints",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/3021ee09-9351-4394-b6e6-fbcc99429721.jpg",
+    "image_url": "",
     "summary_text": "Shares of Facebook parent tumble as it increases capital expenditure while Microsoft cloud growth disappoints",
     "category": "ai",
     "_trending_tags": [
@@ -1449,11 +1461,7 @@
       "cloud",
       "meta",
       "microsoft"
-    ],
-    "_permalink": "/p/e00f6d1334/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/e00f6d1334/",
-    "_summary_240": "Shares of Facebook parent tumble as it increases capital expenditure while Microsoft cloud growth disappoints",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/e00f6d1334/thumbnail.png"
+    ]
   },
   {
     "title": "NPM flooded with malicious packages downloaded more than 86,000 times",
@@ -1491,33 +1499,9 @@
     "source": "Financial Times - Technology",
     "summary": "Payments company has been overly reliant on overseas growth while its core business has slowed",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/d78fbe8f-8bb3-406f-b02b-523cbb97a88b.jpg",
+    "image_url": "",
     "summary_text": "Payments company has been overly reliant on overseas growth while its core business has slowed",
-    "category": "fintech",
-    "_permalink": "/p/9928d0585c/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/9928d0585c/",
-    "_summary_240": "Payments company has been overly reliant on overseas growth while its core business has slowed",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/9928d0585c/thumbnail.png"
-  },
-  {
-    "title": "Box CEO Aaron Levie on how AI is changing the enterprise SaaS landscape",
-    "url": "https://techcrunch.com/2025/10/29/box-ceo-aaron-levie-on-how-ai-is-changing-the-enterprise-saas-landscape/",
-    "published_at": "2025-10-29T14:45:19-04:00",
-    "source": "TechCrunch",
-    "summary": "He painted a picture of a future of enterprise software where the SaaS is used for the core business workflow, and then the agents ride on top of that.",
-    "content_html": "",
-    "image_url": "https://techcrunch.com/wp-content/uploads/2025/10/2244026103.jpg?resize=1200,800",
-    "summary_text": "He painted a picture of a future of enterprise software where the SaaS is used for the core business workflow, and then the agents ride on top of that.",
-    "category": "software",
-    "_trending_tags": [
-      "agent",
-      "ai",
-      "saas"
-    ],
-    "_permalink": "/p/a7a87c1708/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/a7a87c1708/",
-    "_summary_240": "He painted a picture of a future of enterprise software where the SaaS is used for the core business workflow, and then the agents ride on top of that.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/a7a87c1708/thumbnail.png"
+    "category": "fintech"
   },
   {
     "title": "AI Agents Are Terrible Freelance Workers",
@@ -1630,17 +1614,13 @@
     "source": "Financial Times - Technology",
     "summary": "Decision follows growing public and regulatory scrutiny over safety of the technology for young users",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/d87a6892-907a-470e-86a1-ed3ade98c67f.jpg",
+    "image_url": "",
     "summary_text": "Decision follows growing public and regulatory scrutiny over safety of the technology for young users",
     "category": "ai",
     "_trending_tags": [
       "ai",
       "gpu"
-    ],
-    "_permalink": "/p/9860194a91/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/9860194a91/",
-    "_summary_240": "Decision follows growing public and regulatory scrutiny over safety of the technology for young users",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/9860194a91/thumbnail.png"
+    ]
   },
   {
     "title": "OpenAI\u2019s chief gets a licence to play the field",
@@ -1649,18 +1629,14 @@
     "source": "Financial Times - Technology",
     "summary": "Complex restructuring pays Microsoft handsomely but it\u2019s unclear how other shareholders will fit into the AI love-in",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/81984b00-8171-4efd-ad4c-a3a09b9ed003.jpg",
+    "image_url": "",
     "summary_text": "Complex restructuring pays Microsoft handsomely but it\u2019s unclear how other shareholders will fit into the AI love-in",
     "category": "ai",
     "_trending_tags": [
       "ai",
       "microsoft",
       "openai"
-    ],
-    "_permalink": "/p/7b04df0f36/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/7b04df0f36/",
-    "_summary_240": "Complex restructuring pays Microsoft handsomely but it\u2019s unclear how other shareholders will fit into the AI love-in",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/7b04df0f36/thumbnail.png"
+    ]
   },
   {
     "title": "Nvidia supplier has already sold next year\u2019s chips on AI boom",
@@ -1669,17 +1645,13 @@
     "source": "Financial Times - Technology",
     "summary": "South Korean chipmaker points to difficulty in meeting demand as it posts record profits",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/f8272ce2-a4c4-4b1e-aa41-32ad12751da6.jpg",
+    "image_url": "",
     "summary_text": "South Korean chipmaker points to difficulty in meeting demand as it posts record profits",
     "category": "ai",
     "_trending_tags": [
       "ai",
       "nvidia"
-    ],
-    "_permalink": "/p/9256fcb982/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/9256fcb982/",
-    "_summary_240": "South Korean chipmaker points to difficulty in meeting demand as it posts record profits",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/9256fcb982/thumbnail.png"
+    ]
   },
   {
     "title": "Geostar pioneers GEO as traditional SEO faces 25% decline from AI chatbots, Gartner says",
