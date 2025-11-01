@@ -1,13 +1,13 @@
 {
-  "generated_at": "2025-11-01T14:28:21.691352-04:00",
+  "generated_at": "2025-11-01T14:45:23.985147-04:00",
   "total_keywords": 30,
   "keyword_counts": {
-    "ai": 170,
-    "agent": 17,
+    "ai": 168,
+    "agent": 16,
     "meta": 14,
-    "openai": 14,
     "microsoft": 13,
     "cloud": 12,
+    "openai": 12,
     "nvidia": 11,
     "gpt": 9,
     "amazon": 8,
@@ -20,7 +20,6 @@
     "claude": 2,
     "genai": 2,
     "gpu": 2,
-    "paypal": 1,
     "saas": 1
   },
   "sources_per_keyword": {},
