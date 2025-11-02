@@ -1,5 +1,24 @@
 [
   {
+    "title": "Meta has an AI product problem",
+    "url": "https://techcrunch.com/2025/11/02/meta-has-an-ai-product-problem/",
+    "published_at": "2025-11-02T11:00:00-05:00",
+    "source": "TechCrunch",
+    "summary": "Meta's AI spending is starting to make Wall Street nervous.",
+    "content_html": "",
+    "image_url": "https://techcrunch.com/wp-content/uploads/2024/09/GettyImages-2173579243.jpg?resize=1200,799",
+    "summary_text": "Meta's AI spending is starting to make Wall Street nervous.",
+    "category": "ai",
+    "_trending_tags": [
+      "ai",
+      "meta"
+    ],
+    "_permalink": "/p/37968c6f6c/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/37968c6f6c/",
+    "_summary_240": "Meta's AI spending is starting to make Wall Street nervous.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/37968c6f6c/thumbnail.png"
+  },
+  {
     "title": "That Time Xi Jinping Joked About Espionage",
     "url": "https://www.nytimes.com/2025/11/02/world/asia/xi-jinping-china-south-korea-spying.html",
     "published_at": "2025-11-02T08:15:45-05:00",
@@ -964,25 +983,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/1394ee2421/thumbnail.png"
   },
   {
-    "title": "Nvidia expands AI ties with Hyundai, Samsung, SK, Naver",
-    "url": "https://techcrunch.com/2025/10/31/nvidia-expands-ai-ties-with-hyundai-samsung-sk-naver/",
-    "published_at": "2025-10-31T09:29:44-04:00",
-    "source": "TechCrunch",
-    "summary": "Nvidia CEO Jensen Huang is visiting South Korea to strengthen partnerships with Samsung, Hyundai, SK, and Naver, unveiling plans for AI-powered networks and next-generation intelligent systems.",
-    "content_html": "",
-    "image_url": "https://techcrunch.com/wp-content/uploads/2023/08/GettyImages-1598978057.jpg?w=1024",
-    "summary_text": "Nvidia CEO Jensen Huang is visiting South Korea to strengthen partnerships with Samsung, Hyundai, SK, and Naver, unveiling plans for AI-powered networks and next-generation intelligent systems.",
-    "category": "ai",
-    "_trending_tags": [
-      "ai",
-      "nvidia"
-    ],
-    "_permalink": "/p/59fac1ddcb/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/59fac1ddcb/",
-    "_summary_240": "Nvidia CEO Jensen Huang is visiting South Korea to strengthen partnerships with Samsung, Hyundai, SK, and Naver, unveiling plans for AI-powered networks and next-generation...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/59fac1ddcb/thumbnail.png"
-  },
-  {
     "title": "NVIDIA, South Korea Government and Industrial Giants Build AI Infrastructure and Ecosystem to Fuel Korea Innovation, Industries and Jobs",
     "url": "https://nvidianews.nvidia.com/news/south-korea-ai-infrastructure",
     "published_at": "2025-10-31T02:00:00-04:00",
@@ -1199,11 +1199,7 @@
     "category": "ai",
     "_trending_tags": [
       "ai"
-    ],
-    "_permalink": "/p/b80dd35554/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/b80dd35554/",
-    "_summary_240": "AI companion app faces legal and regulatory pressure over child safety concerns.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/b80dd35554/thumbnail.png"
+    ]
   },
   {
     "title": "AI-Powered Mobile Clinics Deliver Breast Cancer Screening to India\u2019s Rural Communities",
@@ -1909,22 +1905,6 @@
       "ai",
       "chatgpt",
       "gpt"
-    ]
-  },
-  {
-    "title": "GitHub's Agent HQ aims to solve enterprises' biggest AI coding problem: Too many agents, no central control",
-    "url": "https://venturebeat.com/ai/githubs-agent-hq-aims-to-solve-enterprises-biggest-ai-coding-problem-too",
-    "published_at": "2025-10-28T12:10:00-04:00",
-    "source": "VentureBeat",
-    "summary": "GitHub is making a bold bet that enterprises don't need another proprietary coding agent: They need a way to manage all of them. At its Universe 2025 conference, the Microsoft-owned developer platform announced Agent HQ. The new architecture transforms GitHub into a unified control plane for managing multiple AI coding agents from competitors including Anthropic, OpenAI, Google, Cognition and xAI...",
-    "content_html": "",
-    "image_url": "",
-    "summary_text": "GitHub is making a bold bet that enterprises don't need another proprietary coding agent: They need a way to manage all of them. At its Universe 2025 conference, the Microsoft-owned developer platform announced Agent HQ. The new architecture transforms GitHub...",
-    "category": "software",
-    "_trending_tags": [
-      "agent",
-      "ai",
-      "microsoft"
     ]
   },
   {
