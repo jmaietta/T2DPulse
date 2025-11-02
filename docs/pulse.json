@@ -1,5 +1,44 @@
 [
   {
+    "title": "Sam Altman says \u2018enough\u2019 to questions about OpenAI\u2019s revenue",
+    "url": "https://techcrunch.com/2025/11/02/sam-altman-says-enough-to-questions-about-openais-revenue/",
+    "published_at": "2025-11-02T12:15:26-05:00",
+    "source": "TechCrunch",
+    "summary": "OpenAI CEO Sam Altman recently said that the company is doing \u201cwell more\u201d than $13 billion in annual revenue \u2014 and he sounded a little testy when pressed on how it will pay for its massive spending commitments.",
+    "content_html": "",
+    "image_url": "https://techcrunch.com/wp-content/uploads/2025/08/GettyImages-2223572243.jpg?resize=1200,800",
+    "summary_text": "OpenAI CEO Sam Altman recently said that the company is doing \u201cwell more\u201d than $13 billion in annual revenue \u2014 and he sounded a little testy when pressed on how it will pay for its massive spending commitments.",
+    "category": "ai",
+    "_trending_tags": [
+      "ai",
+      "llm",
+      "openai"
+    ],
+    "_permalink": "/p/a0aa97307b/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/a0aa97307b/",
+    "_summary_240": "OpenAI CEO Sam Altman recently said that the company is doing \u201cwell more\u201d than $13 billion in annual revenue \u2014 and he sounded a little testy when pressed on how it will pay for...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/a0aa97307b/thumbnail.png"
+  },
+  {
+    "title": "Anthropic Is Testing User Patience",
+    "url": "https://newsletter.tek2dayholdings.com/p/anthropic-is-testing-user-patience",
+    "published_at": "2025-11-02T12:12:19-05:00",
+    "source": "TEK2day Newsletter",
+    "summary": "Anthropic is throttling usage again - heavily, and seemingly randomly.",
+    "content_html": "<div class=\"captioned-image-container\"><figure><a class=\"image-link image2 is-viewable-img\" href=\"https://substackcdn.com/image/fetch/$s_!IbJQ!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F367b3904-31ab-48ac-b783-2ce92d44f6ee_1075x768.png\" target=\"_blank\"><div class=\"image2-inset\"><source type=\"image/webp\" /><img alt=\"\" class=\"sizing-normal\" height=\"768\" src=\"https://substackcdn.com/image/fetch/$s_!IbJQ!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F367b3904-31ab-48ac-b783-2ce92d44f6ee_1075x768.png\" width=\"1075\" /><div class=\"image-link-expand\"><div class=\"pencraft pc-display-flex pc-gap-8 pc-reset\"><div class=\"pencraft pc-reset icon-container restack-image\"><svg class=\"lucide lucide-refresh-cw\" fill=\"none\" height=\"20\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" viewBox=\"0 0 24 24\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8\"></path><path d=\"M21 3v5h-5\"></path><path d=\"M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16\"></path><path d=\"M8 16H3v5\"></path></svg></div><div class=\"pencraft pc-reset icon-container view-image\"><svg class=\"lucide lucide-maximize2 lucide-maximize-2\" fill=\"none\" height=\"20\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" viewBox=\"0 0 24 24\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><polyline points=\"15 3 21 3 21 9\"></polyline><polyline points=\"9 21 3 21 3 15\"></polyline><line x1=\"21\" x2=\"14\" y1=\"3\" y2=\"10\"></line><line x1=\"3\" x2=\"10\" y1=\"21\" y2=\"14\"></line></svg></div></div></div></div></a></figure></div><p><strong>Anthropic is throttling usage again - heavily, and seemingly randomly. </strong>Whilst I&#8217;ve bestowed accolades upon Anthropic&#8217;s <a href=\"https://claude.ai/\">Claude</a> model family for its coding prowess, the company&#8217;s model throttling is infuriating. This is why I cancel my Anthropic subscription regularly and use other premium models in its stead, most notably <a href=\"https://chatgpt.com/\">GPT 5</a> (OpenAI) and <a href=\"https://gemini.google.com/app\">Gemini 2.5 Pro</a> (Google, GOOGL). </p><p><strong>My guess is that Anthropic&#8217;s dollar renewal rate is probably in the 50% range</strong>, which is terrible, and why I believe the company will eventually be sold, most likely to Google. </p><p>Developers that pay Anthropic for firehose access no doubt have a better user experience than me, but I&#8217;d prefer to go the opensource route were I to write code 12 hours day, 6 days per week. <a href=\"https://www.deepseek.com/en\">DeepSeek</a> and other opensource providers build models that have outstanding performance.   </p><div class=\"captioned-image-container\"><figure><a class=\"image-link image2 is-viewable-img\" href=\"https://substackcdn.com/image/fetch/$s_!CgGg!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F93a2bbd3-6ea8-4029-8d1e-cb1eb41ae491_1366x768.png\" target=\"_blank\"><div class=\"image2-inset\"><source type=\"image/webp\" /><img alt=\"\" class=\"sizing-normal\" height=\"768\" src=\"https://substackcdn.com/image/fetch/$s_!CgGg!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F93a2bbd3-6ea8-4029-8d1e-cb1eb41ae491_1366x768.png\" width=\"1366\" /><div class=\"image-link-expand\"><div class=\"pencraft pc-display-flex pc-gap-8 pc-reset\"><div class=\"pencraft pc-reset icon-container restack-image\"><svg class=\"lucide lucide-refresh-cw\" fill=\"none\" height=\"20\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" viewBox=\"0 0 24 24\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8\"></path><path d=\"M21 3v5h-5\"></path><path d=\"M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16\"></path><path d=\"M8 16H3v5\"></path></svg></div><div class=\"pencraft pc-reset icon-container view-image\"><svg class=\"lucide lucide-maximize2 lucide-maximize-2\" fill=\"none\" height=\"20\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" viewBox=\"0 0 24 24\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><polyline points=\"15 3 21 3 21 9\"></polyline><polyline points=\"9 21 3 21 3 15\"></polyline><line x1=\"21\" x2=\"14\" y1=\"3\" y2=\"10\"></line><line x1=\"3\" x2=\"10\" y1=\"21\" y2=\"14\"></line></svg></div></div></div></div></a><figcaption class=\"image-caption\"><a href=\"https://dash.tek2dayholdings.com/\">Source: T2D Dash, TradingView, GOOGL</a></figcaption></figure></div><div><hr /></div><p></p>",
+    "image_url": "https://substackcdn.com/image/fetch/$s_!IbJQ!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F367b3904-31ab-48ac-b783-2ce92d44f6ee_1075x768.png",
+    "summary_text": "Anthropic is throttling usage again - heavily, and seemingly randomly.",
+    "category": "ai",
+    "_trending_tags": [
+      "ai",
+      "anthropic"
+    ],
+    "_permalink": "/p/940d3ef5f3/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/940d3ef5f3/",
+    "_summary_240": "Anthropic is throttling usage again - heavily, and seemingly randomly.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/940d3ef5f3/thumbnail.png"
+  },
+  {
     "title": "Meta has an AI product problem",
     "url": "https://techcrunch.com/2025/11/02/meta-has-an-ai-product-problem/",
     "published_at": "2025-11-02T11:00:00-05:00",
@@ -38,7 +77,7 @@
   },
   {
     "title": "Here\u2019s what happened in crypto today",
-    "url": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss%3F_t%3D1762101596104%26nc%3D1762101596104%26rand%3Dxa2or_1762101596104&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss%3F_refresh%3Dai7vfx%26rand%3Dxlvo8_1762103708105%26cb%3Dai7vfx&utm_campaign=rss_partner_inbound",
     "published_at": "2025-11-02T07:25:56-05:00",
     "source": "Cointelegraph",
     "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, NFTs, Web3 and crypto regulation.",
@@ -49,14 +88,14 @@
     "_trending_tags": [
       "ai"
     ],
-    "_permalink": "/p/6b451604b1/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/6b451604b1/",
+    "_permalink": "/p/56fc7f98fd/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/56fc7f98fd/",
     "_summary_240": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, NFTs, Web3 and crypto regulation.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/6b451604b1/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/56fc7f98fd/thumbnail.png"
   },
   {
     "title": "Fintechs and neobanks drive the next era of stablecoin adoption",
-    "url": "https://cointelegraph.com/news/fintechs-neobanks-stablecoin-adoption?utm_source=rss_feed&utm_medium=rss%3F_t%3D1762101596104%26nc%3D1762101596104%26rand%3Dxa2or_1762101596104&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/fintechs-neobanks-stablecoin-adoption?utm_source=rss_feed&utm_medium=rss%3F_refresh%3Dai7vfx%26rand%3Dxlvo8_1762103708105%26cb%3Dai7vfx&utm_campaign=rss_partner_inbound",
     "published_at": "2025-11-02T03:30:00-05:00",
     "source": "Cointelegraph",
     "summary": "Fintechs bypass traditional banking to offer stablecoin access, yield and spending in emerging markets. Programmable money leapfrogs legacy infrastructure.",
@@ -67,10 +106,10 @@
     "_trending_tags": [
       "fintech"
     ],
-    "_permalink": "/p/807e949f2f/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/807e949f2f/",
+    "_permalink": "/p/5b7b069261/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/5b7b069261/",
     "_summary_240": "Fintechs bypass traditional banking to offer stablecoin access, yield and spending in emerging markets. Programmable money leapfrogs legacy infrastructure.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/807e949f2f/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/5b7b069261/thumbnail.png"
   },
   {
     "title": "The new hot job in AI: forward-deployed engineers",
@@ -112,7 +151,7 @@
   },
   {
     "title": "Columbia Business professor casts doubt on tokenized bank deposits",
-    "url": "https://cointelegraph.com/news/columbia-business-professor-doubt-tokenized-bank-deposits?utm_source=rss_feed&utm_medium=rss%3F_t%3D1762101596104%26nc%3D1762101596104%26rand%3Dxa2or_1762101596104&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/columbia-business-professor-doubt-tokenized-bank-deposits?utm_source=rss_feed&utm_medium=rss%3F_refresh%3Dai7vfx%26rand%3Dxlvo8_1762103708105%26cb%3Dai7vfx&utm_campaign=rss_partner_inbound",
     "published_at": "2025-11-01T18:14:08-04:00",
     "source": "Cointelegraph",
     "summary": "Tokenized bank deposits lack the flexibility and technical features of stablecoins, making them an inferior product, according to Omid Malekan.",
@@ -120,43 +159,39 @@
     "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjQtMTIvMDE5MzhiODAtYTg3NS03ZDAyLWE2N2MtNzMyMTg3ODhkMTIx.jpg",
     "summary_text": "Tokenized bank deposits lack the flexibility and technical features of stablecoins, making them an inferior product, according to Omid Malekan.",
     "category": "fintech",
-    "_permalink": "/p/de44019f2a/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/de44019f2a/",
+    "_permalink": "/p/265d365f78/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/265d365f78/",
     "_summary_240": "Tokenized bank deposits lack the flexibility and technical features of stablecoins, making them an inferior product, according to Omid Malekan.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/de44019f2a/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/265d365f78/thumbnail.png"
   },
   {
-    "title": "Digital euro CBDC is 'symbol of trust in our common destiny' \u2014 ECB head",
-    "url": "https://cointelegraph.com/news/digital-euro-cbdc-symbol-trust-common-destiny-ecb?utm_source=rss_feed&utm_medium=rss%3F_t%3D1762101596104%26nc%3D1762101596104%26rand%3Dxa2or_1762101596104&utm_campaign=rss_partner_inbound",
+    "title": "Digital euro CBDC is \u2018symbol of trust in our common destiny\u2019 \u2014 ECB head",
+    "url": "https://cointelegraph.com/news/digital-euro-cbdc-symbol-trust-common-destiny-ecb?utm_source=rss_feed&utm_medium=rss%3F_refresh%3Dai7vfx%26rand%3Dxlvo8_1762103708105%26cb%3Dai7vfx&utm_campaign=rss_partner_inbound",
     "published_at": "2025-11-01T16:39:45-04:00",
     "source": "Cointelegraph",
     "summary": "The comments from European Central Bank head Christine Lagarde drew overwhelming backlash from the crypto community and political influencers.",
     "content_html": "",
     "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTEvMDE5YTQxMTItZTkwOS03NDcwLWFmNjctZWNhOWYwY2YxZjRh.jpg",
     "summary_text": "The comments from European Central Bank head Christine Lagarde drew overwhelming backlash from the crypto community and political influencers.",
-    "category": "fintech",
-    "_permalink": "/p/d029f3ce4f/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/d029f3ce4f/",
-    "_summary_240": "The comments from European Central Bank head Christine Lagarde drew overwhelming backlash from the crypto community and political influencers.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/d029f3ce4f/thumbnail.png"
+    "category": "fintech"
   },
   {
     "title": "MEV driving institutions away from DeFi, costing users dearly: Crypto exec",
-    "url": "https://cointelegraph.com/news/mev-driving-institutions-away-defi-costing-users-dearly?utm_source=rss_feed&utm_medium=rss%3F_t%3D1762101596104%26nc%3D1762101596104%26rand%3Dxa2or_1762101596104&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/mev-driving-institutions-away-defi-costing-users-dearly?utm_source=rss_feed&utm_medium=rss%3F_refresh%3Dai7vfx%26rand%3Dxlvo8_1762103708105%26cb%3Dai7vfx&utm_campaign=rss_partner_inbound",
     "published_at": "2025-11-01T13:54:34-04:00",
     "source": "Cointelegraph",
-    "summary": "Broadcasting transactions before they are executed imposes a \"hidden tax\" on retail crypto users while alienating financial institutions.",
+    "summary": "Broadcasting transactions before they are executed imposes a \u201chidden tax\u201d on retail crypto users while alienating financial institutions.",
     "content_html": "",
     "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTEvMDE5YTQwNTctZTE5Yi03Y2UzLWE1ZmYtYTQwOTYzMTg1YzZk.jpg",
-    "summary_text": "Broadcasting transactions before they are executed imposes a \"hidden tax\" on retail crypto users while alienating financial institutions.",
+    "summary_text": "Broadcasting transactions before they are executed imposes a \u201chidden tax\u201d on retail crypto users while alienating financial institutions.",
     "category": "fintech",
     "_trending_tags": [
       "ai"
     ],
-    "_permalink": "/p/bf054d34a3/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/bf054d34a3/",
-    "_summary_240": "Broadcasting transactions before they are executed imposes a \"hidden tax\" on retail crypto users while alienating financial institutions.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/bf054d34a3/thumbnail.png"
+    "_permalink": "/p/45c21b5c9b/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/45c21b5c9b/",
+    "_summary_240": "Broadcasting transactions before they are executed imposes a \u201chidden tax\u201d on retail crypto users while alienating financial institutions.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/45c21b5c9b/thumbnail.png"
   },
   {
     "title": "Coinbase CEO Brian Armstrong trolls the prediction markets",
@@ -194,7 +229,7 @@
   },
   {
     "title": "Crypto\u2019s changing demographics demand a new approach to crypto security",
-    "url": "https://cointelegraph.com/news/crypto-demographics-ch-to-crypto-tech?utm_source=rss_feed&utm_medium=rss%3F_t%3D1762101596104%26nc%3D1762101596104%26rand%3Dxa2or_1762101596104&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/crypto-demographics-ch-to-crypto-tech?utm_source=rss_feed&utm_medium=rss%3F_refresh%3Dai7vfx%26rand%3Dxlvo8_1762103708105%26cb%3Dai7vfx&utm_campaign=rss_partner_inbound",
     "published_at": "2025-11-01T09:30:00-04:00",
     "source": "Cointelegraph",
     "summary": "Stablecoins dominate 40% of crypto volume as emerging markets prioritize utility over ideology. Security must become invisible, not user homework.",
@@ -202,14 +237,14 @@
     "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjQtMTIvMDE5M2YxYzktM2NiYS03NjI4LWE2ODQtMTk0NmZlZmFhNjRh.jpg",
     "summary_text": "Stablecoins dominate 40% of crypto volume as emerging markets prioritize utility over ideology. Security must become invisible, not user homework.",
     "category": "fintech",
-    "_permalink": "/p/a1b274a852/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/a1b274a852/",
+    "_permalink": "/p/c9d89d49a8/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/c9d89d49a8/",
     "_summary_240": "Stablecoins dominate 40% of crypto volume as emerging markets prioritize utility over ideology. Security must become invisible, not user homework.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/a1b274a852/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/c9d89d49a8/thumbnail.png"
   },
   {
     "title": "Malaysia\u2019s central bank sets three-year roadmap to pilot asset tokenization",
-    "url": "https://cointelegraph.com/news/malaysia-central-bank-roadmap-pilot-asset-tokenization?utm_source=rss_feed&utm_medium=rss%3F_t%3D1762101596104%26nc%3D1762101596104%26rand%3Dxa2or_1762101596104&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/malaysia-central-bank-roadmap-pilot-asset-tokenization?utm_source=rss_feed&utm_medium=rss%3F_refresh%3Dai7vfx%26rand%3Dxlvo8_1762103708105%26cb%3Dai7vfx&utm_campaign=rss_partner_inbound",
     "published_at": "2025-11-01T08:53:01-04:00",
     "source": "Cointelegraph",
     "summary": "BNM\u2019s tokenization roadmap aims to focus on real-world use cases such as SME supply chain financing, Shariah-compliant Islamic products, green finance and 24/7 cross-border payments.",
@@ -220,14 +255,14 @@
     "_trending_tags": [
       "ai"
     ],
-    "_permalink": "/p/f0886c9ece/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/f0886c9ece/",
+    "_permalink": "/p/81bbf82b3b/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/81bbf82b3b/",
     "_summary_240": "BNM\u2019s tokenization roadmap aims to focus on real-world use cases such as SME supply chain financing, Shariah-compliant Islamic products, green finance and 24/7 cross-border...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/f0886c9ece/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/81bbf82b3b/thumbnail.png"
   },
   {
     "title": "Solana ETFs see inflows for 4th consecutive day amid \u2018capital rotation\u2019 from Bitcoin, Ether funds",
-    "url": "https://cointelegraph.com/news/solana-etfs-fourth-day-inflows-bitcoin-ether-outflows?utm_source=rss_feed&utm_medium=rss%3F_t%3D1762101596104%26nc%3D1762101596104%26rand%3Dxa2or_1762101596104&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/solana-etfs-fourth-day-inflows-bitcoin-ether-outflows?utm_source=rss_feed&utm_medium=rss%3F_refresh%3Dai7vfx%26rand%3Dxlvo8_1762103708105%26cb%3Dai7vfx&utm_campaign=rss_partner_inbound",
     "published_at": "2025-11-01T05:46:55-04:00",
     "source": "Cointelegraph",
     "summary": "Kronos Research\u2019s Vincent Liu expects Solana ETF inflows to continue next week, noting that rotation from Bitcoin and Ether will likely persist.",
@@ -235,14 +270,14 @@
     "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTAvMDE5OWVkZTMtM2ZhZi03MDg4LTlhNDItNTAxY2RjY2NmM2Zi.jpg",
     "summary_text": "Kronos Research\u2019s Vincent Liu expects Solana ETF inflows to continue next week, noting that rotation from Bitcoin and Ether will likely persist.",
     "category": "fintech",
-    "_permalink": "/p/58664a1a78/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/58664a1a78/",
+    "_permalink": "/p/80a7036352/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/80a7036352/",
     "_summary_240": "Kronos Research\u2019s Vincent Liu expects Solana ETF inflows to continue next week, noting that rotation from Bitcoin and Ether will likely persist.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/58664a1a78/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/80a7036352/thumbnail.png"
   },
   {
     "title": "Crypto sleeps while AI builds the richest data set monopolies",
-    "url": "https://cointelegraph.com/news/crypto-ai-data-set-monopolies?utm_source=rss_feed&utm_medium=rss%3F_t%3D1762101596104%26nc%3D1762101596104%26rand%3Dxa2or_1762101596104&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/crypto-ai-data-set-monopolies?utm_source=rss_feed&utm_medium=rss%3F_refresh%3Dai7vfx%26rand%3Dxlvo8_1762103708105%26cb%3Dai7vfx&utm_campaign=rss_partner_inbound",
     "published_at": "2025-11-01T04:30:00-04:00",
     "source": "Cointelegraph",
     "summary": "Crypto debates DeFi forks while AI companies lock trillions of tokens into proprietary training runs, building permanent data set monopolies. The window closes fast.",
@@ -253,14 +288,14 @@
     "_trending_tags": [
       "ai"
     ],
-    "_permalink": "/p/6f8839c804/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/6f8839c804/",
+    "_permalink": "/p/db438d6837/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/db438d6837/",
     "_summary_240": "Crypto debates DeFi forks while AI companies lock trillions of tokens into proprietary training runs, building permanent data set monopolies. The window closes fast.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/6f8839c804/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/db438d6837/thumbnail.png"
   },
   {
     "title": "Bitcoin ends October in red, but now enters its biggest month for gains",
-    "url": "https://cointelegraph.com/news/bitcoin-closed-october-red-now-entering-november?utm_source=rss_feed&utm_medium=rss%3F_t%3D1762101596104%26nc%3D1762101596104%26rand%3Dxa2or_1762101596104&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/bitcoin-closed-october-red-now-entering-november?utm_source=rss_feed&utm_medium=rss%3F_refresh%3Dai7vfx%26rand%3Dxlvo8_1762103708105%26cb%3Dai7vfx&utm_campaign=rss_partner_inbound",
     "published_at": "2025-11-01T01:58:19-04:00",
     "source": "Cointelegraph",
     "summary": "Bitcoin has typically recorded its strongest month for gains in November, and there are certainly macro tailwinds to make it happen again.",
@@ -271,10 +306,10 @@
     "_trending_tags": [
       "ai"
     ],
-    "_permalink": "/p/da6a00995b/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/da6a00995b/",
+    "_permalink": "/p/bfff4a1cf9/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/bfff4a1cf9/",
     "_summary_240": "Bitcoin has typically recorded its strongest month for gains in November, and there are certainly macro tailwinds to make it happen again.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/da6a00995b/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/bfff4a1cf9/thumbnail.png"
   },
   {
     "title": "Large reasoning models almost certainly can think",
@@ -293,7 +328,7 @@
   },
   {
     "title": "Steak \u2018n Shake Bitcoin reserve: Happy meal for hodlers or nothingburger?",
-    "url": "https://cointelegraph.com/news/steak-n-shake-cooking-up-strategic-bitcoin-reserve?utm_source=rss_feed&utm_medium=rss%3F_t%3D1762101596104%26nc%3D1762101596104%26rand%3Dxa2or_1762101596104&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/steak-n-shake-cooking-up-strategic-bitcoin-reserve?utm_source=rss_feed&utm_medium=rss%3F_refresh%3Dai7vfx%26rand%3Dxlvo8_1762103708105%26cb%3Dai7vfx&utm_campaign=rss_partner_inbound",
     "published_at": "2025-10-31T22:38:11-04:00",
     "source": "Cointelegraph",
     "summary": "The fast-food chain is also donating 210 sats from every Bitcoin meal toward open-source Bitcoin development.",
@@ -304,10 +339,10 @@
     "_trending_tags": [
       "ai"
     ],
-    "_permalink": "/p/2246cde8bb/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/2246cde8bb/",
+    "_permalink": "/p/2869feda5e/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/2869feda5e/",
     "_summary_240": "The fast-food chain is also donating 210 sats from every Bitcoin meal toward open-source Bitcoin development.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/2246cde8bb/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/2869feda5e/thumbnail.png"
   },
   {
     "title": "CrowdStrike & NVIDIA\u2019s open source AI gives enterprises the edge against machine-speed attacks",
@@ -327,7 +362,7 @@
   },
   {
     "title": "Musk unveils X Chat, a messenger with encryption \u2018similar to Bitcoin\u2019",
-    "url": "https://cointelegraph.com/news/elon-musk-launch-whatsapp-competitor-with-p2p-encryption-similar-bitcoin?utm_source=rss_feed&utm_medium=rss%3F_t%3D1762101596104%26nc%3D1762101596104%26rand%3Dxa2or_1762101596104&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/elon-musk-launch-whatsapp-competitor-with-p2p-encryption-similar-bitcoin?utm_source=rss_feed&utm_medium=rss%3F_refresh%3Dai7vfx%26rand%3Dxlvo8_1762103708105%26cb%3Dai7vfx&utm_campaign=rss_partner_inbound",
     "published_at": "2025-10-31T20:04:35-04:00",
     "source": "Cointelegraph",
     "summary": "Elon Musk expects X Chat to launch within the next few months and promises it won\u2019t sell or share users\u2019 data with advertisers.",
@@ -335,10 +370,10 @@
     "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMDcvMDE5N2U0M2UtNzIwYi03ODgyLWI5NTEtYWE3NDIyY2ExYmJl.jpg",
     "summary_text": "Elon Musk expects X Chat to launch within the next few months and promises it won\u2019t sell or share users\u2019 data with advertisers.",
     "category": "fintech",
-    "_permalink": "/p/38688b8330/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/38688b8330/",
+    "_permalink": "/p/f6e0da2256/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/f6e0da2256/",
     "_summary_240": "Elon Musk expects X Chat to launch within the next few months and promises it won\u2019t sell or share users\u2019 data with advertisers.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/38688b8330/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/f6e0da2256/thumbnail.png"
   },
   {
     "title": "TranscendAP Secures Venture Funding to Grow AI-Driven AP Automation Software",
@@ -415,7 +450,7 @@
   },
   {
     "title": "New Hampshire Senate stalls crypto mining deregulation bill after split vote",
-    "url": "https://cointelegraph.com/news/new-hampshire-senate-stalls-crypto-mining-deregulation-bill-after-split-vote?utm_source=rss_feed&utm_medium=rss%3F_t%3D1762101596104%26nc%3D1762101596104%26rand%3Dxa2or_1762101596104&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/new-hampshire-senate-stalls-crypto-mining-deregulation-bill-after-split-vote?utm_source=rss_feed&utm_medium=rss%3F_refresh%3Dai7vfx%26rand%3Dxlvo8_1762103708105%26cb%3Dai7vfx&utm_campaign=rss_partner_inbound",
     "published_at": "2025-10-31T17:37:21-04:00",
     "source": "Cointelegraph",
     "summary": "Lawmakers opted to study the proposal further following a wave of public concern over plans to loosen local controls on crypto mining in the state.",
@@ -423,14 +458,14 @@
     "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMDMvMDE5NWI0ZjktMDhlMC03NTlkLTgwYTAtYmU3MTM5ZGVmYjVh.jpg",
     "summary_text": "Lawmakers opted to study the proposal further following a wave of public concern over plans to loosen local controls on crypto mining in the state.",
     "category": "fintech",
-    "_permalink": "/p/78bd555697/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/78bd555697/",
+    "_permalink": "/p/3a1df91d38/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/3a1df91d38/",
     "_summary_240": "Lawmakers opted to study the proposal further following a wave of public concern over plans to loosen local controls on crypto mining in the state.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/78bd555697/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/3a1df91d38/thumbnail.png"
   },
   {
     "title": "Bitcoin's 4-year cycle isn't dead, expect a 70% drop next downturn: VC",
-    "url": "https://cointelegraph.com/news/bitcoin-4-year-cycle-not-dead-70-drawdown?utm_source=rss_feed&utm_medium=rss%3F_t%3D1762101596104%26nc%3D1762101596104%26rand%3Dxa2or_1762101596104&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/bitcoin-4-year-cycle-not-dead-70-drawdown?utm_source=rss_feed&utm_medium=rss%3F_refresh%3Dai7vfx%26rand%3Dxlvo8_1762103708105%26cb%3Dai7vfx&utm_campaign=rss_partner_inbound",
     "published_at": "2025-10-31T17:21:38-04:00",
     "source": "Cointelegraph",
     "summary": "The lack of understanding about Bitcoin's economic properties will result in a market dump at the first sign of trouble, Vineet Budki said.",
@@ -441,10 +476,10 @@
     "_trending_tags": [
       "ai"
     ],
-    "_permalink": "/p/1ef4cfe186/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/1ef4cfe186/",
+    "_permalink": "/p/3df41aafda/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/3df41aafda/",
     "_summary_240": "The lack of understanding about Bitcoin's economic properties will result in a market dump at the first sign of trouble, Vineet Budki said.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/1ef4cfe186/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/3df41aafda/thumbnail.png"
   },
   {
     "title": "Court Backs Fed\u2019s Power to Block FinTech Access to Payment Rails",
@@ -520,7 +555,7 @@
   },
   {
     "title": "Quantum threat to Bitcoin still years away, says Borderless Capital partner",
-    "url": "https://cointelegraph.com/news/quantum-still-infancy-pose-any-threat-to-bitcoin-near-term-vc?utm_source=rss_feed&utm_medium=rss%3F_t%3D1762101596104%26nc%3D1762101596104%26rand%3Dxa2or_1762101596104&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/quantum-still-infancy-pose-any-threat-to-bitcoin-near-term-vc?utm_source=rss_feed&utm_medium=rss%3F_refresh%3Dai7vfx%26rand%3Dxlvo8_1762103708105%26cb%3Dai7vfx&utm_campaign=rss_partner_inbound",
     "published_at": "2025-10-31T16:25:45-04:00",
     "source": "Cointelegraph",
     "summary": "Borderless Capital\u2019s Amit Mehra said quantum computing remains years away from threatening Bitcoin, though rapid advances could make post-quantum security urgent.",
@@ -531,10 +566,10 @@
     "_trending_tags": [
       "ai"
     ],
-    "_permalink": "/p/ce9c736998/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/ce9c736998/",
+    "_permalink": "/p/31208bac3f/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/31208bac3f/",
     "_summary_240": "Borderless Capital\u2019s Amit Mehra said quantum computing remains years away from threatening Bitcoin, though rapid advances could make post-quantum security urgent.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/ce9c736998/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/31208bac3f/thumbnail.png"
   },
   {
     "title": "US stocks ride AI hype and trade truce to 6-month winning streak",
@@ -556,7 +591,7 @@
   },
   {
     "title": "Crypto Biz: Corporate stablecoin race heats up with Citi, Western Union at the helm",
-    "url": "https://cointelegraph.com/news/crypto-biz-corporate-stablecoin-race-heats-up-with-citi-western-union-at-the-helm?utm_source=rss_feed&utm_medium=rss%3F_t%3D1762101596104%26nc%3D1762101596104%26rand%3Dxa2or_1762101596104&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/crypto-biz-corporate-stablecoin-race-heats-up-with-citi-western-union-at-the-helm?utm_source=rss_feed&utm_medium=rss%3F_refresh%3Dai7vfx%26rand%3Dxlvo8_1762103708105%26cb%3Dai7vfx&utm_campaign=rss_partner_inbound",
     "published_at": "2025-10-31T16:00:00-04:00",
     "source": "Cointelegraph",
     "summary": "Citi and Western Union lead Wall Street\u2019s stablecoin charge as Bitcoin miners and lenders shake up the post-halving crypto landscape.",
@@ -564,10 +599,10 @@
     "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjQtMTEvMDE5MzJmYTctN2M1Yi03ODBhLWE4ZmItOWNmZjkyMjc2ZWY2.jpg",
     "summary_text": "Citi and Western Union lead Wall Street\u2019s stablecoin charge as Bitcoin miners and lenders shake up the post-halving crypto landscape.",
     "category": "fintech",
-    "_permalink": "/p/4058c4deef/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/4058c4deef/",
+    "_permalink": "/p/97ffc09972/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/97ffc09972/",
     "_summary_240": "Citi and Western Union lead Wall Street\u2019s stablecoin charge as Bitcoin miners and lenders shake up the post-halving crypto landscape.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/4058c4deef/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/97ffc09972/thumbnail.png"
   },
   {
     "title": "Walmart Adds AI-Powered In-Store Search, Shopping List and Party Planner",
@@ -610,7 +645,7 @@
   },
   {
     "title": "Caitlin Long\u2019s crypto bank loses appeal over Fed master account",
-    "url": "https://cointelegraph.com/news/custodia-crypto-bank-appeal-federal-reserve-master-account?utm_source=rss_feed&utm_medium=rss%3F_t%3D1762101596104%26nc%3D1762101596104%26rand%3Dxa2or_1762101596104&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/custodia-crypto-bank-appeal-federal-reserve-master-account?utm_source=rss_feed&utm_medium=rss%3F_refresh%3Dai7vfx%26rand%3Dxlvo8_1762103708105%26cb%3Dai7vfx&utm_campaign=rss_partner_inbound",
     "published_at": "2025-10-31T15:18:41-04:00",
     "source": "Cointelegraph",
     "summary": "Custodia said it was \u201cactively considering\u201d petitioning the appellate court for a rehearing following the Tenth Circuit judgment, filed more than five years after its application.",
@@ -621,10 +656,10 @@
     "_trending_tags": [
       "ai"
     ],
-    "_permalink": "/p/6fe4a5d6b7/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/6fe4a5d6b7/",
+    "_permalink": "/p/4f01264e21/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/4f01264e21/",
     "_summary_240": "Custodia said it was \u201cactively considering\u201d petitioning the appellate court for a rehearing following the Tenth Circuit judgment, filed more than five years after its application.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/6fe4a5d6b7/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/4f01264e21/thumbnail.png"
   },
   {
     "title": "Big Tech\u2019s market dominance is becoming ever more extreme",
@@ -695,21 +730,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/f6ad92dee9/",
     "_summary_240": "Ease of creating counterfeit documents poses risks to financial trust",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/f6ad92dee9/thumbnail.png"
-  },
-  {
-    "title": "'Dino' cryptos to soak up institutional funds bound for altcoins: Analyst",
-    "url": "https://cointelegraph.com/news/dino-crypto-soak-institutional-capital-bound-altcoins?utm_source=rss_feed&utm_medium=rss%3F_t%3D1762101596104%26nc%3D1762101596104%26rand%3Dxa2or_1762101596104&utm_campaign=rss_partner_inbound",
-    "published_at": "2025-10-31T14:46:27-04:00",
-    "source": "Cointelegraph",
-    "summary": "Older, more established altcoins are likely to be the focus of institutional interest and investment, Maen Ftouni told Cointelegraph.",
-    "content_html": "",
-    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTAvMDE5YTNiNzItYTZmNy03YjJhLThkY2YtY2RlM2JmYTFhNjA3.jpg",
-    "summary_text": "Older, more established altcoins are likely to be the focus of institutional interest and investment, Maen Ftouni told Cointelegraph.",
-    "category": "fintech",
-    "_permalink": "/p/3dd910e8dc/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/3dd910e8dc/",
-    "_summary_240": "Older, more established altcoins are likely to be the focus of institutional interest and investment, Maen Ftouni told Cointelegraph.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/3dd910e8dc/thumbnail.png"
   },
   {
     "title": "Meta Claims Downloaded Porn at Center of AI Lawsuit Was for \u2018Personal Use\u2019",
@@ -1069,16 +1089,12 @@
     "source": "Financial Times - Technology",
     "summary": "Ofcom chief Melanie Dawes reveals she held meetings with US AI firms over Online Safety Act",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/9c54c105-7022-4739-856d-961e5f798c7b.jpg",
+    "image_url": "",
     "summary_text": "Ofcom chief Melanie Dawes reveals she held meetings with US AI firms over Online Safety Act",
     "category": "ai",
     "_trending_tags": [
       "ai"
-    ],
-    "_permalink": "/p/a1cfb7d5fd/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/a1cfb7d5fd/",
-    "_summary_240": "Ofcom chief Melanie Dawes reveals she held meetings with US AI firms over Online Safety Act",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/a1cfb7d5fd/thumbnail.png"
+    ]
   },
   {
     "title": "Inside Celosphere 2025: Why there\u2019s no \u2018enterprise AI\u2019 without process intelligence",
@@ -1156,16 +1172,12 @@
     "source": "Financial Times - Technology",
     "summary": "There are big differences in the level of risk and likely returns of Big Tech\u2019s spending",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/ce881257-dc62-4706-a65f-e1359cc00c71.jpg",
+    "image_url": "",
     "summary_text": "There are big differences in the level of risk and likely returns of Big Tech\u2019s spending",
     "category": "ai",
     "_trending_tags": [
       "ai"
-    ],
-    "_permalink": "/p/cdb008c871/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/cdb008c871/",
-    "_summary_240": "There are big differences in the level of risk and likely returns of Big Tech\u2019s spending",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/cdb008c871/thumbnail.png"
+    ]
   },
   {
     "title": "Claude Code updates: When to use Haiku 4.5, Claude Code on web, and more.",
@@ -1181,11 +1193,7 @@
       "ai",
       "anthropic",
       "claude"
-    ],
-    "_permalink": "/p/63b6a9c0c2/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/63b6a9c0c2/",
-    "_summary_240": "We're covering everything new with Claude for developers, including the launch of Claude Code for the Web, Claude Haiku 4.5, and more. Join the Claude Developer Discord -...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/63b6a9c0c2/thumbnail.png"
+    ]
   },
   {
     "title": "After teen death lawsuits, Character.AI will restrict chats for under-18 users",
@@ -1222,7 +1230,7 @@
     "source": "Financial Times - Technology",
     "summary": "Tim Berners-Lee believes AI offers a chance to reset to a system that serves individuals\u2019 needs and privacy",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/bf5a172d-d843-4628-88cc-a733443c3237.jpg",
+    "image_url": "",
     "summary_text": "Tim Berners-Lee believes AI offers a chance to reset to a system that serves individuals\u2019 needs and privacy",
     "category": "ai",
     "_trending_tags": [
@@ -1266,7 +1274,7 @@
     "source": "Financial Times - Technology",
     "summary": "When it comes to assessing our own work performance we are not always reliable witnesses",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/cd3de883-d8ab-4985-a698-dd1e1a5b3bb1.jpg",
+    "image_url": "",
     "summary_text": "When it comes to assessing our own work performance we are not always reliable witnesses",
     "category": "ai",
     "_trending_tags": [
@@ -1280,7 +1288,7 @@
     "source": "Financial Times - Technology",
     "summary": "The prize of achieving so-called superintelligence outweighs the risks for Meta chief",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/24dcc5e7-828a-46c4-8622-27879a53b889.jpg",
+    "image_url": "",
     "summary_text": "The prize of achieving so-called superintelligence outweighs the risks for Meta chief",
     "category": "ai",
     "_trending_tags": [
@@ -1325,7 +1333,7 @@
     "source": "Financial Times - Technology",
     "summary": "There are sectors that serve older populations and are conducive to automation",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/3b1b747b-3d91-4fd8-ab49-db8100cf7087.jpg",
+    "image_url": "",
     "summary_text": "There are sectors that serve older populations and are conducive to automation",
     "category": "fintech",
     "_trending_tags": [
@@ -1339,7 +1347,7 @@
     "source": "Financial Times - Technology",
     "summary": "Also in this newsletter: Merz visits Erdo\u011fan in Ankara",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/51952f74-4a41-472a-9fcf-b49faee0f450.jpg",
+    "image_url": "",
     "summary_text": "Also in this newsletter: Merz visits Erdo\u011fan in Ankara",
     "category": "ai",
     "_trending_tags": [
@@ -1367,7 +1375,7 @@
     "source": "Financial Times - Technology",
     "summary": "If we want to capitalise on applications in the next five years, we need to lay the groundwork now",
     "content_html": "",
-    "image_url": "https://images.ft.com/v3/image/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F2f2edb4b-67a0-4889-9e23-c5219c32b823.jpg?source=next-article&fit=scale-down&quality=highest&width=700&dpr=1",
+    "image_url": "",
     "summary_text": "If we want to capitalise on applications in the next five years, we need to lay the groundwork now",
     "category": "software"
   },
@@ -1889,22 +1897,6 @@
     "_trending_tags": [
       "ai",
       "nvidia"
-    ]
-  },
-  {
-    "title": "Knowledge preservation powered by ChatGPT",
-    "url": "https://openai.com/index/dai-nippon-printing",
-    "published_at": "2025-10-28T13:00:00-04:00",
-    "source": "OpenAI News",
-    "summary": "Dai Nippon Printing (DNP) rolled out ChatGPT Enterprise across ten core departments to drive companywide adoption. Within three months, it achieved 95% faster patent research, 10x processing volume, 100% weekly active usage, 87% automation, and 70% knowledge reuse.",
-    "content_html": "",
-    "image_url": "",
-    "summary_text": "Dai Nippon Printing (DNP) rolled out ChatGPT Enterprise across ten core departments to drive companywide adoption. Within three months, it achieved 95% faster patent research, 10x processing volume, 100% weekly active usage, 87% automation, and 70% knowledge ...",
-    "category": "ai",
-    "_trending_tags": [
-      "ai",
-      "chatgpt",
-      "gpt"
     ]
   },
   {
