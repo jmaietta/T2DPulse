@@ -1,0 +1,1563 @@
+{
+  "items": [
+    {
+      "title": "Vibe Coding Won\u2019t Replace Humans Anytime Soon, Data Shows",
+      "url": "https://www.pymnts.com/artificial-intelligence-2/2025/vibe-coding-wont-replace-humans-anytime-soon-data-shows/",
+      "published_at": "2025-11-03T15:02:51-05:00",
+      "source": "PYMNTS",
+      "summary": "Autonomous coding agents can now generate, test and debug entire applications but they still falter without human oversight. A new academic work titled, \u201cA Survey of Vibe Coding with Large Language Models\u201d finds that even advanced models capable of building complete apps lose accuracy and efficiency when developers aren\u2019t part of the process. The study [\u2026] The post Vibe Coding Won\u2019t Replace Human...",
+      "content_html": "<p><span>Autonomous coding agents can now generate, test and debug entire applications but they still falter without human oversight. A new academic work titled, </span><a href=\"https://arxiv.org/abs/2510.12399\" rel=\"noopener\" target=\"_blank\"><span>\u201cA Survey of Vibe Coding with Large Language Models\u201d</span></a><span> finds that even advanced models capable of building complete apps lose accuracy and efficiency when developers aren\u2019t part of the process. The study measured a 53% decline in code accuracy and a 19% increase in task completion time when human feedback loops were removed. The findings support a growing consensus: AI will not replace software engineers anytime soon, but it will redefine how they work.</span></p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<h2><b><span>Autonomy Without Context</span></b></h2>\n<p><span>The study\u2019s results reveal that coding agents can efficiently generate and refine code within controlled environments, yet their reasoning deteriorates once human guidance is stripped away. The researchers attribute this drop-off to missing context and unclear goal alignment, problems that human developers naturally resolve through judgment and domain experience. \u201cThese systems can perform multi-step reasoning, but without structured feedback, they fail to distinguish correctness from plausibility,\u201d the authors wrote.</span></p>\n<p><span>A </span><a href=\"https://www.bloomberg.com/opinion/articles/2025-03-25/ai-s-vibe-coding-revolution-is-getting-overhyped\" rel=\"noopener\" target=\"_blank\"><span>Bloomberg Opinion</span></a><span> column warned that the \u201cvibe coding revolution\u201d is being overhyped, arguing that many AI-built programs still require heavy rework to meet production standards. The term \u201cvibe coding,\u201d originally popularized by AI researcher Andrej Karpathy, describes the shift toward prompting models in natural language to write and run entire applications without knowing every line of code. It promises faster software creation but also raises new questions about control, versioning and accountability.</span></p>\n<p><span>In practice, researchers found that agentic models like Claude, Cursor and SWE-Agent performed best when developers reviewed outputs at key checkpoints rather than running fully autonomous sessions. Without those checkpoints, the models produced longer, less maintainable codebases and missed security constraints. The findings align with earlier research on </span><a href=\"https://arxiv.org/abs/2508.03923\" rel=\"noopener\" target=\"_blank\"><span>CoAct-1: Computer-Using Agents with Coding as Actions</span></a><span>, which similarly concluded that human interaction remains essential for steering multi-agent software systems toward reliable outcomes.</span></p>\n<h2><b><span>The Hybrid Developer Era</span></b></h2>\n<p><span>A </span><a href=\"https://www.wsj.com/articles/walmart-wants-more-developers-and-more-ai-agents-to-automate-their-work-e4afaa22\" rel=\"noopener\" target=\"_blank\"><span>Wall Street Journal</span></a><span> report revealed that Walmart, one of the largest enterprise software buyers globally, is not replacing its developers with AI agents but expanding both. The retailer is creating new \u201cagent developer\u201d roles, engineers who train, supervise, and integrate coding agents into production workflows. Rather than automating humans out of the loop, Walmart\u2019s strategy centers on pairing traditional developers with AI copilots that manage documentation, code refactoring, and test automation.</span></p>\n<p><span>That same blended approach is reflected in enterprise strategy across finance, logistics, and retail. Human developers are increasingly acting as conductors of agentic systems, structuring context, enforcing validation, and maintaining continuity between business logic and machine output. This is \u201cinteractive autonomy,\u201d where AI executes and humans validate. The combination improves speed and scalability while retaining the critical human judgment required for compliance and maintainability.</span></p>\n<p><span>Vibe coding also can create opportunities for small businesses where they might not have been previously able to afford to pay for an entire development team, as what Justin Jin\u2019s </span><a href=\"https://www.pymnts.com/artificial-intelligence-2/2025/will-vibe-coding-spark-a-new-economy/\" rel=\"noopener\" target=\"_blank\"><span>experience</span></a><span> was when he launched the AI-powered entertainment app, Giggles.</span></p>\n<p><span>Still, the researchers warn that this structure must be deliberate. Unstructured collaboration between humans and agents can slow down work rather than accelerate it. Teams in the study that adopted consistent review points and role definitions saw up to 31% higher accuracy than those that let agents operate independently. The takeaway, according to the authors, is that autonomy without scaffolding introduces inefficiency rather than innovation.</span></p>\n<p><span>As the </span><a href=\"https://arxiv.org/abs/2509.24240\" rel=\"noopener\" target=\"_blank\"><span>\u201cTakedown\u201d</span></a><span> paper from Stanford highlights, unmonitored AI code can introduce security and compliance vulnerabilities at scale. The lesson, across both research and industry, is that autonomy in AI coding is not a destination but a design choice. True efficiency lies in the feedback architecture that guides agents, embedding human reasoning, ethical oversight and contextual understanding into every iteration.</span></p>\n<p><span>Vibe coding may indeed spark a new economy, but not through total automation. Its real promise lies in redefining collaboration: developers who manage, teach and correct AI will shape the next era of software creation. In the process, coding may become less about syntax and more about a shared workflow where human oversight remains.</span><span>\u00a0</span></p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/artificial-intelligence-2/2025/vibe-coding-wont-replace-humans-anytime-soon-data-shows/\">Vibe Coding Won\u2019t Replace Humans Anytime Soon, Data Shows</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
+      "image_url": "https://www.pymnts.com/wp-content/uploads/2025/11/vibe-coding-ai-artificial-intelligence-automation.jpg?w=457",
+      "summary_text": "Autonomous coding agents can now generate, test and debug entire applications but they still falter without human oversight. A new academic work titled, \u201cA Survey of Vibe Coding with Large Language Models\u201d finds that even advanced models capable of building c...",
+      "category": "fintech",
+      "_trending_tags": [
+        "agent"
+      ],
+      "_permalink": "/p/dd56a28ace/",
+      "_abs_permalink": "https://pulse.tek2dayholdings.com/p/dd56a28ace/",
+      "_summary_240": "Autonomous coding agents can now generate, test and debug entire applications but they still falter without human oversight. A new academic work titled, \u201cA Survey of Vibe Coding...",
+      "_thumbnail": "https://pulse.tek2dayholdings.com/p/dd56a28ace/thumbnail.png"
+    },
+    {
+      "title": "Coin Center files brief in Ethereum MEV trial, disputes \u2018honest validation\u2019 theory",
+      "url": "https://cointelegraph.com/news/coin-center-amicus-brief-mev-bot-trial?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "published_at": "2025-11-03T15:00:48-05:00",
+      "source": "Cointelegraph",
+      "summary": "The advocacy organization filed a brief opposing prosecutors\u2019 arguments that two brothers presented themselves as \u201chonest validators\u201d to allegedly pull off a $25-million exploit.",
+      "content_html": "",
+      "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMDUvMDE5NmVlZGEtYzM3YS03MTA4LWIwZWQtNGQ2NGFjNjRiNzcy.jpg",
+      "summary_text": "The advocacy organization filed a brief opposing prosecutors\u2019 arguments that two brothers presented themselves as \u201chonest validators\u201d to allegedly pull off a $25-million exploit.",
+      "category": "fintech",
+      "_permalink": "/p/f72c0a1b71/",
+      "_abs_permalink": "https://pulse.tek2dayholdings.com/p/f72c0a1b71/",
+      "_summary_240": "The advocacy organization filed a brief opposing prosecutors\u2019 arguments that two brothers presented themselves as \u201chonest validators\u201d to allegedly pull off a $25-million exploit.",
+      "_thumbnail": "https://pulse.tek2dayholdings.com/p/f72c0a1b71/thumbnail.png"
+    },
+    {
+      "title": "Experian to Launch Credit Score in UK That Includes Rental Payments",
+      "url": "https://www.pymnts.com/consumer-finance/2025/experian-to-launch-credit-score-in-uk-that-includes-rental-payments/",
+      "published_at": "2025-11-03T14:56:36-05:00",
+      "source": "PYMNTS",
+      "summary": "Experian UK&I is set to introduce a new credit score in the United Kingdom that will include rental payments and other financial behaviors in consumers\u2019 daily lives. The new Experian Credit Score will begin rolling out this month and will reach all U.K. consumers by the end of the year, the company said in [\u2026] The post Experian to Launch Credit Score in UK That Includes Rental Payments appeared f...",
+      "content_html": "<p style=\"font-weight: 400;\"><a href=\"https://www.experianplc.com/\" rel=\"noopener\" target=\"_blank\">Experian UK&amp;I</a> is set to introduce a new credit score in the United Kingdom that will include rental payments and other financial behaviors in consumers\u2019 daily lives.</p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p style=\"font-weight: 400;\">The new Experian Credit Score will begin rolling out this month and will reach all U.K. consumers by the end of the year, the company said in a Monday (Nov. 3) <a href=\"https://www.experianplc.com/newsroom/press-releases/2025/experian-uk-i-launches-smarter-credit-score-to-give-consumers-sh\" rel=\"noopener\" target=\"_blank\">press release</a>.</p>\n<p style=\"font-weight: 400;\">The new model includes consumers\u2019 habits around overdraft use, credit card cash advances, and payments on rent and phone contracts, according to the release.</p>\n<p style=\"font-weight: 400;\">It also features a score range of 0 to 1250, rather than the previous 0 to 999, to provide a more granular breakdown of financial behavior, the release said.</p>\n<p style=\"font-weight: 400;\">The new score will not affect consumers\u2019 ability to get credit, per the release.</p>\n<p style=\"font-weight: 400;\">\u201cEligibility for things like mortgages, loans or credit cards remains the same,\u201d the release said. \u201cThe updated score simply provides a more detailed view of people\u2019s financial track record and the new information that banks and lenders have started using, offering new ways to strengthen it over time.\u201d</p>\n<p style=\"font-weight: 400;\"><a href=\"https://uk.linkedin.com/in/eduardo-castro-31780a25\" rel=\"noopener\" target=\"_blank\">Edu Castro</a>, managing director of Experian Consumer Services, U.K. and Ireland, said in the release that the new score reflects the evolving ways people manage their money.</p>\n<p style=\"font-weight: 400;\">\u201cOur new Experian Credit Score better reflects more of the everyday financial behaviors that matter \u2014 like paying rent or reducing overdraft use \u2014 offering a clearer understanding of the information on your credit report,\u201d Castro said. \u201cThis means people get a more personalized view of how they\u2019re doing financially and more practical ways to improve their score \u2014 helping unlock better borrowing opportunities for the future.\u201d</p>\n<p style=\"font-weight: 400;\">The PYMNTS Intelligence report \u201c<a href=\"https://www.pymnts.com/study_posts/high-credit-card-denial-rates-force-subprime-borrowers-to-turn-to-alternative-options\" rel=\"noopener\" target=\"_blank\">Subprime Borrowers Flock to Alternative Options Due to High Credit Card Denial Rate</a>\u201d found that one-quarter of subprime consumers use credit for nonessential expenses with the specific intent of raising their <a href=\"https://www.pymnts.com/consumer-insights/2025/25-percent-of-subprime-consumers-use-credit-for-nonessentials-to-improve-credit-score/\" rel=\"noopener\" target=\"_blank\">credit score</a>.</p>\n<p style=\"font-weight: 400;\">The report said this dynamic underscores the opportunity that exists for financial institutions to develop more inclusive and responsible strategies to serve this market segment.</p>\n<p style=\"font-weight: 400;\">In another recent move, Experian said in July that it was launching a new artificial intelligence-powered tool designed to help financial institutions better manage the complex <a href=\"https://www.pymnts.com/news/artificial-intelligence/2025/experian-unveils-new-ai-tool-managing-credit-risk-models/\" rel=\"noopener\" target=\"_blank\">credit and risk models</a> they use to decide who gets a loan or how much credit someone should receive.</p>\n<p style=\"font-weight: 400;\">The <a href=\"https://www.experian.com/business/products/assistant-for-model-risk-management\" rel=\"noopener\" target=\"_blank\">Experian Assistant for Model Risk Management</a> uses automation to create documents, check for errors and monitor model performance.</p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/consumer-finance/2025/experian-to-launch-credit-score-in-uk-that-includes-rental-payments/\">Experian to Launch Credit Score in UK That Includes Rental Payments</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
+      "image_url": "https://www.pymnts.com/wp-content/uploads/2023/12/Experian.jpg?w=457",
+      "summary_text": "Experian UK&I is set to introduce a new credit score in the United Kingdom that will include rental payments and other financial behaviors in consumers\u2019 daily lives. The new Experian Credit Score will begin rolling out this month and will reach all U.K. consu...",
+      "category": "fintech",
+      "_trending_tags": [
+        "ai"
+      ],
+      "_permalink": "/p/7c6e727907/",
+      "_abs_permalink": "https://pulse.tek2dayholdings.com/p/7c6e727907/",
+      "_summary_240": "Experian UK&I is set to introduce a new credit score in the United Kingdom that will include rental payments and other financial behaviors in consumers\u2019 daily lives. The new...",
+      "_thumbnail": "https://pulse.tek2dayholdings.com/p/7c6e727907/thumbnail.png"
+    },
+    {
+      "title": "Waymo\u2019s robotaxi expansion accelerates with 3 new cities",
+      "url": "https://techcrunch.com/2025/11/03/waymos-robotaxi-expansion-accelerates-with-3-new-cities/",
+      "published_at": "2025-11-03T14:45:55-05:00",
+      "source": "TechCrunch",
+      "summary": "Waymo said Monday it will launch a robotaxi service in Detroit, Las Vegas, and San Diego as the Alphabet-owned company hits the accelerator on its expansion plans.",
+      "content_html": "",
+      "image_url": "https://techcrunch.com/wp-content/uploads/2025/11/waymo-zeekr-rt.jpg?resize=1200,801",
+      "summary_text": "Waymo said Monday it will launch a robotaxi service in Detroit, Las Vegas, and San Diego as the Alphabet-owned company hits the accelerator on its expansion plans.",
+      "category": "ai",
+      "_trending_tags": [
+        "ai"
+      ],
+      "_permalink": "/p/bee10e6985/",
+      "_abs_permalink": "https://pulse.tek2dayholdings.com/p/bee10e6985/",
+      "_summary_240": "Waymo said Monday it will launch a robotaxi service in Detroit, Las Vegas, and San Diego as the Alphabet-owned company hits the accelerator on its expansion plans.",
+      "_thumbnail": "https://pulse.tek2dayholdings.com/p/bee10e6985/thumbnail.png"
+    },
+    {
+      "title": "Ethereum Foundation revamps grants program under new funding approach",
+      "url": "https://cointelegraph.com/news/ethereum-foundation-grants-program-new-funding?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "published_at": "2025-11-03T14:25:26-05:00",
+      "source": "Cointelegraph",
+      "summary": "Grants will now be distributed through a wishlist and requests for proposals, aligning funding with the Ethereum ecosystem\u2019s goals.",
+      "content_html": "",
+      "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTEvMDE5YTRhYzUtNjVjNy03ZmMxLWFjZjYtYjNjNGNjOTUzMjRi.jpg",
+      "summary_text": "Grants will now be distributed through a wishlist and requests for proposals, aligning funding with the Ethereum ecosystem\u2019s goals.",
+      "category": "fintech",
+      "_permalink": "/p/57df64448c/",
+      "_abs_permalink": "https://pulse.tek2dayholdings.com/p/57df64448c/",
+      "_summary_240": "Grants will now be distributed through a wishlist and requests for proposals, aligning funding with the Ethereum ecosystem\u2019s goals.",
+      "_thumbnail": "https://pulse.tek2dayholdings.com/p/57df64448c/thumbnail.png"
+    },
+    {
+      "title": "Trump\u2019s CZ Pardon Has the Crypto World Bracing for Impact",
+      "url": "https://www.wired.com/story/trumps-cz-pardon-has-the-crypto-world-bracing-for-impact/",
+      "published_at": "2025-11-03T14:21:17-05:00",
+      "source": "Wired",
+      "summary": "The Trump administration has recast Binance founder CZ as a martyr\u2014and his pardon may have unintended consequences for the US crypto industry.",
+      "content_html": "",
+      "image_url": "https://media.wired.com/photos/6902552b4e7c8c237645e4a1/master/pass/What-CZ-and-Binance-Can-Do-Next-Business-2210817298.jpg",
+      "summary_text": "The Trump administration has recast Binance founder CZ as a martyr\u2014and his pardon may have unintended consequences for the US crypto industry.",
+      "category": "fintech"
+    },
+    {
+      "title": "OCC Rates 6 Banks \u2018Outstanding\u2019 and 10 \u2018Satisfactory\u2019 in CRA Compliance",
+      "url": "https://www.pymnts.com/bank-regulation/2025/occ-rates-6-banks-outstanding-and-10-satisfactory-in-cra-compliance/",
+      "published_at": "2025-11-03T14:18:22-05:00",
+      "source": "PYMNTS",
+      "summary": "Six banks were rated \u201coutstanding\u201d and 10 were rated \u201csatisfactory\u201d in the latest list of banks examined for Community Reinvestment Act (CRA) compliance by the Office of the Comptroller of the Currency (OCC). Among the performance evaluations that became public in October, no banks were rated \u201cneed to improve\u201d or \u201csubstantial noncompliance,\u201d the OCC [\u2026] The post OCC Rates 6 Banks \u2018Outstanding\u2019 an...",
+      "content_html": "<p><span>Six banks were rated \u201coutstanding\u201d and 10 were rated \u201csatisfactory\u201d in the latest list of banks examined for </span><a href=\"https://occ.gov/topics/consumers-and-communities/cra/index-cra.html\" rel=\"noopener\" target=\"_blank\"><span>Community Reinvestment Act</span></a><span> (CRA) compliance by the </span><a href=\"https://occ.gov/index.html\" rel=\"noopener\" target=\"_blank\"><span>Office of the Comptroller of the Currency</span></a> (OCC)<span>.</span></p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p><span>Among the performance evaluations that became public in October, no banks were rated \u201cneed to improve\u201d or \u201csubstantial noncompliance,\u201d the OCC said in a Monday (Nov. 3) </span><a href=\"https://occ.gov/news-issuances/news-releases/2025/nr-occ-2025-106.html\"><span>press release</span></a><span>.</span></p>\n<p><span>\u201cUnder the CRA, the OCC assesses an institution\u2019s record of meeting the credit needs of its entire community, including low- and moderate-income neighborhoods, consistent with the safe and sound operation of such institution,\u201d the release said.</span></p>\n<p><span>The CRA rules were enacted in 1977 to combat discriminatory </span><a href=\"https://www.pymnts.com/bank-regulation/2023/fed-overhauls-community-reinvestment-act-to-adapt-to-online-banking/\" rel=\"noopener\" target=\"_blank\"><span>lending practices</span></a><span> in minority neighborhoods.</span></p>\n<p><span>The six banks rated \u201coutstanding\u201d in CRA compliance in October include New York, New York-based </span><a href=\"https://www.occ.gov/static/cra/craeval/nov25/705273.pdf\" rel=\"noopener\" target=\"_blank\"><span>Carver Federal Savings Bank</span></a><span>; Lawton, Oklahoma-based </span><a href=\"https://www.occ.gov/static/cra/craeval/nov25/14546.pdf\" rel=\"noopener\" target=\"_blank\"><span>FSNB, National Association</span></a><span>; Baton Rouge, Louisiana-based </span><a href=\"https://www.occ.gov/static/cra/craeval/nov25/25185.pdf\" rel=\"noopener\" target=\"_blank\"><span>Investar Bank</span></a><span>, National Association; Sandoval, Illinois-based </span><a href=\"https://www.occ.gov/static/cra/craeval/nov25/9786.pdf\" rel=\"noopener\" target=\"_blank\"><span>Midwest National Bank</span></a><span>; Draper, Utah-based </span><a href=\"https://www.occ.gov/static/cra/craeval/nov25/715044.pdf\" rel=\"noopener\" target=\"_blank\"><span>Synchrony Bank</span></a><span>; and Okawville, Illinois-based </span><a href=\"https://www.occ.gov/static/cra/craeval/nov25/11754.pdf\" rel=\"noopener\" target=\"_blank\"><span>The First National Bank of Okawville</span></a><span>.</span></p>\n<p><span>The 10 banks rated \u201csatisfactory\u201d include Waco, Texas-based </span><a href=\"https://www.occ.gov/static/cra/craeval/nov25/17319.pdf\" rel=\"noopener\" target=\"_blank\"><span>American Bank, National Association</span></a><span>; Nacogdoches, Texas-based </span><a href=\"https://www.occ.gov/static/cra/craeval/nov25/14371.pdf\" rel=\"noopener\" target=\"_blank\"><span>Commercial Bank of Texas, National Association</span></a><span>; Quincy, Illinois-based </span><a href=\"https://www.occ.gov/static/cra/craeval/nov25/14564.pdf\" rel=\"noopener\" target=\"_blank\"><span>First Bankers Trust Company, National Association</span></a><span>; Belpre, Ohio-based </span><a href=\"https://www.occ.gov/static/cra/craeval/nov25/703764.pdf\" rel=\"noopener\" target=\"_blank\"><span>First Mutual Bank, FSB</span></a><span>; Hamilton, Alabama-based </span><a href=\"https://www.occ.gov/static/cra/craeval/nov25/16579.pdf\" rel=\"noopener\" target=\"_blank\"><span>First National Bank</span></a><span>; Granville, Illinois-based </span><a href=\"https://www.occ.gov/static/cra/craeval/nov25/14035.pdf\" rel=\"noopener\" target=\"_blank\"><span>Granville National Bank</span></a><span>; Columbia, Louisiana-based </span><a href=\"https://www.occ.gov/static/cra/craeval/nov25/708286.pdf\" rel=\"noopener\" target=\"_blank\"><span>Homeland Federal Savings Bank</span></a><span>; Frederick, South Dakota-based </span><a href=\"https://www.occ.gov/static/cra/craeval/nov25/8624.pdf\" rel=\"noopener\" target=\"_blank\"><span>The First National Bank of Frederick</span></a><span>; Jacksboro, Texas-based </span><a href=\"https://www.occ.gov/static/cra/craeval/nov25/7814.pdf\" rel=\"noopener\" target=\"_blank\"><span>The Jacksboro National Bank</span></a><span>; and Indianapolis, Indiana-based </span><a href=\"https://www.occ.gov/static/cra/craeval/nov25/22652.pdf\" rel=\"noopener\" target=\"_blank\"><span>The National Bank of Indianapolis</span></a><span>.</span></p>\n<p><span>The OCC determined the CRA rating based on </span><a href=\"https://www.occ.treas.gov/topics/consumers-and-communities/cra/cra-questions-and-answers.html#6\" rel=\"noopener\" target=\"_blank\"><span>performance tests and standards</span></a><span> outlined in the CRA rule and based on information about the institution and the community it serves, according to a questions and answers page about the program.</span></p>\n<p><span>The OCC\u2019s list includes national banks, federal savings associations and insured federal branches of foreign banks, per the Monday press release.</span></p>\n<p><span>Two other banking regulators oversee and provide </span><a href=\"https://www.federalreserve.gov/consumerscommunities/cra_regulators.htm\" rel=\"noopener\" target=\"_blank\"><span>CRA ratings</span></a><span> and performance evaluations for other types of banks. The </span><a href=\"https://www.federalreserve.gov/default.htm\" rel=\"noopener\" target=\"_blank\"><span>Federal Reserve Board</span></a><span> does so for state-chartered banks that are members of the Federal Reserve System, while the </span><a href=\"https://www.fdic.gov/\" rel=\"noopener\" target=\"_blank\"><span>Federal Deposit Insurance Corp.</span></a><span> does so for state-chartered banks that are not members of the Federal Reserve System.</span></p>\n<p><span>The FDIC released a list Monday covering the </span><a href=\"https://www.fdic.gov/news/press-releases/2025/fdic-issues-list-banks-examined-cra-compliance-9\" rel=\"noopener\" target=\"_blank\"><span>CRA evaluation</span></a><span> ratings it assigned to state nonmember banks in August. The FDIC examined 60 institutions and assigned four \u201coutstanding\u201d </span><a href=\"https://www.fdic.gov/banker-resource-center/monthly-list-banks-examined-cra-compliance-november-2025\" rel=\"noopener\" target=\"_blank\"><span>ratings</span></a><span> and 56 \u201csatisfactory ratings.\u201d</span></p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/bank-regulation/2025/occ-rates-6-banks-outstanding-and-10-satisfactory-in-cra-compliance/\">OCC Rates 6 Banks \u2018Outstanding\u2019 and 10 \u2018Satisfactory\u2019 in CRA Compliance</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
+      "image_url": "https://www.pymnts.com/wp-content/uploads/2025/11/occ-office-of-the-comptroller-of-the-currency-cra-community-reinvestment-act-bank-regulation.jpg?w=457",
+      "summary_text": "Six banks were rated \u201coutstanding\u201d and 10 were rated \u201csatisfactory\u201d in the latest list of banks examined for Community Reinvestment Act (CRA) compliance by the Office of the Comptroller of the Currency (OCC). Among the performance evaluations that became publ...",
+      "category": "fintech",
+      "_permalink": "/p/ad85cc59b4/",
+      "_abs_permalink": "https://pulse.tek2dayholdings.com/p/ad85cc59b4/",
+      "_summary_240": "Six banks were rated \u201coutstanding\u201d and 10 were rated \u201csatisfactory\u201d in the latest list of banks examined for Community Reinvestment Act (CRA) compliance by the Office of the...",
+      "_thumbnail": "https://pulse.tek2dayholdings.com/p/ad85cc59b4/thumbnail.png"
+    },
+    {
+      "title": "WIRED Roundup: Alpha School, Grokipedia, and Real Estate AI Videos",
+      "url": "https://www.wired.com/story/uncanny-valley-podcast-wired-roundup-alpha-school-grokipedia-real-estate-ai-videos/",
+      "published_at": "2025-11-03T14:03:46-05:00",
+      "source": "Wired",
+      "summary": "In this episode of Uncanny Valley, we run through the top stories of the week and dive into why the promise of a tech-forward school in Texas with software instead of teachers fell apart.",
+      "content_html": "",
+      "image_url": "https://media.wired.com/photos/6903e781d7276866034bbcd3/master/pass/Uncanny-Valley-News-Update-Alpha-School-Security-1339828637.jpg",
+      "summary_text": "In this episode of Uncanny Valley, we run through the top stories of the week and dive into why the promise of a tech-forward school in Texas with software instead of teachers fell apart.",
+      "category": "ai",
+      "_trending_tags": [
+        "ai"
+      ],
+      "_permalink": "/p/b9cda133f3/",
+      "_abs_permalink": "https://pulse.tek2dayholdings.com/p/b9cda133f3/",
+      "_summary_240": "In this episode of Uncanny Valley, we run through the top stories of the week and dive into why the promise of a tech-forward school in Texas with software instead of teachers...",
+      "_thumbnail": "https://pulse.tek2dayholdings.com/p/b9cda133f3/thumbnail.png"
+    },
+    {
+      "title": "Goldman Forecasts Mid-November End to Government Shutdown",
+      "url": "https://www.pymnts.com/economy/2025/goldman-forecasts-mid-november-end-to-government-shutdown/",
+      "published_at": "2025-11-03T13:43:58-05:00",
+      "source": "PYMNTS",
+      "summary": "An end to the government shutdown could be in sight, according to Goldman Sachs. Increasing operational and political pressures could push lawmakers to striking a compromise, an analysis by the Wall Street bank said, per a report Monday (Nov. 3) by Seeking Alpha. The analysis said that while the shutdown\u2019s end is unpredictable, Goldman [\u2026] The post Goldman Forecasts Mid-November End to Government...",
+      "content_html": "<p><span style=\"font-weight: 400;\">An end to the government shutdown could be in sight, according to </span><a href=\"https://www.goldmansachs.com/\" rel=\"noopener\" target=\"_blank\"><span style=\"font-weight: 400;\">Goldman Sachs</span></a><span style=\"font-weight: 400;\">.</span></p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p><span style=\"font-weight: 400;\">Increasing operational and political pressures could push lawmakers to striking a compromise, an analysis by the Wall Street bank said, per a </span><a href=\"https://seekingalpha.com/news/4513161-us-shutdown-seen-nearing-end-as-pressure-builds-ahead-of-key-november-dates\" rel=\"noopener\" target=\"_blank\"><span style=\"font-weight: 400;\">report</span></a><span style=\"font-weight: 400;\"> Monday (Nov. 3) by Seeking Alpha.</span></p>\n<p><span style=\"font-weight: 400;\">The analysis said that while the shutdown\u2019s end is unpredictable, Goldman anticipates it to most likely conclude around the second week of November. Pressure could mount amid missed paychecks for air traffic controllers and airport screeners, which could cause air travel delays, especially before the second pay date in November.</span></p>\n<p><span style=\"font-weight: 400;\">The failure to pay food stamps benefits on time and the Nov. 7 congressional recess deadline could also help drive the agreement, Goldman analyst Alec Phillips said. Assuming the shutdown persists through Tuesday (Nov. 4) night, it will be the longest in U.S. history.</span></p>\n<p><span style=\"font-weight: 400;\">\u201cThe current shutdown looks likely to have the greatest economic impact of any shutdown on record. Not only is it likely to run longer than the 35-day partial shutdown in 2018-2019, it is much broader than prior lengthy shutdowns, which affected only a few agencies,\u201d Phillips said.</span></p>\n<p><span style=\"font-weight: 400;\">If the shutdown does end in mid-November, Goldman expects the release of the September employment report a few days after reopening, though the November employment report may not arrive until early or mid-December. Phillips added that </span><a href=\"https://www.pymnts.com/economy/2025/consumers-stay-resilient-inflation-pushes-shelter-food-prices-higher/\" rel=\"noopener\" target=\"_blank\"><span style=\"font-weight: 400;\">inflation data</span></a><span style=\"font-weight: 400;\"> could also be delayed.</span></p>\n<p><span style=\"font-weight: 400;\">The report came days after the </span><a href=\"https://www.uschamber.com/\" rel=\"noopener\" target=\"_blank\"><span style=\"font-weight: 400;\">U.S. Chamber of Commerce</span></a><span style=\"font-weight: 400;\"> said that the impasse over the shutdown was putting at risk $3 billion a week that would have been earned by 65,500 small business contractors.</span></p>\n<p><span style=\"font-weight: 400;\">\u201cThe Chamber is again calling on Congress to </span><a href=\"https://www.pymnts.com/economy/2025/us-chamber-says-government-shutdown-costs-contractors-3-billion-a-week/\" rel=\"noopener\" target=\"_blank\"><span style=\"font-weight: 400;\">immediately pass</span></a><span style=\"font-weight: 400;\"> the continuing resolution to reopen and fund the government,\u201d Neil Bradley, the group\u2019s executive vice president, chief policy officer and head of strategic advocacy, wrote in a letter to lawmakers.</span></p>\n<p><span style=\"font-weight: 400;\">\u201cWe also urge Congress to consider ways to help make federal contractors, especially small business contractors, whole.\u201d</span></p>\n<p><span style=\"font-weight: 400;\">The shutdown has also impacted the Supplemental Nutrition Assistance Benefits (SNAP) program, with benefit payments not going out as scheduled Nov. 1. The White House said Monday it would use contingency funds to pay 50% of SNAP benefits.</span></p>\n<p><span style=\"font-weight: 400;\">With the program frozen last week, DoorDash </span><a href=\"https://www.pymnts.com/news/delivery/2025/grocers-agree-to-waive-snap-recipients-doordash-delivery-fees/\" rel=\"noopener\" target=\"_blank\"><span style=\"font-weight: 400;\">announced</span></a><span style=\"font-weight: 400;\"> an Emergency Food Response for SNAP recipients and Project DASH partners who could be affected by the loss of SNAP benefits, along with added contributions of food from DashMart locations. Another delivery platform, </span><a href=\"https://www.gopuff.com/\" rel=\"noopener\" target=\"_blank\"><span style=\"font-weight: 400;\">Gopuff</span></a><span style=\"font-weight: 400;\">, has said it will offer $50 in </span><a href=\"https://www.pymnts.com/news/delivery/2025/gopuff-to-offer-50-in-free-groceries-to-snap-recipients-affected-by-government-shutdown/\" rel=\"noopener\" target=\"_blank\"><span style=\"font-weight: 400;\">free groceries</span></a><span style=\"font-weight: 400;\"> to SNAP recipients during November.</span></p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/economy/2025/goldman-forecasts-mid-november-end-to-government-shutdown/\">Goldman Forecasts Mid-November End to Government Shutdown</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
+      "image_url": "https://www.pymnts.com/wp-content/uploads/2025/11/government-shutdown-goldman-sachs-employment-data-inflation-snap-benefits.jpg?w=457",
+      "summary_text": "An end to the government shutdown could be in sight, according to Goldman Sachs. Increasing operational and political pressures could push lawmakers to striking a compromise, an analysis by the Wall Street bank said, per a report Monday (Nov. 3) by Seeking Al...",
+      "category": "fintech",
+      "_trending_tags": [
+        "ai"
+      ],
+      "_permalink": "/p/a5bfda0d8d/",
+      "_abs_permalink": "https://pulse.tek2dayholdings.com/p/a5bfda0d8d/",
+      "_summary_240": "An end to the government shutdown could be in sight, according to Goldman Sachs. Increasing operational and political pressures could push lawmakers to striking a compromise, an...",
+      "_thumbnail": "https://pulse.tek2dayholdings.com/p/a5bfda0d8d/thumbnail.png"
+    },
+    {
+      "title": "EU Banks Increase Their Dependence on American Dollars",
+      "url": "https://www.pymnts.com/news/international/2025/european-union-banks-increase-dependence-american-dollars/",
+      "published_at": "2025-11-03T13:43:05-05:00",
+      "source": "PYMNTS",
+      "summary": "European banks have increased their dependence on United States dollars, according to a report issued Monday (Nov. 3) by the European Banking Authority. These banks\u2019 funding in dollars came to 13.1% of their total funding in December 2024, compared to 12.4% at the same point in 2023, the report said. Banks\u2019 total exposure to [\u2026] The post EU Banks Increase Their Dependence on American Dollars appe...",
+      "content_html": "<p><span>European banks have increased their </span><span>dependence</span><span> on United States </span><span>dollars</span><span>, according to a </span><a class=\"editor-rtfLink\" href=\"https://www.eba.europa.eu/sites/default/files/2025-11/4790b745-3ad5-4810-b876-e854b92d2549/Report%20on%20EU%20banks%20funding%20structure%20and%20their%20dependence%20on%20fx%20funding.pdf\" rel=\"noopener\" target=\"_blank\"><span>report</span></a><span> issued Monday (Nov. 3) by the </span><a class=\"editor-rtfLink\" href=\"https://www.eba.europa.eu/homepage\" rel=\"noopener\" target=\"_blank\"><span>European Banking Authority</span></a><span>.</span></p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p><span>These banks\u2019 </span><span>funding in dollars came to</span><span> 13.1% of their total funding in December 2024, compared </span><span>to</span><span> 12.4% at the same point in 2023, the report said.</span></p>\n<p><span>Banks\u2019 total exposure to assets denominated in dollars also rose to 23% from 19.3%, per the report, which said banks\u2019 subsidiaries are \u201cincreasing their reliance on U.S. dollar funding at a faster pace compared to the parent entity.\u201d</span></p>\n<p><span>In the report, the EBA warned about \u201ca rather meaningful currency mismatch\u201d in European banks\u2019 balance sheets.</span></p>\n<p><span>This</span><span> is something European regulators have asked banks to track, Reuters </span><a class=\"editor-rtfLink\" href=\"https://uk.finance.yahoo.com/news/european-banks-increase-reliance-us-151824866.html\" rel=\"noopener\" target=\"_blank\"><span>reported</span></a><span> Monday. Banks around the world have substantial dollar exposure in their balance sheets, placing them at risk of funding shocks.</span></p>\n<p><span>Dollar funding fears have risen this year with President Donald Trump instituting </span><span>new </span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/consumer-insights/2025/goldman-raises-estimates-of-tariff-related-costs-paid-by-consumers/\" rel=\"noopener\" target=\"_blank\"><span>tariffs</span></a><span> and placing pressure on the </span><a class=\"editor-rtfLink\" href=\"https://www.federalreserve.gov/\" rel=\"noopener\" target=\"_blank\"><span>Federal Reserve</span></a><span>, </span><span>the</span><span> Reuters </span><span>report said</span><span>.</span> <span>This</span><span> has caused some European regulators to wonder if they can still depend on the Fed to provide dollar funding during periods of market stress.</span></p>\n<p><span>In related news, a group of Europe\u2019s banks is teaming to develop a </span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/cryptocurrency/2025/euro-banks-team-to-counter-us-dominated-stablecoin-space/\" rel=\"noopener\" target=\"_blank\"><span>euro-denominated stablecoin</span></a><span> to combat the U.S. dollar\u2019s </span><span>domination of</span><span> that space.</span></p>\n<p><span>The new token </span><span>is aimed</span><span> at becoming \u201ca trusted European payment standard in the digital ecosystem,\u201d per a news release from Denmark\u2019s </span><a class=\"editor-rtfLink\" href=\"https://danskebank.com/\" rel=\"noopener\" target=\"_blank\"><span>Danske Bank</span></a><span>, which </span><span>is joined</span><span> in the partnership by </span><a class=\"editor-rtfLink\" href=\"https://www.ing.com/\" rel=\"noopener\" target=\"_blank\"><span>ING</span></a><span>, </span><a class=\"editor-rtfLink\" href=\"https://www.sella.it/banca-on-line\" rel=\"noopener\" target=\"_blank\"><span>Banca Sella</span></a><span>, </span><a class=\"editor-rtfLink\" href=\"https://www.kbc.com/en.html\" rel=\"noopener\" target=\"_blank\"><span>KBC</span></a><span>, </span><a class=\"editor-rtfLink\" href=\"https://www.deka.de/deka-group\" rel=\"noopener\" target=\"_blank\"><span>DekaBank</span></a><span>, </span><a class=\"editor-rtfLink\" href=\"https://www.unicreditgroup.eu/en.html\" rel=\"noopener\" target=\"_blank\"><span>UniCredit</span></a><span>, </span><a class=\"editor-rtfLink\" href=\"https://sebgroup.com/\" rel=\"noopener\" target=\"_blank\"><span>SEB</span></a><span>, </span><a class=\"editor-rtfLink\" href=\"https://www.caixabank.es/particular/home/particulares_es.html\" rel=\"noopener\" target=\"_blank\"><span>CaixaBank</span></a><span> and </span><a class=\"editor-rtfLink\" href=\"https://www.rbinternational.com/en/raiffeisen.html\" rel=\"noopener\" target=\"_blank\"><span>Raiffeisen Bank International</span></a><span>.</span></p>\n<p><span>\u201cThe stablecoin will provide near-instant, low-cost payments and settlements,\u201d the release said. \u201cIt will enable 24/7 access to efficient cross-border payments, programmable payments, and improvements in supply chain management and digital asset settlements, which can vary from securities to cryptocurrencies.\u201d</span></p>\n<p><span>The stablecoin will </span><span>be regulated</span><span> by the European Union\u2019s </span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/cryptocurrency/2025/making-sense-european-union-mica-regulation-impact-across-crypto-markets/\" rel=\"noopener\" target=\"_blank\"><span>Markets in Crypto-Assets</span></a> <span>regulation</span><span> (MiCA)</span><span>, </span><span>and </span><span>is expected</span><span> to </span><span>be </span><span>first</span><span> issued</span><span> in the latter half of 2026.</span></p>\n<p><span>The banks said their goal is to develop a European alternative to what they called a \u201cU.S.-dominated\u201d </span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/cryptocurrency/2025/stablecoin-payments-surge-70-post-genius-act/\" rel=\"noopener\" target=\"_blank\"><span>stablecoin</span></a><span> market, while also \u201ccontributing to Europe\u2019s strategic autonomy in payments.\u201d </span><span>Individual banks will be able to offer value-added services, </span><span>like a</span><span> stablecoin </span><span>wallet</span><span> and custody.</span></p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/news/international/2025/european-union-banks-increase-dependence-american-dollars/\">EU Banks Increase Their Dependence on American Dollars</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
+      "image_url": "https://www.pymnts.com/wp-content/uploads/2022/06/European-Banking-Authority.jpg?w=457",
+      "summary_text": "European banks have increased their dependence on United States dollars, according to a report issued Monday (Nov. 3) by the European Banking Authority. These banks\u2019 funding in dollars came to 13.1% of their total funding in December 2024, compared to 12.4% a...",
+      "category": "fintech",
+      "_permalink": "/p/decf546910/",
+      "_abs_permalink": "https://pulse.tek2dayholdings.com/p/decf546910/",
+      "_summary_240": "European banks have increased their dependence on United States dollars, according to a report issued Monday (Nov. 3) by the European Banking Authority. These banks\u2019 funding in...",
+      "_thumbnail": "https://pulse.tek2dayholdings.com/p/decf546910/thumbnail.png"
+    },
+    {
+      "title": "Ripple launches crypto spot prime brokerage services",
+      "url": "https://cointelegraph.com/news/ripple-digital-asset-spot-prime-brokerage?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "published_at": "2025-11-03T13:04:14-05:00",
+      "source": "Cointelegraph",
+      "summary": "As Ripple\u2019s Swell conference kicked off in New York this week, the company announced an expansion of OTC services following its October acquisition of a prime broker.",
+      "content_html": "",
+      "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTEvMDE5YTRhNzgtMDhjOC03NmQ4LWIzNTQtOGNkMjFjNGQ0NzNj.jpg",
+      "summary_text": "As Ripple\u2019s Swell conference kicked off in New York this week, the company announced an expansion of OTC services following its October acquisition of a prime broker.",
+      "category": "fintech",
+      "_permalink": "/p/640d87c325/",
+      "_abs_permalink": "https://pulse.tek2dayholdings.com/p/640d87c325/",
+      "_summary_240": "As Ripple\u2019s Swell conference kicked off in New York this week, the company announced an expansion of OTC services following its October acquisition of a prime broker.",
+      "_thumbnail": "https://pulse.tek2dayholdings.com/p/640d87c325/thumbnail.png"
+    },
+    {
+      "title": "Studio Ghibli, Bandai Namco, Square Enix demand OpenAI stop using their content to train AI",
+      "url": "https://www.theverge.com/news/812545/coda-studio-ghibli-sora-2-copyright-infringement",
+      "published_at": "2025-11-03T12:34:13-05:00",
+      "source": "The Verge",
+      "summary": "The Content Overseas Distribution Association (CODA), an anti-piracy organization representing Japanese IP holders like Studio Ghibli and Bandai Namco, released a letter last week asking OpenAI to stop using its members\u2019 content to train Sora 2, as reported by Automaton. The letter states that \u201cCODA considers that the act of replication during the machine learning [\u2026]",
+      "content_html": "<figure>\n\n<img alt=\"\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/STK149_AI_01.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100\" />\n\t<figcaption>\n\t\t</figcaption>\n</figure>\n<p class=\"has-text-align-none\">The Content Overseas Distribution Association (CODA), an anti-piracy organization representing Japanese IP holders like Studio Ghibli and Bandai Namco, <a href=\"https://coda-cj.jp/en/news/817/\">released a letter</a> last week asking OpenAI to stop using its members\u2019 content to train Sora 2, as reported by <a href=\"https://automaton-media.com/en/news/sonys-aniplex-bandai-namco-and-other-japanese-publishers-demand-end-to-unauthorized-training-of-openais-sora2-through-coda/\"><em>Automaton</em></a>. The letter states that \u201cCODA considers that the act of replication during the machine learning process may constitute copyright infringement,\u201d since the resulting AI model went on to spit out content with copyrighted characters.\u00a0</p>\n\n<p class=\"has-text-align-none\">Sora 2 generated an avalanche of content containing Japanese IP after it launched on September 30th, prompting Japan\u2019s government to <a href=\"https://www.theverge.com/news/799938/japan-government-openai-sora\">formally ask OpenAI to stop</a> replicating Japanese artwork. This isn\u2019t the first time one of OpenAI\u2019s apps clearly pulled from Japanese media, either \u2014 the highlight of GPT-4o\u2019s launch back in March was a proliferation of <a href=\"https://x.com/sama/status/1904921537884676398\">\u201cGhibli-style\u201d</a> images. Even Sam Altman\u2019s own profile picture on X is currently a portrait in a style reminiscent of Studio Ghibli.\u00a0</p>\n\n<p class=\"has-text-align-none\">Altman announced last month that OpenAI will be <a href=\"https://www.theverge.com/news/792661/sora-fictional-copyright-characters\">changing Sora\u2019s opt-out policy</a> for IP holders, but CODA claims that the use of an opt-out policy to begin with may have violated Japanese copyright law, stating, \u201cunder Japan\u2019s copyright system, prior permission is generally required for the use of copyrighted works, and there is no system allowing one to avoid liability for infringement through subsequent objections.\u201d&nbsp;</p>\n\n<p class=\"has-text-align-none\">CODA is now requesting on behalf of its members that OpenAI \u201cresponds sincerely\u201d to its members\u2019 copyright claims and stops using their content for machine learning without their permission, which seems to include not just Sora output, but also the use of Japanese IP as training data.</p>\n\n<p class=\"has-text-align-none\"></p>",
+      "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/STK149_AI_01.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+      "summary_text": "The Content Overseas Distribution Association (CODA), an anti-piracy organization representing Japanese IP holders like Studio Ghibli and Bandai Namco, released a letter last week asking OpenAI to stop using its members\u2019 content to train Sora 2, as reported b...",
+      "category": "ai",
+      "_trending_tags": [
+        "ai",
+        "openai"
+      ],
+      "_permalink": "/p/b52d8da096/",
+      "_abs_permalink": "https://pulse.tek2dayholdings.com/p/b52d8da096/",
+      "_summary_240": "The Content Overseas Distribution Association (CODA), an anti-piracy organization representing Japanese IP holders like Studio Ghibli and Bandai Namco, released a letter last...",
+      "_thumbnail": "https://pulse.tek2dayholdings.com/p/b52d8da096/thumbnail.png"
+    },
+    {
+      "title": "Coca-Cola\u2019s new AI holiday ad is a sloppy eyesore",
+      "url": "https://www.theverge.com/news/812559/coca-cola-ai-holiday-christmas-commercial-2025",
+      "published_at": "2025-11-03T12:31:51-05:00",
+      "source": "The Verge",
+      "summary": "Coca-Cola is once again using generative AI to reimagine its classic Coke caravan holiday commercials, and in doing so, killing some of the festive joy you have for the brand. After receiving backlash for airing three AI-generated holiday commercials last year that featured gliding wheels and uncanny-looking faces, the company has doubled down with a [\u2026]",
+      "content_html": "<figure>\n\n<img alt=\"\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/11/Coca-Cola-AI-holiday-ad-2025.png?quality=90&#038;strip=all&#038;crop=0,0,100,100\" />\n\t<figcaption>\n\tLook at all those blobby bunnies.\t</figcaption>\n</figure>\n<p class=\"has-text-align-none\">Coca-Cola is once again using generative AI to reimagine its classic Coke caravan holiday commercials, and in doing so, killing some of the festive joy you have for the brand. After <a href=\"https://www.forbes.com/sites/danidiplacido/2024/11/16/coca-colas-ai-generated-ad-controversy-explained/\">receiving backlash</a> for airing three <a href=\"https://www.theverge.com/2024/11/15/24297586/coca-cola-is-airing-ai-generated-ads-for-the-holidays\">AI-generated holiday commercials</a> last year that featured gliding wheels and uncanny-looking faces, the company has doubled down with a new AI Christmas campaign that\u2019s more visually jarring than the first.</p>\n\n<p class=\"has-text-align-none\">The \u201c<a href=\"https://www.youtube.com/watch?v=Yy6fByUmPuE\">Holidays Are Coming</a>\u201d commercial attempts to sidestep issues around generating realistic humans by instead featuring a cast of various critters. There\u2019s no consistent style, switching between attempted realism and a bug-eyed toony look, and the polar bears, panda, and sloth move unnaturally, like flat images that have been sloppily animated rather than rigged 3D models in CG. Compared to the convincing deepfake videos being generated by tools like <a href=\"https://www.theverge.com/ai-artificial-intelligence/791290/openai-sora-ai-generated-video-hands-on\">OpenAI\u2019s Sora 2</a> or <a href=\"https://www.theverge.com/ai-artificial-intelligence/673719/google-veo-3-ai-video-audio-sound-effects\">Google\u2019s Veo 3</a>, the videos produced for this Coke ad feel extremely dated.</p>\n\n<p class=\"has-text-align-none\">The only notable improvement to my eyes is that the wheels on the iconic Coke trucks are actually consistently turning this year, rather than gliding statically over snow-covered roads. <a href=\"https://www.wsj.com/articles/coca-cola-injects-holidays-are-coming-ads-with-an-upgraded-dose-of-ai-bc8921e2\"><em>The Wall Street Journal</em></a> reports that Coca-Cola teamed up with Silverside and Secret Level on its latest holiday campaign, two of the AI studios that previously worked on the 2024 Coke Christmas ads.</p>\n<div class=\"youtube-embed\"></div>\n<p class=\"has-text-align-none\">Coca-Cola declined to comment on the cost of the new holiday campaign, according to <em>The Wall Street Journal</em>, but said that around 100 people were involved in the project \u2014 a figure comparable to the company\u2019s older AI-free productions. That includes five \u201cAI specialists\u201d from Silverside who contributed by prompting and refining more than 70,000 AI video clips.</p>\n\n<p class=\"has-text-align-none\">This comes at a time when AI tools are rapidly improving to replace the manual work performed by creative professionals, raising concerns about future employment opportunities. Google has also introduced its <a href=\"https://www.theverge.com/news/811263/this-is-googles-first-entirely-ai-generated-ad\">first fully AI-generated commercial</a> this year, saying that consumers don\u2019t really care if ads are created using the technology. And Coca-Cola is firmly embracing its use in advertising, despite issues in previous campaigns, including a commercial in April that made up a <a href=\"https://fortune.com/2025/05/14/ai-coca-cola-ad-campaign-invented-fake-book/\">fake book by author J.G. Ballard</a>.</p>\n\n<p class=\"has-text-align-none\">Those past blunders are seemingly worth the risk for Coca-Cola, with the company\u2019s Chief Marketing Officer, Manolo Arroyo, telling <em>The Wall Street Journal</em> that its latest holiday campaign was cheaper and speedier to produce compared to traditional production. \u201cBefore, when we were doing the shooting and all the standard processes for a project, we would start a year in advance,\u201d Arroyo told the publication. \u201cNow, you can get it done in around a month.\u201d</p>",
+      "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/11/Coca-Cola-AI-holiday-ad-2025.png?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+      "summary_text": "Coca-Cola is once again using generative AI to reimagine its classic Coke caravan holiday commercials, and in doing so, killing some of the festive joy you have for the brand. After receiving backlash for airing three AI-generated holiday commercials last yea...",
+      "category": "ai",
+      "_trending_tags": [
+        "ai"
+      ],
+      "_permalink": "/p/d727b24861/",
+      "_abs_permalink": "https://pulse.tek2dayholdings.com/p/d727b24861/",
+      "_summary_240": "Coca-Cola is once again using generative AI to reimagine its classic Coke caravan holiday commercials, and in doing so, killing some of the festive joy you have for the brand....",
+      "_thumbnail": "https://pulse.tek2dayholdings.com/p/d727b24861/thumbnail.png"
+    },
+    {
+      "title": "Klarna Expands European Card Network With Help of Marqeta",
+      "url": "https://www.pymnts.com/next-gen-debit/2025/klarna-expands-european-card-network-with-help-marqeta/",
+      "published_at": "2025-11-03T12:11:22-05:00",
+      "source": "PYMNTS",
+      "summary": "Klarna is expanding its card offering in Europe with the help of card issuing platform Marqeta. The partnership is designed to bring the Klarna Card into 15 new European markets, according to a Monday (Nov. 3) press release. The launch builds on the two companies\u2019 long-term partnership and employs Visa\u2019s Flexible Credential (VFC) technology, [\u2026] The post Klarna Expands European Card Network With ...",
+      "content_html": "<p><a class=\"editor-rtfLink\" href=\"https://www.klarna.com/us/\" rel=\"noopener\" target=\"_blank\"><span>Klarna</span></a><span> is expanding its card offering in Europe with the help of card issuing platform </span><a class=\"editor-rtfLink\" href=\"https://www.marqeta.com/\" rel=\"noopener\" target=\"_blank\"><span>Marqeta</span></a><span>.</span></p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p><span>The partnership </span><span>is designed</span><span> to bring the </span><a class=\"editor-rtfLink\" href=\"https://www.klarna.com/us/customer-service/csc/klarna-balance-us/klarna-card/\" rel=\"noopener\" target=\"_blank\"><span>Klarna Card</span></a><span> into 15 new European markets, according to a Monday (Nov. 3) </span><a class=\"editor-rtfLink\" href=\"https://www.businesswire.com/news/home/20251103343270/en/Marqeta-Powers-Expansion-of-Klarna-Debit-Card-Across-Europe\" rel=\"noopener\" target=\"_blank\"><span>press release</span></a><span>. </span><span>The launch builds on the two companies\u2019 long-term partnership and </span><span>employs</span> <a class=\"editor-rtfLink\" href=\"https://usa.visa.com/\" rel=\"noopener\" target=\"_blank\"><span>Visa</span></a><span>\u2019s </span><a class=\"editor-rtfLink\" href=\"https://corporate.visa.com/en/products/flexible-credential.html\" rel=\"noopener\" target=\"_blank\"><span>Flexible Credential</span></a><span> (VFC) technology, </span><span>letting</span><span> cardholders choose between paying now or later.</span></p>\n<p><span>\u201cAt Klarna, we believe everyday spending should be simple, flexible and fair,\u201d Klarna Chief Marketing Officer </span><a class=\"editor-rtfLink\" href=\"https://se.linkedin.com/in/davidsandstrom\" rel=\"noopener\" target=\"_blank\"><span>David Sandstr\u00f6m</span></a><span> said in the release. \u201cTogether with Marqeta and Visa, we\u2019re redefining how people pay across Europe, combining the simplicity of debit with the power of pay-later options in one seamless experience. The Klarna Card gives consumers a smarter, more transparent way to manage their money, on their terms.\u201d</span></p>\n<p><span>The expansion follows the United States launch of the </span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/news/payment-methods/2025/klarna-card-gains-1-million-us-users-in-first-11-weeks/\" rel=\"noopener\" target=\"_blank\"><span>Klarna Card</span></a><span> in July. Marqeta last year became the first </span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/partnerships/2024/marqeta-teams-with-visa-to-offer-flexible-checkout-options/\" rel=\"noopener\" target=\"_blank\"><span>issuer processor</span></a><span> in the U.S. certified for the Visa Flexible Credential.</span></p>\n<p><span>The Klarna Card is now rolling out in the United Kingdom, Denmark, Germany, Norway and Poland, the release said. In addition to the U.S., it is already available in Austria, Belgium, Finland, France, Ireland, Italy, the Netherlands, Portugal, Spain and Sweden.</span></p>\n<p><span>In other news from the pay-later sector, PYMNTS CEO Karen Webster wrote last month about the proliferation of \u201cdoomsday\u201d news articles about </span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/bnpl/2025/the-bnpl-story-everyones-getting-wrong/\" rel=\"noopener\" target=\"_blank\"><span>buy now, pay later</span></a><span> (BNPL) services trapping consumers into a spiral of debt.</span></p>\n<p><span>\u201cThese stories make compelling reading and encourage viral posts and social piling on,\u201d Webster wrote. \u201cThey also fundamentally misrepresent how virtually everyone actually uses these products.\u201d</span></p>\n<p><span>The PYMNTS Intelligence report \u201c</span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/study_posts/split-shift-how-card-installments-are-reshaping-the-pay-later-landscape/\" rel=\"noopener\" target=\"_blank\"><span>Split Shift: How Card Installments Are Reshaping the Pay Later Landscape</span></a><span>\u201d found that between 97% and 98% of BNPL users can responsibly manage their obligations.</span></p>\n<p><span>Delinquency rates remain low, according to </span><a class=\"editor-rtfLink\" href=\"https://www.richmondfed.org/publications/research/economic_brief/2025/eb_25-03#:~:text=The%20BNPL%20delinquency%20rates%20so,onto%20other%20consumer%20credit%20products.\" rel=\"noopener\" target=\"_blank\"><span>data</span></a><span> from the </span><a class=\"editor-rtfLink\" href=\"https://www.federalreserve.gov/\" rel=\"noopener\" target=\"_blank\"><span>Federal Reserve</span></a> <span>as well as</span><span> public </span><a class=\"editor-rtfLink\" href=\"https://investors.klarna.com/News--Events/news/news-details/2025/Klarna-delinquency-rates-drop-as-consumer-health-improves/default.aspx#:~:text=Globally%2C%20Klarna's%20delinquency%20rate%20on,down%20from%202.20%25%20last%20year.\" rel=\"noopener\" target=\"_blank\"><span>disclosures</span></a><span> from BNPL providers </span><span>themselves</span><span>.</span><span> Installment products offered by \u201cpureplay\u201d providers and enablers, along with credit card issuers, can provide valuable budgeting tools for </span><span>those who use them</span><span>, Webster wrote.</span></p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/next-gen-debit/2025/klarna-expands-european-card-network-with-help-marqeta/\">Klarna Expands European Card Network With Help of Marqeta</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
+      "image_url": "https://www.pymnts.com/wp-content/uploads/2023/02/Klarna.jpg?w=457",
+      "summary_text": "Klarna is expanding its card offering in Europe with the help of card issuing platform Marqeta. The partnership is designed to bring the Klarna Card into 15 new European markets, according to a Monday (Nov. 3) press release. The launch builds on the two compa...",
+      "category": "fintech",
+      "_trending_tags": [
+        "ai"
+      ],
+      "_permalink": "/p/cbe376e15a/",
+      "_abs_permalink": "https://pulse.tek2dayholdings.com/p/cbe376e15a/",
+      "_summary_240": "Klarna is expanding its card offering in Europe with the help of card issuing platform Marqeta. The partnership is designed to bring the Klarna Card into 15 new European markets,...",
+      "_thumbnail": "https://pulse.tek2dayholdings.com/p/cbe376e15a/thumbnail.png"
+    },
+    {
+      "title": "The AI industry is running on FOMO",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/812455/ai-industry-earnings-bubble-fomo-hype",
+      "published_at": "2025-11-03T12:06:02-05:00",
+      "source": "The Verge",
+      "summary": "For Big Tech, a penny invested in AI is a penny earned\u2026 Maybe. After an indeterminate amount of time. Investors hope. On earnings calls last week, Amazon, Google, Microsoft, and Meta reported more than $350 billion this year on capital expenditures, or longer-tail investments in a company's future. All four told investors to expect the [\u2026]",
+      "content_html": "<figure>\n\n<img alt=\"\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/10/Vrg_Illo_AI_Bubble.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100\" />\n\t<figcaption>\n\t\t</figcaption>\n</figure>\n<p class=\"has-text-align-none\">For Big Tech, a penny invested in AI is a penny earned\u2026 Maybe. After an indeterminate amount of time. Investors hope. </p>\n<p class=\"has-text-align-none\">On earnings calls last week<strong>, </strong>Amazon, Google, Microsoft, and Meta reported more than $350 billion this year on capital expenditures<strong>, </strong>or<strong> </strong>longer-tail investments in a company's future. All four told investors to expect the number to skyrocket even further next year: Microsoft said \"higher,\" Amazon an \"increase,\" Google a \"significant increase,\" and Meta \"notably larger.\"</p>\n<p class=\"has-text-align-none\">That probably translates to more than $400 billion total for the four companies next year, according to Joe Fath, partner and head of growth at Eclipse VC. </p>\n \u2026\n<p><a href=\"https://www.theverge.com/ai-artificial-intelligence/812455/ai-industry-earnings-bubble-fomo-hype\">Read the full story at The Verge.</a></p>",
+      "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/10/Vrg_Illo_AI_Bubble.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+      "summary_text": "For Big Tech, a penny invested in AI is a penny earned\u2026 Maybe. After an indeterminate amount of time. Investors hope. On earnings calls last week, Amazon, Google, Microsoft, and Meta reported more than $350 billion this year on capital expenditures, or longer...",
+      "category": "ai",
+      "_trending_tags": [
+        "ai",
+        "amazon",
+        "google",
+        "meta",
+        "microsoft"
+      ],
+      "_permalink": "/p/8f32b73e3b/",
+      "_abs_permalink": "https://pulse.tek2dayholdings.com/p/8f32b73e3b/",
+      "_summary_240": "For Big Tech, a penny invested in AI is a penny earned\u2026 Maybe. After an indeterminate amount of time. Investors hope. On earnings calls last week, Amazon, Google, Microsoft, and...",
+      "_thumbnail": "https://pulse.tek2dayholdings.com/p/8f32b73e3b/thumbnail.png"
+    },
+    {
+      "title": "Brazil Central Bank Tightens Rules Amid Fintech Crime Crackdown",
+      "url": "https://www.bloomberg.com/news/articles/2025-11-03/brazil-central-bank-tightens-rules-amid-fintech-crime-crackdown",
+      "published_at": "2025-11-03T12:05:08-05:00",
+      "source": "Bloomberg Technology",
+      "summary": "Brazil\u2019s central bank unveiled a new set of rules for financial institutions on Monday, the latest step toward strengthening a system that\u2019s faced a slew of probes into its fintech firms in recent months.",
+      "content_html": "Police vehicles parked outside a building on Faria Lima Avenue in Sao Paulo on Aug. 28. Photographer: Miguel Schincariol/AFP/Getty Images",
+      "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/izaKd_uRbyKU/v0/1200x-1.jpg",
+      "summary_text": "Brazil\u2019s central bank unveiled a new set of rules for financial institutions on Monday, the latest step toward strengthening a system that\u2019s faced a slew of probes into its fintech firms in recent months.",
+      "category": "fintech",
+      "_trending_tags": [
+        "fintech"
+      ],
+      "_permalink": "/p/9472b03c68/",
+      "_abs_permalink": "https://pulse.tek2dayholdings.com/p/9472b03c68/",
+      "_summary_240": "Brazil\u2019s central bank unveiled a new set of rules for financial institutions on Monday, the latest step toward strengthening a system that\u2019s faced a slew of probes into its...",
+      "_thumbnail": "https://pulse.tek2dayholdings.com/p/9472b03c68/thumbnail.png"
+    },
+    {
+      "title": "Dia\u2019s AI browser starts adding Arc\u2019s \u2018greatest hits\u2019 to its feature set",
+      "url": "https://techcrunch.com/2025/11/03/dias-ai-browser-starts-adding-arcs-greatest-hits-to-its-feature-set/",
+      "published_at": "2025-11-03T12:01:58-05:00",
+      "source": "TechCrunch",
+      "summary": "Dia's AI browser has a head start on what works for consumers thanks to learnings from its browser experiment, Arc.",
+      "content_html": "",
+      "image_url": "https://techcrunch.com/wp-content/uploads/2025/06/@Mention-Tabs.jpeg?resize=1200,775",
+      "summary_text": "Dia's AI browser has a head start on what works for consumers thanks to learnings from its browser experiment, Arc.",
+      "category": "ai",
+      "_trending_tags": [
+        "ai"
+      ],
+      "_permalink": "/p/77451604d1/",
+      "_abs_permalink": "https://pulse.tek2dayholdings.com/p/77451604d1/",
+      "_summary_240": "Dia's AI browser has a head start on what works for consumers thanks to learnings from its browser experiment, Arc.",
+      "_thumbnail": "https://pulse.tek2dayholdings.com/p/77451604d1/thumbnail.png"
+    },
+    {
+      "title": "Pine Labs aims to take Indian fintech global even as it cuts valuation for IPO",
+      "url": "https://techcrunch.com/2025/11/03/pine-labs-aims-to-take-indian-fintech-global-even-as-it-cuts-valuation-for-ipo/",
+      "published_at": "2025-11-03T12:00:52-05:00",
+      "source": "TechCrunch",
+      "summary": "Pine Labs, an Indian merchant-commerce startup backed by PayPal and Mastercard, is going public this week at a valuation about 40% lower than its last private round \u2014 even as it doubles down on plans to take its fintech platform global.",
+      "content_html": "",
+      "image_url": "https://techcrunch.com/wp-content/uploads/2025/11/pine-labs-pos-machine.jpg?resize=1200,800",
+      "summary_text": "Pine Labs, an Indian merchant-commerce startup backed by PayPal and Mastercard, is going public this week at a valuation about 40% lower than its last private round \u2014 even as it doubles down on plans to take its fintech platform global.",
+      "category": "fintech",
+      "_trending_tags": [
+        "ai",
+        "fintech",
+        "gpu",
+        "paypal"
+      ],
+      "_permalink": "/p/3116ef4523/",
+      "_abs_permalink": "https://pulse.tek2dayholdings.com/p/3116ef4523/",
+      "_summary_240": "Pine Labs, an Indian merchant-commerce startup backed by PayPal and Mastercard, is going public this week at a valuation about 40% lower than its last private round \u2014 even as it...",
+      "_thumbnail": "https://pulse.tek2dayholdings.com/p/3116ef4523/thumbnail.png"
+    },
+    {
+      "title": "Stablecoin Orchestration Becomes FinTech Battleground as Blockchain Payments Surge",
+      "url": "https://www.pymnts.com/blockchain/2025/stablecoin-orchestration-becomes-fintech-battleground-blockchain-payments-surge/",
+      "published_at": "2025-11-03T11:52:12-05:00",
+      "source": "PYMNTS",
+      "summary": "As payment innovations scale, settlement and infrastructure have traditionally reared their heads as the strategic chokepoints. In the early days of the digital payments revolution, for example, industry titans like Mastercard, Visa and PayPal built their empires not just by issuing cards or enabling online transactions, but by owning the infrastructure (the gateways, switches [\u2026] The post Stable...",
+      "content_html": "<p><span>As payment innovations scale, settlement and infrastructure have traditionally </span><span>reared their heads</span><span> as </span><span>the</span><span> strategic chokepoints.</span></p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p><span>In the early days of the digital payments revolution, for example, industry titans like </span><a class=\"editor-rtfLink\" href=\"https://www.mastercard.com/us/en.html\" rel=\"noopener\" target=\"_blank\"><span>Mastercard</span></a><span>, </span><a class=\"editor-rtfLink\" href=\"https://usa.visa.com/\" rel=\"noopener\" target=\"_blank\"><span>Visa</span></a><span> and </span><a class=\"editor-rtfLink\" href=\"https://www.paypal.com/us/home\" rel=\"noopener\" target=\"_blank\"><span>PayPal</span></a><span> built their empires not just by issuing cards or enabling online transactions, but by owning the infrastructure (the gateways, switches and clearing systems) that made those transactions possible.</span></p>\n<p><span>Today, as the financial world pivots toward </span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/cryptocurrency/2025/crypto-custody-becomes-land-grab-fintechs-nonbanks/\" rel=\"noopener\" target=\"_blank\"><span>blockchain</span></a><span>-native infrastructure and </span><span>eyes </span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/cryptocurrency/2025/4-questions-cfos-need-to-ask-as-wall-street-embraces-stablecoins/\" rel=\"noopener\" target=\"_blank\"><span>stablecoin</span></a><span> payments with increasing interest</span><span>, the same pattern is emerging. Only this time, the infrastructure is programmable, global, transparent and instant.</span></p>\n<p><span>Three deals crystallized that transformation across FinTech and cryptocurrency. They are Mastercard\u2019s rumored $2 billion </span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/cryptocurrency/2025/mastercard-aims-to-acquire-crypto-and-stablecoin-infrastructure-startup-zerohash/\" rel=\"noopener\" target=\"_blank\"><span>acquisition</span></a><span> of </span><a class=\"editor-rtfLink\" href=\"https://zerohash.com/\" rel=\"noopener\" target=\"_blank\"><span>zerohash</span></a><span>\u2019s crypto capabilities last month, </span><a class=\"editor-rtfLink\" href=\"https://stripe.com/\" rel=\"noopener\" target=\"_blank\"><span>Stripe</span></a><span>\u2019s $1 billion </span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/acquisitions/2024/stripe-aims-for-largest-acquisition-yet-with-1-billion-deal-for-bridge/\" rel=\"noopener\" target=\"_blank\"><span>purchase</span></a><span> of </span><a class=\"editor-rtfLink\" href=\"https://www.bridge.xyz/\" rel=\"noopener\" target=\"_blank\"><span>Bridge</span></a> finalized in February<span>, and the Friday (Oct. 31) report that </span><a class=\"editor-rtfLink\" href=\"https://www.coinbase.com/\" rel=\"noopener\" target=\"_blank\"><span>Coinbase</span></a><span> is inching closer to </span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/cryptocurrency/2025/coinbase-in-late-stage-talks-on-2-billion-bvnk-deal/\" rel=\"noopener\" target=\"_blank\"><span>acquiring</span></a><span> stablecoin infrastructure startup </span><a class=\"editor-rtfLink\" href=\"https://bvnk.com/\" rel=\"noopener\" target=\"_blank\"><span>BVNK</span></a> <span>at a price of</span><span> $2 billion.</span></p>\n<p><span>Not to be outdone, Visa has been building out its own global </span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/cryptocurrency/2025/visa-sees-stablecoins-massively-expanding-its-opportunities/\" rel=\"noopener\" target=\"_blank\"><span>stablecoin settlement</span></a><span> service, enabling banking partners to settle cross-border stablecoin payments directly on public blockchains.</span></p>\n<p><span>Each move reflects a strategic recalibration designed not to replace fiat payments outright, but to expand the underlying tech stack </span><span>necessary</span><span> for orchestrating stablecoin payments at scale</span><span>, </span><span>while </span><span>achieving</span><span> cross-chain settlement and multi-chain compatibility.</span></p>\n<p><span>If it sounds like FinTech firms are racing to build their own stablecoin infrastructure and orchestration layers, it\u2019s because they just might be.</span></p>\n<p><strong><span>See also:</span></strong> <a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/cryptocurrency/2025/if-stablecoins-are-moneys-future-why-arent-they-more-spendable/\" rel=\"noopener\" target=\"_blank\"><span>Why Stablecoins </span><span>Are Stuck</span><span> at the Acceptance Hurdle</span></a></p>\n<h2><strong><span>How Stablecoins Are Rewriting the Original Payments Playbook</span></strong></h2>\n<p><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/cryptocurrency/2025/stablecoins-power-billions-in-payments-one-in-ten-could-be-illicit/\" rel=\"noopener\" target=\"_blank\"><span>Stablecoins</span></a><span> today represent over $250 billion in circulating </span><a class=\"editor-rtfLink\" href=\"https://www.mckinsey.com/industries/financial-services/our-insights/the-stable-door-opens-how-tokenized-cash-enables-next-gen-payments\" rel=\"noopener\" target=\"_blank\"><span>value</span></a><span>, but that\u2019s still a drop in the ocean of global money movement. </span><span>What has held them back hasn\u2019t been utility</span><span>, as</span><span> they already power billions of dollars in daily volume</span><span>, </span><span>but orchestration.</span><span> Most businesses don\u2019t want to hold crypto wallets, deal with gas fees or expose themselves to digital asset regulation. They want the speed and savings of stablecoins with the familiarity of embedded payments systems.</span></p>\n<p><span>To understand what\u2019s happening today, it helps to revisit the playbook of the past. In traditional digital payments, the most successful players invested in enabling infrastructure. Payment gateways built connective tissue between merchants, banks and card networks. Acquirers handled settlement flows and risk models. Switches moved messages across networks. Clearing systems reconciled transactions across international borders. It was an era defined by proprietary messaging formats, regulatory negotiation and decades-long partnerships.</span></p>\n<p><span>These systems evolved, but </span><span>they did so</span><span> within the constraints of legacy banking rails. Settlement still took days. Cross-border fees remained high. Onboarding into these networks was laden with compliance friction. FinTech firms like Stripe and </span><a class=\"editor-rtfLink\" href=\"https://squareup.com/us/en\" rel=\"noopener\" target=\"_blank\"><span>Square</span></a><span> succeeded by abstracting some of that complexity, but ultimately, they still plugged into the same old pipes.</span></p>\n<p><span>Blockchain, and stablecoins more specifically, have introduced a new plumbing layer where asset </span><span>transfer</span><span> and </span><span>settlement happen</span><span> simultaneously, without borders and programmatically.</span><span> But the ability to orchestrate stablecoin payments at scale, all while routing, converting, reconciling and complying, still requires enterprise-grade infrastructure.</span></p>\n<p><strong><span>Read also:</span></strong> <a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/cryptocurrency/2025/stablecoins-arent-created-equal-mapping-the-issuer-marketplace-for-cfos/\" rel=\"noopener\" target=\"_blank\"><span>Stablecoins Aren\u2019t Created Equal: Mapping the Issuer Marketplace for CFOs</span></a></p>\n<h2><strong><span>Beyond the First Mile of Blockchain Payments</span></strong></h2>\n<p><span>A decade ago, if you wanted to move money across borders, you needed correspondent banks, </span><a class=\"editor-rtfLink\" href=\"https://www.swift.com/\" rel=\"noopener\" target=\"_blank\"><span>Swift</span></a><span> messages and 72 hours. Today, a stablecoin like </span><a class=\"editor-rtfLink\" href=\"https://www.usdc.com/\" rel=\"noopener\" target=\"_blank\"><span>USDC</span></a><span> can settle $10 million in 10 seconds, with programmable escrow and instant finality. However, without orchestration, that\u2019s just a demo.</span></p>\n<p><span>Just as cloud computing didn\u2019t eliminate data centers but made them programmable, blockchains are making payment systems more flexible. </span><span>The infrastructure may be decentralized, but the orchestration will likely still </span><span>be run</span><span> by the same institutions that have always excelled at it, </span><span>like</span><span> those with scale, trust and regulatory fluency.</span></p>\n<p><span>During Visa\u2019s latest </span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/visa/2025/visa-ceo-says-company-now-a-payments-hyperscaler/\" rel=\"noopener\" target=\"_blank\"><span>earnings</span></a><span> report Tuesday (Oct. 28), for example, the company revealed it is expanding its stablecoin settlement platform to support four stablecoins across four distinct blockchains.</span></p>\n<p><span>\u201cWe are adding support for four stablecoins, running on four unique blockchains, representing two currencies \u2026 that we can accept and convert to over 25 traditional fiat currencies,\u201d Visa CEO </span><a class=\"editor-rtfLink\" href=\"https://www.linkedin.com/in/ryan-mcinerney-79838697/\" rel=\"noopener\" target=\"_blank\"><span>Ryan McInerney</span></a><span> said.</span></p>\n<p><span>Visa\u2019s ambition, like its </span><span>peer FinTechs</span><span>, isn\u2019t to replace card networks with blockchains, but to make its own network blockchain-capable, allowing stablecoins to flow through familiar channels while retaining compliance and anti-money laundering (AML) guardrails.</span></p>\n<p><span>At the same time, stablecoin issuers like </span><a class=\"editor-rtfLink\" href=\"https://www.circle.com/\" rel=\"noopener\" target=\"_blank\"><span>Circle Internet Group</span></a><span>, </span><a class=\"editor-rtfLink\" href=\"https://www.kraken.com/\" rel=\"noopener\" target=\"_blank\"><span>Kraken</span></a><span>, </span><span>Bridge</span><span> (</span><span>Stripe</span><span>), </span><a class=\"editor-rtfLink\" href=\"https://ripple.com/\" rel=\"noopener\" target=\"_blank\"><span>Ripple</span></a><span> and </span><span>more</span><span> are racing </span><span>for</span> <a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/cryptocurrency/2025/stablecoin-issuers-race-for-bank-charters-as-fed-weighs-access/\" rel=\"noopener\" target=\"_blank\"><span>federal trust or bank charters</span></a> <span>under</span><span> the </span><a class=\"editor-rtfLink\" href=\"https://www.occ.treas.gov/\" rel=\"noopener\" target=\"_blank\"><span>Office of the Comptroller of the Currency</span></a><span>.</span></p>\n<p><span>The big questions that remain revolve around jurisdictions and regulation. Will stablecoins become regulated like bank deposits? Will governments allow corporates to hold them on balance sheets? How will risk-weighting work for capital adequacy? How will central bank digital currencies (CBDCs) interact with private stablecoins?</span></p>\n<p><span>In the meantime, the orchestration platforms are </span><span>being built</span><span>. Just as importantly, these acquisitions show that enterprise demand is real, not hypothetical. </span><span>When payment giants and crypto firms are buying the same kinds of infrastructure, it\u2019s no longer a </span><span>future</span><span> trend.</span><span> It\u2019s a present shift.</span></p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/blockchain/2025/stablecoin-orchestration-becomes-fintech-battleground-blockchain-payments-surge/\">Stablecoin Orchestration Becomes FinTech Battleground as Blockchain Payments Surge</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
+      "image_url": "https://www.pymnts.com/wp-content/uploads/2025/11/blockchain-stablecoin-orchestration-FinTech.jpg?w=457",
+      "summary_text": "As payment innovations scale, settlement and infrastructure have traditionally reared their heads as the strategic chokepoints. In the early days of the digital payments revolution, for example, industry titans like Mastercard, Visa and PayPal built their emp...",
+      "category": "fintech",
+      "_trending_tags": [
+        "ai",
+        "fintech",
+        "paypal"
+      ],
+      "_permalink": "/p/8dbcab6b29/",
+      "_abs_permalink": "https://pulse.tek2dayholdings.com/p/8dbcab6b29/",
+      "_summary_240": "As payment innovations scale, settlement and infrastructure have traditionally reared their heads as the strategic chokepoints. In the early days of the digital payments...",
+      "_thumbnail": "https://pulse.tek2dayholdings.com/p/8dbcab6b29/thumbnail.png"
+    },
+    {
+      "title": "AWS and CrowdStrike Open Cybersecurity Accelerator to Startups Worldwide",
+      "url": "https://www.pymnts.com/cybersecurity/2025/aws-and-crowdstrike-open-cybersecurity-accelerator-to-startups-worldwide/",
+      "published_at": "2025-11-03T11:49:48-05:00",
+      "source": "PYMNTS",
+      "summary": "The AWS & CrowdStrike Cybersecurity Accelerator is now open to cloud and artificial intelligence security startups around the world. The third annual program is accepting applications through Nov. 15 and will run for eight weeks, from Jan. 5 to March 3, 2026, according to a Monday (Nov. 3) press release. The Accelerator provides early-stage [\u2026] The post AWS and CrowdStrike Open Cybersecurity Acce...",
+      "content_html": "<p style=\"font-weight: 400;\">The <a href=\"https://www.vestbee.com/aws-and-crowdstrike-cybersecurity-accelerator\" rel=\"noopener\" target=\"_blank\">AWS &amp; CrowdStrike Cybersecurity Accelerator</a> is now open to cloud and artificial intelligence security startups around the world.</p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p style=\"font-weight: 400;\">The third annual program is accepting applications through Nov. 15 and will run for eight weeks, from Jan. 5 to March 3, 2026, according to a Monday (Nov. 3) <a href=\"https://www.businesswire.com/news/home/20251102541042/en/CrowdStrike-AWS-and-NVIDIA-Expand-Global-Cybersecurity-Startup-Accelerator-to-Drive-Cloud-and-Agentic-AI-Innovation\" rel=\"noopener\" target=\"_blank\">press release</a>.</p>\n<p style=\"font-weight: 400;\">The Accelerator provides early-stage startups with mentorship from leaders across <a href=\"https://aws.amazon.com/\" rel=\"noopener\" target=\"_blank\">AWS</a>, <a href=\"https://www.crowdstrike.com/en-us/\" rel=\"noopener\" target=\"_blank\">CrowdStrike</a> and <a href=\"https://www.nvidia.com/en-us/\" rel=\"noopener\" target=\"_blank\">Nvidia</a>; access to cybersecurity investors and technical experts; and opportunities for global visibility across the companies\u2019 ecosystems and marketplaces, according to the release.</p>\n<p style=\"font-weight: 400;\">At the conclusion of the program, participants will showcase their innovations at an in-person Demo Day that coincides with the <a href=\"https://www.rsaconference.com/\" rel=\"noopener\" target=\"_blank\">RSAC Conference</a> and may be eligible for investment from the Crowdstrike <a href=\"https://www.crowdstrike.com/en-us/falcon-fund/\" rel=\"noopener\" target=\"_blank\">Falcon Fund</a>, the release said.</p>\n<p style=\"font-weight: 400;\">This year\u2019s Accelerator is the first to accept applications from around the world. The <a href=\"https://www.businesswire.com/news/home/20230927498605/en/CrowdStrike-Launches-Startup-Accelerator-with-AWS-to-Support-Next-Generation-of-Cloud-Native-Cybersecurity-Companies\" rel=\"noopener\" target=\"_blank\">first program</a> was limited to startups from the Europe, Middle East and Africa (EMEA) region, while the <a href=\"https://www.businesswire.com/news/home/20240916470788/en/CrowdStrike-Expands-Cybersecurity-Startup-Accelerator-with-AWS-and-NVIDIA-to-Support-the-Next-Generation-of-Global-Cloud-Security-Companies\" rel=\"noopener\" target=\"_blank\">second</a> was expanded to include those from the United States as well as EMEA.</p>\n<p style=\"font-weight: 400;\">The two previous editions of the Accelerator graduated 59 startups, per the release. Following their participation in the program, the startups collectively raised over $730 million in funding, and several achieved successful acquisitions.</p>\n<p style=\"font-weight: 400;\">\u201cThe impact of our past cohorts shows how much can be achieved when the world\u2019s leading technology companies and bold entrepreneurs unite to secure tomorrow,\u201d CrowdStrike Chief Business Officer <a href=\"https://www.crowdstrike.com/en-us/about-us/executive-team/daniel-bernard/\" rel=\"noopener\" target=\"_blank\">Daniel Bernard</a> said in the release.</p>\n<p style=\"font-weight: 400;\"><a href=\"https://www.linkedin.com/in/chris-grusz-03b855\" rel=\"noopener\" target=\"_blank\">Chris Grusz</a>, managing director of technology partnerships at AWS Marketplace, said in the release that the company, along with CrowdStrike and Nvidia, is \u201chelping founders use the scalability of AWS and the expertise of our partners to accelerate their growth and bring new cloud and AI security solutions to market faster.\u201d</p>\n<p style=\"font-weight: 400;\"><a href=\"https://www.linkedin.com/in/bartleyrichardson\" rel=\"noopener\" target=\"_blank\">Bartley Richardson</a>, senior director of agentic AI and cybersecurity engineering at Nvidia, said in the release that through the Accelerator, Nvidia, AWS and CrowdStrike are \u201cempowering founders to harness the full potential of accelerated computing and agentic systems to meet the evolving security needs of the modern enterprise.\u201d</p>\n<p style=\"font-weight: 400;\">The winners of the two previous cohorts of the AWS &amp; CrowdStrike Cybersecurity Accelerator are <a href=\"https://gytpol.com/\" rel=\"noopener\" target=\"_blank\">Remedio</a>\u00a0(formerly GYTPOL) in 2023-2024 and <a href=\"https://www.terra.security/\" rel=\"noopener\" target=\"_blank\">Terra Security</a> in 2024-2025, according to the release.</p>\n<p style=\"font-weight: 400;\">When Remedio announced in a September press release that it raised $65 million in its first <a href=\"https://gytpol.com/remedio-raises-65m-redefine-enterprise-sec\" rel=\"noopener\" target=\"_blank\">funding round</a>, the company included a quote from <a href=\"https://www.linkedin.com/in/cjmoses\" rel=\"noopener\" target=\"_blank\">CJ Moses</a>, chief information security officer and vice president of security engineering at <a href=\"https://www.aboutamazon.com/\" rel=\"noopener\" target=\"_blank\">Amazon</a>, who said Remedio won the inaugural Accelerator prize and that Amazon is using its technology.</p>\n<p style=\"font-weight: 400;\">\u201cRemedio offers automated endpoint security remediation, making what is normally a reactive and time-consuming process proactive and easy,\u201d Moses said in the release.</p>\n<p style=\"font-weight: 400;\">Terra Security said in a September press release that raised $30 million in a Series A <a href=\"https://www.terra.security/blog/terra-security-raises-30m-series-a-to-redefine-penetration-testing-with-agentic-ai\" rel=\"noopener\" target=\"_blank\">funding round</a> just a few months after its $8 million seed round.</p>\n<p style=\"font-weight: 400;\">The company said that since the seed round, it had won the Accelerator, launched an agentic AI continuous penetration testing platform and expanded its customer and partner base.</p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/cybersecurity/2025/aws-and-crowdstrike-open-cybersecurity-accelerator-to-startups-worldwide/\">AWS and CrowdStrike Open Cybersecurity Accelerator to Startups Worldwide</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
+      "image_url": "https://www.pymnts.com/wp-content/uploads/2025/02/cybersecurity.jpg?w=457",
+      "summary_text": "The AWS & CrowdStrike Cybersecurity Accelerator is now open to cloud and artificial intelligence security startups around the world. The third annual program is accepting applications through Nov. 15 and will run for eight weeks, from Jan. 5 to March 3, 2026,...",
+      "category": "ai",
+      "_trending_tags": [
+        "cloud"
+      ],
+      "_permalink": "/p/9c991eebbb/",
+      "_abs_permalink": "https://pulse.tek2dayholdings.com/p/9c991eebbb/",
+      "_summary_240": "The AWS & CrowdStrike Cybersecurity Accelerator is now open to cloud and artificial intelligence security startups around the world. The third annual program is accepting...",
+      "_thumbnail": "https://pulse.tek2dayholdings.com/p/9c991eebbb/thumbnail.png"
+    },
+    {
+      "title": "META Is The World's Largest VC",
+      "url": "https://newsletter.tek2dayholdings.com/p/meta-is-the-worlds-largest-vc",
+      "published_at": "2025-11-03T10:59:42-05:00",
+      "source": "TEK2day Newsletter",
+      "summary": "I liked META\u2019s previous strategy of building open source language models. 99% of language models will be smaller models - many open source - that are perfectly appropriate for managing the task at hand.",
+      "content_html": "<div class=\"captioned-image-container\"><figure><a class=\"image-link image2 is-viewable-img\" href=\"https://substackcdn.com/image/fetch/$s_!le7X!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F68d20bd9-7d6e-4868-9083-bca69062f8ca_3024x2160.jpeg\" target=\"_blank\"><div class=\"image2-inset\"><source type=\"image/webp\" /><img alt=\"\" class=\"sizing-normal\" height=\"1040\" src=\"https://substackcdn.com/image/fetch/$s_!le7X!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F68d20bd9-7d6e-4868-9083-bca69062f8ca_3024x2160.jpeg\" width=\"1456\" /><div class=\"image-link-expand\"><div class=\"pencraft pc-display-flex pc-gap-8 pc-reset\"><div class=\"pencraft pc-reset icon-container restack-image\"><svg class=\"lucide lucide-refresh-cw\" fill=\"none\" height=\"20\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" viewBox=\"0 0 24 24\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8\"></path><path d=\"M21 3v5h-5\"></path><path d=\"M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16\"></path><path d=\"M8 16H3v5\"></path></svg></div><div class=\"pencraft pc-reset icon-container view-image\"><svg class=\"lucide lucide-maximize2 lucide-maximize-2\" fill=\"none\" height=\"20\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" viewBox=\"0 0 24 24\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><polyline points=\"15 3 21 3 21 9\"></polyline><polyline points=\"9 21 3 21 3 15\"></polyline><line x1=\"21\" x2=\"14\" y1=\"3\" y2=\"10\"></line><line x1=\"3\" x2=\"10\" y1=\"21\" y2=\"14\"></line></svg></div></div></div></div></a></figure></div><p><strong>I liked META&#8217;s previous strategy of building open source language models.</strong> 99% of language models will be smaller models - many open source - that are perfectly appropriate for managing the task at hand. Some will be multi-faceted, others will specialize in a particular vertical, having been trained on vertical-specific data sets.</p><p><strong>However, META has abandoned the open source approach in favor of developing frontier models.</strong> The problem is that META keeps shifting its AI team around and Zuckerberg&#8217;s vision is not clear to me. <a href=\"https://newsletter.tek2dayholdings.com/p/metas-ai-glasses-are-the-next-form?r=1rp1p&amp;utm_campaign=post&amp;utm_medium=web&amp;showWelcomeOnShare=false\">I like META&#8217;s smart glasses effort</a>, but beyond that, I don&#8217;t see META&#8217;s path for delivering a return on its CapEx spend. META has invested $48 Billion YTD in CapEx. That number will grow next year, but META has nothing to show for it, which is why I compare META to a venture fund.</p><p>If META wishes to sell &#8220;AI&#8221; services to Enterprises, it should acquire Enterprise data rather than mess around with proprietary closed models. Acquire <strong>CoStar (CSGP) </strong>for CRE data to train its models with. Acquire <strong>Verisk (VRSK)</strong> for P&amp;C insurance data. Acquire Bloomberg, <strong>ICE (ICE)</strong> or the <strong>LSE (LSEG)</strong> if it wants to deploy AI services across Market Data and related services and so on. </p><p><strong>I believe all of the frontier LLM companies are putting the cart before the horse and should invest in modernizing economic infrastructure via Web3 / Blockchain technology.</strong> Once the transaction chain is digitized, AI agents and tools will then be positioned to deliver the type of automation we dream about.</p><div><hr /></div><p></p>",
+      "image_url": "https://substackcdn.com/image/fetch/$s_!le7X!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F68d20bd9-7d6e-4868-9083-bca69062f8ca_3024x2160.jpeg",
+      "summary_text": "I liked META\u2019s previous strategy of building open source language models. 99% of language models will be smaller models - many open source - that are perfectly appropriate for managing the task at hand.",
+      "category": "ai",
+      "_trending_tags": [
+        "ai",
+        "meta"
+      ],
+      "_permalink": "/p/a70f949af9/",
+      "_abs_permalink": "https://pulse.tek2dayholdings.com/p/a70f949af9/",
+      "_summary_240": "I liked META\u2019s previous strategy of building open source language models. 99% of language models will be smaller models - many open source - that are perfectly appropriate for...",
+      "_thumbnail": "https://pulse.tek2dayholdings.com/p/a70f949af9/thumbnail.png"
+    },
+    {
+      "title": "How A.I. Is Transforming Dating Apps",
+      "url": "https://www.nytimes.com/2025/11/03/technology/ai-dating-apps.html",
+      "published_at": "2025-11-03T10:20:51-05:00",
+      "source": "The New York Times - Technology",
+      "summary": "Meet your artificial intelligence matchmakers. These A.I. tools are changing dating apps, so users don\u2019t have to swipe through an endless scroll of profiles.",
+      "content_html": "",
+      "image_url": "https://static01.nyt.com/images/2025/10/29/business/00biz-ai-dating-SUB/00biz-ai-dating-SUB-mediumSquareAt3X.jpg",
+      "summary_text": "Meet your artificial intelligence matchmakers. These A.I. tools are changing dating apps, so users don\u2019t have to swipe through an endless scroll of profiles.",
+      "category": "ai",
+      "_trending_tags": [
+        "ai"
+      ]
+    },
+    {
+      "title": "Waymo\u2019s robotaxis are coming to three new cities",
+      "url": "https://www.theverge.com/transportation/812440/waymo-san-diego-las-vegas-detroit-robotaxi-launch",
+      "published_at": "2025-11-03T10:18:28-05:00",
+      "source": "The Verge",
+      "summary": "Waymo said it plans on launching commercial robotaxi services in three new cities: San Diego, Las Vegas, and Detroit. The announcement comes after the company said it would begin rapidly scaling to bring its fully driverless technology to more people on a faster timeline. Waymo didn\u2019t say exactly when it plans on opening up its [\u2026]",
+      "content_html": "<figure>\n\n<img alt=\"\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/STKS518_WAYMO_TAXI_D.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100\" />\n\t<figcaption>\n\t\t</figcaption>\n</figure>\n<p class=\"has-text-align-none\">Waymo said it plans on launching commercial robotaxi services in three new cities: <a href=\"https://waymo.com/blog?modal=short-newcity_sandiego\">San Diego</a>, <a href=\"https://waymo.com/blog?modal=short-newcity_lasvegas\">Las Vegas</a>, and <a href=\"https://waymo.com/blog?modal=short-newcity_detroit\">Detroit</a>. The announcement comes after the company said it would begin <a href=\"https://waymo.com/blog/2025/08/bringing-waymo-to-more-people-sooner\">rapidly scaling</a> to bring its fully driverless technology to more people on a faster timeline. </p>\n\n<p class=\"has-text-align-none\">Waymo didn\u2019t say exactly when it plans on opening up its vehicles to customers in all three cities, but it will likely be sometime next year. The company currently operates in five cities: San Francisco Bay Area, Los Angeles, Phoenix, Austin, and Atlanta. It has also said it wants to launch in Boston, Seattle, Denver, Miami, New York City, and Washington, DC. (The company is experiencing local pushback in both <a href=\"https://www.boston.com/news/local-news/2025/07/25/waymo-and-its-self-driving-cars-face-steep-opposition-in-boston/\">Boston</a> and <a href=\"https://www.king5.com/article/news/local/waymo-seattle-rideshare-drivers-union-rally/281-21d776a6-f139-422f-a714-d566d849b7e2\">Seattle</a>.) </p>\n\n<p class=\"has-text-align-none\">Waymo is licensed for autonomous ridehailing in California, but will still need to obtain approval in Nevada and Michigan before it can operate fully driverless cars in a commercial capacity. Waymo will need a Transportation Network Company permit in Michigan, and testing approval from both Nevada\u2019s DMV and the state\u2019s transportation authority for commercial operations, Waymo spokesperson Sandy Karp said. </p>\n\n<p class=\"has-text-align-none\">\u201cWe\u2019ll follow our safety framework and serve riders in these cities when we\u2019ve properly validated our technology and obtained the necessary permissions, with the intentions to open our doors to riders next year,\u201d Karp added in an email.</p>\n\n<p class=\"has-text-align-none\">Waymo also says it will be adding <a href=\"https://www.theverge.com/google-waymo/625593/waymos-new-zeekr-robotaxi-emerges-without-camouflage\">its new Zeekr RT</a> vehicles to its fleet of Jaguar I-Pace SUVs when its ready to commence commercial operations in the three cities announced today. The Zeekr RT, which is made by China\u2019s Geely, will be equipped with the company\u2019s 6th generation technology that Waymo says is more <a href=\"https://www.theverge.com/2024/8/19/24223655/waymos-new-robotaxi-will-feature-fewer-sensors-to-help-lower-costs\">cost efficient</a>. </p>\n\n<p class=\"has-text-align-none\"></p>",
+      "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/STKS518_WAYMO_TAXI_D.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+      "summary_text": "Waymo said it plans on launching commercial robotaxi services in three new cities: San Diego, Las Vegas, and Detroit. The announcement comes after the company said it would begin rapidly scaling to bring its fully driverless technology to more people on a fas...",
+      "category": "software",
+      "_trending_tags": [
+        "ai"
+      ],
+      "_permalink": "/p/bdf721eabd/",
+      "_abs_permalink": "https://pulse.tek2dayholdings.com/p/bdf721eabd/",
+      "_summary_240": "Waymo said it plans on launching commercial robotaxi services in three new cities: San Diego, Las Vegas, and Detroit. The announcement comes after the company said it would begin...",
+      "_thumbnail": "https://pulse.tek2dayholdings.com/p/bdf721eabd/thumbnail.png"
+    },
+    {
+      "title": "AI coding transforms data engineering: How dltHub's open-source Python library helps developers create data pipelines for AI in minutes",
+      "url": "https://venturebeat.com/data-infrastructure/ai-coding-transforms-data-engineering-how-dlthubs-open-source-python-library",
+      "published_at": "2025-11-03T10:00:00-05:00",
+      "source": "VentureBeat",
+      "summary": "A quiet revolution is reshaping enterprise data engineering. Python developers are building production data pipelines in minutes using tools that would have required entire specialized teams just months ago. The catalyst is dlt , an open-source Python library that automates complex data engineering tasks. The tool has reached 3 million monthly downloads and powers data workflows for over 5,000 co...",
+      "content_html": "",
+      "image_url": "",
+      "summary_text": "A quiet revolution is reshaping enterprise data engineering. Python developers are building production data pipelines in minutes using tools that would have required entire specialized teams just months ago. The catalyst is dlt , an open-source Python library...",
+      "category": "software",
+      "_trending_tags": [
+        "ai"
+      ]
+    },
+    {
+      "title": "Crypto lobbying surges as industry gains political footing in Washington",
+      "url": "https://cointelegraph.com/news/crypto-lobbying-surges-as-industry-gains-political-footing-in-washington?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "published_at": "2025-11-03T09:15:00-05:00",
+      "source": "Cointelegraph",
+      "summary": "Following a presidential pardon that sparked debate over influence and access, crypto companies and PACs are ramping up political spending as the sector matures into a Washington power player.",
+      "content_html": "",
+      "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMDUvMDE5NmZkNDgtMDVjNS03NzUzLTkzZjgtMDVjMjcwZDQwMjkw.jpg",
+      "summary_text": "Following a presidential pardon that sparked debate over influence and access, crypto companies and PACs are ramping up political spending as the sector matures into a Washington power player.",
+      "category": "fintech",
+      "_trending_tags": [
+        "ai"
+      ],
+      "_permalink": "/p/ae0fcb2a0d/",
+      "_abs_permalink": "https://pulse.tek2dayholdings.com/p/ae0fcb2a0d/",
+      "_summary_240": "Following a presidential pardon that sparked debate over influence and access, crypto companies and PACs are ramping up political spending as the sector matures into a Washington...",
+      "_thumbnail": "https://pulse.tek2dayholdings.com/p/ae0fcb2a0d/thumbnail.png"
+    },
+    {
+      "title": "Cisco Unveils Server Rack for Running AI in Stores, Factories",
+      "url": "https://www.bloomberg.com/news/articles/2025-11-03/cisco-csco-unveils-server-rack-for-running-ai-in-stores-factories",
+      "published_at": "2025-11-03T09:00:05-05:00",
+      "source": "Bloomberg Technology",
+      "summary": "Cisco Systems Inc. unveiled a new all-in-one product that\u2019s meant to help retail stores, health care facilities and factories use artificial intelligence with a single rack of equipment, part of the company\u2019s push to take a bigger role in AI.",
+      "content_html": "Cisco signage outside the company's headquarters in San Jose, California, US, on Tuesday, Nov. 12, 2024. Cisco Systems Inc. is scheduled to release earnings figures on November 13.",
+      "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iDuLfj2pHmC8/v1/1200x-1.jpg",
+      "summary_text": "Cisco Systems Inc. unveiled a new all-in-one product that\u2019s meant to help retail stores, health care facilities and factories use artificial intelligence with a single rack of equipment, part of the company\u2019s push to take a bigger role in AI.",
+      "category": "ai",
+      "_trending_tags": [
+        "ai"
+      ],
+      "_permalink": "/p/01b0e9b4fe/",
+      "_abs_permalink": "https://pulse.tek2dayholdings.com/p/01b0e9b4fe/",
+      "_summary_240": "Cisco Systems Inc. unveiled a new all-in-one product that\u2019s meant to help retail stores, health care facilities and factories use artificial intelligence with a single rack of...",
+      "_thumbnail": "https://pulse.tek2dayholdings.com/p/01b0e9b4fe/thumbnail.png"
+    },
+    {
+      "title": "LG founder\u2019s grandson, production firm partner up to bring AI to filmmaking",
+      "url": "https://techcrunch.com/2025/11/03/lg-scions-stock-farm-road-utopai-launch-ai-driven-filmmaking/",
+      "published_at": "2025-11-03T09:00:00-05:00",
+      "source": "TechCrunch",
+      "summary": "Brian Koo\u2019s Stock Farm Road and Utopai Studios have partnered up to form Utopai East, an AI-powered film production company.",
+      "content_html": "",
+      "image_url": "https://techcrunch.com/wp-content/uploads/2025/10/Brian-Koo-1.jpeg?resize=1200,800",
+      "summary_text": "Brian Koo\u2019s Stock Farm Road and Utopai Studios have partnered up to form Utopai East, an AI-powered film production company.",
+      "category": "ai",
+      "_trending_tags": [
+        "ai"
+      ],
+      "_permalink": "/p/c79e04a88d/",
+      "_abs_permalink": "https://pulse.tek2dayholdings.com/p/c79e04a88d/",
+      "_summary_240": "Brian Koo\u2019s Stock Farm Road and Utopai Studios have partnered up to form Utopai East, an AI-powered film production company.",
+      "_thumbnail": "https://pulse.tek2dayholdings.com/p/c79e04a88d/thumbnail.png"
+    },
+    {
+      "title": "DeFi needs higher certainty, not higher yield",
+      "url": "https://cointelegraph.com/news/defi-certainty?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "published_at": "2025-11-03T08:30:00-05:00",
+      "source": "Cointelegraph",
+      "summary": "High yields mean nothing without execution certainty. Institutional DeFi adoption demands predictable transactions over speculative returns at scale.",
+      "content_html": "",
+      "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMDMvMDE5NTZjMDMtMWJmMS03ODVkLWJkMmMtNmM4Yzk2Y2M0YmE3.jpg",
+      "summary_text": "High yields mean nothing without execution certainty. Institutional DeFi adoption demands predictable transactions over speculative returns at scale.",
+      "category": "fintech",
+      "_trending_tags": [
+        "ai"
+      ],
+      "_permalink": "/p/782c3cdd26/",
+      "_abs_permalink": "https://pulse.tek2dayholdings.com/p/782c3cdd26/",
+      "_summary_240": "High yields mean nothing without execution certainty. Institutional DeFi adoption demands predictable transactions over speculative returns at scale.",
+      "_thumbnail": "https://pulse.tek2dayholdings.com/p/782c3cdd26/thumbnail.png"
+    },
+    {
+      "title": "Here\u2019s what happened in crypto today",
+      "url": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "published_at": "2025-11-03T08:29:26-05:00",
+      "source": "Cointelegraph",
+      "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, NFTs, Web3 and crypto regulation.",
+      "content_html": "",
+      "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMDYvMDE5Nzk0MjMtZWY4ZS03YzYwLWI5MzctYjlkZGY3NWZlOGFk.jpg",
+      "summary_text": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, NFTs, Web3 and crypto regulation.",
+      "category": "fintech",
+      "_trending_tags": [
+        "ai"
+      ],
+      "_permalink": "/p/d510586451/",
+      "_abs_permalink": "https://pulse.tek2dayholdings.com/p/d510586451/",
+      "_summary_240": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, NFTs, Web3 and crypto regulation.",
+      "_thumbnail": "https://pulse.tek2dayholdings.com/p/d510586451/thumbnail.png"
+    },
+    {
+      "title": "Crypto investors flee visibility for anonymity as privacy coins surge 80%",
+      "url": "https://cointelegraph.com/news/privacy-coins-surge-80-percent-investors-financial-privacy-bitcoin?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "published_at": "2025-11-03T08:03:40-05:00",
+      "source": "Cointelegraph",
+      "summary": "Crypto investors are rediscovering the importance of financial privacy, as privacy-preserving cryptocurrencies outperform a broader crypto market slump.",
+      "content_html": "",
+      "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTAvMDE5OWNiYTEtN2I0Mi03MmJkLTk1ZjMtOTk2MDhkY2JlMWEw.jpg",
+      "summary_text": "Crypto investors are rediscovering the importance of financial privacy, as privacy-preserving cryptocurrencies outperform a broader crypto market slump.",
+      "category": "fintech",
+      "_permalink": "/p/1a7bae5481/",
+      "_abs_permalink": "https://pulse.tek2dayholdings.com/p/1a7bae5481/",
+      "_summary_240": "Crypto investors are rediscovering the importance of financial privacy, as privacy-preserving cryptocurrencies outperform a broader crypto market slump.",
+      "_thumbnail": "https://pulse.tek2dayholdings.com/p/1a7bae5481/thumbnail.png"
+    },
+    {
+      "title": "Is XRP the new Bitcoin? Why Wall Street can\u2019t stop talking about its ETF",
+      "url": "https://cointelegraph.com/news/is-xrp-the-new-bitcoin-why-wall-street-can-t-stop-talking-about-its-etf?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "published_at": "2025-11-03T08:00:00-05:00",
+      "source": "Cointelegraph",
+      "summary": "Analysts see billion-dollar potential as SEC reforms shorten paths for crypto ETFs and XRP moves closer to mainstream trading.",
+      "content_html": "",
+      "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTAvMDE5OWRkNjMtODZjOS03NDhlLThjNTgtNDY4NGZjZTUxNzdk.jpg",
+      "summary_text": "Analysts see billion-dollar potential as SEC reforms shorten paths for crypto ETFs and XRP moves closer to mainstream trading.",
+      "category": "fintech",
+      "_trending_tags": [
+        "ai"
+      ],
+      "_permalink": "/p/41812a8323/",
+      "_abs_permalink": "https://pulse.tek2dayholdings.com/p/41812a8323/",
+      "_summary_240": "Analysts see billion-dollar potential as SEC reforms shorten paths for crypto ETFs and XRP moves closer to mainstream trading.",
+      "_thumbnail": "https://pulse.tek2dayholdings.com/p/41812a8323/thumbnail.png"
+    },
+    {
+      "title": "US allows Microsoft to ship Nvidia AI chips to use in UAE for first time",
+      "url": "https://www.ft.com/content/03b30ba3-d0c6-4f63-92f8-077fcd8dc472",
+      "published_at": "2025-11-03T07:29:52-05:00",
+      "source": "Financial Times - Technology",
+      "summary": "Commerce department approval paves way for huge new investment in AI and cloud infrastructure in Middle East",
+      "content_html": "",
+      "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/5a1539c2-be63-4a5a-a878-46e73601b3e9.jpg",
+      "summary_text": "Commerce department approval paves way for huge new investment in AI and cloud infrastructure in Middle East",
+      "category": "ai",
+      "_trending_tags": [
+        "ai",
+        "cloud",
+        "microsoft",
+        "nvidia"
+      ],
+      "_permalink": "/p/70a17ceab4/",
+      "_abs_permalink": "https://pulse.tek2dayholdings.com/p/70a17ceab4/",
+      "_summary_240": "Commerce department approval paves way for huge new investment in AI and cloud infrastructure in Middle East",
+      "_thumbnail": "https://pulse.tek2dayholdings.com/p/70a17ceab4/thumbnail.png"
+    },
+    {
+      "title": "Standard Chartered CEO predicts end of cash: \u2018All money will be digital\u2019",
+      "url": "https://cointelegraph.com/news/standard-chartered-ceo-all-money-will-be-digital-hong-kong-fintech-week-2025?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "published_at": "2025-11-03T07:20:53-05:00",
+      "source": "Cointelegraph",
+      "summary": "Standard Chartered\u2019s Bill Winters predicted a blockchain-driven future where every transaction settles digitally, calling it a total rewiring of finance.",
+      "content_html": "",
+      "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTEvMDE5YTQ5NTEtNGEzNC03ZGM2LTljMTUtOTYzYjBmOWMxMDEy.jpg",
+      "summary_text": "Standard Chartered\u2019s Bill Winters predicted a blockchain-driven future where every transaction settles digitally, calling it a total rewiring of finance.",
+      "category": "fintech",
+      "_trending_tags": [
+        "ai",
+        "llm"
+      ],
+      "_permalink": "/p/c43003aff2/",
+      "_abs_permalink": "https://pulse.tek2dayholdings.com/p/c43003aff2/",
+      "_summary_240": "Standard Chartered\u2019s Bill Winters predicted a blockchain-driven future where every transaction settles digitally, calling it a total rewiring of finance.",
+      "_thumbnail": "https://pulse.tek2dayholdings.com/p/c43003aff2/thumbnail.png"
+    },
+    {
+      "title": "Crypto powerhouse Animoca Brands sets sights on Nasdaq via reverse merger",
+      "url": "https://cointelegraph.com/news/animoca-brands-nasdaq-listing-reverse-merger-currenc?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "published_at": "2025-11-03T07:11:15-05:00",
+      "source": "Cointelegraph",
+      "summary": "The crypto VC giant plans a reverse merger with Nasdaq-listed fintech Currenc, giving Animoca shareholders majority control of the new entity.",
+      "content_html": "",
+      "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjQtMTEvMDE5MzI0YzQtNTVmMi03OGM2LTg1MjUtMTAxN2VjNTYzNWUy.jpg",
+      "summary_text": "The crypto VC giant plans a reverse merger with Nasdaq-listed fintech Currenc, giving Animoca shareholders majority control of the new entity.",
+      "category": "fintech",
+      "_trending_tags": [
+        "fintech"
+      ],
+      "_permalink": "/p/505b731ac8/",
+      "_abs_permalink": "https://pulse.tek2dayholdings.com/p/505b731ac8/",
+      "_summary_240": "The crypto VC giant plans a reverse merger with Nasdaq-listed fintech Currenc, giving Animoca shareholders majority control of the new entity.",
+      "_thumbnail": "https://pulse.tek2dayholdings.com/p/505b731ac8/thumbnail.png"
+    },
+    {
+      "title": "Animoca Brands Plans Nasdaq Listing Through Reverse Merger",
+      "url": "https://www.bloomberg.com/news/articles/2025-11-03/animoca-brands-plans-nasdaq-listing-through-reverse-merger",
+      "published_at": "2025-11-03T06:01:00-05:00",
+      "source": "Bloomberg Technology",
+      "summary": "Animoca Brands, the Hong Kong-based crypto investor and blockchain developer, plans to go public on the Nasdaq stock exchange through a reverse merger with Currenc Group Inc.",
+      "content_html": "Animoca Brands chairman Yat Siu",
+      "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iueKpsoAaibk/v1/1200x-1.jpg",
+      "summary_text": "Animoca Brands, the Hong Kong-based crypto investor and blockchain developer, plans to go public on the Nasdaq stock exchange through a reverse merger with Currenc Group Inc.",
+      "category": "software",
+      "_trending_tags": [
+        "ai"
+      ],
+      "_permalink": "/p/eb3830b09d/",
+      "_abs_permalink": "https://pulse.tek2dayholdings.com/p/eb3830b09d/",
+      "_summary_240": "Animoca Brands, the Hong Kong-based crypto investor and blockchain developer, plans to go public on the Nasdaq stock exchange through a reverse merger with Currenc Group Inc.",
+      "_thumbnail": "https://pulse.tek2dayholdings.com/p/eb3830b09d/thumbnail.png"
+    },
+    {
+      "title": "BlackRock Manager Says AI Bust Won\u2019t Derail Clean-Tech Bets",
+      "url": "https://www.bloomberg.com/news/articles/2025-11-03/blackrock-manager-says-an-ai-bust-wouldn-t-end-clean-tech-rise",
+      "published_at": "2025-11-03T06:00:00-05:00",
+      "source": "Bloomberg Technology",
+      "summary": "Investors worried that artificial intelligence bets look too frothy shouldn\u2019t assume the clean-tech companies powering AI would be trapped in the same bubble, according to a portfolio manager overseeing one of BlackRock Inc.\u2019s flagship actively managed sustainability funds.",
+      "content_html": "",
+      "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iN13_WwWRCVk/v3/1200x-1.png",
+      "summary_text": "Investors worried that artificial intelligence bets look too frothy shouldn\u2019t assume the clean-tech companies powering AI would be trapped in the same bubble, according to a portfolio manager overseeing one of BlackRock Inc.\u2019s flagship actively managed sustai...",
+      "category": "ai",
+      "_trending_tags": [
+        "ai"
+      ]
+    },
+    {
+      "title": "What happens if you don\u2019t pay taxes on your crypto holdings?",
+      "url": "https://cointelegraph.com/news/what-happens-if-you-don-t-pay-taxes-on-your-crypto-holdings?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "published_at": "2025-11-03T05:04:29-05:00",
+      "source": "Cointelegraph",
+      "summary": "Skipping cryp to taxes can trigger hefty fines and legal issues. Find out what really happens if you fail to report or pay taxes on your holdings.",
+      "content_html": "",
+      "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTAvMDE5YTI0NWEtMGRiNS03MTAwLWEwM2UtNjIyZDk0NWIyYjc2.jpg",
+      "summary_text": "Skipping cryp to taxes can trigger hefty fines and legal issues. Find out what really happens if you fail to report or pay taxes on your holdings.",
+      "category": "fintech",
+      "_trending_tags": [
+        "ai"
+      ],
+      "_permalink": "/p/90d3ffa98a/",
+      "_abs_permalink": "https://pulse.tek2dayholdings.com/p/90d3ffa98a/",
+      "_summary_240": "Skipping cryp to taxes can trigger hefty fines and legal issues. Find out what really happens if you fail to report or pay taxes on your holdings.",
+      "_thumbnail": "https://pulse.tek2dayholdings.com/p/90d3ffa98a/thumbnail.png"
+    },
+    {
+      "title": "Trump defends CZ pardon, says he \u2018doesn\u2019t know\u2019 Binance co-founder",
+      "url": "https://cointelegraph.com/news/trump-tells-why-he-pardoned-cz-despite-not-knowing-him?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "published_at": "2025-11-03T04:03:43-05:00",
+      "source": "Cointelegraph",
+      "summary": "Trump again denied ties to Binance co-founder CZ amid reports that the exchange helped facilitate a $2 billion stablecoin deal linked to his World Liberty Financial platform.",
+      "content_html": "",
+      "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTAvMDE5YTJlYjgtM2FlZC03Zjg0LThlMmItNGU5MmNlMzViZWUx.jpg",
+      "summary_text": "Trump again denied ties to Binance co-founder CZ amid reports that the exchange helped facilitate a $2 billion stablecoin deal linked to his World Liberty Financial platform.",
+      "category": "fintech",
+      "_trending_tags": [
+        "ai"
+      ],
+      "_permalink": "/p/c24cdc66e2/",
+      "_abs_permalink": "https://pulse.tek2dayholdings.com/p/c24cdc66e2/",
+      "_summary_240": "Trump again denied ties to Binance co-founder CZ amid reports that the exchange helped facilitate a $2 billion stablecoin deal linked to his World Liberty Financial platform.",
+      "_thumbnail": "https://pulse.tek2dayholdings.com/p/c24cdc66e2/thumbnail.png"
+    },
+    {
+      "title": "Hackers and Crime Rings Are Teaming Up to Steal Cargo, Cyber Firm Says",
+      "url": "https://www.bloomberg.com/news/articles/2025-11-03/hackers-crime-rings-teaming-up-to-steal-cargo-cyber-firm-says",
+      "published_at": "2025-11-03T04:00:00-05:00",
+      "source": "Bloomberg Technology",
+      "summary": "Hackers are infiltrating trucking and freight companies in a scheme to steal and sell cargo shipments, a growing campaign that could end up costing companies and consumers billions of dollars, according to new cybersecurity research.",
+      "content_html": "Tractor trailers carrying shipping containers at the Port of Los Angeles in Los Angeles, California, US, on Thursday, Aug. 28, 2025. A US trade provision dating to the 1930s, which eventually cleared the way for more than a billion small parcels each year, ended Friday. Photographer: Eric Thayer/Bloomberg",
+      "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iX4NjfsR89TY/v13/1200x-1.jpg",
+      "summary_text": "Hackers are infiltrating trucking and freight companies in a scheme to steal and sell cargo shipments, a growing campaign that could end up costing companies and consumers billions of dollars, according to new cybersecurity research.",
+      "category": "fintech",
+      "_trending_tags": [
+        "ai"
+      ],
+      "_permalink": "/p/4fb52b13c5/",
+      "_abs_permalink": "https://pulse.tek2dayholdings.com/p/4fb52b13c5/",
+      "_summary_240": "Hackers are infiltrating trucking and freight companies in a scheme to steal and sell cargo shipments, a growing campaign that could end up costing companies and consumers...",
+      "_thumbnail": "https://pulse.tek2dayholdings.com/p/4fb52b13c5/thumbnail.png"
+    },
+    {
+      "title": "Xi Quips About Backdoors During Xiaomi Phone Gift to Korea\u2019s Lee",
+      "url": "https://www.bloomberg.com/news/articles/2025-11-03/xi-quips-about-backdoors-during-xiaomi-phone-gift-to-korea-s-lee",
+      "published_at": "2025-11-03T03:29:48-05:00",
+      "source": "Bloomberg Technology",
+      "summary": "Chinese President Xi Jinping joked about security backdoors while presenting a pair of Xiaomi Corp. smartphones to his South Korean counterpart, a rare moment of spontaneous levity captured during a week of tense trade negotiations with Donald Trump.",
+      "content_html": "GYEONGJU, SOUTH KOREA - NOVEMBER 1: Chinese President Xi Jinping (L) and South Korean President Lee Jae-Myung (R) are seen on a broadcast screen shaking hands, as they meet with other world leaders, during the APEC Economic Leaders' Week, in Gyeongju, South Korea, on November 1, 2025. The summit focuses on trade, economic cooperation, Artificial Intelligence (AI) and technology development among other issues. (Photo by Daniel Ceng/Anadolu via Getty Images)",
+      "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ilQnWZ4BQjEc/v1/1200x-1.jpg",
+      "summary_text": "Chinese President Xi Jinping joked about security backdoors while presenting a pair of Xiaomi Corp. smartphones to his South Korean counterpart, a rare moment of spontaneous levity captured during a week of tense trade negotiations with Donald Trump.",
+      "category": "fintech",
+      "_trending_tags": [
+        "ai"
+      ],
+      "_permalink": "/p/c9c35f28e0/",
+      "_abs_permalink": "https://pulse.tek2dayholdings.com/p/c9c35f28e0/",
+      "_summary_240": "Chinese President Xi Jinping joked about security backdoors while presenting a pair of Xiaomi Corp. smartphones to his South Korean counterpart, a rare moment of spontaneous...",
+      "_thumbnail": "https://pulse.tek2dayholdings.com/p/c9c35f28e0/thumbnail.png"
+    },
+    {
+      "title": "Without Bitcoin, what happens to Ether and XRP?",
+      "url": "https://cointelegraph.com/news/without-bitcoin-what-happens-to-ether-and-xrp?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "published_at": "2025-11-03T03:10:42-05:00",
+      "source": "Cointelegraph",
+      "summary": "What if Bitcoin crashes? Will Ether and XRP fall with it or hold their ground? Discover how a BTC slump could rattle the entire crypto market.",
+      "content_html": "",
+      "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTAvMDE5YTM1MmYtODFjNy03YjBjLTg3OTYtYmQ5MmU3ODZiMzRk.jpg",
+      "summary_text": "What if Bitcoin crashes? Will Ether and XRP fall with it or hold their ground? Discover how a BTC slump could rattle the entire crypto market.",
+      "category": "fintech",
+      "_permalink": "/p/ec1d6d05aa/",
+      "_abs_permalink": "https://pulse.tek2dayholdings.com/p/ec1d6d05aa/",
+      "_summary_240": "What if Bitcoin crashes? Will Ether and XRP fall with it or hold their ground? Discover how a BTC slump could rattle the entire crypto market.",
+      "_thumbnail": "https://pulse.tek2dayholdings.com/p/ec1d6d05aa/thumbnail.png"
+    },
+    {
+      "title": "That Time Xi Jinping Joked About Espionage",
+      "url": "https://www.nytimes.com/2025/11/02/world/asia/xi-jinping-china-south-korea-spying.html",
+      "published_at": "2025-11-03T02:51:23-05:00",
+      "source": "The New York Times - Technology",
+      "summary": "Xi Jinping gave two cellphones to South Korea\u2019s president, who asked how secure they were. \u201cYou can check if there\u2019s a backdoor,\u201d he said with a laugh.",
+      "content_html": "Xi Jinping, China\u2019s top leader, giving two cellphones to President Lee Jae Myung of South Korea in Gyeongju, South Korea, on Saturday.",
+      "image_url": "https://static01.nyt.com/images/2025/11/02/multimedia/02xp-spying-ltbq/02xp-spying-ltbq-mediumSquareAt3X.jpg",
+      "summary_text": "Xi Jinping gave two cellphones to South Korea\u2019s president, who asked how secure they were. \u201cYou can check if there\u2019s a backdoor,\u201d he said with a laugh.",
+      "category": "fintech",
+      "_trending_tags": [
+        "ai"
+      ],
+      "_permalink": "/p/e135d6318b/",
+      "_abs_permalink": "https://pulse.tek2dayholdings.com/p/e135d6318b/",
+      "_summary_240": "Xi Jinping gave two cellphones to South Korea\u2019s president, who asked how secure they were. \u201cYou can check if there\u2019s a backdoor,\u201d he said with a laugh.",
+      "_thumbnail": "https://pulse.tek2dayholdings.com/p/e135d6318b/thumbnail.png"
+    },
+    {
+      "title": "Abu Dhabi\u2019s Adnoc Uses AI to Reduce Unplanned Shutdowns by Half",
+      "url": "https://www.bloomberg.com/news/articles/2025-11-03/abu-dhabi-s-adnoc-uses-ai-to-reduce-unplanned-shutdowns-by-half",
+      "published_at": "2025-11-03T02:33:38-05:00",
+      "source": "Bloomberg Technology",
+      "summary": "Abu Dhabi National Oil Co. has started to deploy artificial intelligence to vastly reduce sudden maintenance halts and to make production forecasts more accurate.",
+      "content_html": "An ADNOC refinery in Al Ruwais, United Arab Emirates. Photographer: Christophe Viseux/Bloomberg",
+      "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iw1t24gl8KxA/v0/1200x-1.jpg",
+      "summary_text": "Abu Dhabi National Oil Co. has started to deploy artificial intelligence to vastly reduce sudden maintenance halts and to make production forecasts more accurate.",
+      "category": "ai",
+      "_trending_tags": [
+        "ai"
+      ],
+      "_permalink": "/p/dc7d317ffc/",
+      "_abs_permalink": "https://pulse.tek2dayholdings.com/p/dc7d317ffc/",
+      "_summary_240": "Abu Dhabi National Oil Co. has started to deploy artificial intelligence to vastly reduce sudden maintenance halts and to make production forecasts more accurate.",
+      "_thumbnail": "https://pulse.tek2dayholdings.com/p/dc7d317ffc/thumbnail.png"
+    },
+    {
+      "title": "CZ denies he\u2019s behind a proposal for a crypto private bank in Kyrgyzstan",
+      "url": "https://cointelegraph.com/news/cz-denies-kyrgyzstan-crypto-bank-claims?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "published_at": "2025-11-03T01:07:25-05:00",
+      "source": "Cointelegraph",
+      "summary": "Kyrgyzstan President Sadyr Japarov claims that Changpeng \u201cCZ\u201d Zhao proposed establishing a private bank that also deals in cryptocurrency.",
+      "content_html": "",
+      "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMDUvMDE5NmEwMjctNTRkNC03MmRlLTk5YjctYjIwOGQ3ZmExOWE2.jpg",
+      "summary_text": "Kyrgyzstan President Sadyr Japarov claims that Changpeng \u201cCZ\u201d Zhao proposed establishing a private bank that also deals in cryptocurrency.",
+      "category": "fintech",
+      "_trending_tags": [
+        "ai"
+      ],
+      "_permalink": "/p/e6d9745d19/",
+      "_abs_permalink": "https://pulse.tek2dayholdings.com/p/e6d9745d19/",
+      "_summary_240": "Kyrgyzstan President Sadyr Japarov claims that Changpeng \u201cCZ\u201d Zhao proposed establishing a private bank that also deals in cryptocurrency.",
+      "_thumbnail": "https://pulse.tek2dayholdings.com/p/e6d9745d19/thumbnail.png"
+    },
+    {
+      "title": "AWS and OpenAI announce multi-year strategic partnership",
+      "url": "https://openai.com/index/aws-and-openai-partnership",
+      "published_at": "2025-11-03T01:00:00-05:00",
+      "source": "OpenAI News",
+      "summary": "OpenAI and AWS have entered a multi-year, $38 billion partnership to scale advanced AI workloads. AWS will provide world-class infrastructure and compute capacity to power OpenAI\u2019s next generation of models.",
+      "content_html": "",
+      "image_url": "",
+      "summary_text": "OpenAI and AWS have entered a multi-year, $38 billion partnership to scale advanced AI workloads. AWS will provide world-class infrastructure and compute capacity to power OpenAI\u2019s next generation of models.",
+      "category": "ai",
+      "_trending_tags": [
+        "ai",
+        "openai"
+      ]
+    },
+    {
+      "title": "Investors need to look beyond the \u2018bragawatts\u2019 in AI infrastructure boom",
+      "url": "https://www.ft.com/content/bf687d99-f373-4a41-8651-fca9dba83aa0",
+      "published_at": "2025-11-03T00:00:06-05:00",
+      "source": "Financial Times - Technology",
+      "summary": "As investment rush accelerates, the winners will control inputs unlikely to be commoditised",
+      "content_html": "",
+      "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/0f51fb3e-2a17-44ca-a217-1c02674878c8.jpg",
+      "summary_text": "As investment rush accelerates, the winners will control inputs unlikely to be commoditised",
+      "category": "ai",
+      "_trending_tags": [
+        "ai"
+      ],
+      "_permalink": "/p/e268869878/",
+      "_abs_permalink": "https://pulse.tek2dayholdings.com/p/e268869878/",
+      "_summary_240": "As investment rush accelerates, the winners will control inputs unlikely to be commoditised",
+      "_thumbnail": "https://pulse.tek2dayholdings.com/p/e268869878/thumbnail.png"
+    },
+    {
+      "title": "Rothschild Sees More Global Firms Listing Indian Units Next Year",
+      "url": "https://www.bloomberg.com/news/articles/2025-11-03/rothschild-sees-more-global-firms-listing-indian-units-next-year",
+      "published_at": "2025-11-02T22:47:20-05:00",
+      "source": "Bloomberg Technology",
+      "summary": "At least 10 multinational companies may list their Indian units in Mumbai over the next year as they seek higher valuations amid the country\u2019s rapid growth, according to Rothschild & Co.",
+      "content_html": "Claire Suddens-Spiers Rothschild & Co.",
+      "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iiVzhqJpKdec/v0/1200x-1.jpg",
+      "summary_text": "At least 10 multinational companies may list their Indian units in Mumbai over the next year as they seek higher valuations amid the country\u2019s rapid growth, according to Rothschild & Co.",
+      "category": "software",
+      "_trending_tags": [
+        "ai"
+      ],
+      "_permalink": "/p/391e629ad4/",
+      "_abs_permalink": "https://pulse.tek2dayholdings.com/p/391e629ad4/",
+      "_summary_240": "At least 10 multinational companies may list their Indian units in Mumbai over the next year as they seek higher valuations amid the country\u2019s rapid growth, according to...",
+      "_thumbnail": "https://pulse.tek2dayholdings.com/p/391e629ad4/thumbnail.png"
+    },
+    {
+      "title": "Kevin Rose\u2019s simple test for AI hardware \u2014 would you want to punch someone in the face who\u2019s wearing it?",
+      "url": "https://techcrunch.com/2025/11/02/kevin-roses-simple-test-for-ai-hardware-would-you-want-to-punch-someone-in-the-face-whos-wearing-it/",
+      "published_at": "2025-11-02T20:54:17-05:00",
+      "source": "TechCrunch",
+      "summary": "\"As an investor, you kind of have to not only say, okay, cool tech, sure, but emotionally, how does it make me feel? And how does it make others feel around me?\"",
+      "content_html": "",
+      "image_url": "https://techcrunch.com/wp-content/uploads/2025/11/54889293139_d6dbc89df2_k.jpg?resize=1200,800",
+      "summary_text": "\"As an investor, you kind of have to not only say, okay, cool tech, sure, but emotionally, how does it make me feel? And how does it make others feel around me?\"",
+      "category": "ai",
+      "_trending_tags": [
+        "ai"
+      ],
+      "_permalink": "/p/55222f73de/",
+      "_abs_permalink": "https://pulse.tek2dayholdings.com/p/55222f73de/",
+      "_summary_240": "\"As an investor, you kind of have to not only say, okay, cool tech, sure, but emotionally, how does it make me feel? And how does it make others feel around me?\"",
+      "_thumbnail": "https://pulse.tek2dayholdings.com/p/55222f73de/thumbnail.png"
+    },
+    {
+      "title": "Google pulls Gemma from AI Studio after Senator Blackburn accuses model of defamation",
+      "url": "https://techcrunch.com/2025/11/02/google-pulls-gemma-from-ai-studio-after-senator-blackburn-accuses-model-of-defamation/",
+      "published_at": "2025-11-02T16:13:17-05:00",
+      "source": "TechCrunch",
+      "summary": "Senator Martha Blackburn argued Gemma\u2019s fabrications are \u201cnot a harmless \u2018hallucination,\u2019\" but rather \u201can act of defamation produced and distributed by a Google-owned AI model.\u201d",
+      "content_html": "",
+      "image_url": "https://techcrunch.com/wp-content/uploads/2024/05/Sundar-AI-backdrop-Google-IO.png?w=947",
+      "summary_text": "Senator Martha Blackburn argued Gemma\u2019s fabrications are \u201cnot a harmless \u2018hallucination,\u2019\" but rather \u201can act of defamation produced and distributed by a Google-owned AI model.\u201d",
+      "category": "ai",
+      "_trending_tags": [
+        "ai",
+        "google"
+      ],
+      "_permalink": "/p/cab284047f/",
+      "_abs_permalink": "https://pulse.tek2dayholdings.com/p/cab284047f/",
+      "_summary_240": "Senator Martha Blackburn argued Gemma\u2019s fabrications are \u201cnot a harmless \u2018hallucination,\u2019\" but rather \u201can act of defamation produced and distributed by a Google-owned AI model.\u201d",
+      "_thumbnail": "https://pulse.tek2dayholdings.com/p/cab284047f/thumbnail.png"
+    },
+    {
+      "title": "Tech groups step up efforts to solve AI\u2019s big security flaw",
+      "url": "https://www.ft.com/content/56cb100e-7146-488f-aae5-55304ae0eff6",
+      "published_at": "2025-11-02T16:00:02-05:00",
+      "source": "Financial Times - Technology",
+      "summary": "Google DeepMind, Anthropic and Microsoft are trying to prevent \u2018indirect prompt injection attacks\u2019 by hackers",
+      "content_html": "",
+      "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/8936fd5a-8ac6-4eaf-9ea0-8c7e79a90a9e.jpg",
+      "summary_text": "Google DeepMind, Anthropic and Microsoft are trying to prevent \u2018indirect prompt injection attacks\u2019 by hackers",
+      "category": "ai",
+      "_trending_tags": [
+        "ai",
+        "anthropic",
+        "deepmind",
+        "google",
+        "microsoft"
+      ],
+      "_permalink": "/p/36fc15810c/",
+      "_abs_permalink": "https://pulse.tek2dayholdings.com/p/36fc15810c/",
+      "_summary_240": "Google DeepMind, Anthropic and Microsoft are trying to prevent \u2018indirect prompt injection attacks\u2019 by hackers",
+      "_thumbnail": "https://pulse.tek2dayholdings.com/p/36fc15810c/thumbnail.png"
+    },
+    {
+      "title": "Sam Altman says \u2018enough\u2019 to questions about OpenAI\u2019s revenue",
+      "url": "https://techcrunch.com/2025/11/02/sam-altman-says-enough-to-questions-about-openais-revenue/",
+      "published_at": "2025-11-02T12:15:26-05:00",
+      "source": "TechCrunch",
+      "summary": "OpenAI CEO Sam Altman recently said that the company is doing \u201cwell more\u201d than $13 billion in annual revenue \u2014 and he sounded a little testy when pressed on how it will pay for its massive spending commitments.",
+      "content_html": "",
+      "image_url": "https://techcrunch.com/wp-content/uploads/2025/08/GettyImages-2223572243.jpg?resize=1200,800",
+      "summary_text": "OpenAI CEO Sam Altman recently said that the company is doing \u201cwell more\u201d than $13 billion in annual revenue \u2014 and he sounded a little testy when pressed on how it will pay for its massive spending commitments.",
+      "category": "ai",
+      "_trending_tags": [
+        "ai",
+        "llm",
+        "openai"
+      ],
+      "_permalink": "/p/a0aa97307b/",
+      "_abs_permalink": "https://pulse.tek2dayholdings.com/p/a0aa97307b/",
+      "_summary_240": "OpenAI CEO Sam Altman recently said that the company is doing \u201cwell more\u201d than $13 billion in annual revenue \u2014 and he sounded a little testy when pressed on how it will pay for...",
+      "_thumbnail": "https://pulse.tek2dayholdings.com/p/a0aa97307b/thumbnail.png"
+    },
+    {
+      "title": "Anthropic Is Testing User Patience",
+      "url": "https://newsletter.tek2dayholdings.com/p/anthropic-is-testing-user-patience",
+      "published_at": "2025-11-02T12:12:19-05:00",
+      "source": "TEK2day Newsletter",
+      "summary": "Anthropic is throttling usage again - heavily, and seemingly randomly.",
+      "content_html": "<div class=\"captioned-image-container\"><figure><a class=\"image-link image2 is-viewable-img\" href=\"https://substackcdn.com/image/fetch/$s_!IbJQ!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F367b3904-31ab-48ac-b783-2ce92d44f6ee_1075x768.png\" target=\"_blank\"><div class=\"image2-inset\"><source type=\"image/webp\" /><img alt=\"\" class=\"sizing-normal\" height=\"768\" src=\"https://substackcdn.com/image/fetch/$s_!IbJQ!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F367b3904-31ab-48ac-b783-2ce92d44f6ee_1075x768.png\" width=\"1075\" /><div class=\"image-link-expand\"><div class=\"pencraft pc-display-flex pc-gap-8 pc-reset\"><div class=\"pencraft pc-reset icon-container restack-image\"><svg class=\"lucide lucide-refresh-cw\" fill=\"none\" height=\"20\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" viewBox=\"0 0 24 24\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8\"></path><path d=\"M21 3v5h-5\"></path><path d=\"M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16\"></path><path d=\"M8 16H3v5\"></path></svg></div><div class=\"pencraft pc-reset icon-container view-image\"><svg class=\"lucide lucide-maximize2 lucide-maximize-2\" fill=\"none\" height=\"20\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" viewBox=\"0 0 24 24\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><polyline points=\"15 3 21 3 21 9\"></polyline><polyline points=\"9 21 3 21 3 15\"></polyline><line x1=\"21\" x2=\"14\" y1=\"3\" y2=\"10\"></line><line x1=\"3\" x2=\"10\" y1=\"21\" y2=\"14\"></line></svg></div></div></div></div></a></figure></div><p><strong>Anthropic is throttling usage again - heavily, and seemingly randomly. </strong>Whilst I&#8217;ve bestowed accolades upon Anthropic&#8217;s <a href=\"https://claude.ai/\">Claude</a> model family for its coding prowess, the company&#8217;s model throttling is infuriating. This is why I cancel my Anthropic subscription regularly and use other premium models in its stead, most notably <a href=\"https://chatgpt.com/\">GPT 5</a> (OpenAI) and <a href=\"https://gemini.google.com/app\">Gemini 2.5 Pro</a> (Google, GOOGL). </p><p><strong>My guess is that Anthropic&#8217;s dollar renewal rate is probably in the 50% range</strong>, which is terrible, and why I believe the company will eventually be sold, most likely to Google. </p><p>Developers that pay Anthropic for firehose access no doubt have a better user experience than me, but I&#8217;d prefer to go the opensource route were I to write code 12 hours day, 6 days per week. <a href=\"https://www.deepseek.com/en\">DeepSeek</a> and other opensource providers build models that have outstanding performance.   </p><div class=\"captioned-image-container\"><figure><a class=\"image-link image2 is-viewable-img\" href=\"https://substackcdn.com/image/fetch/$s_!CgGg!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F93a2bbd3-6ea8-4029-8d1e-cb1eb41ae491_1366x768.png\" target=\"_blank\"><div class=\"image2-inset\"><source type=\"image/webp\" /><img alt=\"\" class=\"sizing-normal\" height=\"768\" src=\"https://substackcdn.com/image/fetch/$s_!CgGg!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F93a2bbd3-6ea8-4029-8d1e-cb1eb41ae491_1366x768.png\" width=\"1366\" /><div class=\"image-link-expand\"><div class=\"pencraft pc-display-flex pc-gap-8 pc-reset\"><div class=\"pencraft pc-reset icon-container restack-image\"><svg class=\"lucide lucide-refresh-cw\" fill=\"none\" height=\"20\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" viewBox=\"0 0 24 24\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8\"></path><path d=\"M21 3v5h-5\"></path><path d=\"M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16\"></path><path d=\"M8 16H3v5\"></path></svg></div><div class=\"pencraft pc-reset icon-container view-image\"><svg class=\"lucide lucide-maximize2 lucide-maximize-2\" fill=\"none\" height=\"20\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" viewBox=\"0 0 24 24\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><polyline points=\"15 3 21 3 21 9\"></polyline><polyline points=\"9 21 3 21 3 15\"></polyline><line x1=\"21\" x2=\"14\" y1=\"3\" y2=\"10\"></line><line x1=\"3\" x2=\"10\" y1=\"21\" y2=\"14\"></line></svg></div></div></div></div></a><figcaption class=\"image-caption\"><a href=\"https://dash.tek2dayholdings.com/\">Source: T2D Dash, TradingView, GOOGL</a></figcaption></figure></div><div><hr /></div><p></p>",
+      "image_url": "https://substackcdn.com/image/fetch/$s_!IbJQ!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F367b3904-31ab-48ac-b783-2ce92d44f6ee_1075x768.png",
+      "summary_text": "Anthropic is throttling usage again - heavily, and seemingly randomly.",
+      "category": "ai",
+      "_trending_tags": [
+        "ai",
+        "anthropic"
+      ],
+      "_permalink": "/p/940d3ef5f3/",
+      "_abs_permalink": "https://pulse.tek2dayholdings.com/p/940d3ef5f3/",
+      "_summary_240": "Anthropic is throttling usage again - heavily, and seemingly randomly.",
+      "_thumbnail": "https://pulse.tek2dayholdings.com/p/940d3ef5f3/thumbnail.png"
+    },
+    {
+      "title": "Meta has an AI product problem",
+      "url": "https://techcrunch.com/2025/11/02/meta-has-an-ai-product-problem/",
+      "published_at": "2025-11-02T11:00:00-05:00",
+      "source": "TechCrunch",
+      "summary": "Meta's AI spending is starting to make Wall Street nervous.",
+      "content_html": "",
+      "image_url": "https://techcrunch.com/wp-content/uploads/2024/09/GettyImages-2173579243.jpg?resize=1200,799",
+      "summary_text": "Meta's AI spending is starting to make Wall Street nervous.",
+      "category": "ai",
+      "_trending_tags": [
+        "ai",
+        "meta"
+      ],
+      "_permalink": "/p/37968c6f6c/",
+      "_abs_permalink": "https://pulse.tek2dayholdings.com/p/37968c6f6c/",
+      "_summary_240": "Meta's AI spending is starting to make Wall Street nervous.",
+      "_thumbnail": "https://pulse.tek2dayholdings.com/p/37968c6f6c/thumbnail.png"
+    },
+    {
+      "title": "The new hot job in AI: forward-deployed engineers",
+      "url": "https://www.ft.com/content/91002071-7874-4cb7-9245-08ca0571c408",
+      "published_at": "2025-11-02T01:00:09-04:00",
+      "source": "Financial Times - Technology",
+      "summary": "OpenAI, Anthropic and Cohere have stepped up hiring for specialists to help businesses adopt their AI models",
+      "content_html": "",
+      "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/6c7f13ca-8fa2-44ee-afa4-2d8323b0f949.jpg",
+      "summary_text": "OpenAI, Anthropic and Cohere have stepped up hiring for specialists to help businesses adopt their AI models",
+      "category": "ai",
+      "_trending_tags": [
+        "ai",
+        "anthropic",
+        "openai"
+      ],
+      "_permalink": "/p/ba6d47a6b7/",
+      "_abs_permalink": "https://pulse.tek2dayholdings.com/p/ba6d47a6b7/",
+      "_summary_240": "OpenAI, Anthropic and Cohere have stepped up hiring for specialists to help businesses adopt their AI models",
+      "_thumbnail": "https://pulse.tek2dayholdings.com/p/ba6d47a6b7/thumbnail.png"
+    },
+    {
+      "title": "Moving past speculation: How deterministic CPUs deliver predictable AI performance",
+      "url": "https://venturebeat.com/ai/moving-past-speculation-how-deterministic-cpus-deliver-predictable-ai",
+      "published_at": "2025-11-02T01:00:00-04:00",
+      "source": "VentureBeat",
+      "summary": "For more than three decades, modern CPUs have relied on speculative execution to keep pipelines full. When it emerged in the 1990s, speculation was hailed as a breakthrough \u2014 just as pipelining and superscalar execution had been in earlier decades. Each marked a generational leap in microarchitecture. By predicting the outcomes of branches and memory loads, processors could avoid stalls and keep ...",
+      "content_html": "",
+      "image_url": "",
+      "summary_text": "For more than three decades, modern CPUs have relied on speculative execution to keep pipelines full. When it emerged in the 1990s, speculation was hailed as a breakthrough \u2014 just as pipelining and superscalar execution had been in earlier decades. Each marke...",
+      "category": "ai",
+      "_trending_tags": [
+        "ai"
+      ]
+    },
+    {
+      "title": "From AI to Taylor Swift \u2014 case studies drawing lessons from life",
+      "url": "https://www.ft.com/content/74ab3b1a-30a9-4414-bc88-11af3bc0149c",
+      "published_at": "2025-11-02T00:30:11-04:00",
+      "source": "Financial Times - Technology",
+      "summary": "The most-used business school teaching cases tackle subjects from corporate to quirky",
+      "content_html": "",
+      "image_url": "https://images.ft.com/v3/image/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F06c52b93-c1b5-4cdd-a8c2-cc5cd69db141.jpg?source=next-article&fit=scale-down&quality=highest&width=700&dpr=1",
+      "summary_text": "The most-used business school teaching cases tackle subjects from corporate to quirky",
+      "category": "ai",
+      "_trending_tags": [
+        "ai"
+      ],
+      "_permalink": "/p/4751ed88ca/",
+      "_abs_permalink": "https://pulse.tek2dayholdings.com/p/4751ed88ca/",
+      "_summary_240": "The most-used business school teaching cases tackle subjects from corporate to quirky",
+      "_thumbnail": "https://pulse.tek2dayholdings.com/p/4751ed88ca/thumbnail.png"
+    },
+    {
+      "title": "Large reasoning models almost certainly can think",
+      "url": "https://venturebeat.com/ai/large-reasoning-models-almost-certainly-can-think",
+      "published_at": "2025-11-01T01:00:00-04:00",
+      "source": "VentureBeat",
+      "summary": "Recently, there has been a lot of hullabaloo about the idea that large reasoning models (LRM) are unable to think. This is mostly due to a research article published by Apple, \" The Illusion of Thinking \" Apple argues that LRMs must not be able to think; instead, they just perform pattern-matching. The evidence they provided is that LRMs with chain-of-thought (CoT ) reasoning are unable to carry ...",
+      "content_html": "",
+      "image_url": "",
+      "summary_text": "Recently, there has been a lot of hullabaloo about the idea that large reasoning models (LRM) are unable to think. This is mostly due to a research article published by Apple, \" The Illusion of Thinking \" Apple argues that LRMs must not be able to think; inst...",
+      "category": "ai",
+      "_trending_tags": [
+        "ai",
+        "apple"
+      ]
+    },
+    {
+      "title": "CrowdStrike & NVIDIA\u2019s open source AI gives enterprises the edge against machine-speed attacks",
+      "url": "https://venturebeat.com/security/crowdstrike-nvidia-open-source-ai-soc-machine-speed-attacks",
+      "published_at": "2025-10-31T21:10:00-04:00",
+      "source": "VentureBeat",
+      "summary": "Every SOC leader knows the feeling: drowning in alerts, blind to the real threat, stuck playing defense in a war waged at the speed of AI. Now CrowdStrike and NVIDIA are flipping the script. Armed with autonomous agents powered by Charlotte AI and NVIDIA Nemotron models, security teams aren't just reacting; they're striking back at attackers before their next move. Welcome to cybersecurity's new ...",
+      "content_html": "",
+      "image_url": "",
+      "summary_text": "Every SOC leader knows the feeling: drowning in alerts, blind to the real threat, stuck playing defense in a war waged at the speed of AI. Now CrowdStrike and NVIDIA are flipping the script. Armed with autonomous agents powered by Charlotte AI and NVIDIA Nemo...",
+      "category": "ai",
+      "_trending_tags": [
+        "agent",
+        "ai",
+        "nvidia"
+      ]
+    },
+    {
+      "title": "Two Windows vulnerabilities, one a 0-day, are under active exploitation",
+      "url": "https://arstechnica.com/security/2025/10/two-windows-vulnerabilities-one-a-0-day-are-under-active-exploitation/",
+      "published_at": "2025-10-31T17:03:56-04:00",
+      "source": "Ars Technica",
+      "summary": "Both vulnerabilities are being exploited in wide-scale operations.",
+      "content_html": "<p>Two Windows vulnerabilities\u2014one a zero-day that has been known to attackers since 2017 and the other a critical flaw that Microsoft initially tried and failed to patch recently\u2014are under active exploitation in widespread attacks targeting a swath of the Internet, researchers say.</p>\n<p>The zero-day\u00a0went undiscovered until <a href=\"https://www.trendmicro.com/en_us/research/25/c/windows-shortcut-zero-day-exploit.html\">March</a>, when security firm Trend Micro said it had been under active exploitation since 2017, by as many as 11 separate advanced persistent threats (APTs). These APT groups, often with ties to nation-states, relentlessly attack specific individuals or groups of interest. Trend Micro went on to say that the groups were exploiting the vulnerability, then tracked as ZDI-CAN-25373, to install various known post-exploitation payloads on infrastructure located in nearly 60 countries, with the US, Canada, Russia, and Korea being the most common.</p>\n<h2>A large-scale, coordinated operation</h2>\n<p>Seven months later, Microsoft still hasn\u2019t patched the vulnerability, which stems from a bug in the <a href=\"https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-shllink/16cb4ca1-9339-4d0c-a68d-bf1d6cc0f943\">Windows Shortcut</a> binary format. The Windows component makes opening apps or accessing files easier and faster by allowing a single binary file to invoke them without having to navigate to their locations. In recent months, the ZDI-CAN-25373 tracking designation has been changed to CVE-2025-9491.</p><p><a href=\"https://arstechnica.com/security/2025/10/two-windows-vulnerabilities-one-a-0-day-are-under-active-exploitation/\">Read full article</a></p>\n<p><a href=\"https://arstechnica.com/security/2025/10/two-windows-vulnerabilities-one-a-0-day-are-under-active-exploitation/#comments\">Comments</a></p>",
+      "image_url": "https://cdn.arstechnica.net/wp-content/uploads/2022/10/windows-malware-1024x648.jpg",
+      "summary_text": "Both vulnerabilities are being exploited in wide-scale operations.",
+      "category": "fintech"
+    },
+    {
+      "title": "US stocks ride AI hype and trade truce to 6-month winning streak",
+      "url": "https://www.ft.com/content/b78abb32-223a-45b2-a999-133e4273aa52",
+      "published_at": "2025-10-31T16:00:14-04:00",
+      "source": "Financial Times - Technology",
+      "summary": "S&P 500 and Nasdaq post longest runs of monthly gains in years",
+      "content_html": "",
+      "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/5a739b0e-3279-4307-8f5f-07c9e3f0771e.jpg",
+      "summary_text": "S&P 500 and Nasdaq post longest runs of monthly gains in years",
+      "category": "ai",
+      "_trending_tags": [
+        "ai"
+      ]
+    },
+    {
+      "title": "Big Tech\u2019s market dominance is becoming ever more extreme",
+      "url": "https://www.ft.com/content/ae4d7961-cf59-4369-8e64-8a9c9da956d1",
+      "published_at": "2025-10-31T15:05:14-04:00",
+      "source": "Financial Times - Technology",
+      "summary": "In a week when Nvidia\u2019s value reached $5tn, investors in even the broadest index of global companies are now heavily exposed to the AI boom",
+      "content_html": "",
+      "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/ef246440-3c83-46cd-9eef-73847e285827.jpg",
+      "summary_text": "In a week when Nvidia\u2019s value reached $5tn, investors in even the broadest index of global companies are now heavily exposed to the AI boom",
+      "category": "ai",
+      "_trending_tags": [
+        "ai",
+        "nvidia"
+      ]
+    },
+    {
+      "title": "Forging ahead: the challenge of AI expenses fakes",
+      "url": "https://www.ft.com/content/8df6fc61-389a-4951-a996-8df60c99a9fd",
+      "published_at": "2025-10-31T14:46:43-04:00",
+      "source": "Financial Times - Technology",
+      "summary": "Ease of creating counterfeit documents poses risks to financial trust",
+      "content_html": "",
+      "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/55452945-17b0-4885-aaf3-6919fa419430.jpg",
+      "summary_text": "Ease of creating counterfeit documents poses risks to financial trust",
+      "category": "ai",
+      "_trending_tags": [
+        "ai"
+      ]
+    },
+    {
+      "title": "Meta Claims Downloaded Porn at Center of AI Lawsuit Was for \u2018Personal Use\u2019",
+      "url": "https://www.wired.com/story/meta-claims-downloaded-porn-at-center-of-ai-lawsuit-was-for-personal-use/",
+      "published_at": "2025-10-31T14:34:14-04:00",
+      "source": "Wired",
+      "summary": "In a motion to dismiss filed earlier this week, Meta denied claims that employees had downloaded pornography from Strike 3 Holdings to train its artificial intelligence models.",
+      "content_html": "",
+      "image_url": "https://media.wired.com/photos/6904c9a2f67493a12f9cae33/master/pass/biz-meta-ai-porn-645731247.jpg",
+      "summary_text": "In a motion to dismiss filed earlier this week, Meta denied claims that employees had downloaded pornography from Strike 3 Holdings to train its artificial intelligence models.",
+      "category": "ai",
+      "_trending_tags": [
+        "ai",
+        "meta"
+      ]
+    },
+    {
+      "title": "The Man Who Invented AGI",
+      "url": "https://www.wired.com/story/the-man-who-invented-agi/",
+      "published_at": "2025-10-31T14:08:03-04:00",
+      "source": "Wired",
+      "summary": "Everyone is obsessed with artificial general intelligence\u2014the stage when AI can match all feats of human cognition. The guy who named it saw it as a threat.",
+      "content_html": "",
+      "image_url": "https://media.wired.com/photos/6903a7a87e68b5a0905771d7/master/pass/Backchannel-AGI-Origins-Business-1945031205.jpg",
+      "summary_text": "Everyone is obsessed with artificial general intelligence\u2014the stage when AI can match all feats of human cognition. The guy who named it saw it as a threat.",
+      "category": "ai",
+      "_trending_tags": [
+        "ai"
+      ]
+    },
+    {
+      "title": "The 5 generative AI security threats organizations need to know about",
+      "url": "https://www.microsoft.com/en-us/security/blog/2025/10/30/the-5-generative-ai-security-threats-you-need-to-know-about-detailed-in-new-e-book/",
+      "published_at": "2025-10-31T13:14:14-04:00",
+      "source": "Microsoft News",
+      "summary": "The post The 5 generative AI security threats organizations need to know about appeared first on Source .",
+      "content_html": "<article class=\"mssrc-posts font-- has--theme\" id=\"single-22707\">\n\t<div class=\"acf-innerblocks-container\"></div>\t\t\t<section class=\"post-tags\">\n\t\t\t\t<div class=\"post-tags__content wp-block-columns\">\n\t\t\t\t\t<div class=\"post-tags__header wp-block-column flex-basis-25 has-text-align-right\">\n\t\t\t\t\t\t<h4 class=\"sr-only\">Tags: </h4>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"post-tags__body wp-block-column flex-basis-60\">\n\t\t\t\t\t\t<ul class=\"post-tags__list\"><li class=\"post-tags__item\"><a class=\"kicker inline-block post__meta--tags\" href=\"https://news.microsoft.com/source/tag/security/\">Security</a></li></ul>\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</section>\n\t\t\t</article><p>The post <a href=\"https://www.microsoft.com/en-us/security/blog/2025/10/30/the-5-generative-ai-security-threats-you-need-to-know-about-detailed-in-new-e-book/\">The 5 generative AI security threats organizations need to know about</a> appeared first on <a href=\"https://news.microsoft.com/source\">Source</a>.</p>",
+      "image_url": "https://www.microsoft.com/en-us/security/blog/wp-content/uploads/2025/10/Security-ScannedImagery-Blue-04-Getty-scaled.jpg",
+      "summary_text": "The post The 5 generative AI security threats organizations need to know about appeared first on Source .",
+      "category": "ai",
+      "_trending_tags": [
+        "ai"
+      ]
+    },
+    {
+      "title": "Why AI is a double-edged sword for retailers",
+      "url": "https://www.ft.com/content/350640cb-7a59-4945-8d45-a8ff2def4ccb",
+      "published_at": "2025-10-31T12:21:12-04:00",
+      "source": "Financial Times - Technology",
+      "summary": "The potential pay-offs of agentic commerce are huge but it also means giving away valuable data",
+      "content_html": "",
+      "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/3937d45b-d853-4011-aa79-175fe1784cdb.jpg",
+      "summary_text": "The potential pay-offs of agentic commerce are huge but it also means giving away valuable data",
+      "category": "ai",
+      "_trending_tags": [
+        "agent",
+        "ai"
+      ]
+    },
+    {
+      "title": "A.I. Spending Is Accelerating Among Tech\u2019s Biggest Companies",
+      "url": "https://www.nytimes.com/2025/10/31/technology/ai-spending-accelerating.html",
+      "published_at": "2025-10-31T10:25:19-04:00",
+      "source": "The New York Times - Technology",
+      "summary": "Despite the risk of a bubble, Google, Meta, Microsoft and Amazon plan to spend billions more on artificial intelligence than they already do.",
+      "content_html": "Google is among several big technology companies increasing their spending on data centers.",
+      "image_url": "https://static01.nyt.com/images/2025/10/31/multimedia/31biz-ai-boom-sub-gwcl/31biz-ai-boom-sub-gwcl-mediumSquareAt3X-v5.jpg",
+      "summary_text": "Despite the risk of a bubble, Google, Meta, Microsoft and Amazon plan to spend billions more on artificial intelligence than they already do.",
+      "category": "ai",
+      "_trending_tags": [
+        "ai",
+        "amazon",
+        "google",
+        "meta",
+        "microsoft"
+      ]
+    },
+    {
+      "title": "Kenya Private Sector Alliance partners with Microsoft to launch national platform for AI skilling",
+      "url": "https://news.microsoft.com/source/emea/features/kepsa-launches-the-kenya-ai-skilling-alliance-kaisa-a-national-platform-to-accelerate-inclusive-and-responsible-ai-adoption/",
+      "published_at": "2025-10-31T10:03:18-04:00",
+      "source": "Microsoft News",
+      "summary": "The post Kenya Private Sector Alliance partners with Microsoft to launch national platform for AI skilling appeared first on Source .",
+      "content_html": "<article class=\"mssrc-posts font-- has--theme\" id=\"single-22698\">\n\t<div class=\"acf-innerblocks-container\"></div>\t\t\t<section class=\"post-tags\">\n\t\t\t\t<div class=\"post-tags__content wp-block-columns\">\n\t\t\t\t\t<div class=\"post-tags__header wp-block-column flex-basis-25 has-text-align-right\">\n\t\t\t\t\t\t<h4 class=\"sr-only\">Tags: </h4>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"post-tags__body wp-block-column flex-basis-60\">\n\t\t\t\t\t\t<ul class=\"post-tags__list\"><li class=\"post-tags__item\"><a class=\"kicker inline-block post__meta--tags\" href=\"https://news.microsoft.com/source/tag/ai/\">AI</a></li></ul>\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</section>\n\t\t\t</article><p>The post <a href=\"https://news.microsoft.com/source/emea/features/kepsa-launches-the-kenya-ai-skilling-alliance-kaisa-a-national-platform-to-accelerate-inclusive-and-responsible-ai-adoption/\">Kenya Private Sector Alliance partners with Microsoft to launch national platform for AI skilling</a> appeared first on <a href=\"https://news.microsoft.com/source\">Source</a>.</p>",
+      "image_url": "https://news.microsoft.com/source/emea/wp-content/uploads/2025/10/Kaisa_post-Source.jpg",
+      "summary_text": "The post Kenya Private Sector Alliance partners with Microsoft to launch national platform for AI skilling appeared first on Source .",
+      "category": "ai",
+      "_trending_tags": [
+        "ai",
+        "microsoft"
+      ]
+    },
+    {
+      "title": "Korea Joins AI Industrial Revolution: NVIDIA CEO Jensen Huang Unveils Historic Partnership at APEC Summit",
+      "url": "https://blogs.nvidia.com/blog/korea-ai-apec-ceo-summit/",
+      "published_at": "2025-10-31T10:00:36-04:00",
+      "source": "NVIDIA News",
+      "summary": "Amidst Gyeongju, South Korea\u2019s ancient temples and modern skylines, Jensen Huang hit the stage at the APEC Summit with historic news: South Korea is leaping into the future with sovereign AI supported by more than a quarter-million NVIDIA GPUs. \u201cIt\u2019s vital that we build the ecosystem, not just the AI infrastructure, of Korea,\u201d he said. Read Article",
+      "content_html": "",
+      "image_url": "https://s3.amazonaws.com/cms.ipressroom.com/219/files/202510/6904c1403d6332ae969c2591_25_APEC-Summit-Korea_JHH_1280x680%402x-842x450/25_APEC-Summit-Korea_JHH_1280x680%402x-842x450_thmb.jpg",
+      "summary_text": "Amidst Gyeongju, South Korea\u2019s ancient temples and modern skylines, Jensen Huang hit the stage at the APEC Summit with historic news: South Korea is leaping into the future with sovereign AI supported by more than a quarter-million NVIDIA GPUs. \u201cIt\u2019s vital th...",
+      "category": "ai",
+      "_trending_tags": [
+        "ai",
+        "gpu",
+        "nvidia"
+      ]
+    },
+    {
+      "title": "Amazon shares jump 10% as AI powers fastest cloud growth in years",
+      "url": "https://www.ft.com/content/71e29546-661e-4c9f-b401-0428585fbc42",
+      "published_at": "2025-10-31T09:33:39-04:00",
+      "source": "Financial Times - Technology",
+      "summary": "Ecommerce giant boosts capital expenditure as it builds more data centres",
+      "content_html": "",
+      "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/a4133c6d-cc7c-4cb4-843e-41269544fbb0.jpg",
+      "summary_text": "Ecommerce giant boosts capital expenditure as it builds more data centres",
+      "category": "software",
+      "_trending_tags": [
+        "ai",
+        "amazon",
+        "cloud"
+      ]
+    },
+    {
+      "title": "NVIDIA, South Korea Government and Industrial Giants Build AI Infrastructure and Ecosystem to Fuel Korea Innovation, Industries and Jobs",
+      "url": "https://nvidianews.nvidia.com/news/south-korea-ai-infrastructure",
+      "published_at": "2025-10-31T02:00:00-04:00",
+      "source": "NVIDIA News",
+      "summary": "NVIDIA today announced that it is working with South Korea to expand the nation\u2019s AI infrastructure with over a quarter-million NVIDIA GPUs across its sovereign clouds and AI factories.",
+      "content_html": "",
+      "image_url": "https://s3.amazonaws.com/cms.ipressroom.com/219/files/202510/6903a8253d63323be5cd9ede_korea-ai-infrastructure/korea-ai-infrastructure_thmb.jpg",
+      "summary_text": "NVIDIA today announced that it is working with South Korea to expand the nation\u2019s AI infrastructure with over a quarter-million NVIDIA GPUs across its sovereign clouds and AI factories.",
+      "category": "ai",
+      "_trending_tags": [
+        "ai",
+        "cloud",
+        "gpu",
+        "nvidia"
+      ]
+    },
+    {
+      "title": "NVIDIA and Hyundai Motor Group Team on AI Factory to Power AI-Driven Mobility Solutions",
+      "url": "https://nvidianews.nvidia.com/news/hyundai-motor-group-ai-factory",
+      "published_at": "2025-10-31T02:00:00-04:00",
+      "source": "NVIDIA News",
+      "summary": "Leading Global Automaker to Deploy NVIDIA Blackwell AI Infrastructure Across Manufacturing, Robotics and Autonomous DrivingNews Summary: Hyundai Motor Group and NVIDIA will collaborate with ...",
+      "content_html": "",
+      "image_url": "https://s3.amazonaws.com/cms.ipressroom.com/219/files/202510/6903a82c3d63323c42cd9e2f_nvidia-and-hyundai-motor-group/nvidia-and-hyundai-motor-group_thmb.jpg",
+      "summary_text": "Leading Global Automaker to Deploy NVIDIA Blackwell AI Infrastructure Across Manufacturing, Robotics and Autonomous DrivingNews Summary: Hyundai Motor Group and NVIDIA will collaborate with ...",
+      "category": "ai",
+      "_trending_tags": [
+        "ai",
+        "nvidia"
+      ]
+    },
+    {
+      "title": "NVIDIA and Samsung Build AI Factory to Transform Global Intelligent Manufacturing",
+      "url": "https://nvidianews.nvidia.com/news/samsung-ai-factory",
+      "published_at": "2025-10-31T02:00:00-04:00",
+      "source": "NVIDIA News",
+      "summary": "NVIDIA today announced plans with Samsung Electronics to build a new AI factory, representing a new era where intelligent computing and chip manufacturing converge.",
+      "content_html": "",
+      "image_url": "https://s3.amazonaws.com/cms.ipressroom.com/219/files/202510/6903a8203d63323c47cd9fbd_nvidia-and-samsung/nvidia-and-samsung_thmb.png",
+      "summary_text": "NVIDIA today announced plans with Samsung Electronics to build a new AI factory, representing a new era where intelligent computing and chip manufacturing converge.",
+      "category": "ai",
+      "_trending_tags": [
+        "ai",
+        "nvidia"
+      ]
+    },
+    {
+      "title": "NVIDIA and SK Group Build AI Factory to Drive Korea\u2019s Manufacturing and Digital Transformation",
+      "url": "https://nvidianews.nvidia.com/news/sk-group-ai-factory",
+      "published_at": "2025-10-31T02:00:00-04:00",
+      "source": "NVIDIA News",
+      "summary": "NVIDIA today announced that it is working with SK Group to build an AI factory to advance semiconductor research, development and production, as well as cloud infrastructure to support digital twin and AI agent development.",
+      "content_html": "",
+      "image_url": "https://s3.amazonaws.com/cms.ipressroom.com/219/files/202510/69044a333d6332617ec9d8ab_nvidia-and-sk-group/nvidia-and-sk-group_thmb.png",
+      "summary_text": "NVIDIA today announced that it is working with SK Group to build an AI factory to advance semiconductor research, development and production, as well as cloud infrastructure to support digital twin and AI agent development.",
+      "category": "ai",
+      "_trending_tags": [
+        "agent",
+        "ai",
+        "cloud",
+        "nvidia"
+      ]
+    },
+    {
+      "title": "UK regulator threatens tech giants with algorithm audits to protect children",
+      "url": "https://www.ft.com/content/b45b35a1-d93b-44e7-ac4b-139bb20faab7",
+      "published_at": "2025-10-31T01:00:24-04:00",
+      "source": "Financial Times - Technology",
+      "summary": "Ofcom chief Melanie Dawes reveals she held meetings with US AI firms over Online Safety Act",
+      "content_html": "",
+      "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/9c54c105-7022-4739-856d-961e5f798c7b.jpg",
+      "summary_text": "Ofcom chief Melanie Dawes reveals she held meetings with US AI firms over Online Safety Act",
+      "category": "ai",
+      "_trending_tags": [
+        "ai"
+      ]
+    },
+    {
+      "title": "Inside Celosphere 2025: Why there\u2019s no \u2018enterprise AI\u2019 without process intelligence",
+      "url": "https://venturebeat.com/ai/inside-celosphere-2025-why-theres-no-enterprise-ai-without-process",
+      "published_at": "2025-10-31T00:00:00-04:00",
+      "source": "VentureBeat",
+      "summary": "Presented by Celonis AI adoption is accelerating, but results often lag expectations. And enterprise leaders are under pressure to prove measurable ROI from the AI solutions \u2014 especially as the use of autonomous agents rises and global tariffs disrupt supply chains. The issue isn\u2019t the AI itself, says Alex Rinke, co-founder and co-CEO of Celonis, a global leader in process intelligence. \u201cTo succe...",
+      "content_html": "",
+      "image_url": "",
+      "summary_text": "Presented by Celonis AI adoption is accelerating, but results often lag expectations. And enterprise leaders are under pressure to prove measurable ROI from the AI solutions \u2014 especially as the use of autonomous agents rises and global tariffs disrupt supply ...",
+      "category": "ai",
+      "_trending_tags": [
+        "agent",
+        "ai"
+      ]
+    },
+    {
+      "title": "WIRED Roundup: AI Psychosis, Missing FTC Files, and Google Bedbugs",
+      "url": "https://www.wired.com/story/uncanny-valley-podcast-wired-roundup-ai-psychosis-ftc-files-google-bedbugs/",
+      "published_at": "2025-10-30T17:27:08-04:00",
+      "source": "Wired",
+      "summary": "In this episode of Uncanny Valley, we run through the top stories of the week and look closely at people\u2019s complaints to the FTC alleging that ChatGPT led them or loved ones into AI psychosis.",
+      "content_html": "",
+      "image_url": "https://media.wired.com/photos/68fa99670f48aeee5d43d09b/master/pass/Uncanny-Valley-AI-Psychosis-Business-1491212583.jpg",
+      "summary_text": "In this episode of Uncanny Valley, we run through the top stories of the week and look closely at people\u2019s complaints to the FTC alleging that ChatGPT led them or loved ones into AI psychosis.",
+      "category": "ai",
+      "_trending_tags": [
+        "ai",
+        "chatgpt",
+        "google",
+        "gpt"
+      ]
+    },
+    {
+      "title": "Meet Aardvark, OpenAI\u2019s security agent for code analysis and patching",
+      "url": "https://venturebeat.com/security/meet-aardvark-openais-in-house-security-agent-for-code-analysis-and-patching",
+      "published_at": "2025-10-30T17:07:00-04:00",
+      "source": "VentureBeat",
+      "summary": "OpenAI has introduced Aardvark , a GPT-5-powered autonomous security researcher agent now available in private beta. Designed to emulate how human experts identify and resolve software vulnerabilities, Aardvark offers a multi-stage, LLM-driven approach for continuous, 24 /7/365 code analysis , exploit validation , and patch generation ! Positioned as a scalable defense tool for modern software de...",
+      "content_html": "",
+      "image_url": "",
+      "summary_text": "OpenAI has introduced Aardvark , a GPT-5-powered autonomous security researcher agent now available in private beta. Designed to emulate how human experts identify and resolve software vulnerabilities, Aardvark offers a multi-stage, LLM-driven approach for co...",
+      "category": "ai",
+      "_trending_tags": [
+        "agent",
+        "ai",
+        "gpt",
+        "llm",
+        "openai"
+      ]
+    },
+    {
+      "title": "We\u2019re taking the next big step with Researcher. With Computer Use, it can securely browse the open and gated web to find hard-to-locate information\u2014even across hundreds of sites\u2014and handle multi-step tasks to uncover insights, take action and create richer reports.",
+      "url": "https://www.linkedin.com/posts/satyanadella_were-taking-the-next-big-step-with-researcher-activity-7389713560110743552-1TSX",
+      "published_at": "2025-10-30T15:39:35-04:00",
+      "source": "Microsoft News",
+      "summary": "The post We\u2019re taking the next big step with Researcher. With Computer Use, it can securely browse the open and gated web to find hard-to-locate information\u2014even across hundreds of sites\u2014and handle multi-step tasks to uncover insights, take action and create richer reports. appeared first on Source .",
+      "content_html": "<article class=\"mssrc-posts font-- has--theme\" id=\"single-22692\">\n\t<div class=\"acf-innerblocks-container\"></div>\t\t\t<section class=\"post-tags\">\n\t\t\t\t<div class=\"post-tags__content wp-block-columns\">\n\t\t\t\t\t<div class=\"post-tags__header wp-block-column flex-basis-25 has-text-align-right\">\n\t\t\t\t\t\t<h4 class=\"sr-only\">Tags: </h4>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"post-tags__body wp-block-column flex-basis-60\">\n\t\t\t\t\t\t<ul class=\"post-tags__list\"><li class=\"post-tags__item\"><a class=\"kicker inline-block post__meta--tags\" href=\"https://news.microsoft.com/source/tag/linkedin-post/\">LinkedIn Post</a></li></ul>\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</section>\n\t\t\t</article><p>The post <a href=\"https://www.linkedin.com/posts/satyanadella_were-taking-the-next-big-step-with-researcher-activity-7389713560110743552-1TSX\">We&#8217;re taking the next big step with Researcher. With Computer Use, it can securely browse the open and gated web to find hard-to-locate information\u2014even across hundreds of sites\u2014and handle multi-step tasks to uncover insights, take action and create richer reports.</a> appeared first on <a href=\"https://news.microsoft.com/source\">Source</a>.</p>",
+      "image_url": "https://dms.licdn.com/playlist/vid/v2/D5605AQF3Qxz33xEMYQ/thumbnail-with-play-button-overlay-high/B56Zo2JQKcJ4DQ-/0/1761844990871?e=2147483647&v=beta&t=yAE3uIB_ZKHiVa-cTEpOvcx6FRNdkao5ftYYePkSHN8",
+      "summary_text": "The post We\u2019re taking the next big step with Researcher. With Computer Use, it can securely browse the open and gated web to find hard-to-locate information\u2014even across hundreds of sites\u2014and handle multi-step tasks to uncover insights, take action and create ...",
+      "category": "fintech"
+    },
+    {
+      "title": "In the AI boom, not all capex is created equal",
+      "url": "https://www.ft.com/content/53958078-be2e-43fc-ba70-13a68b5fddf1",
+      "published_at": "2025-10-30T13:37:05-04:00",
+      "source": "Financial Times - Technology",
+      "summary": "There are big differences in the level of risk and likely returns of Big Tech\u2019s spending",
+      "content_html": "",
+      "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/ce881257-dc62-4706-a65f-e1359cc00c71.jpg",
+      "summary_text": "There are big differences in the level of risk and likely returns of Big Tech\u2019s spending",
+      "category": "ai",
+      "_trending_tags": [
+        "ai"
+      ]
+    },
+    {
+      "title": "Claude Code updates: When to use Haiku 4.5, Claude Code on web, and more.",
+      "url": "https://www.youtube.com/watch?v=CBneTpXF1CQ",
+      "published_at": "2025-10-30T13:03:35-04:00",
+      "source": "Anthropic YouTube",
+      "summary": "We're covering everything new with Claude for developers, including the launch of Claude Code for the Web, Claude Haiku 4.5, and more. Join the Claude Developer Discord - https://anthropic.com/discord Try Claude Code on the Web - https://claude.ai/code 00:02 Claude Code on the Web 00:42 Claude Code on the Web demo 01:26 Claude Haiku 4.5 02:10 When to use Haiku 4.5 02:51 Claude Code on the Web fol...",
+      "content_html": "",
+      "image_url": "https://i.ytimg.com/vi/CBneTpXF1CQ/maxresdefault.jpg",
+      "summary_text": "We're covering everything new with Claude for developers, including the launch of Claude Code for the Web, Claude Haiku 4.5, and more. Join the Claude Developer Discord - https://anthropic.com/discord Try Claude Code on the Web - https://claude.ai/code 00:02 ...",
+      "category": "ai",
+      "_trending_tags": [
+        "ai",
+        "anthropic",
+        "claude"
+      ]
+    },
+    {
+      "title": "After teen death lawsuits, Character.AI will restrict chats for under-18 users",
+      "url": "https://arstechnica.com/information-technology/2025/10/after-teen-death-lawsuits-character-ai-will-restrict-chats-for-under-18-users/",
+      "published_at": "2025-10-30T11:54:18-04:00",
+      "source": "Ars Technica",
+      "summary": "AI companion app faces legal and regulatory pressure over child safety concerns.",
+      "content_html": "<p>On Wednesday, Character.AI <a href=\"https://blog.character.ai/u18-chat-announcement/\">announced</a> it will bar anyone under the age of 18 from open-ended chats with its AI characters starting on November 25, implementing one of the most restrictive age policies yet among AI chatbot platforms. The company faces <a href=\"https://arstechnica.com/tech-policy/2024/10/chatbots-posed-as-therapist-and-adult-lover-in-teen-suicide-case-lawsuit-says/\">multiple lawsuits</a> from families who say its chatbots contributed to teenager deaths by suicide.</p>\n<p>Over the next month, Character.AI says it will ramp down chatbot use among minors by identifying them and placing a two-hour daily limit on their chatbot access. The company plans to use technology to detect underage users based on conversations and interactions on the platform, as well as information from connected social media accounts. On November 25, those users will no longer be able to create or talk to chatbots, though they can still read previous conversations. The company said it is working to build alternative features for users under the age of 18, such as the ability to create videos, stories, and streams with AI characters.</p>\n<p>Character.AI CEO Karandeep Anand <a href=\"https://www.nytimes.com/2025/10/29/technology/characterai-underage-users.html\">told</a> The New York Times that the company wants to set an example for the industry. \u201cWe\u2019re making a very bold step to say for teen users, chatbots are not the way for entertainment, but there are much better ways to serve them,\u201d Anand said in the interview. The company also plans to establish an AI safety lab.</p><p><a href=\"https://arstechnica.com/information-technology/2025/10/after-teen-death-lawsuits-character-ai-will-restrict-chats-for-under-18-users/\">Read full article</a></p>\n<p><a href=\"https://arstechnica.com/information-technology/2025/10/after-teen-death-lawsuits-character-ai-will-restrict-chats-for-under-18-users/#comments\">Comments</a></p>",
+      "image_url": "https://cdn.arstechnica.net/wp-content/uploads/2025/03/robot_no_sign_3-1152x648.jpg",
+      "summary_text": "AI companion app faces legal and regulatory pressure over child safety concerns.",
+      "category": "ai",
+      "_trending_tags": [
+        "ai"
+      ]
+    },
+    {
+      "title": "AI-Powered Mobile Clinics Deliver Breast Cancer Screening to India\u2019s Rural Communities",
+      "url": "https://blogs.nvidia.com/blog/medcognetics-ai-powered-breast-cancer-screening-india/",
+      "published_at": "2025-10-30T11:00:22-04:00",
+      "source": "NVIDIA News",
+      "summary": "An unassuming van driving around rural India uses powerful AI technology that\u2019s enabling low-cost, high-quality breast cancer screenings for thousands of women. Run by the nonprofit Health Within Reach Foundation, the Women Cancer Screening Van runs an AI solution by MedCognetics, a Dallas, Texas-based company that\u2019s part of the NVIDIA Inception program for startups. The Read Article",
+      "content_html": "",
+      "image_url": "https://s3.amazonaws.com/cms.ipressroom.com/219/files/202510/69037d883d63327881f57713_medcog-main-feature-resized-842x450/medcog-main-feature-resized-842x450_thmb.jpg",
+      "summary_text": "An unassuming van driving around rural India uses powerful AI technology that\u2019s enabling low-cost, high-quality breast cancer screenings for thousands of women. Run by the nonprofit Health Within Reach Foundation, the Women Cancer Screening Van runs an AI sol...",
+      "category": "ai",
+      "_trending_tags": [
+        "ai"
+      ]
+    },
+    {
+      "title": "It\u2019s time to build the intention economy online",
+      "url": "https://www.ft.com/content/614475fe-6b65-4f00-bf0c-16fa6e7e74aa",
+      "published_at": "2025-10-30T10:50:53-04:00",
+      "source": "Financial Times - Technology",
+      "summary": "Tim Berners-Lee believes AI offers a chance to reset to a system that serves individuals\u2019 needs and privacy",
+      "content_html": "",
+      "image_url": "https://images.ft.com/v3/image/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Fbf5a172d-d843-4628-88cc-a733443c3237.jpg?source=next-article&fit=scale-down&quality=highest&width=700&dpr=1",
+      "summary_text": "Tim Berners-Lee believes AI offers a chance to reset to a system that serves individuals\u2019 needs and privacy",
+      "category": "ai",
+      "_trending_tags": [
+        "ai"
+      ]
+    },
+    {
+      "title": "Expanding Stargate to Michigan",
+      "url": "https://openai.com/index/expanding-stargate-to-michigan",
+      "published_at": "2025-10-30T09:30:00-04:00",
+      "source": "OpenAI News",
+      "summary": "OpenAI is expanding Stargate to Michigan with a new one-gigawatt campus that strengthens America\u2019s AI infrastructure. The project will create jobs, drive investment, and support economic growth across the Midwest.",
+      "content_html": "",
+      "image_url": "",
+      "summary_text": "OpenAI is expanding Stargate to Michigan with a new one-gigawatt campus that strengthens America\u2019s AI infrastructure. The project will create jobs, drive investment, and support economic growth across the Midwest.",
+      "category": "ai",
+      "_trending_tags": [
+        "ai",
+        "openai"
+      ]
+    },
+    {
+      "title": "Join the Resistance: \u2018ARC Raiders\u2019 Launches in the Cloud",
+      "url": "https://blogs.nvidia.com/blog/geforce-now-thursday-arc-raiders/",
+      "published_at": "2025-10-30T09:00:02-04:00",
+      "source": "NVIDIA News",
+      "summary": "Get ready, raiders \u2014 the wait is over. ARC Raiders is dropping onto GeForce NOW and bringing the fight from orbit to the screen. To celebrate the launch, gamers can score ARC Raiders for free with the purchase of a 12-month Ultimate membership \u2014 a bundle packed with everything needed to jump into the resistance. Read Article",
+      "content_html": "",
+      "image_url": "https://s3.amazonaws.com/cms.ipressroom.com/219/files/202510/690361903d6332ef18a550c0_gfn-thursday-10-30-nv-blog-1280x680-branding-842x450/gfn-thursday-10-30-nv-blog-1280x680-branding-842x450_thmb.jpg",
+      "summary_text": "Get ready, raiders \u2014 the wait is over. ARC Raiders is dropping onto GeForce NOW and bringing the fight from orbit to the screen. To celebrate the launch, gamers can score ARC Raiders for free with the purchase of a 12-month Ultimate membership \u2014 a bundle pack...",
+      "category": "software",
+      "_trending_tags": [
+        "ai",
+        "cloud"
+      ]
+    },
+    {
+      "title": "Introducing Aardvark: OpenAI\u2019s agentic security researcher",
+      "url": "https://openai.com/index/introducing-aardvark",
+      "published_at": "2025-10-30T07:00:00-04:00",
+      "source": "OpenAI News",
+      "summary": "OpenAI introduces Aardvark, an AI-powered security researcher that autonomously finds, validates, and helps fix software vulnerabilities at scale. The system is in private beta\u2014sign up to join early testing.",
+      "content_html": "",
+      "image_url": "",
+      "summary_text": "OpenAI introduces Aardvark, an AI-powered security researcher that autonomously finds, validates, and helps fix software vulnerabilities at scale. The system is in private beta\u2014sign up to join early testing.",
+      "category": "ai",
+      "_trending_tags": [
+        "agent",
+        "ai",
+        "openai"
+      ]
+    },
+    {
+      "title": "A Fight Over Big Tech\u2019s Emissions Has the Greenhouse Gas Protocol Caught in the Crossfire",
+      "url": "https://www.wired.com/story/greenhouse-gas-protocol-caught-in-big-techs-friendly-fire/",
+      "published_at": "2025-10-30T06:31:37-04:00",
+      "source": "Wired",
+      "summary": "An ideological war over how tech giants can account for AI data center emissions has bled into the international arena.",
+      "content_html": "",
+      "image_url": "https://media.wired.com/photos/68e68926238fbbab3f2aeb31/master/pass/100825_Tech-Data-Center-Emissions.jpg",
+      "summary_text": "An ideological war over how tech giants can account for AI data center emissions has bled into the international arena.",
+      "category": "ai",
+      "_trending_tags": [
+        "ai"
+      ]
+    },
+    {
+      "title": "10YR Marches Higher",
+      "url": "https://newsletter.tek2dayholdings.com/p/10yr-marches-higher",
+      "published_at": "2025-10-30T01:58:38-04:00",
+      "source": "TEK2day Newsletter",
+      "summary": "I\u2019ve disagreed with everything the Fed has done since 2008, but especially since 2020. The massive covid QE stimulus program was a bad idea from the start, the weak QT effort was a joke, the BTFP bailout that subsidized all bank deposits was awful policy.",
+      "content_html": "<div class=\"captioned-image-container\"><figure><a class=\"image-link image2 is-viewable-img\" href=\"https://substackcdn.com/image/fetch/$s_!7E2A!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F75802aa3-f341-448f-96c3-0526f8c66258_1075x768.png\" target=\"_blank\"><div class=\"image2-inset\"><source type=\"image/webp\" /><img alt=\"\" class=\"sizing-normal\" height=\"768\" src=\"https://substackcdn.com/image/fetch/$s_!7E2A!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F75802aa3-f341-448f-96c3-0526f8c66258_1075x768.png\" width=\"1075\" /><div class=\"image-link-expand\"><div class=\"pencraft pc-display-flex pc-gap-8 pc-reset\"><div class=\"pencraft pc-reset icon-container restack-image\"><svg class=\"lucide lucide-refresh-cw\" fill=\"none\" height=\"20\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" viewBox=\"0 0 24 24\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8\"></path><path d=\"M21 3v5h-5\"></path><path d=\"M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16\"></path><path d=\"M8 16H3v5\"></path></svg></div><div class=\"pencraft pc-reset icon-container view-image\"><svg class=\"lucide lucide-maximize2 lucide-maximize-2\" fill=\"none\" height=\"20\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" viewBox=\"0 0 24 24\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><polyline points=\"15 3 21 3 21 9\"></polyline><polyline points=\"9 21 3 21 3 15\"></polyline><line x1=\"21\" x2=\"14\" y1=\"3\" y2=\"10\"></line><line x1=\"3\" x2=\"10\" y1=\"21\" y2=\"14\"></line></svg></div></div></div></div></a></figure></div><p><strong>I&#8217;ve disagreed with everything the Fed has done since 2008, but especially since 2020.</strong> The massive covid QE stimulus program was a bad idea from the start, the weak QT effort was a joke, the BTFP bailout that subsidized all bank deposits was awful policy. </p><p><strong>The Fed should set a reserve requirement above zero percent.</strong> The zero percent reserve requirement (set in 2020), is a primary reason why the money supply has exploded since 2020, and therefore why prices have skyrocketed as the Dollar&#8217;s value has eroded. </p><p><strong>The Treasury market will eventually exercise discipline on Washington, which has lacked fiscal and monetary discipline for decades now.</strong> The 10YR yield will move higher and higher (maybe not on a straight line) as the Dollar&#8217;s value further erodes assuming the status que monetary and fiscal policy. I&#8217;m not sure what the magic number is, but when the 10YR hits 5 or 6%, economic activity will slow significantly. The Fed&#8217;s easing only pours fuel on the fire, which ought to be reflected in a higher 10YR yield.</p><p>We can&#8217;t return to the Gold Standard soon enough.</p><div><hr /></div><p></p>",
+      "image_url": "https://substackcdn.com/image/fetch/$s_!7E2A!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F75802aa3-f341-448f-96c3-0526f8c66258_1075x768.png",
+      "summary_text": "I\u2019ve disagreed with everything the Fed has done since 2008, but especially since 2020. The massive covid QE stimulus program was a bad idea from the start, the weak QT effort was a joke, the BTFP bailout that subsidized all bank deposits was awful policy.",
+      "category": "ai",
+      "_trending_tags": [
+        "ai"
+      ]
+    },
+    {
+      "title": "Why IT leaders should pay attention to Canva\u2019s \u2018imagination era\u2019 strategy",
+      "url": "https://venturebeat.com/ai/why-it-leaders-should-pay-attention-to-canvas-imagination-era-strategy",
+      "published_at": "2025-10-29T23:00:00-04:00",
+      "source": "VentureBeat",
+      "summary": "The rise of AI marks a critical shift away from decades defined by information-chasing and a push for more and more compute power. Canva co-founder and CPO Cameron Adams refers to this dawning time as the \u201cimagination era.\u201d Meaning: Individuals and enterprises must be able to turn creativity into action with AI . Canva hopes to position itself at the center of this shift with a sweeping new suite...",
+      "content_html": "",
+      "image_url": "",
+      "summary_text": "The rise of AI marks a critical shift away from decades defined by information-chasing and a push for more and more compute power. Canva co-founder and CPO Cameron Adams refers to this dawning time as the \u201cimagination era.\u201d Meaning: Individuals and enterprise...",
+      "category": "ai",
+      "_trending_tags": [
+        "ai"
+      ]
+    },
+    {
+      "title": "Meta, Google, and Microsoft Triple Down on AI Spending",
+      "url": "https://www.wired.com/story/microsoft-google-meta-2025-earnings/",
+      "published_at": "2025-10-29T22:09:50-04:00",
+      "source": "Wired",
+      "summary": "Three of the biggest US tech companies reported record profits and record infrastructure spending on Wednesday, fueling speculation about a possible AI market bubble.",
+      "content_html": "",
+      "image_url": "https://media.wired.com/photos/6902815b030326d7e206e552/master/pass/Microsoft-Google-Meta-Report-Earnings-Business-2242649875.jpg",
+      "summary_text": "Three of the biggest US tech companies reported record profits and record infrastructure spending on Wednesday, fueling speculation about a possible AI market bubble.",
+      "category": "ai",
+      "_trending_tags": [
+        "ai",
+        "google",
+        "meta",
+        "microsoft"
+      ]
+    },
+    {
+      "title": "Meta researchers open the LLM black box to repair flawed AI reasoning",
+      "url": "https://venturebeat.com/ai/meta-researchers-open-the-llm-black-box-to-repair-flawed-ai-reasoning",
+      "published_at": "2025-10-29T20:00:00-04:00",
+      "source": "VentureBeat",
+      "summary": "Researchers at Meta FAIR and the University of Edinburgh have developed a new technique that can predict the correctness of a large language model's (LLM) reasoning and even intervene to fix its mistakes. Called Circuit-based Reasoning Verification (CRV), the method looks inside an LLM to monitor its internal \u201creasoning circuits\u201d and detect signs of computational errors as the model solves a prob...",
+      "content_html": "",
+      "image_url": "",
+      "summary_text": "Researchers at Meta FAIR and the University of Edinburgh have developed a new technique that can predict the correctness of a large language model's (LLM) reasoning and even intervene to fix its mistakes. Called Circuit-based Reasoning Verification (CRV), the...",
+      "category": "ai",
+      "_trending_tags": [
+        "ai",
+        "llm",
+        "meta"
+      ]
+    },
+    {
+      "title": "How we built OWL, the new architecture behind our ChatGPT-based browser, Atlas",
+      "url": "https://openai.com/index/building-chatgpt-atlas",
+      "published_at": "2025-10-29T20:00:00-04:00",
+      "source": "OpenAI News",
+      "summary": "A deep dive into OWL, the new architecture powering ChatGPT Atlas\u2014decoupling Chromium, enabling fast startup, rich UI, and agentic browsing with ChatGPT.",
+      "content_html": "",
+      "image_url": "",
+      "summary_text": "A deep dive into OWL, the new architecture powering ChatGPT Atlas\u2014decoupling Chromium, enabling fast startup, rich UI, and agentic browsing with ChatGPT.",
+      "category": "ai",
+      "_trending_tags": [
+        "agent",
+        "chatgpt",
+        "gpt"
+      ]
+    },
+    {
+      "title": "ChatGPT Atlas",
+      "url": "https://www.youtube.com/shorts/qqd4Sb-PKG4",
+      "published_at": "2025-10-23T14:57:03-04:00",
+      "source": "OpenAI YouTube",
+      "summary": "\ud83d\udcf9: @AppleDsign",
+      "content_html": "",
+      "image_url": "https://www.youtube.com/v/qqd4Sb-PKG4?version=3",
+      "summary_text": "\ud83d\udcf9: @AppleDsign",
+      "category": "ai",
+      "_trending_tags": [
+        "apple",
+        "chatgpt",
+        "gpt"
+      ]
+    }
+  ]
+}

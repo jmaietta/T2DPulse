@@ -51,6 +51,24 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/7c6e727907/thumbnail.png"
   },
   {
+    "title": "Waymo\u2019s robotaxi expansion accelerates with 3 new cities",
+    "url": "https://techcrunch.com/2025/11/03/waymos-robotaxi-expansion-accelerates-with-3-new-cities/",
+    "published_at": "2025-11-03T14:45:55-05:00",
+    "source": "TechCrunch",
+    "summary": "Waymo said Monday it will launch a robotaxi service in Detroit, Las Vegas, and San Diego as the Alphabet-owned company hits the accelerator on its expansion plans.",
+    "content_html": "",
+    "image_url": "https://techcrunch.com/wp-content/uploads/2025/11/waymo-zeekr-rt.jpg?resize=1200,801",
+    "summary_text": "Waymo said Monday it will launch a robotaxi service in Detroit, Las Vegas, and San Diego as the Alphabet-owned company hits the accelerator on its expansion plans.",
+    "category": "ai",
+    "_trending_tags": [
+      "ai"
+    ],
+    "_permalink": "/p/bee10e6985/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/bee10e6985/",
+    "_summary_240": "Waymo said Monday it will launch a robotaxi service in Detroit, Las Vegas, and San Diego as the Alphabet-owned company hits the accelerator on its expansion plans.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/bee10e6985/thumbnail.png"
+  },
+  {
     "title": "Ethereum Foundation revamps grants program under new funding approach",
     "url": "https://cointelegraph.com/news/ethereum-foundation-grants-program-new-funding?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
     "published_at": "2025-11-03T14:25:26-05:00",
@@ -749,21 +767,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/e6d9745d19/thumbnail.png"
   },
   {
-    "title": "French MPs advance measure to tax crypto as \u2018unproductive wealth\u2019",
-    "url": "https://cointelegraph.com/news/french-mps-ok-measure-tax-crypto-holdings-unproductive-wealth?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-    "published_at": "2025-11-03T01:02:09-05:00",
-    "source": "Cointelegraph",
-    "summary": "Lawmakers in France\u2019s National Assembly have passed an amendment that would consider larger crypto holdings \u201cunproductive wealth\u201d and subject them to taxation.",
-    "content_html": "",
-    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMDUvMDE5Njk5YWYtNzBkZS03YmIzLWJhZjktMmVmMGQwYmQzYWMy.jpg",
-    "summary_text": "Lawmakers in France\u2019s National Assembly have passed an amendment that would consider larger crypto holdings \u201cunproductive wealth\u201d and subject them to taxation.",
-    "category": "fintech",
-    "_permalink": "/p/10526642d2/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/10526642d2/",
-    "_summary_240": "Lawmakers in France\u2019s National Assembly have passed an amendment that would consider larger crypto holdings \u201cunproductive wealth\u201d and subject them to taxation.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/10526642d2/thumbnail.png"
-  },
-  {
     "title": "AWS and OpenAI announce multi-year strategic partnership",
     "url": "https://openai.com/index/aws-and-openai-partnership",
     "published_at": "2025-11-03T01:00:00-05:00",
@@ -1023,11 +1026,7 @@
     "content_html": "<p>Two Windows vulnerabilities\u2014one a zero-day that has been known to attackers since 2017 and the other a critical flaw that Microsoft initially tried and failed to patch recently\u2014are under active exploitation in widespread attacks targeting a swath of the Internet, researchers say.</p>\n<p>The zero-day\u00a0went undiscovered until <a href=\"https://www.trendmicro.com/en_us/research/25/c/windows-shortcut-zero-day-exploit.html\">March</a>, when security firm Trend Micro said it had been under active exploitation since 2017, by as many as 11 separate advanced persistent threats (APTs). These APT groups, often with ties to nation-states, relentlessly attack specific individuals or groups of interest. Trend Micro went on to say that the groups were exploiting the vulnerability, then tracked as ZDI-CAN-25373, to install various known post-exploitation payloads on infrastructure located in nearly 60 countries, with the US, Canada, Russia, and Korea being the most common.</p>\n<h2>A large-scale, coordinated operation</h2>\n<p>Seven months later, Microsoft still hasn\u2019t patched the vulnerability, which stems from a bug in the <a href=\"https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-shllink/16cb4ca1-9339-4d0c-a68d-bf1d6cc0f943\">Windows Shortcut</a> binary format. The Windows component makes opening apps or accessing files easier and faster by allowing a single binary file to invoke them without having to navigate to their locations. In recent months, the ZDI-CAN-25373 tracking designation has been changed to CVE-2025-9491.</p><p><a href=\"https://arstechnica.com/security/2025/10/two-windows-vulnerabilities-one-a-0-day-are-under-active-exploitation/\">Read full article</a></p>\n<p><a href=\"https://arstechnica.com/security/2025/10/two-windows-vulnerabilities-one-a-0-day-are-under-active-exploitation/#comments\">Comments</a></p>",
     "image_url": "https://cdn.arstechnica.net/wp-content/uploads/2022/10/windows-malware-1024x648.jpg",
     "summary_text": "Both vulnerabilities are being exploited in wide-scale operations.",
-    "category": "fintech",
-    "_permalink": "/p/37fc3c091d/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/37fc3c091d/",
-    "_summary_240": "Both vulnerabilities are being exploited in wide-scale operations.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/37fc3c091d/thumbnail.png"
+    "category": "fintech"
   },
   {
     "title": "US stocks ride AI hype and trade truce to 6-month winning streak",
@@ -1399,7 +1398,7 @@
     "source": "Financial Times - Technology",
     "summary": "Tim Berners-Lee believes AI offers a chance to reset to a system that serves individuals\u2019 needs and privacy",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://images.ft.com/v3/image/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Fbf5a172d-d843-4628-88cc-a733443c3237.jpg?source=next-article&fit=scale-down&quality=highest&width=700&dpr=1",
     "summary_text": "Tim Berners-Lee believes AI offers a chance to reset to a system that serves individuals\u2019 needs and privacy",
     "category": "ai",
     "_trending_tags": [
@@ -1542,17 +1541,6 @@
       "chatgpt",
       "gpt"
     ]
-  },
-  {
-    "title": "NPM flooded with malicious packages downloaded more than 86,000 times",
-    "url": "https://arstechnica.com/security/2025/10/npm-flooded-with-malicious-packages-downloaded-more-than-86000-times/",
-    "published_at": "2025-10-29T17:04:45-04:00",
-    "source": "Ars Technica",
-    "summary": "Packages downloaded from NPM can fetch dependencies from untrusted sites.",
-    "content_html": "<p>Attackers are exploiting a major weakness that has allowed them access to the NPM code repository with more than 100 credential-stealing packages since August, mostly without detection.</p>\n<p>The finding, <a href=\"https://www.koi.ai/blog/phantomraven-npm-malware-hidden-in-invisible-dependencies\">laid out</a> Wednesday by security firm Koi, brings attention to an NPM practice that allows installed packages to automatically pull down and run unvetted packages from untrusted domains. Koi said a campaign it tracks as PhantomRaven has exploited NPM\u2019s use of \u201cRemote Dynamic Dependencies\u201d to flood NPM with 126 malicious packages that have been downloaded more than 86,000 times. Some 80 of those packages remained available as of Wednesday morning, Koi said.</p>\n<h2>A blind spot</h2>\n<p>\u201cPhantomRaven demonstrates how sophisticated attackers are getting [better] at exploiting blind spots in traditional security tooling,\u201d Koi\u2019s Oren Yomtov wrote. \u201cRemote Dynamic Dependencies aren\u2019t visible to static analysis.\u201d</p><p><a href=\"https://arstechnica.com/security/2025/10/npm-flooded-with-malicious-packages-downloaded-more-than-86000-times/\">Read full article</a></p>\n<p><a href=\"https://arstechnica.com/security/2025/10/npm-flooded-with-malicious-packages-downloaded-more-than-86000-times/#comments\">Comments</a></p>",
-    "image_url": "https://cdn.arstechnica.net/wp-content/uploads/2022/05/caution-tape-1000x648.jpeg",
-    "summary_text": "Packages downloaded from NPM can fetch dependencies from untrusted sites.",
-    "category": "fintech"
   },
   {
     "title": "ChatGPT Atlas",
