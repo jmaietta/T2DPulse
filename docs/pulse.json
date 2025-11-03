@@ -1,5 +1,56 @@
 [
   {
+    "title": "Vibe Coding Won\u2019t Replace Humans Anytime Soon, Data Shows",
+    "url": "https://www.pymnts.com/artificial-intelligence-2/2025/vibe-coding-wont-replace-humans-anytime-soon-data-shows/",
+    "published_at": "2025-11-03T15:02:51-05:00",
+    "source": "PYMNTS",
+    "summary": "Autonomous coding agents can now generate, test and debug entire applications but they still falter without human oversight. A new academic work titled, \u201cA Survey of Vibe Coding with Large Language Models\u201d finds that even advanced models capable of building complete apps lose accuracy and efficiency when developers aren\u2019t part of the process. The study [\u2026] The post Vibe Coding Won\u2019t Replace Human...",
+    "content_html": "<p><span>Autonomous coding agents can now generate, test and debug entire applications but they still falter without human oversight. A new academic work titled, </span><a href=\"https://arxiv.org/abs/2510.12399\" rel=\"noopener\" target=\"_blank\"><span>\u201cA Survey of Vibe Coding with Large Language Models\u201d</span></a><span> finds that even advanced models capable of building complete apps lose accuracy and efficiency when developers aren\u2019t part of the process. The study measured a 53% decline in code accuracy and a 19% increase in task completion time when human feedback loops were removed. The findings support a growing consensus: AI will not replace software engineers anytime soon, but it will redefine how they work.</span></p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<h2><b><span>Autonomy Without Context</span></b></h2>\n<p><span>The study\u2019s results reveal that coding agents can efficiently generate and refine code within controlled environments, yet their reasoning deteriorates once human guidance is stripped away. The researchers attribute this drop-off to missing context and unclear goal alignment, problems that human developers naturally resolve through judgment and domain experience. \u201cThese systems can perform multi-step reasoning, but without structured feedback, they fail to distinguish correctness from plausibility,\u201d the authors wrote.</span></p>\n<p><span>A </span><a href=\"https://www.bloomberg.com/opinion/articles/2025-03-25/ai-s-vibe-coding-revolution-is-getting-overhyped\" rel=\"noopener\" target=\"_blank\"><span>Bloomberg Opinion</span></a><span> column warned that the \u201cvibe coding revolution\u201d is being overhyped, arguing that many AI-built programs still require heavy rework to meet production standards. The term \u201cvibe coding,\u201d originally popularized by AI researcher Andrej Karpathy, describes the shift toward prompting models in natural language to write and run entire applications without knowing every line of code. It promises faster software creation but also raises new questions about control, versioning and accountability.</span></p>\n<p><span>In practice, researchers found that agentic models like Claude, Cursor and SWE-Agent performed best when developers reviewed outputs at key checkpoints rather than running fully autonomous sessions. Without those checkpoints, the models produced longer, less maintainable codebases and missed security constraints. The findings align with earlier research on </span><a href=\"https://arxiv.org/abs/2508.03923\" rel=\"noopener\" target=\"_blank\"><span>CoAct-1: Computer-Using Agents with Coding as Actions</span></a><span>, which similarly concluded that human interaction remains essential for steering multi-agent software systems toward reliable outcomes.</span></p>\n<h2><b><span>The Hybrid Developer Era</span></b></h2>\n<p><span>A </span><a href=\"https://www.wsj.com/articles/walmart-wants-more-developers-and-more-ai-agents-to-automate-their-work-e4afaa22\" rel=\"noopener\" target=\"_blank\"><span>Wall Street Journal</span></a><span> report revealed that Walmart, one of the largest enterprise software buyers globally, is not replacing its developers with AI agents but expanding both. The retailer is creating new \u201cagent developer\u201d roles, engineers who train, supervise, and integrate coding agents into production workflows. Rather than automating humans out of the loop, Walmart\u2019s strategy centers on pairing traditional developers with AI copilots that manage documentation, code refactoring, and test automation.</span></p>\n<p><span>That same blended approach is reflected in enterprise strategy across finance, logistics, and retail. Human developers are increasingly acting as conductors of agentic systems, structuring context, enforcing validation, and maintaining continuity between business logic and machine output. This is \u201cinteractive autonomy,\u201d where AI executes and humans validate. The combination improves speed and scalability while retaining the critical human judgment required for compliance and maintainability.</span></p>\n<p><span>Vibe coding also can create opportunities for small businesses where they might not have been previously able to afford to pay for an entire development team, as what Justin Jin\u2019s </span><a href=\"https://www.pymnts.com/artificial-intelligence-2/2025/will-vibe-coding-spark-a-new-economy/\" rel=\"noopener\" target=\"_blank\"><span>experience</span></a><span> was when he launched the AI-powered entertainment app, Giggles.</span></p>\n<p><span>Still, the researchers warn that this structure must be deliberate. Unstructured collaboration between humans and agents can slow down work rather than accelerate it. Teams in the study that adopted consistent review points and role definitions saw up to 31% higher accuracy than those that let agents operate independently. The takeaway, according to the authors, is that autonomy without scaffolding introduces inefficiency rather than innovation.</span></p>\n<p><span>As the </span><a href=\"https://arxiv.org/abs/2509.24240\" rel=\"noopener\" target=\"_blank\"><span>\u201cTakedown\u201d</span></a><span> paper from Stanford highlights, unmonitored AI code can introduce security and compliance vulnerabilities at scale. The lesson, across both research and industry, is that autonomy in AI coding is not a destination but a design choice. True efficiency lies in the feedback architecture that guides agents, embedding human reasoning, ethical oversight and contextual understanding into every iteration.</span></p>\n<p><span>Vibe coding may indeed spark a new economy, but not through total automation. Its real promise lies in redefining collaboration: developers who manage, teach and correct AI will shape the next era of software creation. In the process, coding may become less about syntax and more about a shared workflow where human oversight remains.</span><span>\u00a0</span></p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/artificial-intelligence-2/2025/vibe-coding-wont-replace-humans-anytime-soon-data-shows/\">Vibe Coding Won\u2019t Replace Humans Anytime Soon, Data Shows</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
+    "image_url": "https://www.pymnts.com/wp-content/uploads/2025/11/vibe-coding-ai-artificial-intelligence-automation.jpg?w=457",
+    "summary_text": "Autonomous coding agents can now generate, test and debug entire applications but they still falter without human oversight. A new academic work titled, \u201cA Survey of Vibe Coding with Large Language Models\u201d finds that even advanced models capable of building c...",
+    "category": "fintech",
+    "_trending_tags": [
+      "agent"
+    ],
+    "_permalink": "/p/dd56a28ace/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/dd56a28ace/",
+    "_summary_240": "Autonomous coding agents can now generate, test and debug entire applications but they still falter without human oversight. A new academic work titled, \u201cA Survey of Vibe Coding...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/dd56a28ace/thumbnail.png"
+  },
+  {
+    "title": "Coin Center files brief in Ethereum MEV trial, disputes \u2018honest validation\u2019 theory",
+    "url": "https://cointelegraph.com/news/coin-center-amicus-brief-mev-bot-trial?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "published_at": "2025-11-03T15:00:48-05:00",
+    "source": "Cointelegraph",
+    "summary": "The advocacy organization filed a brief opposing prosecutors\u2019 arguments that two brothers presented themselves as \u201chonest validators\u201d to allegedly pull off a $25-million exploit.",
+    "content_html": "",
+    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMDUvMDE5NmVlZGEtYzM3YS03MTA4LWIwZWQtNGQ2NGFjNjRiNzcy.jpg",
+    "summary_text": "The advocacy organization filed a brief opposing prosecutors\u2019 arguments that two brothers presented themselves as \u201chonest validators\u201d to allegedly pull off a $25-million exploit.",
+    "category": "fintech",
+    "_permalink": "/p/f72c0a1b71/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/f72c0a1b71/",
+    "_summary_240": "The advocacy organization filed a brief opposing prosecutors\u2019 arguments that two brothers presented themselves as \u201chonest validators\u201d to allegedly pull off a $25-million exploit.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/f72c0a1b71/thumbnail.png"
+  },
+  {
+    "title": "Experian to Launch Credit Score in UK That Includes Rental Payments",
+    "url": "https://www.pymnts.com/consumer-finance/2025/experian-to-launch-credit-score-in-uk-that-includes-rental-payments/",
+    "published_at": "2025-11-03T14:56:36-05:00",
+    "source": "PYMNTS",
+    "summary": "Experian UK&I is set to introduce a new credit score in the United Kingdom that will include rental payments and other financial behaviors in consumers\u2019 daily lives. The new Experian Credit Score will begin rolling out this month and will reach all U.K. consumers by the end of the year, the company said in [\u2026] The post Experian to Launch Credit Score in UK That Includes Rental Payments appeared f...",
+    "content_html": "<p style=\"font-weight: 400;\"><a href=\"https://www.experianplc.com/\" rel=\"noopener\" target=\"_blank\">Experian UK&amp;I</a> is set to introduce a new credit score in the United Kingdom that will include rental payments and other financial behaviors in consumers\u2019 daily lives.</p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p style=\"font-weight: 400;\">The new Experian Credit Score will begin rolling out this month and will reach all U.K. consumers by the end of the year, the company said in a Monday (Nov. 3) <a href=\"https://www.experianplc.com/newsroom/press-releases/2025/experian-uk-i-launches-smarter-credit-score-to-give-consumers-sh\" rel=\"noopener\" target=\"_blank\">press release</a>.</p>\n<p style=\"font-weight: 400;\">The new model includes consumers\u2019 habits around overdraft use, credit card cash advances, and payments on rent and phone contracts, according to the release.</p>\n<p style=\"font-weight: 400;\">It also features a score range of 0 to 1250, rather than the previous 0 to 999, to provide a more granular breakdown of financial behavior, the release said.</p>\n<p style=\"font-weight: 400;\">The new score will not affect consumers\u2019 ability to get credit, per the release.</p>\n<p style=\"font-weight: 400;\">\u201cEligibility for things like mortgages, loans or credit cards remains the same,\u201d the release said. \u201cThe updated score simply provides a more detailed view of people\u2019s financial track record and the new information that banks and lenders have started using, offering new ways to strengthen it over time.\u201d</p>\n<p style=\"font-weight: 400;\"><a href=\"https://uk.linkedin.com/in/eduardo-castro-31780a25\" rel=\"noopener\" target=\"_blank\">Edu Castro</a>, managing director of Experian Consumer Services, U.K. and Ireland, said in the release that the new score reflects the evolving ways people manage their money.</p>\n<p style=\"font-weight: 400;\">\u201cOur new Experian Credit Score better reflects more of the everyday financial behaviors that matter \u2014 like paying rent or reducing overdraft use \u2014 offering a clearer understanding of the information on your credit report,\u201d Castro said. \u201cThis means people get a more personalized view of how they\u2019re doing financially and more practical ways to improve their score \u2014 helping unlock better borrowing opportunities for the future.\u201d</p>\n<p style=\"font-weight: 400;\">The PYMNTS Intelligence report \u201c<a href=\"https://www.pymnts.com/study_posts/high-credit-card-denial-rates-force-subprime-borrowers-to-turn-to-alternative-options\" rel=\"noopener\" target=\"_blank\">Subprime Borrowers Flock to Alternative Options Due to High Credit Card Denial Rate</a>\u201d found that one-quarter of subprime consumers use credit for nonessential expenses with the specific intent of raising their <a href=\"https://www.pymnts.com/consumer-insights/2025/25-percent-of-subprime-consumers-use-credit-for-nonessentials-to-improve-credit-score/\" rel=\"noopener\" target=\"_blank\">credit score</a>.</p>\n<p style=\"font-weight: 400;\">The report said this dynamic underscores the opportunity that exists for financial institutions to develop more inclusive and responsible strategies to serve this market segment.</p>\n<p style=\"font-weight: 400;\">In another recent move, Experian said in July that it was launching a new artificial intelligence-powered tool designed to help financial institutions better manage the complex <a href=\"https://www.pymnts.com/news/artificial-intelligence/2025/experian-unveils-new-ai-tool-managing-credit-risk-models/\" rel=\"noopener\" target=\"_blank\">credit and risk models</a> they use to decide who gets a loan or how much credit someone should receive.</p>\n<p style=\"font-weight: 400;\">The <a href=\"https://www.experian.com/business/products/assistant-for-model-risk-management\" rel=\"noopener\" target=\"_blank\">Experian Assistant for Model Risk Management</a> uses automation to create documents, check for errors and monitor model performance.</p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/consumer-finance/2025/experian-to-launch-credit-score-in-uk-that-includes-rental-payments/\">Experian to Launch Credit Score in UK That Includes Rental Payments</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
+    "image_url": "https://www.pymnts.com/wp-content/uploads/2023/12/Experian.jpg?w=457",
+    "summary_text": "Experian UK&I is set to introduce a new credit score in the United Kingdom that will include rental payments and other financial behaviors in consumers\u2019 daily lives. The new Experian Credit Score will begin rolling out this month and will reach all U.K. consu...",
+    "category": "fintech",
+    "_trending_tags": [
+      "ai"
+    ],
+    "_permalink": "/p/7c6e727907/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/7c6e727907/",
+    "_summary_240": "Experian UK&I is set to introduce a new credit score in the United Kingdom that will include rental payments and other financial behaviors in consumers\u2019 daily lives. The new...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/7c6e727907/thumbnail.png"
+  },
+  {
     "title": "Ethereum Foundation revamps grants program under new funding approach",
     "url": "https://cointelegraph.com/news/ethereum-foundation-grants-program-new-funding?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
     "published_at": "2025-11-03T14:25:26-05:00",
@@ -15,7 +66,7 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/57df64448c/thumbnail.png"
   },
   {
-    "title": "Trump's CZ Pardon Has the Crypto World Bracing for Impact",
+    "title": "Trump\u2019s CZ Pardon Has the Crypto World Bracing for Impact",
     "url": "https://www.wired.com/story/trumps-cz-pardon-has-the-crypto-world-bracing-for-impact/",
     "published_at": "2025-11-03T14:21:17-05:00",
     "source": "Wired",
@@ -23,11 +74,7 @@
     "content_html": "",
     "image_url": "https://media.wired.com/photos/6902552b4e7c8c237645e4a1/master/pass/What-CZ-and-Binance-Can-Do-Next-Business-2210817298.jpg",
     "summary_text": "The Trump administration has recast Binance founder CZ as a martyr\u2014and his pardon may have unintended consequences for the US crypto industry.",
-    "category": "fintech",
-    "_permalink": "/p/9ce8a2be4a/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/9ce8a2be4a/",
-    "_summary_240": "The Trump administration has recast Binance founder CZ as a martyr\u2014and his pardon may have unintended consequences for the US crypto industry.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/9ce8a2be4a/thumbnail.png"
+    "category": "fintech"
   },
   {
     "title": "OCC Rates 6 Banks \u2018Outstanding\u2019 and 10 \u2018Satisfactory\u2019 in CRA Compliance",
@@ -283,24 +330,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/9c991eebbb/thumbnail.png"
   },
   {
-    "title": "Ripple Debuts Spot Prime Brokerage for US Market",
-    "url": "https://www.pymnts.com/cryptocurrency/2025/ripple-debuts-spot-prime-brokerage-for-us-market/",
-    "published_at": "2025-11-03T11:22:49-05:00",
-    "source": "PYMNTS",
-    "summary": "Ripple is launching digital asset spot prime brokerage capabilities for the United States market. With this launch, the company\u2019s U.S.-based institutional clients can now carry out OTC spot transactions using dozens of digital assets, the blockchain company said in a Monday (Nov. 3) news release. The release notes that this launch follows Ripple\u2019s acquisition of multi-asset [\u2026] The post Ripple De...",
-    "content_html": "<p style=\"font-weight: 400;\"><a href=\"https://ripple.com/\" rel=\"noopener\" target=\"_blank\">Ripple</a>\u00a0is launching digital asset spot prime brokerage capabilities for the United States market.</p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p style=\"font-weight: 400;\">With this launch, the company\u2019s U.S.-based institutional clients can now carry out OTC spot transactions using dozens of digital assets, the blockchain company said in a Monday (Nov. 3)\u00a0<a href=\"https://ripple.com/ripple-press/ripple-launches-digital-asset-spot-prime-brokerage-for-the-united-states-market/\" rel=\"noopener\" target=\"_blank\">news release</a>.</p>\n<p style=\"font-weight: 400;\">The release notes that this launch follows Ripple\u2019s acquisition of multi-asset prime brokerage,\u00a0<a href=\"https://hiddenroad.com/\" rel=\"noopener\" target=\"_blank\">Hidden Road</a>. Ripple has since combined its licenses with Hidden Road\u2019s solutions, under Ripple Prime, letting institutions access foreign exchange (FX), digital assets, derivatives, swaps and fixed income.</p>\n<p style=\"font-weight: 400;\">\u201cThe launch of OTC spot execution capabilities complements our existing suite of OTC and cleared derivatives services in digital assets and positions us to provide U.S. institutions with a comprehensive offering to suit their trading strategies and needs,\u201d said\u00a0<a href=\"https://www.linkedin.com/posts/cfcstmoritz_rewiring-of-financial-markets-the-crossroads-activity-7316068929007685632-jpRM\" rel=\"noopener\" target=\"_blank\">Michael Higgins</a>, international CEO, Ripple Prime.</p>\n<p style=\"font-weight: 400;\">Ripple announced plans in April to acquire Hidden Road\u00a0<a href=\"https://www.pymnts.com/acquisitions/2025/ripple-pays-1-25-billion-for-prime-brokerage-hidden-road/\" rel=\"noopener\" target=\"_blank\">for $1.25 billion</a>. The acquisition closed last month, per the release.</p>\n<p style=\"font-weight: 400;\">\u201cFor the crypto industry to achieve the next phase of growth, it\u2019s critical that core infrastructure is in place for institutional adoption; prime brokers bring the necessary credibility and professional trading services expected in legacy finance to digital assets,\u201d the company said at the time.</p>\n<p style=\"font-weight: 400;\">\u201cTogether, Ripple and Hidden Road are bringing the promise of digital assets to institutional customers at scale, bridging\u00a0<a href=\"https://www.pymnts.com/cryptocurrency/2025/crypto-custody-becomes-land-grab-fintechs-nonbanks/\" rel=\"noopener\" target=\"_blank\">traditional finance and decentralized finance</a>.\u201d</p>\n<p style=\"font-weight: 400;\">Before this deal, Hidden Road was clearing $3 trillion per year across markets with more than 300 institutional customers. The combination with Ripple was aimed at turning the brokerage into the largest nonbank prime broker in the world.</p>\n<p style=\"font-weight: 400;\">In other Ripple news, the company announced last week that three nonprofit organizations focused on development and humanitarian efforts \u2014\u00a0<a href=\"https://wck.org/\" rel=\"noopener\" target=\"_blank\">World Central Kitchen</a>,\u00a0<a href=\"http://water.org/\" rel=\"noopener\" target=\"_blank\">Water.org</a>\u00a0and\u00a0<a href=\"https://www.mercycorps.org/what-we-do/ventures\" rel=\"noopener\" target=\"_blank\">Mercy Corps Ventures</a>\u00a0\u2014 are using its\u00a0<a href=\"https://www.pymnts.com/cryptocurrency/2025/ripple-powers-aid-delivery-and-funding-for-global-nonprofits/\" rel=\"noopener\" target=\"_blank\">payment solution</a>\u00a0and its stablecoin.</p>\n<p style=\"font-weight: 400;\">\u201cOur partners and customers are redefining how urgent aid, sustainable development and financial support reach those who need it most,\u201d Ripple President\u00a0<a href=\"https://www.linkedin.com/in/monicalong\" rel=\"noopener\" target=\"_blank\">Monica Long</a>\u00a0said in a news release.</p>\n<p style=\"font-weight: 400;\">The company says its Ripple Payments, which was once known as RippleNet, allows businesses to leverage blockchain easily for faster, cheaper and more efficient\u00a0<a href=\"https://www.pymnts.com/cryptocurrency/2025/stablecoins-reshape-cross-border-payments-banks-networks-step-in/\" rel=\"noopener\" target=\"_blank\">cross-border payments</a>. It now has 64 active licenses and money transmitter licenses, and is awaiting permissions from another 11 jurisdictions.</p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/cryptocurrency/2025/ripple-debuts-spot-prime-brokerage-for-us-market/\">Ripple Debuts Spot Prime Brokerage for US Market</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
-    "image_url": "https://www.pymnts.com/wp-content/uploads/2022/02/Ripple.jpg?w=457",
-    "summary_text": "Ripple is launching digital asset spot prime brokerage capabilities for the United States market. With this launch, the company\u2019s U.S.-based institutional clients can now carry out OTC spot transactions using dozens of digital assets, the blockchain company s...",
-    "category": "fintech",
-    "_trending_tags": [
-      "ai"
-    ],
-    "_permalink": "/p/6bb7d6f3cc/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/6bb7d6f3cc/",
-    "_summary_240": "Ripple is launching digital asset spot prime brokerage capabilities for the United States market. With this launch, the company\u2019s U.S.-based institutional clients can now carry...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/6bb7d6f3cc/thumbnail.png"
-  },
-  {
     "title": "META Is The World's Largest VC",
     "url": "https://newsletter.tek2dayholdings.com/p/meta-is-the-worlds-largest-vc",
     "published_at": "2025-11-03T10:59:42-05:00",
@@ -471,21 +500,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/1a7bae5481/thumbnail.png"
   },
   {
-    "title": "How Frankenstein\u2019s creature designer found a new look for an iconic monster",
-    "url": "https://www.theverge.com/entertainment/811694/netflix-frankenstein-creature-design-interview-mike-hill",
-    "published_at": "2025-11-03T08:00:00-05:00",
-    "source": "The Verge",
-    "summary": "For Mike Hill and Guillermo del Toro, it all started with Frankenstein. Years ago, Hill - a sculptor and special effects artist - was exhibiting his works at a convention in Burbank. Del Toro saw some of Hill's monstrous creations on display and was so impressed that he decided to get in touch, tracking down [\u2026]",
-    "content_html": "<figure>\n\n<img alt=\"\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/10/05_Jacob_Elordi_3879_R.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100\" />\n\t<figcaption>\n\tJacob Elordi.\t</figcaption>\n</figure>\n<p class=\"has-drop-cap has-text-align-none\">For Mike Hill and Guillermo del Toro, it all started with <em>Frankenstein</em>.</p>\n<p class=\"has-text-align-none\">Years ago, Hill - a sculptor and special effects artist - was exhibiting his works at a convention in Burbank. Del Toro saw some of Hill's monstrous creations on display and was so impressed that he decided to get in touch, tracking down Hill's contact info from an obscure model kit forum. \"I don't know how he found me from some 20-year-old website,\" says Hill, who describes del Toro's investigation as \"very Columbo-esque\" work. \"But he wrote to me, told me who he was, and asked to commission something.\"</p>\n<p class=\"has-text-align-none\">That first commission turned out to be a sculpture of Boris Karlo \u2026</p>\n<p><a href=\"https://www.theverge.com/entertainment/811694/netflix-frankenstein-creature-design-interview-mike-hill\">Read the full story at The Verge.</a></p>",
-    "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/10/05_Jacob_Elordi_3879_R.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "summary_text": "For Mike Hill and Guillermo del Toro, it all started with Frankenstein. Years ago, Hill - a sculptor and special effects artist - was exhibiting his works at a convention in Burbank. Del Toro saw some of Hill's monstrous creations on display and was so impres...",
-    "category": "fintech",
-    "_permalink": "/p/8048963e37/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/8048963e37/",
-    "_summary_240": "For Mike Hill and Guillermo del Toro, it all started with Frankenstein. Years ago, Hill - a sculptor and special effects artist - was exhibiting his works at a convention in...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/8048963e37/thumbnail.png"
-  },
-  {
     "title": "Is XRP the new Bitcoin? Why Wall Street can\u2019t stop talking about its ETF",
     "url": "https://cointelegraph.com/news/is-xrp-the-new-bitcoin-why-wall-street-can-t-stop-talking-about-its-etf?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
     "published_at": "2025-11-03T08:00:00-05:00",
@@ -510,7 +524,7 @@
     "source": "Financial Times - Technology",
     "summary": "Commerce department approval paves way for huge new investment in AI and cloud infrastructure in Middle East",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/5a1539c2-be63-4a5a-a878-46e73601b3e9.jpg",
+    "image_url": "https://images.ft.com/v3/image/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F5a1539c2-be63-4a5a-a878-46e73601b3e9.jpg?source=ft-app-api&fit=scale-down&quality=highest&width=700&dpr=1",
     "summary_text": "Commerce department approval paves way for huge new investment in AI and cloud infrastructure in Middle East",
     "category": "ai",
     "_trending_tags": [
@@ -765,25 +779,6 @@
     ]
   },
   {
-    "title": "Tokenization takes prime role in Hong Kong\u2019s Fintech 2030 strategy",
-    "url": "https://cointelegraph.com/news/hkma-unveils-fintech-2030-strategy-plans-to-accerlate-rwa-tokenization?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-    "published_at": "2025-11-03T00:53:48-05:00",
-    "source": "Cointelegraph",
-    "summary": "The Hong Kong Monetary Authority has outlined its real-world asset tokenization plans, including tokenized bonds and stablecoin integration for blockchain settlements.",
-    "content_html": "",
-    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjQtMTEvMDE5MzJmNzgtMjg0YS03ZmM2LTgwZmQtOTg1MDkwYTI2ZjQ5.jpg",
-    "summary_text": "The Hong Kong Monetary Authority has outlined its real-world asset tokenization plans, including tokenized bonds and stablecoin integration for blockchain settlements.",
-    "category": "fintech",
-    "_trending_tags": [
-      "ai",
-      "fintech"
-    ],
-    "_permalink": "/p/85d4a803e7/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/85d4a803e7/",
-    "_summary_240": "The Hong Kong Monetary Authority has outlined its real-world asset tokenization plans, including tokenized bonds and stablecoin integration for blockchain settlements.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/85d4a803e7/thumbnail.png"
-  },
-  {
     "title": "Investors need to look beyond the \u2018bragawatts\u2019 in AI infrastructure boom",
     "url": "https://www.ft.com/content/bf687d99-f373-4a41-8651-fca9dba83aa0",
     "published_at": "2025-11-03T00:00:06-05:00",
@@ -989,21 +984,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/4751ed88ca/thumbnail.png"
   },
   {
-    "title": "Coinbase CEO Brian Armstrong trolls the prediction markets",
-    "url": "https://techcrunch.com/2025/11/01/coinbase-ceo-brian-armstrong-trolls-the-prediction-markets/",
-    "published_at": "2025-11-01T12:59:08-04:00",
-    "source": "TechCrunch",
-    "summary": "While Armstrong may have helped some Kalshi and Polymarket users make a little money, he was also illustrating how easily these markets can be manipulated.",
-    "content_html": "",
-    "image_url": "https://techcrunch.com/wp-content/uploads/2020/12/GettyImages-1028811312.jpg?resize=1200,739",
-    "summary_text": "While Armstrong may have helped some Kalshi and Polymarket users make a little money, he was also illustrating how easily these markets can be manipulated.",
-    "category": "fintech",
-    "_permalink": "/p/df289f64d1/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/df289f64d1/",
-    "_summary_240": "While Armstrong may have helped some Kalshi and Polymarket users make a little money, he was also illustrating how easily these markets can be manipulated.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/df289f64d1/thumbnail.png"
-  },
-  {
     "title": "Large reasoning models almost certainly can think",
     "url": "https://venturebeat.com/ai/large-reasoning-models-almost-certainly-can-think",
     "published_at": "2025-11-01T01:00:00-04:00",
@@ -1061,11 +1041,7 @@
     "category": "ai",
     "_trending_tags": [
       "ai"
-    ],
-    "_permalink": "/p/438161bb0e/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/438161bb0e/",
-    "_summary_240": "S&P 500 and Nasdaq post longest runs of monthly gains in years",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/438161bb0e/thumbnail.png"
+    ]
   },
   {
     "title": "Big Tech\u2019s market dominance is becoming ever more extreme",
@@ -1423,7 +1399,7 @@
     "source": "Financial Times - Technology",
     "summary": "Tim Berners-Lee believes AI offers a chance to reset to a system that serves individuals\u2019 needs and privacy",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/bf5a172d-d843-4628-88cc-a733443c3237.jpg",
+    "image_url": "https://images.ft.com/v3/image/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Fbf5a172d-d843-4628-88cc-a733443c3237.jpg?source=next-article&fit=scale-down&quality=highest&width=700&dpr=1",
     "summary_text": "Tim Berners-Lee believes AI offers a chance to reset to a system that serves individuals\u2019 needs and privacy",
     "category": "ai",
     "_trending_tags": [
