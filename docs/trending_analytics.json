@@ -1,25 +1,25 @@
 {
-  "generated_at": "2025-11-03T09:44:07.350591-05:00",
+  "generated_at": "2025-11-03T10:23:53.993436-05:00",
   "total_keywords": 30,
   "keyword_counts": {
-    "ai": 74,
+    "ai": 73,
     "fintech": 6,
-    "openai": 6,
     "agent": 5,
     "anthropic": 5,
+    "openai": 5,
     "cloud": 4,
     "google": 4,
-    "llm": 4,
     "microsoft": 4,
     "nvidia": 4,
-    "apple": 3,
+    "llm": 3,
     "amazon": 2,
-    "chatgpt": 2,
+    "apple": 2,
     "deepmind": 2,
-    "gpt": 2,
     "meta": 2,
+    "chatgpt": 1,
     "claude": 1,
-    "genai": 1
+    "genai": 1,
+    "gpt": 1
   },
   "sources_per_keyword": {},
   "top_articles_per_keyword": {}
