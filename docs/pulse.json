@@ -1,5 +1,62 @@
 [
   {
+    "title": "Google\u2019s AI Mode gets new agentic capabilities to help book event tickets and beauty appointments",
+    "url": "https://techcrunch.com/2025/11/04/googles-ai-mode-gets-new-agentic-capabilities-to-help-book-event-tickets-and-beauty-appointments/",
+    "published_at": "2025-11-04T15:36:18-05:00",
+    "source": "TechCrunch",
+    "summary": "For example, you can ask \"find me 2 cheap tickets for the Shaboozey concert coming up. prefer standing floor tickets.\" AI Mode will then search across multiple websites to find real-time ticket options that meet your specific requests.",
+    "content_html": "",
+    "image_url": "https://techcrunch.com/wp-content/uploads/2025/06/GettyImages-2206888090.jpg?resize=1200,800",
+    "summary_text": "For example, you can ask \"find me 2 cheap tickets for the Shaboozey concert coming up. prefer standing floor tickets.\" AI Mode will then search across multiple websites to find real-time ticket options that meet your specific requests.",
+    "category": "ai",
+    "_trending_tags": [
+      "agent",
+      "ai",
+      "google"
+    ],
+    "_permalink": "/p/9e4bf985ed/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/9e4bf985ed/",
+    "_summary_240": "For example, you can ask \"find me 2 cheap tickets for the Shaboozey concert coming up. prefer standing floor tickets.\" AI Mode will then search across multiple websites to find...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/9e4bf985ed/thumbnail.png"
+  },
+  {
+    "title": "Bain Capital Steers Clear of Backing US Data Centers Despite Boom",
+    "url": "https://www.bloomberg.com/news/articles/2025-11-04/bain-capital-steers-clear-of-backing-us-data-centers-amid-boom",
+    "published_at": "2025-11-04T15:30:39-05:00",
+    "source": "Bloomberg Technology",
+    "summary": "Bain Capital is eschewing investments in the US data center build-out, as its private equity rivals rush to back the physical infrastructure powering the artificial intelligence boom.",
+    "content_html": "A QTS data center campus in the initial stages of construction in Litchfield Park, Arizona, US.",
+    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ibVtEAacdacQ/v1/1200x-1.jpg",
+    "summary_text": "Bain Capital is eschewing investments in the US data center build-out, as its private equity rivals rush to back the physical infrastructure powering the artificial intelligence boom.",
+    "category": "software",
+    "_trending_tags": [
+      "ai"
+    ],
+    "_permalink": "/p/a83e894664/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/a83e894664/",
+    "_summary_240": "Bain Capital is eschewing investments in the US data center build-out, as its private equity rivals rush to back the physical infrastructure powering the artificial intelligence...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/a83e894664/thumbnail.png"
+  },
+  {
+    "title": "UK accused of being too slow to regulate cloud services providers",
+    "url": "https://www.ft.com/content/90607720-f044-4cf6-b97c-5dea2f45491b",
+    "published_at": "2025-11-04T15:23:40-05:00",
+    "source": "Financial Times - Technology",
+    "summary": "Minister says companies will be supervised by financial regulators from next year after MPs complain of sluggish action",
+    "content_html": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/55dc7949-2aef-4ad2-bbc3-701a8529f4ce.jpg",
+    "summary_text": "Minister says companies will be supervised by financial regulators from next year after MPs complain of sluggish action",
+    "category": "software",
+    "_trending_tags": [
+      "ai",
+      "cloud"
+    ],
+    "_permalink": "/p/99893dfee3/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/99893dfee3/",
+    "_summary_240": "Minister says companies will be supervised by financial regulators from next year after MPs complain of sluggish action",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/99893dfee3/thumbnail.png"
+  },
+  {
     "title": "Meta, Pinterest and Other Social Media Overhaul Platforms to Separate Human, AI Content",
     "url": "https://www.pymnts.com/news/artificial-intelligence/2025/meta-pinterest-other-social-media-overhaul-platforms-separate-human-ai-content/",
     "published_at": "2025-11-04T15:22:53-05:00",
@@ -68,11 +125,7 @@
     "category": "ai",
     "_trending_tags": [
       "ai"
-    ],
-    "_permalink": "/p/e88e3121a0/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/e88e3121a0/",
-    "_summary_240": "The intelligence of AI models isn't what's blocking enterprise deployments. It's the inability to define and measure quality in the first place. That's where AI judges are now...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/e88e3121a0/thumbnail.png"
+    ]
   },
   {
     "title": "Anthropic Banks on Increased AI Demand for 28% Growth Jump",
@@ -110,26 +163,7 @@
       "llm",
       "openai",
       "transformer"
-    ],
-    "_permalink": "/p/81caf3ab24/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/81caf3ab24/",
-    "_summary_240": "When the transformer architecture was introduced in 2017 in the now seminal Google paper \" Attention Is All You Need ,\" it became an instant cornerstone of modern artificial...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/81caf3ab24/thumbnail.png"
-  },
-  {
-    "title": "City minister criticised as too slow to subject big tech to new UK regulation",
-    "url": "https://www.ft.com/content/90607720-f044-4cf6-b97c-5dea2f45491b",
-    "published_at": "2025-11-04T14:25:57-05:00",
-    "source": "Financial Times - Technology",
-    "summary": "Regulators already monitoring \u2018all operational instances very, very carefully, Rigby tells Treasury committee",
-    "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/55dc7949-2aef-4ad2-bbc3-701a8529f4ce.jpg",
-    "summary_text": "Regulators already monitoring \u2018all operational instances very, very carefully, Rigby tells Treasury committee",
-    "category": "fintech",
-    "_permalink": "/p/14835af397/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/14835af397/",
-    "_summary_240": "Regulators already monitoring \u2018all operational instances very, very carefully, Rigby tells Treasury committee",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/14835af397/thumbnail.png"
+    ]
   },
   {
     "title": "Bitcoin Falls Amid Investor Concerns About Steep AI Valuations",
@@ -468,15 +502,15 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/7cfd5dfacb/thumbnail.png"
   },
   {
-    "title": "Caterpillar Sets New Growth Goals as Energy Demand Soars",
+    "title": "Caterpillar to Double Gas Turbine Capacity to Feed AI Boom",
     "url": "https://www.bloomberg.com/news/articles/2025-11-04/caterpillar-hikes-earnings-targets-on-energy-equipment-demand",
     "published_at": "2025-11-04T10:09:30-05:00",
     "source": "Bloomberg Technology",
-    "summary": "Caterpillar Inc. laid out new growth targets to boost revenue and double capital spending in a bid to capitalize on rising demand for energy to power data centers.",
+    "summary": "Caterpillar Inc. plans to more than double its capacity of gas turbines to tap into soaring demand for natural gas plants.",
     "content_html": "A Caterpillar Inc Combine at a farm in Pemberton, New Jersey.",
     "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/idG5cbYY9V_Y/v1/1200x-1.jpg",
-    "summary_text": "Caterpillar Inc. laid out new growth targets to boost revenue and double capital spending in a bid to capitalize on rising demand for energy to power data centers.",
-    "category": "software",
+    "summary_text": "Caterpillar Inc. plans to more than double its capacity of gas turbines to tap into soaring demand for natural gas plants.",
+    "category": "ai",
     "_trending_tags": [
       "ai"
     ]
@@ -579,7 +613,11 @@
     "content_html": "",
     "image_url": "https://techcrunch.com/wp-content/uploads/2025/11/Gift_cardsGoFundMe.jpeg?w=1200",
     "summary_text": "Recipients can choose from 1.4 million nonprofits on the platform, ranging from local food banks to global organizations that provide disaster relief, support youth programs, and promote animal welfare.",
-    "category": "fintech"
+    "category": "fintech",
+    "_permalink": "/p/fe792a8f5a/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/fe792a8f5a/",
+    "_summary_240": "Recipients can choose from 1.4 million nonprofits on the platform, ranging from local food banks to global organizations that provide disaster relief, support youth programs, and...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/fe792a8f5a/thumbnail.png"
   },
   {
     "title": "Ripple\u2019s RLUSD enters top 10 USD stablecoins less than year after debut",
@@ -679,7 +717,11 @@
     "category": "fintech",
     "_trending_tags": [
       "ai"
-    ]
+    ],
+    "_permalink": "/p/c5fd0fc642/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/c5fd0fc642/",
+    "_summary_240": "Sam Bankman-Fried\u2019s bid to reverse his fraud conviction and 25-year prison sentence ran into a trio of appeals court judges who appeared skeptical of arguments that he didn\u2019t get...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/c5fd0fc642/thumbnail.png"
   },
   {
     "title": "Postmortems can\u2019t stop AI-powered crypto fraud",
@@ -939,25 +981,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/633b587104/",
     "_summary_240": "Over the last year, certain AI markets appear to be nearly sewn up by startup market leaders. But beyond these areas, a vast swath of AI remains anyone\u2019s game.",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/633b587104/thumbnail.png"
-  },
-  {
-    "title": "Studio Ghibli and other Japanese publishers want OpenAI to stop training on their work",
-    "url": "https://techcrunch.com/2025/11/03/studio-ghibli-and-other-japanese-publishers-want-openai-to-stop-training-on-their-work/",
-    "published_at": "2025-11-03T17:43:03-05:00",
-    "source": "TechCrunch",
-    "summary": "OpenAI's approach to working with copyrighted content is to ask forgiveness, not permission.",
-    "content_html": "",
-    "image_url": "https://techcrunch.com/wp-content/uploads/2025/04/miyazaki-ai-ghibli.jpg?resize=1200,800",
-    "summary_text": "OpenAI's approach to working with copyrighted content is to ask forgiveness, not permission.",
-    "category": "ai",
-    "_trending_tags": [
-      "ai",
-      "openai"
-    ],
-    "_permalink": "/p/461f9621c8/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/461f9621c8/",
-    "_summary_240": "OpenAI's approach to working with copyrighted content is to ask forgiveness, not permission.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/461f9621c8/thumbnail.png"
   },
   {
     "title": "Introducing IndQA",
@@ -1366,7 +1389,7 @@
     "source": "Financial Times - Technology",
     "summary": "Ease of creating counterfeit documents poses risks to financial trust",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://images.ft.com/v3/image/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F55452945-17b0-4885-aaf3-6919fa419430.jpg?source=next-article&fit=scale-down&quality=highest&width=700&dpr=1",
     "summary_text": "Ease of creating counterfeit documents poses risks to financial trust",
     "category": "ai",
     "_trending_tags": [
