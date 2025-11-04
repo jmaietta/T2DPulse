@@ -1,9 +1,9 @@
 {
-  "generated_at": "2025-11-03T22:10:22.994723-05:00",
+  "generated_at": "2025-11-04T06:37:34.454075-05:00",
   "total_keywords": 30,
   "keyword_counts": {
-    "ai": 70,
-    "openai": 10,
+    "ai": 77,
+    "openai": 11,
     "fintech": 7,
     "google": 7,
     "microsoft": 5,
@@ -15,11 +15,10 @@
     "amazon": 2,
     "deepmind": 2,
     "gpt": 2,
+    "nvidia": 2,
     "paypal": 2,
-    "apple": 1,
     "chatgpt": 1,
-    "gpu": 1,
-    "nvidia": 1
+    "gpu": 1
   },
   "sources_per_keyword": {},
   "top_articles_per_keyword": {}
