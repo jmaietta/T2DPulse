@@ -1,5 +1,43 @@
 [
   {
+    "title": "Small Models, Big Shift: How AI Is Moving Beyond Model Size",
+    "url": "https://www.pymnts.com/artificial-intelligence-2/2025/small-models-big-shift-how-ai-is-moving-beyond-model-size/",
+    "published_at": "2025-11-05T14:23:48-05:00",
+    "source": "PYMNTS",
+    "summary": "For years, progress in artificial intelligence was defined by scale and model size. Companies poured billions into training massive systems with ever-growing data sets, assuming that bigger meant better. That assumption is beginning to change. The next phase of AI is about efficiency, building models that are smaller, faster and cheaper to run without sacrificing [\u2026] The post Small Models, Big Sh...",
+    "content_html": "<p style=\"font-weight: 400;\">For years, progress in artificial intelligence was defined by scale and model size. Companies poured billions into training massive systems with ever-growing data sets, assuming that bigger meant better. That assumption is beginning to change. The next phase of AI is about efficiency, building models that are smaller, faster and cheaper to run without sacrificing performance.</p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p style=\"font-weight: 400;\">Anthropic and IBM are among the companies with smaller models. at the forefront of this shift. Anthropic\u2019s Claude Haiku 4.5 <a href=\"https://www.anthropic.com/news/claude-haiku-4-5\" rel=\"noopener\" target=\"_blank\">matches</a> much of the accuracy of its larger sibling, Sonnet 4.5, while running twice as fast and costing roughly one-third as much. IBM\u2019s recent <a href=\"https://www.ibm.com/new/announcements/ibm-granite-4-0-hyper-efficient-high-performance-hybrid-models\" rel=\"noopener\" target=\"_blank\">launch</a> of its Granite 4.0 family of \u201cNano\u201d and \u201cTiny\u201d models takes the idea further, with these systems capable of running directly on local devices instead of relying on expensive cloud infrastructure.</p>\n<h2 style=\"font-weight: 400;\"><strong>Smaller Models, Measurable Returns</strong></h2>\n<p style=\"font-weight: 400;\"><a href=\"https://www.anthropic.com/news/claude-haiku-4-5\" rel=\"noopener\" target=\"_blank\">Haiku 4.5\u2019s efficiency gains</a> translate directly into financial savings. The model processes data at less than $1 per million input tokens, compared with about $3 for Anthropic\u2019s larger models. That cost reduction can lower AI spending by more than 60%, saving hundreds of thousands of dollars a year for enterprises running high-volume chat or analytics systems. Haiku also uses about 50% less energy, a meaningful benefit as electricity demand for data centers increases.</p>\n<p style=\"font-weight: 400;\"><a href=\"https://www.ibm.com/new/announcements/ibm-granite-4-0-hyper-efficient-high-performance-hybrid-models\" rel=\"noopener\" target=\"_blank\">IBM\u2019s Granite 4.0 models</a> deliver comparable gains. Their smaller architecture allows them to run on existing enterprise hardware rather than specialized servers. IBM says the models use 70% less memory and offer twice the inference speed of comparable large models, while keeping sensitive data on-site for privacy and compliance. For sectors like banking, healthcare and logistics, those advantages translate to lower cloud fees, faster responses and tighter data control.</p>\n<h2 style=\"font-weight: 400;\"><strong>Economics of Efficiency</strong></h2>\n<p style=\"font-weight: 400;\">This move toward smaller models comes as AI costs rise across the board. A <a href=\"https://www.pymnts.com/artificial-intelligence-2/2025/enterprises-confront-the-real-price-tag-of-ai-deployment/\" rel=\"noopener\" target=\"_blank\">PYMNTS Intelligence report</a> found that nearly 47% of enterprises cite cost as the top barrier to deploying generative AI. While model prices are falling, total ownership costs remain high due to infrastructure, integration and compliance expenses. The report notes that only 1 in 3 firms deploying artificial intelligence at scale currently meets its expected ROI targets.</p>\n<p style=\"font-weight: 400;\">Haiku 4.5 aims to change that. Anthropic\u2019s internal tests show that it performs within close range of Claude Sonnet 4.5, their frontier model on <a href=\"https://www.anthropic.com/news/claude-haiku-4-5\" rel=\"noopener\" target=\"_blank\">key benchmarks</a> while reducing compute costs by up to 70%. For many enterprises, that means a chatbot or automation system can deliver nearly the same quality at a fraction of the expense.</p>\n<p style=\"font-weight: 400;\">At the infrastructure level, inference, the cost of running models in production rather than training them, is becoming the dominant share of AI spending. As reported by <a href=\"https://www.pymnts.com/artificial-intelligence-2/2025/why-inference-infrastructure-is-the-next-big-layer-in-the-gen-ai-stack/?utm_source=chatgpt.com\" rel=\"noopener\" target=\"_blank\">PYMNTS</a>, inference workloads will make up 75% of global AI compute demand by 2030, according to a report by Brookfield.</p>\n<p style=\"font-weight: 400;\">According to further <a href=\"https://www.pymnts.com/artificial-intelligence-2/2025/small-models-could-redefine-ai-value-nvidia-says/\" rel=\"noopener\" target=\"_blank\">PYMNTS</a> reporting, Nvidia concluded that small-language-models (SLMs) could perform 70% to 80% of enterprise tasks, leaving the most complex reasoning to large-scale systems. That two-tier structure, small for volume, large for complexity, is emerging as the most cost-effective way to operationalize AI.</p>\n<h2 style=\"font-weight: 400;\"><strong>Making AI More Accessible</strong></h2>\n<p style=\"font-weight: 400;\">As <a href=\"https://www.pymnts.com/artificial-intelligence-2/2025/ai-explained-whats-a-small-language-model-and-how-can-business-use-it/\" rel=\"noopener\" target=\"_blank\">PYMNTS has written</a>, SLMs are smaller, more focused versions of large-language models that trade some general versatility for speed, lower cost and ease of customization. They can run directly on local servers, browsers or mobile devices, making them ideal for firms that need privacy and quick deployment rather than extreme scale.</p>\n<p style=\"font-weight: 400;\">A retailer can use a small model to recommend products and handle customer queries on its website, while a financial firm can use one to summarize reports internally without sharing sensitive data with external cloud providers. For many mid-sized businesses, the ability to deploy these tools locally means avoiding six-figure cloud bills while still achieving real-time responsiveness.</p>\n<p style=\"font-weight: 400;\">The industry\u2019s center of gravity is shifting from massive training clusters to lightweight, high-performance systems built for real-world use. As executives confront rising operational costs, smaller models offer a way to keep AI projects profitable without sacrificing accuracy.</p>\n<div>\n<p class=\"elementtoproof\"><i>For all PYMNTS AI coverage, subscribe to the daily<span class=\"apple-converted-space\">\u00a0</span></i><a href=\"https://www.pymnts.com/subscribe/\" rel=\"noopener\" target=\"_blank\" title=\"https://www.pymnts.com/subscribe/\">AI\u00a0Newsletter</a><i>.</i></p>\n</div>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/artificial-intelligence-2/2025/small-models-big-shift-how-ai-is-moving-beyond-model-size/\">Small Models, Big Shift: How AI Is Moving Beyond Model Size</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
+    "image_url": "https://www.pymnts.com/wp-content/uploads/2025/11/small-AI-models.png?w=457",
+    "summary_text": "For years, progress in artificial intelligence was defined by scale and model size. Companies poured billions into training massive systems with ever-growing data sets, assuming that bigger meant better. That assumption is beginning to change. The next phase ...",
+    "category": "ai",
+    "_trending_tags": [
+      "ai",
+      "llm"
+    ],
+    "_permalink": "/p/42913a3e19/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/42913a3e19/",
+    "_summary_240": "For years, progress in artificial intelligence was defined by scale and model size. Companies poured billions into training massive systems with ever-growing data sets, assuming...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/42913a3e19/thumbnail.png"
+  },
+  {
+    "title": "Google Identifies New Forms of AI-Powered Cyberattacks",
+    "url": "https://www.pymnts.com/google/2025/google-identifies-new-forms-of-ai-powered-cyberattacks/",
+    "published_at": "2025-11-05T14:21:15-05:00",
+    "source": "PYMNTS",
+    "summary": "State-sponsored threat actors have developed malware powered by artificial intelligence (AI) that can not only generate malicious scripts but also \u201cchange its code on the fly\u201d to get around detection systems, Google Threat Intelligence Group (GTIG) said in a Wednesday (Nov. 5) blog post. GTIG said in a report released Wednesday that this is [\u2026] The post Google Identifies New Forms of AI-Powered C...",
+    "content_html": "<p><span>State-sponsored threat actors have developed malware powered by artificial intelligence (AI) that can not only generate malicious scripts but also \u201cchange its code on the fly\u201d to get around detection systems, </span><a href=\"https://about.google/\" rel=\"noopener\" target=\"_blank\"><span>Google</span></a><span> Threat Intelligence Group (GTIG) said in a Wednesday (Nov. 5) </span><a href=\"https://blog.google/technology/safety-security/google-threat-intelligence-group-report-ai-november-2025/\" rel=\"noopener\" target=\"_blank\"><span>blog post</span></a><span>.</span></p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p><span>GTIG said in a </span><a href=\"https://cloud.google.com/blog/topics/threat-intelligence/threat-actor-usage-of-ai-tools\" rel=\"noopener\" target=\"_blank\"><span>report</span></a><span> released Wednesday that this is the first time it has seen malware families use large language models during execution.</span></p>\n<p><span>\u201cWhile still nascent, this represents a significant step toward more autonomous and adaptive malware,\u201d the report said.</span></p>\n<p><span>This is one example of the ways threat actors are using AI not only for productivity gains but also for \u201cnovel AI-enabled operations,\u201d GTIG said in its blog post.</span></p>\n<p><span>Threat actors are also using pretexts like posing as a student or researcher in prompts to bypass AI safety guardrails and extract restricted information, and they are using underground digital markets to access AI tools for phishing, malware and vulnerability research, according to the post.</span></p>\n<p><span>\u201cAt Google, we are committed to developing AI responsibly and take proactive steps to disrupt malicious activity by disabling the projects and accounts associated with bad actors, while continuously improving our models to make them less susceptible to misuse,\u201d the company said in the report. \u201cWe also proactively share industry best practices to arm defenders and enable stronger protections across the ecosystem.\u201d</span></p>\n<p><span>PYMNTS reported Monday (Nov. 3) that AI has become both a tool and a target when it comes to </span><a href=\"https://www.pymnts.com/artificial-intelligence-2/2025/ai-becomes-both-tool-and-target-in-cybersecurity/\" rel=\"noopener\" target=\"_blank\"><span>cybersecurity</span></a><span>. For example, </span><a href=\"https://www.csoonline.com/article/4079887/top-7-agentic-ai-use-cases-for-cybersecurity.html\" rel=\"noopener\" target=\"_blank\"><span>CSO.com</span></a><span> said that agentic AI is emerging as a transformative force in cybersecurity because it can process data continuously and react in real time to detect, contain and neutralize threats at a scale and speed that human teams cannot match.</span></p>\n<p><span>It was also reported Monday that tech companies are increasing their efforts to combat a </span><a href=\"https://www.pymnts.com/artificial-intelligence-2/2025/tech-giants-tackle-major-ai-security-threat/\" rel=\"noopener\" target=\"_blank\"><span>security flaw</span></a><span> in their AI models. The companies are focused on stopping indirect prompt injection attacks in which a third party hides commands inside a website or email to trick AI models into turning over unauthorized information.</span></p>\n<p><span>The PYMNTS Intelligence report \u201c</span><a href=\"https://www.pymnts.com/study_posts/coos-leverage-genai-to-reduce-data-security-losses/\" rel=\"noopener\" target=\"_blank\"><span>COOs Leverage AI to Reduce Data Security Losses</span></a><span>\u201d found that chief operating officers are adopting generative AI-driven solutions to improve </span><a href=\"https://www.pymnts.com/cybersecurity/2025/55-of-companies-have-implemented-ai-powered-cybersecurity/\"><span>cybersecurity</span></a><span> management at a time when companies face the threat of cyberattacks that are growing more sophisticated.</span></p>\n<p><i><span>For all PYMNTS AI coverage, subscribe to the daily </span></i><a href=\"https://pymnts.com/subscribe/\" rel=\"noopener\" target=\"_blank\"><i><span>AI Newsletter</span></i></a><i><span>.</span></i></p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/google/2025/google-identifies-new-forms-of-ai-powered-cyberattacks/\">Google Identifies New Forms of AI-Powered Cyberattacks</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
+    "image_url": "https://www.pymnts.com/wp-content/uploads/2025/11/google-cybersecurity-cyberattacks-ai-artificial-intelligence-security.jpg?w=457",
+    "summary_text": "State-sponsored threat actors have developed malware powered by artificial intelligence (AI) that can not only generate malicious scripts but also \u201cchange its code on the fly\u201d to get around detection systems, Google Threat Intelligence Group (GTIG) said in a ...",
+    "category": "fintech",
+    "_trending_tags": [
+      "ai",
+      "google"
+    ],
+    "_permalink": "/p/7cc436bf5e/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/7cc436bf5e/",
+    "_summary_240": "State-sponsored threat actors have developed malware powered by artificial intelligence (AI) that can not only generate malicious scripts but also \u201cchange its code on the fly\u201d to...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/7cc436bf5e/thumbnail.png"
+  },
+  {
     "title": "Apple Plans to Use 1.2 Trillion Parameter Google Gemini Model to Run New Siri",
     "url": "https://www.bloomberg.com/news/articles/2025-11-05/apple-plans-to-use-1-2-trillion-parameter-google-gemini-model-to-power-new-siri",
     "published_at": "2025-11-05T14:10:37-05:00",
@@ -85,7 +123,7 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/222519a189/thumbnail.png"
   },
   {
-    "title": "Why META Is Unlikely To Leapfrog OpenAI, Anthropic, xAI and Google",
+    "title": "META Is Unlikely To Leapfrog OpenAI, Anthropic, xAI and Google",
     "url": "https://newsletter.tek2dayholdings.com/p/why-meta-is-unlikely-to-leapfrog",
     "published_at": "2025-11-05T13:37:36-05:00",
     "source": "TEK2day Newsletter",
@@ -100,11 +138,7 @@
       "google",
       "meta",
       "openai"
-    ],
-    "_permalink": "/p/708a1179f7/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/708a1179f7/",
-    "_summary_240": "I believe META ( ) lacks the required culture to leapfrog its AI competition.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/708a1179f7/thumbnail.png"
+    ]
   },
   {
     "title": "Fiverr Says Small Businesses\u2019 AI Adoption Drives Demand for Skilled Talent",
@@ -358,25 +392,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/eca62effbb/",
     "_summary_240": "Another AI-powered wearable is coming to market. It\u2019s not a pendant like Friend, nor a wristband like Amazon\u2019s Bee. This time, it\u2019s a smart ring called the Stream Ring from the...",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/eca62effbb/thumbnail.png"
-  },
-  {
-    "title": "United Fintech Acquires Trade Ledger to Bolster AI\u2019s Banking Presence",
-    "url": "https://www.pymnts.com/acquisitions/2025/united-fintech-acquires-trade-ledger-to-bolster-ais-banking-presence/",
-    "published_at": "2025-11-05T11:10:36-05:00",
-    "source": "PYMNTS",
-    "summary": "Finance platform United Fintech has acquired lending automation company Trade Ledger. With this deal, United Fintech gets access to a customer base that includes Barclays and Bank of Queensland, as well as Trade Ledger\u2019s expertise in data-driven lending and commercial banking automation, the companies said in a Wednesday (Nov. 5) news release. \u201cAI is redefining how banks operate, and Trade Ledger...",
-    "content_html": "<p style=\"font-weight: 400;\">Finance platform\u00a0<a href=\"https://unitedfintech.com/\" rel=\"noopener\" target=\"_blank\">United Fintech</a>\u00a0has acquired lending automation company\u00a0<a href=\"https://www.tradeledger.io/\" rel=\"noopener\" target=\"_blank\">Trade Ledger</a>.</p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p style=\"font-weight: 400;\">With this deal, United Fintech gets access to a customer base that includes\u00a0<a href=\"https://home.barclays/\" rel=\"noopener\" target=\"_blank\">Barclays</a>\u00a0and\u00a0<a href=\"https://www.boq.com.au/\" rel=\"noopener\" target=\"_blank\">Bank of Queensland</a>, as well as Trade Ledger\u2019s expertise in data-driven lending and commercial banking automation, the companies said in a Wednesday (Nov. 5)\u00a0<a href=\"https://www.globenewswire.com/news-release/2025/11/05/3181149/0/en/United-Fintech-acquires-100-of-Trade-Ledger-to-advance-AI-innovation-in-banking.html\" rel=\"noopener\" target=\"_blank\">news release</a>.</p>\n<p style=\"font-weight: 400;\">\u201cAI is redefining how banks operate, and Trade Ledger is at the forefront of that change,\u201d United Fintech founder and CEO <a href=\"https://unitedfintech.com/about/meet-the-partners/\" rel=\"noopener\" target=\"_blank\">Christian Frahm</a>\u00a0said in the release. \u201cTrade Ledger CEO and Co-Founder Martin McCann and his team have built exceptional technology that transforms lending into a real-time, data-driven experience for customers.\u201d</p>\n<p style=\"font-weight: 400;\">The release notes that this deal follows United Fintech\u2019s acquisition of CBA earlier this year, which provided the company with payments and trade finance capabilities.</p>\n<p style=\"font-weight: 400;\">Both acquisitions, United Fintech said, \u201chighlight the growing demand from banks for smarter, AI-driven solutions and create strong synergies between payments and commercial banking technology.\u201d</p>\n<p style=\"font-weight: 400;\"><a href=\"https://www.tradeledger.io/team-members/martin-mccann\" rel=\"noopener\" target=\"_blank\">Martin McCann</a>, CEO and co-founder of Trade Ledger, said joining United Fintech is in keeping with his company\u2019s ambition to change the way that banks employ data and technology to serve their customers.</p>\n<p style=\"font-weight: 400;\">\u201cBy becoming part of United Fintech, we gain the expertise, scale, and global reach to accelerate that vision and deliver impact faster than we could alone,\u201d he said.</p>\n<p style=\"font-weight: 400;\">The acquisition comes at a time when\u00a0AI\u2019s reach\u00a0inside <a href=\"https://www.pymnts.com/artificial-intelligence-2/2025/ais-move-from-banking-back-offices-to-balance-sheets-warrants-caution/\" rel=\"noopener\" target=\"_blank\">banking</a> \u201cnow extends from the teller window to the balance sheet,\u201d as PYMNTS wrote last month, with customer-facing tools teaching institutions how to personalize services and understand borrower behavior.</p>\n<p style=\"font-weight: 400;\">Research by PYMNTS Intelligence has found that\u00a0<a href=\"https://www.pymnts.com/artificial-intelligence-2/2025/cognitive-banking-anticipates-customer-needs-before-they-ask/\" rel=\"noopener\" target=\"_blank\">72% of customers</a>\u00a0would stay with or return to a bank if they received personalization through embedded conversational AI.</p>\n<p style=\"font-weight: 400;\">\u201cWhen banks deploy digital assistants to answer questions or flag spending patterns, those same data signals can inform credit decisions,\u201d that report said.</p>\n<p style=\"font-weight: 400;\">\u201cAnother PYMNTS piece observed that\u00a0<a href=\"https://www.pymnts.com/opinion/2025/blocks-chief-risk-officer-says-ai-is-leading-the-fight-against-scams\" rel=\"noopener\" target=\"_blank\">AI-powered fraud prevention</a>\u00a0is reshaping the fight against financial crime, analyzing thousands of data points in milliseconds. That same analytical capability, redirected toward underwriting, allows banks and other lenders to assess repayment ability far more dynamically than before.\u201d</p>\n<p style=\"font-weight: 400;\">At the center of this transformation is alternative data, a growing set of non-traditional signals banks employ to evaluate risk.</p>\n<p style=\"font-weight: 400;\">\u201cWe use a wide variety of credit bureau data as well as alternative data in making our credit decisions,\u201d\u00a0<a href=\"https://about.concoracredit.com/\" rel=\"noopener\" target=\"_blank\">Concora Credit</a> executive\u00a0<a href=\"https://www.linkedin.com/in/beckerk\" rel=\"noopener\" target=\"_blank\">Kyle Becker</a>\u00a0said in an\u00a0<a href=\"https://www.pymnts.com/loans/2025/lenders-fight-fraud-and-find-borrowers-with-alternative-data\" rel=\"noopener\" target=\"_blank\">interview</a>\u00a0with PYMNTS in August. \u201cAlternative data is super useful because it allows you to maintain or reduce risk while also providing access to credit to more people.\u201d</p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/acquisitions/2025/united-fintech-acquires-trade-ledger-to-bolster-ais-banking-presence/\">United Fintech Acquires Trade Ledger to Bolster AI\u2019s Banking Presence</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
-    "image_url": "https://www.pymnts.com/wp-content/uploads/2025/11/United-Fintech-Trade-Ledger.png?w=457",
-    "summary_text": "Finance platform United Fintech has acquired lending automation company Trade Ledger. With this deal, United Fintech gets access to a customer base that includes Barclays and Bank of Queensland, as well as Trade Ledger\u2019s expertise in data-driven lending and c...",
-    "category": "fintech",
-    "_trending_tags": [
-      "ai",
-      "fintech"
-    ],
-    "_permalink": "/p/b6bac89e5e/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/b6bac89e5e/",
-    "_summary_240": "Finance platform United Fintech has acquired lending automation company Trade Ledger. With this deal, United Fintech gets access to a customer base that includes Barclays and...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/b6bac89e5e/thumbnail.png"
   },
   {
     "title": "AI-designed antibodies promise big boost to drug development",
@@ -955,12 +970,16 @@
     "source": "Financial Times - Technology",
     "summary": "US photo agency loses central plank in London lawsuit against Stability AI",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/e77542ce-ec19-4104-a17c-18bf69e097dd.jpg",
     "summary_text": "US photo agency loses central plank in London lawsuit against Stability AI",
     "category": "ai",
     "_trending_tags": [
       "ai"
-    ]
+    ],
+    "_permalink": "/p/d4538492b9/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/d4538492b9/",
+    "_summary_240": "US photo agency loses central plank in London lawsuit against Stability AI",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/d4538492b9/thumbnail.png"
   },
   {
     "title": "Deutsche Telekom and NVIDIA Launch Industrial AI Cloud \u2014 a \u2018New Era\u2019 for Germany\u2019s Industrial Transformation",
@@ -1018,12 +1037,16 @@
     "source": "Financial Times - Technology",
     "summary": "Companies such as Phasecraft and Riverlane will need to be brave to remain independent",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/edbda69d-97f5-4dcb-8cde-8162135e6987.jpg",
     "summary_text": "Companies such as Phasecraft and Riverlane will need to be brave to remain independent",
     "category": "software",
     "_trending_tags": [
       "ai"
-    ]
+    ],
+    "_permalink": "/p/d96cb93f9d/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/d96cb93f9d/",
+    "_summary_240": "Companies such as Phasecraft and Riverlane will need to be brave to remain independent",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/d96cb93f9d/thumbnail.png"
   },
   {
     "title": "Crypto\u2019s \u2018decentralised finance\u2019 sector at risk of attack, warns Chainalysis",
@@ -1032,12 +1055,16 @@
     "source": "Financial Times - Technology",
     "summary": "Head of world\u2019s biggest crypto tracing company says security \u2018hasn\u2019t really been considered\u2019 by start-ups",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/272c2be7-3bdc-4549-90ff-91bd9b513a1b.jpg",
     "summary_text": "Head of world\u2019s biggest crypto tracing company says security \u2018hasn\u2019t really been considered\u2019 by start-ups",
     "category": "fintech",
     "_trending_tags": [
       "ai"
-    ]
+    ],
+    "_permalink": "/p/d3faca3321/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/d3faca3321/",
+    "_summary_240": "Head of world\u2019s biggest crypto tracing company says security \u2018hasn\u2019t really been considered\u2019 by start-ups",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/d3faca3321/thumbnail.png"
   },
   {
     "title": "Asian markets\u2019 reliance on AI boom raises \u2018bubble\u2019 fears",
@@ -1046,12 +1073,16 @@
     "source": "Financial Times - Technology",
     "summary": "Some investors grow concerned that region\u2019s markets could be hit by downturn in US tech sector",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/9b36b2fb-1414-4965-bef3-a569164b0971.jpg",
     "summary_text": "Some investors grow concerned that region\u2019s markets could be hit by downturn in US tech sector",
     "category": "ai",
     "_trending_tags": [
       "ai"
-    ]
+    ],
+    "_permalink": "/p/4bd1a39d37/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/4bd1a39d37/",
+    "_summary_240": "Some investors grow concerned that region\u2019s markets could be hit by downturn in US tech sector",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/4bd1a39d37/thumbnail.png"
   },
   {
     "title": "Forget Fine-Tuning: SAP\u2019s RPT-1 Brings Ready-to-Use AI for Business Tasks",
@@ -1229,7 +1260,7 @@
     "source": "Financial Times - Technology",
     "summary": "Commerce department approval paves way for huge new investment in AI and cloud infrastructure in Middle East",
     "content_html": "",
-    "image_url": "https://images.ft.com/v3/image/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F5a1539c2-be63-4a5a-a878-46e73601b3e9.jpg?source=next-article&fit=scale-down&quality=highest&width=700&dpr=1",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/5a1539c2-be63-4a5a-a878-46e73601b3e9.jpg",
     "summary_text": "Commerce department approval paves way for huge new investment in AI and cloud infrastructure in Middle East",
     "category": "ai",
     "_trending_tags": [
@@ -1297,12 +1328,16 @@
     "source": "Financial Times - Technology",
     "summary": "As investment rush accelerates, the winners will control inputs unlikely to be commoditised",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://images.ft.com/v3/image/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F0f51fb3e-2a17-44ca-a217-1c02674878c8.jpg?source=next-article&fit=scale-down&quality=highest&width=700&dpr=1",
     "summary_text": "As investment rush accelerates, the winners will control inputs unlikely to be commoditised",
     "category": "ai",
     "_trending_tags": [
       "ai"
-    ]
+    ],
+    "_permalink": "/p/e268869878/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/e268869878/",
+    "_summary_240": "As investment rush accelerates, the winners will control inputs unlikely to be commoditised",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/e268869878/thumbnail.png"
   },
   {
     "title": "Developers beware: Google\u2019s Gemma model controversy exposes model lifecycle risks",
