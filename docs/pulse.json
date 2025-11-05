@@ -1,5 +1,130 @@
 [
   {
+    "title": "Google Gemini\u2019s Deep Research can look into your emails, drive, and chats",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/814878/google-ai-gemini-deep-research-personalized",
+    "published_at": "2025-11-05T17:09:51-05:00",
+    "source": "The Verge",
+    "summary": "Gemini can now draw from your emails and documents while performing \u201cdeep research\u201d queries. Google\u2019s announcement blog called this \u201cone of our most-requested features\u201d for Gemini Deep Research, which is an agentic feature styled specifically for creating research reports rather than just answering questions. The chatbot starts by creating a multi-step research plan, then it [\u2026]",
+    "content_html": "<figure>\n\n<img alt=\"Black background, Google Gemini prompt bar.\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/11/Screenshot-2025-11-05-at-4.22.58%E2%80%AFPM.png?quality=90&#038;strip=all&#038;crop=0,0,100,100\" />\n\t<figcaption>\n\t\t</figcaption>\n</figure>\n<p class=\"has-text-align-none\">Gemini can now draw from your emails and documents while performing \u201cdeep research\u201d queries. Google\u2019s <a href=\"https://blog.google/products/gemini/deep-research-workspace-app-integration/\">announcement blog</a> called this \u201cone of our most-requested features\u201d for <a href=\"https://gemini.google/overview/deep-research/\">Gemini Deep Research</a>, which is an agentic feature styled specifically for creating research reports rather than just answering questions. The chatbot starts by creating a multi-step research plan, then it performs a series of web searches to create a report that you can ask it to tweak with additional info, or export the whole thing into a Google Doc or <a href=\"https://www.theverge.com/news/634117/google-gemini-ai-podcast-audio-overviews-deep-research\">AI-generated podcast</a>.</p>\n\n<p class=\"has-text-align-none\">Google says of the new connection between Deep Research and Workspace products:</p>\n\n<blockquote class=\"wp-block-quote is-layout-flow wp-block-quote-is-layout-flow\">\n<p class=\"has-text-align-none\">Now you can start a market analysis for a new product by having Deep Research analyze your team&#8217;s initial brainstorming docs, related email threads and project plans. Or you can build a competitor report about a rival product that cross-references public web data with your strategies, comparison spreadsheets and team chats.</p>\n</blockquote>\n\n<p class=\"has-text-align-none\">Once \u201cdeep research\u201d is selected on the Gemini\u2019s prompt bar, users can pick which of the four options they want Gemini to use: a regular Google Search, Gmail, Drive, and/or Chat. That means that your emails in Gmail, your docs, slides, sheets, and PDFs in Drive, and your chatlogs \u2014 if you use Google Chat \u2014 will provide context for Google\u2019s AI model.&nbsp;</p>\n\n<p class=\"has-text-align-none\">For now, it\u2019s only on desktop, but Google says it\u2019ll soon start rolling out to mobile in the coming days.&nbsp;</p>",
+    "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/11/Screenshot-2025-11-05-at-4.22.58%E2%80%AFPM.png?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "summary_text": "Gemini can now draw from your emails and documents while performing \u201cdeep research\u201d queries. Google\u2019s announcement blog called this \u201cone of our most-requested features\u201d for Gemini Deep Research, which is an agentic feature styled specifically for creating res...",
+    "category": "ai",
+    "_trending_tags": [
+      "agent",
+      "ai",
+      "google"
+    ],
+    "_permalink": "/p/c2570f93e9/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/c2570f93e9/",
+    "_summary_240": "Gemini can now draw from your emails and documents while performing \u201cdeep research\u201d queries. Google\u2019s announcement blog called this \u201cone of our most-requested features\u201d for...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/c2570f93e9/thumbnail.png"
+  },
+  {
+    "title": "Franklin Templeton brings tokenized USD money market fund to Hong Kong",
+    "url": "https://cointelegraph.com/news/franklin-templeton-tokenized-usd-money-market-fund-hong-kong?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "published_at": "2025-11-05T16:59:56-05:00",
+    "source": "Cointelegraph",
+    "summary": "The launch marks Franklin Templeton\u2019s latest step into digital assets, introducing a blockchain-based UCITS fund as Hong Kong accelerates its push toward real-world asset tokenization.",
+    "content_html": "",
+    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMDYvMDE5Nzg1MzgtYWQ2Yi03NzljLTg2NGMtNGFhMzkwY2E0ZjYz.jpg",
+    "summary_text": "The launch marks Franklin Templeton\u2019s latest step into digital assets, introducing a blockchain-based UCITS fund as Hong Kong accelerates its push toward real-world asset tokenization.",
+    "category": "ai",
+    "_trending_tags": [
+      "ai"
+    ],
+    "_permalink": "/p/c42cebda9c/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/c42cebda9c/",
+    "_summary_240": "The launch marks Franklin Templeton\u2019s latest step into digital assets, introducing a blockchain-based UCITS fund as Hong Kong accelerates its push toward real-world asset...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/c42cebda9c/thumbnail.png"
+  },
+  {
+    "title": "Here\u2019s what happened in crypto today",
+    "url": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "published_at": "2025-11-05T16:56:14-05:00",
+    "source": "Cointelegraph",
+    "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, NFTs, Web3 and crypto regulation.",
+    "content_html": "",
+    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMDYvMDE5Nzk0MjMtZWY4ZS03YzYwLWI5MzctYjlkZGY3NWZlOGFk.jpg",
+    "summary_text": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, NFTs, Web3 and crypto regulation.",
+    "category": "fintech",
+    "_trending_tags": [
+      "ai"
+    ],
+    "_permalink": "/p/15f58ff118/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/15f58ff118/",
+    "_summary_240": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, NFTs, Web3 and crypto regulation.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/15f58ff118/thumbnail.png"
+  },
+  {
+    "title": "LendingClub Partners With Wisetack and Enters Home Improvement Financing Market",
+    "url": "https://www.pymnts.com/partnerships/2025/lendingclub-partners-with-wisetack-and-enters-home-improvement-financing-market/",
+    "published_at": "2025-11-05T16:54:06-05:00",
+    "source": "PYMNTS",
+    "summary": "LendingClub has partnered with Wisetack as it expands into the home improvement financing market. The partnership aims to accelerate LendingClub\u2019s move into this space by allowing the company to leverage Wisetack\u2019s network of 40,000 contractor merchants and dozens of embedded software-as-a-service partnerships, the companies said in a Wednesday (Nov. 5) press release. Wisetack is [\u2026] The post Len...",
+    "content_html": "<p><a class=\"editor-rtfLink\" href=\"https://www.lendingclub.com/\" rel=\"noopener\" target=\"_blank\"><span>LendingClub</span></a><span> has partnered with </span><a class=\"editor-rtfLink\" href=\"https://www.wisetack.com/\" rel=\"noopener\" target=\"_blank\"><span>Wisetack</span></a><span> as it expands into the home improvement financing market.</span></p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p><span>The partnership aims to accelerate LendingClub\u2019s move into this space by allowing the company to leverage Wisetack\u2019s network of 40,000 contractor merchants and dozens of embedded software-as-a-service </span><span>partnerships</span><span>, the companies said in a Wednesday (Nov. 5) </span><a class=\"editor-rtfLink\" href=\"https://ir.lendingclub.com/news/news-details/2025/LendingClub-Expands-into-Home-Improvement-Financing-Unlocking-a-500-Billion-Market-Opportunity/default.aspx\" rel=\"noopener\" target=\"_blank\"><span>press release</span></a><span>.</span></p>\n<p><span>Wisetack is a platform for home improvement financing, according to the release.</span></p>\n<p><span>In the initial phase of the companies\u2019 partnership, LendingClub will purchase participation certificates in early 2026 from Wisetack\u2019s forward flow loan production, the release said.</span></p>\n<p><span>In the second phase, beginning in mid-2026, LendingClub will </span><span>begin</span><span> using</span><span> its own underwriting model to originate home improvement </span><span>financing</span><span> loans </span><span>that are</span><span> larger than those currently available on Wisetack\u2019s platform, per the release.</span></p>\n<p><span>\u201cWe\u2019re excited to extend our underwriting and customer experience advantages to home improvement, a $500 billion industry that\u2019s ripe for innovation,\u201d LendingClub Chief Lending Officer </span><a class=\"editor-rtfLink\" href=\"https://www.linkedin.com/in/stevenmattics\" rel=\"noopener\" target=\"_blank\"><span>Steve Mattics</span></a><span> said in the release. \u201cThis is a natural next step in our journey to help consumers borrow smarter while enabling partners to grow with greater consistency and trust.\u201d</span></p>\n<p><span>Wisetack Founder and CEO </span><a class=\"editor-rtfLink\" href=\"https://www.linkedin.com/in/tzekin\" rel=\"noopener\" target=\"_blank\"><span>Bobby Tzekin</span></a><span> said in the release that the partnership brings together LendingClub\u2019s trusted brand, underwriting performance, infrastructure </span><span>and</span><span> digital experience with Wisetack\u2019s technology and contractor network.</span></p>\n<p><span>\u201cTogether, we\u2019re creating a more transparent, reliable financing experience for homeowners and smooth funding for contractors \u2014 helping everyone in the ecosystem grow with confidence and borrow smarter,\u201d Tzekin said.</span></p>\n<p><span>LendingClub reported in October that it saw 37% growth in </span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/news/digital-banking/2025/levelup-checking-drives-lendingclub-account-openings/\" rel=\"noopener\" target=\"_blank\"><span>loan originations</span></a><span> in the third quarter, </span><span>taking it</span><span> to $2.6 billion, the highest level in three years.</span></p>\n<p><span>During a conference call with analysts, LendingClub CEO </span><a class=\"editor-rtfLink\" href=\"https://www.linkedin.com/in/scottsanborn\" rel=\"noopener\" target=\"_blank\"><span>Scott Sanborn</span></a><span> said that the loan growth reflected \u201cstrong demand from both consumers and loan investors, and our increased marketing efforts,\u201d adding that marketplace revenues were 75% [to $108 million], and the structured certificate sales topped $1 billion.</span></p>\n<p><span>In August, investment management giant </span><a class=\"editor-rtfLink\" href=\"https://www.blackrock.com/us/individual\" rel=\"noopener\" target=\"_blank\"><span>BlackRock</span></a><span> inked a new agreement with LendingClub that will see funds and accounts managed by BlackRock advisers </span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/loans/2025/blackrock-investing-1-billion-in-lendingclubs-marketplace/\" rel=\"noopener\" target=\"_blank\"><span>invest</span></a><span> up to $1 billion through LendingClub\u2019s marketplace programs through next year.</span></p>\n<p><span>This collaboration followed BlackRock\u2019s first transaction of $100 million under LendingClub\u2019s LENDR (LendingClub Rated Notes) program, which closed in June.</span></p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/partnerships/2025/lendingclub-partners-with-wisetack-and-enters-home-improvement-financing-market/\">LendingClub Partners With Wisetack and Enters Home Improvement Financing Market</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
+    "image_url": "https://www.pymnts.com/wp-content/uploads/2025/11/lendingclub-wisetack.jpg?w=457",
+    "summary_text": "LendingClub has partnered with Wisetack as it expands into the home improvement financing market. The partnership aims to accelerate LendingClub\u2019s move into this space by allowing the company to leverage Wisetack\u2019s network of 40,000 contractor merchants and d...",
+    "category": "fintech",
+    "_trending_tags": [
+      "ai"
+    ],
+    "_permalink": "/p/84e76378a0/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/84e76378a0/",
+    "_summary_240": "LendingClub has partnered with Wisetack as it expands into the home improvement financing market. The partnership aims to accelerate LendingClub\u2019s move into this space by...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/84e76378a0/thumbnail.png"
+  },
+  {
+    "title": "UK ruling in Getty Images' AI lawsuit leaves key IP questions unanswered",
+    "url": "https://cointelegraph.com/news/uk-ruling-getty-images-ai-lawsuit-ip?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "published_at": "2025-11-05T16:53:55-05:00",
+    "source": "Cointelegraph",
+    "summary": "The mixed ruling was claimed as a victory by both Stability AI and Getty Images, muddying the legal waters around AI and intellectual property.",
+    "content_html": "",
+    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMDMvMDE5NTU5MmUtZjI5ZC03YmUwLWJjOWEtYTdiY2NkZmI5MWEx.jpg",
+    "summary_text": "The mixed ruling was claimed as a victory by both Stability AI and Getty Images, muddying the legal waters around AI and intellectual property.",
+    "category": "ai",
+    "_trending_tags": [
+      "ai"
+    ],
+    "_permalink": "/p/b02e4a106a/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/b02e4a106a/",
+    "_summary_240": "The mixed ruling was claimed as a victory by both Stability AI and Getty Images, muddying the legal waters around AI and intellectual property.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/b02e4a106a/thumbnail.png"
+  },
+  {
+    "title": "Bank of America CEO Says AI Is Transforming How Banks Work",
+    "url": "https://www.pymnts.com/artificial-intelligence-2/2025/bank-of-america-ceo-says-ai-is-transforming-how-banks-work/",
+    "published_at": "2025-11-05T16:52:55-05:00",
+    "source": "PYMNTS",
+    "summary": "The technology landscape for banks is shifting fast, and Bank of America CEO Brian Moynihan said the firm\u2019s response is to build for both scale and intelligence. Speaking at the bank\u2019s investor day on Nov. 5, he said decades of steady digital investment have created a foundation that now allows artificial intelligence (AI) and automation [\u2026] The post Bank of America CEO Says AI Is Transforming Ho...",
+    "content_html": "<p><span>\u00a0</span><span>The technology landscape for banks is shifting fast, and <a href=\"https://www.bankofamerica.com/\" rel=\"noopener\" target=\"_blank\">Bank of America</a> CEO Brian Moynihan said the firm\u2019s response is to build for both scale and intelligence. Speaking at the bank\u2019s investor day on Nov. 5, he said decades of steady digital investment have created a foundation that now allows artificial intelligence (AI) and automation to expand across every part of the organization, stretching from consumer services to capital markets.</span></p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<h2><b><span>Investing for the Long Run</span></b></h2>\n<p><span>Moynihan told investors the bank will spend $13 billion on technology this year, with $4 billion tagged as \u201ccode initiatives\u201d \u2014 projects that directly create new capabilities. Over the past decade, Bank of America has invested more than $100 billion in technology. \u201cTechnology is a strategic enabler,\u201d he said, adding that the goal is to make it a competitive advantage for clients and shareholders alike. Those outlays, he said, deliver value \u201cboth externally and internally\u201d by giving customers seamless experiences and helping employees do their jobs better.</span></p>\n<h2><b><span>AI in Action</span></b></h2>\n<p><span>Moynihan said Bank of America\u2019s use of AI is not experimental but embedded in day-to-day operations.</span></p>\n<p><span>\u201cThese aren\u2019t theoretical applications that prove the concept you\u2019re reading about in the press,\u201d he told investors. \u201cThese are tendered tools applied to real-life activities that already help us personalize client experiences, streamline capabilities, and identify new opportunities \u2014 all while saving human capital.\u201d</span></p>\n<p><span>He added that AI is beginning to drive another round of efficiency gains, particularly across underwriting, audit, legal and finance functions.</span></p>\n<h2><b><span>High Tech and High Touch</span></b></h2>\n<p><span>The CEO repeated his long-standing mantra that successful financial services must be \u201chigh touch and high tech.\u201d Bank of America operates 3,600 financial centers, each averaging $500 million in deposits, while digital platforms such as the bank\u2019s virtual assistant Erica \u2014 now handling 3 billion customer actions since launch \u2014 allow customers to manage their finances around the clock. \u201cOur customers want it all, twenty-four by seven,\u201d Moynihan said. \u201cThat means investing in digital platforms that make financial services easier, faster and more secure.\u201d</span></p>\n<h2><b><span>Clients Drive the Direction</span></b></h2>\n<p><span>Moynihan framed the bank\u2019s technology agenda as a direct response to client demand for seamless, integrated service. \u201cIt\u2019s about them, not about us,\u201d he said.</span></p>\n<p><span>\u201cIt\u2019s about our ability to help them navigate and achieve their goals in a holistic and integrated way.\u201d Whether it is an individual planning for retirement or a multinational corporation managing global cash flows, he said, clients expect the bank to connect human expertise with digital efficiency.</span></p>\n<p><span>The combination, he argued, produces deeper, longer relationships and \u201cvery low attrition.\u201d</span></p>\n<h2><b><span>AI in the Back Office</span></b></h2>\n<p><span>Beyond customer-facing innovations, Moynihan said AI and automation are improving productivity across operations and corporate functions. He cited loan underwriting, compliance reviews and internal reporting as areas already benefiting from AI-enabled workflow. The result, he said, is a more efficient platform that can grow faster without expanding headcount.</span></p>\n<p><span>\u201cNow we can drive productivity even better across the other areas in the company,\u201d he said, noting that technology has allowed the bank to keep total employment steady at roughly 213,000 people while continuing to add new capabilities.</span></p>\n<h2><b><span>Capital for the Future</span></b></h2>\n<p><span>Looking ahead, Moynihan said Bank of America will continue to allocate capital toward technology and talent that support \u201cresponsible growth.\u201d</span></p>\n<p><span>\u201cEverything we discussed today \u2014 our platforms, our talent, our technology \u2014 has taken years of development and billions of dollars of investment,\u201d he said. The bank plans to sustain that pace, using scale to extend digital reach, strengthen risk management, and improve returns.</span></p>\n<p><span>\u201cNew technologies may give us new possibilities to continue to do that in ways we haven\u2019t done before,\u201d he told investors.</span></p>\n<h2><b><span>Consumer and Corporate Strength</span></b></h2>\n<p><span>Moynihan also linked the bank\u2019s digital momentum to broader business performance. Consumer spending in Bank of America accounts rose 6% year-over-year in October, and deposit growth remains strong across retail and business clients.</span></p>\n<p><span>\u201cOur business is anchored by being the core to our customers\u2019 daily lives,\u201d he said. \u201cThat position gives us deep insights into what they\u2019re doing, allowing us to serve them holistically and grow relationships over time.\u201d</span></p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/artificial-intelligence-2/2025/bank-of-america-ceo-says-ai-is-transforming-how-banks-work/\">Bank of America CEO Says AI Is Transforming How Banks Work</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
+    "image_url": "https://www.pymnts.com/wp-content/uploads/2025/11/bank-of-america-ai-artificial-intelligence-bofa-digital-banking.jpg?w=457",
+    "summary_text": "The technology landscape for banks is shifting fast, and Bank of America CEO Brian Moynihan said the firm\u2019s response is to build for both scale and intelligence. Speaking at the bank\u2019s investor day on Nov. 5, he said decades of steady digital investment have ...",
+    "category": "fintech",
+    "_trending_tags": [
+      "ai"
+    ],
+    "_permalink": "/p/55a9a59feb/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/55a9a59feb/",
+    "_summary_240": "The technology landscape for banks is shifting fast, and Bank of America CEO Brian Moynihan said the firm\u2019s response is to build for both scale and intelligence. Speaking at the...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/55a9a59feb/thumbnail.png"
+  },
+  {
+    "title": "US lawmakers to meet with Trump\u2019s crypto czar, discuss bill: Report",
+    "url": "https://cointelegraph.com/news/white-house-david-sacks-market-structure-shutdown?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "published_at": "2025-11-05T16:38:56-05:00",
+    "source": "Cointelegraph",
+    "summary": "Some experts suggest that the US Senate is more likely to pass a funding bill to reopen the government before any crypto legislation.",
+    "content_html": "",
+    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTEvMDE5YTU1OTUtM2E4MS03NGZmLTkyNGUtZGZiNGVhNDc1MzRk.jpg",
+    "summary_text": "Some experts suggest that the US Senate is more likely to pass a funding bill to reopen the government before any crypto legislation.",
+    "category": "fintech",
+    "_permalink": "/p/86a0626ad8/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/86a0626ad8/",
+    "_summary_240": "Some experts suggest that the US Senate is more likely to pass a funding bill to reopen the government before any crypto legislation.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/86a0626ad8/thumbnail.png"
+  },
+  {
     "title": "Robinhood Crypto Revenues Miss Estimates, CFO Leaving in Q1",
     "url": "https://www.bloomberg.com/news/articles/2025-11-05/robinhood-crypto-revenues-jump-but-still-miss-analyst-estimates",
     "published_at": "2025-11-05T16:19:07-05:00",
@@ -573,24 +698,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/f80821def0/",
     "_summary_240": "The post Beware of double agents: How AI can fortify \u2014 or fracture \u2014 your cybersecurity appeared first on Source .",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/f80821def0/thumbnail.png"
-  },
-  {
-    "title": "Here\u2019s what happened in crypto today",
-    "url": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-    "published_at": "2025-11-05T08:21:08-05:00",
-    "source": "Cointelegraph",
-    "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, NFTs, Web3 and crypto regulation.",
-    "content_html": "",
-    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMDYvMDE5Nzk0MjMtZWY4ZS03YzYwLWI5MzctYjlkZGY3NWZlOGFk.jpg",
-    "summary_text": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, NFTs, Web3 and crypto regulation.",
-    "category": "fintech",
-    "_trending_tags": [
-      "ai"
-    ],
-    "_permalink": "/p/337fd064df/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/337fd064df/",
-    "_summary_240": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, NFTs, Web3 and crypto regulation.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/337fd064df/thumbnail.png"
   },
   {
     "title": "Khosla Ventures and Kleiner Perkins Back AI Startup Reevo",
@@ -1234,27 +1341,6 @@
     "_trending_tags": [
       "ai"
     ]
-  },
-  {
-    "title": "US allows Microsoft to ship Nvidia AI chips to use in UAE for first time",
-    "url": "https://www.ft.com/content/03b30ba3-d0c6-4f63-92f8-077fcd8dc472",
-    "published_at": "2025-11-03T07:29:52-05:00",
-    "source": "Financial Times - Technology",
-    "summary": "Commerce department approval paves way for huge new investment in AI and cloud infrastructure in Middle East",
-    "content_html": "",
-    "image_url": "https://images.ft.com/v3/image/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F5a1539c2-be63-4a5a-a878-46e73601b3e9.jpg?source=next-article&fit=scale-down&quality=highest&width=700&dpr=1",
-    "summary_text": "Commerce department approval paves way for huge new investment in AI and cloud infrastructure in Middle East",
-    "category": "ai",
-    "_trending_tags": [
-      "ai",
-      "cloud",
-      "microsoft",
-      "nvidia"
-    ],
-    "_permalink": "/p/70a17ceab4/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/70a17ceab4/",
-    "_summary_240": "Commerce department approval paves way for huge new investment in AI and cloud infrastructure in Middle East",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/70a17ceab4/thumbnail.png"
   },
   {
     "title": "Meet Denario, the AI \u2018research assistant\u2019 that is already getting its own papers published",
