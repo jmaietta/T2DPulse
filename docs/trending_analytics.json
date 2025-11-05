@@ -1,11 +1,11 @@
 {
-  "generated_at": "2025-11-05T08:51:31.469229-05:00",
+  "generated_at": "2025-11-05T09:25:04.369911-05:00",
   "total_keywords": 30,
   "keyword_counts": {
-    "ai": 138,
+    "ai": 142,
+    "agent": 15,
     "openai": 15,
-    "agent": 13,
-    "google": 13,
+    "google": 14,
     "fintech": 9,
     "microsoft": 8,
     "cloud": 7,
