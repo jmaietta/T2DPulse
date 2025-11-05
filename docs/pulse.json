@@ -1,5 +1,72 @@
 [
   {
+    "title": "Saga of Chinese Trucking Firm Exposes US National Security Gaps",
+    "url": "https://www.bloomberg.com/news/features/2025-11-05/chinese-self-driving-truck-saga-shows-risks-to-us-national-security",
+    "published_at": "2025-11-05T18:01:05-05:00",
+    "source": "Bloomberg Technology",
+    "summary": "American officials thought they\u2019d secured a deal with TuSimple to protect autonomous-driving technology. It didn\u2019t work.",
+    "content_html": "TuSimple's vehicles were meant to transport freight autonomously on highways and surface streets.",
+    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iuITuPl8Hkc0/v1/1200x-1.jpg",
+    "summary_text": "American officials thought they\u2019d secured a deal with TuSimple to protect autonomous-driving technology. It didn\u2019t work.",
+    "category": "fintech",
+    "_permalink": "/p/973ec157d9/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/973ec157d9/",
+    "_summary_240": "American officials thought they\u2019d secured a deal with TuSimple to protect autonomous-driving technology. It didn\u2019t work.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/973ec157d9/thumbnail.png"
+  },
+  {
+    "title": "5 AI-developed malware families analyzed by Google fail to work and are easily detected",
+    "url": "https://arstechnica.com/security/2025/11/ai-generated-malware-poses-little-real-world-threat-contrary-to-hype/",
+    "published_at": "2025-11-05T18:00:46-05:00",
+    "source": "Ars Technica",
+    "summary": "You wouldn't know it from the hype, but the results fail to impress.",
+    "content_html": "<p>Google on Wednesday revealed five recent malware samples that were built using generative AI. The end results of each one were far below par with professional malware development, a finding that shows that vibe coding of malicious wares lags behind more traditional forms of development, which means it still has a long way to go before it poses a real-world threat.</p>\n<p>One of the samples, for instance, tracked under the name PromptLock, was part of an\u00a0<a href=\"https://arxiv.org/abs/2508.20444v1\">academic study</a> analyzing how effective the use of large language models can be \u201cto autonomously plan, adapt, and execute the ransomware attack lifecycle.\u201d The researchers, however, reported the malware had \u201cclear limitations: it omits persistence, lateral movement, and advanced evasion tactics\u201d and served as little more than a demonstration of the feasibility of AI for such purposes. Prior to the paper\u2019s release, security firm ESET said it had discovered the sample and <a href=\"https://www.eset.com/us/about/newsroom/research/eset-discovers-promptlock-the-first-ai-powered-ransomware/\">hailed</a> it as \u201cthe first AI-powered ransomware.\u201d</p>\n<h2>Don\u2019t believe the hype</h2>\n<p>Like the other four samples Google analyzed\u2014FruitShell, PromptFlux, PromptSteal, and QuietVault\u2014PromptLock was easy to detect, even by less-sophisticated endpoint protections that rely on static signatures. All samples also employed previously seen methods in malware samples, making them easy to counteract. They also had no operational impact, meaning they didn\u2019t require defenders to adopt new defenses.</p><p><a href=\"https://arstechnica.com/security/2025/11/ai-generated-malware-poses-little-real-world-threat-contrary-to-hype/\">Read full article</a></p>\n<p><a href=\"https://arstechnica.com/security/2025/11/ai-generated-malware-poses-little-real-world-threat-contrary-to-hype/#comments\">Comments</a></p>",
+    "image_url": "https://cdn.arstechnica.net/wp-content/uploads/2025/05/malware-threat-1000x648.jpg",
+    "summary_text": "You wouldn't know it from the hype, but the results fail to impress.",
+    "category": "fintech",
+    "_trending_tags": [
+      "ai",
+      "google"
+    ],
+    "_permalink": "/p/20039efd0a/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/20039efd0a/",
+    "_summary_240": "You wouldn't know it from the hype, but the results fail to impress.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/20039efd0a/thumbnail.png"
+  },
+  {
+    "title": "Senate Bill Would Require Quarterly Reports on the Job Effects of AI",
+    "url": "https://www.pymnts.com/artificial-intelligence-2/2025/senate-bill-would-require-quarterly-reports-on-the-job-effects-of-ai/",
+    "published_at": "2025-11-05T17:41:16-05:00",
+    "source": "PYMNTS",
+    "summary": "A bill that is set to be introduced in the Senate would require major companies and federal agencies to report artificial intelligence-related layoffs, hires, job displacements, retraining and other job effects to the Department of Labor (DOL). The bill would also require the DOL to compile data on AI-related job effects and publish a [\u2026] The post Senate Bill Would Require Quarterly Reports on th...",
+    "content_html": "<p><span>A bill that is set to be introduced in the Senate would require major companies and federal agencies to report artificial intelligence-related layoffs, hires, job displacements, retraining </span><span>and</span><span> other job effects to the </span><a class=\"editor-rtfLink\" href=\"https://www.dol.gov/\" rel=\"noopener\" target=\"_blank\"><span>Department of Labor</span></a> (DOL)<span>.</span></p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p><span>The bill would also require the DOL to compile data on AI-related job effects and publish a report to Congress and the public, according to a </span><a class=\"editor-rtfLink\" href=\"https://www.hawley.senate.gov/hawley-warner-to-introduce-bipartisan-legislation-revealing-number-of-jobs-lost-to-ai/\" rel=\"noopener\" target=\"_blank\"><span>press release</span></a><span> issued Wednesday (Nov. 5) by the bill\u2019s sponsors.</span></p>\n<p><span>The sponsors, Sens. </span><a class=\"editor-rtfLink\" href=\"https://www.hawley.senate.gov/\" rel=\"noopener\" target=\"_blank\"><span>Josh Hawley</span></a>,<span> R-Mo., and </span><a class=\"editor-rtfLink\" href=\"https://www.warner.senate.gov/public/\" rel=\"noopener\" target=\"_blank\"><span>Mark Warner</span></a>,<span> D-Va., said in the release that they will introduce the </span><a class=\"editor-rtfLink\" href=\"https://www.hawley.senate.gov/wp-content/uploads/2025/11/AI-Related-Job-Impacts-Clarity-Act.pdf\" rel=\"noopener\" target=\"_blank\"><span>AI-Related Job Impacts Clarity Act</span></a><span>.</span></p>\n<p><span>Organizations would be required to report, and the DOL would be required to publish, this data quarterly, per the bill.</span></p>\n<p><span>\u201cArtificial intelligence is already replacing American workers, and experts project AI could drive unemployment up to 10-20% in the next five years,\u201d Hawley said in the release. \u201cThe American people need to have an accurate understanding of how AI is affecting our workforce, so we can ensure that AI works for the people, not the other way around.\u201d</span></p>\n<p><span>Warner said in the release: \u201cGood policy starts with good data. This bipartisan legislation will finally give us a clear picture of AI\u2019s impact on the workforce \u2014 what jobs are being eliminated, which workers are being retrained, and where new opportunities are emerging. Armed with this information, we can make sure AI drives opportunity instead of leaving workers behind.\u201d</span></p>\n<p><span>The PYMNTS Intelligence report \u201c</span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/study_posts/generation-ai-why-gen-z-bets-big-and-boomers-hold-back\" rel=\"noopener\" target=\"_blank\"><span>Generation AI: Why Gen Z Bets Big and Boomers Hold Back</span></a><span>\u201d found that among people who use generative AI, 33% are concerned that the technology might cause people to lose their jobs.</span></p>\n<p><span>That concern is highest among Generation Z, with 38% of the gen AI users in that age group worried about the impact on employment. </span><span>The report said Gen Z users hold or seek </span><span>the kinds of</span><span> entry-level jobs that </span><span>the</span><span> technology can most easily replace.</span></p>\n<p><span>PYMNTS reported in September that there is a debate over the potential impact of AI on </span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/artificial-intelligence-2/2025/ais-great-jobs-debate-requires-a-history-lesson/\" rel=\"noopener\" target=\"_blank\"><span>jobs</span></a><span>. The forecasts range from </span><a class=\"editor-rtfLink\" href=\"https://openai.com/\" rel=\"noopener\" target=\"_blank\"><span>OpenAI</span></a><span> CEO </span><a class=\"editor-rtfLink\" href=\"https://blog.samaltman.com/\" rel=\"noopener\" target=\"_blank\"><span>Sam Altman</span></a><span>\u2019s statement that the technology could displace 70% of all jobs, to a report by economists, including former Treasury Secretary </span><a class=\"editor-rtfLink\" href=\"https://www.hks.harvard.edu/faculty/lawrence-h-summers\" rel=\"noopener\" target=\"_blank\"><span>Lawrence Summers</span></a><span>, that said it is \u201clikely too early to assess its full impacts.\u201d</span></p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/artificial-intelligence-2/2025/senate-bill-would-require-quarterly-reports-on-the-job-effects-of-ai/\">Senate Bill Would Require Quarterly Reports on the Job Effects of AI</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
+    "image_url": "https://www.pymnts.com/wp-content/uploads/2025/11/Senate-AI-jobs.jpg?w=457",
+    "summary_text": "A bill that is set to be introduced in the Senate would require major companies and federal agencies to report artificial intelligence-related layoffs, hires, job displacements, retraining and other job effects to the Department of Labor (DOL). The bill would...",
+    "category": "ai",
+    "_trending_tags": [
+      "ai"
+    ],
+    "_permalink": "/p/c10766322a/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/c10766322a/",
+    "_summary_240": "A bill that is set to be introduced in the Senate would require major companies and federal agencies to report artificial intelligence-related layoffs, hires, job displacements,...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/c10766322a/thumbnail.png"
+  },
+  {
+    "title": "Fortinet Falls as Largest Revenue Segment Misses Estimates",
+    "url": "https://www.bloomberg.com/news/articles/2025-11-05/fortinet-falls-as-largest-revenue-segment-misses-estimates",
+    "published_at": "2025-11-05T17:25:21-05:00",
+    "source": "Bloomberg Technology",
+    "summary": "The cybersecurity company Fortinet Inc. sank as revenue in its service segment missed expectations.",
+    "content_html": "A device designed to detect hacks manufactured by cybersecurity firm Fortinet is seen on display during the company's Informational Security Carnival in Taipei on November 23, 2023. (Photo by I-Hwa CHENG / AFP) (Photo by I-HWA CHENG/AFP via Getty Images)",
+    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ibklqs2XmU1M/v1/1200x-1.jpg",
+    "summary_text": "The cybersecurity company Fortinet Inc. sank as revenue in its service segment missed expectations.",
+    "category": "fintech",
+    "_permalink": "/p/d4d653009c/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/d4d653009c/",
+    "_summary_240": "The cybersecurity company Fortinet Inc. sank as revenue in its service segment missed expectations.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/d4d653009c/thumbnail.png"
+  },
+  {
     "title": "New York Tech Sector Prepares for Mayor-Elect Mamdani | Bloomberg Tech 11/5/2025",
     "url": "https://www.bloomberg.com/news/videos/2025-11-05/bloomberg-tech-11-5-2025-video",
     "published_at": "2025-11-05T17:16:22-05:00",
@@ -39,7 +106,7 @@
   },
   {
     "title": "Franklin Templeton brings tokenized USD money market fund to Hong Kong",
-    "url": "https://cointelegraph.com/news/franklin-templeton-tokenized-usd-money-market-fund-hong-kong?utm_source=rss_feed&utm_medium=rss%3Fnc%3D1762382274930%26ttt%3D1762382274930%26timestamp%3D1762382274930&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/franklin-templeton-tokenized-usd-money-market-fund-hong-kong?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
     "published_at": "2025-11-05T16:59:56-05:00",
     "source": "Cointelegraph",
     "summary": "The launch marks Franklin Templeton\u2019s latest step into digital assets, introducing a blockchain-based UCITS fund as Hong Kong accelerates its push toward real-world asset tokenization.",
@@ -50,14 +117,14 @@
     "_trending_tags": [
       "ai"
     ],
-    "_permalink": "/p/6f3944e6d5/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/6f3944e6d5/",
+    "_permalink": "/p/c42cebda9c/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/c42cebda9c/",
     "_summary_240": "The launch marks Franklin Templeton\u2019s latest step into digital assets, introducing a blockchain-based UCITS fund as Hong Kong accelerates its push toward real-world asset...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/6f3944e6d5/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/c42cebda9c/thumbnail.png"
   },
   {
     "title": "Here\u2019s what happened in crypto today",
-    "url": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss%3Fnc%3D1762382274930%26ttt%3D1762382274930%26timestamp%3D1762382274930&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
     "published_at": "2025-11-05T16:56:14-05:00",
     "source": "Cointelegraph",
     "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, NFTs, Web3 and crypto regulation.",
@@ -68,10 +135,10 @@
     "_trending_tags": [
       "ai"
     ],
-    "_permalink": "/p/6e31dcc607/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/6e31dcc607/",
+    "_permalink": "/p/15f58ff118/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/15f58ff118/",
     "_summary_240": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, NFTs, Web3 and crypto regulation.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/6e31dcc607/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/15f58ff118/thumbnail.png"
   },
   {
     "title": "LendingClub Partners With Wisetack and Enters Home Improvement Financing Market",
@@ -93,7 +160,7 @@
   },
   {
     "title": "UK ruling in Getty Images' AI lawsuit leaves key IP questions unanswered",
-    "url": "https://cointelegraph.com/news/uk-ruling-getty-images-ai-lawsuit-ip?utm_source=rss_feed&utm_medium=rss%3Fnc%3D1762382274930%26ttt%3D1762382274930%26timestamp%3D1762382274930&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/uk-ruling-getty-images-ai-lawsuit-ip?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
     "published_at": "2025-11-05T16:53:55-05:00",
     "source": "Cointelegraph",
     "summary": "The mixed ruling was claimed as a victory by both Stability AI and Getty Images, muddying the legal waters around AI and intellectual property.",
@@ -104,10 +171,10 @@
     "_trending_tags": [
       "ai"
     ],
-    "_permalink": "/p/3ecb45e317/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/3ecb45e317/",
+    "_permalink": "/p/b02e4a106a/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/b02e4a106a/",
     "_summary_240": "The mixed ruling was claimed as a victory by both Stability AI and Getty Images, muddying the legal waters around AI and intellectual property.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/3ecb45e317/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/b02e4a106a/thumbnail.png"
   },
   {
     "title": "Bank of America CEO Says AI Is Transforming How Banks Work",
@@ -129,7 +196,7 @@
   },
   {
     "title": "US lawmakers to meet with Trump\u2019s crypto czar, discuss bill: Report",
-    "url": "https://cointelegraph.com/news/white-house-david-sacks-market-structure-shutdown?utm_source=rss_feed&utm_medium=rss%3Fnc%3D1762382274930%26ttt%3D1762382274930%26timestamp%3D1762382274930&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/white-house-david-sacks-market-structure-shutdown?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
     "published_at": "2025-11-05T16:38:56-05:00",
     "source": "Cointelegraph",
     "summary": "Some experts suggest that the US Senate is more likely to pass a funding bill to reopen the government before any crypto legislation.",
@@ -137,10 +204,10 @@
     "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTEvMDE5YTU1OTUtM2E4MS03NGZmLTkyNGUtZGZiNGVhNDc1MzRk.jpg",
     "summary_text": "Some experts suggest that the US Senate is more likely to pass a funding bill to reopen the government before any crypto legislation.",
     "category": "fintech",
-    "_permalink": "/p/bfa87ee5d1/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/bfa87ee5d1/",
+    "_permalink": "/p/86a0626ad8/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/86a0626ad8/",
     "_summary_240": "Some experts suggest that the US Senate is more likely to pass a funding bill to reopen the government before any crypto legislation.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/bfa87ee5d1/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/86a0626ad8/thumbnail.png"
   },
   {
     "title": "Robinhood Crypto Revenues Miss Estimates, CFO Leaving in Q1",
@@ -172,7 +239,11 @@
     "category": "software",
     "_trending_tags": [
       "ai"
-    ]
+    ],
+    "_permalink": "/p/787f477ac4/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/787f477ac4/",
+    "_summary_240": "Figma Inc., a design software company that went public earlier this year, gave a better-than-expected quarterly outlook for revenue and profit, touting the adoption of new...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/787f477ac4/thumbnail.png"
   },
   {
     "title": "Arm Gives Bullish Forecast, Pointing Toward AI Demand Surge",
@@ -224,7 +295,11 @@
     "_trending_tags": [
       "ai",
       "openai"
-    ]
+    ],
+    "_permalink": "/p/12f3998b13/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/12f3998b13/",
+    "_summary_240": "House Judiciary Committee Chair Jim Jordan sent a subpoena to OpenAI Chief Executive Officer Sam Altman demanding information on the artificial intelligence startup\u2019s engagement...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/12f3998b13/thumbnail.png"
   },
   {
     "title": "The AI Data Center Boom Is Warping the US Economy",
@@ -407,25 +482,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/42913a3e19/thumbnail.png"
   },
   {
-    "title": "Google Identifies New Forms of AI-Powered Cyberattacks",
-    "url": "https://www.pymnts.com/google/2025/google-identifies-new-forms-of-ai-powered-cyberattacks/",
-    "published_at": "2025-11-05T14:21:15-05:00",
-    "source": "PYMNTS",
-    "summary": "State-sponsored threat fraudsters have developed malware powered by artificial intelligence (AI) that can not only generate malicious scripts but also \u201cchange its code on the fly\u201d to get around detection systems, Google Threat Intelligence Group (GTIG) said in a Wednesday (Nov. 5) blog post. GTIG said in a report released Wednesday that this is [\u2026] The post Google Identifies New Forms of AI-Power...",
-    "content_html": "<p><span>State-sponsored threat fraudsters have developed malware powered by artificial intelligence (AI) that can not only generate malicious scripts but also \u201cchange its code on the fly\u201d to get around detection systems, </span><a href=\"https://about.google/\" rel=\"noopener\" target=\"_blank\"><span>Google</span></a><span> Threat Intelligence Group (GTIG) said in a Wednesday (Nov. 5) </span><a href=\"https://blog.google/technology/safety-security/google-threat-intelligence-group-report-ai-november-2025/\" rel=\"noopener\" target=\"_blank\"><span>blog post</span></a><span>.</span></p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p><span>GTIG said in a </span><a href=\"https://cloud.google.com/blog/topics/threat-intelligence/threat-actor-usage-of-ai-tools\" rel=\"noopener\" target=\"_blank\"><span>report</span></a><span> released Wednesday that this is the first time it has seen malware families use large language models during execution.</span></p>\n<p><span>\u201cWhile still nascent, this represents a significant step toward more autonomous and adaptive malware,\u201d the report said.</span></p>\n<p><span>This is one example of the ways threat actors are using AI not only for productivity gains but also for \u201cnovel AI-enabled operations,\u201d GTIG said in its blog post.</span></p>\n<p><span>The criminal groups are also using pretexts like posing as a student or researcher in prompts to bypass AI safety guardrails and extract restricted information, and they are using underground digital markets to access AI tools for phishing, malware and vulnerability research, according to the post.</span></p>\n<p><span>\u201cAt Google, we are committed to developing AI responsibly and take proactive steps to disrupt malicious activity by disabling the projects and accounts associated with bad actors, while continuously improving our models to make them less susceptible to misuse,\u201d the company said in the report. \u201cWe also proactively share industry best practices to arm defenders and enable stronger protections across the ecosystem.\u201d</span></p>\n<p><span>PYMNTS reported Monday (Nov. 3) that AI has become both a tool and a target when it comes to </span><a href=\"https://www.pymnts.com/artificial-intelligence-2/2025/ai-becomes-both-tool-and-target-in-cybersecurity/\" rel=\"noopener\" target=\"_blank\"><span>cybersecurity</span></a><span>. For example, </span><a href=\"https://www.csoonline.com/article/4079887/top-7-agentic-ai-use-cases-for-cybersecurity.html\" rel=\"noopener\" target=\"_blank\"><span>CSO.com</span></a><span> said that agentic AI is emerging as a transformative force in cybersecurity because it can process data continuously and react in real time to detect, contain and neutralize threats at a scale and speed that human teams cannot match.</span></p>\n<p><span>It was also reported Monday that tech companies are increasing their efforts to combat a </span><a href=\"https://www.pymnts.com/artificial-intelligence-2/2025/tech-giants-tackle-major-ai-security-threat/\" rel=\"noopener\" target=\"_blank\"><span>security flaw</span></a><span> in their AI models. The companies are focused on stopping indirect prompt injection attacks in which a third party hides commands inside a website or email to trick AI models into turning over unauthorized information.</span></p>\n<p><span>The PYMNTS Intelligence report \u201c</span><a href=\"https://www.pymnts.com/study_posts/coos-leverage-genai-to-reduce-data-security-losses/\" rel=\"noopener\" target=\"_blank\"><span>COOs Leverage AI to Reduce Data Security Losses</span></a><span>\u201d found that chief operating officers are adopting generative AI-driven solutions to improve </span><a href=\"https://www.pymnts.com/cybersecurity/2025/55-of-companies-have-implemented-ai-powered-cybersecurity/\"><span>cybersecurity</span></a><span> management at a time when companies face the threat of cyberattacks that are growing more sophisticated.</span></p>\n<p><i><span>For all PYMNTS AI coverage, subscribe to the daily </span></i><a href=\"https://pymnts.com/subscribe/\" rel=\"noopener\" target=\"_blank\"><i><span>AI Newsletter</span></i></a><i><span>.</span></i></p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/google/2025/google-identifies-new-forms-of-ai-powered-cyberattacks/\">Google Identifies New Forms of AI-Powered Cyberattacks</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
-    "image_url": "https://www.pymnts.com/wp-content/uploads/2025/11/google-cybersecurity-cyberattacks-ai-artificial-intelligence-security.jpg?w=457",
-    "summary_text": "State-sponsored threat fraudsters have developed malware powered by artificial intelligence (AI) that can not only generate malicious scripts but also \u201cchange its code on the fly\u201d to get around detection systems, Google Threat Intelligence Group (GTIG) said i...",
-    "category": "fintech",
-    "_trending_tags": [
-      "ai",
-      "google"
-    ],
-    "_permalink": "/p/7cc436bf5e/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/7cc436bf5e/",
-    "_summary_240": "State-sponsored threat fraudsters have developed malware powered by artificial intelligence (AI) that can not only generate malicious scripts but also \u201cchange its code on the...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/7cc436bf5e/thumbnail.png"
-  },
-  {
     "title": "Magentic Marketplace: An open-source simulation environment for studying agentic markets",
     "url": "https://www.microsoft.com/en-us/research/blog/magentic-marketplace-an-open-source-simulation-environment-for-studying-agentic-markets/",
     "published_at": "2025-11-05T14:04:07-05:00",
@@ -463,7 +519,7 @@
   },
   {
     "title": "Self-custody meets KYC: Tangem launches Visa payments with Paera",
-    "url": "https://cointelegraph.com/news/tangem-wallet-visa-card-payments-kyc-self-custody?utm_source=rss_feed&utm_medium=rss%3Fnc%3D1762382274930%26ttt%3D1762382274930%26timestamp%3D1762382274930&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/tangem-wallet-visa-card-payments-kyc-self-custody?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
     "published_at": "2025-11-05T13:55:00-05:00",
     "source": "Cointelegraph",
     "summary": "Tangem Pay enables users to spend Circle\u2019s USDC stablecoin worldwide through a virtual Visa card that connects directly to Tangem\u2019s self-custodial hardware wallet.",
@@ -471,10 +527,10 @@
     "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMDUvMDE5NmFhZjYtMTViNS03MWJhLWIzMWYtOWZhYmVkMzkyYzdi.jpg",
     "summary_text": "Tangem Pay enables users to spend Circle\u2019s USDC stablecoin worldwide through a virtual Visa card that connects directly to Tangem\u2019s self-custodial hardware wallet.",
     "category": "fintech",
-    "_permalink": "/p/c01c5c9eb7/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/c01c5c9eb7/",
+    "_permalink": "/p/fdb8d937c1/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/fdb8d937c1/",
     "_summary_240": "Tangem Pay enables users to spend Circle\u2019s USDC stablecoin worldwide through a virtual Visa card that connects directly to Tangem\u2019s self-custodial hardware wallet.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/c01c5c9eb7/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/fdb8d937c1/thumbnail.png"
   },
   {
     "title": "Dollar Faces Risk of 2000s\u2019 Boom-and-Bust 40% Decline, RBC Warns",
@@ -530,7 +586,7 @@
   },
   {
     "title": "Bitcoin supply held at loss rises to 2024 level: Can BTC recover before 2025 ends?",
-    "url": "https://cointelegraph.com/news/bitcoin-supply-held-at-loss-rises-to-2024-level-can-btc-recover-before-2025-ends?utm_source=rss_feed&utm_medium=rss%3Fnc%3D1762382274930%26ttt%3D1762382274930%26timestamp%3D1762382274930&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/bitcoin-supply-held-at-loss-rises-to-2024-level-can-btc-recover-before-2025-ends?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
     "published_at": "2025-11-05T13:20:00-05:00",
     "source": "Cointelegraph",
     "summary": "With a third of Bitcoin held at a loss, onchain data suggested that the market may be nearing a critical reset phase. Will BTC end the year above its range highs?",
@@ -541,10 +597,10 @@
     "_trending_tags": [
       "ai"
     ],
-    "_permalink": "/p/577bfe47fb/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/577bfe47fb/",
+    "_permalink": "/p/3c299acfdc/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/3c299acfdc/",
     "_summary_240": "With a third of Bitcoin held at a loss, onchain data suggested that the market may be nearing a critical reset phase. Will BTC end the year above its range highs?",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/577bfe47fb/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/3c299acfdc/thumbnail.png"
   },
   {
     "title": "Securing critical infrastructure: Why Europe\u2019s risk-based regulations matter",
@@ -580,7 +636,7 @@
   },
   {
     "title": "How to turn ChatGPT into your personal crypto trading assistant",
-    "url": "https://cointelegraph.com/news/how-to-turn-chatgpt-into-your-personal-crypto-trading-assistant?utm_source=rss_feed&utm_medium=rss%3Fnc%3D1762382274930%26ttt%3D1762382274930%26timestamp%3D1762382274930&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/how-to-turn-chatgpt-into-your-personal-crypto-trading-assistant?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
     "published_at": "2025-11-05T12:26:45-05:00",
     "source": "Cointelegraph",
     "summary": "With the right workflow, data feeds and prompts, ChatGPT can generate structured market summaries, flag risk clusters and support smarter decision-making.",
@@ -592,10 +648,10 @@
       "chatgpt",
       "gpt"
     ],
-    "_permalink": "/p/35af20beb5/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/35af20beb5/",
+    "_permalink": "/p/2dbc52e84a/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/2dbc52e84a/",
     "_summary_240": "With the right workflow, data feeds and prompts, ChatGPT can generate structured market summaries, flag risk clusters and support smarter decision-making.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/35af20beb5/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/2dbc52e84a/thumbnail.png"
   },
   {
     "title": "Google makes it easier to access AI Mode in Chrome on iOS and Android",
@@ -674,7 +730,7 @@
   },
   {
     "title": "Three things that must happen for Bitcoin to avoid the bear market",
-    "url": "https://cointelegraph.com/news/three-things-that-must-happen-bitcoin-avoid-bear-market?utm_source=rss_feed&utm_medium=rss%3Fnc%3D1762382274930%26ttt%3D1762382274930%26timestamp%3D1762382274930&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/three-things-that-must-happen-bitcoin-avoid-bear-market?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
     "published_at": "2025-11-05T09:12:52-05:00",
     "source": "Cointelegraph",
     "summary": "Bitcoin must hold above its 200-week EMA, await Fed\u2019s stealth QE and see US liquidity return post-shutdown to avoid a deeper bear market.",
@@ -685,10 +741,10 @@
     "_trending_tags": [
       "ai"
     ],
-    "_permalink": "/p/cbad6df0cb/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/cbad6df0cb/",
+    "_permalink": "/p/0b54371a5a/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/0b54371a5a/",
     "_summary_240": "Bitcoin must hold above its 200-week EMA, await Fed\u2019s stealth QE and see US liquidity return post-shutdown to avoid a deeper bear market.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/cbad6df0cb/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/0b54371a5a/thumbnail.png"
   },
   {
     "title": "Beware of double agents: How AI can fortify \u2014 or fracture \u2014 your cybersecurity",
@@ -807,7 +863,7 @@
   },
   {
     "title": "NFTs hit the brakes: Market cap tanks 46% in just 30 days",
-    "url": "https://cointelegraph.com/news/nfts-hit-the-brakes-market-cap-drops-46-in-30-days?utm_source=rss_feed&utm_medium=rss%3Fnc%3D1762382274930%26ttt%3D1762382274930%26timestamp%3D1762382274930&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/nfts-hit-the-brakes-market-cap-drops-46-in-30-days?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
     "published_at": "2025-11-05T05:25:06-05:00",
     "source": "Cointelegraph",
     "summary": "CoinGecko data shows the NFT market value has nearly halved in a month, with even top collections like BAYC and CryptoPunks losing ground.",
@@ -815,14 +871,14 @@
     "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMDUvMDE5NjlkYTMtYWEzZS03M2Y4LWJjN2UtNDUzZjRhYmE1Zjdi.jpg",
     "summary_text": "CoinGecko data shows the NFT market value has nearly halved in a month, with even top collections like BAYC and CryptoPunks losing ground.",
     "category": "fintech",
-    "_permalink": "/p/53bf241f5b/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/53bf241f5b/",
+    "_permalink": "/p/e7df0bad27/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/e7df0bad27/",
     "_summary_240": "CoinGecko data shows the NFT market value has nearly halved in a month, with even top collections like BAYC and CryptoPunks losing ground.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/53bf241f5b/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/e7df0bad27/thumbnail.png"
   },
   {
     "title": "Bitcoin is infrastructure, not digital gold",
-    "url": "https://cointelegraph.com/news/bitcoin-is-infrastructure?utm_source=rss_feed&utm_medium=rss%3Fnc%3D1762382274930%26ttt%3D1762382274930%26timestamp%3D1762382274930&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/bitcoin-is-infrastructure?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
     "published_at": "2025-11-05T03:30:00-05:00",
     "source": "Cointelegraph",
     "summary": "Bitcoin\u2019s true potential lies in its infrastructure role as productive capital, not just a digital store of value like gold.",
@@ -830,14 +886,14 @@
     "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTAvMDE5YTEwMjAtYTY1OS03MDBhLTk1NDEtN2Q5ZjZlZmNjYjJh.jpg",
     "summary_text": "Bitcoin\u2019s true potential lies in its infrastructure role as productive capital, not just a digital store of value like gold.",
     "category": "fintech",
-    "_permalink": "/p/318344d71b/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/318344d71b/",
+    "_permalink": "/p/2795371d64/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/2795371d64/",
     "_summary_240": "Bitcoin\u2019s true potential lies in its infrastructure role as productive capital, not just a digital store of value like gold.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/318344d71b/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/2795371d64/thumbnail.png"
   },
   {
     "title": "Are you a freelancer? North Korean spies may be using you",
-    "url": "https://cointelegraph.com/news/freelancer-north-korean-spies-may-using-you?utm_source=rss_feed&utm_medium=rss%3Fnc%3D1762382274930%26ttt%3D1762382274930%26timestamp%3D1762382274930&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/freelancer-north-korean-spies-may-using-you?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
     "published_at": "2025-11-05T03:25:33-05:00",
     "source": "Cointelegraph",
     "summary": "North Korea is recruiting freelancers as identity proxies to score remote contracts and bank accounts, according to new cyber intelligence research.",
@@ -848,14 +904,14 @@
     "_trending_tags": [
       "ai"
     ],
-    "_permalink": "/p/95584a2ff2/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/95584a2ff2/",
+    "_permalink": "/p/732402bd09/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/732402bd09/",
     "_summary_240": "North Korea is recruiting freelancers as identity proxies to score remote contracts and bank accounts, according to new cyber intelligence research.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/95584a2ff2/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/732402bd09/thumbnail.png"
   },
   {
     "title": "Bitcoin and Ether ETFs bleed as Solana quietly pulls in \u2018curious capital\u2019",
-    "url": "https://cointelegraph.com/news/bitcoin-ether-etf-outflows-deepen-solana-inflows-rise?utm_source=rss_feed&utm_medium=rss%3Fnc%3D1762382274930%26ttt%3D1762382274930%26timestamp%3D1762382274930&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/bitcoin-ether-etf-outflows-deepen-solana-inflows-rise?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
     "published_at": "2025-11-05T02:57:33-05:00",
     "source": "Cointelegraph",
     "summary": "Solana ETFs extended their winning streak to six days, attracting fresh inflows even as Bitcoin and Ether funds faced heavy redemptions totaling nearly $800 million.",
@@ -863,10 +919,10 @@
     "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTEvMDE5YTUyZjgtZTM2Yi03NzYyLTgyZTctMjA4ZGZkMGNjY2Rh.jpg",
     "summary_text": "Solana ETFs extended their winning streak to six days, attracting fresh inflows even as Bitcoin and Ether funds faced heavy redemptions totaling nearly $800 million.",
     "category": "fintech",
-    "_permalink": "/p/610f40056f/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/610f40056f/",
+    "_permalink": "/p/83fe5ad424/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/83fe5ad424/",
     "_summary_240": "Solana ETFs extended their winning streak to six days, attracting fresh inflows even as Bitcoin and Ether funds faced heavy redemptions totaling nearly $800 million.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/610f40056f/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/83fe5ad424/thumbnail.png"
   },
   {
     "title": "Google, Epic Games Settle Long Legal Fight Over App Store",
