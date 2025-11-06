@@ -1,5 +1,42 @@
 [
   {
+    "title": "OpenAI Races to Quell Concerns Over Its Finances",
+    "url": "https://www.nytimes.com/2025/11/06/technology/openai-finances-debt-data-centers.html",
+    "published_at": "2025-11-06T16:16:17-05:00",
+    "source": "The New York Times - Technology",
+    "summary": "The A.I. company faced pushback after a top executive raised the idea of government aid, amid concerns that the A.I. industry is headed toward a dangerous bubble.",
+    "content_html": "Sarah Friar, OpenAI\u2019s chief financial officer.",
+    "image_url": "https://static01.nyt.com/images/2025/11/06/multimedia/06biz-openai-Sarah-Friar-wmbh/06biz-openai-Sarah-Friar-wmbh-mediumSquareAt3X.jpg",
+    "summary_text": "The A.I. company faced pushback after a top executive raised the idea of government aid, amid concerns that the A.I. industry is headed toward a dangerous bubble.",
+    "category": "ai",
+    "_trending_tags": [
+      "ai",
+      "openai"
+    ],
+    "_permalink": "/p/fd77f7ef72/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/fd77f7ef72/",
+    "_summary_240": "The A.I. company faced pushback after a top executive raised the idea of government aid, amid concerns that the A.I. industry is headed toward a dangerous bubble.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/fd77f7ef72/thumbnail.png"
+  },
+  {
+    "title": "Chris Sacca\u2019s Venture Firm Is Raising a Second Fusion Fund",
+    "url": "https://www.bloomberg.com/news/articles/2025-11-06/chris-sacca-s-venture-firm-lowercarbon-capital-is-raising-second-fusion-fund",
+    "published_at": "2025-11-06T15:45:32-05:00",
+    "source": "Bloomberg Technology",
+    "summary": "The tech billionaire said the next-generation nuclear technology is needed to meet the growing energy demand from artificial intelligence and need for air conditioning.",
+    "content_html": "Chris Sacca, founder of Lowercase Capital LLC, looks on at the 2017 South By Southwest (SXSW) Interactive Festival at the Austin Convention Center in Austin, Texas, U.S., on Saturday, March 11, 2017. The SXSW Interactive Festival features a variety of tracks that allow attendees to explore what's next in the worlds of entertainment, culture, and technology.",
+    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iXXvlvb48CfE/v1/1200x-1.jpg",
+    "summary_text": "The tech billionaire said the next-generation nuclear technology is needed to meet the growing energy demand from artificial intelligence and need for air conditioning.",
+    "category": "fintech",
+    "_trending_tags": [
+      "ai"
+    ],
+    "_permalink": "/p/f3cf8deb13/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/f3cf8deb13/",
+    "_summary_240": "The tech billionaire said the next-generation nuclear technology is needed to meet the growing energy demand from artificial intelligence and need for air conditioning.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/f3cf8deb13/thumbnail.png"
+  },
+  {
     "title": "Microsoft AI Chief Outlines OpenAI-Less Roadmap",
     "url": "https://www.pymnts.com/artificial-intelligence-2/2025/microsoft-ai-chief-outlines-openai-less-roadmap/",
     "published_at": "2025-11-06T15:36:15-05:00",
@@ -279,7 +316,7 @@
   },
   {
     "title": "Circle weighs in on GENIUS Act implementation: \u2018Simple, strong rules\u2019",
-    "url": "https://cointelegraph.com/news/stablecoins-circle-genius-implementation-rules?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/stablecoins-circle-genius-implementation-rules?utm_source=rss_feed&utm_medium=rss%3F_q%3D1762463906692%26vfff%3D1762463906&utm_campaign=rss_partner_inbound",
     "published_at": "2025-11-06T13:41:57-05:00",
     "source": "Cointelegraph",
     "summary": "The US Treasury Department accepted comments related to the implementation of the stablecoin bill until Tuesday as part of the law\u2019s planned rollout.",
@@ -287,14 +324,14 @@
     "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMDgvMDE5OGJlOGQtYjQ1MS03MTEzLTk5ZjgtOWY0MGQxODM4MjNj.jpg",
     "summary_text": "The US Treasury Department accepted comments related to the implementation of the stablecoin bill until Tuesday as part of the law\u2019s planned rollout.",
     "category": "fintech",
-    "_permalink": "/p/bee84b4d9f/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/bee84b4d9f/",
+    "_permalink": "/p/83a7886044/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/83a7886044/",
     "_summary_240": "The US Treasury Department accepted comments related to the implementation of the stablecoin bill until Tuesday as part of the law\u2019s planned rollout.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/bee84b4d9f/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/83a7886044/thumbnail.png"
   },
   {
     "title": "Bitcoin bulls retreat as spot BTC ETF outflows deepen and macro fears grow",
-    "url": "https://cointelegraph.com/news/bitcoin-bulls-retreat-as-spot-btc-etf-outflows-deepen-and-macro-fears-grow?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/bitcoin-bulls-retreat-as-spot-btc-etf-outflows-deepen-and-macro-fears-grow?utm_source=rss_feed&utm_medium=rss%3F_q%3D1762463906692%26vfff%3D1762463906&utm_campaign=rss_partner_inbound",
     "published_at": "2025-11-06T13:40:18-05:00",
     "source": "Cointelegraph",
     "summary": "Bitcoin\u2019s slide toward $100,000 accelerates as ETF outflows, weak earnings, and macro uncertainty rattle traders, leaving bulls hesitant to reenter the market.",
@@ -305,10 +342,10 @@
     "_trending_tags": [
       "ai"
     ],
-    "_permalink": "/p/4099aa91a2/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/4099aa91a2/",
+    "_permalink": "/p/31f02af3d7/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/31f02af3d7/",
     "_summary_240": "Bitcoin\u2019s slide toward $100,000 accelerates as ETF outflows, weak earnings, and macro uncertainty rattle traders, leaving bulls hesitant to reenter the market.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/4099aa91a2/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/31f02af3d7/thumbnail.png"
   },
   {
     "title": "SpaceX\u2019s Starlink secures more spectrum and airlines as it passes 8 million customers",
@@ -491,7 +528,7 @@
   },
   {
     "title": "Jurors ask pointed questions in MEV bot trial as deliberations proceed",
-    "url": "https://cointelegraph.com/news/jurors-questions-deliberations-mev-bot-trial?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/jurors-questions-deliberations-mev-bot-trial?utm_source=rss_feed&utm_medium=rss%3F_q%3D1762463906692%26vfff%3D1762463906&utm_campaign=rss_partner_inbound",
     "published_at": "2025-11-06T12:23:56-05:00",
     "source": "Cointelegraph",
     "summary": "As deliberations entered their second day in a criminal trial over a $25 million exploit, jurors asked for clarification on previous testimony and the definition of \u201cgood faith.\u201d",
@@ -502,10 +539,10 @@
     "_trending_tags": [
       "ai"
     ],
-    "_permalink": "/p/8219858a1d/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/8219858a1d/",
+    "_permalink": "/p/97955cfda1/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/97955cfda1/",
     "_summary_240": "As deliberations entered their second day in a criminal trial over a $25 million exploit, jurors asked for clarification on previous testimony and the definition of \u201cgood faith.\u201d",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/8219858a1d/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/97955cfda1/thumbnail.png"
   },
   {
     "title": "Qualcomm CEO Says the World Is Underestimating How Big AI Will Get",
@@ -600,7 +637,7 @@
   },
   {
     "title": "How perp DEXs quietly took over 26% of the futures market",
-    "url": "https://cointelegraph.com/news/how-perp-dexs-quietly-took-over-26-of-the-futures-market?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/how-perp-dexs-quietly-took-over-26-of-the-futures-market?utm_source=rss_feed&utm_medium=rss%3F_q%3D1762463906692%26vfff%3D1762463906&utm_campaign=rss_partner_inbound",
     "published_at": "2025-11-06T10:00:00-05:00",
     "source": "Cointelegraph",
     "summary": "Perpetual DEXs are reshaping decentralized trading with faster execution, deeper liquidity and crosschain integration.",
@@ -611,14 +648,14 @@
     "_trending_tags": [
       "ai"
     ],
-    "_permalink": "/p/b567ace377/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/b567ace377/",
+    "_permalink": "/p/9efccb684f/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/9efccb684f/",
     "_summary_240": "Perpetual DEXs are reshaping decentralized trading with faster execution, deeper liquidity and crosschain integration.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/b567ace377/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/9efccb684f/thumbnail.png"
   },
   {
     "title": "Bitcoin\u2019s valuation metric hints at a \u2018possible bottom\u2019 forming: Analysis",
-    "url": "https://cointelegraph.com/news/bitcoin-mvrv-ratio-hints-possible-bottom-forming-analysis?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/bitcoin-mvrv-ratio-hints-possible-bottom-forming-analysis?utm_source=rss_feed&utm_medium=rss%3F_q%3D1762463906692%26vfff%3D1762463906&utm_campaign=rss_partner_inbound",
     "published_at": "2025-11-06T09:59:54-05:00",
     "source": "Cointelegraph",
     "summary": "Bitcoin\u2019s MVRV ratio indicated that BTC was forming a potential local bottom, suggesting that the price can recover due to seller exhaustion.",
@@ -626,14 +663,14 @@
     "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTEvMDE5YTU5OTEtNjc3Zi03MTM0LWJiMWQtYzI2MzY0MjIyMWEy.jpg",
     "summary_text": "Bitcoin\u2019s MVRV ratio indicated that BTC was forming a potential local bottom, suggesting that the price can recover due to seller exhaustion.",
     "category": "fintech",
-    "_permalink": "/p/6c8aad888a/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/6c8aad888a/",
+    "_permalink": "/p/a2c6e847fa/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/a2c6e847fa/",
     "_summary_240": "Bitcoin\u2019s MVRV ratio indicated that BTC was forming a potential local bottom, suggesting that the price can recover due to seller exhaustion.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/6c8aad888a/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/a2c6e847fa/thumbnail.png"
   },
   {
     "title": "Bitcoin is finding grassroots strongholds across the US",
-    "url": "https://cointelegraph.com/news/bitcoin-grassroots-strongholds-across-us?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/bitcoin-grassroots-strongholds-across-us?utm_source=rss_feed&utm_medium=rss%3F_q%3D1762463906692%26vfff%3D1762463906&utm_campaign=rss_partner_inbound",
     "published_at": "2025-11-06T09:48:31-05:00",
     "source": "Cointelegraph",
     "summary": "Across the United States, Bitcoin is gaining traction far from coastal tech hubs, driven by cultural alignment, local educators and emerging state-level legislation.",
@@ -644,10 +681,10 @@
     "_trending_tags": [
       "ai"
     ],
-    "_permalink": "/p/020af65be5/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/020af65be5/",
+    "_permalink": "/p/58d782dda2/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/58d782dda2/",
     "_summary_240": "Across the United States, Bitcoin is gaining traction far from coastal tech hubs, driven by cultural alignment, local educators and emerging state-level legislation.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/020af65be5/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/58d782dda2/thumbnail.png"
   },
   {
     "title": "Microsoft expansion of cloud region accelerates Southeast Asia\u2019s AI Transformation",
@@ -708,7 +745,7 @@
   },
   {
     "title": "Bitcoin.com, Concordium partner on age-verified crypto payments",
-    "url": "https://cointelegraph.com/news/bitcoincom-concordium-age-verified-stablecoin-payments?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/bitcoincom-concordium-age-verified-stablecoin-payments?utm_source=rss_feed&utm_medium=rss%3F_q%3D1762463906692%26vfff%3D1762463906&utm_campaign=rss_partner_inbound",
     "published_at": "2025-11-06T09:00:00-05:00",
     "source": "Cointelegraph",
     "summary": "Bitcoin.com and Concordium have teamed up to introduce age-verified stablecoin payments to 75 million wallets, blending privacy with new compliance standards.",
@@ -716,10 +753,10 @@
     "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjQtMTEvMDE5MzU0ZGYtMTcyYy03NGZhLTkxYTMtMzRhMzM5ZWM5YTg3.jpg",
     "summary_text": "Bitcoin.com and Concordium have teamed up to introduce age-verified stablecoin payments to 75 million wallets, blending privacy with new compliance standards.",
     "category": "fintech",
-    "_permalink": "/p/92d7e5319b/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/92d7e5319b/",
+    "_permalink": "/p/aab61a661b/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/aab61a661b/",
     "_summary_240": "Bitcoin.com and Concordium have teamed up to introduce age-verified stablecoin payments to 75 million wallets, blending privacy with new compliance standards.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/92d7e5319b/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/aab61a661b/thumbnail.png"
   },
   {
     "title": "Developers decode their journeys from app ideas to App Store",
@@ -741,7 +778,7 @@
   },
   {
     "title": "Here\u2019s what happened in crypto today",
-    "url": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss%3F_q%3D1762463906692%26vfff%3D1762463906&utm_campaign=rss_partner_inbound",
     "published_at": "2025-11-06T08:47:43-05:00",
     "source": "Cointelegraph",
     "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, NFTs, Web3 and crypto regulation.",
@@ -752,14 +789,14 @@
     "_trending_tags": [
       "ai"
     ],
-    "_permalink": "/p/e309b962e8/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/e309b962e8/",
+    "_permalink": "/p/d0c0a6ea86/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/d0c0a6ea86/",
     "_summary_240": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, NFTs, Web3 and crypto regulation.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/e309b962e8/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/d0c0a6ea86/thumbnail.png"
   },
   {
     "title": "Crypto\u2019s growth engine stalls as Wintermute warns of \u2018recycled liquidity\u2019",
-    "url": "https://cointelegraph.com/news/wintermute-crypto-liquidity-recycling-stablecoin-etf-dat-slowdown?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/wintermute-crypto-liquidity-recycling-stablecoin-etf-dat-slowdown?utm_source=rss_feed&utm_medium=rss%3F_q%3D1762463906692%26vfff%3D1762463906&utm_campaign=rss_partner_inbound",
     "published_at": "2025-11-06T07:43:14-05:00",
     "source": "Cointelegraph",
     "summary": "Wintermute said inflows across stablecoins, ETFs and digital asset treasuries have plateaued, leaving crypto liquidity recycling internally.",
@@ -770,10 +807,10 @@
     "_trending_tags": [
       "ai"
     ],
-    "_permalink": "/p/8a97a88f84/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/8a97a88f84/",
+    "_permalink": "/p/972ae57318/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/972ae57318/",
     "_summary_240": "Wintermute said inflows across stablecoins, ETFs and digital asset treasuries have plateaued, leaving crypto liquidity recycling internally.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/8a97a88f84/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/972ae57318/thumbnail.png"
   },
   {
     "title": "NVIDIA Founder and CEO Jensen Huang and Chief Scientist Bill Dally Awarded Prestigious Queen Elizabeth Prize for Engineering",
@@ -796,7 +833,7 @@
   },
   {
     "title": "Someone drained your exchange account? Here\u2019s your emergency playbook",
-    "url": "https://cointelegraph.com/explained/someone-drained-your-exchange-account-here-s-your-emergency-playbook?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/explained/someone-drained-your-exchange-account-here-s-your-emergency-playbook?utm_source=rss_feed&utm_medium=rss%3F_q%3D1762463906692%26vfff%3D1762463906&utm_campaign=rss_partner_inbound",
     "published_at": "2025-11-06T07:30:00-05:00",
     "source": "Cointelegraph",
     "summary": "When your crypto is stolen, a rapid and organized response is crucial to trace the funds and rebuild your digital security.",
@@ -807,10 +844,10 @@
     "_trending_tags": [
       "ai"
     ],
-    "_permalink": "/p/1d95f37189/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/1d95f37189/",
+    "_permalink": "/p/8aeb5be716/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/8aeb5be716/",
     "_summary_240": "When your crypto is stolen, a rapid and organized response is crucial to trace the funds and rebuild your digital security.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/1d95f37189/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/8aeb5be716/thumbnail.png"
   },
   {
     "title": "Propel Teams Up With Column to Expand US Credit Reach",
@@ -851,7 +888,7 @@
   },
   {
     "title": "Banks lobby US Treasury for blanket stablecoin yield ban, Coinbase pushes back",
-    "url": "https://cointelegraph.com/news/coinbase-urges-treasury-preserve-stablecoin-yields-non-issuers?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/coinbase-urges-treasury-preserve-stablecoin-yields-non-issuers?utm_source=rss_feed&utm_medium=rss%3F_q%3D1762463906692%26vfff%3D1762463906&utm_campaign=rss_partner_inbound",
     "published_at": "2025-11-06T06:33:30-05:00",
     "source": "Cointelegraph",
     "summary": "Coinbase insists that the US Treasury cannot override Congress\u2019s intent on the GENIUS Act, but banks continue to press for a blanket ban on stablecoin interest.",
@@ -859,10 +896,10 @@
     "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTEvMDE5YTU4NmYtYjEyOS03MWI1LWFkMWUtYmI0YjA5NmQzNjMz.jpg",
     "summary_text": "Coinbase insists that the US Treasury cannot override Congress\u2019s intent on the GENIUS Act, but banks continue to press for a blanket ban on stablecoin interest.",
     "category": "fintech",
-    "_permalink": "/p/5795a5cb62/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/5795a5cb62/",
+    "_permalink": "/p/7a0f45f577/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/7a0f45f577/",
     "_summary_240": "Coinbase insists that the US Treasury cannot override Congress\u2019s intent on the GENIUS Act, but banks continue to press for a blanket ban on stablecoin interest.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/5795a5cb62/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/7a0f45f577/thumbnail.png"
   },
   {
     "title": "Mark Zuckerberg Opened an Illegal School at His Palo Alto Compound. His Neighbors Revolted",
@@ -884,7 +921,7 @@
   },
   {
     "title": "How to spot bull and bear market traps in crypto before they catch you",
-    "url": "https://cointelegraph.com/news/how-to-spot-bull-and-bear-market-traps-in-crypto-before-they-catch-you?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/how-to-spot-bull-and-bear-market-traps-in-crypto-before-they-catch-you?utm_source=rss_feed&utm_medium=rss%3F_q%3D1762463906692%26vfff%3D1762463906&utm_campaign=rss_partner_inbound",
     "published_at": "2025-11-06T05:11:47-05:00",
     "source": "Cointelegraph",
     "summary": "Learn to spot fake breakouts in crypto using funding, OI and volume signals \u2014 and avoid bull and bear trap setups.",
@@ -892,10 +929,10 @@
     "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTAvMDE5YTBjOWUtZTQ0Yy03NDM2LWFlNjQtMmFhNWExYmZiNmUy.jpg",
     "summary_text": "Learn to spot fake breakouts in crypto using funding, OI and volume signals \u2014 and avoid bull and bear trap setups.",
     "category": "fintech",
-    "_permalink": "/p/4cd365ebcd/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/4cd365ebcd/",
+    "_permalink": "/p/caf6a0b325/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/caf6a0b325/",
     "_summary_240": "Learn to spot fake breakouts in crypto using funding, OI and volume signals \u2014 and avoid bull and bear trap setups.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/4cd365ebcd/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/caf6a0b325/thumbnail.png"
   },
   {
     "title": "Where You See a Fancy Fish, Engineers See Alan Turing\u2019s Math",
@@ -951,7 +988,7 @@
   },
   {
     "title": "Can the biggest Bitcoin whales really decide when the market turns green or red?",
-    "url": "https://cointelegraph.com/news/can-the-biggest-bitcoin-whales-really-decide-when-the-market-turns-green-or-red?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/can-the-biggest-bitcoin-whales-really-decide-when-the-market-turns-green-or-red?utm_source=rss_feed&utm_medium=rss%3F_q%3D1762463906692%26vfff%3D1762463906&utm_campaign=rss_partner_inbound",
     "published_at": "2025-11-06T02:49:35-05:00",
     "source": "Cointelegraph",
     "summary": "Whales still move prices, but ETF flows, exchange liquidity, and macro shifts now decide Bitcoin\u2019s daily color.",
@@ -963,10 +1000,10 @@
       "ai",
       "llm"
     ],
-    "_permalink": "/p/d38fae1935/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/d38fae1935/",
+    "_permalink": "/p/5f6b7cfb4f/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/5f6b7cfb4f/",
     "_summary_240": "Whales still move prices, but ETF flows, exchange liquidity, and macro shifts now decide Bitcoin\u2019s daily color.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/d38fae1935/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/5f6b7cfb4f/thumbnail.png"
   },
   {
     "title": "Google's AI Cost Advantage: Owning the Cloud",
@@ -1007,21 +1044,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/b69bedc8ec/thumbnail.png"
   },
   {
-    "title": "Bitcoin bull run hasn\u2019t started yet: Jan3\u2019s Samson Mow",
-    "url": "https://cointelegraph.com/news/bitcoin-bull-run-hasnt-started-yet-samson-mow-2026-prediction?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-    "published_at": "2025-11-06T01:02:35-05:00",
-    "source": "Cointelegraph",
-    "summary": "Jan3 founder Samson Mow also argued that fears of Bitcoin OGs selling are overblown and traders should focus on the next bull run, rather than \u201cself-owning themselves.\u201d",
-    "content_html": "",
-    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMDkvMDE5OTkwNGItMjBkYy03NzZkLWEyMzQtMzY1MGI5ZmZkOTAx.jpg",
-    "summary_text": "Jan3 founder Samson Mow also argued that fears of Bitcoin OGs selling are overblown and traders should focus on the next bull run, rather than \u201cself-owning themselves.\u201d",
-    "category": "fintech",
-    "_permalink": "/p/182a3624da/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/182a3624da/",
-    "_summary_240": "Jan3 founder Samson Mow also argued that fears of Bitcoin OGs selling are overblown and traders should focus on the next bull run, rather than \u201cself-owning themselves.\u201d",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/182a3624da/thumbnail.png"
-  },
-  {
     "title": "From prototype to production: What vibe coding tools must fix for enterprise adoption",
     "url": "https://venturebeat.com/ai/from-prototype-to-production-what-vibe-coding-tools-must-fix-for-enterprise",
     "published_at": "2025-11-06T00:00:00-05:00",
@@ -1051,21 +1073,6 @@
     ]
   },
   {
-    "title": "Nexperia Says Payment Dispute Led to Supply Break With China",
-    "url": "https://www.bloomberg.com/news/articles/2025-11-06/nexperia-says-it-halted-supply-after-china-unit-refused-to-pay",
-    "published_at": "2025-11-05T19:57:00-05:00",
-    "source": "Bloomberg Technology",
-    "summary": "Nexperia suspended supplies to its China factory because the local unit refused to make payments, laying bare the internal discord at the heart of a global chip crisis.",
-    "content_html": "The Nexperia headquarters in Nijmegen, Netherlands.",
-    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iDBnn3.3ItBk/v1/1200x-1.jpg",
-    "summary_text": "Nexperia suspended supplies to its China factory because the local unit refused to make payments, laying bare the internal discord at the heart of a global chip crisis.",
-    "category": "fintech",
-    "_permalink": "/p/5d7b56748c/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/5d7b56748c/",
-    "_summary_240": "Nexperia suspended supplies to its China factory because the local unit refused to make payments, laying bare the internal discord at the heart of a global chip crisis.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/5d7b56748c/thumbnail.png"
-  },
-  {
     "title": "AI progress and recommendations",
     "url": "https://openai.com/index/ai-progress-and-recommendations",
     "published_at": "2025-11-05T19:00:00-05:00",
@@ -1093,21 +1100,6 @@
       "ai",
       "openai"
     ]
-  },
-  {
-    "title": "Blue Origin plans second launch of New Glenn mega-rocket on November 9",
-    "url": "https://techcrunch.com/2025/11/05/blue-origin-plans-second-launch-of-new-glenn-mega-rocket-on-november-9/",
-    "published_at": "2025-11-05T18:41:51-05:00",
-    "source": "TechCrunch",
-    "summary": "Blue Origin's first New Glenn launch in January mostly went well, and now the long-delayed second mission is finally ready for takeoff.",
-    "content_html": "",
-    "image_url": "https://techcrunch.com/wp-content/uploads/2025/01/blue-origin-new-glenn-launch.jpg?resize=1200,909",
-    "summary_text": "Blue Origin's first New Glenn launch in January mostly went well, and now the long-delayed second mission is finally ready for takeoff.",
-    "category": "fintech",
-    "_permalink": "/p/bfae1ea6b0/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/bfae1ea6b0/",
-    "_summary_240": "Blue Origin's first New Glenn launch in January mostly went well, and now the long-delayed second mission is finally ready for takeoff.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/bfae1ea6b0/thumbnail.png"
   },
   {
     "title": "Alt Data, Market Data & Tech News",
@@ -1293,16 +1285,12 @@
     "source": "Financial Times - Technology",
     "summary": "High Court finds Robert Bonnier lied \u2018repeatedly\u2019 to secure investment from tycoon",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/0ba4e8ac-dd04-4cea-9917-d3cecde1b205.jpg",
+    "image_url": "",
     "summary_text": "High Court finds Robert Bonnier lied \u2018repeatedly\u2019 to secure investment from tycoon",
     "category": "fintech",
     "_trending_tags": [
       "ai"
-    ],
-    "_permalink": "/p/62c45fe0d6/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/62c45fe0d6/",
-    "_summary_240": "High Court finds Robert Bonnier lied \u2018repeatedly\u2019 to secure investment from tycoon",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/62c45fe0d6/thumbnail.png"
+    ]
   },
   {
     "title": "AI-designed antibodies promise big boost to drug development",
@@ -1311,16 +1299,12 @@
     "source": "Financial Times - Technology",
     "summary": "University of Washington team uses generative AI tool to create new functional cancer antibodies",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/3592199b-2100-4937-a277-1f140fa550ae.jpg",
+    "image_url": "",
     "summary_text": "University of Washington team uses generative AI tool to create new functional cancer antibodies",
     "category": "ai",
     "_trending_tags": [
       "ai"
-    ],
-    "_permalink": "/p/353e407b54/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/353e407b54/",
-    "_summary_240": "University of Washington team uses generative AI tool to create new functional cancer antibodies",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/353e407b54/thumbnail.png"
+    ]
   },
   {
     "title": "How Chime is redefining marketing through AI",
@@ -1344,7 +1328,7 @@
     "source": "Financial Times - Technology",
     "summary": "Web inventor warns reliance on AI agents threatens multibillion-dollar revenues for Google and Meta",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/5398aedc-02d5-417e-aa6f-d69c2e5c74d6.jpg",
+    "image_url": "",
     "summary_text": "Web inventor warns reliance on AI agents threatens multibillion-dollar revenues for Google and Meta",
     "category": "ai",
     "_trending_tags": [
@@ -1352,11 +1336,7 @@
       "ai",
       "google",
       "meta"
-    ],
-    "_permalink": "/p/cfbecffdec/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/cfbecffdec/",
-    "_summary_240": "Web inventor warns reliance on AI agents threatens multibillion-dollar revenues for Google and Meta",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/cfbecffdec/thumbnail.png"
+    ]
   },
   {
     "title": "How Anthropic's Claude cuts SOC investigation time from 5 hours to 7 minutes",
@@ -1426,16 +1406,12 @@
     "source": "Financial Times - Technology",
     "summary": "Some investors grow concerned that region\u2019s markets could be hit by downturn in US tech sector",
     "content_html": "",
-    "image_url": "https://images.ft.com/v3/image/raw/https%3A%2F%2Fnext-video-editor-images.s3.ap-northeast-1.amazonaws.com%2F47ed8696-a5f5-4335-8892-f2ab38c6005e?source=next-article&fit=scale-down&quality=highest&width=700&dpr=1",
+    "image_url": "",
     "summary_text": "Some investors grow concerned that region\u2019s markets could be hit by downturn in US tech sector",
     "category": "ai",
     "_trending_tags": [
       "ai"
-    ],
-    "_permalink": "/p/03304758d9/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/03304758d9/",
-    "_summary_240": "Some investors grow concerned that region\u2019s markets could be hit by downturn in US tech sector",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/03304758d9/thumbnail.png"
+    ]
   },
   {
     "title": "Databricks research reveals that building better AI judges isn't just a technical concern, it's a people problem",
