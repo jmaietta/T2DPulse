@@ -1,12 +1,12 @@
 {
-  "generated_at": "2025-11-07T14:38:52.332293-05:00",
+  "generated_at": "2025-11-07T15:25:05.461938-05:00",
   "total_keywords": 30,
   "keyword_counts": {
-    "ai": 202,
-    "google": 21,
-    "openai": 21,
-    "agent": 18,
-    "gpt": 15,
+    "ai": 203,
+    "google": 20,
+    "openai": 20,
+    "agent": 17,
+    "gpt": 14,
     "meta": 13,
     "chatgpt": 10,
     "nvidia": 10,
@@ -15,12 +15,11 @@
     "amazon": 6,
     "apple": 6,
     "fintech": 6,
-    "llm": 5,
-    "anthropic": 4,
+    "llm": 4,
+    "anthropic": 3,
     "gpu": 3,
     "claude": 2,
-    "stripe": 1,
-    "transformer": 1
+    "stripe": 1
   },
   "sources_per_keyword": {},
   "top_articles_per_keyword": {}

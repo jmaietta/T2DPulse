@@ -1,5 +1,146 @@
 [
   {
+    "title": "OpenAI Executives Struggle to Combat AI Spending Concerns",
+    "url": "https://www.bloomberg.com/news/newsletters/2025-11-07/openai-executives-struggle-to-combat-ai-spending-concerns-q-ai",
+    "published_at": "2025-11-07T15:19:52-05:00",
+    "source": "Bloomberg Technology",
+    "summary": "Several executives from OpenAI and other tech firms tried to dispel growing anxiety this week about AI spending. But first\u2026",
+    "content_html": "Sam Altman, chief executive officer of OpenAI Inc., during a media tour of the Stargate AI data center in Abilene, Texas, US, on Tuesday, Sept. 23, 2025. Stargate is a collaboration of OpenAI, Oracle and SoftBank, with promotional support from President Donald Trump, to build data centers and other infrastructure for artificial intelligence throughout the US. Photographer: Kyle Grillot/Bloomberg",
+    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ievfYB003aLM/v0/1200x-1.jpg",
+    "summary_text": "Several executives from OpenAI and other tech firms tried to dispel growing anxiety this week about AI spending. But first\u2026",
+    "category": "ai",
+    "_trending_tags": [
+      "ai",
+      "openai"
+    ],
+    "_permalink": "/p/d6eef9797d/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/d6eef9797d/",
+    "_summary_240": "Several executives from OpenAI and other tech firms tried to dispel growing anxiety this week about AI spending. But first\u2026",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/d6eef9797d/thumbnail.png"
+  },
+  {
+    "title": "Lawsuits Blame ChatGPT for Suicides and Harmful Delusions",
+    "url": "https://www.nytimes.com/2025/11/06/technology/chatgpt-lawsuit-suicides-delusions.html",
+    "published_at": "2025-11-07T15:18:27-05:00",
+    "source": "The New York Times - Technology",
+    "summary": "Seven complaints, filed on Thursday, claim the popular chatbot encouraged dangerous discussions and led to mental breakdowns.",
+    "content_html": "Over three weeks of conversations with ChatGPT, Allan Brooks fell into a delusion. He is now suing OpenAI.",
+    "image_url": "https://static01.nyt.com/images/2025/11/06/multimedia/06biz-chatbot-suits-hlwz/06biz-chatbot-suits-hlwz-mediumSquareAt3X.jpg",
+    "summary_text": "Seven complaints, filed on Thursday, claim the popular chatbot encouraged dangerous discussions and led to mental breakdowns.",
+    "category": "ai",
+    "_trending_tags": [
+      "ai",
+      "chatgpt",
+      "gpt"
+    ],
+    "_permalink": "/p/9f538797b2/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/9f538797b2/",
+    "_summary_240": "Seven complaints, filed on Thursday, claim the popular chatbot encouraged dangerous discussions and led to mental breakdowns.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/9f538797b2/thumbnail.png"
+  },
+  {
+    "title": "Phishing Threats Prompt Call for Wider Adoption of Passkeys",
+    "url": "https://www.pymnts.com/cybersecurity/2025/phishing-threats-prompt-call-for-wider-adoption-of-passkeys/",
+    "published_at": "2025-11-07T15:11:39-05:00",
+    "source": "PYMNTS",
+    "summary": "The recent hack of Salesforce should prompt Gmail users to shift from passwords to passkeys, according to a report by Inc. posted by sister publication Fast Company. No Gmail credentials were stolen in the hack, but business-related data like contact lists, company associations and email data were stolen, according to the report. This kind [\u2026] The post Phishing Threats Prompt Call for Wider Adopt...",
+    "content_html": "<p><span>The recent hack of </span><a href=\"https://www.salesforce.com/\" rel=\"noopener\" target=\"_blank\"><span>Salesforce</span></a><span> should prompt Gmail users to shift from passwords to passkeys, according to a </span><a href=\"https://www.fastcompany.com/91431686/google-warning-gmail-users-stop-using-passwords\" rel=\"noopener\" target=\"_blank\"><span>report</span></a><span> by Inc. posted by sister publication Fast Company.</span></p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p><span>No Gmail credentials were stolen in the hack, but business-related data like contact lists, company associations and email data were stolen, according to the report.</span></p>\n<p><span>This kind of data makes phishing and impersonation attacks much more dangerous, because hackers can use it to craft attacks that look authentic and trick people into handing over their login credentials, the report said.</span></p>\n<p><span>With those credentials giving them access to the victim\u2019s email, hackers can then access any of the victim\u2019s accounts that reset a password by sending an email, per the report.</span></p>\n<p><span>Users can prevent these sorts of attacks from happening by ending their use of passwords and using passkeys instead, according to the report.</span></p>\n<p><span>Passkeys can\u2019t be phished because they don\u2019t include passwords that a user could be tricked into sharing, the report said.</span></p>\n<p><span>Google\u2019s Threat Intelligence Group said in an Aug. 5 </span><a href=\"https://cloud.google.com/blog/topics/threat-intelligence/voice-phishing-data-extortion?rev=7194ef805fa2d04b0f7e8c9521f97343\"><span>update</span></a><span> to a blog post that a </span><a href=\"https://www.pymnts.com/cybersecurity/2025/google-says-hackers-stole-customer-info-in-salesforce-data-breach/\" rel=\"noopener\" target=\"_blank\"><span>hacking group</span></a><span> had breached one of its Salesforce data systems used to house contact information and related notes for small and medium-sized businesses.</span></p>\n<p><span>\u201cThe data retrieved by the threat actor was confined to basic and largely publicly available business information, such as business names and contact details,\u201d the post said.</span></p>\n<p><span>In that case, the company said its intelligence group suspected the hackers could be planning to \u201cescalate their extortion tactics\u201d by initiating a data leak site.</span></p>\n<p><span>In one </span><a href=\"https://x.com/newsfromgoogle/status/1982893439378436480?s=43&amp;t=HX_ju0vgQxqA9hav5Ebegg\" rel=\"noopener\" target=\"_blank\"><span>post</span></a><span> in an Oct. 27 </span><a href=\"https://x.com/newsfromgoogle/status/1982893232934793655?s=43&amp;t=HX_ju0vgQxqA9hav5Ebegg\" rel=\"noopener\" target=\"_blank\"><span>thread</span></a><span> on X addressing false reports of a Gmail security breach, Google recommended the use of passkeys and shared a link to an article about protecting personal information with </span><a href=\"https://support.google.com/accounts/answer/10956730\" rel=\"noopener\" target=\"_blank\"><span>2-Step Verification</span></a><span>.</span></p>\n<p><span>\u201cUsers can protect themselves from credential theft by turning on 2-step verification and adopting passkeys as a stronger and safer alternative to passwords, and resetting passwords when they are found in large batches like this,\u201d Google said in the post, referring to various credential theft activity occurring across the web.</span></p>\n<p><span>PYMNTS reported in May 2024 that several payments and financial services companies have introduced </span><a href=\"https://www.pymnts.com/cybersecurity/2024/the-passkeys-primer-making-sense-of-the-new-security-paradigm/\" rel=\"noopener\" target=\"_blank\"><span>passkeys</span></a><span>.</span></p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/cybersecurity/2025/phishing-threats-prompt-call-for-wider-adoption-of-passkeys/\">Phishing Threats Prompt Call for Wider Adoption of Passkeys</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
+    "image_url": "https://www.pymnts.com/wp-content/uploads/2025/11/google-cybersecurity-passwords-passkey-hack-data-breach.jpg?w=457",
+    "summary_text": "The recent hack of Salesforce should prompt Gmail users to shift from passwords to passkeys, according to a report by Inc. posted by sister publication Fast Company. No Gmail credentials were stolen in the hack, but business-related data like contact lists, c...",
+    "category": "fintech",
+    "_trending_tags": [
+      "ai"
+    ],
+    "_permalink": "/p/d1351ddf38/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/d1351ddf38/",
+    "_summary_240": "The recent hack of Salesforce should prompt Gmail users to shift from passwords to passkeys, according to a report by Inc. posted by sister publication Fast Company. No Gmail...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/d1351ddf38/thumbnail.png"
+  },
+  {
+    "title": "Fed\u2019s Miran Says Stablecoins to Put Downward Pressure on Rates",
+    "url": "https://www.bloomberg.com/news/articles/2025-11-07/fed-s-miran-says-stablecoins-to-put-downward-pressure-on-rates",
+    "published_at": "2025-11-07T15:00:00-05:00",
+    "source": "Bloomberg Technology",
+    "summary": "Federal Reserve Governor Stephen Miran said the growth of stablecoins could over time put substantial downward pressure on the neutral interest rate that would neither stimulate nor restrict the economy.",
+    "content_html": "Stephen Miran, governor of the US Federal Reserve, during a Bloomberg Television interview in New York, US, on Monday, Nov. 3, 2025. Miran said monetary policy remains restrictive and that he will continue to advocate for further easing.",
+    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/i5t3xB1YBWuo/v1/1200x-1.jpg",
+    "summary_text": "Federal Reserve Governor Stephen Miran said the growth of stablecoins could over time put substantial downward pressure on the neutral interest rate that would neither stimulate nor restrict the economy.",
+    "category": "fintech",
+    "_trending_tags": [
+      "ai"
+    ],
+    "_permalink": "/p/51b0afc072/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/51b0afc072/",
+    "_summary_240": "Federal Reserve Governor Stephen Miran said the growth of stablecoins could over time put substantial downward pressure on the neutral interest rate that would neither stimulate...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/51b0afc072/thumbnail.png"
+  },
+  {
+    "title": "Sequoia\u2019s \u2018imperial\u2019 Roelof Botha pushed out by top lieutenants",
+    "url": "https://www.ft.com/content/0f16e194-5e9b-4486-988e-6f90f927b153",
+    "published_at": "2025-11-07T14:50:40-05:00",
+    "source": "Financial Times - Technology",
+    "summary": "Partners called vote to oust chief after controversial incidents rocked Silicon Valley venture capital firm",
+    "content_html": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/897d6713-f161-413c-b40f-1bfccf2ea51c.jpg",
+    "summary_text": "Partners called vote to oust chief after controversial incidents rocked Silicon Valley venture capital firm",
+    "category": "software",
+    "_permalink": "/p/4e3b3b2bf6/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/4e3b3b2bf6/",
+    "_summary_240": "Partners called vote to oust chief after controversial incidents rocked Silicon Valley venture capital firm",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/4e3b3b2bf6/thumbnail.png"
+  },
+  {
+    "title": "Coinbase, Block, Robinhood highlight dismal week for crypto stocks",
+    "url": "https://cointelegraph.com/news/crypto-stocks-slide-coinbase-block-robinhood-macro-fears?utm_source=rss_feed&utm_medium=rss%3F__%3D1762546639445%26_nocache%3D1762546639445%26_refresh%3Dshy4bp%26ttl%3D0&utm_campaign=rss_partner_inbound",
+    "published_at": "2025-11-07T14:48:30-05:00",
+    "source": "Cointelegraph",
+    "summary": "Crypto stocks slid as macro fears, government shutdown jitters and lingering fallout from October's $19 billion liquidation hit investor sentiment.",
+    "content_html": "",
+    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMDIvMDE5NTNhOTYtN2UyYi03MDg2LWFkNWUtNzJmNmU4Mzc3YTMz.jpg",
+    "summary_text": "Crypto stocks slid as macro fears, government shutdown jitters and lingering fallout from October's $19 billion liquidation hit investor sentiment.",
+    "category": "fintech",
+    "_permalink": "/p/d6b22f3ca6/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/d6b22f3ca6/",
+    "_summary_240": "Crypto stocks slid as macro fears, government shutdown jitters and lingering fallout from October's $19 billion liquidation hit investor sentiment.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/d6b22f3ca6/thumbnail.png"
+  },
+  {
+    "title": "New Bitcoin highs could take 2 to 6 months but data says it\u2019s worth the wait: Analysis",
+    "url": "https://cointelegraph.com/news/new-bitcoin-highs-could-take-2-to-6-months-but-data-says-it-s-worth-the-wait-analysis?utm_source=rss_feed&utm_medium=rss%3F__%3D1762546639445%26_nocache%3D1762546639445%26_refresh%3Dshy4bp%26ttl%3D0&utm_campaign=rss_partner_inbound",
+    "published_at": "2025-11-07T14:45:00-05:00",
+    "source": "Cointelegraph",
+    "summary": "Bitcoin dropped 20% from its all-time high, leaving analysts split on whether a slow recovery or a fresh parabolic price breakout will happen in the next few months.",
+    "content_html": "",
+    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTAvMDE5YTE0NjUtMjNlMi03ZDQzLWFjMjQtOTNmZTg0NTlhOTJl.jpg",
+    "summary_text": "Bitcoin dropped 20% from its all-time high, leaving analysts split on whether a slow recovery or a fresh parabolic price breakout will happen in the next few months.",
+    "category": "fintech",
+    "_trending_tags": [
+      "ai"
+    ],
+    "_permalink": "/p/2d9903d21b/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/2d9903d21b/",
+    "_summary_240": "Bitcoin dropped 20% from its all-time high, leaving analysts split on whether a slow recovery or a fresh parabolic price breakout will happen in the next few months.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/2d9903d21b/thumbnail.png"
+  },
+  {
+    "title": "Snap crackles while Pinterest pops, but both are a solid bet on AI",
+    "url": "https://www.ft.com/content/012b3524-19d4-4ecf-a1de-a782ca86355a",
+    "published_at": "2025-11-07T14:37:24-05:00",
+    "source": "Financial Times - Technology",
+    "summary": "Digital scrapbook\u2019s stock is cheaper than that of social and video app, and could be better long-term investment",
+    "content_html": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/48483d77-8f0e-46b8-986c-0e061e1253e8.jpg",
+    "summary_text": "Digital scrapbook\u2019s stock is cheaper than that of social and video app, and could be better long-term investment",
+    "category": "ai",
+    "_trending_tags": [
+      "ai"
+    ],
+    "_permalink": "/p/ddc4e12497/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/ddc4e12497/",
+    "_summary_240": "Digital scrapbook\u2019s stock is cheaper than that of social and video app, and could be better long-term investment",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/ddc4e12497/thumbnail.png"
+  },
+  {
     "title": "Grand Theft Auto VI Delay Fails to Faze Take-Two Stock Analysts",
     "url": "https://www.bloomberg.com/news/articles/2025-11-07/grand-theft-auto-vi-delay-fails-to-phase-take-two-ttwo-stock-analysts",
     "published_at": "2025-11-07T14:23:00-05:00",
@@ -55,7 +196,7 @@
   },
   {
     "title": "Balancer exploit and Stream contagion expose DeFi\u2019s fragile core: Finance Redefined",
-    "url": "https://cointelegraph.com/news/defi-newsletter-exploits-risk-ratings-policy-alliance?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/defi-newsletter-exploits-risk-ratings-policy-alliance?utm_source=rss_feed&utm_medium=rss%3F__%3D1762546639445%26_nocache%3D1762546639445%26_refresh%3Dshy4bp%26ttl%3D0&utm_campaign=rss_partner_inbound",
     "published_at": "2025-11-07T14:00:00-05:00",
     "source": "Cointelegraph",
     "summary": "Balancer and Stream Finance incidents totaling over $200 million shook DeFi as RedStone and major Ethereum protocols launched reform initiatives.",
@@ -63,14 +204,32 @@
     "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTEvMDE5YTVkYTQtMTBlMy03NzlmLWFhYjItNGE2OGI0NWY4OTNl.jpg",
     "summary_text": "Balancer and Stream Finance incidents totaling over $200 million shook DeFi as RedStone and major Ethereum protocols launched reform initiatives.",
     "category": "fintech",
-    "_permalink": "/p/89e31bfe5d/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/89e31bfe5d/",
+    "_permalink": "/p/62314039cd/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/62314039cd/",
     "_summary_240": "Balancer and Stream Finance incidents totaling over $200 million shook DeFi as RedStone and major Ethereum protocols launched reform initiatives.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/89e31bfe5d/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/62314039cd/thumbnail.png"
+  },
+  {
+    "title": "Vigilante Lawyers Expose the Rising Tide of A.I. Slop in Court Filings",
+    "url": "https://www.nytimes.com/2025/11/07/business/lawyers-ai-vigilantes.html",
+    "published_at": "2025-11-07T13:51:35-05:00",
+    "source": "The New York Times - Technology",
+    "summary": "More lawyers are using artificial intelligence to write legal briefs. Some colleagues are publicizing the A.I.-generated errors.",
+    "content_html": "",
+    "image_url": "https://static01.nyt.com/images/2025/11/03/business/00ai-lawyers-still/00ai-lawyers-still-mediumSquareAt3X.jpg",
+    "summary_text": "More lawyers are using artificial intelligence to write legal briefs. Some colleagues are publicizing the A.I.-generated errors.",
+    "category": "ai",
+    "_trending_tags": [
+      "ai"
+    ],
+    "_permalink": "/p/a2df907eaf/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/a2df907eaf/",
+    "_summary_240": "More lawyers are using artificial intelligence to write legal briefs. Some colleagues are publicizing the A.I.-generated errors.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/a2df907eaf/thumbnail.png"
   },
   {
     "title": "Bitcoin Coinbase Premium hits 7-month low but traders spot a silver lining",
-    "url": "https://cointelegraph.com/news/bitcoin-coinbase-premium-hits-7-month-low-but-traders-spot-a-silver-lining?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/bitcoin-coinbase-premium-hits-7-month-low-but-traders-spot-a-silver-lining?utm_source=rss_feed&utm_medium=rss%3F__%3D1762546639445%26_nocache%3D1762546639445%26_refresh%3Dshy4bp%26ttl%3D0&utm_campaign=rss_partner_inbound",
     "published_at": "2025-11-07T13:45:00-05:00",
     "source": "Cointelegraph",
     "summary": "Bitcoin dipped below $100,000 as the Coinbase Premium hit a seven-month low, signaling weak US demand. Meanwhile, onchain data hints that short-term holders may be buying the dip.",
@@ -81,10 +240,10 @@
     "_trending_tags": [
       "ai"
     ],
-    "_permalink": "/p/bdd7535fda/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/bdd7535fda/",
+    "_permalink": "/p/a410181194/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/a410181194/",
     "_summary_240": "Bitcoin dipped below $100,000 as the Coinbase Premium hit a seven-month low, signaling weak US demand. Meanwhile, onchain data hints that short-term holders may be buying the dip.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/bdd7535fda/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/a410181194/thumbnail.png"
   },
   {
     "title": "PNC to Add 300 Branches by 2030, Building Coast-to-Coast Franchise",
@@ -190,7 +349,7 @@
   },
   {
     "title": "US Senate to vote on bill to reopen gov\u2019t with crypto bill in limbo",
-    "url": "https://cointelegraph.com/news/us-senate-reopen-government-crypto-bill-limbo?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/us-senate-reopen-government-crypto-bill-limbo?utm_source=rss_feed&utm_medium=rss%3F__%3D1762546639445%26_nocache%3D1762546639445%26_refresh%3Dshy4bp%26ttl%3D0&utm_campaign=rss_partner_inbound",
     "published_at": "2025-11-07T11:11:17-05:00",
     "source": "Cointelegraph",
     "summary": "Some Republicans\u2019 initial plans to have crypto market structure out of committee by November have been sidetracked by the government shutdown.",
@@ -198,14 +357,14 @@
     "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMDcvMDE5ODRmMmQtMzY4OS03M2YzLTk0M2MtYTMwMDEwMWFjOWI1.jpg",
     "summary_text": "Some Republicans\u2019 initial plans to have crypto market structure out of committee by November have been sidetracked by the government shutdown.",
     "category": "fintech",
-    "_permalink": "/p/e1cb30f600/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/e1cb30f600/",
+    "_permalink": "/p/29cc5ea25a/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/29cc5ea25a/",
     "_summary_240": "Some Republicans\u2019 initial plans to have crypto market structure out of committee by November have been sidetracked by the government shutdown.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/e1cb30f600/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/29cc5ea25a/thumbnail.png"
   },
   {
     "title": "AI trading bots surge in popularity, but experts warn they\u2019re not \u2018money printers\u2019",
-    "url": "https://cointelegraph.com/news/ai-trading-bots-surge-experts-warn-not-money-printers?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/ai-trading-bots-surge-experts-warn-not-money-printers?utm_source=rss_feed&utm_medium=rss%3F__%3D1762546639445%26_nocache%3D1762546639445%26_refresh%3Dshy4bp%26ttl%3D0&utm_campaign=rss_partner_inbound",
     "published_at": "2025-11-07T10:20:05-05:00",
     "source": "Cointelegraph",
     "summary": "As AI-powered trading tools gain traction across crypto markets, industry insiders say most traders misunderstand how these models actually work and where their real risks lie.",
@@ -216,10 +375,10 @@
     "_trending_tags": [
       "ai"
     ],
-    "_permalink": "/p/4c755de38d/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/4c755de38d/",
+    "_permalink": "/p/de9a5feb61/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/de9a5feb61/",
     "_summary_240": "As AI-powered trading tools gain traction across crypto markets, industry insiders say most traders misunderstand how these models actually work and where their real risks lie.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/4c755de38d/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/de9a5feb61/thumbnail.png"
   },
   {
     "title": "The Chatbot Delusions: Is AI Contributing to a Novel Mental Health Crisis?",
@@ -257,7 +416,7 @@
   },
   {
     "title": "Here\u2019s what happened in crypto today",
-    "url": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss%3F__%3D1762546639445%26_nocache%3D1762546639445%26_refresh%3Dshy4bp%26ttl%3D0&utm_campaign=rss_partner_inbound",
     "published_at": "2025-11-07T09:20:23-05:00",
     "source": "Cointelegraph",
     "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, NFTs, Web3 and crypto regulation.",
@@ -268,10 +427,10 @@
     "_trending_tags": [
       "ai"
     ],
-    "_permalink": "/p/0795018a75/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/0795018a75/",
+    "_permalink": "/p/ea11fc2505/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/ea11fc2505/",
     "_summary_240": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, NFTs, Web3 and crypto regulation.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/0795018a75/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/ea11fc2505/thumbnail.png"
   },
   {
     "title": "A Different View of Inflation",
@@ -293,7 +452,7 @@
   },
   {
     "title": "Ripple rejects IPO plans despite SEC case victory: Here\u2019s why",
-    "url": "https://cointelegraph.com/news/ripple-rejects-ipo-plans-sec-case-victory-record-growth?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/ripple-rejects-ipo-plans-sec-case-victory-record-growth?utm_source=rss_feed&utm_medium=rss%3F__%3D1762546639445%26_nocache%3D1762546639445%26_refresh%3Dshy4bp%26ttl%3D0&utm_campaign=rss_partner_inbound",
     "published_at": "2025-11-07T08:32:52-05:00",
     "source": "Cointelegraph",
     "summary": "Ripple won\u2019t pursue an IPO after resolving its SEC case despite record growth, major new investors and increasing industry momentum for public listings.",
@@ -301,14 +460,14 @@
     "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTEvMDE5YTVlMDgtN2FkOS03Mzc2LTkzYWMtODM3YzY3ZjMwYTYx.jpg",
     "summary_text": "Ripple won\u2019t pursue an IPO after resolving its SEC case despite record growth, major new investors and increasing industry momentum for public listings.",
     "category": "fintech",
-    "_permalink": "/p/e293d3922a/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/e293d3922a/",
+    "_permalink": "/p/ab0e01a644/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/ab0e01a644/",
     "_summary_240": "Ripple won\u2019t pursue an IPO after resolving its SEC case despite record growth, major new investors and increasing industry momentum for public listings.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/e293d3922a/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/ab0e01a644/thumbnail.png"
   },
   {
     "title": "How TradFi banks are advancing new stablecoin models",
-    "url": "https://cointelegraph.com/news/tradfi-banks-advancing-new-stablecoin-models?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/tradfi-banks-advancing-new-stablecoin-models?utm_source=rss_feed&utm_medium=rss%3F__%3D1762546639445%26_nocache%3D1762546639445%26_refresh%3Dshy4bp%26ttl%3D0&utm_campaign=rss_partner_inbound",
     "published_at": "2025-11-07T08:30:00-05:00",
     "source": "Cointelegraph",
     "summary": "Stablecoins are shifting from crypto-native experiments to instruments embedded in existing banking and payment infrastructure.",
@@ -316,10 +475,10 @@
     "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMDYvMDE5N2FkMTYtMzU5NC03OTk4LWIxZGUtNWI2ODcwOTUzM2My.jpg",
     "summary_text": "Stablecoins are shifting from crypto-native experiments to instruments embedded in existing banking and payment infrastructure.",
     "category": "fintech",
-    "_permalink": "/p/b4e5afef34/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/b4e5afef34/",
+    "_permalink": "/p/d8daf6afd0/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/d8daf6afd0/",
     "_summary_240": "Stablecoins are shifting from crypto-native experiments to instruments embedded in existing banking and payment infrastructure.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/b4e5afef34/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/d8daf6afd0/thumbnail.png"
   },
   {
     "title": "Chatbots Are Sparking a New Era of Student Surveillance",
@@ -341,7 +500,7 @@
   },
   {
     "title": "Majority of traditional hedge funds now exposed to crypto assets: Survey",
-    "url": "https://cointelegraph.com/news/most-traditional-hedge-funds-now-exposed-to-crypto-survey?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/most-traditional-hedge-funds-now-exposed-to-crypto-survey?utm_source=rss_feed&utm_medium=rss%3F__%3D1762546639445%26_nocache%3D1762546639445%26_refresh%3Dshy4bp%26ttl%3D0&utm_campaign=rss_partner_inbound",
     "published_at": "2025-11-07T07:53:15-05:00",
     "source": "Cointelegraph",
     "summary": "AIMA says 55% of traditional hedge funds now hold crypto, with most planning to increase exposure as US regulation boosts confidence.",
@@ -352,10 +511,10 @@
     "_trending_tags": [
       "ai"
     ],
-    "_permalink": "/p/3f9f9b29f3/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/3f9f9b29f3/",
+    "_permalink": "/p/92e502de68/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/92e502de68/",
     "_summary_240": "AIMA says 55% of traditional hedge funds now hold crypto, with most planning to increase exposure as US regulation boosts confidence.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/3f9f9b29f3/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/92e502de68/thumbnail.png"
   },
   {
     "title": "Olympus Cuts Jobs, Streamlines Operations Under New Leadership",
@@ -374,7 +533,7 @@
   },
   {
     "title": "Crypto needs to rethink incentive structures before the mainstream arrives",
-    "url": "https://cointelegraph.com/news/crypto-incentive-structures-mainstream?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/crypto-incentive-structures-mainstream?utm_source=rss_feed&utm_medium=rss%3F__%3D1762546639445%26_nocache%3D1762546639445%26_refresh%3Dshy4bp%26ttl%3D0&utm_campaign=rss_partner_inbound",
     "published_at": "2025-11-07T07:30:00-05:00",
     "source": "Cointelegraph",
     "summary": "Tokenomics favor speed over conviction, using genuine supporters as exit liquidity. Crypto\u2019s mainstream future requires replacing extraction with participation incentives.",
@@ -385,10 +544,10 @@
     "_trending_tags": [
       "ai"
     ],
-    "_permalink": "/p/42ec6f8faa/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/42ec6f8faa/",
+    "_permalink": "/p/6ccf83817f/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/6ccf83817f/",
     "_summary_240": "Tokenomics favor speed over conviction, using genuine supporters as exit liquidity. Crypto\u2019s mainstream future requires replacing extraction with participation incentives.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/42ec6f8faa/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/6ccf83817f/thumbnail.png"
   },
   {
     "title": "The AI Revolution Is an Afterthought for Phone Buyers",
@@ -412,7 +571,7 @@
   },
   {
     "title": "Bybit hack: \u2018Reckoning\u2019 that led SafeWallet to rearchitect its systems",
-    "url": "https://cointelegraph.com/news/bybit-hack-safe-rearchitects-systems?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/bybit-hack-safe-rearchitects-systems?utm_source=rss_feed&utm_medium=rss%3F__%3D1762546639445%26_nocache%3D1762546639445%26_refresh%3Dshy4bp%26ttl%3D0&utm_campaign=rss_partner_inbound",
     "published_at": "2025-11-07T07:01:39-05:00",
     "source": "Cointelegraph",
     "summary": "Ethereum smart account wallet platform SafeWallet has rearchitected its systems in the wake of the infamous $1.5 billion theft of ETH from Bybit.",
@@ -420,10 +579,10 @@
     "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMDMvMDE5NTYwMDctNTQxYS03Y2EwLTg0ODMtZWU5Y2NhOGY2M2Jj.jpg",
     "summary_text": "Ethereum smart account wallet platform SafeWallet has rearchitected its systems in the wake of the infamous $1.5 billion theft of ETH from Bybit.",
     "category": "fintech",
-    "_permalink": "/p/5d7569154e/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/5d7569154e/",
+    "_permalink": "/p/4876ed70a7/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/4876ed70a7/",
     "_summary_240": "Ethereum smart account wallet platform SafeWallet has rearchitected its systems in the wake of the infamous $1.5 billion theft of ETH from Bybit.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/5d7569154e/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/4876ed70a7/thumbnail.png"
   },
   {
     "title": "We Met NEO, the Viral Humanoid Robot + HatGPT",
@@ -482,7 +641,7 @@
   },
   {
     "title": "Japan\u2019s FSA backs joint stablecoin initiative by nation\u2019s top banks",
-    "url": "https://cointelegraph.com/news/japan-fsa-backs-banks-joint-yen-stablecoin-rollout?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/japan-fsa-backs-banks-joint-yen-stablecoin-rollout?utm_source=rss_feed&utm_medium=rss%3F__%3D1762546639445%26_nocache%3D1762546639445%26_refresh%3Dshy4bp%26ttl%3D0&utm_campaign=rss_partner_inbound",
     "published_at": "2025-11-07T05:30:43-05:00",
     "source": "Cointelegraph",
     "summary": "Japan\u2019s financial regulator has launched a \u201cPayment Innovation Project\u201d backing a joint initiative by major banks and corporations to issue yen-based stablecoins.",
@@ -490,10 +649,10 @@
     "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMDMvMDE5NWVhNDYtYWUzZS03N2FkLTgzODAtYzI4OTk5ZDNmMTIw.jpg",
     "summary_text": "Japan\u2019s financial regulator has launched a \u201cPayment Innovation Project\u201d backing a joint initiative by major banks and corporations to issue yen-based stablecoins.",
     "category": "fintech",
-    "_permalink": "/p/fe22a6656f/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/fe22a6656f/",
+    "_permalink": "/p/3d005f169a/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/3d005f169a/",
     "_summary_240": "Japan\u2019s financial regulator has launched a \u201cPayment Innovation Project\u201d backing a joint initiative by major banks and corporations to issue yen-based stablecoins.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/fe22a6656f/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/3d005f169a/thumbnail.png"
   },
   {
     "title": "Notion\u2019s rebuild for agentic AI: How GPT\u20115 helped unlock autonomous workflows",
@@ -513,7 +672,7 @@
   },
   {
     "title": "EU considers delaying AI Act rollout amid US and Big Tech pressure",
-    "url": "https://cointelegraph.com/news/eu-halt-ai-act-counter-us-big-tech-pressure-report?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/eu-halt-ai-act-counter-us-big-tech-pressure-report?utm_source=rss_feed&utm_medium=rss%3F__%3D1762546639445%26_nocache%3D1762546639445%26_refresh%3Dshy4bp%26ttl%3D0&utm_campaign=rss_partner_inbound",
     "published_at": "2025-11-07T04:38:54-05:00",
     "source": "Cointelegraph",
     "summary": "After adopting the AI Act last year, the European Union is considering easing certain provisions amid mounting pressure from the US and Big Tech.",
@@ -524,10 +683,10 @@
     "_trending_tags": [
       "ai"
     ],
-    "_permalink": "/p/d87d5a1e51/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/d87d5a1e51/",
+    "_permalink": "/p/f1fad8288d/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/f1fad8288d/",
     "_summary_240": "After adopting the AI Act last year, the European Union is considering easing certain provisions amid mounting pressure from the US and Big Tech.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/d87d5a1e51/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/f1fad8288d/thumbnail.png"
   },
   {
     "title": "AI Chip Boom Fuels Taiwan\u2019s Fastest Export Gain in 15 Years",
@@ -578,24 +737,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/e3935bb493/thumbnail.png"
   },
   {
-    "title": "FinTech IPO Index Dips 1.6% as Earnings Weigh on Upstart and Oportun",
-    "url": "https://www.pymnts.com/news/fintech-investments/2025/fintech-ipo-index-dips-1-6percent-as-earnings-weigh-on-upstart-and-oportun/",
-    "published_at": "2025-11-07T04:00:09-05:00",
-    "source": "PYMNTS",
-    "summary": "Earnings were everywhere this past week, and for the FinTech IPO Index, quarterly reports dominated the headlines as platforms weighed in with revenues and commentary about consumer and enterprise spending and lending. The FinTech IPO Index lost 1.6% through the week. PYMNTS reported that Chime Financial\u2019s latest earnings report demonstrated double-digit growth in the [\u2026] The post FinTech IPO Ind...",
-    "content_html": "<p style=\"font-weight: 400;\">Earnings were everywhere this past week, and for the FinTech IPO Index, quarterly reports dominated the headlines as platforms weighed in with revenues and commentary about consumer and enterprise spending and lending.</p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p style=\"font-weight: 400;\">The FinTech IPO Index lost 1.6% through the week.</p>\n<p style=\"font-weight: 400;\"><a href=\"https://www.pymnts.com/news/digital-banking/2025/chime-targets-high-earners-as-everyday-essentials-fuel-card-spending/\" rel=\"noopener\" target=\"_blank\">PYMNTS reported that</a> Chime Financial\u2019s latest earnings report demonstrated double-digit growth in the FinTech\u2019s active membership base and increased usage of Chime Card for everyday spending. CEO Chris Britt said the company has notched 9.1 million active members in a market of nearly 200 million people earning up to $100,000 per year.</p>\n<p style=\"font-weight: 400;\">The company delivered 29% year-over-year revenue growth despite lapping the initial launch of MyPay. Revenues came in at $544 million for the quarter. The card spending represented 16% of total purchase volume as of the third quarter, he said. MyPay, for its part, is now a product with a $350 million annual run rate.</p>\n<p style=\"font-weight: 400;\">CFO Matt Newcomb said on the call that the active membership roster grew by 21% year over year and up 400,000 sequentially.</p>\n<p style=\"font-weight: 400;\">Chime\u2019s stock gained 9.7%.</p>\n<h2 style=\"font-weight: 400;\"><strong>Marqeta Reports Earnings and a Pact With Klarna</strong></h2>\n<p style=\"font-weight: 400;\">Elsewhere, <a href=\"https://www.pymnts.com/earnings/2025/embedded-finance-propels-marqeta-to-nearly-100-billion-in-tpv/\" rel=\"noopener\" target=\"_blank\">Marqeta\u2019s third-quarter 2025 earnings</a> detailed $98 billion in total processing volume (TPV), up 33% year over year. In other Marqeta-related news, <a href=\"https://www.pymnts.com/next-gen-debit/2025/klarna-expands-european-card-network-with-help-marqeta/\" rel=\"noopener\" target=\"_blank\">Klarna is expanding its card</a> offering in Europe, partnering with Marqeta to do so. The partnership is designed to bring the Klarna Card into 15 new European markets, according to a joint news release. The launch builds on the two companies\u2019 long-term partnership and employs Visa\u2019s Flexible Credential (VFC) technology, letting cardholders choose between paying now or later. The expansion follows the United States launch of the Klarna Card in July. Marqeta last year became the first issuer processor in the U.S. certified for the Visa Flexible Credential.</p>\n<p style=\"font-weight: 400;\">Marqeta\u2019s stock was up 10.1%. Klarna shares lost 2.4%.</p>\n<p style=\"font-weight: 400;\"><a href=\"https://www.pymnts.com/consumer-finance/2025/upstart-says-originations-leap-as-consumer-credit-strength-improves/\" rel=\"noopener\" target=\"_blank\">PYMNTS reported that</a> artificial intelligence (AI) lending marketplace Upstart saw growing consumer demand and steady consumer credit strength in the third quarter.</p>\n<p style=\"font-weight: 400;\">The company\u2019s originations rose 80% year over year in the third quarter to reach $2.9 billion.</p>\n<p style=\"font-weight: 400;\">By category, compared to the third quarter of 2024, personal loan originations were up 73% to $2.7 billion, auto originations were up fivefold to $128 million, and home originations were up fourfold to $72 million, per the presentation.</p>\n<p style=\"font-weight: 400;\">\u201cWe see no material deterioration in consumer credit strength and in fact have seen recent signs of improvement,\u201d CEO Dave Girouard said. Looking ahead, Upstart expects its macro indicator, the Upstart Macro Index (UMI), to remain stable during the current quarter, Upstart Chief Financial Officer Sanjay Datta said during the call. According to company materials, 91% of the loans enabled by Upstart during the third quarter were fully automated, requiring no human intervention from the company.</p>\n<p style=\"font-weight: 400;\">Upstart\u2019s stock lost 14.5% through the past five sessions.</p>\n<p style=\"font-weight: 400;\">Oportun\u2019s stock dipped more than 6%. <a href=\"https://www.globenewswire.com/news-release/2025/11/04/3180859/0/en/Oportun-Delivers-Fourth-Consecutive-Quarter-of-GAAP-Profitability-Increases-Full-Year-2025-Adjusted-EPS-Guidance.html\" rel=\"noopener\" target=\"_blank\">Oportun reported</a> that in its latest quarter, revenues of $239 million were down about 5% from $250 million in the prior-year quarter. Aggregate originations rose to $512 million, up 7 % from $480 million a year ago. The owned principal balance ended the quarter at $2.6 billion, compared with $2.7 billion a year earlier.</p>\n<p style=\"font-weight: 400;\">The company emphasized execution of asset-backed securitization at weighted average yields below 6 % and the expansion of its warehouse financing capacity (to $1.14 billion committed post-quarter) to underpin growth in its lending portfolio.</p>\n<p style=\"font-weight: 400;\"><a href=\"https://www.prnewswire.com/news-releases/payoneer-reports-third-quarter-2025-financial-results-302604833.html?utm_source=chatgpt.com\" rel=\"noopener\" target=\"_blank\">Cross-border payments firm Payoneer</a> delivered a record quarter with total revenue of $270.9 million, up 9 % year on year. Revenue excluding interest income grew 15 % to approximately $211 million. The company reported $192 million in small and medium-sized business (SMB) customer revenue, up 17 % year on year, reflecting expansion of payment services for sellers, B2B firms and marketplace participants. Payoneer\u2019s stock lost 8.7%.</p>\n<p><img alt=\"FinTech IPO Index chart\" class=\"aligncenter wp-image-3206602\" height=\"657\" src=\"https://www.pymnts.com/wp-content/uploads/2025/11/FinTech-IPO-Index-chart.png\" width=\"900\" /></p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/news/fintech-investments/2025/fintech-ipo-index-dips-1-6percent-as-earnings-weigh-on-upstart-and-oportun/\">FinTech IPO Index Dips 1.6% as Earnings Weigh on Upstart and Oportun</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
-    "image_url": "https://www.pymnts.com/wp-content/uploads/2025/11/FinTech-IPO-Index-1107.jpg?w=457",
-    "summary_text": "Earnings were everywhere this past week, and for the FinTech IPO Index, quarterly reports dominated the headlines as platforms weighed in with revenues and commentary about consumer and enterprise spending and lending. The FinTech IPO Index lost 1.6% through ...",
-    "category": "fintech",
-    "_trending_tags": [
-      "fintech"
-    ],
-    "_permalink": "/p/bfb54d9e11/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/bfb54d9e11/",
-    "_summary_240": "Earnings were everywhere this past week, and for the FinTech IPO Index, quarterly reports dominated the headlines as platforms weighed in with revenues and commentary about...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/bfb54d9e11/thumbnail.png"
-  },
-  {
     "title": "Rightmove Shares Plunge Most on Record on Revenue, AI Spend",
     "url": "https://www.bloomberg.com/news/articles/2025-11-07/rightmove-shares-plunge-most-on-record-on-guidance-ai-spending",
     "published_at": "2025-11-07T03:55:42-05:00",
@@ -615,7 +756,7 @@
   },
   {
     "title": "Stablecoins strengthen the dollar and empower the developing world",
-    "url": "https://cointelegraph.com/news/stablecoins-dollar-and-empower-the-developing-world?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/stablecoins-dollar-and-empower-the-developing-world?utm_source=rss_feed&utm_medium=rss%3F__%3D1762546639445%26_nocache%3D1762546639445%26_refresh%3Dshy4bp%26ttl%3D0&utm_campaign=rss_partner_inbound",
     "published_at": "2025-11-07T03:30:00-05:00",
     "source": "Cointelegraph",
     "summary": "Dollar-backed stablecoins reinforce U.S. currency dominance while democratizing finance in developing nations, countering China's debt-trap diplomacy.",
@@ -623,10 +764,10 @@
     "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTAvMDE5YTEwNDQtOWE5NS03ODVjLTkxY2MtOTFiYjkzNDE1Y2Mx.jpg",
     "summary_text": "Dollar-backed stablecoins reinforce U.S. currency dominance while democratizing finance in developing nations, countering China's debt-trap diplomacy.",
     "category": "fintech",
-    "_permalink": "/p/082a3c0a6f/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/082a3c0a6f/",
+    "_permalink": "/p/ba73e9f2b5/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/ba73e9f2b5/",
     "_summary_240": "Dollar-backed stablecoins reinforce U.S. currency dominance while democratizing finance in developing nations, countering China's debt-trap diplomacy.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/082a3c0a6f/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/ba73e9f2b5/thumbnail.png"
   },
   {
     "title": "We Built A T2D Earnings Calendar",
@@ -663,7 +804,7 @@
   },
   {
     "title": "New crypto group aims to make unified standards for blockchain transactions",
-    "url": "https://cointelegraph.com/news/crypto-firms-launch-blockchain-payments-consortium?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/crypto-firms-launch-blockchain-payments-consortium?utm_source=rss_feed&utm_medium=rss%3F__%3D1762546639445%26_nocache%3D1762546639445%26_refresh%3Dshy4bp%26ttl%3D0&utm_campaign=rss_partner_inbound",
     "published_at": "2025-11-07T01:04:52-05:00",
     "source": "Cointelegraph",
     "summary": "The Blockchain Payments Consortium, made up of several major crypto firms, was formed to create a \u201ccommon framework that enhances blockchain transactions.\u201d",
@@ -674,10 +815,10 @@
     "_trending_tags": [
       "ai"
     ],
-    "_permalink": "/p/2141ab4d26/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/2141ab4d26/",
+    "_permalink": "/p/7d299a13cb/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/7d299a13cb/",
     "_summary_240": "The Blockchain Payments Consortium, made up of several major crypto firms, was formed to create a \u201ccommon framework that enhances blockchain transactions.\u201d",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/2141ab4d26/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/7d299a13cb/thumbnail.png"
   },
   {
     "title": "EU set to water down landmark AI act after Big Tech pressure",
@@ -698,44 +839,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/f74814c133/thumbnail.png"
   },
   {
-    "title": "Lawsuits Blame ChatGPT for Suicides and Harmful Delusions",
-    "url": "https://www.nytimes.com/2025/11/06/technology/chatgpt-lawsuit-suicides-delusions.html",
-    "published_at": "2025-11-06T23:43:46-05:00",
-    "source": "The New York Times - Technology",
-    "summary": "Seven complaints, filed on Thursday, claim the popular chatbot encouraged dangerous discussions and led to mental breakdowns.",
-    "content_html": "Over three weeks of conversations with ChatGPT, Allan Brooks fell into a delusion. He is now suing OpenAI.",
-    "image_url": "https://static01.nyt.com/images/2025/11/06/multimedia/06biz-chatbot-suits-hlwz/06biz-chatbot-suits-hlwz-mediumSquareAt3X.jpg",
-    "summary_text": "Seven complaints, filed on Thursday, claim the popular chatbot encouraged dangerous discussions and led to mental breakdowns.",
-    "category": "ai",
-    "_trending_tags": [
-      "ai",
-      "chatgpt",
-      "gpt"
-    ],
-    "_permalink": "/p/9616172273/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/9616172273/",
-    "_summary_240": "Seven complaints, filed on Thursday, claim the popular chatbot encouraged dangerous discussions and led to mental breakdowns.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/9616172273/thumbnail.png"
-  },
-  {
-    "title": "Ethereum traders flip bullish as rest of market remains fearful",
-    "url": "https://cointelegraph.com/news/ethereum-traders-bullish-when-eth-neared-3500?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-    "published_at": "2025-11-06T23:02:00-05:00",
-    "source": "Cointelegraph",
-    "summary": "Santiment says online Ether chatter turned bullish, but the Crypto Fear & Greed Index tracking wider market sentiment remains at \u201cExtreme Fear.\u201d",
-    "content_html": "",
-    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMDEvMDE5NGFiMDEtMGNlZS03NGUwLTg0NjMtZTdmNTNkM2ZjY2Vi.jpg",
-    "summary_text": "Santiment says online Ether chatter turned bullish, but the Crypto Fear & Greed Index tracking wider market sentiment remains at \u201cExtreme Fear.\u201d",
-    "category": "fintech",
-    "_trending_tags": [
-      "ai"
-    ],
-    "_permalink": "/p/5c489694f0/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/5c489694f0/",
-    "_summary_240": "Santiment says online Ether chatter turned bullish, but the Crypto Fear & Greed Index tracking wider market sentiment remains at \u201cExtreme Fear.\u201d",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/5c489694f0/thumbnail.png"
-  },
-  {
     "title": "Polymarket Volume Inflated by \u2018Artificial\u2019 Activity, Study Finds",
     "url": "https://www.bloomberg.com/news/articles/2025-11-07/polymarket-volume-inflated-by-artificial-activity-study-finds",
     "published_at": "2025-11-06T22:19:04-05:00",
@@ -749,24 +852,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/79db14e182/",
     "_summary_240": "The volume of activity on Polymarket, one of the most popular prediction markets, has been significantly inflated by so-called wash trading in which users rapidly buy and sell...",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/79db14e182/thumbnail.png"
-  },
-  {
-    "title": "Singapore\u2019s DBS Girds for AI as Tellers Morph Into Bankers",
-    "url": "https://www.bloomberg.com/news/articles/2025-11-07/singapore-s-dbs-girds-for-ai-as-tellers-morph-into-bankers",
-    "published_at": "2025-11-06T21:38:52-05:00",
-    "source": "Bloomberg Technology",
-    "summary": "DBS Group Holdings Ltd. is retraining its staffers for new roles as it braces for artificial intelligence to reshape jobs and skills.",
-    "content_html": "A DBS bank branch in Singapore. Photographer: Ore Huiying/Bloomberg",
-    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/i2gfBTz3eUBQ/v0/1200x-1.jpg",
-    "summary_text": "DBS Group Holdings Ltd. is retraining its staffers for new roles as it braces for artificial intelligence to reshape jobs and skills.",
-    "category": "ai",
-    "_trending_tags": [
-      "ai"
-    ],
-    "_permalink": "/p/4e3974e88e/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/4e3974e88e/",
-    "_summary_240": "DBS Group Holdings Ltd. is retraining its staffers for new roles as it braces for artificial intelligence to reshape jobs and skills.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/4e3974e88e/thumbnail.png"
   },
   {
     "title": "Chris Sacca\u2019s VC firm is raising a second nuclear fusion fund",
@@ -1087,16 +1172,12 @@
     "source": "Financial Times - Technology",
     "summary": "The AI hyperscaler capex plans keep on growing and growing",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/78829ecd-022d-4fee-ba85-2e3854c83e5f.jpg",
+    "image_url": "",
     "summary_text": "The AI hyperscaler capex plans keep on growing and growing",
     "category": "ai",
     "_trending_tags": [
       "ai"
-    ],
-    "_permalink": "/p/e171c23c15/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/e171c23c15/",
-    "_summary_240": "The AI hyperscaler capex plans keep on growing and growing",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/e171c23c15/thumbnail.png"
+    ]
   },
   {
     "title": "Fall Into Gaming With 20+ Titles Joining GeForce NOW in November",
@@ -1213,16 +1294,12 @@
     "source": "Financial Times - Technology",
     "summary": "Tech leaders say systems now rival human intelligence in key tasks, further fuelling the superintelligence debate",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/1214554f-c578-43bf-9a0f-3d875956cd68.jpg",
+    "image_url": "",
     "summary_text": "Tech leaders say systems now rival human intelligence in key tasks, further fuelling the superintelligence debate",
     "category": "ai",
     "_trending_tags": [
       "ai"
-    ],
-    "_permalink": "/p/470cad8049/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/470cad8049/",
-    "_summary_240": "Tech leaders say systems now rival human intelligence in key tasks, further fuelling the superintelligence debate",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/470cad8049/thumbnail.png"
+    ]
   },
   {
     "title": "Google's AI Cost Advantage: Owning the Cloud",
@@ -1251,16 +1328,12 @@
     "source": "Financial Times - Technology",
     "summary": "The inside story on the Asia tech trends that matter, from Nikkei Asia and the Financial Times",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/aa994f2f-2b81-4276-97b7-17d36705a297.jpg",
+    "image_url": "",
     "summary_text": "The inside story on the Asia tech trends that matter, from Nikkei Asia and the Financial Times",
     "category": "ai",
     "_trending_tags": [
       "ai"
-    ],
-    "_permalink": "/p/b69bedc8ec/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/b69bedc8ec/",
-    "_summary_240": "The inside story on the Asia tech trends that matter, from Nikkei Asia and the Financial Times",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/b69bedc8ec/thumbnail.png"
+    ]
   },
   {
     "title": "The compute rethink: Scaling AI where data lives, at the edge",
@@ -1377,17 +1450,13 @@
     "source": "Financial Times - Technology",
     "summary": "CEO criticises western \u2018cynicism\u2019 while Beijing loosens regulations and cuts energy costs for data centres",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/34f9618b-8526-4938-878d-019f53a0be96.jpg",
+    "image_url": "",
     "summary_text": "CEO criticises western \u2018cynicism\u2019 while Beijing loosens regulations and cuts energy costs for data centres",
     "category": "ai",
     "_trending_tags": [
       "ai",
       "nvidia"
-    ],
-    "_permalink": "/p/e2d8f7fd53/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/e2d8f7fd53/",
-    "_summary_240": "CEO criticises western \u2018cynicism\u2019 while Beijing loosens regulations and cuts energy costs for data centres",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/e2d8f7fd53/thumbnail.png"
+    ]
   },
   {
     "title": "The AI Data Center Boom Is Warping the US Economy",
@@ -1489,16 +1558,12 @@
     "source": "Financial Times - Technology",
     "summary": "High Court finds Robert Bonnier lied \u2018repeatedly\u2019 to secure investment from tycoon",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/0ba4e8ac-dd04-4cea-9917-d3cecde1b205.jpg",
+    "image_url": "",
     "summary_text": "High Court finds Robert Bonnier lied \u2018repeatedly\u2019 to secure investment from tycoon",
     "category": "fintech",
     "_trending_tags": [
       "ai"
-    ],
-    "_permalink": "/p/62c45fe0d6/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/62c45fe0d6/",
-    "_summary_240": "High Court finds Robert Bonnier lied \u2018repeatedly\u2019 to secure investment from tycoon",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/62c45fe0d6/thumbnail.png"
+    ]
   },
   {
     "title": "AI-designed antibodies promise big boost to drug development",
@@ -1507,16 +1572,12 @@
     "source": "Financial Times - Technology",
     "summary": "University of Washington team uses generative AI tool to create new functional cancer antibodies",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/3592199b-2100-4937-a277-1f140fa550ae.jpg",
+    "image_url": "",
     "summary_text": "University of Washington team uses generative AI tool to create new functional cancer antibodies",
     "category": "ai",
     "_trending_tags": [
       "ai"
-    ],
-    "_permalink": "/p/353e407b54/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/353e407b54/",
-    "_summary_240": "University of Washington team uses generative AI tool to create new functional cancer antibodies",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/353e407b54/thumbnail.png"
+    ]
   },
   {
     "title": "How Chime is redefining marketing through AI",
@@ -1532,27 +1593,6 @@
       "agent",
       "ai"
     ]
-  },
-  {
-    "title": "AI may fatally wound web\u2019s ad model, warns Tim Berners-Lee",
-    "url": "https://www.ft.com/content/20592619-1bb9-451e-b4af-fcd33d981076",
-    "published_at": "2025-11-05T07:57:55-05:00",
-    "source": "Financial Times - Technology",
-    "summary": "Web inventor warns reliance on AI agents threatens multibillion-dollar revenues for Google and Meta",
-    "content_html": "",
-    "image_url": "https://images.ft.com/v3/image/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F5398aedc-02d5-417e-aa6f-d69c2e5c74d6.jpg?source=next-article&fit=scale-down&quality=highest&width=700&dpr=1",
-    "summary_text": "Web inventor warns reliance on AI agents threatens multibillion-dollar revenues for Google and Meta",
-    "category": "ai",
-    "_trending_tags": [
-      "agent",
-      "ai",
-      "google",
-      "meta"
-    ],
-    "_permalink": "/p/cfbecffdec/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/cfbecffdec/",
-    "_summary_240": "Web inventor warns reliance on AI agents threatens multibillion-dollar revenues for Google and Meta",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/cfbecffdec/thumbnail.png"
   },
   {
     "title": "How Anthropic's Claude cuts SOC investigation time from 5 hours to 7 minutes",
