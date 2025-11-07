@@ -1,7 +1,28 @@
 [
   {
+    "title": "Seven more families are now suing OpenAI over ChatGPT\u2019s role in suicides, delusions",
+    "url": "https://techcrunch.com/2025/11/07/seven-more-families-are-now-suing-openai-over-chatgpts-role-in-suicides-delusions/",
+    "published_at": "2025-11-07T15:56:18-05:00",
+    "source": "TechCrunch",
+    "summary": "In one case, 23-year-old Zane Shamblin had a conversation with ChatGPT that lasted more than four hours.",
+    "content_html": "",
+    "image_url": "https://techcrunch.com/wp-content/uploads/2025/04/GettyImages-2205105208.jpg?resize=1200,800",
+    "summary_text": "In one case, 23-year-old Zane Shamblin had a conversation with ChatGPT that lasted more than four hours.",
+    "category": "ai",
+    "_trending_tags": [
+      "ai",
+      "chatgpt",
+      "gpt",
+      "openai"
+    ],
+    "_permalink": "/p/4d84bfb554/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/4d84bfb554/",
+    "_summary_240": "In one case, 23-year-old Zane Shamblin had a conversation with ChatGPT that lasted more than four hours.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/4d84bfb554/thumbnail.png"
+  },
+  {
     "title": "My First Bitcoin ends El Salvador program, pivots to global BTC education",
-    "url": "https://cointelegraph.com/news/my-first-bitcoin-el-salvador-school-program-education-network?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/my-first-bitcoin-el-salvador-school-program-education-network?utm_source=rss_feed&utm_medium=rss%3F_refresh%3Dm6nen7%26_%3D1762550022194%26ttt%3D1762550022194%26_nocache%3D1762550022194&utm_campaign=rss_partner_inbound",
     "published_at": "2025-11-07T15:31:00-05:00",
     "source": "Cointelegraph",
     "summary": "The Bitcoin education initiative is closing its local operations and rebranding for a global mission, shifting from teaching students in El Salvador to training educators worldwide.",
@@ -12,10 +33,10 @@
     "_trending_tags": [
       "ai"
     ],
-    "_permalink": "/p/cadf1a36b0/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/cadf1a36b0/",
+    "_permalink": "/p/fbaf76b09c/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/fbaf76b09c/",
     "_summary_240": "The Bitcoin education initiative is closing its local operations and rebranding for a global mission, shifting from teaching students in El Salvador to training educators...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/cadf1a36b0/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/fbaf76b09c/thumbnail.png"
   },
   {
     "title": "OpenAI Executives Struggle to Combat AI Spending Concerns",
@@ -55,6 +76,24 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/9f538797b2/",
     "_summary_240": "Seven complaints, filed on Thursday, claim the popular chatbot encouraged dangerous discussions and led to mental breakdowns.",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/9f538797b2/thumbnail.png"
+  },
+  {
+    "title": "Researchers surprised that with AI, toxicity is harder to fake than intelligence",
+    "url": "https://arstechnica.com/information-technology/2025/11/being-too-nice-online-is-a-dead-giveaway-for-ai-bots-study-suggests/",
+    "published_at": "2025-11-07T15:15:33-05:00",
+    "source": "Ars Technica",
+    "summary": "New \"computational Turing test\" reportedly catches AI pretending to be human with 80% accuracy.",
+    "content_html": "<p>The next time you encounter an unusually polite reply on social media, you might want to check twice. It could be an AI model trying (and failing) to blend in with the crowd.</p>\n<p>On Wednesday, researchers from the University of Zurich, University of Amsterdam, Duke University, and NYU <a href=\"https://arxiv.org/abs/2511.04195\">released</a> a study revealing that AI models remain easily distinguishable from humans in social media conversations, with overly friendly emotional tone serving as the most persistent giveaway. The research, which tested nine open-weight models across Twitter/X, Bluesky, and Reddit, found that classifiers developed by the researchers detected AI-generated replies with 70 to 80 percent accuracy.</p>\n<p>The study introduces what the authors call a \u201ccomputational Turing test\u201d to assess how closely AI models approximate human language. Instead of relying on subjective human judgment about whether text sounds authentic, the framework uses automated classifiers and linguistic analysis to identify specific features that distinguish machine-generated from human-authored content.</p><p><a href=\"https://arstechnica.com/information-technology/2025/11/being-too-nice-online-is-a-dead-giveaway-for-ai-bots-study-suggests/\">Read full article</a></p>\n<p><a href=\"https://arstechnica.com/information-technology/2025/11/being-too-nice-online-is-a-dead-giveaway-for-ai-bots-study-suggests/#comments\">Comments</a></p>",
+    "image_url": "https://cdn.arstechnica.net/wp-content/uploads/2025/11/frowny_bagboy-1152x648.jpg",
+    "summary_text": "New \"computational Turing test\" reportedly catches AI pretending to be human with 80% accuracy.",
+    "category": "ai",
+    "_trending_tags": [
+      "ai"
+    ],
+    "_permalink": "/p/255b7c5d35/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/255b7c5d35/",
+    "_summary_240": "New \"computational Turing test\" reportedly catches AI pretending to be human with 80% accuracy.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/255b7c5d35/thumbnail.png"
   },
   {
     "title": "Phishing Threats Prompt Call for Wider Adoption of Passkeys",
@@ -128,7 +167,7 @@
   },
   {
     "title": "Coinbase, Block, Robinhood highlight dismal week for crypto stocks",
-    "url": "https://cointelegraph.com/news/crypto-stocks-slide-coinbase-block-robinhood-macro-fears?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/crypto-stocks-slide-coinbase-block-robinhood-macro-fears?utm_source=rss_feed&utm_medium=rss%3F_refresh%3Dm6nen7%26_%3D1762550022194%26ttt%3D1762550022194%26_nocache%3D1762550022194&utm_campaign=rss_partner_inbound",
     "published_at": "2025-11-07T14:48:30-05:00",
     "source": "Cointelegraph",
     "summary": "Crypto stocks slid as macro fears, government shutdown jitters and lingering fallout from October's $19 billion liquidation hit investor sentiment.",
@@ -136,14 +175,14 @@
     "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMDIvMDE5NTNhOTYtN2UyYi03MDg2LWFkNWUtNzJmNmU4Mzc3YTMz.jpg",
     "summary_text": "Crypto stocks slid as macro fears, government shutdown jitters and lingering fallout from October's $19 billion liquidation hit investor sentiment.",
     "category": "fintech",
-    "_permalink": "/p/c2b5b72249/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/c2b5b72249/",
+    "_permalink": "/p/7e28368312/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/7e28368312/",
     "_summary_240": "Crypto stocks slid as macro fears, government shutdown jitters and lingering fallout from October's $19 billion liquidation hit investor sentiment.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/c2b5b72249/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/7e28368312/thumbnail.png"
   },
   {
     "title": "New Bitcoin highs could take 2 to 6 months but data says it\u2019s worth the wait: Analysis",
-    "url": "https://cointelegraph.com/news/new-bitcoin-highs-could-take-2-to-6-months-but-data-says-it-s-worth-the-wait-analysis?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/new-bitcoin-highs-could-take-2-to-6-months-but-data-says-it-s-worth-the-wait-analysis?utm_source=rss_feed&utm_medium=rss%3F_refresh%3Dm6nen7%26_%3D1762550022194%26ttt%3D1762550022194%26_nocache%3D1762550022194&utm_campaign=rss_partner_inbound",
     "published_at": "2025-11-07T14:45:00-05:00",
     "source": "Cointelegraph",
     "summary": "Bitcoin dropped 20% from its all-time high, leaving analysts split on whether a slow recovery or a fresh parabolic price breakout will happen in the next few months.",
@@ -154,10 +193,10 @@
     "_trending_tags": [
       "ai"
     ],
-    "_permalink": "/p/cd4106ec89/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/cd4106ec89/",
+    "_permalink": "/p/1b25df1a5b/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/1b25df1a5b/",
     "_summary_240": "Bitcoin dropped 20% from its all-time high, leaving analysts split on whether a slow recovery or a fresh parabolic price breakout will happen in the next few months.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/cd4106ec89/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/1b25df1a5b/thumbnail.png"
   },
   {
     "title": "Snap crackles while Pinterest pops, but both are a solid bet on AI",
@@ -233,7 +272,7 @@
   },
   {
     "title": "Balancer exploit and Stream contagion expose DeFi\u2019s fragile core: Finance Redefined",
-    "url": "https://cointelegraph.com/news/defi-newsletter-exploits-risk-ratings-policy-alliance?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/defi-newsletter-exploits-risk-ratings-policy-alliance?utm_source=rss_feed&utm_medium=rss%3F_refresh%3Dm6nen7%26_%3D1762550022194%26ttt%3D1762550022194%26_nocache%3D1762550022194&utm_campaign=rss_partner_inbound",
     "published_at": "2025-11-07T14:00:00-05:00",
     "source": "Cointelegraph",
     "summary": "Balancer and Stream Finance incidents totaling over $200 million shook DeFi as RedStone and major Ethereum protocols launched reform initiatives.",
@@ -241,10 +280,10 @@
     "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTEvMDE5YTVkYTQtMTBlMy03NzlmLWFhYjItNGE2OGI0NWY4OTNl.jpg",
     "summary_text": "Balancer and Stream Finance incidents totaling over $200 million shook DeFi as RedStone and major Ethereum protocols launched reform initiatives.",
     "category": "fintech",
-    "_permalink": "/p/89e31bfe5d/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/89e31bfe5d/",
+    "_permalink": "/p/a32b1f37da/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/a32b1f37da/",
     "_summary_240": "Balancer and Stream Finance incidents totaling over $200 million shook DeFi as RedStone and major Ethereum protocols launched reform initiatives.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/89e31bfe5d/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/a32b1f37da/thumbnail.png"
   },
   {
     "title": "Vigilante Lawyers Expose the Rising Tide of A.I. Slop in Court Filings",
@@ -266,7 +305,7 @@
   },
   {
     "title": "Bitcoin Coinbase Premium hits 7-month low but traders spot a silver lining",
-    "url": "https://cointelegraph.com/news/bitcoin-coinbase-premium-hits-7-month-low-but-traders-spot-a-silver-lining?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/bitcoin-coinbase-premium-hits-7-month-low-but-traders-spot-a-silver-lining?utm_source=rss_feed&utm_medium=rss%3F_refresh%3Dm6nen7%26_%3D1762550022194%26ttt%3D1762550022194%26_nocache%3D1762550022194&utm_campaign=rss_partner_inbound",
     "published_at": "2025-11-07T13:45:00-05:00",
     "source": "Cointelegraph",
     "summary": "Bitcoin dipped below $100,000 as the Coinbase Premium hit a seven-month low, signaling weak US demand. Meanwhile, onchain data hints that short-term holders may be buying the dip.",
@@ -277,10 +316,10 @@
     "_trending_tags": [
       "ai"
     ],
-    "_permalink": "/p/bdd7535fda/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/bdd7535fda/",
+    "_permalink": "/p/e2ec988d25/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/e2ec988d25/",
     "_summary_240": "Bitcoin dipped below $100,000 as the Coinbase Premium hit a seven-month low, signaling weak US demand. Meanwhile, onchain data hints that short-term holders may be buying the dip.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/bdd7535fda/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/e2ec988d25/thumbnail.png"
   },
   {
     "title": "PNC to Add 300 Branches by 2030, Building Coast-to-Coast Franchise",
@@ -386,7 +425,7 @@
   },
   {
     "title": "US Senate to vote on bill to reopen gov\u2019t with crypto bill in limbo",
-    "url": "https://cointelegraph.com/news/us-senate-reopen-government-crypto-bill-limbo?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/us-senate-reopen-government-crypto-bill-limbo?utm_source=rss_feed&utm_medium=rss%3F_refresh%3Dm6nen7%26_%3D1762550022194%26ttt%3D1762550022194%26_nocache%3D1762550022194&utm_campaign=rss_partner_inbound",
     "published_at": "2025-11-07T11:11:17-05:00",
     "source": "Cointelegraph",
     "summary": "Some Republicans\u2019 initial plans to have crypto market structure out of committee by November have been sidetracked by the government shutdown.",
@@ -394,14 +433,14 @@
     "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMDcvMDE5ODRmMmQtMzY4OS03M2YzLTk0M2MtYTMwMDEwMWFjOWI1.jpg",
     "summary_text": "Some Republicans\u2019 initial plans to have crypto market structure out of committee by November have been sidetracked by the government shutdown.",
     "category": "fintech",
-    "_permalink": "/p/e1cb30f600/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/e1cb30f600/",
+    "_permalink": "/p/f982d9cfd0/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/f982d9cfd0/",
     "_summary_240": "Some Republicans\u2019 initial plans to have crypto market structure out of committee by November have been sidetracked by the government shutdown.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/e1cb30f600/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/f982d9cfd0/thumbnail.png"
   },
   {
     "title": "AI trading bots surge in popularity, but experts warn they\u2019re not \u2018money printers\u2019",
-    "url": "https://cointelegraph.com/news/ai-trading-bots-surge-experts-warn-not-money-printers?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/ai-trading-bots-surge-experts-warn-not-money-printers?utm_source=rss_feed&utm_medium=rss%3F_refresh%3Dm6nen7%26_%3D1762550022194%26ttt%3D1762550022194%26_nocache%3D1762550022194&utm_campaign=rss_partner_inbound",
     "published_at": "2025-11-07T10:20:05-05:00",
     "source": "Cointelegraph",
     "summary": "As AI-powered trading tools gain traction across crypto markets, industry insiders say most traders misunderstand how these models actually work and where their real risks lie.",
@@ -412,10 +451,10 @@
     "_trending_tags": [
       "ai"
     ],
-    "_permalink": "/p/4c755de38d/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/4c755de38d/",
+    "_permalink": "/p/e66c662e5c/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/e66c662e5c/",
     "_summary_240": "As AI-powered trading tools gain traction across crypto markets, industry insiders say most traders misunderstand how these models actually work and where their real risks lie.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/4c755de38d/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/e66c662e5c/thumbnail.png"
   },
   {
     "title": "The Chatbot Delusions: Is AI Contributing to a Novel Mental Health Crisis?",
@@ -453,7 +492,7 @@
   },
   {
     "title": "Here\u2019s what happened in crypto today",
-    "url": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss%3F_refresh%3Dm6nen7%26_%3D1762550022194%26ttt%3D1762550022194%26_nocache%3D1762550022194&utm_campaign=rss_partner_inbound",
     "published_at": "2025-11-07T09:20:23-05:00",
     "source": "Cointelegraph",
     "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, NFTs, Web3 and crypto regulation.",
@@ -464,10 +503,10 @@
     "_trending_tags": [
       "ai"
     ],
-    "_permalink": "/p/0795018a75/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/0795018a75/",
+    "_permalink": "/p/981e870bf2/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/981e870bf2/",
     "_summary_240": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, NFTs, Web3 and crypto regulation.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/0795018a75/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/981e870bf2/thumbnail.png"
   },
   {
     "title": "A Different View of Inflation",
@@ -489,7 +528,7 @@
   },
   {
     "title": "Ripple rejects IPO plans despite SEC case victory: Here\u2019s why",
-    "url": "https://cointelegraph.com/news/ripple-rejects-ipo-plans-sec-case-victory-record-growth?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/ripple-rejects-ipo-plans-sec-case-victory-record-growth?utm_source=rss_feed&utm_medium=rss%3F_refresh%3Dm6nen7%26_%3D1762550022194%26ttt%3D1762550022194%26_nocache%3D1762550022194&utm_campaign=rss_partner_inbound",
     "published_at": "2025-11-07T08:32:52-05:00",
     "source": "Cointelegraph",
     "summary": "Ripple won\u2019t pursue an IPO after resolving its SEC case despite record growth, major new investors and increasing industry momentum for public listings.",
@@ -497,14 +536,14 @@
     "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTEvMDE5YTVlMDgtN2FkOS03Mzc2LTkzYWMtODM3YzY3ZjMwYTYx.jpg",
     "summary_text": "Ripple won\u2019t pursue an IPO after resolving its SEC case despite record growth, major new investors and increasing industry momentum for public listings.",
     "category": "fintech",
-    "_permalink": "/p/e293d3922a/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/e293d3922a/",
+    "_permalink": "/p/b99182dbbd/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/b99182dbbd/",
     "_summary_240": "Ripple won\u2019t pursue an IPO after resolving its SEC case despite record growth, major new investors and increasing industry momentum for public listings.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/e293d3922a/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/b99182dbbd/thumbnail.png"
   },
   {
     "title": "How TradFi banks are advancing new stablecoin models",
-    "url": "https://cointelegraph.com/news/tradfi-banks-advancing-new-stablecoin-models?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/tradfi-banks-advancing-new-stablecoin-models?utm_source=rss_feed&utm_medium=rss%3F_refresh%3Dm6nen7%26_%3D1762550022194%26ttt%3D1762550022194%26_nocache%3D1762550022194&utm_campaign=rss_partner_inbound",
     "published_at": "2025-11-07T08:30:00-05:00",
     "source": "Cointelegraph",
     "summary": "Stablecoins are shifting from crypto-native experiments to instruments embedded in existing banking and payment infrastructure.",
@@ -512,10 +551,10 @@
     "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMDYvMDE5N2FkMTYtMzU5NC03OTk4LWIxZGUtNWI2ODcwOTUzM2My.jpg",
     "summary_text": "Stablecoins are shifting from crypto-native experiments to instruments embedded in existing banking and payment infrastructure.",
     "category": "fintech",
-    "_permalink": "/p/b4e5afef34/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/b4e5afef34/",
+    "_permalink": "/p/70be08155a/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/70be08155a/",
     "_summary_240": "Stablecoins are shifting from crypto-native experiments to instruments embedded in existing banking and payment infrastructure.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/b4e5afef34/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/70be08155a/thumbnail.png"
   },
   {
     "title": "Chatbots Are Sparking a New Era of Student Surveillance",
@@ -537,7 +576,7 @@
   },
   {
     "title": "Majority of traditional hedge funds now exposed to crypto assets: Survey",
-    "url": "https://cointelegraph.com/news/most-traditional-hedge-funds-now-exposed-to-crypto-survey?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/most-traditional-hedge-funds-now-exposed-to-crypto-survey?utm_source=rss_feed&utm_medium=rss%3F_refresh%3Dm6nen7%26_%3D1762550022194%26ttt%3D1762550022194%26_nocache%3D1762550022194&utm_campaign=rss_partner_inbound",
     "published_at": "2025-11-07T07:53:15-05:00",
     "source": "Cointelegraph",
     "summary": "AIMA says 55% of traditional hedge funds now hold crypto, with most planning to increase exposure as US regulation boosts confidence.",
@@ -548,10 +587,10 @@
     "_trending_tags": [
       "ai"
     ],
-    "_permalink": "/p/3f9f9b29f3/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/3f9f9b29f3/",
+    "_permalink": "/p/d5b2d96cd4/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/d5b2d96cd4/",
     "_summary_240": "AIMA says 55% of traditional hedge funds now hold crypto, with most planning to increase exposure as US regulation boosts confidence.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/3f9f9b29f3/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/d5b2d96cd4/thumbnail.png"
   },
   {
     "title": "Olympus Cuts Jobs, Streamlines Operations Under New Leadership",
@@ -570,7 +609,7 @@
   },
   {
     "title": "Crypto needs to rethink incentive structures before the mainstream arrives",
-    "url": "https://cointelegraph.com/news/crypto-incentive-structures-mainstream?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/crypto-incentive-structures-mainstream?utm_source=rss_feed&utm_medium=rss%3F_refresh%3Dm6nen7%26_%3D1762550022194%26ttt%3D1762550022194%26_nocache%3D1762550022194&utm_campaign=rss_partner_inbound",
     "published_at": "2025-11-07T07:30:00-05:00",
     "source": "Cointelegraph",
     "summary": "Tokenomics favor speed over conviction, using genuine supporters as exit liquidity. Crypto\u2019s mainstream future requires replacing extraction with participation incentives.",
@@ -581,10 +620,10 @@
     "_trending_tags": [
       "ai"
     ],
-    "_permalink": "/p/42ec6f8faa/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/42ec6f8faa/",
+    "_permalink": "/p/2f25d20b7b/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/2f25d20b7b/",
     "_summary_240": "Tokenomics favor speed over conviction, using genuine supporters as exit liquidity. Crypto\u2019s mainstream future requires replacing extraction with participation incentives.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/42ec6f8faa/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/2f25d20b7b/thumbnail.png"
   },
   {
     "title": "The AI Revolution Is an Afterthought for Phone Buyers",
@@ -608,7 +647,7 @@
   },
   {
     "title": "Bybit hack: \u2018Reckoning\u2019 that led SafeWallet to rearchitect its systems",
-    "url": "https://cointelegraph.com/news/bybit-hack-safe-rearchitects-systems?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/bybit-hack-safe-rearchitects-systems?utm_source=rss_feed&utm_medium=rss%3F_refresh%3Dm6nen7%26_%3D1762550022194%26ttt%3D1762550022194%26_nocache%3D1762550022194&utm_campaign=rss_partner_inbound",
     "published_at": "2025-11-07T07:01:39-05:00",
     "source": "Cointelegraph",
     "summary": "Ethereum smart account wallet platform SafeWallet has rearchitected its systems in the wake of the infamous $1.5 billion theft of ETH from Bybit.",
@@ -616,10 +655,10 @@
     "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMDMvMDE5NTYwMDctNTQxYS03Y2EwLTg0ODMtZWU5Y2NhOGY2M2Jj.jpg",
     "summary_text": "Ethereum smart account wallet platform SafeWallet has rearchitected its systems in the wake of the infamous $1.5 billion theft of ETH from Bybit.",
     "category": "fintech",
-    "_permalink": "/p/5d7569154e/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/5d7569154e/",
+    "_permalink": "/p/c728e288fe/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/c728e288fe/",
     "_summary_240": "Ethereum smart account wallet platform SafeWallet has rearchitected its systems in the wake of the infamous $1.5 billion theft of ETH from Bybit.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/5d7569154e/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/c728e288fe/thumbnail.png"
   },
   {
     "title": "We Met NEO, the Viral Humanoid Robot + HatGPT",
@@ -671,11 +710,7 @@
     "_trending_tags": [
       "ai",
       "openai"
-    ],
-    "_permalink": "/p/0913ad6f78/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/0913ad6f78/",
-    "_summary_240": "Prompt injections are a frontier security challenge for AI systems. Learn how these attacks work and how OpenAI is advancing research, training models, and building safeguards...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/0913ad6f78/thumbnail.png"
+    ]
   },
   {
     "title": "The AI Showdown: How the US and China Stack Up",
@@ -697,7 +732,7 @@
   },
   {
     "title": "Japan\u2019s FSA backs joint stablecoin initiative by nation\u2019s top banks",
-    "url": "https://cointelegraph.com/news/japan-fsa-backs-banks-joint-yen-stablecoin-rollout?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/japan-fsa-backs-banks-joint-yen-stablecoin-rollout?utm_source=rss_feed&utm_medium=rss%3F_refresh%3Dm6nen7%26_%3D1762550022194%26ttt%3D1762550022194%26_nocache%3D1762550022194&utm_campaign=rss_partner_inbound",
     "published_at": "2025-11-07T05:30:43-05:00",
     "source": "Cointelegraph",
     "summary": "Japan\u2019s financial regulator has launched a \u201cPayment Innovation Project\u201d backing a joint initiative by major banks and corporations to issue yen-based stablecoins.",
@@ -705,10 +740,10 @@
     "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMDMvMDE5NWVhNDYtYWUzZS03N2FkLTgzODAtYzI4OTk5ZDNmMTIw.jpg",
     "summary_text": "Japan\u2019s financial regulator has launched a \u201cPayment Innovation Project\u201d backing a joint initiative by major banks and corporations to issue yen-based stablecoins.",
     "category": "fintech",
-    "_permalink": "/p/fe22a6656f/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/fe22a6656f/",
+    "_permalink": "/p/7d7844a9e2/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/7d7844a9e2/",
     "_summary_240": "Japan\u2019s financial regulator has launched a \u201cPayment Innovation Project\u201d backing a joint initiative by major banks and corporations to issue yen-based stablecoins.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/fe22a6656f/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/7d7844a9e2/thumbnail.png"
   },
   {
     "title": "Notion\u2019s rebuild for agentic AI: How GPT\u20115 helped unlock autonomous workflows",
@@ -728,7 +763,7 @@
   },
   {
     "title": "EU considers delaying AI Act rollout amid US and Big Tech pressure",
-    "url": "https://cointelegraph.com/news/eu-halt-ai-act-counter-us-big-tech-pressure-report?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/eu-halt-ai-act-counter-us-big-tech-pressure-report?utm_source=rss_feed&utm_medium=rss%3F_refresh%3Dm6nen7%26_%3D1762550022194%26ttt%3D1762550022194%26_nocache%3D1762550022194&utm_campaign=rss_partner_inbound",
     "published_at": "2025-11-07T04:38:54-05:00",
     "source": "Cointelegraph",
     "summary": "After adopting the AI Act last year, the European Union is considering easing certain provisions amid mounting pressure from the US and Big Tech.",
@@ -739,10 +774,10 @@
     "_trending_tags": [
       "ai"
     ],
-    "_permalink": "/p/d87d5a1e51/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/d87d5a1e51/",
+    "_permalink": "/p/2a2c275ff5/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/2a2c275ff5/",
     "_summary_240": "After adopting the AI Act last year, the European Union is considering easing certain provisions amid mounting pressure from the US and Big Tech.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/d87d5a1e51/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/2a2c275ff5/thumbnail.png"
   },
   {
     "title": "AI Chip Boom Fuels Taiwan\u2019s Fastest Export Gain in 15 Years",
@@ -809,21 +844,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/4e27fe572f/",
     "_summary_240": "Shares of Rightmove Plc tumbled the most on record after the company warned it\u2019s likely to take longer to meet previously stated revenue growth goals, as it unveiled plans to...",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/4e27fe572f/thumbnail.png"
-  },
-  {
-    "title": "Stablecoins strengthen the dollar and empower the developing world",
-    "url": "https://cointelegraph.com/news/stablecoins-dollar-and-empower-the-developing-world?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-    "published_at": "2025-11-07T03:30:00-05:00",
-    "source": "Cointelegraph",
-    "summary": "Dollar-backed stablecoins reinforce U.S. currency dominance while democratizing finance in developing nations, countering China's debt-trap diplomacy.",
-    "content_html": "",
-    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTAvMDE5YTEwNDQtOWE5NS03ODVjLTkxY2MtOTFiYjkzNDE1Y2Mx.jpg",
-    "summary_text": "Dollar-backed stablecoins reinforce U.S. currency dominance while democratizing finance in developing nations, countering China's debt-trap diplomacy.",
-    "category": "fintech",
-    "_permalink": "/p/082a3c0a6f/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/082a3c0a6f/",
-    "_summary_240": "Dollar-backed stablecoins reinforce U.S. currency dominance while democratizing finance in developing nations, countering China's debt-trap diplomacy.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/082a3c0a6f/thumbnail.png"
   },
   {
     "title": "We Built A T2D Earnings Calendar",
@@ -1612,7 +1632,7 @@
     "source": "Financial Times - Technology",
     "summary": "University of Washington team uses generative AI tool to create new functional cancer antibodies",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/3592199b-2100-4937-a277-1f140fa550ae.jpg",
+    "image_url": "https://images.ft.com/v3/image/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F3592199b-2100-4937-a277-1f140fa550ae.jpg?source=next-article&fit=scale-down&quality=highest&width=700&dpr=1",
     "summary_text": "University of Washington team uses generative AI tool to create new functional cancer antibodies",
     "category": "ai",
     "_trending_tags": [
