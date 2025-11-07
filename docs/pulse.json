@@ -1,5 +1,56 @@
 [
   {
+    "title": "Here\u2019s what happened in crypto today",
+    "url": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "published_at": "2025-11-07T17:12:48-05:00",
+    "source": "Cointelegraph",
+    "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, NFTs, Web3 and crypto regulation.",
+    "content_html": "",
+    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMDYvMDE5Nzk0MjMtZWY4ZS03YzYwLWI5MzctYjlkZGY3NWZlOGFk.jpg",
+    "summary_text": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, NFTs, Web3 and crypto regulation.",
+    "category": "fintech",
+    "_trending_tags": [
+      "ai"
+    ],
+    "_permalink": "/p/728af5be9a/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/728af5be9a/",
+    "_summary_240": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, NFTs, Web3 and crypto regulation.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/728af5be9a/thumbnail.png"
+  },
+  {
+    "title": "Evernorth\u2019s unrealized XRP losses expose mounting pressure on DATs: CryptoQuant",
+    "url": "https://cointelegraph.com/news/evernorth-xrp-losses-digital-asset-treasury-risks-cryptoquant?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "published_at": "2025-11-07T17:09:17-05:00",
+    "source": "Cointelegraph",
+    "summary": "The latest crypto downturn is hammering companies that built their business models around holding digital assets.",
+    "content_html": "",
+    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMDEvMDE5NDNmZTAtNDZkYy03NzNkLWJiMjktY2EwZDgxNGM2ZmJl.jpg",
+    "summary_text": "The latest crypto downturn is hammering companies that built their business models around holding digital assets.",
+    "category": "fintech",
+    "_permalink": "/p/038a7a9d00/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/038a7a9d00/",
+    "_summary_240": "The latest crypto downturn is hammering companies that built their business models around holding digital assets.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/038a7a9d00/thumbnail.png"
+  },
+  {
+    "title": "Engie Chairman Says AI Demand Propels Solar Despite US Policies",
+    "url": "https://www.bloomberg.com/news/articles/2025-11-07/engie-chairman-says-ai-demand-propels-solar-despite-us-policies",
+    "published_at": "2025-11-07T16:25:06-05:00",
+    "source": "Bloomberg Technology",
+    "summary": "Policy uncertainty is deterring investment in US energy projects, though surging power demand tied to artificial intelligence will continue to support wind and solar farms, Engie SA Chairman Jean-Pierre Clamadieu said Friday.",
+    "content_html": "Jean-Pierre Clamadieu, chairman of Engie SA, speaks during the International Economic Forum of the Americas (IEFA) conference in Paris, France, on Tuesday, Nov. 28, 2023. The two day conference themed on 'Bridging the Divide' runs from 28-29 Nov.",
+    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/i6pfgqfz2Fcc/v1/1200x-1.jpg",
+    "summary_text": "Policy uncertainty is deterring investment in US energy projects, though surging power demand tied to artificial intelligence will continue to support wind and solar farms, Engie SA Chairman Jean-Pierre Clamadieu said Friday.",
+    "category": "ai",
+    "_trending_tags": [
+      "ai"
+    ],
+    "_permalink": "/p/2d43a31b55/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/2d43a31b55/",
+    "_summary_240": "Policy uncertainty is deterring investment in US energy projects, though surging power demand tied to artificial intelligence will continue to support wind and solar farms, Engie...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/2d43a31b55/thumbnail.png"
+  },
+  {
     "title": "Jury in MEV bot trial struggles to reach verdict as weekend approaches",
     "url": "https://cointelegraph.com/news/jury-mev-bot-trial-verdict-struggles?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
     "published_at": "2025-11-07T16:20:31-05:00",
@@ -138,7 +189,7 @@
     "published_at": "2025-11-07T15:15:33-05:00",
     "source": "Ars Technica",
     "summary": "New \"computational Turing test\" reportedly catches AI pretending to be human with 80% accuracy.",
-    "content_html": "<p>The next time you encounter an unusually polite reply on social media, you might want to check twice. It could be an AI model trying (and failing) to blend in with the crowd.</p>\n<p>On Wednesday, researchers from the University of Zurich, University of Amsterdam, Duke University, and NYU <a href=\"https://arxiv.org/abs/2511.04195\">released</a> a study revealing that AI models remain easily distinguishable from humans in social media conversations, with overly friendly emotional tone serving as the most persistent giveaway. The research, which tested nine open-weight models across Twitter/X, Bluesky, and Reddit, found that classifiers developed by the researchers detected AI-generated replies with 70 to 80 percent accuracy.</p>\n<p>The study introduces what the authors call a \u201ccomputational Turing test\u201d to assess how closely AI models approximate human language. Instead of relying on subjective human judgment about whether text sounds authentic, the framework uses automated classifiers and linguistic analysis to identify specific features that distinguish machine-generated from human-authored content.</p><p><a href=\"https://arstechnica.com/information-technology/2025/11/being-too-nice-online-is-a-dead-giveaway-for-ai-bots-study-suggests/\">Read full article</a></p>\n<p><a href=\"https://arstechnica.com/information-technology/2025/11/being-too-nice-online-is-a-dead-giveaway-for-ai-bots-study-suggests/#comments\">Comments</a></p>",
+    "content_html": "<p>The next time you encounter an unusually polite reply on social media, you might want to check twice. It could be an AI model trying (and failing) to blend in with the crowd.</p>\n<p>On Wednesday, researchers from the University of Zurich, University of Amsterdam, Duke University, and New York University <a href=\"https://arxiv.org/abs/2511.04195\">released</a> a study revealing that AI models remain easily distinguishable from humans in social media conversations, with overly friendly emotional tone serving as the most persistent giveaway. The research, which tested nine open-weight models across Twitter/X, Bluesky, and Reddit, found that classifiers developed by the researchers detected AI-generated replies with 70 to 80 percent accuracy.</p>\n<p>The study introduces what the authors call a \u201ccomputational Turing test\u201d to assess how closely AI models approximate human language. Instead of relying on subjective human judgment about whether text sounds authentic, the framework uses automated classifiers and linguistic analysis to identify specific features that distinguish machine-generated from human-authored content.</p><p><a href=\"https://arstechnica.com/information-technology/2025/11/being-too-nice-online-is-a-dead-giveaway-for-ai-bots-study-suggests/\">Read full article</a></p>\n<p><a href=\"https://arstechnica.com/information-technology/2025/11/being-too-nice-online-is-a-dead-giveaway-for-ai-bots-study-suggests/#comments\">Comments</a></p>",
     "image_url": "https://cdn.arstechnica.net/wp-content/uploads/2025/11/frowny_bagboy-1152x648.jpg",
     "summary_text": "New \"computational Turing test\" reportedly catches AI pretending to be human with 80% accuracy.",
     "category": "ai",
@@ -546,24 +597,6 @@
     ]
   },
   {
-    "title": "Here\u2019s what happened in crypto today",
-    "url": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-    "published_at": "2025-11-07T09:20:23-05:00",
-    "source": "Cointelegraph",
-    "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, NFTs, Web3 and crypto regulation.",
-    "content_html": "",
-    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMDYvMDE5Nzk0MjMtZWY4ZS03YzYwLWI5MzctYjlkZGY3NWZlOGFk.jpg",
-    "summary_text": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, NFTs, Web3 and crypto regulation.",
-    "category": "fintech",
-    "_trending_tags": [
-      "ai"
-    ],
-    "_permalink": "/p/0795018a75/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/0795018a75/",
-    "_summary_240": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, NFTs, Web3 and crypto regulation.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/0795018a75/thumbnail.png"
-  },
-  {
     "title": "A Different View of Inflation",
     "url": "https://newsletter.tek2dayholdings.com/p/a-different-view-of-inflation",
     "published_at": "2025-11-07T09:15:29-05:00",
@@ -817,39 +850,6 @@
     ]
   },
   {
-    "title": "AI Chip Boom Fuels Taiwan\u2019s Fastest Export Gain in 15 Years",
-    "url": "https://www.bloomberg.com/news/articles/2025-11-07/ai-chip-frenzy-fuels-taiwan-s-fastest-export-gain-in-15-years",
-    "published_at": "2025-11-07T04:20:44-05:00",
-    "source": "Bloomberg Technology",
-    "summary": "Taiwan\u2019s exports surged at the fastest pace since 2010 as the economy cashes in on bottomless global demand for semiconductors powering artificial intelligence.",
-    "content_html": "",
-    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/idKhoT8vzo3U/v3/1200x-1.png",
-    "summary_text": "Taiwan\u2019s exports surged at the fastest pace since 2010 as the economy cashes in on bottomless global demand for semiconductors powering artificial intelligence.",
-    "category": "ai",
-    "_trending_tags": [
-      "ai"
-    ],
-    "_permalink": "/p/86645967c8/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/86645967c8/",
-    "_summary_240": "Taiwan\u2019s exports surged at the fastest pace since 2010 as the economy cashes in on bottomless global demand for semiconductors powering artificial intelligence.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/86645967c8/thumbnail.png"
-  },
-  {
-    "title": "Gen Z Turns Credit Building Into a Financial Power Move",
-    "url": "https://www.pymnts.com/credit-cards/2025/gen-z-turns-credit-building-into-a-financial-power-move/",
-    "published_at": "2025-11-07T04:01:24-05:00",
-    "source": "PYMNTS",
-    "summary": "For many consumers, smart credit use is more than convenience, it\u2019s a way to unlock financial opportunity. As shown in \u201cConsumer Credit Economy: Strategy vs. Spontaneity \u2014 Navigating the Great Credit Divide,\u201d a joint effort between PYMNTS Intelligence and i2c, building or improving a credit score ranks as the leading motivation for seeking a new [\u2026] The post Gen Z Turns Credit Building Into a Fin...",
-    "content_html": "<p><span>For many consumers, smart credit use is more than convenience, it\u2019s a way to unlock financial opportunity. As shown in \u201c</span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/study/consumer-credit-economy-great-credit-divide/\" rel=\"noopener\" target=\"_blank\"><span>Consumer Credit Economy: Strategy vs. Spontaneity \u2014 Navigating the Great Credit Divide</span></a><span>,\u201d a joint effort between PYMNTS Intelligence and </span><a class=\"editor-rtfLink\" href=\"https://www.i2cinc.com/\" rel=\"noopener\" target=\"_blank\"><span>i2c</span></a><span>, building or improving a credit score ranks as the leading motivation for seeking a new credit card. </span></p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p><span>Among consumers without an active card, 26% cite credit building as their primary reason for wanting one, ahead of rewards, convenience </span><span>or</span><span> managing cash flow.</span></p>\n<p><span>That motivation spans product lines. Sixteen percent of consumers without a buy now, pay later account say they would use one to improve their credit scores, while 1 in 10 express the same interest in payday loans or mortgages. </span></p>\n<p><span>Across the credit landscape, using products strategically to strengthen financial standing is a dominant theme, particularly for Generation Z, prime and subprime borrowers, who see credit-building as a stepping stone to greater opportunity.</span></p>\n<h2>Virtuous Cycle</h2>\n<p><span>The findings highlight a virtuous cycle: responsible card use can build a stronger credit profile, opening the door to more favorable terms, lower interest rates </span><span>and</span><span> higher limits. Yet breaking into that cycle can be difficult when perceptions stand in the way.</span></p>\n<p><span>PYMNTS found that 42% of consumers doubt they would be approved for a new credit card, nearly three times the actual </span><span>rate of denials</span><span> among those without cards (</span><span>just</span><span> 15%).</span><span> And 1 in 3 households earning more than $100,000 annually still believe they would \u201cprobably or certainly\u201d be denied.</span></p>\n<p><span>This perception gap, what might be called a \u201cpsychological access gap,\u201d means millions of creditworthy consumers self-select out of the market, never applying in the first place. For banks and issuers, that represents both a missed opportunity and a call to action. Educating consumers about actual approval odds and promoting flexible, transparent credit products could help close the gap and attract new, loyal customers.</span></p>\n<p><span>Strategic use of credit also defines how consumers manage day-to-day spending. The report shows that 53% of consumers who used credit in the past 90 days did so mainly for planned purchases, while 31% used it for a mix of planned and spontaneous ones. Millennials and Gen Z are far more likely than older cohorts to turn to credit for unplanned expenses. </span><span>The data shows that 22% of millennials</span><span>, for instance,</span><span> use cards spontaneously, underscoring the link between flexibility and financial management.</span></p>\n<p><span>As credit experience grows, strategy takes shape. Among consumers with multiple cards, 37% of those with super-prime credit scores say they select which card to use based on rewards or benefits, compared with just 11% of subprime consumers. Baby boomers and Gen X consumers are also likelier than younger generations to choose cards strategically, while Gen Zers and millennials lean toward convenience. The difference suggests that as credit profiles mature, so does the sophistication of card use, and that helping consumers reach that level can deepen issuer loyalty.</span></p>\n<p><span>Credit building, in this context, becomes not only a financial milestone but also a loyalty strategy. Consumers who use cards to raise their credit standing tend to stay with issuers that make that progress possible. </span><span>The report notes that flexibility and personalization, such as cards that </span><span>allow</span><span> users </span><span>to</span><span> toggle between earning rewards and paying lower interest rates, appeal to 59% of consumers overall</span><span>, </span><span>and even more among younger demographics.</span></p>\n<p><span>These design features align financial incentives with behavioral ones, turning credit building from a daunting chore into a manageable, motivating process. By designing products that empower consumers to build credit with confidence, issuers foster financial inclusion, cultivate lasting relationships rooted in trust, transparency </span><span>and</span><span> shared growth.</span></p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/credit-cards/2025/gen-z-turns-credit-building-into-a-financial-power-move/\">Gen Z Turns Credit Building Into a Financial Power Move</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
-    "image_url": "https://www.pymnts.com/wp-content/uploads/2025/11/Gen-z-credit-power-move.jpg?w=457",
-    "summary_text": "For many consumers, smart credit use is more than convenience, it\u2019s a way to unlock financial opportunity. As shown in \u201cConsumer Credit Economy: Strategy vs. Spontaneity \u2014 Navigating the Great Credit Divide,\u201d a joint effort between PYMNTS Intelligence and i2c...",
-    "category": "fintech",
-    "_permalink": "/p/f420f2bc7a/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/f420f2bc7a/",
-    "_summary_240": "For many consumers, smart credit use is more than convenience, it\u2019s a way to unlock financial opportunity. As shown in \u201cConsumer Credit Economy: Strategy vs. Spontaneity \u2014...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/f420f2bc7a/thumbnail.png"
-  },
-  {
     "title": "Rightmove Shares Plunge Most on Record on Revenue, AI Spend",
     "url": "https://www.bloomberg.com/news/articles/2025-11-07/rightmove-shares-plunge-most-on-record-on-guidance-ai-spending",
     "published_at": "2025-11-07T03:55:42-05:00",
@@ -899,6 +899,24 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/f74814c133/",
     "_summary_240": "Commission proposes pauses to provisions in digital rule book",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/f74814c133/thumbnail.png"
+  },
+  {
+    "title": "Ship fast, optimize later: Top AI engineers don't care about cost \u2014 they're prioritizing deployment",
+    "url": "https://venturebeat.com/data-infrastructure/ship-fast-optimize-later-top-ai-engineers-dont-care-about-cost-theyre",
+    "published_at": "2025-11-07T00:00:00-05:00",
+    "source": "VentureBeat",
+    "summary": "Across industries, rising compute expenses are often cited as a barrier to AI adoption \u2014 but leading companies are finding that cost is no longer the real constraint. The tougher challenges (and the ones top of mind for many tech leaders)? Latency, flexibility and capacity. At Wonder , for instance, AI adds a mere few centers per order; the food delivery and takeout company is much more concerned...",
+    "content_html": "",
+    "image_url": "",
+    "summary_text": "Across industries, rising compute expenses are often cited as a barrier to AI adoption \u2014 but leading companies are finding that cost is no longer the real constraint. The tougher challenges (and the ones top of mind for many tech leaders)? Latency, flexibilit...",
+    "category": "ai",
+    "_trending_tags": [
+      "ai"
+    ],
+    "_permalink": "/p/285fba08e2/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/285fba08e2/",
+    "_summary_240": "Across industries, rising compute expenses are often cited as a barrier to AI adoption \u2014 but leading companies are finding that cost is no longer the real constraint. The tougher...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/285fba08e2/thumbnail.png"
   },
   {
     "title": "Polymarket Volume Inflated by \u2018Artificial\u2019 Activity, Study Finds",
@@ -1410,6 +1428,20 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/b69bedc8ec/thumbnail.png"
   },
   {
+    "title": "From prototype to production: What vibe coding tools must fix for enterprise adoption",
+    "url": "https://venturebeat.com/ai/from-prototype-to-production-what-vibe-coding-tools-must-fix-for-enterprise",
+    "published_at": "2025-11-06T00:00:00-05:00",
+    "source": "VentureBeat",
+    "summary": "Presented by Salesforce Vibe coding \u2014 the fast-growing trend of using generative AI to spin up code from plain-language prompts \u2014 is quick, creative, and great for instant prototypes. But many argue that it's not cut out for building production-ready business apps with the security, governance, and trusted infrastructure that enterprises require. In other words, a few saved hours in development c...",
+    "content_html": "",
+    "image_url": "",
+    "summary_text": "Presented by Salesforce Vibe coding \u2014 the fast-growing trend of using generative AI to spin up code from plain-language prompts \u2014 is quick, creative, and great for instant prototypes. But many argue that it's not cut out for building production-ready business...",
+    "category": "software",
+    "_trending_tags": [
+      "ai"
+    ]
+  },
+  {
     "title": "The compute rethink: Scaling AI where data lives, at the edge",
     "url": "https://venturebeat.com/ai/the-compute-rethink-scaling-ai-where-data-lives-at-the-edge",
     "published_at": "2025-11-06T00:00:00-05:00",
@@ -1422,20 +1454,6 @@
     "_trending_tags": [
       "ai",
       "cloud"
-    ]
-  },
-  {
-    "title": "From prototype to production: What vibe coding tools must fix for enterprise adoption",
-    "url": "https://venturebeat.com/ai/from-prototype-to-production-what-vibe-coding-tools-must-fix-for-enterprise",
-    "published_at": "2025-11-06T00:00:00-05:00",
-    "source": "VentureBeat",
-    "summary": "Presented by Salesforce Vibe coding \u2014 the fast-growing trend of using generative AI to spin up code from plain-language prompts \u2014 is quick, creative, and great for instant prototypes. But many argue that it's not cut out for building production-ready business apps with the security, governance, and trusted infrastructure that enterprises require. In other words, a few saved hours in development c...",
-    "content_html": "",
-    "image_url": "",
-    "summary_text": "Presented by Salesforce Vibe coding \u2014 the fast-growing trend of using generative AI to spin up code from plain-language prompts \u2014 is quick, creative, and great for instant prototypes. But many argue that it's not cut out for building production-ready business...",
-    "category": "software",
-    "_trending_tags": [
-      "ai"
     ]
   },
   {
@@ -1654,12 +1672,16 @@
     "source": "Financial Times - Technology",
     "summary": "University of Washington team uses generative AI tool to create new functional cancer antibodies",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://images.ft.com/v3/image/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F3592199b-2100-4937-a277-1f140fa550ae.jpg?source=next-article&fit=scale-down&quality=highest&width=700&dpr=1",
     "summary_text": "University of Washington team uses generative AI tool to create new functional cancer antibodies",
     "category": "ai",
     "_trending_tags": [
       "ai"
-    ]
+    ],
+    "_permalink": "/p/353e407b54/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/353e407b54/",
+    "_summary_240": "University of Washington team uses generative AI tool to create new functional cancer antibodies",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/353e407b54/thumbnail.png"
   },
   {
     "title": "How Chime is redefining marketing through AI",
@@ -1674,22 +1696,6 @@
     "_trending_tags": [
       "agent",
       "ai"
-    ]
-  },
-  {
-    "title": "How Anthropic's Claude cuts SOC investigation time from 5 hours to 7 minutes",
-    "url": "https://venturebeat.com/security/anthropic-claude-speeds-soc-threat-analysis-43x",
-    "published_at": "2025-11-05T03:00:00-05:00",
-    "source": "VentureBeat",
-    "summary": "Integrating AI models directly into extended detection and response (XDR) platforms is delivering breakthrough improvements in SOC investigation speed and accuracy. In an exclusive interview with VentureBeat, eSentire revealed that deploying Anthropic's Claude across their Atlas XDR Platform compresses comprehensive threat investigations from five hours to seven minutes, delivering a 43x speed im...",
-    "content_html": "",
-    "image_url": "",
-    "summary_text": "Integrating AI models directly into extended detection and response (XDR) platforms is delivering breakthrough improvements in SOC investigation speed and accuracy. In an exclusive interview with VentureBeat, eSentire revealed that deploying Anthropic's Claud...",
-    "category": "ai",
-    "_trending_tags": [
-      "ai",
-      "anthropic",
-      "claude"
     ]
   },
   {
