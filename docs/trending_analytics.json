@@ -1,9 +1,9 @@
 {
-  "generated_at": "2025-11-09T15:22:04.754767-05:00",
+  "generated_at": "2025-11-09T15:38:00.816317-05:00",
   "total_keywords": 30,
   "keyword_counts": {
-    "ai": 87,
-    "openai": 12,
+    "ai": 85,
+    "openai": 11,
     "gpt": 8,
     "chatgpt": 6,
     "agent": 5,
@@ -14,7 +14,6 @@
     "genai": 1,
     "google": 1,
     "meta": 1,
-    "microsoft": 1,
     "transformer": 1
   },
   "sources_per_keyword": {},
