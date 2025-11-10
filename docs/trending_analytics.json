@@ -1,9 +1,9 @@
 {
-  "generated_at": "2025-11-10T15:26:14.051620-05:00",
+  "generated_at": "2025-11-10T15:43:24.776818-05:00",
   "total_keywords": 30,
   "keyword_counts": {
-    "ai": 63,
-    "openai": 8,
+    "ai": 64,
+    "openai": 9,
     "agent": 5,
     "chatgpt": 3,
     "gpt": 3,
@@ -14,6 +14,7 @@
     "fintech": 1,
     "genai": 1,
     "google": 1,
+    "meta": 1,
     "paypal": 1
   },
   "sources_per_keyword": {},
