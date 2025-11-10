@@ -1,18 +1,18 @@
 {
-  "generated_at": "2025-11-09T18:19:48.571654-05:00",
+  "generated_at": "2025-11-10T06:36:37.841831-05:00",
   "total_keywords": 30,
   "keyword_counts": {
-    "ai": 75,
-    "openai": 8,
-    "gpt": 7,
+    "ai": 71,
+    "openai": 9,
+    "gpt": 8,
+    "chatgpt": 7,
     "agent": 5,
-    "chatgpt": 5,
-    "fintech": 2,
+    "llm": 2,
+    "microsoft": 2,
     "nvidia": 2,
-    "amazon": 1,
     "apple": 1,
-    "genai": 1,
-    "transformer": 1
+    "fintech": 1,
+    "genai": 1
   },
   "sources_per_keyword": {},
   "top_articles_per_keyword": {}
