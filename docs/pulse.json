@@ -1,5 +1,99 @@
 [
   {
+    "title": "AI chatbots are helping hide eating disorders and making deepfake \u2018thinspiration\u2019",
+    "url": "https://www.theverge.com/news/818508/chatbot-eating-disorder-mental-health",
+    "published_at": "2025-11-11T12:33:10-05:00",
+    "source": "The Verge",
+    "summary": "AI chatbots \u201cpose serious risks to individuals vulnerable to eating disorders,\u201d researchers warned on Monday. They report that tools from companies like Google and OpenAI are doling out dieting advice, tips on how to hide disorders, and AI-generated \u201cthinspiration.\u201d The researchers, from Stanford and the Center for Democracy & Technology, identified numerous ways publicly available [\u2026]",
+    "content_html": "<figure>\n\n<img alt=\"\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/11/ca7270eb.jpeg?quality=90&#038;strip=all&#038;crop=0,0,100,100\" />\n\t<figcaption>\n\t\t</figcaption>\n</figure>\n<p class=\"has-text-align-none\">AI chatbots \u201cpose serious risks to individuals vulnerable to eating disorders,\u201d researchers <a href=\"https://cdt.org/insights/from-symptoms-to-systems-a-stakeholder-informed-taxonomy-of-generative-ai-risks-for-eating-disorders/\">warned</a> on Monday. They report that tools from companies like Google and OpenAI are doling out dieting advice, tips on how to hide disorders, and AI-generated \u201cthinspiration.\u201d\u00a0</p>\n\n<p class=\"has-text-align-none\">The researchers, from Stanford and the Center for Democracy &amp; Technology, identified numerous ways publicly available AI chatbots including OpenAI\u2019s ChatGPT, Anthropic&#8217;s Claude, Google\u2019s Gemini, and Mistral\u2019s Le Chat can affect people vulnerable to eating disorders, many of them consequences of features deliberately baked in to drive engagement.&nbsp;</p>\n\n<p class=\"has-text-align-none\">In the most extreme cases, chatbots can be active participants helping hide or sustain eating disorders. The researchers said Gemini offered makeup tips to conceal weight loss, and ideas on how to fake having eaten, while ChatGPT advised how to hide frequent vomiting. Other AI tools are being co-opted to create AI-generated  \u201cthinspiration,\u201d content that inspires or pressures someone to conform to a particular body standard, often through extreme means. Being able to create hyper-personalized images in an instant makes the resulting content \u201cfeel more relevant and attainable,\u201d the researchers said.\u00a0</p>\n\n<p class=\"has-text-align-none\">Sycophancy, a flaw AI companies themselves <a href=\"https://www.theverge.com/news/661422/openai-chatgpt-sycophancy-update-what-went-wrong\">acknowledge</a> is rife, is unsurprisingly a problem for eating disorders too. It contributes to undermining self-esteem, reinforcing negative emotions, and promoting harmful self-comparisons. Chatbots suffer from bias as well, and are likely to reinforce the mistaken belief that eating disorders \u201conly impact thin, white, cisgender women,\u201d the report said, which could make it difficult for people to recognize symptoms and get treatment.</p>\n\n<p class=\"has-text-align-none\">Researchers warn existing guardrails in AI tools fail to capture the nuances of eating disorders like anorexia, bulimia, and binge eating. They \u201ctend to overlook the subtle but clinically significant cues that trained professionals rely on, leaving many risks unaddressed.\u201d</p>\n\n<p class=\"has-text-align-none\">But researchers also said many clinicians and caregivers appeared to be unaware of how generative AI tools are impacting people vulnerable to eating disorders. They urged clinicians to \u201cbecome familiar with popular AI tools and platforms,\u201d stress-test their weaknesses, and talk frankly with patients about how they are using them.</p>\n\n<p class=\"has-text-align-none\">The report adds to growing concerns over chatbot use and mental health, with multiple reports linking AI use to bouts of mania, delusional thinking, self-harm, and suicide. Companies like OpenAI have <a href=\"https://www.theverge.com/news/718407/openai-chatgpt-mental-health-guardrails-break-reminders\">acknowledged the potential for harm</a> and are <a href=\"https://www.theverge.com/news/816240/seven-more-people-are-suing-openai\">fending off an increasing number of lawsuits</a> as they work to improve safeguards to protect users.&nbsp;</p>",
+    "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/11/ca7270eb.jpeg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "summary_text": "AI chatbots \u201cpose serious risks to individuals vulnerable to eating disorders,\u201d researchers warned on Monday. They report that tools from companies like Google and OpenAI are doling out dieting advice, tips on how to hide disorders, and AI-generated \u201cthinspir...",
+    "category": "ai",
+    "_trending_tags": [
+      "ai",
+      "google",
+      "openai"
+    ],
+    "_permalink": "/p/3f5e87de19/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/3f5e87de19/",
+    "_summary_240": "AI chatbots \u201cpose serious risks to individuals vulnerable to eating disorders,\u201d researchers warned on Monday. They report that tools from companies like Google and OpenAI are...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/3f5e87de19/thumbnail.png"
+  },
+  {
+    "title": "I Asked OpenAI if META Is Faking Ad Buys",
+    "url": "https://newsletter.tek2dayholdings.com/p/i-asked-openai-if-meta-is-faking",
+    "published_at": "2025-11-11T12:31:53-05:00",
+    "source": "TEK2day Newsletter",
+    "summary": "My question to OpenAI: \u201cWhat is the probability that Meta Platforms creates spam bots to buy ads on Facebook and Instagram to artificially grow revenue?\u201d",
+    "content_html": "<div class=\"captioned-image-container\"><figure><a class=\"image-link image2 is-viewable-img\" href=\"https://substackcdn.com/image/fetch/$s_!BVnb!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F51c24800-1074-4953-b0d3-1708d2e9f63a_1075x768.png\" target=\"_blank\"><div class=\"image2-inset\"><source type=\"image/webp\" /><img alt=\"\" class=\"sizing-normal\" height=\"768\" src=\"https://substackcdn.com/image/fetch/$s_!BVnb!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F51c24800-1074-4953-b0d3-1708d2e9f63a_1075x768.png\" width=\"1075\" /><div class=\"image-link-expand\"><div class=\"pencraft pc-display-flex pc-gap-8 pc-reset\"><button class=\"pencraft pc-reset pencraft icon-container restack-image\" tabindex=\"0\" type=\"button\"><svg class=\"lucide lucide-refresh-cw\" fill=\"none\" height=\"20\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" viewBox=\"0 0 24 24\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8\"></path><path d=\"M21 3v5h-5\"></path><path d=\"M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16\"></path><path d=\"M8 16H3v5\"></path></svg></button><button class=\"pencraft pc-reset pencraft icon-container view-image\" tabindex=\"0\" type=\"button\"><svg class=\"lucide lucide-maximize2 lucide-maximize-2\" fill=\"none\" height=\"20\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" viewBox=\"0 0 24 24\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><polyline points=\"15 3 21 3 21 9\"></polyline><polyline points=\"9 21 3 21 3 15\"></polyline><line x1=\"21\" x2=\"14\" y1=\"3\" y2=\"10\"></line><line x1=\"3\" x2=\"10\" y1=\"21\" y2=\"14\"></line></svg></button></div></div></div></a></figure></div><h4><strong>My question to OpenAI:</strong> &#8220;What is the probability that Meta Platforms creates spam bots to buy ads on Facebook and Instagram to artificially grow revenue?&#8221;</h4><p><strong>OpenAI&#8217;s response: &#8220;</strong>Short answer: there&#8217;s no reliable way to assign a real &#8220;probability&#8221; here, and there&#8217;s <strong>no public evidence</strong> that Meta itself is secretly running spam bots to buy its own ads. <strong>What </strong><em><strong>does</strong></em><strong> exist is (1) a huge industry-wide problem with bots and ad fraud, and (2) evidence and allegations that Meta has profited from fraudulent / scam advertisers and sometimes mis-reported metrics &#8211; which is different from Meta </strong><em><strong>creating</strong></em><strong> the bots.</strong></p><p>Let me unpack that in a grounded way.</p><h4>1. What your question is really asking</h4><p>You&#8217;re basically asking:</p><blockquote><p>&#8220;Is Meta intentionally faking demand for ads (via spam bots it controls) to inflate its revenue?&#8221;</p></blockquote><p>That&#8217;s an allegation of deliberate fraud. To answer responsibly I have to stick to what&#8217;s actually documented:</p><ul><li><p>What we know about <strong>fraudulent activity on Meta&#8217;s platforms</strong></p></li><li><p>What we know about <strong>Meta&#8217;s own role and incentives</strong></p></li><li><p>What we <em>don&#8217;t</em> know (and shouldn&#8217;t just make up)</p></li></ul><h4>2. What is documented about scam ads &amp; fraud on Meta</h4><p>Recent investigations and internal documents show:</p><ul><li><p>Internal Meta documents projected that about <strong>10% of 2024 revenue (&#8776;$16B)</strong> would come from ads for scams and banned goods (investment scams, illegal gambling, banned medical products, etc.). (<a href=\"https://www.reuters.com/investigations/meta-is-earning-fortune-deluge-fraudulent-ads-documents-show-2025-11-06/?utm_source=chatgpt.com\">Reuters</a>)</p></li><li><p>The same docs suggest Meta often <strong>did not aggressively remove</strong> these advertisers unless its systems were extremely sure (e.g., &gt;95% confidence) they were fraudulent, with a bias toward keeping revenue. (<a href=\"https://www.reuters.com/investigations/meta-is-earning-fortune-deluge-fraudulent-ads-documents-show-2025-11-06/?utm_source=chatgpt.com\">Reuters</a>)</p></li><li><p>Meta disputes how those internal numbers are being interpreted, but confirms that they <em>studied</em> the revenue associated with scam / prohibited ads and says it is investing more in anti-fraud enforcement. (<a href=\"https://www.reuters.com/investigations/meta-is-earning-fortune-deluge-fraudulent-ads-documents-show-2025-11-06/?utm_source=chatgpt.com\">Reuters</a>)</p></li></ul><p>Separately, Meta has had <strong>legal issues with ad metrics</strong>:</p><ul><li><p>Facebook/Meta paid around <strong>$40&#8211;60M</strong> to settle lawsuits claiming it overstated video ad viewing metrics (like average watch time) by large percentages. (<a href=\"https://www.adexchanger.com/ad-exchange-news/tuesday-08102019/?utm_source=chatgpt.com\">AdExchanger</a>)</p></li><li><p>A former product manager recently alleged at a UK tribunal that Meta <strong>inflated the performance of &#8220;Shops Ads&#8221; by ~17&#8211;19%</strong> and used aggressive tracking approaches that may have bypassed Apple&#8217;s privacy rules; Meta denies wrongdoing and the case is still being litigated. (<a href=\"https://www.ft.com/content/be6a99d2-22de-48ec-9afa-1d2e2f709afc?utm_source=chatgpt.com\">Financial Times</a>)</p></li></ul><p>Industry-wide context:</p><ul><li><p>Digital ad platforms (including Meta) publicly acknowledge that <strong>invalid traffic (bots, click farms, automated scripts)</strong> is a serious problem; third-party fraud-prevention companies estimate double-digit percentages of traffic can be fake in some channels. (<a href=\"https://www.fraud0.com/resources/state-of-invalid-traffic-and-ad-fraud-q2-2025/?utm_source=chatgpt.com\">Fraud0</a>)</p></li><li><p>Meta has official policies and systems for <strong>&#8220;invalid clicks&#8221;</strong> and says it detects and filters bot / fraudulent traffic and may credit advertisers for it. (<a href=\"https://www.facebook.com/business/help/211248262238771?utm_source=chatgpt.com\">Facebook</a>)</p></li></ul><p>All of that paints a picture where:</p><ul><li><p>Scam ads and invalid traffic are <strong>definitely present</strong> and sometimes substantial.</p></li><li><p>Meta has historically <strong>messed up or mis-represented metrics</strong> and is being scrutinized for that.</p></li><li><p>But none of this is the same as <em>Meta secretly running its own spam bots to buy its own ads</em>.</p></li></ul><h4>3. The specific claim you&#8217;re asking about</h4><blockquote><p>Meta &#8220;creates spam bots to buy ads on Facebook and Instagram to artificially grow revenue.&#8221;</p></blockquote><p>To support that, you&#8217;d need some kind of evidence that:</p><ol><li><p>The bots are <strong>operated or commissioned by Meta</strong> (not just third-party fraudsters), <em>and</em></p></li><li><p>They&#8217;re used to <strong>purchase ads</strong> with the intention of fabricating demand / revenue.</p></li></ol><p>I&#8217;m not seeing any credible sources showing that:</p><ul><li><p>Investigations and lawsuits focus on <strong>Meta&#8217;s handling and reporting</strong> of existing demand (scam advertisers, inflated metrics, etc.), not Meta itself orchestrating fake buyers. (<a href=\"https://www.reuters.com/investigations/meta-is-earning-fortune-deluge-fraudulent-ads-documents-show-2025-11-06/?utm_source=chatgpt.com\">Reuters</a>)</p></li><li><p>The recent internal-docs stories describe Meta <strong>profiting from scam ads placed by others</strong> and being too lax about them &#8211; again, bad, but conceptually different. (<a href=\"https://www.reuters.com/investigations/meta-is-earning-fortune-deluge-fraudulent-ads-documents-show-2025-11-06/?utm_source=chatgpt.com\">Reuters</a>)</p></li></ul><p>So from what&#8217;s publicly known, saying &#8220;Meta probably creates spam bots to buy its own ads&#8221; would be <strong>pure speculation</strong> and essentially an unverified accusation of fraud. I shouldn&#8217;t assign a numeric probability to that or present it as likely.</p><h4>4. Why assigning a probability is not really meaningful here</h4><p>In statistics you need some combination of:</p><ul><li><p>Historical frequencies (similar past cases)</p></li><li><p>Direct data / measurements</p></li><li><p>A clearly defined model</p></li></ul><p>Here we have none of that. We don&#8217;t observe:</p><ul><li><p>Any documented instance of Meta doing this.</p></li><li><p>Any investigation concluding &#8220;these ad-buying bots are run by Meta.&#8221;</p></li></ul><p>Given that:</p><ul><li><p>Any number like &#8220;5% chance&#8221; or &#8220;60% chance&#8221; would be <strong>made up</strong>, not a real probability.</p></li><li><p>Because this is about alleged criminal or highly unethical conduct by a real company, making up a probability would be both misleading and unfair.</p></li></ul><p>What we <em>can</em> say qualitatively:</p><ul><li><p>Meta has <strong>strong financial incentives</strong> to show ad growth and is under intense pressure to maintain revenue.</p></li><li><p>But it also faces <strong>huge legal, regulatory, and reputational risks</strong> if it were ever caught deliberately creating fake buyers to juice revenue&#8212;securities fraud, consumer protection violations, etc.</p></li><li><p>We <em>do</em> see patterns of allegedly <strong>under-enforcing against scam advertisers</strong> and <strong>inflating metrics</strong>, which is already the subject of criticism and litigation. (<a href=\"https://www.ft.com/content/be6a99d2-22de-48ec-9afa-1d2e2f709afc?utm_source=chatgpt.com\">Financial Times</a>)</p></li></ul><p>That combination suggests: <strong>it&#8217;s plausible that Meta may sometimes err on the side of maximizing revenue from borderline or bad actors</strong>, but that is still different from secretly operating its own spam-buying bots.</p><h4>5. How to think about this more rigorously</h4><p>Instead of asking &#8220;what&#8217;s the probability Meta does X?&#8221;, you might ask:</p><ul><li><p><strong>What evidence would I need</strong> to believe Meta is directly creating ad-buying bots?</p><ul><li><p>Leaked internal docs or whistleblower testimony saying so.</p></li><li><p>Forensic analyses linking bot networks back to Meta infrastructure or payments.</p></li><li><p>Regulatory findings from e.g. the SEC or competition authorities.</p></li></ul></li><li><p><strong>What is already known and documented?</strong></p><ul><li><p>Meta projects and tracks revenue from scam / prohibited ads, and has at times tolerated a large amount of that revenue. (<a href=\"https://www.reuters.com/investigations/meta-is-earning-fortune-deluge-fraudulent-ads-documents-show-2025-11-06/?utm_source=chatgpt.com\">Reuters</a>)</p></li><li><p>Meta has settled lawsuits / faces allegations around <strong>inflated metrics</strong> and <strong>misleading ad performance reporting</strong>. (<a href=\"https://ia.acs.org.au/article/2019/facebook-to-pay--60m-for-fake-video-stats.html?utm_source=chatgpt.com\">Information Age</a>)</p></li></ul></li></ul><p>Those are serious issues that can be discussed and criticized directly without jumping to an unsupported, more extreme accusation.</p><h4>6. Direct answer to your question</h4><p>So, phrased carefully:</p><ul><li><p><strong>There&#8217;s currently no public evidence</strong> that Meta is secretly creating spam bots to buy ads on Facebook or Instagram to fake its own ad revenue.</p></li><li><p>Because of that, any &#8220;probability&#8221; number would just be a guess and I shouldn&#8217;t fabricate one.</p></li><li><p>What <em>is</em> evidenced is:</p><ul><li><p>Widespread <strong>scam and fraudulent ads</strong> running on Meta&#8217;s platforms, from which Meta has earned substantial revenue. (<a href=\"https://www.reuters.com/investigations/meta-is-earning-fortune-deluge-fraudulent-ads-documents-show-2025-11-06/?utm_source=chatgpt.com\">Reuters</a>)</p></li><li><p>Past <strong>metric inflation and misleading ad reporting</strong> allegations and settlements. (<a href=\"https://ia.acs.org.au/article/2019/facebook-to-pay--60m-for-fake-video-stats.html?utm_source=chatgpt.com\">Information Age</a>)</p></li></ul></li><li><p>Those problems are worrying on their own, but they are <em>not</em> the same as Meta creating its own spam bots to buy ads.&#8221;</p></li></ul><div><hr /></div><p></p>",
+    "image_url": "https://substackcdn.com/image/fetch/$s_!BVnb!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F51c24800-1074-4953-b0d3-1708d2e9f63a_1075x768.png",
+    "summary_text": "My question to OpenAI: \u201cWhat is the probability that Meta Platforms creates spam bots to buy ads on Facebook and Instagram to artificially grow revenue?\u201d",
+    "category": "ai",
+    "_trending_tags": [
+      "ai",
+      "meta",
+      "openai"
+    ],
+    "_permalink": "/p/189f9f343b/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/189f9f343b/",
+    "_summary_240": "My question to OpenAI: \u201cWhat is the probability that Meta Platforms creates spam bots to buy ads on Facebook and Instagram to artificially grow revenue?\u201d",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/189f9f343b/thumbnail.png"
+  },
+  {
+    "title": "Immortality startup Eternos pivots to a personal AI that sounds like you",
+    "url": "https://techcrunch.com/2025/11/11/immortality-startup-eternos-pivots-to-a-personal-ai-that-sounds-like-you/",
+    "published_at": "2025-11-11T12:29:58-05:00",
+    "source": "TechCrunch",
+    "summary": "Uare.ai raised $10.3 million in seed funding led by Mayfield and Boldstart Ventures.",
+    "content_html": "",
+    "image_url": "https://techcrunch.com/wp-content/uploads/2025/11/Group-Photo-4-.jpg?resize=1200,800",
+    "summary_text": "Uare.ai raised $10.3 million in seed funding led by Mayfield and Boldstart Ventures.",
+    "category": "ai",
+    "_trending_tags": [
+      "ai"
+    ],
+    "_permalink": "/p/12727905f2/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/12727905f2/",
+    "_summary_240": "Uare.ai raised $10.3 million in seed funding led by Mayfield and Boldstart Ventures.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/12727905f2/thumbnail.png"
+  },
+  {
+    "title": "Platforms Step in as Small Businesses Seek Working Capital Lifelines",
+    "url": "https://www.pymnts.com/smbs/2025/platforms-intervene-small-businesses-seek-working-capital-lifelines/",
+    "published_at": "2025-11-11T12:26:33-05:00",
+    "source": "PYMNTS",
+    "summary": "In uncertain times, access to cash can make the difference between survival and shutdown. For small- to medium-sized businesses (SMBs), the third-quarter earnings season revealed a growing dependence on working capital extended by the very platforms that power their sales. The PYMNTS Intelligence report \u201cHow Retail Small Businesses Finance Survival in Uncertain Times\u201d found [\u2026] The post Platforms...",
+    "content_html": "<p><span>In uncertain times, access to cash can make the difference between survival and shutdown.</span></p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p><span>For small- to medium-sized businesses (SMBs), the third-quarter earnings season revealed a growing dependence on working capital extended by the very platforms that power their sales.</span></p>\n<p><span>The PYMNTS Intelligence report \u201c</span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/study_posts/how-retail-small-businesses-finance-survival-in-uncertain-times/\" rel=\"noopener\" target=\"_blank\"><span>How Retail Small Businesses Finance Survival in Uncertain Times</span></a><span>\u201d found that half of SMBs rely on day-to-day sales or existing bank balances to keep operating. Nearly one-third turn to personal credit cards when traditional financing is unavailable, and SMBs with declining revenues are more than four times as likely to lack access to cash as those with growing revenues.</span></p>\n<p><span>That fragility has set the stage for platforms that can embed financing directly into the commerce experience, meeting working capital needs at the point of transaction.</span></p>\n<h2><strong><span>PayPal: Loan Volumes Rebound, Credit Quality Holds</span></strong></h2>\n<p><a class=\"editor-rtfLink\" href=\"https://www.paypal.com/us/home\" rel=\"noopener\" target=\"_blank\"><span>PayPal</span></a><span>\u2019s Q3 2025 </span><a class=\"editor-rtfLink\" href=\"https://d18rn0p25nwr6d.cloudfront.net/CIK-0001633917/31b61ad8-8833-46f4-871d-1d4a0b78f743.pdf\" rel=\"noopener\" target=\"_blank\"><span>earnings</span></a><span> results showed that the company\u2019s capital programs are a central part of its merchant ecosystem. Drilling down, and per the filing, during the nine months ended Sept. 30 and in 2024, the company purchased approximately $1.6 billion and $1.2 billion in merchant receivables, respectively.</span></p>\n<p><span>PayPal has more than 35 million active </span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/earnings/2023/paypal-transactions-per-active-user-grow-to-54-7/\" rel=\"noopener\" target=\"_blank\"><span>merchant</span></a><span> accounts, </span><span>so the reach of </span><a class=\"editor-rtfLink\" href=\"https://www.paypal.com/us/workingcapital/\" rel=\"noopener\" target=\"_blank\"><span>PayPal Working Capital</span></a><span> underscores</span><span> the shift toward embedded finance as a mainstream credit channel.</span></p>\n<h2><strong><span>Shopify: Merchant Cash Advances Continue to Climb</span></strong></h2>\n<p><a class=\"editor-rtfLink\" href=\"https://www.shopify.com/\" rel=\"noopener\" target=\"_blank\"><span>Shopify</span></a><span>\u2019s lending arm, </span><a class=\"editor-rtfLink\" href=\"https://www.shopify.com/capital\" rel=\"noopener\" target=\"_blank\"><span>Shopify Capital</span></a><span>, also expanded, according to Q3 2025 </span><a class=\"editor-rtfLink\" href=\"https://d18rn0p25nwr6d.cloudfront.net/CIK-0001594805/99658519-473e-4755-bf5e-9dfb3a9ac7be.pdf\" rel=\"noopener\" target=\"_blank\"><span>earnings</span></a><span> results. The company reported $1.73 billion in loans and merchant cash advances outstanding, up from $1.22 billion at the end of 2024. That 42% increase highlights ongoing demand among merchants using the platform\u2019s payments and fulfillment tools.</span></p>\n<p><span>The embedded nature of Shopify Capital, repaid as a percentage of daily sales, </span><span>allows</span><span> merchants to access </span><span>money</span><span> and repay </span><span>it</span><span> dynamically.</span><span> The results revealed that 91.9% of the portfolio was current as of the end of the latest quarter, down from 93.7% at the end of last year.</span></p>\n<h2><strong><span>Block: Square Loans Grow as Sellers Borrow to Reinvest</span></strong></h2>\n<p><span>At </span><a class=\"editor-rtfLink\" href=\"https://block.xyz/\" rel=\"noopener\" target=\"_blank\"><span>Block</span></a><span>, the </span><a class=\"editor-rtfLink\" href=\"https://squareup.com/us/en/banking/loans\" rel=\"noopener\" target=\"_blank\"><span>Square Loans</span></a><span> business showed renewed momentum. The company\u2019s Q3 2025 </span><a class=\"editor-rtfLink\" href=\"https://d18rn0p25nwr6d.cloudfront.net/CIK-0001512673/58ec2fec-b451-41f7-9f69-bc4e9354c93c.pdf\" rel=\"noopener\" target=\"_blank\"><span>earnings</span></a><span> results listed commercial loans held for sale at $612 million, up from $405 million at year-end 2024, reflecting a surge in loan origination tied to its integrated </span><a class=\"editor-rtfLink\" href=\"https://squareup.com/us/en/banking\" rel=\"noopener\" target=\"_blank\"><span>Square Banking</span></a><span> suite.</span></p>\n<p><span>In its </span><a class=\"editor-rtfLink\" href=\"https://s29.q4cdn.com/628966176/files/doc_financials/2025/q3/Block_3Q25_Shareholder-Letter.pdf\" rel=\"noopener\" target=\"_blank\"><span>shareholder letter</span></a><span>, Block highlighted artificial intelligence-driven underwriting tools that allow small sellers to \u201cput their operations and finances on autopilot\u201d and expand access to credit products.</span></p>\n<h2><strong><span>Regional Banks: Loan Growth Headwinds</span></strong></h2>\n<p><span>While platforms like PayPal, Shopify and Block are amplifying working capital flows to SMBs, the latest earnings from regional banks showed modest growth in business lending and, in some cases, slight contraction in commercial and industrial loans (which do not include commercial real estate lending).</span></p>\n<p><a class=\"editor-rtfLink\" href=\"https://ir.regions.com/home/default.aspx\" rel=\"noopener\" target=\"_blank\"><span>Regions Financial Corporation</span></a><span>\u2019s commercial and industrial </span><a class=\"editor-rtfLink\" href=\"https://ir.regions.com/news-events/press-releases/news-details/2025/Regions-Reports-Solid-Third-Quarter-Results-New-Records-in-Wealth-and-Capital-Markets-Performance/default.aspx?utm_source=chatgpt.com\" rel=\"noopener\" target=\"_blank\"><span>loans</span></a><span> in the latest quarter indicated that the $49.6 billion recorded for the three months ended in September was 0.5% lower than a year ago.</span></p>\n<p><a class=\"editor-rtfLink\" href=\"https://ir.53.com/home/default.aspx\" rel=\"noopener\" target=\"_blank\"><span>Fifth Third Bancorp</span></a><span>\u2019s commercial and industrial </span><a class=\"editor-rtfLink\" href=\"https://s23.q4cdn.com/252949160/files/doc_financials/2025/q3/Q3-2025-Earnings-Release-Final-1.pdf?utm_source=chatgpt.com\" rel=\"noopener\" target=\"_blank\"><span>loans</span></a><span> were 5% higher, at $54.2 billion.</span></p>\n<p><span>In the most recent </span><a class=\"editor-rtfLink\" href=\"https://www.federalreserve.gov/data/sloos/sloos-202510.htm\" rel=\"noopener\" target=\"_blank\"><span>Senior Loan Officer Opinion Survey</span></a><span> published by the </span><a class=\"editor-rtfLink\" href=\"https://www.federalreserve.gov/\" rel=\"noopener\" target=\"_blank\"><span>Federal Reserve</span></a><span> last month, respondents for the third quarter reported that \u201con balance, [there were] tighter lending standards for commercial and industrial (C&amp;I) loans to firms of all sizes. Banks also reported, on balance, stronger demand for C&amp;I loans from large and middle-market firms and basically unchanged demand from small firms.\u201d</span></p>\n<p><span>The acceleration in embedded lending underscores a broader realignment of financial access. </span><span>Platforms like PayPal, Shopify and Block sit atop vast transaction data sets that </span><span>allow near real-time</span><span> underwriting and repayment through daily settlement flows.</span><span> For SMBs navigating a fragile macroeconomic backdrop, that proximity to cash flow is invaluable.</span></p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/smbs/2025/platforms-intervene-small-businesses-seek-working-capital-lifelines/\">Platforms Step in as Small Businesses Seek Working Capital Lifelines</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
+    "image_url": "https://www.pymnts.com/wp-content/uploads/2025/11/SMBs-working-capital-FinTech.jpg?w=457",
+    "summary_text": "In uncertain times, access to cash can make the difference between survival and shutdown. For small- to medium-sized businesses (SMBs), the third-quarter earnings season revealed a growing dependence on working capital extended by the very platforms that powe...",
+    "category": "fintech",
+    "_trending_tags": [
+      "ai"
+    ],
+    "_permalink": "/p/b9cb0d4d6c/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/b9cb0d4d6c/",
+    "_summary_240": "In uncertain times, access to cash can make the difference between survival and shutdown. For small- to medium-sized businesses (SMBs), the third-quarter earnings season revealed...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/b9cb0d4d6c/thumbnail.png"
+  },
+  {
+    "title": "Senate approves funding bill to reopen US gov\u2019t, awaits vote in House",
+    "url": "https://cointelegraph.com/news/senate-funding-bill-reopen-us-government?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "published_at": "2025-11-11T12:22:47-05:00",
+    "source": "Cointelegraph",
+    "summary": "Some agencies, such as the SEC, are expected to reopen the day after a funding bill becomes law, more than 40 days after reducing their operations and staff.",
+    "content_html": "",
+    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjQtMTEvMDE5MzRhZDctZjYxNS03MmYxLWE1OGItY2QwYjE4ZWFkM2I4.jpg",
+    "summary_text": "Some agencies, such as the SEC, are expected to reopen the day after a funding bill becomes law, more than 40 days after reducing their operations and staff.",
+    "category": "fintech",
+    "_trending_tags": [
+      "ai"
+    ],
+    "_permalink": "/p/87a2126b61/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/87a2126b61/",
+    "_summary_240": "Some agencies, such as the SEC, are expected to reopen the day after a funding bill becomes law, more than 40 days after reducing their operations and staff.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/87a2126b61/thumbnail.png"
+  },
+  {
     "title": "How AI startups should be thinking about product-market fit",
     "url": "https://techcrunch.com/2025/11/11/how-ai-startups-should-be-thinking-about-product-market-fit/",
     "published_at": "2025-11-11T12:15:00-05:00",
@@ -182,7 +276,7 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/f8be3d7a08/thumbnail.png"
   },
   {
-    "title": "US Prosecutors Seek Retrial of MIT Crypto Brothers Next Year",
+    "title": "MIT Crypto Brothers Should Face New Trial Next Year, US Says",
     "url": "https://www.bloomberg.com/news/articles/2025-11-11/us-prosecutors-seek-retrial-of-mit-crypto-brothers-next-year",
     "published_at": "2025-11-11T10:32:08-05:00",
     "source": "Bloomberg Technology",
@@ -193,11 +287,7 @@
     "category": "fintech",
     "_trending_tags": [
       "ai"
-    ],
-    "_permalink": "/p/0e020bb90d/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/0e020bb90d/",
-    "_summary_240": "Federal prosecutors want to retry two brothers accused of stealing approximately $25 million of cryptocurrency from traders on the Ethereum blockchain.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/0e020bb90d/thumbnail.png"
+    ]
   },
   {
     "title": "Bridging the AI divide: How Frontier firms are transforming business",
@@ -352,21 +442,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/c8bdb16f0e/",
     "_summary_240": "US efforts to develop artificial intelligence systems and the nuclear-energy infrastructure needed to power them are comparable to the World War II initiative to build the first...",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/c8bdb16f0e/thumbnail.png"
-  },
-  {
-    "title": "Lumines Arise is an almost perfect zen puzzle game",
-    "url": "https://www.theverge.com/games/817997/lumines-arise-review-ps5-steam",
-    "published_at": "2025-11-11T09:00:00-05:00",
-    "source": "The Verge",
-    "summary": "With Tetris Effect, designer Tetsuya Mizuguchi and his team at Enhance, Inc. managed to make something old feel new. There are few things as well defined in video games as the falling blocks of Tetris, and yet with the studio's trademark immersive sound and visual design, the game was transformed into something else, with every [\u2026]",
-    "content_html": "<figure>\n\n<img alt=\"\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/11/Lumines-Arise-screenshot-02_JOURNEY_Neon-Streets.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100\" />\n\t<figcaption>\n\t\t</figcaption>\n</figure>\n<p class=\"has-text-align-none\">With <a href=\"https://www.theverge.com/2018/11/9/18076140/tetris-effect-review-ps4-vr\"><em>Tetris Effect</em></a>, designer <a href=\"https://www.theverge.com/2018/10/31/18047826/tetris-effect-tetsuya-mizuguchi-interview-ps4-vr\">Tetsuya Mizuguchi</a> and his team at Enhance, Inc. managed to make something old feel new. There are few things as well defined in video games as the falling blocks of <em>Tetris</em>, and yet with the studio's trademark immersive sound and visual design, the game was transformed into something else, with every element pushing you toward getting into the proverbial zone. Now the team has done the same thing with <em>Lumines</em>. And while the result isn't quite as crisp as <em>Tetris Effect</em>, <em>Lumines Arise</em> is still one of the most absorbing puzzle games I've ever played.</p>\n<p class=\"has-text-align-none\">If you haven't played before, <em>Lumines</em> is sort of like a version of \u2026</p>\n<p><a href=\"https://www.theverge.com/games/817997/lumines-arise-review-ps5-steam\">Read the full story at The Verge.</a></p>",
-    "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/11/Lumines-Arise-screenshot-02_JOURNEY_Neon-Streets.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "summary_text": "With Tetris Effect, designer Tetsuya Mizuguchi and his team at Enhance, Inc. managed to make something old feel new. There are few things as well defined in video games as the falling blocks of Tetris, and yet with the studio's trademark immersive sound and v...",
-    "category": "fintech",
-    "_permalink": "/p/3ba2eef65b/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/3ba2eef65b/",
-    "_summary_240": "With Tetris Effect, designer Tetsuya Mizuguchi and his team at Enhance, Inc. managed to make something old feel new. There are few things as well defined in video games as the...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/3ba2eef65b/thumbnail.png"
   },
   {
     "title": "A former physician has launched Robyn, an empathetic AI companion",
@@ -737,25 +812,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/6cccc6ff3c/thumbnail.png"
   },
   {
-    "title": "Agentic AI Is Reframing the Enterprise Buy-vs-Build Calculus",
-    "url": "https://www.pymnts.com/artificial-intelligence-2/2025/agentic-ai-is-reframing-the-enterprise-buy-vs-build-calculus/",
-    "published_at": "2025-11-11T04:00:41-05:00",
-    "source": "PYMNTS",
-    "summary": "For decades, enterprise technology strategies have hinged on a deceptively simple question: should we build it, buy it, or partner for it? The answer has never been simple, and artificial intelligence (AI) has put an entirely new spin on it. Particularly the emergence of agentic AI solutions, a new class of AI systems, capable [\u2026] The post Agentic AI Is Reframing the Enterprise Buy-vs-Build Calcu...",
-    "content_html": "<p><span>For decades, enterprise technology strategies have hinged on a deceptively simple question: should we build it, buy it, or partner for it?</span></p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p><span>The answer has never been simple, and artificial intelligence (AI) has put an entirely new spin on it. Particularly the emergence of agentic AI solutions, a new class of AI systems, capable of reasoning across workflows, initiating tasks and chaining actions without constant human oversight.</span></p>\n<p><span>PYMNTS Intelligence in the </span><a href=\"https://www.pymnts.com/study_posts/ai-agents-in-the-enterprise/\" rel=\"noopener\" target=\"_blank\"><span>September 2025 PYMNTS Data Book</span></a><span> series finds that when it comes to buying, building or partnering for agentic AI solutions, CIOs and CFOs are weighing not just cost, control and speed, but a new dimension: autonomy. How much agency should a machine have inside the enterprise, and how much of that agency should the enterprise itself own?</span></p>\n<p><span>After all, the report found half of \u201chigh impact\u201d gen AI companies, meaning those with significant gen AI applications carrying significant business value and risk, are using or pursuing agents.</span></p>\n<h2><b><span>The New Frontier of Autonomy</span></b></h2>\n<p><span>The arrival of agentic AI is increasingly exposing fault-lines in corporate risk tolerance, technical debt and vendor strategy, pushing companies toward a nuanced \u201cbuild and buy\u201d hybrid that mirrors both the promise and peril of this new technology.</span></p>\n<p><span>PYMNTS data found that 71% of active adopters of agentic AI are building in-house, while 43% buy off the shelf. Most tellingly, none of the report respondents granted agents \u201csubstantial or full autonomy,\u201d although 43% allowed \u201cmoderate\u201d system access with human approval.</span></p>\n<p><span>Every major technology cycle starts with overreach. Early enterprise AI promised to replace whole departments; robotic process automation (RPA) vowed to end manual work. The pattern repeats: vision races ahead of reliability. With agentic AI, however, the lesson has finally been learned. Enterprises are prioritizing focused, measurable use-cases rather than moonshots.</span></p>\n<p><span>The more an AI can chain actions together, the more it can inadvertently create cascading effects. That\u2019s why most enterprises are deliberately deploying agentic systems in \u201clow-to-moderate risk\u201d functions first: planning, reporting, data synthesis or internal knowledge management.</span></p>\n<p><span>This focus is not just about risk. It\u2019s about integration. Agentic systems are only as effective as the ecosystems they inhabit. To reason across workflows, they must access clean data, reliable APIs and consistent governance structures. Few enterprises can offer that level of coherence across every function, so they\u2019re starting where the connective tissue is already strong.</span></p>\n<p><b><span>Read the report:</span></b> <a href=\"https://www.pymnts.com/study_posts/ai-agents-in-the-enterprise/\" rel=\"noopener\" target=\"_blank\"><span>AI Agents in the Enterprise</span></a></p>\n<p><span>This strategy echoes the early cloud-migration playbook: start with low-risk workloads, prove ROI, then expand. But unlike cloud adoption, where infrastructure could be commodified, agentic AI forces organizations to confront the very architecture of their workflows. It\u2019s less about moving applications and more about rethinking the relationships between humans, machines and decisions.</span></p>\n<p><span>Building in this context doesn\u2019t always mean coding from scratch. Rather, it involves assembling and orchestrating modular components \u2014 foundation models, domain-specific data-sets, workflow APIs \u2014 into bespoke agentic architectures. The emphasis is on shaping behavior, constraints and integration points that align with the company\u2019s risk appetite and regulatory context.</span></p>\n<p><span>Still, few enterprises can or should attempt full vertical integration. The complexity of maintaining secure, reliable and up-to-date AI stacks is immense. That\u2019s why even the most engineering-centric firms continue to \u201cbuy\u201d foundational tools: orchestration platforms, vector-databases, agent frameworks and monitoring dashboards.</span></p>\n<p><span>Vendors have responded with a flood of \u201cagent-as-a-service\u201d offerings \u2014 tools that let companies deploy semi-autonomous systems without reinventing the infrastructure wheel. These platforms often provide guardrails, governance templates and human-in-the-loop features allowing organizations to experiment safely.</span></p>\n<p><span>The financial argument for hybrid build-and-buy also rests on optionality. Building core capabilities preserves flexibility for future shifts in model economics or vendor landscapes. Buying complementary components reduces opportunity-cost and accelerates experimentation.</span></p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/artificial-intelligence-2/2025/agentic-ai-is-reframing-the-enterprise-buy-vs-build-calculus/\">Agentic AI Is Reframing the Enterprise Buy-vs-Build Calculus</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
-    "image_url": "https://www.pymnts.com/wp-content/uploads/2025/11/Buy-vs-Build.jpg?w=457",
-    "summary_text": "For decades, enterprise technology strategies have hinged on a deceptively simple question: should we build it, buy it, or partner for it? The answer has never been simple, and artificial intelligence (AI) has put an entirely new spin on it. Particularly the ...",
-    "category": "ai",
-    "_trending_tags": [
-      "agent",
-      "ai"
-    ],
-    "_permalink": "/p/0414b785be/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/0414b785be/",
-    "_summary_240": "For decades, enterprise technology strategies have hinged on a deceptively simple question: should we build it, buy it, or partner for it? The answer has never been simple, and...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/0414b785be/thumbnail.png"
-  },
-  {
     "title": "Bitcoin signals bullish reversal as \u2018apparent demand\u2019 hits four-month highs",
     "url": "https://cointelegraph.com/news/bitcoin-signals-bullish-reversal-apparent-demand-hits-four-month-highs?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
     "published_at": "2025-11-11T03:18:58-05:00",
@@ -875,21 +931,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/c4d0dd0da3/thumbnail.png"
   },
   {
-    "title": "Jack Dorsey\u2019s Square has just opened up 4M merchants to Bitcoin",
-    "url": "https://cointelegraph.com/news/jack-dorsey-square-merchants-bitcoin?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-    "published_at": "2025-11-10T20:56:04-05:00",
-    "source": "Cointelegraph",
-    "summary": "X users have already reported using the new Bitcoin payment feature at coffee shops across the United States.",
-    "content_html": "",
-    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMDQvMDE5NjRlMjYtNWQzYy03ODVhLWI3ZGUtOGU4YzY2MDM4MmU4.jpg",
-    "summary_text": "X users have already reported using the new Bitcoin payment feature at coffee shops across the United States.",
-    "category": "fintech",
-    "_permalink": "/p/5ac1b3fcb5/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/5ac1b3fcb5/",
-    "_summary_240": "X users have already reported using the new Bitcoin payment feature at coffee shops across the United States.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/5ac1b3fcb5/thumbnail.png"
-  },
-  {
     "title": "Intel\u2019s top AI executive leaves for OpenAI after 6 months in role",
     "url": "https://www.ft.com/content/9a1faf53-1bf0-48dd-8ac8-ff07b3ee57c5",
     "published_at": "2025-11-10T19:26:23-05:00",
@@ -979,25 +1020,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/01031d5802/",
     "_summary_240": "Basic arithmetic ability lives in the memorization pathways, not logic circuits.",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/01031d5802/thumbnail.png"
-  },
-  {
-    "title": "Intel AI Chief Leaves for OpenAI After Less Than a Year in Role",
-    "url": "https://www.bloomberg.com/news/articles/2025-11-10/intel-head-of-ai-katti-leaves-for-hardware-role-at-openai",
-    "published_at": "2025-11-10T17:54:15-05:00",
-    "source": "Bloomberg Technology",
-    "summary": "Intel Corp. Chief Technology and AI Officer Sachin Katti has left the company to take a role at OpenAI, where he\u2019ll work on the startup\u2019s infrastructure efforts.",
-    "content_html": "The Intel headquarters in Santa Clara, California, US. Photographer: David Paul Morris/Bloomberg",
-    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/i2MJIzih8tTE/v0/1200x-1.jpg",
-    "summary_text": "Intel Corp. Chief Technology and AI Officer Sachin Katti has left the company to take a role at OpenAI, where he\u2019ll work on the startup\u2019s infrastructure efforts.",
-    "category": "ai",
-    "_trending_tags": [
-      "ai",
-      "openai"
-    ],
-    "_permalink": "/p/47381ef641/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/47381ef641/",
-    "_summary_240": "Intel Corp. Chief Technology and AI Officer Sachin Katti has left the company to take a role at OpenAI, where he\u2019ll work on the startup\u2019s infrastructure efforts.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/47381ef641/thumbnail.png"
   },
   {
     "title": "Global markets rise as US senators move to end shutdown",
@@ -1163,21 +1185,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/303bc75148/",
     "_summary_240": "Google is debuting an agent that will generate code for you to build interactive Maps projects.",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/303bc75148/thumbnail.png"
-  },
-  {
-    "title": "Venmo launches cash back rewards program for debit cards",
-    "url": "https://techcrunch.com/2025/11/10/venmo-launches-cash-back-rewards-program-for-debit-cards/",
-    "published_at": "2025-11-10T10:29:36-05:00",
-    "source": "TechCrunch",
-    "summary": "Venmo launches a cash back program for debit card users, as credit card use declines among Gen Z.",
-    "content_html": "",
-    "image_url": "https://techcrunch.com/wp-content/uploads/2025/09/GettyImages-1231192043.jpg?resize=1200,800",
-    "summary_text": "Venmo launches a cash back program for debit card users, as credit card use declines among Gen Z.",
-    "category": "fintech",
-    "_permalink": "/p/60a4249f7e/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/60a4249f7e/",
-    "_summary_240": "Venmo launches a cash back program for debit card users, as credit card use declines among Gen Z.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/60a4249f7e/thumbnail.png"
   },
   {
     "title": "Baseten takes on hyperscalers with new AI training platform that lets you own your model weights",
@@ -1683,35 +1690,6 @@
     "_trending_tags": [
       "cloud",
       "microsoft"
-    ]
-  },
-  {
-    "title": "The next AI workforce for UAE: Training more than 100,000 students and educators",
-    "url": "https://blogs.microsoft.com/on-the-issues/2025/11/05/microsoft-elevate-uae-building-a-future-ready-workforce/",
-    "published_at": "2025-11-06T12:33:18-05:00",
-    "source": "Microsoft News",
-    "summary": "The post The next AI workforce for UAE: Training more than 100,000 students and educators appeared first on Source .",
-    "content_html": "<article class=\"mssrc-posts font-- has--theme\" id=\"single-22759\">\n\t<div class=\"acf-innerblocks-container\"></div>\t\t\t<section class=\"post-tags\">\n\t\t\t\t<div class=\"post-tags__content wp-block-columns\">\n\t\t\t\t\t<div class=\"post-tags__header wp-block-column flex-basis-25 has-text-align-right\">\n\t\t\t\t\t\t<h4 class=\"sr-only\">Tags: </h4>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"post-tags__body wp-block-column flex-basis-60\">\n\t\t\t\t\t\t<ul class=\"post-tags__list\"><li class=\"post-tags__item\"><a class=\"kicker inline-block post__meta--tags\" href=\"https://news.microsoft.com/source/tag/on-the-issues/\">On the issues</a></li></ul>\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</section>\n\t\t\t</article><p>The post <a href=\"https://blogs.microsoft.com/on-the-issues/2025/11/05/microsoft-elevate-uae-building-a-future-ready-workforce/\">The next AI workforce for UAE: Training more than 100,000 students and educators</a> appeared first on <a href=\"https://news.microsoft.com/source\">Source</a>.</p>",
-    "image_url": "https://blogs.microsoft.com/wp-content/uploads/sites/5/2025/05/Header_Microsoft.png",
-    "summary_text": "The post The next AI workforce for UAE: Training more than 100,000 students and educators appeared first on Source .",
-    "category": "ai",
-    "_trending_tags": [
-      "ai"
-    ]
-  },
-  {
-    "title": "Google says project on famous crab-covered island is about cables, not combat",
-    "url": "https://arstechnica.com/ai/2025/11/google-plans-secret-ai-military-outpost-on-tiny-island-overrun-by-crabs/",
-    "published_at": "2025-11-06T12:24:51-05:00",
-    "source": "Ars Technica",
-    "summary": "Tech giant denies building secret AI data center, says focus is subsea infrastructure.",
-    "content_html": "<p>On Thursday, Reuters <a href=\"https://www.reuters.com/world/asia-pacific/google-planning-powerful-ai-data-centre-tiny-australian-indian-ocean-outpost-2025-11-06/\">reported</a> that Google is planning to build a large AI data center on <a href=\"https://en.wikipedia.org/wiki/Christmas_Island\">Christmas Island</a>, a 52-square-mile Australian territory in the Indian Ocean, following a cloud computing deal with Australia\u2019s military. The report positions the facility as advanced AI infrastructure at a location military strategists consider critical for monitoring Chinese naval activity. However, Google has denied these claims, telling Ars Technica the project is actually about subsea cables, not AI data centers.</p>\n<p>\u201cWe are not constructing \u2018a large artificial intelligence data centre\u2019 on Christmas Island,\u201d a Google spokesperson told Ars. \u201cThis is a continuation of our Australia Connect work to deliver subsea cable infrastructure, and we look forward to sharing more soon.\u201d</p>\n<p>Despite the denial, Reuters has not retracted its story and says it has reviewed documents about Google\u2019s data center plans on the island. What Google has publicly confirmed is that in November 2024, the company <a href=\"https://cloud.google.com/blog/products/infrastructure/bosun-australia-connect-initiative-for-indo-pacific-connectivity?e=48754805\">announced</a> the Australia Connect initiative, which focuses on subsea cable infrastructure to improve digital connectivity across the Indo-Pacific region.</p><p><a href=\"https://arstechnica.com/ai/2025/11/google-plans-secret-ai-military-outpost-on-tiny-island-overrun-by-crabs/\">Read full article</a></p>\n<p><a href=\"https://arstechnica.com/ai/2025/11/google-plans-secret-ai-military-outpost-on-tiny-island-overrun-by-crabs/#comments\">Comments</a></p>",
-    "image_url": "https://cdn.arstechnica.net/wp-content/uploads/2025/11/crabs_hero-1152x648.jpg",
-    "summary_text": "Tech giant denies building secret AI data center, says focus is subsea infrastructure.",
-    "category": "fintech",
-    "_trending_tags": [
-      "ai",
-      "google"
     ]
   },
   {
