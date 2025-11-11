@@ -1,5 +1,53 @@
 [
   {
+    "title": "NTT Data Eyes Saudi Data Center Buildout to Capture AI Momentum",
+    "url": "https://www.bloomberg.com/news/articles/2025-11-11/ntt-data-eyes-saudi-data-center-buildout-to-capture-ai-momentum",
+    "published_at": "2025-11-11T08:17:31-05:00",
+    "source": "Bloomberg Technology",
+    "summary": "NTT Data Group is considering building data centers in Saudi Arabia as the Japanese firm looks to capitalize on fresh momentum around artificial intelligence in the kingdom.",
+    "content_html": "Data center",
+    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ilguWbeYxMPU/v1/1200x-1.jpg",
+    "summary_text": "NTT Data Group is considering building data centers in Saudi Arabia as the Japanese firm looks to capitalize on fresh momentum around artificial intelligence in the kingdom.",
+    "category": "ai",
+    "_trending_tags": [
+      "ai"
+    ],
+    "_permalink": "/p/b1a3ea1bd3/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/b1a3ea1bd3/",
+    "_summary_240": "NTT Data Group is considering building data centers in Saudi Arabia as the Japanese firm looks to capitalize on fresh momentum around artificial intelligence in the kingdom.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/b1a3ea1bd3/thumbnail.png"
+  },
+  {
+    "title": "JPMorgan, DBS eye deposit tokens as cross-bank alternative to stablecoins",
+    "url": "https://cointelegraph.com/news/jpmorgan-dbs-to-develop-tokenization-framework-for-interbank-deposits?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "published_at": "2025-11-11T08:09:38-05:00",
+    "source": "Cointelegraph",
+    "summary": "As of 2024, at least one-third of commercial banks were exploring or piloting tokenized deposits, according to a survey by the Bank for International Settlements.",
+    "content_html": "",
+    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMDYvMDE5NzNjOTItOTJmZC03MjJjLWFhZmUtNDgxOTY5MTc3M2Jh.jpg",
+    "summary_text": "As of 2024, at least one-third of commercial banks were exploring or piloting tokenized deposits, according to a survey by the Bank for International Settlements.",
+    "category": "fintech",
+    "_permalink": "/p/64b00e4c92/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/64b00e4c92/",
+    "_summary_240": "As of 2024, at least one-third of commercial banks were exploring or piloting tokenized deposits, according to a survey by the Bank for International Settlements.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/64b00e4c92/thumbnail.png"
+  },
+  {
+    "title": "ClickFix may be the biggest security threat your family has never heard of",
+    "url": "https://arstechnica.com/security/2025/11/clickfix-may-be-the-biggest-security-threat-your-family-has-never-heard-of/",
+    "published_at": "2025-11-11T07:30:51-05:00",
+    "source": "Ars Technica",
+    "summary": "Relatively new technique can bypass many endpoint protections.",
+    "content_html": "<p>Over the past year, scammers have ramped up a new way to infect the computers of unsuspecting people. The increasingly common method, which many potential targets have yet to learn of, is quick, bypasses most endpoint protections, and works against both macOS and Windows users.</p>\n<p>ClickFix often starts with an email sent from a hotel that the target has a pending registration with and references the correct registration information. In other cases, ClickFix attacks begin with a WhatsApp message. In still other cases, the user receives the URL at the top of Google results for a search query. Once the mark accesses the malicious site referenced, it presents a CAPTCHA challenge or other pretext requiring user confirmation. The user receives an instruction to copy a string of text, open a terminal window, paste it in, and press Enter.</p>\n<h2>One line is all it takes</h2>\n<p>Once entered, the string of text causes the PC or Mac to surreptitiously visit a scammer-controlled server and download malware. Then, the machine automatically installs it\u2014all with no indication to the target. With that, users are infected, usually with credential-stealing malware. Security firms say ClickFix campaigns have run rampant. The lack of awareness of the technique, combined with the links also coming from known addresses or in search results, and the ability to bypass some endpoint protections are all factors driving the growth.</p><p><a href=\"https://arstechnica.com/security/2025/11/clickfix-may-be-the-biggest-security-threat-your-family-has-never-heard-of/\">Read full article</a></p>\n<p><a href=\"https://arstechnica.com/security/2025/11/clickfix-may-be-the-biggest-security-threat-your-family-has-never-heard-of/#comments\">Comments</a></p>",
+    "image_url": "https://cdn.arstechnica.net/wp-content/uploads/2020/10/malware-1000x648.jpg",
+    "summary_text": "Relatively new technique can bypass many endpoint protections.",
+    "category": "fintech",
+    "_permalink": "/p/f1fa548e6a/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/f1fa548e6a/",
+    "_summary_240": "Relatively new technique can bypass many endpoint protections.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/f1fa548e6a/thumbnail.png"
+  },
+  {
     "title": "Your crypto wallet is your digital passport",
     "url": "https://cointelegraph.com/news/crypto-wallet-is-your-digital-passport?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
     "published_at": "2025-11-11T07:30:00-05:00",
