@@ -1,5 +1,40 @@
 [
   {
+    "title": "Wall Street Speeds Up India Expansion After Trump\u2019s Visa Curbs",
+    "url": "https://www.bloomberg.com/news/articles/2025-11-11/trump-visa-crackdown-pushes-more-high-skilled-wall-street-jobs-to-india",
+    "published_at": "2025-11-11T17:33:04-05:00",
+    "source": "Bloomberg Technology",
+    "summary": "Wall Street has been growing its high-skilled operations in India for decades. On today\u2019s Big Take Asia podcast, how President Trump's efforts to curb immigration could accelerate that push.",
+    "content_html": "The office of JPMorgan Chase & Co. in Bengaluru in October. Photographer: Sameer Raichur/Bloomberg",
+    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/imJQJyi4nuoc/v0/1200x-1.jpg",
+    "summary_text": "Wall Street has been growing its high-skilled operations in India for decades. On today\u2019s Big Take Asia podcast, how President Trump's efforts to curb immigration could accelerate that push.",
+    "category": "fintech",
+    "_permalink": "/p/8ed585ecea/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/8ed585ecea/",
+    "_summary_240": "Wall Street has been growing its high-skilled operations in India for decades. On today\u2019s Big Take Asia podcast, how President Trump's efforts to curb immigration could...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/8ed585ecea/thumbnail.png"
+  },
+  {
+    "title": "Meta\u2019s SPICE framework lets AI systems teach themselves to reason",
+    "url": "https://venturebeat.com/ai/metas-spice-framework-lets-ai-systems-teach-themselves-to-reason",
+    "published_at": "2025-11-11T17:21:00-05:00",
+    "source": "VentureBeat",
+    "summary": "Researchers at Meta FAIR and the National University of Singapore have developed a new reinforcement learning framework for self-improving AI systems. Called Self-Play In Corpus Environments (SPICE) , the framework pits two AI agents against each other, creating its own challenges and gradually improving without human supervision. While currently a proof-of-concept, this self-play mechanism could...",
+    "content_html": "",
+    "image_url": "",
+    "summary_text": "Researchers at Meta FAIR and the National University of Singapore have developed a new reinforcement learning framework for self-improving AI systems. Called Self-Play In Corpus Environments (SPICE) , the framework pits two AI agents against each other, creat...",
+    "category": "ai",
+    "_trending_tags": [
+      "agent",
+      "ai",
+      "meta"
+    ],
+    "_permalink": "/p/d1bbbf2676/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/d1bbbf2676/",
+    "_summary_240": "Researchers at Meta FAIR and the National University of Singapore have developed a new reinforcement learning framework for self-improving AI systems. Called Self-Play In Corpus...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/d1bbbf2676/thumbnail.png"
+  },
+  {
     "title": "Here\u2019s what happened in crypto today",
     "url": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
     "published_at": "2025-11-11T16:51:35-05:00",
@@ -842,24 +877,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/736db3ca66/thumbnail.png"
   },
   {
-    "title": "Adyen Forecasts 20% Annual Net Revenue Growth After 2026",
-    "url": "https://www.bloomberg.com/news/articles/2025-11-11/adyen-forecasts-20-annual-net-revenue-growth-after-2026",
-    "published_at": "2025-11-11T02:00:46-05:00",
-    "source": "Bloomberg Technology",
-    "summary": "Adyen NV expects net revenue growth at about 20% in any given year post 2026, it said Tuesday, handing investors a fresh yardstick to judge the Dutch payment processor\u2019s growth trajectory.",
-    "content_html": "The Adyen NV headquarters in Amsterdam. Photographer: Ksenia Kuleshova/Bloomberg",
-    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/i2MftUaSLGVY/v0/1200x-1.jpg",
-    "summary_text": "Adyen NV expects net revenue growth at about 20% in any given year post 2026, it said Tuesday, handing investors a fresh yardstick to judge the Dutch payment processor\u2019s growth trajectory.",
-    "category": "fintech",
-    "_trending_tags": [
-      "ai"
-    ],
-    "_permalink": "/p/ce2a2a8ed1/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/ce2a2a8ed1/",
-    "_summary_240": "Adyen NV expects net revenue growth at about 20% in any given year post 2026, it said Tuesday, handing investors a fresh yardstick to judge the Dutch payment processor\u2019s growth...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/ce2a2a8ed1/thumbnail.png"
-  },
-  {
     "title": "LLMs Fail at Parsing Unstructured Data",
     "url": "https://newsletter.tek2dayholdings.com/p/llms-fail-at-parsing-unstructured",
     "published_at": "2025-11-10T20:57:41-05:00",
@@ -1306,12 +1323,16 @@
     "source": "Financial Times - Technology",
     "summary": "Erik Brynjolfsson, Stanford academic and author, explains how AI and people can complement each other",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/2d11bccc-09a2-4bff-af05-ec7908369698.jpg",
     "summary_text": "Erik Brynjolfsson, Stanford academic and author, explains how AI and people can complement each other",
     "category": "ai",
     "_trending_tags": [
       "ai"
-    ]
+    ],
+    "_permalink": "/p/9dccae13cc/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/9dccae13cc/",
+    "_summary_240": "Erik Brynjolfsson, Stanford academic and author, explains how AI and people can complement each other",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/9dccae13cc/thumbnail.png"
   },
   {
     "title": "OpenAI's Government Handout Request",
@@ -1331,20 +1352,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/e4c77768b7/",
     "_summary_240": "If you are interested in reading OpenAI\u2019s request for a Government handout in the form of a private, public partnership, I have attached the letter below.",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/e4c77768b7/thumbnail.png"
-  },
-  {
-    "title": "6 proven lessons from the AI projects that broke before they scaled",
-    "url": "https://venturebeat.com/ai/6-proven-lessons-from-the-ai-projects-that-broke-before-they-scaled",
-    "published_at": "2025-11-09T00:00:00-05:00",
-    "source": "VentureBeat",
-    "summary": "Companies hate to admit it, but the road to production-level AI deployment is littered with proof of concepts (PoCs) that go nowhere, or failed projects that never deliver on their goals. In certain domains, there\u2019s little tolerance for iteration, especially in something like life sciences, when the AI application is facilitating new treatments to markets or diagnosing diseases. Even slightly ina...",
-    "content_html": "",
-    "image_url": "",
-    "summary_text": "Companies hate to admit it, but the road to production-level AI deployment is littered with proof of concepts (PoCs) that go nowhere, or failed projects that never deliver on their goals. In certain domains, there\u2019s little tolerance for iteration, especially ...",
-    "category": "ai",
-    "_trending_tags": [
-      "ai"
-    ]
   },
   {
     "title": "The Question of Gen AI End-User Usage",
@@ -1368,7 +1375,7 @@
     "source": "Financial Times - Technology",
     "summary": "Watch individual stocks and sell if they are too aggressively valued",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/8e9af4ab-56a6-4833-98fb-920026b1d0ee.jpg",
     "summary_text": "Watch individual stocks and sell if they are too aggressively valued",
     "category": "ai",
     "_trending_tags": [
@@ -1412,7 +1419,7 @@
     "source": "Financial Times - Technology",
     "summary": "Partners called vote to oust chief after controversial incidents rocked Silicon Valley venture capital firm",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/897d6713-f161-413c-b40f-1bfccf2ea51c.jpg",
     "summary_text": "Partners called vote to oust chief after controversial incidents rocked Silicon Valley venture capital firm",
     "category": "software"
   },
@@ -1423,7 +1430,7 @@
     "source": "Financial Times - Technology",
     "summary": "Digital scrapbook\u2019s stock is cheaper than that of social and video app, and could be better long-term investment",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/48483d77-8f0e-46b8-986c-0e061e1253e8.jpg",
     "summary_text": "Digital scrapbook\u2019s stock is cheaper than that of social and video app, and could be better long-term investment",
     "category": "ai",
     "_trending_tags": [
@@ -1522,7 +1529,7 @@
     "source": "Financial Times - Technology",
     "summary": "Commission proposes pauses to provisions in digital rule book",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/e52cc196-4822-448b-b57f-7ca862088cd1.jpg",
     "summary_text": "Commission proposes pauses to provisions in digital rule book",
     "category": "ai",
     "_trending_tags": [
