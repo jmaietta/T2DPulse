@@ -1,5 +1,41 @@
 [
   {
+    "title": "ClearToken gets FCA nod for crypto settlement platform amid UK rules push",
+    "url": "https://cointelegraph.com/news/cleartoken-fca-approval-uk-crypto-settlement-system?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "published_at": "2025-11-11T14:02:00-05:00",
+    "source": "Cointelegraph",
+    "summary": "ClearToken won FCA approval for a regulated crypto settlement system, signaling the UK\u2019s push to bring digital assets under its financial framework.",
+    "content_html": "",
+    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMDYvMDE5NzkyNmItMTQwOC03NGRiLTgyNjktZmUzOTI1NmFhYzBm.jpg",
+    "summary_text": "ClearToken won FCA approval for a regulated crypto settlement system, signaling the UK\u2019s push to bring digital assets under its financial framework.",
+    "category": "fintech",
+    "_permalink": "/p/cb5000dd8e/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/cb5000dd8e/",
+    "_summary_240": "ClearToken won FCA approval for a regulated crypto settlement system, signaling the UK\u2019s push to bring digital assets under its financial framework.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/cb5000dd8e/thumbnail.png"
+  },
+  {
+    "title": "Google is introducing its own version of Apple\u2019s private AI cloud compute",
+    "url": "https://www.theverge.com/news/818364/google-private-ai-compute",
+    "published_at": "2025-11-11T14:00:00-05:00",
+    "source": "The Verge",
+    "summary": "Google is rolling out a new cloud-based platform that lets users unlock advanced AI features on their devices while keeping data private. The feature, virtually identical to Apple\u2019s Private Cloud Compute, comes as companies reconcile users\u2019 demands for privacy with the growing computational needs of the latest AI applications. Many Google products run AI features [\u2026]",
+    "content_html": "<figure>\n\n<img alt=\"\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/11/HT012_google_0003.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100\" />\n\t<figcaption>\n\t\t</figcaption>\n</figure>\n<p class=\"has-text-align-none\">Google is rolling out a new cloud-based platform that lets users unlock advanced AI features on their devices while keeping data private. The feature, virtually identical to <a href=\"https://www.theverge.com/2024/10/24/24278881/apple-intelligence-bug-bounty-security-researchers-private-cloud-compute\">Apple\u2019s Private Cloud Compute</a>, comes as companies reconcile users\u2019 demands for privacy with the growing computational needs of the latest AI applications.</p>\n\n<p class=\"has-text-align-none\">Many Google <a href=\"https://www.theverge.com/24219355/google-pixel-9-ai-features-screenshots-add-me-magic-editor\">products</a> run AI features like <a href=\"https://www.theverge.com/news/810277/androids-gemini-ai-updates-translate-listings-and-enable-more-on-device-ai-features\">translation</a>, <a href=\"https://www.theverge.com/2023/12/6/23989591/google-gemini-ai-model-pixel-8-pro-recorder-smart-reply\">audio summaries,</a> and chatbot assistants, on-device, meaning data doesn\u2019t leave your phone, Chromebook, or whatever it is you\u2019re using. This isn\u2019t sustainable, Google says, as advancing AI tools need more reasoning and computational power than devices can supply.&nbsp;</p>\n\n<p class=\"has-text-align-none\">The compromise is to ship more difficult AI requests to a cloud platform, called Private AI Compute, which it describes as a \u201csecure, fortified space\u201d offering the same degree of security you\u2019d expect from on-device processing. Sensitive data is available \u201conly to you and no one else, not even Google.\u201d</p>\n\n<p class=\"has-text-align-none\"><br />Google said the ability to tap into more processing power will help its AI features go from completing simple requests to giving more personal and tailored suggestions. For example, it says <a href=\"https://www.theverge.com/reviews/766613/google-pixel-10-pro-review-ai-magic-cue-camera-pro-res-zoom\">Pixel 10 phones</a> will get more helpful suggestions from Magic Cue, an AI tool that contextually surfaces information from email and calendar apps, and a wider range of languages for Recorder transcriptions. \u201cThis is just the beginning,\u201d Google said.</p>\n\n<p class=\"has-text-align-none\"></p>",
+    "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/11/HT012_google_0003.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "summary_text": "Google is rolling out a new cloud-based platform that lets users unlock advanced AI features on their devices while keeping data private. The feature, virtually identical to Apple\u2019s Private Cloud Compute, comes as companies reconcile users\u2019 demands for privac...",
+    "category": "ai",
+    "_trending_tags": [
+      "ai",
+      "apple",
+      "cloud",
+      "google"
+    ],
+    "_permalink": "/p/9504b8ce8a/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/9504b8ce8a/",
+    "_summary_240": "Google is rolling out a new cloud-based platform that lets users unlock advanced AI features on their devices while keeping data private. The feature, virtually identical to...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/9504b8ce8a/thumbnail.png"
+  },
+  {
     "title": "VCI Global unveils crypto treasury plan, backs Tether\u2019s payments arm OOBIT",
     "url": "https://cointelegraph.com/news/vci-global-crypto-treasury-tether-payments-oobit?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
     "published_at": "2025-11-11T13:28:57-05:00",
@@ -894,24 +930,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/b084443f63/thumbnail.png"
   },
   {
-    "title": "Willy Woo floats \u2018dummies guide\u2019 to evading the quantum Bitcoin threat",
-    "url": "https://cointelegraph.com/news/bitcoin-segwit-quantum-computing-threat?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-    "published_at": "2025-11-11T01:21:39-05:00",
-    "source": "Cointelegraph",
-    "summary": "Some critics argue the threat posed by quantum computers is overblown, including Strategy chairman Michael Saylor, who has once called it a marketing ploy to pump quantum-branded tokens.",
-    "content_html": "",
-    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMDcvMDE5ODJjYmQtM2UyZC03OWY2LThiM2EtNTI5NDhkODM1NTkw.jpg",
-    "summary_text": "Some critics argue the threat posed by quantum computers is overblown, including Strategy chairman Michael Saylor, who has once called it a marketing ploy to pump quantum-branded tokens.",
-    "category": "fintech",
-    "_trending_tags": [
-      "ai"
-    ],
-    "_permalink": "/p/5b6e50e4c7/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/5b6e50e4c7/",
-    "_summary_240": "Some critics argue the threat posed by quantum computers is overblown, including Strategy chairman Michael Saylor, who has once called it a marketing ploy to pump quantum-branded...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/5b6e50e4c7/thumbnail.png"
-  },
-  {
     "title": "Genspark Becomes Newest AI Unicorn After Winning LG, SBI Funding",
     "url": "https://www.bloomberg.com/news/articles/2025-11-11/genspark-becomes-newest-ai-unicorn-after-winning-lg-sbi-funding",
     "published_at": "2025-11-10T23:30:49-05:00",
@@ -1646,20 +1664,6 @@
     "_trending_tags": [
       "ai",
       "openai"
-    ]
-  },
-  {
-    "title": "Mark Zuckerberg and Priscilla Chan Restructure Their Philanthropy",
-    "url": "https://www.nytimes.com/2025/11/06/technology/zuckerberg-chan-initiative-biohub.html",
-    "published_at": "2025-11-06T14:07:09-05:00",
-    "source": "The New York Times - Technology",
-    "summary": "The Chan Zuckerberg Initiative said its restructured organization, Biohub, would lead its focus on artificial intelligence and scientific research.",
-    "content_html": "Mark Zuckerberg, right, and his wife, Priscilla Chan, co-founders and co-chief executives of the Chan Zuckerberg Initiative, during an event at the Biohub Imaging Institute in Redwood City, Calif., on Wednesday.",
-    "image_url": "https://static01.nyt.com/images/2025/11/06/multimedia/06biz-czi-sub-vpmt/06biz-czi-sub-vpmt-mediumSquareAt3X.jpg",
-    "summary_text": "The Chan Zuckerberg Initiative said its restructured organization, Biohub, would lead its focus on artificial intelligence and scientific research.",
-    "category": "ai",
-    "_trending_tags": [
-      "ai"
     ]
   },
   {
