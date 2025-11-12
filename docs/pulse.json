@@ -1,21 +1,60 @@
 [
   {
-    "title": "Fei-Fei Li\u2019s World Labs speeds up the world model race with Marble, its first commercial product",
-    "url": "https://techcrunch.com/2025/11/12/fei-fei-lis-world-labs-speeds-up-the-world-model-race-with-marble-its-first-commercial-product/",
-    "published_at": "2025-11-12T08:44:01-05:00",
-    "source": "TechCrunch",
-    "summary": "Startups like Decart and Odyssey have released free demos, and Google's Genie is still in limited research preview. Marble differs from these \u2014 and even World Labs's own real-time model, RTFM \u2014 because it creates persistent, downloadable 3D environments rather than generating worlds on-the-fly as you explore. This, the company says, results in less morphing or inconsistency, and lets users export...",
+    "title": "Bybit finds 16 blockchains with power to freeze user funds",
+    "url": "https://cointelegraph.com/news/bybit-analysts-16-blockchains-freeze-user-funds?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "published_at": "2025-11-12T09:02:17-05:00",
+    "source": "Cointelegraph",
+    "summary": "After analyzing 116 blockchains, Bybit\u2019s Lazarus Security Lab found 16 networks that can freeze or restrict user funds, raising questions about decentralization.",
     "content_html": "",
-    "image_url": "https://techcrunch.com/wp-content/uploads/2025/11/world-labs-mushroom-prompt.png?resize=1200,675",
-    "summary_text": "Startups like Decart and Odyssey have released free demos, and Google's Genie is still in limited research preview. Marble differs from these \u2014 and even World Labs's own real-time model, RTFM \u2014 because it creates persistent, downloadable 3D environments rathe...",
+    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMDgvMDE5OGUzZjktMWExMy03ODdiLTk5YTMtN2Q5NDAyOWYzODIx.jpg",
+    "summary_text": "After analyzing 116 blockchains, Bybit\u2019s Lazarus Security Lab found 16 networks that can freeze or restrict user funds, raising questions about decentralization.",
+    "category": "fintech",
+    "_trending_tags": [
+      "ai"
+    ],
+    "_permalink": "/p/b23de3286e/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/b23de3286e/",
+    "_summary_240": "After analyzing 116 blockchains, Bybit\u2019s Lazarus Security Lab found 16 networks that can freeze or restrict user funds, raising questions about decentralization.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/b23de3286e/thumbnail.png"
+  },
+  {
+    "title": "Faster Than a Click: Hyperlink Agent Search Now Available on NVIDIA RTX PCs",
+    "url": "https://blogs.nvidia.com/blog/rtx-ai-garage-nexa-hyperlink-local-agent/",
+    "published_at": "2025-11-12T09:00:21-05:00",
+    "source": "NVIDIA News",
+    "summary": "Large language model (LLM)-based AI assistants are powerful productivity tools, but without the right context and information, they can struggle to provide nuanced, relevant answers. While most LLM-based chat apps allow users to supply a few files for context, they often don\u2019t have access to all the information buried across slides, notes, PDFs and images Read Article",
+    "content_html": "",
+    "image_url": "https://s3.amazonaws.com/cms.ipressroom.com/219/files/202511/691492fb3d63325f4effba66_nexa-ai-nv-blog-1280x680-1-842x450/nexa-ai-nv-blog-1280x680-1-842x450_thmb.jpg",
+    "summary_text": "Large language model (LLM)-based AI assistants are powerful productivity tools, but without the right context and information, they can struggle to provide nuanced, relevant answers. While most LLM-based chat apps allow users to supply a few files for context...",
     "category": "ai",
+    "_trending_tags": [
+      "agent",
+      "ai",
+      "llm",
+      "nvidia"
+    ],
+    "_permalink": "/p/1e5625eb35/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/1e5625eb35/",
+    "_summary_240": "Large language model (LLM)-based AI assistants are powerful productivity tools, but without the right context and information, they can struggle to provide nuanced, relevant...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/1e5625eb35/thumbnail.png"
+  },
+  {
+    "title": "Google relaunches Cameyo to entice businesses from Windows to ChromeOS",
+    "url": "https://www.theverge.com/news/818716/google-cameyo-chromeos-windows-app-virtualization",
+    "published_at": "2025-11-12T09:00:00-05:00",
+    "source": "The Verge",
+    "summary": "After acquiring software virtualization company Cameyo last year, Google has relaunched a version of the service that makes it easier for Windows-based organizations to migrate over to ChromeOS. Now called \u201cCameyo by Google,\u201d the Virtual App Delivery (VAD) solution allows users to run legacy Windows apps in the Chrome browser or as web apps, preventing [\u2026]",
+    "content_html": "<figure>\n\n<img alt=\"\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/11/Cameyo-example-Google.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100\" />\n\t<figcaption>\n\tGoogle aqcuired the Cameyo virtualization software (pictured) in 2024.\t</figcaption>\n</figure>\n<p class=\"has-text-align-none\">After acquiring software virtualization company <a href=\"https://www.theverge.com/2024/6/5/24171900/google-cameyo-acquisition-chromeos-windows-app-virtualization\">Cameyo last year</a>, Google has relaunched a version of the service that makes it easier for Windows-based organizations to migrate over to ChromeOS. Now called \u201cCameyo by Google,\u201d the Virtual App Delivery (VAD) solution allows users to run legacy Windows apps in the Chrome browser or as web apps, preventing organizations from being tied to Microsoft\u2019s operating system.</p>\n\n<p class=\"has-text-align-none\">Google says the new Cameyo experience is more efficient than switching between separate virtual desktop environments, allowing users to stream the specific apps they need instead of virtualizing the entire desktop. That allows Windows-based programs like Excel and AutoCAD to run side-by-side with Chrome and other web apps, giving businesses the flexibility to use a mix of Microsoft and Google services.</p>\n\n<p class=\"has-text-align-none\">\u201cFor years, the primary blocker for deeper enterprise adoption of ChromeOS has always been the \u2018app gap\u2019 \u2014 the persistent need to access a few remaining Windows applications within an organization,\u201d Google said in its announcement. \u201cNow, teams can move to a more modern, collaborative productivity suite that was built for the web, and they can still access any specialized Windows apps that their workflows still depend on.\u201d</p>\n<img alt=\"An image showing Cameyo by Google features.\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/11/Cameyo-by-Google.png?quality=90&#038;strip=all&#038;crop=0,0,100,100\" title=\"An image showing Cameyo by Google features.\" />\n<p class=\"has-text-align-none\">The goal, of course, is to encourage more organizations to provide Chromebooks for their teams, if not switch their systems to ChromeOS entirely. While Chromebooks can be more affordable than Windows-based hardware, and more apps are shifting to cloud or web-based platforms, the <a href=\"https://gs.statcounter.com/os-market-share/desktop/worldwide\">number of ChromeOS users</a> is still dwarfed by those using Microsoft&#8217;s platform.</p>",
+    "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/11/Cameyo-example-Google.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "summary_text": "After acquiring software virtualization company Cameyo last year, Google has relaunched a version of the service that makes it easier for Windows-based organizations to migrate over to ChromeOS. Now called \u201cCameyo by Google,\u201d the Virtual App Delivery (VAD) so...",
+    "category": "software",
     "_trending_tags": [
       "google"
     ],
-    "_permalink": "/p/ea93ca6ca3/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/ea93ca6ca3/",
-    "_summary_240": "Startups like Decart and Odyssey have released free demos, and Google's Genie is still in limited research preview. Marble differs from these \u2014 and even World Labs's own...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/ea93ca6ca3/thumbnail.png"
+    "_permalink": "/p/c06fe2860e/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/c06fe2860e/",
+    "_summary_240": "After acquiring software virtualization company Cameyo last year, Google has relaunched a version of the service that makes it easier for Windows-based organizations to migrate...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/c06fe2860e/thumbnail.png"
   },
   {
     "title": "Altcoins aren\u2019t dead; long live altcoins",
@@ -495,6 +534,27 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/2e0aa9644f/thumbnail.png"
   },
   {
+    "title": "Fighting the New York Times\u2019 invasion of user privacy",
+    "url": "https://openai.com/index/fighting-nyt-user-privacy-invasion",
+    "published_at": "2025-11-12T01:00:00-05:00",
+    "source": "OpenAI News",
+    "summary": "OpenAI is fighting the New York Times\u2019 demand for 20 million private ChatGPT conversations and accelerating new security and privacy protections to protect your data.",
+    "content_html": "",
+    "image_url": "",
+    "summary_text": "OpenAI is fighting the New York Times\u2019 demand for 20 million private ChatGPT conversations and accelerating new security and privacy protections to protect your data.",
+    "category": "ai",
+    "_trending_tags": [
+      "ai",
+      "chatgpt",
+      "gpt",
+      "openai"
+    ],
+    "_permalink": "/p/0e842ec3a5/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/0e842ec3a5/",
+    "_summary_240": "OpenAI is fighting the New York Times\u2019 demand for 20 million private ChatGPT conversations and accelerating new security and privacy protections to protect your data.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/0e842ec3a5/thumbnail.png"
+  },
+  {
     "title": "Google Accused in Suit of Using Gemini AI Tool to Snoop on Users",
     "url": "https://www.bloomberg.com/news/articles/2025-11-12/google-accused-in-suit-of-using-gemini-ai-tool-to-snoop-on-users",
     "published_at": "2025-11-12T00:49:03-05:00",
@@ -803,27 +863,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/cb5000dd8e/thumbnail.png"
   },
   {
-    "title": "Google is introducing its own version of Apple\u2019s private AI cloud compute",
-    "url": "https://www.theverge.com/news/818364/google-private-ai-compute",
-    "published_at": "2025-11-11T14:00:00-05:00",
-    "source": "The Verge",
-    "summary": "Google is rolling out a new cloud-based platform that lets users unlock advanced AI features on their devices while keeping data private. The feature, virtually identical to Apple\u2019s Private Cloud Compute, comes as companies reconcile users\u2019 demands for privacy with the growing computational needs of the latest AI applications. Many Google products run AI features [\u2026]",
-    "content_html": "<figure>\n\n<img alt=\"\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/11/HT012_google_0003.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100\" />\n\t<figcaption>\n\t\t</figcaption>\n</figure>\n<p class=\"has-text-align-none\">Google is rolling out a new cloud-based platform that lets users unlock advanced AI features on their devices while keeping data private. The feature, virtually identical to <a href=\"https://www.theverge.com/2024/10/24/24278881/apple-intelligence-bug-bounty-security-researchers-private-cloud-compute\">Apple\u2019s Private Cloud Compute</a>, comes as companies reconcile users\u2019 demands for privacy with the growing computational needs of the latest AI applications.</p>\n\n<p class=\"has-text-align-none\">Many Google <a href=\"https://www.theverge.com/24219355/google-pixel-9-ai-features-screenshots-add-me-magic-editor\">products</a> run AI features like <a href=\"https://www.theverge.com/news/810277/androids-gemini-ai-updates-translate-listings-and-enable-more-on-device-ai-features\">translation</a>, <a href=\"https://www.theverge.com/2023/12/6/23989591/google-gemini-ai-model-pixel-8-pro-recorder-smart-reply\">audio summaries,</a> and chatbot assistants, on-device, meaning data doesn\u2019t leave your phone, Chromebook, or whatever it is you\u2019re using. This isn\u2019t sustainable, Google says, as advancing AI tools need more reasoning and computational power than devices can supply.&nbsp;</p>\n\n<p class=\"has-text-align-none\">The compromise is to ship more difficult AI requests to a cloud platform, called Private AI Compute, which it describes as a \u201csecure, fortified space\u201d offering the same degree of security you\u2019d expect from on-device processing. Sensitive data is available \u201conly to you and no one else, not even Google.\u201d</p>\n\n<p class=\"has-text-align-none\"><br />Google said the ability to tap into more processing power will help its AI features go from completing simple requests to giving more personal and tailored suggestions. For example, it says <a href=\"https://www.theverge.com/reviews/766613/google-pixel-10-pro-review-ai-magic-cue-camera-pro-res-zoom\">Pixel 10 phones</a> will get more helpful suggestions from Magic Cue, an AI tool that contextually surfaces information from email and calendar apps, and a wider range of languages for Recorder transcriptions. \u201cThis is just the beginning,\u201d Google said.</p>\n\n<p class=\"has-text-align-none\"></p>",
-    "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/11/HT012_google_0003.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "summary_text": "Google is rolling out a new cloud-based platform that lets users unlock advanced AI features on their devices while keeping data private. The feature, virtually identical to Apple\u2019s Private Cloud Compute, comes as companies reconcile users\u2019 demands for privac...",
-    "category": "ai",
-    "_trending_tags": [
-      "ai",
-      "apple",
-      "cloud",
-      "google"
-    ],
-    "_permalink": "/p/9504b8ce8a/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/9504b8ce8a/",
-    "_summary_240": "Google is rolling out a new cloud-based platform that lets users unlock advanced AI features on their devices while keeping data private. The feature, virtually identical to...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/9504b8ce8a/thumbnail.png"
-  },
-  {
     "title": "VCI Global unveils crypto treasury plan, backs Tether\u2019s payments arm OOBIT",
     "url": "https://cointelegraph.com/news/vci-global-crypto-treasury-tether-payments-oobit?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
     "published_at": "2025-11-11T13:28:57-05:00",
@@ -857,26 +896,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/c9875e1621/thumbnail.png"
   },
   {
-    "title": "AI chatbots are helping hide eating disorders and making deepfake \u2018thinspiration\u2019",
-    "url": "https://www.theverge.com/news/818508/chatbot-eating-disorder-mental-health",
-    "published_at": "2025-11-11T12:33:10-05:00",
-    "source": "The Verge",
-    "summary": "AI chatbots \u201cpose serious risks to individuals vulnerable to eating disorders,\u201d researchers warned on Monday. They report that tools from companies like Google and OpenAI are doling out dieting advice, tips on how to hide disorders, and AI-generated \u201cthinspiration.\u201d The researchers, from Stanford and the Center for Democracy & Technology, identified numerous ways publicly available [\u2026]",
-    "content_html": "<figure>\n\n<img alt=\"\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/11/ca7270eb.jpeg?quality=90&#038;strip=all&#038;crop=0,0,100,100\" />\n\t<figcaption>\n\t\t</figcaption>\n</figure>\n<p class=\"has-text-align-none\">AI chatbots \u201cpose serious risks to individuals vulnerable to eating disorders,\u201d researchers <a href=\"https://cdt.org/insights/from-symptoms-to-systems-a-stakeholder-informed-taxonomy-of-generative-ai-risks-for-eating-disorders/\">warned</a> on Monday. They report that tools from companies like Google and OpenAI are doling out dieting advice, tips on how to hide disorders, and AI-generated \u201cthinspiration.\u201d\u00a0</p>\n\n<p class=\"has-text-align-none\">The researchers, from Stanford and the Center for Democracy &amp; Technology, identified numerous ways publicly available AI chatbots including OpenAI\u2019s ChatGPT, Anthropic&#8217;s Claude, Google\u2019s Gemini, and Mistral\u2019s Le Chat can affect people vulnerable to eating disorders, many of them consequences of features deliberately baked in to drive engagement.&nbsp;</p>\n\n<p class=\"has-text-align-none\">In the most extreme cases, chatbots can be active participants helping hide or sustain eating disorders. The researchers said Gemini offered makeup tips to conceal weight loss, and ideas on how to fake having eaten, while ChatGPT advised how to hide frequent vomiting. Other AI tools are being co-opted to create AI-generated  \u201cthinspiration,\u201d content that inspires or pressures someone to conform to a particular body standard, often through extreme means. Being able to create hyper-personalized images in an instant makes the resulting content \u201cfeel more relevant and attainable,\u201d the researchers said.\u00a0</p>\n\n<p class=\"has-text-align-none\">Sycophancy, a flaw AI companies themselves <a href=\"https://www.theverge.com/news/661422/openai-chatgpt-sycophancy-update-what-went-wrong\">acknowledge</a> is rife, is unsurprisingly a problem for eating disorders too. It contributes to undermining self-esteem, reinforcing negative emotions, and promoting harmful self-comparisons. Chatbots suffer from bias as well, and are likely to reinforce the mistaken belief that eating disorders \u201conly impact thin, white, cisgender women,\u201d the report said, which could make it difficult for people to recognize symptoms and get treatment.</p>\n\n<p class=\"has-text-align-none\">Researchers warn existing guardrails in AI tools fail to capture the nuances of eating disorders like anorexia, bulimia, and binge eating. They \u201ctend to overlook the subtle but clinically significant cues that trained professionals rely on, leaving many risks unaddressed.\u201d</p>\n\n<p class=\"has-text-align-none\">But researchers also said many clinicians and caregivers appeared to be unaware of how generative AI tools are impacting people vulnerable to eating disorders. They urged clinicians to \u201cbecome familiar with popular AI tools and platforms,\u201d stress-test their weaknesses, and talk frankly with patients about how they are using them.</p>\n\n<p class=\"has-text-align-none\">The report adds to growing concerns over chatbot use and mental health, with multiple reports linking AI use to bouts of mania, delusional thinking, self-harm, and suicide. Companies like OpenAI have <a href=\"https://www.theverge.com/news/718407/openai-chatgpt-mental-health-guardrails-break-reminders\">acknowledged the potential for harm</a> and are <a href=\"https://www.theverge.com/news/816240/seven-more-people-are-suing-openai\">fending off an increasing number of lawsuits</a> as they work to improve safeguards to protect users.&nbsp;</p>",
-    "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/11/ca7270eb.jpeg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "summary_text": "AI chatbots \u201cpose serious risks to individuals vulnerable to eating disorders,\u201d researchers warned on Monday. They report that tools from companies like Google and OpenAI are doling out dieting advice, tips on how to hide disorders, and AI-generated \u201cthinspir...",
-    "category": "ai",
-    "_trending_tags": [
-      "ai",
-      "google",
-      "openai"
-    ],
-    "_permalink": "/p/3f5e87de19/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/3f5e87de19/",
-    "_summary_240": "AI chatbots \u201cpose serious risks to individuals vulnerable to eating disorders,\u201d researchers warned on Monday. They report that tools from companies like Google and OpenAI are...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/3f5e87de19/thumbnail.png"
-  },
-  {
     "title": "I Asked OpenAI if META Is Faking Ad Buys",
     "url": "https://newsletter.tek2dayholdings.com/p/i-asked-openai-if-meta-is-faking",
     "published_at": "2025-11-11T12:31:53-05:00",
@@ -895,20 +914,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/189f9f343b/",
     "_summary_240": "My question to OpenAI: \u201cWhat is the probability that Meta Platforms creates spam bots to buy ads on Facebook and Instagram to artificially grow revenue?\u201d",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/189f9f343b/thumbnail.png"
-  },
-  {
-    "title": "Senate approves funding bill to reopen US government, awaits vote in House",
-    "url": "https://cointelegraph.com/news/senate-funding-bill-reopen-us-government?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-    "published_at": "2025-11-11T12:22:47-05:00",
-    "source": "Cointelegraph",
-    "summary": "Some agencies, such as the SEC, are expected to reopen the day after a funding bill becomes law, more than 40 days after reducing their operations and staff.",
-    "content_html": "",
-    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjQtMTEvMDE5MzRhZDctZjYxNS03MmYxLWE1OGItY2QwYjE4ZWFkM2I4.jpg",
-    "summary_text": "Some agencies, such as the SEC, are expected to reopen the day after a funding bill becomes law, more than 40 days after reducing their operations and staff.",
-    "category": "fintech",
-    "_trending_tags": [
-      "ai"
-    ]
   },
   {
     "title": "How AI startups should be thinking about product-market fit",
@@ -1269,21 +1274,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/644dd3be7f/thumbnail.png"
   },
   {
-    "title": "Baseten takes on hyperscalers with new AI training platform that lets you own your model weights",
-    "url": "https://venturebeat.com/ai/baseten-takes-on-hyperscalers-with-new-ai-training-platform-that-lets-you",
-    "published_at": "2025-11-10T09:00:00-05:00",
-    "source": "VentureBeat",
-    "summary": "Baseten , the AI infrastructure company recently valued at $2.15 billion, is making its most significant product pivot yet: a full-scale push into model training that could reshape how enterprises wean themselves off dependence on OpenAI and other closed-source AI providers. The San Francisco-based company announced Thursday the general availability of Baseten Training , an infrastructure platfor...",
-    "content_html": "",
-    "image_url": "",
-    "summary_text": "Baseten , the AI infrastructure company recently valued at $2.15 billion, is making its most significant product pivot yet: a full-scale push into model training that could reshape how enterprises wean themselves off dependence on OpenAI and other closed-sour...",
-    "category": "ai",
-    "_trending_tags": [
-      "ai",
-      "openai"
-    ]
-  },
-  {
     "title": "Lenskart makes rocky trading debut after debate over valuation",
     "url": "https://www.ft.com/content/65776e0e-95c5-4b5f-a448-40955fe1b9d7",
     "published_at": "2025-11-10T04:51:34-05:00",
@@ -1536,20 +1526,6 @@
     "content_html": "",
     "image_url": "https://static01.nyt.com/images/2025/11/03/business/00ai-lawyers-still/00ai-lawyers-still-mediumSquareAt3X.jpg",
     "summary_text": "More lawyers are using artificial intelligence to write legal briefs. Some colleagues are publicizing the A.I.-generated errors.",
-    "category": "ai",
-    "_trending_tags": [
-      "ai"
-    ]
-  },
-  {
-    "title": "A Different View of Inflation",
-    "url": "https://newsletter.tek2dayholdings.com/p/a-different-view-of-inflation",
-    "published_at": "2025-11-07T09:15:29-05:00",
-    "source": "TEK2day Newsletter",
-    "summary": "Inflation means growth in the money supply not linked to productivity. One example is when back in 2020 and 2021, the Federal Government mailed Trillions of Dollars directly to the people.",
-    "content_html": "<div class=\"captioned-image-container\"><figure><a class=\"image-link image2 is-viewable-img\" href=\"https://substackcdn.com/image/fetch/$s_!xCqx!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F8aa1557d-6b2a-4e38-9389-f6fac98e5814_1098x784.jpeg\" target=\"_blank\"><div class=\"image2-inset\"><source type=\"image/webp\" /><img alt=\"\" class=\"sizing-normal\" height=\"784\" src=\"https://substackcdn.com/image/fetch/$s_!xCqx!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F8aa1557d-6b2a-4e38-9389-f6fac98e5814_1098x784.jpeg\" width=\"1098\" /><div class=\"image-link-expand\"><div class=\"pencraft pc-display-flex pc-gap-8 pc-reset\"><button class=\"pencraft pc-reset pencraft icon-container restack-image\" tabindex=\"0\" type=\"button\"><svg class=\"lucide lucide-refresh-cw\" fill=\"none\" height=\"20\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" viewBox=\"0 0 24 24\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8\"></path><path d=\"M21 3v5h-5\"></path><path d=\"M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16\"></path><path d=\"M8 16H3v5\"></path></svg></button><button class=\"pencraft pc-reset pencraft icon-container view-image\" tabindex=\"0\" type=\"button\"><svg class=\"lucide lucide-maximize2 lucide-maximize-2\" fill=\"none\" height=\"20\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" viewBox=\"0 0 24 24\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><polyline points=\"15 3 21 3 21 9\"></polyline><polyline points=\"9 21 3 21 3 15\"></polyline><line x1=\"21\" x2=\"14\" y1=\"3\" y2=\"10\"></line><line x1=\"3\" x2=\"10\" y1=\"21\" y2=\"14\"></line></svg></button></div></div></div></a></figure></div><p><strong>Inflation means growth in the money supply not linked to productivity.</strong> One example is when back in 2020 and 2021, the Federal Government mailed Trillions of Dollars directly to the people. The way it&#8217;s supposed to work is that a bank would create &#8220;new&#8221; money in the form of extending credit to a business, and that business would build product, hire people, e.g., drive productivity. A productive society enjoys high employment and stable pricing. Prices often come down in a productive society as the supply of in demand goods and services increases. </p><p>Contrast that to today where Trump, Biden and now Trump again want to mail money to the people rather than pay down $40 Trillion of debt. Or compare it to Private Equity firms that receive billions in loans, only to trade assets at ever higher prices without ever really growing those businesses organically, and then <strong>pay themselves enormous bonuses directly from bank loan proceeds rather than purely from profitable portfolio company exits.</strong></p><p><strong>The chart below shows how the money supply, as measured by M1, has grown as a percentage of GDP. </strong>I used nominal GDP in this chart. If I had used &#8220;Real&#8221; GDP, it would look even worse. We&#8217;ve got too much liquidity in the system. The Fed choosing to end &#8220;QT&#8221; after never really tightening by much is a joke. We ought to be in a &#8220;QT&#8221; period for quite some time until we get the money supply back down to a normal percentage of GDP.</p><div class=\"captioned-image-container\"><figure><a class=\"image-link image2 is-viewable-img\" href=\"https://substackcdn.com/image/fetch/$s_!zGQx!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F56eb7e71-5483-47c8-b825-37e11b567e9e_1140x480.png\" target=\"_blank\"><div class=\"image2-inset\"><source type=\"image/webp\" /><img alt=\"\" class=\"sizing-normal\" height=\"480\" src=\"https://substackcdn.com/image/fetch/$s_!zGQx!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F56eb7e71-5483-47c8-b825-37e11b567e9e_1140x480.png\" width=\"1140\" /><div class=\"image-link-expand\"><div class=\"pencraft pc-display-flex pc-gap-8 pc-reset\"><button class=\"pencraft pc-reset pencraft icon-container restack-image\" tabindex=\"0\" type=\"button\"><svg class=\"lucide lucide-refresh-cw\" fill=\"none\" height=\"20\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" viewBox=\"0 0 24 24\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8\"></path><path d=\"M21 3v5h-5\"></path><path d=\"M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16\"></path><path d=\"M8 16H3v5\"></path></svg></button><button class=\"pencraft pc-reset pencraft icon-container view-image\" tabindex=\"0\" type=\"button\"><svg class=\"lucide lucide-maximize2 lucide-maximize-2\" fill=\"none\" height=\"20\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" viewBox=\"0 0 24 24\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><polyline points=\"15 3 21 3 21 9\"></polyline><polyline points=\"9 21 3 21 3 15\"></polyline><line x1=\"21\" x2=\"14\" y1=\"3\" y2=\"10\"></line><line x1=\"3\" x2=\"10\" y1=\"21\" y2=\"14\"></line></svg></button></div></div></div></a><figcaption class=\"image-caption\"><a href=\"https://fred.stlouisfed.org/graph/?g=1NIXy\">Source: The Fed</a></figcaption></figure></div><p></p><div><hr /></div><p> </p>",
-    "image_url": "https://substackcdn.com/image/fetch/$s_!xCqx!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F8aa1557d-6b2a-4e38-9389-f6fac98e5814_1098x784.jpeg",
-    "summary_text": "Inflation means growth in the money supply not linked to productivity. One example is when back in 2020 and 2021, the Federal Government mailed Trillions of Dollars directly to the people.",
     "category": "ai",
     "_trending_tags": [
       "ai"
