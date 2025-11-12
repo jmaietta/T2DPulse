@@ -1,5 +1,41 @@
 [
   {
+    "title": "The AI Boom Is Fueling a Need for Speed in Chip Networking",
+    "url": "https://www.wired.com/story/ai-boom-networking-technology-photonics/",
+    "published_at": "2025-11-12T12:00:00-05:00",
+    "source": "Wired",
+    "summary": "Next-gen networking tech, sometimes powered by light instead of electricity, is emerging as a critical piece of AI infrastructure.",
+    "content_html": "",
+    "image_url": "https://media.wired.com/photos/69127b39ff32d7263774c48c/master/pass/Model-Behavior-As-Demand-for-AI-Surges-Networking-Tech-Takes-Center-Stage-Business.jpg",
+    "summary_text": "Next-gen networking tech, sometimes powered by light instead of electricity, is emerging as a critical piece of AI infrastructure.",
+    "category": "ai",
+    "_trending_tags": [
+      "ai"
+    ],
+    "_permalink": "/p/4c762930e7/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/4c762930e7/",
+    "_summary_240": "Next-gen networking tech, sometimes powered by light instead of electricity, is emerging as a critical piece of AI infrastructure.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/4c762930e7/thumbnail.png"
+  },
+  {
+    "title": "Productivity app Hero announces an SDK that will complete your AI prompts for you",
+    "url": "https://techcrunch.com/2025/11/12/productivity-app-hero-announces-an-sdk-that-will-complete-your-ai-prompts-for-you/",
+    "published_at": "2025-11-12T12:00:00-05:00",
+    "source": "TechCrunch",
+    "summary": "The autocomplete will help users create more effective prompts for AI apps, resulting in fewer back-and-forths.",
+    "content_html": "",
+    "image_url": "https://techcrunch.com/wp-content/uploads/2025/11/Book-Flight-Wide.jpeg?resize=1200,675",
+    "summary_text": "The autocomplete will help users create more effective prompts for AI apps, resulting in fewer back-and-forths.",
+    "category": "ai",
+    "_trending_tags": [
+      "ai"
+    ],
+    "_permalink": "/p/ffebe15b70/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/ffebe15b70/",
+    "_summary_240": "The autocomplete will help users create more effective prompts for AI apps, resulting in fewer back-and-forths.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/ffebe15b70/thumbnail.png"
+  },
+  {
     "title": "QR Codes and Digital Wallets Converge as Scan to Pay Gains Momentum",
     "url": "https://www.pymnts.com/mobile-wallets/2025/qr-codes-digital-wallets-converge-scan-to-pay-gains-momentum/",
     "published_at": "2025-11-12T11:43:02-05:00",
@@ -321,24 +357,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/1e5625eb35/",
     "_summary_240": "Large language model (LLM)-based AI assistants are powerful productivity tools, but without the right context and information, they can struggle to provide nuanced, relevant...",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/1e5625eb35/thumbnail.png"
-  },
-  {
-    "title": "Google relaunches Cameyo to entice businesses from Windows to ChromeOS",
-    "url": "https://www.theverge.com/news/818716/google-cameyo-chromeos-windows-app-virtualization",
-    "published_at": "2025-11-12T09:00:00-05:00",
-    "source": "The Verge",
-    "summary": "After acquiring software virtualization company Cameyo last year, Google has relaunched a version of the service that makes it easier for Windows-based organizations to migrate over to ChromeOS. Now called \u201cCameyo by Google,\u201d the Virtual App Delivery (VAD) solution allows users to run legacy Windows apps in the Chrome browser or as web apps, preventing [\u2026]",
-    "content_html": "<figure>\n\n<img alt=\"\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/11/Cameyo-example-Google.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100\" />\n\t<figcaption>\n\tGoogle aqcuired the Cameyo virtualization software (pictured) in 2024.\t</figcaption>\n</figure>\n<p class=\"has-text-align-none\">After acquiring software virtualization company <a href=\"https://www.theverge.com/2024/6/5/24171900/google-cameyo-acquisition-chromeos-windows-app-virtualization\">Cameyo last year</a>, Google has relaunched a version of the service that makes it easier for Windows-based organizations to migrate over to ChromeOS. Now called \u201cCameyo by Google,\u201d the Virtual App Delivery (VAD) solution allows users to run legacy Windows apps in the Chrome browser or as web apps, preventing organizations from being tied to Microsoft\u2019s operating system.</p>\n\n<p class=\"has-text-align-none\">Google says the new Cameyo experience is more efficient than switching between separate virtual desktop environments, allowing users to stream the specific apps they need instead of virtualizing the entire desktop. That allows Windows-based programs like Excel and AutoCAD to run side-by-side with Chrome and other web apps, giving businesses the flexibility to use a mix of Microsoft and Google services.</p>\n\n<p class=\"has-text-align-none\">\u201cFor years, the primary blocker for deeper enterprise adoption of ChromeOS has always been the \u2018app gap\u2019 \u2014 the persistent need to access a few remaining Windows applications within an organization,\u201d Google said in its announcement. \u201cNow, teams can move to a more modern, collaborative productivity suite that was built for the web, and they can still access any specialized Windows apps that their workflows still depend on.\u201d</p>\n<img alt=\"An image showing Cameyo by Google features.\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/11/Cameyo-by-Google.png?quality=90&#038;strip=all&#038;crop=0,0,100,100\" title=\"An image showing Cameyo by Google features.\" />\n<p class=\"has-text-align-none\">The goal, of course, is to encourage more organizations to provide Chromebooks for their teams, if not switch their systems to ChromeOS entirely. While Chromebooks can be more affordable than Windows-based hardware, and more apps are shifting to cloud or web-based platforms, the <a href=\"https://gs.statcounter.com/os-market-share/desktop/worldwide\">number of ChromeOS users</a> is still dwarfed by those using Microsoft&#8217;s platform.</p>",
-    "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/11/Cameyo-example-Google.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "summary_text": "After acquiring software virtualization company Cameyo last year, Google has relaunched a version of the service that makes it easier for Windows-based organizations to migrate over to ChromeOS. Now called \u201cCameyo by Google,\u201d the Virtual App Delivery (VAD) so...",
-    "category": "software",
-    "_trending_tags": [
-      "google"
-    ],
-    "_permalink": "/p/c06fe2860e/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/c06fe2860e/",
-    "_summary_240": "After acquiring software virtualization company Cameyo last year, Google has relaunched a version of the service that makes it easier for Windows-based organizations to migrate...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/c06fe2860e/thumbnail.png"
   },
   {
     "title": "Altcoins aren\u2019t dead; long live altcoins",
@@ -819,24 +837,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/77e0ecdbfb/thumbnail.png"
   },
   {
-    "title": "Fed\u2019s Barr Calls for Guardrails as Financial Sector Adopts AI",
-    "url": "https://www.bloomberg.com/news/articles/2025-11-12/fed-s-barr-says-ai-will-transform-economies-though-outcomes-vary",
-    "published_at": "2025-11-11T22:25:00-05:00",
-    "source": "Bloomberg Technology",
-    "summary": "Federal Reserve Governor Michael Barr said there needs to be clear guardrails to prevent risks as the financial sector looks to adopt artificial intelligence in its core functions.",
-    "content_html": "Michael Barr",
-    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iVD9CHzI5yIs/v1/1200x-1.jpg",
-    "summary_text": "Federal Reserve Governor Michael Barr said there needs to be clear guardrails to prevent risks as the financial sector looks to adopt artificial intelligence in its core functions.",
-    "category": "ai",
-    "_trending_tags": [
-      "ai"
-    ],
-    "_permalink": "/p/827865903d/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/827865903d/",
-    "_summary_240": "Federal Reserve Governor Michael Barr said there needs to be clear guardrails to prevent risks as the financial sector looks to adopt artificial intelligence in its core functions.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/827865903d/thumbnail.png"
-  },
-  {
     "title": "Nationally chartered bank SoFi rolls out crypto trading for US customers",
     "url": "https://cointelegraph.com/news/nationally-chartered-bank-sofi-launches-crypto-trading?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
     "published_at": "2025-11-11T22:00:24-05:00",
@@ -1115,13 +1115,17 @@
     "source": "Financial Times - Technology",
     "summary": "Turing Award winner seeks to depart as Mark Zuckerberg makes \u2018superintelligence\u2019 push",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/3b0427c0-714e-4248-afb6-cebed4c90fb0.jpg",
     "summary_text": "Turing Award winner seeks to depart as Mark Zuckerberg makes \u2018superintelligence\u2019 push",
     "category": "ai",
     "_trending_tags": [
       "ai",
       "meta"
-    ]
+    ],
+    "_permalink": "/p/ed94f35e96/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/ed94f35e96/",
+    "_summary_240": "Turing Award winner seeks to depart as Mark Zuckerberg makes \u2018superintelligence\u2019 push",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/ed94f35e96/thumbnail.png"
   },
   {
     "title": "The Former Staffer Calling Out OpenAI\u2019s Erotica Claims",
@@ -1168,13 +1172,17 @@
     "source": "Financial Times - Technology",
     "summary": "Chief technology officer Sachin Katti\u2019s departure is latest blow to chipmaker as it struggles to compete",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/aa5310e7-51d6-4c0a-ac0e-e03798e65807.jpg",
     "summary_text": "Chief technology officer Sachin Katti\u2019s departure is latest blow to chipmaker as it struggles to compete",
     "category": "ai",
     "_trending_tags": [
       "ai",
       "openai"
-    ]
+    ],
+    "_permalink": "/p/70611bc6d3/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/70611bc6d3/",
+    "_summary_240": "Chief technology officer Sachin Katti\u2019s departure is latest blow to chipmaker as it struggles to compete",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/70611bc6d3/thumbnail.png"
   },
   {
     "title": "Bringing the best of AI search to Copilot",
@@ -1219,12 +1227,16 @@
     "source": "Financial Times - Technology",
     "summary": "Wall Street stocks gain and Treasury yields tick up in \u2018relief rally\u2019",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/19adbf31-4973-4f6f-b1c6-854475c9c3e3.jpg",
     "summary_text": "Wall Street stocks gain and Treasury yields tick up in \u2018relief rally\u2019",
     "category": "fintech",
     "_trending_tags": [
       "ai"
-    ]
+    ],
+    "_permalink": "/p/29c7c8472b/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/29c7c8472b/",
+    "_summary_240": "Wall Street stocks gain and Treasury yields tick up in \u2018relief rally\u2019",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/29c7c8472b/thumbnail.png"
   },
   {
     "title": "Meta returns to open source AI with Omnilingual ASR models that can transcribe 1,600+ languages natively",
@@ -1299,12 +1311,16 @@
     "source": "Financial Times - Technology",
     "summary": "SoftBank-backed eyewear retailer had a price-to-earnings ratio of 238:1",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/97c9a440-471c-4aed-9666-b227561abee4.jpg",
     "summary_text": "SoftBank-backed eyewear retailer had a price-to-earnings ratio of 238:1",
     "category": "fintech",
     "_trending_tags": [
       "ai"
-    ]
+    ],
+    "_permalink": "/p/a61e464d37/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/a61e464d37/",
+    "_summary_240": "SoftBank-backed eyewear retailer had a price-to-earnings ratio of 238:1",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/a61e464d37/thumbnail.png"
   },
   {
     "title": "From AI to ROI: some positive evidence",
@@ -1313,12 +1329,16 @@
     "source": "Financial Times - Technology",
     "summary": "Research shows implementation of the technology can help to increase revenue in the real economy",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/a2754c5b-d50d-43d1-b287-343608067ddf.jpg",
     "summary_text": "Research shows implementation of the technology can help to increase revenue in the real economy",
     "category": "ai",
     "_trending_tags": [
       "ai"
-    ]
+    ],
+    "_permalink": "/p/b94be0536c/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/b94be0536c/",
+    "_summary_240": "Research shows implementation of the technology can help to increase revenue in the real economy",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/b94be0536c/thumbnail.png"
   },
   {
     "title": "Europe\u2019s defence start-ups in funding shortfall despite looser bank policies",
@@ -1327,9 +1347,13 @@
     "source": "Financial Times - Technology",
     "summary": "HSBC and Revolut among those restricting lending to sector in a sign of hurdles to rebuilding region\u2019s arms industry",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/c0b46852-8b56-4057-952a-78abd58c3f09.jpg",
     "summary_text": "HSBC and Revolut among those restricting lending to sector in a sign of hurdles to rebuilding region\u2019s arms industry",
-    "category": "fintech"
+    "category": "fintech",
+    "_permalink": "/p/55719ca065/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/55719ca065/",
+    "_summary_240": "HSBC and Revolut among those restricting lending to sector in a sign of hurdles to rebuilding region\u2019s arms industry",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/55719ca065/thumbnail.png"
   },
   {
     "title": "Crushed by capitalism? There\u2019s a video game for that",
@@ -1338,12 +1362,16 @@
     "source": "Financial Times - Technology",
     "summary": "\u2018The Outer Worlds 2\u2019 is set in a galaxy ruled by greedy corporations \u2014 but can a game made by a Microsoft-owned studio critique the system effectively?",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/d35791f8-e6cd-4b19-b897-2965cb43a969.jpg",
     "summary_text": "\u2018The Outer Worlds 2\u2019 is set in a galaxy ruled by greedy corporations \u2014 but can a game made by a Microsoft-owned studio critique the system effectively?",
     "category": "software",
     "_trending_tags": [
       "microsoft"
-    ]
+    ],
+    "_permalink": "/p/5606fe50c8/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/5606fe50c8/",
+    "_summary_240": "\u2018The Outer Worlds 2\u2019 is set in a galaxy ruled by greedy corporations \u2014 but can a game made by a Microsoft-owned studio critique the system effectively?",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/5606fe50c8/thumbnail.png"
   },
   {
     "title": "10YR Treasury Auction Wednesday. Who's Buying?",
@@ -1402,7 +1430,7 @@
     "source": "Financial Times - Technology",
     "summary": "Just as we learnt to treat emails with caution, we must now learn to doubt a human-sounding voice",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/1e977cde-4727-48af-8f80-3f88c2cdbfa2.jpg",
     "summary_text": "Just as we learnt to treat emails with caution, we must now learn to doubt a human-sounding voice",
     "category": "ai",
     "_trending_tags": [
@@ -1431,7 +1459,7 @@
     "source": "Financial Times - Technology",
     "summary": "Erik Brynjolfsson, Stanford academic and author, explains how AI and people can complement each other",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://images.ft.com/v3/image/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F2d11bccc-09a2-4bff-af05-ec7908369698.jpg?source=next-article&fit=scale-down&quality=highest&width=700&dpr=1",
     "summary_text": "Erik Brynjolfsson, Stanford academic and author, explains how AI and people can complement each other",
     "category": "ai",
     "_trending_tags": [
@@ -1466,20 +1494,6 @@
     "_trending_tags": [
       "ai",
       "genai"
-    ]
-  },
-  {
-    "title": "AI bubble: don\u2019t throw the baby out with the bathwater",
-    "url": "https://www.ft.com/content/f8cd239e-287c-4e3c-bfae-8c4acec7ac34",
-    "published_at": "2025-11-08T00:00:16-05:00",
-    "source": "Financial Times - Technology",
-    "summary": "Watch individual stocks and sell if they are too aggressively valued",
-    "content_html": "",
-    "image_url": "",
-    "summary_text": "Watch individual stocks and sell if they are too aggressively valued",
-    "category": "ai",
-    "_trending_tags": [
-      "ai"
     ]
   },
   {
