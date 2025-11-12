@@ -1,8 +1,8 @@
 {
-  "generated_at": "2025-11-12T14:38:42.589835-05:00",
+  "generated_at": "2025-11-12T15:27:43.439000-05:00",
   "total_keywords": 30,
   "keyword_counts": {
-    "ai": 167,
+    "ai": 170,
     "openai": 19,
     "gpt": 11,
     "agent": 10,
@@ -10,13 +10,13 @@
     "google": 9,
     "meta": 7,
     "nvidia": 7,
+    "apple": 6,
     "llm": 6,
-    "apple": 5,
     "microsoft": 4,
+    "anthropic": 3,
+    "claude": 3,
     "cloud": 3,
     "gpu": 3,
-    "anthropic": 2,
-    "claude": 2,
     "amazon": 1,
     "fintech": 1,
     "paypal": 1
