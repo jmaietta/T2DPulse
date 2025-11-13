@@ -1,13 +1,13 @@
 {
-  "generated_at": "2025-11-13T10:44:04.501251-05:00",
+  "generated_at": "2025-11-13T11:29:34.300959-05:00",
   "total_keywords": 30,
   "keyword_counts": {
     "ai": 189,
     "openai": 22,
-    "google": 13,
-    "gpt": 13,
-    "agent": 12,
-    "chatgpt": 9,
+    "gpt": 14,
+    "google": 12,
+    "agent": 11,
+    "chatgpt": 10,
     "meta": 9,
     "apple": 8,
     "microsoft": 5,
@@ -19,6 +19,7 @@
     "gpu": 3,
     "amazon": 2,
     "deepmind": 1,
+    "fintech": 1,
     "paypal": 1
   },
   "sources_per_keyword": {},
