@@ -1,5 +1,195 @@
 [
   {
+    "title": "How Brazil is training 5 million learners to work with AI by 2027",
+    "url": "https://news.microsoft.com/source/latam/features/ai/microsoft-ai-courses-brazil/?lang=en",
+    "published_at": "2025-11-13T09:10:33-05:00",
+    "source": "Microsoft News",
+    "summary": "The post How Brazil is training 5 million learners to work with AI by 2027 appeared first on Source .",
+    "content_html": "<article class=\"mssrc-posts font-- has--theme\" id=\"single-22848\">\n\t<div class=\"acf-innerblocks-container\"></div>\t\t\t<section class=\"post-tags\">\n\t\t\t\t<div class=\"post-tags__content wp-block-columns\">\n\t\t\t\t\t<div class=\"post-tags__header wp-block-column flex-basis-25 has-text-align-right\">\n\t\t\t\t\t\t<h4 class=\"sr-only\">Tags: </h4>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"post-tags__body wp-block-column flex-basis-60\">\n\t\t\t\t\t\t<ul class=\"post-tags__list\"><li class=\"post-tags__item\"><a class=\"kicker inline-block post__meta--tags\" href=\"https://news.microsoft.com/source/tag/ai/\">AI</a></li></ul>\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</section>\n\t\t\t</article><p>The post <a href=\"https://news.microsoft.com/source/latam/features/ai/microsoft-ai-courses-brazil/?lang=en\">How\u00a0Brazil\u00a0is\u00a0training\u00a05\u00a0million\u00a0learners\u00a0to\u00a0work\u00a0with\u00a0AI\u00a0by 2027</a> appeared first on <a href=\"https://news.microsoft.com/source\">Source</a>.</p>",
+    "image_url": "https://news.microsoft.com/source/latam/wp-content/uploads/2025/11/brazil-conectai-main.jpg",
+    "summary_text": "The post How Brazil is training 5 million learners to work with AI by 2027 appeared first on Source .",
+    "category": "ai",
+    "_trending_tags": [
+      "ai"
+    ],
+    "_permalink": "/p/1096b3b4c8/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/1096b3b4c8/",
+    "_summary_240": "The post How Brazil is training 5 million learners to work with AI by 2027 appeared first on Source .",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/1096b3b4c8/thumbnail.png"
+  },
+  {
+    "title": "Will China win the AI race? You asked, we answered",
+    "url": "https://www.ft.com/content/af1a6ce3-b0ab-41cc-9b52-3e0a11641f20",
+    "published_at": "2025-11-13T09:01:11-05:00",
+    "source": "Financial Times - Technology",
+    "summary": "The FT\u2019s John Thornhill and Eleanor Olcott replied to reader questions",
+    "content_html": "",
+    "image_url": "https://images.ft.com/v3/image/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Fea72a63c-628d-4dba-baaa-9b808e8edf8d.jpg?source=next-article&fit=scale-down&quality=highest&width=700&dpr=1",
+    "summary_text": "The FT\u2019s John Thornhill and Eleanor Olcott replied to reader questions",
+    "category": "ai",
+    "_trending_tags": [
+      "ai"
+    ],
+    "_permalink": "/p/6e7bf4c77c/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/6e7bf4c77c/",
+    "_summary_240": "The FT\u2019s John Thornhill and Eleanor Olcott replied to reader questions",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/6e7bf4c77c/thumbnail.png"
+  },
+  {
+    "title": "How MCP Turns Passive AI Assistants Into Active Enterprise Agents",
+    "url": "https://www.pymnts.com/artificial-intelligence-2/2025/how-mcp-turns-passive-ai-assistants-into-active-enterprise-agents/",
+    "published_at": "2025-11-13T09:00:55-05:00",
+    "source": "PYMNTS",
+    "summary": "The Model Context Protocol, or MCP, is an open standard introduced by Anthropic in late 2024 to make artificial intelligence (AI) systems more useful in real-world business settings. At its core, MCP allows AI models such as Claude, ChatGPT or Gemini to securely connect to business tools, databases and workflows. This foundational integration layer [\u2026] The post How MCP Turns Passive AI Assistants...",
+    "content_html": "<p><span>The </span><a class=\"editor-rtfLink\" href=\"https://modelcontextprotocol.io/\" rel=\"noopener\" target=\"_blank\"><span>Model Context Protocol</span></a><span>,</span><span> or </span><span>MCP</span><span>, is an open standard </span><a class=\"editor-rtfLink\" href=\"https://www.anthropic.com/news/model-context-protocol\" rel=\"noopener\" target=\"_blank\"><span>introduced</span></a><span> by </span><a class=\"editor-rtfLink\" href=\"https://www.anthropic.com/\" rel=\"noopener\" target=\"_blank\"><span>Anthropic</span></a><span> in late 2024 to make artificial intelligence (AI) systems more useful in real-world business settings</span><span>.</span><span> At its core, MCP allows AI models such as Claude, ChatGPT or Gemini </span><span>to securely connect to business tools, databases and workflows</span><span>. </span></p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p><span>This foundational integration layer allows AI to move beyond generating passive insights and become an active enterprise agent that retrieves live operational data, updates records, and performs actions within approved systems.</span></p>\n<p><span>Before MCP, connections between an AI system and a business application </span><span>often</span><span> had to be </span><span>custom built</span><span>.</span><span> A developer might need one integration for Salesforce, another for Slack </span><span>and</span><span> another for a legacy database, which made adoption costly and slow. According to </span><a class=\"editor-rtfLink\" href=\"https://cloud.google.com/\" rel=\"noopener\" target=\"_blank\"><span>Google Cloud</span></a><span>, MCP uses a </span><a class=\"editor-rtfLink\" href=\"https://cloud.google.com/discover/what-is-model-context-protocol\" rel=\"noopener\" target=\"_blank\"><span>simple structure</span></a><span>: A host runs the AI model, a client acts as the intermediary </span><span>and</span><span> a server exposes the data or tools the model needs. This approach allows companies to connect AI models to live data without rewriting code for every use case.</span></p>\n<p><span>Moody\u2019s </span><a class=\"editor-rtfLink\" href=\"https://www.moodys.com/web/en/us/creditview/blog/demystifying-mcp.html\" rel=\"noopener\" target=\"_blank\"><span>described MCP</span></a><span> as \u201cthe foundational layer for enterprise AI connectivity,\u201d noting that its use in regulated industries will depend on clear audit trails, governance </span><span>and</span><span> real-time controls. Anthropic called it \u201ca standard way to connect AI models to the tools and data they need,\u201d and early adopters include software and financial institutions seeking more reliable enterprise AI deployment.</span></p>\n<h2>Why MCP Matters</h2>\n<p><span>Modern AI models are great at generating text and insights </span><span>but</span><span> generally cannot act on live data. A customer-service chatbot, for example, can explain how to reset a password but cannot perform that action because it lacks secure, structured access to internal systems.</span></p>\n<p><span>MCP solves that problem by giving AI systems a way to request and perform actions </span><span>such</span><span> as retrieving information, updating records </span><span>or</span><span> triggering workflows </span><span>within</span><span> approved security boundaries.</span><span> It allows AI to move from being a passive assistant to an active helper.</span></p>\n<p><span>In </span><a class=\"editor-rtfLink\" href=\"https://www.anthropic.com/engineering/code-execution-with-mcp?utm_source=chatgpt.com\" rel=\"noopener\" target=\"_blank\"><span>Anthropic\u2019s engineering blog</span></a><span>,</span><span> engineers demonstrate how MCP </span><span>lets</span><span> models safely run code on behalf of users, enabling direct execution of tasks within secure, sandboxed environments.</span><span> In an enterprise setting, this could mean an AI assistant pulling the latest sales data or summarizing a client report. In healthcare, an AI agent might retrieve lab results or send follow-up reminders without exposing patient files.</span></p>\n<p><span>Google Cloud </span><span>explained</span><span> that MCP bridges static, trained knowledge and live operational data. Instead of relying solely on training information, models can now access real-time data from business </span><span>systems in</span><span> sectors such as finance, logistics and healthcare, where accuracy and timeliness are essential.</span></p>\n<h2>How AWS and Enterprises Use MCP</h2>\n<p><span>Amazon Web Services</span><span>\u00a0(AWS) is among the cloud providers </span><a class=\"editor-rtfLink\" href=\"https://aws.amazon.com/blogs/machine-learning/unlocking-the-power-of-model-context-protocol-mcp-on-aws/\" rel=\"noopener\" target=\"_blank\"><span>integrating MCP</span></a><span> to make AI more functional in enterprise settings. In its guidance, AWS outlined how MCP servers act as consistent interfaces to services such as Amazon S3, Amazon RDS </span><span>and</span><span> enterprise application programming interfaces (APIs). </span></p>\n<p><span>Developers are already applying MCP within tools like </span><a class=\"editor-rtfLink\" href=\"https://aws.amazon.com/blogs/devops/use-model-context-protocol-with-amazon-q-developer-for-context-aware-ide-workflows/\" rel=\"noopener\" target=\"_blank\"><span>Amazon</span><span> Q </span><span>Developer</span></a><span>,</span><span> where MCP connects AI assistants to project files, issue trackers </span><span>and</span><span> design systems.</span><span> This enables context-aware software development and simplifies multi-tool workflows.</span></p>\n<p><span>In financial services, MCP can connect AI systems to internal databases, compliance dashboards </span><span>and</span><span> risk models. </span><span>For example, a compliance officer could ask, \u201cShow me all transactions over $10,000 flagged this week,\u201d and the AI assistant could retrieve that data </span><span>through MCP</span><span> directly from a secure database.</span><span> Because the protocol supports authentication, permissions </span><span>and</span><span> logging, those actions can be monitored for audit and risk control.</span></p>\n<h2>Enterprise Example From Retail</h2>\n<p><span>A clear illustration of MCP\u2019s potential comes from </span><a href=\"https://www.walmart.com/\" rel=\"noopener\" target=\"_blank\"><span>Walmart</span></a><span>,</span><span> which recently overhauled its approach to AI agents, <a href=\"https://www.wsj.com/articles/why-walmart-is-overhauling-its-approach-to-ai-agents-4b1fbc65?gaa_at=eafs&amp;gaa_n=AWEtsqfUj2BYB9NHVD3LNIHZUBF-AF3s__uSfsZcIt-LbtFxmyhu2Mud2PS9AKlQe3k%3D&amp;gaa_ts=6914af24&amp;gaa_sig=0NmEvhi5atlp_mmFUZ__ndyk94-iX9dpY8BgQV0i3n57ctC97gMj613TYEfdaEShNAwlD2ugMRP6GhhqsIiTAA%3D%3D\" rel=\"noopener\" target=\"_blank\">as reported</a> by The Wall Street Journal. The company had deployed dozens of narrow agents that worked separately across departments, leading to inefficiency and confusion. </span><span>To address this, Walmart consolidated them into four \u201csuper agents\u201d for customers, employees, engineers </span><span>and</span><span> suppliers </span><span>that</span><span> call smaller agents and internal systems through MCP.</span></p>\n<p><span>The move provides a unified interface and stronger oversight across its AI infrastructure. </span><span>Walmart told </span><span>the Journal</span><span>\u00a0that </span><span>the</span><span> goal is to make its AI ecosystem more scalable and secure by using MCP to connect disparate systems under </span><span>one</span><span> governance model.</span></p>\n<h2>How MCP Differs From RAG</h2>\n<p><span>MCP is often compared with </span><a class=\"editor-rtfLink\" href=\"https://aws.amazon.com/what-is/retrieval-augmented-generation/\" rel=\"noopener\" target=\"_blank\"><span>Retrieval-Augmented Generation</span></a><span> (RAG), another way of expanding a model\u2019s access to external information. The difference lies in what each method allows the AI to do.</span></p>\n<p><span>RAG helps an AI system find and understand information. It retrieves relevant text or documents from an external database and feeds them into the model\u2019s context to improve the quality of its answers. It is best for knowledge-based tasks such as research or customer support.</span></p>\n<p><span>MCP, by contrast, allows an AI system to connect and act. </span><span>It </span><span>lets</span><span> the model interact directly with software systems </span><span>through</span><span> secure connections.</span><span> While RAG improves knowledge, MCP expands capability.</span></p>\n<p><span>For instance, RAG might help an AI assistant answer, \u201cWhat were our quarterly earnings?\u201d by retrieving a report and quoting a number. </span><span>MCP could go further by logging </span><span>in to</span><span> the company\u2019s analytics system, pulling live data </span><span>and</span><span> updating a dashboard </span><span>or</span><span> sending a summary email.</span></p>\n<p><span>In essence, RAG operates at the knowledge layer, while MCP functions at the integration layer. They complement each other: An AI assistant in a bank might use RAG to locate a regulatory document and MCP to apply that rule automatically to a new transaction.</span></p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/artificial-intelligence-2/2025/how-mcp-turns-passive-ai-assistants-into-active-enterprise-agents/\">How MCP Turns Passive AI Assistants Into Active Enterprise Agents</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
+    "image_url": "https://www.pymnts.com/wp-content/uploads/2025/11/AI-agents-MCP.jpg?w=457",
+    "summary_text": "The Model Context Protocol, or MCP, is an open standard introduced by Anthropic in late 2024 to make artificial intelligence (AI) systems more useful in real-world business settings. At its core, MCP allows AI models such as Claude, ChatGPT or Gemini to secur...",
+    "category": "ai",
+    "_trending_tags": [
+      "agent",
+      "ai",
+      "anthropic",
+      "chatgpt",
+      "claude",
+      "gpt"
+    ],
+    "_permalink": "/p/3fba519707/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/3fba519707/",
+    "_summary_240": "The Model Context Protocol, or MCP, is an open standard introduced by Anthropic in late 2024 to make artificial intelligence (AI) systems more useful in real-world business...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/3fba519707/thumbnail.png"
+  },
+  {
+    "title": "GeForce NOW Enlists \u2018Call of Duty: Black Ops 7\u2019 for the Cloud",
+    "url": "https://blogs.nvidia.com/blog/geforce-now-thursday-call-of-duty-black-ops-7/",
+    "published_at": "2025-11-13T09:00:50-05:00",
+    "source": "NVIDIA News",
+    "summary": "Chaos has entered the chat. It\u2019s GFN Thursday, and things are getting intense with the launch of Call of Duty: Black Ops 7, streaming at launch this week on GeForce NOW. Dive straight into the chaos across devices \u2014 underpowered laptops, Macs, and Steam Decks. Power up the week with 12 new games to stream Read Article",
+    "content_html": "",
+    "image_url": "https://s3.amazonaws.com/cms.ipressroom.com/219/files/202511/6915e49d3d6332ce8736e58e_gfn-thursday-11-13-nv-blog-1280x680-logo-842x450/gfn-thursday-11-13-nv-blog-1280x680-logo-842x450_thmb.jpg",
+    "summary_text": "Chaos has entered the chat. It\u2019s GFN Thursday, and things are getting intense with the launch of Call of Duty: Black Ops 7, streaming at launch this week on GeForce NOW. Dive straight into the chaos across devices \u2014 underpowered laptops, Macs, and Steam Decks...",
+    "category": "software",
+    "_trending_tags": [
+      "ai",
+      "cloud"
+    ],
+    "_permalink": "/p/86f1d4baa2/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/86f1d4baa2/",
+    "_summary_240": "Chaos has entered the chat. It\u2019s GFN Thursday, and things are getting intense with the launch of Call of Duty: Black Ops 7, streaming at launch this week on GeForce NOW. Dive...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/86f1d4baa2/thumbnail.png"
+  },
+  {
+    "title": "Magic: The Gathering\u2019s future looks like Fortnite, and fans are split",
+    "url": "https://www.theverge.com/report/819098/magic-the-gathering-universes-beyond-avatar-final-fantasy-spider-man",
+    "published_at": "2025-11-13T09:00:00-05:00",
+    "source": "The Verge",
+    "summary": "Over the last five years, Magic: The Gathering games have gotten a bit strange. Cards featuring characters from Final Fantasy, Spider-Man, and, in a few weeks, Avatar: The Last Airbender are starting to show up with increasing frequency, making a typical Friday Night Magic game look more like a match in Fortnite. For some, this [\u2026]",
+    "content_html": "<figure>\n\n<img alt=\"\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/11/TLA_sma_key_1920x1080_EN.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100\" />\n\t<figcaption>\n\t\t</figcaption>\n</figure>\n<p class=\"has-drop-cap has-text-align-none\">Over the last five years, <em>Magic: The Gathering</em> games have gotten a bit strange. Cards featuring characters from <a href=\"https://www.theverge.com/games/690509/how-to-play-final-fantasy-magic-the-gathering-set\"><em>Final Fantasy</em></a>, <a href=\"https://www.gamesradar.com/tabletop-gaming/magic-the-gatherings-spider-man-set-is-only-just-fine-which-isnt-good-enough/\">Spider-Man</a>, and, in a few weeks, <em>Avatar: The Last Airbender</em> are starting to show up with increasing frequency, making a typical Friday Night <em>Magic</em> game look more like a match in <em>Fortnite</em>. For some, this is a welcome change, allowing <em>Magic </em>to entice newcomers and invigorate existing players with properties they know and love. But others feel this focus on licensed sets comes at the expense of <em>Magic</em>'s identity, quality, and longevity. </p>\n<p class=\"has-text-align-none\">Depending on who you talk to, <em>Magic</em> crossover sets have been around since the early \u2026</p>\n<p><a href=\"https://www.theverge.com/report/819098/magic-the-gathering-universes-beyond-avatar-final-fantasy-spider-man\">Read the full story at The Verge.</a></p>",
+    "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/11/TLA_sma_key_1920x1080_EN.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "summary_text": "Over the last five years, Magic: The Gathering games have gotten a bit strange. Cards featuring characters from Final Fantasy, Spider-Man, and, in a few weeks, Avatar: The Last Airbender are starting to show up with increasing frequency, making a typical Frid...",
+    "category": "fintech",
+    "_trending_tags": [
+      "ai"
+    ],
+    "_permalink": "/p/aa1fc8f7c5/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/aa1fc8f7c5/",
+    "_summary_240": "Over the last five years, Magic: The Gathering games have gotten a bit strange. Cards featuring characters from Final Fantasy, Spider-Man, and, in a few weeks, Avatar: The Last...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/aa1fc8f7c5/thumbnail.png"
+  },
+  {
+    "title": "Google will let users call stores, browse products, and check out using AI",
+    "url": "https://www.theverge.com/news/819431/google-shopping-ai-gemini-agentic-checkout-calling",
+    "published_at": "2025-11-13T09:00:00-05:00",
+    "source": "The Verge",
+    "summary": "Google is infusing artificial intelligence into just about every part of how people shop online \u2014 including having an AI tool call local stores on a human\u2019s behalf and purchase items automatically. Beginning Thursday (and ahead of the holiday shopping season) Google users in the US will have access to a slew of new AI [\u2026]",
+    "content_html": "<figure>\n\n<img alt=\"\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/11/Agentic-Checkout.png?quality=90&#038;strip=all&#038;crop=0,0,100,100\" />\n\t<figcaption>\n\t\t</figcaption>\n</figure>\n<p class=\"has-text-align-none\">Google is infusing artificial intelligence into just about every part of how people shop online \u2014 including having an AI tool call local stores on a human\u2019s behalf and purchase items automatically.</p>\n\n<p class=\"has-text-align-none\">Beginning Thursday (and ahead of the holiday shopping season) Google users in the US will have access to a slew of new AI shopping features, targeting tasks like searching for products, comparing similar items, tracking prices, and finally hitting check out. Some of the features <a href=\"https://www.theverge.com/news/670346/google-try-on-clothes-ai-shopping-io-2025\">were teased in May</a> at Google I/O.</p>\n\n<p class=\"has-text-align-none\">First, Google is adding conversational shopping to search\u2019s AI Mode, allowing users to describe in detail what they\u2019re looking for: an initial search for \u201cwomen\u2019s sweaters that can be worn with pants or dresses\u201d can then be modified by a follow-up of \u201cmore options in gray colors,\u201d for example, instead of clicking through filters and adding keywords to queries. The AI-powered response pulls from Google\u2019s trove of 50 billion product listings and is tailored to the specific request: a side-by-side chart if the user is asking for comparisons of specific items, or a stream of product image cards if they\u2019re looking for general suggestions. Users can click into items, visit retailer sites, see historic pricing data, and track price changes all from AI Mode, and there will be sponsored listings (i.e., ads) in results. Google is also adding the shopping features to the Gemini app for US users.</p>\n<img alt=\"\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/11/AI-Mode-in-Search-Product-Comparison.png?quality=90&#038;strip=all&#038;crop=0,0,100,100\" title=\"\" />\n<p class=\"has-text-align-none\">AI tools will also be deployed for the shopping tasks that can be painfully human. Google is adding a so-called agentic AI feature called \u201cLet Google Call\u201d that users can direct to call local stores to ask about products, what\u2019s in stock, and whether there are sales or promotions. When the AI agent calls, it discloses to the store that it\u2019s an AI caller; merchants will be able to opt out if they don\u2019t want robots asking about sales. After the call, the human user will get a text or email with the information gathered. The agentic calling option will begin rolling out in certain categories, starting with toys, health and beauty, and electronics.</p>\n\n<p class=\"has-text-align-none\">Finally, users will be able to task AI agents with actually purchasing items. Shoppers will be able to select items and specifications like color or size, and name the price they want to spend \u2014 if the item dips below that, Google\u2019s agentic checkout will ping the shopper, confirm they want to buy it, then use Google Pay to complete the transaction. The feature will begin rolling out with merchants including Wayfair, Chewy, Quince, and some Shopify sellers.</p>\n<img alt=\"Google\u2019s AI agentic calling report showing a list of local stores that were called, along with notes from the call.\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/11/Agentic-Calling-Report.png?quality=90&#038;strip=all&#038;crop=0,0,100,100\" title=\"Google\u2019s AI agentic calling report showing a list of local stores that were called, along with notes from the call.\" />\n<p class=\"has-text-align-none\">Google frames the features as a way to automate the tedious parts of shopping while still giving shoppers control, especially around things like price. But a shift to AI-powered shopping could upend all of the existing ways consumers currently find things: browsing in-store, through buying guilds and reviews, and of course from influencers.</p>\n\n<p class=\"has-text-align-none\">One of the example queries Google demonstrated during a press briefing was an AI Mode shopping search for moisturizers for dry winter skin. The tool quickly pulled a handful of recommendations, along with comparisons of products. It struck me as fascinating \u2014 just a week prior, I had made essentially the same search, only on TikTok, which is <a href=\"https://www.pewresearch.org/short-reads/2024/11/21/a-majority-of-us-tiktok-users-are-there-for-reviews-and-recommendations/\">widely used as a product recommendations and reviews platform</a>.</p>\n\n<p class=\"has-text-align-none\">Ordinarily I might find an item to buy through a beauty influencer or a site like <em>The Strategist</em>; in Google\u2019s new shopping ecosystem, I could choose what to buy, track the price, and buy it, all&nbsp; from Google, consolidating the entire experience. AI-generated shopping responses sometimes also pull in content from platforms like TikTok or Reddit, meaning all of those human recommendations and reviews eventually funnel up to Google\u2019s automated system, too. Would shoppers completely abandon influencer recommendations for an AI chatbot? Probably not. But it\u2019s hard not to see all of these AI-powered tools as effectively a built-in personal shopper \u2014 and creators ranging from Instagram influencers to product review sites will likely feel the competition.&nbsp;</p>",
+    "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/11/Agentic-Checkout.png?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "summary_text": "Google is infusing artificial intelligence into just about every part of how people shop online \u2014 including having an AI tool call local stores on a human\u2019s behalf and purchase items automatically. Beginning Thursday (and ahead of the holiday shopping season)...",
+    "category": "ai",
+    "_trending_tags": [
+      "ai",
+      "google"
+    ],
+    "_permalink": "/p/4587ccb3d4/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/4587ccb3d4/",
+    "_summary_240": "Google is infusing artificial intelligence into just about every part of how people shop online \u2014 including having an AI tool call local stores on a human\u2019s behalf and purchase...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/4587ccb3d4/thumbnail.png"
+  },
+  {
+    "title": "Google augments AI shopping with conversational search, agentic checkout and an AI that calls stores for you",
+    "url": "https://techcrunch.com/2025/11/13/google-expands-ai-shopping-with-conversational-search-agentic-checkout-and-an-ai-that-calls-stores-for-you/",
+    "published_at": "2025-11-13T09:00:00-05:00",
+    "source": "TechCrunch",
+    "summary": "Google is expanding AI shopping with conversational search, agentic checkout and an AI that calls stores for you about local inventory.",
+    "content_html": "",
+    "image_url": "https://techcrunch.com/wp-content/uploads/2019/09/google-search-app-ios.jpg?resize=1200,644",
+    "summary_text": "Google is expanding AI shopping with conversational search, agentic checkout and an AI that calls stores for you about local inventory.",
+    "category": "ai",
+    "_trending_tags": [
+      "agent",
+      "ai",
+      "google"
+    ],
+    "_permalink": "/p/b6ff85a616/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/b6ff85a616/",
+    "_summary_240": "Google is expanding AI shopping with conversational search, agentic checkout and an AI that calls stores for you about local inventory.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/b6ff85a616/thumbnail.png"
+  },
+  {
+    "title": "OKX adds decentralized trading for US users as DEX volumes hit record high",
+    "url": "https://cointelegraph.com/news/okx-decentralized-trading-us-dex-high?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "published_at": "2025-11-13T09:00:00-05:00",
+    "source": "Cointelegraph",
+    "summary": "The crypto exchange enabled decentralized trading for US users, integrating DEX access and self-custody wallets as onchain volumes reach record highs.",
+    "content_html": "",
+    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTEvMDE5YTczYWMtNGQ0My03YzI1LThhMGQtMDYwNWQ2MjdhNmEx.jpg",
+    "summary_text": "The crypto exchange enabled decentralized trading for US users, integrating DEX access and self-custody wallets as onchain volumes reach record highs.",
+    "category": "fintech",
+    "_trending_tags": [
+      "ai"
+    ],
+    "_permalink": "/p/ccb32b0402/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/ccb32b0402/",
+    "_summary_240": "The crypto exchange enabled decentralized trading for US users, integrating DEX access and self-custody wallets as onchain volumes reach record highs.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/ccb32b0402/thumbnail.png"
+  },
+  {
+    "title": "Here\u2019s what happened in crypto today",
+    "url": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "published_at": "2025-11-13T08:56:15-05:00",
+    "source": "Cointelegraph",
+    "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, NFTs, Web3 and crypto regulation.",
+    "content_html": "",
+    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMDYvMDE5Nzk0MjMtZWY4ZS03YzYwLWI5MzctYjlkZGY3NWZlOGFk.jpg",
+    "summary_text": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, NFTs, Web3 and crypto regulation.",
+    "category": "fintech",
+    "_trending_tags": [
+      "ai"
+    ],
+    "_permalink": "/p/1491abfa49/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/1491abfa49/",
+    "_summary_240": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, NFTs, Web3 and crypto regulation.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/1491abfa49/thumbnail.png"
+  },
+  {
+    "title": "New free course from RCSI and Microsoft Ireland explores transformative role of AI in healthcare",
+    "url": "https://news.microsoft.com/europe/2025/11/11/new-free-course-from-rcsi-explores-the-transformative-role-of-ai-in-healthcare-delivery-in-collaboration-with-microsoft-ireland/",
+    "published_at": "2025-11-13T08:53:32-05:00",
+    "source": "Microsoft News",
+    "summary": "The post New free course from RCSI and Microsoft Ireland explores transformative role of AI in healthcare appeared first on Source .",
+    "content_html": "<article class=\"mssrc-posts font-- has--theme\" id=\"single-22844\">\n\t<div class=\"acf-innerblocks-container\"></div>\t\t\t<section class=\"post-tags\">\n\t\t\t\t<div class=\"post-tags__content wp-block-columns\">\n\t\t\t\t\t<div class=\"post-tags__header wp-block-column flex-basis-25 has-text-align-right\">\n\t\t\t\t\t\t<h4 class=\"sr-only\">Tags: </h4>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"post-tags__body wp-block-column flex-basis-60\">\n\t\t\t\t\t\t<ul class=\"post-tags__list\"><li class=\"post-tags__item\"><a class=\"kicker inline-block post__meta--tags\" href=\"https://news.microsoft.com/source/tag/health/\">Health</a></li></ul>\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</section>\n\t\t\t</article><p>The post <a href=\"https://news.microsoft.com/europe/2025/11/11/new-free-course-from-rcsi-explores-the-transformative-role-of-ai-in-healthcare-delivery-in-collaboration-with-microsoft-ireland/\">New free course from RCSI and Microsoft Ireland explores transformative role of AI in healthcare</a> appeared first on <a href=\"https://news.microsoft.com/source\">Source</a>.</p>",
+    "image_url": "https://msftstories.thesourcemediaassets.com/sites/93/2025/11/251106_NCP4_010-scaled.jpg",
+    "summary_text": "The post New free course from RCSI and Microsoft Ireland explores transformative role of AI in healthcare appeared first on Source .",
+    "category": "ai",
+    "_trending_tags": [
+      "ai",
+      "microsoft"
+    ],
+    "_permalink": "/p/5a46b64577/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/5a46b64577/",
+    "_summary_240": "The post New free course from RCSI and Microsoft Ireland explores transformative role of AI in healthcare appeared first on Source .",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/5a46b64577/thumbnail.png"
+  },
+  {
     "title": "Spotify\u2019s new audiobook recap feature uses AI to remind you of the story so far",
     "url": "https://www.theverge.com/news/819476/spotify-audiobook-ai-recaps-short-summary",
     "published_at": "2025-11-13T08:30:00-05:00",
@@ -67,24 +257,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/0e2e85fca6/",
     "_summary_240": "The Bank of New York Mellon Corp. is launching a money-market fund tailored to issuers of stablecoins who need to comply with a recently signed US stablecoin law.",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/0e2e85fca6/thumbnail.png"
-  },
-  {
-    "title": "Will China win the AI race? Submit your questions now",
-    "url": "https://www.ft.com/content/af1a6ce3-b0ab-41cc-9b52-3e0a11641f20",
-    "published_at": "2025-11-13T07:59:28-05:00",
-    "source": "Financial Times - Technology",
-    "summary": "Take part in a live Ask an Expert Q&A with the FT\u2019s John Thornhill and Eleanor Olcott now",
-    "content_html": "",
-    "image_url": "https://images.ft.com/v3/image/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Fcf86dc56-5a03-4a6c-a0cb-74e5cd30c5eb.jpg?source=next-article&fit=scale-down&quality=highest&width=700&dpr=1",
-    "summary_text": "Take part in a live Ask an Expert Q&A with the FT\u2019s John Thornhill and Eleanor Olcott now",
-    "category": "ai",
-    "_trending_tags": [
-      "ai"
-    ],
-    "_permalink": "/p/85a64ff970/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/85a64ff970/",
-    "_summary_240": "Take part in a live Ask an Expert Q&A with the FT\u2019s John Thornhill and Eleanor Olcott now",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/85a64ff970/thumbnail.png"
   },
   {
     "title": "Institutions must stake Ether on decentralized infrastructure",
@@ -746,24 +918,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/d1678651ee/thumbnail.png"
   },
   {
-    "title": "Here\u2019s what happened in crypto today",
-    "url": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-    "published_at": "2025-11-12T16:47:26-05:00",
-    "source": "Cointelegraph",
-    "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, NFTs, Web3 and crypto regulation.",
-    "content_html": "",
-    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMDYvMDE5Nzk0MjMtZWY4ZS03YzYwLWI5MzctYjlkZGY3NWZlOGFk.jpg",
-    "summary_text": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, NFTs, Web3 and crypto regulation.",
-    "category": "fintech",
-    "_trending_tags": [
-      "ai"
-    ],
-    "_permalink": "/p/23263f18d7/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/23263f18d7/",
-    "_summary_240": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, NFTs, Web3 and crypto regulation.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/23263f18d7/thumbnail.png"
-  },
-  {
     "title": "Bitcoin Depot enters Hong Kong as part of Asia expansion",
     "url": "https://cointelegraph.com/news/bitcoin-depot-hong-kong-as-part-of-asian-expansion?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
     "published_at": "2025-11-12T16:07:38-05:00",
@@ -815,21 +969,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/ab17955e01/",
     "_summary_240": "We asked two teams of Anthropic researchers to program a robot dog. Neither team had any robotics expertise\u2014but we let only one team use Claude. In the past, we\u2019ve run simulated...",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/ab17955e01/thumbnail.png"
-  },
-  {
-    "title": "Prosecutors request February or March retrial for MEV bot brothers",
-    "url": "https://cointelegraph.com/news/prosecutors-retrial-mev-bot-exploit-case?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-    "published_at": "2025-11-12T14:55:00-05:00",
-    "source": "Cointelegraph",
-    "summary": "After a jury deadlocked on a verdict for two brothers accused of perpetrating a $25 million exploit on Ethereum, prosecutors are looking to retry them in 2026.",
-    "content_html": "",
-    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMDQvMDE5NjU5YTYtMzkzZi03N2M2LWE2NTAtYmM2NzQxYzZhNzkw.jpg",
-    "summary_text": "After a jury deadlocked on a verdict for two brothers accused of perpetrating a $25 million exploit on Ethereum, prosecutors are looking to retry them in 2026.",
-    "category": "fintech",
-    "_permalink": "/p/a7675aec8f/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/a7675aec8f/",
-    "_summary_240": "After a jury deadlocked on a verdict for two brothers accused of perpetrating a $25 million exploit on Ethereum, prosecutors are looking to retry them in 2026.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/a7675aec8f/thumbnail.png"
   },
   {
     "title": "Elon Musk\u2019s X botched its security key switchover, locking users out",
@@ -885,17 +1024,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/fa8fdf3221/",
     "_summary_240": "Anthropic believes AI models will increasingly reach into the physical world. To understand where things are headed, it asked Claude to program a quadruped.",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/fa8fdf3221/thumbnail.png"
-  },
-  {
-    "title": "Skittish risk managers could turn Bitcoin\u2019s institutional boom into bust, CEO warns",
-    "url": "https://cointelegraph.com/news/skittish-risk-managers-bitcoin-institutional-boom-bust-ceo-warns?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-    "published_at": "2025-11-12T14:00:00-05:00",
-    "source": "Cointelegraph",
-    "summary": "Markus Thielen warns Bitcoin\u2019s institutional rally could reverse as ETF outflows and market fatigue weigh on risk appetite.",
-    "content_html": "",
-    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTEvMDE5YTc4ZTgtYmFmNi03MTA4LWEwYjEtOTlmOGQ5NTU3YmRh.jpg",
-    "summary_text": "Markus Thielen warns Bitcoin\u2019s institutional rally could reverse as ETF outflows and market fatigue weigh on risk appetite.",
-    "category": "fintech"
   },
   {
     "title": "The EU needs to rethink its AI rules",
@@ -1063,42 +1191,19 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/ffebe15b70/thumbnail.png"
   },
   {
-    "title": "Apple launches Digital ID, a way to carry your passport on your phone for use at TSA checkpoints",
-    "url": "https://techcrunch.com/2025/11/12/apple-launches-digital-id-a-way-to-carry-your-passport-on-your-phone-for-use-at-tsa-checkpoints/",
-    "published_at": "2025-11-12T11:30:00-05:00",
-    "source": "TechCrunch",
-    "summary": "Apple Watch and iPhone owners in the United States will now be able to carry a copy of their U.S. passport on their device, which they can then use at TSA checkpoints across more than 250 U.S. airports when traveling domestically.",
-    "content_html": "",
-    "image_url": "https://techcrunch.com/wp-content/uploads/2024/08/GettyImages-2141952348.jpg?resize=1200,800",
-    "summary_text": "Apple Watch and iPhone owners in the United States will now be able to carry a copy of their U.S. passport on their device, which they can then use at TSA checkpoints across more than 250 U.S. airports when traveling domestically.",
-    "category": "ai",
-    "_trending_tags": [
-      "ai",
-      "apple"
-    ],
-    "_permalink": "/p/51bc079657/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/51bc079657/",
-    "_summary_240": "Apple Watch and iPhone owners in the United States will now be able to carry a copy of their U.S. passport on their device, which they can then use at TSA checkpoints across more...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/51bc079657/thumbnail.png"
-  },
-  {
     "title": "New AI agent understands video and images together",
     "url": "https://www.microsoft.com/en-us/research/blog/mmctagent-enabling-multimodal-reasoning-over-large-video-and-image-collections/",
     "published_at": "2025-11-12T11:23:01-05:00",
     "source": "Microsoft News",
     "summary": "The post New AI agent understands video and images together appeared first on Source .",
     "content_html": "<article class=\"mssrc-posts font-- has--theme\" id=\"single-22819\">\n\t<div class=\"acf-innerblocks-container\"></div>\t\t\t<section class=\"post-tags\">\n\t\t\t\t<div class=\"post-tags__content wp-block-columns\">\n\t\t\t\t\t<div class=\"post-tags__header wp-block-column flex-basis-25 has-text-align-right\">\n\t\t\t\t\t\t<h4 class=\"sr-only\">Tags: </h4>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"post-tags__body wp-block-column flex-basis-60\">\n\t\t\t\t\t\t<ul class=\"post-tags__list\"><li class=\"post-tags__item\"><a class=\"kicker inline-block post__meta--tags\" href=\"https://news.microsoft.com/source/tag/ai/\">AI</a></li></ul>\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</section>\n\t\t\t</article><p>The post <a href=\"https://www.microsoft.com/en-us/research/blog/mmctagent-enabling-multimodal-reasoning-over-large-video-and-image-collections/\">New AI agent understands video and images together</a> appeared first on <a href=\"https://news.microsoft.com/source\">Source</a>.</p>",
-    "image_url": "https://www.microsoft.com/en-us/research/wp-content/uploads/2025/10/MMCTAgent-TWLIFB-1200x627-1.jpg",
+    "image_url": "",
     "summary_text": "The post New AI agent understands video and images together appeared first on Source .",
     "category": "ai",
     "_trending_tags": [
       "agent",
       "ai"
-    ],
-    "_permalink": "/p/d1558f5b17/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/d1558f5b17/",
-    "_summary_240": "The post New AI agent understands video and images together appeared first on Source .",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/d1558f5b17/thumbnail.png"
+    ]
   },
   {
     "title": "Land O\u2019Lakes and Microsoft partner to accelerate AI innovation in agriculture",
@@ -1475,24 +1580,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/56a095404b/thumbnail.png"
   },
   {
-    "title": "Bridging the AI divide: How Frontier firms are transforming business",
-    "url": "https://blogs.microsoft.com/blog/2025/11/11/bridging-the-ai-divide-how-frontier-firms-are-transforming-business/",
-    "published_at": "2025-11-11T10:22:57-05:00",
-    "source": "Microsoft News",
-    "summary": "The post Bridging the AI divide: How Frontier firms are transforming business appeared first on Source .",
-    "content_html": "<article class=\"mssrc-posts font-- has--theme\" id=\"single-22776\">\n\t<div class=\"acf-innerblocks-container\"></div>\t\t\t<section class=\"post-tags\">\n\t\t\t\t<div class=\"post-tags__content wp-block-columns\">\n\t\t\t\t\t<div class=\"post-tags__header wp-block-column flex-basis-25 has-text-align-right\">\n\t\t\t\t\t\t<h4 class=\"sr-only\">Tags: </h4>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"post-tags__body wp-block-column flex-basis-60\">\n\t\t\t\t\t\t<ul class=\"post-tags__list\"><li class=\"post-tags__item\"><a class=\"kicker inline-block post__meta--tags\" href=\"https://news.microsoft.com/source/tag/ai/\">AI</a></li></ul>\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</section>\n\t\t\t</article><p>The post <a href=\"https://blogs.microsoft.com/blog/2025/11/11/bridging-the-ai-divide-how-frontier-firms-are-transforming-business/\">Bridging the AI divide: How Frontier firms are transforming business</a> appeared first on <a href=\"https://news.microsoft.com/source\">Source</a>.</p>",
-    "image_url": "https://blogs.microsoft.com/wp-content/uploads/2025/11/OMB-IDC-25-Art-Hero-Final_Final-1024x576.png",
-    "summary_text": "The post Bridging the AI divide: How Frontier firms are transforming business appeared first on Source .",
-    "category": "ai",
-    "_trending_tags": [
-      "ai"
-    ],
-    "_permalink": "/p/e1f610a990/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/e1f610a990/",
-    "_summary_240": "The post Bridging the AI divide: How Frontier firms are transforming business appeared first on Source .",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/e1f610a990/thumbnail.png"
-  },
-  {
     "title": "Why Nvidia should be glad to see the back of SoftBank",
     "url": "https://www.ft.com/content/9a6a92aa-9907-45df-9aa7-6028b70adb85",
     "published_at": "2025-11-11T08:51:53-05:00",
@@ -1590,31 +1677,17 @@
     "source": "Financial Times - Technology",
     "summary": "Chief technology officer Sachin Katti\u2019s departure is latest blow to chipmaker as it struggles to compete",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://images.ft.com/v3/image/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Faa5310e7-51d6-4c0a-ac0e-e03798e65807.jpg?source=next-article&fit=scale-down&quality=highest&width=700&dpr=1",
     "summary_text": "Chief technology officer Sachin Katti\u2019s departure is latest blow to chipmaker as it struggles to compete",
     "category": "ai",
     "_trending_tags": [
       "ai",
       "openai"
-    ]
-  },
-  {
-    "title": "Bringing the best of AI search to Copilot",
-    "url": "https://www.microsoft.com/en-us/microsoft-copilot/blog/2025/11/07/bringing-the-best-of-ai-search-to-copilot/",
-    "published_at": "2025-11-10T18:13:16-05:00",
-    "source": "Microsoft News",
-    "summary": "The post Bringing the best of AI search to Copilot appeared first on Source .",
-    "content_html": "<article class=\"mssrc-posts font-- has--theme\" id=\"single-22774\">\n\t<div class=\"acf-innerblocks-container\"></div>\t\t\t<section class=\"post-tags\">\n\t\t\t\t<div class=\"post-tags__content wp-block-columns\">\n\t\t\t\t\t<div class=\"post-tags__header wp-block-column flex-basis-25 has-text-align-right\">\n\t\t\t\t\t\t<h4 class=\"sr-only\">Tags: </h4>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"post-tags__body wp-block-column flex-basis-60\">\n\t\t\t\t\t\t<ul class=\"post-tags__list\"><li class=\"post-tags__item\"><a class=\"kicker inline-block post__meta--tags\" href=\"https://news.microsoft.com/source/tag/ai/\">AI</a></li></ul>\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</section>\n\t\t\t</article><p>The post <a href=\"https://www.microsoft.com/en-us/microsoft-copilot/blog/2025/11/07/bringing-the-best-of-ai-search-to-copilot/\">Bringing the best\u00a0of\u00a0AI\u00a0search\u00a0to Copilot</a> appeared first on <a href=\"https://news.microsoft.com/source\">Source</a>.</p>",
-    "image_url": "https://www.microsoft.com/en-us/microsoft-copilot/blog/wp-content/uploads/2025/11/Frame-2147233335-1-1.png",
-    "summary_text": "The post Bringing the best of AI search to Copilot appeared first on Source .",
-    "category": "ai",
-    "_trending_tags": [
-      "ai"
     ],
-    "_permalink": "/p/e44d1d6bdb/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/e44d1d6bdb/",
-    "_summary_240": "The post Bringing the best of AI search to Copilot appeared first on Source .",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/e44d1d6bdb/thumbnail.png"
+    "_permalink": "/p/70611bc6d3/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/70611bc6d3/",
+    "_summary_240": "Chief technology officer Sachin Katti\u2019s departure is latest blow to chipmaker as it struggles to compete",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/70611bc6d3/thumbnail.png"
   },
   {
     "title": "Researchers isolate memorization from problem-solving in AI neural networks",
