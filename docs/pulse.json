@@ -1,5 +1,23 @@
 [
   {
+    "title": "The State of the Podcast Business, According to the People Shaping It",
+    "url": "https://www.bloomberg.com/news/newsletters/2025-11-13/the-state-of-the-podcast-business-according-to-people-shaping-it",
+    "published_at": "2025-11-13T16:23:31-05:00",
+    "source": "Bloomberg Technology",
+    "summary": "Industry leaders weigh in on everything from the middling allure of Netflix to the debatable impact of AI",
+    "content_html": "Ben Meiselas, co-founder of the MeidasTouch, has built a digital-first, political content machine to rival cable TV. Photographer: Daniel Topete/On Air Fest",
+    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/i27mOA.gtA1E/v0/1200x-1.jpg",
+    "summary_text": "Industry leaders weigh in on everything from the middling allure of Netflix to the debatable impact of AI",
+    "category": "software",
+    "_trending_tags": [
+      "ai"
+    ],
+    "_permalink": "/p/9335af977c/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/9335af977c/",
+    "_summary_240": "Industry leaders weigh in on everything from the middling allure of Netflix to the debatable impact of AI",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/9335af977c/thumbnail.png"
+  },
+  {
     "title": "Blue Origin lands New Glenn rocket booster on second try",
     "url": "https://techcrunch.com/2025/11/13/blue-origin-lands-new-glenn-rocket-booster-on-second-try/",
     "published_at": "2025-11-13T16:15:06-05:00",
@@ -1106,11 +1124,7 @@
       "ai",
       "chatgpt",
       "gpt"
-    ],
-    "_permalink": "/p/7c11b2f32a/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/7c11b2f32a/",
-    "_summary_240": "Philips is scaling AI literacy with ChatGPT Enterprise, training 70,000 employees to use AI responsibly and improve healthcare outcomes worldwide.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/7c11b2f32a/thumbnail.png"
+    ]
   },
   {
     "title": "OpenAI walks a tricky tightrope with GPT-5.1\u2019s eight new personalities",
@@ -1440,17 +1454,13 @@
     "source": "Financial Times - Technology",
     "summary": "Taiwanese electronics manufacturer expects revenue from AI server production to almost double from this quarter to the next",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/98c6e87a-5fb6-454a-acb1-306dc49eefd5.jpg",
+    "image_url": "",
     "summary_text": "Taiwanese electronics manufacturer expects revenue from AI server production to almost double from this quarter to the next",
     "category": "ai",
     "_trending_tags": [
       "ai",
       "nvidia"
-    ],
-    "_permalink": "/p/6646cb8ca1/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/6646cb8ca1/",
-    "_summary_240": "Taiwanese electronics manufacturer expects revenue from AI server production to almost double from this quarter to the next",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/6646cb8ca1/thumbnail.png"
+    ]
   },
   {
     "title": "Who Pays When A.I. Is Wrong?",
@@ -1477,17 +1487,13 @@
     "source": "Financial Times - Technology",
     "summary": "Tech giant aims to dismantle the \u2018Lighthouse Enterprise\u2019, which it claims has tricked 1mn victims out of $1bn",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/6ad01da8-678b-4b57-b651-d4376f2cd061.jpg",
+    "image_url": "",
     "summary_text": "Tech giant aims to dismantle the \u2018Lighthouse Enterprise\u2019, which it claims has tricked 1mn victims out of $1bn",
     "category": "software",
     "_trending_tags": [
       "ai",
       "google"
-    ],
-    "_permalink": "/p/5f221631d7/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/5f221631d7/",
-    "_summary_240": "Tech giant aims to dismantle the \u2018Lighthouse Enterprise\u2019, which it claims has tricked 1mn victims out of $1bn",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/5f221631d7/thumbnail.png"
+    ]
   },
   {
     "title": "Fighting the New York Times\u2019 invasion of user privacy",
@@ -1550,16 +1556,12 @@
     "source": "Financial Times - Technology",
     "summary": "There is widespread agreement on the need for action to cut red tape and raise investment to help boost the sector",
     "content_html": "",
-    "image_url": "https://images.ft.com/v3/image/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Fa00b1ee5-d8a0-45e8-a47d-bc083968ec1e.jpg?source=next-article&fit=scale-down&quality=highest&width=700&dpr=1",
+    "image_url": "",
     "summary_text": "There is widespread agreement on the need for action to cut red tape and raise investment to help boost the sector",
     "category": "fintech",
     "_trending_tags": [
       "ai"
-    ],
-    "_permalink": "/p/77e0ecdbfb/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/77e0ecdbfb/",
-    "_summary_240": "There is widespread agreement on the need for action to cut red tape and raise investment to help boost the sector",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/77e0ecdbfb/thumbnail.png"
+    ]
   },
   {
     "title": "What if the AI race isn\u2019t about chips at all?",
@@ -1568,16 +1570,12 @@
     "source": "Financial Times - Technology",
     "summary": "Availability of electricity to keep models running is becoming the critical factor in technology\u2019s development",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/fea2ba26-0558-4e58-b503-14bec3cec219.jpg",
+    "image_url": "",
     "summary_text": "Availability of electricity to keep models running is becoming the critical factor in technology\u2019s development",
     "category": "ai",
     "_trending_tags": [
       "ai"
-    ],
-    "_permalink": "/p/d2b5218c04/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/d2b5218c04/",
-    "_summary_240": "Availability of electricity to keep models running is becoming the critical factor in technology\u2019s development",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/d2b5218c04/thumbnail.png"
+    ]
   },
   {
     "title": "Baidu just dropped an open-source multimodal AI that it claims beats GPT-5 and Gemini",
@@ -1653,16 +1651,12 @@
     "source": "Financial Times - Technology",
     "summary": "Debt issued by groups building data centres has been hit in recent weeks",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/827f4ce4-1cc5-4413-bb7d-78c2a0b95428.jpg",
+    "image_url": "",
     "summary_text": "Debt issued by groups building data centres has been hit in recent weeks",
     "category": "ai",
     "_trending_tags": [
       "ai"
-    ],
-    "_permalink": "/p/56a095404b/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/56a095404b/",
-    "_summary_240": "Debt issued by groups building data centres has been hit in recent weeks",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/56a095404b/thumbnail.png"
+    ]
   },
   {
     "title": "Why Nvidia should be glad to see the back of SoftBank",
@@ -1671,17 +1665,13 @@
     "source": "Financial Times - Technology",
     "summary": "Thanks to the magical maths of AI, what the chipmaker loses on one hand it may gain with the other",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/c62c5c30-c3df-472c-875a-dff53cbb1262.jpg",
+    "image_url": "",
     "summary_text": "Thanks to the magical maths of AI, what the chipmaker loses on one hand it may gain with the other",
     "category": "fintech",
     "_trending_tags": [
       "ai",
       "nvidia"
-    ],
-    "_permalink": "/p/bfaa3d8caa/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/bfaa3d8caa/",
-    "_summary_240": "Thanks to the magical maths of AI, what the chipmaker loses on one hand it may gain with the other",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/bfaa3d8caa/thumbnail.png"
+    ]
   },
   {
     "title": "ClickFix may be the biggest security threat your family has never heard of",
@@ -1705,17 +1695,13 @@
     "source": "Financial Times - Technology",
     "summary": "Turing Award winner seeks to depart as Mark Zuckerberg makes \u2018superintelligence\u2019 push",
     "content_html": "",
-    "image_url": "https://images.ft.com/v3/image/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F3b0427c0-714e-4248-afb6-cebed4c90fb0.jpg?source=next-article&fit=scale-down&quality=highest&width=700&dpr=1",
+    "image_url": "",
     "summary_text": "Turing Award winner seeks to depart as Mark Zuckerberg makes \u2018superintelligence\u2019 push",
     "category": "ai",
     "_trending_tags": [
       "ai",
       "meta"
-    ],
-    "_permalink": "/p/ed94f35e96/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/ed94f35e96/",
-    "_summary_240": "Turing Award winner seeks to depart as Mark Zuckerberg makes \u2018superintelligence\u2019 push",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/ed94f35e96/thumbnail.png"
+    ]
   },
   {
     "title": "The Former Staffer Calling Out OpenAI\u2019s Erotica Claims",
