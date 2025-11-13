@@ -1,5 +1,20 @@
 [
   {
+    "title": "BNY launches money market fund to hold reserves for US stablecoin issuers",
+    "url": "https://cointelegraph.com/news/bny-stablecoin-reserves-fund-to-support-regulated-us-issuers?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "published_at": "2025-11-13T14:18:26-05:00",
+    "source": "Cointelegraph",
+    "summary": "Built to align with the GENIUS Act, the new fund provides a regulated vehicle for holding stablecoin reserves in cash and US Treasurys.",
+    "content_html": "",
+    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjQtMTEvMDE5MzJmYTctN2M1Yi03ODBhLWE4ZmItOWNmZjkyMjc2ZWY2.jpg",
+    "summary_text": "Built to align with the GENIUS Act, the new fund provides a regulated vehicle for holding stablecoin reserves in cash and US Treasurys.",
+    "category": "fintech",
+    "_permalink": "/p/67a9ee5991/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/67a9ee5991/",
+    "_summary_240": "Built to align with the GENIUS Act, the new fund provides a regulated vehicle for holding stablecoin reserves in cash and US Treasurys.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/67a9ee5991/thumbnail.png"
+  },
+  {
     "title": "Apple Aims to Capitalize on Mini App Trend With New Program",
     "url": "https://www.bloomberg.com/news/articles/2025-11-13/apple-aims-to-capitalize-on-mini-app-trend-with-new-program",
     "published_at": "2025-11-13T14:02:51-05:00",
@@ -982,21 +997,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/4b42fec7c8/thumbnail.png"
   },
   {
-    "title": "Vitalik Buterin champions decentralization in \u2018Trustless Manifesto\u2019",
-    "url": "https://cointelegraph.com/news/vitalik-buterin-authors-signs-trustless-manifesto?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-    "published_at": "2025-11-12T23:44:14-05:00",
-    "source": "Cointelegraph",
-    "summary": "Vitalik Buterin and two other Ethereum leaders have written a \u201cTrustless Manifesto\u201d to call on builders to never sacrifice decentralization in pursuit of adoption.",
-    "content_html": "",
-    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTEvMDE5YTdiODMtNDY3Yy03MTAyLTk2MzktYmJhZWRhZDVjOTVm.jpg",
-    "summary_text": "Vitalik Buterin and two other Ethereum leaders have written a \u201cTrustless Manifesto\u201d to call on builders to never sacrifice decentralization in pursuit of adoption.",
-    "category": "fintech",
-    "_permalink": "/p/8f22d02a97/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/8f22d02a97/",
-    "_summary_240": "Vitalik Buterin and two other Ethereum leaders have written a \u201cTrustless Manifesto\u201d to call on builders to never sacrifice decentralization in pursuit of adoption.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/8f22d02a97/thumbnail.png"
-  },
-  {
     "title": "Japan Exchange Looks at Ways to Curb Crypto Hoarding Firms",
     "url": "https://www.bloomberg.com/news/articles/2025-11-13/japan-exchange-is-looking-at-ways-to-curb-crypto-hoarding-firms",
     "published_at": "2025-11-12T21:22:52-05:00",
@@ -1511,6 +1511,20 @@
     ]
   },
   {
+    "title": "GPT-5.1 Instant and GPT-5.1 Thinking System Card Addendum",
+    "url": "https://openai.com/index/gpt-5-system-card-addendum-gpt-5-1",
+    "published_at": "2025-11-11T19:00:00-05:00",
+    "source": "OpenAI News",
+    "summary": "This GPT-5 system card addendum provides updated safety metrics for GPT-5.1 Instant and Thinking, including new evaluations for mental health and emotional reliance.",
+    "content_html": "",
+    "image_url": "",
+    "summary_text": "This GPT-5 system card addendum provides updated safety metrics for GPT-5.1 Instant and Thinking, including new evaluations for mental health and emotional reliance.",
+    "category": "ai",
+    "_trending_tags": [
+      "gpt"
+    ]
+  },
+  {
     "title": "GPT-5.1: A smarter, more conversational ChatGPT",
     "url": "https://openai.com/index/gpt-5-1",
     "published_at": "2025-11-11T19:00:00-05:00",
@@ -1523,20 +1537,6 @@
     "_trending_tags": [
       "ai",
       "chatgpt",
-      "gpt"
-    ]
-  },
-  {
-    "title": "GPT-5.1 Instant and GPT-5.1 Thinking System Card Addendum",
-    "url": "https://openai.com/index/gpt-5-system-card-addendum-gpt-5-1",
-    "published_at": "2025-11-11T19:00:00-05:00",
-    "source": "OpenAI News",
-    "summary": "This GPT-5 system card addendum provides updated safety metrics for GPT-5.1 Instant and Thinking, including new evaluations for mental health and emotional reliance.",
-    "content_html": "",
-    "image_url": "",
-    "summary_text": "This GPT-5 system card addendum provides updated safety metrics for GPT-5.1 Instant and Thinking, including new evaluations for mental health and emotional reliance.",
-    "category": "ai",
-    "_trending_tags": [
       "gpt"
     ]
   },
