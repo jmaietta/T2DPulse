@@ -1,21 +1,57 @@
 [
   {
-    "title": "Apollo, KKR See Record-Wide Gap on Valuing Stressed Private Loan",
-    "url": "https://www.bloomberg.com/news/articles/2025-11-13/apollo-kkr-see-record-wide-gap-on-valuing-stressed-private-loan",
-    "published_at": "2025-11-13T10:07:12-05:00",
-    "source": "Bloomberg Technology",
-    "summary": "An Apollo Global Management Inc. private credit fund deemed a loan to Medallia Inc. worth 77 cents on the dollar, a level typically considered distressed. A rival fund co-managed by Future Standard and KKR & Co. offered a very different assessment: 91 cents.",
-    "content_html": "The Apollo Global Management office in New York.",
-    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iMC9dpfLDmdo/v1/1200x-1.jpg",
-    "summary_text": "An Apollo Global Management Inc. private credit fund deemed a loan to Medallia Inc. worth 77 cents on the dollar, a level typically considered distressed. A rival fund co-managed by Future Standard and KKR & Co. offered a very different assessment: 91 cents.",
-    "category": "fintech",
+    "title": "Watch Google DeepMind\u2019s new AI agent learn to play video games",
+    "url": "https://www.theverge.com/tech/819937/google-deepmind-ai-agent-sima-2-agi-video-games",
+    "published_at": "2025-11-13T10:39:24-05:00",
+    "source": "The Verge",
+    "summary": "Google DeepMind\u2019s new AI agent learned how to play a bunch of video games \u2014 including No Man\u2019s Sky, Valheim, and Goat Simulator 3 \u2014 to become a viable \u201cinteractive gaming companion.\u201d The new agent tool, SIMA 2, builds on its earlier iteration, SIMA (Scalable Instructable Multiworld Agent), which DeepMind released in March 2024. It also [\u2026]",
+    "content_html": "<figure>\n\n<img alt=\"\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/11/Blog-header-sima-2-an-agent-that-plays-reasons-and-learns-with-you-in-virtual-3d-worlds%402x.png?quality=90&#038;strip=all&#038;crop=0,0,100,100\" />\n\t<figcaption>\n\t\t</figcaption>\n</figure>\n<p class=\"has-text-align-none\">Google DeepMind\u2019s new AI agent learned how to play a bunch of video games \u2014&nbsp;including <em>No Man\u2019s Sky</em>, <em>Valheim</em>, and <em>Goat Simulator 3</em> \u2014 to become a viable \u201cinteractive gaming companion.\u201d</p>\n\n<p class=\"has-text-align-none\">The new agent tool, SIMA 2, builds on its earlier iteration, SIMA (Scalable Instructable Multiworld Agent), which DeepMind released in March 2024. It also incorporates Google\u2019s Gemini AI for the first time, meaning the agent can go beyond simply following instructions to  \u201cunderstand a user&#8217;s high-level goal, perform complex reasoning in pursuit, and skillfully execute goal-oriented actions within games,\u201d even ones it hasn\u2019t seen before, according to a DeepMind blog post. It\u2019s currently being released to some academics and developers as a limited research preview. </p>\n<div class=\"video-container\"></div>\n<p class=\"has-text-align-none\">Despite SIMA 2\u2019s gaming prowess, creating a consumer-facing gaming helper isn\u2019t the broader goal here, members of the DeepMind team told <em>The Verge</em> during a Wednesday briefing. Jane Wang, a senior staff research scientist at DeepMind, called it \u201ca really great training ground\u201d for potentially transferring the skills to real-world environments one day.</p>\n<div class=\"video-container\"></div>\n<p class=\"has-text-align-none\">And, as usual, it all comes back to the ever-intensifying AGI race between Google, Meta, OpenAI, Anthropic, and others. \u201cThis is a significant step in the direction of Artificial General Intelligence (AGI), with important implications for the future of robotics and AI-embodiment in general,\u201d DeepMind\u2019s blog post states.</p>\n<div class=\"video-container\"></div>\n<p class=\"has-text-align-none\">Joe Marino, a research scientist at DeepMind, doubled down on that, saying that SIMA 2\u2019s ability to take actions in a virtual world and handle environments it has never seen before is a \u201cfundamental\u201d step toward AGI \u2014&nbsp;and potentially toward building a general-purpose robot down the line. </p>\n<div class=\"video-container\"></div>",
+    "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/11/Blog-header-sima-2-an-agent-that-plays-reasons-and-learns-with-you-in-virtual-3d-worlds%402x.png?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "summary_text": "Google DeepMind\u2019s new AI agent learned how to play a bunch of video games \u2014 including No Man\u2019s Sky, Valheim, and Goat Simulator 3 \u2014 to become a viable \u201cinteractive gaming companion.\u201d The new agent tool, SIMA 2, builds on its earlier iteration, SIMA (Scalable ...",
+    "category": "ai",
+    "_trending_tags": [
+      "agent",
+      "ai",
+      "deepmind",
+      "google"
+    ],
+    "_permalink": "/p/66aac3becd/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/66aac3becd/",
+    "_summary_240": "Google DeepMind\u2019s new AI agent learned how to play a bunch of video games \u2014 including No Man\u2019s Sky, Valheim, and Goat Simulator 3 \u2014 to become a viable \u201cinteractive gaming...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/66aac3becd/thumbnail.png"
+  },
+  {
+    "title": "Sam Atlman-backed Exowatt wants to power AI data centers with billions of hot rocks",
+    "url": "https://techcrunch.com/2025/11/13/sam-atlman-backed-exowatt-wants-to-power-ai-data-centers-with-billions-of-hot-rocks/",
+    "published_at": "2025-11-13T10:30:00-05:00",
+    "source": "TechCrunch",
+    "summary": "The solar-thermal startup wants to deliver electricity for as little as one cent per kWh. But first it has to scale production to 1 million units per year.",
+    "content_html": "",
+    "image_url": "https://techcrunch.com/wp-content/uploads/2025/11/P3-Modules-at-data-center.jpg?resize=1200,701",
+    "summary_text": "The solar-thermal startup wants to deliver electricity for as little as one cent per kWh. But first it has to scale production to 1 million units per year.",
+    "category": "ai",
     "_trending_tags": [
       "ai"
     ],
-    "_permalink": "/p/b7720ce91b/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/b7720ce91b/",
-    "_summary_240": "An Apollo Global Management Inc. private credit fund deemed a loan to Medallia Inc. worth 77 cents on the dollar, a level typically considered distressed. A rival fund co-managed...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/b7720ce91b/thumbnail.png"
+    "_permalink": "/p/5ebfda8ea4/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/5ebfda8ea4/",
+    "_summary_240": "The solar-thermal startup wants to deliver electricity for as little as one cent per kWh. But first it has to scale production to 1 million units per year.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/5ebfda8ea4/thumbnail.png"
+  },
+  {
+    "title": "What happens if the Fed cuts rates before Christmas Eve?",
+    "url": "https://cointelegraph.com/news/what-happens-if-the-fed-cuts-rates-before-christmas-eve?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "published_at": "2025-11-13T10:25:27-05:00",
+    "source": "Cointelegraph",
+    "summary": "A pre-Christmas Fed rate cut could boost spending, shift bond yields, lift risk assets and increase demand for crypto.",
+    "content_html": "",
+    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTEvMDE5YTdkY2ItM2MyZi03OGRiLWE4MjgtMzc3NTI3OWVhZDBl.jpg",
+    "summary_text": "A pre-Christmas Fed rate cut could boost spending, shift bond yields, lift risk assets and increase demand for crypto.",
+    "category": "fintech",
+    "_permalink": "/p/e877743782/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/e877743782/",
+    "_summary_240": "A pre-Christmas Fed rate cut could boost spending, shift bond yields, lift risk assets and increase demand for crypto.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/e877743782/thumbnail.png"
   },
   {
     "title": "Crypto most \u2018fearful\u2019 since March as Bitcoin eyes one-year lows versus gold",
@@ -75,7 +111,7 @@
     "published_at": "2025-11-13T09:10:33-05:00",
     "source": "Microsoft News",
     "summary": "The post How Brazil is training 5 million learners to work with AI by 2027 appeared first on Source .",
-    "content_html": "<article class=\"mssrc-posts font-- has--theme\" id=\"single-22848\">\n\t<div class=\"acf-innerblocks-container\"></div>\t\t\t<section class=\"post-tags\">\n\t\t\t\t<div class=\"post-tags__content wp-block-columns\">\n\t\t\t\t\t<div class=\"post-tags__header wp-block-column flex-basis-25 has-text-align-right\">\n\t\t\t\t\t\t<h4 class=\"sr-only\">Tags: </h4>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"post-tags__body wp-block-column flex-basis-60\">\n\t\t\t\t\t\t<ul class=\"post-tags__list\"><li class=\"post-tags__item\"><a class=\"kicker inline-block post__meta--tags\" href=\"https://news.microsoft.com/source/tag/ai/\">AI</a></li></ul>\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</section>\n\t\t\t</article><p>The post <a href=\"https://news.microsoft.com/source/latam/features/ai/microsoft-ai-courses-brazil/?lang=en\">How\u00a0Brazil\u00a0is\u00a0training\u00a05\u00a0million\u00a0learners\u00a0to\u00a0work\u00a0with\u00a0AI\u00a0by 2027</a> appeared first on <a href=\"https://news.microsoft.com/source\">Source</a>.</p>",
+    "content_html": "<article class=\"mssrc-posts font-- has--theme\" id=\"single-22848\">\n\t<div class=\"acf-innerblocks-container\"></div>\t\t\t<section class=\"post-tags\">\n\t\t\t\t<div class=\"post-tags__content wp-block-columns\">\n\t\t\t\t\t<div class=\"post-tags__header wp-block-column flex-basis-25 has-text-align-right\">\n\t\t\t\t\t\t<h4 class=\"sr-only\">Tags: </h4>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"post-tags__body wp-block-column flex-basis-60\">\n\t\t\t\t\t\t<ul class=\"post-tags__list\"><li class=\"post-tags__item\"><a class=\"kicker inline-block post__meta--tags\" href=\"https://news.microsoft.com/source/tag/ai/\">AI</a></li></ul>\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</section>\n\t\t\t</article><p>The post <a href=\"https://news.microsoft.com/source/latam/features/ai/microsoft-ai-courses-brazil/?lang=en\">How Brazil is training 5 million learners to work with AI by 2027</a> appeared first on <a href=\"https://news.microsoft.com/source\">Source</a>.</p>",
     "image_url": "https://news.microsoft.com/source/latam/wp-content/uploads/2025/11/brazil-conectai-main.jpg",
     "summary_text": "The post How Brazil is training 5 million learners to work with AI by 2027 appeared first on Source .",
     "category": "ai",
@@ -164,25 +200,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/aa1fc8f7c5/",
     "_summary_240": "Over the last five years, Magic: The Gathering games have gotten a bit strange. Cards featuring characters from Final Fantasy, Spider-Man, and, in a few weeks, Avatar: The Last...",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/aa1fc8f7c5/thumbnail.png"
-  },
-  {
-    "title": "Google will let users call stores, browse products, and check out using AI",
-    "url": "https://www.theverge.com/news/819431/google-shopping-ai-gemini-agentic-checkout-calling",
-    "published_at": "2025-11-13T09:00:00-05:00",
-    "source": "The Verge",
-    "summary": "Google is infusing artificial intelligence into just about every part of how people shop online \u2014 including having an AI tool call local stores on a human\u2019s behalf and purchase items automatically. Beginning Thursday (and ahead of the holiday shopping season) Google users in the US will have access to a slew of new AI [\u2026]",
-    "content_html": "<figure>\n\n<img alt=\"\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/11/Agentic-Checkout.png?quality=90&#038;strip=all&#038;crop=0,0,100,100\" />\n\t<figcaption>\n\t\t</figcaption>\n</figure>\n<p class=\"has-text-align-none\">Google is infusing artificial intelligence into just about every part of how people shop online \u2014 including having an AI tool call local stores on a human\u2019s behalf and purchase items automatically.</p>\n\n<p class=\"has-text-align-none\">Beginning Thursday (and ahead of the holiday shopping season) Google users in the US will have access to <a href=\"https://blog.google/products/shopping/agentic-checkout-holiday-ai-shopping/\">a slew of new AI shopping features</a>, targeting tasks like searching for products, comparing similar items, tracking prices, and finally hitting check out. Some of the features <a href=\"https://www.theverge.com/news/670346/google-try-on-clothes-ai-shopping-io-2025\">were teased in May</a> at Google I/O.</p>\n\n<p class=\"has-text-align-none\">First, Google is adding conversational shopping to search\u2019s AI Mode, allowing users to describe in detail what they\u2019re looking for: an initial search for \u201cwomen\u2019s sweaters that can be worn with pants or dresses\u201d can then be modified by a follow-up of \u201cmore options in gray colors,\u201d for example, instead of clicking through filters and adding keywords to queries. The AI-powered response pulls from Google\u2019s trove of 50 billion product listings and is tailored to the specific request: a side-by-side chart if the user is asking for comparisons of specific items, or a stream of product image cards if they\u2019re looking for general suggestions. Users can click into items, visit retailer sites, see historic pricing data, and track price changes all from AI Mode, and there will be sponsored listings (i.e., ads) in results. Google is also adding the shopping features to the Gemini app for US users.</p>\n<img alt=\"\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/11/AI-Mode-in-Search-Product-Comparison.png?quality=90&#038;strip=all&#038;crop=0,0,100,100\" title=\"\" />\n<p class=\"has-text-align-none\">AI tools will also be deployed for the shopping tasks that can be painfully human. Google is adding a so-called agentic AI feature called \u201cLet Google Call\u201d that users can direct to call local stores to ask about products, what\u2019s in stock, and whether there are sales or promotions. When the AI agent calls, it discloses to the store that it\u2019s an AI caller; merchants will be able to opt out if they don\u2019t want robots asking about sales. After the call, the human user will get a text or email with the information gathered. The agentic calling option will begin rolling out in certain categories, starting with toys, health and beauty, and electronics.</p>\n\n<p class=\"has-text-align-none\">Finally, users will be able to task AI agents with actually purchasing items. Shoppers will be able to select items and specifications like color or size, and name the price they want to spend \u2014 if the item dips below that, Google\u2019s agentic checkout will ping the shopper, confirm they want to buy it, then use Google Pay to complete the transaction. The feature will begin rolling out with merchants including Wayfair, Chewy, Quince, and some Shopify sellers.</p>\n<img alt=\"Google\u2019s AI agentic calling report showing a list of local stores that were called, along with notes from the call.\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/11/Agentic-Calling-Report.png?quality=90&#038;strip=all&#038;crop=0,0,100,100\" title=\"Google\u2019s AI agentic calling report showing a list of local stores that were called, along with notes from the call.\" />\n<p class=\"has-text-align-none\">Google frames the features as a way to automate the tedious parts of shopping while still giving shoppers control, especially around things like price. But a shift to AI-powered shopping could upend all of the existing ways consumers currently find things: browsing in-store, through buying guilds and reviews, and of course from influencers.</p>\n\n<p class=\"has-text-align-none\">One of the example queries Google demonstrated during a press briefing was an AI Mode shopping search for moisturizers for dry winter skin. The tool quickly pulled a handful of recommendations, along with comparisons of products. It struck me as fascinating \u2014 just a week prior, I had made essentially the same search, only on TikTok, which is <a href=\"https://www.pewresearch.org/short-reads/2024/11/21/a-majority-of-us-tiktok-users-are-there-for-reviews-and-recommendations/\">widely used as a product recommendations and reviews platform</a>.</p>\n\n<p class=\"has-text-align-none\">Ordinarily I might find an item to buy through a beauty influencer or a site like <em>The Strategist</em>; in Google\u2019s new shopping ecosystem, I could choose what to buy, track the price, and buy it, all&nbsp; from Google, consolidating the entire experience. AI-generated shopping responses sometimes also pull in content from platforms like TikTok or Reddit, meaning all of those human recommendations and reviews eventually funnel up to Google\u2019s automated system, too. Would shoppers completely abandon influencer recommendations for an AI chatbot? Probably not. But it\u2019s hard not to see all of these AI-powered tools as effectively a built-in personal shopper \u2014 and creators ranging from Instagram influencers to product review sites will likely feel the competition.&nbsp;</p>",
-    "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/11/Agentic-Checkout.png?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "summary_text": "Google is infusing artificial intelligence into just about every part of how people shop online \u2014 including having an AI tool call local stores on a human\u2019s behalf and purchase items automatically. Beginning Thursday (and ahead of the holiday shopping season)...",
-    "category": "ai",
-    "_trending_tags": [
-      "ai",
-      "google"
-    ],
-    "_permalink": "/p/4587ccb3d4/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/4587ccb3d4/",
-    "_summary_240": "Google is infusing artificial intelligence into just about every part of how people shop online \u2014 including having an AI tool call local stores on a human\u2019s behalf and purchase...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/4587ccb3d4/thumbnail.png"
   },
   {
     "title": "Google augments AI shopping with conversational search, agentic checkout and an AI that calls stores for you",
@@ -937,21 +954,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/91d8ff7eee/thumbnail.png"
   },
   {
-    "title": "Bitcoin\u2019s 4-year cycle is broken, and this time, data proves it",
-    "url": "https://cointelegraph.com/news/bitcoin-s-4-year-cycle-is-broken-and-this-time-data-proves-it?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-    "published_at": "2025-11-12T16:49:51-05:00",
-    "source": "Cointelegraph",
-    "summary": "Data shows that BTC\u2019s \u201caverage annual returns have gradually declined, with no peaks at all in the last cycle, confirming the hypothesis that Bitcoin's risk/return structure has changed.\u201d",
-    "content_html": "",
-    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMDMvMDE5NTU2MjQtZDcxNy03ZjAwLWIwNzktNDZmNDljZDE4ODhj.jpg",
-    "summary_text": "Data shows that BTC\u2019s \u201caverage annual returns have gradually declined, with no peaks at all in the last cycle, confirming the hypothesis that Bitcoin's risk/return structure has changed.\u201d",
-    "category": "fintech",
-    "_permalink": "/p/d1678651ee/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/d1678651ee/",
-    "_summary_240": "Data shows that BTC\u2019s \u201caverage annual returns have gradually declined, with no peaks at all in the last cycle, confirming the hypothesis that Bitcoin's risk/return structure has...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/d1678651ee/thumbnail.png"
-  },
-  {
     "title": "Can AI program a robot dog?",
     "url": "https://www.youtube.com/watch?v=NGOAUJtdk-4",
     "published_at": "2025-11-12T15:14:24-05:00",
@@ -1331,13 +1333,17 @@
     "source": "Financial Times - Technology",
     "summary": "Tech giant aims to dismantle the \u2018Lighthouse Enterprise\u2019, which it claims has tricked 1mn victims out of $1bn",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/6ad01da8-678b-4b57-b651-d4376f2cd061.jpg",
     "summary_text": "Tech giant aims to dismantle the \u2018Lighthouse Enterprise\u2019, which it claims has tricked 1mn victims out of $1bn",
     "category": "software",
     "_trending_tags": [
       "ai",
       "google"
-    ]
+    ],
+    "_permalink": "/p/5f221631d7/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/5f221631d7/",
+    "_summary_240": "Tech giant aims to dismantle the \u2018Lighthouse Enterprise\u2019, which it claims has tricked 1mn victims out of $1bn",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/5f221631d7/thumbnail.png"
   },
   {
     "title": "Fighting the New York Times\u2019 invasion of user privacy",
@@ -1400,12 +1406,16 @@
     "source": "Financial Times - Technology",
     "summary": "There is widespread agreement on the need for action to cut red tape and raise investment to help boost the sector",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://images.ft.com/v3/image/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Fa00b1ee5-d8a0-45e8-a47d-bc083968ec1e.jpg?source=next-article&fit=scale-down&quality=highest&width=700&dpr=1",
     "summary_text": "There is widespread agreement on the need for action to cut red tape and raise investment to help boost the sector",
     "category": "fintech",
     "_trending_tags": [
       "ai"
-    ]
+    ],
+    "_permalink": "/p/77e0ecdbfb/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/77e0ecdbfb/",
+    "_summary_240": "There is widespread agreement on the need for action to cut red tape and raise investment to help boost the sector",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/77e0ecdbfb/thumbnail.png"
   },
   {
     "title": "What if the AI race isn\u2019t about chips at all?",
@@ -1414,12 +1424,16 @@
     "source": "Financial Times - Technology",
     "summary": "Availability of electricity to keep models running is becoming the critical factor in technology\u2019s development",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/fea2ba26-0558-4e58-b503-14bec3cec219.jpg",
     "summary_text": "Availability of electricity to keep models running is becoming the critical factor in technology\u2019s development",
     "category": "ai",
     "_trending_tags": [
       "ai"
-    ]
+    ],
+    "_permalink": "/p/d2b5218c04/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/d2b5218c04/",
+    "_summary_240": "Availability of electricity to keep models running is becoming the critical factor in technology\u2019s development",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/d2b5218c04/thumbnail.png"
   },
   {
     "title": "Baidu just dropped an open-source multimodal AI that it claims beats GPT-5 and Gemini",
@@ -1543,12 +1557,16 @@
     "source": "Financial Times - Technology",
     "summary": "Debt issued by groups building data centres has been hit in recent weeks",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/827f4ce4-1cc5-4413-bb7d-78c2a0b95428.jpg",
     "summary_text": "Debt issued by groups building data centres has been hit in recent weeks",
     "category": "ai",
     "_trending_tags": [
       "ai"
-    ]
+    ],
+    "_permalink": "/p/56a095404b/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/56a095404b/",
+    "_summary_240": "Debt issued by groups building data centres has been hit in recent weeks",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/56a095404b/thumbnail.png"
   },
   {
     "title": "Why Nvidia should be glad to see the back of SoftBank",
@@ -1557,13 +1575,17 @@
     "source": "Financial Times - Technology",
     "summary": "Thanks to the magical maths of AI, what the chipmaker loses on one hand it may gain with the other",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/c62c5c30-c3df-472c-875a-dff53cbb1262.jpg",
     "summary_text": "Thanks to the magical maths of AI, what the chipmaker loses on one hand it may gain with the other",
     "category": "fintech",
     "_trending_tags": [
       "ai",
       "nvidia"
-    ]
+    ],
+    "_permalink": "/p/bfaa3d8caa/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/bfaa3d8caa/",
+    "_summary_240": "Thanks to the magical maths of AI, what the chipmaker loses on one hand it may gain with the other",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/bfaa3d8caa/thumbnail.png"
   },
   {
     "title": "ClickFix may be the biggest security threat your family has never heard of",
@@ -1587,13 +1609,17 @@
     "source": "Financial Times - Technology",
     "summary": "Turing Award winner seeks to depart as Mark Zuckerberg makes \u2018superintelligence\u2019 push",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/3b0427c0-714e-4248-afb6-cebed4c90fb0.jpg",
     "summary_text": "Turing Award winner seeks to depart as Mark Zuckerberg makes \u2018superintelligence\u2019 push",
     "category": "ai",
     "_trending_tags": [
       "ai",
       "meta"
-    ]
+    ],
+    "_permalink": "/p/ed94f35e96/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/ed94f35e96/",
+    "_summary_240": "Turing Award winner seeks to depart as Mark Zuckerberg makes \u2018superintelligence\u2019 push",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/ed94f35e96/thumbnail.png"
   },
   {
     "title": "The Former Staffer Calling Out OpenAI\u2019s Erotica Claims",
@@ -1640,13 +1666,17 @@
     "source": "Financial Times - Technology",
     "summary": "Chief technology officer Sachin Katti\u2019s departure is latest blow to chipmaker as it struggles to compete",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://images.ft.com/v3/image/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Faa5310e7-51d6-4c0a-ac0e-e03798e65807.jpg?source=next-article&fit=scale-down&quality=highest&width=700&dpr=1",
     "summary_text": "Chief technology officer Sachin Katti\u2019s departure is latest blow to chipmaker as it struggles to compete",
     "category": "ai",
     "_trending_tags": [
       "ai",
       "openai"
-    ]
+    ],
+    "_permalink": "/p/70611bc6d3/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/70611bc6d3/",
+    "_summary_240": "Chief technology officer Sachin Katti\u2019s departure is latest blow to chipmaker as it struggles to compete",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/70611bc6d3/thumbnail.png"
   },
   {
     "title": "Researchers isolate memorization from problem-solving in AI neural networks",
