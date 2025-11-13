@@ -1,5 +1,135 @@
 [
   {
+    "title": "Bitcoin, Ethereum now operate in \u2018different monetary\u2019 universes: Data",
+    "url": "https://cointelegraph.com/news/bitcoin-ethereum-now-operate-in-different-monetary-universes-glassnode-keyrock?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "published_at": "2025-11-13T15:12:08-05:00",
+    "source": "Cointelegraph",
+    "summary": "Bitcoin is turning into a savings-focused asset while Ethereum is becoming a high-velocity utility engine, a split that some analysts say is an emerging structural risk.",
+    "content_html": "",
+    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMDcvMDE5ODQyMWQtNWQyNS03ZmZmLWIwMzMtNTVhZGNhNzhiODg0.jpg",
+    "summary_text": "Bitcoin is turning into a savings-focused asset while Ethereum is becoming a high-velocity utility engine, a split that some analysts say is an emerging structural risk.",
+    "category": "fintech",
+    "_permalink": "/p/3bde43d396/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/3bde43d396/",
+    "_summary_240": "Bitcoin is turning into a savings-focused asset while Ethereum is becoming a high-velocity utility engine, a split that some analysts say is an emerging structural risk.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/3bde43d396/thumbnail.png"
+  },
+  {
+    "title": "Google Debuts Private AI Compute System for Gemini Models",
+    "url": "https://www.pymnts.com/news/artificial-intelligence/2025/google-debuts-private-ai-compute-system-gemini-models/",
+    "published_at": "2025-11-13T15:08:32-05:00",
+    "source": "PYMNTS",
+    "summary": "Google introduced Private AI Compute, a new system that allows its Gemini models to process information in the cloud while keeping user data isolated and inaccessible to Google\u2019s own teams. The launch underscores a broader shift toward privacy-centric artificial intelligence infrastructure at a time when regulators and financial institutions are increasingly concerned about data [\u2026] The post Goog...",
+    "content_html": "<p><a class=\"editor-rtfLink\" href=\"https://www.google.com/\" rel=\"noopener\" target=\"_blank\"><span>Google</span></a><span> introduced </span><a class=\"editor-rtfLink\" href=\"https://blog.google/technology/ai/google-private-ai-compute/\" rel=\"noopener\" target=\"_blank\"><span>Private AI Compute</span></a><span>, a new system that allows its </span><a class=\"editor-rtfLink\" href=\"https://gemini.google.com/\" rel=\"noopener\" target=\"_blank\"><span>Gemini</span></a><span> models to process information in the cloud while keeping user data isolated and inaccessible to Google\u2019s own teams.</span></p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p><span>The launch underscores a broader shift toward privacy-centric artificial intelligence infrastructure </span><span>at a time when</span><span> regulators and financial institutions are increasingly concerned about data governance and third-party dependencies.</span></p>\n<h2><strong><span>Bridging Scale and Privacy</span></strong></h2>\n<p><span>Enterprises have long faced a trade-off between performance and control. On-device AI offers stronger privacy but limited power, while cloud-based AI provides scale at the expense of exposure. Google is attempting to bridge the two.</span></p>\n<p><span>The company said it built Private AI Compute \u201cto unlock the full speed and power of Gemini cloud models for AI experiences, while ensuring your personal data stays private to you and is not accessible to anyone else, not even Google.\u201d</span></p>\n<p><span>The technology brings computation closer to where data </span><span>is stored</span><span> rather than sending it into shared systems, and it initially applies to consumer products like Pixel devices. Features such as real-time transcription, summarization and contextual assistance will now use large-scale models in this protected environment. Although the company has not announced specific enterprise deployments, the same privacy architecture could support future use in regulated sectors that require verifiable data protection and compliance.</span></p>\n<p><a class=\"editor-rtfLink\" href=\"https://www.apple.com/\" rel=\"noopener\" target=\"_blank\"><span>Apple</span></a><span> already set a precedent with </span><a class=\"editor-rtfLink\" href=\"https://security.apple.com/blog/private-cloud-compute/\" rel=\"noopener\" target=\"_blank\"><span>Private Cloud Compute</span></a><span>, a cloud security framework that</span><span> handles sensitive processing on hardened servers designed so that personal user data \u201cisn\u2019t accessible to anyone other than the user, not even to Apple.\u201d Private Cloud Compute </span><span>is built</span><span> to extend \u201cthe industry-leading security and privacy of Apple devices into the cloud.\u201d</span></p>\n<h2><strong><span>Infrastructure and Regulatory Pressures</span></strong></h2>\n<p><span>The surge in AI demand has given rise to </span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/artificial-intelligence-2/2025/ai-demand-is-fueling-the-rise-of-neoclouds/\" rel=\"noopener\" target=\"_blank\"><span>neoclouds</span></a><span>, such as </span><a class=\"editor-rtfLink\" href=\"https://www.coreweave.com/\" rel=\"noopener\" target=\"_blank\"><span>CoreWeave</span></a><span> and </span><a class=\"editor-rtfLink\" href=\"https://www.crusoe.ai/\" rel=\"noopener\" target=\"_blank\"><span>Crusoe</span></a><span>, which specialize in GPU-dense infrastructure for training and inference workloads. The next competitive frontier is </span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/artificial-intelligence-2/2025/why-inference-infrastructure-is-the-next-big-layer-in-the-gen-ai-stack/\" rel=\"noopener\" target=\"_blank\"><span>inference infrastructure</span></a><span>, the layer that delivers real-time responses from trained models.</span></p>\n<p><span>\u201cThe future of artificial intelligence is not just about how intelligent AI models can become,\u201d PYMNTS reported Sept. 22. \u201cIt is about how reliably and efficiently </span><span>they can be served</span><span> at scale.\u201d</span></p>\n<p><span>Private AI Compute </span><span>fits within</span><span> this shift by </span><span>offering</span><span> large-model performance with built-in privacy assurances.</span></p>\n<p><span>Financial regulators are watching these developments closely. The </span><a class=\"editor-rtfLink\" href=\"https://www.fsb.org/\" rel=\"noopener\" target=\"_blank\"><span>Financial Stability Board</span></a><span> and the </span><a class=\"editor-rtfLink\" href=\"https://www.bis.org/\" rel=\"noopener\" target=\"_blank\"><span>Bank for International Settlements</span></a><span> warned that financial institutions may become too dependent on too few third-party service providers that help develop and deploy </span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/artificial-intelligence-2/2025/fsb-and-bis-warn-financial-authorities-about-potential-risks-of-ai/\" rel=\"noopener\" target=\"_blank\"><span>generative AI</span></a><span> applications. They cited other vulnerabilities, including market correlations, cyber risks and challenges in model risk and governance. Oversight remains at an early stage and </span><span>is constrained</span><span> by limited data and inconsistent monitoring.</span></p>\n<h2><strong><span>Privacy as a Counterbalance</span></strong></h2>\n<p><span>Google\u2019s consumer rollout does not directly address these regulatory concerns, but its architecture illustrates how large-scale AI could evolve </span><span>in ways that</span><span> limit data exposure. In principle, private compute environments could help banks and insurers run sensitive analytics or compliance models while maintaining data custody. Healthcare and retail applications could follow similar logic, enabling organizations to deploy advanced models without moving personal or proprietary data into general-purpose cloud environments.</span></p>\n<p><span>Google said the system relies on custom </span><a class=\"editor-rtfLink\" href=\"https://cloud.google.com/tpu\" rel=\"noopener\" target=\"_blank\"><span>Tensor Processing Units</span></a><span>, hardware isolation and remote attestation to verify that data remains secure during processing.</span></p>\n<p><span>For now, Google\u2019s privacy framework applies primarily to consumer products, but it lays the groundwork for more transparent, verifiable AI operations. Privacy-first computation </span><span>is increasingly seen</span><span> as a baseline requirement for systems that handle personal, financial or regulatory data.</span></p>\n<p><em>For all PYMNTS AI coverage, subscribe to the daily </em><a href=\"https://pymnts.com/subscribe/\" rel=\"noopener\" target=\"_blank\"><em>AI Newsletter</em></a><em>.</em></p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/news/artificial-intelligence/2025/google-debuts-private-ai-compute-system-gemini-models/\">Google Debuts Private AI Compute System for Gemini Models</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
+    "image_url": "https://www.pymnts.com/wp-content/uploads/2024/09/Google.jpg?w=457",
+    "summary_text": "Google introduced Private AI Compute, a new system that allows its Gemini models to process information in the cloud while keeping user data isolated and inaccessible to Google\u2019s own teams. The launch underscores a broader shift toward privacy-centric artific...",
+    "category": "ai",
+    "_trending_tags": [
+      "ai",
+      "cloud",
+      "google"
+    ],
+    "_permalink": "/p/24cffcbb85/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/24cffcbb85/",
+    "_summary_240": "Google introduced Private AI Compute, a new system that allows its Gemini models to process information in the cloud while keeping user data isolated and inaccessible to Google\u2019s...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/24cffcbb85/thumbnail.png"
+  },
+  {
+    "title": "Anthropic details how it measures Claude\u2019s wokeness",
+    "url": "https://www.theverge.com/news/819216/anthropic-claude-political-even-handedness-woke-ai",
+    "published_at": "2025-11-13T15:00:00-05:00",
+    "source": "The Verge",
+    "summary": "Anthropic is detailing its efforts to make its Claude AI chatbot \u201cpolitically even-handed\u201d \u2014 a move that comes just months after President Donald Trump issued a ban on \u201cwoke AI.\u201d As outlined in a new blog post, Anthropic says it wants Claude to \u201ctreat opposing political viewpoints with equal depth, engagement, and quality of analysis.\u201d [\u2026]",
+    "content_html": "<figure>\n\n<img alt=\"\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/11/STK414_AI_CVIRGINIA_2_C.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100\" />\n\t<figcaption>\n\t\t</figcaption>\n</figure>\n<p class=\"has-text-align-none\">Anthropic is detailing its efforts to make its Claude AI chatbot \u201cpolitically even-handed\u201d \u2014 a move that comes just months after <a href=\"https://www.theverge.com/policy/713222/trump-woke-ai-executive-order-chatbots-llms\">President Donald Trump issued a ban</a> on \u201cwoke AI.\u201d As outlined in a new blog post, Anthropic says it wants Claude to \u201ctreat opposing political viewpoints with equal depth, engagement, and quality of analysis.\u201d</p>\n\n<p class=\"has-text-align-none\">In July, Trump signed an executive order that says the government should only procure \u201cunbiased\u201d and \u201ctruth-seeking\u201d AI models. Though this order only applies to government agencies, the changes companies make in response will likely trickle down to widely released AI models, since \u201crefining models in a way that consistently and predictably aligns them in certain directions can be an expensive and time-consuming process,\u201d <a href=\"https://www.theverge.com/policy/713222/trump-woke-ai-executive-order-chatbots-llms\">as noted by my colleague Adi Robertson</a>. Last month, <a href=\"https://www.theverge.com/news/798388/openai-chatgpt-political-bias-eval\">OpenAI similarly said it would \u201cclamp down\u201d on bias</a> in ChatGPT.</p>\n\n<p class=\"has-text-align-none\">Anthropic doesn\u2019t mention Trump\u2019s order in its press release, but it says it has instructed Claude to adhere to a series of rules \u2014 called a system prompt \u2014 that direct it to avoid providing \u201cunsolicited political opinions.\u201d It\u2019s also supposed to maintain factual accuracy and represent \u201cmultiple perspectives.\u201d Anthropic says that while including these instructions in Claude\u2019s system prompt \u201cis not a foolproof method\u201d to ensure political neutrality, it can still make a \u201csubstantial difference\u201d in its responses.</p>\n\n<p class=\"has-text-align-none\">Additionally, the AI startup describes how it uses reinforcement learning \u201cto reward the model for producing responses that are closer to a set of pre-defined \u2018traits.\u2019\u201d One of the desired \u201ctraits\u201d given to Claude encourages the model to \u201ctry to answer questions in such a way that someone could neither identify me as being a conservative nor liberal.&#8221;</p>\n<img alt=\"\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/11/anthropic-political-even-handedness.png?quality=90&#038;strip=all&#038;crop=0,0,100,100\" title=\"\" />\n<p class=\"has-text-align-none\">Anthropic also announced that it has created an open-source tool that measures Claude\u2019s responses for political neutrality, with its most recent test showing Claude Sonnet 4.5 and Claude Opus 4.1 garnering respective scores of 95 and 94 percent in even-handedness. That\u2019s higher than Meta\u2019s Llama 4 at 66 percent and GPT-5 at 89 percent, according to Anthropic.</p>\n\n<p class=\"has-text-align-none\">\u201cIf AI models unfairly advantage certain views \u2014 perhaps by overtly or subtly arguing more persuasively for one side, or by refusing to engage with some arguments altogether \u2014 they fail to respect the user\u2019s independence, and they fail at the task of assisting users to form their own judgments,\u201d Anthropic writes in its blog post.</p>",
+    "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/11/STK414_AI_CVIRGINIA_2_C.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "summary_text": "Anthropic is detailing its efforts to make its Claude AI chatbot \u201cpolitically even-handed\u201d \u2014 a move that comes just months after President Donald Trump issued a ban on \u201cwoke AI.\u201d As outlined in a new blog post, Anthropic says it wants Claude to \u201ctreat opposin...",
+    "category": "ai",
+    "_trending_tags": [
+      "ai",
+      "anthropic",
+      "claude"
+    ],
+    "_permalink": "/p/4877fb815a/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/4877fb815a/",
+    "_summary_240": "Anthropic is detailing its efforts to make its Claude AI chatbot \u201cpolitically even-handed\u201d \u2014 a move that comes just months after President Donald Trump issued a ban on \u201cwoke AI.\u201d...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/4877fb815a/thumbnail.png"
+  },
+  {
+    "title": "Japanese Chip Sector\u2019s Earnings Show AI Appetite, Auto Slump",
+    "url": "https://www.bloomberg.com/news/articles/2025-11-13/japanese-chip-sector-s-earnings-show-ai-appetite-auto-slump",
+    "published_at": "2025-11-13T15:00:00-05:00",
+    "source": "Bloomberg Technology",
+    "summary": "Artificial intelligence fueled a stronger-than-expected earnings season for Japan\u2019s tech sector, with surging data-center demand prompting chipmakers and equipment suppliers to raise forecasts.",
+    "content_html": "Employees work at a wafer fabrication factory in Hitachinaka, Ibaraki prefecture, Japan.",
+    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/imu5BBzdKlXU/v1/1200x-1.jpg",
+    "summary_text": "Artificial intelligence fueled a stronger-than-expected earnings season for Japan\u2019s tech sector, with surging data-center demand prompting chipmakers and equipment suppliers to raise forecasts.",
+    "category": "ai",
+    "_trending_tags": [
+      "ai"
+    ],
+    "_permalink": "/p/517838c70a/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/517838c70a/",
+    "_summary_240": "Artificial intelligence fueled a stronger-than-expected earnings season for Japan\u2019s tech sector, with surging data-center demand prompting chipmakers and equipment suppliers to...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/517838c70a/thumbnail.png"
+  },
+  {
+    "title": "UK risks falling behind US, EU without GBP stablecoin: Fintech exec",
+    "url": "https://cointelegraph.com/news/uk-falling-behind-countries-gbp-stablecoin?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "published_at": "2025-11-13T14:59:16-05:00",
+    "source": "Cointelegraph",
+    "summary": "The British pound needs digital rails to remain competitive with the dollar and euro as the world shifts to onchain and internet-native finance.",
+    "content_html": "",
+    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTEvMDE5YTdlNzMtMDhmYS03YTFiLThkMmUtZGViZDRhOTg4NjY3.jpg",
+    "summary_text": "The British pound needs digital rails to remain competitive with the dollar and euro as the world shifts to onchain and internet-native finance.",
+    "category": "fintech",
+    "_trending_tags": [
+      "ai",
+      "fintech"
+    ],
+    "_permalink": "/p/131977c413/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/131977c413/",
+    "_summary_240": "The British pound needs digital rails to remain competitive with the dollar and euro as the world shifts to onchain and internet-native finance.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/131977c413/thumbnail.png"
+  },
+  {
+    "title": "Apple will take a mini commission from mini app developers",
+    "url": "https://www.theverge.com/news/820486/apple-mini-app-developers-commission",
+    "published_at": "2025-11-13T14:58:25-05:00",
+    "source": "The Verge",
+    "summary": "Apple is launching a new program for mini app developers that slashes its fees for in-app purchases. On Thursday, the company announced that mini app creators who join the program take advantage of a lower 15 percent commission rate \u2014 half of the up to 30 percent rate Apple charges other developers. Apple describes mini [\u2026]",
+    "content_html": "<figure>\n\n<img alt=\"\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/STK071_APPLE_D.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100\" />\n\t<figcaption>\n\t\t</figcaption>\n</figure>\n<p class=\"has-text-align-none\">Apple is launching a new program for mini app developers that slashes its fees for in-app purchases. On Thursday, <a href=\"https://developer.apple.com/news/?id=xcz1s7cz\">the company announced</a> that mini app creators who <a href=\"https://developer.apple.com/programs/mini-apps-partner/\">join the program</a> take advantage of a lower 15 percent commission rate \u2014 half of the up to 30 percent rate Apple charges other developers.</p>\n\n<p class=\"has-text-align-none\">Apple describes mini apps as \u201cself-contained experiences\u201d built using HTML5 and JavaScript that exist within another app. The format has become <a href=\"https://www.bbc.com/news/business-55929418\">popular in China</a>, where apps like the Tencent-owned WeChat have built-in services for ride-hailing, food delivery, payments, and more. <a href=\"https://www.theverge.com/2024/11/18/24299536/telegram-mini-apps-update-2-super-app\">Telegram</a> and <a href=\"https://www.theverge.com/2024/3/12/24098262/discord-embedded-apps-games-sdk-developers\">Discord</a> similarly offer mini apps, while <a href=\"https://www.theverge.com/2020/6/11/21286537/snap-minis-snapchat-partner-summit-2020-announcements\">Snapchat</a> and <a href=\"https://www.socialmediatoday.com/news/tiktok-moves-closer-testing-mini-apps-in-stream/734492/\">TikTok have also experimented</a> with them.</p>\n\n<p class=\"has-text-align-none\">The news of the program comes just hours after <a href=\"https://www.bloomberg.com/news/articles/2025-11-13/apple-and-tencent-agree-to-15-fee-on-wechat-mini-game-purchases\">Apple reached an agreement</a> with Tencent, allowing it to take a 15 percent commission on purchases from WeChat\u2019s mini apps. Part of the Department of Justice\u2019s antitrust lawsuit against Apple accuses the company <a href=\"https://www.theverge.com/2024/3/21/24107633/apple-streaming-super-apps-doj-lawsuit\">of stifling super apps</a>, or apps that offer a range of services (or mini apps) on a single platform. This move may help lessen that antitrust pressure.</p>\n\n<p class=\"has-text-align-none\">Apple says its new program will help \u201cdevelopers who host mini apps grow their business and further the availability of mini apps on the App Store.\u201d</p>",
+    "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/STK071_APPLE_D.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "summary_text": "Apple is launching a new program for mini app developers that slashes its fees for in-app purchases. On Thursday, the company announced that mini app creators who join the program take advantage of a lower 15 percent commission rate \u2014 half of the up to 30 per...",
+    "category": "software",
+    "_trending_tags": [
+      "apple"
+    ],
+    "_permalink": "/p/81608826b1/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/81608826b1/",
+    "_summary_240": "Apple is launching a new program for mini app developers that slashes its fees for in-app purchases. On Thursday, the company announced that mini app creators who join the...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/81608826b1/thumbnail.png"
+  },
+  {
+    "title": "Hackers use Anthropic\u2019s AI model Claude once again",
+    "url": "https://www.theverge.com/news/820458/hackers-china-ai-anthropic-claude",
+    "published_at": "2025-11-13T14:47:39-05:00",
+    "source": "The Verge",
+    "summary": "Anthropic announced on Thursday that Chinese state-backed hackers used the company\u2019s AI model Claude to automate roughly 30 attacks on corporations and governments during a September campaign, according to reporting from the Wall Street Journal. Anthropic said that up to 80% to 90% of the attack was automated with AI, a level higher than previous [\u2026]",
+    "content_html": "<figure>\n\n<img alt=\"\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/STKB364_CLAUDE_A.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100\" />\n\t<figcaption>\n\t\t</figcaption>\n</figure>\n<p class=\"has-text-align-none\">Anthropic announced on Thursday that Chinese state-backed hackers used the company\u2019s AI model Claude to automate roughly 30 attacks on corporations and governments during a September campaign, according to <a href=\"https://www.wsj.com/tech/ai/china-hackers-ai-cyberattacks-anthropic-41d7ce76\">reporting from the <em>Wall Street Journal</em></a>.</p>\n\n<p class=\"has-text-align-none\">Anthropic said that up to 80% to 90% of the attack was automated with AI, a level higher than previous hacks. It occurred \u201cliterally with the click of a button, and then with minimal human interaction,\u201d Anthropic\u2019s head of threat intelligence Jacob Klein told the <em>Journal</em>. He added: \u201cThe human was only involved in a few critical chokepoints, saying, \u2018Yes, continue,\u2019 \u2018Don\u2019t continue,\u2019 \u2018Thank you for this information,\u2019 \u2018Oh, that doesn\u2019t look right, Claude, are you sure?\u2019\u201d&nbsp;</p>\n\n<p class=\"has-text-align-none\">AI-powered hacking is <a href=\"https://www.theverge.com/2024/2/14/24072706/microsoft-openai-cyberattack-tools-ai-chatgpt\">increasingly common</a>, and so is the latest strategy to use AI to tack together the various tasks necessary for a successful attack. Google spotted Russian hackers using large-language models to generate commands for their malware, according to a <a href=\"https://cloud.google.com/blog/topics/threat-intelligence/threat-actor-usage-of-ai-tools\">company report</a> released on November 5th.\u00a0</p>\n\n<p class=\"has-text-align-none\">For years, the US government has <a href=\"https://www.wsj.com/tech/ai/china-is-stealing-ai-secrets-to-turbocharge-spying-u-s-says-00413594?mod=article_inline\">warned that China was using AI</a> to steal data of American citizens and companies, which China has denied. Anthropic told the <em>Journal</em> that it is confident the hackers were sponsored by the Chinese government. In this campaign, the hackers stole sensitive data from four victims, but as with <a href=\"https://www.theverge.com/ai-artificial-intelligence/766435/anthropic-claude-threat-intelligence-report-ai-cybersecurity-hacking\">previous hacks</a>, Anthropic did not disclose the names of the targets, successful or unsuccessful. The company did say that the US government was not a successful target.</p>",
+    "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/STKB364_CLAUDE_A.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "summary_text": "Anthropic announced on Thursday that Chinese state-backed hackers used the company\u2019s AI model Claude to automate roughly 30 attacks on corporations and governments during a September campaign, according to reporting from the Wall Street Journal. Anthropic sai...",
+    "category": "ai",
+    "_trending_tags": [
+      "ai",
+      "anthropic",
+      "claude"
+    ],
+    "_permalink": "/p/170f9cac3d/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/170f9cac3d/",
+    "_summary_240": "Anthropic announced on Thursday that Chinese state-backed hackers used the company\u2019s AI model Claude to automate roughly 30 attacks on corporations and governments during a...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/170f9cac3d/thumbnail.png"
+  },
+  {
     "title": "BNY launches money market fund to hold reserves for US stablecoin issuers",
     "url": "https://cointelegraph.com/news/bny-stablecoin-reserves-fund-to-support-regulated-us-issuers?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
     "published_at": "2025-11-13T14:18:26-05:00",
@@ -123,6 +253,21 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/0486ec38ee/",
     "_summary_240": "The post The next phase of Aurora: Open and collaborative AI for weather and climate forecasting appeared first on Source .",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/0486ec38ee/thumbnail.png"
+  },
+  {
+    "title": "Bitcoin Diehard Jack Dorsey Leans Into Stablecoin-Payments Boom",
+    "url": "https://www.bloomberg.com/news/articles/2025-11-13/bitcoin-diehard-jack-dorsey-succumbs-to-stablecoin-payments-boom",
+    "published_at": "2025-11-13T13:30:31-05:00",
+    "source": "Bloomberg Technology",
+    "summary": "Jack Dorsey is capitulating to the rise of regulated digital dollars. The Bitcoin maximalist who long argued the cryptocurrency could anchor everyday payments is now steering Block Inc.\u2019s Cash App to support stablecoins, marking a sharp break for a company that built its crypto identity around Bitcoin purity.",
+    "content_html": "Jack Dorsey",
+    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/i0X_5leD.E9E/v1/1200x-1.jpg",
+    "summary_text": "Jack Dorsey is capitulating to the rise of regulated digital dollars. The Bitcoin maximalist who long argued the cryptocurrency could anchor everyday payments is now steering Block Inc.\u2019s Cash App to support stablecoins, marking a sharp break for a company th...",
+    "category": "fintech",
+    "_permalink": "/p/14bfd04cbe/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/14bfd04cbe/",
+    "_summary_240": "Jack Dorsey is capitulating to the rise of regulated digital dollars. The Bitcoin maximalist who long argued the cryptocurrency could anchor everyday payments is now steering...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/14bfd04cbe/thumbnail.png"
   },
   {
     "title": "Upwork study shows AI agents excel with human partners but fail independently",
@@ -312,24 +457,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/2ba7057713/thumbnail.png"
   },
   {
-    "title": "World Labs is betting on \u2018world generation\u2019 as the next AI frontier",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/820016/world-labs-is-betting-on-world-generation-as-the-next-ai-frontier",
-    "published_at": "2025-11-13T12:16:25-05:00",
-    "source": "The Verge",
-    "summary": "In recent years, we've seen generative AI move quickly through different eras: chatbots, image-generation, voice, video-generation, and more. But Dr. Fei-Fei Li, longtime AI pioneer and co-director of Stanford's Institute for Human-Centered Artificial Intelligence (HAI), is staking out what she thinks is the next frontier: spatial intelligence, a nascent field that she believes is the [\u2026]",
-    "content_html": "<figure>\n\n<img alt=\"\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/11/Screenshot-2025-11-13-at-11.35.40%E2%80%AFAM.png?quality=90&#038;strip=all&#038;crop=0,0,100,100\" />\n\t<figcaption>\n\t\t</figcaption>\n</figure>\n<p class=\"has-text-align-none\">In recent years, we've seen generative AI move quickly through different eras: chatbots, image-generation, voice, video-generation, and more. But Dr. Fei-Fei Li, longtime AI pioneer and co-director of Stanford's Institute for Human-Centered Artificial Intelligence (HAI), is staking out what she thinks is the next frontier: spatial intelligence, a nascent field that she believes is the \"defining challenge of the next decade,\" as she wrote in a Substack <a href=\"https://drfeifei.substack.com/p/from-words-to-worlds-spatial-intelligence\">post</a> this week.</p>\n<p class=\"has-text-align-none\">That's why Li co-founded World Labs in 2024 - and raised $230 million last fall - to build world models, or generative AI models that can \"perceive, generate, reason, and inter \u2026</p>\n<p><a href=\"https://www.theverge.com/ai-artificial-intelligence/820016/world-labs-is-betting-on-world-generation-as-the-next-ai-frontier\">Read the full story at The Verge.</a></p>",
-    "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/11/Screenshot-2025-11-13-at-11.35.40%E2%80%AFAM.png?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "summary_text": "In recent years, we've seen generative AI move quickly through different eras: chatbots, image-generation, voice, video-generation, and more. But Dr. Fei-Fei Li, longtime AI pioneer and co-director of Stanford's Institute for Human-Centered Artificial Intelli...",
-    "category": "ai",
-    "_trending_tags": [
-      "ai"
-    ],
-    "_permalink": "/p/9334251469/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/9334251469/",
-    "_summary_240": "In recent years, we've seen generative AI move quickly through different eras: chatbots, image-generation, voice, video-generation, and more. But Dr. Fei-Fei Li, longtime AI...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/9334251469/thumbnail.png"
-  },
-  {
     "title": "AI concentration does not breed strength",
     "url": "https://www.ft.com/content/7da7039f-e076-480d-8786-7f0e1ce6df8a",
     "published_at": "2025-11-13T12:10:45-05:00",
@@ -500,24 +627,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/ece0b488c6/thumbnail.png"
   },
   {
-    "title": "Apple and Tencent Reach WeChat Payments Agreement",
-    "url": "https://www.pymnts.com/apple/2025/apple-tencent-reach-wechat-payments-agreement/",
-    "published_at": "2025-11-13T09:41:07-05:00",
-    "source": "PYMNTS",
-    "summary": "Apple reportedly reached a payments agreement with Chinese tech giant Tencent. The new arrangement will see Apple handle payments and take a 15% cut of purchases of mini games and apps from Tencent\u2019s WeChat social media platform, Bloomberg reported Thursday (Nov. 13), citing unnamed sources. The two sides had been negotiating the issue for [\u2026] The post Apple and Tencent Reach WeChat Payments Agre...",
-    "content_html": "<p><a class=\"editor-rtfLink\" href=\"https://www.apple.com/\" rel=\"noopener\" target=\"_blank\"><span>Apple</span></a><span> reportedly reached a payments agreement with Chinese tech giant </span><a class=\"editor-rtfLink\" href=\"https://www.tencent.com/\" rel=\"noopener\" target=\"_blank\"><span>Tencent</span></a><span>.</span></p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p><span>The new arrangement will see Apple handle payments and take a 15% cut of purchases of mini games and apps from Tencent\u2019s </span><a class=\"editor-rtfLink\" href=\"https://www.wechat.com/\" rel=\"noopener\" target=\"_blank\"><span>WeChat</span></a><span> social media platform, Bloomberg </span><a class=\"editor-rtfLink\" href=\"https://www.bloomberg.com/news/articles/2025-11-13/apple-and-tencent-agree-to-15-fee-on-wechat-mini-game-purchases\" rel=\"noopener\" target=\"_blank\"><span>reported</span></a><span> Thursday (Nov. 13), citing unnamed sources.</span></p>\n<p><span>The two sides had been negotiating the issue for more than a year, according to the report. The arrangement gives Apple a new revenue stream and relieves pressure on Tencent. Apple had pushed the company to </span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/apple/2024/report-apple-tells-wechat-parent-tencent-to-eliminate-payment-loopholes/\" rel=\"noopener\" target=\"_blank\"><span>eliminate a loophole</span></a><span> that let app creators send users to outside payment systems to get around the standard 30% iPhone commission.</span></p>\n<p><span>Developers who wish to qualify will need to agree to Apple software requirements, like one to help parents share their child\u2019s age range, the report said.</span></p>\n<p><span>Neither Apple nor Tencent replied to PYMNTS\u2019 request for comment.</span></p>\n<p><span>While the 15% agreement means Apple is halving </span><span>its</span><span> standard fee </span><span>charged to</span><span> developers for in-app purchases, the report said </span><span>this</span><span> is a sign of the company\u2019s progress </span><span>within</span><span> the Chinese entertainment sector.</span><span> More than 1 billion people use WeChat, and the mini games drove $4.5 billion in revenue for Tencent in its latest quarter.</span></p>\n<p><span>The company said last year it was in discussions with Apple about a </span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/mobile-applications/2024/tencent-may-share-mini-game-revenue-with-apple/\" rel=\"noopener\" target=\"_blank\"><span>revenue-sharing</span></a><span> agreement </span><span>related to</span><span> the games.</span></p>\n<p><span>The apparent agreement came weeks after Apple was </span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/apple/2025/antitrust-lawsuit-in-china-targets-apple-policies-on-app-distribution-and-payments/\" rel=\"noopener\" target=\"_blank\"><span>sued in China</span></a><span> over its policies around app distribution and payments.</span></p>\n<p><span>The complaint came from a group of 55 Chinese iPhone and iPad users who alleged that Apple abuses its dominant market position by requiring that iOS apps be distributed and payments be made on its platform and by charging commissions of as much as 30%.</span></p>\n<p><span>The attorney who filed the suit, Wang Qiongfei, leveled a similar case against Apple in 2021. That action was dismissed last year and is now under appeal before China\u2019s Supreme People\u2019s Court.</span></p>\n<p><span>Apple\u2019s app store policies have been the target of </span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/cpi-posts/apple-faces-new-eu-antitrust-complaint-over-app-store-practices/\" rel=\"noopener\" target=\"_blank\"><span>antitrust cases</span></a><span> around the world, with the payments it receives representing a major source of revenue.</span></p>\n<p><span>\u201cIn another example of how big this business is, Apple said that </span><a class=\"editor-rtfLink\" href=\"https://www.apple.com/app-store/\" rel=\"noopener\" target=\"_blank\"><span>App Store</span></a><span> developer </span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/apple/2025/will-apples-services-momentum-be-blunted-by-new-epic-app-store-ruling/\" rel=\"noopener\" target=\"_blank\"><span>billings</span></a><span> were $1.1 trillion in 2022, and said that more than 90% of that accrued to the developers \u2018without any commission paid to Apple,\u2019\u201d PYMNTS reported in May.</span></p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/apple/2025/apple-tencent-reach-wechat-payments-agreement/\">Apple and Tencent Reach WeChat Payments Agreement</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
-    "image_url": "https://www.pymnts.com/wp-content/uploads/2024/08/Apple.jpg?w=457",
-    "summary_text": "Apple reportedly reached a payments agreement with Chinese tech giant Tencent. The new arrangement will see Apple handle payments and take a 15% cut of purchases of mini games and apps from Tencent\u2019s WeChat social media platform, Bloomberg reported Thursday (...",
-    "category": "fintech",
-    "_trending_tags": [
-      "apple"
-    ],
-    "_permalink": "/p/0f818f70b0/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/0f818f70b0/",
-    "_summary_240": "Apple reportedly reached a payments agreement with Chinese tech giant Tencent. The new arrangement will see Apple handle payments and take a 15% cut of purchases of mini games...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/0f818f70b0/thumbnail.png"
-  },
-  {
     "title": "How Brazil is training 5 million learners to work with AI by 2027",
     "url": "https://news.microsoft.com/source/latam/features/ai/microsoft-ai-courses-brazil/?lang=en",
     "published_at": "2025-11-13T09:10:33-05:00",
@@ -552,29 +661,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/6e7bf4c77c/",
     "_summary_240": "The FT\u2019s John Thornhill and Eleanor Olcott replied to reader questions",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/6e7bf4c77c/thumbnail.png"
-  },
-  {
-    "title": "How MCP Turns Passive AI Assistants Into Active Enterprise Agents",
-    "url": "https://www.pymnts.com/artificial-intelligence-2/2025/how-mcp-turns-passive-ai-assistants-into-active-enterprise-agents/",
-    "published_at": "2025-11-13T09:00:55-05:00",
-    "source": "PYMNTS",
-    "summary": "The Model Context Protocol, or MCP, is an open standard introduced by Anthropic in late 2024 to make artificial intelligence (AI) systems more useful in real-world business settings. At its core, MCP allows AI models such as Claude, ChatGPT or Gemini to securely connect to business tools, databases and workflows. This foundational integration layer [\u2026] The post How MCP Turns Passive AI Assistants...",
-    "content_html": "<p><span>The </span><a class=\"editor-rtfLink\" href=\"https://modelcontextprotocol.io/\" rel=\"noopener\" target=\"_blank\"><span>Model Context Protocol</span></a><span>,</span><span> or </span><span>MCP</span><span>, is an open standard </span><a class=\"editor-rtfLink\" href=\"https://www.anthropic.com/news/model-context-protocol\" rel=\"noopener\" target=\"_blank\"><span>introduced</span></a><span> by </span><a class=\"editor-rtfLink\" href=\"https://www.anthropic.com/\" rel=\"noopener\" target=\"_blank\"><span>Anthropic</span></a><span> in late 2024 to make artificial intelligence (AI) systems more useful in real-world business settings</span><span>.</span><span> At its core, MCP allows AI models such as Claude, ChatGPT or Gemini </span><span>to securely connect to business tools, databases and workflows</span><span>. </span></p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p><span>This foundational integration layer allows AI to move beyond generating passive insights and become an active enterprise agent that retrieves live operational data, updates records, and performs actions within approved systems.</span></p>\n<p><span>Before MCP, connections between an AI system and a business application </span><span>often</span><span> had to be </span><span>custom built</span><span>.</span><span> A developer might need one integration for Salesforce, another for Slack </span><span>and</span><span> another for a legacy database, which made adoption costly and slow. According to </span><a class=\"editor-rtfLink\" href=\"https://cloud.google.com/\" rel=\"noopener\" target=\"_blank\"><span>Google Cloud</span></a><span>, MCP uses a </span><a class=\"editor-rtfLink\" href=\"https://cloud.google.com/discover/what-is-model-context-protocol\" rel=\"noopener\" target=\"_blank\"><span>simple structure</span></a><span>: A host runs the AI model, a client acts as the intermediary </span><span>and</span><span> a server exposes the data or tools the model needs. This approach allows companies to connect AI models to live data without rewriting code for every use case.</span></p>\n<p><span>Moody\u2019s </span><a class=\"editor-rtfLink\" href=\"https://www.moodys.com/web/en/us/creditview/blog/demystifying-mcp.html\" rel=\"noopener\" target=\"_blank\"><span>described MCP</span></a><span> as \u201cthe foundational layer for enterprise AI connectivity,\u201d noting that its use in regulated industries will depend on clear audit trails, governance </span><span>and</span><span> real-time controls. Anthropic called it \u201ca standard way to connect AI models to the tools and data they need,\u201d and early adopters include software and financial institutions seeking more reliable enterprise AI deployment.</span></p>\n<h2>Why MCP Matters</h2>\n<p><span>Modern AI models are great at generating text and insights </span><span>but</span><span> generally cannot act on live data. A customer-service chatbot, for example, can explain how to reset a password but cannot perform that action because it lacks secure, structured access to internal systems.</span></p>\n<p><span>MCP solves that problem by giving AI systems a way to request and perform actions </span><span>such</span><span> as retrieving information, updating records </span><span>or</span><span> triggering workflows </span><span>within</span><span> approved security boundaries.</span><span> It allows AI to move from being a passive assistant to an active helper.</span></p>\n<p><span>In </span><a class=\"editor-rtfLink\" href=\"https://www.anthropic.com/engineering/code-execution-with-mcp?utm_source=chatgpt.com\" rel=\"noopener\" target=\"_blank\"><span>Anthropic\u2019s engineering blog</span></a><span>,</span><span> engineers demonstrate how MCP </span><span>lets</span><span> models safely run code on behalf of users, enabling direct execution of tasks within secure, sandboxed environments.</span><span> In an enterprise setting, this could mean an AI assistant pulling the latest sales data or summarizing a client report. In healthcare, an AI agent might retrieve lab results or send follow-up reminders without exposing patient files.</span></p>\n<p><span>Google Cloud </span><span>explained</span><span> that MCP bridges static, trained knowledge and live operational data. Instead of relying solely on training information, models can now access real-time data from business </span><span>systems in</span><span> sectors such as finance, logistics and healthcare, where accuracy and timeliness are essential.</span></p>\n<h2>How AWS and Enterprises Use MCP</h2>\n<p><span>Amazon Web Services</span><span>\u00a0(AWS) is among the cloud providers </span><a class=\"editor-rtfLink\" href=\"https://aws.amazon.com/blogs/machine-learning/unlocking-the-power-of-model-context-protocol-mcp-on-aws/\" rel=\"noopener\" target=\"_blank\"><span>integrating MCP</span></a><span> to make AI more functional in enterprise settings. In its guidance, AWS outlined how MCP servers act as consistent interfaces to services such as Amazon S3, Amazon RDS </span><span>and</span><span> enterprise application programming interfaces (APIs). </span></p>\n<p><span>Developers are already applying MCP within tools like </span><a class=\"editor-rtfLink\" href=\"https://aws.amazon.com/blogs/devops/use-model-context-protocol-with-amazon-q-developer-for-context-aware-ide-workflows/\" rel=\"noopener\" target=\"_blank\"><span>Amazon</span><span> Q </span><span>Developer</span></a><span>,</span><span> where MCP connects AI assistants to project files, issue trackers </span><span>and</span><span> design systems.</span><span> This enables context-aware software development and simplifies multi-tool workflows.</span></p>\n<p><span>In financial services, MCP can connect AI systems to internal databases, compliance dashboards </span><span>and</span><span> risk models. </span><span>For example, a compliance officer could ask, \u201cShow me all transactions over $10,000 flagged this week,\u201d and the AI assistant could retrieve that data </span><span>through MCP</span><span> directly from a secure database.</span><span> Because the protocol supports authentication, permissions </span><span>and</span><span> logging, those actions can be monitored for audit and risk control.</span></p>\n<h2>Enterprise Example From Retail</h2>\n<p><span>A clear illustration of MCP\u2019s potential comes from </span><a href=\"https://www.walmart.com/\" rel=\"noopener\" target=\"_blank\"><span>Walmart</span></a><span>,</span><span> which recently overhauled its approach to AI agents, <a href=\"https://www.wsj.com/articles/why-walmart-is-overhauling-its-approach-to-ai-agents-4b1fbc65?gaa_at=eafs&amp;gaa_n=AWEtsqfUj2BYB9NHVD3LNIHZUBF-AF3s__uSfsZcIt-LbtFxmyhu2Mud2PS9AKlQe3k%3D&amp;gaa_ts=6914af24&amp;gaa_sig=0NmEvhi5atlp_mmFUZ__ndyk94-iX9dpY8BgQV0i3n57ctC97gMj613TYEfdaEShNAwlD2ugMRP6GhhqsIiTAA%3D%3D\" rel=\"noopener\" target=\"_blank\">as reported</a> by The Wall Street Journal. The company had deployed dozens of narrow agents that worked separately across departments, leading to inefficiency and confusion. </span><span>To address this, Walmart consolidated them into four \u201csuper agents\u201d for customers, employees, engineers </span><span>and</span><span> suppliers </span><span>that</span><span> call smaller agents and internal systems through MCP.</span></p>\n<p><span>The move provides a unified interface and stronger oversight across its AI infrastructure. </span><span>Walmart told </span><span>the Journal</span><span>\u00a0that </span><span>the</span><span> goal is to make its AI ecosystem more scalable and secure by using MCP to connect disparate systems under </span><span>one</span><span> governance model.</span></p>\n<h2>How MCP Differs From RAG</h2>\n<p><span>MCP is often compared with </span><a class=\"editor-rtfLink\" href=\"https://aws.amazon.com/what-is/retrieval-augmented-generation/\" rel=\"noopener\" target=\"_blank\"><span>Retrieval-Augmented Generation</span></a><span> (RAG), another way of expanding a model\u2019s access to external information. The difference lies in what each method allows the AI to do.</span></p>\n<p><span>RAG helps an AI system find and understand information. It retrieves relevant text or documents from an external database and feeds them into the model\u2019s context to improve the quality of its answers. It is best for knowledge-based tasks such as research or customer support.</span></p>\n<p><span>MCP, by contrast, allows an AI system to connect and act. </span><span>It </span><span>lets</span><span> the model interact directly with software systems </span><span>through</span><span> secure connections.</span><span> While RAG improves knowledge, MCP expands capability.</span></p>\n<p><span>For instance, RAG might help an AI assistant answer, \u201cWhat were our quarterly earnings?\u201d by retrieving a report and quoting a number. </span><span>MCP could go further by logging </span><span>in to</span><span> the company\u2019s analytics system, pulling live data </span><span>and</span><span> updating a dashboard </span><span>or</span><span> sending a summary email.</span></p>\n<p><span>In essence, RAG operates at the knowledge layer, while MCP functions at the integration layer. They complement each other: An AI assistant in a bank might use RAG to locate a regulatory document and MCP to apply that rule automatically to a new transaction.</span></p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/artificial-intelligence-2/2025/how-mcp-turns-passive-ai-assistants-into-active-enterprise-agents/\">How MCP Turns Passive AI Assistants Into Active Enterprise Agents</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
-    "image_url": "https://www.pymnts.com/wp-content/uploads/2025/11/AI-agents-MCP.jpg?w=457",
-    "summary_text": "The Model Context Protocol, or MCP, is an open standard introduced by Anthropic in late 2024 to make artificial intelligence (AI) systems more useful in real-world business settings. At its core, MCP allows AI models such as Claude, ChatGPT or Gemini to secur...",
-    "category": "ai",
-    "_trending_tags": [
-      "agent",
-      "ai",
-      "anthropic",
-      "chatgpt",
-      "claude",
-      "gpt"
-    ],
-    "_permalink": "/p/3fba519707/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/3fba519707/",
-    "_summary_240": "The Model Context Protocol, or MCP, is an open standard introduced by Anthropic in late 2024 to make artificial intelligence (AI) systems more useful in real-world business...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/3fba519707/thumbnail.png"
   },
   {
     "title": "GeForce NOW Enlists \u2018Call of Duty: Black Ops 7\u2019 for the Cloud",
@@ -811,7 +897,7 @@
     "source": "Bloomberg Technology",
     "summary": "Energy-hungry data centers test industry\u2019s commitment to go carbon-zero by 2040",
     "content_html": "The Cipher Mining Inc. data center in Odessa, Texas, US, on Saturday, March 15, 2025. The Permian Basin, a sprawling shale patch that lies beneath Texas and New Mexico, is North America's most prolific shale patch.",
-    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ilMdR44co2lY/v1/1200x-1.jpg",
+    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ilMdR44co2lY/v2/1200x-1.jpg",
     "summary_text": "Energy-hungry data centers test industry\u2019s commitment to go carbon-zero by 2040",
     "category": "ai",
     "_trending_tags": [
@@ -928,24 +1014,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/0c0839bbc5/thumbnail.png"
   },
   {
-    "title": "Baidu Unveils New Model, Chips to Keep Up in China\u2019s AI Race",
-    "url": "https://www.bloomberg.com/news/articles/2025-11-13/baidu-unveils-new-model-chips-to-keep-up-in-china-s-ai-race",
-    "published_at": "2025-11-13T01:26:22-05:00",
-    "source": "Bloomberg Technology",
-    "summary": "Baidu Inc. released the latest iteration of its flagship AI models, trying to keep up in the highly competitive Chinese artificial intelligence arena.",
-    "content_html": "",
-    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iNQoJTgj_6hU/v0/1200x-1.jpg",
-    "summary_text": "Baidu Inc. released the latest iteration of its flagship AI models, trying to keep up in the highly competitive Chinese artificial intelligence arena.",
-    "category": "ai",
-    "_trending_tags": [
-      "ai"
-    ],
-    "_permalink": "/p/8a117442bc/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/8a117442bc/",
-    "_summary_240": "Baidu Inc. released the latest iteration of its flagship AI models, trying to keep up in the highly competitive Chinese artificial intelligence arena.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/8a117442bc/thumbnail.png"
-  },
-  {
     "title": "Canary Capital files for MOG ETF, boosting the little-known memecoin",
     "url": "https://cointelegraph.com/news/canary-capital-files-mog-etf-boosting-the-little-known-memecoin?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
     "published_at": "2025-11-13T01:08:32-05:00",
@@ -980,21 +1048,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/52dc9224c5/",
     "_summary_240": "Alibaba Group Holding Ltd. is preparing an overhaul of its main mobile AI app in coming months to help it more closely resemble OpenAI\u2019s ChatGPT, a key step in a broader effort...",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/52dc9224c5/thumbnail.png"
-  },
-  {
-    "title": "US shutdown ends, crypto progress resumes as Trump signs bill",
-    "url": "https://cointelegraph.com/news/us-shutdown-ends-crypto-progress-continues-as-trump-signs-bill?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-    "published_at": "2025-11-12T23:49:41-05:00",
-    "source": "Cointelegraph",
-    "summary": "US President Donald Trump signed the bill ending the record 43-day government shutdown and resuming federal operations.",
-    "content_html": "",
-    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMDUvMDE5NmZlNGYtZDEwMi03ZDBmLWIzYTQtYTUyNDdkMzJmZGVj.jpg",
-    "summary_text": "US President Donald Trump signed the bill ending the record 43-day government shutdown and resuming federal operations.",
-    "category": "fintech",
-    "_permalink": "/p/4b42fec7c8/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/4b42fec7c8/",
-    "_summary_240": "US President Donald Trump signed the bill ending the record 43-day government shutdown and resuming federal operations.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/4b42fec7c8/thumbnail.png"
   },
   {
     "title": "Japan Exchange Looks at Ways to Curb Crypto Hoarding Firms",
