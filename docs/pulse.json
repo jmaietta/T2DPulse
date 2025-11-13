@@ -1,5 +1,62 @@
 [
   {
+    "title": "Apple Aims to Capitalize on Mini App Trend With New Program",
+    "url": "https://www.bloomberg.com/news/articles/2025-11-13/apple-aims-to-capitalize-on-mini-app-trend-with-new-program",
+    "published_at": "2025-11-13T14:02:51-05:00",
+    "source": "Bloomberg Technology",
+    "summary": "Apple Inc. introduced a new program Thursday that lets the iPhone maker collect revenue from mini apps and games within larger \u201csuper apps,\u201d an attempt to capitalize on a growing trend among software developers.",
+    "content_html": "Signage at the Apple Fifth Avenue store in New York, US, on Tuesday, Oct. 28, 2025. Apple Inc. is expected to release earnings figures on October 30. Photographer: Michael Nagle/Bloomberg",
+    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/i2abXElSy1bE/v0/1200x-1.jpg",
+    "summary_text": "Apple Inc. introduced a new program Thursday that lets the iPhone maker collect revenue from mini apps and games within larger \u201csuper apps,\u201d an attempt to capitalize on a growing trend among software developers.",
+    "category": "software",
+    "_trending_tags": [
+      "ai",
+      "apple"
+    ],
+    "_permalink": "/p/ca8f231351/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/ca8f231351/",
+    "_summary_240": "Apple Inc. introduced a new program Thursday that lets the iPhone maker collect revenue from mini apps and games within larger \u201csuper apps,\u201d an attempt to capitalize on a growing...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/ca8f231351/thumbnail.png"
+  },
+  {
+    "title": "AI On: 3 Ways to Bring Agentic AI to Computer Vision Applications",
+    "url": "https://blogs.nvidia.com/blog/ways-to-bring-agentic-ai-to-computer-vision-applications/",
+    "published_at": "2025-11-13T13:50:06-05:00",
+    "source": "NVIDIA News",
+    "summary": "Editor\u2019s note: This post is part of the AI On blog series, which explores the latest techniques and real-world applications of agentic AI, chatbots and copilots. The series also highlights the NVIDIA software and hardware powering advanced AI agents, which form the foundation of AI query engines that gather insights and perform tasks to transform Read Article",
+    "content_html": "",
+    "image_url": "https://s3.amazonaws.com/cms.ipressroom.com/219/files/202511/691628973d63321dadf211ee_image2-842x450/image2-842x450_thmb.jpg",
+    "summary_text": "Editor\u2019s note: This post is part of the AI On blog series, which explores the latest techniques and real-world applications of agentic AI, chatbots and copilots. The series also highlights the NVIDIA software and hardware powering advanced AI agents, which fo...",
+    "category": "ai",
+    "_trending_tags": [
+      "agent",
+      "ai",
+      "nvidia"
+    ],
+    "_permalink": "/p/34eb82df1b/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/34eb82df1b/",
+    "_summary_240": "Editor\u2019s note: This post is part of the AI On blog series, which explores the latest techniques and real-world applications of agentic AI, chatbots and copilots. The series also...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/34eb82df1b/thumbnail.png"
+  },
+  {
+    "title": "Newsletter platform beehiiv adds AI website building, creator tools in major expansion",
+    "url": "https://techcrunch.com/2025/11/13/newsletter-platform-beehiiv-adds-ai-website-building-creator-tools-in-major-expansion/",
+    "published_at": "2025-11-13T13:50:00-05:00",
+    "source": "TechCrunch",
+    "summary": "Newsletter platform beehiiv announced a massive expansion to its platform on Thursday, including offering real-time analytics and AI website creation.",
+    "content_html": "",
+    "image_url": "https://techcrunch.com/wp-content/uploads/2025/11/Tyler-Denk.jpg?resize=1200,675",
+    "summary_text": "Newsletter platform beehiiv announced a massive expansion to its platform on Thursday, including offering real-time analytics and AI website creation.",
+    "category": "ai",
+    "_trending_tags": [
+      "ai"
+    ],
+    "_permalink": "/p/14476c3ceb/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/14476c3ceb/",
+    "_summary_240": "Newsletter platform beehiiv announced a massive expansion to its platform on Thursday, including offering real-time analytics and AI website creation.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/14476c3ceb/thumbnail.png"
+  },
+  {
     "title": "21Shares launches crypto index ETFs under SEC\u2019s Act 40",
     "url": "https://cointelegraph.com/news/21shares-first-crypto-index-etfs-launched-sec-1940-act?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
     "published_at": "2025-11-13T13:42:33-05:00",
@@ -65,11 +122,7 @@
     "_trending_tags": [
       "agent",
       "ai"
-    ],
-    "_permalink": "/p/e837a98685/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/e837a98685/",
-    "_summary_240": "Artificial intelligence agents powered by the world's most advanced language models routinely fail to complete even straightforward professional tasks on their own, according to...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/e837a98685/thumbnail.png"
+    ]
   },
   {
     "title": "BNY Debuts Stablecoin-Focused Money Market Fund",
@@ -293,26 +346,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/c8a36b565d/",
     "_summary_240": "The registration statement was made public about four months after the asset manager had filed confidentially for an initial public offering.",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/c8a36b565d/thumbnail.png"
-  },
-  {
-    "title": "Google\u2019s NotebookLM will now do \u2018deep research\u2019",
-    "url": "https://www.theverge.com/news/820022/google-notebooklm-gemini-deep-research",
-    "published_at": "2025-11-13T12:00:00-05:00",
-    "source": "The Verge",
-    "summary": "Google is pairing up two of its research products: NotebookLM and Gemini\u2019s agentic AI tool Deep Research. On Thursday, the company announced that all users will have access to Deep Research in NotebookLM within a week. Google recently linked Deep Research to other Workspace products like Gmail and Drive, allowing Gemini to draw context from [\u2026]",
-    "content_html": "<figure>\n\n<img alt=\"\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/05/STK093_Google_05.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100\" />\n\t<figcaption>\n\t\t</figcaption>\n</figure>\n<p class=\"has-text-align-none\">Google is pairing up two of its research products: NotebookLM and Gemini\u2019s agentic <a href=\"https://www.theverge.com/2024/12/11/24318217/google-gemini-advanced-deep-research-launch\">AI tool Deep Research</a>. On Thursday, the company announced that all users will have access to Deep Research in NotebookLM within a week.&nbsp;</p>\n\n<p class=\"has-text-align-none\">Google recently linked <a href=\"https://www.theverge.com/ai-artificial-intelligence/814878/google-ai-gemini-deep-research-personalized\">Deep Research to other Workspace products</a> like Gmail and Drive, allowing Gemini to draw context from a user\u2019s emails in Gmail, files in Drive, and chat logs in Google Chat.</p>\n\n<p class=\"has-text-align-none\">Now, NotebookLM users will be able to direct a question to Deep Research and choose between two research styles: fast or deep. The fast research style will \u201crapidly\u201d look for information, while the deep style will do \u201cin-depth analysis to find high-quality sources,\u201d Google says. Users will get a research plan before the research begins using either style.&nbsp;</p>\n\n<p class=\"has-text-align-none\">If you choose to go deep with Deep Research, you\u2019ll be able to add more sources as the report generates in the background. Google\u2019s blog says this will help \u201cyou assemble a rich knowledge base on any topic without leaving your workflow.\u201d The final report on the topic will include citations to relevant articles, websites, or papers, all of which you can pop into your notebook.&nbsp;</p>\n\n<p class=\"has-text-align-none\">In addition to Deep Research, NotebookLM is expanding to work with several new file types. You can now link Google Sheets and ask for statistics based on the structured data, or you can add Drive files like PDFs via URL link instead of uploading them directly to NotebookLM. Google will now also let users add Microsoft Word files in .docx format to NotebookLM.</p>",
-    "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/05/STK093_Google_05.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "summary_text": "Google is pairing up two of its research products: NotebookLM and Gemini\u2019s agentic AI tool Deep Research. On Thursday, the company announced that all users will have access to Deep Research in NotebookLM within a week. Google recently linked Deep Research to ...",
-    "category": "ai",
-    "_trending_tags": [
-      "agent",
-      "ai",
-      "google"
-    ],
-    "_permalink": "/p/971bed922f/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/971bed922f/",
-    "_summary_240": "Google is pairing up two of its research products: NotebookLM and Gemini\u2019s agentic AI tool Deep Research. On Thursday, the company announced that all users will have access to...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/971bed922f/thumbnail.png"
   },
   {
     "title": "Facebook Marketplace gets new collaborative and social features, Meta AI integrations",
@@ -964,24 +997,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/8f22d02a97/thumbnail.png"
   },
   {
-    "title": "Sour crypto mood could fuel an unexpected rally this month: Santiment",
-    "url": "https://cointelegraph.com/news/crypto-fear-sentiment-bitcoin-ethereum-xrp?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-    "published_at": "2025-11-12T21:31:15-05:00",
-    "source": "Cointelegraph",
-    "summary": "Crypto market sentiment remains fearful as the broader market continues to slump, but that could be a good thing, as weak hands sell off, Santiment argued.",
-    "content_html": "",
-    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTEvMDE5YTdhODEtYTUxNi03YTlmLThlNmUtYTE0OGU3ZWZkNjRh.jpg",
-    "summary_text": "Crypto market sentiment remains fearful as the broader market continues to slump, but that could be a good thing, as weak hands sell off, Santiment argued.",
-    "category": "fintech",
-    "_trending_tags": [
-      "ai"
-    ],
-    "_permalink": "/p/167d7ea410/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/167d7ea410/",
-    "_summary_240": "Crypto market sentiment remains fearful as the broader market continues to slump, but that could be a good thing, as weak hands sell off, Santiment argued.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/167d7ea410/thumbnail.png"
-  },
-  {
     "title": "Japan Exchange Looks at Ways to Curb Crypto Hoarding Firms",
     "url": "https://www.bloomberg.com/news/articles/2025-11-13/japan-exchange-is-looking-at-ways-to-curb-crypto-hoarding-firms",
     "published_at": "2025-11-12T21:22:52-05:00",
@@ -1009,11 +1024,7 @@
     "_trending_tags": [
       "ai",
       "gpt"
-    ],
-    "_permalink": "/p/37698dcc3f/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/37698dcc3f/",
-    "_summary_240": "GPT-5.1 is now available in the API, bringing faster adaptive reasoning, extended prompt caching, improved coding performance, and new apply_patch and shell tools.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/37698dcc3f/thumbnail.png"
+    ]
   },
   {
     "title": "OpenAI walks a tricky tightrope with GPT-5.1\u2019s eight new personalities",
@@ -1500,20 +1511,6 @@
     ]
   },
   {
-    "title": "GPT-5.1 Instant and GPT-5.1 Thinking System Card Addendum",
-    "url": "https://openai.com/index/gpt-5-system-card-addendum-gpt-5-1",
-    "published_at": "2025-11-11T19:00:00-05:00",
-    "source": "OpenAI News",
-    "summary": "This GPT-5 system card addendum provides updated safety metrics for GPT-5.1 Instant and Thinking, including new evaluations for mental health and emotional reliance.",
-    "content_html": "",
-    "image_url": "",
-    "summary_text": "This GPT-5 system card addendum provides updated safety metrics for GPT-5.1 Instant and Thinking, including new evaluations for mental health and emotional reliance.",
-    "category": "ai",
-    "_trending_tags": [
-      "gpt"
-    ]
-  },
-  {
     "title": "GPT-5.1: A smarter, more conversational ChatGPT",
     "url": "https://openai.com/index/gpt-5-1",
     "published_at": "2025-11-11T19:00:00-05:00",
@@ -1526,6 +1523,20 @@
     "_trending_tags": [
       "ai",
       "chatgpt",
+      "gpt"
+    ]
+  },
+  {
+    "title": "GPT-5.1 Instant and GPT-5.1 Thinking System Card Addendum",
+    "url": "https://openai.com/index/gpt-5-system-card-addendum-gpt-5-1",
+    "published_at": "2025-11-11T19:00:00-05:00",
+    "source": "OpenAI News",
+    "summary": "This GPT-5 system card addendum provides updated safety metrics for GPT-5.1 Instant and Thinking, including new evaluations for mental health and emotional reliance.",
+    "content_html": "",
+    "image_url": "",
+    "summary_text": "This GPT-5 system card addendum provides updated safety metrics for GPT-5.1 Instant and Thinking, including new evaluations for mental health and emotional reliance.",
+    "category": "ai",
+    "_trending_tags": [
       "gpt"
     ]
   },
