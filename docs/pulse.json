@@ -1,5 +1,38 @@
 [
   {
+    "title": "\u2018Volatility is your friend\u2019: Eric Trump not bothered by Bitcoin, crypto carnage",
+    "url": "https://cointelegraph.com/news/eric-trump-bitcoin-volatility-american-bitcoin-btc-holdings?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "published_at": "2025-11-14T15:10:04-05:00",
+    "source": "Cointelegraph",
+    "summary": "Eric Trump shrugs off an extended crypto sell-off as American Bitcoin ramps up its holdings and climbs into the top ranks of public BTC treasuries.",
+    "content_html": "",
+    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMDgvMDE5ODhjMjYtNTI2Zi03NjY1LThmZWUtMTEzNmFiNWNkODg0.jpg",
+    "summary_text": "Eric Trump shrugs off an extended crypto sell-off as American Bitcoin ramps up its holdings and climbs into the top ranks of public BTC treasuries.",
+    "category": "fintech",
+    "_permalink": "/p/91553ab054/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/91553ab054/",
+    "_summary_240": "Eric Trump shrugs off an extended crypto sell-off as American Bitcoin ramps up its holdings and climbs into the top ranks of public BTC treasuries.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/91553ab054/thumbnail.png"
+  },
+  {
+    "title": "Hybrid AI Bridges Decision-Making Transparency Gap",
+    "url": "https://www.pymnts.com/artificial-intelligence-2/2025/hybrid-ai-bridges-decision-making-transparency-gap/",
+    "published_at": "2025-11-14T14:38:46-05:00",
+    "source": "PYMNTS",
+    "summary": "As artificial intelligence (AI) becomes part of everyday business operations, companies rethink how they want these systems to behave. AI models generate quick predictions but often struggle to explain why the model chose a specific outcome. That lack of clarity leads to mistakes, customer friction and regulatory scrutiny. To avoid these problems, companies now turn [\u2026] The post Hybrid AI Bridges...",
+    "content_html": "<p><span>As artificial intelligence (AI) becomes part of everyday business operations, companies rethink how they want these systems to behave. AI models generate quick predictions but often struggle to explain why the model chose a specific outcome. That lack of clarity leads to mistakes, customer friction and regulatory scrutiny. To avoid these problems, companies now turn to hybrid AI, an approach that blends machine learning with clear rules, human judgment and reasoning steps that people can trace.</span></p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<h2><b><span>Why Companies Need AI That Explains Itself</span></b></h2>\n<p><span>Hybrid AI blends machine learning with rules and human judgment, so organizations can see how an AI system reaches a decision rather than guessing</span><span>. </span><a href=\"https://www.cio.com/article/4088838/hybrid-ai-the-future-of-certifiable-and-trustworthy-intelligence.html\" rel=\"noopener\" target=\"_blank\"><span>CIO explained</span></a><span> that hybrid AI moves systems into reasoning mode rather than pure prediction mode.</span></p>\n<p><span>Companies need this clarity because machine-learning systems often land on results that look right mathematically but fail in real-world operations. </span><a href=\"https://seekingalpha.com/article/4843221-world-of-enterprise-ai-turning-hybrid\" rel=\"noopener\" target=\"_blank\"><span>Seeking Alpha</span></a><span> noted that organizations now view these \u201cstatistically correct but operationally wrong\u201d moments as serious risks. A support system, for instance, might treat two distinct complaint types as identical because the wording overlaps, even if one is about billing errors and the other about user interface glitches. Hybrid AI prevents that by anchoring decisions to business rules and context, not just numeric similarity.</span></p>\n<p><span>Many organizations say they still fail to get consistent value from AI because systems act unpredictably when real-world conditions change. A </span><a href=\"https://www.weforum.org/stories/2025/11/trust-ai-global-governance/\" rel=\"noopener\" target=\"_blank\"><span>recent analysis</span></a><span> by the World Economic Forum showed that weak governance and opaque logic cause expensive missteps and erode trust. Hybrid AI fixes this by building structure into the system so teams can review how each decision happens, correct faulty logic and enforce standards. For example, an HR tool might combine predictive models with explicit rules that ensure fairness, diversity and compliance. A customer-service triage system might merge pattern detection with business priority rules so frontline teams handle the right cases at the right time.</span></p>\n<p><span>The financial sector offers a clear example of why these matters. Fraud detection and credit decisions require speed, but they also demand transparency and fairness. </span><a href=\"https://www.pymnts.com/news/artificial-intelligence/2025/hybrid-ai-human-models-sharpen-fraud-response/\" rel=\"noopener\" target=\"_blank\"><span>PYMNTS</span></a><span> shows how teams use hybrid AI in fraud workflows by combining machine-learning alerts with human-driven rules and judgment. When AI flags a transaction as unusual, a human analyst reviews context, checks customer history and applies defined rules. This approach reduces false alarms, for example, blocking a loyal customer on holiday while protecting consumers and enabling companies to explain decisions clearly.</span></p>\n<p><span>Beyond business logic, hybrid AI also helps tackle a growing cybersecurity threat, the blurring of human and machine identities. A </span><a href=\"https://arxiv.org/abs/2503.18255\" rel=\"noopener\" target=\"_blank\"><span>recent paper</span></a><span> showed that machine identities (APIs, service accounts, AI agents) now far outnumber human users and create a growing attack surface. This \u201chuman-machine identity blur\u201d opens gaps in governance because systems often treat humans and machines differently. Hybrid AI supports visibility, rules and human oversight across both human users and machine agents, helping companies defend this new frontier.</span></p>\n<h2><b><span>How Hybrid AI Prepares Companies for Autonomous Systems</span></b></h2>\n<p><span>Agentic AI,\u00a0 systems capable of planning, deciding and acting on their own, makes the need for hybrid AI even stronger. </span><a href=\"https://www.pymnts.com/artificial-intelligence-2/2025/agentic-ai-what-it-will-take-to-move-from-rhetoric-to-reality/\" rel=\"noopener\" target=\"_blank\"><span>PYMNTS</span></a><span> shows that organizations cannot deploy autonomous tools safely unless those systems embed rules, oversight and reasoning frameworks from the baseline. Suppose a service-bot issues refunds, moves funds or alters account settings. Hybrid AI ensures each action hits policy, logs decisions and avoids actions outside control. Without such structure, autonomous systems risk out-of-control behavior.</span></p>\n<p><span>Other industries face similar needs. DataBank </span><a href=\"https://www.databank.com/resources/blogs/why-enterprise-ai-infrastructure-is-going-hybrid-and-geographic/\" rel=\"noopener\" target=\"_blank\"><span>highlighted</span></a><span> that businesses increasingly want AI systems that support human decisions rather than replace them. A logistics firm, for example, may use hybrid AI to plan delivery routes. The AI analyses weather and traffic, but human supervisors set rules for driver safety, customer priority and delivery windows. Hybrid AI lets teams understand why the system chose a route and adjust it as conditions change.</span></p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/artificial-intelligence-2/2025/hybrid-ai-bridges-decision-making-transparency-gap/\">Hybrid AI Bridges Decision-Making Transparency Gap</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
+    "image_url": "https://www.pymnts.com/wp-content/uploads/2025/11/hybrid-ai-artificial-intelligence-machine-learning.jpg?w=457",
+    "summary_text": "As artificial intelligence (AI) becomes part of everyday business operations, companies rethink how they want these systems to behave. AI models generate quick predictions but often struggle to explain why the model chose a specific outcome. That lack of clar...",
+    "category": "ai",
+    "_trending_tags": [
+      "ai"
+    ],
+    "_permalink": "/p/04a1f75537/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/04a1f75537/",
+    "_summary_240": "As artificial intelligence (AI) becomes part of everyday business operations, companies rethink how they want these systems to behave. AI models generate quick predictions but...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/04a1f75537/thumbnail.png"
+  },
+  {
     "title": "Walmart\u2019s CEO Makes Way for Fellow Lifer He Guided for New Tech Era",
     "url": "https://www.bloomberg.com/news/articles/2025-11-14/walmart-ceo-doug-mcmillon-hands-reins-to-john-furner-for-ai-era",
     "published_at": "2025-11-14T14:13:54-05:00",
@@ -47,6 +80,26 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/713c0ed10d/",
     "_summary_240": "Bitcoin drops to a six-month low as spot ETF outflows resume despite the US shutdown ending, signaling weak demand and renewed pressure on crypto markets.",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/713c0ed10d/thumbnail.png"
+  },
+  {
+    "title": "Forget AGI\u2014Sam Altman celebrates ChatGPT finally following em dash formatting rules",
+    "url": "https://arstechnica.com/ai/2025/11/forget-agi-sam-altman-celebrates-chatgpt-finally-following-em-dash-formatting-rules/",
+    "published_at": "2025-11-14T13:45:34-05:00",
+    "source": "Ars Technica",
+    "summary": "Ongoing struggles with AI model instruction-following show that true human-level AI still a ways off.",
+    "content_html": "<p>Em dashes have become what many believe to be a <a href=\"https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing#Overuse_of_em_dashes\">telltale sign of AI-generated text</a> over the past few years. The punctuation mark appears frequently in outputs from ChatGPT and other AI chatbots, sometimes to the point where readers believe they can identify AI writing by its overuse alone\u2014although people can overuse it, too.</p>\n<p>On Thursday evening, OpenAI CEO Sam Altman <a href=\"https://x.com/sama/status/1989193813043069219?s=20\">posted</a> on X that ChatGPT has started following custom instructions to avoid using em dashes. \u201cSmall-but-happy win: If you tell ChatGPT not to use em-dashes in your custom instructions, it finally does what it\u2019s supposed to do!\u201d he wrote.</p>\n<p>The post, which came two days after the release of OpenAI\u2019s new <a href=\"https://arstechnica.com/ai/2025/11/openai-walks-a-tricky-tightrope-with-gpt-5-1s-eight-new-personalities/\">GPT-5.1</a> AI model, received mixed reactions from users who have <a href=\"https://community.openai.com/t/cannot-get-responses-to-not-include-dashes-and-em-dashes/1023216/7\">struggled</a> for years with getting the chatbot to follow specific formatting preferences. And this \u201csmall win\u201d raises a very big question: If the world\u2019s most valuable AI company has struggled with controlling something as simple as punctuation use after years of trying, perhaps <a href=\"https://arstechnica.com/ai/2025/07/agi-may-be-impossible-to-define-and-thats-a-multibillion-dollar-problem/\">what people call</a> artificial general intelligence (AGI) is farther off than some in the industry <a href=\"https://arstechnica.com/ai/2025/01/anthropic-chief-says-ai-could-surpass-almost-all-humans-at-almost-everything-shortly-after-2027/\">claim</a>.</p><p><a href=\"https://arstechnica.com/ai/2025/11/forget-agi-sam-altman-celebrates-chatgpt-finally-following-em-dash-formatting-rules/\">Read full article</a></p>\n<p><a href=\"https://arstechnica.com/ai/2025/11/forget-agi-sam-altman-celebrates-chatgpt-finally-following-em-dash-formatting-rules/#comments\">Comments</a></p>",
+    "image_url": "https://cdn.arstechnica.net/wp-content/uploads/2025/11/man_wrestling_with_robot_hand_2-1152x648.jpg",
+    "summary_text": "Ongoing struggles with AI model instruction-following show that true human-level AI still a ways off.",
+    "category": "ai",
+    "_trending_tags": [
+      "ai",
+      "chatgpt",
+      "gpt"
+    ],
+    "_permalink": "/p/b1a4058af9/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/b1a4058af9/",
+    "_summary_240": "Ongoing struggles with AI model instruction-following show that true human-level AI still a ways off.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/b1a4058af9/thumbnail.png"
   },
   {
     "title": "Real estate hybrid funds challenge DATs with mix of property and Bitcoin",
@@ -646,25 +699,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/a29d2bc97d/thumbnail.png"
   },
   {
-    "title": "Amazon and Walmart Race to Win Over a Cautious Consumer",
-    "url": "https://www.pymnts.com/retail-2/2025/amazon-and-walmart-race-to-win-over-a-cautious-consumer/",
-    "published_at": "2025-11-14T04:00:04-05:00",
-    "source": "PYMNTS",
-    "summary": "Amazon and Walmart have spent decades defining the competitive perimeter of American retail, each shaping consumer behavior at enormous scale. But no matter the innovations around convenience and the ongoing race to turn commerce invisible and frictionless, there\u2019s always been a bigger factor at play when it comes to consumer behavior. A factor so [\u2026] The post Amazon and Walmart Race to Win Over ...",
-    "content_html": "<p><span>Amazon and Walmart have spent decades defining the competitive perimeter of American retail, each shaping consumer behavior at enormous scale.</span></p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p><span>But no matter the innovations around convenience and the ongoing race to turn commerce invisible and frictionless, there\u2019s always been a bigger factor at play when it comes to consumer behavior. A factor so huge it also shapes the operational realities of both Walmart, Amazon, as well as the rest of the retail landscape.</span></p>\n<p><span>This factor is, of course, the macro environment. And today, as 2025 turns to 2026, that macro environment is being increasingly revealed as a challenging one that has thrown consumer confidence into a tailspin. Households remain more selective, trading down on discretionary items while continuing to prioritize essentials.</span></p>\n<p><span>Today\u2019s softening economy is forcing a reimagining of what value really means in a cautious consumer economy. Walmart and Amazon\u2019s week-to-week moves illuminate a rivalry no longer just about who sells more stuff and at what cost, but about who has the best pulse on the direction for the entire consumer economy.</span></p>\n<p><b><span>Read more: </span></b><a href=\"https://www.pymnts.com/news/retail/2025/amazon-and-walmart-battle-for-bare-necessities-as-spend-shifts-to-essentials/\" rel=\"noopener\" target=\"_blank\"><span>Amazon and Walmart Battle for Relevance as Spend Shifts to Essentials</span></a></p>\n<h2><b><span>Inside the Weekly Grind of a Relentless Retail Rivalry</span></b></h2>\n<p><span>Both Amazon and Walmart are rolling out new forms of innovation, from AI-assisted purchasing and revamped advertising engines to sustainability-driven manufacturing and structural workforce realignments. The result is a sweeping recalibration of the retail landscape that signals not only where the market is headed but how the average American will shop, work, and spend in the coming years.</span></p>\n<p><span>This evolution is unfolding against a backdrop of spending restraint. Consumer confidence is uneven, neither deeply pessimistic nor reassuringly strong, creating a marketplace where loyalty can be won or lost in an instant.</span></p>\n<p><span>Data from the October \u201c</span><a href=\"https://www.pymnts.com/study_posts/seven-in-10-americans-live-paycheck-to-paycheck-and-confidence-is-cracking/\" rel=\"noopener\" target=\"_blank\"><span>New Reality Check: The Paycheck-to-Paycheck Report</span></a><span>\u201d by PYMNTS Intelligence finds that today, more consumers are struggling to get by. More than 1 in 4, or 26%, had difficulties paying their bills last month, the highest share in at least two years.</span></p>\n<p><span>In this environment, innovation is less about spectacle than about utility: tools that reduce friction, platforms that speak more fluently to business and advertising customers, and supply chains that absorb economic shocks before they reach the checkout page.</span></p>\n<p><span>Amazon, long the industry&#8217;s technological bellwether, is leaning heavily into this moment with the introduction of new AI-powered capabilities geared toward business procurement.</span></p>\n<p><span>Amazon Business has quietly grown into a multi-billion-dollar segment serving companies that increasingly mirror consumer behavior in their purchasing patterns: high-frequency orders, rapid replenishment cycles, and an expectation of seamless digital experiences. A </span><a href=\"https://www.pymnts.com/amazon/2025/amazon-debuts-ai-powered-tools-for-business-clients/\" rel=\"noopener\" target=\"_blank\"><span>new suite of AI solutions </span></a><span>launched Wednesday (Nov. 12) is designed to help those buyers navigate complex approval flows, compare products, and ensure compliance with corporate purchasing policies</span><span>.</span></p>\n<p><span>At the same time, about a year after launching Amazon Haul and Amazon Bazaar,\u202f</span><a href=\"https://www.amazon.com/\" rel=\"noopener\" target=\"_blank\"><span>Amazon</span></a><span>\u202fis expanding that shopping experience to </span><a href=\"https://www.pymnts.com/amazon/2025/amazon-bazaar-value-focused-shopping-experience-expands-to-14-more-markets/\" rel=\"noopener\" target=\"_blank\"><span>another 14 markets</span></a><span>.</span></p>\n<p><span>Parallel to these efforts, Amazon is </span><a href=\"https://digiday.com/marketing/amazon-rebuilds-its-ad-machine-for-the-mass-market/\" rel=\"noopener\" target=\"_blank\"><span>rebuilding</span></a><span> its advertising machinery to appeal to a much broader segment of the market. The new structure consolidates disparate ad-buying paths into a single, unified system, making it significantly easier for mid-market brands to participate.</span></p>\n<p><span>Elsewhere across the ecommerce giant\u2019s ecosystem, Whole Foods, which once operated with semi-independent governance, is increasingly </span><a href=\"https://www.businessinsider.com/amazon-whole-foods-absorb-workforce-project-cremini-2025-11\" rel=\"noopener\" target=\"_blank\"><span>being absorbed</span></a><span> into Amazon\u2019s broader operations under a project known internally as Cremini. The shift reduces duplicative functions and brings food retail closer to Amazon\u2019s unified logistics and technology systems.</span></p>\n<p><b><span>Related:</span></b><span>\u202f</span><a href=\"https://www.pymnts.com/connectedeconomy/2025/10-years-later-platforms-still-define-the-connected-economy/\" rel=\"noopener\" target=\"_blank\"><span>10 Years Later, Platforms Still Define the Connected Economy</span></a></p>\n<h2><b><span>Walmart\u2019s Countermove: Value, Velocity, and U.S.-Led Innovation</span></b></h2>\n<p><span>Meanwhile, Walmart is rewriting a different version of the innovation story. The company\u2019s recent emphasis on \u201c</span><a href=\"https://corporate.walmart.com/news/2025/10/31/american-innovation-is--literally--growing\" rel=\"noopener\" target=\"_blank\"><span>American innovation</span></a><span>\u201d is more than patriotic branding; it represents a significant shift in how Walmart thinks about its role in the supply chain.</span></p>\n<p><span>Walmart\u2019s partnerships with U.S.-based materials companies and agricultural innovators illustrate a desire not only to reduce reliance on vulnerable supply routes but also to position the company as an engine of economic renewal.</span></p>\n<p><span>These efforts coincide with an aggressive holiday strategy, including early access Black Friday events and deeper-than-usual promotional cycles. The timing and structure of these events signal an understanding of the modern consumer\u2019s psychology: shoppers are deal-sensitive but fatigue quickly; they want value but not at the cost of convenience.</span></p>\n<p><span>Consumers may not see the machinations of Amazon and Walmart directly, but they will feel the effects. More intuitive purchasing experiences. Faster and more reliable deliveries. Deals that appear earlier, run longer, and respond more dynamically to demand patterns.</span></p>\n<p><span>The choices big retailers are making this season are not merely responses to cautious spending, but the early lines of a blueprint for retail\u2019s next decade.</span><span>\u00a0</span></p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/retail-2/2025/amazon-and-walmart-race-to-win-over-a-cautious-consumer/\">Amazon and Walmart Race to Win Over a Cautious Consumer</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
-    "image_url": "https://www.pymnts.com/wp-content/uploads/2025/11/amazon-walmart-retail-consumer-spending-ai-artificial-intelligence.jpg?w=457",
-    "summary_text": "Amazon and Walmart have spent decades defining the competitive perimeter of American retail, each shaping consumer behavior at enormous scale. But no matter the innovations around convenience and the ongoing race to turn commerce invisible and frictionless, t...",
-    "category": "fintech",
-    "_trending_tags": [
-      "ai",
-      "amazon"
-    ],
-    "_permalink": "/p/20f122668f/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/20f122668f/",
-    "_summary_240": "Amazon and Walmart have spent decades defining the competitive perimeter of American retail, each shaping consumer behavior at enormous scale. But no matter the innovations...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/20f122668f/thumbnail.png"
-  },
-  {
     "title": "SAP On Track to Dodge EU Antitrust Fine Over Software Probe",
     "url": "https://www.bloomberg.com/news/articles/2025-11-14/sap-on-track-to-dodge-eu-antitrust-fine-over-software-probe",
     "published_at": "2025-11-14T03:13:07-05:00",
@@ -766,6 +800,25 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/a8aa70f425/",
     "_summary_240": "Speculation that Kraken was planning to go public has been circulating since mid-2024, with one report suggesting it would do so in the first quarter of 2026.",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/a8aa70f425/thumbnail.png"
+  },
+  {
+    "title": "OpenAI experiment finds that sparse models could give AI builders the tools to debug neural networks",
+    "url": "https://venturebeat.com/ai/openai-experiment-finds-that-sparse-models-could-give-ai-builders-the-tools",
+    "published_at": "2025-11-14T00:00:00-05:00",
+    "source": "VentureBeat",
+    "summary": "OpenAI researchers are experimenting with a new approach to designing neural networks, with the aim of making AI models easier to understand, debug, and govern. Sparse models can provide enterprises with a better understanding of how these models make decisions. Understanding how models choose to respond, a big selling point of reasoning models for enterprises, can provide a level of trust for or...",
+    "content_html": "",
+    "image_url": "",
+    "summary_text": "OpenAI researchers are experimenting with a new approach to designing neural networks, with the aim of making AI models easier to understand, debug, and govern. Sparse models can provide enterprises with a better understanding of how these models make decisio...",
+    "category": "ai",
+    "_trending_tags": [
+      "ai",
+      "openai"
+    ],
+    "_permalink": "/p/e9fd46ea6d/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/e9fd46ea6d/",
+    "_summary_240": "OpenAI researchers are experimenting with a new approach to designing neural networks, with the aim of making AI models easier to understand, debug, and govern. Sparse models can...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/e9fd46ea6d/thumbnail.png"
   },
   {
     "title": "Bitcoin can win US voters regardless of political lean, survey finds",
@@ -949,24 +1002,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/0cf247e235/thumbnail.png"
   },
   {
-    "title": "MoonPay launches enterprise stablecoin suite with M0, taps ex-Paxos leaders",
-    "url": "https://cointelegraph.com/news/moonpay-enterprise-stablecoin-suite-m0-paxos?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-    "published_at": "2025-11-13T16:55:36-05:00",
-    "source": "Cointelegraph",
-    "summary": "The move pushes MoonPay deeper into stablecoin infrastructure, giving issuers a ready-made stack for launching fully backed digital dollars across multiple chains.",
-    "content_html": "",
-    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMDcvMDE5ODUyZDQtNjdlYy03N2Q0LTliOWItZWE1NzU4YzZiZmU2.jpg",
-    "summary_text": "The move pushes MoonPay deeper into stablecoin infrastructure, giving issuers a ready-made stack for launching fully backed digital dollars across multiple chains.",
-    "category": "fintech",
-    "_trending_tags": [
-      "ai"
-    ],
-    "_permalink": "/p/6381879b5c/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/6381879b5c/",
-    "_summary_240": "The move pushes MoonPay deeper into stablecoin infrastructure, giving issuers a ready-made stack for launching fully backed digital dollars across multiple chains.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/6381879b5c/thumbnail.png"
-  },
-  {
     "title": "Build Mode starts at the beginning: How Forethought AI found product-market fit",
     "url": "https://techcrunch.com/2025/11/13/build-mode-starts-at-the-beginning-how-forethought-ai-found-product-market-fit/",
     "published_at": "2025-11-13T16:47:30-05:00",
@@ -983,21 +1018,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/6b8c7bd5b3/",
     "_summary_240": "In the debut episode of the Build Mode podcast, we sat down with Deon Nicholas, co-founder of Forethought AI, to unpack what it really takes to build a lasting company with and...",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/6b8c7bd5b3/thumbnail.png"
-  },
-  {
-    "title": "Cash App plans to unlock stablecoin transactions \u2019soon\u2019",
-    "url": "https://cointelegraph.com/news/cash-app-block-stablecoin-transactions?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-    "published_at": "2025-11-13T16:39:45-05:00",
-    "source": "Cointelegraph",
-    "summary": "Reports suggested that several new features for the financial transaction app may roll out in early 2026.",
-    "content_html": "",
-    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMDYvMDE5NzcyMWItMzg5Ni03NzkxLWE4YzItMmFiOGQ5ZDAzNjRl.jpg",
-    "summary_text": "Reports suggested that several new features for the financial transaction app may roll out in early 2026.",
-    "category": "fintech",
-    "_permalink": "/p/4804f95d74/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/4804f95d74/",
-    "_summary_240": "Reports suggested that several new features for the financial transaction app may roll out in early 2026.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/4804f95d74/thumbnail.png"
   },
   {
     "title": "Apple\u2019s new App Review Guidelines clamp down on apps sharing personal data with \u2018third-party AI\u2019",
@@ -1342,10 +1362,10 @@
     "url": "https://venturebeat.com/ai/alembic-melted-gpus-chasing-causal-a-i-now-its-running-one-of-the-fastest",
     "published_at": "2025-11-13T05:00:00-05:00",
     "source": "VentureBeat",
-    "summary": "Alembic Technologies has raised $145 million in Series B and growth funding at a valuation 13 times higher than its previous round, betting that the next competitive advantage in artificial intelligence will come not from better language models but from proprietary data and causal reasoning. The San Francisco-based startup, which builds AI systems that identify cause-and-effect relationships rath...",
+    "summary": "Alembic Technologies has raised $145 million in Series B and growth funding at a valuation 15 times higher than its previous round, betting that the next competitive advantage in artificial intelligence will come not from better language models but from proprietary data and causal reasoning. The San Francisco-based startup, which builds AI systems that identify cause-and-effect relationships rath...",
     "content_html": "",
     "image_url": "",
-    "summary_text": "Alembic Technologies has raised $145 million in Series B and growth funding at a valuation 13 times higher than its previous round, betting that the next competitive advantage in artificial intelligence will come not from better language models but from propr...",
+    "summary_text": "Alembic Technologies has raised $145 million in Series B and growth funding at a valuation 15 times higher than its previous round, betting that the next competitive advantage in artificial intelligence will come not from better language models but from propr...",
     "category": "ai",
     "_trending_tags": [
       "ai",
@@ -1365,22 +1385,6 @@
     "_trending_tags": [
       "ai",
       "openai"
-    ]
-  },
-  {
-    "title": "Forrester: Gen AI is a chaos agent, models are wrong 60% of the time",
-    "url": "https://venturebeat.com/security/forrester-generative-ai-chaos-agent-45-percent-code-vulnerable",
-    "published_at": "2025-11-13T03:00:00-05:00",
-    "source": "VentureBeat",
-    "summary": "The shark from Jaws attacked without warning, showing how an apex predator exploits chaos to create lethal, devastating harm on its prey. Now, Forrester says, gen AI has become that predator in the hands of attackers: The one that never tires or sleeps and executes at scale. \"In Jaws, the shark acts as the chaos agent,\" Forrester principal analyst Allie Mellen told attendees at the IT consultancy...",
-    "content_html": "",
-    "image_url": "",
-    "summary_text": "The shark from Jaws attacked without warning, showing how an apex predator exploits chaos to create lethal, devastating harm on its prey. Now, Forrester says, gen AI has become that predator in the hands of attackers: The one that never tires or sleeps and ex...",
-    "category": "ai",
-    "_trending_tags": [
-      "agent",
-      "ai",
-      "genai"
     ]
   },
   {
@@ -1477,16 +1481,12 @@
     "source": "Financial Times - Technology",
     "summary": "Overly onerous regulation could leave Europe as an also-ran after the US and China",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/c8a3088e-4bec-48ba-bc82-28150779de66.jpg",
+    "image_url": "",
     "summary_text": "Overly onerous regulation could leave Europe as an also-ran after the US and China",
     "category": "ai",
     "_trending_tags": [
       "ai"
-    ],
-    "_permalink": "/p/6a78e23698/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/6a78e23698/",
-    "_summary_240": "Overly onerous regulation could leave Europe as an also-ran after the US and China",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/6a78e23698/thumbnail.png"
+    ]
   },
   {
     "title": "OpenAI Phone",
@@ -1532,17 +1532,13 @@
     "source": "Financial Times - Technology",
     "summary": "Inference inferred, revenue reconstructed, cash burn quantified",
     "content_html": "",
-    "image_url": "https://images.ft.com/v3/image/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Fcddd1665-3992-4b21-8c87-c4a4e7506130.png?source=next-article&fit=scale-down&quality=highest&width=700&dpr=1",
+    "image_url": "",
     "summary_text": "Inference inferred, revenue reconstructed, cash burn quantified",
     "category": "ai",
     "_trending_tags": [
       "ai",
       "openai"
-    ],
-    "_permalink": "/p/14c26f7321/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/14c26f7321/",
-    "_summary_240": "Inference inferred, revenue reconstructed, cash burn quantified",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/14c26f7321/thumbnail.png"
+    ]
   },
   {
     "title": "How Project Gecko is rewiring AI for local languages and global impact",
@@ -1700,17 +1696,13 @@
     "source": "Financial Times - Technology",
     "summary": "Taiwanese electronics manufacturer expects revenue from AI server production to almost double from this quarter to the next",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/98c6e87a-5fb6-454a-acb1-306dc49eefd5.jpg",
+    "image_url": "",
     "summary_text": "Taiwanese electronics manufacturer expects revenue from AI server production to almost double from this quarter to the next",
     "category": "ai",
     "_trending_tags": [
       "ai",
       "nvidia"
-    ],
-    "_permalink": "/p/6646cb8ca1/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/6646cb8ca1/",
-    "_summary_240": "Taiwanese electronics manufacturer expects revenue from AI server production to almost double from this quarter to the next",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/6646cb8ca1/thumbnail.png"
+    ]
   },
   {
     "title": "Who Pays When A.I. Is Wrong?",
@@ -1737,17 +1729,13 @@
     "source": "Financial Times - Technology",
     "summary": "Tech giant aims to dismantle the \u2018Lighthouse Enterprise\u2019, which it claims has tricked 1mn victims out of $1bn",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/6ad01da8-678b-4b57-b651-d4376f2cd061.jpg",
+    "image_url": "",
     "summary_text": "Tech giant aims to dismantle the \u2018Lighthouse Enterprise\u2019, which it claims has tricked 1mn victims out of $1bn",
     "category": "software",
     "_trending_tags": [
       "ai",
       "google"
-    ],
-    "_permalink": "/p/5f221631d7/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/5f221631d7/",
-    "_summary_240": "Tech giant aims to dismantle the \u2018Lighthouse Enterprise\u2019, which it claims has tricked 1mn victims out of $1bn",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/5f221631d7/thumbnail.png"
+    ]
   },
   {
     "title": "Fighting the New York Times\u2019 invasion of user privacy",
@@ -1793,16 +1781,12 @@
     "source": "Financial Times - Technology",
     "summary": "There is widespread agreement on the need for action to cut red tape and raise investment to help boost the sector",
     "content_html": "",
-    "image_url": "https://images.ft.com/v3/image/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Fa00b1ee5-d8a0-45e8-a47d-bc083968ec1e.jpg?source=next-article&fit=scale-down&quality=highest&width=700&dpr=1",
+    "image_url": "",
     "summary_text": "There is widespread agreement on the need for action to cut red tape and raise investment to help boost the sector",
     "category": "fintech",
     "_trending_tags": [
       "ai"
-    ],
-    "_permalink": "/p/77e0ecdbfb/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/77e0ecdbfb/",
-    "_summary_240": "There is widespread agreement on the need for action to cut red tape and raise investment to help boost the sector",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/77e0ecdbfb/thumbnail.png"
+    ]
   },
   {
     "title": "GPT-5.1: A smarter, more conversational ChatGPT",
