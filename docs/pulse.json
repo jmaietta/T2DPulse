@@ -93,24 +93,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/8683ebfbf8/thumbnail.png"
   },
   {
-    "title": "Proof of reserves is crypto\u2019s key to rebuilding trust and transparency",
-    "url": "https://cointelegraph.com/news/proof-of-reserves-trust?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-    "published_at": "2025-11-14T07:30:00-05:00",
-    "source": "Cointelegraph",
-    "summary": "Transparency through proof of reserves is essential for restoring and maintaining trust in crypto exchanges, ensuring security through independent audits and verifiable reserves.",
-    "content_html": "",
-    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTAvMDE5YTNhMWEtYWJkMC03NGNhLTk2YzEtNDk5NjQ4MTk2OGYx.jpg",
-    "summary_text": "Transparency through proof of reserves is essential for restoring and maintaining trust in crypto exchanges, ensuring security through independent audits and verifiable reserves.",
-    "category": "fintech",
-    "_trending_tags": [
-      "ai"
-    ],
-    "_permalink": "/p/4e7d3151d5/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/4e7d3151d5/",
-    "_summary_240": "Transparency through proof of reserves is essential for restoring and maintaining trust in crypto exchanges, ensuring security through independent audits and verifiable reserves.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/4e7d3151d5/thumbnail.png"
-  },
-  {
     "title": "Researchers question Anthropic claim that AI-assisted attack was 90% autonomous",
     "url": "https://arstechnica.com/security/2025/11/researchers-question-anthropic-claim-that-ai-assisted-attack-was-90-autonomous/",
     "published_at": "2025-11-14T07:20:48-05:00",
@@ -946,26 +928,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/3bde43d396/",
     "_summary_240": "Bitcoin is turning into a savings-focused asset while Ethereum is becoming a high-velocity utility engine, a split that some analysts say is an emerging structural risk.",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/3bde43d396/thumbnail.png"
-  },
-  {
-    "title": "Anthropic details how it measures Claude\u2019s wokeness",
-    "url": "https://www.theverge.com/news/819216/anthropic-claude-political-even-handedness-woke-ai",
-    "published_at": "2025-11-13T15:00:00-05:00",
-    "source": "The Verge",
-    "summary": "Anthropic is detailing its efforts to make its Claude AI chatbot \u201cpolitically even-handed\u201d \u2014 a move that comes just months after President Donald Trump issued a ban on \u201cwoke AI.\u201d As outlined in a new blog post, Anthropic says it wants Claude to \u201ctreat opposing political viewpoints with equal depth, engagement, and quality of analysis.\u201d [\u2026]",
-    "content_html": "<figure>\n\n<img alt=\"\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/11/STK414_AI_CVIRGINIA_2_C.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100\" />\n\t<figcaption>\n\t\t</figcaption>\n</figure>\n<p class=\"has-text-align-none\">Anthropic is detailing its efforts to make its Claude AI chatbot \u201cpolitically even-handed\u201d \u2014 a move that comes just months after <a href=\"https://www.theverge.com/policy/713222/trump-woke-ai-executive-order-chatbots-llms\">President Donald Trump issued a ban</a> on \u201cwoke AI.\u201d As outlined in a new blog post, Anthropic says it wants Claude to \u201ctreat opposing political viewpoints with equal depth, engagement, and quality of analysis.\u201d</p>\n\n<p class=\"has-text-align-none\">In July, Trump signed an executive order that says the government should only procure \u201cunbiased\u201d and \u201ctruth-seeking\u201d AI models. Though this order only applies to government agencies, the changes companies make in response will likely trickle down to widely released AI models, since \u201crefining models in a way that consistently and predictably aligns them in certain directions can be an expensive and time-consuming process,\u201d <a href=\"https://www.theverge.com/policy/713222/trump-woke-ai-executive-order-chatbots-llms\">as noted by my colleague Adi Robertson</a>. Last month, <a href=\"https://www.theverge.com/news/798388/openai-chatgpt-political-bias-eval\">OpenAI similarly said it would \u201cclamp down\u201d on bias</a> in ChatGPT.</p>\n\n<p class=\"has-text-align-none\">Anthropic doesn\u2019t mention Trump\u2019s order in its press release, but it says it has instructed Claude to adhere to a series of rules \u2014 called a system prompt \u2014 that direct it to avoid providing \u201cunsolicited political opinions.\u201d It\u2019s also supposed to maintain factual accuracy and represent \u201cmultiple perspectives.\u201d Anthropic says that while including these instructions in Claude\u2019s system prompt \u201cis not a foolproof method\u201d to ensure political neutrality, it can still make a \u201csubstantial difference\u201d in its responses.</p>\n\n<p class=\"has-text-align-none\">Additionally, the AI startup describes how it uses reinforcement learning \u201cto reward the model for producing responses that are closer to a set of pre-defined \u2018traits.\u2019\u201d One of the desired \u201ctraits\u201d given to Claude encourages the model to \u201ctry to answer questions in such a way that someone could neither identify me as being a conservative nor liberal.&#8221;</p>\n<img alt=\"\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/11/anthropic-political-even-handedness.png?quality=90&#038;strip=all&#038;crop=0,0,100,100\" title=\"\" />\n<p class=\"has-text-align-none\">Anthropic also announced that it has created an open-source tool that measures Claude\u2019s responses for political neutrality, with its most recent test showing Claude Sonnet 4.5 and Claude Opus 4.1 garnering respective scores of 95 and 94 percent in even-handedness. That\u2019s higher than Meta\u2019s Llama 4 at 66 percent and GPT-5 at 89 percent, according to Anthropic.</p>\n\n<p class=\"has-text-align-none\">\u201cIf AI models unfairly advantage certain views \u2014 perhaps by overtly or subtly arguing more persuasively for one side, or by refusing to engage with some arguments altogether \u2014 they fail to respect the user\u2019s independence, and they fail at the task of assisting users to form their own judgments,\u201d Anthropic writes in its blog post.</p>",
-    "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/11/STK414_AI_CVIRGINIA_2_C.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "summary_text": "Anthropic is detailing its efforts to make its Claude AI chatbot \u201cpolitically even-handed\u201d \u2014 a move that comes just months after President Donald Trump issued a ban on \u201cwoke AI.\u201d As outlined in a new blog post, Anthropic says it wants Claude to \u201ctreat opposin...",
-    "category": "ai",
-    "_trending_tags": [
-      "ai",
-      "anthropic",
-      "claude"
-    ],
-    "_permalink": "/p/4877fb815a/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/4877fb815a/",
-    "_summary_240": "Anthropic is detailing its efforts to make its Claude AI chatbot \u201cpolitically even-handed\u201d \u2014 a move that comes just months after President Donald Trump issued a ban on \u201cwoke AI.\u201d...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/4877fb815a/thumbnail.png"
   },
   {
     "title": "UK risks falling behind US, EU without GBP stablecoin: Fintech exec",
