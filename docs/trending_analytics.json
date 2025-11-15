@@ -1,8 +1,8 @@
 {
-  "generated_at": "2025-11-15T15:40:27.203959-05:00",
+  "generated_at": "2025-11-15T16:20:35.196647-05:00",
   "total_keywords": 30,
   "keyword_counts": {
-    "ai": 157,
+    "ai": 155,
     "gpt": 19,
     "openai": 19,
     "chatgpt": 12,
@@ -20,8 +20,7 @@
     "llm": 2,
     "deepmind": 1,
     "gpu": 1,
-    "nvidia": 1,
-    "paypal": 1
+    "nvidia": 1
   },
   "sources_per_keyword": {},
   "top_articles_per_keyword": {}
