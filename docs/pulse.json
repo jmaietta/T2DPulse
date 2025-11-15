@@ -290,6 +290,23 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/c57210c854/thumbnail.png"
   },
   {
+    "title": "Google\u2019s new AI training method helps small models tackle complex reasoning",
+    "url": "https://venturebeat.com/ai/googles-new-ai-training-method-helps-small-models-tackle-complex-reasoning",
+    "published_at": "2025-11-14T18:00:00-05:00",
+    "source": "VentureBeat",
+    "summary": "Researchers at Google Cloud and UCLA have proposed a new reinforcement learning framework that significantly improves the ability of language models to learn very challenging multi-step reasoning tasks. Supervised Reinforcement Learning (SRL) reformulates problem-solving as a sequence of logical \u201cactions,\u201d providing rich learning signals during the training process. This approach enables smaller ...",
+    "content_html": "",
+    "image_url": "",
+    "summary_text": "Researchers at Google Cloud and UCLA have proposed a new reinforcement learning framework that significantly improves the ability of language models to learn very challenging multi-step reasoning tasks. Supervised Reinforcement Learning (SRL) reformulates pro...",
+    "category": "ai",
+    "_trending_tags": [
+      "ai",
+      "cloud",
+      "google",
+      "llm"
+    ]
+  },
+  {
     "title": "Databricks co-founder argues US must go open source to beat China in AI",
     "url": "https://techcrunch.com/2025/11/14/databricks-co-founder-argues-us-must-go-open-source-to-beat-china-in-ai/",
     "published_at": "2025-11-14T17:52:18-05:00",
@@ -797,6 +814,39 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/53713e37d8/thumbnail.png"
   },
   {
+    "title": "Databricks: 'PDF parsing for agentic AI is still unsolved' \u2014 new tool replaces multi-service pipelines with single function",
+    "url": "https://venturebeat.com/data-infrastructure/databricks-pdf-parsing-for-agentic-ai-is-still-unsolved-new-tool-replaces",
+    "published_at": "2025-11-14T11:00:00-05:00",
+    "source": "VentureBeat",
+    "summary": "There is a lot of enterprise data trapped in PDF documents. To be sure, gen AI tools have been able to ingest and analyze PDFs, but accuracy, time and cost have been less than ideal. New technology from Databricks could change that. The company this week detailed its \"ai_parse_document\" technology, now integrated with Databricks' Agent Bricks platform . The technology addresses a critical bottlen...",
+    "content_html": "",
+    "image_url": "",
+    "summary_text": "There is a lot of enterprise data trapped in PDF documents. To be sure, gen AI tools have been able to ingest and analyze PDFs, but accuracy, time and cost have been less than ideal. New technology from Databricks could change that. The company this week deta...",
+    "category": "ai",
+    "_trending_tags": [
+      "agent",
+      "ai",
+      "genai"
+    ]
+  },
+  {
+    "title": "ChatGPT Group Chats are here \u2026 but not for everyone (yet)",
+    "url": "https://venturebeat.com/ai/chatgpt-group-chats-are-here-but-not-for-everyone-yet",
+    "published_at": "2025-11-14T10:54:00-05:00",
+    "source": "VentureBeat",
+    "summary": "It was originally found in leaked code and publicized by AI influencers on X , but OpenAI has made it official: ChatGPT now offers Group Chats, allowing multiple users to join the same, single ChatGPT conversation and send messages to each other and the underlying large language model (LLM), online and via its mobile apps. Imagine adding ChatGPT as another member of your existing group chats, all...",
+    "content_html": "",
+    "image_url": "",
+    "summary_text": "It was originally found in leaked code and publicized by AI influencers on X , but OpenAI has made it official: ChatGPT now offers Group Chats, allowing multiple users to join the same, single ChatGPT conversation and send messages to each other and the under...",
+    "category": "ai",
+    "_trending_tags": [
+      "ai",
+      "chatgpt",
+      "gpt",
+      "openai"
+    ]
+  },
+  {
     "title": "Chicago Trading Floor Gets Second Act Powering AI-Led Future",
     "url": "https://www.bloomberg.com/news/articles/2025-11-14/chicago-trading-floor-gets-second-act-powering-ai-led-future",
     "published_at": "2025-11-14T10:00:00-05:00",
@@ -953,6 +1003,22 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/80b09afd6d/thumbnail.png"
   },
   {
+    "title": "How Anthropic's AI was jailbroken to become a weapon",
+    "url": "https://venturebeat.com/security/how-anthropics-ai-was-jailbroken-to-become-a-weapon",
+    "published_at": "2025-11-14T03:00:00-05:00",
+    "source": "VentureBeat",
+    "summary": "Chinese hackers automated 90% of an espionage campaign using Anthropic\u2019s Claude, breaching four organizations of the 30 they chose as targets. \"They broke down their attacks into small, seemingly innocent tasks that Claude would execute without being provided the full context of their malicious purpose,\" Jacob Klein, Anthropic's head of threat intelligence, told VentureBeat. AI models have reache...",
+    "content_html": "",
+    "image_url": "",
+    "summary_text": "Chinese hackers automated 90% of an espionage campaign using Anthropic\u2019s Claude, breaching four organizations of the 30 they chose as targets. \"They broke down their attacks into small, seemingly innocent tasks that Claude would execute without being provided...",
+    "category": "ai",
+    "_trending_tags": [
+      "ai",
+      "anthropic",
+      "claude"
+    ]
+  },
+  {
     "title": "Google Gemini 3.0 and GPT 5.1",
     "url": "https://newsletter.tek2dayholdings.com/p/google-gemini-30-and-gpt-51",
     "published_at": "2025-11-14T01:34:07-05:00",
@@ -990,6 +1056,21 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/d14d7a7f2d/thumbnail.png"
   },
   {
+    "title": "OpenAI experiment finds that sparse models could give AI builders the tools to debug neural networks",
+    "url": "https://venturebeat.com/ai/openai-experiment-finds-that-sparse-models-could-give-ai-builders-the-tools",
+    "published_at": "2025-11-14T00:00:00-05:00",
+    "source": "VentureBeat",
+    "summary": "OpenAI researchers are experimenting with a new approach to designing neural networks, with the aim of making AI models easier to understand, debug, and govern. Sparse models can provide enterprises with a better understanding of how these models make decisions. Understanding how models choose to respond, a big selling point of reasoning models for enterprises, can provide a level of trust for or...",
+    "content_html": "",
+    "image_url": "",
+    "summary_text": "OpenAI researchers are experimenting with a new approach to designing neural networks, with the aim of making AI models easier to understand, debug, and govern. Sparse models can provide enterprises with a better understanding of how these models make decisio...",
+    "category": "ai",
+    "_trending_tags": [
+      "ai",
+      "openai"
+    ]
+  },
+  {
     "title": "New personalities in ChatGPT",
     "url": "https://www.youtube.com/shorts/kykP8fy1a9Q",
     "published_at": "2025-11-13T23:17:15-05:00",
@@ -1007,6 +1088,21 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/fec96e96fb/",
     "_summary_240": "Say hello to GPT-5.1 and new personalization controls, rolling out to all users this week. 8 unique chat styles (including 3 new ones) are now in your ChatGPT personalization...",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/fec96e96fb/thumbnail.png"
+  },
+  {
+    "title": "Introducing OpenAI for Ireland",
+    "url": "https://openai.com/index/openai-for-ireland",
+    "published_at": "2025-11-13T23:00:00-05:00",
+    "source": "OpenAI News",
+    "summary": "OpenAI launches OpenAI for Ireland, partnering with the Irish Government, Dogpatch Labs and Patch to help SMEs, founders and young builders use AI to innovate, boost productivity and build the next generation of Irish tech startups.",
+    "content_html": "",
+    "image_url": "",
+    "summary_text": "OpenAI launches OpenAI for Ireland, partnering with the Irish Government, Dogpatch Labs and Patch to help SMEs, founders and young builders use AI to innovate, boost productivity and build the next generation of Irish tech startups.",
+    "category": "ai",
+    "_trending_tags": [
+      "ai",
+      "openai"
+    ]
   },
   {
     "title": "Wall Street stocks slide as tech jitters return",
@@ -1058,6 +1154,22 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/6b8c7bd5b3/",
     "_summary_240": "In the debut episode of the Build Mode podcast, we sat down with Deon Nicholas, co-founder of Forethought AI, to unpack what it really takes to build a lasting company with and...",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/6b8c7bd5b3/thumbnail.png"
+  },
+  {
+    "title": "Baidu unveils proprietary ERNIE 5 beating GPT-5 performance on charts, document understanding and more",
+    "url": "https://venturebeat.com/ai/baidu-unveils-proprietary-ernie-5-beating-gpt-5-performance-on-charts",
+    "published_at": "2025-11-13T15:23:00-05:00",
+    "source": "VentureBeat",
+    "summary": "Mere hours after OpenAI updated its flagship foundation model GPT-5 to GPT-5.1 , promising reduced token usage overall and a more pleasant personality with more preset options, Chinese search giant Baidu unveiled its next-generation foundation model, ERNIE 5.0, alongside a suite of AI product upgrades and strategic international expansions. The goal: to position as a global contender in the incre...",
+    "content_html": "",
+    "image_url": "",
+    "summary_text": "Mere hours after OpenAI updated its flagship foundation model GPT-5 to GPT-5.1 , promising reduced token usage overall and a more pleasant personality with more preset options, Chinese search giant Baidu unveiled its next-generation foundation model, ERNIE 5....",
+    "category": "ai",
+    "_trending_tags": [
+      "ai",
+      "gpt",
+      "openai"
+    ]
   },
   {
     "title": "AI On: 3 Ways to Bring Agentic AI to Computer Vision Applications",
@@ -1116,6 +1228,21 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/0486ec38ee/",
     "_summary_240": "The post The next phase of Aurora: Open and collaborative AI for weather and climate forecasting appeared first on Source .",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/0486ec38ee/thumbnail.png"
+  },
+  {
+    "title": "Upwork study shows AI agents excel with human partners but fail independently",
+    "url": "https://venturebeat.com/ai/upwork-study-shows-ai-agents-excel-with-human-partners-but-fail",
+    "published_at": "2025-11-13T13:30:00-05:00",
+    "source": "VentureBeat",
+    "summary": "Artificial intelligence agents powered by the world's most advanced language models routinely fail to complete even straightforward professional tasks on their own, according to groundbreaking research released Thursday by Upwork , the largest online work marketplace. But the same study reveals a more promising path forward: When AI agents collaborate with human experts, project completion rates ...",
+    "content_html": "",
+    "image_url": "",
+    "summary_text": "Artificial intelligence agents powered by the world's most advanced language models routinely fail to complete even straightforward professional tasks on their own, according to groundbreaking research released Thursday by Upwork , the largest online work mar...",
+    "category": "ai",
+    "_trending_tags": [
+      "agent",
+      "ai"
+    ]
   },
   {
     "title": "AI bubble trouble talk is overblown",
@@ -1263,6 +1390,68 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/1aa6e8dd50/thumbnail.png"
   },
   {
+    "title": "Understanding neural networks through sparse circuits",
+    "url": "https://openai.com/index/understanding-neural-networks-through-sparse-circuits",
+    "published_at": "2025-11-13T05:00:00-05:00",
+    "source": "OpenAI News",
+    "summary": "OpenAI is exploring mechanistic interpretability to understand how neural networks reason. Our new sparse model approach could make AI systems more transparent and support safer, more reliable behavior.",
+    "content_html": "",
+    "image_url": "",
+    "summary_text": "OpenAI is exploring mechanistic interpretability to understand how neural networks reason. Our new sparse model approach could make AI systems more transparent and support safer, more reliable behavior.",
+    "category": "ai",
+    "_trending_tags": [
+      "ai",
+      "openai"
+    ]
+  },
+  {
+    "title": "Introducing GPT-5.1 for developers",
+    "url": "https://openai.com/index/gpt-5-1-for-developers",
+    "published_at": "2025-11-12T19:00:00-05:00",
+    "source": "OpenAI News",
+    "summary": "GPT-5.1 is now available in the API, bringing faster adaptive reasoning, extended prompt caching, improved coding performance, and new apply_patch and shell tools.",
+    "content_html": "",
+    "image_url": "",
+    "summary_text": "GPT-5.1 is now available in the API, bringing faster adaptive reasoning, extended prompt caching, improved coding performance, and new apply_patch and shell tools.",
+    "category": "ai",
+    "_trending_tags": [
+      "ai",
+      "gpt"
+    ]
+  },
+  {
+    "title": "How Philips Is scaling AI literacy across 70,000 employees",
+    "url": "https://openai.com/index/philips",
+    "published_at": "2025-11-12T19:00:00-05:00",
+    "source": "OpenAI News",
+    "summary": "Philips is scaling AI literacy with ChatGPT Enterprise, training 70,000 employees to use AI responsibly and improve healthcare outcomes worldwide.",
+    "content_html": "",
+    "image_url": "",
+    "summary_text": "Philips is scaling AI literacy with ChatGPT Enterprise, training 70,000 employees to use AI responsibly and improve healthcare outcomes worldwide.",
+    "category": "ai",
+    "_trending_tags": [
+      "ai",
+      "chatgpt",
+      "gpt"
+    ]
+  },
+  {
+    "title": "Piloting group chats in ChatGPT",
+    "url": "https://openai.com/index/group-chats-in-chatgpt",
+    "published_at": "2025-11-12T19:00:00-05:00",
+    "source": "OpenAI News",
+    "summary": "We\u2019re piloting group chats in ChatGPT to make collaboration simple. Bring others\u2014and ChatGPT\u2014into one shared conversation to plan, brainstorm, and create together.",
+    "content_html": "",
+    "image_url": "",
+    "summary_text": "We\u2019re piloting group chats in ChatGPT to make collaboration simple. Bring others\u2014and ChatGPT\u2014into one shared conversation to plan, brainstorm, and create together.",
+    "category": "ai",
+    "_trending_tags": [
+      "ai",
+      "chatgpt",
+      "gpt"
+    ]
+  },
+  {
     "title": "OpenAI walks a tricky tightrope with GPT-5.1\u2019s eight new personalities",
     "url": "https://arstechnica.com/ai/2025/11/openai-walks-a-tricky-tightrope-with-gpt-5-1s-eight-new-personalities/",
     "published_at": "2025-11-12T17:54:47-05:00",
@@ -1305,7 +1494,7 @@
     "source": "Financial Times - Technology",
     "summary": "Overly onerous regulation could leave Europe as an also-ran after the US and China",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/c8a3088e-4bec-48ba-bc82-28150779de66.jpg",
+    "image_url": "",
     "summary_text": "Overly onerous regulation could leave Europe as an also-ran after the US and China",
     "category": "ai",
     "_trending_tags": [
@@ -1348,7 +1537,7 @@
     "source": "Financial Times - Technology",
     "summary": "Inference inferred, revenue reconstructed, cash burn quantified",
     "content_html": "",
-    "image_url": "https://images.ft.com/v3/image/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Fcddd1665-3992-4b21-8c87-c4a4e7506130.png?source=next-article&fit=scale-down&quality=highest&width=700&dpr=1",
+    "image_url": "",
     "summary_text": "Inference inferred, revenue reconstructed, cash burn quantified",
     "category": "ai",
     "_trending_tags": [
@@ -1447,6 +1636,22 @@
     ]
   },
   {
+    "title": "Neuro drives national retail wins with ChatGPT Business",
+    "url": "https://openai.com/index/neurogum",
+    "published_at": "2025-11-12T06:00:00-05:00",
+    "source": "OpenAI News",
+    "summary": "Neuro uses ChatGPT Business to scale nationwide with fewer than seventy employees. From drafting contracts to uncovering insights in customer data, the team saves time, cuts costs, and turns ideas into growth.",
+    "content_html": "",
+    "image_url": "",
+    "summary_text": "Neuro uses ChatGPT Business to scale nationwide with fewer than seventy employees. From drafting contracts to uncovering insights in customer data, the team saves time, cuts costs, and turns ideas into growth.",
+    "category": "ai",
+    "_trending_tags": [
+      "ai",
+      "chatgpt",
+      "gpt"
+    ]
+  },
+  {
     "title": "All of My Employees Are AI Agents, and So Are My Executives",
     "url": "https://www.wired.com/story/all-my-employees-are-ai-agents-so-are-my-executives/",
     "published_at": "2025-11-12T06:00:00-05:00",
@@ -1468,7 +1673,7 @@
     "source": "Financial Times - Technology",
     "summary": "Taiwanese electronics manufacturer expects revenue from AI server production to almost double from this quarter to the next",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/98c6e87a-5fb6-454a-acb1-306dc49eefd5.jpg",
+    "image_url": "",
     "summary_text": "Taiwanese electronics manufacturer expects revenue from AI server production to almost double from this quarter to the next",
     "category": "ai",
     "_trending_tags": [
@@ -1497,12 +1702,29 @@
     "source": "Financial Times - Technology",
     "summary": "Tech giant aims to dismantle the \u2018Lighthouse Enterprise\u2019, which it claims has tricked 1mn victims out of $1bn",
     "content_html": "",
-    "image_url": "https://images.ft.com/v3/image/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F6ad01da8-678b-4b57-b651-d4376f2cd061.jpg?source=next-article&fit=scale-down&quality=highest&width=700&dpr=1",
+    "image_url": "",
     "summary_text": "Tech giant aims to dismantle the \u2018Lighthouse Enterprise\u2019, which it claims has tricked 1mn victims out of $1bn",
     "category": "software",
     "_trending_tags": [
       "ai",
       "google"
+    ]
+  },
+  {
+    "title": "Fighting the New York Times\u2019 invasion of user privacy",
+    "url": "https://openai.com/index/fighting-nyt-user-privacy-invasion",
+    "published_at": "2025-11-12T01:00:00-05:00",
+    "source": "OpenAI News",
+    "summary": "OpenAI is fighting the New York Times\u2019 demand for 20 million private ChatGPT conversations and accelerating new security and privacy protections to protect your data.",
+    "content_html": "",
+    "image_url": "",
+    "summary_text": "OpenAI is fighting the New York Times\u2019 demand for 20 million private ChatGPT conversations and accelerating new security and privacy protections to protect your data.",
+    "category": "ai",
+    "_trending_tags": [
+      "ai",
+      "chatgpt",
+      "gpt",
+      "openai"
     ]
   },
   {
@@ -1519,6 +1741,36 @@
       "ai",
       "llm",
       "meta"
+    ]
+  },
+  {
+    "title": "GPT-5.1: A smarter, more conversational ChatGPT",
+    "url": "https://openai.com/index/gpt-5-1",
+    "published_at": "2025-11-11T19:00:00-05:00",
+    "source": "OpenAI News",
+    "summary": "We\u2019re upgrading the GPT-5 series with warmer, more capable models and new ways to customize ChatGPT\u2019s tone and style. GPT-5.1 starts rolling out today to paid users.",
+    "content_html": "",
+    "image_url": "",
+    "summary_text": "We\u2019re upgrading the GPT-5 series with warmer, more capable models and new ways to customize ChatGPT\u2019s tone and style. GPT-5.1 starts rolling out today to paid users.",
+    "category": "ai",
+    "_trending_tags": [
+      "ai",
+      "chatgpt",
+      "gpt"
+    ]
+  },
+  {
+    "title": "GPT-5.1 Instant and GPT-5.1 Thinking System Card Addendum",
+    "url": "https://openai.com/index/gpt-5-system-card-addendum-gpt-5-1",
+    "published_at": "2025-11-11T19:00:00-05:00",
+    "source": "OpenAI News",
+    "summary": "This GPT-5 system card addendum provides updated safety metrics for GPT-5.1 Instant and Thinking, including new evaluations for mental health and emotional reliance.",
+    "content_html": "",
+    "image_url": "",
+    "summary_text": "This GPT-5 system card addendum provides updated safety metrics for GPT-5.1 Instant and Thinking, including new evaluations for mental health and emotional reliance.",
+    "category": "ai",
+    "_trending_tags": [
+      "gpt"
     ]
   },
   {
