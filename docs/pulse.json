@@ -1447,11 +1447,7 @@
       "ai",
       "gpt",
       "openai"
-    ],
-    "_permalink": "/p/a025c06266/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/a025c06266/",
-    "_summary_240": "New controls attempt to please critics on both sides with a balance between bland and habit-forming.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/a025c06266/thumbnail.png"
+    ]
   },
   {
     "title": "Anthropic\u2019s Claude Takes Control of a Robot Dog",
@@ -1810,20 +1806,6 @@
     "_trending_tags": [
       "ai",
       "llm"
-    ]
-  },
-  {
-    "title": "Researchers isolate memorization from problem-solving in AI neural networks",
-    "url": "https://arstechnica.com/ai/2025/11/study-finds-ai-models-store-memories-and-logic-in-different-neural-regions/",
-    "published_at": "2025-11-10T18:06:42-05:00",
-    "source": "Ars Technica",
-    "summary": "Basic arithmetic ability lives in the memorization pathways, not logic circuits.",
-    "content_html": "<p>When engineers build AI language models like GPT-5 from training data, at least two major processing features emerge: memorization (reciting exact text they\u2019ve seen before, like famous quotes or passages from books) and what you might call \u201creasoning\u201d (solving new problems using general principles). New research from AI startup <a href=\"https://www.goodfire.ai/\">Goodfire.ai</a> provides the first potentially clear evidence that these different functions actually work through completely separate neural pathways in the model\u2019s architecture.</p>\n<p>The researchers discovered that this separation proves remarkably clean. In a preprint paper <a href=\"https://arxiv.org/abs/2510.24256\">released</a> in late October, they described that when they removed the memorization pathways, models lost 97 percent of their ability to recite training data verbatim but kept nearly all their \u201clogical reasoning\u201d ability intact.</p>\n<p>For example, at layer 22 in Allen Institute for AI\u2019s <a href=\"https://allenai.org/olmo\">OLMo-7B</a> language model, the researchers ranked all the weight components (the mathematical values that process information) from high to low based on a measure called \u201ccurvature\u201d (which we\u2019ll explain more below). When they examined these ranked components, the bottom 50 percent of weight components showed 23 percent higher activation on memorized data, while the top 10 percent showed 26 percent higher activation on general, non-memorized text.</p><p><a href=\"https://arstechnica.com/ai/2025/11/study-finds-ai-models-store-memories-and-logic-in-different-neural-regions/\">Read full article</a></p>\n<p><a href=\"https://arstechnica.com/ai/2025/11/study-finds-ai-models-store-memories-and-logic-in-different-neural-regions/#comments\">Comments</a></p>",
-    "image_url": "https://cdn.arstechnica.net/wp-content/uploads/2025/07/surprised_robot_2-1152x648.jpg",
-    "summary_text": "Basic arithmetic ability lives in the memorization pathways, not logic circuits.",
-    "category": "ai",
-    "_trending_tags": [
-      "ai"
     ]
   }
 ]
