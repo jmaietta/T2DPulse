@@ -1478,12 +1478,16 @@
     "source": "Financial Times - Technology",
     "summary": "Overly onerous regulation could leave Europe as an also-ran after the US and China",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/c8a3088e-4bec-48ba-bc82-28150779de66.jpg",
     "summary_text": "Overly onerous regulation could leave Europe as an also-ran after the US and China",
     "category": "ai",
     "_trending_tags": [
       "ai"
-    ]
+    ],
+    "_permalink": "/p/6a78e23698/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/6a78e23698/",
+    "_summary_240": "Overly onerous regulation could leave Europe as an also-ran after the US and China",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/6a78e23698/thumbnail.png"
   },
   {
     "title": "OpenAI Phone",
@@ -1529,13 +1533,17 @@
     "source": "Financial Times - Technology",
     "summary": "Inference inferred, revenue reconstructed, cash burn quantified",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://images.ft.com/v3/image/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Fcddd1665-3992-4b21-8c87-c4a4e7506130.png?source=next-article&fit=scale-down&quality=highest&width=700&dpr=1",
     "summary_text": "Inference inferred, revenue reconstructed, cash burn quantified",
     "category": "ai",
     "_trending_tags": [
       "ai",
       "openai"
-    ]
+    ],
+    "_permalink": "/p/14c26f7321/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/14c26f7321/",
+    "_summary_240": "Inference inferred, revenue reconstructed, cash burn quantified",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/14c26f7321/thumbnail.png"
   },
   {
     "title": "How Project Gecko is rewiring AI for local languages and global impact",
@@ -1586,11 +1594,7 @@
     "_trending_tags": [
       "ai",
       "meta"
-    ],
-    "_permalink": "/p/3e405e07d7/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/3e405e07d7/",
-    "_summary_240": "AI pioneer reportedly frustrated with Meta's shift from research to rapid product releases.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/3e405e07d7/thumbnail.png"
+    ]
   },
   {
     "title": "The AI Boom Is Fueling a Need for Speed in Chip Networking",
@@ -1604,11 +1608,7 @@
     "category": "ai",
     "_trending_tags": [
       "ai"
-    ],
-    "_permalink": "/p/4c762930e7/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/4c762930e7/",
-    "_summary_240": "Next-gen networking tech, sometimes powered by light instead of electricity, is emerging as a critical piece of AI infrastructure.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/4c762930e7/thumbnail.png"
+    ]
   },
   {
     "title": "NVIDIA Wins Every MLPerf Training v5.1 Benchmark",
@@ -1681,7 +1681,7 @@
     "source": "Financial Times - Technology",
     "summary": "Taiwanese electronics manufacturer expects revenue from AI server production to almost double from this quarter to the next",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/98c6e87a-5fb6-454a-acb1-306dc49eefd5.jpg",
     "summary_text": "Taiwanese electronics manufacturer expects revenue from AI server production to almost double from this quarter to the next",
     "category": "ai",
     "_trending_tags": [
@@ -1710,7 +1710,7 @@
     "source": "Financial Times - Technology",
     "summary": "Tech giant aims to dismantle the \u2018Lighthouse Enterprise\u2019, which it claims has tricked 1mn victims out of $1bn",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://images.ft.com/v3/image/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F6ad01da8-678b-4b57-b651-d4376f2cd061.jpg?source=next-article&fit=scale-down&quality=highest&width=700&dpr=1",
     "summary_text": "Tech giant aims to dismantle the \u2018Lighthouse Enterprise\u2019, which it claims has tricked 1mn victims out of $1bn",
     "category": "software",
     "_trending_tags": [
@@ -1847,20 +1847,6 @@
     "content_html": "<p>When engineers build AI language models like GPT-5 from training data, at least two major processing features emerge: memorization (reciting exact text they\u2019ve seen before, like famous quotes or passages from books) and what you might call \u201creasoning\u201d (solving new problems using general principles). New research from AI startup <a href=\"https://www.goodfire.ai/\">Goodfire.ai</a> provides the first potentially clear evidence that these different functions actually work through completely separate neural pathways in the model\u2019s architecture.</p>\n<p>The researchers discovered that this separation proves remarkably clean. In a preprint paper <a href=\"https://arxiv.org/abs/2510.24256\">released</a> in late October, they described that when they removed the memorization pathways, models lost 97 percent of their ability to recite training data verbatim but kept nearly all their \u201clogical reasoning\u201d ability intact.</p>\n<p>For example, at layer 22 in Allen Institute for AI\u2019s <a href=\"https://allenai.org/olmo\">OLMo-7B</a> language model, the researchers ranked all the weight components (the mathematical values that process information) from high to low based on a measure called \u201ccurvature\u201d (which we\u2019ll explain more below). When they examined these ranked components, the bottom 50 percent of weight components showed 23 percent higher activation on memorized data, while the top 10 percent showed 26 percent higher activation on general, non-memorized text.</p><p><a href=\"https://arstechnica.com/ai/2025/11/study-finds-ai-models-store-memories-and-logic-in-different-neural-regions/\">Read full article</a></p>\n<p><a href=\"https://arstechnica.com/ai/2025/11/study-finds-ai-models-store-memories-and-logic-in-different-neural-regions/#comments\">Comments</a></p>",
     "image_url": "https://cdn.arstechnica.net/wp-content/uploads/2025/07/surprised_robot_2-1152x648.jpg",
     "summary_text": "Basic arithmetic ability lives in the memorization pathways, not logic circuits.",
-    "category": "ai",
-    "_trending_tags": [
-      "ai"
-    ]
-  },
-  {
-    "title": "In an AI World, MSFT & AMZN Are Shorts",
-    "url": "https://newsletter.tek2dayholdings.com/p/in-an-ai-world-msft-and-amzn-are",
-    "published_at": "2025-11-10T12:09:07-05:00",
-    "source": "TEK2day Newsletter",
-    "summary": "If we are going to drink the tonic and assume that everything will be automated by AI tomorrow (which is what company valuations suggest), then we ought to short MSFT & AMZN.",
-    "content_html": "<div class=\"captioned-image-container\"><figure><a class=\"image-link image2 is-viewable-img\" href=\"https://substackcdn.com/image/fetch/$s_!ruGh!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F68650a00-66e3-4937-b3ba-c9680e45059c_1075x768.png\" target=\"_blank\"><div class=\"image2-inset\"><source type=\"image/webp\" /><img alt=\"\" class=\"sizing-normal\" height=\"768\" src=\"https://substackcdn.com/image/fetch/$s_!ruGh!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F68650a00-66e3-4937-b3ba-c9680e45059c_1075x768.png\" width=\"1075\" /><div class=\"image-link-expand\"><div class=\"pencraft pc-display-flex pc-gap-8 pc-reset\"><button class=\"pencraft pc-reset pencraft icon-container restack-image\" tabindex=\"0\" type=\"button\"><svg class=\"lucide lucide-refresh-cw\" fill=\"none\" height=\"20\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" viewBox=\"0 0 24 24\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8\"></path><path d=\"M21 3v5h-5\"></path><path d=\"M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16\"></path><path d=\"M8 16H3v5\"></path></svg></button><button class=\"pencraft pc-reset pencraft icon-container view-image\" tabindex=\"0\" type=\"button\"><svg class=\"lucide lucide-maximize2 lucide-maximize-2\" fill=\"none\" height=\"20\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" viewBox=\"0 0 24 24\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><polyline points=\"15 3 21 3 21 9\"></polyline><polyline points=\"9 21 3 21 3 15\"></polyline><line x1=\"21\" x2=\"14\" y1=\"3\" y2=\"10\"></line><line x1=\"3\" x2=\"10\" y1=\"21\" y2=\"14\"></line></svg></button></div></div></div></a></figure></div><h4>If we are going to drink the tonic and assume that everything will be automated by AI tomorrow (which is what company valuations suggest), then we ought to short <strong>MSFT</strong> &amp; <strong>AMZN</strong>. </h4><p><strong>The rationale is as follows:</strong> Azure is the engine that drives MSFT. AWS is the engine that drives Amazon. Neither Azure nor AWS make world-class chips that are competitive with <strong>NVIDIA (NVDA).</strong> Only <strong>Google (GOOGL)</strong> has meaningful AI traction with its TPU chips, most notably, <strong>Anthropic&#8217;s</strong> Claude models leverage Google&#8217;s TPUs.</p><p>Therefore, in a &#8220;AI world&#8221;, if you are one of the cloud hyper-scalers (AWS, Azure, Google, maybe Oracle (ORCL)), you need to be able to offer world-class compute to your customers. This means that AWS and Azure are completely dependent on third party GPUs such as those from NVIDIA and AMD (AMD). </p><p>Leaning on chip manufacturers is only going to take you so far. I would argue that when it comes to Cloud Services, it is chip quality that is the key differentiator when it comes to AI processes. The software piece is not as complicated to do well. </p><p><strong>Thus, what is to stop NVIDA and perhaps AMD and other chip makers from investing heavily in proprietary cloud businesses?</strong> <strong>NVIDIA doesn&#8217;t need Azure, AWS and other cloud service providers as customers. </strong></p><p>Google on the other hand is much better positioned. </p><div><hr /></div><p></p>",
-    "image_url": "https://substackcdn.com/image/fetch/$s_!ruGh!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F68650a00-66e3-4937-b3ba-c9680e45059c_1075x768.png",
-    "summary_text": "If we are going to drink the tonic and assume that everything will be automated by AI tomorrow (which is what company valuations suggest), then we ought to short MSFT & AMZN.",
     "category": "ai",
     "_trending_tags": [
       "ai"
