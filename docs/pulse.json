@@ -18,6 +18,25 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/458623091b/thumbnail.png"
   },
   {
+    "title": "From shiny object to sober reality: The vector database story, two years later",
+    "url": "https://venturebeat.com/ai/from-shiny-object-to-sober-reality-the-vector-database-story-two-years-later",
+    "published_at": "2025-11-16T13:00:00-05:00",
+    "source": "VentureBeat",
+    "summary": "When I first wrote \u201c Vector databases: Shiny object syndrome and the case of a missing unicorn \u201d in March 2024, the industry was awash in hype. Vector databases were positioned as the next big thing \u2014 a must-have infrastructure layer for the gen AI era. Billions of venture dollars flowed, developers rushed to integrate embeddings into their pipelines and analysts breathlessly tracked funding roun...",
+    "content_html": "",
+    "image_url": "",
+    "summary_text": "When I first wrote \u201c Vector databases: Shiny object syndrome and the case of a missing unicorn \u201d in March 2024, the industry was awash in hype. Vector databases were positioned as the next big thing \u2014 a must-have infrastructure layer for the gen AI era. Billi...",
+    "category": "software",
+    "_trending_tags": [
+      "ai",
+      "genai"
+    ],
+    "_permalink": "/p/ab0419e940/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/ab0419e940/",
+    "_summary_240": "When I first wrote \u201c Vector databases: Shiny object syndrome and the case of a missing unicorn \u201d in March 2024, the industry was awash in hype. Vector databases were positioned...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/ab0419e940/thumbnail.png"
+  },
+  {
     "title": "How much of the AI data center boom will be powered by renewable energy?",
     "url": "https://techcrunch.com/2025/11/16/how-much-of-the-ai-data-center-boom-will-be-powered-by-renewable-energy/",
     "published_at": "2025-11-16T11:48:42-05:00",
@@ -725,21 +744,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/b1a4058af9/thumbnail.png"
   },
   {
-    "title": "Real estate hybrid funds challenge DATs with mix of property and Bitcoin",
-    "url": "https://cointelegraph.com/news/cardone-capital-dats-real-estate-bitcoin-fund?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-    "published_at": "2025-11-14T13:35:10-05:00",
-    "source": "Cointelegraph",
-    "summary": "Most crypto treasury companies today lack an operational business that generates cash flow to finance additional digital asset purchases.",
-    "content_html": "",
-    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMDIvMDE5NGU0ZWUtYjdjNi03OWNlLTliYjgtMDE4MTRhODM0ZTJj.jpg",
-    "summary_text": "Most crypto treasury companies today lack an operational business that generates cash flow to finance additional digital asset purchases.",
-    "category": "fintech",
-    "_permalink": "/p/3f73cbff63/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/3f73cbff63/",
-    "_summary_240": "Most crypto treasury companies today lack an operational business that generates cash flow to finance additional digital asset purchases.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/3f73cbff63/thumbnail.png"
-  },
-  {
     "title": "Who\u2019s funding Silicon Valley\u2019s data-centre dream? It might be you.",
     "url": "https://www.ft.com/content/30162671-4366-40af-9519-1a02c3f1e1f5",
     "published_at": "2025-11-14T13:15:18-05:00",
@@ -1056,22 +1060,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/ebcf8dafb5/",
     "_summary_240": "Investor concerns over lofty valuations for artificial intelligence companies hit sentiment",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/ebcf8dafb5/thumbnail.png"
-  },
-  {
-    "title": "Baidu unveils proprietary ERNIE 5 beating GPT-5 performance on charts, document understanding and more",
-    "url": "https://venturebeat.com/ai/baidu-unveils-proprietary-ernie-5-beating-gpt-5-performance-on-charts",
-    "published_at": "2025-11-13T15:23:00-05:00",
-    "source": "VentureBeat",
-    "summary": "Mere hours after OpenAI updated its flagship foundation model GPT-5 to GPT-5.1 , promising reduced token usage overall and a more pleasant personality with more preset options, Chinese search giant Baidu unveiled its next-generation foundation model, ERNIE 5.0, alongside a suite of AI product upgrades and strategic international expansions. The goal: to position as a global contender in the incre...",
-    "content_html": "",
-    "image_url": "",
-    "summary_text": "Mere hours after OpenAI updated its flagship foundation model GPT-5 to GPT-5.1 , promising reduced token usage overall and a more pleasant personality with more preset options, Chinese search giant Baidu unveiled its next-generation foundation model, ERNIE 5....",
-    "category": "ai",
-    "_trending_tags": [
-      "ai",
-      "gpt",
-      "openai"
-    ]
   },
   {
     "title": "AI On: 3 Ways to Bring Agentic AI to Computer Vision Applications",
