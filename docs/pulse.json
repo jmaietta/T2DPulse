@@ -1,5 +1,23 @@
 [
   {
+    "title": "Here\u2019s what happened in crypto today",
+    "url": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "published_at": "2025-11-16T07:37:50-05:00",
+    "source": "Cointelegraph",
+    "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, NFTs, Web3 and crypto regulation.",
+    "content_html": "",
+    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMDYvMDE5Nzk0MjMtZWY4ZS03YzYwLWI5MzctYjlkZGY3NWZlOGFk.jpg",
+    "summary_text": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, NFTs, Web3 and crypto regulation.",
+    "category": "fintech",
+    "_trending_tags": [
+      "ai"
+    ],
+    "_permalink": "/p/43fa21f281/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/43fa21f281/",
+    "_summary_240": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, NFTs, Web3 and crypto regulation.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/43fa21f281/thumbnail.png"
+  },
+  {
     "title": "Japan\u2019s FSA plans to classify crypto as financial products, eyes 20% tax rate: Report",
     "url": "https://cointelegraph.com/news/japan-fsa-crypto-financial-products-20-percent-tax-reform?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
     "published_at": "2025-11-16T07:32:59-05:00",
@@ -85,24 +103,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/21b29c3f89/",
     "_summary_240": "Princeton University said a database containing information on alumni, donors, students and other members of the school\u2019s community was \u201ccompromised by outside actors for less...",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/21b29c3f89/thumbnail.png"
-  },
-  {
-    "title": "Here\u2019s what happened in crypto today",
-    "url": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-    "published_at": "2025-11-15T17:18:50-05:00",
-    "source": "Cointelegraph",
-    "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, NFTs, Web3 and crypto regulation.",
-    "content_html": "",
-    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMDYvMDE5Nzk0MjMtZWY4ZS03YzYwLWI5MzctYjlkZGY3NWZlOGFk.jpg",
-    "summary_text": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, NFTs, Web3 and crypto regulation.",
-    "category": "fintech",
-    "_trending_tags": [
-      "ai"
-    ],
-    "_permalink": "/p/103bdfa319/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/103bdfa319/",
-    "_summary_240": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, NFTs, Web3 and crypto regulation.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/103bdfa319/thumbnail.png"
   },
   {
     "title": "Pro-Bitcoin restaurant Steak 'n Shake announces El Salvador expansion",
@@ -1338,17 +1338,18 @@
     ]
   },
   {
-    "title": "Introducing GPT-5.1 for developers",
-    "url": "https://openai.com/index/gpt-5-1-for-developers",
+    "title": "Piloting group chats in ChatGPT",
+    "url": "https://openai.com/index/group-chats-in-chatgpt",
     "published_at": "2025-11-12T19:00:00-05:00",
     "source": "OpenAI News",
-    "summary": "GPT-5.1 is now available in the API, bringing faster adaptive reasoning, extended prompt caching, improved coding performance, and new apply_patch and shell tools.",
+    "summary": "We\u2019re piloting group chats in ChatGPT to make collaboration simple. Bring others\u2014and ChatGPT\u2014into one shared conversation to plan, brainstorm, and create together.",
     "content_html": "",
     "image_url": "",
-    "summary_text": "GPT-5.1 is now available in the API, bringing faster adaptive reasoning, extended prompt caching, improved coding performance, and new apply_patch and shell tools.",
+    "summary_text": "We\u2019re piloting group chats in ChatGPT to make collaboration simple. Bring others\u2014and ChatGPT\u2014into one shared conversation to plan, brainstorm, and create together.",
     "category": "ai",
     "_trending_tags": [
       "ai",
+      "chatgpt",
       "gpt"
     ]
   },
@@ -1369,18 +1370,17 @@
     ]
   },
   {
-    "title": "Piloting group chats in ChatGPT",
-    "url": "https://openai.com/index/group-chats-in-chatgpt",
+    "title": "Introducing GPT-5.1 for developers",
+    "url": "https://openai.com/index/gpt-5-1-for-developers",
     "published_at": "2025-11-12T19:00:00-05:00",
     "source": "OpenAI News",
-    "summary": "We\u2019re piloting group chats in ChatGPT to make collaboration simple. Bring others\u2014and ChatGPT\u2014into one shared conversation to plan, brainstorm, and create together.",
+    "summary": "GPT-5.1 is now available in the API, bringing faster adaptive reasoning, extended prompt caching, improved coding performance, and new apply_patch and shell tools.",
     "content_html": "",
     "image_url": "",
-    "summary_text": "We\u2019re piloting group chats in ChatGPT to make collaboration simple. Bring others\u2014and ChatGPT\u2014into one shared conversation to plan, brainstorm, and create together.",
+    "summary_text": "GPT-5.1 is now available in the API, bringing faster adaptive reasoning, extended prompt caching, improved coding performance, and new apply_patch and shell tools.",
     "category": "ai",
     "_trending_tags": [
       "ai",
-      "chatgpt",
       "gpt"
     ]
   },
@@ -1643,6 +1643,20 @@
     ]
   },
   {
+    "title": "GPT-5.1 Instant and GPT-5.1 Thinking System Card Addendum",
+    "url": "https://openai.com/index/gpt-5-system-card-addendum-gpt-5-1",
+    "published_at": "2025-11-11T19:00:00-05:00",
+    "source": "OpenAI News",
+    "summary": "This GPT-5 system card addendum provides updated safety metrics for GPT-5.1 Instant and Thinking, including new evaluations for mental health and emotional reliance.",
+    "content_html": "",
+    "image_url": "",
+    "summary_text": "This GPT-5 system card addendum provides updated safety metrics for GPT-5.1 Instant and Thinking, including new evaluations for mental health and emotional reliance.",
+    "category": "ai",
+    "_trending_tags": [
+      "gpt"
+    ]
+  },
+  {
     "title": "GPT-5.1: A smarter, more conversational ChatGPT",
     "url": "https://openai.com/index/gpt-5-1",
     "published_at": "2025-11-11T19:00:00-05:00",
@@ -1655,20 +1669,6 @@
     "_trending_tags": [
       "ai",
       "chatgpt",
-      "gpt"
-    ]
-  },
-  {
-    "title": "GPT-5.1 Instant and GPT-5.1 Thinking System Card Addendum",
-    "url": "https://openai.com/index/gpt-5-system-card-addendum-gpt-5-1",
-    "published_at": "2025-11-11T19:00:00-05:00",
-    "source": "OpenAI News",
-    "summary": "This GPT-5 system card addendum provides updated safety metrics for GPT-5.1 Instant and Thinking, including new evaluations for mental health and emotional reliance.",
-    "content_html": "",
-    "image_url": "",
-    "summary_text": "This GPT-5 system card addendum provides updated safety metrics for GPT-5.1 Instant and Thinking, including new evaluations for mental health and emotional reliance.",
-    "category": "ai",
-    "_trending_tags": [
       "gpt"
     ]
   },
