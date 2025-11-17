@@ -1,5 +1,42 @@
 [
   {
+    "title": "The 4 Things You Need for a Tech Bubble",
+    "url": "https://www.wired.com/story/uncanny-valley-podcast-4-things-you-need-for-a-tech-bubble/",
+    "published_at": "2025-11-17T17:09:54-05:00",
+    "source": "Wired",
+    "summary": "On this episode of Uncanny Valley, guest Brian Merchant walks us through a historical framework he used to analyze whether AI fits the classic signs of an economic bubble\u2014and what that means for all of us.",
+    "content_html": "",
+    "image_url": "https://media.wired.com/photos/690a77fca74eaf504e5be2c3/master/pass/Uncanny-Valley-Roundtable-AI-Bubble-Business-2234427708.jpg",
+    "summary_text": "On this episode of Uncanny Valley, guest Brian Merchant walks us through a historical framework he used to analyze whether AI fits the classic signs of an economic bubble\u2014and what that means for all of us.",
+    "category": "ai",
+    "_trending_tags": [
+      "ai"
+    ],
+    "_permalink": "/p/f0cceb7f94/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/f0cceb7f94/",
+    "_summary_240": "On this episode of Uncanny Valley, guest Brian Merchant walks us through a historical framework he used to analyze whether AI fits the classic signs of an economic bubble\u2014and...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/f0cceb7f94/thumbnail.png"
+  },
+  {
+    "title": "Google updates its weather forecasts with a new AI model",
+    "url": "https://www.theverge.com/news/822489/weather-forecast-ai-model-google-weathernext",
+    "published_at": "2025-11-17T17:00:56-05:00",
+    "source": "The Verge",
+    "summary": "Google debuted a new and improved AI weather model today that will be incorporated into popular products like Search, Gemini, and Pixel phones. The company\u2019s AI-enhanced forecasts have proven themselves to be quite accurate so far. AI weather models have also been able to make predictions faster and more efficiently than conventional physics-based models. Until [\u2026]",
+    "content_html": "<figure>\n\n<img alt=\"An illustration of swirling colors. \" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/11/WeatherNext-2-illustration-animation-globe-on-white-background.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100\" />\n\t<figcaption>\n\tAn illustration from Google\u2019s new AI weather model. | Image: Google\t</figcaption>\n</figure>\n<p class=\"has-text-align-none\">Google <a href=\"https://blog.google/technology/google-deepmind/weathernext-2/\">debuted a new and improved AI weather model</a> today that will be incorporated into popular products like Search, Gemini, and Pixel phones.&nbsp;</p>\n\n<p class=\"has-text-align-none\">The company\u2019s AI-enhanced forecasts have <a href=\"https://www.theverge.com/2024/12/7/24314064/ai-weather-forecast-model-google-deepmind-gencast\">proven themselves to be quite accurate</a><a href=\"https://arstechnica.com/science/2025/11/googles-new-weather-model-impressed-during-its-first-hurricane-season/\"> so far</a>. AI weather models have also been able to make predictions faster and more efficiently than conventional physics-based models. Until now, Google\u2019s work in this area has been mostly <a href=\"https://www.theverge.com/news/685820/google-ai-forecast-typhoon-hurricane-tropical-storm\">experimental</a>. Now, it\u2019s making those predictions a selling point for Google products and services.\u00a0</p>\n\n<figure class=\"wp-block-pullquote\"><blockquote><p>\u201cWe\u2019re taking it out of the lab and really putting it into the hands of users\u201d</p></blockquote></figure>\n\n<p class=\"has-text-align-none\">\u201cWe\u2019re taking it out of the lab and really putting it into the hands of users in more ways than we have before and sort of shedding off the experimental kind of designation because we have confidence that our forecasts are really quite effective and quite useful,\u201d Peter Battaglia, senior director of research and sustainability at Google DeepMind, said in a briefing with reporters.&nbsp;&nbsp;</p>\n\n<p class=\"has-text-align-none\">The <a href=\"https://deepmind.google/science/weathernext/\">new AI model, WeatherNext 2,</a> can generate forecasts eight times faster than Google\u2019s previous model, and is also more accurate in predicting 99.9 percent of variables like temperature or wind. WeatherNext 2 can pump out hundreds of potential outcomes from a particular starting point. It takes less than a minute using one of Google\u2019s TPU chips to make a prediction, which the company says would typically take several hours to accomplish using physics-based models on a supercomputer.\u00a0</p>\n\n<p class=\"has-text-align-none\">Those conventional models are computationally intensive because they\u2019re essentially attempting to recreate the complicated physics of the atmosphere to produce forecasts. AI models, in contrast, try to discern patterns out of historical weather data in order to predict future outcomes.&nbsp;</p>\n\n<p class=\"has-text-align-none\">Google was able to streamline its process by using a strategy it calls a <a href=\"https://arxiv.org/abs/2506.10772\">Functional Generative Network</a> (FGN) in WeatherNext 2. Older AI weather models still required repeated processing to generate one forecast. FGN is more efficient because it incorporates noise \u2014 or targeted randomness \u2014 into the model each time it\u2019s provided an input so that WeatherNext 2 can generate many different possible outcomes in a single step.\u00a0</p>\n\n<p class=\"has-text-align-none\">The advancements allow WeatherNext 2 to make predictions up to 15 days in advance and generate hourly forecasts. Google\u2019s banking on that appealing to enterprise customers as well as individual consumers.&nbsp;</p>\n\n<p class=\"has-text-align-none\">\u201cWe found that energy, agriculture, transportation, logistics, and customers in many other industries are quite interested in these one-hour steps. It helps them make more precise decisions relating to things that affect their business,\u201d Akib Uddin, a product manager at Google Research, said on the call.&nbsp;&nbsp;</p>\n\n<p class=\"has-text-align-none\">Aside from adding WeatherNext 2 to Maps, Search, Gemini, and Pixel Weather, Google is also offering an <a href=\"https://console.cloud.google.com/vertex-ai/publishers/google/model-garden/weather-next-v2\">early access program</a> for customers interested in custom modeling. The forecast data is also available in Google <a href=\"https://developers.google.com/earth-engine/datasets/catalog/projects_gcp-public-data-weathernext_assets_weathernext_2_0_0\">Earth Engine</a> for geospatial analysis and <a href=\"https://console.cloud.google.com/bigquery/analytics-hub/exchanges/projects/871883017250/locations/us/dataExchanges/weathernext_19397e1bcb7/listings/weathernext_2_19a39fe59dd\">BigQuery</a> for large-scale data analysis.\u00a0</p>\n\n<p class=\"has-text-align-none\">Google has competition, of course, when it comes to figuring out how to make generative AI useful in weather forecasting. The <a href=\"https://e360.yale.edu/features/artificial-intelligence-weather-forecasting\">European Center for Medium-Range Weather Forecasts</a>, <a href=\"https://www.axios.com/2025/02/24/nvidia-ai-weather-forecast-corediff\">Nvidia</a>, <a href=\"https://www.bloomberg.com/news/articles/2025-06-17/huawei-s-ai-weather-model-among-top-performers-in-china-tests\">Huawei</a>, and other companies are similarly developing their own AI weather models.\u00a0</p>",
+    "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/11/WeatherNext-2-illustration-animation-globe-on-white-background.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "summary_text": "Google debuted a new and improved AI weather model today that will be incorporated into popular products like Search, Gemini, and Pixel phones. The company\u2019s AI-enhanced forecasts have proven themselves to be quite accurate so far. AI weather models have also...",
+    "category": "ai",
+    "_trending_tags": [
+      "ai",
+      "google"
+    ],
+    "_permalink": "/p/8604ef1ad3/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/8604ef1ad3/",
+    "_summary_240": "Google debuted a new and improved AI weather model today that will be incorporated into popular products like Search, Gemini, and Pixel phones. The company\u2019s AI-enhanced...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/8604ef1ad3/thumbnail.png"
+  },
+  {
     "title": "Sen. Dick Durbin Says Proposed Visa and Mastercard \u2018Swipe Fees\u2019 Settlement \u2018Falls Short\u2019",
     "url": "https://www.pymnts.com/mastercard/2025/sen-dick-durbin-says-proposed-visa-and-mastercard-swipe-fees-settlement-falls-short/",
     "published_at": "2025-11-17T16:38:14-05:00",
@@ -34,6 +71,24 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/b93ef23817/",
     "_summary_240": "With higher yields and flexible deposits, Aave\u2019s new app marks a deeper move into the consumer banking terrain as inflation drives demand for better savings tools.",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/b93ef23817/thumbnail.png"
+  },
+  {
+    "title": "Theil\u2019s Hedge Funds Sell Entire Nvidia Stake | Bloomberg Tech 11/17/2025",
+    "url": "https://www.bloomberg.com/news/videos/2025-11-17/bloomberg-tech-11-17-2025-video",
+    "published_at": "2025-11-17T16:19:21-05:00",
+    "source": "Bloomberg Technology",
+    "summary": "Bloomberg\u2019s Caroline Hyde discusses the move by Peter Thiel\u2019s hedge fund to sell its holdings in Nvidia and its stock impact ahead of earnings. Plus, the crypto market selloff shows no signs of easing, and some of the riskiest tokens are bearing the brunt of it. And Amazon is seeking to raise about $12 billion through a debt offering, amid an industry-wide race to build AI infrastructure. (Source...",
+    "content_html": "",
+    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iU5WlizO0HZk/v3/1200x-1.jpg",
+    "summary_text": "Bloomberg\u2019s Caroline Hyde discusses the move by Peter Thiel\u2019s hedge fund to sell its holdings in Nvidia and its stock impact ahead of earnings. Plus, the crypto market selloff shows no signs of easing, and some of the riskiest tokens are bearing the brunt of ...",
+    "category": "fintech",
+    "_trending_tags": [
+      "nvidia"
+    ],
+    "_permalink": "/p/1488217f22/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/1488217f22/",
+    "_summary_240": "Bloomberg\u2019s Caroline Hyde discusses the move by Peter Thiel\u2019s hedge fund to sell its holdings in Nvidia and its stock impact ahead of earnings. Plus, the crypto market selloff...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/1488217f22/thumbnail.png"
   },
   {
     "title": "Consumers Want More Credit But Not More Cards",
@@ -281,7 +336,7 @@
     "published_at": "2025-11-17T12:07:57-05:00",
     "source": "The Verge",
     "summary": "Google users can now describe their next trip to its AI Mode in search and select the option to \u201cCreate with Canvas,\u201d which will build out an itinerary in a side panel complete with data on flights and hotels. The document it puts together can lay out potential plans, with suggestions based on the user\u2019s [\u2026]",
-    "content_html": "<figure>\n\n<img alt=\"\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/11/trip-plan-ai-mode.png?quality=90&#038;strip=all&#038;crop=0,0,100,100\" />\n\t<figcaption>\n\tUsers can plan their trip in Google\u2019s AI Mode.\t</figcaption>\n</figure>\n<p class=\"has-text-align-none\">Google users can now describe their next trip to its <a href=\"https://www.theverge.com/google-io/670439/google-ai-mode-search-io-2025\">AI Mode</a> in search and select the option to \u201cCreate with Canvas,\u201d which will build out an itinerary in a side panel complete with data on flights and hotels. The document it puts together can lay out potential plans, with suggestions based on the user\u2019s inputs, as well as photos and reviews from Google Maps.&nbsp;</p>\n\n<p class=\"has-text-align-none\">You can refine the plan it develops with follow-up questions or additional requests, like requesting hotel suggestions based on pricing and amenities, or activities based on travel time. Users in the US <a href=\"https://blog.google/products/search/agentic-plans-booking-travel-canvas-ai-mode/\">will now have access to travel planning with Canvas on desktop</a> if they\u2019ve opted into AI Mode in Labs, with the drafted plans stored in the AI Mode\u2019s history.\u00a0</p>\n<img alt=\"\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/11/trip-plan-canvas.png?quality=90&#038;strip=all&#038;crop=0,0,100,100\" title=\"\" />\n<p class=\"has-text-align-none\">The Canvas feature launched in March as a dynamic workspace for Gemini that could display <a href=\"https://www.theverge.com/google/631726/google-gemini-canvas-audio-overview-notebooklm-coding\">real-time coding output</a> or other information, like <a href=\"https://www.theverge.com/news/715218/google-ai-mode-image-upload-canvas-update-students\">continuously-updating study plans</a>, and has since expanded to become a part of AI Mode in Search. Google announced trip planning features for Gemini <a href=\"https://www.theverge.com/2024/5/14/24156508/google-ai-gemini-travel-assistant-hotel-bookings-io\">last year</a>, but this pulls them closer to all of the people who use its search engine, which probably isn\u2019t good news for other travel companies like <a href=\"https://www.theverge.com/2024/3/5/24090945/kayak-ai-chatbot-travel-chatgpt\">Kayak</a> and <a href=\"https://www.theverge.com/2023/12/18/24003416/expedia-travel-generative-ai-personalized-model\">Expedia</a>, which are also building their own AI-powered features.&nbsp;</p>\n\n<p class=\"has-text-align-none\">Google is also expanding the types of activities that can be agentically booked with AI Mode. Labs users in the US can already use AI Mode\u2019s agent for bot-automated booking of event tickets and local appointments, and beginning this week, agentic booking of restaurants is rolling out to all US users, <a href=\"https://www.theverge.com/news/763367/google-search-ai-mode-agentic-restaurant-bookings\">not just Labs users</a>. AI Mode shows you a list of options with links to finalize booking through Google\u2019s partners, such as OpenTable, Resy, Tock, Ticketmaster, StubHub, SeatGeek, among others.&nbsp;</p>\n\n<p class=\"has-text-align-none\">Google says it\u2019s also partnering with hotel companies and online booking platforms, including Booking.com, Expedia, Marriott International, and Wyndham Hotels &amp; Resorts to eventually roll out agentic booking for flights and hotels too.\u00a0 It also announced an expansion of the AI-powered Flight Deals search within Google Flights, which is already <a href=\"https://www.theverge.com/news/759444/google-flight-deals-ai-update-travel-ideas\">available to users in the US, Canada, and India</a>. The worldwide rollout to over 200 countries and territories with support for more than 60 languages has already begun, Google says.</p>",
+    "content_html": "<figure>\n\n<img alt=\"\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/11/trip-plan-ai-mode.png?quality=90&#038;strip=all&#038;crop=0,0,100,100\" />\n\t<figcaption>\n\tUsers can plan their trip in Google\u2019s AI Mode.\t</figcaption>\n</figure>\n<p class=\"has-text-align-none\">Google users can now describe their next trip to its <a href=\"https://www.theverge.com/google-io/670439/google-ai-mode-search-io-2025\">AI Mode</a> in search and select the option to \u201cCreate with Canvas,\u201d which will build out an itinerary in a side panel complete with data on flights and hotels. The document it puts together can lay out potential plans, with suggestions based on the user\u2019s inputs, as well as photos and reviews from Google Maps.&nbsp;</p>\n\n<p class=\"has-text-align-none\">You can refine the plan it develops with follow-up questions or additional requests, like requesting hotel suggestions based on pricing and amenities, or activities based on travel time. Users in the US <a href=\"https://blog.google/products/search/agentic-plans-booking-travel-canvas-ai-mode/\">will now have access to travel planning with Canvas on desktop</a> if they\u2019ve opted into AI Mode in Labs, with the drafted plans stored in the AI Mode\u2019s history.&nbsp;</p>\n<img alt=\"\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/11/trip-plan-canvas.png?quality=90&#038;strip=all&#038;crop=0,0,100,100\" title=\"\" />\n<p class=\"has-text-align-none\">The Canvas feature launched in March as a dynamic workspace for Gemini that could display <a href=\"https://www.theverge.com/google/631726/google-gemini-canvas-audio-overview-notebooklm-coding\">real-time coding output</a> or other information, like <a href=\"https://www.theverge.com/news/715218/google-ai-mode-image-upload-canvas-update-students\">continuously updating study plans</a>, and has since expanded to become a part of AI Mode in Search. Google announced trip planning features for Gemini <a href=\"https://www.theverge.com/2024/5/14/24156508/google-ai-gemini-travel-assistant-hotel-bookings-io\">last year</a>, but this pulls them closer to all of the people who use its search engine, which probably isn\u2019t good news for other travel companies like <a href=\"https://www.theverge.com/2024/3/5/24090945/kayak-ai-chatbot-travel-chatgpt\">Kayak</a> and <a href=\"https://www.theverge.com/2023/12/18/24003416/expedia-travel-generative-ai-personalized-model\">Expedia</a>, which are also building their own AI-powered features.\u00a0</p>\n\n<p class=\"has-text-align-none\">Google is also expanding the types of activities that can be agentically booked with AI Mode. Labs users in the US can already use AI Mode\u2019s agent for bot-automated booking of event tickets and local appointments, and beginning this week, agentic booking of restaurants is rolling out to all US users, <a href=\"https://www.theverge.com/news/763367/google-search-ai-mode-agentic-restaurant-bookings\">not just Labs users</a>. AI Mode shows you a list of options with links to finalize booking through Google\u2019s partners, such as OpenTable, Resy, Tock, Ticketmaster, StubHub, and SeatGeek, among others.\u00a0</p>\n\n<p class=\"has-text-align-none\">Google says it\u2019s also partnering with hotel companies and online booking platforms, including Booking.com, Expedia, Marriott International, and Wyndham Hotels &amp; Resorts to eventually roll out agentic booking for flights and hotels too.&nbsp; It also announced an expansion of the AI-powered Flight Deals search within Google Flights, which is already <a href=\"https://www.theverge.com/news/759444/google-flight-deals-ai-update-travel-ideas\">available to users in the US, Canada, and India</a>. The worldwide rollout to over 200 countries and territories with support for more than 60 languages has already begun, Google says.</p>",
     "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/11/trip-plan-ai-mode.png?quality=90&#038;strip=all&#038;crop=0,0,100,100",
     "summary_text": "Google users can now describe their next trip to its AI Mode in search and select the option to \u201cCreate with Canvas,\u201d which will build out an itinerary in a side panel complete with data on flights and hotels. The document it puts together can lay out potenti...",
     "category": "ai",
@@ -757,24 +812,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/c200669897/thumbnail.png"
   },
   {
-    "title": "Bitcoin isn\u2019t a \u2018magical anarcho-capitalist Swiss army knife\u2019: Nick Szabo",
-    "url": "https://cointelegraph.com/news/bitcoin-resilient-but-not-perfect-says-nick-szabo?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-    "published_at": "2025-11-17T00:44:35-05:00",
-    "source": "Cointelegraph",
-    "summary": "Every layer-1 crypto network has a \u201clegal attack\u201d surface, and while Bitcoin is resilient, it isn't immune, said American computer scientist Nick Szabo.",
-    "content_html": "",
-    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTEvMDE5YTkwMGEtMjgyOS03MWRmLWExZjktZjc3NjI2ZTMyZmZj.jpg",
-    "summary_text": "Every layer-1 crypto network has a \u201clegal attack\u201d surface, and while Bitcoin is resilient, it isn't immune, said American computer scientist Nick Szabo.",
-    "category": "fintech",
-    "_trending_tags": [
-      "ai"
-    ],
-    "_permalink": "/p/0c423e50f6/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/0c423e50f6/",
-    "_summary_240": "Every layer-1 crypto network has a \u201clegal attack\u201d surface, and while Bitcoin is resilient, it isn't immune, said American computer scientist Nick Szabo.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/0c423e50f6/thumbnail.png"
-  },
-  {
     "title": "Agentic AI - Whoa, Pump the Brakes",
     "url": "https://newsletter.tek2dayholdings.com/p/agentic-ai-whoa-pump-the-brakes",
     "published_at": "2025-11-17T00:05:23-05:00",
@@ -1141,7 +1178,7 @@
     "source": "Financial Times - Technology",
     "summary": "The grown-ups have officially arrived",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/d88a7eea-9f13-4001-8fbf-43ca89dd471a.jpg",
+    "image_url": "",
     "summary_text": "The grown-ups have officially arrived",
     "category": "ai",
     "_trending_tags": [
@@ -1185,7 +1222,7 @@
     "source": "Financial Times - Technology",
     "summary": "Investor concerns over lofty valuations for artificial intelligence companies hit sentiment",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/02970f7b-8476-496f-9652-934827071e40.jpg",
+    "image_url": "",
     "summary_text": "Investor concerns over lofty valuations for artificial intelligence companies hit sentiment",
     "category": "ai"
   },
@@ -1242,7 +1279,7 @@
     "source": "Financial Times - Technology",
     "summary": "For the foreseeable future, the market is facing a shortage of capacity \u2014 hardly the conditions that spell imminent disaster",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/60a0fc3f-4d1e-4c8f-a54c-4c467de4db30.jpg",
+    "image_url": "",
     "summary_text": "For the foreseeable future, the market is facing a shortage of capacity \u2014 hardly the conditions that spell imminent disaster",
     "category": "ai",
     "_trending_tags": [
@@ -1267,7 +1304,7 @@
     "source": "Financial Times - Technology",
     "summary": "The assumption that partnerships and circular investments will boost growth is economically and historically misguided",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/9e0d2a77-7992-4ee9-a3ba-9f2f6fd8782c.jpg",
+    "image_url": "",
     "summary_text": "The assumption that partnerships and circular investments will boost growth is economically and historically misguided",
     "category": "ai",
     "_trending_tags": [
@@ -1295,7 +1332,7 @@
     "source": "Financial Times - Technology",
     "summary": "The FT\u2019s John Thornhill and Eleanor Olcott replied to reader questions",
     "content_html": "",
-    "image_url": "https://images.ft.com/v3/image/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Fea72a63c-628d-4dba-baaa-9b808e8edf8d.jpg?source=next-article&fit=scale-down&quality=highest&width=700&dpr=1",
+    "image_url": "",
     "summary_text": "The FT\u2019s John Thornhill and Eleanor Olcott replied to reader questions",
     "category": "ai",
     "_trending_tags": [
