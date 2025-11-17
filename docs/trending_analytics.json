@@ -1,13 +1,13 @@
 {
-  "generated_at": "2025-11-17T13:50:27.332720-05:00",
+  "generated_at": "2025-11-17T14:19:12.883472-05:00",
   "total_keywords": 30,
   "keyword_counts": {
-    "ai": 63,
+    "ai": 64,
     "google": 7,
     "openai": 6,
-    "fintech": 5,
     "agent": 4,
     "chatgpt": 4,
+    "fintech": 4,
     "gpt": 4,
     "amazon": 3,
     "llm": 3,
@@ -17,7 +17,8 @@
     "anthropic": 1,
     "claude": 1,
     "deepmind": 1,
-    "genai": 1
+    "genai": 1,
+    "saas": 1
   },
   "sources_per_keyword": {},
   "top_articles_per_keyword": {}
