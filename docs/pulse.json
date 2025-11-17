@@ -1,5 +1,78 @@
 [
   {
+    "title": "Singapore\u2019s SGX to launch Bitcoin and Ether perps as institutional demand climbs",
+    "url": "https://cointelegraph.com/news/singapore-exchange-bitcoin-ether-perpetual-futures-institutional-demand?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "published_at": "2025-11-17T07:18:48-05:00",
+    "source": "Cointelegraph",
+    "summary": "SGX is aiming to capture rising institutional crypto demand by launching the second set of Bitcoin and Ether perpetual futures products in Singapore.",
+    "content_html": "",
+    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTEvMDE5YTkxYWYtYzFlNy03NmU3LWJlZmQtMjI3YzAwYmQxYzZj.jpg",
+    "summary_text": "SGX is aiming to capture rising institutional crypto demand by launching the second set of Bitcoin and Ether perpetual futures products in Singapore.",
+    "category": "fintech",
+    "_trending_tags": [
+      "ai"
+    ],
+    "_permalink": "/p/34e76c5807/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/34e76c5807/",
+    "_summary_240": "SGX is aiming to capture rising institutional crypto demand by launching the second set of Bitcoin and Ether perpetual futures products in Singapore.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/34e76c5807/thumbnail.png"
+  },
+  {
+    "title": "CoreWeave\u2019s Worst-Ever Week Shows AI Traders Are Getting Picky",
+    "url": "https://www.bloomberg.com/news/articles/2025-11-17/coreweave-s-worst-ever-week-shows-ai-traders-are-getting-picky",
+    "published_at": "2025-11-17T07:05:00-05:00",
+    "source": "Bloomberg Technology",
+    "summary": "Money is still pouring in from the race to build out artificial intelligence infrastructure, but traders are suddenly getting more selective about who the beneficiaries will be.",
+    "content_html": "",
+    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iuS.dZS4LpL8/v3/1200x-1.png",
+    "summary_text": "Money is still pouring in from the race to build out artificial intelligence infrastructure, but traders are suddenly getting more selective about who the beneficiaries will be.",
+    "category": "ai",
+    "_trending_tags": [
+      "ai"
+    ],
+    "_permalink": "/p/817271e521/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/817271e521/",
+    "_summary_240": "Money is still pouring in from the race to build out artificial intelligence infrastructure, but traders are suddenly getting more selective about who the beneficiaries will be.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/817271e521/thumbnail.png"
+  },
+  {
+    "title": "Google is collecting troves of data from downgraded Nest thermostats",
+    "url": "https://www.theverge.com/news/820600/google-nest-learning-thermostat-downgraded-data-collection",
+    "published_at": "2025-11-17T07:00:00-05:00",
+    "source": "The Verge",
+    "summary": "Google officially turned off remote control functionality for early Nest Learning Thermostats last month, but it hasn\u2019t stopped collecting a stream of data from these downgraded devices. After digging into the backend, security researcher Cody Kociemba found that the first- and second-generation Nest Learning Thermostats are still sending Google information about manual temperature changes, wheth...",
+    "content_html": "<figure>\n\n<img alt=\"\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/11/DSC_7066.1419978891.webp?quality=90&#038;strip=all&#038;crop=0,0,100,100\" />\n\t<figcaption>\n\tThe second-gen Nest Thermostat launched in 2012.\t</figcaption>\n</figure>\n<p class=\"has-text-align-none\">Google officially turned off remote control functionality for <a href=\"https://www.theverge.com/news/656332/google-ending-support-nest-thermostats\">early Nest Learning Thermostats last month</a>, but it hasn\u2019t stopped collecting a stream of data from these downgraded devices. After digging into the backend, security researcher Cody Kociemba found that the first- and second-generation Nest Learning Thermostats are still sending Google information about manual temperature changes, whether a person is present in the room, if sunlight is hitting the device, and more.</p>\n\n<p class=\"has-text-align-none\">Kociemba made the discovery while participating in a <a href=\"https://bounties.fulu.org/\">bounty program created by FULU</a>, a right-to-repair advocacy organization cofounded by electronics repair technician and YouTuber Louis Rossmann. <a href=\"https://www.youtube.com/watch?v=LsI6P2lxcHM\">FULU challenged developers</a> to come up with a solution to restore smart functionality to Nest devices no longer supported by Google, and that\u2019s exactly what Kociemba did with his <a href=\"https://nolongerevil.com/\">open-source No Longer Evil project</a>.</p>\n\n<p class=\"has-text-align-none\">But after cloning Google\u2019s API to create this custom software, he started receiving <a href=\"https://pastebin.com/fkQDkSwu\">a trove of logs from customer devices</a>, which he turned off. \u201cOn these devices, while they [Google] turned off access to remotely control them, they did leave in the ability for the devices to upload logs. And the logs are pretty extensive,\u201d Kociemba tells <em>The Verge</em>.</p>\n\n<p class=\"has-text-align-none\">Along with preventing users from remotely controlling early Nest Learning Thermostats (in addition to the European version from 2014), Google turned off the ability for users to check the status of their devices from the Nest or Google Home app, while also blocking security and software updates. <a href=\"https://support.google.com/googlenest/answer/16233096?hl=en\">Google notes</a> that the unsupported devices \u201cwill continue to report logs for issue diagnostics,\u201d though the data the company is collecting no longer appears to be useful.</p>\n\n<p class=\"has-text-align-none\">\u201cAlthough these logs can contain technical details such as HVAC error states, Google can no longer use that information to assist the customers who still depend on these thermostats, since support has been fully discontinued, even in cases of device failure,\u201d according to Kociemba.</p>\n\n<p class=\"has-text-align-none\">Google is still getting all the information collected by Nest Learning Thermostats, including data measured by their sensors, such as temperature, humidity, ambient light, and motion. \u201cI was under the impression that the Google connection would be severed along with the remote functionality, however that connection is not severed, and instead is a one-way street,\u201d Kociemba says. <em>The Verge </em>reached out to Google with a request for comment but didn\u2019t immediately hear back.</p>\n\n<p class=\"has-text-align-none\">FULU awarded Kociemba and another winner, who goes by the name of Team Dinosaur, with the $14,772 bounty for bringing smart features back to the unsupported thermostats.</p>",
+    "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/11/DSC_7066.1419978891.webp?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "summary_text": "Google officially turned off remote control functionality for early Nest Learning Thermostats last month, but it hasn\u2019t stopped collecting a stream of data from these downgraded devices. After digging into the backend, security researcher Cody Kociemba found ...",
+    "category": "fintech",
+    "_trending_tags": [
+      "google"
+    ],
+    "_permalink": "/p/34868ffa47/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/34868ffa47/",
+    "_summary_240": "Google officially turned off remote control functionality for early Nest Learning Thermostats last month, but it hasn\u2019t stopped collecting a stream of data from these downgraded...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/34868ffa47/thumbnail.png"
+  },
+  {
+    "title": "Amazon Founder Jeff Bezos Launches AI Startup Project Prometheus",
+    "url": "https://www.pymnts.com/artificial-intelligence-2/2025/amazon-founder-jeff-bezos-launches-ai-startup-project-prometheus/",
+    "published_at": "2025-11-17T06:53:45-05:00",
+    "source": "PYMNTS",
+    "summary": "Amazon founder Jeff Bezos has reportedly launched an AI startup where he\u2019ll serve as co-CEO. The company, dubbed \u201cProject Prometheus,\u201d is launching with $6.2 billion in financing, some of it from Bezos himself, the New York Times (NYT) reported Monday (Nov. 17), citing three sources familiar with the project. The report notes this is [\u2026] The post Amazon Founder Jeff Bezos Launches AI Startup Proj...",
+    "content_html": "<p><a href=\"https://www.amazon.com/\" rel=\"noopener\" target=\"_blank\"><span style=\"font-weight: 400;\">Amazon</span></a><span style=\"font-weight: 400;\"> founder </span><a href=\"https://www.linkedin.com/in/jeff-bezos-879307323\" rel=\"noopener\" target=\"_blank\"><span style=\"font-weight: 400;\">Jeff Bezos</span></a><span style=\"font-weight: 400;\"> has reportedly launched an AI startup where he\u2019ll serve as co-CEO.</span></p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p><span style=\"font-weight: 400;\">The company, dubbed </span><a href=\"https://www.linkedin.com/company/project-prometheus25/\" rel=\"noopener\" target=\"_blank\"><span style=\"font-weight: 400;\">\u201cProject Prometheus,\u201d</span></a><span style=\"font-weight: 400;\"> is launching with $6.2 billion in financing, some of it from Bezos himself, the New York Times (NYT) </span><a href=\"https://www.nytimes.com/2025/11/17/technology/bezos-project-prometheus.html?smid=nytcore-ios-share&amp;referringSource=articleShare\" rel=\"noopener\" target=\"_blank\"><span style=\"font-weight: 400;\">reported</span></a><span style=\"font-weight: 400;\"> Monday (Nov. 17), citing three sources familiar with the project.</span></p>\n<p><span style=\"font-weight: 400;\">The report notes this is the first time Bezos has taken an official operational role in a company since </span><a href=\"https://www.pymnts.com/cpi-posts/jeff-bezos-steps-down-as-amazon-ceo/\" rel=\"noopener\" target=\"_blank\"><span style=\"font-weight: 400;\">leaving Amazon</span></a><span style=\"font-weight: 400;\"> four years ago.\u00a0</span></p>\n<p><span style=\"font-weight: 400;\">Project Prometheus has already hired nearly 100 employees, including researchers recruited from </span><a href=\"https://openai.com/\" rel=\"noopener\" target=\"_blank\"><span style=\"font-weight: 400;\">OpenAI</span></a><span style=\"font-weight: 400;\">, </span><a href=\"https://deepmind.google/\" rel=\"noopener\" target=\"_blank\"><span style=\"font-weight: 400;\">Google DeepMind</span></a><span style=\"font-weight: 400;\"> and </span><a href=\"https://www.meta.com/about/?srsltid=AfmBOoreG5OpY2jnIUhXXKUJ-IpCFFbgR6i0QK-XwFO_Jl8FAraqIZXL\" rel=\"noopener\" target=\"_blank\"><span style=\"font-weight: 400;\">Meta</span></a><span style=\"font-weight: 400;\">, the sources said. The NYT says the company has thus far kept a low profile, and it\u2019s unclear when it was even started or where it will be based.</span></p>\n<p><span style=\"font-weight: 400;\">According to the report, Project Prometheus is part of a wave of companies working to apply AI to physical tasks like robotics or drug design.</span></p>\n<p><span style=\"font-weight: 400;\">This year saw the </span><a href=\"https://www.pymnts.com/news/investment-tracker/2025/openai-and-google-vets-periodic-labs-seeks-200-million-investment/\" rel=\"noopener\" target=\"_blank\"><span style=\"font-weight: 400;\">launch</span></a><span style=\"font-weight: 400;\"> of </span><a href=\"https://periodic.com/\" rel=\"noopener\" target=\"_blank\"><span style=\"font-weight: 400;\">Periodic Labs</span></a><span style=\"font-weight: 400;\">, a company founded by veterans of Meta, OpenAI, DeepMind and other major AI players, focused on developing AI that can boost discoveries in fields like chemistry and physics.</span></p>\n<p><span style=\"font-weight: 400;\">That company plans to build its own lab in Northern California where robots will conduct scientific experiments on a massive scale. By examining these efforts, AI systems can, in theory, learn to carry out experiments largely on their own, the report added.</span></p>\n<p><span style=\"font-weight: 400;\">Project Prometheus will delve into similar work, according to the sources familiar with the company\u2019s plans. The company is working on AI to assist in engineering and manufacturing in fields such as computers, automobiles and aerospace, aligning with Bezos\u2019 interest in space travel, the report added.</span></p>\n<p><span style=\"font-weight: 400;\">Joining Bezos as co-founder/co-CEO is </span><a href=\"https://www.linkedin.com/in/drvikbajaj\" rel=\"noopener\" target=\"_blank\"><span style=\"font-weight: 400;\">Vik Bajaj</span></a><span style=\"font-weight: 400;\">, a physicist and chemist who worked with Google\u2019s co-founder Sergey Brin at Google\u2019s X. That project produced </span><a href=\"https://wing.com/\" rel=\"noopener\" target=\"_blank\"><span style=\"font-weight: 400;\">Wing</span></a><span style=\"font-weight: 400;\">, a drone delivery service, and the </span><a href=\"https://www.pymnts.com/transportation/2025/waymo-to-test-autonomous-vehicles-in-10-new-cities-in-2025/\" rel=\"noopener\" target=\"_blank\"><span style=\"font-weight: 400;\">self-driving vehicle</span></a><span style=\"font-weight: 400;\"> that became </span><a href=\"https://waymo.com/\" rel=\"noopener\" target=\"_blank\"><span style=\"font-weight: 400;\">Waymo</span></a><span style=\"font-weight: 400;\">.</span></p>\n<p><span style=\"font-weight: 400;\">In other AI news, PYMNTS spoke recently with </span><a href=\"https://www.trulioo.com/\" rel=\"noopener\" target=\"_blank\"><span style=\"font-weight: 400;\">Trulioo</span></a><span style=\"font-weight: 400;\"> CEO </span><a href=\"https://www.linkedin.com/in/vickybindra\" rel=\"noopener\" target=\"_blank\"><span style=\"font-weight: 400;\">Vicky Bindra</span></a><span style=\"font-weight: 400;\"> for the \u201cWhat\u2019s Next in Payments: The Year of the CEO\u201d series. He characterized 2025 as the year in which CEOs came to terms with what artificial intelligence truly means for their companies.</span></p>\n<p><span style=\"font-weight: 400;\">\u201cIs it machine learning? Is it agents? Or is it generative AI? They\u2019re </span><a href=\"https://www.pymnts.com/artificial-intelligence-2/2025/trulioo-ceo-says-leadership-today-is-about-trust-data-and-decision-making/\" rel=\"noopener\" target=\"_blank\"><span style=\"font-weight: 400;\">sort of connected</span></a><span style=\"font-weight: 400;\">,\u201d he said. \u201cBut people talk about them as very different blocks. Your ability to be either influenced, supported or disintermediated by any of these technologies is what\u2019s causing the biggest concern or opportunity for businesses.\u201d</span></p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/artificial-intelligence-2/2025/amazon-founder-jeff-bezos-launches-ai-startup-project-prometheus/\">Amazon Founder Jeff Bezos Launches AI Startup Project Prometheus</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
+    "image_url": "https://www.pymnts.com/wp-content/uploads/2020/06/bezos.jpg?w=457",
+    "summary_text": "Amazon founder Jeff Bezos has reportedly launched an AI startup where he\u2019ll serve as co-CEO. The company, dubbed \u201cProject Prometheus,\u201d is launching with $6.2 billion in financing, some of it from Bezos himself, the New York Times (NYT) reported Monday (Nov. 1...",
+    "category": "ai",
+    "_trending_tags": [
+      "ai",
+      "amazon"
+    ],
+    "_permalink": "/p/aa20699f6e/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/aa20699f6e/",
+    "_summary_240": "Amazon founder Jeff Bezos has reportedly launched an AI startup where he\u2019ll serve as co-CEO. The company, dubbed \u201cProject Prometheus,\u201d is launching with $6.2 billion in...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/aa20699f6e/thumbnail.png"
+  },
+  {
     "title": "UBS and Ant bet on blockchain to break bottleneck in global treasury flows",
     "url": "https://cointelegraph.com/news/ubs-ant-tokenized-deposits-cross-border-payments?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
     "published_at": "2025-11-17T06:22:53-05:00",
@@ -404,24 +477,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/29300ddbc0/thumbnail.png"
   },
   {
-    "title": "White House Rolls Back Cash Repayments for Canceled Flights",
-    "url": "https://www.pymnts.com/news/regulation/2025/white-house-rolls-back-cash-repayments-for-canceled-flights/",
-    "published_at": "2025-11-16T18:56:08-05:00",
-    "source": "PYMNTS",
-    "summary": "The Trump administration is reversing a policy requiring airlines to repay travelers for major flight disruptions. In a document filed Friday (Nov. 14) with the Federal Register, the Transportation Department said it was rescinding the Biden-era proposal that would have refunded passengers up to $775 for delayed and called flights. According to the filing, [\u2026] The post White House Rolls Back Cash...",
-    "content_html": "<p><span>The Trump administration is reversing a policy requiring airlines to </span><span>repay</span><span> travelers for major flight disruptions.</span></p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p><span>In a </span><a class=\"editor-rtfLink\" href=\"https://www.federalregister.gov/documents/2025/11/17/2025-20042/airline-passenger-rights-withdrawal\" rel=\"noopener\" target=\"_blank\"><span>document</span></a><span> filed Friday (Nov. 14) with the Federal Register, the </span><a class=\"editor-rtfLink\" href=\"https://www.transportation.gov/\" rel=\"noopener\" target=\"_blank\"><span>Transportation Department</span></a><span> said it was rescinding the Biden-era proposal that would have refunded passengers up to $775 for delayed and </span><span>called</span><span> flights.\u00a0</span></p>\n<p><span>According to the filing, the order is in line with two executive orders from President Donald Trump: One calls on federal agencies to \u201creduce regulatory burdens</span><span>,\u201d while</span><span> the other directs agencies \u201cto identify and to repeal or to modify regulations that are unlawful or unauthorized.\u201d</span></p>\n<p><span>Instead, the department said it would continue to allow airlines to \u201ccompete on the services and compensation that they provide to passengers.\u201d</span></p>\n<p><span>The filing </span><span>was flagged</span><span> in a </span><a class=\"editor-rtfLink\" href=\"https://www.nytimes.com/2025/11/14/travel/trump-biden-delayed-flights-payments.html\" rel=\"noopener\" target=\"_blank\"><span>report</span></a><span> by The</span><span> New York Times (NYT), which said airlines had resisted the rule, arguing it exceeded the government\u2019s authority and would lead to </span><span>steeper</span><span> fares.</span> <span>Airlines for America, a trade association, said that </span><span>air carriers</span><span> already offer some relief </span><span>for</span><span> inconvenienced passengers.</span></p>\n<p><span>\u201cA4A carriers provide automatic refunds for significant delays and cancellations if a passenger chooses not to be rebooked, and they have competitive policies regarding reimbursements for food, transportation </span><span>and</span><span> lodging for cancellations and significant delays within a carrier\u2019s control,\u201d a spokeswoman told NYT.</span></p>\n<p><span>The rule was announced last April, aimed at making it easier for travelers to </span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/travel-payments/2024/dot-airlines-must-automatically-refund-canceled-flights/\" rel=\"noopener\" target=\"_blank\"><span>obtain refunds</span></a><span> if a flight is canceled or \u201csignificantly\u201d changed. It also mandated refunds for passengers with checked-in bags that were \u201csignificantly\u201d delayed or who did not receive the extra services they had purchased.</span></p>\n<p><span>\u201cThe new mandate is set to transform the landscape of air travel, ensuring that passengers are no longer </span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/travel-payments/2024/new-airline-refund-requirements-put-spotlight-on-b2c-payments/\" rel=\"noopener\" target=\"_blank\"><span>left in limbo</span></a><span> when their travel plans are abruptly altered,\u201d PYMNTS wrote at the time. \u201cAfter all, flight cancellations are enough of an inconvenience that customers shouldn\u2019t also have to jump through hoops to </span><span>be appropriately compensated</span><span> for their troubles.\u201d</span></p>\n<p><span>The NYT report also points out that a group of 18 Democratic senators sent a letter to the Transportation Department urging it to keep the protections in place, calling cash compensation a \u201ccommon-sense proposal.\u201d</span></p>\n<p><span>This change is happening at a time when consumers are looking to streamline their travel arrangements, with </span><span>research by</span><span> PYMNTS Intelligence showing smartphones becoming the </span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/study_posts/consumers-go-mobile-first-on-travel-purchases/\" rel=\"noopener\" target=\"_blank\"><span>default way</span></a><span> to pay for transportation.</span><span>\u00a0</span></p>\n<p><span>\u201cMore than 7 in 10 U.S. consumers </span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/travel-payments/2025/mobile-accounts-for-59-percent-of-long-distance-travel-bookings/\" rel=\"noopener\" target=\"_blank\"><span>prefer to buy</span></a><span> local rides or transit tickets on mobile devices, and nearly 6 in 10 do so for long-distance trips and rental cars,\u201d PYMNTS wrote last month. \u201cThe mobile-first pattern is more pronounced for travel than for retail, restaurants </span><span>or</span><span> groceries.\u201d</span></p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/news/regulation/2025/white-house-rolls-back-cash-repayments-for-canceled-flights/\">White House Rolls Back Cash Repayments for Canceled Flights</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
-    "image_url": "https://www.pymnts.com/wp-content/uploads/2025/11/canceled-flights.jpg?w=457",
-    "summary_text": "The Trump administration is reversing a policy requiring airlines to repay travelers for major flight disruptions. In a document filed Friday (Nov. 14) with the Federal Register, the Transportation Department said it was rescinding the Biden-era proposal that...",
-    "category": "fintech",
-    "_trending_tags": [
-      "ai"
-    ],
-    "_permalink": "/p/2ac4616e88/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/2ac4616e88/",
-    "_summary_240": "The Trump administration is reversing a policy requiring airlines to repay travelers for major flight disruptions. In a document filed Friday (Nov. 14) with the Federal Register,...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/2ac4616e88/thumbnail.png"
-  },
-  {
     "title": "Bitcoin briefly erases 2025 gains as crypto bleeds over weekend",
     "url": "https://cointelegraph.com/news/bitcoin-briefly-falls-below-2025-entry-point?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
     "published_at": "2025-11-16T18:42:12-05:00",
@@ -710,36 +765,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/025f5df7cd/thumbnail.png"
   },
   {
-    "title": "Robert Kiyosaki says cash crunch driving crash, stays bullish on Bitcoin, gold",
-    "url": "https://cointelegraph.com/news/kiyosaki-cash-crunch-bitcoin-gold-big-print-warning?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-    "published_at": "2025-11-15T05:29:26-05:00",
-    "source": "Cointelegraph",
-    "summary": "Robert Kiyosaki argues a global cash shortage is driving the market crash and says he\u2019s holding Bitcoin and gold, adding he\u2019ll buy more BTC once the downturn ends.",
-    "content_html": "",
-    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTEvMDE5YTg3MTYtMzlmNi03NzZkLThlODEtNDExNTdjNmE4MGFk.jpg",
-    "summary_text": "Robert Kiyosaki argues a global cash shortage is driving the market crash and says he\u2019s holding Bitcoin and gold, adding he\u2019ll buy more BTC once the downturn ends.",
-    "category": "fintech",
-    "_permalink": "/p/49983b3a2f/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/49983b3a2f/",
-    "_summary_240": "Robert Kiyosaki argues a global cash shortage is driving the market crash and says he\u2019s holding Bitcoin and gold, adding he\u2019ll buy more BTC once the downturn ends.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/49983b3a2f/thumbnail.png"
-  },
-  {
-    "title": "ARK Invest resumes crypto buying spree, adds BitMine and Bullish shares",
-    "url": "https://cointelegraph.com/news/ark-invest-bitmine-bullish-share-buys-crypto-stock-dip?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-    "published_at": "2025-11-15T02:12:33-05:00",
-    "source": "Cointelegraph",
-    "summary": "ARK Invest boosted its crypto-linked holdings, buying $5.8 million in BitMine and $2.9 million in Bullish shares amid market dip.",
-    "content_html": "",
-    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMDMvMDE5NWFhMTctZWIyZC03Mjc5LWFmYjAtNDE1OWMzNjQxMTIy.jpg",
-    "summary_text": "ARK Invest boosted its crypto-linked holdings, buying $5.8 million in BitMine and $2.9 million in Bullish shares amid market dip.",
-    "category": "fintech",
-    "_permalink": "/p/c60467827b/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/c60467827b/",
-    "_summary_240": "ARK Invest boosted its crypto-linked holdings, buying $5.8 million in BitMine and $2.9 million in Bullish shares amid market dip.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/c60467827b/thumbnail.png"
-  },
-  {
     "title": "Leaked documents shed light into how much OpenAI pays Microsoft",
     "url": "https://techcrunch.com/2025/11/14/leaked-documents-shed-light-into-how-much-openai-pays-microsoft/",
     "published_at": "2025-11-14T19:47:41-05:00",
@@ -1011,11 +1036,7 @@
     "_trending_tags": [
       "ai",
       "anthropic"
-    ],
-    "_permalink": "/p/e421050b23/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/e421050b23/",
-    "_summary_240": "The results of AI-assisted hacking aren't as impressive as many might have us believe.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/e421050b23/thumbnail.png"
+    ]
   },
   {
     "title": "Celebrated or penalised? Employers confuse staff over AI rules",
@@ -1029,11 +1050,7 @@
     "category": "ai",
     "_trending_tags": [
       "ai"
-    ],
-    "_permalink": "/p/7d5d899132/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/7d5d899132/",
-    "_summary_240": "Businesses advised to set clear policies covering which tools can be used and how",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/7d5d899132/thumbnail.png"
+    ]
   },
   {
     "title": "How Anthropic's AI was jailbroken to become a weapon",
@@ -1214,7 +1231,7 @@
     "source": "Financial Times - Technology",
     "summary": "The assumption that partnerships and circular investments will boost growth is economically and historically misguided",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/9e0d2a77-7992-4ee9-a3ba-9f2f6fd8782c.jpg",
     "summary_text": "The assumption that partnerships and circular investments will boost growth is economically and historically misguided",
     "category": "ai",
     "_trending_tags": [
@@ -1242,7 +1259,7 @@
     "source": "Financial Times - Technology",
     "summary": "The FT\u2019s John Thornhill and Eleanor Olcott replied to reader questions",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://images.ft.com/v3/image/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Fea72a63c-628d-4dba-baaa-9b808e8edf8d.jpg?source=next-article&fit=scale-down&quality=highest&width=700&dpr=1",
     "summary_text": "The FT\u2019s John Thornhill and Eleanor Olcott replied to reader questions",
     "category": "ai",
     "_trending_tags": [
@@ -1396,7 +1413,7 @@
     "source": "Financial Times - Technology",
     "summary": "Overly onerous regulation could leave Europe as an also-ran after the US and China",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/c8a3088e-4bec-48ba-bc82-28150779de66.jpg",
     "summary_text": "Overly onerous regulation could leave Europe as an also-ran after the US and China",
     "category": "ai",
     "_trending_tags": [
@@ -1439,7 +1456,7 @@
     "source": "Financial Times - Technology",
     "summary": "Inference inferred, revenue reconstructed, cash burn quantified",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://images.ft.com/v3/image/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Fcddd1665-3992-4b21-8c87-c4a4e7506130.png?source=next-article&fit=scale-down&quality=highest&width=700&dpr=1",
     "summary_text": "Inference inferred, revenue reconstructed, cash burn quantified",
     "category": "ai",
     "_trending_tags": [
