@@ -660,7 +660,7 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/888cbfbcd3/thumbnail.png"
   },
   {
-    "title": "Danish startup FlatPay joins the club of European fintech unicorns to track",
+    "title": "Danish startup Flatpay joins the club of European fintech unicorns to track",
     "url": "https://techcrunch.com/2025/11/16/fast-growing-danish-startup-flatpay-joins-the-club-of-european-fintech-unicorns-to-track/",
     "published_at": "2025-11-17T02:45:12-05:00",
     "source": "TechCrunch",
@@ -673,10 +673,10 @@
       "fintech",
       "llm"
     ],
-    "_permalink": "/p/40c3a8692e/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/40c3a8692e/",
+    "_permalink": "/p/8038de932a/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/8038de932a/",
     "_summary_240": "Flatpay\u2019s bet is that it can challenge larger players by charging small merchants a flat transaction rate to use its card terminals and point-of-sales systems.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/40c3a8692e/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/8038de932a/thumbnail.png"
   },
   {
     "title": "Ethereum starting on \u2018same supercycle\u2019 as Bitcoin: BitMine\u2019s Tom Lee",
@@ -826,24 +826,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/e94404b878/thumbnail.png"
   },
   {
-    "title": "Bitcoin briefly erases 2025 gains as crypto bleeds over weekend",
-    "url": "https://cointelegraph.com/news/bitcoin-briefly-falls-below-2025-entry-point?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-    "published_at": "2025-11-16T18:42:12-05:00",
-    "source": "Cointelegraph",
-    "summary": "Bitcoin\u2019s latest tumble pushed it below the $93,507 price it entered the year at, despite the year mostly seeing positive industry developments from corporations and governments.",
-    "content_html": "",
-    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMDMvMDE5NWU5NDYtNzI1NS03Y2E0LWJiM2QtYTM5OTdlZjA0NGYz.jpg",
-    "summary_text": "Bitcoin\u2019s latest tumble pushed it below the $93,507 price it entered the year at, despite the year mostly seeing positive industry developments from corporations and governments.",
-    "category": "fintech",
-    "_trending_tags": [
-      "ai"
-    ],
-    "_permalink": "/p/347339d6fc/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/347339d6fc/",
-    "_summary_240": "Bitcoin\u2019s latest tumble pushed it below the $93,507 price it entered the year at, despite the year mostly seeing positive industry developments from corporations and governments.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/347339d6fc/thumbnail.png"
-  },
-  {
     "title": "Warburg-Backed Princeton Enters Korea With First Data Center",
     "url": "https://www.bloomberg.com/news/articles/2025-11-16/warburg-backed-princeton-enters-korea-with-first-data-center",
     "published_at": "2025-11-16T17:00:00-05:00",
@@ -991,11 +973,7 @@
       "ai",
       "chatgpt",
       "gpt"
-    ],
-    "_permalink": "/p/b1a4058af9/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/b1a4058af9/",
-    "_summary_240": "Ongoing struggles with AI model instruction-following show that true human-level AI still a ways off.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/b1a4058af9/thumbnail.png"
+    ]
   },
   {
     "title": "Who\u2019s funding Silicon Valley\u2019s data-centre dream? It might be you.",
@@ -1407,22 +1385,6 @@
     ]
   },
   {
-    "title": "Piloting group chats in ChatGPT",
-    "url": "https://openai.com/index/group-chats-in-chatgpt",
-    "published_at": "2025-11-12T19:00:00-05:00",
-    "source": "OpenAI News",
-    "summary": "We\u2019re piloting group chats in ChatGPT to make collaboration simple. Bring others\u2014and ChatGPT\u2014into one shared conversation to plan, brainstorm, and create together.",
-    "content_html": "",
-    "image_url": "",
-    "summary_text": "We\u2019re piloting group chats in ChatGPT to make collaboration simple. Bring others\u2014and ChatGPT\u2014into one shared conversation to plan, brainstorm, and create together.",
-    "category": "ai",
-    "_trending_tags": [
-      "ai",
-      "chatgpt",
-      "gpt"
-    ]
-  },
-  {
     "title": "How Philips Is scaling AI literacy across 70,000 employees",
     "url": "https://openai.com/index/philips",
     "published_at": "2025-11-12T19:00:00-05:00",
@@ -1431,6 +1393,22 @@
     "content_html": "",
     "image_url": "",
     "summary_text": "Philips is scaling AI literacy with ChatGPT Enterprise, training 70,000 employees to use AI responsibly and improve healthcare outcomes worldwide.",
+    "category": "ai",
+    "_trending_tags": [
+      "ai",
+      "chatgpt",
+      "gpt"
+    ]
+  },
+  {
+    "title": "Piloting group chats in ChatGPT",
+    "url": "https://openai.com/index/group-chats-in-chatgpt",
+    "published_at": "2025-11-12T19:00:00-05:00",
+    "source": "OpenAI News",
+    "summary": "We\u2019re piloting group chats in ChatGPT to make collaboration simple. Bring others\u2014and ChatGPT\u2014into one shared conversation to plan, brainstorm, and create together.",
+    "content_html": "",
+    "image_url": "",
+    "summary_text": "We\u2019re piloting group chats in ChatGPT to make collaboration simple. Bring others\u2014and ChatGPT\u2014into one shared conversation to plan, brainstorm, and create together.",
     "category": "ai",
     "_trending_tags": [
       "ai",
