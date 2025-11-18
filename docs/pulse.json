@@ -1,5 +1,139 @@
 [
   {
+    "title": "Microsoft\u2019s new Anthropic partnership brings Claude AI models to Azure",
+    "url": "https://www.theverge.com/news/822988/microsoft-anthropic-partnership-claude-models-azure-investment-nvidia",
+    "published_at": "2025-11-18T10:20:17-05:00",
+    "source": "The Verge",
+    "summary": "Microsoft is announcing a strategic partnership with Anthropic today that will bring the AI startup\u2019s models to Microsoft Foundry for the first time. As part of the deal, Anthropic is also committing to purchasing $30 billion of Azure compute capacity and \u201cto contract additional compute capacity up to one gigawatt.\u201d Microsoft Foundry customers will now be able [\u2026]",
+    "content_html": "<figure>\n\n<img alt=\"\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/11/microsoftanthropicdeal.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100\" />\n\t<figcaption>\n\t\t</figcaption>\n</figure>\n<p class=\"has-text-align-none\">Microsoft is announcing a strategic partnership with Anthropic today that will bring the AI startup\u2019s models to Microsoft Foundry for the first time. As <a href=\"https://blogs.microsoft.com/blog/2025/11/18/microsoft-nvidia-and-anthropic-announce-strategic-partnerships/\">part of the deal</a>, Anthropic is also committing to purchasing $30 billion of Azure compute capacity and \u201cto contract\u00a0additional\u00a0compute capacity up to one gigawatt.\u201d</p>\n\n<p class=\"has-text-align-none\">Microsoft Foundry customers will now be able to access Anthropic\u2019s\u00a0frontier Claude models including Claude Sonnet 4.5, Claude Opus 4.1, and Claude Haiku 4.5. Despite these models coming to Microsoft\u2019s AI servers, Amazon will still remain Anthropic\u2019s primary cloud provider and training partner.</p>\n<div class=\"youtube-embed\"></div>\n<p class=\"has-text-align-none\">Nvidia and Anthropic are also partnering today as part of this deal, to optimize Anthropic\u2019s models for the best performance on future Nvidia architectures. Anthropic is committing to up to one gigawatt of compute capacity using Nvidia Blackwell and Vera Rubin systems.</p>\n\n<p class=\"has-text-align-none\">As part of these partnerships, Nvidia is investing up to $10 billion in Anthropic, with Microsoft also investing $5 billion.</p>\n\n<p class=\"has-text-align-none\">Microsoft has been increasingly embracing Anthropic\u2019s models across its Copilot services. In fact, Microsoft has been favoring Anthropic\u2019s Claude 4 over GPT-5 in its new auto <a href=\"https://www.theverge.com/report/778641/microsoft-visual-studio-code-anthropic-claude-4\">AI model selector in Visual Studio Code</a>. Microsoft also brought Anthropic\u2019s Claude Sonnet 4 and Claude Opus 4.1 to <a href=\"https://www.theverge.com/news/784392/microsoft-365-copilot-anthropic-ai-models-feature\">Microsoft 365 Copilot users recently</a>.</p>\n\n<p class=\"has-text-align-none\"><em>Developing\u2026</em></p>",
+    "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/11/microsoftanthropicdeal.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "summary_text": "Microsoft is announcing a strategic partnership with Anthropic today that will bring the AI startup\u2019s models to Microsoft Foundry for the first time. As part of the deal, Anthropic is also committing to purchasing $30 billion of Azure compute capacity and \u201cto...",
+    "category": "ai",
+    "_trending_tags": [
+      "ai",
+      "anthropic",
+      "claude",
+      "microsoft"
+    ],
+    "_permalink": "/p/0b87d9a7e1/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/0b87d9a7e1/",
+    "_summary_240": "Microsoft is announcing a strategic partnership with Anthropic today that will bring the AI startup\u2019s models to Microsoft Foundry for the first time. As part of the deal,...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/0b87d9a7e1/thumbnail.png"
+  },
+  {
+    "title": "Retail vs. whales: Who actually drives the Santa rally?",
+    "url": "https://cointelegraph.com/news/retail-vs-whales-who-actually-drives-the-santa-rally?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "published_at": "2025-11-18T10:18:11-05:00",
+    "source": "Cointelegraph",
+    "summary": "Is the Santa Rally driven by retail FOMO or whale-sized capital flows? Here\u2019s what actually fuels December\u2019s market surge in stocks and crypto.",
+    "content_html": "",
+    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTEvMDE5YTk3ODQtZTk4Yy03MmU5LTgzNTctMWViYjI0NDZjYjg5.jpg",
+    "summary_text": "Is the Santa Rally driven by retail FOMO or whale-sized capital flows? Here\u2019s what actually fuels December\u2019s market surge in stocks and crypto.",
+    "category": "software",
+    "_trending_tags": [
+      "ai"
+    ],
+    "_permalink": "/p/88a0e90867/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/88a0e90867/",
+    "_summary_240": "Is the Santa Rally driven by retail FOMO or whale-sized capital flows? Here\u2019s what actually fuels December\u2019s market surge in stocks and crypto.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/88a0e90867/thumbnail.png"
+  },
+  {
+    "title": "Microsoft, NVIDIA and Anthropic Announce Strategic Partnerships",
+    "url": "https://blogs.nvidia.com/blog/microsoft-nvidia-anthropic-announce-partnership/",
+    "published_at": "2025-11-18T10:00:00-05:00",
+    "source": "NVIDIA News",
+    "summary": "Today, Microsoft, NVIDIA and Anthropic announced new strategic partnerships. Anthropic is scaling its rapidly growing Claude AI model on Microsoft Azure, powered by NVIDIA, which will broaden access to Claude and provide Azure enterprise customers with expanded model choice and new capabilities. Anthropic has committed to purchase $30 billion of Azure compute capacity and to Read Article",
+    "content_html": "",
+    "image_url": "https://s3.amazonaws.com/cms.ipressroom.com/219/files/202511/691c89ed3d633254eac0f22b_nvidia-and-company-name-partnership-lockup-h-on-dark-1280x680-r5-1-842x450/nvidia-and-company-name-partnership-lockup-h-on-dark-1280x680-r5-1-842x450_thmb.jpg",
+    "summary_text": "Today, Microsoft, NVIDIA and Anthropic announced new strategic partnerships. Anthropic is scaling its rapidly growing Claude AI model on Microsoft Azure, powered by NVIDIA, which will broaden access to Claude and provide Azure enterprise customers with expand...",
+    "category": "ai",
+    "_trending_tags": [
+      "ai",
+      "anthropic",
+      "claude",
+      "microsoft",
+      "nvidia"
+    ],
+    "_permalink": "/p/22a399e556/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/22a399e556/",
+    "_summary_240": "Today, Microsoft, NVIDIA and Anthropic announced new strategic partnerships. Anthropic is scaling its rapidly growing Claude AI model on Microsoft Azure, powered by NVIDIA, which...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/22a399e556/thumbnail.png"
+  },
+  {
+    "title": "Alphabet-Led AI Project to Shield New Zealand Grid From Outages",
+    "url": "https://www.bloomberg.com/news/articles/2025-11-18/alphabet-led-ai-project-to-shield-new-zealand-grid-from-outages",
+    "published_at": "2025-11-18T10:00:00-05:00",
+    "source": "Bloomberg Technology",
+    "summary": "A consortium of four utilities serving a quarter of New Zealand will join an Alphabet Inc.-led initiative that uses artificial intelligence to fortify the country\u2019s grid against failures caused by extreme weather or earthquakes.",
+    "content_html": "Power lines in Bluff, New Zealand.",
+    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iJhCBgai98M8/v1/1200x-1.jpg",
+    "summary_text": "A consortium of four utilities serving a quarter of New Zealand will join an Alphabet Inc.-led initiative that uses artificial intelligence to fortify the country\u2019s grid against failures caused by extreme weather or earthquakes.",
+    "category": "ai",
+    "_trending_tags": [
+      "ai"
+    ],
+    "_permalink": "/p/4008623746/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/4008623746/",
+    "_summary_240": "A consortium of four utilities serving a quarter of New Zealand will join an Alphabet Inc.-led initiative that uses artificial intelligence to fortify the country\u2019s grid against...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/4008623746/thumbnail.png"
+  },
+  {
+    "title": "JPMorgan Vice Chair Daniel Pinto Says \u2018Correction\u2019 Coming for AI Valuations",
+    "url": "https://www.pymnts.com/news/artificial-intelligence/2025/jpmorgan-vice-chair-daniel-pinto-says-correction-coming-ai-valuations/",
+    "published_at": "2025-11-18T09:59:03-05:00",
+    "source": "PYMNTS",
+    "summary": "JPMorgan Chase Vice Chairman Daniel Pinto said Tuesday (Nov. 18) that artificial intelligence valuations need re-examination. He also warned that a downturn among AI companies would have a broader impact on the larger stock market, Bloomberg reported Tuesday. \u201cThere is probably a correction there,\u201d said Pinto at the Bloomberg Africa Business Summit in Johannesburg, [\u2026] The post JPMorgan Vice Chai...",
+    "content_html": "<p><a class=\"editor-rtfLink\" href=\"https://www.jpmorganchase.com/\" rel=\"noopener\" target=\"_blank\"><span>JPMorgan Chase</span></a><span> Vice Chairman </span><a class=\"editor-rtfLink\" href=\"https://www.linkedin.com/in/daniel-pinto-69a985a2/\" rel=\"noopener\" target=\"_blank\"><span>Daniel Pinto</span></a><span> said Tuesday (Nov. 18) that artificial intelligence valuations need re-examination.</span></p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p><span>He also warned that a downturn among AI companies would have a broader impact on the larger stock market, Bloomberg </span><a class=\"editor-rtfLink\" href=\"https://www.bloomberg.com/news/articles/2025-11-18/jpmorgan-s-pinto-warns-of-possible-correction-in-ai-valuations\" rel=\"noopener\" target=\"_blank\"><span>reported</span></a><span> Tuesday.</span></p>\n<p><span>\u201cThere is probably a correction there,\u201d said Pinto at the </span><a class=\"editor-rtfLink\" href=\"https://events.bloombergevents.com/event/BloombergAfricaBusinessSummit/summary\" rel=\"noopener\" target=\"_blank\"><span>Bloomberg Africa Business Summit</span></a><span> in Johannesburg, per the report. \u201cThat correction will also create a correction in the rest of the segment, the S&amp;P and in the industry.\u201d</span></p>\n<p><span>Pinto is </span><span>one of</span><span> several Wall Street figures worried about the possibility of an </span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/artificial-intelligence-2/2025/jeff-bezos-says-ai-bubble-may-burst-but-ai-is-real/\" rel=\"noopener\" target=\"_blank\"><span>AI bubble</span></a> <span>forming</span><span> amid gargantuan </span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/news/investment-tracker/2025/openai-reaches-500-billion-valuation-after-share-sale/\" rel=\"noopener\" target=\"_blank\"><span>investments</span></a><span> in the sector, according to the report.</span></p>\n<p><span>The five largest tech companies could spend an estimated $371 billion this year to develop the data centers required to train and run complex AI models. By the decade\u2019s end, that infrastructure will need $5.2 trillion to keep up with demand, the report said, citing projections from </span><a class=\"editor-rtfLink\" href=\"https://www.mckinsey.com/\" rel=\"noopener\" target=\"_blank\"><span>McKinsey &amp; Co</span></a><span>.</span></p>\n<p><span>\u201cIn order to justify these valuations, you are considering a level of productivity that, it will happen, but it may not happen as fast as the market is pricing now,\u201d Pinto said, per the report.</span></p>\n<p><span>Pinto downplayed the likelihood of a recession in the United States, while also painting a less-than-rosy picture of the stock market, according to the report.</span></p>\n<p><span>\u201cWe do see some deceleration,\u201d Pinto said, per the report. \u201cI think that the economy may grow less next year, but most likely it will avoid recession.\u201d</span></p>\n<p><span>While the stock market may be concerned about AI valuations, </span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/artificial-intelligence-2/2025/3-areas-where-ai-generates-roi-in-b2b-payments/\" rel=\"noopener\" target=\"_blank\"><span>finance</span></a><span> teams are increasingly focused on the technology\u2019s deployment.</span></p>\n<p><span>\u201cThe evolution of AI in payments started across existing use cases, with models embedded in fraud detection, invoice matching and risk scoring,\u201d PYMNTS reported Nov. 7.</span></p>\n<p><span>Now, gains are beginning to materialize as </span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/artificial-intelligence-2/2025/why-ais-transformation-of-finance-function-is-incremental-but-irreversible/\" rel=\"noopener\" target=\"_blank\"><span>AI</span></a><span> crosses over into proactive and predictive territory.</span></p>\n<p><span>For chief financial officers, AI\u2019s capacity to improve </span><span>financial</span><span> outcomes falls into three categories: operational, strategic and relational. Operational return on investment (ROI) comes from reducing manual effort, strategic ROI emerges when AI helps finance leaders shape the company\u2019s liquidity horizon, and relational ROI enhances trust between buyers and suppliers.</span></p>\n<p><em>For all PYMNTS AI coverage, subscribe to the daily </em><a href=\"https://pymnts.com/subscribe/\" rel=\"noopener\" target=\"_blank\"><em>AI Newsletter</em></a><em>.</em></p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/news/artificial-intelligence/2025/jpmorgan-vice-chair-daniel-pinto-says-correction-coming-ai-valuations/\">JPMorgan Vice Chair Daniel Pinto Says \u2018Correction\u2019 Coming for AI Valuations</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
+    "image_url": "https://www.pymnts.com/wp-content/uploads/2025/05/JPMorganChase.jpg?w=457",
+    "summary_text": "JPMorgan Chase Vice Chairman Daniel Pinto said Tuesday (Nov. 18) that artificial intelligence valuations need re-examination. He also warned that a downturn among AI companies would have a broader impact on the larger stock market, Bloomberg reported Tuesday....",
+    "category": "ai",
+    "_trending_tags": [
+      "ai"
+    ],
+    "_permalink": "/p/eb9c4c655f/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/eb9c4c655f/",
+    "_summary_240": "JPMorgan Chase Vice Chairman Daniel Pinto said Tuesday (Nov. 18) that artificial intelligence valuations need re-examination. He also warned that a downturn among AI companies...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/eb9c4c655f/thumbnail.png"
+  },
+  {
+    "title": "Cloudflare Outage Darkens Vast Portions of the Web",
+    "url": "https://www.pymnts.com/connectedeconomy/2025/cloudflare-outage-darkens-vast-portions-of-the-web/",
+    "published_at": "2025-11-18T09:56:42-05:00",
+    "source": "PYMNTS",
+    "summary": "A Cloudflare outage Tuesday (Nov. 18) shut down multiple high-profile websites. The internet infrastructure provider has pointed to a \u201cspike in unusual traffic\u201d as the culprit behind the trouble, per multiple media reports. The outage has impacted a number of artificial intelligence (AI) services, including ChatGPT, as well as social media platform X. \u201cWe do not yet know [\u2026] The post Cloudflare O...",
+    "content_html": "<p style=\"font-weight: 400;\">A\u00a0<a href=\"https://www.cloudflare.com/\" rel=\"noopener\" target=\"_blank\">Cloudflare</a>\u00a0outage Tuesday (Nov. 18) shut down multiple high-profile websites.</p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p style=\"font-weight: 400;\">The internet infrastructure provider has pointed to a \u201cspike in unusual traffic\u201d as the culprit behind the trouble, per multiple media reports. The outage has impacted a number of artificial intelligence (AI) services, including\u00a0<a href=\"https://chatgpt.com/\" rel=\"noopener\" target=\"_blank\">ChatGPT</a>, as well as social media platform\u00a0<a href=\"https://x.com/\">X</a>.</p>\n<p style=\"font-weight: 400;\">\u201cWe do not yet know the cause of the spike in unusual traffic,\u201d a company spokesperson told CNBC. \u201cWe are\u00a0<a href=\"https://www.cnbc.com/2025/11/18/cloudflare-down-outage-traffic-spike-x-chatgpt.html\" rel=\"noopener\" target=\"_blank\">all hands on deck</a>\u00a0to make sure all traffic is served without errors.\u201d</p>\n<p style=\"font-weight: 400;\">As of 9:22 a.m. Tuesday, the company\u2019s\u00a0<a href=\"https://www.cloudflarestatus.com/\" rel=\"noopener\" target=\"_blank\">status page</a>\u00a0said Cloudflare was \u201ccontinuing working on restoring service for application services customers.\u201d</p>\n<p style=\"font-weight: 400;\">The CNBC report notes that Cloudflare\u2019s software is used by multiple businesses around the, helping to manage and secure traffic for a 20% of the internet. Its services include cybersecurity protections, such as distributed denial of service attacks, in which hackers try to overload a website\u2019s system with so many traffic requests that it can\u2019t operate.</p>\n<p style=\"font-weight: 400;\">Meanwhile, a\u00a0<a href=\"https://www.coindesk.com/business/2025/11/18/cloudflare-global-outage-spreads-to-crypto-multiple-front-ends-down\" rel=\"noopener\" target=\"_blank\">report</a>\u00a0by Coindesk said the outage coincided with problems at several cryptocurrency-related sites, including\u00a0<a href=\"https://ton.org/\" rel=\"noopener\" target=\"_blank\">Toncoin</a>\u00a0and Abritrum block explorer\u00a0<a href=\"https://arbiscan.io/\" rel=\"noopener\" target=\"_blank\">Arbiscan</a>, with data platform DefiLlama showing intermittent \u201cinternal server errors.\u201d</p>\n<p style=\"font-weight: 400;\">The outage comes a little less than a month after Amazon Web Services suffered a\u00a0<a href=\"https://www.pymnts.com/amazon/2025/aws-outage-briefly-shutters-broad-swaths-of-the-internet/\" rel=\"noopener\" target=\"_blank\">massive outage</a>\u00a0that impacted millions of people and large portions of the internet around the world.</p>\n<p style=\"font-weight: 400;\">Facebook,\u202fReddit,\u202fRobinhood,\u202fVenmo,\u202fVerizon,\u202fLyft,\u202fUnited Airlines,\u202fRing,\u202fSnapchat,\u202fThe New York Times,\u202fFortnite,\u202fRoblox\u202fand the\u202fMcDonald\u2019s\u202fapp were all along the websites who experienced problems during that event.</p>\n<p style=\"font-weight: 400;\">Nine days later,\u00a0<a href=\"https://www.microsoft.com/\" rel=\"noopener\" target=\"_blank\">Microsoft</a>\u00a0reported it was\u00a0<a href=\"https://www.pymnts.com/safety-and-security/2025/microsoft-says-problematic-configuration-change-caused-outage-of-cloud-services/\" rel=\"noopener\" target=\"_blank\">dealing with issues</a>\u00a0that had been causing service degradation on Microsoft 365 productivity apps and Microsoft Azure cloud computing services for users around the world.</p>\n<p style=\"font-weight: 400;\">Cloudflare in September issued a warning that information shared in its customer support system should be\u00a0<a href=\"https://www.pymnts.com/fraud-attack/2025/cloudflare-says-support-case-data-compromised-by-breach-of-saleslofts-drift/\" rel=\"noopener\" target=\"_blank\">considered compromised</a>.</p>\n<p style=\"font-weight: 400;\">This came after the company revealed that it was affected by a\u00a0<a href=\"https://www.pymnts.com/cybersecurity/2025/phishing-threats-prompt-call-for-wider-adoption-of-passkeys/\" rel=\"noopener\" target=\"_blank\">breach</a>\u00a0of\u00a0<a href=\"https://www.salesloft.com/\" rel=\"noopener\" target=\"_blank\">Salesloft\u2019s</a>\u00a0Drift that let someone outside Cloudflare access the Salesforce instance it uses for customer support and in-house customer case management.</p>\n<p style=\"font-weight: 400;\">\u201cMost of this information is customer contact information and basic support case data, but some customer support interactions may reveal information about a customer\u2019s configuration and could contain sensitive information like access tokens,\u201d the post said.</p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/connectedeconomy/2025/cloudflare-outage-darkens-vast-portions-of-the-web/\">Cloudflare Outage Darkens Vast Portions of the Web</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
+    "image_url": "https://www.pymnts.com/wp-content/uploads/2025/09/Cloudflare-1.jpg?w=457",
+    "summary_text": "A Cloudflare outage Tuesday (Nov. 18) shut down multiple high-profile websites. The internet infrastructure provider has pointed to a \u201cspike in unusual traffic\u201d as the culprit behind the trouble, per multiple media reports. The outage has impacted a number of...",
+    "category": "fintech",
+    "_trending_tags": [
+      "cloud"
+    ],
+    "_permalink": "/p/86f1899cb0/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/86f1899cb0/",
+    "_summary_240": "A Cloudflare outage Tuesday (Nov. 18) shut down multiple high-profile websites. The internet infrastructure provider has pointed to a \u201cspike in unusual traffic\u201d as the culprit...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/86f1899cb0/thumbnail.png"
+  },
+  {
+    "title": "Cloudflare outage hits multiple crypto websites, social media channels",
+    "url": "https://cointelegraph.com/news/cloudflare-outage-crypto-websites-social-media?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "published_at": "2025-11-18T09:51:27-05:00",
+    "source": "Cointelegraph",
+    "summary": "Many users reported not having access to websites, including Coinbase and Blockchain.com, and social media platforms after Cloudflare reported an \u201cinternal service degradation.\u201d",
+    "content_html": "",
+    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMDgvMDE5ODdjMzAtMjY0ZC03ZGUyLThjYjAtZDYzMmE1MWZkZGYz.jpg",
+    "summary_text": "Many users reported not having access to websites, including Coinbase and Blockchain.com, and social media platforms after Cloudflare reported an \u201cinternal service degradation.\u201d",
+    "category": "software",
+    "_trending_tags": [
+      "ai",
+      "cloud"
+    ],
+    "_permalink": "/p/a231ce60cb/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/a231ce60cb/",
+    "_summary_240": "Many users reported not having access to websites, including Coinbase and Blockchain.com, and social media platforms after Cloudflare reported an \u201cinternal service degradation.\u201d",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/a231ce60cb/thumbnail.png"
+  },
+  {
     "title": "Here\u2019s what happened in crypto today",
     "url": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
     "published_at": "2025-11-18T09:36:31-05:00",
@@ -183,21 +317,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/a51f4327a5/thumbnail.png"
   },
   {
-    "title": "Zigbee\u2019s next big update lets you add smart home devices without a hub",
-    "url": "https://www.theverge.com/news/822450/zigbee-4-0-suzi-smart-home-wireless-mesh-network-ble",
-    "published_at": "2025-11-18T08:00:00-05:00",
-    "source": "The Verge",
-    "summary": "The Connectivity Standards Alliance has released Zigbee 4.0, an updated version of its wireless mesh networking standard with better security, improved battery life, and batch setup of new devices like smart lights, switches, and plugs. It\u2019s also announcing a new feature called Suzi, which is short for Sub-GHz and Zigbee. While Zigbee smart home devices [\u2026]",
-    "content_html": "<figure>\n\n<img alt=\"The Philips Hue Twilight smart sunrise lamp on a corner table.\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/09/IMG_7084.jpeg?quality=90&#038;strip=all&#038;crop=0,0,100,100\" />\n\t<figcaption>\n\t\t</figcaption>\n</figure>\n<p class=\"has-text-align-none\">The Connectivity Standards Alliance has released Zigbee 4.0, an updated version of its wireless mesh networking standard with better security, improved battery life, and batch setup of new devices like smart lights, switches, and plugs. It\u2019s also announcing a new feature called <a href=\"https://csa-iot.org/all-solutions/suzi/\">Suzi</a>, which is short for Sub-GHz and Zigbee.&nbsp;</p>\n\n<p class=\"has-text-align-none\">While Zigbee smart home devices typically operate on the 2.4GHz band, which can experience signal loss caused by obstacles like thick walls, Suzi-branded devices will be able to work on the European 800 MHz and North American 900 MHz frequency bands. That way, the group says they\u2019ll offer coverage for smart devices installed outside and farther away from a home, without the need for additional hardware to extend the networks.</p>\n\n<p class=\"has-text-align-none\">Suzi is similar to other branded features that have been added to the 802.15.4-based spec over the years, like Zigbee Smart Energy usage monitoring gear, and the low-power / low-maintenance Zigbee Green Power devices that harvest energy from sources like light or heat instead of using batteries.</p>\n\n<p class=\"has-text-align-none\">As <a href=\"https://www.theverge.com/news/814241/ikea-smart-home-matter-thread-lights-sensors-remote-control\">companies like Ikea</a> have been making the transition to Matter over Thread, which also operates on the 2.4GHz band, the advantages of Suzi will help keep the Zigbee protocol competitive, and not just in the home. \u201cSuzi is a strong fit for commercial and industrial use-cases, which introduce challenging environments such as thick walls, multiple levels, and large deployments,\u201d Genie Peshkova, chair of the Zigbee Product Marketing Group, explained to <em>The Verge</em> in an email.</p>\n<img alt=\"The Zigbee and Suzi logos.\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/11/zigbee.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100\" title=\"The Zigbee and Suzi logos.\" />\n<p class=\"has-text-align-none\">The list of improvements coming with Zigbee 4.0 includes a simplified certification process, increased information exchange between devices, better security, and improved battery life for devices with communications that can be limited to set schedules.</p>\n\n<p class=\"has-text-align-none\">A new feature called Batch Commissioning will streamline large-scale installations by allowing multiple smart devices to be set up simultaneously. An electrician could install Zigbee-compatible light bulbs throughout a new house long before there\u2019s even power, and when a hub is later installed and running, they can be activated at once instead of having to add them to the network individually.&nbsp;</p>\n\n<p class=\"has-text-align-none\"><a href=\"https://csa-iot.org/all-solutions/zigbee/zigbee-direct/\">Zigbee Direct</a>, a previously optional feature added two years ago, is now standard in 4.0. It allows smartphones to directly connect, control, and even add nearby Zigbee devices to a network using Bluetooth Low Energy without a hub.</p>\n\n<p class=\"has-text-align-none\">Zigbee 4.0 is fully backwards compatible with Zigbee 3.0 and Smart Energy devices, and devices with \u201csufficient operational resources\u201d can potentially be upgraded over-the-air once certified, according to Peshkova. But exactly which devices will be eligible to take full advantage of the improvements isn\u2019t yet known. The Suzi certification program is scheduled to start sometime in the first half of 2026.</p>",
-    "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/09/IMG_7084.jpeg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "summary_text": "The Connectivity Standards Alliance has released Zigbee 4.0, an updated version of its wireless mesh networking standard with better security, improved battery life, and batch setup of new devices like smart lights, switches, and plugs. It\u2019s also announcing a...",
-    "category": "fintech",
-    "_permalink": "/p/e60b8f9b6a/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/e60b8f9b6a/",
-    "_summary_240": "The Connectivity Standards Alliance has released Zigbee 4.0, an updated version of its wireless mesh networking standard with better security, improved battery life, and batch...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/e60b8f9b6a/thumbnail.png"
-  },
-  {
     "title": "Dorsey-Backed Yellow Card Says Dollar Barriers Boost Stablecoins",
     "url": "https://www.bloomberg.com/news/articles/2025-11-18/dorsey-backed-yellow-card-says-dollar-barriers-boost-stablecoins",
     "published_at": "2025-11-18T07:49:04-05:00",
@@ -216,15 +335,15 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/e85d735707/thumbnail.png"
   },
   {
-    "title": "Widespread Cloudflare Outage Takes Down ChatGPT, X, Others",
+    "title": "Sites From ChatGPT to X Recovering from Global Cloudflare Outage",
     "url": "https://www.bloomberg.com/news/articles/2025-11-18/chatgpt-x-among-sites-blocked-in-widespread-cloudflare-outage",
     "published_at": "2025-11-18T07:18:45-05:00",
     "source": "Bloomberg Technology",
-    "summary": "A worldwide outage plaguing the network of cybersecurity firm Cloudflare Inc. has taken down the websites for everything from the chief US energy regulator, ChatGPT, the New Jersey transit authority and the social-media platform X.",
+    "summary": "A worldwide outage at the network of cybersecurity firm Cloudflare Inc. has been resolved after several hours of disruption on Tuesday.",
     "content_html": "Cloudflare headquarters in San Francisco. Photographer: David Paul Morris/Bloomberg",
     "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/i057kmPAoy0g/v0/1200x-1.jpg",
-    "summary_text": "A worldwide outage plaguing the network of cybersecurity firm Cloudflare Inc. has taken down the websites for everything from the chief US energy regulator, ChatGPT, the New Jersey transit authority and the social-media platform X.",
-    "category": "ai",
+    "summary_text": "A worldwide outage at the network of cybersecurity firm Cloudflare Inc. has been resolved after several hours of disruption on Tuesday.",
+    "category": "software",
     "_trending_tags": [
       "chatgpt",
       "cloud",
@@ -343,8 +462,8 @@
     "published_at": "2025-11-18T05:45:05-05:00",
     "source": "Bloomberg Technology",
     "summary": "The bull case for generative artificial intelligence is no longer clear and hyperscalers should be approached with caution, according to an analyst who downgraded two of Wall Street\u2019s most-favored tech giants.",
-    "content_html": "",
-    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iepTzMNh1XjA/v3/1200x-1.png",
+    "content_html": "Microsoft Amazon.com logos",
+    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ieeiZ5I36UPA/v1/1200x-1.jpg",
     "summary_text": "The bull case for generative artificial intelligence is no longer clear and hyperscalers should be approached with caution, according to an analyst who downgraded two of Wall Street\u2019s most-favored tech giants.",
     "category": "ai",
     "_trending_tags": [
@@ -504,40 +623,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/6ab3ff4d50/thumbnail.png"
   },
   {
-    "title": "Marqeta Exec Sees Digital Wallets as \u2018Gateway\u2019 to Payments Choice",
-    "url": "https://www.pymnts.com/mobile-wallets/2025/marqeta-exec-sees-digital-wallets-as-gateway-to-payments-choice/",
-    "published_at": "2025-11-18T04:00:28-05:00",
-    "source": "PYMNTS",
-    "summary": "Watch more: Digital Shift: Marqeta\u2019s Todd Pollak According to Marqeta Chief Revenue Officer Todd Pollak, the future of payments is being built by ecosystems in which merchants and consumers drive change and flexible credentials are firmly in the mix. As card usage rises and cash fades, several intermediaries, like delivery platforms, marketplaces and on-demand [\u2026] The post Marqeta Exec Sees Digit...",
-    "content_html": "<p><strong>Watch more:</strong> <a href=\"https://tv.pymnts.com/detail/video/6384963538112\" rel=\"noopener\" target=\"_blank\">Digital Shift: Marqeta\u2019s Todd Pollak</a></p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p><span>According to </span><a class=\"editor-rtfLink\" href=\"https://www.marqeta.com/\" rel=\"noopener\" target=\"_blank\"><span>Marqeta</span></a><span> Chief Revenue Officer </span><a class=\"editor-rtfLink\" href=\"https://www.linkedin.com/in/todd-pollak-991b6/\" rel=\"noopener\" target=\"_blank\"><span>Todd Pollak</span></a><span>, the future of payments is </span><span>being built</span><span> by ecosystems in which merchants and consumers drive change </span><span>and</span><span> flexible credentials </span><span>are</span><span> firmly in the mix.</span></p>\n<p><span>As card usage rises and cash fades, several intermediaries, like delivery platforms, marketplaces and on-demand providers, now sit between merchants and consumers, adding complexity and cost, Pollak told PYMNTS in an interview.</span></p>\n<p><span>\u201cYou\u2019re seeing pressure from the merchant side to come up with creative and unique ways to reduce some of that pressure while they continue to provide service to consumers,\u201d he said.</span></p>\n<p><span>What merchants don\u2019t want \u201cis to limit the choice that consumers have in how they want to shop,\u201d he said.</span></p>\n<p><span>In the meantime, <a href=\"https://www.pymnts.com/tag/digital-wallets/\" rel=\"noopener\" target=\"_blank\">digital wallets</a> are no longer just digital copies of cards; they are becoming \u201ca gateway into choice,\u201d Pollak said. Consumers can select from debit, credit, or <a href=\"https://www.pymnts.com/tag/buy-now-pay-later/\" rel=\"noopener\" target=\"_blank\">buy now, pay later</a> within the same credential, often without leaving the checkout flow.</span></p>\n<p><span>He said that \u201cwith a flexible credential, I can have <a href=\"https://www.pymnts.com/tag/bnpl/\" rel=\"noopener\" target=\"_blank\">BNPL</a> embedded into a debit card and at any point of sale transact and break things into installments. That is revolutionary for the consumer.\u201d</span></p>\n<h2><strong><span>Flexible Credentials Redefine Issuer Strategy</span></strong></h2>\n<p><span>The implications for issuers are significant, Pollak said. Traditional debit products risk becoming outdated as consumers </span><span>expect more optionality</span><span>.</span></p>\n<p><span>\u201cIf I had a debit program, I don\u2019t know why I would ever want a standard debit program anymore,\u201d he said.</span></p>\n<p><span>Embedding BNPL or other financing directly into a debit or prepaid card makes an issuer\u2019s offering \u201cinfinitely more interesting\u201d and expands distribution for lending partners, he said. The result is a new competitive dynamic in which flexibility itself becomes the differentiator.</span></p>\n<h2><strong><span>Use Cases Extend From Consumers to Corporations</span></strong></h2>\n<p><span>The same architecture that powers flexible consumer credentials can serve commercial payments. Expense management is an example.</span></p>\n<p><span>\u201cPeople are using their cards for personal and for business uses, and at the end of the month, you have to reconcile\u201d that spending, Pollak said.</span></p>\n<p><span>Flexible credentials can separate those transactions </span><span>automatically</span><span>\u2014debit for wages, credit for reimbursable expenses\u2014while ensuring the corporation, not the employee, earns rewards.</span></p>\n<p><span>\u201cThere\u2019s lots of ways this could play out, and it depends how creative people get,\u201d he said.</span></p>\n<h2><strong><span>Marqeta\u2019s Role in Enabling the Shift</span></strong></h2>\n<p><span>Marqeta\u2019s infrastructure has been central to bringing these capabilities to market.</span></p>\n<p><span>\u201cWe have longstanding partnerships with the BNPL providers,\u201d Pollak said.</span></p>\n<p><span>Companies like </span><a class=\"editor-rtfLink\" href=\"https://www.affirm.com/\" rel=\"noopener\" target=\"_blank\"><span>Affirm</span></a><span> and </span><a class=\"editor-rtfLink\" href=\"https://www.klarna.com/us/\" rel=\"noopener\" target=\"_blank\"><span>Klarna</span></a><span> \u201care the architects\u201d of flexible credential innovation, and Marqeta has worked to help distribute BNPL to more merchants without point-of-sale integrations, he said.</span></p>\n<p><span>Flexible credentials create a win-win across the ecosystem, Pollak said.</span></p>\n<p><span>Networks benefit too, since \u201cit\u2019s another tool to offer out in the market for people to get creative and offer new solutions, which of course grows the number of transactions,\u201d he said.</span></p>\n<p><span>And consumers gain expanded choice and access all within the digital wallets they already use.</span></p>\n<h2><strong><span>Beyond BNPL: The Next Wave of Embedded Finance</span></strong></h2>\n<p><span>Pollak said he sees flexible credentials as the foundation for broader <a href=\"https://www.pymnts.com/tag/embedded-finance/\" rel=\"noopener\" target=\"_blank\">embedded finance</a>.</span></p>\n<p><span>\u201cThe benefit of embedded finance is not so much in the payment credential; it\u2019s in reducing the friction associated with reconciling a payment into a ledger of record,\u201d he said.</span></p>\n<p><span>When payment and accounting functions </span><span>are integrated</span><span> into a single platform, \u201cyou exponentially improve the user experience,\u201d he said.</span></p>\n<p><span>Pollak said he expects rapid expansion.</span></p>\n<p><span>\u201cThere are more BNPL providers that will want to follow suit,\u201d he said.</span></p>\n<p><span>When incumbents move to match FinTech innovations, \u201cthat usually signifies a major tipping point,\u201d he said.</span></p>\n<p><span>As networks roll out capabilities for revolving credit, issuers will be able to maximize interchange and profitability while passing along rewards and eliminating traditional fees.</span></p>\n<p><span>Flexible credentials are \u201cstill in the early innings,\u201d he said, but they are already changing how payments, loyalty and credit converge.</span></p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/mobile-wallets/2025/marqeta-exec-sees-digital-wallets-as-gateway-to-payments-choice/\">Marqeta Exec Sees Digital Wallets as \u2018Gateway\u2019 to Payments Choice</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
-    "image_url": "https://www.pymnts.com/wp-content/uploads/2025/11/marqeta-gateway-1118.jpg?w=457",
-    "summary_text": "Watch more: Digital Shift: Marqeta\u2019s Todd Pollak According to Marqeta Chief Revenue Officer Todd Pollak, the future of payments is being built by ecosystems in which merchants and consumers drive change and flexible credentials are firmly in the mix. As card ...",
-    "category": "fintech",
-    "_permalink": "/p/f573794f44/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/f573794f44/",
-    "_summary_240": "Watch more: Digital Shift: Marqeta\u2019s Todd Pollak According to Marqeta Chief Revenue Officer Todd Pollak, the future of payments is being built by ecosystems in which merchants...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/f573794f44/thumbnail.png"
-  },
-  {
-    "title": "Thales Pushes Issuers to Match FinTech Velocity",
-    "url": "https://www.pymnts.com/digital-payments/2025/thales-pushes-issuers-to-match-fintech-velocity/",
-    "published_at": "2025-11-18T04:00:15-05:00",
-    "source": "PYMNTS",
-    "summary": "Watch more: Need to Know: Thales\u2019 Caio Reis Behind all the talk about real-time rails and artificial intelligence, card programs remain the spine of the modern payments experience. In a market increasingly defined by digital experiences, Thales said transforming how to issue, tokenize and manage cards can be just as important as the payment [\u2026] The post Thales Pushes Issuers to Match FinTech Velo...",
-    "content_html": "<p><strong>Watch more:</strong> <a href=\"https://tv.pymnts.com/detail/video/6383576265112\" rel=\"noopener\" target=\"_blank\">Need to Know: Thales\u2019 Caio Reis</a></p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p><span>Behind all the talk about real-time rails and artificial intelligence, card programs remain the spine of the modern payments experience.</span></p>\n<p><span>In a market increasingly defined by digital experiences, Thales said transforming how </span><span>to issue</span><span>, </span><span>tokenize</span><span> and </span><span>manage cards</span><span> can be just as important as the payment itself.</span></p>\n<p><span>In an interview with PYMNTS, </span><a class=\"editor-rtfLink\" href=\"https://www.linkedin.com/in/reiscaio/\" rel=\"noopener\" target=\"_blank\"><span>Caio Reis</span></a><span>, vice president of strategy and marketing at </span><a class=\"editor-rtfLink\" href=\"https://www.thalesgroup.com/en\" rel=\"noopener\" target=\"_blank\"><span>Thales</span></a><span>, said modern issuance is emerging as a source of competitive differentiation and that bridging the physical and digital sides of payments is now essential.</span></p>\n<p><span>With decades of experience supporting card programs worldwide, Thales </span><span>is focused</span><span> on connecting the entire issuance chain, from manufacturing and personalization to mobile-first user experiences, through its cloud-based </span><a class=\"editor-rtfLink\" href=\"https://www.thalesgroup.com/en/solutions-catalogue/enterprise/financial-services/thales-gemalto-d1-modern-card-issuing-platform\" rel=\"noopener\" target=\"_blank\"><span>D1 platform</span></a><span>.</span></p>\n<p><span>Reis illustrated how the D1 platform can support financial institutions with the launch of </span><a class=\"editor-rtfLink\" href=\"https://vippsmobilepay.com/\" rel=\"noopener\" target=\"_blank\"><span>Vipps</span></a><span>\u2019 first third-party iOS wallet following </span><a class=\"editor-rtfLink\" href=\"https://www.apple.com/\" rel=\"noopener\" target=\"_blank\"><span>Apple</span></a><span> opening </span><span>its</span><span> NFC access in Europe.</span><span> In four months, the company helped Vipps launch, and within 24 hours, </span><span>200,000 bank accounts had been digitized</span><span>.</span></p>\n<p><span>\u201cThis kind of speed, scale and innovation\u201d is what <a href=\"https://www.pymnts.com/tag/banks/\" rel=\"noopener\" target=\"_blank\">banks</a> expect from partners right now, he said.</span></p>\n<h2><strong><span>Meeting Cardholder Expectations</span></strong></h2>\n<p><span>Consumer expectations have reset around mobile-first, real-time and highly personalized experiences. Incumbent issuers must match FinTech velocity while operating on legacy stacks that </span><span>weren\u2019t built</span><span> for it.</span></p>\n<p><span>Thales\u2019 answer is D1, \u201ca cloud-first platform that enables banks to launch innovative new payment services at the same speed as FinTechs,\u201d delivered via APIs that sit alongside existing infrastructure, he said.</span></p>\n<p><span>One immediate area of focus is eCommerce checkout. </span><span>The industry is working to bring the in-store</span><span>, </span><span><a href=\"https://www.pymnts.com/tag/mobile-wallets/\" rel=\"noopener\" target=\"_blank\">mobile wallet</a> experience online with network-backed Click to Pay, which aims to </span><span>end the</span><span> manual entry of card details.</span><span> Schemes are mandating adoption on tight timelines, and Thales was the first provider to enable issuers to launch the new experience, Reis said.</span></p>\n<p><span>Behind those front-end experiences sit security and scale. Thales leans on its cybersecurity heritage, running hardware security modules (HSMs) as part of the D1 platform. With scheme rules and regulatory standards handled by the platform, issuers can move faster without re-engineering their cores.</span></p>\n<p><span>Time to market</span><span> is the other lever. D1 typically enables issuers to launch new digital services in </span><span>less than three</span><span> months. Thales implemented the </span><span>Click to Pay</span><span> mandate for one client in 10 weeks, Reis said. When adoption spikes, scale follows. For a major U.S. eCommerce player that launched its own wallet, Thales went live in six months and reached 3.8 million users three months later.</span></p>\n<p><span>That mix of speed, security and scale is why more than 600 issuers trust Thales to manage over 200 million cards, he said.</span></p>\n<h2><strong><span>Physical Card Customization and Premium Offers</span></strong></h2>\n<p><span>The physical card still carries weight with customers and brands.</span></p>\n<p><span>\u201cThe card itself is still the most visible and tactile symbol of a bank\u2019s brand,\u201d Reis said, adding that it signals value and status and plays a role in loyalty, particularly in premium segments.</span></p>\n<p><span>Thales helps issuers translate brand stories into materials and designs, including metal cards, eco-friendly options, including wood, and accessibility features such as cards that vocalize transaction details. </span><a class=\"editor-rtfLink\" href=\"https://www.bankofamerica.com/\" rel=\"noopener\" target=\"_blank\"><span>Bank of America</span></a><span>, for example, has committed to using 100% recycled PVC for its plastic cards, a move supported by Thales as one of its card suppliers.</span></p>\n<p><span>The experience around the card is getting an overhaul</span><span>, too</span><span>.</span> <span>Reis described an \u201cAmazon-like\u201d journey in which cardholders, </span><span>from</span><span> within their banking app, </span><span>can</span><span> confirm a shipping address, track production and delivery in real time, activate the card instantly </span><span>on</span><span> arrival, and set a PIN without visiting a branch.</span><span> Even the unboxing </span><span>is treated</span><span> as a brand moment meant to feel premium, a tactile reinforcement of the issuer\u2019s identity.</span></p>\n<p><span>Most customers don\u2019t see a trade-off between physical and digital anymore; they want both, choosing the best tool for the moment. Thales\u2019 positioning is to \u201cbridge the gap\u201d so issuers can deliver one integrated experience across channels, Reis said.</span></p>\n<h2><strong><span>Extending Beyond Retail Banking</span></strong></h2>\n<p><span>The appetite for secure, seamless experiences extends beyond retail banking. Thales is adapting the same capabilities, like virtual cards, tokenization and NFC, for sectors such as transit, fuel and fleet, mobility and loyalty. </span><span>For fleet operators, </span><span>for example,</span><span> issuers can provision time- and amount-limited digital cards directly to a temporary driver\u2019s phone, reducing loss and misuse </span><span>tied to</span><span> shared plastic cards.</span></p>\n<p><span>Transit shows how these shifts touch everyday life. </span><span>Ahead of the Paris 2024 Olympics, Thales worked with Apple and </span><a class=\"editor-rtfLink\" href=\"https://www.iledefrance-mobilites.fr/\" rel=\"noopener\" target=\"_blank\"><span>\u00cele-de-France Mobilit\u00e9s</span></a><span> so visitors could move </span><span>across</span><span> the city using only the <a href=\"https://www.pymnts.com/tag/digital-wallets/\" rel=\"noopener\" target=\"_blank\">digital wallet</a> on their </span><span>iPhone</span><span> without forcing</span><span> a </span><span>costly </span><span>replacement</span><span> of existing ticketing systems.</span><span> Similar models are live in places like Hong Kong and the Netherlands. The broader play is to take proven innovations from open-loop payments and apply them where others can\u2019t, so every segment can deliver a premium, mobile-first experience, Reis said.</span></p>\n<p><span>As Reis put it, \u201cwe\u2019re not just helping banks launch digital-first services; we\u2019re giving them the confidence to scale securely, adapt to constant change, and be ready for whatever the next wave of innovation brings.\u201d</span></p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/digital-payments/2025/thales-pushes-issuers-to-match-fintech-velocity/\">Thales Pushes Issuers to Match FinTech Velocity</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
-    "image_url": "https://www.pymnts.com/wp-content/uploads/2025/11/Thales-velocity-1118.jpg?w=457",
-    "summary_text": "Watch more: Need to Know: Thales\u2019 Caio Reis Behind all the talk about real-time rails and artificial intelligence, card programs remain the spine of the modern payments experience. In a market increasingly defined by digital experiences, Thales said transform...",
-    "category": "fintech",
-    "_trending_tags": [
-      "ai",
-      "fintech"
-    ],
-    "_permalink": "/p/7f3fe2e4d6/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/7f3fe2e4d6/",
-    "_summary_240": "Watch more: Need to Know: Thales\u2019 Caio Reis Behind all the talk about real-time rails and artificial intelligence, card programs remain the spine of the modern payments...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/7f3fe2e4d6/thumbnail.png"
-  },
-  {
     "title": "ABB Disappoints Investors by Leaving Growth Target Unchanged",
     "url": "https://www.bloomberg.com/news/articles/2025-11-18/abb-lifts-earnings-margin-target-eyes-acquisitions-to-grow",
     "published_at": "2025-11-18T01:50:45-05:00",
@@ -617,25 +702,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/a1896e7831/",
     "_summary_240": "HIVE Digital has reported record revenues for its latest quarter, spurred by rising Bitcoin prices and an expansion of its mining fleet.",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/a1896e7831/thumbnail.png"
-  },
-  {
-    "title": "Nvidia-Backed Cassava Pushes to Expand AI Access Across Africa",
-    "url": "https://www.bloomberg.com/news/articles/2025-11-18/nvidia-backed-cassava-pushes-to-expand-ai-access-across-africa",
-    "published_at": "2025-11-18T00:10:54-05:00",
-    "source": "Bloomberg Technology",
-    "summary": "Nvidia Corp.-backed Cassava Technologies plans to raise as much as $700 million to build and upgrade a network of data centers across Africa with artificial intelligence chips, with the goal of making AI services more affordable for companies and nonprofits, as well as some of the world\u2019s poorest people.",
-    "content_html": "",
-    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/i0samq.GMF.0/v0/1200x-1.jpg",
-    "summary_text": "Nvidia Corp.-backed Cassava Technologies plans to raise as much as $700 million to build and upgrade a network of data centers across Africa with artificial intelligence chips, with the goal of making AI services more affordable for companies and nonprofits, ...",
-    "category": "ai",
-    "_trending_tags": [
-      "ai",
-      "nvidia"
-    ],
-    "_permalink": "/p/f01efcae66/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/f01efcae66/",
-    "_summary_240": "Nvidia Corp.-backed Cassava Technologies plans to raise as much as $700 million to build and upgrade a network of data centers across Africa with artificial intelligence chips,...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/f01efcae66/thumbnail.png"
   },
   {
     "title": "Intuit and OpenAI join forces on new AI-powered experiences",
@@ -947,24 +1013,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/3362f118b6/",
     "_summary_240": "Treasury Secretary Scott Bessent has changed his tune about Trump\u2019s proposed $2,000 checks (approximately $600 Billion in total expense).",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/3362f118b6/thumbnail.png"
-  },
-  {
-    "title": "Cboe to launch perpetual-style Bitcoin and Ether futures in US",
-    "url": "https://cointelegraph.com/news/cboe-perpetual-style-bitcoin-ether-futures-us-dec-15?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-    "published_at": "2025-11-17T14:37:59-05:00",
-    "source": "Cointelegraph",
-    "summary": "The exchange's 10-year Bitcoin and Ether contracts mimic perpetuals through daily cash adjustments, giving users a regulated way to trade crypto futures in the US.",
-    "content_html": "",
-    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTEvMDE5YTkzMmItMmI2YS03YjIxLWFlNGMtOTdlOThiOWJmNzk4.jpg",
-    "summary_text": "The exchange's 10-year Bitcoin and Ether contracts mimic perpetuals through daily cash adjustments, giving users a regulated way to trade crypto futures in the US.",
-    "category": "fintech",
-    "_trending_tags": [
-      "ai"
-    ],
-    "_permalink": "/p/d1e9925d22/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/d1e9925d22/",
-    "_summary_240": "The exchange's 10-year Bitcoin and Ether contracts mimic perpetuals through daily cash adjustments, giving users a regulated way to trade crypto futures in the US.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/d1e9925d22/thumbnail.png"
   },
   {
     "title": "Jeff Bezos Creates A.I. Start-Up Where He Will Be Co-Chief Executive",
@@ -1284,7 +1332,7 @@
     "source": "Financial Times - Technology",
     "summary": "A large part of the investment pouring into AI is being financed by debt of the kind that lines millions of nest eggs",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/a93a6a2a-ef23-4b25-910d-835aa875ec9f.jpg",
+    "image_url": "",
     "summary_text": "A large part of the investment pouring into AI is being financed by debt of the kind that lines millions of nest eggs",
     "category": "ai",
     "_trending_tags": [
@@ -1298,7 +1346,7 @@
     "source": "Financial Times - Technology",
     "summary": "National security document outlines intelligence on tech support given to PLA \u2018operations\u2019",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/cfe6ec3f-89fe-4a4f-b27b-3cd4f5370782.jpg",
+    "image_url": "",
     "summary_text": "National security document outlines intelligence on tech support given to PLA \u2018operations\u2019",
     "category": "fintech",
     "_trending_tags": [
@@ -1371,7 +1419,7 @@
     "source": "Financial Times - Technology",
     "summary": "Businesses advised to set clear policies covering which tools can be used and how",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/86bb20f0-0d2a-4d8b-be12-00cd4ade37df.jpg",
+    "image_url": "",
     "summary_text": "Businesses advised to set clear policies covering which tools can be used and how",
     "category": "ai",
     "_trending_tags": [
@@ -1400,7 +1448,7 @@
     "source": "Financial Times - Technology",
     "summary": "The grown-ups have officially arrived",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/d88a7eea-9f13-4001-8fbf-43ca89dd471a.jpg",
+    "image_url": "",
     "summary_text": "The grown-ups have officially arrived",
     "category": "ai",
     "_trending_tags": [
@@ -1444,7 +1492,7 @@
     "source": "Financial Times - Technology",
     "summary": "Investor concerns over lofty valuations for artificial intelligence companies hit sentiment",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/02970f7b-8476-496f-9652-934827071e40.jpg",
+    "image_url": "",
     "summary_text": "Investor concerns over lofty valuations for artificial intelligence companies hit sentiment",
     "category": "ai"
   },
@@ -1501,7 +1549,7 @@
     "source": "Financial Times - Technology",
     "summary": "For the foreseeable future, the market is facing a shortage of capacity \u2014 hardly the conditions that spell imminent disaster",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/60a0fc3f-4d1e-4c8f-a54c-4c467de4db30.jpg",
+    "image_url": "",
     "summary_text": "For the foreseeable future, the market is facing a shortage of capacity \u2014 hardly the conditions that spell imminent disaster",
     "category": "ai",
     "_trending_tags": [
@@ -1526,7 +1574,7 @@
     "source": "Financial Times - Technology",
     "summary": "The assumption that partnerships and circular investments will boost growth is economically and historically misguided",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/9e0d2a77-7992-4ee9-a3ba-9f2f6fd8782c.jpg",
+    "image_url": "",
     "summary_text": "The assumption that partnerships and circular investments will boost growth is economically and historically misguided",
     "category": "ai",
     "_trending_tags": [
