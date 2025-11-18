@@ -1,5 +1,64 @@
 [
   {
+    "title": "A massive Cloudflare outage is affecting X, ChatGPT, and even Downdetector",
+    "url": "https://www.theverge.com/news/822869/cloudflare-is-down-outage-x-twitter-downdetector",
+    "published_at": "2025-11-18T08:29:21-05:00",
+    "source": "The Verge",
+    "summary": "Cloudflare, a networking company that provides DDoS protection and delivery services for many companies around the globe, is experiencing a major outage that\u2019s taking down sites across the web. Users are running into an error message when they try to access X, ChatGPT, and even the outage-tracking website DownDetector has an error message saying \u201cPlease [\u2026]",
+    "content_html": "<figure>\n\n<img alt=\"\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/06/STKB326_CLOUDFLARE_B.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100\" />\n\t<figcaption>\n\t\t</figcaption>\n</figure>\n<p class=\"has-text-align-none\">Cloudflare, a networking company that provides DDoS protection and delivery services for many companies around the globe, is experiencing a major outage that\u2019s taking down sites across the web. Users are running into an error message when they try to access X, ChatGPT, and even the outage-tracking website DownDetector has an error message saying \u201cPlease unblock challenges.cloudflare.com to proceed.\u201d</p>\n\n<p class=\"has-text-align-none\">On <a href=\"https://www.cloudflarestatus.com/\">Cloudflare\u2019s status page</a>, the company\u2019s latest note about the outage and its attempt to recover services says:</p>\n\n<blockquote class=\"wp-block-quote is-layout-flow wp-block-quote-is-layout-flow\">\n<p class=\"has-text-align-none\"><em>We have made changes that have allowed Cloudflare Access and WARP to recover. Error levels for Access and WARP users have returned to pre-incident rates.&nbsp;</em></p>\n\n\n\n<p class=\"has-text-align-none\"><em>We have re-enabled WARP access in London.</em></p>\n\n\n\n<p class=\"has-text-align-none\"><em>We are continuing to work towards restoring other services.</em></p>\n</blockquote>\n\n<p class=\"has-text-align-none\">The outage comes less than a month after a huge <a href=\"https://www.theverge.com/news/802486/aws-outage-alexa-fortnite-snapchat-offline\">Amazon Web Services crash took down <em>Fortnite</em></a>, Alexa, Snapchat, and other services, which was followed by issues at <a href=\"https://www.theverge.com/news/809142/microsoft-azure-xbox-365-is-down-outage\">Microsoft Azure that brought Xbox offline</a> for hours.</p>\n\n<p class=\"has-text-align-none\"><em>Developing\u2026</em></p>",
+    "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/06/STKB326_CLOUDFLARE_B.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "summary_text": "Cloudflare, a networking company that provides DDoS protection and delivery services for many companies around the globe, is experiencing a major outage that\u2019s taking down sites across the web. Users are running into an error message when they try to access X...",
+    "category": "software",
+    "_trending_tags": [
+      "chatgpt",
+      "cloud",
+      "gpt"
+    ],
+    "_permalink": "/p/537d3b6cfb/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/537d3b6cfb/",
+    "_summary_240": "Cloudflare, a networking company that provides DDoS protection and delivery services for many companies around the globe, is experiencing a major outage that\u2019s taking down sites...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/537d3b6cfb/thumbnail.png"
+  },
+  {
+    "title": "How Pi Network\u2019s 50M nodes could reshape the future of decentralized AI",
+    "url": "https://cointelegraph.com/explained/how-pi-network-s-50m-nodes-could-reshape-the-future-of-decentralized-ai?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "published_at": "2025-11-18T08:19:53-05:00",
+    "source": "Cointelegraph",
+    "summary": "Pi is turning its giant mobile community into a distributed compute grid, testing whether AI can run on a global crowd instead of the cloud.",
+    "content_html": "",
+    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMDgvMDE5ODhhNDEtZTgwNS03ZGZmLTliZGItMDBjMTg4ODY1MWU4.jpg",
+    "summary_text": "Pi is turning its giant mobile community into a distributed compute grid, testing whether AI can run on a global crowd instead of the cloud.",
+    "category": "ai",
+    "_trending_tags": [
+      "ai",
+      "cloud"
+    ],
+    "_permalink": "/p/1be8ba855b/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/1be8ba855b/",
+    "_summary_240": "Pi is turning its giant mobile community into a distributed compute grid, testing whether AI can run on a global crowd instead of the cloud.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/1be8ba855b/thumbnail.png"
+  },
+  {
+    "title": "ChatGPT and X hit by outage at online security group Cloudflare",
+    "url": "https://www.ft.com/content/9898e434-f7ec-4113-915b-fce28f1a9c25",
+    "published_at": "2025-11-18T08:17:16-05:00",
+    "source": "Financial Times - Technology",
+    "summary": "San Francisco-based company blames incident on \u2018spike in unusual traffic\u2019 to one of its services",
+    "content_html": "",
+    "image_url": "https://images.ft.com/v3/image/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F20e15302-2d06-4f51-ba3d-a779b9307403.jpg?source=next-article&fit=scale-down&quality=highest&width=700&dpr=1",
+    "summary_text": "San Francisco-based company blames incident on \u2018spike in unusual traffic\u2019 to one of its services",
+    "category": "ai",
+    "_trending_tags": [
+      "chatgpt",
+      "cloud",
+      "gpt"
+    ],
+    "_permalink": "/p/0689682ec2/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/0689682ec2/",
+    "_summary_240": "San Francisco-based company blames incident on \u2018spike in unusual traffic\u2019 to one of its services",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/0689682ec2/thumbnail.png"
+  },
+  {
     "title": "Talking to Windows\u2019 Copilot AI makes a computer feel incompetent",
     "url": "https://www.theverge.com/report/822443/microsoft-windows-copilot-vision-ai-assistant-pc-voice-controls-impressions",
     "published_at": "2025-11-18T08:00:00-05:00",
@@ -52,14 +111,14 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/e85d735707/thumbnail.png"
   },
   {
-    "title": "ChatGPT, X Among Sites Down in Broad Cloudflare Outage",
+    "title": "Widespread Cloudflare Outage Blocks NJ Transit, ChatGPT Websites",
     "url": "https://www.bloomberg.com/news/articles/2025-11-18/chatgpt-x-among-sites-blocked-in-widespread-cloudflare-outage",
     "published_at": "2025-11-18T07:18:45-05:00",
     "source": "Bloomberg Technology",
-    "summary": "ChatGPT, social-media platform X and NJ Transit were among the websites blocking some users\u2019 access on Tuesday as the web security firm Cloudflare Inc. worked to address a widespread, worldwide networking outage.",
-    "content_html": "",
-    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ivdqFcMRSa7A/v0/1200x-1.png",
-    "summary_text": "ChatGPT, social-media platform X and NJ Transit were among the websites blocking some users\u2019 access on Tuesday as the web security firm Cloudflare Inc. worked to address a widespread, worldwide networking outage.",
+    "summary": "ChatGPT, social-media platform X and NJ Transit were among the websites blocking users\u2019 access on Tuesday as the web security firm Cloudflare Inc. worked to address a widespread, worldwide networking outage.",
+    "content_html": "Cloudflare headquarters in San Francisco. Photographer: David Paul Morris/Bloomberg",
+    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/i057kmPAoy0g/v0/1200x-1.jpg",
+    "summary_text": "ChatGPT, social-media platform X and NJ Transit were among the websites blocking users\u2019 access on Tuesday as the web security firm Cloudflare Inc. worked to address a widespread, worldwide networking outage.",
     "category": "ai",
     "_trending_tags": [
       "chatgpt",
@@ -488,11 +547,7 @@
       "chatgpt",
       "gpt",
       "openai"
-    ],
-    "_permalink": "/p/03b567eca4/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/03b567eca4/",
-    "_summary_240": "OpenAI and Intuit have entered a $100M+ multi-year partnership to launch Intuit app experiences in ChatGPT and expand Intuit\u2019s use of OpenAI\u2019s frontier models to power...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/03b567eca4/thumbnail.png"
+    ]
   },
   {
     "title": "Crypto bank AMINA gets Hong Kong license to launch institutional trading",
@@ -777,25 +832,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/f0cceb7f94/thumbnail.png"
   },
   {
-    "title": "Google updates its weather forecasts with a new AI model",
-    "url": "https://www.theverge.com/news/822489/weather-forecast-ai-model-google-weathernext",
-    "published_at": "2025-11-17T17:00:56-05:00",
-    "source": "The Verge",
-    "summary": "Google debuted a new and improved AI weather model today that will be incorporated into popular products like Search, Gemini, and Pixel phones. The company\u2019s AI-enhanced forecasts have proven themselves to be quite accurate so far. AI weather models have also been able to make predictions faster and more efficiently than conventional physics-based models. Until [\u2026]",
-    "content_html": "<figure>\n\n<img alt=\"An illustration of swirling colors. \" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/11/WeatherNext-2-illustration-animation-globe-on-white-background.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100\" />\n\t<figcaption>\n\tAn illustration from Google\u2019s new AI weather model. | Image: Google\t</figcaption>\n</figure>\n<p class=\"has-text-align-none\">Google <a href=\"https://blog.google/technology/google-deepmind/weathernext-2/\">debuted a new and improved AI weather model</a> today that will be incorporated into popular products like Search, Gemini, and Pixel phones.&nbsp;</p>\n\n<p class=\"has-text-align-none\">The company\u2019s AI-enhanced forecasts have <a href=\"https://www.theverge.com/2024/12/7/24314064/ai-weather-forecast-model-google-deepmind-gencast\">proven themselves to be quite accurate</a><a href=\"https://arstechnica.com/science/2025/11/googles-new-weather-model-impressed-during-its-first-hurricane-season/\"> so far</a>. AI weather models have also been able to make predictions faster and more efficiently than conventional physics-based models. Until now, Google\u2019s work in this area has been mostly <a href=\"https://www.theverge.com/news/685820/google-ai-forecast-typhoon-hurricane-tropical-storm\">experimental</a>. Now, it\u2019s making those predictions a selling point for Google products and services.&nbsp;</p>\n\n<figure class=\"wp-block-pullquote\"><blockquote><p>\u201cWe\u2019re taking it out of the lab and really putting it into the hands of users\u201d</p></blockquote></figure>\n\n<p class=\"has-text-align-none\">\u201cWe\u2019re taking it out of the lab and really putting it into the hands of users in more ways than we have before and sort of shedding off the experimental kind of designation because we have confidence that our forecasts are really quite effective and quite useful,\u201d Peter Battaglia, senior director of research and sustainability at Google DeepMind, said in a briefing with reporters.&nbsp;&nbsp;</p>\n\n<p class=\"has-text-align-none\">The <a href=\"https://deepmind.google/science/weathernext/\">new AI model, WeatherNext 2,</a> can generate forecasts eight times faster than Google\u2019s previous model, and is also more accurate in predicting 99.9 percent of variables like temperature or wind. WeatherNext 2 can pump out hundreds of potential outcomes from a particular starting point. It takes less than a minute using one of Google\u2019s TPU chips to make a prediction, which the company says would typically take several hours to accomplish using physics-based models on a supercomputer.&nbsp;</p>\n\n<p class=\"has-text-align-none\">Those conventional models are computationally intensive because they\u2019re essentially attempting to re-create the complicated physics of the atmosphere to produce forecasts. AI models, in contrast, try to discern patterns out of historical weather data in order to predict future outcomes.\u00a0</p>\n\n<p class=\"has-text-align-none\">Google was able to streamline its process by using a strategy it calls a <a href=\"https://arxiv.org/abs/2506.10772\">Functional Generative Network</a> (FGN) in WeatherNext 2. Older AI weather models still required repeated processing to generate one forecast. FGN is more efficient because it incorporates noise \u2014 or targeted randomness \u2014 into the model each time it\u2019s provided an input so that WeatherNext 2 can generate many different possible outcomes in a single step.&nbsp;</p>\n\n<p class=\"has-text-align-none\">The advancements allow WeatherNext 2 to make predictions up to 15 days in advance and generate hourly forecasts. Google\u2019s banking on that appealing to enterprise customers as well as individual consumers.&nbsp;</p>\n\n<p class=\"has-text-align-none\">\u201cWe found that energy, agriculture, transportation, logistics, and customers in many other industries are quite interested in these one-hour steps. It helps them make more precise decisions relating to things that affect their business,\u201d Akib Uddin, a product manager at Google Research, said on the call.&nbsp;&nbsp;</p>\n\n<p class=\"has-text-align-none\">Aside from adding WeatherNext 2 to Maps, Search, Gemini, and Pixel Weather, Google is also offering an <a href=\"https://console.cloud.google.com/vertex-ai/publishers/google/model-garden/weather-next-v2\">early access program</a> for customers interested in custom modeling. The forecast data is also available in Google <a href=\"https://developers.google.com/earth-engine/datasets/catalog/projects_gcp-public-data-weathernext_assets_weathernext_2_0_0\">Earth Engine</a> for geospatial analysis and <a href=\"https://console.cloud.google.com/bigquery/analytics-hub/exchanges/projects/871883017250/locations/us/dataExchanges/weathernext_19397e1bcb7/listings/weathernext_2_19a39fe59dd\">BigQuery</a> for large-scale data analysis.&nbsp;</p>\n\n<p class=\"has-text-align-none\">Google has competition, of course, when it comes to figuring out how to make generative AI useful in weather forecasting. The <a href=\"https://e360.yale.edu/features/artificial-intelligence-weather-forecasting\">European Center for Medium-Range Weather Forecasts</a>, <a href=\"https://www.axios.com/2025/02/24/nvidia-ai-weather-forecast-corediff\">Nvidia</a>, <a href=\"https://www.bloomberg.com/news/articles/2025-06-17/huawei-s-ai-weather-model-among-top-performers-in-china-tests\">Huawei</a>, and other companies are similarly developing their own AI weather models.&nbsp;</p>",
-    "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/11/WeatherNext-2-illustration-animation-globe-on-white-background.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "summary_text": "Google debuted a new and improved AI weather model today that will be incorporated into popular products like Search, Gemini, and Pixel phones. The company\u2019s AI-enhanced forecasts have proven themselves to be quite accurate so far. AI weather models have also...",
-    "category": "ai",
-    "_trending_tags": [
-      "ai",
-      "google"
-    ],
-    "_permalink": "/p/8604ef1ad3/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/8604ef1ad3/",
-    "_summary_240": "Google debuted a new and improved AI weather model today that will be incorporated into popular products like Search, Gemini, and Pixel phones. The company\u2019s AI-enhanced...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/8604ef1ad3/thumbnail.png"
-  },
-  {
     "title": "Aave launches retail savings app with up to 9% APY to compete with banks",
     "url": "https://cointelegraph.com/news/aave-launches-retails-savings-app-to-compete-with-fintech-and-traditional-banks?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
     "published_at": "2025-11-17T16:36:18-05:00",
@@ -950,21 +986,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/4a217c638f/thumbnail.png"
   },
   {
-    "title": "Strategy steps up Bitcoin buys with 8,178 BTC purchase",
-    "url": "https://cointelegraph.com/news/strategy-bitcoin-buy-purchase-november?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-    "published_at": "2025-11-17T11:19:19-05:00",
-    "source": "Cointelegraph",
-    "summary": "After weeks of reporting Bitcoin purchases hovering around 400 to 500 BTC, Michael Saylor\u2019s company announced a massive crypto investment on Monday.",
-    "content_html": "",
-    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMDQvMDE5Njg0MzQtYjFkNS03NTFjLTk2NTUtYjQ1OTZlYTYwYjUx.jpg",
-    "summary_text": "After weeks of reporting Bitcoin purchases hovering around 400 to 500 BTC, Michael Saylor\u2019s company announced a massive crypto investment on Monday.",
-    "category": "fintech",
-    "_permalink": "/p/39a6e71cea/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/39a6e71cea/",
-    "_summary_240": "After weeks of reporting Bitcoin purchases hovering around 400 to 500 BTC, Michael Saylor\u2019s company announced a massive crypto investment on Monday.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/39a6e71cea/thumbnail.png"
-  },
-  {
     "title": "DoorDash confirms data breach impacting users\u2019 phone numbers and physical addresses",
     "url": "https://techcrunch.com/2025/11/17/doordash-confirms-data-breach-impacting-users-phone-numbers-and-physical-addresses/",
     "published_at": "2025-11-17T10:27:38-05:00",
@@ -1071,6 +1092,20 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/ae9cbd90f3/",
     "_summary_240": "Sophisticated crypto scams are on the rise. But few of them go to the lengths one bitcoin mining executive experienced earlier this year.",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/ae9cbd90f3/thumbnail.png"
+  },
+  {
+    "title": "Nigerian Startups Shun Local IPOs Due to Weak Naira",
+    "url": "https://www.bloomberg.com/news/articles/2025-11-17/nigerian-startups-shun-local-ipos-as-weak-naira-deters-founders",
+    "published_at": "2025-11-17T04:33:31-05:00",
+    "source": "Bloomberg Technology",
+    "summary": "Nigerian startups have stayed away from listing on a special section of the country\u2019s stock exchange because of the local currency\u2019s weakness, according to a survey of the new companies.",
+    "content_html": "Lagos",
+    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/i5exWxE29n_s/v1/1200x-1.jpg",
+    "summary_text": "Nigerian startups have stayed away from listing on a special section of the country\u2019s stock exchange because of the local currency\u2019s weakness, according to a survey of the new companies.",
+    "category": "fintech",
+    "_trending_tags": [
+      "ai"
+    ]
   },
   {
     "title": "Phi-4 proves that a 'data-first' SFT methodology is the new differentiator",
