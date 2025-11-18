@@ -1,13 +1,85 @@
 [
   {
+    "title": "Michael Saylor\u2019s Rare Euro Preferred Stock Sours on Bitcoin Rout",
+    "url": "https://www.bloomberg.com/news/articles/2025-11-18/michael-saylor-s-rare-euro-preferred-stock-sours-on-bitcoin-rout",
+    "published_at": "2025-11-18T09:06:07-05:00",
+    "source": "Bloomberg Technology",
+    "summary": "It\u2019s taken less than two weeks for a rare euro-denominated preferred stock offering by Michael Saylor\u2019s Bitcoin treasury company to fall below its already-discounted offer price.",
+    "content_html": "Michael Saylor",
+    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/idwspsPOsO0c/v1/1200x-1.jpg",
+    "summary_text": "It\u2019s taken less than two weeks for a rare euro-denominated preferred stock offering by Michael Saylor\u2019s Bitcoin treasury company to fall below its already-discounted offer price.",
+    "category": "fintech",
+    "_permalink": "/p/d823befdfc/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/d823befdfc/",
+    "_summary_240": "It\u2019s taken less than two weeks for a rare euro-denominated preferred stock offering by Michael Saylor\u2019s Bitcoin treasury company to fall below its already-discounted offer price.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/d823befdfc/thumbnail.png"
+  },
+  {
+    "title": "Stack Overflow is remaking itself into an AI data provider",
+    "url": "https://techcrunch.com/2025/11/18/stack-overflow-is-remaking-itself-into-an-ai-data-provider/",
+    "published_at": "2025-11-18T09:00:00-05:00",
+    "source": "TechCrunch",
+    "summary": "Stack Overflow wants to remake its classic problem-solving forum into a tool for translating human expertise into an AI-accessible format.",
+    "content_html": "",
+    "image_url": "https://techcrunch.com/wp-content/uploads/2019/05/stack-overflow.jpg?resize=1200,784",
+    "summary_text": "Stack Overflow wants to remake its classic problem-solving forum into a tool for translating human expertise into an AI-accessible format.",
+    "category": "ai",
+    "_trending_tags": [
+      "ai"
+    ],
+    "_permalink": "/p/74945ac308/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/74945ac308/",
+    "_summary_240": "Stack Overflow wants to remake its classic problem-solving forum into a tool for translating human expertise into an AI-accessible format.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/74945ac308/thumbnail.png"
+  },
+  {
+    "title": "Cloudflare outage takes down X one month after Musk mocked AWS customers",
+    "url": "https://techcrunch.com/2025/11/18/cloudflare-outage-takes-down-x-one-month-after-musk-mocked-aws-customers/",
+    "published_at": "2025-11-18T08:59:31-05:00",
+    "source": "TechCrunch",
+    "summary": "The infrastructure service Cloudflare faced massive outages on Tuesday morning, cutting off access to ChatGPT, Claude, Spotify, X, and other platforms.",
+    "content_html": "",
+    "image_url": "https://techcrunch.com/wp-content/uploads/2024/09/bomb-explosion.jpg?resize=1200,893",
+    "summary_text": "The infrastructure service Cloudflare faced massive outages on Tuesday morning, cutting off access to ChatGPT, Claude, Spotify, X, and other platforms.",
+    "category": "software",
+    "_trending_tags": [
+      "chatgpt",
+      "claude",
+      "cloud",
+      "gpt"
+    ],
+    "_permalink": "/p/7a824104e0/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/7a824104e0/",
+    "_summary_240": "The infrastructure service Cloudflare faced massive outages on Tuesday morning, cutting off access to ChatGPT, Claude, Spotify, X, and other platforms.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/7a824104e0/thumbnail.png"
+  },
+  {
+    "title": "Crypto private key theft is now big business: Here\u2019s what to know",
+    "url": "https://cointelegraph.com/news/crypto-private-key-theft-big-business-what-to-know?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "published_at": "2025-11-18T08:48:16-05:00",
+    "source": "Cointelegraph",
+    "summary": "Private key theft has become an automated, industrialized threat, highlighting the need for crypto users to remain vigilant, according to a report by GK8, a subsidiary of Galaxy Digital.",
+    "content_html": "",
+    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTEvMDE5YTk2OWYtN2QxYy03MzBiLTk3OTctYjRiMzdhNTM2MDA5.jpg",
+    "summary_text": "Private key theft has become an automated, industrialized threat, highlighting the need for crypto users to remain vigilant, according to a report by GK8, a subsidiary of Galaxy Digital.",
+    "category": "fintech",
+    "_trending_tags": [
+      "ai"
+    ],
+    "_permalink": "/p/1edbb3b6e5/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/1edbb3b6e5/",
+    "_summary_240": "Private key theft has become an automated, industrialized threat, highlighting the need for crypto users to remain vigilant, according to a report by GK8, a subsidiary of Galaxy...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/1edbb3b6e5/thumbnail.png"
+  },
+  {
     "title": "A massive Cloudflare outage is affecting X, ChatGPT, and even Downdetector",
     "url": "https://www.theverge.com/news/822869/cloudflare-is-down-outage-x-twitter-downdetector",
     "published_at": "2025-11-18T08:29:21-05:00",
     "source": "The Verge",
-    "summary": "Cloudflare, a networking company that provides DDoS protection and delivery services for many companies around the globe, is experiencing a major outage that\u2019s taking down sites across the web. Users are running into an error message when they try to access X, ChatGPT, and even the outage-tracking website DownDetector has an error message saying \u201cPlease [\u2026]",
-    "content_html": "<figure>\n\n<img alt=\"\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/06/STKB326_CLOUDFLARE_B.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100\" />\n\t<figcaption>\n\t\t</figcaption>\n</figure>\n<p class=\"has-text-align-none\">Cloudflare, a networking company that provides DDoS protection and delivery services for many companies around the globe, is experiencing a major outage that\u2019s taking down sites across the web. Users are running into an error message when they try to access X, ChatGPT, and even the outage-tracking website DownDetector has an error message saying \u201cPlease unblock challenges.cloudflare.com to proceed.\u201d</p>\n\n<p class=\"has-text-align-none\">On <a href=\"https://www.cloudflarestatus.com/\">Cloudflare\u2019s status page</a>, the company\u2019s latest note about the outage and its attempt to recover services says:</p>\n\n<blockquote class=\"wp-block-quote is-layout-flow wp-block-quote-is-layout-flow\">\n<p class=\"has-text-align-none\"><em>We have made changes that have allowed Cloudflare Access and WARP to recover. Error levels for Access and WARP users have returned to pre-incident rates.&nbsp;</em></p>\n\n\n\n<p class=\"has-text-align-none\"><em>We have re-enabled WARP access in London.</em></p>\n\n\n\n<p class=\"has-text-align-none\"><em>We are continuing to work towards restoring other services.</em></p>\n</blockquote>\n\n<p class=\"has-text-align-none\">The outage comes less than a month after a huge <a href=\"https://www.theverge.com/news/802486/aws-outage-alexa-fortnite-snapchat-offline\">Amazon Web Services crash took down <em>Fortnite</em></a>, Alexa, Snapchat, and other services, which was followed by issues at <a href=\"https://www.theverge.com/news/809142/microsoft-azure-xbox-365-is-down-outage\">Microsoft Azure that brought Xbox offline</a> for hours.</p>\n\n<p class=\"has-text-align-none\"><em>Developing\u2026</em></p>",
+    "summary": "Cloudflare, a networking company that provides DDoS protection and internet content delivery services for many companies around the globe, is working to fix a major outage that\u2019s taking down sites across the web. Users are running into an error message when they try to access X and ChatGPT, with some sites saying \u201cPlease unblock challenges.cloudflare.com [\u2026]",
+    "content_html": "<figure>\n\n<img alt=\"\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/06/STKB326_CLOUDFLARE_B.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100\" />\n\t<figcaption>\n\t\t</figcaption>\n</figure>\n<p class=\"has-text-align-none\">Cloudflare, a networking company that provides DDoS protection and internet content delivery services for many companies around the globe, is working to fix a major outage that\u2019s taking down sites across the web. Users are running into an error message when they try to access X and <a href=\"https://status.openai.com/incidents/01KABE2437NJYKBFHT22SD3H92\">ChatGPT</a>, with some sites saying \u201cPlease unblock challenges.cloudflare.com to proceed.\u201d</p>\n\n<p class=\"has-text-align-none\">Even the outage-tracking website DownDetector went down, though the site now appears to be recovering. On Cloudflare\u2019s <a href=\"https://www.cloudflarestatus.com/incidents/8gmgl950y3h7\">status page</a>, the most recent update from the company at 8:58AM ET, says \u201cWe are continuing working on restoring service for application services customers.\u201d</p>\n\n<p class=\"has-text-align-none\">In a statement to <em>The Verge</em>, Cloudflare spokesperson Jackie Dutton said the company noticed a \u201cspike in unusual traffic\u201d to one of its services starting at 6:20AM ET, causing \u201csome traffic passing through Cloudflare&#8217;s network to experience errors.\u201d Dutton added, \u201cWe do not yet know the cause of the spike in unusual traffic. We are all hands on deck to make sure all traffic is served without errors.\u201d The company is also planning to investigate the cause of the unusual spike in traffic.</p>\n\n<p class=\"has-text-align-none\">Other online services, including NJ Transit, <em>League of Legends</em>, Grindr, Uber, Canva, Spotify, and Archive of Our Own, experienced issues during the outage, while digital outlets like <em>Axios</em>, <em>The Information</em>, and <em>Politico</em> also went down.</p>\n\n<p class=\"has-text-align-none\">The Cloudflare outage comes less than a month after a huge <a href=\"https://www.theverge.com/news/802486/aws-outage-alexa-fortnite-snapchat-offline\">Amazon Web Services crash took down <em>Fortnite</em></a>, Alexa, Snapchat, and other services, which was followed by issues at <a href=\"https://www.theverge.com/news/809142/microsoft-azure-xbox-365-is-down-outage\">Microsoft Azure that brought Xbox offline</a> for hours.</p>\n\n<p class=\"has-text-align-none\"><em>Developing\u2026</em></p>",
     "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/06/STKB326_CLOUDFLARE_B.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "summary_text": "Cloudflare, a networking company that provides DDoS protection and delivery services for many companies around the globe, is experiencing a major outage that\u2019s taking down sites across the web. Users are running into an error message when they try to access X...",
+    "summary_text": "Cloudflare, a networking company that provides DDoS protection and internet content delivery services for many companies around the globe, is working to fix a major outage that\u2019s taking down sites across the web. Users are running into an error message when t...",
     "category": "software",
     "_trending_tags": [
       "chatgpt",
@@ -16,7 +88,7 @@
     ],
     "_permalink": "/p/537d3b6cfb/",
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/537d3b6cfb/",
-    "_summary_240": "Cloudflare, a networking company that provides DDoS protection and delivery services for many companies around the globe, is experiencing a major outage that\u2019s taking down sites...",
+    "_summary_240": "Cloudflare, a networking company that provides DDoS protection and internet content delivery services for many companies around the globe, is working to fix a major outage that\u2019s...",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/537d3b6cfb/thumbnail.png"
   },
   {
@@ -45,7 +117,7 @@
     "source": "Financial Times - Technology",
     "summary": "San Francisco-based company blames incident on \u2018spike in unusual traffic\u2019 to one of its services",
     "content_html": "",
-    "image_url": "https://images.ft.com/v3/image/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F20e15302-2d06-4f51-ba3d-a779b9307403.jpg?source=next-article&fit=scale-down&quality=highest&width=700&dpr=1",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/20e15302-2d06-4f51-ba3d-a779b9307403.jpg",
     "summary_text": "San Francisco-based company blames incident on \u2018spike in unusual traffic\u2019 to one of its services",
     "category": "ai",
     "_trending_tags": [
@@ -111,14 +183,14 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/e85d735707/thumbnail.png"
   },
   {
-    "title": "Widespread Cloudflare Outage Blocks NJ Transit, ChatGPT Websites",
+    "title": "Widespread Cloudflare Outage Takes Down ChatGPT, X, Others",
     "url": "https://www.bloomberg.com/news/articles/2025-11-18/chatgpt-x-among-sites-blocked-in-widespread-cloudflare-outage",
     "published_at": "2025-11-18T07:18:45-05:00",
     "source": "Bloomberg Technology",
-    "summary": "ChatGPT, social-media platform X and NJ Transit were among the websites blocking users\u2019 access on Tuesday as the web security firm Cloudflare Inc. worked to address a widespread, worldwide networking outage.",
+    "summary": "A worldwide outage plaguing the network of cybersecurity firm Cloudflare Inc. has taken down the websites for everything from the chief US energy regulator, ChatGPT, the New Jersey transit authority and the social-media platform X.",
     "content_html": "Cloudflare headquarters in San Francisco. Photographer: David Paul Morris/Bloomberg",
     "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/i057kmPAoy0g/v0/1200x-1.jpg",
-    "summary_text": "ChatGPT, social-media platform X and NJ Transit were among the websites blocking users\u2019 access on Tuesday as the web security firm Cloudflare Inc. worked to address a widespread, worldwide networking outage.",
+    "summary_text": "A worldwide outage plaguing the network of cybersecurity firm Cloudflare Inc. has taken down the websites for everything from the chief US energy regulator, ChatGPT, the New Jersey transit authority and the social-media platform X.",
     "category": "ai",
     "_trending_tags": [
       "chatgpt",
@@ -669,26 +741,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/abe24eb9a1/thumbnail.png"
   },
   {
-    "title": "Google is fighting the defamation battle Meta caved on",
-    "url": "https://www.theverge.com/news/822636/google-robby-starbuck-defamation-lawsuit-ai-chatbot",
-    "published_at": "2025-11-17T18:11:07-05:00",
-    "source": "The Verge",
-    "summary": "Google filed a motion to dismiss a defamation lawsuit brought by anti-corporate diversity activist Robby Starbuck, who claimed Google\u2019s AI falsely associated him with sexual assault allegations and a white nationalist. Starbuck\u2019s claims against Google came after he filed a similar lawsuit against Meta, whose AI he claimed falsely asserted that he\u2019d participated in the [\u2026]",
-    "content_html": "<figure>\n\n<img alt=\"\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/25842651/STK093_GOOGLE_B.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100\" />\n\t<figcaption>\n\t\t</figcaption>\n</figure>\n<p class=\"has-text-align-none\">Google filed a motion to dismiss a defamation lawsuit brought by anti-corporate diversity activist Robby Starbuck, who <a href=\"https://www.theverge.com/news/804494/anti-diversity-activist-robby-starbuck-is-suing-google-now\">claimed Google\u2019s AI falsely associated him</a> with sexual assault allegations and a white nationalist.</p>\n\n<p class=\"has-text-align-none\">Starbuck\u2019s claims against Google came after he <a href=\"https://www.theverge.com/news/659809/robby-starbuck-meta-ai-lawsuit\">filed a similar lawsuit against Meta</a>, whose AI he claimed falsely asserted that he\u2019d participated in the January 6th riot at the US Capitol. But <a href=\"https://www.theverge.com/news/757537/meta-robby-starbuck-conservative-activist-ai-bias-advisor\">Meta settled that lawsuit</a> in August and even hired Starbuck as an adviser to help address \u201cideological and political bias\u201d in its AI chatbot, <a href=\"https://www.wsj.com/tech/ai/meta-robby-starbuck-ai-lawsuit-settlement-6c6e9b0a?mod=tech_lead_pos5\"><em>The Wall Street Journal</em> reported</a>. The outlet <a href=\"https://www.wsj.com/tech/ai/activist-robby-starbuck-sues-google-over-claims-of-false-ai-info-d0a8bdbe?mod=tech_lead_story\">noted last month</a> that so far, no US court had awarded damages for defamation by an AI chatbot.</p>\n\n<p class=\"has-text-align-none\">Starbuck is seeking $15 million in damages from Google. But the company says in its filing that his claims simply represent his \u201cmisuse of developer tools to induce hallucinations.\u201d Starbuck doesn\u2019t identify what prompts he used to generate the outputs at issue, according to Google, or any actual person who was misled by the alleged claims. Starbuck did not immediately respond to a request for comment.</p>\n\n<p class=\"has-text-align-none\">Google, of course, could eventually choose a similar route to Meta to resolve the claims. But at least for now, it\u2019s choosing to fight them in court.</p>\n<div class=\"documentcloud-embed\"><a href=\"https://www.documentcloud.org/documents/26284879-opening-brief-for-googles-motion-to-dismiss-robby-starbuck-lawsuit/\" rel=\"noopener noreferrer\" target=\"_blank\">View Link</a></div>",
-    "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/25842651/STK093_GOOGLE_B.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "summary_text": "Google filed a motion to dismiss a defamation lawsuit brought by anti-corporate diversity activist Robby Starbuck, who claimed Google\u2019s AI falsely associated him with sexual assault allegations and a white nationalist. Starbuck\u2019s claims against Google came af...",
-    "category": "ai",
-    "_trending_tags": [
-      "ai",
-      "google",
-      "meta"
-    ],
-    "_permalink": "/p/67262dd7a0/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/67262dd7a0/",
-    "_summary_240": "Google filed a motion to dismiss a defamation lawsuit brought by anti-corporate diversity activist Robby Starbuck, who claimed Google\u2019s AI falsely associated him with sexual...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/67262dd7a0/thumbnail.png"
-  },
-  {
     "title": "Crypto firm LevelField secures Illinois approval to buy Chicago bank",
     "url": "https://cointelegraph.com/news/crypto-friendly-levelfield-approved-to-buy-chicago-bank?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
     "published_at": "2025-11-17T18:06:28-05:00",
@@ -702,25 +754,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/6fbf580e20/",
     "_summary_240": "LevelField could become the first crypto-friendly FDIC-insured bank to offer crypto services after receiving approval from the Illinois financial regulator to acquire Burling Bank.",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/6fbf580e20/thumbnail.png"
-  },
-  {
-    "title": "OpenAI is finally letting employees donate their equity to charity",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/822496/openai-employee-equity-donation-charity-rounds-share-valuation",
-    "published_at": "2025-11-17T17:47:14-05:00",
-    "source": "The Verge",
-    "summary": "Current and former OpenAI employees have grown increasingly frustrated by the fact that the company hasn't allowed them to donate their equity to charity in years. But OpenAI has finally seemed to bow to pressure, sending out an email from the company's equity team stating that current and former employees with eligible shares will be [\u2026]",
-    "content_html": "<figure>\n\n<img alt=\"\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/10/STK155_OPEN_AI_CVirginia__C.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100\" />\n\t<figcaption>\n\t\t</figcaption>\n</figure>\n<p class=\"has-text-align-none\">Current and former OpenAI employees have grown increasingly frustrated by the fact that the company hasn't allowed them to donate their equity to charity in years. But OpenAI has finally seemed to bow to pressure, sending out an email from the company's equity team stating that current and former employees with eligible shares will be able to participate, according to a memo viewed by <em>The Verge</em>. </p>\n<p class=\"has-text-align-none\">A lot of money is on the line: It could give employees who got six-figure equity deals in <a href=\"https://www.cnbc.com/2025/05/23/openai-employees-thwarted-in-efforts-to-donate-equity-in-ai-startup.html\">2019</a> the chance to donate millions of dollars to charity.</p>\n<p class=\"has-text-align-none\">A source familiar with the situation told <em>The Verge</em> that the company is about 18 months late in del \u2026</p>\n<p><a href=\"https://www.theverge.com/ai-artificial-intelligence/822496/openai-employee-equity-donation-charity-rounds-share-valuation\">Read the full story at The Verge.</a></p>",
-    "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/10/STK155_OPEN_AI_CVirginia__C.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "summary_text": "Current and former OpenAI employees have grown increasingly frustrated by the fact that the company hasn't allowed them to donate their equity to charity in years. But OpenAI has finally seemed to bow to pressure, sending out an email from the company's equit...",
-    "category": "ai",
-    "_trending_tags": [
-      "ai",
-      "openai"
-    ],
-    "_permalink": "/p/0440dd4706/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/0440dd4706/",
-    "_summary_240": "Current and former OpenAI employees have grown increasingly frustrated by the fact that the company hasn't allowed them to donate their equity to charity in years. But OpenAI has...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/0440dd4706/thumbnail.png"
   },
   {
     "title": "NVIDIA Accelerates AI for Over 80 New Science Systems Worldwide",
@@ -969,57 +1002,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/da6b0e7733/",
     "_summary_240": "The startup said that until now, users had to either transfer the money to their Indian accounts or ask someone to handle the bills for them. The other option for them was to use...",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/da6b0e7733/thumbnail.png"
-  },
-  {
-    "title": "Figment, OpenTrade debut Solana-based stablecoin product targeting 15% APR",
-    "url": "https://cointelegraph.com/news/figment-opentrade-debut-solana-based-stablecoin-yield-product?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-    "published_at": "2025-11-17T12:19:54-05:00",
-    "source": "Cointelegraph",
-    "summary": "A hedged SOL staking model underpins the new yield product, debuting amid rising institutional demand for regulated access to Solana\u2019s network rewards.",
-    "content_html": "",
-    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMDIvMDE5NGNiNmQtYzBjYy03NGQwLThmMDAtZWY1NzU5Y2Y2NjQ4.jpg",
-    "summary_text": "A hedged SOL staking model underpins the new yield product, debuting amid rising institutional demand for regulated access to Solana\u2019s network rewards.",
-    "category": "fintech",
-    "_permalink": "/p/4a217c638f/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/4a217c638f/",
-    "_summary_240": "A hedged SOL staking model underpins the new yield product, debuting amid rising institutional demand for regulated access to Solana\u2019s network rewards.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/4a217c638f/thumbnail.png"
-  },
-  {
-    "title": "DoorDash confirms data breach impacting users\u2019 phone numbers and physical addresses",
-    "url": "https://techcrunch.com/2025/11/17/doordash-confirms-data-breach-impacting-users-phone-numbers-and-physical-addresses/",
-    "published_at": "2025-11-17T10:27:38-05:00",
-    "source": "TechCrunch",
-    "summary": "The delivery giant said \u201cno sensitive information\u201d was accessed, and did not specify the number of customers, delivery workers, and merchants who were impacted by the breach.",
-    "content_html": "",
-    "image_url": "https://techcrunch.com/wp-content/uploads/2019/08/GettyImages-1147932669.jpg?resize=1200,841",
-    "summary_text": "The delivery giant said \u201cno sensitive information\u201d was accessed, and did not specify the number of customers, delivery workers, and merchants who were impacted by the breach.",
-    "category": "fintech",
-    "_trending_tags": [
-      "ai"
-    ],
-    "_permalink": "/p/5d449f81ad/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/5d449f81ad/",
-    "_summary_240": "The delivery giant said \u201cno sensitive information\u201d was accessed, and did not specify the number of customers, delivery workers, and merchants who were impacted by the breach.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/5d449f81ad/thumbnail.png"
-  },
-  {
-    "title": "Jeff Bezos reportedly returns to the trenches as co-CEO of new AI startup, Project Prometheus",
-    "url": "https://techcrunch.com/2025/11/17/jeff-bezos-reportedly-returns-to-the-trenches-as-co-ceo-of-new-ai-startup-project-prometheus/",
-    "published_at": "2025-11-17T09:33:30-05:00",
-    "source": "TechCrunch",
-    "summary": "Jeff Bezos is partly backing a new AI startup called Project Prometheus that has raised $6.2 billion in funding, and will take on duties as co-chief executive.",
-    "content_html": "",
-    "image_url": "https://techcrunch.com/wp-content/uploads/2025/04/GettyImages-2208733347.jpg?w=1024",
-    "summary_text": "Jeff Bezos is partly backing a new AI startup called Project Prometheus that has raised $6.2 billion in funding, and will take on duties as co-chief executive.",
-    "category": "ai",
-    "_trending_tags": [
-      "ai"
-    ],
-    "_permalink": "/p/c943ce8b8e/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/c943ce8b8e/",
-    "_summary_240": "Jeff Bezos is partly backing a new AI startup called Project Prometheus that has raised $6.2 billion in funding, and will take on duties as co-chief executive.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/c943ce8b8e/thumbnail.png"
   },
   {
     "title": "\u2018I\u2019m nervous\u2019: Klarna founder challenges trillion-dollar spending on AI",
@@ -1353,22 +1335,6 @@
     ]
   },
   {
-    "title": "Databricks: 'PDF parsing for agentic AI is still unsolved' \u2014 new tool replaces multi-service pipelines with single function",
-    "url": "https://venturebeat.com/data-infrastructure/databricks-pdf-parsing-for-agentic-ai-is-still-unsolved-new-tool-replaces",
-    "published_at": "2025-11-14T11:00:00-05:00",
-    "source": "VentureBeat",
-    "summary": "There is a lot of enterprise data trapped in PDF documents. To be sure, gen AI tools have been able to ingest and analyze PDFs, but accuracy, time and cost have been less than ideal. New technology from Databricks could change that. The company this week detailed its \"ai_parse_document\" technology, now integrated with Databricks' Agent Bricks platform . The technology addresses a critical bottlen...",
-    "content_html": "",
-    "image_url": "",
-    "summary_text": "There is a lot of enterprise data trapped in PDF documents. To be sure, gen AI tools have been able to ingest and analyze PDFs, but accuracy, time and cost have been less than ideal. New technology from Databricks could change that. The company this week deta...",
-    "category": "ai",
-    "_trending_tags": [
-      "agent",
-      "ai",
-      "genai"
-    ]
-  },
-  {
     "title": "Researchers question Anthropic claim that AI-assisted attack was 90% autonomous",
     "url": "https://arstechnica.com/security/2025/11/researchers-question-anthropic-claim-that-ai-assisted-attack-was-90-autonomous/",
     "published_at": "2025-11-14T07:20:48-05:00",
@@ -1550,64 +1516,6 @@
     "category": "ai",
     "_trending_tags": [
       "ai"
-    ]
-  },
-  {
-    "title": "How Brazil is training 5 million learners to work with AI by 2027",
-    "url": "https://news.microsoft.com/source/latam/features/ai/microsoft-ai-courses-brazil/?lang=en",
-    "published_at": "2025-11-13T09:10:33-05:00",
-    "source": "Microsoft News",
-    "summary": "The post How Brazil is training 5 million learners to work with AI by 2027 appeared first on Source .",
-    "content_html": "<article class=\"mssrc-posts font-- has--theme\" id=\"single-22848\">\n\t<div class=\"acf-innerblocks-container\"></div>\t\t\t<section class=\"post-tags\">\n\t\t\t\t<div class=\"post-tags__content wp-block-columns\">\n\t\t\t\t\t<div class=\"post-tags__header wp-block-column flex-basis-25 has-text-align-right\">\n\t\t\t\t\t\t<h4 class=\"sr-only\">Tags: </h4>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"post-tags__body wp-block-column flex-basis-60\">\n\t\t\t\t\t\t<ul class=\"post-tags__list\"><li class=\"post-tags__item\"><a class=\"kicker inline-block post__meta--tags\" href=\"https://news.microsoft.com/source/tag/ai/\">AI</a></li></ul>\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</section>\n\t\t\t</article><p>The post <a href=\"https://news.microsoft.com/source/latam/features/ai/microsoft-ai-courses-brazil/?lang=en\">How Brazil is training 5 million learners to work with AI by 2027</a> appeared first on <a href=\"https://news.microsoft.com/source\">Source</a>.</p>",
-    "image_url": "https://news.microsoft.com/source/latam/wp-content/uploads/2025/11/brazil-conectai-main.jpg",
-    "summary_text": "The post How Brazil is training 5 million learners to work with AI by 2027 appeared first on Source .",
-    "category": "ai",
-    "_trending_tags": [
-      "ai"
-    ]
-  },
-  {
-    "title": "Will China win the AI race? You asked, we answered",
-    "url": "https://www.ft.com/content/af1a6ce3-b0ab-41cc-9b52-3e0a11641f20",
-    "published_at": "2025-11-13T09:01:11-05:00",
-    "source": "Financial Times - Technology",
-    "summary": "The FT\u2019s John Thornhill and Eleanor Olcott replied to reader questions",
-    "content_html": "",
-    "image_url": "https://images.ft.com/v3/image/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Fea72a63c-628d-4dba-baaa-9b808e8edf8d.jpg?source=next-article&fit=scale-down&quality=highest&width=700&dpr=1",
-    "summary_text": "The FT\u2019s John Thornhill and Eleanor Olcott replied to reader questions",
-    "category": "ai",
-    "_trending_tags": [
-      "ai"
-    ]
-  },
-  {
-    "title": "GeForce NOW Enlists \u2018Call of Duty: Black Ops 7\u2019 for the Cloud",
-    "url": "https://blogs.nvidia.com/blog/geforce-now-thursday-call-of-duty-black-ops-7/",
-    "published_at": "2025-11-13T09:00:50-05:00",
-    "source": "NVIDIA News",
-    "summary": "Chaos has entered the chat. It\u2019s GFN Thursday, and things are getting intense with the launch of Call of Duty: Black Ops 7, streaming at launch this week on GeForce NOW. Dive straight into the chaos across devices \u2014 underpowered laptops, Macs, and Steam Decks. Power up the week with 12 new games to stream Read Article",
-    "content_html": "",
-    "image_url": "https://s3.amazonaws.com/cms.ipressroom.com/219/files/202511/6915e49d3d6332ce8736e58e_gfn-thursday-11-13-nv-blog-1280x680-logo-842x450/gfn-thursday-11-13-nv-blog-1280x680-logo-842x450_thmb.jpg",
-    "summary_text": "Chaos has entered the chat. It\u2019s GFN Thursday, and things are getting intense with the launch of Call of Duty: Black Ops 7, streaming at launch this week on GeForce NOW. Dive straight into the chaos across devices \u2014 underpowered laptops, Macs, and Steam Decks...",
-    "category": "software",
-    "_trending_tags": [
-      "ai",
-      "cloud"
-    ]
-  },
-  {
-    "title": "New free course from RCSI and Microsoft Ireland explores transformative role of AI in healthcare",
-    "url": "https://news.microsoft.com/europe/2025/11/11/new-free-course-from-rcsi-explores-the-transformative-role-of-ai-in-healthcare-delivery-in-collaboration-with-microsoft-ireland/",
-    "published_at": "2025-11-13T08:53:32-05:00",
-    "source": "Microsoft News",
-    "summary": "The post New free course from RCSI and Microsoft Ireland explores transformative role of AI in healthcare appeared first on Source .",
-    "content_html": "<article class=\"mssrc-posts font-- has--theme\" id=\"single-22844\">\n\t<div class=\"acf-innerblocks-container\"></div>\t\t\t<section class=\"post-tags\">\n\t\t\t\t<div class=\"post-tags__content wp-block-columns\">\n\t\t\t\t\t<div class=\"post-tags__header wp-block-column flex-basis-25 has-text-align-right\">\n\t\t\t\t\t\t<h4 class=\"sr-only\">Tags: </h4>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"post-tags__body wp-block-column flex-basis-60\">\n\t\t\t\t\t\t<ul class=\"post-tags__list\"><li class=\"post-tags__item\"><a class=\"kicker inline-block post__meta--tags\" href=\"https://news.microsoft.com/source/tag/health/\">Health</a></li></ul>\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</section>\n\t\t\t</article><p>The post <a href=\"https://news.microsoft.com/europe/2025/11/11/new-free-course-from-rcsi-explores-the-transformative-role-of-ai-in-healthcare-delivery-in-collaboration-with-microsoft-ireland/\">New free course from RCSI and Microsoft Ireland explores transformative role of AI in healthcare</a> appeared first on <a href=\"https://news.microsoft.com/source\">Source</a>.</p>",
-    "image_url": "https://msftstories.thesourcemediaassets.com/sites/93/2025/11/251106_NCP4_010-scaled.jpg",
-    "summary_text": "The post New free course from RCSI and Microsoft Ireland explores transformative role of AI in healthcare appeared first on Source .",
-    "category": "ai",
-    "_trending_tags": [
-      "ai",
-      "microsoft"
     ]
   }
 ]
