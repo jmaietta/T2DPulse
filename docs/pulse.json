@@ -1,23 +1,71 @@
 [
   {
-    "title": "ChatGPT, X Among Sites Down in Widespread Cloudflare Outage",
+    "title": "Talking to Windows\u2019 Copilot AI makes a computer feel incompetent",
+    "url": "https://www.theverge.com/report/822443/microsoft-windows-copilot-vision-ai-assistant-pc-voice-controls-impressions",
+    "published_at": "2025-11-18T08:00:00-05:00",
+    "source": "The Verge",
+    "summary": "It's not hard to understand the AI future Microsoft is betting billions on - a world where computers understand what you're saying and do things for you. It's right there in the ads for the latest Copilot PCs, where people cheerfully talk to their laptops and they talk back, answering questions in natural language and [\u2026]",
+    "content_html": "<figure>\n\n<img alt=\"An illustration of a person\u2019s mouth and a Windows laptop trying to talk to each other via speech bubbles, with interference between the two getting in the way.\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/11/258094_I_tried_talking_to_my_Windows_PC_CVirginia.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100\" />\n\t<figcaption>\n\t\t</figcaption>\n</figure>\n<p class=\"has-text-align-none\">It's not hard to understand the AI future Microsoft is betting billions on - a world where computers understand what you're saying and do things for you. It's right there in <a href=\"https://www.youtube.com/watch?v=7Nbf1fqxcCM\">the ads for the latest Copilot PCs</a>, where people cheerfully talk to their laptops and they talk back, answering questions in natural language and even doing things for them. The tagline is straightforward: \"The computer you can talk to.\" </p>\n<p class=\"has-text-align-none\">\"You should be able to talk to your PC, have it understand you, and then be able to have magic happen from that,\" Microsoft's Yusuf Mehdi <a href=\"https://www.theverge.com/news/799768/microsoft-windows-ai-copilot-voice-vision-launch\">told us in October</a>. \"The PC should be able to act on your behalf.\" </p>\n<p class=\"has-text-align-none\">And that has nothing on Micr \u2026</p>\n<p><a href=\"https://www.theverge.com/report/822443/microsoft-windows-copilot-vision-ai-assistant-pc-voice-controls-impressions\">Read the full story at The Verge.</a></p>",
+    "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/11/258094_I_tried_talking_to_my_Windows_PC_CVirginia.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "summary_text": "It's not hard to understand the AI future Microsoft is betting billions on - a world where computers understand what you're saying and do things for you. It's right there in the ads for the latest Copilot PCs, where people cheerfully talk to their laptops and...",
+    "category": "ai",
+    "_trending_tags": [
+      "ai",
+      "microsoft"
+    ],
+    "_permalink": "/p/a51f4327a5/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/a51f4327a5/",
+    "_summary_240": "It's not hard to understand the AI future Microsoft is betting billions on - a world where computers understand what you're saying and do things for you. It's right there in the...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/a51f4327a5/thumbnail.png"
+  },
+  {
+    "title": "Zigbee\u2019s next big update lets you add smart home devices without a hub",
+    "url": "https://www.theverge.com/news/822450/zigbee-4-0-suzi-smart-home-wireless-mesh-network-ble",
+    "published_at": "2025-11-18T08:00:00-05:00",
+    "source": "The Verge",
+    "summary": "The Connectivity Standards Alliance has released Zigbee 4.0, an updated version of its wireless mesh networking standard with better security, improved battery life, and batch setup of new devices like smart lights, switches, and plugs. It\u2019s also announcing a new feature called Suzi, which is short for Sub-GHz and Zigbee. While Zigbee smart home devices [\u2026]",
+    "content_html": "<figure>\n\n<img alt=\"The Philips Hue Twilight smart sunrise lamp on a corner table.\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/09/IMG_7084.jpeg?quality=90&#038;strip=all&#038;crop=0,0,100,100\" />\n\t<figcaption>\n\t\t</figcaption>\n</figure>\n<p class=\"has-text-align-none\">The Connectivity Standards Alliance has released Zigbee 4.0, an updated version of its wireless mesh networking standard with better security, improved battery life, and batch setup of new devices like smart lights, switches, and plugs. It\u2019s also announcing a new feature called <a href=\"https://csa-iot.org/all-solutions/suzi/\">Suzi</a>, which is short for Sub-GHz and Zigbee.&nbsp;</p>\n\n<p class=\"has-text-align-none\">While Zigbee smart home devices typically operate on the 2.4GHz band, which can experience signal loss caused by obstacles like thick walls, Suzi-branded devices will be able to work on the European 800 MHz and North American 900 MHz frequency bands. That way, the group says they\u2019ll offer coverage for smart devices installed outside and farther away from a home, without the need for additional hardware to extend the networks.</p>\n\n<p class=\"has-text-align-none\">Suzi is similar to other branded features that have been added to the 802.15.4-based spec over the years, like Zigbee Smart Energy usage monitoring gear, and the low-power / low-maintenance Zigbee Green Power devices that harvest energy from sources like light or heat instead of using batteries.</p>\n\n<p class=\"has-text-align-none\">As <a href=\"https://www.theverge.com/news/814241/ikea-smart-home-matter-thread-lights-sensors-remote-control\">companies like Ikea</a> have been making the transition to Matter over Thread, which also operates on the 2.4GHz band, the advantages of Suzi will help keep the Zigbee protocol competitive, and not just in the home. \u201cSuzi is a strong fit for commercial and industrial use-cases, which introduce challenging environments such as thick walls, multiple levels, and large deployments,\u201d Genie Peshkova, chair of the Zigbee Product Marketing Group, explained to <em>The Verge</em> in an email.</p>\n<img alt=\"The Zigbee and Suzi logos.\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/11/zigbee.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100\" title=\"The Zigbee and Suzi logos.\" />\n<p class=\"has-text-align-none\">The list of improvements coming with Zigbee 4.0 includes a simplified certification process, increased information exchange between devices, better security, and improved battery life for devices with communications that can be limited to set schedules.</p>\n\n<p class=\"has-text-align-none\">A new feature called Batch Commissioning will streamline large-scale installations by allowing multiple smart devices to be set up simultaneously. An electrician could install Zigbee-compatible light bulbs throughout a new house long before there\u2019s even power, and when a hub is later installed and running, they can be activated at once instead of having to add them to the network individually.&nbsp;</p>\n\n<p class=\"has-text-align-none\"><a href=\"https://csa-iot.org/all-solutions/zigbee/zigbee-direct/\">Zigbee Direct</a>, a previously optional feature added two years ago, is now standard in 4.0. It allows smartphones to directly connect, control, and even add nearby Zigbee devices to a network using Bluetooth Low Energy without a hub.</p>\n\n<p class=\"has-text-align-none\">Zigbee 4.0 is fully backwards compatible with Zigbee 3.0 and Smart Energy devices, and devices with \u201csufficient operational resources\u201d can potentially be upgraded over-the-air once certified, according to Peshkova. But exactly which devices will be eligible to take full advantage of the improvements isn\u2019t yet known. The Suzi certification program is scheduled to start sometime in the first half of 2026.</p>",
+    "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/09/IMG_7084.jpeg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "summary_text": "The Connectivity Standards Alliance has released Zigbee 4.0, an updated version of its wireless mesh networking standard with better security, improved battery life, and batch setup of new devices like smart lights, switches, and plugs. It\u2019s also announcing a...",
+    "category": "fintech",
+    "_permalink": "/p/e60b8f9b6a/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/e60b8f9b6a/",
+    "_summary_240": "The Connectivity Standards Alliance has released Zigbee 4.0, an updated version of its wireless mesh networking standard with better security, improved battery life, and batch...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/e60b8f9b6a/thumbnail.png"
+  },
+  {
+    "title": "Dorsey-Backed Yellow Card Says Dollar Barriers Boost Stablecoins",
+    "url": "https://www.bloomberg.com/news/articles/2025-11-18/dorsey-backed-yellow-card-says-dollar-barriers-boost-stablecoins",
+    "published_at": "2025-11-18T07:49:04-05:00",
+    "source": "Bloomberg Technology",
+    "summary": "The head of Jack Dorsey-backed Yellow Card said African nations are among the world\u2019s top adopters of stablecoins as global trade shifts away from a reliance on the US dollar.",
+    "content_html": "Chris Maurice Source: Yellow Card",
+    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iMMH1BuQlk_s/v0/1200x-1.jpg",
+    "summary_text": "The head of Jack Dorsey-backed Yellow Card said African nations are among the world\u2019s top adopters of stablecoins as global trade shifts away from a reliance on the US dollar.",
+    "category": "fintech",
+    "_trending_tags": [
+      "ai"
+    ],
+    "_permalink": "/p/e85d735707/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/e85d735707/",
+    "_summary_240": "The head of Jack Dorsey-backed Yellow Card said African nations are among the world\u2019s top adopters of stablecoins as global trade shifts away from a reliance on the US dollar.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/e85d735707/thumbnail.png"
+  },
+  {
+    "title": "ChatGPT, X Among Sites Down in Broad Cloudflare Outage",
     "url": "https://www.bloomberg.com/news/articles/2025-11-18/chatgpt-x-among-sites-blocked-in-widespread-cloudflare-outage",
     "published_at": "2025-11-18T07:18:45-05:00",
     "source": "Bloomberg Technology",
-    "summary": "ChatGPT and the social-media platform X were among the websites blocking some users\u2019 access on Tuesday as the web security firm Cloudflare Inc. worked to address a widespread, worldwide networking outage.",
+    "summary": "ChatGPT, social-media platform X and NJ Transit were among the websites blocking some users\u2019 access on Tuesday as the web security firm Cloudflare Inc. worked to address a widespread, worldwide networking outage.",
     "content_html": "",
     "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ivdqFcMRSa7A/v0/1200x-1.png",
-    "summary_text": "ChatGPT and the social-media platform X were among the websites blocking some users\u2019 access on Tuesday as the web security firm Cloudflare Inc. worked to address a widespread, worldwide networking outage.",
+    "summary_text": "ChatGPT, social-media platform X and NJ Transit were among the websites blocking some users\u2019 access on Tuesday as the web security firm Cloudflare Inc. worked to address a widespread, worldwide networking outage.",
     "category": "ai",
     "_trending_tags": [
       "chatgpt",
       "cloud",
       "gpt"
-    ],
-    "_permalink": "/p/b7acbc80b1/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/b7acbc80b1/",
-    "_summary_240": "ChatGPT and the social-media platform X were among the websites blocking some users\u2019 access on Tuesday as the web security firm Cloudflare Inc. worked to address a widespread,...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/b7acbc80b1/thumbnail.png"
+    ]
   },
   {
     "title": "Apple and Tencent Try to Regulate the WeChat Economy",
@@ -101,7 +149,11 @@
     "category": "ai",
     "_trending_tags": [
       "ai"
-    ]
+    ],
+    "_permalink": "/p/878cad1e0f/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/878cad1e0f/",
+    "_summary_240": "Bank of America survey shows a majority of investors think companies are spending too much on AI infrastructure",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/878cad1e0f/thumbnail.png"
   },
   {
     "title": "Mastercard taps Polygon to turn clunky crypto addresses into simple usernames",
@@ -420,6 +472,27 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/f01efcae66/",
     "_summary_240": "Nvidia Corp.-backed Cassava Technologies plans to raise as much as $700 million to build and upgrade a network of data centers across Africa with artificial intelligence chips,...",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/f01efcae66/thumbnail.png"
+  },
+  {
+    "title": "Intuit and OpenAI join forces on new AI-powered experiences",
+    "url": "https://openai.com/index/intuit-partnership",
+    "published_at": "2025-11-18T00:00:00-05:00",
+    "source": "OpenAI News",
+    "summary": "OpenAI and Intuit have entered a $100M+ multi-year partnership to launch Intuit app experiences in ChatGPT and expand Intuit\u2019s use of OpenAI\u2019s frontier models to power personalized financial tools.",
+    "content_html": "",
+    "image_url": "",
+    "summary_text": "OpenAI and Intuit have entered a $100M+ multi-year partnership to launch Intuit app experiences in ChatGPT and expand Intuit\u2019s use of OpenAI\u2019s frontier models to power personalized financial tools.",
+    "category": "ai",
+    "_trending_tags": [
+      "ai",
+      "chatgpt",
+      "gpt",
+      "openai"
+    ],
+    "_permalink": "/p/03b567eca4/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/03b567eca4/",
+    "_summary_240": "OpenAI and Intuit have entered a $100M+ multi-year partnership to launch Intuit app experiences in ChatGPT and expand Intuit\u2019s use of OpenAI\u2019s frontier models to power...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/03b567eca4/thumbnail.png"
   },
   {
     "title": "Crypto bank AMINA gets Hong Kong license to launch institutional trading",
