@@ -1,5 +1,64 @@
 [
   {
+    "title": "A massive Cloudflare outage brought down X, ChatGPT, and even Downdetector",
+    "url": "https://www.theverge.com/news/822869/cloudflare-is-down-outage-x-twitter-downdetector",
+    "published_at": "2025-11-18T13:30:54-05:00",
+    "source": "The Verge",
+    "summary": "Cloudflare, a networking company that provides DDoS protection and internet content delivery services for many companies around the globe, is recovering after a major outage that took down sites across the web. Users weren\u2019t able to access X, ChatGPT, and even the outage-tracking site DownDetector on Tuesday morning, with some sites displaying an error message [\u2026]",
+    "content_html": "<figure>\n\n<img alt=\"\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/06/STKB326_CLOUDFLARE_B.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100\" />\n\t<figcaption>\n\t\t</figcaption>\n</figure>\n<p class=\"has-text-align-none\">Cloudflare, a networking company that provides DDoS protection and internet content delivery services for many companies around the globe, is recovering after a major outage that took down sites across the web. Users weren\u2019t able to access X, <a href=\"https://status.openai.com/incidents/01KABE2437NJYKBFHT22SD3H92\">ChatGPT</a>, and even the outage-tracking site DownDetector on Tuesday morning, with some sites displaying an error message that said, \u201cPlease unblock challenges.cloudflare.com to proceed.\u201d </p>\n\n<p class=\"has-text-align-none\">The disruption, which started at around 6:20AM ET, is linked to a \u201cconfiguration file that is automatically generated to manage threat traffic,\u201d Cloudflare spokesperson Jackie Dutton tells <em>The Verge</em>. \u201cThe file grew beyond an expected size of entries and triggered a crash in the software system that handles traffic for a number of Cloudflare&#8217;s services.\u201d Dutton added that \u201cthere is no evidence\u201d of an attack or other malicious activity.</p>\n\n<p class=\"has-text-align-none\">Cloudflare posted an update <a href=\"https://www.cloudflarestatus.com/\">to its status page</a> at 9:42AM ET, saying: \u201cA fix has been implemented and we believe the incident is now resolved. We are continuing to monitor for errors to ensure all services are back to normal.\u201d</p>\n\n<p class=\"has-text-align-none\">Cloudflare CTO Dane Knecht <a href=\"https://x.com/dok2001/status/1990791419653484646?s=20\">wrote in a post on X</a> that the service \u201cfailed\u201d its customers and the broader internet, adding that \u201ca latent bug in a service underpinning our bot mitigation capability started to crash after a routine configuration change we made\u2026 This was not an attack.\u201d</p>\n\n<figure class=\"wp-block-embed is-type-rich is-provider-twitter wp-block-embed-twitter\"><div class=\"wp-block-embed__wrapper\">\n<blockquote class=\"twitter-tweet\"><p dir=\"ltr\" lang=\"en\">I won\u2019t mince words: earlier today we failed our customers and the broader Internet when a problem in <a href=\"https://twitter.com/Cloudflare?ref_src=twsrc%5Etfw\">@Cloudflare</a>  network impacted large amounts of traffic that rely on us. The sites, businesses, and organizations that rely on Cloudflare depend on us being available and I\u2026</p>&mdash; Dane Knecht \ud83e\uddad (@dok2001) <a href=\"https://twitter.com/dok2001/status/1990791419653484646?ref_src=twsrc%5Etfw\">November 18, 2025</a></blockquote>\n</div></figure>\n\n<p class=\"has-text-align-none\">Other online services, including Indeed, Grindr, Uber, Canva, Spotify, NJ Transit, <em>League of Legends</em>, and Archive of Our Own, experienced issues during the outage, while digital outlets like <em>Axios</em>, <em>The Information</em>, and <em>Politico</em> also went down.</p>\n\n<p class=\"has-text-align-none\">The Cloudflare outage comes less than a month after a huge <a href=\"https://www.theverge.com/news/802486/aws-outage-alexa-fortnite-snapchat-offline\">Amazon Web Services crash took down <em>Fortnite</em></a>, Alexa, Snapchat, and other services, which was followed by issues at <a href=\"https://www.theverge.com/news/809142/microsoft-azure-xbox-365-is-down-outage\">Microsoft Azure that brought Xbox offline</a> for hours.</p>\n\n<p class=\"has-text-align-none\"><em><strong>Update, November 18th: </strong>Added an update from Cloudflare.</em></p>",
+    "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/06/STKB326_CLOUDFLARE_B.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "summary_text": "Cloudflare, a networking company that provides DDoS protection and internet content delivery services for many companies around the globe, is recovering after a major outage that took down sites across the web. Users weren\u2019t able to access X, ChatGPT, and eve...",
+    "category": "ai",
+    "_trending_tags": [
+      "chatgpt",
+      "cloud",
+      "gpt"
+    ],
+    "_permalink": "/p/c9270c46b1/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/c9270c46b1/",
+    "_summary_240": "Cloudflare, a networking company that provides DDoS protection and internet content delivery services for many companies around the globe, is recovering after a major outage that...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/c9270c46b1/thumbnail.png"
+  },
+  {
+    "title": "Sen. Warren presses Trump admin on potential AI bailout plans",
+    "url": "https://www.theverge.com/news/823136/senator-elizabeth-warren-openai-trump-bailout",
+    "published_at": "2025-11-18T13:00:00-05:00",
+    "source": "The Verge",
+    "summary": "Sen. Elizabeth Warren (D-MA) is pressing the Trump administration for more information on potential plans to \u201cprop up\u201d major AI companies with money from taxpayers. In a letter to David Sacks, the White House special advisor for AI and Crypto, and Michael Kratsios, the director of the Office of Science and Technology Policy, Sen.Warren writes [\u2026]",
+    "content_html": "<figure>\n\n<img alt=\"\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/11/STK417_MONEY_CVIRGINIA_B.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100\" />\n\t<figcaption>\n\t\t</figcaption>\n</figure>\n<p class=\"has-text-align-none\">Sen. Elizabeth Warren (D-MA) is pressing the Trump administration for more information on potential plans to \u201cprop up\u201d major AI companies with money from taxpayers. In <a href=\"https://www.documentcloud.org/documents/26285476-warren-letter-to-sacks-and-kratsios/\">a letter to David Sacks</a>, the White House special advisor for AI and Crypto, and Michael Kratsios, the director of the Office of Science and Technology Policy, Sen.Warren writes that President Donald Trump\u2019s \u201cclose ties\u201d with AI executives and donors \u201craise concerns that the Administration will bail out AI executives and shareholders while leaving taxpayers to foot the bill.\u201d</p>\n\n<p class=\"has-text-align-none\">Warren, who is a ranking member on the Senate Committee on Banking, Housing, and Urban Affairs, points to a recent interview with OpenAI CFO Sarah Friar, who suggested <a href=\"https://www.nytimes.com/2025/11/06/technology/openai-finances-debt-data-centers.html\">the government could \u201cbackstop\u201d</a> the company\u2019s investments in AI, before <a href=\"https://www.linkedin.com/posts/sarah-friar_openai-wants-federal-backstop-for-new-investments-activity-7392049356012507136-wAV7/?utm_source=share&amp;amp;utm_medium=member_desktop&amp;amp;rcm=ACoAAClBTFwB3e8ij9qjwcRz2ZX6ZrzRUoQ467w\">walking back</a> the statement. However, Warren notes that OpenAI <a href=\"https://cdn.openai.com/pdf/21b88bb5-10a3-4566-919d-f9a6b9c3e632/openai-ostp-rfi-oct-27-2025.pdf\">wrote a letter</a> to Kratsios in October, requesting that the Trump administration expand the government-funded Advanced Manufacturing Investment Credit (AMIC) \u2014 which is supposed to go toward semiconductor manufacturers \u2014 to support AI server production and data centers.</p>\n\n<p class=\"has-text-align-none\">OpenAI CEO Sam Altman said last week that the company does \u201cnot have or want government guarantees for OpenAI datacenters,\u201d adding that \u201ctaxpayers should not bail out companies that make bad business decisions.\u201d Despite the billions that <a href=\"https://www.theverge.com/ai-artificial-intelligence/776170/oracle-openai-300-billion-contract-project-stargate\">AI companies like OpenAI</a> and <a href=\"https://www.theverge.com/news/819072/anthropic-50-billion-infrastructure-ai-data-center-investment\">Anthropic are pouring</a> into the technology, they\u2019re seeing far less in return, raising questions about what <a href=\"https://www.theverge.com/ai-artificial-intelligence/812455/ai-industry-earnings-bubble-fomo-hype\">might happen to these startups if AI demand doesn\u2019t pan out</a>. Meanwhile, tech executives have <a href=\"https://www.theverge.com/policy/772760/tech-ceos-ai-trump-white-house-dinner\">spent months attempting</a> to flatter President Donald Trump at White House dinners and with donations, with <a href=\"https://www.theverge.com/news/806027/trumps-got-big-tech-and-crypto-bankrolling-white-house-ballroom\">Amazon, Apple, Google, and Meta pitching</a> in to build a White House ballroom. Warren and other lawmakers have characterized some of these contributions as <a href=\"https://www.theverge.com/policy/800193/google-youtube-senators-letter-warren-wyden-bribe\">potential bribes</a>.</p>\n\n<figure class=\"wp-block-pullquote\"><blockquote><p>\u201cOpenAI\u2019s actions suggest that it may be pursuing a deliberate strategy to entangle itself with the federal government.\u201d</p></blockquote></figure>\n\n<p class=\"has-text-align-none\">Earlier this month, Sacks pushed back on concerns that the government will back up AI startups, <a href=\"https://x.com/DavidSacks/status/1986476840207122440\">saying</a> \u201cthere will be no federal bailout for AI.\u201d</p>\n\n<p class=\"has-text-align-none\">Warren, however, expresses skepticism. \u201cWhile Mr. Altman has claimed that the company is not looking for a \u2018bail out,\u2019 OpenAI\u2019s actions suggest that it may be pursuing a deliberate strategy to entangle itself with the federal government and the broader economy so the government has no choice but to step in with public funds,\u201d Warren writes. \u201cWe have seen this before: take on enough debt, make enough risky bets, and then demand a taxpayer bailout when those bets go south so the economy does not crash.\u201d</p>\n\n<p class=\"has-text-align-none\">Sen. Warren is asking Sacks and Kratsios if the Trump administration has any plans or proposals to provide a backstop for OpenAI and other firms. She\u2019s also seeking information about what kind of government assistance the administration plans to give OpenAI and other companies, as well as whether they think AMIC should apply to AI buildout. Sacks and Kratsios have until December 1st, 2025, to reply.</p>",
+    "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/11/STK417_MONEY_CVIRGINIA_B.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "summary_text": "Sen. Elizabeth Warren (D-MA) is pressing the Trump administration for more information on potential plans to \u201cprop up\u201d major AI companies with money from taxpayers. In a letter to David Sacks, the White House special advisor for AI and Crypto, and Michael Kra...",
+    "category": "ai",
+    "_trending_tags": [
+      "ai"
+    ],
+    "_permalink": "/p/68c1b3e5be/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/68c1b3e5be/",
+    "_summary_240": "Sen. Elizabeth Warren (D-MA) is pressing the Trump administration for more information on potential plans to \u201cprop up\u201d major AI companies with money from taxpayers. In a letter...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/68c1b3e5be/thumbnail.png"
+  },
+  {
+    "title": "SAP to Keep Microsoft EU Cloud Running If Trump Orders Shutdown",
+    "url": "https://www.bloomberg.com/news/articles/2025-11-18/sap-to-keep-microsoft-eu-cloud-running-if-trump-orders-shutdown",
+    "published_at": "2025-11-18T13:00:00-05:00",
+    "source": "Bloomberg Technology",
+    "summary": "SAP SE will maintain access to Microsoft Corp.\u2019s cloud services even if a foreign government attempts to cut it off, after Donald Trump\u2019s administration sanctioned an international court in the Hague.",
+    "content_html": "Branded cycles at the SAP SE campus in Walldorf, Germany.",
+    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iGyT987pSmBE/v1/1200x-1.jpg",
+    "summary_text": "SAP SE will maintain access to Microsoft Corp.\u2019s cloud services even if a foreign government attempts to cut it off, after Donald Trump\u2019s administration sanctioned an international court in the Hague.",
+    "category": "software",
+    "_trending_tags": [
+      "ai",
+      "cloud",
+      "llm",
+      "microsoft"
+    ],
+    "_permalink": "/p/d46e6319e3/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/d46e6319e3/",
+    "_summary_240": "SAP SE will maintain access to Microsoft Corp.\u2019s cloud services even if a foreign government attempts to cut it off, after Donald Trump\u2019s administration sanctioned an...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/d46e6319e3/thumbnail.png"
+  },
+  {
     "title": "Klarna Sees Future as Neobank as Growth Accelerates",
     "url": "https://www.pymnts.com/earnings/2025/klarna-sees-future-neobank-growth-accelerates/",
     "published_at": "2025-11-18T12:35:00-05:00",
@@ -16,24 +75,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/0f04030c4e/",
     "_summary_240": "Klarna\u2019s third-quarter earnings update Tuesday (Nov. 18), its first earnings report as a publicly listed company, detailed a strategic transformation that seeks to push the brand...",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/0f04030c4e/thumbnail.png"
-  },
-  {
-    "title": "ETH falls into \u2018buy zone,\u2019 but volatility-adverse traders take a wait-and-see approach",
-    "url": "https://cointelegraph.com/news/eth-falls-into-buy-zone-but-volatility-adverse-traders-take-a-wait-and-see-approach?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-    "published_at": "2025-11-18T12:29:42-05:00",
-    "source": "Cointelegraph",
-    "summary": "Ethereum retests $3,000 as its Mayer Multiple falls below 1, entering a historical buy zone, while liquidity clusters signal short-term volatility ahead.",
-    "content_html": "",
-    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMDcvMDE5ODNhM2ItYjhmOC03ZjI0LWJhOWMtZjNlNjZlMTQ5NTA0.jpg",
-    "summary_text": "Ethereum retests $3,000 as its Mayer Multiple falls below 1, entering a historical buy zone, while liquidity clusters signal short-term volatility ahead.",
-    "category": "fintech",
-    "_trending_tags": [
-      "ai"
-    ],
-    "_permalink": "/p/adb227235e/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/adb227235e/",
-    "_summary_240": "Ethereum retests $3,000 as its Mayer Multiple falls below 1, entering a historical buy zone, while liquidity clusters signal short-term volatility ahead.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/adb227235e/thumbnail.png"
   },
   {
     "title": "Google CEO Says AI Boom Contains Both Rational and Irrational Elements",
@@ -269,7 +310,7 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/37ad3b7486/thumbnail.png"
   },
   {
-    "title": "Google\u2019s Sundar Pichai warns of \u201cirrationality\u201d in trillion-dollar AI investment boom",
+    "title": "Google CEO: If an AI bubble pops, no one is getting out clean",
     "url": "https://arstechnica.com/ai/2025/11/googles-sundar-pichai-warns-of-irrationality-in-trillion-dollar-ai-investment-boom/",
     "published_at": "2025-11-18T11:32:58-05:00",
     "source": "Ars Technica",
@@ -281,11 +322,7 @@
     "_trending_tags": [
       "ai",
       "google"
-    ],
-    "_permalink": "/p/ae5453097b/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/ae5453097b/",
-    "_summary_240": "Sundar Pichai says no company is immune if AI bubble bursts, echoing dotcom fears.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/ae5453097b/thumbnail.png"
+    ]
   },
   {
     "title": "Google Unveils Gemini 3, With Improved Coding and Search Abilities",
@@ -406,18 +443,19 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/c7d1222282/thumbnail.png"
   },
   {
-    "title": "Writer's AI agents can actually do your work\u2014not just chat about it",
-    "url": "https://venturebeat.com/ai/writers-ai-agents-can-actually-do-your-work-not-just-chat-about-it",
+    "title": "Google unveils Gemini 3 claiming the lead in math, science, multimodal and agentic AI benchmarks",
+    "url": "https://venturebeat.com/ai/google-unveils-gemini-3-claiming-the-lead-in-math-science-multimodal-and",
     "published_at": "2025-11-18T11:00:00-05:00",
     "source": "VentureBeat",
-    "summary": "Writer , a San Francisco-based artificial intelligence startup, is launching a unified AI agent platform designed to let any employee automate complex business workflows without writing code \u2014 a capability the company says distinguishes it from consumer-oriented tools like Microsoft Copilot and ChatGPT . The platform, called Writer Agent , combines chat-based assistance with autonomous task execu...",
+    "summary": "After more than a month of rumors and feverish speculation \u2014 including Polymarket wagering on the release date \u2014 Google today unveiled Gemini 3 , its newest proprietary frontier model family and the company\u2019s most comprehensive AI release since the Gemini line debuted in 2023. The models are proprietary (closed-source), available exclusively through Google products, developer platforms, and paid ...",
     "content_html": "",
     "image_url": "",
-    "summary_text": "Writer , a San Francisco-based artificial intelligence startup, is launching a unified AI agent platform designed to let any employee automate complex business workflows without writing code \u2014 a capability the company says distinguishes it from consumer-orien...",
+    "summary_text": "After more than a month of rumors and feverish speculation \u2014 including Polymarket wagering on the release date \u2014 Google today unveiled Gemini 3 , its newest proprietary frontier model family and the company\u2019s most comprehensive AI release since the Gemini lin...",
     "category": "ai",
     "_trending_tags": [
       "agent",
-      "ai"
+      "ai",
+      "google"
     ]
   },
   {
@@ -437,6 +475,21 @@
     ]
   },
   {
+    "title": "Writer's AI agents can actually do your work\u2014not just chat about it",
+    "url": "https://venturebeat.com/ai/writers-ai-agents-can-actually-do-your-work-not-just-chat-about-it",
+    "published_at": "2025-11-18T11:00:00-05:00",
+    "source": "VentureBeat",
+    "summary": "Writer , a San Francisco-based artificial intelligence startup, is launching a unified AI agent platform designed to let any employee automate complex business workflows without writing code \u2014 a capability the company says distinguishes it from consumer-oriented tools like Microsoft Copilot and ChatGPT . The platform, called Writer Agent , combines chat-based assistance with autonomous task execu...",
+    "content_html": "",
+    "image_url": "",
+    "summary_text": "Writer , a San Francisco-based artificial intelligence startup, is launching a unified AI agent platform designed to let any employee automate complex business workflows without writing code \u2014 a capability the company says distinguishes it from consumer-orien...",
+    "category": "ai",
+    "_trending_tags": [
+      "agent",
+      "ai"
+    ]
+  },
+  {
     "title": "Microsoft remakes Windows for an era of autonomous AI agents",
     "url": "https://venturebeat.com/ai/microsoft-remakes-windows-for-an-era-of-autonomous-ai-agents",
     "published_at": "2025-11-18T11:00:00-05:00",
@@ -450,22 +503,6 @@
       "agent",
       "ai",
       "microsoft"
-    ]
-  },
-  {
-    "title": "Google unveils Gemini 3 claiming the lead in math, science, multimodal and agentic AI benchmarks",
-    "url": "https://venturebeat.com/ai/google-unveils-gemini-3-claiming-the-lead-in-math-science-multimodal-and",
-    "published_at": "2025-11-18T11:00:00-05:00",
-    "source": "VentureBeat",
-    "summary": "After more than a month of rumors and feverish speculation \u2014 including Polymarket wagering on the release date \u2014 Google today unveiled Gemini 3 , its newest proprietary frontier model family and the company\u2019s most comprehensive AI release since the Gemini line debuted in 2023. The models are proprietary (closed-source), available exclusively through Google products, developer platforms, and paid ...",
-    "content_html": "",
-    "image_url": "",
-    "summary_text": "After more than a month of rumors and feverish speculation \u2014 including Polymarket wagering on the release date \u2014 Google today unveiled Gemini 3 , its newest proprietary frontier model family and the company\u2019s most comprehensive AI release since the Gemini lin...",
-    "category": "ai",
-    "_trending_tags": [
-      "agent",
-      "ai",
-      "google"
     ]
   },
   {
@@ -506,27 +543,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/9306165f0f/",
     "_summary_240": "Alongside today\u2019s announcement of Gemini 3 Pro, Google has revealed Antigravity, a development tool that uses Gemini 3 Pro, along with other third-party models. Google says that...",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/9306165f0f/thumbnail.png"
-  },
-  {
-    "title": "Google is launching Gemini 3, its \u2018most intelligent\u2019 AI model yet",
-    "url": "https://www.theverge.com/news/822977/gemini-3-google-ai-model-launch",
-    "published_at": "2025-11-18T11:00:00-05:00",
-    "source": "The Verge",
-    "summary": "Google is beginning to launch Gemini 3 today, a new series of models the company says is its \u201cmost intelligent\u201d and \u201cfactually accurate\u201d AI systems yet. They\u2019re also a chance for Google to leap ahead of OpenAI following the rocky launch of GPT-5, potentially putting the company at the forefront of consumer-focused AI models. For [\u2026]",
-    "content_html": "<figure>\n\n<img alt=\"\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/25290329/STK255_Google_Gemini_A.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100\" />\n\t<figcaption>\n\t\t</figcaption>\n</figure>\n<p class=\"has-text-align-none\">Google is beginning to <a href=\"https://blog.google/products/gemini/gemini-3/\">launch Gemini 3 today</a>, a new series of models the company says is its \u201cmost intelligent\u201d and \u201cfactually accurate\u201d AI systems yet. They\u2019re also a chance for Google to leap ahead of OpenAI following the rocky launch of GPT-5, potentially putting the company at the forefront of consumer-focused AI models.</p>\n\n<p class=\"has-text-align-none\">For the first time, Google is giving everyone access to its new flagship AI model \u2014&nbsp;Gemini 3 Pro \u2014&nbsp;in the Gemini app on day one. It\u2019s also rolling out Gemini 3 Pro to subscribers inside Search. Tulsee Doshi, Google DeepMind\u2019s senior director and head of product, says the new model will bring the company closer to making information \u201cuniversally accessible and useful\u201d as its search engine continues to evolve.</p>\n\n<p class=\"has-text-align-none\">\u201cI think the one really big step in that direction is to step out of the paradigm of just text responses and to give you a much richer, more complete view of what you can actually see.\u201d</p>\n<img alt=\"\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/11/gemini3-visualization.gif?quality=90&#038;strip=all&#038;crop=0,0,100,100\" title=\"\" />\n<p class=\"has-text-align-none\">Gemini 3 Pro is \u201cnatively multimodal,\u201d meaning it can process text, images, and audio all at once, rather than handling them separately. As an example, Google says Gemini 3 Pro could be used to translate photos of recipes and then transform them into a cookbook, or it could create interactive flashcards based on a series of video lectures.</p>\n\n<p class=\"has-text-align-none\">You\u2019ll spot some of these improvements across Google\u2019s suite of products, including the Gemini app, where you can build more \u201cfull-featured\u201d <a href=\"https://www.theverge.com/google/631726/google-gemini-canvas-audio-overview-notebooklm-coding\">programs inside the built-in workspace, Canvas</a>. The upgraded AI model will also enable \u201cgenerative interfaces,\u201d a tool Google is testing in Gemini Labs that allows Gemini 3 Pro to create a visual, magazine-style format with pictures you can browse through, or a dynamic layout with a custom user interface tailored to your prompt.</p>\n<img alt=\"\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/11/google-gemini-3-dynamic-view.gif?quality=90&#038;strip=all&#038;crop=0,0,100,100\" title=\"\" />\n<p class=\"has-text-align-none\">Gemini 3 Pro in AI Mode \u2014 the AI-powered Google Search feature \u2014 will similarly present you with visual elements, like images, tables, grids, and simulations based on your query. It\u2019s also capable of performing more searches using an upgraded version of <a href=\"https://www.theverge.com/google/671200/google-googling-ai-mode-project-mariner-i-o-2025\">Google\u2019s \u201cquery fan-out technique,\u201d</a> which now not only breaks down questions into bits it can search for on your behalf, but is better at understanding intent to help \u201cfind new content that it may have previously missed,\u201d according to Google\u2019s announcement.</p>\n\n<p class=\"has-text-align-none\">Google is also not so subtly jabbing at OpenAI, describing Gemini 3 Pro as less prone to the type of empty flattery espoused by ChatGPT. Doshi says you\u2019ll see&nbsp;\u201cnoticeable\u201d changes to Gemini 3 Pro\u2019s responses, which Google describes as offering a \u201csmart, concise and direct, trading cliche and flattery for genuine insight \u2014 telling you what you need to hear, not just what you want to hear.\u201d The company says it also shows \u201creduced sycophany,\u201d an issue <a href=\"https://www.theverge.com/news/661422/openai-chatgpt-sycophancy-update-what-went-wrong\">OpenAI had to address with ChatGPT earlier this year</a>.</p>\n\n<p class=\"has-text-align-none\">Along with these improvements, Gemini 3 Pro comes with better reasoning and agentic capabilities, allowing it to complete more complex tasks and \u201creliably plan ahead over longer horizons,\u201d according to Google. The AI model is powering an experimental Gemini Agent feature that can perform tasks on your behalf inside the Gemini app, such as reviewing and organizing emails, or researching and booking travel.</p>\n<img alt=\"\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/11/google-gemini-simulation.gif?quality=90&#038;strip=all&#038;crop=0,0,100,100\" title=\"\" />\n<p class=\"has-text-align-none\">Gemini 3 Pro now sits at the top of LMArena\u2019s leaderboard, a popular platform used for benchmarking AI models. A Deep Think mode enhances the model\u2019s reasoning capabilities even further, though it\u2019s currently only available to safety testers.</p>\n\n<p class=\"has-text-align-none\">Gemini 3 Pro is available inside the Gemini app for everyone starting today, while Google AI Pro and Ultra subscribers in the US can try out Gemini Agent in the Gemini app, along with Gemini 3 Pro inside AI Mode by selecting \u201cThinking\u201d from the model dropdown.</p>",
-    "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/25290329/STK255_Google_Gemini_A.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "summary_text": "Google is beginning to launch Gemini 3 today, a new series of models the company says is its \u201cmost intelligent\u201d and \u201cfactually accurate\u201d AI systems yet. They\u2019re also a chance for Google to leap ahead of OpenAI following the rocky launch of GPT-5, potentially ...",
-    "category": "ai",
-    "_trending_tags": [
-      "ai",
-      "google",
-      "gpt",
-      "openai"
-    ],
-    "_permalink": "/p/91ab03370b/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/91ab03370b/",
-    "_summary_240": "Google is beginning to launch Gemini 3 today, a new series of models the company says is its \u201cmost intelligent\u201d and \u201cfactually accurate\u201d AI systems yet. They\u2019re also a chance for...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/91ab03370b/thumbnail.png"
   },
   {
     "title": "Google Launches New Gemini AI Model With Interactive Answers",
@@ -621,27 +637,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/3ab3a7fc6b/",
     "_summary_240": "An outage at internet infrastructure giant Cloudflare took down several big websites and services, including ChatGPT, Claude, Spotify, and X.",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/3ab3a7fc6b/thumbnail.png"
-  },
-  {
-    "title": "Microsoft\u2019s new Anthropic partnership brings Claude AI models to Azure",
-    "url": "https://www.theverge.com/news/822988/microsoft-anthropic-partnership-claude-models-azure-investment-nvidia",
-    "published_at": "2025-11-18T10:20:17-05:00",
-    "source": "The Verge",
-    "summary": "Microsoft is announcing a strategic partnership with Anthropic today that will bring the AI startup\u2019s models to Microsoft Foundry for the first time. As part of the deal, Anthropic is also committing to purchasing $30 billion of Azure compute capacity and \u201cto contract additional compute capacity up to one gigawatt.\u201d Microsoft Foundry customers will now be able [\u2026]",
-    "content_html": "<figure>\n\n<img alt=\"\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/11/microsoftanthropicdeal.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100\" />\n\t<figcaption>\n\t\t</figcaption>\n</figure>\n<p class=\"has-text-align-none\">Microsoft is announcing a strategic partnership with Anthropic today that will bring the AI startup\u2019s models to Microsoft Foundry for the first time. As <a href=\"https://blogs.microsoft.com/blog/2025/11/18/microsoft-nvidia-and-anthropic-announce-strategic-partnerships/\">part of the deal</a>, Anthropic is also committing to purchasing $30 billion of Azure compute capacity and \u201cto contract\u00a0additional\u00a0compute capacity up to one gigawatt.\u201d</p>\n\n<p class=\"has-text-align-none\">Microsoft Foundry customers will now be able to access Anthropic\u2019s\u00a0frontier Claude models including Claude Sonnet 4.5, Claude Opus 4.1, and Claude Haiku 4.5. Despite these models coming to Microsoft\u2019s AI servers, Amazon will still remain Anthropic\u2019s primary cloud provider and training partner.</p>\n<div class=\"youtube-embed\"></div>\n<p class=\"has-text-align-none\">Nvidia and Anthropic are also partnering today as part of this deal, to optimize Anthropic\u2019s models for the best performance on future Nvidia architectures. Anthropic is committing to up to one gigawatt of compute capacity using Nvidia Blackwell and Vera Rubin systems.</p>\n\n<p class=\"has-text-align-none\">As part of these partnerships, Nvidia is investing up to $10 billion in Anthropic, with Microsoft also investing $5 billion.</p>\n\n<p class=\"has-text-align-none\">Microsoft\u2019s deal with Anthropic comes just weeks after its OpenAI partner completed its for-profit restructuring and struck a <a href=\"https://www.theverge.com/news/807875/openai-microsoft-for-profit-agi\">new deal with Microsoft</a>. The new deal with OpenAI extends Microsoft\u2019s IP rights to models from OpenAI through 2032 and also includes post-AGI (artificial general intelligence) models. The potential for a declaration of AGI had been a sticking point in Microsoft\u2019s OpenAI deal, but the pair have now agreed the milestone would be verified by an independent expert panel.</p>\n\n<p class=\"has-text-align-none\">Microsoft and OpenAI have also relaxed the exclusive parts of their partnership even more, allowing OpenAI to collaborate with third parties and release open weight models. Microsoft also no longer has the right of first refusal to be OpenAI\u2019s compute provider.</p>\n\n<p class=\"has-text-align-none\">All of these OpenAI partnership changes have allowed Microsoft to pursue this deal with Anthropic. Microsoft has been increasingly embracing Anthropic\u2019s models across its Copilot services in recent months. In fact, Microsoft has been favoring Anthropic\u2019s Claude 4 over GPT-5 in its new auto <a href=\"https://www.theverge.com/report/778641/microsoft-visual-studio-code-anthropic-claude-4\">AI model selector in Visual Studio Code</a>. Microsoft also brought Anthropic\u2019s Claude Sonnet 4 and Claude Opus 4.1 to <a href=\"https://www.theverge.com/news/784392/microsoft-365-copilot-anthropic-ai-models-feature\">Microsoft 365 Copilot users recently</a>.</p>",
-    "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/11/microsoftanthropicdeal.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "summary_text": "Microsoft is announcing a strategic partnership with Anthropic today that will bring the AI startup\u2019s models to Microsoft Foundry for the first time. As part of the deal, Anthropic is also committing to purchasing $30 billion of Azure compute capacity and \u201cto...",
-    "category": "ai",
-    "_trending_tags": [
-      "ai",
-      "anthropic",
-      "claude",
-      "microsoft"
-    ],
-    "_permalink": "/p/0b87d9a7e1/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/0b87d9a7e1/",
-    "_summary_240": "Microsoft is announcing a strategic partnership with Anthropic today that will bring the AI startup\u2019s models to Microsoft Foundry for the first time. As part of the deal,...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/0b87d9a7e1/thumbnail.png"
   },
   {
     "title": "Retail vs. whales: Who actually drives the Santa rally?",
@@ -972,21 +967,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/9f0e233cd2/thumbnail.png"
   },
   {
-    "title": "Roblox will require all users to perform age-checks to access chat from January",
-    "url": "https://techcrunch.com/2025/11/18/roblox-will-require-all-users-to-perform-age-checks-to-access-chat-from-january/",
-    "published_at": "2025-11-18T07:00:00-05:00",
-    "source": "TechCrunch",
-    "summary": "Starting Tuesday, users can voluntarily undergo the age-check process to secure access to communication features.",
-    "content_html": "",
-    "image_url": "https://techcrunch.com/wp-content/uploads/2024/09/roblox-heading.jpg?resize=1200,800",
-    "summary_text": "Starting Tuesday, users can voluntarily undergo the age-check process to secure access to communication features.",
-    "category": "fintech",
-    "_permalink": "/p/8f753c4b96/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/8f753c4b96/",
-    "_summary_240": "Starting Tuesday, users can voluntarily undergo the age-check process to secure access to communication features.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/8f753c4b96/thumbnail.png"
-  },
-  {
     "title": "\u2018Odd Lots\u2019 Cohost Joe Weisenthal Has Predictions About How the AI Bubble Will Burst",
     "url": "https://www.wired.com/story/the-big-interview-podcast-joe-weisenthal/",
     "published_at": "2025-11-18T06:30:00-05:00",
@@ -1042,45 +1022,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/046d8dc248/thumbnail.png"
   },
   {
-    "title": "Amazon\u2019s AWS and Microsoft\u2019s Azure Face EU Probe Into Cloud Power",
-    "url": "https://www.bloomberg.com/news/articles/2025-11-18/amazon-s-aws-and-microsoft-azure-face-eu-probe-into-cloud-power",
-    "published_at": "2025-11-18T05:27:27-05:00",
-    "source": "Bloomberg Technology",
-    "summary": "Amazon Web Services and Microsoft Corp.\u2019s Azure are under investigation by the European Union to determine whether the world\u2019s two biggest cloud platforms should be hit by rules designed to curtail Big Tech\u2019s market power.",
-    "content_html": "Data center computers.",
-    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/if_jwPsTJejE/v1/1200x-1.jpg",
-    "summary_text": "Amazon Web Services and Microsoft Corp.\u2019s Azure are under investigation by the European Union to determine whether the world\u2019s two biggest cloud platforms should be hit by rules designed to curtail Big Tech\u2019s market power.",
-    "category": "software",
-    "_trending_tags": [
-      "ai",
-      "amazon",
-      "cloud",
-      "microsoft"
-    ],
-    "_permalink": "/p/71fa6a3f43/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/71fa6a3f43/",
-    "_summary_240": "Amazon Web Services and Microsoft Corp.\u2019s Azure are under investigation by the European Union to determine whether the world\u2019s two biggest cloud platforms should be hit by rules...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/71fa6a3f43/thumbnail.png"
-  },
-  {
-    "title": "JPMorgan\u2019s Pinto Warns of Possible \u2018Correction\u2019 in AI Valuations",
-    "url": "https://www.bloomberg.com/news/articles/2025-11-18/jpmorgan-s-pinto-warns-of-possible-correction-in-ai-valuations",
-    "published_at": "2025-11-18T04:43:40-05:00",
-    "source": "Bloomberg Technology",
-    "summary": "Valuations in the booming AI industry are due for a reassessment, according to JPMorgan Chase & Co. Vice Chairman Daniel Pinto, who warned that any decline would reverberate across the stock market.",
-    "content_html": "Daniel Pinto Photographer: Leon Sadiki/Bloomberg",
-    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iMdlqmH5FFFE/v0/1200x-1.jpg",
-    "summary_text": "Valuations in the booming AI industry are due for a reassessment, according to JPMorgan Chase & Co. Vice Chairman Daniel Pinto, who warned that any decline would reverberate across the stock market.",
-    "category": "ai",
-    "_trending_tags": [
-      "ai"
-    ],
-    "_permalink": "/p/0cd8727c34/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/0cd8727c34/",
-    "_summary_240": "Valuations in the booming AI industry are due for a reassessment, according to JPMorgan Chase & Co. Vice Chairman Daniel Pinto, who warned that any decline would reverberate...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/0cd8727c34/thumbnail.png"
-  },
-  {
     "title": "Grab deepens stablecoin push with StraitsX Web3 wallet and settlements",
     "url": "https://cointelegraph.com/news/grab-straitsx-stablecoin-settlement-mou-web3-wallet-asia?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
     "published_at": "2025-11-18T04:29:42-05:00",
@@ -1097,6 +1038,21 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/734a90dc45/",
     "_summary_240": "Southeast Asian super app Grab\u2019s MOU with StraitsX shifts its Web3 efforts from pilots to infrastructure, exploring a unified stablecoin settlement layer across Asia.",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/734a90dc45/thumbnail.png"
+  },
+  {
+    "title": "ABB Disappoints Investors by Leaving Growth Target Unchanged",
+    "url": "https://www.bloomberg.com/news/articles/2025-11-18/abb-lifts-earnings-margin-target-eyes-acquisitions-to-grow",
+    "published_at": "2025-11-18T01:50:45-05:00",
+    "source": "Bloomberg Technology",
+    "summary": "ABB Ltd. kept its revenue growth target unchanged, disappointing investors who had expected a more ambitious goal as an artificial intelligence boom drives demand for the company\u2019s power-grid products.",
+    "content_html": "ABB branding.",
+    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iawtjU0T6BXo/v1/1200x-1.jpg",
+    "summary_text": "ABB Ltd. kept its revenue growth target unchanged, disappointing investors who had expected a more ambitious goal as an artificial intelligence boom drives demand for the company\u2019s power-grid products.",
+    "category": "ai",
+    "_permalink": "/p/853fd019dd/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/853fd019dd/",
+    "_summary_240": "ABB Ltd. kept its revenue growth target unchanged, disappointing investors who had expected a more ambitious goal as an artificial intelligence boom drives demand for the...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/853fd019dd/thumbnail.png"
   },
   {
     "title": "SEC makes no specific mention of crypto in 2026 exam priorities",
@@ -1650,7 +1606,7 @@
     "source": "Financial Times - Technology",
     "summary": "A large part of the investment pouring into AI is being financed by debt of the kind that lines millions of nest eggs",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/a93a6a2a-ef23-4b25-910d-835aa875ec9f.jpg",
     "summary_text": "A large part of the investment pouring into AI is being financed by debt of the kind that lines millions of nest eggs",
     "category": "ai",
     "_trending_tags": [
@@ -1664,7 +1620,7 @@
     "source": "Financial Times - Technology",
     "summary": "National security document outlines intelligence on tech support given to PLA \u2018operations\u2019",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/cfe6ec3f-89fe-4a4f-b27b-3cd4f5370782.jpg",
     "summary_text": "National security document outlines intelligence on tech support given to PLA \u2018operations\u2019",
     "category": "fintech",
     "_trending_tags": [
@@ -1737,7 +1693,7 @@
     "source": "Financial Times - Technology",
     "summary": "Businesses advised to set clear policies covering which tools can be used and how",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/86bb20f0-0d2a-4d8b-be12-00cd4ade37df.jpg",
     "summary_text": "Businesses advised to set clear policies covering which tools can be used and how",
     "category": "ai",
     "_trending_tags": [
@@ -1766,7 +1722,7 @@
     "source": "Financial Times - Technology",
     "summary": "The grown-ups have officially arrived",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/d88a7eea-9f13-4001-8fbf-43ca89dd471a.jpg",
     "summary_text": "The grown-ups have officially arrived",
     "category": "ai",
     "_trending_tags": [
@@ -1810,7 +1766,7 @@
     "source": "Financial Times - Technology",
     "summary": "Investor concerns over lofty valuations for artificial intelligence companies hit sentiment",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/02970f7b-8476-496f-9652-934827071e40.jpg",
     "summary_text": "Investor concerns over lofty valuations for artificial intelligence companies hit sentiment",
     "category": "ai"
   },
@@ -1845,30 +1801,5 @@
       "gpt",
       "microsoft"
     ]
-  },
-  {
-    "title": "AI bubble trouble talk is overblown",
-    "url": "https://www.ft.com/content/7c268962-7663-43ed-b30d-901d509f831b",
-    "published_at": "2025-11-13T13:04:50-05:00",
-    "source": "Financial Times - Technology",
-    "summary": "For the foreseeable future, the market is facing a shortage of capacity \u2014 hardly the conditions that spell imminent disaster",
-    "content_html": "",
-    "image_url": "",
-    "summary_text": "For the foreseeable future, the market is facing a shortage of capacity \u2014 hardly the conditions that spell imminent disaster",
-    "category": "ai",
-    "_trending_tags": [
-      "ai"
-    ]
-  },
-  {
-    "title": "CEORater API Is Live",
-    "url": "https://newsletter.tek2dayholdings.com/p/ceorater-api-is-live-b1e",
-    "published_at": "2025-11-13T12:47:03-05:00",
-    "source": "TEK2day Newsletter",
-    "summary": "Try our CEORater API (HERE), which allows for programmatic access to CEO performance metrics and company data.",
-    "content_html": "<div class=\"captioned-image-container\"><figure><a class=\"image-link image2 is-viewable-img\" href=\"https://substackcdn.com/image/fetch/$s_!NMrB!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa8d481f1-e70a-4cdf-a35d-039c4713fafb_1075x768.png\" target=\"_blank\"><div class=\"image2-inset\"><source type=\"image/webp\" /><img alt=\"\" class=\"sizing-normal\" height=\"768\" src=\"https://substackcdn.com/image/fetch/$s_!NMrB!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa8d481f1-e70a-4cdf-a35d-039c4713fafb_1075x768.png\" width=\"1075\" /><div class=\"image-link-expand\"><div class=\"pencraft pc-display-flex pc-gap-8 pc-reset\"><button class=\"pencraft pc-reset pencraft icon-container restack-image\" tabindex=\"0\" type=\"button\"><svg class=\"lucide lucide-refresh-cw\" fill=\"none\" height=\"20\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" viewBox=\"0 0 24 24\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8\"></path><path d=\"M21 3v5h-5\"></path><path d=\"M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16\"></path><path d=\"M8 16H3v5\"></path></svg></button><button class=\"pencraft pc-reset pencraft icon-container view-image\" tabindex=\"0\" type=\"button\"><svg class=\"lucide lucide-maximize2 lucide-maximize-2\" fill=\"none\" height=\"20\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" viewBox=\"0 0 24 24\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><polyline points=\"15 3 21 3 21 9\"></polyline><polyline points=\"9 21 3 21 3 15\"></polyline><line x1=\"21\" x2=\"14\" y1=\"3\" y2=\"10\"></line><line x1=\"3\" x2=\"10\" y1=\"21\" y2=\"14\"></line></svg></button></div></div></div></a></figure></div><p><strong>Try our CEORater API (<a href=\"https://ceorater-api.onrender.com/docs\">HERE</a>), which allows for programmatic access to CEO performance metrics and company data.</strong></p><ul><li><p>1,500 data points across the universe of NASDAQ100 companies and CEOs. </p></li><li><p>Perfect for Quant shops and devs.</p></li></ul><div><hr /></div><p></p>",
-    "image_url": "https://substackcdn.com/image/fetch/$s_!NMrB!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa8d481f1-e70a-4cdf-a35d-039c4713fafb_1075x768.png",
-    "summary_text": "Try our CEORater API (HERE), which allows for programmatic access to CEO performance metrics and company data.",
-    "category": "ai"
   }
 ]
