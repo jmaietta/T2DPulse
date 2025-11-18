@@ -1,5 +1,81 @@
 [
   {
+    "title": "Microsoft Rolls Out Agent 365 for Businesses to Manage AI Workforces",
+    "url": "https://www.pymnts.com/artificial-intelligence-2/2025/microsoft-rolls-out-agent-365-for-businesses-to-manage-ai-workforces/",
+    "published_at": "2025-11-18T18:08:57-05:00",
+    "source": "PYMNTS",
+    "summary": "Microsoft on Tuesday (Nov. 18) introduced Microsoft Agent 365, a new system aimed to help companies track and control the growing number of AI agents used in everyday work. The company said organizations are starting to rely on agents to handle tasks across support, operations and productivity tools, and that they need a single [\u2026] The post Microsoft Rolls Out Agent 365 for Businesses to Manage A...",
+    "content_html": "<p><span>Microsoft on Tuesday (Nov. 18) introduced </span><a href=\"https://www.microsoft.com/en-us/microsoft-365/blog/2025/11/18/microsoft-agent-365-the-control-plane-for-ai-agents/\" rel=\"noopener\" target=\"_blank\"><span>Microsoft Agent 365</span></a><span>, a new system aimed to help companies track and control the growing number of AI agents used in everyday work.</span></p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p><span>The company said organizations are starting to rely on agents to handle tasks across support, operations and productivity tools, and that they need a single place to manage them. Microsoft cited IDC research estimating that more than one billion agents could be active inside businesses by 2028.</span></p>\n<p><span>Agent 365 gives companies a unified view of all the agents running in their environments. It includes a central list where IT teams can see approved agents as well as \u201cshadow\u201d agents that may have been created without permission. Companies can set rules about what each agent is allowed to access, using Microsoft Entra to manage those permissions.</span></p>\n<p><span>The system also provides a dashboard that shows how agents are being used, who they interact with and which tools they connect to. The platform supports agents built with Microsoft tools as well as third-party frameworks, and security features from Defender and Purview extend threat protection and audit controls to all registered agents.</span></p>\n<p><span>The launch signals that many companies are moving past small experiments and now need ways to manage larger groups of agents. Microsoft is positioning Agent 365 to bring structure and accountability to these deployments so businesses can scale them safely and measure their impact.</span></p>\n<p><span>The visibility and reporting tools could also help companies determine where agents are working well and where adjustments are needed. As agent adoption grows, Microsoft said organizations are increasingly worried about unauthorized agents operating without oversight, which Agent 365 aims to address.</span></p>\n<p><span>The system builds on Microsoft\u2019s earlier step from May, when it introduced the </span><a href=\"https://www.microsoft.com/en-us/microsoft-365-copilot/agents\" rel=\"noopener\" target=\"_blank\"><span>Agent Store</span></a><span>. That marketplace let users browse and install prebuilt agents designed for everyday tasks in Microsoft 365 apps. </span><a href=\"https://www.pymnts.com/artificial-intelligence-2/2025/ai-models-and-tools-microsoft-launches-agent-store-marketplace/\" rel=\"noopener\" target=\"_blank\"><span>PYMNTS reported</span></a><span> that the store launched with more than 70 agents and was aimed at helping workers bring AI into their existing workflows without learning new tools.</span></p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/artificial-intelligence-2/2025/microsoft-rolls-out-agent-365-for-businesses-to-manage-ai-workforces/\">Microsoft Rolls Out Agent 365 for Businesses to Manage AI Workforces</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
+    "image_url": "https://www.pymnts.com/wp-content/uploads/2025/11/microsoft-agent-365-agentic-ai-artificial-intelligence.jpeg?w=457",
+    "summary_text": "Microsoft on Tuesday (Nov. 18) introduced Microsoft Agent 365, a new system aimed to help companies track and control the growing number of AI agents used in everyday work. The company said organizations are starting to rely on agents to handle tasks across s...",
+    "category": "ai",
+    "_trending_tags": [
+      "agent",
+      "ai",
+      "microsoft"
+    ],
+    "_permalink": "/p/cb09e971a4/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/cb09e971a4/",
+    "_summary_240": "Microsoft on Tuesday (Nov. 18) introduced Microsoft Agent 365, a new system aimed to help companies track and control the growing number of AI agents used in everyday work. The...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/cb09e971a4/thumbnail.png"
+  },
+  {
+    "title": "Bitcoin recovery expected as liquidity conditions change, but US macro remains a threat",
+    "url": "https://cointelegraph.com/news/bitcoin-recovery-expected-as-liquidity-conditions-change-but-us-macro-remains-a-threat?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "published_at": "2025-11-18T18:00:00-05:00",
+    "source": "Cointelegraph",
+    "summary": "Bitcoin\u2019s recent weakness reflects broader economic stress, but improving liquidity and investors\u2019 positive outlook for 2026 could set the stage for a strong rebound.",
+    "content_html": "",
+    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTEvMDE5YTk4YzAtNTUxNC03ZjY2LTg0YTQtYWE1ZTgyMjFlMjVk.jpg",
+    "summary_text": "Bitcoin\u2019s recent weakness reflects broader economic stress, but improving liquidity and investors\u2019 positive outlook for 2026 could set the stage for a strong rebound.",
+    "category": "fintech",
+    "_trending_tags": [
+      "ai"
+    ],
+    "_permalink": "/p/bf2cb333c2/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/bf2cb333c2/",
+    "_summary_240": "Bitcoin\u2019s recent weakness reflects broader economic stress, but improving liquidity and investors\u2019 positive outlook for 2026 could set the stage for a strong rebound.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/bf2cb333c2/thumbnail.png"
+  },
+  {
+    "title": "Cloudflare outages aren\u2019t a matter of if \u2014 but when",
+    "url": "https://www.theverge.com/news/823562/cloudflare-outage-wake-up-call-websites",
+    "published_at": "2025-11-18T17:58:59-05:00",
+    "source": "The Verge",
+    "summary": "Cloudflare has become the latest web infrastructure giant to collapse in the span of a month, replacing entire sites, including X, ChatGPT, Spotify, Canva, and even the outage-tracking DownDetector, with an error message for hours this morning. It's the latest in a string of outages that Mehdi Daoudi, CEO and co-founder of the internet performance [\u2026]",
+    "content_html": "<figure>\n\n<img alt=\"\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/25537994/STK454_ERRORS_CVIRGINIA_B.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100\" />\n\t<figcaption>\n\t\t</figcaption>\n</figure>\n<p class=\"has-text-align-none\">Cloudflare has become the latest web infrastructure giant to collapse in the span of a month, <a href=\"https://www.theverge.com/news/822869/cloudflare-is-down-outage-x-twitter-downdetector\">replacing entire sites</a>, including X, ChatGPT, Spotify, Canva, and even the outage-tracking DownDetector, with an error message for hours this morning. It's the latest in a string of outages that Mehdi Daoudi, CEO and co-founder of the internet performance monitoring platform Catchpoint, says should be a \"wake-up call\" for companies.</p>\n<p class=\"has-text-align-none\">\"Everybody's putting all their eggs in one basket, and then they're surprised when there is a problem,\" Daoudi says. \"It's on the company's side to make sure that they have redundancy and resiliency.\"</p>\n<p class=\"has-text-align-none\">The outage comes  \u2026</p>\n<p><a href=\"https://www.theverge.com/news/823562/cloudflare-outage-wake-up-call-websites\">Read the full story at The Verge.</a></p>",
+    "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/25537994/STK454_ERRORS_CVIRGINIA_B.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "summary_text": "Cloudflare has become the latest web infrastructure giant to collapse in the span of a month, replacing entire sites, including X, ChatGPT, Spotify, Canva, and even the outage-tracking DownDetector, with an error message for hours this morning. It's the lates...",
+    "category": "software",
+    "_trending_tags": [
+      "chatgpt",
+      "cloud",
+      "gpt"
+    ],
+    "_permalink": "/p/24c9364365/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/24c9364365/",
+    "_summary_240": "Cloudflare has become the latest web infrastructure giant to collapse in the span of a month, replacing entire sites, including X, ChatGPT, Spotify, Canva, and even the...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/24c9364365/thumbnail.png"
+  },
+  {
+    "title": "Trump Urges Congress to Block State-Level AI Regulation",
+    "url": "https://www.bloomberg.com/news/articles/2025-11-18/trump-urges-congress-to-block-state-level-ai-regulation",
+    "published_at": "2025-11-18T17:58:52-05:00",
+    "source": "Bloomberg Technology",
+    "summary": "President Donald Trump called on Congress to pass a federal standard governing oversight of artificial intelligence and warned that varied regulation at the state level risked slowing the development of an emerging technology that\u2019s critical to the US economy.",
+    "content_html": "US President Donald Trump Photographer: Shawn Thew/EPA",
+    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iYj1kB3YwfMY/v0/1200x-1.jpg",
+    "summary_text": "President Donald Trump called on Congress to pass a federal standard governing oversight of artificial intelligence and warned that varied regulation at the state level risked slowing the development of an emerging technology that\u2019s critical to the US economy.",
+    "category": "ai",
+    "_trending_tags": [
+      "ai"
+    ],
+    "_permalink": "/p/d80641962a/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/d80641962a/",
+    "_summary_240": "President Donald Trump called on Congress to pass a federal standard governing oversight of artificial intelligence and warned that varied regulation at the state level risked...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/d80641962a/thumbnail.png"
+  },
+  {
     "title": "Xi\u2019s University Fuels China AI Boom With More Patents Than Harvard or MIT",
     "url": "https://www.bloomberg.com/news/features/2025-11-18/china-s-tsinghua-university-is-beating-us-in-the-race-for-ai-patents",
     "published_at": "2025-11-18T17:00:36-05:00",
@@ -309,26 +385,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/1a33915b42/thumbnail.png"
   },
   {
-    "title": "Google\u2019s New Gemini 3 Powers New Search, Enterprise Features",
-    "url": "https://www.pymnts.com/artificial-intelligence-2/2025/googles-new-gemini-3-powers-new-search-enterprise-features/",
-    "published_at": "2025-11-18T14:56:00-05:00",
-    "source": "PYMNTS",
-    "summary": "Google introduced its newest AI model, Gemini 3, on Tuesday (Nov. 18) and deployed it directly into Google Search, the Gemini app and its enterprise cloud stack. The company announced the release in its blog, calling it its most capable multimodal model to date. Google Embeds Gemini 3 Into Its Core Products The company [\u2026] The post Google\u2019s New Gemini 3 Powers New Search, Enterprise Features appe...",
-    "content_html": "<p style=\"font-weight: 400;\">Google introduced its newest AI model, Gemini 3, on Tuesday (Nov. 18) and deployed it directly into Google Search, the Gemini app and its enterprise cloud stack. The company announced the release in its <a href=\"https://blog.google/products/gemini/gemini-3/\">blog</a>, calling it its most capable multimodal model to date.</p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<h2 style=\"font-weight: 400;\"><strong>Google Embeds Gemini 3 Into Its Core Products</strong></h2>\n<p style=\"font-weight: 400;\">The company says Gemini 3 brings expanded reasoning, longer context handling and improved multimodal performance across text, image, audio and video. Google placed it into Search\u2019s AI Mode for premium users, added it to the Gemini app and made it available to developers through AI Studio and Vertex AI. Independent evaluations are still limited, but Google reports strong internal results across comprehension and problem-solving tests.</p>\n<p style=\"font-weight: 400;\">The immediate deployment marks a strategic response to concerns that Google was moving too slowly on artificial intelligence compared to rivals. By pushing Gemini 3 straight into Search, Google is signaling that its flagship product will remain the center of its AI strategy rather than be displaced by external models.</p>\n<p style=\"font-weight: 400;\">The release follows OpenAI\u2019s launch of GPT 5.1, which <a href=\"https://www.pymnts.com/artificial-intelligence-2/2025/openai-releases-gpt-5-1-with-faster-reasoning-and-expanded-personalization/\" rel=\"noopener\" target=\"_blank\">PYMNTS reported</a> focuses on faster reasoning, adaptive problem solving and personalization features that allow users to set tone and communication style. GPT 5.1 is designed to be more predictable and customizable, especially for enterprise workflows.</p>\n<p style=\"font-weight: 400;\">Anthropic updated its lineup with Claude Sonnet 4.5 and introduced the Claude Agent SDK. <a href=\"https://www.pymnts.com/artificial-intelligence-2/2025/anthropic-claude-sonnet-4-5-introduces-claude-agent-sdk/?utm_source=chatgpt.com\" rel=\"noopener\" target=\"_blank\">PYMNTS reported</a> that Sonnet 4.5 is built for complex enterprise work, including coding and long-running tasks, and offers expanded safety controls. The Agent SDK gives developers tools to build structured agents that can handle multi-step operations and integrate across business systems.</p>\n<p style=\"font-weight: 400;\">Google is positioning Gemini 3 around multimodality, agent readiness and broad distribution, especially through Search. OpenAI maintains an advantage in third-party developer ecosystems, and Anthropic continues to gain traction among enterprises that prioritize governance and reliability.</p>\n<h2 style=\"font-weight: 400;\"><strong>The Search Narrative Shifts</strong></h2>\n<p style=\"font-weight: 400;\">For Google\u2019s core business, Gemini 3 alters a narrative that has followed the company for nearly two years: whether AI would weaken or replace the search model that drives its revenues. The launch shows Google is placing AI inside Search rather than outside it. By integrating Gemini 3 into queries, summaries and planning tasks, Google is betting that its own interface remains the primary destination for information, shopping and service interactions.</p>\n<p style=\"font-weight: 400;\">Google also introduced Antigravity, a developer platform that uses Gemini 3 to build agents that plan tasks, write code and interact with tools. Gemini 3 on Vertex AI includes expanded governance and privacy controls aimed at enterprise buyers.</p>\n<div>\n<p class=\"elementtoproof\"><i>For all PYMNTS AI coverage, subscribe to the daily<span class=\"apple-converted-space\">\u00a0</span></i><a href=\"https://www.pymnts.com/subscribe/\" rel=\"noopener\" target=\"_blank\" title=\"https://www.pymnts.com/subscribe/\">AI\u00a0Newsletter</a><i>.</i></p>\n</div>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/artificial-intelligence-2/2025/googles-new-gemini-3-powers-new-search-enterprise-features/\">Google\u2019s New Gemini 3 Powers New Search, Enterprise Features</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
-    "image_url": "https://www.pymnts.com/wp-content/uploads/2025/11/Google-Gemini.png?w=457",
-    "summary_text": "Google introduced its newest AI model, Gemini 3, on Tuesday (Nov. 18) and deployed it directly into Google Search, the Gemini app and its enterprise cloud stack. The company announced the release in its blog, calling it its most capable multimodal model to da...",
-    "category": "ai",
-    "_trending_tags": [
-      "ai",
-      "cloud",
-      "google"
-    ],
-    "_permalink": "/p/526721b25a/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/526721b25a/",
-    "_summary_240": "Google introduced its newest AI model, Gemini 3, on Tuesday (Nov. 18) and deployed it directly into Google Search, the Gemini app and its enterprise cloud stack. The company...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/526721b25a/thumbnail.png"
-  },
-  {
     "title": "ChatGPT and X hit by outage at online security group Cloudflare",
     "url": "https://www.ft.com/content/9898e434-f7ec-4113-915b-fce28f1a9c25",
     "published_at": "2025-11-18T14:26:30-05:00",
@@ -591,7 +647,11 @@
     "_trending_tags": [
       "ai",
       "google"
-    ]
+    ],
+    "_permalink": "/p/1e57e61b71/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/1e57e61b71/",
+    "_summary_240": "Sundar Pichai says no company is immune if AI bubble bursts, echoing dotcom fears.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/1e57e61b71/thumbnail.png"
   },
   {
     "title": "Google Unveils Gemini 3, With Improved Coding and Search Abilities",
@@ -674,39 +734,19 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/7a63fe19e6/thumbnail.png"
   },
   {
-    "title": "Microsoft is turning Windows into an \u2018agentic OS,\u2019 starting with the taskbar",
-    "url": "https://www.theverge.com/news/821948/microsoft-windows-11-ai-agents-taskbar-integration",
-    "published_at": "2025-11-18T11:00:34-05:00",
-    "source": "The Verge",
-    "summary": "Microsoft is trying to transform Windows into a \u201ccanvas for AI,\u201d with new AI agents integrated into the Windows 11 taskbar. These new taskbar capabilities are designed to make AI agents feel like an assistant in Windows that can go off and control your PC and do tasks for you at the click of a [\u2026]",
-    "content_html": "<figure>\n\n<img alt=\"\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/11/aiagentstaskbar.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100\" />\n\t<figcaption>\n\t\t</figcaption>\n</figure>\n<p class=\"has-text-align-none\">Microsoft is trying to transform Windows into a \u201ccanvas for AI,\u201d with new AI agents integrated into the Windows 11 taskbar. These new taskbar capabilities are designed to make AI agents feel like an assistant in Windows that can go off and control your PC and do tasks for you at the click of a button. It\u2019s part of a broader overhaul of Windows to turn the operating system into an \u201cagentic OS.\u201d</p>\n\n<p class=\"has-text-align-none\">\u201cThis is all about us wanting to make sure that every user can get the superpowers of AI,\u201d says Navjot Virk, corporate vice president of Windows experiences, in an interview with <em>The Verge</em>.</p>\n\n<p class=\"has-text-align-none\">Microsoft is integrating a variety of AI agents directly into the Windows 11 taskbar, including its own Microsoft 365 Copilot and third-party options. \u201cThis integration isn\u2019t just about adding agents; it\u2019s about making them part of the OS experience,\u201d says Windows chief Pavan Davuluri.</p>\n<img alt=\"\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/11/taskbarai.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100\" title=\"\" />\n<p class=\"has-text-align-none\">Agents will be able to do things like research data in the background while you work on something else, or access files and folders on your PC to automate a boring and time-consuming admin task you have to do at work. Once you ask an AI agent to go do some tasks for you, the agent will shift into the taskbar and run in the background.&nbsp;\u201cYou can hover on the taskbar icon at any time to see what the agent is doing,\u201d explains Virk.</p>\n\n<p class=\"has-text-align-none\">The AI agent integration is part of the new <a href=\"https://www.theverge.com/news/799768/microsoft-windows-ai-copilot-voice-vision-launch\">Ask Copilot feature in the taskbar</a>, which combines the existing local file search with Copilot capabilities. \u201cNot only do you get lightning-fast search for files and settings, you can now start a conversation with Microsoft 365 Copilot and also launch AI agents directly from the taskbar,\u201d explains Virk.</p>\n\n<p class=\"has-text-align-none\">Microsoft has even added new taskbar capabilities to these agents so you can glance at them to see the status of whatever they\u2019re working on in the background. A floating window will also appear to interact with agents or Microsoft 365 Copilot, instead of a full app. </p>\n<img alt=\"\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/11/Ask-Copilot-on-taskbar.png?quality=90&#038;strip=all&#038;crop=0,0,100,100\" title=\"\" />\n<p class=\"has-text-align-none\">If an agent needs attention or completes a task, it will notify you and update its state on the taskbar. There are badges on the AI agent taskbar icons that show you visually that an agent is progressing with a task: a yellow exclamation point when it needs help, or a green tick for when it has completed something.</p>\n\n<p class=\"has-text-align-none\">If you don\u2019t want AI agents on the taskbar, you don\u2019t have to enable this feature. \u201cThese experiences are designed to be opt-in, we want customers to have full control over when and how they engage with Copilot and these agents,\u201d says Virk.</p>\n\n<p class=\"has-text-align-none\">Developers will ultimately think up a lot of use cases for these agents, and Microsoft is doing a lot of the platform-level work to make them possible. AI agent capabilities are being embedded into core parts of Windows <a href=\"https://www.theverge.com/news/669298/microsoft-windows-ai-foundry-mcp-support\">thanks to Model Context Protocol</a> (MCP). &#8220;Essentially what they do is give us a standardized framework that allows these agents to discover tools and discover other agents through a secure managed on-device registry,\u201d says Davuluri. \u201cIt also gives us, the Windows team, the ability to provide tools in an agentic framework for these agents to go and consume.\u201d</p>\n<div class=\"youtube-embed\"></div>\n<p class=\"has-text-align-none\">AI agents will also have their own workspace, separate to your Windows 11 desktop. &#8220;It&#8217;s a contained policy-controlled auditable execution environment,&#8221; says Davuluri. &#8220;It gives us a place where the agents can operate with software in an analogous fashion to what people do.&#8221; Agent workspace is like a sandbox for AI agents, where each agent operates using its own Windows account. This is all <a href=\"https://support.microsoft.com/en-us/windows/experimental-agentic-features-a25ede8a-e4c2-4841-85a8-44839191dfb3\">in the name of security</a>, and probably because AI models aren\u2019t always accurate so you\u2019ll want that activity separate to your main Windows session.</p>\n\n<p class=\"has-text-align-none\">While agents in the taskbar is a big new AI addition to Windows 11, it\u2019s not the only way Microsoft is reimagining the operating system into what it calls an \u201cagentic OS.\u201d Microsoft is also bringing Copilot into File Explorer as part of this work.&nbsp;\u201cWhat we want to do is make it even more convenient to get highly contextual and deeper Copilot help in Windows surfaces that you already use a lot, like the File Explorer,\u201d says Virk. </p>\n\n<p class=\"has-text-align-none\">Copilot integration in File Explorer lets Windows 11 users summarize a document in one click, answer questions about files, or draft emails based on the content of a document.</p>\n<img alt=\"\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/11/How-Agents-Operate-on-Windows_Developer-Platform.png?quality=90&#038;strip=all&#038;crop=0,0,100,100\" title=\"\" />\n<p class=\"has-text-align-none\">Click to Do is also being improved on Copilot Plus PCs, allowing you to convert any table you see on the web or anywhere else on your PC into an Excel document. You can then freely manipulate the data and add new columns. While Click To Do uses local AI models on a Copilot Plus PC, once that data is in Excel you can modify it using cloud-powered AI models through Copilot and Agent Mode.</p>\n\n<p class=\"has-text-align-none\">This hybrid mix of local AI (Copilot Plus PC) and cloud-powered AI (Copilot) seems to be where Microsoft is heading with its Windows AI features. A new writing assistance feature is entering preview that lets you rewrite and compose in any text box in Windows 11, and it even has offline support on Copilot Plus PCs.</p>\n\n<p class=\"has-text-align-none\">Outlook is also getting AI-generated summaries, and Word is getting automatic alt-text for images in Office documents. Microsoft is also working on a new \u201cfluid dictation\u201d feature for Windows that turns speech into text with correct grammar and punctuation.</p>\n\n<p class=\"has-text-align-none\">This hybrid mix of AI is even more apparent in Microsoft\u2019s Windows 365 service. These cloud PCs \u2014 that can be accessed through Windows 11, a web browser, or mobile apps \u2014 include Copilot Plus features and also have access to the main cloud-powered Copilot features.</p>\n\n<p class=\"has-text-align-none\">If you\u2019re not interested in the AI additions to Windows, Microsoft also has some IT-focused additions at its Ignite conference this week. Hardware-accelerated BitLocker is on the way next year, and will require next-generation Windows devices that are built on unannounced chips. \u201cHardware acceleration of BitLock requires the capability in the silicon platform,\u201d says Davuluri. \u201cAs and when those capabilities are available, the OS will be able to unlock them for users.\u201d</p>\n\n<p class=\"has-text-align-none\">Sysmon functionality is also being integrated into Windows in early 2026. It will make security events available in the event log and make it easier for security teams to manage Windows systems. Microsoft is also launching Windows Hello\u2019s visual refresh and new <a href=\"https://www.theverge.com/tech/818548/windows-11-now-natively-supports-1password-passkeys\">passkey manager integration</a>, which works with Microsoft Password Manager in Edge, 1Password, and Bitwarden.</p>",
-    "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/11/aiagentstaskbar.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "summary_text": "Microsoft is trying to transform Windows into a \u201ccanvas for AI,\u201d with new AI agents integrated into the Windows 11 taskbar. These new taskbar capabilities are designed to make AI agents feel like an assistant in Windows that can go off and control your PC and...",
+    "title": "Microsoft remakes Windows for an era of autonomous AI agents",
+    "url": "https://venturebeat.com/ai/microsoft-remakes-windows-for-an-era-of-autonomous-ai-agents",
+    "published_at": "2025-11-18T11:00:00-05:00",
+    "source": "VentureBeat",
+    "summary": "Microsoft is fundamentally restructuring its Windows operating system to become what executives call the first \"agentic OS,\" embedding the infrastructure needed for autonomous AI agents to operate securely at enterprise scale \u2014 a watershed moment in the evolution of personal computing that positions the 40-year-old platform as the foundation for a new era of human-machine collaboration. The compa...",
+    "content_html": "",
+    "image_url": "",
+    "summary_text": "Microsoft is fundamentally restructuring its Windows operating system to become what executives call the first \"agentic OS,\" embedding the infrastructure needed for autonomous AI agents to operate securely at enterprise scale \u2014 a watershed moment in the evolu...",
     "category": "ai",
     "_trending_tags": [
       "agent",
       "ai",
       "microsoft"
-    ],
-    "_permalink": "/p/c7d1222282/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/c7d1222282/",
-    "_summary_240": "Microsoft is trying to transform Windows into a \u201ccanvas for AI,\u201d with new AI agents integrated into the Windows 11 taskbar. These new taskbar capabilities are designed to make AI...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/c7d1222282/thumbnail.png"
-  },
-  {
-    "title": "Google unveils Gemini 3 claiming the lead in math, science, multimodal and agentic AI benchmarks",
-    "url": "https://venturebeat.com/ai/google-unveils-gemini-3-claiming-the-lead-in-math-science-multimodal-and",
-    "published_at": "2025-11-18T11:00:00-05:00",
-    "source": "VentureBeat",
-    "summary": "After more than a month of rumors and feverish speculation \u2014 including Polymarket wagering on the release date \u2014 Google today unveiled Gemini 3 , its newest proprietary frontier model family and the company\u2019s most comprehensive AI release since the Gemini line debuted in 2023. The models are proprietary (closed-source), available exclusively through Google products, developer platforms, and paid ...",
-    "content_html": "",
-    "image_url": "",
-    "summary_text": "After more than a month of rumors and feverish speculation \u2014 including Polymarket wagering on the release date \u2014 Google today unveiled Gemini 3 , its newest proprietary frontier model family and the company\u2019s most comprehensive AI release since the Gemini lin...",
-    "category": "ai",
-    "_trending_tags": [
-      "agent",
-      "ai",
-      "google"
     ]
   },
   {
@@ -726,6 +766,22 @@
     ]
   },
   {
+    "title": "Google unveils Gemini 3 claiming the lead in math, science, multimodal and agentic AI benchmarks",
+    "url": "https://venturebeat.com/ai/google-unveils-gemini-3-claiming-the-lead-in-math-science-multimodal-and",
+    "published_at": "2025-11-18T11:00:00-05:00",
+    "source": "VentureBeat",
+    "summary": "After more than a month of rumors and feverish speculation \u2014 including Polymarket wagering on the release date \u2014 Google today unveiled Gemini 3 , its newest proprietary frontier model family and the company\u2019s most comprehensive AI release since the Gemini line debuted in 2023. The models are proprietary (closed-source), available exclusively through Google products, developer platforms, and paid ...",
+    "content_html": "",
+    "image_url": "",
+    "summary_text": "After more than a month of rumors and feverish speculation \u2014 including Polymarket wagering on the release date \u2014 Google today unveiled Gemini 3 , its newest proprietary frontier model family and the company\u2019s most comprehensive AI release since the Gemini lin...",
+    "category": "ai",
+    "_trending_tags": [
+      "agent",
+      "ai",
+      "google"
+    ]
+  },
+  {
     "title": "Writer's AI agents can actually do your work\u2014not just chat about it",
     "url": "https://venturebeat.com/ai/writers-ai-agents-can-actually-do-your-work-not-just-chat-about-it",
     "published_at": "2025-11-18T11:00:00-05:00",
@@ -738,22 +794,6 @@
     "_trending_tags": [
       "agent",
       "ai"
-    ]
-  },
-  {
-    "title": "Microsoft remakes Windows for an era of autonomous AI agents",
-    "url": "https://venturebeat.com/ai/microsoft-remakes-windows-for-an-era-of-autonomous-ai-agents",
-    "published_at": "2025-11-18T11:00:00-05:00",
-    "source": "VentureBeat",
-    "summary": "Microsoft is fundamentally restructuring its Windows operating system to become what executives call the first \"agentic OS,\" embedding the infrastructure needed for autonomous AI agents to operate securely at enterprise scale \u2014 a watershed moment in the evolution of personal computing that positions the 40-year-old platform as the foundation for a new era of human-machine collaboration. The compa...",
-    "content_html": "",
-    "image_url": "",
-    "summary_text": "Microsoft is fundamentally restructuring its Windows operating system to become what executives call the first \"agentic OS,\" embedding the infrastructure needed for autonomous AI agents to operate securely at enterprise scale \u2014 a watershed moment in the evolu...",
-    "category": "ai",
-    "_trending_tags": [
-      "agent",
-      "ai",
-      "microsoft"
     ]
   },
   {
@@ -943,21 +983,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/db65694f5d/thumbnail.png"
   },
   {
-    "title": "Michael Saylor\u2019s Rare Euro Preferred Stock Sours on Bitcoin Rout",
-    "url": "https://www.bloomberg.com/news/articles/2025-11-18/michael-saylor-s-rare-euro-preferred-stock-sours-on-bitcoin-rout",
-    "published_at": "2025-11-18T09:06:07-05:00",
-    "source": "Bloomberg Technology",
-    "summary": "It\u2019s taken less than two weeks for a rare euro-denominated preferred stock offering by Michael Saylor\u2019s Bitcoin treasury company to fall below its already-discounted offer price.",
-    "content_html": "Michael Saylor",
-    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/idwspsPOsO0c/v1/1200x-1.jpg",
-    "summary_text": "It\u2019s taken less than two weeks for a rare euro-denominated preferred stock offering by Michael Saylor\u2019s Bitcoin treasury company to fall below its already-discounted offer price.",
-    "category": "fintech",
-    "_permalink": "/p/d823befdfc/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/d823befdfc/",
-    "_summary_240": "It\u2019s taken less than two weeks for a rare euro-denominated preferred stock offering by Michael Saylor\u2019s Bitcoin treasury company to fall below its already-discounted offer price.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/d823befdfc/thumbnail.png"
-  },
-  {
     "title": "Stack Overflow is remaking itself into an AI data provider",
     "url": "https://techcrunch.com/2025/11/18/stack-overflow-is-remaking-itself-into-an-ai-data-provider/",
     "published_at": "2025-11-18T09:00:00-05:00",
@@ -1026,7 +1051,11 @@
       "chatgpt",
       "cloud",
       "gpt"
-    ]
+    ],
+    "_permalink": "/p/bbaa5379e9/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/bbaa5379e9/",
+    "_summary_240": "A major outage on the network of cybersecurity firm Cloudflare Inc. was resolved after disrupting websites ranging from X to ChatGPT around the globe for several hours on Tuesday.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/bbaa5379e9/thumbnail.png"
   },
   {
     "title": "\u2018Odd Lots\u2019 Cohost Joe Weisenthal Has Predictions About How the AI Bubble Will Burst",
@@ -1183,19 +1212,18 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/a1896e7831/thumbnail.png"
   },
   {
-    "title": "Microsoft\u2019s Agent 365 shifts AI agents from sandbox tools to enterprise-grade infrastructure",
-    "url": "https://venturebeat.com/ai/microsofts-agent-365-shifts-ai-agents-from-sandbox-tools-to-enterprise-grade",
+    "title": "Google Antigravity introduces agent-first architecture for asynchronous, verifiable coding workflows",
+    "url": "https://venturebeat.com/ai/google-antigravity-introduces-agent-first-architecture-for-asynchronous",
     "published_at": "2025-11-18T00:00:00-05:00",
     "source": "VentureBeat",
-    "summary": "Managing and maintaining AI systems remains a challenge for many enterprises, particularly with the potential for agentic sprawl to expose businesses to risky entry points. Microsoft entered the observability fray with the launch of Agent 365 during its annual Ignite conference Tuesday. It described Agent 365 as the control plane for AI agents, serving as an observability layer for enterprises ru...",
+    "summary": "Google launched yet another coding agent platform Tuesday, this time focused on developer teams collaborating to create agents that can execute complex tasks automatically, in a way that moves agents from being remotely controlled to actually independent. The platform, called Antigravity, is powered by Gemini 3 and is now available in public preview with \u201c generous rate limits on Gemini 3 Pro usa...",
     "content_html": "",
     "image_url": "",
-    "summary_text": "Managing and maintaining AI systems remains a challenge for many enterprises, particularly with the potential for agentic sprawl to expose businesses to risky entry points. Microsoft entered the observability fray with the launch of Agent 365 during its annua...",
-    "category": "ai",
+    "summary_text": "Google launched yet another coding agent platform Tuesday, this time focused on developer teams collaborating to create agents that can execute complex tasks automatically, in a way that moves agents from being remotely controlled to actually independent. The...",
+    "category": "software",
     "_trending_tags": [
       "agent",
-      "ai",
-      "microsoft"
+      "google"
     ]
   },
   {
