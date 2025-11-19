@@ -1,5 +1,117 @@
 [
   {
+    "title": "Google Gemini 3.0 - The Best LLM Yet",
+    "url": "https://newsletter.tek2dayholdings.com/p/google-gemini-30-the-best-llm-yet",
+    "published_at": "2025-11-19T09:37:51-05:00",
+    "source": "TEK2day Newsletter",
+    "summary": "I\u2019ve used Gemini 3.0 for a few hours last night and this morning for code maintenance.",
+    "content_html": "<div class=\"captioned-image-container\"><figure><a class=\"image-link image2 is-viewable-img\" href=\"https://substackcdn.com/image/fetch/$s_!btRj!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F3540f6f5-fe1b-46ad-bd59-8811bf12f0f8_946x676.png\" target=\"_blank\"><div class=\"image2-inset\"><source type=\"image/webp\" /><img alt=\"\" class=\"sizing-normal\" height=\"676\" src=\"https://substackcdn.com/image/fetch/$s_!btRj!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F3540f6f5-fe1b-46ad-bd59-8811bf12f0f8_946x676.png\" width=\"946\" /><div class=\"image-link-expand\"><div class=\"pencraft pc-display-flex pc-gap-8 pc-reset\"><button class=\"pencraft pc-reset pencraft icon-container restack-image\" tabindex=\"0\" type=\"button\"><svg class=\"lucide lucide-refresh-cw\" fill=\"none\" height=\"20\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" viewBox=\"0 0 24 24\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8\"></path><path d=\"M21 3v5h-5\"></path><path d=\"M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16\"></path><path d=\"M8 16H3v5\"></path></svg></button><button class=\"pencraft pc-reset pencraft icon-container view-image\" tabindex=\"0\" type=\"button\"><svg class=\"lucide lucide-maximize2 lucide-maximize-2\" fill=\"none\" height=\"20\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" viewBox=\"0 0 24 24\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><polyline points=\"15 3 21 3 21 9\"></polyline><polyline points=\"9 21 3 21 3 15\"></polyline><line x1=\"21\" x2=\"14\" y1=\"3\" y2=\"10\"></line><line x1=\"3\" x2=\"10\" y1=\"21\" y2=\"14\"></line></svg></button></div></div></div></a></figure></div><p><strong>I&#8217;ve used Gemini 3.0 for a few hours last night and this morning for code maintenance.</strong> </p><p>Most of my effort was around software code maintenance for CEORater, some of what I asked Gemini to do was around video analytics. <strong>The adjectives that come to mind to describe Gemini 3.0 are &#8220;fast&#8221; and &#8220;accurate&#8221;.</strong> Gemini 3.0 is certainly faster and more accurate than Gemini 2.5 Pro, GPT 5.1 (OpenAI) and Claude Sonnet 4.5 (Anthropic). </p><p>Gemini 3.0 sits on top of the leaderboards this morning (<a href=\"https://huggingface.co/spaces/ArtificialAnalysis/LLM-Performance-Leaderboard\">HERE</a> and <a href=\"https://lmarena.ai/leaderboard\">HERE</a>, two of the many leaderboards). </p><p>As I&#8217;ve written previously, Google: </p><ul><li><p>has the balance sheet to constantly iterate, although 3.0 is more than a modest iteration over 2.5;</p></li><li><p>has an organic data trove as a result of Google Search, Google Photos and Gmail to name several; </p></li><li><p>and also has purpose-built, in-house chips (TPUs), that reside inside Google Cloud, both of which are optimized for Gemini. This provides Google with a sustainable advantage over OpenAI, Anthropic and xAI. Microsoft (MSFT) and Meta Platforms (META) are not in the conversation with their in-house LLMs.</p></li></ul><p>If you are interested, here is a link to Google&#8217;s blog where CEO Sundar Pichai covers Gemini 3.0: <a href=\"https://blog.google/products/gemini/gemini-3/#gemini-3\">Google Blog</a></p><div><hr /></div><p> </p>",
+    "image_url": "https://substackcdn.com/image/fetch/$s_!btRj!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F3540f6f5-fe1b-46ad-bd59-8811bf12f0f8_946x676.png",
+    "summary_text": "I\u2019ve used Gemini 3.0 for a few hours last night and this morning for code maintenance.",
+    "category": "ai",
+    "_trending_tags": [
+      "ai",
+      "google",
+      "llm"
+    ],
+    "_permalink": "/p/5b05c89b8b/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/5b05c89b8b/",
+    "_summary_240": "I\u2019ve used Gemini 3.0 for a few hours last night and this morning for code maintenance.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/5b05c89b8b/thumbnail.png"
+  },
+  {
+    "title": "Target joins OpenAI\u2019s growing list of retail apps",
+    "url": "https://techcrunch.com/2025/11/19/target-joins-openais-growing-list-of-retail-apps/",
+    "published_at": "2025-11-19T09:36:12-05:00",
+    "source": "TechCrunch",
+    "summary": "OpenAI is pushing deeper into retail, with Target set to debut a new ChatGPT-powered app for shoppers. The app is launching in beta next week.",
+    "content_html": "",
+    "image_url": "https://techcrunch.com/wp-content/uploads/2025/11/2025_TargetxOpenAi_ChatGPT_PR-Image_Hero.png?resize=1200,675",
+    "summary_text": "OpenAI is pushing deeper into retail, with Target set to debut a new ChatGPT-powered app for shoppers. The app is launching in beta next week.",
+    "category": "ai",
+    "_trending_tags": [
+      "ai",
+      "chatgpt",
+      "gpt",
+      "openai"
+    ],
+    "_permalink": "/p/5431168da8/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/5431168da8/",
+    "_summary_240": "OpenAI is pushing deeper into retail, with Target set to debut a new ChatGPT-powered app for shoppers. The app is launching in beta next week.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/5431168da8/thumbnail.png"
+  },
+  {
+    "title": "Lloyds Acquires UK Digital Wallet FinTech Curve",
+    "url": "https://www.pymnts.com/acquisitions/2025/lloyds-acquires-united-kingdom-digital-wallet-fintech-curve/",
+    "published_at": "2025-11-19T09:34:20-05:00",
+    "source": "PYMNTS",
+    "summary": "United Kingdom-based Lloyds Banking Group acquired London-based digital wallet FinTech Curve. The deal will allow Lloyds to expand its digital footprint, according to a Wednesday (Nov. 19) press release. \u201cThis strategic acquisition of Curve marks another significant step forward in Lloyds Banking Group\u2019s digital transformation journey,\u201d Jas Singh, Lloyds CEO of customer relationships, said [\u2026] Th...",
+    "content_html": "<p><span>United Kingdom-based </span><a class=\"editor-rtfLink\" href=\"https://www.lloydsbankinggroup.com/\" rel=\"noopener\" target=\"_blank\"><span>Lloyds Banking Group</span></a><span> acquired London-based digital wallet FinTech </span><a class=\"editor-rtfLink\" href=\"https://www.curve.com/\" rel=\"noopener\" target=\"_blank\"><span>Curve</span></a><span>.</span></p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p><span>The deal will allow Lloyds to expand its digital footprint, according to a Wednesday (Nov. 19) </span><a class=\"editor-rtfLink\" href=\"https://www.londonstockexchange.com/news-article/LLOY/curve-acquisition/17333578\" rel=\"noopener\" target=\"_blank\"><span>press release</span></a><span>.</span></p>\n<p><span>\u201cThis strategic acquisition of Curve marks another significant step forward in Lloyds Banking Group\u2019s digital transformation journey,\u201d </span><a class=\"editor-rtfLink\" href=\"https://www.linkedin.com/in/jasjyot-singh-obe-b24640/\" rel=\"noopener\" target=\"_blank\"><span>Jas Singh</span></a><span>, Lloyds CEO of customer relationships, said in a statement provided to PYMNTS. \u201cBuilding on the innovative changes we\u2019ve made to our app recently, integrating Curve\u2019s cutting-edge technology and digital wallet capabilities will deliver a next-generation digital banking experience for our customers as we help them to take control of their finances in a simple and convenient way.\u201d</span></p>\n<p><span>The acquisition is slated to become final in the first half of 2026. No terms were disclosed, although a </span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/acquisitions/2025/lloyds-reportedly-wants-to-acquire-digital-wallet-fintech-curve/\" rel=\"noopener\" target=\"_blank\"><span>report</span></a><span> during the summer from Sky News said Lloyds was looking to pay 120 million pounds (about $157 million) for Curve.</span></p>\n<p><span>\u201cIt\u2019s a partnership rooted in shared ambition to deliver next-generation banking experiences that are simpler, more personalized, and built around real customer needs,\u201d Curve said in a Wednesday </span><a class=\"editor-rtfLink\" href=\"https://www.curve.com/blog/curve-is-joining-lloyds-banking-group/\" rel=\"noopener\" target=\"_blank\"><span>blog post</span></a><span>. \u201cFor existing Curve customers, nothing changes. Your Curve Pay app, your wallet, your cards, your rewards\u2014all just as they were yesterday. But with the scale, reach and trust of Lloyds behind us, we\u2019ll be able to do more of what you love, faster.\u201d</span></p>\n<p><span>Lloyds announced in January that it planned to close 136 branches as its customers increasingly used </span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/news/banking/2025/lloyds-shuttering-136-branches-amid-digital-banking-shift/\" rel=\"noopener\" target=\"_blank\"><span>digital</span></a><span> means to do their banking.</span></p>\n<p><span>\u201cOver 20 million customers are using our apps for on-demand access to their money, and customers have more choice and flexibility than ever for their day-to-day banking,\u201d Lloyds said at the time.</span></p>\n<p><span>The Curve deal came as banks face increasing pressure from neobanks such as </span><a class=\"editor-rtfLink\" href=\"https://monzo.com/\" rel=\"noopener\" target=\"_blank\"><span>Monzo</span></a><span> and </span><a class=\"editor-rtfLink\" href=\"https://www.revolut.com/en-US/\" rel=\"noopener\" target=\"_blank\"><span>Revolut</span></a><span>. Meanwhile, these </span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/news/banking/2025/neobanks-push-beyond-interchange-to-build-full-service-platforms/\" rel=\"noopener\" target=\"_blank\"><span>neobanks</span></a><span> are themselves in the midst of an evolution.</span></p>\n<p><span>\u201cNeobanks are moving into fully defined banking initiatives because that is where the unit economics work, acting less like a standalone payments app and more like a modern, digital-first banking platform,\u201d PYMNTS reported Tuesday (Nov. 18).</span></p>\n<p><span>Monzo, for example, expanded into overdrafts, savings and subscription accounts, important drivers of </span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/news/digital-banking/2020/monzo-launches-new-premium-consumer-banking-accounts\" rel=\"noopener\" target=\"_blank\"><span>recurring revenue</span></a><span>. Revolut ventured into foreign exchange, wealth, business banking, and a tiered </span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/news/digital-banking/2025/revolut-delivers-first-1-billion-profit-as-subscription-wealth-units-boom/?utm_source=chatgpt.com\" rel=\"noopener\" target=\"_blank\"><span>subscription</span></a><span> model that has become a key revenue and profit engine.</span></p>\n<p><em>For all PYMNTS digital transformation coverage, subscribe to the daily </em><a href=\"https://pymnts.com/subscribe/\" rel=\"noopener\" target=\"_blank\"><em>Digital Transformation Newsletter</em></a><em>.</em></p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/acquisitions/2025/lloyds-acquires-united-kingdom-digital-wallet-fintech-curve/\">Lloyds Acquires UK Digital Wallet FinTech Curve</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
+    "image_url": "https://www.pymnts.com/wp-content/uploads/2025/11/Lloyds-Banking-Group.jpeg?w=457",
+    "summary_text": "United Kingdom-based Lloyds Banking Group acquired London-based digital wallet FinTech Curve. The deal will allow Lloyds to expand its digital footprint, according to a Wednesday (Nov. 19) press release. \u201cThis strategic acquisition of Curve marks another sign...",
+    "category": "fintech",
+    "_trending_tags": [
+      "fintech"
+    ],
+    "_permalink": "/p/755ab84cc1/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/755ab84cc1/",
+    "_summary_240": "United Kingdom-based Lloyds Banking Group acquired London-based digital wallet FinTech Curve. The deal will allow Lloyds to expand its digital footprint, according to a Wednesday...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/755ab84cc1/thumbnail.png"
+  },
+  {
+    "title": "The Epstein files have claimed their first OpenAI victim: board member Larry Summers",
+    "url": "https://techcrunch.com/2025/11/19/the-epstein-files-have-claimed-their-first-openai-victim-board-member-larry-summers/",
+    "published_at": "2025-11-19T09:33:54-05:00",
+    "source": "TechCrunch",
+    "summary": "Former Treasury Secretary Larry Summers has resigned from OpenAI\u2019s board days after Congress released documents showing he was close friends with convicted sex offender Jeffrey Epstein.",
+    "content_html": "",
+    "image_url": "https://techcrunch.com/wp-content/uploads/2025/01/GettyImages-2170386424.jpg?w=1024",
+    "summary_text": "Former Treasury Secretary Larry Summers has resigned from OpenAI\u2019s board days after Congress released documents showing he was close friends with convicted sex offender Jeffrey Epstein.",
+    "category": "ai",
+    "_trending_tags": [
+      "ai",
+      "openai"
+    ],
+    "_permalink": "/p/51598dc251/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/51598dc251/",
+    "_summary_240": "Former Treasury Secretary Larry Summers has resigned from OpenAI\u2019s board days after Congress released documents showing he was close friends with convicted sex offender Jeffrey...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/51598dc251/thumbnail.png"
+  },
+  {
+    "title": "Why Kohaku is central to Ethereum\u2019s 2025 privacy shift",
+    "url": "https://cointelegraph.com/explained/why-kohaku-is-central-to-ethereum-s-2025-privacy-shift?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "published_at": "2025-11-19T09:29:25-05:00",
+    "source": "Cointelegraph",
+    "summary": "Kohaku brings practical privacy to Ethereum wallets with safer recovery, private modes and shared standards designed for real-world use.",
+    "content_html": "",
+    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTEvMDE5YTljNWItNTUwNS03NjM0LTgyZWUtN2Q2YWQ3MmY0OGNk.jpg",
+    "summary_text": "Kohaku brings practical privacy to Ethereum wallets with safer recovery, private modes and shared standards designed for real-world use.",
+    "category": "fintech",
+    "_permalink": "/p/24c63d05af/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/24c63d05af/",
+    "_summary_240": "Kohaku brings practical privacy to Ethereum wallets with safer recovery, private modes and shared standards designed for real-world use.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/24c63d05af/thumbnail.png"
+  },
+  {
+    "title": "Larry Summers Resigns From OpenAI\u2019s Board",
+    "url": "https://www.nytimes.com/2025/11/19/technology/larry-summers-resigns-from-openais-board.html",
+    "published_at": "2025-11-19T09:23:14-05:00",
+    "source": "The New York Times - Technology",
+    "summary": "Mr. Summers\u2019 departure from the artificial intelligence company\u2019s board followed revelations of his communications with the disgraced financier Jeffrey Epstein.",
+    "content_html": "Larry Summers\u2019 exit from OpenAI is part of the widening fallout of those who were in the orbit of Jeffrey Epstein.",
+    "image_url": "https://static01.nyt.com/images/2025/11/19/multimedia/OPENAI-SUMMERS-1-mbgf/OPENAI-SUMMERS-1-mbgf-mediumSquareAt3X.jpg",
+    "summary_text": "Mr. Summers\u2019 departure from the artificial intelligence company\u2019s board followed revelations of his communications with the disgraced financier Jeffrey Epstein.",
+    "category": "ai",
+    "_trending_tags": [
+      "ai",
+      "openai"
+    ],
+    "_permalink": "/p/1da544952d/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/1da544952d/",
+    "_summary_240": "Mr. Summers\u2019 departure from the artificial intelligence company\u2019s board followed revelations of his communications with the disgraced financier Jeffrey Epstein.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/1da544952d/thumbnail.png"
+  },
+  {
     "title": "Here\u2019s what happened in crypto today",
     "url": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
     "published_at": "2025-11-19T09:16:32-05:00",
@@ -16,25 +128,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/78da0dee17/",
     "_summary_240": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, NFTs, Web3 and crypto regulation.",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/78da0dee17/thumbnail.png"
-  },
-  {
-    "title": "Larry Summers Resigns From OpenAI\u2019s Board",
-    "url": "https://www.nytimes.com/2025/11/19/technology/larry-summers-resigns-from-openais-board.html",
-    "published_at": "2025-11-19T09:12:37-05:00",
-    "source": "The New York Times - Technology",
-    "summary": "Mr. Summers\u2019 departure from the artificial intelligence company\u2019s board followed revelations of his communications with the disgraced financier Jeffrey Epstein.",
-    "content_html": "Larry Summers\u2019 exit from OpenAI is part of the widening fallout of those who were in the orbit of Jeffrey Epstein.",
-    "image_url": "https://static01.nyt.com/images/2025/11/19/multimedia/OPENAI-SUMMERS-1-mbgf/OPENAI-SUMMERS-1-mbgf-mediumSquareAt3X.jpg",
-    "summary_text": "Mr. Summers\u2019 departure from the artificial intelligence company\u2019s board followed revelations of his communications with the disgraced financier Jeffrey Epstein.",
-    "category": "ai",
-    "_trending_tags": [
-      "ai",
-      "openai"
-    ],
-    "_permalink": "/p/319dc678b0/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/319dc678b0/",
-    "_summary_240": "Mr. Summers\u2019 departure from the artificial intelligence company\u2019s board followed revelations of his communications with the disgraced financier Jeffrey Epstein.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/319dc678b0/thumbnail.png"
   },
   {
     "title": "Apple announces finalists for the 2025 App Store Awards",
@@ -68,11 +161,7 @@
       "ai",
       "google",
       "openai"
-    ],
-    "_permalink": "/p/5494ee34b4/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/5494ee34b4/",
-    "_summary_240": "A new artificial intelligence startup founded by the creators of the world's most widely used computer vision library has emerged from stealth with technology that generates...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/5494ee34b4/thumbnail.png"
+    ]
   },
   {
     "title": "HSBC to bring tokenized deposits to US and UAE as stablecoin race heats up",
@@ -1062,24 +1151,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/46290bdfce/thumbnail.png"
   },
   {
-    "title": "'Crypto Winter Is Here' \u2014 Mark Yusko Explains What May Come Next",
-    "url": "https://cointelegraph.com/news/bitcoin-bear-market-here-mark-yusko-explains-what-comes-next?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-    "published_at": "2025-11-18T12:00:00-05:00",
-    "source": "Cointelegraph",
-    "summary": "In a recent Cointelegraph interview, Mark Yusko outlined the indicators pointing to a Bitcoin bear market and the forces shaping the road ahead.",
-    "content_html": "",
-    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTEvMDE5YTk2ZjctNTBhYS03Nzk5LWIxNWUtYmY5OWY4ODllMjdi.jpg",
-    "summary_text": "In a recent Cointelegraph interview, Mark Yusko outlined the indicators pointing to a Bitcoin bear market and the forces shaping the road ahead.",
-    "category": "fintech",
-    "_trending_tags": [
-      "ai"
-    ],
-    "_permalink": "/p/e64b09766d/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/e64b09766d/",
-    "_summary_240": "In a recent Cointelegraph interview, Mark Yusko outlined the indicators pointing to a Bitcoin bear market and the forces shaping the road ahead.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/e64b09766d/thumbnail.png"
-  },
-  {
     "title": "10 PRINT \u201cANTHROPIC + MICROSOFT + NVIDIA = MORE COMPUTE, COGNITION, AND CHOICE.\u201d",
     "url": "https://www.linkedin.com/posts/satyanadella_10-print-anthropic-microsoft-nvidia-activity-7396565254328995840-i9JX",
     "published_at": "2025-11-18T11:53:27-05:00",
@@ -1158,25 +1229,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/681d1e689c/",
     "_summary_240": "The post With Microsoft Agent 365, one startup furthers goal of making AI agents more intuitive appeared first on Source .",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/681d1e689c/thumbnail.png"
-  },
-  {
-    "title": "Hank Green\u2019s Focus Friend is Google Play\u2019s app of the year",
-    "url": "https://techcrunch.com/2025/11/18/hank-greens-focus-friend-is-google-plays-app-of-the-year/",
-    "published_at": "2025-11-18T11:05:06-05:00",
-    "source": "TechCrunch",
-    "summary": "In a year that again saw AI assistants and tools climb the app store charts over and over, it's interesting to see a timer that helps you disconnect from your tech winning Google's highest app award.",
-    "content_html": "",
-    "image_url": "https://techcrunch.com/wp-content/uploads/2025/08/focus-friend.jpg?resize=1200,675",
-    "summary_text": "In a year that again saw AI assistants and tools climb the app store charts over and over, it's interesting to see a timer that helps you disconnect from your tech winning Google's highest app award.",
-    "category": "ai",
-    "_trending_tags": [
-      "ai",
-      "google"
-    ],
-    "_permalink": "/p/7f06b2d728/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/7f06b2d728/",
-    "_summary_240": "In a year that again saw AI assistants and tools climb the app store charts over and over, it's interesting to see a timer that helps you disconnect from your tech winning...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/7f06b2d728/thumbnail.png"
   },
   {
     "title": "Delivering AI-Ready Enterprise Data With GPU-Accelerated AI Storage",
@@ -1280,25 +1332,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/d481b98db5/",
     "_summary_240": "Gemini 3 is skilled at reasoning, generating video, and writing code. Amid talk of an AI bubble, Google notes the new model could help increase search revenue too.",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/d481b98db5/thumbnail.png"
-  },
-  {
-    "title": "Google launches Gemini 3 with new coding app and record benchmark scores",
-    "url": "https://techcrunch.com/2025/11/18/google-launches-gemini-3-with-new-coding-app-and-record-benchmark-scores/",
-    "published_at": "2025-11-18T11:00:00-05:00",
-    "source": "TechCrunch",
-    "summary": "Google released Gemini 3, its latest and most advanced foundation model, to be made immediately available through the Gemini app and AI search interface.",
-    "content_html": "",
-    "image_url": "https://techcrunch.com/wp-content/uploads/2025/10/gemini.jpg?resize=1200,800",
-    "summary_text": "Google released Gemini 3, its latest and most advanced foundation model, to be made immediately available through the Gemini app and AI search interface.",
-    "category": "ai",
-    "_trending_tags": [
-      "ai",
-      "google"
-    ],
-    "_permalink": "/p/1c002aeb76/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/1c002aeb76/",
-    "_summary_240": "Google released Gemini 3, its latest and most advanced foundation model, to be made immediately available through the Gemini app and AI search interface.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/1c002aeb76/thumbnail.png"
   },
   {
     "title": "Microsoft, NVIDIA and Anthropic Announce Strategic Partnerships",
