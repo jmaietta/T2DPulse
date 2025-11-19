@@ -87,11 +87,7 @@
       "ai",
       "deepmind",
       "google"
-    ],
-    "_permalink": "/p/79e57f0338/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/79e57f0338/",
-    "_summary_240": "Fetch AI , a startup founded and led by former DeepMind founding investor, Humayun Sheikh, today announced the release of three interconnected products designed to provide the...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/79e57f0338/thumbnail.png"
+    ]
   },
   {
     "title": "Target Details Consumer Strain and Unveils Its Chatbot Plans",
@@ -812,16 +808,12 @@
     "source": "Bloomberg Technology",
     "summary": "AI wasn\u2019t much of a topic in the 2024 election. But it will almost certainly be big in 2028, and probably even the 2026 midterms. There are concerns about all the money being spent and whether a federal backstop or bailout will be necessary one day. There are the concerns about energy use and electricity prices. There are concerns about labor displacement. And there are concerns about whether we ...",
     "content_html": "",
-    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iE6XbSGosk88/v6/-1x-1.png",
+    "image_url": "",
     "summary_text": "AI wasn\u2019t much of a topic in the 2024 election. But it will almost certainly be big in 2028, and probably even the 2026 midterms. There are concerns about all the money being spent and whether a federal backstop or bailout will be necessary one day. There are...",
     "category": "ai",
     "_trending_tags": [
       "ai"
-    ],
-    "_permalink": "/p/9b9ce4cc29/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/9b9ce4cc29/",
-    "_summary_240": "AI wasn\u2019t much of a topic in the 2024 election. But it will almost certainly be big in 2028, and probably even the 2026 midterms. There are concerns about all the money being...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/9b9ce4cc29/thumbnail.png"
+    ]
   },
   {
     "title": "Coinbase working on prediction markets website, tech researcher says",
@@ -1068,11 +1060,7 @@
     "_trending_tags": [
       "agent",
       "gpt"
-    ],
-    "_permalink": "/p/d8162fe412/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/d8162fe412/",
-    "_summary_240": "Introducing GPT-5.1-Codex-Max, a faster, more intelligent agentic coding model for Codex. The model is designed for long-running, project-scale work with enhanced reasoning and...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/d8162fe412/thumbnail.png"
+    ]
   },
   {
     "title": "Teacher Access Terms",
@@ -1087,11 +1075,7 @@
     "_trending_tags": [
       "chatgpt",
       "gpt"
-    ],
-    "_permalink": "/p/2ca1508ae8/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/2ca1508ae8/",
-    "_summary_240": "Teacher Access Terms outline how verified educators may use ChatGPT for Teachers, covering eligibility, account management, and data privacy requirements.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/2ca1508ae8/thumbnail.png"
+    ]
   },
   {
     "title": "A free version of ChatGPT built for teachers",
@@ -1106,11 +1090,7 @@
     "_trending_tags": [
       "chatgpt",
       "gpt"
-    ],
-    "_permalink": "/p/e4d25d8a3a/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/e4d25d8a3a/",
-    "_summary_240": "ChatGPT for Teachers is a secure workspace with education\u2011grade privacy and admin controls. Free for verified U.S. K\u201312 educators through June 2027.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/e4d25d8a3a/thumbnail.png"
+    ]
   },
   {
     "title": "GPT-5.1-Codex-Max System Card",
@@ -1126,11 +1106,7 @@
       "agent",
       "ai",
       "gpt"
-    ],
-    "_permalink": "/p/a0d2bc027d/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/a0d2bc027d/",
-    "_summary_240": "This system card outlines the comprehensive safety measures implemented for GPT\u20115.1-CodexMax. It details both model-level mitigations, such as specialized safety training for...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/a0d2bc027d/thumbnail.png"
+    ]
   },
   {
     "title": "Bitcoin recovery expected as liquidity conditions change, but US macro remains a threat",
@@ -1841,22 +1817,6 @@
     "category": "ai",
     "_trending_tags": [
       "ai"
-    ]
-  },
-  {
-    "title": "Forget AGI\u2014Sam Altman celebrates ChatGPT finally following em dash formatting rules",
-    "url": "https://arstechnica.com/ai/2025/11/forget-agi-sam-altman-celebrates-chatgpt-finally-following-em-dash-formatting-rules/",
-    "published_at": "2025-11-14T13:45:34-05:00",
-    "source": "Ars Technica",
-    "summary": "Ongoing struggles with AI model instruction-following show that true human-level AI still a ways off.",
-    "content_html": "<p>Em dashes have become what many believe to be a <a href=\"https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing#Overuse_of_em_dashes\">telltale sign of AI-generated text</a> over the past few years. The punctuation mark appears frequently in outputs from ChatGPT and other AI chatbots, sometimes to the point where readers believe they can identify AI writing by its overuse alone\u2014although people can overuse it, too.</p>\n<p>On Thursday evening, OpenAI CEO Sam Altman <a href=\"https://x.com/sama/status/1989193813043069219?s=20\">posted</a> on X that ChatGPT has started following custom instructions to avoid using em dashes. \u201cSmall-but-happy win: If you tell ChatGPT not to use em-dashes in your custom instructions, it finally does what it\u2019s supposed to do!\u201d he wrote.</p>\n<p>The post, which came two days after the release of OpenAI\u2019s new <a href=\"https://arstechnica.com/ai/2025/11/openai-walks-a-tricky-tightrope-with-gpt-5-1s-eight-new-personalities/\">GPT-5.1</a> AI model, received mixed reactions from users who have <a href=\"https://community.openai.com/t/cannot-get-responses-to-not-include-dashes-and-em-dashes/1023216/7\">struggled</a> for years with getting the chatbot to follow specific formatting preferences. And this \u201csmall win\u201d raises a very big question: If the world\u2019s most valuable AI company has struggled with controlling something as simple as punctuation use after years of trying, perhaps <a href=\"https://arstechnica.com/ai/2025/07/agi-may-be-impossible-to-define-and-thats-a-multibillion-dollar-problem/\">what people call</a> artificial general intelligence (AGI) is farther off than some in the industry <a href=\"https://arstechnica.com/ai/2025/01/anthropic-chief-says-ai-could-surpass-almost-all-humans-at-almost-everything-shortly-after-2027/\">claim</a>.</p><p><a href=\"https://arstechnica.com/ai/2025/11/forget-agi-sam-altman-celebrates-chatgpt-finally-following-em-dash-formatting-rules/\">Read full article</a></p>\n<p><a href=\"https://arstechnica.com/ai/2025/11/forget-agi-sam-altman-celebrates-chatgpt-finally-following-em-dash-formatting-rules/#comments\">Comments</a></p>",
-    "image_url": "https://cdn.arstechnica.net/wp-content/uploads/2025/11/man_wrestling_with_robot_hand_2-1152x648.jpg",
-    "summary_text": "Ongoing struggles with AI model instruction-following show that true human-level AI still a ways off.",
-    "category": "ai",
-    "_trending_tags": [
-      "ai",
-      "chatgpt",
-      "gpt"
     ]
   },
   {
