@@ -1,5 +1,59 @@
 [
   {
+    "title": "TikTok is letting users control how much AI content they see",
+    "url": "https://www.theverge.com/news/823775/tiktok-ai-generated-content-controls-manage-topics",
+    "published_at": "2025-11-19T08:06:49-05:00",
+    "source": "The Verge",
+    "summary": "TikTok is testing a new control that will let users manage how much AI-generated content appears in their video feed on the app. To help make the filter more effective, the app will also soon start adding invisible watermarks to AI content. The new AI slider will appear along with TikTok\u2019s other content controls under [\u2026]",
+    "content_html": "<figure>\n\n<img alt=\"\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/11/tiktok-ai-controls-manage-topics.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100\" />\n\t<figcaption>\n\tAI content is controlled alongside specific topic areas.\t</figcaption>\n</figure>\n<p class=\"has-text-align-none\">TikTok is testing a new control that will let users manage how much AI-generated content appears in their video feed on the app. To help make the filter more effective, the app will also soon start adding invisible watermarks to AI content.</p>\n\n<p class=\"has-text-align-none\">The <a href=\"https://newsroom.tiktok.com/more-ways-to-spot-shape-and-understand-ai-generated-content?lang=en\">new AI slider</a> will appear along with TikTok\u2019s other content controls under \u201cManage topics,\u201d which currently allows users to set how much they want to see from content areas including dance, current affairs, and fitness. Just like those sliders, the AI control will allow users to request to see more or less AI material, with two levels in either direction.\u00a0</p>\n\n<p class=\"has-text-align-none\">An AI slider will only work if TikTok itself knows which content is made with AI, so it\u2019s working on improving detection too. Recognising that users often remove visual watermarks from AI-generated content, the company will start adding invisible watermarks to content made with its own tools like AI Editor Pro, along with any videos uploaded with C2PA Content Credentials \u2014 an <a href=\"https://www.theverge.com/2024/8/21/24223932/c2pa-standard-verify-ai-generated-images-content-credentials\">industry-wide authentication standard</a>, albeit one that has already <a href=\"https://www.theverge.com/report/806359/openai-sora-deepfake-detection-c2pa-content-credentials\">shown its limits</a>.</p>\n\n<p class=\"has-text-align-none\">TikTok says both changes are rolling out over \u201cthe coming weeks,\u201d though the AI content control is only a test for now.</p>",
+    "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/11/tiktok-ai-controls-manage-topics.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "summary_text": "TikTok is testing a new control that will let users manage how much AI-generated content appears in their video feed on the app. To help make the filter more effective, the app will also soon start adding invisible watermarks to AI content. The new AI slider ...",
+    "category": "ai",
+    "_trending_tags": [
+      "ai"
+    ],
+    "_permalink": "/p/b2146dbe09/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/b2146dbe09/",
+    "_summary_240": "TikTok is testing a new control that will let users manage how much AI-generated content appears in their video feed on the app. To help make the filter more effective, the app...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/b2146dbe09/thumbnail.png"
+  },
+  {
+    "title": "Europe is scaling back its landmark privacy and AI laws",
+    "url": "https://www.theverge.com/news/823750/european-union-ai-act-gdpr-changes",
+    "published_at": "2025-11-19T07:47:09-05:00",
+    "source": "The Verge",
+    "summary": "After years of staring down the world\u2019s biggest tech companies and setting the bar for tough regulation worldwide, Europe has blinked. Under intense pressure from industry and the US government, Brussels is stripping protections from its flagship General Data Protection Regulation (GDPR) \u2014 including simplifying its infamous cookie permission pop-ups \u2014 and relaxing or delaying landmark [\u2026]",
+    "content_html": "<figure>\n\n<img alt=\"\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/03/STK450_EU_E.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100\" />\n\t<figcaption>\n\t\t</figcaption>\n</figure>\n<p class=\"has-text-align-none\">After years of staring down the world\u2019s biggest tech companies and setting the bar for tough regulation worldwide, Europe has blinked. Under intense pressure from industry and the US government, Brussels is stripping protections from its flagship <a href=\"https://www.theverge.com/2018/3/28/17172548/gdpr-compliance-requirements-privacy-notice\">General Data Protection Regulation (GDPR)</a>  \u2014 including simplifying its infamous cookie permission pop-ups \u2014\u00a0and relaxing or delaying landmark AI rules in an effort to cut red tape and revive sluggish economic growth.</p>\n\n<p class=\"has-text-align-none\">The proposal waters down a key part of Europe\u2019s sweeping artificial intelligence rules, the <a href=\"https://www.theverge.com/2023/12/14/24001919/eu-ai-act-foundation-models-regulation-data\">AI Act</a>, which came into force in 2024 but had many elements that would only come into effect later. The change extends the grace period for rules governing high-risk AI systems that pose \u201cserious risks\u201d to health, safety, or fundamental rights, which were due to come into effect next summer. The rules will now only apply once it\u2019s confirmed that \u201cthe needed standards and support tools are available\u201d to AI companies.</p>\n\n<p class=\"has-text-align-none\">One change that\u2019s likely to please almost everyone is a reduction in Europe\u2019s ubiquitous cookie banners and pop-ups. Under the new proposal, some \u201cnon-risk\u201d cookies won\u2019t trigger pop-ups at all, and users would be able to control others from central browser controls that apply to websites broadly.</p>\n\n<p class=\"has-text-align-none\">The proposal now heads to the European Parliament and the EU\u2019s 27 member states \u2014 where it will need a <a href=\"https://www.consilium.europa.eu/en/council-eu/voting-system/qualified-majority/\">qualified majority</a> \u2014 for approval, a process that could drag on for months and potentially introduce significant changes.</p>\n\n<p class=\"has-text-align-none\">The proposed overhaul won\u2019t land quietly in Brussels, and if the development of the GDPR and AI Act are anything to go by, a political and lobbying firestorm is on its way. The GDPR is a cornerstone of Europe\u2019s tech strategy and as close to sacred as a policy can be. Leaked drafts have already provoked outrage among civil rights groups and politicians, who have accused the Commission of weakening fundamental safeguards and bowing to pressure from Big Tech.</p>\n\n<p class=\"has-text-align-none\">The decision follows months of intense pressure from Big Tech and Donald Trump \u2014 as well as high-profile internal figures like ex-Italian prime minister and former head of the European Central Bank <a href=\"https://commission.europa.eu/topics/competitiveness/draghi-report_en\">Mario Draghi</a> \u2014 urging the bloc to weaken burdensome tech regulation. The Commission has sought to frame the changes as simplifying the EU\u2019s tech laws, not weakening them \u2013 a way of soothing growing fears in Brussels that its tough rules are hampering its ability to compete globally. With very few exceptions, Europe doesn\u2019t have any credible competitors in the global AI race, which is dominated by US and Chinese companies like DeepSeek, Google, and OpenAI.</p>\n\n<p class=\"has-text-align-none\"><em>This article is developing\u2026</em></p>",
+    "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/03/STK450_EU_E.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "summary_text": "After years of staring down the world\u2019s biggest tech companies and setting the bar for tough regulation worldwide, Europe has blinked. Under intense pressure from industry and the US government, Brussels is stripping protections from its flagship General Data...",
+    "category": "ai",
+    "_trending_tags": [
+      "ai"
+    ],
+    "_permalink": "/p/ab333d6646/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/ab333d6646/",
+    "_summary_240": "After years of staring down the world\u2019s biggest tech companies and setting the bar for tough regulation worldwide, Europe has blinked. Under intense pressure from industry and...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/ab333d6646/thumbnail.png"
+  },
+  {
+    "title": "Kenya\u2019s new crypto law faces stress test as Bitcoin ATMs appear in malls",
+    "url": "https://cointelegraph.com/news/kenya-bitcoin-atms-vasp-law-warning?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "published_at": "2025-11-19T07:42:57-05:00",
+    "source": "Cointelegraph",
+    "summary": "Kenyan regulators say no crypto firms are licensed under the new VASP Act and warn that providers claiming approval are doing so illegally.",
+    "content_html": "",
+    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTEvMDE5YTliYTgtZTQ2Ni03MTdjLTllZTgtMjE1NzY3ZjYwZGZl.jpg",
+    "summary_text": "Kenyan regulators say no crypto firms are licensed under the new VASP Act and warn that providers claiming approval are doing so illegally.",
+    "category": "fintech",
+    "_trending_tags": [
+      "ai"
+    ],
+    "_permalink": "/p/02728ccbc8/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/02728ccbc8/",
+    "_summary_240": "Kenyan regulators say no crypto firms are licensed under the new VASP Act and warn that providers claiming approval are doing so illegally.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/02728ccbc8/thumbnail.png"
+  },
+  {
     "title": "Larry Summers Steps Down From OpenAI Board Over Epstein Ties",
     "url": "https://www.bloomberg.com/news/articles/2025-11-19/larry-summers-steps-down-from-openai-board-over-epstein-ties",
     "published_at": "2025-11-19T07:30:47-05:00",
@@ -103,7 +157,11 @@
     "category": "ai",
     "_trending_tags": [
       "ai"
-    ]
+    ],
+    "_permalink": "/p/4643fa3edd/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/4643fa3edd/",
+    "_summary_240": "Nokia Oyj is banking on the boom in artificial intelligence, streamlining its business to focus on networking infrastructure that can connect AI data centers.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/4643fa3edd/thumbnail.png"
   },
   {
     "title": "Companies Are Warming Up to Saying AI Is the Reason for Job Cuts",
@@ -607,24 +665,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/faa2ad07b1/thumbnail.png"
   },
   {
-    "title": "Republicans are looking for a way to bring back the AI moratorium",
-    "url": "https://www.theverge.com/policy/823650/ai-moratorium-house-gop-scalise",
-    "published_at": "2025-11-18T18:45:52-05:00",
-    "source": "The Verge",
-    "summary": "House Republicans are looking to renew an effort to override state AI laws after a previous version came to a screeching halt earlier this year. House Majority Leader Steve Scalise (R-LA) told Punchbowl News he\u2019s considering adding language to the National Defense Authorization Act (NDAA) effectively banning state AI regulations. Later on Tuesday, President Donald [\u2026]",
-    "content_html": "<figure>\n\n<img alt=\"\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/09/STK481_STK432_CONGRESS_GOVERNMENT_CIVRGINIA_C.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100\" />\n\t<figcaption>\n\t\t</figcaption>\n</figure>\n<p class=\"has-text-align-none\">House Republicans are looking to renew an effort to override state AI laws after a previous version <a href=\"https://punchbowl.news/article/tech/house-ai-preemption-ndaa/\">came to a screeching halt</a> earlier this year.</p>\n\n<p class=\"has-text-align-none\">House Majority Leader Steve Scalise (R-LA) <a href=\"https://punchbowl.news/article/tech/house-ai-preemption-ndaa/\">told Punchbowl News</a> he\u2019s considering adding language to the National Defense Authorization Act (NDAA) effectively banning state AI regulations. Later on Tuesday, President Donald Trump <a href=\"https://truthsocial.com/@realDonaldTrump/posts/115573090200730933\">posted on Truth Social</a> urging Congress to standardize AI regulations. \u201cWe MUST have one Federal Standard instead of a patchwork of 50 State Regulatory Regimes,\u201d he wrote. \u201cIf we don\u2019t, then China will easily catch us in the AI race. Put it in the NDAA, or pass a separate Bill, and nobody will ever be able to compete with America.\u201d</p>\n\n<figure class=\"wp-block-embed is-type-rich is-provider-truth-social wp-block-embed-truth-social\"><div class=\"wp-block-embed__wrapper\">\n<div class=\"iframely-embed\"><div class=\"iframely-responsive\"><a href=\"https://truthsocial.com/@realDonaldTrump/115573090200730933\"></a></div></div>\n</div></figure>\n\n<p class=\"has-text-align-none\">Tacking amendments onto the NDAA, which lawmakers consider a must-pass bill, is a common strategy to get legislation across the finish line at the end of the year. It\u2019s not totally clear what the new language would look like considering 99 out of 100 senators ultimately turned against the version of a five-year moratorium on state AI laws that was put to a vote this summer.&nbsp;</p>\n\n<p class=\"has-text-align-none\">When the issue came up earlier this year, many lawmakers expressed concern about the initial 10-year term proposed for the moratorium, and the potential that language could be so broad as to<a href=\"https://www.theverge.com/politics/681727/ro-khanna-ai-state-law-moratorium-reconciliation\"> cover&nbsp; a host of other tech regulations</a>, including kids\u2019 online safety laws. Both red and blue states have <a href=\"https://www.ncsl.org/technology-and-communication/artificial-intelligence-2025-legislation\">adopted AI-related laws</a> that could be effectively nullified if Congress were to vote to preempt or pause them.</p>\n\n<p class=\"has-text-align-none\">Proponents of the moratorium, including <a href=\"https://netchoice.org/congress-must-clear-the-runway-for-american-ai-innovation/\">tech industry associations like NetChoice</a>, argued that a complicated patchwork of state regulations for an early-stage industry like AI could hamper innovation and threaten US competitiveness with China.\u00a0</p>\n\n<p class=\"has-text-align-none\">More details on the NDAA\u2019s language are expected before the Thanksgiving holiday, with a vote on track for December, <a href=\"https://subscriber.politicopro.com/article/2025/11/compromise-ndaa-on-track-for-december-vote-house-armed-services-chair-says-00650508\">according to <em>Politico</em></a>.</p>",
-    "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/09/STK481_STK432_CONGRESS_GOVERNMENT_CIVRGINIA_C.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "summary_text": "House Republicans are looking to renew an effort to override state AI laws after a previous version came to a screeching halt earlier this year. House Majority Leader Steve Scalise (R-LA) told Punchbowl News he\u2019s considering adding language to the National De...",
-    "category": "ai",
-    "_trending_tags": [
-      "ai"
-    ],
-    "_permalink": "/p/f5c2cf7367/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/f5c2cf7367/",
-    "_summary_240": "House Republicans are looking to renew an effort to override state AI laws after a previous version came to a screeching halt earlier this year. House Majority Leader Steve...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/f5c2cf7367/thumbnail.png"
-  },
-  {
     "title": "Bitcoin recovery expected as liquidity conditions change, but US macro remains a threat",
     "url": "https://cointelegraph.com/news/bitcoin-recovery-expected-as-liquidity-conditions-change-but-us-macro-remains-a-threat?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
     "published_at": "2025-11-18T18:00:00-05:00",
@@ -641,22 +681,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/bf2cb333c2/",
     "_summary_240": "Bitcoin\u2019s recent weakness reflects broader economic stress, but improving liquidity and investors\u2019 positive outlook for 2026 could set the stage for a strong rebound.",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/bf2cb333c2/thumbnail.png"
-  },
-  {
-    "title": "Cloudflare shows internet outages aren\u2019t a matter of if \u2014 but when",
-    "url": "https://www.theverge.com/news/823562/cloudflare-outage-wake-up-call-websites",
-    "published_at": "2025-11-18T17:58:59-05:00",
-    "source": "The Verge",
-    "summary": "Cloudflare has become the latest web infrastructure giant to collapse in the span of a month, replacing entire sites, including X, ChatGPT, Spotify, Canva, and even the outage-tracking Downdetector, with an error message for hours this morning. It's the latest in a string of outages that Mehdi Daoudi, CEO and cofounder of the internet performance [\u2026]",
-    "content_html": "<figure>\n\n<img alt=\"\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/25537994/STK454_ERRORS_CVIRGINIA_B.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100\" />\n\t<figcaption>\n\t\t</figcaption>\n</figure>\n<p class=\"has-text-align-none\">Cloudflare has become the latest web infrastructure giant to collapse in the span of a month, <a href=\"https://www.theverge.com/news/822869/cloudflare-is-down-outage-x-twitter-downdetector\">replacing entire sites</a>, including X, ChatGPT, Spotify, Canva, and even the outage-tracking Downdetector, with an error message for hours this morning. It's the latest in a string of outages that Mehdi Daoudi, CEO and cofounder of the internet performance monitoring platform Catchpoint, says should be a \"wake-up call\" for companies.</p>\n<p class=\"has-text-align-none\">\"Everybody's putting all their eggs in one basket, and then they're surprised when there is a problem,\" Daoudi says. \"It's on the company's side to make sure that they have redundancy and resiliency.\"</p>\n<p class=\"has-text-align-none\">The outage comes a \u2026</p>\n<p><a href=\"https://www.theverge.com/news/823562/cloudflare-outage-wake-up-call-websites\">Read the full story at The Verge.</a></p>",
-    "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/25537994/STK454_ERRORS_CVIRGINIA_B.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "summary_text": "Cloudflare has become the latest web infrastructure giant to collapse in the span of a month, replacing entire sites, including X, ChatGPT, Spotify, Canva, and even the outage-tracking Downdetector, with an error message for hours this morning. It's the lates...",
-    "category": "software",
-    "_trending_tags": [
-      "chatgpt",
-      "cloud",
-      "gpt"
-    ]
   },
   {
     "title": "Trump Urges Congress to Block State-Level AI Regulation",
@@ -1214,21 +1238,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/1c002aeb76/",
     "_summary_240": "Google released Gemini 3, its latest and most advanced foundation model, to be made immediately available through the Gemini app and AI search interface.",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/1c002aeb76/thumbnail.png"
-  },
-  {
-    "title": "Physics Wallah enjoys a rosy IPO day, bucking the broader slowdown in Indian edtech",
-    "url": "https://techcrunch.com/2025/11/18/physics-wallah-enjoys-a-rosy-ipo-day-bucking-the-broader-slowdown-in-indian-edtech/",
-    "published_at": "2025-11-18T10:36:09-05:00",
-    "source": "TechCrunch",
-    "summary": "The Indian edtech startup ended its first day as a public company on a high, with its shares closing 44% higher than they were listed for, indicating that the country's edtech sector may still recover after years of gloom.",
-    "content_html": "",
-    "image_url": "https://techcrunch.com/wp-content/uploads/2025/11/physics-wallah.jpg?resize=1200,800",
-    "summary_text": "The Indian edtech startup ended its first day as a public company on a high, with its shares closing 44% higher than they were listed for, indicating that the country's edtech sector may still recover after years of gloom.",
-    "category": "fintech",
-    "_permalink": "/p/9567f1a53a/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/9567f1a53a/",
-    "_summary_240": "The Indian edtech startup ended its first day as a public company on a high, with its shares closing 44% higher than they were listed for, indicating that the country's edtech...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/9567f1a53a/thumbnail.png"
   },
   {
     "title": "Microsoft, NVIDIA and Anthropic Announce Strategic Partnerships",
