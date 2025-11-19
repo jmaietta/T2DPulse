@@ -18,12 +18,30 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/b2146dbe09/thumbnail.png"
   },
   {
+    "title": "EU Proposes Streamlined Digital Rules to Boost Competitiveness",
+    "url": "https://www.bloomberg.com/news/articles/2025-11-19/eu-proposes-streamlined-digital-rules-to-boost-competitiveness",
+    "published_at": "2025-11-19T07:49:14-05:00",
+    "source": "Bloomberg Technology",
+    "summary": "The European Union unveiled a sweeping plan to reduce digital regulation as the bloc strives to boost its competitiveness in artificial intelligence and aid local technology companies.",
+    "content_html": "Henna Virkkunen",
+    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ix7.j7xTRfM8/v1/1200x-1.jpg",
+    "summary_text": "The European Union unveiled a sweeping plan to reduce digital regulation as the bloc strives to boost its competitiveness in artificial intelligence and aid local technology companies.",
+    "category": "fintech",
+    "_trending_tags": [
+      "ai"
+    ],
+    "_permalink": "/p/3e73bec965/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/3e73bec965/",
+    "_summary_240": "The European Union unveiled a sweeping plan to reduce digital regulation as the bloc strives to boost its competitiveness in artificial intelligence and aid local technology...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/3e73bec965/thumbnail.png"
+  },
+  {
     "title": "Europe is scaling back its landmark privacy and AI laws",
     "url": "https://www.theverge.com/news/823750/european-union-ai-act-gdpr-changes",
     "published_at": "2025-11-19T07:47:09-05:00",
     "source": "The Verge",
     "summary": "After years of staring down the world\u2019s biggest tech companies and setting the bar for tough regulation worldwide, Europe has blinked. Under intense pressure from industry and the US government, Brussels is stripping protections from its flagship General Data Protection Regulation (GDPR) \u2014 including simplifying its infamous cookie permission pop-ups \u2014 and relaxing or delaying landmark [\u2026]",
-    "content_html": "<figure>\n\n<img alt=\"\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/03/STK450_EU_E.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100\" />\n\t<figcaption>\n\t\t</figcaption>\n</figure>\n<p class=\"has-text-align-none\">After years of staring down the world\u2019s biggest tech companies and setting the bar for tough regulation worldwide, Europe has blinked. Under intense pressure from industry and the US government, Brussels is stripping protections from its flagship <a href=\"https://www.theverge.com/2018/3/28/17172548/gdpr-compliance-requirements-privacy-notice\">General Data Protection Regulation (GDPR)</a>  \u2014 including simplifying its infamous cookie permission pop-ups \u2014\u00a0and relaxing or delaying landmark AI rules in an effort to cut red tape and revive sluggish economic growth.</p>\n\n<p class=\"has-text-align-none\">The proposal waters down a key part of Europe\u2019s sweeping artificial intelligence rules, the <a href=\"https://www.theverge.com/2023/12/14/24001919/eu-ai-act-foundation-models-regulation-data\">AI Act</a>, which came into force in 2024 but had many elements that would only come into effect later. The change extends the grace period for rules governing high-risk AI systems that pose \u201cserious risks\u201d to health, safety, or fundamental rights, which were due to come into effect next summer. The rules will now only apply once it\u2019s confirmed that \u201cthe needed standards and support tools are available\u201d to AI companies.</p>\n\n<p class=\"has-text-align-none\">One change that\u2019s likely to please almost everyone is a reduction in Europe\u2019s ubiquitous cookie banners and pop-ups. Under the new proposal, some \u201cnon-risk\u201d cookies won\u2019t trigger pop-ups at all, and users would be able to control others from central browser controls that apply to websites broadly.</p>\n\n<p class=\"has-text-align-none\">The proposal now heads to the European Parliament and the EU\u2019s 27 member states \u2014 where it will need a <a href=\"https://www.consilium.europa.eu/en/council-eu/voting-system/qualified-majority/\">qualified majority</a> \u2014 for approval, a process that could drag on for months and potentially introduce significant changes.</p>\n\n<p class=\"has-text-align-none\">The proposed overhaul won\u2019t land quietly in Brussels, and if the development of the GDPR and AI Act are anything to go by, a political and lobbying firestorm is on its way. The GDPR is a cornerstone of Europe\u2019s tech strategy and as close to sacred as a policy can be. Leaked drafts have already provoked outrage among civil rights groups and politicians, who have accused the Commission of weakening fundamental safeguards and bowing to pressure from Big Tech.</p>\n\n<p class=\"has-text-align-none\">The decision follows months of intense pressure from Big Tech and Donald Trump \u2014 as well as high-profile internal figures like ex-Italian prime minister and former head of the European Central Bank <a href=\"https://commission.europa.eu/topics/competitiveness/draghi-report_en\">Mario Draghi</a> \u2014 urging the bloc to weaken burdensome tech regulation. The Commission has sought to frame the changes as simplifying the EU\u2019s tech laws, not weakening them \u2013 a way of soothing growing fears in Brussels that its tough rules are hampering its ability to compete globally. With very few exceptions, Europe doesn\u2019t have any credible competitors in the global AI race, which is dominated by US and Chinese companies like DeepSeek, Google, and OpenAI.</p>\n\n<p class=\"has-text-align-none\"><em>This article is developing\u2026</em></p>",
+    "content_html": "<figure>\n\n<img alt=\"\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/03/STK450_EU_E.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100\" />\n\t<figcaption>\n\t\t</figcaption>\n</figure>\n<p class=\"has-text-align-none\">After years of staring down the world\u2019s biggest tech companies and setting the bar for tough regulation worldwide, Europe has blinked. Under intense pressure from industry and the US government, Brussels is stripping protections from its flagship <a href=\"https://www.theverge.com/2018/3/28/17172548/gdpr-compliance-requirements-privacy-notice\">General Data Protection Regulation (GDPR)</a>  \u2014 including simplifying its infamous cookie permission pop-ups \u2014\u00a0and relaxing or delaying landmark AI rules in an effort to cut red tape and revive sluggish economic growth.</p>\n\n<p class=\"has-text-align-none\">The changes, proposed by the European Commission, the bloc\u2019s executive branch, changes core elements of the GDPR, making it easier for companies to share anonymized and pseudonymized personal datasets. They would allow AI companies to legally use personal data to train AI models, so long as that training complies with other GDPR requirements.</p>\n\n<p class=\"has-text-align-none\">The proposal also waters down a key part of Europe\u2019s sweeping artificial intelligence rules, the <a href=\"https://www.theverge.com/2023/12/14/24001919/eu-ai-act-foundation-models-regulation-data\">AI Act</a>, which came into force in 2024 but had many elements that would only come into effect later. The change extends the grace period for rules governing high-risk AI systems that pose \u201cserious risks\u201d to health, safety, or fundamental rights, which were due to come into effect next summer. The rules will now only apply once it\u2019s confirmed that \u201cthe needed standards and support tools are available\u201d to AI companies.</p>\n\n<p class=\"has-text-align-none\">One change that\u2019s likely to please almost everyone is a reduction in Europe\u2019s ubiquitous cookie banners and pop-ups. Under the new proposal, some \u201cnon-risk\u201d cookies won\u2019t trigger pop-ups at all, and users would be able to control others from central browser controls that apply to websites broadly.</p>\n\n<p class=\"has-text-align-none\">Other amendments in the new Digital Omnibus include simplified AI documentation requirements for smaller companies, a unified interface for companies to report cybersecurity incidents, and centralizing oversight of AI into the bloc\u2019s AI Office.</p>\n\n<figure class=\"wp-block-pullquote\"><blockquote><p>\u201cThis is being done in the European way.\u201d</p></blockquote></figure>\n\n<p class=\"has-text-align-none\">\u201cWe have all the ingredients in the EU to succeed. But our companies, especially our start-ups and small businesses, are often held back by layers of rigid rules,\u201d said Henna Virkkunen, executive vice-president for tech sovereignty at the European Commission. \u201cBy cutting red tape, simplifying EU laws, opening access to data and introducing a common European Business Wallet we are giving space for innovation to happen and to be marketed in Europe. This is being done in the European way: by making sure that fundamental rights of users remain fully protected.\u201d</p>\n\n<p class=\"has-text-align-none\">The proposal now heads to the European Parliament and the EU\u2019s 27 member states \u2014 where it will need a <a href=\"https://www.consilium.europa.eu/en/council-eu/voting-system/qualified-majority/\">qualified majority</a> \u2014 for approval, a process that could drag on for months and potentially introduce significant changes.</p>\n\n<p class=\"has-text-align-none\">The proposed overhaul won\u2019t land quietly in Brussels, and if the development of the GDPR and AI Act are anything to go by, a political and lobbying firestorm is on its way. The GDPR is a cornerstone of Europe\u2019s tech strategy and as close to sacred as a policy can be. Leaked drafts have already provoked outrage among civil rights groups and politicians, who have accused the Commission of weakening fundamental safeguards and bowing to pressure from Big Tech.</p>\n\n<p class=\"has-text-align-none\">The decision follows months of intense pressure from Big Tech and Donald Trump \u2014 as well as high-profile internal figures like ex-Italian prime minister and former head of the European Central Bank <a href=\"https://commission.europa.eu/topics/competitiveness/draghi-report_en\">Mario Draghi</a> \u2014 urging the bloc to weaken burdensome tech regulation. The Commission has sought to frame the changes as simplifying the EU\u2019s tech laws, not weakening them \u2013 a way of soothing growing fears in Brussels that its tough rules are hampering its ability to compete globally. With very few exceptions, Europe doesn\u2019t have any credible competitors in the global AI race, which is dominated by US and Chinese companies like DeepSeek, Google, and OpenAI.</p>",
     "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/03/STK450_EU_E.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
     "summary_text": "After years of staring down the world\u2019s biggest tech companies and setting the bar for tough regulation worldwide, Europe has blinked. Under intense pressure from industry and the US government, Brussels is stripping protections from its flagship General Data...",
     "category": "ai",
@@ -54,7 +72,7 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/02728ccbc8/thumbnail.png"
   },
   {
-    "title": "Larry Summers Steps Down From OpenAI Board Over Epstein Ties",
+    "title": "Summers Steps Down From OpenAI Board Over Epstein Ties",
     "url": "https://www.bloomberg.com/news/articles/2025-11-19/larry-summers-steps-down-from-openai-board-over-epstein-ties",
     "published_at": "2025-11-19T07:30:47-05:00",
     "source": "Bloomberg Technology",
@@ -66,11 +84,7 @@
     "_trending_tags": [
       "ai",
       "openai"
-    ],
-    "_permalink": "/p/a219d03406/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/a219d03406/",
-    "_summary_240": "Larry Summers will leave the board of OpenAI, part of his departure from public roles after US lawmakers released the former US Treasury Secretary\u2019s correspondence with the late...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/a219d03406/thumbnail.png"
+    ]
   },
   {
     "title": "Emerging-Market Stocks Slip as Traders Weigh AI Rally Prospects",
@@ -699,20 +713,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/d80641962a/",
     "_summary_240": "President Donald Trump called on Congress to pass a federal standard governing oversight of artificial intelligence and warned that varied regulation at the state level risked...",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/d80641962a/thumbnail.png"
-  },
-  {
-    "title": "China\u2019s AI University Beats Out Harvard, MIT in Race For Patents",
-    "url": "https://www.bloomberg.com/news/features/2025-11-18/china-s-tsinghua-university-is-beating-us-in-the-race-for-ai-patents",
-    "published_at": "2025-11-18T17:00:36-05:00",
-    "source": "Bloomberg Technology",
-    "summary": "Tsinghua University has educated the country\u2019s top science and engineering students for decades. Now, it\u2019s at the forefront of the AI revolution.",
-    "content_html": "Tsinghua Hephaestus Team, known for its work in advanced robotics and AI, competes in the World Humanoid Robot Games in Beijing in August.",
-    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iV5vOfBI0P9A/v1/1200x-1.jpg",
-    "summary_text": "Tsinghua University has educated the country\u2019s top science and engineering students for decades. Now, it\u2019s at the forefront of the AI revolution.",
-    "category": "ai",
-    "_trending_tags": [
-      "ai"
-    ]
   },
   {
     "title": "Hugging Face CEO says we\u2019re in an \u2018LLM bubble,\u2019 not an AI bubble",
