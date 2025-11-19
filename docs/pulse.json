@@ -1,5 +1,95 @@
 [
   {
+    "title": "Yann LeCun, a Pioneering A.I. Scientist, Leaves Meta",
+    "url": "https://www.nytimes.com/2025/11/19/technology/yann-lecun-ai-scientist-meta.html",
+    "published_at": "2025-11-19T18:12:13-05:00",
+    "source": "The New York Times - Technology",
+    "summary": "Dr. LeCun\u2019s departure follows a shake-up in Meta\u2019s artificial intelligence efforts, as Mark Zuckerberg pushes his company to keep up in the tech race.",
+    "content_html": "Despite Meta\u2019s efforts to reach A.I. \u201csuperintelligence,\u201d Yann LeCun has said that large language models will never be smart enough to be considered superintelligent.",
+    "image_url": "https://static01.nyt.com/images/2025/11/19/multimedia/META-AI-Yann-LeCun-1-tpbw/META-AI-Yann-LeCun-1-tpbw-mediumSquareAt3X.jpg",
+    "summary_text": "Dr. LeCun\u2019s departure follows a shake-up in Meta\u2019s artificial intelligence efforts, as Mark Zuckerberg pushes his company to keep up in the tech race.",
+    "category": "ai",
+    "_trending_tags": [
+      "ai",
+      "gpu",
+      "meta"
+    ],
+    "_permalink": "/p/1f98cc206f/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/1f98cc206f/",
+    "_summary_240": "Dr. LeCun\u2019s departure follows a shake-up in Meta\u2019s artificial intelligence efforts, as Mark Zuckerberg pushes his company to keep up in the tech race.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/1f98cc206f/thumbnail.png"
+  },
+  {
+    "title": "Google DeepMind Hires Former CTO of Boston Dynamics as the Company Pushes Deeper Into Robotics",
+    "url": "https://www.wired.com/story/google-hires-cto-boston-dynamics-demis-hassabis-android/",
+    "published_at": "2025-11-19T18:03:52-05:00",
+    "source": "Wired",
+    "summary": "DeepMind's chief says he envisions Gemini as an operating system for physical robots. The company has hired Aaron Saunders to help make that a reality.",
+    "content_html": "",
+    "image_url": "https://media.wired.com/photos/691e477b5cd82181399f7fe5/master/pass/Google-DeepMind-Hires-Former-CTO-of-Boston-Dynamics-as-Company-Pushes-Deeper-Into-Robotics-Business-2223617397.jpg",
+    "summary_text": "DeepMind's chief says he envisions Gemini as an operating system for physical robots. The company has hired Aaron Saunders to help make that a reality.",
+    "category": "ai",
+    "_trending_tags": [
+      "deepmind",
+      "google"
+    ],
+    "_permalink": "/p/b6da4878b8/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/b6da4878b8/",
+    "_summary_240": "DeepMind's chief says he envisions Gemini as an operating system for physical robots. The company has hired Aaron Saunders to help make that a reality.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/b6da4878b8/thumbnail.png"
+  },
+  {
+    "title": "Here\u2019s the Trump executive order that would ban state AI laws",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/824608/trump-executive-order-ai-state-laws",
+    "published_at": "2025-11-19T18:03:28-05:00",
+    "source": "The Verge",
+    "summary": "President Donald Trump is considering signing an executive order as soon as Friday that would give the federal government unilateral power over regulating artificial intelligence, including the creation of an \"AI Litigation Task Force\" overseen by the Attorney General, \"whose sole responsibility shall be to challenge State AI laws.\" According to a draft of the [\u2026]",
+    "content_html": "<figure>\n\n<img alt=\"\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/01/gettyimages-2194990747.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100\" />\n\t<figcaption>\n\t\t</figcaption>\n</figure>\n<p class=\"has-text-align-none\">President Donald Trump is considering signing an executive order as soon as Friday that would give the federal government unilateral power over regulating artificial intelligence, including the creation of an \"AI Litigation Task Force\" overseen by the Attorney General, \"whose sole responsibility shall be to challenge State AI laws.\" </p>\n<p class=\"has-text-align-none\">According to a draft of the order <a href=\"https://www.documentcloud.org/documents/26287992-trump-executive-order-on-ai-law-preemption/\">obtained by <em>The Verge</em></a><em>, </em>the Task Force would be able to sue states whose laws are deemed to obstruct the growth of the AI industry, citing California's recent laws on AI safety and \"catastrophic risk\", and a Colorado law that prevents \"algorithmic discrimination\". The Task Force \u2026</p>\n<p><a href=\"https://www.theverge.com/ai-artificial-intelligence/824608/trump-executive-order-ai-state-laws\">Read the full story at The Verge.</a></p>",
+    "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/01/gettyimages-2194990747.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "summary_text": "President Donald Trump is considering signing an executive order as soon as Friday that would give the federal government unilateral power over regulating artificial intelligence, including the creation of an \"AI Litigation Task Force\" overseen by the Attorne...",
+    "category": "ai",
+    "_trending_tags": [
+      "ai"
+    ],
+    "_permalink": "/p/b9380b48a6/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/b9380b48a6/",
+    "_summary_240": "President Donald Trump is considering signing an executive order as soon as Friday that would give the federal government unilateral power over regulating artificial...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/b9380b48a6/thumbnail.png"
+  },
+  {
+    "title": "Crypto Mixer Co-Founder Gets Four Years in Money-Laundering Case",
+    "url": "https://www.bloomberg.com/news/articles/2025-11-19/crypto-mixer-co-founder-gets-four-years-in-money-laundering-case",
+    "published_at": "2025-11-19T17:59:55-05:00",
+    "source": "Bloomberg Technology",
+    "summary": "One of the rare cryptocurrency prosecutions under the Trump administration led to a four-year prison term for a bitcoin wallet operator accused of helping launder more than $200 million from illegal dark web transactions.",
+    "content_html": "",
+    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/i7wDORJMXh7w/v0/1200x-1.jpg",
+    "summary_text": "One of the rare cryptocurrency prosecutions under the Trump administration led to a four-year prison term for a bitcoin wallet operator accused of helping launder more than $200 million from illegal dark web transactions.",
+    "category": "fintech",
+    "_permalink": "/p/63c00c16e1/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/63c00c16e1/",
+    "_summary_240": "One of the rare cryptocurrency prosecutions under the Trump administration led to a four-year prison term for a bitcoin wallet operator accused of helping launder more than $200...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/63c00c16e1/thumbnail.png"
+  },
+  {
+    "title": "Trump Plans to Unveil \u2018Genesis Mission\u2019 to Boost AI Development",
+    "url": "https://www.bloomberg.com/news/articles/2025-11-19/trump-plans-to-unveil-genesis-mission-to-boost-ai-development",
+    "published_at": "2025-11-19T17:34:05-05:00",
+    "source": "Bloomberg Technology",
+    "summary": "President Donald Trump plans to roll out a \u201cGenesis Mission\u201d as part of an executive order to boost US artificial intelligence efforts on Monday at the White House, according to a Department of Energy official.",
+    "content_html": "US President Donald Trump, Elon Musk, center left, Nvidia founder and CEO Jensen Huang, center right, and other attendees, arrive for a family picture the US-Saudi Investment Forum at the John F. Kennedy Center for the Performing Arts in Washington, DC on November 19, 2025.",
+    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/it2vheH4HOsQ/v1/1200x-1.jpg",
+    "summary_text": "President Donald Trump plans to roll out a \u201cGenesis Mission\u201d as part of an executive order to boost US artificial intelligence efforts on Monday at the White House, according to a Department of Energy official.",
+    "category": "ai",
+    "_trending_tags": [
+      "ai"
+    ],
+    "_permalink": "/p/dacab08986/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/dacab08986/",
+    "_summary_240": "President Donald Trump plans to roll out a \u201cGenesis Mission\u201d as part of an executive order to boost US artificial intelligence efforts on Monday at the White House, according to...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/dacab08986/thumbnail.png"
+  },
+  {
     "title": "Institutional Interest Is Stress Testing Blockchain\u2019s Financial Interoperability",
     "url": "https://www.pymnts.com/blockchain/2025/institutional-interest-is-stress-testing-blockchain-financial-interoperability/",
     "published_at": "2025-11-19T17:33:53-05:00",
@@ -22,17 +112,17 @@
     "url": "https://techcrunch.com/2025/11/19/how-the-classic-anime-ghost-in-the-shell-predicted-the-future-of-cybersecurity-30-years-ago/",
     "published_at": "2025-11-19T17:00:32-05:00",
     "source": "TechCrunch",
-    "summary": "The story of the Ghost in the Shell\u2019s main villain the Puppet Master hinted at a future where governments use hackers for espionage, at a time when most of the world had never connected to the internet.",
+    "summary": "The story of Ghost in the Shell\u2019s main villain the Puppet Master hinted at a future where governments use hackers for espionage, at a time when most of the world had never connected to the internet.",
     "content_html": "",
     "image_url": "https://techcrunch.com/wp-content/uploads/2025/11/ghost-in-the-shell-anime.png?resize=1200,649",
-    "summary_text": "The story of the Ghost in the Shell\u2019s main villain the Puppet Master hinted at a future where governments use hackers for espionage, at a time when most of the world had never connected to the internet.",
+    "summary_text": "The story of Ghost in the Shell\u2019s main villain the Puppet Master hinted at a future where governments use hackers for espionage, at a time when most of the world had never connected to the internet.",
     "category": "fintech",
     "_trending_tags": [
       "ai"
     ],
     "_permalink": "/p/318fb3d509/",
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/318fb3d509/",
-    "_summary_240": "The story of the Ghost in the Shell\u2019s main villain the Puppet Master hinted at a future where governments use hackers for espionage, at a time when most of the world had never...",
+    "_summary_240": "The story of Ghost in the Shell\u2019s main villain the Puppet Master hinted at a future where governments use hackers for espionage, at a time when most of the world had never...",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/318fb3d509/thumbnail.png"
   },
   {
@@ -91,14 +181,33 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/37bcba8698/thumbnail.png"
   },
   {
+    "title": "Massive Cloudflare outage was triggered by file that suddenly doubled in size",
+    "url": "https://arstechnica.com/tech-policy/2025/11/cloudflare-broke-much-of-the-internet-with-a-corrupted-bot-management-file/",
+    "published_at": "2025-11-19T16:25:24-05:00",
+    "source": "Ars Technica",
+    "summary": "\"I worry this is the big botnet flexing,\" CEO said. But outage was self-inflicted.",
+    "content_html": "<p>When a Cloudflare outage <a href=\"https://arstechnica.com/tech-policy/2025/11/widespread-cloudflare-outage-blamed-on-mysterious-traffic-spike/\">disrupted large numbers</a> of websites and online services yesterday, the company initially thought it was hit by a \u201chyper-scale\u201d DDoS (distributed denial-of-service) attack.</p>\n<p>\u201cI worry this is the big botnet flexing,\u201d Cloudflare co-founder and CEO Matthew Prince wrote in an internal chat room yesterday, while he and others discussed whether Cloudflare was being hit by attacks from the prolific <a href=\"https://techcommunity.microsoft.com/blog/azureinfrastructureblog/defending-the-cloud-azure-neutralized-a-record-breaking-15-tbps-ddos-attack/4470422\">Aisuru botnet</a>. But upon further investigation, Cloudflare staff realized the problem had an internal cause: an important file had unexpectedly doubled in size and propagated across the network.</p>\n<p>This caused trouble for software that needs to read the file to maintain the Cloudflare <a href=\"https://www.cloudflare.com/application-services/products/bot-management/\">bot management system</a> that uses a machine learning model to protect against security threats. Cloudflare\u2019s core CDN, security services, and several other services were affected.</p><p><a href=\"https://arstechnica.com/tech-policy/2025/11/cloudflare-broke-much-of-the-internet-with-a-corrupted-bot-management-file/\">Read full article</a></p>\n<p><a href=\"https://arstechnica.com/tech-policy/2025/11/cloudflare-broke-much-of-the-internet-with-a-corrupted-bot-management-file/#comments\">Comments</a></p>",
+    "image_url": "https://cdn.arstechnica.net/wp-content/uploads/2025/11/cloudflare-error-1152x648-1763584433.jpg",
+    "summary_text": "\"I worry this is the big botnet flexing,\" CEO said. But outage was self-inflicted.",
+    "category": "software",
+    "_trending_tags": [
+      "ai",
+      "cloud"
+    ],
+    "_permalink": "/p/4c10e5e2ec/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/4c10e5e2ec/",
+    "_summary_240": "\"I worry this is the big botnet flexing,\" CEO said. But outage was self-inflicted.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/4c10e5e2ec/thumbnail.png"
+  },
+  {
     "title": "Nvidia\u2019s Upbeat Forecast Soothes Fears of AI Spending Bubble",
     "url": "https://www.bloomberg.com/news/articles/2025-11-19/nvidia-gives-strong-forecast-helping-counter-fears-of-ai-bubble",
     "published_at": "2025-11-19T16:23:13-05:00",
     "source": "Bloomberg Technology",
-    "summary": "Nvidia Corp., the world\u2019s most valuable company, gave a strong revenue forecast for the current period, helping counter concern that a global surge in AI spending is poised to fizzle.",
+    "summary": "Nvidia Corp. delivered a surprisingly strong revenue forecast and pushed back on the idea that the AI industry is in a bubble, easing concerns that had spread across the tech sector.",
     "content_html": "",
     "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iRaN7PjMl78k/v3/1200x-1.png",
-    "summary_text": "Nvidia Corp., the world\u2019s most valuable company, gave a strong revenue forecast for the current period, helping counter concern that a global surge in AI spending is poised to fizzle.",
+    "summary_text": "Nvidia Corp. delivered a surprisingly strong revenue forecast and pushed back on the idea that the AI industry is in a bubble, easing concerns that had spread across the tech sector.",
     "category": "ai",
     "_trending_tags": [
       "ai",
@@ -429,24 +538,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/7e7eba9ea8/thumbnail.png"
   },
   {
-    "title": "Nokia Divides AI and Telecom Business Into Two Units",
-    "url": "https://www.pymnts.com/business/2025/nokia-divides-ai-and-telecom-business-into-two-units/",
-    "published_at": "2025-11-19T13:12:58-05:00",
-    "source": "PYMNTS",
-    "summary": "Nokia is dividing its artificial intelligence (AI) and telecom businesses into separate units. The tech company announced Wednesday (Nov. 19) that its new network infrastructure division would house its AI and data center operations, while its telecoms network operations would become part of its mobile infrastructure unit. \u201cNokia changed the world once by connecting people \u2014 and [\u2026] The post Noki...",
-    "content_html": "<p style=\"font-weight: 400;\"><a href=\"https://www.nokia.com/\" rel=\"noopener\" target=\"_blank\">Nokia</a>\u00a0is dividing its artificial intelligence (AI) and telecom businesses into separate units.</p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p style=\"font-weight: 400;\">The tech company\u00a0<a href=\"https://www.nokia.com/newsroom/nokia-announces-new-strategy-evolution-of-its-operating-model-new-long-term-financial-target-strategic-kpis-and-changes-to-its-group-leadership-team/\" rel=\"noopener\" target=\"_blank\">announced</a>\u00a0Wednesday (Nov. 19) that its new network infrastructure division would house its AI and data center operations, while its telecoms network operations would become part of its mobile infrastructure unit.</p>\n<p style=\"font-weight: 400;\">\u201cNokia changed the world once by connecting people \u2014 and will again by connecting intelligence,\u201d said <a href=\"https://fi.linkedin.com/in/justinhotard\" rel=\"noopener\" target=\"_blank\">Justin Hotard</a>, Nokia\u2019s president and chief executive, said in a news release.</p>\n<p style=\"font-weight: 400;\">\u201cAs the trusted western provider of secure and advanced connectivity, our technology is powering the AI supercycle.\u201d</p>\n<p style=\"font-weight: 400;\">The Finland-based company is positioning its network infrastructure business as a \u201cgrowth segment\u201d designed to capitalize on rapid, global AI and\u00a0<a href=\"https://www.pymnts.com/news/artificial-intelligence/2025/google-meta-others-pledge-billions-dollars-build-ai-data-centers/\" rel=\"noopener\" target=\"_blank\">data center</a>\u00a0build-out.</p>\n<p style=\"font-weight: 400;\">Projections earlier this year from Citigroup forecast that artificial intelligence spending will\u00a0<a href=\"https://www.pymnts.com/artificial-intelligence-2/2025/ai-spending-could-exceed-2-8-trillion-through-2029/\" rel=\"noopener\" target=\"_blank\">exceed $2.8 trillion</a>\u00a0by 2029. The banking giant has cited investments by hyperscalers and rising demand for enterprise AI use. Citi also forecasts that capital expenditures among hyperscalers \u2014 or data center operators \u2014 will come to $490 billion by the end of next year, surpassing its previous estimate of $420 billion.</p>\n<p style=\"font-weight: 400;\">Although the AI and telecoms divisions will be Nokia\u2019s core units, the company also announced it was establishing a new defense division.</p>\n<p style=\"font-weight: 400;\">Nokia Defense is being launched as an incubation unit to serve as the central go-to-market and research and development hub for Nokia\u2019s defense portfolio, the release added.</p>\n<p style=\"font-weight: 400;\">\u201cBuilding on the strong foundation of Nokia Federal Solutions in the US, the company sees further opportunities in the US, Finland and other allied countries to deliver defense-grade solutions based on Nokia\u2019s core technologies in network and mobile infrastructure.\u201d</p>\n<p style=\"font-weight: 400;\">Nokia\u2019s new artificial intelligence push comes just weeks after the company announced it was receiving a $1 billion investment from\u00a0<a href=\"https://www.nvidia.com/en-us/\" rel=\"noopener\" target=\"_blank\">Nvidia</a>.</p>\n<p style=\"font-weight: 400;\">That investment is\u00a0<a href=\"https://www.pymnts.com/partnerships/2025/nvidia-and-nokia-form-1-billion-communications-pact/\" rel=\"noopener\" target=\"_blank\">part of a partnership</a>\u00a0that involves weaving Nvidia-powered, commercial grade artificial intelligence radio access network (AI-RAN) products into Nokia\u2019s RAN portfolio.</p>\n<p style=\"font-weight: 400;\">This will let communication service providers launch AI-native 5G-Advanced and 6G networks on Nvidia platforms, Nvidia said in a news release, calling the collaboration \u201cthe beginning of the AI-native wireless era.\u201d</p>\n<p style=\"font-weight: 400;\">The companies say their partnership also addresses the fast-growing AI-RAN market, with the larger RAN market expected to top $200 billion by 2030.</p>\n<p style=\"font-weight: 400;\">\u201cTelecommunications is a critical national infrastructure \u2014 the digital nervous system of our economy and security,\u201d said Jensen Huang, founder and CEO of Nvidia.</p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/business/2025/nokia-divides-ai-and-telecom-business-into-two-units/\">Nokia Divides AI and Telecom Business Into Two Units</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
-    "image_url": "https://www.pymnts.com/wp-content/uploads/2023/02/Nokia.jpg?w=457",
-    "summary_text": "Nokia is dividing its artificial intelligence (AI) and telecom businesses into separate units. The tech company announced Wednesday (Nov. 19) that its new network infrastructure division would house its AI and data center operations, while its telecoms networ...",
-    "category": "ai",
-    "_trending_tags": [
-      "ai"
-    ],
-    "_permalink": "/p/2d9059665b/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/2d9059665b/",
-    "_summary_240": "Nokia is dividing its artificial intelligence (AI) and telecom businesses into separate units. The tech company announced Wednesday (Nov. 19) that its new network infrastructure...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/2d9059665b/thumbnail.png"
-  },
-  {
     "title": "US stocks edge higher ahead of Nvidia results",
     "url": "https://www.ft.com/content/a268450e-13fa-4f4e-a425-c99f4e6b5a7a",
     "published_at": "2025-11-19T13:10:18-05:00",
@@ -592,24 +683,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/5bb1f90576/",
     "_summary_240": "Now, when users search for places in Map like restaurants, hotels, or concert venues, they'll see a new \"know before you go\" tips section that will surface important information...",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/5bb1f90576/thumbnail.png"
-  },
-  {
-    "title": "Lawmakers want to let users sue over harmful social media algorithms",
-    "url": "https://www.theverge.com/policy/824054/algorithm-accountability-act-section-230",
-    "published_at": "2025-11-19T11:07:28-05:00",
-    "source": "The Verge",
-    "summary": "Tech critics' least favorite law is under siege again, this time with a focus on its recommendation algorithms. On Wednesday Sens. John Curtis (R-UT) and Mark Kelly (D-AZ) introduced the Algorithm Accountability Act, which amends Section 230 of the Communications Decency Act to make platforms responsible for preventing their recommendation systems from causing certain foreseeable [\u2026]",
-    "content_html": "<figure>\n\n<img alt=\"\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/09/STKS519_FREE_SPEECH_CVIRGINIA_D.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100\" />\n\t<figcaption>\n\t\t</figcaption>\n</figure>\n<p class=\"has-text-align-none\">Tech critics' least favorite law is under siege again, this time with a focus on its recommendation algorithms.</p>\n<p class=\"has-text-align-none\">On Wednesday Sens. John Curtis (R-UT) and Mark Kelly (D-AZ) introduced the Algorithm Accountability Act, which amends Section 230 of the Communications Decency Act to make platforms responsible for preventing their recommendation systems from causing certain foreseeable harms. Section 230 is the law that shields online platforms - including social media sites, digital forums, blogs with comment sections, and their users - from being held liable for other people's unlawful posts, or for engaging in good faith content moderation. Bu \u2026</p>\n<p><a href=\"https://www.theverge.com/policy/824054/algorithm-accountability-act-section-230\">Read the full story at The Verge.</a></p>",
-    "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/09/STKS519_FREE_SPEECH_CVIRGINIA_D.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "summary_text": "Tech critics' least favorite law is under siege again, this time with a focus on its recommendation algorithms. On Wednesday Sens. John Curtis (R-UT) and Mark Kelly (D-AZ) introduced the Algorithm Accountability Act, which amends Section 230 of the Communicat...",
-    "category": "fintech",
-    "_trending_tags": [
-      "ai"
-    ],
-    "_permalink": "/p/2b250872f3/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/2b250872f3/",
-    "_summary_240": "Tech critics' least favorite law is under siege again, this time with a focus on its recommendation algorithms. On Wednesday Sens. John Curtis (R-UT) and Mark Kelly (D-AZ)...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/2b250872f3/thumbnail.png"
   },
   {
     "title": "US government reopening may unleash crypto ETF floodgates: Analyst",
@@ -988,38 +1061,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/8b66ffd36d/thumbnail.png"
   },
   {
-    "title": "The Politics of AI Are About to Explode",
-    "url": "https://www.bloomberg.com/news/articles/2025-11-19/how-the-politics-of-ai-will-shape-2028-s-election",
-    "published_at": "2025-11-19T04:00:38-05:00",
-    "source": "Bloomberg Technology",
-    "summary": "Get ready for datacenters to dominate the election.",
-    "content_html": "SKOREA OPENAI Photographer: SeongJoon Cho/Bloomberg",
-    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iq1yjzoJvX1E/v0/1200x-1.jpg",
-    "summary_text": "Get ready for datacenters to dominate the election.",
-    "category": "ai",
-    "_trending_tags": [
-      "ai"
-    ],
-    "_permalink": "/p/9983403931/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/9983403931/",
-    "_summary_240": "Get ready for datacenters to dominate the election.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/9983403931/thumbnail.png"
-  },
-  {
-    "title": "Odd Lots: The Politics of AI Are About to Explode (Podcast)",
-    "url": "https://www.bloomberg.com/news/audio/2025-11-19/odd-lots-the-politics-of-ai-are-about-to-explode-podcast",
-    "published_at": "2025-11-19T04:00:00-05:00",
-    "source": "Bloomberg Technology",
-    "summary": "AI wasn\u2019t much of a topic in the 2024 election. But it will almost certainly be big in 2028, and probably even the 2026 midterms. There are concerns about all the money being spent and whether a federal backstop or bailout will be necessary one day. There are the concerns about energy use and electricity prices. There are concerns about labor displacement. And there are concerns about whether we ...",
-    "content_html": "",
-    "image_url": "",
-    "summary_text": "AI wasn\u2019t much of a topic in the 2024 election. But it will almost certainly be big in 2028, and probably even the 2026 midterms. There are concerns about all the money being spent and whether a federal backstop or bailout will be necessary one day. There are...",
-    "category": "ai",
-    "_trending_tags": [
-      "ai"
-    ]
-  },
-  {
     "title": "Coinbase working on prediction markets website, tech researcher says",
     "url": "https://cointelegraph.com/news/coinbase-kalshi-prediction-market-leak-by-researcher?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
     "published_at": "2025-11-19T01:37:31-05:00",
@@ -1121,21 +1162,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/25133cfa7d/thumbnail.png"
   },
   {
-    "title": "US won\u2019t start Bitcoin reserve until other countries do: Mike Alfred",
-    "url": "https://cointelegraph.com/news/us-won-t-start-bitcoin-reserve-until-other-countries-do-mike-alfred?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-    "published_at": "2025-11-18T21:55:38-05:00",
-    "source": "Cointelegraph",
-    "summary": "The US government will start buying Bitcoin for its strategic reserve when there is \u201cenough pressure externally,\u201d says crypto entrepreneur Mike Alfred.",
-    "content_html": "",
-    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTEvMDE5YTk5ZDEtZTIzOS03YzBjLWFlYzAtMmUyZTM1OTMwMzgz.jpg",
-    "summary_text": "The US government will start buying Bitcoin for its strategic reserve when there is \u201cenough pressure externally,\u201d says crypto entrepreneur Mike Alfred.",
-    "category": "fintech",
-    "_permalink": "/p/2d46295a87/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/2d46295a87/",
-    "_summary_240": "The US government will start buying Bitcoin for its strategic reserve when there is \u201cenough pressure externally,\u201d says crypto entrepreneur Mike Alfred.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/2d46295a87/thumbnail.png"
-  },
-  {
     "title": "US tech stocks slide as traders fret over \u2018frothy\u2019 AI valuations",
     "url": "https://www.ft.com/content/72c35b5a-f75f-493d-ba86-a35d8d1f3490",
     "published_at": "2025-11-18T21:05:13-05:00",
@@ -1180,13 +1206,9 @@
     "source": "Financial Times - Technology",
     "summary": "The sector is expanding far beyond its giant IT service companies",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/848491d5-8ae9-48e9-a8d9-652d468edff7.jpg",
+    "image_url": "",
     "summary_text": "The sector is expanding far beyond its giant IT service companies",
-    "category": "fintech",
-    "_permalink": "/p/b1cae55af3/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/b1cae55af3/",
-    "_summary_240": "The sector is expanding far beyond its giant IT service companies",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/b1cae55af3/thumbnail.png"
+    "category": "fintech"
   },
   {
     "title": "Meta\u2019s DreamGym framework trains AI agents in a simulated world to cut reinforcement learning costs",
@@ -1272,7 +1294,7 @@
     "source": "Financial Times - Technology",
     "summary": "Bank of America survey shows a majority of investors think companies are spending too much on AI infrastructure",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/3485cd86-5e11-4587-b03d-39a03b688381.jpg",
+    "image_url": "",
     "summary_text": "Bank of America survey shows a majority of investors think companies are spending too much on AI infrastructure",
     "category": "ai",
     "_trending_tags": [
@@ -1350,7 +1372,7 @@
     "source": "Financial Times - Technology",
     "summary": "US company finds no evidence of malicious activity and blames incident on \u2018crash in the software system\u2019",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/20e15302-2d06-4f51-ba3d-a779b9307403.jpg",
+    "image_url": "",
     "summary_text": "US company finds no evidence of malicious activity and blames incident on \u2018crash in the software system\u2019",
     "category": "software",
     "_trending_tags": [
@@ -1579,16 +1601,12 @@
     "source": "Financial Times - Technology",
     "summary": "Also in this newsletter: Italy redoubles Ukraine support",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/11ff3bfd-633d-4977-b5b9-db0902e9f83a.jpg",
+    "image_url": "",
     "summary_text": "Also in this newsletter: Italy redoubles Ukraine support",
     "category": "ai",
     "_trending_tags": [
       "ai"
-    ],
-    "_permalink": "/p/a28838778d/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/a28838778d/",
-    "_summary_240": "Also in this newsletter: Italy redoubles Ukraine support",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/a28838778d/thumbnail.png"
+    ]
   },
   {
     "title": "Intuit and OpenAI join forces on new AI-powered experiences",
