@@ -1,5 +1,82 @@
 [
   {
+    "title": "Gemini 3 refused to believe it was 2025, and hilarity ensued",
+    "url": "https://techcrunch.com/2025/11/20/gemini-3-refused-to-believe-it-was-2025-and-hilarity-ensued/",
+    "published_at": "2025-11-20T12:38:21-05:00",
+    "source": "TechCrunch",
+    "summary": "Famed AI researcher Andrej Karpathy got early access to Google\u2019s latest AI model and stumbled onto its \"model smell.\"",
+    "content_html": "",
+    "image_url": "https://techcrunch.com/wp-content/uploads/2025/11/Gemini-3.jpeg?resize=1200,677",
+    "summary_text": "Famed AI researcher Andrej Karpathy got early access to Google\u2019s latest AI model and stumbled onto its \"model smell.\"",
+    "category": "ai",
+    "_trending_tags": [
+      "ai",
+      "google"
+    ],
+    "_permalink": "/p/6ad89543ce/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/6ad89543ce/",
+    "_summary_240": "Famed AI researcher Andrej Karpathy got early access to Google\u2019s latest AI model and stumbled onto its \"model smell.\"",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/6ad89543ce/thumbnail.png"
+  },
+  {
+    "title": "ScaleOps' new AI Infra Product slashes GPU costs for self-hosted enterprise LLMs by 50% for early adopters",
+    "url": "https://venturebeat.com/ai/scaleops-new-ai-infra-product-slashes-gpu-costs-for-self-hosted-enterprise",
+    "published_at": "2025-11-20T12:35:00-05:00",
+    "source": "VentureBeat",
+    "summary": "ScaleOps has expanded its cloud resource management platform with a new product aimed at enterprises operating self-hosted large language models (LLMs) and GPU-based AI applications. The AI Infra Product announced today , extends the company\u2019s existing automation capabilities to address a growing need for efficient GPU utilization, predictable performance, and reduced operational burden in large-...",
+    "content_html": "",
+    "image_url": "",
+    "summary_text": "ScaleOps has expanded its cloud resource management platform with a new product aimed at enterprises operating self-hosted large language models (LLMs) and GPU-based AI applications. The AI Infra Product announced today , extends the company\u2019s existing automa...",
+    "category": "ai",
+    "_trending_tags": [
+      "ai",
+      "cloud",
+      "gpu",
+      "llm"
+    ],
+    "_permalink": "/p/8e23d42921/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/8e23d42921/",
+    "_summary_240": "ScaleOps has expanded its cloud resource management platform with a new product aimed at enterprises operating self-hosted large language models (LLMs) and GPU-based AI...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/8e23d42921/thumbnail.png"
+  },
+  {
+    "title": "Amazon is using AI to create video recaps of its biggest streaming shows",
+    "url": "https://www.theverge.com/news/825052/amazon-prime-original-ai-video-recap-fallout-jack-ryan",
+    "published_at": "2025-11-20T12:31:49-05:00",
+    "source": "The Verge",
+    "summary": "Amazon Prime Video is testing another new generative AI-powered feature to help catch you up on a show you\u2019ve been watching before starting a new season. Video Recaps uses AI to identify a show\u2019s important plot points and create a short but \u201ctheatrical-quality\u201d summary video that combines a selection of clips with music, dialogue, and [\u2026]",
+    "content_html": "<figure>\n\n<img alt=\"A TV showing the Amazon Prime interface and the Tom Clancy\u2019s Jack Ryan show.\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/11/amazon_prime_recaps1.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100\" />\n\t<figcaption>\n\tVideo Recaps are being introduced for a handful of Amazon Prime Original series. | Image: Amazon\t</figcaption>\n</figure>\n<p class=\"has-text-align-none\">Amazon Prime Video is testing another new generative AI-powered feature to help catch you up on a show you\u2019ve been watching before starting a new season. <a href=\"https://www.aboutamazon.com/news/entertainment/ai-plot-summary-video-recaps-prime-video\">Video Recaps</a> uses AI to identify a show\u2019s important plot points and create a short but \u201ctheatrical-quality\u201d summary video that combines a selection of clips with music, dialogue, and narration.</p>\n\n<p class=\"has-text-align-none\">The Video Recaps feature is being rolled out starting this week in beta on some English-language Prime Original series including <em>Tom Clancy\u2019s Jack Ryan</em>, <em>Upload</em>, <em>Bosch</em>, <em>The Rig</em>, and <em>Fallout</em> (ahead of <a href=\"https://www.theverge.com/entertainment/819996/fallouts-new-season-two-trailer-brings-the-war-to-new-vegas\">season two\u2019s premiere</a> on December 17th, 2025). Amazon says available recaps, including the <a href=\"https://www.theverge.com/2024/11/4/24287955/amazon-prime-video-ai-x-ray-recaps\">text-based X-Ray Recaps</a> it introduced a year ago, will be accessible through a recap button on the detail page when a \u201ccustomer navigates to the next season of a supported series.\u201d At launch they\u2019re limited to \u201cliving room\u201d Fire TV devices, but will expand to additional devices in the coming months.</p>\n<img alt=\"A TV showing the Amazon Prime interface and the Tom Clancy\u2019s Jack Ryan show.\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/11/amazon_prime_recaps2.jpg?quality=90&#038;strip=all&#038;crop=0,0.022431583669807,100,99.95513683266\" title=\"A TV showing the Amazon Prime interface and the Tom Clancy\u2019s Jack Ryan show.\" />\n<p class=\"has-text-align-none\">The feature first \u201canalyzes a season\u2019s key plot points and character arcs to deeply understand the most pivotal moments that will resonate with viewers.\u201d The AI then selects video clips and stitches them together with audio that includes sound effects and an \u201coverarching AI-generated voiceover narration.\u201d The length of the summaries will vary depending on the show, but in one photo <a href=\"https://www.aboutamazon.com/news/entertainment/ai-plot-summary-video-recaps-prime-video\">shared in a blog post</a> a season three recap of <em>Tom Clancy\u2019s Jack Ryan</em> appears to be three minutes long.</p>\n\n<p class=\"has-text-align-none\">The feature could be a useful way to refresh your memory for shows with especially long gaps between seasons. But does Amazon really need to use AI to create these summaries and open the door for inaccuracies that could cause confusion as you dive into a new season? Making Video Recaps available for every season of every show available on Prime could potentially justify the use of AI, but there&#8217;s fewer than 20 original drama series on the platform, and this rollout doesn\u2019t even include all of them. Is it really that hard to get a human being to watch <em>Citadel</em>?</p>",
+    "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/11/amazon_prime_recaps1.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "summary_text": "Amazon Prime Video is testing another new generative AI-powered feature to help catch you up on a show you\u2019ve been watching before starting a new season. Video Recaps uses AI to identify a show\u2019s important plot points and create a short but \u201ctheatrical-qualit...",
+    "category": "ai",
+    "_trending_tags": [
+      "ai",
+      "amazon"
+    ],
+    "_permalink": "/p/cdfc1c264f/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/cdfc1c264f/",
+    "_summary_240": "Amazon Prime Video is testing another new generative AI-powered feature to help catch you up on a show you\u2019ve been watching before starting a new season. Video Recaps uses AI to...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/cdfc1c264f/thumbnail.png"
+  },
+  {
+    "title": "AI Chatbots Give Harmful Tip to Users Seeking Abortion Reversal",
+    "url": "https://www.bloomberg.com/news/articles/2025-11-20/ai-chatbots-give-harmful-tip-to-users-seeking-abortion-reversal",
+    "published_at": "2025-11-20T12:20:21-05:00",
+    "source": "Bloomberg Technology",
+    "summary": "Popular AI chatbots are routinely steering users who ask for advice on reversing an abortion to a hotline that promotes an unproven and potentially dangerous treatment, according to a new report.",
+    "content_html": "A woman uses her smartphone on Dec. 1, 2024 in Newcastle, Australia. Photographer: Roni Bintang/Getty Images",
+    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iR0Www9KKMQg/v0/1200x-1.jpg",
+    "summary_text": "Popular AI chatbots are routinely steering users who ask for advice on reversing an abortion to a hotline that promotes an unproven and potentially dangerous treatment, according to a new report.",
+    "category": "ai",
+    "_trending_tags": [
+      "ai"
+    ],
+    "_permalink": "/p/c8b5594e6c/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/c8b5594e6c/",
+    "_summary_240": "Popular AI chatbots are routinely steering users who ask for advice on reversing an abortion to a hotline that promotes an unproven and potentially dangerous treatment, according...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/c8b5594e6c/thumbnail.png"
+  },
+  {
     "title": "India\u2019s government may consider stablecoin framework, diverging from RBI",
     "url": "https://cointelegraph.com/news/india-government-consider-stablecoin-framework-diverge-rbi?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
     "published_at": "2025-11-20T12:12:52-05:00",
@@ -20,7 +97,7 @@
     "published_at": "2025-11-20T12:00:00-05:00",
     "source": "The Verge",
     "summary": "Nvidia has partnered with Google to launch a new cloud gaming plan exclusive to Chromebooks. GeForce Now Fast Pass will allow Chromebook owners to stream over 2,000 games directly from an existing PC game library without ads, and new Chromebook purchases will include a year\u2019s membership for free. Fast Pass looks similar to GeForce Now\u2019s [\u2026]",
-    "content_html": "<figure>\n\n<img alt=\"\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/11/236575_236575_HP_Chromebook_AKrales_0060.webp?quality=90&#038;strip=all&#038;crop=0,0,100,100\" />\n\t<figcaption>\n\t\t</figcaption>\n</figure>\n<p class=\"has-text-align-none\">Nvidia has partnered with Google to launch a new cloud gaming plan exclusive to Chromebooks. GeForce Now Fast Pass will allow Chromebook owners to stream over 2,000 games directly from an existing PC game library without ads, and new Chromebook purchases will include a year\u2019s membership for free.</p>\n\n<p class=\"has-text-align-none\">Fast Pass looks similar to GeForce Now\u2019s existing free plan, which includes the ability to stream more than 2,000 \u201cReady-to-Play\u201d titles from a user\u2019s existing Steam, Epic, or Xbox libraries. Unlike that plan, <a href=\"https://blog.google/products/chromebooks/geforce-now-fast-pass\">the companies say</a> Fast Pass \u201chas no ads,\u201d and \u201callows you to skip the queue,\u201d compared to typical waits of two minutes or more to start playing on the free plan.</p>\n\n<p class=\"has-text-align-none\">There are other restrictions, with Fast Pass users limited to 10 hours of cloud gaming each month. Up to five of those can roll over to the next month if you don\u2019t use them up though. Nvidia\u2019s <a href=\"https://www.theverge.com/2024/11/7/24289443/nvidia-geforce-now-monthly-playtime-caps-performance-membership-1440p\">other paid plans</a>, which start at $99.99 per month, support a variety of other features, including higher resolutions, faster frame rates, RTX ray-tracing, and access to a larger game library bolstered by a couple of thousand <a href=\"https://www.theverge.com/news/760219/nvidia-geforce-now-rtx-5080-cloud-gaming\">\u201cInstall-to-Play\u201d</a> titles that must be installed onto Nvidia\u2019s servers before you can access them.</p>\n\n<p class=\"has-text-align-none\">Google says that anyone who purchases a new Chromebook will now get one year of GeForce Now Fast Pass included. The companies haven\u2019t confirmed how much Fast Pass will cost outside of that offer.</p>",
+    "content_html": "<figure>\n\n<img alt=\"\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/11/236575_236575_HP_Chromebook_AKrales_0060.webp?quality=90&#038;strip=all&#038;crop=0,0,100,100\" />\n\t<figcaption>\n\t\t</figcaption>\n</figure>\n<p class=\"has-text-align-none\">Nvidia has partnered with Google to launch a new cloud gaming plan exclusive to Chromebooks. GeForce Now Fast Pass will allow Chromebook owners to stream over 2,000 games directly from an existing PC game library without ads, and new Chromebook purchases will include a year\u2019s membership for free.</p>\n\n<p class=\"has-text-align-none\">Fast Pass looks similar to GeForce Now\u2019s existing free plan, which includes the ability to stream more than 2,000 \u201cReady-to-Play\u201d titles from a user\u2019s existing Steam, Epic, or Xbox libraries. Unlike that plan, <a href=\"https://blog.google/products/chromebooks/geforce-now-fast-pass\">the companies say</a> Fast Pass \u201chas no ads,\u201d and \u201callows you to skip the queue,\u201d compared to typical waits of two minutes or more to start playing on the free plan.</p>\n\n<p class=\"has-text-align-none\">There are other restrictions, with Fast Pass users limited to 10 hours of cloud gaming each month. Up to five of those can roll over to the next month if you don\u2019t use them up though. Nvidia\u2019s <a href=\"https://www.theverge.com/2024/11/7/24289443/nvidia-geforce-now-monthly-playtime-caps-performance-membership-1440p\">other paid plans</a>, which start at $9.99 per month, support a variety of other features, including higher resolutions, faster frame rates, RTX ray-tracing, and access to a larger game library bolstered by a couple of thousand <a href=\"https://www.theverge.com/news/760219/nvidia-geforce-now-rtx-5080-cloud-gaming\">\u201cInstall-to-Play\u201d</a> titles that must be installed onto Nvidia\u2019s servers before you can access them.</p>\n\n<p class=\"has-text-align-none\">Google says that anyone who purchases a new Chromebook will now get one year of GeForce Now Fast Pass included. The companies haven\u2019t confirmed how much Fast Pass will cost outside of that offer.</p>",
     "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/11/236575_236575_HP_Chromebook_AKrales_0060.webp?quality=90&#038;strip=all&#038;crop=0,0,100,100",
     "summary_text": "Nvidia has partnered with Google to launch a new cloud gaming plan exclusive to Chromebooks. GeForce Now Fast Pass will allow Chromebook owners to stream over 2,000 games directly from an existing PC game library without ads, and new Chromebook purchases will...",
     "category": "software",
@@ -334,7 +411,11 @@
     "category": "ai",
     "_trending_tags": [
       "google"
-    ]
+    ],
+    "_permalink": "/p/ad8c2a589f/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/ad8c2a589f/",
+    "_summary_240": "Google is upgrading its image generation model with new editing chops, higher resolutions, more accurate text rendering, and the ability to search the web.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/ad8c2a589f/thumbnail.png"
   },
   {
     "title": "Reserve Bank of India Has Reservations About Stablecoins",
@@ -565,17 +646,17 @@
     "url": "https://techcrunch.com/2025/11/20/finlands-nestai-lands-e100m-partners-with-nokia-to-build-ai-for-defense-applications/",
     "published_at": "2025-11-20T08:04:11-05:00",
     "source": "TechCrunch",
-    "summary": "Finnish startup NestAI said it has raised \u20ac100 million to build \"Europe's leading physical AI lab.\"",
+    "summary": "Finnish startup NestAI NestAI has struck a partnership with Nokia to build AI products for defense applications and develop \"physical AI,\" which involves using large language models and related technology for robotics and other real-world applications.",
     "content_html": "",
     "image_url": "https://techcrunch.com/wp-content/uploads/2025/11/Peter-Sarlin-at-AI-Summit-2025-image-credits-Vesa-Matti-Vaara.jpg?resize=1200,800",
-    "summary_text": "Finnish startup NestAI said it has raised \u20ac100 million to build \"Europe's leading physical AI lab.\"",
+    "summary_text": "Finnish startup NestAI NestAI has struck a partnership with Nokia to build AI products for defense applications and develop \"physical AI,\" which involves using large language models and related technology for robotics and other real-world applications.",
     "category": "ai",
     "_trending_tags": [
       "ai"
     ],
     "_permalink": "/p/746f980087/",
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/746f980087/",
-    "_summary_240": "Finnish startup NestAI said it has raised \u20ac100 million to build \"Europe's leading physical AI lab.\"",
+    "_summary_240": "Finnish startup NestAI NestAI has struck a partnership with Nokia to build AI products for defense applications and develop \"physical AI,\" which involves using large language...",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/746f980087/thumbnail.png"
   },
   {
@@ -605,7 +686,11 @@
     "category": "fintech",
     "_trending_tags": [
       "ai"
-    ]
+    ],
+    "_permalink": "/p/72f4b75681/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/72f4b75681/",
+    "_summary_240": "Samourai Wallet\u2019s co-founders received four- and five-year prison terms in the US for operating an unlicensed money-transmitting business through their non-custodial crypto mixer.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/72f4b75681/thumbnail.png"
   },
   {
     "title": "The AI Shift: Do we prefer talking to machines rather than each other?",
@@ -801,19 +886,22 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/4a0230dc9b/thumbnail.png"
   },
   {
-    "title": "Discover Challenges PayFacs to Scale Beyond Their Niche",
-    "url": "https://www.pymnts.com/commerce/2025/discover-challenges-payfacs-to-scale-beyond-their-niche/",
+    "title": "Discover Network: The Future of Commerce Runs Through PayFac Rails",
+    "url": "https://www.pymnts.com/commerce/2025/discover-network-the-future-of-commerce-runs-through-payfac-rails/",
     "published_at": "2025-11-20T04:00:51-05:00",
     "source": "PYMNTS",
-    "summary": "Watch more: Need to Know: Discover Network\u2019s Dave Dew The history of payments can be separated into two eras: before the payment facilitator and after the payment facilitator. Known in the industry as a PayFac, this model has transformed from a niche operational convenience into a global infrastructure trend by streamlining merchant onboarding, embedding [\u2026] The post Discover Challenges PayFacs t...",
-    "content_html": "<p><strong>Watch more:</strong> <a href=\"https://tv.pymnts.com/detail/video/6379518744112\" rel=\"noopener\" target=\"_blank\">Need to Know: Discover Network\u2019s Dave Dew</a></p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p><span>The history of payments can be separated into two eras: before the payment facilitator and after the payment facilitator.</span></p>\n<p><span>Known in the industry as a PayFac, this model has transformed from a niche operational convenience into a global infrastructure trend by streamlining merchant onboarding, embedding payment capabilities into software and clearing away many of the complexities that once slowed commerce.</span></p>\n<p><span>\u201cMerchants are busy. They want certain things to be easy, right? And I think that would include payment experiences,\u201d </span><a href=\"https://www.linkedin.com/in/dave-dew-7620b733/\" rel=\"noopener\" target=\"_blank\"><span>Dave Dew</span></a><span>, senior manager of U.S. acquiring and digital payments at </span><a href=\"https://www.discoverglobalnetwork.com/\" rel=\"noopener\" target=\"_blank\"><span>Discover\u00ae Network</span></a><span>, told PYMNTS.</span></p>\n<p><span>PayFacs shift payments from being a back-office necessity into a front-line enabler. Instead of forcing merchants to stitch together contracts, accounts and gateways, PayFacs allow software companies to embed payments directly into their platforms.</span></p>\n<p><span>\u201cWhat I think the PayFac model does very well is that it not only streamlines the payments piece, but also the inner workings of a merchant\u2019s business,\u201d Dew said. \u201cWhat the software is doing is unlocking vast possibilities for tailored payment experiences and allowing merchants to focus more on their core business rather than the payments piece itself.\u201d</span></p>\n<p><span>While its appeal is undeniable, the path to becoming a PayFac can often be anything but simple.</span></p>\n<p><span>From choosing the right acquiring bank to mitigating risk and navigating card network registrations, the early decisions can determine whether a PayFac thrives or stalls before launch.</span></p>\n<p><span>The promise of speed, control and revenue opportunity is real, but so too are the costs, compliance obligations and forks in the road.</span></p>\n<h2><b><span>Embracing the PayFac Model for Business Transformation</span></b></h2>\n<p><span>The challenge starts with self-assessment. Companies must determine whether the financial, operational and regulatory demands align with their business objectives.</span></p>\n<p><span>Do they have the appetite for building compliance programs, managing underwriting processes and handling customer support for merchants? Or is the opportunity simply to generate incremental revenue without overhauling core operations?</span></p>\n<p><span>\u201cPayFac is a very intricate space, has many layers, and there are many, many options,\u201d Dew said.</span></p>\n<p><span>Discover Network, for instance, launched its PayFac registration program two years ago and already counts hundreds of registered PayFacs.</span></p>\n<p><span>Perhaps the most consequential decision is choosing between becoming a registered PayFac or opting for the managed option, sometimes called PayFac-as-a-Service.</span></p>\n<p><span>A registered PayFac has maximum control but is subject to longer timelines and uses more resources. Meanwhile, PayFac-as-a-Service offers speed and simplicity. Providers handle much of the operational heavy lifting, from onboarding to compliance.</span></p>\n<p><span>\u201cIt could take as little as four weeks because of the lighter technology lift and these plug-and-play solutions,\u201d Dew said.</span></p>\n<p><span>Even for those with clear intent around their business transformation goals, the early PayFac decisions can be make-or-break. Choosing the right acquiring partner, navigating card network registrations and managing risk infrastructure are formidable undertakings.</span></p>\n<h2><b><span>Building for the Future</span></b> <b><span>in a Crowded Market</span></b></h2>\n<p><span>For PayFacs that succeed domestically, the next logical question is scale. Yet scaling internationally reveals another layer of complexity. Vertical specialization, which is often the key to early success, can later become a barrier to broader expansion.</span></p>\n<p><span>To break out of niche markets, companies must lean heavily on technology and partnerships, and here providers like Discover Network play a role.</span></p>\n<p><span>\u201cWe are a global payments network supporting PayFac with dedicated teams, not only in the U.S. and Canada, but across the globe, including APAC, EMEA and LatAm,\u201d Dew said</span></p>\n<p><span>The operational mechanics of such relationships are not trivial. Dew pointed to the importance of enabling full Discover Network acceptance by integrating all issuer identification number (IIN) ranges, ensuring transactions from network alliances can ride on the network\u2019s rails seamlessly.</span></p>\n<p><span>The vision? A PayFac in Chicago should be able to support a merchant with customers in Tokyo or S\u00e3o Paulo without the merchant realizing the complexity behind the scenes.</span></p>\n<h2><b><span>The Bigger Picture</span></b></h2>\n<p><span>For all the focus on infrastructure, PayFac success ultimately comes down to the merchant experience.</span></p>\n<p><span>\u201cFor the simple answer, it\u2019s pivotal,\u201d Dew said. \u201cThe merchant experience is pivotal to a PayFac\u2019s success. It really goes without saying that a PayFac should act as a partner to their merchants, working closely with them to enhance their business, rather than just providing the payments processing piece.\u201d</span></p>\n<p><span>That means more seamless onboarding, transparent pricing, responsive multichannel support and robust dashboards for real-time analytics. These elements may sound like table stakes, but Dew said they are what separate thriving PayFacs from struggling ones.</span></p>\n<p><span>\u201cSuccessful PayFacs will leverage those strategic partnerships that they already have and make and forge new ones,\u201d he said. \u201c&#8230;They should also think about offering embedded financial services.\u201d</span></p>\n<p><span>\u201cThe PayFac model has and continues to evolve, and I think we all know that it\u2019s moving beyond just payments,\u201d he added.</span></p>\n<p><span>Ultimately, the PayFac model is not simply about making payments easier. It is about reimagining how payments function within business models. As the market matures, differentiation may hinge less on whether a company can become a PayFac and more on what it can do with that capability.</span></p>\n<p><span>\u201cInvesting in emerging technology like digital wallets, real-time payments and also AI-driven fraud detection is very important,\u201d Dew said. \u201cDo your research and leverage connections. At Discover [Network], we provide dedicated support and integrated options to help PayFacs grow, streamline processes and build trust.\u201d</span></p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/commerce/2025/discover-challenges-payfacs-to-scale-beyond-their-niche/\">Discover Challenges PayFacs to Scale Beyond Their Niche</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
+    "summary": "Watch more: Need to Know: Discover Network\u2019s Dave Dew The history of payments can be separated into two eras: before the payment facilitator and after the payment facilitator. Known in the industry as a PayFac, this model has transformed from a niche operational convenience into a global infrastructure trend by streamlining merchant onboarding, embedding [\u2026] The post Discover Network: The Future ...",
+    "content_html": "<p><strong>Watch more:</strong> <a href=\"https://tv.pymnts.com/detail/video/6379518744112\" rel=\"noopener\" target=\"_blank\">Need to Know: Discover Network\u2019s Dave Dew</a></p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p><span>The history of payments can be separated into two eras: before the payment facilitator and after the payment facilitator.</span></p>\n<p><span>Known in the industry as a PayFac, this model has transformed from a niche operational convenience into a global infrastructure trend by streamlining merchant onboarding, embedding payment capabilities into software and clearing away many of the complexities that once slowed commerce.</span></p>\n<p><span>\u201cMerchants are busy. They want certain things to be easy, right? And I think that would include payment experiences,\u201d </span><a href=\"https://www.linkedin.com/in/dave-dew-7620b733/\" rel=\"noopener\" target=\"_blank\"><span>Dave Dew</span></a><span>, senior manager of U.S. acquiring and digital payments at </span><a href=\"https://www.discoverglobalnetwork.com/\" rel=\"noopener\" target=\"_blank\"><span>Discover\u00ae Network</span></a><span>, told PYMNTS.</span></p>\n<p><span>PayFacs shift payments from being a back-office necessity into a front-line enabler. Instead of forcing merchants to stitch together contracts, accounts and gateways, PayFacs allow software companies to embed payments directly into their platforms.</span></p>\n<p><span>\u201cWhat I think the PayFac model does very well is that it not only streamlines the payments piece, but also the inner workings of a merchant\u2019s business,\u201d Dew said. \u201cWhat the software is doing is unlocking vast possibilities for tailored payment experiences and allowing merchants to focus more on their core business rather than the payments piece itself.\u201d</span></p>\n<p><span>While its appeal is undeniable, the path to becoming a PayFac can often be anything but simple.</span></p>\n<p><span>From choosing the right acquiring bank to mitigating risk and navigating card network registrations, the early decisions can determine whether a PayFac thrives or stalls before launch.</span></p>\n<p><span>The promise of speed, control and revenue opportunity is real, but so too are the costs, compliance obligations and forks in the road.</span></p>\n<h2><b><span>Embracing the PayFac Model for Business Transformation</span></b></h2>\n<p><span>The challenge starts with self-assessment. Companies must determine whether the financial, operational and regulatory demands align with their business objectives.</span></p>\n<p><span>Do they have the appetite for building compliance programs, managing underwriting processes and handling customer support for merchants? Or is the opportunity simply to generate incremental revenue without overhauling core operations?</span></p>\n<p><span>\u201cPayFac is a very intricate space, has many layers, and there are many, many options,\u201d Dew said.</span></p>\n<p><span>Discover Network, for instance, launched its PayFac registration program two years ago and already counts hundreds of registered PayFacs.</span></p>\n<p><span>Perhaps the most consequential decision is choosing between becoming a registered PayFac or opting for the managed option, sometimes called PayFac-as-a-Service.</span></p>\n<p><span>A registered PayFac has maximum control but is subject to longer timelines and uses more resources. Meanwhile, PayFac-as-a-Service offers speed and simplicity. Providers handle much of the operational heavy lifting, from onboarding to compliance.</span></p>\n<p><span>\u201cIt could take as little as four weeks because of the lighter technology lift and these plug-and-play solutions,\u201d Dew said.</span></p>\n<p><span>Even for those with clear intent around their business transformation goals, the early PayFac decisions can be make-or-break. Choosing the right acquiring partner, navigating card network registrations and managing risk infrastructure are formidable undertakings.</span></p>\n<h2><b><span>Building for the Future</span></b> <b><span>in a Crowded Market</span></b></h2>\n<p><span>For PayFacs that succeed domestically, the next logical question is scale. Yet scaling internationally reveals another layer of complexity. Vertical specialization, which is often the key to early success, can later become a barrier to broader expansion.</span></p>\n<p><span>To break out of niche markets, companies must lean heavily on technology and partnerships, and here providers like Discover Network play a role.</span></p>\n<p><span>\u201cWe are a global payments network supporting PayFac with dedicated teams, not only in the U.S. and Canada, but across the globe, including APAC, EMEA and LatAm,\u201d Dew said</span></p>\n<p><span>The operational mechanics of such relationships are not trivial. Dew pointed to the importance of enabling full Discover Network acceptance by integrating all issuer identification number (IIN) ranges, ensuring transactions from network alliances can ride on the network\u2019s rails seamlessly.</span></p>\n<p><span>The vision? A PayFac in Chicago should be able to support a merchant with customers in Tokyo or S\u00e3o Paulo without the merchant realizing the complexity behind the scenes.</span></p>\n<h2><b><span>The Bigger Picture</span></b></h2>\n<p><span>For all the focus on infrastructure, PayFac success ultimately comes down to the merchant experience.</span></p>\n<p><span>\u201cFor the simple answer, it\u2019s pivotal,\u201d Dew said. \u201cThe merchant experience is pivotal to a PayFac\u2019s success. It really goes without saying that a PayFac should act as a partner to their merchants, working closely with them to enhance their business, rather than just providing the payments processing piece.\u201d</span></p>\n<p><span>That means more seamless onboarding, transparent pricing, responsive multichannel support and robust dashboards for real-time analytics. These elements may sound like table stakes, but Dew said they are what separate thriving PayFacs from struggling ones.</span></p>\n<p><span>\u201cSuccessful PayFacs will leverage those strategic partnerships that they already have and make and forge new ones,\u201d he said. \u201c&#8230;They should also think about offering embedded financial services.\u201d</span></p>\n<p><span>\u201cThe PayFac model has and continues to evolve, and I think we all know that it\u2019s moving beyond just payments,\u201d he added.</span></p>\n<p><span>Ultimately, the PayFac model is not simply about making payments easier. It is about reimagining how payments function within business models. As the market matures, differentiation may hinge less on whether a company can become a PayFac and more on what it can do with that capability.</span></p>\n<p><span>\u201cInvesting in emerging technology like digital wallets, real-time payments and also AI-driven fraud detection is very important,\u201d Dew said. \u201cDo your research and leverage connections. At Discover [Network], we provide dedicated support and integrated options to help PayFacs grow, streamline processes and build trust.\u201d</span></p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/commerce/2025/discover-network-the-future-of-commerce-runs-through-payfac-rails/\">Discover Network: The Future of Commerce Runs Through PayFac Rails</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
     "image_url": "https://www.pymnts.com/wp-content/uploads/2025/11/discover.jpg?w=457",
     "summary_text": "Watch more: Need to Know: Discover Network\u2019s Dave Dew The history of payments can be separated into two eras: before the payment facilitator and after the payment facilitator. Known in the industry as a PayFac, this model has transformed from a niche operatio...",
     "category": "fintech",
-    "_permalink": "/p/dbeac73fca/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/dbeac73fca/",
+    "_trending_tags": [
+      "ai"
+    ],
+    "_permalink": "/p/0dcc4f6a91/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/0dcc4f6a91/",
     "_summary_240": "Watch more: Need to Know: Discover Network\u2019s Dave Dew The history of payments can be separated into two eras: before the payment facilitator and after the payment facilitator....",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/dbeac73fca/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/0dcc4f6a91/thumbnail.png"
   },
   {
     "title": "NVDA EPS Call: Not A Fan of Jensen's Stretching of the Truth",
@@ -897,7 +985,11 @@
     "_trending_tags": [
       "ai",
       "openai"
-    ]
+    ],
+    "_permalink": "/p/517922bd87/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/517922bd87/",
+    "_summary_240": "OpenAI is partnering with DoorDash, SCORE, and local organizations to help 1,000 small businesses build with AI. The Small Business AI Jam gives Main Street business owners...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/517922bd87/thumbnail.png"
   },
   {
     "title": "1 in 3 young investors switched advisers over crypto access: Survey",
@@ -1233,14 +1325,14 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/4c10e5e2ec/thumbnail.png"
   },
   {
-    "title": "Nvidia\u2019s Upbeat Forecast Soothes Fears of AI Market Bubble",
+    "title": "Nvidia Downplays Bubble Fears, Though Post-Earnings Rally Fades",
     "url": "https://www.bloomberg.com/news/articles/2025-11-19/nvidia-gives-strong-forecast-helping-counter-fears-of-ai-bubble",
     "published_at": "2025-11-19T16:23:13-05:00",
     "source": "Bloomberg Technology",
-    "summary": "Nvidia Corp. delivered a surprisingly strong revenue forecast and pushed back on the idea that the AI industry is in a bubble, easing concerns that had spread across the tech sector.",
+    "summary": "A rally in Nvidia Corp. shares fizzled on Thursday after investors shrugged off a stronger-than-expected revenue forecast and assurances that the AI economy wasn\u2019t in a bubble.",
     "content_html": "",
     "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iRaN7PjMl78k/v3/1200x-1.png",
-    "summary_text": "Nvidia Corp. delivered a surprisingly strong revenue forecast and pushed back on the idea that the AI industry is in a bubble, easing concerns that had spread across the tech sector.",
+    "summary_text": "A rally in Nvidia Corp. shares fizzled on Thursday after investors shrugged off a stronger-than-expected revenue forecast and assurances that the AI economy wasn\u2019t in a bubble.",
     "category": "ai",
     "_trending_tags": [
       "ai",
@@ -1284,24 +1376,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/30387e9b37/",
     "_summary_240": "What does it mean for NVIDIA\u2019s long-term outlook given that Gemini 3.0 was entirely trained and entirely operates on Google\u2019s TPU chips and infrastructure, not NVIDIA hardware?",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/30387e9b37/thumbnail.png"
-  },
-  {
-    "title": "VC Jennifer Neundorfer explains how founders can stand out in a crowded AI market",
-    "url": "https://techcrunch.com/2025/11/19/vc-jennifer-neundorfer-explains-how-founders-can-stand-out-in-a-crowded-ai-market/",
-    "published_at": "2025-11-19T15:30:00-05:00",
-    "source": "TechCrunch",
-    "summary": "Founders and investors alike are obsessed with AI, and even Neundorfer said her firm, January Ventures, is looking at ways to use AI to make their work more efficient, such as helping to do due diligence on the market and competition.",
-    "content_html": "",
-    "image_url": "https://techcrunch.com/wp-content/uploads/2025/11/54886289739_6fa8cfb36d_o.jpg?resize=1200,800",
-    "summary_text": "Founders and investors alike are obsessed with AI, and even Neundorfer said her firm, January Ventures, is looking at ways to use AI to make their work more efficient, such as helping to do due diligence on the market and competition.",
-    "category": "ai",
-    "_trending_tags": [
-      "ai"
-    ],
-    "_permalink": "/p/2323ba4fe7/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/2323ba4fe7/",
-    "_summary_240": "Founders and investors alike are obsessed with AI, and even Neundorfer said her firm, January Ventures, is looking at ways to use AI to make their work more efficient, such as...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/2323ba4fe7/thumbnail.png"
   },
   {
     "title": "Larry Summers Resigns From OpenAI\u2019s Board",
@@ -1614,22 +1688,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/b1cae55af3/",
     "_summary_240": "The sector is expanding far beyond its giant IT service companies",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/b1cae55af3/thumbnail.png"
-  },
-  {
-    "title": "Meta\u2019s DreamGym framework trains AI agents in a simulated world to cut reinforcement learning costs",
-    "url": "https://venturebeat.com/ai/metas-dreamgym-framework-trains-ai-agents-in-a-simulated-world-to-cut",
-    "published_at": "2025-11-18T19:00:00-05:00",
-    "source": "VentureBeat",
-    "summary": "Researchers at Meta, the University of Chicago, and UC Berkeley have developed a new framework that addresses the high costs, infrastructure complexity, and unreliable feedback associated with using reinforcement learning (RL) to train large language model (LLM) agents. The framework, DreamGym , simulates an RL environment to train agents for complex applications. As it progresses through the tra...",
-    "content_html": "",
-    "image_url": "",
-    "summary_text": "Researchers at Meta, the University of Chicago, and UC Berkeley have developed a new framework that addresses the high costs, infrastructure complexity, and unreliable feedback associated with using reinforcement learning (RL) to train large language model (L...",
-    "category": "software",
-    "_trending_tags": [
-      "agent",
-      "ai",
-      "meta"
-    ]
   },
   {
     "title": "How Scania is accelerating work with AI across its global workforce",
