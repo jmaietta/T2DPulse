@@ -1,5 +1,42 @@
 [
   {
+    "title": "Global tech stocks rally after Nvidia earnings bolster AI bulls",
+    "url": "https://www.ft.com/content/2c0bb19c-7c64-453f-95ab-c0f54a184089",
+    "published_at": "2025-11-20T08:41:51-05:00",
+    "source": "Financial Times - Technology",
+    "summary": "Markets climb as chipmaker shrugs off bubble concerns",
+    "content_html": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/453b39a6-4e48-47a6-a7a6-375838880672.png",
+    "summary_text": "Markets climb as chipmaker shrugs off bubble concerns",
+    "category": "ai",
+    "_trending_tags": [
+      "ai",
+      "nvidia"
+    ],
+    "_permalink": "/p/110f241454/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/110f241454/",
+    "_summary_240": "Markets climb as chipmaker shrugs off bubble concerns",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/110f241454/thumbnail.png"
+  },
+  {
+    "title": "Europe\u2019s tech sector is evolving fast. Is it fast enough?",
+    "url": "https://www.ft.com/content/6e8706c8-6227-489d-9e1b-d5205697d4e7",
+    "published_at": "2025-11-20T08:31:47-05:00",
+    "source": "Financial Times - Technology",
+    "summary": "Despite record expansion and growing ambition in the continent, the US is surging ahead again",
+    "content_html": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/79d4f212-428f-467d-97fd-12fbc76f5bc4.jpg",
+    "summary_text": "Despite record expansion and growing ambition in the continent, the US is surging ahead again",
+    "category": "fintech",
+    "_trending_tags": [
+      "ai"
+    ],
+    "_permalink": "/p/e3aa8de644/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/e3aa8de644/",
+    "_summary_240": "Despite record expansion and growing ambition in the continent, the US is surging ahead again",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/e3aa8de644/thumbnail.png"
+  },
+  {
     "title": "The FCC wants to roll back steps meant to stop a repeat of a massive telecom hack",
     "url": "https://www.theverge.com/policy/824508/fcc-telecom-salt-typhoon-hack",
     "published_at": "2025-11-20T08:30:00-05:00",
@@ -82,25 +119,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/8c63403299/",
     "_summary_240": "Samourai Wallet\u2019s co-founders received four- and five-year prison terms in the US for operating an unlicensed money-transmitting business through their non-custodial crypto mixer.",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/8c63403299/thumbnail.png"
-  },
-  {
-    "title": "Global tech stocks rally after Nvidia earnings bolster AI bulls",
-    "url": "https://www.ft.com/content/2c0bb19c-7c64-453f-95ab-c0f54a184089",
-    "published_at": "2025-11-20T07:33:52-05:00",
-    "source": "Financial Times - Technology",
-    "summary": "Markets climb as chipmaker shrugs off bubble concerns",
-    "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/453b39a6-4e48-47a6-a7a6-375838880672.png",
-    "summary_text": "Markets climb as chipmaker shrugs off bubble concerns",
-    "category": "ai",
-    "_trending_tags": [
-      "ai",
-      "nvidia"
-    ],
-    "_permalink": "/p/a2e32dfd3e/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/a2e32dfd3e/",
-    "_summary_240": "Markets climb as chipmaker shrugs off bubble concerns",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/a2e32dfd3e/thumbnail.png"
   },
   {
     "title": "The AI Shift: Do we prefer talking to machines rather than each other?",
@@ -1094,17 +1112,13 @@
     "source": "Financial Times - Technology",
     "summary": "Wall Street shares have seen big swings this week as investors brace for all-important earnings from AI bellwether",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/6c3909c3-aa63-4996-8db5-4a1ab09cbee6.jpg",
+    "image_url": "",
     "summary_text": "Wall Street shares have seen big swings this week as investors brace for all-important earnings from AI bellwether",
     "category": "ai",
     "_trending_tags": [
       "ai",
       "nvidia"
-    ],
-    "_permalink": "/p/eee5cea506/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/eee5cea506/",
-    "_summary_240": "Wall Street shares have seen big swings this week as investors brace for all-important earnings from AI bellwether",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/eee5cea506/thumbnail.png"
+    ]
   },
   {
     "title": "The Google Search of AI agents? Fetch launches ASI:One and Business tier for new era of non-human web",
@@ -1255,16 +1269,12 @@
     "source": "Financial Times - Technology",
     "summary": "Algorithms and generative AI models that decide what billions of users see should be transparent",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/4cbab655-68ec-4d9e-bde7-be8eb481e468.jpg",
+    "image_url": "",
     "summary_text": "Algorithms and generative AI models that decide what billions of users see should be transparent",
     "category": "ai",
     "_trending_tags": [
       "ai"
-    ],
-    "_permalink": "/p/6828953d1c/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/6828953d1c/",
-    "_summary_240": "Algorithms and generative AI models that decide what billions of users see should be transparent",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/6828953d1c/thumbnail.png"
+    ]
   },
   {
     "title": "How evals drive the next chapter in AI for businesses",
@@ -1318,18 +1328,14 @@
     "source": "Financial Times - Technology",
     "summary": "Nasdaq lower as heavyweights including Nvidia and Microsoft sustain steep falls",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/8ce46e40-1d71-4cad-99d4-07a83027b203.png",
+    "image_url": "",
     "summary_text": "Nasdaq lower as heavyweights including Nvidia and Microsoft sustain steep falls",
     "category": "ai",
     "_trending_tags": [
       "ai",
       "microsoft",
       "nvidia"
-    ],
-    "_permalink": "/p/5dc8694a0a/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/5dc8694a0a/",
-    "_summary_240": "Nasdaq lower as heavyweights including Nvidia and Microsoft sustain steep falls",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/5dc8694a0a/thumbnail.png"
+    ]
   },
   {
     "title": "How TikTok Helped Meta Land an Antitrust Victory",
@@ -1356,13 +1362,9 @@
     "source": "Financial Times - Technology",
     "summary": "The sector is expanding far beyond its giant IT service companies",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/848491d5-8ae9-48e9-a8d9-652d468edff7.jpg",
+    "image_url": "",
     "summary_text": "The sector is expanding far beyond its giant IT service companies",
-    "category": "fintech",
-    "_permalink": "/p/b1cae55af3/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/b1cae55af3/",
-    "_summary_240": "The sector is expanding far beyond its giant IT service companies",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/b1cae55af3/thumbnail.png"
+    "category": "fintech"
   },
   {
     "title": "Meta\u2019s DreamGym framework trains AI agents in a simulated world to cut reinforcement learning costs",
@@ -1456,24 +1458,6 @@
       "chatgpt",
       "gpt"
     ]
-  },
-  {
-    "title": "Fund managers warn AI investment boom has gone too far",
-    "url": "https://www.ft.com/content/e2d93034-ef3b-4259-9ab1-c45396ca59b3",
-    "published_at": "2025-11-18T16:13:33-05:00",
-    "source": "Financial Times - Technology",
-    "summary": "Bank of America survey shows a majority of investors think companies are spending too much on AI infrastructure",
-    "content_html": "",
-    "image_url": "https://images.ft.com/v3/image/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F3485cd86-5e11-4587-b03d-39a03b688381.jpg?source=next-article&fit=scale-down&quality=highest&width=700&dpr=1",
-    "summary_text": "Bank of America survey shows a majority of investors think companies are spending too much on AI infrastructure",
-    "category": "ai",
-    "_trending_tags": [
-      "ai"
-    ],
-    "_permalink": "/p/aff8c6cea1/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/aff8c6cea1/",
-    "_summary_240": "Bank of America survey shows a majority of investors think companies are spending too much on AI infrastructure",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/aff8c6cea1/thumbnail.png"
   },
   {
     "title": "Tech giants pour billions into Anthropic as circular AI investments roll on",
