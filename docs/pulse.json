@@ -1,22 +1,170 @@
 [
   {
+    "title": "How Much Longer Will NVIDIA and Microsoft Subsidize OpenAI and Anthropic?",
+    "url": "https://newsletter.tek2dayholdings.com/p/how-much-longer-will-nvidia-and-microsoft",
+    "published_at": "2025-11-20T10:16:55-05:00",
+    "source": "TEK2day Newsletter",
+    "summary": "Google does not require financial assistance.",
+    "content_html": "<div class=\"captioned-image-container\"><figure><a class=\"image-link image2 is-viewable-img\" href=\"https://substackcdn.com/image/fetch/$s_!yIVF!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F7b611f78-8cda-45a9-bb4d-2d665b9a30b4_1075x768.png\" target=\"_blank\"><div class=\"image2-inset\"><source type=\"image/webp\" /><img alt=\"\" class=\"sizing-normal\" height=\"768\" src=\"https://substackcdn.com/image/fetch/$s_!yIVF!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F7b611f78-8cda-45a9-bb4d-2d665b9a30b4_1075x768.png\" width=\"1075\" /><div class=\"image-link-expand\"><div class=\"pencraft pc-display-flex pc-gap-8 pc-reset\"><button class=\"pencraft pc-reset pencraft icon-container restack-image\" tabindex=\"0\" type=\"button\"><svg class=\"lucide lucide-refresh-cw\" fill=\"none\" height=\"20\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" viewBox=\"0 0 24 24\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8\"></path><path d=\"M21 3v5h-5\"></path><path d=\"M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16\"></path><path d=\"M8 16H3v5\"></path></svg></button><button class=\"pencraft pc-reset pencraft icon-container view-image\" tabindex=\"0\" type=\"button\"><svg class=\"lucide lucide-maximize2 lucide-maximize-2\" fill=\"none\" height=\"20\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" viewBox=\"0 0 24 24\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><polyline points=\"15 3 21 3 21 9\"></polyline><polyline points=\"9 21 3 21 3 15\"></polyline><line x1=\"21\" x2=\"14\" y1=\"3\" y2=\"10\"></line><line x1=\"3\" x2=\"10\" y1=\"21\" y2=\"14\"></line></svg></button></div></div></div></a></figure></div><p>I am stating the obvious that while Google (GOOGL), xAI and Meta (META) have substantial balance sheets (I am not including Microsoft (MSFT) in this group as the company has no real ambition of building a frontier LLM), OpenAI and Anthropic do not. Cash infusions from NVIDIA (NVDA) and Microsoft can only take OpenAI and Anthropic so far. Heck, <a href=\"https://www.bloomberg.com/news/articles/2025-08-19/how-pimco-outmaneuvered-apollo-kkr-to-win-29-billion-meta-deal\">even META had to tap the debt market to finance its CapEx initiatives</a>. </p><p>I don&#8217;t know when, perhaps as early as the next model cycle in late 2026/ early 2027, OpenAI and Anthropic will find the LLM business cost prohibitive without enormous financial assistance. Perhaps at that juncture NVIDIA will move to take control of OpenAI or Anthropic. We&#8217;ll see how serious NVIDIA is about Gen AI then. </p><p>Personally, I believe that Anthropic would fit well with Google. Google can play this game all day. AI and data centers are its core business, always have been.  </p><div><hr /></div><p>Here&#8217;s a fun exercise for the weekend: Arrive at what you believe is NVDA&#8217;s fair value based on your Revenue and cash flow outlook (or however you want to do it). Next, consolidate OpenAI&#8217;s financials. OpenAI will be at an ARR of $20 billion by calendar year-end 2025. For simplicity sake, call it $20 billion in 2025 revenue. OpenAI has a loss of $25 billion through September, I believe it will be a $40 billion loss for 2025 (assume net loss equals free cash flow loss). Next, add the $20 billion of revenue and $40 billion loss to NVIDIA&#8217;s figures. What is NVDA&#8217;s fair value under that scenario? My view is that OpenAI&#8217;s loss will be $50-60 billion in 2026 if you wsih to carry your assumptions forward on perhaps $30-40 billion of revenue. </p><div><hr /></div><p></p>",
+    "image_url": "https://substackcdn.com/image/fetch/$s_!yIVF!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F7b611f78-8cda-45a9-bb4d-2d665b9a30b4_1075x768.png",
+    "summary_text": "Google does not require financial assistance.",
+    "category": "ai",
+    "_trending_tags": [
+      "ai",
+      "anthropic",
+      "google",
+      "microsoft",
+      "nvidia",
+      "openai"
+    ],
+    "_permalink": "/p/9a87ce8901/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/9a87ce8901/",
+    "_summary_240": "Google does not require financial assistance.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/9a87ce8901/thumbnail.png"
+  },
+  {
+    "title": "ChatGPT Atlas adds Arc-like vertical tabs",
+    "url": "https://www.theverge.com/news/825036/openai-chatgpt-atlas-arc-vertical-tabs-update",
+    "published_at": "2025-11-20T10:04:02-05:00",
+    "source": "The Verge",
+    "summary": "OpenAI is updating ChatGPT Atlas with vertical tabs that make it look a bit like the Arc browser. Now, instead of opening a new tab at the top of the AI-powered browser, you can change your tab style to access them within a left-hand sidebar. Similar to Arc, you can resize the sidebar on ChatGPT [\u2026]",
+    "content_html": "<figure>\n\n<img alt=\"\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/10/STKB372_CHAT_GPT_ATLAS_C.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100\" />\n\t<figcaption>\n\t\t</figcaption>\n</figure>\n<p class=\"has-text-align-none\">OpenAI is <a href=\"https://x.com/adamhfry/status/1991209533046493486?s=61\">updating ChatGPT Atlas</a> with vertical tabs that make it <a href=\"https://www.theverge.com/23462235/arc-web-browser-review\">look a bit like the Arc browser</a>. Now, instead of opening a new tab at the top of the AI-powered browser, you can change your tab style to access them within a left-hand sidebar.</p>\n\n<p class=\"has-text-align-none\">Similar to Arc, you can resize the sidebar on ChatGPT Atlas, as well as reorder your tabs. The new sidebar still isn\u2019t as full-featured as Arc\u2019s, however, and the address bar remains at the top of your screen. You can try out vertical tabs on ChatGPT Atlas by right-clicking inside the address bar, hovering over \u201cTab Style,\u201d and then choosing \u201cVertical Tabs.\u201d</p>\n\n<figure class=\"wp-block-embed is-type-rich is-provider-twitter wp-block-embed-twitter\"><div class=\"wp-block-embed__wrapper\">\n<blockquote class=\"twitter-tweet\"><p dir=\"ltr\" lang=\"en\">New ChatGPT Atlas release out! Just hit &quot;update&quot; in the top right. <a href=\"https://t.co/mJ6IJW0YKu\">https://t.co/mJ6IJW0YKu</a><br /><br />&#8211; extensions import<br />&#8211; icloud passkeys<br />&#8211; new downloads ui<br />&#8211; setting to use control + tab to cycle to most recently used tab<br />&#8211; select multiple tabs at once (shift + click)<br />&#8211; ability to set\u2026 <a href=\"https://t.co/jWoNPHcx7V\">pic.twitter.com/jWoNPHcx7V</a></p>&mdash; Adam Fry (@adamhfry) <a href=\"https://twitter.com/adamhfry/status/1991209533046493486?ref_src=twsrc%5Etfw\">November 19, 2025</a></blockquote>\n</div></figure>\n\n<p class=\"has-text-align-none\">Along with this change, you can now set Google as your default search engine, which makes sense since using the browser sometimes <a href=\"https://www.theverge.com/ai-artificial-intelligence/804931/openai-chatgpt-atlas-hands-on-google-search\">feels like Googling with extra steps</a>. Otherwise, ChatGPT Atlas will present you with around 10 relevant sources it found across the web, with a link to Google Search results in the top-right corner of the screen.</p>\n\n<p class=\"has-text-align-none\">Some other updates include the ability to select and drag multiple tabs by holding down Command or Shift and clicking. You can also import your extensions from your existing browser when downloading Atlas, though this feature isn\u2019t yet available for existing users. There\u2019s an improved downloads interface as well, in addition to support for iCloud keychain passkeys.</p>\n\n<p class=\"has-text-align-none\"><a href=\"https://www.theverge.com/ai-artificial-intelligence/804931/openai-chatgpt-atlas-hands-on-google-search\">ChatGPT Atlas launched on macOS last month</a>, becoming the newest addition to AI-enabled browsing experiences alongside Perplexity\u2019s Comet and Google\u2019s Gemini extension in Chrome. With ChatGPT Atlas, you can either enter a URL or type in a question that will be answered by ChatGPT. You can view the full list of changes <a href=\"https://help.openai.com/en/articles/12591856-chatgpt-atlas-release-notes\">on OpenAI\u2019s website</a>.</p>",
+    "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/10/STKB372_CHAT_GPT_ATLAS_C.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "summary_text": "OpenAI is updating ChatGPT Atlas with vertical tabs that make it look a bit like the Arc browser. Now, instead of opening a new tab at the top of the AI-powered browser, you can change your tab style to access them within a left-hand sidebar. Similar to Arc, ...",
+    "category": "ai",
+    "_trending_tags": [
+      "ai",
+      "chatgpt",
+      "gpt",
+      "openai"
+    ],
+    "_permalink": "/p/3d5bf97f5a/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/3d5bf97f5a/",
+    "_summary_240": "OpenAI is updating ChatGPT Atlas with vertical tabs that make it look a bit like the Arc browser. Now, instead of opening a new tab at the top of the AI-powered browser, you can...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/3d5bf97f5a/thumbnail.png"
+  },
+  {
+    "title": "Another fire breaks out at aluminum plant that supplies Ford",
+    "url": "https://techcrunch.com/2025/11/20/another-fire-breaks-out-at-aluminum-plant-that-supplies-ford/",
+    "published_at": "2025-11-20T10:01:33-05:00",
+    "source": "TechCrunch",
+    "summary": "It's the second major fire -- and the third overall -- in the last few months at the Novelis plant in Oswego, NY.",
+    "content_html": "",
+    "image_url": "https://techcrunch.com/wp-content/uploads/2023/11/GettyImages-1741629073.jpg?resize=1200,800",
+    "summary_text": "It's the second major fire -- and the third overall -- in the last few months at the Novelis plant in Oswego, NY.",
+    "category": "fintech",
+    "_permalink": "/p/dc5e398144/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/dc5e398144/",
+    "_summary_240": "It's the second major fire -- and the third overall -- in the last few months at the Novelis plant in Oswego, NY.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/dc5e398144/thumbnail.png"
+  },
+  {
+    "title": "Google Tackles AI's Spelling Problem in New Image Generation Model",
+    "url": "https://www.bloomberg.com/news/articles/2025-11-20/google-tackles-ai-s-spelling-problem-with-new-nano-banana-image-generation-model",
+    "published_at": "2025-11-20T10:00:36-05:00",
+    "source": "Bloomberg Technology",
+    "summary": "As confident as artificial intelligence assistants can sound in chat responses, if you ask them to generate an image containing several text phrases, chances are the resulting imagery will contain some typos or distorted fonts.",
+    "content_html": "The logo of the Google Chrome browser on a smartphone arranged in Riga, Latvia, on Wednesday, Aug. 13, 2025. AI startup Perplexity made a formal offer to acquire Google\u2019s Chrome browser for $34.5 billion, an audacious bid to get ahead of a potential requirement for the search giant to sell the web browser in US antitrust proceedings.",
+    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iPZ_9J219AK0/v1/1200x-1.jpg",
+    "summary_text": "As confident as artificial intelligence assistants can sound in chat responses, if you ask them to generate an image containing several text phrases, chances are the resulting imagery will contain some typos or distorted fonts.",
+    "category": "ai",
+    "_trending_tags": [
+      "ai",
+      "google"
+    ],
+    "_permalink": "/p/0b10eaa2d1/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/0b10eaa2d1/",
+    "_summary_240": "As confident as artificial intelligence assistants can sound in chat responses, if you ask them to generate an image containing several text phrases, chances are the resulting...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/0b10eaa2d1/thumbnail.png"
+  },
+  {
+    "title": "Google Gemini is getting better at identifying AI fakes",
+    "url": "https://www.theverge.com/news/824786/google-gemini-synthid-ai-image-detection",
+    "published_at": "2025-11-20T10:00:00-05:00",
+    "source": "The Verge",
+    "summary": "Google is making it easier for Gemini users to detect at least some AI-generated content. From today, you\u2019ll be able to use the Gemini app to determine if an image was either created or edited by a Google AI tool, simply by asking Gemini \u201cIs this AI-generated?\u201d While the initial launch is limited to images, [\u2026]",
+    "content_html": "<figure>\n\n<img alt=\"\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/11/SynthID-image.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100\" />\n\t<figcaption>\n\t\t</figcaption>\n</figure>\n<p class=\"has-text-align-none\">Google is making it easier for Gemini users to detect at least some AI-generated content. From today, you\u2019ll be able to use the Gemini app to determine if an image was either created or edited by a Google AI tool, simply by asking Gemini \u201cIs this AI-generated?\u201d</p>\n\n<p class=\"has-text-align-none\">While the initial launch is limited to images, Google says verification of video and audio will come \u201csoon,\u201d and it also intends to expand the functionality beyond the Gemini app, including into Search.</p>\n\n<p class=\"has-text-align-none\">The more important expansion will come further down the line, when Google extends verification to support industry-wide <a href=\"https://www.theverge.com/2024/8/21/24223932/c2pa-standard-verify-ai-generated-images-content-credentials\">C2PA content credentials</a>. The initial image verification is based only on <a href=\"https://www.theverge.com/2023/8/29/23849107/synthid-google-deepmind-ai-image-detector\">SynthID</a>, Google\u2019s own invisible AI watermarking, but an expansion to C2PA would make it possible to detect the source of content generated by a wider variety of AI tools and creative software, including <a href=\"https://www.theverge.com/ai-artificial-intelligence/791290/openai-sora-ai-generated-video-hands-on\">OpenAI\u2019s Sora</a>.&nbsp;</p>\n\n<p class=\"has-text-align-none\">Google also announced that images generated by its <a href=\"https://www.theverge.com/news/824785/google-nano-banana-pro-try-free-examples-prices\">Nano Banana Pro model</a>, also revealed today, will have C2PA metadata embedded. It\u2019s the second bit of good news for C2PA this week, after TikTok confirmed it would use C2PA metadata as part of its own <a href=\"https://www.theverge.com/news/823775/tiktok-ai-generated-content-controls-manage-topics\">invisible watermarking for AI-generated content</a>.</p>\n\n<p class=\"has-text-align-none\">Manual content verification in Gemini is a useful step, but C2PA credentials, and other watermarks like SynthID, won\u2019t be truly useful until social media platforms get better at <a href=\"https://www.theverge.com/report/806359/openai-sora-deepfake-detection-c2pa-content-credentials\">flagging AI-generated content automatically</a>, rather than putting the onus on users to confirm for themselves.</p>\n\n<p class=\"has-text-align-none\"></p>",
+    "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/11/SynthID-image.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "summary_text": "Google is making it easier for Gemini users to detect at least some AI-generated content. From today, you\u2019ll be able to use the Gemini app to determine if an image was either created or edited by a Google AI tool, simply by asking Gemini \u201cIs this AI-generated...",
+    "category": "ai",
+    "_trending_tags": [
+      "ai",
+      "google"
+    ],
+    "_permalink": "/p/9e96bc3538/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/9e96bc3538/",
+    "_summary_240": "Google is making it easier for Gemini users to detect at least some AI-generated content. From today, you\u2019ll be able to use the Gemini app to determine if an image was either...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/9e96bc3538/thumbnail.png"
+  },
+  {
+    "title": "Google releases Nano Banana Pro, its latest image generation model",
+    "url": "https://techcrunch.com/2025/11/20/google-releases-nano-banana-pro-its-latest-image-generation-model/",
+    "published_at": "2025-11-20T10:00:00-05:00",
+    "source": "TechCrunch",
+    "summary": "Google is upgrading its image generation model with new editing chops, higher resolutions, more accurate text rendering, and the ability to search the web.",
+    "content_html": "",
+    "image_url": "https://techcrunch.com/wp-content/uploads/2025/11/GEMINI-Woodchuck.jpeg?resize=1200,655",
+    "summary_text": "Google is upgrading its image generation model with new editing chops, higher resolutions, more accurate text rendering, and the ability to search the web.",
+    "category": "ai",
+    "_trending_tags": [
+      "google"
+    ],
+    "_permalink": "/p/73eceeb494/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/73eceeb494/",
+    "_summary_240": "Google is upgrading its image generation model with new editing chops, higher resolutions, more accurate text rendering, and the ability to search the web.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/73eceeb494/thumbnail.png"
+  },
+  {
     "title": "US tech stocks surge after Nvidia earnings bolster AI bulls",
     "url": "https://www.ft.com/content/2c0bb19c-7c64-453f-95ab-c0f54a184089",
-    "published_at": "2025-11-20T09:30:53-05:00",
+    "published_at": "2025-11-20T09:53:50-05:00",
     "source": "Financial Times - Technology",
-    "summary": "Nasdaq jumps 2.2% as chipmaker shrugs off bubble concerns",
+    "summary": "Nasdaq jumps 2.3% as chipmaker shrugs off bubble concerns",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/5821f0e5-3f4a-46a5-b8be-442af7dd83a6.jpg",
-    "summary_text": "Nasdaq jumps 2.2% as chipmaker shrugs off bubble concerns",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/b7cdfccd-944c-4932-bd71-a05cd181746c.png",
+    "summary_text": "Nasdaq jumps 2.3% as chipmaker shrugs off bubble concerns",
     "category": "ai",
     "_trending_tags": [
       "ai",
       "nvidia"
     ],
-    "_permalink": "/p/41823ccc36/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/41823ccc36/",
-    "_summary_240": "Nasdaq jumps 2.2% as chipmaker shrugs off bubble concerns",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/41823ccc36/thumbnail.png"
+    "_permalink": "/p/4fadc5b4fc/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/4fadc5b4fc/",
+    "_summary_240": "Nasdaq jumps 2.3% as chipmaker shrugs off bubble concerns",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/4fadc5b4fc/thumbnail.png"
+  },
+  {
+    "title": "Reserve Bank of India Has Reservations About Stablecoins",
+    "url": "https://www.pymnts.com/cryptocurrency/2025/reserve-bank-india-has-reservations-about-stablecoins/",
+    "published_at": "2025-11-20T09:52:38-05:00",
+    "source": "PYMNTS",
+    "summary": "India\u2019s central bank is reportedly taking a cautious stance on stablecoins and other cryptocurrencies. \u201cStablecoins, cryptos, they have a huge risk, and so we are adopting a very cautious approach towards it,\u201d Reserve Bank of India Governor Sanjay Malhotra said Thursday (Nov. 20) in a lecture at the Delhi School of Economics, Reuters reported [\u2026] The post Reserve Bank of India Has Reservations Ab...",
+    "content_html": "<p><span>India\u2019s central bank is reportedly taking a cautious stance on stablecoins and other cryptocurrencies.</span></p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p><span>\u201cStablecoins, cryptos, they have a huge risk, and so we are adopting a very cautious approach towards it,\u201d </span><a class=\"editor-rtfLink\" href=\"https://www.rbi.org.in/\" rel=\"noopener\" target=\"_blank\"><span>Reserve Bank of India</span></a><span> Governor </span><a class=\"editor-rtfLink\" href=\"https://iitk.ac.in/dora/profile/Mr-Sanjay-Malhotra\" rel=\"noopener\" target=\"_blank\"><span>Sanjay Malhotra</span></a><span> said Thursday (Nov. 20) in a lecture at the Delhi School of Economics, Reuters </span><a class=\"editor-rtfLink\" href=\"https://www.reuters.com/world/india/being-cautious-about-cryptocurrencies-stablecoins-india-cenbank-chief-says-2025-11-20/\" rel=\"noopener\" target=\"_blank\"><span>reported</span></a><span> Thursday.</span></p>\n<p><span>Additionally, </span><a class=\"editor-rtfLink\" href=\"https://www.linkedin.com/in/v-anantha-nageswaran-37a588225/\" rel=\"noopener\" target=\"_blank\"><span>V. Anantha Nageswaran</span></a><span>, India\u2019s chief economic adviser, said at an </span><a class=\"editor-rtfLink\" href=\"https://www.imf.org/en/home\" rel=\"noopener\" target=\"_blank\"><span>International Monetary Fund</span></a><span> and </span><a class=\"editor-rtfLink\" href=\"https://www.worldbank.org/ext/en/home\" rel=\"noopener\" target=\"_blank\"><span>World Bank</span></a><span> event last month that the increasing popularity of dollar-backed stablecoins will become a key phenomenon next year and could lead to challenges for monetary policy globally, per the report.</span></p>\n<p><span>Dollar-backed stablecoins now have a market capitalization of more $300 billion, while the overall market cap of crypto tokens has surpassed $4 trillion, the report said, citing data provider </span><a class=\"editor-rtfLink\" href=\"https://www.coingecko.com/\" rel=\"noopener\" target=\"_blank\"><span>CoinGecko</span></a><span>.</span></p>\n<p><span>Malhotra said the RBI wants to promote its </span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/cbdc/2021/india-central-bank-eyes-digital-currency-trial-run-in-2022\" rel=\"noopener\" target=\"_blank\"><span>central bank digital currency</span></a><span> before stablecoins or cryptocurrencies, according to the report. He said the government must have the final say in whether cryptocurrencies should be regulated in India.</span></p>\n<p><span>\u201cThere is a working group that was set up earlier, and they will take a final call as to how, if at all, crypto is to be handled in our country,\u201d Malhotra said, per the report.</span></p>\n<p><span>India prefers not to create legislation to regulate crypto and will instead maintain partial oversight out of concern that integrating the assets into mainstream finance could pose a systemic threat, the report said.</span></p>\n<p><span>Malhotra\u2019s comments came one day after the </span><a class=\"editor-rtfLink\" href=\"https://www.fsb.org/\" rel=\"noopener\" target=\"_blank\"><span>Financial Stability Board</span></a><span> announced plans to increase its focus on </span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/cryptocurrency/2025/fsb-sharpens-focus-on-stablecoins-and-nbfi-saying-they-raise-vulnerabilities/\" rel=\"noopener\" target=\"_blank\"><span>stablecoins</span></a><span> and nonbank financial intermediation (</span><span>NBFI</span><span>), two areas that it said could present vulnerabilities in the world financial system.</span></p>\n<p><span>At a meeting this week in Saudi Arabia, FSB members called for continued close monitoring of the connections between crypto assets and stablecoins and the wider financial system.</span></p>\n<p><span>\u201cStablecoins may improve payment speed and efficiency, but they raise a number of vulnerabilities, including run risk and regulatory challenges associated with multi-jurisdiction issuers of stablecoins, which require continuing attention,\u201d the FSB said in a Wednesday (Nov. 19) news release.</span></p>\n<p><span>Also this week, </span><a class=\"editor-rtfLink\" href=\"https://www.riksbank.se/en-gb/about-the-riksbank/organisation/the-executive-board/erik-thedeen/\" rel=\"noopener\" target=\"_blank\"><span>Erik Thed\u00e9en</span></a><span>, chair of the </span><a class=\"editor-rtfLink\" href=\"https://www.bis.org/bcbs/index.htm\" rel=\"noopener\" target=\"_blank\"><span>Basel Committee on Banking Supervision</span></a><span>, gave an interview to the Financial Times in which he said \u201ca different approach\u201d is required on the global rules for banks\u2019 </span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/cryptocurrency/2025/basel-chair-calls-for-new-crypto-rules-for-banks/\" rel=\"noopener\" target=\"_blank\"><span>cryptocurrency</span></a><span> holdings. However, he added that this would be difficult to achieve due to \u201cdifferent views\u201d among regulators.</span></p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/cryptocurrency/2025/reserve-bank-india-has-reservations-about-stablecoins/\">Reserve Bank of India Has Reservations About Stablecoins</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
+    "image_url": "https://www.pymnts.com/wp-content/uploads/2021/10/Reserve-Bank-of-India.jpg?w=457",
+    "summary_text": "India\u2019s central bank is reportedly taking a cautious stance on stablecoins and other cryptocurrencies. \u201cStablecoins, cryptos, they have a huge risk, and so we are adopting a very cautious approach towards it,\u201d Reserve Bank of India Governor Sanjay Malhotra sa...",
+    "category": "fintech",
+    "_permalink": "/p/d85f340eea/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/d85f340eea/",
+    "_summary_240": "India\u2019s central bank is reportedly taking a cautious stance on stablecoins and other cryptocurrencies. \u201cStablecoins, cryptos, they have a huge risk, and so we are adopting a very...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/d85f340eea/thumbnail.png"
+  },
+  {
+    "title": "Aztec launches decentralized and private Ethereum L2 on mainnet, almost",
+    "url": "https://cointelegraph.com/news/aztec-launches-actually-decentralized-and-private-eth-l2-mainnet-almost?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "published_at": "2025-11-20T09:46:33-05:00",
+    "source": "Cointelegraph",
+    "summary": "Aztec launched its Ignition mainnet with no centralized operators, opening community staking amid its major token sale and positioning itself as a fully decentralized L2.",
+    "content_html": "",
+    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTEvMDE5YWEwNDEtYjEzYS03MTBmLThkOTQtYTkzMDAzM2Q0NWNi.jpg",
+    "summary_text": "Aztec launched its Ignition mainnet with no centralized operators, opening community staking amid its major token sale and positioning itself as a fully decentralized L2.",
+    "category": "fintech",
+    "_trending_tags": [
+      "ai"
+    ],
+    "_permalink": "/p/0ea8efda46/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/0ea8efda46/",
+    "_summary_240": "Aztec launched its Ignition mainnet with no centralized operators, opening community staking amid its major token sale and positioning itself as a fully decentralized L2.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/0ea8efda46/thumbnail.png"
   },
   {
     "title": "FICO and Plaid Add Cash Flow Data to Credit Scores",
@@ -138,6 +286,24 @@
     ]
   },
   {
+    "title": "A Hedge Against AI Crash Emerges as Oracle CDS Market Explodes",
+    "url": "https://www.bloomberg.com/news/articles/2025-11-20/a-hedge-against-ai-crash-emerges-as-oracle-cds-market-explodes",
+    "published_at": "2025-11-20T09:00:00-05:00",
+    "source": "Bloomberg Technology",
+    "summary": "Oracle Corp., the once stodgy database giant that\u2019s borrowed tens of billions and tethered its fortunes to the artificial intelligence boom, is quickly emerging as the credit market\u2019s barometer for AI risk.",
+    "content_html": "",
+    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iE5Yr8CxluXY/v2/1200x-1.png",
+    "summary_text": "Oracle Corp., the once stodgy database giant that\u2019s borrowed tens of billions and tethered its fortunes to the artificial intelligence boom, is quickly emerging as the credit market\u2019s barometer for AI risk.",
+    "category": "ai",
+    "_trending_tags": [
+      "ai"
+    ],
+    "_permalink": "/p/f0967233d7/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/f0967233d7/",
+    "_summary_240": "Oracle Corp., the once stodgy database giant that\u2019s borrowed tens of billions and tethered its fortunes to the artificial intelligence boom, is quickly emerging as the credit...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/f0967233d7/thumbnail.png"
+  },
+  {
     "title": "Here\u2019s what happened in crypto today",
     "url": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
     "published_at": "2025-11-20T08:50:22-05:00",
@@ -179,7 +345,7 @@
     "published_at": "2025-11-20T08:30:00-05:00",
     "source": "The Verge",
     "summary": "After one of the biggest telecom hacks in US history, the Federal Communications Commission (FCC) moved to enforce strict standards on carriers' cybersecurity measures. On Thursday, the agency is set to vote to roll back those requirements, arguing they were an unnecessary overstep of its authority. The China-linked Salt Typhoon hack revealed last year impacted [\u2026]",
-    "content_html": "<figure>\n\n<img alt=\"\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/23318438/akrales_220309_4977_0305.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100\" />\n\t<figcaption>\n\t\t</figcaption>\n</figure>\n<p class=\"has-text-align-none\">After one of the biggest telecom hacks in US history, the Federal Communications Commission (FCC) moved to enforce strict standards on carriers' cybersecurity measures. On Thursday, the agency is set to vote to roll back those requirements, arguing they were an unnecessary overstep of its authority.</p>\n<p class=\"has-text-align-none\">The China-linked <a href=\"https://www.wsj.com/tech/cybersecurity/u-s-wiretap-systems-targeted-in-china-linked-hack-327fc63b\">Salt Typhoon hack revealed last year</a> impacted telecom companies including AT&amp;T, Verizon, T-Mobile and Lumen Technologies, <em>The Wall Street Journal</em> reported. The issue was so bad that US officials <a href=\"https://www.theverge.com/2024/12/4/24313187/encrypted-apps-salt-typhoon-hack-telecom-fbi-cisa\">urged consumers in late 2024</a> to only communicate via encrypted apps, fearing adversaries may still be lurking in their carriers' networ \u2026</p>\n<p><a href=\"https://www.theverge.com/policy/824508/fcc-telecom-salt-typhoon-hack\">Read the full story at The Verge.</a></p>",
+    "content_html": "<figure>\n\n<img alt=\"\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/23318438/akrales_220309_4977_0305.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100\" />\n\t<figcaption>\n\t\t</figcaption>\n</figure>\n<p class=\"has-text-align-none\">After one of the biggest telecom hacks in US history, the Federal Communications Commission (FCC) moved to enforce strict standards on carriers' cybersecurity measures. On Thursday, the agency is set to vote to roll back those requirements, arguing they were an unnecessary overstep of its authority.</p>\n<p class=\"has-text-align-none\">The China-linked <a href=\"https://www.wsj.com/tech/cybersecurity/u-s-wiretap-systems-targeted-in-china-linked-hack-327fc63b\">Salt Typhoon hack revealed last year</a> impacted telecom companies including AT&amp;T, Verizon, T-Mobile, and Lumen Technologies, <em>The Wall Street Journal</em> reported. The issue was so bad that US officials <a href=\"https://www.theverge.com/2024/12/4/24313187/encrypted-apps-salt-typhoon-hack-telecom-fbi-cisa\">urged consumers in late 2024</a> to only communicate via encrypted apps, fearing adversaries may still be lurking in their carriers' netwo \u2026</p>\n<p><a href=\"https://www.theverge.com/policy/824508/fcc-telecom-salt-typhoon-hack\">Read the full story at The Verge.</a></p>",
     "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/23318438/akrales_220309_4977_0305.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
     "summary_text": "After one of the biggest telecom hacks in US history, the Federal Communications Commission (FCC) moved to enforce strict standards on carriers' cybersecurity measures. On Thursday, the agency is set to vote to roll back those requirements, arguing they were ...",
     "category": "fintech",
@@ -240,7 +406,7 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/9df9d0d0a0/thumbnail.png"
   },
   {
-    "title": "Samourai sentences cement DOJ\u2019s money transmitter theory for crypto mixers",
+    "title": "After Samourai, DOJ\u2019s money-transmitter theory now looms over crypto mixers",
     "url": "https://cointelegraph.com/news/samourai-sentences-cement-doj-money-transmitter-theory?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
     "published_at": "2025-11-20T07:44:59-05:00",
     "source": "Cointelegraph",
@@ -251,11 +417,7 @@
     "category": "fintech",
     "_trending_tags": [
       "ai"
-    ],
-    "_permalink": "/p/8c63403299/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/8c63403299/",
-    "_summary_240": "Samourai Wallet\u2019s co-founders received four- and five-year prison terms in the US for operating an unlicensed money-transmitting business through their non-custodial crypto mixer.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/8c63403299/thumbnail.png"
+    ]
   },
   {
     "title": "The AI Shift: Do we prefer talking to machines rather than each other?",
@@ -482,24 +644,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/2399996f76/",
     "_summary_240": "Watch more: Digital Shift: FIS\u2019 Melisa Kessous For middle-market firms, connecting to their banks has long been more patchwork than pipeline. Each financial institution maintains...",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/2399996f76/thumbnail.png"
-  },
-  {
-    "title": "Consumers Lose Ground in Holiday Shopping Season Even as Paycheck Stress Briefly Eases",
-    "url": "https://www.pymnts.com/consumer-insights/2025/consumers-lose-ground-holiday-shopping-season-paycheck-stress-briefly-eases/",
-    "published_at": "2025-11-20T04:00:09-05:00",
-    "source": "PYMNTS",
-    "summary": "As the annual holiday shopping ritual ramps up, consumers\u2019 finances are less robust than they might appear. Last month, PYMNTS Intelligence surveyed more than 2,100 U.S. adult consumers for the most recent installment of the New Reality Check: The Paycheck-to-Paycheck Report series, \u201cIncome Instability is Redefining the Paycheck-to-Paycheck Economy.\u201d The report revealed that in [\u2026] The post Consu...",
-    "content_html": "<p><span>As the annual holiday shopping ritual ramps up, consumers\u2019 finances are less robust than they might appear.</span></p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p><span>Last month, PYMNTS Intelligence surveyed more than 2,100 U.S. adult consumers for the most recent installment of the New Reality Check: The Paycheck-to-Paycheck Report series, \u201c</span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/study_posts/income-instability-is-redefining-the-paycheck-to-paycheck-economy/\" rel=\"noopener\" target=\"_blank\"><span>Income Instability is Redefining the Paycheck-to-Paycheck Economy</span></a><span>.\u201d The report revealed that in October, the share of consumers living paycheck to paycheck dipped</span><span> 4 </span><span>percentage points from the prior month, to 65.5%. That\u2019s roughly </span><span>171 million out</span><span> of 261 million adult consumers.</span></p>\n<p><span>Among the 2 in 3 Americans caught in this financial lifestyle, there are three groups, and those in the first are in trouble.</span></p>\n<p><span>The first group </span><span>covers people</span><span> whose paychecks </span><span>fly out the door</span><span> the month they </span><span>come in</span><span> due to economic necessity as they pay </span><span>needed</span><span> items </span><span>like</span><span> housing, utilities, groceries, healthcare, childcare and minimum credit card payments.</span><span> Some 110 million individuals, or 42% of all adult consumers, lived this way in October, a rise from 36% in August.</span></p>\n<p><span>The second group </span><span>covers</span><span> people who live paycheck to paycheck by choice, </span><span>perhaps</span><span> making discretionary purchases that, when combined with paying for essentials, max out their monthly income.</span><span> Roughly 76 million individuals, or almost 3 in 10 consumers, lived this way last month, </span><span>roughly</span><span> the same as the 28% in August.</span></p>\n<p><span>The third group </span><span>covers people</span><span> who live paycheck to paycheck partly by necessity</span><span>, </span><span>partly by choice, and thus have at least some control over their spending </span><span>choices</span><span>.</span><span> Seventy-three million individuals, or 28% of all consumers, lived this way in October, down from 36% in August, suggesting they exercised greater control of their spending.</span></p>\n<p><span>The figures revealed nuances in how most </span><span>of America experiences</span><span> pocketbook pressure, as well as how they shop and pay. The overall decrease in those living paycheck to paycheck came primarily from the sub-group of people who live that way by necessity and choice. </span><span>By contrast, the spike in consumers who live that way solely out of necessity, who struggle to meet their essential monthly </span><span>costs</span><span>, </span><span>spiked</span><span>.</span><span> In short, the overall decrease masks financial precarity for more than 4 in 10 Americans.</span></p>\n<p><span>So, it might seem that as the year-end shopping season kicks into full gear, the overall decline in the number of paycheck-to-paycheck consumers means more people have more </span><span>dollars</span><span> to spend.</span><span> That would be misleading. What\u2019s clear is that the number of people living paycheck to paycheck out of necessity is higher since the end of summer.</span></p>\n<div class=\"infogram-embed\"></div>\n<p>&amp;&amp;</p>\n<h2><span>\u00a0</span><strong><span>The Great Dial Back</span></strong></h2>\n<p><span>Recent dip aside, the share of consumers who spend their paychecks the same month they receive them was up 5.5 percentage points compared to two years ago, long before the President Donald Trump administration\u2019s global tariffs regime unfolded in April. The share who struggles to pay essential bills was up 3.2 percentage points over that period.</span></p>\n<p><span>More than half of all consumers reported feeling pressure from increasing daily living expenses </span><span>and</span><span> putting off larger purchases and saving, the new PYMNTS report </span><span>found</span><span>.</span><span> The pain </span><span>wasn\u2019t confined</span><span> to low-income individuals. One-quarter of respondents in the report had an annual income of at least $150,000. Nearly 1 in 5 were in the $100,000 to $150,000 range. </span><span>Some</span><span> 28% </span><span>were in</span><span> the $50,000 to $100,000 range, and 27% earned less than $50,000</span><span> a </span><span>year.</span></p>\n<h2><strong><span>Pressure All Around</span></strong></h2>\n<p><span>On the one hand, financial stress has grown due to higher prices on imports, from toys and furniture to beef and electronics. </span><span>The United States\u2019 </span><a class=\"editor-rtfLink\" href=\"https://taxfoundation.org/research/all/federal/trump-tariffs-trade-war/\" rel=\"noopener\" target=\"_blank\"><span>reciprocal tariffs</span></a><span> on most nations will cost the average household $1,200 this year and $1,600 next year, the conservative-leaning </span><a class=\"editor-rtfLink\" href=\"https://taxfoundation.org/\" rel=\"noopener\" target=\"_blank\"><span>Tax Foundation</span></a> <span>said</span><span>.</span></p>\n<p><span>The </span><a class=\"editor-rtfLink\" href=\"https://budgetlab.yale.edu/research/state-us-tariffs-october-30-2025\" rel=\"noopener\" target=\"_blank\"><span>levies</span></a><span> are the highest since 1934, when new tariffs were introduced to help farmers and manufacturers leveled by the Great Depression, according to </span><a class=\"editor-rtfLink\" href=\"https://budgetlab.yale.edu/\" rel=\"noopener\" target=\"_blank\"><span>The Budget Lab</span></a><span> at </span><a class=\"editor-rtfLink\" href=\"https://www.yale.edu/\" rel=\"noopener\" target=\"_blank\"><span>Yale</span></a><span>.</span></p>\n<p><span>On the other hand, other macroeconomic factors are also at play.</span></p>\n<p><span>The </span><a class=\"editor-rtfLink\" href=\"https://www.bls.gov/news.release/pdf/cpi.pdf\" rel=\"noopener\" target=\"_blank\"><span>Consumer Price Index</span></a><span> rose an annualized 3% in September, according to data from the </span><a class=\"editor-rtfLink\" href=\"https://www.bls.gov/\" rel=\"noopener\" target=\"_blank\"><span>Bureau of Labor Statistics</span></a><span>. </span><span>However, some core expenses, </span><span>like</span><span> housing, utilities and medical care services, spiked more.</span></p>\n<p><span>The overall picture is one of mounting financial pressure. The PYMNTS report, which fielded a new set of questions, found that amid tariffs and rising living costs, 62% of all U.S. consumers had cut back their everyday spending, including 70% of baby boomers and seniors and half of Generation Zers.</span></p>\n<p><span>Tighter pocketbooks mean less cheer for retailers during their biggest selling season of the year. </span><a class=\"editor-rtfLink\" href=\"https://www.conference-board.org/north-america/index.cfm\" rel=\"noopener\" target=\"_blank\"><span>The Conference Board</span></a><span> projected a 6.9% decrease in </span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/consumer-insights/2025/conference-board-americans-to-spend-less-this-holiday-season-prioritizing-budget-and-value/\" rel=\"noopener\" target=\"_blank\"><span>holiday spending</span></a><span> this year, with the average consumer planning to </span><span>splash out</span><span> $990 on holiday gifts, d\u00e9cor, food and other seasonal items, down from $1,063 last year.</span></p>\n<p><span>Useful is in.</span></p>\n<p><span>\u201cMore consumers are shopping early and opting for practical gifts to avoid last-minute shipping costs,\u201d said </span><a class=\"editor-rtfLink\" href=\"https://www.linkedin.com/in/kellyjvincent/\" rel=\"noopener\" target=\"_blank\"><span>Kelly Vincent</span></a><span>, chief product officer at </span><a class=\"editor-rtfLink\" href=\"https://auctane.com/\" rel=\"noopener\" target=\"_blank\"><span>Auctane</span></a><span>, a shipping and logistics company based in Austin, Texas.</span></p>\n<h2><strong><span>The Rearview Mirror</span></strong></h2>\n<p><span>When Americans look at their pocketbooks, bank accounts and monthly credit card statements, their two-year decline in financial stability likely feels more relevant than any monthly improvement.</span></p>\n<p><span>The </span><a class=\"editor-rtfLink\" href=\"https://thedecisionlab.com/biases/peak-end-rule\" rel=\"noopener\" target=\"_blank\"><span>peak-end rule</span></a><span> of behavioral psychology </span><span>shows</span><span> that people tend to recall events and experiences at their maximum intensity, rather than in terms of how they later </span><span>soften</span><span> or </span><span>end</span><span>.</span> <span>If struggling consumers improved their finances slightly in the last month but things worsened for them over the last couple of years, </span><span>people</span><span> may cling to a cloudy outlook.</span></p>\n<p><span>In the longer view, matters are looking worse for some consumers. </span><span>By October, the share of consumers living paycheck to paycheck out of necessity</span><span>, </span><span>rather than as a result of discretionary spending, had spiked roughly 14 percentage points since the start of the year, including</span><span> 3 </span><span>percentage points in September alone.</span></p>\n<div class=\"infogram-embed\"></div>\n<p>&amp;&amp;<br />\n<span>The </span><a class=\"editor-rtfLink\" href=\"https://nrf.com/\" rel=\"noopener\" target=\"_blank\"><span>National Retail Federation</span></a><span> anticipates </span><span>an</span><span> increase in holiday spending this year </span><span>to more than</span> <a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/news/retail/2025/pymnts-weekender-retro-economy-wants-your-black-friday-cart/\" rel=\"noopener\" target=\"_blank\"><span>$1 trillion</span></a><span> for the first time.</span> <span>But</span><span> any boost won\u2019t come </span><span>thanks to</span><span> the average consumer.</span><span> The top 10% wealthiest Americans, who earn at least $250,000 a year, account for half of all </span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/consumer-finance/2025/wealthiest-10-of-americans-drive-bulk-of-consumer-spending/\" rel=\"noopener\" target=\"_blank\"><span>consumer spending</span></a><span>.</span></p>\n<p><span>As such, the average consumer\u2019s perception of their current financial situation will likely influence not just what they buy, but how and where. </span><span>Additionally, they will likely </span><span>use</span><span> financing tools to continue </span><span>to spend</span><span>.</span> <span>In recent years, shoppers have </span><span>used</span><span> options </span><span>such as</span> <a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/study_posts/pay-later-plans-power-holiday-shopping-strategies/\" rel=\"noopener\" target=\"_blank\"><span>buy now, pay later</span></a><span> to splurge on holiday purchases while managing their spending.</span><span> Last year, 28% of all consumers used the payment method. Meanwhile, the availability of </span><span>pay later</span><span> plans influenced where 60 million U.S. consumers, equivalent to 43% of all holiday shoppers, decided to shop last year.</span></p>\n<h2><strong><span>Now and Later</span></strong></h2>\n<p><span>BNPL providers are seizing on this opportunity. Last month, </span><a class=\"editor-rtfLink\" href=\"https://www.affirm.com/\" rel=\"noopener\" target=\"_blank\"><span>Affirm</span></a><span> ran its first \u201c</span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/buy-now-pay-later/2025/affirm-launches-nationwide-0percent-days-promotion-before-holiday-shopping-season/\" rel=\"noopener\" target=\"_blank\"><span>0% Days</span></a><span>\u201d promotional event. Also in October, </span><a class=\"editor-rtfLink\" href=\"https://www.paypal.com/us/home\" rel=\"noopener\" target=\"_blank\"><span>PayPal</span></a><span> introduced a </span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/buy-now-pay-later/2025/paypal-offering-bnpl-cash-back-amid-holiday-stress/\" rel=\"noopener\" target=\"_blank\"><span>cash back</span></a><span> offering for the payment method for the remainder of the year. </span><a class=\"editor-rtfLink\" href=\"https://sezzle.com/\" rel=\"noopener\" target=\"_blank\"><span>Sezzle</span></a><span> has discussed its intention to capture the </span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/bnpl/2025/sezzle-says-bnpl-platforms-tools-can-draw-holiday-shoppers/\" rel=\"noopener\" target=\"_blank\"><span>holiday shopping</span></a><span> opportunity.</span></p>\n<p><span>Yet even with that spending tool, many consumers aren\u2019t budgeting as deliberately as they could </span><span>be</span><span>.</span><span> PYMNTS Intelligence research in June found a gap between consumers\u2019 purported demand for </span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/study_posts/consumers-say-they-want-budgeting-tools-but-arent-using-them/\" rel=\"noopener\" target=\"_blank\"><span>budgeting tools</span></a><span> and their usage of those tools.</span></p>\n<p><span>To get a clearer picture of how consumers are doing financially, check out the new PYMNTS Intelligence report, \u201c</span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/study_posts/income-instability-is-redefining-the-paycheck-to-paycheck-economy/\" rel=\"noopener\" target=\"_blank\"><span>Income Instability Is Redefining the Paycheck-to-Paycheck Economy</span></a><span>.\u201d </span><span>The study not only delves deeper into paycheck-to-paycheck living but also </span><span>explores</span><span> how </span><span>changes</span><span> in employment and income sources are </span><span>transforming</span><span> consumer finances.</span></p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/consumer-insights/2025/consumers-lose-ground-holiday-shopping-season-paycheck-stress-briefly-eases/\">Consumers Lose Ground in Holiday Shopping Season Even as Paycheck Stress Briefly Eases</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
-    "image_url": "https://www.pymnts.com/wp-content/uploads/2025/11/consumer-spending-holiday-shopping.jpeg?w=457",
-    "summary_text": "As the annual holiday shopping ritual ramps up, consumers\u2019 finances are less robust than they might appear. Last month, PYMNTS Intelligence surveyed more than 2,100 U.S. adult consumers for the most recent installment of the New Reality Check: The Paycheck-to...",
-    "category": "fintech",
-    "_trending_tags": [
-      "llm"
-    ],
-    "_permalink": "/p/daf6d37fb1/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/daf6d37fb1/",
-    "_summary_240": "As the annual holiday shopping ritual ramps up, consumers\u2019 finances are less robust than they might appear. Last month, PYMNTS Intelligence surveyed more than 2,100 U.S. adult...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/daf6d37fb1/thumbnail.png"
   },
   {
     "title": "NVDA EPS Call: Not A Fan of Jensen's Stretching of the Truth",
@@ -900,39 +1044,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/b6da4878b8/thumbnail.png"
   },
   {
-    "title": "Here\u2019s the Trump executive order that would ban state AI laws",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/824608/trump-executive-order-ai-state-laws",
-    "published_at": "2025-11-19T18:03:28-05:00",
-    "source": "The Verge",
-    "summary": "President Donald Trump is considering signing an executive order as soon as Friday that would give the federal government unilateral power over regulating artificial intelligence, including the creation of an \"AI Litigation Task Force\" overseen by the attorney general, \"whose sole responsibility shall be to challenge State AI laws.\" According to a draft of the [\u2026]",
-    "content_html": "<figure>\n\n<img alt=\"\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/01/gettyimages-2194990747.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100\" />\n\t<figcaption>\n\t\t</figcaption>\n</figure>\n<p class=\"has-text-align-none\">President Donald Trump is considering signing an executive order as soon as Friday that would give the federal government unilateral power over regulating artificial intelligence, including the creation of an \"AI Litigation Task Force\" overseen by the attorney general, \"whose sole responsibility shall be to challenge State AI laws.\" </p>\n<p class=\"has-text-align-none\">According to a draft of the order <a href=\"https://www.documentcloud.org/documents/26287992-trump-executive-order-on-ai-law-preemption/\">obtained by <em>The Verge</em></a><em>, </em>the Task Force would be able to sue states whose laws are deemed to obstruct the growth of the AI industry, citing California's recent laws on AI safety and \"catastrophic risk\" and a Colorado law that prevents \"algorithmic discrimination.\" The task force  \u2026</p>\n<p><a href=\"https://www.theverge.com/ai-artificial-intelligence/824608/trump-executive-order-ai-state-laws\">Read the full story at The Verge.</a></p>",
-    "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/01/gettyimages-2194990747.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "summary_text": "President Donald Trump is considering signing an executive order as soon as Friday that would give the federal government unilateral power over regulating artificial intelligence, including the creation of an \"AI Litigation Task Force\" overseen by the attorne...",
-    "category": "ai",
-    "_trending_tags": [
-      "ai"
-    ],
-    "_permalink": "/p/b9380b48a6/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/b9380b48a6/",
-    "_summary_240": "President Donald Trump is considering signing an executive order as soon as Friday that would give the federal government unilateral power over regulating artificial...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/b9380b48a6/thumbnail.png"
-  },
-  {
-    "title": "Crypto Mixer Co-Founder Gets Four Years in Money-Laundering Case",
-    "url": "https://www.bloomberg.com/news/articles/2025-11-19/crypto-mixer-co-founder-gets-four-years-in-money-laundering-case",
-    "published_at": "2025-11-19T17:59:55-05:00",
-    "source": "Bloomberg Technology",
-    "summary": "One of the rare cryptocurrency prosecutions under the Trump administration led to a four-year prison term for a bitcoin wallet operator accused of helping launder more than $200 million from illegal dark web transactions.",
-    "content_html": "",
-    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/i7wDORJMXh7w/v0/1200x-1.jpg",
-    "summary_text": "One of the rare cryptocurrency prosecutions under the Trump administration led to a four-year prison term for a bitcoin wallet operator accused of helping launder more than $200 million from illegal dark web transactions.",
-    "category": "fintech",
-    "_permalink": "/p/63c00c16e1/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/63c00c16e1/",
-    "_summary_240": "One of the rare cryptocurrency prosecutions under the Trump administration led to a four-year prison term for a bitcoin wallet operator accused of helping launder more than $200...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/63c00c16e1/thumbnail.png"
-  },
-  {
     "title": "Trump Plans \u2018Genesis Mission\u2019 to Boost US AI Development",
     "url": "https://www.bloomberg.com/news/articles/2025-11-19/trump-plans-to-unveil-genesis-mission-to-boost-ai-development",
     "published_at": "2025-11-19T17:34:05-05:00",
@@ -1091,21 +1202,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/2323ba4fe7/thumbnail.png"
   },
   {
-    "title": "Advocacy group proposes DeFi solutions to address global poverty",
-    "url": "https://cointelegraph.com/news/defi-education-fund-solutions-poverty?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-    "published_at": "2025-11-19T15:02:55-05:00",
-    "source": "Cointelegraph",
-    "summary": "The DeFi Education Fund estimated that decentralized finance technology could potentially save people up to $30 billion annually by reducing remittance costs.",
-    "content_html": "",
-    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTEvMDE5YTlkMmItNmU1NC03MjRlLWFhZjctNjYwNWZkZTFlNmQ5.jpg",
-    "summary_text": "The DeFi Education Fund estimated that decentralized finance technology could potentially save people up to $30 billion annually by reducing remittance costs.",
-    "category": "fintech",
-    "_permalink": "/p/769eaf2b45/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/769eaf2b45/",
-    "_summary_240": "The DeFi Education Fund estimated that decentralized finance technology could potentially save people up to $30 billion annually by reducing remittance costs.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/769eaf2b45/thumbnail.png"
-  },
-  {
     "title": "Spotify acquires music database WhoSampled",
     "url": "https://techcrunch.com/2025/11/19/spotify-acquires-music-database-whosampled/",
     "published_at": "2025-11-19T14:59:28-05:00",
@@ -1221,17 +1317,13 @@
     "source": "Financial Times - Technology",
     "summary": "Wall Street shares have seen big swings this week as investors brace for all-important earnings from AI bellwether",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/6c3909c3-aa63-4996-8db5-4a1ab09cbee6.jpg",
+    "image_url": "",
     "summary_text": "Wall Street shares have seen big swings this week as investors brace for all-important earnings from AI bellwether",
     "category": "ai",
     "_trending_tags": [
       "ai",
       "nvidia"
-    ],
-    "_permalink": "/p/eee5cea506/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/eee5cea506/",
-    "_summary_240": "Wall Street shares have seen big swings this week as investors brace for all-important earnings from AI bellwether",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/eee5cea506/thumbnail.png"
+    ]
   },
   {
     "title": "The Google Search of AI agents? Fetch launches ASI:One and Business tier for new era of non-human web",
@@ -1249,25 +1341,6 @@
       "deepmind",
       "google"
     ]
-  },
-  {
-    "title": "YC-backed Poly relaunches as a cloud-hosted file storage with AI search",
-    "url": "https://techcrunch.com/2025/11/19/yc-backed-poly-relaunches-as-a-cloud-hosted-file-storage-with-ai-search/",
-    "published_at": "2025-11-19T12:00:00-05:00",
-    "source": "TechCrunch",
-    "summary": "Poly's cloud-based file storage system with AI-powered search lets you search through text, images, audio, and video.",
-    "content_html": "",
-    "image_url": "https://techcrunch.com/wp-content/uploads/2025/11/Poly-feat.jpg?resize=1200,675",
-    "summary_text": "Poly's cloud-based file storage system with AI-powered search lets you search through text, images, audio, and video.",
-    "category": "software",
-    "_trending_tags": [
-      "ai",
-      "cloud"
-    ],
-    "_permalink": "/p/20a8c9940f/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/20a8c9940f/",
-    "_summary_240": "Poly's cloud-based file storage system with AI-powered search lets you search through text, images, audio, and video.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/20a8c9940f/thumbnail.png"
   },
   {
     "title": "The US Will Prioritize Visa Processing for Fans With World Cup Tickets",
@@ -1363,16 +1436,12 @@
     "source": "Financial Times - Technology",
     "summary": "Algorithms and generative AI models that decide what billions of users see should be transparent",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/4cbab655-68ec-4d9e-bde7-be8eb481e468.jpg",
+    "image_url": "",
     "summary_text": "Algorithms and generative AI models that decide what billions of users see should be transparent",
     "category": "ai",
     "_trending_tags": [
       "ai"
-    ],
-    "_permalink": "/p/6828953d1c/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/6828953d1c/",
-    "_summary_240": "Algorithms and generative AI models that decide what billions of users see should be transparent",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/6828953d1c/thumbnail.png"
+    ]
   },
   {
     "title": "How evals drive the next chapter in AI for businesses",
@@ -1426,18 +1495,14 @@
     "source": "Financial Times - Technology",
     "summary": "Nasdaq lower as heavyweights including Nvidia and Microsoft sustain steep falls",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/8ce46e40-1d71-4cad-99d4-07a83027b203.png",
+    "image_url": "",
     "summary_text": "Nasdaq lower as heavyweights including Nvidia and Microsoft sustain steep falls",
     "category": "ai",
     "_trending_tags": [
       "ai",
       "microsoft",
       "nvidia"
-    ],
-    "_permalink": "/p/5dc8694a0a/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/5dc8694a0a/",
-    "_summary_240": "Nasdaq lower as heavyweights including Nvidia and Microsoft sustain steep falls",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/5dc8694a0a/thumbnail.png"
+    ]
   },
   {
     "title": "How TikTok Helped Meta Land an Antitrust Victory",
@@ -1464,13 +1529,9 @@
     "source": "Financial Times - Technology",
     "summary": "The sector is expanding far beyond its giant IT service companies",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/848491d5-8ae9-48e9-a8d9-652d468edff7.jpg",
+    "image_url": "",
     "summary_text": "The sector is expanding far beyond its giant IT service companies",
-    "category": "fintech",
-    "_permalink": "/p/b1cae55af3/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/b1cae55af3/",
-    "_summary_240": "The sector is expanding far beyond its giant IT service companies",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/b1cae55af3/thumbnail.png"
+    "category": "fintech"
   },
   {
     "title": "Meta\u2019s DreamGym framework trains AI agents in a simulated world to cut reinforcement learning costs",
