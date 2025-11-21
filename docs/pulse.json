@@ -1,5 +1,26 @@
 [
   {
+    "title": "OpenAI is ending API access to fan-favorite GPT-4o model in February 2026",
+    "url": "https://venturebeat.com/ai/openai-is-ending-api-access-to-fan-favorite-gpt-4o-model-in-february-2026",
+    "published_at": "2025-11-21T18:01:00-05:00",
+    "source": "VentureBeat",
+    "summary": "OpenAI has sent out emails notifying API customers that its chatgpt-4o-latest model will be retired from the developer platform in mid-February 2026,. Access to the model is scheduled to end on February 16, 2026, creating a roughly three-month transition period for remaining applications still built on GPT-4o. Sources familiar with the matter emphasized that this timeline applies only to the API....",
+    "content_html": "",
+    "image_url": "",
+    "summary_text": "OpenAI has sent out emails notifying API customers that its chatgpt-4o-latest model will be retired from the developer platform in mid-February 2026,. Access to the model is scheduled to end on February 16, 2026, creating a roughly three-month transition peri...",
+    "category": "ai",
+    "_trending_tags": [
+      "ai",
+      "chatgpt",
+      "gpt",
+      "openai"
+    ],
+    "_permalink": "/p/f153b55a86/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/f153b55a86/",
+    "_summary_240": "OpenAI has sent out emails notifying API customers that its chatgpt-4o-latest model will be retired from the developer platform in mid-February 2026,. Access to the model is...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/f153b55a86/thumbnail.png"
+  },
+  {
     "title": "Lawmakers Encourage CFPB to Protect Consumer Choice While Rewriting Rule 1033",
     "url": "https://www.pymnts.com/news/cfpb/2025/lawmakers-encourage-cfpb-protect-consumer-choice-while-rewriting-rule-1033/",
     "published_at": "2025-11-21T17:14:02-05:00",
@@ -1198,26 +1219,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/4674a5a787/thumbnail.png"
   },
   {
-    "title": "Mixup is a new, Mad Libs-style app for creating AI images from photos, text, and doodles",
-    "url": "https://techcrunch.com/2025/11/20/mixup-is-a-new-mad-libs-style-app-for-creating-ai-images-from-photos-text-and-doodles/",
-    "published_at": "2025-11-20T13:49:27-05:00",
-    "source": "TechCrunch",
-    "summary": "The new app lets anyone use Google's Nano Banana in a fun new way, with fill-in-the-blank AI \"recipes\" that users can share.",
-    "content_html": "",
-    "image_url": "https://techcrunch.com/wp-content/uploads/2025/11/mixup-header.jpg?resize=1200,692",
-    "summary_text": "The new app lets anyone use Google's Nano Banana in a fun new way, with fill-in-the-blank AI \"recipes\" that users can share.",
-    "category": "ai",
-    "_trending_tags": [
-      "ai",
-      "apple",
-      "google"
-    ],
-    "_permalink": "/p/b6941a148a/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/b6941a148a/",
-    "_summary_240": "The new app lets anyone use Google's Nano Banana in a fun new way, with fill-in-the-blank AI \"recipes\" that users can share.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/b6941a148a/thumbnail.png"
-  },
-  {
     "title": "How AI search is changing the way conversions are measured",
     "url": "https://blogs.bing.com/webmaster/November-2025/How-AI-Search-Is-Changing%E2%80%AFthe%E2%80%AFWay%E2%80%AFConversions%E2%80%AFare-Measured",
     "published_at": "2025-11-20T13:05:30-05:00",
@@ -1387,20 +1388,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/0c0cdc7b73/thumbnail.png"
   },
   {
-    "title": "Tome's founders ditch viral presentation app with 20M users to build AI-native CRM Lightfield",
-    "url": "https://venturebeat.com/ai/tomes-founders-ditch-viral-presentation-app-with-20m-users-to-build-ai",
-    "published_at": "2025-11-20T09:00:00-05:00",
-    "source": "VentureBeat",
-    "summary": "Lightfield , a customer relationship management platform built entirely around artificial intelligence, officially launched to the public this week after a year of quiet development \u2014 a bold pivot by a startup that once had 20 million users and $43 million in the bank building something completely different. The San Francisco-based company is positioning itself as a fundamental reimagining of how...",
-    "content_html": "",
-    "image_url": "",
-    "summary_text": "Lightfield , a customer relationship management platform built entirely around artificial intelligence, officially launched to the public this week after a year of quiet development \u2014 a bold pivot by a startup that once had 20 million users and $43 million in...",
-    "category": "ai",
-    "_trending_tags": [
-      "ai"
-    ]
-  },
-  {
     "title": "Europe\u2019s tech sector is evolving fast. Is it fast enough?",
     "url": "https://www.ft.com/content/6e8706c8-6227-489d-9e1b-d5205697d4e7",
     "published_at": "2025-11-20T08:31:47-05:00",
@@ -1483,16 +1470,12 @@
     "source": "Financial Times - Technology",
     "summary": "The inside story on the Asia tech trends that matter, from Nikkei Asia and the Financial Times",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/da31b60d-5f19-4baf-a549-c959c757b514.jpg",
+    "image_url": "",
     "summary_text": "The inside story on the Asia tech trends that matter, from Nikkei Asia and the Financial Times",
     "category": "ai",
     "_trending_tags": [
       "ai"
-    ],
-    "_permalink": "/p/0e9e24dccd/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/0e9e24dccd/",
-    "_summary_240": "The inside story on the Asia tech trends that matter, from Nikkei Asia and the Financial Times",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/0e9e24dccd/thumbnail.png"
+    ]
   },
   {
     "title": "Helping 1,000 small businesses build with AI",
@@ -1516,16 +1499,12 @@
     "source": "Financial Times - Technology",
     "summary": "Can Brussels balance its desire to set the guardrails for tech with its need to attract investment?",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/b2ea6382-ca8e-49b6-bf1c-e0d96fec6920.jpg",
+    "image_url": "",
     "summary_text": "Can Brussels balance its desire to set the guardrails for tech with its need to attract investment?",
     "category": "ai",
     "_trending_tags": [
       "ai"
-    ],
-    "_permalink": "/p/a7e7e2c82a/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/a7e7e2c82a/",
-    "_summary_240": "Can Brussels balance its desire to set the guardrails for tech with its need to attract investment?",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/a7e7e2c82a/thumbnail.png"
+    ]
   },
   {
     "title": "Trump Takes Aim at State AI Laws in Draft Executive Order",
@@ -1552,17 +1531,13 @@
     "source": "Financial Times - Technology",
     "summary": "While the chipmaker is the big winner from the booming technology, it is singularly exposed to changing expectations",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/2da6231e-8117-4d1c-9590-5766925e0d3f.jpg",
+    "image_url": "",
     "summary_text": "While the chipmaker is the big winner from the booming technology, it is singularly exposed to changing expectations",
     "category": "ai",
     "_trending_tags": [
       "ai",
       "nvidia"
-    ],
-    "_permalink": "/p/e6cb271ad7/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/e6cb271ad7/",
-    "_summary_240": "While the chipmaker is the big winner from the booming technology, it is singularly exposed to changing expectations",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/e6cb271ad7/thumbnail.png"
+    ]
   },
   {
     "title": "Nvidia CEO Dismisses Concerns of an AI Bubble. Investors Remain Skeptical",
@@ -1758,17 +1733,13 @@
     "source": "Financial Times - Technology",
     "summary": "Wall Street shares have seen big swings this week as investors brace for all-important earnings from AI bellwether",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/6c3909c3-aa63-4996-8db5-4a1ab09cbee6.jpg",
+    "image_url": "",
     "summary_text": "Wall Street shares have seen big swings this week as investors brace for all-important earnings from AI bellwether",
     "category": "ai",
     "_trending_tags": [
       "ai",
       "nvidia"
-    ],
-    "_permalink": "/p/eee5cea506/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/eee5cea506/",
-    "_summary_240": "Wall Street shares have seen big swings this week as investors brace for all-important earnings from AI bellwether",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/eee5cea506/thumbnail.png"
+    ]
   },
   {
     "title": "The US Will Prioritize Visa Processing for Fans With World Cup Tickets",
