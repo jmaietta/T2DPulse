@@ -693,7 +693,11 @@
       "chatgpt",
       "gpt",
       "openai"
-    ]
+    ],
+    "_permalink": "/p/a37321a0e1/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/a37321a0e1/",
+    "_summary_240": "OpenAI is partnering with Hon Hai Precision Industry Co. to design and manufacture hardware for data centers, the latest move by the ChatGPT-maker to meet its surging need for...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/a37321a0e1/thumbnail.png"
   },
   {
     "title": "UK Plans \u00a310 Billion Wales Data-Center Hub in AI Push",
@@ -1481,16 +1485,12 @@
     "source": "Financial Times - Technology",
     "summary": "Can Brussels balance its desire to set the guardrails for tech with its need to attract investment?",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/b2ea6382-ca8e-49b6-bf1c-e0d96fec6920.jpg",
+    "image_url": "",
     "summary_text": "Can Brussels balance its desire to set the guardrails for tech with its need to attract investment?",
     "category": "ai",
     "_trending_tags": [
       "ai"
-    ],
-    "_permalink": "/p/a7e7e2c82a/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/a7e7e2c82a/",
-    "_summary_240": "Can Brussels balance its desire to set the guardrails for tech with its need to attract investment?",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/a7e7e2c82a/thumbnail.png"
+    ]
   },
   {
     "title": "Ai2\u2019s Olmo 3 family challenges Qwen and Llama with efficient, open reasoning and customization",
@@ -1531,17 +1531,13 @@
     "source": "Financial Times - Technology",
     "summary": "While the chipmaker is the big winner from the booming technology, it is singularly exposed to changing expectations",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/2da6231e-8117-4d1c-9590-5766925e0d3f.jpg",
+    "image_url": "",
     "summary_text": "While the chipmaker is the big winner from the booming technology, it is singularly exposed to changing expectations",
     "category": "ai",
     "_trending_tags": [
       "ai",
       "nvidia"
-    ],
-    "_permalink": "/p/e6cb271ad7/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/e6cb271ad7/",
-    "_summary_240": "While the chipmaker is the big winner from the booming technology, it is singularly exposed to changing expectations",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/e6cb271ad7/thumbnail.png"
+    ]
   },
   {
     "title": "Nvidia CEO Dismisses Concerns of an AI Bubble. Investors Remain Skeptical",
@@ -1754,17 +1750,13 @@
     "source": "Financial Times - Technology",
     "summary": "Wall Street shares have seen big swings this week as investors brace for all-important earnings from AI bellwether",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/6c3909c3-aa63-4996-8db5-4a1ab09cbee6.jpg",
+    "image_url": "",
     "summary_text": "Wall Street shares have seen big swings this week as investors brace for all-important earnings from AI bellwether",
     "category": "ai",
     "_trending_tags": [
       "ai",
       "nvidia"
-    ],
-    "_permalink": "/p/eee5cea506/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/eee5cea506/",
-    "_summary_240": "Wall Street shares have seen big swings this week as investors brace for all-important earnings from AI bellwether",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/eee5cea506/thumbnail.png"
+    ]
   },
   {
     "title": "The US Will Prioritize Visa Processing for Fans With World Cup Tickets",
@@ -1869,6 +1861,22 @@
     ]
   },
   {
+    "title": "How Scania is accelerating work with AI across its global workforce",
+    "url": "https://openai.com/index/scania",
+    "published_at": "2025-11-18T19:00:00-05:00",
+    "source": "OpenAI News",
+    "summary": "Description: Global manufacturer Scania is scaling AI with ChatGPT Enterprise. With team-based onboarding and strong guardrails, AI is boosting productivity, quality, and innovation.",
+    "content_html": "",
+    "image_url": "",
+    "summary_text": "Description: Global manufacturer Scania is scaling AI with ChatGPT Enterprise. With team-based onboarding and strong guardrails, AI is boosting productivity, quality, and innovation.",
+    "category": "ai",
+    "_trending_tags": [
+      "ai",
+      "chatgpt",
+      "gpt"
+    ]
+  },
+  {
     "title": "A free version of ChatGPT built for teachers",
     "url": "https://openai.com/index/chatgpt-for-teachers",
     "published_at": "2025-11-18T19:00:00-05:00",
@@ -1926,22 +1934,6 @@
     "category": "ai",
     "_trending_tags": [
       "agent",
-      "gpt"
-    ]
-  },
-  {
-    "title": "How Scania is accelerating work with AI across its global workforce",
-    "url": "https://openai.com/index/scania",
-    "published_at": "2025-11-18T19:00:00-05:00",
-    "source": "OpenAI News",
-    "summary": "Description: Global manufacturer Scania is scaling AI with ChatGPT Enterprise. With team-based onboarding and strong guardrails, AI is boosting productivity, quality, and innovation.",
-    "content_html": "",
-    "image_url": "",
-    "summary_text": "Description: Global manufacturer Scania is scaling AI with ChatGPT Enterprise. With team-based onboarding and strong guardrails, AI is boosting productivity, quality, and innovation.",
-    "category": "ai",
-    "_trending_tags": [
-      "ai",
-      "chatgpt",
       "gpt"
     ]
   },
