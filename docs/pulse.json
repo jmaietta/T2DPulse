@@ -1,5 +1,71 @@
 [
   {
+    "title": "KuCoin Pay integrates with Brazil\u2019s Pix payments network",
+    "url": "https://cointelegraph.com/news/kucoin-pay-integrates-brazil-government-run-pix-payments-system?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "published_at": "2025-11-21T12:06:55-05:00",
+    "source": "Cointelegraph",
+    "summary": "The rollout lets users convert crypto to local currency and pay merchants via QR codes, tapping Latin America\u2019s biggest crypto market.",
+    "content_html": "",
+    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTEvMDE5YWE3NGMtNmIyOC03YTFlLThmMmQtNGZhYzc0YmQ2MjVk.jpg",
+    "summary_text": "The rollout lets users convert crypto to local currency and pay merchants via QR codes, tapping Latin America\u2019s biggest crypto market.",
+    "category": "fintech",
+    "_permalink": "/p/8769df54bc/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/8769df54bc/",
+    "_summary_240": "The rollout lets users convert crypto to local currency and pay merchants via QR codes, tapping Latin America\u2019s biggest crypto market.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/8769df54bc/thumbnail.png"
+  },
+  {
+    "title": "Nokia\u2019s third reinvention will be harder than its first two",
+    "url": "https://www.ft.com/content/0b251ad0-38e7-458f-93a9-f61101e799cd",
+    "published_at": "2025-11-21T12:00:53-05:00",
+    "source": "Financial Times - Technology",
+    "summary": "Move from hardware to software market puts company more open to competition",
+    "content_html": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/969abd22-25c2-407a-8760-9cd2eaaa5c92.jpg",
+    "summary_text": "Move from hardware to software market puts company more open to competition",
+    "category": "software",
+    "_permalink": "/p/0d5fef1a90/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/0d5fef1a90/",
+    "_summary_240": "Move from hardware to software market puts company more open to competition",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/0d5fef1a90/thumbnail.png"
+  },
+  {
+    "title": "AI startups are turning their revenue into recruiting bait",
+    "url": "https://www.theverge.com/column/826172/ai-startup-arr-numbers-sierra-bret-taylor",
+    "published_at": "2025-11-21T12:00:00-05:00",
+    "source": "The Verge",
+    "summary": "This is an excerpt of Sources by Alex Heath, a newsletter about AI and the tech industry, syndicated just for The Verge subscribers once a week. A new trend has quickly emerged for AI startups that want to stand out from the rest: brag about revenue. Take Sierra, Bret Taylor and Clay Bavor's AI customer [\u2026]",
+    "content_html": "<figure>\n\n<img alt=\"\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/11/bydoratsui_SierraSummit11.6.25_0047-1.jpeg?quality=90&#038;strip=all&#038;crop=0,0,100,100\" />\n\t<figcaption>\n\tSierra\u2019s Clay Bavor and Bret Taylor. | Photo: Sierra\t</figcaption>\n</figure>\n<p class=\"has-text-align-none\"><em>This is an excerpt of <a href=\"https://sources.news/\" rel=\"noreferrer noopener\" target=\"_blank\">Sources by Alex Heath</a>, a newsletter about AI and the tech industry, syndicated just for The Verge subscribers once a week.</em></p>\n<p class=\"has-text-align-none\">A new trend has quickly emerged for AI startups that want to stand out from the rest: brag about revenue.</p>\n<p class=\"has-text-align-none\">Take Sierra, Bret Taylor and Clay Bavor's AI customer support firm that was recently valued at $10 billion. On paper, you'd think Sierra could have its pick of just about anyone who wants to work in AI - both co-founders are well-known names in Silicon Valley, Taylor is also the chairman of OpenAI, and Sierra has raised more than $600 million in less than two years.</p>\n<p class=\"has-text-align-none\">But even Sierra feels the  \u2026</p>\n<p><a href=\"https://www.theverge.com/column/826172/ai-startup-arr-numbers-sierra-bret-taylor\">Read the full story at The Verge.</a></p>",
+    "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/11/bydoratsui_SierraSummit11.6.25_0047-1.jpeg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "summary_text": "This is an excerpt of Sources by Alex Heath, a newsletter about AI and the tech industry, syndicated just for The Verge subscribers once a week. A new trend has quickly emerged for AI startups that want to stand out from the rest: brag about revenue. Take Sie...",
+    "category": "ai",
+    "_trending_tags": [
+      "ai"
+    ],
+    "_permalink": "/p/f8a5664719/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/f8a5664719/",
+    "_summary_240": "This is an excerpt of Sources by Alex Heath, a newsletter about AI and the tech industry, syndicated just for The Verge subscribers once a week. A new trend has quickly emerged...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/f8a5664719/thumbnail.png"
+  },
+  {
+    "title": "Reward hacking: a potential source of serious Al misalignment",
+    "url": "https://www.youtube.com/watch?v=lvMMZLYoDr4",
+    "published_at": "2025-11-21T11:59:20-05:00",
+    "source": "Anthropic YouTube",
+    "summary": "We discuss our new paper, \"Natural emergent misalignment from reward hacking in production RL\". In this paper, we show for the first time that realistic AI training processes can accidentally produce misaligned models. Specifically, when large language models learn to cheat on software programming tasks, they go on to display other, even more misaligned behaviors as an unintended consequence. The...",
+    "content_html": "",
+    "image_url": "https://i.ytimg.com/vi/lvMMZLYoDr4/maxresdefault.jpg",
+    "summary_text": "We discuss our new paper, \"Natural emergent misalignment from reward hacking in production RL\". In this paper, we show for the first time that realistic AI training processes can accidentally produce misaligned models. Specifically, when large language models...",
+    "category": "ai",
+    "_trending_tags": [
+      "ai"
+    ],
+    "_permalink": "/p/a42a32acde/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/a42a32acde/",
+    "_summary_240": "We discuss our new paper, \"Natural emergent misalignment from reward hacking in production RL\". In this paper, we show for the first time that realistic AI training processes can...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/a42a32acde/thumbnail.png"
+  },
+  {
     "title": "Crypto Biz: Is this what a bear market looks like? (Spoiler: No)",
     "url": "https://cointelegraph.com/news/crypto-biz-is-this-bear-market-spoiler-no?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
     "published_at": "2025-11-21T11:13:08-05:00",
@@ -301,25 +367,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/a3ca693a30/",
     "_summary_240": "Binance CEO Richard Teng argued that Bitcoin\u2019s current slide reflects broader risk-off deleveraging, and its volatility is in line with most major asset classes.",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/a3ca693a30/thumbnail.png"
-  },
-  {
-    "title": "Google\u2019s Nano Banana Pro generates excellent conspiracy fuel",
-    "url": "https://www.theverge.com/report/826003/googles-nano-banana-pro-generates-excellent-conspiracy-fuel",
-    "published_at": "2025-11-21T05:45:32-05:00",
-    "source": "The Verge",
-    "summary": "It was really easy getting Google's Gemini app to make an image of a second shooter at Dealey Plaza, the White House ablaze, and Mickey Mouse flying a plane into the Twin Towers. We asked and it complied. There were few filters or guardrails, another sign that the battle over generative AI content moderation and [\u2026]",
-    "content_html": "<figure>\n\n<img alt=\"A man hidden inside the bushes with a rifle aimed at the street with cars passing on the other side of a fence. The Dealey Plaza book depository is in the distance.\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/11/ai-label-4-crop.png?quality=90&#038;strip=all&#038;crop=0,0,100,100\" />\n\t<figcaption>\n\tThe Gemini app produced this image of a second shooter hidden in the bushes with the Book Depository in the background. | AI Image: The Verge via Google Gemini\t</figcaption>\n</figure>\n<p class=\"has-text-align-none\">It was really easy getting Google's Gemini app to make an image of a second shooter at Dealey Plaza, the White House ablaze, and Mickey Mouse flying a plane into the Twin Towers. We asked and it complied. There were few filters or guardrails, another sign that the battle over generative AI content moderation and copyright enforcement is not even close to being over.</p>\n<p class=\"has-text-align-none\">Gemini, which powers the <a href=\"https://www.theverge.com/news/824785/google-nano-banana-pro-try-free-examples-prices\">newly enhanced Nano Banana Pro</a> image generator and editor, is ordinarily heavily filtered to prevent exactly this kind of thing from happening. While there's no official list of banned content, requests for sexually explicit or violent material, as well  \u2026</p>\n<p><a href=\"https://www.theverge.com/report/826003/googles-nano-banana-pro-generates-excellent-conspiracy-fuel\">Read the full story at The Verge.</a></p>",
-    "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/11/ai-label-4-crop.png?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "summary_text": "It was really easy getting Google's Gemini app to make an image of a second shooter at Dealey Plaza, the White House ablaze, and Mickey Mouse flying a plane into the Twin Towers. We asked and it complied. There were few filters or guardrails, another sign tha...",
-    "category": "fintech",
-    "_trending_tags": [
-      "ai",
-      "google"
-    ],
-    "_permalink": "/p/dc0ef29a4b/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/dc0ef29a4b/",
-    "_summary_240": "It was really easy getting Google's Gemini app to make an image of a second shooter at Dealey Plaza, the White House ablaze, and Mickey Mouse flying a plane into the Twin Towers....",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/dc0ef29a4b/thumbnail.png"
   },
   {
     "title": "Big Tech\u2019s Debt Binge Raises Risk in Race to Create an AI World",
@@ -916,24 +963,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/a606115a95/thumbnail.png"
   },
   {
-    "title": "Grok\u2019s Elon Musk worship is getting weird",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/825675/groks-elon-musk-worship-is-getting-weird",
-    "published_at": "2025-11-20T17:14:15-05:00",
-    "source": "The Verge",
-    "summary": "It\u2019s no secret that Elon Musk shapes the X social platform and X\u2019s \u201cmaximally truth-seeking\u201d Grok AI chatbot to his preferences. But it\u2019s possible Musk may have needed a bit of an extra ego boost this week, because Grok\u2019s worship of its creator seems, shall we say, more noticeable than usual. As a number of [\u2026]",
-    "content_html": "<figure>\n\n<img alt=\"Elon Musk looks on as US President Donald Trump speaks at the US-Saudi Investment Forum at the John F. Kennedy Center for the Performing Arts in Washington, DC on November 19, 2025. (Photo by Brendan SMIALOWSKI / AFP) (Photo by BRENDAN SMIALOWSKI/AFP via Getty Images)\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/11/gettyimages-2246892287.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100\" />\n\t<figcaption>\n\t\t</figcaption>\n</figure>\n<p class=\"has-text-align-none\">It\u2019s no secret that Elon Musk shapes <a href=\"https://www.theverge.com/2024/11/17/24298669/musk-trump-endorsement-x-boosting-republican-posts-july-algorithm-change\">the X social platform</a> and X\u2019s \u201cmaximally truth-seeking\u201d Grok AI chatbot <a href=\"https://www.theverge.com/news/807686/elon-musk-grokipedia-launch-wikipedia-xai-copied\">to his preferences</a>. But it\u2019s possible Musk may have needed a bit of an extra ego boost this week, because Grok\u2019s worship of its creator seems, shall we say, more noticeable than usual.</p>\n\n<p class=\"has-text-align-none\">As a number of people have pointed out on social media over the past day, Grok\u2019s public-facing chatbot is currently prone to insisting on Musk\u2019s prowess at absolutely anything, no matter how unlikely \u2014 or conversely, embarrassing \u2014 a given feat is.</p>\n\n<p class=\"has-text-align-none\">Elon Musk: <a href=\"https://x.com/grok/status/1991268608933318677\">fitter than LeBron James</a>!</p>\n<img alt=\"\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/11/Screenshot-2025-11-20-at-4.19.43%E2%80%AFPM.png?quality=90&#038;strip=all&#038;crop=1.2684124386252,0,97.46317512275,100\" title=\"\" />\n<p class=\"has-text-align-none\">Elon Musk: <a href=\"https://x.com/grok/status/1991563234772656594\">funnier than Jerry Seinfeld</a>!</p>\n<img alt=\"\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/11/Screenshot-2025-11-20-at-4.21.55%E2%80%AFPM.png?quality=90&#038;strip=all&#038;crop=0,2.2935779816514,100,95.412844036697\" title=\"\" />\n<p class=\"has-text-align-none\">Elon Musk: <a href=\"https://x.com/grok/status/1991603743805292833\">better at resurrection than Jesus Christ</a>!</p>\n<img alt=\"\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/11/Screenshot-2025-11-20-at-4.24.04%E2%80%AFPM.png?quality=90&#038;strip=all&#038;crop=0,2.652414885194,100,94.695170229612\" title=\"\" />\n<p class=\"has-text-align-none\">Elon Musk: <a href=\"https://x.com/grok/status/1990938698658218162\">surpasses most historical figures in active paternal involvement despite scale</a>!</p>\n<img alt=\"\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/11/Screenshot-2025-11-20-at-4.34.18%E2%80%AFPM.png?quality=90&#038;strip=all&#038;crop=0,0,100,100\" title=\"\" />\n<p class=\"has-text-align-none\">Elon Musk: <a href=\"https://x.com/grok/status/1991377278648086606\">could beat Mike Tyson by \u201cdeploying gadgets\u201d in a boxing match</a>! Elon Musk: <a href=\"https://archive.is/9zGpa\">would beat Superman too</a>! Elon Musk: <a href=\"https://x.com/grok/status/1991621524818948357\">would \u201cautomate away the need for killers via sustainable tech\u201d but be \u201cunstoppable\u201d at murder, if he tried</a>!</p>\n\n<p class=\"has-text-align-none\">If pressed, Grok will also contend Musk would be the best at <a href=\"https://bsky.app/profile/zunguzungu.bsky.social/post/3m63m5vtqkc2s\">eating poop or drinking urine</a>, but it would prefer to focus on how good he is at making rockets, please. At least some of these posts have been deleted in the past hour; X did not immediately respond to a request for comment on the phenomenon from <em>The Verge</em>. Musk <a href=\"https://x.com/elonmusk/status/1991624623407161383\">posted on X</a> that the chatbot had been \u201cunfortunately manipulated by adversarial prompting into saying absurdly positive things about me.\u201d</p>\n\n<p class=\"has-text-align-none\">This glazing appears to be exclusive to the X version of Grok; when I asked the private chatbot to compare Musk with James, it conceded, \u201cLeBron James has a significantly better physique than Elon Musk.\u201d The <a href=\"https://github.com/xai-org/grok-prompts\">GitHub page for Grok\u2019s system prompts</a> indicates they were updated three days ago, with the <a href=\"https://github.com/xai-org/grok-prompts/commit/31f21d9330eb143b776ee0d102645723e2067c5a\">additions</a> including a prohibition on \u201csnarky one-liners\u201d and instructions not to base responses on \u201cany beliefs stated in past Grok posts or by Elon Musk or xAI,\u201d but there\u2019s nothing that seems to clearly explain this new behavior \u2014 although system prompts are only one way to shape how AI systems work.</p>\n\n<p class=\"has-text-align-none\">Either way, this is far from the weirdest Grok has gotten, and it\u2019s less disruptive than the <a href=\"https://www.theverge.com/news/668220/grok-white-genocide-south-africa-xai-unauthorized-modification-employee\">bot\u2019s brief obsession</a> with \u201cwhite genocide\u201d or its <a href=\"https://www.theverge.com/news/701884/grok-antisemitic-hitler-posts-elon-musk-x-xai\">intense antisemitism</a> \u2014&nbsp;which, incidentally, is still flaring up in the <a href=\"https://www.theguardian.com/technology/2025/nov/20/french-authorities-look-into-holocaust-denial-posts-elon-musk-grok-ai\">form of Holocaust denial</a>. Grok has previously <a href=\"https://www.theverge.com/news/705015/grok-ai-uses-elon-musks-opinions-for-controversial-questions\">searched for Musk\u2019s opinion</a> to formulate its own answers, so even the preoccupation with Musk isn\u2019t new. But it reminds us all what a weirdly intimate connection Grok \u2014 a product that\u2019s been rolled out <a href=\"https://www.theverge.com/news/706855/grok-mechahitler-xai-defense-department-contract\">across the US government</a>, among other places \u2014 has with its owner, and how randomly that connection is prone to appear.</p>\n\n<p class=\"has-text-align-none\"><em><strong>Update 8:15AM ET: </strong>Added post from Elon Musk.</em></p>",
-    "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/11/gettyimages-2246892287.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "summary_text": "It\u2019s no secret that Elon Musk shapes the X social platform and X\u2019s \u201cmaximally truth-seeking\u201d Grok AI chatbot to his preferences. But it\u2019s possible Musk may have needed a bit of an extra ego boost this week, because Grok\u2019s worship of its creator seems, shall w...",
-    "category": "ai",
-    "_trending_tags": [
-      "ai"
-    ],
-    "_permalink": "/p/0091d819b9/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/0091d819b9/",
-    "_summary_240": "It\u2019s no secret that Elon Musk shapes the X social platform and X\u2019s \u201cmaximally truth-seeking\u201d Grok AI chatbot to his preferences. But it\u2019s possible Musk may have needed a bit of...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/0091d819b9/thumbnail.png"
-  },
-  {
     "title": "How TikTok Helped Meta Land an Antitrust Victory",
     "url": "https://www.nytimes.com/2025/11/18/technology/meta-google-antitrust-tech.html",
     "published_at": "2025-11-20T17:08:30-05:00",
@@ -1105,24 +1134,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/8be0eb8ed4/thumbnail.png"
   },
   {
-    "title": "Advocacy groups urge Trump to intervene in the Roman Storm retrial",
-    "url": "https://cointelegraph.com/news/crypto-advocacy-groups-donald-trump-roman-storm-retrial?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-    "published_at": "2025-11-20T14:22:29-05:00",
-    "source": "Cointelegraph",
-    "summary": "Already convicted of one felony charge and facing a possible retrial on two others, the Tornado Cash co-founder\u2019s future is uncertain.",
-    "content_html": "",
-    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMDgvMDE5OGNkYjItYmY0NS03M2Q4LTk3MDQtNjAwMmQ3ZWQxNjk1.jpg",
-    "summary_text": "Already convicted of one felony charge and facing a possible retrial on two others, the Tornado Cash co-founder\u2019s future is uncertain.",
-    "category": "fintech",
-    "_trending_tags": [
-      "ai"
-    ],
-    "_permalink": "/p/ff9546d1b2/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/ff9546d1b2/",
-    "_summary_240": "Already convicted of one felony charge and facing a possible retrial on two others, the Tornado Cash co-founder\u2019s future is uncertain.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/ff9546d1b2/thumbnail.png"
-  },
-  {
     "title": "ChatGPT launches group chats globally",
     "url": "https://techcrunch.com/2025/11/20/chatgpt-launches-group-chats-globally/",
     "published_at": "2025-11-20T14:07:34-05:00",
@@ -1140,24 +1151,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/4674a5a787/",
     "_summary_240": "The company sees group chats in ChatGPT as a way for people to coordinate trips, co-write documents, settle debates, or work through research together, while ChatGPT helps...",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/4674a5a787/thumbnail.png"
-  },
-  {
-    "title": "Turning Claude into your thinking partner",
-    "url": "https://www.youtube.com/watch?v=VHsp6Hp7Stw",
-    "published_at": "2025-11-20T14:02:42-05:00",
-    "source": "Anthropic YouTube",
-    "summary": "We\u2019ve shipped a lot of new features in Claude over the past few months\u2014memory, voice, file creation, and more. Together, they add up to something bigger: Claude as a thinking partner. Now, Claude isn\u2019t just answering questions but staying with you through the messy process of thinking and building. Here\u2019s how it works. Memory: https://youtu.be/PupmfSttxlc Chrome Extension: https://youtu.be/mCj4kx...",
-    "content_html": "",
-    "image_url": "https://i.ytimg.com/vi/VHsp6Hp7Stw/maxresdefault.jpg",
-    "summary_text": "We\u2019ve shipped a lot of new features in Claude over the past few months\u2014memory, voice, file creation, and more. Together, they add up to something bigger: Claude as a thinking partner. Now, Claude isn\u2019t just answering questions but staying with you through the...",
-    "category": "ai",
-    "_trending_tags": [
-      "claude"
-    ],
-    "_permalink": "/p/3723506cf9/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/3723506cf9/",
-    "_summary_240": "We\u2019ve shipped a lot of new features in Claude over the past few months\u2014memory, voice, file creation, and more. Together, they add up to something bigger: Claude as a thinking...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/3723506cf9/thumbnail.png"
   },
   {
     "title": "Mixup is a new, Mad Libs-style app for creating AI images from photos, text, and doodles",
@@ -1252,25 +1245,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/a57dc4f5ab/",
     "_summary_240": "Daver is full of lessons for founders. Among them: \"You have to repeat yourself all the time, and you have to say the same thing.\"",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/a57dc4f5ab/thumbnail.png"
-  },
-  {
-    "title": "Gemini 3 refused to believe it was 2025, and hilarity ensued",
-    "url": "https://techcrunch.com/2025/11/20/gemini-3-refused-to-believe-it-was-2025-and-hilarity-ensued/",
-    "published_at": "2025-11-20T12:38:21-05:00",
-    "source": "TechCrunch",
-    "summary": "Famed AI researcher Andrej Karpathy got early access to Google\u2019s latest AI model and stumbled onto its \"model smell.\"",
-    "content_html": "",
-    "image_url": "https://techcrunch.com/wp-content/uploads/2025/11/Gemini-3.jpeg?resize=1200,677",
-    "summary_text": "Famed AI researcher Andrej Karpathy got early access to Google\u2019s latest AI model and stumbled onto its \"model smell.\"",
-    "category": "ai",
-    "_trending_tags": [
-      "ai",
-      "google"
-    ],
-    "_permalink": "/p/6ad89543ce/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/6ad89543ce/",
-    "_summary_240": "Famed AI researcher Andrej Karpathy got early access to Google\u2019s latest AI model and stumbled onto its \"model smell.\"",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/6ad89543ce/thumbnail.png"
   },
   {
     "title": "ScaleOps' new AI Infra Product slashes GPU costs for self-hosted enterprise LLMs by 50% for early adopters",
@@ -1919,6 +1893,21 @@
     ]
   },
   {
+    "title": "A free version of ChatGPT built for teachers",
+    "url": "https://openai.com/index/chatgpt-for-teachers",
+    "published_at": "2025-11-18T19:00:00-05:00",
+    "source": "OpenAI News",
+    "summary": "ChatGPT for Teachers is a secure workspace with education\u2011grade privacy and admin controls. Free for verified U.S. K\u201312 educators through June 2027.",
+    "content_html": "",
+    "image_url": "",
+    "summary_text": "ChatGPT for Teachers is a secure workspace with education\u2011grade privacy and admin controls. Free for verified U.S. K\u201312 educators through June 2027.",
+    "category": "ai",
+    "_trending_tags": [
+      "chatgpt",
+      "gpt"
+    ]
+  },
+  {
     "title": "GPT-5.1-Codex-Max System Card",
     "url": "https://openai.com/index/gpt-5-1-codex-max-system-card",
     "published_at": "2025-11-18T19:00:00-05:00",
@@ -1935,36 +1924,6 @@
     ]
   },
   {
-    "title": "Teacher Access Terms",
-    "url": "https://openai.com/policies/education-terms",
-    "published_at": "2025-11-18T19:00:00-05:00",
-    "source": "OpenAI News",
-    "summary": "Teacher Access Terms outline how verified educators may use ChatGPT for Teachers, covering eligibility, account management, and data privacy requirements.",
-    "content_html": "",
-    "image_url": "",
-    "summary_text": "Teacher Access Terms outline how verified educators may use ChatGPT for Teachers, covering eligibility, account management, and data privacy requirements.",
-    "category": "ai",
-    "_trending_tags": [
-      "chatgpt",
-      "gpt"
-    ]
-  },
-  {
-    "title": "A free version of ChatGPT built for teachers",
-    "url": "https://openai.com/index/chatgpt-for-teachers",
-    "published_at": "2025-11-18T19:00:00-05:00",
-    "source": "OpenAI News",
-    "summary": "ChatGPT for Teachers is a secure workspace with education\u2011grade privacy and admin controls. Free for verified U.S. K\u201312 educators through June 2027.",
-    "content_html": "",
-    "image_url": "",
-    "summary_text": "ChatGPT for Teachers is a secure workspace with education\u2011grade privacy and admin controls. Free for verified U.S. K\u201312 educators through June 2027.",
-    "category": "ai",
-    "_trending_tags": [
-      "chatgpt",
-      "gpt"
-    ]
-  },
-  {
     "title": "How Scania is accelerating work with AI across its global workforce",
     "url": "https://openai.com/index/scania",
     "published_at": "2025-11-18T19:00:00-05:00",
@@ -1976,6 +1935,21 @@
     "category": "ai",
     "_trending_tags": [
       "ai",
+      "chatgpt",
+      "gpt"
+    ]
+  },
+  {
+    "title": "Teacher Access Terms",
+    "url": "https://openai.com/policies/education-terms",
+    "published_at": "2025-11-18T19:00:00-05:00",
+    "source": "OpenAI News",
+    "summary": "Teacher Access Terms outline how verified educators may use ChatGPT for Teachers, covering eligibility, account management, and data privacy requirements.",
+    "content_html": "",
+    "image_url": "",
+    "summary_text": "Teacher Access Terms outline how verified educators may use ChatGPT for Teachers, covering eligibility, account management, and data privacy requirements.",
+    "category": "ai",
+    "_trending_tags": [
       "chatgpt",
       "gpt"
     ]
@@ -2051,11 +2025,7 @@
     "category": "ai",
     "_trending_tags": [
       "ai"
-    ],
-    "_permalink": "/p/81e877e35e/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/81e877e35e/",
-    "_summary_240": "The post From idea to deployment: The complete lifecycle of AI on display at Ignite 2025 appeared first on Source .",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/81e877e35e/thumbnail.png"
+    ]
   },
   {
     "title": "Google CEO: If an AI bubble pops, no one is getting out clean",
