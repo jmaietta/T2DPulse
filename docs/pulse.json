@@ -1,5 +1,24 @@
 [
   {
+    "title": "Lean4: How the theorem prover works and why it's the new competitive edge in AI",
+    "url": "https://venturebeat.com/ai/lean4-how-the-theorem-prover-works-and-why-its-the-new-competitive-edge-in",
+    "published_at": "2025-11-22T19:30:00-05:00",
+    "source": "VentureBeat",
+    "summary": "Large language models (LLMs) have astounded the world with their capabilities, yet they remain plagued by unpredictability and hallucinations \u2013 confidently outputting incorrect information. In high-stakes domains like finance, medicine or autonomous systems, such unreliability is unacceptable. Enter Lean4 , an open-source programming language and interactive theorem prover becoming a key tool to ...",
+    "content_html": "",
+    "image_url": "",
+    "summary_text": "Large language models (LLMs) have astounded the world with their capabilities, yet they remain plagued by unpredictability and hallucinations \u2013 confidently outputting incorrect information. In high-stakes domains like finance, medicine or autonomous systems, ...",
+    "category": "ai",
+    "_trending_tags": [
+      "ai",
+      "llm"
+    ],
+    "_permalink": "/p/3913116857/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/3913116857/",
+    "_summary_240": "Large language models (LLMs) have astounded the world with their capabilities, yet they remain plagued by unpredictability and hallucinations \u2013 confidently outputting incorrect...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/3913116857/thumbnail.png"
+  },
+  {
     "title": "Here\u2019s what happened in crypto today",
     "url": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
     "published_at": "2025-11-22T17:31:21-05:00",
@@ -1219,23 +1238,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/e01c9eb037/thumbnail.png"
   },
   {
-    "title": "ScaleOps' new AI Infra Product slashes GPU costs for self-hosted enterprise LLMs by 50% for early adopters",
-    "url": "https://venturebeat.com/ai/scaleops-new-ai-infra-product-slashes-gpu-costs-for-self-hosted-enterprise",
-    "published_at": "2025-11-20T12:35:00-05:00",
-    "source": "VentureBeat",
-    "summary": "ScaleOps has expanded its cloud resource management platform with a new product aimed at enterprises operating self-hosted large language models (LLMs) and GPU-based AI applications. The AI Infra Product announced today , extends the company\u2019s existing automation capabilities to address a growing need for efficient GPU utilization, predictable performance, and reduced operational burden in large-...",
-    "content_html": "",
-    "image_url": "",
-    "summary_text": "ScaleOps has expanded its cloud resource management platform with a new product aimed at enterprises operating self-hosted large language models (LLMs) and GPU-based AI applications. The AI Infra Product announced today , extends the company\u2019s existing automa...",
-    "category": "ai",
-    "_trending_tags": [
-      "ai",
-      "cloud",
-      "gpu",
-      "llm"
-    ]
-  },
-  {
     "title": "From legacy to Frontier: How 100-year brands are leading AI innovation",
     "url": "https://www.microsoft.com/en-us/microsoft-cloud/blog/2025/11/20/from-legacy-to-frontier-how-100-year-brands-are-leading-ai-innovation/",
     "published_at": "2025-11-20T11:56:02-05:00",
@@ -1581,11 +1583,7 @@
     "_trending_tags": [
       "deepmind",
       "google"
-    ],
-    "_permalink": "/p/b6da4878b8/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/b6da4878b8/",
-    "_summary_240": "DeepMind\u2019s chief says he envisions Gemini as an operating system for physical robots. The company has hired Aaron Saunders to help make that a reality.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/b6da4878b8/thumbnail.png"
+    ]
   },
   {
     "title": "Massive Cloudflare outage was triggered by file that suddenly doubled in size",
