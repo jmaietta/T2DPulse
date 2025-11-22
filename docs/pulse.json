@@ -1,5 +1,23 @@
 [
   {
+    "title": "Coinbase crypto exchange executes internal wallet migration",
+    "url": "https://cointelegraph.com/news/coinbase-crypto-wallet-migration?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "published_at": "2025-11-22T11:45:54-05:00",
+    "source": "Cointelegraph",
+    "summary": "The crypto exchange said the planned internal migration is a normal, \"best practice\" in the industry to maintain cybersecurity standards.",
+    "content_html": "",
+    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjQtMTEvMDE5MzI3NTktZWM3NS03ZDdjLWFlYmEtYzgxOTg4YTdkZTE3.jpg",
+    "summary_text": "The crypto exchange said the planned internal migration is a normal, \"best practice\" in the industry to maintain cybersecurity standards.",
+    "category": "fintech",
+    "_trending_tags": [
+      "ai"
+    ],
+    "_permalink": "/p/010bb0677d/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/010bb0677d/",
+    "_summary_240": "The crypto exchange said the planned internal migration is a normal, \"best practice\" in the industry to maintain cybersecurity standards.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/010bb0677d/thumbnail.png"
+  },
+  {
     "title": "Here\u2019s what happened in crypto today",
     "url": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
     "published_at": "2025-11-22T08:06:28-05:00",
@@ -271,7 +289,7 @@
     "published_at": "2025-11-21T16:47:44-05:00",
     "source": "Ars Technica",
     "summary": "Google's AI infrastructure chief tells staff it needs thousandfold capacity increase in 5 years.",
-    "content_html": "<p>While AI bubble talk <a href=\"https://arstechnica.com/ai/2025/11/were-in-an-llm-bubble-hugging-face-ceo-says-but-not-an-ai-one/\">fills the air</a> these days, with fears of overinvestment that could <a href=\"https://arstechnica.com/ai/2025/10/ars-live-recap-is-the-ai-bubble-about-to-pop-ed-zitron-weighs-in/\">pop</a> at any time, something of a contradiction is brewing on the ground: Companies like Google and OpenAI can barely build infrastructure fast enough to fill their AI needs.</p>\n<p>During an all-hands meeting earlier this month, Google\u2019s AI infrastructure head Amin Vahdat told employees that the company must double its serving capacity every six months to meet demand for artificial intelligence services, <a href=\"https://www.cnbc.com/2025/11/21/google-must-double-ai-serving-capacity-every-6-months-to-meet-demand.html\">reports</a> CNBC. Vahdat, a vice president at Google Cloud, presented slides showing the company needs to scale \u201cthe next 1000x in 4-5 years.\u201d</p>\n<p>While a thousandfold increase in compute capacity sounds ambitious by itself, Vahdat noted some key constraints: Google needs to be able to deliver this increase in capability, compute, and storage networking \u201cfor essentially the same cost and increasingly, the same power, the same energy level,\u201d he told employees during the meeting. \u201cIt won\u2019t be easy but through collaboration and co-design, we\u2019re going to get there.\u201d</p><p><a href=\"https://arstechnica.com/ai/2025/11/google-tells-employees-it-must-double-capacity-every-6-months-to-meet-ai-demand/\">Read full article</a></p>\n<p><a href=\"https://arstechnica.com/ai/2025/11/google-tells-employees-it-must-double-capacity-every-6-months-to-meet-ai-demand/#comments\">Comments</a></p>",
+    "content_html": "<p>While AI bubble talk <a href=\"https://arstechnica.com/ai/2025/11/were-in-an-llm-bubble-hugging-face-ceo-says-but-not-an-ai-one/\">fills the air</a> these days, with fears of overinvestment that could <a href=\"https://arstechnica.com/ai/2025/10/ars-live-recap-is-the-ai-bubble-about-to-pop-ed-zitron-weighs-in/\">pop</a> at any time, something of a contradiction is brewing on the ground: Companies like Google and OpenAI can barely build infrastructure fast enough to fill their AI needs.</p>\n<p>During an all-hands meeting earlier this month, Google\u2019s AI infrastructure head Amin Vahdat told employees that the company must double its serving capacity every six months to meet demand for artificial intelligence services, <a href=\"https://www.cnbc.com/2025/11/21/google-must-double-ai-serving-capacity-every-6-months-to-meet-demand.html\">reports</a> CNBC. The comments show a rare look at what Google executives are telling its own employees internally. Vahdat, a vice president at Google Cloud, presented slides to its employees showing the company needs to scale \u201cthe next 1000x in 4-5 years.\u201d</p>\n<p>While a thousandfold increase in compute capacity sounds ambitious by itself, Vahdat noted some key constraints: Google needs to be able to deliver this increase in capability, compute, and storage networking \u201cfor essentially the same cost and increasingly, the same power, the same energy level,\u201d he told employees during the meeting. \u201cIt won\u2019t be easy but through collaboration and co-design, we\u2019re going to get there.\u201d</p><p><a href=\"https://arstechnica.com/ai/2025/11/google-tells-employees-it-must-double-capacity-every-6-months-to-meet-ai-demand/\">Read full article</a></p>\n<p><a href=\"https://arstechnica.com/ai/2025/11/google-tells-employees-it-must-double-capacity-every-6-months-to-meet-ai-demand/#comments\">Comments</a></p>",
     "image_url": "https://cdn.arstechnica.net/wp-content/uploads/2019/03/DLS_013-1152x648.jpg",
     "summary_text": "Google's AI infrastructure chief tells staff it needs thousandfold capacity increase in 5 years.",
     "category": "ai",
@@ -921,21 +939,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/c0c0a56293/",
     "_summary_240": "Taiwan Semiconductor Manufacturing Co.\u2019s boss vowed to keep growing its US presence to meet AI demand, sustaining a rapid expansion that also encompasses Japan and Europe.",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/c0c0a56293/thumbnail.png"
-  },
-  {
-    "title": "SoftBank\u2019s PayPay changes the game for Binance Japan users",
-    "url": "https://cointelegraph.com/news/softbank-paypay-binance-payments-japan-investment?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-    "published_at": "2025-11-21T04:15:10-05:00",
-    "source": "Cointelegraph",
-    "summary": "Operated by SoftBank, the backer of one of the world\u2019s top 10 public Bitcoin holders, PayPay is integrating with Binance Japan ahead of its expected US IPO in December.",
-    "content_html": "",
-    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTEvMDE5YWE1NTgtMGE2ZS03YjIyLTkyZGUtOWNkNDhkMTUyYTRl.jpg",
-    "summary_text": "Operated by SoftBank, the backer of one of the world\u2019s top 10 public Bitcoin holders, PayPay is integrating with Binance Japan ahead of its expected US IPO in December.",
-    "category": "fintech",
-    "_permalink": "/p/11e131a4a4/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/11e131a4a4/",
-    "_summary_240": "Operated by SoftBank, the backer of one of the world\u2019s top 10 public Bitcoin holders, PayPay is integrating with Binance Japan ahead of its expected US IPO in December.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/11e131a4a4/thumbnail.png"
   },
   {
     "title": "Bitcoin Heading for Worst Month Since Crypto Collapse of 2022",
