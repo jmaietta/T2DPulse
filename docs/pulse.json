@@ -1,10 +1,127 @@
 [
   {
+    "title": "NVIDIA Insider Activity: All Sells",
+    "url": "https://newsletter.tek2dayholdings.com/p/nvidia-insider-activity-all-sells",
+    "published_at": "2025-11-22T00:31:57-05:00",
+    "source": "TEK2day Newsletter",
+    "summary": "NASDAQ",
+    "content_html": "<div class=\"captioned-image-container\"><figure><a class=\"image-link image2 is-viewable-img\" href=\"https://substackcdn.com/image/fetch/$s_!v7pW!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ffe4753ec-654d-4fda-8f30-214fb18b3282_850x535.png\" target=\"_blank\"><div class=\"image2-inset\"><source type=\"image/webp\" /><img alt=\"\" class=\"sizing-normal\" height=\"535\" src=\"https://substackcdn.com/image/fetch/$s_!v7pW!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ffe4753ec-654d-4fda-8f30-214fb18b3282_850x535.png\" width=\"850\" /><div class=\"image-link-expand\"><div class=\"pencraft pc-display-flex pc-gap-8 pc-reset\"><button class=\"pencraft pc-reset pencraft icon-container restack-image\" tabindex=\"0\" type=\"button\"><svg class=\"lucide lucide-refresh-cw\" fill=\"none\" height=\"20\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" viewBox=\"0 0 24 24\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8\"></path><path d=\"M21 3v5h-5\"></path><path d=\"M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16\"></path><path d=\"M8 16H3v5\"></path></svg></button><button class=\"pencraft pc-reset pencraft icon-container view-image\" tabindex=\"0\" type=\"button\"><svg class=\"lucide lucide-maximize2 lucide-maximize-2\" fill=\"none\" height=\"20\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" viewBox=\"0 0 24 24\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><polyline points=\"15 3 21 3 21 9\"></polyline><polyline points=\"9 21 3 21 3 15\"></polyline><line x1=\"21\" x2=\"14\" y1=\"3\" y2=\"10\"></line><line x1=\"3\" x2=\"10\" y1=\"21\" y2=\"14\"></line></svg></button></div></div></div></a><figcaption class=\"image-caption\"><a href=\"https://www.nasdaq.com/market-activity/stocks/nvda/insider-activity\">NASDAQ</a></figcaption></figure></div><div><hr /></div><p></p>",
+    "image_url": "https://substackcdn.com/image/fetch/$s_!v7pW!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ffe4753ec-654d-4fda-8f30-214fb18b3282_850x535.png",
+    "summary_text": "NASDAQ",
+    "category": "ai",
+    "_trending_tags": [
+      "ai",
+      "nvidia"
+    ],
+    "_permalink": "/p/8859affa13/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/8859affa13/",
+    "_summary_240": "NASDAQ",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/8859affa13/thumbnail.png"
+  },
+  {
+    "title": "A Bit on Google's TPUs",
+    "url": "https://newsletter.tek2dayholdings.com/p/a-bit-on-googles-tpus",
+    "published_at": "2025-11-22T00:22:35-05:00",
+    "source": "TEK2day Newsletter",
+    "summary": "Here is a visual explanation of how Google\u2019s Tensor Processing Units (TPUs) work.",
+    "content_html": "<div class=\"captioned-image-container\"><figure><a class=\"image-link image2 is-viewable-img\" href=\"https://substackcdn.com/image/fetch/$s_!TC3c!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F9a0e8865-d945-4bf3-930a-542f970edc85_797x569.png\" target=\"_blank\"><div class=\"image2-inset\"><source type=\"image/webp\" /><img alt=\"\" class=\"sizing-normal\" height=\"569\" src=\"https://substackcdn.com/image/fetch/$s_!TC3c!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F9a0e8865-d945-4bf3-930a-542f970edc85_797x569.png\" width=\"797\" /><div class=\"image-link-expand\"><div class=\"pencraft pc-display-flex pc-gap-8 pc-reset\"><button class=\"pencraft pc-reset pencraft icon-container restack-image\" tabindex=\"0\" type=\"button\"><svg class=\"lucide lucide-refresh-cw\" fill=\"none\" height=\"20\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" viewBox=\"0 0 24 24\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8\"></path><path d=\"M21 3v5h-5\"></path><path d=\"M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16\"></path><path d=\"M8 16H3v5\"></path></svg></button><button class=\"pencraft pc-reset pencraft icon-container view-image\" tabindex=\"0\" type=\"button\"><svg class=\"lucide lucide-maximize2 lucide-maximize-2\" fill=\"none\" height=\"20\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" viewBox=\"0 0 24 24\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><polyline points=\"15 3 21 3 21 9\"></polyline><polyline points=\"9 21 3 21 3 15\"></polyline><line x1=\"21\" x2=\"14\" y1=\"3\" y2=\"10\"></line><line x1=\"3\" x2=\"10\" y1=\"21\" y2=\"14\"></line></svg></button></div></div></div></a></figure></div><h4><strong>Here is a visual explanation of how Google&#8217;s Tensor Processing Units (TPUs) work.</strong></h4><p><strong>1. The Problem: The Memory Bottleneck</strong></p><p>Traditional CPUs and GPUs are designed for general-purpose computing. When they perform the massive number of matrix multiplications required for machine learning, they spend a lot of time waiting for data to be fetched from memory. This &#8220;Von Neumann bottleneck&#8221; slows down the entire process.</p><div class=\"captioned-image-container\"><figure><a class=\"image-link image2 is-viewable-img\" href=\"https://substackcdn.com/image/fetch/$s_!BQHa!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F6d66da8d-d772-4d8f-bc45-29e14b39ebce_2816x1536.png\" target=\"_blank\"><div class=\"image2-inset\"><source type=\"image/webp\" /><img alt=\"\" class=\"sizing-normal\" height=\"794\" src=\"https://substackcdn.com/image/fetch/$s_!BQHa!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F6d66da8d-d772-4d8f-bc45-29e14b39ebce_2816x1536.png\" width=\"1456\" /><div class=\"image-link-expand\"><div class=\"pencraft pc-display-flex pc-gap-8 pc-reset\"><button class=\"pencraft pc-reset pencraft icon-container restack-image\" tabindex=\"0\" type=\"button\"><svg class=\"lucide lucide-refresh-cw\" fill=\"none\" height=\"20\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" viewBox=\"0 0 24 24\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8\"></path><path d=\"M21 3v5h-5\"></path><path d=\"M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16\"></path><path d=\"M8 16H3v5\"></path></svg></button><button class=\"pencraft pc-reset pencraft icon-container view-image\" tabindex=\"0\" type=\"button\"><svg class=\"lucide lucide-maximize2 lucide-maximize-2\" fill=\"none\" height=\"20\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" viewBox=\"0 0 24 24\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><polyline points=\"15 3 21 3 21 9\"></polyline><polyline points=\"9 21 3 21 3 15\"></polyline><line x1=\"21\" x2=\"14\" y1=\"3\" y2=\"10\"></line><line x1=\"3\" x2=\"10\" y1=\"21\" y2=\"14\"></line></svg></button></div></div></div></a></figure></div><p><strong>2. The Solution: The Systolic Array (MXU)</strong></p><p>The heart of the TPU is the Matrix Multiplier Unit (MXU). Instead of fetching data for each calculation, the MXU uses a &#8220;systolic array&#8221; architecture. Data flows through a grid of processors, similar to how blood flows through the heart. Each processor performs a calculation and passes the result to its neighbor, allowing for massive parallelism and data reuse without constant memory access.</p><div class=\"captioned-image-container\"><figure><a class=\"image-link image2 is-viewable-img\" href=\"https://substackcdn.com/image/fetch/$s_!kVnM!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F8a136e7f-8e52-446b-a373-ab5b59636c28_2816x1536.png\" target=\"_blank\"><div class=\"image2-inset\"><source type=\"image/webp\" /><img alt=\"\" class=\"sizing-normal\" height=\"794\" src=\"https://substackcdn.com/image/fetch/$s_!kVnM!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F8a136e7f-8e52-446b-a373-ab5b59636c28_2816x1536.png\" width=\"1456\" /><div class=\"image-link-expand\"><div class=\"pencraft pc-display-flex pc-gap-8 pc-reset\"><button class=\"pencraft pc-reset pencraft icon-container restack-image\" tabindex=\"0\" type=\"button\"><svg class=\"lucide lucide-refresh-cw\" fill=\"none\" height=\"20\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" viewBox=\"0 0 24 24\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8\"></path><path d=\"M21 3v5h-5\"></path><path d=\"M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16\"></path><path d=\"M8 16H3v5\"></path></svg></button><button class=\"pencraft pc-reset pencraft icon-container view-image\" tabindex=\"0\" type=\"button\"><svg class=\"lucide lucide-maximize2 lucide-maximize-2\" fill=\"none\" height=\"20\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" viewBox=\"0 0 24 24\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><polyline points=\"15 3 21 3 21 9\"></polyline><polyline points=\"9 21 3 21 3 15\"></polyline><line x1=\"21\" x2=\"14\" y1=\"3\" y2=\"10\"></line><line x1=\"3\" x2=\"10\" y1=\"21\" y2=\"14\"></line></svg></button></div></div></div></a></figure></div><p><strong>3. The Complete System Architecture</strong></p><p>To keep the powerful MXU fed with data, the TPU has a specialized memory hierarchy. Large, high-speed buffers are built directly onto the chip, storing data close to where it&#8217;s needed. This is supplemented by external High-Bandwidth Memory (HBM). A dedicated control unit orchestrates the data flow, ensuring the MXU is always busy and not waiting for data.</p><div class=\"captioned-image-container\"><figure><a class=\"image-link image2 is-viewable-img\" href=\"https://substackcdn.com/image/fetch/$s_!7A8x!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F802a5acf-a3b2-47b9-a434-2778870f8143_2816x1536.png\" target=\"_blank\"><div class=\"image2-inset\"><source type=\"image/webp\" /><img alt=\"\" class=\"sizing-normal\" height=\"794\" src=\"https://substackcdn.com/image/fetch/$s_!7A8x!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F802a5acf-a3b2-47b9-a434-2778870f8143_2816x1536.png\" width=\"1456\" /><div class=\"image-link-expand\"><div class=\"pencraft pc-display-flex pc-gap-8 pc-reset\"><button class=\"pencraft pc-reset pencraft icon-container restack-image\" tabindex=\"0\" type=\"button\"><svg class=\"lucide lucide-refresh-cw\" fill=\"none\" height=\"20\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" viewBox=\"0 0 24 24\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8\"></path><path d=\"M21 3v5h-5\"></path><path d=\"M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16\"></path><path d=\"M8 16H3v5\"></path></svg></button><button class=\"pencraft pc-reset pencraft icon-container view-image\" tabindex=\"0\" type=\"button\"><svg class=\"lucide lucide-maximize2 lucide-maximize-2\" fill=\"none\" height=\"20\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" viewBox=\"0 0 24 24\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><polyline points=\"15 3 21 3 21 9\"></polyline><polyline points=\"9 21 3 21 3 15\"></polyline><line x1=\"21\" x2=\"14\" y1=\"3\" y2=\"10\"></line><line x1=\"3\" x2=\"10\" y1=\"21\" y2=\"14\"></line></svg></button></div></div></div></a></figure></div><div><hr /></div><p></p>",
+    "image_url": "https://substackcdn.com/image/fetch/$s_!TC3c!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F9a0e8865-d945-4bf3-930a-542f970edc85_797x569.png",
+    "summary_text": "Here is a visual explanation of how Google\u2019s Tensor Processing Units (TPUs) work.",
+    "category": "ai",
+    "_trending_tags": [
+      "google",
+      "tensor"
+    ],
+    "_permalink": "/p/436bceedee/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/436bceedee/",
+    "_summary_240": "Here is a visual explanation of how Google\u2019s Tensor Processing Units (TPUs) work.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/436bceedee/thumbnail.png"
+  },
+  {
+    "title": "How this founder\u2019s unlikely path to Silicon Valley could become an edge in industrial tech",
+    "url": "https://techcrunch.com/2025/11/21/how-this-founders-unlikely-path-to-silicon-valley-could-become-an-edge-in-industrial-tech/",
+    "published_at": "2025-11-21T22:26:19-05:00",
+    "source": "TechCrunch",
+    "summary": "Young's age and background \u2013 things that might seem like disadvantages when it comes to more established industries \u2013 have become his secret weapons. When he walks into a room of executives twice or three times his age, he says, there's initial skepticism. \"Who the hell is this young guy and how does he know what he's talking about?\"",
+    "content_html": "",
+    "image_url": "https://techcrunch.com/wp-content/uploads/2025/11/111925_Interface-Cofounder-Headshots-21.jpg?resize=1200,800",
+    "summary_text": "Young's age and background \u2013 things that might seem like disadvantages when it comes to more established industries \u2013 have become his secret weapons. When he walks into a room of executives twice or three times his age, he says, there's initial skepticism. \"W...",
+    "category": "fintech",
+    "_permalink": "/p/3eb2ec35e1/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/3eb2ec35e1/",
+    "_summary_240": "Young's age and background \u2013 things that might seem like disadvantages when it comes to more established industries \u2013 have become his secret weapons. When he walks into a room of...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/3eb2ec35e1/thumbnail.png"
+  },
+  {
+    "title": "Sovereign Bitcoin adoption would be the ultimate upside catalyst: Jeff Park",
+    "url": "https://cointelegraph.com/news/bitcoin-sovereign-adoption-upside-candle-catalyst-jeff-park?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "published_at": "2025-11-21T21:14:35-05:00",
+    "source": "Cointelegraph",
+    "summary": "The catalyst could serve as a wake-up call and send Bitcoin to $150,000 overnight, though it \u201cwould have to be real,\" according to Jeff Park.",
+    "content_html": "",
+    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTAvMDE5OWFmNzItOThmOC03NjllLTkwMGYtMzA3MTJjMDE5NmRh.jpg",
+    "summary_text": "The catalyst could serve as a wake-up call and send Bitcoin to $150,000 overnight, though it \u201cwould have to be real,\" according to Jeff Park.",
+    "category": "fintech",
+    "_permalink": "/p/dc76c763f4/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/dc76c763f4/",
+    "_summary_240": "The catalyst could serve as a wake-up call and send Bitcoin to $150,000 overnight, though it \u201cwould have to be real,\" according to Jeff Park.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/dc76c763f4/thumbnail.png"
+  },
+  {
+    "title": "Cryptology Group Held an Election, but Can\u2019t Decrypt the Results",
+    "url": "https://www.nytimes.com/2025/11/21/world/cryptography-group-lost-election-results.html",
+    "published_at": "2025-11-21T20:52:09-05:00",
+    "source": "The New York Times - Technology",
+    "summary": "A global group of researchers was unable to read the vote tally, after an official lost one of three secret code keys needed to unlock a hyper-secure election system.",
+    "content_html": "",
+    "image_url": "",
+    "summary_text": "A global group of researchers was unable to read the vote tally, after an official lost one of three secret code keys needed to unlock a hyper-secure election system.",
+    "category": "fintech",
+    "_permalink": "/p/1444300643/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/1444300643/",
+    "_summary_240": "A global group of researchers was unable to read the vote tally, after an official lost one of three secret code keys needed to unlock a hyper-secure election system.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/1444300643/thumbnail.png"
+  },
+  {
+    "title": "Google denies \u2018misleading\u2019 reports of Gmail using your emails to train AI",
+    "url": "https://www.theverge.com/news/826902/gmail-ai-training-data-opt-out",
+    "published_at": "2025-11-21T19:04:21-05:00",
+    "source": "The Verge",
+    "summary": "Google is pushing back on viral social media posts and articles like this one by Malwarebytes, claiming Google has changed its policy to use your Gmail messages and attachments to train AI models, and the only way to opt out is by disabling \u201csmart features\u201d like spell checking. But Google spokesperson Jenny Thomson tells The [\u2026]",
+    "content_html": "<figure>\n\n<img alt=\"\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/03/acastro_STK459_09.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100\" />\n\t<figcaption>\n\t\t</figcaption>\n</figure>\n<p class=\"has-text-align-none\">Google is pushing back on <a href=\"https://x.com/eevblog/status/1991293066175492297\">viral social media posts</a> and articles like <a href=\"https://www.malwarebytes.com/blog/news/2025/11/gmail-is-reading-your-emails-and-attachments-to-train-its-ai-unless-you-turn-it-off\">this one by <em>Malwarebytes</em></a><em>,</em> claiming Google has changed its policy to use your Gmail messages and attachments to train AI models, and the only way to opt out is by disabling \u201csmart features\u201d like spell checking.</p>\n\n<p class=\"has-text-align-none\">But Google spokesperson Jenny Thomson tells <em>The Verge</em> that \u201cthese reports are misleading \u2013 we have not changed anyone\u2019s settings, Gmail Smart Features have existed for many years, and we do not use your Gmail content for training our Gemini AI model.\u201d</p>\n\n<p class=\"has-text-align-none\">You may want to double-check your settings anyway, as one <em>Verge</em> staffer also says they had opted out of some of the Smart Features, but had been opted back in to having them on. In January, <a href=\"https://workspace.google.com/blog/product-announcements/updated-smart-feature-settings-give-users-increased-choice-and-control\">Google updated</a> its smart feature personalization settings so that you could turn off the features for Google Workspace and for other Google products (like Maps and Wallet) independently of each other.\u00a0</p>\n\n<p class=\"has-text-align-none\">In addition to things like spell checking, having Gmail\u2019s smart features turned on enables <a href=\"https://support.google.com/mail/answer/15604322?hl=en&amp;co=GENIE.Platform%3DAndroid#zippy=%2Cwhat-are-googles-legal-bases-of-processing-for-users-in-the-european-economic-area-united-kingdom-or-switzerland%2Chow-long-is-your-workspace-content-activity-used-to-provide-smart-features-and-to-improve-these-features\">features like</a> tracking orders or easily adding flights from Gmail to your calendar. Enabling the feature in Workspace says that \u201cyou agree to let Google Workspace use your Workspace content and activity to personalize your experience across Workspace,\u201d according to the settings page, but according to Google, that does not mean handing over the content of your emails to use for AI training.</p>",
+    "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/03/acastro_STK459_09.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "summary_text": "Google is pushing back on viral social media posts and articles like this one by Malwarebytes, claiming Google has changed its policy to use your Gmail messages and attachments to train AI models, and the only way to opt out is by disabling \u201csmart features\u201d l...",
+    "category": "ai",
+    "_trending_tags": [
+      "ai",
+      "google"
+    ],
+    "_permalink": "/p/8d0a67696f/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/8d0a67696f/",
+    "_summary_240": "Google is pushing back on viral social media posts and articles like this one by Malwarebytes, claiming Google has changed its policy to use your Gmail messages and attachments...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/8d0a67696f/thumbnail.png"
+  },
+  {
+    "title": "House Bill Would Allow Bitcoin Payments for Federal Taxes",
+    "url": "https://www.pymnts.com/blockchain/bitcoin/2025/house-bill-would-allow-bitcoin-payments-for-federal-taxes/",
+    "published_at": "2025-11-21T18:54:47-05:00",
+    "source": "PYMNTS",
+    "summary": "A bill introduced Thursday (Nov. 20) in the U.S. House would allow Americans to use Bitcoin to pay federal taxes and would direct those payments into the Strategic Bitcoin Reserve. The Bitcoin for America Act (H.R. 6180) was introduced by Rep. Warren Davidson (R-Ohio) and referred to the Ways and Means Committee and the [\u2026] The post House Bill Would Allow Bitcoin Payments for Federal Taxes appear...",
+    "content_html": "<p><span>A bill introduced Thursday (Nov. 20) in the U.S. House would allow Americans to use Bitcoin to pay federal taxes and would direct those payments into the Strategic Bitcoin Reserve.</span></p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p><span>The </span><a href=\"https://drive.google.com/file/d/1uQCCCI77jTgLHf-wI0c-iPHjkbz0ZCZi/view\" rel=\"noopener\" target=\"_blank\"><span>Bitcoin for America Act</span></a><span> (</span><a href=\"https://www.congress.gov/bill/119th-congress/house-bill/6180?s=2&amp;r=1\" rel=\"noopener\" target=\"_blank\"><span>H.R. 6180</span></a><span>) was introduced by Rep. </span><a href=\"https://davidson.house.gov/\" rel=\"noopener\" target=\"_blank\"><span>Warren Davidson</span></a><span> (R-Ohio) and referred to the Ways and Means Committee and the Financial Services Committee, according to Congress.gov.</span></p>\n<p><span>Davidson said in a Thursday </span><a href=\"https://davidson.house.gov/2025/11/rep-warren-davidson-introduces-the-bitcoin-for-america-act\" rel=\"noopener\" target=\"_blank\"><span>press release</span></a><span> that allowing Americans to use Bitcoin to pay taxes would enable more Americans, including those who are unbanked, to pay taxes.</span></p>\n<p><span>Directing those Bitcoin payments to the Strategic Bitcoin Reserve would diversify U.S. assets, create an independent store of value, ensure the U.S. doesn\u2019t fall behind other nations in global financial competition, and guard against dollar erosion and long-term economic risk, Davidson said in the release.</span></p>\n<p><span>\u201cBy allowing taxpayers to pay federal taxes in Bitcoin and having the proceeds placed into the Strategic Bitcoin Reserve, the nation will benefit by having a tangible asset that appreciates in value over time \u2014 unlike the U.S. dollar, which has steadily lost value under inflationary pressures,\u201d Davidson said in the release.</span></p>\n<p><span>\u201cThis bill will give the American people more choice in paying their taxes as well as give our government a stronger financial foundation,\u201d Davidson said. \u201cThe Bitcoin for America Act will position our country to lead \u2014 not follow \u2014 as the world navigates the future of sound money and digital innovation.\u201d</span></p>\n<p><span>President Donald Trump signed an </span><a href=\"https://www.whitehouse.gov/presidential-actions/2025/03/establishment-of-the-strategic-bitcoin-reserve-and-united-states-digital-asset-stockpile/\" rel=\"noopener\" target=\"_blank\"><span>executive order</span></a><span> to establish a </span><a href=\"https://www.pymnts.com/cryptocurrency/2025/trump-establishes-strategic-bitcoin-reserve-and-us-digital-asset-stockpile/\" rel=\"noopener\" target=\"_blank\"><span>Strategic Bitcoin Reserve</span></a><span> in March, saying it would enable the nation to manage digital assets as it would any other resource.</span></p>\n<p><span>The </span><a href=\"https://www.btcpolicy.org/\" rel=\"noopener\" target=\"_blank\"><span>Bitcoin Policy Institute</span></a><span>, a nonpartisan, nonprofit organization, said Thursday that it endorses Davidson\u2019s bill. In a Thursday </span><a href=\"https://www.btcpolicy.org/articles/press-release-bpi-endorses-bitcoin-for-america-act-and-unveils-bitcoin-tax-payment-model\" rel=\"noopener\" target=\"_blank\"><span>press release</span></a><span>, the organization said the bill codifies the executive order creating a Strategic Bitcoin Reserve and enables Americans to pay federal taxes in Bitcoin without incurring capital gains liability.</span></p>\n<p><span>\u201cThe Bitcoin for America Act proves that a strategic Bitcoin reserve doesn\u2019t need to be a top-down mandate,\u201d BPI Head of Strategy </span><a href=\"https://www.btcpolicy.org/authors/conner-brown-db860\" rel=\"noopener\" target=\"_blank\"><span>Conner Brown</span></a><span> said in the release. \u201cBy letting Americans voluntarily contribute Bitcoin through their tax payments, it creates the first truly democratic, market-driven model for national Bitcoin accumulation.\u201d</span></p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/blockchain/bitcoin/2025/house-bill-would-allow-bitcoin-payments-for-federal-taxes/\">House Bill Would Allow Bitcoin Payments for Federal Taxes</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
+    "image_url": "https://www.pymnts.com/wp-content/uploads/2025/11/bitcoin-federal-taxes-us-house-tax-return-strategic-bitcoin-reserve.jpeg?w=457",
+    "summary_text": "A bill introduced Thursday (Nov. 20) in the U.S. House would allow Americans to use Bitcoin to pay federal taxes and would direct those payments into the Strategic Bitcoin Reserve. The Bitcoin for America Act (H.R. 6180) was introduced by Rep. Warren Davidson...",
+    "category": "fintech",
+    "_permalink": "/p/61e52d9bcc/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/61e52d9bcc/",
+    "_summary_240": "A bill introduced Thursday (Nov. 20) in the U.S. House would allow Americans to use Bitcoin to pay federal taxes and would direct those payments into the Strategic Bitcoin...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/61e52d9bcc/thumbnail.png"
+  },
+  {
     "title": "OpenAI is ending API access to fan-favorite GPT-4o model in February 2026",
     "url": "https://venturebeat.com/ai/openai-is-ending-api-access-to-fan-favorite-gpt-4o-model-in-february-2026",
     "published_at": "2025-11-21T18:01:00-05:00",
     "source": "VentureBeat",
-    "summary": "OpenAI has sent out emails notifying API customers that its chatgpt-4o-latest model will be retired from the developer platform in mid-February 2026,. Access to the model is scheduled to end on February 16, 2026, creating a roughly three-month transition period for remaining applications still built on GPT-4o. Sources familiar with the matter emphasized that this timeline applies only to the API....",
+    "summary": "OpenAI has sent out emails notifying API customers that its chatgpt-4o-latest model will be retired from the developer platform in mid-February 2026,. Access to the model is scheduled to end on February 16, 2026, creating a roughly three-month transition period for remaining applications still built on GPT-4o. An OpenAI spokesperson emphasized that this timeline applies only to the API. OpenAI ha...",
     "content_html": "",
     "image_url": "",
     "summary_text": "OpenAI has sent out emails notifying API customers that its chatgpt-4o-latest model will be retired from the developer platform in mid-February 2026,. Access to the model is scheduled to end on February 16, 2026, creating a roughly three-month transition peri...",
@@ -14,11 +131,7 @@
       "chatgpt",
       "gpt",
       "openai"
-    ],
-    "_permalink": "/p/f153b55a86/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/f153b55a86/",
-    "_summary_240": "OpenAI has sent out emails notifying API customers that its chatgpt-4o-latest model will be retired from the developer platform in mid-February 2026,. Access to the model is...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/f153b55a86/thumbnail.png"
+    ]
   },
   {
     "title": "Lawmakers Encourage CFPB to Protect Consumer Choice While Rewriting Rule 1033",
@@ -39,15 +152,19 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/b754f60063/thumbnail.png"
   },
   {
-    "title": "Cryptology Group Held an Election, but Can\u2019t Decrypt the Results",
-    "url": "https://www.nytimes.com/2025/11/21/world/cryptography-group-lost-election-results.html",
-    "published_at": "2025-11-21T17:13:03-05:00",
-    "source": "The New York Times - Technology",
-    "summary": "A global group of researchers was unable to read the vote tally, after an official lost one of three secret code keys needed to unlock a hyper-secure election system.",
-    "content_html": "",
-    "image_url": "",
-    "summary_text": "A global group of researchers was unable to read the vote tally, after an official lost one of three secret code keys needed to unlock a hyper-secure election system.",
-    "category": "fintech"
+    "title": "How to know if your Asus router is one of thousands hacked by China-state hackers",
+    "url": "https://arstechnica.com/security/2025/11/thousands-of-hacked-asus-routers-are-under-control-of-suspected-china-state-hackers/",
+    "published_at": "2025-11-21T17:05:20-05:00",
+    "source": "Ars Technica",
+    "summary": "So far, the hackers are laying low, likely for later use.",
+    "content_html": "<p>Thousands of Asus routers have been hacked and are under the control of a suspected China-state group that has yet to reveal its intentions for the mass compromise, researchers said.</p>\n<p>The hacking spree is either primarily or exclusively targeting seven models of Asus routers, all of which are no longer supported by the manufacturer, meaning they no longer receive security patches, researchers from SecurityScorecard <a href=\"https://securityscorecard.com/wp-content/uploads/2025/11/STRIKE_Asus_WrtHug-Report_V6.pdf\">said</a>. So far, it\u2019s unclear what the attackers do after gaining control of the devices. SecurityScorecard has named the operation WrtHug.</p>\n<h2>Staying off the radar</h2>\n<p>SecurityScorecard said it suspects the compromised devices are being used similarly to those found in ORB (operational relay box) networks, which hackers primarily use to conduct espionage to conceal their identity.</p><p><a href=\"https://arstechnica.com/security/2025/11/thousands-of-hacked-asus-routers-are-under-control-of-suspected-china-state-hackers/\">Read full article</a></p>\n<p><a href=\"https://arstechnica.com/security/2025/11/thousands-of-hacked-asus-routers-are-under-control-of-suspected-china-state-hackers/#comments\">Comments</a></p>",
+    "image_url": "https://cdn.arstechnica.net/wp-content/uploads/2023/05/asus-router-1024x648.jpg",
+    "summary_text": "So far, the hackers are laying low, likely for later use.",
+    "category": "fintech",
+    "_permalink": "/p/b40f4de11f/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/b40f4de11f/",
+    "_summary_240": "So far, the hackers are laying low, likely for later use.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/b40f4de11f/thumbnail.png"
   },
   {
     "title": "\u2018Rich Dad, Poor Dad\u2019 author and Bitcoin bull Robert Kiyosaki sells his BTC",
@@ -393,57 +510,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/7f13a51a5a/",
     "_summary_240": "US officials are having early discussions on whether to let Nvidia Corp. sell its H200 artificial intelligence chips to China, according to people familiar with the matter, a...",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/7f13a51a5a/thumbnail.png"
-  },
-  {
-    "title": "KuCoin Pay Integrates Crypto Payment Acceptance Tool With Brazil\u2019s Pix",
-    "url": "https://www.pymnts.com/cryptocurrency/2025/kucoin-pay-integrates-crypto-payment-acceptance-tool-with-brazil-pix/",
-    "published_at": "2025-11-21T13:07:26-05:00",
-    "source": "PYMNTS",
-    "summary": "KuCoin Pay now enables Brazilians to convert and spend cryptocurrencies at any merchant that accepts the QR codes of Brazil\u2019s instant payment system, Pix. The capability was enabled by the integration of KuCoin Pay, which is the crypto payment arm of global crypto platform KuCoin, and Pix, according to a Friday (Nov. 21) press [\u2026] The post KuCoin Pay Integrates Crypto Payment Acceptance Tool With...",
-    "content_html": "<p><a class=\"editor-rtfLink\" href=\"https://www.kucoin.com/pay\" rel=\"noopener\" target=\"_blank\"><span>KuCoin Pay</span></a><span> now enables Brazilians to convert and spend cryptocurrencies at any merchant that accepts the QR codes of Brazil\u2019s instant payment system, </span><a class=\"editor-rtfLink\" href=\"https://www.bcb.gov.br/en/financialstability/pix_en\" rel=\"noopener\" target=\"_blank\"><span>Pix</span></a><span>.</span></p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p><span>The capability was enabled by the integration of KuCoin Pay, which is the crypto payment arm of global crypto platform </span><a class=\"editor-rtfLink\" href=\"https://www.kucoin.com/\" rel=\"noopener\" target=\"_blank\"><span>KuCoin</span></a><span>, and Pix, according to a Friday (Nov. 21) </span><a class=\"editor-rtfLink\" href=\"https://www.prnewswire.com/news-releases/kucoin-pay-enters-brazil-via-pix-driving-instant-crypto-payments-and-enhancing-utility-302622725.html\" rel=\"noopener\" target=\"_blank\"><span>press release</span></a><span>.</span></p>\n<p><span>With this integration, KuCoin Pay instantly converts any of the more than 50 cryptocurrencies that it supports to Brazilian real, enabling users to transfer funds from their KuCoin accounts to any Brazilian bank or pay a merchant via Pix, according to the release.</span></p>\n<p><span>\u201cBy integrating with Pix, we are unlocking a new economic layer for Brazil\u2019s digitally savvy population,\u201d KuCoin Pay Lead Raymond Ngai said in the release. \u201cThis embodies our commitment to enhance crypto accessibility for all, building on our previously announced on-chain payment solutions as a new step forward in making digital assets practical for everyday life.\u201d</span></p>\n<p><span>KuCoin introduced KuCoin Pay in January, saying this </span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/cryptocurrency/2025/kucoin-debuts-crypto-payment-acceptance-tool-merchants/\" rel=\"noopener\" target=\"_blank\"><span>crypto payment</span></a><span> acceptance tool aims to bridge \u201cthe gap between traditional retail and crypto, offering contactless and borderless transactions.\u201d</span></p>\n<p><span>The company said integration with its app allows \u201cbusinesses to tap into KuCoin\u2019s &#8230; user base while simplifying the buying process for everyday items for users. Daily requests such as gift cards and mobile top-ups can be done seamlessly, further promoting widespread crypto adoption.\u201d</span></p>\n<p><span>KuCoin </span><span>said</span><span> in July that KuCoin Pay expanded globally </span><span>and was</span><span> enabling </span><a class=\"editor-rtfLink\" href=\"https://www.prnewswire.com/news-releases/kucoins-remarkable-first-half-of-2025-building-trust-driving-innovation-and-shaping-the-future-302506482.html\" rel=\"noopener\" target=\"_blank\"><span>crypto payments</span></a><span> for real-world services </span><span>such as</span><span> retail purchases via </span><a class=\"editor-rtfLink\" href=\"https://aeon.xyz/\" rel=\"noopener\" target=\"_blank\"><span>AEON</span></a><span>\u2019s VietQR and QR Ph codes in Southeast Asia.</span></p>\n<p><span>The company also said at the time that its cryptocurrency exchange had more than 41 million registered users.</span></p>\n<p><span>When announcing its integration with AEON in May, KuCoin Pay </span><span>said</span><span> this would </span><span>advance</span><span> its </span><a class=\"editor-rtfLink\" href=\"https://www.prnewswire.com/news-releases/kucoin-pay-integrates-with-aeon-to-revolutionize-web3-mobile-payments-in-retail-302459766.html\" rel=\"noopener\" target=\"_blank\"><span>Web3 mobile payment</span></a><span> capabilities across online and offline retail environments.</span><span> AEON is a Web3 payment protocol.</span></p>\n<p><span>\u201cBy adopting AEON\u2019s suite of interoperable payment tools, including Web3 Mobile Payments, Online Web3 Payments and support for recurring or pre-authorized transactions, KuCoin Pay strengthens its ability to offer scalable and user-friendly payment solutions,\u201d the company said at the time in a press release.</span></p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/cryptocurrency/2025/kucoin-pay-integrates-crypto-payment-acceptance-tool-with-brazil-pix/\">KuCoin Pay Integrates Crypto Payment Acceptance Tool With Brazil\u2019s Pix</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
-    "image_url": "https://www.pymnts.com/wp-content/uploads/2025/11/KuCoin-Pay.jpg?w=457",
-    "summary_text": "KuCoin Pay now enables Brazilians to convert and spend cryptocurrencies at any merchant that accepts the QR codes of Brazil\u2019s instant payment system, Pix. The capability was enabled by the integration of KuCoin Pay, which is the crypto payment arm of global c...",
-    "category": "fintech",
-    "_permalink": "/p/b1f201411a/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/b1f201411a/",
-    "_summary_240": "KuCoin Pay now enables Brazilians to convert and spend cryptocurrencies at any merchant that accepts the QR codes of Brazil\u2019s instant payment system, Pix. The capability was...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/b1f201411a/thumbnail.png"
-  },
-  {
-    "title": "Who is AI nostalgia slop even for?",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/825498/openai-sora-video-slop-nostalgia-mister-rogers",
-    "published_at": "2025-11-21T13:02:01-05:00",
-    "source": "The Verge",
-    "summary": "There has been a recent deluge of generative AI videos featuring uncannily fresh-faced teens waxing nostalgic about how much better the world was during the '80s and '90s. As the AI youths smize and show off their period-specific haircuts, the clips cut to dreamlike footage of sun-drenched cul-de-sacs and vintage cars while songs like \"Everybody [\u2026]",
-    "content_html": "<figure>\n\n<img alt=\"\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/11/258133_Who_are_these_nostalgia_AI_slop_videos_for__CVirginia2.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100\" />\n\t<figcaption>\n\t\t</figcaption>\n</figure>\n<p class=\"has-drop-cap has-text-align-none\">There has been a <a href=\"https://www.redpepper.org.uk/political-parties-and-ideologies/history/nowhere-to-retvrn-history-nostalgia-tradwives-far-right/\">recent deluge of generative AI videos</a> featuring uncannily fresh-faced teens waxing nostalgic about how much better the world was during the '80s and '90s. As the AI youths smize and show off their period-specific haircuts, the clips cut to dreamlike footage of sun-drenched cul-de-sacs and vintage cars while songs like \"<a href=\"https://www.youtube.com/shorts/OS-M5ZK-I8o\">Everybody Wants to Rule the World</a>\" and tracks inspired by the <a href=\"https://www.youtube.com/shorts/ngStbzblHds\"><em>Donkey Kong Country</em> soundtrack</a> play in the background. It's all very weird - like bragging that you peaked in high school. </p>\n<p class=\"has-text-align-none\">As strange as the videos are, there is a relatively easy to understand logic at work here. On one level, this content appeal \u2026</p>\n<p><a href=\"https://www.theverge.com/ai-artificial-intelligence/825498/openai-sora-video-slop-nostalgia-mister-rogers\">Read the full story at The Verge.</a></p>",
-    "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/11/258133_Who_are_these_nostalgia_AI_slop_videos_for__CVirginia2.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "summary_text": "There has been a recent deluge of generative AI videos featuring uncannily fresh-faced teens waxing nostalgic about how much better the world was during the '80s and '90s. As the AI youths smize and show off their period-specific haircuts, the clips cut to dr...",
-    "category": "ai",
-    "_trending_tags": [
-      "ai"
-    ],
-    "_permalink": "/p/9f0152eba7/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/9f0152eba7/",
-    "_summary_240": "There has been a recent deluge of generative AI videos featuring uncannily fresh-faced teens waxing nostalgic about how much better the world was during the '80s and '90s. As the...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/9f0152eba7/thumbnail.png"
-  },
-  {
-    "title": "FCC Rescinds Cybersecurity Requirements for Telecommunications Carriers",
-    "url": "https://www.pymnts.com/cybersecurity/2025/fcc-rescinds-cybersecurity-requirements-for-telecommunications-carriers/",
-    "published_at": "2025-11-21T12:52:44-05:00",
-    "source": "PYMNTS",
-    "summary": "The Federal Communications Commission (FCC) has rescinded its rule that required telecommunications carriers to safeguard their networks from cyberattacks, saying it will instead partner with carriers to strengthen cybersecurity. The regulator said in a Thursday (Nov. 20) press release that the declaratory ruling and notice of proposed rulemaking (NPRM) were unlawful and proposed ineffective [\u2026] ...",
-    "content_html": "<p><span>The </span><a href=\"https://www.fcc.gov/\" rel=\"noopener\" target=\"_blank\"><span>Federal Communications Commission</span></a><span> (FCC) has rescinded its rule that required telecommunications carriers to safeguard their networks from cyberattacks, saying it will instead partner with carriers to strengthen cybersecurity.</span></p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p><span>The regulator said in a Thursday (Nov. 20) </span><a href=\"https://docs.fcc.gov/public/attachments/DOC-415455A1.pdf\" rel=\"noopener\" target=\"_blank\"><span>press release</span></a><span> that the declaratory ruling and notice of proposed rulemaking (NPRM) were unlawful and proposed ineffective requirements.</span></p>\n<p><span>It was reported in February that the </span><a href=\"https://www.pymnts.com/cpi-posts/fcc-responds-to-cybersecurity-threats-with-calea-ruling/\" rel=\"noopener\" target=\"_blank\"><span>declaratory ruling</span></a><span> and NPRM were issued in the final days of </span><a href=\"https://www.fcc.gov/about/leadership/jessica-rosenworcel\" rel=\"noopener\" target=\"_blank\"><span>Jessica Rosenworcel</span></a><span>\u2019s tenure as chair of the Democrat-led FCC.</span></p>\n<p><span>The declaratory ruling affirmed that the Communications Assistance for Law Enforcement Act (CALEA) required telecommunications carriers to safeguard their networks from unlawful access, while the NPRM aimed to extend cybersecurity and supply chain risk management requirements to a broader range of service providers.</span></p>\n<p><span>When announcing its decision to rescind these actions on Thursday, the FCC said that the declaratory ruling misconstrued CALEA. The regulator also said that communications service providers have strengthened their cybersecurity posture over the past several months and will continue to do so.</span></p>\n<p><span>The FCC\u2019s action to rescind the prior measures was approved by two commissioners, with a third commissioner dissenting, according to the release.</span></p>\n<p><span>FCC Chairman </span><a href=\"https://www.fcc.gov/about/leadership/brendan-carr\" rel=\"noopener\" target=\"_blank\"><span>Brendan Carr</span></a><span> said in a Thursday </span><a href=\"https://docs.fcc.gov/public/attachments/DOC-415455A2.pdf\" rel=\"noopener\" target=\"_blank\"><span>statement</span></a><span> that he approved the move because actions the regulator takes to protect the nation\u2019s communications systems from cybersecurity threats must be both lawful and effective.</span></p>\n<p><span>Carr said that the Biden-era measures resulted from a \u201crushed and eleventh-hour approach to cybersecurity\u201d and that under his leadership, the FCC has worked directly with carriers and taken other actions to protect against cyber intrusions.</span></p>\n<p><span>Commissioner </span><a href=\"https://www.fcc.gov/about/leadership/olivia-trusty\" rel=\"noopener\" target=\"_blank\"><span>Olivia Trusty</span></a><span>, who also approved the rescinding of the prior measures, said in a </span><a href=\"https://docs.fcc.gov/public/attachments/DOC-415455A4.pdf\" rel=\"noopener\" target=\"_blank\"><span>statement</span></a><span> that the move affirms the FCC\u2019s commitment to act within its regulatory authority and to pursue actions that are \u201ctargeted and enforceable.\u201d</span></p>\n<p><span>\u201cImportantly, today\u2019s decision does not signal a retreat from our cybersecurity mission,\u201d Trusty said in the statement. \u201cOn the contrary, it reflects a recognition that one of the most effective defenses against foreign threats comes from a dynamic partnership between the federal government and the private sector.\u201d</span></p>\n<p><span>Commissioner </span><a href=\"https://www.fcc.gov/about/leadership/anna-gomez\" rel=\"noopener\" target=\"_blank\"><span>Anna Gomez</span></a><span>, who dissented from the rescinding of the measures, said in a </span><a href=\"https://docs.fcc.gov/public/attachments/DOC-415455A3.pdf\" rel=\"noopener\" target=\"_blank\"><span>statement</span></a><span> that the prior measures were advanced in response to Salt Typhoon\u2019s breach of American </span><a href=\"https://www.pymnts.com/cybersecurity/2024/ongoing-salt-typhoon-hacking-campaign-targets-americans-call-record-metadata/\" rel=\"noopener\" target=\"_blank\"><span>telecommunications infrastructure</span></a><span> and that the FCC\u2019s rescinding of those measures \u201creverses the only meaningful effort this agency has advanced in response to that attack.\u201d</span></p>\n<p><span>\u201cWe\u2019re told the answer is not regulation, but voluntary cooperation,\u201d Gomez said in the statement. \u201cCollaboration is valuable and I support it as one part of a comprehensive cybersecurity strategy. However, collaboration is not a substitute for obligation.\u201d</span></p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/cybersecurity/2025/fcc-rescinds-cybersecurity-requirements-for-telecommunications-carriers/\">FCC Rescinds Cybersecurity Requirements for Telecommunications Carriers</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
-    "image_url": "https://www.pymnts.com/wp-content/uploads/2025/11/fcc-federal-communications-commission-cybersecurity-telecommunications.jpeg?w=457",
-    "summary_text": "The Federal Communications Commission (FCC) has rescinded its rule that required telecommunications carriers to safeguard their networks from cyberattacks, saying it will instead partner with carriers to strengthen cybersecurity. The regulator said in a Thurs...",
-    "category": "fintech",
-    "_trending_tags": [
-      "ai"
-    ],
-    "_permalink": "/p/3240d7a31f/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/3240d7a31f/",
-    "_summary_240": "The Federal Communications Commission (FCC) has rescinded its rule that required telecommunications carriers to safeguard their networks from cyberattacks, saying it will instead...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/3240d7a31f/thumbnail.png"
   },
   {
     "title": "Ex-Coinbase lawyer announces run for New York Attorney General, citing crypto policy",
@@ -960,39 +1026,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/3e0603b88a/thumbnail.png"
   },
   {
-    "title": "Bitcoiners lose their mind after Scott Bessent walks into a Bitcoin bar",
-    "url": "https://cointelegraph.com/news/bitcoin-bar-washington-pubkey-scott-bessent-us-treasury-secretary?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-    "published_at": "2025-11-20T23:59:11-05:00",
-    "source": "Cointelegraph",
-    "summary": "Bitcoiners viewed US Treasury Secretary Scott Bessent\u2019s appearance at the opening night of the Bitcoin-themed bar as \u201ca sign\u201d for Bitcoin.",
-    "content_html": "",
-    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMDIvMDE5NGQ0OTEtYzk2My03ZDIzLWI1NjAtNWFjMWZhZWJjYmRl.jpg",
-    "summary_text": "Bitcoiners viewed US Treasury Secretary Scott Bessent\u2019s appearance at the opening night of the Bitcoin-themed bar as \u201ca sign\u201d for Bitcoin.",
-    "category": "fintech",
-    "_permalink": "/p/c904c71874/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/c904c71874/",
-    "_summary_240": "Bitcoiners viewed US Treasury Secretary Scott Bessent\u2019s appearance at the opening night of the Bitcoin-themed bar as \u201ca sign\u201d for Bitcoin.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/c904c71874/thumbnail.png"
-  },
-  {
-    "title": "Grok fan-girling Elon Musk shows why AI must be decentralized",
-    "url": "https://cointelegraph.com/news/groks-praises-elon-musk-shows-ai-needs-decentralization?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-    "published_at": "2025-11-20T23:57:21-05:00",
-    "source": "Cointelegraph",
-    "summary": "Grok couldn\u2019t stop singing Elon Musk\u2019s praises, arguing he could beat Mike Tyson in a fight and was fitter than NBA superstar LeBron James.",
-    "content_html": "",
-    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMDUvMDE5NmQ3MzUtMDFiYi03ZTE1LThlNjAtNGE4N2FlNGMwNzNi.jpg",
-    "summary_text": "Grok couldn\u2019t stop singing Elon Musk\u2019s praises, arguing he could beat Mike Tyson in a fight and was fitter than NBA superstar LeBron James.",
-    "category": "ai",
-    "_trending_tags": [
-      "ai"
-    ],
-    "_permalink": "/p/b7772f1613/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/b7772f1613/",
-    "_summary_240": "Grok couldn\u2019t stop singing Elon Musk\u2019s praises, arguing he could beat Mike Tyson in a fight and was fitter than NBA superstar LeBron James.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/b7772f1613/thumbnail.png"
-  },
-  {
     "title": "Taiwan minister says US will not put \u2018punishing\u2019 tariffs on chip sector",
     "url": "https://www.ft.com/content/28648c5f-5dcf-4300-9074-b1b0ef4704fd",
     "published_at": "2025-11-20T22:35:35-05:00",
@@ -1470,12 +1503,16 @@
     "source": "Financial Times - Technology",
     "summary": "The inside story on the Asia tech trends that matter, from Nikkei Asia and the Financial Times",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/da31b60d-5f19-4baf-a549-c959c757b514.jpg",
     "summary_text": "The inside story on the Asia tech trends that matter, from Nikkei Asia and the Financial Times",
     "category": "ai",
     "_trending_tags": [
       "ai"
-    ]
+    ],
+    "_permalink": "/p/0e9e24dccd/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/0e9e24dccd/",
+    "_summary_240": "The inside story on the Asia tech trends that matter, from Nikkei Asia and the Financial Times",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/0e9e24dccd/thumbnail.png"
   },
   {
     "title": "Helping 1,000 small businesses build with AI",
@@ -1499,12 +1536,16 @@
     "source": "Financial Times - Technology",
     "summary": "Can Brussels balance its desire to set the guardrails for tech with its need to attract investment?",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/b2ea6382-ca8e-49b6-bf1c-e0d96fec6920.jpg",
     "summary_text": "Can Brussels balance its desire to set the guardrails for tech with its need to attract investment?",
     "category": "ai",
     "_trending_tags": [
       "ai"
-    ]
+    ],
+    "_permalink": "/p/a7e7e2c82a/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/a7e7e2c82a/",
+    "_summary_240": "Can Brussels balance its desire to set the guardrails for tech with its need to attract investment?",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/a7e7e2c82a/thumbnail.png"
   },
   {
     "title": "Trump Takes Aim at State AI Laws in Draft Executive Order",
@@ -1531,13 +1572,17 @@
     "source": "Financial Times - Technology",
     "summary": "While the chipmaker is the big winner from the booming technology, it is singularly exposed to changing expectations",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/2da6231e-8117-4d1c-9590-5766925e0d3f.jpg",
     "summary_text": "While the chipmaker is the big winner from the booming technology, it is singularly exposed to changing expectations",
     "category": "ai",
     "_trending_tags": [
       "ai",
       "nvidia"
-    ]
+    ],
+    "_permalink": "/p/e6cb271ad7/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/e6cb271ad7/",
+    "_summary_240": "While the chipmaker is the big winner from the booming technology, it is singularly exposed to changing expectations",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/e6cb271ad7/thumbnail.png"
   },
   {
     "title": "Nvidia CEO Dismisses Concerns of an AI Bubble. Investors Remain Skeptical",
@@ -1733,13 +1778,17 @@
     "source": "Financial Times - Technology",
     "summary": "Wall Street shares have seen big swings this week as investors brace for all-important earnings from AI bellwether",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://images.ft.com/v3/image/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F6c3909c3-aa63-4996-8db5-4a1ab09cbee6.jpg?source=next-article&fit=scale-down&quality=highest&width=700&dpr=1",
     "summary_text": "Wall Street shares have seen big swings this week as investors brace for all-important earnings from AI bellwether",
     "category": "ai",
     "_trending_tags": [
       "ai",
       "nvidia"
-    ]
+    ],
+    "_permalink": "/p/eee5cea506/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/eee5cea506/",
+    "_summary_240": "Wall Street shares have seen big swings this week as investors brace for all-important earnings from AI bellwether",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/eee5cea506/thumbnail.png"
   },
   {
     "title": "The US Will Prioritize Visa Processing for Fans With World Cup Tickets",
@@ -2262,32 +2311,6 @@
     "content_html": "",
     "image_url": "https://media.wired.com/photos/6913b909f757bec53ccf7811/master/pass/Bitcoin-Heist-Business-1304706668.jpg",
     "summary_text": "Sophisticated crypto scams are on the rise. But few of them go to the lengths one bitcoin mining executive experienced earlier this year.",
-    "category": "fintech"
-  },
-  {
-    "title": "Agentic AI - Whoa, Pump the Brakes",
-    "url": "https://newsletter.tek2dayholdings.com/p/agentic-ai-whoa-pump-the-brakes",
-    "published_at": "2025-11-17T00:05:23-05:00",
-    "source": "TEK2day Newsletter",
-    "summary": "The current AI Agent problem is reliability, not IAM",
-    "content_html": "<div class=\"captioned-image-container\"><figure><a class=\"image-link image2 is-viewable-img\" href=\"https://substackcdn.com/image/fetch/$s_!Tn8K!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ff9aacbd4-d89d-4e7a-89b2-a74dc842af0b_1098x784.jpeg\" target=\"_blank\"><div class=\"image2-inset\"><source type=\"image/webp\" /><img alt=\"\" class=\"sizing-normal\" height=\"784\" src=\"https://substackcdn.com/image/fetch/$s_!Tn8K!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ff9aacbd4-d89d-4e7a-89b2-a74dc842af0b_1098x784.jpeg\" width=\"1098\" /><div class=\"image-link-expand\"><div class=\"pencraft pc-display-flex pc-gap-8 pc-reset\"><button class=\"pencraft pc-reset pencraft icon-container restack-image\" tabindex=\"0\" type=\"button\"><svg class=\"lucide lucide-refresh-cw\" fill=\"none\" height=\"20\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" viewBox=\"0 0 24 24\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8\"></path><path d=\"M21 3v5h-5\"></path><path d=\"M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16\"></path><path d=\"M8 16H3v5\"></path></svg></button><button class=\"pencraft pc-reset pencraft icon-container view-image\" tabindex=\"0\" type=\"button\"><svg class=\"lucide lucide-maximize2 lucide-maximize-2\" fill=\"none\" height=\"20\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" viewBox=\"0 0 24 24\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><polyline points=\"15 3 21 3 21 9\"></polyline><polyline points=\"9 21 3 21 3 15\"></polyline><line x1=\"21\" x2=\"14\" y1=\"3\" y2=\"10\"></line><line x1=\"3\" x2=\"10\" y1=\"21\" y2=\"14\"></line></svg></button></div></div></div></a></figure></div><p><strong>Lately I frequently come across articles that say the biggest obstacle to Agentic AI progress is &#8220;IAM&#8221; - &#8220;Identity and Access Management&#8221;.</strong> For example, if one worker has 5 or 10 AI Agents acting on his behalf, those agents require access to systems (and therefore permissions and passwords), to execute the tasks they&#8217;re responsible for. </p><p>First, I don&#8217;t know anybody that has deployed 5 or 10 AI Agents that are truly AI Agents as opposed to simple software automations such as a Github cron job. <strong>The reason people have not widely deployed AI Agents is because LLMs are fundamentally unreliable.</strong> <strong>IAM is a future problem. The current AI Agent problem is reliability.</strong> </p><p>Let&#8217;s say I task an AI Agent to write a summary report and send it downstream to my equity traders each morning. I don&#8217;t know when or where the underlying LLM - and therefore the AI Agent it underpins - may hallucinate. Therefore, I have to check every stitch of content the AI produces to make sure there are not any errors. What is the ROI in that example? Probably negative. </p><p><strong>I do believe there is a tangible ROI in text-centric use cases where the AI Agent acts as the first line of defense. Examples include writing an initial summary of a long-form report and looking for syntax errors in a block of software code. </strong></p><p><strong>I&#8217;ve previously written that LLMs can be well leveraged across the Software coding function, including writing new code and maintaining existing code bases- albeit while under the supervision of humans. </strong>One may set up agents to monitor agents that write code. Yet, we are far away from fully autonomous AI Agents that write, maintain and analyze enterprise code because AI Agents are too unreliable and too dangerous to allow to run autonomously across a company&#8217;s enterprise data. Sure, one may set-up guardrails to limit potentially catastrophic actions, but that does not deal with the reliability issue which is a function of LLM&#8217;s propensity to hallucinate, to not interpret instructions correctly, and the fundamental lack of commonsense or real world heuristics. </p><div class=\"youtube-wrap\" id=\"youtube2-sAitLFLbgDA\"><div class=\"youtube-inner\"></div></div><div><hr /></div><p></p>",
-    "image_url": "https://substackcdn.com/image/fetch/$s_!Tn8K!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ff9aacbd4-d89d-4e7a-89b2-a74dc842af0b_1098x784.jpeg",
-    "summary_text": "The current AI Agent problem is reliability, not IAM",
-    "category": "ai",
-    "_trending_tags": [
-      "agent",
-      "ai"
-    ]
-  },
-  {
-    "title": "How Fraudsters Use Cryptocurrency A.T.M.s to Target Victims",
-    "url": "https://www.nytimes.com/2025/11/17/technology/fraudsters-cryptocurrency-atms.html",
-    "published_at": "2025-11-17T00:01:20-05:00",
-    "source": "The New York Times - Technology",
-    "summary": "The kiosks, which resemble conventional A.T.M.s and convert cash into virtual currencies, are increasingly under scrutiny as a tool for scammers.",
-    "content_html": "A Bitcoin A.T.M. in a convenience store in Miami. Crypto A.T.M. operators are in at least 28,000 locations, according to Treasury Department data.",
-    "image_url": "https://static01.nyt.com/images/2025/11/17/multimedia/BIZ-CRYPTO-ATM-03-cjqg/BIZ-CRYPTO-ATM-03-cjqg-mediumSquareAt3X.jpg",
-    "summary_text": "The kiosks, which resemble conventional A.T.M.s and convert cash into virtual currencies, are increasingly under scrutiny as a tool for scammers.",
     "category": "fintech"
   },
   {
