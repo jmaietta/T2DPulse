@@ -2,7 +2,7 @@
   {
     "title": "What OpenAI Did When ChatGPT Users Lost Touch With Reality",
     "url": "https://www.nytimes.com/2025/11/23/technology/openai-chatgpt-users-risks.html",
-    "published_at": "2025-11-23T07:34:31-05:00",
+    "published_at": "2025-11-23T08:12:23-05:00",
     "source": "The New York Times - Technology",
     "summary": "In tweaking its chatbot to appeal to more people, OpenAI made it riskier for some of them. Now the company has made its chatbot safer. Will that undermine its quest for growth?",
     "content_html": "",
@@ -15,10 +15,30 @@
       "gpt",
       "openai"
     ],
-    "_permalink": "/p/79144e745d/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/79144e745d/",
+    "_permalink": "/p/33516a22ee/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/33516a22ee/",
     "_summary_240": "In tweaking its chatbot to appeal to more people, OpenAI made it riskier for some of them. Now the company has made its chatbot safer. Will that undermine its quest for growth?",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/79144e745d/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/33516a22ee/thumbnail.png"
+  },
+  {
+    "title": "Apple iOS 27 to Be No-Frills \u2018Snow Leopard\u2019 Update, Other Than New AI",
+    "url": "https://www.bloomberg.com/news/newsletters/2025-11-23/apple-ios-27-snow-leopard-like-quality-focus-ai-features-tim-cook-retirement-mibq7jv8",
+    "published_at": "2025-11-23T08:00:41-05:00",
+    "source": "Bloomberg Technology",
+    "summary": "Apple\u2019s next major iPhone software update \u2014 iOS 27 \u2014 will have two major elements: quality improvements and artificial intelligence features. Also: The report on Tim Cook\u2019s imminent departure as CEO is premature, and OpenAI continues poaching Apple engineers. Lastly, the iPhone Air designer who introduced the device has left the company.",
+    "content_html": "Apple executive Bertrand Serlet talks about the Mac OS X Snow Leopard operating system during the 2009 World Wide Developers Conference.",
+    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/i4en9_8DYQSQ/v1/1200x-1.jpg",
+    "summary_text": "Apple\u2019s next major iPhone software update \u2014 iOS 27 \u2014 will have two major elements: quality improvements and artificial intelligence features. Also: The report on Tim Cook\u2019s imminent departure as CEO is premature, and OpenAI continues poaching Apple engineers....",
+    "category": "ai",
+    "_trending_tags": [
+      "ai",
+      "apple",
+      "openai"
+    ],
+    "_permalink": "/p/0a81c32c59/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/0a81c32c59/",
+    "_summary_240": "Apple\u2019s next major iPhone software update \u2014 iOS 27 \u2014 will have two major elements: quality improvements and artificial intelligence features. Also: The report on Tim Cook\u2019s...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/0a81c32c59/thumbnail.png"
   },
   {
     "title": "Grayscale calls Chainlink the \u2018crictical connective tissue\u2019 of tokenized finance",
@@ -396,25 +416,6 @@
     "image_url": "",
     "summary_text": "A global group of researchers was unable to read the vote tally, after an official lost one of three secret code keys needed to unlock a hyper-secure election system.",
     "category": "fintech"
-  },
-  {
-    "title": "Google denies \u2018misleading\u2019 reports of Gmail using your emails to train AI",
-    "url": "https://www.theverge.com/news/826902/gmail-ai-training-data-opt-out",
-    "published_at": "2025-11-21T19:04:21-05:00",
-    "source": "The Verge",
-    "summary": "Google is pushing back on viral social media posts and articles like this one by Malwarebytes, claiming Google has changed its policy to use your Gmail messages and attachments to train AI models, and the only way to opt out is by disabling \u201csmart features\u201d like spell checking. But Google spokesperson Jenny Thomson tells The [\u2026]",
-    "content_html": "<figure>\n\n<img alt=\"\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/03/acastro_STK459_09.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100\" />\n\t<figcaption>\n\t\t</figcaption>\n</figure>\n<p class=\"has-text-align-none\">Google is pushing back on <a href=\"https://x.com/eevblog/status/1991293066175492297\">viral social media posts</a> and articles like <a href=\"https://www.malwarebytes.com/blog/news/2025/11/gmail-is-reading-your-emails-and-attachments-to-train-its-ai-unless-you-turn-it-off\">this one by <em>Malwarebytes</em></a><em>,</em> claiming Google has changed its policy to use your Gmail messages and attachments to train AI models, and the only way to opt out is by disabling \u201csmart features\u201d like spell checking.</p>\n\n<p class=\"has-text-align-none\">But Google spokesperson Jenny Thomson tells <em>The Verge</em> that \u201cthese reports are misleading \u2013 we have not changed anyone\u2019s settings, Gmail Smart Features have existed for many years, and we do not use your Gmail content for training our Gemini AI model.\u201d</p>\n\n<p class=\"has-text-align-none\">You may want to double-check your settings anyway, as one <em>Verge</em> staffer also says they had opted out of some of the Smart Features, but had been opted back in to having them on. In January, <a href=\"https://workspace.google.com/blog/product-announcements/updated-smart-feature-settings-give-users-increased-choice-and-control\">Google updated</a> its smart feature personalization settings so that you could turn off the features for Google Workspace and for other Google products (like Maps and Wallet) independently of each other.\u00a0</p>\n\n<p class=\"has-text-align-none\">In addition to things like spell checking, having Gmail\u2019s smart features turned on enables <a href=\"https://support.google.com/mail/answer/15604322?hl=en&amp;co=GENIE.Platform%3DAndroid#zippy=%2Cwhat-are-googles-legal-bases-of-processing-for-users-in-the-european-economic-area-united-kingdom-or-switzerland%2Chow-long-is-your-workspace-content-activity-used-to-provide-smart-features-and-to-improve-these-features\">features like</a> tracking orders or easily adding flights from Gmail to your calendar. Enabling the feature in Workspace says that \u201cyou agree to let Google Workspace use your Workspace content and activity to personalize your experience across Workspace,\u201d according to the settings page, but according to Google, that does not mean handing over the content of your emails to use for AI training.</p>",
-    "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/03/acastro_STK459_09.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "summary_text": "Google is pushing back on viral social media posts and articles like this one by Malwarebytes, claiming Google has changed its policy to use your Gmail messages and attachments to train AI models, and the only way to opt out is by disabling \u201csmart features\u201d l...",
-    "category": "ai",
-    "_trending_tags": [
-      "ai",
-      "google"
-    ],
-    "_permalink": "/p/8d0a67696f/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/8d0a67696f/",
-    "_summary_240": "Google is pushing back on viral social media posts and articles like this one by Malwarebytes, claiming Google has changed its policy to use your Gmail messages and attachments...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/8d0a67696f/thumbnail.png"
   },
   {
     "title": "House Bill Would Allow Bitcoin Payments for Federal Taxes",
