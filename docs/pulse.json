@@ -635,25 +635,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/047e37a001/thumbnail.png"
   },
   {
-    "title": "Meta Enters Power Trading to Support Its AI Expansion",
-    "url": "https://www.bloomberg.com/news/videos/2025-11-21/meta-enters-power-trading-to-support-its-ai-expansion-video",
-    "published_at": "2025-11-21T16:27:03-05:00",
-    "source": "Bloomberg Technology",
-    "summary": "Meta is entering the power trading market to help support its AI expansion, hoping to help plant developers by committing to long-term energy contracts. Bloomberg's Riley Griffin discusses the plan with Caroline Hyde on \u201cBloomberg Tech.\u201d (Source: Bloomberg)",
-    "content_html": "",
-    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ilZnfW0oCuE8/v3/1200x-1.jpg",
-    "summary_text": "Meta is entering the power trading market to help support its AI expansion, hoping to help plant developers by committing to long-term energy contracts. Bloomberg's Riley Griffin discusses the plan with Caroline Hyde on \u201cBloomberg Tech.\u201d (Source: Bloomberg)",
-    "category": "ai",
-    "_trending_tags": [
-      "ai",
-      "meta"
-    ],
-    "_permalink": "/p/be81d1573c/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/be81d1573c/",
-    "_summary_240": "Meta is entering the power trading market to help support its AI expansion, hoping to help plant developers by committing to long-term energy contracts. Bloomberg's Riley Griffin...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/be81d1573c/thumbnail.png"
-  },
-  {
     "title": "US Business Activity and Optimism Boosted by End of Government Shutdown",
     "url": "https://www.pymnts.com/economy/2025/united-states-business-activity-optimism-boosted-end-government-shutdown/",
     "published_at": "2025-11-21T16:18:52-05:00",
@@ -789,21 +770,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/01f75ce86d/",
     "_summary_240": "The integration gives institutions regulated access to HYPE staking on HyperCORE, extending Anchorage Digital\u2019s custody and DeFi capabilities across Hyperliquid.",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/01f75ce86d/thumbnail.png"
-  },
-  {
-    "title": "This Week in Stablecoins: Building Trust Layers for a Trustless Technology",
-    "url": "https://www.pymnts.com/cryptocurrency/2025/this-week-in-stablecoins-building-trust-layers-for-a-trustless-technology/",
-    "published_at": "2025-11-21T14:43:42-05:00",
-    "source": "PYMNTS",
-    "summary": "Rather than a full-blown revolution in money movement, the stablecoin story is increasingly coalescing into one of re-architecting payments and trust layers over a near-trustless base. As recent news from Citigroup and the global inter-bank messaging network SWIFT reveals, banks and legacy infrastructure may be ready to embed stablecoins or tokenized fiat into mainstream chains rather [\u2026] The pos...",
-    "content_html": "<p><span>Rather than a full-blown revolution in money movement, the stablecoin story is increasingly coalescing into one of\u202fre-architecting payments and trust layers\u202fover a near-trustless base.</span></p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p><span>As </span><a href=\"https://www.prnewswire.com/apac/news-releases/citi-completes-landmark-fiat-to-digital-currency-payment-settlement-workflow-trial-with-swift-302615195.html\" rel=\"noopener\" target=\"_blank\"><span>recent news</span></a> <span>from Citigroup and the global inter-bank messaging network SWIFT reveals, banks and legacy infrastructure may be ready to embed stablecoins or tokenized fiat into mainstream chains rather than treat them as stand-alone crypto experiments. Citi and SWIFT undertook a trial proving the feasibility of settling payments between fiat and digital currencies, in a Payment-versus-Payment (PvP) workflow.</span></p>\n<p><span>The trial used adaptations of SWIFT\u2019s messaging rails alongside a digital-asset corridor and demonstrated that a bank could settle fiat and digital tokens in near-lockstep.\u202fThe significance is more than technical. It signals that a large incumbent bank is treating digital-currency settlement as part of its core FX business rather than a crypto sidetrack. After all, Citigroup\u2019s statement in the </span><a href=\"https://www.prnewswire.com/apac/news-releases/citi-completes-landmark-fiat-to-digital-currency-payment-settlement-workflow-trial-with-swift-302615195.html\" rel=\"noopener\" target=\"_blank\"><span>announcement</span></a><span> came from its Head of FX Products rather than the separate \u201cdigital assets\u201d unit, suggesting a melding of traditional payments/international-banking infrastructure with tokenized currency rails.</span></p>\n<p><span>Yet while the infrastructure is converging, the underlying design of many stablecoins remains unchanged: they are not bank deposits, they are not central-bank liabilities, and they lack some of the implicit guarantees that traditional banking provides.</span></p>\n<p><span>That structural limitation is increasingly coming into sharper focus.</span></p>\n<p><b><span>Read more: </span></b><a href=\"https://www.pymnts.com/blockchain/2025/institutional-interest-is-stress-testing-blockchain-financial-interoperability/\" rel=\"noopener\" target=\"_blank\"><span>Institutional Interest Is Stress Testing Blockchain\u2019s Financial Interoperability</span></a></p>\n<h2><b><span>Key Fault Lines to Watch as Stablecoins Go Mainstream</span></b></h2>\n<p><span>Despite their inroads across mainstream finance, unlike bank deposits or central-bank liabilities, most stablecoins are issued by non-bank entities (or bank-subsidiaries) and are not backed by deposit-insurance or direct recourse to central-bank money. The trust they carry must therefore come from other mechanisms, including reserve backing, redemption at par, transparency, regulatory oversight.</span></p>\n<p><span>Crucially, the U.S. GENIUS Act\u202fdoes not\u202ftreat stablecoin tokens as bank deposits or securities; it treats them instead as payment tools.</span></p>\n<p><span>What this means in practice is that the stability of the peg, the exit-mechanism (redemption), the reserve-asset quality, and the operational continuity of the issuer become central to user confidence. In times of stress, a stablecoin might behave not like a bank-deposit but more like a money-market-fund or commercial-paper equivalent: exposed to possible runs, asset-liquidity risks, credit mismatches.</span></p>\n<p><span>PYMNTS </span><a href=\"https://www.pymnts.com/cryptocurrency/2025/reserve-bank-india-has-reservations-about-stablecoins/\" rel=\"noopener\" target=\"_blank\"><span>covered</span></a> <span>Thursday (Nov. 20) how India\u2019s central bank is reportedly taking a cautious stance on stablecoins and other cryptocurrencies. The comments out of India came one day after the\u202f</span><a href=\"https://www.fsb.org/\" rel=\"noopener\" target=\"_blank\"><span>Financial Stability Board</span></a><span>\u202fannounced plans to increase its focus on\u202f</span><a href=\"https://www.pymnts.com/cryptocurrency/2025/fsb-sharpens-focus-on-stablecoins-and-nbfi-saying-they-raise-vulnerabilities/\" rel=\"noopener\" target=\"_blank\"><span>stablecoins</span></a><span>\u202fand nonbank financial intermediation (NBFI), two areas that it said could present vulnerabilities in the world financial system.</span></p>\n<p><span>Also this week,\u202f</span><a href=\"https://www.riksbank.se/en-gb/about-the-riksbank/organisation/the-executive-board/erik-thedeen/\" rel=\"noopener\" target=\"_blank\"><span>Erik Thed\u00e9en</span></a><span>, chair of the\u202f</span><a href=\"https://www.bis.org/bcbs/index.htm\" rel=\"noopener\" target=\"_blank\"><span>Basel Committee on Banking Supervision</span></a><span>, gave an interview to the Financial Times in which he said \u201ca different approach\u201d is required on the global rules for banks\u2019\u202f</span><a href=\"https://www.pymnts.com/cryptocurrency/2025/basel-chair-calls-for-new-crypto-rules-for-banks/\" rel=\"noopener\" target=\"_blank\"><span>cryptocurrency</span></a><span> holdings.\u202fMeanwhile, Canada has proposed a </span><a href=\"https://www.parl.ca/DocumentViewer/en/45-1/bill/C-15/first-reading#ID0ENGA\" rel=\"noopener\" target=\"_blank\"><span>Stablecoin Act</span></a> <span>of its own as part of the latest federal budget bill.</span></p>\n<p><span>In aggregate, any stablecoin-grounded vision of the future of money may look less like the overthrow of fiat and more like an\u202faddition\u202fto the monetary architecture: tokenized units, redeemable and exchangeable, sitting alongside bank deposits and central bank money, but requiring their own trust-layers. The question then becomes whether stablecoins can\u202fearn\u202fthat trust in design, governance and regulation, and whether the system can deliver redemption and stability reliably in times of stress.</span></p>\n<p><b><span>Read more: </span></b><a href=\"https://www.pymnts.com/cryptocurrency/2025/what-cross-border-cfos-need-to-know-about-stablecoin-bridging/\" rel=\"noopener\" target=\"_blank\"><span>What Cross-Border CFOs Need to Know About Stablecoin Bridging</span></a></p>\n<h2><b><span>Marketplace Moves and Infrastructure Developments</span></b></h2>\n<p><span>Beyond banks and regulators, we see crypto-native infrastructure increasingly moving into the mainstream as highlighted by this week\u2019s announcements.</span></p>\n<p><a href=\"https://yellowcard.io/\" rel=\"noopener\" target=\"_blank\"><span>Yellow Card</span></a><span>\u2019s\u202fCEO on Tuesday (Nov. 18) </span><a href=\"https://www.pymnts.com/cryptocurrency/2025/yellow-card-ceo-sees-africa-boosting-global-stablecoin-adoption/\" rel=\"noopener\" target=\"_blank\"><span>said</span></a><span> that African countries are among the world\u2019s top stablecoin adopters.</span> <span>The company has in the last year\u202f</span><a href=\"https://www.pymnts.com/news/cross-border-commerce/cross-border-payments/2024/paypal-xoom-begin-allowing-cross-border-stablecoin-payments/\" rel=\"noopener\" target=\"_blank\"><span>launched partnerships</span></a><span>\u202fwith Visa and PayPal to\u202f</span><a href=\"https://www.pymnts.com/partnerships/2025/visa-and-yellow-card-to-explore-stablecoin-opportunities-in-africa/\" rel=\"noopener\" target=\"_blank\"><span>promote stablecoin usage</span></a><span>.</span></p>\n<p><span>\u202f</span><a href=\"https://www.circle.com/\" rel=\"noopener\" target=\"_blank\"><span>Circle</span></a><span>, also on Tuesday, </span><a href=\"https://www.pymnts.com/blockchain/2025/institutional-interest-is-stress-testing-blockchain-financial-interoperability/\" rel=\"noopener\" target=\"_blank\"><span>unveiled\u202fxReserve</span></a>, <span>a new interoperability hub for stablecoins meant to serve as connective tissue across blockchains; while\u202f</span><a href=\"https://www.deutsche-boerse.com/dbg-en/\" rel=\"noopener\" target=\"_blank\"><span>Deutsche\u202fBoerse</span></a><span>, a German stock exchange operator, started using\u202f</span><a href=\"https://www.societegenerale.com/en\" rel=\"noopener\" target=\"_blank\"><span>Societe Generale</span></a><span>\u2019s\u202finstitutional\u202f</span><a href=\"https://www.reuters.com/business/finance/deutsche-boerse-add-socgens-stablecoins-its-settlement-business-2025-11-18/\" rel=\"noopener\" target=\"_blank\"><span>stablecoin</span></a><span>\u202ffor its settlement business.</span></p>\n<p><span>Not to be outdone, </span><a href=\"https://www.us.hsbc.com/\" rel=\"noopener\" target=\"_blank\"><span>HSBC</span></a><span>\u202fis reportedly due to </span><a href=\"https://www.pymnts.com/blockchain/2025/hsbc-makes-big-bets-on-blockchain-with-tokenization-expansion/\" rel=\"noopener\" target=\"_blank\"><span>launch an expansion</span></a><span> of its tokenized deposits services. The global bank already offers that service in Hong Kong, Singapore, the UK and Luxembourg, and now plans to expand it to corporate clients in the U.S. and United Arab Emirates (UAE) beginning next year.</span></p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/cryptocurrency/2025/this-week-in-stablecoins-building-trust-layers-for-a-trustless-technology/\">This Week in Stablecoins: Building Trust Layers for a Trustless Technology</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
-    "image_url": "https://www.pymnts.com/wp-content/uploads/2025/11/stablecoin-cryptocurrency-crypto-technology.jpeg?w=457",
-    "summary_text": "Rather than a full-blown revolution in money movement, the stablecoin story is increasingly coalescing into one of re-architecting payments and trust layers over a near-trustless base. As recent news from Citigroup and the global inter-bank messaging network ...",
-    "category": "fintech",
-    "_permalink": "/p/41f8b0a480/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/41f8b0a480/",
-    "_summary_240": "Rather than a full-blown revolution in money movement, the stablecoin story is increasingly coalescing into one of re-architecting payments and trust layers over a near-trustless...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/41f8b0a480/thumbnail.png"
   },
   {
     "title": "Bitcoin rout continues as crypto treasuries face reckoning: Finance Redefined",
@@ -988,21 +954,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/177e361c47/",
     "_summary_240": "As Nvidia, OpenAI, Google, and Microsoft forge partnerships and deals, the AI industry is looking more like one interconnected machine. What does that mean for all of us?",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/177e361c47/thumbnail.png"
-  },
-  {
-    "title": "US Stocks Climb With Alphabet, Apple Powering Tech Sector Higher",
-    "url": "https://www.bloomberg.com/news/articles/2025-11-21/us-stocks-advance-as-alphabet-gains-amid-revived-fed-cut-bets",
-    "published_at": "2025-11-21T09:44:43-05:00",
-    "source": "Bloomberg Technology",
-    "summary": "The S&P 500 Index posted its broadest daily advance since May as Alphabet Inc. and Apple Inc. lifted indexes, a signal of confidence amid persistent worries around Big Tech valuations.",
-    "content_html": "Traders on the floor of the New York Stock Exchange.",
-    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ieMkSqG07syA/v1/1200x-1.jpg",
-    "summary_text": "The S&P 500 Index posted its broadest daily advance since May as Alphabet Inc. and Apple Inc. lifted indexes, a signal of confidence amid persistent worries around Big Tech valuations.",
-    "category": "fintech",
-    "_trending_tags": [
-      "ai",
-      "apple"
-    ]
   },
   {
     "title": "AI agent evaluation replaces data labeling as the critical path to production deployment",
@@ -1240,7 +1191,7 @@
     "source": "Financial Times - Technology",
     "summary": "Development comes as tech groups bet on potential for AI to accelerate drug discovery and uncover new materials",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/b0ca37e9-a3f9-4748-8023-ff2e850ffb7f.jpg",
+    "image_url": "",
     "summary_text": "Development comes as tech groups bet on potential for AI to accelerate drug discovery and uncover new materials",
     "category": "ai",
     "_trending_tags": [
@@ -1350,7 +1301,7 @@
     "source": "Financial Times - Technology",
     "summary": "Despite record expansion and growing ambition in the continent, the US is surging ahead again",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/79d4f212-428f-467d-97fd-12fbc76f5bc4.jpg",
+    "image_url": "",
     "summary_text": "Despite record expansion and growing ambition in the continent, the US is surging ahead again",
     "category": "fintech",
     "_trending_tags": [
@@ -1364,7 +1315,7 @@
     "source": "Financial Times - Technology",
     "summary": "It turns out that some people prefer AI interviewers and medical advice from chatbots",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/128eeaa4-b778-44f1-bb5f-16a9819b172e.jpg",
+    "image_url": "",
     "summary_text": "It turns out that some people prefer AI interviewers and medical advice from chatbots",
     "category": "ai",
     "_trending_tags": [
@@ -1410,7 +1361,7 @@
     "source": "Financial Times - Technology",
     "summary": "The inside story on the Asia tech trends that matter, from Nikkei Asia and the Financial Times",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/da31b60d-5f19-4baf-a549-c959c757b514.jpg",
+    "image_url": "",
     "summary_text": "The inside story on the Asia tech trends that matter, from Nikkei Asia and the Financial Times",
     "category": "ai",
     "_trending_tags": [
@@ -1439,7 +1390,7 @@
     "source": "Financial Times - Technology",
     "summary": "Can Brussels balance its desire to set the guardrails for tech with its need to attract investment?",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/b2ea6382-ca8e-49b6-bf1c-e0d96fec6920.jpg",
+    "image_url": "",
     "summary_text": "Can Brussels balance its desire to set the guardrails for tech with its need to attract investment?",
     "category": "ai",
     "_trending_tags": [
@@ -1467,7 +1418,7 @@
     "source": "Financial Times - Technology",
     "summary": "While the chipmaker is the big winner from the booming technology, it is singularly exposed to changing expectations",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/2da6231e-8117-4d1c-9590-5766925e0d3f.jpg",
+    "image_url": "",
     "summary_text": "While the chipmaker is the big winner from the booming technology, it is singularly exposed to changing expectations",
     "category": "ai",
     "_trending_tags": [
