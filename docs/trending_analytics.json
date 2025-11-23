@@ -1,8 +1,8 @@
 {
-  "generated_at": "2025-11-23T09:21:35.560854-05:00",
+  "generated_at": "2025-11-23T09:39:48.572416-05:00",
   "total_keywords": 30,
   "keyword_counts": {
-    "ai": 122,
+    "ai": 121,
     "google": 19,
     "openai": 15,
     "nvidia": 14,
@@ -13,8 +13,8 @@
     "llm": 6,
     "meta": 5,
     "amazon": 3,
-    "apple": 3,
     "gpu": 3,
+    "apple": 2,
     "cloud": 2,
     "anthropic": 1,
     "claude": 1,
