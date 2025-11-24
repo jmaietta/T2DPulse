@@ -19,217 +19,723 @@
   <meta name="twitter:description" content="AI, Software, and FinTech News.">
   <meta name="twitter:image" content="https://pulse.tek2dayholdings.com/icons/T2D_Pulse_Banner.png">
 
-  <!-- PWA + icons (paths are relative to docs/index.html) -->
+  <!-- PWA + icons -->
   <meta name="theme-color" content="#0f172a" />
   <link rel="manifest" href="./manifest.webmanifest" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-  <!-- Orbitron font for the headline -->
+  <!-- Orbitron font for branding -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
-    :root{
-      --ai:#6b8afd; --sw:#ff7a59; --ft:#00a87e;
-      --ink:#0f172a; --muted:#5b6473; --line:#e6eaf0; --card:#ffffff; --bg:#f7f9fc;
-      --r:16px; --shadow:0 10px 30px rgba(15,23,42,.06);
-      --ink-soft:#1f2937;
+    /* ============================================
+       DESIGN TOKENS - Modern Color Palette
+       ============================================ */
+    :root {
+      /* Refined neutrals */
+      --bg: #f8fafc;
+      --bg-subtle: #f1f5f9;
+      --card: #ffffff;
+      --ink: #0f172a;
+      --ink-soft: #334155;
+      --muted: #64748b;
+      --line: #e2e8f0;
+      --line-light: #f1f5f9;
+      
+      /* Vibrant accents */
+      --ai: #6366f1;
+      --ai-light: #eef2ff;
+      --ai-border: rgba(99, 102, 241, 0.2);
+      --sw: #f97316;
+      --ft: #10b981;
+      
+      /* Layout */
+      --radius: 16px;
+      --radius-sm: 12px;
+      --radius-xs: 8px;
+      --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.04);
+      --shadow: 0 1px 3px rgba(15, 23, 42, 0.04), 0 4px 12px rgba(15, 23, 42, 0.03);
+      --shadow-lg: 0 4px 16px rgba(15, 23, 42, 0.08), 0 8px 32px rgba(15, 23, 42, 0.04);
+      
+      /* Transitions */
+      --transition-fast: 0.15s ease;
+      --transition: 0.2s ease;
     }
 
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;background:var(--bg);color:var(--ink);
-      font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
-      -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+    /* ============================================
+       BASE STYLES
+       ============================================ */
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+    
+    html, body {
+      height: 100%;
+    }
+    
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
     }
 
-    /* Sticky header */
-    header.site{
-      position:sticky; top:0; z-index:50;
-      backdrop-filter:saturate(160%) blur(10px); -webkit-backdrop-filter:saturate(160%) blur(10px);
-      background:color-mix(in srgb, var(--bg) 88%, transparent);
-      border-bottom:1px solid var(--line);
+    /* Accessibility - Screen reader only */
+    .sr-only {
+      position: absolute !important;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
     }
-    .site-inner{
-      max-width:1100px;margin:0 auto;padding:.65rem 1rem;
-      display:flex;align-items:center;gap:.9rem;
-    }
-    header.site img.brand-mark{width:66px;height:66px;border-radius:12px}
-    header.site h1{
-      font-family:'Orbitron', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
-      font-weight:700; letter-spacing:.4px; font-size:1.28rem; margin:0; color:var(--ink-soft);
-    }
-    
-    /* keep an accessible title for SEO/screen readers, but visually hide it */
-    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
-    
-    /* Bloomberg-style header */
-    header .tag{
-      display:flex;
-      align-items:center;
-      gap:0.8rem;
-    }
-    header .tag .date{
-      font-size:0.8rem;
-      font-weight:600;
-      color:var(--ink);
-      padding:0.3rem 0.6rem;
-      background:var(--line);
-      border-radius:4px;
-      text-transform:uppercase;
-      letter-spacing:0.03em;
-    }
-    header .tag .divider{
-      width:1px;
-      height:20px;
-      background:var(--line);
-    }
-    header .tag .desc{
-      font-size:0.95rem;
-      color:var(--ink-soft);
-      font-weight:500;
-    }
-    header .tag .desc strong{
-      font-weight:700;
-      color:var(--ink);
-    }
-    .grow{flex:1}
-    .hdr-actions{display:flex;gap:.5rem;margin-left:auto;align-items:center}
-    .btn{
-      appearance:none;border:1px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer;
-      border-radius:999px;padding:.45rem .75rem;font-weight:700;font-size:.9rem; box-shadow:none;
-    }
-    .btn:hover{box-shadow:var(--shadow)}
-    .install{display:none}
 
-    /* Container */
-    #app{max-width:1100px;margin:0 auto 2.2rem;padding:0 1rem}
+    /* Focus states for keyboard navigation */
+    a:focus-visible,
+    button:focus-visible,
+    input:focus-visible,
+    .trend-chip:focus-visible {
+      outline: 2px solid var(--ai);
+      outline-offset: 2px;
+    }
 
-    /* Section - simplified without category tabs */
-    #tek2day-pulse{
-      background:var(--card);border:1px solid var(--line);border-radius:calc(var(--r) + 2px);
-      padding:1.1rem; box-shadow:var(--shadow); margin-top:1rem;
+    /* Reduced motion preference */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+
+    /* ============================================
+       HEADER - Sticky with blur effect
+       ============================================ */
+    header.site {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(12px) saturate(180%);
+      -webkit-backdrop-filter: blur(12px) saturate(180%);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+      transition: box-shadow var(--transition);
     }
     
-    .items{display:grid;gap:.75rem;grid-template-columns:1fr;}
+    header.site.shadow {
+      box-shadow: 0 4px 24px rgba(15, 23, 42, 0.06);
+    }
+
+    .site-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0.75rem 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    /* Logo */
+    header.site img.brand-mark {
+      width: 52px;
+      height: 52px;
+      border-radius: 14px;
+      transition: box-shadow var(--transition);
+    }
     
-    article{
-      position:relative;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:.9rem;
-      transition:transform .06s ease, box-shadow .12s ease; will-change:transform;
-      display:flex;gap:.9rem;align-items:stretch;height:100%;
+    header.site a:hover img.brand-mark,
+    header.site a:focus-visible img.brand-mark {
+      box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.15);
     }
-    article:hover{transform:translateY(-1px); box-shadow:var(--shadow)}
-    article.top{background:linear-gradient(180deg, color-mix(in srgb, var(--card) 92%, #fff 8%), var(--card)); border-width:1px}
-    .article-thumb{
-      width:120px;height:67.5px;border-radius:8px;object-fit:cover;flex-shrink:0;
-      align-self:flex-start;
+
+    header.site h1 {
+      font-family: 'Orbitron', system-ui, sans-serif;
+      font-weight: 700;
+      letter-spacing: 0.4px;
+      font-size: 1.25rem;
+      margin: 0;
+      color: var(--ink);
     }
-    .article-content{flex:1;min-width:0;display:flex;flex-direction:column;}
-    h3{margin:0 0 .4rem;font-size:1.15rem;line-height:1.3;font-weight:800;letter-spacing:-0.01em;}
-    h3 a{color:var(--ink);text-decoration:none;transition:color 0.15s ease;}
-    h3 a:hover{color:var(--ai);text-decoration:none;}
-    .meta{color:var(--muted);font-size:.86rem;margin-bottom:.4rem;display:flex;gap:.4rem;align-items:center;flex-wrap:wrap}
-    .meta .src{font-weight:700;letter-spacing:.1px}
-    .meta .sep{opacity:.35}
-    .badge{
-      display:inline-block;padding:.15rem .4rem;border-radius:4px;font-size:.75rem;font-weight:700;
-      background:var(--ai);color:white;margin-left:.25rem;
+
+    /* Header tag line */
+    header .tag {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
     }
-    .badge.muted{background:var(--muted);opacity:.7;}
     
-    /* Trending indicator - Option 2: Subtle variant */
+    header .tag .date {
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 0.375rem 0.75rem;
+      background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+      border-radius: 20px;
+      color: var(--ink-soft);
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+    }
+    
+    header .tag .divider {
+      width: 1px;
+      height: 20px;
+      background: var(--line);
+    }
+    
+    header .tag .desc {
+      font-size: 0.9rem;
+      color: var(--muted);
+      font-weight: 500;
+    }
+    
+    header .tag .desc strong {
+      font-weight: 600;
+      color: var(--ink-soft);
+    }
+
+    .grow { flex: 1; }
+
+    /* Header actions */
+    .hdr-actions {
+      display: flex;
+      gap: 0.5rem;
+      margin-left: auto;
+      align-items: center;
+    }
+
+    /* Button styles */
+    .btn {
+      appearance: none;
+      border: 1px solid var(--line);
+      background: var(--card);
+      color: var(--ink);
+      cursor: pointer;
+      border-radius: 999px;
+      padding: 0.5rem 1rem;
+      font-weight: 600;
+      font-size: 0.875rem;
+      box-shadow: none;
+      transition: all var(--transition-fast);
+    }
+    
+    .btn:hover {
+      background: var(--bg-subtle);
+      box-shadow: var(--shadow-sm);
+    }
+    
+    .install { display: none; }
+
+    /* ============================================
+       SEARCH INPUT - Polished design
+       ============================================ */
+    .hdr-actions .search {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--bg-subtle);
+      border: 2px solid transparent;
+      border-radius: var(--radius-sm);
+      padding: 0.5rem 0.875rem;
+      transition: all var(--transition-fast);
+    }
+    
+    .hdr-actions .search:focus-within {
+      background: var(--card);
+      border-color: var(--ai);
+      box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1);
+    }
+    
+    .hdr-actions .search input {
+      width: 180px;
+      max-width: 40vw;
+      border: 0;
+      outline: 0;
+      background: transparent;
+      font: inherit;
+      font-size: 0.9375rem;
+      color: var(--ink);
+    }
+    
+    .hdr-actions .search input::placeholder {
+      color: var(--muted);
+    }
+    
+    /* Hide browser search UI */
+    .hdr-actions .search input[type="search"]::-webkit-search-decoration,
+    .hdr-actions .search input[type="search"]::-webkit-search-cancel-button,
+    .hdr-actions .search input[type="search"]::-webkit-search-results-button,
+    .hdr-actions .search input[type="search"]::-webkit-search-results-decoration {
+      display: none;
+    }
+    
+    .hdr-actions .search input[type="search"] {
+      -webkit-appearance: none;
+      appearance: none;
+    }
+    
+    .hdr-actions .search input[type="search"]::-ms-clear,
+    .hdr-actions .search input[type="search"]::-ms-reveal {
+      display: none;
+      width: 0;
+      height: 0;
+    }
+
+    /* ============================================
+       MAIN CONTAINER
+       ============================================ */
+    #app {
+      max-width: 1200px;
+      margin: 0 auto 3rem;
+      padding: 0 1.5rem;
+    }
+
+    /* Section container */
+    #tek2day-pulse {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: calc(var(--radius) + 4px);
+      padding: 1.5rem;
+      box-shadow: var(--shadow);
+      margin-top: 1.5rem;
+    }
+
+    /* Items grid */
+    .items {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: 1fr;
+    }
+
+    /* ============================================
+       ARTICLE CARDS - Modern design
+       ============================================ */
+    article {
+      position: relative;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 1.25rem;
+      display: flex;
+      gap: 1.25rem;
+      align-items: flex-start;
+      transition: transform var(--transition-fast), box-shadow var(--transition), border-color var(--transition);
+      will-change: transform;
+    }
+    
+    article:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--line-light);
+    }
+    
+    /* Featured/top article */
+    article.top {
+      background: linear-gradient(180deg, rgba(99, 102, 241, 0.03) 0%, var(--card) 100%);
+      border-color: var(--ai-border);
+    }
+    
+    article.top:hover {
+      border-color: rgba(99, 102, 241, 0.3);
+    }
+
+    /* Article thumbnail */
+    .article-thumb {
+      width: 160px;
+      height: 100px;
+      border-radius: var(--radius-sm);
+      object-fit: cover;
+      flex-shrink: 0;
+      background: var(--bg-subtle);
+    }
+
+    /* Article content */
+    .article-content {
+      flex: 1;
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Article title */
+    h3 {
+      margin: 0 0 0.5rem;
+      font-size: 1.125rem;
+      line-height: 1.4;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+    
+    h3 a {
+      color: var(--ink);
+      text-decoration: none;
+      transition: color var(--transition-fast);
+    }
+    
+    h3 a:hover {
+      color: var(--ai);
+    }
+
+    /* Article meta */
+    .meta {
+      color: var(--muted);
+      font-size: 0.8125rem;
+      margin-bottom: 0.5rem;
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    
+    .meta .src {
+      font-weight: 600;
+      color: var(--ink-soft);
+      letter-spacing: 0.01em;
+    }
+
+    /* Badges */
+    .badge {
+      display: inline-block;
+      padding: 0.2rem 0.5rem;
+      border-radius: 6px;
+      font-size: 0.6875rem;
+      font-weight: 700;
+      background: var(--ai);
+      color: white;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+    
+    .badge.muted {
+      background: var(--muted);
+      opacity: 0.7;
+    }
+
+    /* Trending indicator */
     .trending-indicator {
       display: inline-flex;
       align-items: center;
       gap: 4px;
-      margin-left: 6px;
-      padding: 2px 6px;
-      background: rgba(91, 100, 115, 0.06);
-      border: 1px solid rgba(91, 100, 115, 0.15);
-      border-radius: 4px;
-      font-size: 0.7rem;
+      padding: 0.2rem 0.5rem;
+      background: rgba(16, 185, 129, 0.08);
+      border: 1px solid rgba(16, 185, 129, 0.2);
+      border-radius: 6px;
+      font-size: 0.6875rem;
       font-weight: 600;
-      color: var(--muted);
+      color: #059669;
       letter-spacing: 0.03em;
       text-transform: uppercase;
     }
-
+    
     .trending-indicator::before {
       content: "↗";
       font-size: 0.75rem;
       font-weight: 700;
     }
+
+    /* Article summary */
+    p[data-summary] {
+      margin: 0.5rem 0 0;
+      color: var(--ink-soft);
+      font-size: 0.9375rem;
+      line-height: 1.6;
+    }
+
+    /* ============================================
+       TRENDING CHIPS - Modern pill design
+       ============================================ */
+    .trend-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 0.5rem;
+    }
     
-    p{margin:.25rem 0 0; color:var(--ink)}
+    /* Hide duplicate and empty chip containers */
+    article .trend-chips ~ .trend-chips,
+    [data-card] .trend-chips ~ .trend-chips,
+    article .trend-chips:empty,
+    [data-card] .trend-chips:empty {
+      display: none;
+    }
 
-    /* Footer note */
-    .foot{margin-top:1rem;color:var(--muted);font-size:12px;text-align:center}
+    .trend-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 0.25rem 0.625rem;
+      border-radius: 20px;
+      background: linear-gradient(135deg, #eef2ff 0%, #e0e7ff 100%);
+      border: 1px solid var(--ai-border);
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: #4f46e5;
+      cursor: pointer;
+      transition: all var(--transition-fast);
+      position: relative;
+    }
+    
+    .trend-chip::before {
+      content: "↗";
+      font-size: 0.65rem;
+      opacity: 0.7;
+    }
+    
+    .trend-chip:hover {
+      background: linear-gradient(135deg, #e0e7ff 0%, #c7d2fe 100%);
+      border-color: rgba(99, 102, 241, 0.4);
+      transform: translateY(-1px);
+    }
 
-    /* Sticky header shadow on scroll */
-    header.site.shadow{ box-shadow: 0 10px 56px rgba(15,23,42,.08) }
+    /* Chip tooltip */
+    .trend-chip[data-tip]::after {
+      display: none;
+      position: absolute;
+      z-index: 30;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: calc(100% + 8px);
+      background: var(--ink);
+      color: white;
+      padding: 6px 10px;
+      border-radius: 8px;
+      font-size: 0.75rem;
+      font-weight: 500;
+      white-space: nowrap;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      content: attr(data-tip);
+    }
+    
+    .trend-chip:hover::after,
+    .trend-chip:focus-visible::after {
+      display: block;
+    }
 
-    /* Small screens */
-    @media (max-width: 640px){
-      header.site h1{font-size:1.12rem}
-      header .tag{flex-wrap:wrap;gap:0.5rem;}
-      header .tag .divider{display:none;}
-      header .tag .desc{font-size:0.85rem;}
-      #tek2day-pulse{padding:.9rem}
-      .items{padding:.45rem .6rem .8rem}
-      article{padding:.8rem;flex-direction:column;}
-      .article-thumb{width:100%;height:auto;aspect-ratio:16/9;}
+    /* ============================================
+       SHARE TOOLBAR
+       ============================================ */
+    .share {
+      display: flex;
+      gap: 0.5rem;
+      margin-top: 0.75rem;
+      flex-wrap: nowrap;
+      align-items: center;
+    }
+    
+    .share-btn {
+      appearance: none;
+      -webkit-appearance: none;
+      border: 1px solid var(--line);
+      background: var(--card);
+      color: var(--ink-soft);
+      border-radius: var(--radius-xs);
+      padding: 0.375rem 0.75rem;
+      font-size: 0.8125rem;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      white-space: nowrap;
+      flex-shrink: 0;
+      transition: all var(--transition-fast);
+    }
+    
+    .share-btn:hover {
+      background: var(--bg-subtle);
+      border-color: var(--muted);
+      color: var(--ink);
+    }
+
+    /* ============================================
+       FOOTER
+       ============================================ */
+    .foot {
+      margin-top: 1.5rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--line-light);
+      color: var(--muted);
+      font-size: 0.8125rem;
+      text-align: center;
+    }
+
+    /* ============================================
+       RESPONSIVE - Mobile
+       ============================================ */
+    @media (max-width: 768px) {
+      .site-inner {
+        padding: 0.625rem 1rem;
+        flex-wrap: wrap;
+      }
+      
+      header.site img.brand-mark {
+        width: 44px;
+        height: 44px;
+      }
+      
+      header.site h1 {
+        font-size: 1.1rem;
+      }
+      
+      header .tag {
+        flex: 1 1 100%;
+        order: 3;
+        margin-top: 0.5rem;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+      }
+      
+      header .tag .divider {
+        display: none;
+      }
+      
+      header .tag .desc {
+        font-size: 0.85rem;
+      }
+      
+      .hdr-actions {
+        order: 2;
+        flex: 0 1 auto;
+      }
+      
+      .hdr-actions .search {
+        flex: 1 1 auto;
+        max-width: 60vw;
+      }
+      
+      .hdr-actions .search input {
+        width: 100%;
+        font-size: 16px; /* Prevents iOS zoom */
+      }
+      
+      .grow {
+        display: none;
+      }
+      
+      #app {
+        padding: 0 1rem;
+      }
+      
+      #tek2day-pulse {
+        padding: 1rem;
+        margin-top: 1rem;
+      }
+      
+      .items {
+        gap: 0.875rem;
+      }
+      
+      article {
+        padding: 1rem;
+        flex-direction: column;
+        gap: 0.875rem;
+      }
+      
+      .article-thumb {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16/9;
+        border-radius: var(--radius-xs);
+      }
+      
+      h3 {
+        font-size: 1.0625rem;
+      }
+      
       .trending-indicator {
-        padding: 1px 4px;
-        font-size: 0.65rem;
+        padding: 0.15rem 0.4rem;
+        font-size: 0.625rem;
+      }
+      
+      .share {
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+      
+      .share-btn {
+        flex: 1;
+        text-align: center;
+        justify-content: center;
       }
     }
 
-    /* Share toolbar */
-    .share{
-      display:flex; 
-      gap:.5rem; 
-      margin-top:.35rem; 
-      flex-wrap:nowrap;
-      align-items:center;
+    @media (max-width: 400px) {
+      .site-inner {
+        padding: 0.5rem 0.75rem;
+      }
+      
+      header.site img.brand-mark {
+        width: 40px;
+        height: 40px;
+      }
+      
+      .hdr-actions .search {
+        max-width: 55vw;
+      }
+      
+      article {
+        padding: 0.875rem;
+      }
+      
+      h3 {
+        font-size: 1rem;
+      }
     }
-    .share-btn{
-      appearance:none; 
-      -webkit-appearance:none;
-      border:1px solid var(--line); 
-      background:#fff; 
-      color:var(--ink);
-      border-radius:999px; 
-      padding:.3rem .6rem; 
-      font-size:.82rem; 
-      font-weight:600;
-      text-decoration:none; 
-      cursor:pointer;
-      white-space:nowrap;
-      flex-shrink:0;
-    }
-    .share-btn:hover{ 
-      background:#f3f4f6; 
-    }
-  
-    /* De-duplicate trend chips rendered by multiple responsive blocks & hide empties */
-    article .trend-chips ~ .trend-chips, [data-card] .trend-chips ~ .trend-chips { display: none; }
-    article .trend-chips:empty,           [data-card] .trend-chips:empty           { display: none; }
 
-    /* Trend chip tooltips + interactivity */
-    .trend-chip{ position:relative; cursor:pointer; }
-    .trend-chip:focus-visible{ outline:2px solid rgba(107,138,253,.6); outline-offset:2px; border-radius:999px; }
-    .trend-chip[data-tip]::after{
-      display:none; position:absolute; z-index:30; left:50%; transform:translateX(-50%);
-      bottom:calc(100% + 8px); background:#111; color:#fff; padding:6px 8px; border-radius:6px;
-      font-size:12px; white-space:nowrap; box-shadow:0 4px 12px rgba(0,0,0,.2);
-      content: attr(data-tip);
+    /* ============================================
+       HIGH CONTRAST MODE
+       ============================================ */
+    @media (prefers-contrast: high) {
+      article {
+        border: 2px solid var(--ink);
+      }
+      
+      .trend-chip {
+        border: 2px solid currentColor;
+      }
+      
+      .badge {
+        border: 1px solid currentColor;
+      }
     }
-    .trend-chip:hover::after, .trend-chip:focus-visible::after{ display:block; }
-</style>
-  
+
+    /* ============================================
+       DARK MODE (optional - uncomment to enable)
+       ============================================ */
+    /*
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0f172a;
+        --bg-subtle: #1e293b;
+        --card: #1e293b;
+        --ink: #f1f5f9;
+        --ink-soft: #cbd5e1;
+        --muted: #94a3b8;
+        --line: #334155;
+        --line-light: #1e293b;
+      }
+      
+      header.site {
+        background: rgba(15, 23, 42, 0.85);
+      }
+      
+      header .tag .date {
+        background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+      }
+      
+      .trend-chip {
+        background: linear-gradient(135deg, #312e81 0%, #3730a3 100%);
+        color: #c7d2fe;
+      }
+    }
+    */
+  </style>
+
   <link rel="icon" type="image/x-icon" href="./icons/favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="./icons/t2d-pulse-32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="./icons/t2d-pulse-16.png">
@@ -239,55 +745,6 @@
   <meta property="og:site_name" content="T2D Pulse">
   <meta property="og:image:alt" content="T2D Pulse - AI, Software & FinTech news">
   <meta name="description" content="AI, Software, and FinTech News.">
-
-  <style id="t2d-mobile-final">
-    /* Mobile-hardening */
-    @media (max-width: 720px){
-      header.site .site-inner{ display:flex; flex-wrap:wrap; align-items:center; }
-      header.site .site-inner > *{ min-width:0; }
-      header.site .tag{ flex:1 1 100%; order:3; min-width:0; }
-      header.site .hdr-actions{ order:2; display:flex; align-items:center; gap:.5rem; flex:0 1 auto; }
-      header.site .hdr-actions .search{ flex: 1 1 auto; max-width: 64vw; overflow:hidden; }
-      header.site .hdr-actions .search input{ width:100%; font-size:16px; line-height:1.2; }
-      header.site img.brand-mark{ width:52px; height:52px; }
-      header.site .grow{ display:none; }
-    }
-    @media (max-width: 400px){
-      header.site .hdr-actions .search{ max-width: 72vw; }
-      header.site img.brand-mark{ width:48px; height:48px; }
-    }
-  </style>
-
-  <style id="t2d-search-css-rescue">
-    /* Search styling */
-    .hdr-actions{ display:flex; align-items:center; gap:.5rem; }
-    .hdr-actions .search{
-      display:flex; align-items:center; gap:.35rem;
-      border:1px solid var(--line); background:var(--card);
-      border-radius:999px; padding:.34rem .6rem;
-    }
-    .hdr-actions .search input{
-      width:18ch; max-width:40vw;
-      border:0; outline:0; background:transparent;
-      font:inherit; color:var(--ink);
-    }
-    .hdr-actions .search input[type="search"]::-webkit-search-decoration,
-    .hdr-actions .search input[type="search"]::-webkit-search-cancel-button,
-    .hdr-actions .search input[type="search"]::-webkit-search-results-button,
-    .hdr-actions .search input[type="search"]::-webkit-search-results-decoration{ display:none; }
-    .hdr-actions .search input[type="search"]{ -webkit-appearance:none; appearance:none; }
-    .hdr-actions .search input[type="search"]::-ms-clear,
-    .hdr-actions .search input[type="search"]::-ms-reveal{ display:none; width:0; height:0; }
-    
-    @media (max-width:720px){
-      header.site .site-inner{ flex-wrap: wrap; }
-      header.site .hdr-actions{ flex: 0 1 auto; }
-      header.site .hdr-actions .search{ flex: 1 1 auto; max-width: 64vw; overflow:hidden; }
-      header.site .hdr-actions .search input{ width:100%; font-size:16px; line-height:1.2; }
-    }
-    
-    .sr-only{ position:absolute !important; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
-  </style>
 </head>
 
 <body>
@@ -306,8 +763,8 @@
       <div class="grow"></div>
       <div class="hdr-actions">
         <form class="search" role="search" method="GET" action="/">
-          <label for="t2d-q" class="sr-only">Search</label>
-          <input id="t2d-q" name="q" type="search" placeholder="Search" enterkeyhint="search" autocapitalize="off" autocomplete="off" />
+          <label for="t2d-q" class="sr-only">Search articles</label>
+          <input id="t2d-q" name="q" type="search" placeholder="Search..." enterkeyhint="search" autocapitalize="off" autocomplete="off" />
         </form>
       </div>
     </div>
@@ -320,13 +777,13 @@
         {{SW_ITEMS}}
         {{FT_ITEMS}}
       </div>
-      <p class="foot">T2D Pulse 2025.</p>
+      <p class="foot">© 2025 T2D Pulse. All rights reserved.</p>
     </section>
   </div>
 
-  <!-- Scripts: PWA + header shadow -->
+  <!-- Scripts -->
   <script>
-    // Install prompt
+    // Install prompt for PWA
     let deferredPrompt;
     window.addEventListener('beforeinstallprompt', (e) => {
       e.preventDefault();
@@ -334,6 +791,7 @@
       const wrap = document.querySelector('.install');
       if (wrap) wrap.style.display = 'block';
     });
+    
     document.getElementById('btnInstall')?.addEventListener('click', async () => {
       if (!deferredPrompt) return;
       deferredPrompt.prompt();
@@ -342,7 +800,7 @@
       document.querySelector('.install').style.display = 'none';
     });
 
-    // Service worker
+    // Service worker registration
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
         navigator.serviceWorker.register('./sw.js', { scope: './' });
@@ -353,175 +811,194 @@
     window.addEventListener('scroll', () => {
       const h = document.querySelector('header.site');
       if (!h) return;
-      if (window.scrollY > 8) h.classList.add('shadow');
-      else h.classList.remove('shadow');
-    });
+      h.classList.toggle('shadow', window.scrollY > 8);
+    }, { passive: true });
   </script>
 
   <!-- Share buttons script -->
   <script>
-  (function () {
+  (function() {
     const cards = document.querySelectorAll('#tek2day-pulse article');
     if (!cards.length) return;
 
     for (const card of cards) {
-      const a = card.querySelector('h3 a');
-      if (!a) continue;
+      const link = card.querySelector('h3 a');
+      if (!link) continue;
 
-      const originalUrl = a.href;
+      const originalUrl = link.href;
       let permalink = card.dataset.permalink || originalUrl;
       
-      // Convert relative URLs to absolute URLs
+      // Convert relative URLs to absolute
       if (permalink.startsWith('/')) {
         permalink = window.location.origin + permalink;
       }
       
-      const title = a.textContent.trim();
+      const title = link.textContent.trim();
       const brand = 'via T2D Pulse';
-
       const shareTitle = `${title} - ${brand}`;
-      const u = encodeURIComponent(permalink);
-      const xShare = `https://twitter.com/intent/tweet?url=${u}&text=${encodeURIComponent(shareTitle)}`;
+      const encodedUrl = encodeURIComponent(permalink);
+      const xShareUrl = `https://twitter.com/intent/tweet?url=${encodedUrl}&text=${encodeURIComponent(shareTitle)}`;
 
-      // Toolbar with both Share to X and Copy URL buttons
+      // Create share toolbar
       const bar = document.createElement('div');
       bar.className = 'share';
       bar.innerHTML = `
-        <a class="share-btn" href="${xShare}" target="_blank" rel="noopener">Share to X</a>
-        <button class="share-btn copy-url" type="button">Copy URL</button>
+        <a class="share-btn" href="${xShareUrl}" target="_blank" rel="noopener noreferrer">Share to X</a>
+        <button class="share-btn copy-url" type="button" data-url="${permalink}">Copy URL</button>
       `;
-      const btn = bar.querySelector('.copy-url');
-      btn.dataset.url = permalink;
       card.appendChild(bar);
     }
 
-    // Copy URL handler
+    // Copy URL handler with native share fallback
     document.addEventListener('click', async (e) => {
       const btn = e.target.closest('.copy-url');
       if (!btn) return;
 
       const url = btn.dataset.url;
 
-      // Prefer native share on mobile (URL only)
+      // Prefer native share on mobile
       if (navigator.share) {
-        try { await navigator.share({ url }); return; } catch(_) {}
+        try {
+          await navigator.share({ url });
+          return;
+        } catch (_) {}
       }
 
+      // Fallback to clipboard
       try {
         await navigator.clipboard.writeText(url);
       } catch (err) {
         const ta = document.createElement('textarea');
-        ta.value = url; document.body.appendChild(ta);
-        ta.select(); document.execCommand('copy'); ta.remove();
+        ta.value = url;
+        ta.style.cssText = 'position:fixed;opacity:0';
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        ta.remove();
       }
-      const old = btn.textContent; btn.textContent = 'Copied!'; setTimeout(() => btn.textContent = old, 1200);
+      
+      const originalText = btn.textContent;
+      btn.textContent = 'Copied!';
+      setTimeout(() => btn.textContent = originalText, 1500);
     });
   })();
   </script>
 
   <!-- Search logic -->
-  <script id="t2d-search-logic">
-  (function(){
-    const $  = (sel, ctx=document) => ctx.querySelector(sel);
-    const $$ = (sel, ctx=document) => Array.from(ctx.querySelectorAll(sel));
-    const container = $('#tek2day-pulse') || document.body;
-    const form  = $('.hdr-actions .search');
-    const input = $('#t2d-q') || (form && form.querySelector('input[type="search"]'));
-    if (!form || !input) return;
+  <script>
+  (function() {
+    const container = document.getElementById('tek2day-pulse');
+    const form = document.querySelector('.hdr-actions .search');
+    const input = document.getElementById('t2d-q');
+    if (!form || !input || !container) return;
 
-    function buildHaystack(card){
+    function buildHaystack(card) {
       const clone = card.cloneNode(true);
-      // Remove metadata elements we don't want to search
+      // Remove elements we don't want to search
       clone.querySelectorAll('.host-pill, .byline, .count, .date, .publisher').forEach(n => n.remove());
-      const sels = ['h3','h2','.title','.headline','.desc','.dek','.summary','.snippet','.copy','.body','p','.src'];
+      
+      const selectors = ['h3', 'h2', '.title', '.headline', '.desc', '.summary', '.snippet', 'p', '.src'];
       const parts = [];
-      for (const s of sels){ clone.querySelectorAll(s).forEach(n => parts.push(n.textContent || '')); }
-      // Include data attributes including the new data-source
-      ['data-tickers','data-companies','data-keywords','data-source'].forEach(a => {
-        const v = card.getAttribute(a); if (v) parts.push(v);
+      
+      for (const sel of selectors) {
+        clone.querySelectorAll(sel).forEach(n => parts.push(n.textContent || ''));
+      }
+      
+      // Include data attributes
+      ['data-tickers', 'data-companies', 'data-keywords', 'data-source'].forEach(attr => {
+        const v = card.getAttribute(attr);
+        if (v) parts.push(v);
       });
-      return parts.join(' ').replace(/\s+/g,' ').trim().toLowerCase();
+      
+      return parts.join(' ').replace(/\s+/g, ' ').trim().toLowerCase();
     }
 
-    const itemsContainer = $('.items');
+    const itemsContainer = container.querySelector('.items');
     
-    function tokenize(q){ return (q||'').toLowerCase().trim().split(/\s+/).filter(Boolean); }
-    function cardList(container){ return container ? Array.from(container.children) : []; }
+    function tokenize(q) {
+      return (q || '').toLowerCase().trim().split(/\s+/).filter(Boolean);
+    }
 
-    function applyFilter(q){
-      const toks = tokenize(q);
+    function applyFilter(q) {
+      const tokens = tokenize(q);
       let total = 0;
 
       if (itemsContainer) {
-        cardList(itemsContainer).forEach(card => {
+        Array.from(itemsContainer.children).forEach(card => {
           const hay = buildHaystack(card);
-          const ok = toks.every(t => hay.includes(t));
-          card.style.display = ok ? '' : 'none';
-          if (ok) total++;
+          const match = tokens.every(t => hay.includes(t));
+          card.style.display = match ? '' : 'none';
+          if (match) total++;
         });
       }
 
-      let empty = $('#search-empty');
-      if (!empty){
+      // Show/hide empty state
+      let empty = document.getElementById('search-empty');
+      if (!empty) {
         empty = document.createElement('div');
         empty.id = 'search-empty';
-        empty.style.display = 'none';
-        empty.style.padding = '1rem';
-        empty.style.color = 'var(--muted)';
+        empty.style.cssText = 'display:none;padding:2rem;color:var(--muted);text-align:center;';
         empty.setAttribute('role', 'status');
-        empty.textContent = 'No results.';
+        empty.textContent = 'No articles found matching your search.';
         container.prepend(empty);
       }
-      empty.style.display = toks.length && total === 0 ? 'block' : 'none';
+      empty.style.display = tokens.length && total === 0 ? 'block' : 'none';
     }
 
     form.addEventListener('submit', (e) => {
       e.preventDefault();
       applyFilter(input.value);
-      if (window.innerWidth > 720) { container.scrollIntoView({behavior:'smooth', block:'start'}); }
-    }, {passive:false});
-    input.addEventListener('input', () => applyFilter(input.value), {passive:true});
+      if (window.innerWidth > 720) {
+        container.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+    
+    input.addEventListener('input', () => applyFilter(input.value), { passive: true });
 
+    // Check for initial query param
     try {
       const q0 = new URLSearchParams(location.search).get('q');
-      if (q0) { input.value = q0; applyFilter(q0); }
-    } catch(_) {}
+      if (q0) {
+        input.value = q0;
+        applyFilter(q0);
+      }
+    } catch (_) {}
   })();
   </script>
 
+  <!-- Trend chip interactions -->
   <script>
-  (function(){
-    // Choose where chips should link: 'trends' or 'site'
-    const MODE = 'trends';                 // change to 'site' if you want internal search instead
-    const GEO = 'US';                      // Google Trends GEO
-    const TIME = 'now 7-d';                // Google Trends window
-    const SITE_SEARCH_URL = '/?q=';        // your site search base, if MODE === 'site'
+  (function() {
+    const MODE = 'trends'; // 'trends' or 'site'
+    const GEO = 'US';
+    const TIME = 'now 7-d';
+    const SITE_SEARCH_URL = '/?q=';
 
     const chips = document.querySelectorAll('.trend-chip');
+    
     chips.forEach(chip => {
-      const kw = (chip.textContent || '').trim();
-      if (!kw) return;
-      // Tooltip text
-      chip.setAttribute('data-tip', 'Trending keyword: "' + kw + '"');
+      const keyword = (chip.textContent || '').trim();
+      if (!keyword) return;
+      
+      chip.setAttribute('data-tip', `Explore "${keyword}" on Google Trends`);
       chip.setAttribute('role', 'link');
       chip.setAttribute('tabindex', '0');
 
-      function targetUrl() {
+      function getTargetUrl() {
         if (MODE === 'trends') {
-          const u = new URL('https://trends.google.com/trends/explore');
-          u.searchParams.set('date', TIME);
-          u.searchParams.set('geo', GEO);
-          u.searchParams.set('q', kw);
-          return u.toString();
-        } else {
-          return SITE_SEARCH_URL + encodeURIComponent(kw);
+          const url = new URL('https://trends.google.com/trends/explore');
+          url.searchParams.set('date', TIME);
+          url.searchParams.set('geo', GEO);
+          url.searchParams.set('q', keyword);
+          return url.toString();
         }
+        return SITE_SEARCH_URL + encodeURIComponent(keyword);
       }
 
-      chip.addEventListener('click', (e) => {
-        const url = targetUrl();
-        window.open(url, '_blank', 'noopener');
+      chip.addEventListener('click', () => {
+        window.open(getTargetUrl(), '_blank', 'noopener');
       });
+      
       chip.addEventListener('keydown', (e) => {
         if (e.key === 'Enter' || e.key === ' ') {
           e.preventDefault();
@@ -532,32 +1009,24 @@
   })();
   </script>
 
-  <!-- Iframe communication: Send article clicks to parent dashboard -->
+  <!-- Iframe communication for embedded use -->
   <script>
   (function() {
-    // Only run if we're inside an iframe
+    // Only run if embedded in iframe
     if (window.self === window.top) return;
     
-    // Listen for clicks on article links
     document.addEventListener('click', function(e) {
-      // Find if the clicked element or its parent is an article link
       const link = e.target.closest('h3 a');
       if (!link) return;
       
-      // Get the article URL
-      const articleUrl = link.href;
-      
-      // Prevent default navigation within iframe
       e.preventDefault();
       e.stopPropagation();
       
-      // Send message to parent window (dashboard) to navigate there
       window.parent.postMessage({
         type: 'article-click',
-        url: articleUrl
+        url: link.href
       }, 'https://dash.tek2dayholdings.com');
-      
-    }, true); // Use capture phase to catch it early
+    }, true);
   })();
   </script>
 </body>
