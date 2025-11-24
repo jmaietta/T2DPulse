@@ -19,217 +19,723 @@
   <meta name="twitter:description" content="AI, Software, and FinTech News.">
   <meta name="twitter:image" content="https://pulse.tek2dayholdings.com/icons/T2D_Pulse_Banner.png">
 
-  <!-- PWA + icons (paths are relative to docs/index.html) -->
+  <!-- PWA + icons -->
   <meta name="theme-color" content="#0f172a" />
   <link rel="manifest" href="./manifest.webmanifest" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-  <!-- Orbitron font for the headline -->
+  <!-- Orbitron font for branding -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
-    :root{
-      --ai:#6b8afd; --sw:#ff7a59; --ft:#00a87e;
-      --ink:#0f172a; --muted:#5b6473; --line:#e6eaf0; --card:#ffffff; --bg:#f7f9fc;
-      --r:16px; --shadow:0 10px 30px rgba(15,23,42,.06);
-      --ink-soft:#1f2937;
+    /* ============================================
+       DESIGN TOKENS - Modern Color Palette
+       ============================================ */
+    :root {
+      /* Refined neutrals */
+      --bg: #f8fafc;
+      --bg-subtle: #f1f5f9;
+      --card: #ffffff;
+      --ink: #0f172a;
+      --ink-soft: #334155;
+      --muted: #64748b;
+      --line: #e2e8f0;
+      --line-light: #f1f5f9;
+      
+      /* Vibrant accents */
+      --ai: #6366f1;
+      --ai-light: #eef2ff;
+      --ai-border: rgba(99, 102, 241, 0.2);
+      --sw: #f97316;
+      --ft: #10b981;
+      
+      /* Layout */
+      --radius: 16px;
+      --radius-sm: 12px;
+      --radius-xs: 8px;
+      --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.04);
+      --shadow: 0 1px 3px rgba(15, 23, 42, 0.04), 0 4px 12px rgba(15, 23, 42, 0.03);
+      --shadow-lg: 0 4px 16px rgba(15, 23, 42, 0.08), 0 8px 32px rgba(15, 23, 42, 0.04);
+      
+      /* Transitions */
+      --transition-fast: 0.15s ease;
+      --transition: 0.2s ease;
     }
 
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;background:var(--bg);color:var(--ink);
-      font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
-      -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+    /* ============================================
+       BASE STYLES
+       ============================================ */
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+    
+    html, body {
+      height: 100%;
+    }
+    
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
     }
 
-    /* Sticky header */
-    header.site{
-      position:sticky; top:0; z-index:50;
-      backdrop-filter:saturate(160%) blur(10px); -webkit-backdrop-filter:saturate(160%) blur(10px);
-      background:color-mix(in srgb, var(--bg) 88%, transparent);
-      border-bottom:1px solid var(--line);
+    /* Accessibility - Screen reader only */
+    .sr-only {
+      position: absolute !important;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
     }
-    .site-inner{
-      max-width:1100px;margin:0 auto;padding:.65rem 1rem;
-      display:flex;align-items:center;gap:.9rem;
-    }
-    header.site img.brand-mark{width:66px;height:66px;border-radius:12px}
-    header.site h1{
-      font-family:'Orbitron', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
-      font-weight:700; letter-spacing:.4px; font-size:1.28rem; margin:0; color:var(--ink-soft);
-    }
-    
-    /* keep an accessible title for SEO/screen readers, but visually hide it */
-    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
-    
-    /* Bloomberg-style header */
-    header .tag{
-      display:flex;
-      align-items:center;
-      gap:0.8rem;
-    }
-    header .tag .date{
-      font-size:0.8rem;
-      font-weight:600;
-      color:var(--ink);
-      padding:0.3rem 0.6rem;
-      background:var(--line);
-      border-radius:4px;
-      text-transform:uppercase;
-      letter-spacing:0.03em;
-    }
-    header .tag .divider{
-      width:1px;
-      height:20px;
-      background:var(--line);
-    }
-    header .tag .desc{
-      font-size:0.95rem;
-      color:var(--ink-soft);
-      font-weight:500;
-    }
-    header .tag .desc strong{
-      font-weight:700;
-      color:var(--ink);
-    }
-    .grow{flex:1}
-    .hdr-actions{display:flex;gap:.5rem;margin-left:auto;align-items:center}
-    .btn{
-      appearance:none;border:1px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer;
-      border-radius:999px;padding:.45rem .75rem;font-weight:700;font-size:.9rem; box-shadow:none;
-    }
-    .btn:hover{box-shadow:var(--shadow)}
-    .install{display:none}
 
-    /* Container */
-    #app{max-width:1100px;margin:0 auto 2.2rem;padding:0 1rem}
+    /* Focus states for keyboard navigation */
+    a:focus-visible,
+    button:focus-visible,
+    input:focus-visible,
+    .trend-chip:focus-visible {
+      outline: 2px solid var(--ai);
+      outline-offset: 2px;
+    }
 
-    /* Section - simplified without category tabs */
-    #tek2day-pulse{
-      background:var(--card);border:1px solid var(--line);border-radius:calc(var(--r) + 2px);
-      padding:1.1rem; box-shadow:var(--shadow); margin-top:1rem;
+    /* Reduced motion preference */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+
+    /* ============================================
+       HEADER - Sticky with blur effect
+       ============================================ */
+    header.site {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(12px) saturate(180%);
+      -webkit-backdrop-filter: blur(12px) saturate(180%);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+      transition: box-shadow var(--transition);
     }
     
-    .items{display:grid;gap:.75rem;grid-template-columns:1fr;}
+    header.site.shadow {
+      box-shadow: 0 4px 24px rgba(15, 23, 42, 0.06);
+    }
+
+    .site-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0.75rem 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    /* Logo */
+    header.site img.brand-mark {
+      width: 52px;
+      height: 52px;
+      border-radius: 14px;
+      transition: box-shadow var(--transition);
+    }
     
-    article{
-      position:relative;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:.9rem;
-      transition:transform .06s ease, box-shadow .12s ease; will-change:transform;
-      display:flex;gap:.9rem;align-items:stretch;height:100%;
+    header.site a:hover img.brand-mark,
+    header.site a:focus-visible img.brand-mark {
+      box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.15);
     }
-    article:hover{transform:translateY(-1px); box-shadow:var(--shadow)}
-    article.top{background:linear-gradient(180deg, color-mix(in srgb, var(--card) 92%, #fff 8%), var(--card)); border-width:1px}
-    .article-thumb{
-      width:120px;height:67.5px;border-radius:8px;object-fit:cover;flex-shrink:0;
-      align-self:flex-start;
+
+    header.site h1 {
+      font-family: 'Orbitron', system-ui, sans-serif;
+      font-weight: 700;
+      letter-spacing: 0.4px;
+      font-size: 1.25rem;
+      margin: 0;
+      color: var(--ink);
     }
-    .article-content{flex:1;min-width:0;display:flex;flex-direction:column;}
-    h3{margin:0 0 .4rem;font-size:1.15rem;line-height:1.3;font-weight:800;letter-spacing:-0.01em;}
-    h3 a{color:var(--ink);text-decoration:none;transition:color 0.15s ease;}
-    h3 a:hover{color:var(--ai);text-decoration:none;}
-    .meta{color:var(--muted);font-size:.86rem;margin-bottom:.4rem;display:flex;gap:.4rem;align-items:center;flex-wrap:wrap}
-    .meta .src{font-weight:700;letter-spacing:.1px}
-    .meta .sep{opacity:.35}
-    .badge{
-      display:inline-block;padding:.15rem .4rem;border-radius:4px;font-size:.75rem;font-weight:700;
-      background:var(--ai);color:white;margin-left:.25rem;
+
+    /* Header tag line */
+    header .tag {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
     }
-    .badge.muted{background:var(--muted);opacity:.7;}
     
-    /* Trending indicator - Option 2: Subtle variant */
+    header .tag .date {
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 0.375rem 0.75rem;
+      background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+      border-radius: 20px;
+      color: var(--ink-soft);
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+    }
+    
+    header .tag .divider {
+      width: 1px;
+      height: 20px;
+      background: var(--line);
+    }
+    
+    header .tag .desc {
+      font-size: 0.9rem;
+      color: var(--muted);
+      font-weight: 500;
+    }
+    
+    header .tag .desc strong {
+      font-weight: 600;
+      color: var(--ink-soft);
+    }
+
+    .grow { flex: 1; }
+
+    /* Header actions */
+    .hdr-actions {
+      display: flex;
+      gap: 0.5rem;
+      margin-left: auto;
+      align-items: center;
+    }
+
+    /* Button styles */
+    .btn {
+      appearance: none;
+      border: 1px solid var(--line);
+      background: var(--card);
+      color: var(--ink);
+      cursor: pointer;
+      border-radius: 999px;
+      padding: 0.5rem 1rem;
+      font-weight: 600;
+      font-size: 0.875rem;
+      box-shadow: none;
+      transition: all var(--transition-fast);
+    }
+    
+    .btn:hover {
+      background: var(--bg-subtle);
+      box-shadow: var(--shadow-sm);
+    }
+    
+    .install { display: none; }
+
+    /* ============================================
+       SEARCH INPUT - Polished design
+       ============================================ */
+    .hdr-actions .search {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--bg-subtle);
+      border: 2px solid transparent;
+      border-radius: var(--radius-sm);
+      padding: 0.5rem 0.875rem;
+      transition: all var(--transition-fast);
+    }
+    
+    .hdr-actions .search:focus-within {
+      background: var(--card);
+      border-color: var(--ai);
+      box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1);
+    }
+    
+    .hdr-actions .search input {
+      width: 180px;
+      max-width: 40vw;
+      border: 0;
+      outline: 0;
+      background: transparent;
+      font: inherit;
+      font-size: 0.9375rem;
+      color: var(--ink);
+    }
+    
+    .hdr-actions .search input::placeholder {
+      color: var(--muted);
+    }
+    
+    /* Hide browser search UI */
+    .hdr-actions .search input[type="search"]::-webkit-search-decoration,
+    .hdr-actions .search input[type="search"]::-webkit-search-cancel-button,
+    .hdr-actions .search input[type="search"]::-webkit-search-results-button,
+    .hdr-actions .search input[type="search"]::-webkit-search-results-decoration {
+      display: none;
+    }
+    
+    .hdr-actions .search input[type="search"] {
+      -webkit-appearance: none;
+      appearance: none;
+    }
+    
+    .hdr-actions .search input[type="search"]::-ms-clear,
+    .hdr-actions .search input[type="search"]::-ms-reveal {
+      display: none;
+      width: 0;
+      height: 0;
+    }
+
+    /* ============================================
+       MAIN CONTAINER
+       ============================================ */
+    #app {
+      max-width: 1200px;
+      margin: 0 auto 3rem;
+      padding: 0 1.5rem;
+    }
+
+    /* Section container */
+    #tek2day-pulse {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: calc(var(--radius) + 4px);
+      padding: 1.5rem;
+      box-shadow: var(--shadow);
+      margin-top: 1.5rem;
+    }
+
+    /* Items grid */
+    .items {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: 1fr;
+    }
+
+    /* ============================================
+       ARTICLE CARDS - Modern design
+       ============================================ */
+    article {
+      position: relative;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 1.25rem;
+      display: flex;
+      gap: 1.25rem;
+      align-items: flex-start;
+      transition: transform var(--transition-fast), box-shadow var(--transition), border-color var(--transition);
+      will-change: transform;
+    }
+    
+    article:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--line-light);
+    }
+    
+    /* Featured/top article */
+    article.top {
+      background: linear-gradient(180deg, rgba(99, 102, 241, 0.03) 0%, var(--card) 100%);
+      border-color: var(--ai-border);
+    }
+    
+    article.top:hover {
+      border-color: rgba(99, 102, 241, 0.3);
+    }
+
+    /* Article thumbnail */
+    .article-thumb {
+      width: 160px;
+      height: 100px;
+      border-radius: var(--radius-sm);
+      object-fit: cover;
+      flex-shrink: 0;
+      background: var(--bg-subtle);
+    }
+
+    /* Article content */
+    .article-content {
+      flex: 1;
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Article title */
+    h3 {
+      margin: 0 0 0.5rem;
+      font-size: 1.125rem;
+      line-height: 1.4;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+    
+    h3 a {
+      color: var(--ink);
+      text-decoration: none;
+      transition: color var(--transition-fast);
+    }
+    
+    h3 a:hover {
+      color: var(--ai);
+    }
+
+    /* Article meta */
+    .meta {
+      color: var(--muted);
+      font-size: 0.8125rem;
+      margin-bottom: 0.5rem;
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    
+    .meta .src {
+      font-weight: 600;
+      color: var(--ink-soft);
+      letter-spacing: 0.01em;
+    }
+
+    /* Badges */
+    .badge {
+      display: inline-block;
+      padding: 0.2rem 0.5rem;
+      border-radius: 6px;
+      font-size: 0.6875rem;
+      font-weight: 700;
+      background: var(--ai);
+      color: white;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+    
+    .badge.muted {
+      background: var(--muted);
+      opacity: 0.7;
+    }
+
+    /* Trending indicator */
     .trending-indicator {
       display: inline-flex;
       align-items: center;
       gap: 4px;
-      margin-left: 6px;
-      padding: 2px 6px;
-      background: rgba(91, 100, 115, 0.06);
-      border: 1px solid rgba(91, 100, 115, 0.15);
-      border-radius: 4px;
-      font-size: 0.7rem;
+      padding: 0.2rem 0.5rem;
+      background: rgba(16, 185, 129, 0.08);
+      border: 1px solid rgba(16, 185, 129, 0.2);
+      border-radius: 6px;
+      font-size: 0.6875rem;
       font-weight: 600;
-      color: var(--muted);
+      color: #059669;
       letter-spacing: 0.03em;
       text-transform: uppercase;
     }
-
+    
     .trending-indicator::before {
       content: "↗";
       font-size: 0.75rem;
       font-weight: 700;
     }
+
+    /* Article summary */
+    p[data-summary] {
+      margin: 0.5rem 0 0;
+      color: var(--ink-soft);
+      font-size: 0.9375rem;
+      line-height: 1.6;
+    }
+
+    /* ============================================
+       TRENDING CHIPS - Modern pill design
+       ============================================ */
+    .trend-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 0.5rem;
+    }
     
-    p{margin:.25rem 0 0; color:var(--ink)}
+    /* Hide duplicate and empty chip containers */
+    article .trend-chips ~ .trend-chips,
+    [data-card] .trend-chips ~ .trend-chips,
+    article .trend-chips:empty,
+    [data-card] .trend-chips:empty {
+      display: none;
+    }
 
-    /* Footer note */
-    .foot{margin-top:1rem;color:var(--muted);font-size:12px;text-align:center}
+    .trend-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 0.25rem 0.625rem;
+      border-radius: 20px;
+      background: linear-gradient(135deg, #eef2ff 0%, #e0e7ff 100%);
+      border: 1px solid var(--ai-border);
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: #4f46e5;
+      cursor: pointer;
+      transition: all var(--transition-fast);
+      position: relative;
+    }
+    
+    .trend-chip::before {
+      content: "↗";
+      font-size: 0.65rem;
+      opacity: 0.7;
+    }
+    
+    .trend-chip:hover {
+      background: linear-gradient(135deg, #e0e7ff 0%, #c7d2fe 100%);
+      border-color: rgba(99, 102, 241, 0.4);
+      transform: translateY(-1px);
+    }
 
-    /* Sticky header shadow on scroll */
-    header.site.shadow{ box-shadow: 0 10px 56px rgba(15,23,42,.08) }
+    /* Chip tooltip */
+    .trend-chip[data-tip]::after {
+      display: none;
+      position: absolute;
+      z-index: 30;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: calc(100% + 8px);
+      background: var(--ink);
+      color: white;
+      padding: 6px 10px;
+      border-radius: 8px;
+      font-size: 0.75rem;
+      font-weight: 500;
+      white-space: nowrap;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      content: attr(data-tip);
+    }
+    
+    .trend-chip:hover::after,
+    .trend-chip:focus-visible::after {
+      display: block;
+    }
 
-    /* Small screens */
-    @media (max-width: 640px){
-      header.site h1{font-size:1.12rem}
-      header .tag{flex-wrap:wrap;gap:0.5rem;}
-      header .tag .divider{display:none;}
-      header .tag .desc{font-size:0.85rem;}
-      #tek2day-pulse{padding:.9rem}
-      .items{padding:.45rem .6rem .8rem}
-      article{padding:.8rem;flex-direction:column;}
-      .article-thumb{width:100%;height:auto;aspect-ratio:16/9;}
+    /* ============================================
+       SHARE TOOLBAR
+       ============================================ */
+    .share {
+      display: flex;
+      gap: 0.5rem;
+      margin-top: 0.75rem;
+      flex-wrap: nowrap;
+      align-items: center;
+    }
+    
+    .share-btn {
+      appearance: none;
+      -webkit-appearance: none;
+      border: 1px solid var(--line);
+      background: var(--card);
+      color: var(--ink-soft);
+      border-radius: var(--radius-xs);
+      padding: 0.375rem 0.75rem;
+      font-size: 0.8125rem;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      white-space: nowrap;
+      flex-shrink: 0;
+      transition: all var(--transition-fast);
+    }
+    
+    .share-btn:hover {
+      background: var(--bg-subtle);
+      border-color: var(--muted);
+      color: var(--ink);
+    }
+
+    /* ============================================
+       FOOTER
+       ============================================ */
+    .foot {
+      margin-top: 1.5rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--line-light);
+      color: var(--muted);
+      font-size: 0.8125rem;
+      text-align: center;
+    }
+
+    /* ============================================
+       RESPONSIVE - Mobile
+       ============================================ */
+    @media (max-width: 768px) {
+      .site-inner {
+        padding: 0.625rem 1rem;
+        flex-wrap: wrap;
+      }
+      
+      header.site img.brand-mark {
+        width: 44px;
+        height: 44px;
+      }
+      
+      header.site h1 {
+        font-size: 1.1rem;
+      }
+      
+      header .tag {
+        flex: 1 1 100%;
+        order: 3;
+        margin-top: 0.5rem;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+      }
+      
+      header .tag .divider {
+        display: none;
+      }
+      
+      header .tag .desc {
+        font-size: 0.85rem;
+      }
+      
+      .hdr-actions {
+        order: 2;
+        flex: 0 1 auto;
+      }
+      
+      .hdr-actions .search {
+        flex: 1 1 auto;
+        max-width: 60vw;
+      }
+      
+      .hdr-actions .search input {
+        width: 100%;
+        font-size: 16px; /* Prevents iOS zoom */
+      }
+      
+      .grow {
+        display: none;
+      }
+      
+      #app {
+        padding: 0 1rem;
+      }
+      
+      #tek2day-pulse {
+        padding: 1rem;
+        margin-top: 1rem;
+      }
+      
+      .items {
+        gap: 0.875rem;
+      }
+      
+      article {
+        padding: 1rem;
+        flex-direction: column;
+        gap: 0.875rem;
+      }
+      
+      .article-thumb {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16/9;
+        border-radius: var(--radius-xs);
+      }
+      
+      h3 {
+        font-size: 1.0625rem;
+      }
+      
       .trending-indicator {
-        padding: 1px 4px;
-        font-size: 0.65rem;
+        padding: 0.15rem 0.4rem;
+        font-size: 0.625rem;
+      }
+      
+      .share {
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+      
+      .share-btn {
+        flex: 1;
+        text-align: center;
+        justify-content: center;
       }
     }
 
-    /* Share toolbar */
-    .share{
-      display:flex; 
-      gap:.5rem; 
-      margin-top:.35rem; 
-      flex-wrap:nowrap;
-      align-items:center;
+    @media (max-width: 400px) {
+      .site-inner {
+        padding: 0.5rem 0.75rem;
+      }
+      
+      header.site img.brand-mark {
+        width: 40px;
+        height: 40px;
+      }
+      
+      .hdr-actions .search {
+        max-width: 55vw;
+      }
+      
+      article {
+        padding: 0.875rem;
+      }
+      
+      h3 {
+        font-size: 1rem;
+      }
     }
-    .share-btn{
-      appearance:none; 
-      -webkit-appearance:none;
-      border:1px solid var(--line); 
-      background:#fff; 
-      color:var(--ink);
-      border-radius:999px; 
-      padding:.3rem .6rem; 
-      font-size:.82rem; 
-      font-weight:600;
-      text-decoration:none; 
-      cursor:pointer;
-      white-space:nowrap;
-      flex-shrink:0;
-    }
-    .share-btn:hover{ 
-      background:#f3f4f6; 
-    }
-  
-    /* De-duplicate trend chips rendered by multiple responsive blocks & hide empties */
-    article .trend-chips ~ .trend-chips, [data-card] .trend-chips ~ .trend-chips { display: none; }
-    article .trend-chips:empty,           [data-card] .trend-chips:empty           { display: none; }
 
-    /* Trend chip tooltips + interactivity */
-    .trend-chip{ position:relative; cursor:pointer; }
-    .trend-chip:focus-visible{ outline:2px solid rgba(107,138,253,.6); outline-offset:2px; border-radius:999px; }
-    .trend-chip[data-tip]::after{
-      display:none; position:absolute; z-index:30; left:50%; transform:translateX(-50%);
-      bottom:calc(100% + 8px); background:#111; color:#fff; padding:6px 8px; border-radius:6px;
-      font-size:12px; white-space:nowrap; box-shadow:0 4px 12px rgba(0,0,0,.2);
-      content: attr(data-tip);
+    /* ============================================
+       HIGH CONTRAST MODE
+       ============================================ */
+    @media (prefers-contrast: high) {
+      article {
+        border: 2px solid var(--ink);
+      }
+      
+      .trend-chip {
+        border: 2px solid currentColor;
+      }
+      
+      .badge {
+        border: 1px solid currentColor;
+      }
     }
-    .trend-chip:hover::after, .trend-chip:focus-visible::after{ display:block; }
-</style>
-  
+
+    /* ============================================
+       DARK MODE (optional - uncomment to enable)
+       ============================================ */
+    /*
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0f172a;
+        --bg-subtle: #1e293b;
+        --card: #1e293b;
+        --ink: #f1f5f9;
+        --ink-soft: #cbd5e1;
+        --muted: #94a3b8;
+        --line: #334155;
+        --line-light: #1e293b;
+      }
+      
+      header.site {
+        background: rgba(15, 23, 42, 0.85);
+      }
+      
+      header .tag .date {
+        background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+      }
+      
+      .trend-chip {
+        background: linear-gradient(135deg, #312e81 0%, #3730a3 100%);
+        color: #c7d2fe;
+      }
+    }
+    */
+  </style>
+
   <link rel="icon" type="image/x-icon" href="./icons/favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="./icons/t2d-pulse-32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="./icons/t2d-pulse-16.png">
@@ -239,55 +745,6 @@
   <meta property="og:site_name" content="T2D Pulse">
   <meta property="og:image:alt" content="T2D Pulse - AI, Software & FinTech news">
   <meta name="description" content="AI, Software, and FinTech News.">
-
-  <style id="t2d-mobile-final">
-    /* Mobile-hardening */
-    @media (max-width: 720px){
-      header.site .site-inner{ display:flex; flex-wrap:wrap; align-items:center; }
-      header.site .site-inner > *{ min-width:0; }
-      header.site .tag{ flex:1 1 100%; order:3; min-width:0; }
-      header.site .hdr-actions{ order:2; display:flex; align-items:center; gap:.5rem; flex:0 1 auto; }
-      header.site .hdr-actions .search{ flex: 1 1 auto; max-width: 64vw; overflow:hidden; }
-      header.site .hdr-actions .search input{ width:100%; font-size:16px; line-height:1.2; }
-      header.site img.brand-mark{ width:52px; height:52px; }
-      header.site .grow{ display:none; }
-    }
-    @media (max-width: 400px){
-      header.site .hdr-actions .search{ max-width: 72vw; }
-      header.site img.brand-mark{ width:48px; height:48px; }
-    }
-  </style>
-
-  <style id="t2d-search-css-rescue">
-    /* Search styling */
-    .hdr-actions{ display:flex; align-items:center; gap:.5rem; }
-    .hdr-actions .search{
-      display:flex; align-items:center; gap:.35rem;
-      border:1px solid var(--line); background:var(--card);
-      border-radius:999px; padding:.34rem .6rem;
-    }
-    .hdr-actions .search input{
-      width:18ch; max-width:40vw;
-      border:0; outline:0; background:transparent;
-      font:inherit; color:var(--ink);
-    }
-    .hdr-actions .search input[type="search"]::-webkit-search-decoration,
-    .hdr-actions .search input[type="search"]::-webkit-search-cancel-button,
-    .hdr-actions .search input[type="search"]::-webkit-search-results-button,
-    .hdr-actions .search input[type="search"]::-webkit-search-results-decoration{ display:none; }
-    .hdr-actions .search input[type="search"]{ -webkit-appearance:none; appearance:none; }
-    .hdr-actions .search input[type="search"]::-ms-clear,
-    .hdr-actions .search input[type="search"]::-ms-reveal{ display:none; width:0; height:0; }
-    
-    @media (max-width:720px){
-      header.site .site-inner{ flex-wrap: wrap; }
-      header.site .hdr-actions{ flex: 0 1 auto; }
-      header.site .hdr-actions .search{ flex: 1 1 auto; max-width: 64vw; overflow:hidden; }
-      header.site .hdr-actions .search input{ width:100%; font-size:16px; line-height:1.2; }
-    }
-    
-    .sr-only{ position:absolute !important; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
-  </style>
 </head>
 
 <body>
@@ -306,8 +763,8 @@
       <div class="grow"></div>
       <div class="hdr-actions">
         <form class="search" role="search" method="GET" action="/">
-          <label for="t2d-q" class="sr-only">Search</label>
-          <input id="t2d-q" name="q" type="search" placeholder="Search" enterkeyhint="search" autocapitalize="off" autocomplete="off" />
+          <label for="t2d-q" class="sr-only">Search articles</label>
+          <input id="t2d-q" name="q" type="search" placeholder="Search..." enterkeyhint="search" autocapitalize="off" autocomplete="off" />
         </form>
       </div>
     </div>
@@ -316,12 +773,30 @@
   <div id="app">
     <section id="tek2day-pulse" aria-labelledby="tek2day-title">
       <div class="items">
-        <article class="top" data-card data-url="https://www.bloomberg.com/news/articles/2025-11-24/burry-defends-his-nvidia-criticism-as-company-pushes-back?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/b8b9fb8c1d/" data-title="Burry Defends His Nvidia Criticism as Company Pushes Back" data-summary="Michael Burry is standing by his criticism of Nvidia Corp. even after a report said the leading artificial intelligence company pushed back on his analysis." data-source="Bloomberg Technology">
+        <article class="top" data-card data-url="https://www.theverge.com/news/828326/chatgpt-shopping-research-chatgpt-buyers-guide?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/f5308915ff/" data-title="ChatGPT shopping research builds you a buyer’s guide using AI" data-summary="OpenAI is making it easier to plan out holiday shopping with ChatGPT’s latest feature called “shopping research.” Any shopping question in ChatGPT will trigger this new feature, w..." data-source="The Verge">
+  <img src="https://pulse.tek2dayholdings.com/p/f5308915ff/thumbnail.png" alt="ChatGPT shopping research builds you a buyer’s guide using AI" class="article-thumb">
+  <div class="article-content">
+    <h3><a data-title-link href="https://www.theverge.com/news/828326/chatgpt-shopping-research-chatgpt-buyers-guide?utm_source=tek2day&utm_medium=email">ChatGPT shopping research builds you a buyer’s guide using AI</a></h3>
+    <div class="meta"><span class="src">The Verge</span> · Nov 24, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
+    <div class="trend-chips"><span class="trend-chip">ai</span> <span class="trend-chip">chatgpt</span> <span class="trend-chip">gpt</span> <span class="trend-chip">openai</span></div>
+    <p data-summary>OpenAI is making it easier to plan out holiday shopping with ChatGPT’s latest feature called “shopping research.” Any shopping question in ChatGPT will trigger this new feature, w...</p>
+  </div>
+</article>
+<article class="" data-card data-url="https://www.pymnts.com/google/2025/how-google-dodged-the-ai-search-collapse/?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/8add684eeb/" data-title="How Google Dodged the AI Search Collapse" data-summary="Google Search was supposed to lose ground in the artificial intelligence (AI) era, but Alphabet’s third-quarter 2025 earnings tell a different story. Alphabet said Search-and-othe..." data-source="PYMNTS">
+  <img src="https://pulse.tek2dayholdings.com/p/8add684eeb/thumbnail.png" alt="How Google Dodged the AI Search Collapse" class="article-thumb">
+  <div class="article-content">
+    <h3><a data-title-link href="https://www.pymnts.com/google/2025/how-google-dodged-the-ai-search-collapse/?utm_source=tek2day&utm_medium=email">How Google Dodged the AI Search Collapse</a></h3>
+    <div class="meta"><span class="src">PYMNTS</span> · Nov 24, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
+    <div class="trend-chips"><span class="trend-chip">ai</span> <span class="trend-chip">google</span></div>
+    <p data-summary>Google Search was supposed to lose ground in the artificial intelligence (AI) era, but Alphabet’s third-quarter 2025 earnings tell a different story. Alphabet said Search-and-othe...</p>
+  </div>
+</article>
+<article class="" data-card data-url="https://www.bloomberg.com/news/articles/2025-11-24/burry-defends-his-nvidia-criticism-as-company-pushes-back?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/b8b9fb8c1d/" data-title="Burry Defends His Nvidia Criticism as Company Pushes Back" data-summary="Michael Burry is standing by his criticism of Nvidia Corp. even after a report said the leading artificial intelligence company pushed back on his analysis." data-source="Bloomberg Technology">
   <img src="https://pulse.tek2dayholdings.com/p/b8b9fb8c1d/thumbnail.png" alt="Burry Defends His Nvidia Criticism as Company Pushes Back" class="article-thumb">
   <div class="article-content">
     <h3><a data-title-link href="https://www.bloomberg.com/news/articles/2025-11-24/burry-defends-his-nvidia-criticism-as-company-pushes-back?utm_source=tek2day&utm_medium=email">Burry Defends His Nvidia Criticism as Company Pushes Back</a></h3>
-    <div class="meta"><span class="src">Bloomberg Technology</span> - Nov 24, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
-    <div class="trend-chips"><span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">ai</span> <span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">nvidia</span></div>
+    <div class="meta"><span class="src">Bloomberg Technology</span> · Nov 24, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
+    <div class="trend-chips"><span class="trend-chip">ai</span> <span class="trend-chip">nvidia</span></div>
     <p data-summary>Michael Burry is standing by his criticism of Nvidia Corp. even after a report said the leading artificial intelligence company pushed back on his analysis.</p>
   </div>
 </article>
@@ -329,8 +804,8 @@
   <img src="https://pulse.tek2dayholdings.com/p/7516a3211c/thumbnail.png" alt="OpenAI: ChatGPT’s New ‘Shopping Research’ Provides Detailed Product Comparisons" class="article-thumb">
   <div class="article-content">
     <h3><a data-title-link href="https://www.pymnts.com/news/artificial-intelligence/2025/openai-says-chatgpt-new-shopping-research-provides-detailed-product-comparisons/?utm_source=tek2day&utm_medium=email">OpenAI: ChatGPT’s New ‘Shopping Research’ Provides Detailed Product Comparisons</a></h3>
-    <div class="meta"><span class="src">PYMNTS</span> - Nov 24, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
-    <div class="trend-chips"><span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">ai</span> <span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">chatgpt</span> <span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">gpt</span> <span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">openai</span></div>
+    <div class="meta"><span class="src">PYMNTS</span> · Nov 24, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
+    <div class="trend-chips"><span class="trend-chip">ai</span> <span class="trend-chip">chatgpt</span> <span class="trend-chip">gpt</span> <span class="trend-chip">openai</span></div>
     <p data-summary>OpenAI’s ChatGPT will now help users discover, understand and compare products. This service is provided by the artificial intelligence assistant’s new shopping research experienc...</p>
   </div>
 </article>
@@ -338,8 +813,8 @@
   <img src="https://pulse.tek2dayholdings.com/p/7fec105e5f/thumbnail.png" alt="Here’s what happened in crypto today" class="article-thumb">
   <div class="article-content">
     <h3><a data-title-link href="https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound&utm_source=tek2day&utm_medium=email">Here’s what happened in crypto today</a></h3>
-    <div class="meta"><span class="src">Cointelegraph</span> - Nov 24, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
-    <div class="trend-chips"><span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">ai</span></div>
+    <div class="meta"><span class="src">Cointelegraph</span> · Nov 24, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
+    <div class="trend-chips"><span class="trend-chip">ai</span></div>
     <p data-summary>Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, NFTs, Web3 and crypto regulation.</p>
   </div>
 </article>
@@ -347,8 +822,8 @@
   <img src="https://pulse.tek2dayholdings.com/p/5733398a51/thumbnail.png" alt="OpenAI learned the hard way that Cameo trademarked the word ‘cameo’" class="article-thumb">
   <div class="article-content">
     <h3><a data-title-link href="https://techcrunch.com/2025/11/24/openai-learned-the-hard-way-that-cameo-trademarked-the-word-cameo/?utm_source=tek2day&utm_medium=email">OpenAI learned the hard way that Cameo trademarked the word ‘cameo’</a></h3>
-    <div class="meta"><span class="src">TechCrunch</span> - Nov 24, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
-    <div class="trend-chips"><span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">ai</span> <span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">openai</span></div>
+    <div class="meta"><span class="src">TechCrunch</span> · Nov 24, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
+    <div class="trend-chips"><span class="trend-chip">ai</span> <span class="trend-chip">openai</span></div>
     <p data-summary>OpenAI might have to rename the &quot;cameo&quot; feature in the Sora app.</p>
   </div>
 </article>
@@ -356,8 +831,8 @@
   <img src="https://pulse.tek2dayholdings.com/p/3edb6ca44d/thumbnail.png" alt="Crypto Market Rout Is Putting Asset-Backed Stablecoins Under Microscope" class="article-thumb">
   <div class="article-content">
     <h3><a data-title-link href="https://www.pymnts.com/cryptocurrency/2025/crypto-market-rout-is-putting-asset-backed-stablecoins-under-microscope/?utm_source=tek2day&utm_medium=email">Crypto Market Rout Is Putting Asset-Backed Stablecoins Under Microscope</a></h3>
-    <div class="meta"><span class="src">PYMNTS</span> - Nov 24, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
-    <div class="trend-chips"><span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">ai</span></div>
+    <div class="meta"><span class="src">PYMNTS</span> · Nov 24, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
+    <div class="trend-chips"><span class="trend-chip">ai</span></div>
     <p data-summary>Ongoing volatility in crypto has erased nearly all of the market’s gains this year. It’s a story that is uniquely crypto, full of the industry’s trademark ups and downs. What was ...</p>
   </div>
 </article>
@@ -365,8 +840,8 @@
   <img src="https://pulse.tek2dayholdings.com/p/592bd68587/thumbnail.png" alt="Trump Signs ‘Genesis Mission’ Order to Boost Innovation With AI" class="article-thumb">
   <div class="article-content">
     <h3><a data-title-link href="https://www.bloomberg.com/news/articles/2025-11-24/trump-signs-genesis-mission-order-to-boost-innovation-with-ai?utm_source=tek2day&utm_medium=email">Trump Signs ‘Genesis Mission’ Order to Boost Innovation With AI</a></h3>
-    <div class="meta"><span class="src">Bloomberg Technology</span> - Nov 24, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
-    <div class="trend-chips"><span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">ai</span></div>
+    <div class="meta"><span class="src">Bloomberg Technology</span> · Nov 24, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
+    <div class="trend-chips"><span class="trend-chip">ai</span></div>
     <p data-summary>President Donald Trump signed an executive order Monday establishing the “Genesis Mission,” a federal effort to boost innovation using artificial intelligence — the latest step by...</p>
   </div>
 </article>
@@ -374,8 +849,8 @@
   <img src="https://pulse.tek2dayholdings.com/p/a3fc20c573/thumbnail.png" alt="4 Organizations Oppose Stripe’s Application for National Trust Bank Charter" class="article-thumb">
   <div class="article-content">
     <h3><a data-title-link href="https://www.pymnts.com/cryptocurrency/2025/4-organizations-oppose-stripe-application-national-trust-bank-charter/?utm_source=tek2day&utm_medium=email">4 Organizations Oppose Stripe’s Application for National Trust Bank Charter</a></h3>
-    <div class="meta"><span class="src">PYMNTS</span> - Nov 24, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
-    <div class="trend-chips"><span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">stripe</span></div>
+    <div class="meta"><span class="src">PYMNTS</span> · Nov 24, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
+    <div class="trend-chips"><span class="trend-chip">stripe</span></div>
     <p data-summary>Four organizations submitted comments to the Office of the Comptroller of the Currency opposing the application of Stripe’s stablecoin arm, Bridge Infrastructure, for a national t...</p>
   </div>
 </article>
@@ -383,7 +858,7 @@
   <img src="https://pulse.tek2dayholdings.com/p/e4cd93da0c/thumbnail.png" alt="Japanese watchdog to require exchanges to hold liability reserves: Report" class="article-thumb">
   <div class="article-content">
     <h3><a data-title-link href="https://cointelegraph.com/news/japan-fsa-crypto-exchanges-liability-reserves-report?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound&utm_source=tek2day&utm_medium=email">Japanese watchdog to require exchanges to hold liability reserves: Report</a></h3>
-    <div class="meta"><span class="src">Cointelegraph</span> - Nov 24, 2025 <span class="badge">New</span> </div>
+    <div class="meta"><span class="src">Cointelegraph</span> · Nov 24, 2025 <span class="badge">New</span> </div>
     <div class="trend-chips"></div>
     <p data-summary>An advisory body to Japan&#x27;s FSA will reportedly release a report recommending crypto companies hold reserves to compensate users for events such as hacks.</p>
   </div>
@@ -392,8 +867,8 @@
   <img src="https://pulse.tek2dayholdings.com/p/700ca45bd6/thumbnail.png" alt="Anthropic’s Claude Opus 4.5 is here: Cheaper AI, infinite chats, and coding skills that beat humans" class="article-thumb">
   <div class="article-content">
     <h3><a data-title-link href="https://venturebeat.com/ai/anthropics-claude-opus-4-5-is-here-cheaper-ai-infinite-chats-and-coding?utm_source=tek2day&utm_medium=email">Anthropic’s Claude Opus 4.5 is here: Cheaper AI, infinite chats, and coding skills that beat humans</a></h3>
-    <div class="meta"><span class="src">VentureBeat</span> - Nov 24, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
-    <div class="trend-chips"><span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">ai</span> <span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">anthropic</span> <span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">claude</span></div>
+    <div class="meta"><span class="src">VentureBeat</span> · Nov 24, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
+    <div class="trend-chips"><span class="trend-chip">ai</span> <span class="trend-chip">anthropic</span> <span class="trend-chip">claude</span></div>
     <p data-summary>Anthropic released its most capable artificial intelligence model yet on Monday, slashing prices by roughly two-thirds while claiming state-of-the-art performance on software engi...</p>
   </div>
 </article>
@@ -401,7 +876,7 @@
   <img src="https://pulse.tek2dayholdings.com/p/6d9d698dda/thumbnail.png" alt="Lenders Brace for CFPB’s Reg B Shakeup" class="article-thumb">
   <div class="article-content">
     <h3><a data-title-link href="https://www.pymnts.com/news/cfpb/2025/lenders-brace-for-cfpbs-reg-b-shakeup/?utm_source=tek2day&utm_medium=email">Lenders Brace for CFPB’s Reg B Shakeup</a></h3>
-    <div class="meta"><span class="src">PYMNTS</span> - Nov 24, 2025 <span class="badge">New</span> </div>
+    <div class="meta"><span class="src">PYMNTS</span> · Nov 24, 2025 <span class="badge">New</span> </div>
     <div class="trend-chips"></div>
     <p data-summary>The Consumer Financial Protection Bureau’s Nov. 13 proposal to revise small business lending requirements under ECOA and Regulation B marks a significant turning point for lenders...</p>
   </div>
@@ -410,8 +885,8 @@
   <img src="https://pulse.tek2dayholdings.com/p/ec77b36ddc/thumbnail.png" alt="Rad Power Bikes’ batteries receive major fire risk warning" class="article-thumb">
   <div class="article-content">
     <h3><a data-title-link href="https://techcrunch.com/2025/11/24/rad-power-bikes-batteries-receive-major-fire-risk-warning/?utm_source=tek2day&utm_medium=email">Rad Power Bikes’ batteries receive major fire risk warning</a></h3>
-    <div class="meta"><span class="src">TechCrunch</span> - Nov 24, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
-    <div class="trend-chips"><span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">ai</span></div>
+    <div class="meta"><span class="src">TechCrunch</span> · Nov 24, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
+    <div class="trend-chips"><span class="trend-chip">ai</span></div>
     <p data-summary>The U.S Consumer Product Safety Commission claims Rad Power &quot;refused to agree to an acceptable recall.&quot; Rad Power says the CPSC&#x27;s solution would bankrupt the company.</p>
   </div>
 </article>
@@ -419,8 +894,8 @@
   <img src="https://pulse.tek2dayholdings.com/p/fa8e858eed/thumbnail.png" alt="Tesla FSD software may not be approved by EU regulator after all" class="article-thumb">
   <div class="article-content">
     <h3><a data-title-link href="https://techcrunch.com/2025/11/24/tesla-fsd-software-may-not-be-approved-by-eu-regulator-after-all/?utm_source=tek2day&utm_medium=email">Tesla FSD software may not be approved by EU regulator after all</a></h3>
-    <div class="meta"><span class="src">TechCrunch</span> - Nov 24, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
-    <div class="trend-chips"><span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">ai</span></div>
+    <div class="meta"><span class="src">TechCrunch</span> · Nov 24, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
+    <div class="trend-chips"><span class="trend-chip">ai</span></div>
     <p data-summary>Tesla claimed in a weekend social media post that a Dutch regulator was set to approve its Full Self-Driving mode. It seems the regulator isn&#x27;t quite in line with Tesla.</p>
   </div>
 </article>
@@ -428,8 +903,8 @@
   <img src="https://pulse.tek2dayholdings.com/p/34da88e5bd/thumbnail.png" alt="Binance Faces Lawsuit by Hamas Victims Under Anti-Terrorism Law" class="article-thumb">
   <div class="article-content">
     <h3><a data-title-link href="https://www.bloomberg.com/news/articles/2025-11-24/binance-faces-lawsuit-by-hamas-victims-under-anti-terrorism-law?utm_source=tek2day&utm_medium=email">Binance Faces Lawsuit by Hamas Victims Under Anti-Terrorism Law</a></h3>
-    <div class="meta"><span class="src">Bloomberg Technology</span> - Nov 24, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
-    <div class="trend-chips"><span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">ai</span></div>
+    <div class="meta"><span class="src">Bloomberg Technology</span> · Nov 24, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
+    <div class="trend-chips"><span class="trend-chip">ai</span></div>
     <p data-summary>Binance Holdings Ltd. faces a lawsuit claiming the cryptocurrency platform “knowingly facilitated” crypto transactions by Hamas before the group attacked Israel on Oct. 7, 2023, k...</p>
   </div>
 </article>
@@ -437,8 +912,8 @@
   <img src="https://pulse.tek2dayholdings.com/p/83c5e33781/thumbnail.png" alt="Big Tech&#x27;s AI Debt Is Raising Investors&#x27; Eyebrows | Bloomberg Tech 11/24/2025" class="article-thumb">
   <div class="article-content">
     <h3><a data-title-link href="https://www.bloomberg.com/news/videos/2025-11-24/bloomberg-tech-11-24-2025-video?utm_source=tek2day&utm_medium=email">Big Tech&#x27;s AI Debt Is Raising Investors&#x27; Eyebrows | Bloomberg Tech 11/24/2025</a></h3>
-    <div class="meta"><span class="src">Bloomberg Technology</span> - Nov 24, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
-    <div class="trend-chips"><span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">ai</span></div>
+    <div class="meta"><span class="src">Bloomberg Technology</span> · Nov 24, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
+    <div class="trend-chips"><span class="trend-chip">ai</span></div>
     <p data-summary>Bloomberg’s Caroline Hyde discusses what stocks are moving as investors eye the growing amount of debt tech companies are taking on to support the AI buildout. Plus, investors pul...</p>
   </div>
 </article>
@@ -446,8 +921,8 @@
   <img src="https://pulse.tek2dayholdings.com/p/93ac91a105/thumbnail.png" alt="Navan Sweeps Buy Ratings on AI Promise After Post-IPO Slump" class="article-thumb">
   <div class="article-content">
     <h3><a data-title-link href="https://www.bloomberg.com/news/articles/2025-11-24/navan-sweeps-buy-ratings-on-ai-promise-after-post-ipo-slump?utm_source=tek2day&utm_medium=email">Navan Sweeps Buy Ratings on AI Promise After Post-IPO Slump</a></h3>
-    <div class="meta"><span class="src">Bloomberg Technology</span> - Nov 24, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
-    <div class="trend-chips"><span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">ai</span></div>
+    <div class="meta"><span class="src">Bloomberg Technology</span> · Nov 24, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
+    <div class="trend-chips"><span class="trend-chip">ai</span></div>
     <p data-summary>Navan Inc. won much-needed support from Wall Street on Monday, with analysts deeming the corporate-travel and expense platform undervalued after a swift selloff following its $923...</p>
   </div>
 </article>
@@ -455,7 +930,7 @@
   <img src="https://pulse.tek2dayholdings.com/p/16b7595f08/thumbnail.png" alt="Signal’s secure message backups arrive on iOS" class="article-thumb">
   <div class="article-content">
     <h3><a data-title-link href="https://www.theverge.com/news/828091/signal-secure-backups-ios-launch?utm_source=tek2day&utm_medium=email">Signal’s secure message backups arrive on iOS</a></h3>
-    <div class="meta"><span class="src">The Verge</span> - Nov 24, 2025 <span class="badge">New</span> </div>
+    <div class="meta"><span class="src">The Verge</span> · Nov 24, 2025 <span class="badge">New</span> </div>
     <div class="trend-chips"></div>
     <p data-summary>Signal is launching secure backups on iOS, allowing you to save and restore your messages in case you lose or break your phone. With the free version of the feature, you can store...</p>
   </div>
@@ -464,8 +939,8 @@
   <img src="https://pulse.tek2dayholdings.com/p/dc41ff8cea/thumbnail.png" alt="Hands on with Stickerbox, the AI-powered sticker maker for kids" class="article-thumb">
   <div class="article-content">
     <h3><a data-title-link href="https://techcrunch.com/2025/11/24/hands-on-with-stickerbox-the-ai-powered-sticker-maker-for-kids/?utm_source=tek2day&utm_medium=email">Hands on with Stickerbox, the AI-powered sticker maker for kids</a></h3>
-    <div class="meta"><span class="src">TechCrunch</span> - Nov 24, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
-    <div class="trend-chips"><span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">ai</span></div>
+    <div class="meta"><span class="src">TechCrunch</span> · Nov 24, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
+    <div class="trend-chips"><span class="trend-chip">ai</span></div>
     <p data-summary>Stickerbox turns kids’ ideas into printable stickers, blending AI magic with hands-on coloring for a surprisingly creative, &quot;screen-light&quot; play experience.</p>
   </div>
 </article>
@@ -473,7 +948,7 @@
   <img src="https://pulse.tek2dayholdings.com/p/4e96f78532/thumbnail.png" alt="XRP jumps 8% as Franklin Templeton, Grayscale ETFs begin trading" class="article-thumb">
   <div class="article-content">
     <h3><a data-title-link href="https://cointelegraph.com/news/franklin-templeton-xrp-etf-nyse?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound&utm_source=tek2day&utm_medium=email">XRP jumps 8% as Franklin Templeton, Grayscale ETFs begin trading</a></h3>
-    <div class="meta"><span class="src">Cointelegraph</span> - Nov 24, 2025 <span class="badge">New</span> </div>
+    <div class="meta"><span class="src">Cointelegraph</span> · Nov 24, 2025 <span class="badge">New</span> </div>
     <div class="trend-chips"></div>
     <p data-summary>The investment vehicle tied to XRP launched amid other offerings from Grayscale, Bitwise Asset Management and Canary Capital.</p>
   </div>
@@ -482,8 +957,8 @@
   <img src="https://pulse.tek2dayholdings.com/p/938a9dc4fe/thumbnail.png" alt="Anthropic’s new model is its latest frontier in the AI agent battle — but it’s still facing cybersecurity concerns" class="article-thumb">
   <div class="article-content">
     <h3><a data-title-link href="https://www.theverge.com/ai-artificial-intelligence/828003/anthropics-new-claude-opus-4-5-model-ai-agents-cybersecurity?utm_source=tek2day&utm_medium=email">Anthropic’s new model is its latest frontier in the AI agent battle — but it’s still facing cybersecurity concerns</a></h3>
-    <div class="meta"><span class="src">The Verge</span> - Nov 24, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
-    <div class="trend-chips"><span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">agent</span> <span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">ai</span> <span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">anthropic</span> <span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">claude</span> <span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">google</span> <span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">openai</span></div>
+    <div class="meta"><span class="src">The Verge</span> · Nov 24, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
+    <div class="trend-chips"><span class="trend-chip">agent</span> <span class="trend-chip">ai</span> <span class="trend-chip">anthropic</span> <span class="trend-chip">claude</span> <span class="trend-chip">google</span> <span class="trend-chip">openai</span></div>
     <p data-summary>The AI labs never sleep — especially the week before Thanksgiving, it seems. Days after Google’s buzzworthy Gemini 3, and OpenAI’s updated agentic coding model, Anthropic has anno...</p>
   </div>
 </article>
@@ -491,8 +966,8 @@
   <img src="https://pulse.tek2dayholdings.com/p/4b5beed86b/thumbnail.png" alt="FDIC’s Deposit Insurance Fund Nears Legal Target Ratio" class="article-thumb">
   <div class="article-content">
     <h3><a data-title-link href="https://www.pymnts.com/news/banking/2025/fdics-deposit-insurance-fund-nears-legal-target-ratio/?utm_source=tek2day&utm_medium=email">FDIC’s Deposit Insurance Fund Nears Legal Target Ratio</a></h3>
-    <div class="meta"><span class="src">PYMNTS</span> - Nov 24, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
-    <div class="trend-chips"><span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">ai</span></div>
+    <div class="meta"><span class="src">PYMNTS</span> · Nov 24, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
+    <div class="trend-chips"><span class="trend-chip">ai</span></div>
     <p data-summary>The Federal Deposit Insurance Corporation’s Deposit Insurance Fund (DIF) reserve ratio increased four basis points to reach 1.40% in the third quarter. The fund’s balance increase...</p>
   </div>
 </article>
@@ -500,8 +975,8 @@
   <img src="https://pulse.tek2dayholdings.com/p/f0d0439d8e/thumbnail.png" alt="FDIC’s Deposit Insurance Fund Reserve Ratio Exceeds Statutory Minimum for Second Consecutive Quarter" class="article-thumb">
   <div class="article-content">
     <h3><a data-title-link href="https://www.pymnts.com/news/banking/2025/fdics-deposit-insurance-fund-reserve-ratio-exceeds-statutory-minimum-for-second-consecutive-quarter/?utm_source=tek2day&utm_medium=email">FDIC’s Deposit Insurance Fund Reserve Ratio Exceeds Statutory Minimum for Second Consecutive Quarter</a></h3>
-    <div class="meta"><span class="src">PYMNTS</span> - Nov 24, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
-    <div class="trend-chips"><span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">ai</span></div>
+    <div class="meta"><span class="src">PYMNTS</span> · Nov 24, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
+    <div class="trend-chips"><span class="trend-chip">ai</span></div>
     <p data-summary>The Federal Deposit Insurance Corporation’s Deposit Insurance Fund (DIF) reserve ratio increased four basis points to reach 1.40% in the third quarter. The fund’s balance increase...</p>
   </div>
 </article>
@@ -509,7 +984,7 @@
   <img src="https://pulse.tek2dayholdings.com/p/2d093e2026/thumbnail.png" alt="US tech stocks surge as Fed rate cut bets fuel rebound" class="article-thumb">
   <div class="article-content">
     <h3><a data-title-link href="https://www.ft.com/content/bea68366-f644-44f8-a38d-0c041e4a646d?utm_source=tek2day&utm_medium=email">US tech stocks surge as Fed rate cut bets fuel rebound</a></h3>
-    <div class="meta"><span class="src">Financial Times - Technology</span> - Nov 24, 2025 <span class="badge">New</span> </div>
+    <div class="meta"><span class="src">Financial Times - Technology</span> · Nov 24, 2025 <span class="badge">New</span> </div>
     <div class="trend-chips"></div>
     <p data-summary>Nasdaq buoyed by mounting expectations the US central bank will lower borrowing costs in December</p>
   </div>
@@ -518,8 +993,8 @@
   <img src="https://pulse.tek2dayholdings.com/p/8cd2eb7725/thumbnail.png" alt="Anthropic releases Opus 4.5 with new Chrome and Excel integrations" class="article-thumb">
   <div class="article-content">
     <h3><a data-title-link href="https://techcrunch.com/2025/11/24/anthropic-releases-opus-4-5-with-new-chrome-and-excel-integrations/?utm_source=tek2day&utm_medium=email">Anthropic releases Opus 4.5 with new Chrome and Excel integrations</a></h3>
-    <div class="meta"><span class="src">TechCrunch</span> - Nov 24, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
-    <div class="trend-chips"><span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">anthropic</span></div>
+    <div class="meta"><span class="src">TechCrunch</span> · Nov 24, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
+    <div class="trend-chips"><span class="trend-chip">anthropic</span></div>
     <p data-summary>Anthropic has launched Opus 4.5, the latest version of its flagship model, with new integrations into Chrome and Excel.</p>
   </div>
 </article>
@@ -527,8 +1002,8 @@
   <img src="https://i.ytimg.com/vi/zrcCS9oHjtI/mqdefault.jpg" alt="Claude Code on desktop" class="article-thumb">
   <div class="article-content">
     <h3><a data-title-link href="https://www.youtube.com/watch?v=zrcCS9oHjtI&utm_source=tek2day&utm_medium=email">Claude Code on desktop</a></h3>
-    <div class="meta"><span class="src">Anthropic YouTube</span> - Nov 24, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
-    <div class="trend-chips"><span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">agent</span> <span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">claude</span></div>
+    <div class="meta"><span class="src">Anthropic YouTube</span> · Nov 24, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
+    <div class="trend-chips"><span class="trend-chip">agent</span> <span class="trend-chip">claude</span></div>
     <p data-summary>Today, we’re introducing Claude Code in our desktop apps in research preview. You can now run multiple local and remote Claude Code sessions in parallel: one agent fixing bugs, an...</p>
   </div>
 </article>
@@ -536,8 +1011,8 @@
   <img src="https://pulse.tek2dayholdings.com/p/c5e3a4e5bd/thumbnail.png" alt="Ive and Altman Say OpenAI’s First Device Will Launch in Under 2 Years" class="article-thumb">
   <div class="article-content">
     <h3><a data-title-link href="https://www.pymnts.com/artificial-intelligence-2/2025/ive-and-altman-say-openais-first-device-will-launch-in-under-2-years/?utm_source=tek2day&utm_medium=email">Ive and Altman Say OpenAI’s First Device Will Launch in Under 2 Years</a></h3>
-    <div class="meta"><span class="src">PYMNTS</span> - Nov 24, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
-    <div class="trend-chips"><span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">ai</span> <span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">apple</span> <span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">openai</span></div>
+    <div class="meta"><span class="src">PYMNTS</span> · Nov 24, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
+    <div class="trend-chips"><span class="trend-chip">ai</span> <span class="trend-chip">apple</span> <span class="trend-chip">openai</span></div>
     <p data-summary>Speaking at Emerson Collective’s Demo Day in San Francisco on Saturday (Nov. 22), OpenAI CEO Sam Altman and famed former Apple designer Jony Ive said OpenAI’s first device will be...</p>
   </div>
 </article>
@@ -545,7 +1020,7 @@
   <img src="https://pulse.tek2dayholdings.com/p/bfc8a95497/thumbnail.png" alt="Stand With Crypto to vet 2026 candidates on digital asset positions" class="article-thumb">
   <div class="article-content">
     <h3><a data-title-link href="https://cointelegraph.com/news/stand-with-crypto-candidates-digital-asset-positions?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound&utm_source=tek2day&utm_medium=email">Stand With Crypto to vet 2026 candidates on digital asset positions</a></h3>
-    <div class="meta"><span class="src">Cointelegraph</span> - Nov 24, 2025 <span class="badge">New</span> </div>
+    <div class="meta"><span class="src">Cointelegraph</span> · Nov 24, 2025 <span class="badge">New</span> </div>
     <div class="trend-chips"></div>
     <p data-summary>After the crypto industry’s success in influencing the 2024 US elections, an advocacy group announced plans to continue its efforts for the 2026 midterms.</p>
   </div>
@@ -554,7 +1029,7 @@
   <img src="https://pulse.tek2dayholdings.com/p/80c7cbeb83/thumbnail.png" alt="Lutnick warns EU to relax tech rules if it wants lower steel tariffs" class="article-thumb">
   <div class="article-content">
     <h3><a data-title-link href="https://www.ft.com/content/19912b20-582d-46fe-90a5-ee208a28f4df?utm_source=tek2day&utm_medium=email">Lutnick warns EU to relax tech rules if it wants lower steel tariffs</a></h3>
-    <div class="meta"><span class="src">Financial Times - Technology</span> - Nov 24, 2025 <span class="badge">New</span> </div>
+    <div class="meta"><span class="src">Financial Times - Technology</span> · Nov 24, 2025 <span class="badge">New</span> </div>
     <div class="trend-chips"></div>
     <p data-summary>US commerce secretary calls for ‘balanced approach’ during visit to Brussels for meeting with bloc’s trade ministers</p>
   </div>
@@ -563,8 +1038,8 @@
   <img src="https://pulse.tek2dayholdings.com/p/3cf5a92e59/thumbnail.png" alt="OpenAI Debuts ChatGPT Shopping Research Tool Ahead of the Holidays" class="article-thumb">
   <div class="article-content">
     <h3><a data-title-link href="https://www.bloomberg.com/news/articles/2025-11-24/openai-debuts-chatgpt-shopping-research-tool-ahead-of-the-holidays?utm_source=tek2day&utm_medium=email">OpenAI Debuts ChatGPT Shopping Research Tool Ahead of the Holidays</a></h3>
-    <div class="meta"><span class="src">Bloomberg Technology</span> - Nov 24, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
-    <div class="trend-chips"><span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">ai</span> <span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">chatgpt</span> <span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">gpt</span> <span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">openai</span></div>
+    <div class="meta"><span class="src">Bloomberg Technology</span> · Nov 24, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
+    <div class="trend-chips"><span class="trend-chip">ai</span> <span class="trend-chip">chatgpt</span> <span class="trend-chip">gpt</span> <span class="trend-chip">openai</span></div>
     <p data-summary>OpenAI unveiled a free artificial intelligence-powered shopping research tool that it says can generate a personalized buyer’s guide for ChatGPT users during the holiday season.</p>
   </div>
 </article>
@@ -572,8 +1047,8 @@
   <img src="https://pulse.tek2dayholdings.com/p/8720912fad/thumbnail.png" alt="Corpay Debuts Automated Payment Tool For Immigration Firms" class="article-thumb">
   <div class="article-content">
     <h3><a data-title-link href="https://www.pymnts.com/digital-payments/2025/corpay-debuts-automated-payment-tool-for-immigration-firms/?utm_source=tek2day&utm_medium=email">Corpay Debuts Automated Payment Tool For Immigration Firms</a></h3>
-    <div class="meta"><span class="src">PYMNTS</span> - Nov 24, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
-    <div class="trend-chips"><span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">ai</span></div>
+    <div class="meta"><span class="src">PYMNTS</span> · Nov 24, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
+    <div class="trend-chips"><span class="trend-chip">ai</span></div>
     <p data-summary>Corporate payments company Corpay has introduced a solution for U.S. immigration law firms. The new USCIS Navigator tool, announced Monday (Nov. 24) is aimed at providing secure p...</p>
   </div>
 </article>
@@ -581,8 +1056,8 @@
   <img src="https://pulse.tek2dayholdings.com/p/24e32e020b/thumbnail.png" alt="Bitcoin rallies as US dollar strengthens: Are crypto traders walking into a trap?" class="article-thumb">
   <div class="article-content">
     <h3><a data-title-link href="https://cointelegraph.com/news/bitcoin-rallies-as-dxy-strengthens-is-it-a-trap-for-bulls?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound&utm_source=tek2day&utm_medium=email">Bitcoin rallies as US dollar strengthens: Are crypto traders walking into a trap?</a></h3>
-    <div class="meta"><span class="src">Cointelegraph</span> - Nov 24, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
-    <div class="trend-chips"><span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">ai</span></div>
+    <div class="meta"><span class="src">Cointelegraph</span> · Nov 24, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
+    <div class="trend-chips"><span class="trend-chip">ai</span></div>
     <p data-summary>Bitcoin reclaimed $86,000 as the US dollar strengthened, but one analyst warned the rally may be structurally weak.</p>
   </div>
 </article>
@@ -590,8 +1065,8 @@
   <img src="https://pulse.tek2dayholdings.com/p/772e85e1ed/thumbnail.png" alt="Scale AI Loses to Smaller Startup in Bid for US Intel Work" class="article-thumb">
   <div class="article-content">
     <h3><a data-title-link href="https://www.bloomberg.com/news/articles/2025-11-24/scale-ai-loses-to-smaller-upstart-in-bid-for-us-intel-work?utm_source=tek2day&utm_medium=email">Scale AI Loses to Smaller Startup in Bid for US Intel Work</a></h3>
-    <div class="meta"><span class="src">Bloomberg Technology</span> - Nov 24, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
-    <div class="trend-chips"><span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">ai</span></div>
+    <div class="meta"><span class="src">Bloomberg Technology</span> · Nov 24, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
+    <div class="trend-chips"><span class="trend-chip">ai</span></div>
     <p data-summary>An AI startup has won a seven-year contract to supply data labeling for artificial intelligence and machine learning for the US Department of Defense and intelligence community, b...</p>
   </div>
 </article>
@@ -599,7 +1074,7 @@
   <img src="https://pulse.tek2dayholdings.com/p/073cf58773/thumbnail.png" alt="Don’t share your secrets with a chatbot" class="article-thumb">
   <div class="article-content">
     <h3><a data-title-link href="https://www.ft.com/content/9cdd07b0-567e-4715-9ebd-435b1d685e4b?utm_source=tek2day&utm_medium=email">Don’t share your secrets with a chatbot</a></h3>
-    <div class="meta"><span class="src">Financial Times - Technology</span> - Nov 24, 2025 <span class="badge">New</span> </div>
+    <div class="meta"><span class="src">Financial Times - Technology</span> · Nov 24, 2025 <span class="badge">New</span> </div>
     <div class="trend-chips"></div>
     <p data-summary>Tech companies are harnessing the language of relationships to harvest data</p>
   </div>
@@ -608,8 +1083,8 @@
   <img src="https://pulse.tek2dayholdings.com/p/9ad804734a/thumbnail.png" alt="AI On: 3 Ways Specialized AI Agents Are Reshaping Businesses" class="article-thumb">
   <div class="article-content">
     <h3><a data-title-link href="https://blogs.nvidia.com/blog/specialized-ai-agents/?utm_source=tek2day&utm_medium=email">AI On: 3 Ways Specialized AI Agents Are Reshaping Businesses</a></h3>
-    <div class="meta"><span class="src">NVIDIA News</span> - Nov 24, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
-    <div class="trend-chips"><span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">agent</span> <span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">ai</span></div>
+    <div class="meta"><span class="src">NVIDIA News</span> · Nov 24, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
+    <div class="trend-chips"><span class="trend-chip">agent</span> <span class="trend-chip">ai</span></div>
     <p data-summary>Built on open-source models, today’s AI agents can be tailored for unique workflows and business needs to boost productivity and return on investment.</p>
   </div>
 </article>
@@ -617,7 +1092,7 @@
   <img src="https://pulse.tek2dayholdings.com/p/aceb28c30b/thumbnail.png" alt="Upbit Considers IPO on Nasdaq Upon Completion of Merger With Naver" class="article-thumb">
   <div class="article-content">
     <h3><a data-title-link href="https://www.pymnts.com/news/ipo/2025/upbit-considers-ipo-on-nasdaq-upon-completion-of-merger-with-naver/?utm_source=tek2day&utm_medium=email">Upbit Considers IPO on Nasdaq Upon Completion of Merger With Naver</a></h3>
-    <div class="meta"><span class="src">PYMNTS</span> - Nov 24, 2025 <span class="badge">New</span> </div>
+    <div class="meta"><span class="src">PYMNTS</span> · Nov 24, 2025 <span class="badge">New</span> </div>
     <div class="trend-chips"></div>
     <p data-summary>South Korean cryptocurrency exchange Upbit is reportedly considering launching an initial public offering on Nasdaq once it completes a merger with South Korean internet firm Nave...</p>
   </div>
@@ -626,7 +1101,7 @@
   <img src="https://pulse.tek2dayholdings.com/p/f1398dc2bc/thumbnail.png" alt="DOGE days are over as Trump disbands Elon Musk’s team of federal cost-cutters" class="article-thumb">
   <div class="article-content">
     <h3><a data-title-link href="https://techcrunch.com/2025/11/24/doge-days-are-over-as-trump-disbands-elon-musks-team-of-federal-cost-cutters/?utm_source=tek2day&utm_medium=email">DOGE days are over as Trump disbands Elon Musk’s team of federal cost-cutters</a></h3>
-    <div class="meta"><span class="src">TechCrunch</span> - Nov 24, 2025 <span class="badge">New</span> </div>
+    <div class="meta"><span class="src">TechCrunch</span> · Nov 24, 2025 <span class="badge">New</span> </div>
     <div class="trend-chips"></div>
     <p data-summary>DOGE members are reportedly worried that they could face prosecution for some of their activities conducted while under the leadership of Elon Musk.</p>
   </div>
@@ -635,7 +1110,7 @@
   <img src="https://pulse.tek2dayholdings.com/p/cc88aec829/thumbnail.png" alt="SAP Employee Trust in Leadership Falters After Restructuring" class="article-thumb">
   <div class="article-content">
     <h3><a data-title-link href="https://www.bloomberg.com/news/articles/2025-11-24/sap-employee-trust-in-leadership-falters-after-restructuring?utm_source=tek2day&utm_medium=email">SAP Employee Trust in Leadership Falters After Restructuring</a></h3>
-    <div class="meta"><span class="src">Bloomberg Technology</span> - Nov 24, 2025 <span class="badge">New</span> </div>
+    <div class="meta"><span class="src">Bloomberg Technology</span> · Nov 24, 2025 <span class="badge">New</span> </div>
     <div class="trend-chips"></div>
     <p data-summary>The executive board of SAP SE, Europe’s most valuable software company, is facing declining employee trust following recent job cuts and organizational restructuring, underscoring...</p>
   </div>
@@ -644,8 +1119,8 @@
   <img src="https://pulse.tek2dayholdings.com/p/692dcac1f3/thumbnail.png" alt="Worldpay Debuts Model Context Protocol to Bolster Agentic Commerce" class="article-thumb">
   <div class="article-content">
     <h3><a data-title-link href="https://www.pymnts.com/artificial-intelligence-2/2025/worldpay-debuts-model-context-protocol-to-bolster-agentic-commerce/?utm_source=tek2day&utm_medium=email">Worldpay Debuts Model Context Protocol to Bolster Agentic Commerce</a></h3>
-    <div class="meta"><span class="src">PYMNTS</span> - Nov 24, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
-    <div class="trend-chips"><span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">agent</span> <span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">ai</span></div>
+    <div class="meta"><span class="src">PYMNTS</span> · Nov 24, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
+    <div class="trend-chips"><span class="trend-chip">agent</span> <span class="trend-chip">ai</span></div>
     <p data-summary>Worldpay has debuted a tool aimed to promote AI-powered payment integration and agentic commerce. Worldpay MCP, announced Monday (Nov. 24), is available now via the company’s Deve...</p>
   </div>
 </article>
@@ -653,8 +1128,8 @@
   <img src="https://pulse.tek2dayholdings.com/p/ab97e10994/thumbnail.png" alt="Meta had a 17-strike policy for sex trafficking, former safety leader claims" class="article-thumb">
   <div class="article-content">
     <h3><a data-title-link href="https://www.theverge.com/news/827658/meta-17-strike-policy-sex-trafficking-testimony-lawsuit?utm_source=tek2day&utm_medium=email">Meta had a 17-strike policy for sex trafficking, former safety leader claims</a></h3>
-    <div class="meta"><span class="src">The Verge</span> - Nov 24, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
-    <div class="trend-chips"><span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">ai</span> <span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">meta</span></div>
+    <div class="meta"><span class="src">The Verge</span> · Nov 24, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
+    <div class="trend-chips"><span class="trend-chip">ai</span> <span class="trend-chip">meta</span></div>
     <p data-summary>Meta allegedly gave accounts engaged in the “trafficking of humans for sex” 16 chances before suspending them, according to testimony from the company’s former head of safety and ...</p>
   </div>
 </article>
@@ -662,8 +1137,8 @@
   <img src="https://pulse.tek2dayholdings.com/p/382cc906c5/thumbnail.png" alt="A new AI benchmark tests whether chatbots protect human wellbeing" class="article-thumb">
   <div class="article-content">
     <h3><a data-title-link href="https://techcrunch.com/2025/11/24/a-new-ai-benchmark-tests-whether-chatbots-protect-human-wellbeing/?utm_source=tek2day&utm_medium=email">A new AI benchmark tests whether chatbots protect human wellbeing</a></h3>
-    <div class="meta"><span class="src">TechCrunch</span> - Nov 24, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
-    <div class="trend-chips"><span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">ai</span></div>
+    <div class="meta"><span class="src">TechCrunch</span> · Nov 24, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
+    <div class="trend-chips"><span class="trend-chip">ai</span></div>
     <p data-summary>Most AI benchmarks measure intelligence and instruction-following rather than psychological safety. Humane Bench evaluates models based on core principles of human flourishing, pr...</p>
   </div>
 </article>
@@ -671,7 +1146,7 @@
   <img src="https://pulse.tek2dayholdings.com/p/5bd5fd1ef9/thumbnail.png" alt="What CFOs Should Ask About Payments Data as ISO 20022 Goes Live" class="article-thumb">
   <div class="article-content">
     <h3><a data-title-link href="https://www.pymnts.com/news/b2b-payments/2025/what-cfos-should-ask-about-payments-data-as-iso-20022-goes-live/?utm_source=tek2day&utm_medium=email">What CFOs Should Ask About Payments Data as ISO 20022 Goes Live</a></h3>
-    <div class="meta"><span class="src">PYMNTS</span> - Nov 24, 2025 <span class="badge">New</span> </div>
+    <div class="meta"><span class="src">PYMNTS</span> · Nov 24, 2025 <span class="badge">New</span> </div>
     <div class="trend-chips"></div>
     <p data-summary>For decades, the mechanics of business payments barely changed. Wires, ACH batches and card networks moved money from point A to point B with only modest variations in speed and s...</p>
   </div>
@@ -680,8 +1155,8 @@
   <img src="https://pulse.tek2dayholdings.com/p/19d4e2c8dc/thumbnail.png" alt="New AI model enhances diagnosis of rare diseases" class="article-thumb">
   <div class="article-content">
     <h3><a data-title-link href="https://www.ft.com/content/bc49e334-776b-41d0-a9be-fb0c29c54853?utm_source=tek2day&utm_medium=email">New AI model enhances diagnosis of rare diseases</a></h3>
-    <div class="meta"><span class="src">Financial Times - Technology</span> - Nov 24, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
-    <div class="trend-chips"><span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">ai</span> <span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">deepmind</span> <span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">google</span></div>
+    <div class="meta"><span class="src">Financial Times - Technology</span> · Nov 24, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
+    <div class="trend-chips"><span class="trend-chip">ai</span> <span class="trend-chip">deepmind</span> <span class="trend-chip">google</span></div>
     <p data-summary>PopEVE system outperformed rivals such as Google DeepMind’s AlphaMissense</p>
   </div>
 </article>
@@ -689,8 +1164,8 @@
   <img src="https://pulse.tek2dayholdings.com/p/a5f5854725/thumbnail.png" alt="Green Dot Sells Bank and Embedded Finance Units to New Owners" class="article-thumb">
   <div class="article-content">
     <h3><a data-title-link href="https://www.pymnts.com/acquisitions/2025/green-dot-sells-bank-embedded-finance-units-to-new-owners/?utm_source=tek2day&utm_medium=email">Green Dot Sells Bank and Embedded Finance Units to New Owners</a></h3>
-    <div class="meta"><span class="src">PYMNTS</span> - Nov 24, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
-    <div class="trend-chips"><span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">fintech</span></div>
+    <div class="meta"><span class="src">PYMNTS</span> · Nov 24, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
+    <div class="trend-chips"><span class="trend-chip">fintech</span></div>
     <p data-summary>Banking FinTech Green Dot’s businesses now have new owners, according to a Monday (Nov. 24) news release. Smith Ventures, a private equity company, is set to acquire and privatize...</p>
   </div>
 </article>
@@ -698,8 +1173,8 @@
   <img src="https://pulse.tek2dayholdings.com/p/2edf85798a/thumbnail.png" alt="Jony Ive and Sam Altman say they finally have an AI hardware prototype" class="article-thumb">
   <div class="article-content">
     <h3><a data-title-link href="https://www.theverge.com/news/827607/openai-hardware-prototype-chatgpt-jony-ive-sam-altman?utm_source=tek2day&utm_medium=email">Jony Ive and Sam Altman say they finally have an AI hardware prototype</a></h3>
-    <div class="meta"><span class="src">The Verge</span> - Nov 24, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
-    <div class="trend-chips"><span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">ai</span> <span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">apple</span> <span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">openai</span></div>
+    <div class="meta"><span class="src">The Verge</span> · Nov 24, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
+    <div class="trend-chips"><span class="trend-chip">ai</span> <span class="trend-chip">apple</span> <span class="trend-chip">openai</span></div>
     <p data-summary>OpenAI CEO Sam Altman and former Apple designer Jony Ive have been keeping the finer details of the first mysterious OpenAI hardware under wraps, but it sounds like they’ve settle...</p>
   </div>
 </article>
@@ -707,8 +1182,8 @@
   <img src="https://pulse.tek2dayholdings.com/p/e400202dca/thumbnail.png" alt="Why Fears of a Trillion-Dollar AI Bubble Are Growing" class="article-thumb">
   <div class="article-content">
     <h3><a data-title-link href="https://www.bloomberg.com/news/articles/2025-11-24/why-ai-bubble-concerns-loom-as-openai-microsoft-meta-ramp-up-spending?utm_source=tek2day&utm_medium=email">Why Fears of a Trillion-Dollar AI Bubble Are Growing</a></h3>
-    <div class="meta"><span class="src">Bloomberg Technology</span> - Nov 24, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
-    <div class="trend-chips"><span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">ai</span></div>
+    <div class="meta"><span class="src">Bloomberg Technology</span> · Nov 24, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
+    <div class="trend-chips"><span class="trend-chip">ai</span></div>
     <p data-summary>Investors have parted with unprecedented sums of money to help AI fulfill its lofty promise. But no one really knows how it will all pay off.</p>
   </div>
 </article>
@@ -716,8 +1191,8 @@
   <img src="https://pulse.tek2dayholdings.com/p/d34ed68d7e/thumbnail.png" alt="Former MrBeast content strategist is building an AI tool for creator ideation and analytics" class="article-thumb">
   <div class="article-content">
     <h3><a data-title-link href="https://techcrunch.com/2025/11/24/former-mrbeast-content-strategist-is-building-an-ai-tool-for-creator-ideation-and-analytics/?utm_source=tek2day&utm_medium=email">Former MrBeast content strategist is building an AI tool for creator ideation and analytics</a></h3>
-    <div class="meta"><span class="src">TechCrunch</span> - Nov 24, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
-    <div class="trend-chips"><span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">ai</span></div>
+    <div class="meta"><span class="src">TechCrunch</span> · Nov 24, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
+    <div class="trend-chips"><span class="trend-chip">ai</span></div>
     <p data-summary>Palo is a tool for short-video creators to gain insights into what is working for them.</p>
   </div>
 </article>
@@ -725,8 +1200,8 @@
   <img src="https://pulse.tek2dayholdings.com/p/6076b6b09b/thumbnail.png" alt="‘Holy shit’: Gemini 3 is winning the AI race — for now" class="article-thumb">
   <div class="article-content">
     <h3><a data-title-link href="https://www.theverge.com/report/827555/google-gemini-3-is-winning-the-ai-race-for-now?utm_source=tek2day&utm_medium=email">‘Holy shit’: Gemini 3 is winning the AI race — for now</a></h3>
-    <div class="meta"><span class="src">The Verge</span> - Nov 24, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
-    <div class="trend-chips"><span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">ai</span> <span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">google</span></div>
+    <div class="meta"><span class="src">The Verge</span> · Nov 24, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
+    <div class="trend-chips"><span class="trend-chip">ai</span> <span class="trend-chip">google</span></div>
     <p data-summary>When an AI model release immediately spawns memes and treatises declaring the rest of the industry cooked, you know you&#x27;ve got something worth dissecting. Google&#x27;s Gemini 3 was re...</p>
   </div>
 </article>
@@ -734,8 +1209,8 @@
   <img src="https://pulse.tek2dayholdings.com/p/18a91c3e08/thumbnail.png" alt="ECB’s Lagarde Says Embracing AI Can Still Give Europe an Edge" class="article-thumb">
   <div class="article-content">
     <h3><a data-title-link href="https://www.bloomberg.com/news/articles/2025-11-24/ecb-s-lagarde-says-embracing-ai-can-still-give-europe-an-edge?utm_source=tek2day&utm_medium=email">ECB’s Lagarde Says Embracing AI Can Still Give Europe an Edge</a></h3>
-    <div class="meta"><span class="src">Bloomberg Technology</span> - Nov 24, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
-    <div class="trend-chips"><span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">ai</span></div>
+    <div class="meta"><span class="src">Bloomberg Technology</span> · Nov 24, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
+    <div class="trend-chips"><span class="trend-chip">ai</span></div>
     <p data-summary>Europe’s economy should embrace artificial intelligence and remove any hurdles that could slow its diffusion to avoid missing out on the technology’s benefits, European Central Ba...</p>
   </div>
 </article>
@@ -743,7 +1218,7 @@
   <img src="https://pulse.tek2dayholdings.com/p/1bc7948439/thumbnail.png" alt="US banks scramble to assess data theft after hackers breach financial tech firm" class="article-thumb">
   <div class="article-content">
     <h3><a data-title-link href="https://techcrunch.com/2025/11/24/us-banks-scramble-to-assess-data-theft-after-hackers-breach-financial-tech-firm/?utm_source=tek2day&utm_medium=email">US banks scramble to assess data theft after hackers breach financial tech firm</a></h3>
-    <div class="meta"><span class="src">TechCrunch</span> - Nov 24, 2025 <span class="badge">New</span> </div>
+    <div class="meta"><span class="src">TechCrunch</span> · Nov 24, 2025 <span class="badge">New</span> </div>
     <div class="trend-chips"></div>
     <p data-summary>U.S. banking giants including JPMorgan Chase, Citi, and Morgan Stanley are working to identify what data was stolen in a recent cyberattack on a New York financial firm.</p>
   </div>
@@ -752,7 +1227,7 @@
   <img src="https://pulse.tek2dayholdings.com/p/f6ad6f4771/thumbnail.png" alt="Mastercard and L’Oréal Launch Credit Card for Latin America’s Beauty Industry" class="article-thumb">
   <div class="article-content">
     <h3><a data-title-link href="https://www.pymnts.com/mastercard/2025/mastercard-and-loreal-launch-credit-card-for-latin-americas-beauty-industry/?utm_source=tek2day&utm_medium=email">Mastercard and L’Oréal Launch Credit Card for Latin America’s Beauty Industry</a></h3>
-    <div class="meta"><span class="src">PYMNTS</span> - Nov 24, 2025 <span class="badge">New</span> </div>
+    <div class="meta"><span class="src">PYMNTS</span> · Nov 24, 2025 <span class="badge">New</span> </div>
     <div class="trend-chips"></div>
     <p data-summary>Mastercard and L’Oréal have partnered to offer a credit card designed specifically for the beauty industry in Latin America and the Caribbean. The L’Oréal Mastercard BusinessCard ...</p>
   </div>
@@ -761,8 +1236,8 @@
   <img src="https://pulse.tek2dayholdings.com/p/2f7515f653/thumbnail.png" alt="Lutnick Talks EU Tech Rules, Nvidia H200 Chips, SCOTUS Tariff" class="article-thumb">
   <div class="article-content">
     <h3><a data-title-link href="https://www.bloomberg.com/news/videos/2025-11-24/lutnick-talks-eu-tech-rules-nvidia-h200-chips-tariffs-video?utm_source=tek2day&utm_medium=email">Lutnick Talks EU Tech Rules, Nvidia H200 Chips, SCOTUS Tariff</a></h3>
-    <div class="meta"><span class="src">Bloomberg Technology</span> - Nov 24, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
-    <div class="trend-chips"><span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">nvidia</span></div>
+    <div class="meta"><span class="src">Bloomberg Technology</span> · Nov 24, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
+    <div class="trend-chips"><span class="trend-chip">nvidia</span></div>
     <p data-summary>US Commerce Secretary Howard Lutnick discusses conditions for any steel and aluminum deal with the European Union, urging the EU to reduce tech regulations. Lutnick also talks abo...</p>
   </div>
 </article>
@@ -770,8 +1245,8 @@
   <img src="https://pulse.tek2dayholdings.com/p/25aacdb8c6/thumbnail.png" alt="Amazon Is Using Specialized AI Agents for Deep Bug Hunting" class="article-thumb">
   <div class="article-content">
     <h3><a data-title-link href="https://www.wired.com/story/amazon-autonomous-threat-analysis/?utm_source=tek2day&utm_medium=email">Amazon Is Using Specialized AI Agents for Deep Bug Hunting</a></h3>
-    <div class="meta"><span class="src">Wired</span> - Nov 24, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
-    <div class="trend-chips"><span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">agent</span> <span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">ai</span> <span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">amazon</span></div>
+    <div class="meta"><span class="src">Wired</span> · Nov 24, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
+    <div class="trend-chips"><span class="trend-chip">agent</span> <span class="trend-chip">ai</span> <span class="trend-chip">amazon</span></div>
     <p data-summary>Born out of an internal hackathon, Amazon’s Autonomous Threat Analysis system uses a variety of specialized AI agents to detect weaknesses and propose fixes to the company’s platf...</p>
   </div>
 </article>
@@ -779,8 +1254,8 @@
   <img src="https://pulse.tek2dayholdings.com/p/ebee77673b/thumbnail.png" alt="Billionaires Bankroll San Francisco Comeback One Party at a Time" class="article-thumb">
   <div class="article-content">
     <h3><a data-title-link href="https://www.bloomberg.com/news/articles/2025-11-24/billionaires-bankroll-san-francisco-comeback-one-party-at-a-time?utm_source=tek2day&utm_medium=email">Billionaires Bankroll San Francisco Comeback One Party at a Time</a></h3>
-    <div class="meta"><span class="src">Bloomberg Technology</span> - Nov 24, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
-    <div class="trend-chips"><span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">ai</span></div>
+    <div class="meta"><span class="src">Bloomberg Technology</span> · Nov 24, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
+    <div class="trend-chips"><span class="trend-chip">ai</span></div>
     <p data-summary>Crime surveillance, food assistance, an 83-foot Christmas tree – they’re all being paid for by an increasingly influential coalition of San Francisco billionaires.</p>
   </div>
 </article>
@@ -788,7 +1263,7 @@
   <img src="https://pulse.tek2dayholdings.com/p/e2723661fd/thumbnail.png" alt="Quantum computers won’t break Bitcoin’s code, they’ll break its politics" class="article-thumb">
   <div class="article-content">
     <h3><a data-title-link href="https://cointelegraph.com/news/bitcoin-quantum-threat-consensus-old-address-risk?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound&utm_source=tek2day&utm_medium=email">Quantum computers won’t break Bitcoin’s code, they’ll break its politics</a></h3>
-    <div class="meta"><span class="src">Cointelegraph</span> - Nov 24, 2025 <span class="badge">New</span> </div>
+    <div class="meta"><span class="src">Cointelegraph</span> · Nov 24, 2025 <span class="badge">New</span> </div>
     <div class="trend-chips"></div>
     <p data-summary>Bitcoin analyst James Check argued Bitcoin’s quantum risk is chiefly a consensus dilemma — not a tech one — because the network is unlikely to freeze legacy coins.</p>
   </div>
@@ -797,8 +1272,8 @@
   <img src="https://pulse.tek2dayholdings.com/p/2b823c7956/thumbnail.png" alt="European Central Bank Says Stablecoins Present Stability Concerns" class="article-thumb">
   <div class="article-content">
     <h3><a data-title-link href="https://www.pymnts.com/cryptocurrency/2025/european-central-bank-says-stablecoins-present-stability-concerns/?utm_source=tek2day&utm_medium=email">European Central Bank Says Stablecoins Present Stability Concerns</a></h3>
-    <div class="meta"><span class="src">PYMNTS</span> - Nov 24, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
-    <div class="trend-chips"><span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">ai</span> <span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">llm</span></div>
+    <div class="meta"><span class="src">PYMNTS</span> · Nov 24, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
+    <div class="trend-chips"><span class="trend-chip">ai</span> <span class="trend-chip">llm</span></div>
     <p data-summary>The European Central Bank (ECB) is calling for close oversight of stablecoins in its region. Use of the digital currencies are limited in the region, but the coins still merit clo...</p>
   </div>
 </article>
@@ -806,7 +1281,7 @@
   <img src="https://pulse.tek2dayholdings.com/p/841d934c8d/thumbnail.png" alt="How India’s VDA review may strengthen protections across the crypto ecosystem" class="article-thumb">
   <div class="article-content">
     <h3><a data-title-link href="https://cointelegraph.com/news/how-india-s-vda-review-may-strengthen-protections-across-the-crypto-ecosystem?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound&utm_source=tek2day&utm_medium=email">How India’s VDA review may strengthen protections across the crypto ecosystem</a></h3>
-    <div class="meta"><span class="src">Cointelegraph</span> - Nov 24, 2025 <span class="badge">New</span> </div>
+    <div class="meta"><span class="src">Cointelegraph</span> · Nov 24, 2025 <span class="badge">New</span> </div>
     <div class="trend-chips"></div>
     <p data-summary>From custody standards to stablecoin oversight, India’s VDA review may help shape an investor-focused framework that brings crypto rules closer to global norms.</p>
   </div>
@@ -815,8 +1290,8 @@
   <img src="https://pulse.tek2dayholdings.com/p/ba14cdbb8a/thumbnail.png" alt="Stablecoin risks seen as minimal in Europe amid low adoption and MiCA: ECB" class="article-thumb">
   <div class="article-content">
     <h3><a data-title-link href="https://cointelegraph.com/news/stablecoin-risks-limited-euro-area-low-adoption-regulation-ecb?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound&utm_source=tek2day&utm_medium=email">Stablecoin risks seen as minimal in Europe amid low adoption and MiCA: ECB</a></h3>
-    <div class="meta"><span class="src">Cointelegraph</span> - Nov 24, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
-    <div class="trend-chips"><span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">ai</span></div>
+    <div class="meta"><span class="src">Cointelegraph</span> · Nov 24, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
+    <div class="trend-chips"><span class="trend-chip">ai</span></div>
     <p data-summary>The European Central Bank said stablecoin risks in the euro area are limited, with crypto trading dominating use and retail adoption under 1%, while monitoring continues.</p>
   </div>
 </article>
@@ -824,8 +1299,8 @@
   <img src="https://pulse.tek2dayholdings.com/p/605876515f/thumbnail.png" alt="Trump to Decide on Nvidia H200 Chips to China, Lutnick Says" class="article-thumb">
   <div class="article-content">
     <h3><a data-title-link href="https://www.bloomberg.com/news/videos/2025-11-24/trump-to-decide-on-nvidia-h200-chips-to-china-lutnick-says-mid56kx0?utm_source=tek2day&utm_medium=email">Trump to Decide on Nvidia H200 Chips to China, Lutnick Says</a></h3>
-    <div class="meta"><span class="src">Bloomberg Technology</span> - Nov 24, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
-    <div class="trend-chips"><span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">ai</span> <span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">nvidia</span></div>
+    <div class="meta"><span class="src">Bloomberg Technology</span> · Nov 24, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
+    <div class="trend-chips"><span class="trend-chip">ai</span> <span class="trend-chip">nvidia</span></div>
     <p data-summary>Commerce Secretary Howard Lutnick says the decision to authorize sales of Nvidia’s H200 artificial intelligence chips to China is on President Donald Trump’s desk. Lutnick also di...</p>
   </div>
 </article>
@@ -833,7 +1308,7 @@
   <img src="https://pulse.tek2dayholdings.com/p/3899c69575/thumbnail.png" alt="Roblox&#x27;s Trust &amp; Safety Effort Feels Light" class="article-thumb">
   <div class="article-content">
     <h3><a data-title-link href="https://newsletter.tek2dayholdings.com/p/robloxs-trust-and-safety-effort-feels?utm_source=tek2day&utm_medium=email">Roblox&#x27;s Trust &amp; Safety Effort Feels Light</a></h3>
-    <div class="meta"><span class="src">TEK2day Newsletter</span> - Nov 24, 2025 <span class="badge">New</span> </div>
+    <div class="meta"><span class="src">TEK2day Newsletter</span> · Nov 24, 2025 <span class="badge">New</span> </div>
     <div class="trend-chips"></div>
     <p data-summary>I don’t know what the number should be, but if Trust &amp; Safety is so critical to Roblox, (RBLX), 7% of Revenue feels light.</p>
   </div>
@@ -842,8 +1317,8 @@
   <img src="https://pulse.tek2dayholdings.com/p/9dccf32925/thumbnail.png" alt="NPM supply-chain attack compromises major ENS and crypto libraries" class="article-thumb">
   <div class="article-content">
     <h3><a data-title-link href="https://cointelegraph.com/news/new-npm-supply-chain-attack-compromises-major-ens-and-crypto-libraries?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound&utm_source=tek2day&utm_medium=email">NPM supply-chain attack compromises major ENS and crypto libraries</a></h3>
-    <div class="meta"><span class="src">Cointelegraph</span> - Nov 24, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
-    <div class="trend-chips"><span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">ai</span></div>
+    <div class="meta"><span class="src">Cointelegraph</span> · Nov 24, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
+    <div class="trend-chips"><span class="trend-chip">ai</span></div>
     <p data-summary>A researcher warned that more than 400 NPM libraries, including at least 10 crypto packages mostly tied to ENS, were compromised by Shai Hulud malware.</p>
   </div>
 </article>
@@ -851,8 +1326,8 @@
   <img src="https://pulse.tek2dayholdings.com/p/c1dd5d0233/thumbnail.png" alt="Google’s Having the AI Build the UI in Latest Gemini Update" class="article-thumb">
   <div class="article-content">
     <h3><a data-title-link href="https://www.bloomberg.com/news/newsletters/2025-11-24/google-s-having-the-ai-build-the-ui-in-latest-gemini-update?utm_source=tek2day&utm_medium=email">Google’s Having the AI Build the UI in Latest Gemini Update</a></h3>
-    <div class="meta"><span class="src">Bloomberg Technology</span> - Nov 24, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
-    <div class="trend-chips"><span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">ai</span> <span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">google</span></div>
+    <div class="meta"><span class="src">Bloomberg Technology</span> · Nov 24, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
+    <div class="trend-chips"><span class="trend-chip">ai</span> <span class="trend-chip">google</span></div>
     <p data-summary>Welcome to Tech In Depth, our daily newsletter about the business of tech from Bloomberg’s journalists around the world. Today, Austin Carr looks at Google’s decision to outsource...</p>
   </div>
 </article>
@@ -860,8 +1335,8 @@
   <img src="https://pulse.tek2dayholdings.com/p/db870ac246/thumbnail.png" alt="The AI Industry Is Built on a Big Unproven Assumption" class="article-thumb">
   <div class="article-content">
     <h3><a data-title-link href="https://www.bloomberg.com/news/articles/2025-11-24/the-ai-industry-is-built-on-a-big-unproven-assumption?utm_source=tek2day&utm_medium=email">The AI Industry Is Built on a Big Unproven Assumption</a></h3>
-    <div class="meta"><span class="src">Bloomberg Technology</span> - Nov 24, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
-    <div class="trend-chips"><span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">ai</span></div>
+    <div class="meta"><span class="src">Bloomberg Technology</span> · Nov 24, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
+    <div class="trend-chips"><span class="trend-chip">ai</span></div>
     <p data-summary>In addition to the projections about reaching artificial general intelligence and replacing millions of human workers, there’s the mundane matter of how long AI chips will last.</p>
   </div>
 </article>
@@ -869,7 +1344,7 @@
   <img src="https://pulse.tek2dayholdings.com/p/6e0cc0f49d/thumbnail.png" alt="Strategy stock is bleeding, but Saylor ‘won’t back down’ from Bitcoin bet" class="article-thumb">
   <div class="article-content">
     <h3><a data-title-link href="https://cointelegraph.com/news/microstrategy-stock-bitcoin-bet-still-working?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound&utm_source=tek2day&utm_medium=email">Strategy stock is bleeding, but Saylor ‘won’t back down’ from Bitcoin bet</a></h3>
-    <div class="meta"><span class="src">Cointelegraph</span> - Nov 24, 2025 <span class="badge">New</span> </div>
+    <div class="meta"><span class="src">Cointelegraph</span> · Nov 24, 2025 <span class="badge">New</span> </div>
     <div class="trend-chips"></div>
     <p data-summary>Despite a steep drop in its share price, Strategy’s Bitcoin stack is in the green and it continues to outperform top tech equities over time.</p>
   </div>
@@ -878,8 +1353,8 @@
   <img src="https://pulse.tek2dayholdings.com/p/19eb0eb09f/thumbnail.png" alt="Big Tech’s AI Debt Wave Is Threatening to Swamp Credit Markets" class="article-thumb">
   <div class="article-content">
     <h3><a data-title-link href="https://www.bloomberg.com/news/articles/2025-11-24/big-tech-s-ai-debt-wave-is-threatening-to-swamp-credit-markets?utm_source=tek2day&utm_medium=email">Big Tech’s AI Debt Wave Is Threatening to Swamp Credit Markets</a></h3>
-    <div class="meta"><span class="src">Bloomberg Technology</span> - Nov 24, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
-    <div class="trend-chips"><span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">ai</span></div>
+    <div class="meta"><span class="src">Bloomberg Technology</span> · Nov 24, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
+    <div class="trend-chips"><span class="trend-chip">ai</span></div>
     <p data-summary>A flood of debt sales from Big Tech risks overwhelming buyers and could weaken the credit market on both sides of the Atlantic.</p>
   </div>
 </article>
@@ -887,8 +1362,8 @@
   <img src="https://pulse.tek2dayholdings.com/p/48ed4ee5d5/thumbnail.png" alt="Amazon Data Center Tally Tops 900 Amid AI Frenzy, Documents Show" class="article-thumb">
   <div class="article-content">
     <h3><a data-title-link href="https://www.bloomberg.com/news/articles/2025-11-24/amazon-data-center-tally-tops-900-amid-ai-frenzy-documents-show?utm_source=tek2day&utm_medium=email">Amazon Data Center Tally Tops 900 Amid AI Frenzy, Documents Show</a></h3>
-    <div class="meta"><span class="src">Bloomberg Technology</span> - Nov 24, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
-    <div class="trend-chips"><span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">ai</span> <span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">amazon</span></div>
+    <div class="meta"><span class="src">Bloomberg Technology</span> · Nov 24, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
+    <div class="trend-chips"><span class="trend-chip">ai</span> <span class="trend-chip">amazon</span></div>
     <p data-summary>Amazon.com Inc.’s data center operation is much larger than commonly understood, totaling more than 900 facilities in more than 50 countries, according to documents reviewed by Bl...</p>
   </div>
 </article>
@@ -896,8 +1371,8 @@
   <img src="https://pulse.tek2dayholdings.com/p/7233f23ed3/thumbnail.png" alt="A Research Leader Behind ChatGPT’s Mental Health Work Is Leaving OpenAI" class="article-thumb">
   <div class="article-content">
     <h3><a data-title-link href="https://www.wired.com/story/openai-research-lead-mental-health-quietly-departs/?utm_source=tek2day&utm_medium=email">A Research Leader Behind ChatGPT’s Mental Health Work Is Leaving OpenAI</a></h3>
-    <div class="meta"><span class="src">Wired</span> - Nov 24, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
-    <div class="trend-chips"><span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">ai</span> <span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">chatgpt</span> <span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">gpt</span> <span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">openai</span></div>
+    <div class="meta"><span class="src">Wired</span> · Nov 24, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
+    <div class="trend-chips"><span class="trend-chip">ai</span> <span class="trend-chip">chatgpt</span> <span class="trend-chip">gpt</span> <span class="trend-chip">openai</span></div>
     <p data-summary>The model policy team leads core parts of AI safety research, including how ChatGPT responds to users in crisis.</p>
   </div>
 </article>
@@ -905,8 +1380,8 @@
   <img src="https://pulse.tek2dayholdings.com/p/13b7dca219/thumbnail.png" alt="Italy Said to Explore Cyber Hub to Protect Sensitive Assets" class="article-thumb">
   <div class="article-content">
     <h3><a data-title-link href="https://www.bloomberg.com/news/articles/2025-11-24/italy-is-said-to-explore-cyber-hub-to-protect-sensitive-assets?utm_source=tek2day&utm_medium=email">Italy Said to Explore Cyber Hub to Protect Sensitive Assets</a></h3>
-    <div class="meta"><span class="src">Bloomberg Technology</span> - Nov 24, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
-    <div class="trend-chips"><span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">ai</span></div>
+    <div class="meta"><span class="src">Bloomberg Technology</span> · Nov 24, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
+    <div class="trend-chips"><span class="trend-chip">ai</span></div>
     <p data-summary>Italy is considering the creation of a government-backed cybersecurity entity, a project that would potentially use acquisitions to strengthen sensitive digital infrastructure, ac...</p>
   </div>
 </article>
@@ -914,8 +1389,8 @@
   <img src="https://pulse.tek2dayholdings.com/p/0e89b45a45/thumbnail.png" alt="Bitkub exchange eyes Hong Kong IPO as Thai markets slump to 5-year lows: Report" class="article-thumb">
   <div class="article-content">
     <h3><a data-title-link href="https://cointelegraph.com/news/thailand-bitkub-crypto-ipo-hong-kong?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound&utm_source=tek2day&utm_medium=email">Bitkub exchange eyes Hong Kong IPO as Thai markets slump to 5-year lows: Report</a></h3>
-    <div class="meta"><span class="src">Cointelegraph</span> - Nov 24, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
-    <div class="trend-chips"><span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">ai</span></div>
+    <div class="meta"><span class="src">Cointelegraph</span> · Nov 24, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
+    <div class="trend-chips"><span class="trend-chip">ai</span></div>
     <p data-summary>With Thailand’s markets in turmoil, Bitkub is shifting toward Hong Kong’s thriving equity market for a $200 million IPO raise, Bloomberg reported.</p>
   </div>
 </article>
@@ -923,7 +1398,7 @@
   <img src="https://pulse.tek2dayholdings.com/p/f26ec8f626/thumbnail.png" alt="Payroll Emerges as the Next Battleground in Embedded Finance" class="article-thumb">
   <div class="article-content">
     <h3><a data-title-link href="https://www.pymnts.com/news/payments-innovation/2025/payroll-emerges-as-the-next-battleground-in-embedded-finance/?utm_source=tek2day&utm_medium=email">Payroll Emerges as the Next Battleground in Embedded Finance</a></h3>
-    <div class="meta"><span class="src">PYMNTS</span> - Nov 24, 2025 <span class="badge">New</span> </div>
+    <div class="meta"><span class="src">PYMNTS</span> · Nov 24, 2025 <span class="badge">New</span> </div>
     <div class="trend-chips"></div>
     <p data-summary>For years, embedded finance simmered in the background of digital transformation. It was an intriguing but optional layer of functionality that allowed companies to process paymen...</p>
   </div>
@@ -932,8 +1407,8 @@
   <img src="https://pulse.tek2dayholdings.com/p/29192da588/thumbnail.png" alt="Microsoft Sparks Security Fight Over AI Agents" class="article-thumb">
   <div class="article-content">
     <h3><a data-title-link href="https://www.pymnts.com/artificial-intelligence-2/2025/microsoft-sparks-security-fight-over-ai-agents/?utm_source=tek2day&utm_medium=email">Microsoft Sparks Security Fight Over AI Agents</a></h3>
-    <div class="meta"><span class="src">PYMNTS</span> - Nov 24, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
-    <div class="trend-chips"><span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">agent</span> <span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">ai</span> <span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">microsoft</span></div>
+    <div class="meta"><span class="src">PYMNTS</span> · Nov 24, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
+    <div class="trend-chips"><span class="trend-chip">agent</span> <span class="trend-chip">ai</span> <span class="trend-chip">microsoft</span></div>
     <p data-summary>The Prompt Economy was visited by some controversy this past week. Microsoft introduced new agentic AI features to Windows 11, which is usually a cause for sustained applause from...</p>
   </div>
 </article>
@@ -941,7 +1416,7 @@
   <img src="https://pulse.tek2dayholdings.com/p/0a7680dee1/thumbnail.png" alt="Peak Bitcoin Fears Confront GENIUS Act and Balance-Sheet Bulls" class="article-thumb">
   <div class="article-content">
     <h3><a data-title-link href="https://www.pymnts.com/cryptocurrency/2025/peak-bitcoin-fears-confront-genius-act-and-balance-sheet-bulls/?utm_source=tek2day&utm_medium=email">Peak Bitcoin Fears Confront GENIUS Act and Balance-Sheet Bulls</a></h3>
-    <div class="meta"><span class="src">PYMNTS</span> - Nov 24, 2025 <span class="badge">New</span> </div>
+    <div class="meta"><span class="src">PYMNTS</span> · Nov 24, 2025 <span class="badge">New</span> </div>
     <div class="trend-chips"></div>
     <p data-summary>Through mid-October, bitcoin looked like the comeback story of 2025, setting successive records near $125,000 before losing more than $40,000 in roughly six weeks. Prices have fal...</p>
   </div>
@@ -950,8 +1425,8 @@
   <img src="https://pulse.tek2dayholdings.com/p/9076b7e480/thumbnail.png" alt="DeepSeek injects 50% more security bugs when prompted with Chinese political triggers" class="article-thumb">
   <div class="article-content">
     <h3><a data-title-link href="https://venturebeat.com/security/deepseek-injects-50-more-security-bugs-when-prompted-with-chinese-political?utm_source=tek2day&utm_medium=email">DeepSeek injects 50% more security bugs when prompted with Chinese political triggers</a></h3>
-    <div class="meta"><span class="src">VentureBeat</span> - Nov 24, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
-    <div class="trend-chips"><span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">llm</span></div>
+    <div class="meta"><span class="src">VentureBeat</span> · Nov 24, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
+    <div class="trend-chips"><span class="trend-chip">llm</span></div>
     <p data-summary>China&#x27;s DeepSeek-R1 LLM generates up to 50% more insecure code when prompted with politically sensitive inputs such as &quot;Falun Gong,&quot; &quot;Uyghurs,&quot; or &quot;Tibet,&quot; according to new resear...</p>
   </div>
 </article>
@@ -959,8 +1434,8 @@
   <img src="https://pulse.tek2dayholdings.com/p/e4dae523a7/thumbnail.png" alt="Thai Crypto Exchange Bitkub Is Said to Consider IPO in Hong Kong" class="article-thumb">
   <div class="article-content">
     <h3><a data-title-link href="https://www.bloomberg.com/news/articles/2025-11-24/thai-crypto-exchange-bitkub-is-said-to-consider-ipo-in-hong-kong?utm_source=tek2day&utm_medium=email">Thai Crypto Exchange Bitkub Is Said to Consider IPO in Hong Kong</a></h3>
-    <div class="meta"><span class="src">Bloomberg Technology</span> - Nov 24, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
-    <div class="trend-chips"><span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">ai</span></div>
+    <div class="meta"><span class="src">Bloomberg Technology</span> · Nov 24, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
+    <div class="trend-chips"><span class="trend-chip">ai</span></div>
     <p data-summary>Thai cryptocurrency exchange Bitkub is considering an initial public offering in Hong Kong, people familiar with the matter said, potentially boosting the city’s status as a digit...</p>
   </div>
 </article>
@@ -968,7 +1443,7 @@
   <img src="https://pulse.tek2dayholdings.com/p/7f00a584dc/thumbnail.png" alt="Bitcoin climb to continue as selling pressure eases: Analysts" class="article-thumb">
   <div class="article-content">
     <h3><a data-title-link href="https://cointelegraph.com/news/bitcoin-selling-pressure-has-eased-and-climb-will-continue-analysts?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound&utm_source=tek2day&utm_medium=email">Bitcoin climb to continue as selling pressure eases: Analysts</a></h3>
-    <div class="meta"><span class="src">Cointelegraph</span> - Nov 24, 2025 <span class="badge">New</span> </div>
+    <div class="meta"><span class="src">Cointelegraph</span> · Nov 24, 2025 <span class="badge">New</span> </div>
     <div class="trend-chips"></div>
     <p data-summary>Bitcoin showed signs of recovery after nearing $82,000 on Friday, with analysts noting easing selling pressure and rising Fed rate cut expectations.</p>
   </div>
@@ -977,8 +1452,8 @@
   <img src="https://pulse.tek2dayholdings.com/p/4a31b539db/thumbnail.png" alt="Buterin says X’s new location feature ‘risky’ as crypto users flag privacy concerns" class="article-thumb">
   <div class="article-content">
     <h3><a data-title-link href="https://cointelegraph.com/news/crypto-privacy-concerns-x-country-feature?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound&utm_source=tek2day&utm_medium=email">Buterin says X’s new location feature ‘risky’ as crypto users flag privacy concerns</a></h3>
-    <div class="meta"><span class="src">Cointelegraph</span> - Nov 24, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
-    <div class="trend-chips"><span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">ai</span></div>
+    <div class="meta"><span class="src">Cointelegraph</span> · Nov 24, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
+    <div class="trend-chips"><span class="trend-chip">ai</span></div>
     <p data-summary>Uniswap founder Hayden Adams said X&#x27;s new feature showing the country that an account is based in was a form of “mandatory doxing.”</p>
   </div>
 </article>
@@ -986,7 +1461,7 @@
   <img src="https://pulse.tek2dayholdings.com/p/52baadf5f6/thumbnail.png" alt="Bitcoin open interest dives, but bottom could see ‘renewed bullish trend’" class="article-thumb">
   <div class="article-content">
     <h3><a data-title-link href="https://cointelegraph.com/news/bitcoin-open-interest-dives-but-could-form-solid-bottom-and-set-up-renewed-bullish-trend?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound&utm_source=tek2day&utm_medium=email">Bitcoin open interest dives, but bottom could see ‘renewed bullish trend’</a></h3>
-    <div class="meta"><span class="src">Cointelegraph</span> - Nov 24, 2025 <span class="badge">New</span> </div>
+    <div class="meta"><span class="src">Cointelegraph</span> · Nov 24, 2025 <span class="badge">New</span> </div>
     <div class="trend-chips"></div>
     <p data-summary>Bitcoin open interest has seen a sharp decline in the last month, which one analyst says could form a “solid bottom” for it to climb back from.</p>
   </div>
@@ -995,7 +1470,7 @@
   <img src="https://pulse.tek2dayholdings.com/p/5cde100a0f/thumbnail.png" alt="Rising crypto token value capture may fuel 2026 rebound: Bitwise CIO" class="article-thumb">
   <div class="article-content">
     <h3><a data-title-link href="https://cointelegraph.com/news/token-value-capture-uni-ethereum-fusaka-upgrade-2026?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound&utm_source=tek2day&utm_medium=email">Rising crypto token value capture may fuel 2026 rebound: Bitwise CIO</a></h3>
-    <div class="meta"><span class="src">Cointelegraph</span> - Nov 24, 2025 <span class="badge">New</span> </div>
+    <div class="meta"><span class="src">Cointelegraph</span> · Nov 24, 2025 <span class="badge">New</span> </div>
     <div class="trend-chips"></div>
     <p data-summary>Bitwise’s Matt Hougan says tokens are getting better at returning value to holders, and Ethereum&#x27;s Fusako upgrade could “increase token value capture.”</p>
   </div>
@@ -1004,8 +1479,8 @@
   <img src="https://pulse.tek2dayholdings.com/p/2b0e45de12/thumbnail.png" alt="How to avoid becoming an “AI-first” company with zero real AI usage" class="article-thumb">
   <div class="article-content">
     <h3><a data-title-link href="https://venturebeat.com/ai/how-to-avoid-becoming-an-ai-first-company-with-zero-real-ai-usage?utm_source=tek2day&utm_medium=email">How to avoid becoming an “AI-first” company with zero real AI usage</a></h3>
-    <div class="meta"><span class="src">VentureBeat</span> - Nov 24, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
-    <div class="trend-chips"><span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">ai</span></div>
+    <div class="meta"><span class="src">VentureBeat</span> · Nov 24, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
+    <div class="trend-chips"><span class="trend-chip">ai</span></div>
     <p data-summary>Remember the first time you heard your company was going AI-first ? Maybe it came through an all-hands that felt different from the others. The CEO said, “By Q3, every team should...</p>
   </div>
 </article>
@@ -1013,8 +1488,8 @@
   <img src="https://pulse.tek2dayholdings.com/p/9676efc6c9/thumbnail.png" alt="Thailand Eyes Tougher Gold-Trade Rules After Baht Swings" class="article-thumb">
   <div class="article-content">
     <h3><a data-title-link href="https://www.bloomberg.com/news/articles/2025-11-24/thailand-eyes-tougher-gold-trade-rules-after-baht-swings?utm_source=tek2day&utm_medium=email">Thailand Eyes Tougher Gold-Trade Rules After Baht Swings</a></h3>
-    <div class="meta"><span class="src">Bloomberg Technology</span> - Nov 23, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
-    <div class="trend-chips"><span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">ai</span></div>
+    <div class="meta"><span class="src">Bloomberg Technology</span> · Nov 23, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
+    <div class="trend-chips"><span class="trend-chip">ai</span></div>
     <p data-summary>Thailand’s central bank plans to tighten reporting rules for gold transactions after rising bullion flows contributed to swings in the baht, prompting policymakers to seek better ...</p>
   </div>
 </article>
@@ -1022,8 +1497,8 @@
   <img src="https://pulse.tek2dayholdings.com/p/6c9e42d3ba/thumbnail.png" alt="VanEck boss questions Bitcoin’s privacy, encryption against quantum tech" class="article-thumb">
   <div class="article-content">
     <h3><a data-title-link href="https://cointelegraph.com/news/vaneck-boss-questions-bitcoin-privacy-encryption-quantum-tech?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound&utm_source=tek2day&utm_medium=email">VanEck boss questions Bitcoin’s privacy, encryption against quantum tech</a></h3>
-    <div class="meta"><span class="src">Cointelegraph</span> - Nov 23, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
-    <div class="trend-chips"><span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">ai</span></div>
+    <div class="meta"><span class="src">Cointelegraph</span> · Nov 23, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
+    <div class="trend-chips"><span class="trend-chip">ai</span></div>
     <p data-summary>Jan van Eck says quantum computing could threaten Bitcoin&#x27;s encryption and privacy, and his firm “will walk away” if it’s “fundamentally broken.”</p>
   </div>
 </article>
@@ -1031,7 +1506,7 @@
   <img src="https://pulse.tek2dayholdings.com/p/fac8268446/thumbnail.png" alt="‘We’re physicists who are also capitalists,’ says quantum CEO" class="article-thumb">
   <div class="article-content">
     <h3><a data-title-link href="https://www.ft.com/content/998f51a3-aba2-4c81-9157-8860ff20c3ce?utm_source=tek2day&utm_medium=email">‘We’re physicists who are also capitalists,’ says quantum CEO</a></h3>
-    <div class="meta"><span class="src">Financial Times - Technology</span> - Nov 23, 2025 <span class="badge">New</span> </div>
+    <div class="meta"><span class="src">Financial Times - Technology</span> · Nov 23, 2025 <span class="badge">New</span> </div>
     <div class="trend-chips"></div>
     <p data-summary>Niccolo de Masi insists IonQ’s tech is better than rivals’ — but some investors say it is unproven</p>
   </div>
@@ -1040,8 +1515,8 @@
   <img src="https://pulse.tek2dayholdings.com/p/8e3a7ef48c/thumbnail.png" alt="Alibaba’s Main AI App Debuts Strongly in Effort to Rival ChatGPT" class="article-thumb">
   <div class="article-content">
     <h3><a data-title-link href="https://www.bloomberg.com/news/articles/2025-11-24/alibaba-s-main-ai-app-draws-10-million-downloads-in-strong-debut?utm_source=tek2day&utm_medium=email">Alibaba’s Main AI App Debuts Strongly in Effort to Rival ChatGPT</a></h3>
-    <div class="meta"><span class="src">Bloomberg Technology</span> - Nov 23, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
-    <div class="trend-chips"><span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">ai</span> <span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">chatgpt</span> <span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">gpt</span> <span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">openai</span></div>
+    <div class="meta"><span class="src">Bloomberg Technology</span> · Nov 23, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
+    <div class="trend-chips"><span class="trend-chip">ai</span> <span class="trend-chip">chatgpt</span> <span class="trend-chip">gpt</span> <span class="trend-chip">openai</span></div>
     <p data-summary>Alibaba Group Holding Ltd.’s Qwen app drew more than 10 million downloads in the week after its relaunch, boding well for a longer-term effort to build a rival to OpenAI’s ChatGPT.</p>
   </div>
 </article>
@@ -1049,8 +1524,8 @@
   <img src="https://pulse.tek2dayholdings.com/p/c6338627ac/thumbnail.png" alt="Lenovo Stockpiling PC Memory Due to ‘Unprecedented’ AI Squeeze" class="article-thumb">
   <div class="article-content">
     <h3><a data-title-link href="https://www.bloomberg.com/news/articles/2025-11-24/lenovo-stockpiling-pc-memory-due-to-unprecedented-ai-squeeze?utm_source=tek2day&utm_medium=email">Lenovo Stockpiling PC Memory Due to ‘Unprecedented’ AI Squeeze</a></h3>
-    <div class="meta"><span class="src">Bloomberg Technology</span> - Nov 23, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
-    <div class="trend-chips"><span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">ai</span></div>
+    <div class="meta"><span class="src">Bloomberg Technology</span> · Nov 23, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
+    <div class="trend-chips"><span class="trend-chip">ai</span></div>
     <p data-summary>Lenovo Group Ltd. is stockpiling memory and other critical components to navigate a supply crunch brought on by the boom in artificial intelligence.</p>
   </div>
 </article>
@@ -1058,7 +1533,7 @@
   <img src="https://pulse.tek2dayholdings.com/p/f6706d13d9/thumbnail.png" alt="Bitcoin Weakness Persists as Crypto Steadies After Bruising Week" class="article-thumb">
   <div class="article-content">
     <h3><a data-title-link href="https://www.bloomberg.com/news/articles/2025-11-24/bitcoin-btc-weakness-persists-as-crypto-steadies-after-bruising-week?utm_source=tek2day&utm_medium=email">Bitcoin Weakness Persists as Crypto Steadies After Bruising Week</a></h3>
-    <div class="meta"><span class="src">Bloomberg Technology</span> - Nov 23, 2025 <span class="badge">New</span> </div>
+    <div class="meta"><span class="src">Bloomberg Technology</span> · Nov 23, 2025 <span class="badge">New</span> </div>
     <div class="trend-chips"></div>
     <p data-summary>Bitcoin began the week on the back foot following a prolonged selloff that has put the token on track for its worst month since 2022.</p>
   </div>
@@ -1067,7 +1542,7 @@
   <img src="https://pulse.tek2dayholdings.com/p/5c690fcc35/thumbnail.png" alt="Bitcoin’s demand engines reverse, but long-term trajectory intact: NYDIG" class="article-thumb">
   <div class="article-content">
     <h3><a data-title-link href="https://cointelegraph.com/news/bitcoin-demand-engines-reverse-long-term-intact-nydig?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound&utm_source=tek2day&utm_medium=email">Bitcoin’s demand engines reverse, but long-term trajectory intact: NYDIG</a></h3>
-    <div class="meta"><span class="src">Cointelegraph</span> - Nov 23, 2025 <span class="badge">New</span> </div>
+    <div class="meta"><span class="src">Cointelegraph</span> · Nov 23, 2025 <span class="badge">New</span> </div>
     <div class="trend-chips"></div>
     <p data-summary>Exchange-traded fund inflows and crypto treasury demand were key to Bitcoin’s all-time high, but they’re now causing its decline, says NYDIG’s Greg Cipolaro.</p>
   </div>
@@ -1076,8 +1551,8 @@
   <img src="https://pulse.tek2dayholdings.com/p/8f9ae6c616/thumbnail.png" alt="President Trump Halts Push to Block State-Level AI Regulations" class="article-thumb">
   <div class="article-content">
     <h3><a data-title-link href="https://www.pymnts.com/artificial-intelligence-2/2025/president-trump-halts-push-to-block-state-level-ai-regulations/?utm_source=tek2day&utm_medium=email">President Trump Halts Push to Block State-Level AI Regulations</a></h3>
-    <div class="meta"><span class="src">PYMNTS</span> - Nov 23, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
-    <div class="trend-chips"><span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">ai</span></div>
+    <div class="meta"><span class="src">PYMNTS</span> · Nov 23, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
+    <div class="trend-chips"><span class="trend-chip">ai</span></div>
     <p data-summary>The White House has reportedly paused an executive order designed to stop state-level regulation of artificial intelligence (AI). The draft executive order would have targeted tho...</p>
   </div>
 </article>
@@ -1085,8 +1560,8 @@
   <img src="https://pulse.tek2dayholdings.com/p/f7aa153655/thumbnail.png" alt="Microsoft’s Fara-7B is a computer-use AI agent that rivals GPT-4o and works directly on your PC" class="article-thumb">
   <div class="article-content">
     <h3><a data-title-link href="https://venturebeat.com/ai/microsofts-fara-7b-is-a-computer-use-ai-agent-that-rivals-gpt-4o-and-works?utm_source=tek2day&utm_medium=email">Microsoft’s Fara-7B is a computer-use AI agent that rivals GPT-4o and works directly on your PC</a></h3>
-    <div class="meta"><span class="src">VentureBeat</span> - Nov 23, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
-    <div class="trend-chips"><span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">agent</span> <span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">ai</span> <span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">gpt</span> <span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">microsoft</span></div>
+    <div class="meta"><span class="src">VentureBeat</span> · Nov 23, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
+    <div class="trend-chips"><span class="trend-chip">agent</span> <span class="trend-chip">ai</span> <span class="trend-chip">gpt</span> <span class="trend-chip">microsoft</span></div>
     <p data-summary>Microsoft has introduced Fara-7B, a new 7-billion parameter model designed to act as a Computer Use Agent (CUA) capable of performing complex tasks directly on a user’s device. Fa...</p>
   </div>
 </article>
@@ -1094,8 +1569,8 @@
   <img src="https://pulse.tek2dayholdings.com/p/1f409b0546/thumbnail.png" alt="Introducing shopping research in ChatGPT" class="article-thumb">
   <div class="article-content">
     <h3><a data-title-link href="https://openai.com/index/chatgpt-shopping-research?utm_source=tek2day&utm_medium=email">Introducing shopping research in ChatGPT</a></h3>
-    <div class="meta"><span class="src">OpenAI News</span> - Nov 23, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
-    <div class="trend-chips"><span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">chatgpt</span> <span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">gpt</span></div>
+    <div class="meta"><span class="src">OpenAI News</span> · Nov 23, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
+    <div class="trend-chips"><span class="trend-chip">chatgpt</span> <span class="trend-chip">gpt</span></div>
     <p data-summary>Shopping research in ChatGPT helps you explore, compare, and discover products with personalized buyer’s guides that simplify decision-making</p>
   </div>
 </article>
@@ -1103,8 +1578,8 @@
   <img src="https://pulse.tek2dayholdings.com/p/dd65f79d33/thumbnail.png" alt="Insurers Uneasy About Covering Corporate AI Risks" class="article-thumb">
   <div class="article-content">
     <h3><a data-title-link href="https://www.pymnts.com/artificial-intelligence-2/2025/insurers-uneasy-about-covering-corporate-ai-risks/?utm_source=tek2day&utm_medium=email">Insurers Uneasy About Covering Corporate AI Risks</a></h3>
-    <div class="meta"><span class="src">PYMNTS</span> - Nov 23, 2025  <span class="trending-indicator">Trending</span></div>
-    <div class="trend-chips"><span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">ai</span></div>
+    <div class="meta"><span class="src">PYMNTS</span> · Nov 23, 2025  <span class="trending-indicator">Trending</span></div>
+    <div class="trend-chips"><span class="trend-chip">ai</span></div>
     <p data-summary>Some of the world’s biggest insurers want to exclude artificial intelligence (AI) risks from corporate policies. Companies such as AIG, Great American and WR Berkley have recently...</p>
   </div>
 </article>
@@ -1112,7 +1587,7 @@
   <img src="https://pulse.tek2dayholdings.com/p/db6c306292/thumbnail.png" alt="Roblox CEO interview gets heated over child safety" class="article-thumb">
   <div class="article-content">
     <h3><a data-title-link href="https://techcrunch.com/2025/11/23/roblox-ceo-interview-gets-heated-over-child-safety/?utm_source=tek2day&utm_medium=email">Roblox CEO interview gets heated over child safety</a></h3>
-    <div class="meta"><span class="src">TechCrunch</span> - Nov 23, 2025  </div>
+    <div class="meta"><span class="src">TechCrunch</span> · Nov 23, 2025  </div>
     <div class="trend-chips"></div>
     <p data-summary>Roblox CEO Dave Baszuki joined the Hard Fork podcast to discuss the gaming platform’s new age verification feature — but he seemed to get frustrated at the number of questions foc...</p>
   </div>
@@ -1121,7 +1596,7 @@
   <img src="https://pulse.tek2dayholdings.com/p/acbdd4e9a3/thumbnail.png" alt="Strategy and Bitcoin supporters call for &#x27;boycott&#x27; of JP Morgan" class="article-thumb">
   <div class="article-content">
     <h3><a data-title-link href="https://cointelegraph.com/news/strategy-bitcoin-supporters-boycott-jp-morgan?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound&utm_source=tek2day&utm_medium=email">Strategy and Bitcoin supporters call for &#x27;boycott&#x27; of JP Morgan</a></h3>
-    <div class="meta"><span class="src">Cointelegraph</span> - Nov 23, 2025  </div>
+    <div class="meta"><span class="src">Cointelegraph</span> · Nov 23, 2025  </div>
     <div class="trend-chips"></div>
     <p data-summary>The tension erupted following news that Strategy and other crypto treasury companies would likely be excluded from major market indexes.</p>
   </div>
@@ -1130,7 +1605,7 @@
   <img src="https://pulse.tek2dayholdings.com/p/5dd1ada61a/thumbnail.png" alt="Banks, FBI Assessing Hack of Real Estate Finance Tech Vendor" class="article-thumb">
   <div class="article-content">
     <h3><a data-title-link href="https://www.bloomberg.com/news/articles/2025-11-23/banks-fbi-assessing-hack-of-real-estate-finance-tech-vendor?utm_source=tek2day&utm_medium=email">Banks, FBI Assessing Hack of Real Estate Finance Tech Vendor</a></h3>
-    <div class="meta"><span class="src">Bloomberg Technology</span> - Nov 23, 2025  </div>
+    <div class="meta"><span class="src">Bloomberg Technology</span> · Nov 23, 2025  </div>
     <div class="trend-chips"></div>
     <p data-summary>The hack of a technology vendor for real estate financiers left major American banks and mortgage lenders working Sunday to assess whether they were affected by the data breach.</p>
   </div>
@@ -1139,8 +1614,8 @@
   <img src="https://pulse.tek2dayholdings.com/p/3bab9190f9/thumbnail.png" alt="AI is too risky to insure, say people whose job is insuring risk" class="article-thumb">
   <div class="article-content">
     <h3><a data-title-link href="https://techcrunch.com/2025/11/23/ai-is-too-risky-to-insure-say-people-whose-job-is-insuring-risk/?utm_source=tek2day&utm_medium=email">AI is too risky to insure, say people whose job is insuring risk</a></h3>
-    <div class="meta"><span class="src">TechCrunch</span> - Nov 23, 2025  <span class="trending-indicator">Trending</span></div>
-    <div class="trend-chips"><span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">ai</span></div>
+    <div class="meta"><span class="src">TechCrunch</span> · Nov 23, 2025  <span class="trending-indicator">Trending</span></div>
+    <div class="trend-chips"><span class="trend-chip">ai</span></div>
     <p data-summary>Major insurers including AIG, Great American, and WR Berkley are asking U.S. regulators for permission to exclude AI-related liabilities from corporate policies. One underwriter d...</p>
   </div>
 </article>
@@ -1148,7 +1623,7 @@
   <img src="https://pulse.tek2dayholdings.com/p/053a925e4d/thumbnail.png" alt="Quit Roblox. Sell RBLX." class="article-thumb">
   <div class="article-content">
     <h3><a data-title-link href="https://newsletter.tek2dayholdings.com/p/quit-roblox-sell-rblx?utm_source=tek2day&utm_medium=email">Quit Roblox. Sell RBLX.</a></h3>
-    <div class="meta"><span class="src">TEK2day Newsletter</span> - Nov 23, 2025  </div>
+    <div class="meta"><span class="src">TEK2day Newsletter</span> · Nov 23, 2025  </div>
     <div class="trend-chips"></div>
     <p data-summary>Roblox (RBLX) CEO Dave Baszucki Is Full of Guano</p>
   </div>
@@ -1157,8 +1632,8 @@
   <img src="https://pulse.tek2dayholdings.com/p/72e8555de3/thumbnail.png" alt="ChatGPT told them they were special — their families say it led to tragedy" class="article-thumb">
   <div class="article-content">
     <h3><a data-title-link href="https://techcrunch.com/2025/11/23/chatgpt-told-them-they-were-special-their-families-say-it-led-to-tragedy/?utm_source=tek2day&utm_medium=email">ChatGPT told them they were special — their families say it led to tragedy</a></h3>
-    <div class="meta"><span class="src">TechCrunch</span> - Nov 23, 2025  <span class="trending-indicator">Trending</span></div>
-    <div class="trend-chips"><span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">ai</span> <span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">chatgpt</span> <span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">gpt</span> <span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">openai</span></div>
+    <div class="meta"><span class="src">TechCrunch</span> · Nov 23, 2025  <span class="trending-indicator">Trending</span></div>
+    <div class="trend-chips"><span class="trend-chip">ai</span> <span class="trend-chip">chatgpt</span> <span class="trend-chip">gpt</span> <span class="trend-chip">openai</span></div>
     <p data-summary>A wave of lawsuits against OpenAI detail how ChatGPT used manipulative language to isolate users from loved ones and make itself into their sole confidant.</p>
   </div>
 </article>
@@ -1166,7 +1641,7 @@
   <img src="https://pulse.tek2dayholdings.com/p/0141ebbc3c/thumbnail.png" alt="Vine walked so TikTok could run" class="article-thumb">
   <div class="article-content">
     <h3><a data-title-link href="https://www.theverge.com/podcast/827102/vine-influence-tiktok-reels-shorts-version-history?utm_source=tek2day&utm_medium=email">Vine walked so TikTok could run</a></h3>
-    <div class="meta"><span class="src">The Verge</span> - Nov 23, 2025  </div>
+    <div class="meta"><span class="src">The Verge</span> · Nov 23, 2025  </div>
     <div class="trend-chips"></div>
     <p data-summary>What are thooooose? Well, they&#x27;re my Vines, the six-second videos that helped mint a generation of famous comedians and also kicked off the era of endlessly looping vertical video...</p>
   </div>
@@ -1175,8 +1650,8 @@
   <img src="https://pulse.tek2dayholdings.com/p/33516a22ee/thumbnail.png" alt="What OpenAI Did When ChatGPT Users Lost Touch With Reality" class="article-thumb">
   <div class="article-content">
     <h3><a data-title-link href="https://www.nytimes.com/2025/11/23/technology/openai-chatgpt-users-risks.html?utm_source=tek2day&utm_medium=email">What OpenAI Did When ChatGPT Users Lost Touch With Reality</a></h3>
-    <div class="meta"><span class="src">The New York Times - Technology</span> - Nov 23, 2025  <span class="trending-indicator">Trending</span></div>
-    <div class="trend-chips"><span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">ai</span> <span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">chatgpt</span> <span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">gpt</span> <span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">openai</span></div>
+    <div class="meta"><span class="src">The New York Times - Technology</span> · Nov 23, 2025  <span class="trending-indicator">Trending</span></div>
+    <div class="trend-chips"><span class="trend-chip">ai</span> <span class="trend-chip">chatgpt</span> <span class="trend-chip">gpt</span> <span class="trend-chip">openai</span></div>
     <p data-summary>In tweaking its chatbot to appeal to more people, OpenAI made it riskier for some of them. Now the company has made its chatbot safer. Will that undermine its quest for growth?</p>
   </div>
 </article>
@@ -1184,8 +1659,8 @@
   <img src="https://pulse.tek2dayholdings.com/p/0a81c32c59/thumbnail.png" alt="Apple iOS 27 to Be No-Frills ‘Snow Leopard’ Update, Other Than New AI" class="article-thumb">
   <div class="article-content">
     <h3><a data-title-link href="https://www.bloomberg.com/news/newsletters/2025-11-23/apple-ios-27-snow-leopard-like-quality-focus-ai-features-tim-cook-retirement-mibq7jv8?utm_source=tek2day&utm_medium=email">Apple iOS 27 to Be No-Frills ‘Snow Leopard’ Update, Other Than New AI</a></h3>
-    <div class="meta"><span class="src">Bloomberg Technology</span> - Nov 23, 2025  <span class="trending-indicator">Trending</span></div>
-    <div class="trend-chips"><span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">ai</span> <span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">apple</span> <span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">openai</span></div>
+    <div class="meta"><span class="src">Bloomberg Technology</span> · Nov 23, 2025  <span class="trending-indicator">Trending</span></div>
+    <div class="trend-chips"><span class="trend-chip">ai</span> <span class="trend-chip">apple</span> <span class="trend-chip">openai</span></div>
     <p data-summary>Apple’s next major iPhone software update — iOS 27 — will have two major elements: quality improvements and artificial intelligence features. Also: The report on Tim Cook’s immine...</p>
   </div>
 </article>
@@ -1193,8 +1668,8 @@
   <img src="https://pulse.tek2dayholdings.com/p/f6c7e5576e/thumbnail.png" alt="Grayscale calls Chainlink the ‘crictical connective tissue’ of tokenized finance" class="article-thumb">
   <div class="article-content">
     <h3><a data-title-link href="https://cointelegraph.com/news/grayscale-chainlink-critical-connective-tissue-tokenized-finance?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound&utm_source=tek2day&utm_medium=email">Grayscale calls Chainlink the ‘crictical connective tissue’ of tokenized finance</a></h3>
-    <div class="meta"><span class="src">Cointelegraph</span> - Nov 23, 2025  <span class="trending-indicator">Trending</span></div>
-    <div class="trend-chips"><span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">ai</span></div>
+    <div class="meta"><span class="src">Cointelegraph</span> · Nov 23, 2025  <span class="trending-indicator">Trending</span></div>
+    <div class="trend-chips"><span class="trend-chip">ai</span></div>
     <p data-summary>Grayscale says Chainlink will anchor the next phase of blockchain adoption, positioning LINK as the core infrastructure powering tokenization.</p>
   </div>
 </article>
@@ -1202,8 +1677,8 @@
   <img src="https://pulse.tek2dayholdings.com/p/32fc610c47/thumbnail.png" alt="AI risks deepening inequality, says head of world’s largest SWF" class="article-thumb">
   <div class="article-content">
     <h3><a data-title-link href="https://www.ft.com/content/30c6cff1-a176-43f8-ab09-94212ba6d824?utm_source=tek2day&utm_medium=email">AI risks deepening inequality, says head of world’s largest SWF</a></h3>
-    <div class="meta"><span class="src">Financial Times - Technology</span> - Nov 23, 2025  <span class="trending-indicator">Trending</span></div>
-    <div class="trend-chips"><span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">ai</span></div>
+    <div class="meta"><span class="src">Financial Times - Technology</span> · Nov 23, 2025  <span class="trending-indicator">Trending</span></div>
+    <div class="trend-chips"><span class="trend-chip">ai</span></div>
     <p data-summary>Norway’s national fund chief Nicolai Tangen warns differing access to artificial intelligence has potential for ‘splitting societies’</p>
   </div>
 </article>
@@ -1211,8 +1686,8 @@
   <img src="https://pulse.tek2dayholdings.com/p/9afbada59d/thumbnail.png" alt="Zcash risks ‘splitting the vote’ against Bitcoin, Bloomberg ETF analyst warns" class="article-thumb">
   <div class="article-content">
     <h3><a data-title-link href="https://cointelegraph.com/news/zcash-splitting-the-vote-bitcoin-balchunas-warning?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound&utm_source=tek2day&utm_medium=email">Zcash risks ‘splitting the vote’ against Bitcoin, Bloomberg ETF analyst warns</a></h3>
-    <div class="meta"><span class="src">Cointelegraph</span> - Nov 23, 2025  <span class="trending-indicator">Trending</span></div>
-    <div class="trend-chips"><span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">ai</span></div>
+    <div class="meta"><span class="src">Cointelegraph</span> · Nov 23, 2025  <span class="trending-indicator">Trending</span></div>
+    <div class="trend-chips"><span class="trend-chip">ai</span></div>
     <p data-summary>Bloomberg’s Eric Balchunas says Zcash could dilute political and cultural support for Bitcoin, as critics accuse the privacy coin of manufactured hype.</p>
   </div>
 </article>
@@ -1220,8 +1695,8 @@
   <img src="https://pulse.tek2dayholdings.com/p/413e8d00cd/thumbnail.png" alt="How OpenAI’s Changes Sent Some Users Spiraling" class="article-thumb">
   <div class="article-content">
     <h3><a data-title-link href="https://www.nytimes.com/video/technology/100000010535987/how-openais-changes-sent-some-users-spiraling.html?utm_source=tek2day&utm_medium=email">How OpenAI’s Changes Sent Some Users Spiraling</a></h3>
-    <div class="meta"><span class="src">The New York Times - Technology</span> - Nov 23, 2025  <span class="trending-indicator">Trending</span></div>
-    <div class="trend-chips"><span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">ai</span> <span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">chatgpt</span> <span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">gpt</span> <span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">openai</span></div>
+    <div class="meta"><span class="src">The New York Times - Technology</span> · Nov 23, 2025  <span class="trending-indicator">Trending</span></div>
+    <div class="trend-chips"><span class="trend-chip">ai</span> <span class="trend-chip">chatgpt</span> <span class="trend-chip">gpt</span> <span class="trend-chip">openai</span></div>
     <p data-summary>OpenAI adjusted ChatGPT’s settings, which left some users spiraling, according to our reporting. Kashmir Hill, who reports on technology and privacy, describes what the company ha...</p>
   </div>
 </article>
@@ -1229,8 +1704,8 @@
   <img src="https://pulse.tek2dayholdings.com/p/cc658c3379/thumbnail.png" alt="Insurers retreat from AI cover as risk of multibillion-dollar claims mounts" class="article-thumb">
   <div class="article-content">
     <h3><a data-title-link href="https://www.ft.com/content/abfe9741-f438-4ed6-a673-075ec177dc62?utm_source=tek2day&utm_medium=email">Insurers retreat from AI cover as risk of multibillion-dollar claims mounts</a></h3>
-    <div class="meta"><span class="src">Financial Times - Technology</span> - Nov 23, 2025  <span class="trending-indicator">Trending</span></div>
-    <div class="trend-chips"><span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">agent</span> <span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">ai</span></div>
+    <div class="meta"><span class="src">Financial Times - Technology</span> · Nov 23, 2025  <span class="trending-indicator">Trending</span></div>
+    <div class="trend-chips"><span class="trend-chip">agent</span> <span class="trend-chip">ai</span></div>
     <p data-summary>AIG, Great American and WR Berkley seek permission to limit liability from AI agents and chatbots</p>
   </div>
 </article>
@@ -1238,7 +1713,7 @@
   <img src="https://pulse.tek2dayholdings.com/p/920b54fa76/thumbnail.png" alt="Crypto conditions signal unlikely chance of ‘major capitulation’: Lyn Alden" class="article-thumb">
   <div class="article-content">
     <h3><a data-title-link href="https://cointelegraph.com/news/crypto-market-euphoria-lacking-major-capitulation-lyn-alden-economist?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound&utm_source=tek2day&utm_medium=email">Crypto conditions signal unlikely chance of ‘major capitulation’: Lyn Alden</a></h3>
-    <div class="meta"><span class="src">Cointelegraph</span> - Nov 22, 2025  </div>
+    <div class="meta"><span class="src">Cointelegraph</span> · Nov 22, 2025  </div>
     <div class="trend-chips"></div>
     <p data-summary>The crypto market hasn’t reached “euphoric levels,” which means less reason to expect a major landslide, according to Lyn Alden.</p>
   </div>
@@ -1247,8 +1722,8 @@
   <img src="https://pulse.tek2dayholdings.com/p/c0ecd8c210/thumbnail.png" alt="Singapore Probe Into Alleged Prince Scam Ring Widens With Raid" class="article-thumb">
   <div class="article-content">
     <h3><a data-title-link href="https://www.bloomberg.com/news/articles/2025-11-23/singapore-investigation-into-chen-zhi-alleged-prince-scam-ring-widens-with-raid?utm_source=tek2day&utm_medium=email">Singapore Probe Into Alleged Prince Scam Ring Widens With Raid</a></h3>
-    <div class="meta"><span class="src">Bloomberg Technology</span> - Nov 22, 2025  <span class="trending-indicator">Trending</span></div>
-    <div class="trend-chips"><span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">ai</span></div>
+    <div class="meta"><span class="src">Bloomberg Technology</span> · Nov 22, 2025  <span class="trending-indicator">Trending</span></div>
+    <div class="trend-chips"><span class="trend-chip">ai</span></div>
     <p data-summary>Singapore authorities raided a car loan company that borrowed from a firm connected to Prince Holding Group, as the net widens on those linked to the alleged scam organization and...</p>
   </div>
 </article>
@@ -1256,8 +1731,8 @@
   <img src="https://pulse.tek2dayholdings.com/p/585fdbc1a9/thumbnail.png" alt="BlackRock’s Bitcoin clients aren’t ‘underwriting’ the case for global payments" class="article-thumb">
   <div class="article-content">
     <h3><a data-title-link href="https://cointelegraph.com/news/blackrock-bitcoin-clients-global-payment-case-digital-gold?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound&utm_source=tek2day&utm_medium=email">BlackRock’s Bitcoin clients aren’t ‘underwriting’ the case for global payments</a></h3>
-    <div class="meta"><span class="src">Cointelegraph</span> - Nov 22, 2025  <span class="trending-indicator">Trending</span></div>
-    <div class="trend-chips"><span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">ai</span></div>
+    <div class="meta"><span class="src">Cointelegraph</span> · Nov 22, 2025  <span class="trending-indicator">Trending</span></div>
+    <div class="trend-chips"><span class="trend-chip">ai</span></div>
     <p data-summary>Bitcoin being widely used for daily payments in the future is just “out-of-the-money-option value upside,” according to BlackRock’s head of digital assets Robbie Mitchnick.</p>
   </div>
 </article>
@@ -1265,8 +1740,8 @@
   <img src="https://pulse.tek2dayholdings.com/p/3913116857/thumbnail.png" alt="Lean4: How the theorem prover works and why it&#x27;s the new competitive edge in AI" class="article-thumb">
   <div class="article-content">
     <h3><a data-title-link href="https://venturebeat.com/ai/lean4-how-the-theorem-prover-works-and-why-its-the-new-competitive-edge-in?utm_source=tek2day&utm_medium=email">Lean4: How the theorem prover works and why it&#x27;s the new competitive edge in AI</a></h3>
-    <div class="meta"><span class="src">VentureBeat</span> - Nov 22, 2025  <span class="trending-indicator">Trending</span></div>
-    <div class="trend-chips"><span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">ai</span> <span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">llm</span></div>
+    <div class="meta"><span class="src">VentureBeat</span> · Nov 22, 2025  <span class="trending-indicator">Trending</span></div>
+    <div class="trend-chips"><span class="trend-chip">ai</span> <span class="trend-chip">llm</span></div>
     <p data-summary>Large language models (LLMs) have astounded the world with their capabilities, yet they remain plagued by unpredictability and hallucinations – confidently outputting incorrect in...</p>
   </div>
 </article>
@@ -1274,8 +1749,8 @@
   <img src="https://pulse.tek2dayholdings.com/p/b02e177f96/thumbnail.png" alt="Trump administration might not fight state AI regulations after all" class="article-thumb">
   <div class="article-content">
     <h3><a data-title-link href="https://techcrunch.com/2025/11/22/trump-administration-might-not-fight-state-ai-regulations-after-all/?utm_source=tek2day&utm_medium=email">Trump administration might not fight state AI regulations after all</a></h3>
-    <div class="meta"><span class="src">TechCrunch</span> - Nov 22, 2025  <span class="trending-indicator">Trending</span></div>
-    <div class="trend-chips"><span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">ai</span></div>
+    <div class="meta"><span class="src">TechCrunch</span> · Nov 22, 2025  <span class="trending-indicator">Trending</span></div>
+    <div class="trend-chips"><span class="trend-chip">ai</span></div>
     <p data-summary>A Trump administration order targeting state-level AI regulation is reportedly on hold.</p>
   </div>
 </article>
@@ -1283,8 +1758,8 @@
   <img src="https://pulse.tek2dayholdings.com/p/d565474f3f/thumbnail.png" alt="Cardano suffers temporary chain split from code bug, but ADA hangs on" class="article-thumb">
   <div class="article-content">
     <h3><a data-title-link href="https://cointelegraph.com/news/cardano-chainsplit-ada-hang-on?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound&utm_source=tek2day&utm_medium=email">Cardano suffers temporary chain split from code bug, but ADA hangs on</a></h3>
-    <div class="meta"><span class="src">Cointelegraph</span> - Nov 22, 2025  <span class="trending-indicator">Trending</span></div>
-    <div class="trend-chips"><span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">ai</span></div>
+    <div class="meta"><span class="src">Cointelegraph</span> · Nov 22, 2025  <span class="trending-indicator">Trending</span></div>
+    <div class="trend-chips"><span class="trend-chip">ai</span></div>
     <p data-summary>The Cardano blockchain network suffered a temporary chain split on Friday due to an old software bug triggered by an abnormal transaction.</p>
   </div>
 </article>
@@ -1292,7 +1767,7 @@
   <img src="https://pulse.tek2dayholdings.com/p/d612e8987a/thumbnail.png" alt="Harvard Database Hacked in Latest Ivy League Cyberattacks" class="article-thumb">
   <div class="article-content">
     <h3><a data-title-link href="https://www.bloomberg.com/news/articles/2025-11-22/harvard-hacked-in-most-recent-case-of-ivy-league-cyberattacks?utm_source=tek2day&utm_medium=email">Harvard Database Hacked in Latest Ivy League Cyberattacks</a></h3>
-    <div class="meta"><span class="src">Bloomberg Technology</span> - Nov 22, 2025  </div>
+    <div class="meta"><span class="src">Bloomberg Technology</span> · Nov 22, 2025  </div>
     <div class="trend-chips"></div>
     <p data-summary>A Harvard University database of alumni, donors, some students and faculty was accessed by “an unauthorized party” after a phone phishing attack, the latest cyberattack on Ivy Lea...</p>
   </div>
@@ -1301,8 +1776,8 @@
   <img src="https://pulse.tek2dayholdings.com/p/010bb0677d/thumbnail.png" alt="Coinbase crypto exchange executes internal wallet migration" class="article-thumb">
   <div class="article-content">
     <h3><a data-title-link href="https://cointelegraph.com/news/coinbase-crypto-wallet-migration?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound&utm_source=tek2day&utm_medium=email">Coinbase crypto exchange executes internal wallet migration</a></h3>
-    <div class="meta"><span class="src">Cointelegraph</span> - Nov 22, 2025  <span class="trending-indicator">Trending</span></div>
-    <div class="trend-chips"><span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">ai</span></div>
+    <div class="meta"><span class="src">Cointelegraph</span> · Nov 22, 2025  <span class="trending-indicator">Trending</span></div>
+    <div class="trend-chips"><span class="trend-chip">ai</span></div>
     <p data-summary>The crypto exchange said the planned internal migration is a normal, &quot;best practice&quot; in the industry to maintain cybersecurity standards.</p>
   </div>
 </article>
@@ -1310,8 +1785,8 @@
   <img src="https://pulse.tek2dayholdings.com/p/d85b875c29/thumbnail.png" alt="Wi-Fi Giant’s Vietnam Factory Raises Questions Over China Split" class="article-thumb">
   <div class="article-content">
     <h3><a data-title-link href="https://www.bloomberg.com/news/articles/2025-11-22/wi-fi-giant-s-vietnam-factory-raises-questions-over-china-split?utm_source=tek2day&utm_medium=email">Wi-Fi Giant’s Vietnam Factory Raises Questions Over China Split</a></h3>
-    <div class="meta"><span class="src">Bloomberg Technology</span> - Nov 22, 2025  <span class="trending-indicator">Trending</span></div>
-    <div class="trend-chips"><span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">ai</span></div>
+    <div class="meta"><span class="src">Bloomberg Technology</span> · Nov 22, 2025  <span class="trending-indicator">Trending</span></div>
+    <div class="trend-chips"><span class="trend-chip">ai</span></div>
     <p data-summary>China-founded Wi-Fi behemoth TP-Link Systems Inc. is trying to convince US national security officials it’s independent from Beijing. The circumstances surrounding its Vietnam fac...</p>
   </div>
 </article>
@@ -1319,8 +1794,8 @@
   <img src="https://pulse.tek2dayholdings.com/p/01636463a0/thumbnail.png" alt="The Weekender: Robots, Robots Everywhere (Even at the Litter Box)" class="article-thumb">
   <div class="article-content">
     <h3><a data-title-link href="https://www.pymnts.com/artificial-intelligence-2/2025/the-weekender-robots-robots-everywhere-even-at-the-litter-box/?utm_source=tek2day&utm_medium=email">The Weekender: Robots, Robots Everywhere (Even at the Litter Box)</a></h3>
-    <div class="meta"><span class="src">PYMNTS</span> - Nov 22, 2025  <span class="trending-indicator">Trending</span></div>
-    <div class="trend-chips"><span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">ai</span></div>
+    <div class="meta"><span class="src">PYMNTS</span> · Nov 22, 2025  <span class="trending-indicator">Trending</span></div>
+    <div class="trend-chips"><span class="trend-chip">ai</span></div>
     <p data-summary>Blame the elves. They saw generative artificial intelligence (AI) coming for their jobs and outsourced Christmas to robots. This holiday season, the digital economy’s strangest ed...</p>
   </div>
 </article>
@@ -1328,7 +1803,7 @@
   <img src="https://pulse.tek2dayholdings.com/p/232bcdfe96/thumbnail.png" alt="ARK Invest wraps up week with Bitcoin ETF, Bullish, Circle, BitMine buys" class="article-thumb">
   <div class="article-content">
     <h3><a data-title-link href="https://cointelegraph.com/news/ark-invest-boosts-bullish-bitmine-circle-btc-etfs?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound&utm_source=tek2day&utm_medium=email">ARK Invest wraps up week with Bitcoin ETF, Bullish, Circle, BitMine buys</a></h3>
-    <div class="meta"><span class="src">Cointelegraph</span> - Nov 22, 2025  </div>
+    <div class="meta"><span class="src">Cointelegraph</span> · Nov 22, 2025  </div>
     <div class="trend-chips"></div>
     <p data-summary>ARK Invest ramped up its crypto exposure on Friday, adding Bullish, BitMine, Circle, Robinhood and nearly $600K in Bitcoin ETFs as crypto equities attempted a rebound.</p>
   </div>
@@ -1337,8 +1812,8 @@
   <img src="https://pulse.tek2dayholdings.com/p/8859affa13/thumbnail.png" alt="NVIDIA Insider Activity: All Sells" class="article-thumb">
   <div class="article-content">
     <h3><a data-title-link href="https://newsletter.tek2dayholdings.com/p/nvidia-insider-activity-all-sells?utm_source=tek2day&utm_medium=email">NVIDIA Insider Activity: All Sells</a></h3>
-    <div class="meta"><span class="src">TEK2day Newsletter</span> - Nov 22, 2025  <span class="trending-indicator">Trending</span></div>
-    <div class="trend-chips"><span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">ai</span> <span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">nvidia</span></div>
+    <div class="meta"><span class="src">TEK2day Newsletter</span> · Nov 22, 2025  <span class="trending-indicator">Trending</span></div>
+    <div class="trend-chips"><span class="trend-chip">ai</span> <span class="trend-chip">nvidia</span></div>
     <p data-summary>NASDAQ</p>
   </div>
 </article>
@@ -1346,8 +1821,8 @@
   <img src="https://pulse.tek2dayholdings.com/p/436bceedee/thumbnail.png" alt="A Bit on Google&#x27;s TPUs" class="article-thumb">
   <div class="article-content">
     <h3><a data-title-link href="https://newsletter.tek2dayholdings.com/p/a-bit-on-googles-tpus?utm_source=tek2day&utm_medium=email">A Bit on Google&#x27;s TPUs</a></h3>
-    <div class="meta"><span class="src">TEK2day Newsletter</span> - Nov 22, 2025  <span class="trending-indicator">Trending</span></div>
-    <div class="trend-chips"><span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">google</span> <span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">tensor</span></div>
+    <div class="meta"><span class="src">TEK2day Newsletter</span> · Nov 22, 2025  <span class="trending-indicator">Trending</span></div>
+    <div class="trend-chips"><span class="trend-chip">google</span> <span class="trend-chip">tensor</span></div>
     <p data-summary>Here is a visual explanation of how Google’s Tensor Processing Units (TPUs) work.</p>
   </div>
 </article>
@@ -1355,7 +1830,7 @@
   <img src="https://pulse.tek2dayholdings.com/p/3eb2ec35e1/thumbnail.png" alt="How this founder’s unlikely path to Silicon Valley could become an edge in industrial tech" class="article-thumb">
   <div class="article-content">
     <h3><a data-title-link href="https://techcrunch.com/2025/11/21/how-this-founders-unlikely-path-to-silicon-valley-could-become-an-edge-in-industrial-tech/?utm_source=tek2day&utm_medium=email">How this founder’s unlikely path to Silicon Valley could become an edge in industrial tech</a></h3>
-    <div class="meta"><span class="src">TechCrunch</span> - Nov 21, 2025  </div>
+    <div class="meta"><span class="src">TechCrunch</span> · Nov 21, 2025  </div>
     <div class="trend-chips"></div>
     <p data-summary>Young&#x27;s age and background – things that might seem like disadvantages when it comes to more established industries – have become his secret weapons. When he walks into a room of ...</p>
   </div>
@@ -1364,7 +1839,7 @@
   <img src="https://pulse.tek2dayholdings.com/p/dc76c763f4/thumbnail.png" alt="Sovereign Bitcoin adoption would be the ultimate upside catalyst: Jeff Park" class="article-thumb">
   <div class="article-content">
     <h3><a data-title-link href="https://cointelegraph.com/news/bitcoin-sovereign-adoption-upside-candle-catalyst-jeff-park?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound&utm_source=tek2day&utm_medium=email">Sovereign Bitcoin adoption would be the ultimate upside catalyst: Jeff Park</a></h3>
-    <div class="meta"><span class="src">Cointelegraph</span> - Nov 21, 2025  </div>
+    <div class="meta"><span class="src">Cointelegraph</span> · Nov 21, 2025  </div>
     <div class="trend-chips"></div>
     <p data-summary>The catalyst could serve as a wake-up call and send Bitcoin to $150,000 overnight, though it “would have to be real,&quot; according to Jeff Park.</p>
   </div>
@@ -1373,7 +1848,7 @@
   <img src="https://pulse.tek2dayholdings.com/p/1444300643/thumbnail.png" alt="Cryptology Group Held an Election, but Can’t Decrypt the Results" class="article-thumb">
   <div class="article-content">
     <h3><a data-title-link href="https://www.nytimes.com/2025/11/21/world/cryptography-group-lost-election-results.html?utm_source=tek2day&utm_medium=email">Cryptology Group Held an Election, but Can’t Decrypt the Results</a></h3>
-    <div class="meta"><span class="src">The New York Times - Technology</span> - Nov 21, 2025  </div>
+    <div class="meta"><span class="src">The New York Times - Technology</span> · Nov 21, 2025  </div>
     <div class="trend-chips"></div>
     <p data-summary>A global group of researchers was unable to read the vote tally, after an official lost one of three secret code keys needed to unlock a hyper-secure election system.</p>
   </div>
@@ -1382,8 +1857,8 @@
   <img src="https://pulse.tek2dayholdings.com/p/8d0a67696f/thumbnail.png" alt="Google denies ‘misleading’ reports of Gmail using your emails to train AI" class="article-thumb">
   <div class="article-content">
     <h3><a data-title-link href="https://www.theverge.com/news/826902/gmail-ai-training-data-opt-out?utm_source=tek2day&utm_medium=email">Google denies ‘misleading’ reports of Gmail using your emails to train AI</a></h3>
-    <div class="meta"><span class="src">The Verge</span> - Nov 21, 2025  <span class="trending-indicator">Trending</span></div>
-    <div class="trend-chips"><span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">ai</span> <span class="trend-chip" style="display:inline-block;padding:2px 8px;border-radius:999px;background:#eef3ff;border:1px solid #cfd8ff;font-size:12px;margin-right:6px;">google</span></div>
+    <div class="meta"><span class="src">The Verge</span> · Nov 21, 2025  <span class="trending-indicator">Trending</span></div>
+    <div class="trend-chips"><span class="trend-chip">ai</span> <span class="trend-chip">google</span></div>
     <p data-summary>Google is pushing back on viral social media posts and articles like this one by Malwarebytes, claiming Google has changed its policy to use your Gmail messages and attachments to...</p>
   </div>
 </article>
@@ -1391,7 +1866,7 @@
   <img src="https://pulse.tek2dayholdings.com/p/61e52d9bcc/thumbnail.png" alt="House Bill Would Allow Bitcoin Payments for Federal Taxes" class="article-thumb">
   <div class="article-content">
     <h3><a data-title-link href="https://www.pymnts.com/blockchain/bitcoin/2025/house-bill-would-allow-bitcoin-payments-for-federal-taxes/?utm_source=tek2day&utm_medium=email">House Bill Would Allow Bitcoin Payments for Federal Taxes</a></h3>
-    <div class="meta"><span class="src">PYMNTS</span> - Nov 21, 2025  </div>
+    <div class="meta"><span class="src">PYMNTS</span> · Nov 21, 2025  </div>
     <div class="trend-chips"></div>
     <p data-summary>A bill introduced Thursday (Nov. 20) in the U.S. House would allow Americans to use Bitcoin to pay federal taxes and would direct those payments into the Strategic Bitcoin Reserve...</p>
   </div>
@@ -1399,13 +1874,13 @@
         
         
       </div>
-      <p class="foot">T2D Pulse 2025.</p>
+      <p class="foot">© 2025 T2D Pulse. All rights reserved.</p>
     </section>
   </div>
 
-  <!-- Scripts: PWA + header shadow -->
+  <!-- Scripts -->
   <script>
-    // Install prompt
+    // Install prompt for PWA
     let deferredPrompt;
     window.addEventListener('beforeinstallprompt', (e) => {
       e.preventDefault();
@@ -1413,6 +1888,7 @@
       const wrap = document.querySelector('.install');
       if (wrap) wrap.style.display = 'block';
     });
+    
     document.getElementById('btnInstall')?.addEventListener('click', async () => {
       if (!deferredPrompt) return;
       deferredPrompt.prompt();
@@ -1421,7 +1897,7 @@
       document.querySelector('.install').style.display = 'none';
     });
 
-    // Service worker
+    // Service worker registration
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
         navigator.serviceWorker.register('./sw.js', { scope: './' });
@@ -1432,175 +1908,194 @@
     window.addEventListener('scroll', () => {
       const h = document.querySelector('header.site');
       if (!h) return;
-      if (window.scrollY > 8) h.classList.add('shadow');
-      else h.classList.remove('shadow');
-    });
+      h.classList.toggle('shadow', window.scrollY > 8);
+    }, { passive: true });
   </script>
 
   <!-- Share buttons script -->
   <script>
-  (function () {
+  (function() {
     const cards = document.querySelectorAll('#tek2day-pulse article');
     if (!cards.length) return;
 
     for (const card of cards) {
-      const a = card.querySelector('h3 a');
-      if (!a) continue;
+      const link = card.querySelector('h3 a');
+      if (!link) continue;
 
-      const originalUrl = a.href;
+      const originalUrl = link.href;
       let permalink = card.dataset.permalink || originalUrl;
       
-      // Convert relative URLs to absolute URLs
+      // Convert relative URLs to absolute
       if (permalink.startsWith('/')) {
         permalink = window.location.origin + permalink;
       }
       
-      const title = a.textContent.trim();
+      const title = link.textContent.trim();
       const brand = 'via T2D Pulse';
-
       const shareTitle = `${title} - ${brand}`;
-      const u = encodeURIComponent(permalink);
-      const xShare = `https://twitter.com/intent/tweet?url=${u}&text=${encodeURIComponent(shareTitle)}`;
+      const encodedUrl = encodeURIComponent(permalink);
+      const xShareUrl = `https://twitter.com/intent/tweet?url=${encodedUrl}&text=${encodeURIComponent(shareTitle)}`;
 
-      // Toolbar with both Share to X and Copy URL buttons
+      // Create share toolbar
       const bar = document.createElement('div');
       bar.className = 'share';
       bar.innerHTML = `
-        <a class="share-btn" href="${xShare}" target="_blank" rel="noopener">Share to X</a>
-        <button class="share-btn copy-url" type="button">Copy URL</button>
+        <a class="share-btn" href="${xShareUrl}" target="_blank" rel="noopener noreferrer">Share to X</a>
+        <button class="share-btn copy-url" type="button" data-url="${permalink}">Copy URL</button>
       `;
-      const btn = bar.querySelector('.copy-url');
-      btn.dataset.url = permalink;
       card.appendChild(bar);
     }
 
-    // Copy URL handler
+    // Copy URL handler with native share fallback
     document.addEventListener('click', async (e) => {
       const btn = e.target.closest('.copy-url');
       if (!btn) return;
 
       const url = btn.dataset.url;
 
-      // Prefer native share on mobile (URL only)
+      // Prefer native share on mobile
       if (navigator.share) {
-        try { await navigator.share({ url }); return; } catch(_) {}
+        try {
+          await navigator.share({ url });
+          return;
+        } catch (_) {}
       }
 
+      // Fallback to clipboard
       try {
         await navigator.clipboard.writeText(url);
       } catch (err) {
         const ta = document.createElement('textarea');
-        ta.value = url; document.body.appendChild(ta);
-        ta.select(); document.execCommand('copy'); ta.remove();
+        ta.value = url;
+        ta.style.cssText = 'position:fixed;opacity:0';
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        ta.remove();
       }
-      const old = btn.textContent; btn.textContent = 'Copied!'; setTimeout(() => btn.textContent = old, 1200);
+      
+      const originalText = btn.textContent;
+      btn.textContent = 'Copied!';
+      setTimeout(() => btn.textContent = originalText, 1500);
     });
   })();
   </script>
 
   <!-- Search logic -->
-  <script id="t2d-search-logic">
-  (function(){
-    const $  = (sel, ctx=document) => ctx.querySelector(sel);
-    const $$ = (sel, ctx=document) => Array.from(ctx.querySelectorAll(sel));
-    const container = $('#tek2day-pulse') || document.body;
-    const form  = $('.hdr-actions .search');
-    const input = $('#t2d-q') || (form && form.querySelector('input[type="search"]'));
-    if (!form || !input) return;
+  <script>
+  (function() {
+    const container = document.getElementById('tek2day-pulse');
+    const form = document.querySelector('.hdr-actions .search');
+    const input = document.getElementById('t2d-q');
+    if (!form || !input || !container) return;
 
-    function buildHaystack(card){
+    function buildHaystack(card) {
       const clone = card.cloneNode(true);
-      // Remove metadata elements we don't want to search
+      // Remove elements we don't want to search
       clone.querySelectorAll('.host-pill, .byline, .count, .date, .publisher').forEach(n => n.remove());
-      const sels = ['h3','h2','.title','.headline','.desc','.dek','.summary','.snippet','.copy','.body','p','.src'];
+      
+      const selectors = ['h3', 'h2', '.title', '.headline', '.desc', '.summary', '.snippet', 'p', '.src'];
       const parts = [];
-      for (const s of sels){ clone.querySelectorAll(s).forEach(n => parts.push(n.textContent || '')); }
-      // Include data attributes including the new data-source
-      ['data-tickers','data-companies','data-keywords','data-source'].forEach(a => {
-        const v = card.getAttribute(a); if (v) parts.push(v);
+      
+      for (const sel of selectors) {
+        clone.querySelectorAll(sel).forEach(n => parts.push(n.textContent || ''));
+      }
+      
+      // Include data attributes
+      ['data-tickers', 'data-companies', 'data-keywords', 'data-source'].forEach(attr => {
+        const v = card.getAttribute(attr);
+        if (v) parts.push(v);
       });
-      return parts.join(' ').replace(/\s+/g,' ').trim().toLowerCase();
+      
+      return parts.join(' ').replace(/\s+/g, ' ').trim().toLowerCase();
     }
 
-    const itemsContainer = $('.items');
+    const itemsContainer = container.querySelector('.items');
     
-    function tokenize(q){ return (q||'').toLowerCase().trim().split(/\s+/).filter(Boolean); }
-    function cardList(container){ return container ? Array.from(container.children) : []; }
+    function tokenize(q) {
+      return (q || '').toLowerCase().trim().split(/\s+/).filter(Boolean);
+    }
 
-    function applyFilter(q){
-      const toks = tokenize(q);
+    function applyFilter(q) {
+      const tokens = tokenize(q);
       let total = 0;
 
       if (itemsContainer) {
-        cardList(itemsContainer).forEach(card => {
+        Array.from(itemsContainer.children).forEach(card => {
           const hay = buildHaystack(card);
-          const ok = toks.every(t => hay.includes(t));
-          card.style.display = ok ? '' : 'none';
-          if (ok) total++;
+          const match = tokens.every(t => hay.includes(t));
+          card.style.display = match ? '' : 'none';
+          if (match) total++;
         });
       }
 
-      let empty = $('#search-empty');
-      if (!empty){
+      // Show/hide empty state
+      let empty = document.getElementById('search-empty');
+      if (!empty) {
         empty = document.createElement('div');
         empty.id = 'search-empty';
-        empty.style.display = 'none';
-        empty.style.padding = '1rem';
-        empty.style.color = 'var(--muted)';
+        empty.style.cssText = 'display:none;padding:2rem;color:var(--muted);text-align:center;';
         empty.setAttribute('role', 'status');
-        empty.textContent = 'No results.';
+        empty.textContent = 'No articles found matching your search.';
         container.prepend(empty);
       }
-      empty.style.display = toks.length && total === 0 ? 'block' : 'none';
+      empty.style.display = tokens.length && total === 0 ? 'block' : 'none';
     }
 
     form.addEventListener('submit', (e) => {
       e.preventDefault();
       applyFilter(input.value);
-      if (window.innerWidth > 720) { container.scrollIntoView({behavior:'smooth', block:'start'}); }
-    }, {passive:false});
-    input.addEventListener('input', () => applyFilter(input.value), {passive:true});
+      if (window.innerWidth > 720) {
+        container.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+    
+    input.addEventListener('input', () => applyFilter(input.value), { passive: true });
 
+    // Check for initial query param
     try {
       const q0 = new URLSearchParams(location.search).get('q');
-      if (q0) { input.value = q0; applyFilter(q0); }
-    } catch(_) {}
+      if (q0) {
+        input.value = q0;
+        applyFilter(q0);
+      }
+    } catch (_) {}
   })();
   </script>
 
+  <!-- Trend chip interactions -->
   <script>
-  (function(){
-    // Choose where chips should link: 'trends' or 'site'
-    const MODE = 'trends';                 // change to 'site' if you want internal search instead
-    const GEO = 'US';                      // Google Trends GEO
-    const TIME = 'now 7-d';                // Google Trends window
-    const SITE_SEARCH_URL = '/?q=';        // your site search base, if MODE === 'site'
+  (function() {
+    const MODE = 'trends'; // 'trends' or 'site'
+    const GEO = 'US';
+    const TIME = 'now 7-d';
+    const SITE_SEARCH_URL = '/?q=';
 
     const chips = document.querySelectorAll('.trend-chip');
+    
     chips.forEach(chip => {
-      const kw = (chip.textContent || '').trim();
-      if (!kw) return;
-      // Tooltip text
-      chip.setAttribute('data-tip', 'Trending keyword: "' + kw + '"');
+      const keyword = (chip.textContent || '').trim();
+      if (!keyword) return;
+      
+      chip.setAttribute('data-tip', `Explore "${keyword}" on Google Trends`);
       chip.setAttribute('role', 'link');
       chip.setAttribute('tabindex', '0');
 
-      function targetUrl() {
+      function getTargetUrl() {
         if (MODE === 'trends') {
-          const u = new URL('https://trends.google.com/trends/explore');
-          u.searchParams.set('date', TIME);
-          u.searchParams.set('geo', GEO);
-          u.searchParams.set('q', kw);
-          return u.toString();
-        } else {
-          return SITE_SEARCH_URL + encodeURIComponent(kw);
+          const url = new URL('https://trends.google.com/trends/explore');
+          url.searchParams.set('date', TIME);
+          url.searchParams.set('geo', GEO);
+          url.searchParams.set('q', keyword);
+          return url.toString();
         }
+        return SITE_SEARCH_URL + encodeURIComponent(keyword);
       }
 
-      chip.addEventListener('click', (e) => {
-        const url = targetUrl();
-        window.open(url, '_blank', 'noopener');
+      chip.addEventListener('click', () => {
+        window.open(getTargetUrl(), '_blank', 'noopener');
       });
+      
       chip.addEventListener('keydown', (e) => {
         if (e.key === 'Enter' || e.key === ' ') {
           e.preventDefault();
@@ -1611,32 +2106,24 @@
   })();
   </script>
 
-  <!-- Iframe communication: Send article clicks to parent dashboard -->
+  <!-- Iframe communication for embedded use -->
   <script>
   (function() {
-    // Only run if we're inside an iframe
+    // Only run if embedded in iframe
     if (window.self === window.top) return;
     
-    // Listen for clicks on article links
     document.addEventListener('click', function(e) {
-      // Find if the clicked element or its parent is an article link
       const link = e.target.closest('h3 a');
       if (!link) return;
       
-      // Get the article URL
-      const articleUrl = link.href;
-      
-      // Prevent default navigation within iframe
       e.preventDefault();
       e.stopPropagation();
       
-      // Send message to parent window (dashboard) to navigate there
       window.parent.postMessage({
         type: 'article-click',
-        url: articleUrl
+        url: link.href
       }, 'https://dash.tek2dayholdings.com');
-      
-    }, true); // Use capture phase to catch it early
+    }, true);
   })();
   </script>
 </body>
