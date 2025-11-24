@@ -13,11 +13,40 @@
       "ai",
       "anthropic",
       "claude"
+    ]
+  },
+  {
+    "title": "Signal\u2019s secure message backups arrive on iOS",
+    "url": "https://www.theverge.com/news/828091/signal-secure-backups-ios-launch",
+    "published_at": "2025-11-24T15:29:36-05:00",
+    "source": "The Verge",
+    "summary": "Signal is launching secure backups on iOS, allowing you to save and restore your messages in case you lose or break your phone. With the free version of the feature, you can store up to 100MB of text messages, along with the past 45 days\u2019 worth of photos, videos, GIFs, and files. There\u2019s also a [\u2026]",
+    "content_html": "<figure>\n\n<img alt=\"\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/06/acastro_STK459_02.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100\" />\n\t<figcaption>\n\t\t</figcaption>\n</figure>\n<p class=\"has-text-align-none\">Signal is <a href=\"https://x.com/signalapp/status/1993018186690871409?s=20\">launching secure backups on iOS</a>, allowing you to save and restore your messages in case you lose or break your phone. With the free version of the feature, you can store up to 100MB of text messages, along with the past 45 days&#8217; worth of photos, videos, GIFs, and files.</p>\n\n<p class=\"has-text-align-none\">There\u2019s also a $1.99 per month option that can back up all of your text messages, in addition to up to 100GB of media beyond the 45-day cap. Signal <a href=\"https://www.theverge.com/news/774018/signal-encrypted-secure-backups-paid-feature-beta\">first launched secure backups</a> on Android devices in September, which store your messages and media using end-to-end encryption. You can access your backup using a 64-character recovery key generated on your device, though Signal notes that it can\u2019t help you recover the code if you lose it.</p>\n\n<p class=\"has-text-align-none\"><a href=\"https://support.signal.org/hc/en-us/articles/9708267671322-Signal-Secure-Backup\">To enable secure backups</a>, head to the <strong>Settings</strong> menu and select <strong>Backups</strong>. From there, tap <strong>Setup</strong> &gt; <strong>Enable Backups</strong> and then write down or store your recovery key. Once you confirm your recovery key, you can choose between the free or paid plan. Signal will then begin storing your messages and media.</p>\n\n<p class=\"has-text-align-none\">Signal plans on bringing secure backups to its desktop app, too, and will eventually allow you to transfer your encrypted messaging history between Android, iOS, and desktop.</p>",
+    "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/06/acastro_STK459_02.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "summary_text": "Signal is launching secure backups on iOS, allowing you to save and restore your messages in case you lose or break your phone. With the free version of the feature, you can store up to 100MB of text messages, along with the past 45 days\u2019 worth of photos, vid...",
+    "category": "fintech",
+    "_permalink": "/p/16b7595f08/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/16b7595f08/",
+    "_summary_240": "Signal is launching secure backups on iOS, allowing you to save and restore your messages in case you lose or break your phone. With the free version of the feature, you can...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/16b7595f08/thumbnail.png"
+  },
+  {
+    "title": "Hands on with Stickerbox, the AI-powered sticker maker for kids",
+    "url": "https://techcrunch.com/2025/11/24/hands-on-with-stickerbox-the-ai-powered-sticker-maker-for-kids/",
+    "published_at": "2025-11-24T15:25:20-05:00",
+    "source": "TechCrunch",
+    "summary": "Stickerbox turns kids\u2019 ideas into printable stickers, blending AI magic with hands-on coloring for a surprisingly creative, \"screen-light\" play experience.",
+    "content_html": "",
+    "image_url": "https://techcrunch.com/wp-content/uploads/2025/11/Stickerbox-Sunflower.jpg?resize=1200,800",
+    "summary_text": "Stickerbox turns kids\u2019 ideas into printable stickers, blending AI magic with hands-on coloring for a surprisingly creative, \"screen-light\" play experience.",
+    "category": "ai",
+    "_trending_tags": [
+      "ai"
     ],
-    "_permalink": "/p/700ca45bd6/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/700ca45bd6/",
-    "_summary_240": "Anthropic released its most capable artificial intelligence model yet on Monday, slashing prices by roughly two-thirds while claiming state-of-the-art performance on software...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/700ca45bd6/thumbnail.png"
+    "_permalink": "/p/dc41ff8cea/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/dc41ff8cea/",
+    "_summary_240": "Stickerbox turns kids\u2019 ideas into printable stickers, blending AI magic with hands-on coloring for a surprisingly creative, \"screen-light\" play experience.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/dc41ff8cea/thumbnail.png"
   },
   {
     "title": "XRP jumps 8% as Franklin Templeton, Grayscale ETFs begin trading",
@@ -330,25 +359,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/cc88aec829/",
     "_summary_240": "The executive board of SAP SE, Europe\u2019s most valuable software company, is facing declining employee trust following recent job cuts and organizational restructuring,...",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/cc88aec829/thumbnail.png"
-  },
-  {
-    "title": "Worldpay Debuts Model Context Protocol to Bolster Agentic Commerce",
-    "url": "https://www.pymnts.com/artificial-intelligence-2/2025/worldpay-debuts-model-context-protocol-to-bolster-agentic-commerce/",
-    "published_at": "2025-11-24T11:28:46-05:00",
-    "source": "PYMNTS",
-    "summary": "Worldpay has debuted a tool aimed to promote AI-powered payment integration and agentic commerce. Worldpay MCP, announced Monday (Nov. 24), is available now via the company\u2019s Developer Hub and Github, letting developers and merchants create artificial intelligence agents and direct payment integrations with Worldpay\u2019s API. The MCP is an open standard introduced late last year by [\u2026] The post Worl...",
-    "content_html": "<p style=\"font-weight: 400;\"><a href=\"https://www.worldpay.com/\" rel=\"noopener\" target=\"_blank\">Worldpay</a>\u00a0has debuted a tool aimed to promote AI-powered payment integration and agentic commerce.</p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p style=\"font-weight: 400;\">Worldpay MCP, <a href=\"https://www.businesswire.com/news/home/20251124162914/en/Worldpay-Accelerates-the-Future-of-Agentic-Commerce-with-Model-Context-Protocol-MCP-A-Publicly-Available-Server-Powering-AI-Driven-Agent-Enabled-Payments\" rel=\"noopener\" target=\"_blank\">announced</a>\u00a0Monday (Nov. 24), is available now via the company\u2019s Developer Hub and Github, letting developers and merchants create artificial intelligence agents and direct payment integrations with Worldpay\u2019s API.</p>\n<p style=\"font-weight: 400;\">The MCP is an open standard introduced late last year by Anthropic, designed to make AI systems more useful in real-world business settings. It allows artificial intelligence models like Claude, ChatGPT or Gemini to securely connect to business tools, databases and workflows.</p>\n<p style=\"font-weight: 400;\">\u201cModern AI models are great at\u00a0<a href=\"https://www.pymnts.com/artificial-intelligence-2/2025/how-mcp-turns-passive-ai-assistants-into-active-enterprise-agents/\" rel=\"noopener\" target=\"_blank\">generating text and insights</a>\u00a0but generally cannot act on live data,\u201d PYMNTS wrote earlier this month in a report on the MCP. \u201cA customer-service chatbot, for example, can explain how to reset a password but cannot perform that action because it lacks secure, structured access to internal systems.\u201d</p>\n<p style=\"font-weight: 400;\">The protocol addresses that problem by providing AI systems with a way to request and execute actions like retrieving information, updating records or triggering workflows within permitted security boundaries, turning AI from \u201ca passive assistant to an active helper,\u201d the report added.</p>\n<p style=\"font-weight: 400;\">At the same time, Worldpay said in its release, consumer expectations are shifting toward more autonomous, AI-fueled experiences, with\u00a0<a href=\"https://www.pymnts.com/artificial-intelligence-2/2025/worldpay-says-americans-most-likely-to-adopt-agentic-commerce-for-smaller-purchases/\" rel=\"noopener\" target=\"_blank\">44% of the shoppers</a>\u00a0surveyed by the company saying they would let an artificial intelligence bot browse on their behalf.</p>\n<p style=\"font-weight: 400;\">\u201cAgentic commerce is rapidly emerging as the next evolutionary step in online shopping,\u201d said\u00a0<a href=\"https://www.linkedin.com/in/lucinda-turner\" rel=\"noopener\" target=\"_blank\">Cindy Turner</a>, chief product officer at Worldpay.</p>\n<p style=\"font-weight: 400;\">\u201cBy launching Worldpay MCP, we\u2019re answering the demand of developers and merchants, giving them the freedom to experiment, build and innovate in a controlled environment, while connecting directly to our global payment infrastructure. We\u2019re not adding another protocol, we\u2019re making them all work together for sellers.\u201d</p>\n<p style=\"font-weight: 400;\">At the same time, Worldplay\u2019s survey also found there are limits to what consumers will allow artificial intelligence to do when it comes to shopping. Respondents said they were less likely to use agentic commerce for categories such as travel, concert tickets, clothing and home decor.</p>\n<p style=\"font-weight: 400;\">Worldpay also announced late last month that it now supports\u00a0<a href=\"https://openai.com/\">OpenAI</a>\u2019s\u00a0Agentic Commerce Protocol (ACP), which is an\u00a0<a href=\"https://www.pymnts.com/artificial-intelligence-2/2025/worldpay-brings-support-for-openais-agentic-commerce-protocol/\" rel=\"noopener\" target=\"_blank\">open standard</a>\u00a0for agentic commerce that allows AI agents, people and businesses to work in concert on purchases.</p>\n<p style=\"font-weight: 400;\">With ACP, U.S. users of OpenAI\u2019s ChatGPT can shop directly from participating Worldpay merchants using Instant Checkout.</p>\n<p style=\"font-weight: 400;\">\u201cFor agentic commerce to truly scale, it must deliver seamless, secure payments that both consumers and merchants can trust,\u201d Turner said at the time.</p>\n<div>\n<p class=\"elementtoproof\"><i>For all PYMNTS AI coverage, subscribe to the daily<span class=\"apple-converted-space\">\u00a0</span></i><a href=\"https://www.pymnts.com/subscribe/\" rel=\"noopener\" target=\"_blank\" title=\"https://www.pymnts.com/subscribe/\">AI\u00a0Newsletter</a><i>.</i></p>\n</div>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/artificial-intelligence-2/2025/worldpay-debuts-model-context-protocol-to-bolster-agentic-commerce/\">Worldpay Debuts Model Context Protocol to Bolster Agentic Commerce</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
-    "image_url": "https://www.pymnts.com/wp-content/uploads/2025/06/Worldpay.png?w=457",
-    "summary_text": "Worldpay has debuted a tool aimed to promote AI-powered payment integration and agentic commerce. Worldpay MCP, announced Monday (Nov. 24), is available now via the company\u2019s Developer Hub and Github, letting developers and merchants create artificial intelli...",
-    "category": "ai",
-    "_trending_tags": [
-      "agent",
-      "ai"
-    ],
-    "_permalink": "/p/692dcac1f3/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/692dcac1f3/",
-    "_summary_240": "Worldpay has debuted a tool aimed to promote AI-powered payment integration and agentic commerce. Worldpay MCP, announced Monday (Nov. 24), is available now via the company\u2019s...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/692dcac1f3/thumbnail.png"
   },
   {
     "title": "A new AI benchmark tests whether chatbots protect human wellbeing",
@@ -785,11 +795,7 @@
     "category": "fintech",
     "_trending_tags": [
       "llm"
-    ],
-    "_permalink": "/p/9076b7e480/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/9076b7e480/",
-    "_summary_240": "China's DeepSeek-R1 LLM generates up to 50% more insecure code when prompted with politically sensitive inputs such as \"Falun Gong,\" \"Uyghurs,\" or \"Tibet,\" according to new...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/9076b7e480/thumbnail.png"
+    ]
   },
   {
     "title": "Thai Crypto Exchange Bitkub Is Said to Consider IPO in Hong Kong",
@@ -920,7 +926,7 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/fac8268446/thumbnail.png"
   },
   {
-    "title": "Bitcoin Inches Back Though Bruising Week Keeps Traders on Edge",
+    "title": "Bitcoin Tracks Stocks Higher With Crypto Traders Staying on Edge",
     "url": "https://www.bloomberg.com/news/articles/2025-11-24/bitcoin-btc-weakness-persists-as-crypto-steadies-after-bruising-week",
     "published_at": "2025-11-23T21:32:04-05:00",
     "source": "Bloomberg Technology",
@@ -1138,24 +1144,6 @@
       "ai",
       "llm"
     ]
-  },
-  {
-    "title": "Trump administration might not fight state AI regulations after all",
-    "url": "https://techcrunch.com/2025/11/22/trump-administration-might-not-fight-state-ai-regulations-after-all/",
-    "published_at": "2025-11-22T17:20:27-05:00",
-    "source": "TechCrunch",
-    "summary": "A Trump administration order targeting state-level AI regulation is reportedly on hold.",
-    "content_html": "",
-    "image_url": "https://techcrunch.com/wp-content/uploads/2025/08/GettyImages-2227934246.jpg?w=1024",
-    "summary_text": "A Trump administration order targeting state-level AI regulation is reportedly on hold.",
-    "category": "ai",
-    "_trending_tags": [
-      "ai"
-    ],
-    "_permalink": "/p/b02e177f96/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/b02e177f96/",
-    "_summary_240": "A Trump administration order targeting state-level AI regulation is reportedly on hold.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/b02e177f96/thumbnail.png"
   },
   {
     "title": "NVIDIA Insider Activity: All Sells",
@@ -1766,22 +1754,6 @@
     "category": "ai",
     "_trending_tags": [
       "ai"
-    ]
-  },
-  {
-    "title": "Question for NVIDIA (NVDA) RE: Google Gemini 3.0",
-    "url": "https://newsletter.tek2dayholdings.com/p/question-for-nvidia-nvda-re-google",
-    "published_at": "2025-11-19T15:38:28-05:00",
-    "source": "TEK2day Newsletter",
-    "summary": "What does it mean for NVIDIA\u2019s long-term outlook given that Gemini 3.0 was entirely trained and entirely operates on Google\u2019s TPU chips and infrastructure, not NVIDIA hardware?",
-    "content_html": "<div class=\"captioned-image-container\"><figure><a class=\"image-link image2 is-viewable-img\" href=\"https://substackcdn.com/image/fetch/$s_!15Au!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fabb993b2-5bae-460c-91b9-a63410eb3655_2390x1707.jpeg\" target=\"_blank\"><div class=\"image2-inset\"><source type=\"image/webp\" /><img alt=\"\" class=\"sizing-normal\" height=\"1040\" src=\"https://substackcdn.com/image/fetch/$s_!15Au!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fabb993b2-5bae-460c-91b9-a63410eb3655_2390x1707.jpeg\" width=\"1456\" /><div class=\"image-link-expand\"><div class=\"pencraft pc-display-flex pc-gap-8 pc-reset\"><button class=\"pencraft pc-reset pencraft icon-container restack-image\" tabindex=\"0\" type=\"button\"><svg class=\"lucide lucide-refresh-cw\" fill=\"none\" height=\"20\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" viewBox=\"0 0 24 24\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8\"></path><path d=\"M21 3v5h-5\"></path><path d=\"M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16\"></path><path d=\"M8 16H3v5\"></path></svg></button><button class=\"pencraft pc-reset pencraft icon-container view-image\" tabindex=\"0\" type=\"button\"><svg class=\"lucide lucide-maximize2 lucide-maximize-2\" fill=\"none\" height=\"20\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" viewBox=\"0 0 24 24\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><polyline points=\"15 3 21 3 21 9\"></polyline><polyline points=\"9 21 3 21 3 15\"></polyline><line x1=\"21\" x2=\"14\" y1=\"3\" y2=\"10\"></line><line x1=\"3\" x2=\"10\" y1=\"21\" y2=\"14\"></line></svg></button></div></div></div></a></figure></div><p><strong>What does it mean for NVIDIA&#8217;s long-term outlook given that Gemini 3.0 was entirely trained and entirely operates on Google&#8217;s TPU chips and infrastructure, not NVIDIA hardware?</strong> </p><div><hr /></div><p></p>",
-    "image_url": "https://substackcdn.com/image/fetch/$s_!15Au!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fabb993b2-5bae-460c-91b9-a63410eb3655_2390x1707.jpeg",
-    "summary_text": "What does it mean for NVIDIA\u2019s long-term outlook given that Gemini 3.0 was entirely trained and entirely operates on Google\u2019s TPU chips and infrastructure, not NVIDIA hardware?",
-    "category": "ai",
-    "_trending_tags": [
-      "ai",
-      "google",
-      "nvidia"
     ]
   },
   {
