@@ -1,5 +1,43 @@
 [
   {
+    "title": "Worldpay Debuts Model Context Protocol to Bolster Agentic Commerce",
+    "url": "https://www.pymnts.com/artificial-intelligence-2/2025/worldpay-debuts-model-context-protocol-to-bolster-agentic-commerce/",
+    "published_at": "2025-11-24T11:28:46-05:00",
+    "source": "PYMNTS",
+    "summary": "Worldpay has debuted a tool aimed to promote AI-powered payment integration and agentic commerce. Worldpay MCP, announced Monday (Nov. 24), is available now via the company\u2019s Developer Hub and Github, letting developers and merchants create artificial intelligence agents and direct payment integrations with Worldpay\u2019s API. The MCP is an open standard introduced late last year by [\u2026] The post Worl...",
+    "content_html": "<p style=\"font-weight: 400;\"><a href=\"https://www.worldpay.com/\" rel=\"noopener\" target=\"_blank\">Worldpay</a>\u00a0has debuted a tool aimed to promote AI-powered payment integration and agentic commerce.</p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p style=\"font-weight: 400;\">Worldpay MCP, <a href=\"https://www.businesswire.com/news/home/20251124162914/en/Worldpay-Accelerates-the-Future-of-Agentic-Commerce-with-Model-Context-Protocol-MCP-A-Publicly-Available-Server-Powering-AI-Driven-Agent-Enabled-Payments\" rel=\"noopener\" target=\"_blank\">announced</a>\u00a0Monday (Nov. 24), is available now via the company\u2019s Developer Hub and Github, letting developers and merchants create artificial intelligence agents and direct payment integrations with Worldpay\u2019s API.</p>\n<p style=\"font-weight: 400;\">The MCP is an open standard introduced late last year by Anthropic, designed to make AI systems more useful in real-world business settings. It allows artificial intelligence models like Claude, ChatGPT or Gemini to securely connect to business tools, databases and workflows.</p>\n<p style=\"font-weight: 400;\">\u201cModern AI models are great at\u00a0<a href=\"https://www.pymnts.com/artificial-intelligence-2/2025/how-mcp-turns-passive-ai-assistants-into-active-enterprise-agents/\" rel=\"noopener\" target=\"_blank\">generating text and insights</a>\u00a0but generally cannot act on live data,\u201d PYMNTS wrote earlier this month in a report on the MCP. \u201cA customer-service chatbot, for example, can explain how to reset a password but cannot perform that action because it lacks secure, structured access to internal systems.\u201d</p>\n<p style=\"font-weight: 400;\">The protocol addresses that problem by providing AI systems with a way to request and execute actions like retrieving information, updating records or triggering workflows within permitted security boundaries, turning AI from \u201ca passive assistant to an active helper,\u201d the report added.</p>\n<p style=\"font-weight: 400;\">At the same time, Worldpay said in its release, consumer expectations are shifting toward more autonomous, AI-fueled experiences, with\u00a0<a href=\"https://www.pymnts.com/artificial-intelligence-2/2025/worldpay-says-americans-most-likely-to-adopt-agentic-commerce-for-smaller-purchases/\" rel=\"noopener\" target=\"_blank\">44% of the shoppers</a>\u00a0surveyed by the company saying they would let an artificial intelligence bot browse on their behalf.</p>\n<p style=\"font-weight: 400;\">\u201cAgentic commerce is rapidly emerging as the next evolutionary step in online shopping,\u201d said\u00a0<a href=\"https://www.linkedin.com/in/lucinda-turner\" rel=\"noopener\" target=\"_blank\">Cindy Turner</a>, chief product officer at Worldpay.</p>\n<p style=\"font-weight: 400;\">\u201cBy launching Worldpay MCP, we\u2019re answering the demand of developers and merchants, giving them the freedom to experiment, build and innovate in a controlled environment, while connecting directly to our global payment infrastructure. We\u2019re not adding another protocol, we\u2019re making them all work together for sellers.\u201d</p>\n<p style=\"font-weight: 400;\">At the same time, Worldplay\u2019s survey also found there are limits to what consumers will allow artificial intelligence to do when it comes to shopping. Respondents said they were less likely to use agentic commerce for categories such as travel, concert tickets, clothing and home decor.</p>\n<p style=\"font-weight: 400;\">Worldpay also announced late last month that it now supports\u00a0<a href=\"https://openai.com/\">OpenAI</a>\u2019s\u00a0Agentic Commerce Protocol (ACP), which is an\u00a0<a href=\"https://www.pymnts.com/artificial-intelligence-2/2025/worldpay-brings-support-for-openais-agentic-commerce-protocol/\" rel=\"noopener\" target=\"_blank\">open standard</a>\u00a0for agentic commerce that allows AI agents, people and businesses to work in concert on purchases.</p>\n<p style=\"font-weight: 400;\">With ACP, U.S. users of OpenAI\u2019s ChatGPT can shop directly from participating Worldpay merchants using Instant Checkout.</p>\n<p style=\"font-weight: 400;\">\u201cFor agentic commerce to truly scale, it must deliver seamless, secure payments that both consumers and merchants can trust,\u201d Turner said at the time.</p>\n<div>\n<p class=\"elementtoproof\"><i>For all PYMNTS AI coverage, subscribe to the daily<span class=\"apple-converted-space\">\u00a0</span></i><a href=\"https://www.pymnts.com/subscribe/\" rel=\"noopener\" target=\"_blank\" title=\"https://www.pymnts.com/subscribe/\">AI\u00a0Newsletter</a><i>.</i></p>\n</div>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/artificial-intelligence-2/2025/worldpay-debuts-model-context-protocol-to-bolster-agentic-commerce/\">Worldpay Debuts Model Context Protocol to Bolster Agentic Commerce</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
+    "image_url": "https://www.pymnts.com/wp-content/uploads/2025/06/Worldpay.png?w=457",
+    "summary_text": "Worldpay has debuted a tool aimed to promote AI-powered payment integration and agentic commerce. Worldpay MCP, announced Monday (Nov. 24), is available now via the company\u2019s Developer Hub and Github, letting developers and merchants create artificial intelli...",
+    "category": "ai",
+    "_trending_tags": [
+      "agent",
+      "ai"
+    ],
+    "_permalink": "/p/692dcac1f3/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/692dcac1f3/",
+    "_summary_240": "Worldpay has debuted a tool aimed to promote AI-powered payment integration and agentic commerce. Worldpay MCP, announced Monday (Nov. 24), is available now via the company\u2019s...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/692dcac1f3/thumbnail.png"
+  },
+  {
+    "title": "Meta had a 17-strike policy for sex trafficking, former safety leader claims",
+    "url": "https://www.theverge.com/news/827658/meta-17-strike-policy-sex-trafficking-testimony-lawsuit",
+    "published_at": "2025-11-24T11:25:13-05:00",
+    "source": "The Verge",
+    "summary": "Meta allegedly gave accounts engaged in the \u201ctrafficking of humans for sex\u201d 16 chances before suspending them, according to testimony from the company\u2019s former head of safety and well-being, Vaishnavi Jayakumar. The testimony \u2014 along with several other claims that Meta ignored problems if they increased engagement \u2014 surfaced in an unredacted court filing related [\u2026]",
+    "content_html": "<figure>\n\n<img alt=\"\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/25546027/STK043_META_CVIRGINIA_D.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100\" />\n\t<figcaption>\n\t\t</figcaption>\n</figure>\n<p class=\"has-text-align-none\">Meta allegedly gave accounts engaged in the \u201ctrafficking of humans for sex\u201d 16 chances before suspending them, according to testimony from the company\u2019s former head of safety and well-being, Vaishnavi Jayakumar. The testimony \u2014 along with several other claims that Meta ignored problems if they increased engagement \u2014\u00a0 <a href=\"https://www.documentcloud.org/documents/26297953-unredacted-meta-filing/\">surfaced in an unredacted court filing</a> related to a social media child safety lawsuit <a href=\"https://www.theverge.com/2023/6/2/23746904/maryland-school-meta-google-tiktok-snap-lawsuit\">filed by school districts across the country</a>.</p>\n\n<p class=\"has-text-align-none\">\u201cThat means that you could incur 16 violations for prostitution and sexual solicitation, and upon the 17th violation, your account would be suspended,\u201d Jayakumar said during her deposition. She added that this \u201cis a very high strike threshold\u201d by \u201cany measure across the industry,\u201d according to the lawsuit. Internal documentation also \u201cconfirms\u201d this policy, lawyers claim.</p>\n\n<p class=\"has-text-align-none\"><a href=\"https://time.com/7336204/meta-lawsuit-files-child-safety/\">As reported by <em>Time</em></a>, the unredacted filing reveals other disturbing accusations, including that Meta \u201cdid not have a specific way\u201d for Instagram users to report child sexual abuse material (CSAM) on the platform. When Jayakumar learned about this, she reportedly \u201craised this issue \u2018multiple times,\u2019 but was told that it would be too much work to build\u201d and to review reports.</p>\n\n<p class=\"has-text-align-none\">Though Meta recently <a href=\"https://www.theverge.com/news/823191/meta-ftc-antitrust-trial-ruling\">won its antitrust battle against the Federal Trade Commission</a>, the company is facing mounting <a href=\"https://www.theverge.com/2024/2/1/24057460/senators-confront-meta-tiktok-snap-x-discord-ceos-kids-online-harm\">regulatory and legal pressure</a> over child safety on the platform. The unredacted filing is part of <a href=\"https://www.theverge.com/2023/11/14/23960956/meta-google-tiktok-snap-social-media-addiction-lawsuits\">a massive lawsuit</a> filed against Meta, TikTok, Google, and Snapchat by dozens of school districts, attorneys general, and parents, alleging they are contributing to a \u201cmental health crisis\u201d by operating \u201caddictive and dangerous\u201d platforms. Meta CEO Mark Zuckerberg <a href=\"https://www.theverge.com/2024/9/25/24254044/mark-zuckerberg-meta-social-media-teen-mental-health\">told <em>The Verge</em> last year</a> that he believes there is \u201cno causal connection\u201d between social media and teen mental health.</p>\n\n<p class=\"has-text-align-none\">The filing reveals multiple instances in which Meta is accused of downplaying the harms of its platforms in favor of boosting engagement. In 2019, Meta considered making all teen accounts private by default in order to prevent them from receiving unwanted messages; however, the company allegedly rejected the idea after the growth team found it would \u201clikely smash engagement.\u201d Meta <a href=\"https://www.theverge.com/2024/9/17/24246423/instagram-teen-account-private-restrictive\">started putting teens on Instagram</a> into private accounts last year.</p>\n\n<p class=\"has-text-align-none\">The lawsuit also claims that while Meta researchers found that hiding likes on posts would make users \u201csignificantly less likely to feel worse about themselves,\u201d the company walked back these plans after finding it was \u201cpretty negative to FB metrics.\u201d Meta is similarly accused of <a href=\"https://www.bbc.com/news/business-50152053\">reinstating beauty filters</a> in 2020, even after finding \u201cactively encouraging young girls into body dysmorphia.\u201d Taking away the filters could have \u201cnegative growth impact, simply because any restriction is likely to reduce engagement if people go elsewhere,\u201d Meta said, the lawsuit alleges.</p>\n\n<p class=\"has-text-align-none\">\u201cWe strongly disagree with these allegations, which rely on cherry-picked quotes and misinformed opinions in an attempt to present a deliberately misleading picture,\u201d Meta spokesperson Andy Stone said in an emailed statement to <em>The Verge. </em>\u201cThe full record will show that for over a decade, we have listened to parents, researched issues that matter most, and made real changes to protect teens \u2014 like introducing Teen Accounts with built-in protections and providing parents with controls to manage their teens\u2019 experiences.\u201d</p>",
+    "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/25546027/STK043_META_CVIRGINIA_D.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "summary_text": "Meta allegedly gave accounts engaged in the \u201ctrafficking of humans for sex\u201d 16 chances before suspending them, according to testimony from the company\u2019s former head of safety and well-being, Vaishnavi Jayakumar. The testimony \u2014 along with several other claims...",
+    "category": "ai",
+    "_trending_tags": [
+      "ai",
+      "meta"
+    ],
+    "_permalink": "/p/ab97e10994/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/ab97e10994/",
+    "_summary_240": "Meta allegedly gave accounts engaged in the \u201ctrafficking of humans for sex\u201d 16 chances before suspending them, according to testimony from the company\u2019s former head of safety and...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/ab97e10994/thumbnail.png"
+  },
+  {
     "title": "A new AI benchmark tests whether chatbots protect human wellbeing",
     "url": "https://techcrunch.com/2025/11/24/a-new-ai-benchmark-tests-whether-chatbots-protect-human-wellbeing/",
     "published_at": "2025-11-24T11:15:52-05:00",
@@ -643,6 +681,24 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/5cde100a0f/",
     "_summary_240": "Bitwise\u2019s Matt Hougan says tokens are getting better at returning value to holders, and Ethereum's Fusako upgrade could \u201cincrease token value capture.\u201d",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/5cde100a0f/thumbnail.png"
+  },
+  {
+    "title": "How to avoid becoming an \u201cAI-first\u201d company with zero real AI usage",
+    "url": "https://venturebeat.com/ai/how-to-avoid-becoming-an-ai-first-company-with-zero-real-ai-usage",
+    "published_at": "2025-11-24T00:00:00-05:00",
+    "source": "VentureBeat",
+    "summary": "Remember the first time you heard your company was going AI-first ? Maybe it came through an all-hands that felt different from the others. The CEO said, \u201cBy Q3, every team should have integrated AI into their core workflows,\u201d and the energy in the room (or on the Zoom) shifted. You saw a mix of excitement and anxiety ripple through the crowd. Maybe you were one of the curious ones. Maybe you\u2019d a...",
+    "content_html": "",
+    "image_url": "",
+    "summary_text": "Remember the first time you heard your company was going AI-first ? Maybe it came through an all-hands that felt different from the others. The CEO said, \u201cBy Q3, every team should have integrated AI into their core workflows,\u201d and the energy in the room (or o...",
+    "category": "ai",
+    "_trending_tags": [
+      "ai"
+    ],
+    "_permalink": "/p/2b0e45de12/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/2b0e45de12/",
+    "_summary_240": "Remember the first time you heard your company was going AI-first ? Maybe it came through an all-hands that felt different from the others. The CEO said, \u201cBy Q3, every team...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/2b0e45de12/thumbnail.png"
   },
   {
     "title": "Thailand Eyes Tougher Gold-Trade Rules After Baht Swings",
@@ -1360,21 +1416,6 @@
     "category": "fintech"
   },
   {
-    "title": "Google's upgraded Nano Banana Pro AI image model hailed as 'absolutely bonkers' for enterprises and users",
-    "url": "https://venturebeat.com/ai/googles-upgraded-nano-banana-pro-ai-image-model-hailed-as-absolutely-bonkers",
-    "published_at": "2025-11-20T15:20:00-05:00",
-    "source": "VentureBeat",
-    "summary": "Infographics rendered without a single spelling error. Complex diagrams one-shotted from paragraph prompts. Logos restored from fragments. And visual outputs so sharp with so much text density and accuracy, one developer simply called it \u201cabsolutely bonkers.\u201d Google DeepMind\u2019s newly released Nano Banana Pro \u2014officially Gemini 3 Pro Image\u2014has drawn astonishment from both the developer community an...",
-    "content_html": "",
-    "image_url": "",
-    "summary_text": "Infographics rendered without a single spelling error. Complex diagrams one-shotted from paragraph prompts. Logos restored from fragments. And visual outputs so sharp with so much text density and accuracy, one developer simply called it \u201cabsolutely bonkers.\u201d...",
-    "category": "ai",
-    "_trending_tags": [
-      "ai",
-      "google"
-    ]
-  },
-  {
     "title": "Why Microsoft Copilot Studio is the foundation for agentic business transformation",
     "url": "https://www.microsoft.com/en-us/microsoft-copilot/blog/copilot-studio/why-microsoft-copilot-studio-is-the-foundation-for-agentic-business-transformation/",
     "published_at": "2025-11-20T14:57:03-05:00",
@@ -1609,7 +1650,7 @@
     "source": "Financial Times - Technology",
     "summary": "Can Brussels balance its desire to set the guardrails for tech with its need to attract investment?",
     "content_html": "",
-    "image_url": "https://images.ft.com/v3/image/raw/ftcms%3Ab2ea6382-ca8e-49b6-bf1c-e0d96fec6920?source=cp-insurance-policy&fit=scale-down&quality=highest&width=1440&dpr=1",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/b2ea6382-ca8e-49b6-bf1c-e0d96fec6920.jpg",
     "summary_text": "Can Brussels balance its desire to set the guardrails for tech with its need to attract investment?",
     "category": "ai",
     "_trending_tags": [
