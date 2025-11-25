@@ -17,6 +17,24 @@
     ]
   },
   {
+    "title": "AI Firm Accuses SAP of Stealing Supply-Chain Trade Secrets",
+    "url": "https://www.bloomberg.com/news/articles/2025-11-25/ai-firm-accuses-sap-of-stealing-supply-chain-trade-secrets",
+    "published_at": "2025-11-25T13:36:09-05:00",
+    "source": "Bloomberg Technology",
+    "summary": "SAP SE was sued by supply-chain artificial intelligence firm o9 Solutions Inc., which claimed three of its former executives stole trade secrets for the European software giant.",
+    "content_html": "Signage at the SAP campus in Walldorf, Germany.",
+    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iD3bPqvv9wJo/v1/1200x-1.jpg",
+    "summary_text": "SAP SE was sued by supply-chain artificial intelligence firm o9 Solutions Inc., which claimed three of its former executives stole trade secrets for the European software giant.",
+    "category": "ai",
+    "_trending_tags": [
+      "ai"
+    ],
+    "_permalink": "/p/6b6eed8be4/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/6b6eed8be4/",
+    "_summary_240": "SAP SE was sued by supply-chain artificial intelligence firm o9 Solutions Inc., which claimed three of its former executives stole trade secrets for the European software giant.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/6b6eed8be4/thumbnail.png"
+  },
+  {
     "title": "UK Puts AI at Center of Its Economic Growth Strategy",
     "url": "https://www.pymnts.com/artificial-intelligence-2/2025/uk-puts-ai-at-center-of-its-economic-growth-strategy/",
     "published_at": "2025-11-25T13:21:45-05:00",
@@ -350,10 +368,10 @@
     "url": "https://venturebeat.com/ai/what-enterprises-should-know-about-the-white-houses-new-ai-manhattan-project",
     "published_at": "2025-11-25T10:52:00-05:00",
     "source": "VentureBeat",
-    "summary": "President Donald Trump\u2019s new \u201c Genesis Mission \u201d unveiled Monday is billed as a generational leap in how the United States does science akin to the Manhattan Project that created the atomic bomb during World War II. The executive order directs the Department of Energy (DOE) to build a \u201cclosed-loop AI experimentation platform\u201d that links the country\u2019s 17 national laboratories, federal supercompute...",
+    "summary": "President Donald Trump\u2019s new \u201c Genesis Mission \u201d unveiled Monday, November 24, 2025, is billed as a generational leap in how the United States does science akin to the Manhattan Project that created the atomic bomb during World War II. The executive order directs the Department of Energy (DOE) to build a \u201cclosed-loop AI experimentation platform\u201d that links the country\u2019s 17 national laboratories, ...",
     "content_html": "",
     "image_url": "",
-    "summary_text": "President Donald Trump\u2019s new \u201c Genesis Mission \u201d unveiled Monday is billed as a generational leap in how the United States does science akin to the Manhattan Project that created the atomic bomb during World War II. The executive order directs the Department ...",
+    "summary_text": "President Donald Trump\u2019s new \u201c Genesis Mission \u201d unveiled Monday, November 24, 2025, is billed as a generational leap in how the United States does science akin to the Manhattan Project that created the atomic bomb during World War II. The executive order dir...",
     "category": "ai",
     "_trending_tags": [
       "ai"
@@ -814,11 +832,7 @@
       "chatgpt",
       "gpt",
       "openai"
-    ],
-    "_permalink": "/p/13446f94c0/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/13446f94c0/",
-    "_summary_240": "OpenAI expanded its data residency regions for ChatGPT and its API, giving enterprise users the option to store and process their data closest to their business operations and...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/13446f94c0/thumbnail.png"
+    ]
   },
   {
     "title": "India\u2019s gig workers win legal status, but access to social security remains elusive",
@@ -1139,25 +1153,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/8cd2eb7725/",
     "_summary_240": "Anthropic has launched Opus 4.5, the latest version of its flagship model, with new integrations into Chrome and Excel.",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/8cd2eb7725/thumbnail.png"
-  },
-  {
-    "title": "Claude Code on desktop",
-    "url": "https://www.youtube.com/watch?v=zrcCS9oHjtI",
-    "published_at": "2025-11-24T13:52:06-05:00",
-    "source": "Anthropic YouTube",
-    "summary": "Today, we\u2019re introducing Claude Code in our desktop apps in research preview. You can now run multiple local and remote Claude Code sessions in parallel: one agent fixing bugs, another researching GitHub, a third updating docs. It uses git worktrees for parallel repo work and offers a clean user interface with the option to open in VS Code or resume in CLI. Learn more: https://www.anthropic.com/n...",
-    "content_html": "",
-    "image_url": "https://i.ytimg.com/vi/zrcCS9oHjtI/maxresdefault.jpg",
-    "summary_text": "Today, we\u2019re introducing Claude Code in our desktop apps in research preview. You can now run multiple local and remote Claude Code sessions in parallel: one agent fixing bugs, another researching GitHub, a third updating docs. It uses git worktrees for paral...",
-    "category": "ai",
-    "_trending_tags": [
-      "agent",
-      "claude"
-    ],
-    "_permalink": "/p/da5a539beb/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/da5a539beb/",
-    "_summary_240": "Today, we\u2019re introducing Claude Code in our desktop apps in research preview. You can now run multiple local and remote Claude Code sessions in parallel: one agent fixing bugs,...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/da5a539beb/thumbnail.png"
   },
   {
     "title": "Lutnick warns EU to relax tech rules if it wants lower steel tariffs",
@@ -1652,7 +1647,7 @@
     "source": "Financial Times - Technology",
     "summary": "Today\u2019s eye-popping valuations are based on the assumption that LLMs are the only game in town",
     "content_html": "",
-    "image_url": "https://images.ft.com/v3/image/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Fuploaded-files%2Ffthead-v1_gillian-tett-0df947ec-cd61-4d74-b2d8-e5f832415f1a.png?source=ft-app-api&fit=scale-down&quality=highest&width=150&dpr=2",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/abce98de-3a38-42f3-9802-109ce6702271.jpg",
     "summary_text": "Today\u2019s eye-popping valuations are based on the assumption that LLMs are the only game in town",
     "category": "ai",
     "_trending_tags": [
@@ -1672,6 +1667,23 @@
     "category": "fintech",
     "_trending_tags": [
       "ai"
+    ]
+  },
+  {
+    "title": "Scania accelerates operations across its global workforce with ChatGPT",
+    "url": "https://www.youtube.com/watch?v=0luMwmnvRuQ",
+    "published_at": "2025-11-20T20:43:32-05:00",
+    "source": "OpenAI YouTube",
+    "summary": "Scania builds the trucks, buses, and transport systems that keep the world moving. With AI in their engineering-led organisation, they're evolving from vehicle maker to sustainable transport ecosystem leader. Read more: https://openai.com/index/scania/",
+    "content_html": "",
+    "image_url": "https://i.ytimg.com/vi/0luMwmnvRuQ/maxresdefault.jpg",
+    "summary_text": "Scania builds the trucks, buses, and transport systems that keep the world moving. With AI in their engineering-led organisation, they're evolving from vehicle maker to sustainable transport ecosystem leader. Read more: https://openai.com/index/scania/",
+    "category": "ai",
+    "_trending_tags": [
+      "ai",
+      "chatgpt",
+      "gpt",
+      "openai"
     ]
   },
   {
