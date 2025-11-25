@@ -84,22 +84,22 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/c39a0a66b9/thumbnail.png"
   },
   {
-    "title": "Warner Music Settles Lawsuit with AI Music Startup Suno",
+    "title": "Warner Music Settles Lawsuit With AI Music Startup Suno",
     "url": "https://www.bloomberg.com/news/articles/2025-11-25/warner-music-settles-lawsuit-with-ai-music-startup-suno",
     "published_at": "2025-11-25T14:38:11-05:00",
     "source": "Bloomberg Technology",
-    "summary": "Warner Music Group Corp. and Suno, a generative-artificial intelligence music startup, settled their copyright lawsuit and agreed on a new partnership for creating music.",
+    "summary": "Warner Music Group Corp. and Suno Inc. settled their copyright lawsuit and agreed on a new partnership for creating music, the latest sign of a thaw in relations between the music industry and the artificial intelligence startups.",
     "content_html": "The Warner Music headquarters in the Arts District neighborhood of Los Angeles.",
     "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ioBU0ML3mzoE/v1/1200x-1.jpg",
-    "summary_text": "Warner Music Group Corp. and Suno, a generative-artificial intelligence music startup, settled their copyright lawsuit and agreed on a new partnership for creating music.",
+    "summary_text": "Warner Music Group Corp. and Suno Inc. settled their copyright lawsuit and agreed on a new partnership for creating music, the latest sign of a thaw in relations between the music industry and the artificial intelligence startups.",
     "category": "ai",
     "_trending_tags": [
       "ai"
     ],
-    "_permalink": "/p/49d11a5fe9/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/49d11a5fe9/",
-    "_summary_240": "Warner Music Group Corp. and Suno, a generative-artificial intelligence music startup, settled their copyright lawsuit and agreed on a new partnership for creating music.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/49d11a5fe9/thumbnail.png"
+    "_permalink": "/p/71cf14a262/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/71cf14a262/",
+    "_summary_240": "Warner Music Group Corp. and Suno Inc. settled their copyright lawsuit and agreed on a new partnership for creating music, the latest sign of a thaw in relations between the...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/71cf14a262/thumbnail.png"
   },
   {
     "title": "OpenAI and Perplexity are launching AI shopping assistants, but competing startups aren\u2019t sweating it",
@@ -794,11 +794,7 @@
     "_trending_tags": [
       "chatgpt",
       "gpt"
-    ],
-    "_permalink": "/p/66577c6229/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/66577c6229/",
-    "_summary_240": "We\u2019re sharing our approach to mental health-related litigation. O handle sensitive cases with care, transparency, and respect while continuing to strengthen safety and support in...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/66577c6229/thumbnail.png"
+    ]
   },
   {
     "title": "Three Years of AI Mania: How ChatGPT Reordered the Stock Market",
@@ -1250,6 +1246,25 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/8cd2eb7725/",
     "_summary_240": "Anthropic has launched Opus 4.5, the latest version of its flagship model, with new integrations into Chrome and Excel.",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/8cd2eb7725/thumbnail.png"
+  },
+  {
+    "title": "Claude Code on desktop",
+    "url": "https://www.youtube.com/watch?v=zrcCS9oHjtI",
+    "published_at": "2025-11-24T13:52:06-05:00",
+    "source": "Anthropic YouTube",
+    "summary": "Today, we\u2019re introducing Claude Code in our desktop apps in research preview. You can now run multiple local and remote Claude Code sessions in parallel: one agent fixing bugs, another researching GitHub, a third updating docs. It uses git worktrees for parallel repo work and offers a clean user interface with the option to open in VS Code or resume in CLI. Learn more: https://www.anthropic.com/n...",
+    "content_html": "",
+    "image_url": "https://i.ytimg.com/vi/zrcCS9oHjtI/maxresdefault.jpg",
+    "summary_text": "Today, we\u2019re introducing Claude Code in our desktop apps in research preview. You can now run multiple local and remote Claude Code sessions in parallel: one agent fixing bugs, another researching GitHub, a third updating docs. It uses git worktrees for paral...",
+    "category": "ai",
+    "_trending_tags": [
+      "agent",
+      "claude"
+    ],
+    "_permalink": "/p/da5a539beb/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/da5a539beb/",
+    "_summary_240": "Today, we\u2019re introducing Claude Code in our desktop apps in research preview. You can now run multiple local and remote Claude Code sessions in parallel: one agent fixing bugs,...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/da5a539beb/thumbnail.png"
   },
   {
     "title": "Lutnick warns EU to relax tech rules if it wants lower steel tariffs",
@@ -1728,23 +1743,6 @@
     "category": "fintech",
     "_trending_tags": [
       "ai"
-    ]
-  },
-  {
-    "title": "Scania accelerates operations across its global workforce with ChatGPT",
-    "url": "https://www.youtube.com/watch?v=0luMwmnvRuQ",
-    "published_at": "2025-11-20T20:43:32-05:00",
-    "source": "OpenAI YouTube",
-    "summary": "Scania builds the trucks, buses, and transport systems that keep the world moving. With AI in their engineering-led organisation, they're evolving from vehicle maker to sustainable transport ecosystem leader. Read more: https://openai.com/index/scania/",
-    "content_html": "",
-    "image_url": "https://i.ytimg.com/vi/0luMwmnvRuQ/maxresdefault.jpg",
-    "summary_text": "Scania builds the trucks, buses, and transport systems that keep the world moving. With AI in their engineering-led organisation, they're evolving from vehicle maker to sustainable transport ecosystem leader. Read more: https://openai.com/index/scania/",
-    "category": "ai",
-    "_trending_tags": [
-      "ai",
-      "chatgpt",
-      "gpt",
-      "openai"
     ]
   },
   {
