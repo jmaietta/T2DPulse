@@ -17,6 +17,24 @@
     ]
   },
   {
+    "title": "Klarna launches stablecoin to cut cost of cross-border payments",
+    "url": "https://www.ft.com/content/1e22422f-5859-42e0-85ff-7d6fd7869d5c",
+    "published_at": "2025-11-25T08:00:01-05:00",
+    "source": "Financial Times - Technology",
+    "summary": "Digital token will aimed at merchants moving large sums and may also be offered to consumers",
+    "content_html": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/89f6fe76-8936-4f5a-81d6-84de76fc07b4.jpg",
+    "summary_text": "Digital token will aimed at merchants moving large sums and may also be offered to consumers",
+    "category": "fintech",
+    "_trending_tags": [
+      "ai"
+    ],
+    "_permalink": "/p/a7f64849d3/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/a7f64849d3/",
+    "_summary_240": "Digital token will aimed at merchants moving large sums and may also be offered to consumers",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/a7f64849d3/thumbnail.png"
+  },
+  {
     "title": "China\u2019s Top Companies Focus on AI Agents as Next Battleground",
     "url": "https://www.bloomberg.com/news/newsletters/2025-11-25/china-s-top-companies-focus-on-ai-agents-as-next-battleground",
     "published_at": "2025-11-25T07:01:33-05:00",
@@ -495,25 +513,21 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/fe00c0a6e6/thumbnail.png"
   },
   {
-    "title": "Nvidia Shares Drop on Report of Google Challenge in AI Chips",
+    "title": "Nvidia-Google AI Chip Rivalry Escalates on Report of Meta Talks",
     "url": "https://www.bloomberg.com/news/articles/2025-11-25/alphabet-gains-on-report-that-meta-will-use-its-ai-chips",
     "published_at": "2025-11-24T19:11:53-05:00",
     "source": "Bloomberg Technology",
-    "summary": "Nvidia Corp. shares fell on a report that Meta Platforms Inc. is in talks to spend billions on Google\u2019s AI chips, suggesting the internet search leader is making headway in efforts to rival the industry\u2019s bestselling AI accelerator.",
+    "summary": "Meta Platforms Inc. is in talks to spend billions on Google\u2019s AI chips, the Information reported, adding to a monthslong share rally as the search giant has made the case it can rival Nvidia Corp. as a leader in artificial intelligence technology.",
     "content_html": "",
     "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/i05q1XDFA7_0/v2/1200x-1.png",
-    "summary_text": "Nvidia Corp. shares fell on a report that Meta Platforms Inc. is in talks to spend billions on Google\u2019s AI chips, suggesting the internet search leader is making headway in efforts to rival the industry\u2019s bestselling AI accelerator.",
+    "summary_text": "Meta Platforms Inc. is in talks to spend billions on Google\u2019s AI chips, the Information reported, adding to a monthslong share rally as the search giant has made the case it can rival Nvidia Corp. as a leader in artificial intelligence technology.",
     "category": "ai",
     "_trending_tags": [
       "ai",
       "google",
       "meta",
       "nvidia"
-    ],
-    "_permalink": "/p/471e1bcdc4/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/471e1bcdc4/",
-    "_summary_240": "Nvidia Corp. shares fell on a report that Meta Platforms Inc. is in talks to spend billions on Google\u2019s AI chips, suggesting the internet search leader is making headway in...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/471e1bcdc4/thumbnail.png"
+    ]
   },
   {
     "title": "What OpenAI Did When ChatGPT Users Lost Touch With Reality",
@@ -817,6 +831,25 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/8cd2eb7725/",
     "_summary_240": "Anthropic has launched Opus 4.5, the latest version of its flagship model, with new integrations into Chrome and Excel.",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/8cd2eb7725/thumbnail.png"
+  },
+  {
+    "title": "Claude Code on desktop",
+    "url": "https://www.youtube.com/watch?v=zrcCS9oHjtI",
+    "published_at": "2025-11-24T13:52:06-05:00",
+    "source": "Anthropic YouTube",
+    "summary": "Today, we\u2019re introducing Claude Code in our desktop apps in research preview. You can now run multiple local and remote Claude Code sessions in parallel: one agent fixing bugs, another researching GitHub, a third updating docs. It uses git worktrees for parallel repo work and offers a clean user interface with the option to open in VS Code or resume in CLI. Learn more: https://www.anthropic.com/n...",
+    "content_html": "",
+    "image_url": "https://i.ytimg.com/vi/zrcCS9oHjtI/maxresdefault.jpg",
+    "summary_text": "Today, we\u2019re introducing Claude Code in our desktop apps in research preview. You can now run multiple local and remote Claude Code sessions in parallel: one agent fixing bugs, another researching GitHub, a third updating docs. It uses git worktrees for paral...",
+    "category": "ai",
+    "_trending_tags": [
+      "agent",
+      "claude"
+    ],
+    "_permalink": "/p/da5a539beb/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/da5a539beb/",
+    "_summary_240": "Today, we\u2019re introducing Claude Code in our desktop apps in research preview. You can now run multiple local and remote Claude Code sessions in parallel: one agent fixing bugs,...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/da5a539beb/thumbnail.png"
   },
   {
     "title": "Stand With Crypto to vet 2026 candidates on digital asset positions",
@@ -1436,23 +1469,6 @@
     ]
   },
   {
-    "title": "Scania accelerates operations across its global workforce with ChatGPT",
-    "url": "https://www.youtube.com/watch?v=0luMwmnvRuQ",
-    "published_at": "2025-11-20T20:43:32-05:00",
-    "source": "OpenAI YouTube",
-    "summary": "Scania builds the trucks, buses, and transport systems that keep the world moving. With AI in their engineering-led organisation, they're evolving from vehicle maker to sustainable transport ecosystem leader. Read more: https://openai.com/index/scania/",
-    "content_html": "",
-    "image_url": "https://i.ytimg.com/vi/0luMwmnvRuQ/maxresdefault.jpg",
-    "summary_text": "Scania builds the trucks, buses, and transport systems that keep the world moving. With AI in their engineering-led organisation, they're evolving from vehicle maker to sustainable transport ecosystem leader. Read more: https://openai.com/index/scania/",
-    "category": "ai",
-    "_trending_tags": [
-      "ai",
-      "chatgpt",
-      "gpt",
-      "openai"
-    ]
-  },
-  {
     "title": "4 People Indicted in Alleged Conspiracy to Smuggle Supercomputers and Nvidia Chips to China",
     "url": "https://www.wired.com/story/smuggling-supercomputers-china-nvidia-indictment/",
     "published_at": "2025-11-20T17:26:17-05:00",
@@ -1652,7 +1668,7 @@
     "source": "Financial Times - Technology",
     "summary": "Despite record expansion and growing ambition in the continent, the US is surging ahead again",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/79d4f212-428f-467d-97fd-12fbc76f5bc4.jpg",
+    "image_url": "https://images.ft.com/v3/image/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F79d4f212-428f-467d-97fd-12fbc76f5bc4.jpg?source=next-article&fit=scale-down&quality=highest&width=700&dpr=1",
     "summary_text": "Despite record expansion and growing ambition in the continent, the US is surging ahead again",
     "category": "fintech",
     "_trending_tags": [
