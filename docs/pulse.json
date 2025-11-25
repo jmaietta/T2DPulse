@@ -1,5 +1,39 @@
 [
   {
+    "title": "Researchers Train AI Agents to Share Complex Tasks",
+    "url": "https://www.pymnts.com/artificial-intelligence-2/2025/researchers-train-ai-agents-to-share-complex-tasks/",
+    "published_at": "2025-11-25T17:19:55-05:00",
+    "source": "PYMNTS",
+    "summary": "Researchers at Imperial College London and Ant Group, part of the Chinese conglomerate Alibaba Group, introduced a new method for training groups of artificial intelligence (AI) agents to work together on complex tasks, presenting a framework that coordinates a main agent that plans steps and sub-agents that operate tools. The team detailed the approach, called [\u2026] The post Researchers Train AI A...",
+    "content_html": "<p><span>Researchers at Imperial College London and Ant Group, part of the Chinese conglomerate Alibaba Group, introduced a new method for training groups of artificial intelligence (AI) agents to work together on complex tasks, presenting a framework that coordinates a main agent that plans steps and sub-agents that operate tools. The team detailed the approach, called M-GRPO, in </span><a href=\"https://arxiv.org/pdf/2511.13288v2\" rel=\"noopener\" target=\"_blank\"><span>a paper</span></a><span> released this month and evaluated the system across three real-world benchmarks that measure multi-step reasoning and tool use.</span></p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<h2><b><span>Single Agent Systems Face Coordination Limits</span></b></h2>\n<p><span>Most current tools using AI systems rely on a single agent to handle planning, reasoning and tool execution. They reported that these systems struggle with tasks that require long decision chains because one model must determine what to do, when to do it, which tool to use, and how to combine outputs. According to the paper, errors made early in a sequence often affect subsequent steps when all decisions run through a single model.</span></p>\n<p><span>The </span><a href=\"https://arxiv.org/pdf/2511.13288v2\" rel=\"noopener\" target=\"_blank\"><span>study</span></a><span> tested an alternative structure in which several agents share responsibility. A main agent produces a plan, delegates steps, and checks outputs, while sub-agents run tool operations that may involve several turns. The authors described this structure as a vertical multi-agent setup that mirrors how multistage tasks unfold in real environments where an AI system must search, analyze and retrieve information from external tools.</span></p>\n<p><span>In one example, the main agent selected a reasoning tool and issued instructions while sub-agents carried out web navigation or retrieval steps. The researchers noted that this structure differed from single-agent attempts, in which the same component tried to perform every action.</span></p>\n<h2><b><span>New Training Method Introduces Decoupled Pipeline</span></b></h2>\n<p><span>The researchers developed M-GRPO as an extension of the earlier GRPO method, a training method that evaluates an agent\u2019s output against the average performance of other outputs in the same group and updates the policy based on that relative score.</span></p>\n<p><span>The framework adapts GRPO to a structure with a single main agent and multiple sub-agents operating at different frequencies. The paper identifies three challenges in training such systems. The first is that the main agent operates on every turn, while sub-agents engage only when a tool is needed. The second is that tasks may require different numbers of sub-agents. The third is that rollouts may be generated on separate servers.</span></p>\n<p><span>To address these issues, the researchers created a decoupled training pipeline. The system collects rollouts from the main agent and all sub-agents and stores them in a shared buffer. Each agent is then evaluated on its contribution to the final answer. The method computes group-relative advantages by comparing an agent\u2019s performance with the average performance of similar agents, allowing updates even when agents participate at different rates.</span></p>\n<p><span>The paper states that this design enables coordination between the main agent\u2019s planning behavior and each sub-agent\u2019s tool-execution behavior. The authors wrote that M-GRPO supports scenarios in which sub-agents must run multi-turn tool calls, retrieve external information, or navigate through several steps before returning results.</span></p>\n<h2><b><span>Meeting Benchmarks</span></b></h2>\n<p><span>The researchers tested their thesis on several performance benchmarks. These benchmarks simulate real-world tasks that require planning and decision-making across multiple stages. </span><a href=\"https://arxiv.org/abs/2501.07572\" rel=\"noopener\" target=\"_blank\"><span>WebWalkerQA</span></a><span> tasks involve page-to-page navigation, locating specific content and issuing sequential tool calls. </span><a href=\"https://arxiv.org/abs/2506.13651\" rel=\"noopener\" target=\"_blank\"><span>XBench DeepSearch</span></a><span> includes tasks that require selecting the correct tool, combining retrieved information and assembling a final output. </span><a href=\"https://arxiv.org/abs/2311.12983\" rel=\"noopener\" target=\"_blank\"><span>GAIA</span></a><span> includes tasks that require searching, running tools and integrating several sources of information.</span></p>\n<p><span>The paper reported that the system achieved higher performance than both a single-agent baseline and a multi-agent baseline with fixed sub-agents, and that the multi-agent model demonstrated greater training stability and higher sample efficiency across all three benchmarks.</span></p>\n<p><i><span>For all PYMNTS AI coverage, subscribe to the daily </span></i><a href=\"https://pymnts.com/subscribe/\" rel=\"noopener\" target=\"_blank\"><i><span>AI Newsletter</span></i></a><i><span>.</span></i></p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/artificial-intelligence-2/2025/researchers-train-ai-agents-to-share-complex-tasks/\">Researchers Train AI Agents to Share Complex Tasks</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
+    "image_url": "https://www.pymnts.com/wp-content/uploads/2025/11/ai-agents-agentic-ai-collaboration-multi-agent-artificial-intelligence-operations.jpeg?w=457",
+    "summary_text": "Researchers at Imperial College London and Ant Group, part of the Chinese conglomerate Alibaba Group, introduced a new method for training groups of artificial intelligence (AI) agents to work together on complex tasks, presenting a framework that coordinates...",
+    "category": "ai",
+    "_trending_tags": [
+      "agent",
+      "ai"
+    ],
+    "_permalink": "/p/33216899c5/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/33216899c5/",
+    "_summary_240": "Researchers at Imperial College London and Ant Group, part of the Chinese conglomerate Alibaba Group, introduced a new method for training groups of artificial intelligence (AI)...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/33216899c5/thumbnail.png"
+  },
+  {
+    "title": "Ep:515: Roblox (RBLX): Playground or Danger?",
+    "url": "https://newsletter.tek2dayholdings.com/p/ep515-roblox-rblx-playground-or-danger",
+    "published_at": "2025-11-25T17:09:12-05:00",
+    "source": "TEK2day Newsletter",
+    "summary": "",
+    "content_html": "<div class=\"youtube-wrap\" id=\"youtube2-Wcp8i6W9vjg\"><div class=\"youtube-inner\"></div></div><div><hr /></div>",
+    "image_url": "https://substackcdn.com/image/youtube/w_728,c_limit/Wcp8i6W9vjg",
+    "summary_text": "Publishing content at the intersection of Technology and the Capital Markets",
+    "category": "ai",
+    "_permalink": "/p/21e0dbcf65/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/21e0dbcf65/",
+    "_summary_240": "Publishing content at the intersection of Technology and the Capital Markets",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/21e0dbcf65/thumbnail.png"
+  },
+  {
     "title": "Expanding data residency access to business customers worldwide",
     "url": "https://openai.com/index/expanding-data-residency-access-to-business-customers-worldwide",
     "published_at": "2025-11-25T17:00:00-05:00",
@@ -421,24 +455,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/2388902160/",
     "_summary_240": "The U.K. government last week announced a wide package of AI investments designed to place artificial intelligence at the center of its economic renewal strategy, committing...",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/2388902160/thumbnail.png"
-  },
-  {
-    "title": "Thredd Expands Payments Processing Platform by Joining Visa Cloud Connect",
-    "url": "https://www.pymnts.com/partnerships/2025/thredd-expands-payments-processing-platform-by-joining-visa-cloud-connect/",
-    "published_at": "2025-11-25T13:20:13-05:00",
-    "source": "PYMNTS",
-    "summary": "Global payments processor Thredd has signed an agreement in which it will connect across three global Visa Cloud Connect endpoints. By connecting to Visa Cloud Connect, which allows organizations to access Visa\u2019s global payments network VisaNet, Thredd will eliminate the need for multiple regional integrations and will help its clients gain new geographies, Thredd [\u2026] The post Thredd Expands Paym...",
-    "content_html": "<p><span>Global payments processor </span><a href=\"https://www.thredd.com/\" rel=\"noopener\" target=\"_blank\"><span>Thredd</span></a><span> has signed an agreement in which it will connect across three global </span><a href=\"https://usa.visa.com/products/visa-cloud-connect.html\" rel=\"noopener\" target=\"_blank\"><span>Visa Cloud Connect</span></a><span> endpoints.</span></p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p><span>By connecting to Visa Cloud Connect, which allows organizations to access Visa\u2019s global payments network </span><a href=\"https://corporate.visa.com/en/about-visa/visanet.html\" rel=\"noopener\" target=\"_blank\"><span>VisaNet</span></a><span>, Thredd will eliminate the need for multiple regional integrations and will help its clients gain new geographies, Thredd said in a Tuesday (Nov. 25) </span><a href=\"https://www.thredd.com/about-us/newsroom/company-news/thredd-signs-landmark-agreement-to-enable-visa-cloud-connect-globally\" rel=\"noopener\" target=\"_blank\"><span>press release</span></a><span>.</span></p>\n<p><span>\u201cSigning this agreement is about future-proofing payments infrastructure,\u201d </span><a href=\"https://uk.linkedin.com/in/jonathan-vaux-789788\" rel=\"noopener\" target=\"_blank\"><span>Jonathan Vaux</span></a><span>, head of propositions and partnerships at Thredd, said in the release. \u201cBy committing to Visa Cloud Connect globally, we\u2019re helping our clients gain faster, more resilient access to Visa\u2019s network, while advancing our strategy to deliver a single, cloud-first global platform.\u201d</span></p>\n<p><span>Another collaboration between the two companies was announced in October, when Thredd released an </span><a href=\"https://www.pymnts.com/partnerships/2025/thredd-featurespace-team-better-view-fraud-attempts/\" rel=\"noopener\" target=\"_blank\"><span>anti-fraud solution</span></a><span> developed in tandem with Visa\u2019s </span><a href=\"https://www.featurespace.com/\" rel=\"noopener\" target=\"_blank\"><span>Featurespace</span></a><span>.</span></p>\n<p><span>The One View solution allows card transactions and non-card payments to be intelligently monitored under a single, network-agnostic interface and rules engine to enhance fraud detection.</span></p>\n<p><span>\u201cNow fraud teams can spot unusual behavior patterns that might not be flagged in isolated systems, and choose to equip themselves with self-resolving alerts that can be sent directly to customers, enabling them to approve or decline transactions themselves,\u201d </span><a href=\"https://uk.linkedin.com/in/anthony-gudgeon\" rel=\"noopener\" target=\"_blank\"><span>Anthony Gudgeon</span></a><span>, head of fraud operations at Thredd, said at the time in a press release. \u201cAs a result, clients reduce their customer service workload and can eliminate the need for 24/7 manual monitoring.\u201d</span></p>\n<p><span>During October, Thredd also expanded its partnership with cryptocurrency exchange </span><a href=\"https://www.bybit.com/en/\" rel=\"noopener\" target=\"_blank\"><span>Bybit</span></a><span> to help roll out the exchange\u2019s multi-currency, crypto-linked </span><a href=\"https://www.pymnts.com/cryptocurrency/2025/thredd-helps-bybit-launch-crypto-linked-debit-cards/#wpcf7-f2699550-p3181734-o1\" rel=\"noopener\" target=\"_blank\"><span>payment card</span></a><span>, the Bybit Card.</span></p>\n<p><span>Thredd also said in October that it entered the </span><a href=\"https://www.pymnts.com/partnerships/2025/thredd-integrates-loanpro-infrastructure-into-new-credit-offerings/\" rel=\"noopener\" target=\"_blank\"><span>credit</span></a><span> space and integrated </span><a href=\"https://www.loanpro.io/\" rel=\"noopener\" target=\"_blank\"><span>LoanPro</span></a><span>\u2019s composable credit infrastructure to underpin its new offerings.</span></p>\n<p><span>Meanwhile, Visa CEO </span><a href=\"https://www.linkedin.com/in/ryan-mcinerney-79838697/\" rel=\"noopener\" target=\"_blank\"><span>Ryan McInerney</span></a><span> said in October: \u201cVisa has become a hyperscaler, enabling anyone that wants to be in the money movement or </span><a href=\"https://www.linkedin.com/in/ryan-mcinerney-79838697/\" rel=\"noopener\" target=\"_blank\"><span>payments</span></a><span> business to build on top of the Visa-as-a-service stack.\u201d</span></p>\n<p><span>Speaking during Visa\u2019s Oct. 28 earnings call, McInerney also said that the payments giant has been deploying \u201cthe next generation of VisaNet &#8230; [which] offers a cloud-ready microservices distributed, modular architecture that uses open languages and technologies, enabling easier scaling, configuration and faster feature deployment.\u201d</span></p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/partnerships/2025/thredd-expands-payments-processing-platform-by-joining-visa-cloud-connect/\">Thredd Expands Payments Processing Platform by Joining Visa Cloud Connect</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
-    "image_url": "https://www.pymnts.com/wp-content/uploads/2025/11/Thredd-Visa-Cloud-Connect-Partnership-Payments-Digital-Payments-Processing.jpeg?w=457",
-    "summary_text": "Global payments processor Thredd has signed an agreement in which it will connect across three global Visa Cloud Connect endpoints. By connecting to Visa Cloud Connect, which allows organizations to access Visa\u2019s global payments network VisaNet, Thredd will e...",
-    "category": "fintech",
-    "_trending_tags": [
-      "cloud"
-    ],
-    "_permalink": "/p/c07ca98ed0/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/c07ca98ed0/",
-    "_summary_240": "Global payments processor Thredd has signed an agreement in which it will connect across three global Visa Cloud Connect endpoints. By connecting to Visa Cloud Connect, which...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/c07ca98ed0/thumbnail.png"
   },
   {
     "title": "Why the SEC\u2019s new guidelines could speed up the approval process for new crypto ETFs",
@@ -1841,35 +1857,6 @@
     "summary_text": "A federal prosecutor alleged that one defendant boasted that his father \u201chad engaged in similar business for the Chinese Communist Party.\u201d",
     "category": "fintech",
     "_trending_tags": [
-      "nvidia"
-    ]
-  },
-  {
-    "title": "How TikTok Helped Meta Land an Antitrust Victory",
-    "url": "https://www.nytimes.com/2025/11/18/technology/meta-google-antitrust-tech.html",
-    "published_at": "2025-11-20T17:08:30-05:00",
-    "source": "The New York Times - Technology",
-    "summary": "Silicon Valley has increasingly pointed at rapid digital changes to blunt government efforts to rein in its power.",
-    "content_html": "The Washington headquarters of the Federal Trade Commission, which sued Meta five years ago.",
-    "image_url": "https://static01.nyt.com/images/2025/11/19/multimedia/19biz-meta-analysis-1-jpkv/19biz-meta-analysis-1-jpkv-mediumSquareAt3X.jpg",
-    "summary_text": "Silicon Valley has increasingly pointed at rapid digital changes to blunt government efforts to rein in its power.",
-    "category": "software",
-    "_trending_tags": [
-      "meta"
-    ]
-  },
-  {
-    "title": "NVIDIA Announces Upcoming Event for Financial Community",
-    "url": "https://nvidianews.nvidia.com/news/nvidia-announces-upcoming-event-for-financial-community-6914936",
-    "published_at": "2025-11-20T17:00:00-05:00",
-    "source": "NVIDIA News",
-    "summary": "SANTA CLARA, Calif., Nov. 20, 2025 (GLOBE NEWSWIRE) -- NVIDIA will present at the following event for the financial community: UBS Global Technology and AI ConferenceTuesday, Dec. 2, 6:35 a.m. ...",
-    "content_html": "",
-    "image_url": "https://nvidianews.nvidia.com/media/sites/219/images/social-image.jpg",
-    "summary_text": "SANTA CLARA, Calif., Nov. 20, 2025 (GLOBE NEWSWIRE) -- NVIDIA will present at the following event for the financial community: UBS Global Technology and AI ConferenceTuesday, Dec. 2, 6:35 a.m. ...",
-    "category": "ai",
-    "_trending_tags": [
-      "ai",
       "nvidia"
     ]
   },
