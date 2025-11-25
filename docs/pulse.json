@@ -36,10 +36,10 @@
     "url": "https://techcrunch.com/2025/11/25/microsofts-ai-chatbot-copilot-leaves-whatsapp-on-january-15/",
     "published_at": "2025-11-25T12:11:55-05:00",
     "source": "TechCrunch",
-    "summary": "WhatsApp's new platform policies ban general purpose AI chatbots like Copilot from using its service.",
+    "summary": "WhatsApp's new platform policies ban general-purpose AI chatbots like Copilot from using its service.",
     "content_html": "",
     "image_url": "https://techcrunch.com/wp-content/uploads/2024/04/GettyImages-2041281128-e1712563728365.jpg?resize=1200,676",
-    "summary_text": "WhatsApp's new platform policies ban general purpose AI chatbots like Copilot from using its service.",
+    "summary_text": "WhatsApp's new platform policies ban general-purpose AI chatbots like Copilot from using its service.",
     "category": "ai",
     "_trending_tags": [
       "ai",
@@ -47,7 +47,7 @@
     ],
     "_permalink": "/p/f4fdbb6d87/",
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/f4fdbb6d87/",
-    "_summary_240": "WhatsApp's new platform policies ban general purpose AI chatbots like Copilot from using its service.",
+    "_summary_240": "WhatsApp's new platform policies ban general-purpose AI chatbots like Copilot from using its service.",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/f4fdbb6d87/thumbnail.png"
   },
   {
@@ -68,6 +68,24 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/89712fbdbf/",
     "_summary_240": "Cargo theft is now \u201cprimarily cyber-enabled,\u201d an FBI agent said in a Tuesday (Nov. 25) Wall Street Journal report. Doug McKelway, a supervisory special agent with the Federal...",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/89712fbdbf/thumbnail.png"
+  },
+  {
+    "title": "China\u2019s Pony AI plans to triple global robotaxi fleet by the end of 2026",
+    "url": "https://techcrunch.com/2025/11/25/chinas-pony-ai-plans-to-triple-global-robotaxi-fleet-by-the-end-of-2026/",
+    "published_at": "2025-11-25T11:54:57-05:00",
+    "source": "TechCrunch",
+    "summary": "The Chinese autonomous vehicle company Pony.ai has global ambitions and plans to build a 3,000-strong robotaxi fleet to meet them.",
+    "content_html": "",
+    "image_url": "https://techcrunch.com/wp-content/uploads/2025/11/pony.ai-robotaxi.jpg?resize=1200,800",
+    "summary_text": "The Chinese autonomous vehicle company Pony.ai has global ambitions and plans to build a 3,000-strong robotaxi fleet to meet them.",
+    "category": "ai",
+    "_trending_tags": [
+      "ai"
+    ],
+    "_permalink": "/p/fb7faf8e57/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/fb7faf8e57/",
+    "_summary_240": "The Chinese autonomous vehicle company Pony.ai has global ambitions and plans to build a 3,000-strong robotaxi fleet to meet them.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/fb7faf8e57/thumbnail.png"
   },
   {
     "title": "3 Ways Compliance Is Becoming an Unlock for Embedded Finance in B2B",
@@ -1051,25 +1069,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/8cd2eb7725/thumbnail.png"
   },
   {
-    "title": "Claude Code on desktop",
-    "url": "https://www.youtube.com/watch?v=zrcCS9oHjtI",
-    "published_at": "2025-11-24T13:52:06-05:00",
-    "source": "Anthropic YouTube",
-    "summary": "Today, we\u2019re introducing Claude Code in our desktop apps in research preview. You can now run multiple local and remote Claude Code sessions in parallel: one agent fixing bugs, another researching GitHub, a third updating docs. It uses git worktrees for parallel repo work and offers a clean user interface with the option to open in VS Code or resume in CLI. Learn more: https://www.anthropic.com/n...",
-    "content_html": "",
-    "image_url": "https://i.ytimg.com/vi/zrcCS9oHjtI/maxresdefault.jpg",
-    "summary_text": "Today, we\u2019re introducing Claude Code in our desktop apps in research preview. You can now run multiple local and remote Claude Code sessions in parallel: one agent fixing bugs, another researching GitHub, a third updating docs. It uses git worktrees for paral...",
-    "category": "ai",
-    "_trending_tags": [
-      "agent",
-      "claude"
-    ],
-    "_permalink": "/p/da5a539beb/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/da5a539beb/",
-    "_summary_240": "Today, we\u2019re introducing Claude Code in our desktop apps in research preview. You can now run multiple local and remote Claude Code sessions in parallel: one agent fixing bugs,...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/da5a539beb/thumbnail.png"
-  },
-  {
     "title": "Lutnick warns EU to relax tech rules if it wants lower steel tariffs",
     "url": "https://www.ft.com/content/19912b20-582d-46fe-90a5-ee208a28f4df",
     "published_at": "2025-11-24T13:09:05-05:00",
@@ -1599,6 +1598,23 @@
     "category": "fintech",
     "_trending_tags": [
       "ai"
+    ]
+  },
+  {
+    "title": "Scania accelerates operations across its global workforce with ChatGPT",
+    "url": "https://www.youtube.com/watch?v=0luMwmnvRuQ",
+    "published_at": "2025-11-20T20:43:32-05:00",
+    "source": "OpenAI YouTube",
+    "summary": "Scania builds the trucks, buses, and transport systems that keep the world moving. With AI in their engineering-led organisation, they're evolving from vehicle maker to sustainable transport ecosystem leader. Read more: https://openai.com/index/scania/",
+    "content_html": "",
+    "image_url": "https://i.ytimg.com/vi/0luMwmnvRuQ/maxresdefault.jpg",
+    "summary_text": "Scania builds the trucks, buses, and transport systems that keep the world moving. With AI in their engineering-led organisation, they're evolving from vehicle maker to sustainable transport ecosystem leader. Read more: https://openai.com/index/scania/",
+    "category": "ai",
+    "_trending_tags": [
+      "ai",
+      "chatgpt",
+      "gpt",
+      "openai"
     ]
   },
   {
