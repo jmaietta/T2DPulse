@@ -17,9 +17,27 @@
     ]
   },
   {
+    "title": "3 Ways Compliance Is Becoming an Unlock for Embedded Finance in B2B",
+    "url": "https://www.pymnts.com/news/b2b-payments/2025/3-ways-compliance-is-becoming-unlock-embedded-finance-b2b/",
+    "published_at": "2025-11-25T11:49:30-05:00",
+    "source": "PYMNTS",
+    "summary": "Traditionally, compliance has been shorthand for constraint. However, that\u2019s never been the case across embedded finance, particularly across its promise to empower B2B platforms to offer payments, lending, insurance and treasury services directly inside their workflows. B2B firms usually navigate a fragmented landscape. Unlike consumer FinTech, which benefits from more uniform federal oversight,...",
+    "content_html": "<p><span>Traditionally, </span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/smbs/2025/global-smbs-push-back-as-compliance-slows-payments/\" rel=\"noopener\" target=\"_blank\"><span>compliance</span></a><span> has been shorthand for constraint.</span></p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p><span>However, </span><span>that\u2019s</span><span> never been the case across embedded finance, particularly </span><span>across</span><span> its promise to empower </span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/news/b2b-payments/2025/embedded-finance-powers-b2b-modernization-across-platforms/\" rel=\"noopener\" target=\"_blank\"><span>B2B platforms</span></a><span> to offer payments, lending, insurance and treasury services directly </span><span>inside</span><span> their workflows.</span></p>\n<p><span>B2B firms usually navigate a fragmented landscape. Unlike consumer FinTech, which benefits from more uniform federal oversight, B2B </span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/study/retailers-expand-embedded-finance-to-unlock-control-and-customization/\" rel=\"noopener\" target=\"_blank\"><span>embedded finance</span></a><span> often triggers commercial rules that vary by state. The definition of what constitutes money transmission, for example, remains notoriously inconsistent. </span><span>Some states exempt payment processors handling funds incidental to a business service</span><span>; </span><span>others require full licensure if a platform </span><span>so much as</span><span> exercises control over settlement timing.</span></p>\n<p><span>In lending, the </span><span>line</span><span> between a referral relationship and an activity requiring broker or </span><span>loan-originator</span><span> licensing </span><span>differs</span><span> in wording and enforcement.</span><span> In insurance add-ons, such as invoice coverage or revenue protection products, ancillary services can veer into regulated territory.</span></p>\n<p><span>As embedded finance matures, however, a pivot is underway. The companies gaining advantage are those reframing compliance not as a defensive shield but as a strategic engine. They are deepening partnerships with banks, investing in automated infrastructure, and building internal regulatory literacy as a core competency. In the process, they are working to turn one of the industry\u2019s </span><span>biggest</span><span> liabilities into a durable moat.</span></p>\n<p><strong><span>Read also: </span></strong><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/news/b2b-payments/2025/how-embedded-finance-ai-and-automation-are-redefining-b2b-payment-networks/\" rel=\"noopener\" target=\"_blank\"><span>How Embedded Finance, AI and Automation Are Redefining B2B Payment Networks</span></a></p>\n<h2><strong><span>The Moving Target of B2B Financial Regulation</span></strong></h2>\n<p><span>Compliance is no longer just a guardrail; it\u2019s becoming the infrastructure that makes embedded finance scalable, defensible and trusted. </span><span>For a vertical </span><span>software-as-a-Service</span><span> (SaaS) platform that embeds supplier payments, servicing a single invoice </span><span>means touching</span><span> identity verification, funds movement, fraud controls, dispute workflows and, depending on the product, credit extension.</span></p>\n<p><span>The PYMNTS Intelligence report \u201c</span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/study/embedded-finance-grows-up-online-marketplaces-customer-retention/\" rel=\"noopener\" target=\"_blank\"><span>Embedded Finance Grows Up: How Online Marketplaces Can Retain Customers and Boost Revenues</span></a><span>\u201d revealed that 81% of marketplaces face regulatory hurdles, making strong oversight and risk management the top criteria for embedded finance vendor </span><span>selection</span><span>.</span></p>\n<p><span>Multiply that complexity across a customer base spanning dozens of states, and the compliance surface rapidly becomes unrecognizable from traditional FinTech models.</span></p>\n<p><span>\u201cIn 2025, there is pretty much no </span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/news/risk-management/2025/financial-leaders-how-ai-transforms-compliance-and-risk-management/\" rel=\"noopener\" target=\"_blank\"><span>compliance</span></a><span> without AI because compliance became exponentially harder,\u201d </span><a class=\"editor-rtfLink\" href=\"https://www.linkedin.com/in/statnikov\" rel=\"noopener\" target=\"_blank\"><span>Alexander Statnikov</span></a><span>, co-founder and CEO of </span><a class=\"editor-rtfLink\" href=\"https://www.crosswise.io/\" rel=\"noopener\" target=\"_blank\"><span>Crosswise Risk Management</span></a><span>, told PYMNTS in March. \u201cThink about all the change management that happens with regulations. Now, states will be stepping in. How do you stay on top of it?\u201d</span></p>\n<p><span>The first </span><span>major</span><span> shift is happening in bank-FinTech relationships. Early embedded finance platforms often treated the bank partner as a back-end utility, responsible for maintaining the regulatory perimeter while the platform controlled customer experience. </span><span>But</span><span> as regulatory responsibilities expand, platforms are </span><span>finding</span><span> that a transactional relationship is no longer </span><span>enough</span><span>.</span><span> They need banks that not only sponsor accounts but also collaborate on product design, risk modeling, dispute procedures and licensing strategies, actively creating more resilient architectures.</span></p>\n<p><span>The shift can be most visible in treasury and payments products. For example, a software platform offering embedded supplier payments may need approval for how it manages sub-accounts, handles float or structures escrow-like services.</span></p>\n<p><span>At the same time, banks</span><span>, for their part,</span><span> are recognizing that the quality of FinTech partners affects their own regulatory exposure. After several high-profile </span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/news/b2b-payments/2024/securing-b2b-success-why-managing-third-party-risks-is-non-negotiable/\" rel=\"noopener\" target=\"_blank\"><span>supervisory actions</span></a><span> scrutinizing bank-FinTech arrangements, institutions are more selective, more embedded and more operationally involved. The result is a new category of partnership that is collaborative, risk-aligned and structurally integrated.</span></p>\n<p><strong><span>See also:</span></strong> <a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/news/banking/2024/apis-and-points-of-vulnerability-spotlight-baas-risks-as-platforms-evolve/\" rel=\"noopener\" target=\"_blank\"><span>APIs and Points of Vulnerability Spotlight BaaS Risks as Platforms Evolve</span></a></p>\n<h2><strong><span>Automation Moves Compliance From Manual Burden to Advantage</span></strong></h2>\n<p><span>The second unlock is technological. Historically, compliance operations relied on manual review queues, spreadsheets and a constellation of point solutions that seldom communicated cleanly. Embedded finance breaks that model. Platforms processing B2B-sized payment amounts daily cannot afford compliance architectures that scale linearly with headcount, or that expose them to inconsistent decision-making across regulatory regimes.</span></p>\n<p><span>Instead of maintaining brittle manual decision trees, automated systems ingest regulatory logic as modular parameters. If California updates its rules governing commercial financing disclosures, or New York sharpens expectations around transaction reporting, a platform can update its rules engine without re-architecting the entire workflow.</span></p>\n<p><span>Automation also enables granularity. A platform that serves construction suppliers in Louisiana, manufacturers in Michigan and professional services firms in Massachusetts can build jurisdiction-specific logic for onboarding, monitoring, financing and payouts, all while presenting a unified user experience to customers. This precision would be impossible with purely manual operations.</span></p>\n<p><span>The third unlock is cultural. As embedded finance reaches deeper into core business workflows, the companies poised to win are those treating regulatory literacy as an organizational competency.</span></p>\n<p><span>Platforms treating compliance as a strategy begin to see regulatory expertise as a moat. They can design products that competitors cannot launch quickly. They can negotiate more collaborative arrangements with banks. They can speak the language of regulators during examinations, building trust that translates into smoother operations and fewer surprises. And they can anticipate where the regulatory frontier is moving, particularly as states experiment with new frameworks governing digital wallets, instant payments, commercial financing disclosures and platform liability.</span></p>\n<p><em>For all PYMNTS B2B coverage, subscribe to the daily </em><a href=\"https://pymnts.com/subscribe/\" rel=\"noopener\" target=\"_blank\"><em>B2B Newsletter</em></a><em>.</em></p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/news/b2b-payments/2025/3-ways-compliance-is-becoming-unlock-embedded-finance-b2b/\">3 Ways Compliance Is Becoming an Unlock for Embedded Finance in B2B</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
+    "image_url": "https://www.pymnts.com/wp-content/uploads/2025/11/compliance-embedded-finance-B2B.jpeg?w=457",
+    "summary_text": "Traditionally, compliance has been shorthand for constraint. However, that\u2019s never been the case across embedded finance, particularly across its promise to empower B2B platforms to offer payments, lending, insurance and treasury services directly inside thei...",
+    "category": "fintech",
+    "_trending_tags": [
+      "ai"
+    ],
+    "_permalink": "/p/498fdb0b5d/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/498fdb0b5d/",
+    "_summary_240": "Traditionally, compliance has been shorthand for constraint. However, that\u2019s never been the case across embedded finance, particularly across its promise to empower B2B platforms...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/498fdb0b5d/thumbnail.png"
+  },
+  {
     "title": "Nvidia shares tumble on signs Google gaining upper hand in AI",
     "url": "https://www.ft.com/content/7d0cd87e-99b0-4411-b54f-f5b239af8e76",
-    "published_at": "2025-11-25T11:28:27-05:00",
+    "published_at": "2025-11-25T11:47:53-05:00",
     "source": "Financial Times - Technology",
     "summary": "Chipmaker hit by $200bn sell-off",
     "content_html": "",
@@ -31,10 +49,25 @@
       "google",
       "nvidia"
     ],
-    "_permalink": "/p/e8ebddf067/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/e8ebddf067/",
+    "_permalink": "/p/4b907f9885/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/4b907f9885/",
     "_summary_240": "Chipmaker hit by $200bn sell-off",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/e8ebddf067/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/4b907f9885/thumbnail.png"
+  },
+  {
+    "title": "Mastercard Launches Access Pass in UAE to Deepen Consumer Engagement",
+    "url": "https://www.pymnts.com/credit-cards/2025/mastercard-launches-access-pass-in-uae-to-deepen-consumer-engagement/",
+    "published_at": "2025-11-25T11:36:04-05:00",
+    "source": "PYMNTS",
+    "summary": "Mastercard has moved to strengthen its footprint in experiential payments by debuting Mastercard Access Pass, a platform designed to give issuers and brands new tools for driving engagement, in the United Arab Emirates. The launch, announced in a Tuesday (Nov. 25) news release, comes as global payment networks and banks accelerate efforts to differentiate their digital [\u2026] The post Mastercard Lau...",
+    "content_html": "<p style=\"font-weight: 400;\">Mastercard has moved to strengthen its footprint in experiential payments by debuting\u00a0Mastercard Access Pass, a platform designed to give issuers and brands new tools for driving engagement, in the United Arab Emirates. The launch, announced in a Tuesday (Nov. 25) <a href=\"https://www.mastercard.com/us/en/news-and-trends/press/2025/november/mastercard-access-pass-enables-partners-to-forge-deeper-connecti.html\" rel=\"noopener\" target=\"_blank\">news release</a>, comes as global payment networks and banks accelerate efforts to differentiate their digital card propositions through personalization, loyalty and embedded experiences.</p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p style=\"font-weight: 400;\">The program is rolling out first with the\u00a0McLaren Formula 1 Team\u00a0and\u00a0First Abu Dhabi Bank (FAB), giving eligible FAB cardholders access to exclusive content, merchandise, events and limited-edition digital card art tied to the McLaren Racing brand. According to Mastercard, Access Pass lets consumers layer unique perks and visual designs onto their existing debit, credit, or prepaid cards without needing a new physical card.</p>\n<p style=\"font-weight: 400;\">Consumers in the UAE can activate the McLaren Racing Mastercard Pass through the FAB mobile app and receive instant digital-wallet updates. Mastercard said the offering will expand with additional designs, partners, and markets in 2026.</p>\n<p style=\"font-weight: 400;\">The release underscores rising demand for passion-driven, personalized card features, citing internal Mastercard research and external sources from EY, Youth Blueprint and Deloitte. These findings highlight younger consumers\u2019 expectations for exclusive content, digital-first payment options and brand-aligned rewards.</p>\n<p style=\"font-weight: 400;\">Mastercard framed the UAE rollout as the beginning of a global strategy that positions Access Pass as both a consumer perk and a value-creation tool for issuers. \u201cWith Mastercard Access Pass, we\u2019ve created a seamless digital gateway to the passions that matter most to our cardholders,\u201d\u00a0Mastercard Chief Product Officer Jorn Lambert said in the release.\u00a0\u201cTogether with incredible partners like the McLaren Formula 1 Team and FAB, we\u2019re delivering exclusive experiences \u2013 starting in the UAE and expanding globally.\u201d</p>\n<p style=\"font-weight: 400;\">In other Mastercard news, PYMNTS recently covered <a href=\"https://www.pymnts.com/news/security-and-risk/2025/mastercard-ramps-up-ai-driven-offensive-against-scams/\" rel=\"noopener\" target=\"_blank\">Mastercard\u2019s work</a> on artificial intelligence (AI)-driven fraud prevention, tokenization and its Cyber and Intelligence product enhancements, which aim to bolster security across merchant and issuer networks.</p>\n<p style=\"font-weight: 400;\">PYMNTS has also reported on Mastercard\u2019s continued push into <a href=\"https://www.pymnts.com/partnerships/2025/mastercard-paytently-team-promote-open-banking/\" rel=\"noopener\" target=\"_blank\">open banking</a>, including ecosystem collaborations to streamline account-to-account payments, identity verification and credit decisioning.</p>\n<p style=\"font-weight: 400;\">Recent PYMNTS features have <a href=\"https://www.pymnts.com/mastercard/2025/mastercard-debuts-program-help-its-customers-reach-new-markets/\" rel=\"noopener\" target=\"_blank\">highlighted</a> Mastercard\u2019s views on agentic AI, cross-border payment modernization, and the company\u2019s role in shaping 2026 card-network innovations.</p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/credit-cards/2025/mastercard-launches-access-pass-in-uae-to-deepen-consumer-engagement/\">Mastercard Launches Access Pass in UAE to Deepen Consumer Engagement</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
+    "image_url": "https://www.pymnts.com/wp-content/uploads/2025/11/Mastercard-Access-Pass-UAE.png?w=457",
+    "summary_text": "Mastercard has moved to strengthen its footprint in experiential payments by debuting Mastercard Access Pass, a platform designed to give issuers and brands new tools for driving engagement, in the United Arab Emirates. The launch, announced in a Tuesday (Nov...",
+    "category": "fintech",
+    "_permalink": "/p/092bf78a02/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/092bf78a02/",
+    "_summary_240": "Mastercard has moved to strengthen its footprint in experiential payments by debuting Mastercard Access Pass, a platform designed to give issuers and brands new tools for driving...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/092bf78a02/thumbnail.png"
   },
   {
     "title": "Fleet Space finds massive lithium deposit using AI and satellites",
@@ -134,6 +167,24 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/1f1148c461/thumbnail.png"
   },
   {
+    "title": "Speechify adds voice typing and voice assistant to its Chrome extension",
+    "url": "https://techcrunch.com/2025/11/25/speechify-adds-voice-typing-and-voice-assistant-to-its-chrome-extension/",
+    "published_at": "2025-11-25T11:00:00-05:00",
+    "source": "TechCrunch",
+    "summary": "In the last 12 months, there has been a proliferation of voice detection tools, thanks to overall quality improvement in speech recognition models. Speechify is hitching its wagon to this train and launching its own dictation tool with support for English.",
+    "content_html": "",
+    "image_url": "https://techcrunch.com/wp-content/uploads/2025/11/Voice-AI-Assistant.jpeg?resize=1200,810",
+    "summary_text": "In the last 12 months, there has been a proliferation of voice detection tools, thanks to overall quality improvement in speech recognition models. Speechify is hitching its wagon to this train and launching its own dictation tool with support for English.",
+    "category": "ai",
+    "_trending_tags": [
+      "ai"
+    ],
+    "_permalink": "/p/c300007793/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/c300007793/",
+    "_summary_240": "In the last 12 months, there has been a proliferation of voice detection tools, thanks to overall quality improvement in speech recognition models. Speechify is hitching its...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/c300007793/thumbnail.png"
+  },
+  {
     "title": "FLUX.2 Image Generation Models Now Released, Optimized for NVIDIA RTX GPUs",
     "url": "https://blogs.nvidia.com/blog/rtx-ai-garage-flux-2-comfyui/",
     "published_at": "2025-11-25T10:53:21-05:00",
@@ -165,11 +216,7 @@
     "category": "ai",
     "_trending_tags": [
       "ai"
-    ],
-    "_permalink": "/p/4b34f015b0/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/4b34f015b0/",
-    "_summary_240": "President Donald Trump\u2019s new \u201c Genesis Mission \u201d unveiled Monday is billed as a generational leap in how the United States does science akin to the Manhattan Project that created...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/4b34f015b0/thumbnail.png"
+    ]
   },
   {
     "title": "AI Slop Recipes Are Taking Over the Internet \u2014 And Thanksgiving Dinner",
@@ -712,27 +759,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/5c6deb0215/thumbnail.png"
   },
   {
-    "title": "Anthropic Targets Coding and Agents Markets With Latest AI Model",
-    "url": "https://www.pymnts.com/artificial-intelligence-2/2025/anthropic-targets-coding-and-agents-markets-with-latest-ai-model/",
-    "published_at": "2025-11-24T21:12:56-05:00",
-    "source": "PYMNTS",
-    "summary": "Anthropic released its latest artificial intelligence (AI) model, Claude Opus 4.5, on Monday (Nov. 24), together with several other new products and features. Claude Opus 4.5 performs especially well when applied to coding, agents and computer use, the company said in a Monday press release. The new model is also \u201cmeaningfully better\u201d than its [\u2026] The post Anthropic Targets Coding and Agents Mark...",
-    "content_html": "<p><a class=\"editor-rtfLink\" href=\"https://www.anthropic.com/\" rel=\"noopener\" target=\"_blank\"><span>Anthropic</span></a><span> released its latest artificial intelligence (AI) model, Claude Opus 4.5, on Monday (Nov. 24), together with several other new products and features.</span></p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p><span>Claude Opus 4.5 performs especially well when applied to coding, agents </span><span>and</span><span> computer use, the company said in a </span><span>Monday</span> <a class=\"editor-rtfLink\" href=\"https://www.anthropic.com/news/claude-opus-4-5\" rel=\"noopener\" target=\"_blank\"><span>press release</span></a><span>.</span></p>\n<p><span>The new model is also \u201cmeaningfully better\u201d than its predecessors in performing deep research and working with slides and spreadsheets, according to the release.</span></p>\n<p><span>\u201cOpus 4.5 is a step forward in what AI systems can do, and a preview of larger changes to how work gets done,\u201d Anthropic said in the release.</span></p>\n<p><span>The model is now available on the company\u2019s app and application programming interface (API), </span><span>and</span><span> on major cloud platforms, </span><span>per</span><span> the release.</span></p>\n<p><span>Anthropic also released updates to the </span><a class=\"editor-rtfLink\" href=\"https://www.claude.com/platform/api\" rel=\"noopener\" target=\"_blank\"><span>Claude Developer Platform</span></a><span>, </span><a class=\"editor-rtfLink\" href=\"https://www.claude.com/product/claude-code\" rel=\"noopener\" target=\"_blank\"><span>Claude Code</span></a> <span>and</span><span> the company\u2019s </span><a class=\"editor-rtfLink\" href=\"https://www.claude.com/download\" rel=\"noopener\" target=\"_blank\"><span>consumer apps</span></a><span>, according to the release.</span></p>\n<p><span>Among the changes: the Claude Developer Platform now includes an effort parameter that lets developers decide how much time the model spends thinking about a problem; Claude Code now </span><span>includes</span><span> a Plan Mode for building more precise plans; and the consumer apps automatically summarize earlier context as needed to allow longer conversations, per the release.</span></p>\n<p><span>\u201cEach of these updates takes advantage of Claude Opus 4.5\u2019s market-leading performance in using computers, spreadsheets </span><span>and</span><span> handling long-running tasks,\u201d Anthropic said in the release, referring to the consumer apps\u2019 updates.</span></p>\n<p><span>This announcement came about a week after </span><a class=\"editor-rtfLink\" href=\"https://www.nvidia.com/en-us/\" rel=\"noopener\" target=\"_blank\"><span>Nvidia</span></a><span> and </span><a class=\"editor-rtfLink\" href=\"https://www.microsoft.com/en-us/\" rel=\"noopener\" target=\"_blank\"><span>Microsoft</span></a><span> pledged up to $15 billion to Anthropic as part of a </span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/artificial-intelligence-2/2025/nvidia-and-microsoft-pledge-up-to-15-billion-to-anthropic/\" rel=\"noopener\" target=\"_blank\"><span>partnership</span></a><span> between the three companies.</span></p>\n<p><span>The collaboration includes Anthropic scaling its Claude AI model on the Nvidia-powered Microsoft Azure; Anthropic agreeing to purchase $30 billion of Azure compute capacity and to contract additional compute capacity up to one gigawatt; and Microsoft and Nvidia pledging to invest up to $5 billion and $10 billion, respectively, in Anthropic.</span></p>\n<p><span>It was reported on </span><span>Nov.</span><span> 4 that Anthropic expects to </span><span>bring in</span><span> up to $70 billion in </span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/artificial-intelligence-2/2025/anthropic-banks-on-increased-ai-demand-for-28-growth-jump/\" rel=\"noopener\" target=\"_blank\"><span>revenue</span></a><span> by 2028, compared to </span><span>about</span><span> $5 billion this year.</span><span> The company expects demand from businesses for its AI models to fuel that growth, The Information </span><a class=\"editor-rtfLink\" href=\"https://www.theinformation.com/articles/anthropic-projects-70-billion-revenue-17-billion-cash-flow-2028\" rel=\"noopener\" target=\"_blank\"><span>reported</span></a><span> at the time, citing a source familiar with the company\u2019s financials.</span></p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/artificial-intelligence-2/2025/anthropic-targets-coding-and-agents-markets-with-latest-ai-model/\">Anthropic Targets Coding and Agents Markets With Latest AI Model</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
-    "image_url": "https://www.pymnts.com/wp-content/uploads/2025/11/Anthropic-claude11.jpg?w=457",
-    "summary_text": "Anthropic released its latest artificial intelligence (AI) model, Claude Opus 4.5, on Monday (Nov. 24), together with several other new products and features. Claude Opus 4.5 performs especially well when applied to coding, agents and computer use, the compan...",
-    "category": "ai",
-    "_trending_tags": [
-      "agent",
-      "ai",
-      "anthropic",
-      "claude"
-    ],
-    "_permalink": "/p/89ef88f006/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/89ef88f006/",
-    "_summary_240": "Anthropic released its latest artificial intelligence (AI) model, Claude Opus 4.5, on Monday (Nov. 24), together with several other new products and features. Claude Opus 4.5...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/89ef88f006/thumbnail.png"
-  },
-  {
     "title": "Wall Street need not be squeamish about Bitcoin\u2019s ups and downs: Pomp",
     "url": "https://cointelegraph.com/news/bitcoin-volatility-drawdowns-pompliano-wall-street-analysis?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
     "published_at": "2025-11-24T21:06:52-05:00",
@@ -1019,25 +1045,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/8cd2eb7725/",
     "_summary_240": "Anthropic has launched Opus 4.5, the latest version of its flagship model, with new integrations into Chrome and Excel.",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/8cd2eb7725/thumbnail.png"
-  },
-  {
-    "title": "Claude Code on desktop",
-    "url": "https://www.youtube.com/watch?v=zrcCS9oHjtI",
-    "published_at": "2025-11-24T13:52:06-05:00",
-    "source": "Anthropic YouTube",
-    "summary": "Today, we\u2019re introducing Claude Code in our desktop apps in research preview. You can now run multiple local and remote Claude Code sessions in parallel: one agent fixing bugs, another researching GitHub, a third updating docs. It uses git worktrees for parallel repo work and offers a clean user interface with the option to open in VS Code or resume in CLI. Learn more: https://www.anthropic.com/n...",
-    "content_html": "",
-    "image_url": "https://i.ytimg.com/vi/zrcCS9oHjtI/maxresdefault.jpg",
-    "summary_text": "Today, we\u2019re introducing Claude Code in our desktop apps in research preview. You can now run multiple local and remote Claude Code sessions in parallel: one agent fixing bugs, another researching GitHub, a third updating docs. It uses git worktrees for paral...",
-    "category": "ai",
-    "_trending_tags": [
-      "agent",
-      "claude"
-    ],
-    "_permalink": "/p/da5a539beb/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/da5a539beb/",
-    "_summary_240": "Today, we\u2019re introducing Claude Code in our desktop apps in research preview. You can now run multiple local and remote Claude Code sessions in parallel: one agent fixing bugs,...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/da5a539beb/thumbnail.png"
   },
   {
     "title": "Lutnick warns EU to relax tech rules if it wants lower steel tariffs",
@@ -1381,13 +1388,17 @@
     "source": "Financial Times - Technology",
     "summary": "AIG, Great American and WR Berkley seek permission to limit liability from AI agents and chatbots",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/9bc84743-630a-483b-ac2f-1c210c3e7c1d.jpg",
     "summary_text": "AIG, Great American and WR Berkley seek permission to limit liability from AI agents and chatbots",
     "category": "ai",
     "_trending_tags": [
       "agent",
       "ai"
-    ]
+    ],
+    "_permalink": "/p/cc658c3379/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/cc658c3379/",
+    "_summary_240": "AIG, Great American and WR Berkley seek permission to limit liability from AI agents and chatbots",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/cc658c3379/thumbnail.png"
   },
   {
     "title": "Lean4: How the theorem prover works and why it's the new competitive edge in AI",
@@ -1517,7 +1528,7 @@
     "source": "Financial Times - Technology",
     "summary": "Move from hardware to software market puts company more open to competition",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/969abd22-25c2-407a-8760-9cd2eaaa5c92.jpg",
     "summary_text": "Move from hardware to software market puts company more open to competition",
     "category": "software"
   },
@@ -1546,7 +1557,7 @@
     "source": "Financial Times - Technology",
     "summary": "Plus, Patrick Drahi\u2019s deal dance with French trio and the musical chairs inside Abu Dhabi\u2019s deal machine",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/e3f1cfed-43e3-4b3b-b158-807a5d861e79.jpg",
     "summary_text": "Plus, Patrick Drahi\u2019s deal dance with French trio and the musical chairs inside Abu Dhabi\u2019s deal machine",
     "category": "ai",
     "_trending_tags": [
@@ -1560,7 +1571,7 @@
     "source": "Financial Times - Technology",
     "summary": "Today\u2019s eye-popping valuations are based on the assumption that LLMs are the only game in town",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/abce98de-3a38-42f3-9802-109ce6702271.jpg",
     "summary_text": "Today\u2019s eye-popping valuations are based on the assumption that LLMs are the only game in town",
     "category": "ai",
     "_trending_tags": [
@@ -1575,11 +1586,28 @@
     "source": "Financial Times - Technology",
     "summary": "Tech official says Taipei willing to share lessons from its world-leading industrial model under trade deal",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/e524158c-54f3-4ac1-848d-5ed767a2e717.jpg",
     "summary_text": "Tech official says Taipei willing to share lessons from its world-leading industrial model under trade deal",
     "category": "fintech",
     "_trending_tags": [
       "ai"
+    ]
+  },
+  {
+    "title": "Scania accelerates operations across its global workforce with ChatGPT",
+    "url": "https://www.youtube.com/watch?v=0luMwmnvRuQ",
+    "published_at": "2025-11-20T20:43:32-05:00",
+    "source": "OpenAI YouTube",
+    "summary": "Scania builds the trucks, buses, and transport systems that keep the world moving. With AI in their engineering-led organisation, they're evolving from vehicle maker to sustainable transport ecosystem leader. Read more: https://openai.com/index/scania/",
+    "content_html": "",
+    "image_url": "https://i.ytimg.com/vi/0luMwmnvRuQ/maxresdefault.jpg",
+    "summary_text": "Scania builds the trucks, buses, and transport systems that keep the world moving. With AI in their engineering-led organisation, they're evolving from vehicle maker to sustainable transport ecosystem leader. Read more: https://openai.com/index/scania/",
+    "category": "ai",
+    "_trending_tags": [
+      "ai",
+      "chatgpt",
+      "gpt",
+      "openai"
     ]
   },
   {
@@ -1632,7 +1660,7 @@
     "source": "Financial Times - Technology",
     "summary": "US regulator says current interpretation limits choice for technology companies",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/96723f0e-05c2-4ea5-b0df-9dea31bd2f1d.jpg",
     "summary_text": "US regulator says current interpretation limits choice for technology companies",
     "category": "fintech"
   },
@@ -1672,7 +1700,7 @@
     "source": "Financial Times - Technology",
     "summary": "Development comes as tech groups bet on potential for AI to accelerate drug discovery and uncover new materials",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://images.ft.com/v3/image/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Fb0ca37e9-a3f9-4748-8023-ff2e850ffb7f.jpg?source=next-article&fit=scale-down&quality=highest&width=700&dpr=1",
     "summary_text": "Development comes as tech groups bet on potential for AI to accelerate drug discovery and uncover new materials",
     "category": "ai",
     "_trending_tags": [
