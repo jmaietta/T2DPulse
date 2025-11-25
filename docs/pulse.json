@@ -14,11 +14,65 @@
       "chatgpt",
       "gpt",
       "openai"
+    ]
+  },
+  {
+    "title": "China\u2019s Top Companies Focus on AI Agents as Next Battleground",
+    "url": "https://www.bloomberg.com/news/newsletters/2025-11-25/china-s-top-companies-focus-on-ai-agents-as-next-battleground",
+    "published_at": "2025-11-25T07:01:33-05:00",
+    "source": "Bloomberg Technology",
+    "summary": "Welcome to Tech In Depth, our daily newsletter about the business of tech from Bloomberg\u2019s journalists around the world. Today, Vlad Savov checks in from Hong Kong with a look at what\u2019s top of mind for China\u2019s biggest AI companies.",
+    "content_html": "Travelers walk past an Alibaba Cloud advertisement at Shenzhen Bao'an International Airport.",
+    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/i8e0r43QUxn4/v1/1200x-1.jpg",
+    "summary_text": "Welcome to Tech In Depth, our daily newsletter about the business of tech from Bloomberg\u2019s journalists around the world. Today, Vlad Savov checks in from Hong Kong with a look at what\u2019s top of mind for China\u2019s biggest AI companies.",
+    "category": "ai",
+    "_trending_tags": [
+      "agent",
+      "ai"
     ],
-    "_permalink": "/p/04bb710a36/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/04bb710a36/",
-    "_summary_240": "OpenAI expands data residency for ChatGPT Enterprise, ChatGPT Edu, and the API Platform, enabling eligible customers to store data at rest in-region.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/04bb710a36/thumbnail.png"
+    "_permalink": "/p/13249a531b/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/13249a531b/",
+    "_summary_240": "Welcome to Tech In Depth, our daily newsletter about the business of tech from Bloomberg\u2019s journalists around the world. Today, Vlad Savov checks in from Hong Kong with a look at...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/13249a531b/thumbnail.png"
+  },
+  {
+    "title": "Large language mistake",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/827820/large-language-models-ai-intelligence-neuroscience-problems",
+    "published_at": "2025-11-25T07:00:00-05:00",
+    "source": "The Verge",
+    "summary": "\"Developing superintelligence is now in sight,\" says Mark Zuckerberg, heralding the \"creation and discovery of new things that aren't imaginable today.\" Powerful AI \"may come as soon as 2026 [and will be] smarter than a Nobel Prize winner across most relevant fields,\" says Dario Amodei, offering the doubling of human lifespans or even \"escape velocity\" [\u2026]",
+    "content_html": "<figure>\n\n<img alt=\"\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/11/258108_language_is_not_intelligence_CVirginia37.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100\" />\n\t<figcaption>\n\t\t</figcaption>\n</figure>\n<p class=\"has-drop-cap has-text-align-none\">\"Developing superintelligence is now in sight,\" <a href=\"https://www.meta.com/superintelligence/?srsltid=AfmBOordifyF0yEAoSvgERn-1kSfAWRL9lMWOGQGF_B0fKHcWf7onC_L\">says</a> Mark Zuckerberg, heralding the \"creation and discovery of new things that aren't imaginable today.\" Powerful AI \"may come as soon as 2026 [and will be] smarter than a Nobel Prize winner across most relevant fields,\" <a href=\"https://www.darioamodei.com/essay/machines-of-loving-grace\">says</a> Dario Amodei, offering the doubling of human lifespans or even \"escape velocity\" from death itself. \"We are now confident we know how to build AGI,\" <a href=\"https://blog.samaltman.com/reflections\">says</a> Sam Altman, referring to the industry's holy grail of artificial general intelligence - and soon superintelligent AI \"could massively accelerate scientific discovery and innovation well beyond what we are capable of doing \u2026</p>\n<p><a href=\"https://www.theverge.com/ai-artificial-intelligence/827820/large-language-models-ai-intelligence-neuroscience-problems\">Read the full story at The Verge.</a></p>",
+    "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/11/258108_language_is_not_intelligence_CVirginia37.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "summary_text": "\"Developing superintelligence is now in sight,\" says Mark Zuckerberg, heralding the \"creation and discovery of new things that aren't imaginable today.\" Powerful AI \"may come as soon as 2026 [and will be] smarter than a Nobel Prize winner across most relevant...",
+    "category": "ai",
+    "_trending_tags": [
+      "ai"
+    ],
+    "_permalink": "/p/3ffa83fe04/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/3ffa83fe04/",
+    "_summary_240": "\"Developing superintelligence is now in sight,\" says Mark Zuckerberg, heralding the \"creation and discovery of new things that aren't imaginable today.\" Powerful AI \"may come as...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/3ffa83fe04/thumbnail.png"
+  },
+  {
+    "title": "Three Years of AI Mania: How ChatGPT Reordered the Stock Market",
+    "url": "https://www.bloomberg.com/news/articles/2025-11-25/three-years-of-ai-mania-how-chatgpt-reordered-the-stock-market",
+    "published_at": "2025-11-25T06:30:00-05:00",
+    "source": "Bloomberg Technology",
+    "summary": "Three years ago, OpenAI released ChatGPT, setting off a mania on Wall Street for all things artificial intelligence. And the stock market hasn\u2019t been the same since.",
+    "content_html": "A worker uses ChatGPT artificial intelligence software. Photographer: Nicolas Maeterlinck/AFP/Getty Images",
+    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ioajyahMiU2c/v0/1200x-1.jpg",
+    "summary_text": "Three years ago, OpenAI released ChatGPT, setting off a mania on Wall Street for all things artificial intelligence. And the stock market hasn\u2019t been the same since.",
+    "category": "ai",
+    "_trending_tags": [
+      "ai",
+      "chatgpt",
+      "gpt",
+      "openai"
+    ],
+    "_permalink": "/p/973306f75a/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/973306f75a/",
+    "_summary_240": "Three years ago, OpenAI released ChatGPT, setting off a mania on Wall Street for all things artificial intelligence. And the stock market hasn\u2019t been the same since.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/973306f75a/thumbnail.png"
   },
   {
     "title": "Strike CEO debanked by JPMorgan as Lummis sounds \u2018Chokepoint 2.0\u2019 alarm",
@@ -63,7 +117,7 @@
     "source": "Bloomberg Technology",
     "summary": "Alibaba Group Holding Ltd. posted better-than-projected 34% growth in its pivotal cloud business, highlighting the enormous demand for computing during China\u2019s AI boom.",
     "content_html": "",
-    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iDkQOyWh0_os/v3/1200x-1.png",
+    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/i5FVmWBLV0.A/v3/1200x-1.png",
     "summary_text": "Alibaba Group Holding Ltd. posted better-than-projected 34% growth in its pivotal cloud business, highlighting the enormous demand for computing during China\u2019s AI boom.",
     "category": "ai",
     "_trending_tags": [
@@ -76,7 +130,7 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/3e65e9b3d1/thumbnail.png"
   },
   {
-    "title": "Alphabet\u2019s Rally Threatens World\u2019s Most Valuable Stock Standings",
+    "title": "Alphabet\u2019s AI Chips, Gemini Model Position It to Rival Nvidia",
     "url": "https://www.bloomberg.com/news/articles/2025-11-25/alphabet-s-rally-threatens-world-s-most-valuable-stock-standings",
     "published_at": "2025-11-25T05:40:28-05:00",
     "source": "Bloomberg Technology",
@@ -88,11 +142,7 @@
     "_trending_tags": [
       "ai",
       "nvidia"
-    ],
-    "_permalink": "/p/1660a5d60b/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/1660a5d60b/",
-    "_summary_240": "Alphabet Inc. shares are poised to shake up the ranking of the world\u2019s most valuable companies, amid signs the search giant is making headway in efforts to rival Nvidia Corp.\u2019s...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/1660a5d60b/thumbnail.png"
+    ]
   },
   {
     "title": "UAE\u2019s new financial law pulls DeFi and Web3 into regulatory scope",
@@ -450,8 +500,8 @@
     "published_at": "2025-11-24T19:11:53-05:00",
     "source": "Bloomberg Technology",
     "summary": "Nvidia Corp. shares fell on a report that Meta Platforms Inc. is in talks to spend billions on Google\u2019s AI chips, suggesting the internet search leader is making headway in efforts to rival the industry\u2019s bestselling AI accelerator.",
-    "content_html": "Google previously sealed a deal to supply up to 1 million of its chips to Anthropic PBC.",
-    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iXU6IqY8ht1s/v1/1200x-1.jpg",
+    "content_html": "",
+    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/i05q1XDFA7_0/v2/1200x-1.png",
     "summary_text": "Nvidia Corp. shares fell on a report that Meta Platforms Inc. is in talks to spend billions on Google\u2019s AI chips, suggesting the internet search leader is making headway in efforts to rival the industry\u2019s bestselling AI accelerator.",
     "category": "ai",
     "_trending_tags": [
@@ -499,11 +549,7 @@
     "_trending_tags": [
       "ai",
       "gpt"
-    ],
-    "_permalink": "/p/b8766477f5/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/b8766477f5/",
-    "_summary_240": "JetBrains is integrating GPT-5 across its coding tools, helping millions of developers design, reason, and build software faster.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/b8766477f5/thumbnail.png"
+    ]
   },
   {
     "title": "ChatGPT shopping research builds you a buyer\u2019s guide using AI",
@@ -722,21 +768,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/93ac91a105/thumbnail.png"
   },
   {
-    "title": "Signal\u2019s secure message backups arrive on iOS",
-    "url": "https://www.theverge.com/news/828091/signal-secure-backups-ios-launch",
-    "published_at": "2025-11-24T15:29:36-05:00",
-    "source": "The Verge",
-    "summary": "Signal is launching secure backups on iOS, allowing you to save and restore your messages in case you lose or break your phone. With the free version of the feature, you can store up to 100MB of text messages, along with the past 45 days\u2019 worth of photos, videos, GIFs, and files. There\u2019s also a [\u2026]",
-    "content_html": "<figure>\n\n<img alt=\"\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/06/acastro_STK459_02.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100\" />\n\t<figcaption>\n\t\t</figcaption>\n</figure>\n<p class=\"has-text-align-none\">Signal is <a href=\"https://x.com/signalapp/status/1993018186690871409?s=20\">launching secure backups on iOS</a>, allowing you to save and restore your messages in case you lose or break your phone. With the free version of the feature, you can store up to 100MB of text messages, along with the past 45 days&#8217; worth of photos, videos, GIFs, and files.</p>\n\n<p class=\"has-text-align-none\">There\u2019s also a $1.99 per month option that can back up all of your text messages, in addition to up to 100GB of media beyond the 45-day cap. Signal <a href=\"https://www.theverge.com/news/774018/signal-encrypted-secure-backups-paid-feature-beta\">first launched secure backups</a> on Android devices in September, which store your messages and media using end-to-end encryption. You can access your backup using a 64-character recovery key generated on your device, though Signal notes that it can\u2019t help you recover the code if you lose it.</p>\n\n<p class=\"has-text-align-none\"><a href=\"https://support.signal.org/hc/en-us/articles/9708267671322-Signal-Secure-Backup\">To enable secure backups</a>, head to the <strong>Settings</strong> menu and select <strong>Backups</strong>. From there, tap <strong>Setup</strong> &gt; <strong>Enable Backups</strong> and then write down or store your recovery key. Once you confirm your recovery key, you can choose between the free or paid plan. Signal will then begin storing your messages and media.</p>\n\n<p class=\"has-text-align-none\">Signal plans on bringing secure backups to its desktop app, too, and will eventually allow you to transfer your encrypted messaging history between Android, iOS, and desktop.</p>",
-    "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/06/acastro_STK459_02.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "summary_text": "Signal is launching secure backups on iOS, allowing you to save and restore your messages in case you lose or break your phone. With the free version of the feature, you can store up to 100MB of text messages, along with the past 45 days\u2019 worth of photos, vid...",
-    "category": "fintech",
-    "_permalink": "/p/16b7595f08/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/16b7595f08/",
-    "_summary_240": "Signal is launching secure backups on iOS, allowing you to save and restore your messages in case you lose or break your phone. With the free version of the feature, you can...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/16b7595f08/thumbnail.png"
-  },
-  {
     "title": "Hands on with Stickerbox, the AI-powered sticker maker for kids",
     "url": "https://techcrunch.com/2025/11/24/hands-on-with-stickerbox-the-ai-powered-sticker-maker-for-kids/",
     "published_at": "2025-11-24T15:25:20-05:00",
@@ -786,25 +817,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/8cd2eb7725/",
     "_summary_240": "Anthropic has launched Opus 4.5, the latest version of its flagship model, with new integrations into Chrome and Excel.",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/8cd2eb7725/thumbnail.png"
-  },
-  {
-    "title": "Claude Code on desktop",
-    "url": "https://www.youtube.com/watch?v=zrcCS9oHjtI",
-    "published_at": "2025-11-24T13:52:06-05:00",
-    "source": "Anthropic YouTube",
-    "summary": "Today, we\u2019re introducing Claude Code in our desktop apps in research preview. You can now run multiple local and remote Claude Code sessions in parallel: one agent fixing bugs, another researching GitHub, a third updating docs. It uses git worktrees for parallel repo work and offers a clean user interface with the option to open in VS Code or resume in CLI. Learn more: https://www.anthropic.com/n...",
-    "content_html": "",
-    "image_url": "https://i.ytimg.com/vi/zrcCS9oHjtI/maxresdefault.jpg",
-    "summary_text": "Today, we\u2019re introducing Claude Code in our desktop apps in research preview. You can now run multiple local and remote Claude Code sessions in parallel: one agent fixing bugs, another researching GitHub, a third updating docs. It uses git worktrees for paral...",
-    "category": "ai",
-    "_trending_tags": [
-      "agent",
-      "claude"
-    ],
-    "_permalink": "/p/da5a539beb/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/da5a539beb/",
-    "_summary_240": "Today, we\u2019re introducing Claude Code in our desktop apps in research preview. You can now run multiple local and remote Claude Code sessions in parallel: one agent fixing bugs,...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/da5a539beb/thumbnail.png"
   },
   {
     "title": "Stand With Crypto to vet 2026 candidates on digital asset positions",
@@ -1002,21 +1014,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/25aacdb8c6/thumbnail.png"
   },
   {
-    "title": "Quantum computers won\u2019t break Bitcoin\u2019s code, they\u2019ll break its politics",
-    "url": "https://cointelegraph.com/news/bitcoin-quantum-threat-consensus-old-address-risk?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-    "published_at": "2025-11-24T08:59:32-05:00",
-    "source": "Cointelegraph",
-    "summary": "Bitcoin analyst James Check argued Bitcoin\u2019s quantum risk is chiefly a consensus dilemma \u2014 not a tech one \u2014 because the network is unlikely to freeze legacy coins.",
-    "content_html": "",
-    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMDgvMDE5ODdlZGEtZjIxOS03NzExLTljMzgtZTMzZDkxNzBlNjM1.jpg",
-    "summary_text": "Bitcoin analyst James Check argued Bitcoin\u2019s quantum risk is chiefly a consensus dilemma \u2014 not a tech one \u2014 because the network is unlikely to freeze legacy coins.",
-    "category": "fintech",
-    "_permalink": "/p/e2723661fd/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/e2723661fd/",
-    "_summary_240": "Bitcoin analyst James Check argued Bitcoin\u2019s quantum risk is chiefly a consensus dilemma \u2014 not a tech one \u2014 because the network is unlikely to freeze legacy coins.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/e2723661fd/thumbnail.png"
-  },
-  {
     "title": "Roblox's Trust & Safety Effort Feels Light",
     "url": "https://newsletter.tek2dayholdings.com/p/robloxs-trust-and-safety-effort-feels",
     "published_at": "2025-11-24T07:34:31-05:00",
@@ -1137,11 +1134,7 @@
     "_trending_tags": [
       "ai",
       "gpt"
-    ],
-    "_permalink": "/p/b5701eceab/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/b5701eceab/",
-    "_summary_240": "UCLA Professor Ernest Ryu and GPT-5 solved a key question in optimization theory, showcasing AI\u2019s role in accelerating mathematical discovery.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/b5701eceab/thumbnail.png"
+    ]
   },
   {
     "title": "Microsoft\u2019s Fara-7B is a computer-use AI agent that rivals GPT-4o and works directly on your PC",
@@ -1443,6 +1436,23 @@
     ]
   },
   {
+    "title": "Scania accelerates operations across its global workforce with ChatGPT",
+    "url": "https://www.youtube.com/watch?v=0luMwmnvRuQ",
+    "published_at": "2025-11-20T20:43:32-05:00",
+    "source": "OpenAI YouTube",
+    "summary": "Scania builds the trucks, buses, and transport systems that keep the world moving. With AI in their engineering-led organisation, they're evolving from vehicle maker to sustainable transport ecosystem leader. Read more: https://openai.com/index/scania/",
+    "content_html": "",
+    "image_url": "https://i.ytimg.com/vi/0luMwmnvRuQ/maxresdefault.jpg",
+    "summary_text": "Scania builds the trucks, buses, and transport systems that keep the world moving. With AI in their engineering-led organisation, they're evolving from vehicle maker to sustainable transport ecosystem leader. Read more: https://openai.com/index/scania/",
+    "category": "ai",
+    "_trending_tags": [
+      "ai",
+      "chatgpt",
+      "gpt",
+      "openai"
+    ]
+  },
+  {
     "title": "4 People Indicted in Alleged Conspiracy to Smuggle Supercomputers and Nvidia Chips to China",
     "url": "https://www.wired.com/story/smuggling-supercomputers-china-nvidia-indictment/",
     "published_at": "2025-11-20T17:26:17-05:00",
@@ -1645,20 +1655,6 @@
     "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/79d4f212-428f-467d-97fd-12fbc76f5bc4.jpg",
     "summary_text": "Despite record expansion and growing ambition in the continent, the US is surging ahead again",
     "category": "fintech",
-    "_trending_tags": [
-      "ai"
-    ]
-  },
-  {
-    "title": "The AI Shift: Do we prefer talking to machines rather than each other?",
-    "url": "https://www.ft.com/content/99984e13-7919-4836-a35f-375665931f81",
-    "published_at": "2025-11-20T07:30:03-05:00",
-    "source": "Financial Times - Technology",
-    "summary": "It turns out that some people prefer AI interviewers and medical advice from chatbots",
-    "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/128eeaa4-b778-44f1-bb5f-16a9819b172e.jpg",
-    "summary_text": "It turns out that some people prefer AI interviewers and medical advice from chatbots",
-    "category": "ai",
     "_trending_tags": [
       "ai"
     ]
