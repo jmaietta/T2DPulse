@@ -1,7 +1,42 @@
 [
   {
-    "title": "Musk\u2019s xAI to build small solar farm adjacent Colossus data center",
-    "url": "https://techcrunch.com/2025/11/26/musks-xai-to-build-small-solar-farm-adjacent-colossus-data-center/",
+    "title": "Anthropic Pushes Back as Hackers Press AI Weak Spots",
+    "url": "https://www.pymnts.com/news/artificial-intelligence/2025/anthropic-pushes-back-hackers-press-ai-weak-spots/",
+    "published_at": "2025-11-26T12:38:56-05:00",
+    "source": "PYMNTS",
+    "summary": "Anthropic published research Monday (Nov. 24) showing its Claude Opus 4.5 model, released the same day, reduced successful prompt injection attacks to 1% in browser-based operations, down from earlier versions that faced higher breach rates when adversaries embedded malicious instructions in web content. The results show progress in making agent systems more resilient. However, [\u2026] The post Anthr...",
+    "content_html": "<p><a class=\"editor-rtfLink\" href=\"https://www.anthropic.com/\" rel=\"noopener\" target=\"_blank\"><span>Anthropic</span></a><span> published </span><a class=\"editor-rtfLink\" href=\"https://www.anthropic.com/research/prompt-injection-defenses\" rel=\"noopener\" target=\"_blank\"><span>research</span></a><span> Monday (Nov. 24) showing its </span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/artificial-intelligence-2/2025/anthropic-targets-coding-and-agents-markets-with-latest-ai-model/\" rel=\"noopener\" target=\"_blank\"><span>Claude Opus 4.5 model</span></a><span>, released the same day, reduced successful prompt injection attacks to 1% in browser-based operations, down from earlier versions that faced higher breach rates when adversaries embedded malicious instructions in web content.</span></p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p><span>The results show progress in making agent systems more resilient. </span><span>However, the underlying weakness </span><span>still exists</span><span> as browser-based automation becomes </span><span>more</span><span> common.</span></p>\n<p><a class=\"editor-rtfLink\" href=\"https://www.ibm.com/think/topics/prompt-injection\" rel=\"noopener\" target=\"_blank\"><span>Prompt injection</span></a><span> attacks exploit how AI models process instructions. When an agent browses the web or reads emails, attackers can embed hidden commands that direct the model to leak data, forward confidential communications or take unauthorized actions. PYMNTS Intelligence found 98% of business leaders remain unwilling to grant </span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/study_posts/agentic-ai-finds-a-foothold-in-the-automated-enterprise/\" rel=\"noopener\" target=\"_blank\"><span>AI agents</span></a><span> action-level access to core systems, with trust emerging as the primary constraint on adoption.</span></p>\n<p><span>The challenge has </span><span>drawn acknowledgment</span><span> across the industry. </span><a class=\"editor-rtfLink\" href=\"https://openai.com/\" rel=\"noopener\" target=\"_blank\"><span>OpenAI</span></a> <span>called</span> <a class=\"editor-rtfLink\" href=\"https://openai.com/index/prompt-injections/\" rel=\"noopener\" target=\"_blank\"><span>prompt injection</span></a><span> a \u201cfrontier security challenge\u201d </span><span>requiring</span><span> ongoing work.</span> <a class=\"editor-rtfLink\" href=\"https://www.microsoft.com/en-us/\" rel=\"noopener\" target=\"_blank\"><span>Microsoft</span></a><span> ranked it as the top entry in the </span><a class=\"editor-rtfLink\" href=\"https://owasp.org/www-project-top-ten/\" rel=\"noopener\" target=\"_blank\"><span>OWASP Top 10</span></a><span> for </span><a class=\"editor-rtfLink\" href=\"https://www.microsoft.com/en-us/msrc/blog/2025/07/how-microsoft-defends-against-indirect-prompt-injection-attacks\" rel=\"noopener\" target=\"_blank\"><span>large language model</span></a><span> applications in 2025. Security researchers highlight that the issue is particularly challenging. It arises from how AI systems handle natural language, not from typical software flaws.</span></p>\n<h2><strong><span>Attack Surface Expands With Browser Agents</span></strong></h2>\n<p><span>Browser use creates distinct exposure. Every webpage and embedded document becomes a potential vecto</span><span>r. </span><span>Security researchers at </span><a class=\"editor-rtfLink\" href=\"https://brave.com/\" rel=\"noopener\" target=\"_blank\"><span>Brave</span></a><span> demonstrated that attackers can embed nearly invisible commands in </span><a class=\"editor-rtfLink\" href=\"https://brave.com/blog/unseeable-prompt-injections/\" rel=\"noopener\" target=\"_blank\"><span>screenshots</span></a><span> that bypass text-based filters.</span></p>\n<p><span>Security firm </span><a class=\"editor-rtfLink\" href=\"https://appomni.com/\" rel=\"noopener\" target=\"_blank\"><span>AppOmni</span></a><span> revealed that </span><a class=\"editor-rtfLink\" href=\"https://www.servicenow.com/\" rel=\"noopener\" target=\"_blank\"><span>ServiceNow</span></a><span>\u2019s </span><a class=\"editor-rtfLink\" href=\"https://www.servicenow.com/platform/now-assist.html\" rel=\"noopener\" target=\"_blank\"><span>Now Assist</span></a><span> agents could be </span><a class=\"editor-rtfLink\" href=\"https://appomni.com/ao-labs/ai-agent-to-agent-discovery-prompt-injection/\" rel=\"noopener\" target=\"_blank\"><span>manipulated</span></a><span> to recruit more powerful agents that read or modify records and send emails </span><span>while</span><span> built-in protections remained enabled.</span> <span>Research from </span><a class=\"editor-rtfLink\" href=\"https://smart-labs.ai/\" rel=\"noopener\" target=\"_blank\"><span>Smart Labs AI</span></a> <span>showed</span> <span>agents can be </span><a class=\"editor-rtfLink\" href=\"https://www.helpnetsecurity.com/2025/10/29/agentic-ai-security-indirect-prompt-injection/\" rel=\"noopener\" target=\"_blank\"><span>coerced</span></a><span> into leaking internal documents during routine tasks, with success rates </span><span>varying</span><span> across implementations.</span></p>\n<p><span>A Fortune 500 financial services firm</span> <span>found</span><span> that its customer service agent </span><span>was</span><span> leaking account data for weeks through a prompt injection attack, resulting in millions of dollars in regulatory fines, according to a </span><a class=\"editor-rtfLink\" href=\"https://www.obsidiansecurity.com/blog/prompt-injection\" rel=\"noopener\" target=\"_blank\"><span>blog post</span></a><span> by </span><a class=\"editor-rtfLink\" href=\"https://www.obsidiansecurity.com/\" rel=\"noopener\" target=\"_blank\"><span>Obsidian</span></a><span>.</span></p>\n<h2><strong><span>Training and Classifiers Form Dual Defense</span></strong></h2>\n<p><span>Anthropic\u2019s improvements center on two approaches. The company applied reinforcement learning during model training, exposing Claude to prompt injections in simulated web content and rewarding the model when it correctly identifies and refuses malicious instructions. </span><span>This</span><span> builds robustness directly into capabilities rather than relying solely on external filters.</span></p>\n<p><span>The second layer involves classifiers that scan untrusted content entering the model\u2019s context window, detecting adversarial commands hidden in text, images or interface elements. Anthropic improved the classifiers and intervention mechanisms since the browser extension launched in research preview.</span></p>\n<p><span>The company also conducts expert human red teaming and participates in </span><a class=\"editor-rtfLink\" href=\"https://app.grayswan.ai/arena/challenge/indirect-prompt-injection/rules\" rel=\"noopener\" target=\"_blank\"><span>external arena-style challenges</span></a><span> that benchmark robustness across the industry.</span></p>\n<p><span>The 1% attack success rate reflects testing against an adaptive adversary combining multiple known techniques. The figure represents meaningful risk rather than a solved problem.</span></p>\n<h2><strong><span>Industry Adopts Layered Mitigation Strategies</span></strong></h2>\n<p><span>Other AI providers have outlined similar defense frameworks </span><span>combining</span><span> preventative controls, detection tools and impact mitigation.</span><span> Microsoft uses hardened system prompts and a technique called spotlighting to isolate untrusted inputs, alongside </span><a class=\"editor-rtfLink\" href=\"https://azure.microsoft.com/en-us/blog/enhance-ai-security-with-azure-prompt-shields-and-azure-ai-content-safety/\" rel=\"noopener\" target=\"_blank\"><span>Prompt Shields</span></a><span> integrated with </span><a class=\"editor-rtfLink\" href=\"https://learn.microsoft.com/en-us/azure/defender-for-cloud/defender-for-cloud-introduction\" rel=\"noopener\" target=\"_blank\"><span>Defender for Cloud</span></a><span>. The company developed </span><a class=\"editor-rtfLink\" href=\"https://www.microsoft.com/en-us/research/publication/securing-ai-agents-with-information-flow-control/\" rel=\"noopener\" target=\"_blank\"><span>FIDES</span></a><span>, an approach using information flow control </span><span>to deterministically prevent indirect prompt injection in agent systems</span><span>.</span></p>\n<p><a class=\"editor-rtfLink\" href=\"https://www.google.com/\" rel=\"noopener\" target=\"_blank\"><span>Google</span></a><span> announced </span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/news/artificial-intelligence/2025/agentic-ai-turns-enterprise-cybersecurity-into-machine-battle\" rel=\"noopener\" target=\"_blank\"><span>autonomous</span></a><span> systems that detect and respond to threats in </span><span>real time</span><span>, often without human intervention, as part of a broader shift toward AI-driven preemptive cyber defense.</span></p>\n<p><span>Security experts say the models remain only as reliable as the data feeding them, with accuracy and accountability determining whether prevention at this scale proves economically viable.</span></p>\n<p><span>The broader consensus across security teams is that no single technique closes the gap. Providers are layering training, classifiers, monitoring tools and internal guardrails to shrink the window in which prompt injection succeeds.</span></p>\n<p><em>For all PYMNTS AI coverage, subscribe to the daily </em><a href=\"https://pymnts.com/subscribe/\" rel=\"noopener\" target=\"_blank\"><em>AI Newsletter</em></a><em>.</em></p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/news/artificial-intelligence/2025/anthropic-pushes-back-hackers-press-ai-weak-spots/\">Anthropic Pushes Back as Hackers Press AI Weak Spots</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
+    "image_url": "https://www.pymnts.com/wp-content/uploads/2025/05/Anthropic-2.jpg?w=457",
+    "summary_text": "Anthropic published research Monday (Nov. 24) showing its Claude Opus 4.5 model, released the same day, reduced successful prompt injection attacks to 1% in browser-based operations, down from earlier versions that faced higher breach rates when adversaries e...",
+    "category": "ai",
+    "_trending_tags": [
+      "ai",
+      "anthropic",
+      "claude"
+    ],
+    "_permalink": "/p/871cd3e004/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/871cd3e004/",
+    "_summary_240": "Anthropic published research Monday (Nov. 24) showing its Claude Opus 4.5 model, released the same day, reduced successful prompt injection attacks to 1% in browser-based...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/871cd3e004/thumbnail.png"
+  },
+  {
+    "title": "Bolivia to integrate crypto, stablecoins into the financial system",
+    "url": "https://cointelegraph.com/news/bolivia-integrate-crypto-stablecoins-financial-system?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "published_at": "2025-11-26T12:28:43-05:00",
+    "source": "Cointelegraph",
+    "summary": "Fiat currency inflation, US dollar shortages, and global competition are prompting the government to integrate cryptocurrencies.",
+    "content_html": "",
+    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTEvMDE5YWMwZTktZjRhMy03NjBmLWI3ZmItZTFmMjZkNWEwYmJl.jpg",
+    "summary_text": "Fiat currency inflation, US dollar shortages, and global competition are prompting the government to integrate cryptocurrencies.",
+    "category": "fintech",
+    "_permalink": "/p/2fdaeb09b2/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/2fdaeb09b2/",
+    "_summary_240": "Fiat currency inflation, US dollar shortages, and global competition are prompting the government to integrate cryptocurrencies.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/2fdaeb09b2/thumbnail.png"
+  },
+  {
+    "title": "Musk\u2019s xAI to build small solar farm adjacent to Colossus data center",
+    "url": "https://techcrunch.com/2025/11/26/musks-xai-to-build-small-solar-farm-adjacent-to-colossus-data-center/",
     "published_at": "2025-11-26T12:19:04-05:00",
     "source": "TechCrunch",
     "summary": "The artificial intelligence company said it was working with a developer to build a solar farm on 88 acres next to its Memphis site.",
@@ -12,10 +47,28 @@
     "_trending_tags": [
       "ai"
     ],
-    "_permalink": "/p/6492e698be/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/6492e698be/",
+    "_permalink": "/p/e03ae371a7/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/e03ae371a7/",
     "_summary_240": "The artificial intelligence company said it was working with a developer to build a solar farm on 88 acres next to its Memphis site.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/6492e698be/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/e03ae371a7/thumbnail.png"
+  },
+  {
+    "title": "AI Spending Frenzy Echos Early Go-Go Days of Shale, Currie Says",
+    "url": "https://www.bloomberg.com/news/articles/2025-11-26/ai-spending-frenzy-echos-early-go-go-days-of-shale-currie-says",
+    "published_at": "2025-11-26T12:15:31-05:00",
+    "source": "Bloomberg Technology",
+    "summary": "The eye-popping amounts Big Tech is shelling out on artificial intelligence resembles shale\u2019s golden age of spending before a price crash wiped out $2.6 trillion in equity, Carlyle Group Inc.\u2019s Jeff Currie says.",
+    "content_html": "",
+    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ikCymU9QiabI/v1/1200x-1.jpg",
+    "summary_text": "The eye-popping amounts Big Tech is shelling out on artificial intelligence resembles shale\u2019s golden age of spending before a price crash wiped out $2.6 trillion in equity, Carlyle Group Inc.\u2019s Jeff Currie says.",
+    "category": "ai",
+    "_trending_tags": [
+      "ai"
+    ],
+    "_permalink": "/p/7f3c791be9/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/7f3c791be9/",
+    "_summary_240": "The eye-popping amounts Big Tech is shelling out on artificial intelligence resembles shale\u2019s golden age of spending before a price crash wiped out $2.6 trillion in equity,...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/7f3c791be9/thumbnail.png"
   },
   {
     "title": "How the SEC\u2019s revised 2025 plan could streamline crypto oversight",
@@ -82,7 +135,11 @@
     "category": "ai",
     "_trending_tags": [
       "ai"
-    ]
+    ],
+    "_permalink": "/p/0f2a6a0726/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/0f2a6a0726/",
+    "_summary_240": "MyHair AI examines photos of the scalp to help diagnose hair loss and suggest scientifically validated clinics and treatments.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/0f2a6a0726/thumbnail.png"
   },
   {
     "title": "Poland to Bolster Drone Capabilities With New EU Defense Funding",
@@ -537,24 +594,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/94a89a951e/thumbnail.png"
   },
   {
-    "title": "Top Performing Issuers Turn Data Into Their Biggest Competitive Advantage",
-    "url": "https://www.pymnts.com/credit-cards/2025/top-performing-issuers-turn-data-into-their-biggest-competitive-advantage/",
-    "published_at": "2025-11-26T04:00:29-05:00",
-    "source": "PYMNTS",
-    "summary": "What separates top card issuers from everyone else often comes down to one capability: the ability to use analytics to see the full value of a customer relationship. Research from PYMNTS Intelligence and Visa DPS shows that the issuers with the highest customer lifetime values are the ones whose issuing platforms can turn raw [\u2026] The post Top Performing Issuers Turn Data Into Their Biggest Compet...",
-    "content_html": "<p style=\"font-weight: 400;\">What separates top card issuers from everyone else often comes down to one capability: the ability to use analytics to see the full value of a customer relationship.</p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p style=\"font-weight: 400;\"><a href=\"https://www.pymnts.com/credit-cards/2025/the-data-divide-in-card-issuing/\" rel=\"noopener\" target=\"_blank\">Research</a> from PYMNTS Intelligence and <a href=\"https://usa.visa.com/sites/visa-dps.html\" rel=\"noopener\" target=\"_blank\">Visa DPS</a> shows that the issuers with the highest customer lifetime values are the ones whose issuing platforms can turn raw transaction data into clear, actionable insight about profitability over time.</p>\n<h2 style=\"font-weight: 400;\"><strong>How Visa DPS and Visa Intelligence Identified Top Performers</strong></h2>\n<p style=\"font-weight: 400;\">The study draws on a survey of 451 heads of payments at U.S. card issuers, fielded between December 2024 and January 2025, to identify the factors that correlate with high customer lifetime value. The joint PYMNTS Intelligence and Visa DPS research team evaluated how issuers define best-in-class performance and how they use analytics within their issuing platforms.</p>\n<p style=\"font-weight: 400;\">The analysis used customer lifetime value (CLTV) as the primary indicator of issuer performance. Issuers were grouped into high, medium and low CLTV categories based on the lifetime revenue they earn per cardholder. High CLTV issuers exceed $2,500 per customer, medium CLTV issuers fall between $1,000 and $2,500 and low CLTV issuers generate less than $1,000. That measure allowed researchers to directly correlate platform capabilities with long-term profitability.</p>\n<p style=\"font-weight: 400;\">Across all issuer types, one theme stood out. Sixty-seven percent of issuers said that enhanced performance tracking and profitability metrics define a best-in-class issuing platform. Consumer segmentation, forecasting and real-time risk monitoring were valued, but issuers made it clear that those tools matter most when they illuminate financial outcomes. The study highlights that analytics only create competitive advantage when they help issuers understand how their portfolios are performing and what to expect next.</p>\n<h2 style=\"font-weight: 400;\"><strong>The Value of Analytics in Issuing Platforms</strong></h2>\n<p style=\"font-weight: 400;\">The research shows that high CLTV issuers are more advanced in their use of predictive analytics. They are twice as likely as other groups to rely on forecasting tools that connect customer behavior to future profitability.</p>\n<p style=\"font-weight: 400;\">The report also underscores the importance of consumer analytics. Fifty-four percent of high CLTV issuers say consumer analytics are important to their choice of issuer processor, compared to 48% of medium CLTV issuers and 47% of low CLTV issuers. Higher performers tend to treat consumer analytics not as a technical add-on but as a core strategic input.</p>\n<ul>\n<li style=\"font-weight: 400;\"><strong>Enhanced performance and profitability tracking</strong><br />\nIssuers rank this as the most important capability because it provides a clear view of financial outcomes across cardholder segments. Top issuers use these tools to optimize portfolio strategy, track revenue drivers and quickly identify areas where engagement or profitability is shifting.</li>\n<li style=\"font-weight: 400;\"><strong>Predictive analytics and forecasting</strong><br />\nHigh CLTV issuers lean heavily on forecasting to anticipate future performance. These features support better decisions about pricing, credit strategies, rewards design and marketing investments because they quantify the long-term effects of customer behavior.</li>\n<li style=\"font-weight: 400;\"><strong>Consumer and transaction analytics</strong><br />\nUnderstanding real-time behavior remains essential. Segmentation and behavioral analytics enable issuers to tailor offers, reduce churn and strengthen engagement, which are all core drivers of CLTV. High CLTV issuers signal that these insights are increasingly important in selecting an issuer processor.</li>\n</ul>\n<h2 style=\"font-weight: 400;\"><strong>Who the Top Performers Are</strong></h2>\n<p style=\"font-weight: 400;\">The research reveals important differences across issuer categories. Seventy-five percent of high CLTV large national banks already have advanced analytics built into their issuing platforms. All high CLTV digital-only banks report the same. Yet only 33% of credit unions and 41% of local and regional banks say they have advanced analytics capabilities today. FinTech issuers fall in the middle, with 43% having advanced analytics.</p>\n<p style=\"font-weight: 400;\">These gaps suggest that while large institutions and digital-first issuers have pulled ahead, many smaller banks and credit unions remain early in the analytics adoption cycle. At the same time, FinTech issuers show strong momentum. Twenty-nine percent of high CLTV FinTechs say data analytics is the most important upgrade they intend to make in the next year.</p>\n<p style=\"font-weight: 400;\">\u00a0The institutions that thrive will be those that can connect data, strategy and customer behavior in ways that lift lifetime value and long-term profitability.</p>\n<p style=\"font-weight: 400;\"><strong>Read the report:</strong> <a href=\"https://www.pymnts.com/credit-cards/2025/the-data-divide-in-card-issuing/\" rel=\"noopener\" target=\"_blank\">Best-In-Class Modern Card Issuer: Why Data Analytics Features Distinguish Best-In-Class Platforms</a></p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/credit-cards/2025/top-performing-issuers-turn-data-into-their-biggest-competitive-advantage/\">Top Performing Issuers Turn Data Into Their Biggest Competitive Advantage</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
-    "image_url": "https://www.pymnts.com/wp-content/uploads/2025/11/CONSUMER-INSIGHTS-DATA.jpeg?w=457",
-    "summary_text": "What separates top card issuers from everyone else often comes down to one capability: the ability to use analytics to see the full value of a customer relationship. Research from PYMNTS Intelligence and Visa DPS shows that the issuers with the highest custom...",
-    "category": "fintech",
-    "_trending_tags": [
-      "ai"
-    ],
-    "_permalink": "/p/ea0c5ad5d3/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/ea0c5ad5d3/",
-    "_summary_240": "What separates top card issuers from everyone else often comes down to one capability: the ability to use analytics to see the full value of a customer relationship. Research...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/ea0c5ad5d3/thumbnail.png"
-  },
-  {
     "title": "SoftBank\u2019s 40% Slide From Peak Shows Worry Over Giant OpenAI Bet",
     "url": "https://www.bloomberg.com/news/articles/2025-11-26/softbank-s-40-slide-from-peak-reflects-jitters-over-openai-bet",
     "published_at": "2025-11-26T02:13:06-05:00",
@@ -682,42 +721,6 @@
     ]
   },
   {
-    "title": "\u2018Institutions have arrived\u2019 \u2014 US Bancorp launches stablecoin pilot on Stellar network",
-    "url": "https://cointelegraph.com/news/us-bancorp-stablecoin-pilot-pwc-stellar-blockchain?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-    "published_at": "2025-11-25T22:10:44-05:00",
-    "source": "Cointelegraph",
-    "summary": "The ability to freeze assets and unwind transactions was a key consideration when selecting the blockchain for the pilot, according to Mike Villano from US Bank.",
-    "content_html": "",
-    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMDYvMDE5N2FkMTYtMzU5NC03OTk4LWIxZGUtNWI2ODcwOTUzM2My.jpg",
-    "summary_text": "The ability to freeze assets and unwind transactions was a key consideration when selecting the blockchain for the pilot, according to Mike Villano from US Bank.",
-    "category": "fintech",
-    "_trending_tags": [
-      "ai"
-    ],
-    "_permalink": "/p/5da1bf71b6/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/5da1bf71b6/",
-    "_summary_240": "The ability to freeze assets and unwind transactions was a key consideration when selecting the blockchain for the pilot, according to Mike Villano from US Bank.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/5da1bf71b6/thumbnail.png"
-  },
-  {
-    "title": "SoftBank Completes Acquisition of Chipmaker Ampere Computing",
-    "url": "https://www.bloomberg.com/news/articles/2025-11-26/softbank-completes-acquisition-of-chipmaker-ampere-computing",
-    "published_at": "2025-11-25T20:59:37-05:00",
-    "source": "Bloomberg Technology",
-    "summary": "SoftBank Group Corp. completed its $6.5 billion purchase of US chip startup Ampere Computing LLC, adding another asset to aid its push into AI hardware.",
-    "content_html": "",
-    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ihEOkL4eRgck/v0/1200x-1.jpg",
-    "summary_text": "SoftBank Group Corp. completed its $6.5 billion purchase of US chip startup Ampere Computing LLC, adding another asset to aid its push into AI hardware.",
-    "category": "fintech",
-    "_trending_tags": [
-      "ai"
-    ],
-    "_permalink": "/p/36efeda17d/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/36efeda17d/",
-    "_summary_240": "SoftBank Group Corp. completed its $6.5 billion purchase of US chip startup Ampere Computing LLC, adding another asset to aid its push into AI hardware.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/36efeda17d/thumbnail.png"
-  },
-  {
     "title": "China leapfrogs US in global market for \u2018open\u2019 AI models",
     "url": "https://www.ft.com/content/931c8218-a9d7-4cbd-8b08-27516637ff41",
     "published_at": "2025-11-25T20:15:05-05:00",
@@ -753,27 +756,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/6b84ba8e8e/",
     "_summary_240": "Robinhood Markets Inc. and Susquehanna International Group are taking over a regulated exchange that was tied to the now-defunct crypto business FTX, giving them a powerful new...",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/6b84ba8e8e/thumbnail.png"
-  },
-  {
-    "title": "OpenAI Says ChatGPT Not to Blame in Teen\u2019s Death by Suicide",
-    "url": "https://www.bloomberg.com/news/articles/2025-11-26/openai-says-chatgpt-not-to-blame-in-teen-s-death-by-suicide",
-    "published_at": "2025-11-25T19:07:50-05:00",
-    "source": "Bloomberg Technology",
-    "summary": "OpenAI defended itself against a lawsuit accusing ChatGPT of coaching a 16-year-old to kill himself, saying the chatbot directed the teenager to seek help more than 100 times.",
-    "content_html": "",
-    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/icEonO8cM2MA/v0/1200x-1.jpg",
-    "summary_text": "OpenAI defended itself against a lawsuit accusing ChatGPT of coaching a 16-year-old to kill himself, saying the chatbot directed the teenager to seek help more than 100 times.",
-    "category": "ai",
-    "_trending_tags": [
-      "ai",
-      "chatgpt",
-      "gpt",
-      "openai"
-    ],
-    "_permalink": "/p/1a45ff5106/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/1a45ff5106/",
-    "_summary_240": "OpenAI defended itself against a lawsuit accusing ChatGPT of coaching a 16-year-old to kill himself, saying the chatbot directed the teenager to seek help more than 100 times.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/1a45ff5106/thumbnail.png"
   },
   {
     "title": "The AI cycle will crack first in Asia",
@@ -1536,7 +1518,11 @@
     "category": "ai",
     "_trending_tags": [
       "ai"
-    ]
+    ],
+    "_permalink": "/p/69cc019e0c/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/69cc019e0c/",
+    "_summary_240": "Remember the first time you heard your company was going AI-first ? Maybe it came through an all-hands that felt different from the others. The CEO said, \u201cBy Q3, every team...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/69cc019e0c/thumbnail.png"
   },
   {
     "title": "\u2018We\u2019re physicists who are also capitalists,\u2019 says quantum CEO",
