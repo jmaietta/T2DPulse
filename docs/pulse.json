@@ -1,5 +1,47 @@
 [
   {
+    "title": "A weekend \u2018vibe code\u2019 hack by Andrej Karpathy quietly sketches the missing layer of enterprise AI orchestration",
+    "url": "https://venturebeat.com/ai/a-weekend-vibe-code-hack-by-andrej-karpathy-quietly-sketches-the-missing",
+    "published_at": "2025-11-26T09:00:00-05:00",
+    "source": "VentureBeat",
+    "summary": "This weekend, Andrej Karpathy , the former director of AI at Tesla and a founding member of OpenAI, decided he wanted to read a book. But he did not want to read it alone. He wanted to read it accompanied by a committee of artificial intelligences, each offering its own perspective, critiquing the others, and eventually synthesizing a final answer under the guidance of a \"Chairman.\" To make this ...",
+    "content_html": "",
+    "image_url": "",
+    "summary_text": "This weekend, Andrej Karpathy , the former director of AI at Tesla and a founding member of OpenAI, decided he wanted to read a book. But he did not want to read it alone. He wanted to read it accompanied by a committee of artificial intelligences, each offer...",
+    "category": "ai",
+    "_trending_tags": [
+      "ai",
+      "openai"
+    ],
+    "_permalink": "/p/c5bd192772/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/c5bd192772/",
+    "_summary_240": "This weekend, Andrej Karpathy , the former director of AI at Tesla and a founding member of OpenAI, decided he wanted to read a book. But he did not want to read it alone. He...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/c5bd192772/thumbnail.png"
+  },
+  {
+    "title": "ChatGPT and Copilot are being booted out of WhatsApp",
+    "url": "https://www.theverge.com/news/829808/chatgpt-copilot-ai-llm-leaving-whatsapp-meta",
+    "published_at": "2025-11-26T08:00:55-05:00",
+    "source": "The Verge",
+    "summary": "OpenAI\u2019s ChatGPT and Microsoft\u2019s Copilot are both leaving WhatsApp thanks to upcoming changes to the messaging app\u2019s terms of service that will prohibit using it to distribute AI chatbots not made by Meta. OpenAI announced its planned departure a few weeks ago, with Microsoft following it this week. Both companies attributed the departures to Meta\u2019s [\u2026]",
+    "content_html": "<figure>\n\n<img alt=\"\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/11/STK110_whats_app_Kradtke_01.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100\" />\n\t<figcaption>\n\t\t</figcaption>\n</figure>\n<p class=\"has-text-align-none\">OpenAI\u2019s ChatGPT and Microsoft\u2019s Copilot are both leaving WhatsApp thanks to upcoming changes to the messaging app\u2019s terms of service that will prohibit using it to distribute AI chatbots not made by Meta.</p>\n\n<p class=\"has-text-align-none\">OpenAI <a href=\"https://openai.com/index/chatgpt-whatsapp-transition/\">announced its planned departure</a> a few weeks ago, with Microsoft <a href=\"https://www.microsoft.com/en-us/microsoft-copilot/blog/2025/11/24/copilot-is-leaving-whatsapp-whats-next/\">following it</a> this week. Both companies attributed the departures to Meta\u2019s new terms of service for WhatsApp Business Solution, which come into effect on January 15th, 2026, and said the chatbots will remain accessible in WhatsApp until that date. ChatGPT users can link their accounts to WhatsApp to make sure their chat history carries over, though Copilot users won\u2019t have that option.</p>\n\n<p class=\"has-text-align-none\">WhatsApp announced the update to <a href=\"https://www.whatsapp.com/legal/business-solution-terms/preview?lang=en\">its terms</a> in October, banning AI companies from using its business API as a distribution platform for chatbots. Other companies will still be permitted to use WhatsApp for customer service or support chatbots, with the terms only prohibiting cases where the AI itself is the product \u2014\u00a0a simple way of stopping Meta\u2019s AI rivals using its own platform to reach customers.</p>\n\n<p class=\"has-text-align-none\">\u201cThe purpose of the WhatsApp Business API is to help businesses provide customer support and send relevant updates,\u201d an anonymous Meta spokesperson told <a href=\"https://techcrunch.com/2025/10/18/whatssapp-changes-its-terms-to-bar-general-purpose-chatbots-from-its-platform/\"><em>TechCrunch</em></a> at the time. \u201cOur focus is on supporting the tens of thousands of businesses who are building these experiences on WhatsApp.\u201d</p>\n\n<p class=\"has-text-align-none\">The change means that other third-party AI chatbots, including Perplexity, are likely to announce departures from WhatsApp soon, leaving <a href=\"https://www.theverge.com/2023/9/27/23891128/meta-ai-assistant-characters-whatsapp-instagram-connect\">Meta AI</a> the only option available from next January.</p>",
+    "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/11/STK110_whats_app_Kradtke_01.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "summary_text": "OpenAI\u2019s ChatGPT and Microsoft\u2019s Copilot are both leaving WhatsApp thanks to upcoming changes to the messaging app\u2019s terms of service that will prohibit using it to distribute AI chatbots not made by Meta. OpenAI announced its planned departure a few weeks ag...",
+    "category": "ai",
+    "_trending_tags": [
+      "ai",
+      "chatgpt",
+      "gpt",
+      "meta",
+      "microsoft",
+      "openai"
+    ],
+    "_permalink": "/p/ebef878ff7/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/ebef878ff7/",
+    "_summary_240": "OpenAI\u2019s ChatGPT and Microsoft\u2019s Copilot are both leaving WhatsApp thanks to upcoming changes to the messaging app\u2019s terms of service that will prohibit using it to distribute AI...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/ebef878ff7/thumbnail.png"
+  },
+  {
     "title": "FCA trials crypto transparency templates as UK shapes new rulebook",
     "url": "https://cointelegraph.com/news/uk-fca-eunice-crypto-disclosure-sandbox-roadmap?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
     "published_at": "2025-11-26T07:30:36-05:00",
@@ -1367,13 +1409,9 @@
     "source": "Financial Times - Technology",
     "summary": "US commerce secretary calls for \u2018balanced approach\u2019 during visit to Brussels for meeting with bloc\u2019s trade ministers",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/4ba6158a-2c4a-41a1-8512-4f8e794396b6.jpg",
+    "image_url": "",
     "summary_text": "US commerce secretary calls for \u2018balanced approach\u2019 during visit to Brussels for meeting with bloc\u2019s trade ministers",
-    "category": "fintech",
-    "_permalink": "/p/80c7cbeb83/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/80c7cbeb83/",
-    "_summary_240": "US commerce secretary calls for \u2018balanced approach\u2019 during visit to Brussels for meeting with bloc\u2019s trade ministers",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/80c7cbeb83/thumbnail.png"
+    "category": "fintech"
   },
   {
     "title": "Don\u2019t share your secrets with a chatbot",
@@ -1382,13 +1420,9 @@
     "source": "Financial Times - Technology",
     "summary": "Tech companies are harnessing the language of relationships to harvest data",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/98ba7be1-23cc-4a50-8503-efe19fee90b7.jpg",
+    "image_url": "",
     "summary_text": "Tech companies are harnessing the language of relationships to harvest data",
-    "category": "fintech",
-    "_permalink": "/p/073cf58773/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/073cf58773/",
-    "_summary_240": "Tech companies are harnessing the language of relationships to harvest data",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/073cf58773/thumbnail.png"
+    "category": "fintech"
   },
   {
     "title": "AI On: 3 Ways Specialized AI Agents Are Reshaping Businesses",
@@ -1416,18 +1450,14 @@
     "source": "Financial Times - Technology",
     "summary": "PopEVE system outperformed rivals such as Google DeepMind\u2019s AlphaMissense",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/1e7c6c33-e3a9-4e3a-8bd9-cfbbe78b7974.jpg",
+    "image_url": "",
     "summary_text": "PopEVE system outperformed rivals such as Google DeepMind\u2019s AlphaMissense",
     "category": "ai",
     "_trending_tags": [
       "ai",
       "deepmind",
       "google"
-    ],
-    "_permalink": "/p/19d4e2c8dc/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/19d4e2c8dc/",
-    "_summary_240": "PopEVE system outperformed rivals such as Google DeepMind\u2019s AlphaMissense",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/19d4e2c8dc/thumbnail.png"
+    ]
   },
   {
     "title": "Amazon Is Using Specialized AI Agents for Deep Bug Hunting",
@@ -1520,13 +1550,9 @@
     "source": "Financial Times - Technology",
     "summary": "Niccolo de Masi insists IonQ\u2019s tech is better than rivals\u2019 \u2014 but some investors say it is unproven",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/0f6625bb-4802-4b31-b1fd-6ebdf245ab86.jpg",
+    "image_url": "",
     "summary_text": "Niccolo de Masi insists IonQ\u2019s tech is better than rivals\u2019 \u2014 but some investors say it is unproven",
-    "category": "software",
-    "_permalink": "/p/fac8268446/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/fac8268446/",
-    "_summary_240": "Niccolo de Masi insists IonQ\u2019s tech is better than rivals\u2019 \u2014 but some investors say it is unproven",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/fac8268446/thumbnail.png"
+    "category": "software"
   },
   {
     "title": "Introducing shopping research in ChatGPT",
@@ -1559,23 +1585,6 @@
     ]
   },
   {
-    "title": "Microsoft\u2019s Fara-7B is a computer-use AI agent that rivals GPT-4o and works directly on your PC",
-    "url": "https://venturebeat.com/ai/microsofts-fara-7b-is-a-computer-use-ai-agent-that-rivals-gpt-4o-and-works",
-    "published_at": "2025-11-23T19:00:00-05:00",
-    "source": "VentureBeat",
-    "summary": "Microsoft has introduced Fara-7B, a new 7-billion parameter model designed to act as a Computer Use Agent (CUA) capable of performing complex tasks directly on a user\u2019s device. Fara-7B sets new state-of-the-art results for its size, providing a way to build AI agents that don\u2019t rely on massive, cloud-dependent models and can run on compact systems with lower latency and enhanced privacy. While th...",
-    "content_html": "",
-    "image_url": "",
-    "summary_text": "Microsoft has introduced Fara-7B, a new 7-billion parameter model designed to act as a Computer Use Agent (CUA) capable of performing complex tasks directly on a user\u2019s device. Fara-7B sets new state-of-the-art results for its size, providing a way to build A...",
-    "category": "ai",
-    "_trending_tags": [
-      "agent",
-      "ai",
-      "gpt",
-      "microsoft"
-    ]
-  },
-  {
     "title": "Quit Roblox. Sell RBLX.",
     "url": "https://newsletter.tek2dayholdings.com/p/quit-roblox-sell-rblx",
     "published_at": "2025-11-23T11:04:01-05:00",
@@ -1597,7 +1606,7 @@
     "source": "Financial Times - Technology",
     "summary": "Norway\u2019s national fund chief Nicolai Tangen warns differing access to artificial intelligence has potential for \u2018splitting societies\u2019",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/b20ca843-87fa-438b-a4d9-d9af96d3276e.jpg",
+    "image_url": "",
     "summary_text": "Norway\u2019s national fund chief Nicolai Tangen warns differing access to artificial intelligence has potential for \u2018splitting societies\u2019",
     "category": "ai",
     "_trending_tags": [
@@ -1628,7 +1637,7 @@
     "source": "Financial Times - Technology",
     "summary": "AIG, Great American and WR Berkley seek permission to limit liability from AI agents and chatbots",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/9bc84743-630a-483b-ac2f-1c210c3e7c1d.jpg",
+    "image_url": "",
     "summary_text": "AIG, Great American and WR Berkley seek permission to limit liability from AI agents and chatbots",
     "category": "ai",
     "_trending_tags": [
