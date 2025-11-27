@@ -1092,7 +1092,7 @@
     "source": "Financial Times - Technology",
     "summary": "$115bn sell-off for chip group weighs on those linked to company",
     "content_html": "",
-    "image_url": "https://images.ft.com/v3/image/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F38fe4fe9-1093-4942-8401-9c8809c6adc0.jpg?source=cp-insurance-policy&fit=scale-down&quality=highest&width=700&dpr=1",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/38fe4fe9-1093-4942-8401-9c8809c6adc0.jpg",
     "summary_text": "$115bn sell-off for chip group weighs on those linked to company",
     "category": "ai",
     "_trending_tags": [
@@ -1124,24 +1124,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/2193027e47/",
     "_summary_240": "In this episode of Uncanny Valley, we cover the news of the week and take a closer look at the Gemini 3, Google\u2019s latest AI model and chatbot.",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/2193027e47/thumbnail.png"
-  },
-  {
-    "title": "HP Announces Job Cuts as Profit Outlook Misses Estimates",
-    "url": "https://www.bloomberg.com/news/articles/2025-11-25/hp-announces-job-cuts-as-profit-outlook-falls-short-of-estimates",
-    "published_at": "2025-11-25T16:17:20-05:00",
-    "source": "Bloomberg Technology",
-    "summary": "HP Inc. gave a profit outlook for current year that fell short of estimates and the company said it will cut 4,000 to 6,000 employees through fiscal 2028 by using more AI tools.",
-    "content_html": "HP Inc. headquarters in Palo Alto, California.",
-    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iqs1fKLcwQP8/v1/1200x-1.jpg",
-    "summary_text": "HP Inc. gave a profit outlook for current year that fell short of estimates and the company said it will cut 4,000 to 6,000 employees through fiscal 2028 by using more AI tools.",
-    "category": "ai",
-    "_trending_tags": [
-      "ai"
-    ],
-    "_permalink": "/p/086fcdb77b/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/086fcdb77b/",
-    "_summary_240": "HP Inc. gave a profit outlook for current year that fell short of estimates and the company said it will cut 4,000 to 6,000 employees through fiscal 2028 by using more AI tools.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/086fcdb77b/thumbnail.png"
   },
   {
     "title": "ChatGPT\u2019s voice mode is no longer a separate interface",
