@@ -633,27 +633,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/ca2350697f/thumbnail.png"
   },
   {
-    "title": "Claude Agent Skills Explained",
-    "url": "https://www.youtube.com/watch?v=fOxC44g8vig",
-    "published_at": "2025-11-26T17:09:15-05:00",
-    "source": "Anthropic YouTube",
-    "summary": "Agent Skills are organized folders that package expertise that Claude can automatically invoke when relevant to the task at hand. Join the Claude Developer Discord - https://anthropic.com/discord Learn more about Agent Skills - https://www.claude.com/blog/skills 00:06 Introducing Agent Skills 00:30 How Agent Skills work 01:08 Agent Skills vs Claude.md 01:42 Agent Skills vs MCP Servers 02:05 Agent...",
-    "content_html": "",
-    "image_url": "https://i.ytimg.com/vi/fOxC44g8vig/maxresdefault.jpg",
-    "summary_text": "Agent Skills are organized folders that package expertise that Claude can automatically invoke when relevant to the task at hand. Join the Claude Developer Discord - https://anthropic.com/discord Learn more about Agent Skills - https://www.claude.com/blog/ski...",
-    "category": "ai",
-    "_trending_tags": [
-      "agent",
-      "ai",
-      "anthropic",
-      "claude"
-    ],
-    "_permalink": "/p/9df3cc51a4/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/9df3cc51a4/",
-    "_summary_240": "Agent Skills are organized folders that package expertise that Claude can automatically invoke when relevant to the task at hand. Join the Claude Developer Discord -...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/9df3cc51a4/thumbnail.png"
-  },
-  {
     "title": "Bitcoin shows \u2018strong negative correlation\u2019 with USDt activity: Glassnode",
     "url": "https://cointelegraph.com/news/bitcoin-usdt-performance-glassnode?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
     "published_at": "2025-11-26T16:55:53-05:00",
@@ -1740,6 +1719,23 @@
     "_trending_tags": [
       "agent",
       "ai"
+    ]
+  },
+  {
+    "title": "Scania accelerates operations across its global workforce with ChatGPT",
+    "url": "https://www.youtube.com/watch?v=0luMwmnvRuQ",
+    "published_at": "2025-11-20T20:43:32-05:00",
+    "source": "OpenAI YouTube",
+    "summary": "Scania builds the trucks, buses, and transport systems that keep the world moving. With AI in their engineering-led organisation, they're evolving from vehicle maker to sustainable transport ecosystem leader. Read more: https://openai.com/index/scania/",
+    "content_html": "",
+    "image_url": "https://i.ytimg.com/vi/0luMwmnvRuQ/maxresdefault.jpg",
+    "summary_text": "Scania builds the trucks, buses, and transport systems that keep the world moving. With AI in their engineering-led organisation, they're evolving from vehicle maker to sustainable transport ecosystem leader. Read more: https://openai.com/index/scania/",
+    "category": "ai",
+    "_trending_tags": [
+      "ai",
+      "chatgpt",
+      "gpt",
+      "openai"
     ]
   },
   {
