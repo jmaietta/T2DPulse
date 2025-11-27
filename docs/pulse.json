@@ -1,5 +1,41 @@
 [
   {
+    "title": "Malicious Chrome extension skims Solana swaps with hidden extra transfers",
+    "url": "https://cointelegraph.com/news/malicious-solana-chrome-extension-skims-sol-rather-than-emptying-the-wallet?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "published_at": "2025-11-27T09:07:24-05:00",
+    "source": "Cointelegraph",
+    "summary": "A malicious Chrome extension called Crypto Copilot lets users trade Solana directly from X but secretly skims a small portion of the transaction.",
+    "content_html": "",
+    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjQtMTEvMDE5Mzc3NzEtZmZkYS03YjM3LTliYjctYjAwNDhhNGI5MWQw.jpg",
+    "summary_text": "A malicious Chrome extension called Crypto Copilot lets users trade Solana directly from X but secretly skims a small portion of the transaction.",
+    "category": "fintech",
+    "_permalink": "/p/aa1a712c5c/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/aa1a712c5c/",
+    "_summary_240": "A malicious Chrome extension called Crypto Copilot lets users trade Solana directly from X but secretly skims a small portion of the transaction.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/aa1a712c5c/thumbnail.png"
+  },
+  {
+    "title": "Sorry Mom. The Shopping Bots Suggested a Bathrobe for Christmas",
+    "url": "https://www.bloomberg.com/news/articles/2025-11-27/sorry-mom-the-shopping-bots-suggested-a-bathrobe-for-christmas",
+    "published_at": "2025-11-27T09:00:35-05:00",
+    "source": "Bloomberg Technology",
+    "summary": "Amazon.com Inc.\u2019s AI-infused Rufus shopping assistant has new features that make it a \u201cfaster, more useful, state-of-the-art shopping companion.\u201d Google\u2019s agentic checkout feature \u201ccan do the heavy lifting to help you get the perfect item without blowing your budget.\u201d OpenAI on Monday unveiled a free ChatGPT tool it says can generate a personalized gift-buying guide.",
+    "content_html": "",
+    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iSwtepLHH.Ac/v0/1200x-1.jpg",
+    "summary_text": "Amazon.com Inc.\u2019s AI-infused Rufus shopping assistant has new features that make it a \u201cfaster, more useful, state-of-the-art shopping companion.\u201d Google\u2019s agentic checkout feature \u201ccan do the heavy lifting to help you get the perfect item without blowing your...",
+    "category": "ai",
+    "_trending_tags": [
+      "agent",
+      "ai",
+      "amazon",
+      "google"
+    ],
+    "_permalink": "/p/c4a6c6cb7c/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/c4a6c6cb7c/",
+    "_summary_240": "Amazon.com Inc.\u2019s AI-infused Rufus shopping assistant has new features that make it a \u201cfaster, more useful, state-of-the-art shopping companion.\u201d Google\u2019s agentic checkout...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/c4a6c6cb7c/thumbnail.png"
+  },
+  {
     "title": "How blockchain upgrades start: From idea to proposal",
     "url": "https://cointelegraph.com/news/how-blockchain-upgrades-start-from-idea-to-proposal?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
     "published_at": "2025-11-27T08:42:00-05:00",
@@ -1515,11 +1551,7 @@
       "agent",
       "ai",
       "amazon"
-    ],
-    "_permalink": "/p/25aacdb8c6/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/25aacdb8c6/",
-    "_summary_240": "Born out of an internal hackathon, Amazon\u2019s Autonomous Threat Analysis system uses a variety of specialized AI agents to detect weaknesses and propose fixes to the company\u2019s...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/25aacdb8c6/thumbnail.png"
+    ]
   },
   {
     "title": "Roblox's Trust & Safety Effort Feels Light",
