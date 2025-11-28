@@ -1,9 +1,9 @@
 {
-  "generated_at": "2025-11-28T15:41:46.424059-05:00",
+  "generated_at": "2025-11-28T16:22:18.959111-05:00",
   "total_keywords": 30,
   "keyword_counts": {
-    "ai": 133,
-    "agent": 15,
+    "ai": 130,
+    "agent": 14,
     "openai": 13,
     "chatgpt": 9,
     "google": 9,
@@ -13,14 +13,13 @@
     "claude": 4,
     "fintech": 3,
     "meta": 3,
+    "microsoft": 3,
     "nvidia": 3,
     "amazon": 2,
+    "cloud": 2,
     "genai": 2,
-    "microsoft": 2,
     "apple": 1,
-    "cloud": 1,
-    "h100": 1,
-    "stripe": 1
+    "h100": 1
   },
   "sources_per_keyword": {},
   "top_articles_per_keyword": {}
