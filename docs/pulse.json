@@ -1,5 +1,20 @@
 [
   {
+    "title": "Polymarket puts December rate-cut odds at 87% as crypto stocks climb",
+    "url": "https://cointelegraph.com/news/polymarket-december-rate-cut-odds-crypto-stocks-climb?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "published_at": "2025-11-28T15:29:09-05:00",
+    "source": "Cointelegraph",
+    "summary": "Cleanspark, Riot, Cipher and Circle rose higher as the odds of a US rate-cut in December reached its highest level of the month on the prediction market.",
+    "content_html": "",
+    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMDkvMDE5OTNkMDItZDBiNS03NDFkLTlhOTItYjUxZjY3ODI2ZWY0.jpg",
+    "summary_text": "Cleanspark, Riot, Cipher and Circle rose higher as the odds of a US rate-cut in December reached its highest level of the month on the prediction market.",
+    "category": "fintech",
+    "_permalink": "/p/e682660a2d/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/e682660a2d/",
+    "_summary_240": "Cleanspark, Riot, Cipher and Circle rose higher as the odds of a US rate-cut in December reached its highest level of the month on the prediction market.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/e682660a2d/thumbnail.png"
+  },
+  {
     "title": "Lufthansa Introduces Klarna-Powered Flexible Payment Options for Travelers",
     "url": "https://www.pymnts.com/buy-now-pay-later/2025/lufthansa-introduces-klarna-powered-flexible-payment-options-travelers/",
     "published_at": "2025-11-28T14:42:02-05:00",
@@ -16,6 +31,27 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/cd0ce869d3/",
     "_summary_240": "Lufthansa Group customers in several countries can now choose Klarna\u2019s flexible payment options when booking travel experiences. The options allow the airline group\u2019s travelers...",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/cd0ce869d3/thumbnail.png"
+  },
+  {
+    "title": "Anthropic says it solved the long-running AI agent problem with a new multi-session Claude SDK",
+    "url": "https://venturebeat.com/ai/anthropic-says-it-solved-the-long-running-ai-agent-problem-with-a-new-multi",
+    "published_at": "2025-11-28T14:30:00-05:00",
+    "source": "VentureBeat",
+    "summary": "Agent memory remains a problem that enterprises want to fix, as agents forget some instructions or conversations the longer they run. Anthropic believes it has solved this issue for its Claude Agent SDK , developing a two-fold solution that allows an agent to work across different context windows. \u201cThe core challenge of long-running agents is that they must work in discrete sessions, and each new...",
+    "content_html": "",
+    "image_url": "https://images.ctfassets.net/jdtwqhzvc2n1/5OhMVMuZnqqqn6ri40T71w/17233373dbf6bca0ca38c73008c35468/crimedy7_illustration_of_robots_running_a_marathon_--ar_169_-_98e4a2e9-af27-4fe5-8f24-c70cc6d9dd30_3.png?w=800&amp;q=75",
+    "summary_text": "Agent memory remains a problem that enterprises want to fix, as agents forget some instructions or conversations the longer they run. Anthropic believes it has solved this issue for its Claude Agent SDK , developing a two-fold solution that allows an agent to...",
+    "category": "ai",
+    "_trending_tags": [
+      "agent",
+      "ai",
+      "anthropic",
+      "claude"
+    ],
+    "_permalink": "/p/4cedf6464a/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/4cedf6464a/",
+    "_summary_240": "Agent memory remains a problem that enterprises want to fix, as agents forget some instructions or conversations the longer they run. Anthropic believes it has solved this issue...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/4cedf6464a/thumbnail.png"
   },
   {
     "title": "FDIC Terminates Consent Orders Against 2 Banks",
@@ -622,24 +658,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/5bbbfc064f/thumbnail.png"
   },
   {
-    "title": "South Africa\u2019s central bank says no \u2018strong immediate need\u2019 for CBDC",
-    "url": "https://cointelegraph.com/news/south-africa-central-bank-no-strong-immediate-need-for-cbdc?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-    "published_at": "2025-11-27T23:11:34-05:00",
-    "source": "Cointelegraph",
-    "summary": "The South African Reserve Bank found no short-term need for a retail CBDC, saying wholesale or cross-border uses should be explored instead.",
-    "content_html": "",
-    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMDEvMDE5NGJjMmEtNDk4NS03NWM1LWFmNGUtNmRkZTQzZGRmODlj.jpg",
-    "summary_text": "The South African Reserve Bank found no short-term need for a retail CBDC, saying wholesale or cross-border uses should be explored instead.",
-    "category": "fintech",
-    "_trending_tags": [
-      "ai"
-    ],
-    "_permalink": "/p/1ea3548763/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/1ea3548763/",
-    "_summary_240": "The South African Reserve Bank found no short-term need for a retail CBDC, saying wholesale or cross-border uses should be explored instead.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/1ea3548763/thumbnail.png"
-  },
-  {
     "title": "Beyond math and coding: New RL framework helps train LLM agents for complex, real-world tasks",
     "url": "https://venturebeat.com/ai/beyond-math-and-coding-new-rl-framework-helps-train-llm-agents-for-complex",
     "published_at": "2025-11-27T23:00:00-05:00",
@@ -1105,13 +1123,17 @@
     "source": "Financial Times - Technology",
     "summary": "Beijing-backed technology gains ground as American giants hold fast to \u2018closed\u2019 AI strategies",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/cc1c2257-5f64-48e3-923d-950c5c49e14e.jpg",
     "summary_text": "Beijing-backed technology gains ground as American giants hold fast to \u2018closed\u2019 AI strategies",
     "category": "ai",
     "_trending_tags": [
       "ai",
       "openai"
-    ]
+    ],
+    "_permalink": "/p/d86879c5b9/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/d86879c5b9/",
+    "_summary_240": "Beijing-backed technology gains ground as American giants hold fast to \u2018closed\u2019 AI strategies",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/d86879c5b9/thumbnail.png"
   },
   {
     "title": "The AI cycle will crack first in Asia",
@@ -1120,12 +1142,16 @@
     "source": "Financial Times - Technology",
     "summary": "Big US tech companies are more diversified than Korean and Taiwanese chipmakers",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/f4c0b666-6c53-43d1-a43e-3281b6312a1b.jpg",
     "summary_text": "Big US tech companies are more diversified than Korean and Taiwanese chipmakers",
     "category": "ai",
     "_trending_tags": [
       "ai"
-    ]
+    ],
+    "_permalink": "/p/8c68fff3df/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/8c68fff3df/",
+    "_summary_240": "Big US tech companies are more diversified than Korean and Taiwanese chipmakers",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/8c68fff3df/thumbnail.png"
   },
   {
     "title": "Alibaba's AgentEvolver lifts model performance in tool use by ~30% using synthetic, auto-generated tasks",
@@ -1185,14 +1211,18 @@
     "source": "Financial Times - Technology",
     "summary": "$115bn sell-off for chip group weighs on those linked to company",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/38fe4fe9-1093-4942-8401-9c8809c6adc0.jpg",
     "summary_text": "$115bn sell-off for chip group weighs on those linked to company",
     "category": "ai",
     "_trending_tags": [
       "ai",
       "google",
       "nvidia"
-    ]
+    ],
+    "_permalink": "/p/0207dc93a9/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/0207dc93a9/",
+    "_summary_240": "$115bn sell-off for chip group weighs on those linked to company",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/0207dc93a9/thumbnail.png"
   },
   {
     "title": "WIRED Roundup: Gemini 3 Release, Nvidia Earnings, Epstein Files Fallout",
@@ -1277,27 +1307,13 @@
     ]
   },
   {
-    "title": "What enterprises should know about The White House's new AI 'Manhattan Project' the Genesis Mission",
-    "url": "https://venturebeat.com/ai/what-enterprises-should-know-about-the-white-houses-new-ai-manhattan-project",
-    "published_at": "2025-11-25T10:52:00-05:00",
-    "source": "VentureBeat",
-    "summary": "President Donald Trump\u2019s new \u201c Genesis Mission \u201d unveiled Monday, November 24, 2025, is billed as a generational leap in how the United States does science akin to the Manhattan Project that created the atomic bomb during World War II. The executive order directs the Department of Energy (DOE) to build a \u201cclosed-loop AI experimentation platform\u201d that links the country\u2019s 17 national laboratories, ...",
-    "content_html": "",
-    "image_url": "https://images.ctfassets.net/jdtwqhzvc2n1/5m2x1YdAEaqWJLhiH1Oh3S/cf8162a0477a1a70dbebd393e0ce2a3d/0hw9lFQJS_Zy6yiTAktWc.png?w=800&amp;q=75",
-    "summary_text": "President Donald Trump\u2019s new \u201c Genesis Mission \u201d unveiled Monday, November 24, 2025, is billed as a generational leap in how the United States does science akin to the Manhattan Project that created the atomic bomb during World War II. The executive order dir...",
-    "category": "ai",
-    "_trending_tags": [
-      "ai"
-    ]
-  },
-  {
     "title": "Klarna launches stablecoin to cut cost of cross-border payments",
     "url": "https://www.ft.com/content/1e22422f-5859-42e0-85ff-7d6fd7869d5c",
     "published_at": "2025-11-25T08:00:01-05:00",
     "source": "Financial Times - Technology",
     "summary": "Digital token will be aimed at merchants moving large sums and may also be offered to consumers",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/89f6fe76-8936-4f5a-81d6-84de76fc07b4.jpg",
     "summary_text": "Digital token will be aimed at merchants moving large sums and may also be offered to consumers",
     "category": "fintech",
     "_trending_tags": [
@@ -1439,7 +1455,7 @@
     "source": "Financial Times - Technology",
     "summary": "US commerce secretary calls for \u2018balanced approach\u2019 during visit to Brussels for meeting with bloc\u2019s trade ministers",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://images.ft.com/v3/image/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F4ba6158a-2c4a-41a1-8512-4f8e794396b6.jpg?source=next-article&fit=scale-down&quality=highest&width=700&dpr=1",
     "summary_text": "US commerce secretary calls for \u2018balanced approach\u2019 during visit to Brussels for meeting with bloc\u2019s trade ministers",
     "category": "fintech"
   },
