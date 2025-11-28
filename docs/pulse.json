@@ -843,6 +843,27 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/57d4970608/thumbnail.png"
   },
   {
+    "title": "Claude Agent Skills Explained",
+    "url": "https://www.youtube.com/watch?v=fOxC44g8vig",
+    "published_at": "2025-11-26T17:09:15-05:00",
+    "source": "Anthropic YouTube",
+    "summary": "Agent Skills are organized folders that package expertise that Claude can automatically invoke when relevant to the task at hand. Join the Claude Developer Discord - https://anthropic.com/discord Learn more about Agent Skills - https://www.claude.com/blog/skills 00:06 Introducing Agent Skills 00:30 How Agent Skills work 01:08 Agent Skills vs Claude.md 01:42 Agent Skills vs MCP Servers 02:05 Agent...",
+    "content_html": "",
+    "image_url": "https://i.ytimg.com/vi/fOxC44g8vig/maxresdefault.jpg",
+    "summary_text": "Agent Skills are organized folders that package expertise that Claude can automatically invoke when relevant to the task at hand. Join the Claude Developer Discord - https://anthropic.com/discord Learn more about Agent Skills - https://www.claude.com/blog/ski...",
+    "category": "ai",
+    "_trending_tags": [
+      "agent",
+      "ai",
+      "anthropic",
+      "claude"
+    ],
+    "_permalink": "/p/9df3cc51a4/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/9df3cc51a4/",
+    "_summary_240": "Agent Skills are organized folders that package expertise that Claude can automatically invoke when relevant to the task at hand. Join the Claude Developer Discord -...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/9df3cc51a4/thumbnail.png"
+  },
+  {
     "title": "JustiGuide wants to use AI to help people navigate the US immigration system",
     "url": "https://techcrunch.com/2025/11/26/justiguide-wants-to-use-ai-to-help-people-navigate-the-u-s-immigration-system/",
     "published_at": "2025-11-26T15:31:59-05:00",
@@ -1251,11 +1272,7 @@
       "ai",
       "google",
       "nvidia"
-    ],
-    "_permalink": "/p/0207dc93a9/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/0207dc93a9/",
-    "_summary_240": "$115bn sell-off for chip group weighs on those linked to company",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/0207dc93a9/thumbnail.png"
+    ]
   },
   {
     "title": "WIRED Roundup: Gemini 3 Release, Nvidia Earnings, Epstein Files Fallout",
@@ -1271,11 +1288,7 @@
       "ai",
       "google",
       "nvidia"
-    ],
-    "_permalink": "/p/2193027e47/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/2193027e47/",
-    "_summary_240": "In this episode of Uncanny Valley, we cover the news of the week and take a closer look at the Gemini 3, Google\u2019s latest AI model and chatbot.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/2193027e47/thumbnail.png"
+    ]
   },
   {
     "title": "Charting the future of SOC: Human and AI collaboration for better security",
@@ -1579,23 +1592,6 @@
     "_trending_tags": [
       "chatgpt",
       "gpt"
-    ]
-  },
-  {
-    "title": "Scania accelerates operations across its global workforce with ChatGPT",
-    "url": "https://www.youtube.com/watch?v=0luMwmnvRuQ",
-    "published_at": "2025-11-20T20:43:32-05:00",
-    "source": "OpenAI YouTube",
-    "summary": "Scania builds the trucks, buses, and transport systems that keep the world moving. With AI in their engineering-led organisation, they're evolving from vehicle maker to sustainable transport ecosystem leader. Read more: https://openai.com/index/scania/",
-    "content_html": "",
-    "image_url": "https://i.ytimg.com/vi/0luMwmnvRuQ/maxresdefault.jpg",
-    "summary_text": "Scania builds the trucks, buses, and transport systems that keep the world moving. With AI in their engineering-led organisation, they're evolving from vehicle maker to sustainable transport ecosystem leader. Read more: https://openai.com/index/scania/",
-    "category": "ai",
-    "_trending_tags": [
-      "ai",
-      "chatgpt",
-      "gpt",
-      "openai"
     ]
   },
   {
