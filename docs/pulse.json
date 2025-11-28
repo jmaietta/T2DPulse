@@ -1,5 +1,23 @@
 [
   {
+    "title": "I Still See The Same Mistakes with LLMs",
+    "url": "https://newsletter.tek2dayholdings.com/p/i-still-see-the-same-mistakes-with",
+    "published_at": "2025-11-28T12:18:00-05:00",
+    "source": "TEK2day Newsletter",
+    "summary": "Here\u2019s an example of the type of error I still see with LLM coding that I saw 2 years ago.",
+    "content_html": "<p></p><div class=\"captioned-image-container\"><figure><a class=\"image-link image2 is-viewable-img\" href=\"https://substackcdn.com/image/fetch/$s_!wQ3-!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F2bf67dde-cc78-4a84-b446-01741694c9bf_2150x1536.png\" target=\"_blank\"><div class=\"image2-inset\"><source type=\"image/webp\" /><img alt=\"\" class=\"sizing-normal\" height=\"1040\" src=\"https://substackcdn.com/image/fetch/$s_!wQ3-!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F2bf67dde-cc78-4a84-b446-01741694c9bf_2150x1536.png\" width=\"1456\" /><div class=\"image-link-expand\"><div class=\"pencraft pc-display-flex pc-gap-8 pc-reset\"><button class=\"pencraft pc-reset pencraft icon-container restack-image\" tabindex=\"0\" type=\"button\"><svg class=\"lucide lucide-refresh-cw\" fill=\"none\" height=\"20\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" viewBox=\"0 0 24 24\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8\"></path><path d=\"M21 3v5h-5\"></path><path d=\"M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16\"></path><path d=\"M8 16H3v5\"></path></svg></button><button class=\"pencraft pc-reset pencraft icon-container view-image\" tabindex=\"0\" type=\"button\"><svg class=\"lucide lucide-maximize2 lucide-maximize-2\" fill=\"none\" height=\"20\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" viewBox=\"0 0 24 24\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><polyline points=\"15 3 21 3 21 9\"></polyline><polyline points=\"9 21 3 21 3 15\"></polyline><line x1=\"21\" x2=\"14\" y1=\"3\" y2=\"10\"></line><line x1=\"3\" x2=\"10\" y1=\"21\" y2=\"14\"></line></svg></button></div></div></div></a></figure></div><h4><strong>Here&#8217;s an example of the type of error I still see with LLM coding that I saw 2 years ago. </strong></h4><p><strong>Example:</strong> I ask the model to write a block of code. I deploy the code in a test environment. It is obvious there is a bug. I describe the bug to the model and share error logs. The model acknowledges the error and re-writes the code block. The new code block has the same error, or, the original error has been replaced by a new error. </p><p>I ask the model to iterate again and the new code block is error free. However, sometimes the model will iterate for a third time and replace the new error from the second iteration with the error from the first iteration. This type of error tree still occurs. Perhaps it occurs less frequently today than 6 months or a year ago, but frequently enough where you say to yourself  &#8220;the models are not performing at a level that is congruent with their respective capital investment&#8221;. </p><p>There is lots of work to be done in terms of improving real-world LLM coding performance. Perhaps advances in inference will fix these errors. Perhaps LLMs need to be augmented with external tools and data to avoid making such mistakes. Regardless, the type of promised ROI will not become reality until this LLM error type is resolved. </p><div><hr /></div><p></p>",
+    "image_url": "https://substackcdn.com/image/fetch/$s_!wQ3-!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F2bf67dde-cc78-4a84-b446-01741694c9bf_2150x1536.png",
+    "summary_text": "Here\u2019s an example of the type of error I still see with LLM coding that I saw 2 years ago.",
+    "category": "ai",
+    "_trending_tags": [
+      "llm"
+    ],
+    "_permalink": "/p/4406777adc/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/4406777adc/",
+    "_summary_240": "Here\u2019s an example of the type of error I still see with LLM coding that I saw 2 years ago.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/4406777adc/thumbnail.png"
+  },
+  {
     "title": "\u2018We refused to do an ICO\u2019: The truth behind Canton\u2019s tokenomics",
     "url": "https://cointelegraph.com/news/behind-canton-network-tokenomics?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
     "published_at": "2025-11-28T11:46:39-05:00",
@@ -786,6 +804,27 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/57d4970608/thumbnail.png"
   },
   {
+    "title": "Claude Agent Skills Explained",
+    "url": "https://www.youtube.com/watch?v=fOxC44g8vig",
+    "published_at": "2025-11-26T17:09:15-05:00",
+    "source": "Anthropic YouTube",
+    "summary": "Agent Skills are organized folders that package expertise that Claude can automatically invoke when relevant to the task at hand. Join the Claude Developer Discord - https://anthropic.com/discord Learn more about Agent Skills - https://www.claude.com/blog/skills 00:06 Introducing Agent Skills 00:30 How Agent Skills work 01:08 Agent Skills vs Claude.md 01:42 Agent Skills vs MCP Servers 02:05 Agent...",
+    "content_html": "",
+    "image_url": "https://i.ytimg.com/vi/fOxC44g8vig/maxresdefault.jpg",
+    "summary_text": "Agent Skills are organized folders that package expertise that Claude can automatically invoke when relevant to the task at hand. Join the Claude Developer Discord - https://anthropic.com/discord Learn more about Agent Skills - https://www.claude.com/blog/ski...",
+    "category": "ai",
+    "_trending_tags": [
+      "agent",
+      "ai",
+      "anthropic",
+      "claude"
+    ],
+    "_permalink": "/p/9df3cc51a4/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/9df3cc51a4/",
+    "_summary_240": "Agent Skills are organized folders that package expertise that Claude can automatically invoke when relevant to the task at hand. Join the Claude Developer Discord -...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/9df3cc51a4/thumbnail.png"
+  },
+  {
     "title": "JustiGuide wants to use AI to help people navigate the US immigration system",
     "url": "https://techcrunch.com/2025/11/26/justiguide-wants-to-use-ai-to-help-people-navigate-the-u-s-immigration-system/",
     "published_at": "2025-11-26T15:31:59-05:00",
@@ -1557,23 +1596,6 @@
     "_trending_tags": [
       "chatgpt",
       "gpt"
-    ]
-  },
-  {
-    "title": "Scania accelerates operations across its global workforce with ChatGPT",
-    "url": "https://www.youtube.com/watch?v=0luMwmnvRuQ",
-    "published_at": "2025-11-20T20:43:32-05:00",
-    "source": "OpenAI YouTube",
-    "summary": "Scania builds the trucks, buses, and transport systems that keep the world moving. With AI in their engineering-led organisation, they're evolving from vehicle maker to sustainable transport ecosystem leader. Read more: https://openai.com/index/scania/",
-    "content_html": "",
-    "image_url": "https://i.ytimg.com/vi/0luMwmnvRuQ/maxresdefault.jpg",
-    "summary_text": "Scania builds the trucks, buses, and transport systems that keep the world moving. With AI in their engineering-led organisation, they're evolving from vehicle maker to sustainable transport ecosystem leader. Read more: https://openai.com/index/scania/",
-    "category": "ai",
-    "_trending_tags": [
-      "ai",
-      "chatgpt",
-      "gpt",
-      "openai"
     ]
   },
   {
