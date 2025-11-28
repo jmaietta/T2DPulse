@@ -22,10 +22,10 @@
     "url": "https://www.bloomberg.com/news/articles/2025-11-28/airbus-warns-a320-fleet-needs-software-fix-after-solar-incident",
     "published_at": "2025-11-28T12:59:28-05:00",
     "source": "Bloomberg Technology",
-    "summary": "Airbus SE cautioned that a large portion of its active A320 jetliner family fleet will require a software fix after a recent incident involving a Jetblue Airways Corp. airliner revealed that \u201cintense solar radiation\u201d could risk corrupting data that\u2019s critical to maintaining functioning flight controls.",
+    "summary": "Airbus SE cautioned that a large portion of its active A320 jetliner family fleet will require a software fix after a recent incident involving a Jetblue Airways Corp. airliner revealed that \u201cintense solar radiation\u201d could risk corrupting data critical to maintaining functioning flight controls.",
     "content_html": "The Airbus SE logo sits on the exterior of the company's aircraft fuselage assembly factory in Hamburg, Germany, on Tuesday, Feb. 27, 2018. Airbus is considering increasing production rates for its best-selling single-aisle A320 jetliners, as airlines around the world place orders for hundreds of planes to meet surging demand for air travel.",
     "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iYszr3BgP0dE/v1/1200x-1.jpg",
-    "summary_text": "Airbus SE cautioned that a large portion of its active A320 jetliner family fleet will require a software fix after a recent incident involving a Jetblue Airways Corp. airliner revealed that \u201cintense solar radiation\u201d could risk corrupting data that\u2019s critical...",
+    "summary_text": "Airbus SE cautioned that a large portion of its active A320 jetliner family fleet will require a software fix after a recent incident involving a Jetblue Airways Corp. airliner revealed that \u201cintense solar radiation\u201d could risk corrupting data critical to mai...",
     "category": "software",
     "_trending_tags": [
       "ai"
@@ -103,6 +103,25 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/ba1dfb6c4f/",
     "_summary_240": "Quantum security is moving from theory to practice as layer-1 blockchains prepare long-term plans to adopt post-quantum cryptography.",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/ba1dfb6c4f/thumbnail.png"
+  },
+  {
+    "title": "What to be thankful for in AI in 2025",
+    "url": "https://venturebeat.com/ai/what-to-be-thankful-for-in-ai-in-2025",
+    "published_at": "2025-11-28T11:19:00-05:00",
+    "source": "VentureBeat",
+    "summary": "Hello, dear readers. Happy belated Thanksgiving and Black Friday! This year has felt like living inside a permanent DevDay. Every week, some lab drops a new model, a new agent framework, or a new \u201cthis changes everything\u201d demo. It\u2019s overwhelming. But it\u2019s also the first year I\u2019ve felt like AI is finally diversifying \u2014 not just one or two frontier models in the cloud, but a whole ecosystem: open a...",
+    "content_html": "",
+    "image_url": "https://images.ctfassets.net/jdtwqhzvc2n1/7BJ6qthLz1rIy0SAh6QlwR/692feae20837c4375ed8638be0b4303b/ChatGPT_Image_Nov_28__2025__10_42_26_AM.png?w=800&amp;q=75",
+    "summary_text": "Hello, dear readers. Happy belated Thanksgiving and Black Friday! This year has felt like living inside a permanent DevDay. Every week, some lab drops a new model, a new agent framework, or a new \u201cthis changes everything\u201d demo. It\u2019s overwhelming. But it\u2019s als...",
+    "category": "ai",
+    "_trending_tags": [
+      "agent",
+      "ai"
+    ],
+    "_permalink": "/p/21eb6a7416/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/21eb6a7416/",
+    "_summary_240": "Hello, dear readers. Happy belated Thanksgiving and Black Friday! This year has felt like living inside a permanent DevDay. Every week, some lab drops a new model, a new agent...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/21eb6a7416/thumbnail.png"
   },
   {
     "title": "How OpenAI and Google see AI changing go-to-market strategies",
@@ -710,6 +729,25 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/d779ab6737/thumbnail.png"
   },
   {
+    "title": "Prompt Security's Itamar Golan on why generative AI security requires building a category, not a feature",
+    "url": "https://venturebeat.com/security/prompt-securitys-itamar-golan-on-why-generative-ai-security-requires",
+    "published_at": "2025-11-27T03:00:00-05:00",
+    "source": "VentureBeat",
+    "summary": "VentureBeat recently sat down (virtually) with Itamar Golan, co-founder and CEO of Prompt Security , to chat through the GenAI security challenges organizations of all sizes face. We talked about shadow AI sprawl, the strategic decisions that led Golan to pursue building a market-leading platform versus competing on features, and a real-world incident that crystallized why protecting AI applicati...",
+    "content_html": "",
+    "image_url": "https://images.ctfassets.net/jdtwqhzvc2n1/8fZhgFhn4wgHlB4J2Ecc2/725fe727d287ce66afcb754658606048/Prompt_Team_photo.jpeg?w=800&amp;q=75",
+    "summary_text": "VentureBeat recently sat down (virtually) with Itamar Golan, co-founder and CEO of Prompt Security , to chat through the GenAI security challenges organizations of all sizes face. We talked about shadow AI sprawl, the strategic decisions that led Golan to pur...",
+    "category": "ai",
+    "_trending_tags": [
+      "ai",
+      "genai"
+    ],
+    "_permalink": "/p/5ed3e27af0/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/5ed3e27af0/",
+    "_summary_240": "VentureBeat recently sat down (virtually) with Itamar Golan, co-founder and CEO of Prompt Security , to chat through the GenAI security challenges organizations of all sizes...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/5ed3e27af0/thumbnail.png"
+  },
+  {
     "title": "Agentic AI is the hacker\u2019s new accomplice",
     "url": "https://www.ft.com/content/9966d9e8-7fd3-4324-b57e-f02763795d29",
     "published_at": "2025-11-27T00:00:25-05:00",
@@ -745,6 +783,27 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/57d4970608/",
     "_summary_240": "Seeing limited potential in its niche dubbing product, Synthesia built an AI tool to appeal across industries",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/57d4970608/thumbnail.png"
+  },
+  {
+    "title": "Claude Agent Skills Explained",
+    "url": "https://www.youtube.com/watch?v=fOxC44g8vig",
+    "published_at": "2025-11-26T17:09:15-05:00",
+    "source": "Anthropic YouTube",
+    "summary": "Agent Skills are organized folders that package expertise that Claude can automatically invoke when relevant to the task at hand. Join the Claude Developer Discord - https://anthropic.com/discord Learn more about Agent Skills - https://www.claude.com/blog/skills 00:06 Introducing Agent Skills 00:30 How Agent Skills work 01:08 Agent Skills vs Claude.md 01:42 Agent Skills vs MCP Servers 02:05 Agent...",
+    "content_html": "",
+    "image_url": "https://i.ytimg.com/vi/fOxC44g8vig/maxresdefault.jpg",
+    "summary_text": "Agent Skills are organized folders that package expertise that Claude can automatically invoke when relevant to the task at hand. Join the Claude Developer Discord - https://anthropic.com/discord Learn more about Agent Skills - https://www.claude.com/blog/ski...",
+    "category": "ai",
+    "_trending_tags": [
+      "agent",
+      "ai",
+      "anthropic",
+      "claude"
+    ],
+    "_permalink": "/p/9df3cc51a4/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/9df3cc51a4/",
+    "_summary_240": "Agent Skills are organized folders that package expertise that Claude can automatically invoke when relevant to the task at hand. Join the Claude Developer Discord -...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/9df3cc51a4/thumbnail.png"
   },
   {
     "title": "JustiGuide wants to use AI to help people navigate the US immigration system",
@@ -838,6 +897,21 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/fed1d260fe/",
     "_summary_240": "Three London councils reported disruption, prompting officials to shut down phone lines and networks and activate emergency plans.",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/fed1d260fe/thumbnail.png"
+  },
+  {
+    "title": "Mixpanel security incident: what OpenAI users need to know",
+    "url": "https://openai.com/index/mixpanel-incident",
+    "published_at": "2025-11-26T14:00:00-05:00",
+    "source": "OpenAI News",
+    "summary": "OpenAI shares details about a Mixpanel security incident involving limited API analytics data. No API content, credentials, or payment details were exposed. Learn what happened and how we\u2019re protecting users.",
+    "content_html": "",
+    "image_url": "",
+    "summary_text": "OpenAI shares details about a Mixpanel security incident involving limited API analytics data. No API content, credentials, or payment details were exposed. Learn what happened and how we\u2019re protecting users.",
+    "category": "ai",
+    "_trending_tags": [
+      "ai",
+      "openai"
+    ]
   },
   {
     "title": "GM tech executive shakeup continues on software team",
@@ -963,6 +1037,25 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/db0ec7ca41/thumbnail.png"
   },
   {
+    "title": "A weekend \u2018vibe code\u2019 hack by Andrej Karpathy quietly sketches the missing layer of enterprise AI orchestration",
+    "url": "https://venturebeat.com/ai/a-weekend-vibe-code-hack-by-andrej-karpathy-quietly-sketches-the-missing",
+    "published_at": "2025-11-26T09:00:00-05:00",
+    "source": "VentureBeat",
+    "summary": "This weekend, Andrej Karpathy , the former director of AI at Tesla and a founding member of OpenAI, decided he wanted to read a book. But he did not want to read it alone. He wanted to read it accompanied by a committee of artificial intelligences, each offering its own perspective, critiquing the others, and eventually synthesizing a final answer under the guidance of a \"Chairman.\" To make this ...",
+    "content_html": "",
+    "image_url": "https://images.ctfassets.net/jdtwqhzvc2n1/2Ey8QusmYk8nxrgwRnt2il/f17035cb1ab8a293f3de798fba1978a0/nuneybits_A_glowing_computer_screen_on_a_laptop_computer_code_s_c5238c15-75e5-4c2b-9f4b-e530ad71adf0.webp?w=800&amp;q=75",
+    "summary_text": "This weekend, Andrej Karpathy , the former director of AI at Tesla and a founding member of OpenAI, decided he wanted to read a book. But he did not want to read it alone. He wanted to read it accompanied by a committee of artificial intelligences, each offer...",
+    "category": "ai",
+    "_trending_tags": [
+      "ai",
+      "openai"
+    ],
+    "_permalink": "/p/c5bd192772/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/c5bd192772/",
+    "_summary_240": "This weekend, Andrej Karpathy , the former director of AI at Tesla and a founding member of OpenAI, decided he wanted to read a book. But he did not want to read it alone. He...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/c5bd192772/thumbnail.png"
+  },
+  {
     "title": "Micro-degree, macro impact: How AI is transforming skilling in India",
     "url": "https://news.microsoft.com/source/asia/features/micro-degree-macro-impact-how-ai-is-transforming-skilling-in-india/",
     "published_at": "2025-11-26T08:58:08-05:00",
@@ -999,23 +1092,40 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/1297b6430e/thumbnail.png"
   },
   {
+    "title": "Black Forest Labs launches Flux.2 AI image models to challenge Nano Banana Pro and Midjourney",
+    "url": "https://venturebeat.com/ai/black-forest-labs-launches-flux-2-ai-image-models-to-challenge-nano-banana",
+    "published_at": "2025-11-25T22:46:00-05:00",
+    "source": "VentureBeat",
+    "summary": "It's not just Google's Gemini 3 , Nano Banana Pro , and Anthropic's Claude Opus 4.5 we have to be thankful for this year around the Thanksgiving holiday here in the U.S. No, today the German AI startup Black Forest Labs released FLUX.2 , a new image generation and editing system complete with four different models designed to support production-grade creative workflows. FLUX.2 introduces multi-re...",
+    "content_html": "",
+    "image_url": "https://images.ctfassets.net/jdtwqhzvc2n1/3xnd8Pd0WlOl5td1iZkwG5/7e244c4fe5fda98c5550d87cd9c511c2/2Q______1_.jpeg?w=800&amp;q=75",
+    "summary_text": "It's not just Google's Gemini 3 , Nano Banana Pro , and Anthropic's Claude Opus 4.5 we have to be thankful for this year around the Thanksgiving holiday here in the U.S. No, today the German AI startup Black Forest Labs released FLUX.2 , a new image generatio...",
+    "category": "ai",
+    "_trending_tags": [
+      "ai",
+      "anthropic",
+      "claude",
+      "google"
+    ],
+    "_permalink": "/p/1d5f423229/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/1d5f423229/",
+    "_summary_240": "It's not just Google's Gemini 3 , Nano Banana Pro , and Anthropic's Claude Opus 4.5 we have to be thankful for this year around the Thanksgiving holiday here in the U.S. No,...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/1d5f423229/thumbnail.png"
+  },
+  {
     "title": "China leapfrogs US in global market for \u2018open\u2019 AI models",
     "url": "https://www.ft.com/content/931c8218-a9d7-4cbd-8b08-27516637ff41",
     "published_at": "2025-11-25T20:15:05-05:00",
     "source": "Financial Times - Technology",
     "summary": "Beijing-backed technology gains ground as American giants hold fast to \u2018closed\u2019 AI strategies",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/cc1c2257-5f64-48e3-923d-950c5c49e14e.jpg",
+    "image_url": "",
     "summary_text": "Beijing-backed technology gains ground as American giants hold fast to \u2018closed\u2019 AI strategies",
     "category": "ai",
     "_trending_tags": [
       "ai",
       "openai"
-    ],
-    "_permalink": "/p/d86879c5b9/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/d86879c5b9/",
-    "_summary_240": "Beijing-backed technology gains ground as American giants hold fast to \u2018closed\u2019 AI strategies",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/d86879c5b9/thumbnail.png"
+    ]
   },
   {
     "title": "The AI cycle will crack first in Asia",
@@ -1024,16 +1134,31 @@
     "source": "Financial Times - Technology",
     "summary": "Big US tech companies are more diversified than Korean and Taiwanese chipmakers",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/f4c0b666-6c53-43d1-a43e-3281b6312a1b.jpg",
+    "image_url": "",
     "summary_text": "Big US tech companies are more diversified than Korean and Taiwanese chipmakers",
     "category": "ai",
     "_trending_tags": [
       "ai"
+    ]
+  },
+  {
+    "title": "Alibaba's AgentEvolver lifts model performance in tool use by ~30% using synthetic, auto-generated tasks",
+    "url": "https://venturebeat.com/ai/alibabas-agentevolver-lifts-model-performance-in-tool-use-by-30-using",
+    "published_at": "2025-11-25T19:00:00-05:00",
+    "source": "VentureBeat",
+    "summary": "Researchers at Alibaba\u2019s Tongyi Lab have developed a new framework for self-evolving agents that create their own training data by exploring their application environments. The framework, AgentEvolver , uses the knowledge and reasoning capabilities of large language models for autonomous learning, addressing the high costs and manual effort typically required to gather task-specific datasets. Exp...",
+    "content_html": "",
+    "image_url": "https://images.ctfassets.net/jdtwqhzvc2n1/4enOwMu4NUlXF6NXOriDEH/b99b0fee6403bc292622b870a5b234a6/AI_agent_exploring_different_branches.jpg?w=800&amp;q=75",
+    "summary_text": "Researchers at Alibaba\u2019s Tongyi Lab have developed a new framework for self-evolving agents that create their own training data by exploring their application environments. The framework, AgentEvolver , uses the knowledge and reasoning capabilities of large l...",
+    "category": "software",
+    "_trending_tags": [
+      "agent",
+      "ai"
     ],
-    "_permalink": "/p/8c68fff3df/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/8c68fff3df/",
-    "_summary_240": "Big US tech companies are more diversified than Korean and Taiwanese chipmakers",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/8c68fff3df/thumbnail.png"
+    "_permalink": "/p/b6033717b7/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/b6033717b7/",
+    "_summary_240": "Researchers at Alibaba\u2019s Tongyi Lab have developed a new framework for self-evolving agents that create their own training data by exploring their application environments. The...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/b6033717b7/thumbnail.png"
   },
   {
     "title": "Ep. 515: Roblox (RBLX) - Playground or Danger?",
@@ -1051,24 +1176,37 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/9786b0320c/thumbnail.png"
   },
   {
+    "title": "Expanding data residency access to business customers worldwide",
+    "url": "https://openai.com/index/expanding-data-residency-access-to-business-customers-worldwide",
+    "published_at": "2025-11-25T17:00:00-05:00",
+    "source": "OpenAI News",
+    "summary": "OpenAI expands data residency for ChatGPT Enterprise, ChatGPT Edu, and the API Platform, enabling eligible customers to store data at rest in-region.",
+    "content_html": "",
+    "image_url": "",
+    "summary_text": "OpenAI expands data residency for ChatGPT Enterprise, ChatGPT Edu, and the API Platform, enabling eligible customers to store data at rest in-region.",
+    "category": "ai",
+    "_trending_tags": [
+      "ai",
+      "chatgpt",
+      "gpt",
+      "openai"
+    ]
+  },
+  {
     "title": "Nvidia shares fall on signs Google gaining upper hand in AI",
     "url": "https://www.ft.com/content/7d0cd87e-99b0-4411-b54f-f5b239af8e76",
     "published_at": "2025-11-25T16:30:27-05:00",
     "source": "Financial Times - Technology",
     "summary": "$115bn sell-off for chip group weighs on those linked to company",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/38fe4fe9-1093-4942-8401-9c8809c6adc0.jpg",
+    "image_url": "",
     "summary_text": "$115bn sell-off for chip group weighs on those linked to company",
     "category": "ai",
     "_trending_tags": [
       "ai",
       "google",
       "nvidia"
-    ],
-    "_permalink": "/p/0207dc93a9/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/0207dc93a9/",
-    "_summary_240": "$115bn sell-off for chip group weighs on those linked to company",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/0207dc93a9/thumbnail.png"
+    ]
   },
   {
     "title": "WIRED Roundup: Gemini 3 Release, Nvidia Earnings, Epstein Files Fallout",
@@ -1157,17 +1295,46 @@
     ]
   },
   {
+    "title": "What enterprises should know about The White House's new AI 'Manhattan Project' the Genesis Mission",
+    "url": "https://venturebeat.com/ai/what-enterprises-should-know-about-the-white-houses-new-ai-manhattan-project",
+    "published_at": "2025-11-25T10:52:00-05:00",
+    "source": "VentureBeat",
+    "summary": "President Donald Trump\u2019s new \u201c Genesis Mission \u201d unveiled Monday, November 24, 2025, is billed as a generational leap in how the United States does science akin to the Manhattan Project that created the atomic bomb during World War II. The executive order directs the Department of Energy (DOE) to build a \u201cclosed-loop AI experimentation platform\u201d that links the country\u2019s 17 national laboratories, ...",
+    "content_html": "",
+    "image_url": "https://images.ctfassets.net/jdtwqhzvc2n1/5m2x1YdAEaqWJLhiH1Oh3S/cf8162a0477a1a70dbebd393e0ce2a3d/0hw9lFQJS_Zy6yiTAktWc.png?w=800&amp;q=75",
+    "summary_text": "President Donald Trump\u2019s new \u201c Genesis Mission \u201d unveiled Monday, November 24, 2025, is billed as a generational leap in how the United States does science akin to the Manhattan Project that created the atomic bomb during World War II. The executive order dir...",
+    "category": "ai",
+    "_trending_tags": [
+      "ai"
+    ]
+  },
+  {
     "title": "Klarna launches stablecoin to cut cost of cross-border payments",
     "url": "https://www.ft.com/content/1e22422f-5859-42e0-85ff-7d6fd7869d5c",
     "published_at": "2025-11-25T08:00:01-05:00",
     "source": "Financial Times - Technology",
     "summary": "Digital token will be aimed at merchants moving large sums and may also be offered to consumers",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/89f6fe76-8936-4f5a-81d6-84de76fc07b4.jpg",
+    "image_url": "",
     "summary_text": "Digital token will be aimed at merchants moving large sums and may also be offered to consumers",
     "category": "fintech",
     "_trending_tags": [
       "ai"
+    ]
+  },
+  {
+    "title": "Our approach to mental health-related litigation",
+    "url": "https://openai.com/index/mental-health-litigation-approach",
+    "published_at": "2025-11-25T07:00:00-05:00",
+    "source": "OpenAI News",
+    "summary": "We\u2019re sharing our approach to mental health-related litigation. O handle sensitive cases with care, transparency, and respect while continuing to strengthen safety and support in ChatGPT.",
+    "content_html": "",
+    "image_url": "",
+    "summary_text": "We\u2019re sharing our approach to mental health-related litigation. O handle sensitive cases with care, transparency, and respect while continuing to strengthen safety and support in ChatGPT.",
+    "category": "ai",
+    "_trending_tags": [
+      "chatgpt",
+      "gpt"
     ]
   },
   {
@@ -1225,6 +1392,23 @@
     "category": "ai"
   },
   {
+    "title": "OpenAI now lets enterprises choose where to host their data",
+    "url": "https://venturebeat.com/ai/openai-now-lets-enterprises-choose-where-to-host-their-data",
+    "published_at": "2025-11-25T00:00:00-05:00",
+    "source": "VentureBeat",
+    "summary": "OpenAI expanded its data residency regions for ChatGPT and its API, giving enterprise users the option to store and process their data closest to their business operations and better comply with local regulations. This expansion removes one of the biggest compliance blockers preventing global enterprises from deploying ChatGPT at scale. Data residency , often an overlooked piece of the enterprise...",
+    "content_html": "",
+    "image_url": "https://images.ctfassets.net/jdtwqhzvc2n1/1g8nmbi7oAHyjfQNPztaUi/02c20bc6a85bbab1d13fffc88b356a9b/crimedy7_illustration_of_a_house_of_data_--ar_169_--v_7_ff997425-90c8-4492-b29d-74de45555488_3.png?w=800&amp;q=75",
+    "summary_text": "OpenAI expanded its data residency regions for ChatGPT and its API, giving enterprise users the option to store and process their data closest to their business operations and better comply with local regulations. This expansion removes one of the biggest com...",
+    "category": "ai",
+    "_trending_tags": [
+      "ai",
+      "chatgpt",
+      "gpt",
+      "openai"
+    ]
+  },
+  {
     "title": "RealPage Agrees to Settle Federal Rent-Collusion Case",
     "url": "https://www.nytimes.com/2025/11/24/technology/realpage-doj-settlement.html",
     "published_at": "2025-11-24T19:39:54-05:00",
@@ -1269,13 +1453,28 @@
     ]
   },
   {
+    "title": "Inside JetBrains\u2014the company reshaping how the world writes code",
+    "url": "https://openai.com/index/jetbrains-2025",
+    "published_at": "2025-11-24T19:00:00-05:00",
+    "source": "OpenAI News",
+    "summary": "JetBrains is integrating GPT-5 across its coding tools, helping millions of developers design, reason, and build software faster.",
+    "content_html": "",
+    "image_url": "",
+    "summary_text": "JetBrains is integrating GPT-5 across its coding tools, helping millions of developers design, reason, and build software faster.",
+    "category": "software",
+    "_trending_tags": [
+      "ai",
+      "gpt"
+    ]
+  },
+  {
     "title": "Lutnick warns EU to relax tech rules if it wants lower steel tariffs",
     "url": "https://www.ft.com/content/19912b20-582d-46fe-90a5-ee208a28f4df",
     "published_at": "2025-11-24T13:09:05-05:00",
     "source": "Financial Times - Technology",
     "summary": "US commerce secretary calls for \u2018balanced approach\u2019 during visit to Brussels for meeting with bloc\u2019s trade ministers",
     "content_html": "",
-    "image_url": "https://images.ft.com/v3/image/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F4ba6158a-2c4a-41a1-8512-4f8e794396b6.jpg?source=next-article&fit=scale-down&quality=highest&width=700&dpr=1",
+    "image_url": "",
     "summary_text": "US commerce secretary calls for \u2018balanced approach\u2019 during visit to Brussels for meeting with bloc\u2019s trade ministers",
     "category": "fintech"
   },
@@ -1339,20 +1538,33 @@
     ]
   },
   {
-    "title": "Scania accelerates operations across its global workforce with ChatGPT",
-    "url": "https://www.youtube.com/watch?v=0luMwmnvRuQ",
-    "published_at": "2025-11-20T20:43:32-05:00",
-    "source": "OpenAI YouTube",
-    "summary": "Scania builds the trucks, buses, and transport systems that keep the world moving. With AI in their engineering-led organisation, they're evolving from vehicle maker to sustainable transport ecosystem leader. Read more: https://openai.com/index/scania/",
+    "title": "GPT-5 and the future of mathematical discovery",
+    "url": "https://openai.com/index/gpt-5-mathematical-discovery",
+    "published_at": "2025-11-23T19:00:00-05:00",
+    "source": "OpenAI News",
+    "summary": "UCLA Professor Ernest Ryu and GPT-5 solved a key question in optimization theory, showcasing AI\u2019s role in accelerating mathematical discovery.",
     "content_html": "",
-    "image_url": "https://i.ytimg.com/vi/0luMwmnvRuQ/maxresdefault.jpg",
-    "summary_text": "Scania builds the trucks, buses, and transport systems that keep the world moving. With AI in their engineering-led organisation, they're evolving from vehicle maker to sustainable transport ecosystem leader. Read more: https://openai.com/index/scania/",
+    "image_url": "",
+    "summary_text": "UCLA Professor Ernest Ryu and GPT-5 solved a key question in optimization theory, showcasing AI\u2019s role in accelerating mathematical discovery.",
     "category": "ai",
     "_trending_tags": [
       "ai",
+      "gpt"
+    ]
+  },
+  {
+    "title": "Introducing shopping research in ChatGPT",
+    "url": "https://openai.com/index/chatgpt-shopping-research",
+    "published_at": "2025-11-23T19:00:00-05:00",
+    "source": "OpenAI News",
+    "summary": "Shopping research in ChatGPT helps you explore, compare, and discover products with personalized buyer\u2019s guides that simplify decision-making",
+    "content_html": "",
+    "image_url": "",
+    "summary_text": "Shopping research in ChatGPT helps you explore, compare, and discover products with personalized buyer\u2019s guides that simplify decision-making",
+    "category": "ai",
+    "_trending_tags": [
       "chatgpt",
-      "gpt",
-      "openai"
+      "gpt"
     ]
   },
   {
