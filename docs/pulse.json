@@ -622,6 +622,26 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/1ea3548763/thumbnail.png"
   },
   {
+    "title": "Beyond math and coding: New RL framework helps train LLM agents for complex, real-world tasks",
+    "url": "https://venturebeat.com/ai/beyond-math-and-coding-new-rl-framework-helps-train-llm-agents-for-complex",
+    "published_at": "2025-11-27T23:00:00-05:00",
+    "source": "VentureBeat",
+    "summary": "Researchers at the University of Science and Technology of China have developed a new reinforcement learning (RL) framework that helps train large language models (LLMs) for complex agentic tasks beyond well-defined problems such as math and coding. Their framework, Agent-R1 , is compatible with popular RL algorithms and shows considerable improvement on reasoning tasks that require multiple retr...",
+    "content_html": "",
+    "image_url": "https://images.ctfassets.net/jdtwqhzvc2n1/7B2gHkr0DFzxJgUpVa69Rq/141d4baf2328e9fde768357e5662624c/LLM_agent_using_tools.jpg?w=800&amp;q=75",
+    "summary_text": "Researchers at the University of Science and Technology of China have developed a new reinforcement learning (RL) framework that helps train large language models (LLMs) for complex agentic tasks beyond well-defined problems such as math and coding. Their fra...",
+    "category": "ai",
+    "_trending_tags": [
+      "agent",
+      "ai",
+      "llm"
+    ],
+    "_permalink": "/p/af5e908918/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/af5e908918/",
+    "_summary_240": "Researchers at the University of Science and Technology of China have developed a new reinforcement learning (RL) framework that helps train large language models (LLMs) for...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/af5e908918/thumbnail.png"
+  },
+  {
     "title": "Switzerland delays crypto tax info sharing until 2027",
     "url": "https://cointelegraph.com/news/switzerland-delays-crypto-tax-info-sharing-until-2027?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
     "published_at": "2025-11-27T22:25:35-05:00",
@@ -635,24 +655,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/b1a59a58ea/",
     "_summary_240": "Switzerland will enshrine a global crypto tax sharing framework into law on Jan. 1, but will delay implementing it until at least 2027.",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/b1a59a58ea/thumbnail.png"
-  },
-  {
-    "title": "Animoca eyes stablecoins, AI, DePIN as it expands focus in 2026: Exec",
-    "url": "https://cointelegraph.com/news/animoca-brands-gaming-stablecoins-ai-depin-investments?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-    "published_at": "2025-11-27T21:55:14-05:00",
-    "source": "Cointelegraph",
-    "summary": "Animoca Brands\u2019 Keyvan Peymani says the Web3 gaming company is exploring all segments of the crypto industry, including DePIN, DeFi and AI.",
-    "content_html": "",
-    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTEvMDE5YWMzNzMtMGY1MS03ODM2LTk5MDEtYmQxYzViNmRjYWM4.jpg",
-    "summary_text": "Animoca Brands\u2019 Keyvan Peymani says the Web3 gaming company is exploring all segments of the crypto industry, including DePIN, DeFi and AI.",
-    "category": "fintech",
-    "_trending_tags": [
-      "ai"
-    ],
-    "_permalink": "/p/62d85f0530/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/62d85f0530/",
-    "_summary_240": "Animoca Brands\u2019 Keyvan Peymani says the Web3 gaming company is exploring all segments of the crypto industry, including DePIN, DeFi and AI.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/62d85f0530/thumbnail.png"
   },
   {
     "title": "Google\u2019s AI Progress Drives MediaTek to Best Week Since 2002",
@@ -1119,13 +1121,17 @@
     "source": "Financial Times - Technology",
     "summary": "Beijing-backed technology gains ground as American giants hold fast to \u2018closed\u2019 AI strategies",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/cc1c2257-5f64-48e3-923d-950c5c49e14e.jpg",
     "summary_text": "Beijing-backed technology gains ground as American giants hold fast to \u2018closed\u2019 AI strategies",
     "category": "ai",
     "_trending_tags": [
       "ai",
       "openai"
-    ]
+    ],
+    "_permalink": "/p/d86879c5b9/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/d86879c5b9/",
+    "_summary_240": "Beijing-backed technology gains ground as American giants hold fast to \u2018closed\u2019 AI strategies",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/d86879c5b9/thumbnail.png"
   },
   {
     "title": "The AI cycle will crack first in Asia",
@@ -1134,12 +1140,16 @@
     "source": "Financial Times - Technology",
     "summary": "Big US tech companies are more diversified than Korean and Taiwanese chipmakers",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/f4c0b666-6c53-43d1-a43e-3281b6312a1b.jpg",
     "summary_text": "Big US tech companies are more diversified than Korean and Taiwanese chipmakers",
     "category": "ai",
     "_trending_tags": [
       "ai"
-    ]
+    ],
+    "_permalink": "/p/8c68fff3df/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/8c68fff3df/",
+    "_summary_240": "Big US tech companies are more diversified than Korean and Taiwanese chipmakers",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/8c68fff3df/thumbnail.png"
   },
   {
     "title": "Alibaba's AgentEvolver lifts model performance in tool use by ~30% using synthetic, auto-generated tasks",
@@ -1199,14 +1209,18 @@
     "source": "Financial Times - Technology",
     "summary": "$115bn sell-off for chip group weighs on those linked to company",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/38fe4fe9-1093-4942-8401-9c8809c6adc0.jpg",
     "summary_text": "$115bn sell-off for chip group weighs on those linked to company",
     "category": "ai",
     "_trending_tags": [
       "ai",
       "google",
       "nvidia"
-    ]
+    ],
+    "_permalink": "/p/0207dc93a9/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/0207dc93a9/",
+    "_summary_240": "$115bn sell-off for chip group weighs on those linked to company",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/0207dc93a9/thumbnail.png"
   },
   {
     "title": "WIRED Roundup: Gemini 3 Release, Nvidia Earnings, Epstein Files Fallout",
@@ -1240,11 +1254,7 @@
     "category": "ai",
     "_trending_tags": [
       "ai"
-    ],
-    "_permalink": "/p/132d16ab83/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/132d16ab83/",
-    "_summary_240": "The post Charting the future of SOC: Human and AI collaboration for better security appeared first on Source .",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/132d16ab83/thumbnail.png"
+    ]
   },
   {
     "title": "Introducing Anthropic\u2019s newest model, Claude Opus 4.5, in Microsoft Foundry",
@@ -1315,7 +1325,7 @@
     "source": "Financial Times - Technology",
     "summary": "Digital token will be aimed at merchants moving large sums and may also be offered to consumers",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/89f6fe76-8936-4f5a-81d6-84de76fc07b4.jpg",
     "summary_text": "Digital token will be aimed at merchants moving large sums and may also be offered to consumers",
     "category": "fintech",
     "_trending_tags": [
@@ -1392,23 +1402,6 @@
     "category": "ai"
   },
   {
-    "title": "OpenAI now lets enterprises choose where to host their data",
-    "url": "https://venturebeat.com/ai/openai-now-lets-enterprises-choose-where-to-host-their-data",
-    "published_at": "2025-11-25T00:00:00-05:00",
-    "source": "VentureBeat",
-    "summary": "OpenAI expanded its data residency regions for ChatGPT and its API, giving enterprise users the option to store and process their data closest to their business operations and better comply with local regulations. This expansion removes one of the biggest compliance blockers preventing global enterprises from deploying ChatGPT at scale. Data residency , often an overlooked piece of the enterprise...",
-    "content_html": "",
-    "image_url": "https://images.ctfassets.net/jdtwqhzvc2n1/1g8nmbi7oAHyjfQNPztaUi/02c20bc6a85bbab1d13fffc88b356a9b/crimedy7_illustration_of_a_house_of_data_--ar_169_--v_7_ff997425-90c8-4492-b29d-74de45555488_3.png?w=800&amp;q=75",
-    "summary_text": "OpenAI expanded its data residency regions for ChatGPT and its API, giving enterprise users the option to store and process their data closest to their business operations and better comply with local regulations. This expansion removes one of the biggest com...",
-    "category": "ai",
-    "_trending_tags": [
-      "ai",
-      "chatgpt",
-      "gpt",
-      "openai"
-    ]
-  },
-  {
     "title": "RealPage Agrees to Settle Federal Rent-Collusion Case",
     "url": "https://www.nytimes.com/2025/11/24/technology/realpage-doj-settlement.html",
     "published_at": "2025-11-24T19:39:54-05:00",
@@ -1474,7 +1467,7 @@
     "source": "Financial Times - Technology",
     "summary": "US commerce secretary calls for \u2018balanced approach\u2019 during visit to Brussels for meeting with bloc\u2019s trade ministers",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://images.ft.com/v3/image/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F4ba6158a-2c4a-41a1-8512-4f8e794396b6.jpg?source=next-article&fit=scale-down&quality=highest&width=700&dpr=1",
     "summary_text": "US commerce secretary calls for \u2018balanced approach\u2019 during visit to Brussels for meeting with bloc\u2019s trade ministers",
     "category": "fintech"
   },
