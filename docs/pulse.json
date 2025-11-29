@@ -88,7 +88,7 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/eab91a1fd4/thumbnail.png"
   },
   {
-    "title": "No, you can\u2019t get your AI to \u2018admit\u2019 to being sexist, but it probably is",
+    "title": "No, you can\u2019t get your AI to \u2018admit\u2019 to being sexist, but it probably is anyway",
     "url": "https://techcrunch.com/2025/11/29/no-you-cant-get-your-ai-to-admit-to-being-sexist-but-it-probably-is/",
     "published_at": "2025-11-29T11:00:00-05:00",
     "source": "TechCrunch",
@@ -100,11 +100,7 @@
     "_trending_tags": [
       "ai",
       "llm"
-    ],
-    "_permalink": "/p/2c91e87b9f/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/2c91e87b9f/",
-    "_summary_240": "Though LLMs might not use explicitly biased language, they may infer your demographic data and display implicit biases, researchers say.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/2c91e87b9f/thumbnail.png"
+    ]
   },
   {
     "title": "Superintelligence Won't Happen Absent A New Approach To Gen AI",
@@ -203,7 +199,11 @@
     "category": "software",
     "_trending_tags": [
       "ai"
-    ]
+    ],
+    "_permalink": "/p/fafbbb9f3e/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/fafbbb9f3e/",
+    "_summary_240": "Airlines across the world raced to keep their fleet operating after a major software glitch forced an urgent update for Airbus SE\u2019s most widely flown aircraft, with the rapid...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/fafbbb9f3e/thumbnail.png"
   },
   {
     "title": "Ethereum tripling its gas limit is the \u2018floor, we can go higher\u2019 \u2014 Sassano",
