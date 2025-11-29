@@ -1034,11 +1034,7 @@
     "_trending_tags": [
       "ai",
       "openai"
-    ],
-    "_permalink": "/p/c5bd192772/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/c5bd192772/",
-    "_summary_240": "This weekend, Andrej Karpathy , the former director of AI at Tesla and a founding member of OpenAI, decided he wanted to read a book. But he did not want to read it alone. He...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/c5bd192772/thumbnail.png"
+    ]
   },
   {
     "title": "Micro-degree, macro impact: How AI is transforming skilling in India",
@@ -1052,11 +1048,7 @@
     "category": "ai",
     "_trending_tags": [
       "ai"
-    ],
-    "_permalink": "/p/4267112122/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/4267112122/",
-    "_summary_240": "The post Micro-degree, macro impact: How AI is transforming skilling in India appeared first on Source .",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/4267112122/thumbnail.png"
+    ]
   },
   {
     "title": "Can South Korea\u2019s hot streak continue?",
@@ -1096,7 +1088,7 @@
     "source": "Financial Times - Technology",
     "summary": "Beijing-backed technology gains ground as American giants hold fast to \u2018closed\u2019 AI strategies",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/cc1c2257-5f64-48e3-923d-950c5c49e14e.jpg",
     "summary_text": "Beijing-backed technology gains ground as American giants hold fast to \u2018closed\u2019 AI strategies",
     "category": "ai",
     "_trending_tags": [
@@ -1111,7 +1103,7 @@
     "source": "Financial Times - Technology",
     "summary": "Big US tech companies are more diversified than Korean and Taiwanese chipmakers",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/f4c0b666-6c53-43d1-a43e-3281b6312a1b.jpg",
     "summary_text": "Big US tech companies are more diversified than Korean and Taiwanese chipmakers",
     "category": "ai",
     "_trending_tags": [
@@ -1168,7 +1160,7 @@
     "source": "Financial Times - Technology",
     "summary": "$115bn sell-off for chip group weighs on those linked to company",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/38fe4fe9-1093-4942-8401-9c8809c6adc0.jpg",
     "summary_text": "$115bn sell-off for chip group weighs on those linked to company",
     "category": "ai",
     "_trending_tags": [
@@ -1262,7 +1254,7 @@
     "source": "Financial Times - Technology",
     "summary": "Digital token will be aimed at merchants moving large sums and may also be offered to consumers",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/89f6fe76-8936-4f5a-81d6-84de76fc07b4.jpg",
     "summary_text": "Digital token will be aimed at merchants moving large sums and may also be offered to consumers",
     "category": "fintech",
     "_trending_tags": [
@@ -1390,7 +1382,7 @@
     "source": "Financial Times - Technology",
     "summary": "US commerce secretary calls for \u2018balanced approach\u2019 during visit to Brussels for meeting with bloc\u2019s trade ministers",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://images.ft.com/v3/image/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F4ba6158a-2c4a-41a1-8512-4f8e794396b6.jpg?source=next-article&fit=scale-down&quality=highest&width=700&dpr=1",
     "summary_text": "US commerce secretary calls for \u2018balanced approach\u2019 during visit to Brussels for meeting with bloc\u2019s trade ministers",
     "category": "fintech"
   },
@@ -1407,22 +1399,6 @@
     "_trending_tags": [
       "agent",
       "ai"
-    ]
-  },
-  {
-    "title": "Amazon Is Using Specialized AI Agents for Deep Bug Hunting",
-    "url": "https://www.wired.com/story/amazon-autonomous-threat-analysis/",
-    "published_at": "2025-11-24T09:00:00-05:00",
-    "source": "Wired",
-    "summary": "Born out of an internal hackathon, Amazon\u2019s Autonomous Threat Analysis system uses a variety of specialized AI agents to detect weaknesses and propose fixes to the company\u2019s platforms.",
-    "content_html": "",
-    "image_url": "https://media.wired.com/photos/6920be92dadba95e94f9bc80/master/pass/Amazon-Using-Specialized-AI-Agents-Security-2223553741.jpg",
-    "summary_text": "Born out of an internal hackathon, Amazon\u2019s Autonomous Threat Analysis system uses a variety of specialized AI agents to detect weaknesses and propose fixes to the company\u2019s platforms.",
-    "category": "ai",
-    "_trending_tags": [
-      "agent",
-      "ai",
-      "amazon"
     ]
   },
   {
