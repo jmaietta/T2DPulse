@@ -1,5 +1,41 @@
 [
   {
+    "title": "97 percent of people struggle to identify AI music, but it\u2019s not as bad as it seems",
+    "url": "https://www.theverge.com/entertainment/830393/ai-music-deezer-survey-spotify",
+    "published_at": "2025-11-29T12:00:00-05:00",
+    "source": "The Verge",
+    "summary": "Streaming service Deezer ran an experiment recently, with the help of research firm Ipsos. The finding - that 97 percent of people can't tell the difference between fully AI-generated and human-made music - was alarming. But it's also not the whole story. In the survey, 9,000 participants listened to three tracks and were asked to [\u2026]",
+    "content_html": "<figure>\n\n<img alt=\"Messy AI-generated hands playing a piano, overlayed with pixel art music notes.\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/11/STK467_AI_MUSIC_CVirginia_D.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100\" />\n\t<figcaption>\n\tPeople don\u2019t like not being able to identify AI-generated music.\t</figcaption>\n</figure>\n<p class=\"has-text-align-none\">Streaming service Deezer ran an experiment recently, with the help of research firm Ipsos. The finding - that <a href=\"https://newsroom-deezer.com/2025/11/deezer-ipsos-survey-ai-music/\">97 percent of people</a> can't tell the difference between fully AI-generated and human-made music - was alarming. But it's also not the whole story. </p>\n<p class=\"has-text-align-none\">In the survey, 9,000 participants listened to three tracks and were asked to guess which, if any, were completely AI-generated. If the participant failed to guess all three correctly, they were put in the fail pile. That means if you got two of three correct, Deezer and Ipsos still said you couldn't tell the difference between fully AI-generated music and the real deal.</p>\n<p class=\"has-text-align-none\">Deezer sent me th \u2026</p>\n<p><a href=\"https://www.theverge.com/entertainment/830393/ai-music-deezer-survey-spotify\">Read the full story at The Verge.</a></p>",
+    "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/11/STK467_AI_MUSIC_CVirginia_D.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "summary_text": "Streaming service Deezer ran an experiment recently, with the help of research firm Ipsos. The finding - that 97 percent of people can't tell the difference between fully AI-generated and human-made music - was alarming. But it's also not the whole story. In ...",
+    "category": "ai",
+    "_trending_tags": [
+      "ai"
+    ],
+    "_permalink": "/p/3d03a35ebb/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/3d03a35ebb/",
+    "_summary_240": "Streaming service Deezer ran an experiment recently, with the help of research firm Ipsos. The finding - that 97 percent of people can't tell the difference between fully...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/3d03a35ebb/thumbnail.png"
+  },
+  {
+    "title": "LLMs Give Rise To Superhuman Product Managers",
+    "url": "https://newsletter.tek2dayholdings.com/p/llms-give-rise-to-superhuman-product",
+    "published_at": "2025-11-29T11:49:45-05:00",
+    "source": "TEK2day Newsletter",
+    "summary": "Within the context of Software companies, I often refer to Product Managers (PMs) as CEOs of their product portfolio.",
+    "content_html": "<div class=\"captioned-image-container\"><figure><a class=\"image-link image2 is-viewable-img\" href=\"https://substackcdn.com/image/fetch/$s_!evZF!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F46bb1691-61d3-414e-8cc6-fd74bb44e9d8_2150x1536.png\" target=\"_blank\"><div class=\"image2-inset\"><source type=\"image/webp\" /><img alt=\"\" class=\"sizing-normal\" height=\"1040\" src=\"https://substackcdn.com/image/fetch/$s_!evZF!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F46bb1691-61d3-414e-8cc6-fd74bb44e9d8_2150x1536.png\" width=\"1456\" /><div class=\"image-link-expand\"><div class=\"pencraft pc-display-flex pc-gap-8 pc-reset\"><button class=\"pencraft pc-reset pencraft icon-container restack-image\" tabindex=\"0\" type=\"button\"><svg class=\"lucide lucide-refresh-cw\" fill=\"none\" height=\"20\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" viewBox=\"0 0 24 24\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8\"></path><path d=\"M21 3v5h-5\"></path><path d=\"M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16\"></path><path d=\"M8 16H3v5\"></path></svg></button><button class=\"pencraft pc-reset pencraft icon-container view-image\" tabindex=\"0\" type=\"button\"><svg class=\"lucide lucide-maximize2 lucide-maximize-2\" fill=\"none\" height=\"20\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" viewBox=\"0 0 24 24\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><polyline points=\"15 3 21 3 21 9\"></polyline><polyline points=\"9 21 3 21 3 15\"></polyline><line x1=\"21\" x2=\"14\" y1=\"3\" y2=\"10\"></line><line x1=\"3\" x2=\"10\" y1=\"21\" y2=\"14\"></line></svg></button></div></div></div></a></figure></div><h4>Within the context of Software companies, I often refer to Product Managers (PMs) as CEOs of their product portfolio. LLMs can be a force multiplier for motivated Product Managers. </h4><p>For example, if a Product Manager has an idea for a new product feature or a new product based on customer input and intuition, the PM does not need to absorb company resources to mock-up that feature or product. Instead, the PM can leverage Gemini, Anthropic or GPT (or any preferred LLM), to build that feature or product himself within a matter of minutes or hours. It&#8217;s that simple. One must then spend the time to test the feature or product with live data, but the real ROI is giving rise to the initial build.</p><p>Every Software company ought to demand LLM usage from their PMs as leveraging LLMs greatly reduces build times and time to market. </p><div><hr /></div><p></p>",
+    "image_url": "https://substackcdn.com/image/fetch/$s_!evZF!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F46bb1691-61d3-414e-8cc6-fd74bb44e9d8_2150x1536.png",
+    "summary_text": "Within the context of Software companies, I often refer to Product Managers (PMs) as CEOs of their product portfolio.",
+    "category": "ai",
+    "_trending_tags": [
+      "llm"
+    ],
+    "_permalink": "/p/eab91a1fd4/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/eab91a1fd4/",
+    "_summary_240": "Within the context of Software companies, I often refer to Product Managers (PMs) as CEOs of their product portfolio.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/eab91a1fd4/thumbnail.png"
+  },
+  {
     "title": "No, you can\u2019t get your AI to \u2018admit\u2019 to being sexist, but it probably is",
     "url": "https://techcrunch.com/2025/11/29/no-you-cant-get-your-ai-to-admit-to-being-sexist-but-it-probably-is/",
     "published_at": "2025-11-29T11:00:00-05:00",
@@ -122,22 +158,18 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/3ce6c74ce7/thumbnail.png"
   },
   {
-    "title": "Airlines Rush to Fix Software Glitch on Most-Flown Airbus",
+    "title": "Airlines Rush to Contain Fallout from Airbus Software Glitch",
     "url": "https://www.bloomberg.com/news/articles/2025-11-29/global-flights-in-chaos-as-top-selling-airbus-jet-hit-by-recall",
     "published_at": "2025-11-28T23:42:44-05:00",
     "source": "Bloomberg Technology",
-    "summary": "Airlines across the world canceled hundreds of flights and raced to adjust their schedules, as a major Airbus SE software glitch forced the planemaker into a sweeping recall that threatened to roil a crucial holiday travel season.",
+    "summary": "Airlines across the world raced to keep their fleet running after a major software glitch forced an urgent update for Airbus SE\u2019s most widely flown aircraft, keeping disruptions and cancellations limited during a crucial holiday season.",
     "content_html": "An Iberia Airbus A320-251N prepares for takeoff on the runway at Adolfo Suarez Airport in Madrid, Spain, on October 12, 2025. (Photo by Joan Valls/Urbanandsport/NurPhoto via Getty Images)",
     "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iDuier2TaaFs/v1/1200x-1.jpg",
-    "summary_text": "Airlines across the world canceled hundreds of flights and raced to adjust their schedules, as a major Airbus SE software glitch forced the planemaker into a sweeping recall that threatened to roil a crucial holiday travel season.",
+    "summary_text": "Airlines across the world raced to keep their fleet running after a major software glitch forced an urgent update for Airbus SE\u2019s most widely flown aircraft, keeping disruptions and cancellations limited during a crucial holiday season.",
     "category": "software",
     "_trending_tags": [
       "ai"
-    ],
-    "_permalink": "/p/7bee188599/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/7bee188599/",
-    "_summary_240": "Airlines across the world canceled hundreds of flights and raced to adjust their schedules, as a major Airbus SE software glitch forced the planemaker into a sweeping recall that...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/7bee188599/thumbnail.png"
+    ]
   },
   {
     "title": "Ethereum tripling its gas limit is the \u2018floor, we can go higher\u2019 \u2014 Sassano",
@@ -990,11 +1022,7 @@
       "agent",
       "ai",
       "nvidia"
-    ],
-    "_permalink": "/p/976147f78f/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/976147f78f/",
-    "_summary_240": "Last week, more than 1,000 attendees joined NVIDIA AI Day Seoul to learn about sovereign AI \u2014 including breakout sessions on agentic and physical AI, hands-on workshops and a...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/976147f78f/thumbnail.png"
+    ]
   },
   {
     "title": "Fears About A.I. Prompt Talks of Super PACs to Rein In the Industry",
@@ -1400,21 +1428,6 @@
     "image_url": "https://images.ft.com/v3/image/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F4ba6158a-2c4a-41a1-8512-4f8e794396b6.jpg?source=next-article&fit=scale-down&quality=highest&width=700&dpr=1",
     "summary_text": "US commerce secretary calls for \u2018balanced approach\u2019 during visit to Brussels for meeting with bloc\u2019s trade ministers",
     "category": "fintech"
-  },
-  {
-    "title": "AI On: 3 Ways Specialized AI Agents Are Reshaping Businesses",
-    "url": "https://blogs.nvidia.com/blog/specialized-ai-agents/",
-    "published_at": "2025-11-24T12:00:00-05:00",
-    "source": "NVIDIA News",
-    "summary": "Built on open-source models, today\u2019s AI agents can be tailored for unique workflows and business needs to boost productivity and return on investment.",
-    "content_html": "",
-    "image_url": "https://s3.amazonaws.com/cms.ipressroom.com/219/files/202511/69248f513d6332f7207a2689_ai-on-specialized-agents-1280x680-1-842x450/ai-on-specialized-agents-1280x680-1-842x450_thmb.jpg",
-    "summary_text": "Built on open-source models, today\u2019s AI agents can be tailored for unique workflows and business needs to boost productivity and return on investment.",
-    "category": "ai",
-    "_trending_tags": [
-      "agent",
-      "ai"
-    ]
   },
   {
     "title": "New personalities in ChatGPT",
