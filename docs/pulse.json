@@ -882,27 +882,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/57d4970608/thumbnail.png"
   },
   {
-    "title": "Claude Agent Skills Explained",
-    "url": "https://www.youtube.com/watch?v=fOxC44g8vig",
-    "published_at": "2025-11-26T17:09:15-05:00",
-    "source": "Anthropic YouTube",
-    "summary": "Agent Skills are organized folders that package expertise that Claude can automatically invoke when relevant to the task at hand. Join the Claude Developer Discord - https://anthropic.com/discord Learn more about Agent Skills - https://www.claude.com/blog/skills 00:06 Introducing Agent Skills 00:30 How Agent Skills work 01:08 Agent Skills vs Claude.md 01:42 Agent Skills vs MCP Servers 02:05 Agent...",
-    "content_html": "",
-    "image_url": "https://i.ytimg.com/vi/fOxC44g8vig/maxresdefault.jpg",
-    "summary_text": "Agent Skills are organized folders that package expertise that Claude can automatically invoke when relevant to the task at hand. Join the Claude Developer Discord - https://anthropic.com/discord Learn more about Agent Skills - https://www.claude.com/blog/ski...",
-    "category": "ai",
-    "_trending_tags": [
-      "agent",
-      "ai",
-      "anthropic",
-      "claude"
-    ],
-    "_permalink": "/p/9df3cc51a4/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/9df3cc51a4/",
-    "_summary_240": "Agent Skills are organized folders that package expertise that Claude can automatically invoke when relevant to the task at hand. Join the Claude Developer Discord -...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/9df3cc51a4/thumbnail.png"
-  },
-  {
     "title": "JustiGuide wants to use AI to help people navigate the US immigration system",
     "url": "https://techcrunch.com/2025/11/26/justiguide-wants-to-use-ai-to-help-people-navigate-the-u-s-immigration-system/",
     "published_at": "2025-11-26T15:31:59-05:00",
@@ -914,11 +893,7 @@
     "category": "ai",
     "_trending_tags": [
       "ai"
-    ],
-    "_permalink": "/p/c3a9cafdef/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/c3a9cafdef/",
-    "_summary_240": "The startup uses AI to help immigrants understand the system, connect with lawyers, and reduce associated costs.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/c3a9cafdef/thumbnail.png"
+    ]
   },
   {
     "title": "OpenAI claims teen circumvented safety features before suicide that ChatGPT helped plan",
@@ -935,11 +910,7 @@
       "chatgpt",
       "gpt",
       "openai"
-    ],
-    "_permalink": "/p/e30e3e4bf3/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/e30e3e4bf3/",
-    "_summary_240": "In August, parents Matthew and Maria Raine sued OpenAI and its CEO, Sam Altman, over their 16-year-old son Adam's suicide, accusing the company of wrongful death. On Tuesday,...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/e30e3e4bf3/thumbnail.png"
+    ]
   },
   {
     "title": "Jeff Bezos\u2019 New AI Venture Quietly Acquired an Agentic Computing Startup",
@@ -1380,6 +1351,23 @@
     "_trending_tags": [
       "ai",
       "gpt"
+    ]
+  },
+  {
+    "title": "Scania accelerates operations across its global workforce with ChatGPT",
+    "url": "https://www.youtube.com/watch?v=0luMwmnvRuQ",
+    "published_at": "2025-11-20T20:43:32-05:00",
+    "source": "OpenAI YouTube",
+    "summary": "Scania builds the trucks, buses, and transport systems that keep the world moving. With AI in their engineering-led organisation, they're evolving from vehicle maker to sustainable transport ecosystem leader. Read more: https://openai.com/index/scania/",
+    "content_html": "",
+    "image_url": "https://i.ytimg.com/vi/0luMwmnvRuQ/maxresdefault.jpg",
+    "summary_text": "Scania builds the trucks, buses, and transport systems that keep the world moving. With AI in their engineering-led organisation, they're evolving from vehicle maker to sustainable transport ecosystem leader. Read more: https://openai.com/index/scania/",
+    "category": "ai",
+    "_trending_tags": [
+      "ai",
+      "chatgpt",
+      "gpt",
+      "openai"
     ]
   },
   {
