@@ -1,5 +1,24 @@
 [
   {
+    "title": "Why observable AI is the missing SRE layer enterprises need for reliable LLMs",
+    "url": "https://venturebeat.com/ai/why-observable-ai-is-the-missing-sre-layer-enterprises-need-for-reliable",
+    "published_at": "2025-11-29T14:00:00-05:00",
+    "source": "VentureBeat",
+    "summary": "As AI systems enter production, reliability and governance can\u2019t depend on wishful thinking. Here\u2019s how observability turns large language models (LLMs) into auditable, trustworthy enterprise systems. Why observability secures the future of enterprise AI The enterprise race to deploy LLM systems mirrors the early days of cloud adoption. Executives love the promise; compliance demands accountabili...",
+    "content_html": "",
+    "image_url": "https://images.ctfassets.net/jdtwqhzvc2n1/3377dEBZA5or66BktZdgE4/ed88e306a9f1cda0c843bdff011b1c5f/Observability.png?w=800&amp;q=75",
+    "summary_text": "As AI systems enter production, reliability and governance can\u2019t depend on wishful thinking. Here\u2019s how observability turns large language models (LLMs) into auditable, trustworthy enterprise systems. Why observability secures the future of enterprise AI The ...",
+    "category": "ai",
+    "_trending_tags": [
+      "ai",
+      "llm"
+    ],
+    "_permalink": "/p/5316751978/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/5316751978/",
+    "_summary_240": "As AI systems enter production, reliability and governance can\u2019t depend on wishful thinking. Here\u2019s how observability turns large language models (LLMs) into auditable,...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/5316751978/thumbnail.png"
+  },
+  {
     "title": "Crypto self-custody is a fundamental right, says SEC's Hester Peirce",
     "url": "https://cointelegraph.com/news/crypto-self-custody-fundamental-right-sec-hester-peirce?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
     "published_at": "2025-11-29T12:47:56-05:00",
@@ -13,24 +32,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/6bf9b28a16/",
     "_summary_240": "Self-custody of assets and financial privacy are both fundamental rights consistent with the pro-freedom philosophy on which the US was founded.",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/6bf9b28a16/thumbnail.png"
-  },
-  {
-    "title": "97 percent of people struggle to identify AI music, but it\u2019s not as bad as it seems",
-    "url": "https://www.theverge.com/entertainment/830393/ai-music-deezer-survey-spotify",
-    "published_at": "2025-11-29T12:00:00-05:00",
-    "source": "The Verge",
-    "summary": "Streaming service Deezer ran an experiment recently, with the help of research firm Ipsos. The finding - that 97 percent of people can't tell the difference between fully AI-generated and human-made music - was alarming. But it's also not the whole story. In the survey, 9,000 participants listened to three tracks and were asked to [\u2026]",
-    "content_html": "<figure>\n\n<img alt=\"Messy AI-generated hands playing a piano, overlayed with pixel art music notes.\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/11/STK467_AI_MUSIC_CVirginia_D.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100\" />\n\t<figcaption>\n\tPeople don\u2019t like not being able to identify AI-generated music.\t</figcaption>\n</figure>\n<p class=\"has-text-align-none\">Streaming service Deezer ran an experiment recently, with the help of research firm Ipsos. The finding - that <a href=\"https://newsroom-deezer.com/2025/11/deezer-ipsos-survey-ai-music/\">97 percent of people</a> can't tell the difference between fully AI-generated and human-made music - was alarming. But it's also not the whole story. </p>\n<p class=\"has-text-align-none\">In the survey, 9,000 participants listened to three tracks and were asked to guess which, if any, were completely AI-generated. If the participant failed to guess all three correctly, they were put in the fail pile. That means if you got two of three correct, Deezer and Ipsos still said you couldn't tell the difference between fully AI-generated music and the real deal.</p>\n<p class=\"has-text-align-none\">Deezer sent me th \u2026</p>\n<p><a href=\"https://www.theverge.com/entertainment/830393/ai-music-deezer-survey-spotify\">Read the full story at The Verge.</a></p>",
-    "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/11/STK467_AI_MUSIC_CVirginia_D.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "summary_text": "Streaming service Deezer ran an experiment recently, with the help of research firm Ipsos. The finding - that 97 percent of people can't tell the difference between fully AI-generated and human-made music - was alarming. But it's also not the whole story. In ...",
-    "category": "ai",
-    "_trending_tags": [
-      "ai"
-    ],
-    "_permalink": "/p/3d03a35ebb/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/3d03a35ebb/",
-    "_summary_240": "Streaming service Deezer ran an experiment recently, with the help of research firm Ipsos. The finding - that 97 percent of people can't tell the difference between fully...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/3d03a35ebb/thumbnail.png"
   },
   {
     "title": "LLMs Give Rise To Superhuman Product Managers",
@@ -608,24 +609,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/ebcbb28985/thumbnail.png"
   },
   {
-    "title": "Avail\u2019s Nexus wants to be Web3\u2019s execution spine, not just another bridge",
-    "url": "https://cointelegraph.com/news/avails-nexus-web3s-execution-spine?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-    "published_at": "2025-11-28T08:13:22-05:00",
-    "source": "Cointelegraph",
-    "summary": "Nexus wants to be more than just another bridge by turning crosschain chaos into one unified balance so users can move assets seamlessly between blockchains.",
-    "content_html": "",
-    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjQtMTEvMDE5MzRlYTgtN2JjNi03MTM3LWFkZWYtZWRlYzBlOTllZmRj.jpg",
-    "summary_text": "Nexus wants to be more than just another bridge by turning crosschain chaos into one unified balance so users can move assets seamlessly between blockchains.",
-    "category": "fintech",
-    "_trending_tags": [
-      "ai"
-    ],
-    "_permalink": "/p/b62e6db7a4/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/b62e6db7a4/",
-    "_summary_240": "Nexus wants to be more than just another bridge by turning crosschain chaos into one unified balance so users can move assets seamlessly between blockchains.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/b62e6db7a4/thumbnail.png"
-  },
-  {
     "title": "Nu, Revolut Lead Fintech Quest for Mexico\u2019s Middle-Class Wealth",
     "url": "https://www.bloomberg.com/news/articles/2025-11-28/nu-revolut-race-for-bank-licenses-in-quest-for-mexico-middle-class-wealth",
     "published_at": "2025-11-28T08:00:35-05:00",
@@ -971,11 +954,7 @@
     "_trending_tags": [
       "agent",
       "ai"
-    ],
-    "_permalink": "/p/805806e01f/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/805806e01f/",
-    "_summary_240": "Project Prometheus has raised over $6 billion in funding and hired over 100 employees, a handful of whom joined through its acquisition of General Agents, according to records...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/805806e01f/thumbnail.png"
+    ]
   },
   {
     "title": "ChatGPT: Everything you need to know about the AI-powered chatbot",
@@ -1150,21 +1129,6 @@
     "summary_text": "Big US tech companies are more diversified than Korean and Taiwanese chipmakers",
     "category": "ai",
     "_trending_tags": [
-      "ai"
-    ]
-  },
-  {
-    "title": "Alibaba's AgentEvolver lifts model performance in tool use by ~30% using synthetic, auto-generated tasks",
-    "url": "https://venturebeat.com/ai/alibabas-agentevolver-lifts-model-performance-in-tool-use-by-30-using",
-    "published_at": "2025-11-25T19:00:00-05:00",
-    "source": "VentureBeat",
-    "summary": "Researchers at Alibaba\u2019s Tongyi Lab have developed a new framework for self-evolving agents that create their own training data by exploring their application environments. The framework, AgentEvolver , uses the knowledge and reasoning capabilities of large language models for autonomous learning, addressing the high costs and manual effort typically required to gather task-specific datasets. Exp...",
-    "content_html": "",
-    "image_url": "https://images.ctfassets.net/jdtwqhzvc2n1/4enOwMu4NUlXF6NXOriDEH/b99b0fee6403bc292622b870a5b234a6/AI_agent_exploring_different_branches.jpg?w=800&amp;q=75",
-    "summary_text": "Researchers at Alibaba\u2019s Tongyi Lab have developed a new framework for self-evolving agents that create their own training data by exploring their application environments. The framework, AgentEvolver , uses the knowledge and reasoning capabilities of large l...",
-    "category": "software",
-    "_trending_tags": [
-      "agent",
       "ai"
     ]
   },
