@@ -1,5 +1,24 @@
 [
   {
+    "title": "No, you can\u2019t get your AI to \u2018admit\u2019 to being sexist, but it probably is",
+    "url": "https://techcrunch.com/2025/11/29/no-you-cant-get-your-ai-to-admit-to-being-sexist-but-it-probably-is/",
+    "published_at": "2025-11-29T11:00:00-05:00",
+    "source": "TechCrunch",
+    "summary": "Though LLMs might not use explicitly biased language, they may infer your demographic data and display implicit biases, researchers say.",
+    "content_html": "",
+    "image_url": "https://techcrunch.com/wp-content/uploads/2025/11/robot.jpg?resize=1200,600",
+    "summary_text": "Though LLMs might not use explicitly biased language, they may infer your demographic data and display implicit biases, researchers say.",
+    "category": "ai",
+    "_trending_tags": [
+      "ai",
+      "llm"
+    ],
+    "_permalink": "/p/2c91e87b9f/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/2c91e87b9f/",
+    "_summary_240": "Though LLMs might not use explicitly biased language, they may infer your demographic data and display implicit biases, researchers say.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/2c91e87b9f/thumbnail.png"
+  },
+  {
     "title": "Superintelligence Won't Happen Absent A New Approach To Gen AI",
     "url": "https://newsletter.tek2dayholdings.com/p/superintelligence-wont-happen-absent",
     "published_at": "2025-11-29T10:00:03-05:00",
@@ -958,21 +977,6 @@
     ]
   },
   {
-    "title": "GM tech executive shakeup continues on software team",
-    "url": "https://techcrunch.com/2025/11/26/gm-tech-executive-shakeup-continues-on-software-team/",
-    "published_at": "2025-11-26T13:45:18-05:00",
-    "source": "TechCrunch",
-    "summary": "Three of GM's top software executives have left the automaker in recent months, as the company moves to combine its disparate technology businesses.",
-    "content_html": "",
-    "image_url": "https://techcrunch.com/wp-content/uploads/2023/06/general-motors-branding.jpg?resize=1200,900",
-    "summary_text": "Three of GM's top software executives have left the automaker in recent months, as the company moves to combine its disparate technology businesses.",
-    "category": "software",
-    "_permalink": "/p/c6516f824a/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/c6516f824a/",
-    "_summary_240": "Three of GM's top software executives have left the automaker in recent months, as the company moves to combine its disparate technology businesses.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/c6516f824a/thumbnail.png"
-  },
-  {
     "title": "From Government to Gaming, AI Is \u2018Strengthening Korea\u2019s Digital Foundation,\u2019 NVIDIA Leader Says at AI Day Seoul",
     "url": "https://blogs.nvidia.com/blog/ai-day-seoul/",
     "published_at": "2025-11-26T12:00:32-05:00",
@@ -1019,11 +1023,7 @@
     "content_html": "<p>Crypto-hoarding companies are ditching their holdings in a bid to prop up their sinking share prices, as the craze for \u201cdigital asset treasury\u201d businesses unravels in the face of a $1 trillion\u00a0cryptocurrency rout.</p>\n<p>Shares in Michael Saylor-led Strategy, the world\u2019s biggest corporate bitcoin holder, have tumbled 50 percent over the past three months, dragging down scores of copycat companies.</p>\n<p>About $77 billion\u00a0has been wiped from the stock market value of these companies, which raise debt and equity to fund purchases of crypto, since their peak of $176 billion\u00a0in July, according to industry data publication The Block.</p><p><a href=\"https://arstechnica.com/information-technology/2025/11/crypto-hoarders-dump-tokens-as-shares-tumble/\">Read full article</a></p>\n<p><a href=\"https://arstechnica.com/information-technology/2025/11/crypto-hoarders-dump-tokens-as-shares-tumble/#comments\">Comments</a></p>",
     "image_url": "https://cdn.arstechnica.net/wp-content/uploads/2025/11/GettyImages-1368998806-1152x648.jpg",
     "summary_text": "Several companies are selling crypto stockpiles in effort to fund share buybacks, shore up stock prices.",
-    "category": "fintech",
-    "_permalink": "/p/da2f9fa57d/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/da2f9fa57d/",
-    "_summary_240": "Several companies are selling crypto stockpiles in effort to fund share buybacks, shore up stock prices.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/da2f9fa57d/thumbnail.png"
+    "category": "fintech"
   },
   {
     "title": "What Is META Doing?",
@@ -1122,7 +1122,7 @@
     "source": "Financial Times - Technology",
     "summary": "Big US tech companies are more diversified than Korean and Taiwanese chipmakers",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/f4c0b666-6c53-43d1-a43e-3281b6312a1b.jpg",
+    "image_url": "",
     "summary_text": "Big US tech companies are more diversified than Korean and Taiwanese chipmakers",
     "category": "ai",
     "_trending_tags": [
@@ -1179,7 +1179,7 @@
     "source": "Financial Times - Technology",
     "summary": "$115bn sell-off for chip group weighs on those linked to company",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/38fe4fe9-1093-4942-8401-9c8809c6adc0.jpg",
+    "image_url": "",
     "summary_text": "$115bn sell-off for chip group weighs on those linked to company",
     "category": "ai",
     "_trending_tags": [
@@ -1273,7 +1273,7 @@
     "source": "Financial Times - Technology",
     "summary": "Digital token will be aimed at merchants moving large sums and may also be offered to consumers",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/89f6fe76-8936-4f5a-81d6-84de76fc07b4.jpg",
+    "image_url": "",
     "summary_text": "Digital token will be aimed at merchants moving large sums and may also be offered to consumers",
     "category": "fintech",
     "_trending_tags": [
@@ -1401,7 +1401,7 @@
     "source": "Financial Times - Technology",
     "summary": "US commerce secretary calls for \u2018balanced approach\u2019 during visit to Brussels for meeting with bloc\u2019s trade ministers",
     "content_html": "",
-    "image_url": "https://images.ft.com/v3/image/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F4ba6158a-2c4a-41a1-8512-4f8e794396b6.jpg?source=next-article&fit=scale-down&quality=highest&width=700&dpr=1",
+    "image_url": "",
     "summary_text": "US commerce secretary calls for \u2018balanced approach\u2019 during visit to Brussels for meeting with bloc\u2019s trade ministers",
     "category": "fintech"
   },
