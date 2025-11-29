@@ -899,6 +899,27 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/57d4970608/thumbnail.png"
   },
   {
+    "title": "Claude Agent Skills Explained",
+    "url": "https://www.youtube.com/watch?v=fOxC44g8vig",
+    "published_at": "2025-11-26T17:09:15-05:00",
+    "source": "Anthropic YouTube",
+    "summary": "Agent Skills are organized folders that package expertise that Claude can automatically invoke when relevant to the task at hand. Join the Claude Developer Discord - https://anthropic.com/discord Learn more about Agent Skills - https://www.claude.com/blog/skills 00:06 Introducing Agent Skills 00:30 How Agent Skills work 01:08 Agent Skills vs Claude.md 01:42 Agent Skills vs MCP Servers 02:05 Agent...",
+    "content_html": "",
+    "image_url": "https://i.ytimg.com/vi/fOxC44g8vig/maxresdefault.jpg",
+    "summary_text": "Agent Skills are organized folders that package expertise that Claude can automatically invoke when relevant to the task at hand. Join the Claude Developer Discord - https://anthropic.com/discord Learn more about Agent Skills - https://www.claude.com/blog/ski...",
+    "category": "ai",
+    "_trending_tags": [
+      "agent",
+      "ai",
+      "anthropic",
+      "claude"
+    ],
+    "_permalink": "/p/9df3cc51a4/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/9df3cc51a4/",
+    "_summary_240": "Agent Skills are organized folders that package expertise that Claude can automatically invoke when relevant to the task at hand. Join the Claude Developer Discord -...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/9df3cc51a4/thumbnail.png"
+  },
+  {
     "title": "JustiGuide wants to use AI to help people navigate the US immigration system",
     "url": "https://techcrunch.com/2025/11/26/justiguide-wants-to-use-ai-to-help-people-navigate-the-u-s-immigration-system/",
     "published_at": "2025-11-26T15:31:59-05:00",
@@ -970,11 +991,7 @@
       "ai",
       "chatgpt",
       "gpt"
-    ],
-    "_permalink": "/p/f70af2974d/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/f70af2974d/",
-    "_summary_240": "A timeline of ChatGPT product updates and releases, starting with the latest, which we\u2019ve been updating throughout the year.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/f70af2974d/thumbnail.png"
+    ]
   },
   {
     "title": "Mixpanel security incident: what OpenAI users need to know",
@@ -1114,7 +1131,7 @@
     "source": "Financial Times - Technology",
     "summary": "Beijing-backed technology gains ground as American giants hold fast to \u2018closed\u2019 AI strategies",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/cc1c2257-5f64-48e3-923d-950c5c49e14e.jpg",
     "summary_text": "Beijing-backed technology gains ground as American giants hold fast to \u2018closed\u2019 AI strategies",
     "category": "ai",
     "_trending_tags": [
@@ -1129,7 +1146,7 @@
     "source": "Financial Times - Technology",
     "summary": "Big US tech companies are more diversified than Korean and Taiwanese chipmakers",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/f4c0b666-6c53-43d1-a43e-3281b6312a1b.jpg",
     "summary_text": "Big US tech companies are more diversified than Korean and Taiwanese chipmakers",
     "category": "ai",
     "_trending_tags": [
@@ -1186,7 +1203,7 @@
     "source": "Financial Times - Technology",
     "summary": "$115bn sell-off for chip group weighs on those linked to company",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/38fe4fe9-1093-4942-8401-9c8809c6adc0.jpg",
     "summary_text": "$115bn sell-off for chip group weighs on those linked to company",
     "category": "ai",
     "_trending_tags": [
@@ -1280,7 +1297,7 @@
     "source": "Financial Times - Technology",
     "summary": "Digital token will be aimed at merchants moving large sums and may also be offered to consumers",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/89f6fe76-8936-4f5a-81d6-84de76fc07b4.jpg",
     "summary_text": "Digital token will be aimed at merchants moving large sums and may also be offered to consumers",
     "category": "fintech",
     "_trending_tags": [
@@ -1399,23 +1416,6 @@
     "_trending_tags": [
       "ai",
       "gpt"
-    ]
-  },
-  {
-    "title": "Scania accelerates operations across its global workforce with ChatGPT",
-    "url": "https://www.youtube.com/watch?v=0luMwmnvRuQ",
-    "published_at": "2025-11-20T20:43:32-05:00",
-    "source": "OpenAI YouTube",
-    "summary": "Scania builds the trucks, buses, and transport systems that keep the world moving. With AI in their engineering-led organisation, they're evolving from vehicle maker to sustainable transport ecosystem leader. Read more: https://openai.com/index/scania/",
-    "content_html": "",
-    "image_url": "https://i.ytimg.com/vi/0luMwmnvRuQ/maxresdefault.jpg",
-    "summary_text": "Scania builds the trucks, buses, and transport systems that keep the world moving. With AI in their engineering-led organisation, they're evolving from vehicle maker to sustainable transport ecosystem leader. Read more: https://openai.com/index/scania/",
-    "category": "ai",
-    "_trending_tags": [
-      "ai",
-      "chatgpt",
-      "gpt",
-      "openai"
     ]
   },
   {
