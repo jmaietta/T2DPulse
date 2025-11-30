@@ -1,14 +1,14 @@
 {
-  "generated_at": "2025-11-30T09:40:05.511887-05:00",
+  "generated_at": "2025-11-30T10:21:02.277515-05:00",
   "total_keywords": 30,
   "keyword_counts": {
-    "ai": 63,
+    "ai": 62,
     "llm": 6,
     "agent": 4,
     "google": 4,
+    "chatgpt": 3,
+    "gpt": 3,
     "openai": 3,
-    "chatgpt": 2,
-    "gpt": 2,
     "microsoft": 2,
     "amazon": 1,
     "anthropic": 1,
