@@ -1,15 +1,14 @@
 {
-  "generated_at": "2025-11-30T11:45:37.211493-05:00",
+  "generated_at": "2025-11-30T12:19:39.653336-05:00",
   "total_keywords": 30,
   "keyword_counts": {
-    "ai": 58,
+    "ai": 57,
     "llm": 6,
     "google": 5,
-    "agent": 4,
+    "agent": 3,
     "chatgpt": 3,
     "gpt": 3,
     "openai": 3,
-    "microsoft": 2,
     "amazon": 1,
     "anthropic": 1,
     "claude": 1,
@@ -17,6 +16,7 @@
     "fintech": 1,
     "genai": 1,
     "meta": 1,
+    "microsoft": 1,
     "nvidia": 1
   },
   "sources_per_keyword": {},
