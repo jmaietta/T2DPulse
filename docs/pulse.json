@@ -1,5 +1,20 @@
 [
   {
+    "title": "Most Ethereum valuation models indicate ETH is undervalued: Analyst",
+    "url": "https://cointelegraph.com/news/ethereum-valuation-eth-undervalued?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "published_at": "2025-11-30T12:49:24-05:00",
+    "source": "Cointelegraph",
+    "summary": "Although most models projected ETH prices above $4,000, one critical valuation model bucked the trend, signaling that ETH may be overvalued.",
+    "content_html": "",
+    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjQtMTEvMDE5MzA1MmUtZjQxZi03ZjFkLWFjODktOThkYjIzOGE4MjFm.jpg",
+    "summary_text": "Although most models projected ETH prices above $4,000, one critical valuation model bucked the trend, signaling that ETH may be overvalued.",
+    "category": "ai",
+    "_permalink": "/p/cee31708b7/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/cee31708b7/",
+    "_summary_240": "Although most models projected ETH prices above $4,000, one critical valuation model bucked the trend, signaling that ETH may be overvalued.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/cee31708b7/thumbnail.png"
+  },
+  {
     "title": "Comparative Analysis: Google TPUs vs. NVIDIA Blackwell",
     "url": "https://newsletter.tek2dayholdings.com/p/comparative-analysis-google-tpus",
     "published_at": "2025-11-30T11:33:15-05:00",
@@ -659,21 +674,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/a3f2b6bc3b/thumbnail.png"
   },
   {
-    "title": "The Makers of \u2018Silksong\u2019 Aren\u2019t Done Just Yet",
-    "url": "https://www.bloomberg.com/news/newsletters/2025-11-28/the-makers-of-hollow-knight-silksong-aren-t-done-just-yet",
-    "published_at": "2025-11-28T11:30:01-05:00",
-    "source": "Bloomberg Technology",
-    "summary": "The developers at Team Cherry tell us they\u2019re working on new content for their popular action game",
-    "content_html": "Silksong has been a huge hit since its release on September 4 and was even nominated for Game of the Year Photographer: Team Cherry",
-    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ikDSaE9JVdUE/v0/1200x-1.jpg",
-    "summary_text": "The developers at Team Cherry tell us they\u2019re working on new content for their popular action game",
-    "category": "software",
-    "_permalink": "/p/1676e70d23/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/1676e70d23/",
-    "_summary_240": "The developers at Team Cherry tell us they\u2019re working on new content for their popular action game",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/1676e70d23/thumbnail.png"
-  },
-  {
     "title": "Why quantum security is rising on layer-1 roadmaps and which networks are preparing first",
     "url": "https://cointelegraph.com/explained/why-quantum-security-is-rising-on-layer-1-roadmaps-and-which-networks-are-preparing-first?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
     "published_at": "2025-11-28T11:29:15-05:00",
@@ -962,23 +962,6 @@
     ]
   },
   {
-    "title": "Claude Agent Skills Explained",
-    "url": "https://www.youtube.com/watch?v=fOxC44g8vig",
-    "published_at": "2025-11-26T17:09:15-05:00",
-    "source": "Anthropic YouTube",
-    "summary": "Agent Skills are organized folders that package expertise that Claude can automatically invoke when relevant to the task at hand. Join the Claude Developer Discord - https://anthropic.com/discord Learn more about Agent Skills - https://www.claude.com/blog/skills 00:06 Introducing Agent Skills 00:30 How Agent Skills work 01:08 Agent Skills vs Claude.md 01:42 Agent Skills vs MCP Servers 02:05 Agent...",
-    "content_html": "",
-    "image_url": "https://i.ytimg.com/vi/fOxC44g8vig/maxresdefault.jpg",
-    "summary_text": "Agent Skills are organized folders that package expertise that Claude can automatically invoke when relevant to the task at hand. Join the Claude Developer Discord - https://anthropic.com/discord Learn more about Agent Skills - https://www.claude.com/blog/ski...",
-    "category": "ai",
-    "_trending_tags": [
-      "agent",
-      "ai",
-      "anthropic",
-      "claude"
-    ]
-  },
-  {
     "title": "JustiGuide wants to use AI to help people navigate the US immigration system",
     "url": "https://techcrunch.com/2025/11/26/justiguide-wants-to-use-ai-to-help-people-navigate-the-u-s-immigration-system/",
     "published_at": "2025-11-26T15:31:59-05:00",
@@ -1256,6 +1239,23 @@
     "category": "ai",
     "_trending_tags": [
       "ai"
+    ]
+  },
+  {
+    "title": "Scania accelerates operations across its global workforce with ChatGPT",
+    "url": "https://www.youtube.com/watch?v=0luMwmnvRuQ",
+    "published_at": "2025-11-20T20:43:32-05:00",
+    "source": "OpenAI YouTube",
+    "summary": "Scania builds the trucks, buses, and transport systems that keep the world moving. With AI in their engineering-led organisation, they're evolving from vehicle maker to sustainable transport ecosystem leader. Read more: https://openai.com/index/scania/",
+    "content_html": "",
+    "image_url": "https://i.ytimg.com/vi/0luMwmnvRuQ/maxresdefault.jpg",
+    "summary_text": "Scania builds the trucks, buses, and transport systems that keep the world moving. With AI in their engineering-led organisation, they're evolving from vehicle maker to sustainable transport ecosystem leader. Read more: https://openai.com/index/scania/",
+    "category": "ai",
+    "_trending_tags": [
+      "ai",
+      "chatgpt",
+      "gpt",
+      "openai"
     ]
   },
   {
