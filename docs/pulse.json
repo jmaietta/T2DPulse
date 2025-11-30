@@ -758,43 +758,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/93bd3ea1f6/thumbnail.png"
   },
   {
-    "title": "Marshall Wace to Charge Clients for Costs of Hiring AI Talent",
-    "url": "https://www.bloomberg.com/news/articles/2025-11-28/marshall-wace-to-charge-clients-for-costs-of-hiring-ai-talent",
-    "published_at": "2025-11-28T07:30:00-05:00",
-    "source": "Bloomberg Technology",
-    "summary": "Stock-picking hedge fund Marshall Wace will start making clients pay for the rising costs of hiring and retaining technology, trading and risk personnel amid an intense war for talent.",
-    "content_html": "Signage for artificial intelligence displayed at the SK AI Summit in Seoul, South Korea, on Monday, Nov. 3, 2025. Chey Tae Won, the billionaire chairman of South Korea\u2019s second-largest conglomerate SK Group, projected strong demand for artificial intelligence over the next few years, joining other tech leaders in playing down fears about a spending bubble.",
-    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/i0IbVQRqgmqk/v1/1200x-1.jpg",
-    "summary_text": "Stock-picking hedge fund Marshall Wace will start making clients pay for the rising costs of hiring and retaining technology, trading and risk personnel amid an intense war for talent.",
-    "category": "ai",
-    "_trending_tags": [
-      "ai"
-    ],
-    "_permalink": "/p/06338fb31d/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/06338fb31d/",
-    "_summary_240": "Stock-picking hedge fund Marshall Wace will start making clients pay for the rising costs of hiring and retaining technology, trading and risk personnel amid an intense war for...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/06338fb31d/thumbnail.png"
-  },
-  {
-    "title": "AI Shopping Bots Threaten to Upend Amazon\u2019s E-Commerce Dominance",
-    "url": "https://www.bloomberg.com/news/newsletters/2025-11-28/ai-shopping-bots-threaten-to-upend-amazon-s-e-commerce-dominance",
-    "published_at": "2025-11-28T07:06:33-05:00",
-    "source": "Bloomberg Technology",
-    "summary": "Welcome to Tech In Depth, our daily newsletter about the business of tech from Bloomberg\u2019s journalists around the world. Today, Spencer Soper addresses the challenge for Amazon\u2019s business model coming from the advent of AI shopping bots.",
-    "content_html": "The Amazon.com website on a laptop. The e-commerce giant\u2019s business faces threats from the advent of AI shopping bots.",
-    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iM1TWZk9ZK6Y/v1/1200x-1.jpg",
-    "summary_text": "Welcome to Tech In Depth, our daily newsletter about the business of tech from Bloomberg\u2019s journalists around the world. Today, Spencer Soper addresses the challenge for Amazon\u2019s business model coming from the advent of AI shopping bots.",
-    "category": "ai",
-    "_trending_tags": [
-      "ai",
-      "amazon"
-    ],
-    "_permalink": "/p/bc61d4953d/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/bc61d4953d/",
-    "_summary_240": "Welcome to Tech In Depth, our daily newsletter about the business of tech from Bloomberg\u2019s journalists around the world. Today, Spencer Soper addresses the challenge for Amazon\u2019s...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/bc61d4953d/thumbnail.png"
-  },
-  {
     "title": "Taiwan\u2019s economy roars ahead on back of AI demand",
     "url": "https://www.ft.com/content/f6b8fac5-1a70-4815-854b-a2670cb9ac00",
     "published_at": "2025-11-28T06:17:48-05:00",
@@ -943,6 +906,23 @@
     "category": "ai",
     "_trending_tags": [
       "ai"
+    ]
+  },
+  {
+    "title": "Claude Agent Skills Explained",
+    "url": "https://www.youtube.com/watch?v=fOxC44g8vig",
+    "published_at": "2025-11-26T17:09:15-05:00",
+    "source": "Anthropic YouTube",
+    "summary": "Agent Skills are organized folders that package expertise that Claude can automatically invoke when relevant to the task at hand. Join the Claude Developer Discord - https://anthropic.com/discord Learn more about Agent Skills - https://www.claude.com/blog/skills 00:06 Introducing Agent Skills 00:30 How Agent Skills work 01:08 Agent Skills vs Claude.md 01:42 Agent Skills vs MCP Servers 02:05 Agent...",
+    "content_html": "",
+    "image_url": "https://i.ytimg.com/vi/fOxC44g8vig/maxresdefault.jpg",
+    "summary_text": "Agent Skills are organized folders that package expertise that Claude can automatically invoke when relevant to the task at hand. Join the Claude Developer Discord - https://anthropic.com/discord Learn more about Agent Skills - https://www.claude.com/blog/ski...",
+    "category": "ai",
+    "_trending_tags": [
+      "agent",
+      "ai",
+      "anthropic",
+      "claude"
     ]
   },
   {
@@ -1285,38 +1265,6 @@
     "category": "fintech",
     "_trending_tags": [
       "ai"
-    ]
-  },
-  {
-    "title": "Our approach to mental health-related litigation",
-    "url": "https://openai.com/index/mental-health-litigation-approach",
-    "published_at": "2025-11-25T07:00:00-05:00",
-    "source": "OpenAI News",
-    "summary": "We\u2019re sharing our approach to mental health-related litigation. O handle sensitive cases with care, transparency, and respect while continuing to strengthen safety and support in ChatGPT.",
-    "content_html": "",
-    "image_url": "",
-    "summary_text": "We\u2019re sharing our approach to mental health-related litigation. O handle sensitive cases with care, transparency, and respect while continuing to strengthen safety and support in ChatGPT.",
-    "category": "ai",
-    "_trending_tags": [
-      "chatgpt",
-      "gpt"
-    ]
-  },
-  {
-    "title": "Scania accelerates operations across its global workforce with ChatGPT",
-    "url": "https://www.youtube.com/watch?v=0luMwmnvRuQ",
-    "published_at": "2025-11-20T20:43:32-05:00",
-    "source": "OpenAI YouTube",
-    "summary": "Scania builds the trucks, buses, and transport systems that keep the world moving. With AI in their engineering-led organisation, they're evolving from vehicle maker to sustainable transport ecosystem leader. Read more: https://openai.com/index/scania/",
-    "content_html": "",
-    "image_url": "https://i.ytimg.com/vi/0luMwmnvRuQ/maxresdefault.jpg",
-    "summary_text": "Scania builds the trucks, buses, and transport systems that keep the world moving. With AI in their engineering-led organisation, they're evolving from vehicle maker to sustainable transport ecosystem leader. Read more: https://openai.com/index/scania/",
-    "category": "ai",
-    "_trending_tags": [
-      "ai",
-      "chatgpt",
-      "gpt",
-      "openai"
     ]
   },
   {
