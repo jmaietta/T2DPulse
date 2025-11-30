@@ -1,8 +1,8 @@
 {
-  "generated_at": "2025-11-30T10:37:27.985933-05:00",
+  "generated_at": "2025-11-30T11:25:50.637963-05:00",
   "total_keywords": 30,
   "keyword_counts": {
-    "ai": 62,
+    "ai": 59,
     "llm": 6,
     "agent": 4,
     "google": 4,
@@ -12,7 +12,6 @@
     "microsoft": 2,
     "amazon": 1,
     "anthropic": 1,
-    "apple": 1,
     "claude": 1,
     "cloud": 1,
     "fintech": 1,
