@@ -1,5 +1,24 @@
 [
   {
+    "title": "Comparative Analysis: Google TPUs vs. NVIDIA Blackwell",
+    "url": "https://newsletter.tek2dayholdings.com/p/comparative-analysis-google-tpus",
+    "published_at": "2025-11-30T11:33:15-05:00",
+    "source": "TEK2day Newsletter",
+    "summary": "See the attached 3-page PDF report below that compares Google\u2019s in-house developed TPU chips vs.",
+    "content_html": "<div class=\"captioned-image-container\"><figure><a class=\"image-link image2 is-viewable-img\" href=\"https://substackcdn.com/image/fetch/$s_!QR0A!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F9eda909f-6fdc-44c4-874d-40adf0acb85c_1373x981.png\" target=\"_blank\"><div class=\"image2-inset\"><source type=\"image/webp\" /><img alt=\"\" class=\"sizing-normal\" height=\"981\" src=\"https://substackcdn.com/image/fetch/$s_!QR0A!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F9eda909f-6fdc-44c4-874d-40adf0acb85c_1373x981.png\" width=\"1373\" /><div class=\"image-link-expand\"><div class=\"pencraft pc-display-flex pc-gap-8 pc-reset\"><button class=\"pencraft pc-reset pencraft icon-container restack-image\" tabindex=\"0\" type=\"button\"><svg class=\"lucide lucide-refresh-cw\" fill=\"none\" height=\"20\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" viewBox=\"0 0 24 24\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8\"></path><path d=\"M21 3v5h-5\"></path><path d=\"M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16\"></path><path d=\"M8 16H3v5\"></path></svg></button><button class=\"pencraft pc-reset pencraft icon-container view-image\" tabindex=\"0\" type=\"button\"><svg class=\"lucide lucide-maximize2 lucide-maximize-2\" fill=\"none\" height=\"20\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" viewBox=\"0 0 24 24\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><polyline points=\"15 3 21 3 21 9\"></polyline><polyline points=\"9 21 3 21 3 15\"></polyline><line x1=\"21\" x2=\"14\" y1=\"3\" y2=\"10\"></line><line x1=\"3\" x2=\"10\" y1=\"21\" y2=\"14\"></line></svg></button></div></div></div></a></figure></div><p>See the attached 3-page PDF report below that compares Google&#8217;s in-house developed TPU chips vs. NVIDIA&#8217;s Blackwell offering.</p><div class=\"file-embed-wrapper\"><div class=\"file-embed-container-reader\"><div class=\"file-embed-container-top\"><div class=\"file-embed-details\"><div class=\"file-embed-details-h1\">T2d Googl Tpu Vs Nvda Blackwell Nov 2025</div><div class=\"file-embed-details-h2\">397KB &#8729; PDF file</div></div><a class=\"file-embed-button wide\" href=\"https://newsletter.tek2dayholdings.com/api/v1/file/737db988-839f-4989-942a-5da0faca5225.pdf\"><span class=\"file-embed-button-text\">Download</span></a></div><a class=\"file-embed-button narrow\" href=\"https://newsletter.tek2dayholdings.com/api/v1/file/737db988-839f-4989-942a-5da0faca5225.pdf\"><span class=\"file-embed-button-text\">Download</span></a></div></div><p></p><div><hr /></div><p></p>",
+    "image_url": "https://substackcdn.com/image/fetch/$s_!QR0A!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F9eda909f-6fdc-44c4-874d-40adf0acb85c_1373x981.png",
+    "summary_text": "See the attached 3-page PDF report below that compares Google\u2019s in-house developed TPU chips vs.",
+    "category": "ai",
+    "_trending_tags": [
+      "google",
+      "nvidia"
+    ],
+    "_permalink": "/p/7d0c7bbe27/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/7d0c7bbe27/",
+    "_summary_240": "See the attached 3-page PDF report below that compares Google\u2019s in-house developed TPU chips vs.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/7d0c7bbe27/thumbnail.png"
+  },
+  {
     "title": "AI doesn\u2019t add up if you neglect the mathematicians",
     "url": "https://www.ft.com/content/b05318d1-12e5-49f1-9950-47e8b0f809ae",
     "published_at": "2025-11-30T11:00:02-05:00",
@@ -935,7 +954,7 @@
     "source": "Financial Times - Technology",
     "summary": "Seeing limited potential in its niche dubbing product, Synthesia built an AI tool to appeal across industries",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://images.ft.com/v3/image/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F7dc064d2-590c-4f86-a827-2d54e82f0e22.jpg?source=next-article&fit=scale-down&quality=highest&width=700&dpr=1",
     "summary_text": "Seeing limited potential in its niche dubbing product, Synthesia built an AI tool to appeal across industries",
     "category": "ai",
     "_trending_tags": [
@@ -1112,7 +1131,7 @@
     "source": "Financial Times - Technology",
     "summary": "And securitising AI debt",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/b6e68971-91aa-4ae0-a47f-d3ef16224ba7.jpg",
     "summary_text": "And securitising AI debt",
     "category": "ai",
     "_trending_tags": [
@@ -1143,7 +1162,7 @@
     "source": "Financial Times - Technology",
     "summary": "Beijing-backed technology gains ground as American giants hold fast to \u2018closed\u2019 AI strategies",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/cc1c2257-5f64-48e3-923d-950c5c49e14e.jpg",
     "summary_text": "Beijing-backed technology gains ground as American giants hold fast to \u2018closed\u2019 AI strategies",
     "category": "ai",
     "_trending_tags": [
@@ -1158,7 +1177,7 @@
     "source": "Financial Times - Technology",
     "summary": "Big US tech companies are more diversified than Korean and Taiwanese chipmakers",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/f4c0b666-6c53-43d1-a43e-3281b6312a1b.jpg",
     "summary_text": "Big US tech companies are more diversified than Korean and Taiwanese chipmakers",
     "category": "ai",
     "_trending_tags": [
@@ -1200,7 +1219,7 @@
     "source": "Financial Times - Technology",
     "summary": "$115bn sell-off for chip group weighs on those linked to company",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/38fe4fe9-1093-4942-8401-9c8809c6adc0.jpg",
     "summary_text": "$115bn sell-off for chip group weighs on those linked to company",
     "category": "ai",
     "_trending_tags": [
