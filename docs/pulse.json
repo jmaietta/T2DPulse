@@ -962,23 +962,6 @@
     ]
   },
   {
-    "title": "Claude Agent Skills Explained",
-    "url": "https://www.youtube.com/watch?v=fOxC44g8vig",
-    "published_at": "2025-11-26T17:09:15-05:00",
-    "source": "Anthropic YouTube",
-    "summary": "Agent Skills are organized folders that package expertise that Claude can automatically invoke when relevant to the task at hand. Join the Claude Developer Discord - https://anthropic.com/discord Learn more about Agent Skills - https://www.claude.com/blog/skills 00:06 Introducing Agent Skills 00:30 How Agent Skills work 01:08 Agent Skills vs Claude.md 01:42 Agent Skills vs MCP Servers 02:05 Agent...",
-    "content_html": "",
-    "image_url": "https://i.ytimg.com/vi/fOxC44g8vig/maxresdefault.jpg",
-    "summary_text": "Agent Skills are organized folders that package expertise that Claude can automatically invoke when relevant to the task at hand. Join the Claude Developer Discord - https://anthropic.com/discord Learn more about Agent Skills - https://www.claude.com/blog/ski...",
-    "category": "ai",
-    "_trending_tags": [
-      "agent",
-      "ai",
-      "anthropic",
-      "claude"
-    ]
-  },
-  {
     "title": "JustiGuide wants to use AI to help people navigate the US immigration system",
     "url": "https://techcrunch.com/2025/11/26/justiguide-wants-to-use-ai-to-help-people-navigate-the-u-s-immigration-system/",
     "published_at": "2025-11-26T15:31:59-05:00",
@@ -1245,17 +1228,20 @@
     ]
   },
   {
-    "title": "Charting the future of SOC: Human and AI collaboration for better security",
-    "url": "https://techcommunity.microsoft.com/blog/microsoftsecurityexperts/charting-the-future-of-soc-human-and-ai-collaboration-for-better-security/4470688",
-    "published_at": "2025-11-25T13:53:09-05:00",
-    "source": "Microsoft News",
-    "summary": "The post Charting the future of SOC: Human and AI collaboration for better security appeared first on Source .",
-    "content_html": "<article class=\"mssrc-posts font-- has--theme\" id=\"single-22956\">\n\t<div class=\"acf-innerblocks-container\"></div>\t\t\t<section class=\"post-tags\">\n\t\t\t\t<div class=\"post-tags__content wp-block-columns\">\n\t\t\t\t\t<div class=\"post-tags__header wp-block-column flex-basis-25 has-text-align-right\">\n\t\t\t\t\t\t<h4 class=\"sr-only\">Tags: </h4>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"post-tags__body wp-block-column flex-basis-60\">\n\t\t\t\t\t\t<ul class=\"post-tags__list\"><li class=\"post-tags__item\"><a class=\"kicker inline-block post__meta--tags\" href=\"https://news.microsoft.com/source/tag/security/\">Security</a></li></ul>\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</section>\n\t\t\t</article><p>The post <a href=\"https://techcommunity.microsoft.com/blog/microsoftsecurityexperts/charting-the-future-of-soc-human-and-ai-collaboration-for-better-security/4470688\">Charting the future of SOC: Human and AI collaboration for better security</a> appeared first on <a href=\"https://news.microsoft.com/source\">Source</a>.</p>",
-    "image_url": "https://techcommunity.microsoft.com/t5/s/gxcuf89792/images/bS00NDcwNjg4LW1KQWlEMA?revision=8",
-    "summary_text": "The post Charting the future of SOC: Human and AI collaboration for better security appeared first on Source .",
+    "title": "Scania accelerates operations across its global workforce with ChatGPT",
+    "url": "https://www.youtube.com/watch?v=0luMwmnvRuQ",
+    "published_at": "2025-11-20T20:43:32-05:00",
+    "source": "OpenAI YouTube",
+    "summary": "Scania builds the trucks, buses, and transport systems that keep the world moving. With AI in their engineering-led organisation, they're evolving from vehicle maker to sustainable transport ecosystem leader. Read more: https://openai.com/index/scania/",
+    "content_html": "",
+    "image_url": "https://i.ytimg.com/vi/0luMwmnvRuQ/maxresdefault.jpg",
+    "summary_text": "Scania builds the trucks, buses, and transport systems that keep the world moving. With AI in their engineering-led organisation, they're evolving from vehicle maker to sustainable transport ecosystem leader. Read more: https://openai.com/index/scania/",
     "category": "ai",
     "_trending_tags": [
-      "ai"
+      "ai",
+      "chatgpt",
+      "gpt",
+      "openai"
     ]
   },
   {
