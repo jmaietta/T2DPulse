@@ -1,5 +1,23 @@
 [
   {
+    "title": "College Students Choosing A.I. Majors Over Computer Science",
+    "url": "https://www.nytimes.com/2025/12/01/technology/college-computer-science-ai-boom.html",
+    "published_at": "2025-12-01T10:25:58-05:00",
+    "source": "The New York Times - Technology",
+    "summary": "At M.I.T., a new program called \u201cartificial intelligence and decision-making\u201d is now the second-most-popular undergraduate major.",
+    "content_html": "",
+    "image_url": "https://static01.nyt.com/images/2025/11/28/business/00ai-majors/00ai-majors-mediumSquareAt3X.jpg",
+    "summary_text": "At M.I.T., a new program called \u201cartificial intelligence and decision-making\u201d is now the second-most-popular undergraduate major.",
+    "category": "ai",
+    "_trending_tags": [
+      "ai"
+    ],
+    "_permalink": "/p/758498cb21/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/758498cb21/",
+    "_summary_240": "At M.I.T., a new program called \u201cartificial intelligence and decision-making\u201d is now the second-most-popular undergraduate major.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/758498cb21/thumbnail.png"
+  },
+  {
     "title": "DeepSeek Debuts New AI Models to Rival Google and OpenAI",
     "url": "https://www.bloomberg.com/news/articles/2025-12-01/deepseek-debuts-new-ai-models-to-rival-google-and-openai",
     "published_at": "2025-12-01T10:02:34-05:00",
@@ -1248,7 +1266,7 @@
     "source": "Financial Times - Technology",
     "summary": "Venture capital dealmaking on Sand Hill Road is still frenzied despite falls in tech sector shares",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/f91c6768-7a07-41f1-baf1-cd538d34b87d.jpg",
     "summary_text": "Venture capital dealmaking on Sand Hill Road is still frenzied despite falls in tech sector shares",
     "category": "ai",
     "_trending_tags": [
@@ -1262,7 +1280,7 @@
     "source": "Financial Times - Technology",
     "summary": "The automation of attacker-defender dynamics is a long-standing fear among cyber defence specialists",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/9e0dfd9e-a7f1-4dcf-9c07-673413c15c11.jpg",
     "summary_text": "The automation of attacker-defender dynamics is a long-standing fear among cyber defence specialists",
     "category": "ai",
     "_trending_tags": [
@@ -1277,7 +1295,7 @@
     "source": "Financial Times - Technology",
     "summary": "Seeing limited potential in its niche dubbing product, Synthesia built an AI tool to appeal across industries",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://images.ft.com/v3/image/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F7dc064d2-590c-4f86-a827-2d54e82f0e22.jpg?source=next-article&fit=scale-down&quality=highest&width=700&dpr=1",
     "summary_text": "Seeing limited potential in its niche dubbing product, Synthesia built an AI tool to appeal across industries",
     "category": "ai",
     "_trending_tags": [
@@ -1360,17 +1378,6 @@
     "_trending_tags": [
       "ai"
     ]
-  },
-  {
-    "title": "Crypto hoarders dump tokens as shares tumble",
-    "url": "https://arstechnica.com/information-technology/2025/11/crypto-hoarders-dump-tokens-as-shares-tumble/",
-    "published_at": "2025-11-26T10:37:47-05:00",
-    "source": "Ars Technica",
-    "summary": "Several companies are selling crypto stockpiles in effort to fund share buybacks, shore up stock prices.",
-    "content_html": "<p>Crypto-hoarding companies are ditching their holdings in a bid to prop up their sinking share prices, as the craze for \u201cdigital asset treasury\u201d businesses unravels in the face of a $1 trillion\u00a0cryptocurrency rout.</p>\n<p>Shares in Michael Saylor-led Strategy, the world\u2019s biggest corporate bitcoin holder, have tumbled 50 percent over the past three months, dragging down scores of copycat companies.</p>\n<p>About $77 billion\u00a0has been wiped from the stock market value of these companies, which raise debt and equity to fund purchases of crypto, since their peak of $176 billion\u00a0in July, according to industry data publication The Block.</p><p><a href=\"https://arstechnica.com/information-technology/2025/11/crypto-hoarders-dump-tokens-as-shares-tumble/\">Read full article</a></p>\n<p><a href=\"https://arstechnica.com/information-technology/2025/11/crypto-hoarders-dump-tokens-as-shares-tumble/#comments\">Comments</a></p>",
-    "image_url": "https://cdn.arstechnica.net/wp-content/uploads/2025/11/GettyImages-1368998806-1152x648.jpg",
-    "summary_text": "Several companies are selling crypto stockpiles in effort to fund share buybacks, shore up stock prices.",
-    "category": "fintech"
   },
   {
     "title": "New personalities in ChatGPT",
