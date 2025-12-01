@@ -1,41 +1,51 @@
 [
   {
-    "title": "Apple AI chief steps down amid Siri struggles",
+    "title": "MIT Says AI Can Replace 11.7% of US Workforce",
+    "url": "https://www.pymnts.com/news/artificial-intelligence/2025/mit-says-ai-can-replace-11percent-united-states-workforce/",
+    "published_at": "2025-12-01T17:59:54-05:00",
+    "source": "PYMNTS",
+    "summary": "Artificial intelligence systems can already perform tasks equal to 11.7% of the workforce in the United States, according to research from the Massachusetts Institute of Technology released Wednesday (Nov. 26). That represents about $1.2 trillion in wages tied to potentially automatable work across finance, healthcare and professional services. The estimate comes from MIT\u2019s new [\u2026] The post MIT S...",
+    "content_html": "<p><span>Artificial intelligence systems can already perform tasks equal to 11.7% of the workforce in the United States, according to </span><a class=\"editor-rtfLink\" href=\"https://iceberg.mit.edu/report.pdf\" rel=\"noopener\" target=\"_blank\"><span>research</span></a><span> from the </span><a class=\"editor-rtfLink\" href=\"https://www.mit.edu/\" rel=\"noopener\" target=\"_blank\"><span>Massachusetts Institute of Technology</span></a><span> released Wednesday (Nov. 26).</span></p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p><span>That represents about $1.2 trillion in wages tied to potentially automatable work across finance, healthcare and professional services.</span></p>\n<p><span>The estimate comes from MIT\u2019s new labor analysis tool, the </span><a class=\"editor-rtfLink\" href=\"https://iceberg.mit.edu/\" rel=\"noopener\" target=\"_blank\"><span>Iceberg Index</span></a><span>, </span><span>developed</span> <span>with</span> <a class=\"editor-rtfLink\" href=\"https://www.ornl.gov/\" rel=\"noopener\" target=\"_blank\"><span>Oak Ridge National Laboratory</span></a><span>.</span><span> The platform models how 151 million U.S. workers interact with thousands of AI tools to measure technical task exposure rather than forecast whether or when </span><span>jobs will be eliminated</span><span>.</span></p>\n<p><span>The study represents the first attempt to map AI capabilities against the entire U.S. labor market at the county level, CNBC </span><a class=\"editor-rtfLink\" href=\"https://www.cnbc.com/2025/11/26/mit-study-finds-ai-can-already-replace-11point7percent-of-us-workforce.html\" rel=\"noopener\" target=\"_blank\"><span>reported</span></a><span> Wednesday. Tennessee has already incorporated the findings into its statewide </span><a class=\"editor-rtfLink\" href=\"https://www.tn.gov/content/dam/tn/finance/aicouncil/documents/TN%20AI%20Advisory%20Council%20Action%20Plan%20-%20November%202025.pdf\" rel=\"noopener\" target=\"_blank\"><span>Artificial Intelligence Advisory Council Action Plan</span></a><span>, and Utah is preparing a similar report.</span></p>\n<p><span>Visible AI adoption in computing and technology accounts for only 2.2% of wage value exposure, or roughly $211 billion, the report said. </span><span>The remaining exposure reflects tasks that AI can perform today, even if no employer has automated them </span><span>yet</span><strong><span>.</span></strong></p>\n<h2><strong><span>How the Iceberg Index Measures AI Exposure</span></strong></h2>\n<p><span>The Iceberg Index maps AI system capabilities onto occupational skill requirements. </span><span>Researchers cataloged more than 13,000 AI tools and aligned them with </span><a class=\"editor-rtfLink\" href=\"https://www.bls.gov/\" rel=\"noopener\" target=\"_blank\"><span>Bureau of Labor Statistics</span></a><span> taxonomies </span><span>covering</span><span> 32,000 competencies across 923 occupations in </span><span>about</span><span> 3,000 counties.</span></p>\n<p><span>Each occupation\u2019s skills </span><span>are weighted</span><span> by importance, automatability and wage value. A skill </span><span>is considered</span><span> automatable when AI tools exist that a language model can use to execute that task. Research co-leader </span><a class=\"editor-rtfLink\" href=\"https://www.linkedin.com/in/prasannaprakash/\" rel=\"noopener\" target=\"_blank\"><span>Prasanna Balaprakash</span></a><span> of Oak Ridge National Laboratory described the platform as building a \u201cdigital twin for the U.S. labor market,\u201d per CNBC\u2019s report.</span></p>\n<p><span>The index measures exposure, not adoption, workforce displacement or policy impacts. Real-world outcomes depend on employer decisions, regulation, job design and reskilling capacity.</span></p>\n<h2><strong><span>Which Jobs Are Most Exposed</span></strong></h2>\n<p><span>AI deployment is concentrated in technology occupations, employing about 1.9 million workers. Software engineers, data scientists and program managers show the highest degree of overlap with existing AI capabilities. Washington leads the nation with 4.2% exposure in tech roles, followed by Virginia at 3.6% and California at 3%.</span></p>\n<p><span>The broader 11.7% figure reflects capability in document processing, financial analysis and routine administrative tasks. Exposure extends to routine functions in human resources, logistics, finance and office administration, CNBC reported.</span></p>\n<p><span>The study distinguishes between task replacement and task augmentation. Some AI systems can fully automate specific functions, while others support workers by handling repetitive or low-judgment components. Many exposed jobs may shift toward hybrid models rather than vanish.</span></p>\n<p><span>MIT economist </span><a class=\"editor-rtfLink\" href=\"https://shapingwork.mit.edu/about-us/david-autor/\" rel=\"noopener\" target=\"_blank\"><span>David Autor</span></a><span> told an audience at the </span><a class=\"editor-rtfLink\" href=\"https://ilp.mit.edu/AI25\" rel=\"noopener\" target=\"_blank\"><span>MIT AI Conference</span></a><span> in March that AI will likely </span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/artificial-intelligence-2/2025/will-ai-eventually-replace-human-workers-or-augment-them/\" rel=\"noopener\" target=\"_blank\"><span>augment</span></a><span> human expertise more frequently than replace it.</span></p>\n<h2><strong><span>How Exposure Varies Across Regions and Industries</span></strong></h2>\n<p><span>Exposure is not concentrated solely in coastal technology hubs. South Dakota, North Carolina and Utah show higher index values than California or Virginia when administrative and financial sectors </span><span>are included</span><span>.</span></p>\n<p><span>Industrial states also show high cognitive-task exposure. Tennessee registers 11.6% while Ohio reaches 11.8%, driven by administrative coordination and professional services embedded within manufacturing supply chains. </span><span>The study </span><span>used</span><span> the </span><a class=\"editor-rtfLink\" href=\"https://www.justice.gov/atr/herfindahl-hirschman-index\" rel=\"noopener\" target=\"_blank\"><span>Herfindahl-Hirschman Index</span></a><span> to </span><span>examine</span><span> whether exposure clusters in specific industries or </span><span>spreads</span><span> broadly.</span> <span>Northeastern states tend to </span><span>show</span><span> concentrated exposure led by finance and technology, while Manufacturing Belt states display more distributed patterns across logistics, production, administration and services.</span></p>\n<p><span>MIT researchers also developed an interactive simulation environment that </span><span>allows</span><span> states to model policy scenarios, including training investments and workforce funding before implementation.</span></p>\n<p><span>The PYMNTS Intelligence report \u201c</span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/study_posts/no-roadmap-no-problem-how-enterprises-are-reinventing-the-ai-workforce\" rel=\"noopener\" target=\"_blank\"><span>No Roadmap, No Problem: How Enterprises Are Reinventing the AI Workforce</span></a><span>\u201d found that readiness levels for AI adoption </span><span>inside</span><span> firms vary.</span> <span>Overall, 60% of chief financial officers </span><span>said</span><span> their companies are at least somewhat prepared to manage AI-driven change, including 12% who </span><span>said</span><span> they are very prepared.</span><span> Nearly all the rest, about 38%, were neutral, signaling uncertainty about their ability to adapt.</span></p>\n<p><em>For all PYMNTS AI coverage, subscribe to the daily </em><a href=\"https://pymnts.com/subscribe/\" rel=\"noopener\" target=\"_blank\"><em>AI Newsletter</em></a><em>.</em></p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/news/artificial-intelligence/2025/mit-says-ai-can-replace-11percent-united-states-workforce/\">MIT Says AI Can Replace 11.7% of US Workforce</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
+    "image_url": "https://www.pymnts.com/wp-content/uploads/2025/12/MIT.jpeg?w=457",
+    "summary_text": "Artificial intelligence systems can already perform tasks equal to 11.7% of the workforce in the United States, according to research from the Massachusetts Institute of Technology released Wednesday (Nov. 26). That represents about $1.2 trillion in wages tie...",
+    "category": "ai",
+    "_trending_tags": [
+      "ai"
+    ],
+    "_permalink": "/p/033b03e57c/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/033b03e57c/",
+    "_summary_240": "Artificial intelligence systems can already perform tasks equal to 11.7% of the workforce in the United States, according to research from the Massachusetts Institute of...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/033b03e57c/thumbnail.png"
+  },
+  {
+    "title": "Apple AI chief steps down following Siri setbacks",
     "url": "https://www.theverge.com/news/835466/apple-ai-chief-john-giannandrea-steps-down-siri",
     "published_at": "2025-12-01T17:39:22-05:00",
     "source": "The Verge",
-    "summary": "Apple AI chief John Giannandrea is stepping down from his position, according to an announcement on Monday. The change comes as Apple struggles to get the launch of its AI-powered Siri back on track after delaying its launch earlier this year. Now, Apple is appointing Amar Subramanya as its vice president of AI. Subramanya spent [\u2026]",
-    "content_html": "<figure>\n\n<img alt=\"\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/03/STK071_APPLE_M.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100\" />\n\t<figcaption>\n\t\t</figcaption>\n</figure>\n<p class=\"has-text-align-none\">Apple AI chief John Giannandrea is stepping down from his position, according to <a href=\"https://www.apple.com/newsroom/2025/12/john-giannandrea-to-retire-from-apple/\">an announcement on Monday</a>. The change comes as Apple struggles to get the launch of its AI-powered Siri back on track after delaying its launch earlier this year.</p>\n\n<p class=\"has-text-align-none\">Now, Apple is appointing Amar Subramanya as its vice president of AI. Subramanya spent more than a decade at Google before joining Microsoft as the corporate VP of AI in July. He\u2019ll oversee the development of Apple\u2019s AI models, machine learning research, and AI safety and evaluation. Meanwhile, Giannandrea will continue working as an advisor before retiring in the spring of 2026.</p>\n\n<p class=\"has-text-align-none\">After pushing <a href=\"https://www.theverge.com/news/626035/apple-delays-upgraded-siri-intelligence-longer-than-we-thought\">back the release of an upgraded</a> Siri in March, <em>Bloomberg</em> reported that <a href=\"http://Giannandrea\">Apple put Vision Pro leader Mike Rockwell</a> in charge of AI and Siri, replacing Giannandrea. Apple CEO Tim Cook has since said that the company expects to release the <a href=\"https://www.theverge.com/news/810735/tim-cook-ai-apple-intelligence-integrations\">upgraded version of Siri next year</a>.</p>\n\n<p class=\"has-text-align-none\"><em>Developing\u2026</em></p>",
+    "summary": "Apple AI chief John Giannandrea is stepping down from his position, according to an announcement on Monday. The change comes as Apple struggles to get its AI-powered Siri back on track after delaying its launch earlier this year. Now, Amar Subramanya will serve as Apple\u2019s vice president of AI. Subramanya spent 16 years at Google [\u2026]",
+    "content_html": "<figure>\n\n<img alt=\"\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/03/STK071_APPLE_M.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100\" />\n\t<figcaption>\n\t\t</figcaption>\n</figure>\n<p class=\"has-text-align-none\">Apple AI chief John Giannandrea is stepping down from his position, according to <a href=\"https://www.apple.com/newsroom/2025/12/john-giannandrea-to-retire-from-apple/\">an announcement on Monday</a>. The change comes as Apple struggles to get its AI-powered Siri back on track after delaying its launch earlier this year.</p>\n\n<p class=\"has-text-align-none\">Now, Amar Subramanya will serve as Apple\u2019s vice president of AI. Subramanya spent 16 years at Google before <a href=\"https://www.cnbc.com/2025/07/22/microsoft-google-deepmind-ai-talent.html\">joining Microsoft\u2019s AI division as the corporate VP of AI</a> in July. While at Apple, Subramanya will oversee the development of the company\u2019s AI models, machine learning research, as well as AI safety and evaluation.</p>\n\n<p class=\"has-text-align-none\">Giannandrea, who previously headed up AI and Search at Google, <a href=\"https://www.theverge.com/2018/4/3/17195076/google-ai-chief-john-giannandrea-joining-apple-machine-learning-siri\">joined Apple in 2018</a> to help improve the company\u2019s voice assistant. </p>\n\n<p class=\"has-text-align-none\">In March, Apple <a href=\"https://www.theverge.com/news/626035/apple-delays-upgraded-siri-intelligence-longer-than-we-thought\">pushed back the release</a> of a <a href=\"https://www.theverge.com/2024/6/10/24171936/apple-siri-ai-update-ios18-features-wwdc\">more personalized Siri</a>, admitting that \u201cit\u2019s taking longer than we thought.\u201d <em>Bloomberg</em> later reported that Apple CEO Tim Cook had \u201clost confidence\u201d in Giannandrea\u2019s ability to oversee the company\u2019s AI team, leading him to put <a href=\"https://www.theverge.com/news/633358/apple-replace-siri-leader-john-giannandrea\">Vision Pro leader Mike Rockwell</a> in charge. Giannandrea will continue working as an advisor before retiring in the spring of 2026.</p>\n\n<p class=\"has-text-align-none\">Apple says Subramanya\u2019s experience in integrating AI research into products \u201cwill be important to Apple\u2019s ongoing innovation and future Apple Intelligence features.\u201d As part of the shift, Subramanya will report to Apple software SVP Craig Federighi. Apple expects to launch its upgraded Siri next spring, with a report from <em>Bloomberg</em> suggesting that the company will power some of the assistant\u2019s new features <a href=\"https://www.theverge.com/news/814654/apple-intelligence-google-gemini-ai-siri\">with a custom version of Google\u2019s Gemini AI model</a>.</p>\n\n<p class=\"has-text-align-none\">\u201cAI has long been central to Apple\u2019s strategy, and we are pleased to welcome Amar to Craig\u2019s leadership team and to bring his extraordinary AI expertise to Apple,\u201d Cook says in a statement. \u201cIn addition to growing his leadership team and AI responsibilities with Amar\u2019s joining, Craig has been instrumental in driving our AI efforts, including overseeing our work to bring a more personalized Siri to users next year.\u201d</p>\n\n<p class=\"has-text-align-none\"><em>Developing\u2026</em></p>",
     "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/03/STK071_APPLE_M.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "summary_text": "Apple AI chief John Giannandrea is stepping down from his position, according to an announcement on Monday. The change comes as Apple struggles to get the launch of its AI-powered Siri back on track after delaying its launch earlier this year. Now, Apple is a...",
+    "summary_text": "Apple AI chief John Giannandrea is stepping down from his position, according to an announcement on Monday. The change comes as Apple struggles to get its AI-powered Siri back on track after delaying its launch earlier this year. Now, Amar Subramanya will ser...",
     "category": "ai",
     "_trending_tags": [
       "ai",
       "apple"
-    ],
-    "_permalink": "/p/767e3a4ca6/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/767e3a4ca6/",
-    "_summary_240": "Apple AI chief John Giannandrea is stepping down from his position, according to an announcement on Monday. The change comes as Apple struggles to get the launch of its...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/767e3a4ca6/thumbnail.png"
+    ]
   },
   {
-    "title": "Apple Artificial Intelligence Head to Leave After AI Struggles",
+    "title": "Apple AI Head John Giannandrea to Leave After Chaotic Stint",
     "url": "https://www.bloomberg.com/news/articles/2025-12-01/apple-artificial-intelligence-head-to-leave-after-ai-struggles",
     "published_at": "2025-12-01T17:18:51-05:00",
     "source": "Bloomberg Technology",
-    "summary": "Apple Inc. artificial intelligence head John Giannandrea plans to step down from the job, ending a challenging stint at the iPhone maker.",
+    "summary": "Apple Inc. artificial intelligence head John Giannandrea is stepping down from the role, capping a tumultuous tenure that included a fumbled entry into generative AI.",
     "content_html": "John Giannandrea, senior vice president of machine learning and AI strategy at Apple Inc., during the Apple Worldwide Developers Conference at Apple Park campus in Cupertino, California, US, on Monday, June 10, 2024. The conference will show whether Apple Inc. can become a major player in the burgeoning field of artificial intelligence, marking a critical moment for a company forced to adapt to a new era.",
     "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/i6OqUjMdxvxQ/v1/1200x-1.jpg",
-    "summary_text": "Apple Inc. artificial intelligence head John Giannandrea plans to step down from the job, ending a challenging stint at the iPhone maker.",
+    "summary_text": "Apple Inc. artificial intelligence head John Giannandrea is stepping down from the role, capping a tumultuous tenure that included a fumbled entry into generative AI.",
     "category": "ai",
     "_trending_tags": [
       "ai",
       "apple"
-    ],
-    "_permalink": "/p/0c68e2a468/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/0c68e2a468/",
-    "_summary_240": "Apple Inc. artificial intelligence head John Giannandrea plans to step down from the job, ending a challenging stint at the iPhone maker.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/0c68e2a468/thumbnail.png"
+    ]
   },
   {
     "title": "Here\u2019s what happened in crypto today",
@@ -214,24 +224,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/840060770d/thumbnail.png"
   },
   {
-    "title": "Stablecoin Firm First Digital Plans SPAC Market Listing",
-    "url": "https://www.pymnts.com/cryptocurrency/2025/stablecoin-firm-first-digital-plans-spac-market-listing/",
-    "published_at": "2025-12-01T14:43:31-05:00",
-    "source": "PYMNTS",
-    "summary": "Stablecoin issuer First Digital is reportedly the latest crypto company planning to go public. The Hong Kong-based company is aiming to list via a special purpose acquisition company (SPAC) merger with CSLM Digital Asset Acquisition Corp III, Bloomberg News reported Monday (Dec. 1), citing sources familiar with the matter. According to the report, First [\u2026] The post Stablecoin Firm First Digital ...",
-    "content_html": "<p><span style=\"font-weight: 400;\">Stablecoin issuer </span><a href=\"https://firstdigitallabs.com/\" rel=\"noopener\" target=\"_blank\"><span style=\"font-weight: 400;\">First Digital</span></a><span style=\"font-weight: 400;\"> is reportedly the latest crypto company planning to go public.</span></p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p><span style=\"font-weight: 400;\">The Hong Kong-based company is aiming to list via a special purpose acquisition company (SPAC) merger with CSLM Digital Asset Acquisition Corp III, Bloomberg News </span><a href=\"https://www.bloomberg.com/news/articles/2025-12-01/stablecoin-firm-first-digital-eyes-listing-through-spac-merger\" rel=\"noopener\" target=\"_blank\"><span style=\"font-weight: 400;\">reported</span></a><span style=\"font-weight: 400;\"> Monday (Dec. 1), citing sources familiar with the matter.</span></p>\n<p><span style=\"font-weight: 400;\">According to the report, First Digital issued FDUSD, a stablecoin with a market circulation of about $920 million, which is down from a peak of roughly $4.4 billion in April of last year.</span></p>\n<p><span style=\"font-weight: 400;\">As Bloomberg noted, the pace of crypto listings has sped up this year as companies look to make the most of the Trump administration\u2019s pro-digital assets position. Among the companies to </span><a href=\"https://www.pymnts.com/cryptocurrency/2025/circles-post-ipo-surge-resumes-as-investors-eye-coinbase/\" rel=\"noopener\" target=\"_blank\"><span style=\"font-weight: 400;\">list this year</span></a><span style=\"font-weight: 400;\"> include stablecoin issuer </span><a href=\"https://circle.so/\" rel=\"noopener\" target=\"_blank\"><span style=\"font-weight: 400;\">Circle</span></a><span style=\"font-weight: 400;\">.</span></p>\n<p><span style=\"font-weight: 400;\">That company\u2019s market debut, PYMNTS wrote this summer, marked a wider cultural and economic shift.</span></p>\n<p><span style=\"font-weight: 400;\">\u201cFor years, cryptocurrencies have lived at the </span><a href=\"https://www.pymnts.com/cryptocurrency/2025/circle-is-americas-first-publicly-traded-stablecoin-issuer-now-what/\" rel=\"noopener\" target=\"_blank\"><span style=\"font-weight: 400;\">margins of institutional finance</span></a><span style=\"font-weight: 400;\">, oscillating between hype cycles and regulatory crackdowns,\u201d that report said.</span></p>\n<p><span style=\"font-weight: 400;\">\u201cWith Circle\u2019s entry into the public market, a new chapter looks set to begin. With blue-chip banks underwriting the deal and retail investors clamoring for shares, the traditional finance world appears more open than ever to embracing digital assets.\u201d</span></p>\n<p><span style=\"font-weight: 400;\">SPACs have also been </span><a href=\"https://www.pymnts.com/spac/2025/spacs-make-9-billion-comeback-thanks-to-trump-and-tariffs/\" rel=\"noopener\" target=\"_blank\"><span style=\"font-weight: 400;\">enjoying a comeback</span></a><span style=\"font-weight: 400;\"> this year. The so-called \u201cblank check company\u201d wave saw around 600 U.S. companies raise a record $163 billion in 2021, though the trend faded when global stocks plunged in 2022 as interest rates rose.</span></p>\n<p><span style=\"font-weight: 400;\">In other stablecoin news, PYMNTS wrote last week about how this segment of the cryptocurrency sector was being impacted by the </span><a href=\"https://www.pymnts.com/cryptocurrency/2025/bitcoin-slips-below-86k-amid-concerns-about-meager-inflows\" rel=\"noopener\" target=\"_blank\"><span style=\"font-weight: 400;\">downturn in the overall crypto market</span></a><span style=\"font-weight: 400;\">.</span></p>\n<p><span style=\"font-weight: 400;\">While bitcoin, the most popular cryptocurrency, had reached a record high of $126,000 in October, it has since fallen to under $86,000, with </span><a href=\"https://www.pymnts.com/cryptocurrency/2025/tariffs-trigger-record-19-billion-in-crypto-liquidations/\"><span style=\"font-weight: 400;\">large-scale liquidations</span></a><span style=\"font-weight: 400;\"> hitting the market.</span></p>\n<p><span style=\"font-weight: 400;\">\u201cThe problem for the rest of </span><a href=\"https://www.pymnts.com/cryptocurrency/2025/crypto-market-rout-is-putting-asset-backed-stablecoins-under-microscope/\" rel=\"noopener\" target=\"_blank\"><span style=\"font-weight: 400;\">blockchain finance</span></a><span style=\"font-weight: 400;\">? The crypto ecosystem is highly interconnected, and certain stablecoins use bitcoin (and bitcoin ETFs) as part of their reserve mix of backing mechanisms,\u201d PYMNTS wrote.</span></p>\n<p><span style=\"font-weight: 400;\">\u201cStablecoin pegs can fluctuate during depegging events, when the token value moves away from the value it is supposed to match due to fluctuations in its reserve composition or other extenuating factors.\u201d</span></p>\n<p><span style=\"font-weight: 400;\">Touted as a more reliable on-chain asset alternative to traditional cryptocurrencies, stablecoins still remain integrated with, and not wholly protected from, the larger digital asset marketplace, that report added.</span></p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/cryptocurrency/2025/stablecoin-firm-first-digital-plans-spac-market-listing/\">Stablecoin Firm First Digital Plans SPAC Market Listing</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
-    "image_url": "https://www.pymnts.com/wp-content/uploads/2025/12/first-digital-spac-special-purpose-acquisition-company-crypto-cryptocurrency-stablecoins-e1764619483288.jpeg?w=457",
-    "summary_text": "Stablecoin issuer First Digital is reportedly the latest crypto company planning to go public. The Hong Kong-based company is aiming to list via a special purpose acquisition company (SPAC) merger with CSLM Digital Asset Acquisition Corp III, Bloomberg News r...",
-    "category": "fintech",
-    "_trending_tags": [
-      "ai"
-    ],
-    "_permalink": "/p/7aea57f39e/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/7aea57f39e/",
-    "_summary_240": "Stablecoin issuer First Digital is reportedly the latest crypto company planning to go public. The Hong Kong-based company is aiming to list via a special purpose acquisition...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/7aea57f39e/thumbnail.png"
-  },
-  {
     "title": "CME rekindles ETH \u2018super-cycle\u2019 debate as Ether futures volume tops Bitcoin",
     "url": "https://cointelegraph.com/news/cme-eth-supercycle-futures-volume-exceeds-bitcoin?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
     "published_at": "2025-12-01T14:34:00-05:00",
@@ -335,21 +327,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/fb13e50099/",
     "_summary_240": "Republican leaders released a final staff report going over claims of debanking by federal regulators in what some have called \"Operation Choke Point 2.0.\"",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/fb13e50099/thumbnail.png"
-  },
-  {
-    "title": "Australia\u2019s GDP Set to Hit Three-Year High as Rate Hikes Debated",
-    "url": "https://www.bloomberg.com/news/articles/2025-12-01/australia-s-gdp-set-to-hit-three-year-high-as-rate-hikes-debated",
-    "published_at": "2025-12-01T13:00:00-05:00",
-    "source": "Bloomberg Technology",
-    "summary": "Australia\u2019s economic growth probably accelerated at the fastest pace in three years last quarter, coinciding with hotter inflation that\u2019s prompted traders and some economists to wager the Reserve Bank\u2019s next move will be an interest-rate increase.",
-    "content_html": "Pedestrians move along Market Street in Sydney, Australia, on Sunday, Dec. 1, 2024. Australia will release its gross domestic product (GDP) figures Dec. 4.",
-    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ipVuFyjNgp2k/v1/1200x-1.jpg",
-    "summary_text": "Australia\u2019s economic growth probably accelerated at the fastest pace in three years last quarter, coinciding with hotter inflation that\u2019s prompted traders and some economists to wager the Reserve Bank\u2019s next move will be an interest-rate increase.",
-    "category": "fintech",
-    "_permalink": "/p/4f14901aad/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/4f14901aad/",
-    "_summary_240": "Australia\u2019s economic growth probably accelerated at the fastest pace in three years last quarter, coinciding with hotter inflation that\u2019s prompted traders and some economists to...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/4f14901aad/thumbnail.png"
   },
   {
     "title": "At NeurIPS, NVIDIA Advances Open Model Development for Digital and Physical AI",
@@ -612,21 +589,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/5b810c1035/thumbnail.png"
   },
   {
-    "title": "Ruby Is Not a Serious Programming Language",
-    "url": "https://www.wired.com/story/ruby-is-not-a-serious-programming-language/",
-    "published_at": "2025-12-01T07:00:00-05:00",
-    "source": "Wired",
-    "summary": "Ruby survives on affection, not utility. Let's move on.",
-    "content_html": "",
-    "image_url": "https://media.wired.com/photos/6925f4622a28299e7369f588/master/pass/MR%20012%20'Ruby'%20(1).jpg",
-    "summary_text": "Ruby survives on affection, not utility. Let's move on.",
-    "category": "software",
-    "_permalink": "/p/4e1b722584/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/4e1b722584/",
-    "_summary_240": "Ruby survives on affection, not utility. Let's move on.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/4e1b722584/thumbnail.png"
-  },
-  {
     "title": "What AI Bubble? BNEF Outlook for Data Center Power Use Rises 36%",
     "url": "https://www.bloomberg.com/news/articles/2025-12-01/what-ai-bubble-bnef-outlook-for-data-center-power-use-rises-36",
     "published_at": "2025-12-01T07:00:00-05:00",
@@ -643,6 +605,21 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/215e611134/",
     "_summary_240": "Power demand from US data centers is set to surge to 106 gigawatts by 2035, according to BloombergNEF, a 36% increase from the research provider\u2019s previous outlook in April.",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/215e611134/thumbnail.png"
+  },
+  {
+    "title": "Ruby Is Not a Serious Programming Language",
+    "url": "https://www.wired.com/story/ruby-is-not-a-serious-programming-language/",
+    "published_at": "2025-12-01T07:00:00-05:00",
+    "source": "Wired",
+    "summary": "Ruby survives on affection, not utility. Let's move on.",
+    "content_html": "",
+    "image_url": "https://media.wired.com/photos/6925f4622a28299e7369f588/master/pass/MR%20012%20'Ruby'%20(1).jpg",
+    "summary_text": "Ruby survives on affection, not utility. Let's move on.",
+    "category": "software",
+    "_permalink": "/p/4e1b722584/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/4e1b722584/",
+    "_summary_240": "Ruby survives on affection, not utility. Let's move on.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/4e1b722584/thumbnail.png"
   },
   {
     "title": "Prediction markets bet on Coinbase-linked Hassett as top Fed pick",
@@ -759,24 +736,6 @@
       "gpt",
       "openai"
     ]
-  },
-  {
-    "title": "China reaffirms crypto ban after noticing \u2018speculation has resurfaced\u2019",
-    "url": "https://cointelegraph.com/news/china-crypto-crackdown-stablecoin-concerns?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-    "published_at": "2025-12-01T00:56:05-05:00",
-    "source": "Cointelegraph",
-    "summary": "The People\u2019s Bank of China reasserted the country\u2019s crypto ban, claiming trading had reemerged and vowed to crack down on stablecoins.",
-    "content_html": "",
-    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTIvMDE5YWQ4MDItZTczYi03ZTc4LWFiY2QtNTc3NTkxOTViZWZj.jpg",
-    "summary_text": "The People\u2019s Bank of China reasserted the country\u2019s crypto ban, claiming trading had reemerged and vowed to crack down on stablecoins.",
-    "category": "fintech",
-    "_trending_tags": [
-      "ai"
-    ],
-    "_permalink": "/p/55052afa4a/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/55052afa4a/",
-    "_summary_240": "The People\u2019s Bank of China reasserted the country\u2019s crypto ban, claiming trading had reemerged and vowed to crack down on stablecoins.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/55052afa4a/thumbnail.png"
   },
   {
     "title": "Black Forest Labs: one-year-old German start-up challenges AI giants",
@@ -966,25 +925,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/529e25aeb3/",
     "_summary_240": "David Sacks\u2019 role as President Donald Trump\u2019s artificial intelligence and crypto czar could work out very well for his investments, according to a new report. However, Sacks...",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/529e25aeb3/thumbnail.png"
-  },
-  {
-    "title": "ChatGPT launched three years ago today",
-    "url": "https://techcrunch.com/2025/11/30/chatgpt-launched-three-years-ago-today/",
-    "published_at": "2025-11-30T15:14:09-05:00",
-    "source": "TechCrunch",
-    "summary": "It\u2019s no hyperbole to suggest that ChatGPT subsequently transformed the worlds of business and tech.",
-    "content_html": "",
-    "image_url": "https://techcrunch.com/wp-content/uploads/2025/02/GettyImages-2195918462.jpg?w=1024",
-    "summary_text": "It\u2019s no hyperbole to suggest that ChatGPT subsequently transformed the worlds of business and tech.",
-    "category": "ai",
-    "_trending_tags": [
-      "chatgpt",
-      "gpt"
-    ],
-    "_permalink": "/p/3c2911aef4/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/3c2911aef4/",
-    "_summary_240": "It\u2019s no hyperbole to suggest that ChatGPT subsequently transformed the worlds of business and tech.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/3c2911aef4/thumbnail.png"
   },
   {
     "title": "Comparative Analysis: Google TPUs vs. NVIDIA Blackwell",
