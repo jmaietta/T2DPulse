@@ -1,5 +1,23 @@
 [
   {
+    "title": "Construction workers are cashing in on the AI boom",
+    "url": "https://techcrunch.com/2025/12/01/construction-workers-are-cashing-in-on-the-ai-boom/",
+    "published_at": "2025-12-01T14:13:50-05:00",
+    "source": "TechCrunch",
+    "summary": "\"I pinch myself going to work every day,\" one 51-year-old says of his new supervisor role overseeing 200 workers at a data center site.",
+    "content_html": "",
+    "image_url": "https://techcrunch.com/wp-content/uploads/2024/05/GettyImages-2152222109.jpg?resize=1200,800",
+    "summary_text": "\"I pinch myself going to work every day,\" one 51-year-old says of his new supervisor role overseeing 200 workers at a data center site.",
+    "category": "ai",
+    "_trending_tags": [
+      "ai"
+    ],
+    "_permalink": "/p/241522b2ca/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/241522b2ca/",
+    "_summary_240": "\"I pinch myself going to work every day,\" one 51-year-old says of his new supervisor role overseeing 200 workers at a data center site.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/241522b2ca/thumbnail.png"
+  },
+  {
     "title": "ChatGPT Hits Its Third Year and Redefines Digital Strategy",
     "url": "https://www.pymnts.com/artificial-intelligence-2/2025/chatgpt-hits-its-third-year-and-redefines-digital-strategy/",
     "published_at": "2025-12-01T13:51:25-05:00",
@@ -558,24 +576,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/9619144b80/thumbnail.png"
   },
   {
-    "title": "Boston Rebuilds Payments to Simplify Municipal Money Flows",
-    "url": "https://www.pymnts.com/connectedeconomy/2025/boston-rebuilds-payments-to-simplify-municipal-money-flows/",
-    "published_at": "2025-12-01T04:03:23-05:00",
-    "source": "PYMNTS",
-    "summary": "Cities depend on thousands of small transactions that happen every day, but the systems behind those payments often work against the efficiency city departments need. Boston decided it could no longer operate with decades-old tools that made it hard to collect, track and reconcile parking and small-dollar municipal payments. That push to modernize is [\u2026] The post Boston Rebuilds Payments to Simpl...",
-    "content_html": "<p><span>Cities depend on thousands of small transactions that </span><span>happen</span><span> every day, but the systems behind those payments often </span><span>work against</span><span> the efficiency city departments need.</span></p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p><span>Boston decided it could no longer operate with decades-old tools that made it hard to collect, track and reconcile parking and small-dollar municipal payments. </span></p>\n<p><span>That push to modernize is now taking shape </span><span>through <a href=\"http://passportpayments.com/\" rel=\"noopener\" target=\"_blank\">Passport Payments</a>,</span><span> a <a href=\"https://www.passportinc.com/blog/city-of-boston-modernizes-parking-with-passports-unified-platform/\" rel=\"noopener\" target=\"_blank\">platform</a> the city co-developed with curb management solutions provider <a href=\"https://www.passportinc.com/\" rel=\"noopener\" target=\"_blank\">Passport</a> to simplify </span><span>how money moves</span><span> across Boston\u2019s transportation-related units. </span></p>\n<h2>Boston\u2019s Fragmented System</h2>\n<p><span>Parking is the most visible source of small-dollar payments for Boston, but it is also one of the most complex. </span><span>Finance Manager <a href=\"https://www.linkedin.com/in/richard-andrade-378235276/\" rel=\"noopener\" target=\"_blank\">Rich Andrade</a> told PYMNTS Karen Webster as part of the Monday Conversation series that Boston wanted a single system that could address the needs, </span><span>especially</span>\u00a0<span>of</span><span> high-traffic</span><span> areas like Quincy Market and downtown.</span></p>\n<p><span>\u201cThe city wanted a system that could really unify our operations just to make the city more livable for residents and easier to navigate for visitors,\u201d he said. \u201cWe get a large volume of transactions in our touristy areas, and before </span><span>this</span><span> I was dealing with having a primary vendor along with five or six other vendors just to reconcile several bank accounts. Passport has consolidated those six or seven websites into one platform.\u201d</span></p>\n<p><span>Passport and Boston built the platform together. </span><span>Passport CTO <a href=\"https://www.linkedin.com/in/gene-f-rohrwasser/\" rel=\"noopener\" target=\"_blank\">Gene Rohrwasser</a> said the company designed the product specifically for the public sector </span><span>and</span><span> the complexity of municipal </span><span>money</span><span> flows.</span><span> \u201cIt is a purpose-built solution for the public sector,\u201d he said. \u201cCities are very dynamic </span><span>and</span><span> there are a lot of moving pieces and constituent interactions.\u201d</span></p>\n<p><span>For Boston, the underlying problem was not simply the number of payments coming in but the number of systems required to manage them. Webster pointed out that the city\u2019s existing systems required significant coordination across data and operational processes and asked how Passport Payments fit into that broader evolution.</span></p>\n<p><span>From parking enforcement to appeals </span><span>to</span><span> permits </span><span>to</span><span> kiosk payments, each function had been handled by different vendors and separate portals that did not </span><span>speak to</span><span> each other.</span> <span>Andrade </span><span>said</span><span> that structure </span><span>meant</span><span> switching between multiple sites and data sources, </span><span>creating</span><span> delays in reconciling payments and increasing the </span><span>possibility</span><span> of errors.</span> <span>He said the transition to Passport Payments has reduced workloads by almost 40% because the city no longer spends hours pulling data from multiple systems, </span><span>with</span><span> spreadsheets </span><span>in the mix</span><span>.</span></p>\n<p><span>Constituents have felt that fragmentation, too. Andrade said residents had limited ability to manage their accounts or receive timely notifications. </span><span>With the new system, they can receive email and text </span><span>notices</span><span> and access information </span><span>sooner</span><span>.</span><span> That shift, said Andrade, helps Boston take a step toward modern expectations for managing city services.</span></p>\n<h2>Building With a Public-Sector Focus</h2>\n<p><span>Andrade\u2019s team helped Passport identify every user persona involved in the process, from operations staff to people reconciling daily cash and card payments. Rohrwasser said that input ensured the platform addressed all reporting and workflow needs without making assumptions.</span></p>\n<p><span>The RFP and implementation took </span><span>about</span><span> four months, a reflection of </span><span>how many parts of</span><span> the </span><span>department had</span><span> to </span><span>be modernized at</span><span> the </span><span>same time</span><span>.</span><span> Andrade said Passport\u2019s support helped break down a contract structure that had been in place for four decades. By the end of the fiscal year, the system was ready to </span><span>launch,</span><span> and debuted in October.</span></p>\n<p><span>The impact of the unified system was immediate. </span><span>Andrade said the platform </span><span>allows</span><span> him to report cleaner, more accurate information in </span><span>real time instead of</span><span> waiting several days for batches to clear.</span><span> Teams that once spent time tracking down exceptions now focus on quality control. The ability to see transactions across departments in one place has simplified oversight and reduced the risk of discrepancies.</span></p>\n<p><span>For constituents, Passport Payments </span><span>provides</span><span> a more consistent experience for parking and related services, including the upgraded ParkBoston app </span><span>that</span><span> now integrates into the broader payment infrastructure.</span></p>\n<h2>Boston and Beyond</h2>\n<p><span>Passport already works with more than 800 cities, and Rohrwasser said Boston\u2019s input makes the platform easily applicable elsewhere. \u201cWe have been able to roll it out across hundreds of other customers,\u201d he said. \u201cHaving a technology platform that can support that scale is important, and in the </span><span>mornings</span><span> we will process over 800 transactions a second. A strong user experience at the top of the funnel drives adoption and gives the city a touch point with constituents that feels modern and intuitive.\u201d</span></p>\n<p><span>Looking 18 months ahead, Boston\u2019s work with Passport Payments is only the beginning. As Rohrwasser said, the real opportunity comes from using data to elevate what city teams can focus on. \u201cThere is a lot in the way of how we can further use this data from the curb all the way down to the payment data that can further transform the city\u2019s operation and find more efficiencies,\u201d he said. \u201cThat has a ton of applicability across the other 800 cities that Passport serves.\u201d </span></p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/connectedeconomy/2025/boston-rebuilds-payments-to-simplify-municipal-money-flows/\">Boston Rebuilds Payments to Simplify Municipal Money Flows</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
-    "image_url": "https://www.pymnts.com/wp-content/uploads/2025/12/Boston-payments1-with-overlay.jpg?w=457",
-    "summary_text": "Cities depend on thousands of small transactions that happen every day, but the systems behind those payments often work against the efficiency city departments need. Boston decided it could no longer operate with decades-old tools that made it hard to collec...",
-    "category": "fintech",
-    "_trending_tags": [
-      "ai"
-    ],
-    "_permalink": "/p/b85f91f054/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/b85f91f054/",
-    "_summary_240": "Cities depend on thousands of small transactions that happen every day, but the systems behind those payments often work against the efficiency city departments need. Boston...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/b85f91f054/thumbnail.png"
-  },
-  {
     "title": "Why China\u2019s Bitcoin mining activity is surging again after a 4-year crackdown",
     "url": "https://cointelegraph.com/explained/why-china-s-bitcoin-mining-activity-is-surging-again-after-a-4-year-crackdown?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
     "published_at": "2025-12-01T02:31:49-05:00",
@@ -932,39 +932,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/3c2911aef4/thumbnail.png"
   },
   {
-    "title": "Tether CEO slams S&P ratings agency and influencers spreading USDt FUD",
-    "url": "https://cointelegraph.com/news/tether-ceo-rails-sp-tether-fud?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-    "published_at": "2025-11-30T15:09:51-05:00",
-    "source": "Cointelegraph",
-    "summary": "The comments followed S&P's downgrade of USDt's ability to maintain its peg, which cited Tether's Bitcoin and gold reserves as a concern.",
-    "content_html": "",
-    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTEvMDE5YWQ2NTAtMWVjNC03M2ExLWJmMzktYzk1MWY4MjUzNjcx.jpg",
-    "summary_text": "The comments followed S&P's downgrade of USDt's ability to maintain its peg, which cited Tether's Bitcoin and gold reserves as a concern.",
-    "category": "fintech",
-    "_trending_tags": [
-      "ai"
-    ],
-    "_permalink": "/p/551b967425/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/551b967425/",
-    "_summary_240": "The comments followed S&P's downgrade of USDt's ability to maintain its peg, which cited Tether's Bitcoin and gold reserves as a concern.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/551b967425/thumbnail.png"
-  },
-  {
-    "title": "Most Ethereum valuation models indicate ETH is undervalued: Analyst",
-    "url": "https://cointelegraph.com/news/ethereum-valuation-eth-undervalued?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-    "published_at": "2025-11-30T12:49:24-05:00",
-    "source": "Cointelegraph",
-    "summary": "Although most models projected ETH prices above $4,000, one critical valuation model bucked the trend, signaling that ETH may be overvalued.",
-    "content_html": "",
-    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjQtMTEvMDE5MzA1MmUtZjQxZi03ZjFkLWFjODktOThkYjIzOGE4MjFm.jpg",
-    "summary_text": "Although most models projected ETH prices above $4,000, one critical valuation model bucked the trend, signaling that ETH may be overvalued.",
-    "category": "ai",
-    "_permalink": "/p/cee31708b7/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/cee31708b7/",
-    "_summary_240": "Although most models projected ETH prices above $4,000, one critical valuation model bucked the trend, signaling that ETH may be overvalued.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/cee31708b7/thumbnail.png"
-  },
-  {
     "title": "Comparative Analysis: Google TPUs vs. NVIDIA Blackwell",
     "url": "https://newsletter.tek2dayholdings.com/p/comparative-analysis-google-tpus",
     "published_at": "2025-11-30T11:33:15-05:00",
@@ -1170,25 +1137,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/eab91a1fd4/thumbnail.png"
   },
   {
-    "title": "No, you can\u2019t get your AI to \u2018admit\u2019 to being sexist, but it probably is anyway",
-    "url": "https://techcrunch.com/2025/11/29/no-you-cant-get-your-ai-to-admit-to-being-sexist-but-it-probably-is/",
-    "published_at": "2025-11-29T11:00:00-05:00",
-    "source": "TechCrunch",
-    "summary": "Though LLMs might not use explicitly biased language, they may infer your demographic data and display implicit biases, researchers say.",
-    "content_html": "",
-    "image_url": "https://techcrunch.com/wp-content/uploads/2025/11/robot.jpg?resize=1200,600",
-    "summary_text": "Though LLMs might not use explicitly biased language, they may infer your demographic data and display implicit biases, researchers say.",
-    "category": "ai",
-    "_trending_tags": [
-      "ai",
-      "llm"
-    ],
-    "_permalink": "/p/349a664669/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/349a664669/",
-    "_summary_240": "Though LLMs might not use explicitly biased language, they may infer your demographic data and display implicit biases, researchers say.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/349a664669/thumbnail.png"
-  },
-  {
     "title": "Superintelligence Won't Happen Absent A New Approach To Gen AI",
     "url": "https://newsletter.tek2dayholdings.com/p/superintelligence-wont-happen-absent",
     "published_at": "2025-11-29T10:00:03-05:00",
@@ -1376,21 +1324,6 @@
     "_trending_tags": [
       "agent",
       "ai"
-    ]
-  },
-  {
-    "title": "Mixpanel security incident: what OpenAI users need to know",
-    "url": "https://openai.com/index/mixpanel-incident",
-    "published_at": "2025-11-26T14:00:00-05:00",
-    "source": "OpenAI News",
-    "summary": "OpenAI shares details about a Mixpanel security incident involving limited API analytics data. No API content, credentials, or payment details were exposed. Learn what happened and how we\u2019re protecting users.",
-    "content_html": "",
-    "image_url": "",
-    "summary_text": "OpenAI shares details about a Mixpanel security incident involving limited API analytics data. No API content, credentials, or payment details were exposed. Learn what happened and how we\u2019re protecting users.",
-    "category": "ai",
-    "_trending_tags": [
-      "ai",
-      "openai"
     ]
   },
   {
