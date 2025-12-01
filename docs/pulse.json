@@ -243,7 +243,11 @@
     "content_html": "",
     "image_url": "https://techcrunch.com/wp-content/uploads/2025/12/cryptomixer-seizure-notice-europol.jpg?resize=1200,693",
     "summary_text": "Europol announced the seizure of Cryptomixer\u2019s official website, as well as 25 million euros and 12 terabytes of data from the mixer's service.",
-    "category": "fintech"
+    "category": "fintech",
+    "_permalink": "/p/24d6ed0d69/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/24d6ed0d69/",
+    "_summary_240": "Europol announced the seizure of Cryptomixer\u2019s official website, as well as 25 million euros and 12 terabytes of data from the mixer's service.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/24d6ed0d69/thumbnail.png"
   },
   {
     "title": "College Students Choosing A.I. Majors Over Computer Science",
@@ -575,6 +579,21 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/5b810c1035/thumbnail.png"
   },
   {
+    "title": "Ruby Is Not a Serious Programming Language",
+    "url": "https://www.wired.com/story/ruby-is-not-a-serious-programming-language/",
+    "published_at": "2025-12-01T07:00:00-05:00",
+    "source": "Wired",
+    "summary": "Ruby survives on affection, not utility. Let's move on.",
+    "content_html": "",
+    "image_url": "https://media.wired.com/photos/6925f4622a28299e7369f588/master/pass/MR%20012%20'Ruby'%20(1).jpg",
+    "summary_text": "Ruby survives on affection, not utility. Let's move on.",
+    "category": "software",
+    "_permalink": "/p/4e1b722584/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/4e1b722584/",
+    "_summary_240": "Ruby survives on affection, not utility. Let's move on.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/4e1b722584/thumbnail.png"
+  },
+  {
     "title": "What AI Bubble? BNEF Outlook for Data Center Power Use Rises 36%",
     "url": "https://www.bloomberg.com/news/articles/2025-12-01/what-ai-bubble-bnef-outlook-for-data-center-power-use-rises-36",
     "published_at": "2025-12-01T07:00:00-05:00",
@@ -591,21 +610,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/215e611134/",
     "_summary_240": "Power demand from US data centers is set to surge to 106 gigawatts by 2035, according to BloombergNEF, a 36% increase from the research provider\u2019s previous outlook in April.",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/215e611134/thumbnail.png"
-  },
-  {
-    "title": "Ruby Is Not a Serious Programming Language",
-    "url": "https://www.wired.com/story/ruby-is-not-a-serious-programming-language/",
-    "published_at": "2025-12-01T07:00:00-05:00",
-    "source": "Wired",
-    "summary": "Ruby survives on affection, not utility. Let's move on.",
-    "content_html": "",
-    "image_url": "https://media.wired.com/photos/6925f4622a28299e7369f588/master/pass/MR%20012%20'Ruby'%20(1).jpg",
-    "summary_text": "Ruby survives on affection, not utility. Let's move on.",
-    "category": "software",
-    "_permalink": "/p/4e1b722584/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/4e1b722584/",
-    "_summary_240": "Ruby survives on affection, not utility. Let's move on.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/4e1b722584/thumbnail.png"
   },
   {
     "title": "Prediction markets bet on Coinbase-linked Hassett as top Fed pick",
@@ -1149,24 +1153,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/f9e1a21551/",
     "_summary_240": "The podcast discussion with AI researcher and SSI co-founder Ilya Sutskever regarding the field\u2019s shift from the recent \u201cage of scaling\u201d back to a necessary \u201cage of research.\u201d",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/f9e1a21551/thumbnail.png"
-  },
-  {
-    "title": "Airlines Limit Disruptions from Airbus A320 Software Glitch",
-    "url": "https://www.bloomberg.com/news/articles/2025-11-29/global-flights-in-chaos-as-top-selling-airbus-jet-hit-by-recall",
-    "published_at": "2025-11-28T23:42:44-05:00",
-    "source": "Bloomberg Technology",
-    "summary": "Airlines across the world raced to keep their fleet operating after a major software glitch forced an urgent update for Airbus SE\u2019s most widely flown aircraft, with the rapid response avoiding a major meltdown during a crucial holiday-travel season.",
-    "content_html": "An Iberia Airbus A320-251N prepares for takeoff on the runway at Adolfo Suarez Airport in Madrid, Spain, on October 12, 2025. (Photo by Joan Valls/Urbanandsport/NurPhoto via Getty Images)",
-    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iDuier2TaaFs/v1/1200x-1.jpg",
-    "summary_text": "Airlines across the world raced to keep their fleet operating after a major software glitch forced an urgent update for Airbus SE\u2019s most widely flown aircraft, with the rapid response avoiding a major meltdown during a crucial holiday-travel season.",
-    "category": "software",
-    "_trending_tags": [
-      "ai"
-    ],
-    "_permalink": "/p/fafbbb9f3e/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/fafbbb9f3e/",
-    "_summary_240": "Airlines across the world raced to keep their fleet operating after a major software glitch forced an urgent update for Airbus SE\u2019s most widely flown aircraft, with the rapid...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/fafbbb9f3e/thumbnail.png"
   },
   {
     "title": "I Still See The Same Mistakes with LLMs",
