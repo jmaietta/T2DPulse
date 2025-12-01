@@ -1,5 +1,44 @@
 [
   {
+    "title": "At NeurIPS, NVIDIA Advances Open Model Development for Digital and Physical AI",
+    "url": "https://blogs.nvidia.com/blog/neurips-open-source-digital-physical-ai/",
+    "published_at": "2025-12-01T12:00:48-05:00",
+    "source": "NVIDIA News",
+    "summary": "Researchers worldwide rely on open-source technologies as the foundation of their work. To equip the community with the latest advancements in digital and physical AI, NVIDIA is further expanding its collection of open AI models, datasets and tools \u2014 with potential applications in virtually every research field. At NeurIPS, one of the world\u2019s top AI Read Article",
+    "content_html": "",
+    "image_url": "https://s3.amazonaws.com/cms.ipressroom.com/219/files/202512/692dc9fb3d63325d86b044f4_ov-neurips-25-blog-corp-blog-1280x680-1/ov-neurips-25-blog-corp-blog-1280x680-1_thmb.jpg",
+    "summary_text": "Researchers worldwide rely on open-source technologies as the foundation of their work. To equip the community with the latest advancements in digital and physical AI, NVIDIA is further expanding its collection of open AI models, datasets and tools \u2014 with pot...",
+    "category": "ai",
+    "_trending_tags": [
+      "ai",
+      "nvidia",
+      "openai"
+    ],
+    "_permalink": "/p/17c27ab385/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/17c27ab385/",
+    "_summary_240": "Researchers worldwide rely on open-source technologies as the foundation of their work. To equip the community with the latest advancements in digital and physical AI, NVIDIA is...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/17c27ab385/thumbnail.png"
+  },
+  {
+    "title": "India is ordering Apple and other phone makers to preinstall a state-owned app",
+    "url": "https://www.theverge.com/news/834998/india-sanchar-saathi-app-order-apple-android",
+    "published_at": "2025-12-01T11:53:18-05:00",
+    "source": "The Verge",
+    "summary": "India\u2019s Department of Telecommunications is giving phone manufacturers 90 days to comply with an order to pre-install a state-owned app on new phones and push it to existing phones through software updates, reports Reuters. The government order was privately sent out to phone manufacturers on November 28th, according to Reuters, including Apple, Samsung, Vivo, Oppo, [\u2026]",
+    "content_html": "<figure>\n\n<img alt=\"\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/12/gettyimages-2235695907.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100\" />\n\t<figcaption>\n\t\t</figcaption>\n</figure>\n<p class=\"has-text-align-none\">India\u2019s Department of Telecommunications is giving phone manufacturers 90 days to comply with an order to pre-install a state-owned app on new phones and push it to existing phones through software updates, reports <a href=\"https://www.reuters.com/sustainability/boards-policy-regulation/india-orders-mobile-phones-preloaded-with-government-app-ensure-cyber-safety-2025-12-01/\"><em>Reuters</em></a>. The government order was privately sent out to phone manufacturers on November 28th, according to <em>Reuters</em>, including Apple, Samsung, Vivo, Oppo, and Xiaomi.&nbsp;</p>\n\n<p class=\"has-text-align-none\">In August, Russia <a href=\"https://www.theverge.com/apps/764070/russias-national-messenger-app-max-must-be-preinstalled-on-new-devices-soon\">issued a similar order</a> requiring phone manufacturers to preload a state-backed messenger app, Max.&nbsp;</p>\n\n<p class=\"has-text-align-none\">In this case, the state-owned <a href=\"https://sancharsaathi.gov.in/\">Sanchar Saathi</a> app is already available on the App Store and Google Play Store, but this order would make it mandatory and prevent it from being disabled or deleted. The app includes features for blocking and tracking lost or stolen phones based on their IMEI, and reporting suspected fraud messages.&nbsp;</p>\n<img alt=\"\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/12/Screenshot-2025-12-01-at-11.47.46%E2%80%AFAM.png?quality=90&#038;strip=all&#038;crop=0,0,100,100\" title=\"\" />\n<p class=\"has-text-align-none\">While iOS users still make up a small slice of the pie in India, Apple\u2019s sales in the region <a href=\"https://www.bloomberg.com/news/articles/2025-09-05/apple-s-india-sales-hit-record-9-billion-after-big-retail-push\">hit a record high</a> of $9 billion in September. Similarly, Google began <a href=\"https://www.reuters.com/world/india/google-begins-direct-online-sales-pixel-phones-india-2025-05-29/\">offering direct online sales of Pixel phones</a> in India earlier this year, and both companies have increased local manufacturing of their mobile devices in recent years. Apple and Google didn\u2019t immediately respond to a request for comment.</p>",
+    "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/12/gettyimages-2235695907.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "summary_text": "India\u2019s Department of Telecommunications is giving phone manufacturers 90 days to comply with an order to pre-install a state-owned app on new phones and push it to existing phones through software updates, reports Reuters. The government order was privately ...",
+    "category": "software",
+    "_trending_tags": [
+      "ai",
+      "apple"
+    ],
+    "_permalink": "/p/fc0cf250b6/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/fc0cf250b6/",
+    "_summary_240": "India\u2019s Department of Telecommunications is giving phone manufacturers 90 days to comply with an order to pre-install a state-owned app on new phones and push it to existing...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/fc0cf250b6/thumbnail.png"
+  },
+  {
     "title": "This Time Last Year: How 2025 Reshaped the AP/AR Innovation Cycle",
     "url": "https://www.pymnts.com/news/b2b-payments/2025/this-time-last-year-how-2025-reshaped-accounts-payable-receivable-innovation-cycle/",
     "published_at": "2025-12-01T11:33:59-05:00",
@@ -349,21 +388,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/5b810c1035/thumbnail.png"
   },
   {
-    "title": "Ruby Is Not a Serious Programming Language",
-    "url": "https://www.wired.com/story/ruby-is-not-a-serious-programming-language/",
-    "published_at": "2025-12-01T07:00:00-05:00",
-    "source": "Wired",
-    "summary": "Ruby survives on affection, not utility. Let's move on.",
-    "content_html": "",
-    "image_url": "https://media.wired.com/photos/6925f4622a28299e7369f588/master/pass/MR%20012%20'Ruby'%20(1).jpg",
-    "summary_text": "Ruby survives on affection, not utility. Let's move on.",
-    "category": "software",
-    "_permalink": "/p/4e1b722584/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/4e1b722584/",
-    "_summary_240": "Ruby survives on affection, not utility. Let's move on.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/4e1b722584/thumbnail.png"
-  },
-  {
     "title": "What AI Bubble? BNEF Outlook for Data Center Power Use Rises 36%",
     "url": "https://www.bloomberg.com/news/articles/2025-12-01/what-ai-bubble-bnef-outlook-for-data-center-power-use-rises-36",
     "published_at": "2025-12-01T07:00:00-05:00",
@@ -380,6 +404,21 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/215e611134/",
     "_summary_240": "Power demand from US data centers is set to surge to 106 gigawatts by 2035, according to BloombergNEF, a 36% increase from the research provider\u2019s previous outlook in April.",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/215e611134/thumbnail.png"
+  },
+  {
+    "title": "Ruby Is Not a Serious Programming Language",
+    "url": "https://www.wired.com/story/ruby-is-not-a-serious-programming-language/",
+    "published_at": "2025-12-01T07:00:00-05:00",
+    "source": "Wired",
+    "summary": "Ruby survives on affection, not utility. Let's move on.",
+    "content_html": "",
+    "image_url": "https://media.wired.com/photos/6925f4622a28299e7369f588/master/pass/MR%20012%20'Ruby'%20(1).jpg",
+    "summary_text": "Ruby survives on affection, not utility. Let's move on.",
+    "category": "software",
+    "_permalink": "/p/4e1b722584/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/4e1b722584/",
+    "_summary_240": "Ruby survives on affection, not utility. Let's move on.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/4e1b722584/thumbnail.png"
   },
   {
     "title": "Prediction markets bet on Coinbase-linked Hassett as top Fed pick",
@@ -1182,11 +1221,7 @@
     "category": "ai",
     "_trending_tags": [
       "llm"
-    ],
-    "_permalink": "/p/4406777adc/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/4406777adc/",
-    "_summary_240": "Here\u2019s an example of the type of error I still see with LLM coding that I saw 2 years ago.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/4406777adc/thumbnail.png"
+    ]
   },
   {
     "title": "What to be thankful for in AI in 2025",
@@ -1201,22 +1236,6 @@
     "_trending_tags": [
       "agent",
       "ai"
-    ]
-  },
-  {
-    "title": "How OpenAI and Google see AI changing go-to-market strategies",
-    "url": "https://techcrunch.com/2025/11/28/how-openai-and-google-see-ai-changing-go-to-market-strategies/",
-    "published_at": "2025-11-28T11:00:00-05:00",
-    "source": "TechCrunch",
-    "summary": "AI is changing how investors and startups bring their products to market. Three experts offered their insights at TechCrunch Disrupt.",
-    "content_html": "",
-    "image_url": "https://techcrunch.com/wp-content/uploads/2025/11/gtm-disrupt-2025.jpeg?resize=1200,745",
-    "summary_text": "AI is changing how investors and startups bring their products to market. Three experts offered their insights at TechCrunch Disrupt.",
-    "category": "ai",
-    "_trending_tags": [
-      "ai",
-      "google",
-      "openai"
     ]
   },
   {
@@ -1290,7 +1309,7 @@
     "source": "Financial Times - Technology",
     "summary": "Venture capital dealmaking on Sand Hill Road is still frenzied despite falls in tech sector shares",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/f91c6768-7a07-41f1-baf1-cd538d34b87d.jpg",
+    "image_url": "",
     "summary_text": "Venture capital dealmaking on Sand Hill Road is still frenzied despite falls in tech sector shares",
     "category": "ai",
     "_trending_tags": [
@@ -1304,7 +1323,7 @@
     "source": "Financial Times - Technology",
     "summary": "The automation of attacker-defender dynamics is a long-standing fear among cyber defence specialists",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/9e0dfd9e-a7f1-4dcf-9c07-673413c15c11.jpg",
+    "image_url": "",
     "summary_text": "The automation of attacker-defender dynamics is a long-standing fear among cyber defence specialists",
     "category": "ai",
     "_trending_tags": [
@@ -1319,7 +1338,7 @@
     "source": "Financial Times - Technology",
     "summary": "Seeing limited potential in its niche dubbing product, Synthesia built an AI tool to appeal across industries",
     "content_html": "",
-    "image_url": "https://images.ft.com/v3/image/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F7dc064d2-590c-4f86-a827-2d54e82f0e22.jpg?source=next-article&fit=scale-down&quality=highest&width=700&dpr=1",
+    "image_url": "",
     "summary_text": "Seeing limited potential in its niche dubbing product, Synthesia built an AI tool to appeal across industries",
     "category": "ai",
     "_trending_tags": [
@@ -1371,22 +1390,6 @@
     "_trending_tags": [
       "ai",
       "openai"
-    ]
-  },
-  {
-    "title": "From Government to Gaming, AI Is \u2018Strengthening Korea\u2019s Digital Foundation,\u2019 NVIDIA Leader Says at AI Day Seoul",
-    "url": "https://blogs.nvidia.com/blog/ai-day-seoul/",
-    "published_at": "2025-11-26T12:00:32-05:00",
-    "source": "NVIDIA News",
-    "summary": "Last week, more than 1,000 attendees joined NVIDIA AI Day Seoul to learn about sovereign AI \u2014 including breakout sessions on agentic and physical AI, hands-on workshops and a startup reception for members of the NVIDIA Inception program, all offering insights into the current and future landscape of the AI ecosystem in Korea.",
-    "content_html": "",
-    "image_url": "https://s3.amazonaws.com/cms.ipressroom.com/219/files/202511/692732463d6332006a04f89a_ai-day-seoul-featured-1280x680-1-842x450/ai-day-seoul-featured-1280x680-1-842x450_thmb.jpg",
-    "summary_text": "Last week, more than 1,000 attendees joined NVIDIA AI Day Seoul to learn about sovereign AI \u2014 including breakout sessions on agentic and physical AI, hands-on workshops and a startup reception for members of the NVIDIA Inception program, all offering insights...",
-    "category": "ai",
-    "_trending_tags": [
-      "agent",
-      "ai",
-      "nvidia"
     ]
   },
   {
