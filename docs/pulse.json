@@ -52,21 +52,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/689b894ad6/thumbnail.png"
   },
   {
-    "title": "Ruby Is Not a Serious Programming Language",
-    "url": "https://www.wired.com/story/ruby-is-not-a-serious-programming-language/",
-    "published_at": "2025-12-01T07:00:00-05:00",
-    "source": "Wired",
-    "summary": "Ruby survives on affection, not utility. Let's move on.",
-    "content_html": "",
-    "image_url": "https://media.wired.com/photos/6925f4622a28299e7369f588/master/pass/MR%20012%20'Ruby'%20(1).jpg",
-    "summary_text": "Ruby survives on affection, not utility. Let's move on.",
-    "category": "software",
-    "_permalink": "/p/4e1b722584/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/4e1b722584/",
-    "_summary_240": "Ruby survives on affection, not utility. Let's move on.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/4e1b722584/thumbnail.png"
-  },
-  {
     "title": "What AI Bubble? BNEF Outlook for Data Center Power Use Rises 36%",
     "url": "https://www.bloomberg.com/news/articles/2025-12-01/what-ai-bubble-bnef-outlook-for-data-center-power-use-rises-36",
     "published_at": "2025-12-01T07:00:00-05:00",
@@ -83,6 +68,21 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/215e611134/",
     "_summary_240": "Power demand from US data centers is set to surge to 106 gigawatts by 2035, according to BloombergNEF, a 36% increase from the research provider\u2019s previous outlook in April.",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/215e611134/thumbnail.png"
+  },
+  {
+    "title": "Ruby Is Not a Serious Programming Language",
+    "url": "https://www.wired.com/story/ruby-is-not-a-serious-programming-language/",
+    "published_at": "2025-12-01T07:00:00-05:00",
+    "source": "Wired",
+    "summary": "Ruby survives on affection, not utility. Let's move on.",
+    "content_html": "",
+    "image_url": "https://media.wired.com/photos/6925f4622a28299e7369f588/master/pass/MR%20012%20'Ruby'%20(1).jpg",
+    "summary_text": "Ruby survives on affection, not utility. Let's move on.",
+    "category": "software",
+    "_permalink": "/p/4e1b722584/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/4e1b722584/",
+    "_summary_240": "Ruby survives on affection, not utility. Let's move on.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/4e1b722584/thumbnail.png"
   },
   {
     "title": "Prediction markets bet on Coinbase-linked Hassett as top Fed pick",
@@ -339,6 +339,27 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/19fb0f38b3/",
     "_summary_240": "Low-profile group has quickly emerged as a top developer of image generation technology",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/19fb0f38b3/thumbnail.png"
+  },
+  {
+    "title": "Accenture and OpenAI accelerate enterprise AI success",
+    "url": "https://openai.com/index/accenture-partnership",
+    "published_at": "2025-12-01T00:00:00-05:00",
+    "source": "OpenAI News",
+    "summary": "Accenture is rolling out 40,000 ChatGPT Enterprise licenses and naming OpenAI its primary intelligence partner to power enterprise AI success, upskill teams, and deliver AI-driven client outcomes.",
+    "content_html": "",
+    "image_url": "",
+    "summary_text": "Accenture is rolling out 40,000 ChatGPT Enterprise licenses and naming OpenAI its primary intelligence partner to power enterprise AI success, upskill teams, and deliver AI-driven client outcomes.",
+    "category": "ai",
+    "_trending_tags": [
+      "ai",
+      "chatgpt",
+      "gpt",
+      "openai"
+    ],
+    "_permalink": "/p/6490c614c9/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/6490c614c9/",
+    "_summary_240": "Accenture is rolling out 40,000 ChatGPT Enterprise licenses and naming OpenAI its primary intelligence partner to power enterprise AI success, upskill teams, and deliver...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/6490c614c9/thumbnail.png"
   },
   {
     "title": "The AI skills employers want \u2014 and what business schools teach",
@@ -654,6 +675,25 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/a28d8b7d24/thumbnail.png"
   },
   {
+    "title": "Hybrid cloud security must be rebuilt for an AI war it was never designed to fight",
+    "url": "https://venturebeat.com/security/hybrid-cloud-security-reinvented-ai-era",
+    "published_at": "2025-11-30T11:00:00-05:00",
+    "source": "VentureBeat",
+    "summary": "Hybrid cloud security was built before the current era of automated, machine-based cyberattacks that take just milliseconds to execute and minutes to deliver devastating impacts to infrastructure. The architectures and tech stacks every enterprise depends on, from batch-based detection to siloed tools to 15-minute response windows, stood a better chance of defending against attackers moving at hu...",
+    "content_html": "",
+    "image_url": "https://images.ctfassets.net/jdtwqhzvc2n1/1FJkY0juMySv2GWt60vocX/20fb6a9a39030dafe3d03bdc8d1ff5ca/HERO_IMAGE_FINAL_CLOUD_DETECTION_AND_RESPONSE.jpg?w=800&amp;q=75",
+    "summary_text": "Hybrid cloud security was built before the current era of automated, machine-based cyberattacks that take just milliseconds to execute and minutes to deliver devastating impacts to infrastructure. The architectures and tech stacks every enterprise depends on,...",
+    "category": "software",
+    "_trending_tags": [
+      "ai",
+      "cloud"
+    ],
+    "_permalink": "/p/07d7d2e230/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/07d7d2e230/",
+    "_summary_240": "Hybrid cloud security was built before the current era of automated, machine-based cyberattacks that take just milliseconds to execute and minutes to deliver devastating impacts...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/07d7d2e230/thumbnail.png"
+  },
+  {
     "title": "Strategy will sell Bitcoin as \u2018last resort\u2019 if mNAV drops, capital is unavailable: CEO",
     "url": "https://cointelegraph.com/news/strategy-sell-bitcoin-last-resort-mnav-capital?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
     "published_at": "2025-11-30T05:13:26-05:00",
@@ -819,17 +859,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/5316751978/",
     "_summary_240": "As AI systems enter production, reliability and governance can\u2019t depend on wishful thinking. Here\u2019s how observability turns large language models (LLMs) into auditable,...",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/5316751978/thumbnail.png"
-  },
-  {
-    "title": "Crypto self-custody is a fundamental right, says SEC\u2019s Hester Peirce",
-    "url": "https://cointelegraph.com/news/crypto-self-custody-fundamental-right-sec-hester-peirce?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-    "published_at": "2025-11-29T12:47:56-05:00",
-    "source": "Cointelegraph",
-    "summary": "Self-custody of assets and financial privacy are both fundamental rights consistent with the pro-freedom philosophy on which the US was founded.",
-    "content_html": "",
-    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTEvMDE5YWQwYWUtYTJjMC03OWJlLTk5OGQtYTIwODVjM2VmMmVj.jpg",
-    "summary_text": "Self-custody of assets and financial privacy are both fundamental rights consistent with the pro-freedom philosophy on which the US was founded.",
-    "category": "fintech"
   },
   {
     "title": "LLMs Give Rise To Superhuman Product Managers",
@@ -1144,23 +1173,6 @@
     ]
   },
   {
-    "title": "Claude Agent Skills Explained",
-    "url": "https://www.youtube.com/watch?v=fOxC44g8vig",
-    "published_at": "2025-11-26T17:09:15-05:00",
-    "source": "Anthropic YouTube",
-    "summary": "Agent Skills are organized folders that package expertise that Claude can automatically invoke when relevant to the task at hand. Join the Claude Developer Discord - https://anthropic.com/discord Learn more about Agent Skills - https://www.claude.com/blog/skills 00:06 Introducing Agent Skills 00:30 How Agent Skills work 01:08 Agent Skills vs Claude.md 01:42 Agent Skills vs MCP Servers 02:05 Agent...",
-    "content_html": "",
-    "image_url": "https://i.ytimg.com/vi/fOxC44g8vig/maxresdefault.jpg",
-    "summary_text": "Agent Skills are organized folders that package expertise that Claude can automatically invoke when relevant to the task at hand. Join the Claude Developer Discord - https://anthropic.com/discord Learn more about Agent Skills - https://www.claude.com/blog/ski...",
-    "category": "ai",
-    "_trending_tags": [
-      "agent",
-      "ai",
-      "anthropic",
-      "claude"
-    ]
-  },
-  {
     "title": "Jeff Bezos\u2019 New AI Venture Quietly Acquired an Agentic Computing Startup",
     "url": "https://www.wired.com/story/jeff-bezos-new-ai-company-acquired-agentic-computing-startup/",
     "published_at": "2025-11-26T15:02:13-05:00",
@@ -1247,21 +1259,6 @@
     ]
   },
   {
-    "title": "A weekend \u2018vibe code\u2019 hack by Andrej Karpathy quietly sketches the missing layer of enterprise AI orchestration",
-    "url": "https://venturebeat.com/ai/a-weekend-vibe-code-hack-by-andrej-karpathy-quietly-sketches-the-missing",
-    "published_at": "2025-11-26T09:00:00-05:00",
-    "source": "VentureBeat",
-    "summary": "This weekend, Andrej Karpathy , the former director of AI at Tesla and a founding member of OpenAI, decided he wanted to read a book. But he did not want to read it alone. He wanted to read it accompanied by a committee of artificial intelligences, each offering its own perspective, critiquing the others, and eventually synthesizing a final answer under the guidance of a \"Chairman.\" To make this ...",
-    "content_html": "",
-    "image_url": "https://images.ctfassets.net/jdtwqhzvc2n1/2Ey8QusmYk8nxrgwRnt2il/f17035cb1ab8a293f3de798fba1978a0/nuneybits_A_glowing_computer_screen_on_a_laptop_computer_code_s_c5238c15-75e5-4c2b-9f4b-e530ad71adf0.webp?w=800&amp;q=75",
-    "summary_text": "This weekend, Andrej Karpathy , the former director of AI at Tesla and a founding member of OpenAI, decided he wanted to read a book. But he did not want to read it alone. He wanted to read it accompanied by a committee of artificial intelligences, each offer...",
-    "category": "ai",
-    "_trending_tags": [
-      "ai",
-      "openai"
-    ]
-  },
-  {
     "title": "Micro-degree, macro impact: How AI is transforming skilling in India",
     "url": "https://news.microsoft.com/source/asia/features/micro-degree-macro-impact-how-ai-is-transforming-skilling-in-india/",
     "published_at": "2025-11-26T08:58:08-05:00",
@@ -1273,6 +1270,23 @@
     "category": "ai",
     "_trending_tags": [
       "ai"
+    ]
+  },
+  {
+    "title": "Scania accelerates operations across its global workforce with ChatGPT",
+    "url": "https://www.youtube.com/watch?v=0luMwmnvRuQ",
+    "published_at": "2025-11-20T20:43:32-05:00",
+    "source": "OpenAI YouTube",
+    "summary": "Scania builds the trucks, buses, and transport systems that keep the world moving. With AI in their engineering-led organisation, they're evolving from vehicle maker to sustainable transport ecosystem leader. Read more: https://openai.com/index/scania/",
+    "content_html": "",
+    "image_url": "https://i.ytimg.com/vi/0luMwmnvRuQ/maxresdefault.jpg",
+    "summary_text": "Scania builds the trucks, buses, and transport systems that keep the world moving. With AI in their engineering-led organisation, they're evolving from vehicle maker to sustainable transport ecosystem leader. Read more: https://openai.com/index/scania/",
+    "category": "ai",
+    "_trending_tags": [
+      "ai",
+      "chatgpt",
+      "gpt",
+      "openai"
     ]
   },
   {
