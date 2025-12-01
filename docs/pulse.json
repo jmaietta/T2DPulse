@@ -1,8 +1,76 @@
 [
   {
+    "title": "Runway says its new text-to-video AI generator has \u2018unprecedented\u2019 accuracy",
+    "url": "https://www.theverge.com/news/834905/runway-ai-text-video-generator-launch",
+    "published_at": "2025-12-01T11:22:08-05:00",
+    "source": "The Verge",
+    "summary": "Runway claims its latest text-to-video model generates even more accurate visuals than its last. In a blog post on Monday, Runway says its Gen-4.5 model can produce \u201ccinematic and highly realistic outputs,\u201d potentially making it even more difficult to distinguish between what\u2019s real and what\u2019s AI. \u201cGen-4.5 achieves unprecedented physical accuracy and visual precision,\u201d Runway\u2019s [\u2026]",
+    "content_html": "<figure>\n\n<img alt=\"\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/12/runway-ai-snowman.png?quality=90&#038;strip=all&#038;crop=0,0,98.61149893869,100\" />\n\t<figcaption>\n\tAn AI-generated clip produced with Runway Gen-4.5 shows a snowman dissolving in a city street.\t</figcaption>\n</figure>\n<p class=\"has-text-align-none\">Runway claims its latest text-to-video model generates even more accurate visuals than its last. In <a href=\"https://runwayml.com/research/introducing-runway-gen-4.5\">a blog post on Monday</a>, Runway says its Gen-4.5 model can produce \u201ccinematic and highly realistic outputs,\u201d potentially making it even more difficult to distinguish between what\u2019s real and what\u2019s AI.</p>\n\n<p class=\"has-text-align-none\">\u201cGen-4.5 achieves unprecedented physical accuracy and visual precision,\u201d Runway\u2019s announcement says. It adds that the new AI model is better at adhering to prompts, allowing it to produce detailed scenes without compromising video quality. Runway says that AI-generated objects \u201cmove with realistic weight, momentum and force,\u201d while liquids \u201cflow with proper dynamics.\u201d</p>\n<div class=\"youtube-embed\"></div>\n<p class=\"has-text-align-none\">The Gen-4.5 model is rolling out to all users gradually and will offer the same speed and efficiency as its predecessor, according to Runway. There are still some limitations, though, as the model may experience issues with object permanence and causal reasoning, meaning effects may happen before the cause, such as a door opening before someone uses a handle.</p>\n\n<p class=\"has-text-align-none\">Along with Runway, OpenAI is ramping up efforts to make its AI-generated videos look more lifelike. OpenAI highlighted upgrades to physics with the release of its Sora 2 text-to-video model in September, <a href=\"https://www.theverge.com/ai-artificial-intelligence/789126/openai-made-a-tiktok-for-deepfakes-and-its-getting-hard-to-tell-whats-real\">with Sora head Bill Peebles saying</a>, \u201cYou can accurately do backflips on top of a paddleboard on a body of water, and all of the fluid dynamics and buoyancy are accurately modeled.\u201d</p>\n\n<p class=\"has-text-align-none\">Runway says its Gen-4.5 model is better at handling different visual styles, too, allowing it to produce more consistent photorealistic, stylized, and cinematic visuals. The startup claims that photorealistic visuals created with Gen-4.5 can be \u201cindistinguishable from real-world footage with lifelike detail and accuracy.\u201d</p>",
+    "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/12/runway-ai-snowman.png?quality=90&#038;strip=all&#038;crop=0,0,98.61149893869,100",
+    "summary_text": "Runway claims its latest text-to-video model generates even more accurate visuals than its last. In a blog post on Monday, Runway says its Gen-4.5 model can produce \u201ccinematic and highly realistic outputs,\u201d potentially making it even more difficult to disting...",
+    "category": "ai",
+    "_trending_tags": [
+      "ai"
+    ],
+    "_permalink": "/p/56277b8a76/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/56277b8a76/",
+    "_summary_240": "Runway claims its latest text-to-video model generates even more accurate visuals than its last. In a blog post on Monday, Runway says its Gen-4.5 model can produce \u201ccinematic...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/56277b8a76/thumbnail.png"
+  },
+  {
+    "title": "Google and AWS Team to Create Multicloud Networking Solution",
+    "url": "https://www.pymnts.com/partnerships/2025/google-and-aws-team-to-create-multicloud-networking-solution/",
+    "published_at": "2025-12-01T11:10:56-05:00",
+    "source": "PYMNTS",
+    "summary": "Amazon and Google have teamed to help cloud service providers connect with each other. The tech giants\u2019 cloud units on Monday (Dec. 1) announced a new, jointly engineered multicloud networking solution that uses Amazon Web Services (AWS) Interconnect \u2013 multicloud and Google Cloud\u2019s Cross-Cloud Interconnect. According to the announcement, the partnership also introduces an open specification for n...",
+    "content_html": "<p style=\"font-weight: 400;\"><a href=\"https://www.amazon.com/\" rel=\"noopener\" target=\"_blank\">Amazon</a>\u00a0and\u00a0<a href=\"https://www.google.com/\" rel=\"noopener\" target=\"_blank\">Google</a>\u00a0have teamed to help cloud service providers connect with each other.</p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p style=\"font-weight: 400;\">The tech giants\u2019 cloud units on Monday (Dec. 1)\u00a0<a href=\"https://cloud.google.com/blog/products/networking/aws-and-google-cloud-collaborate-on-multicloud-networking\" rel=\"noopener\" target=\"_blank\">announced</a>\u00a0a new, jointly engineered multicloud networking solution that uses\u00a0<a href=\"https://aws.amazon.com/\" rel=\"noopener\" target=\"_blank\">Amazon Web Services</a>\u00a0(AWS) Interconnect &#8211; multicloud and\u00a0Google Cloud\u2019s\u00a0Cross-Cloud Interconnect.</p>\n<p style=\"font-weight: 400;\">According to the announcement, the partnership also introduces an open specification for network interoperability, giving customers private, high-speed connectivity between Google Cloud and AWS with \u201chigh levels\u201d of automation and speed.</p>\n<p style=\"font-weight: 400;\">\u201cAs organizations increasingly adopt multicloud architectures, the need for interoperability between cloud service providers has never been greater,\u201d the announcement said. \u201cHistorically, however, connecting these environments has been a challenge, forcing customers to take a complex \u2018do-it-yourself\u2019 approach to managing global multi-layered networks at scale.\u201d</p>\n<p style=\"font-weight: 400;\">The companies said that prior to this, connecting cloud service providers meant manually establishing complicated networking components, a process that could take weeks or even months. AWS, the announcement added, had a \u201cvision\u201d for creating this capability as a unified specification available to any cloud service provider and worked with Google to make it a reality.</p>\n<p style=\"font-weight: 400;\">\u201cNow, this new solution reimagines multicloud connectivity by moving away from physical infrastructure management toward a managed, cloud-native experience,\u201d the companies said.</p>\n<p style=\"font-weight: 400;\">\u201cBy integrating AWS with Google Cloud\u2019s Cross-Cloud Network architecture, we are abstracting the complexity of physical connectivity, network addressing, and routing policies. Customers no longer need to wait weeks for circuit provisioning: they can now provision dedicated bandwidth on demand and establish connectivity in minutes through their preferred cloud console or API.\u201d</p>\n<p style=\"font-weight: 400;\">PYMNTS wrote last month about the rigors of\u00a0<a href=\"https://www.pymnts.com/news/cross-border-commerce/cross-border-payments/2025/aws-the-real-story-of-payments-cloud-modernization-starts-after-the-move/\" rel=\"noopener\" target=\"_blank\">cloud migration for payments companies</a>, noting that it was the \u201cstarting line\u201d rather than the end game.</p>\n<p style=\"font-weight: 400;\">When global business payments giant\u202f<a href=\"https://convera.com/\" rel=\"noopener\" target=\"_blank\">Convera</a>\u202fbegan new life as an\u00a0<a href=\"https://www.pymnts.com/economy/2025/in-the-year-of-the-ceo-convera-bets-on-data-and-discipline/\" rel=\"noopener\" target=\"_blank\">independent company</a>, it faced an obstacle familiar to many legacy enterprises. The company\u2019s networks cover more than\u202f200 countries and territories, and upwards of 140 currencies, but its infrastructure was still tied to on-premises systems designed for a slower age of finance.</p>\n<p style=\"font-weight: 400;\">\u201cIt was an incredible 10 months to move everything from\u00a0<a href=\"https://www.pymnts.com/study_posts/building-the-future-of-payments-in-the-cloud/\" rel=\"noopener\" target=\"_blank\">on-prem to the cloud</a>. But the real story starts after that \u2014 that\u2019s when you start unlocking all the benefits,\u201d\u00a0<a href=\"https://www.linkedin.com/in/sudiptodas\" rel=\"noopener\" target=\"_blank\">Sudipto Das</a>, vice president of engineering at Convera, told PYMNTS as part of a discussion with\u00a0<a href=\"https://www.linkedin.com/in/vishal-arora-baa7b1\" rel=\"noopener\" target=\"_blank\">Vishal Arora</a>, head of generative AI and ML for payments at\u202fAWS.</p>\n<p style=\"font-weight: 400;\">What started out as a \u201clift and shift\u201d migration turned into an innovation engine, ultimately transforming the way data, compliance and intelligence interact across geographies.</p>\n<p style=\"font-weight: 400;\">\u201cMoving from\u00a0<a href=\"https://www.pymnts.com/tracker/b2b-cross-border-payments-digitization-international-smbs/\" rel=\"noopener\" target=\"_blank\">cross-border B2B payments</a>\u00a0infrastructure to AWS does help a lot of our customers with immediate modernization gains that address some of those core challenges faced by traditional payment systems,\u201d Arora said.</p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/partnerships/2025/google-and-aws-team-to-create-multicloud-networking-solution/\">Google and AWS Team to Create Multicloud Networking Solution</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
+    "image_url": "https://www.pymnts.com/wp-content/uploads/2022/01/Google-Cloud.jpg?w=457",
+    "summary_text": "Amazon and Google have teamed to help cloud service providers connect with each other. The tech giants\u2019 cloud units on Monday (Dec. 1) announced a new, jointly engineered multicloud networking solution that uses Amazon Web Services (AWS) Interconnect \u2013 multic...",
+    "category": "fintech",
+    "_trending_tags": [
+      "amazon",
+      "cloud",
+      "google"
+    ],
+    "_permalink": "/p/ca0610463a/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/ca0610463a/",
+    "_summary_240": "Amazon and Google have teamed to help cloud service providers connect with each other. The tech giants\u2019 cloud units on Monday (Dec. 1) announced a new, jointly engineered...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/ca0610463a/thumbnail.png"
+  },
+  {
+    "title": "Bitcoin miners enter \u2018harshest margin environment of all time\u2019",
+    "url": "https://cointelegraph.com/news/bitcoin-miners-enter-harshest-margin-environment-of-all-time?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "published_at": "2025-12-01T11:08:07-05:00",
+    "source": "Cointelegraph",
+    "summary": "Mining revenue hits structural lows as hashprice sinks, costs rise and payback periods stretch past 1,000 days, squeezing even the largest operators.",
+    "content_html": "",
+    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTIvMDE5YWRhNzktYzBhYi03NDg5LTlkZDgtOTA4MTU2N2JhYmQy.jpg",
+    "summary_text": "Mining revenue hits structural lows as hashprice sinks, costs rise and payback periods stretch past 1,000 days, squeezing even the largest operators.",
+    "category": "fintech",
+    "_permalink": "/p/80c9b461ca/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/80c9b461ca/",
+    "_summary_240": "Mining revenue hits structural lows as hashprice sinks, costs rise and payback periods stretch past 1,000 days, squeezing even the largest operators.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/80c9b461ca/thumbnail.png"
+  },
+  {
+    "title": "Why Vitalik believes quantum computing could break Ethereum\u2019s cryptography sooner than expected",
+    "url": "https://cointelegraph.com/news/why-vitalik-believes-quantum-computing-could-break-ethereum-s-cryptography-sooner-than-expected?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "published_at": "2025-12-01T11:04:04-05:00",
+    "source": "Cointelegraph",
+    "summary": "Buterin warns that quantum computers could threaten Ethereum\u2019s cryptography sooner than expected and outlines how the network can prepare safely.",
+    "content_html": "",
+    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTIvMDE5YWRhOWQtYzZkOS03YTc2LTg0MmYtMjlkMDM3NWY4YjA3.jpg",
+    "summary_text": "Buterin warns that quantum computers could threaten Ethereum\u2019s cryptography sooner than expected and outlines how the network can prepare safely.",
+    "category": "fintech",
+    "_permalink": "/p/60898769a0/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/60898769a0/",
+    "_summary_240": "Buterin warns that quantum computers could threaten Ethereum\u2019s cryptography sooner than expected and outlines how the network can prepare safely.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/60898769a0/thumbnail.png"
+  },
+  {
     "title": "College Students Choosing A.I. Majors Over Computer Science",
     "url": "https://www.nytimes.com/2025/12/01/technology/college-computer-science-ai-boom.html",
-    "published_at": "2025-12-01T10:25:58-05:00",
+    "published_at": "2025-12-01T11:00:35-05:00",
     "source": "The New York Times - Technology",
     "summary": "At M.I.T., a new program called \u201cartificial intelligence and decision-making\u201d is now the second-most-popular undergraduate major.",
     "content_html": "",
@@ -12,10 +80,46 @@
     "_trending_tags": [
       "ai"
     ],
-    "_permalink": "/p/758498cb21/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/758498cb21/",
+    "_permalink": "/p/c61b34c899/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/c61b34c899/",
     "_summary_240": "At M.I.T., a new program called \u201cartificial intelligence and decision-making\u201d is now the second-most-popular undergraduate major.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/758498cb21/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/c61b34c899/thumbnail.png"
+  },
+  {
+    "title": "How AI PR startup Clipbook won Mark Cuban\u2019s investment from a cold email",
+    "url": "https://techcrunch.com/2025/12/01/how-ai-pr-startup-clipbook-won-mark-cubans-investment-from-a-cold-email/",
+    "published_at": "2025-12-01T11:00:00-05:00",
+    "source": "TechCrunch",
+    "summary": "Adam Joseph was shocked when Mark Cuban replied to his email with an inquisition full of questions.",
+    "content_html": "",
+    "image_url": "https://techcrunch.com/wp-content/uploads/2025/11/Adam-Joseph-Clipbook.jpg?resize=1200,800",
+    "summary_text": "Adam Joseph was shocked when Mark Cuban replied to his email with an inquisition full of questions.",
+    "category": "ai",
+    "_trending_tags": [
+      "ai"
+    ],
+    "_permalink": "/p/926c1fd9fb/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/926c1fd9fb/",
+    "_summary_240": "Adam Joseph was shocked when Mark Cuban replied to his email with an inquisition full of questions.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/926c1fd9fb/thumbnail.png"
+  },
+  {
+    "title": "Prophecy Fraud Case May Involve Classified Information, US Says",
+    "url": "https://www.bloomberg.com/news/articles/2025-12-01/prophecy-fraud-case-may-involve-classified-information-us-says",
+    "published_at": "2025-12-01T10:27:33-05:00",
+    "source": "Bloomberg Technology",
+    "summary": "The fraud case against Prophecy Asset Management co-owner Jeffrey Spotts over $300 million in investor losses may involve classified information, US prosecutors said while seeking a delay of at least two months in a trial set for January.",
+    "content_html": "The Clarkson S. Fisher Federal Building in Trenton. Photographer: Carol M. Highsmith/Buyenlarge/Getty Images",
+    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iBNbIU9Caz_I/v0/1200x-1.jpg",
+    "summary_text": "The fraud case against Prophecy Asset Management co-owner Jeffrey Spotts over $300 million in investor losses may involve classified information, US prosecutors said while seeking a delay of at least two months in a trial set for January.",
+    "category": "fintech",
+    "_trending_tags": [
+      "ai"
+    ],
+    "_permalink": "/p/82ae2ddb6b/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/82ae2ddb6b/",
+    "_summary_240": "The fraud case against Prophecy Asset Management co-owner Jeffrey Spotts over $300 million in investor losses may involve classified information, US prosecutors said while...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/82ae2ddb6b/thumbnail.png"
   },
   {
     "title": "DeepSeek Debuts New AI Models to Rival Google and OpenAI",
@@ -230,24 +334,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/5b810c1035/thumbnail.png"
   },
   {
-    "title": "Welcome to fandom\u2019s AI clout economy",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/830876/influencers-anti-ai-deepfakes-fandom-economy",
-    "published_at": "2025-12-01T07:00:00-05:00",
-    "source": "The Verge",
-    "summary": "Madison Lawrence Tabbey was scrolling through X in late October when a post from a Wicked update account caught her attention. Ariana Grande, who stars in the movies as Glinda, had just liked a meme on Instagram about never wanting to see another AI-generated image again. Grande had also purportedly blocked a fan account that [\u2026]",
-    "content_html": "<figure>\n\n<img alt=\"An image of Ariana Grande copy and pasted over and over, with mouse cursors over her face.\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/11/258093_AI_video_is_coming_for_influencers_and_nobody_knows_what_to_do_CVirginia.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100\" />\n\t<figcaption>\n\t\t</figcaption>\n</figure>\n<p class=\"has-drop-cap has-text-align-none\">Madison Lawrence Tabbey was scrolling through X in late October when <a href=\"https://x.com/GalindaHQ/status/1981211983879033073\">a post</a> from a <em>Wicked </em>update account caught her attention. Ariana Grande, who stars in the movies as Glinda, had just liked <a href=\"https://www.instagram.com/p/DQCx5vjCR3x/\">a meme</a> on Instagram about never wanting to see another AI-generated image again. Grande had also <a href=\"https://x.com/ve_nus6/status/1848538777750229040\">purportedly blocked</a> a fan account that had made <a href=\"https://x.com/rollymollykd/status/1981364449949995416\">AI edits</a> of her. </p>\n<p class=\"has-text-align-none\">As Tabbey read through the mostly sympathetic replies, a very different message caught her eye. It was from a fellow Grande fan whose profile was mostly AI edits, showing Grande with different hairstyles and outfits. And, their reply said, they weren't going to stop. Tabbey, a 33-year-old liv \u2026</p>\n<p><a href=\"https://www.theverge.com/ai-artificial-intelligence/830876/influencers-anti-ai-deepfakes-fandom-economy\">Read the full story at The Verge.</a></p>",
-    "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/11/258093_AI_video_is_coming_for_influencers_and_nobody_knows_what_to_do_CVirginia.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "summary_text": "Madison Lawrence Tabbey was scrolling through X in late October when a post from a Wicked update account caught her attention. Ariana Grande, who stars in the movies as Glinda, had just liked a meme on Instagram about never wanting to see another AI-generated...",
-    "category": "ai",
-    "_trending_tags": [
-      "ai"
-    ],
-    "_permalink": "/p/689b894ad6/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/689b894ad6/",
-    "_summary_240": "Madison Lawrence Tabbey was scrolling through X in late October when a post from a Wicked update account caught her attention. Ariana Grande, who stars in the movies as Glinda,...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/689b894ad6/thumbnail.png"
-  },
-  {
     "title": "What AI Bubble? BNEF Outlook for Data Center Power Use Rises 36%",
     "url": "https://www.bloomberg.com/news/articles/2025-12-01/what-ai-bubble-bnef-outlook-for-data-center-power-use-rises-36",
     "published_at": "2025-12-01T07:00:00-05:00",
@@ -417,24 +503,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/aa4bb0336f/thumbnail.png"
   },
   {
-    "title": "62% of Gen Z Turn to AI for Financial Planning Guidance",
-    "url": "https://www.pymnts.com/credit-unions/2025/62percent-of-gen-z-turn-to-ai-for-financial-planning-guidance/",
-    "published_at": "2025-12-01T04:00:16-05:00",
-    "source": "PYMNTS",
-    "summary": "Credit unions trying to attract younger members now face a generation that expects personalized digital tools and is willing to walk away when it does not get them. The \u201cDigital-First Retention Playbook: Winning Gen Z Loyalty at Credit Unions\u201d report lays out a portrait of a cohort that sees itself as navigating a tougher [\u2026] The post 62% of Gen Z Turn to AI for Financial Planning Guidance appear...",
-    "content_html": "<p style=\"font-weight: 400;\">Credit unions trying to attract younger members now face a generation that expects personalized digital tools and is willing to walk away when it does not get them.</p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p style=\"font-weight: 400;\">The \u201c<a href=\"https://www.pymnts.com/tracker_posts/digital-first-retention-playbook-winning-gen-z-loyalty-at-credit-unions/\" rel=\"noopener\" target=\"_blank\">Digital-First Retention Playbook: Winning Gen Z Loyalty at Credit Unions</a>\u201d report lays out a portrait of a cohort that sees itself as navigating a tougher financial landscape than older groups while demanding fast, relevant and tech-forward service from its financial institutions.</p>\n<p style=\"font-weight: 400;\">The report, produced by PYMNTS Intelligence in collaboration with <a href=\"https://www.velera.com/\" rel=\"noopener\" target=\"_blank\">Velera</a>, finds that Gen Z\u2019s expectations are rising at the same time that their willingness to switch providers is accelerating. This is the tension confronting credit unions. It is real.</p>\n<p><img alt=\"\" class=\"alignright wp-image-3263791\" height=\"233\" src=\"https://www.pymnts.com/wp-content/uploads/2025/11/Gen-Z-AI.png\" width=\"350\" /></p>\n<p>&nbsp;</p>\n<p style=\"font-weight: 400;\">According to the report, Gen Z members are digital-first consumers who still move comfortably between online and in-person channels. They want personalization, real-time guidance and tools that match their habits and values. They also want financial partners who communicate in ways that feel authentic to them.</p>\n<p style=\"font-weight: 400;\">Those preferences are forming earlier than they did for previous generations, and they are forming fast. That creates both peril and opportunity for credit unions seeking long-term relationships.</p>\n<ul>\n<li>Gen Z members are more than twice as likely to consider leaving their credit unions, at 36%, compared with 14% for consumers overall.</li>\n<li>Seventy-two percent of Gen Z respondents say they face financial hurdles that older generations do not, reinforcing their desire for self-directed, tech-powered tools.</li>\n<li>Sixty-two percent of Gen Z consumers are open to using AI for \u201cwhat if\u201d financial planning, a signal that generative AI is shaping their expectations for real-time advice.</li>\n</ul>\n<p style=\"font-weight: 400;\">The study also finds Gen Z\u2019s financial behavior is shaped by a search for control amid uncertainty. Many turn to family members and financial institutions for advice, but nearly 1 in 3 say they trust digital creators on TikTok, YouTube and Instagram for guidance.</p>\n<p style=\"font-weight: 400;\">That split highlights a challenge for traditional institutions. It also shows how open this generation is to assembling financial strategies from multiple providers without hesitation. Loyalty is not a given. It must be earned.</p>\n<p style=\"font-weight: 400;\">Another finding describes Gen Z\u2019s view of authenticity. While two-thirds prefer online tools for bill payment and card management, nearly half say they want in-person support when seeking financial advice.</p>\n<p style=\"font-weight: 400;\">That mix requires a consistent experience across channels. It requires speed, and it requires relevance. Credit unions score well among Gen Z on understanding their needs and being technologically advanced, outperforming the marks given by non-Gen Z consumers.</p>\n<p style=\"font-weight: 400;\">The report emphasizes the rise of AI as both a standard and an expectation. Gen Z members view AI as an everyday utility, not an experimental tool. They expect financial institutions to anticipate needs, offer personalized insights and deliver information quickly. If credit unions fall behind, the comparison will be immediate. Young consumers will not wait.</p>\n<p style=\"font-weight: 400;\">The findings extend beyond digital engagement, addressing trust, identity and the degree to which Gen Z wants financial partners to speak its language across social media, podcasts and mobile platforms. They also point to areas where credit unions retain an edge, including strong member service and a reputation for understanding their communities.</p>\n<p style=\"font-weight: 400;\">The report closes with a warning and an opportunity. Gen Z is poised to become the largest and wealthiest generation in history. Their expectations will redefine financial services. Credit unions that meet them where they are and speak in ways that resonate can move from vulnerability to advantage. The window is open.</p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/credit-unions/2025/62percent-of-gen-z-turn-to-ai-for-financial-planning-guidance/\">62% of Gen Z Turn to AI for Financial Planning Guidance</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
-    "image_url": "https://www.pymnts.com/wp-content/uploads/2025/11/Gen-Z-credit-unions.png?w=457",
-    "summary_text": "Credit unions trying to attract younger members now face a generation that expects personalized digital tools and is willing to walk away when it does not get them. The \u201cDigital-First Retention Playbook: Winning Gen Z Loyalty at Credit Unions\u201d report lays out...",
-    "category": "ai",
-    "_trending_tags": [
-      "ai"
-    ],
-    "_permalink": "/p/feb5dc4efe/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/feb5dc4efe/",
-    "_summary_240": "Credit unions trying to attract younger members now face a generation that expects personalized digital tools and is willing to walk away when it does not get them. The...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/feb5dc4efe/thumbnail.png"
-  },
-  {
     "title": "Why China\u2019s Bitcoin mining activity is surging again after a 4-year crackdown",
     "url": "https://cointelegraph.com/explained/why-china-s-bitcoin-mining-activity-is-surging-again-after-a-4-year-crackdown?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
     "published_at": "2025-12-01T02:31:49-05:00",
@@ -554,6 +622,25 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/19fb0f38b3/thumbnail.png"
   },
   {
+    "title": "Agent coordination is the missing piece in AI commerce \u2014 new AWS and Visa blueprints target the gap",
+    "url": "https://venturebeat.com/ai/agent-coordination-is-the-missing-piece-in-ai-commerce-new-aws-and-visa",
+    "published_at": "2025-12-01T00:00:00-05:00",
+    "source": "VentureBeat",
+    "summary": "With some needed infrastructure now being developed for agentic commerce, enterprises will want to figure out how to participate in this new form of buying and selling. But it remains a fragmented Wild West with competing payment protocols, and it's unclear what enterprises need to do to prepare. More cloud providers and AI model companies will start providing enterprises with the tools needed to...",
+    "content_html": "",
+    "image_url": "https://images.ctfassets.net/jdtwqhzvc2n1/4Lv5iyTanLLH1Vy8WuC9Wp/8f962a277a3987de13437ea75064a3b8/crimedy7_illustration_of_robots_shopping_--ar_169_--v_7_d85ed49f-a613-469d-9f88-1e1bd75b4808_3.png?w=800&amp;q=75",
+    "summary_text": "With some needed infrastructure now being developed for agentic commerce, enterprises will want to figure out how to participate in this new form of buying and selling. But it remains a fragmented Wild West with competing payment protocols, and it's unclear w...",
+    "category": "ai",
+    "_trending_tags": [
+      "agent",
+      "ai"
+    ],
+    "_permalink": "/p/f0999a560c/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/f0999a560c/",
+    "_summary_240": "With some needed infrastructure now being developed for agentic commerce, enterprises will want to figure out how to participate in this new form of buying and selling. But it...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/f0999a560c/thumbnail.png"
+  },
+  {
     "title": "OpenAI takes an ownership stake in Thrive Holdings to accelerate enterprise AI adoption",
     "url": "https://openai.com/index/thrive-holdings",
     "published_at": "2025-12-01T00:00:00-05:00",
@@ -573,36 +660,16 @@
     "url": "https://openai.com/index/accenture-partnership",
     "published_at": "2025-12-01T00:00:00-05:00",
     "source": "OpenAI News",
-    "summary": "Accenture is rolling out 40,000 ChatGPT Enterprise licenses and naming OpenAI its primary intelligence partner to power enterprise AI success, upskill teams, and deliver AI-driven client outcomes.",
+    "summary": "Accenture and OpenAI are collaborating to help enterprises bring agentic AI capabilities into the core of their business and unlock new levels of growth.",
     "content_html": "",
     "image_url": "",
-    "summary_text": "Accenture is rolling out 40,000 ChatGPT Enterprise licenses and naming OpenAI its primary intelligence partner to power enterprise AI success, upskill teams, and deliver AI-driven client outcomes.",
-    "category": "ai",
-    "_trending_tags": [
-      "ai",
-      "chatgpt",
-      "gpt",
-      "openai"
-    ]
-  },
-  {
-    "title": "Agent coordination is the missing piece in AI commerce \u2014 new AWS and Visa blueprints target the gap",
-    "url": "https://venturebeat.com/ai/agent-coordination-is-the-missing-piece-in-ai-commerce-new-aws-and-visa",
-    "published_at": "2025-12-01T00:00:00-05:00",
-    "source": "VentureBeat",
-    "summary": "With some needed infrastructure now being developed for agentic commerce, enterprises will want to figure out how to participate in this new form of buying and selling. But it remains a fragmented Wild West with competing payment protocols, and it's unclear what enterprises need to do to prepare. More cloud providers and AI model companies will start providing enterprises with the tools needed to...",
-    "content_html": "",
-    "image_url": "https://images.ctfassets.net/jdtwqhzvc2n1/4Lv5iyTanLLH1Vy8WuC9Wp/8f962a277a3987de13437ea75064a3b8/crimedy7_illustration_of_robots_shopping_--ar_169_--v_7_d85ed49f-a613-469d-9f88-1e1bd75b4808_3.png?w=800&amp;q=75",
-    "summary_text": "With some needed infrastructure now being developed for agentic commerce, enterprises will want to figure out how to participate in this new form of buying and selling. But it remains a fragmented Wild West with competing payment protocols, and it's unclear w...",
+    "summary_text": "Accenture and OpenAI are collaborating to help enterprises bring agentic AI capabilities into the core of their business and unlock new levels of growth.",
     "category": "ai",
     "_trending_tags": [
       "agent",
-      "ai"
-    ],
-    "_permalink": "/p/f0999a560c/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/f0999a560c/",
-    "_summary_240": "With some needed infrastructure now being developed for agentic commerce, enterprises will want to figure out how to participate in this new form of buying and selling. But it...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/f0999a560c/thumbnail.png"
+      "ai",
+      "openai"
+    ]
   },
   {
     "title": "The AI skills employers want \u2014 and what business schools teach",
@@ -881,24 +948,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/07d7d2e230/thumbnail.png"
   },
   {
-    "title": "Strategy will sell Bitcoin as \u2018last resort\u2019 if mNAV drops, capital is unavailable: CEO",
-    "url": "https://cointelegraph.com/news/strategy-sell-bitcoin-last-resort-mnav-capital?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-    "published_at": "2025-11-30T05:13:26-05:00",
-    "source": "Cointelegraph",
-    "summary": "Strategy CEO Phong Le said Bitcoin would only be sold if the company\u2019s stock fell below net asset value and funding options disappear, calling it a financial decision.",
-    "content_html": "",
-    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTEvMDE5YWQ0NGMtZWY5Zi03ZTJlLTlhY2EtOTM3YmJlOGVlZjRh.jpg",
-    "summary_text": "Strategy CEO Phong Le said Bitcoin would only be sold if the company\u2019s stock fell below net asset value and funding options disappear, calling it a financial decision.",
-    "category": "fintech",
-    "_trending_tags": [
-      "ai"
-    ],
-    "_permalink": "/p/a3634a266f/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/a3634a266f/",
-    "_summary_240": "Strategy CEO Phong Le said Bitcoin would only be sold if the company\u2019s stock fell below net asset value and funding options disappear, calling it a financial decision.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/a3634a266f/thumbnail.png"
-  },
-  {
     "title": "Airlines in India Complete A320 Software Upgrades: Regulator",
     "url": "https://www.bloomberg.com/news/articles/2025-11-30/airlines-in-india-complete-a320-software-upgrades-regulator",
     "published_at": "2025-11-30T01:10:40-05:00",
@@ -1155,11 +1204,7 @@
     "_trending_tags": [
       "agent",
       "ai"
-    ],
-    "_permalink": "/p/21eb6a7416/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/21eb6a7416/",
-    "_summary_240": "Hello, dear readers. Happy belated Thanksgiving and Black Friday! This year has felt like living inside a permanent DevDay. Every week, some lab drops a new model, a new agent...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/21eb6a7416/thumbnail.png"
+    ]
   },
   {
     "title": "How OpenAI and Google see AI changing go-to-market strategies",
@@ -1175,11 +1220,7 @@
       "ai",
       "google",
       "openai"
-    ],
-    "_permalink": "/p/4ce17a2f58/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/4ce17a2f58/",
-    "_summary_240": "AI is changing how investors and startups bring their products to market. Three experts offered their insights at TechCrunch Disrupt.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/4ce17a2f58/thumbnail.png"
+    ]
   },
   {
     "title": "The race to regulate AI has sparked a federal vs state showdown",
@@ -1266,7 +1307,7 @@
     "source": "Financial Times - Technology",
     "summary": "Venture capital dealmaking on Sand Hill Road is still frenzied despite falls in tech sector shares",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/f91c6768-7a07-41f1-baf1-cd538d34b87d.jpg",
+    "image_url": "",
     "summary_text": "Venture capital dealmaking on Sand Hill Road is still frenzied despite falls in tech sector shares",
     "category": "ai",
     "_trending_tags": [
@@ -1280,7 +1321,7 @@
     "source": "Financial Times - Technology",
     "summary": "The automation of attacker-defender dynamics is a long-standing fear among cyber defence specialists",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/9e0dfd9e-a7f1-4dcf-9c07-673413c15c11.jpg",
+    "image_url": "",
     "summary_text": "The automation of attacker-defender dynamics is a long-standing fear among cyber defence specialists",
     "category": "ai",
     "_trending_tags": [
@@ -1295,7 +1336,7 @@
     "source": "Financial Times - Technology",
     "summary": "Seeing limited potential in its niche dubbing product, Synthesia built an AI tool to appeal across industries",
     "content_html": "",
-    "image_url": "https://images.ft.com/v3/image/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F7dc064d2-590c-4f86-a827-2d54e82f0e22.jpg?source=next-article&fit=scale-down&quality=highest&width=700&dpr=1",
+    "image_url": "",
     "summary_text": "Seeing limited potential in its niche dubbing product, Synthesia built an AI tool to appeal across industries",
     "category": "ai",
     "_trending_tags": [
@@ -1363,20 +1404,6 @@
       "agent",
       "ai",
       "nvidia"
-    ]
-  },
-  {
-    "title": "Fears About A.I. Prompt Talks of Super PACs to Rein In the Industry",
-    "url": "https://www.nytimes.com/2025/11/25/us/politics/ai-super-pac-anthropic.html",
-    "published_at": "2025-11-26T11:30:41-05:00",
-    "source": "The New York Times - Technology",
-    "summary": "As artificial intelligence companies prepare to pour money into the midterm elections, some in the A.I. world are hatching plans of their own to curb the industry\u2019s influence.",
-    "content_html": "Jack Clark, a co-founder of Anthropic, an A.I. company that favors more guardrails for the technology. Some of the company\u2019s employees have discussed how to become more involved in political advocacy.",
-    "image_url": "https://static01.nyt.com/images/2025/11/25/us/politics/25pol-ai-super-pac/25pol-ai-super-pac-mediumSquareAt3X.jpg",
-    "summary_text": "As artificial intelligence companies prepare to pour money into the midterm elections, some in the A.I. world are hatching plans of their own to curb the industry\u2019s influence.",
-    "category": "ai",
-    "_trending_tags": [
-      "ai"
     ]
   },
   {
