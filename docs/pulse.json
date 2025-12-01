@@ -1,5 +1,20 @@
 [
   {
+    "title": "CME rekindles ETH \u2018super-cycle\u2019 debate as Ether futures volume tops Bitcoin",
+    "url": "https://cointelegraph.com/news/cme-eth-supercycle-futures-volume-exceeds-bitcoin?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "published_at": "2025-12-01T14:34:00-05:00",
+    "source": "Cointelegraph",
+    "summary": "Ether futures overtake Bitcoin on CME as ETH volatility spikes, fueling debate over a potential Ether super-cycle amid a broader crypto market pullback.",
+    "content_html": "",
+    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTIvMDE5YWRiNDYtN2U2NC03MGVmLTkxMzAtNjk1M2M1Y2FiNDMw.jpg",
+    "summary_text": "Ether futures overtake Bitcoin on CME as ETH volatility spikes, fueling debate over a potential Ether super-cycle amid a broader crypto market pullback.",
+    "category": "fintech",
+    "_permalink": "/p/e1ed332885/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/e1ed332885/",
+    "_summary_240": "Ether futures overtake Bitcoin on CME as ETH volatility spikes, fueling debate over a potential Ether super-cycle amid a broader crypto market pullback.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/e1ed332885/thumbnail.png"
+  },
+  {
     "title": "Construction workers are cashing in on the AI boom",
     "url": "https://techcrunch.com/2025/12/01/construction-workers-are-cashing-in-on-the-ai-boom/",
     "published_at": "2025-12-01T14:13:50-05:00",
@@ -212,24 +227,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/827b32d37a/thumbnail.png"
   },
   {
-    "title": "Runway says its new text-to-video AI generator has \u2018unprecedented\u2019 accuracy",
-    "url": "https://www.theverge.com/news/834905/runway-ai-text-video-generator-launch",
-    "published_at": "2025-12-01T11:22:08-05:00",
-    "source": "The Verge",
-    "summary": "Runway claims its latest text-to-video model generates even more accurate visuals than its last. In a blog post on Monday, Runway says its Gen-4.5 model can produce \u201ccinematic and highly realistic outputs,\u201d potentially making it even more difficult to distinguish between what\u2019s real and what\u2019s AI. \u201cGen-4.5 achieves unprecedented physical accuracy and visual precision,\u201d Runway\u2019s [\u2026]",
-    "content_html": "<figure>\n\n<img alt=\"\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/12/runway-ai-snowman.png?quality=90&#038;strip=all&#038;crop=0,0,98.61149893869,100\" />\n\t<figcaption>\n\tAn AI-generated clip produced with Runway Gen-4.5 shows a snowman dissolving in a city street.\t</figcaption>\n</figure>\n<p class=\"has-text-align-none\">Runway claims its latest text-to-video model generates even more accurate visuals than its last. In <a href=\"https://runwayml.com/research/introducing-runway-gen-4.5\">a blog post on Monday</a>, Runway says its Gen-4.5 model can produce \u201ccinematic and highly realistic outputs,\u201d potentially making it even more difficult to distinguish between what\u2019s real and what\u2019s AI.</p>\n\n<p class=\"has-text-align-none\">\u201cGen-4.5 achieves unprecedented physical accuracy and visual precision,\u201d Runway\u2019s announcement says. It adds that the new AI model is better at adhering to prompts, allowing it to produce detailed scenes without compromising video quality. Runway says that AI-generated objects \u201cmove with realistic weight, momentum and force,\u201d while liquids \u201cflow with proper dynamics.\u201d</p>\n<div class=\"youtube-embed\"></div>\n<p class=\"has-text-align-none\">The Gen-4.5 model is rolling out to all users gradually and will offer the same speed and efficiency as its predecessor, according to Runway. There are still some limitations, though, as the model may experience issues with object permanence and causal reasoning, meaning effects may happen before the cause, such as a door opening before someone uses a handle.</p>\n\n<p class=\"has-text-align-none\">Along with Runway, OpenAI is ramping up efforts to make its AI-generated videos look more lifelike. OpenAI highlighted upgrades to physics with the release of its Sora 2 text-to-video model in September, <a href=\"https://www.theverge.com/ai-artificial-intelligence/789126/openai-made-a-tiktok-for-deepfakes-and-its-getting-hard-to-tell-whats-real\">with Sora head Bill Peebles saying</a>, \u201cYou can accurately do backflips on top of a paddleboard on a body of water, and all of the fluid dynamics and buoyancy are accurately modeled.\u201d</p>\n\n<p class=\"has-text-align-none\">Runway says its Gen-4.5 model is better at handling different visual styles, too, allowing it to produce more consistent photorealistic, stylized, and cinematic visuals. The startup claims that photorealistic visuals created with Gen-4.5 can be \u201cindistinguishable from real-world footage with lifelike detail and accuracy.\u201d</p>",
-    "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/12/runway-ai-snowman.png?quality=90&#038;strip=all&#038;crop=0,0,98.61149893869,100",
-    "summary_text": "Runway claims its latest text-to-video model generates even more accurate visuals than its last. In a blog post on Monday, Runway says its Gen-4.5 model can produce \u201ccinematic and highly realistic outputs,\u201d potentially making it even more difficult to disting...",
-    "category": "ai",
-    "_trending_tags": [
-      "ai"
-    ],
-    "_permalink": "/p/56277b8a76/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/56277b8a76/",
-    "_summary_240": "Runway claims its latest text-to-video model generates even more accurate visuals than its last. In a blog post on Monday, Runway says its Gen-4.5 model can produce \u201ccinematic...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/56277b8a76/thumbnail.png"
-  },
-  {
     "title": "Google and AWS Team to Create Multicloud Networking Solution",
     "url": "https://www.pymnts.com/partnerships/2025/google-and-aws-team-to-create-multicloud-networking-solution/",
     "published_at": "2025-12-01T11:10:56-05:00",
@@ -422,24 +419,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/4fee817210/thumbnail.png"
   },
   {
-    "title": "Flock Uses Overseas Gig Workers to Build Its Surveillance AI",
-    "url": "https://www.wired.com/story/flock-uses-overseas-gig-workers-to-build-its-surveillance-ai/",
-    "published_at": "2025-12-01T09:00:00-05:00",
-    "source": "Wired",
-    "summary": "An accidental leak revealed that Flock, which has cameras in thousands of US communities, is using workers in the Philippines to review and classify footage.",
-    "content_html": "",
-    "image_url": "https://media.wired.com/photos/6927b1517b8388b70e0317d2/master/pass/Flock-Uses-Overseas-Gig-Workers-to-Build-Surveillance-AI-Business.jpg",
-    "summary_text": "An accidental leak revealed that Flock, which has cameras in thousands of US communities, is using workers in the Philippines to review and classify footage.",
-    "category": "ai",
-    "_trending_tags": [
-      "ai"
-    ],
-    "_permalink": "/p/7401414389/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/7401414389/",
-    "_summary_240": "An accidental leak revealed that Flock, which has cameras in thousands of US communities, is using workers in the Philippines to review and classify footage.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/7401414389/thumbnail.png"
-  },
-  {
     "title": "OpenAGI emerges from stealth with an AI agent that it claims crushes OpenAI and Anthropic",
     "url": "https://venturebeat.com/ai/openagi-emerges-from-stealth-with-an-ai-agent-that-it-claims-crushes-openai",
     "published_at": "2025-12-01T09:00:00-05:00",
@@ -459,6 +438,24 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/9d299af077/",
     "_summary_240": "A stealth artificial intelligence startup founded by an MIT researcher emerged this morning with an ambitious claim: its new AI model can control computers better than systems...",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/9d299af077/thumbnail.png"
+  },
+  {
+    "title": "Flock Uses Overseas Gig Workers to Build Its Surveillance AI",
+    "url": "https://www.wired.com/story/flock-uses-overseas-gig-workers-to-build-its-surveillance-ai/",
+    "published_at": "2025-12-01T09:00:00-05:00",
+    "source": "Wired",
+    "summary": "An accidental leak revealed that Flock, which has cameras in thousands of US communities, is using workers in the Philippines to review and classify footage.",
+    "content_html": "",
+    "image_url": "https://media.wired.com/photos/6927b1517b8388b70e0317d2/master/pass/Flock-Uses-Overseas-Gig-Workers-to-Build-Surveillance-AI-Business.jpg",
+    "summary_text": "An accidental leak revealed that Flock, which has cameras in thousands of US communities, is using workers in the Philippines to review and classify footage.",
+    "category": "ai",
+    "_trending_tags": [
+      "ai"
+    ],
+    "_permalink": "/p/7401414389/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/7401414389/",
+    "_summary_240": "An accidental leak revealed that Flock, which has cameras in thousands of US communities, is using workers in the Philippines to review and classify footage.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/7401414389/thumbnail.png"
   },
   {
     "title": "Does GENIUS turn stablecoin issuers into stealth buyers of US debt?",
@@ -510,21 +507,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/5b810c1035/thumbnail.png"
   },
   {
-    "title": "Ruby Is Not a Serious Programming Language",
-    "url": "https://www.wired.com/story/ruby-is-not-a-serious-programming-language/",
-    "published_at": "2025-12-01T07:00:00-05:00",
-    "source": "Wired",
-    "summary": "Ruby survives on affection, not utility. Let's move on.",
-    "content_html": "",
-    "image_url": "https://media.wired.com/photos/6925f4622a28299e7369f588/master/pass/MR%20012%20'Ruby'%20(1).jpg",
-    "summary_text": "Ruby survives on affection, not utility. Let's move on.",
-    "category": "software",
-    "_permalink": "/p/4e1b722584/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/4e1b722584/",
-    "_summary_240": "Ruby survives on affection, not utility. Let's move on.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/4e1b722584/thumbnail.png"
-  },
-  {
     "title": "What AI Bubble? BNEF Outlook for Data Center Power Use Rises 36%",
     "url": "https://www.bloomberg.com/news/articles/2025-12-01/what-ai-bubble-bnef-outlook-for-data-center-power-use-rises-36",
     "published_at": "2025-12-01T07:00:00-05:00",
@@ -541,6 +523,21 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/215e611134/",
     "_summary_240": "Power demand from US data centers is set to surge to 106 gigawatts by 2035, according to BloombergNEF, a 36% increase from the research provider\u2019s previous outlook in April.",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/215e611134/thumbnail.png"
+  },
+  {
+    "title": "Ruby Is Not a Serious Programming Language",
+    "url": "https://www.wired.com/story/ruby-is-not-a-serious-programming-language/",
+    "published_at": "2025-12-01T07:00:00-05:00",
+    "source": "Wired",
+    "summary": "Ruby survives on affection, not utility. Let's move on.",
+    "content_html": "",
+    "image_url": "https://media.wired.com/photos/6925f4622a28299e7369f588/master/pass/MR%20012%20'Ruby'%20(1).jpg",
+    "summary_text": "Ruby survives on affection, not utility. Let's move on.",
+    "category": "software",
+    "_permalink": "/p/4e1b722584/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/4e1b722584/",
+    "_summary_240": "Ruby survives on affection, not utility. Let's move on.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/4e1b722584/thumbnail.png"
   },
   {
     "title": "Prediction markets bet on Coinbase-linked Hassett as top Fed pick",
@@ -695,6 +692,25 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/19fb0f38b3/thumbnail.png"
   },
   {
+    "title": "Agent coordination is the missing piece in AI commerce \u2014 new AWS and Visa blueprints target the gap",
+    "url": "https://venturebeat.com/ai/agent-coordination-is-the-missing-piece-in-ai-commerce-new-aws-and-visa",
+    "published_at": "2025-12-01T00:00:00-05:00",
+    "source": "VentureBeat",
+    "summary": "With some needed infrastructure now being developed for agentic commerce, enterprises will want to figure out how to participate in this new form of buying and selling. But it remains a fragmented Wild West with competing payment protocols, and it's unclear what enterprises need to do to prepare. More cloud providers and AI model companies will start providing enterprises with the tools needed to...",
+    "content_html": "",
+    "image_url": "https://images.ctfassets.net/jdtwqhzvc2n1/4Lv5iyTanLLH1Vy8WuC9Wp/8f962a277a3987de13437ea75064a3b8/crimedy7_illustration_of_robots_shopping_--ar_169_--v_7_d85ed49f-a613-469d-9f88-1e1bd75b4808_3.png?w=800&amp;q=75",
+    "summary_text": "With some needed infrastructure now being developed for agentic commerce, enterprises will want to figure out how to participate in this new form of buying and selling. But it remains a fragmented Wild West with competing payment protocols, and it's unclear w...",
+    "category": "ai",
+    "_trending_tags": [
+      "agent",
+      "ai"
+    ],
+    "_permalink": "/p/f0999a560c/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/f0999a560c/",
+    "_summary_240": "With some needed infrastructure now being developed for agentic commerce, enterprises will want to figure out how to participate in this new form of buying and selling. But it...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/f0999a560c/thumbnail.png"
+  },
+  {
     "title": "Accenture and OpenAI accelerate enterprise AI success",
     "url": "https://openai.com/index/accenture-partnership",
     "published_at": "2025-12-01T00:00:00-05:00",
@@ -724,25 +740,6 @@
       "ai",
       "openai"
     ]
-  },
-  {
-    "title": "Agent coordination is the missing piece in AI commerce \u2014 new AWS and Visa blueprints target the gap",
-    "url": "https://venturebeat.com/ai/agent-coordination-is-the-missing-piece-in-ai-commerce-new-aws-and-visa",
-    "published_at": "2025-12-01T00:00:00-05:00",
-    "source": "VentureBeat",
-    "summary": "With some needed infrastructure now being developed for agentic commerce, enterprises will want to figure out how to participate in this new form of buying and selling. But it remains a fragmented Wild West with competing payment protocols, and it's unclear what enterprises need to do to prepare. More cloud providers and AI model companies will start providing enterprises with the tools needed to...",
-    "content_html": "",
-    "image_url": "https://images.ctfassets.net/jdtwqhzvc2n1/4Lv5iyTanLLH1Vy8WuC9Wp/8f962a277a3987de13437ea75064a3b8/crimedy7_illustration_of_robots_shopping_--ar_169_--v_7_d85ed49f-a613-469d-9f88-1e1bd75b4808_3.png?w=800&amp;q=75",
-    "summary_text": "With some needed infrastructure now being developed for agentic commerce, enterprises will want to figure out how to participate in this new form of buying and selling. But it remains a fragmented Wild West with competing payment protocols, and it's unclear w...",
-    "category": "ai",
-    "_trending_tags": [
-      "agent",
-      "ai"
-    ],
-    "_permalink": "/p/f0999a560c/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/f0999a560c/",
-    "_summary_240": "With some needed infrastructure now being developed for agentic commerce, enterprises will want to figure out how to participate in this new form of buying and selling. But it...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/f0999a560c/thumbnail.png"
   },
   {
     "title": "The AI skills employers want \u2014 and what business schools teach",
@@ -878,24 +875,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/1c29ed65ff/",
     "_summary_240": "James Cameron\u2019s movies are often at the cutting edge of visual effects technology, but that doesn't make him a fan of generative AI.",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/1c29ed65ff/thumbnail.png"
-  },
-  {
-    "title": "Telegram's Pavel Durov: Cocoon decentralized AI network now live",
-    "url": "https://cointelegraph.com/news/telegram-durov-cocoon-decentralized-ai-live?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-    "published_at": "2025-11-30T16:40:53-05:00",
-    "source": "Cointelegraph",
-    "summary": "The privacy-preserving decentralized AI platform is built on top of The Open Network, and users earn TON for renting out computing power.",
-    "content_html": "",
-    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTEvMDE5YWQ2YjEtMzkyNS03NzRkLWJiZWUtYjQwMDBiMGQ4MWNm.jpg",
-    "summary_text": "The privacy-preserving decentralized AI platform is built on top of The Open Network, and users earn TON for renting out computing power.",
-    "category": "ai",
-    "_trending_tags": [
-      "ai"
-    ],
-    "_permalink": "/p/40614b3028/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/40614b3028/",
-    "_summary_240": "The privacy-preserving decentralized AI platform is built on top of The Open Network, and users earn TON for renting out computing power.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/40614b3028/thumbnail.png"
   },
   {
     "title": "New report examines how David Sacks might profit from Trump administration role",
