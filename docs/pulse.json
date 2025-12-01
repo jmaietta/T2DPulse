@@ -52,21 +52,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/689b894ad6/thumbnail.png"
   },
   {
-    "title": "Ruby Is Not a Serious Programming Language",
-    "url": "https://www.wired.com/story/ruby-is-not-a-serious-programming-language/",
-    "published_at": "2025-12-01T07:00:00-05:00",
-    "source": "Wired",
-    "summary": "Ruby survives on affection, not utility. Let's move on.",
-    "content_html": "",
-    "image_url": "https://media.wired.com/photos/6925f4622a28299e7369f588/master/pass/MR%20012%20'Ruby'%20(1).jpg",
-    "summary_text": "Ruby survives on affection, not utility. Let's move on.",
-    "category": "software",
-    "_permalink": "/p/4e1b722584/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/4e1b722584/",
-    "_summary_240": "Ruby survives on affection, not utility. Let's move on.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/4e1b722584/thumbnail.png"
-  },
-  {
     "title": "What AI Bubble? BNEF Outlook for Data Center Power Use Rises 36%",
     "url": "https://www.bloomberg.com/news/articles/2025-12-01/what-ai-bubble-bnef-outlook-for-data-center-power-use-rises-36",
     "published_at": "2025-12-01T07:00:00-05:00",
@@ -83,6 +68,21 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/215e611134/",
     "_summary_240": "Power demand from US data centers is set to surge to 106 gigawatts by 2035, according to BloombergNEF, a 36% increase from the research provider\u2019s previous outlook in April.",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/215e611134/thumbnail.png"
+  },
+  {
+    "title": "Ruby Is Not a Serious Programming Language",
+    "url": "https://www.wired.com/story/ruby-is-not-a-serious-programming-language/",
+    "published_at": "2025-12-01T07:00:00-05:00",
+    "source": "Wired",
+    "summary": "Ruby survives on affection, not utility. Let's move on.",
+    "content_html": "",
+    "image_url": "https://media.wired.com/photos/6925f4622a28299e7369f588/master/pass/MR%20012%20'Ruby'%20(1).jpg",
+    "summary_text": "Ruby survives on affection, not utility. Let's move on.",
+    "category": "software",
+    "_permalink": "/p/4e1b722584/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/4e1b722584/",
+    "_summary_240": "Ruby survives on affection, not utility. Let's move on.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/4e1b722584/thumbnail.png"
   },
   {
     "title": "Prediction markets bet on Coinbase-linked Hassett as top Fed pick",
@@ -370,11 +370,7 @@
     "_trending_tags": [
       "ai",
       "openai"
-    ],
-    "_permalink": "/p/7641d00a2f/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/7641d00a2f/",
-    "_summary_240": "OpenAI takes an ownership stake in Thrive Holdings to accelerate enterprise AI adoption, embedding frontier research and engineering directly into accounting and IT services to...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/7641d00a2f/thumbnail.png"
+    ]
   },
   {
     "title": "The AI skills employers want \u2014 and what business schools teach",
