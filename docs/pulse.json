@@ -1,5 +1,26 @@
 [
   {
+    "title": "France\u2019s Mistral Debuts New Models to Keep Pace in AI Race",
+    "url": "https://www.bloomberg.com/news/articles/2025-12-02/france-s-mistral-debuts-new-models-to-keep-pace-in-ai-race",
+    "published_at": "2025-12-02T12:08:29-05:00",
+    "source": "Bloomberg Technology",
+    "summary": "Mistral AI, Europe\u2019s leading artificial intelligence startup, released its next generation of models pitched as more adaptable than alternatives from larger rivals OpenAI and Alphabet Inc.\u2019s Google.",
+    "content_html": "The Mistral AI logo on a smartphone arranged in New York, US, on Friday, Dec. 8, 2023. Mistral AI is in the final stages of raising roughly 450 million ($487 million) from investors including Nvidia Corp. and Salesforce Inc. in a funding round that values the OpenAI rival at about $2 billion, according to people familiar with the deal.",
+    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iuPGpozkoqXQ/v1/1200x-1.jpg",
+    "summary_text": "Mistral AI, Europe\u2019s leading artificial intelligence startup, released its next generation of models pitched as more adaptable than alternatives from larger rivals OpenAI and Alphabet Inc.\u2019s Google.",
+    "category": "ai",
+    "_trending_tags": [
+      "ai",
+      "google",
+      "mistral",
+      "openai"
+    ],
+    "_permalink": "/p/fdbb2fbeec/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/fdbb2fbeec/",
+    "_summary_240": "Mistral AI, Europe\u2019s leading artificial intelligence startup, released its next generation of models pitched as more adaptable than alternatives from larger rivals OpenAI and...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/fdbb2fbeec/thumbnail.png"
+  },
+  {
     "title": "OpenAI slammed for app suggestions that looked like ads",
     "url": "https://techcrunch.com/2025/12/02/openai-slammed-for-app-suggestions-that-looked-like-ads/",
     "published_at": "2025-12-02T11:43:21-05:00",
@@ -223,10 +244,10 @@
     "url": "https://techcrunch.com/2025/12/02/aws-announces-new-capabilities-for-its-ai-agent-builder/",
     "published_at": "2025-12-02T11:00:00-05:00",
     "source": "TechCrunch",
-    "summary": "AWS is introducing new capabilities for its AI agent building platform, including memory and evaluation tools.",
+    "summary": "AWS is introducing new capabilities for its AI agent-building platform, including memory and evaluation tools.",
     "content_html": "",
     "image_url": "https://techcrunch.com/wp-content/uploads/2024/12/aws-reinvent-2024-logo.png?resize=1200,627",
-    "summary_text": "AWS is introducing new capabilities for its AI agent building platform, including memory and evaluation tools.",
+    "summary_text": "AWS is introducing new capabilities for its AI agent-building platform, including memory and evaluation tools.",
     "category": "ai",
     "_trending_tags": [
       "agent",
@@ -234,7 +255,7 @@
     ],
     "_permalink": "/p/d18c50aec9/",
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/d18c50aec9/",
-    "_summary_240": "AWS is introducing new capabilities for its AI agent building platform, including memory and evaluation tools.",
+    "_summary_240": "AWS is introducing new capabilities for its AI agent-building platform, including memory and evaluation tools.",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/d18c50aec9/thumbnail.png"
   },
   {
@@ -294,7 +315,7 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/dccf495be9/thumbnail.png"
   },
   {
-    "title": "US Eyes Backup Generators From Walmart in Quest for Power",
+    "title": "US Eyes Diesel Generators to Meet Growing AI Power Demand",
     "url": "https://www.bloomberg.com/news/articles/2025-12-02/us-eyes-backup-generators-from-walmart-in-quest-for-more-power",
     "published_at": "2025-12-02T10:42:03-05:00",
     "source": "Bloomberg Technology",
@@ -303,20 +324,19 @@
     "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iEQMGTAxdOc0/v1/1200x-1.jpg",
     "summary_text": "The US is looking to tap the nation\u2019s network of large industrial diesel generators used at data centers, big box stores and elsewhere to help curb rising electricity costs and support the surge in power demand from artificial intelligence, according to Energ...",
     "category": "ai",
-    "_permalink": "/p/16b4681da9/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/16b4681da9/",
-    "_summary_240": "The US is looking to tap the nation\u2019s network of large industrial diesel generators used at data centers, big box stores and elsewhere to help curb rising electricity costs and...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/16b4681da9/thumbnail.png"
+    "_trending_tags": [
+      "ai"
+    ]
   },
   {
     "title": "Mistral closes in on Big AI rivals with new open-weight frontier and small models",
     "url": "https://techcrunch.com/2025/12/02/mistral-closes-in-on-big-ai-rivals-with-mistral-3-open-weight-frontier-and-small-models/",
     "published_at": "2025-12-02T10:37:07-05:00",
     "source": "TechCrunch",
-    "summary": "Mistral unveils its Mistral 3 lineup, including a frontier model and efficient small models designed for offline, customizable enterprise use\u2014aiming to prove small, fine-tuned AI can beat closed-source giants.",
+    "summary": "Mistral unveils its Mistral 3 lineup, including a frontier model and efficient small models designed for offline, customizable enterprise use \u2014 aiming to prove small, fine-tuned AI can beat closed-source giants.",
     "content_html": "",
     "image_url": "https://techcrunch.com/wp-content/uploads/2024/05/GettyImages-2147859992-e1713960898378.webp?resize=1200,676",
-    "summary_text": "Mistral unveils its Mistral 3 lineup, including a frontier model and efficient small models designed for offline, customizable enterprise use\u2014aiming to prove small, fine-tuned AI can beat closed-source giants.",
+    "summary_text": "Mistral unveils its Mistral 3 lineup, including a frontier model and efficient small models designed for offline, customizable enterprise use \u2014 aiming to prove small, fine-tuned AI can beat closed-source giants.",
     "category": "ai",
     "_trending_tags": [
       "ai",
@@ -325,7 +345,7 @@
     ],
     "_permalink": "/p/530f497cf2/",
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/530f497cf2/",
-    "_summary_240": "Mistral unveils its Mistral 3 lineup, including a frontier model and efficient small models designed for offline, customizable enterprise use\u2014aiming to prove small, fine-tuned AI...",
+    "_summary_240": "Mistral unveils its Mistral 3 lineup, including a frontier model and efficient small models designed for offline, customizable enterprise use \u2014 aiming to prove small, fine-tuned...",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/530f497cf2/thumbnail.png"
   },
   {
@@ -763,25 +783,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/ad21663c09/thumbnail.png"
   },
   {
-    "title": "AI Agents Turn Issuers Into Real-Time Decision Makers",
-    "url": "https://www.pymnts.com/news/artificial-intelligence/2025/ai-agents-turn-issuers-into-real-time-decision-makers/",
-    "published_at": "2025-12-02T04:03:26-05:00",
-    "source": "PYMNTS",
-    "summary": "New applications of artificial intelligence technologies, from dynamic wallets to autonomous shopping agents, are compressing the distance across global commerce between intent and transaction to near zero. However, for issuers, retailers and the platforms connecting them, the emergence of AI agents that can complete multistep tasks end-to-end isn\u2019t simply another feature cycle. It\u2019s the [\u2026] The ...",
-    "content_html": "<p><span>New applications of <a href=\"https://www.pymnts.com/tag/artificial-intelligence/\" rel=\"noopener\" target=\"_blank\">artificial intelligence</a> technologies, from dynamic <a href=\"https://www.pymnts.com/tag/digital-wallets/\" rel=\"noopener\" target=\"_blank\">wallets</a> to autonomous shopping agents, are compressing the distance </span><span>across global commerce</span><span> between intent and transaction to near zero.</span></p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p><span>However, for issuers, <a href=\"https://www.pymnts.com/tag/retail/\" rel=\"noopener\" target=\"_blank\">retailers</a> and the platforms connecting them, the emergence of AI agents that can complete multistep tasks end-to-end isn\u2019t simply another feature cycle.</span></p>\n<p><span>It\u2019s the start of a potential structural realignment set to rewrite how shoppers handle everything from finding a product to choosing the best payment method to executing the transaction.</span></p>\n<p><span>\u201cThe real transformation happens when payments are built directly into AI-driven workflows,\u201d </span><a class=\"editor-rtfLink\" href=\"https://www.marqeta.com/\" rel=\"noopener\" target=\"_blank\"><span>Marqeta</span></a><span> Chief Technology and AI Officer </span><a class=\"editor-rtfLink\" href=\"https://www.linkedin.com/in/fouzihusaini/\" rel=\"noopener\" target=\"_blank\"><span>Fouzi Husaini</span></a><span> told PYMNTS.</span></p>\n<p><span>\u201cWe envision agentic commerce becoming just a standard part of how the payment ecosystem works,\u201d Husaini said, adding that the issuers who will thrive as agentic AI capabilities mature will not be passive processors but active enablers.</span></p>\n<p><span>This</span><span> is not a distant-future scenario. Powered by real-time <a href=\"https://www.pymnts.com/tag/data/\" rel=\"noopener\" target=\"_blank\">data</a>, flexible payment infrastructure and rapidly maturing autonomous agents, the AI shift in commerce is already reshaping how retailers, issuers and platforms think about their roles in the buying journey.</span></p>\n<p><span>In the next operating system of commerce, the payment isn\u2019t the end of the story but the beginning. </span><span>This</span><span> represents a shift from user-pulled to system-pushed commerce.</span></p>\n<h2><strong><span>Agentic AI\u2019s Role in Collapsing the Commerce Funnel</span></strong></h2>\n<p><span>As retailers have learned over the past decade, discovery is no longer the problem. </span><span>Recommendation engines and content-driven shopping behaviors have </span><span>multiplied</span><span> opportunities for consumers to </span><span>encounter</span><span> new products.</span><span> What has remained fractured is the leap from intent to purchase. </span><span>Users still leave apps, break </span><span>flows</span> <span>or</span><span> fall out of channels altogether before converting.</span><span> Each subsequent step serves as an opportunity for friction, abandonment and profit loss.</span></p>\n<p><span>In an AI-native environment, however, the traditional purchase funnel compresses into a single, often invisible action. Once authorized by a consumer, an AI agent handles everything that follows.</span></p>\n<p><span>\u201cWhen payments are built directly into these AI-driven workflows\u2026 that eliminates friction points where consumers traditionally had to leave one experience to complete a transaction,\u201d Husaini said, citing Marqeta research that found 29% of surveyed U.S. consumers said they are interested in AI-powered wallets that automatically optimize </span><a class=\"editor-rtfLink\" href=\"https://investors.marqeta.com/news-releases/news-release-details/marqetas-2025-state-payments-report-reveals-consumers-and-smbs\" rel=\"noopener\" target=\"_blank\"><span>payment choices</span></a><span> based on their spending habits.</span></p>\n<p><span>In the traditional linear flow, the consumer starts at a merchant, checks out, and the issuer processes the transaction. Agentic commerce breaks that sequence. AI agents might initiate a purchase from a banking app, trigger a transaction from a card-linked service, or preemptively select an issuer-optimized payment method. Suddenly, issuers appear not at the end of the transaction, but at the beginning.</span></p>\n<p><span>\u201cAs AI agents take on more decision-making, issuers now have an opportunity to start to shift left and be present earlier in the purchase journey rather than at the point of transaction,\u201d Husaini said.</span></p>\n<h2><strong><span>A New Operating System for Commerce</span></strong></h2>\n<p><span>The shift could have far-reaching implications. For retailers, it means the front door of commerce may no longer be the storefront. For issuers, it opens an opportunity to shape decisions rather than merely process them. For consumers, it introduces a future where their financial tools work autonomously and proactively.</span></p>\n<p><span>As agents take over the </span><span>decisioning</span><span> layer, retailers must ensure their products, prices and promotions are machine-readable and accessible.</span> <span>The interface of commerce may shift away from the retailer\u2019s own app or website to an AI layer </span><span>sitting</span><span> between consumer and brand.</span> <span>Retailers that fail to prepare risk losing visibility and relevance as </span><span>agents steer consumers</span><span> elsewhere.</span></p>\n<p><span>\u201cTrust and security become even more critical when we\u2019re talking about AI agents executing transactions on behalf of customers,\u201d Husaini said, adding that as agents gain autonomy, the systems that secure transactions, from fraud detection to authentication, must evolve as well.</span></p>\n<h2><strong><span>The Real-Time Infrastructure Beneath the Agents</span></strong></h2>\n<p><span>The enabling layer underneath the rise of agents may ultimately prove more transformative than the AI bots themselves. Real-time data infrastructure and open, standardized interfaces are becoming crucial. </span><span>For agents to execute tasks reliably, they need fast, permissioned access to account data, contextual information </span><span>and</span><span> transaction capabilities, without </span><span>brittle</span><span> or bespoke integrations.</span></p>\n<p><span>\u201cYou have to start with things being secure and accessible,\u201d Husaini said.</span></p>\n<p><span>That\u2019s where protocols like Marqeta\u2019s </span><a class=\"editor-rtfLink\" href=\"https://www.marqeta.com/docs/developer-guides/agentic-ai-mcp-server/\" rel=\"noopener\" target=\"_blank\"><span>Model Context Protocol</span></a><span> (MCP) server come in. </span><span>Originally developed</span><span> by </span><a class=\"editor-rtfLink\" href=\"https://www.anthropic.com/\" rel=\"noopener\" target=\"_blank\"><span>Anthropic</span></a><span>, MCP is quickly becoming a preferred way for AI systems to access structured contextual data. </span><span>Marqeta\u2019s implementation </span><span>allows</span><span> AI agents to directly interact with payment infrastructure, </span><span>doing</span><span> tasks </span><span>like</span><span> pulling balances, initiating transactions, receiving real-time signals </span><span>and more</span><span>, all through standardized APIs.</span></p>\n<p><span>\u201cIt creates a direct connection between AI applications and payment infrastructure, dramatically reducing time to market,\u201d Husaini said, adding that intelligent credentials, driven by AI and powered by issuers, could increase top-of-wallet use.</span></p>\n<p><span>Husaini also said he foresees \u201cnew revenue streams and partnerships\u201d for issuers as they transform into platforms for AI services. Instead of merely providing payment rails, they become orchestrators of intelligent commerce ecosystems, where agents plug in, execute tasks and operate autonomously.</span></p>\n<p><em>For all PYMNTS AI coverage, subscribe to the daily </em><a href=\"https://pymnts.com/subscribe/\" rel=\"noopener\" target=\"_blank\"><em>AI Newsletter</em></a><em>.</em></p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/news/artificial-intelligence/2025/ai-agents-turn-issuers-into-real-time-decision-makers/\">AI Agents Turn Issuers Into Real-Time Decision Makers</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
-    "image_url": "https://www.pymnts.com/wp-content/uploads/2025/12/Marqeta-Start-overlay-update.png?w=457",
-    "summary_text": "New applications of artificial intelligence technologies, from dynamic wallets to autonomous shopping agents, are compressing the distance across global commerce between intent and transaction to near zero. However, for issuers, retailers and the platforms co...",
-    "category": "ai",
-    "_trending_tags": [
-      "agent",
-      "ai"
-    ],
-    "_permalink": "/p/dad03f7ad0/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/dad03f7ad0/",
-    "_summary_240": "New applications of artificial intelligence technologies, from dynamic wallets to autonomous shopping agents, are compressing the distance across global commerce between intent...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/dad03f7ad0/thumbnail.png"
-  },
-  {
     "title": "Bank of England Warns Debt-Fueled AI Boom Could Unravel",
     "url": "https://www.bloomberg.com/news/articles/2025-12-02/bank-of-england-warns-debt-fueled-spending-boom-could-unravel",
     "published_at": "2025-12-02T03:52:07-05:00",
@@ -995,25 +996,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/52a8b4337b/thumbnail.png"
   },
   {
-    "title": "Fanuc Shares Surge on Agreement With Nvidia to Integrate AI",
-    "url": "https://www.bloomberg.com/news/articles/2025-12-02/fanuc-shares-surge-on-agreement-with-nvidia-to-integrate-ai",
-    "published_at": "2025-12-01T21:32:55-05:00",
-    "source": "Bloomberg Technology",
-    "summary": "Fanuc Corp. shares rose as much as 9.4% to the highest since July 2021 after the company said it\u2019s partnering with Nvidia Corp. in real-world factory lines as well as in production simulations.",
-    "content_html": "",
-    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ilZOMwkY6Yc8/v0/1200x-1.jpg",
-    "summary_text": "Fanuc Corp. shares rose as much as 9.4% to the highest since July 2021 after the company said it\u2019s partnering with Nvidia Corp. in real-world factory lines as well as in production simulations.",
-    "category": "ai",
-    "_trending_tags": [
-      "ai",
-      "nvidia"
-    ],
-    "_permalink": "/p/ad5d443ce1/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/ad5d443ce1/",
-    "_summary_240": "Fanuc Corp. shares rose as much as 9.4% to the highest since July 2021 after the company said it\u2019s partnering with Nvidia Corp. in real-world factory lines as well as in...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/ad5d443ce1/thumbnail.png"
-  },
-  {
     "title": "Hock Tan (AVGO CEO) vs. Sundar Pichai (GOOGL CEO)",
     "url": "https://newsletter.tek2dayholdings.com/p/hock-tan-avgo-ceo-vs-sundar-pichai",
     "published_at": "2025-12-01T20:53:19-05:00",
@@ -1219,21 +1201,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/7401414389/thumbnail.png"
   },
   {
-    "title": "Funding grants for new research into AI and mental health",
-    "url": "https://openai.com/index/ai-mental-health-research-grants",
-    "published_at": "2025-12-01T07:00:00-05:00",
-    "source": "OpenAI News",
-    "summary": "OpenAI is awarding up to $2 million in grants for research at the intersection of AI and mental health. The program supports projects that study real-world risks, benefits, and applications to improve safety and well-being.",
-    "content_html": "",
-    "image_url": "",
-    "summary_text": "OpenAI is awarding up to $2 million in grants for research at the intersection of AI and mental health. The program supports projects that study real-world risks, benefits, and applications to improve safety and well-being.",
-    "category": "ai",
-    "_trending_tags": [
-      "ai",
-      "openai"
-    ]
-  },
-  {
     "title": "Ruby Is Not a Serious Programming Language",
     "url": "https://www.wired.com/story/ruby-is-not-a-serious-programming-language/",
     "published_at": "2025-12-01T07:00:00-05:00",
@@ -1247,6 +1214,21 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/4e1b722584/",
     "_summary_240": "Ruby survives on affection, not utility. Let's move on.",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/4e1b722584/thumbnail.png"
+  },
+  {
+    "title": "Funding grants for new research into AI and mental health",
+    "url": "https://openai.com/index/ai-mental-health-research-grants",
+    "published_at": "2025-12-01T07:00:00-05:00",
+    "source": "OpenAI News",
+    "summary": "OpenAI is awarding up to $2 million in grants for research at the intersection of AI and mental health. The program supports projects that study real-world risks, benefits, and applications to improve safety and well-being.",
+    "content_html": "",
+    "image_url": "",
+    "summary_text": "OpenAI is awarding up to $2 million in grants for research at the intersection of AI and mental health. The program supports projects that study real-world risks, benefits, and applications to improve safety and well-being.",
+    "category": "ai",
+    "_trending_tags": [
+      "ai",
+      "openai"
+    ]
   },
   {
     "title": "OpenAI and NORAD team up to bring new magic to \u201cNORAD Tracks Santa\u201d",
