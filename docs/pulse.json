@@ -1,5 +1,65 @@
 [
   {
+    "title": "Big Tech Broadens AI Footprint from Local PC Agents to Super Factories",
+    "url": "https://www.pymnts.com/artificial-intelligence-2/2025/big-tech-broadens-ai-footprint-from-local-pc-agents-to-super-factories/",
+    "published_at": "2025-12-02T18:04:42-05:00",
+    "source": "PYMNTS",
+    "summary": "A new wave of announcements from big technology companies shows how quickly the artificial intelligence (AI) landscape is shifting. This week\u2019s updates reflect a broader push to increase existing footprint from local PC agents to AI Super Factories. Nvidia introduces a local AI agent for PCs Nvidia introduced a new on-device AI tool through [\u2026] The post Big Tech Broadens AI Footprint from Local P...",
+    "content_html": "<p><span>A new wave of announcements from big technology companies shows how quickly the artificial intelligence (AI) landscape is shifting. This week\u2019s updates reflect a broader push to increase existing footprint from local PC agents to AI Super Factories.</span></p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<h2><b><span>Nvidia introduces a local AI agent for PCs</span></b></h2>\n<p><a href=\"https://www.nvidia.com/en-us/\" rel=\"noopener\" target=\"_blank\"><span>Nvidia</span></a> <a href=\"https://blogs.nvidia.com/blog/rtx-ai-garage-nexa-hyperlink-local-agent/\" rel=\"noopener\" target=\"_blank\"><span>introduced</span></a><span> a new on-device AI tool through its RTX AI Garage program. The tool, called Hyperlink by Nexa, runs directly on the user\u2019s computer and indexes local files, slides, PDFs and images. It allows users to search and generate content without sending data to the cloud.</span></p>\n<p><span>Nvidia </span><a href=\"https://blogs.nvidia.com/blog/rtx-ai-garage-nexa-hyperlink-local-agent/\" rel=\"noopener\" target=\"_blank\"><span>said</span></a><span> in its blog that the approach boosts speed and privacy and gives everyday computing devices more intelligence. The agent uses the GPU inside RTX PCs to run generative models locally and supports tasks such as creating study summaries, preparing presentations or organizing research material. The launch reflects the shift toward distributing AI capability across both cloud systems and personal devices.</span></p>\n<h2><b><span>Nvidia and Microsoft Move Ahead on AI Super Factories</span></b></h2>\n<p><span>Nvidia and </span><a href=\"https://www.microsoft.com/\" rel=\"noopener\" target=\"_blank\"><span>Microsoft</span></a> <a href=\"https://blogs.nvidia.com/blog/nvidia-microsoft-ai-superfactories/\" rel=\"noopener\" target=\"_blank\"><span>expanded</span></a><span> their work on what they call AI super factories, which link large data centers to train models and run enterprise AI applications. According to the </span><a href=\"https://blogs.nvidia.com/blog/nvidia-microsoft-ai-superfactories/\" rel=\"noopener\" target=\"_blank\"><span>Nvidia blog</span></a><span>, the companies are pairing Microsoft cloud infrastructure with Nvidia GPUs and microservices to support AI workloads in industries such as manufacturing, logistics and finance.\u00a0</span></p>\n<p><span>Microsoft described these distributed systems as connected facilities tied together by high-speed networks to deliver reliable compute at scale. A </span><a href=\"https://news.microsoft.com/source/features/ai/from-wisconsin-to-atlanta-microsoft-connects-datacenters-to-build-its-first-ai-superfactory/\" rel=\"noopener\" target=\"_blank\"><span>release</span></a><span> from Microsoft detailed how the company is linking sites from Wisconsin to Atlanta to build its first AI superfactory. The project combines energy-efficient data centers, long-haul fiber links and Nvidia accelerated computing to support training and inference across corporate applications.</span></p>\n<h2><b><span>AMD and HPE Push Open Rack-Scale AI Systems</span></b></h2>\n<p><a href=\"https://www.amd.com/en.html\"><span>AMD</span></a><span> and </span><a href=\"https://www.hpe.com/us/en/home.html\" rel=\"noopener\" target=\"_blank\"><span>HPE</span></a> <a href=\"https://ir.amd.com/news-events/press-releases/detail/1269/amd-and-hpe-expand-collaboration-to-advance-open-rack-scale-ai-infrastructure\" rel=\"noopener\" target=\"_blank\"><span>expanded</span></a><span> their partnership to build a new large-scale AI computing system called Helios. AMD said the setup combines its processors and graphics chips with HPE\u2019s networking hardware so the machines can move data quickly and handle heavier AI workloads. HPE expects to begin shipping the racks globally in 2026.</span></p>\n<p><span>The companies </span><a href=\"https://ir.amd.com/news-events/press-releases/detail/1269/amd-and-hpe-expand-collaboration-to-advance-open-rack-scale-ai-infrastructure\"><span>say</span></a><span> the design is \u201copen,\u201d meaning organizations can mix and match components rather than rely on a single supplier. The system is built to handle the demands of training big AI models and running simulations. AMD said the work draws on its long experience in supercomputing and gives businesses a more flexible way to expand their AI infrastructure.</span></p>\n<h2><b><span>Meta Releases SAM 3D for 3D Object Creation</span></b></h2>\n<p><span>Meta advanced its work in foundation models with the </span><a href=\"https://ai.meta.com/blog/sam-3d/\" rel=\"noopener\" target=\"_blank\"><span>release of SAM 3D</span></a><span>. The model converts 2D images into 3D representations, allowing developers and creators to produce objects that can be used in games, metaverse environments or design tools. Meta described the model on its AI blog as an evolution of its segment-anything family. The company </span><a href=\"https://ai.meta.com/blog/sam-3d/\" rel=\"noopener\" target=\"_blank\"><span>said</span></a><span> the new version uses depth estimation and learned 3D structure to create cleaner and more consistent shapes than earlier methods. Meta framed the update as part of its push to make spatial content creation accessible without requiring advanced modeling skills.</span></p>\n<h2><b><span>Amazon tests AI Voices in Streaming Content</span></b></h2>\n<p><span>Amazon\u2019s Prime Video team tested AI-generated voice dubs for the anime series Banana Fish. Forbes </span><a href=\"https://www.forbes.com/sites/paultassi/2025/11/30/amazons-ai-banana-fish-dubs-are-hilariously-inexcusably-bad/\" rel=\"noopener\" target=\"_blank\"><span>reported</span></a><span> that the AI dubs were widely criticized by early viewers who described the voices as stiff and mismatched with on-screen emotion. The publication also </span><a href=\"https://www.forbes.com/sites/paultassi/2025/11/30/amazons-ai-banana-fish-dubs-are-hilariously-inexcusably-bad/\" rel=\"noopener\" target=\"_blank\"><span>said</span></a><span> the experiment shows the limits of current voice synthesis in entertainment where tone, pacing and acting remain difficult for AI to reproduce. The test followed Amazon\u2019s broader efforts to integrate AI into production and localization workflows but drew immediate backlash from fans who argued the audio lacked the expression needed for dramatic scenes.</span></p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/artificial-intelligence-2/2025/big-tech-broadens-ai-footprint-from-local-pc-agents-to-super-factories/\">Big Tech Broadens AI Footprint from Local PC Agents to Super Factories</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
+    "image_url": "https://www.pymnts.com/wp-content/uploads/2025/12/ai-artificial-intelligence-amazon-meta-nvidia-microsoft-amd-hpe-big-tech-technology-e1764715681536.jpeg?w=457",
+    "summary_text": "A new wave of announcements from big technology companies shows how quickly the artificial intelligence (AI) landscape is shifting. This week\u2019s updates reflect a broader push to increase existing footprint from local PC agents to AI Super Factories. Nvidia in...",
+    "category": "ai",
+    "_trending_tags": [
+      "agent",
+      "ai",
+      "nvidia"
+    ],
+    "_permalink": "/p/ef8624f733/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/ef8624f733/",
+    "_summary_240": "A new wave of announcements from big technology companies shows how quickly the artificial intelligence (AI) landscape is shifting. This week\u2019s updates reflect a broader push to...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/ef8624f733/thumbnail.png"
+  },
+  {
+    "title": "Stocks Rise as Bitcoin Bounces Back | Closing Bell",
+    "url": "https://www.bloomberg.com/news/videos/2025-12-02/stocks-rise-as-bitcoin-bounces-back-closing-bell-video",
+    "published_at": "2025-12-02T17:49:42-05:00",
+    "source": "Bloomberg Technology",
+    "summary": "Comprehensive cross-platform coverage of the U.S. market close on Bloomberg Television, Bloomberg Radio, and YouTube with Romaine Bostick, Katie Greifeld, Carol Massar and Tim Stenovec. (Source: Bloomberg)",
+    "content_html": "",
+    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iVFz5XTBzJU8/v3/1200x-1.png",
+    "summary_text": "Comprehensive cross-platform coverage of the U.S. market close on Bloomberg Television, Bloomberg Radio, and YouTube with Romaine Bostick, Katie Greifeld, Carol Massar and Tim Stenovec. (Source: Bloomberg)",
+    "category": "fintech",
+    "_trending_tags": [
+      "ai"
+    ],
+    "_permalink": "/p/7d3f8d2b76/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/7d3f8d2b76/",
+    "_summary_240": "Comprehensive cross-platform coverage of the U.S. market close on Bloomberg Television, Bloomberg Radio, and YouTube with Romaine Bostick, Katie Greifeld, Carol Massar and Tim...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/7d3f8d2b76/thumbnail.png"
+  },
+  {
+    "title": "OpenAI CEO declares \u201ccode red\u201d as Gemini gains 200 million users in 3 months",
+    "url": "https://arstechnica.com/ai/2025/12/openai-ceo-declares-code-red-as-gemini-gains-200-million-users-in-3-months/",
+    "published_at": "2025-12-02T17:42:09-05:00",
+    "source": "Ars Technica",
+    "summary": "Three years after Google sounded alarm bells over ChatGPT, the tables have turned.",
+    "content_html": "<p>The shoe is most certainly on the other foot. On Monday, OpenAI CEO Sam Altman reportedly declared a \u201ccode red\u201d at the company to improve ChatGPT, delaying advertising plans and other products in the process, \u00a0The Information <a href=\"https://www.theinformation.com/articles/openai-ceo-declares-code-red-combat-threats-chatgpt-delays-ads-effort\">reported</a> based on a leaked internal memo. The move follows Google\u2019s <a href=\"https://arstechnica.com/google/2025/11/google-unveils-gemini-3-ai-model-and-ai-first-ide-called-antigravity/\">release</a> of its Gemini 3 model last month, which has outperformed ChatGPT on some industry benchmark tests and sparked high-profile praise on social media.</p>\n<p>In the memo, Altman wrote, \u201cWe are at a critical time for ChatGPT.\u201d The company will push back work on advertising integration, AI agents for health and shopping, and a personal assistant feature called <a href=\"https://arstechnica.com/ai/2025/09/chatgpt-pulse-delivers-morning-updates-based-on-your-chat-history/\">Pulse</a>. Altman encouraged temporary team transfers and established daily calls for employees responsible for enhancing the chatbot.</p>\n<p>The directive creates an odd symmetry with events from December 2022, when Google management <a href=\"https://arstechnica.com/information-technology/2023/01/fearing-chatgpt-google-enlists-founders-brin-and-page-in-ai-fight/\">declared</a> its own \u201ccode red\u201d internal emergency after ChatGPT <a href=\"https://arstechnica.com/information-technology/2022/12/openai-invites-everyone-to-test-new-ai-powered-chatbot-with-amusing-results/\">launched</a> and rapidly gained in popularity. At the time, Google CEO Sundar Pichai <a href=\"https://www.businessinsider.com/google-management-issues-code-red-over-chatgpt-report-2022-12\">reassigned</a> teams across the company to develop AI prototypes and products to compete with OpenAI\u2019s chatbot. Now, three years later, the AI industry is in a very different place.</p><p><a href=\"https://arstechnica.com/ai/2025/12/openai-ceo-declares-code-red-as-gemini-gains-200-million-users-in-3-months/\">Read full article</a></p>\n<p><a href=\"https://arstechnica.com/ai/2025/12/openai-ceo-declares-code-red-as-gemini-gains-200-million-users-in-3-months/#comments\">Comments</a></p>",
+    "image_url": "https://cdn.arstechnica.net/wp-content/uploads/2025/12/aaltman_crop-1152x648.jpg",
+    "summary_text": "Three years after Google sounded alarm bells over ChatGPT, the tables have turned.",
+    "category": "ai",
+    "_trending_tags": [
+      "ai",
+      "chatgpt",
+      "google",
+      "gpt",
+      "openai"
+    ],
+    "_permalink": "/p/fc546503ed/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/fc546503ed/",
+    "_summary_240": "Three years after Google sounded alarm bells over ChatGPT, the tables have turned.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/fc546503ed/thumbnail.png"
+  },
+  {
     "title": "Complexity of Blockchain Rails Trip Up Stablecoins\u2019 Enterprise Push",
     "url": "https://www.pymnts.com/cryptocurrency/2025/complexity-of-blockchain-rails-trip-up-stablecoins-enterprise-push/",
     "published_at": "2025-12-02T17:30:39-05:00",
@@ -97,17 +157,17 @@
     "url": "https://www.bloomberg.com/news/articles/2025-12-02/oracle-credit-fear-gauge-hits-highest-since-2009-on-ai-bubble-fears",
     "published_at": "2025-12-02T17:18:54-05:00",
     "source": "Bloomberg Technology",
-    "summary": "A gauge of fear about Oracle Corp.\u2019s debt closed at the highest level since the financial crisis after a flood of bond sales from tech giants amplified investor fears of an artificial intelligence-fueled bubble.",
+    "summary": "A risk gauge on Oracle Corp. debt closed at the highest level since the financial crisis after a flood of bond sales from tech giants amplified concerns that a bubble is forming in the artificial-intelligence industry.",
     "content_html": "Signage is displayed outside the Oracle Corp. headquarters campus in Redwood City, California, U.S., on Tuesday, Aug. 18, 2020. Oracle Corp., the world's second-largest software maker, is weighing a surprise bid for part of TikTok's business, seeking to rival Microsoft Corp. in the race to acquire the viral video streaming app, according to people familiar with the matter.",
     "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iQGVlDSCVuzo/v1/1200x-1.jpg",
-    "summary_text": "A gauge of fear about Oracle Corp.\u2019s debt closed at the highest level since the financial crisis after a flood of bond sales from tech giants amplified investor fears of an artificial intelligence-fueled bubble.",
+    "summary_text": "A risk gauge on Oracle Corp. debt closed at the highest level since the financial crisis after a flood of bond sales from tech giants amplified concerns that a bubble is forming in the artificial-intelligence industry.",
     "category": "ai",
     "_trending_tags": [
       "ai"
     ],
     "_permalink": "/p/16b2977a8a/",
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/16b2977a8a/",
-    "_summary_240": "A gauge of fear about Oracle Corp.\u2019s debt closed at the highest level since the financial crisis after a flood of bond sales from tech giants amplified investor fears of an...",
+    "_summary_240": "A risk gauge on Oracle Corp. debt closed at the highest level since the financial crisis after a flood of bond sales from tech giants amplified concerns that a bubble is forming...",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/16b2977a8a/thumbnail.png"
   },
   {
@@ -209,17 +269,17 @@
     "url": "https://www.bloomberg.com/news/articles/2025-12-02/ai-power-darling-vistra-raised-to-investment-grade-by-s-p",
     "published_at": "2025-12-02T16:49:19-05:00",
     "source": "Bloomberg Technology",
-    "summary": "Vistra Corp. \u2014 one of the biggest US power-sector beneficiaries of the AI boom \u2014 was upgraded to investment grade by S&P.",
+    "summary": "Vistra Corp. \u2014 one of the biggest US power-sector beneficiaries of the artificial intelligence boom \u2014 was upgraded to investment grade by S&P.",
     "content_html": "A power substation at the Vistra Corp. Moss Landing Energy Storage Facility in Moss Landing, California, U.S., on Tuesday, April 20, 2021. The facility is the world's largest battery energy storage system.",
     "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/idLz6bCQyAV4/v1/1200x-1.jpg",
-    "summary_text": "Vistra Corp. \u2014 one of the biggest US power-sector beneficiaries of the AI boom \u2014 was upgraded to investment grade by S&P.",
+    "summary_text": "Vistra Corp. \u2014 one of the biggest US power-sector beneficiaries of the artificial intelligence boom \u2014 was upgraded to investment grade by S&P.",
     "category": "ai",
     "_trending_tags": [
       "ai"
     ],
     "_permalink": "/p/4ee6a57513/",
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/4ee6a57513/",
-    "_summary_240": "Vistra Corp. \u2014 one of the biggest US power-sector beneficiaries of the AI boom \u2014 was upgraded to investment grade by S&P.",
+    "_summary_240": "Vistra Corp. \u2014 one of the biggest US power-sector beneficiaries of the artificial intelligence boom \u2014 was upgraded to investment grade by S&P.",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/4ee6a57513/thumbnail.png"
   },
   {
@@ -533,39 +593,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/c3394d3116/",
     "_summary_240": "Bitcoin is back above $90,000 today, recovering from a bruising selloff. The rebound offered a brief respite in a months-long rout, but traders remain cautious. On \"Bloomberg...",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/c3394d3116/thumbnail.png"
-  },
-  {
-    "title": "Kraken Makes Bigger Bet on Tokenization With Backed Acquisition",
-    "url": "https://www.pymnts.com/acquisitions/2025/kraken-makes-bigger-bet-on-tokenization-with-backed-acquisition/",
-    "published_at": "2025-12-02T14:20:27-05:00",
-    "source": "PYMNTS",
-    "summary": "Crypto exchange Kraken is set to acquire tokenized assets platform Backed Finance. The deal, announced in a news release Tuesday (Dec. 2), follows a collaboration between the companies called xStocks, their tokenized equities effort. Terms of the deal were not disclosed. \u201cxStocks has seen exceptional adoption since its debut earlier in 2025, surpassing $10 [\u2026] The post Kraken Makes Bigger Bet on ...",
-    "content_html": "<p><span style=\"font-weight: 400;\">Crypto exchange </span><a href=\"https://www.kraken.com/\" rel=\"noopener\" target=\"_blank\"><span style=\"font-weight: 400;\">Kraken</span></a><span style=\"font-weight: 400;\"> is set to acquire tokenized assets platform Backed Finance.</span></p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p><span style=\"font-weight: 400;\">The deal, </span><a href=\"https://blog.kraken.com/news/backed-acquisition\" rel=\"noopener\" target=\"_blank\"><span style=\"font-weight: 400;\">announced</span></a><span style=\"font-weight: 400;\"> in a news release Tuesday (Dec. 2), follows a collaboration between the companies called xStocks, their tokenized equities effort. Terms of the deal were not disclosed.</span></p>\n<p><span style=\"font-weight: 400;\">\u201cxStocks has seen exceptional adoption since its debut earlier in 2025, surpassing $10 billion in combined exchange and onchain trading volume within six months,\u201d the release said.</span></p>\n<p><span style=\"font-weight: 400;\">\u201cThis acquisition gives Backed access to the capital and resources needed to scale faster and capitalize on surging adoption and growing institutional demand for tokenized equities.\u201d</span></p>\n<p><span style=\"font-weight: 400;\">In an </span><a href=\"https://www.bloomberg.com/news/articles/2025-12-02/crypto-firm-kraken-acquires-backed-finance-in-tokenization-push\" rel=\"noopener\" target=\"_blank\"><span style=\"font-weight: 400;\">interview</span></a><span style=\"font-weight: 400;\"> with Bloomberg News, Kraken co-CEO </span><a href=\"https://www.linkedin.com/in/asethi\" rel=\"noopener\" target=\"_blank\"><span style=\"font-weight: 400;\">Arjun Sethi</span></a><span style=\"font-weight: 400;\"> said the acquisition allows the company to integrate stocks and exchange-traded funds more deeply into its platform.</span></p>\n<p><span style=\"font-weight: 400;\">\u201cWhile everyone is talking about tokenized equities, we are just doing it,\u201d Sethi said. \u201cWe are focused on long-term investment, not hype.\u201d</span></p>\n<p><span style=\"font-weight: 400;\">As PYMNTS wrote earlier this year </span><a href=\"https://www.pymnts.com/news/payments-innovation/2025/tokenization-scales-checkout-security-central-bank-pilots/\" rel=\"noopener\" target=\"_blank\"><span style=\"font-weight: 400;\">tokenization has evolved</span></a><span style=\"font-weight: 400;\"> from a niche concept to a \u201cstrategic imperative across financial services,\u201d increasingly supporting payment security and the trading of real-world assets.</span></p>\n<p><span style=\"font-weight: 400;\">Benefits include security and </span><a href=\"https://www.pymnts.com/news/security-and-risk/2024/tokens-see-double-duty-protection-from-fraud-transaction-failures/\" rel=\"noopener\" target=\"_blank\"><span style=\"font-weight: 400;\">fraud prevention</span></a><span style=\"font-weight: 400;\">, as network tokenization can mask sensitive data and cut down on fraud while boosting transaction approval rates. Asset tokenization, meanwhile, allows for instant settlement, automated compliance, and \u201c24/7 trading and fractional ownership,\u201d the report added.</span></p>\n<p><span style=\"font-weight: 400;\">Still, there are challenges facing tokenization, including \u201cregulatory and legal ambiguity.\u201d Regulators in the United States, such as the </span><a href=\"https://www.sec.gov/\" rel=\"noopener\" target=\"_blank\"><span style=\"font-weight: 400;\">Securities and Exchange Commission</span></a><span style=\"font-weight: 400;\"> (SEC), still have not formalized frameworks for tokenized securities, though some officials have indicated they are \u201cwilling to work with\u201d </span><a href=\"https://www.pymnts.com/news/regulation/2025/sec-commissioner-says-regulator-willing-to-work-with-tokenized-real-world-assets/\" rel=\"noopener\" target=\"_blank\"><span style=\"font-weight: 400;\">different approaches</span></a><span style=\"font-weight: 400;\">, PYMNTS added.</span></p>\n<p><span style=\"font-weight: 400;\">Kraken and Backed announced in September that they were </span><a href=\"https://www.pymnts.com/cryptocurrency/2025/kraken-brings-tokenized-equities-ethereum-blockchain/\" rel=\"noopener\" target=\"_blank\"><span style=\"font-weight: 400;\">expanding xStocks</span></a><span style=\"font-weight: 400;\"> to the Ethereum blockchain, saying it offered new ways to integrate tokenized stocks and ETFs \u201cacross the world\u2019s most widely adopted smart contract network.\u201d</span></p>\n<p>Kraken announced in late June that it begun offering tokenized U.S. stocks and ETFs on its platform for eligible non-U.S. clients, with the help of xStocks.</p>\n<p>Sethi said in the blog post that xStocks is a critical component in Kraken\u2019s plan to bring traditional assets \u201conto trust-minimized infrastructure.\u201d</p>\n<p><span style=\"font-weight: 400;\">Meanwhile, the company\u00a0 recently announced </span><a href=\"https://www.pymnts.com/cryptocurrency/2025/kraken-becomes-latest-crypto-firm-with-ipo-plans/\" rel=\"noopener\" target=\"_blank\"><span style=\"font-weight: 400;\">plans to go public</span></a><span style=\"font-weight: 400;\">, filing confidentially last month for an initial public offering (IPO) with the SEC.</span></p>\n<p><span style=\"font-weight: 400;\">Also in November, Kraken launched the Krak Card, a </span><a href=\"https://www.pymnts.com/cryptocurrency/2025/kraken-introduces-debit-card-that-enables-payments-in-crypto-and-fiat/\" rel=\"noopener\" target=\"_blank\"><span style=\"font-weight: 400;\">crypto-fiat debit card</span></a><span style=\"font-weight: 400;\"> on the Mastercard network, available initially in the United Kingdom and the European Union.</span></p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/acquisitions/2025/kraken-makes-bigger-bet-on-tokenization-with-backed-acquisition/\">Kraken Makes Bigger Bet on Tokenization With Backed Acquisition</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
-    "image_url": "https://www.pymnts.com/wp-content/uploads/2025/12/kraken-backed-finance-acquisition-tokenization-tokenized-equities-stocks-xstocks-e1764702599904.jpeg?w=457",
-    "summary_text": "Crypto exchange Kraken is set to acquire tokenized assets platform Backed Finance. The deal, announced in a news release Tuesday (Dec. 2), follows a collaboration between the companies called xStocks, their tokenized equities effort. Terms of the deal were no...",
-    "category": "fintech",
-    "_permalink": "/p/bd6a452156/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/bd6a452156/",
-    "_summary_240": "Crypto exchange Kraken is set to acquire tokenized assets platform Backed Finance. The deal, announced in a news release Tuesday (Dec. 2), follows a collaboration between the...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/bd6a452156/thumbnail.png"
-  },
-  {
-    "title": "Zepz Debuts Stablecoin-Linked Visa Card for Sendwave Wallet",
-    "url": "https://www.pymnts.com/news/payment-methods/2025/zepz-debuts-stablecoin-linked-visa-card-for-sendwave-wallet/",
-    "published_at": "2025-12-02T14:10:38-05:00",
-    "source": "PYMNTS",
-    "summary": "WorldRemit and Sendwave owner Zepz is rolling out a stablecoin-linked Visa card. The cards are powered by Bridge, the Stripe-owned stablecoin infrastructure platform, and will let Sendwave Wallet customers spend their digital-dollar balances at millions of merchants worldwide, according to a Tuesday (Dec. 2) news release. Zepz has also signed an agreement with Stripe to expand into new markets in...",
-    "content_html": "<p style=\"font-weight: 400;\"><a href=\"https://www.worldremit.com/en\" rel=\"noopener\" target=\"_blank\">WorldRemit</a>\u00a0and\u00a0<a href=\"https://www.sendwave.com/en-us\" rel=\"noopener\" target=\"_blank\">Sendwave</a>\u00a0owner\u00a0<a href=\"https://zepz.io/\" rel=\"noopener\" target=\"_blank\">Zepz</a>\u00a0is rolling out a stablecoin-linked Visa card.</p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p style=\"font-weight: 400;\">The cards are powered by <a href=\"https://www.bridge.xyz/\" rel=\"noopener\" target=\"_blank\">Bridge</a>, the\u00a0<a href=\"https://stripe.com/\" rel=\"noopener\" target=\"_blank\">Stripe</a>-owned stablecoin infrastructure platform, and will let Sendwave Wallet customers spend their digital-dollar balances at millions of merchants worldwide, according to a Tuesday (Dec. 2) <a href=\"https://zepz.io/press/zepz-to-launch-stablecoin-linked-visa-cards-powered-by-bridge/\" rel=\"noopener\" target=\"_blank\">news release</a>. Zepz has also signed an agreement with Stripe to expand into new markets including the U.S., Canada and Australia.</p>\n<p style=\"font-weight: 400;\">\u201cFor years, cross-border communities have been underserved by a financial system that wasn\u2019t built for them,\u201d said\u00a0<a href=\"https://uk.linkedin.com/in/lenhard\" rel=\"noopener\" target=\"_blank\">Mark Lenhard</a>, CEO of Zepz.</p>\n<p style=\"font-weight: 400;\">\u201cWe\u2019re changing that. By leveraging Bridge\u2019s infrastructure, Sendwave customers can use their digital dollar balance to not just send, receive and hold funds but also to spend them as an integral part of their daily lives.</p>\n<p style=\"font-weight: 400;\">Launched in October, the Sendwave Wallet is a peer-to-peer money solution that allows customers to send, store and spend funds across more than 100 countries. With Bridge, Zepz customers can use their stablecoin balances to make everyday purchases by tapping a card, anywhere Visa is accepted.</p>\n<p style=\"font-weight: 400;\">Once the customer has made a purchase, Bridge instantly converts their stablecoins to local currency, allowing merchants to get paid as they would with any other transaction.</p>\n<p style=\"font-weight: 400;\">\u201cWe launched our card issuing platform earlier this year to address a major gap we saw in the market,\u201d said\u00a0<a href=\"https://www.linkedin.com/in/zacharyabrams\" rel=\"noopener\" target=\"_blank\">Zach Abrams</a>, CEO and co-founder of Bridge. \u201cGlobal fintechs like Zepz shouldn\u2019t have to spend years launching cards from scratch in every single country. With Bridge, Zepz can launch card services quickly and expand to new countries with just a few lines of code.\u201d</p>\n<p style=\"font-weight: 400;\">The partnership comes amid a\u00a0<a href=\"https://www.pymnts.com/cryptocurrency/2025/stablecoin-payments-surge-70-post-genius-act/\" rel=\"noopener\" target=\"_blank\">surge in stablecoin payment volume</a>\u00a0following recent digital asset legislation in the U.S.</p>\n<p style=\"font-weight: 400;\">Upwards of $10 billion flowed through stablecoins in August for goods, services and transfers, according to an October report from blockchain data provider\u00a0<a href=\"https://www.artemis.xyz/\" rel=\"noopener\" target=\"_blank\">Artemis Analytics</a>.</p>\n<p style=\"font-weight: 400;\">That number is up from $6 billion in February and more than double the volume from August of last year, said the report, issued in the wake of the signing of the\u00a0<a href=\"https://www.pymnts.com/cryptocurrency/2025/trump-signs-genius-bill-as-private-stablecoins-corner-cbdcs-in-digital-dollar-race/\" rel=\"noopener\" target=\"_blank\">GENIUS Act</a>\u00a0in the U.S.</p>\n<p style=\"font-weight: 400;\">Stablecoin payments could come to $122 billion over a full year, the report added.</p>\n<p style=\"font-weight: 400;\">\u201cIt\u2019s well understood that stablecoins have graduated from merely being a tool used by crypto traders and exchanges to conveniently move money around without relying on banks, to a more widely used tool for consumer and enterprise payments,\u201d Artemis said.</p>\n<p style=\"font-weight: 400;\">\u201cMajor payments companies such as\u00a0<a href=\"https://www.visa.com/en-us\" rel=\"noopener\" target=\"_blank\">Visa</a>,\u00a0<a href=\"https://www.mastercard.com/us/en.html\" rel=\"noopener\" target=\"_blank\">Mastercard</a>, and\u00a0<a href=\"https://stripe.com/\" rel=\"noopener\" target=\"_blank\">Stripe</a>\u00a0have begun to incorporate stablecoins\u00a0<a href=\"https://www.pymnts.com/cryptocurrency/2025/mastercard-thunes-launch-stablecoin-payments-partnership/\" rel=\"noopener\" target=\"_blank\">into their payment flows</a>.\u201d</p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/news/payment-methods/2025/zepz-debuts-stablecoin-linked-visa-card-for-sendwave-wallet/\">Zepz Debuts Stablecoin-Linked Visa Card for Sendwave Wallet</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
-    "image_url": "https://www.pymnts.com/wp-content/uploads/2023/11/Zepz.jpg?w=457",
-    "summary_text": "WorldRemit and Sendwave owner Zepz is rolling out a stablecoin-linked Visa card. The cards are powered by Bridge, the Stripe-owned stablecoin infrastructure platform, and will let Sendwave Wallet customers spend their digital-dollar balances at millions of me...",
-    "category": "fintech",
-    "_trending_tags": [
-      "stripe"
-    ],
-    "_permalink": "/p/fc986b3b9c/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/fc986b3b9c/",
-    "_summary_240": "WorldRemit and Sendwave owner Zepz is rolling out a stablecoin-linked Visa card. The cards are powered by Bridge, the Stripe-owned stablecoin infrastructure platform, and will...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/fc986b3b9c/thumbnail.png"
   },
   {
     "title": "CME launches Bitcoin volatility index as institutional crypto trading matures",
@@ -930,28 +957,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/0ce26d75bd/thumbnail.png"
   },
   {
-    "title": "Amazon Rushes Out Latest AI Chip to Take On Nvidia, Google",
-    "url": "https://www.bloomberg.com/news/articles/2025-12-02/amazon-rushes-latest-ai-chip-to-market-to-take-on-nvidia-google",
-    "published_at": "2025-12-02T11:00:00-05:00",
-    "source": "Bloomberg Technology",
-    "summary": "Amazon.com Inc.\u2019s cloud unit raced to get the latest version of its artificial intelligence chip to market, renewing efforts to sell hardware capable of rivaling products from Nvidia Corp. and Google.",
-    "content_html": "Amazon Trainium3 chip built on 3nm technology.",
-    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/i.q83d4o1_Is/v1/1200x-1.jpg",
-    "summary_text": "Amazon.com Inc.\u2019s cloud unit raced to get the latest version of its artificial intelligence chip to market, renewing efforts to sell hardware capable of rivaling products from Nvidia Corp. and Google.",
-    "category": "ai",
-    "_trending_tags": [
-      "ai",
-      "amazon",
-      "cloud",
-      "google",
-      "nvidia"
-    ],
-    "_permalink": "/p/33067d2a92/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/33067d2a92/",
-    "_summary_240": "Amazon.com Inc.\u2019s cloud unit raced to get the latest version of its artificial intelligence chip to market, renewing efforts to sell hardware capable of rivaling products from...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/33067d2a92/thumbnail.png"
-  },
-  {
     "title": "Amazon Has New Frontier AI Models\u2014and a Way for Customers to Build Their Own",
     "url": "https://www.wired.com/story/amazon-nova-forge-ai-models/",
     "published_at": "2025-12-02T11:00:00-05:00",
@@ -991,6 +996,28 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/5c973f7ee8/",
     "_summary_240": "As Google and Microsoft continue to surge, the AWS chief lays out his pitch: cheaper, reliable AI delivered at hyperscale.",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/5c973f7ee8/thumbnail.png"
+  },
+  {
+    "title": "Amazon Rushes Out Latest AI Chip to Take On Nvidia, Google",
+    "url": "https://www.bloomberg.com/news/articles/2025-12-02/amazon-rushes-latest-ai-chip-to-market-to-take-on-nvidia-google",
+    "published_at": "2025-12-02T11:00:00-05:00",
+    "source": "Bloomberg Technology",
+    "summary": "Amazon.com Inc.\u2019s cloud unit raced to get the latest version of its artificial intelligence chip to market, renewing efforts to sell hardware capable of rivaling products from Nvidia Corp. and Google.",
+    "content_html": "Amazon Trainium3 chip built on 3nm technology.",
+    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/i.q83d4o1_Is/v1/1200x-1.jpg",
+    "summary_text": "Amazon.com Inc.\u2019s cloud unit raced to get the latest version of its artificial intelligence chip to market, renewing efforts to sell hardware capable of rivaling products from Nvidia Corp. and Google.",
+    "category": "ai",
+    "_trending_tags": [
+      "ai",
+      "amazon",
+      "cloud",
+      "google",
+      "nvidia"
+    ],
+    "_permalink": "/p/33067d2a92/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/33067d2a92/",
+    "_summary_240": "Amazon.com Inc.\u2019s cloud unit raced to get the latest version of its artificial intelligence chip to market, renewing efforts to sell hardware capable of rivaling products from...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/33067d2a92/thumbnail.png"
   },
   {
     "title": "Simular\u2019s AI agent wants to run your Mac, Windows PC for you",
@@ -1049,44 +1076,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/d18c50aec9/",
     "_summary_240": "AWS is introducing new capabilities for its AI agent-building platform, including memory and evaluation tools.",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/d18c50aec9/thumbnail.png"
-  },
-  {
-    "title": "US Eyes Diesel Generators to Meet Growing AI Power Demand",
-    "url": "https://www.bloomberg.com/news/articles/2025-12-02/us-eyes-backup-generators-from-walmart-in-quest-for-more-power",
-    "published_at": "2025-12-02T10:42:03-05:00",
-    "source": "Bloomberg Technology",
-    "summary": "The US is looking to tap the nation\u2019s network of large industrial diesel generators used at data centers, big box stores and elsewhere to help curb rising electricity costs and support the surge in power demand from artificial intelligence, according to Energy Secretary Chris Wright.",
-    "content_html": "Generac Holdings Inc. generators sit stacked at the ABT Inc. warehouse in Glenview, Illinois, U.S., on Monday, Oct. 10, 2011. The U.S. Census Burea will release business inventory data on Oct. 14.",
-    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iEQMGTAxdOc0/v1/1200x-1.jpg",
-    "summary_text": "The US is looking to tap the nation\u2019s network of large industrial diesel generators used at data centers, big box stores and elsewhere to help curb rising electricity costs and support the surge in power demand from artificial intelligence, according to Energ...",
-    "category": "ai",
-    "_trending_tags": [
-      "ai"
-    ],
-    "_permalink": "/p/ebcbd4a8c7/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/ebcbd4a8c7/",
-    "_summary_240": "The US is looking to tap the nation\u2019s network of large industrial diesel generators used at data centers, big box stores and elsewhere to help curb rising electricity costs and...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/ebcbd4a8c7/thumbnail.png"
-  },
-  {
-    "title": "Mistral closes in on Big AI rivals with new open-weight frontier and small models",
-    "url": "https://techcrunch.com/2025/12/02/mistral-closes-in-on-big-ai-rivals-with-mistral-3-open-weight-frontier-and-small-models/",
-    "published_at": "2025-12-02T10:37:07-05:00",
-    "source": "TechCrunch",
-    "summary": "Mistral unveils its Mistral 3 lineup, including a frontier model and efficient small models designed for offline, customizable enterprise use \u2014 aiming to prove small, fine-tuned AI can beat closed-source giants.",
-    "content_html": "",
-    "image_url": "https://techcrunch.com/wp-content/uploads/2024/05/GettyImages-2147859992-e1713960898378.webp?resize=1200,676",
-    "summary_text": "Mistral unveils its Mistral 3 lineup, including a frontier model and efficient small models designed for offline, customizable enterprise use \u2014 aiming to prove small, fine-tuned AI can beat closed-source giants.",
-    "category": "ai",
-    "_trending_tags": [
-      "ai",
-      "llm",
-      "mistral"
-    ],
-    "_permalink": "/p/530f497cf2/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/530f497cf2/",
-    "_summary_240": "Mistral unveils its Mistral 3 lineup, including a frontier model and efficient small models designed for offline, customizable enterprise use \u2014 aiming to prove small, fine-tuned...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/530f497cf2/thumbnail.png"
   },
   {
     "title": "Identity checks to power AI stablecoin payments added to Coinbase-incubated x402",
@@ -1450,21 +1439,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/35960cb931/",
     "_summary_240": "Amar Subramanya to replace John Giannandrea as iPhone maker struggles to make up ground in artificial intelligence race",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/35960cb931/thumbnail.png"
-  },
-  {
-    "title": "Carlyle Sells Debt of Roomba Maker as Bankruptcy Risks Loom",
-    "url": "https://www.bloomberg.com/news/articles/2025-12-01/carlyle-sells-debt-of-roomba-maker-as-bankruptcy-risks-loom",
-    "published_at": "2025-12-01T18:21:58-05:00",
-    "source": "Bloomberg Technology",
-    "summary": "Carlyle Group Inc. sold a troubled loan it provided to iRobot Corp. less than three years ago as the maker of Roomba vacuum cleaners is trying to stave off a potential bankruptcy filing.",
-    "content_html": "",
-    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/i.lpMXMac8Tk/v0/1200x-1.jpg",
-    "summary_text": "Carlyle Group Inc. sold a troubled loan it provided to iRobot Corp. less than three years ago as the maker of Roomba vacuum cleaners is trying to stave off a potential bankruptcy filing.",
-    "category": "fintech",
-    "_permalink": "/p/ad92fd1dc6/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/ad92fd1dc6/",
-    "_summary_240": "Carlyle Group Inc. sold a troubled loan it provided to iRobot Corp. less than three years ago as the maker of Roomba vacuum cleaners is trying to stave off a potential bankruptcy...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/ad92fd1dc6/thumbnail.png"
   },
   {
     "title": "Inside Mirakl's agentic commerce vision",
