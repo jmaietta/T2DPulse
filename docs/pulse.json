@@ -51,6 +51,24 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/eed5712600/thumbnail.png"
   },
   {
+    "title": "Syntax hacking: Researchers discover sentence structure can bypass AI safety rules",
+    "url": "https://arstechnica.com/ai/2025/12/syntax-hacking-researchers-discover-sentence-structure-can-bypass-ai-safety-rules/",
+    "published_at": "2025-12-02T07:15:55-05:00",
+    "source": "Ars Technica",
+    "summary": "New research offers clues about why some prompt injection attacks may succeed.",
+    "content_html": "<p>Researchers from MIT, Northeastern University, and Meta recently <a href=\"https://arxiv.org/abs/2509.21155v2\">released</a> a paper suggesting that large language models (LLMs) similar to those that power ChatGPT may sometimes prioritize sentence structure over meaning when answering questions. The findings reveal a weakness in how these models process instructions that may shed light on why some <a href=\"https://arstechnica.com/information-technology/2022/09/twitter-pranksters-derail-gpt-3-bot-with-newly-discovered-prompt-injection-hack/\">prompt injection</a> or <a href=\"https://arstechnica.com/information-technology/2023/10/sob-story-about-dead-grandma-tricks-microsoft-ai-into-solving-captcha/\">jailbreaking</a> approaches work, though the researchers caution their analysis of some production models remains speculative since training data details of prominent commercial AI models are not publicly available.</p>\n<p>The team, led by Chantal Shaib and Vinith M. Suriyakumar, tested this by asking models questions with preserved grammatical patterns but nonsensical words. For example, when prompted with \u201cQuickly sit Paris clouded?\u201d (mimicking the structure of \u201cWhere is Paris located?\u201d), models still answered \u201cFrance.\u201d</p>\n<p>This suggests models absorb both meaning and syntactic patterns, but can overrely on structural shortcuts when they strongly correlate with specific domains in training data, which sometimes allows patterns to override semantic understanding in edge cases. The team plans to present these findings at <a href=\"https://neurips.cc/\">NeurIPS</a> later this month.</p><p><a href=\"https://arstechnica.com/ai/2025/12/syntax-hacking-researchers-discover-sentence-structure-can-bypass-ai-safety-rules/\">Read full article</a></p>\n<p><a href=\"https://arstechnica.com/ai/2025/12/syntax-hacking-researchers-discover-sentence-structure-can-bypass-ai-safety-rules/#comments\">Comments</a></p>",
+    "image_url": "https://cdn.arstechnica.net/wp-content/uploads/2025/12/BOOK_PAGES_FLYING-1152x648.jpg",
+    "summary_text": "New research offers clues about why some prompt injection attacks may succeed.",
+    "category": "ai",
+    "_trending_tags": [
+      "ai"
+    ],
+    "_permalink": "/p/3a15d78db3/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/3a15d78db3/",
+    "_summary_240": "New research offers clues about why some prompt injection attacks may succeed.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/3a15d78db3/thumbnail.png"
+  },
+  {
     "title": "TSMC and Intel Clash Over Trade Secrets Allegations",
     "url": "https://www.bloomberg.com/news/newsletters/2025-12-02/tsmc-and-intel-clash-over-trade-secrets-allegations",
     "published_at": "2025-12-02T07:02:33-05:00",
@@ -634,26 +652,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/32adbef5c9/thumbnail.png"
   },
   {
-    "title": "No More Walled Gardens As Multicloud Agility Comes to Financial Services",
-    "url": "https://www.pymnts.com/technology/2025/no-more-walled-gardens-as-multicloud-agility-comes-to-financial-services/",
-    "published_at": "2025-12-01T19:35:04-05:00",
-    "source": "PYMNTS",
-    "summary": "For most of the past decade, the cloud landscape has resembled a giant, digital land grab. Hyperscalers fought for enterprise workloads one contract at a time, while the largest providers, with Amazon Web Services (AWS) and Google Cloud foremost among them, built fortunes on tight lock-in, proprietary services, and sprawling ecosystems designed to keep [\u2026] The post No More Walled Gardens As Multi...",
-    "content_html": "<p><span>For most of the past decade, the cloud landscape has resembled a giant, digital land grab.</span></p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p><span>Hyperscalers fought for enterprise workloads one contract at a time, while the largest providers, with Amazon Web Services (AWS) and Google Cloud foremost among them, built fortunes on tight lock-in, proprietary services, and sprawling ecosystems designed to keep customers close.</span></p>\n<p><span>Collaboration, when it happened at all, was limited to industry standard bodies or regulatory consultations. The result was that multicloud architecture has been both an aspiration and a headache for many large enterprises, with the tangled reality of manual network engineering lurking just beneath the glossy narrative of best-of-breed service selection.</span></p>\n<p><span>Connecting AWS to Google Cloud, or either to a private data center, for example, required bespoke physical links, provisioning processes that stretched across teams and continents, and weeks or months of change-management choreography.</span></p>\n<p><span>But on Monday (Dec. 1), that era may have finally receded to a historical footnote with the </span><a href=\"https://www.pymnts.com/partnerships/2025/google-and-aws-team-to-create-multicloud-networking-solution/\" rel=\"noopener\" target=\"_blank\"><span>news</span></a><span> that AWS and Google Cloud have together\u202fintroduced an open specification for network interoperability, giving customers private, high-speed connectivity between Google Cloud and AWS with \u201chigh levels\u201d of automation and speed.</span></p>\n<p><span>This shift may be particularly consequential for financial-services firms and payment providers that rely heavily on hybrid or multicloud environments to navigate regulatory boundaries, ensure operational continuity, and deliver global services at low latency.</span></p>\n<p><span>As cloud architectures evolve, these firms are facing not just incremental improvements in network plumbing but a potential redefinition of multicloud itself as a first-class architectural model.</span></p>\n<p><b><span>Read more:</span></b> <a href=\"https://www.pymnts.com/study_posts/building-the-future-of-payments-in-the-cloud/\" rel=\"noopener\" target=\"_blank\"><span>Building the Future of Payments in the Cloud</span></a></p>\n<h2><b><span>The End of Manual Multicloud Plumbing</span></b></h2>\n<p><span>Historically, connecting two clouds meant working through physical circuits, manual router configuration, IP addressing plans, and cross-provider coordination. Even teams with mature networking practices treated the exercise as a bespoke project requiring deep expertise and significant lead times.</span></p>\n<p><span>PYMNTS wrote last month about the rigors of\u202f</span><a href=\"https://www.pymnts.com/news/cross-border-commerce/cross-border-payments/2025/aws-the-real-story-of-payments-cloud-modernization-starts-after-the-move/\" rel=\"noopener\" target=\"_blank\"><span>cloud migration for payments companies</span></a><span>, noting that it was the \u201cstarting line\u201d rather than the end game.</span></p>\n<p><span>By contrast, the AWS\u2013Google Cloud integration enables enterprises to provision private, high-bandwidth connectivity between clouds in minutes through a console or API. What once required weeks of back-and-forth with carriers and cloud architects can now be deployed nearly as fast as spinning up a virtual machine.</span></p>\n<p><span>A payments provider expanding into a new region, for example, no longer faces a long runway of network deployment before rolling out risk models or transaction-processing services in a second cloud. A bank evaluating new AI-based fraud detection tools on Google Cloud can integrate those models with transaction workloads on AWS without the delays of bespoke interconnect design.</span></p>\n<p><span>This is a subtle yet powerful shift. For years, the cloud industry has thrived on differentiated services but has been constrained by proprietary networking models. Multicloud strategies often emerged reactively \u2014 when a regulator required regional diversification, when a corporate acquisition introduced a second cloud provider, or when a team needed a specialized service available only on another platform. The network complexity standing in the way of easy migration or workload distribution created a form of implicit vendor lock-in.</span></p>\n<p><b><span>Read more:</span></b><a href=\"https://www.pymnts.com/cfo/2025/cfos-embrace-data-clouds-amid-shift-away-from-pure-play-record-keeping/\" rel=\"noopener\" target=\"_blank\"><span> CFOs Embrace Data Clouds Amid Shift Away From Pure-Play Record-Keeping</span></a></p>\n<h2><b><span>What This Means for Financial Services and Payments Firms</span></b></h2>\n<p><span>The financial sector has long been caught between the need for agility and the weight of regulatory expectations. It wants to adopt AI models, leverage real-time analytics, and operate across regions while maintaining strict controls over data residency, encryption standards, and business continuity. This new multicloud connectivity model catalyzes that ambition.</span></p>\n<p><span>\u201cIt\u2019s an </span><a href=\"https://www.pymnts.com/news/payments-innovation/2024/aws-and-jpmorgan-weigh-in-on-the-clouds-role-in-payments-modernization/\" rel=\"noopener\" target=\"_blank\"><span>interesting time</span></a><span> in the in banking and the payments industry,\u201d said\u202f</span><a href=\"https://www.linkedin.com/in/mike-lozanoff-93a6285/\" rel=\"noopener\" target=\"_blank\"><span>Michael Lozanoff</span></a><span>, managing director, global head of merchant services for\u202f</span><a href=\"https://www.jpmorgan.com/payments\" rel=\"noopener\" target=\"_blank\"><span>J.P. Morgan Payments</span></a><span> in an earlier interview with PYMNTS. \u201cMany of the systems we ran for decades have reached their shelf life.\u201d</span></p>\n<p><span>Strategically, today\u2019s emerging environment gives financial institutions something they have sought for years: genuine agility. They can adopt best-in-class AI and data services from one provider while maintaining core transaction systems on another. They can experiment with new services on one cloud without committing to long-term architectural entanglement. And they can shift or expand workloads when business conditions or regulatory regimes change.</span></p>\n<p><span>Still, as PYMNTS has covered previously, cloud innovation is not a silver bullet. It comes with its own risks, many of which can be serious. Last year, the enterprise data cloud landscape witnessed a Snowflake\u202f</span><a href=\"https://www.pymnts.com/news/security-and-risk/2024/hackers-increasing-pressure-on-snowflake-customers-to-make-ransom-payments/\" rel=\"noopener\" target=\"_blank\"><span>data breach</span></a><span>\u202fthat\u202f</span><a href=\"https://www.pymnts.com/news/security-and-risk/2024/almost-all-att-wireless-customers-hacked-snowflake-breach-snowballs/\" rel=\"noopener\" target=\"_blank\"><span>snowballed</span></a><span>\u202fto include AT&amp;T, Santander Bank, Advance Auto Parts, Ticketmaster parent company LiveNation and\u202f</span><a href=\"https://www.pymnts.com/cybersecurity/2024/att-hacker-arrested-how-the-cybersecurity-landscape-evolved-post-snowflake-breach/\" rel=\"noopener\" target=\"_blank\"><span>over 160</span></a><span>\u202fof the world\u2019s largest companies.</span></p>\n<p><span>At the same time, the ultimate significance of the AWS\u2013Google Cloud collaboration lies not only in what it enables today but also in what it signals about the next decade of cloud evolution. Multicloud is no longer an edge case reserved for the largest banks or the most globally distributed enterprises. It is rapidly becoming the default operating model for any company that demands resilience, regulatory flexibility, or architectural freedom.</span></p>\n<p><i><span>For all PYMNTS digital transformation coverage, subscribe to the daily </span></i><a href=\"https://pymnts.com/subscribe/\" rel=\"noopener\" target=\"_blank\"><i><span>Digital Transformation Newsletter</span></i></a><i><span>.</span></i></p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/technology/2025/no-more-walled-gardens-as-multicloud-agility-comes-to-financial-services/\">No More Walled Gardens As Multicloud Agility Comes to Financial Services</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
-    "image_url": "https://www.pymnts.com/wp-content/uploads/2025/12/aws-amazon-web-services-google-cloud-multicloud-technology-automation-digital-payments-financial-services-e1764635148444.jpeg?w=457",
-    "summary_text": "For most of the past decade, the cloud landscape has resembled a giant, digital land grab. Hyperscalers fought for enterprise workloads one contract at a time, while the largest providers, with Amazon Web Services (AWS) and Google Cloud foremost among them, b...",
-    "category": "fintech",
-    "_trending_tags": [
-      "amazon",
-      "cloud",
-      "google"
-    ],
-    "_permalink": "/p/933e955124/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/933e955124/",
-    "_summary_240": "For most of the past decade, the cloud landscape has resembled a giant, digital land grab. Hyperscalers fought for enterprise workloads one contract at a time, while the largest...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/933e955124/thumbnail.png"
-  },
-  {
     "title": "One of Google\u2019s biggest AI advantages is what it already knows about you",
     "url": "https://techcrunch.com/2025/12/01/one-of-googles-biggest-ai-advantages-is-what-it-already-knows-about-you/",
     "published_at": "2025-12-01T19:17:52-05:00",
@@ -1022,21 +1020,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/9d299af077/thumbnail.png"
   },
   {
-    "title": "Ruby Is Not a Serious Programming Language",
-    "url": "https://www.wired.com/story/ruby-is-not-a-serious-programming-language/",
-    "published_at": "2025-12-01T07:00:00-05:00",
-    "source": "Wired",
-    "summary": "Ruby survives on affection, not utility. Let's move on.",
-    "content_html": "",
-    "image_url": "https://media.wired.com/photos/6925f4622a28299e7369f588/master/pass/MR%20012%20'Ruby'%20(1).jpg",
-    "summary_text": "Ruby survives on affection, not utility. Let's move on.",
-    "category": "software",
-    "_permalink": "/p/4e1b722584/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/4e1b722584/",
-    "_summary_240": "Ruby survives on affection, not utility. Let's move on.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/4e1b722584/thumbnail.png"
-  },
-  {
     "title": "Funding grants for new research into AI and mental health",
     "url": "https://openai.com/index/ai-mental-health-research-grants",
     "published_at": "2025-12-01T07:00:00-05:00",
@@ -1050,6 +1033,21 @@
       "ai",
       "openai"
     ]
+  },
+  {
+    "title": "Ruby Is Not a Serious Programming Language",
+    "url": "https://www.wired.com/story/ruby-is-not-a-serious-programming-language/",
+    "published_at": "2025-12-01T07:00:00-05:00",
+    "source": "Wired",
+    "summary": "Ruby survives on affection, not utility. Let's move on.",
+    "content_html": "",
+    "image_url": "https://media.wired.com/photos/6925f4622a28299e7369f588/master/pass/MR%20012%20'Ruby'%20(1).jpg",
+    "summary_text": "Ruby survives on affection, not utility. Let's move on.",
+    "category": "software",
+    "_permalink": "/p/4e1b722584/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/4e1b722584/",
+    "_summary_240": "Ruby survives on affection, not utility. Let's move on.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/4e1b722584/thumbnail.png"
   },
   {
     "title": "OpenAI and NORAD team up to bring new magic to \u201cNORAD Tracks Santa\u201d",
@@ -1085,6 +1083,37 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/19fb0f38b3/",
     "_summary_240": "Low-profile group has quickly emerged as a top developer of image generation technology",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/19fb0f38b3/thumbnail.png"
+  },
+  {
+    "title": "OpenAI takes an ownership stake in Thrive Holdings to accelerate enterprise AI adoption",
+    "url": "https://openai.com/index/thrive-holdings",
+    "published_at": "2025-12-01T00:00:00-05:00",
+    "source": "OpenAI News",
+    "summary": "OpenAI takes an ownership stake in Thrive Holdings to accelerate enterprise AI adoption, embedding frontier research and engineering directly into accounting and IT services to boost speed, accuracy, and efficiency while creating a scalable model for industry-wide transformation.",
+    "content_html": "",
+    "image_url": "",
+    "summary_text": "OpenAI takes an ownership stake in Thrive Holdings to accelerate enterprise AI adoption, embedding frontier research and engineering directly into accounting and IT services to boost speed, accuracy, and efficiency while creating a scalable model for industry...",
+    "category": "ai",
+    "_trending_tags": [
+      "ai",
+      "openai"
+    ]
+  },
+  {
+    "title": "Accenture and OpenAI accelerate enterprise AI success",
+    "url": "https://openai.com/index/accenture-partnership",
+    "published_at": "2025-12-01T00:00:00-05:00",
+    "source": "OpenAI News",
+    "summary": "Accenture and OpenAI are collaborating to help enterprises bring agentic AI capabilities into the core of their business and unlock new levels of growth.",
+    "content_html": "",
+    "image_url": "",
+    "summary_text": "Accenture and OpenAI are collaborating to help enterprises bring agentic AI capabilities into the core of their business and unlock new levels of growth.",
+    "category": "ai",
+    "_trending_tags": [
+      "agent",
+      "ai",
+      "openai"
+    ]
   },
   {
     "title": "Agent coordination is the missing piece in AI commerce \u2014 new AWS and Visa blueprints target the gap",
@@ -1123,37 +1152,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/6a2ad4cae3/",
     "_summary_240": "As AI, cloud, and other technology investments soar, organizations have to make investment decisions with increased speed and clarity. Practices like FinOps, IT financial...",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/6a2ad4cae3/thumbnail.png"
-  },
-  {
-    "title": "OpenAI takes an ownership stake in Thrive Holdings to accelerate enterprise AI adoption",
-    "url": "https://openai.com/index/thrive-holdings",
-    "published_at": "2025-12-01T00:00:00-05:00",
-    "source": "OpenAI News",
-    "summary": "OpenAI takes an ownership stake in Thrive Holdings to accelerate enterprise AI adoption, embedding frontier research and engineering directly into accounting and IT services to boost speed, accuracy, and efficiency while creating a scalable model for industry-wide transformation.",
-    "content_html": "",
-    "image_url": "",
-    "summary_text": "OpenAI takes an ownership stake in Thrive Holdings to accelerate enterprise AI adoption, embedding frontier research and engineering directly into accounting and IT services to boost speed, accuracy, and efficiency while creating a scalable model for industry...",
-    "category": "ai",
-    "_trending_tags": [
-      "ai",
-      "openai"
-    ]
-  },
-  {
-    "title": "Accenture and OpenAI accelerate enterprise AI success",
-    "url": "https://openai.com/index/accenture-partnership",
-    "published_at": "2025-12-01T00:00:00-05:00",
-    "source": "OpenAI News",
-    "summary": "Accenture and OpenAI are collaborating to help enterprises bring agentic AI capabilities into the core of their business and unlock new levels of growth.",
-    "content_html": "",
-    "image_url": "",
-    "summary_text": "Accenture and OpenAI are collaborating to help enterprises bring agentic AI capabilities into the core of their business and unlock new levels of growth.",
-    "category": "ai",
-    "_trending_tags": [
-      "agent",
-      "ai",
-      "openai"
-    ]
   },
   {
     "title": "The AI skills employers want \u2014 and what business schools teach",
@@ -1354,7 +1352,7 @@
     "source": "Financial Times - Technology",
     "summary": "The executive on the \u2018hideous\u2019 implementation of the 2022 Chips Act, his new role heading up a Christian AI platform \u2014 and why quantum could upend computing",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/4fe842a8-4e47-486d-a247-0f86d69d4279.jpg",
+    "image_url": "",
     "summary_text": "The executive on the \u2018hideous\u2019 implementation of the 2022 Chips Act, his new role heading up a Christian AI platform \u2014 and why quantum could upend computing",
     "category": "ai",
     "_trending_tags": [
@@ -1415,20 +1413,20 @@
     ]
   },
   {
-    "title": "Scania accelerates operations across its global workforce with ChatGPT",
-    "url": "https://www.youtube.com/watch?v=0luMwmnvRuQ",
-    "published_at": "2025-11-20T20:43:32-05:00",
-    "source": "OpenAI YouTube",
-    "summary": "Scania builds the trucks, buses, and transport systems that keep the world moving. With AI in their engineering-led organisation, they're evolving from vehicle maker to sustainable transport ecosystem leader. Read more: https://openai.com/index/scania/",
+    "title": "Claude Agent Skills Explained",
+    "url": "https://www.youtube.com/watch?v=fOxC44g8vig",
+    "published_at": "2025-11-26T17:09:15-05:00",
+    "source": "Anthropic YouTube",
+    "summary": "Agent Skills are organized folders that package expertise that Claude can automatically invoke when relevant to the task at hand. Join the Claude Developer Discord - https://anthropic.com/discord Learn more about Agent Skills - https://www.claude.com/blog/skills 00:06 Introducing Agent Skills 00:30 How Agent Skills work 01:08 Agent Skills vs Claude.md 01:42 Agent Skills vs MCP Servers 02:05 Agent...",
     "content_html": "",
-    "image_url": "https://i.ytimg.com/vi/0luMwmnvRuQ/maxresdefault.jpg",
-    "summary_text": "Scania builds the trucks, buses, and transport systems that keep the world moving. With AI in their engineering-led organisation, they're evolving from vehicle maker to sustainable transport ecosystem leader. Read more: https://openai.com/index/scania/",
+    "image_url": "https://i.ytimg.com/vi/fOxC44g8vig/maxresdefault.jpg",
+    "summary_text": "Agent Skills are organized folders that package expertise that Claude can automatically invoke when relevant to the task at hand. Join the Claude Developer Discord - https://anthropic.com/discord Learn more about Agent Skills - https://www.claude.com/blog/ski...",
     "category": "ai",
     "_trending_tags": [
+      "agent",
       "ai",
-      "chatgpt",
-      "gpt",
-      "openai"
+      "anthropic",
+      "claude"
     ]
   },
   {
