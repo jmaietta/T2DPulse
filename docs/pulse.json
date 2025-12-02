@@ -1,21 +1,112 @@
 [
   {
-    "title": "Bitmain Is A National Security Concern: David Feith",
+    "title": "Changing Software Development with Frontier Agents",
+    "url": "https://www.bloomberg.com/news/videos/2025-12-02/changing-software-development-with-frontier-agents-video",
+    "published_at": "2025-12-02T15:17:56-05:00",
+    "source": "Bloomberg Technology",
+    "summary": "Swami Sivasubramanian, vice president for Agentic AI at AWS, discusses the impact of new frontier agents being deployed by Amazon and how it's changing the way software is being developed. He joins Ed Ludlow on \u201cBloomberg Tech.\u201d (Source: Bloomberg)",
+    "content_html": "",
+    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iWKMYUgbQQSo/v3/1200x-1.jpg",
+    "summary_text": "Swami Sivasubramanian, vice president for Agentic AI at AWS, discusses the impact of new frontier agents being deployed by Amazon and how it's changing the way software is being developed. He joins Ed Ludlow on \u201cBloomberg Tech.\u201d (Source: Bloomberg)",
+    "category": "software",
+    "_trending_tags": [
+      "agent",
+      "ai",
+      "amazon"
+    ],
+    "_permalink": "/p/e5ccdb5038/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/e5ccdb5038/",
+    "_summary_240": "Swami Sivasubramanian, vice president for Agentic AI at AWS, discusses the impact of new frontier agents being deployed by Amazon and how it's changing the way software is being...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/e5ccdb5038/thumbnail.png"
+  },
+  {
+    "title": "How Amazon is Embracing the AI 'Chaos'",
+    "url": "https://www.bloomberg.com/news/videos/2025-12-02/how-amazon-is-embracing-the-ai-chaos-video",
+    "published_at": "2025-12-02T15:09:46-05:00",
+    "source": "Bloomberg Technology",
+    "summary": "Colleen Aubrey, senior vice president of AWS Applied AI Solutions, says the company is broadly embracing \"the chaos\" of AI by putting the tools into the hands of their employees. She joins Ed Ludlow on \u201cBloomberg Tech.\u201d (Source: Bloomberg)",
+    "content_html": "",
+    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/it_KIJ8giTi0/v3/1200x-1.jpg",
+    "summary_text": "Colleen Aubrey, senior vice president of AWS Applied AI Solutions, says the company is broadly embracing \"the chaos\" of AI by putting the tools into the hands of their employees. She joins Ed Ludlow on \u201cBloomberg Tech.\u201d (Source: Bloomberg)",
+    "category": "ai",
+    "_trending_tags": [
+      "ai",
+      "amazon"
+    ],
+    "_permalink": "/p/038e4cca89/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/038e4cca89/",
+    "_summary_240": "Colleen Aubrey, senior vice president of AWS Applied AI Solutions, says the company is broadly embracing \"the chaos\" of AI by putting the tools into the hands of their employees....",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/038e4cca89/thumbnail.png"
+  },
+  {
+    "title": "Agentic AI Turns Supply Planning Into a Continuous, Autonomous System",
+    "url": "https://www.pymnts.com/artificial-intelligence-2/2025/agentic-ai-turns-supply-planning-into-a-continuous-autonomous-system/",
+    "published_at": "2025-12-02T15:07:08-05:00",
+    "source": "PYMNTS",
+    "summary": "As companies experiment with agentic AI, some are discovering that real transformation starts when planning becomes dynamic. The World Economic Forum says global supply chains now operate under \u201cperpetual volatility,\u201d which eliminates periodic planning cycles. Early trailblazers are responding by deploying agentic artificial intelligence systems that update supply, production and logistics plans ...",
+    "content_html": "<p style=\"font-weight: 400;\">As companies experiment with agentic AI, some are discovering that real transformation starts when planning becomes dynamic. The World Economic Forum <a href=\"https://www.weforum.org/stories/2025/12/agentic-ai-change-supply-planning/\" rel=\"noopener\" target=\"_blank\">says</a> global supply chains now operate under \u201cperpetual volatility,\u201d which eliminates periodic planning cycles.</p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p style=\"font-weight: 400;\">Early trailblazers are responding by deploying agentic artificial intelligence systems that update supply, production and logistics plans in real time. These platforms scan demand updates, supplier signals, inventory imbalances, transit delays and external risks, then adjust plans within minutes, marking a shift from scheduled planning to continuous, autonomous decisioning.</p>\n<h2 style=\"font-weight: 400;\"><strong>Cutting Down Manual Reconciliation</strong></h2>\n<p style=\"font-weight: 400;\">Demand data now flows into planning systems much faster than traditional workflows. Many companies connect CRM and order-management platforms like Salesforce to their supply-chain planning tools via API connectors, allowing changes to each downstream planning model in minutes.</p>\n<p style=\"font-weight: 400;\">This reduces manual reconciliation and bridges the gap between customer demand and operational planning. In past coverage, PYMNTS <a href=\"https://www.pymnts.com/artificial-intelligence-2/2025/ai-helps-global-supply-chains-operate-closer-to-real-time/\" rel=\"noopener\" target=\"_blank\">reported</a> that companies using autonomous planning and logistics tools cut manual reconciliation in half and reduced expedited shipping costs by up to 5%.</p>\n<p style=\"font-weight: 400;\"><a href=\"https://blueyonder.com/\" rel=\"noopener\" target=\"_blank\">Blue Yonder</a>, an AI supply chain startup, released five artificial intelligence agents that show how these systems operate at scale. Its Inventory Ops Agent detects supply-demand mismatches, identifies root causes and proposes corrective actions within minutes.</p>\n<p style=\"font-weight: 400;\">The company says the platform processes over 25 billion supply-chain intelligence operations per day. Early adopters report faster response when suppliers shift lead times or carriers miss milestones.</p>\n<h2 style=\"font-weight: 400;\"><strong>Multi-Agent Frameworks Coordinate Across Company Boundaries</strong></h2>\n<p style=\"font-weight: 400;\">Supply chains depend on coordination among many entities. Multi-agent AI frameworks enable that coordination by allowing suppliers, manufacturers and retailers to update plans autonomously. A recent <a href=\"https://arxiv.org/pdf/2411.10184\" rel=\"noopener\" target=\"_blank\">study</a> demonstrated that agents representing each partner exchanged structured updates on demand, capacity, and constraints and reached consensus plans 80% faster than human-led cycles. For example, SAP <a href=\"https://www.sap.com/topics/innovation-guide/h2#supply-chain-management\" rel=\"noopener\" target=\"_blank\">introduced</a> SAP Supply Chain Orchestration, a new solution that helps customers achieve a synchronized supply chain. This is designed to improve risk detection, provide actionable insights and allow for coordinated responses across supply chains.</p>\n<p style=\"font-weight: 400;\">The model reduces the bullwhip effect because upstream and downstream partners receive the same updates simultaneously. When demand shifts at a retailer, the supplier\u2019s agent sees the update immediately and adjusts capacity. When a manufacturer changes production output, the distributor\u2019s agent recalibrates allocations. The study shows lower total network costs and faster recovery from disruptions when every partner uses multi-agent coordination rather than manual reconciliation.</p>\n<p style=\"font-weight: 400;\">PYMNTS <a href=\"https://www.pymnts.com/artificial-intelligence-2/2025/from-just-in-time-to-just-in-case-inside-schneider-electrics-ai-powered-supply-chain/\" rel=\"noopener\" target=\"_blank\">reported</a> on Schneider Electric\u2019s use of real-time analytics and continuous data inputs to adjust operations early rather than reacting after disruptions appear. That mirrors the multi-agent coordination model now emerging in broader supply-chain systems.</p>\n<h2 style=\"font-weight: 400;\"><strong>Preemptive Disruption Control</strong></h2>\n<p style=\"font-weight: 400;\">Preemptive logistics gives supply chains early warning before disruptions hit. Agentic AI scans GPS signals, carrier histories, port congestion, weather data, and vessel telemetry to calculate risk for each shipment. When risk rises, the system adjusts what is needed before service levels drop.</p>\n<p style=\"font-weight: 400;\">DHL Express <a href=\"https://www.eglobalis.com/ai-in-global-logistics-enhancing-customer-experience-through-intelligent-operations/\" rel=\"noopener\" target=\"_blank\">integrated</a> Google Cloud\u2019s AI and natural language models to predict customs delays and weather risks. Its AI engine sends alerts to customers before disruptions occur, reducing inquiries by 40%. The system depends on millions of daily data points from sensors and global flight networks.</p>\n<p style=\"font-weight: 400;\">Procter &amp; Gamble <a href=\"https://www.eglobalis.com/ai-in-global-logistics-enhancing-customer-experience-through-intelligent-operations/\" rel=\"noopener\" target=\"_blank\">built</a> an AI-powered control tower that simulates scenarios in its global supply network. It uses <a href=\"https://www.sap.com/products/scm/integrated-business-planning.html\" rel=\"noopener\" target=\"_blank\">SAP Integrated Business Planning</a>\u00a0(IBP) with predictive analytics to identify potential delays caused by political, climate, or transportation issues. It can then reroute goods in advance.</p>\n<div>\n<p class=\"elementtoproof\"><i>For all PYMNTS AI coverage, subscribe to the daily<span class=\"apple-converted-space\">\u00a0</span></i><a href=\"https://www.pymnts.com/subscribe/\" rel=\"noopener\" target=\"_blank\" title=\"https://www.pymnts.com/subscribe/\">AI\u00a0Newsletter</a><i>.</i></p>\n</div>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/artificial-intelligence-2/2025/agentic-ai-turns-supply-planning-into-a-continuous-autonomous-system/\">Agentic AI Turns Supply Planning Into a Continuous, Autonomous System</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
+    "image_url": "https://www.pymnts.com/wp-content/uploads/2022/12/supply-chain.jpg?w=457",
+    "summary_text": "As companies experiment with agentic AI, some are discovering that real transformation starts when planning becomes dynamic. The World Economic Forum says global supply chains now operate under \u201cperpetual volatility,\u201d which eliminates periodic planning cycles...",
+    "category": "ai",
+    "_trending_tags": [
+      "agent",
+      "ai"
+    ],
+    "_permalink": "/p/7d87eee9b9/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/7d87eee9b9/",
+    "_summary_240": "As companies experiment with agentic AI, some are discovering that real transformation starts when planning becomes dynamic. The World Economic Forum says global supply chains...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/7d87eee9b9/thumbnail.png"
+  },
+  {
+    "title": "DeepSeek's Improved Performance",
+    "url": "https://newsletter.tek2dayholdings.com/p/deepseeks-improved-performance",
+    "published_at": "2025-12-02T15:02:06-05:00",
+    "source": "TEK2day Newsletter",
+    "summary": "I don\u2019t put much credence into the AI Evals given that real-world model performance is nowhere close to eval performance.",
+    "content_html": "<div class=\"captioned-image-container\"><figure><a class=\"image-link image2 is-viewable-img\" href=\"https://substackcdn.com/image/fetch/$s_!f4q1!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F835dbd4d-801c-4a89-bd62-a5464df60beb_1016x726.png\" target=\"_blank\"><div class=\"image2-inset\"><source type=\"image/webp\" /><img alt=\"\" class=\"sizing-normal\" height=\"726\" src=\"https://substackcdn.com/image/fetch/$s_!f4q1!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F835dbd4d-801c-4a89-bd62-a5464df60beb_1016x726.png\" width=\"1016\" /><div class=\"image-link-expand\"><div class=\"pencraft pc-display-flex pc-gap-8 pc-reset\"><button class=\"pencraft pc-reset pencraft icon-container restack-image\" tabindex=\"0\" type=\"button\"><svg class=\"lucide lucide-refresh-cw\" fill=\"none\" height=\"20\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" viewBox=\"0 0 24 24\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8\"></path><path d=\"M21 3v5h-5\"></path><path d=\"M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16\"></path><path d=\"M8 16H3v5\"></path></svg></button><button class=\"pencraft pc-reset pencraft icon-container view-image\" tabindex=\"0\" type=\"button\"><svg class=\"lucide lucide-maximize2 lucide-maximize-2\" fill=\"none\" height=\"20\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" viewBox=\"0 0 24 24\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><polyline points=\"15 3 21 3 21 9\"></polyline><polyline points=\"9 21 3 21 3 15\"></polyline><line x1=\"21\" x2=\"14\" y1=\"3\" y2=\"10\"></line><line x1=\"3\" x2=\"10\" y1=\"21\" y2=\"14\"></line></svg></button></div></div></div></a></figure></div><h4>I don&#8217;t put much credence into the AI Evals given that real-world model performance is nowhere close to eval performance. Further, I believe the model companies train on the evals. That said, <strong>DeepSeek</strong> continues to improve (chart below). </h4><p>How will <strong>OpenAI</strong> and <strong>Anthropic</strong> compete long-term with well-funded <strong>Google (GOOGL)</strong> <strong>Gemini</strong> on the one-hand, and inexpensive opensource models such as <strong>DeepSeek</strong> on the other? </p><p>Steady state, most language models will be opensource. China&#8217;s strategy of flooding the market with high quality opensource models is brilliant. The U.S. is taking the wrong approach by pursuing a closed model strategy. The real IP will be what people build on top of the models, not the models themselves.</p><div class=\"captioned-image-container\"><figure><a class=\"image-link image2 is-viewable-img\" href=\"https://substackcdn.com/image/fetch/$s_!zV30!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ffca184ea-932e-4b68-b82e-16d54075e3d8_4096x2286.jpeg\" target=\"_blank\"><div class=\"image2-inset\"><source type=\"image/webp\" /><img alt=\"\" class=\"sizing-normal\" height=\"813\" src=\"https://substackcdn.com/image/fetch/$s_!zV30!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ffca184ea-932e-4b68-b82e-16d54075e3d8_4096x2286.jpeg\" width=\"1456\" /><div class=\"image-link-expand\"><div class=\"pencraft pc-display-flex pc-gap-8 pc-reset\"><button class=\"pencraft pc-reset pencraft icon-container restack-image\" tabindex=\"0\" type=\"button\"><svg class=\"lucide lucide-refresh-cw\" fill=\"none\" height=\"20\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" viewBox=\"0 0 24 24\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8\"></path><path d=\"M21 3v5h-5\"></path><path d=\"M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16\"></path><path d=\"M8 16H3v5\"></path></svg></button><button class=\"pencraft pc-reset pencraft icon-container view-image\" tabindex=\"0\" type=\"button\"><svg class=\"lucide lucide-maximize2 lucide-maximize-2\" fill=\"none\" height=\"20\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" viewBox=\"0 0 24 24\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><polyline points=\"15 3 21 3 21 9\"></polyline><polyline points=\"9 21 3 21 3 15\"></polyline><line x1=\"21\" x2=\"14\" y1=\"3\" y2=\"10\"></line><line x1=\"3\" x2=\"10\" y1=\"21\" y2=\"14\"></line></svg></button></div></div></div></a></figure></div><div><hr /></div><p></p>",
+    "image_url": "https://substackcdn.com/image/fetch/$s_!f4q1!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F835dbd4d-801c-4a89-bd62-a5464df60beb_1016x726.png",
+    "summary_text": "I don\u2019t put much credence into the AI Evals given that real-world model performance is nowhere close to eval performance.",
+    "category": "ai",
+    "_trending_tags": [
+      "ai"
+    ],
+    "_permalink": "/p/fecb2df056/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/fecb2df056/",
+    "_summary_240": "I don\u2019t put much credence into the AI Evals given that real-world model performance is nowhere close to eval performance.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/fecb2df056/thumbnail.png"
+  },
+  {
+    "title": "OpenAI and Vendor Mixpanel Face Lawsuit After Data Breach",
+    "url": "https://www.pymnts.com/cybersecurity/2025/openai-and-vendor-mixpanel-face-lawsuit-after-data-breach/",
+    "published_at": "2025-12-02T14:47:14-05:00",
+    "source": "PYMNTS",
+    "summary": "A California resident reportedly sued artificial intelligence startup OpenAI and data analytics provider Mixpanel on Monday (Dec. 1) after the companies disclosed a data breach in November. Jon Woodard\u2019s class action lawsuit alleges that the companies violated their duty to safeguard user data, and it seeks damages and injunctive relief requiring improved security measures, [\u2026] The post OpenAI an...",
+    "content_html": "<p style=\"font-weight: 400;\">A California resident reportedly sued artificial intelligence startup <a href=\"https://openai.com/\" rel=\"noopener\" target=\"_blank\">OpenAI</a> and data analytics provider <a href=\"https://mixpanel.com/home/\" rel=\"noopener\" target=\"_blank\">Mixpanel</a> on Monday (Dec. 1) after the companies disclosed a data breach in November.</p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p style=\"font-weight: 400;\">Jon Woodard\u2019s class action lawsuit alleges that the companies violated their duty to safeguard user data, and it seeks damages and injunctive relief requiring improved security measures, Bloomberg Law <a href=\"https://news.bloomberglaw.com/litigation/openai-mixpanel-face-class-action-lawsuit-over-data-breach\" rel=\"noopener\" target=\"_blank\">reported</a> Monday.</p>\n<p style=\"font-weight: 400;\">OpenAI disclosed the security incident in a Wednesday (Nov. 26) <a href=\"https://openai.com/index/mixpanel-incident/\" rel=\"noopener\" target=\"_blank\">blog post</a>, saying the incident occurred within Mixpanel\u2019s systems, involved limited analytics data related to some users of OpenAI\u2019s application programming interface (API) product, and did not impact users of ChatGPT and other products.</p>\n<p style=\"font-weight: 400;\">OpenAI used Mixpanel for web analytics on the front-end interface for the AI startup\u2019s API product, using the company\u2019s services to help understand product usage and improve the product, according to the post.</p>\n<p style=\"font-weight: 400;\">\u201cThis was not a breach of OpenAI\u2019s systems,\u201d the post said. \u201cNo chat, API requests, API usage data, passwords, credentials, API keys, payment details or government IDs were compromised or exposed.\u201d</p>\n<p style=\"font-weight: 400;\">The data exported from Mixpanel during the breach may have included the user\u2019s name, email address, and organization or user IDs associated with the API account; the approximate coarse location based on API user browser; the operating system and browser used to access the API account; and the referring websites, per the post.</p>\n<p style=\"font-weight: 400;\">Mixpanel published its response to the security incident a day later, in a Thursday (Nov. 27) <a href=\"https://mixpanel.com/blog/sms-security-incident/\" rel=\"noopener\" target=\"_blank\">blog post</a>, saying it detected a smishing campaign on Nov. 8 and promptly contained and eradicated unauthorized access and secured impacted user accounts.</p>\n<p style=\"font-weight: 400;\">\u201cWe proactively communicated with all impacted customers,\u201d the post said.</p>\n<p style=\"font-weight: 400;\">OpenAI said in its blog post that after reviewing the security incident, it terminated its use of Mixpanel and is conducting expanded security reviews across its vendor ecosystem.</p>\n<p style=\"font-weight: 400;\">\u201cSince names, email addresses and OpenAI API metadata (e.g., user IDs) were included, we encourage you to remain vigilant for credible-looking phishing attempts or spam,\u201d the company told users in its post.</p>\n<p style=\"font-weight: 400;\">Verizon reported in May that 30% of <a href=\"https://www.pymnts.com/cybersecurity/2025/30percent-of-data-breaches-involve-victims-third-party-suppliers-and-vendors/\" rel=\"noopener\" target=\"_blank\">data breaches</a> that occurred during the year ended Oct. 31, 2024, involved third parties such as suppliers, vendors, hosting partners and outsourced IT support providers that act as custodians to companies\u2019 data and underpin critical parts of those organizations\u2019 operations.</p>\n<p style=\"font-weight: 400;\">It was reported in September that experts predict that the number of <a href=\"https://www.pymnts.com/news/security-and-risk/2025/hacks-third-party-supply-chains-expected-rise-2025/\" rel=\"noopener\" target=\"_blank\">cyberattacks</a> on companies\u2019 third-party suppliers will increase this year.</p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/cybersecurity/2025/openai-and-vendor-mixpanel-face-lawsuit-after-data-breach/\">OpenAI and Vendor Mixpanel Face Lawsuit After Data Breach</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
+    "image_url": "https://www.pymnts.com/wp-content/uploads/2025/05/OpenAI-1.jpg?w=457",
+    "summary_text": "A California resident reportedly sued artificial intelligence startup OpenAI and data analytics provider Mixpanel on Monday (Dec. 1) after the companies disclosed a data breach in November. Jon Woodard\u2019s class action lawsuit alleges that the companies violate...",
+    "category": "ai",
+    "_trending_tags": [
+      "ai",
+      "openai"
+    ],
+    "_permalink": "/p/00f958c839/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/00f958c839/",
+    "_summary_240": "A California resident reportedly sued artificial intelligence startup OpenAI and data analytics provider Mixpanel on Monday (Dec. 1) after the companies disclosed a data breach...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/00f958c839/thumbnail.png"
+  },
+  {
+    "title": "Chinese Maker of Bitcoin-Mining Machines Is a Security Threat, Says Expert",
     "url": "https://www.bloomberg.com/news/videos/2025-12-02/bitmain-is-a-national-security-concern-david-feith-video",
     "published_at": "2025-12-02T14:24:16-05:00",
     "source": "Bloomberg Technology",
     "summary": "Bloomberg News reports that a Chinese manufacturer, Bitmain Technologies Ltd, that sells most of the world\u2019s Bitcoin-mining machines \u2014 including 16,000 of them to a venture backed by two of President Donald Trump\u2019s sons \u2014 has been the focus of a months-long federal investigation to assess whether its products pose risks to US national security. David Feith, who left the Trump administration\u2019s Nat...",
     "content_html": "",
-    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iwrgi8c48SrY/v3/1200x-1.jpg",
+    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iQ31bQFgST1E/v3/1200x-1.jpg",
     "summary_text": "Bloomberg News reports that a Chinese manufacturer, Bitmain Technologies Ltd, that sells most of the world\u2019s Bitcoin-mining machines \u2014 including 16,000 of them to a venture backed by two of President Donald Trump\u2019s sons \u2014 has been the focus of a months-long f...",
     "category": "fintech",
     "_trending_tags": [
       "ai"
-    ],
-    "_permalink": "/p/571f6834d5/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/571f6834d5/",
-    "_summary_240": "Bloomberg News reports that a Chinese manufacturer, Bitmain Technologies Ltd, that sells most of the world\u2019s Bitcoin-mining machines \u2014 including 16,000 of them to a venture...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/571f6834d5/thumbnail.png"
+    ]
   },
   {
     "title": "Crypto Treasuries Cos. Lack Transparency: Kavita Gupta",
@@ -681,26 +772,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/530f497cf2/thumbnail.png"
   },
   {
-    "title": "It\u2019s their job to keep AI from destroying everything",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/836335/anthropic-societal-impacts-team-ai-claude-effects",
-    "published_at": "2025-12-02T10:11:21-05:00",
-    "source": "The Verge",
-    "summary": "One night in May 2020, during the height of lockdown, Deep Ganguli was worried. Ganguli, then research director at the Stanford Institute for Human-Centered AI, had just been alerted to OpenAI's new paper on GPT-3, its latest large language model. This new AI model was potentially 10 times more advanced than any other of its [\u2026]",
-    "content_html": "<figure>\n\n<img alt=\"\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/12/258130_Profile_of_Anthropics_7-person_societal_impacts_team_CVirginia3.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100\" />\n\t<figcaption>\n\t\t</figcaption>\n</figure>\n<p class=\"has-drop-cap has-text-align-none\">One night in May 2020, during the height of lockdown, Deep Ganguli was worried.</p>\n<p class=\"has-text-align-none\">Ganguli, then research director at the Stanford Institute for Human-Centered AI, had just been alerted to OpenAI's new <a href=\"https://arxiv.org/pdf/2005.14165\">paper</a> on GPT-3, its latest large language model. This new AI model was potentially 10 times more advanced than any other of its kind - and it was doing things he had never thought possible for AI. The scaling data revealed in the research suggested there was no sign of it slowing down. Ganguli fast-forwarded five years in his head, running through the kinds of societal implications he spent his time at Stanford anticipating, and the changes he e \u2026</p>\n<p><a href=\"https://www.theverge.com/ai-artificial-intelligence/836335/anthropic-societal-impacts-team-ai-claude-effects\">Read the full story at The Verge.</a></p>",
-    "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/12/258130_Profile_of_Anthropics_7-person_societal_impacts_team_CVirginia3.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "summary_text": "One night in May 2020, during the height of lockdown, Deep Ganguli was worried. Ganguli, then research director at the Stanford Institute for Human-Centered AI, had just been alerted to OpenAI's new paper on GPT-3, its latest large language model. This new AI...",
-    "category": "ai",
-    "_trending_tags": [
-      "ai",
-      "gpt",
-      "openai"
-    ],
-    "_permalink": "/p/3f76796caf/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/3f76796caf/",
-    "_summary_240": "One night in May 2020, during the height of lockdown, Deep Ganguli was worried. Ganguli, then research director at the Stanford Institute for Human-Centered AI, had just been...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/3f76796caf/thumbnail.png"
-  },
-  {
     "title": "Identity checks to power AI stablecoin payments added to Coinbase-incubated x402",
     "url": "https://cointelegraph.com/news/coinbase-x402-ai-stablecoin-payments-id-age-verification?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
     "published_at": "2025-12-02T10:01:00-05:00",
@@ -949,25 +1020,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/8aeb6a5e80/thumbnail.png"
   },
   {
-    "title": "Eric Schmidt, Xavier Niel Back French AI Voice Startup Gradium",
-    "url": "https://www.bloomberg.com/news/articles/2025-12-02/eric-schmidt-xavier-niel-back-french-ai-voice-startup-gradium",
-    "published_at": "2025-12-02T06:15:33-05:00",
-    "source": "Bloomberg Technology",
-    "summary": "A Paris-based artificial intelligence voice startup called Gradium has spun out of a nonprofit research lab and raised $70 million in funding from a group of A-list investors, including former Google Chief Executive Officer Eric Schmidt and French telecom billionaire Xavier Niel.",
-    "content_html": "Xavier Niel, billionaire and chairman of Iliad SA, left, during an interview at the AI Action Summit in Paris, France, on Monday, Feb. 10, 2025. France is set to announce a total of \u20ac109 billion in investment in artificial intelligence projects in the country by companies, funds and other sources over the coming years, President Emmanuel Macron said on the eve of a two-day AI Action Summit.",
-    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iAgdD6ihcOdA/v1/1200x-1.jpg",
-    "summary_text": "A Paris-based artificial intelligence voice startup called Gradium has spun out of a nonprofit research lab and raised $70 million in funding from a group of A-list investors, including former Google Chief Executive Officer Eric Schmidt and French telecom bil...",
-    "category": "ai",
-    "_trending_tags": [
-      "ai",
-      "google"
-    ],
-    "_permalink": "/p/89d0b44e29/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/89d0b44e29/",
-    "_summary_240": "A Paris-based artificial intelligence voice startup called Gradium has spun out of a nonprofit research lab and raised $70 million in funding from a group of A-list investors,...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/89d0b44e29/thumbnail.png"
-  },
-  {
     "title": "Bitcoin to end four-year cycle, break out to new highs in 2026: Grayscale",
     "url": "https://cointelegraph.com/news/bitcoin-four-year-cycle-break-out-new-highs-2026-grayscale?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
     "published_at": "2025-12-02T05:32:17-05:00",
@@ -984,24 +1036,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/29e8c89f8d/",
     "_summary_240": "Grayscale said Bitcoin\u2019s 2025 sell-off looks like a local bottom, not a new cycle peak, with Fed policy and US crypto bills key for 2026.",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/29e8c89f8d/thumbnail.png"
-  },
-  {
-    "title": "Economy and AI Push Make Shorting US Stocks Dangerous, 22V Says",
-    "url": "https://www.bloomberg.com/news/articles/2025-12-02/economy-and-ai-push-make-shorting-us-stocks-dangerous-22v-says",
-    "published_at": "2025-12-02T05:30:00-05:00",
-    "source": "Bloomberg Technology",
-    "summary": "Anyone looking to bet against US stocks this month would be wise to consider the strength of the American economy and ongoing enthusiasm around artificial intelligence.",
-    "content_html": "AI data center hardware in Ashburn, Virginia, US. Photographer: Andrew Caballero-Reynolds/Getty Images",
-    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iP_VziYeROGE/v0/1200x-1.jpg",
-    "summary_text": "Anyone looking to bet against US stocks this month would be wise to consider the strength of the American economy and ongoing enthusiasm around artificial intelligence.",
-    "category": "ai",
-    "_trending_tags": [
-      "ai"
-    ],
-    "_permalink": "/p/03e4201055/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/03e4201055/",
-    "_summary_240": "Anyone looking to bet against US stocks this month would be wise to consider the strength of the American economy and ongoing enthusiasm around artificial intelligence.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/03e4201055/thumbnail.png"
   },
   {
     "title": "OpenAI\u2019s Sam Altman declares \u2018code red\u2019 after rivals make advances",
@@ -1598,12 +1632,16 @@
     "source": "Financial Times - Technology",
     "summary": "Hanneke Faber says Swiss company known for everyday tech will become the \u2018eyes, ears and hands\u2019 of AI",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/54e35bdb-31e6-44aa-92cc-2f41e45e52ff.jpg",
     "summary_text": "Hanneke Faber says Swiss company known for everyday tech will become the \u2018eyes, ears and hands\u2019 of AI",
     "category": "ai",
     "_trending_tags": [
       "ai"
-    ]
+    ],
+    "_permalink": "/p/8b6154e6b3/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/8b6154e6b3/",
+    "_summary_240": "Hanneke Faber says Swiss company known for everyday tech will become the \u2018eyes, ears and hands\u2019 of AI",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/8b6154e6b3/thumbnail.png"
   },
   {
     "title": "LLMs Give Rise To Superhuman Product Managers",
@@ -1666,7 +1704,7 @@
     "source": "Financial Times - Technology",
     "summary": "The executive on the \u2018hideous\u2019 implementation of the 2022 Chips Act, his new role heading up a Christian AI platform \u2014 and why quantum could upend computing",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/4fe842a8-4e47-486d-a247-0f86d69d4279.jpg",
     "summary_text": "The executive on the \u2018hideous\u2019 implementation of the 2022 Chips Act, his new role heading up a Christian AI platform \u2014 and why quantum could upend computing",
     "category": "ai",
     "_trending_tags": [
@@ -1680,7 +1718,7 @@
     "source": "Financial Times - Technology",
     "summary": "Growth forecast for 2025 raised to 7.37%, the fastest rate in 15 years",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/85090be8-bd9c-4cea-9e18-6aee3ca05794.jpg",
     "summary_text": "Growth forecast for 2025 raised to 7.37%, the fastest rate in 15 years",
     "category": "ai",
     "_trending_tags": [
@@ -1708,7 +1746,7 @@
     "source": "Financial Times - Technology",
     "summary": "Defence-tech start-up becomes one of Europe\u2019s most valuable drone makers",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/d3753312-b0ec-479d-baf6-107f743fa431.jpg",
     "summary_text": "Defence-tech start-up becomes one of Europe\u2019s most valuable drone makers",
     "category": "fintech"
   },
