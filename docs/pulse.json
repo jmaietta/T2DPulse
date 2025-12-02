@@ -1,5 +1,160 @@
 [
   {
+    "title": "Nuvei Boosts Global Processing Capabilities by Migrating Core Services to Microsoft Azure",
+    "url": "https://www.pymnts.com/partnerships/2025/nuvei-boosts-global-processing-capabilities-by-migrating-core-services-to-microsoft-azure/",
+    "published_at": "2025-12-02T13:31:16-05:00",
+    "source": "PYMNTS",
+    "summary": "Nuvei\u2019s global processing capabilities can now support 10,000 transactions per second and more than $1 trillion in annual payment volume. These capabilities were expanded by the company\u2019s expanded strategic partnership with Microsoft, which enables Nuvei\u2019s core payment processing application programming interfaces (APIs) to run on Microsoft Azure and use Azure AI to optimize transactions [\u2026] The ...",
+    "content_html": "<p><a href=\"https://www.nuvei.com/\" rel=\"noopener\" target=\"_blank\"><span>Nuvei</span></a><span>\u2019s global processing capabilities can now support 10,000 transactions per second and more than $1 trillion in annual payment volume.</span></p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p><span>These capabilities were expanded by the company\u2019s expanded strategic partnership with </span><a href=\"https://www.microsoft.com/en-us/\" rel=\"noopener\" target=\"_blank\"><span>Microsoft</span></a><span>, which enables Nuvei\u2019s core payment processing application programming interfaces (APIs) to run on Microsoft </span><a href=\"https://azure.microsoft.com/en-us/\" rel=\"noopener\" target=\"_blank\"><span>Azure</span></a><span> and use Azure AI to optimize transactions in real time, the companies said in a Tuesday (Dec. 2) </span><a href=\"https://www.nuvei.com/posts/nuvei-expands-partnership-with-microsoft-to-scale-global-payments-infrastructure-to-support-more-than-10-000-transactions-per-second\" rel=\"noopener\" target=\"_blank\"><span>press release</span></a><span>.</span></p>\n<p><span>Migrating its core services to Azure will also provide Nuvei with greater elasticity, faster performance, more consistent global reliability and reduced reliance on third-party technologies, according to the release.</span></p>\n<p><span>The new architecture also enables future enhancements and ongoing improvements to resilience and optimization, per the release.</span></p>\n<p><span>\u201cRunning our core processing on Microsoft Azure gives us an AI-native foundation that adapts in real time, optimizes transactions globally and meets regional data-residency requirements,\u201d Nuvei Chair and CEO </span><a href=\"https://www.nuvei.com/persons/philip-fayer\" rel=\"noopener\" target=\"_blank\"><span>Phil Fayer</span></a><span> said in the release. \u201cIt strengthens our performance today and enables us to deliver new AI-driven capabilities as our clients scale.\u201d</span></p>\n<p><span>Azure\u2019s distributed architecture supports payments processing by absorbing peak transaction volume, maintaining continuous uptime, and optimizing latency and authorization outcomes worldwide, according to the release.</span></p>\n<p><span>Nuvei is leveraging Azure for private connectivity via </span><a href=\"https://azure.microsoft.com/en-us/products/expressroute\" rel=\"noopener\" target=\"_blank\"><span>Azure ExpressRoute</span></a><span>, network protection via </span><a href=\"https://azure.microsoft.com/en-us/products/azure-firewall\" rel=\"noopener\" target=\"_blank\"><span>Azure Firewall</span></a><span>, containerized workloads via </span><a href=\"https://azure.microsoft.com/en-us/products/kubernetes-service\" rel=\"noopener\" target=\"_blank\"><span>Azure Kubernetes Service</span></a><span>, and security via </span><a href=\"https://learn.microsoft.com/en-us/azure/defender-for-cloud/defender-for-cloud-introduction\" rel=\"noopener\" target=\"_blank\"><span>Azure Defender for Cloud</span></a><span> and </span><a href=\"https://learn.microsoft.com/en-us/azure/web-application-firewall/ag/ag-overview\" rel=\"noopener\" target=\"_blank\"><span>Azure Application Gateway with Web Application Firewall</span></a><span>, the release said.</span></p>\n<p><span>\u201cMicrosoft Azure\u2019s AI-ready infrastructure complements Nuvei\u2019s enterprise payments expertise,\u201d </span><a href=\"https://ca.linkedin.com/in/tyler-pichach\" rel=\"noopener\" target=\"_blank\"><span>Tyler Pichach</span></a><span>, global head of payments strategy at Microsoft, said in the release. \u201cThis step positions Nuvei to deliver the resilient, responsive and optimized payment experiences required for the future of global commerce.\u201d</span></p>\n<p><span>PYMNTS reported in October that Microsoft\u2019s 40% cloud growth and expanding </span><a href=\"https://www.pymnts.com/earnings/2025/microsofts-ai-bet-keeps-paying-off-across-cloud-copilot-and-code/\" rel=\"noopener\" target=\"_blank\"><span>AI infrastructure</span></a><span> offerings helped drive the company\u2019s latest quarterly revenue to nearly $78 billion.</span></p>\n<p><span>Meanwhile, Nuvei announced two new developments in November: the company\u2019s ability to process </span><a href=\"https://www.pymnts.com/digital-payments/2025/nuvei-begins-processing-merchant-transactions-via-epis-digital-wallet-wero/\" rel=\"noopener\" target=\"_blank\"><span>merchant transactions</span></a><span> via </span><a href=\"https://wero-wallet.eu/\" rel=\"noopener\" target=\"_blank\"><span>Wero</span></a><span>, the </span><a href=\"https://epicompany.eu/\" rel=\"noopener\" target=\"_blank\"><span>European Payment Initiative</span></a><span>\u2019s digital wallet that delivers instant account-to-account payments across Europe, and its integration of </span><a href=\"https://developer.visa.com/capabilities/visa-direct-account-and-wallet\" rel=\"noopener\" target=\"_blank\"><span>Visa Direct for Account</span></a><span> into its </span><a href=\"https://www.pymnts.com/partnerships/2025/nuvei-adds-visa-direct-for-account-to-its-payments-platform/\" rel=\"noopener\" target=\"_blank\"><span>global payments</span></a><span> platform to let merchants send funds directly to the bank accounts of consumers and workers in eligible countries.</span></p>\n<p><i><span>For all PYMNTS AI coverage, subscribe to the daily </span></i><a href=\"https://pymnts.com/subscribe/\" rel=\"noopener\" target=\"_blank\"><i><span>AI Newsletter</span></i></a><i><span>.</span></i></p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/partnerships/2025/nuvei-boosts-global-processing-capabilities-by-migrating-core-services-to-microsoft-azure/\">Nuvei Boosts Global Processing Capabilities by Migrating Core Services to Microsoft Azure</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
+    "image_url": "https://www.pymnts.com/wp-content/uploads/2025/12/nuvei-microsoft-azure-partnerships-payments-processing-ai-artificial-intelligence-e1764699773206.jpeg?w=457",
+    "summary_text": "Nuvei\u2019s global processing capabilities can now support 10,000 transactions per second and more than $1 trillion in annual payment volume. These capabilities were expanded by the company\u2019s expanded strategic partnership with Microsoft, which enables Nuvei\u2019s co...",
+    "category": "fintech",
+    "_trending_tags": [
+      "microsoft"
+    ],
+    "_permalink": "/p/246abe4c39/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/246abe4c39/",
+    "_summary_240": "Nuvei\u2019s global processing capabilities can now support 10,000 transactions per second and more than $1 trillion in annual payment volume. These capabilities were expanded by the...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/246abe4c39/thumbnail.png"
+  },
+  {
+    "title": "Is Bitcoin approaching its true value?",
+    "url": "https://www.bloomberg.com/news/videos/2025-12-02/is-bitcoin-approaching-its-true-value",
+    "published_at": "2025-12-02T13:29:33-05:00",
+    "source": "Bloomberg Technology",
+    "summary": "Is Bitcoin approaching its true value? As prices fall around 16% in six months many are questioning the hype. Merryn Somerset Webb explains. (Source: Bloomberg)",
+    "content_html": "",
+    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iZu5zyGBqul0/v3/1200x-1.png",
+    "summary_text": "Is Bitcoin approaching its true value? As prices fall around 16% in six months many are questioning the hype. Merryn Somerset Webb explains. (Source: Bloomberg)",
+    "category": "fintech",
+    "_trending_tags": [
+      "ai"
+    ],
+    "_permalink": "/p/7fc3e2216c/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/7fc3e2216c/",
+    "_summary_240": "Is Bitcoin approaching its true value? As prices fall around 16% in six months many are questioning the hype. Merryn Somerset Webb explains. (Source: Bloomberg)",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/7fc3e2216c/thumbnail.png"
+  },
+  {
+    "title": "Unlimit enters stablecoin infrastructure race with decentralized clearing house",
+    "url": "https://cointelegraph.com/news/unlimit-stablecoin-infrastructure-decentralized-clearing-house?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "published_at": "2025-12-02T13:22:13-05:00",
+    "source": "Cointelegraph",
+    "summary": "The new platform lands amid a wave of fintech adoption of stablecoins for global transfers, payouts and onchain settlement.",
+    "content_html": "",
+    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTIvMDE5YWRmYmYtMjNhOC03MzcyLTkzMWYtZjQ0ZDJmNTkxOTRk.jpg",
+    "summary_text": "The new platform lands amid a wave of fintech adoption of stablecoins for global transfers, payouts and onchain settlement.",
+    "category": "fintech",
+    "_trending_tags": [
+      "ai",
+      "fintech"
+    ],
+    "_permalink": "/p/2b1cacdf99/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/2b1cacdf99/",
+    "_summary_240": "The new platform lands amid a wave of fintech adoption of stablecoins for global transfers, payouts and onchain settlement.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/2b1cacdf99/thumbnail.png"
+  },
+  {
+    "title": "NVIDIA Partners With Mistral AI to Accelerate New Family of Open Models",
+    "url": "https://blogs.nvidia.com/blog/mistral-frontier-open-models/",
+    "published_at": "2025-12-02T13:00:30-05:00",
+    "source": "NVIDIA News",
+    "summary": "Today, Mistral AI announced the Mistral 3 family of open-source multilingual, multimodal models, optimized across NVIDIA supercomputing and edge platforms. Mistral Large 3 is a mixture-of-experts (MoE) model \u2014 instead of firing up every neuron for every token, it only activates the parts of the model with the most impact. The result is efficiency Read Article",
+    "content_html": "",
+    "image_url": "https://s3.amazonaws.com/cms.ipressroom.com/219/files/202512/692f29703d63321e2cabaafb_genai-tech-blog-gtc25-paris-nv-mistral-1920x1080-1-842x450/genai-tech-blog-gtc25-paris-nv-mistral-1920x1080-1-842x450_thmb.jpg",
+    "summary_text": "Today, Mistral AI announced the Mistral 3 family of open-source multilingual, multimodal models, optimized across NVIDIA supercomputing and edge platforms. Mistral Large 3 is a mixture-of-experts (MoE) model \u2014 instead of firing up every neuron for every token...",
+    "category": "ai",
+    "_trending_tags": [
+      "ai",
+      "mistral",
+      "nvidia"
+    ],
+    "_permalink": "/p/e4b8f43ffb/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/e4b8f43ffb/",
+    "_summary_240": "Today, Mistral AI announced the Mistral 3 family of open-source multilingual, multimodal models, optimized across NVIDIA supercomputing and edge platforms. Mistral Large 3 is a...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/e4b8f43ffb/thumbnail.png"
+  },
+  {
+    "title": "ChatGPT referrals to retailers\u2019 apps increased 28% year-over-year, says report",
+    "url": "https://techcrunch.com/2025/12/02/chatgpt-referrals-to-retailers-apps-increased-28-year-over-year-says-report/",
+    "published_at": "2025-12-02T12:56:16-05:00",
+    "source": "TechCrunch",
+    "summary": "ChatGPT referrals to retailers' apps were up on Black Friday year-over-year, with Walmart and Amazon benefitting the most.",
+    "content_html": "",
+    "image_url": "https://techcrunch.com/wp-content/uploads/2023/01/GettyImages-1336136316.jpg?resize=1200,800",
+    "summary_text": "ChatGPT referrals to retailers' apps were up on Black Friday year-over-year, with Walmart and Amazon benefitting the most.",
+    "category": "ai",
+    "_trending_tags": [
+      "ai",
+      "amazon",
+      "chatgpt",
+      "gpt"
+    ],
+    "_permalink": "/p/745e8f0a2e/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/745e8f0a2e/",
+    "_summary_240": "ChatGPT referrals to retailers' apps were up on Black Friday year-over-year, with Walmart and Amazon benefitting the most.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/745e8f0a2e/thumbnail.png"
+  },
+  {
+    "title": "Propel Holdings Gets OK to Launch Banking Services",
+    "url": "https://www.pymnts.com/bank-regulation/2025/propel-holdings-gets-approval-launch-banking-services/",
+    "published_at": "2025-12-02T12:54:36-05:00",
+    "source": "PYMNTS",
+    "summary": "FinTech Propel Holdings received regulatory permission to launch its own bank. The approval came from the Office of the Commissioner of Financial Institutions (OCFI) of Puerto Rico and allows Propel Bank to be licensed as an international financial entity (IFE) overseen by the regulator, according to a Tuesday (Dec. 2) press release. \u201cPropel Bank [\u2026] The post Propel Holdings Gets OK to Launch Ban...",
+    "content_html": "<p><span>FinTech </span><a class=\"editor-rtfLink\" href=\"https://www.propelholdings.com/\" rel=\"noopener\" target=\"_blank\"><span>Propel Holdings</span></a><span> received regulatory permission to launch its own bank.</span></p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p><span>The approval came from the </span><a class=\"editor-rtfLink\" href=\"https://www.ocif.pr.gov/\" rel=\"noopener\" target=\"_blank\"><span>Office of the Commissioner of Financial Institutions (OCFI) of Puerto Rico</span></a><span> and allows Propel Bank to </span><span>be licensed</span><span> as an international financial entity (IFE) overseen by the regulator, according to a Tuesday (Dec. 2) </span><a class=\"editor-rtfLink\" href=\"https://www.prnewswire.com/news-releases/propel-holdings-receives-regulatory-approval-to-launch-propel-bank-302629493.html\" rel=\"noopener\" target=\"_blank\"><span>press release</span></a><span>.</span></p>\n<p><span>\u201cPropel Bank represents an evolution of Propel\u2019s FinTech-bank partnership platform,\u201d the release said. \u201cAt launch, Propel Bank will focus on serving existing and future bank partners by providing core consumer lending services, including underwriting, compliance and customer service. Propel Holdings will not become a bank holding company.\u201d</span></p>\n<p><span>The IFE license allows Propel Bank to have an expanded presence in existing and new markets, according to the release. </span><span>The bank will be headquartered in Puerto Rico with its own management team, employ the company\u2019s artificial intelligence-powered platform</span><span>, and</span> <span>is expected</span><span> to become operational in the first half of 2026.</span></p>\n<p><span>\u201cPropel Bank marks the next step in our journey to become global leaders by strengthening our partnership platform, expanding our reach and opening new pathways for growth,\u201d Propel Holdings CEO </span><a class=\"editor-rtfLink\" href=\"https://ca.linkedin.com/in/clive-kinross-b9022815\" rel=\"noopener\" target=\"_blank\"><span>Clive Kinross</span></a><span> said in the release. \u201cThis approval validates the strength of our team, our technology and the business we\u2019ve built, and positions us to create greater opportunity for partners, shareholders and underserved consumers.\u201d</span></p>\n<p><span>The PYMNTS Intelligence report \u201c</span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/study/global-money-movement-cross-border-payments/\" rel=\"noopener\" target=\"_blank\"><span>Global Money Movement: How Digital Wallets Are Transforming Cross-Border Payments</span></a><span>\u201d found that 62% of banks in the United States and the United Kingdom are actively seeking to </span><span>work</span><span> with FinTech firms to </span><span>bolster</span><span> their cross-border payment offerings.</span></p>\n<p><span>\u201cThis integration signals a trend in the banking industry where collaboration with </span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/news/cross-border-commerce/cross-border-payments/2025/two-thirds-of-banks-team-with-fintechs-on-cross-border-payments/\" rel=\"noopener\" target=\"_blank\"><span>FinTech</span></a><span> firms is becoming a key strategy for driving innovation,\u201d PYMNTS wrote in March.</span></p>\n<p><span>Meanwhile, PYMNTS spoke with Propel\u2019s Kinross in June about the </span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/alternative-credit/2025/tight-credit-market-creates-goldilocks-scenario-alternative-lenders/\" rel=\"noopener\" target=\"_blank\"><span>credit</span></a><span> pipeline, which he called \u201cas tight as it\u2019s been over the last 10 years\u201d amid a surge in delinquencies.</span></p>\n<p><span>For companies like Propel, which provides alternative access to credit for underserved consumers, the shift </span><span>marks a chance</span><span> to serve </span><span>people</span><span> often overlooked by traditional institutions.</span></p>\n<p><span>\u201cThere\u2019s a big distinction between riskier consumers and risky business,\u201d Kinross said.</span></p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/bank-regulation/2025/propel-holdings-gets-approval-launch-banking-services/\">Propel Holdings Gets OK to Launch Banking Services</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
+    "image_url": "https://www.pymnts.com/wp-content/uploads/2025/12/Propel-Holdings.png?w=457",
+    "summary_text": "FinTech Propel Holdings received regulatory permission to launch its own bank. The approval came from the Office of the Commissioner of Financial Institutions (OCFI) of Puerto Rico and allows Propel Bank to be licensed as an international financial entity (IF...",
+    "category": "fintech",
+    "_trending_tags": [
+      "fintech"
+    ],
+    "_permalink": "/p/43f1db0ccd/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/43f1db0ccd/",
+    "_summary_240": "FinTech Propel Holdings received regulatory permission to launch its own bank. The approval came from the Office of the Commissioner of Financial Institutions (OCFI) of Puerto...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/43f1db0ccd/thumbnail.png"
+  },
+  {
+    "title": "AWS launches new Nova AI models and a service that gives customers more control",
+    "url": "https://techcrunch.com/2025/12/02/aws-launches-new-nova-ai-models-and-a-service-that-gives-customers-more-control/",
+    "published_at": "2025-12-02T12:54:02-05:00",
+    "source": "TechCrunch",
+    "summary": "Amazon Web Services announced four new AI models within its Nova model family and a frontier model service.",
+    "content_html": "",
+    "image_url": "https://techcrunch.com/wp-content/uploads/2024/12/IMG_6848.jpg?resize=1200,900",
+    "summary_text": "Amazon Web Services announced four new AI models within its Nova model family and a frontier model service.",
+    "category": "ai",
+    "_trending_tags": [
+      "ai",
+      "amazon"
+    ],
+    "_permalink": "/p/804e749054/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/804e749054/",
+    "_summary_240": "Amazon Web Services announced four new AI models within its Nova model family and a frontier model service.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/804e749054/thumbnail.png"
+  },
+  {
+    "title": "OpenAI\u2019s Altman Declares \u2018Code Red\u2019 on ChatGPT: Reports",
+    "url": "https://www.bloomberg.com/news/videos/2025-12-02/openai-s-altman-declares-code-red-on-chatgpt-reports",
+    "published_at": "2025-12-02T12:51:54-05:00",
+    "source": "Bloomberg Technology",
+    "summary": "OpenAI Chief Executive Officer Sam Altman is declaring a \u201ccode red\u201d to speed up improvements to ChatGPT, the Information reported. Altman on Monday called for a \u201csurge\u201d to improve ChatGPT while delaying progress on other efforts such as autonomous AI agents and advertising. Tom Mackenzie reports on Bloomberg Television. (Source: Bloomberg)",
+    "content_html": "",
+    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iAooX.iMgznw/v3/1200x-1.jpg",
+    "summary_text": "OpenAI Chief Executive Officer Sam Altman is declaring a \u201ccode red\u201d to speed up improvements to ChatGPT, the Information reported. Altman on Monday called for a \u201csurge\u201d to improve ChatGPT while delaying progress on other efforts such as autonomous AI agents a...",
+    "category": "ai",
+    "_trending_tags": [
+      "agent",
+      "ai",
+      "chatgpt",
+      "gpt",
+      "openai"
+    ],
+    "_permalink": "/p/83d70b3b6a/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/83d70b3b6a/",
+    "_summary_240": "OpenAI Chief Executive Officer Sam Altman is declaring a \u201ccode red\u201d to speed up improvements to ChatGPT, the Information reported. Altman on Monday called for a \u201csurge\u201d to...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/83d70b3b6a/thumbnail.png"
+  },
+  {
     "title": "AI Fluency for nonprofits course trailer",
     "url": "https://www.youtube.com/watch?v=xatyxfEevZA",
     "published_at": "2025-12-02T12:41:41-05:00",
@@ -43,7 +198,7 @@
     "source": "Bloomberg Technology",
     "summary": "Strategy Chief Executive Officer Phong Le says he hopes to keep paying a dividend to investors in perpetuity. Le says there are no plans to sell its Bitcoin holdings even as token prices continue to fall. He speaks on \"Bloomberg Crypto.\" (Source: Bloomberg)",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ixXBiKvZb3ac/v3/1200x-1.jpg",
     "summary_text": "Strategy Chief Executive Officer Phong Le says he hopes to keep paying a dividend to investors in perpetuity. Le says there are no plans to sell its Bitcoin holdings even as token prices continue to fall. He speaks on \"Bloomberg Crypto.\" (Source: Bloomberg)",
     "category": "fintech",
     "_permalink": "/p/fd677bca1d/",
@@ -300,10 +455,10 @@
     "url": "https://techcrunch.com/2025/12/02/amazon-releases-an-impressive-new-ai-chip-and-teases-a-nvidia-friendly-roadmap/",
     "published_at": "2025-12-02T11:00:00-05:00",
     "source": "TechCrunch",
-    "summary": "AWS has been building its own AI chips \u2013 and systems \u2013 for years now. It just released its third version, known as Trainium3 with some impressive specs.",
+    "summary": "AWS has been building its own AI chips \u2014 and systems \u2014 for years now. It just released its third version, known as Trainium3, with some impressive specs.",
     "content_html": "",
     "image_url": "https://techcrunch.com/wp-content/uploads/2020/01/GettyImages-1136663877.jpg?resize=1200,800",
-    "summary_text": "AWS has been building its own AI chips \u2013 and systems \u2013 for years now. It just released its third version, known as Trainium3 with some impressive specs.",
+    "summary_text": "AWS has been building its own AI chips \u2014 and systems \u2014 for years now. It just released its third version, known as Trainium3, with some impressive specs.",
     "category": "ai",
     "_trending_tags": [
       "ai",
@@ -312,7 +467,7 @@
     ],
     "_permalink": "/p/259e771c56/",
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/259e771c56/",
-    "_summary_240": "AWS has been building its own AI chips \u2013 and systems \u2013 for years now. It just released its third version, known as Trainium3 with some impressive specs.",
+    "_summary_240": "AWS has been building its own AI chips \u2014 and systems \u2014 for years now. It just released its third version, known as Trainium3, with some impressive specs.",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/259e771c56/thumbnail.png"
   },
   {
@@ -484,29 +639,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/2bcf3ce01f/",
     "_summary_240": "Velera is expanding its ATM network at thousands of Speedway locations around the country. The payments credit union service organization announced Tuesday (Dec. 2) that it would...",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/2bcf3ce01f/thumbnail.png"
-  },
-  {
-    "title": "OpenAI Delays Some Products Amid Competition From Google and Anthropic",
-    "url": "https://www.pymnts.com/news/artificial-intelligence/2025/openai-delays-some-products-amid-competition-from-google-anthropic/",
-    "published_at": "2025-12-02T09:48:42-05:00",
-    "source": "PYMNTS",
-    "summary": "OpenAI is reportedly delaying some products amid increased competition from rivals Google and Anthropic. CEO Sam Altman declared a \u201ccode red\u201d related to the need to bolster the company\u2019s ChatGPT artificial intelligence model, the Financial Times reported Tuesday (Dec. 2), citing an internal memo. Altman said the company would redouble its efforts to improve [\u2026] The post OpenAI Delays Some Product...",
-    "content_html": "<p><a class=\"editor-rtfLink\" href=\"https://openai.com/\" rel=\"noopener\" target=\"_blank\"><span>OpenAI</span></a><span> is reportedly delaying some products amid increased competition from rivals </span><a class=\"editor-rtfLink\" href=\"https://www.google.com/\" rel=\"noopener\" target=\"_blank\"><span>Google</span></a><span> and </span><a class=\"editor-rtfLink\" href=\"https://www.anthropic.com/\" rel=\"noopener\" target=\"_blank\"><span>Anthropic</span></a><span>.</span></p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p><span>CEO </span><a class=\"editor-rtfLink\" href=\"https://blog.samaltman.com/\" rel=\"noopener\" target=\"_blank\"><span>Sam Altman</span></a><span> declared a \u201ccode red\u201d related to the need to bolster the company\u2019s </span><a class=\"editor-rtfLink\" href=\"https://chatgpt.com/\" rel=\"noopener\" target=\"_blank\"><span>ChatGPT</span></a><span> artificial intelligence model, the Financial Times </span><a class=\"editor-rtfLink\" href=\"https://www.ft.com/content/7a42396f-487a-47b0-8121-8d8f2112fa53\" rel=\"noopener\" target=\"_blank\"><span>reported</span></a><span> Tuesday (Dec. 2), citing an internal memo.</span></p>\n<p><span>Altman said the company would redouble its efforts to improve the speed, reliability and personalization of its chatbot, per the report. He added that OpenAI would hold off on other products as \u201cwe are at a critical time for ChatGPT.\u201d</span></p>\n<p><span>Among the projects being delayed are the company\u2019s planned advertising products, </span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/news/artificial-intelligence/2025/ai-agents-are-moving-to-the-front-of-the-checkout-line/\" rel=\"noopener\" target=\"_blank\"><span>AI agents</span></a><span> aimed at automating shopping, and </span><a class=\"editor-rtfLink\" href=\"https://help.openai.com/en/articles/12293630-chatgpt-pulse\" rel=\"noopener\" target=\"_blank\"><span>Pulse</span></a><span>, which offers users personalized morning updates, the report said.</span></p>\n<p><span>OpenAI is </span><span>dealing with</span><span> increased competition, higher data center costs, and an ongoing battle to </span><span>hold onto</span><span> top talent. Google and Anthropic unveiled new </span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/google/2025/gemini-2-5-and-ai-overviews-mark-googles-biggest-ai-push-yet/\" rel=\"noopener\" target=\"_blank\"><span>AI models</span></a><span> that </span><span>surpassed</span><span> OpenAI\u2019s </span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/news/artificial-intelligence/2025/openai-new-gpt-5-can-write-software-demand/\" rel=\"noopener\" target=\"_blank\"><span>GPT-5</span></a><span> on certain industry benchmarks</span><span>, according to the report</span><span>.</span></p>\n<p><a class=\"editor-rtfLink\" href=\"https://uk.linkedin.com/in/koray-kavukcuoglu-0439a720\" rel=\"noopener\" target=\"_blank\"><span>Koray Kavukcuoglu</span></a><span>, Google\u2019s AI architect and </span><a class=\"editor-rtfLink\" href=\"https://deepmind.google/\" rel=\"noopener\" target=\"_blank\"><span>DeepMind</span></a><span>\u2019s chief technology officer, said that the company \u201cpushed our performance quite significantly\u201d by training its AI models using Google\u2019s in-house chips, per the report. The tech giant also said it was integrating its latest AI models into products immediately.</span></p>\n<p><span>Meanwhile, PYMNTS wrote this week about the status of </span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/artificial-intelligence-2/2025/chatgpt-hits-its-third-year-and-redefines-digital-strategy/\" rel=\"noopener\" target=\"_blank\"><span>generative AI</span></a><span> in the business world as ChatGPT marked its third year Sunday (Nov. 30).</span></p>\n<p><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/study_posts/since-march-triple-the-cfos-report-very-positive-roi-from-genai/\" rel=\"noopener\" target=\"_blank\"><span>PYMNTS Intelligence</span></a><span> found that 90% of chief financial officers reported \u201cvery positive\u201d returns on their investment from adopting generative AI. That was up from 27% in March 2024, indicating a \u201cdecisive shift from pilot experiments to structured deployment,\u201d PYMNTS wrote.</span></p>\n<p><span>OpenAI added 1 million paying business subscribers between February and June of this year, marking 3 million subscribers across ChatGPT Enterprise, Team and Education tiers. ChatGPT Plus holds the highest retention rate in the category, with 71% of users staying with the service after six months.</span></p>\n<p><span>As for the financial services industry, whose digital evolution has been inconsistent, generative AI represents a genuine break with the past.</span></p>\n<p><span>PYMNTS CEO Karen Webster referred to it as \u201cthe </span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/artificial-intelligence-2/2025/gen-ai-the-technology-that-broke-the-adoption-curve/\" rel=\"noopener\" target=\"_blank\"><span>technology</span></a><span> that broke the adoption curve,\u201d as it bypassed the usual frictions.</span></p>\n<p><em>For all PYMNTS AI coverage, subscribe to the daily </em><a href=\"https://pymnts.com/subscribe/\" rel=\"noopener\" target=\"_blank\"><em>AI Newsletter</em></a><em>.</em></p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/news/artificial-intelligence/2025/openai-delays-some-products-amid-competition-from-google-anthropic/\">OpenAI Delays Some Products Amid Competition From Google and Anthropic</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
-    "image_url": "https://www.pymnts.com/wp-content/uploads/2023/03/OpenAI.jpg?w=457",
-    "summary_text": "OpenAI is reportedly delaying some products amid increased competition from rivals Google and Anthropic. CEO Sam Altman declared a \u201ccode red\u201d related to the need to bolster the company\u2019s ChatGPT artificial intelligence model, the Financial Times reported Tues...",
-    "category": "ai",
-    "_trending_tags": [
-      "ai",
-      "anthropic",
-      "chatgpt",
-      "google",
-      "gpt",
-      "openai"
-    ],
-    "_permalink": "/p/c04494325f/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/c04494325f/",
-    "_summary_240": "OpenAI is reportedly delaying some products amid increased competition from rivals Google and Anthropic. CEO Sam Altman declared a \u201ccode red\u201d related to the need to bolster the...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/c04494325f/thumbnail.png"
   },
   {
     "title": "Russia mulls relaxing crypto rules to blunt impact of Western sanctions",
@@ -936,24 +1068,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/28429c2275/thumbnail.png"
   },
   {
-    "title": "AI Startup Upstage Hires KB Securities, Mirae for Korea IPO",
-    "url": "https://www.bloomberg.com/news/articles/2025-12-02/ai-startup-upstage-hires-kb-securities-mirae-for-korea-ipo",
-    "published_at": "2025-12-02T00:45:05-05:00",
-    "source": "Bloomberg Technology",
-    "summary": "South Korean AI startup Upstage has hired KB Securities Co. and Mirae Asset Securities Co. to assist with an initial public offering as early as the second half of 2026, according to people familiar with the matter.",
-    "content_html": "",
-    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/i58.e2W8TxR8/v0/1200x-1.jpg",
-    "summary_text": "South Korean AI startup Upstage has hired KB Securities Co. and Mirae Asset Securities Co. to assist with an initial public offering as early as the second half of 2026, according to people familiar with the matter.",
-    "category": "ai",
-    "_trending_tags": [
-      "ai"
-    ],
-    "_permalink": "/p/3b4453122e/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/3b4453122e/",
-    "_summary_240": "South Korean AI startup Upstage has hired KB Securities Co. and Mirae Asset Securities Co. to assist with an initial public offering as early as the second half of 2026,...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/3b4453122e/thumbnail.png"
-  },
-  {
     "title": "AWS goes beyond prompt-level safety with automated reasoning in AgentCore",
     "url": "https://venturebeat.com/ai/aws-goes-beyond-prompt-level-safety-with-automated-reasoning-in-agentcore",
     "published_at": "2025-12-02T00:00:00-05:00",
@@ -1043,24 +1157,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/f22a56ee8e/thumbnail.png"
   },
   {
-    "title": "CZ\u2019s YZi Labs moves to take over board of flatlining BNB treasury",
-    "url": "https://cointelegraph.com/news/cz-yzi-labs-eyes-takeover-cea-industries-board?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-    "published_at": "2025-12-01T21:45:30-05:00",
-    "source": "Cointelegraph",
-    "summary": "YZi Labs has asked CEA Industries shareholders to support its move to shake up the BNB treasury company\u2019s board and install its pick of directors.",
-    "content_html": "",
-    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTIvMDE5YWRjMzktZjA3Yi03YWMyLWExYWMtOTY1YmQ1MjJkZjc0.jpg",
-    "summary_text": "YZi Labs has asked CEA Industries shareholders to support its move to shake up the BNB treasury company\u2019s board and install its pick of directors.",
-    "category": "fintech",
-    "_trending_tags": [
-      "ai"
-    ],
-    "_permalink": "/p/52a8b4337b/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/52a8b4337b/",
-    "_summary_240": "YZi Labs has asked CEA Industries shareholders to support its move to shake up the BNB treasury company\u2019s board and install its pick of directors.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/52a8b4337b/thumbnail.png"
-  },
-  {
     "title": "Hock Tan (AVGO CEO) vs. Sundar Pichai (GOOGL CEO)",
     "url": "https://newsletter.tek2dayholdings.com/p/hock-tan-avgo-ceo-vs-sundar-pichai",
     "published_at": "2025-12-01T20:53:19-05:00",
@@ -1098,25 +1194,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/feff54cca1/",
     "_summary_240": "His replacement is Amar Subramanya, a highly regarded Microsoft executive who spent 16 years at Google, most recently leading engineering for the Gemini Assistant. It's a savvy...",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/feff54cca1/thumbnail.png"
-  },
-  {
-    "title": "One of Google\u2019s biggest AI advantages is what it already knows about you",
-    "url": "https://techcrunch.com/2025/12/01/one-of-googles-biggest-ai-advantages-is-what-it-already-knows-about-you/",
-    "published_at": "2025-12-01T19:17:52-05:00",
-    "source": "TechCrunch",
-    "summary": "The promise is AI that's uniquely helpful because it knows you. But the risk is AI that feels more like surveillance than service.",
-    "content_html": "",
-    "image_url": "https://techcrunch.com/wp-content/uploads/2025/11/pluribus.jpeg?resize=1200,803",
-    "summary_text": "The promise is AI that's uniquely helpful because it knows you. But the risk is AI that feels more like surveillance than service.",
-    "category": "ai",
-    "_trending_tags": [
-      "ai",
-      "google"
-    ],
-    "_permalink": "/p/17fb69c053/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/17fb69c053/",
-    "_summary_240": "The promise is AI that's uniquely helpful because it knows you. But the risk is AI that feels more like surveillance than service.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/17fb69c053/thumbnail.png"
   },
   {
     "title": "Apple replaces head of AI with executive poached from Microsoft",
