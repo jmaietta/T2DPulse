@@ -1,8 +1,8 @@
 {
-  "generated_at": "2025-12-02T10:26:16.051312-05:00",
+  "generated_at": "2025-12-02T10:45:51.033697-05:00",
   "total_keywords": 30,
   "keyword_counts": {
-    "ai": 108,
+    "ai": 109,
     "openai": 18,
     "google": 12,
     "gpt": 12,
@@ -12,11 +12,11 @@
     "nvidia": 6,
     "amazon": 5,
     "cloud": 4,
+    "llm": 4,
     "anthropic": 3,
-    "llm": 3,
     "microsoft": 2,
-    "gpu": 1,
-    "mistral": 1
+    "mistral": 2,
+    "gpu": 1
   },
   "sources_per_keyword": {},
   "top_articles_per_keyword": {}
