@@ -1,5 +1,38 @@
 [
   {
+    "title": "SEC sends warning letters to ETF issuers targeting untamed leverage",
+    "url": "https://cointelegraph.com/news/sec-warning-letters-etf-untamed-leverage?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "published_at": "2025-12-03T13:38:42-05:00",
+    "source": "Cointelegraph",
+    "summary": "The United States Securities and Exchange Commission halted several ETF filings that proposed 3-5 times leverage on the underlying asset.",
+    "content_html": "",
+    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTIvMDE5YWU1MmMtZTQ0Ni03M2ZhLTk4ZjQtYjBlOWM2MDUxYzhh.jpg",
+    "summary_text": "The United States Securities and Exchange Commission halted several ETF filings that proposed 3-5 times leverage on the underlying asset.",
+    "category": "fintech",
+    "_permalink": "/p/66234e4f02/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/66234e4f02/",
+    "_summary_240": "The United States Securities and Exchange Commission halted several ETF filings that proposed 3-5 times leverage on the underlying asset.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/66234e4f02/thumbnail.png"
+  },
+  {
+    "title": "UK explores tougher laws on AI chatbots",
+    "url": "https://www.ft.com/content/12cc60ef-7d97-4d20-a7fd-9a28ff6bcb11",
+    "published_at": "2025-12-03T13:34:54-05:00",
+    "source": "Financial Times - Technology",
+    "summary": "Technology secretary Liz Kendall tells MPs she is \u2018especially worried\u2019 about potential risks to children",
+    "content_html": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/f16ebdbc-8700-48a0-be46-39840d9462dd.jpg",
+    "summary_text": "Technology secretary Liz Kendall tells MPs she is \u2018especially worried\u2019 about potential risks to children",
+    "category": "ai",
+    "_trending_tags": [
+      "ai"
+    ],
+    "_permalink": "/p/cf5c0f4475/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/cf5c0f4475/",
+    "_summary_240": "Technology secretary Liz Kendall tells MPs she is \u2018especially worried\u2019 about potential risks to children",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/cf5c0f4475/thumbnail.png"
+  },
+  {
     "title": "Anthropic\u2019s IPO pitch: helpful, honest, harmless and hulking",
     "url": "https://www.ft.com/content/9c8c1bb7-b1aa-4c9c-9896-791998b506fd",
     "published_at": "2025-12-03T13:32:40-05:00",
@@ -162,19 +195,15 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/8d32f9c458/thumbnail.png"
   },
   {
-    "title": "Fraudulent gambling network may be a nation-state spying operation",
+    "title": "Fraudulent gambling network may actually be something more nefarious",
     "url": "https://arstechnica.com/security/2025/12/fraudulent-gambling-network-may-be-a-nation-state-spying-operation/",
     "published_at": "2025-12-03T12:23:26-05:00",
     "source": "Ars Technica",
     "summary": "Researchers say there's more to the network, which has operated for 14 years.",
-    "content_html": "<p>A sprawling infrastructure that has been bilking unsuspecting people through fraudulent gambling websites for 14 years is likely a dual operation run by a nation-state-sponsored group that is targeting government and private-industry organizations in the US and Europe, researchers said Wednesday.</p>\n<p>Researchers have previously tracked smaller pieces of the enormous infrastructure. Last month, security firm Sucuri <a href=\"https://blog.sucuri.net/2025/11/slot-gacor-the-rise-of-online-casino-spam.html\">reported</a> that the operation seeks out and compromises poorly configured websites running the WordPress CMS. Imperva in January <a href=\"https://www.imperva.com/blog/how-hackers-use-php-backdoors-and-gsocket-to-facilitate-illegal-gambling-in-indonesia/\">said</a> the attackers also scan for and exploit Web apps built with the PHP programming language that have existing webshells or vulnerabilities. Once the weaknesses are exploited, the attackers install a GSocket, a backdoor the attackers use to compromise servers and host gambling Web content on them.</p>\n<p>All of the gambling sites target Indonesian-speaking visitors. Because Indonesian law prohibits gambling, many people in that country are drawn to illicit services. Most of the 236,433 attacker-owned domains hosting the gambling sites are hosted on Cloudflare. Most of the 1,481 hijacked subdomains were hosted on AWS, Azure, and GitHub.</p><p><a href=\"https://arstechnica.com/security/2025/12/fraudulent-gambling-network-may-be-a-nation-state-spying-operation/\">Read full article</a></p>\n<p><a href=\"https://arstechnica.com/security/2025/12/fraudulent-gambling-network-may-be-a-nation-state-spying-operation/#comments\">Comments</a></p>",
+    "content_html": "<p>A sprawling infrastructure that has been bilking unsuspecting people through fraudulent gambling websites for 14 years is likely a dual operation run by a nation-state-sponsored group that is targeting government and private-industry organizations in the US and Europe, researchers said Wednesday.</p>\n<p>Researchers have previously tracked smaller pieces of the enormous infrastructure. Last month, security firm Sucuri <a href=\"https://blog.sucuri.net/2025/11/slot-gacor-the-rise-of-online-casino-spam.html\">reported</a> that the operation seeks out and compromises poorly configured websites running the WordPress CMS. Imperva in January <a href=\"https://www.imperva.com/blog/how-hackers-use-php-backdoors-and-gsocket-to-facilitate-illegal-gambling-in-indonesia/\">said</a> the attackers also scan for and exploit web apps built with the PHP programming language that have existing webshells or vulnerabilities. Once the weaknesses are exploited, the attackers install a GSocket, a backdoor that the attackers use to compromise servers and host gambling web content on them.</p>\n<p>All of the gambling sites target Indonesian-speaking visitors. Because Indonesian law prohibits gambling, many people in that country are drawn to illicit services. Most of the 236,433 attacker-owned domains hosting the gambling sites are hosted on Cloudflare. Most of the 1,481 hijacked subdomains were hosted on Amazon Web Services, Azure, and GitHub.</p><p><a href=\"https://arstechnica.com/security/2025/12/fraudulent-gambling-network-may-be-a-nation-state-spying-operation/\">Read full article</a></p>\n<p><a href=\"https://arstechnica.com/security/2025/12/fraudulent-gambling-network-may-be-a-nation-state-spying-operation/#comments\">Comments</a></p>",
     "image_url": "https://cdn.arstechnica.net/wp-content/uploads/2025/03/warning-alert-screen-1152x648.jpg",
     "summary_text": "Researchers say there's more to the network, which has operated for 14 years.",
-    "category": "fintech",
-    "_permalink": "/p/05a5545573/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/05a5545573/",
-    "_summary_240": "Researchers say there's more to the network, which has operated for 14 years.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/05a5545573/thumbnail.png"
+    "category": "fintech"
   },
   {
     "title": "Taiwan eyes 2026 stablecoin launch as crypto legislation advances: Report",
@@ -636,7 +665,7 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/bf0599c1e0/thumbnail.png"
   },
   {
-    "title": "After intense backlash, India pulls mandate to pre-install government app on smartphones",
+    "title": "After intense backlash, India pulls mandate to preinstall government app on smartphones",
     "url": "https://techcrunch.com/2025/12/03/after-intense-backlash-india-pulls-mandate-to-pre-install-government-app-on-smartphones/",
     "published_at": "2025-12-03T07:11:44-05:00",
     "source": "TechCrunch",
@@ -647,11 +676,7 @@
     "category": "fintech",
     "_trending_tags": [
       "ai"
-    ],
-    "_permalink": "/p/966120aa2e/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/966120aa2e/",
-    "_summary_240": "On Wednesday, the Indian telecom ministry said Sanchar Saathi, an anti-theft and cybersecurity protection app, would remain voluntary, and that smartphone makers would no longer...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/966120aa2e/thumbnail.png"
+    ]
   },
   {
     "title": "China\u2019s AI Future Looks Like a Long Road to Small Profit",
@@ -806,11 +831,7 @@
     "_trending_tags": [
       "ai",
       "openai"
-    ],
-    "_permalink": "/p/fa15e21285/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/fa15e21285/",
-    "_summary_240": "OpenAI researchers are testing \u201cconfessions,\u201d a method that trains models to admit when they make mistakes or act undesirably, helping improve AI honesty, transparency, and trust...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/fa15e21285/thumbnail.png"
+    ]
   },
   {
     "title": "Ethena\u2019s synthetic USDe contracts sharply as dollar-backed stablecoins expand",
@@ -1931,28 +1952,11 @@
     "source": "Financial Times - Technology",
     "summary": "We are failing to invest in the mathematical community at a time when we need it more than ever",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/7a949be0-e5b3-4edf-9789-33bb80a5dbd2.jpg",
+    "image_url": "",
     "summary_text": "We are failing to invest in the mathematical community at a time when we need it more than ever",
     "category": "ai",
     "_trending_tags": [
       "ai"
-    ]
-  },
-  {
-    "title": "OpenAI\u2019s lead under pressure as rivals start to close the gap",
-    "url": "https://www.ft.com/content/8881062d-ff4f-4454-8e9d-d992e8e2c4e3",
-    "published_at": "2025-11-30T00:00:20-05:00",
-    "source": "Financial Times - Technology",
-    "summary": "Three years since the debut of ChatGPT, the $500bn start-up is facing significant challenges to its dominance in AI",
-    "content_html": "",
-    "image_url": "https://images.ft.com/v3/image/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F8a38dca5-77bc-4714-a19d-9cb036999e9e.jpg?source=next-article&fit=scale-down&quality=highest&width=700&dpr=1",
-    "summary_text": "Three years since the debut of ChatGPT, the $500bn start-up is facing significant challenges to its dominance in AI",
-    "category": "ai",
-    "_trending_tags": [
-      "ai",
-      "chatgpt",
-      "gpt",
-      "openai"
     ]
   },
   {
