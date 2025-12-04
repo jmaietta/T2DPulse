@@ -1,5 +1,97 @@
 [
   {
+    "title": "The EU is probing Meta over WhatsApp\u2019s AI chatbot restrictions",
+    "url": "https://www.theverge.com/news/838020/meta-whatsapp-eu-antitrust-investigation-ai-tools",
+    "published_at": "2025-12-04T07:39:53-05:00",
+    "source": "The Verge",
+    "summary": "The European Union has launched a formal investigation into Meta over antitrust concerns with AI restrictions in WhatsApp. The probe aims to \u201cprevent any possible irreparable harm to competition in the AI space\u201d according to the EU, and follows Meta announcing changes to WhatsApp\u2019s terms for businesses in October that will prohibit companies from using [\u2026]",
+    "content_html": "<figure>\n\n<img alt=\"\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/03/STK110_whats_app_Kradtke_02.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100\" />\n\t<figcaption>\n\t\t</figcaption>\n</figure>\n<p class=\"has-text-align-none\">The European Union has launched a <a href=\"https://ec.europa.eu/commission/presscorner/detail/en/ip_25_2896\">formal investigation into Meta</a> over antitrust concerns with AI restrictions in WhatsApp. The probe aims to \u201cprevent any possible irreparable harm to competition in the AI space\u201d according to the EU, and follows Meta announcing <a href=\"https://www.whatsapp.com/legal/business-solution-terms/preview?lang=en\">changes to WhatsApp\u2019s terms</a> for businesses in October that will prohibit companies from using the platform\u2019s API to distribute third-party AI chatbots.</p>\n\n<p class=\"has-text-align-none\">\u201cAs a result of the new policy, competing AI providers may be blocked from reaching their customers through WhatsApp,\u201d says the European Commission\u2019s announcement. \u201cOn the other hand, Meta&#8217;s own AI service \u2018Meta AI&#8217; would remain accessible to users on the platform.\u201d</p>\n\n<p class=\"has-text-align-none\">The updated WhatsApp policy went into effect on October 15 for AI providers that don\u2019t already have services on the platform, and will apply to existing AI providers on WhatsApp starting January 15th, 2026. <a href=\"https://www.theverge.com/news/829808/chatgpt-copilot-ai-llm-leaving-whatsapp-meta\">OpenAI and Microsoft responded</a> to the policy changes earlier this year by announcing that ChatGPT and Copilot would be removed from the platform.</p>\n\n<p class=\"has-text-align-none\">The investigation will assess whether Meta violated the EU laws that \u201cprohibit the abuse of a dominant position\u201d to make it harder for smaller providers to compete with its own services. There is no deadline for the investigation. If Meta is ruled to have breached the bloc\u2019s antitrust rules, it may face fines up to 10 percent of the company\u2019s global annual revenue, working out at $16.45 billion (per Meta\u2019s 2024 earnings).</p>\n\n<p class=\"has-text-align-none\">\u201cAI markets are booming in Europe and beyond,\u201d European competition commissioner Teresa Ribera said in the announcement. \u201cWe must ensure European citizens and businesses can benefit fully from this technological revolution and act to prevent dominant digital incumbents from abusing their power to crowd out innovative competitors.\u201d</p>",
+    "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/03/STK110_whats_app_Kradtke_02.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "summary_text": "The European Union has launched a formal investigation into Meta over antitrust concerns with AI restrictions in WhatsApp. The probe aims to \u201cprevent any possible irreparable harm to competition in the AI space\u201d according to the EU, and follows Meta announcin...",
+    "category": "ai",
+    "_trending_tags": [
+      "ai",
+      "meta"
+    ],
+    "_permalink": "/p/6d2decd8d3/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/6d2decd8d3/",
+    "_summary_240": "The European Union has launched a formal investigation into Meta over antitrust concerns with AI restrictions in WhatsApp. The probe aims to \u201cprevent any possible irreparable...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/6d2decd8d3/thumbnail.png"
+  },
+  {
+    "title": "YouTube Creators Spin Up AI Videos to Keep Babies Glued to the Screen",
+    "url": "https://www.bloomberg.com/news/newsletters/2025-12-04/youtube-creators-spin-up-ai-videos-to-keep-babies-glued-to-the-screen",
+    "published_at": "2025-12-04T07:02:12-05:00",
+    "source": "Bloomberg Technology",
+    "summary": "Welcome to Tech In Depth, our daily newsletter about the business of tech from Bloomberg\u2019s journalists around the world. Today, Alexandra S. Levine follows her report on the growing use of AI videos on YouTube aimed at children younger than 2 years old.",
+    "content_html": "The fastest-growing group of children viewers on YouTube are younger than 2 years old, according to Pew Research Center data.",
+    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/i7JJTdetbfOg/v1/1200x-1.jpg",
+    "summary_text": "Welcome to Tech In Depth, our daily newsletter about the business of tech from Bloomberg\u2019s journalists around the world. Today, Alexandra S. Levine follows her report on the growing use of AI videos on YouTube aimed at children younger than 2 years old.",
+    "category": "ai",
+    "_trending_tags": [
+      "ai"
+    ],
+    "_permalink": "/p/45718fc078/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/45718fc078/",
+    "_summary_240": "Welcome to Tech In Depth, our daily newsletter about the business of tech from Bloomberg\u2019s journalists around the world. Today, Alexandra S. Levine follows her report on the...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/45718fc078/thumbnail.png"
+  },
+  {
+    "title": "Prometeo Debuts Ownership-Check Feature for ACH Payments",
+    "url": "https://www.pymnts.com/api/2025/prometeo-debuts-ownership-check-feature-for-ach-payments/",
+    "published_at": "2025-12-04T07:00:13-05:00",
+    "source": "PYMNTS",
+    "summary": "Uruguay-based FinTech Prometeo on Thursday (Dec. 4) introduced Name Match, a new ownership-evaluation feature within its Bank Account Verification API designed to improve payment accuracy and reduce fraud for businesses moving money across U.S. bank accounts. The capability adds a new layer to Prometeo\u2019s verification flow by checking whether a beneficiary\u2019s name aligns with the [\u2026] The post Prome...",
+    "content_html": "<p><span>Uruguay-based FinTech </span><a href=\"https://prometeoapi.com/en\" rel=\"noopener\" target=\"_blank\"><span>Prometeo</span></a><span> on Thursday (Dec. 4) introduced Name Match, a new ownership-evaluation feature within its Bank Account Verification API designed to improve payment accuracy and reduce fraud for businesses moving money across U.S. bank accounts. The capability adds a new layer to Prometeo\u2019s verification flow by checking whether a beneficiary\u2019s name aligns with the official account holder name on file before a payment is initiated.</span></p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p><span>The launch reflects rising pressure on businesses to strengthen pre-payment controls as ACH volumes expand and fraud attempts increase. Nacha, the governing body for the Automated Clearing House network, has encouraged account validation and pre-transaction checks to reduce misdirected payments and expensive returns. Prometeo said Name Match supports these practices by producing a clear, real-time indicator\u2014Match, Partial Match, No Match or No Data \u2014 that businesses can feed into payout, onboarding or treasury workflows.</span></p>\n<p><span>\u201cToday, verifying that a bank account exists is no longer enough,\u201d Prometeo CEO </span><a href=\"https://www.linkedin.com/in/ximena-aleman/?locale=en\" rel=\"noopener\" target=\"_blank\"><span>Ximena Aleman</span></a><span> told PYMNTS. \u201cAs ACH volumes grow and payment flows accelerate, institutions need to understand the likely association between an account and its intended beneficiary before funds move. Errors from mis-typed information, misdirected payouts, or fraud attempts using substituted account numbers become more costly at scale.\u201d</span></p>\n<p><span>Prometeo said the tool draws on trusted banking network data sources to evaluate likely ownership without requiring users to log in or authenticate via a third-party interface. This distinction matters for companies that need to verify thousands of accounts at scale. Login-based tools can work for individual consumers linking their personal accounts, but introduce friction when enterprises are processing mass payouts, supplier onboarding, or marketplace disbursements.</span></p>\n<p><span>According to Aleman, traditional login-based verification works well in consumer onboarding, where one person links one account. But for large players, the scale looks very different. Payroll processors often need to validate 5,000 to 20,000 accounts in a single payout cycle, and some handle well over 100,000.</span></p>\n<p><span>\u201cGig platforms and marketplaces may onboard or pay out to hundreds of thousands of workers or sellers each month,\u201d Aleman said. \u201cWith Name Match, that workload becomes fully automated. A large payer can submit routing and account numbers plus the expected beneficiary name for an entire batch, and Prometeo orchestrates the ownership evaluation through providers connected to U.S. payment networks, returning an indicative result for each account.\u201d</span></p>\n<p><span>By layering name-matching onto account-existence checks, Prometeo aims to help firms reduce the risk of sending payments to the wrong recipient, limit manual reviews and avoid costs tied to ACH returns. Fraud concerns continue to rise: 79% of organizations reported attempted payment fraud in 2024, according to industry data cited by the company. ACH payment volumes reached $23.2 trillion in the third quarter, intensifying the need for automated safeguards.</span></p>\n<p><span>Prometeo first </span><a href=\"https://www.pymnts.com/news/banking/2024/prometeo-launches-bank-account-validation-offering-for-us-market/\" rel=\"noopener\" target=\"_blank\"><span>introduced</span></a><span> its U.S. Bank Account Verification API in 2024, giving businesses a single integration to validate accounts across both the U.S. and Latin America. The company said its network now covers 100% of U.S. banks and more than 1,200 financial institutions across 11 Latin American markets.</span></p>\n<p><span>Aleman says the rise in payment-fraud attempts is accelerating the shift toward verification models that incorporate stronger ownership signals. Organizations want controls that improve accuracy without slowing down their payment or onboarding flows, and they want those controls to work consistently across markets and payment rails.</span></p>\n<p><span>\u201cOwnership-aware verification is an important part of that evolution,\u201d Aleman said. \u201cAs more activity moves to real-time and instant-payment environments, companies will expect verification methods that can generate clearer, more actionable insights. They will also look for ways to complement ownership evaluation with additional capabilities such as risk scoring, behavioral indicators, or real-time alerts based on their own policies and thresholds.\u201d</span></p>\n<p><span>With Name Match, Prometeo is broadening its infrastructure for ownership-aware payments at a time when enterprises are looking for verification tools that work behind the scenes and support real-time decision making.</span><span>\u00a0</span></p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/api/2025/prometeo-debuts-ownership-check-feature-for-ach-payments/\">Prometeo Debuts Ownership-Check Feature for ACH Payments</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
+    "image_url": "https://www.pymnts.com/wp-content/uploads/2025/12/prometeo-name-match-api-ach-payments-digital-payments-business.jpg?w=457",
+    "summary_text": "Uruguay-based FinTech Prometeo on Thursday (Dec. 4) introduced Name Match, a new ownership-evaluation feature within its Bank Account Verification API designed to improve payment accuracy and reduce fraud for businesses moving money across U.S. bank accounts....",
+    "category": "fintech",
+    "_trending_tags": [
+      "fintech"
+    ],
+    "_permalink": "/p/f492dc1668/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/f492dc1668/",
+    "_summary_240": "Uruguay-based FinTech Prometeo on Thursday (Dec. 4) introduced Name Match, a new ownership-evaluation feature within its Bank Account Verification API designed to improve payment...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/f492dc1668/thumbnail.png"
+  },
+  {
+    "title": "Get ready for an AI country music explosion",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/829964/country-music-ai",
+    "published_at": "2025-12-04T07:00:00-05:00",
+    "source": "The Verge",
+    "summary": "When songwriter Patrick Irwin moved to Nashville last year, he was entering a lottery. Each day hundreds of sessions take place where writers create a song demo to pitch to a publisher. Publishers then share those songs with labels and managers, who may share those songs with the artists. Even if a major country star [\u2026]",
+    "content_html": "<figure>\n\n<img alt=\"\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/11/258106_Nashville_AI_demos_CVirginia.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100\" />\n\t<figcaption>\n\t\t</figcaption>\n</figure>\n<p class=\"has-drop-cap has-text-align-none\">When songwriter Patrick Irwin moved to Nashville last year, he was entering a lottery. Each day hundreds of sessions take place where writers create a song demo to pitch to a publisher. Publishers then share those songs with labels and managers, who may share those songs with the artists. Even if a major country star records (\"cuts\") the song, it still takes a stroke of luck for that song to become a No. 1 hit. </p>\n<p class=\"has-text-align-none\">The odds of winning are extremely low. Recently, Irwin was in a room where his cowriters Sam Fink and Duane Deerweater tried something new. Instead of booking studio time or calling a \"track guy\" to produce a demo, one cowriter open \u2026</p>\n<p><a href=\"https://www.theverge.com/ai-artificial-intelligence/829964/country-music-ai\">Read the full story at The Verge.</a></p>",
+    "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/11/258106_Nashville_AI_demos_CVirginia.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "summary_text": "When songwriter Patrick Irwin moved to Nashville last year, he was entering a lottery. Each day hundreds of sessions take place where writers create a song demo to pitch to a publisher. Publishers then share those songs with labels and managers, who may share...",
+    "category": "ai",
+    "_trending_tags": [
+      "ai"
+    ],
+    "_permalink": "/p/8c12412791/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/8c12412791/",
+    "_summary_240": "When songwriter Patrick Irwin moved to Nashville last year, he was entering a lottery. Each day hundreds of sessions take place where writers create a song demo to pitch to a...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/8c12412791/thumbnail.png"
+  },
+  {
+    "title": "Meta\u2019s WhatsApp AI Features Targeted in EU Antitrust Probe",
+    "url": "https://www.pymnts.com/meta/2025/metas-whatsapp-ai-features-targeted-in-eu-antitrust-probe/",
+    "published_at": "2025-12-04T06:54:29-05:00",
+    "source": "PYMNTS",
+    "summary": "European antitrust regulators have launched an investigation into Meta\u2019s artificial intelligence (AI) enhancement to WhatsApp. The European Commission announced Thursday (Dec. 4) that it had launched a probe into whether the tech giant\u2019s new policy on AI providers\u2019 access to WhatApp violates European Union competition rules. Meta\u2019s new policy, announced in October, bars AI [\u2026] The post Meta\u2019s Wha...",
+    "content_html": "<p><span style=\"font-weight: 400;\">European antitrust regulators have launched an investigation into </span><a href=\"https://www.meta.com/about/?srsltid=AfmBOopTGBlljAKEsI_UysBILEjAPJbhhuxZyWLuAjpx1LmR0xTQ7Wln\" rel=\"noopener\" target=\"_blank\"><span style=\"font-weight: 400;\">Meta\u2019s</span></a><span style=\"font-weight: 400;\"> artificial intelligence (AI) enhancement to </span><a href=\"https://www.whatsapp.com/?lang=en\" rel=\"noopener\" target=\"_blank\"><span style=\"font-weight: 400;\">WhatsApp</span></a><span style=\"font-weight: 400;\">.</span></p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p>The European Commission <a href=\"https://ec.europa.eu/commission/presscorner/detail/en/ip_25_2896\" rel=\"noopener\" target=\"_blank\">announced</a> Thursday (Dec. 4) that it had launched a probe into whether the tech giant\u2019s new policy on AI providers\u2019 access to WhatApp violates European Union competition rules.</p>\n<p>Meta\u2019s new policy, announced in October, bars AI providers from using a tool allowing businesses to communicate with customers via WhatsApp, the \u201cWhatsApp Business Solution,\u201d when AI is the chief service offered.</p>\n<p>\u201cBusinesses may still use AI tools for ancillary or support functions, such as automated customer support offered via WhatsApp,\u201d the EC said in its announcement. \u201cThe Commission is concerned that such new policy may prevent third party AI providers from offering their services through WhatsApp in the European Economic Area.\u201d</p>\n<p>A spokesperson for WhatsApp told PYMNTS the claims behind the planned investigation are \u201cbaseless.\u201d</p>\n<p>\u201cThe emergence of AI chatbots on our Business API puts a strain on our systems that they were not designed to support,\u201d the company said. \u201cEven still, the AI space is highly competitive and people have access to the services of their choice in any number of ways, including app stores, search engines, email services, partnership integrations and operating systems.\u201d</p>\n<p><span style=\"font-weight: 400;\">Meta introduced the AI feature for WhatsApp in March throughout Europe, after an earlier delay to the rollout, citing the region\u2019s regulatory complexities. The feature was created to serve as an AI assistant that can suggest prompts and additional text to complete messages in the chat function.</span></p>\n<p><span style=\"font-weight: 400;\">The EC probe follows news from last month that </span><a href=\"https://www.pymnts.com/cpi-posts/italy-expands-antitrust-probe-into-metas-whatsapp-ai-integration/\" rel=\"noopener\" target=\"_blank\"><span style=\"font-weight: 400;\">Italy\u2019s antitrust regulator</span></a><span style=\"font-weight: 400;\"> had increased its scrutiny of Meta due to concerns that the company could be unfairly wielding its dominant position in the messaging market through its use of AI within WhatsApp.</span></p>\n<p><span style=\"font-weight: 400;\">The Italian antitrust authority, AGCM, believes the new AI-driven interaction features inside the app could impede fair competition in the market for AI chatbot services.</span></p>\n<p><span style=\"font-weight: 400;\">Regulators are looking into whether these changes could hold back competitors\u2019 ability to enter or expand in the space, limit market choice, or hinder technological progress in messaging-based AI tools.</span></p>\n<p><span style=\"font-weight: 400;\">Meta was also recently ordered to </span><a href=\"https://www.pymnts.com/meta/2025/meta-ordered-to-pay-552-million-in-case-alleging-gdpr-violations/\" rel=\"noopener\" target=\"_blank\"><span style=\"font-weight: 400;\">pay 479 million euros</span></a><span style=\"font-weight: 400;\"> (about $552 million) after a Spanish court found that the company had violated the European Union\u2019s General Data Protection Regulation (GDPR) as well as Spain\u2019s antitrust law.</span></p>\n<p><span style=\"font-weight: 400;\">Meta has said it would appeal the ruling.</span></p>\n<p><span style=\"font-weight: 400;\">These actions come as the Trump administration continues to push the EU to </span><a href=\"https://www.pymnts.com/cpi-posts/us-commerce-secretary-urges-eu-to-dial-back-digital-rules-targeting-american-tech/\" rel=\"noopener\" target=\"_blank\"><span style=\"font-weight: 400;\">dial back</span></a><span style=\"font-weight: 400;\"> its tech regulations, saying that the DMA and its sister rule the Digital Services Act place disproportionate pressure on American tech giants as these laws apply to companies that surpass specific user-base thresholds.</span></p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/meta/2025/metas-whatsapp-ai-features-targeted-in-eu-antitrust-probe/\">Meta\u2019s WhatsApp AI Features Targeted in EU Antitrust Probe</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
+    "image_url": "https://www.pymnts.com/wp-content/uploads/2023/12/Whatsapp-1.jpg?w=457",
+    "summary_text": "European antitrust regulators have launched an investigation into Meta\u2019s artificial intelligence (AI) enhancement to WhatsApp. The European Commission announced Thursday (Dec. 4) that it had launched a probe into whether the tech giant\u2019s new policy on AI prov...",
+    "category": "ai",
+    "_trending_tags": [
+      "ai",
+      "meta"
+    ],
+    "_permalink": "/p/25ccb41b37/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/25ccb41b37/",
+    "_summary_240": "European antitrust regulators have launched an investigation into Meta\u2019s artificial intelligence (AI) enhancement to WhatsApp. The European Commission announced Thursday (Dec. 4)...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/25ccb41b37/thumbnail.png"
+  },
+  {
     "title": "CoinDCX report shows Indian users moving to broader crypto portfolios in 2025",
     "url": "https://cointelegraph.com/news/coindcx-users-show-signs-of-longer-term-crypto-allocation-report-finds?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
     "published_at": "2025-12-04T06:18:48-05:00",
@@ -87,19 +179,15 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/61a89cc935/thumbnail.png"
   },
   {
-    "title": "Banks Face a Fraud Spike as Attacks Stress Legacy Systems",
+    "title": "Banks Face Fraud Spike As Scams Stress Legacy Systems",
     "url": "https://www.pymnts.com/fraud-prevention/2025/banks-face-a-fraud-spike-as-attacks-stress-legacy-systems/",
     "published_at": "2025-12-04T04:00:53-05:00",
     "source": "PYMNTS",
     "summary": "The \u201c2025 State of Fraud and Financial Crime in the United States\u201d report, a PYMNTS Intelligence report commissioned by Block, reveals that the financial industry is navigating an increasingly sophisticated and dynamic threat landscape. The primary trend observed is a significant surge in unauthorized-party fraud, reversing the pattern seen in the previous year. Unauthorized-party schemes, [\u2026] Th...",
-    "content_html": "<p>The \u201c<strong>2025 State of Fraud and Financial Crime in the United States</strong>\u201d report, a <strong>PYMNTS Intelligence</strong> report commissioned by <a href=\"https://block.xyz\" rel=\"noopener\" target=\"_blank\"><strong>Block</strong></a>, reveals that the financial industry is navigating an increasingly sophisticated and dynamic threat landscape. The primary trend observed is a significant surge in unauthorized-party fraud, reversing the pattern seen in the previous year. Unauthorized-party schemes, driven by credential theft and account takeovers, now account for 71% of all incidents and dollar losses. This shift underscores the growing need for adaptive, intelligence-driven defenses among financial institutions (FIs).</p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p>Average fraud loss rates across the industry rose modestly to 0.8 basis points, though this average masks sharp disparities. Notably, large banks reported losses nearly four times the industry average, signaling greater exposure due to scale and speed. The fact that 46% of financial institutions report an increase in the sophistication of fraud schemes further highlights the increased complexity and risk. Institutions are concurrently managing overlapping regulatory requirements (47%) and operational pressures tied to faster, more diverse payment systems (41%).</p>\n<p>In response to these threats, 68% of firms plan to increase their fraud-detection spending year over year. The report identifies artificial intelligence and advanced behavioral analytics as the defining tools of modern fraud defense, enabling institutions to adopt a balanced approach that is both proactive (anticipating fraud) and reactive (accelerated response).</p>\n<p>However, the cost of fraud extends far beyond direct financial losses. Half of institutions report damage to customer loyalty, and nearly as many cite reputational harm and lost business opportunities, emphasizing that fraud now poses a significant threat to long-term growth and trust. Future investment strategies focus on continuous modernization, hybrid defense models that combine AI and cloud infrastructure, and improved customer communication to reinforce security and trust.</p>\n<h3>In \u201c2025 State of Fraud and Financial Crime in the United States,\u201d learn how:</h3>\n<ul>\n<li><strong>Unauthorized fraud is growing</strong>: Unauthorized-party fraud (e.g., account takeovers, credential theft) surged to represent 71% of all incidents and dollar losses, reversing previous trends.</li>\n<li><strong>AI serves as an essential defense</strong>: Widespread integration of AI and behavioral analytics is transforming fraud defense from reactive, rules-based systems into adaptive, intelligence-driven capabilities.</li>\n<li><strong>Consumer trust suffers</strong>: The true impact of fraud is on the customer, including damaged customer loyalty (50%) and reputational harm (44%), demonstrating a threat to long-term growth beyond financial losses.</li>\n</ul>\n<div class=\"my-5\">\n<div id=\"DownloadForm\">\n  <div class=\"container free-download-sec\">\n    <div class=\"inner\">\n      <div class=\"row\">\n        <div class=\"col-md-5 d-flex flex-row justify-content-center align-items-center\">\n          <div>\n            <h2 class=\"report-title px-4 text-start fw-bold mb-3 mb-md-0\">\n              <small class=\"text-start fw-bold d-block small mb-2\">\n                Download the Report\n              </small>\n              2025 State of Fraud and Financial Crime in the United States\n            </h2>\n            \n          </div>\n        </div>\n        <div class=\"col-md-7\">\n          <div class=\" bg-white rounded-3 p-4 shadow\">\n            \n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</div></div>\n<h3>About the Report</h3>\n<p>\u201c<strong>2025 State of Fraud and Financial Crime in the United States</strong>,\u201d a <strong>PYMNTS Intelligence</strong> report produced in collaboration with <a href=\"https://block.xyz\" rel=\"noopener\" target=\"_blank\"><strong>Block</strong></a> (CashApp), is based on a survey of 200 executives working at U.S. financial institutions with assets of at least $1 billion and at FinTechs with at least $100 million in annual revenues in 2024. It was conducted from Sept. 30, 2025, to Oct. 15, 2025. To ensure representativeness, we weighted all bank and credit union responses by national asset-size distribution. The respondents had deep knowledge and leadership responsibilities in: compliance and operations, fraud and risk operations, fraud analysis or strategy, or trust and safety analyst or operations. All insights reflect PYMNTS\u2019 independently collected, double-blind survey data and analysis. It\u2019s possible that Block was surveyed, but neither PYMNTS nor Block would have known, removing the potential for bias.</p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/fraud-prevention/2025/banks-face-a-fraud-spike-as-attacks-stress-legacy-systems/\">Banks Face a Fraud Spike as Attacks Stress Legacy Systems</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
+    "content_html": "<p>The \u201c<strong>2025 State of Fraud and Financial Crime in the United States</strong>\u201d report, a <strong>PYMNTS Intelligence</strong> report commissioned by <a href=\"https://block.xyz\" rel=\"noopener\" target=\"_blank\"><strong>Block</strong></a>, reveals that the financial industry is navigating an increasingly sophisticated and dynamic threat landscape. The primary trend observed is a significant surge in unauthorized-party fraud, reversing the pattern seen in the previous year. Unauthorized-party schemes, driven by credential theft and account takeovers, now account for 71% of all incidents and dollar losses. This shift underscores the growing need for adaptive, intelligence-driven defenses among financial institutions (FIs).</p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p>Average fraud loss rates across the industry rose modestly to 0.8 basis points, though this average masks sharp disparities. Notably, large banks reported losses nearly four times the industry average, signaling greater exposure due to scale and speed. The fact that 46% of financial institutions report an increase in the sophistication of fraud schemes further highlights the increased complexity and risk. Institutions are concurrently managing overlapping regulatory requirements (47%) and operational pressures tied to faster, more diverse payment systems (41%).</p>\n<p>In response to these threats, 68% of firms plan to increase their fraud-detection spending year over year. The report identifies artificial intelligence and advanced behavioral analytics as the defining tools of modern fraud defense, enabling institutions to adopt a balanced approach that is both proactive (anticipating fraud) and reactive (accelerated response).</p>\n<p>However, the cost of fraud extends far beyond direct financial losses. Half of institutions report damage to customer loyalty, and nearly as many cite reputational harm and lost business opportunities, emphasizing that fraud now poses a significant threat to long-term growth and trust. Future investment strategies focus on continuous modernization, hybrid defense models that combine AI and cloud infrastructure, and improved customer communication to reinforce security and trust.</p>\n<h3>In \u201c2025 State of Fraud and Financial Crime in the United States,\u201d learn how:</h3>\n<ul>\n<li><strong>Unauthorized fraud is growing</strong>: Unauthorized-party fraud (e.g., account takeovers, credential theft) surged to represent 71% of all incidents and dollar losses, reversing previous trends.</li>\n<li><strong>AI serves as an essential defense</strong>: Widespread integration of AI and behavioral analytics is transforming fraud defense from reactive, rules-based systems into adaptive, intelligence-driven capabilities.</li>\n<li><strong>Consumer trust suffers</strong>: The true impact of fraud is on the customer, including damaged customer loyalty (50%) and reputational harm (44%), demonstrating a threat to long-term growth beyond financial losses.</li>\n</ul>\n<div class=\"my-5\">\n<div id=\"DownloadForm\">\n  <div class=\"container free-download-sec\">\n    <div class=\"inner\">\n      <div class=\"row\">\n        <div class=\"col-md-5 d-flex flex-row justify-content-center align-items-center\">\n          <div>\n            <h2 class=\"report-title px-4 text-start fw-bold mb-3 mb-md-0\">\n              <small class=\"text-start fw-bold d-block small mb-2\">\n                Download the Report\n              </small>\n              2025 State of Fraud and Financial Crime in the United States\n            </h2>\n            \n          </div>\n        </div>\n        <div class=\"col-md-7\">\n          <div class=\" bg-white rounded-3 p-4 shadow\">\n            \n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</div></div>\n<h3>About the Report</h3>\n<p>\u201c<strong>2025 State of Fraud and Financial Crime in the United States</strong>,\u201d a <strong>PYMNTS Intelligence</strong> report produced in collaboration with <a href=\"https://block.xyz\" rel=\"noopener\" target=\"_blank\"><strong>Block</strong></a> (CashApp), is based on a survey of 200 executives working at U.S. financial institutions with assets of at least $1 billion and at FinTechs with at least $100 million in annual revenues in 2024. It was conducted from Sept. 30, 2025, to Oct. 15, 2025. To ensure representativeness, we weighted all bank and credit union responses by national asset-size distribution. The respondents had deep knowledge and leadership responsibilities in: compliance and operations, fraud and risk operations, fraud analysis or strategy, or trust and safety analyst or operations. All insights reflect PYMNTS\u2019 independently collected, double-blind survey data and analysis. It\u2019s possible that Block was surveyed, but neither PYMNTS nor Block would have known, removing the potential for bias.</p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/fraud-prevention/2025/banks-face-a-fraud-spike-as-attacks-stress-legacy-systems/\">Banks Face Fraud Spike As Scams Stress Legacy Systems</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
     "image_url": "https://www.pymnts.com/wp-content/uploads/2025/12/banks-face-a-fraud-spike-as-attacks-outpace-legacy-systems-hero.jpg?w=457",
     "summary_text": "The \u201c2025 State of Fraud and Financial Crime in the United States\u201d report, a PYMNTS Intelligence report commissioned by Block, reveals that the financial industry is navigating an increasingly sophisticated and dynamic threat landscape. The primary trend obse...",
-    "category": "fintech",
-    "_permalink": "/p/bc89f8b06e/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/bc89f8b06e/",
-    "_summary_240": "The \u201c2025 State of Fraud and Financial Crime in the United States\u201d report, a PYMNTS Intelligence report commissioned by Block, reveals that the financial industry is navigating...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/bc89f8b06e/thumbnail.png"
+    "category": "fintech"
   },
   {
     "title": "Nearly 1 in 5 Gen Z Turn to BNPL as Traditional Credit Plays a Smaller Role",
@@ -218,23 +306,19 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/5b30c64cb9/thumbnail.png"
   },
   {
-    "title": "Meta Hit by EU Antitrust Probe Over WhatsApp\u2019s AI Tools",
+    "title": "Meta Risks Temporary Ban on WhatsApp AI Plan Amid EU Probe",
     "url": "https://www.bloomberg.com/news/articles/2025-12-04/eu-to-begin-probe-into-whatsapp-ai-features-rollout-ft-says",
     "published_at": "2025-12-04T00:11:51-05:00",
     "source": "Bloomberg Technology",
-    "summary": "Meta Platforms Inc. has been hit by a full-scale European Union antitrust investigation over how its AI features in WhatsApp may be harming competition, in the latest probe into Big Tech\u2019s dominance on the continent.",
+    "summary": "Meta Platforms Inc. risks a temporary European Union ban on the rollout of new policies over how its AI features in WhatsApp, after being hit by the latest probe into Big Tech\u2019s alleged dominance on the continent.",
     "content_html": "The WhatsApp application. Photographer: Thomas Trutschel/Getty Images",
     "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iATkfa9z95og/v0/1200x-1.jpg",
-    "summary_text": "Meta Platforms Inc. has been hit by a full-scale European Union antitrust investigation over how its AI features in WhatsApp may be harming competition, in the latest probe into Big Tech\u2019s dominance on the continent.",
+    "summary_text": "Meta Platforms Inc. risks a temporary European Union ban on the rollout of new policies over how its AI features in WhatsApp, after being hit by the latest probe into Big Tech\u2019s alleged dominance on the continent.",
     "category": "ai",
     "_trending_tags": [
       "ai",
       "meta"
-    ],
-    "_permalink": "/p/2f9abca9b0/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/2f9abca9b0/",
-    "_summary_240": "Meta Platforms Inc. has been hit by a full-scale European Union antitrust investigation over how its AI features in WhatsApp may be harming competition, in the latest probe into...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/2f9abca9b0/thumbnail.png"
+    ]
   },
   {
     "title": "EU launches antitrust probe into Meta over WhatsApp AI policy",
@@ -329,24 +413,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/764fb3e22b/",
     "_summary_240": "The post Introducing Mistral Large 3 in Microsoft Foundry: Open and ready for production workloads appeared first on Source .",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/764fb3e22b/thumbnail.png"
-  },
-  {
-    "title": "Coinbase Partners with Banks on Crypto and Stablecoin Pilot Projects",
-    "url": "https://www.pymnts.com/cryptocurrency/2025/coinbase-partners-with-banks-on-crypto-and-stablecoin-pilot-projects/",
-    "published_at": "2025-12-03T19:45:40-05:00",
-    "source": "PYMNTS",
-    "summary": "Coinbase CEO Brian Armstrong reportedly said Wednesday (Dec. 3) that his company is working with some of the biggest U.S. banks on pilot programs testing stablecoins, crypto custody and trading. \u201cThe best banks are leaning into this as an opportunity,\u201d Armstrong said at the New York Times DealBook Summit, CoinDesk reported Wednesday. \u201cThe ones [\u2026] The post Coinbase Partners with Banks on Crypto a...",
-    "content_html": "<p><a href=\"https://www.coinbase.com/\" rel=\"noopener\" target=\"_blank\"><span>Coinbase</span></a><span> CEO </span><a href=\"https://www.linkedin.com/in/barmstrong\" rel=\"noopener\" target=\"_blank\"><span>Brian Armstrong</span></a><span> reportedly said Wednesday (Dec. 3) that his company is working with some of the biggest U.S. banks on pilot programs testing stablecoins, crypto custody and trading.</span></p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p><span>\u201cThe best banks are leaning into this as an opportunity,\u201d Armstrong said at the New York Times </span><a href=\"https://www.nytimes.com/events/dealbook#overview\" rel=\"noopener\" target=\"_blank\"><span>DealBook Summit</span></a><span>, CoinDesk </span><a href=\"https://www.coindesk.com/business/2025/12/03/coinbase-is-partnering-with-major-u-s-banks-on-stablecoin-and-crypto-pilots\" rel=\"noopener\" target=\"_blank\"><span>reported</span></a><span> Wednesday. \u201cThe ones who are fighting it are going to get left behind.\u201d</span></p>\n<p><span>Armstrong did not name the banks, according to the report.</span></p>\n<p><span>Coinbase has announced some other collaborations with banks in recent months.</span></p>\n<p><span>The company said in October that it planned to collaborate with </span><a href=\"https://www.citigroup.com/global\" rel=\"noopener\" target=\"_blank\"><span>Citi</span></a><span> on </span><a href=\"https://www.pymnts.com/cryptocurrency/2025/citi-and-coinbase-to-explore-digital-asset-payment-capabilities-for-institutional-clients/\" rel=\"noopener\" target=\"_blank\"><span>digital asset payment</span></a><span> capabilities for the bank\u2019s clients, starting with its institutional clients and potentially expanding to its other global clients in the future.</span></p>\n<p><span>\u201cThis collaboration is part of our broader mission to make digital assets a trusted and integral part of the global economy,\u201d Coinbase said at the time in a </span><a href=\"https://www.coinbase.com/blog/coinbase-and-citi-collaborate-to-build-the-future-of-payments\" rel=\"noopener\" target=\"_blank\"><span>blog post</span></a><span>. \u201cBy working with Citi and other major banks, asset managers, payment service providers and other financial institutions, we\u2019re building the infrastructure that the global economy needs to adopt and scale digital asset solutions.\u201d</span></p>\n<p><span>In July, Coinbase and </span><a href=\"https://www.jpmorganchase.com/\" rel=\"noopener\" target=\"_blank\"><span>JPMorganChase</span></a><span> said they partnered to develop a feature that will enable customers to use Chase credit cards to fund their Coinbase accounts, making it easier for their mutual customers to </span><a href=\"https://www.pymnts.com/cryptocurrency/2025/jpmorgan-chase-allow-credit-cards-fund-coinbase-accounts/\" rel=\"noopener\" target=\"_blank\"><span>buy cryptocurrency</span></a><span>.</span></p>\n<p><span>The companies said they also planned to add the ability to link Chase bank accounts to Coinbase wallets through JPMorgan\u2019s API, and the ability to use points from Chase\u2019s rewards program, Chase Ultimate Rewards, to fund their Coinbase account.</span></p>\n<p><span>\u201cTogether, we are expanding choice and lowering barriers to entry for consumers to participate in the future of financial services on-chain,\u201d </span><a href=\"https://www.linkedin.com/in/mbranzburg\" rel=\"noopener\" target=\"_blank\"><span>Max Branzburg</span></a><span>, head of consumer and business products at Coinbase, said at the time in a press release.</span></p>\n<p><span>Also in July, Coinbase and </span><a href=\"https://www.pnc.com/en/about-pnc.html\" rel=\"noopener\" target=\"_blank\"><span>PNC Bank</span></a><span> teamed up to develop a solution that will allow the bank\u2019s clients to buy, hold and sell </span><a href=\"https://www.pymnts.com/cryptocurrency/2025/pnc-and-coinbase-partner-to-develop-crypto-financial-solutions/\" rel=\"noopener\" target=\"_blank\"><span>cryptocurrencies</span></a><span>.</span></p>\n<p><span>The organizations said this project is part of a new partnership that also includes PNC adding other crypto financial solutions for its clients and providing select banking services to Coinbase.</span></p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/cryptocurrency/2025/coinbase-partners-with-banks-on-crypto-and-stablecoin-pilot-projects/\">Coinbase Partners with Banks on Crypto and Stablecoin Pilot Projects</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
-    "image_url": "https://www.pymnts.com/wp-content/uploads/2025/12/coinbase-crypto-cryptocurrency-stablecoin-trading-cryptotrading-e1764808177860.jpeg?w=457",
-    "summary_text": "Coinbase CEO Brian Armstrong reportedly said Wednesday (Dec. 3) that his company is working with some of the biggest U.S. banks on pilot programs testing stablecoins, crypto custody and trading. \u201cThe best banks are leaning into this as an opportunity,\u201d Armstr...",
-    "category": "fintech",
-    "_trending_tags": [
-      "ai"
-    ],
-    "_permalink": "/p/4ad9386e73/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/4ad9386e73/",
-    "_summary_240": "Coinbase CEO Brian Armstrong reportedly said Wednesday (Dec. 3) that his company is working with some of the biggest U.S. banks on pilot programs testing stablecoins, crypto...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/4ad9386e73/thumbnail.png"
   },
   {
     "title": "Stocks Rise as Soft ADP Report Boosts Rate-Cut Hopes | The Close 12/3/2025",
@@ -705,63 +771,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/3c2713428d/thumbnail.png"
   },
   {
-    "title": "Apple\u2019s head of UI design is leaving for Meta",
-    "url": "https://www.theverge.com/news/837654/apple-meta-alan-dye-designer",
-    "published_at": "2025-12-03T15:13:01-05:00",
-    "source": "The Verge",
-    "summary": "Alan Dye, who has led Apple\u2019s UI design team since 2015, is leaving to join Meta as its chief design officer, Bloomberg reports. He\u2019ll join Meta on December 31st, and Meta is opening a design studio and giving Dye oversight of design for \u201chardware, software and AI integration for its interfaces,\u201d according to Bloomberg. Dye [\u2026]",
-    "content_html": "<figure>\n\n<img alt=\"\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/12/videoframe_638193.png?quality=90&#038;strip=all&#038;crop=0,0,100,100\" />\n\t<figcaption>\n\t\t</figcaption>\n</figure>\n<p class=\"has-text-align-none\">Alan Dye, who has led Apple\u2019s UI design team since 2015, is leaving to join Meta as its chief design officer, <a href=\"https://www.bloomberg.com/news/articles/2025-12-03/apple-design-executive-alan-dye-poached-by-meta-in-major-coup?embedded-checkout=true\"><em>Bloomberg</em> reports</a>. He\u2019ll join Meta on December 31st, and Meta is opening a design studio and giving Dye oversight of design for \u201chardware, software and AI integration for its interfaces,\u201d according to <em>Bloomberg</em>. Dye will report to Meta CTO Andrew Bosworth.</p>\n\n<p class=\"has-text-align-none\">Designer Steve Lemay will replace Dye at Apple, the company confirmed to <em>Bloomberg</em>. \u201cSteve Lemay has played a key role in the design of every major Apple interface since 1999,\u201d CEO Tim Cook told <em>Bloomberg</em> in a statement. \u201cHe has always set an extraordinarily high bar for excellence and embodies Apple\u2019s culture of collaboration and creativity.\u201d Following the recent retirement of <a href=\"https://www.theverge.com/news/701576/apple-coo-jeff-williams-retiring-sabih-khan\">former COO Jeff Williams</a>, Apple\u2019s design team now <a href=\"https://www.theverge.com/news/701705/apple-tim-cook-design-team-report\">reports to Tim Cook</a>.</p>\n\n<p class=\"has-text-align-none\">Here\u2019s what <a href=\"https://www.threads.com/@zuck/post/DR0WswFknat?xmt=AQF0z3hzh412YUSDB4cy2eyXHzKgov3sFisrS-pc1qSvvQ\">Meta CEO Mark Zuckerberg says</a> about the new design studio and the role of design at the company:</p>\n\n<blockquote class=\"wp-block-quote is-layout-flow wp-block-quote-is-layout-flow\">\n<p class=\"has-text-align-none\">The new studio will bring together design, fashion, and technology to define the next generation of our products and experiences. Our idea is to treat intelligence as a new design material and imagine what becomes possible when it is abundant, capable, and human-centered. We plan to elevate design within Meta, and pull together a talented group with a combination of craft, creative vision, systems thinking, and deep experience building iconic products that bridge hardware and software.&nbsp;</p>\n</blockquote>\n\n<p class=\"has-text-align-none\">In other post, <a href=\"https://www.threads.com/@zuck/post/DR0WsxRklXy?xmt=AQF0z3hzh412YUSDB4cy2eyXHzKgov3sFisrS-pc1qSvvQ\">he says</a>:</p>\n\n<blockquote class=\"wp-block-quote is-layout-flow wp-block-quote-is-layout-flow\">\n<p class=\"has-text-align-none\">We&#8217;re entering a new era where AI glasses and other devices will change how we connect with technology and each other. The potential is enormous, but what matters most is making these experiences feel natural and truly centered around people. With this new studio, we&#8217;re focused on making every interaction thoughtful, intuitive, and built to serve people.&nbsp;</p>\n</blockquote>\n\n<p class=\"has-text-align-none\">Apple designer Billy Sorrentino is also leaving to join Meta, Zuckerberg says.</p>\n\n<p class=\"has-text-align-none\">Apple didn\u2019t immediately reply to a request for comment.</p>\n\n<p class=\"has-text-align-none\">Dye\u2019s departure is the latest leadership change at Apple, and another one of <a href=\"https://www.theverge.com/2024/2/18/24076510/18-and-23-of-apples-jony-ive-era-industrial-design-team-members-have-left\">many top designers who have left the company</a> in the last several years. Williams officially left Apple <a href=\"https://www.macrumors.com/2025/11/15/apple-executive-jeff-williams-retires/\">in November</a>, and the company announced earlier this week that AI chief John Giannandrea <a href=\"https://www.apple.com/newsroom/2025/12/john-giannandrea-to-retire-from-apple/\">would be stepping down</a>. <em>Bloomberg</em> has also reported that chips lead Johny Srouji is evaluating his future at the company.</p>\n\n<p class=\"has-text-align-none\"><em><strong>Update, December 3rd</strong>: Added posts from Meta CEO Mark Zuckerberg.</em></p>",
-    "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/12/videoframe_638193.png?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "summary_text": "Alan Dye, who has led Apple\u2019s UI design team since 2015, is leaving to join Meta as its chief design officer, Bloomberg reports. He\u2019ll join Meta on December 31st, and Meta is opening a design studio and giving Dye oversight of design for \u201chardware, software a...",
-    "category": "software",
-    "_trending_tags": [
-      "ai",
-      "apple",
-      "meta"
-    ],
-    "_permalink": "/p/059f661006/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/059f661006/",
-    "_summary_240": "Alan Dye, who has led Apple\u2019s UI design team since 2015, is leaving to join Meta as its chief design officer, Bloomberg reports. He\u2019ll join Meta on December 31st, and Meta is...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/059f661006/thumbnail.png"
-  },
-  {
-    "title": "Okta CEO Sees Big Opportunity in AI",
-    "url": "https://www.bloomberg.com/news/videos/2025-12-03/okta-ceo-sees-big-opportunity-in-ai-video",
-    "published_at": "2025-12-03T15:01:32-05:00",
-    "source": "Bloomberg Technology",
-    "summary": "Okta CEO Todd McKinnon discusses what\u2019s driving the software maker\u2019s boosted forecast. He speaks with Caroline Hyde on \"Bloomberg Tech.\" (Source: Bloomberg)",
-    "content_html": "",
-    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iZYBQiMsd5tE/v3/1200x-1.jpg",
-    "summary_text": "Okta CEO Todd McKinnon discusses what\u2019s driving the software maker\u2019s boosted forecast. He speaks with Caroline Hyde on \"Bloomberg Tech.\" (Source: Bloomberg)",
-    "category": "ai",
-    "_trending_tags": [
-      "ai"
-    ],
-    "_permalink": "/p/b615fd1200/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/b615fd1200/",
-    "_summary_240": "Okta CEO Todd McKinnon discusses what\u2019s driving the software maker\u2019s boosted forecast. He speaks with Caroline Hyde on \"Bloomberg Tech.\" (Source: Bloomberg)",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/b615fd1200/thumbnail.png"
-  },
-  {
-    "title": "AI Chip Race Heats Up With Amazon\u2019s Trainium3",
-    "url": "https://www.bloomberg.com/news/videos/2025-12-03/ai-chip-race-heats-up-with-amazon-s-trainium3-video",
-    "published_at": "2025-12-03T14:53:49-05:00",
-    "source": "Bloomberg Technology",
-    "summary": "JoAnne Feeney, partner and portfolio manager at Advisors Capital Management, discusses Amazon's latest AI chip release, and efforts to expand chipmaking in the US. She joins Caroline Hyde on \u201cBloomberg Tech.\u201d (Source: Bloomberg)",
-    "content_html": "",
-    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iL_RXhtCCy5E/v3/1200x-1.jpg",
-    "summary_text": "JoAnne Feeney, partner and portfolio manager at Advisors Capital Management, discusses Amazon's latest AI chip release, and efforts to expand chipmaking in the US. She joins Caroline Hyde on \u201cBloomberg Tech.\u201d (Source: Bloomberg)",
-    "category": "ai",
-    "_trending_tags": [
-      "ai",
-      "amazon"
-    ],
-    "_permalink": "/p/9bcdb74ddb/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/9bcdb74ddb/",
-    "_summary_240": "JoAnne Feeney, partner and portfolio manager at Advisors Capital Management, discusses Amazon's latest AI chip release, and efforts to expand chipmaking in the US. She joins...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/9bcdb74ddb/thumbnail.png"
-  },
-  {
     "title": "An AI Dark Horse Is Rewriting the Rules of Game Design",
     "url": "https://www.wired.com/story/tecent-3d-models-video-game-design-artificial-intelligence/",
     "published_at": "2025-12-03T14:00:00-05:00",
@@ -1092,24 +1101,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/1dfdc7a114/thumbnail.png"
   },
   {
-    "title": "Strategy\u2019s Michael Saylor on potential MSCI exclusion: \u2018We\u2019re engaging\u2019",
-    "url": "https://cointelegraph.com/news/strategy-michael-saylor-msci-potential-exclusion-engaging?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-    "published_at": "2025-12-03T09:11:55-05:00",
-    "source": "Cointelegraph",
-    "summary": "Strategy is urging MSCI to retain MSTR in its indexes, despite raising its Bitcoin holdings to 650,000 BTC as it has lowered its 2025 targets.",
-    "content_html": "",
-    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTIvMDE5YWU0MzMtYjBjNC03OTFhLThiN2QtYTg4OWUzMjUxMTA0.jpg",
-    "summary_text": "Strategy is urging MSCI to retain MSTR in its indexes, despite raising its Bitcoin holdings to 650,000 BTC as it has lowered its 2025 targets.",
-    "category": "fintech",
-    "_trending_tags": [
-      "ai"
-    ],
-    "_permalink": "/p/ce2829f17e/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/ce2829f17e/",
-    "_summary_240": "Strategy is urging MSCI to retain MSTR in its indexes, despite raising its Bitcoin holdings to 650,000 BTC as it has lowered its 2025 targets.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/ce2829f17e/thumbnail.png"
-  },
-  {
     "title": "Bolzano\u2019s digital renaissance: Putting citizens first with AI in the Alps",
     "url": "https://news.microsoft.com/source/emea/features/bolzano-digital-renaissance-citizens-first-ai/",
     "published_at": "2025-12-03T09:09:59-05:00",
@@ -1179,21 +1170,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/8eaf32055d/thumbnail.png"
   },
   {
-    "title": "OpenAI to acquire Neptune",
-    "url": "https://openai.com/index/openai-to-acquire-neptune",
-    "published_at": "2025-12-03T05:00:00-05:00",
-    "source": "OpenAI News",
-    "summary": "OpenAI is acquiring Neptune to deepen visibility into model behavior and strengthen the tools researchers use to track experiments and monitor training.",
-    "content_html": "",
-    "image_url": "",
-    "summary_text": "OpenAI is acquiring Neptune to deepen visibility into model behavior and strengthen the tools researchers use to track experiments and monitor training.",
-    "category": "ai",
-    "_trending_tags": [
-      "ai",
-      "openai"
-    ]
-  },
-  {
     "title": "How confessions can keep language models honest",
     "url": "https://openai.com/index/how-confessions-can-keep-language-models-honest",
     "published_at": "2025-12-03T05:00:00-05:00",
@@ -1202,6 +1178,21 @@
     "content_html": "",
     "image_url": "",
     "summary_text": "OpenAI researchers are testing \u201cconfessions,\u201d a method that trains models to admit when they make mistakes or act undesirably, helping improve AI honesty, transparency, and trust in model outputs.",
+    "category": "ai",
+    "_trending_tags": [
+      "ai",
+      "openai"
+    ]
+  },
+  {
+    "title": "OpenAI to acquire Neptune",
+    "url": "https://openai.com/index/openai-to-acquire-neptune",
+    "published_at": "2025-12-03T05:00:00-05:00",
+    "source": "OpenAI News",
+    "summary": "OpenAI is acquiring Neptune to deepen visibility into model behavior and strengthen the tools researchers use to track experiments and monitor training.",
+    "content_html": "",
+    "image_url": "",
+    "summary_text": "OpenAI is acquiring Neptune to deepen visibility into model behavior and strengthen the tools researchers use to track experiments and monitor training.",
     "category": "ai",
     "_trending_tags": [
       "ai",
@@ -1524,25 +1515,23 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/e4b8f43ffb/thumbnail.png"
   },
   {
-    "title": "Shaping Model Behavior in GPT-5.1\u2014 the OpenAI Podcast Ep. 11",
-    "url": "https://www.youtube.com/watch?v=GXAAzKX6oaQ",
-    "published_at": "2025-12-02T13:00:27-05:00",
-    "source": "OpenAI YouTube",
-    "summary": "What does it mean for an AI model to have \"personality\"? Researcher Christina Kim and product manager Laurentia Romaniuk talk about how OpenAI set out to build a model that delivers on both IQ and EQ, while giving people more flexibility in how ChatGPT responds. They break down what goes into model behavior and why it's an important, but still imperfect blend of art and science. Chapters - 00:00:...",
+    "title": "AI Fluency for nonprofits course trailer",
+    "url": "https://www.youtube.com/watch?v=xatyxfEevZA",
+    "published_at": "2025-12-02T12:41:41-05:00",
+    "source": "Anthropic YouTube",
+    "summary": "A trailer of AI Fluency for nonprofits developed by Anthropic and Giving Tuesday. View the full free course, including all videos, exercises, and resources, at https://www.anthropic.com/ai-fluency-for-nonprofits This video is copyright 2025 Anthropic PBC and Giving Tuesday. Based on the AI Fluency Framework developed by Prof. Rick Dakan (Ringling College of Art and Design) and Prof. Joseph Feller...",
     "content_html": "",
-    "image_url": "https://i.ytimg.com/vi/GXAAzKX6oaQ/maxresdefault.jpg",
-    "summary_text": "What does it mean for an AI model to have \"personality\"? Researcher Christina Kim and product manager Laurentia Romaniuk talk about how OpenAI set out to build a model that delivers on both IQ and EQ, while giving people more flexibility in how ChatGPT respon...",
+    "image_url": "https://i.ytimg.com/vi/xatyxfEevZA/maxresdefault.jpg",
+    "summary_text": "A trailer of AI Fluency for nonprofits developed by Anthropic and Giving Tuesday. View the full free course, including all videos, exercises, and resources, at https://www.anthropic.com/ai-fluency-for-nonprofits This video is copyright 2025 Anthropic PBC and ...",
     "category": "ai",
     "_trending_tags": [
       "ai",
-      "chatgpt",
-      "gpt",
-      "openai"
+      "anthropic"
     ],
-    "_permalink": "/p/9fe4ac80a4/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/9fe4ac80a4/",
-    "_summary_240": "What does it mean for an AI model to have \"personality\"? Researcher Christina Kim and product manager Laurentia Romaniuk talk about how OpenAI set out to build a model that...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/9fe4ac80a4/thumbnail.png"
+    "_permalink": "/p/26dc568f02/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/26dc568f02/",
+    "_summary_240": "A trailer of AI Fluency for nonprofits developed by Anthropic and Giving Tuesday. View the full free course, including all videos, exercises, and resources, at...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/26dc568f02/thumbnail.png"
   },
   {
     "title": "Amazon's new AI can code for days without human help. What does that mean for software engineers?",
@@ -1858,11 +1847,7 @@
     "content_html": "",
     "image_url": "https://media.wired.com/photos/6925f4622a28299e7369f588/master/pass/MR%20012%20'Ruby'%20(1).jpg",
     "summary_text": "Ruby survives on affection, not utility. Let's move on.",
-    "category": "software",
-    "_permalink": "/p/4e1b722584/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/4e1b722584/",
-    "_summary_240": "Ruby survives on affection, not utility. Let's move on.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/4e1b722584/thumbnail.png"
+    "category": "software"
   },
   {
     "title": "Funding grants for new research into AI and mental health",
@@ -1897,21 +1882,6 @@
     ]
   },
   {
-    "title": "OpenAI takes an ownership stake in Thrive Holdings to accelerate enterprise AI adoption",
-    "url": "https://openai.com/index/thrive-holdings",
-    "published_at": "2025-12-01T00:00:00-05:00",
-    "source": "OpenAI News",
-    "summary": "OpenAI takes an ownership stake in Thrive Holdings to accelerate enterprise AI adoption, embedding frontier research and engineering directly into accounting and IT services to boost speed, accuracy, and efficiency while creating a scalable model for industry-wide transformation.",
-    "content_html": "",
-    "image_url": "",
-    "summary_text": "OpenAI takes an ownership stake in Thrive Holdings to accelerate enterprise AI adoption, embedding frontier research and engineering directly into accounting and IT services to boost speed, accuracy, and efficiency while creating a scalable model for industry...",
-    "category": "ai",
-    "_trending_tags": [
-      "ai",
-      "openai"
-    ]
-  },
-  {
     "title": "Accenture and OpenAI accelerate enterprise AI success",
     "url": "https://openai.com/index/accenture-partnership",
     "published_at": "2025-12-01T00:00:00-05:00",
@@ -1923,6 +1893,21 @@
     "category": "ai",
     "_trending_tags": [
       "agent",
+      "ai",
+      "openai"
+    ]
+  },
+  {
+    "title": "OpenAI takes an ownership stake in Thrive Holdings to accelerate enterprise AI adoption",
+    "url": "https://openai.com/index/thrive-holdings",
+    "published_at": "2025-12-01T00:00:00-05:00",
+    "source": "OpenAI News",
+    "summary": "OpenAI takes an ownership stake in Thrive Holdings to accelerate enterprise AI adoption, embedding frontier research and engineering directly into accounting and IT services to boost speed, accuracy, and efficiency while creating a scalable model for industry-wide transformation.",
+    "content_html": "",
+    "image_url": "",
+    "summary_text": "OpenAI takes an ownership stake in Thrive Holdings to accelerate enterprise AI adoption, embedding frontier research and engineering directly into accounting and IT services to boost speed, accuracy, and efficiency while creating a scalable model for industry...",
+    "category": "ai",
+    "_trending_tags": [
       "ai",
       "openai"
     ]
