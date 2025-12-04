@@ -1,5 +1,191 @@
 [
   {
+    "title": "Nvidia\u2019s new RTX 50-series GPU driver restores PhysX support for popular games",
+    "url": "https://www.theverge.com/news/838043/nvidia-rtx-50-series-physx-support-driver",
+    "published_at": "2025-12-04T09:11:16-05:00",
+    "source": "The Verge",
+    "summary": "Nvidia launched its first RTX 50-series graphics cards earlier this year without support for PhysX, the GPU-accelerated technology that let games realistically simulate shattering glass, moving liquids, smoke, fog, and more. Now, Nvidia is bringing back PhysX support for the RTX 50-series GPUs for top-played games like Borderlands 2, Mirror\u2019s Edge, and Batman: Arkham City. [\u2026]",
+    "content_html": "<figure>\n\n<img alt=\"\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/25728971/STK083_NVIDIA_2_D.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100\" />\n\t<figcaption>\n\t\t</figcaption>\n</figure>\n<p class=\"has-text-align-none\">Nvidia launched its first RTX 50-series graphics cards earlier this year <a href=\"https://www.theverge.com/news/615768/nvidia-rtx-5090-5080-5070-drop-physx-support-32-bit\">without support for PhysX</a>, the GPU-accelerated technology that let games realistically simulate shattering glass, moving liquids, smoke, fog, and more. Now, Nvidia is bringing back PhysX support for the RTX 50-series GPUs for top-played games like <em>Borderlands 2</em>, <em>Mirror\u2019s Edge</em>, and <em>Batman: Arkham City</em>.</p>\n\n<p class=\"has-text-align-none\">\u201cWe heard the feedback from the community, and with the launch of our new driver today, we are adding custom support for GeForce gamers\u2019 most played PhysX-accelerated games, enabling full performance on GeForce RTX 50 Series GPUs, in line with our existing PhysX support on prior-generation GPUs,\u201d <a href=\"https://www.nvidia.com/en-us/geforce/news/battlefield-6-winter-offensive-geforce-game-ready-driver/\">says Nvidia</a>.</p>\n\n<p class=\"has-text-align-none\">PhysX was a big part of games like <em>Borderlands 2</em> and <em>Mirror\u2019s Edge</em>, and it originally didn\u2019t ship with Nvidia\u2019s latest GPUs because the RTX 50-series dropped support for 32-bit CUDA support. That prevented these older games using PhysX from being GPU-accelerated on the latest Nvidia GPUs. Some titles like <em>Borderlands 2</em> dropped below 60fps, because the games were relying on a CPU to deliver PhysX effects.</p>\n\n<p class=\"has-text-align-none\">Nvidia has now created \u201ccustom support\u201d for top-played PhysX-accelerated games, but not all games are supported yet. Here\u2019s the current list:</p>\n\n<p class=\"has-text-align-none\"><em>Alice: Madness Returns<br />Assassin\u2019s Creed IV: Black Flag<br />Batman: Arkham City<br />Batman: Arkham Origins<br />Borderlands 2<br />Mafia II<br />Metro 2033<br />Metro: Last Light<br />Mirror\u2019s Edge</em></p>\n\n<p class=\"has-text-align-none\">Nvidia says it\u2019s also planning to support <em>Batman: Arkham Asylum</em> \u201cin the first part of 2026,\u201d but there\u2019s no word on any additional games. PhysX was always limited to a handful of titles anyway, but <a href=\"https://www.resetera.com/threads/rtx-50-series-gpus-have-dropped-support-for-32-bit-physx-many-older-pc-games-are-impacted-mirrors-edge-borderlands-etc.1111698/\">Resetera forum</a> members have been tracking more than 40 games that have been affected by the removal of PhysX support on RTX 50-series GPUs. Unfortunately, it seems unlikely that Nvidia will fully support all of these older PhysX games.</p>\n\n<p class=\"has-text-align-none\">You can download Nvidia\u2019s new Game Ready driver (591.44) over at <a href=\"https://www.nvidia.com/en-us/geforce/drivers/\">Nvidia\u2019s website</a> or through the Nvidia app.</p>",
+    "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/25728971/STK083_NVIDIA_2_D.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "summary_text": "Nvidia launched its first RTX 50-series graphics cards earlier this year without support for PhysX, the GPU-accelerated technology that let games realistically simulate shattering glass, moving liquids, smoke, fog, and more. Now, Nvidia is bringing back PhysX...",
+    "category": "fintech",
+    "_trending_tags": [
+      "ai",
+      "gpu",
+      "nvidia"
+    ],
+    "_permalink": "/p/8a4ec7cb4f/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/8a4ec7cb4f/",
+    "_summary_240": "Nvidia launched its first RTX 50-series graphics cards earlier this year without support for PhysX, the GPU-accelerated technology that let games realistically simulate...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/8a4ec7cb4f/thumbnail.png"
+  },
+  {
+    "title": "German Regulator Warns of Risks From Muddied Ties Between AI Firms",
+    "url": "https://www.pymnts.com/bank-regulation/2025/german-regulator-warns-of-risks-from-muddied-ties-between-ai-firms/",
+    "published_at": "2025-12-04T09:08:55-05:00",
+    "source": "PYMNTS",
+    "summary": "Germany\u2019s financial regulator is reportedly warning banks of risks from unclear ties between artificial intelligence companies. \u201cWe\u2019re currently observing the development of both vertical and horizontal connections which are hard to see into from the outside,\u201d Nikolas Speer, the head of banking supervision at BaFin, said at a conference on IT resilience Thursday (Dec. 4), per [\u2026] The post German ...",
+    "content_html": "<p style=\"font-weight: 400;\">Germany\u2019s financial regulator is reportedly warning banks of risks from unclear ties between artificial intelligence companies.</p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p style=\"font-weight: 400;\">\u201cWe\u2019re currently observing the development of both vertical and horizontal connections which are hard to see into from the outside,\u201d\u00a0<a href=\"https://www.bafin.de/EN/DieBaFin/Leitung/Bankenaufsicht/bankenaufsicht_node_en.html\" rel=\"noopener\" target=\"_blank\">Nikolas Speer</a>, the head of banking supervision at\u00a0<a href=\"https://www.bafin.de/EN/Homepage/homepage_node.html\" rel=\"noopener\" target=\"_blank\">BaFin</a>, said at a conference on IT resilience Thursday (Dec. 4), per a Bloomberg News\u00a0<a href=\"https://www.bloomberg.com/news/articles/2025-12-04/german-watchdog-warns-banks-of-ai-industry-concentration-risks\" rel=\"noopener\" target=\"_blank\">report</a>.</p>\n<p style=\"font-weight: 400;\">The report notes that these comments highlight rising worries among regulators in Europe over how AI adoption will add to banks\u2019 dependence on\u00a0<a href=\"https://www.pymnts.com/artificial-intelligence-2/2025/banking-giants-warn-ai-can-bolster-cybercrime-and-lower-morale/\" rel=\"noopener\" target=\"_blank\">foreign tech giants</a>.</p>\n<p style=\"font-weight: 400;\">Earlier this week, Bloomberg added, the\u00a0<a href=\"https://www.bankofengland.co.uk/\" rel=\"noopener\" target=\"_blank\">Bank of England</a>\u00a0warned that a correction in AI stocks could infect wider debt markets and pointed to early warning signs in credit default swaps of companies depending on debt to finance their investments.</p>\n<p style=\"font-weight: 400;\">Speer pointed to \u201can increasing clustering\u201d of the operators of artificial intelligence models, cloud providers, chipmakers and\u00a0<a href=\"https://www.pymnts.com/artificial-intelligence-2/2025/openai-weighs-letting-other-companies-tap-its-data-centers/\" rel=\"noopener\" target=\"_blank\">data centers</a> through shareholdings, the purchase of computing power and other contracts.</p>\n<p style=\"font-weight: 400;\">\u201cThis also creates a concentration risk in the medium-term,\u201d he said. \u201cIt presents you as users with at least the same challenges you\u2019re already facing in the use of cloud services.\u201d</p>\n<p style=\"font-weight: 400;\">The regulator\u2019s comments come two months after separate reports from the\u00a0<a href=\"https://www.fsb.org/\" rel=\"noopener\" target=\"_blank\">Financial Stability Board</a>\u00a0(FSB) and the\u00a0<a href=\"https://www.bis.org/index.htm\" rel=\"noopener\" target=\"_blank\">Bank for International Settlements</a>\u00a0(BIS) calling on financial authorities to monitor the effects of AI use.</p>\n<p style=\"font-weight: 400;\">In its report, the FSB said that financial institutions\u00a0<a href=\"https://www.pymnts.com/artificial-intelligence-2/2025/fsb-and-bis-warn-financial-authorities-about-potential-risks-of-ai/\" rel=\"noopener\" target=\"_blank\">may become too reliant</a>\u00a0on too few third-party generative AI service providers.</p>\n<p style=\"font-weight: 400;\">\u201cThe FSB encourages national authorities to enhance their monitoring approaches, leveraging the indicators presented in the report,\u201d the organization said in a press release. \u201cTo support these efforts, the FSB will facilitate alignment in taxonomies and indicators through cross-border cooperation.\u201d</p>\n<p style=\"font-weight: 400;\">For its part, the BIS contended that while the latest artificial intelligence tools have allowed central banks, financial regulators and supervisory authorities to improve their efficiency and policymaking, the technology also creates potential obstacles in terms of governance, investment in human capital and IT infrastructure.</p>\n<p style=\"font-weight: 400;\">To address the rising challenges presented by the\u00a0<a href=\"https://www.pymnts.com/artificial-intelligence-2/2025/ai-explained-what-businesses-need-to-know-for-enterprise-ai-adoption/\" rel=\"noopener\" target=\"_blank\">adoption of AI</a>\u00a0by households and businesses, central banks and other supervisory and regulatory authorities should \u201cupgrade their capabilities both as informed observers of the effects of technological advancements and as users of the technology itself,\u201d BIS said.</p>\n<p style=\"font-weight: 400;\">\u201cFor example, central banks as observers need to stay ahead of the\u00a0<a href=\"https://www.pymnts.com/news/artificial-intelligence/2025/mit-says-ai-can-replace-11percent-united-states-workforce\" rel=\"noopener\" target=\"_blank\">impact of AI</a>\u00a0on economic activity through its effects on aggregate supply and demand,\u201d BIS said in its report. \u201cAs users, they need to build expertise in incorporating AI and non-traditional data in their own analytical tools as well as in how to use AI to produce reliable data.\u201d</p>\n<div>\n<p class=\"elementtoproof\"><i>For all PYMNTS AI coverage, subscribe to the daily<span class=\"apple-converted-space\">\u00a0</span></i><a href=\"https://www.pymnts.com/subscribe/\" rel=\"noopener\" target=\"_blank\" title=\"https://www.pymnts.com/subscribe/\">AI\u00a0Newsletter</a><i>.</i></p>\n</div>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/bank-regulation/2025/german-regulator-warns-of-risks-from-muddied-ties-between-ai-firms/\">German Regulator Warns of Risks From Muddied Ties Between AI Firms</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
+    "image_url": "https://www.pymnts.com/wp-content/uploads/2022/11/BaFin.jpg?w=457",
+    "summary_text": "Germany\u2019s financial regulator is reportedly warning banks of risks from unclear ties between artificial intelligence companies. \u201cWe\u2019re currently observing the development of both vertical and horizontal connections which are hard to see into from the outside,...",
+    "category": "ai",
+    "_trending_tags": [
+      "ai"
+    ],
+    "_permalink": "/p/83dc740ace/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/83dc740ace/",
+    "_summary_240": "Germany\u2019s financial regulator is reportedly warning banks of risks from unclear ties between artificial intelligence companies. \u201cWe\u2019re currently observing the development of both...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/83dc740ace/thumbnail.png"
+  },
+  {
+    "title": "Yahoo is using AI to recap football games in real time",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/837950/yahoo-sports-game-breakdowns-ai",
+    "published_at": "2025-12-04T09:05:16-05:00",
+    "source": "The Verge",
+    "summary": "It's about to be week 14 of the NFL season, and stakes and storylines abound across the league. In a new section of the Yahoo Sports app, Yahoo is hoping it can use AI to capture them all automatically. The company is launching a new feature called Game Breakdowns, which attempt to generate a snapshot [\u2026]",
+    "content_html": "<figure>\n\n<img alt=\"\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/12/Yahoo-Sports-Game-Breakdowns.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100\" />\n\t<figcaption>\n\t\t</figcaption>\n</figure>\n<p class=\"has-text-align-none\">It's about to be week 14 of the NFL season, and stakes and storylines abound across the league. In a new section of the Yahoo Sports app, Yahoo is hoping it can use AI to capture them all automatically. The company is launching a new feature called Game Breakdowns, which attempt to generate a snapshot of what's interesting about a game - before, during, or after it's been played.</p>\n<p class=\"has-text-align-none\">Game Breakdowns, which for now are in beta and only for users who pay for Yahoo's Fantasy Plus subscription, consist of three things. The first is a summary of the game, intended to capture both its most interesting stats and its biggest stories - not just typical  \u2026</p>\n<p><a href=\"https://www.theverge.com/ai-artificial-intelligence/837950/yahoo-sports-game-breakdowns-ai\">Read the full story at The Verge.</a></p>",
+    "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/12/Yahoo-Sports-Game-Breakdowns.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "summary_text": "It's about to be week 14 of the NFL season, and stakes and storylines abound across the league. In a new section of the Yahoo Sports app, Yahoo is hoping it can use AI to capture them all automatically. The company is launching a new feature called Game Break...",
+    "category": "ai",
+    "_trending_tags": [
+      "ai"
+    ],
+    "_permalink": "/p/dda11bb801/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/dda11bb801/",
+    "_summary_240": "It's about to be week 14 of the NFL season, and stakes and storylines abound across the league. In a new section of the Yahoo Sports app, Yahoo is hoping it can use AI to capture...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/dda11bb801/thumbnail.png"
+  },
+  {
+    "title": "EU investigating Meta over policy change that bans rival AI chatbots from WhatsApp",
+    "url": "https://techcrunch.com/2025/12/04/eu-investigating-meta-over-policy-change-that-bans-rival-ai-chatbots-from-whatsapp/",
+    "published_at": "2025-12-04T09:02:28-05:00",
+    "source": "TechCrunch",
+    "summary": "The European Commission is is launching an antitrust investigation into Meta's move to ban other AI companies from using WhatsApp's business tools to offer their own AI chatbots to users.",
+    "content_html": "",
+    "image_url": "https://techcrunch.com/wp-content/uploads/2024/12/whatsapp-logo.jpg?resize=1200,800",
+    "summary_text": "The European Commission is is launching an antitrust investigation into Meta's move to ban other AI companies from using WhatsApp's business tools to offer their own AI chatbots to users.",
+    "category": "ai",
+    "_trending_tags": [
+      "ai",
+      "meta"
+    ],
+    "_permalink": "/p/a6c625819e/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/a6c625819e/",
+    "_summary_240": "The European Commission is is launching an antitrust investigation into Meta's move to ban other AI companies from using WhatsApp's business tools to offer their own AI chatbots...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/a6c625819e/thumbnail.png"
+  },
+  {
+    "title": "AWS launches Kiro powers with Stripe, Figma, and Datadog integrations for AI-assisted coding",
+    "url": "https://venturebeat.com/ai/aws-launches-kiro-powers-with-stripe-figma-and-datadog-integrations-for-ai",
+    "published_at": "2025-12-04T09:02:00-05:00",
+    "source": "VentureBeat",
+    "summary": "Amazon Web Services on Wednesday introduced Kiro powers , a system that allows software developers to give their AI coding assistants instant, specialized expertise in specific tools and workflows \u2014 addressing what the company calls a fundamental bottleneck in how artificial intelligence agents operate today. AWS made the announcement at its annual re:Invent conference in Las Vegas. The capabilit...",
+    "content_html": "",
+    "image_url": "https://images.ctfassets.net/jdtwqhzvc2n1/53TbLNDfKawmAd8kGfw7ce/17400e5e49710944890e2a6b69cf04f8/nuneybits_Vector_art_of_a_server_rack_in_the_clouds_bf8ba787-9002-494b-b6be-fedd40deb4f9.webp?w=800&amp;q=75",
+    "summary_text": "Amazon Web Services on Wednesday introduced Kiro powers , a system that allows software developers to give their AI coding assistants instant, specialized expertise in specific tools and workflows \u2014 addressing what the company calls a fundamental bottleneck i...",
+    "category": "fintech",
+    "_trending_tags": [
+      "ai",
+      "amazon",
+      "stripe"
+    ],
+    "_permalink": "/p/55f2917c13/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/55f2917c13/",
+    "_summary_240": "Amazon Web Services on Wednesday introduced Kiro powers , a system that allows software developers to give their AI coding assistants instant, specialized expertise in specific...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/55f2917c13/thumbnail.png"
+  },
+  {
+    "title": "Game the Halls: GeForce NOW Brings Holiday Cheer With 30 New Games in the Cloud",
+    "url": "https://blogs.nvidia.com/blog/geforce-now-thursday-dec-2025/",
+    "published_at": "2025-12-04T09:00:37-05:00",
+    "source": "NVIDIA News",
+    "summary": "GeForce NOW is decking the digital halls with 30 new games to keep spirits high all month long. Join the fun with Hogwarts Legacy, the LEGO Harry Potter Collection and a sleighful of new adventures streaming straight from the cloud. The \u201cHalf-Price Holiday\u201d sale keeps the savings rolling after Black Friday, with premium GeForce NOW Read Article",
+    "content_html": "",
+    "image_url": "https://s3.amazonaws.com/cms.ipressroom.com/219/files/202512/693194183d633203d1531dac_gfn-thursday-12-4-nv-blog-1280x680-logo-842x450/gfn-thursday-12-4-nv-blog-1280x680-logo-842x450_thmb.jpg",
+    "summary_text": "GeForce NOW is decking the digital halls with 30 new games to keep spirits high all month long. Join the fun with Hogwarts Legacy, the LEGO Harry Potter Collection and a sleighful of new adventures streaming straight from the cloud. The \u201cHalf-Price Holiday\u201d s...",
+    "category": "software",
+    "_trending_tags": [
+      "ai",
+      "cloud",
+      "llm"
+    ],
+    "_permalink": "/p/25f7ded41b/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/25f7ded41b/",
+    "_summary_240": "GeForce NOW is decking the digital halls with 30 new games to keep spirits high all month long. Join the fun with Hogwarts Legacy, the LEGO Harry Potter Collection and a...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/25f7ded41b/thumbnail.png"
+  },
+  {
+    "title": "Identity Platform Trulioo Joins Google\u2019s Agent Payments Protocol",
+    "url": "https://www.pymnts.com/artificial-intelligence-2/2025/identity-platform-trulioo-joins-googles-agent-payments-protocol/",
+    "published_at": "2025-12-04T09:00:13-05:00",
+    "source": "PYMNTS",
+    "summary": "Identity platform Trulioo has joined Google\u2019s Agent Payments Protocol (AP2) initiative, which creates a common language for how artificial intelligence agents can initiate and complete transactions on behalf of users. Trulioo will bring to the AP2 initiative its expertise in identity verification and trust infrastructure and will show how its Digital Agent Passport (DAP) [\u2026] The post Identity Pla...",
+    "content_html": "<p>Identity platform <a href=\"https://www.trulioo.com/\" rel=\"noopener\" target=\"_blank\">Trulioo</a> has joined <a href=\"https://about.google/\" rel=\"noopener\" target=\"_blank\">Google</a>\u2019s <a href=\"https://cloud.google.com/blog/products/ai-machine-learning/announcing-agents-to-payments-ap2-protocol\" rel=\"noopener\" target=\"_blank\">Agent Payments Protocol</a> (AP2) initiative, which creates a common language for how artificial intelligence agents can initiate and complete transactions on behalf of users.</p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p>Trulioo will bring to the AP2 initiative its expertise in identity verification and trust infrastructure and will show how its <a href=\"https://www.trulioo.com/resources/white-papers/know-your-agent-an-identity-framework-for-trusted-agentic-commerce\" rel=\"noopener\" target=\"_blank\">Digital Agent Passport</a> (DAP) can be used with AP2 to convey trust for agent-led transactions, the company said in a Thursday (Dec. 4) press release emailed to PYMNTS.</p>\n<p>\u201cBy joining AP2, we\u2019re helping define the identity backbone for autonomous payments, where verified agents transact transparently, responsibly and at machine speed,\u201d Trulioo CEO <a href=\"https://www.linkedin.com/in/vickybindra\" rel=\"noopener\" target=\"_blank\">Vicky Bindra</a> said in the release. \u201cThis is the architecture, and the future, of trusted agentic commerce.\u201d</p>\n<p>The Digital Agent Passport, a tamper-proof <a href=\"https://www.pymnts.com/artificial-intelligence-2/2025/trulioo-bets-on-a-digital-agent-passport-to-keep-bots-honest-at-checkout/\" rel=\"noopener\" target=\"_blank\">credential</a> showing who built the agent, who it represents and what permissions it has, is at the heart of the framework of Know Your Agent (KYA), a concept designed to verify identities of AI-driven software agents, PYMNTS reported in July.</p>\n<p>The KYA concept was advanced in a <a href=\"https://www.trulioo.com/resources/white-paper/know-your-agent-an-identity-framework-for-trusted-agentic-commerce?utm_campaign=know-your-agent-an-identity-framework-for-trusted-agentic-commerce&amp;utm_medium=third-party&amp;utm_source=pymnts\" rel=\"noopener\" target=\"_blank\">white paper</a> published by Trulioo and <a href=\"https://payos.ai/\" rel=\"noopener\" target=\"_blank\">PayOS</a>.</p>\n<p>The passport framework includes five key checkpoints: provenance, user binding, permission scope, real-time behavior telemetry and continuous risk scoring.</p>\n<p>Identity is the key to adoption of AI agents, Bindra told PYMNTS CEO Karen Webster in July.</p>\n<p>\u201cThere\u2019s still a lot of fear in how the system will operate and therefore some resistance to being proactive,\u201d Bindra said. \u201cBut we think we\u2019ll reach a tipping point in three or four months as networks become more certain about things like liability shifts. Issuers will be more definite, merchants will be more comfortable.\u201d</p>\n<p>Google introduced AP2 in September, saying the protocol was developed in tandem with payments and tech firms and is designed to \u201csecurely initiate and transact <a href=\"https://www.pymnts.com/news/artificial-intelligence/2025/google-debuts-agent-payments-protocol-bolster-ai-commerce/\" rel=\"noopener\" target=\"_blank\">agent-led payments</a> across platforms.\u201d</p>\n<p>PYMNTS reported at the time that for risk teams, AP2\u2019s biggest contribution is accountability. Each mandate documents what the user allowed, what the merchant promised, and what the network processed. That evidence can cut down on false disputes and help issuers make better approve-or-decline decisions. Agentic commerce will still need strong <a href=\"https://www.pymnts.com/artificial-intelligence-2/2025/google-unveils-a-payment-protocol-for-ai-driven-commerce/\" rel=\"noopener\" target=\"_blank\">identity checks</a>, but mandates could reduce fraud without adding friction.</p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/artificial-intelligence-2/2025/identity-platform-trulioo-joins-googles-agent-payments-protocol/\">Identity Platform Trulioo Joins Google\u2019s Agent Payments Protocol</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
+    "image_url": "https://www.pymnts.com/wp-content/uploads/2025/10/Trulioo-KYB.jpg?w=457",
+    "summary_text": "Identity platform Trulioo has joined Google\u2019s Agent Payments Protocol (AP2) initiative, which creates a common language for how artificial intelligence agents can initiate and complete transactions on behalf of users. Trulioo will bring to the AP2 initiative ...",
+    "category": "fintech",
+    "_trending_tags": [
+      "agent",
+      "google"
+    ],
+    "_permalink": "/p/de32a4669f/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/de32a4669f/",
+    "_summary_240": "Identity platform Trulioo has joined Google\u2019s Agent Payments Protocol (AP2) initiative, which creates a common language for how artificial intelligence agents can initiate and...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/de32a4669f/thumbnail.png"
+  },
+  {
+    "title": "Are seed-phrase-free crypto wallets the key to mass self-custody? Expert weighs in",
+    "url": "https://cointelegraph.com/news/are-seed-phrase-free-crypto-wallets-the-key-to-mass-self-custody-expert-weighs-in?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "published_at": "2025-12-04T09:00:00-05:00",
+    "source": "Cointelegraph",
+    "summary": "A new wave of self-custodial smart accounts aims to eliminate seed phrases, introduce card-based spending and remove the fear of losing access to crypto forever.",
+    "content_html": "",
+    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTIvMDE5YWU5M2MtYTg2NS03ZTE3LWE1MzAtNTQyNzAyZmMzM2Vk.jpg",
+    "summary_text": "A new wave of self-custodial smart accounts aims to eliminate seed phrases, introduce card-based spending and remove the fear of losing access to crypto forever.",
+    "category": "fintech",
+    "_trending_tags": [
+      "ai"
+    ],
+    "_permalink": "/p/7bba7c59e5/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/7bba7c59e5/",
+    "_summary_240": "A new wave of self-custodial smart accounts aims to eliminate seed phrases, introduce card-based spending and remove the fear of losing access to crypto forever.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/7bba7c59e5/thumbnail.png"
+  },
+  {
+    "title": "US stablecoin rules split global liquidity with Europe, CertiK warns",
+    "url": "https://cointelegraph.com/news/us-genius-act-eu-mica-stablecoin-liquidity-split?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "published_at": "2025-12-04T09:00:00-05:00",
+    "source": "Cointelegraph",
+    "summary": "US stablecoin rules under the GENIUS Act are splitting global liquidity with Europe, creating regional markets and potentially leading to cross-border friction, a report says.",
+    "content_html": "",
+    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTIvMDE5YWUwYmYtNmNlYy03ZjA1LWFiZmQtOWI3MDliNWFjZTkz.jpg",
+    "summary_text": "US stablecoin rules under the GENIUS Act are splitting global liquidity with Europe, creating regional markets and potentially leading to cross-border friction, a report says.",
+    "category": "fintech",
+    "_permalink": "/p/ef9fe3cdb3/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/ef9fe3cdb3/",
+    "_summary_240": "US stablecoin rules under the GENIUS Act are splitting global liquidity with Europe, creating regional markets and potentially leading to cross-border friction, a report says.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/ef9fe3cdb3/thumbnail.png"
+  },
+  {
+    "title": "AI finds its way into Apple\u2019s top apps of the year",
+    "url": "https://techcrunch.com/2025/12/04/ai-finds-its-way-into-apples-top-apps-of-the-year/",
+    "published_at": "2025-12-04T09:00:00-05:00",
+    "source": "TechCrunch",
+    "summary": "Although Apple has continued to avoid naming a dedicated AI app or AI chatbot as its app of the year, AI was showcased among this year's winners.",
+    "content_html": "",
+    "image_url": "https://techcrunch.com/wp-content/uploads/2025/12/app-of-the-year.jpg?resize=1200,722",
+    "summary_text": "Although Apple has continued to avoid naming a dedicated AI app or AI chatbot as its app of the year, AI was showcased among this year's winners.",
+    "category": "ai",
+    "_trending_tags": [
+      "ai",
+      "apple"
+    ],
+    "_permalink": "/p/5673fbbb1d/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/5673fbbb1d/",
+    "_summary_240": "Although Apple has continued to avoid naming a dedicated AI app or AI chatbot as its app of the year, AI was showcased among this year's winners.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/5673fbbb1d/thumbnail.png"
+  },
+  {
     "title": "Digital Asset raises fresh funding to scale Canton Network adoption",
     "url": "https://cointelegraph.com/news/digital-asset-canton-network-bny-nasdaq-sp-global-funding?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
     "published_at": "2025-12-04T08:49:23-05:00",
@@ -428,26 +614,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/1f68abcca7/thumbnail.png"
   },
   {
-    "title": "Meta Hires Apple Design Executive Alan Dye to Lead New Creative Studio",
-    "url": "https://www.pymnts.com/meta/2025/meta-hires-apple-design-executive-alan-dye-to-lead-new-creative-studio/",
-    "published_at": "2025-12-03T21:38:16-05:00",
-    "source": "PYMNTS",
-    "summary": "Meta is establishing a new creative studio in its Reality Labs division and has hired longtime Apple design executive Alan Dye to lead it. Mark Zuckerberg, CEO at Meta, announced these moves in a Wednesday (Dec. 3) post on Threads. The new studio will \u201cdefine the next generation of our products and services\u201d and [\u2026] The post Meta Hires Apple Design Executive Alan Dye to Lead New Creative Studio a...",
-    "content_html": "<p><a href=\"https://www.meta.com/\" rel=\"noopener\" target=\"_blank\"><span>Meta</span></a><span> is establishing a new creative studio in its </span><a href=\"https://tech.facebook.com/reality-labs/\" rel=\"noopener\" target=\"_blank\"><span>Reality Labs</span></a><span> division and has hired longtime </span><a href=\"https://www.apple.com/\" rel=\"noopener\" target=\"_blank\"><span>Apple</span></a><span> design executive </span><a href=\"https://www.linkedin.com/in/alan-dye-3879a82\" rel=\"noopener\" target=\"_blank\"><span>Alan Dye</span></a><span> to lead it.</span></p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p><a href=\"https://www.meta.com/media-gallery/executives/mark-zuckerberg/\" rel=\"noopener\" target=\"_blank\"><span>Mark Zuckerberg</span></a><span>, CEO at Meta, announced these moves in a Wednesday (Dec. 3) </span><a href=\"https://www.threads.com/@zuck/post/DR0Wsy0EhCP\" rel=\"noopener\" target=\"_blank\"><span>post</span></a><span> on Threads.</span></p>\n<p><span>The new studio will \u201cdefine the next generation of our products and services\u201d and will include designers with \u201cdeep experience building iconic products that bridge hardware and software,\u201d Zuckerberg said in another </span><a href=\"https://www.threads.com/@zuck/post/DR0WswFknat\" rel=\"noopener\" target=\"_blank\"><span>post</span></a><span>.</span></p>\n<p><span>Together with Dye, the creative studio will include </span><a href=\"https://www.linkedin.com/in/bsorrentino\" rel=\"noopener\" target=\"_blank\"><span>Billy Sorentino</span></a><span>, another design lead from Apple; </span><a href=\"https://www.linkedin.com/in/joshto\" rel=\"noopener\" target=\"_blank\"><span>Joshua To</span></a><span>, who has led interface design across Reality Labs; Meta\u2019s industrial design team; and its metaverse design and art teams, Zuckerberg said in a third </span><a href=\"https://www.threads.com/@zuck/post/DR0WsyWki1M\" rel=\"noopener\" target=\"_blank\"><span>post</span></a><span>.</span></p>\n<p><span>\u201cWe\u2019re entering a new era where AI glasses and other devices will change how we connect with technology and each other,\u201d Zuckerberg said in a fourth </span><a href=\"https://www.threads.com/@zuck/post/DR0WsxRklXy\" rel=\"noopener\" target=\"_blank\"><span>post</span></a><span>. \u201cThe potential is enormous, but what matters most is making these experiences feel natural and truly centered around people. With this new studio, we\u2019re focused on making every interaction thoughtful, intuitive and built to serve people.\u201d</span></p>\n<p><span>Dye joined Apple in 2006 and became the company\u2019s Design Studio Lead in 2015, according to his LinkedIn profile.</span></p>\n<p><span>During that time, Dye \u201cshaped the evolution\u201d of every major software platform for iPhone, iPad, Mac, Watch, TV and Vision Pro, according to the profile.</span></p>\n<p><span>\u201cIntroduced multiple generations of Apple\u2019s design language, culminating in Liquid Glass, reshaping not only the aesthetics of Apple\u2019s platforms but the fundamental patterns that billions of people use to navigate the digital world,\u201d Dye\u2019s profile said.</span></p>\n<p><a href=\"https://www.apple.com/newsroom/2025/06/apple-introduces-a-delightful-and-elegant-new-software-design/\" rel=\"noopener\" target=\"_blank\"><span>Liquid Glass</span></a><span>, which was introduced in June, is Apple\u2019s new translucent material for its devices paired with a software design that extends across the company\u2019s devices, Apple said at the time in a press release.</span></p>\n<p><span>Apple will replace Dye with its longtime designer </span><a href=\"https://www.linkedin.com/in/stephen-lemay-12930bb4\" rel=\"noopener\" target=\"_blank\"><span>Stephen Lemay</span></a><span>, Bloomberg reported Wednesday.</span></p>\n<p><span>\u201cSteve Lemay has played a key role in the design of every major Apple interface since 1999,\u201d Apple CEO said in a statement provided to Bloomberg. \u201cHe has always set an extraordinarily high bar for excellence and embodies Apple\u2019s culture of collaboration and creativity.\u201d</span></p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/meta/2025/meta-hires-apple-design-executive-alan-dye-to-lead-new-creative-studio/\">Meta Hires Apple Design Executive Alan Dye to Lead New Creative Studio</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
-    "image_url": "https://www.pymnts.com/wp-content/uploads/2025/12/meta-reality-labs-apple-ai-artificial-intelligence-alan-dye-design-hiring-e1764815385473.jpeg?w=425",
-    "summary_text": "Meta is establishing a new creative studio in its Reality Labs division and has hired longtime Apple design executive Alan Dye to lead it. Mark Zuckerberg, CEO at Meta, announced these moves in a Wednesday (Dec. 3) post on Threads. The new studio will \u201cdefine...",
-    "category": "fintech",
-    "_trending_tags": [
-      "ai",
-      "apple",
-      "meta"
-    ],
-    "_permalink": "/p/93ee071caf/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/93ee071caf/",
-    "_summary_240": "Meta is establishing a new creative studio in its Reality Labs division and has hired longtime Apple design executive Alan Dye to lead it. Mark Zuckerberg, CEO at Meta, announced...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/93ee071caf/thumbnail.png"
-  },
-  {
     "title": "Day One Ventures\u2019 Masha Bucher on why every founder needs to be an influencer",
     "url": "https://techcrunch.com/video/day-one-ventures-masha-bucher-on-why-every-founder-needs-to-be-an-influencer/",
     "published_at": "2025-12-03T20:00:00-05:00",
@@ -557,6 +723,26 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/afab8ddcdf/",
     "_summary_240": "Open source React executes malicious code with malformed HTML\u2014no authentication needed.",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/afab8ddcdf/thumbnail.png"
+  },
+  {
+    "title": "Nvidia's new AI framework trains an 8B model to manage tools like a pro",
+    "url": "https://venturebeat.com/ai/nvidias-new-ai-framework-trains-an-8b-model-to-manage-tools-like-a-pro",
+    "published_at": "2025-12-03T18:00:00-05:00",
+    "source": "VentureBeat",
+    "summary": "Researchers at Nvidia and the University of Hong Kong have released Orchestrator, an 8-billion-parameter model that coordinates different tools and large language models (LLMs) to solve complex problems. In their experiments, Orchestrator achieved higher accuracy at a lower cost than much larger models in tool-use benchmarks, while also aligning with user preferences on which tools to use for a g...",
+    "content_html": "",
+    "image_url": "https://images.ctfassets.net/jdtwqhzvc2n1/61f98zxDza93Nw0wgjD4Sb/935f7357237957c9ff642b7c4355cf88/LLM_tool-use.jpg?w=800&amp;q=75",
+    "summary_text": "Researchers at Nvidia and the University of Hong Kong have released Orchestrator, an 8-billion-parameter model that coordinates different tools and large language models (LLMs) to solve complex problems. In their experiments, Orchestrator achieved higher accu...",
+    "category": "ai",
+    "_trending_tags": [
+      "ai",
+      "llm",
+      "nvidia"
+    ],
+    "_permalink": "/p/147bb756ab/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/147bb756ab/",
+    "_summary_240": "Researchers at Nvidia and the University of Hong Kong have released Orchestrator, an 8-billion-parameter model that coordinates different tools and large language models (LLMs)...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/147bb756ab/thumbnail.png"
   },
   {
     "title": "Fusaka goes live as Ethereum edges closer to \u2018instant feel\u2019 UX",
@@ -948,24 +1134,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/971dcd6490/thumbnail.png"
   },
   {
-    "title": "ETHZilla takes stake in Karus to tokenize AI-modeled auto-loan portfolios",
-    "url": "https://cointelegraph.com/news/ethzilla-stake-karus-tokenized-ai-modeled-auto-loan?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-    "published_at": "2025-12-03T13:21:29-05:00",
-    "source": "Cointelegraph",
-    "summary": "The deal grants ETHZilla access to Karus\u2019s AI underwriting engine and loan origination network, positioning the crypto treasury company to offer auto credit onchain in 2026.",
-    "content_html": "",
-    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTIvMDE5YWU1MGMtODllMC03YjhjLWI0MjgtMDNiYjVkNTQ1YWNj.jpg",
-    "summary_text": "The deal grants ETHZilla access to Karus\u2019s AI underwriting engine and loan origination network, positioning the crypto treasury company to offer auto credit onchain in 2026.",
-    "category": "fintech",
-    "_trending_tags": [
-      "ai"
-    ],
-    "_permalink": "/p/a77585a2a1/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/a77585a2a1/",
-    "_summary_240": "The deal grants ETHZilla access to Karus\u2019s AI underwriting engine and loan origination network, positioning the crypto treasury company to offer auto credit onchain in 2026.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/a77585a2a1/thumbnail.png"
-  },
-  {
     "title": "How healthcare leaders can build cyber resilience",
     "url": "https://www.microsoft.com/en-us/industry/blog/healthcare/2025/12/03/future-proofing-healthcare-cybersecurity-what-every-leader-should-know/",
     "published_at": "2025-12-03T13:13:59-05:00",
@@ -996,24 +1164,6 @@
     ]
   },
   {
-    "title": "Anthropic hires lawyers as it preps for IPO",
-    "url": "https://techcrunch.com/2025/12/03/anthropic-hires-lawyers-as-it-preps-for-ipo/",
-    "published_at": "2025-12-03T12:42:37-05:00",
-    "source": "TechCrunch",
-    "summary": "It has brought on law firm Wilson Sonsini to help kick off the process, and the company is tackling an internal checklist to prepare it for what could be one of the largest IPOs ever.",
-    "content_html": "",
-    "image_url": "https://techcrunch.com/wp-content/uploads/2025/06/Anthropic-economic-futures-program.png?resize=1200,667",
-    "summary_text": "It has brought on law firm Wilson Sonsini to help kick off the process, and the company is tackling an internal checklist to prepare it for what could be one of the largest IPOs ever.",
-    "category": "ai",
-    "_trending_tags": [
-      "anthropic"
-    ],
-    "_permalink": "/p/8d32f9c458/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/8d32f9c458/",
-    "_summary_240": "It has brought on law firm Wilson Sonsini to help kick off the process, and the company is tackling an internal checklist to prepare it for what could be one of the largest IPOs...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/8d32f9c458/thumbnail.png"
-  },
-  {
     "title": "Fraudulent gambling network may actually be something more nefarious",
     "url": "https://arstechnica.com/security/2025/12/fraudulent-gambling-network-may-be-a-nation-state-spying-operation/",
     "published_at": "2025-12-03T12:23:26-05:00",
@@ -1027,44 +1177,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/9a3b442b69/",
     "_summary_240": "Researchers say there's more to the network, which has operated for 14 years.",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/9a3b442b69/thumbnail.png"
-  },
-  {
-    "title": "Taiwan eyes 2026 stablecoin launch as crypto legislation advances: Report",
-    "url": "https://cointelegraph.com/news/taiwan-stablecoin-regulations-2026-report?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-    "published_at": "2025-12-03T12:06:16-05:00",
-    "source": "Cointelegraph",
-    "summary": "A Taiwan-issued stablecoin pegged to either the country\u2019s dollar or the US dollar may enter the market in the second half of 2026.",
-    "content_html": "",
-    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTIvMDE5YWU0ZTEtZWY0Ny03OTI2LWJhMjAtMDdmYzMwOWZhODg5.jpg",
-    "summary_text": "A Taiwan-issued stablecoin pegged to either the country\u2019s dollar or the US dollar may enter the market in the second half of 2026.",
-    "category": "fintech",
-    "_trending_tags": [
-      "ai"
-    ],
-    "_permalink": "/p/d564328cff/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/d564328cff/",
-    "_summary_240": "A Taiwan-issued stablecoin pegged to either the country\u2019s dollar or the US dollar may enter the market in the second half of 2026.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/d564328cff/thumbnail.png"
-  },
-  {
-    "title": "AWS doubles down on custom LLMs with features meant to simplify model creation",
-    "url": "https://techcrunch.com/2025/12/03/aws-doubles-down-on-custom-llms-with-features-meant-to-simplify-model-creation/",
-    "published_at": "2025-12-03T11:30:00-05:00",
-    "source": "TechCrunch",
-    "summary": "AWS is launching more capabilities in both Amazon Bedrock and Amazon SageMaker AI to make building custom models easier.",
-    "content_html": "",
-    "image_url": "https://techcrunch.com/wp-content/uploads/2025/12/Sagemaker.png?resize=1200,675",
-    "summary_text": "AWS is launching more capabilities in both Amazon Bedrock and Amazon SageMaker AI to make building custom models easier.",
-    "category": "ai",
-    "_trending_tags": [
-      "ai",
-      "amazon",
-      "llm"
-    ],
-    "_permalink": "/p/d1117bdb9f/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/d1117bdb9f/",
-    "_summary_240": "AWS is launching more capabilities in both Amazon Bedrock and Amazon SageMaker AI to make building custom models easier.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/d1117bdb9f/thumbnail.png"
   },
   {
     "title": "Codex brings concepts into view.",
@@ -1434,26 +1546,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/2cd0dd6ce9/thumbnail.png"
   },
   {
-    "title": "AWS claims 90% vector cost savings with S3 Vectors GA, calls it 'complementary' - analysts split on what it means for vector databases",
-    "url": "https://venturebeat.com/data-infrastructure/aws-claims-90-vector-cost-savings-with-s3-vectors-ga-calls-it-complementary",
-    "published_at": "2025-12-02T21:00:00-05:00",
-    "source": "VentureBeat",
-    "summary": "Vector databases emerged as a must-have technology foundation at the beginning of the modern gen AI era. What has changed over the last year, however, is that vectors, the numerical representations of data used by LLMs, have increasingly become just another data type in all manner of different databases. Now, Amazon Web Services (AWS) is taking the next leap forward in the ubiquity of vectors wit...",
-    "content_html": "",
-    "image_url": "https://images.ctfassets.net/jdtwqhzvc2n1/7JL5r6I6mP0tW5L8ojqnuT/5f396584fbd5ca55b1e9e6438423ee5a/s3-vs-vector-smk.jpg?w=800&amp;q=75",
-    "summary_text": "Vector databases emerged as a must-have technology foundation at the beginning of the modern gen AI era. What has changed over the last year, however, is that vectors, the numerical representations of data used by LLMs, have increasingly become just another d...",
-    "category": "ai",
-    "_trending_tags": [
-      "ai",
-      "genai",
-      "llm"
-    ],
-    "_permalink": "/p/65977885e2/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/65977885e2/",
-    "_summary_240": "Vector databases emerged as a must-have technology foundation at the beginning of the modern gen AI era. What has changed over the last year, however, is that vectors, the...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/65977885e2/thumbnail.png"
-  },
-  {
     "title": "Anthropic taps IPO lawyers as it races OpenAI to go public",
     "url": "https://www.ft.com/content/3254fa30-5bdb-4c30-8560-7cd7ebbefc5f",
     "published_at": "2025-12-02T19:35:19-05:00",
@@ -1534,45 +1626,23 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/e4b8f43ffb/thumbnail.png"
   },
   {
-    "title": "Shaping Model Behavior in GPT-5.1\u2014 the OpenAI Podcast Ep. 11",
-    "url": "https://www.youtube.com/watch?v=GXAAzKX6oaQ",
-    "published_at": "2025-12-02T13:00:27-05:00",
-    "source": "OpenAI YouTube",
-    "summary": "What does it mean for an AI model to have \"personality\"? Researcher Christina Kim and product manager Laurentia Romaniuk talk about how OpenAI set out to build a model that delivers on both IQ and EQ, while giving people more flexibility in how ChatGPT responds. They break down what goes into model behavior and why it's an important, but still imperfect blend of art and science. Chapters - 00:00:...",
+    "title": "AI Fluency for nonprofits course trailer",
+    "url": "https://www.youtube.com/watch?v=xatyxfEevZA",
+    "published_at": "2025-12-02T12:41:41-05:00",
+    "source": "Anthropic YouTube",
+    "summary": "A trailer of AI Fluency for nonprofits developed by Anthropic and Giving Tuesday. View the full free course, including all videos, exercises, and resources, at https://www.anthropic.com/ai-fluency-for-nonprofits This video is copyright 2025 Anthropic PBC and Giving Tuesday. Based on the AI Fluency Framework developed by Prof. Rick Dakan (Ringling College of Art and Design) and Prof. Joseph Feller...",
     "content_html": "",
-    "image_url": "https://i.ytimg.com/vi/GXAAzKX6oaQ/maxresdefault.jpg",
-    "summary_text": "What does it mean for an AI model to have \"personality\"? Researcher Christina Kim and product manager Laurentia Romaniuk talk about how OpenAI set out to build a model that delivers on both IQ and EQ, while giving people more flexibility in how ChatGPT respon...",
+    "image_url": "https://i.ytimg.com/vi/xatyxfEevZA/maxresdefault.jpg",
+    "summary_text": "A trailer of AI Fluency for nonprofits developed by Anthropic and Giving Tuesday. View the full free course, including all videos, exercises, and resources, at https://www.anthropic.com/ai-fluency-for-nonprofits This video is copyright 2025 Anthropic PBC and ...",
     "category": "ai",
     "_trending_tags": [
       "ai",
-      "chatgpt",
-      "gpt",
-      "openai"
+      "anthropic"
     ],
-    "_permalink": "/p/9fe4ac80a4/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/9fe4ac80a4/",
-    "_summary_240": "What does it mean for an AI model to have \"personality\"? Researcher Christina Kim and product manager Laurentia Romaniuk talk about how OpenAI set out to build a model that...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/9fe4ac80a4/thumbnail.png"
-  },
-  {
-    "title": "Amazon's new AI can code for days without human help. What does that mean for software engineers?",
-    "url": "https://venturebeat.com/ai/amazons-new-ai-can-code-for-days-without-human-help-what-does-that-mean-for",
-    "published_at": "2025-12-02T12:30:00-05:00",
-    "source": "VentureBeat",
-    "summary": "Amazon Web Services on Tuesday announced a new class of artificial intelligence systems called \" frontier agents \" that can work autonomously for hours or even days without human intervention, representing one of the most ambitious attempts yet to automate the full software development lifecycle. The announcement, made during AWS CEO Matt Garman's keynote address at the company's annual re:Invent...",
-    "content_html": "",
-    "image_url": "https://images.ctfassets.net/jdtwqhzvc2n1/4DAwyP4OahDixwCOgmDRK0/8c301172d603674eb96b8f67008faf53/nuneybits_Vector_art_of_glowing-code_cloud_4880d34c-2130-4612-92b4-ff55b2bb0255.webp?w=800&amp;q=75",
-    "summary_text": "Amazon Web Services on Tuesday announced a new class of artificial intelligence systems called \" frontier agents \" that can work autonomously for hours or even days without human intervention, representing one of the most ambitious attempts yet to automate th...",
-    "category": "software",
-    "_trending_tags": [
-      "agent",
-      "ai",
-      "amazon"
-    ],
-    "_permalink": "/p/e012a848fc/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/e012a848fc/",
-    "_summary_240": "Amazon Web Services on Tuesday announced a new class of artificial intelligence systems called \" frontier agents \" that can work autonomously for hours or even days without human...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/e012a848fc/thumbnail.png"
+    "_permalink": "/p/26dc568f02/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/26dc568f02/",
+    "_summary_240": "A trailer of AI Fluency for nonprofits developed by Anthropic and Giving Tuesday. View the full free course, including all videos, exercises, and resources, at...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/26dc568f02/thumbnail.png"
   },
   {
     "title": "NVIDIA and AWS Expand Full-Stack Partnership, Providing the Secure, High-Performance Compute Platform Vital for Future Innovation",
@@ -1853,11 +1923,7 @@
     "category": "ai",
     "_trending_tags": [
       "ai"
-    ],
-    "_permalink": "/p/7401414389/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/7401414389/",
-    "_summary_240": "An accidental leak revealed that Flock, which has cameras in thousands of US communities, is using workers in the Philippines to review and classify footage.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/7401414389/thumbnail.png"
+    ]
   },
   {
     "title": "Ruby Is Not a Serious Programming Language",
