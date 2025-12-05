@@ -1,15 +1,15 @@
 {
-  "generated_at": "2025-12-05T12:23:13.119105-05:00",
+  "generated_at": "2025-12-05T12:43:21.645458-05:00",
   "total_keywords": 30,
   "keyword_counts": {
-    "ai": 260,
+    "ai": 259,
     "openai": 25,
-    "amazon": 19,
-    "agent": 15,
+    "amazon": 18,
     "google": 15,
+    "agent": 14,
+    "anthropic": 14,
     "meta": 14,
     "nvidia": 14,
-    "anthropic": 13,
     "gpt": 11,
     "chatgpt": 10,
     "llm": 10,
@@ -20,6 +20,7 @@
     "mistral": 3,
     "gpu": 2,
     "stripe": 2,
+    "claude": 1,
     "genai": 1,
     "paypal": 1,
     "tensor": 1
