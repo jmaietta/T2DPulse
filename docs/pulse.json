@@ -1,5 +1,75 @@
 [
   {
+    "title": "Here\u2019s what happened in crypto today",
+    "url": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "published_at": "2025-12-05T09:09:34-05:00",
+    "source": "Cointelegraph",
+    "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, NFTs, Web3 and crypto regulation.",
+    "content_html": "",
+    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMDYvMDE5Nzk0MjMtZWY4ZS03YzYwLWI5MzctYjlkZGY3NWZlOGFk.jpg",
+    "summary_text": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, NFTs, Web3 and crypto regulation.",
+    "category": "fintech",
+    "_trending_tags": [
+      "ai"
+    ],
+    "_permalink": "/p/e52f7c0222/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/e52f7c0222/",
+    "_summary_240": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, NFTs, Web3 and crypto regulation.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/e52f7c0222/thumbnail.png"
+  },
+  {
+    "title": "Healthcare AI Shifts Focus From Diagnosis to Workflow",
+    "url": "https://www.pymnts.com/artificial-intelligence-2/2025/healthcare-ai-shifts-focus-from-diagnosis-to-workflow/",
+    "published_at": "2025-12-05T09:00:47-05:00",
+    "source": "PYMNTS",
+    "summary": "The promise of artificial intelligence (AI) in healthcare has long centered on the vision of an autonomous diagnostic engine, a machine that sees disease where human eyes fail. Yet, the current reality in the banking, payments, and digital health ecosystem is far more strategic and immediate: AI is stepping in not to replace the doctor, [\u2026] The post Healthcare AI Shifts Focus From Diagnosis to Wo...",
+    "content_html": "<p><span>The promise of artificial intelligence (AI) in healthcare has long centered on the vision of an autonomous diagnostic engine, a machine that sees disease where human eyes fail. Yet, the current reality in the banking, payments, and digital health ecosystem is far more strategic and immediate: AI is stepping in not to replace the doctor, but to save their time.</span></p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p><span>This shift is the financial and operational linchpin of the newest wave of healthcare technology adoption. With rising patient loads, staffing shortages and a volume of imaging and documentation that has simply outpaced human capacity, health systems are actively embracing AI systems that tackle the \u201cgrunt work\u201d before a clinician even reviews a case.</span></p>\n<p><span>This was underscored by recent models showcased by Microsoft at its Ignite 2025 </span><a href=\"https://ignite.microsoft.com/en-US/home\" rel=\"noopener\" target=\"_blank\"><span>conference</span></a><span>, reflecting a broader industry pivot toward tools that support groundwork tasks while leaving core clinical decision-making untouched.</span></p>\n<p><span>The trend aligns with data highlighted by </span><a href=\"https://www.pymnts.com/artificial-intelligence-2/2025/generative-ai-in-healthcare/\" rel=\"noopener\" target=\"_blank\"><span>PYMNTS</span></a><span>, which reported this year that nearly half of healthcare and life-sciences organizations have generative AI in production use, often for documentation, administrative work and early-stage clinical summaries.</span></p>\n<p><span>More than half of physicians </span><a href=\"https://www.ama-assn.org/practice-management/digital-health/physicians-greatest-use-ai-cutting-administrative-burdens\" rel=\"noopener\" target=\"_blank\"><span>surveyed</span></a><span> by the American Medical Association said that AI tools could meaningfully support core clinical functions. Among respondents, 72% said AI could improve diagnostic ability, 62% said it could enhance clinical outcomes and 59% said it could strengthen care coordination.</span></p>\n<h2><b><span>Imaging Models Anchor Early Use</span></b></h2>\n<p><span>Much of the recent interest has centered on imaging. Microsoft </span><a href=\"https://www.microsoft.com/en-us/industry/blog/healthcare/2025/11/18/agentic-ai-in-action-healthcare-innovation-at-microsoft-ignite-2025/\" rel=\"noopener\" target=\"_blank\"><span>expanded</span></a><span> its healthcare model catalog to more than 50 systems, including upgraded versions of MedImageInsight, which supports X-ray, MRI, dermatology and pathology workloads, and CXRReportGen Premium, built for chest X-ray reporting.</span></p>\n<p><span>These models perform quality checks, classify findings and generate first-pass summaries, but human oversight remains essential to mitigate risks and ensure safety in clinical decision-making.</span></p>\n<p><span>A recent study </span><a href=\"https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2834943\" rel=\"noopener\" target=\"_blank\"><span>found</span></a><span> that AI-assisted radiograph reporting improved documentation efficiency by 15.5%, with peer reviewers detecting no decline in diagnostic</span> <span>quality. A separate </span><a href=\"https://arxiv.org/abs/2412.12042\" rel=\"noopener\" target=\"_blank\"><span>pilot</span></a><span> using simulated AI draft reports showed radiologists completed studies nearly 24% faster when starting from an AI-generated structure rather than a blank screen.</span></p>\n<p><span>Meanwhile, broader research trends suggest where these systems may evolve. As covered by </span><a href=\"https://www.pymnts.com/artificial-intelligence-2/2025/multimodal-ai-takes-shape-for-next-generation-cancer-research/\" rel=\"noopener\" target=\"_blank\"><span>PYMNTS</span></a><span>, multimodal AI tools for next-generation cancer research are beginning to combine imaging, pathology, genomics and clinical history, offering early signals of how AI may support complex data environments.</span></p>\n<p><span>Some hospitals are taking those models further by building their own workflow agents. Oxford University Hospitals in the United Kingdom </span><a href=\"https://www.microsoft.com/en-us/industry/blog/healthcare/2025/11/18/agentic-ai-in-action-healthcare-innovation-at-microsoft-ignite-2025/\" rel=\"noopener\" target=\"_blank\"><span>worked</span></a><span> with Microsoft to assemble a set of specialized agents, called TrustedMDT, that use structured data and model outputs to create case packets for tumor board reviews. These\u202fefforts aim to empower clinicians, shifting\u202fmeetings from information gathering to interpretation and planning, fostering a sense of shared progress.</span></p>\n<p><span>Evidence review is also emerging as a use case. Atropos Health, a clinical evidence platform </span><a href=\"https://www.atroposhealth.com/atropos-health-launches-the-atropos-evidence-agent-at-stanford-health-care-and-collaborates-with-microsoft-to-improve-evidence-based-personalized-medicine-at-the-point-of-care/\" rel=\"noopener\" target=\"_blank\"><span>built</span></a><span> an Evidence Agent that draws on scientific literature and real-world data to generate summaries tied to a specific case. These summaries appear during pre-visit planning or alongside electronic records, allowing clinicians to see relevant research without leaving their workflow.</span></p>\n<h2><b><span>Oversight and Validation Define the Adoption Path</span></b></h2>\n<p><span>Hospitals experimenting with these systems are emphasizing validation and governance. Microsoft also </span><a href=\"https://www.microsoft.com/en-us/industry/blog/healthcare/2025/11/18/agentic-ai-in-action-healthcare-innovation-at-microsoft-ignite-2025/\"><span>released</span></a><span> a Healthcare AI Model Evaluator,\u202fenabling\u202fhospitals to test models on their own data, compare outputs\u202fand\u202fensure reliable\u202fperformance.\u202fThis focus on local verification aims to build trust and confidence in AI adoption.</span></p>\n<p><span>That shift aligns with national guidance. The National Academy of Medicine\u2019s 2025 </span><a href=\"https://www.nationalacademies.org/publications/29087\" rel=\"noopener\" target=\"_blank\"><span>Artificial Intelligence Code of Conduct for Health and Medicine</span></a><span> urges health systems to generate local evidence for every AI tool they adopt, emphasizing that performance can change when models encounter new patient populations, documentation styles or imaging protocols.</span></p>\n<p><span>The </span><a href=\"https://www.nationalacademies.org/publications/29087\" rel=\"noopener\" target=\"_blank\"><span>report</span></a><span> also recommends maintaining audit trails, documenting the provenance of model outputs and ensuring transparent human oversight for all AI-assisted steps that influence clinical decisions.</span></p>\n<p><i><span>For all PYMNTS AI coverage, subscribe to the daily </span></i><a href=\"https://pymnts.com/subscribe/\" rel=\"noopener\" target=\"_blank\"><i><span>AI Newsletter</span></i></a><i><span>.</span></i></p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/artificial-intelligence-2/2025/healthcare-ai-shifts-focus-from-diagnosis-to-workflow/\">Healthcare AI Shifts Focus From Diagnosis to Workflow</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
+    "image_url": "https://www.pymnts.com/wp-content/uploads/2025/12/healthcare-ai-tools-artificial-intelligence-e1764897557225.jpeg?w=457",
+    "summary_text": "The promise of artificial intelligence (AI) in healthcare has long centered on the vision of an autonomous diagnostic engine, a machine that sees disease where human eyes fail. Yet, the current reality in the banking, payments, and digital health ecosystem is...",
+    "category": "ai",
+    "_trending_tags": [
+      "ai"
+    ],
+    "_permalink": "/p/eb70421ae3/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/eb70421ae3/",
+    "_summary_240": "The promise of artificial intelligence (AI) in healthcare has long centered on the vision of an autonomous diagnostic engine, a machine that sees disease where human eyes fail....",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/eb70421ae3/thumbnail.png"
+  },
+  {
+    "title": "From DOGE to Bitcoin: How fiat accidentally \u2018orange-pilled\u2019 Elon Musk",
+    "url": "https://cointelegraph.com/news/doge-to-bitcoin-elon-musk-orange-pill?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "published_at": "2025-12-05T09:00:10-05:00",
+    "source": "Cointelegraph",
+    "summary": "Elon Musk\u2019s viral comments on Bitcoin\u2019s intrinsic ties to energy and physics signal a changing attitude toward Bitcoin from Tesla\u2019s founder.",
+    "content_html": "",
+    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTIvMDE5YWVlYTMtNzU2Yi03ZjY4LTljMGMtZGQzMDEyODRiZmJk.jpg",
+    "summary_text": "Elon Musk\u2019s viral comments on Bitcoin\u2019s intrinsic ties to energy and physics signal a changing attitude toward Bitcoin from Tesla\u2019s founder.",
+    "category": "fintech",
+    "_permalink": "/p/aaeef6a1bb/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/aaeef6a1bb/",
+    "_summary_240": "Elon Musk\u2019s viral comments on Bitcoin\u2019s intrinsic ties to energy and physics signal a changing attitude toward Bitcoin from Tesla\u2019s founder.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/aaeef6a1bb/thumbnail.png"
+  },
+  {
+    "title": "FT award-winning author Stephen Witt on the future of reading: \u2018Books could respond\u2019",
+    "url": "https://www.ft.com/content/9058c29f-d868-4089-8493-298976848846",
+    "published_at": "2025-12-05T08:50:21-05:00",
+    "source": "Financial Times - Technology",
+    "summary": "Writer of \u2018The Thinking Machine\u2019 about Nvidia\u2019s rise believes in vast potential of AI",
+    "content_html": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/21d26800-bab9-459a-87a2-30f001191d13.jpg",
+    "summary_text": "Writer of \u2018The Thinking Machine\u2019 about Nvidia\u2019s rise believes in vast potential of AI",
+    "category": "ai",
+    "_trending_tags": [
+      "ai",
+      "nvidia"
+    ],
+    "_permalink": "/p/0fe8c7dcdf/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/0fe8c7dcdf/",
+    "_summary_240": "Writer of \u2018The Thinking Machine\u2019 about Nvidia\u2019s rise believes in vast potential of AI",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/0fe8c7dcdf/thumbnail.png"
+  },
+  {
     "title": "Buy every dip? How pro hodlers blend surgical DCA with rules-based crypto buys",
     "url": "https://cointelegraph.com/news/how-pros-buy-bitcoin-dips-dca-institutional-playbook?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
     "published_at": "2025-12-05T08:38:33-05:00",
@@ -336,16 +406,12 @@
     "source": "Bloomberg Technology",
     "summary": "Max Levchin probably knows as much about online payments as anyone. He was part of the original \u201cPayPal mafia,\u201d before going on to become co-founder and CEO of Affirm, the $22 billion player in the Buy Now, Pay Later industry that\u2019s hoping to disrupt the incumbent credit card companies. While BNPL is booming, there is still a lot of confusion about how it works, how it makes money, and how transp...",
     "content_html": "",
-    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/i65NVizABMgw/v8/-1x-1.png",
+    "image_url": "",
     "summary_text": "Max Levchin probably knows as much about online payments as anyone. He was part of the original \u201cPayPal mafia,\u201d before going on to become co-founder and CEO of Affirm, the $22 billion player in the Buy Now, Pay Later industry that\u2019s hoping to disrupt the incu...",
     "category": "fintech",
     "_trending_tags": [
       "paypal"
-    ],
-    "_permalink": "/p/9e66b01067/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/9e66b01067/",
-    "_summary_240": "Max Levchin probably knows as much about online payments as anyone. He was part of the original \u201cPayPal mafia,\u201d before going on to become co-founder and CEO of Affirm, the $22...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/9e66b01067/thumbnail.png"
+    ]
   },
   {
     "title": "Ethereum sees 25% validation drop post-Fusaka as Prysm bug nears finality loss",
@@ -643,24 +709,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/e8aeb397c4/thumbnail.png"
   },
   {
-    "title": "N3XT Launches Blockchain-Powered Bank Focused on B2B Payments",
-    "url": "https://www.pymnts.com/blockchain/2025/n3xt-launches-blockchain-powered-bank-focused-on-b2b-payments/",
-    "published_at": "2025-12-04T18:07:26-05:00",
-    "source": "PYMNTS",
-    "summary": "N3XT has launched as a fully blockchain-powered bank designed to enable clients to make instant, programmable B2B payments in U.S. dollars at any hour, on any day. The bank operates globally under a Wyoming Special Purpose Depository Institution charter, is a full-reserve bank with every dollar of deposits backed one-to-one by cash or short-term [\u2026] The post N3XT Launches Blockchain-Powered Bank ...",
-    "content_html": "<p><a href=\"https://n3xt.io/\" rel=\"noopener\" target=\"_blank\"><span>N3XT</span></a><span> has launched as a fully blockchain-powered bank designed to enable clients to make instant, programmable B2B payments in U.S. dollars at any hour, on any day.</span></p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p><span>The bank operates globally under a Wyoming </span><a href=\"https://wyomingbankingdivision.wyo.gov/banks-and-trust-companies/special-purpose-depository-institutions\" rel=\"noopener\" target=\"_blank\"><span>Special Purpose Depository Institution</span></a><span> charter, is a full-reserve bank with every dollar of deposits backed one-to-one by cash or short-term U.S. Treasuries, and publishes its reserve holdings daily, N3XT said in a Thursday (Dec. 4) </span><a href=\"https://www.businesswire.com/news/home/20251204526572/en/N3XT-Launches-First-Fully-Blockchain-Powered-Bank-for-Instant-Programmable-B2B-Payments\" rel=\"noopener\" target=\"_blank\"><span>press release</span></a><span>.</span></p>\n<p><span>\u201cWe\u2019re applying crypto innovations to banking to deliver instant, programmable payments for institutional clients,\u201d N3XT CEO and President </span><a href=\"https://www.linkedin.com/in/jeffreywallis?trk=org-employees\" rel=\"noopener\" target=\"_blank\"><span>Jeffrey Wallis</span></a><span> said in the release. \u201cOur platform gives businesses the control and reliability they need in a 24/7 global economy.\u201d</span></p>\n<p><span>Built on a private, permissioned blockchain and with application programming interface (API)-first architecture, N3XT can settle transactions immediately without relying on outside financial institutions to clear payments, enables businesses to use smart contracts to program payments to execute and clear when conditions are met, and can be integrated directly into client operations, according to the release.</span></p>\n<p><span>The company\u2019s blockchain environment is designed for interoperability with stablecoins, utility tokens and other digital assets, per the release.</span></p>\n<p><a href=\"https://www.linkedin.com/in/askorniakoffpalmedo\" rel=\"noopener\" target=\"_blank\"><span>Alana Palmedo</span></a><span>, managing partner of </span><a href=\"https://www.paradigm.xyz/\" rel=\"noopener\" target=\"_blank\"><span>Paradigm</span></a><span>, an investor in N3XT, said in the release that that the financial system \u201cis being rewired to be internet native, 24/7/365 and global.\u201d</span></p>\n<p><span>\u201cN3XT\u2019s blockchain-powered bank embodies that shift and we\u2019re proud to back them as they establish a new standard for how dollars move globally,\u201d Palmedo said.</span></p>\n<p><span>Another backer of N3XT, </span><a href=\"https://www.hack.vc/\" rel=\"noopener\" target=\"_blank\"><span>Hack VC</span></a><span>, said in a Thursday </span><a href=\"https://x.com/hack_vc/status/1996616174269018318?s=43&amp;t=HX_ju0vgQxqA9hav5Ebegg\" rel=\"noopener\" target=\"_blank\"><span>post</span></a><span> on X: \u201cCheering on N3XT as they launch today. We were early investors in this team, the same builders who created Signet, and they are picking up where they left off with a simple idea: hold cash and T-bills, settle fast, and keep things transparent. The future of banking should feel this straightforward!\u201d</span></p>\n<p><a href=\"https://www.linkedin.com/in/alexpack\" rel=\"noopener\" target=\"_blank\"><span>Alexander Pack</span></a><span>, co-founder and managing partner of Hack VC, wrote in a Thursday </span><a href=\"https://x.com/alpackap/status/1996703095099658745?s=43&amp;t=HX_ju0vgQxqA9hav5Ebegg\" rel=\"noopener\" target=\"_blank\"><span>post</span></a><span> on X that Hack is proud to support N3XT as it comes out of stealth mode.</span></p>\n<p><span>\u201cN3XT\u2019s founders, Scott [</span><a href=\"https://n3xt.io/about\" rel=\"noopener\" target=\"_blank\"><span>Shay</span></a><span>] and Jeff [Wallis], are forces of nature: they previously built Signature Bank, the biggest and best bank to support the US crypto industry in a regulated way, before the last administration forced them to shut down,\u201d Pack wrote. \u201cMost founders would quit after something like that, but instead they immediately went back to work building N3XT.\u201d</span></p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/blockchain/2025/n3xt-launches-blockchain-powered-bank-focused-on-b2b-payments/\">N3XT Launches Blockchain-Powered Bank Focused on B2B Payments</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
-    "image_url": "https://www.pymnts.com/wp-content/uploads/2025/12/n3xt-banking-blockchain-digital-banking-b2b-payments-e1764889020206.jpeg?w=457",
-    "summary_text": "N3XT has launched as a fully blockchain-powered bank designed to enable clients to make instant, programmable B2B payments in U.S. dollars at any hour, on any day. The bank operates globally under a Wyoming Special Purpose Depository Institution charter, is a...",
-    "category": "fintech",
-    "_trending_tags": [
-      "ai"
-    ],
-    "_permalink": "/p/7d42fd54f2/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/7d42fd54f2/",
-    "_summary_240": "N3XT has launched as a fully blockchain-powered bank designed to enable clients to make instant, programmable B2B payments in U.S. dollars at any hour, on any day. The bank...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/7d42fd54f2/thumbnail.png"
-  },
-  {
     "title": "The 'truth serum' for AI: OpenAI\u2019s new method for training models to confess their mistakes",
     "url": "https://venturebeat.com/ai/the-truth-serum-for-ai-openais-new-method-for-training-models-to-confess",
     "published_at": "2025-12-04T18:00:00-05:00",
@@ -808,24 +856,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/7a14d7ef6f/",
     "_summary_240": "Defendants were convicted of similar crimes a decade ago. How were they cleared again?",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/7a14d7ef6f/thumbnail.png"
-  },
-  {
-    "title": "Here\u2019s what happened in crypto today",
-    "url": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-    "published_at": "2025-12-04T16:50:53-05:00",
-    "source": "Cointelegraph",
-    "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, NFTs, Web3 and crypto regulation.",
-    "content_html": "",
-    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMDYvMDE5Nzk0MjMtZWY4ZS03YzYwLWI5MzctYjlkZGY3NWZlOGFk.jpg",
-    "summary_text": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, NFTs, Web3 and crypto regulation.",
-    "category": "fintech",
-    "_trending_tags": [
-      "ai"
-    ],
-    "_permalink": "/p/8533f6e161/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/8533f6e161/",
-    "_summary_240": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, NFTs, Web3 and crypto regulation.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/8533f6e161/thumbnail.png"
   },
   {
     "title": "Anthropic\u2019s Daniela Amodei Believes the Market Will Reward Safe AI",
@@ -1183,24 +1213,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/b81760c8ad/",
     "_summary_240": "The diverging path of China\u2019s two leading AI players shows where the country\u2019s artificial intelligence industry is headed.",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/b81760c8ad/thumbnail.png"
-  },
-  {
-    "title": "CFTC greenlights spot crypto trading on US exchanges",
-    "url": "https://cointelegraph.com/news/cftc-spot-crypto-trading-exchanges?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-    "published_at": "2025-12-04T11:26:47-05:00",
-    "source": "Cointelegraph",
-    "summary": "Acting CFTC Chair Caroline Pham said the move was intended to drive trading activity to US exchanges, rather than offshore ones \u201cthat lack basic safeguards.\u201d",
-    "content_html": "",
-    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTIvMDE5YWVhMGYtOTljZi03ZWM1LTk3MTMtZGJiOWY5MzQzZTgw.jpg",
-    "summary_text": "Acting CFTC Chair Caroline Pham said the move was intended to drive trading activity to US exchanges, rather than offshore ones \u201cthat lack basic safeguards.\u201d",
-    "category": "fintech",
-    "_trending_tags": [
-      "ai"
-    ],
-    "_permalink": "/p/4ff317daab/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/4ff317daab/",
-    "_summary_240": "Acting CFTC Chair Caroline Pham said the move was intended to drive trading activity to US exchanges, rather than offshore ones \u201cthat lack basic safeguards.\u201d",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/4ff317daab/thumbnail.png"
   },
   {
     "title": "The US may be running the wrong AI race",
@@ -1706,20 +1718,6 @@
     "image_url": "",
     "summary_text": "Companies trial latest tools on themselves to demonstrate their potential",
     "category": "ai",
-    "_trending_tags": [
-      "ai"
-    ]
-  },
-  {
-    "title": "Generative AI\u2019s rapid journey through the \u2018hype cycle\u2019",
-    "url": "https://www.ft.com/content/bc84b655-3c91-4efc-9191-18366173c4ca",
-    "published_at": "2025-12-03T00:00:07-05:00",
-    "source": "Financial Times - Technology",
-    "summary": "Realising the tech\u2019s potential to boost productivity requires a shift in corporate culture and working practices",
-    "content_html": "",
-    "image_url": "",
-    "summary_text": "Realising the tech\u2019s potential to boost productivity requires a shift in corporate culture and working practices",
-    "category": "software",
     "_trending_tags": [
       "ai"
     ]
