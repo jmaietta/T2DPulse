@@ -1,5 +1,5 @@
 {
-  "generated_at": "2025-12-05T13:31:49.975526-05:00",
+  "generated_at": "2025-12-05T13:50:33.222963-05:00",
   "total_keywords": 30,
   "keyword_counts": {
     "ai": 254,
@@ -11,12 +11,12 @@
     "agent": 13,
     "nvidia": 13,
     "llm": 10,
-    "microsoft": 9,
     "gpt": 8,
+    "microsoft": 8,
     "chatgpt": 7,
     "cloud": 6,
     "apple": 5,
-    "fintech": 5,
+    "fintech": 4,
     "gpu": 2,
     "mistral": 2,
     "stripe": 2,
