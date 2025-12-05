@@ -1,5 +1,162 @@
 [
   {
+    "title": "Cloudflare Says It Resolved Services Issues Caused by Software Update",
+    "url": "https://www.pymnts.com/technology/2025/cloudflare-says-it-resolved-services-issues-from-software-update/",
+    "published_at": "2025-12-05T10:15:42-05:00",
+    "source": "PYMNTS",
+    "summary": "Cloudflare said Friday (Dec. 5) that it resolved an incident in which its network became unavailable for several minutes earlier in the day. The company first announced what it called \u201cCloudflare service issues\u201d in an 08:56 UTC Friday update on its status page, saying that it was investigating issues with the Cloudflare Dashboard and [\u2026] The post Cloudflare Says It Resolved Services Issues Caused...",
+    "content_html": "<p><a class=\"editor-rtfLink\" href=\"https://www.cloudflare.com/\" rel=\"noopener\" target=\"_blank\"><span>Cloudflare</span></a><span> said Friday (Dec. 5) that it resolved an incident in which its network became unavailable for several minutes earlier in the day.</span></p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p><span>The company first announced what it called \u201cCloudflare service issues\u201d in an 08:56 UTC Friday update on its </span><a class=\"editor-rtfLink\" href=\"https://www.cloudflarestatus.com/\" rel=\"noopener\" target=\"_blank\"><span>status page</span></a><span>, saying that it was investigating issues with the Cloudflare Dashboard and related APIs and that customers using the Dashboard/Cloudflare APIs may see requests fail and/or errors be displayed.</span></p>\n<p><span>At 09:12 UTC, Cloudflare said it had implemented a fix and was monitoring the results.</span></p>\n<p><span>At 09:20 UTC, the firm said it had resolved the incident.</span></p>\n<p><span>\u201cA change made to how Cloudflare\u2019s Web Application Firewall parses requests caused Cloudflare\u2019s network to be unavailable for several minutes this morning,\u201d the company said in its 09:20 UTC update. \u201cThis was not an attack; the change was deployed by our team to help mitigate the industry-wide vulnerability disclosed this week in React Server Components. We will share more information as we have it today.\u201d</span></p>\n<p><a class=\"editor-rtfLink\" href=\"https://react.dev/\" rel=\"noopener\" target=\"_blank\"><span>React</span></a><span>, a library for web and native user interfaces, said in a Wednesday (Dec. 3) </span><a class=\"editor-rtfLink\" href=\"https://react.dev/blog/2025/12/03/critical-security-vulnerability-in-react-server-components\" rel=\"noopener\" target=\"_blank\"><span>blog post</span></a><span> that a security vulnerability in React Server Components had been reported and that the company recommended that users upgrade to a fixed version immediately.</span></p>\n<p><span>Cloudflare\u2019s global cloud platform delivers </span><a class=\"editor-rtfLink\" href=\"https://www.cloudflare.com/about-overview/\" rel=\"noopener\" target=\"_blank\"><span>network services</span></a><span> to businesses around the world and is designed to make those businesses more secure while enhancing the performance and reliability of their internet properties, according to the company\u2019s website.</span></p>\n<p><span>The Cloudflare service issues caused the websites for several banks, </span><a class=\"editor-rtfLink\" href=\"https://www.shopify.com/\" rel=\"noopener\" target=\"_blank\"><span>Shopify</span></a><span>, </span><a class=\"editor-rtfLink\" href=\"https://www.zoom.com/\" rel=\"noopener\" target=\"_blank\"><span>Zoom</span></a><span>, </span><a class=\"editor-rtfLink\" href=\"https://www.linkedin.com/\" rel=\"noopener\" target=\"_blank\"><span>LinkedIn</span></a><span>, and the Norwegian and Swedish governments to go down, Bloomberg </span><a class=\"editor-rtfLink\" href=\"https://www.bloomberg.com/news/articles/2025-12-05/cloudflare-says-it-fixed-outage-that-slowed-banking-sites-zoom\" rel=\"noopener\" target=\"_blank\"><span>reported</span></a><span> Friday.</span></p>\n<p><span>CNBC </span><a class=\"editor-rtfLink\" href=\"https://www.cnbc.com/2025/12/05/cloudlfare-is-investigating-issues-with-dashboard-and-related-apps.html\" rel=\"noopener\" target=\"_blank\"><span>reported</span></a><span> Friday that sites affected by the issues included </span><a class=\"editor-rtfLink\" href=\"https://www.coinbase.com/\" rel=\"noopener\" target=\"_blank\"><span>Coinbase</span></a><span>, </span><a class=\"editor-rtfLink\" href=\"https://substack.com/home\" rel=\"noopener\" target=\"_blank\"><span>Substack</span></a><span>, Shopify, </span><a class=\"editor-rtfLink\" href=\"https://www.us.hsbc.com/\" rel=\"noopener\" target=\"_blank\"><span>HSBC</span></a><span> and </span><a class=\"editor-rtfLink\" href=\"https://deliveroo.co.uk/\" rel=\"noopener\" target=\"_blank\"><span>Deliveroo</span></a><span>. Cloudflare\u2019s software helps to manage and secure traffic for 20% of the web.</span></p>\n<p><span>Data from outage-tracking tool </span><a class=\"editor-rtfLink\" href=\"https://downdetector.com/\" rel=\"noopener\" target=\"_blank\"><span>Downdetector</span></a><span> showed that the number of reports about issues with Cloudflare peaked at about 2,000 during the incident, Reuters </span><a class=\"editor-rtfLink\" href=\"https://finance.yahoo.com/news/cloudflare-restores-services-minor-dashboard-121214310.html\" rel=\"noopener\" target=\"_blank\"><span>reported</span></a><span> Friday.</span></p>\n<p><span>Cloudflare experienced and resolved another </span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/connectedeconomy/2025/cloudflare-outage-darkens-vast-portions-of-the-web/\" rel=\"noopener\" target=\"_blank\"><span>outage</span></a><span> on Nov. 18. That issue shut down multiple high-profile websites, including </span><a class=\"editor-rtfLink\" href=\"https://chatgpt.com/\" rel=\"noopener\" target=\"_blank\"><span>ChatGPT</span></a><span>, other artificial intelligence services and social platform </span><a class=\"editor-rtfLink\" href=\"https://x.com/\" rel=\"noopener\" target=\"_blank\"><span>X</span></a><span>.</span></p>\n<p><span>Cloudflare Chief Technology Officer </span><a class=\"editor-rtfLink\" href=\"https://www.linkedin.com/in/dknecht\" rel=\"noopener\" target=\"_blank\"><span>Dane Knecht</span></a><span> said after that incident, in a Nov. 18 </span><a class=\"editor-rtfLink\" href=\"https://x.com/dok2001/status/1990791419653484646?s=43&amp;t=HX_ju0vgQxqA9hav5Ebegg\" rel=\"noopener\" target=\"_blank\"><span>post</span></a><span> on X, \u201cThe trust our customers place in us is what we value the most, and we are going to do what it takes to earn that back.\u201d</span></p>\n<blockquote class=\"twitter-tweet\">\n<p dir=\"ltr\" lang=\"en\">I won\u2019t mince words: earlier today we failed our customers and the broader Internet when a problem in <a href=\"https://twitter.com/Cloudflare?ref_src=twsrc%5Etfw\">@Cloudflare</a> network impacted large amounts of traffic that rely on us. The sites, businesses, and organizations that rely on Cloudflare depend on us being available and I\u2026</p>\n<p>\u2014 Dane Knecht ? (@dok2001) <a href=\"https://twitter.com/dok2001/status/1990791419653484646?ref_src=twsrc%5Etfw\">November 18, 2025</a></p>\n</blockquote>\n<p></p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/technology/2025/cloudflare-says-it-resolved-services-issues-from-software-update/\">Cloudflare Says It Resolved Services Issues Caused by Software Update</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
+    "image_url": "https://www.pymnts.com/wp-content/uploads/2023/09/Cloudflare.jpg?w=457",
+    "summary_text": "Cloudflare said Friday (Dec. 5) that it resolved an incident in which its network became unavailable for several minutes earlier in the day. The company first announced what it called \u201cCloudflare service issues\u201d in an 08:56 UTC Friday update on its status pag...",
+    "category": "fintech",
+    "_trending_tags": [
+      "ai",
+      "cloud"
+    ],
+    "_permalink": "/p/4f4c3c8040/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/4f4c3c8040/",
+    "_summary_240": "Cloudflare said Friday (Dec. 5) that it resolved an incident in which its network became unavailable for several minutes earlier in the day. The company first announced what it...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/4f4c3c8040/thumbnail.png"
+  },
+  {
+    "title": "New York Times Sues A.I. Start-Up Perplexity Over Use of Copyrighted Work",
+    "url": "https://www.nytimes.com/2025/12/05/technology/new-york-times-perplexity-ai-lawsuit.html",
+    "published_at": "2025-12-05T10:11:34-05:00",
+    "source": "The New York Times - Technology",
+    "summary": "Filed in federal court on Friday, the suit joins more than 40 other court disputes between copyright holders and A.I. companies.",
+    "content_html": "The A.I. start-up Perplexity, led by Aravind Srinivas, has also been sued by Dow Jones, the owner of The Wall Street Journal.",
+    "image_url": "https://static01.nyt.com/images/2025/12/04/business/04biz-perplexity-lawuit-1/04biz-perplexity-lawuit-1-mediumSquareAt3X.jpg",
+    "summary_text": "Filed in federal court on Friday, the suit joins more than 40 other court disputes between copyright holders and A.I. companies.",
+    "category": "ai",
+    "_trending_tags": [
+      "ai"
+    ],
+    "_permalink": "/p/564392e0e5/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/564392e0e5/",
+    "_summary_240": "Filed in federal court on Friday, the suit joins more than 40 other court disputes between copyright holders and A.I. companies.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/564392e0e5/thumbnail.png"
+  },
+  {
+    "title": "It\u2019s code red for ChatGPT",
+    "url": "https://www.theverge.com/podcast/838932/openai-chatgpt-code-red-vergecast",
+    "published_at": "2025-12-05T10:09:35-05:00",
+    "source": "The Verge",
+    "summary": "A smidge over three years ago, OpenAI threw the rest of the tech industry into chaos. When ChatGPT launched, even billed as a \"low-key research preview,\" it became immediately clear that OpenAI was showing the world a new way of computing. Lots of other companies, most notably Google, had to immediately scramble to catch up [\u2026]",
+    "content_html": "<figure>\n\n<img alt=\"\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/12/VST_1205_Site.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100\" />\n\t<figcaption>\n\t\t</figcaption>\n</figure>\n<p class=\"has-text-align-none\">A smidge over three years ago, OpenAI threw the rest of the tech industry into chaos. <a href=\"https://www.theverge.com/2024/12/12/24318650/chatgpt-openai-history-two-year-anniversary\">When ChatGPT launched</a>, even billed as a \"low-key research preview,\" <a href=\"https://www.theverge.com/23981318/chatgpt-open-ai-launch-anniversary-future\">it became immediately clear</a> that OpenAI was showing the world a new way of computing. Lots of other companies, most notably Google, had to immediately scramble to catch up as AI took over the world.</p>\n<p class=\"has-text-align-none\">Now it's OpenAI doing the scrambling. CEO Sam Altman sent a note to his team this week declaring a \"code red,\" saying that OpenAI needs to re-focus on its most important products in order to keep up with the onslaught of competition from Google's Gemini and others. The question now is, what doe \u2026</p>\n<p><a href=\"https://www.theverge.com/podcast/838932/openai-chatgpt-code-red-vergecast\">Read the full story at The Verge.</a></p>",
+    "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/12/VST_1205_Site.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "summary_text": "A smidge over three years ago, OpenAI threw the rest of the tech industry into chaos. When ChatGPT launched, even billed as a \"low-key research preview,\" it became immediately clear that OpenAI was showing the world a new way of computing. Lots of other compa...",
+    "category": "ai",
+    "_trending_tags": [
+      "ai",
+      "chatgpt",
+      "gpt",
+      "openai"
+    ],
+    "_permalink": "/p/a692ce08ff/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/a692ce08ff/",
+    "_summary_240": "A smidge over three years ago, OpenAI threw the rest of the tech industry into chaos. When ChatGPT launched, even billed as a \"low-key research preview,\" it became immediately...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/a692ce08ff/thumbnail.png"
+  },
+  {
+    "title": "SoftBank in Talks to Buy Data-Center Investor DigitalBridge",
+    "url": "https://www.bloomberg.com/news/articles/2025-12-05/softbank-said-in-talks-to-buy-data-center-investor-digitalbridge",
+    "published_at": "2025-12-05T10:09:16-05:00",
+    "source": "Bloomberg Technology",
+    "summary": "SoftBank Group Corp. is in talks to acquire DigitalBridge Group Inc., a private equity firm that invests in assets such as data centers, as it seeks to take advantage of an AI-driven boom in digital infrastructure, according to people with knowledge of the matter.",
+    "content_html": "SoftBank CEO Masayoshi Son",
+    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/imH_5mEtVWlA/v1/1200x-1.jpg",
+    "summary_text": "SoftBank Group Corp. is in talks to acquire DigitalBridge Group Inc., a private equity firm that invests in assets such as data centers, as it seeks to take advantage of an AI-driven boom in digital infrastructure, according to people with knowledge of the ma...",
+    "category": "fintech",
+    "_trending_tags": [
+      "ai"
+    ],
+    "_permalink": "/p/34b70e5259/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/34b70e5259/",
+    "_summary_240": "SoftBank Group Corp. is in talks to acquire DigitalBridge Group Inc., a private equity firm that invests in assets such as data centers, as it seeks to take advantage of an...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/34b70e5259/thumbnail.png"
+  },
+  {
+    "title": "NYT, Chicago Tribune Sue Perplexity AI as Copyright War Rages On",
+    "url": "https://www.bloomberg.com/news/articles/2025-12-05/nyt-chicago-tribune-sue-perplexity-ai-as-copyright-war-rages-on",
+    "published_at": "2025-12-05T10:01:38-05:00",
+    "source": "Bloomberg Technology",
+    "summary": "The New York Times Co. and the Chicago Tribune sued Perplexity AI Inc., saying the artificial intelligence search startup is copying and distributing their exclusive content, the latest in a wave of lawsuits against AI developers.",
+    "content_html": "The New York Times headquarters in New York.",
+    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iyL_VZvll1Ts/v1/1200x-1.jpg",
+    "summary_text": "The New York Times Co. and the Chicago Tribune sued Perplexity AI Inc., saying the artificial intelligence search startup is copying and distributing their exclusive content, the latest in a wave of lawsuits against AI developers.",
+    "category": "ai",
+    "_trending_tags": [
+      "ai"
+    ],
+    "_permalink": "/p/6464745fe5/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/6464745fe5/",
+    "_summary_240": "The New York Times Co. and the Chicago Tribune sued Perplexity AI Inc., saying the artificial intelligence search startup is copying and distributing their exclusive content, the...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/6464745fe5/thumbnail.png"
+  },
+  {
+    "title": "13 years later, the bold and terrifying sci-fi game Routine is finally here",
+    "url": "https://www.theverge.com/entertainment/838639/routine-sci-fi-horror-game-development",
+    "published_at": "2025-12-05T10:00:00-05:00",
+    "source": "The Verge",
+    "summary": "It has been 13 long years since Aaron Foster last spoke to The Verge. Back then, Foster's tiny, three-person studio Lunar Software was touting sci-fi horror game Routine with a striking vision: Foster hoped to suck players into the desolate eeriness of its moon base setting, which was equal parts immersive and grounded. Foster ended [\u2026]",
+    "content_html": "<figure>\n\n<img alt=\"\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/12/ROUTINE_SS_001_August.png?quality=90&#038;strip=all&#038;crop=0,0,100,100\" />\n\t<figcaption>\n\t\t</figcaption>\n</figure>\n<p class=\"has-drop-cap has-text-align-none\">It has been 13 long years since Aaron Foster last <a href=\"https://www.theverge.com/2012/10/15/3507340/routine-sci-fi-horror-game\">spoke</a> to <em>The Verge</em>. Back then, Foster's tiny, three-person studio Lunar Software was touting sci-fi horror game <em>Routine</em> with a striking vision: Foster hoped to suck players into the desolate eeriness of its moon base setting, which was equal parts immersive and grounded. Foster ended that interview by swerving a release date question. With 13 years of hindsight, it reads like an all-timer understatement. \"Making a good game is more important than a hard-set deadline,\" he said. \"So we will keep it loose for now.\" </p>\n<p class=\"has-text-align-none\">Now, nearly a decade and a half on, <a href=\"https://www.routinegame.com/\"><em>Routine </em>has been released on Steam and Xbox</a> \u2026</p>\n<p><a href=\"https://www.theverge.com/entertainment/838639/routine-sci-fi-horror-game-development\">Read the full story at The Verge.</a></p>",
+    "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/12/ROUTINE_SS_001_August.png?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "summary_text": "It has been 13 long years since Aaron Foster last spoke to The Verge. Back then, Foster's tiny, three-person studio Lunar Software was touting sci-fi horror game Routine with a striking vision: Foster hoped to suck players into the desolate eeriness of its mo...",
+    "category": "software",
+    "_permalink": "/p/0899c7a72f/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/0899c7a72f/",
+    "_summary_240": "It has been 13 long years since Aaron Foster last spoke to The Verge. Back then, Foster's tiny, three-person studio Lunar Software was touting sci-fi horror game Routine with a...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/0899c7a72f/thumbnail.png"
+  },
+  {
+    "title": "Welcome to the wellness surveillance state",
+    "url": "https://www.theverge.com/column/838872/optimizer-wellness-surveillance-state-oura-withings",
+    "published_at": "2025-12-05T10:00:00-05:00",
+    "source": "The Verge",
+    "summary": "This is Optimizer, a weekly newsletter sent every Friday from Verge senior reviewer Victoria Song that dissects and discusses the latest phones, smartwatches, apps, and other gizmos that swear they're going to change your life. Optimizer arrives in our subscribers' inboxes at 10AM ET. Opt in for Optimizer here. The other day I was staring [\u2026]",
+    "content_html": "<figure>\n\n<img alt=\"Person looking at Whoop health tracking data on a phone\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/06/257818_Whoop_5_AKrales_0006.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100\" />\n\t<figcaption>\n\tA big part of my job is spending several hours per week staring at charts of my data.\t</figcaption>\n</figure>\n<p class=\"has-text-align-none\"><em>This is </em><a href=\"https://www.theverge.com/optimizer-newsletter\" rel=\"noreferrer noopener\" target=\"_blank\">Optimizer</a><em>, a weekly newsletter sent every Friday from Verge senior reviewer</em> <a href=\"https://www.theverge.com/authors/victoria-song\" rel=\"noreferrer noopener\" target=\"_blank\"><em>Victoria Song</em></a><em> that dissects and discusses the latest phones, smartwatches, apps, and other gizmos that swear they're going to change your life. </em>Optimizer<em> arrives in our subscribers' inboxes at 10AM ET. Opt in for </em>Optimizer <em><a href=\"https://www.theverge.com/newsletters\" rel=\"noreferrer noopener\" target=\"_blank\">here</a>.</em></p>\n<p class=\"has-drop-cap has-text-align-none\">The other day I was staring into my toilet. Not because I was hungover, stricken with food poisoning, or in the midst of a deep clean. No, I was installing a gadget that I affectionately call the Pee Shell. The actual name is the <a href=\"https://www.theverge.com/2023/1/3/23537085/withings-u-scan-urinalysis-health-ces-2023\">Withings U-Scan</a>, a $380 at-home urinalysis test with a removable cartridge that either measures your nutr \u2026</p>\n<p><a href=\"https://www.theverge.com/column/838872/optimizer-wellness-surveillance-state-oura-withings\">Read the full story at The Verge.</a></p>",
+    "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/06/257818_Whoop_5_AKrales_0006.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "summary_text": "This is Optimizer, a weekly newsletter sent every Friday from Verge senior reviewer Victoria Song that dissects and discusses the latest phones, smartwatches, apps, and other gizmos that swear they're going to change your life. Optimizer arrives in our subscr...",
+    "category": "fintech",
+    "_permalink": "/p/a2303c6fa6/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/a2303c6fa6/",
+    "_summary_240": "This is Optimizer, a weekly newsletter sent every Friday from Verge senior reviewer Victoria Song that dissects and discusses the latest phones, smartwatches, apps, and other...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/a2303c6fa6/thumbnail.png"
+  },
+  {
+    "title": "What Texas\u2019 recent Bitcoin purchase signals to the rest of the US in a market downturn",
+    "url": "https://cointelegraph.com/news/texas-bitcoin-purchase-us-podcast?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "published_at": "2025-12-05T09:59:10-05:00",
+    "source": "Cointelegraph",
+    "summary": "Texas is now the first US state to purchase and hold Bitcoin, but why did it act during a market pullback, and how could this move influence national crypto policy?",
+    "content_html": "",
+    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTIvMDE5YWVlZjktY2QxNy03NDk0LWE5ZTgtODhkNjM5ZWFiNzBl.jpg",
+    "summary_text": "Texas is now the first US state to purchase and hold Bitcoin, but why did it act during a market pullback, and how could this move influence national crypto policy?",
+    "category": "fintech",
+    "_permalink": "/p/c2c1504c2a/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/c2c1504c2a/",
+    "_summary_240": "Texas is now the first US state to purchase and hold Bitcoin, but why did it act during a market pullback, and how could this move influence national crypto policy?",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/c2c1504c2a/thumbnail.png"
+  },
+  {
+    "title": "Petco confirms security lapse exposed customers\u2019 personal data",
+    "url": "https://techcrunch.com/2025/12/05/petco-confirms-security-lapse-exposed-customers-personal-data/",
+    "published_at": "2025-12-05T09:52:19-05:00",
+    "source": "TechCrunch",
+    "summary": "The pet company has published almost no details about what happened, who was affected, and what personal data was exposed.",
+    "content_html": "",
+    "image_url": "https://techcrunch.com/wp-content/uploads/2025/12/petco-logo.jpg?resize=1200,800",
+    "summary_text": "The pet company has published almost no details about what happened, who was affected, and what personal data was exposed.",
+    "category": "fintech",
+    "_trending_tags": [
+      "ai"
+    ],
+    "_permalink": "/p/78c7bc4531/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/78c7bc4531/",
+    "_summary_240": "The pet company has published almost no details about what happened, who was affected, and what personal data was exposed.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/78c7bc4531/thumbnail.png"
+  },
+  {
     "title": "EU may consolidate crypto regulations, IMF warns of stablecoin risk: Global Express",
     "url": "https://cointelegraph.com/news/eu-crypto-regulations-imf-stablecoin-risk-global-express?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
     "published_at": "2025-12-05T09:36:52-05:00",
@@ -13,6 +170,24 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/4c5c015bf9/",
     "_summary_240": "The IMF and South Africa\u2019s central bank are still concerned about stablecoins, while in the US, spot crypto products can now be traded on futures markets.",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/4c5c015bf9/thumbnail.png"
+  },
+  {
+    "title": "Do Kwon Should Get 12 Years for \u2018Colossal\u2019 Crypto Fraud, US Says",
+    "url": "https://www.bloomberg.com/news/articles/2025-12-05/do-kwon-should-get-12-years-for-colossal-crypto-fraud-us-says",
+    "published_at": "2025-12-05T09:30:04-05:00",
+    "source": "Bloomberg Technology",
+    "summary": "Terraform Labs Pte. co-founder Do Kwon should be sentenced to 12 years in prison for the fraud that led to the TerraUSD stablecoin\u2019s $40 billion collapse in 2022, US prosecutors said.",
+    "content_html": "Do Kwon in Podgorica, Montenegro, in 2024. Photographer: Filip Filipovic/Getty Images",
+    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ifh84Cck5u5Y/v0/1200x-1.jpg",
+    "summary_text": "Terraform Labs Pte. co-founder Do Kwon should be sentenced to 12 years in prison for the fraud that led to the TerraUSD stablecoin\u2019s $40 billion collapse in 2022, US prosecutors said.",
+    "category": "fintech",
+    "_trending_tags": [
+      "ai"
+    ],
+    "_permalink": "/p/92dcb09141/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/92dcb09141/",
+    "_summary_240": "Terraform Labs Pte. co-founder Do Kwon should be sentenced to 12 years in prison for the fraud that led to the TerraUSD stablecoin\u2019s $40 billion collapse in 2022, US prosecutors...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/92dcb09141/thumbnail.png"
   },
   {
     "title": "Here\u2019s what happened in crypto today",
@@ -115,40 +290,25 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/6b27406deb/thumbnail.png"
   },
   {
-    "title": "The far right is mobilizing against Trump AI czar David Sacks",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/838776/maga-ai-executive-order-david-sacks",
-    "published_at": "2025-12-05T08:15:21-05:00",
-    "source": "The Verge",
-    "summary": "Washington lawmakers had barely finished processing the news that Congress would not put a state AI law ban into the National Defense Authorization Act (NDAA) when a new rumor began trickling out of the White House on Wednesday: President Donald Trump would, indeed, sign an executive order that would ostensibly assign the federal government the [\u2026]",
-    "content_html": "<figure>\n\n<img alt=\"\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/03/STKP213_DAVID_SACKS_B.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100\" />\n\t<figcaption>\n\t\t</figcaption>\n</figure>\n<p class=\"has-text-align-none\">Washington lawmakers had barely finished processing the news that Congress would not put a state AI law ban into the National Defense Authorization Act (NDAA) when a new rumor began trickling out of the White House on Wednesday: President Donald Trump would, indeed,  sign an executive order that would ostensibly assign the federal government the ability to punish states for writing their own AI laws.</p>\n<p class=\"has-text-align-none\">There was the possibility that it would be as drastic as <a href=\"https://www.theverge.com/ai-artificial-intelligence/829179/david-sacks-ai-executive-order\">the one that had leaked from the White House weeks before</a>, which would have given David Sacks, billionaire venture capitalist and the White House's AI and crypto czar, immense influence o \u2026</p>\n<p><a href=\"https://www.theverge.com/ai-artificial-intelligence/838776/maga-ai-executive-order-david-sacks\">Read the full story at The Verge.</a></p>",
-    "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/03/STKP213_DAVID_SACKS_B.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "summary_text": "Washington lawmakers had barely finished processing the news that Congress would not put a state AI law ban into the National Defense Authorization Act (NDAA) when a new rumor began trickling out of the White House on Wednesday: President Donald Trump would, ...",
+    "title": "AI denial is becoming an enterprise risk: Why dismissing \u201cslop\u201d obscures real capability gains",
+    "url": "https://venturebeat.com/ai/ai-denial-is-becoming-an-enterprise-risk-why-dismissing-slop-obscures-real",
+    "published_at": "2025-12-05T08:00:00-05:00",
+    "source": "VentureBeat",
+    "summary": "Three years ago, Chat GPT was born. It amazed the world and ignited unprecedented investment and excitement in AI. Today, ChatGPT is still a toddler, but public sentiment around the AI boom has turned sharply negative. The shift began when OpenAI released GPT-5 this summer to mixed reviews , mostly from casual users who, unsurprisingly, judged the system by its surface flaws rather than its under...",
+    "content_html": "",
+    "image_url": "https://images.ctfassets.net/jdtwqhzvc2n1/4cm8F6jnq7mT7NhyXWA1qQ/119d505338624d93ce9134238ebe73d3/Denialism.png?w=800&amp;q=75",
+    "summary_text": "Three years ago, Chat GPT was born. It amazed the world and ignited unprecedented investment and excitement in AI. Today, ChatGPT is still a toddler, but public sentiment around the AI boom has turned sharply negative. The shift began when OpenAI released GPT...",
     "category": "ai",
     "_trending_tags": [
-      "ai"
+      "ai",
+      "chatgpt",
+      "gpt",
+      "openai"
     ],
-    "_permalink": "/p/9b6e710cf2/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/9b6e710cf2/",
-    "_summary_240": "Washington lawmakers had barely finished processing the news that Congress would not put a state AI law ban into the National Defense Authorization Act (NDAA) when a new rumor...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/9b6e710cf2/thumbnail.png"
-  },
-  {
-    "title": "New York Times Sues A.I. Start-Up Perplexity Over Use of Copyrighted Work",
-    "url": "https://www.nytimes.com/2025/12/05/technology/new-york-times-perplexity-ai-lawsuit.html",
-    "published_at": "2025-12-05T08:14:58-05:00",
-    "source": "The New York Times - Technology",
-    "summary": "Filed in federal court on Friday, the suit joins more than 40 other court disputes between copyright holders and A.I. companies.",
-    "content_html": "The A.I. start-up Perplexity, led by Aravind Srinivas, has also been sued by Dow Jones, the owner of The Wall Street Journal.",
-    "image_url": "https://static01.nyt.com/images/2025/12/04/business/04biz-perplexity-lawuit-1/04biz-perplexity-lawuit-1-mediumSquareAt3X.jpg",
-    "summary_text": "Filed in federal court on Friday, the suit joins more than 40 other court disputes between copyright holders and A.I. companies.",
-    "category": "ai",
-    "_trending_tags": [
-      "ai"
-    ],
-    "_permalink": "/p/6193e8ff41/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/6193e8ff41/",
-    "_summary_240": "Filed in federal court on Friday, the suit joins more than 40 other court disputes between copyright holders and A.I. companies.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/6193e8ff41/thumbnail.png"
+    "_permalink": "/p/1903128e7b/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/1903128e7b/",
+    "_summary_240": "Three years ago, Chat GPT was born. It amazed the world and ignited unprecedented investment and excitement in AI. Today, ChatGPT is still a toddler, but public sentiment around...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/1903128e7b/thumbnail.png"
   },
   {
     "title": "Turkish crypto exchange Paribu buys majority stake in competitor CoinMENA",
@@ -668,25 +828,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/27e142a3ae/thumbnail.png"
   },
   {
-    "title": "Target Says Shifting Order Fulfillment to Slower Stores Speeds Delivery and Reduces Costs",
-    "url": "https://www.pymnts.com/news/retail/2025/target-says-shifting-order-fulfillment-to-slower-stores-speeds-delivery-and-reduces-costs/",
-    "published_at": "2025-12-04T18:52:10-05:00",
-    "source": "PYMNTS",
-    "summary": "Target is reportedly testing new ways to provide next-day delivery. The new models the retailer is testing include shifting fulfillment from busy stores to ones that are less busy, opening a new facility focused on overnight deliveries, and having gig workers handle some deliveries, the Wall Street Journal reported Thursday (Dec. 4). When Target [\u2026] The post Target Says Shifting Order Fulfillment...",
-    "content_html": "<p><a href=\"https://www.target.com/\" rel=\"noopener\" target=\"_blank\"><span>Target</span></a><span> is reportedly testing new ways to provide next-day delivery.</span></p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p><span>The new models the retailer is testing include shifting fulfillment from busy stores to ones that are less busy, opening a new facility focused on overnight deliveries, and having gig workers handle some deliveries, the Wall Street Journal </span><a href=\"https://www.wsj.com/articles/target-tests-new-models-for-next-day-delivery-463adbe7\" rel=\"noopener\" target=\"_blank\"><span>reported</span></a><span> Thursday (Dec. 4).</span></p>\n<p><span>When Target began having stores that were less busy handle the fulfillment of next-day orders in Chicago, it found that the change sped up delivery and reduced costs, </span><a href=\"https://corporate.target.com/about/purpose-history/leadership/gretchen-mccarthy\" rel=\"noopener\" target=\"_blank\"><span>Gretchen McCarthy</span></a><span>, chief supply chain and logistics officer at Target, told the WSJ.</span></p>\n<p><span>Its new facility in Cleveland is a sortation center that is operated by </span><a href=\"https://www.ryder.com/en-us\" rel=\"noopener\" target=\"_blank\"><span>Ryder System</span></a><span>, according to the report. Stores pick and pack the orders and send them to the sortation center, and the center then batches the orders by neighborhood for delivery.</span></p>\n<p><span>In various markets, the retailer has some or all of its deliveries done by drivers with </span><a href=\"https://www.shipt.com/\" rel=\"noopener\" target=\"_blank\"><span>Shipt</span></a><span>, the delivery service it acquired in 2017, per the report.</span></p>\n<p><span>The company aims to offer customers several ways to get their orders, McCarthy told the WSJ. \u201cWe believe there\u2019s a use case for same-day delivery, there\u2019s a use case for drive-up, there\u2019s a use case for ship-to-home brown box, and, of course, the bread and butter of our business, there is a use case for people coming into our stores,\u201d McCarthy said.</span></p>\n<p><span>Target is increasingly using its stores to fulfill online orders, as that streamlines inventory and cuts shipping costs, according to the report.</span></p>\n<p><span>Rival retailers </span><a href=\"https://www.amazon.com/\" rel=\"noopener\" target=\"_blank\"><span>Amazon</span></a><span> and </span><a href=\"https://www.walmart.com/\" rel=\"noopener\" target=\"_blank\"><span>Walmart</span></a><span> have also been working to store goods closer to customers, with Amazon shifting inventory closer to customers and Walmart using its stores and freelance drivers to enable same-day delivery, the report said.</span></p>\n<p><span>PYMNTS reported Thursday that Amazon, Walmart and other retail giants are increasingly looking to build </span><a href=\"https://www.pymnts.com/news/retail/2025/amazon-and-walmart-compete-on-cost-by-bringing-delivery-corridors-in-house/\" rel=\"noopener\" target=\"_blank\"><span>delivery networks</span></a><span> in-house and own those networks themselves. They are doing so because control of the flow between click and doorstep is the defining retail battle of this center, the report said.</span></p>\n<p><span>Target said in 2023 that its </span><a href=\"https://www.pymnts.com/news/delivery/2023/target-says-sortation-centers-have-boosted-next-day-deliveries-150-percent/\" rel=\"noopener\" target=\"_blank\"><span>sortation centers</span></a><span> had enabled a 150% increase in the number of orders delivered to guests the next day.</span></p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/news/retail/2025/target-says-shifting-order-fulfillment-to-slower-stores-speeds-delivery-and-reduces-costs/\">Target Says Shifting Order Fulfillment to Slower Stores Speeds Delivery and Reduces Costs</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
-    "image_url": "https://www.pymnts.com/wp-content/uploads/2025/12/target-retail-delivery-order-fulfillment-next-day-e1764891327258.jpeg?w=457",
-    "summary_text": "Target is reportedly testing new ways to provide next-day delivery. The new models the retailer is testing include shifting fulfillment from busy stores to ones that are less busy, opening a new facility focused on overnight deliveries, and having gig workers...",
-    "category": "ai",
-    "_trending_tags": [
-      "ai",
-      "llm"
-    ],
-    "_permalink": "/p/8a9a3c3fc0/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/8a9a3c3fc0/",
-    "_summary_240": "Target is reportedly testing new ways to provide next-day delivery. The new models the retailer is testing include shifting fulfillment from busy stores to ones that are less...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/8a9a3c3fc0/thumbnail.png"
-  },
-  {
     "title": "Nvidia Challenger Moore Threads Jumps 425% in China Debut",
     "url": "https://www.bloomberg.com/news/articles/2025-12-04/leading-ai-chipmaker-moore-threads-1-1-billion-ipo-puts-china-s-tech-in-focus",
     "published_at": "2025-12-04T18:30:00-05:00",
@@ -762,26 +903,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/9e4e083e4b/thumbnail.png"
   },
   {
-    "title": "Apple announces even more major executive turnover",
-    "url": "https://www.theverge.com/news/838712/apple-policy-lead-lisa-jackson-retiring",
-    "published_at": "2025-12-04T17:37:44-05:00",
-    "source": "The Verge",
-    "summary": "Following the recent retirement of former COO Jeff Williams, AI chief John Giannandrea stepping down, and the departure of head of design Alan Dye for Meta, Apple announced Thursday that environmental and policy lead Lisa Jackson is retiring and that Jennifer Newstead will replace Kate Adams as the company\u2019s general counsel after Adams retires \u201clate [\u2026]",
-    "content_html": "<figure>\n\n<img alt=\"\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/12/gettyimages-2236778494.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100\" />\n\t<figcaption>\n\t\t</figcaption>\n</figure>\n<p class=\"has-text-align-none\">Following the recent retirement of <a href=\"https://www.theverge.com/news/701576/apple-coo-jeff-williams-retiring-sabih-khan\">former COO Jeff Williams</a>, <a href=\"https://www.theverge.com/news/835466/apple-ai-chief-john-giannandrea-steps-down-siri\">AI chief John Giannandrea stepping down</a>, and the <a href=\"https://www.theverge.com/news/837654/apple-meta-alan-dye-designer\">departure of head of design Alan Dye for Meta</a>, Apple <a href=\"https://www.apple.com/newsroom/2025/12/apple-announces-executive-transitions/\">announced Thursday</a> that environmental and policy lead Lisa Jackson is retiring and that Jennifer Newstead will replace Kate Adams as the company\u2019s general counsel after Adams retires \u201clate next year.\u201d</p>\n\n<p class=\"has-text-align-none\">Jackson, technically \u201cvice president for Environment, Policy, and Social Initiatives,\u201d will retire in \u201clate January 2026,\u201d Apple says. Newstead, who is currently Meta\u2019s chief legal officer, will take over Apple\u2019s general counsel role on March 1st, 2026, from Adams, who has been Apple\u2019s general counsel since 2017.</p>\n\n<p class=\"has-text-align-none\">With Jackson\u2019s retirement and Newstead coming on board, Apple is also making some organizational shifts and shifting some responsibilities to Williams\u2019 COO replacement, Sabih Khan. As described by Apple:</p>\n\n<blockquote class=\"wp-block-quote is-layout-flow wp-block-quote-is-layout-flow\">\n<p class=\"has-text-align-none\">The Government Affairs organization will transition to Adams, who will oversee the team until her retirement late next year, after which it will be led by Newstead. Newstead\u2019s title will become senior vice president, General Counsel and Government Affairs, reflecting the combining of the two organizations. The Environment and Social Initiatives teams will report to Apple chief operating officer Sabih Khan.</p>\n</blockquote>\n\n<p class=\"has-text-align-none\">Before joining Apple <a href=\"https://www.theverge.com/2013/5/28/4374474/apple-tim-cook-d11-interview-taxes\">in 2013</a>, Jackson led the EPA for part of President Obama\u2019s time in office. Apple promoted Jackson to be policy lead <a href=\"https://www.theverge.com/2015/6/23/8836229/apple-lisa-jackson-environmental-policy-head\">in 2015</a>. Adams came to Apple in 2017 after 14 years at Honeywell, <a href=\"https://www.apple.com/leadership/katherine-adams/\">according to Apple\u2019s website</a>.</p>",
-    "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/12/gettyimages-2236778494.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "summary_text": "Following the recent retirement of former COO Jeff Williams, AI chief John Giannandrea stepping down, and the departure of head of design Alan Dye for Meta, Apple announced Thursday that environmental and policy lead Lisa Jackson is retiring and that Jennifer...",
-    "category": "ai",
-    "_trending_tags": [
-      "ai",
-      "apple",
-      "meta"
-    ],
-    "_permalink": "/p/ece34b01b2/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/ece34b01b2/",
-    "_summary_240": "Following the recent retirement of former COO Jeff Williams, AI chief John Giannandrea stepping down, and the departure of head of design Alan Dye for Meta, Apple announced...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/ece34b01b2/thumbnail.png"
-  },
-  {
     "title": "How Levi Strauss & Co. is refashioning its brand with AI",
     "url": "https://www.microsoft.com/en-us/worklab/how-levis-is-refashioning-its-timeless-company-with-ai",
     "published_at": "2025-12-04T17:22:10-05:00",
@@ -816,25 +937,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/c5061df992/",
     "_summary_240": "The hunt is on for new Asian equity winners from the artificial intelligence trade, as a technological shift and bubble fears reshape the investment universe.",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/c5061df992/thumbnail.png"
-  },
-  {
-    "title": "Microsoft Is the House That Excel Built",
-    "url": "https://www.bloomberg.com/features/2025-microsoft-excel-ai-software/",
-    "published_at": "2025-12-04T17:00:11-05:00",
-    "source": "Bloomberg Technology",
-    "summary": "The ubiquitous spreadsheet software is expensive, derivative and depressing. It\u2019s also the software the world can\u2019t quit, even in the era of AI tools.",
-    "content_html": "",
-    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iEqIli0QTDRY/v0/1200x-1.jpg",
-    "summary_text": "The ubiquitous spreadsheet software is expensive, derivative and depressing. It\u2019s also the software the world can\u2019t quit, even in the era of AI tools.",
-    "category": "software",
-    "_trending_tags": [
-      "ai",
-      "microsoft"
-    ],
-    "_permalink": "/p/7314562bf2/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/7314562bf2/",
-    "_summary_240": "The ubiquitous spreadsheet software is expensive, derivative and depressing. It\u2019s also the software the world can\u2019t quit, even in the era of AI tools.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/7314562bf2/thumbnail.png"
   },
   {
     "title": "In comedy of errors, men accused of wiping gov databases turned to an AI tool",
@@ -1009,21 +1111,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/2302f27e4f/thumbnail.png"
   },
   {
-    "title": "IMF lays out guidelines for addressing stablecoin risks, beyond regulations",
-    "url": "https://cointelegraph.com/news/imf-guidelines-stablecoin-risks-regulations?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-    "published_at": "2025-12-04T14:43:08-05:00",
-    "source": "Cointelegraph",
-    "summary": "The fund identified \u201cstrong macro-policies and robust institutions\u201d as a response to the potential risks of stablecoins, above a patchwork of global regulations.",
-    "content_html": "",
-    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTIvMDE5YWVhNTItMWY1OC03YWRiLTkwMzAtZjUzNDYxYWI0ZWQw.jpg",
-    "summary_text": "The fund identified \u201cstrong macro-policies and robust institutions\u201d as a response to the potential risks of stablecoins, above a patchwork of global regulations.",
-    "category": "fintech",
-    "_permalink": "/p/358cbba017/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/358cbba017/",
-    "_summary_240": "The fund identified \u201cstrong macro-policies and robust institutions\u201d as a response to the potential risks of stablecoins, above a patchwork of global regulations.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/358cbba017/thumbnail.png"
-  },
-  {
     "title": "AI Dev Days: Level-up your AI skills with Microsoft Reactor at virtual event Dec. 10-11",
     "url": "https://devblogs.microsoft.com/foundry/ai-dev-days-december-2025/",
     "published_at": "2025-12-04T14:05:59-05:00",
@@ -1109,21 +1196,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/b9397a8d69/",
     "_summary_240": "Lisa Su leads Nvidia\u2019s biggest rival in the AI chip market. When asked at WIRED\u2019s Big Interview event if AI is a bubble, the company\u2019s CEO said, \u201cEmphatically, from my...",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/b9397a8d69/thumbnail.png"
-  },
-  {
-    "title": "Twenty One Capital eyes Tuesday debut following Cantor Equity Partners merger",
-    "url": "https://cointelegraph.com/news/twenty-one-capital-dec-9-listing-cantor-equity-partners-merger?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-    "published_at": "2025-12-04T13:30:44-05:00",
-    "source": "Cointelegraph",
-    "summary": "Bitcoin-focused Twenty One Capital is set to go public on the NYSE after winning shareholder approval for its merger with Cantor Equity Partners.",
-    "content_html": "",
-    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTIvMDE5YWVhODAtZWE4MS03OGMxLWIzNmYtNDcwN2NmMTRkOTA5.jpg",
-    "summary_text": "Bitcoin-focused Twenty One Capital is set to go public on the NYSE after winning shareholder approval for its merger with Cantor Equity Partners.",
-    "category": "software",
-    "_permalink": "/p/24f428204c/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/24f428204c/",
-    "_summary_240": "Bitcoin-focused Twenty One Capital is set to go public on the NYSE after winning shareholder approval for its merger with Cantor Equity Partners.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/24f428204c/thumbnail.png"
   },
   {
     "title": "Sanctioned spyware maker Intellexa had direct access to government espionage victims, researchers say",
@@ -1309,6 +1381,24 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/393f5e43e4/thumbnail.png"
   },
   {
+    "title": "Inside NetSuite\u2019s next act: Evan Goldberg on the future of AI-powered business systems",
+    "url": "https://venturebeat.com/ai/inside-netsuites-next-act-evan-goldberg-on-the-future-of-ai-powered-business",
+    "published_at": "2025-12-04T00:00:00-05:00",
+    "source": "VentureBeat",
+    "summary": "Presented by Oracle NetSuite When Evan Goldberg started NetSuite in 1998, his vision was radically simple: give entrepreneurs access to their business data anytime, anywhere. At the time, most enterprise software lived on local servers. As an entrepreneur himself, Goldberg understood the frustration intimately. \"I had fragmented systems. They all said something different,\" he recalls of his early...",
+    "content_html": "",
+    "image_url": "https://images.ctfassets.net/jdtwqhzvc2n1/2XtOSMqQi1z1ZProN1wL2h/93796f6888f6a6567104c2545639c3c3/2025_SuiteWorld_ExecutiveKeynote01_88144-64-.jpg?w=800&amp;q=75",
+    "summary_text": "Presented by Oracle NetSuite When Evan Goldberg started NetSuite in 1998, his vision was radically simple: give entrepreneurs access to their business data anytime, anywhere. At the time, most enterprise software lived on local servers. As an entrepreneur him...",
+    "category": "software",
+    "_trending_tags": [
+      "ai"
+    ],
+    "_permalink": "/p/3709d2f914/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/3709d2f914/",
+    "_summary_240": "Presented by Oracle NetSuite When Evan Goldberg started NetSuite in 1998, his vision was radically simple: give entrepreneurs access to their business data anytime, anywhere. At...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/3709d2f914/thumbnail.png"
+  },
+  {
     "title": "Anthropic vs. OpenAI red teaming methods reveal different security priorities for enterprise AI",
     "url": "https://venturebeat.com/security/anthropic-vs-openai-red-teaming-methods-reveal-different-security-priorities",
     "published_at": "2025-12-04T00:00:00-05:00",
@@ -1327,24 +1417,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/7af64b2116/",
     "_summary_240": "M odel providers want to prove the security and robustness of their models, releasing system cards and conducting red-team exercises with each new release. But it can be...",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/7af64b2116/thumbnail.png"
-  },
-  {
-    "title": "Inside NetSuite\u2019s next act: Evan Goldberg on the future of AI-powered business systems",
-    "url": "https://venturebeat.com/ai/inside-netsuites-next-act-evan-goldberg-on-the-future-of-ai-powered-business",
-    "published_at": "2025-12-04T00:00:00-05:00",
-    "source": "VentureBeat",
-    "summary": "Presented by Oracle NetSuite When Evan Goldberg started NetSuite in 1998, his vision was radically simple: give entrepreneurs access to their business data anytime, anywhere. At the time, most enterprise software lived on local servers. As an entrepreneur himself, Goldberg understood the frustration intimately. \"I had fragmented systems. They all said something different,\" he recalls of his early...",
-    "content_html": "",
-    "image_url": "https://images.ctfassets.net/jdtwqhzvc2n1/2XtOSMqQi1z1ZProN1wL2h/93796f6888f6a6567104c2545639c3c3/2025_SuiteWorld_ExecutiveKeynote01_88144-64-.jpg?w=800&amp;q=75",
-    "summary_text": "Presented by Oracle NetSuite When Evan Goldberg started NetSuite in 1998, his vision was radically simple: give entrepreneurs access to their business data anytime, anywhere. At the time, most enterprise software lived on local servers. As an entrepreneur him...",
-    "category": "software",
-    "_trending_tags": [
-      "ai"
-    ],
-    "_permalink": "/p/3709d2f914/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/3709d2f914/",
-    "_summary_240": "Presented by Oracle NetSuite When Evan Goldberg started NetSuite in 1998, his vision was radically simple: give entrepreneurs access to their business data anytime, anywhere. At...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/3709d2f914/thumbnail.png"
   },
   {
     "title": "Introducing Mistral Large 3 in Microsoft Foundry: Open and ready for production workloads",
@@ -1382,26 +1454,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/afab8ddcdf/",
     "_summary_240": "Open source React executes malicious code with malformed HTML\u2014no authentication needed.",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/afab8ddcdf/thumbnail.png"
-  },
-  {
-    "title": "Nvidia's new AI framework trains an 8B model to manage tools like a pro",
-    "url": "https://venturebeat.com/ai/nvidias-new-ai-framework-trains-an-8b-model-to-manage-tools-like-a-pro",
-    "published_at": "2025-12-03T18:00:00-05:00",
-    "source": "VentureBeat",
-    "summary": "Researchers at Nvidia and the University of Hong Kong have released Orchestrator, an 8-billion-parameter model that coordinates different tools and large language models (LLMs) to solve complex problems. In their experiments, Orchestrator achieved higher accuracy at a lower cost than much larger models in tool-use benchmarks, while also aligning with user preferences on which tools to use for a g...",
-    "content_html": "",
-    "image_url": "https://images.ctfassets.net/jdtwqhzvc2n1/61f98zxDza93Nw0wgjD4Sb/935f7357237957c9ff642b7c4355cf88/LLM_tool-use.jpg?w=800&amp;q=75",
-    "summary_text": "Researchers at Nvidia and the University of Hong Kong have released Orchestrator, an 8-billion-parameter model that coordinates different tools and large language models (LLMs) to solve complex problems. In their experiments, Orchestrator achieved higher accu...",
-    "category": "ai",
-    "_trending_tags": [
-      "ai",
-      "llm",
-      "nvidia"
-    ],
-    "_permalink": "/p/147bb756ab/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/147bb756ab/",
-    "_summary_240": "Researchers at Nvidia and the University of Hong Kong have released Orchestrator, an 8-billion-parameter model that coordinates different tools and large language models (LLMs)...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/147bb756ab/thumbnail.png"
   },
   {
     "title": "Meta poaches senior Apple designer to support AI glasses push",
