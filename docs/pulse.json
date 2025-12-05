@@ -1,11 +1,83 @@
 [
   {
+    "title": "New York Times Sues A.I. Start-Up Perplexity Over Use of Copyrighted Work",
+    "url": "https://www.nytimes.com/2025/12/05/technology/new-york-times-perplexity-ai-lawsuit.html",
+    "published_at": "2025-12-05T11:10:35-05:00",
+    "source": "The New York Times - Technology",
+    "summary": "Filed in federal court on Friday, the suit joins more than 40 other court disputes between copyright holders and A.I. companies.",
+    "content_html": "The A.I. start-up Perplexity, led by Aravind Srinivas, has also been sued by Dow Jones, the owner of The Wall Street Journal.",
+    "image_url": "https://static01.nyt.com/images/2025/12/04/business/04biz-perplexity-lawuit-1/04biz-perplexity-lawuit-1-mediumSquareAt3X.jpg",
+    "summary_text": "Filed in federal court on Friday, the suit joins more than 40 other court disputes between copyright holders and A.I. companies.",
+    "category": "ai",
+    "_trending_tags": [
+      "ai"
+    ],
+    "_permalink": "/p/00084754ea/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/00084754ea/",
+    "_summary_240": "Filed in federal court on Friday, the suit joins more than 40 other court disputes between copyright holders and A.I. companies.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/00084754ea/thumbnail.png"
+  },
+  {
+    "title": "The New York Times is suing Perplexity for copyright infringement",
+    "url": "https://techcrunch.com/2025/12/05/the-new-york-times-is-suing-perplexity-for-copyright-infringement/",
+    "published_at": "2025-12-05T11:03:59-05:00",
+    "source": "TechCrunch",
+    "summary": "The New York Times filed a copyright lawsuit against Perplexity, joining other publishers using legal action as leverage to force AI companies into licensing deals that compensate content creators.",
+    "content_html": "",
+    "image_url": "https://techcrunch.com/wp-content/uploads/2024/07/GettyImages-2150495091.jpg?resize=1200,825",
+    "summary_text": "The New York Times filed a copyright lawsuit against Perplexity, joining other publishers using legal action as leverage to force AI companies into licensing deals that compensate content creators.",
+    "category": "ai",
+    "_trending_tags": [
+      "ai"
+    ],
+    "_permalink": "/p/29dcee721a/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/29dcee721a/",
+    "_summary_240": "The New York Times filed a copyright lawsuit against Perplexity, joining other publishers using legal action as leverage to force AI companies into licensing deals that...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/29dcee721a/thumbnail.png"
+  },
+  {
+    "title": "Here\u2019s What You Should Know About Launching an AI Startup",
+    "url": "https://www.wired.com/story/artificial-intelligence-startups-daydream-fashion-recommendations/",
+    "published_at": "2025-12-05T11:00:00-05:00",
+    "source": "Wired",
+    "summary": "AI startups say the promise of turning dazzling models into useful products is harder than anyone expected. Three founders discuss what it takes.",
+    "content_html": "",
+    "image_url": "https://media.wired.com/photos/692de340fbb01f28f4e39193/master/pass/Backchannel-The-Extreme-Challenge-of-Building-Great-Apps-with-AI-Business.jpg",
+    "summary_text": "AI startups say the promise of turning dazzling models into useful products is harder than anyone expected. Three founders discuss what it takes.",
+    "category": "ai",
+    "_trending_tags": [
+      "ai"
+    ],
+    "_permalink": "/p/56d65b1ff5/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/56d65b1ff5/",
+    "_summary_240": "AI startups say the promise of turning dazzling models into useful products is harder than anyone expected. Three founders discuss what it takes.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/56d65b1ff5/thumbnail.png"
+  },
+  {
+    "title": "US prosecutors request 12 years in prison for Terraform\u2019s Do Kwon",
+    "url": "https://cointelegraph.com/news/terraform-do-kwon-sentencing-recommendation-twelve-years?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "published_at": "2025-12-05T10:43:25-05:00",
+    "source": "Cointelegraph",
+    "summary": "A sentencing recommendation said that Do Kwon had caused more losses than Sam Bankman-Fried, Alex Mashinsky and Karl Sebastian Greenwood combined.",
+    "content_html": "",
+    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTIvMDE5YWVlZGMtN2I4MS03YTZmLWIzZTMtMDJhOGY4NzllNmNl.jpg",
+    "summary_text": "A sentencing recommendation said that Do Kwon had caused more losses than Sam Bankman-Fried, Alex Mashinsky and Karl Sebastian Greenwood combined.",
+    "category": "fintech",
+    "_trending_tags": [
+      "ai"
+    ],
+    "_permalink": "/p/c6d1f9b7cb/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/c6d1f9b7cb/",
+    "_summary_240": "A sentencing recommendation said that Do Kwon had caused more losses than Sam Bankman-Fried, Alex Mashinsky and Karl Sebastian Greenwood combined.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/c6d1f9b7cb/thumbnail.png"
+  },
+  {
     "title": "The New York Times sues Perplexity for producing \u2018verbatim\u2019 copies of its work",
     "url": "https://www.theverge.com/news/839006/new-york-times-perplexity-lawsuit-copyright",
     "published_at": "2025-12-05T10:42:56-05:00",
     "source": "The Verge",
     "summary": "The New York Times has escalated its legal battle against the AI startup Perplexity, as it\u2019s now suing the AI \u201canswer engine\u201d for allegedly producing and profiting from responses that are \u201cverbatim or substantially similar copies\u201d of the publication\u2019s work. The lawsuit, filed in a New York federal court on Friday, claims Perplexity \u201cunlawfully crawls, [\u2026]",
-    "content_html": "<figure>\n\n<img alt=\"A photo showing the New York Times building\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/12/gettyimages-2249036304.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100\" />\n\t<figcaption>\n\t\t</figcaption>\n</figure>\n<p class=\"has-text-align-none\"><em>The New York Times</em> <a href=\"https://www.nytimes.com/2025/12/05/technology/new-york-times-perplexity-ai-lawsuit.html\">has escalated its legal battle against the AI startup Perplexity</a>, as it&#8217;s now suing the AI \u201canswer engine\u201d for allegedly producing and profiting from responses that are \u201cverbatim or substantially similar copies\u201d of the publication\u2019s work.</p>\n\n<p class=\"has-text-align-none\">The lawsuit, <a href=\"https://www.documentcloud.org/documents/26341080-nyt-perplexity-filing-dec-2025/\">filed in a New York federal court on Friday</a>, claims Perplexity \u201cunlawfully crawls, scrapes, copies, and distributes\u201d content from the <em>NYT</em>. It comes after the outlet\u2019s repeated demands for Perplexity to stop using content from its website, as the <em>NYT</em> sent cease-and-desist <a href=\"https://www.theverge.com/2024/10/15/24270774/new-york-times-cease-and-desist-letter-perplexity-ai-search-engine\">notices to the AI startup last year</a> and most recently in July, according to the lawsuit.&nbsp; <a href=\"https://techcrunch.com/2025/12/04/chicago-tribune-sues-perplexity/\"><em>The Chicago Tribune</em> also filed a copyright lawsuit</a> against Perplexity on Thursday.</p>\n\n<p class=\"has-text-align-none\"><em>The New York Times</em> sued OpenAI for <a href=\"https://www.theverge.com/2023/12/27/24016212/new-york-times-openai-microsoft-lawsuit-copyright-infringement\">copyright infringement in December 2023</a>, and later <a href=\"https://www.theverge.com/news/676291/new-york-times-ai-deal-amazon\">inked a deal with Amazon</a>, bringing its content to products like Alexa.</p>\n\n<p class=\"has-text-align-none\">Perplexity <a href=\"https://www.theverge.com/2024/10/21/24275924/news-corp-wall-street-journal-perplexity-lawsuit-copyright-infringement\">became the</a> <a href=\"https://www.theverge.com/news/777344/perplexity-lawsuit-encyclopedia-britannica-merriam-webster\">subject of</a> <a href=\"https://www.theverge.com/news/804660/reddit-suing-perplexity-data-scrapers-ai-lawsuit\">several</a> lawsuits <a href=\"https://www.theverge.com/2024/6/27/24187405/perplexity-ai-twitter-lie-plagiarism\">after reporting from <em>Forbes</em> and <em>Wired </em>revealed that the</a> startup had been skirting websites\u2019 paywalls to provide AI-generated summaries \u2014 and in <a href=\"https://www.wired.com/story/perplexity-plagiarized-our-story-about-how-perplexity-is-a-bullshit-machine/\">some cases, copies</a> \u2014 of their work. The<em> NYT</em> makes similar accusations in its lawsuit, stating that Perplexity\u2019s crawlers \u201chave intentionally ignored or evaded technical content protection measures,\u201d such <a href=\"https://www.theverge.com/24067997/robots-txt-ai-text-file-web-crawlers-spiders\">as the robots.txt file</a>, which indicates the parts of a website crawlers can access.</p>\n\n<p class=\"has-text-align-none\">\u201cBy copying The Times\u2019s copyrighted content and creating substitutive output derived from its works, obviating the need for users to visit The Times\u2019s website or purchase its newspaper, Perplexity is misappropriating substantial subscription, advertising, licensing, and affiliate revenue opportunities that belong rightfully and exclusively to The Times,\u201d the lawsuit states.\u00a0</p>\n\n<p class=\"has-text-align-none\">The<em> NYT</em> is seeking damages and is also asking the court to permanently block the AI startup from engaging in its allegedly unlawful behavior. Perplexity didn\u2019t immediately respond to a request for comment.</p>",
+    "content_html": "<figure>\n\n<img alt=\"A photo showing the New York Times building\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/12/gettyimages-2249036304.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100\" />\n\t<figcaption>\n\t\t</figcaption>\n</figure>\n<p class=\"has-text-align-none\"><em>The New York Times</em> <a href=\"https://www.nytimes.com/2025/12/05/technology/new-york-times-perplexity-ai-lawsuit.html\">has escalated its legal battle against the AI startup Perplexity</a>, as it&#8217;s now suing the AI \u201canswer engine\u201d for allegedly producing and profiting from responses that are \u201cverbatim or substantially similar copies\u201d of the publication\u2019s work.</p>\n\n<p class=\"has-text-align-none\">The lawsuit, <a href=\"https://www.documentcloud.org/documents/26341080-nyt-perplexity-filing-dec-2025/\">filed in a New York federal court on Friday</a>, claims Perplexity \u201cunlawfully crawls, scrapes, copies, and distributes\u201d content from the <em>NYT</em>. It comes after the outlet\u2019s repeated demands for Perplexity to stop using content from its website, as the <em>NYT</em> sent cease-and-desist <a href=\"https://www.theverge.com/2024/10/15/24270774/new-york-times-cease-and-desist-letter-perplexity-ai-search-engine\">notices to the AI startup last year</a> and most recently in July, according to the lawsuit.&nbsp; <a href=\"https://techcrunch.com/2025/12/04/chicago-tribune-sues-perplexity/\"><em>The Chicago Tribune</em> also filed a copyright lawsuit</a> against Perplexity on Thursday.</p>\n\n<p class=\"has-text-align-none\"><em>The New York Times</em> sued OpenAI for <a href=\"https://www.theverge.com/2023/12/27/24016212/new-york-times-openai-microsoft-lawsuit-copyright-infringement\">copyright infringement in December 2023</a>, and later <a href=\"https://www.theverge.com/news/676291/new-york-times-ai-deal-amazon\">inked a deal with Amazon</a>, bringing its content to products like Alexa.</p>\n\n<p class=\"has-text-align-none\">Perplexity <a href=\"https://www.theverge.com/2024/10/21/24275924/news-corp-wall-street-journal-perplexity-lawsuit-copyright-infringement\">became the</a> <a href=\"https://www.theverge.com/news/777344/perplexity-lawsuit-encyclopedia-britannica-merriam-webster\">subject of</a> <a href=\"https://www.theverge.com/news/804660/reddit-suing-perplexity-data-scrapers-ai-lawsuit\">several</a> lawsuits <a href=\"https://www.theverge.com/2024/6/27/24187405/perplexity-ai-twitter-lie-plagiarism\">after reporting from <em>Forbes</em> and <em>Wired </em>revealed that the</a> startup had been skirting websites\u2019 paywalls to provide AI-generated summaries \u2014 and in <a href=\"https://www.wired.com/story/perplexity-plagiarized-our-story-about-how-perplexity-is-a-bullshit-machine/\">some cases, copies</a> \u2014 of their work. The<em> NYT</em> makes similar accusations in its lawsuit, stating that Perplexity\u2019s crawlers \u201chave intentionally ignored or evaded technical content protection measures,\u201d such <a href=\"https://www.theverge.com/24067997/robots-txt-ai-text-file-web-crawlers-spiders\">as the robots.txt file</a>, which indicates the parts of a website crawlers can access.</p>\n\n<p class=\"has-text-align-none\">Perplexity attempted to smooth things over by <a href=\"https://www.theverge.com/2024/7/30/24208979/perplexity-publishers-program-ad-revenue-sharing-ai-time-fortune-der-spiegel\">launching a program to share ad revenue with publishers last year</a>, which it later expanded to <a href=\"https://www.theverge.com/ai-artificial-intelligence/765078/perplexity-expanded-its-revenue-sharing-program-with-publishers\">include its Comet web browser in August</a>.</p>\n\n<p class=\"has-text-align-none\">\u201cBy copying The Times\u2019s copyrighted content and creating substitutive output derived from its works, obviating the need for users to visit The Times\u2019s website or purchase its newspaper, Perplexity is misappropriating substantial subscription, advertising, licensing, and affiliate revenue opportunities that belong rightfully and exclusively to The Times,\u201d the lawsuit states.&nbsp;</p>\n\n<p class=\"has-text-align-none\">The<em> NYT</em> is seeking damages and is also asking the court to permanently block the AI startup from engaging in its allegedly unlawful behavior. \u201cPublishers have been suing new tech companies for a hundred years, starting with radio, TV, the internet, social media and now AI,\u201d Perplexity spokesperson Jesse Dwyer said in an emailed statement to <em>The Verge</em>. \u201cFortunately it\u2019s never worked, or we\u2019d all be talking about this by telegraph.\u201d</p>\n\n<p class=\"has-text-align-none\"><em><strong>Update, December 5th: </strong>Added a statement from Perplexity.</em></p>",
     "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/12/gettyimages-2249036304.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
     "summary_text": "The New York Times has escalated its legal battle against the AI startup Perplexity, as it\u2019s now suing the AI \u201canswer engine\u201d for allegedly producing and profiting from responses that are \u201cverbatim or substantially similar copies\u201d of the publication\u2019s work. T...",
     "category": "ai",
@@ -35,24 +107,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/4f4c3c8040/",
     "_summary_240": "Cloudflare said Friday (Dec. 5) that it resolved an incident in which its network became unavailable for several minutes earlier in the day. The company first announced what it...",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/4f4c3c8040/thumbnail.png"
-  },
-  {
-    "title": "New York Times Sues A.I. Start-Up Perplexity Over Use of Copyrighted Work",
-    "url": "https://www.nytimes.com/2025/12/05/technology/new-york-times-perplexity-ai-lawsuit.html",
-    "published_at": "2025-12-05T10:11:34-05:00",
-    "source": "The New York Times - Technology",
-    "summary": "Filed in federal court on Friday, the suit joins more than 40 other court disputes between copyright holders and A.I. companies.",
-    "content_html": "The A.I. start-up Perplexity, led by Aravind Srinivas, has also been sued by Dow Jones, the owner of The Wall Street Journal.",
-    "image_url": "https://static01.nyt.com/images/2025/12/04/business/04biz-perplexity-lawuit-1/04biz-perplexity-lawuit-1-mediumSquareAt3X.jpg",
-    "summary_text": "Filed in federal court on Friday, the suit joins more than 40 other court disputes between copyright holders and A.I. companies.",
-    "category": "ai",
-    "_trending_tags": [
-      "ai"
-    ],
-    "_permalink": "/p/564392e0e5/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/564392e0e5/",
-    "_summary_240": "Filed in federal court on Friday, the suit joins more than 40 other court disputes between copyright holders and A.I. companies.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/564392e0e5/thumbnail.png"
   },
   {
     "title": "It\u2019s code red for ChatGPT",
@@ -259,23 +313,19 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/aaeef6a1bb/thumbnail.png"
   },
   {
-    "title": "FT award-winning author Stephen Witt on the future of reading: \u2018Books could respond\u2019",
+    "title": "In future \u2018books could respond\u2019 says winning author Stephen Witt",
     "url": "https://www.ft.com/content/9058c29f-d868-4089-8493-298976848846",
     "published_at": "2025-12-05T08:50:21-05:00",
     "source": "Financial Times - Technology",
-    "summary": "Writer of \u2018The Thinking Machine\u2019 about Nvidia\u2019s rise believes in vast potential of AI",
+    "summary": "Writer of \u2018The Thinking Machine\u2019 about Nvidia\u2019s rise believes in the vast potential of AI",
     "content_html": "",
     "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/21d26800-bab9-459a-87a2-30f001191d13.jpg",
-    "summary_text": "Writer of \u2018The Thinking Machine\u2019 about Nvidia\u2019s rise believes in vast potential of AI",
+    "summary_text": "Writer of \u2018The Thinking Machine\u2019 about Nvidia\u2019s rise believes in the vast potential of AI",
     "category": "ai",
     "_trending_tags": [
       "ai",
       "nvidia"
-    ],
-    "_permalink": "/p/0fe8c7dcdf/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/0fe8c7dcdf/",
-    "_summary_240": "Writer of \u2018The Thinking Machine\u2019 about Nvidia\u2019s rise believes in vast potential of AI",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/0fe8c7dcdf/thumbnail.png"
+    ]
   },
   {
     "title": "Buy every dip? How pro hodlers blend surgical DCA with rules-based crypto buys",
@@ -297,10 +347,10 @@
     "url": "https://venturebeat.com/ai/ai-denial-is-becoming-an-enterprise-risk-why-dismissing-slop-obscures-real",
     "published_at": "2025-12-05T08:00:00-05:00",
     "source": "VentureBeat",
-    "summary": "Three years ago, Chat GPT was born. It amazed the world and ignited unprecedented investment and excitement in AI. Today, ChatGPT is still a toddler, but public sentiment around the AI boom has turned sharply negative. The shift began when OpenAI released GPT-5 this summer to mixed reviews , mostly from casual users who, unsurprisingly, judged the system by its surface flaws rather than its under...",
+    "summary": "Three years ago, ChatGPT was born. It amazed the world and ignited unprecedented investment and excitement in AI. Today, ChatGPT is still a toddler, but public sentiment around the AI boom has turned sharply negative. The shift began when OpenAI released GPT-5 this summer to mixed reviews , mostly from casual users who, unsurprisingly, judged the system by its surface flaws rather than its underl...",
     "content_html": "",
     "image_url": "https://images.ctfassets.net/jdtwqhzvc2n1/4cm8F6jnq7mT7NhyXWA1qQ/119d505338624d93ce9134238ebe73d3/Denialism.png?w=800&amp;q=75",
-    "summary_text": "Three years ago, Chat GPT was born. It amazed the world and ignited unprecedented investment and excitement in AI. Today, ChatGPT is still a toddler, but public sentiment around the AI boom has turned sharply negative. The shift began when OpenAI released GPT...",
+    "summary_text": "Three years ago, ChatGPT was born. It amazed the world and ignited unprecedented investment and excitement in AI. Today, ChatGPT is still a toddler, but public sentiment around the AI boom has turned sharply negative. The shift began when OpenAI released GPT-...",
     "category": "ai",
     "_trending_tags": [
       "ai",
@@ -310,7 +360,7 @@
     ],
     "_permalink": "/p/1903128e7b/",
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/1903128e7b/",
-    "_summary_240": "Three years ago, Chat GPT was born. It amazed the world and ignited unprecedented investment and excitement in AI. Today, ChatGPT is still a toddler, but public sentiment around...",
+    "_summary_240": "Three years ago, ChatGPT was born. It amazed the world and ignited unprecedented investment and excitement in AI. Today, ChatGPT is still a toddler, but public sentiment around...",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/1903128e7b/thumbnail.png"
   },
   {
@@ -584,16 +634,12 @@
     "source": "Bloomberg Technology",
     "summary": "Max Levchin probably knows as much about online payments as anyone. He was part of the original \u201cPayPal mafia,\u201d before going on to become co-founder and CEO of Affirm, the $22 billion player in the Buy Now, Pay Later industry that\u2019s hoping to disrupt the incumbent credit card companies. While BNPL is booming, there is still a lot of confusion about how it works, how it makes money, and how transp...",
     "content_html": "",
-    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/i65NVizABMgw/v8/-1x-1.png",
+    "image_url": "",
     "summary_text": "Max Levchin probably knows as much about online payments as anyone. He was part of the original \u201cPayPal mafia,\u201d before going on to become co-founder and CEO of Affirm, the $22 billion player in the Buy Now, Pay Later industry that\u2019s hoping to disrupt the incu...",
     "category": "fintech",
     "_trending_tags": [
       "paypal"
-    ],
-    "_permalink": "/p/9e66b01067/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/9e66b01067/",
-    "_summary_240": "Max Levchin probably knows as much about online payments as anyone. He was part of the original \u201cPayPal mafia,\u201d before going on to become co-founder and CEO of Affirm, the $22...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/9e66b01067/thumbnail.png"
+    ]
   },
   {
     "title": "Ethereum sees 25% validation drop post-Fusaka as Prysm bug nears finality loss",
@@ -1082,6 +1128,25 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/8884604aec/",
     "_summary_240": "Gold advocate Peter Schiff faced Binance co-founder Changpeng \"CZ\" Zhao during an event panel in Dubai, arguing that tokenized gold is a better store-of-value asset than Bitcoin.",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/8884604aec/thumbnail.png"
+  },
+  {
+    "title": "Build Hour: Agent Memory Patterns",
+    "url": "https://www.youtube.com/watch?v=WsGVXiWzTpI",
+    "published_at": "2025-12-04T15:28:02-05:00",
+    "source": "OpenAI YouTube",
+    "summary": "AI agents don\u2019t just reason \u2014 they remember. In this Build Hour, we deep-dive into context engineering techniques that enable agents to maintain short-term and long-term memory, personalize interactions, and operate reliably across long-running workflows. Emre Okcular (Solutions Architect) covers: \u2022 Why memory matters: stability, personalization, and long-running agent workflows \u2022 Short-term memo...",
+    "content_html": "",
+    "image_url": "https://i.ytimg.com/vi/WsGVXiWzTpI/maxresdefault.jpg",
+    "summary_text": "AI agents don\u2019t just reason \u2014 they remember. In this Build Hour, we deep-dive into context engineering techniques that enable agents to maintain short-term and long-term memory, personalize interactions, and operate reliably across long-running workflows. Emr...",
+    "category": "ai",
+    "_trending_tags": [
+      "agent",
+      "ai"
+    ],
+    "_permalink": "/p/d489603f0e/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/d489603f0e/",
+    "_summary_240": "AI agents don\u2019t just reason \u2014 they remember. In this Build Hour, we deep-dive into context engineering techniques that enable agents to maintain short-term and long-term memory,...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/d489603f0e/thumbnail.png"
   },
   {
     "title": "Anthropic CEO weighs in on AI bubble talk and risk-taking among competitors",
@@ -1658,21 +1723,6 @@
     "category": "fintech"
   },
   {
-    "title": "OpenAI to acquire Neptune",
-    "url": "https://openai.com/index/openai-to-acquire-neptune",
-    "published_at": "2025-12-03T05:00:00-05:00",
-    "source": "OpenAI News",
-    "summary": "OpenAI is acquiring Neptune to deepen visibility into model behavior and strengthen the tools researchers use to track experiments and monitor training.",
-    "content_html": "",
-    "image_url": "",
-    "summary_text": "OpenAI is acquiring Neptune to deepen visibility into model behavior and strengthen the tools researchers use to track experiments and monitor training.",
-    "category": "ai",
-    "_trending_tags": [
-      "ai",
-      "openai"
-    ]
-  },
-  {
     "title": "How confessions can keep language models honest",
     "url": "https://openai.com/index/how-confessions-can-keep-language-models-honest",
     "published_at": "2025-12-03T05:00:00-05:00",
@@ -1681,6 +1731,21 @@
     "content_html": "",
     "image_url": "",
     "summary_text": "OpenAI researchers are testing \u201cconfessions,\u201d a method that trains models to admit when they make mistakes or act undesirably, helping improve AI honesty, transparency, and trust in model outputs.",
+    "category": "ai",
+    "_trending_tags": [
+      "ai",
+      "openai"
+    ]
+  },
+  {
+    "title": "OpenAI to acquire Neptune",
+    "url": "https://openai.com/index/openai-to-acquire-neptune",
+    "published_at": "2025-12-03T05:00:00-05:00",
+    "source": "OpenAI News",
+    "summary": "OpenAI is acquiring Neptune to deepen visibility into model behavior and strengthen the tools researchers use to track experiments and monitor training.",
+    "content_html": "",
+    "image_url": "",
+    "summary_text": "OpenAI is acquiring Neptune to deepen visibility into model behavior and strengthen the tools researchers use to track experiments and monitor training.",
     "category": "ai",
     "_trending_tags": [
       "ai",
@@ -1805,25 +1870,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/e4b8f43ffb/thumbnail.png"
   },
   {
-    "title": "AI Fluency for nonprofits course trailer",
-    "url": "https://www.youtube.com/watch?v=xatyxfEevZA",
-    "published_at": "2025-12-02T12:41:41-05:00",
-    "source": "Anthropic YouTube",
-    "summary": "A trailer of AI Fluency for nonprofits developed by Anthropic and Giving Tuesday. View the full free course, including all videos, exercises, and resources, at https://www.anthropic.com/ai-fluency-for-nonprofits This video is copyright 2025 Anthropic PBC and Giving Tuesday. Based on the AI Fluency Framework developed by Prof. Rick Dakan (Ringling College of Art and Design) and Prof. Joseph Feller...",
-    "content_html": "",
-    "image_url": "https://i.ytimg.com/vi/xatyxfEevZA/maxresdefault.jpg",
-    "summary_text": "A trailer of AI Fluency for nonprofits developed by Anthropic and Giving Tuesday. View the full free course, including all videos, exercises, and resources, at https://www.anthropic.com/ai-fluency-for-nonprofits This video is copyright 2025 Anthropic PBC and ...",
-    "category": "ai",
-    "_trending_tags": [
-      "ai",
-      "anthropic"
-    ],
-    "_permalink": "/p/26dc568f02/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/26dc568f02/",
-    "_summary_240": "A trailer of AI Fluency for nonprofits developed by Anthropic and Giving Tuesday. View the full free course, including all videos, exercises, and resources, at...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/26dc568f02/thumbnail.png"
-  },
-  {
     "title": "NVIDIA and AWS Expand Full-Stack Partnership, Providing the Secure, High-Performance Compute Platform Vital for Future Innovation",
     "url": "https://blogs.nvidia.com/blog/aws-partnership-expansion-reinvent/",
     "published_at": "2025-12-02T11:00:27-05:00",
@@ -1838,11 +1884,7 @@
       "amazon",
       "cloud",
       "nvidia"
-    ],
-    "_permalink": "/p/0ce26d75bd/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/0ce26d75bd/",
-    "_summary_240": "At AWS re:Invent, NVIDIA and Amazon Web Services expanded their strategic collaboration with new technology integrations across interconnect technology, cloud infrastructure,...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/0ce26d75bd/thumbnail.png"
+    ]
   },
   {
     "title": "Amazon Has New Frontier AI Models\u2014and a Way for Customers to Build Their Own",
@@ -1857,11 +1899,7 @@
     "_trending_tags": [
       "ai",
       "amazon"
-    ],
-    "_permalink": "/p/794790c6aa/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/794790c6aa/",
-    "_summary_240": "Nova Forge lets Amazon\u2019s customers train frontier models for different tasks\u2014a potential breakthrough in making AI actually useful for businesses.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/794790c6aa/thumbnail.png"
+    ]
   },
   {
     "title": "AWS CEO Matt Garman Wants to Reassert Amazon\u2019s Cloud Dominance in the AI Era",
@@ -1879,11 +1917,7 @@
       "cloud",
       "google",
       "microsoft"
-    ],
-    "_permalink": "/p/5c973f7ee8/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/5c973f7ee8/",
-    "_summary_240": "As Google and Microsoft continue to surge, the AWS chief lays out his pitch: cheaper, reliable AI delivered at hyperscale.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/5c973f7ee8/thumbnail.png"
+    ]
   },
   {
     "title": "Syntax hacking: Researchers discover sentence structure can bypass AI safety rules",
