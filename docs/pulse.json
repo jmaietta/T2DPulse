@@ -1,5 +1,23 @@
 [
   {
+    "title": "The New York Times sues Perplexity for producing \u2018verbatim\u2019 copies of its work",
+    "url": "https://www.theverge.com/news/839006/new-york-times-perplexity-lawsuit-copyright",
+    "published_at": "2025-12-05T10:42:56-05:00",
+    "source": "The Verge",
+    "summary": "The New York Times has escalated its legal battle against the AI startup Perplexity, as it\u2019s now suing the AI \u201canswer engine\u201d for allegedly producing and profiting from responses that are \u201cverbatim or substantially similar copies\u201d of the publication\u2019s work. The lawsuit, filed in a New York federal court on Friday, claims Perplexity \u201cunlawfully crawls, [\u2026]",
+    "content_html": "<figure>\n\n<img alt=\"A photo showing the New York Times building\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/12/gettyimages-2249036304.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100\" />\n\t<figcaption>\n\t\t</figcaption>\n</figure>\n<p class=\"has-text-align-none\"><em>The New York Times</em> <a href=\"https://www.nytimes.com/2025/12/05/technology/new-york-times-perplexity-ai-lawsuit.html\">has escalated its legal battle against the AI startup Perplexity</a>, as it&#8217;s now suing the AI \u201canswer engine\u201d for allegedly producing and profiting from responses that are \u201cverbatim or substantially similar copies\u201d of the publication\u2019s work.</p>\n\n<p class=\"has-text-align-none\">The lawsuit, <a href=\"https://www.documentcloud.org/documents/26341080-nyt-perplexity-filing-dec-2025/\">filed in a New York federal court on Friday</a>, claims Perplexity \u201cunlawfully crawls, scrapes, copies, and distributes\u201d content from the <em>NYT</em>. It comes after the outlet\u2019s repeated demands for Perplexity to stop using content from its website, as the <em>NYT</em> sent cease-and-desist <a href=\"https://www.theverge.com/2024/10/15/24270774/new-york-times-cease-and-desist-letter-perplexity-ai-search-engine\">notices to the AI startup last year</a> and most recently in July, according to the lawsuit.&nbsp; <a href=\"https://techcrunch.com/2025/12/04/chicago-tribune-sues-perplexity/\"><em>The Chicago Tribune</em> also filed a copyright lawsuit</a> against Perplexity on Thursday.</p>\n\n<p class=\"has-text-align-none\"><em>The New York Times</em> sued OpenAI for <a href=\"https://www.theverge.com/2023/12/27/24016212/new-york-times-openai-microsoft-lawsuit-copyright-infringement\">copyright infringement in December 2023</a>, and later <a href=\"https://www.theverge.com/news/676291/new-york-times-ai-deal-amazon\">inked a deal with Amazon</a>, bringing its content to products like Alexa.</p>\n\n<p class=\"has-text-align-none\">Perplexity <a href=\"https://www.theverge.com/2024/10/21/24275924/news-corp-wall-street-journal-perplexity-lawsuit-copyright-infringement\">became the</a> <a href=\"https://www.theverge.com/news/777344/perplexity-lawsuit-encyclopedia-britannica-merriam-webster\">subject of</a> <a href=\"https://www.theverge.com/news/804660/reddit-suing-perplexity-data-scrapers-ai-lawsuit\">several</a> lawsuits <a href=\"https://www.theverge.com/2024/6/27/24187405/perplexity-ai-twitter-lie-plagiarism\">after reporting from <em>Forbes</em> and <em>Wired </em>revealed that the</a> startup had been skirting websites\u2019 paywalls to provide AI-generated summaries \u2014 and in <a href=\"https://www.wired.com/story/perplexity-plagiarized-our-story-about-how-perplexity-is-a-bullshit-machine/\">some cases, copies</a> \u2014 of their work. The<em> NYT</em> makes similar accusations in its lawsuit, stating that Perplexity\u2019s crawlers \u201chave intentionally ignored or evaded technical content protection measures,\u201d such <a href=\"https://www.theverge.com/24067997/robots-txt-ai-text-file-web-crawlers-spiders\">as the robots.txt file</a>, which indicates the parts of a website crawlers can access.</p>\n\n<p class=\"has-text-align-none\">\u201cBy copying The Times\u2019s copyrighted content and creating substitutive output derived from its works, obviating the need for users to visit The Times\u2019s website or purchase its newspaper, Perplexity is misappropriating substantial subscription, advertising, licensing, and affiliate revenue opportunities that belong rightfully and exclusively to The Times,\u201d the lawsuit states.\u00a0</p>\n\n<p class=\"has-text-align-none\">The<em> NYT</em> is seeking damages and is also asking the court to permanently block the AI startup from engaging in its allegedly unlawful behavior. Perplexity didn\u2019t immediately respond to a request for comment.</p>",
+    "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/12/gettyimages-2249036304.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "summary_text": "The New York Times has escalated its legal battle against the AI startup Perplexity, as it\u2019s now suing the AI \u201canswer engine\u201d for allegedly producing and profiting from responses that are \u201cverbatim or substantially similar copies\u201d of the publication\u2019s work. T...",
+    "category": "ai",
+    "_trending_tags": [
+      "ai"
+    ],
+    "_permalink": "/p/5a2b2960a3/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/5a2b2960a3/",
+    "_summary_240": "The New York Times has escalated its legal battle against the AI startup Perplexity, as it\u2019s now suing the AI \u201canswer engine\u201d for allegedly producing and profiting from responses...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/5a2b2960a3/thumbnail.png"
+  },
+  {
     "title": "Cloudflare Says It Resolved Services Issues Caused by Software Update",
     "url": "https://www.pymnts.com/technology/2025/cloudflare-says-it-resolved-services-issues-from-software-update/",
     "published_at": "2025-12-05T10:15:42-05:00",
@@ -273,21 +291,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/a5857df34e/",
     "_summary_240": "Pros don\u2019t \u201cape the dip\u201d on gut feel; they predefine their allocation, let rules-based systems do the buying and use DCA-style flows as part of a disciplined, data-driven...",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/a5857df34e/thumbnail.png"
-  },
-  {
-    "title": "Pluribus turns a \u2018caloric deficit\u2019 into a nightmare",
-    "url": "https://www.theverge.com/streaming/838256/pluribus-episode-6-recap-discussion",
-    "published_at": "2025-12-05T08:30:00-05:00",
-    "source": "The Verge",
-    "summary": "Every week since Pluribus' premiere, I've presented a handful of burning questions I have about what's coming next. And most of the time I really want to know the answer. This is a show where mysteries are baked into the premise, with a slow-burn structure that can make it very satisfying when the answers start [\u2026]",
-    "content_html": "<figure>\n\n<img alt=\"\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/12/Pluribus_Photo_010502.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100\" />\n\t<figcaption>\n\t\t</figcaption>\n</figure>\n<p class=\"has-text-align-none\">Every week <a href=\"https://www.theverge.com/entertainment/815745/pluribus-review-apple-tv\">since <em>Pluribus</em>' premiere</a>, I've presented a handful of burning questions I have about what's coming next. And most of the time I really want to know the answer. This is a show where mysteries are baked into the premise, with a slow-burn structure that can make it very satisfying when the answers start rolling in. But I regret wanting to know <a href=\"https://www.theverge.com/tech/829885/pluribus-episode-5-discussion-apple-tv\">what the hive mind are drinking in episode 5</a> - I now have the answer, and I really don't like it.</p>\n<p class=\"has-text-align-none\">Welcome to our weekly <em>Verge</em>-subscriber discussion of <a href=\"https://www.theverge.com/entertainment/815745/pluribus-review-apple-tv\"><em>Pluribus</em></a>, the new sci-fi series on Apple TV <a href=\"https://www.theverge.com/entertainment/807102/pluribus-vince-gilligan-interview-apple-tv-breaking-bad\">from <em>Breaking Bad</em> creator Vince Gilligan</a>. The show follows a woman named Carol (Rhea Seehorn), who  \u2026</p>\n<p><a href=\"https://www.theverge.com/streaming/838256/pluribus-episode-6-recap-discussion\">Read the full story at The Verge.</a></p>",
-    "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/12/Pluribus_Photo_010502.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "summary_text": "Every week since Pluribus' premiere, I've presented a handful of burning questions I have about what's coming next. And most of the time I really want to know the answer. This is a show where mysteries are baked into the premise, with a slow-burn structure th...",
-    "category": "fintech",
-    "_permalink": "/p/6b27406deb/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/6b27406deb/",
-    "_summary_240": "Every week since Pluribus' premiere, I've presented a handful of burning questions I have about what's coming next. And most of the time I really want to know the answer. This is...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/6b27406deb/thumbnail.png"
   },
   {
     "title": "AI denial is becoming an enterprise risk: Why dismissing \u201cslop\u201d obscures real capability gains",
@@ -581,12 +584,16 @@
     "source": "Bloomberg Technology",
     "summary": "Max Levchin probably knows as much about online payments as anyone. He was part of the original \u201cPayPal mafia,\u201d before going on to become co-founder and CEO of Affirm, the $22 billion player in the Buy Now, Pay Later industry that\u2019s hoping to disrupt the incumbent credit card companies. While BNPL is booming, there is still a lot of confusion about how it works, how it makes money, and how transp...",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/i65NVizABMgw/v8/-1x-1.png",
     "summary_text": "Max Levchin probably knows as much about online payments as anyone. He was part of the original \u201cPayPal mafia,\u201d before going on to become co-founder and CEO of Affirm, the $22 billion player in the Buy Now, Pay Later industry that\u2019s hoping to disrupt the incu...",
     "category": "fintech",
     "_trending_tags": [
       "paypal"
-    ]
+    ],
+    "_permalink": "/p/9e66b01067/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/9e66b01067/",
+    "_summary_240": "Max Levchin probably knows as much about online payments as anyone. He was part of the original \u201cPayPal mafia,\u201d before going on to become co-founder and CEO of Affirm, the $22...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/9e66b01067/thumbnail.png"
   },
   {
     "title": "Ethereum sees 25% validation drop post-Fusaka as Prysm bug nears finality loss",
@@ -1232,25 +1239,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/39453d1aef/thumbnail.png"
   },
   {
-    "title": "Meta centralizes Facebook and Instagram support, tests AI support assistant",
-    "url": "https://techcrunch.com/2025/12/04/meta-centralizes-facebook-and-instagram-support-tests-ai-support-assistant/",
-    "published_at": "2025-12-04T12:00:00-05:00",
-    "source": "TechCrunch",
-    "summary": "The new support hub will connect users to security tools, account recovery options, and an AI assistant.",
-    "content_html": "",
-    "image_url": "https://techcrunch.com/wp-content/uploads/2023/05/GettyImages-1467844599.jpg?w=1024",
-    "summary_text": "The new support hub will connect users to security tools, account recovery options, and an AI assistant.",
-    "category": "ai",
-    "_trending_tags": [
-      "ai",
-      "meta"
-    ],
-    "_permalink": "/p/286e248702/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/286e248702/",
-    "_summary_240": "The new support hub will connect users to security tools, account recovery options, and an AI assistant.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/286e248702/thumbnail.png"
-  },
-  {
     "title": "ByteDance and DeepSeek Are Placing Very Different AI Bets",
     "url": "https://www.wired.com/story/deepseek-goes-high-while-bytedance-goes-wide/",
     "published_at": "2025-12-04T11:57:09-05:00",
@@ -1368,17 +1356,13 @@
     "source": "Financial Times - Technology",
     "summary": "Brussels concerned that US tech group\u2019s business terms may prevent competition from third-party AI providers",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/57c24072-332a-4b9f-9dd0-33c5885846b4.jpg",
+    "image_url": "",
     "summary_text": "Brussels concerned that US tech group\u2019s business terms may prevent competition from third-party AI providers",
     "category": "ai",
     "_trending_tags": [
       "ai",
       "meta"
-    ],
-    "_permalink": "/p/393f5e43e4/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/393f5e43e4/",
-    "_summary_240": "Brussels concerned that US tech group\u2019s business terms may prevent competition from third-party AI providers",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/393f5e43e4/thumbnail.png"
+    ]
   },
   {
     "title": "Inside NetSuite\u2019s next act: Evan Goldberg on the future of AI-powered business systems",
@@ -1462,7 +1446,7 @@
     "source": "Financial Times - Technology",
     "summary": "Mark Zuckerberg foresees wearable artificial intelligence-powered devices supplanting smartphones",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/dd231a42-3fc4-449e-be36-6b65279750e7.jpg",
+    "image_url": "",
     "summary_text": "Mark Zuckerberg foresees wearable artificial intelligence-powered devices supplanting smartphones",
     "category": "ai",
     "_trending_tags": [
@@ -1515,16 +1499,12 @@
     "source": "Financial Times - Technology",
     "summary": "In Silicon Valley, VCs offer both funding and advice from partners who built their own global businesses",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/55757ea5-599c-48ac-9789-db976e831613.jpg",
+    "image_url": "",
     "summary_text": "In Silicon Valley, VCs offer both funding and advice from partners who built their own global businesses",
     "category": "ai",
     "_trending_tags": [
       "ai"
-    ],
-    "_permalink": "/p/7fda8c1f40/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/7fda8c1f40/",
-    "_summary_240": "In Silicon Valley, VCs offer both funding and advice from partners who built their own global businesses",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/7fda8c1f40/thumbnail.png"
+    ]
   },
   {
     "title": "UK explores tougher laws on AI chatbots",
@@ -1533,16 +1513,12 @@
     "source": "Financial Times - Technology",
     "summary": "Technology secretary Liz Kendall tells MPs she is \u2018especially worried\u2019 about potential risks to children",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/f16ebdbc-8700-48a0-be46-39840d9462dd.jpg",
+    "image_url": "",
     "summary_text": "Technology secretary Liz Kendall tells MPs she is \u2018especially worried\u2019 about potential risks to children",
     "category": "ai",
     "_trending_tags": [
       "ai"
-    ],
-    "_permalink": "/p/cf5c0f4475/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/cf5c0f4475/",
-    "_summary_240": "Technology secretary Liz Kendall tells MPs she is \u2018especially worried\u2019 about potential risks to children",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/cf5c0f4475/thumbnail.png"
+    ]
   },
   {
     "title": "Anthropic\u2019s IPO pitch: helpful, honest, harmless and hulking",
@@ -1551,16 +1527,12 @@
     "source": "Financial Times - Technology",
     "summary": "An initial public offering could value the company at $350bn next year",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/016213df-d496-4461-99fd-7d6217118446.jpg",
+    "image_url": "",
     "summary_text": "An initial public offering could value the company at $350bn next year",
     "category": "ai",
     "_trending_tags": [
       "anthropic"
-    ],
-    "_permalink": "/p/64c28b239f/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/64c28b239f/",
-    "_summary_240": "An initial public offering could value the company at $350bn next year",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/64c28b239f/thumbnail.png"
+    ]
   },
   {
     "title": "Small businesses work smarter with AI in Microsoft 365 Copilot Business",
@@ -1653,16 +1625,12 @@
     "source": "Financial Times - Technology",
     "summary": "Pace of change requires \u2018different relationship between regulator and regulated\u2019, Nikhil Rathi tells FT conference",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/2ecadb68-4524-4cf1-83cf-c51c4a08a141.jpg",
+    "image_url": "",
     "summary_text": "Pace of change requires \u2018different relationship between regulator and regulated\u2019, Nikhil Rathi tells FT conference",
     "category": "ai",
     "_trending_tags": [
       "ai"
-    ],
-    "_permalink": "/p/9455fb0837/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/9455fb0837/",
-    "_summary_240": "Pace of change requires \u2018different relationship between regulator and regulated\u2019, Nikhil Rathi tells FT conference",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/9455fb0837/thumbnail.png"
+    ]
   },
   {
     "title": "India reverses order to install government app on all smartphones",
@@ -1671,16 +1639,12 @@
     "source": "Financial Times - Technology",
     "summary": "Communications minister says use of state-run cyber security app is \u2018completely voluntary\u2019 following public outcry",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/eb823106-604a-4888-a0ce-23d84c5d9a48.jpg",
+    "image_url": "",
     "summary_text": "Communications minister says use of state-run cyber security app is \u2018completely voluntary\u2019 following public outcry",
     "category": "fintech",
     "_trending_tags": [
       "gpu"
-    ],
-    "_permalink": "/p/ec171d518e/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/ec171d518e/",
-    "_summary_240": "Communications minister says use of state-run cyber security app is \u2018completely voluntary\u2019 following public outcry",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/ec171d518e/thumbnail.png"
+    ]
   },
   {
     "title": "Ministers explore national security exemption to ban on ransom payments",
@@ -1689,13 +1653,9 @@
     "source": "Financial Times - Technology",
     "summary": "Dan Jarvis says government is looking \u2018very carefully\u2019 at sparing NHS and other critical bodies in specific cases",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/44c6ceff-15e1-4495-82e2-7b8a69a1ddd5.jpg",
+    "image_url": "",
     "summary_text": "Dan Jarvis says government is looking \u2018very carefully\u2019 at sparing NHS and other critical bodies in specific cases",
-    "category": "fintech",
-    "_permalink": "/p/8eaf32055d/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/8eaf32055d/",
-    "_summary_240": "Dan Jarvis says government is looking \u2018very carefully\u2019 at sparing NHS and other critical bodies in specific cases",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/8eaf32055d/thumbnail.png"
+    "category": "fintech"
   },
   {
     "title": "OpenAI to acquire Neptune",
@@ -1749,16 +1709,12 @@
     "source": "Financial Times - Technology",
     "summary": "Trading firm Jane Street leads $105mn investment in testing group Antithesis as AI-generated software proliferates",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/eab9bdf9-7fcb-449b-9e00-58c8133f9964.jpg",
+    "image_url": "",
     "summary_text": "Trading firm Jane Street leads $105mn investment in testing group Antithesis as AI-generated software proliferates",
     "category": "software",
     "_trending_tags": [
       "ai"
-    ],
-    "_permalink": "/p/7bdcb52f7a/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/7bdcb52f7a/",
-    "_summary_240": "Trading firm Jane Street leads $105mn investment in testing group Antithesis as AI-generated software proliferates",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/7bdcb52f7a/thumbnail.png"
+    ]
   },
   {
     "title": "UK banks turn to AI for fraud prevention and to improve services",
@@ -1767,16 +1723,12 @@
     "source": "Financial Times - Technology",
     "summary": "Tools help detect organised crime, automate lending checks and deliver personalised financial offerings",
     "content_html": "",
-    "image_url": "https://images.ft.com/v3/image/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Fa8a12899-4713-47e9-a593-d07b7d9e765b.jpg?source=next-article&fit=scale-down&quality=highest&width=700&dpr=1",
+    "image_url": "",
     "summary_text": "Tools help detect organised crime, automate lending checks and deliver personalised financial offerings",
     "category": "fintech",
     "_trending_tags": [
       "ai"
-    ],
-    "_permalink": "/p/279a1526fa/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/279a1526fa/",
-    "_summary_240": "Tools help detect organised crime, automate lending checks and deliver personalised financial offerings",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/279a1526fa/thumbnail.png"
+    ]
   },
   {
     "title": "Internal AI adoption accelerates across tech sector",
@@ -1785,16 +1737,12 @@
     "source": "Financial Times - Technology",
     "summary": "Companies trial latest tools on themselves to demonstrate their potential",
     "content_html": "",
-    "image_url": "https://images.ft.com/v3/image/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F8f57fa2b-2a24-4bef-8f19-69b4c465bf86.jpg?source=next-article&fit=scale-down&quality=highest&width=700&dpr=1",
+    "image_url": "",
     "summary_text": "Companies trial latest tools on themselves to demonstrate their potential",
     "category": "ai",
     "_trending_tags": [
       "ai"
-    ],
-    "_permalink": "/p/7128cc2d96/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/7128cc2d96/",
-    "_summary_240": "Companies trial latest tools on themselves to demonstrate their potential",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/7128cc2d96/thumbnail.png"
+    ]
   },
   {
     "title": "OpenAI CEO declares \u201ccode red\u201d as Gemini gains 200 million users in 3 months",
