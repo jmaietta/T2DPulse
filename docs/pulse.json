@@ -631,6 +631,25 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/3c5b2ebd8d/thumbnail.png"
   },
   {
+    "title": "What's New with ChatGPT Voice",
+    "url": "https://www.youtube.com/watch?v=4jBcK0cYass",
+    "published_at": "2025-12-05T14:07:27-05:00",
+    "source": "OpenAI YouTube",
+    "summary": "You can now use ChatGPT Voice right inside chat \u2014 no separate mode needed. You can talk, watch answers appear, review earlier messages, and see visuals like images or maps in real time. Rolling out to all users on mobile and web. Just update your app. If you prefer the original experience, turn on \u201cSeparate mode\u201d under Settings \u2192 Voice Mode.",
+    "content_html": "",
+    "image_url": "https://i.ytimg.com/vi/4jBcK0cYass/maxresdefault.jpg",
+    "summary_text": "You can now use ChatGPT Voice right inside chat \u2014 no separate mode needed. You can talk, watch answers appear, review earlier messages, and see visuals like images or maps in real time. Rolling out to all users on mobile and web. Just update your app. If you ...",
+    "category": "ai",
+    "_trending_tags": [
+      "chatgpt",
+      "gpt"
+    ],
+    "_permalink": "/p/fd81e2f6f9/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/fd81e2f6f9/",
+    "_summary_240": "You can now use ChatGPT Voice right inside chat \u2014 no separate mode needed. You can talk, watch answers appear, review earlier messages, and see visuals like images or maps in...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/fd81e2f6f9/thumbnail.png"
+  },
+  {
     "title": "Is Bitcoin shifting to a 2-year cycle?",
     "url": "https://cointelegraph.com/news/bitcoin-shifting-2-year-cycle-video?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
     "published_at": "2025-12-05T13:32:02-05:00",
@@ -751,22 +770,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/29dcee721a/",
     "_summary_240": "The New York Times filed a copyright lawsuit against Perplexity, joining other publishers using legal action as leverage to force AI companies into licensing deals that...",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/29dcee721a/thumbnail.png"
-  },
-  {
-    "title": "Anthropic\u2019s philosopher answers your questions",
-    "url": "https://www.youtube.com/watch?v=I9aGC6Ui3eE",
-    "published_at": "2025-12-05T11:00:35-05:00",
-    "source": "Anthropic YouTube",
-    "summary": "Amanda Askell is a philosopher at Anthropic who works on Claude's character. In this video, she answers questions from the community about her work, reflections and predictions. 0:00 Introduction 0:29 Why is there a philosopher at an AI company? 1:24 Are philosophers taking AI seriously? 3:00 Philosophy ideals vs. engineering realities 5:00 Do models make superhumanly moral decisions? 6:24 Why Op...",
-    "content_html": "",
-    "image_url": "https://i.ytimg.com/vi/I9aGC6Ui3eE/maxresdefault.jpg",
-    "summary_text": "Amanda Askell is a philosopher at Anthropic who works on Claude's character. In this video, she answers questions from the community about her work, reflections and predictions. 0:00 Introduction 0:29 Why is there a philosopher at an AI company? 1:24 Are phil...",
-    "category": "ai",
-    "_trending_tags": [
-      "ai",
-      "anthropic",
-      "claude"
-    ]
   },
   {
     "title": "Here\u2019s What You Should Know About Launching an AI Startup",
@@ -931,24 +934,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/1903128e7b/",
     "_summary_240": "Three years ago, ChatGPT was born. It amazed the world and ignited unprecedented investment and excitement in AI. Today, ChatGPT is still a toddler, but public sentiment around...",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/1903128e7b/thumbnail.png"
-  },
-  {
-    "title": "Turkish crypto exchange Paribu buys majority stake in competitor CoinMENA",
-    "url": "https://cointelegraph.com/news/paribu-acquires-coinmena-turkey-mena-crypto-expansion?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-    "published_at": "2025-12-05T07:19:28-05:00",
-    "source": "Cointelegraph",
-    "summary": "Paribu has bought a majority stake in Dubai- and Bahrain-licensed CoinMENA in a deal valuing the exchange at up to $240 million.",
-    "content_html": "",
-    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTIvMDE5YWVlOGItNmJmMi03YmY2LTk5YmItYTU3OGVmOGQ2ZjAx.jpg",
-    "summary_text": "Paribu has bought a majority stake in Dubai- and Bahrain-licensed CoinMENA in a deal valuing the exchange at up to $240 million.",
-    "category": "fintech",
-    "_trending_tags": [
-      "ai"
-    ],
-    "_permalink": "/p/156deb265f/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/156deb265f/",
-    "_summary_240": "Paribu has bought a majority stake in Dubai- and Bahrain-licensed CoinMENA in a deal valuing the exchange at up to $240 million.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/156deb265f/thumbnail.png"
   },
   {
     "title": "OpenAI Calls a \u2018Code Red\u2019 + Which Model Should I Use? + The Hard Fork Review of Slop",
@@ -1871,23 +1856,6 @@
     "category": "ai",
     "_trending_tags": [
       "ai"
-    ]
-  },
-  {
-    "title": "Inside Mirakl's agentic commerce vision",
-    "url": "https://openai.com/index/mirakl",
-    "published_at": "2025-12-01T17:00:00-05:00",
-    "source": "OpenAI News",
-    "summary": "Mirakl is redefining commerce through AI agents and ChatGPT Enterprise\u2014achieving faster documentation, smarter customer support, and building toward agent-native commerce with Mirakl Nexus.",
-    "content_html": "",
-    "image_url": "",
-    "summary_text": "Mirakl is redefining commerce through AI agents and ChatGPT Enterprise\u2014achieving faster documentation, smarter customer support, and building toward agent-native commerce with Mirakl Nexus.",
-    "category": "ai",
-    "_trending_tags": [
-      "agent",
-      "ai",
-      "chatgpt",
-      "gpt"
     ]
   },
   {
