@@ -1,8 +1,8 @@
 {
-  "generated_at": "2025-12-06T13:48:04.792023-05:00",
+  "generated_at": "2025-12-06T14:18:53.438435-05:00",
   "total_keywords": 30,
   "keyword_counts": {
-    "ai": 187,
+    "ai": 178,
     "meta": 18,
     "openai": 14,
     "anthropic": 11,
@@ -15,8 +15,8 @@
     "apple": 6,
     "chatgpt": 6,
     "cloud": 6,
-    "fintech": 5,
     "microsoft": 5,
+    "fintech": 4,
     "stripe": 3,
     "claude": 1,
     "gpu": 1,
