@@ -817,6 +817,25 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/3c5b2ebd8d/thumbnail.png"
   },
   {
+    "title": "What's New with ChatGPT Voice",
+    "url": "https://www.youtube.com/watch?v=4jBcK0cYass",
+    "published_at": "2025-12-05T14:07:27-05:00",
+    "source": "OpenAI YouTube",
+    "summary": "You can now use ChatGPT Voice right inside chat \u2014 no separate mode needed. You can talk, watch answers appear, review earlier messages, and see visuals like images or maps in real time. Rolling out to all users on mobile and web. Just update your app. If you prefer the original experience, turn on \u201cSeparate mode\u201d under Settings \u2192 Voice Mode.",
+    "content_html": "",
+    "image_url": "https://i.ytimg.com/vi/4jBcK0cYass/maxresdefault.jpg",
+    "summary_text": "You can now use ChatGPT Voice right inside chat \u2014 no separate mode needed. You can talk, watch answers appear, review earlier messages, and see visuals like images or maps in real time. Rolling out to all users on mobile and web. Just update your app. If you ...",
+    "category": "ai",
+    "_trending_tags": [
+      "chatgpt",
+      "gpt"
+    ],
+    "_permalink": "/p/fd81e2f6f9/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/fd81e2f6f9/",
+    "_summary_240": "You can now use ChatGPT Voice right inside chat \u2014 no separate mode needed. You can talk, watch answers appear, review earlier messages, and see visuals like images or maps in...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/fd81e2f6f9/thumbnail.png"
+  },
+  {
     "title": "Is Bitcoin shifting to a 2-year cycle?",
     "url": "https://cointelegraph.com/news/bitcoin-shifting-2-year-cycle-video?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
     "published_at": "2025-12-05T13:32:02-05:00",
@@ -830,25 +849,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/65db328e34/",
     "_summary_240": "ProCap BTC\u2019s Jeff Park reveals how institutional flows and ETFs could shorten Bitcoin\u2019s market cycle \u2014 with major implications heading into 2026",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/65db328e34/thumbnail.png"
-  },
-  {
-    "title": "AWS re:Invent was an all-in pitch for AI. Customers might not be ready.",
-    "url": "https://techcrunch.com/2025/12/05/aws-reinvent-was-an-all-in-pitch-for-ai-customers-might-not-be-ready/",
-    "published_at": "2025-12-05T13:05:35-05:00",
-    "source": "TechCrunch",
-    "summary": "AWS is releasing a lot of new AI tech, but the cloud infrastructure giant's enterprise customers may not be ready for it yet.",
-    "content_html": "",
-    "image_url": "https://techcrunch.com/wp-content/uploads/2024/12/IMG_3817.jpg?resize=1200,900",
-    "summary_text": "AWS is releasing a lot of new AI tech, but the cloud infrastructure giant's enterprise customers may not be ready for it yet.",
-    "category": "ai",
-    "_trending_tags": [
-      "ai",
-      "cloud"
-    ],
-    "_permalink": "/p/90c38afbb1/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/90c38afbb1/",
-    "_summary_240": "AWS is releasing a lot of new AI tech, but the cloud infrastructure giant's enterprise customers may not be ready for it yet.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/90c38afbb1/thumbnail.png"
   },
   {
     "title": "Dario Amodei, \u2018safe AI\u2019 evangelist eyes Anthropic IPO",
@@ -886,26 +886,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/00084754ea/",
     "_summary_240": "Filed in federal court on Friday, the suit joins more than 40 other court disputes between copyright holders and A.I. companies.",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/00084754ea/thumbnail.png"
-  },
-  {
-    "title": "Anthropic\u2019s philosopher answers your questions",
-    "url": "https://www.youtube.com/watch?v=I9aGC6Ui3eE",
-    "published_at": "2025-12-05T11:00:35-05:00",
-    "source": "Anthropic YouTube",
-    "summary": "Amanda Askell is a philosopher at Anthropic who works on Claude's character. In this video, she answers questions from the community about her work, reflections and predictions. 0:00 Introduction 0:29 Why is there a philosopher at an AI company? 1:24 Are philosophers taking AI seriously? 3:00 Philosophy ideals vs. engineering realities 5:00 Do models make superhumanly moral decisions? 6:24 Why Op...",
-    "content_html": "",
-    "image_url": "https://i.ytimg.com/vi/I9aGC6Ui3eE/maxresdefault.jpg",
-    "summary_text": "Amanda Askell is a philosopher at Anthropic who works on Claude's character. In this video, she answers questions from the community about her work, reflections and predictions. 0:00 Introduction 0:29 Why is there a philosopher at an AI company? 1:24 Are phil...",
-    "category": "ai",
-    "_trending_tags": [
-      "ai",
-      "anthropic",
-      "claude"
-    ],
-    "_permalink": "/p/81c0a5de7d/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/81c0a5de7d/",
-    "_summary_240": "Amanda Askell is a philosopher at Anthropic who works on Claude's character. In this video, she answers questions from the community about her work, reflections and predictions....",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/81c0a5de7d/thumbnail.png"
   },
   {
     "title": "Here\u2019s What You Should Know About Launching an AI Startup",
@@ -1394,17 +1374,19 @@
     ]
   },
   {
-    "title": "Inside NetSuite\u2019s next act: Evan Goldberg on the future of AI-powered business systems",
-    "url": "https://venturebeat.com/ai/inside-netsuites-next-act-evan-goldberg-on-the-future-of-ai-powered-business",
+    "title": "Anthropic vs. OpenAI red teaming methods reveal different security priorities for enterprise AI",
+    "url": "https://venturebeat.com/security/anthropic-vs-openai-red-teaming-methods-reveal-different-security-priorities",
     "published_at": "2025-12-04T00:00:00-05:00",
     "source": "VentureBeat",
-    "summary": "Presented by Oracle NetSuite When Evan Goldberg started NetSuite in 1998, his vision was radically simple: give entrepreneurs access to their business data anytime, anywhere. At the time, most enterprise software lived on local servers. As an entrepreneur himself, Goldberg understood the frustration intimately. \"I had fragmented systems. They all said something different,\" he recalls of his early...",
+    "summary": "M odel providers want to prove the security and robustness of their models, releasing system cards and conducting red-team exercises with each new release. But it can be difficult for enterprises to parse through the results, which vary widely and can be misleading. Anthropic's 153-page system card for Claude Opus 4.5 versus OpenAI's 60-page GPT-5 system card reveals a fundamental split in how th...",
     "content_html": "",
-    "image_url": "https://images.ctfassets.net/jdtwqhzvc2n1/2XtOSMqQi1z1ZProN1wL2h/93796f6888f6a6567104c2545639c3c3/2025_SuiteWorld_ExecutiveKeynote01_88144-64-.jpg?w=800&amp;q=75",
-    "summary_text": "Presented by Oracle NetSuite When Evan Goldberg started NetSuite in 1998, his vision was radically simple: give entrepreneurs access to their business data anytime, anywhere. At the time, most enterprise software lived on local servers. As an entrepreneur him...",
-    "category": "software",
+    "image_url": "https://images.ctfassets.net/jdtwqhzvc2n1/3rwD78rWMVQoD6mxei3how/7a9957d3a02efd06ca5a7dbee64505de/Anthropic_red_teaming.jpg?w=800&amp;q=75",
+    "summary_text": "M odel providers want to prove the security and robustness of their models, releasing system cards and conducting red-team exercises with each new release. But it can be difficult for enterprises to parse through the results, which vary widely and can be misl...",
+    "category": "ai",
     "_trending_tags": [
-      "ai"
+      "ai",
+      "anthropic",
+      "openai"
     ]
   },
   {
@@ -1516,7 +1498,7 @@
     "source": "Financial Times - Technology",
     "summary": "An initial public offering could value the company at $350bn next year",
     "content_html": "",
-    "image_url": "https://images.ft.com/v3/image/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F016213df-d496-4461-99fd-7d6217118446.jpg?source=next-article&fit=scale-down&quality=highest&width=700&dpr=1",
+    "image_url": "",
     "summary_text": "An initial public offering could value the company at $350bn next year",
     "category": "ai",
     "_trending_tags": [
