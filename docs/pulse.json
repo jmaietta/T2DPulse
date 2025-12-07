@@ -188,6 +188,26 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/374ba894c8/thumbnail.png"
   },
   {
+    "title": "Why AI coding agents aren\u2019t production-ready: Brittle context windows, broken refactors, missing operational awareness",
+    "url": "https://venturebeat.com/ai/why-ai-coding-agents-arent-production-ready-brittle-context-windows-broken",
+    "published_at": "2025-12-07T00:00:00-05:00",
+    "source": "VentureBeat",
+    "summary": "Remember this Quora comment (which also became a meme)? (Source: Quora ) In the pre-large language model (LLM) Stack Overflow era, the challenge was discerning which code snippets to adopt and adapt effectively. Now, while generating code has become trivially easy, the more profound challenge lies in reliably identifying and integrating high-quality, enterprise-grade code into production environm...",
+    "content_html": "",
+    "image_url": "https://images.ctfassets.net/jdtwqhzvc2n1/57iOC9GySM11PZVim8VPJd/8dc8208b48161a7b58f9b78b4c4e53e1/DDM-AI_agents_at_work.png?w=800&amp;q=75",
+    "summary_text": "Remember this Quora comment (which also became a meme)? (Source: Quora ) In the pre-large language model (LLM) Stack Overflow era, the challenge was discerning which code snippets to adopt and adapt effectively. Now, while generating code has become trivially...",
+    "category": "ai",
+    "_trending_tags": [
+      "agent",
+      "ai",
+      "llm"
+    ],
+    "_permalink": "/p/b430c9c96f/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/b430c9c96f/",
+    "_summary_240": "Remember this Quora comment (which also became a meme)? (Source: Quora ) In the pre-large language model (LLM) Stack Overflow era, the challenge was discerning which code...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/b430c9c96f/thumbnail.png"
+  },
+  {
     "title": "Bitcoin buries the tulip myth after 17 years of proven resilience says ETF expert",
     "url": "https://cointelegraph.com/news/bitcoin-buries-the-tulip-myth-after-17-years-of-proven-resilience-balchunas?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
     "published_at": "2025-12-06T23:24:35-05:00",
@@ -1025,12 +1045,16 @@
     "source": "Financial Times - Technology",
     "summary": "Many investment trusts opt for less obvious routes into the boom",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/260c7c3e-2851-4e26-b496-ad0446f2171d.jpg",
     "summary_text": "Many investment trusts opt for less obvious routes into the boom",
     "category": "ai",
     "_trending_tags": [
       "ai"
-    ]
+    ],
+    "_permalink": "/p/738369b2f4/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/738369b2f4/",
+    "_summary_240": "Many investment trusts opt for less obvious routes into the boom",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/738369b2f4/thumbnail.png"
   },
   {
     "title": "Circle\u2019s Jeremy Allaire: We\u2019re Building an \u2018Economic OS\u2019 for the AI Era",
@@ -1150,13 +1174,17 @@
     "source": "Financial Times - Technology",
     "summary": "Social media company considering cutting unit\u2019s budget by as much as 30%",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/cba8fa46-6610-4fcf-9fa3-2ee9d9fcffa5.jpg",
     "summary_text": "Social media company considering cutting unit\u2019s budget by as much as 30%",
     "category": "ai",
     "_trending_tags": [
       "ai",
       "meta"
-    ]
+    ],
+    "_permalink": "/p/95933ae845/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/95933ae845/",
+    "_summary_240": "Social media company considering cutting unit\u2019s budget by as much as 30%",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/95933ae845/thumbnail.png"
   },
   {
     "title": "What Happens When Your Coworkers Are AI Agents",
@@ -1190,11 +1218,7 @@
     "_trending_tags": [
       "ai",
       "microsoft"
-    ],
-    "_permalink": "/p/2fdc79170f/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/2fdc79170f/",
-    "_summary_240": "The post AI Dev Days: Level-up your AI skills with Microsoft Reactor at virtual event Dec. 10-11 appeared first on Source .",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/2fdc79170f/thumbnail.png"
+    ]
   },
   {
     "title": "Cybersecurity strategies to prioritize now",
@@ -1205,11 +1229,7 @@
     "content_html": "<article class=\"mssrc-posts font-- has--theme\" id=\"single-23015\">\n\t<div class=\"acf-innerblocks-container\"></div>\t\t\t<section class=\"post-tags\">\n\t\t\t\t<div class=\"post-tags__content wp-block-columns\">\n\t\t\t\t\t<div class=\"post-tags__header wp-block-column flex-basis-25 has-text-align-right\">\n\t\t\t\t\t\t<h4 class=\"sr-only\">Tags: </h4>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"post-tags__body wp-block-column flex-basis-60\">\n\t\t\t\t\t\t<ul class=\"post-tags__list\"><li class=\"post-tags__item\"><a class=\"kicker inline-block post__meta--tags\" href=\"https://news.microsoft.com/source/tag/security/\">Security</a></li></ul>\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</section>\n\t\t\t</article><p>The post <a href=\"https://www.microsoft.com/en-us/security/blog/2025/12/04/cybersecurity-strategies-to-prioritize-now/\">Cybersecurity strategies to prioritize now</a> appeared first on <a href=\"https://news.microsoft.com/source\">Source</a>.</p>",
     "image_url": "https://www.microsoft.com/en-us/security/blog/wp-content/uploads/2025/11/Security_CISO_Blog_250609-1-1024x576.png",
     "summary_text": "The post Cybersecurity strategies to prioritize now appeared first on Source .",
-    "category": "fintech",
-    "_permalink": "/p/a717e9b0fa/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/a717e9b0fa/",
-    "_summary_240": "The post Cybersecurity strategies to prioritize now appeared first on Source .",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/a717e9b0fa/thumbnail.png"
+    "category": "fintech"
   },
   {
     "title": "Introducing OpenAI for Australia",
@@ -1239,11 +1259,7 @@
     "category": "software",
     "_trending_tags": [
       "microsoft"
-    ],
-    "_permalink": "/p/e8b5108825/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/e8b5108825/",
-    "_summary_240": "The post Microsoft Store Awards honors top apps in 2025 appeared first on Source .",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/e8b5108825/thumbnail.png"
+    ]
   },
   {
     "title": "AMD CEO Lisa Su Says Concerns About an AI Bubble Are Overblown",
@@ -1258,11 +1274,7 @@
     "_trending_tags": [
       "ai",
       "nvidia"
-    ],
-    "_permalink": "/p/b9397a8d69/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/b9397a8d69/",
-    "_summary_240": "Lisa Su leads Nvidia\u2019s biggest rival in the AI chip market. When asked at WIRED\u2019s Big Interview event if AI is a bubble, the company\u2019s CEO said, \u201cEmphatically, from my...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/b9397a8d69/thumbnail.png"
+    ]
   },
   {
     "title": "OpenAI\u2019s \u2018code red\u2019 moment",
@@ -1271,7 +1283,7 @@
     "source": "Financial Times - Technology",
     "summary": "Rallying call by Sam Altman raises questions over the company\u2019s priorities in the new phases of competition",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/bb5bc436-214f-4980-9f2b-3bfa55ef0459.jpg",
     "summary_text": "Rallying call by Sam Altman raises questions over the company\u2019s priorities in the new phases of competition",
     "category": "ai",
     "_trending_tags": [
@@ -1300,7 +1312,7 @@
     "source": "Financial Times - Technology",
     "summary": "China\u2019s favouring of small and cheap models such as DeepSeek could prove to be the better bet",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/76180ea3-b738-4223-ab13-ac6df21ea7f1.jpg",
     "summary_text": "China\u2019s favouring of small and cheap models such as DeepSeek could prove to be the better bet",
     "category": "ai",
     "_trending_tags": [
@@ -1373,7 +1385,7 @@
     "source": "Financial Times - Technology",
     "summary": "Brussels concerned that US tech group\u2019s business terms may prevent competition from third-party AI providers",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/57c24072-332a-4b9f-9dd0-33c5885846b4.jpg",
     "summary_text": "Brussels concerned that US tech group\u2019s business terms may prevent competition from third-party AI providers",
     "category": "ai",
     "_trending_tags": [
@@ -1393,22 +1405,6 @@
     "category": "software",
     "_trending_tags": [
       "ai"
-    ]
-  },
-  {
-    "title": "Anthropic vs. OpenAI red teaming methods reveal different security priorities for enterprise AI",
-    "url": "https://venturebeat.com/security/anthropic-vs-openai-red-teaming-methods-reveal-different-security-priorities",
-    "published_at": "2025-12-04T00:00:00-05:00",
-    "source": "VentureBeat",
-    "summary": "M odel providers want to prove the security and robustness of their models, releasing system cards and conducting red-team exercises with each new release. But it can be difficult for enterprises to parse through the results, which vary widely and can be misleading. Anthropic's 153-page system card for Claude Opus 4.5 versus OpenAI's 60-page GPT-5 system card reveals a fundamental split in how th...",
-    "content_html": "",
-    "image_url": "https://images.ctfassets.net/jdtwqhzvc2n1/3rwD78rWMVQoD6mxei3how/7a9957d3a02efd06ca5a7dbee64505de/Anthropic_red_teaming.jpg?w=800&amp;q=75",
-    "summary_text": "M odel providers want to prove the security and robustness of their models, releasing system cards and conducting red-team exercises with each new release. But it can be difficult for enterprises to parse through the results, which vary widely and can be misl...",
-    "category": "ai",
-    "_trending_tags": [
-      "ai",
-      "anthropic",
-      "openai"
     ]
   },
   {
@@ -1447,7 +1443,7 @@
     "source": "Financial Times - Technology",
     "summary": "Mark Zuckerberg foresees wearable artificial intelligence-powered devices supplanting smartphones",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/dd231a42-3fc4-449e-be36-6b65279750e7.jpg",
     "summary_text": "Mark Zuckerberg foresees wearable artificial intelligence-powered devices supplanting smartphones",
     "category": "ai",
     "_trending_tags": [
@@ -1492,7 +1488,7 @@
     "source": "Financial Times - Technology",
     "summary": "In Silicon Valley, VCs offer both funding and advice from partners who built their own global businesses",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/55757ea5-599c-48ac-9789-db976e831613.jpg",
     "summary_text": "In Silicon Valley, VCs offer both funding and advice from partners who built their own global businesses",
     "category": "ai",
     "_trending_tags": [
@@ -1506,7 +1502,7 @@
     "source": "Financial Times - Technology",
     "summary": "Technology secretary Liz Kendall tells MPs she is \u2018especially worried\u2019 about potential risks to children",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/f16ebdbc-8700-48a0-be46-39840d9462dd.jpg",
     "summary_text": "Technology secretary Liz Kendall tells MPs she is \u2018especially worried\u2019 about potential risks to children",
     "category": "ai",
     "_trending_tags": [
@@ -1520,7 +1516,7 @@
     "source": "Financial Times - Technology",
     "summary": "An initial public offering could value the company at $350bn next year",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://images.ft.com/v3/image/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F016213df-d496-4461-99fd-7d6217118446.jpg?source=next-article&fit=scale-down&quality=highest&width=700&dpr=1",
     "summary_text": "An initial public offering could value the company at $350bn next year",
     "category": "ai",
     "_trending_tags": [
