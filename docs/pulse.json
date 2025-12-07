@@ -817,25 +817,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/3c5b2ebd8d/thumbnail.png"
   },
   {
-    "title": "What's New with ChatGPT Voice",
-    "url": "https://www.youtube.com/watch?v=4jBcK0cYass",
-    "published_at": "2025-12-05T14:07:27-05:00",
-    "source": "OpenAI YouTube",
-    "summary": "You can now use ChatGPT Voice right inside chat \u2014 no separate mode needed. You can talk, watch answers appear, review earlier messages, and see visuals like images or maps in real time. Rolling out to all users on mobile and web. Just update your app. If you prefer the original experience, turn on \u201cSeparate mode\u201d under Settings \u2192 Voice Mode.",
-    "content_html": "",
-    "image_url": "https://i.ytimg.com/vi/4jBcK0cYass/maxresdefault.jpg",
-    "summary_text": "You can now use ChatGPT Voice right inside chat \u2014 no separate mode needed. You can talk, watch answers appear, review earlier messages, and see visuals like images or maps in real time. Rolling out to all users on mobile and web. Just update your app. If you ...",
-    "category": "ai",
-    "_trending_tags": [
-      "chatgpt",
-      "gpt"
-    ],
-    "_permalink": "/p/fd81e2f6f9/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/fd81e2f6f9/",
-    "_summary_240": "You can now use ChatGPT Voice right inside chat \u2014 no separate mode needed. You can talk, watch answers appear, review earlier messages, and see visuals like images or maps in...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/fd81e2f6f9/thumbnail.png"
-  },
-  {
     "title": "Is Bitcoin shifting to a 2-year cycle?",
     "url": "https://cointelegraph.com/news/bitcoin-shifting-2-year-cycle-video?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
     "published_at": "2025-12-05T13:32:02-05:00",
@@ -886,6 +867,26 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/00084754ea/",
     "_summary_240": "Filed in federal court on Friday, the suit joins more than 40 other court disputes between copyright holders and A.I. companies.",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/00084754ea/thumbnail.png"
+  },
+  {
+    "title": "Anthropic\u2019s philosopher answers your questions",
+    "url": "https://www.youtube.com/watch?v=I9aGC6Ui3eE",
+    "published_at": "2025-12-05T11:00:35-05:00",
+    "source": "Anthropic YouTube",
+    "summary": "Amanda Askell is a philosopher at Anthropic who works on Claude's character. In this video, she answers questions from the community about her work, reflections and predictions. 0:00 Introduction 0:29 Why is there a philosopher at an AI company? 1:24 Are philosophers taking AI seriously? 3:00 Philosophy ideals vs. engineering realities 5:00 Do models make superhumanly moral decisions? 6:24 Why Op...",
+    "content_html": "",
+    "image_url": "https://i.ytimg.com/vi/I9aGC6Ui3eE/maxresdefault.jpg",
+    "summary_text": "Amanda Askell is a philosopher at Anthropic who works on Claude's character. In this video, she answers questions from the community about her work, reflections and predictions. 0:00 Introduction 0:29 Why is there a philosopher at an AI company? 1:24 Are phil...",
+    "category": "ai",
+    "_trending_tags": [
+      "ai",
+      "anthropic",
+      "claude"
+    ],
+    "_permalink": "/p/81c0a5de7d/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/81c0a5de7d/",
+    "_summary_240": "Amanda Askell is a philosopher at Anthropic who works on Claude's character. In this video, she answers questions from the community about her work, reflections and predictions....",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/81c0a5de7d/thumbnail.png"
   },
   {
     "title": "Here\u2019s What You Should Know About Launching an AI Startup",
@@ -1498,7 +1499,7 @@
     "source": "Financial Times - Technology",
     "summary": "An initial public offering could value the company at $350bn next year",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://images.ft.com/v3/image/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F016213df-d496-4461-99fd-7d6217118446.jpg?source=next-article&fit=scale-down&quality=highest&width=700&dpr=1",
     "summary_text": "An initial public offering could value the company at $350bn next year",
     "category": "ai",
     "_trending_tags": [
@@ -1630,20 +1631,6 @@
       "google",
       "gpt",
       "openai"
-    ]
-  },
-  {
-    "title": "DeepSeek's Improved Performance",
-    "url": "https://newsletter.tek2dayholdings.com/p/deepseeks-improved-performance",
-    "published_at": "2025-12-02T15:02:06-05:00",
-    "source": "TEK2day Newsletter",
-    "summary": "I don\u2019t put much credence into the AI Evals given that real-world model performance is nowhere close to eval performance.",
-    "content_html": "<div class=\"captioned-image-container\"><figure><a class=\"image-link image2 is-viewable-img\" href=\"https://substackcdn.com/image/fetch/$s_!f4q1!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F835dbd4d-801c-4a89-bd62-a5464df60beb_1016x726.png\" target=\"_blank\"><div class=\"image2-inset\"><source type=\"image/webp\" /><img alt=\"\" class=\"sizing-normal\" height=\"726\" src=\"https://substackcdn.com/image/fetch/$s_!f4q1!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F835dbd4d-801c-4a89-bd62-a5464df60beb_1016x726.png\" width=\"1016\" /><div class=\"image-link-expand\"><div class=\"pencraft pc-display-flex pc-gap-8 pc-reset\"><button class=\"pencraft pc-reset pencraft icon-container restack-image\" tabindex=\"0\" type=\"button\"><svg class=\"lucide lucide-refresh-cw\" fill=\"none\" height=\"20\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" viewBox=\"0 0 24 24\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8\"></path><path d=\"M21 3v5h-5\"></path><path d=\"M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16\"></path><path d=\"M8 16H3v5\"></path></svg></button><button class=\"pencraft pc-reset pencraft icon-container view-image\" tabindex=\"0\" type=\"button\"><svg class=\"lucide lucide-maximize2 lucide-maximize-2\" fill=\"none\" height=\"20\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" viewBox=\"0 0 24 24\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><polyline points=\"15 3 21 3 21 9\"></polyline><polyline points=\"9 21 3 21 3 15\"></polyline><line x1=\"21\" x2=\"14\" y1=\"3\" y2=\"10\"></line><line x1=\"3\" x2=\"10\" y1=\"21\" y2=\"14\"></line></svg></button></div></div></div></a></figure></div><h4>I don&#8217;t put much credence into the AI Evals given that real-world model performance is nowhere close to eval performance. Further, I believe the model companies train on the evals. That said, <strong>DeepSeek</strong> continues to improve (chart below). </h4><p>How will <strong>OpenAI</strong> and <strong>Anthropic</strong> compete long-term with well-funded <strong>Google (GOOGL)</strong> <strong>Gemini</strong> on the one-hand, and inexpensive opensource models such as <strong>DeepSeek</strong> on the other? </p><p>Steady state, most language models will be opensource. China&#8217;s strategy of flooding the market with high quality opensource models is brilliant. The U.S. is taking the wrong approach by pursuing a closed model strategy. The real IP will be what people build on top of the models, not the models themselves.</p><div class=\"captioned-image-container\"><figure><a class=\"image-link image2 is-viewable-img\" href=\"https://substackcdn.com/image/fetch/$s_!zV30!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ffca184ea-932e-4b68-b82e-16d54075e3d8_4096x2286.jpeg\" target=\"_blank\"><div class=\"image2-inset\"><source type=\"image/webp\" /><img alt=\"\" class=\"sizing-normal\" height=\"813\" src=\"https://substackcdn.com/image/fetch/$s_!zV30!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ffca184ea-932e-4b68-b82e-16d54075e3d8_4096x2286.jpeg\" width=\"1456\" /><div class=\"image-link-expand\"><div class=\"pencraft pc-display-flex pc-gap-8 pc-reset\"><button class=\"pencraft pc-reset pencraft icon-container restack-image\" tabindex=\"0\" type=\"button\"><svg class=\"lucide lucide-refresh-cw\" fill=\"none\" height=\"20\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" viewBox=\"0 0 24 24\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8\"></path><path d=\"M21 3v5h-5\"></path><path d=\"M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16\"></path><path d=\"M8 16H3v5\"></path></svg></button><button class=\"pencraft pc-reset pencraft icon-container view-image\" tabindex=\"0\" type=\"button\"><svg class=\"lucide lucide-maximize2 lucide-maximize-2\" fill=\"none\" height=\"20\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" viewBox=\"0 0 24 24\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><polyline points=\"15 3 21 3 21 9\"></polyline><polyline points=\"9 21 3 21 3 15\"></polyline><line x1=\"21\" x2=\"14\" y1=\"3\" y2=\"10\"></line><line x1=\"3\" x2=\"10\" y1=\"21\" y2=\"14\"></line></svg></button></div></div></div></a></figure></div><div><hr /></div><p></p>",
-    "image_url": "https://substackcdn.com/image/fetch/$s_!f4q1!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F835dbd4d-801c-4a89-bd62-a5464df60beb_1016x726.png",
-    "summary_text": "I don\u2019t put much credence into the AI Evals given that real-world model performance is nowhere close to eval performance.",
-    "category": "ai",
-    "_trending_tags": [
-      "ai"
     ]
   },
   {
