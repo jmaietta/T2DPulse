@@ -1,5 +1,23 @@
 [
   {
+    "title": "Coinbase starts onboarding users again in India, plans for fiat on-ramp next year",
+    "url": "https://techcrunch.com/2025/12/07/coinbase-starts-onboarding-users-again-in-india-plans-for-fiat-on-ramp-for-next-year/",
+    "published_at": "2025-12-07T11:00:00-05:00",
+    "source": "TechCrunch",
+    "summary": "Coinbase is exploring expansion into India with a staggered relaunch and hiring for different roles.",
+    "content_html": "",
+    "image_url": "https://techcrunch.com/wp-content/uploads/2023/01/coinbase-phone.jpg?resize=1200,678",
+    "summary_text": "Coinbase is exploring expansion into India with a staggered relaunch and hiring for different roles.",
+    "category": "fintech",
+    "_trending_tags": [
+      "ai"
+    ],
+    "_permalink": "/p/aa96c0686f/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/aa96c0686f/",
+    "_summary_240": "Coinbase is exploring expansion into India with a staggered relaunch and hiring for different roles.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/aa96c0686f/thumbnail.png"
+  },
+  {
     "title": "How Stablecoins Can Help Criminals Launder Money and Evade Sanctions",
     "url": "https://www.nytimes.com/2025/12/07/technology/how-a-cryptocurrency-helps-criminals-launder-money-and-evade-sanctions.html",
     "published_at": "2025-12-07T10:07:41-05:00",
@@ -909,21 +927,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/34b70e5259/thumbnail.png"
   },
   {
-    "title": "What Texas\u2019 recent Bitcoin purchase signals to the rest of the US in a market downturn",
-    "url": "https://cointelegraph.com/news/texas-bitcoin-purchase-us-podcast?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-    "published_at": "2025-12-05T09:59:10-05:00",
-    "source": "Cointelegraph",
-    "summary": "Texas is now the first US state to purchase and hold Bitcoin, but why did it act during a market pullback, and how could this move influence national crypto policy?",
-    "content_html": "",
-    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTIvMDE5YWVlZjktY2QxNy03NDk0LWE5ZTgtODhkNjM5ZWFiNzBl.jpg",
-    "summary_text": "Texas is now the first US state to purchase and hold Bitcoin, but why did it act during a market pullback, and how could this move influence national crypto policy?",
-    "category": "fintech",
-    "_permalink": "/p/c2c1504c2a/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/c2c1504c2a/",
-    "_summary_240": "Texas is now the first US state to purchase and hold Bitcoin, but why did it act during a market pullback, and how could this move influence national crypto policy?",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/c2c1504c2a/thumbnail.png"
-  },
-  {
     "title": "In future \u2018books could respond\u2019 says winning author Stephen Witt",
     "url": "https://www.ft.com/content/9058c29f-d868-4089-8493-298976848846",
     "published_at": "2025-12-05T08:50:21-05:00",
@@ -1025,12 +1028,16 @@
     "source": "Financial Times - Technology",
     "summary": "Many investment trusts opt for less obvious routes into the boom",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/260c7c3e-2851-4e26-b496-ad0446f2171d.jpg",
     "summary_text": "Many investment trusts opt for less obvious routes into the boom",
     "category": "ai",
     "_trending_tags": [
       "ai"
-    ]
+    ],
+    "_permalink": "/p/738369b2f4/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/738369b2f4/",
+    "_summary_240": "Many investment trusts opt for less obvious routes into the boom",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/738369b2f4/thumbnail.png"
   },
   {
     "title": "Circle\u2019s Jeremy Allaire: We\u2019re Building an \u2018Economic OS\u2019 for the AI Era",
@@ -1150,13 +1157,17 @@
     "source": "Financial Times - Technology",
     "summary": "Social media company considering cutting unit\u2019s budget by as much as 30%",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/cba8fa46-6610-4fcf-9fa3-2ee9d9fcffa5.jpg",
     "summary_text": "Social media company considering cutting unit\u2019s budget by as much as 30%",
     "category": "ai",
     "_trending_tags": [
       "ai",
       "meta"
-    ]
+    ],
+    "_permalink": "/p/95933ae845/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/95933ae845/",
+    "_summary_240": "Social media company considering cutting unit\u2019s budget by as much as 30%",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/95933ae845/thumbnail.png"
   },
   {
     "title": "What Happens When Your Coworkers Are AI Agents",
@@ -1686,56 +1697,6 @@
       "ai",
       "mistral",
       "nvidia"
-    ]
-  },
-  {
-    "title": "NVIDIA and AWS Expand Full-Stack Partnership, Providing the Secure, High-Performance Compute Platform Vital for Future Innovation",
-    "url": "https://blogs.nvidia.com/blog/aws-partnership-expansion-reinvent/",
-    "published_at": "2025-12-02T11:00:27-05:00",
-    "source": "NVIDIA News",
-    "summary": "At AWS re:Invent, NVIDIA and Amazon Web Services expanded their strategic collaboration with new technology integrations across interconnect technology, cloud infrastructure, open models and physical AI. As part of this expansion, AWS will support NVIDIA NVLink Fusion \u2014 a platform for custom AI infrastructure \u2014 for deploying its custom-designed silicon, including next-generation Trainium4 chips f...",
-    "content_html": "",
-    "image_url": "https://s3.amazonaws.com/cms.ipressroom.com/219/files/202512/692f0d2d3d63329582468404_nvidia-aws-lockup-corp-blog-1280x680-1-842x450/nvidia-aws-lockup-corp-blog-1280x680-1-842x450_thmb.jpg",
-    "summary_text": "At AWS re:Invent, NVIDIA and Amazon Web Services expanded their strategic collaboration with new technology integrations across interconnect technology, cloud infrastructure, open models and physical AI. As part of this expansion, AWS will support NVIDIA NVLi...",
-    "category": "fintech",
-    "_trending_tags": [
-      "ai",
-      "amazon",
-      "cloud",
-      "nvidia"
-    ]
-  },
-  {
-    "title": "Amazon Has New Frontier AI Models\u2014and a Way for Customers to Build Their Own",
-    "url": "https://www.wired.com/story/amazon-nova-forge-ai-models/",
-    "published_at": "2025-12-02T11:00:00-05:00",
-    "source": "Wired",
-    "summary": "Nova Forge lets Amazon\u2019s customers train frontier models for different tasks\u2014a potential breakthrough in making AI actually useful for businesses.",
-    "content_html": "",
-    "image_url": "https://media.wired.com/photos/692e13f07e056dae9d7474c9/master/pass/Amazon-Releases-New-Versions-of-Nova-Business-1244448114.jpg",
-    "summary_text": "Nova Forge lets Amazon\u2019s customers train frontier models for different tasks\u2014a potential breakthrough in making AI actually useful for businesses.",
-    "category": "ai",
-    "_trending_tags": [
-      "ai",
-      "amazon"
-    ]
-  },
-  {
-    "title": "AWS CEO Matt Garman Wants to Reassert Amazon\u2019s Cloud Dominance in the AI Era",
-    "url": "https://www.wired.com/story/amazon-aws-ceo-matt-garman-ai-agents/",
-    "published_at": "2025-12-02T11:00:00-05:00",
-    "source": "Wired",
-    "summary": "As Google and Microsoft continue to surge, the AWS chief lays out his pitch: cheaper, reliable AI delivered at hyperscale.",
-    "content_html": "",
-    "image_url": "https://media.wired.com/photos/69262e0a63eaab204bc381ad/master/pass/Model-Behavior-Interview-with-AWS-CEO-Matt-Garman-Business-2243442799.jpg",
-    "summary_text": "As Google and Microsoft continue to surge, the AWS chief lays out his pitch: cheaper, reliable AI delivered at hyperscale.",
-    "category": "ai",
-    "_trending_tags": [
-      "ai",
-      "amazon",
-      "cloud",
-      "google",
-      "microsoft"
     ]
   },
   {
