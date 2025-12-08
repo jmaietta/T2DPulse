@@ -8,6 +8,8 @@ on:
   workflow_dispatch: {}
 permissions:
   contents: write
+  pages: write
+  id-token: write
 # Prevent overlapping runs; newest run wins
 concurrency:
   group: pulse-prod
@@ -85,3 +87,10 @@ jobs:
             git commit -m "chore: TEK2day Pulse auto-update (prod)"
             git push origin HEAD:main
           fi
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs/
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
