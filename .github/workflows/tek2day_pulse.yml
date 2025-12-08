@@ -1,5 +1,4 @@
 name: Build TEK2day Pulse (Website Only)
-
 on:
   # Every 30 minutes, 11:30-23:00 UTC (covers 7:30am-6pm ET in both EST/EDT), Mon-Fri only
   schedule:
@@ -7,15 +6,12 @@ on:
     - cron: "0 12-23 * * 0-6"   # :00 minutes from 12:00-23:00 UTC
   # Manual "Run workflow" button in Actions
   workflow_dispatch: {}
-
 permissions:
   contents: write
-
 # Prevent overlapping runs; newest run wins
 concurrency:
   group: pulse-prod
   cancel-in-progress: true
-
 jobs:
   build:
     env:
@@ -23,24 +19,20 @@ jobs:
     # Extra safety: only operate on main
     if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout main
         uses: actions/checkout@v4
         with:
           ref: main
-
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
-
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           if [ -f generator/requirements.txt ]; then pip install -r generator/requirements.txt; fi
           pip install tldextract==5.1.2
-
       # Safety check: verify we're in ET business hours (cron handles most filtering)
       - name: ET weekday window verification
         run: |
@@ -56,11 +48,31 @@ jobs:
             print("Outside business hours - exiting gracefully")
             raise SystemExit(0)
           PY
-
       - name: Build site (writes to docs/)
         run: |
           python generator/generate_pulse.py
-
+      - name: Clean old timestamped snapshots
+        run: |
+          # Keep only last 7 days of timestamped snapshots
+          if [ -d "docs/archive/timestamped" ]; then
+            echo "Cleaning old timestamped snapshots..."
+            find docs/archive/timestamped -name "*.json" -mtime +7 -delete
+            echo "Remaining timestamped files:"
+            ls -lh docs/archive/timestamped | wc -l
+          fi
+          
+          # Keep only last 30 days of permalinks
+          if [ -d "docs/p" ]; then
+            echo "Cleaning old permalinks..."
+            find docs/p -type d -mtime +30 -exec rm -rf {} + 2>/dev/null || true
+            echo "Remaining permalink dirs:"
+            ls -d docs/p/*/ 2>/dev/null | wc -l
+          fi
+          
+          # Show disk usage
+          echo "Docs folder size:"
+          du -sh docs/
+          df -h
       - name: Commit & push if changed
         run: |
           git config user.name "github-actions[bot]"
