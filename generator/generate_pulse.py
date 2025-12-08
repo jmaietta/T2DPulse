@@ -1736,7 +1736,7 @@ def main():
         os.makedirs(ts_dir, exist_ok=True)
         ts_name = now_et().strftime("%Y-%m-%d_%H%M%S") + ".json"
         ts_path = os.path.join(ts_dir, ts_name)
-        with open(ts_path, "x", encoding="utf-8") as tf:
+        with open(ts_path, "w", encoding="utf-8") as tf:
             json.dump({"items": all_items}, tf, indent=2)
     except FileExistsError:
         pass
