@@ -1,5 +1,25 @@
 [
   {
+    "title": "Google and NextEra to Develop Data Centers With Power Plants",
+    "url": "https://www.bloomberg.com/news/articles/2025-12-08/google-and-nextera-to-develop-data-centers-with-power-plants",
+    "published_at": "2025-12-08T08:10:08-05:00",
+    "source": "Bloomberg Technology",
+    "summary": "Alphabet Inc.\u2019s Google Cloud and NextEra Energy Inc. reached an agreement to develop data centers paired with electric plants in the latest example of how intertwined the tech and power sectors have become.",
+    "content_html": "Signage at the Google Midlothian Data Center in Midlothian, Texas, US, on Friday, Nov. 14, 2025. Alphabet Inc.'s Google plans to invest $40 billion in three new Texas data centers, ramping up its footprint as competitors such as OpenAI and Anthropic PBC map out their own multibillion-dollar bets in the state.",
+    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/isD72.BsXgug/v1/1200x-1.jpg",
+    "summary_text": "Alphabet Inc.\u2019s Google Cloud and NextEra Energy Inc. reached an agreement to develop data centers paired with electric plants in the latest example of how intertwined the tech and power sectors have become.",
+    "category": "software",
+    "_trending_tags": [
+      "ai",
+      "cloud",
+      "google"
+    ],
+    "_permalink": "/p/1d5eb0191a/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/1d5eb0191a/",
+    "_summary_240": "Alphabet Inc.\u2019s Google Cloud and NextEra Energy Inc. reached an agreement to develop data centers paired with electric plants in the latest example of how intertwined the tech...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/1d5eb0191a/thumbnail.png"
+  },
+  {
     "title": "How the creator economy destroyed the internet",
     "url": "https://www.theverge.com/cs/features/810002/influencers-creator-economy-special-series",
     "published_at": "2025-12-08T08:00:05-05:00",
@@ -522,6 +542,25 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/8ae38ad007/thumbnail.png"
   },
   {
+    "title": "Interview Practice with ChatGPT",
+    "url": "https://www.youtube.com/watch?v=Belt8RStJeM",
+    "published_at": "2025-12-07T21:15:38-05:00",
+    "source": "OpenAI YouTube",
+    "summary": "Be your best at your next job interview... rehearse what you want to say with ChatGPT.",
+    "content_html": "",
+    "image_url": "https://i.ytimg.com/vi/Belt8RStJeM/maxresdefault.jpg",
+    "summary_text": "Be your best at your next job interview... rehearse what you want to say with ChatGPT.",
+    "category": "ai",
+    "_trending_tags": [
+      "chatgpt",
+      "gpt"
+    ],
+    "_permalink": "/p/cb5275e9af/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/cb5275e9af/",
+    "_summary_240": "Be your best at your next job interview... rehearse what you want to say with ChatGPT.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/cb5275e9af/thumbnail.png"
+  },
+  {
     "title": "Crypto\u2019s other halving: Bittensor\u2019s first 4-year cycle seen as \u2018maturation\u2019 milestone",
     "url": "https://cointelegraph.com/news/crypto-other-halving-bittensor-maturation-milestone?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
     "published_at": "2025-12-07T15:36:38-05:00",
@@ -922,26 +961,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/00084754ea/thumbnail.png"
   },
   {
-    "title": "Anthropic\u2019s philosopher answers your questions",
-    "url": "https://www.youtube.com/watch?v=I9aGC6Ui3eE",
-    "published_at": "2025-12-05T11:00:35-05:00",
-    "source": "Anthropic YouTube",
-    "summary": "Amanda Askell is a philosopher at Anthropic who works on Claude's character. In this video, she answers questions from the community about her work, reflections and predictions. 0:00 Introduction 0:29 Why is there a philosopher at an AI company? 1:24 Are philosophers taking AI seriously? 3:00 Philosophy ideals vs. engineering realities 5:00 Do models make superhumanly moral decisions? 6:24 Why Op...",
-    "content_html": "",
-    "image_url": "https://i.ytimg.com/vi/I9aGC6Ui3eE/maxresdefault.jpg",
-    "summary_text": "Amanda Askell is a philosopher at Anthropic who works on Claude's character. In this video, she answers questions from the community about her work, reflections and predictions. 0:00 Introduction 0:29 Why is there a philosopher at an AI company? 1:24 Are phil...",
-    "category": "ai",
-    "_trending_tags": [
-      "ai",
-      "anthropic",
-      "claude"
-    ],
-    "_permalink": "/p/81c0a5de7d/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/81c0a5de7d/",
-    "_summary_240": "Amanda Askell is a philosopher at Anthropic who works on Claude's character. In this video, she answers questions from the community about her work, reflections and predictions....",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/81c0a5de7d/thumbnail.png"
-  },
-  {
     "title": "Here\u2019s What You Should Know About Launching an AI Startup",
     "url": "https://www.wired.com/story/artificial-intelligence-startups-daydream-fashion-recommendations/",
     "published_at": "2025-12-05T11:00:00-05:00",
@@ -1031,7 +1050,7 @@
     "source": "Financial Times - Technology",
     "summary": "Bullish forecasts come despite recent investor jitters over tech spending and potential bubble in AI sector",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/b15c6db2-a282-48ef-8254-5c421078c922.jpg",
+    "image_url": "",
     "summary_text": "Bullish forecasts come despite recent investor jitters over tech spending and potential bubble in AI sector",
     "category": "fintech",
     "_trending_tags": [
@@ -1045,7 +1064,7 @@
     "source": "Financial Times - Technology",
     "summary": "Many investment trusts opt for less obvious routes into the boom",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/260c7c3e-2851-4e26-b496-ad0446f2171d.jpg",
+    "image_url": "",
     "summary_text": "Many investment trusts opt for less obvious routes into the boom",
     "category": "ai",
     "_trending_tags": [
@@ -1146,7 +1165,7 @@
     "source": "Financial Times - Technology",
     "summary": "Social media company considering cutting unit\u2019s budget by as much as 30%",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/cba8fa46-6610-4fcf-9fa3-2ee9d9fcffa5.jpg",
+    "image_url": "",
     "summary_text": "Social media company considering cutting unit\u2019s budget by as much as 30%",
     "category": "ai",
     "_trending_tags": [
@@ -1247,7 +1266,7 @@
     "source": "Financial Times - Technology",
     "summary": "Rallying call by Sam Altman raises questions over the company\u2019s priorities in the new phases of competition",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/bb5bc436-214f-4980-9f2b-3bfa55ef0459.jpg",
+    "image_url": "",
     "summary_text": "Rallying call by Sam Altman raises questions over the company\u2019s priorities in the new phases of competition",
     "category": "ai",
     "_trending_tags": [
@@ -1276,7 +1295,7 @@
     "source": "Financial Times - Technology",
     "summary": "China\u2019s favouring of small and cheap models such as DeepSeek could prove to be the better bet",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/76180ea3-b738-4223-ab13-ac6df21ea7f1.jpg",
+    "image_url": "",
     "summary_text": "China\u2019s favouring of small and cheap models such as DeepSeek could prove to be the better bet",
     "category": "ai",
     "_trending_tags": [
@@ -1349,7 +1368,7 @@
     "source": "Financial Times - Technology",
     "summary": "Brussels concerned that US tech group\u2019s business terms may prevent competition from third-party AI providers",
     "content_html": "",
-    "image_url": "https://images.ft.com/v3/image/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F57c24072-332a-4b9f-9dd0-33c5885846b4.jpg?source=next-article&fit=scale-down&quality=highest&width=700&dpr=1",
+    "image_url": "",
     "summary_text": "Brussels concerned that US tech group\u2019s business terms may prevent competition from third-party AI providers",
     "category": "ai",
     "_trending_tags": [
