@@ -1,13 +1,13 @@
 {
-  "generated_at": "2025-12-08T13:35:09.830575-05:00",
+  "generated_at": "2025-12-08T13:46:35.976523-05:00",
   "total_keywords": 30,
   "keyword_counts": {
-    "ai": 85,
+    "ai": 86,
+    "openai": 9,
+    "chatgpt": 8,
     "google": 8,
-    "openai": 8,
+    "gpt": 8,
     "agent": 7,
-    "chatgpt": 7,
-    "gpt": 7,
     "meta": 7,
     "anthropic": 4,
     "apple": 4,
