@@ -1,5 +1,115 @@
 [
   {
+    "title": "Here\u2019s what happened in crypto today",
+    "url": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "published_at": "2025-12-08T17:01:49-05:00",
+    "source": "Cointelegraph",
+    "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, NFTs, Web3 and crypto regulation.",
+    "content_html": "",
+    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMDYvMDE5Nzk0MjMtZWY4ZS03YzYwLWI5MzctYjlkZGY3NWZlOGFk.jpg",
+    "summary_text": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, NFTs, Web3 and crypto regulation.",
+    "category": "fintech",
+    "_trending_tags": [
+      "ai"
+    ],
+    "_permalink": "/p/c14345fa15/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/c14345fa15/",
+    "_summary_240": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, NFTs, Web3 and crypto regulation.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/c14345fa15/thumbnail.png"
+  },
+  {
+    "title": "Streaming\u2019s AI \u2018Front Door\u2019 Is Getting More Valuable, Just Ask Netflix and Paramount",
+    "url": "https://www.pymnts.com/streaming/2025/streamings-ai-front-door-is-getting-more-valuable-just-ask-netflix-and-paramount/",
+    "published_at": "2025-12-08T16:55:18-05:00",
+    "source": "PYMNTS",
+    "summary": "The increasingly heated fight for Warner Bros. Discovery (WBD) is, on its face, about libraries: HBO\u2019s prestige slate, DC\u2019s franchises and Warner\u2019s studio machine. But the bidding war now featuring Netflix and Paramount is also a referendum on something less visible and arguably more defensible than IP: the consumer-facing algorithms that decide what gets watched, [\u2026] The post Streaming\u2019s AI \u2018Fro...",
+    "content_html": "<p style=\"font-weight: 400;\">The increasingly <a href=\"https://www.reuters.com/legal/transactional/paramount-makes-1084-billion-bid-warner-bros-discovery-2025-12-08/\" rel=\"noopener\" target=\"_blank\">heated fight</a> for Warner Bros. Discovery (WBD) is, on its face, about libraries: HBO\u2019s prestige slate, DC\u2019s franchises and Warner\u2019s studio machine. But the bidding war now featuring Netflix and Paramount is also a referendum on something less visible and arguably more defensible than IP: the consumer-facing algorithms that decide what gets watched, when and how often.</p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p style=\"font-weight: 400;\">Netflix reached a $72 billion equity deal for WBD\u2019s studio and streaming assets, while Paramount Skydance has countered with a $30-per-share hostile bid, prolonging a contest already drawing regulatory scrutiny and pricing questions.</p>\n<p style=\"font-weight: 400;\">Streaming has become one of the most refined subscription machines in the consumer economy. Recurring card-on-file behavior, churn management, bundled offers and fast-growing ad tiers all depend on how well a platform can keep viewers engaged. In this model, the storefront is the product. Recommendations, rankings, searches and even the artwork people click on have become machine-learned decision systems built to maximize engagement and lifetime value.</p>\n<p style=\"font-weight: 400;\">And consumer numbers show it. As PYMNTS <a href=\"https://www.pymnts.com/streaming/2025/streaming-overtakes-broadcast-and-cable-watchers-for-first-time/\" rel=\"noopener\" target=\"_blank\">reported</a>, streaming surpassed both cable and broadcast TV for the first time last June. Almost 45% of consumers now watch streaming services.</p>\n<h2 style=\"font-weight: 400;\"><strong>How Algorithms Shape Streaming</strong></h2>\n<p style=\"font-weight: 400;\">Netflix created the playbook for this category. WIRED <a href=\"https://www.wired.com/story/how-do-netflixs-algorithms-work-machine-learning-helps-to-predict-what-viewers-will-like/\" rel=\"noopener\" target=\"_blank\">noted</a> that over 80% of viewing comes from recommendations. This shows that the algorithm is the main way for content distribution. Personalization also affects how titles are displayed. Netflix\u2019s published <a href=\"https://arxiv.org/abs/2511.07280\" rel=\"noopener\" target=\"_blank\">research</a> says it uses artwork-personalization models that can deliver tens of millions of customized images every second during busy times. Recently, the company has improved the infrastructure that supports these decisions by integrating a foundation model into its personalization system.</p>\n<p style=\"font-weight: 400;\">Rivals are pursuing the same goal. Warner Bros. Discovery has <a href=\"https://wbdtechblog.com/engineering-the-future-of-streaming-how-hbo-max-is-reinventing-merchandising-with-automation-4a52fb203376\" rel=\"noopener\" target=\"_blank\">detailed</a> an automated promotion system for HBO Max that pulls in watch-time signals, metadata and editorial inputs, then runs them through a machine-learning ranking model to score content for predicted uplift and relevance before placing it across the interface. Max is also tightening its feedback loop with a new \u201cLove/Like/Not For Me\u201d <a href=\"https://www.theverge.com/news/804839/hbo-max-ratings-system-recommendations\" rel=\"noopener\" target=\"_blank\">ratings tool</a> that trains recommendations directly on user sentiment.</p>\n<p style=\"font-weight: 400;\">Amazon is pushing artificial intelligence deeper into discovery and navigation. Prime Video has tested \u201c<a href=\"https://www.theverge.com/2024/12/12/24319824/amazon-prime-video-ai-topics-old-algorithms\" rel=\"noopener\" target=\"_blank\">AI Topics</a>\u201d that organize content around themes rather than traditional genres, introduced AI-powered recaps and added a <a href=\"https://www.theverge.com/news/837156/amazon-fire-tv-alexa-plus-skip-to-scene\" rel=\"noopener\" target=\"_blank\">Fire TV feature</a> that lets viewers jump to specific moments in a show by describing them in natural language. That shift moves discovery from \u201crecommend a title\u201d to \u201cretrieve a moment,\u201d expanding what a subscriber can do inside the interface.</p>\n<p style=\"font-weight: 400;\">Disney\u2019s roadmap shows the same trend. Disney+ <a href=\"https://www.databricks.com/blog/2020/12/14/learn-how-disney-built-their-streaming-data-analytics-platform-with-databricks-and-aws-to-improve-the-customer-experience.html\" rel=\"noopener\" target=\"_blank\">uses</a> a real-time data architecture for actions like providing title recommendations, and Reuters has <a href=\"https://www.reuters.com/technology/artificial-intelligence/disney-sees-ai-helping-personalize-new-espn-app-2024-08-28/\" rel=\"noopener\" target=\"_blank\">reported</a> that ESPN plans to use AI to personalize \u201cSportsCenter\u201d in its standalone app, including clip creation and narration.</p>\n<h2 style=\"font-weight: 400;\"><strong>Personalization Moves Into Pricing</strong></h2>\n<p style=\"font-weight: 400;\">Pricing follows naturally from this shift. Streamers built artificial intelligence systems to predict what each viewer will watch, how long they will stay and what will push them to cancel. Those same signals let platforms forecast which offers a viewer will accept and which price points trigger churn. Once AI optimizes discovery, it inevitably starts to optimize revenue.</p>\n<p style=\"font-weight: 400;\">The industry is already functioning this way. Platforms run models for predicting behavior, churn predictors, quick tests, and algorithms for bundling that update recommendations in real time. They still issue fixed-price cards, but the AI-driven pricing system is already in place below the surface.</p>\n<p style=\"font-weight: 400;\">PYMNTS data shows how quickly consumers balk at price increases. In fact, the <a href=\"https://www.pymnts.com/subscriptions/2023/streaming-subscription-price-hikes-may-force-hard-decisions-for-viewers/partial/\" rel=\"noopener\" target=\"_blank\">data</a> also shows that cost is the primary factor in consumer cancellations of streaming services.</p>\n<h2 style=\"font-weight: 400;\"><strong>A Balancing Act</strong></h2>\n<p style=\"font-weight: 400;\">Netflix showed how quickly pricing can move. During the WBD talks, the company <a href=\"https://www.reuters.com/business/media-telecom/netflix-warner-bros-discovery-combo-seen-lowering-costs-consumers-sources-say-2025-12-03/\" rel=\"noopener\" target=\"_blank\">argued</a> that a combined Netflix\u2013HBO Max bundle could lower consumer costs. That pitch targets regulators, but it also hints at bundles assembled by algorithms that calculate predicted value and retention lift. <a href=\"https://www.pbs.org/newshour/economy/personalized-pricing-has-spread-across-many-industries-heres-how-consumers-can-avoid-it\" rel=\"noopener\" target=\"_blank\">Personalized pricing</a> is spreading across industries, raising new questions about fairness and transparency.</p>\n<p style=\"font-weight: 400;\">That shift is now visible across the broader subscription economy. Enterprises in every sector are moving away from static price cards and toward models built on ongoing billing, experimentation and full lifecycle visibility.</p>\n<p style=\"font-weight: 400;\">Payments infrastructure is starting to match those needs. PYMNTS <a href=\"https://www.pymnts.com/partnerships/2025/nuvei-zuora-launch-recurring-payments-solution-international-enterprises/\" rel=\"noopener\" target=\"_blank\">reported</a> that Nuvei and Zuora\u2019s new recurring-payments solution gives international enterprises a unified system for billing, global payment acceptance and transaction optimization. The integration aims to increase authorization rates, streamline reconciliation and support subscription, usage-based and hybrid revenue models at scale. Those capabilities mirror the kind of operational backbone that supports large-scale streaming subscriptions. With stronger payment performance and consolidated workflows, enterprises can move faster on new offers and remove friction across the subscription lifecycle.</p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/streaming/2025/streamings-ai-front-door-is-getting-more-valuable-just-ask-netflix-and-paramount/\">Streaming\u2019s AI \u2018Front Door\u2019 Is Getting More Valuable, Just Ask Netflix and Paramount</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
+    "image_url": "https://www.pymnts.com/wp-content/uploads/2025/12/streaming-AI-Netflix.png?w=457",
+    "summary_text": "The increasingly heated fight for Warner Bros. Discovery (WBD) is, on its face, about libraries: HBO\u2019s prestige slate, DC\u2019s franchises and Warner\u2019s studio machine. But the bidding war now featuring Netflix and Paramount is also a referendum on something less ...",
+    "category": "ai",
+    "_trending_tags": [
+      "ai"
+    ],
+    "_permalink": "/p/28acf6c2fa/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/28acf6c2fa/",
+    "_summary_240": "The increasingly heated fight for Warner Bros. Discovery (WBD) is, on its face, about libraries: HBO\u2019s prestige slate, DC\u2019s franchises and Warner\u2019s studio machine. But the...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/28acf6c2fa/thumbnail.png"
+  },
+  {
+    "title": "Nvidia can sell H200 AI chips to China, Trump says",
+    "url": "https://www.ft.com/content/ac63139d-5143-4aed-a1e4-980a06551b51",
+    "published_at": "2025-12-08T16:55:04-05:00",
+    "source": "Financial Times - Technology",
+    "summary": "US president says other chipmakers will also be allowed to export advanced semiconductors",
+    "content_html": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/406f64c3-9093-40fb-bfe1-c963b7564ae6.jpg",
+    "summary_text": "US president says other chipmakers will also be allowed to export advanced semiconductors",
+    "category": "ai",
+    "_trending_tags": [
+      "ai",
+      "nvidia"
+    ],
+    "_permalink": "/p/8754085228/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/8754085228/",
+    "_summary_240": "US president says other chipmakers will also be allowed to export advanced semiconductors",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/8754085228/thumbnail.png"
+  },
+  {
+    "title": "Saylor pitches Bitcoin-backed banking system to nation-states",
+    "url": "https://cointelegraph.com/news/michael-saylor-countries-bitcoin-backed-digital-banks?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "published_at": "2025-12-08T16:51:01-05:00",
+    "source": "Cointelegraph",
+    "summary": "Speaking in Abu Dhabi, the Strategy CEO said nations could use Bitcoin reserves and tokenized credit markets to offer regulated accounts with higher yields.",
+    "content_html": "",
+    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTIvMDE5YWZmOTctOTNhYS03YTA1LTg1NGQtZjVmNmVmNTQ5OGNm.jpg",
+    "summary_text": "Speaking in Abu Dhabi, the Strategy CEO said nations could use Bitcoin reserves and tokenized credit markets to offer regulated accounts with higher yields.",
+    "category": "fintech",
+    "_trending_tags": [
+      "ai"
+    ],
+    "_permalink": "/p/06ebe346f3/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/06ebe346f3/",
+    "_summary_240": "Speaking in Abu Dhabi, the Strategy CEO said nations could use Bitcoin reserves and tokenized credit markets to offer regulated accounts with higher yields.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/06ebe346f3/thumbnail.png"
+  },
+  {
+    "title": "SoftBank and Nvidia Consider Joining Funding Round for Robotics Firm Skild AI",
+    "url": "https://www.pymnts.com/artificial-intelligence-2/2025/softbank-and-nvidia-consider-joining-funding-round-for-robotics-firm-skild-ai/",
+    "published_at": "2025-12-08T16:43:44-05:00",
+    "source": "PYMNTS",
+    "summary": "SoftBank Group and Nvidia are reportedly in talks to participate in a more than $1 billion funding round for Skild AI, a maker of foundation models for robots. The round, which has not been finalized and could change, could nearly triple Skild\u2019s valuation from the $4.7 billion it attained earlier this year to around [\u2026] The post SoftBank and Nvidia Consider Joining Funding Round for Robotics Firm...",
+    "content_html": "<p><a class=\"editor-rtfLink\" href=\"https://group.softbank/en\" rel=\"noopener\" target=\"_blank\"><span>SoftBank Group</span></a><span> and </span><a class=\"editor-rtfLink\" href=\"https://www.nvidia.com/en-us/\" rel=\"noopener\" target=\"_blank\"><span>Nvidia</span></a><span> are reportedly in talks to participate in a </span><span>more than</span><span> $1 billion </span><span>funding round</span><span> for </span><a class=\"editor-rtfLink\" href=\"https://www.skild.ai/\" rel=\"noopener\" target=\"_blank\"><span>Skild AI</span></a><span>, a </span><span>maker</span><span> of foundation models for robots.</span></p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p><span>The round, which has not been finalized and could change, could nearly triple Skild\u2019s valuation from the $4.7 billion it attained earlier this year to around $14 billion, Reuters </span><a class=\"editor-rtfLink\" href=\"https://finance.yahoo.com/news/exclusive-softbank-nvidia-looking-invest-153957884.html\" rel=\"noopener\" target=\"_blank\"><span>reported</span></a><span> Monday (Dec. 8), citing a term sheet.</span></p>\n<p><span>Skild raised $500 million in </span><span>the</span><span> Series B </span><span>round</span> <span>in which</span><span> it </span><span>was valued</span><span> at $4.7 billion, and </span><span>it raised</span><span> $300 million in</span><span> a </span><span>Series A round </span><span>that</span><span> valued it at $1.5 billion </span><span>last year</span><span>, according to the report.</span></p>\n<p><span>When announcing its Series A funding round in July 2024, Skild </span><span>said</span><span> its model was being designed as a \u201cshared, general-purpose brain\u201d for </span><span>a variety of</span> <a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/news/investment-tracker/2024/skild-ai-raises-300-million-to-build-general-purpose-brain-for-robots/\" rel=\"noopener\" target=\"_blank\"><span>robots</span></a><span>, scenarios </span><span>and</span><span> tasks.</span><span> Unlike those designed for specific applications, it aims to enable the use of low-cost robots for a broad range of industries and applications.</span></p>\n<p><span>\u201cWith </span><span>general purpose</span><span> robots that can safely perform any automated task, in any environment, and with any type of embodiment, we can expand the capabilities of robots, democratize their cost, and support the severely understaffed labor market,\u201d </span><a class=\"editor-rtfLink\" href=\"https://www.linkedin.com/in/abhinav-gupta-319193164\" rel=\"noopener\" target=\"_blank\"><span>Abhinav Gupta</span></a><span>, president and co-founder of Skild AI, said at the time in a press release.</span></p>\n<p><span>In July, Skild introduced an AI model called \u201cSkild Brain\u201d and </span><span>said</span><span> the model can run on almost any </span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/artificial-intelligence-2/2025/skild-debuts-ai-it-says-can-run-on-any-robot/\" rel=\"noopener\" target=\"_blank\"><span>robot</span></a><span>, from humanoids to </span><span>table-top</span><span> arms, </span><span>and enable</span><span> them to think, function </span><span>and</span><span> respond more like humans.</span></p>\n<p><span>\u201cWe post-train this foundation model using targeted real-world data to deliver working solutions to our customers,\u201d the company </span><span>said at the time</span><span> in a blog post.</span></p>\n<p><span>It was reported in May that Nvidia unveiled more than 70 research papers showing how AI can perform in real-world settings that go far beyond text and images.</span></p>\n<p><span>The chip company advanced what it calls \u201c</span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/artificial-intelligence-2/2025/nvidia-wants-to-use-ai-in-the-real-world-from-biotech-to-transportation/\" rel=\"noopener\" target=\"_blank\"><span>embodied intelligence</span></a><span>,\u201d or AI that can perceive, reason </span><span>and</span><span> act in industries including manufacturing, biotechnology </span><span>and</span><span> transportation.</span></p>\n<p><span>Meanwhile, SoftBank Group </span><span>said</span><span> in October that it plans to acquire </span><a class=\"editor-rtfLink\" href=\"https://www.abb.com/global/en\" rel=\"noopener\" target=\"_blank\"><span>ABB</span></a><span>\u2019s </span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/acquisitions/2025/softbank-acquire-abb-robotics-business-amid-growing-ai-related-investments/\" rel=\"noopener\" target=\"_blank\"><span>robotics</span></a><span> business for $5.375 billion </span><span>to complement</span><span> its existing investments in AI and </span><span>robots</span><span>.</span></p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/artificial-intelligence-2/2025/softbank-and-nvidia-consider-joining-funding-round-for-robotics-firm-skild-ai/\">SoftBank and Nvidia Consider Joining Funding Round for Robotics Firm Skild AI</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
+    "image_url": "https://www.pymnts.com/wp-content/uploads/2025/12/robots-skild1.jpg?w=457",
+    "summary_text": "SoftBank Group and Nvidia are reportedly in talks to participate in a more than $1 billion funding round for Skild AI, a maker of foundation models for robots. The round, which has not been finalized and could change, could nearly triple Skild\u2019s valuation fro...",
+    "category": "ai",
+    "_trending_tags": [
+      "ai",
+      "nvidia"
+    ],
+    "_permalink": "/p/290bbb1efe/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/290bbb1efe/",
+    "_summary_240": "SoftBank Group and Nvidia are reportedly in talks to participate in a more than $1 billion funding round for Skild AI, a maker of foundation models for robots. The round, which...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/290bbb1efe/thumbnail.png"
+  },
+  {
+    "title": "New York Cash Payments Law to Take Effect in March",
+    "url": "https://www.pymnts.com/money-mobility/2025/new-york-cash-payments-law-to-take-effect-in-march/",
+    "published_at": "2025-12-08T16:40:52-05:00",
+    "source": "PYMNTS",
+    "summary": "Food stores and retail establishments in New York are required to accept cash payments for in-person transactions after a bill was signed into law by the state\u2019s governor. Governor Kathy Hochul signed Senate Bill S4153A into law on Nov. 21 after it was delivered to her office on Nov. 17, according to the website [\u2026] The post New York Cash Payments Law to Take Effect in March appeared first on PYM...",
+    "content_html": "<p><span>Food stores and retail establishments in New York are required to accept cash payments for in-person transactions after a bill was signed into law by the state\u2019s governor.</span></p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p><span>Governor </span><a href=\"https://www.governor.ny.gov/\" rel=\"noopener\" target=\"_blank\"><span>Kathy Hochul</span></a><span> signed Senate Bill </span><a href=\"https://legislation.nysenate.gov/pdf/bills/2025/S4153A\" rel=\"noopener\" target=\"_blank\"><span>S4153A</span></a><span> into law on Nov. 21 after it was delivered to her office on Nov. 17, according to the </span><a href=\"https://www.nysenate.gov/legislation/bills/2025/S4153/amendment/A\" rel=\"noopener\" target=\"_blank\"><span>website</span></a><span> of the New York State Senate.</span></p>\n<p><span>The law will become effective 120 days after signing, which is expected to be March 20, 2026, according to an </span><a href=\"https://www.hklaw.com/en/insights/publications/2025/12/new-york-state-enacts-cash-acceptance-law\" rel=\"noopener\" target=\"_blank\"><span>article</span></a><span> by law firm Holland &amp; Knight.</span></p>\n<p><span>The bill was passed by the state legislature in May, according to the Senate\u2019s website.</span></p>\n<p><span>With the law set to take effect, New York joins New Jersey and Colorado, which have similar laws, Newsweek </span><a href=\"https://www.newsweek.com/new-cash-law-could-change-shopping-for-millions-11124739\" rel=\"noopener\" target=\"_blank\"><span>reported</span></a><span> Nov. 28. New Jersey adopted a law that effectively banned cashless establishments in 2019, while Colorado enacted a law generally requiring retailers to accept cash in 2021, according to the report.</span></p>\n<p><span>The sponsor of the senate bill, Sen. </span><a href=\"https://www.nysenate.gov/senators/james-sanders-jr\" rel=\"noopener\" target=\"_blank\"><span>James Sanders Jr.</span></a><span>, told Newsweek, per the report: \u201cI firmly believe that this legislation was necessary to protect some of the most vulnerable New Yorkers. While digital payments are becoming more common, not everyone has access to credit cards, bank accounts or smartphones. Many seniors, low-income residents, immigrants and young adults rely on cash to manage their daily lives.\u201d</span></p>\n<p><span>Assemblymember </span><a href=\"https://assembly.state.ny.us/mem/Catalina-Cruz\" rel=\"noopener\" target=\"_blank\"><span>Catalina Cruz</span></a><span>, who sponsored the bill in the assembly, said in a June 3 </span><a href=\"https://www.facebook.com/CatalinaCruzNY/photos/the-assembly-just-passed-my-bill-a7929a-to-make-sure-cash-remains-a-valid-form-o/1146550113943120/\" rel=\"noopener\" target=\"_blank\"><span>post</span></a><span> on Facebook that the legislation aims to ensure that cash remains a valid form of payment in New York.</span></p>\n<p><span>\u201cToo many stores are going cashless, shutting out seniors, immigrants and working-class New Yorkers who rely on cash every day,\u201d Cruz said in the post. \u201cOur bill makes it clear: retailers and food stores can\u2019t refuse cash \u2014 because access to essentials shouldn\u2019t depend on a credit card.\u201d</span></p>\n<p><span>When the bill was being considered by Hochul, </span><a href=\"https://www.natmc.org/\" rel=\"noopener\" target=\"_blank\"><span>The National ATM Council</span></a><span> urged New York\u2019s ATM operators and suppliers to contact her to support the bill.</span></p>\n<p><span>\u201cCash remains essential in emergencies and for ensuring privacy and protection against digital threats,\u201d </span><a href=\"https://www.linkedin.com/in/bruce-renard-1aa29a63\" rel=\"noopener\" target=\"_blank\"><span>Bruce Wayne Reynard</span></a><span>, executive director of The National ATM Council, said at the time in a </span><a href=\"https://myemail.constantcontact.com/Breaking-News--NY-Legislature-Passes-Statewide-Cash-Law.html?soid=1108931207910&amp;aid=gQAyq8zDSkI\" rel=\"noopener\" target=\"_blank\"><span>press release</span></a><span>.</span></p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/money-mobility/2025/new-york-cash-payments-law-to-take-effect-in-march/\">New York Cash Payments Law to Take Effect in March</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
+    "image_url": "https://www.pymnts.com/wp-content/uploads/2025/12/new-york-retail-fast-food-restaurants-money-mobility-payments-cash-e1765228626286.jpeg?w=457",
+    "summary_text": "Food stores and retail establishments in New York are required to accept cash payments for in-person transactions after a bill was signed into law by the state\u2019s governor. Governor Kathy Hochul signed Senate Bill S4153A into law on Nov. 21 after it was delive...",
+    "category": "fintech",
+    "_trending_tags": [
+      "ai"
+    ],
+    "_permalink": "/p/6c72cfc6f0/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/6c72cfc6f0/",
+    "_summary_240": "Food stores and retail establishments in New York are required to accept cash payments for in-person transactions after a bill was signed into law by the state\u2019s governor....",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/6c72cfc6f0/thumbnail.png"
+  },
+  {
     "title": "Google\u2019s AI try-on app Doppl adds a shoppable discovery feed",
     "url": "https://techcrunch.com/2025/12/08/googles-ai-try-on-app-doppl-adds-a-shoppable-discovery-feed/",
     "published_at": "2025-12-08T16:29:03-05:00",
@@ -71,23 +181,19 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/ae383a62cb/thumbnail.png"
   },
   {
-    "title": "Nvidia Set to Win US Approval to Export H200 AI Chips to China",
+    "title": "Nvidia Wins Trump\u2019s Approval to Sell Its H200 AI Chips in China",
     "url": "https://www.bloomberg.com/news/articles/2025-12-08/nvidia-set-to-win-us-approval-to-export-h200-ai-chips-to-china",
     "published_at": "2025-12-08T14:45:27-05:00",
     "source": "Bloomberg Technology",
-    "summary": "The Trump administration is poised to allow Nvidia Corp. to sell its H200 artificial intelligence chip to China, according to people familiar with the matter, a move that would mark a major lobbying win for the world\u2019s most valuable company and potentially let it regain billions of dollars of business lost in a key global market.",
+    "summary": "President Donald Trump granted Nvidia Corp. permission to ship its H200 artificial intelligence chip to China in exchange for a 25% cut of the sales, a move that would mark a major lobbying win for the world\u2019s most valuable company and potentially let it regain billions of dollars of business lost in a key global market.",
     "content_html": "Jensen Huang, chief executive officer of Nvidia Corp., departs following a meeting with members of the Senate Banking Committee in Washington on Dec. 3.",
     "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iCSbKEogJnLE/v1/1200x-1.jpg",
-    "summary_text": "The Trump administration is poised to allow Nvidia Corp. to sell its H200 artificial intelligence chip to China, according to people familiar with the matter, a move that would mark a major lobbying win for the world\u2019s most valuable company and potentially le...",
+    "summary_text": "President Donald Trump granted Nvidia Corp. permission to ship its H200 artificial intelligence chip to China in exchange for a 25% cut of the sales, a move that would mark a major lobbying win for the world\u2019s most valuable company and potentially let it rega...",
     "category": "ai",
     "_trending_tags": [
       "ai",
       "nvidia"
-    ],
-    "_permalink": "/p/9e672274a0/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/9e672274a0/",
-    "_summary_240": "The Trump administration is poised to allow Nvidia Corp. to sell its H200 artificial intelligence chip to China, according to people familiar with the matter, a move that would...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/9e672274a0/thumbnail.png"
+    ]
   },
   {
     "title": "Bank of America Debuts Small Business Retirement Platform",
@@ -145,7 +251,7 @@
   },
   {
     "title": "Watchdog asks for crypto industry feedback on UK investment reforms",
-    "url": "https://ct.com/news/uk-fca-watchdog-crypto-investment-reforms?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/uk-fca-watchdog-crypto-investment-reforms?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
     "published_at": "2025-12-08T14:10:01-05:00",
     "source": "Cointelegraph",
     "summary": "The Financial Conduct Authority asked for companies linked to digital assets to weigh in on policy proposals in February and March 2026.",
@@ -153,10 +259,10 @@
     "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTIvMDE5YWZlZjUtNzZjMC03NWExLWFhNzAtY2VjNWQzODdhMjQz.jpg",
     "summary_text": "The Financial Conduct Authority asked for companies linked to digital assets to weigh in on policy proposals in February and March 2026.",
     "category": "fintech",
-    "_permalink": "/p/2c4a71e400/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/2c4a71e400/",
+    "_permalink": "/p/f915bcf513/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/f915bcf513/",
     "_summary_240": "The Financial Conduct Authority asked for companies linked to digital assets to weigh in on policy proposals in February and March 2026.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/2c4a71e400/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/f915bcf513/thumbnail.png"
   },
   {
     "title": "Anthropic is bringing Claude Code to Slack",
@@ -218,29 +324,8 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/ff630b758a/thumbnail.png"
   },
   {
-    "title": "Instacart Integrates Grocery Platform With ChatGPT",
-    "url": "https://www.pymnts.com/artificial-intelligence-2/2025/instacart-integrates-grocery-platform-with-chatgpt/",
-    "published_at": "2025-12-08T13:43:40-05:00",
-    "source": "PYMNTS",
-    "summary": "Instacart has become the first grocery sector company to launch an app on OpenAI\u2019s ChatGPT. This integration, announced Monday (Dec. 8), will also see Instacart offer an embedded shopping and checkout offering within ChatGPT conversations, and is designed to make it easier for users to get meal ideas and have the necessary products delivered to their door. \u201cInstacart [\u2026] The post Instacart Integr...",
-    "content_html": "<p style=\"font-weight: 400;\"><a href=\"https://www.instacart.com/\" rel=\"noopener\" target=\"_blank\">Instacart</a>\u00a0has become the first grocery sector company to launch an app on\u00a0<a href=\"https://openai.com/\" rel=\"noopener\" target=\"_blank\">OpenAI</a>\u2019s ChatGPT.</p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p style=\"font-weight: 400;\">This integration,\u00a0<a href=\"https://www.prnewswire.com/news-releases/instacart-app-launches-in-openai-chatgpt--first-company-to-offer-new-instant-checkout-app-experience-302635106.html\" rel=\"noopener\" target=\"_blank\">announced</a>\u00a0Monday (Dec. 8), will also see Instacart offer an embedded shopping and checkout offering within ChatGPT conversations, and is designed to make it easier for users to get meal ideas and have the necessary products delivered to their door.</p>\n<p style=\"font-weight: 400;\">\u201cInstacart and ChatGPT are redefining what\u2019s possible in AI-powered shopping,\u201d\u00a0<a href=\"https://www.linkedin.com/in/ankundu\" rel=\"noopener\" target=\"_blank\">Anirban Kundu</a>, Instacart\u2019s chief technology officer, said in a news release.</p>\n<p style=\"font-weight: 400;\">\u201cBuilt on\u00a0<a href=\"https://www.pymnts.com/news/artificial-intelligence/2025/google-debuts-agent-payments-protocol-bolster-ai-commerce/\" rel=\"noopener\" target=\"_blank\">Agentic Commerce Protocol</a>, this experience brings intelligent, real-time support to one of the most essential parts of daily life: getting groceries to feed your family. Together, we\u2019re creating a seamless and secure way for people to turn simple conversations into real-world action \u2014 helping customers go from inspiration to a full cart delivered from the store to their door with ease.\u201d</p>\n<p style=\"font-weight: 400;\">According to the release, the new integration is now available on desktop and mobile web. The Instacart ChatGPT app is available on iOS and Android, with Instant Checkout coming to these native platforms in the weeks ahead. ChatGPT, the companies said, can \u201csurface\u201d the Instacart ChatGPT app when a user asks for it by initiating a prompt with Instacart.</p>\n<p style=\"font-weight: 400;\">After opening the app and signing in, users can get help finding the items they need from local retailers, and pay for their purchases directly in the Instacart app right in ChatGPT with Instant Checkout, without having to switch tabs. From there, products will be shopped and delivered via Instacart\u2019s platform, the release added.</p>\n<p style=\"font-weight: 400;\">The new integration comes as consumers are growing increasingly comfortable using generative artificial intelligence to help guide retail purchases.</p>\n<p style=\"font-weight: 400;\">The PYMNTS Intelligence report\u00a0\u201c<a href=\"https://www.pymnts.com/study_posts/black-friday-on-a-budget-how-discipline-and-deals-shaped-holiday-shopping-in-2025\" rel=\"noopener\" target=\"_blank\">Black Friday Shopping Trends Expose Shift to Budget-Driven Buying</a>\u201d found that half of the surveyed consumers had turned to generative AI at least once for their Black Friday purchases this year.</p>\n<p style=\"font-weight: 400;\">This survey also found that shoppers most commonly used artificial intelligence assistants to seek out discount codes or deals (42%), keep track of prices or monitor price reductions (35%), research and compare product options (31%) come up with gift ideas (30%) and understand product specifications or features (28%).</p>\n<p style=\"font-weight: 400;\">\u201cConversational AI, in the form of prompt-based AI platforms such as ChatGPT,\u00a0<a href=\"https://claude.ai/\" rel=\"noopener\" target=\"_blank\">Claude</a>\u00a0or Gemini, is becoming a mainstream\u00a0<a href=\"https://www.pymnts.com/artificial-intelligence-2/2025/chatgpt-hits-its-third-year-and-redefines-digital-strategy/\" rel=\"noopener\" target=\"_blank\">shopping concierge</a>,\u201d the report said.</p>\n<p style=\"font-weight: 400;\">The PYMNTS research is in keeping with recent findings from Visa which showed that 47% of Americans were using AI tools to assist them with this year\u2019s\u00a0<a href=\"https://www.pymnts.com/artificial-intelligence-2/2025/visa-47percent-of-americans-use-ai-tools-for-holiday-shopping/\" rel=\"noopener\" target=\"_blank\">holiday shopping</a>.</p>\n<div>\n<p class=\"elementtoproof\"><i>For all PYMNTS AI coverage, subscribe to the daily<span class=\"apple-converted-space\">\u00a0</span></i><a href=\"https://www.pymnts.com/subscribe/\" rel=\"noopener\" target=\"_blank\" title=\"https://www.pymnts.com/subscribe/\">AI\u00a0Newsletter</a><i>.</i></p>\n</div>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/artificial-intelligence-2/2025/instacart-integrates-grocery-platform-with-chatgpt/\">Instacart Integrates Grocery Platform With ChatGPT</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
-    "image_url": "https://www.pymnts.com/wp-content/uploads/2022/12/Instacart.jpg?w=457",
-    "summary_text": "Instacart has become the first grocery sector company to launch an app on OpenAI\u2019s ChatGPT. This integration, announced Monday (Dec. 8), will also see Instacart offer an embedded shopping and checkout offering within ChatGPT conversations, and is designed to ...",
-    "category": "ai",
-    "_trending_tags": [
-      "ai",
-      "chatgpt",
-      "gpt",
-      "openai"
-    ],
-    "_permalink": "/p/e0e7c22458/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/e0e7c22458/",
-    "_summary_240": "Instacart has become the first grocery sector company to launch an app on OpenAI\u2019s ChatGPT. This integration, announced Monday (Dec. 8), will also see Instacart offer an embedded...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/e0e7c22458/thumbnail.png"
-  },
-  {
     "title": "XRP needs a Solana-style strategy to keep up: Ripple executive",
-    "url": "https://ct.com/news/xrp-needs-a-solana-style-strategy-to-keep-up-ripple-executive?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/xrp-needs-a-solana-style-strategy-to-keep-up-ripple-executive?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
     "published_at": "2025-12-08T13:40:00-05:00",
     "source": "Cointelegraph",
     "summary": "Luke Judges highlights how XRP Ledger\u2019s tech and developer tools could take cues from Solana to stay competitive among layer-1 networks.",
@@ -248,10 +333,10 @@
     "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTIvMDE5YWZlY2EtYmQzNy03MzkzLThjZDEtYzk2MmQyYzhkODM0.jpg",
     "summary_text": "Luke Judges highlights how XRP Ledger\u2019s tech and developer tools could take cues from Solana to stay competitive among layer-1 networks.",
     "category": "software",
-    "_permalink": "/p/3100d404b8/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/3100d404b8/",
+    "_permalink": "/p/903d4d9db5/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/903d4d9db5/",
     "_summary_240": "Luke Judges highlights how XRP Ledger\u2019s tech and developer tools could take cues from Solana to stay competitive among layer-1 networks.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/3100d404b8/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/903d4d9db5/thumbnail.png"
   },
   {
     "title": "ICEBlock developer sues Trump administration over App Store removal",
@@ -267,25 +352,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/3e4302a7a3/",
     "_summary_240": "Joshua Aaron, the developer of the ICEBlock app, is suing Attorney General Pam Bondi, US Homeland Security Secretary Kirsti Noem, acting director of ICE Todd Lyons, White House...",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/3e4302a7a3/thumbnail.png"
-  },
-  {
-    "title": "OpenAI Found 75% of Workers Say AI Has Improved Their Output",
-    "url": "https://www.pymnts.com/artificial-intelligence-2/2025/openai-found-75-of-workers-say-ai-has-improved-their-output/",
-    "published_at": "2025-12-08T13:17:20-05:00",
-    "source": "PYMNTS",
-    "summary": "A new OpenAI report found a majority of surveyed workers seeing positive results from artificial intelligence (AI). The AI startup on Monday (Dec. 8) released findings from its \u201cState of Enterprise AI\u201d report, which drew on real-world usage data from OpenAI\u2019s enterprise customers, as well as a survey of 9,000 workers on AI adoption [\u2026] The post OpenAI Found 75% of Workers Say AI Has Improved Thei...",
-    "content_html": "<p><span style=\"font-weight: 400;\">A new </span><a href=\"https://openai.com/\" rel=\"noopener\" target=\"_blank\"><span style=\"font-weight: 400;\">OpenAI</span></a><span style=\"font-weight: 400;\"> report found a majority of surveyed workers seeing positive results from artificial intelligence (AI).</span></p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p><span style=\"font-weight: 400;\">The AI startup on Monday (Dec. 8) </span><a href=\"https://openai.com/index/the-state-of-enterprise-ai-2025-report/\" rel=\"noopener\" target=\"_blank\"><span style=\"font-weight: 400;\">released findings</span></a><span style=\"font-weight: 400;\"> from its \u201cState of Enterprise AI\u201d report, which drew on real-world usage data from OpenAI\u2019s enterprise customers, as well as a survey of 9,000 workers on AI adoption patterns.</span></p>\n<p><span style=\"font-weight: 400;\">\u201cFor the first time, we\u2019re sharing a comprehensive look at how enterprises are </span><a href=\"https://www.pymnts.com/news/artificial-intelligence/2025/mit-says-ai-can-replace-11percent-united-states-workforce/\" rel=\"noopener\" target=\"_blank\"><span style=\"font-weight: 400;\">adopting AI</span></a><span style=\"font-weight: 400;\">, what workers say they\u2019re gaining, and how organizational leaders are turning experimentation into measurable productivity and new capabilities,\u201d the report said.</span></p>\n<p><span style=\"font-weight: 400;\">Among the survey\u2019s findings: 75% of workers said that using AI at work has improved either the speed or quality of their output. Workers said they were saving 40 to 60 minutes each day, with \u201cheavy users\u201d saying they were saving upwards of 10 hours a week.</span></p>\n<p><span style=\"font-weight: 400;\">Drilling down, the survey found that 87% of IT workers reported faster issue resolutions, 85% of marketing and product users saw speedier campaign execution, and three out of every four HR professions said they\u2019d seen improved employee engagement.</span></p>\n<p><span style=\"font-weight: 400;\">\u201cCrucially, AI is not just helping people do the same work faster\u2014it is enabling people to do new kinds of work,\u201d the company said.</span></p>\n<p><span style=\"font-weight: 400;\">For example, coding-related messages increased 36% for workers outside of technical functions, while three-quarters of users said they could now complete new tasks they once could not perform.</span></p>\n<p><span style=\"font-weight: 400;\">The survey comes in the closing weeks of a year that has seen high-profile research questioning AI\u2019s benefits in the workplace.</span></p>\n<p><span style=\"font-weight: 400;\">For example, researchers at MIT released a report which found that most organizations are </span><a href=\"https://www.pymnts.com/artificial-intelligence-2/2025/ai-bubble-worries-spooking-tech-investors/\" rel=\"noopener\" target=\"_blank\"><span style=\"font-weight: 400;\">getting \u201czero return\u201d</span></a><span style=\"font-weight: 400;\"> on their investments into the generative AI space. The study found that just 5% of \u201cintegrated AI pilots are extracting millions in value, while the vast majority remain stuck with no measurable [profit and loss] impact.\u201d</span></p>\n<p><span style=\"font-weight: 400;\">Writing in </span><a href=\"https://www.pymnts.com/artificial-intelligence-2/2025/how-leading-enterprises-really-measure-gen-ai-roi/\" rel=\"noopener\" target=\"_blank\"><span style=\"font-weight: 400;\">response</span></a><span style=\"font-weight: 400;\"> to the MIT findings, PYMNTS CEO Karen Webster pointed to research from PYMNTS Intelligence showing \u2014 over an 18 month stretch \u2014 increasing numbers of enterprise </span><span style=\"font-weight: 400;\">executives who said that generative AI is </span><a href=\"https://www.pymnts.com/artificial-intelligence-2/2025/how-leading-enterprises-really-measure-gen-ai-roi/\" rel=\"noopener\" target=\"_blank\"><span style=\"font-weight: 400;\">highly effective</span></a><span style=\"font-weight: 400;\"> for things like product development, workflow management and internal </span><span style=\"font-weight: 400;\">processes.</span></p>\n<p><span style=\"font-weight: 400;\">\u201cWe also find executives at some of the largest companies in the U.S. reporting a strong, or what I might even call </span><a href=\"https://www.pymnts.com/news/artificial-intelligence/2025/90percent-of-cfos-report-very-positive-roi-from-genai-in-just-9-months/\" rel=\"noopener\" target=\"_blank\"><span style=\"font-weight: 400;\">compelling, positive impact</span></a><span style=\"font-weight: 400;\"> of Gen AI across the enterprise, with 90% of enterprise chiefs citing a positive impact on their customer experience, and more than three quarters citing a positive impact on their competitive position,\u201d Webster wrote.</span></p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/artificial-intelligence-2/2025/openai-found-75-of-workers-say-ai-has-improved-their-output/\">OpenAI Found 75% of Workers Say AI Has Improved Their Output</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
-    "image_url": "https://www.pymnts.com/wp-content/uploads/2025/12/openai-ai-artificial-intelligence-ai-adoption-generative-ai-data-workforce-e1765216745903.jpeg?w=457",
-    "summary_text": "A new OpenAI report found a majority of surveyed workers seeing positive results from artificial intelligence (AI). The AI startup on Monday (Dec. 8) released findings from its \u201cState of Enterprise AI\u201d report, which drew on real-world usage data from OpenAI\u2019s...",
-    "category": "ai",
-    "_trending_tags": [
-      "ai",
-      "openai"
-    ],
-    "_permalink": "/p/530a265b4b/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/530a265b4b/",
-    "_summary_240": "A new OpenAI report found a majority of surveyed workers seeing positive results from artificial intelligence (AI). The AI startup on Monday (Dec. 8) released findings from its...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/530a265b4b/thumbnail.png"
   },
   {
     "title": "Google Says First AI Glasses With Gemini Will Arrive in 2026",
@@ -367,7 +433,7 @@
   },
   {
     "title": "Why Grayscale thinks Bitcoin will ignore the 4-year cycle this time",
-    "url": "https://ct.com/news/why-grayscale-thinks-bitcoin-will-ignore-the-4-year-cycle-this-time?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/why-grayscale-thinks-bitcoin-will-ignore-the-4-year-cycle-this-time?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
     "published_at": "2025-12-08T12:50:00-05:00",
     "source": "Cointelegraph",
     "summary": "Grayscale argues Bitcoin\u2019s market structure has evolved beyond the old four-year rhythm. Institutional flows and macro dynamics have reshaped BTC\u2019s price behavior.",
@@ -375,14 +441,14 @@
     "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTIvMDE5YWZlYzQtNjE0ZC03MjkxLWJlZTktMzVlODQ1NGM4NGFk.jpg",
     "summary_text": "Grayscale argues Bitcoin\u2019s market structure has evolved beyond the old four-year rhythm. Institutional flows and macro dynamics have reshaped BTC\u2019s price behavior.",
     "category": "fintech",
-    "_permalink": "/p/930e55c33f/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/930e55c33f/",
+    "_permalink": "/p/96f3ebfc7f/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/96f3ebfc7f/",
     "_summary_240": "Grayscale argues Bitcoin\u2019s market structure has evolved beyond the old four-year rhythm. Institutional flows and macro dynamics have reshaped BTC\u2019s price behavior.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/930e55c33f/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/96f3ebfc7f/thumbnail.png"
   },
   {
     "title": "Tether's USDt awarded key regulatory status in Abu Dhabi",
-    "url": "https://ct.com/news/usdt-recognized-fiat-referenced-token-adgm?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/usdt-recognized-fiat-referenced-token-adgm?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
     "published_at": "2025-12-08T12:44:14-05:00",
     "source": "Cointelegraph",
     "summary": "ADGM\u2019s recognition of USDT as an accepted fiat-referenced token lets licensed companies offer regulated custody, marking a step for stablecoins in the UAE.",
@@ -390,28 +456,10 @@
     "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTIvMDE5YWZlY2QtYjQ4OS03Mzg0LThmNzMtMTQ5NDFmYzIzNzQ0.jpg",
     "summary_text": "ADGM\u2019s recognition of USDT as an accepted fiat-referenced token lets licensed companies offer regulated custody, marking a step for stablecoins in the UAE.",
     "category": "fintech",
-    "_permalink": "/p/2813aa0f2e/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/2813aa0f2e/",
+    "_permalink": "/p/2310a90af3/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/2310a90af3/",
     "_summary_240": "ADGM\u2019s recognition of USDT as an accepted fiat-referenced token lets licensed companies offer regulated custody, marking a step for stablecoins in the UAE.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/2813aa0f2e/thumbnail.png"
-  },
-  {
-    "title": "Mastercard Move and TenPay Global Facilitate Digital Remittances to Weixin Pay",
-    "url": "https://www.pymnts.com/partnerships/2025/mastercard-move-and-tenpay-global-facilitate-digital-remittances-to-weixin-pay/",
-    "published_at": "2025-12-08T12:43:50-05:00",
-    "source": "PYMNTS",
-    "summary": "Mastercard Move, Mastercard\u2019s money movement business, can now reach over 1.4 billion users of Weixin and WeChat. This capability is enabled by a collaboration of Mastercard Move with TenPay Global, Tencent\u2019s cross-border payment platform, the companies said in a Monday (Dec. 8) press release. Together, Mastercard Move and TenPay Global facilitate digital remittances from [\u2026] The post Mastercard ...",
-    "content_html": "<p><a href=\"https://www.mastercard.com/us/en/business/payments/mastercard-move.html\" rel=\"noopener\" target=\"_blank\"><span>Mastercard Move</span></a><span>, </span><a href=\"https://www.mastercard.com/us/en.html\" rel=\"noopener\" target=\"_blank\"><span>Mastercard</span></a><span>\u2019s money movement business, can now reach over 1.4 billion users of </span><a href=\"https://weixin.qq.com/\" rel=\"noopener\" target=\"_blank\"><span>Weixin</span></a><span> and </span><a href=\"https://www.wechat.com/\" rel=\"noopener\" target=\"_blank\"><span>WeChat</span></a><span>.</span></p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p><span>This capability is enabled by a collaboration of Mastercard Move with </span><a href=\"https://www.tenpayglobal.com/en\" rel=\"noopener\" target=\"_blank\"><span>TenPay Global</span></a><span>, </span><a href=\"https://www.tencent.com/en-us/\" rel=\"noopener\" target=\"_blank\"><span>Tencent</span></a><span>\u2019s cross-border payment platform, the companies said in a Monday (Dec. 8) </span><a href=\"https://www.mastercard.com/news/ap/en/newsroom/press-releases/en/2025/tenpay-global-and-mastercard-collaborate-to-enable-fast-and-secure-remittances-to-weixin-pay-1/\" rel=\"noopener\" target=\"_blank\"><span>press release</span></a><span>.</span></p>\n<p><span>Together, Mastercard Move and TenPay Global facilitate digital remittances from eligible senders around the world to </span><a href=\"https://pay.weixin.qq.com/index.php/public/wechatpay_en/\" rel=\"noopener\" target=\"_blank\"><span>Weixin Pay</span></a><span>, a mobile payment service within the Weixin ecosystem in China, according to the release.</span></p>\n<p><span>\u201cWith this collaboration, recipients gain fast, secure and transparent access to funds right where they already pay,\u201d </span><a href=\"https://www.linkedin.com/in/anouska-ladds-5192762/\" rel=\"noopener\" target=\"_blank\"><span>Anouska Ladds</span></a><span>, executive vice president, commercial new payment flows, Asia Pacific at Mastercard, said in the release. \u201cIt\u2019s exactly how we\u2019re driving payments modernization across the region together with our partners: embedding financial services into everyday life, expanding access, and empowering people and organizations to thrive in today\u2019s digitally connected economy.\u201d</span></p>\n<p><a href=\"https://sg.linkedin.com/in/wenhui-yang-b1b664b6\" rel=\"noopener\" target=\"_blank\"><span>Wenhui Yang</span></a><span>, CEO of TenPay Global (Singapore) said in the release: \u201cTogether with Mastercard, we are unlocking new opportunities and greater convenience for people around the world to send money back home. This marks another step forward in supporting the growing money transfer needs of a globally connected user base, ensuring funds arrive swiftly and safely in an everyday platform they trust.\u201d</span></p>\n<p><span>Tencent said in April 2024 that it had made it easier for visitors to mainland China to register for a WeChat account and to </span><a href=\"https://www.pymnts.com/news/cross-border-commerce/cross-border-payments/2024/tencent-simplifies-process-of-linking-international-cards-with-weixin-pay/\" rel=\"noopener\" target=\"_blank\"><span>link</span></a><span> international cards to Weixin Pay. The company also said that Weixin Pay was exploring interoperability with more overseas eWallets.</span></p>\n<p><span>Meanwhile, Mastercard Move has announced several partnerships in recent months that extend the reach of its money movement capabilities.</span></p>\n<p><span>The company said in November that it is collaborating with </span><a href=\"https://www.felixpago.com/en\" rel=\"noopener\" target=\"_blank\"><span>F\u00e9lix</span></a><span> to make cross-border </span><a href=\"https://www.pymnts.com/news/cross-border-commerce/cross-border-payments/2025/felix-to-leverage-mastercard-move-to-accelerate-cross-border-remittances/\" rel=\"noopener\" target=\"_blank\"><span>remittance</span></a><span> flows between the United States and Latin America faster, more transparent and more secure. This combination will enable senders to message F\u00e9lix\u2019s artificial intelligence (AI) chatbot on WhatsApp to initiate a transfer powered by Mastercard Move.</span></p>\n<p><span>In July, Mastercard said it teamed up with </span><a href=\"https://www.bmo.com/en-us/main/personal/\" rel=\"noopener\" target=\"_blank\"><span>BMO</span></a><span> to expand the Canadian bank\u2019s </span><a href=\"https://www.pymnts.com/partnerships/2025/mastercard-bmo-expand-remittance-services/\" rel=\"noopener\" target=\"_blank\"><span>money transfer</span></a><span> service. This service is powered by Mastercard Move and has been expanded to add new destinations and currencies.</span></p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/partnerships/2025/mastercard-move-and-tenpay-global-facilitate-digital-remittances-to-weixin-pay/\">Mastercard Move and TenPay Global Facilitate Digital Remittances to Weixin Pay</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
-    "image_url": "https://www.pymnts.com/wp-content/uploads/2025/12/mastercard-move-tenpay-tencent-partnerships-cross-border-payments-money-movement-weixin-pay-wechat-digital-payments-e1765215508950.jpeg?w=457",
-    "summary_text": "Mastercard Move, Mastercard\u2019s money movement business, can now reach over 1.4 billion users of Weixin and WeChat. This capability is enabled by a collaboration of Mastercard Move with TenPay Global, Tencent\u2019s cross-border payment platform, the companies said ...",
-    "category": "fintech",
-    "_trending_tags": [
-      "ai"
-    ],
-    "_permalink": "/p/959f856948/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/959f856948/",
-    "_summary_240": "Mastercard Move, Mastercard\u2019s money movement business, can now reach over 1.4 billion users of Weixin and WeChat. This capability is enabled by a collaboration of Mastercard Move...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/959f856948/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/2310a90af3/thumbnail.png"
   },
   {
     "title": "The State of AI: life in 2030",
@@ -451,7 +499,7 @@
   },
   {
     "title": "The easiest and safest methods for gifting crypto at Christmas in 2025",
-    "url": "https://ct.com/explained/the-easiest-and-safest-methods-for-gifting-crypto-at-christmas-in-2025?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/explained/the-easiest-and-safest-methods-for-gifting-crypto-at-christmas-in-2025?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
     "published_at": "2025-12-08T12:00:00-05:00",
     "source": "Cointelegraph",
     "summary": "Discover safe ways to give crypto in 2025. Learn about gift cards, exchanges, hardware wallets and essential security and tax guidance.",
@@ -459,14 +507,14 @@
     "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTIvMDE5YWZlYmMtZDk5Yy03NDhmLThhNzktMDg4NTU1MTNiNTVi.jpg",
     "summary_text": "Discover safe ways to give crypto in 2025. Learn about gift cards, exchanges, hardware wallets and essential security and tax guidance.",
     "category": "fintech",
-    "_permalink": "/p/3b6bee42b7/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/3b6bee42b7/",
+    "_permalink": "/p/1c72a2c863/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/1c72a2c863/",
     "_summary_240": "Discover safe ways to give crypto in 2025. Learn about gift cards, exchanges, hardware wallets and essential security and tax guidance.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/3b6bee42b7/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/1c72a2c863/thumbnail.png"
   },
   {
     "title": "BlackRock files for listing staked Ether ETF",
-    "url": "https://ct.com/news/blackrock-sec-staked-ether-etf?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/blackrock-sec-staked-ether-etf?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
     "published_at": "2025-12-08T11:53:49-05:00",
     "source": "Cointelegraph",
     "summary": "The fund, if approved by the SEC, would give BlackRock investors indirect exposure to staked Ether \u2014 one of the industry\u2019s first following the 2024 approval of spot Ether ETFs.",
@@ -474,10 +522,10 @@
     "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTIvMDE5YWZlNzQtMjQ5Ni03MjNlLWFlMTEtZDBkNzFiNTI3NDA0.jpg",
     "summary_text": "The fund, if approved by the SEC, would give BlackRock investors indirect exposure to staked Ether \u2014 one of the industry\u2019s first following the 2024 approval of spot Ether ETFs.",
     "category": "fintech",
-    "_permalink": "/p/6b19ca48d5/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/6b19ca48d5/",
+    "_permalink": "/p/f0ca62ee95/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/f0ca62ee95/",
     "_summary_240": "The fund, if approved by the SEC, would give BlackRock investors indirect exposure to staked Ether \u2014 one of the industry\u2019s first following the 2024 approval of spot Ether ETFs.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/6b19ca48d5/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/f0ca62ee95/thumbnail.png"
   },
   {
     "title": "Petco\u2019s security lapse affected customers\u2019 SSNs, driver\u2019s licenses, and more",
@@ -499,7 +547,7 @@
   },
   {
     "title": "Ripple\u2019s big Singapore win: What the expanded license allows now",
-    "url": "https://ct.com/news/ripple-s-big-singapore-win-what-the-expanded-license-allows-now?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/ripple-s-big-singapore-win-what-the-expanded-license-allows-now?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
     "published_at": "2025-12-08T11:09:01-05:00",
     "source": "Cointelegraph",
     "summary": "Singapore\u2019s MAS has widened Ripple\u2019s MPI license scope, enabling regulated token services, end-to-end payments and major growth across Asia-Pacific.",
@@ -507,10 +555,10 @@
     "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTIvMDE5YWZlYjQtOWM5Ny03Mzk2LTg0NzItOTg5MGRjYjRiZTBi.jpg",
     "summary_text": "Singapore\u2019s MAS has widened Ripple\u2019s MPI license scope, enabling regulated token services, end-to-end payments and major growth across Asia-Pacific.",
     "category": "fintech",
-    "_permalink": "/p/a8e9994be0/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/a8e9994be0/",
+    "_permalink": "/p/7173b77b5e/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/7173b77b5e/",
     "_summary_240": "Singapore\u2019s MAS has widened Ripple\u2019s MPI license scope, enabling regulated token services, end-to-end payments and major growth across Asia-Pacific.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/a8e9994be0/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/7173b77b5e/thumbnail.png"
   },
   {
     "title": "\u2018ONE RULE\u2019: Trump says he\u2019ll sign an executive order blocking state AI laws despite bipartisan pushback",
@@ -662,7 +710,7 @@
   },
   {
     "title": "SEC ends Biden-era probe into tokenized equity platform Ondo Finance",
-    "url": "https://ct.com/news/sec-ends-ondo-investigation-tokenized-securities-reset?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/sec-ends-ondo-investigation-tokenized-securities-reset?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
     "published_at": "2025-12-08T09:08:11-05:00",
     "source": "Cointelegraph",
     "summary": "Launched in 2023, the SEC probe into Ondo\u2019s tokenized RWAs and ONDO token ended without charges, signaling a regulatory reset for onchain assets.",
@@ -673,10 +721,10 @@
     "_trending_tags": [
       "ai"
     ],
-    "_permalink": "/p/712a017f8b/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/712a017f8b/",
+    "_permalink": "/p/907975217a/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/907975217a/",
     "_summary_240": "Launched in 2023, the SEC probe into Ondo\u2019s tokenized RWAs and ONDO token ended without charges, signaling a regulatory reset for onchain assets.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/712a017f8b/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/907975217a/thumbnail.png"
   },
   {
     "title": "Google\u2019s \u2018TPU\u2019 chip puts OpenAI on alert and shakes Nvidia investors",
@@ -702,24 +750,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/0e94c29a8f/thumbnail.png"
   },
   {
-    "title": "Tether Backs Italian Humanoid-Robotics Firm as AI Push Builds",
-    "url": "https://www.bloomberg.com/news/articles/2025-12-08/tether-backs-italian-humanoid-robotics-firm-as-ai-push-builds",
-    "published_at": "2025-12-08T09:05:48-05:00",
-    "source": "Bloomberg Technology",
-    "summary": "Stablecoin giant Tether has joined a \u20ac70 million ($81.6 million) funding round for Italy-based Generative Bionics, a humanoid-robotics startup developing industrial robots built using research from the Italian Institute of Technology.",
-    "content_html": "Tether branding.",
-    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iW76gpw8e3Ms/v1/1200x-1.jpg",
-    "summary_text": "Stablecoin giant Tether has joined a \u20ac70 million ($81.6 million) funding round for Italy-based Generative Bionics, a humanoid-robotics startup developing industrial robots built using research from the Italian Institute of Technology.",
-    "category": "ai",
-    "_trending_tags": [
-      "ai"
-    ],
-    "_permalink": "/p/6a6c1681a7/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/6a6c1681a7/",
-    "_summary_240": "Stablecoin giant Tether has joined a \u20ac70 million ($81.6 million) funding round for Italy-based Generative Bionics, a humanoid-robotics startup developing industrial robots built...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/6a6c1681a7/thumbnail.png"
-  },
-  {
     "title": "Qatar Sets Up National AI Firm, Joining Gulf Neighbors",
     "url": "https://www.bloomberg.com/news/articles/2025-12-08/qatar-sets-up-national-ai-firm-following-wealthy-gulf-neighbors",
     "published_at": "2025-12-08T08:59:35-05:00",
@@ -738,26 +768,8 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/111e000129/thumbnail.png"
   },
   {
-    "title": "Here\u2019s what happened in crypto today",
-    "url": "https://ct.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-    "published_at": "2025-12-08T08:42:52-05:00",
-    "source": "Cointelegraph",
-    "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, NFTs, Web3 and crypto regulation.",
-    "content_html": "",
-    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMDYvMDE5Nzk0MjMtZWY4ZS03YzYwLWI5MzctYjlkZGY3NWZlOGFk.jpg",
-    "summary_text": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, NFTs, Web3 and crypto regulation.",
-    "category": "fintech",
-    "_trending_tags": [
-      "ai"
-    ],
-    "_permalink": "/p/a723a81830/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/a723a81830/",
-    "_summary_240": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, NFTs, Web3 and crypto regulation.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/a723a81830/thumbnail.png"
-  },
-  {
     "title": "Bitcoin \u2019rallies are for selling\u2018: Top 3 arguments from BTC market bears",
-    "url": "https://ct.com/news/bitcoin-rallies-are-for-selling-top-arguments-btc-market-bears?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/bitcoin-rallies-are-for-selling-top-arguments-btc-market-bears?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
     "published_at": "2025-12-08T08:35:02-05:00",
     "source": "Cointelegraph",
     "summary": "Many analysts say BTC\u2019s rebound is a bull trap, warning its price could fall to as low as $40,000 over the coming months.",
@@ -765,28 +777,10 @@
     "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTIvMDE5YWZkYjEtZmU5ZC03M2VkLWJjMDEtOWE0MjNiMGJhNWZk.jpg",
     "summary_text": "Many analysts say BTC\u2019s rebound is a bull trap, warning its price could fall to as low as $40,000 over the coming months.",
     "category": "fintech",
-    "_permalink": "/p/f92c07cb12/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/f92c07cb12/",
+    "_permalink": "/p/4f54a56209/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/4f54a56209/",
     "_summary_240": "Many analysts say BTC\u2019s rebound is a bull trap, warning its price could fall to as low as $40,000 over the coming months.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/f92c07cb12/thumbnail.png"
-  },
-  {
-    "title": "Trump Says He\u2019ll Sign Executive Order Curbing State AI Rules",
-    "url": "https://www.bloomberg.com/news/articles/2025-12-08/trump-says-he-ll-sign-executive-order-curbing-state-ai-rules",
-    "published_at": "2025-12-08T08:31:22-05:00",
-    "source": "Bloomberg Technology",
-    "summary": "President Donald Trump said he would approve an executive order this week establishing \u201cONE RULE\u201d on artificial intelligence aimed at limiting state-level policies regulating the technology.",
-    "content_html": "US President Donald Trump during an announcement in the Oval Office of the White House in Washington, DC, US, on Wednesday, Dec. 3, 2025. Trump unveiled his administration\u2019s plan to relax stringent Biden-era fuel efficiency standards, casting the change as a way to lower consumer costs.",
-    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iKXw2KEHSptE/v1/1200x-1.jpg",
-    "summary_text": "President Donald Trump said he would approve an executive order this week establishing \u201cONE RULE\u201d on artificial intelligence aimed at limiting state-level policies regulating the technology.",
-    "category": "ai",
-    "_trending_tags": [
-      "ai"
-    ],
-    "_permalink": "/p/f2ff98a3c3/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/f2ff98a3c3/",
-    "_summary_240": "President Donald Trump said he would approve an executive order this week establishing \u201cONE RULE\u201d on artificial intelligence aimed at limiting state-level policies regulating the...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/f2ff98a3c3/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/4f54a56209/thumbnail.png"
   },
   {
     "title": "NextEra Shares Fall Amid Push to Move Into Data Centers and Gas",
@@ -823,7 +817,7 @@
   },
   {
     "title": "Argentina weighs letting traditional banks trade crypto: Report",
-    "url": "https://ct.com/news/argentina-weighs-reversing-bank-level-crypto-ban-report?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/argentina-weighs-reversing-bank-level-crypto-ban-report?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
     "published_at": "2025-12-08T07:47:35-05:00",
     "source": "Cointelegraph",
     "summary": "Argentina\u2019s central bank is reportedly considering whether to allow traditional financial institutions to offer crypto services, marking the potential lifting of a ban.",
@@ -831,14 +825,14 @@
     "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTIvMDE5YWZkNTEtZGVhNC03YmM3LWJiODktNTAzNGE0NzBjMjhl.jpg",
     "summary_text": "Argentina\u2019s central bank is reportedly considering whether to allow traditional financial institutions to offer crypto services, marking the potential lifting of a ban.",
     "category": "fintech",
-    "_permalink": "/p/2aecf0e4ac/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/2aecf0e4ac/",
+    "_permalink": "/p/bc6aed616d/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/bc6aed616d/",
     "_summary_240": "Argentina\u2019s central bank is reportedly considering whether to allow traditional financial institutions to offer crypto services, marking the potential lifting of a ban.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/2aecf0e4ac/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/bc6aed616d/thumbnail.png"
   },
   {
     "title": "Prediction markets emerge as speculative \u2018arbitrage arena\u2019 for crypto traders",
-    "url": "https://ct.com/news/prediction-markets-arbitrage-arena-crypto-traders?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/prediction-markets-arbitrage-arena-crypto-traders?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
     "published_at": "2025-12-08T07:07:31-05:00",
     "source": "Cointelegraph",
     "summary": "Prediction markets offer traders more upside than holding the underlying spot crypto, but AI bots and accounts with a 100% win rate raise suspicions of insider trading.",
@@ -849,10 +843,10 @@
     "_trending_tags": [
       "ai"
     ],
-    "_permalink": "/p/99ddb3702a/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/99ddb3702a/",
+    "_permalink": "/p/e52c82c954/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/e52c82c954/",
     "_summary_240": "Prediction markets offer traders more upside than holding the underlying spot crypto, but AI bots and accounts with a 100% win rate raise suspicions of insider trading.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/99ddb3702a/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/e52c82c954/thumbnail.png"
   },
   {
     "title": "OpenAI boasts enterprise win days after internal \u2018code red\u2019 on Google threat",
@@ -897,7 +891,7 @@
   },
   {
     "title": "Can panic wallets stop a wrench? Why crypto\u2019s next security debate is physical",
-    "url": "https://ct.com/news/panic-wallets-crypto-physical-security?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/panic-wallets-crypto-physical-security?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
     "published_at": "2025-12-08T06:13:48-05:00",
     "source": "Cointelegraph",
     "summary": "Jameson Lopp\u2019s wrench attack data shows physical assaults on crypto holders surging in 2025, forcing a reckoning over whether self\u2011custody is worth the physical risk.",
@@ -905,10 +899,10 @@
     "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTIvMDE5YWY4MDctOGIxNy03NTZhLWIyN2QtMTczN2QyY2Q4YzUx.jpg",
     "summary_text": "Jameson Lopp\u2019s wrench attack data shows physical assaults on crypto holders surging in 2025, forcing a reckoning over whether self\u2011custody is worth the physical risk.",
     "category": "fintech",
-    "_permalink": "/p/93578f4f5f/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/93578f4f5f/",
+    "_permalink": "/p/4e376bcd24/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/4e376bcd24/",
     "_summary_240": "Jameson Lopp\u2019s wrench attack data shows physical assaults on crypto holders surging in 2025, forcing a reckoning over whether self\u2011custody is worth the physical risk.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/93578f4f5f/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/4e376bcd24/thumbnail.png"
   },
   {
     "title": "Apple Manufacturing Academy launches virtual programming",
@@ -930,7 +924,7 @@
   },
   {
     "title": "US Treasurys lead tokenization wave as CoinShares predicts 2026 growth",
-    "url": "https://ct.com/news/coinshares-2026-outlook-tokenized-rwas-us-treasuries?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "url": "https://cointelegraph.com/news/coinshares-2026-outlook-tokenized-rwas-us-treasuries?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
     "published_at": "2025-12-08T05:00:42-05:00",
     "source": "Cointelegraph",
     "summary": "CoinShares said tokenized RWAs jumped 229% in 2025, led by US Treasurys, and it expects dollar-yield demand to keep driving onchain growth into 2026.",
@@ -941,25 +935,10 @@
     "_trending_tags": [
       "ai"
     ],
-    "_permalink": "/p/412cf6f5ea/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/412cf6f5ea/",
+    "_permalink": "/p/7d90a83db0/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/7d90a83db0/",
     "_summary_240": "CoinShares said tokenized RWAs jumped 229% in 2025, led by US Treasurys, and it expects dollar-yield demand to keep driving onchain growth into 2026.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/412cf6f5ea/thumbnail.png"
-  },
-  {
-    "title": "Coinbase mounts a cautious comeback in India, two years after exit",
-    "url": "https://ct.com/news/coinbase-india-relaunch-two-years-market-exit?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-    "published_at": "2025-12-08T03:36:49-05:00",
-    "source": "Cointelegraph",
-    "summary": "Coinbase has reopened India app registrations, with local fiat on-ramps planned for 2026 following a rocky exit more than two years ago.",
-    "content_html": "",
-    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTIvMDE5YWZjZDQtZGU4MS03MzFiLWE5ZDctMWYwMzk5OGY4NDNh.jpg",
-    "summary_text": "Coinbase has reopened India app registrations, with local fiat on-ramps planned for 2026 following a rocky exit more than two years ago.",
-    "category": "fintech",
-    "_permalink": "/p/e10631d995/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/e10631d995/",
-    "_summary_240": "Coinbase has reopened India app registrations, with local fiat on-ramps planned for 2026 following a rocky exit more than two years ago.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/e10631d995/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/7d90a83db0/thumbnail.png"
   },
   {
     "title": "Design in the age of AI: How small businesses are building big brands faster",
@@ -1025,39 +1004,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/edf9ac402c/",
     "_summary_240": "Through layers of intermediaries, stablecoins can be moved, swapped and mixed into pools of other funds in ways that are difficult to trace, experts say.",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/edf9ac402c/thumbnail.png"
-  },
-  {
-    "title": "The accelerator is on the floor for autonomous vehicles",
-    "url": "https://techcrunch.com/2025/12/07/the-accelerator-is-on-the-floor-for-autonomous-vehicles/",
-    "published_at": "2025-12-07T12:00:00-05:00",
-    "source": "TechCrunch",
-    "summary": "Welcome back to TechCrunch Mobility \u2014 your central hub for news and insights on the future of transportation.",
-    "content_html": "",
-    "image_url": "https://techcrunch.com/wp-content/uploads/2025/10/waymo-nyc.jpg?w=1121",
-    "summary_text": "Welcome back to TechCrunch Mobility \u2014 your central hub for news and insights on the future of transportation.",
-    "category": "ai",
-    "_permalink": "/p/7951dacdaf/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/7951dacdaf/",
-    "_summary_240": "Welcome back to TechCrunch Mobility \u2014 your central hub for news and insights on the future of transportation.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/7951dacdaf/thumbnail.png"
-  },
-  {
-    "title": "Coinbase starts onboarding users again in India, plans for fiat on-ramp next year",
-    "url": "https://techcrunch.com/2025/12/07/coinbase-starts-onboarding-users-again-in-india-plans-for-fiat-on-ramp-for-next-year/",
-    "published_at": "2025-12-07T11:00:00-05:00",
-    "source": "TechCrunch",
-    "summary": "Coinbase is exploring expansion into India with a staggered relaunch and hiring for different roles.",
-    "content_html": "",
-    "image_url": "https://techcrunch.com/wp-content/uploads/2023/01/coinbase-phone.jpg?resize=1200,678",
-    "summary_text": "Coinbase is exploring expansion into India with a staggered relaunch and hiring for different roles.",
-    "category": "fintech",
-    "_trending_tags": [
-      "ai"
-    ],
-    "_permalink": "/p/aa96c0686f/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/aa96c0686f/",
-    "_summary_240": "Coinbase is exploring expansion into India with a staggered relaunch and hiring for different roles.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/aa96c0686f/thumbnail.png"
   },
   {
     "title": "Chinese phonemakers seize on Apple\u2019s AI struggles",
