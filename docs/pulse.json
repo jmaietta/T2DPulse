@@ -1,5 +1,24 @@
 [
   {
+    "title": "Google Adds Security Layers to Safeguard Agentic Browsing With Chrome",
+    "url": "https://www.pymnts.com/google/2025/google-adds-security-layers-to-safeguard-agentic-browsing-with-chrome/",
+    "published_at": "2025-12-08T17:52:21-05:00",
+    "source": "PYMNTS",
+    "summary": "Google has announced new tools it will use to improve the safety of agentic browsing with Chrome. The tools are designed in part to combat \u201cthe primary new threat facing all agentic browsers,\u201d indirect prompt injection, Nathan Parker, Chrome security team, said in a Monday (Dec. 8) blog post. Indirect prompt injection, which can [\u2026] The post Google Adds Security Layers to Safeguard Agentic Browsi...",
+    "content_html": "<p><a class=\"editor-rtfLink\" href=\"https://about.google/\" rel=\"noopener\" target=\"_blank\"><span>Google</span></a><span> has announced new tools it will use to improve the safety of agentic browsing with Chrome.</span></p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p><span>The tools are designed in part to combat \u201cthe primary new threat facing all agentic browsers,</span><span>\u201d indirect prompt injection,</span><span> Nathan Parker, Chrome security team, said in a Monday (Dec. 8) </span><a class=\"editor-rtfLink\" href=\"https://security.googleblog.com/2025/12/architecting-security-for-agentic.html\" rel=\"noopener\" target=\"_blank\"><span>blog post</span></a><span>.</span></p>\n<p><span>Indirect prompt injection, which can appear </span><span>in</span><span> malicious sites, in third-party content </span><span>in</span><span> iframes, or </span><span>from</span><span> user-generated content such as user reviews, can cause the agent to take unwanted actions, including initiating financial transactions or exfiltrating sensitive data, according to the post.</span></p>\n<p><span>To combat this threat, Google has added new layers to its existing protections, the post </span><span>said</span><span>.</span></p>\n<p><span>These include a new user alignment critic that involves a separate model isolated from the untrusted content vetting the actions of the agent, and an extension of Chrome\u2019s origin-isolation capabilities to limit the origins with which the agent can interact to those </span><span>that are</span><span> relevant to the task, per the post.</span></p>\n<p><span>The layers also include user confirmation for critical steps, real-time </span><span>detection of threats</span><span>, and red-teaming and response, according to the post.</span></p>\n<p><span>\u201cThe upcoming introduction of agentic capabilities in Chrome brings new demands for browser security, and we\u2019ve approached this challenge with the same rigor that has defined Chrome\u2019s security model from its inception,\u201d Parker said in the post. \u201cBy extending some core principles like origin-isolation and layered defenses, and introducing a trusted-model architecture, we\u2019re building a secure foundation for Gemini\u2019s agentic experiences in Chrome.\u201d</span></p>\n<p><span>It was reported in November that </span><a class=\"editor-rtfLink\" href=\"https://deepmind.google/\" rel=\"noopener\" target=\"_blank\"><span>Google </span><span>Deepmind</span></a><span>, </span><a class=\"editor-rtfLink\" href=\"https://www.microsoft.com/en-us/\" rel=\"noopener\" target=\"_blank\"><span>Microsoft</span></a><span>, </span><a class=\"editor-rtfLink\" href=\"https://www.anthropic.com/\" rel=\"noopener\" target=\"_blank\"><span>Anthropic</span></a> <span>and</span> <a class=\"editor-rtfLink\" href=\"https://openai.com/\" rel=\"noopener\" target=\"_blank\"><span>OpenAI</span></a><span> were among the tech companies working to </span><span>stop</span> <a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/artificial-intelligence-2/2025/tech-giants-tackle-major-ai-security-threat/\" rel=\"noopener\" target=\"_blank\"><span>indirect prompt injection</span></a><span> attacks.</span></p>\n<p><span>The report </span><span>said</span><span> these attacks </span><span>happen</span><span> when a third party </span><span>hides</span><span> commands </span><span>inside</span><span> a website or email to </span><span>trick</span><span> AI models into </span><span>turning over</span><span> unauthorized information.</span></p>\n<p><span>Companies are </span><span>doing things like</span><span> hiring external testers and </span><span>using</span><span> AI-powered tools to </span><span>ferret out</span><span> and prevent malicious uses of their technology</span><span>, but</span><span> experts</span><span> caution that the industry still </span><span>hasn\u2019t determined how</span><span> to </span><span>stop</span><span> indirect prompt injection attacks, the report </span><span>said</span><span>.</span></p>\n<p><span>Later in November, Anthropic published research showing its Claude Opus 4.5 model reduced successful </span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/news/artificial-intelligence/2025/anthropic-pushes-back-hackers-press-ai-weak-spots/\" rel=\"noopener\" target=\"_blank\"><span>prompt injection</span></a><span> attacks to 1% in browser-based operations, down from earlier versions that faced higher breach rates when adversaries embedded malicious instructions in web content.</span></p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/google/2025/google-adds-security-layers-to-safeguard-agentic-browsing-with-chrome/\">Google Adds Security Layers to Safeguard Agentic Browsing With Chrome</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
+    "image_url": "https://www.pymnts.com/wp-content/uploads/2025/12/Google-Gemini-agentic-browsing1.jpg?w=457",
+    "summary_text": "Google has announced new tools it will use to improve the safety of agentic browsing with Chrome. The tools are designed in part to combat \u201cthe primary new threat facing all agentic browsers,\u201d indirect prompt injection, Nathan Parker, Chrome security team, sa...",
+    "category": "ai",
+    "_trending_tags": [
+      "agent",
+      "google"
+    ],
+    "_permalink": "/p/e057cdeced/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/e057cdeced/",
+    "_summary_240": "Google has announced new tools it will use to improve the safety of agentic browsing with Chrome. The tools are designed in part to combat \u201cthe primary new threat facing all...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/e057cdeced/thumbnail.png"
+  },
+  {
     "title": "Nvidia can sell H200 AI chips to China, Trump says",
     "url": "https://www.ft.com/content/ac63139d-5143-4aed-a1e4-980a06551b51",
     "published_at": "2025-12-08T17:39:19-05:00",
@@ -196,14 +215,14 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/ae383a62cb/thumbnail.png"
   },
   {
-    "title": "Nvidia Wins Trump\u2019s Approval to Sell Its H200 AI Chips in China",
+    "title": "Nvidia Wins Trump\u2019s Approval to Sell H200 AI Chips in China",
     "url": "https://www.bloomberg.com/news/articles/2025-12-08/nvidia-set-to-win-us-approval-to-export-h200-ai-chips-to-china",
     "published_at": "2025-12-08T14:45:27-05:00",
     "source": "Bloomberg Technology",
-    "summary": "President Donald Trump granted Nvidia Corp. permission to ship its H200 artificial intelligence chip to China in exchange for a 25% cut of the sales, a move that would mark a major lobbying win for the world\u2019s most valuable company and potentially let it regain billions of dollars of business lost in a key global market.",
-    "content_html": "Jensen Huang, chief executive officer of Nvidia Corp., departs following a meeting with members of the Senate Banking Committee in Washington on Dec. 3.",
-    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iCSbKEogJnLE/v1/1200x-1.jpg",
-    "summary_text": "President Donald Trump granted Nvidia Corp. permission to ship its H200 artificial intelligence chip to China in exchange for a 25% cut of the sales, a move that would mark a major lobbying win for the world\u2019s most valuable company and potentially let it rega...",
+    "summary": "President Donald Trump granted Nvidia Corp. permission to ship its H200 artificial intelligence chip to China in exchange for a 25% surcharge, a move that lets the world\u2019s most valuable company potentially regain billions of dollars in lost business from a key global market.",
+    "content_html": "Jensen Huang",
+    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iCSbKEogJnLE/v2/1200x-1.jpg",
+    "summary_text": "President Donald Trump granted Nvidia Corp. permission to ship its H200 artificial intelligence chip to China in exchange for a 25% surcharge, a move that lets the world\u2019s most valuable company potentially regain billions of dollars in lost business from a ke...",
     "category": "ai",
     "_trending_tags": [
       "ai",
@@ -359,7 +378,7 @@
     "published_at": "2025-12-08T13:25:33-05:00",
     "source": "The Verge",
     "summary": "Joshua Aaron, the developer of the ICEBlock app, is suing Attorney General Pam Bondi, US Homeland Security Secretary Kirsti Noem, acting director of ICE Todd Lyons, White House \"Border Czar\" Tom Homan, and other federal officials over the Trump administration's \"unlawful threats\" made against Aaron and its actions to pressure Apple to pull the app [\u2026]",
-    "content_html": "<figure>\n\n<img alt=\"\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/07/STKB356_ICEBLOCK_A.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100\" />\n\t<figcaption>\n\t\t</figcaption>\n</figure>\n<p class=\"has-text-align-none\">Joshua Aaron, the developer of the ICEBlock app, <a href=\"https://www.documentcloud.org/documents/26360528-joshua-aaron-vs-pam-bondi-and-others-iceblock-lawsuit/\">is suing</a> Attorney General Pam Bondi, US Homeland Security Secretary Kirsti Noem, acting director of ICE Todd Lyons, White House \"Border Czar\" Tom Homan, and other federal officials over the Trump administration's \"unlawful threats\" made against Aaron and its actions to pressure Apple to pull the app from the App Store, which it did.</p>\n<p class=\"has-text-align-none\">\"We promised you we would fight back. Well, today's the day we make good on the promise,\" according to a post from <a href=\"https://bsky.app/profile/iceblock.app\">ICEBlock's official account on Bluesky</a>. Aaron, Apple, and the Department of Homeland Security, didn't immediately respond to a request for comment fr \u2026</p>\n<p><a href=\"https://www.theverge.com/news/840164/iceblock-joshua-aaron-sues-trump-administration-apple-app-store-removeal\">Read the full story at The Verge.</a></p>",
+    "content_html": "<figure>\n\n<img alt=\"\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/07/STKB356_ICEBLOCK_A.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100\" />\n\t<figcaption>\n\t\t</figcaption>\n</figure>\n<p class=\"has-text-align-none\">Joshua Aaron, the developer of the ICEBlock app, <a href=\"https://www.documentcloud.org/documents/26360528-joshua-aaron-vs-pam-bondi-and-others-iceblock-lawsuit/\">is suing</a> Attorney General Pam Bondi, US Homeland Security Secretary Kirsti Noem, acting director of ICE Todd Lyons, White House \"Border Czar\" Tom Homan, and other federal officials over the Trump administration's \"unlawful threats\" made against Aaron and its actions to pressure Apple to pull the app from the App Store, which it did.</p>\n<p class=\"has-text-align-none\">\"We promised you we would fight back. Well, today's the day we make good on the promise,\" according to a post from <a href=\"https://bsky.app/profile/iceblock.app\">ICEBlock's official account on Bluesky</a>. Aaron and Apple didn't immediately respond to a request for comment from <em>The Verge</em>. </p>\n<p class=\"has-text-align-none\">Department of Justice s \u2026</p>\n<p><a href=\"https://www.theverge.com/news/840164/iceblock-joshua-aaron-sues-trump-administration-apple-app-store-removeal\">Read the full story at The Verge.</a></p>",
     "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/07/STKB356_ICEBLOCK_A.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
     "summary_text": "Joshua Aaron, the developer of the ICEBlock app, is suing Attorney General Pam Bondi, US Homeland Security Secretary Kirsti Noem, acting director of ICE Todd Lyons, White House \"Border Czar\" Tom Homan, and other federal officials over the Trump administration...",
     "category": "software",
@@ -1479,20 +1498,6 @@
     "_trending_tags": [
       "microsoft",
       "mistral"
-    ]
-  },
-  {
-    "title": "Admins and defenders gird themselves against maximum-severity server vuln",
-    "url": "https://arstechnica.com/security/2025/12/admins-and-defenders-gird-themselves-against-maximum-severity-server-vulnerability/",
-    "published_at": "2025-12-03T18:16:03-05:00",
-    "source": "Ars Technica",
-    "summary": "Open source React executes malicious code with malformed HTML\u2014no authentication needed.",
-    "content_html": "<p>Security defenders are girding themselves in response to the disclosure of a maximum-severity vulnerability disclosed Wednesday in React Server, an open-source package that\u2019s widely used by websites and in cloud environments.</p>\n<p>The vulnerability is easy to exploit and allows hackers to execute malicious code on servers that run it. Exploit code is now <a href=\"https://github.com/ejpir/CVE-2025-55182-poc/tree/main\">publicly available</a>.</p>\n<p>React is embedded into web apps running on servers so that remote devices render JavaScript and content more quickly and with fewer resources required. React is used by an estimated <a href=\"https://www.wiz.io/blog/critical-vulnerability-in-react-cve-2025-55182\">6 percent</a> of all websites and 39 percent of cloud environments. When end users reload a page, React allows servers to re-render only parts that have changed, a feature that drastically speeds up performance and lowers the computing resources required by the server.</p><p><a href=\"https://arstechnica.com/security/2025/12/admins-and-defenders-gird-themselves-against-maximum-severity-server-vulnerability/\">Read full article</a></p>\n<p><a href=\"https://arstechnica.com/security/2025/12/admins-and-defenders-gird-themselves-against-maximum-severity-server-vulnerability/#comments\">Comments</a></p>",
-    "image_url": "https://cdn.arstechnica.net/wp-content/uploads/2023/07/exploit-vulnerability-security-1.jpg",
-    "summary_text": "Open source React executes malicious code with malformed HTML\u2014no authentication needed.",
-    "category": "software",
-    "_trending_tags": [
-      "ai"
     ]
   },
   {
