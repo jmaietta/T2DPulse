@@ -6,6 +6,8 @@
 # - Parallel RSS fetching
 # - Session with retry adapter
 # - Cleaner organization
+# - Updated for Grid Layout (Thumbnails sized for Cards)
+# - Added loading="lazy" to images
 
 import os
 import re
@@ -1278,7 +1280,8 @@ def create_branded_og_image(source_url: str, permalink_dir: str, pre_extracted_i
     thumbnail_path = os.path.join(permalink_dir, "thumbnail.png")
 
     TARGET_WIDTH, TARGET_HEIGHT = 1200, 630
-    THUMB_WIDTH, THUMB_HEIGHT = 240, 135
+    # Increased THUMB_WIDTH for grid layout (was 240)
+    THUMB_WIDTH, THUMB_HEIGHT = 400, 225
     LOGO_SIZE, PADDING = 120, 20
 
     def _compose_and_save(base_img: Image.Image) -> tuple[str, str]:
@@ -1495,7 +1498,7 @@ def build_section(date_str: str, by_cat: dict) -> str:
             summary_txt = clean_text(strip_html_to_text(it.get("summary_text", "")), 180)
             summary_html = html.escape(summary_txt)
             top_cls = " top" if idx == 0 else ""
-            thumb_html = f'<img src="{thumbnail}" alt="{html.escape(title_raw, quote=True)}" class="article-thumb">' if thumbnail else ''
+            thumb_html = f'<img src="{thumbnail}" alt="{html.escape(title_raw, quote=True)}" class="article-thumb" loading="lazy">' if thumbnail else ''
 
             parts.append(f"""<article class="{top_cls.strip()}" data-card data-url="{url}" data-permalink="{permalink}" data-title="{html.escape(title_raw, quote=True)}" data-summary="{summary_html}" data-source="{src}">
   {thumb_html}
