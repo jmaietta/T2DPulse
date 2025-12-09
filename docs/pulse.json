@@ -15,6 +15,36 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/8d874640ea/thumbnail.png"
   },
   {
+    "title": "Can Your Treasury Function Put Money to Work Immediately?",
+    "url": "https://www.pymnts.com/real-time-payments/2025/can-your-treasury-function-put-money-to-work-immediately/",
+    "published_at": "2025-12-09T17:27:10-05:00",
+    "source": "PYMNTS",
+    "summary": "For decades, corporate treasury has been organized around a simple premise: Money moves slowly enough that decisions can wait. But real-time payment rails, always-on banking APIs, and continuous data flows are fundamentally altering how money moves through corporations. The most effective treasury functions are becoming not those that simply know where the money is [\u2026] The post Can Your Treasury ...",
+    "content_html": "<p><span>For decades, corporate treasury has been organized around a simple premise: Money moves slowly enough that decisions can wait. But real-time payment rails, always-on banking APIs, and continuous data flows are fundamentally altering how </span><span>money</span><span> moves through corporations. </span></p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p><span>The most effective treasury functions are </span><span>becoming</span><span> not</span><span> those that </span><span>simply</span><span> know where the money is at day\u2019s end.</span><span> They are the ones </span><span>that can</span><span> answer a more demanding question at any moment: Can we put this money to work, right now?</span></p>\n<p><span>Historically, end-of-day reporting served a practical purpose. When banks processed transactions in batches and settlement windows were rigid, a daily snapshot was the best available approximation of reality. Liquidity buffers existed to absorb delays, errors, and unknowns.</span></p>\n<p><span>But in a real-time environment, end-of-day reporting resembles a lagging indicator. </span><span>Cash positions can change materially throughout the day as customer payments arrive instantly, supplier payments are settled in </span><span>real time</span><span>, or funding is </span><span>moved</span><span> across accounts at any hour.</span></p>\n<p><span>As highlighted by the Tuesday (Dec. 9) </span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/partnerships/2025/clearbank-and-finseta-team-to-simplify-international-payments/\" rel=\"noopener\" target=\"_blank\"><span>partnership</span></a><span> between embedded banking provider\u00a0</span><a class=\"editor-rtfLink\" href=\"https://clear.bank/\" rel=\"noopener\" target=\"_blank\"><span>ClearBank</span></a><span> and foreign exchange (FX) and payments solutions company\u00a0</span><a class=\"editor-rtfLink\" href=\"https://finseta.com/\" rel=\"noopener\" target=\"_blank\"><span>Finseta</span></a><span>, designed to leverage ClearBank\u2019s </span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/topic/real-time-payments/\" rel=\"noopener\" target=\"_blank\"><span>real-time payment</span></a><span> infrastructure, the marketplace is moving toward a widening </span><span>embrace</span><span> of always-on treasury solutions.</span></p>\n<p><span>The irony is that treasury teams may have more visibility into cash than ever before</span><span>, but many</span><span> are still unable to act on it in real time because systems and processes cannot confirm its availability quickly enough. </span></p>\n<p><span>All of this </span><span>elevates</span><span> the importance of how </span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/earnings/2025/bank-earnings-spotlight-treasury-innovation-growth-engine/\" rel=\"noopener\" target=\"_blank\"><span>treasury</span><span> connects</span></a><span> to its</span><span> banks.</span></p>\n<p><strong><span>Read more:</span></strong> <a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/cfo/2025/ai-cyber-risk-and-payments-monetization-put-treasury-at-the-center-of-finance/\" rel=\"noopener\" target=\"_blank\"><span>AI, Cyber Risk and Payments Monetization Put Treasury at the Center of </span><span>Finance</span><span>\u00a0</span></a></p>\n<h2>End of \u2018Good Enough\u2019 Treasury Management</h2>\n<p><span>Real-time payment systems, such as RTP\u00ae and FedNow\u00ae in the U.S., SEPA Instant in Europe, and Faster Payments in the U.K., have been available in some form for years</span><span>, but</span><span> recent adoption has been </span><span>meaningfully</span><span> different.</span><span> Instant payment rails are no longer edge cases used only for emergencies or consumer use. They are becoming embedded in B2B workflows: supplier payments, intercompany funding, just-in-time payroll, and even treasury-to-treasury movements within corporate groups.</span></p>\n<p><span>At the same time, banks have quietly transformed how treasury teams can interact with them. APIs now provide continuous access to balances, intraday transactions, payment statuses, and FX positions. Cloud-based treasury management systems (TMS) can ingest this data in near real time, making the end-of-day file transfer model look obsolete.</span></p>\n<p><span>In this environment, \u201cgood\u201d treasury management is no longer defined by how efficiently a team closes the books each day. It is </span><span>defined</span><span> by how quickly and confidently it can deploy cash, rebalance liquidity, and respond to events as they happen.</span></p>\n<p><span>For many organizations, that shift is uncomfortable. Treasury teams were not built to operate like trading desks. Controls, approvals and risk frameworks were designed around slower cycles. </span></p>\n<p><span>Many treasury teams discover that the bottleneck is not their TMS, but the way it connects to their banks. Batch files processed a few times a day are ill-suited to a world where liquidity decisions need to be made continuously.</span></p>\n<p><strong><span>Read more:</span></strong> <a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/news/b2b-payments/2025/making-sense-of-the-liquidity-hub-treasury-model/\" rel=\"noopener\" target=\"_blank\"><span>Making Sense of the Liquidity Hub Treasury </span><span>Model</span></a><strong><span>\u00a0</span></strong></p>\n<h2>Transformation Is Incremental, Not Instant</h2>\n<p><span>The good news is that closing the gap between payment speed and treasury decisioning does not usually require a wholesale transformation. Few organizations can justify replacing core systems solely to gain real-time capabilities, and many do not need full intraday optimization across all cash pools.</span></p>\n<p><span>Instead, leading treasury teams are layering real-time extensions onto existing architectures. This is where banks </span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/tracker_posts/business-at-risk-how-credit-unions-can-attract-and-keep-smb-members/\" rel=\"noopener\" target=\"_blank\"><span>increasingly play </span></a><span>a central role.</span></p>\n<p><span>Modern banks offer API-based services that </span><span>sit alongside</span><span> traditional channels, providing incremental capabilities without </span><span>forcing</span><span> clients to abandon established processes.</span><span> A treasury team might still run its daily cash positioning cycle as before, but supplement it with intraday balance APIs for critical accounts, or real-time payment status updates for high-value transactions.</span></p>\n<p><span>This hybrid approach </span><span>allows</span><span> treasurers to focus </span><span>real-time</span> <span>decisioning</span><span> where it matters most \u2014 large payments, constrained currencies, volatile periods \u2014 while </span><span>leaving</span><span> lower-risk flows on existing schedules.</span><span> It also reduces the organizational shock of moving from a batch-driven world to a fully continuous one.</span></p>\n<p><strong><span>Read more:\u00a0</span></strong><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/cfo/2025/why-cfo-is-now-chief-forecasting-officer/\" rel=\"noopener\" target=\"_blank\"><span>Why CFO Now Stands for \u2018Chief Forecasting Officer\u2019</span></a><strong><span>\u00a0</span></strong></p>\n<p><span>This does not mean abandoning structure. Many organizations still anchor decisions around scheduled reviews. What changes is that those reviews are informed by up-to-the-minute data rather than stale snapshots. Exceptions can be flagged as they arise, </span><span>not</span><span> discovered hours later.</span></p>\n<p><span>Progressive treasury teams are engaging banks not just as service providers, but as partners in redesigning cash management. They are asking pointed questions: Which accounts support real-time balance reporting? How quickly are transactions reflected? What controls can be embedded upstream? How does real-time data integrate with existing TMS workflows?</span></p>\n<p><span>For most organizations, </span><span>that</span><span> journey </span><span>starts</span><span> with a conversation \u2014 with their banks, </span><span>their</span><span> TMS providers, and </span><span>their</span><span> internal stakeholders.</span><span> Understanding what is already possible, and where incremental real-time extensions can deliver outsized benefits, is far more effective than embarking on an all-or-nothing transformation.</span></p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/real-time-payments/2025/can-your-treasury-function-put-money-to-work-immediately/\">Can Your Treasury Function Put Money to Work Immediately?</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
+    "image_url": "https://www.pymnts.com/wp-content/uploads/2025/12/faster-money1.jpg?w=457",
+    "summary_text": "For decades, corporate treasury has been organized around a simple premise: Money moves slowly enough that decisions can wait. But real-time payment rails, always-on banking APIs, and continuous data flows are fundamentally altering how money moves through co...",
+    "category": "fintech",
+    "_permalink": "/p/e5cbf30ae4/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/e5cbf30ae4/",
+    "_summary_240": "For decades, corporate treasury has been organized around a simple premise: Money moves slowly enough that decisions can wait. But real-time payment rails, always-on banking...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/e5cbf30ae4/thumbnail.png"
+  },
+  {
+    "title": "Nvidia Wins US Approval to Sell H200 Chips to China | Bloomberg Tech 12/9/2025",
+    "url": "https://www.bloomberg.com/news/videos/2025-12-09/bloomberg-tech-12-9-2025-video",
+    "published_at": "2025-12-09T17:07:41-05:00",
+    "source": "Bloomberg Technology",
+    "summary": "Bloomberg\u2019s Caroline Hyde and Ed Ludlow discuss President Trump\u2019s decision to allow Nvidia to ship its H200 AI chip to China, in exchange for a 25% surcharge. Plus, the battle for Warner Bros. heats up, as antitrust concerns swirl around both Netflix\u2019s and Paramount Skydance\u2019s offers. And Microsoft is committing $17.5 billion over four years to help build India's cloud and AI infrastructure. (Sou...",
+    "content_html": "",
+    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/inGlbvxshKkM/v3/1200x-1.jpg",
+    "summary_text": "Bloomberg\u2019s Caroline Hyde and Ed Ludlow discuss President Trump\u2019s decision to allow Nvidia to ship its H200 AI chip to China, in exchange for a 25% surcharge. Plus, the battle for Warner Bros. heats up, as antitrust concerns swirl around both Netflix\u2019s and Pa...",
+    "category": "ai",
+    "_permalink": "/p/87f6225fcf/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/87f6225fcf/",
+    "_summary_240": "Bloomberg\u2019s Caroline Hyde and Ed Ludlow discuss President Trump\u2019s decision to allow Nvidia to ship its H200 AI chip to China, in exchange for a 25% surcharge. Plus, the battle...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/87f6225fcf/thumbnail.png"
+  },
+  {
     "title": "Here\u2019s what happened in crypto today",
     "url": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
     "published_at": "2025-12-09T17:03:36-05:00",
@@ -383,7 +413,11 @@
     "content_html": "",
     "image_url": "https://techcrunch.com/wp-content/uploads/2024/08/ring_battery_doorbell_2024.jpg?w=1200",
     "summary_text": "The feature lets you identify the people who regularly come to your door by creating a catalog of up to 50 faces. The company says the Ring feature is opt in and the biometric data isn't used to train AI models.",
-    "category": "ai"
+    "category": "ai",
+    "_permalink": "/p/9e04fc025f/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/9e04fc025f/",
+    "_summary_240": "The feature lets you identify the people who regularly come to your door by creating a catalog of up to 50 faces. The company says the Ring feature is opt in and the biometric...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/9e04fc025f/thumbnail.png"
   },
   {
     "title": "UK crypto lobbying group joins Digital Chamber in cross-border policy push",
@@ -399,21 +433,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/fb3a0ea760/",
     "_summary_240": "The partnership between the two advocacy groups was the latest move in efforts by US and UK policymakers to work closer together on crypto regulation.",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/fb3a0ea760/thumbnail.png"
-  },
-  {
-    "title": "ClearBank and Finseta Team to Simplify International Payments",
-    "url": "https://www.pymnts.com/partnerships/2025/clearbank-and-finseta-team-to-simplify-international-payments/",
-    "published_at": "2025-12-09T13:43:38-05:00",
-    "source": "PYMNTS",
-    "summary": "Embedded banking provider ClearBank has launched a collaboration with foreign exchange (FX) and payments solutions company Finseta. The partnership, announced in a news release Tuesday (Dec. 9) is designed to deliver agency banking services supporting British pound (GBP) and multi-currency (MCCY) accounts. The partnership will see Finseta use ClearBank\u2019s virtual IBAN technology to provide [\u2026] The...",
-    "content_html": "<p><span style=\"font-weight: 400;\">Embedded banking provider </span><a href=\"https://clear.bank/\" rel=\"noopener\" target=\"_blank\"><span style=\"font-weight: 400;\">ClearBank</span></a><span style=\"font-weight: 400;\"> has launched a collaboration with foreign exchange (FX) and payments solutions company </span><a href=\"https://finseta.com/\" rel=\"noopener\" target=\"_blank\"><span style=\"font-weight: 400;\">Finseta</span></a><span style=\"font-weight: 400;\">.</span></p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p><span style=\"font-weight: 400;\">The partnership, announced in a </span><a href=\"https://clear.bank/learn/news/partnering-finseta-power-its-multicurrency-cross-border-payments\" rel=\"noopener\" target=\"_blank\"><span style=\"font-weight: 400;\">news release</span></a><span style=\"font-weight: 400;\"> Tuesday (Dec. 9) is designed to deliver agency banking services supporting British pound (GBP) and multi-currency (MCCY) accounts.</span></p>\n<p><span style=\"font-weight: 400;\">The partnership will see Finseta use ClearBank\u2019s virtual IBAN technology to provide both GBP and MCCY wallets for its UK customers, letting them move money faster and more efficiently.</span></p>\n<p><span style=\"font-weight: 400;\">ClearBank\u2019s </span><a href=\"https://www.pymnts.com/topic/real-time-payments/\" rel=\"noopener\" target=\"_blank\"><span style=\"font-weight: 400;\">real-time payment</span></a><span style=\"font-weight: 400;\"> infrastructure, the release added, will support people and merchants who have complicated international payment and FX needs, while also letting them access additional currencies.</span></p>\n<p><span style=\"font-weight: 400;\">\u201cThis partnership marks an important milestone for both organizations. For Finseta, it strengthens its ability to unlock new segments and support clients in high-value international transactions and complex </span><a href=\"https://www.pymnts.com/tag/foreign-exchange/\" rel=\"noopener\" target=\"_blank\"><span style=\"font-weight: 400;\">FX scenarios</span></a><span style=\"font-weight: 400;\">,\u201d the release said. \u201cFor ClearBank, it represents another step in expanding its support for fintechs operating in the international payments ecosystem and its ability to facilitate real-time foreign currency payments.\u201d</span></p>\n<p><span style=\"font-weight: 400;\">According to the release, the collaboration will initially serve Finseta\u2019s customers in the UK, with the goal of eventually broadening the partnership to Europe. Finseta hopes the partnership will let it access </span><a href=\"https://www.pymnts.com/news/b2b-payments/2025/sepa-instant-payments-push-banks-and-b2b-payments-into-the-future/\" rel=\"noopener\" target=\"_blank\"><span style=\"font-weight: 400;\">SEPA payments</span></a><span style=\"font-weight: 400;\"> rails to bolster its operations in Europe and expand its offering.</span></p>\n<p><span style=\"font-weight: 400;\">Elsewhere from the world of </span><a href=\"https://www.pymnts.com/topic/cross-border/\" rel=\"noopener\" target=\"_blank\"><span style=\"font-weight: 400;\">cross-border payments</span></a><span style=\"font-weight: 400;\">, a recent PYMNTS Intelligence report shows that consumer expectations around these transactions have shifted faster than many retailers\u2019 payment strategies.</span></p>\n<p><span style=\"font-weight: 400;\">\u202fThe report,\u202f</span><a href=\"https://www.pymnts.com/tracker_posts/going-global-how-payments-optimization-can-power-an-international-commerce-strategy/\" rel=\"noopener\" target=\"_blank\"><span style=\"font-weight: 400;\">\u201cGoing Global: How Payments Optimization Can Power an International Commerce Strategy,\u201d</span></a><span style=\"font-weight: 400;\"> found that many merchants continue to fall short in providing the speed, transparency and convenience that international shoppers expect.</span></p>\n<p><span style=\"font-weight: 400;\">\u201cThese gaps slow conversions,\u201d PYMNTS wrote recently. \u201cThey also create an entry point for competitors with stronger payment localization strategies.\u201d</span></p>\n<p><span style=\"font-weight: 400;\">The research points to findings that spotlight the scale of disconnect between merchant readiness and consumer demand.</span></p>\n<p><span style=\"font-weight: 400;\">For example, </span><a href=\"https://www.pymnts.com/digital-payments/2025/66-percent-cross-border-shift-to-digital-payments-raises-pressure-on-global-merchants/\" rel=\"noopener\" target=\"_blank\"><span style=\"font-weight: 400;\">two-thirds of global eCommerce value</span></a><span style=\"font-weight: 400;\"> was conducted through digital payments last year 2024, but\u202f72%\u202fof merchants said they say higher payment failure rates for cross-border transactions than domestic ones. This failure rate can lead shoppers to abandon purchases after just a few tries.</span></p>\n<p><span style=\"font-weight: 400;\">In addition, 99%\u202fof cross-border shoppers \u201cwant to pay with their preferred </span><a href=\"https://www.pymnts.com/news/cross-border-commerce/cross-border-payments/2025/why-99-percent-of-cross-border-consumers-insist-on-local-payment-methods/\" rel=\"noopener\" target=\"_blank\"><span style=\"font-weight: 400;\">local payment method</span></a><span style=\"font-weight: 400;\">, and\u202f94% expect to pay in their own currency,\u201d PYMNTS wrote. \u201cThe report shows that merchants who do not offer these options risk losing more than half of potential buyers.\u201d</span></p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/partnerships/2025/clearbank-and-finseta-team-to-simplify-international-payments/\">ClearBank and Finseta Team to Simplify International Payments</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
-    "image_url": "https://www.pymnts.com/wp-content/uploads/2025/12/clearbank-finseta-cross-border-payments-international-payments-partnerships-foreign-exchange.jpeg?w=457",
-    "summary_text": "Embedded banking provider ClearBank has launched a collaboration with foreign exchange (FX) and payments solutions company Finseta. The partnership, announced in a news release Tuesday (Dec. 9) is designed to deliver agency banking services supporting British...",
-    "category": "fintech",
-    "_permalink": "/p/fe7b1bb5ab/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/fe7b1bb5ab/",
-    "_summary_240": "Embedded banking provider ClearBank has launched a collaboration with foreign exchange (FX) and payments solutions company Finseta. The partnership, announced in a news release...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/fe7b1bb5ab/thumbnail.png"
   },
   {
     "title": "Delivery Hero Weighs Options After Holders Seek Strategic Review",
@@ -499,7 +518,11 @@
     "content_html": "Howard Marks, co-founder of Oaktree Capital Group, at the Qatar Economic Forum (QEF) in Doha, Qatar, on Wednesday, May 21, 2025. The fifth annual Qatar Economic Forum will gather government and business leaders in Doha to discuss what\u2019s driving the global economy. Photographer: Christopher Pike/Bloomberg",
     "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iWXIiSW1bN5M/v0/1200x-1.jpg",
     "summary_text": "Artificial intelligence has created a \u201cterrifying\u201d outlook for employment, Oaktree Capital Management LP co-founder Howard Marks cautioned, and an assumed productivity boom fails to consider how many people will be able to afford the additional goods produced.",
-    "category": "ai"
+    "category": "ai",
+    "_permalink": "/p/e8018a3cb2/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/e8018a3cb2/",
+    "_summary_240": "Artificial intelligence has created a \u201cterrifying\u201d outlook for employment, Oaktree Capital Management LP co-founder Howard Marks cautioned, and an assumed productivity boom fails...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/e8018a3cb2/thumbnail.png"
   },
   {
     "title": "BMW\u2019s New CEO Bet Early on Nvidia to Gain Lead in Factory Setup",
@@ -1090,6 +1113,21 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/c37582cf2a/thumbnail.png"
   },
   {
+    "title": "Claude Code in Slack",
+    "url": "https://www.youtube.com/watch?v=XpXImenrSPI",
+    "published_at": "2025-12-08T13:56:15-05:00",
+    "source": "Anthropic YouTube",
+    "summary": "Delegate tasks to Claude Code directly from Slack, making it easy to move context from Slack conversations to coding sessions. Claude Code in Slack is available now for teams with the Claude app installed in their Slack workspace and who have access to Claude Code on the web. Read more: https://www.anthropic.com/news/claude-code-and-slack",
+    "content_html": "",
+    "image_url": "https://i.ytimg.com/vi/XpXImenrSPI/maxresdefault.jpg",
+    "summary_text": "Delegate tasks to Claude Code directly from Slack, making it easy to move context from Slack conversations to coding sessions. Claude Code in Slack is available now for teams with the Claude app installed in their Slack workspace and who have access to Claude...",
+    "category": "ai",
+    "_permalink": "/p/ff630b758a/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/ff630b758a/",
+    "_summary_240": "Delegate tasks to Claude Code directly from Slack, making it easy to move context from Slack conversations to coding sessions. Claude Code in Slack is available now for teams...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/ff630b758a/thumbnail.png"
+  },
+  {
     "title": "The State of AI: life in 2030",
     "url": "https://www.ft.com/content/5bff1202-b2ce-439a-8687-8f8b919c683e",
     "published_at": "2025-12-08T12:00:05-05:00",
@@ -1185,21 +1223,6 @@
     "image_url": "",
     "summary_text": "Key findings from OpenAI\u2019s enterprise data show accelerating AI adoption, deeper integration, and measurable productivity gains across industries in 2025.",
     "category": "ai"
-  },
-  {
-    "title": "Interview Practice with ChatGPT",
-    "url": "https://www.youtube.com/watch?v=Belt8RStJeM",
-    "published_at": "2025-12-07T21:15:38-05:00",
-    "source": "OpenAI YouTube",
-    "summary": "Be your best at your next job interview... rehearse what you want to say with ChatGPT.",
-    "content_html": "",
-    "image_url": "https://i.ytimg.com/vi/Belt8RStJeM/maxresdefault.jpg",
-    "summary_text": "Be your best at your next job interview... rehearse what you want to say with ChatGPT.",
-    "category": "ai",
-    "_permalink": "/p/cb5275e9af/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/cb5275e9af/",
-    "_summary_240": "Be your best at your next job interview... rehearse what you want to say with ChatGPT.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/cb5275e9af/thumbnail.png"
   },
   {
     "title": "How Virgin Atlantic uses AI to enhance every step of travel",
