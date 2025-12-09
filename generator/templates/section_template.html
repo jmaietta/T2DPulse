@@ -100,8 +100,7 @@
     /* Focus states for keyboard navigation */
     a:focus-visible,
     button:focus-visible,
-    input:focus-visible,
-    .trend-chip:focus-visible {
+    input:focus-visible {
       outline: 2px solid var(--ai);
       outline-offset: 2px;
     }
@@ -452,28 +451,6 @@
       opacity: 0.7;
     }
 
-    /* Trending indicator */
-    .trending-indicator {
-      display: inline-flex;
-      align-items: center;
-      gap: 4px;
-      padding: 0.15rem 0.4rem;
-      background: rgba(16, 185, 129, 0.08);
-      border: 1px solid rgba(16, 185, 129, 0.2);
-      border-radius: 6px;
-      font-size: 0.625rem;
-      font-weight: 600;
-      color: #059669;
-      letter-spacing: 0.03em;
-      text-transform: uppercase;
-    }
-    
-    .trending-indicator::before {
-      content: "↗";
-      font-size: 0.7rem;
-      font-weight: 700;
-    }
-
     /* Article summary */
     p[data-summary] {
       margin: 0;
@@ -486,46 +463,6 @@
       -webkit-box-orient: vertical;
       overflow: hidden;
       flex-grow: 1; /* Push footer down */
-    }
-
-    /* ============================================
-       TRENDING CHIPS
-       ============================================ */
-    .trend-chips {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.375rem;
-      margin-top: 1rem;
-      margin-bottom: 0.25rem;
-    }
-    
-    /* Hide duplicate and empty chip containers */
-    article .trend-chips ~ .trend-chips,
-    [data-card] .trend-chips ~ .trend-chips,
-    article .trend-chips:empty,
-    [data-card] .trend-chips:empty {
-      display: none;
-    }
-
-    .trend-chip {
-      display: inline-flex;
-      align-items: center;
-      gap: 4px;
-      padding: 0.2rem 0.5rem;
-      border-radius: 20px;
-      background: var(--bg-subtle);
-      border: 1px solid var(--line);
-      font-size: 0.7rem;
-      font-weight: 600;
-      color: var(--ink-soft);
-      cursor: pointer;
-      transition: all var(--transition-fast);
-    }
-    
-    .trend-chip:hover {
-      background: var(--ai-light);
-      color: var(--ai);
-      border-color: var(--ai-border);
     }
 
     /* ============================================
@@ -746,10 +683,6 @@
     @media (prefers-contrast: high) {
       article {
         border: 2px solid var(--ink);
-      }
-      
-      .trend-chip {
-        border: 2px solid currentColor;
       }
       
       .badge {
@@ -1014,46 +947,6 @@
         applyFilter(q0);
       }
     } catch (_) {}
-  })();
-  </script>
-
-  <script>
-  (function() {
-    const SITE_SEARCH_URL = '/?q=';
-
-    const chips = document.querySelectorAll('.trend-chip');
-    
-    chips.forEach(chip => {
-      const keyword = (chip.textContent || '').trim();
-      if (!keyword) return;
-      
-      chip.setAttribute('role', 'link');
-      chip.setAttribute('tabindex', '0');
-
-      // Simple site search on click, instead of external trends
-      function getTargetUrl() {
-        return SITE_SEARCH_URL + encodeURIComponent(keyword);
-      }
-
-      chip.addEventListener('click', () => {
-        // Option: Change this to window.location.href if you want to stay in same tab
-        // But for filters, updating the input box is often nicer.
-        const input = document.getElementById('t2d-q');
-        if (input) {
-            input.value = keyword;
-            input.dispatchEvent(new Event('input'));
-            const container = document.getElementById('tek2day-pulse');
-            if(container) container.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-      });
-      
-      chip.addEventListener('keydown', (e) => {
-        if (e.key === 'Enter' || e.key === ' ') {
-          e.preventDefault();
-          chip.click();
-        }
-      });
-    });
   })();
   </script>
 
