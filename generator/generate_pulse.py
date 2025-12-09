@@ -1,13 +1,12 @@
 #!/usr/bin/env python3
 # generator/generate_pulse.py
 # Refactored version with:
+# - REMOVED: Google Trends / Trending Chips / Trending Badges
 # - Consolidated duplicate functions
 # - Dataclasses for type safety
 # - Parallel RSS fetching
 # - Session with retry adapter
-# - Cleaner organization
-# - Updated for Grid Layout (Thumbnails sized for Cards)
-# - Added loading="lazy" to images
+# - Updated for Grid Layout
 
 import os
 import re
@@ -37,12 +36,6 @@ from dateutil import parser as dtparser
 from PIL import Image
 from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
-
-# Google Trends (pytrends) optional import with fallback
-try:
-    from pytrends.request import TrendReq
-except Exception:
-    TrendReq = None
 
 # ============================================================================
 # CONFIGURATION
@@ -128,7 +121,6 @@ class Article:
     image_url: str = ""
     category: str = ""
     summary_text: str = ""
-    trending_tags: list[str] = field(default_factory=list)
     permalink: str = ""
     abs_permalink: str = ""
     summary_240: str = ""
@@ -154,8 +146,6 @@ class Article:
             result["category"] = self.category
         if self.summary_text:
             result["summary_text"] = self.summary_text
-        if self.trending_tags:
-            result["_trending_tags"] = self.trending_tags
         if self.permalink:
             result["_permalink"] = self.permalink
         if self.abs_permalink:
@@ -183,7 +173,6 @@ class Article:
             image_url=data.get("image_url", ""),
             category=data.get("category", ""),
             summary_text=data.get("summary_text", ""),
-            trending_tags=data.get("_trending_tags", []),
             permalink=data.get("_permalink", ""),
             abs_permalink=data.get("_abs_permalink", ""),
             summary_240=data.get("_summary_240", ""),
@@ -737,118 +726,6 @@ def is_deals_or_consumer_shopping(title: str, url: str) -> bool:
     if any(n in t for n in DEAL_WORDS) or any(n in t for n in CONSUMER_GADGET_WORDS):
         return True
     return any(p in t for p in DEAL_PATH_HINTS)
-
-
-# ============================================================================
-# TRENDING KEYWORDS
-# ============================================================================
-
-def _norm_keyword(s: str) -> str:
-    """Normalize keyword for matching."""
-    return re.sub(r"[^a-z0-9]+", "", (s or "").lower())
-
-
-TRENDING_KEYWORD_ALIASES: dict[str, list[str]] = {
-    "ai": ["AI", "A.I.", "A I", "a.i.", "a i", "artificial intelligence", 
-           "artificial-intelligence", "artificial_intelligence", "Artificial Intelligence"],
-    "chatgpt": ["ChatGPT", "Chat GPT", "chat gpt"],
-    "openai": ["OpenAI", "Open AI", "open ai"],
-    "deepseek": ["DeepSeek", "Deep Seek", "deep seek"],
-}
-
-ALIAS_TO_CANON: dict[str, str] = {
-    _norm_keyword(variant): canon.lower()
-    for canon, variants in TRENDING_KEYWORD_ALIASES.items()
-    for variant in variants + [canon]
-}
-
-
-def _match_trending_keywords(text: str, keywords: list[str]) -> list[str]:
-    """Match trending keywords in text, returning canonical forms."""
-    if not text:
-        return []
-    tl = text.lower()
-    tn = _norm_keyword(text)
-
-    out: set[str] = set()
-    for kw in (keywords or []):
-        if not kw:
-            continue
-        kw_lower = kw.lower().strip()
-        kw_norm = _norm_keyword(kw)
-        matched = (kw_lower and kw_lower in tl) or (kw_norm and kw_norm in tn)
-        if not matched:
-            continue
-        canonical = ALIAS_TO_CANON.get(kw_norm, kw_lower)
-        out.add(canonical)
-    return sorted(out)
-
-
-def get_trending_tech_keywords(max_keywords: int = 25) -> list[str]:
-    """Fetch trending tech keywords from Google Trends with fallback."""
-    fallback = [
-        "ai", "openai", "anthropic", "claude", "chatgpt", "gpt", "llm", "deepmind", "mistral",
-        "nvidia", "h100", "gpu", "cuda", "rocm", "tensor", "transformer", "agent", "genai",
-        "google", "microsoft", "apple", "meta", "amazon", "cloud", "saas", "kubernetes", "k8s",
-        "stripe", "paypal", "fintech", "bitcoin", "ethereum", "stablecoin", "vector db", "embedding", "llama"
-    ]
-    try:
-        if TrendReq is None:
-            return fallback[:max_keywords]
-        pytrends = TrendReq(hl="en-US", tz=360)
-        df = pytrends.trending_searches(pn="united_states")
-        trends = [str(x).strip() for x in df.iloc[:, 0].dropna().tolist()]
-        seeds = ["AI", "OpenAI", "Nvidia", "Claude", "ChatGPT", "Llama", "GPU", "Cloud", "Fintech", "Stripe",
-                 "Microsoft", "Google", "Apple"]
-        enriched = []
-        for seed in seeds:
-            try:
-                pytrends.build_payload([seed], timeframe="now 7-d", geo="US")
-                rq = pytrends.related_queries()
-                for _, v in (rq or {}).items():
-                    if not v:
-                        continue
-                    for col in ("rising", "top"):
-                        if v.get(col) is not None:
-                            enriched += [str(x).strip() for x in v[col]["query"].dropna().tolist()]
-            except Exception:
-                continue
-        tech_hints = {
-            "ai", "gpt", "llm", "model", "chip", "gpu", "npu", "cuda", "rocm", "nvidia", "openai", "anthropic",
-            "claude", "deepmind", "mistral", "llama", "meta", "microsoft", "azure", "google", "cloud", "saas",
-            "apple", "iphone", "mac", "silicon", "tensorflow", "pytorch", "transformer", "diffusion",
-            "agent", "prompt", "vector", "database", "fintech", "payments", "stripe", "paypal", "bitcoin",
-            "ethereum", "stablecoin"
-        }
-
-        def is_techy(q: str) -> bool:
-            ql = q.lower()
-            return any(h in ql for h in tech_hints)
-
-        merged = [t for t in (trends + enriched) if t and is_techy(t)]
-        seen = set()
-        uniq = []
-        for t in merged:
-            tl = t.lower()
-            if tl not in seen:
-                seen.add(tl)
-                uniq.append(tl)
-        if not uniq:
-            return fallback[:max_keywords]
-        return uniq[:max_keywords]
-    except Exception:
-        return fallback[:max_keywords]
-
-
-def _apply_trend_chips_inplace(it: dict, trending_keywords: list[str]) -> None:
-    """Apply trending tags to an item dictionary in-place."""
-    title = it.get("title", "") or ""
-    summary_raw = it.get("summary_text") or it.get("summary") or it.get("description") or ""
-    summary_txt = strip_html_to_text(summary_raw)
-    tags = set(_match_trending_keywords(title, trending_keywords))
-    tags.update(_match_trending_keywords(summary_txt, trending_keywords))
-    if tags:
-        it["_trending_tags"] = sorted(tags)
 
 
 # ============================================================================
@@ -1457,16 +1334,8 @@ def build_section(date_str: str, by_cat: dict) -> str:
     def render_items(items: list) -> str:
         parts = []
         for idx, it in enumerate(items):
-            trending_badge = '<span class="trending-indicator">Trending</span>' if it.get("_trending_tags") else ''
-            trending_chips_html = ''
-            if it.get("_trending_tags"):
-                try:
-                    trending_chips_html = ' '.join([
-                        f'<span class="trend-chip">{html.escape(tag)}</span>'
-                        for tag in it.get("_trending_tags", [])
-                    ])
-                except Exception:
-                    trending_chips_html = ''
+            # REMOVED: Trending Badge Logic
+            # REMOVED: Trending Chips Logic
 
             title_raw = it["title"]
             title = html.escape(title_raw)
@@ -1500,12 +1369,12 @@ def build_section(date_str: str, by_cat: dict) -> str:
             top_cls = " top" if idx == 0 else ""
             thumb_html = f'<img src="{thumbnail}" alt="{html.escape(title_raw, quote=True)}" class="article-thumb" loading="lazy">' if thumbnail else ''
 
+            # CLEANED UP HTML STRUCTURE (No trends)
             parts.append(f"""<article class="{top_cls.strip()}" data-card data-url="{url}" data-permalink="{permalink}" data-title="{html.escape(title_raw, quote=True)}" data-summary="{summary_html}" data-source="{src}">
   {thumb_html}
   <div class="article-content">
     <h3><a data-title-link href="{url}">{title}</a></h3>
-    <div class="meta"><span class="src">{src}</span> · {dt_str} {render_item_badges(it)} {trending_badge}</div>
-    <div class="trend-chips">{trending_chips_html}</div>
+    <div class="meta"><span class="src">{src}</span> · {dt_str} {render_item_badges(it)}</div>
     <p data-summary>{summary_html}</p>
   </div>
 </article>""")
@@ -1600,8 +1469,7 @@ def main():
 
     print("=== Starting T2D Pulse Generation ===")
 
-    trending_keywords = get_trending_tech_keywords(max_keywords=30)
-    print(f"Fetched {len(trending_keywords)} trending tech keywords from Google Trends.")
+    # REMOVED: Fetching trending keywords logic
 
     # Fetch RSS feeds in parallel (major performance improvement)
     print(f"\n--- Fetching {len(CFG['sources']['rss'])} RSS feeds (parallel) ---")
@@ -1637,14 +1505,7 @@ def main():
             continue
         it["category"] = cat
 
-        # Tag with canonical trending chips
-        try:
-            tags = set(_match_trending_keywords(it.get("title", ""), trending_keywords))
-            tags.update(_match_trending_keywords(it.get("summary_text", ""), trending_keywords))
-            if tags:
-                it["_trending_tags"] = sorted(tags)
-        except Exception:
-            pass
+        # REMOVED: Tagging with trending keywords
 
         # Force-routing for certain sources/domains
         try:
@@ -1681,11 +1542,7 @@ def main():
         backfill_days=BACKFILL_WINDOW_DAYS
     )
 
-    # Ensure chips are present for items being rendered now
-    for cat in ("ai", "software", "fintech"):
-        for it in by_cat.get(cat, []):
-            if not it.get("_trending_tags"):
-                _apply_trend_chips_inplace(it, trending_keywords)
+    # REMOVED: Loop to ensure chips are present
 
     # Generate permalinks and concise summaries for today's items (PARALLEL for speed)
     unique_items, _seen = [], set()
@@ -1746,28 +1603,7 @@ def main():
     except Exception:
         pass
 
-    # Trending analytics JSON
-    try:
-        analytics = {
-            "generated_at": now_et().isoformat(),
-            "total_keywords": len(trending_keywords),
-            "keyword_counts": {},
-            "sources_per_keyword": {},
-            "top_articles_per_keyword": {},
-        }
-        items_for_stats = unique_items
-        kw_to_items = {}
-        for it in items_for_stats:
-            for kw in (it.get("_trending_tags") or []):
-                kw_to_items.setdefault(kw, []).append(it)
-        for kw, items in kw_to_items.items():
-            analytics["keyword_counts"][kw] = len(items)
-        nonzero = {k: v for k, v in analytics["keyword_counts"].items() if v > 0}
-        analytics["keyword_counts"] = dict(sorted(nonzero.items(), key=lambda kv: (-kv[1], kv[0])))
-        with open(os.path.join(docs, "trending_analytics.json"), "w", encoding="utf-8") as f:
-            json.dump(analytics, f, indent=2)
-    except Exception as e:
-        print(f"Warning: failed to write trending_analytics.json: {e}")
+    # REMOVED: Trending analytics JSON
 
     # Daily snapshot
     try:
@@ -1781,50 +1617,7 @@ def main():
     except Exception:
         pass
 
-    # Backfill: retro-tag archived items with canonical trending chips
-    try:
-        ts_dir = os.path.join(docs, "archive", "timestamped")
-        if os.path.isdir(ts_dir):
-            updated_files = 0
-            for filename in os.listdir(ts_dir):
-                if not filename.endswith(".json"):
-                    continue
-                path = os.path.join(ts_dir, filename)
-                try:
-                    with open(path, "r", encoding="utf-8") as f:
-                        data = json.load(f)
-                except Exception:
-                    continue
-
-                items = data.get("items") or []
-                changed = False
-
-                for it in items:
-                    title = it.get("title", "")
-                    summary_raw = it.get("summary_text") or it.get("summary") or it.get("description") or ""
-                    summary_txt = strip_html_to_text(summary_raw)
-                    tags = set(_match_trending_keywords(title, trending_keywords))
-                    tags.update(_match_trending_keywords(summary_txt, trending_keywords))
-                    if tags:
-                        new_tags = sorted(tags)
-                        if new_tags != (it.get("_trending_tags") or []):
-                            it["_trending_tags"] = new_tags
-                            changed = True
-
-                if changed:
-                    try:
-                        with open(path, "w", encoding="utf-8") as f:
-                            json.dump({"items": items}, f, indent=2, ensure_ascii=False)
-                        updated_files += 1
-                    except Exception as e:
-                        print(f"Backfill write failed for {filename}: {e}")
-
-            if updated_files:
-                print(f"Backfill: updated trending tags in {updated_files} archived snapshot file(s).")
-            else:
-                print("Backfill: no archived snapshots needed updates.")
-    except Exception as e:
-        print(f"Backfill error: {e}")
+    # REMOVED: Backfill retro-tagging logic
 
     print(f"\n=== T2D Pulse Generation Complete ===")
     print(f"Total articles: {len(all_items)}")
