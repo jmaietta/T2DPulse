@@ -881,30 +881,15 @@
     "url": "https://venturebeat.com/ai/anthropics-claude-code-can-now-read-your-slack-messages-and-write-code-for",
     "published_at": "2025-12-08T14:00:00-05:00",
     "source": "VentureBeat",
-    "summary": "Anthropic on Monday launched a beta integration that connects its fast-growing Claude Code programming agent directly to Slack , allowing software engineers to delegate coding tasks without leaving the workplace messaging platform where much of their daily communication already happens. The release, which Anthropic describes as a \" research preview ,\" is the AI safety company's latest move to emb...",
+    "summary": "Anthropic has launched a beta integration that connects its fast-growing Claude Code programming agent directly into Slack , allowing software engineers to delegate coding tasks without leaving the workplace messaging platform where much of their daily communication already happens. The release, which Anthropic describes as a \" research preview ,\" is the company's latest move to embed its technol...",
     "content_html": "",
     "image_url": "https://images.ctfassets.net/jdtwqhzvc2n1/667OUCJyzh5TAzDpX4UQDa/d1b772df47ef4e01e6450e1bb9979970/nuneybits_Vector_art_of_code-filled_speech_bubble_in_burnt_oran_78f6bff7-7863-4363-bcad-892c8f7cf2f7.webp?w=800&amp;q=75",
-    "summary_text": "Anthropic on Monday launched a beta integration that connects its fast-growing Claude Code programming agent directly to Slack , allowing software engineers to delegate coding tasks without leaving the workplace messaging platform where much of their daily co...",
+    "summary_text": "Anthropic has launched a beta integration that connects its fast-growing Claude Code programming agent directly into Slack , allowing software engineers to delegate coding tasks without leaving the workplace messaging platform where much of their daily commun...",
     "category": "software",
     "_permalink": "/p/c37582cf2a/",
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/c37582cf2a/",
-    "_summary_240": "Anthropic on Monday launched a beta integration that connects its fast-growing Claude Code programming agent directly to Slack , allowing software engineers to delegate coding...",
+    "_summary_240": "Anthropic has launched a beta integration that connects its fast-growing Claude Code programming agent directly into Slack , allowing software engineers to delegate coding tasks...",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/c37582cf2a/thumbnail.png"
-  },
-  {
-    "title": "Claude Code in Slack",
-    "url": "https://www.youtube.com/watch?v=XpXImenrSPI",
-    "published_at": "2025-12-08T13:56:15-05:00",
-    "source": "Anthropic YouTube",
-    "summary": "Delegate tasks to Claude Code directly from Slack, making it easy to move context from Slack conversations to coding sessions. Claude Code in Slack is available now for teams with the Claude app installed in their Slack workspace and who have access to Claude Code on the web. Read more: https://www.anthropic.com/news/claude-code-and-slack",
-    "content_html": "",
-    "image_url": "https://i.ytimg.com/vi/XpXImenrSPI/maxresdefault.jpg",
-    "summary_text": "Delegate tasks to Claude Code directly from Slack, making it easy to move context from Slack conversations to coding sessions. Claude Code in Slack is available now for teams with the Claude app installed in their Slack workspace and who have access to Claude...",
-    "category": "ai",
-    "_permalink": "/p/ff630b758a/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/ff630b758a/",
-    "_summary_240": "Delegate tasks to Claude Code directly from Slack, making it easy to move context from Slack conversations to coding sessions. Claude Code in Slack is available now for teams...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/ff630b758a/thumbnail.png"
   },
   {
     "title": "Google details security measures for Chrome\u2019s agentic features",
@@ -1018,13 +1003,9 @@
     "source": "Financial Times - Technology",
     "summary": "AI advances made through group\u2019s custom processor hit Nvidia\u2019s stock and prompt ChatGPT maker to declare \u2018code red\u2019",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/f9b73243-bd35-4dcf-bb77-2287e2c6eec4.jpg",
+    "image_url": "",
     "summary_text": "AI advances made through group\u2019s custom processor hit Nvidia\u2019s stock and prompt ChatGPT maker to declare \u2018code red\u2019",
-    "category": "ai",
-    "_permalink": "/p/0e94c29a8f/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/0e94c29a8f/",
-    "_summary_240": "AI advances made through group\u2019s custom processor hit Nvidia\u2019s stock and prompt ChatGPT maker to declare \u2018code red\u2019",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/0e94c29a8f/thumbnail.png"
+    "category": "ai"
   },
   {
     "title": "Qatar Sets Up National AI Firm, Follows UAE and Saudi Arabia",
@@ -1044,13 +1025,9 @@
     "source": "Financial Times - Technology",
     "summary": "Washington cheered on the consolidation of the social web in the 2010s \u2014 it must not make the same mistake today",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/bd4c0b6c-ee86-4e91-9833-728426a3d258.jpg",
+    "image_url": "",
     "summary_text": "Washington cheered on the consolidation of the social web in the 2010s \u2014 it must not make the same mistake today",
-    "category": "ai",
-    "_permalink": "/p/ae2499974b/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/ae2499974b/",
-    "_summary_240": "Washington cheered on the consolidation of the social web in the 2010s \u2014 it must not make the same mistake today",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/ae2499974b/thumbnail.png"
+    "category": "ai"
   },
   {
     "title": "Apple Manufacturing Academy launches virtual programming",
@@ -1105,6 +1082,21 @@
     "category": "ai"
   },
   {
+    "title": "Interview Practice with ChatGPT",
+    "url": "https://www.youtube.com/watch?v=Belt8RStJeM",
+    "published_at": "2025-12-07T21:15:38-05:00",
+    "source": "OpenAI YouTube",
+    "summary": "Be your best at your next job interview... rehearse what you want to say with ChatGPT.",
+    "content_html": "",
+    "image_url": "https://i.ytimg.com/vi/Belt8RStJeM/maxresdefault.jpg",
+    "summary_text": "Be your best at your next job interview... rehearse what you want to say with ChatGPT.",
+    "category": "ai",
+    "_permalink": "/p/cb5275e9af/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/cb5275e9af/",
+    "_summary_240": "Be your best at your next job interview... rehearse what you want to say with ChatGPT.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/cb5275e9af/thumbnail.png"
+  },
+  {
     "title": "How Virgin Atlantic uses AI to enhance every step of travel",
     "url": "https://openai.com/index/virgin-atlantic-oliver-byers",
     "published_at": "2025-12-07T19:00:00-05:00",
@@ -1137,13 +1129,9 @@
     "source": "Financial Times - Technology",
     "summary": "Manufacturers tout apps that help users switch from iPhones",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/c2d1c6bf-7b9b-44c1-a5ed-d33efe1d9323.jpg",
+    "image_url": "",
     "summary_text": "Manufacturers tout apps that help users switch from iPhones",
-    "category": "ai",
-    "_permalink": "/p/2498c65b22/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/2498c65b22/",
-    "_summary_240": "Manufacturers tout apps that help users switch from iPhones",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/2498c65b22/thumbnail.png"
+    "category": "ai"
   },
   {
     "title": "Why AI coding agents aren\u2019t production-ready: Brittle context windows, broken refactors, missing operational awareness",
@@ -1167,7 +1155,7 @@
     "source": "Financial Times - Technology",
     "summary": "Deal indicates Zuckerberg is exploring other types of artificial intelligence-powered devices beyond smart glasses",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/144cdc23-a3b2-40e8-a10b-c43ab8cedd28.png",
+    "image_url": "",
     "summary_text": "Deal indicates Zuckerberg is exploring other types of artificial intelligence-powered devices beyond smart glasses",
     "category": "ai"
   },
