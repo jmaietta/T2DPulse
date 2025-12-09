@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>T2D Pulse</title>
 
-  <!-- Social share (OG + Twitter) -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="T2D Pulse - AI, Software & FinTech News">
   <meta property="og:description" content="AI, Software, and FinTech News.">
@@ -19,13 +18,11 @@
   <meta name="twitter:description" content="AI, Software, and FinTech News.">
   <meta name="twitter:image" content="https://pulse.tek2dayholdings.com/icons/T2D_Pulse_Banner.png">
 
-  <!-- PWA + icons -->
   <meta name="theme-color" content="#0f172a" />
   <link rel="manifest" href="./manifest.webmanifest" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-  <!-- Orbitron font for branding -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -299,84 +296,121 @@
 
     /* Section container */
     #tek2day-pulse {
-      background: var(--card);
-      border: 1px solid var(--line);
-      border-radius: calc(var(--radius) + 4px);
-      padding: 1.5rem;
-      box-shadow: var(--shadow);
-      margin-top: 1.5rem;
-    }
-
-    /* Items grid */
-    .items {
-      display: grid;
-      gap: 1rem;
-      grid-template-columns: 1fr;
+      background: transparent;
+      border: none;
+      padding: 0;
+      box-shadow: none;
+      margin-top: 2rem;
     }
 
     /* ============================================
-       ARTICLE CARDS - Modern design
+       GRID LAYOUT
+       ============================================ */
+    .items {
+      display: grid;
+      gap: 1.5rem;
+      /* Intelligent 3-column grid that falls back automatically */
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      align-items: start;
+    }
+
+    /* ============================================
+       ARTICLE CARDS - Grid Style
        ============================================ */
     article {
       position: relative;
       background: var(--card);
       border: 1px solid var(--line);
       border-radius: var(--radius);
-      padding: 1.25rem;
       display: flex;
-      gap: 1.25rem;
-      align-items: flex-start;
+      flex-direction: column; /* Stack vertically for grid card */
+      overflow: hidden; /* Ensure image doesn't bleed out */
+      height: 100%; /* Uniform height */
       transition: transform var(--transition-fast), box-shadow var(--transition), border-color var(--transition);
       will-change: transform;
     }
     
     article:hover {
-      transform: translateY(-2px);
+      transform: translateY(-4px);
       box-shadow: var(--shadow-lg);
       border-color: var(--line-light);
+      z-index: 2;
     }
     
-    /* Featured/top article */
+    /* Article thumbnail - Full width card header */
+    .article-thumb {
+      width: 100%;
+      height: 180px;
+      border-radius: 0;
+      object-fit: cover;
+      background: var(--bg-subtle);
+      border-bottom: 1px solid var(--line-light);
+    }
+
+    /* Article content wrapper */
+    .article-content {
+      padding: 1.25rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Featured/top article - Spans columns on larger screens */
     article.top {
       background: linear-gradient(180deg, rgba(99, 102, 241, 0.03) 0%, var(--card) 100%);
       border-color: var(--ai-border);
     }
     
+    /* Hero layout logic */
+    @media (min-width: 768px) {
+      .items > article.top {
+        grid-column: span 2;
+      }
+      .items > article.top .article-thumb {
+         height: 300px;
+      }
+    }
+    
+    @media (min-width: 1100px) {
+      .items > article.top {
+        grid-column: 1 / -1; /* Full width */
+        flex-direction: row; /* Side-by-side for hero */
+        align-items: stretch;
+      }
+      .items > article.top .article-thumb {
+        width: 50%;
+        height: auto;
+        min-height: 350px;
+        border-bottom: none;
+        border-right: 1px solid var(--line-light);
+      }
+      .items > article.top .article-content {
+        padding: 2rem;
+        justify-content: center;
+      }
+      .items > article.top h3 {
+        font-size: 1.75rem;
+      }
+    }
+
     article.top:hover {
       border-color: rgba(99, 102, 241, 0.3);
     }
 
-    /* Article thumbnail */
-    .article-thumb {
-      width: 160px;
-      height: 100px;
-      border-radius: var(--radius-sm);
-      object-fit: cover;
-      flex-shrink: 0;
-      background: var(--bg-subtle);
-    }
-
-    /* Article content */
-    .article-content {
-      flex: 1;
-      min-width: 0;
-      display: flex;
-      flex-direction: column;
-    }
-
     /* Article title */
     h3 {
-      margin: 0 0 0.5rem;
+      margin: 0 0 0.75rem;
       font-size: 1.125rem;
       line-height: 1.4;
       font-weight: 700;
-      letter-spacing: -0.02em;
+      letter-spacing: -0.01em;
     }
     
     h3 a {
       color: var(--ink);
       text-decoration: none;
       transition: color var(--transition-fast);
+      display: block; /* Expand click area */
     }
     
     h3 a:hover {
@@ -386,8 +420,8 @@
     /* Article meta */
     .meta {
       color: var(--muted);
-      font-size: 0.8125rem;
-      margin-bottom: 0.5rem;
+      font-size: 0.75rem;
+      margin-bottom: 0.75rem;
       display: flex;
       gap: 0.5rem;
       align-items: center;
@@ -403,9 +437,9 @@
     /* Badges */
     .badge {
       display: inline-block;
-      padding: 0.2rem 0.5rem;
+      padding: 0.15rem 0.4rem;
       border-radius: 6px;
-      font-size: 0.6875rem;
+      font-size: 0.625rem;
       font-weight: 700;
       background: var(--ai);
       color: white;
@@ -423,11 +457,11 @@
       display: inline-flex;
       align-items: center;
       gap: 4px;
-      padding: 0.2rem 0.5rem;
+      padding: 0.15rem 0.4rem;
       background: rgba(16, 185, 129, 0.08);
       border: 1px solid rgba(16, 185, 129, 0.2);
       border-radius: 6px;
-      font-size: 0.6875rem;
+      font-size: 0.625rem;
       font-weight: 600;
       color: #059669;
       letter-spacing: 0.03em;
@@ -436,26 +470,33 @@
     
     .trending-indicator::before {
       content: "↗";
-      font-size: 0.75rem;
+      font-size: 0.7rem;
       font-weight: 700;
     }
 
     /* Article summary */
     p[data-summary] {
-      margin: 0.5rem 0 0;
+      margin: 0;
       color: var(--ink-soft);
       font-size: 0.9375rem;
       line-height: 1.6;
+      /* Clamp text to 3 lines for clean grid */
+      display: -webkit-box;
+      -webkit-line-clamp: 4;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      flex-grow: 1; /* Push footer down */
     }
 
     /* ============================================
-       TRENDING CHIPS - Modern pill design
+       TRENDING CHIPS
        ============================================ */
     .trend-chips {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.5rem;
-      margin-top: 0.5rem;
+      gap: 0.375rem;
+      margin-top: 1rem;
+      margin-bottom: 0.25rem;
     }
     
     /* Hide duplicate and empty chip containers */
@@ -470,52 +511,21 @@
       display: inline-flex;
       align-items: center;
       gap: 4px;
-      padding: 0.25rem 0.625rem;
+      padding: 0.2rem 0.5rem;
       border-radius: 20px;
-      background: linear-gradient(135deg, #eef2ff 0%, #e0e7ff 100%);
-      border: 1px solid var(--ai-border);
-      font-size: 0.75rem;
+      background: var(--bg-subtle);
+      border: 1px solid var(--line);
+      font-size: 0.7rem;
       font-weight: 600;
-      color: #4f46e5;
+      color: var(--ink-soft);
       cursor: pointer;
       transition: all var(--transition-fast);
-      position: relative;
-    }
-    
-    .trend-chip::before {
-      content: "↗";
-      font-size: 0.65rem;
-      opacity: 0.7;
     }
     
     .trend-chip:hover {
-      background: linear-gradient(135deg, #e0e7ff 0%, #c7d2fe 100%);
-      border-color: rgba(99, 102, 241, 0.4);
-      transform: translateY(-1px);
-    }
-
-    /* Chip tooltip */
-    .trend-chip[data-tip]::after {
-      display: none;
-      position: absolute;
-      z-index: 30;
-      left: 50%;
-      transform: translateX(-50%);
-      bottom: calc(100% + 8px);
-      background: var(--ink);
-      color: white;
-      padding: 6px 10px;
-      border-radius: 8px;
-      font-size: 0.75rem;
-      font-weight: 500;
-      white-space: nowrap;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-      content: attr(data-tip);
-    }
-    
-    .trend-chip:hover::after,
-    .trend-chip:focus-visible::after {
-      display: block;
+      background: var(--ai-light);
+      color: var(--ai);
+      border-color: var(--ai-border);
     }
 
     /* ============================================
@@ -524,41 +534,94 @@
     .share {
       display: flex;
       gap: 0.5rem;
-      margin-top: 0.75rem;
-      flex-wrap: nowrap;
+      margin-top: 1.25rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--line-light);
       align-items: center;
     }
     
     .share-btn {
       appearance: none;
       -webkit-appearance: none;
-      border: 1px solid var(--line);
-      background: var(--card);
-      color: var(--ink-soft);
-      border-radius: var(--radius-xs);
-      padding: 0.375rem 0.75rem;
-      font-size: 0.8125rem;
+      border: none;
+      background: transparent;
+      color: var(--muted);
+      padding: 0;
+      font-size: 0.75rem;
       font-weight: 600;
       text-decoration: none;
       cursor: pointer;
-      white-space: nowrap;
-      flex-shrink: 0;
-      transition: all var(--transition-fast);
+      transition: color var(--transition-fast);
     }
     
     .share-btn:hover {
-      background: var(--bg-subtle);
-      border-color: var(--muted);
-      color: var(--ink);
+      color: var(--ai);
+    }
+    
+    .share-btn.copy-url {
+        margin-left: auto;
+    }
+
+    /* ============================================
+       BACK TO TOP BUTTON
+       ============================================ */
+    .back-to-top {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      background: var(--ai);
+      color: white;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      border: none;
+      box-shadow: var(--shadow-lg);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(20px);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      z-index: 90;
+      outline: none;
+    }
+
+    .back-to-top svg {
+      width: 24px;
+      height: 24px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2.5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .back-to-top.visible {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .back-to-top:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 25px rgba(99, 102, 241, 0.4);
+      background: #565add;
+    }
+
+    .back-to-top:focus-visible {
+      box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.3);
     }
 
     /* ============================================
        FOOTER
        ============================================ */
     .foot {
-      margin-top: 1.5rem;
-      padding-top: 1rem;
-      border-top: 1px solid var(--line-light);
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--line);
       color: var(--muted);
       font-size: 0.8125rem;
       text-align: center;
@@ -621,46 +684,40 @@
         padding: 0 1rem;
       }
       
-      #tek2day-pulse {
-        padding: 1rem;
-        margin-top: 1rem;
-      }
-      
       .items {
-        gap: 0.875rem;
+        grid-template-columns: 1fr; /* Force single column on mobile */
+        gap: 1.5rem;
       }
       
       article {
-        padding: 1rem;
+        /* On mobile, standard card stack */
         flex-direction: column;
-        gap: 0.875rem;
       }
       
-      .article-thumb {
+      /* Reset hero styles on mobile */
+      .items > article.top .article-thumb {
         width: 100%;
-        height: auto;
-        aspect-ratio: 16/9;
-        border-radius: var(--radius-xs);
+        height: 180px;
+        border-right: none;
+        border-bottom: 1px solid var(--line-light);
+      }
+      .items > article.top .article-content {
+        padding: 1.25rem;
       }
       
       h3 {
-        font-size: 1.0625rem;
-      }
-      
-      .trending-indicator {
-        padding: 0.15rem 0.4rem;
-        font-size: 0.625rem;
-      }
-      
-      .share {
-        flex-direction: row;
-        flex-wrap: wrap;
+        font-size: 1.125rem;
       }
       
       .share-btn {
-        flex: 1;
-        text-align: center;
-        justify-content: center;
+        padding: 0.5rem 0; /* Larger touch target */
+      }
+
+      .back-to-top {
+        bottom: 1.5rem;
+        right: 1.5rem;
+        width: 44px;
+        height: 44px;
       }
     }
 
@@ -679,11 +736,7 @@
       }
       
       article {
-        padding: 0.875rem;
-      }
-      
-      h3 {
-        font-size: 1rem;
+        border-radius: var(--radius-sm);
       }
     }
 
@@ -703,37 +756,6 @@
         border: 1px solid currentColor;
       }
     }
-
-    /* ============================================
-       DARK MODE (optional - uncomment to enable)
-       ============================================ */
-    /*
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --bg: #0f172a;
-        --bg-subtle: #1e293b;
-        --card: #1e293b;
-        --ink: #f1f5f9;
-        --ink-soft: #cbd5e1;
-        --muted: #94a3b8;
-        --line: #334155;
-        --line-light: #1e293b;
-      }
-      
-      header.site {
-        background: rgba(15, 23, 42, 0.85);
-      }
-      
-      header .tag .date {
-        background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
-      }
-      
-      .trend-chip {
-        background: linear-gradient(135deg, #312e81 0%, #3730a3 100%);
-        color: #c7d2fe;
-      }
-    }
-    */
   </style>
 
   <link rel="icon" type="image/x-icon" href="./icons/favicon.ico">
@@ -748,7 +770,6 @@
 </head>
 
 <body>
-  <!-- Sticky site header -->
   <header class="site">
     <div class="site-inner">
       <a href="/" aria-label="T2D Pulse Home">
@@ -773,17 +794,26 @@
   <div id="app">
     <section id="tek2day-pulse" aria-labelledby="tek2day-title">
       <div class="items">
-        <article class="top" data-card data-url="https://www.pymnts.com/google/2025/google-adds-security-layers-to-safeguard-agentic-browsing-with-chrome/?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/e057cdeced/" data-title="Google Adds Security Layers to Safeguard Agentic Browsing With Chrome" data-summary="Google has announced new tools it will use to improve the safety of agentic browsing with Chrome. The tools are designed in part to combat “the primary new threat facing all agent..." data-source="PYMNTS">
-  <img src="https://pulse.tek2dayholdings.com/p/e057cdeced/thumbnail.png" alt="Google Adds Security Layers to Safeguard Agentic Browsing With Chrome" class="article-thumb">
+        <article class="top" data-card data-url="https://cointelegraph.com/news/tether-backs-funding-round-italian-humanoid-robots?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound&utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/45d2bbcfc9/" data-title="Tether deepens AI bet, backs Italian firm’s humanoid robots" data-summary="The funding will support the development of humanoid robots for industrial use, aiming for “industrial scale performance.”" data-source="Cointelegraph">
+  <img src="https://pulse.tek2dayholdings.com/p/45d2bbcfc9/thumbnail.png" alt="Tether deepens AI bet, backs Italian firm’s humanoid robots" class="article-thumb" loading="lazy">
   <div class="article-content">
-    <h3><a data-title-link href="https://www.pymnts.com/google/2025/google-adds-security-layers-to-safeguard-agentic-browsing-with-chrome/?utm_source=tek2day&utm_medium=email">Google Adds Security Layers to Safeguard Agentic Browsing With Chrome</a></h3>
-    <div class="meta"><span class="src">PYMNTS</span> · Dec 8, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
-    <div class="trend-chips"><span class="trend-chip">agent</span> <span class="trend-chip">google</span></div>
-    <p data-summary>Google has announced new tools it will use to improve the safety of agentic browsing with Chrome. The tools are designed in part to combat “the primary new threat facing all agent...</p>
+    <h3><a data-title-link href="https://cointelegraph.com/news/tether-backs-funding-round-italian-humanoid-robots?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound&utm_source=tek2day&utm_medium=email">Tether deepens AI bet, backs Italian firm’s humanoid robots</a></h3>
+    <div class="meta"><span class="src">Cointelegraph</span> · Dec 8, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
+    <div class="trend-chips"><span class="trend-chip">ai</span></div>
+    <p data-summary>The funding will support the development of humanoid robots for industrial use, aiming for “industrial scale performance.”</p>
   </div>
 </article>
-<article class="" data-card data-url="https://www.ft.com/content/ac63139d-5143-4aed-a1e4-980a06551b51?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/423c19a41c/" data-title="Nvidia can sell H200 AI chips to China, Trump says" data-summary="President says other chipmakers can also resume exports and ‘25% will be paid’ to the US" data-source="Financial Times - Technology">
-  <img src="https://pulse.tek2dayholdings.com/p/423c19a41c/thumbnail.png" alt="Nvidia can sell H200 AI chips to China, Trump says" class="article-thumb">
+<article class="" data-card data-url="https://www.bloomberg.com/news/articles/2025-12-09/reddit-adds-global-teen-safety-features-ahead-of-australia-ban?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/a37cf1089a/" data-title="Reddit Adds Global Teen Safety Features Ahead of Australia Ban" data-summary="Reddit Inc. is launching new safety features globally for all under-18s on its popular online forums ahead of Australia’s groundbreaking social media ban." data-source="Bloomberg Technology">
+  <img src="https://pulse.tek2dayholdings.com/p/a37cf1089a/thumbnail.png" alt="Reddit Adds Global Teen Safety Features Ahead of Australia Ban" class="article-thumb" loading="lazy">
+  <div class="article-content">
+    <h3><a data-title-link href="https://www.bloomberg.com/news/articles/2025-12-09/reddit-adds-global-teen-safety-features-ahead-of-australia-ban?utm_source=tek2day&utm_medium=email">Reddit Adds Global Teen Safety Features Ahead of Australia Ban</a></h3>
+    <div class="meta"><span class="src">Bloomberg Technology</span> · Dec 8, 2025 <span class="badge">New</span> </div>
+    <div class="trend-chips"></div>
+    <p data-summary>Reddit Inc. is launching new safety features globally for all under-18s on its popular online forums ahead of Australia’s groundbreaking social media ban.</p>
+  </div>
+</article>
+<article class="" data-card data-url="https://www.ft.com/content/ac63139d-5143-4aed-a1e4-980a06551b51?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/3865a082bb/" data-title="Nvidia can sell H200 AI chips to China, Trump says" data-summary="President says other chipmakers can also resume exports and ‘25% will be paid’ to the US" data-source="Financial Times - Technology">
+  <img src="https://pulse.tek2dayholdings.com/p/3865a082bb/thumbnail.png" alt="Nvidia can sell H200 AI chips to China, Trump says" class="article-thumb" loading="lazy">
   <div class="article-content">
     <h3><a data-title-link href="https://www.ft.com/content/ac63139d-5143-4aed-a1e4-980a06551b51?utm_source=tek2day&utm_medium=email">Nvidia can sell H200 AI chips to China, Trump says</a></h3>
     <div class="meta"><span class="src">Financial Times - Technology</span> · Dec 8, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
@@ -791,8 +821,143 @@
     <p data-summary>President says other chipmakers can also resume exports and ‘25% will be paid’ to the US</p>
   </div>
 </article>
+<article class="" data-card data-url="https://www.nytimes.com/2025/12/08/theater/marjorie-prime-review-june-squibb.html?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/f8a3f91753/" data-title="‘Marjorie Prime’ Review: A.I. Gave Her Back Her Husband. Was It Worth It?" data-summary="June Squibb stars in the Broadway premiere of Jordan Harrison’s meditation on grief and the nature of human and artificial intelligence." data-source="The New York Times - Technology">
+  <img src="https://pulse.tek2dayholdings.com/p/f8a3f91753/thumbnail.png" alt="‘Marjorie Prime’ Review: A.I. Gave Her Back Her Husband. Was It Worth It?" class="article-thumb" loading="lazy">
+  <div class="article-content">
+    <h3><a data-title-link href="https://www.nytimes.com/2025/12/08/theater/marjorie-prime-review-june-squibb.html?utm_source=tek2day&utm_medium=email">‘Marjorie Prime’ Review: A.I. Gave Her Back Her Husband. Was It Worth It?</a></h3>
+    <div class="meta"><span class="src">The New York Times - Technology</span> · Dec 8, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
+    <div class="trend-chips"><span class="trend-chip">ai</span></div>
+    <p data-summary>June Squibb stars in the Broadway premiere of Jordan Harrison’s meditation on grief and the nature of human and artificial intelligence.</p>
+  </div>
+</article>
+<article class="" data-card data-url="https://www.pymnts.com/cryptocurrency/2025/bank-ceos-and-senators-to-discuss-crypto-market-regulation/?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/1c6ac6ee2d/" data-title="Bank CEOs and Senators to Discuss Crypto Market Regulation" data-summary="Bank CEOs are reportedly scheduled to meet with senators from both parties on Thursday (Dec. 11) to discuss crypto market regulation. The CEOs of Citigroup, Wells Fargo and Bank o..." data-source="PYMNTS">
+  <img src="https://pulse.tek2dayholdings.com/p/1c6ac6ee2d/thumbnail.png" alt="Bank CEOs and Senators to Discuss Crypto Market Regulation" class="article-thumb" loading="lazy">
+  <div class="article-content">
+    <h3><a data-title-link href="https://www.pymnts.com/cryptocurrency/2025/bank-ceos-and-senators-to-discuss-crypto-market-regulation/?utm_source=tek2day&utm_medium=email">Bank CEOs and Senators to Discuss Crypto Market Regulation</a></h3>
+    <div class="meta"><span class="src">PYMNTS</span> · Dec 8, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
+    <div class="trend-chips"><span class="trend-chip">llm</span></div>
+    <p data-summary>Bank CEOs are reportedly scheduled to meet with senators from both parties on Thursday (Dec. 11) to discuss crypto market regulation. The CEOs of Citigroup, Wells Fargo and Bank o...</p>
+  </div>
+</article>
+<article class="" data-card data-url="https://www.bloomberg.com/news/videos/2025-12-09/nvidia-wins-approval-to-sell-h200-chips-in-china-video?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/02dc0d0eec/" data-title="Nvidia Wins Approval to Sell H200 Chips in China" data-summary="President Donald Trump granted Nvidia Corp. permission to ship its H200 artificial intelligence chip to China in exchange for a 25% surcharge. Bloomberg&#x27;s Annabelle Droulers expla..." data-source="Bloomberg Technology">
+  <img src="https://pulse.tek2dayholdings.com/p/02dc0d0eec/thumbnail.png" alt="Nvidia Wins Approval to Sell H200 Chips in China" class="article-thumb" loading="lazy">
+  <div class="article-content">
+    <h3><a data-title-link href="https://www.bloomberg.com/news/videos/2025-12-09/nvidia-wins-approval-to-sell-h200-chips-in-china-video?utm_source=tek2day&utm_medium=email">Nvidia Wins Approval to Sell H200 Chips in China</a></h3>
+    <div class="meta"><span class="src">Bloomberg Technology</span> · Dec 8, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
+    <div class="trend-chips"><span class="trend-chip">ai</span> <span class="trend-chip">nvidia</span></div>
+    <p data-summary>President Donald Trump granted Nvidia Corp. permission to ship its H200 artificial intelligence chip to China in exchange for a 25% surcharge. Bloomberg&#x27;s Annabelle Droulers expla...</p>
+  </div>
+</article>
+<article class="" data-card data-url="https://www.pymnts.com/artificial-intelligence-2/2025/google-denies-report-it-plans-to-bring-ads-to-ai-chatbot-gemini/?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/6e464ae394/" data-title="Google Denies Report It Plans to Bring Ads to AI Chatbot Gemini" data-summary="Google denied a Monday (Dec. 8) report by AdWeek that the tech giant plans to bring ads to its artificial intelligence (AI) chatbot Gemini. “This story is based on uninformed, ano..." data-source="PYMNTS">
+  <img src="https://pulse.tek2dayholdings.com/p/6e464ae394/thumbnail.png" alt="Google Denies Report It Plans to Bring Ads to AI Chatbot Gemini" class="article-thumb" loading="lazy">
+  <div class="article-content">
+    <h3><a data-title-link href="https://www.pymnts.com/artificial-intelligence-2/2025/google-denies-report-it-plans-to-bring-ads-to-ai-chatbot-gemini/?utm_source=tek2day&utm_medium=email">Google Denies Report It Plans to Bring Ads to AI Chatbot Gemini</a></h3>
+    <div class="meta"><span class="src">PYMNTS</span> · Dec 8, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
+    <div class="trend-chips"><span class="trend-chip">ai</span> <span class="trend-chip">google</span></div>
+    <p data-summary>Google denied a Monday (Dec. 8) report by AdWeek that the tech giant plans to bring ads to its artificial intelligence (AI) chatbot Gemini. “This story is based on uninformed, ano...</p>
+  </div>
+</article>
+<article class="" data-card data-url="https://cointelegraph.com/news/occ-jonathan-gould-banks-crypto-shouldnt-be-treated-differently?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound&utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/3e61d9a30a/" data-title="OCC boss says ‘no justification’ to judge banks and crypto differently" data-summary="Office of the Comptroller of the Currency’s Jonathan Gould says crypto companies should have a path to supervision in the banking system, which can evolve to embrace blockchain." data-source="Cointelegraph">
+  <img src="https://pulse.tek2dayholdings.com/p/3e61d9a30a/thumbnail.png" alt="OCC boss says ‘no justification’ to judge banks and crypto differently" class="article-thumb" loading="lazy">
+  <div class="article-content">
+    <h3><a data-title-link href="https://cointelegraph.com/news/occ-jonathan-gould-banks-crypto-shouldnt-be-treated-differently?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound&utm_source=tek2day&utm_medium=email">OCC boss says ‘no justification’ to judge banks and crypto differently</a></h3>
+    <div class="meta"><span class="src">Cointelegraph</span> · Dec 8, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
+    <div class="trend-chips"><span class="trend-chip">ai</span></div>
+    <p data-summary>Office of the Comptroller of the Currency’s Jonathan Gould says crypto companies should have a path to supervision in the banking system, which can evolve to embrace blockchain.</p>
+  </div>
+</article>
+<article class="" data-card data-url="https://www.pymnts.com/artificial-intelligence-2/2025/qatar-launches-national-ai-firm-as-gulf-tech-investments-ramp-up/?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/b0544c06b4/" data-title="Qatar Launches National AI Firm as Gulf Tech Investments Ramp Up" data-summary="Qatar has established a new artificial intelligence (AI) company called Qai, joining larger Gulf nations that are channeling state resources into building domestic AI capabilities..." data-source="PYMNTS">
+  <img src="https://pulse.tek2dayholdings.com/p/b0544c06b4/thumbnail.png" alt="Qatar Launches National AI Firm as Gulf Tech Investments Ramp Up" class="article-thumb" loading="lazy">
+  <div class="article-content">
+    <h3><a data-title-link href="https://www.pymnts.com/artificial-intelligence-2/2025/qatar-launches-national-ai-firm-as-gulf-tech-investments-ramp-up/?utm_source=tek2day&utm_medium=email">Qatar Launches National AI Firm as Gulf Tech Investments Ramp Up</a></h3>
+    <div class="meta"><span class="src">PYMNTS</span> · Dec 8, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
+    <div class="trend-chips"><span class="trend-chip">ai</span></div>
+    <p data-summary>Qatar has established a new artificial intelligence (AI) company called Qai, joining larger Gulf nations that are channeling state resources into building domestic AI capabilities...</p>
+  </div>
+</article>
+<article class="" data-card data-url="https://www.bloomberg.com/news/articles/2025-12-09/us-detains-two-men-accused-of-smuggling-nvidia-ai-gear-to-china?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/e8564bc35a/" data-title="US Detains Two Men Accused of Smuggling Nvidia AI Gear to China" data-summary="The US Department of Justice has detained two men for allegedly violating export control laws by attempting to smuggle at least $160 million worth of Nvidia Corp. AI chips to Chin..." data-source="Bloomberg Technology">
+  <img src="https://pulse.tek2dayholdings.com/p/e8564bc35a/thumbnail.png" alt="US Detains Two Men Accused of Smuggling Nvidia AI Gear to China" class="article-thumb" loading="lazy">
+  <div class="article-content">
+    <h3><a data-title-link href="https://www.bloomberg.com/news/articles/2025-12-09/us-detains-two-men-accused-of-smuggling-nvidia-ai-gear-to-china?utm_source=tek2day&utm_medium=email">US Detains Two Men Accused of Smuggling Nvidia AI Gear to China</a></h3>
+    <div class="meta"><span class="src">Bloomberg Technology</span> · Dec 8, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
+    <div class="trend-chips"><span class="trend-chip">ai</span> <span class="trend-chip">nvidia</span></div>
+    <p data-summary>The US Department of Justice has detained two men for allegedly violating export control laws by attempting to smuggle at least $160 million worth of Nvidia Corp. AI chips to Chin...</p>
+  </div>
+</article>
+<article class="" data-card data-url="https://cointelegraph.com/news/cftc-pilot-crypto-collateral-derivative-markets?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound&utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/7d4ef15972/" data-title="CFTC pilot opens path for crypto as collateral in derivative markets" data-summary="The pilot program allows futures commission merchants to accept Bitcoin, Ether and USDC for margin collateral, provided strict reporting criteria are followed." data-source="Cointelegraph">
+  <img src="https://pulse.tek2dayholdings.com/p/7d4ef15972/thumbnail.png" alt="CFTC pilot opens path for crypto as collateral in derivative markets" class="article-thumb" loading="lazy">
+  <div class="article-content">
+    <h3><a data-title-link href="https://cointelegraph.com/news/cftc-pilot-crypto-collateral-derivative-markets?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound&utm_source=tek2day&utm_medium=email">CFTC pilot opens path for crypto as collateral in derivative markets</a></h3>
+    <div class="meta"><span class="src">Cointelegraph</span> · Dec 8, 2025 <span class="badge">New</span> </div>
+    <div class="trend-chips"></div>
+    <p data-summary>The pilot program allows futures commission merchants to accept Bitcoin, Ether and USDC for margin collateral, provided strict reporting criteria are followed.</p>
+  </div>
+</article>
+<article class="" data-card data-url="https://cointelegraph.com/news/fitch-ratings-warns-reassess-banks-with-high-crypto-exposure?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound&utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/2039367430/" data-title="Fitch Ratings flags risk for US banks with high crypto exposure" data-summary="While crypto offers banks an opportunity to generate new sources of revenue, Fitch warns it could bring risks that could lead to rating revisions." data-source="Cointelegraph">
+  <img src="https://pulse.tek2dayholdings.com/p/2039367430/thumbnail.png" alt="Fitch Ratings flags risk for US banks with high crypto exposure" class="article-thumb" loading="lazy">
+  <div class="article-content">
+    <h3><a data-title-link href="https://cointelegraph.com/news/fitch-ratings-warns-reassess-banks-with-high-crypto-exposure?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound&utm_source=tek2day&utm_medium=email">Fitch Ratings flags risk for US banks with high crypto exposure</a></h3>
+    <div class="meta"><span class="src">Cointelegraph</span> · Dec 8, 2025 <span class="badge">New</span> </div>
+    <div class="trend-chips"></div>
+    <p data-summary>While crypto offers banks an opportunity to generate new sources of revenue, Fitch warns it could bring risks that could lead to rating revisions.</p>
+  </div>
+</article>
+<article class="" data-card data-url="https://www.pymnts.com/cryptocurrency/2025/central-bank-of-argentina-considers-letting-lenders-trade-crypto-for-clients/?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/b7e9b137e3/" data-title="Central Bank of Argentina Considers Letting Lenders Trade Crypto for Clients" data-summary="The Central Bank of Argentina is reportedly considering letting traditional lenders trade cryptocurrencies for their clients. The central bank is drafting a measure and could have..." data-source="PYMNTS">
+  <img src="https://pulse.tek2dayholdings.com/p/b7e9b137e3/thumbnail.png" alt="Central Bank of Argentina Considers Letting Lenders Trade Crypto for Clients" class="article-thumb" loading="lazy">
+  <div class="article-content">
+    <h3><a data-title-link href="https://www.pymnts.com/cryptocurrency/2025/central-bank-of-argentina-considers-letting-lenders-trade-crypto-for-clients/?utm_source=tek2day&utm_medium=email">Central Bank of Argentina Considers Letting Lenders Trade Crypto for Clients</a></h3>
+    <div class="meta"><span class="src">PYMNTS</span> · Dec 8, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
+    <div class="trend-chips"><span class="trend-chip">ai</span></div>
+    <p data-summary>The Central Bank of Argentina is reportedly considering letting traditional lenders trade cryptocurrencies for their clients. The central bank is drafting a measure and could have...</p>
+  </div>
+</article>
+<article class="" data-card data-url="https://venturebeat.com/ai/z-ai-debuts-open-source-glm-4-6v-a-native-tool-calling-vision-model-for?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/e8a1117ab4/" data-title="Z.ai debuts open source GLM-4.6V, a native tool-calling vision model for multimodal reasoning" data-summary="Chinese AI startup Zhipu AI aka Z.ai has released its GLM-4.6V series , a new generation of open-source vision-language models (VLMs) optimized for multimodal reasoning, frontend ..." data-source="VentureBeat">
+  <img src="https://pulse.tek2dayholdings.com/p/e8a1117ab4/thumbnail.png" alt="Z.ai debuts open source GLM-4.6V, a native tool-calling vision model for multimodal reasoning" class="article-thumb" loading="lazy">
+  <div class="article-content">
+    <h3><a data-title-link href="https://venturebeat.com/ai/z-ai-debuts-open-source-glm-4-6v-a-native-tool-calling-vision-model-for?utm_source=tek2day&utm_medium=email">Z.ai debuts open source GLM-4.6V, a native tool-calling vision model for multimodal reasoning</a></h3>
+    <div class="meta"><span class="src">VentureBeat</span> · Dec 8, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
+    <div class="trend-chips"><span class="trend-chip">ai</span></div>
+    <p data-summary>Chinese AI startup Zhipu AI aka Z.ai has released its GLM-4.6V series , a new generation of open-source vision-language models (VLMs) optimized for multimodal reasoning, frontend ...</p>
+  </div>
+</article>
+<article class="" data-card data-url="https://www.ft.com/content/b1f92b0e-d6ef-4c95-b51e-7bcf90c8a65f?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/db9803f723/" data-title="China’s open-source AI is a national advantage" data-summary="The models are akin to studying together to ace a test instead of relying on individual knowledge" data-source="Financial Times - Technology">
+  <img src="https://pulse.tek2dayholdings.com/p/db9803f723/thumbnail.png" alt="China’s open-source AI is a national advantage" class="article-thumb" loading="lazy">
+  <div class="article-content">
+    <h3><a data-title-link href="https://www.ft.com/content/b1f92b0e-d6ef-4c95-b51e-7bcf90c8a65f?utm_source=tek2day&utm_medium=email">China’s open-source AI is a national advantage</a></h3>
+    <div class="meta"><span class="src">Financial Times - Technology</span> · Dec 8, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
+    <div class="trend-chips"><span class="trend-chip">ai</span></div>
+    <p data-summary>The models are akin to studying together to ace a test instead of relying on individual knowledge</p>
+  </div>
+</article>
+<article class="" data-card data-url="https://www.pymnts.com/business/2025/jpmorganchase-says-jeff-bezos-is-among-advisers-to-security-and-resiliency-initiative/?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/54d2b95945/" data-title="JPMorganChase Says Jeff Bezos Is Among Advisers to Security and Resiliency Initiative" data-summary="JPMorganChase said Monday (Dec. 8) that Jeff Bezos and Michael Dell will be among the 12 members of an external advisory council for its new Security and Resiliency Initiative (SR..." data-source="PYMNTS">
+  <img src="https://pulse.tek2dayholdings.com/p/54d2b95945/thumbnail.png" alt="JPMorganChase Says Jeff Bezos Is Among Advisers to Security and Resiliency Initiative" class="article-thumb" loading="lazy">
+  <div class="article-content">
+    <h3><a data-title-link href="https://www.pymnts.com/business/2025/jpmorganchase-says-jeff-bezos-is-among-advisers-to-security-and-resiliency-initiative/?utm_source=tek2day&utm_medium=email">JPMorganChase Says Jeff Bezos Is Among Advisers to Security and Resiliency Initiative</a></h3>
+    <div class="meta"><span class="src">PYMNTS</span> · Dec 8, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
+    <div class="trend-chips"><span class="trend-chip">ai</span></div>
+    <p data-summary>JPMorganChase said Monday (Dec. 8) that Jeff Bezos and Michael Dell will be among the 12 members of an external advisory council for its new Security and Resiliency Initiative (SR...</p>
+  </div>
+</article>
+<article class="" data-card data-url="https://www.bloomberg.com/news/articles/2025-12-08/sk-hynix-shares-draw-second-exchange-caution-on-blistering-rally?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/a1ca2f9a9f/" data-title="SK Hynix Shares Draw Second Exchange Notice on Blistering Rally" data-summary="South Korea’s main bourse operator issued its second warning in about one month over the rapid rise in shares of SK Hynix Inc., which have more than tripled this year on the artif..." data-source="Bloomberg Technology">
+  <img src="https://pulse.tek2dayholdings.com/p/a1ca2f9a9f/thumbnail.png" alt="SK Hynix Shares Draw Second Exchange Notice on Blistering Rally" class="article-thumb" loading="lazy">
+  <div class="article-content">
+    <h3><a data-title-link href="https://www.bloomberg.com/news/articles/2025-12-08/sk-hynix-shares-draw-second-exchange-caution-on-blistering-rally?utm_source=tek2day&utm_medium=email">SK Hynix Shares Draw Second Exchange Notice on Blistering Rally</a></h3>
+    <div class="meta"><span class="src">Bloomberg Technology</span> · Dec 8, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
+    <div class="trend-chips"><span class="trend-chip">ai</span></div>
+    <p data-summary>South Korea’s main bourse operator issued its second warning in about one month over the rapid rise in shares of SK Hynix Inc., which have more than tripled this year on the artif...</p>
+  </div>
+</article>
+<article class="" data-card data-url="https://www.pymnts.com/google/2025/google-adds-security-layers-to-safeguard-agentic-browsing-with-chrome/?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/e057cdeced/" data-title="Google Adds Security Layers to Safeguard Agentic Browsing With Chrome" data-summary="Google has announced new tools it will use to improve the safety of agentic browsing with Chrome. The tools are designed in part to combat “the primary new threat facing all agent..." data-source="PYMNTS">
+  <img src="https://pulse.tek2dayholdings.com/p/e057cdeced/thumbnail.png" alt="Google Adds Security Layers to Safeguard Agentic Browsing With Chrome" class="article-thumb" loading="lazy">
+  <div class="article-content">
+    <h3><a data-title-link href="https://www.pymnts.com/google/2025/google-adds-security-layers-to-safeguard-agentic-browsing-with-chrome/?utm_source=tek2day&utm_medium=email">Google Adds Security Layers to Safeguard Agentic Browsing With Chrome</a></h3>
+    <div class="meta"><span class="src">PYMNTS</span> · Dec 8, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
+    <div class="trend-chips"><span class="trend-chip">agent</span> <span class="trend-chip">google</span></div>
+    <p data-summary>Google has announced new tools it will use to improve the safety of agentic browsing with Chrome. The tools are designed in part to combat “the primary new threat facing all agent...</p>
+  </div>
+</article>
 <article class="" data-card data-url="https://www.bloomberg.com/news/articles/2025-12-08/tiger-global-returns-to-roots-with-smaller-2-2-billion-vc-goal?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/a35429dad1/" data-title="Tiger Global Returns to Roots With Smaller VC Goal" data-summary="Tiger Global Management’s venture capital business is reverting back to an earlier strategy: debuting smaller funds with paced investing, which it says produce its strongest retur..." data-source="Bloomberg Technology">
-  <img src="https://pulse.tek2dayholdings.com/p/a35429dad1/thumbnail.png" alt="Tiger Global Returns to Roots With Smaller VC Goal" class="article-thumb">
+  <img src="https://pulse.tek2dayholdings.com/p/a35429dad1/thumbnail.png" alt="Tiger Global Returns to Roots With Smaller VC Goal" class="article-thumb" loading="lazy">
   <div class="article-content">
     <h3><a data-title-link href="https://www.bloomberg.com/news/articles/2025-12-08/tiger-global-returns-to-roots-with-smaller-2-2-billion-vc-goal?utm_source=tek2day&utm_medium=email">Tiger Global Returns to Roots With Smaller VC Goal</a></h3>
     <div class="meta"><span class="src">Bloomberg Technology</span> · Dec 8, 2025 <span class="badge">New</span> </div>
@@ -801,7 +966,7 @@
   </div>
 </article>
 <article class="" data-card data-url="https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound&utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/c14345fa15/" data-title="Here’s what happened in crypto today" data-summary="Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, NFTs, Web3 and crypto regulation." data-source="Cointelegraph">
-  <img src="https://pulse.tek2dayholdings.com/p/c14345fa15/thumbnail.png" alt="Here’s what happened in crypto today" class="article-thumb">
+  <img src="https://pulse.tek2dayholdings.com/p/c14345fa15/thumbnail.png" alt="Here’s what happened in crypto today" class="article-thumb" loading="lazy">
   <div class="article-content">
     <h3><a data-title-link href="https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound&utm_source=tek2day&utm_medium=email">Here’s what happened in crypto today</a></h3>
     <div class="meta"><span class="src">Cointelegraph</span> · Dec 8, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
@@ -810,7 +975,7 @@
   </div>
 </article>
 <article class="" data-card data-url="https://www.pymnts.com/streaming/2025/streamings-ai-front-door-is-getting-more-valuable-just-ask-netflix-and-paramount/?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/28acf6c2fa/" data-title="Streaming’s AI ‘Front Door’ Is Getting More Valuable, Just Ask Netflix and Paramount" data-summary="The increasingly heated fight for Warner Bros. Discovery (WBD) is, on its face, about libraries: HBO’s prestige slate, DC’s franchises and Warner’s studio machine. But the bidding..." data-source="PYMNTS">
-  <img src="https://pulse.tek2dayholdings.com/p/28acf6c2fa/thumbnail.png" alt="Streaming’s AI ‘Front Door’ Is Getting More Valuable, Just Ask Netflix and Paramount" class="article-thumb">
+  <img src="https://pulse.tek2dayholdings.com/p/28acf6c2fa/thumbnail.png" alt="Streaming’s AI ‘Front Door’ Is Getting More Valuable, Just Ask Netflix and Paramount" class="article-thumb" loading="lazy">
   <div class="article-content">
     <h3><a data-title-link href="https://www.pymnts.com/streaming/2025/streamings-ai-front-door-is-getting-more-valuable-just-ask-netflix-and-paramount/?utm_source=tek2day&utm_medium=email">Streaming’s AI ‘Front Door’ Is Getting More Valuable, Just Ask Netflix and Paramount</a></h3>
     <div class="meta"><span class="src">PYMNTS</span> · Dec 8, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
@@ -819,7 +984,7 @@
   </div>
 </article>
 <article class="" data-card data-url="https://cointelegraph.com/news/michael-saylor-countries-bitcoin-backed-digital-banks?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound&utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/06ebe346f3/" data-title="Saylor pitches Bitcoin-backed banking system to nation-states" data-summary="Speaking in Abu Dhabi, the Strategy CEO said nations could use Bitcoin reserves and tokenized credit markets to offer regulated accounts with higher yields." data-source="Cointelegraph">
-  <img src="https://pulse.tek2dayholdings.com/p/06ebe346f3/thumbnail.png" alt="Saylor pitches Bitcoin-backed banking system to nation-states" class="article-thumb">
+  <img src="https://pulse.tek2dayholdings.com/p/06ebe346f3/thumbnail.png" alt="Saylor pitches Bitcoin-backed banking system to nation-states" class="article-thumb" loading="lazy">
   <div class="article-content">
     <h3><a data-title-link href="https://cointelegraph.com/news/michael-saylor-countries-bitcoin-backed-digital-banks?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound&utm_source=tek2day&utm_medium=email">Saylor pitches Bitcoin-backed banking system to nation-states</a></h3>
     <div class="meta"><span class="src">Cointelegraph</span> · Dec 8, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
@@ -828,7 +993,7 @@
   </div>
 </article>
 <article class="" data-card data-url="https://www.pymnts.com/artificial-intelligence-2/2025/softbank-and-nvidia-consider-joining-funding-round-for-robotics-firm-skild-ai/?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/290bbb1efe/" data-title="SoftBank and Nvidia Consider Joining Funding Round for Robotics Firm Skild AI" data-summary="SoftBank Group and Nvidia are reportedly in talks to participate in a more than $1 billion funding round for Skild AI, a maker of foundation models for robots. The round, which ha..." data-source="PYMNTS">
-  <img src="https://pulse.tek2dayholdings.com/p/290bbb1efe/thumbnail.png" alt="SoftBank and Nvidia Consider Joining Funding Round for Robotics Firm Skild AI" class="article-thumb">
+  <img src="https://pulse.tek2dayholdings.com/p/290bbb1efe/thumbnail.png" alt="SoftBank and Nvidia Consider Joining Funding Round for Robotics Firm Skild AI" class="article-thumb" loading="lazy">
   <div class="article-content">
     <h3><a data-title-link href="https://www.pymnts.com/artificial-intelligence-2/2025/softbank-and-nvidia-consider-joining-funding-round-for-robotics-firm-skild-ai/?utm_source=tek2day&utm_medium=email">SoftBank and Nvidia Consider Joining Funding Round for Robotics Firm Skild AI</a></h3>
     <div class="meta"><span class="src">PYMNTS</span> · Dec 8, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
@@ -837,7 +1002,7 @@
   </div>
 </article>
 <article class="" data-card data-url="https://www.pymnts.com/money-mobility/2025/new-york-cash-payments-law-to-take-effect-in-march/?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/6c72cfc6f0/" data-title="New York Cash Payments Law to Take Effect in March" data-summary="Food stores and retail establishments in New York are required to accept cash payments for in-person transactions after a bill was signed into law by the state’s governor. Governo..." data-source="PYMNTS">
-  <img src="https://pulse.tek2dayholdings.com/p/6c72cfc6f0/thumbnail.png" alt="New York Cash Payments Law to Take Effect in March" class="article-thumb">
+  <img src="https://pulse.tek2dayholdings.com/p/6c72cfc6f0/thumbnail.png" alt="New York Cash Payments Law to Take Effect in March" class="article-thumb" loading="lazy">
   <div class="article-content">
     <h3><a data-title-link href="https://www.pymnts.com/money-mobility/2025/new-york-cash-payments-law-to-take-effect-in-march/?utm_source=tek2day&utm_medium=email">New York Cash Payments Law to Take Effect in March</a></h3>
     <div class="meta"><span class="src">PYMNTS</span> · Dec 8, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
@@ -846,7 +1011,7 @@
   </div>
 </article>
 <article class="" data-card data-url="https://techcrunch.com/2025/12/08/googles-ai-try-on-app-doppl-adds-a-shoppable-discovery-feed/?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/288a88bd87/" data-title="Google’s AI try-on app Doppl adds a shoppable discovery feed" data-summary="The tech giant says the idea behind the new feed is to display recommendations so users can discover and virtually try on items. Nearly everything in the feed is shoppable, with d..." data-source="TechCrunch">
-  <img src="https://pulse.tek2dayholdings.com/p/288a88bd87/thumbnail.png" alt="Google’s AI try-on app Doppl adds a shoppable discovery feed" class="article-thumb">
+  <img src="https://pulse.tek2dayholdings.com/p/288a88bd87/thumbnail.png" alt="Google’s AI try-on app Doppl adds a shoppable discovery feed" class="article-thumb" loading="lazy">
   <div class="article-content">
     <h3><a data-title-link href="https://techcrunch.com/2025/12/08/googles-ai-try-on-app-doppl-adds-a-shoppable-discovery-feed/?utm_source=tek2day&utm_medium=email">Google’s AI try-on app Doppl adds a shoppable discovery feed</a></h3>
     <div class="meta"><span class="src">TechCrunch</span> · Dec 8, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
@@ -855,7 +1020,7 @@
   </div>
 </article>
 <article class="" data-card data-url="https://www.bloomberg.com/news/videos/2025-12-08/reagan-institute-s-zakheim-on-dollar-diplomacy-video?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/74157dde8e/" data-title="Reagan Institute’s Zakheim on “Dollar Diplomacy”" data-summary="JPMorgan plans to invest $10 billion dollars of its own capital in the defense, aerospace, health care and energy sectors. Roger Zakheim, director of the Ronald Reagan Institute, ..." data-source="Bloomberg Technology">
-  <img src="https://pulse.tek2dayholdings.com/p/74157dde8e/thumbnail.png" alt="Reagan Institute’s Zakheim on “Dollar Diplomacy”" class="article-thumb">
+  <img src="https://pulse.tek2dayholdings.com/p/74157dde8e/thumbnail.png" alt="Reagan Institute’s Zakheim on “Dollar Diplomacy”" class="article-thumb" loading="lazy">
   <div class="article-content">
     <h3><a data-title-link href="https://www.bloomberg.com/news/videos/2025-12-08/reagan-institute-s-zakheim-on-dollar-diplomacy-video?utm_source=tek2day&utm_medium=email">Reagan Institute’s Zakheim on “Dollar Diplomacy”</a></h3>
     <div class="meta"><span class="src">Bloomberg Technology</span> · Dec 8, 2025 <span class="badge">New</span> </div>
@@ -864,7 +1029,7 @@
   </div>
 </article>
 <article class="" data-card data-url="https://www.pymnts.com/artificial-intelligence-2/2025/digitally-maturing-ap-systems-open-door-for-ars-leap-forward/?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/529cad95e8/" data-title="Digitally Maturing AP Systems Open Door for AR’s Leap Forward" data-summary="Finance leaders used to joke that accounts payable (AP) was where innovation went to die. Then, seemingly overnight, AP became one of the most aggressively optimized functions in ..." data-source="PYMNTS">
-  <img src="https://pulse.tek2dayholdings.com/p/529cad95e8/thumbnail.png" alt="Digitally Maturing AP Systems Open Door for AR’s Leap Forward" class="article-thumb">
+  <img src="https://pulse.tek2dayholdings.com/p/529cad95e8/thumbnail.png" alt="Digitally Maturing AP Systems Open Door for AR’s Leap Forward" class="article-thumb" loading="lazy">
   <div class="article-content">
     <h3><a data-title-link href="https://www.pymnts.com/artificial-intelligence-2/2025/digitally-maturing-ap-systems-open-door-for-ars-leap-forward/?utm_source=tek2day&utm_medium=email">Digitally Maturing AP Systems Open Door for AR’s Leap Forward</a></h3>
     <div class="meta"><span class="src">PYMNTS</span> · Dec 8, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
@@ -873,7 +1038,7 @@
   </div>
 </article>
 <article class="" data-card data-url="https://www.bloomberg.com/news/videos/2025-12-08/trump-calls-for-one-rule-for-ai-regulation-video?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/ae383a62cb/" data-title="Trump Calls for &#x27;One Rule&#x27; for AI Regulation" data-summary="President Donald Trump said he would sign an executive order this week to establish “one rule” on artificial intelligence regulation, aimed at limiting state-led restrictions on t..." data-source="Bloomberg Technology">
-  <img src="https://pulse.tek2dayholdings.com/p/ae383a62cb/thumbnail.png" alt="Trump Calls for &#x27;One Rule&#x27; for AI Regulation" class="article-thumb">
+  <img src="https://pulse.tek2dayholdings.com/p/ae383a62cb/thumbnail.png" alt="Trump Calls for &#x27;One Rule&#x27; for AI Regulation" class="article-thumb" loading="lazy">
   <div class="article-content">
     <h3><a data-title-link href="https://www.bloomberg.com/news/videos/2025-12-08/trump-calls-for-one-rule-for-ai-regulation-video?utm_source=tek2day&utm_medium=email">Trump Calls for &#x27;One Rule&#x27; for AI Regulation</a></h3>
     <div class="meta"><span class="src">Bloomberg Technology</span> · Dec 8, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
@@ -882,7 +1047,7 @@
   </div>
 </article>
 <article class="" data-card data-url="https://www.bloomberg.com/news/articles/2025-12-08/nvidia-set-to-win-us-approval-to-export-h200-ai-chips-to-china?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/9e672274a0/" data-title="Nvidia Set to Win US Approval to Export H200 AI Chips to China" data-summary="The Trump administration is poised to allow Nvidia Corp. to sell its H200 artificial intelligence chip to China, according to people familiar with the matter, a move that would ma..." data-source="Bloomberg Technology">
-  <img src="https://pulse.tek2dayholdings.com/p/9e672274a0/thumbnail.png" alt="Nvidia Set to Win US Approval to Export H200 AI Chips to China" class="article-thumb">
+  <img src="https://pulse.tek2dayholdings.com/p/9e672274a0/thumbnail.png" alt="Nvidia Set to Win US Approval to Export H200 AI Chips to China" class="article-thumb" loading="lazy">
   <div class="article-content">
     <h3><a data-title-link href="https://www.bloomberg.com/news/articles/2025-12-08/nvidia-set-to-win-us-approval-to-export-h200-ai-chips-to-china?utm_source=tek2day&utm_medium=email">Nvidia Set to Win US Approval to Export H200 AI Chips to China</a></h3>
     <div class="meta"><span class="src">Bloomberg Technology</span> · Dec 8, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
@@ -891,7 +1056,7 @@
   </div>
 </article>
 <article class="" data-card data-url="https://www.pymnts.com/smbs/2025/bank-of-america-debuts-small-business-retirement-platform/?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/8019ba58a8/" data-title="Bank of America Debuts Small Business Retirement Platform" data-summary="Bank of America is introducing a retirement-focused digital platform for business owners and their workers. The new platform, announced Monday (Dec. 8), is designed to provide gre..." data-source="PYMNTS">
-  <img src="https://pulse.tek2dayholdings.com/p/8019ba58a8/thumbnail.png" alt="Bank of America Debuts Small Business Retirement Platform" class="article-thumb">
+  <img src="https://pulse.tek2dayholdings.com/p/8019ba58a8/thumbnail.png" alt="Bank of America Debuts Small Business Retirement Platform" class="article-thumb" loading="lazy">
   <div class="article-content">
     <h3><a data-title-link href="https://www.pymnts.com/smbs/2025/bank-of-america-debuts-small-business-retirement-platform/?utm_source=tek2day&utm_medium=email">Bank of America Debuts Small Business Retirement Platform</a></h3>
     <div class="meta"><span class="src">PYMNTS</span> · Dec 8, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
@@ -900,7 +1065,7 @@
   </div>
 </article>
 <article class="" data-card data-url="https://www.pymnts.com/artificial-intelligence-2/2025/health-department-debuts-plans-for-integrating-ai/?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/2e745391d1/" data-title="Health Department Debuts Plans for Integrating AI" data-summary="The Department of Health and Human Services has released its artificial intelligence strategy. The new strategy, announced Monday (Dec. 8), is part of a broader plan to make artif..." data-source="PYMNTS">
-  <img src="https://pulse.tek2dayholdings.com/p/2e745391d1/thumbnail.png" alt="Health Department Debuts Plans for Integrating AI" class="article-thumb">
+  <img src="https://pulse.tek2dayholdings.com/p/2e745391d1/thumbnail.png" alt="Health Department Debuts Plans for Integrating AI" class="article-thumb" loading="lazy">
   <div class="article-content">
     <h3><a data-title-link href="https://www.pymnts.com/artificial-intelligence-2/2025/health-department-debuts-plans-for-integrating-ai/?utm_source=tek2day&utm_medium=email">Health Department Debuts Plans for Integrating AI</a></h3>
     <div class="meta"><span class="src">PYMNTS</span> · Dec 8, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
@@ -909,7 +1074,7 @@
   </div>
 </article>
 <article class="" data-card data-url="https://www.pymnts.com/artificial-intelligence-2/2025/fashions-creative-clock-now-runs-on-ai/?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/77f84b6ec4/" data-title="Fashion’s Creative Clock Now Runs on AI" data-summary="Fashion brands are facing faster trend cycles and rising pressure to design, produce and personalize at the speed of consumer demand. Artificial intelligence (AI) has moved to the..." data-source="PYMNTS">
-  <img src="https://pulse.tek2dayholdings.com/p/77f84b6ec4/thumbnail.png" alt="Fashion’s Creative Clock Now Runs on AI" class="article-thumb">
+  <img src="https://pulse.tek2dayholdings.com/p/77f84b6ec4/thumbnail.png" alt="Fashion’s Creative Clock Now Runs on AI" class="article-thumb" loading="lazy">
   <div class="article-content">
     <h3><a data-title-link href="https://www.pymnts.com/artificial-intelligence-2/2025/fashions-creative-clock-now-runs-on-ai/?utm_source=tek2day&utm_medium=email">Fashion’s Creative Clock Now Runs on AI</a></h3>
     <div class="meta"><span class="src">PYMNTS</span> · Dec 8, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
@@ -918,7 +1083,7 @@
   </div>
 </article>
 <article class="" data-card data-url="https://cointelegraph.com/news/uk-fca-watchdog-crypto-investment-reforms?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound&utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/f915bcf513/" data-title="Watchdog asks for crypto industry feedback on UK investment reforms" data-summary="The Financial Conduct Authority asked for companies linked to digital assets to weigh in on policy proposals in February and March 2026." data-source="Cointelegraph">
-  <img src="https://pulse.tek2dayholdings.com/p/f915bcf513/thumbnail.png" alt="Watchdog asks for crypto industry feedback on UK investment reforms" class="article-thumb">
+  <img src="https://pulse.tek2dayholdings.com/p/f915bcf513/thumbnail.png" alt="Watchdog asks for crypto industry feedback on UK investment reforms" class="article-thumb" loading="lazy">
   <div class="article-content">
     <h3><a data-title-link href="https://cointelegraph.com/news/uk-fca-watchdog-crypto-investment-reforms?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound&utm_source=tek2day&utm_medium=email">Watchdog asks for crypto industry feedback on UK investment reforms</a></h3>
     <div class="meta"><span class="src">Cointelegraph</span> · Dec 8, 2025 <span class="badge">New</span> </div>
@@ -926,8 +1091,17 @@
     <p data-summary>The Financial Conduct Authority asked for companies linked to digital assets to weigh in on policy proposals in February and March 2026.</p>
   </div>
 </article>
+<article class="" data-card data-url="https://www.nytimes.com/2025/12/08/technology/ai-slop-sora-social-media.html?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/35aed35786/" data-title="A.I. Videos Have Flooded Social Media. No One Was Ready." data-summary="Apps like OpenAI’s Sora are fooling millions of users into thinking A.I. videos are real, even when they include warning labels." data-source="The New York Times - Technology">
+  <img src="https://pulse.tek2dayholdings.com/p/35aed35786/thumbnail.png" alt="A.I. Videos Have Flooded Social Media. No One Was Ready." class="article-thumb" loading="lazy">
+  <div class="article-content">
+    <h3><a data-title-link href="https://www.nytimes.com/2025/12/08/technology/ai-slop-sora-social-media.html?utm_source=tek2day&utm_medium=email">A.I. Videos Have Flooded Social Media. No One Was Ready.</a></h3>
+    <div class="meta"><span class="src">The New York Times - Technology</span> · Dec 8, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
+    <div class="trend-chips"><span class="trend-chip">ai</span> <span class="trend-chip">openai</span></div>
+    <p data-summary>Apps like OpenAI’s Sora are fooling millions of users into thinking A.I. videos are real, even when they include warning labels.</p>
+  </div>
+</article>
 <article class="" data-card data-url="https://www.theverge.com/news/839817/anthropic-claude-code-slack-integration?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/fc3a8da677/" data-title="Anthropic is bringing Claude Code to Slack" data-summary="Slack users can now access Anthropic&#x27;s Claude Code directly in Slack by tagging Claude on coding-related messages and threads. The new feature is launching today in beta as a rese..." data-source="The Verge">
-  <img src="https://pulse.tek2dayholdings.com/p/fc3a8da677/thumbnail.png" alt="Anthropic is bringing Claude Code to Slack" class="article-thumb">
+  <img src="https://pulse.tek2dayholdings.com/p/fc3a8da677/thumbnail.png" alt="Anthropic is bringing Claude Code to Slack" class="article-thumb" loading="lazy">
   <div class="article-content">
     <h3><a data-title-link href="https://www.theverge.com/news/839817/anthropic-claude-code-slack-integration?utm_source=tek2day&utm_medium=email">Anthropic is bringing Claude Code to Slack</a></h3>
     <div class="meta"><span class="src">The Verge</span> · Dec 8, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
@@ -936,7 +1110,7 @@
   </div>
 </article>
 <article class="" data-card data-url="https://venturebeat.com/ai/anthropics-claude-code-can-now-read-your-slack-messages-and-write-code-for?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/c37582cf2a/" data-title="Anthropic&#x27;s Claude Code can now read your Slack messages and write code for you" data-summary="Anthropic on Monday launched a beta integration that connects its fast-growing Claude Code programming agent directly to Slack , allowing software engineers to delegate coding tas..." data-source="VentureBeat">
-  <img src="https://pulse.tek2dayholdings.com/p/c37582cf2a/thumbnail.png" alt="Anthropic&#x27;s Claude Code can now read your Slack messages and write code for you" class="article-thumb">
+  <img src="https://pulse.tek2dayholdings.com/p/c37582cf2a/thumbnail.png" alt="Anthropic&#x27;s Claude Code can now read your Slack messages and write code for you" class="article-thumb" loading="lazy">
   <div class="article-content">
     <h3><a data-title-link href="https://venturebeat.com/ai/anthropics-claude-code-can-now-read-your-slack-messages-and-write-code-for?utm_source=tek2day&utm_medium=email">Anthropic&#x27;s Claude Code can now read your Slack messages and write code for you</a></h3>
     <div class="meta"><span class="src">VentureBeat</span> · Dec 8, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
@@ -945,7 +1119,7 @@
   </div>
 </article>
 <article class="" data-card data-url="https://www.youtube.com/watch?v=XpXImenrSPI&utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/ff630b758a/" data-title="Claude Code in Slack" data-summary="Delegate tasks to Claude Code directly from Slack, making it easy to move context from Slack conversations to coding sessions. Claude Code in Slack is available now for teams with..." data-source="Anthropic YouTube">
-  <img src="https://i.ytimg.com/vi/XpXImenrSPI/mqdefault.jpg" alt="Claude Code in Slack" class="article-thumb">
+  <img src="https://i.ytimg.com/vi/XpXImenrSPI/mqdefault.jpg" alt="Claude Code in Slack" class="article-thumb" loading="lazy">
   <div class="article-content">
     <h3><a data-title-link href="https://www.youtube.com/watch?v=XpXImenrSPI&utm_source=tek2day&utm_medium=email">Claude Code in Slack</a></h3>
     <div class="meta"><span class="src">Anthropic YouTube</span> · Dec 8, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
@@ -954,7 +1128,7 @@
   </div>
 </article>
 <article class="" data-card data-url="https://www.pymnts.com/artificial-intelligence-2/2025/instacart-integrates-grocery-platform-with-chatgpt/?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/e0e7c22458/" data-title="Instacart Integrates Grocery Platform With ChatGPT" data-summary="Instacart has become the first grocery sector company to launch an app on OpenAI’s ChatGPT. This integration, announced Monday (Dec. 8), will also see Instacart offer an embedded ..." data-source="PYMNTS">
-  <img src="https://pulse.tek2dayholdings.com/p/e0e7c22458/thumbnail.png" alt="Instacart Integrates Grocery Platform With ChatGPT" class="article-thumb">
+  <img src="https://pulse.tek2dayholdings.com/p/e0e7c22458/thumbnail.png" alt="Instacart Integrates Grocery Platform With ChatGPT" class="article-thumb" loading="lazy">
   <div class="article-content">
     <h3><a data-title-link href="https://www.pymnts.com/artificial-intelligence-2/2025/instacart-integrates-grocery-platform-with-chatgpt/?utm_source=tek2day&utm_medium=email">Instacart Integrates Grocery Platform With ChatGPT</a></h3>
     <div class="meta"><span class="src">PYMNTS</span> · Dec 8, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
@@ -963,7 +1137,7 @@
   </div>
 </article>
 <article class="" data-card data-url="https://cointelegraph.com/news/xrp-needs-a-solana-style-strategy-to-keep-up-ripple-executive?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound&utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/903d4d9db5/" data-title="XRP needs a Solana-style strategy to keep up: Ripple executive" data-summary="Luke Judges highlights how XRP Ledger’s tech and developer tools could take cues from Solana to stay competitive among layer-1 networks." data-source="Cointelegraph">
-  <img src="https://pulse.tek2dayholdings.com/p/903d4d9db5/thumbnail.png" alt="XRP needs a Solana-style strategy to keep up: Ripple executive" class="article-thumb">
+  <img src="https://pulse.tek2dayholdings.com/p/903d4d9db5/thumbnail.png" alt="XRP needs a Solana-style strategy to keep up: Ripple executive" class="article-thumb" loading="lazy">
   <div class="article-content">
     <h3><a data-title-link href="https://cointelegraph.com/news/xrp-needs-a-solana-style-strategy-to-keep-up-ripple-executive?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound&utm_source=tek2day&utm_medium=email">XRP needs a Solana-style strategy to keep up: Ripple executive</a></h3>
     <div class="meta"><span class="src">Cointelegraph</span> · Dec 8, 2025 <span class="badge">New</span> </div>
@@ -972,7 +1146,7 @@
   </div>
 </article>
 <article class="" data-card data-url="https://www.theverge.com/news/840164/iceblock-joshua-aaron-sues-trump-administration-apple-app-store-removeal?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/3e4302a7a3/" data-title="ICEBlock developer sues Trump administration over App Store removal" data-summary="Joshua Aaron, the developer of the ICEBlock app, is suing Attorney General Pam Bondi, US Homeland Security Secretary Kirsti Noem, acting director of ICE Todd Lyons, White House &quot;B..." data-source="The Verge">
-  <img src="https://pulse.tek2dayholdings.com/p/3e4302a7a3/thumbnail.png" alt="ICEBlock developer sues Trump administration over App Store removal" class="article-thumb">
+  <img src="https://pulse.tek2dayholdings.com/p/3e4302a7a3/thumbnail.png" alt="ICEBlock developer sues Trump administration over App Store removal" class="article-thumb" loading="lazy">
   <div class="article-content">
     <h3><a data-title-link href="https://www.theverge.com/news/840164/iceblock-joshua-aaron-sues-trump-administration-apple-app-store-removeal?utm_source=tek2day&utm_medium=email">ICEBlock developer sues Trump administration over App Store removal</a></h3>
     <div class="meta"><span class="src">The Verge</span> · Dec 8, 2025 <span class="badge">New</span> </div>
@@ -981,7 +1155,7 @@
   </div>
 </article>
 <article class="" data-card data-url="https://www.pymnts.com/artificial-intelligence-2/2025/openai-found-75-of-workers-say-ai-has-improved-their-output/?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/530a265b4b/" data-title="OpenAI Found 75% of Workers Say AI Has Improved Their Output" data-summary="A new OpenAI report found a majority of surveyed workers seeing positive results from artificial intelligence (AI). The AI startup on Monday (Dec. 8) released findings from its “S..." data-source="PYMNTS">
-  <img src="https://pulse.tek2dayholdings.com/p/530a265b4b/thumbnail.png" alt="OpenAI Found 75% of Workers Say AI Has Improved Their Output" class="article-thumb">
+  <img src="https://pulse.tek2dayholdings.com/p/530a265b4b/thumbnail.png" alt="OpenAI Found 75% of Workers Say AI Has Improved Their Output" class="article-thumb" loading="lazy">
   <div class="article-content">
     <h3><a data-title-link href="https://www.pymnts.com/artificial-intelligence-2/2025/openai-found-75-of-workers-say-ai-has-improved-their-output/?utm_source=tek2day&utm_medium=email">OpenAI Found 75% of Workers Say AI Has Improved Their Output</a></h3>
     <div class="meta"><span class="src">PYMNTS</span> · Dec 8, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
@@ -990,7 +1164,7 @@
   </div>
 </article>
 <article class="" data-card data-url="https://www.bloomberg.com/news/articles/2025-12-08/google-says-first-ai-glasses-with-gemini-will-arrive-in-2026?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/f8903ba03b/" data-title="Google Says First AI Glasses With Gemini Will Arrive in 2026" data-summary="Alphabet Inc.’s Google said it’s working to create two different categories of artificial intelligence-powered smart glasses to compete next year with existing models from Meta Pl..." data-source="Bloomberg Technology">
-  <img src="https://pulse.tek2dayholdings.com/p/f8903ba03b/thumbnail.png" alt="Google Says First AI Glasses With Gemini Will Arrive in 2026" class="article-thumb">
+  <img src="https://pulse.tek2dayholdings.com/p/f8903ba03b/thumbnail.png" alt="Google Says First AI Glasses With Gemini Will Arrive in 2026" class="article-thumb" loading="lazy">
   <div class="article-content">
     <h3><a data-title-link href="https://www.bloomberg.com/news/articles/2025-12-08/google-says-first-ai-glasses-with-gemini-will-arrive-in-2026?utm_source=tek2day&utm_medium=email">Google Says First AI Glasses With Gemini Will Arrive in 2026</a></h3>
     <div class="meta"><span class="src">Bloomberg Technology</span> · Dec 8, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
@@ -999,7 +1173,7 @@
   </div>
 </article>
 <article class="" data-card data-url="https://techcrunch.com/2025/12/08/google-details-security-measures-for-chromes-agentic-features/?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/9fcbd30042/" data-title="Google details security measures for Chrome’s agentic features" data-summary="Google details how it is enacting security guardrails before rolling out agentic capabilities on Chrome." data-source="TechCrunch">
-  <img src="https://pulse.tek2dayholdings.com/p/9fcbd30042/thumbnail.png" alt="Google details security measures for Chrome’s agentic features" class="article-thumb">
+  <img src="https://pulse.tek2dayholdings.com/p/9fcbd30042/thumbnail.png" alt="Google details security measures for Chrome’s agentic features" class="article-thumb" loading="lazy">
   <div class="article-content">
     <h3><a data-title-link href="https://techcrunch.com/2025/12/08/google-details-security-measures-for-chromes-agentic-features/?utm_source=tek2day&utm_medium=email">Google details security measures for Chrome’s agentic features</a></h3>
     <div class="meta"><span class="src">TechCrunch</span> · Dec 8, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
@@ -1008,7 +1182,7 @@
   </div>
 </article>
 <article class="" data-card data-url="https://www.theverge.com/tech/839392/project-aura-android-xr-software-headsets-ai-glasses?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/4d64dfc1f4/" data-title="A first look at Google’s Project Aura glasses built with Xreal" data-summary="Teased at Google I/O, Project Aura is a collaboration between Xreal and Google. It&#x27;s the second Android XR device (the first being Samsung&#x27;s Galaxy XR headset) and is expected to ..." data-source="The Verge">
-  <img src="https://pulse.tek2dayholdings.com/p/4d64dfc1f4/thumbnail.png" alt="A first look at Google’s Project Aura glasses built with Xreal" class="article-thumb">
+  <img src="https://pulse.tek2dayholdings.com/p/4d64dfc1f4/thumbnail.png" alt="A first look at Google’s Project Aura glasses built with Xreal" class="article-thumb" loading="lazy">
   <div class="article-content">
     <h3><a data-title-link href="https://www.theverge.com/tech/839392/project-aura-android-xr-software-headsets-ai-glasses?utm_source=tek2day&utm_medium=email">A first look at Google’s Project Aura glasses built with Xreal</a></h3>
     <div class="meta"><span class="src">The Verge</span> · Dec 8, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
@@ -1017,7 +1191,7 @@
   </div>
 </article>
 <article class="" data-card data-url="https://techcrunch.com/2025/12/08/you-can-buy-your-instacart-groceries-without-leaving-chatgpt/?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/2da83d38b5/" data-title="You can buy your Instacart groceries without leaving ChatGPT" data-summary="Shoppers will be able to go from recipe planning to checkout within the ChatGPT window." data-source="TechCrunch">
-  <img src="https://pulse.tek2dayholdings.com/p/2da83d38b5/thumbnail.png" alt="You can buy your Instacart groceries without leaving ChatGPT" class="article-thumb">
+  <img src="https://pulse.tek2dayholdings.com/p/2da83d38b5/thumbnail.png" alt="You can buy your Instacart groceries without leaving ChatGPT" class="article-thumb" loading="lazy">
   <div class="article-content">
     <h3><a data-title-link href="https://techcrunch.com/2025/12/08/you-can-buy-your-instacart-groceries-without-leaving-chatgpt/?utm_source=tek2day&utm_medium=email">You can buy your Instacart groceries without leaving ChatGPT</a></h3>
     <div class="meta"><span class="src">TechCrunch</span> · Dec 8, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
@@ -1026,7 +1200,7 @@
   </div>
 </article>
 <article class="" data-card data-url="https://cointelegraph.com/news/why-grayscale-thinks-bitcoin-will-ignore-the-4-year-cycle-this-time?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound&utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/96f3ebfc7f/" data-title="Why Grayscale thinks Bitcoin will ignore the 4-year cycle this time" data-summary="Grayscale argues Bitcoin’s market structure has evolved beyond the old four-year rhythm. Institutional flows and macro dynamics have reshaped BTC’s price behavior." data-source="Cointelegraph">
-  <img src="https://pulse.tek2dayholdings.com/p/96f3ebfc7f/thumbnail.png" alt="Why Grayscale thinks Bitcoin will ignore the 4-year cycle this time" class="article-thumb">
+  <img src="https://pulse.tek2dayholdings.com/p/96f3ebfc7f/thumbnail.png" alt="Why Grayscale thinks Bitcoin will ignore the 4-year cycle this time" class="article-thumb" loading="lazy">
   <div class="article-content">
     <h3><a data-title-link href="https://cointelegraph.com/news/why-grayscale-thinks-bitcoin-will-ignore-the-4-year-cycle-this-time?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound&utm_source=tek2day&utm_medium=email">Why Grayscale thinks Bitcoin will ignore the 4-year cycle this time</a></h3>
     <div class="meta"><span class="src">Cointelegraph</span> · Dec 8, 2025 <span class="badge">New</span> </div>
@@ -1035,7 +1209,7 @@
   </div>
 </article>
 <article class="" data-card data-url="https://cointelegraph.com/news/usdt-recognized-fiat-referenced-token-adgm?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound&utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/2310a90af3/" data-title="Tether&#x27;s USDt awarded key regulatory status in Abu Dhabi" data-summary="ADGM’s recognition of USDT as an accepted fiat-referenced token lets licensed companies offer regulated custody, marking a step for stablecoins in the UAE." data-source="Cointelegraph">
-  <img src="https://pulse.tek2dayholdings.com/p/2310a90af3/thumbnail.png" alt="Tether&#x27;s USDt awarded key regulatory status in Abu Dhabi" class="article-thumb">
+  <img src="https://pulse.tek2dayholdings.com/p/2310a90af3/thumbnail.png" alt="Tether&#x27;s USDt awarded key regulatory status in Abu Dhabi" class="article-thumb" loading="lazy">
   <div class="article-content">
     <h3><a data-title-link href="https://cointelegraph.com/news/usdt-recognized-fiat-referenced-token-adgm?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound&utm_source=tek2day&utm_medium=email">Tether&#x27;s USDt awarded key regulatory status in Abu Dhabi</a></h3>
     <div class="meta"><span class="src">Cointelegraph</span> · Dec 8, 2025 <span class="badge">New</span> </div>
@@ -1044,7 +1218,7 @@
   </div>
 </article>
 <article class="" data-card data-url="https://www.pymnts.com/partnerships/2025/mastercard-move-and-tenpay-global-facilitate-digital-remittances-to-weixin-pay/?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/959f856948/" data-title="Mastercard Move and TenPay Global Facilitate Digital Remittances to Weixin Pay" data-summary="Mastercard Move, Mastercard’s money movement business, can now reach over 1.4 billion users of Weixin and WeChat. This capability is enabled by a collaboration of Mastercard Move ..." data-source="PYMNTS">
-  <img src="https://pulse.tek2dayholdings.com/p/959f856948/thumbnail.png" alt="Mastercard Move and TenPay Global Facilitate Digital Remittances to Weixin Pay" class="article-thumb">
+  <img src="https://pulse.tek2dayholdings.com/p/959f856948/thumbnail.png" alt="Mastercard Move and TenPay Global Facilitate Digital Remittances to Weixin Pay" class="article-thumb" loading="lazy">
   <div class="article-content">
     <h3><a data-title-link href="https://www.pymnts.com/partnerships/2025/mastercard-move-and-tenpay-global-facilitate-digital-remittances-to-weixin-pay/?utm_source=tek2day&utm_medium=email">Mastercard Move and TenPay Global Facilitate Digital Remittances to Weixin Pay</a></h3>
     <div class="meta"><span class="src">PYMNTS</span> · Dec 8, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
@@ -1053,7 +1227,7 @@
   </div>
 </article>
 <article class="" data-card data-url="https://www.ft.com/content/5bff1202-b2ce-439a-8687-8f8b919c683e?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/229b96fb67/" data-title="The State of AI: life in 2030" data-summary="Expect a world of robots, robotaxis and AI haves and have-nots" data-source="Financial Times - Technology">
-  <img src="https://pulse.tek2dayholdings.com/p/229b96fb67/thumbnail.png" alt="The State of AI: life in 2030" class="article-thumb">
+  <img src="https://pulse.tek2dayholdings.com/p/229b96fb67/thumbnail.png" alt="The State of AI: life in 2030" class="article-thumb" loading="lazy">
   <div class="article-content">
     <h3><a data-title-link href="https://www.ft.com/content/5bff1202-b2ce-439a-8687-8f8b919c683e?utm_source=tek2day&utm_medium=email">The State of AI: life in 2030</a></h3>
     <div class="meta"><span class="src">Financial Times - Technology</span> · Dec 8, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
@@ -1062,7 +1236,7 @@
   </div>
 </article>
 <article class="" data-card data-url="https://www.bloomberg.com/news/videos/2025-12-08/hannah-fry-decodes-spain?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/d6df37c775/" data-title="Hannah Fry Decodes Spain" data-summary="Hannah Fry travels to Spain to decode the complexities of its history and culture. Travelling across the country, she analyzes the rhythms of flamenco, seeks out the origins of pa..." data-source="Bloomberg Technology">
-  <img src="https://pulse.tek2dayholdings.com/p/d6df37c775/thumbnail.png" alt="Hannah Fry Decodes Spain" class="article-thumb">
+  <img src="https://pulse.tek2dayholdings.com/p/d6df37c775/thumbnail.png" alt="Hannah Fry Decodes Spain" class="article-thumb" loading="lazy">
   <div class="article-content">
     <h3><a data-title-link href="https://www.bloomberg.com/news/videos/2025-12-08/hannah-fry-decodes-spain?utm_source=tek2day&utm_medium=email">Hannah Fry Decodes Spain</a></h3>
     <div class="meta"><span class="src">Bloomberg Technology</span> · Dec 8, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
@@ -1071,7 +1245,7 @@
   </div>
 </article>
 <article class="" data-card data-url="https://cointelegraph.com/explained/the-easiest-and-safest-methods-for-gifting-crypto-at-christmas-in-2025?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound&utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/1c72a2c863/" data-title="The easiest and safest methods for gifting crypto at Christmas in 2025" data-summary="Discover safe ways to give crypto in 2025. Learn about gift cards, exchanges, hardware wallets and essential security and tax guidance." data-source="Cointelegraph">
-  <img src="https://pulse.tek2dayholdings.com/p/1c72a2c863/thumbnail.png" alt="The easiest and safest methods for gifting crypto at Christmas in 2025" class="article-thumb">
+  <img src="https://pulse.tek2dayholdings.com/p/1c72a2c863/thumbnail.png" alt="The easiest and safest methods for gifting crypto at Christmas in 2025" class="article-thumb" loading="lazy">
   <div class="article-content">
     <h3><a data-title-link href="https://cointelegraph.com/explained/the-easiest-and-safest-methods-for-gifting-crypto-at-christmas-in-2025?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound&utm_source=tek2day&utm_medium=email">The easiest and safest methods for gifting crypto at Christmas in 2025</a></h3>
     <div class="meta"><span class="src">Cointelegraph</span> · Dec 8, 2025 <span class="badge">New</span> </div>
@@ -1080,7 +1254,7 @@
   </div>
 </article>
 <article class="" data-card data-url="https://cointelegraph.com/news/blackrock-sec-staked-ether-etf?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound&utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/f0ca62ee95/" data-title="BlackRock files for listing staked Ether ETF" data-summary="The fund, if approved by the SEC, would give BlackRock investors indirect exposure to staked Ether — one of the industry’s first following the 2024 approval of spot Ether ETFs." data-source="Cointelegraph">
-  <img src="https://pulse.tek2dayholdings.com/p/f0ca62ee95/thumbnail.png" alt="BlackRock files for listing staked Ether ETF" class="article-thumb">
+  <img src="https://pulse.tek2dayholdings.com/p/f0ca62ee95/thumbnail.png" alt="BlackRock files for listing staked Ether ETF" class="article-thumb" loading="lazy">
   <div class="article-content">
     <h3><a data-title-link href="https://cointelegraph.com/news/blackrock-sec-staked-ether-etf?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound&utm_source=tek2day&utm_medium=email">BlackRock files for listing staked Ether ETF</a></h3>
     <div class="meta"><span class="src">Cointelegraph</span> · Dec 8, 2025 <span class="badge">New</span> </div>
@@ -1089,7 +1263,7 @@
   </div>
 </article>
 <article class="" data-card data-url="https://techcrunch.com/2025/12/08/petcos-security-lapse-affected-customers-ssns-drivers-licenses-and-more/?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/dbc5185190/" data-title="Petco’s security lapse affected customers’ SSNs, driver’s licenses, and more" data-summary="Petco said the exposure was due to an error in an application and that it is notifying victims whose data was affected." data-source="TechCrunch">
-  <img src="https://pulse.tek2dayholdings.com/p/dbc5185190/thumbnail.png" alt="Petco’s security lapse affected customers’ SSNs, driver’s licenses, and more" class="article-thumb">
+  <img src="https://pulse.tek2dayholdings.com/p/dbc5185190/thumbnail.png" alt="Petco’s security lapse affected customers’ SSNs, driver’s licenses, and more" class="article-thumb" loading="lazy">
   <div class="article-content">
     <h3><a data-title-link href="https://techcrunch.com/2025/12/08/petcos-security-lapse-affected-customers-ssns-drivers-licenses-and-more/?utm_source=tek2day&utm_medium=email">Petco’s security lapse affected customers’ SSNs, driver’s licenses, and more</a></h3>
     <div class="meta"><span class="src">TechCrunch</span> · Dec 8, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
@@ -1098,7 +1272,7 @@
   </div>
 </article>
 <article class="" data-card data-url="https://cointelegraph.com/news/ripple-s-big-singapore-win-what-the-expanded-license-allows-now?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound&utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/7173b77b5e/" data-title="Ripple’s big Singapore win: What the expanded license allows now" data-summary="Singapore’s MAS has widened Ripple’s MPI license scope, enabling regulated token services, end-to-end payments and major growth across Asia-Pacific." data-source="Cointelegraph">
-  <img src="https://pulse.tek2dayholdings.com/p/7173b77b5e/thumbnail.png" alt="Ripple’s big Singapore win: What the expanded license allows now" class="article-thumb">
+  <img src="https://pulse.tek2dayholdings.com/p/7173b77b5e/thumbnail.png" alt="Ripple’s big Singapore win: What the expanded license allows now" class="article-thumb" loading="lazy">
   <div class="article-content">
     <h3><a data-title-link href="https://cointelegraph.com/news/ripple-s-big-singapore-win-what-the-expanded-license-allows-now?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound&utm_source=tek2day&utm_medium=email">Ripple’s big Singapore win: What the expanded license allows now</a></h3>
     <div class="meta"><span class="src">Cointelegraph</span> · Dec 8, 2025 <span class="badge">New</span> </div>
@@ -1107,7 +1281,7 @@
   </div>
 </article>
 <article class="" data-card data-url="https://techcrunch.com/2025/12/08/one-rule-trump-says-hell-sign-an-executive-order-blocking-state-ai-laws-despite-bipartisan-pushback/?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/34e8dbb35e/" data-title="‘ONE RULE’: Trump says he’ll sign an executive order blocking state AI laws despite bipartisan pushback" data-summary="“I will be doing a ONE RULE Executive Order this week,” Trump posted on social media. “You can’t expect a company to get 50 Approvals every time they want to do something.”" data-source="TechCrunch">
-  <img src="https://pulse.tek2dayholdings.com/p/34e8dbb35e/thumbnail.png" alt="‘ONE RULE’: Trump says he’ll sign an executive order blocking state AI laws despite bipartisan pushback" class="article-thumb">
+  <img src="https://pulse.tek2dayholdings.com/p/34e8dbb35e/thumbnail.png" alt="‘ONE RULE’: Trump says he’ll sign an executive order blocking state AI laws despite bipartisan pushback" class="article-thumb" loading="lazy">
   <div class="article-content">
     <h3><a data-title-link href="https://techcrunch.com/2025/12/08/one-rule-trump-says-hell-sign-an-executive-order-blocking-state-ai-laws-despite-bipartisan-pushback/?utm_source=tek2day&utm_medium=email">‘ONE RULE’: Trump says he’ll sign an executive order blocking state AI laws despite bipartisan pushback</a></h3>
     <div class="meta"><span class="src">TechCrunch</span> · Dec 8, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
@@ -1116,7 +1290,7 @@
   </div>
 </article>
 <article class="" data-card data-url="https://www.bloomberg.com/news/articles/2025-12-08/ai-companies-bet-on-india-with-free-access-to-chatgpt-gemini-copilot?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/5a8aea5356/" data-title="AI Battle for India Heats Up With Radical Approach: Free Access" data-summary="Microsoft Corp.’s chief Satya Nadella this week becomes the latest tech leader to visit India, joining a procession of industry bigwigs seeking to court a potentially massive mark..." data-source="Bloomberg Technology">
-  <img src="https://pulse.tek2dayholdings.com/p/5a8aea5356/thumbnail.png" alt="AI Battle for India Heats Up With Radical Approach: Free Access" class="article-thumb">
+  <img src="https://pulse.tek2dayholdings.com/p/5a8aea5356/thumbnail.png" alt="AI Battle for India Heats Up With Radical Approach: Free Access" class="article-thumb" loading="lazy">
   <div class="article-content">
     <h3><a data-title-link href="https://www.bloomberg.com/news/articles/2025-12-08/ai-companies-bet-on-india-with-free-access-to-chatgpt-gemini-copilot?utm_source=tek2day&utm_medium=email">AI Battle for India Heats Up With Radical Approach: Free Access</a></h3>
     <div class="meta"><span class="src">Bloomberg Technology</span> · Dec 8, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
@@ -1125,7 +1299,7 @@
   </div>
 </article>
 <article class="" data-card data-url="https://www.bloomberg.com/news/articles/2025-12-08/tesla-s-sky-high-valuation-prompts-morgan-stanley-to-cut-rating?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/5908ae4748/" data-title="Tesla’s Sky High Valuation Prompts Morgan Stanley to Cut Rating" data-summary="Elon Musk is eager to transform Tesla Inc. into a robotics and artificial intelligence company, but the electric-vehicle maker’s stock price already reflects those businesses and ..." data-source="Bloomberg Technology">
-  <img src="https://pulse.tek2dayholdings.com/p/5908ae4748/thumbnail.png" alt="Tesla’s Sky High Valuation Prompts Morgan Stanley to Cut Rating" class="article-thumb">
+  <img src="https://pulse.tek2dayholdings.com/p/5908ae4748/thumbnail.png" alt="Tesla’s Sky High Valuation Prompts Morgan Stanley to Cut Rating" class="article-thumb" loading="lazy">
   <div class="article-content">
     <h3><a data-title-link href="https://www.bloomberg.com/news/articles/2025-12-08/tesla-s-sky-high-valuation-prompts-morgan-stanley-to-cut-rating?utm_source=tek2day&utm_medium=email">Tesla’s Sky High Valuation Prompts Morgan Stanley to Cut Rating</a></h3>
     <div class="meta"><span class="src">Bloomberg Technology</span> · Dec 8, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
@@ -1134,7 +1308,7 @@
   </div>
 </article>
 <article class="" data-card data-url="https://www.bloomberg.com/news/articles/2025-12-08/wall-street-gets-a-3-second-head-start-over-retail-in-event-bets?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/b325e6abe6/" data-title="Crypto.com Gives Pros 3-Second Head Start Over Retail Traders for Sports Bets" data-summary="In the fast-moving world of sports betting, a few seconds can mean everything. On Crypto.com’s prediction market, those seconds now belong to the pros." data-source="Bloomberg Technology">
-  <img src="https://pulse.tek2dayholdings.com/p/b325e6abe6/thumbnail.png" alt="Crypto.com Gives Pros 3-Second Head Start Over Retail Traders for Sports Bets" class="article-thumb">
+  <img src="https://pulse.tek2dayholdings.com/p/b325e6abe6/thumbnail.png" alt="Crypto.com Gives Pros 3-Second Head Start Over Retail Traders for Sports Bets" class="article-thumb" loading="lazy">
   <div class="article-content">
     <h3><a data-title-link href="https://www.bloomberg.com/news/articles/2025-12-08/wall-street-gets-a-3-second-head-start-over-retail-in-event-bets?utm_source=tek2day&utm_medium=email">Crypto.com Gives Pros 3-Second Head Start Over Retail Traders for Sports Bets</a></h3>
     <div class="meta"><span class="src">Bloomberg Technology</span> · Dec 8, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
@@ -1143,7 +1317,7 @@
   </div>
 </article>
 <article class="" data-card data-url="https://www.bloomberg.com/news/articles/2025-12-08/insurers-are-doubling-down-on-ai-related-stocks-as-values-soar?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/b832190ac0/" data-title="Insurers Are Doubling Down on AI-Related Stocks as Values Soar" data-summary="Insurance companies have been net buyers of stocks tied to artificial intelligence in the second half of the year as prices for the shares surge." data-source="Bloomberg Technology">
-  <img src="https://pulse.tek2dayholdings.com/p/b832190ac0/thumbnail.png" alt="Insurers Are Doubling Down on AI-Related Stocks as Values Soar" class="article-thumb">
+  <img src="https://pulse.tek2dayholdings.com/p/b832190ac0/thumbnail.png" alt="Insurers Are Doubling Down on AI-Related Stocks as Values Soar" class="article-thumb" loading="lazy">
   <div class="article-content">
     <h3><a data-title-link href="https://www.bloomberg.com/news/articles/2025-12-08/insurers-are-doubling-down-on-ai-related-stocks-as-values-soar?utm_source=tek2day&utm_medium=email">Insurers Are Doubling Down on AI-Related Stocks as Values Soar</a></h3>
     <div class="meta"><span class="src">Bloomberg Technology</span> · Dec 8, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
@@ -1152,7 +1326,7 @@
   </div>
 </article>
 <article class="" data-card data-url="https://www.bloomberg.com/news/articles/2025-12-08/us-will-proceed-with-aukus-security-partnership-rubio-says?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/8e3dee3b50/" data-title="US Will Proceed With Aukus Security Partnership, Rubio Says" data-summary="Secretary of State Marco Rubio said the Trump administration has endorsed the Aukus security agreement with Australia and the UK following a lengthy review of the Biden-era pact t..." data-source="Bloomberg Technology">
-  <img src="https://pulse.tek2dayholdings.com/p/8e3dee3b50/thumbnail.png" alt="US Will Proceed With Aukus Security Partnership, Rubio Says" class="article-thumb">
+  <img src="https://pulse.tek2dayholdings.com/p/8e3dee3b50/thumbnail.png" alt="US Will Proceed With Aukus Security Partnership, Rubio Says" class="article-thumb" loading="lazy">
   <div class="article-content">
     <h3><a data-title-link href="https://www.bloomberg.com/news/articles/2025-12-08/us-will-proceed-with-aukus-security-partnership-rubio-says?utm_source=tek2day&utm_medium=email">US Will Proceed With Aukus Security Partnership, Rubio Says</a></h3>
     <div class="meta"><span class="src">Bloomberg Technology</span> · Dec 8, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
@@ -1161,7 +1335,7 @@
   </div>
 </article>
 <article class="" data-card data-url="https://venturebeat.com/ai/booking-coms-agent-strategy-disciplined-modular-and-already-delivering-2?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/5b1193e1d4/" data-title="Booking.com’s agent strategy: Disciplined, modular and already delivering 2× accuracy" data-summary="When many enterprises weren’t even thinking about agentic behaviors or infrastructures, Booking.com had already “stumbled” into them with its homegrown conversational recommendati..." data-source="VentureBeat">
-  <img src="https://pulse.tek2dayholdings.com/p/5b1193e1d4/thumbnail.png" alt="Booking.com’s agent strategy: Disciplined, modular and already delivering 2× accuracy" class="article-thumb">
+  <img src="https://pulse.tek2dayholdings.com/p/5b1193e1d4/thumbnail.png" alt="Booking.com’s agent strategy: Disciplined, modular and already delivering 2× accuracy" class="article-thumb" loading="lazy">
   <div class="article-content">
     <h3><a data-title-link href="https://venturebeat.com/ai/booking-coms-agent-strategy-disciplined-modular-and-already-delivering-2?utm_source=tek2day&utm_medium=email">Booking.com’s agent strategy: Disciplined, modular and already delivering 2× accuracy</a></h3>
     <div class="meta"><span class="src">VentureBeat</span> · Dec 8, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
@@ -1170,7 +1344,7 @@
   </div>
 </article>
 <article class="" data-card data-url="https://newsletter.tek2dayholdings.com/p/google-looks-smart-cant-say-the-same?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/e9d4262818/" data-title="Google Looks Smart. Can&#x27;t Say the Same for META, MSFT and ORCL." data-summary="META: $30 billion public bond sale and $27 billion private capital deal for AI/LLM-related infrastructure, yet less than $5 billion in LLM-related revenue." data-source="TEK2day Newsletter">
-  <img src="https://pulse.tek2dayholdings.com/p/e9d4262818/thumbnail.png" alt="Google Looks Smart. Can&#x27;t Say the Same for META, MSFT and ORCL." class="article-thumb">
+  <img src="https://pulse.tek2dayholdings.com/p/e9d4262818/thumbnail.png" alt="Google Looks Smart. Can&#x27;t Say the Same for META, MSFT and ORCL." class="article-thumb" loading="lazy">
   <div class="article-content">
     <h3><a data-title-link href="https://newsletter.tek2dayholdings.com/p/google-looks-smart-cant-say-the-same?utm_source=tek2day&utm_medium=email">Google Looks Smart. Can&#x27;t Say the Same for META, MSFT and ORCL.</a></h3>
     <div class="meta"><span class="src">TEK2day Newsletter</span> · Dec 8, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
@@ -1179,7 +1353,7 @@
   </div>
 </article>
 <article class="" data-card data-url="https://cointelegraph.com/news/sec-ends-ondo-investigation-tokenized-securities-reset?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound&utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/907975217a/" data-title="SEC ends Biden-era probe into tokenized equity platform Ondo Finance" data-summary="Launched in 2023, the SEC probe into Ondo’s tokenized RWAs and ONDO token ended without charges, signaling a regulatory reset for onchain assets." data-source="Cointelegraph">
-  <img src="https://pulse.tek2dayholdings.com/p/907975217a/thumbnail.png" alt="SEC ends Biden-era probe into tokenized equity platform Ondo Finance" class="article-thumb">
+  <img src="https://pulse.tek2dayholdings.com/p/907975217a/thumbnail.png" alt="SEC ends Biden-era probe into tokenized equity platform Ondo Finance" class="article-thumb" loading="lazy">
   <div class="article-content">
     <h3><a data-title-link href="https://cointelegraph.com/news/sec-ends-ondo-investigation-tokenized-securities-reset?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound&utm_source=tek2day&utm_medium=email">SEC ends Biden-era probe into tokenized equity platform Ondo Finance</a></h3>
     <div class="meta"><span class="src">Cointelegraph</span> · Dec 8, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
@@ -1187,17 +1361,17 @@
     <p data-summary>Launched in 2023, the SEC probe into Ondo’s tokenized RWAs and ONDO token ended without charges, signaling a regulatory reset for onchain assets.</p>
   </div>
 </article>
-<article class="" data-card data-url="https://www.ft.com/content/d8585870-17a5-43a0-95ef-cbebb1995107?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/0e94c29a8f/" data-title="Google’s ‘TPU’ chip puts OpenAI on alert and shakes Nvidia investors" data-summary="AI advances made through group’s custom processor hits Nvidia’s stock and prompts ChatGPT maker to declare ‘code red’" data-source="Financial Times - Technology">
-  <img src="https://pulse.tek2dayholdings.com/p/0e94c29a8f/thumbnail.png" alt="Google’s ‘TPU’ chip puts OpenAI on alert and shakes Nvidia investors" class="article-thumb">
+<article class="" data-card data-url="https://www.ft.com/content/d8585870-17a5-43a0-95ef-cbebb1995107?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/0e94c29a8f/" data-title="Google’s ‘TPU’ chip puts OpenAI on alert and shakes Nvidia investors" data-summary="AI advances made through group’s custom processor hit Nvidia’s stock and prompt ChatGPT maker to declare ‘code red’" data-source="Financial Times - Technology">
+  <img src="https://pulse.tek2dayholdings.com/p/0e94c29a8f/thumbnail.png" alt="Google’s ‘TPU’ chip puts OpenAI on alert and shakes Nvidia investors" class="article-thumb" loading="lazy">
   <div class="article-content">
     <h3><a data-title-link href="https://www.ft.com/content/d8585870-17a5-43a0-95ef-cbebb1995107?utm_source=tek2day&utm_medium=email">Google’s ‘TPU’ chip puts OpenAI on alert and shakes Nvidia investors</a></h3>
     <div class="meta"><span class="src">Financial Times - Technology</span> · Dec 8, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
     <div class="trend-chips"><span class="trend-chip">ai</span> <span class="trend-chip">chatgpt</span> <span class="trend-chip">google</span> <span class="trend-chip">gpt</span> <span class="trend-chip">nvidia</span> <span class="trend-chip">openai</span></div>
-    <p data-summary>AI advances made through group’s custom processor hits Nvidia’s stock and prompts ChatGPT maker to declare ‘code red’</p>
+    <p data-summary>AI advances made through group’s custom processor hit Nvidia’s stock and prompt ChatGPT maker to declare ‘code red’</p>
   </div>
 </article>
 <article class="" data-card data-url="https://www.bloomberg.com/news/articles/2025-12-08/tether-backs-italian-humanoid-robotics-firm-as-ai-push-builds?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/6a6c1681a7/" data-title="Tether Backs Italian Humanoid-Robotics Firm as AI Push Builds" data-summary="Stablecoin giant Tether has joined a €70 million ($81.6 million) funding round for Italy-based Generative Bionics, a humanoid-robotics startup developing industrial robots built u..." data-source="Bloomberg Technology">
-  <img src="https://pulse.tek2dayholdings.com/p/6a6c1681a7/thumbnail.png" alt="Tether Backs Italian Humanoid-Robotics Firm as AI Push Builds" class="article-thumb">
+  <img src="https://pulse.tek2dayholdings.com/p/6a6c1681a7/thumbnail.png" alt="Tether Backs Italian Humanoid-Robotics Firm as AI Push Builds" class="article-thumb" loading="lazy">
   <div class="article-content">
     <h3><a data-title-link href="https://www.bloomberg.com/news/articles/2025-12-08/tether-backs-italian-humanoid-robotics-firm-as-ai-push-builds?utm_source=tek2day&utm_medium=email">Tether Backs Italian Humanoid-Robotics Firm as AI Push Builds</a></h3>
     <div class="meta"><span class="src">Bloomberg Technology</span> · Dec 8, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
@@ -1206,7 +1380,7 @@
   </div>
 </article>
 <article class="" data-card data-url="https://www.bloomberg.com/news/articles/2025-12-08/qatar-sets-up-national-ai-firm-following-wealthy-gulf-neighbors?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/111e000129/" data-title="Qatar Sets Up National AI Firm, Joining Gulf Neighbors" data-summary="Qatar is establishing a new company to develop and invest in artificial intelligence, joining larger Gulf nations in plowing national resources into the technology." data-source="Bloomberg Technology">
-  <img src="https://pulse.tek2dayholdings.com/p/111e000129/thumbnail.png" alt="Qatar Sets Up National AI Firm, Joining Gulf Neighbors" class="article-thumb">
+  <img src="https://pulse.tek2dayholdings.com/p/111e000129/thumbnail.png" alt="Qatar Sets Up National AI Firm, Joining Gulf Neighbors" class="article-thumb" loading="lazy">
   <div class="article-content">
     <h3><a data-title-link href="https://www.bloomberg.com/news/articles/2025-12-08/qatar-sets-up-national-ai-firm-following-wealthy-gulf-neighbors?utm_source=tek2day&utm_medium=email">Qatar Sets Up National AI Firm, Joining Gulf Neighbors</a></h3>
     <div class="meta"><span class="src">Bloomberg Technology</span> · Dec 8, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
@@ -1215,7 +1389,7 @@
   </div>
 </article>
 <article class="" data-card data-url="https://cointelegraph.com/news/bitcoin-rallies-are-for-selling-top-arguments-btc-market-bears?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound&utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/4f54a56209/" data-title="Bitcoin ’rallies are for selling‘: Top 3 arguments from BTC market bears" data-summary="Many analysts say BTC’s rebound is a bull trap, warning its price could fall to as low as $40,000 over the coming months." data-source="Cointelegraph">
-  <img src="https://pulse.tek2dayholdings.com/p/4f54a56209/thumbnail.png" alt="Bitcoin ’rallies are for selling‘: Top 3 arguments from BTC market bears" class="article-thumb">
+  <img src="https://pulse.tek2dayholdings.com/p/4f54a56209/thumbnail.png" alt="Bitcoin ’rallies are for selling‘: Top 3 arguments from BTC market bears" class="article-thumb" loading="lazy">
   <div class="article-content">
     <h3><a data-title-link href="https://cointelegraph.com/news/bitcoin-rallies-are-for-selling-top-arguments-btc-market-bears?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound&utm_source=tek2day&utm_medium=email">Bitcoin ’rallies are for selling‘: Top 3 arguments from BTC market bears</a></h3>
     <div class="meta"><span class="src">Cointelegraph</span> · Dec 8, 2025 <span class="badge">New</span> </div>
@@ -1224,7 +1398,7 @@
   </div>
 </article>
 <article class="" data-card data-url="https://www.bloomberg.com/news/articles/2025-12-08/trump-says-he-ll-sign-executive-order-curbing-state-ai-rules?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/f2ff98a3c3/" data-title="Trump Says He’ll Sign Executive Order Curbing State AI Rules" data-summary="President Donald Trump said he would approve an executive order this week establishing “ONE RULE” on artificial intelligence aimed at limiting state-level policies regulating the ..." data-source="Bloomberg Technology">
-  <img src="https://pulse.tek2dayholdings.com/p/f2ff98a3c3/thumbnail.png" alt="Trump Says He’ll Sign Executive Order Curbing State AI Rules" class="article-thumb">
+  <img src="https://pulse.tek2dayholdings.com/p/f2ff98a3c3/thumbnail.png" alt="Trump Says He’ll Sign Executive Order Curbing State AI Rules" class="article-thumb" loading="lazy">
   <div class="article-content">
     <h3><a data-title-link href="https://www.bloomberg.com/news/articles/2025-12-08/trump-says-he-ll-sign-executive-order-curbing-state-ai-rules?utm_source=tek2day&utm_medium=email">Trump Says He’ll Sign Executive Order Curbing State AI Rules</a></h3>
     <div class="meta"><span class="src">Bloomberg Technology</span> · Dec 8, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
@@ -1233,7 +1407,7 @@
   </div>
 </article>
 <article class="" data-card data-url="https://www.bloomberg.com/news/articles/2025-12-08/google-and-nextera-to-develop-data-centers-with-power-plants?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/db853dc714/" data-title="NextEra Shares Fall Amid Push to Move Into Data Centers and Gas" data-summary="NextEra Energy Inc., the big clean-power developer that’s been pivoting into natural gas generation preferred by President Donald Trump, announced Monday a flurry of plans to deve..." data-source="Bloomberg Technology">
-  <img src="https://pulse.tek2dayholdings.com/p/db853dc714/thumbnail.png" alt="NextEra Shares Fall Amid Push to Move Into Data Centers and Gas" class="article-thumb">
+  <img src="https://pulse.tek2dayholdings.com/p/db853dc714/thumbnail.png" alt="NextEra Shares Fall Amid Push to Move Into Data Centers and Gas" class="article-thumb" loading="lazy">
   <div class="article-content">
     <h3><a data-title-link href="https://www.bloomberg.com/news/articles/2025-12-08/google-and-nextera-to-develop-data-centers-with-power-plants?utm_source=tek2day&utm_medium=email">NextEra Shares Fall Amid Push to Move Into Data Centers and Gas</a></h3>
     <div class="meta"><span class="src">Bloomberg Technology</span> · Dec 8, 2025 <span class="badge">New</span> </div>
@@ -1242,7 +1416,7 @@
   </div>
 </article>
 <article class="" data-card data-url="https://www.bloomberg.com/news/features/2025-12-08/what-is-agentic-browsing-and-why-are-ai-browsers-not-replacing-chrome-yet?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/c3bcfed834/" data-title="AI Browsers Aren’t Smart Enough Yet to Take Over the Internet" data-summary="A crop of under-baked new products is splitting the internet into two lanes, forcing website developers to rethink who their pages are for." data-source="Bloomberg Technology">
-  <img src="https://pulse.tek2dayholdings.com/p/c3bcfed834/thumbnail.png" alt="AI Browsers Aren’t Smart Enough Yet to Take Over the Internet" class="article-thumb">
+  <img src="https://pulse.tek2dayholdings.com/p/c3bcfed834/thumbnail.png" alt="AI Browsers Aren’t Smart Enough Yet to Take Over the Internet" class="article-thumb" loading="lazy">
   <div class="article-content">
     <h3><a data-title-link href="https://www.bloomberg.com/news/features/2025-12-08/what-is-agentic-browsing-and-why-are-ai-browsers-not-replacing-chrome-yet?utm_source=tek2day&utm_medium=email">AI Browsers Aren’t Smart Enough Yet to Take Over the Internet</a></h3>
     <div class="meta"><span class="src">Bloomberg Technology</span> · Dec 8, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
@@ -1251,7 +1425,7 @@
   </div>
 </article>
 <article class="" data-card data-url="https://techcrunch.com/2025/12/08/hinges-new-ai-feature-helps-daters-start-better-convos-moving-beyond-boring-small-talk/?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/b3cf1666a9/" data-title="Hinge’s new AI feature helps daters move beyond boring small talk" data-summary="Hinge launched “Convo Starters,” a feature powered by AI that provides personalized tips for initiating meaningful conversations." data-source="TechCrunch">
-  <img src="https://pulse.tek2dayholdings.com/p/b3cf1666a9/thumbnail.png" alt="Hinge’s new AI feature helps daters move beyond boring small talk" class="article-thumb">
+  <img src="https://pulse.tek2dayholdings.com/p/b3cf1666a9/thumbnail.png" alt="Hinge’s new AI feature helps daters move beyond boring small talk" class="article-thumb" loading="lazy">
   <div class="article-content">
     <h3><a data-title-link href="https://techcrunch.com/2025/12/08/hinges-new-ai-feature-helps-daters-start-better-convos-moving-beyond-boring-small-talk/?utm_source=tek2day&utm_medium=email">Hinge’s new AI feature helps daters move beyond boring small talk</a></h3>
     <div class="meta"><span class="src">TechCrunch</span> · Dec 8, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
@@ -1260,7 +1434,7 @@
   </div>
 </article>
 <article class="" data-card data-url="https://cointelegraph.com/news/argentina-weighs-reversing-bank-level-crypto-ban-report?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound&utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/bc6aed616d/" data-title="Argentina weighs letting traditional banks trade crypto: Report" data-summary="Argentina’s central bank is reportedly considering whether to allow traditional financial institutions to offer crypto services, marking the potential lifting of a ban." data-source="Cointelegraph">
-  <img src="https://pulse.tek2dayholdings.com/p/bc6aed616d/thumbnail.png" alt="Argentina weighs letting traditional banks trade crypto: Report" class="article-thumb">
+  <img src="https://pulse.tek2dayholdings.com/p/bc6aed616d/thumbnail.png" alt="Argentina weighs letting traditional banks trade crypto: Report" class="article-thumb" loading="lazy">
   <div class="article-content">
     <h3><a data-title-link href="https://cointelegraph.com/news/argentina-weighs-reversing-bank-level-crypto-ban-report?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound&utm_source=tek2day&utm_medium=email">Argentina weighs letting traditional banks trade crypto: Report</a></h3>
     <div class="meta"><span class="src">Cointelegraph</span> · Dec 8, 2025 <span class="badge">New</span> </div>
@@ -1269,7 +1443,7 @@
   </div>
 </article>
 <article class="" data-card data-url="https://cointelegraph.com/news/prediction-markets-arbitrage-arena-crypto-traders?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound&utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/e52c82c954/" data-title="Prediction markets emerge as speculative ‘arbitrage arena’ for crypto traders" data-summary="Prediction markets offer traders more upside than holding the underlying spot crypto, but AI bots and accounts with a 100% win rate raise suspicions of insider trading." data-source="Cointelegraph">
-  <img src="https://pulse.tek2dayholdings.com/p/e52c82c954/thumbnail.png" alt="Prediction markets emerge as speculative ‘arbitrage arena’ for crypto traders" class="article-thumb">
+  <img src="https://pulse.tek2dayholdings.com/p/e52c82c954/thumbnail.png" alt="Prediction markets emerge as speculative ‘arbitrage arena’ for crypto traders" class="article-thumb" loading="lazy">
   <div class="article-content">
     <h3><a data-title-link href="https://cointelegraph.com/news/prediction-markets-arbitrage-arena-crypto-traders?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound&utm_source=tek2day&utm_medium=email">Prediction markets emerge as speculative ‘arbitrage arena’ for crypto traders</a></h3>
     <div class="meta"><span class="src">Cointelegraph</span> · Dec 8, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
@@ -1278,7 +1452,7 @@
   </div>
 </article>
 <article class="" data-card data-url="https://www.bloomberg.com/news/newsletters/2025-12-08/amazon-pitches-ai-tools-as-co-workers-while-axing-jobs?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/55e7a614fc/" data-title="Amazon Pitches AI Tools as Co-Workers While Axing Jobs" data-summary="Welcome to Tech In Depth, our daily newsletter about the business of tech from Bloomberg’s journalists around the world. Today, Ed Ludlow reports on Amazon’s view on the use of AI..." data-source="Bloomberg Technology">
-  <img src="https://pulse.tek2dayholdings.com/p/55e7a614fc/thumbnail.png" alt="Amazon Pitches AI Tools as Co-Workers While Axing Jobs" class="article-thumb">
+  <img src="https://pulse.tek2dayholdings.com/p/55e7a614fc/thumbnail.png" alt="Amazon Pitches AI Tools as Co-Workers While Axing Jobs" class="article-thumb" loading="lazy">
   <div class="article-content">
     <h3><a data-title-link href="https://www.bloomberg.com/news/newsletters/2025-12-08/amazon-pitches-ai-tools-as-co-workers-while-axing-jobs?utm_source=tek2day&utm_medium=email">Amazon Pitches AI Tools as Co-Workers While Axing Jobs</a></h3>
     <div class="meta"><span class="src">Bloomberg Technology</span> · Dec 8, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
@@ -1287,7 +1461,7 @@
   </div>
 </article>
 <article class="" data-card data-url="https://techcrunch.com/2025/12/08/openai-boasts-enterprise-win-days-after-internal-code-red-on-google-threat/?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/be98383523/" data-title="OpenAI boasts enterprise win days after internal ‘code red’ on Google threat" data-summary="ChatGPT Enterprise usage grew 8x year-over-year as workers report saving an hour daily, but OpenAI faces competitive pressure from Anthropic and questions about cost sustainabilit..." data-source="TechCrunch">
-  <img src="https://pulse.tek2dayholdings.com/p/be98383523/thumbnail.png" alt="OpenAI boasts enterprise win days after internal ‘code red’ on Google threat" class="article-thumb">
+  <img src="https://pulse.tek2dayholdings.com/p/be98383523/thumbnail.png" alt="OpenAI boasts enterprise win days after internal ‘code red’ on Google threat" class="article-thumb" loading="lazy">
   <div class="article-content">
     <h3><a data-title-link href="https://techcrunch.com/2025/12/08/openai-boasts-enterprise-win-days-after-internal-code-red-on-google-threat/?utm_source=tek2day&utm_medium=email">OpenAI boasts enterprise win days after internal ‘code red’ on Google threat</a></h3>
     <div class="meta"><span class="src">TechCrunch</span> · Dec 8, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
@@ -1296,7 +1470,7 @@
   </div>
 </article>
 <article class="" data-card data-url="https://www.ft.com/content/307d5bb6-d02c-4052-8251-b0dad90a1c5f?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/ae2499974b/" data-title="AI poses a new antitrust problem" data-summary="Washington cheered on the consolidation of the social web in the 2010s — it must not make the same mistake today" data-source="Financial Times - Technology">
-  <img src="https://pulse.tek2dayholdings.com/p/ae2499974b/thumbnail.png" alt="AI poses a new antitrust problem" class="article-thumb">
+  <img src="https://pulse.tek2dayholdings.com/p/ae2499974b/thumbnail.png" alt="AI poses a new antitrust problem" class="article-thumb" loading="lazy">
   <div class="article-content">
     <h3><a data-title-link href="https://www.ft.com/content/307d5bb6-d02c-4052-8251-b0dad90a1c5f?utm_source=tek2day&utm_medium=email">AI poses a new antitrust problem</a></h3>
     <div class="meta"><span class="src">Financial Times - Technology</span> · Dec 8, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
@@ -1304,17 +1478,17 @@
     <p data-summary>Washington cheered on the consolidation of the social web in the 2010s — it must not make the same mistake today</p>
   </div>
 </article>
-<article class="" data-card data-url="https://cointelegraph.com/news/panic-wallets-crypto-physical-security?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound&utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/4e376bcd24/" data-title="Can panic wallets stop a wrench? Why crypto’s next security debate is physical" data-summary="Jameson Lopp’s wrench attack data shows physical assaults on crypto holders surging in 2025, forcing a reckoning over whether self‑custody is worth the physical risk." data-source="Cointelegraph">
-  <img src="https://pulse.tek2dayholdings.com/p/4e376bcd24/thumbnail.png" alt="Can panic wallets stop a wrench? Why crypto’s next security debate is physical" class="article-thumb">
+<article class="" data-card data-url="https://ct.com/news/panic-wallets-crypto-physical-security?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound&utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/93578f4f5f/" data-title="Can panic wallets stop a wrench? Why crypto’s next security debate is physical" data-summary="Jameson Lopp’s wrench attack data shows physical assaults on crypto holders surging in 2025, forcing a reckoning over whether self‑custody is worth the physical risk." data-source="Cointelegraph">
+  <img src="https://pulse.tek2dayholdings.com/p/93578f4f5f/thumbnail.png" alt="Can panic wallets stop a wrench? Why crypto’s next security debate is physical" class="article-thumb" loading="lazy">
   <div class="article-content">
-    <h3><a data-title-link href="https://cointelegraph.com/news/panic-wallets-crypto-physical-security?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound&utm_source=tek2day&utm_medium=email">Can panic wallets stop a wrench? Why crypto’s next security debate is physical</a></h3>
+    <h3><a data-title-link href="https://ct.com/news/panic-wallets-crypto-physical-security?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound&utm_source=tek2day&utm_medium=email">Can panic wallets stop a wrench? Why crypto’s next security debate is physical</a></h3>
     <div class="meta"><span class="src">Cointelegraph</span> · Dec 8, 2025 <span class="badge">New</span> </div>
     <div class="trend-chips"></div>
     <p data-summary>Jameson Lopp’s wrench attack data shows physical assaults on crypto holders surging in 2025, forcing a reckoning over whether self‑custody is worth the physical risk.</p>
   </div>
 </article>
 <article class="" data-card data-url="https://www.apple.com/ca/newsroom/2025/12/apple-manufacturing-academy-launches-virtual-programming/?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/7c5a0d9f7d/" data-title="Apple Manufacturing Academy launches virtual programming" data-summary="Apple today expanded its Apple Manufacturing Academy with new virtual programming." data-source="Apple News">
-  <img src="https://pulse.tek2dayholdings.com/p/7c5a0d9f7d/thumbnail.png" alt="Apple Manufacturing Academy launches virtual programming" class="article-thumb">
+  <img src="https://pulse.tek2dayholdings.com/p/7c5a0d9f7d/thumbnail.png" alt="Apple Manufacturing Academy launches virtual programming" class="article-thumb" loading="lazy">
   <div class="article-content">
     <h3><a data-title-link href="https://www.apple.com/ca/newsroom/2025/12/apple-manufacturing-academy-launches-virtual-programming/?utm_source=tek2day&utm_medium=email">Apple Manufacturing Academy launches virtual programming</a></h3>
     <div class="meta"><span class="src">Apple News</span> · Dec 8, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
@@ -1322,17 +1496,17 @@
     <p data-summary>Apple today expanded its Apple Manufacturing Academy with new virtual programming.</p>
   </div>
 </article>
-<article class="" data-card data-url="https://cointelegraph.com/news/coinshares-2026-outlook-tokenized-rwas-us-treasuries?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound&utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/7d90a83db0/" data-title="US Treasurys lead tokenization wave as CoinShares predicts 2026 growth" data-summary="CoinShares said tokenized RWAs jumped 229% in 2025, led by US Treasurys, and it expects dollar-yield demand to keep driving onchain growth into 2026." data-source="Cointelegraph">
-  <img src="https://pulse.tek2dayholdings.com/p/7d90a83db0/thumbnail.png" alt="US Treasurys lead tokenization wave as CoinShares predicts 2026 growth" class="article-thumb">
+<article class="" data-card data-url="https://ct.com/news/coinshares-2026-outlook-tokenized-rwas-us-treasuries?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound&utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/412cf6f5ea/" data-title="US Treasurys lead tokenization wave as CoinShares predicts 2026 growth" data-summary="CoinShares said tokenized RWAs jumped 229% in 2025, led by US Treasurys, and it expects dollar-yield demand to keep driving onchain growth into 2026." data-source="Cointelegraph">
+  <img src="https://pulse.tek2dayholdings.com/p/412cf6f5ea/thumbnail.png" alt="US Treasurys lead tokenization wave as CoinShares predicts 2026 growth" class="article-thumb" loading="lazy">
   <div class="article-content">
-    <h3><a data-title-link href="https://cointelegraph.com/news/coinshares-2026-outlook-tokenized-rwas-us-treasuries?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound&utm_source=tek2day&utm_medium=email">US Treasurys lead tokenization wave as CoinShares predicts 2026 growth</a></h3>
+    <h3><a data-title-link href="https://ct.com/news/coinshares-2026-outlook-tokenized-rwas-us-treasuries?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound&utm_source=tek2day&utm_medium=email">US Treasurys lead tokenization wave as CoinShares predicts 2026 growth</a></h3>
     <div class="meta"><span class="src">Cointelegraph</span> · Dec 8, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
     <div class="trend-chips"><span class="trend-chip">ai</span></div>
     <p data-summary>CoinShares said tokenized RWAs jumped 229% in 2025, led by US Treasurys, and it expects dollar-yield demand to keep driving onchain growth into 2026.</p>
   </div>
 </article>
 <article class="" data-card data-url="https://ct.com/news/coinbase-india-relaunch-two-years-market-exit?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound&utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/e10631d995/" data-title="Coinbase mounts a cautious comeback in India, two years after exit" data-summary="Coinbase has reopened India app registrations, with local fiat on-ramps planned for 2026 following a rocky exit more than two years ago." data-source="Cointelegraph">
-  <img src="https://pulse.tek2dayholdings.com/p/e10631d995/thumbnail.png" alt="Coinbase mounts a cautious comeback in India, two years after exit" class="article-thumb">
+  <img src="https://pulse.tek2dayholdings.com/p/e10631d995/thumbnail.png" alt="Coinbase mounts a cautious comeback in India, two years after exit" class="article-thumb" loading="lazy">
   <div class="article-content">
     <h3><a data-title-link href="https://ct.com/news/coinbase-india-relaunch-two-years-market-exit?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound&utm_source=tek2day&utm_medium=email">Coinbase mounts a cautious comeback in India, two years after exit</a></h3>
     <div class="meta"><span class="src">Cointelegraph</span> · Dec 8, 2025 <span class="badge">New</span> </div>
@@ -1341,7 +1515,7 @@
   </div>
 </article>
 <article class="" data-card data-url="https://venturebeat.com/ai/design-in-the-age-of-ai-how-small-businesses-are-building-big-brands-faster?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/eab77e3293/" data-title="Design in the age of AI: How small businesses are building big brands faster" data-summary="Presented by Design.com For most of history, design was the last step in starting a business — something entrepreneurs invested in once the idea was proven. Today, it’s one of the..." data-source="VentureBeat">
-  <img src="https://pulse.tek2dayholdings.com/p/eab77e3293/thumbnail.png" alt="Design in the age of AI: How small businesses are building big brands faster" class="article-thumb">
+  <img src="https://pulse.tek2dayholdings.com/p/eab77e3293/thumbnail.png" alt="Design in the age of AI: How small businesses are building big brands faster" class="article-thumb" loading="lazy">
   <div class="article-content">
     <h3><a data-title-link href="https://venturebeat.com/ai/design-in-the-age-of-ai-how-small-businesses-are-building-big-brands-faster?utm_source=tek2day&utm_medium=email">Design in the age of AI: How small businesses are building big brands faster</a></h3>
     <div class="meta"><span class="src">VentureBeat</span> · Dec 8, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
@@ -1350,7 +1524,7 @@
   </div>
 </article>
 <article class="" data-card data-url="https://cointelegraph.com/explained/the-future-of-secure-messaging-why-decentralization-matters-more-than-ever?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound&utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/56ceb222ee/" data-title="The future of secure messaging: Why decentralization matters more than ever" data-summary="Decentralized messengers shift security beyond encryption by reducing metadata, limiting data requests and preparing for post-quantum threats." data-source="Cointelegraph">
-  <img src="https://pulse.tek2dayholdings.com/p/56ceb222ee/thumbnail.png" alt="The future of secure messaging: Why decentralization matters more than ever" class="article-thumb">
+  <img src="https://pulse.tek2dayholdings.com/p/56ceb222ee/thumbnail.png" alt="The future of secure messaging: Why decentralization matters more than ever" class="article-thumb" loading="lazy">
   <div class="article-content">
     <h3><a data-title-link href="https://cointelegraph.com/explained/the-future-of-secure-messaging-why-decentralization-matters-more-than-ever?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound&utm_source=tek2day&utm_medium=email">The future of secure messaging: Why decentralization matters more than ever</a></h3>
     <div class="meta"><span class="src">Cointelegraph</span> · Dec 8, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
@@ -1359,7 +1533,7 @@
   </div>
 </article>
 <article class="" data-card data-url="https://openai.com/index/instacart-partnership?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/da4f323a51/" data-title="Instacart and OpenAI partner on AI shopping experiences" data-summary="OpenAI and Instacart are deepening their longstanding partnership by bringing the first fully integrated grocery shopping and Instant Checkout payment app to ChatGPT." data-source="OpenAI News">
-  <img src="https://pulse.tek2dayholdings.com/p/da4f323a51/thumbnail.png" alt="Instacart and OpenAI partner on AI shopping experiences" class="article-thumb">
+  <img src="https://pulse.tek2dayholdings.com/p/da4f323a51/thumbnail.png" alt="Instacart and OpenAI partner on AI shopping experiences" class="article-thumb" loading="lazy">
   <div class="article-content">
     <h3><a data-title-link href="https://openai.com/index/instacart-partnership?utm_source=tek2day&utm_medium=email">Instacart and OpenAI partner on AI shopping experiences</a></h3>
     <div class="meta"><span class="src">OpenAI News</span> · Dec 8, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
@@ -1368,25 +1542,34 @@
   </div>
 </article>
 <article class="" data-card data-url="https://openai.com/index/the-state-of-enterprise-ai-2025-report?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/ceaa421c72/" data-title="The state of enterprise AI" data-summary="Key findings from OpenAI’s enterprise data show accelerating AI adoption, deeper integration, and measurable productivity gains across industries in 2025." data-source="OpenAI News">
-  <img src="https://pulse.tek2dayholdings.com/p/ceaa421c72/thumbnail.png" alt="The state of enterprise AI" class="article-thumb">
+  <img src="https://pulse.tek2dayholdings.com/p/ceaa421c72/thumbnail.png" alt="The state of enterprise AI" class="article-thumb" loading="lazy">
   <div class="article-content">
     <h3><a data-title-link href="https://openai.com/index/the-state-of-enterprise-ai-2025-report?utm_source=tek2day&utm_medium=email">The state of enterprise AI</a></h3>
-    <div class="meta"><span class="src">OpenAI News</span> · Dec 7, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
+    <div class="meta"><span class="src">OpenAI News</span> · Dec 7, 2025  <span class="trending-indicator">Trending</span></div>
     <div class="trend-chips"><span class="trend-chip">ai</span> <span class="trend-chip">openai</span></div>
     <p data-summary>Key findings from OpenAI’s enterprise data show accelerating AI adoption, deeper integration, and measurable productivity gains across industries in 2025.</p>
   </div>
 </article>
 <article class="" data-card data-url="https://www.youtube.com/watch?v=Belt8RStJeM&utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/cb5275e9af/" data-title="Interview Practice with ChatGPT" data-summary="Be your best at your next job interview... rehearse what you want to say with ChatGPT." data-source="OpenAI YouTube">
-  <img src="https://i.ytimg.com/vi/Belt8RStJeM/mqdefault.jpg" alt="Interview Practice with ChatGPT" class="article-thumb">
+  <img src="https://i.ytimg.com/vi/Belt8RStJeM/mqdefault.jpg" alt="Interview Practice with ChatGPT" class="article-thumb" loading="lazy">
   <div class="article-content">
     <h3><a data-title-link href="https://www.youtube.com/watch?v=Belt8RStJeM&utm_source=tek2day&utm_medium=email">Interview Practice with ChatGPT</a></h3>
-    <div class="meta"><span class="src">OpenAI YouTube</span> · Dec 7, 2025 <span class="badge">New</span> <span class="trending-indicator">Trending</span></div>
+    <div class="meta"><span class="src">OpenAI YouTube</span> · Dec 7, 2025  <span class="trending-indicator">Trending</span></div>
     <div class="trend-chips"><span class="trend-chip">chatgpt</span> <span class="trend-chip">gpt</span></div>
     <p data-summary>Be your best at your next job interview... rehearse what you want to say with ChatGPT.</p>
   </div>
 </article>
+<article class="" data-card data-url="https://openai.com/index/virgin-atlantic-oliver-byers?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/f40a434543/" data-title="How Virgin Atlantic uses AI to enhance every step of travel" data-summary="Virgin Atlantic CFO Oliver Byers shares how the airline is using AI to speed up development, improve decision-making, and elevate customer experience." data-source="OpenAI News">
+  <img src="https://pulse.tek2dayholdings.com/p/f40a434543/thumbnail.png" alt="How Virgin Atlantic uses AI to enhance every step of travel" class="article-thumb" loading="lazy">
+  <div class="article-content">
+    <h3><a data-title-link href="https://openai.com/index/virgin-atlantic-oliver-byers?utm_source=tek2day&utm_medium=email">How Virgin Atlantic uses AI to enhance every step of travel</a></h3>
+    <div class="meta"><span class="src">OpenAI News</span> · Dec 7, 2025  <span class="trending-indicator">Trending</span></div>
+    <div class="trend-chips"><span class="trend-chip">ai</span></div>
+    <p data-summary>Virgin Atlantic CFO Oliver Byers shares how the airline is using AI to speed up development, improve decision-making, and elevate customer experience.</p>
+  </div>
+</article>
 <article class="" data-card data-url="https://www.nytimes.com/2025/12/07/technology/how-a-cryptocurrency-helps-criminals-launder-money-and-evade-sanctions.html?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/edf9ac402c/" data-title="How Stablecoins Can Help Criminals Launder Money and Evade Sanctions" data-summary="Through layers of intermediaries, stablecoins can be moved, swapped and mixed into pools of other funds in ways that are difficult to trace, experts say." data-source="The New York Times - Technology">
-  <img src="https://pulse.tek2dayholdings.com/p/edf9ac402c/thumbnail.png" alt="How Stablecoins Can Help Criminals Launder Money and Evade Sanctions" class="article-thumb">
+  <img src="https://pulse.tek2dayholdings.com/p/edf9ac402c/thumbnail.png" alt="How Stablecoins Can Help Criminals Launder Money and Evade Sanctions" class="article-thumb" loading="lazy">
   <div class="article-content">
     <h3><a data-title-link href="https://www.nytimes.com/2025/12/07/technology/how-a-cryptocurrency-helps-criminals-launder-money-and-evade-sanctions.html?utm_source=tek2day&utm_medium=email">How Stablecoins Can Help Criminals Launder Money and Evade Sanctions</a></h3>
     <div class="meta"><span class="src">The New York Times - Technology</span> · Dec 7, 2025  </div>
@@ -1395,7 +1578,7 @@
   </div>
 </article>
 <article class="" data-card data-url="https://techcrunch.com/2025/12/07/the-accelerator-is-on-the-floor-for-autonomous-vehicles/?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/7951dacdaf/" data-title="The accelerator is on the floor for autonomous vehicles" data-summary="Welcome back to TechCrunch Mobility — your central hub for news and insights on the future of transportation." data-source="TechCrunch">
-  <img src="https://pulse.tek2dayholdings.com/p/7951dacdaf/thumbnail.png" alt="The accelerator is on the floor for autonomous vehicles" class="article-thumb">
+  <img src="https://pulse.tek2dayholdings.com/p/7951dacdaf/thumbnail.png" alt="The accelerator is on the floor for autonomous vehicles" class="article-thumb" loading="lazy">
   <div class="article-content">
     <h3><a data-title-link href="https://techcrunch.com/2025/12/07/the-accelerator-is-on-the-floor-for-autonomous-vehicles/?utm_source=tek2day&utm_medium=email">The accelerator is on the floor for autonomous vehicles</a></h3>
     <div class="meta"><span class="src">TechCrunch</span> · Dec 7, 2025  </div>
@@ -1404,7 +1587,7 @@
   </div>
 </article>
 <article class="" data-card data-url="https://techcrunch.com/2025/12/07/coinbase-starts-onboarding-users-again-in-india-plans-for-fiat-on-ramp-for-next-year/?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/aa96c0686f/" data-title="Coinbase starts onboarding users again in India, plans for fiat on-ramp next year" data-summary="Coinbase is exploring expansion into India with a staggered relaunch and hiring for different roles." data-source="TechCrunch">
-  <img src="https://pulse.tek2dayholdings.com/p/aa96c0686f/thumbnail.png" alt="Coinbase starts onboarding users again in India, plans for fiat on-ramp next year" class="article-thumb">
+  <img src="https://pulse.tek2dayholdings.com/p/aa96c0686f/thumbnail.png" alt="Coinbase starts onboarding users again in India, plans for fiat on-ramp next year" class="article-thumb" loading="lazy">
   <div class="article-content">
     <h3><a data-title-link href="https://techcrunch.com/2025/12/07/coinbase-starts-onboarding-users-again-in-india-plans-for-fiat-on-ramp-for-next-year/?utm_source=tek2day&utm_medium=email">Coinbase starts onboarding users again in India, plans for fiat on-ramp next year</a></h3>
     <div class="meta"><span class="src">TechCrunch</span> · Dec 7, 2025  <span class="trending-indicator">Trending</span></div>
@@ -1413,7 +1596,7 @@
   </div>
 </article>
 <article class="" data-card data-url="https://www.ft.com/content/5bfaf5f3-c92a-41e1-81a6-c065a1bc61c2?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/2498c65b22/" data-title="Chinese phonemakers seize on Apple’s AI struggles" data-summary="Manufacturers tout apps that help users switch from iPhones" data-source="Financial Times - Technology">
-  <img src="https://pulse.tek2dayholdings.com/p/2498c65b22/thumbnail.png" alt="Chinese phonemakers seize on Apple’s AI struggles" class="article-thumb">
+  <img src="https://pulse.tek2dayholdings.com/p/2498c65b22/thumbnail.png" alt="Chinese phonemakers seize on Apple’s AI struggles" class="article-thumb" loading="lazy">
   <div class="article-content">
     <h3><a data-title-link href="https://www.ft.com/content/5bfaf5f3-c92a-41e1-81a6-c065a1bc61c2?utm_source=tek2day&utm_medium=email">Chinese phonemakers seize on Apple’s AI struggles</a></h3>
     <div class="meta"><span class="src">Financial Times - Technology</span> · Dec 7, 2025  <span class="trending-indicator">Trending</span></div>
@@ -1422,7 +1605,7 @@
   </div>
 </article>
 <article class="" data-card data-url="https://venturebeat.com/ai/why-ai-coding-agents-arent-production-ready-brittle-context-windows-broken?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/b430c9c96f/" data-title="Why AI coding agents aren’t production-ready: Brittle context windows, broken refactors, missing operational awareness" data-summary="Remember this Quora comment (which also became a meme)? (Source: Quora ) In the pre-large language model (LLM) Stack Overflow era, the challenge was discerning which code snippets..." data-source="VentureBeat">
-  <img src="https://pulse.tek2dayholdings.com/p/b430c9c96f/thumbnail.png" alt="Why AI coding agents aren’t production-ready: Brittle context windows, broken refactors, missing operational awareness" class="article-thumb">
+  <img src="https://pulse.tek2dayholdings.com/p/b430c9c96f/thumbnail.png" alt="Why AI coding agents aren’t production-ready: Brittle context windows, broken refactors, missing operational awareness" class="article-thumb" loading="lazy">
   <div class="article-content">
     <h3><a data-title-link href="https://venturebeat.com/ai/why-ai-coding-agents-arent-production-ready-brittle-context-windows-broken?utm_source=tek2day&utm_medium=email">Why AI coding agents aren’t production-ready: Brittle context windows, broken refactors, missing operational awareness</a></h3>
     <div class="meta"><span class="src">VentureBeat</span> · Dec 7, 2025  <span class="trending-indicator">Trending</span></div>
@@ -1437,7 +1620,12 @@
     </section>
   </div>
 
-  <!-- Scripts -->
+  <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+    <svg viewBox="0 0 24 24">
+      <path d="M12 19V5M5 12l7-7 7 7" />
+    </svg>
+  </button>
+
   <script>
     // Install prompt for PWA
     let deferredPrompt;
@@ -1471,7 +1659,6 @@
     }, { passive: true });
   </script>
 
-  <!-- Share buttons script -->
   <script>
   (function() {
     const cards = document.querySelectorAll('#tek2day-pulse article');
@@ -1500,9 +1687,9 @@
       bar.className = 'share';
       bar.innerHTML = `
         <a class="share-btn" href="${xShareUrl}" target="_blank" rel="noopener noreferrer">Share to X</a>
-        <button class="share-btn copy-url" type="button" data-url="${permalink}">Copy URL</button>
+        <button class="share-btn copy-url" type="button" data-url="${permalink}">Copy Link</button>
       `;
-      card.appendChild(bar);
+      card.querySelector('.article-content').appendChild(bar);
     }
 
     // Copy URL handler with native share fallback
@@ -1540,7 +1727,33 @@
   })();
   </script>
 
-  <!-- Search logic -->
+  <script>
+  (function() {
+    const btn = document.getElementById('back-to-top');
+    if (!btn) return;
+
+    // Show/hide based on scroll position
+    window.addEventListener('scroll', () => {
+      // Threshold: 300px
+      if (window.scrollY > 300) {
+        btn.classList.add('visible');
+      } else {
+        btn.classList.remove('visible');
+      }
+    }, { passive: true });
+
+    // Scroll up smoothly on click
+    btn.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+      // For accessibility, move focus back to top
+      document.body.focus(); 
+    });
+  })();
+  </script>
+
   <script>
   (function() {
     const container = document.getElementById('tek2day-pulse');
@@ -1593,10 +1806,10 @@
       if (!empty) {
         empty = document.createElement('div');
         empty.id = 'search-empty';
-        empty.style.cssText = 'display:none;padding:2rem;color:var(--muted);text-align:center;';
+        empty.style.cssText = 'display:none;padding:2rem;color:var(--muted);text-align:center;grid-column:1/-1;';
         empty.setAttribute('role', 'status');
         empty.textContent = 'No articles found matching your search.';
-        container.prepend(empty);
+        itemsContainer.appendChild(empty);
       }
       empty.style.display = tokens.length && total === 0 ? 'block' : 'none';
     }
@@ -1622,12 +1835,8 @@
   })();
   </script>
 
-  <!-- Trend chip interactions -->
   <script>
   (function() {
-    const MODE = 'trends'; // 'trends' or 'site'
-    const GEO = 'US';
-    const TIME = 'now 7-d';
     const SITE_SEARCH_URL = '/?q=';
 
     const chips = document.querySelectorAll('.trend-chip');
@@ -1636,23 +1845,24 @@
       const keyword = (chip.textContent || '').trim();
       if (!keyword) return;
       
-      chip.setAttribute('data-tip', `Explore "${keyword}" on Google Trends`);
       chip.setAttribute('role', 'link');
       chip.setAttribute('tabindex', '0');
 
+      // Simple site search on click, instead of external trends
       function getTargetUrl() {
-        if (MODE === 'trends') {
-          const url = new URL('https://trends.google.com/trends/explore');
-          url.searchParams.set('date', TIME);
-          url.searchParams.set('geo', GEO);
-          url.searchParams.set('q', keyword);
-          return url.toString();
-        }
         return SITE_SEARCH_URL + encodeURIComponent(keyword);
       }
 
       chip.addEventListener('click', () => {
-        window.open(getTargetUrl(), '_blank', 'noopener');
+        // Option: Change this to window.location.href if you want to stay in same tab
+        // But for filters, updating the input box is often nicer.
+        const input = document.getElementById('t2d-q');
+        if (input) {
+            input.value = keyword;
+            input.dispatchEvent(new Event('input'));
+            const container = document.getElementById('tek2day-pulse');
+            if(container) container.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
       });
       
       chip.addEventListener('keydown', (e) => {
@@ -1665,7 +1875,6 @@
   })();
   </script>
 
-  <!-- Iframe communication for embedded use -->
   <script>
   (function() {
     // Only run if embedded in iframe
