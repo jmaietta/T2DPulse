@@ -1,5 +1,65 @@
 [
   {
+    "title": "Cisco Shares Finally Top Dot-Com Record After More Than 25 Years",
+    "url": "https://www.bloomberg.com/news/articles/2025-12-10/cisco-shares-finally-top-dot-com-record-after-more-than-25-years",
+    "published_at": "2025-12-10T16:05:20-05:00",
+    "source": "Bloomberg Technology",
+    "summary": "Cisco Systems Inc., a bellwether stock of the dot-com technological revolution, has returned to a record after a quarter century, thanks in part to the artificial intelligence spending boom.",
+    "content_html": "",
+    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ieSGYrjS2Nwg/v3/1200x-1.png",
+    "summary_text": "Cisco Systems Inc., a bellwether stock of the dot-com technological revolution, has returned to a record after a quarter century, thanks in part to the artificial intelligence spending boom.",
+    "category": "ai",
+    "_permalink": "/p/288bf93ac0/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/288bf93ac0/",
+    "_summary_240": "Cisco Systems Inc., a bellwether stock of the dot-com technological revolution, has returned to a record after a quarter century, thanks in part to the artificial intelligence...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/288bf93ac0/thumbnail.png"
+  },
+  {
+    "title": "US state attorneys-general demand better AI safeguards",
+    "url": "https://www.ft.com/content/4f3161cc-b97a-496e-b74e-4d6d2467d59c",
+    "published_at": "2025-12-10T16:00:57-05:00",
+    "source": "Financial Times - Technology",
+    "summary": "Warning to groups such as OpenAI and Google comes as Trump tries to take federal control of the technology\u2019s regulation",
+    "content_html": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/4885681f-6a80-434e-a0b1-5c98c7f6806a.jpg",
+    "summary_text": "Warning to groups such as OpenAI and Google comes as Trump tries to take federal control of the technology\u2019s regulation",
+    "category": "ai",
+    "_permalink": "/p/f34dbabba8/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/f34dbabba8/",
+    "_summary_240": "Warning to groups such as OpenAI and Google comes as Trump tries to take federal control of the technology\u2019s regulation",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/f34dbabba8/thumbnail.png"
+  },
+  {
+    "title": "How NVIDIA H100 GPUs on CoreWeave\u2019s AI Cloud Platform Delivered a Record-Breaking Graph500 Run",
+    "url": "https://blogs.nvidia.com/blog/h100-coreweave-graph500/",
+    "published_at": "2025-12-10T15:56:53-05:00",
+    "source": "NVIDIA News",
+    "summary": "The world\u2019s top-performing system for graph processing at scale was built on a commercially available cluster. NVIDIA last month announced a record-breaking benchmark result of 410 trillion traversed edges per second (TEPS), ranking No. 1 on the 31st Graph500 breadth-first search (BFS) list. Performed on an accelerated computing cluster hosted in a CoreWeave data center Read Article",
+    "content_html": "",
+    "image_url": "https://s3.amazonaws.com/cms.ipressroom.com/219/files/202512/6939de8c3d6332fa9c64876b_rapids-wholegraph-24-corp-blog-1280x680-1-842x450/rapids-wholegraph-24-corp-blog-1280x680-1-842x450_thmb.jpg",
+    "summary_text": "The world\u2019s top-performing system for graph processing at scale was built on a commercially available cluster. NVIDIA last month announced a record-breaking benchmark result of 410 trillion traversed edges per second (TEPS), ranking No. 1 on the 31st Graph500...",
+    "category": "ai",
+    "_permalink": "/p/9d7def84aa/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/9d7def84aa/",
+    "_summary_240": "The world\u2019s top-performing system for graph processing at scale was built on a commercially available cluster. NVIDIA last month announced a record-breaking benchmark result of...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/9d7def84aa/thumbnail.png"
+  },
+  {
+    "title": "Tether launches privacy-focused health platform with on-device AI",
+    "url": "https://cointelegraph.com/news/tether-privacy-health-platform-device-ai?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "published_at": "2025-12-10T15:50:03-05:00",
+    "source": "Cointelegraph",
+    "summary": "Tether says the system is designed to give users control over biometric data by keeping analysis and storage off the cloud.",
+    "content_html": "",
+    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTIvMDE5YjA5YWItNjVmNS03NWFlLThiMjAtOTBiZWY1M2VkYmFl.jpg",
+    "summary_text": "Tether says the system is designed to give users control over biometric data by keeping analysis and storage off the cloud.",
+    "category": "ai",
+    "_permalink": "/p/6152357bdb/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/6152357bdb/",
+    "_summary_240": "Tether says the system is designed to give users control over biometric data by keeping analysis and storage off the cloud.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/6152357bdb/thumbnail.png"
+  },
+  {
     "title": "SoFi Debuts \u2018All-In-One\u2019 Account Smart Card",
     "url": "https://www.pymnts.com/news/banking/2025/sofi-debuts-all-in-one-account-smart-card/",
     "published_at": "2025-12-10T14:59:43-05:00",
@@ -238,21 +298,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/87221696a7/",
     "_summary_240": "Google is planning to update its AI-powered search feature, AI Mode, to include more in-line links to the sources it's pulling information from. The company included the update...",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/87221696a7/thumbnail.png"
-  },
-  {
-    "title": "Modernizing a legacy steel yard with ChatGPT",
-    "url": "https://www.youtube.com/watch?v=WeBuFsJ8k-0",
-    "published_at": "2025-12-10T11:59:37-05:00",
-    "source": "OpenAI YouTube",
-    "summary": "Inside an 86-year-old steel yard in Reno, manager Richard Lane shows how a legacy business stays alive by adapting: fixing what breaks, improving what he can, and bringing his team along. Richard runs the yard the way his predecessors did: hands-on, practical, and rooted in community. But the work has changed. Machines break. Orders pile up. The next generation needs training. In a place that onc...",
-    "content_html": "",
-    "image_url": "https://i.ytimg.com/vi/WeBuFsJ8k-0/maxresdefault.jpg",
-    "summary_text": "Inside an 86-year-old steel yard in Reno, manager Richard Lane shows how a legacy business stays alive by adapting: fixing what breaks, improving what he can, and bringing his team along. Richard runs the yard the way his predecessors did: hands-on, practical...",
-    "category": "ai",
-    "_permalink": "/p/68fd7652c3/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/68fd7652c3/",
-    "_summary_240": "Inside an 86-year-old steel yard in Reno, manager Richard Lane shows how a legacy business stays alive by adapting: fixing what breaks, improving what he can, and bringing his...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/68fd7652c3/thumbnail.png"
   },
   {
     "title": "Teachers union claims risks to retirement funds in crypto market structure",
@@ -626,21 +671,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/0ec472112b/thumbnail.png"
   },
   {
-    "title": "Blackstone-Backed Mollie Nears Takeover of UK Fintech GoCardless",
-    "url": "https://www.bloomberg.com/news/articles/2025-12-10/blackstone-backed-payments-firm-mollie-nears-takeover-of-uk-fintech-gocardless",
-    "published_at": "2025-12-10T06:42:31-05:00",
-    "source": "Bloomberg Technology",
-    "summary": "Dutch payments firm Mollie is expected to announce it has completed its acquisition of British fintech unicorn GoCardless as early as this week, boosting its capabilities in payment processing, according to people familiar with the matter.",
-    "content_html": "The GoCardless logo on a smartphone",
-    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iAblKPliu7Lc/v1/1200x-1.jpg",
-    "summary_text": "Dutch payments firm Mollie is expected to announce it has completed its acquisition of British fintech unicorn GoCardless as early as this week, boosting its capabilities in payment processing, according to people familiar with the matter.",
-    "category": "fintech",
-    "_permalink": "/p/9b9f0217ff/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/9b9f0217ff/",
-    "_summary_240": "Dutch payments firm Mollie is expected to announce it has completed its acquisition of British fintech unicorn GoCardless as early as this week, boosting its capabilities in...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/9b9f0217ff/thumbnail.png"
-  },
-  {
     "title": "Abu Dhabi\u2019s Mubadala Capital explores tokenized private market access",
     "url": "https://cointelegraph.com/news/mubadala-capital-kaio-tokenized-private-markets-rwa?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
     "published_at": "2025-12-10T05:41:17-05:00",
@@ -819,21 +849,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/188c7b7ed9/",
     "_summary_240": "The post Every time I visit India, I\u2019m struck by how AI is already starting to have a profound impact on people\u2019s lives. A great example is our partnership with the Ministry of...",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/188c7b7ed9/thumbnail.png"
-  },
-  {
-    "title": "Stripe\u2019s stablecoin blockchain Tempo launches public testnet",
-    "url": "https://cointelegraph.com/news/stripe-blockchain-tempo-launches-public-testnet?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-    "published_at": "2025-12-09T20:34:08-05:00",
-    "source": "Cointelegraph",
-    "summary": "Public testnet for the Stripe-and-Paradigm-built payments blockchain is now live, featuring tools for developer onboarding and stablecoin testing.",
-    "content_html": "",
-    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTIvMDE5YjA1NTktY2VkYi03MzExLTljNTEtYzI3NDk1Y2NlYzYy.jpg",
-    "summary_text": "Public testnet for the Stripe-and-Paradigm-built payments blockchain is now live, featuring tools for developer onboarding and stablecoin testing.",
-    "category": "fintech",
-    "_permalink": "/p/3eaa2dc395/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/3eaa2dc395/",
-    "_summary_240": "Public testnet for the Stripe-and-Paradigm-built payments blockchain is now live, featuring tools for developer onboarding and stablecoin testing.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/3eaa2dc395/thumbnail.png"
   },
   {
     "title": "GE Vernova Soars After AI Spurs Higher Dividend and Buybacks",
@@ -1109,17 +1124,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/db9803f723/thumbnail.png"
   },
   {
-    "title": "Bringing powerful AI to millions across Europe with Deutsche Telekom",
-    "url": "https://openai.com/index/deutsche-telekom-collaboration",
-    "published_at": "2025-12-08T19:00:00-05:00",
-    "source": "OpenAI News",
-    "summary": "OpenAI is collaborating with Deutsche Telekom to bring advanced, multilingual AI experiences to millions of people across Europe. ChatGPT Enterprise will also be deployed to help employees at Deutsche Telekom improve workflows and accelerate innovation.",
-    "content_html": "",
-    "image_url": "",
-    "summary_text": "OpenAI is collaborating with Deutsche Telekom to bring advanced, multilingual AI experiences to millions of people across Europe. ChatGPT Enterprise will also be deployed to help employees at Deutsche Telekom improve workflows and accelerate innovation.",
-    "category": "ai"
-  },
-  {
     "title": "Building AI fluency at scale with ChatGPT Enterprise",
     "url": "https://openai.com/index/commonwealth-bank-of-australia",
     "published_at": "2025-12-08T19:00:00-05:00",
@@ -1128,6 +1132,17 @@
     "content_html": "",
     "image_url": "",
     "summary_text": "Commonwealth Bank of Australia partners with OpenAI to roll out ChatGPT Enterprise to 50,000 employees, building AI fluency at scale to improve customer service and fraud response.",
+    "category": "ai"
+  },
+  {
+    "title": "Bringing powerful AI to millions across Europe with Deutsche Telekom",
+    "url": "https://openai.com/index/deutsche-telekom-collaboration",
+    "published_at": "2025-12-08T19:00:00-05:00",
+    "source": "OpenAI News",
+    "summary": "OpenAI is collaborating with Deutsche Telekom to bring advanced, multilingual AI experiences to millions of people across Europe. ChatGPT Enterprise will also be deployed to help employees at Deutsche Telekom improve workflows and accelerate innovation.",
+    "content_html": "",
+    "image_url": "",
+    "summary_text": "OpenAI is collaborating with Deutsche Telekom to bring advanced, multilingual AI experiences to millions of people across Europe. ChatGPT Enterprise will also be deployed to help employees at Deutsche Telekom improve workflows and accelerate innovation.",
     "category": "ai"
   },
   {
@@ -1146,19 +1161,30 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/35aed35786/thumbnail.png"
   },
   {
+    "title": "Claude Code in Slack",
+    "url": "https://www.youtube.com/watch?v=XpXImenrSPI",
+    "published_at": "2025-12-08T13:56:15-05:00",
+    "source": "Anthropic YouTube",
+    "summary": "Delegate tasks to Claude Code directly from Slack, making it easy to move context from Slack conversations to coding sessions. Claude Code in Slack is available now for teams with the Claude app installed in their Slack workspace and who have access to Claude Code on the web. Read more: https://www.anthropic.com/news/claude-code-and-slack",
+    "content_html": "",
+    "image_url": "https://i.ytimg.com/vi/XpXImenrSPI/maxresdefault.jpg",
+    "summary_text": "Delegate tasks to Claude Code directly from Slack, making it easy to move context from Slack conversations to coding sessions. Claude Code in Slack is available now for teams with the Claude app installed in their Slack workspace and who have access to Claude...",
+    "category": "ai",
+    "_permalink": "/p/ff630b758a/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/ff630b758a/",
+    "_summary_240": "Delegate tasks to Claude Code directly from Slack, making it easy to move context from Slack conversations to coding sessions. Claude Code in Slack is available now for teams...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/ff630b758a/thumbnail.png"
+  },
+  {
     "title": "The State of AI: life in 2030",
     "url": "https://www.ft.com/content/5bff1202-b2ce-439a-8687-8f8b919c683e",
     "published_at": "2025-12-08T12:00:05-05:00",
     "source": "Financial Times - Technology",
     "summary": "Expect a world of robots, robotaxis and AI haves and have-nots",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/eccc94dd-610d-47ff-94f0-c5071eef11d7.jpg",
+    "image_url": "",
     "summary_text": "Expect a world of robots, robotaxis and AI haves and have-nots",
-    "category": "ai",
-    "_permalink": "/p/229b96fb67/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/229b96fb67/",
-    "_summary_240": "Expect a world of robots, robotaxis and AI haves and have-nots",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/229b96fb67/thumbnail.png"
+    "category": "ai"
   },
   {
     "title": "Google Looks Smart. Can't Say the Same for META, MSFT and ORCL.",
@@ -1182,13 +1208,9 @@
     "source": "Financial Times - Technology",
     "summary": "AI advances made through group\u2019s custom processor hit Nvidia\u2019s stock and prompt ChatGPT maker to declare \u2018code red\u2019",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/f9b73243-bd35-4dcf-bb77-2287e2c6eec4.jpg",
+    "image_url": "",
     "summary_text": "AI advances made through group\u2019s custom processor hit Nvidia\u2019s stock and prompt ChatGPT maker to declare \u2018code red\u2019",
-    "category": "ai",
-    "_permalink": "/p/0e94c29a8f/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/0e94c29a8f/",
-    "_summary_240": "AI advances made through group\u2019s custom processor hit Nvidia\u2019s stock and prompt ChatGPT maker to declare \u2018code red\u2019",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/0e94c29a8f/thumbnail.png"
+    "category": "ai"
   },
   {
     "title": "AI poses a new antitrust problem",
@@ -1197,13 +1219,9 @@
     "source": "Financial Times - Technology",
     "summary": "Washington cheered on the consolidation of the social web in the 2010s \u2014 it must not make the same mistake today",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/bd4c0b6c-ee86-4e91-9833-728426a3d258.jpg",
+    "image_url": "",
     "summary_text": "Washington cheered on the consolidation of the social web in the 2010s \u2014 it must not make the same mistake today",
-    "category": "ai",
-    "_permalink": "/p/ae2499974b/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/ae2499974b/",
-    "_summary_240": "Washington cheered on the consolidation of the social web in the 2010s \u2014 it must not make the same mistake today",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/ae2499974b/thumbnail.png"
+    "category": "ai"
   },
   {
     "title": "Apple Manufacturing Academy launches virtual programming",
@@ -1263,17 +1281,6 @@
     "image_url": "https://static01.nyt.com/images/2025/12/05/business/00stablecoin-sanctions/00stablecoin-sanctions-mediumSquareAt3X.jpg",
     "summary_text": "Through layers of intermediaries, stablecoins can be moved, swapped and mixed into pools of other funds in ways that are difficult to trace, experts say.",
     "category": "fintech"
-  },
-  {
-    "title": "Time to IPO Anthropic and OpenAI",
-    "url": "https://newsletter.tek2dayholdings.com/p/time-to-ipo-anthropic-and-openai",
-    "published_at": "2025-12-05T15:58:11-05:00",
-    "source": "TEK2day Newsletter",
-    "summary": "VCs know the AI Bubble is about to burst.",
-    "content_html": "<div class=\"captioned-image-container\"><figure><a class=\"image-link image2 is-viewable-img\" href=\"https://substackcdn.com/image/fetch/$s_!U6aS!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ff3e33e60-7bd6-4f6a-8f58-8ec0aae4f36f_554x396.png\" target=\"_blank\"><div class=\"image2-inset\"><source type=\"image/webp\" /><img alt=\"\" class=\"sizing-normal\" height=\"396\" src=\"https://substackcdn.com/image/fetch/$s_!U6aS!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ff3e33e60-7bd6-4f6a-8f58-8ec0aae4f36f_554x396.png\" width=\"554\" /><div class=\"image-link-expand\"><div class=\"pencraft pc-display-flex pc-gap-8 pc-reset\"><button class=\"pencraft pc-reset pencraft icon-container restack-image\" tabindex=\"0\" type=\"button\"><svg fill=\"none\" height=\"20\" stroke=\"var(--color-fg-primary)\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" viewBox=\"0 0 20 20\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><g><title></title><path d=\"M2.53001 7.81595C3.49179 4.73911 6.43281 2.5 9.91173 2.5C13.1684 2.5 15.9537 4.46214 17.0852 7.23684L17.6179 8.67647M17.6179 8.67647L18.5002 4.26471M17.6179 8.67647L13.6473 6.91176M17.4995 12.1841C16.5378 15.2609 13.5967 17.5 10.1178 17.5C6.86118 17.5 4.07589 15.5379 2.94432 12.7632L2.41165 11.3235M2.41165 11.3235L1.5293 15.7353M2.41165 11.3235L6.38224 13.0882\"></path></g></svg></button><button class=\"pencraft pc-reset pencraft icon-container view-image\" tabindex=\"0\" type=\"button\"><svg class=\"lucide lucide-maximize2 lucide-maximize-2\" fill=\"none\" height=\"20\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" viewBox=\"0 0 24 24\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><polyline points=\"15 3 21 3 21 9\"></polyline><polyline points=\"9 21 3 21 3 15\"></polyline><line x1=\"21\" x2=\"14\" y1=\"3\" y2=\"10\"></line><line x1=\"3\" x2=\"10\" y1=\"21\" y2=\"14\"></line></svg></button></div></div></div></a></figure></div><h4><strong>VCs know the AI Bubble is about to burst. That&#8217;s why we are now hearing about Anthropic and OpenAI IPOs.</strong> </h4><p><strong>VCs are not willing to do higher valuation multiple rounds, so time to sell the story to public investors.</strong> We mentioned that an IPO could be coming as an exit strategy soon back in October <a href=\"https://newsletter.tek2dayholdings.com/p/who-will-acquire-openai-and-anthropic?r=1rp1p&amp;utm_campaign=post&amp;utm_medium=web&amp;showWelcomeOnShare=false\">HERE</a>. </p><p>At the end of the day, both <strong>Anthropic</strong> and <strong>OpenAI</strong> will be acquired as their respective business models are too capital intensive. Better off for both inside of a strategic acquirer such as <strong>Google (GOOGL), </strong>certainly <strong>Anthropic.</strong> Expect Anthropic and OpenAI to tap the equity markets regularly so long as lofty valuations remain. Let&#8217;s see how quickly private round investors move to exit each company.</p><div><hr /></div><p></p>",
-    "image_url": "https://substackcdn.com/image/fetch/$s_!U6aS!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ff3e33e60-7bd6-4f6a-8f58-8ec0aae4f36f_554x396.png",
-    "summary_text": "VCs know the AI Bubble is about to burst.",
-    "category": "ai"
   },
   {
     "title": "Codex brings concepts into view.",
