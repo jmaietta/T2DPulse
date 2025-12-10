@@ -60,6 +60,21 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/5581f44383/thumbnail.png"
   },
   {
+    "title": "Spotify\u2019s Prompted Playlists use AI to control your algorithm",
+    "url": "https://www.theverge.com/news/842053/spotify-ai-prompted-playlists",
+    "published_at": "2025-12-10T17:11:57-05:00",
+    "source": "The Verge",
+    "summary": "A new beta feature on Spotify takes the idea behind the Discover Weekly playlist and puts the control in users' hands through AI prompts. Prompted Playlists, which are initially launching in New Zealand on Thursday, let users type out exactly what they want to listen to, with as much or little detail as they like. [\u2026]",
+    "content_html": "<figure>\n\n<img alt=\"\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/23951390/STK088_VRG_Illo_N_Barclay_5_spotify.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100\" />\n\t<figcaption>\n\t\t</figcaption>\n</figure>\n<p class=\"has-text-align-none\">A new beta feature on Spotify takes the idea behind the Discover Weekly playlist and puts the control in users' hands through AI prompts. <a href=\"https://newsroom.spotify.com/2025-12-10/spotify-prompted-playlists-algorithm-gustav-soderstrom/\">Prompted Playlists</a>, which are initially launching in New Zealand on Thursday, let users type out exactly what they want to listen to, with as much or little detail as they like. Then Spotify's AI curates a playlist based on those instructions and the user's listening history. </p>\n<p class=\"has-text-align-none\">Users can also set Prompted Playlists to regularly refresh with new songs based on the same prompt, effectively allowing you to make a Discover Weekly playlist with an algorithm you control. Earlier this year, Discover Weekly playli \u2026</p>\n<p><a href=\"https://www.theverge.com/news/842053/spotify-ai-prompted-playlists\">Read the full story at The Verge.</a></p>",
+    "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/23951390/STK088_VRG_Illo_N_Barclay_5_spotify.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "summary_text": "A new beta feature on Spotify takes the idea behind the Discover Weekly playlist and puts the control in users' hands through AI prompts. Prompted Playlists, which are initially launching in New Zealand on Thursday, let users type out exactly what they want t...",
+    "category": "ai",
+    "_permalink": "/p/a85894a77e/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/a85894a77e/",
+    "_summary_240": "A new beta feature on Spotify takes the idea behind the Discover Weekly playlist and puts the control in users' hands through AI prompts. Prompted Playlists, which are initially...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/a85894a77e/thumbnail.png"
+  },
+  {
     "title": "Fed slashes interest rates, but issues mixed forward guidance",
     "url": "https://cointelegraph.com/news/fed-slashes-interest-rates-mixed-guidance?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
     "published_at": "2025-12-10T17:11:49-05:00",
@@ -165,19 +180,15 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/6152357bdb/thumbnail.png"
   },
   {
-    "title": "A new open AI coding model is closing in on proprietary options",
+    "title": "A new open-weights AI coding model is closing in on proprietary options",
     "url": "https://arstechnica.com/ai/2025/12/mistral-bets-big-on-vibe-coding-with-new-autonomous-software-engineering-agent/",
     "published_at": "2025-12-10T15:38:58-05:00",
     "source": "Ars Technica",
-    "summary": "Open-weights Devstral 2 model scores 72% on industry benchmark, nearing proprietary rivals.",
+    "summary": "Devstral 2 model scores 72% on industry benchmark, nearing proprietary rivals.",
     "content_html": "<p>On Tuesday, French AI startup Mistral AI <a href=\"https://mistral.ai/news/devstral-2-vibe-cli\">released</a> Devstral 2, a 123 billion parameter open-weights coding model designed to work as part of an autonomous software engineering agent. The model achieves a 72.2 percent score on <a href=\"https://www.swebench.com/\">SWE-bench Verified</a>, a benchmark that attempts to test whether AI systems can solve real GitHub issues, putting it among the top-performing open-weights models.</p>\n<p>Perhaps more notably, Mistral didn\u2019t just release an AI model, it released a new development app called Mistral Vibe. It\u2019s a command line interface (CLI) similar to <a href=\"https://arstechnica.com/ai/2025/10/claude-code-gets-a-web-version-but-its-the-new-sandboxing-that-really-matters/\">Claude Code</a>, <a href=\"https://arstechnica.com/ai/2025/05/openai-introduces-codex-its-first-full-fledged-ai-agent-for-coding/\">OpenAI Codex</a>, and <a href=\"https://arstechnica.com/ai/2025/06/google-is-bringing-vibe-coding-to-your-terminal-with-gemini-cli/\">Gemini CLI</a> that lets developers interact with the Devstral models directly in their terminal. The tool can scan file structures and Git status to maintain context across an entire project, make changes across multiple files, and execute shell commands autonomously. Mistral released the CLI under the Apache 2.0 license.</p>\n<p>It\u2019s always wise to take AI benchmarks with a large grain of salt, but we\u2019ve heard from employees of the big AI companies that they pay very close attention to how well models do on SWE-bench Verified, which presents AI models with 500 real software engineering problems pulled from GitHub issues in popular Python repositories. The AI must read the issue description, navigate the codebase, and generate a working patch that passes unit tests. While some AI researchers have <a href=\"https://epoch.ai/blog/what-skills-does-swe-bench-verified-evaluate\">noted</a> that around 90 percent of the tasks in the benchmark test relatively simple bug fixes that experienced engineers could complete in under an hour, it\u2019s one of the few standardized ways to compare coding models.</p><p><a href=\"https://arstechnica.com/ai/2025/12/mistral-bets-big-on-vibe-coding-with-new-autonomous-software-engineering-agent/\">Read full article</a></p>\n<p><a href=\"https://arstechnica.com/ai/2025/12/mistral-bets-big-on-vibe-coding-with-new-autonomous-software-engineering-agent/#comments\">Comments</a></p>",
     "image_url": "https://cdn.arstechnica.net/wp-content/uploads/2025/12/mistral_header_2-1152x648.jpg",
-    "summary_text": "Open-weights Devstral 2 model scores 72% on industry benchmark, nearing proprietary rivals.",
-    "category": "ai",
-    "_permalink": "/p/7975c676cb/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/7975c676cb/",
-    "_summary_240": "Open-weights Devstral 2 model scores 72% on industry benchmark, nearing proprietary rivals.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/7975c676cb/thumbnail.png"
+    "summary_text": "Devstral 2 model scores 72% on industry benchmark, nearing proprietary rivals.",
+    "category": "ai"
   },
   {
     "title": "SoFi Debuts \u2018All-In-One\u2019 Account Smart Card",
@@ -238,21 +249,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/c83d63a481/",
     "_summary_240": "The company\u2019s second acquisition in a week brings manufactured-home chattel loans onchain as Ether treasury stocks continue to slide.",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/c83d63a481/thumbnail.png"
-  },
-  {
-    "title": "Meta might charge for a future AI model",
-    "url": "https://www.theverge.com/news/841809/meta-avocado-ai-model-charge-open-source-mark-zuckerberg",
-    "published_at": "2025-12-10T13:46:12-05:00",
-    "source": "The Verge",
-    "summary": "Meta's next AI model could mark a change in its \"open source\" AI strategy that Mark Zuckerberg had called \"the path forward.\" Currently, the company is working on a new AI model, code-named Avocado, that it might charge for access to, Bloomberg reports. Last year, Meta launched its open source (depending on who you ask, [\u2026]",
-    "content_html": "<figure>\n\n<img alt=\"\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/25546252/STK169_Mark_Zuckerburg_CVIRGINIA_D.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100\" />\n\t<figcaption>\n\t\t</figcaption>\n</figure>\n<p class=\"has-text-align-none\">Meta's next AI model could mark a change in its \"open source\" AI strategy that Mark Zuckerberg had called \"<a href=\"https://about.fb.com/news/2024/07/open-source-ai-is-the-path-forward/\">the path forward</a>.\" Currently, the company is working on a new AI model, code-named Avocado, that it might charge for access to, <a href=\"https://www.bloomberg.com/news/articles/2025-12-10/inside-meta-s-pivot-from-open-source-to-money-making-ai-model\"><em>Bloomberg</em> reports</a>.</p>\n<p class=\"has-text-align-none\">Last year, Meta launched its open source (depending on who you ask, since the Open Source Initiative <a href=\"https://opensource.org/blog/metas-llama-license-is-still-not-open-source\">disagrees</a>) Llama 4 AI model, but it had a disappointing release, with Meta <a href=\"https://www.theverge.com/meta/645012/meta-llama-4-maverick-benchmarks-gaming\">caught gaming AI benchmarks</a> and being forced to delay <a href=\"https://www.theverge.com/news/675558/meta-splits-its-ai-team-to-speed-up-rollouts\">a planned \"Behemoth\"</a> version. But Zuckerberg scrapped that \"in pursuit of something new,\" <em>Bloomberg</em> says. </p>\n<p class=\"has-text-align-none\">Following the Llama 4 launch, Zuckerberg has made sweepi \u2026</p>\n<p><a href=\"https://www.theverge.com/news/841809/meta-avocado-ai-model-charge-open-source-mark-zuckerberg\">Read the full story at The Verge.</a></p>",
-    "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/25546252/STK169_Mark_Zuckerburg_CVIRGINIA_D.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "summary_text": "Meta's next AI model could mark a change in its \"open source\" AI strategy that Mark Zuckerberg had called \"the path forward.\" Currently, the company is working on a new AI model, code-named Avocado, that it might charge for access to, Bloomberg reports. Last ...",
-    "category": "ai",
-    "_permalink": "/p/a85b9edb01/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/a85b9edb01/",
-    "_summary_240": "Meta's next AI model could mark a change in its \"open source\" AI strategy that Mark Zuckerberg had called \"the path forward.\" Currently, the company is working on a new AI model,...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/a85b9edb01/thumbnail.png"
   },
   {
     "title": "Adobe Lets Users Design and Edit Using ChatGPT",
@@ -486,7 +482,7 @@
     "source": "Financial Times - Technology",
     "summary": "Former lobbyist and UK deputy prime minister joins London-based Hiro Capital",
     "content_html": "",
-    "image_url": "https://images.ft.com/v3/image/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F90195e6d-00a8-469d-8ac9-d0cfb397ffb5.jpg?source=ft-app-api&fit=scale-down&quality=highest&width=700&dpr=1",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/90195e6d-00a8-469d-8ac9-d0cfb397ffb5.jpg",
     "summary_text": "Former lobbyist and UK deputy prime minister joins London-based Hiro Capital",
     "category": "software",
     "_permalink": "/p/580553ab26/",
@@ -538,21 +534,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/05fda5843a/",
     "_summary_240": "The post Jobs, security, skills: How India\u2019s giant database is helping over 300 million informal workers step up, with AI appeared first on Source .",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/05fda5843a/thumbnail.png"
-  },
-  {
-    "title": "Amazon Bets on Color and AI With Its Priciest Kindle to Date",
-    "url": "https://www.bloomberg.com/news/features/2025-12-10/amazon-kindle-scribe-colorsoft-review-630-device-bets-big-on-ai-color-screen",
-    "published_at": "2025-12-10T09:00:24-05:00",
-    "source": "Bloomberg Technology",
-    "summary": "Review: Amazon\u2019s $630 pen-enabled device is a tough sell for most people.",
-    "content_html": "Amazon\u2019s Kindle Scribe Colorsoft",
-    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iGxMm2pBobSc/v1/1200x-1.jpg",
-    "summary_text": "Review: Amazon\u2019s $630 pen-enabled device is a tough sell for most people.",
-    "category": "ai",
-    "_permalink": "/p/45a1195ae0/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/45a1195ae0/",
-    "_summary_240": "Review: Amazon\u2019s $630 pen-enabled device is a tough sell for most people.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/45a1195ae0/thumbnail.png"
   },
   {
     "title": "How Hud's runtime sensor cut triage time from 3 hours to 10 minutes",
