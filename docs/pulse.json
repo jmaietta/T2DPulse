@@ -15,7 +15,37 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/8d874640ea/thumbnail.png"
   },
   {
-    "title": "China\u2019s DeepSeek Uses Banned Nvidia Chips for AI Model, The Information Says",
+    "title": "OpenAI\u2019s ChatGPT Now Lets Users Edit Images With Photoshop",
+    "url": "https://www.bloomberg.com/news/articles/2025-12-10/openai-s-chatgpt-now-lets-users-edit-images-with-photoshop",
+    "published_at": "2025-12-10T08:00:24-05:00",
+    "source": "Bloomberg Technology",
+    "summary": "ChatGPT users can now access Photoshop and other creativity software from Adobe Inc. directly within the chatbot, as OpenAI works to bring more third-party apps into its flagship product.",
+    "content_html": "",
+    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iyhXMooeM7Nc/v0/1200x-1.png",
+    "summary_text": "ChatGPT users can now access Photoshop and other creativity software from Adobe Inc. directly within the chatbot, as OpenAI works to bring more third-party apps into its flagship product.",
+    "category": "ai",
+    "_permalink": "/p/a399801a55/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/a399801a55/",
+    "_summary_240": "ChatGPT users can now access Photoshop and other creativity software from Adobe Inc. directly within the chatbot, as OpenAI works to bring more third-party apps into its flagship...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/a399801a55/thumbnail.png"
+  },
+  {
+    "title": "ChatGPT can now use Adobe apps to edit your photos and PDFs for free",
+    "url": "https://www.theverge.com/news/841369/chatgpt-apps-adobe-photoshop-acrobat-express",
+    "published_at": "2025-12-10T08:00:00-05:00",
+    "source": "The Verge",
+    "summary": "Adobe is giving ChatGPT users some new capabilities for designing and editing their work without having to switch apps. New apps for Photoshop, Acrobat, and Adobe Express are launching today directly in ChatGPT, allowing users to create designs or adjust photos and PDFs by describing what they want. The Adobe apps are free to use, [\u2026]",
+    "content_html": "<figure>\n\n<img alt=\"\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/12/Adobe-apps-ChatGPT.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100\" />\n\t<figcaption>\n\tThe Photoshop app for ChatGPT will provide UI interfaces like sliders for some editing requests.\t</figcaption>\n</figure>\n<p class=\"has-text-align-none\">Adobe is giving ChatGPT users some new capabilities for designing and editing their work without having to switch apps. New apps for Photoshop, Acrobat, and Adobe Express are launching today directly in ChatGPT, allowing users to create designs or adjust photos and PDFs by describing what they want.</p>\n<p class=\"has-text-align-none\">The Adobe apps are free to use, and can be activated by typing the name of the app alongside an uploaded file and conversational instruction, such as \"Adobe Photoshop, help me blur the background of this image.\" ChatGPT users won't have to specify the name of the app again during the same conversation to make additional changes. Depending on the \u2026</p>\n<p><a href=\"https://www.theverge.com/news/841369/chatgpt-apps-adobe-photoshop-acrobat-express\">Read the full story at The Verge.</a></p>",
+    "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/12/Adobe-apps-ChatGPT.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "summary_text": "Adobe is giving ChatGPT users some new capabilities for designing and editing their work without having to switch apps. New apps for Photoshop, Acrobat, and Adobe Express are launching today directly in ChatGPT, allowing users to create designs or adjust phot...",
+    "category": "ai",
+    "_permalink": "/p/25859231d3/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/25859231d3/",
+    "_summary_240": "Adobe is giving ChatGPT users some new capabilities for designing and editing their work without having to switch apps. New apps for Photoshop, Acrobat, and Adobe Express are...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/25859231d3/thumbnail.png"
+  },
+  {
+    "title": "China\u2019s DeepSeek Uses Banned Nvidia Chips for AI Model, Report Says",
     "url": "https://www.bloomberg.com/news/articles/2025-12-10/china-s-deepseek-uses-banned-nvidia-chips-for-ai-model-the-information-says",
     "published_at": "2025-12-10T07:24:37-05:00",
     "source": "Bloomberg Technology",
@@ -23,11 +53,7 @@
     "content_html": "The DeepSeek application. Photographer: Lam Yik/Bloomberg",
     "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/izOXpmfbZxSQ/v0/1200x-1.jpg",
     "summary_text": "Chinese artificial intelligence startup DeepSeek has relied on Nvidia Corp. chips that are banned in the country to develop an upcoming AI model, according to a new report in The Information.",
-    "category": "ai",
-    "_permalink": "/p/23a273e653/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/23a273e653/",
-    "_summary_240": "Chinese artificial intelligence startup DeepSeek has relied on Nvidia Corp. chips that are banned in the country to develop an upcoming AI model, according to a new report in The...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/23a273e653/thumbnail.png"
+    "category": "ai"
   },
   {
     "title": "Crypto's Nouveaux Riches Seek Privacy After Years of Ostentation",
@@ -705,21 +731,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/5d4d311e2b/thumbnail.png"
   },
   {
-    "title": "I\u2019m obsessed with Redfin\u2019s AI search",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/840190/redfin-ai-search-chatbot",
-    "published_at": "2025-12-09T14:15:00-05:00",
-    "source": "The Verge",
-    "summary": "Look, I'm as fed up as the next guy with AI chatbots stuffed into every app. I don't want to brainstorm coverage options with an LLM every time I renew my car insurance. I'd much rather message a human than a robot to pester FedEx about my missing package. But I have found one scenario [\u2026]",
-    "content_html": "<figure>\n\n<img alt=\"\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/12/Screenshot-2025-12-09-at-8.51.41%E2%80%AFAM.png?quality=90&#038;strip=all&#038;crop=0,0,100,100\" />\n\t<figcaption>\n\tA girl can dream. | Image: Redfin / The Verge\t</figcaption>\n</figure>\n<p class=\"has-text-align-none\">Look, I'm as fed up as the next guy with AI chatbots stuffed into every app. I don't want to brainstorm coverage options with an LLM every time I renew my car insurance. I'd much rather message a human than a robot to pester FedEx about my missing package. But I <em>have</em> found one scenario where AI is actually pretty great: real estate.</p>\n<p class=\"has-text-align-none\">I need to confess something: I'm a Redfin looky-loo. A Zillow zealot. Not because I am <em>actually</em> shopping for a new home. With these interest rates? God, no. But I am perpetually window-shopping for a new home - partly out of nosiness, and partly because I like imagining what life might look like in a different a \u2026</p>\n<p><a href=\"https://www.theverge.com/ai-artificial-intelligence/840190/redfin-ai-search-chatbot\">Read the full story at The Verge.</a></p>",
-    "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/12/Screenshot-2025-12-09-at-8.51.41%E2%80%AFAM.png?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "summary_text": "Look, I'm as fed up as the next guy with AI chatbots stuffed into every app. I don't want to brainstorm coverage options with an LLM every time I renew my car insurance. I'd much rather message a human than a robot to pester FedEx about my missing package. Bu...",
-    "category": "ai",
-    "_permalink": "/p/0127b9a74d/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/0127b9a74d/",
-    "_summary_240": "Look, I'm as fed up as the next guy with AI chatbots stuffed into every app. I don't want to brainstorm coverage options with an LLM every time I renew my car insurance. I'd much...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/0127b9a74d/thumbnail.png"
-  },
-  {
     "title": "Amazon\u2019s Ring rolls out controversial, AI-powered facial-recognition feature to video doorbells",
     "url": "https://techcrunch.com/2025/12/09/amazons-ring-rolls-out-controversial-ai-powered-facial-recognition-feature-to-video-doorbells/",
     "published_at": "2025-12-09T14:04:08-05:00",
@@ -1361,7 +1372,7 @@
     "source": "Financial Times - Technology",
     "summary": "Manufacturers tout apps that help users switch from iPhones",
     "content_html": "",
-    "image_url": "https://images.ft.com/v3/image/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Fc2d1c6bf-7b9b-44c1-a5ed-d33efe1d9323.jpg?source=next-article&fit=scale-down&quality=highest&width=700&dpr=1",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/c2d1c6bf-7b9b-44c1-a5ed-d33efe1d9323.jpg",
     "summary_text": "Manufacturers tout apps that help users switch from iPhones",
     "category": "ai"
   },
