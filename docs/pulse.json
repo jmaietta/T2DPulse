@@ -1,18 +1,93 @@
 [
   {
+    "title": "ChatGPT is Apple\u2019s most downloaded app of 2025 in the US",
+    "url": "https://techcrunch.com/2025/12/10/chatgpt-is-apples-most-downloaded-app-of-2025-in-the-us/",
+    "published_at": "2025-12-10T10:17:26-05:00",
+    "source": "TechCrunch",
+    "summary": "This is ChatGPT's first year as the No. 1 app on the U.S. App Store by downloads.",
+    "content_html": "",
+    "image_url": "https://techcrunch.com/wp-content/uploads/2025/01/GettyImages-2191707579.jpg?w=1024",
+    "summary_text": "This is ChatGPT's first year as the No. 1 app on the U.S. App Store by downloads.",
+    "category": "ai",
+    "_permalink": "/p/e0c186b1af/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/e0c186b1af/",
+    "_summary_240": "This is ChatGPT's first year as the No. 1 app on the U.S. App Store by downloads.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/e0c186b1af/thumbnail.png"
+  },
+  {
+    "title": "Meta\u2019s New A.I. Superstars Are Chafing Against the Rest of the Company",
+    "url": "https://www.nytimes.com/2025/12/10/technology/meta-ai-tbd-lab-friction.html",
+    "published_at": "2025-12-10T10:16:22-05:00",
+    "source": "The New York Times - Technology",
+    "summary": "An us-versus-them mentality has emerged between Meta\u2019s top artificial intelligence team and longtime lieutenants to Mark Zuckerberg.",
+    "content_html": "",
+    "image_url": "https://static01.nyt.com/images/2025/12/10/business/00met-ai/00met-ai-mediumSquareAt3X.jpg",
+    "summary_text": "An us-versus-them mentality has emerged between Meta\u2019s top artificial intelligence team and longtime lieutenants to Mark Zuckerberg.",
+    "category": "ai",
+    "_permalink": "/p/1654b5c5fe/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/1654b5c5fe/",
+    "_summary_240": "An us-versus-them mentality has emerged between Meta\u2019s top artificial intelligence team and longtime lieutenants to Mark Zuckerberg.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/1654b5c5fe/thumbnail.png"
+  },
+  {
+    "title": "Taiwan Invokes National Security Law to Protect TSMC Trade Secrets",
+    "url": "https://www.nytimes.com/2025/12/10/business/taiwan-tsmc-trade-secrets.html",
+    "published_at": "2025-12-10T10:08:27-05:00",
+    "source": "The New York Times - Technology",
+    "summary": "An executive left TSMC for Intel. Taiwan\u2019s government says that could threaten its national security.",
+    "content_html": "The authorities in Taiwan are taking a stronger hand in protecting the prized technology of the chip maker TSMC.",
+    "image_url": "https://static01.nyt.com/images/2025/12/08/multimedia/Biz-TSMC-Secrets-01-zqlh/Biz-TSMC-Secrets-01-zqlh-mediumSquareAt3X-v3.jpg",
+    "summary_text": "An executive left TSMC for Intel. Taiwan\u2019s government says that could threaten its national security.",
+    "category": "fintech",
+    "_permalink": "/p/b60e7c8e39/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/b60e7c8e39/",
+    "_summary_240": "An executive left TSMC for Intel. Taiwan\u2019s government says that could threaten its national security.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/b60e7c8e39/thumbnail.png"
+  },
+  {
     "title": "The AI that scored 95% \u2014 until consultants learned it was AI",
     "url": "https://venturebeat.com/ai/the-ai-that-scored-95-until-consultants-learned-it-was-ai",
     "published_at": "2025-12-10T10:00:00-05:00",
     "source": "VentureBeat",
     "summary": "Presented by SAP When SAP ran a quiet internal experiment to gauge consultant attitudes toward AI, the results were striking. Five teams were asked to validate answers to more than 1,000 business requirements completed by SAP\u2019s AI co-pilot, Joule for Consultants \u2014 a workload that would normally take several weeks. Four teams were told the analysis had been completed by junior interns fresh out of...",
     "content_html": "",
-    "image_url": "https://images.ctfassets.net/jdtwqhzvc2n1/7IoiYyTs0K9D4WfYDzJvhy/2cd15991676cc0648bffb25178642417/AdobeStock_571280209_Preview.jpeg?w=800&amp;q=75",
+    "image_url": "https://images.ctfassets.net/jdtwqhzvc2n1/7IoiYyTs0K9D4WfYDzJvhy/f6bb93584c65f055662926cf6ed9d467/AdobeStock_571280209.jpeg?w=800&amp;q=75",
     "summary_text": "Presented by SAP When SAP ran a quiet internal experiment to gauge consultant attitudes toward AI, the results were striking. Five teams were asked to validate answers to more than 1,000 business requirements completed by SAP\u2019s AI co-pilot, Joule for Consulta...",
     "category": "ai",
     "_permalink": "/p/8d874640ea/",
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/8d874640ea/",
     "_summary_240": "Presented by SAP When SAP ran a quiet internal experiment to gauge consultant attitudes toward AI, the results were striking. Five teams were asked to validate answers to more...",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/8d874640ea/thumbnail.png"
+  },
+  {
+    "title": "Google launches managed MCP servers that let AI agents simply plug into its tools",
+    "url": "https://techcrunch.com/2025/12/10/google-is-going-all-in-on-mcp-servers-agent-ready-by-design/",
+    "published_at": "2025-12-10T10:00:00-05:00",
+    "source": "TechCrunch",
+    "summary": "Google is rolling out managed MCP servers to make its services \u201cagent-ready by design,\u201d starting with Maps and BigQuery, aiming to simplify messy integrations and help AI agents use real tools.",
+    "content_html": "",
+    "image_url": "https://techcrunch.com/wp-content/uploads/2024/07/GettyImages-2148009757.jpg?resize=1200,800",
+    "summary_text": "Google is rolling out managed MCP servers to make its services \u201cagent-ready by design,\u201d starting with Maps and BigQuery, aiming to simplify messy integrations and help AI agents use real tools.",
+    "category": "ai",
+    "_permalink": "/p/04fddce909/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/04fddce909/",
+    "_summary_240": "Google is rolling out managed MCP servers to make its services \u201cagent-ready by design,\u201d starting with Maps and BigQuery, aiming to simplify messy integrations and help AI agents...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/04fddce909/thumbnail.png"
+  },
+  {
+    "title": "Nick Clegg takes on venture capital role alongside Meta AI scientist Yann LeCun",
+    "url": "https://www.ft.com/content/98cf87d9-3d1c-4f60-9c50-eed36a25e219",
+    "published_at": "2025-12-10T09:45:38-05:00",
+    "source": "Financial Times - Technology",
+    "summary": "Former lobbyist and UK deputy prime minister joins London-based Hiro Capital",
+    "content_html": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/90195e6d-00a8-469d-8ac9-d0cfb397ffb5.jpg",
+    "summary_text": "Former lobbyist and UK deputy prime minister joins London-based Hiro Capital",
+    "category": "software",
+    "_permalink": "/p/580553ab26/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/580553ab26/",
+    "_summary_240": "Former lobbyist and UK deputy prime minister joins London-based Hiro Capital",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/580553ab26/thumbnail.png"
   },
   {
     "title": "AI companies want a new internet \u2014 and they think they\u2019ve found the key",
@@ -58,21 +133,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/dfa8789462/",
     "_summary_240": "Mark Zuckerberg is getting personally involved in day-to-day work and pivoting Meta Platforms Inc.\u2019s focus to an artificial intelligence model it can make money from. Ed Ludlow...",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/dfa8789462/thumbnail.png"
-  },
-  {
-    "title": "Every time I visit India, I\u2019m struck by how AI is already starting to have a profound impact on people\u2019s lives. A great example is our partnership with the Ministry of Labour and Employment, GOI to help connect more than 300 million informal workers to better jobs and social security, showing what\u2019s possible when technology empowers people at scale.",
-    "url": "https://www.linkedin.com/posts/satyanadella_jobs-security-skills-how-indias-giant-activity-7404408432293969921-BJHX",
-    "published_at": "2025-12-10T09:11:55-05:00",
-    "source": "Microsoft News",
-    "summary": "The post Every time I visit India, I\u2019m struck by how AI is already starting to have a profound impact on people\u2019s lives. A great example is our partnership with the Ministry of Labour and Employment, GOI to help connect more than 300 million informal workers to better jobs and social security, showing what\u2019s possible when technology empowers people at scale. appeared first on Source .",
-    "content_html": "<article class=\"mssrc-posts font-- has--theme\" id=\"single-23169\">\n\t<div class=\"acf-innerblocks-container\"></div>\t\t\t<section class=\"post-tags\">\n\t\t\t\t<div class=\"post-tags__content wp-block-columns\">\n\t\t\t\t\t<div class=\"post-tags__header wp-block-column flex-basis-25 has-text-align-right\">\n\t\t\t\t\t\t<h4 class=\"sr-only\">Tags: </h4>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"post-tags__body wp-block-column flex-basis-60\">\n\t\t\t\t\t\t<ul class=\"post-tags__list\"><li class=\"post-tags__item\"><a class=\"kicker inline-block post__meta--tags\" href=\"https://news.microsoft.com/source/tag/linkedin-post/\">LinkedIn Post</a></li></ul>\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</section>\n\t\t\t</article><p>The post <a href=\"https://www.linkedin.com/posts/satyanadella_jobs-security-skills-how-indias-giant-activity-7404408432293969921-BJHX\">Every time I visit India, I&#8217;m struck by how AI is already starting to have a profound impact on people&#8217;s lives. A great example is our partnership with the Ministry of Labour and Employment, GOI to help connect more than 300 million informal workers to better jobs and social security, showing what\u2019s possible when technology empowers people at scale.</a> appeared first on <a href=\"https://news.microsoft.com/source\">Source</a>.</p>",
-    "image_url": "https://media.licdn.com/dms/image/sync/v2/D5627AQG-zWtL7vecEw/articleshare-shrink_800/B56ZsG7wLxH8AM-/0/1765347886435?e=2147483647&v=beta&t=yisO4DKvhs_v3jK1yzyC0p80pyr95iBhBbc8iYxzfk8",
-    "summary_text": "The post Every time I visit India, I\u2019m struck by how AI is already starting to have a profound impact on people\u2019s lives. A great example is our partnership with the Ministry of Labour and Employment, GOI to help connect more than 300 million informal workers ...",
-    "category": "ai",
-    "_permalink": "/p/2437bf2e31/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/2437bf2e31/",
-    "_summary_240": "The post Every time I visit India, I\u2019m struck by how AI is already starting to have a profound impact on people\u2019s lives. A great example is our partnership with the Ministry of...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/2437bf2e31/thumbnail.png"
   },
   {
     "title": "Jobs, security, skills: How India\u2019s giant database is helping over 300 million informal workers step up, with AI",
@@ -300,21 +360,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/a399801a55/thumbnail.png"
   },
   {
-    "title": "ChatGPT can now use Adobe apps to edit your photos and PDFs for free",
-    "url": "https://www.theverge.com/news/841369/chatgpt-apps-adobe-photoshop-acrobat-express",
-    "published_at": "2025-12-10T08:00:00-05:00",
-    "source": "The Verge",
-    "summary": "Adobe is giving ChatGPT users some new capabilities for designing and editing their work without having to switch apps. New apps for Photoshop, Acrobat, and Adobe Express are launching today directly in ChatGPT, allowing users to create designs or adjust photos and PDFs by describing what they want. The Adobe apps are free to use, [\u2026]",
-    "content_html": "<figure>\n\n<img alt=\"\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/12/Adobe-apps-ChatGPT.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100\" />\n\t<figcaption>\n\tThe Photoshop app for ChatGPT will provide UI interfaces like sliders for some editing requests.\t</figcaption>\n</figure>\n<p class=\"has-text-align-none\">Adobe is giving ChatGPT users some new capabilities for designing and editing their work without having to switch apps. New apps for Photoshop, Acrobat, and Adobe Express are launching today directly in ChatGPT, allowing users to create designs or adjust photos and PDFs by describing what they want.</p>\n<p class=\"has-text-align-none\">The Adobe apps are free to use, and can be activated by typing the name of the app alongside an uploaded file and conversational instruction, such as \"Adobe Photoshop, help me blur the background of this image.\" ChatGPT users won't have to specify the name of the app again during the same conversation to make additional changes. Depending on the \u2026</p>\n<p><a href=\"https://www.theverge.com/news/841369/chatgpt-apps-adobe-photoshop-acrobat-express\">Read the full story at The Verge.</a></p>",
-    "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/12/Adobe-apps-ChatGPT.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "summary_text": "Adobe is giving ChatGPT users some new capabilities for designing and editing their work without having to switch apps. New apps for Photoshop, Acrobat, and Adobe Express are launching today directly in ChatGPT, allowing users to create designs or adjust phot...",
-    "category": "ai",
-    "_permalink": "/p/25859231d3/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/25859231d3/",
-    "_summary_240": "Adobe is giving ChatGPT users some new capabilities for designing and editing their work without having to switch apps. New apps for Photoshop, Acrobat, and Adobe Express are...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/25859231d3/thumbnail.png"
-  },
-  {
     "title": "China\u2019s DeepSeek Uses Banned Nvidia Chips for AI Model, Report Says",
     "url": "https://www.bloomberg.com/news/articles/2025-12-10/china-s-deepseek-uses-banned-nvidia-chips-for-ai-model-the-information-says",
     "published_at": "2025-12-10T07:24:37-05:00",
@@ -463,21 +508,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/bfb7144741/",
     "_summary_240": "Lip-Bu Tan, who was appointed chief executive of Intel in March, is also a longtime venture capitalist. His dual roles have caused some consternation.",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/bfb7144741/thumbnail.png"
-  },
-  {
-    "title": "Meta\u2019s New A.I. Superstars Are Chafing Against the Rest of the Company",
-    "url": "https://www.nytimes.com/2025/12/10/technology/meta-ai-tbd-lab-friction.html",
-    "published_at": "2025-12-10T05:00:29-05:00",
-    "source": "The New York Times - Technology",
-    "summary": "An us-versus-them mentality has emerged between Meta\u2019s top artificial intelligence team and longtime lieutenants to Mark Zuckerberg.",
-    "content_html": "",
-    "image_url": "https://static01.nyt.com/images/2025/12/10/business/00met-ai/00met-ai-mediumSquareAt3X.jpg",
-    "summary_text": "An us-versus-them mentality has emerged between Meta\u2019s top artificial intelligence team and longtime lieutenants to Mark Zuckerberg.",
-    "category": "ai",
-    "_permalink": "/p/596607c708/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/596607c708/",
-    "_summary_240": "An us-versus-them mentality has emerged between Meta\u2019s top artificial intelligence team and longtime lieutenants to Mark Zuckerberg.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/596607c708/thumbnail.png"
   },
   {
     "title": "AI Adoption on Wall Street Set to Drive Near-Term Hiring",
@@ -690,19 +720,19 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/8e421d3a2c/thumbnail.png"
   },
   {
-    "title": "The AI industry\u2019s biggest week: Google\u2019s rise, RL mania, and a party boat",
-    "url": "https://www.theverge.com/column/841207/ai-neurips-2025",
-    "published_at": "2025-12-09T21:00:00-05:00",
-    "source": "The Verge",
-    "summary": "This is an excerpt of Sources by Alex Heath, a newsletter about AI and the tech industry, syndicated just for The Verge subscribers once a week. Reinforcement learning (RL) is the next frontier, Google is surging, and the party scene has gotten completely out of hand. Those were the through lines from this year's NeurIPS [\u2026]",
-    "content_html": "<figure>\n\n<img alt=\"\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/03/STK093_GOOGLE_E.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100\" />\n\t<figcaption>\n\t\t</figcaption>\n</figure>\n<p class=\"has-text-align-none\"><em>This is an excerpt of <a href=\"https://sources.news/\" rel=\"noreferrer noopener\" target=\"_blank\">Sources by Alex Heath</a>, a newsletter about AI and the tech industry, syndicated just for The Verge subscribers once a week.</em></p>\n<p class=\"has-text-align-none\">Reinforcement learning (RL) is the next frontier, Google is surging, and the party scene has gotten completely out of hand. Those were the through lines from this year's NeurIPS in San Diego.</p>\n<p class=\"has-text-align-none\">NeurIPS, or the \"Conference on Neural Information Processing Systems,\" started in 1987 as a purely academic affair. It has since ballooned alongside the hype around AI into a massive industry event where labs come to recruit and investors come to find the next wave of AI startups.</p>\n<p class=\"has-text-align-none\">I was regretfully unable to \u2026</p>\n<p><a href=\"https://www.theverge.com/column/841207/ai-neurips-2025\">Read the full story at The Verge.</a></p>",
-    "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/03/STK093_GOOGLE_E.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "summary_text": "This is an excerpt of Sources by Alex Heath, a newsletter about AI and the tech industry, syndicated just for The Verge subscribers once a week. Reinforcement learning (RL) is the next frontier, Google is surging, and the party scene has gotten completely out...",
+    "title": "Every time I visit India, I\u2019m struck by how AI is already starting to have a profound impact on people\u2019s lives. A great example is our partnership with the Ministry of Labour and Employment, GOI to help connect more than 300 million informal workers to better jobs and social security, showing what\u2019s possible when technology empowers people at scale.",
+    "url": "https://www.linkedin.com/posts/satyanadella_jobs-security-skills-how-indias-giant-activity-7404408432293969921-BJHX",
+    "published_at": "2025-12-09T21:11:00-05:00",
+    "source": "Microsoft News",
+    "summary": "The post Every time I visit India, I\u2019m struck by how AI is already starting to have a profound impact on people\u2019s lives. A great example is our partnership with the Ministry of Labour and Employment, GOI to help connect more than 300 million informal workers to better jobs and social security, showing what\u2019s possible when technology empowers people at scale. appeared first on Source .",
+    "content_html": "<article class=\"mssrc-posts font-- has--theme\" id=\"single-23169\">\n\t<div class=\"acf-innerblocks-container\"></div>\t\t\t<section class=\"post-tags\">\n\t\t\t\t<div class=\"post-tags__content wp-block-columns\">\n\t\t\t\t\t<div class=\"post-tags__header wp-block-column flex-basis-25 has-text-align-right\">\n\t\t\t\t\t\t<h4 class=\"sr-only\">Tags: </h4>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"post-tags__body wp-block-column flex-basis-60\">\n\t\t\t\t\t\t<ul class=\"post-tags__list\"><li class=\"post-tags__item\"><a class=\"kicker inline-block post__meta--tags\" href=\"https://news.microsoft.com/source/tag/linkedin-post/\">LinkedIn Post</a></li></ul>\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</section>\n\t\t\t</article><p>The post <a href=\"https://www.linkedin.com/posts/satyanadella_jobs-security-skills-how-indias-giant-activity-7404408432293969921-BJHX\">Every time I visit India, I&#8217;m struck by how AI is already starting to have a profound impact on people&#8217;s lives. A great example is our partnership with the Ministry of Labour and Employment, GOI to help connect more than 300 million informal workers to better jobs and social security, showing what\u2019s possible when technology empowers people at scale.</a> appeared first on <a href=\"https://news.microsoft.com/source\">Source</a>.</p>",
+    "image_url": "https://media.licdn.com/dms/image/sync/v2/D5627AQG-zWtL7vecEw/articleshare-shrink_800/B56ZsG7wLxH8AM-/0/1765347886435?e=2147483647&v=beta&t=yisO4DKvhs_v3jK1yzyC0p80pyr95iBhBbc8iYxzfk8",
+    "summary_text": "The post Every time I visit India, I\u2019m struck by how AI is already starting to have a profound impact on people\u2019s lives. A great example is our partnership with the Ministry of Labour and Employment, GOI to help connect more than 300 million informal workers ...",
     "category": "ai",
-    "_permalink": "/p/e30b108c17/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/e30b108c17/",
-    "_summary_240": "This is an excerpt of Sources by Alex Heath, a newsletter about AI and the tech industry, syndicated just for The Verge subscribers once a week. Reinforcement learning (RL) is...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/e30b108c17/thumbnail.png"
+    "_permalink": "/p/188c7b7ed9/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/188c7b7ed9/",
+    "_summary_240": "The post Every time I visit India, I\u2019m struck by how AI is already starting to have a profound impact on people\u2019s lives. A great example is our partnership with the Ministry of...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/188c7b7ed9/thumbnail.png"
   },
   {
     "title": "Bitwise Uplists Crypto Index Fund to NYSE Arca",
@@ -780,21 +810,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/8b82f6ccb2/thumbnail.png"
   },
   {
-    "title": "B Capital founding partner Kabir Narang leaves to launch new investment platform",
-    "url": "https://techcrunch.com/2025/12/09/b-capital-founding-partner-kabir-narang-leaves-to-launch-new-investment-platform/",
-    "published_at": "2025-12-09T16:13:19-05:00",
-    "source": "TechCrunch",
-    "summary": "Kabir Narang is laying the groundwork for a new investment platform slated for 2026 that will focus on \"compounding at the intersection of technology, AI, and global capital flows.\"",
-    "content_html": "",
-    "image_url": "https://techcrunch.com/wp-content/uploads/2025/12/kabir-narang-b-capital-GettyImages-1027568616.jpg?resize=1200,800",
-    "summary_text": "Kabir Narang is laying the groundwork for a new investment platform slated for 2026 that will focus on \"compounding at the intersection of technology, AI, and global capital flows.\"",
-    "category": "software",
-    "_permalink": "/p/d874bd43a3/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/d874bd43a3/",
-    "_summary_240": "Kabir Narang is laying the groundwork for a new investment platform slated for 2026 that will focus on \"compounding at the intersection of technology, AI, and global capital...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/d874bd43a3/thumbnail.png"
-  },
-  {
     "title": "GE Vernova Soars After AI Spurs Higher Dividend and Buybacks",
     "url": "https://www.bloomberg.com/news/articles/2025-12-09/ge-vernova-boosts-buyback-doubles-dividend-on-ai-power-boom",
     "published_at": "2025-12-09T16:05:00-05:00",
@@ -804,21 +819,6 @@
     "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/i5e5jHc7n3OQ/v1/1200x-1.jpg",
     "summary_text": "GE Vernova Inc. surged to a record high after showering shareholders with rewards in the latest sign that demand for new natural gas-fired power will remain robust for years into the future.",
     "category": "ai"
-  },
-  {
-    "title": "Why Cursor\u2019s CEO believes OpenAI, Anthropic competition won\u2019t crush his startup",
-    "url": "https://techcrunch.com/2025/12/09/why-cursors-ceo-believes-openai-anthropic-competition-wont-crush-his-startup/",
-    "published_at": "2025-12-09T15:59:21-05:00",
-    "source": "TechCrunch",
-    "summary": "After reaching $1 billion in annualized revenue, Anysphere CEO Michael Truell explained the features his company is focused on building out.",
-    "content_html": "",
-    "image_url": "https://techcrunch.com/wp-content/uploads/2025/12/Anysphere-Cursor-Michael-Truell-.png?resize=1200,745",
-    "summary_text": "After reaching $1 billion in annualized revenue, Anysphere CEO Michael Truell explained the features his company is focused on building out.",
-    "category": "ai",
-    "_permalink": "/p/7c24a32edb/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/7c24a32edb/",
-    "_summary_240": "After reaching $1 billion in annualized revenue, Anysphere CEO Michael Truell explained the features his company is focused on building out.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/7c24a32edb/thumbnail.png"
   },
   {
     "title": "New ETF proposal bets Bitcoin returns are made after hours",
@@ -849,21 +849,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/240fad0b16/",
     "_summary_240": "The guidance confirms that facilitating customer crypto trades falls within the \u201cbusiness of banking,\u201d expanding the range of activities that national banks may offer under...",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/240fad0b16/thumbnail.png"
-  },
-  {
-    "title": "Rivian is building its own AI assistant",
-    "url": "https://techcrunch.com/2025/12/09/rivian-is-building-its-own-ai-assistant/",
-    "published_at": "2025-12-09T15:11:13-05:00",
-    "source": "TechCrunch",
-    "summary": "The EV maker will likely share more details on its upcoming AI & Autonomy Day scheduled for December 11.",
-    "content_html": "",
-    "image_url": "https://techcrunch.com/wp-content/uploads/2025/07/250522-ANASTASIA-BENSON-GOOGLE-MAPS-AEB08056-FINAL.jpg?resize=1200,790",
-    "summary_text": "The EV maker will likely share more details on its upcoming AI & Autonomy Day scheduled for December 11.",
-    "category": "ai",
-    "_permalink": "/p/c2ea4bb4be/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/c2ea4bb4be/",
-    "_summary_240": "The EV maker will likely share more details on its upcoming AI & Autonomy Day scheduled for December 11.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/c2ea4bb4be/thumbnail.png"
   },
   {
     "title": "UK crypto lobbying group joins Digital Chamber in cross-border policy push",
@@ -941,17 +926,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/a7a59ae4e0/thumbnail.png"
   },
   {
-    "title": "BMW\u2019s New CEO Bet Early on Nvidia for Lead in Factory Setup",
-    "url": "https://www.bloomberg.com/news/articles/2025-12-09/bmw-s-new-ceo-bet-early-on-nvidia-to-gain-lead-in-factory-setup",
-    "published_at": "2025-12-09T12:45:44-05:00",
-    "source": "Bloomberg Technology",
-    "summary": "In 2021, well before AI became a corporate buzzword, BMW AG\u2019s production chief Milan Nedeljkovic made a bet on using Nvidia Corp.\u2019s technology to virtually plan future factories.",
-    "content_html": "Milan Nedeljkovi\u0107 Source: BMW",
-    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iwcxJLvIxaiI/v0/1200x-1.jpg",
-    "summary_text": "In 2021, well before AI became a corporate buzzword, BMW AG\u2019s production chief Milan Nedeljkovic made a bet on using Nvidia Corp.\u2019s technology to virtually plan future factories.",
-    "category": "ai"
-  },
-  {
     "title": "OpenAI Staffer Quits, Alleging Company\u2019s Economic Research Is Drifting Into AI Advocacy",
     "url": "https://www.wired.com/story/openai-economic-research-team-ai-jobs/",
     "published_at": "2025-12-09T12:30:00-05:00",
@@ -1010,21 +984,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/3965aa06e6/",
     "_summary_240": "A new Circle\u2013Aleo stablecoin project highlights the growing demand for privacy features as companies weigh blockchain use against the risks of transparency.",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/3965aa06e6/thumbnail.png"
-  },
-  {
-    "title": "Senator Lummis anticipates crypto market structure markup next week",
-    "url": "https://cointelegraph.com/news/cynthia-lummis-market-structure-markup-before-holidays?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-    "published_at": "2025-12-09T11:28:59-05:00",
-    "source": "Cointelegraph",
-    "summary": "\u201cOur staffs are exhausted,\u201d said the Wyoming senator at the Blockchain Association Policy Summit on Tuesday, speaking on the progress of the crypto bill.",
-    "content_html": "",
-    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTIvMDE5YjAzYWMtMGNmYy03MWZiLTk0YTItZTQ1NjRhM2JjYmRj.jpg",
-    "summary_text": "\u201cOur staffs are exhausted,\u201d said the Wyoming senator at the Blockchain Association Policy Summit on Tuesday, speaking on the progress of the crypto bill.",
-    "category": "fintech",
-    "_permalink": "/p/1d7ace1e12/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/1d7ace1e12/",
-    "_summary_240": "\u201cOur staffs are exhausted,\u201d said the Wyoming senator at the Blockchain Association Policy Summit on Tuesday, speaking on the progress of the crypto bill.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/1d7ace1e12/thumbnail.png"
   },
   {
     "title": "M&A Masterclass",
@@ -1096,6 +1055,21 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/c46e5ed703/",
     "_summary_240": "The post Data-driven farming and AI are transforming water management in Chile appeared first on Source .",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/c46e5ed703/thumbnail.png"
+  },
+  {
+    "title": "AT&T, IBM & CVS on Staying Ahead of Cyber Threats",
+    "url": "https://www.bloomberg.com/news/videos/2025-12-09/at-t-ibm-cvs-on-staying-ahead-of-cyber-threats-video",
+    "published_at": "2025-12-09T06:35:25-05:00",
+    "source": "Bloomberg Technology",
+    "summary": "Rich Baich, Senior Vice President & Chief Information Security Officer, AT&T, Rosa Bolger, Vice President, Cyber Defense and Technology, IBM and Alan Rosa, Chief Information Security Officer & Senior Vice President, Information Security & Technology Solutions, CVS Health discuss staying ahead of cyber threats with Bloomberg's Lynn Doan at the Defending the Digital Economy event in New York. (Sour...",
+    "content_html": "",
+    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ixMYIZUEz6AU/v3/1200x-1.jpg",
+    "summary_text": "Rich Baich, Senior Vice President & Chief Information Security Officer, AT&T, Rosa Bolger, Vice President, Cyber Defense and Technology, IBM and Alan Rosa, Chief Information Security Officer & Senior Vice President, Information Security & Technology Solutions...",
+    "category": "fintech",
+    "_permalink": "/p/17b1b2d069/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/17b1b2d069/",
+    "_summary_240": "Rich Baich, Senior Vice President & Chief Information Security Officer, AT&T, Rosa Bolger, Vice President, Cyber Defense and Technology, IBM and Alan Rosa, Chief Information...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/17b1b2d069/thumbnail.png"
   },
   {
     "title": "America\u2019s Biggest Bitcoin Miners Are Pivoting to AI",
@@ -1386,17 +1360,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/edf9ac402c/",
     "_summary_240": "Through layers of intermediaries, stablecoins can be moved, swapped and mixed into pools of other funds in ways that are difficult to trace, experts say.",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/edf9ac402c/thumbnail.png"
-  },
-  {
-    "title": "Chinese phonemakers seize on Apple\u2019s AI struggles",
-    "url": "https://www.ft.com/content/5bfaf5f3-c92a-41e1-81a6-c065a1bc61c2",
-    "published_at": "2025-12-07T00:00:06-05:00",
-    "source": "Financial Times - Technology",
-    "summary": "Manufacturers tout apps that help users switch from iPhones",
-    "content_html": "",
-    "image_url": "",
-    "summary_text": "Manufacturers tout apps that help users switch from iPhones",
-    "category": "ai"
   },
   {
     "title": "Time to IPO Anthropic and OpenAI",
