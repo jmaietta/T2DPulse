@@ -229,14 +229,14 @@
     "url": "https://venturebeat.com/ai/quilters-ai-just-designed-an-843-part-linux-computer-that-booted-on-the",
     "published_at": "2025-12-10T09:00:00-05:00",
     "source": "VentureBeat",
-    "summary": "A San Francisco-based startup has demonstrated what it calls a breakthrough in hardware development: an artificial intelligence system that designed a fully functional Linux computer in one week \u2014 a process that would typically consume nearly three months of skilled engineering labor. Quilter , which has raised more than $40 million from investors including Benchmark, Index Ventures, and Coatue, ...",
+    "summary": "A Los Angeles-based startup has demonstrated what it calls a breakthrough in hardware development: an artificial intelligence system that designed a fully functional Linux computer in one week \u2014 a process that would typically consume nearly three months of skilled engineering labor. Quilter , which has raised more than $40 million from investors including Benchmark, Index Ventures, and Coatue, us...",
     "content_html": "",
     "image_url": "https://images.ctfassets.net/jdtwqhzvc2n1/3ibU0O0ON6nC4NSVY5KYkP/e13a276f2bece890100148b10cbcf165/nuneybits_Vector_art_of_self-building_computer_isometric_ca3b7721-5759-4033-9885-e096e5d68ddc.webp?w=800&amp;q=75",
-    "summary_text": "A San Francisco-based startup has demonstrated what it calls a breakthrough in hardware development: an artificial intelligence system that designed a fully functional Linux computer in one week \u2014 a process that would typically consume nearly three months of ...",
+    "summary_text": "A Los Angeles-based startup has demonstrated what it calls a breakthrough in hardware development: an artificial intelligence system that designed a fully functional Linux computer in one week \u2014 a process that would typically consume nearly three months of sk...",
     "category": "ai",
     "_permalink": "/p/6990ae415f/",
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/6990ae415f/",
-    "_summary_240": "A San Francisco-based startup has demonstrated what it calls a breakthrough in hardware development: an artificial intelligence system that designed a fully functional Linux...",
+    "_summary_240": "A Los Angeles-based startup has demonstrated what it calls a breakthrough in hardware development: an artificial intelligence system that designed a fully functional Linux...",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/6990ae415f/thumbnail.png"
   },
   {
@@ -1236,30 +1236,19 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/35aed35786/thumbnail.png"
   },
   {
-    "title": "Claude Code in Slack",
-    "url": "https://www.youtube.com/watch?v=XpXImenrSPI",
-    "published_at": "2025-12-08T13:56:15-05:00",
-    "source": "Anthropic YouTube",
-    "summary": "Delegate tasks to Claude Code directly from Slack, making it easy to move context from Slack conversations to coding sessions. Claude Code in Slack is available now for teams with the Claude app installed in their Slack workspace and who have access to Claude Code on the web. Read more: https://www.anthropic.com/news/claude-code-and-slack",
-    "content_html": "",
-    "image_url": "https://i.ytimg.com/vi/XpXImenrSPI/maxresdefault.jpg",
-    "summary_text": "Delegate tasks to Claude Code directly from Slack, making it easy to move context from Slack conversations to coding sessions. Claude Code in Slack is available now for teams with the Claude app installed in their Slack workspace and who have access to Claude...",
-    "category": "ai",
-    "_permalink": "/p/ff630b758a/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/ff630b758a/",
-    "_summary_240": "Delegate tasks to Claude Code directly from Slack, making it easy to move context from Slack conversations to coding sessions. Claude Code in Slack is available now for teams...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/ff630b758a/thumbnail.png"
-  },
-  {
     "title": "The State of AI: life in 2030",
     "url": "https://www.ft.com/content/5bff1202-b2ce-439a-8687-8f8b919c683e",
     "published_at": "2025-12-08T12:00:05-05:00",
     "source": "Financial Times - Technology",
     "summary": "Expect a world of robots, robotaxis and AI haves and have-nots",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/eccc94dd-610d-47ff-94f0-c5071eef11d7.jpg",
     "summary_text": "Expect a world of robots, robotaxis and AI haves and have-nots",
-    "category": "ai"
+    "category": "ai",
+    "_permalink": "/p/229b96fb67/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/229b96fb67/",
+    "_summary_240": "Expect a world of robots, robotaxis and AI haves and have-nots",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/229b96fb67/thumbnail.png"
   },
   {
     "title": "Google Looks Smart. Can't Say the Same for META, MSFT and ORCL.",
@@ -1283,9 +1272,13 @@
     "source": "Financial Times - Technology",
     "summary": "AI advances made through group\u2019s custom processor hit Nvidia\u2019s stock and prompt ChatGPT maker to declare \u2018code red\u2019",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/f9b73243-bd35-4dcf-bb77-2287e2c6eec4.jpg",
     "summary_text": "AI advances made through group\u2019s custom processor hit Nvidia\u2019s stock and prompt ChatGPT maker to declare \u2018code red\u2019",
-    "category": "ai"
+    "category": "ai",
+    "_permalink": "/p/0e94c29a8f/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/0e94c29a8f/",
+    "_summary_240": "AI advances made through group\u2019s custom processor hit Nvidia\u2019s stock and prompt ChatGPT maker to declare \u2018code red\u2019",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/0e94c29a8f/thumbnail.png"
   },
   {
     "title": "AI poses a new antitrust problem",
@@ -1294,9 +1287,13 @@
     "source": "Financial Times - Technology",
     "summary": "Washington cheered on the consolidation of the social web in the 2010s \u2014 it must not make the same mistake today",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/bd4c0b6c-ee86-4e91-9833-728426a3d258.jpg",
     "summary_text": "Washington cheered on the consolidation of the social web in the 2010s \u2014 it must not make the same mistake today",
-    "category": "ai"
+    "category": "ai",
+    "_permalink": "/p/ae2499974b/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/ae2499974b/",
+    "_summary_240": "Washington cheered on the consolidation of the social web in the 2010s \u2014 it must not make the same mistake today",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/ae2499974b/thumbnail.png"
   },
   {
     "title": "Apple Manufacturing Academy launches virtual programming",
@@ -1334,6 +1331,21 @@
     "image_url": "",
     "summary_text": "Key findings from OpenAI\u2019s enterprise data show accelerating AI adoption, deeper integration, and measurable productivity gains across industries in 2025.",
     "category": "ai"
+  },
+  {
+    "title": "Interview Practice with ChatGPT",
+    "url": "https://www.youtube.com/watch?v=Belt8RStJeM",
+    "published_at": "2025-12-07T21:15:38-05:00",
+    "source": "OpenAI YouTube",
+    "summary": "Be your best at your next job interview... rehearse what you want to say with ChatGPT.",
+    "content_html": "",
+    "image_url": "https://i.ytimg.com/vi/Belt8RStJeM/maxresdefault.jpg",
+    "summary_text": "Be your best at your next job interview... rehearse what you want to say with ChatGPT.",
+    "category": "ai",
+    "_permalink": "/p/cb5275e9af/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/cb5275e9af/",
+    "_summary_240": "Be your best at your next job interview... rehearse what you want to say with ChatGPT.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/cb5275e9af/thumbnail.png"
   },
   {
     "title": "How Virgin Atlantic uses AI to enhance every step of travel",
