@@ -1,5 +1,35 @@
 [
   {
+    "title": "Can OpenAI Respond After Google Closes the A.I. Technology Gap?",
+    "url": "https://www.nytimes.com/2025/12/11/technology/openai-google-ai-technology-gap.html",
+    "published_at": "2025-12-11T14:24:16-05:00",
+    "source": "The New York Times - Technology",
+    "summary": "A new technology release from OpenAI is supposed to top what Google recently produced. It also shows OpenAI is engaged in a new and more difficult competition.",
+    "content_html": "OpenAI\u2019s newest technology comes after Google claimed it had topped its young competitor.",
+    "image_url": "https://static01.nyt.com/images/2025/12/10/multimedia/OPENAI-FIGHT-1-02-kwpv/OPENAI-FIGHT-1-02-kwpv-mediumSquareAt3X.jpg",
+    "summary_text": "A new technology release from OpenAI is supposed to top what Google recently produced. It also shows OpenAI is engaged in a new and more difficult competition.",
+    "category": "ai",
+    "_permalink": "/p/5460746d97/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/5460746d97/",
+    "_summary_240": "A new technology release from OpenAI is supposed to top what Google recently produced. It also shows OpenAI is engaged in a new and more difficult competition.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/5460746d97/thumbnail.png"
+  },
+  {
+    "title": "As AI Grows More Complex, Model Builders Rely on NVIDIA",
+    "url": "https://blogs.nvidia.com/blog/leading-models-nvidia/",
+    "published_at": "2025-12-11T14:19:57-05:00",
+    "source": "NVIDIA News",
+    "summary": "Unveiling what it describes as the most capable model series yet for professional knowledge work, OpenAI launched GPT-5.2 today. The model was trained and deployed on NVIDIA infrastructure, including NVIDIA Hopper and GB200 NVL72 systems. It\u2019s the latest example of how leading AI builders train and deploy at scale on NVIDIA\u2019s full-stack AI infrastructure. Pretraining: Read Article",
+    "content_html": "",
+    "image_url": "https://s3.amazonaws.com/cms.ipressroom.com/219/files/202512/693b19733d63322296b8ce74_end-to-end-press-best-models-trained-1920x1080-4660123-842x450/end-to-end-press-best-models-trained-1920x1080-4660123-842x450_thmb.jpg",
+    "summary_text": "Unveiling what it describes as the most capable model series yet for professional knowledge work, OpenAI launched GPT-5.2 today. The model was trained and deployed on NVIDIA infrastructure, including NVIDIA Hopper and GB200 NVL72 systems. It\u2019s the latest exam...",
+    "category": "ai",
+    "_permalink": "/p/2362126b90/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/2362126b90/",
+    "_summary_240": "Unveiling what it describes as the most capable model series yet for professional knowledge work, OpenAI launched GPT-5.2 today. The model was trained and deployed on NVIDIA...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/2362126b90/thumbnail.png"
+  },
+  {
     "title": "Stripe Introduces Agentic Commerce Suite for Brands and eCommerce Platforms",
     "url": "https://www.pymnts.com/artificial-intelligence-2/2025/stripe-introduces-agentic-commerce-suite-for-brands-and-ecommerce-platforms/",
     "published_at": "2025-12-11T14:18:43-05:00",
@@ -489,21 +519,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/de60982944/",
     "_summary_240": "Learn how to supercharge Claude by connecting the tools you already use. This video shows you how to set up connectors that give Claude access to your files, apps, and workflows.",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/de60982944/thumbnail.png"
-  },
-  {
-    "title": "US stocks slide after Oracle results disappoint",
-    "url": "https://www.ft.com/content/e4ae8299-e0a4-4e36-8c8f-d59b22202284",
-    "published_at": "2025-12-11T12:03:50-05:00",
-    "source": "Financial Times - Technology",
-    "summary": "US database company\u2019s earnings published on Wednesday fell short of forecasts amid concerns over AI boom",
-    "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/9e64c09d-6717-4418-8c0d-e79af3e9b0fe.jpg",
-    "summary_text": "US database company\u2019s earnings published on Wednesday fell short of forecasts amid concerns over AI boom",
-    "category": "ai",
-    "_permalink": "/p/89600fce70/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/89600fce70/",
-    "_summary_240": "US database company\u2019s earnings published on Wednesday fell short of forecasts amid concerns over AI boom",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/89600fce70/thumbnail.png"
   },
   {
     "title": "Microsoft Executive Vows to Halt AI Work If It Imperils Humanity",
