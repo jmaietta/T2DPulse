@@ -1,5 +1,110 @@
 [
   {
+    "title": "BIS-Led Collaboration Completes Successful Tests of Post-Quantum Cryptography in Payment System",
+    "url": "https://www.pymnts.com/digital-payments/2025/bis-led-collaboration-completes-successful-tests-of-post-quantum-cryptography-in-payment-system/",
+    "published_at": "2025-12-11T12:45:51-05:00",
+    "source": "PYMNTS",
+    "summary": "Migrating payment systems to post-quantum cryptography is feasible but requires further testing and preparation, according to a report released Thursday (Dec. 11) by the Bank for International Settlements (BIS). The report \u201cProject Leap: Quantum-proofing payment systems\u201d shared the results of a test of post-quantum cryptography in an operational payment system to protect such systems [\u2026] The post...",
+    "content_html": "<p><span>Migrating payment systems to post-quantum cryptography is feasible but requires further testing and preparation, according to a report released Thursday (Dec. 11) by the </span><a href=\"https://www.bis.org/index.htm\" rel=\"noopener\" target=\"_blank\"><span>Bank for International Settlements</span></a><span> (BIS).</span></p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p><span>The report \u201c</span><a href=\"https://www.bis.org/publ/othp107.pdf\" rel=\"noopener\" target=\"_blank\"><span>Project Leap: Quantum-proofing payment systems</span></a><span>\u201d shared the results of a test of post-quantum cryptography in an operational payment system to protect such systems from the potential threat posed by quantum computers, BIS said in a </span><a href=\"https://www.bis.org/publ/othp107.htm\" rel=\"noopener\" target=\"_blank\"><span>press release</span></a><span>.</span></p>\n<p><span>The test dubbed \u201cProject Leap Phase 2\u201d is a collaboration between the </span><a href=\"https://www.bis.org/about/bisih/locations/eurosystem.htm\" rel=\"noopener\" target=\"_blank\"><span>BIS Innovation Hub Eurosystem Centre</span></a><span>, the </span><a href=\"https://www.bancaditalia.it/homepage/index.html?com.dotmarketing.htmlpage.language=1&amp;dotcache=refresh\" rel=\"noopener\" target=\"_blank\"><span>Bank of Italy</span></a><span>, the </span><a href=\"https://www.banque-france.fr/en\" rel=\"noopener\" target=\"_blank\"><span>Bank of France</span></a><span>, </span><a href=\"https://www.bundesbank.de/en\" rel=\"noopener\" target=\"_blank\"><span>Deutsche Bundesbank</span></a><span>, </span><a href=\"https://www.colt.net/product/esmig-with-sia-colt/\" rel=\"noopener\" target=\"_blank\"><span>Nexi-Colt</span></a><span> and </span><a href=\"https://www.swift.com/\" rel=\"noopener\" target=\"_blank\"><span>Swift</span></a><span>, according to the release.</span></p>\n<p><span>It used post-quantum cryptography in place of traditional digital signatures while sending liquidity transfers and modified several system components to ensure compatibility with update cryptographic libraries, per the release.</span></p>\n<p><span>\u201cAll test scenarios were successfully executed, demonstrating the feasibility of migrating payment systems to post-quantum cryptography,\u201d the report said. \u201cThe tests also revealed significant performance differences between traditional and post-quantum algorithms, pointing at the need for further traditional and post-quantum algorithms, pointing at the need for further testing and preparation before transitioning the financial system.\u201d</span></p>\n<p><span>Project Leap Phase 2 followed an earlier test in which the BIS Innovation Hub Eurosystem Centre, Banque de France and Deutsche Bundesbank successfully established a secure communication channel designed to protect financial data from </span><a href=\"https://www.bis.org/press/p230605.htm\" rel=\"noopener\" target=\"_blank\"><span>quantum computers</span></a><span>.</span></p>\n<p><span>\u201cThe project involved transmitting test payment messages via this quantum-resistant VPN (Virtual Private Network) tunnel between servers located in Paris and Frankfurt, thereby demonstrating how critical financial data can be protected,\u201d BIS said in a June 2023 press release about the report \u201c</span><a href=\"https://www.bis.org/publ/othp67.pdf\" rel=\"noopener\" target=\"_blank\"><span>Project Leap: Quantum-proofing the financial system</span></a><span>.\u201d</span></p>\n<p><span>PYMNTS reported in October 2024 that </span><a href=\"https://www.pymnts.com/cybersecurity/2024/making-sense-of-quantum-data-defense-in-the-payments-space/\" rel=\"noopener\" target=\"_blank\"><span>quantum computers</span></a><span> capable of cracking current encryption protocols are still in the developmental stage, but experts warn that these machines could become commercially viable within the next decade.</span></p>\n<p><span>Security experts have adopted the name \u201cQ-Day\u201d for the day when </span><a href=\"https://www.pymnts.com/technology/2024/making-sense-of-the-post-quantum-payments-landscape/\" rel=\"noopener\" target=\"_blank\"><span>quantum technology</span></a><span> has advanced to the point where its commercial applications and availability could be used to compromise and fundamentally undermine the encryption protocols relied upon by corporations, banks and national governments around the world.</span></p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/digital-payments/2025/bis-led-collaboration-completes-successful-tests-of-post-quantum-cryptography-in-payment-system/\">BIS-Led Collaboration Completes Successful Tests of Post-Quantum Cryptography in Payment System</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
+    "image_url": "https://www.pymnts.com/wp-content/uploads/2025/12/bis-digital-payments-post-quantum-cryptography-bank-of-italy-france-collaboration.jpeg?w=457",
+    "summary_text": "Migrating payment systems to post-quantum cryptography is feasible but requires further testing and preparation, according to a report released Thursday (Dec. 11) by the Bank for International Settlements (BIS). The report \u201cProject Leap: Quantum-proofing paym...",
+    "category": "fintech",
+    "_permalink": "/p/b78735a5c6/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/b78735a5c6/",
+    "_summary_240": "Migrating payment systems to post-quantum cryptography is feasible but requires further testing and preparation, according to a report released Thursday (Dec. 11) by the Bank for...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/b78735a5c6/thumbnail.png"
+  },
+  {
+    "title": "Podcast with EY\u2019s Dan Diasio: AI is driving the biggest revolution in management ever",
+    "url": "https://www.microsoft.com/en-us/worklab/podcast/eys-dan-diasio-ai-is-driving-the-biggest-revolution-in-management-ever",
+    "published_at": "2025-12-11T12:44:12-05:00",
+    "source": "Microsoft News",
+    "summary": "The post Podcast with EY\u2019s Dan Diasio: AI is driving the biggest revolution in management ever appeared first on Source .",
+    "content_html": "<article class=\"mssrc-posts font-- has--theme\" id=\"single-23190\">\n\t<div class=\"acf-innerblocks-container\"></div>\t\t\t<section class=\"post-tags\">\n\t\t\t\t<div class=\"post-tags__content wp-block-columns\">\n\t\t\t\t\t<div class=\"post-tags__header wp-block-column flex-basis-25 has-text-align-right\">\n\t\t\t\t\t\t<h4 class=\"sr-only\">Tags: </h4>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"post-tags__body wp-block-column flex-basis-60\">\n\t\t\t\t\t\t<ul class=\"post-tags__list\"><li class=\"post-tags__item\"><a class=\"kicker inline-block post__meta--tags\" href=\"https://news.microsoft.com/source/tag/ai/\">AI</a></li></ul>\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</section>\n\t\t\t</article><p>The post <a href=\"https://www.microsoft.com/en-us/worklab/podcast/eys-dan-diasio-ai-is-driving-the-biggest-revolution-in-management-ever\">Podcast with EY\u2019s Dan Diasio: AI is driving the biggest revolution in management ever</a> appeared first on <a href=\"https://news.microsoft.com/source\">Source</a>.</p>",
+    "image_url": "https://assets-c4akfrf5b4d3f4b7.z01.azurefd.net/assets/2025/12/WorkLab-Pod_Dan-Diasio_Web-Thumbnail_1920x1080_6938913f6c361.jpg",
+    "summary_text": "The post Podcast with EY\u2019s Dan Diasio: AI is driving the biggest revolution in management ever appeared first on Source .",
+    "category": "ai",
+    "_permalink": "/p/13010aeece/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/13010aeece/",
+    "_summary_240": "The post Podcast with EY\u2019s Dan Diasio: AI is driving the biggest revolution in management ever appeared first on Source .",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/13010aeece/thumbnail.png"
+  },
+  {
+    "title": "Texas Files Antitrust Suit Against Epic Systems Over Health Data",
+    "url": "https://www.bloomberg.com/news/articles/2025-12-11/texas-files-antitrust-suit-against-epic-systems-over-health-data",
+    "published_at": "2025-12-11T12:31:54-05:00",
+    "source": "Bloomberg Technology",
+    "summary": "Texas Attorney General Ken Paxton sued Epic Systems Corp. for antitrust violations, accusing the healthcare software company of leveraging its control over patient medical records to maintain dominance in the market.",
+    "content_html": "A hospital bed in the hallway of the intensive care unit at Saint Claire Regional Medical Center in Morehead, Kentucky, U.S., on Wednesday, Dec. 1, 2021. Kentucky's Covid landscape is a lot like what's happening in the rest of the United States. When the latest surge of infections began this summer, outbreaks in less vaccinated counties filled up small, local hospitals. Sicker patients, or those who couldn't find space, went on to regional facilities. The most severe cases fed into the biggest and most advanced hospital in the state, the University of Kentucky Albert B. Chandler Hospital, until it too overflowed.",
+    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/i56Ncoz3NvwE/v1/1200x-1.jpg",
+    "summary_text": "Texas Attorney General Ken Paxton sued Epic Systems Corp. for antitrust violations, accusing the healthcare software company of leveraging its control over patient medical records to maintain dominance in the market.",
+    "category": "software",
+    "_permalink": "/p/74541996eb/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/74541996eb/",
+    "_summary_240": "Texas Attorney General Ken Paxton sued Epic Systems Corp. for antitrust violations, accusing the healthcare software company of leveraging its control over patient medical...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/74541996eb/thumbnail.png"
+  },
+  {
+    "title": "From Black Hat Europe: Evolving our approach to coordinated security research",
+    "url": "https://www.microsoft.com/en-us/msrc/blog/2025/12/in-scope-by-default",
+    "published_at": "2025-12-11T12:30:45-05:00",
+    "source": "Microsoft News",
+    "summary": "The post From Black Hat Europe: Evolving our approach to coordinated security research appeared first on Source .",
+    "content_html": "<article class=\"mssrc-posts font-- has--theme\" id=\"single-23188\">\n\t<div class=\"acf-innerblocks-container\"></div>\t\t\t<section class=\"post-tags\">\n\t\t\t\t<div class=\"post-tags__content wp-block-columns\">\n\t\t\t\t\t<div class=\"post-tags__header wp-block-column flex-basis-25 has-text-align-right\">\n\t\t\t\t\t\t<h4 class=\"sr-only\">Tags: </h4>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"post-tags__body wp-block-column flex-basis-60\">\n\t\t\t\t\t\t<ul class=\"post-tags__list\"><li class=\"post-tags__item\"><a class=\"kicker inline-block post__meta--tags\" href=\"https://news.microsoft.com/source/tag/security/\">Security</a></li></ul>\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</section>\n\t\t\t</article><p>The post <a href=\"https://www.microsoft.com/en-us/msrc/blog/2025/12/in-scope-by-default\">From Black Hat Europe: Evolving our approach to coordinated security research</a> appeared first on <a href=\"https://news.microsoft.com/source\">Source</a>.</p>",
+    "image_url": "https://uhf.microsoft.com/images/microsoft/RE1Mu3b.png",
+    "summary_text": "The post From Black Hat Europe: Evolving our approach to coordinated security research appeared first on Source .",
+    "category": "fintech",
+    "_permalink": "/p/b5f3bc34a7/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/b5f3bc34a7/",
+    "_summary_240": "The post From Black Hat Europe: Evolving our approach to coordinated security research appeared first on Source .",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/b5f3bc34a7/thumbnail.png"
+  },
+  {
+    "title": "Rivian Bets Big With New AI Chip and Lidar",
+    "url": "https://www.bloomberg.com/news/videos/2025-12-11/rivian-bets-big-with-new-ai-chip-and-lidar-video",
+    "published_at": "2025-12-11T12:30:26-05:00",
+    "source": "Bloomberg Technology",
+    "summary": "Rivian is making a high-stakes bet that its own AI chip and a new lidar system will power its path to driverless autonomy. Bloomberg TV\u2019s Ed Ludlow reports. (Source: Bloomberg)",
+    "content_html": "",
+    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iLtM5NMvqo2k/v3/1200x-1.jpg",
+    "summary_text": "Rivian is making a high-stakes bet that its own AI chip and a new lidar system will power its path to driverless autonomy. Bloomberg TV\u2019s Ed Ludlow reports. (Source: Bloomberg)",
+    "category": "ai",
+    "_permalink": "/p/80fbf3a15c/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/80fbf3a15c/",
+    "_summary_240": "Rivian is making a high-stakes bet that its own AI chip and a new lidar system will power its path to driverless autonomy. Bloomberg TV\u2019s Ed Ludlow reports. (Source: Bloomberg)",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/80fbf3a15c/thumbnail.png"
+  },
+  {
+    "title": "Mamoru Hosoda explains why Hamlet is everywhere this year",
+    "url": "https://www.theverge.com/entertainment/842346/mamoru-hosoda-interview-scarlet",
+    "published_at": "2025-12-11T12:30:00-05:00",
+    "source": "The Verge",
+    "summary": "Hamlet is having something of a renaissance in 2025. This year's edition of the Toronto International Film Festival featured three different takes on the idea, including Chlo\u00e9 Zhao's adaptation of the play's inspiration and Aneil Karia's rendition set in modern-day London. But the most out-there version came from Belle director Mamoru Hosoda, who transformed Shakespeare's [\u2026]",
+    "content_html": "<figure>\n\n<img alt=\"\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/09/Scarlet_Still_01.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100\" />\n\t<figcaption>\n\t\t</figcaption>\n</figure>\n<p class=\"has-drop-cap has-text-align-none\"><em>Hamlet</em> is having something of a renaissance in 2025. This year's edition of the Toronto International Film Festival featured three different takes on the idea, including Chlo&eacute; Zhao's adaptation of the play's inspiration and Aneil Karia's rendition set in modern-day London. But the most out-there version came from <a href=\"https://www.theverge.com/22866629/belle-mamoru-hosoda-director-interview\"><em>Belle</em> director Mamoru Hosoda</a>, who transformed Shakespeare's revenge story into a fantastical epic called <em>Scarlet</em>, complete with time travel and dragons.</p>\n<p class=\"has-text-align-none\">Hosoda likens the confluence to the late 1940s and early '50s, when acclaimed filmmakers like Akira Kurosawa and Orson Welles put out their own takes on <em>Macbeth</em>. \"Perhaps there was \u2026</p>\n<p><a href=\"https://www.theverge.com/entertainment/842346/mamoru-hosoda-interview-scarlet\">Read the full story at The Verge.</a></p>",
+    "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/09/Scarlet_Still_01.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "summary_text": "Hamlet is having something of a renaissance in 2025. This year's edition of the Toronto International Film Festival featured three different takes on the idea, including Chlo\u00e9 Zhao's adaptation of the play's inspiration and Aneil Karia's rendition set in mode...",
+    "category": "fintech",
+    "_permalink": "/p/862a505a9e/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/862a505a9e/",
+    "_summary_240": "Hamlet is having something of a renaissance in 2025. This year's edition of the Toronto International Film Festival featured three different takes on the idea, including Chlo\u00e9...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/862a505a9e/thumbnail.png"
+  },
+  {
+    "title": "Rivian Unveils Plans For Autonomous Driving",
+    "url": "https://www.bloomberg.com/news/videos/2025-12-11/rivian-unveils-plans-for-autonomous-driving-video",
+    "published_at": "2025-12-11T12:24:17-05:00",
+    "source": "Bloomberg Technology",
+    "summary": "Rivian announced its plans for autonomous driving with a new in house chip and lidar. CEO RJ Scaringe shares the EV maker's roadmap for autonomy, and a future where the company sees people owning their own cars and being willing to pay for software that will drive it for them. He speaks to Bloomberg Technology co-host Ed Ludlow. (Source: Bloomberg)",
+    "content_html": "",
+    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/i7PyZumvTEN8/v3/1200x-1.png",
+    "summary_text": "Rivian announced its plans for autonomous driving with a new in house chip and lidar. CEO RJ Scaringe shares the EV maker's roadmap for autonomy, and a future where the company sees people owning their own cars and being willing to pay for software that will ...",
+    "category": "software",
+    "_permalink": "/p/ee17142c63/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/ee17142c63/",
+    "_summary_240": "Rivian announced its plans for autonomous driving with a new in house chip and lidar. CEO RJ Scaringe shares the EV maker's roadmap for autonomy, and a future where the company...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/ee17142c63/thumbnail.png"
+  },
+  {
     "title": "Rivian is building its own powerful AI chips for autonomous driving",
     "url": "https://www.theverge.com/news/842213/rivian-ai-autonomous-chip-specs",
     "published_at": "2025-12-11T12:20:00-05:00",
@@ -73,21 +178,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/90f1a9c86c/",
     "_summary_240": "Mastercard has launched a digital wallet partnership with money movement company TerraPay. This collaboration is designed to provide the latest in digital payment capabilities to...",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/90f1a9c86c/thumbnail.png"
-  },
-  {
-    "title": "Getting started with connectors in Claude.ai",
-    "url": "https://www.youtube.com/watch?v=_jjSS0qGFbI",
-    "published_at": "2025-12-11T12:07:09-05:00",
-    "source": "Anthropic YouTube",
-    "summary": "Learn how to supercharge Claude by connecting the tools you already use. This video shows you how to set up connectors that give Claude access to your files, apps, and workflows.",
-    "content_html": "",
-    "image_url": "https://i.ytimg.com/vi/_jjSS0qGFbI/maxresdefault.jpg",
-    "summary_text": "Learn how to supercharge Claude by connecting the tools you already use. This video shows you how to set up connectors that give Claude access to your files, apps, and workflows.",
-    "category": "ai",
-    "_permalink": "/p/de60982944/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/de60982944/",
-    "_summary_240": "Learn how to supercharge Claude by connecting the tools you already use. This video shows you how to set up connectors that give Claude access to your files, apps, and workflows.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/de60982944/thumbnail.png"
   },
   {
     "title": "US stocks slide after Oracle results disappoint",
@@ -548,7 +638,11 @@
     "content_html": "",
     "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/73a5ed23-07c1-421d-b73d-21e61ddd2616.jpg",
     "summary_text": "Dutch payments group aims to create new European fintech",
-    "category": "fintech"
+    "category": "fintech",
+    "_permalink": "/p/9d15b7ad45/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/9d15b7ad45/",
+    "_summary_240": "Dutch payments group aims to create new European fintech",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/9d15b7ad45/thumbnail.png"
   },
   {
     "title": "Coinbase opens Solana DEX access as CeFi and DeFi converge",
@@ -641,21 +735,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/cc512758bf/thumbnail.png"
   },
   {
-    "title": "Bloomberg Intelligence: AI Adoption in Financial Services",
-    "url": "https://www.bloomberg.com/news/videos/2025-12-11/bloomberg-intelligence-ai-in-financial-services-video",
-    "published_at": "2025-12-11T05:38:07-05:00",
-    "source": "Bloomberg Technology",
-    "summary": "Diksha Gera, Senior Analyst, Global Payments & Fintech, Bloomberg Intelligence, shares findings from the latest research on AI trends shaping the future of finance at Empowering Business Growth in the Digital Economy in San Francisco. (Source: Bloomberg)",
-    "content_html": "",
-    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ifXSiAok9Mmc/v3/1200x-1.jpg",
-    "summary_text": "Diksha Gera, Senior Analyst, Global Payments & Fintech, Bloomberg Intelligence, shares findings from the latest research on AI trends shaping the future of finance at Empowering Business Growth in the Digital Economy in San Francisco. (Source: Bloomberg)",
-    "category": "ai",
-    "_permalink": "/p/f5d6a920da/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/f5d6a920da/",
-    "_summary_240": "Diksha Gera, Senior Analyst, Global Payments & Fintech, Bloomberg Intelligence, shares findings from the latest research on AI trends shaping the future of finance at Empowering...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/f5d6a920da/thumbnail.png"
-  },
-  {
     "title": "OpenAI and Microsoft Sued Over Murder-Suicide Blamed on ChatGPT",
     "url": "https://www.bloomberg.com/news/articles/2025-12-11/openai-microsoft-sued-over-murder-suicide-blamed-on-chatgpt",
     "published_at": "2025-12-11T05:27:30-05:00",
@@ -684,21 +763,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/0f88f22fa4/",
     "_summary_240": "Norway rules that a digital krone is unnecessary for now, highlighting its strong payment rails and the uncertain benefits of both retail and wholesale CBDCs.",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/0f88f22fa4/thumbnail.png"
-  },
-  {
-    "title": "Embedded Finance Improves Cash Flow for SaaS Platforms",
-    "url": "https://www.pymnts.com/digital-payments/2025/embedded-finance-improves-cash-flow-for-saas-platforms/",
-    "published_at": "2025-12-11T04:01:25-05:00",
-    "source": "PYMNTS",
-    "summary": "Vertical software companies have built thriving businesses by deeply understanding niche industries. Education technology platforms, for example, manage enrollment, tuition schedules and financial aid. Healthcare systems coordinate scheduling, billing codes and insurance workflows. Field-service platforms help contractors dispatch crews, track jobs, and manage customers. But findings in the Octob...",
-    "content_html": "<p><span>Vertical software companies have built thriving businesses by deeply understanding niche industries.</span></p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p><span>Education technology platforms, for example, manage enrollment, tuition schedules and financial aid. Healthcare systems coordinate scheduling, billing codes and insurance workflows. Field-service platforms help contractors dispatch crews, track jobs, and manage customers.</span></p>\n<p><span>But findings in the </span><a href=\"https://www.pymnts.com/tracker_posts/vertical-first-payments-how-low-code-wins-in-education-healthcare-and-field-services\" rel=\"noopener\" target=\"_blank\"><span>October 2025 Payment Processing Tracker</span><span>\u00ae</span><span>\u202fSeries</span></a><span>, a PYMNTS Intelligence report in collaboration with Finix, reveal that across these three industries, one element has remained stubbornly outdated: payments.</span></p>\n<p><span>Despite advances in cloud computing and mobile tools, payment flows in many vertical markets still rely on fragmented systems, manual reconciliation, and back-office processes designed decades ago.</span></p>\n<p><span>Tuition payments may sit in separate portals from enrollment systems. Healthcare billing often involves paper statements, phone calls, and delayed claims. Field-service professionals frequently invoice after the fact and wait weeks, sometimes months, to get paid.</span></p>\n<p><span>This separation may have made more sense when payments were largely checks, cash, or batch card processing. Against the backdrop of today\u2019s mobile-first economy, the back-office model of payments is becoming increasingly misaligned with how people work and pay.</span></p>\n<p><span>Vertical software platforms that prioritize mobile use, simplify payment flows, and integrate billing directly into core interactions may not only improve operational efficiency but could ultimately redefine what users expect from industry-specific software.</span></p>\n<h2><b><span>Low Code Embedded Payments Become an Advantage, Not a Checkbox</span></b></h2>\n<p><span>As vertical software markets mature, differentiation becomes harder. Features converge. Pricing compresses. Customer acquisition costs rise. Payments can offer a new axis of competition.</span></p>\n<p><span>Low-code embedded payment solutions aim to flip the script for vertical platforms. Instead of requiring vertical platforms to build payment systems from scratch or stitch together multiple vendors, low-code tools provide modular components that can be integrated directly into existing software with minimal engineering effort.</span></p>\n<p><span>Most importantly, they allow payments to move from a supporting role to a product feature.</span></p>\n<p><span>This matters because most vertical SaaS companies do not want to become payments experts. They want flexibility, speed, and control without assuming regulatory or technical burdens.</span></p>\n<p><span>For vertical industries long constrained by legacy systems and manual processes, this shift can be particularly powerful. Education, healthcare, and field services all benefit when payments are timely, transparent, and aligned with real-world workflows.</span></p>\n<p><b><span>Read the report</span></b><span>: </span><a href=\"https://www.pymnts.com/tracker_posts/vertical-first-payments-how-low-code-wins-in-education-healthcare-and-field-services\"><span>Vertical-First Payments: How Low-Code Wins in Education, Healthcare and Field Services</span></a></p>\n<h2><b><span>The Front-End Future of Integrated Payments for Vertical Platforms</span></b></h2>\n<p><span>Few industries illustrate the power of front-end payments more clearly than field services. Contractors and service professionals operate in dynamic environments, often on-site, with pricing that can change based on conditions.</span></p>\n<p><span>Low-code payment tools enable field-service platforms to offer features like digital invoices, card-on-file, and real-time payment confirmation without heavy development work. These capabilities improve cash flow and reduce administrative overhead for small businesses that can least afford delays.</span></p>\n<p><span>Elsewhere, embedding payments directly into healthcare platforms allows billing to align more closely with care delivery. Estimates, copays and balances can be presented clearly and early. Patients can pay digitally, and often from the same portal they use to schedule appointments or view results.</span></p>\n<p><span>For education technology providers, payments become a retention and differentiation tool. Schools are more likely to adopt platforms that reduce administrative workload and improve on-time payments without requiring separate systems.</span></p>\n<p><span>Mobile-optimized payment flows are especially impactful. Students increasingly expect to manage finances on their phones. Platforms that enable self-service payments, automated reminders, and flexible payment plans not only improve cash flow for institutions but can help improve the student experience.</span></p>\n<p><span>And as low-code embedded solutions continue to mature, the question for vertical platforms is no longer whether to rethink payments, but how quickly they can turn them into an advantage.</span></p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/digital-payments/2025/embedded-finance-improves-cash-flow-for-saas-platforms/\">Embedded Finance Improves Cash Flow for SaaS Platforms</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
-    "image_url": "https://www.pymnts.com/wp-content/uploads/2025/12/Cash-Flow-embedded-finance.jpg?w=457",
-    "summary_text": "Vertical software companies have built thriving businesses by deeply understanding niche industries. Education technology platforms, for example, manage enrollment, tuition schedules and financial aid. Healthcare systems coordinate scheduling, billing codes a...",
-    "category": "fintech",
-    "_permalink": "/p/9791fd92e8/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/9791fd92e8/",
-    "_summary_240": "Vertical software companies have built thriving businesses by deeply understanding niche industries. Education technology platforms, for example, manage enrollment, tuition...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/9791fd92e8/thumbnail.png"
   },
   {
     "title": "AI giveth and taketh away and nuclear gets hot",
@@ -1079,6 +1143,21 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/8acd20c32b/thumbnail.png"
   },
   {
+    "title": "Modernizing a legacy steel yard with ChatGPT",
+    "url": "https://www.youtube.com/watch?v=WeBuFsJ8k-0",
+    "published_at": "2025-12-10T11:59:37-05:00",
+    "source": "OpenAI YouTube",
+    "summary": "Inside an 86-year-old steel yard in Reno, manager Richard Lane shows how a legacy business stays alive by adapting: fixing what breaks, improving what he can, and bringing his team along. Richard runs the yard the way his predecessors did: hands-on, practical, and rooted in community. But the work has changed. Machines break. Orders pile up. The next generation needs training. In a place that onc...",
+    "content_html": "",
+    "image_url": "https://i.ytimg.com/vi/WeBuFsJ8k-0/maxresdefault.jpg",
+    "summary_text": "Inside an 86-year-old steel yard in Reno, manager Richard Lane shows how a legacy business stays alive by adapting: fixing what breaks, improving what he can, and bringing his team along. Richard runs the yard the way his predecessors did: hands-on, practical...",
+    "category": "ai",
+    "_permalink": "/p/68fd7652c3/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/68fd7652c3/",
+    "_summary_240": "Inside an 86-year-old steel yard in Reno, manager Richard Lane shows how a legacy business stays alive by adapting: fixing what breaks, improving what he can, and bringing his...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/68fd7652c3/thumbnail.png"
+  },
+  {
     "title": "Meta\u2019s New A.I. Superstars Are Chafing Against the Rest of the Company",
     "url": "https://www.nytimes.com/2025/12/10/technology/meta-ai-tbd-lab-friction.html",
     "published_at": "2025-12-10T10:16:23-05:00",
@@ -1268,21 +1347,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/95545a59e8/",
     "_summary_240": "June Squibb stars in the Broadway premiere of Jordan Harrison\u2019s meditation on grief and the nature of human and artificial intelligence.",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/95545a59e8/thumbnail.png"
-  },
-  {
-    "title": "Every time I visit India, I\u2019m struck by how AI is already starting to have a profound impact on people\u2019s lives. A great example is our partnership with the Ministry of Labour and Employment, GOI to help connect more than 300 million informal workers to better jobs and social security, showing what\u2019s possible when technology empowers people at scale.",
-    "url": "https://www.linkedin.com/posts/satyanadella_jobs-security-skills-how-indias-giant-activity-7404408432293969921-BJHX",
-    "published_at": "2025-12-09T21:11:00-05:00",
-    "source": "Microsoft News",
-    "summary": "The post Every time I visit India, I\u2019m struck by how AI is already starting to have a profound impact on people\u2019s lives. A great example is our partnership with the Ministry of Labour and Employment, GOI to help connect more than 300 million informal workers to better jobs and social security, showing what\u2019s possible when technology empowers people at scale. appeared first on Source .",
-    "content_html": "<article class=\"mssrc-posts font-- has--theme\" id=\"single-23169\">\n\t<div class=\"acf-innerblocks-container\"></div>\t\t\t<section class=\"post-tags\">\n\t\t\t\t<div class=\"post-tags__content wp-block-columns\">\n\t\t\t\t\t<div class=\"post-tags__header wp-block-column flex-basis-25 has-text-align-right\">\n\t\t\t\t\t\t<h4 class=\"sr-only\">Tags: </h4>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"post-tags__body wp-block-column flex-basis-60\">\n\t\t\t\t\t\t<ul class=\"post-tags__list\"><li class=\"post-tags__item\"><a class=\"kicker inline-block post__meta--tags\" href=\"https://news.microsoft.com/source/tag/linkedin-post/\">LinkedIn Post</a></li></ul>\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</section>\n\t\t\t</article><p>The post <a href=\"https://www.linkedin.com/posts/satyanadella_jobs-security-skills-how-indias-giant-activity-7404408432293969921-BJHX\">Every time I visit India, I&#8217;m struck by how AI is already starting to have a profound impact on people&#8217;s lives. A great example is our partnership with the Ministry of Labour and Employment, GOI to help connect more than 300 million informal workers to better jobs and social security, showing what\u2019s possible when technology empowers people at scale.</a> appeared first on <a href=\"https://news.microsoft.com/source\">Source</a>.</p>",
-    "image_url": "https://media.licdn.com/dms/image/sync/v2/D5627AQG-zWtL7vecEw/articleshare-shrink_800/B56ZsG7wLxH8AM-/0/1765347886435?e=2147483647&v=beta&t=yisO4DKvhs_v3jK1yzyC0p80pyr95iBhBbc8iYxzfk8",
-    "summary_text": "The post Every time I visit India, I\u2019m struck by how AI is already starting to have a profound impact on people\u2019s lives. A great example is our partnership with the Ministry of Labour and Employment, GOI to help connect more than 300 million informal workers ...",
-    "category": "ai",
-    "_permalink": "/p/188c7b7ed9/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/188c7b7ed9/",
-    "_summary_240": "The post Every time I visit India, I\u2019m struck by how AI is already starting to have a profound impact on people\u2019s lives. A great example is our partnership with the Ministry of...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/188c7b7ed9/thumbnail.png"
   },
   {
     "title": "OpenAI Staffer Quits, Alleging Company\u2019s Economic Research Is Drifting Into AI Advocacy",
