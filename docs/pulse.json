@@ -1,5 +1,35 @@
 [
   {
+    "title": "Coinbase opens Solana DEX access as CeFi and DeFi converge",
+    "url": "https://cointelegraph.com/news/coinbase-joins-the-cex-dex-convergence-with-solana-integration?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "published_at": "2025-12-11T07:14:03-05:00",
+    "source": "Cointelegraph",
+    "summary": "Coinbase has plugged directly into Solana\u2019s fast-growing DeFi ecosystem, letting users trade any Solana token via DEX rails without a formal listing.",
+    "content_html": "",
+    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTIvMDE5YjBjYWQtZjVmZS03YzA5LTkzY2QtMGI1YTMzOTNjNTQ3.jpg",
+    "summary_text": "Coinbase has plugged directly into Solana\u2019s fast-growing DeFi ecosystem, letting users trade any Solana token via DEX rails without a formal listing.",
+    "category": "fintech",
+    "_permalink": "/p/5255de7de4/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/5255de7de4/",
+    "_summary_240": "Coinbase has plugged directly into Solana\u2019s fast-growing DeFi ecosystem, letting users trade any Solana token via DEX rails without a formal listing.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/5255de7de4/thumbnail.png"
+  },
+  {
+    "title": "Meta\u2019s Zuckerberg Pushes Highly Paid AI Lab to Build Moneymakers",
+    "url": "https://www.bloomberg.com/news/newsletters/2025-12-11/meta-s-zuckerberg-pushes-highly-paid-ai-lab-to-build-moneymakers",
+    "published_at": "2025-12-11T07:02:22-05:00",
+    "source": "Bloomberg Technology",
+    "summary": "Welcome to Tech In Depth, our daily newsletter about the business of tech from Bloomberg\u2019s journalists around the world. Today, Riley Griffin reports on the pressure Meta\u2019s artificial intelligence researchers are under to deliver products that make money for the company.",
+    "content_html": "The Meta AI logo on a laptop arranged in Germantown, New York, US, on Wednesday, July 23, 2025. In April, Meta said it could spend as much as $72 billion on capital expenditures this year, with a focus on AI and the data centers used to train and run the models.",
+    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iCOMrflE8hmw/v1/1200x-1.jpg",
+    "summary_text": "Welcome to Tech In Depth, our daily newsletter about the business of tech from Bloomberg\u2019s journalists around the world. Today, Riley Griffin reports on the pressure Meta\u2019s artificial intelligence researchers are under to deliver products that make money for ...",
+    "category": "ai",
+    "_permalink": "/p/fd11720e38/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/fd11720e38/",
+    "_summary_240": "Welcome to Tech In Depth, our daily newsletter about the business of tech from Bloomberg\u2019s journalists around the world. Today, Riley Griffin reports on the pressure Meta\u2019s...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/fd11720e38/thumbnail.png"
+  },
+  {
     "title": "Axa Warns on Data Center \u2018Gambles\u2019 as Private Credit Risks Rise",
     "url": "https://www.bloomberg.com/news/articles/2025-12-11/axa-warns-on-data-center-gambles-as-private-credit-risks-rise",
     "published_at": "2025-12-11T06:22:35-05:00",
@@ -79,14 +109,14 @@
     "url": "https://www.bloomberg.com/news/articles/2025-12-11/openai-microsoft-sued-over-murder-suicide-blamed-on-chatgpt",
     "published_at": "2025-12-11T05:27:30-05:00",
     "source": "Bloomberg Technology",
-    "summary": "OpenAI and its investor Microsoft were sued over a Connecticut murder-suicide in the latest case to blame the popular ChatGPT chatbot for dangerous psychological manipulation of users.",
+    "summary": "OpenAI and its investor Microsoft Corp. were sued over a Connecticut murder-suicide in the latest case to blame the popular ChatGPT chatbot for dangerous psychological manipulation of users.",
     "content_html": "The ChatGPT virtual assistant logo on a smartphone. Photographer: Andrey Rudakov/Bloomberg",
     "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iU9Z_Iu7YWcY/v0/1200x-1.jpg",
-    "summary_text": "OpenAI and its investor Microsoft were sued over a Connecticut murder-suicide in the latest case to blame the popular ChatGPT chatbot for dangerous psychological manipulation of users.",
+    "summary_text": "OpenAI and its investor Microsoft Corp. were sued over a Connecticut murder-suicide in the latest case to blame the popular ChatGPT chatbot for dangerous psychological manipulation of users.",
     "category": "ai",
     "_permalink": "/p/9459f4a350/",
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/9459f4a350/",
-    "_summary_240": "OpenAI and its investor Microsoft were sued over a Connecticut murder-suicide in the latest case to blame the popular ChatGPT chatbot for dangerous psychological manipulation of...",
+    "_summary_240": "OpenAI and its investor Microsoft Corp. were sued over a Connecticut murder-suicide in the latest case to blame the popular ChatGPT chatbot for dangerous psychological...",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/9459f4a350/thumbnail.png"
   },
   {
@@ -298,6 +328,21 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/b4f622e524/",
     "_summary_240": "Close allies among those targeted in bid to protect semiconductor sector that is backbone of economy",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/b4f622e524/thumbnail.png"
+  },
+  {
+    "title": "Creating a glass box: How NetSuite is engineering trust into AI",
+    "url": "https://venturebeat.com/ai/creating-a-glass-box-how-netsuite-is-engineering-trust-into-ai",
+    "published_at": "2025-12-11T00:00:00-05:00",
+    "source": "VentureBeat",
+    "summary": "Presented by Oracle NetSuite When any company tells you it is their biggest product release in almost three decades, it\u2019s worth listening. When the person saying it founded the world\u2019s first cloud computing company, it\u2019s time to take note. At SuiteWorld 2025, Evan Goldberg, founder and EVP of Oracle NetSuite, did just that when he called NetSuite Next the company\u2019s biggest product evolution in ne...",
+    "content_html": "",
+    "image_url": "https://images.ctfassets.net/jdtwqhzvc2n1/6ouXpzYvtEUpMqztfoRe7u/c8be75d5f24ee25abb8f25c45358796a/AdobeStock_1708529298.jpeg?w=800&amp;q=75",
+    "summary_text": "Presented by Oracle NetSuite When any company tells you it is their biggest product release in almost three decades, it\u2019s worth listening. When the person saying it founded the world\u2019s first cloud computing company, it\u2019s time to take note. At SuiteWorld 2025,...",
+    "category": "ai",
+    "_permalink": "/p/8d0ca743ed/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/8d0ca743ed/",
+    "_summary_240": "Presented by Oracle NetSuite When any company tells you it is their biggest product release in almost three decades, it\u2019s worth listening. When the person saying it founded the...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/8d0ca743ed/thumbnail.png"
   },
   {
     "title": "MSCI\u2019s Bitcoin snub is like penalizing Chevron for oil: Strategy CEO",
@@ -615,21 +660,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/2bb91abfe4/thumbnail.png"
   },
   {
-    "title": "Cisco Shares Finally Top Dot-Com Record After More Than 25 Years",
-    "url": "https://www.bloomberg.com/news/articles/2025-12-10/cisco-shares-finally-top-dot-com-record-after-more-than-25-years",
-    "published_at": "2025-12-10T16:05:20-05:00",
-    "source": "Bloomberg Technology",
-    "summary": "Cisco Systems Inc., a bellwether stock of the dot-com technological revolution, has returned to a record after a quarter century, thanks in part to the artificial intelligence spending boom.",
-    "content_html": "",
-    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ieSGYrjS2Nwg/v3/1200x-1.png",
-    "summary_text": "Cisco Systems Inc., a bellwether stock of the dot-com technological revolution, has returned to a record after a quarter century, thanks in part to the artificial intelligence spending boom.",
-    "category": "ai",
-    "_permalink": "/p/288bf93ac0/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/288bf93ac0/",
-    "_summary_240": "Cisco Systems Inc., a bellwether stock of the dot-com technological revolution, has returned to a record after a quarter century, thanks in part to the artificial intelligence...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/288bf93ac0/thumbnail.png"
-  },
-  {
     "title": "US state attorneys-general demand better AI safeguards",
     "url": "https://www.ft.com/content/4f3161cc-b97a-496e-b74e-4d6d2467d59c",
     "published_at": "2025-12-10T16:00:57-05:00",
@@ -750,36 +780,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/0722c9f2c0/thumbnail.png"
   },
   {
-    "title": "The whale awakening: Why dormant crypto giants are suddenly back in motion",
-    "url": "https://cointelegraph.com/explained/the-whale-awakening-why-dormant-crypto-giants-are-suddenly-back-in-motion?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-    "published_at": "2025-12-10T12:04:46-05:00",
-    "source": "Cointelegraph",
-    "summary": "Dormant Bitcoin giants have awakened. Onchain data shows aging wallets reactivating, reshaping supply dynamics across the network.",
-    "content_html": "",
-    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTIvMDE5YjA5MzAtY2UyNC03YjRmLWJmM2UtODZlYTBjNWVkM2E5.jpg",
-    "summary_text": "Dormant Bitcoin giants have awakened. Onchain data shows aging wallets reactivating, reshaping supply dynamics across the network.",
-    "category": "fintech",
-    "_permalink": "/p/017024d518/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/017024d518/",
-    "_summary_240": "Dormant Bitcoin giants have awakened. Onchain data shows aging wallets reactivating, reshaping supply dynamics across the network.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/017024d518/thumbnail.png"
-  },
-  {
-    "title": "Modernizing a legacy steel yard with ChatGPT",
-    "url": "https://www.youtube.com/watch?v=WeBuFsJ8k-0",
-    "published_at": "2025-12-10T11:59:37-05:00",
-    "source": "OpenAI YouTube",
-    "summary": "Inside an 86-year-old steel yard in Reno, manager Richard Lane shows how a legacy business stays alive by adapting: fixing what breaks, improving what he can, and bringing his team along. Richard runs the yard the way his predecessors did: hands-on, practical, and rooted in community. But the work has changed. Machines break. Orders pile up. The next generation needs training. In a place that onc...",
-    "content_html": "",
-    "image_url": "https://i.ytimg.com/vi/WeBuFsJ8k-0/maxresdefault.jpg",
-    "summary_text": "Inside an 86-year-old steel yard in Reno, manager Richard Lane shows how a legacy business stays alive by adapting: fixing what breaks, improving what he can, and bringing his team along. Richard runs the yard the way his predecessors did: hands-on, practical...",
-    "category": "ai",
-    "_permalink": "/p/68fd7652c3/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/68fd7652c3/",
-    "_summary_240": "Inside an 86-year-old steel yard in Reno, manager Richard Lane shows how a legacy business stays alive by adapting: fixing what breaks, improving what he can, and bringing his...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/68fd7652c3/thumbnail.png"
-  },
-  {
     "title": "ChatGPT is Apple\u2019s most downloaded app of 2025 in the US",
     "url": "https://techcrunch.com/2025/12/10/chatgpt-is-apples-most-downloaded-app-of-2025-in-the-us/",
     "published_at": "2025-12-10T10:17:26-05:00",
@@ -885,21 +885,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/05fda5843a/thumbnail.png"
   },
   {
-    "title": "Quilter's AI just designed an 843\u2011part Linux computer that booted on the first try. Hardware will never be the same.",
-    "url": "https://venturebeat.com/ai/quilters-ai-just-designed-an-843-part-linux-computer-that-booted-on-the",
-    "published_at": "2025-12-10T09:00:00-05:00",
-    "source": "VentureBeat",
-    "summary": "A Los Angeles-based startup has demonstrated what it calls a breakthrough in hardware development: an artificial intelligence system that designed a fully functional Linux computer in one week \u2014 a process that would typically consume nearly three months of skilled engineering labor. Quilter , which has raised more than $40 million from investors including Benchmark, Index Ventures, and Coatue, us...",
-    "content_html": "",
-    "image_url": "https://images.ctfassets.net/jdtwqhzvc2n1/3ibU0O0ON6nC4NSVY5KYkP/e13a276f2bece890100148b10cbcf165/nuneybits_Vector_art_of_self-building_computer_isometric_ca3b7721-5759-4033-9885-e096e5d68ddc.webp?w=800&amp;q=75",
-    "summary_text": "A Los Angeles-based startup has demonstrated what it calls a breakthrough in hardware development: an artificial intelligence system that designed a fully functional Linux computer in one week \u2014 a process that would typically consume nearly three months of sk...",
-    "category": "ai",
-    "_permalink": "/p/6990ae415f/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/6990ae415f/",
-    "_summary_240": "A Los Angeles-based startup has demonstrated what it calls a breakthrough in hardware development: an artificial intelligence system that designed a fully functional Linux...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/6990ae415f/thumbnail.png"
-  },
-  {
     "title": "How Hud's runtime sensor cut triage time from 3 hours to 10 minutes",
     "url": "https://venturebeat.com/ai/how-huds-runtime-sensor-cut-triage-time-from-3-hours-to-10-minutes",
     "published_at": "2025-12-10T09:00:00-05:00",
@@ -913,6 +898,21 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/f8fdb6bfb3/",
     "_summary_240": "Engineering teams are generating more code with AI agents than ever before. But they're hitting a wall when that code reaches production. The problem isn't necessarily the...",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/f8fdb6bfb3/thumbnail.png"
+  },
+  {
+    "title": "Quilter's AI just designed an 843\u2011part Linux computer that booted on the first try. Hardware will never be the same.",
+    "url": "https://venturebeat.com/ai/quilters-ai-just-designed-an-843-part-linux-computer-that-booted-on-the",
+    "published_at": "2025-12-10T09:00:00-05:00",
+    "source": "VentureBeat",
+    "summary": "A Los Angeles-based startup has demonstrated what it calls a breakthrough in hardware development: an artificial intelligence system that designed a fully functional Linux computer in one week \u2014 a process that would typically consume nearly three months of skilled engineering labor. Quilter , which has raised more than $40 million from investors including Benchmark, Index Ventures, and Coatue, us...",
+    "content_html": "",
+    "image_url": "https://images.ctfassets.net/jdtwqhzvc2n1/3ibU0O0ON6nC4NSVY5KYkP/e13a276f2bece890100148b10cbcf165/nuneybits_Vector_art_of_self-building_computer_isometric_ca3b7721-5759-4033-9885-e096e5d68ddc.webp?w=800&amp;q=75",
+    "summary_text": "A Los Angeles-based startup has demonstrated what it calls a breakthrough in hardware development: an artificial intelligence system that designed a fully functional Linux computer in one week \u2014 a process that would typically consume nearly three months of sk...",
+    "category": "ai",
+    "_permalink": "/p/6990ae415f/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/6990ae415f/",
+    "_summary_240": "A Los Angeles-based startup has demonstrated what it calls a breakthrough in hardware development: an artificial intelligence system that designed a fully functional Linux...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/6990ae415f/thumbnail.png"
   },
   {
     "title": "Strengthening cyber resilience as AI capabilities advance",
@@ -1168,13 +1168,9 @@
     "source": "Financial Times - Technology",
     "summary": "Investigation is bloc\u2019s latest challenge to US big tech companies",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/d5f07d14-9561-490d-b3cf-8a5a951a18e9.jpg",
+    "image_url": "",
     "summary_text": "Investigation is bloc\u2019s latest challenge to US big tech companies",
-    "category": "ai",
-    "_permalink": "/p/15c380aa9a/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/15c380aa9a/",
-    "_summary_240": "Investigation is bloc\u2019s latest challenge to US big tech companies",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/15c380aa9a/thumbnail.png"
+    "category": "ai"
   },
   {
     "title": "OpenAI co-founds Agentic AI Foundation, donates AGENTS.md",
@@ -1220,13 +1216,9 @@
     "source": "Financial Times - Technology",
     "summary": "Companies hope the technology will take on work usually sent to law firms. Plus: the top innovative in-house teams, North America 2025; and six \u2018case studies\u2019 of corporate lawyers\u2019 innovations",
     "content_html": "",
-    "image_url": "https://images.ft.com/v3/image/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F54740973-d421-4f4f-bb69-675a0a79921d.jpg?source=next-article&fit=scale-down&quality=highest&width=700&dpr=1",
+    "image_url": "",
     "summary_text": "Companies hope the technology will take on work usually sent to law firms. Plus: the top innovative in-house teams, North America 2025; and six \u2018case studies\u2019 of corporate lawyers\u2019 innovations",
-    "category": "ai",
-    "_permalink": "/p/29231dd67f/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/29231dd67f/",
-    "_summary_240": "Companies hope the technology will take on work usually sent to law firms. Plus: the top innovative in-house teams, North America 2025; and six \u2018case studies\u2019 of corporate...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/29231dd67f/thumbnail.png"
+    "category": "ai"
   },
   {
     "title": "AI turbocharges litigation powers",
@@ -1235,13 +1227,9 @@
     "source": "Financial Times - Technology",
     "summary": "Artificial intelligence is transforming legal work, but accuracy is seen as the greatest risk",
     "content_html": "",
-    "image_url": "https://images.ft.com/v3/image/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F6f4d6117-f689-4f83-aff4-d6e5009d95a3.jpg?source=next-article&fit=scale-down&quality=highest&width=700&dpr=1",
+    "image_url": "",
     "summary_text": "Artificial intelligence is transforming legal work, but accuracy is seen as the greatest risk",
-    "category": "ai",
-    "_permalink": "/p/0d657e114b/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/0d657e114b/",
-    "_summary_240": "Artificial intelligence is transforming legal work, but accuracy is seen as the greatest risk",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/0d657e114b/thumbnail.png"
+    "category": "ai"
   },
   {
     "title": "China\u2019s open-source AI is a national advantage",
@@ -1250,13 +1238,9 @@
     "source": "Financial Times - Technology",
     "summary": "The models are akin to studying together to ace a test instead of relying on individual knowledge",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/580b9f94-141d-4e84-9b13-a01f4b5307a1.jpg",
+    "image_url": "",
     "summary_text": "The models are akin to studying together to ace a test instead of relying on individual knowledge",
-    "category": "ai",
-    "_permalink": "/p/db9803f723/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/db9803f723/",
-    "_summary_240": "The models are akin to studying together to ace a test instead of relying on individual knowledge",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/db9803f723/thumbnail.png"
+    "category": "ai"
   },
   {
     "title": "Building AI fluency at scale with ChatGPT Enterprise",
@@ -1296,19 +1280,30 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/35aed35786/thumbnail.png"
   },
   {
+    "title": "Claude Code in Slack",
+    "url": "https://www.youtube.com/watch?v=XpXImenrSPI",
+    "published_at": "2025-12-08T13:56:15-05:00",
+    "source": "Anthropic YouTube",
+    "summary": "Delegate tasks to Claude Code directly from Slack, making it easy to move context from Slack conversations to coding sessions. Claude Code in Slack is available now for teams with the Claude app installed in their Slack workspace and who have access to Claude Code on the web. Read more: https://www.anthropic.com/news/claude-code-and-slack",
+    "content_html": "",
+    "image_url": "https://i.ytimg.com/vi/XpXImenrSPI/maxresdefault.jpg",
+    "summary_text": "Delegate tasks to Claude Code directly from Slack, making it easy to move context from Slack conversations to coding sessions. Claude Code in Slack is available now for teams with the Claude app installed in their Slack workspace and who have access to Claude...",
+    "category": "ai",
+    "_permalink": "/p/ff630b758a/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/ff630b758a/",
+    "_summary_240": "Delegate tasks to Claude Code directly from Slack, making it easy to move context from Slack conversations to coding sessions. Claude Code in Slack is available now for teams...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/ff630b758a/thumbnail.png"
+  },
+  {
     "title": "The State of AI: life in 2030",
     "url": "https://www.ft.com/content/5bff1202-b2ce-439a-8687-8f8b919c683e",
     "published_at": "2025-12-08T12:00:05-05:00",
     "source": "Financial Times - Technology",
     "summary": "Expect a world of robots, robotaxis and AI haves and have-nots",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/eccc94dd-610d-47ff-94f0-c5071eef11d7.jpg",
+    "image_url": "",
     "summary_text": "Expect a world of robots, robotaxis and AI haves and have-nots",
-    "category": "ai",
-    "_permalink": "/p/229b96fb67/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/229b96fb67/",
-    "_summary_240": "Expect a world of robots, robotaxis and AI haves and have-nots",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/229b96fb67/thumbnail.png"
+    "category": "ai"
   },
   {
     "title": "Google Looks Smart. Can't Say the Same for META, MSFT and ORCL.",
@@ -1332,13 +1327,9 @@
     "source": "Financial Times - Technology",
     "summary": "AI advances made through group\u2019s custom processor hit Nvidia\u2019s stock and prompt ChatGPT maker to declare \u2018code red\u2019",
     "content_html": "",
-    "image_url": "https://images.ft.com/v3/image/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Ff9b73243-bd35-4dcf-bb77-2287e2c6eec4.jpg?source=next-article&fit=scale-down&quality=highest&width=700&dpr=1",
+    "image_url": "",
     "summary_text": "AI advances made through group\u2019s custom processor hit Nvidia\u2019s stock and prompt ChatGPT maker to declare \u2018code red\u2019",
-    "category": "ai",
-    "_permalink": "/p/0e94c29a8f/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/0e94c29a8f/",
-    "_summary_240": "AI advances made through group\u2019s custom processor hit Nvidia\u2019s stock and prompt ChatGPT maker to declare \u2018code red\u2019",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/0e94c29a8f/thumbnail.png"
+    "category": "ai"
   },
   {
     "title": "Apple Manufacturing Academy launches virtual programming",
