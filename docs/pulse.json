@@ -1,5 +1,35 @@
 [
   {
+    "title": "Google and Apple roll out emergency security updates after zero-day attacks",
+    "url": "https://techcrunch.com/2025/12/12/google-and-apple-roll-out-emergency-security-updates-after-zero-day-attacks/",
+    "published_at": "2025-12-12T15:31:36-05:00",
+    "source": "TechCrunch",
+    "summary": "Apple released patches for all of its flagship devices to fix security flaws under attack. Google also updated Chrome to remediate one vulnerabilty exploited in the attacks.",
+    "content_html": "",
+    "image_url": "https://techcrunch.com/wp-content/uploads/2025/10/iphone-trenchant-l3harris-1059636822.jpg?resize=1200,808",
+    "summary_text": "Apple released patches for all of its flagship devices to fix security flaws under attack. Google also updated Chrome to remediate one vulnerabilty exploited in the attacks.",
+    "category": "fintech",
+    "_permalink": "/p/969bc5258c/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/969bc5258c/",
+    "_summary_240": "Apple released patches for all of its flagship devices to fix security flaws under attack. Google also updated Chrome to remediate one vulnerabilty exploited in the attacks.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/969bc5258c/thumbnail.png"
+  },
+  {
+    "title": "China Is \u2018Rejecting\u2019 H200s, Outfoxing US Strategy, Sacks Says",
+    "url": "https://www.bloomberg.com/news/articles/2025-12-12/china-is-rejecting-h200s-outfoxing-us-strategy-sacks-says",
+    "published_at": "2025-12-12T15:30:38-05:00",
+    "source": "Bloomberg Technology",
+    "summary": "China has figured out the US strategy for allowing it to buy Nvidia Corp.\u2019s H200 and is rejecting the AI chip in favor of domestically developed semiconductors, White House AI czar David Sacks said, citing news reports.",
+    "content_html": "Nvidia H200 AI chips.",
+    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/i8jya2MS.P6k/v1/1200x-1.jpg",
+    "summary_text": "China has figured out the US strategy for allowing it to buy Nvidia Corp.\u2019s H200 and is rejecting the AI chip in favor of domestically developed semiconductors, White House AI czar David Sacks said, citing news reports.",
+    "category": "ai",
+    "_permalink": "/p/5dfeb12aaf/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/5dfeb12aaf/",
+    "_summary_240": "China has figured out the US strategy for allowing it to buy Nvidia Corp.\u2019s H200 and is rejecting the AI chip in favor of domestically developed semiconductors, White House AI...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/5dfeb12aaf/thumbnail.png"
+  },
+  {
     "title": "Enterprise AI Shifts Focus to Inference as Production Deployments Scale",
     "url": "https://www.pymnts.com/artificial-intelligence-2/2025/enterprise-ai-shifts-focus-to-inference-as-production-deployments-scale/",
     "published_at": "2025-12-12T15:24:11-05:00",
@@ -746,21 +776,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/6d462ce78c/thumbnail.png"
   },
   {
-    "title": "Tokenization Shields Merchants, Issuers as AI Agents Start to Shop",
-    "url": "https://www.pymnts.com/news/payments-innovation/2025/tokenization-shields-merchants-issuers-as-ai-agents-start-to-shop/",
-    "published_at": "2025-12-12T04:02:45-05:00",
-    "source": "PYMNTS",
-    "summary": "Watch more: The Digital Shift: Thales\u2019 Francois Chaffard As artificial intelligence (AI) agents edge from novelty to shopping companion, merchants are revisiting an old question in a new form: Who \u2014 or what \u2014 gets trusted to pay? Agentic commerce promises frictionless buying, but it also creates new openings for fraud and disputes. Tokenization, [\u2026] The post Tokenization Shields Merchants, Issuer...",
-    "content_html": "<p><strong>Watch more:</strong> <a href=\"https://tv.pymnts.com/detail/video/6386046912112\" rel=\"noopener\" target=\"_blank\">The Digital Shift: Thales\u2019 Francois Chaffard</a></p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p><span>As artificial intelligence (AI) agents edge from novelty to shopping companion, merchants are revisiting an old question in a new form: Who \u2014 or what \u2014 gets trusted to pay? Agentic commerce promises frictionless buying, but it also creates new openings for fraud and disputes. Tokenization, which swaps real card credentials for limited-use digital stand-ins, could be the layer that makes autonomous transactions safer.\u00a0</span></p>\n<p><span>In a recent conversation with PYMNTS, </span><a class=\"editor-rtfLink\" href=\"https://www.linkedin.com/in/fchaffard/?originalSubdomain=fr\" rel=\"noopener\" target=\"_blank\"><span>Francois Chaffard</span></a><span>, </span><span>vice president</span><span> of </span><span>digital</span><span> at </span><a class=\"editor-rtfLink\" href=\"https://www.thalesgroup.com/en/enterprise/financial-services?utm_source=pymnts&amp;utm_medium=article&amp;utm_campaign=itw2\" rel=\"noopener\" target=\"_blank\"><span>Thales</span></a><span>, argued that tokenization is evolving into \u201cthe foundation of seamless autonomous and authenticated digital experiences.\u201d</span></p>\n<p><span>Agentic commerce is \u201cextremely high on the agenda,\u201d he said, because the ecosystem must answer three questions: \u201cDid the user authorize the purchase? Is the agent buying exactly what you ask him to buy? And in case something goes wrong, is the liability clearly designed, and can we designate one responsible if the transaction is failing?\u201d</span></p>\n<p><span>Tokenization, he said, is already doing more of that work than many people realize. \u201cI like to call it a silent revolution because it has already transformed the way we </span><span>paid</span><span>,\u201d Chaffard said. </span></p>\n<p><span>The change is massive, but largely invisible. Add a card to a wallet and \u201cyou don\u2019t feel that you are adding a token,\u201d he said. Shop online </span><span>and</span><span> \u201cyou don\u2019t know that behind the scenes </span><span>your</span><span> card details are not stored, but instead a token is being created.\u201d Tokenization\u2019s biggest success may be that it improved security without demanding new consumer behavior, which is exactly the kind of \u201cinvisible\u201d shift that could help agentic commerce scale.</span></p>\n<p><span>\u201cTokenization has become a new rail that connects the very same parties in real time,\u201d he said. That connection matters because it creates a real-time backbone for trust across merchants, acquirers, issuers </span><span>and</span><span> cardholders.</span></p>\n<h2>Tokenization, Authorization Form Backbone for Payments</h2>\n<p><span>That same backbone is reshaping the everyday payment journey. Chaffard pointed to Apple Pay as the benchmark for best-in-class experience: \u201cYou open your wallet, you just do a fingerprint or a face ID, and then your payment is approved,\u201d he said, and \u201cbehind the </span><span>scenes</span><span> tokenization is operating.\u201d Network services such as Click to Pay aim to extend that flow so that \u201cyou can have the very same experience for every merchant and every consumer.\u201d </span><span>If agentic commerce is </span><span>going</span><span> to feel effortless, the payments layer beneath it </span><span>has to</span><span> be both consistent and secure, without </span><span>forcing</span><span> the consumer to constantly reauthenticate or reenter sensitive data.</span></p>\n<p><span>But</span><span> in a digital-first world, </span><span>tokenization\u2019s</span><span> success depends on the strength of authentication </span><span>around</span><span> it.</span> <span>When a card is enrolled </span><span>into</span><span> a wallet, there\u2019s an </span><span>identity-and-verification</span><span> step.</span><span> \u201cPayment fraud goes to the weakest link,\u201d Chaffard said, taking the example of fraudsters exploiting weak provisioning authentication with stolen credentials and SMS one-time passwords.</span></p>\n<p><span>Chaffard said </span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/tag/thales/\" rel=\"noopener\" target=\"_blank\"><span>Thales</span></a><span> is working to harden both token creation and token use. The company has built an engine inside its D1 platform that \u201ccombines in real time different signals,\u201d including device fingerprints and issuer fraud inputs, \u201cto make sure that when we create a token, we are safe.\u201d </span></p>\n<p><span>But, he added, \u201cYou need not only to bring security when you create </span><span>token</span><span>, but also when you use this token.\u201d </span><span>That\u2019s where he sees payment passkeys as a key ingredient \u2014</span><span> \u201c</span><span>silent purchase behind the scenes</span><span>\u201d combining</span><span> strong authentication with tokenization.</span><span>\u00a0</span></p>\n<p><span>Scaling that shift is where Thales acts in the ecosystem. The company\u2019s D1 platform \u201creally exposes simple APIs to interface with legacy infrastructure,\u201d Chaffard said, so customers can launch tokenization services without having to \u201cmaster the complexity and the technology challenges.\u201d He </span><span>said</span><span> Thales expects to close the year with \u201c300 million digital active cards\u201d on D1, giving issuers the ability to build digital consumer journeys while staying \u201cin full control of all the tokens\u201d associated with their cards.\u00a0</span></p>\n<h2>Timetables and Agentic Commerce Protocols</h2>\n<p><span>The industry\u2019s timetable is tightening. Mastercard has committed to fully tokenizing its network by 2030, a bold ambition that Thales is \u201cfully supportive\u201d of. The challenge, </span><span>Chaffard </span><span>says</span><span> is really to make it happen in five years. </span></p>\n<p><span>His checklist starts with reach: Thales is hard at work to help industries \u201cmassify tokenization,\u201d\u00a0including in untapped geographies and in complex markets where domestic schemes must be equipped alongside global networks. Then come new capabilities \u2014 \u201cand that\u2019s Click to Pay,\u201d he said \u2014 followed by \u201cthe cherry on the cake,\u201d which is Payment Passkeys using\u00a0biometric authentication.</span></p>\n<p><span>Agentic commerce may be the ultimate test of whether those pieces truly fit together. Chaffard pointed to Google\u2019s AP2 initiative, which uses cryptography and \u201cthree mandates\u201d to formalize user intent, constraints </span><span>and</span><span> payment authority. The \u201cpayment mandate,\u201d he said, is \u201cclearly fit for tokenization,\u201d because it keeps credentials from \u201c</span><span>appear[</span><span>ing</span><span>]</span><span> everywhere,\u201d and a token \u201ccan be assigned to </span><span>specific</span><span> agent with the end user consent.\u201d Add payment passkeys on top for </span><span>the end user</span><span> approval to create a mandate \u201cfully recognized by the issuer\u201d without major disruption.\u00a0</span></p>\n<p><span>For Chaffard, that\u2019s the throughline: Tokenization is no longer a background security feature. It is the foundational shift that can make digital payments \u2014 and autonomous commerce \u2014 both safer and simpler. </span></p>\n<p><span>\u201cThat\u2019s why this is not just a rail,\u201d he said. \u201cIt\u2019s a backbone for the digital payment ecosystem to work.\u201d\u00a0</span></p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/news/payments-innovation/2025/tokenization-shields-merchants-issuers-as-ai-agents-start-to-shop/\">Tokenization Shields Merchants, Issuers as AI Agents Start to Shop</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
-    "image_url": "https://www.pymnts.com/wp-content/uploads/2025/12/tokenization-shield-Thales1-with-overlay.jpg?w=457",
-    "summary_text": "Watch more: The Digital Shift: Thales\u2019 Francois Chaffard As artificial intelligence (AI) agents edge from novelty to shopping companion, merchants are revisiting an old question in a new form: Who \u2014 or what \u2014 gets trusted to pay? Agentic commerce promises fri...",
-    "category": "ai",
-    "_permalink": "/p/b9a40f26a9/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/b9a40f26a9/",
-    "_summary_240": "Watch more: The Digital Shift: Thales\u2019 Francois Chaffard As artificial intelligence (AI) agents edge from novelty to shopping companion, merchants are revisiting an old question...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/b9a40f26a9/thumbnail.png"
-  },
-  {
     "title": "Great meeting Chief Minister Devendra Fadnavis today to discuss how AI can have real impact for people across Maharashtra. Our first collaboration, MahaCrimeOS AI, is helping to support victims of cybercrime and financial fraud.",
     "url": "https://www.linkedin.com/posts/satyanadella_a-race-against-time-maharashtra-police-get-activity-7405143430328258560-Bzph",
     "published_at": "2025-12-12T01:45:00-05:00",
@@ -956,17 +971,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/19a2788a6b/thumbnail.png"
   },
   {
-    "title": "BBVA and OpenAI collaborate to transform global banking",
-    "url": "https://openai.com/index/bbva-collaboration-expansion",
-    "published_at": "2025-12-11T19:00:00-05:00",
-    "source": "OpenAI News",
-    "summary": "BBVA is expanding its work with OpenAI through a multi-year AI transformation program, rolling out ChatGPT Enterprise to all 120,000 employees. Together, the companies will develop AI solutions that enhance customer interactions, streamline operations, and help build an AI-native banking experience.",
-    "content_html": "",
-    "image_url": "",
-    "summary_text": "BBVA is expanding its work with OpenAI through a multi-year AI transformation program, rolling out ChatGPT Enterprise to all 120,000 employees. Together, the companies will develop AI solutions that enhance customer interactions, streamline operations, and he...",
-    "category": "ai"
-  },
-  {
     "title": "How We Used Codex to Ship Sora for Android in 28 Days",
     "url": "https://openai.com/index/shipping-sora-for-android-with-codex",
     "published_at": "2025-12-11T19:00:00-05:00",
@@ -986,6 +990,17 @@
     "content_html": "",
     "image_url": "",
     "summary_text": "BNY is using OpenAI technology to expand AI adoption enterprise-wide. Through its Eliza platform, 20,000+ employees are building AI agents that enhance efficiency and improve client outcomes.",
+    "category": "ai"
+  },
+  {
+    "title": "BBVA and OpenAI collaborate to transform global banking",
+    "url": "https://openai.com/index/bbva-collaboration-expansion",
+    "published_at": "2025-12-11T19:00:00-05:00",
+    "source": "OpenAI News",
+    "summary": "BBVA is expanding its work with OpenAI through a multi-year AI transformation program, rolling out ChatGPT Enterprise to all 120,000 employees. Together, the companies will develop AI solutions that enhance customer interactions, streamline operations, and help build an AI-native banking experience.",
+    "content_html": "",
+    "image_url": "",
+    "summary_text": "BBVA is expanding its work with OpenAI through a multi-year AI transformation program, rolling out ChatGPT Enterprise to all 120,000 employees. Together, the companies will develop AI solutions that enhance customer interactions, streamline operations, and he...",
     "category": "ai"
   },
   {
@@ -1244,21 +1259,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/e4cc1771cb/thumbnail.png"
   },
   {
-    "title": "OpenAI fires back at Google with GPT-5.2 after \u2018code red\u2019 memo",
-    "url": "https://techcrunch.com/2025/12/11/openai-fires-back-at-google-with-gpt-5-2-after-code-red-memo/",
-    "published_at": "2025-12-11T13:02:44-05:00",
-    "source": "TechCrunch",
-    "summary": "OpenAI just launched GPT-5.2, a frontier model aimed at developers and professionals, pushing reasoning and coding benchmarks as it races Google\u2019s Gemini 3 while grappling with compute costs and no generator.",
-    "content_html": "",
-    "image_url": "https://techcrunch.com/wp-content/uploads/2025/05/GettyImages-2213399157.jpg?resize=1200,800",
-    "summary_text": "OpenAI just launched GPT-5.2, a frontier model aimed at developers and professionals, pushing reasoning and coding benchmarks as it races Google\u2019s Gemini 3 while grappling with compute costs and no generator.",
-    "category": "ai",
-    "_permalink": "/p/ab56ae81de/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/ab56ae81de/",
-    "_summary_240": "OpenAI just launched GPT-5.2, a frontier model aimed at developers and professionals, pushing reasoning and coding benchmarks as it races Google\u2019s Gemini 3 while grappling with...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/ab56ae81de/thumbnail.png"
-  },
-  {
     "title": "OpenAI Launches GPT-5.2 as It Navigates \u2018Code Red\u2019",
     "url": "https://www.wired.com/story/openai-gpt-launch-gemini-code-red/",
     "published_at": "2025-12-11T13:00:00-05:00",
@@ -1476,14 +1476,14 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/8d0ca743ed/thumbnail.png"
   },
   {
-    "title": "Increasing revenue 300% by bringing AI to SMBs",
-    "url": "https://openai.com/index/podium",
+    "title": "The Walt Disney Company and OpenAI reach landmark agreement to bring beloved characters to Sora",
+    "url": "https://openai.com/index/disney-sora-agreement",
     "published_at": "2025-12-10T19:00:00-05:00",
     "source": "OpenAI News",
-    "summary": "Discover how Podium used OpenAI\u2019s GPT-5 to build \u201cJerry,\u201d an AI teammate driving 300% growth and transforming how Main Street businesses serve customers.",
+    "summary": "Disney and OpenAI have reached an agreement to bring more than 200 Disney, Marvel, Pixar and Star Wars characters to Sora for fan-inspired short videos. The agreement emphasizes responsible AI in entertainment and includes Disney\u2019s company-wide use of ChatGPT Enterprise and the OpenAI API.",
     "content_html": "",
     "image_url": "",
-    "summary_text": "Discover how Podium used OpenAI\u2019s GPT-5 to build \u201cJerry,\u201d an AI teammate driving 300% growth and transforming how Main Street businesses serve customers.",
+    "summary_text": "Disney and OpenAI have reached an agreement to bring more than 200 Disney, Marvel, Pixar and Star Wars characters to Sora for fan-inspired short videos. The agreement emphasizes responsible AI in entertainment and includes Disney\u2019s company-wide use of ChatGPT...",
     "category": "ai"
   },
   {
@@ -1509,17 +1509,6 @@
     "category": "ai"
   },
   {
-    "title": "The Walt Disney Company and OpenAI reach landmark agreement to bring beloved characters to Sora",
-    "url": "https://openai.com/index/disney-sora-agreement",
-    "published_at": "2025-12-10T19:00:00-05:00",
-    "source": "OpenAI News",
-    "summary": "Disney and OpenAI have reached an agreement to bring more than 200 Disney, Marvel, Pixar and Star Wars characters to Sora for fan-inspired short videos. The agreement emphasizes responsible AI in entertainment and includes Disney\u2019s company-wide use of ChatGPT Enterprise and the OpenAI API.",
-    "content_html": "",
-    "image_url": "",
-    "summary_text": "Disney and OpenAI have reached an agreement to bring more than 200 Disney, Marvel, Pixar and Star Wars characters to Sora for fan-inspired short videos. The agreement emphasizes responsible AI in entertainment and includes Disney\u2019s company-wide use of ChatGPT...",
-    "category": "ai"
-  },
-  {
     "title": "Introducing GPT-5.2",
     "url": "https://openai.com/index/introducing-gpt-5-2",
     "published_at": "2025-12-10T19:00:00-05:00",
@@ -1528,6 +1517,17 @@
     "content_html": "",
     "image_url": "",
     "summary_text": "GPT-5.2 is our most advanced frontier model for everyday professional work, with state-of-the-art reasoning, long-context understanding, coding, and vision. Use it in ChatGPT and the OpenAI API to power faster, more reliable agentic workflows.",
+    "category": "ai"
+  },
+  {
+    "title": "Increasing revenue 300% by bringing AI to SMBs",
+    "url": "https://openai.com/index/podium",
+    "published_at": "2025-12-10T19:00:00-05:00",
+    "source": "OpenAI News",
+    "summary": "Discover how Podium used OpenAI\u2019s GPT-5 to build \u201cJerry,\u201d an AI teammate driving 300% growth and transforming how Main Street businesses serve customers.",
+    "content_html": "",
+    "image_url": "",
+    "summary_text": "Discover how Podium used OpenAI\u2019s GPT-5 to build \u201cJerry,\u201d an AI teammate driving 300% growth and transforming how Main Street businesses serve customers.",
     "category": "ai"
   },
   {
@@ -1836,17 +1836,6 @@
     "category": "ai"
   },
   {
-    "title": "Building AI fluency at scale with ChatGPT Enterprise",
-    "url": "https://openai.com/index/commonwealth-bank-of-australia",
-    "published_at": "2025-12-08T19:00:00-05:00",
-    "source": "OpenAI News",
-    "summary": "Commonwealth Bank of Australia partners with OpenAI to roll out ChatGPT Enterprise to 50,000 employees, building AI fluency at scale to improve customer service and fraud response.",
-    "content_html": "",
-    "image_url": "",
-    "summary_text": "Commonwealth Bank of Australia partners with OpenAI to roll out ChatGPT Enterprise to 50,000 employees, building AI fluency at scale to improve customer service and fraud response.",
-    "category": "ai"
-  },
-  {
     "title": "Bringing powerful AI to millions across Europe with Deutsche Telekom",
     "url": "https://openai.com/index/deutsche-telekom-collaboration",
     "published_at": "2025-12-08T19:00:00-05:00",
@@ -1855,6 +1844,17 @@
     "content_html": "",
     "image_url": "",
     "summary_text": "OpenAI is collaborating with Deutsche Telekom to bring advanced, multilingual AI experiences to millions of people across Europe. ChatGPT Enterprise will also be deployed to help employees at Deutsche Telekom improve workflows and accelerate innovation.",
+    "category": "ai"
+  },
+  {
+    "title": "Building AI fluency at scale with ChatGPT Enterprise",
+    "url": "https://openai.com/index/commonwealth-bank-of-australia",
+    "published_at": "2025-12-08T19:00:00-05:00",
+    "source": "OpenAI News",
+    "summary": "Commonwealth Bank of Australia partners with OpenAI to roll out ChatGPT Enterprise to 50,000 employees, building AI fluency at scale to improve customer service and fraud response.",
+    "content_html": "",
+    "image_url": "",
+    "summary_text": "Commonwealth Bank of Australia partners with OpenAI to roll out ChatGPT Enterprise to 50,000 employees, building AI fluency at scale to improve customer service and fraud response.",
     "category": "ai"
   },
   {
