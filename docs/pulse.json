@@ -1291,9 +1291,13 @@
     "source": "Financial Times - Technology",
     "summary": "Larry Ellison\u2019s company raises its capital expenditure forecast as it doubles down on AI infrastructure bet",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/52c672d0-aa3c-450e-b01e-928c9109a6c6.png",
     "summary_text": "Larry Ellison\u2019s company raises its capital expenditure forecast as it doubles down on AI infrastructure bet",
-    "category": "ai"
+    "category": "ai",
+    "_permalink": "/p/e38e989cf4/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/e38e989cf4/",
+    "_summary_240": "Larry Ellison\u2019s company raises its capital expenditure forecast as it doubles down on AI infrastructure bet",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/e38e989cf4/thumbnail.png"
   },
   {
     "title": "Why we built\u2014and donated\u2014the Model Context Protocol (MCP)",
@@ -1908,17 +1912,6 @@
     "content_html": "",
     "image_url": "https://static01.nyt.com/images/2025/12/08/business/ai-slop/ai-slop-mediumSquareAt3X.png",
     "summary_text": "Apps like OpenAI\u2019s Sora are fooling millions of users into thinking A.I. videos are real, even when they include warning labels.",
-    "category": "ai"
-  },
-  {
-    "title": "Google Looks Smart. Can't Say the Same for META, MSFT and ORCL.",
-    "url": "https://newsletter.tek2dayholdings.com/p/google-looks-smart-cant-say-the-same",
-    "published_at": "2025-12-08T09:08:58-05:00",
-    "source": "TEK2day Newsletter",
-    "summary": "META: $30 billion public bond sale and $27 billion private capital deal for AI/LLM-related infrastructure, yet less than $5 billion in LLM-related revenue.",
-    "content_html": "<div class=\"captioned-image-container\"><figure><a class=\"image-link image2 is-viewable-img\" href=\"https://substackcdn.com/image/fetch/$s_!6-se!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F8f19bc4f-19b5-41a3-898e-0aa805b24708_1098x784.jpeg\" target=\"_blank\"><div class=\"image2-inset\"><source type=\"image/webp\" /><img alt=\"\" class=\"sizing-normal\" height=\"784\" src=\"https://substackcdn.com/image/fetch/$s_!6-se!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F8f19bc4f-19b5-41a3-898e-0aa805b24708_1098x784.jpeg\" width=\"1098\" /><div class=\"image-link-expand\"><div class=\"pencraft pc-display-flex pc-gap-8 pc-reset\"><button class=\"pencraft pc-reset pencraft icon-container restack-image\" tabindex=\"0\" type=\"button\"><svg fill=\"none\" height=\"20\" stroke=\"var(--color-fg-primary)\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" viewBox=\"0 0 20 20\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><g><title></title><path d=\"M2.53001 7.81595C3.49179 4.73911 6.43281 2.5 9.91173 2.5C13.1684 2.5 15.9537 4.46214 17.0852 7.23684L17.6179 8.67647M17.6179 8.67647L18.5002 4.26471M17.6179 8.67647L13.6473 6.91176M17.4995 12.1841C16.5378 15.2609 13.5967 17.5 10.1178 17.5C6.86118 17.5 4.07589 15.5379 2.94432 12.7632L2.41165 11.3235M2.41165 11.3235L1.5293 15.7353M2.41165 11.3235L6.38224 13.0882\"></path></g></svg></button><button class=\"pencraft pc-reset pencraft icon-container view-image\" tabindex=\"0\" type=\"button\"><svg class=\"lucide lucide-maximize2 lucide-maximize-2\" fill=\"none\" height=\"20\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" viewBox=\"0 0 24 24\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><polyline points=\"15 3 21 3 21 9\"></polyline><polyline points=\"9 21 3 21 3 15\"></polyline><line x1=\"21\" x2=\"14\" y1=\"3\" y2=\"10\"></line><line x1=\"3\" x2=\"10\" y1=\"21\" y2=\"14\"></line></svg></button></div></div></div></a></figure></div><p><strong>META:</strong> $30 billion public bond sale and $27 billion private capital deal for AI/LLM-related infrastructure, yet less than $5 billion in LLM-related revenue. META will have egg on its face when this AI trade fully plays out. The best and brightest AI researchers aren&#8217;t going to META.</p><p><strong>MSFT:</strong> Microsoft has taken CapEx from 13% of Revenue in FY&#8217;23 to 18% in FY&#8217;24 to 23% in FY&#8217;25 much of it in support of LLM-related initiatives primarily with <strong>OpenAI</strong> and to a lesser extent with <strong>Anthropic</strong> and internally developed LLMs. MSFT <strong>Co-Pilot </strong>has been a dud. MSFT does own a 27% stake in OpenAI, but my guess is that OpenAI would experience valuation multiple compression were it to try to execute another private round, which is why it will float shares to the public (easier to trick public company investors). MSFT will have egg on its face when the AI trade has fully played out. </p><p><strong>ORCL:</strong> ORCL shares have another leg down. ORCL hopes to see Cloud revenue accelerate as evidenced by its bogus long-term <strong>OpenAI</strong> &#8220;contract&#8221;, but my guess is that the combination of <strong>Google (GOOGL),</strong> <strong>Anthropic</strong> and capital constraints will smash OpenAI over the next several years. Oracle picked the wrong LLM partner. </p><p><strong>GOOGL:</strong> Google has so fully embedded its multi-modal model - <strong>Gemini </strong>- into its business that it will be impossible to tease out the revenue lift that Gemini provides Google Cloud, Google Workspace, YouTube and Google hardware products. Google&#8217;s holistic approach to Gen AI is the only smart, strategic approach I can point to among the cloud service providers. If you haven&#8217;t tried Gemini 3.0, Nano Banana or Antigravity, give them a shot. </p><div class=\"native-video-embed\"></div><div><hr /></div><p></p>",
-    "image_url": "https://substackcdn.com/image/fetch/$s_!6-se!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F8f19bc4f-19b5-41a3-898e-0aa805b24708_1098x784.jpeg",
-    "summary_text": "META: $30 billion public bond sale and $27 billion private capital deal for AI/LLM-related infrastructure, yet less than $5 billion in LLM-related revenue.",
     "category": "ai"
   },
   {
