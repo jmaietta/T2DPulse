@@ -1728,9 +1728,13 @@
     "source": "Financial Times - Technology",
     "summary": "Warning to groups such as OpenAI and Google comes as Trump tries to take federal control of the technology\u2019s regulation",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://images.ft.com/v3/image/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F4885681f-6a80-434e-a0b1-5c98c7f6806a.jpg?source=next-article&fit=scale-down&quality=highest&width=700&dpr=1",
     "summary_text": "Warning to groups such as OpenAI and Google comes as Trump tries to take federal control of the technology\u2019s regulation",
-    "category": "ai"
+    "category": "ai",
+    "_permalink": "/p/f34dbabba8/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/f34dbabba8/",
+    "_summary_240": "Warning to groups such as OpenAI and Google comes as Trump tries to take federal control of the technology\u2019s regulation",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/f34dbabba8/thumbnail.png"
   },
   {
     "title": "How NVIDIA H100 GPUs on CoreWeave\u2019s AI Cloud Platform Delivered a Record-Breaking Graph500 Run",
@@ -1947,17 +1951,6 @@
     "content_html": "",
     "image_url": "",
     "summary_text": "Commonwealth Bank of Australia partners with OpenAI to roll out ChatGPT Enterprise to 50,000 employees, building AI fluency at scale to improve customer service and fraud response.",
-    "category": "ai"
-  },
-  {
-    "title": "A.I. Videos Have Flooded Social Media. No One Was Ready.",
-    "url": "https://www.nytimes.com/2025/12/08/technology/ai-slop-sora-social-media.html",
-    "published_at": "2025-12-08T14:03:40-05:00",
-    "source": "The New York Times - Technology",
-    "summary": "Apps like OpenAI\u2019s Sora are fooling millions of users into thinking A.I. videos are real, even when they include warning labels.",
-    "content_html": "",
-    "image_url": "https://static01.nyt.com/images/2025/12/08/business/ai-slop/ai-slop-mediumSquareAt3X.png",
-    "summary_text": "Apps like OpenAI\u2019s Sora are fooling millions of users into thinking A.I. videos are real, even when they include warning labels.",
     "category": "ai"
   },
   {
