@@ -1207,6 +1207,21 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/bd020d0515/thumbnail.png"
   },
   {
+    "title": "Google\u2019s new framework helps AI agents spend their compute and tool budget more wisely",
+    "url": "https://venturebeat.com/ai/googles-new-framework-helps-ai-agents-spend-their-compute-and-tool-budget",
+    "published_at": "2025-12-11T19:00:00-05:00",
+    "source": "VentureBeat",
+    "summary": "In a new paper that studies tool-use in large language model (LLM) agents, researchers at Google and UC Santa Barbara have developed a framework that enables agents to make more efficient use of tool and compute budgets. The researchers introduce two new techniques: a simple \"Budget Tracker\" and a more comprehensive framework called \"Budget Aware Test-time Scaling.\" These techniques make agents e...",
+    "content_html": "",
+    "image_url": "https://images.ctfassets.net/jdtwqhzvc2n1/6VnZyZmLcPdUEcSjiLXeDk/5f1a4baa15f9a5f2651050c8bd6c4bad/AI_budget_management.jpg?w=800&amp;q=75",
+    "summary_text": "In a new paper that studies tool-use in large language model (LLM) agents, researchers at Google and UC Santa Barbara have developed a framework that enables agents to make more efficient use of tool and compute budgets. The researchers introduce two new tech...",
+    "category": "ai",
+    "_permalink": "/p/2495f78806/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/2495f78806/",
+    "_summary_240": "In a new paper that studies tool-use in large language model (LLM) agents, researchers at Google and UC Santa Barbara have developed a framework that enables agents to make more...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/2495f78806/thumbnail.png"
+  },
+  {
     "title": "BBVA and OpenAI collaborate to transform global banking",
     "url": "https://openai.com/index/bbva-collaboration-expansion",
     "published_at": "2025-12-11T19:00:00-05:00",
@@ -1238,21 +1253,6 @@
     "image_url": "",
     "summary_text": "OpenAI shipped Sora for Android in 28 days using Codex. AI-assisted planning, translation, and parallel coding workflows helped a nimble team deliver rapid, reliable development.",
     "category": "software"
-  },
-  {
-    "title": "Google\u2019s new framework helps AI agents spend their compute and tool budget more wisely",
-    "url": "https://venturebeat.com/ai/googles-new-framework-helps-ai-agents-spend-their-compute-and-tool-budget",
-    "published_at": "2025-12-11T19:00:00-05:00",
-    "source": "VentureBeat",
-    "summary": "In a new paper that studies tool-use in large language model (LLM) agents, researchers at Google and UC Santa Barbara have developed a framework that enables agents to make more efficient use of tool and compute budgets. The researchers introduce two new techniques: a simple \"Budget Tracker\" and a more comprehensive framework called \"Budget Aware Test-time Scaling.\" These techniques make agents e...",
-    "content_html": "",
-    "image_url": "https://images.ctfassets.net/jdtwqhzvc2n1/6VnZyZmLcPdUEcSjiLXeDk/5f1a4baa15f9a5f2651050c8bd6c4bad/AI_budget_management.jpg?w=800&amp;q=75",
-    "summary_text": "In a new paper that studies tool-use in large language model (LLM) agents, researchers at Google and UC Santa Barbara have developed a framework that enables agents to make more efficient use of tool and compute budgets. The researchers introduce two new tech...",
-    "category": "ai",
-    "_permalink": "/p/2495f78806/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/2495f78806/",
-    "_summary_240": "In a new paper that studies tool-use in large language model (LLM) agents, researchers at Google and UC Santa Barbara have developed a framework that enables agents to make more...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/2495f78806/thumbnail.png"
   },
   {
     "title": "GPT-5.2 first impressions: a powerful update, especially for business tasks and workflows",
