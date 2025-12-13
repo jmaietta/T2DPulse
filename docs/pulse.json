@@ -1,6 +1,6 @@
 [
   {
-    "title": "A Soft Economy Will Slow AI Project Deployments.",
+    "title": "A Soft Economy Will Slow AI Project Deployments",
     "url": "https://newsletter.tek2dayholdings.com/p/a-soft-economy-will-slow-ai-project",
     "published_at": "2025-12-13T11:03:55-05:00",
     "source": "TEK2day Newsletter",
@@ -8,11 +8,7 @@
     "content_html": "<div class=\"captioned-image-container\"><figure><a class=\"image-link image2 is-viewable-img\" href=\"https://substackcdn.com/image/fetch/$s_!wJ3m!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F6029e4b0-bbb2-4b6b-9d4d-29c5bb783f16_2150x1536.png\" target=\"_blank\"><div class=\"image2-inset\"><source type=\"image/webp\" /><img alt=\"\" class=\"sizing-normal\" height=\"1040\" src=\"https://substackcdn.com/image/fetch/$s_!wJ3m!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F6029e4b0-bbb2-4b6b-9d4d-29c5bb783f16_2150x1536.png\" width=\"1456\" /><div class=\"image-link-expand\"><div class=\"pencraft pc-display-flex pc-gap-8 pc-reset\"><button class=\"pencraft pc-reset pencraft icon-container restack-image\" tabindex=\"0\" type=\"button\"><svg fill=\"none\" height=\"20\" stroke=\"var(--color-fg-primary)\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" viewBox=\"0 0 20 20\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><g><title></title><path d=\"M2.53001 7.81595C3.49179 4.73911 6.43281 2.5 9.91173 2.5C13.1684 2.5 15.9537 4.46214 17.0852 7.23684L17.6179 8.67647M17.6179 8.67647L18.5002 4.26471M17.6179 8.67647L13.6473 6.91176M17.4995 12.1841C16.5378 15.2609 13.5967 17.5 10.1178 17.5C6.86118 17.5 4.07589 15.5379 2.94432 12.7632L2.41165 11.3235M2.41165 11.3235L1.5293 15.7353M2.41165 11.3235L6.38224 13.0882\"></path></g></svg></button><button class=\"pencraft pc-reset pencraft icon-container view-image\" tabindex=\"0\" type=\"button\"><svg class=\"lucide lucide-maximize2 lucide-maximize-2\" fill=\"none\" height=\"20\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" viewBox=\"0 0 24 24\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><polyline points=\"15 3 21 3 21 9\"></polyline><polyline points=\"9 21 3 21 3 15\"></polyline><line x1=\"21\" x2=\"14\" y1=\"3\" y2=\"10\"></line><line x1=\"3\" x2=\"10\" y1=\"21\" y2=\"14\"></line></svg></button></div></div></div></a></figure></div><h4>There is a cost associated with deploying AI initiatives (I am referring to all permutations of AI, not only Gen AI). </h4><p><strong>Prepping for an AI project is an extensive and expensive process. Data must be acquired, cleansed and stored in an accessible manner so that it can be utilized for advanced automation initiatives. </strong></p><ul><li><p><strong>Data has to be lifted out of data silos that reside in various corporate departments. </strong></p><ul><li><p>This assumes the CEO has mandated that various departments share their data. If the AI project is bottoms-up, it may be next to impossible to exert enough influence on another department to acquire their data. </p></li><li><p>Internal politics have killed a number of automation projects before they ever got off the ground. </p></li></ul></li><li><p><strong>Once acquired, data must be cleansed, labeled and stored in an accessible manner. </strong></p><ul><li><p>Enterprise Data can be stored inside of data lakes where Devs, Data Scientists and business users can work together to glean insights from the data and to build tools, apps and various products for internal and external use.</p></li><li><p>Companies can&#8217;t begin to build robust ROI cases until they know what they have for data and how they may utilize it to generate operating efficiencies and revenue.</p></li></ul></li><li><p>Steps 1 and 2 may require that a company hire people with data management experience, along with Stats Phds, to execute on AI projects. A company can&#8217;t simply hand an AI project to a group of people that are not qualified. As it is, 80% of all predictive / &#8220;AI&#8221; models do not see production. </p></li></ul><p><strong>Companies simply won&#8217;t take on AI projects if they feel their business is slowing due to a soft economy. </strong></p><div><hr /></div><p></p>",
     "image_url": "https://substackcdn.com/image/fetch/$s_!wJ3m!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F6029e4b0-bbb2-4b6b-9d4d-29c5bb783f16_2150x1536.png",
     "summary_text": "We may see signs of AI weakness in Accenture's bookings and deal pipeline this Thursday Dec. 18th when ACN reports.",
-    "category": "ai",
-    "_permalink": "/p/428f68b8ad/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/428f68b8ad/",
-    "_summary_240": "We may see signs of AI weakness in Accenture's bookings and deal pipeline this Thursday Dec. 18th when ACN reports.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/428f68b8ad/thumbnail.png"
+    "category": "ai"
   },
   {
     "title": "Wall Street Week | Hubbard on Fed Cut Fallout, Open Source AI, Nuclear Bet, Department Store Revival",
@@ -218,7 +214,11 @@
     "content_html": "",
     "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/idzDJeMkBozE/v4/1200x-1.png",
     "summary_text": "Moore Threads Technology Co.\u2019s 425% first-day pop this month \u2014 China\u2019s most successful initial public offering since 2019 \u2014 capped a year in which investors have grown increasingly excited about the prospects for the country\u2019s AI chip advancement. That\u2019s desp...",
-    "category": "ai"
+    "category": "ai",
+    "_permalink": "/p/cf0f732449/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/cf0f732449/",
+    "_summary_240": "Moore Threads Technology Co.\u2019s 425% first-day pop this month \u2014 China\u2019s most successful initial public offering since 2019 \u2014 capped a year in which investors have grown...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/cf0f732449/thumbnail.png"
   },
   {
     "title": "Conversational AI Becomes New Front Door for Holiday Shopping",
@@ -1587,7 +1587,7 @@
     "source": "Financial Times - Technology",
     "summary": "The inside story on the Asia tech trends that matter, from Nikkei Asia and the Financial Times",
     "content_html": "",
-    "image_url": "https://images.ft.com/v3/image/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F4618fd7e-bb58-405e-9931-38f6c9b887d3.jpg?source=ft-app-api&fit=scale-down&quality=highest&width=700&dpr=1",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/4618fd7e-bb58-405e-9931-38f6c9b887d3.jpg",
     "summary_text": "The inside story on the Asia tech trends that matter, from Nikkei Asia and the Financial Times",
     "category": "ai",
     "_permalink": "/p/b391bdc958/",
