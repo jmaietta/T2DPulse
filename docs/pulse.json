@@ -1,5 +1,20 @@
 [
   {
+    "title": "Why most enterprise AI coding pilots underperform (Hint: It's not the model)",
+    "url": "https://venturebeat.com/ai/why-most-enterprise-ai-coding-pilots-underperform-hint-its-not-the-model",
+    "published_at": "2025-12-13T15:00:00-05:00",
+    "source": "VentureBeat",
+    "summary": "Gen AI in software engineering has moved well beyond autocomplete. The emerging frontier is agentic coding : AI systems capable of planning changes, executing them across multiple steps and iterating based on feedback. Yet despite the excitement around \u201cAI agents that code,\u201d most enterprise deployments underperform. The limiting factor is no longer the model. It\u2019s context : The structure, history...",
+    "content_html": "",
+    "image_url": "https://images.ctfassets.net/jdtwqhzvc2n1/38oJ3yjcAb67Hunz4whpDs/5e419481c52a1deafddb26fc2af21f57/DDM_Coding.png?w=800&amp;q=75",
+    "summary_text": "Gen AI in software engineering has moved well beyond autocomplete. The emerging frontier is agentic coding : AI systems capable of planning changes, executing them across multiple steps and iterating based on feedback. Yet despite the excitement around \u201cAI ag...",
+    "category": "ai",
+    "_permalink": "/p/e63ada3a19/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/e63ada3a19/",
+    "_summary_240": "Gen AI in software engineering has moved well beyond autocomplete. The emerging frontier is agentic coding : AI systems capable of planning changes, executing them across...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/e63ada3a19/thumbnail.png"
+  },
+  {
     "title": "The Securities and Exchange Commission publishes crypto custody guide",
     "url": "https://cointelegraph.com/news/securities-exchange-commission-crypto-custody-guide?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
     "published_at": "2025-12-13T14:54:49-05:00",
@@ -1192,36 +1207,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/bd020d0515/thumbnail.png"
   },
   {
-    "title": "Google launched its deepest AI research agent yet \u2014 on the same day OpenAI dropped GPT-5.2",
-    "url": "https://techcrunch.com/2025/12/11/google-launched-its-deepest-ai-research-agent-yet-on-the-same-day-openai-dropped-gpt-5-2/",
-    "published_at": "2025-12-11T19:18:56-05:00",
-    "source": "TechCrunch",
-    "summary": "For the first time, developers can embed Google's Deep Research tool, based on Gemini 3 Pro, into their own apps.",
-    "content_html": "",
-    "image_url": "https://techcrunch.com/wp-content/uploads/2022/05/GettyImages-1147600063.jpg?resize=1200,817",
-    "summary_text": "For the first time, developers can embed Google's Deep Research tool, based on Gemini 3 Pro, into their own apps.",
-    "category": "ai",
-    "_permalink": "/p/19a2788a6b/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/19a2788a6b/",
-    "_summary_240": "For the first time, developers can embed Google's Deep Research tool, based on Gemini 3 Pro, into their own apps.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/19a2788a6b/thumbnail.png"
-  },
-  {
-    "title": "Google\u2019s new framework helps AI agents spend their compute and tool budget more wisely",
-    "url": "https://venturebeat.com/ai/googles-new-framework-helps-ai-agents-spend-their-compute-and-tool-budget",
-    "published_at": "2025-12-11T19:00:00-05:00",
-    "source": "VentureBeat",
-    "summary": "In a new paper that studies tool-use in large language model (LLM) agents, researchers at Google and UC Santa Barbara have developed a framework that enables agents to make more efficient use of tool and compute budgets. The researchers introduce two new techniques: a simple \"Budget Tracker\" and a more comprehensive framework called \"Budget Aware Test-time Scaling.\" These techniques make agents e...",
-    "content_html": "",
-    "image_url": "https://images.ctfassets.net/jdtwqhzvc2n1/6VnZyZmLcPdUEcSjiLXeDk/5f1a4baa15f9a5f2651050c8bd6c4bad/AI_budget_management.jpg?w=800&amp;q=75",
-    "summary_text": "In a new paper that studies tool-use in large language model (LLM) agents, researchers at Google and UC Santa Barbara have developed a framework that enables agents to make more efficient use of tool and compute budgets. The researchers introduce two new tech...",
-    "category": "ai",
-    "_permalink": "/p/2495f78806/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/2495f78806/",
-    "_summary_240": "In a new paper that studies tool-use in large language model (LLM) agents, researchers at Google and UC Santa Barbara have developed a framework that enables agents to make more...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/2495f78806/thumbnail.png"
-  },
-  {
     "title": "BBVA and OpenAI collaborate to transform global banking",
     "url": "https://openai.com/index/bbva-collaboration-expansion",
     "published_at": "2025-12-11T19:00:00-05:00",
@@ -1253,6 +1238,21 @@
     "image_url": "",
     "summary_text": "OpenAI shipped Sora for Android in 28 days using Codex. AI-assisted planning, translation, and parallel coding workflows helped a nimble team deliver rapid, reliable development.",
     "category": "software"
+  },
+  {
+    "title": "Google\u2019s new framework helps AI agents spend their compute and tool budget more wisely",
+    "url": "https://venturebeat.com/ai/googles-new-framework-helps-ai-agents-spend-their-compute-and-tool-budget",
+    "published_at": "2025-12-11T19:00:00-05:00",
+    "source": "VentureBeat",
+    "summary": "In a new paper that studies tool-use in large language model (LLM) agents, researchers at Google and UC Santa Barbara have developed a framework that enables agents to make more efficient use of tool and compute budgets. The researchers introduce two new techniques: a simple \"Budget Tracker\" and a more comprehensive framework called \"Budget Aware Test-time Scaling.\" These techniques make agents e...",
+    "content_html": "",
+    "image_url": "https://images.ctfassets.net/jdtwqhzvc2n1/6VnZyZmLcPdUEcSjiLXeDk/5f1a4baa15f9a5f2651050c8bd6c4bad/AI_budget_management.jpg?w=800&amp;q=75",
+    "summary_text": "In a new paper that studies tool-use in large language model (LLM) agents, researchers at Google and UC Santa Barbara have developed a framework that enables agents to make more efficient use of tool and compute budgets. The researchers introduce two new tech...",
+    "category": "ai",
+    "_permalink": "/p/2495f78806/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/2495f78806/",
+    "_summary_240": "In a new paper that studies tool-use in large language model (LLM) agents, researchers at Google and UC Santa Barbara have developed a framework that enables agents to make more...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/2495f78806/thumbnail.png"
   },
   {
     "title": "GPT-5.2 first impressions: a powerful update, especially for business tasks and workflows",
@@ -1351,9 +1351,13 @@
     "source": "Financial Times - Technology",
     "summary": "Larry Ellison\u2019s company raises its capital expenditure forecast as it doubles down on AI infrastructure bet",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/52c672d0-aa3c-450e-b01e-928c9109a6c6.png",
     "summary_text": "Larry Ellison\u2019s company raises its capital expenditure forecast as it doubles down on AI infrastructure bet",
-    "category": "ai"
+    "category": "ai",
+    "_permalink": "/p/e38e989cf4/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/e38e989cf4/",
+    "_summary_240": "Larry Ellison\u2019s company raises its capital expenditure forecast as it doubles down on AI infrastructure bet",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/e38e989cf4/thumbnail.png"
   },
   {
     "title": "Why we built\u2014and donated\u2014the Model Context Protocol (MCP)",
@@ -1392,9 +1396,13 @@
     "source": "Financial Times - Technology",
     "summary": "SpaceX, OpenAI and Anthropic will break new ground \u2014 potentially with the scale of their losses",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/ca30c1b2-597e-4c80-9246-dba908bea267.jpg",
     "summary_text": "SpaceX, OpenAI and Anthropic will break new ground \u2014 potentially with the scale of their losses",
-    "category": "ai"
+    "category": "ai",
+    "_permalink": "/p/a963da569b/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/a963da569b/",
+    "_summary_240": "SpaceX, OpenAI and Anthropic will break new ground \u2014 potentially with the scale of their losses",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/a963da569b/thumbnail.png"
   },
   {
     "title": "Super excited about GPT-5.2 from our partners at OpenAI. Making it natively part of the Microsoft tools people use every day along with your work data helps all the new model capabilities shine. [See more.]",
@@ -1418,9 +1426,13 @@
     "source": "Financial Times - Technology",
     "summary": "The database company\u2019s stock looks like a leveraged bet on OpenAI being able to meet its long-term promises",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/7a9c801d-d27e-4f58-ab85-81a429d37d1f.jpg",
     "summary_text": "The database company\u2019s stock looks like a leveraged bet on OpenAI being able to meet its long-term promises",
-    "category": "ai"
+    "category": "ai",
+    "_permalink": "/p/f9a19b22b9/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/f9a19b22b9/",
+    "_summary_240": "The database company\u2019s stock looks like a leveraged bet on OpenAI being able to meet its long-term promises",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/f9a19b22b9/thumbnail.png"
   },
   {
     "title": "OpenAI's GPT-5.2 is here: what enterprises need to know",
@@ -1549,9 +1561,13 @@
     "source": "Financial Times - Technology",
     "summary": "A market correction will give the EU the chance to offer a trust-based alternative to American tech",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/853ef860-b644-425a-90d5-9d65ffee33e6.jpg",
     "summary_text": "A market correction will give the EU the chance to offer a trust-based alternative to American tech",
-    "category": "ai"
+    "category": "ai",
+    "_permalink": "/p/da3557693c/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/da3557693c/",
+    "_summary_240": "A market correction will give the EU the chance to offer a trust-based alternative to American tech",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/da3557693c/thumbnail.png"
   },
   {
     "title": "Private capital-backed Mollie buys GoCardless for \u20ac1.1bn",
@@ -1560,9 +1576,13 @@
     "source": "Financial Times - Technology",
     "summary": "Dutch payments group aims to create new European fintech",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/73a5ed23-07c1-421d-b73d-21e61ddd2616.jpg",
     "summary_text": "Dutch payments group aims to create new European fintech",
-    "category": "fintech"
+    "category": "fintech",
+    "_permalink": "/p/9d15b7ad45/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/9d15b7ad45/",
+    "_summary_240": "Dutch payments group aims to create new European fintech",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/9d15b7ad45/thumbnail.png"
   },
   {
     "title": "Advancing science and math with GPT-5.2",
@@ -1597,9 +1617,13 @@
     "source": "Financial Times - Technology",
     "summary": "The inside story on the Asia tech trends that matter, from Nikkei Asia and the Financial Times",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/4618fd7e-bb58-405e-9931-38f6c9b887d3.jpg",
     "summary_text": "The inside story on the Asia tech trends that matter, from Nikkei Asia and the Financial Times",
-    "category": "ai"
+    "category": "ai",
+    "_permalink": "/p/b391bdc958/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/b391bdc958/",
+    "_summary_240": "The inside story on the Asia tech trends that matter, from Nikkei Asia and the Financial Times",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/b391bdc958/thumbnail.png"
   },
   {
     "title": "How the Next Big Thing in Carbon Removal Sank Without a Trace",
@@ -1619,24 +1643,13 @@
     "source": "Financial Times - Technology",
     "summary": "Close allies among those targeted in bid to protect semiconductor sector that is backbone of economy",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/2ecbd6cb-6063-433b-86f9-0bf9fb23e78d.jpg",
     "summary_text": "Close allies among those targeted in bid to protect semiconductor sector that is backbone of economy",
-    "category": "fintech"
-  },
-  {
-    "title": "Creating a glass box: How NetSuite is engineering trust into AI",
-    "url": "https://venturebeat.com/ai/creating-a-glass-box-how-netsuite-is-engineering-trust-into-ai",
-    "published_at": "2025-12-11T00:00:00-05:00",
-    "source": "VentureBeat",
-    "summary": "Presented by Oracle NetSuite When any company tells you it is their biggest product release in almost three decades, it\u2019s worth listening. When the person saying it founded the world\u2019s first cloud computing company, it\u2019s time to take note. At SuiteWorld 2025, Evan Goldberg, founder and EVP of Oracle NetSuite, did just that when he called NetSuite Next the company\u2019s biggest product evolution in ne...",
-    "content_html": "",
-    "image_url": "https://images.ctfassets.net/jdtwqhzvc2n1/6ouXpzYvtEUpMqztfoRe7u/c8be75d5f24ee25abb8f25c45358796a/AdobeStock_1708529298.jpeg?w=800&amp;q=75",
-    "summary_text": "Presented by Oracle NetSuite When any company tells you it is their biggest product release in almost three decades, it\u2019s worth listening. When the person saying it founded the world\u2019s first cloud computing company, it\u2019s time to take note. At SuiteWorld 2025,...",
-    "category": "ai",
-    "_permalink": "/p/8d0ca743ed/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/8d0ca743ed/",
-    "_summary_240": "Presented by Oracle NetSuite When any company tells you it is their biggest product release in almost three decades, it\u2019s worth listening. When the person saying it founded the...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/8d0ca743ed/thumbnail.png"
+    "category": "fintech",
+    "_permalink": "/p/b4f622e524/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/b4f622e524/",
+    "_summary_240": "Close allies among those targeted in bid to protect semiconductor sector that is backbone of economy",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/b4f622e524/thumbnail.png"
   },
   {
     "title": "Introducing GPT-5.2",
@@ -1730,7 +1743,7 @@
     "source": "Financial Times - Technology",
     "summary": "Warning to groups such as OpenAI and Google comes as Trump tries to take federal control of the technology\u2019s regulation",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://images.ft.com/v3/image/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F4885681f-6a80-434e-a0b1-5c98c7f6806a.jpg?source=next-article&fit=scale-down&quality=highest&width=700&dpr=1",
     "summary_text": "Warning to groups such as OpenAI and Google comes as Trump tries to take federal control of the technology\u2019s regulation",
     "category": "ai"
   },
@@ -1743,11 +1756,7 @@
     "content_html": "",
     "image_url": "https://s3.amazonaws.com/cms.ipressroom.com/219/files/202512/6939de8c3d6332fa9c64876b_rapids-wholegraph-24-corp-blog-1280x680-1-842x450/rapids-wholegraph-24-corp-blog-1280x680-1-842x450_thmb.jpg",
     "summary_text": "The world\u2019s top-performing system for graph processing at scale was built on a commercially available cluster. NVIDIA last month announced a record-breaking benchmark result of 410 trillion traversed edges per second (TEPS), ranking No. 1 on the 31st Graph500...",
-    "category": "ai",
-    "_permalink": "/p/9d7def84aa/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/9d7def84aa/",
-    "_summary_240": "The world\u2019s top-performing system for graph processing at scale was built on a commercially available cluster. NVIDIA last month announced a record-breaking benchmark result of...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/9d7def84aa/thumbnail.png"
+    "category": "ai"
   },
   {
     "title": "A new open-weights AI coding model is closing in on proprietary options",
