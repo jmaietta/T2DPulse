@@ -1,5 +1,35 @@
 [
   {
+    "title": "Memecoins will rise from the dead, but in a new form: Crypto exec",
+    "url": "https://cointelegraph.com/news/memecoins-not-dead-will-return-new-form?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "published_at": "2025-12-14T14:58:25-05:00",
+    "source": "Cointelegraph",
+    "summary": "Memecoins were never about memes, jokes, or financial nihilism; it is the underlying technology and its implications that are promising.",
+    "content_html": "",
+    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTIvMDE5YjFlNjMtN2EyMS03M2E0LTljMTctNWVlZGZlM2FhNzJlLmpwZw==.jpg",
+    "summary_text": "Memecoins were never about memes, jokes, or financial nihilism; it is the underlying technology and its implications that are promising.",
+    "category": "fintech",
+    "_permalink": "/p/2dbea737b6/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/2dbea737b6/",
+    "_summary_240": "Memecoins were never about memes, jokes, or financial nihilism; it is the underlying technology and its implications that are promising.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/2dbea737b6/thumbnail.png"
+  },
+  {
+    "title": "Build vs buy is dead \u2014 AI just killed it",
+    "url": "https://venturebeat.com/ai/build-vs-buy-is-dead-ai-just-killed-it",
+    "published_at": "2025-12-14T14:00:00-05:00",
+    "source": "VentureBeat",
+    "summary": "Picture this: You're sitting in a conference room, halfway through a vendor pitch. The demo looks solid, and pricing fits nicely under budget. The timeline seems reasonable too. Everyone\u2019s nodding along. You\u2019re literally minutes away from saying yes. Then someone from your finance team walks in. They see the deck and frown. A few minutes later, they shoot you a message on Slack: \u201cActually, I thre...",
+    "content_html": "",
+    "image_url": "https://images.ctfassets.net/jdtwqhzvc2n1/6kXpR2jU6eoKdeTMAngNL8/96b17bfd5d5ce4ea7285636538c2d054/DDM_build_versus_buy.png?w=800&amp;q=75",
+    "summary_text": "Picture this: You're sitting in a conference room, halfway through a vendor pitch. The demo looks solid, and pricing fits nicely under budget. The timeline seems reasonable too. Everyone\u2019s nodding along. You\u2019re literally minutes away from saying yes. Then som...",
+    "category": "ai",
+    "_permalink": "/p/95900b0a84/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/95900b0a84/",
+    "_summary_240": "Picture this: You're sitting in a conference room, halfway through a vendor pitch. The demo looks solid, and pricing fits nicely under budget. The timeline seems reasonable too....",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/95900b0a84/thumbnail.png"
+  },
+  {
     "title": "Investors seek protection from risk of AI debt bust",
     "url": "https://www.ft.com/content/c5f9380e-df86-42a9-a387-a0d5e04ad45f",
     "published_at": "2025-12-14T13:00:00-05:00",
@@ -1151,21 +1181,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/bd020d0515/thumbnail.png"
   },
   {
-    "title": "Google\u2019s new framework helps AI agents spend their compute and tool budget more wisely",
-    "url": "https://venturebeat.com/ai/googles-new-framework-helps-ai-agents-spend-their-compute-and-tool-budget",
-    "published_at": "2025-12-11T19:00:00-05:00",
-    "source": "VentureBeat",
-    "summary": "In a new paper that studies tool-use in large language model (LLM) agents, researchers at Google and UC Santa Barbara have developed a framework that enables agents to make more efficient use of tool and compute budgets. The researchers introduce two new techniques: a simple \"Budget Tracker\" and a more comprehensive framework called \"Budget Aware Test-time Scaling.\" These techniques make agents e...",
-    "content_html": "",
-    "image_url": "https://images.ctfassets.net/jdtwqhzvc2n1/6VnZyZmLcPdUEcSjiLXeDk/5f1a4baa15f9a5f2651050c8bd6c4bad/AI_budget_management.jpg?w=800&amp;q=75",
-    "summary_text": "In a new paper that studies tool-use in large language model (LLM) agents, researchers at Google and UC Santa Barbara have developed a framework that enables agents to make more efficient use of tool and compute budgets. The researchers introduce two new tech...",
-    "category": "ai",
-    "_permalink": "/p/2495f78806/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/2495f78806/",
-    "_summary_240": "In a new paper that studies tool-use in large language model (LLM) agents, researchers at Google and UC Santa Barbara have developed a framework that enables agents to make more...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/2495f78806/thumbnail.png"
-  },
-  {
     "title": "BBVA and OpenAI collaborate to transform global banking",
     "url": "https://openai.com/index/bbva-collaboration-expansion",
     "published_at": "2025-12-11T19:00:00-05:00",
@@ -1197,6 +1212,21 @@
     "image_url": "",
     "summary_text": "OpenAI shipped Sora for Android in 28 days using Codex. AI-assisted planning, translation, and parallel coding workflows helped a nimble team deliver rapid, reliable development.",
     "category": "software"
+  },
+  {
+    "title": "Google\u2019s new framework helps AI agents spend their compute and tool budget more wisely",
+    "url": "https://venturebeat.com/ai/googles-new-framework-helps-ai-agents-spend-their-compute-and-tool-budget",
+    "published_at": "2025-12-11T19:00:00-05:00",
+    "source": "VentureBeat",
+    "summary": "In a new paper that studies tool-use in large language model (LLM) agents, researchers at Google and UC Santa Barbara have developed a framework that enables agents to make more efficient use of tool and compute budgets. The researchers introduce two new techniques: a simple \"Budget Tracker\" and a more comprehensive framework called \"Budget Aware Test-time Scaling.\" These techniques make agents e...",
+    "content_html": "",
+    "image_url": "https://images.ctfassets.net/jdtwqhzvc2n1/6VnZyZmLcPdUEcSjiLXeDk/5f1a4baa15f9a5f2651050c8bd6c4bad/AI_budget_management.jpg?w=800&amp;q=75",
+    "summary_text": "In a new paper that studies tool-use in large language model (LLM) agents, researchers at Google and UC Santa Barbara have developed a framework that enables agents to make more efficient use of tool and compute budgets. The researchers introduce two new tech...",
+    "category": "ai",
+    "_permalink": "/p/2495f78806/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/2495f78806/",
+    "_summary_240": "In a new paper that studies tool-use in large language model (LLM) agents, researchers at Google and UC Santa Barbara have developed a framework that enables agents to make more...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/2495f78806/thumbnail.png"
   },
   {
     "title": "GPT-5.2 first impressions: a powerful update, especially for business tasks and workflows",
@@ -1312,11 +1342,7 @@
     "content_html": "",
     "image_url": "https://i.ytimg.com/vi/PLyCki2K0Lg/maxresdefault.jpg",
     "summary_text": "Anthropic's Stuart Ritchie speaks with co-creator David Soria Parra about the development of the Model Context Protocol (MCP), an open standard to connect AI to external tools and services\u2014and why Anthropic is donating it to the Linux Foundation. 00:00 - What...",
-    "category": "ai",
-    "_permalink": "/p/97d937edb5/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/97d937edb5/",
-    "_summary_240": "Anthropic's Stuart Ritchie speaks with co-creator David Soria Parra about the development of the Model Context Protocol (MCP), an open standard to connect AI to external tools...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/97d937edb5/thumbnail.png"
+    "category": "ai"
   },
   {
     "title": "As AI Grows More Complex, Model Builders Rely on NVIDIA",
@@ -1481,17 +1507,6 @@
     "content_html": "",
     "image_url": "",
     "summary_text": "GPT-5.2 is OpenAI\u2019s strongest model yet for math and science, setting new state-of-the-art results on benchmarks like GPQA Diamond and FrontierMath. This post shows how those gains translate into real research progress, including solving an open theoretical p...",
-    "category": "ai"
-  },
-  {
-    "title": "Nous Research just released Nomos 1, an open-source AI that ranks second on the notoriously brutal Putnam math exam",
-    "url": "https://venturebeat.com/ai/nous-research-just-released-nomos-1-an-open-source-ai-that-ranks-second-on",
-    "published_at": "2025-12-11T04:30:00-05:00",
-    "source": "VentureBeat",
-    "summary": "Nous Research , the San Francisco-based artificial intelligence startup, released on Tuesday an open-source mathematical reasoning system called Nomos 1 that achieved near-elite human performance on this year's William Lowell Putnam Mathematical Competition , one of the most prestigious and notoriously difficult undergraduate math contests in the world. The Putnam is known for its difficulty: Whi...",
-    "content_html": "",
-    "image_url": "https://images.ctfassets.net/jdtwqhzvc2n1/3D8WVGuLYcQWTny9eZ4GTH/bcedb162ba6f9a20be33108305199048/G7wxtuvXQAAaZdv.jpg?w=800&amp;q=75",
-    "summary_text": "Nous Research , the San Francisco-based artificial intelligence startup, released on Tuesday an open-source mathematical reasoning system called Nomos 1 that achieved near-elite human performance on this year's William Lowell Putnam Mathematical Competition ,...",
     "category": "ai"
   },
   {
