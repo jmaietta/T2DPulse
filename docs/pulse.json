@@ -881,21 +881,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/3f13d672d9/thumbnail.png"
   },
   {
-    "title": "AI Stocks Get Pummeled as Oracle Delay Adds to Broadcom Concerns",
-    "url": "https://www.bloomberg.com/news/articles/2025-12-12/ai-stocks-get-pummeled-as-oracle-delay-adds-to-broadcom-concerns",
-    "published_at": "2025-12-12T12:09:02-05:00",
-    "source": "Bloomberg Technology",
-    "summary": "The shares of companies exposed to artificial intelligence infrastructure came in for a beating after a report about Oracle Corp. data center delays added fuel to a selloff already underway following disappointing earnings results from chipmaker Broadcom Inc.",
-    "content_html": "Traders work on the floor of the New York Stock Exchange (NYSE) in New York, US, on Wednesday, Dec. 10, 2025. US equities slid Wednesday as traders brace for a widely anticipated quarter-point rate cut later in the session, along with projections from officials on the trajectory of monetary policy.",
-    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/irvf_ESCAMJA/v1/1200x-1.jpg",
-    "summary_text": "The shares of companies exposed to artificial intelligence infrastructure came in for a beating after a report about Oracle Corp. data center delays added fuel to a selloff already underway following disappointing earnings results from chipmaker Broadcom Inc.",
-    "category": "ai",
-    "_permalink": "/p/203d8a1fff/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/203d8a1fff/",
-    "_summary_240": "The shares of companies exposed to artificial intelligence infrastructure came in for a beating after a report about Oracle Corp. data center delays added fuel to a selloff...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/203d8a1fff/thumbnail.png"
-  },
-  {
     "title": "Trump\u2019s AI executive order promises \u2018one rulebook\u2019 \u2014 startups may get legal limbo instead",
     "url": "https://techcrunch.com/2025/12/12/trumps-ai-executive-order-promises-one-rulebook-startups-may-get-legal-limbo-instead/",
     "published_at": "2025-12-12T12:07:22-05:00",
@@ -1151,21 +1136,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/2ac98413b5/thumbnail.png"
   },
   {
-    "title": "World launches its \u2018super app,\u2019 including crypto pay and encrypted chat features",
-    "url": "https://techcrunch.com/2025/12/11/world-launches-its-super-app-including-crypto-pay-and-encrypted-chat-features/",
-    "published_at": "2025-12-11T20:40:54-05:00",
-    "source": "TechCrunch",
-    "summary": "Tools for Humanity, the company behind the app, is seeking to expand its \"real human network.\"",
-    "content_html": "",
-    "image_url": "https://techcrunch.com/wp-content/uploads/2024/11/GettyImages-1535376729-e1731897472270.jpg?resize=1200,798",
-    "summary_text": "Tools for Humanity, the company behind the app, is seeking to expand its \"real human network.\"",
-    "category": "fintech",
-    "_permalink": "/p/24e74c0207/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/24e74c0207/",
-    "_summary_240": "Tools for Humanity, the company behind the app, is seeking to expand its \"real human network.\"",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/24e74c0207/thumbnail.png"
-  },
-  {
     "title": "Trump threatens federal funding cuts for states with \u2018onerous\u2019 AI laws",
     "url": "https://www.ft.com/content/a114351c-2f4f-4688-96d9-5ae1af777420",
     "published_at": "2025-12-11T20:10:48-05:00",
@@ -1334,21 +1304,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/8bcb0005de/thumbnail.png"
   },
   {
-    "title": "10 years.",
-    "url": "https://www.youtube.com/watch?v=8JXwrVQQ4jw",
-    "published_at": "2025-12-11T16:33:02-05:00",
-    "source": "OpenAI YouTube",
-    "summary": "",
-    "content_html": "",
-    "image_url": "https://i.ytimg.com/vi/8JXwrVQQ4jw/maxresdefault.jpg",
-    "summary_text": "Enjoy the videos and music you love, upload original content, and share it all with friends, family, and the world on YouTube.",
-    "category": "ai",
-    "_permalink": "/p/7045d918a4/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/7045d918a4/",
-    "_summary_240": "Enjoy the videos and music you love, upload original content, and share it all with friends, family, and the world on YouTube.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/7045d918a4/thumbnail.png"
-  },
-  {
     "title": "OpenAI releases GPT-5.2 after \u201ccode red\u201d Google threat alert",
     "url": "https://arstechnica.com/information-technology/2025/12/openai-releases-gpt-5-2-after-code-red-google-threat-alert/",
     "published_at": "2025-12-11T16:27:18-05:00",
@@ -1377,6 +1332,21 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/e38e989cf4/",
     "_summary_240": "Larry Ellison\u2019s company raises its capital expenditure forecast as it doubles down on AI infrastructure bet",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/e38e989cf4/thumbnail.png"
+  },
+  {
+    "title": "Why we built\u2014and donated\u2014the Model Context Protocol (MCP)",
+    "url": "https://www.youtube.com/watch?v=PLyCki2K0Lg",
+    "published_at": "2025-12-11T15:14:58-05:00",
+    "source": "Anthropic YouTube",
+    "summary": "Anthropic's Stuart Ritchie speaks with co-creator David Soria Parra about the development of the Model Context Protocol (MCP), an open standard to connect AI to external tools and services\u2014and why Anthropic is donating it to the Linux Foundation. 00:00 - What is MCP? 01:21 - The problem MCP solves 02:46 - The USB-C analogy 03:45 - How MCP began 05:36 - What makes MCP different 08:05 - Community a...",
+    "content_html": "",
+    "image_url": "https://i.ytimg.com/vi/PLyCki2K0Lg/maxresdefault.jpg",
+    "summary_text": "Anthropic's Stuart Ritchie speaks with co-creator David Soria Parra about the development of the Model Context Protocol (MCP), an open standard to connect AI to external tools and services\u2014and why Anthropic is donating it to the Linux Foundation. 00:00 - What...",
+    "category": "ai",
+    "_permalink": "/p/97d937edb5/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/97d937edb5/",
+    "_summary_240": "Anthropic's Stuart Ritchie speaks with co-creator David Soria Parra about the development of the Model Context Protocol (MCP), an open standard to connect AI to external tools...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/97d937edb5/thumbnail.png"
   },
   {
     "title": "As AI Grows More Complex, Model Builders Rely on NVIDIA",
@@ -1786,17 +1756,6 @@
     "content_html": "",
     "image_url": "https://media.wired.com/photos/69377ab2ceb33c37ef2a4915/master/pass/business_openai_economic_impact.jpg",
     "summary_text": "Four sources close to the situation claim OpenAI has become hesitant to publish research on the negative impact of AI. The company says it has only expanded the economic research team\u2019s scope.",
-    "category": "ai"
-  },
-  {
-    "title": "OpenAI, Anthropic, and Block Are Teaming Up to Make AI Agents Play Nice",
-    "url": "https://www.wired.com/story/openai-anthropic-and-block-are-teaming-up-on-ai-agent-standards/",
-    "published_at": "2025-12-09T12:06:58-05:00",
-    "source": "Wired",
-    "summary": "American AI giants are backing a new effort to establish open standards for building agentic software and tools.",
-    "content_html": "",
-    "image_url": "https://media.wired.com/photos/693854c57eeef7f25b0423c2/master/pass/ai-agents-play-nice-1.jpg",
-    "summary_text": "American AI giants are backing a new effort to establish open standards for building agentic software and tools.",
     "category": "ai"
   },
   {
