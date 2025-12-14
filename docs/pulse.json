@@ -128,7 +128,11 @@
     "content_html": "PARIS, FRANCE - JUNE 11: The logo AI (Artificial inteligency) is displayed during the 9th edition of the VivaTech show at Parc des Expositions Porte de Versailles on June 11, 2025 in Paris, France. VivaTech, the biggest tech show in Europe but also in a unique digital format, for 4 days of reconnection and relaunch thanks to innovation. The event brings together startups, CEOs, investors, tech leaders and all of the digital transformation players who are shaping the future of the Internet. The annual technology conference, also known as VivaTech, was founded in 2016 by Publicis Groupe and Groupe Les Echos and is dedicated to promoting innovation and startups. (Photo by Chesnot/Getty Images)",
     "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ijt8j35wEhRU/v1/1200x-1.jpg",
     "summary_text": "It\u2019s been three years since OpenAI set off euphoria over artificial intelligence with the release of ChatGPT. And while the money is still pouring in, so are the doubts about whether the good times can last.",
-    "category": "ai"
+    "category": "ai",
+    "_permalink": "/p/2194956f14/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/2194956f14/",
+    "_summary_240": "It\u2019s been three years since OpenAI set off euphoria over artificial intelligence with the release of ChatGPT. And while the money is still pouring in, so are the doubts about...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/2194956f14/thumbnail.png"
   },
   {
     "title": "AI image generators are getting better by getting worse",
@@ -1217,17 +1221,6 @@
     "category": "ai"
   },
   {
-    "title": "10 years.",
-    "url": "https://www.youtube.com/watch?v=8JXwrVQQ4jw",
-    "published_at": "2025-12-11T16:33:02-05:00",
-    "source": "OpenAI YouTube",
-    "summary": "",
-    "content_html": "",
-    "image_url": "https://i.ytimg.com/vi/8JXwrVQQ4jw/maxresdefault.jpg",
-    "summary_text": "Enjoy the videos and music you love, upload original content, and share it all with friends, family, and the world on YouTube.",
-    "category": "ai"
-  },
-  {
     "title": "OpenAI releases GPT-5.2 after \u201ccode red\u201d Google threat alert",
     "url": "https://arstechnica.com/information-technology/2025/12/openai-releases-gpt-5-2-after-code-red-google-threat-alert/",
     "published_at": "2025-12-11T16:27:18-05:00",
@@ -1247,6 +1240,17 @@
     "content_html": "",
     "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/52c672d0-aa3c-450e-b01e-928c9109a6c6.png",
     "summary_text": "Larry Ellison\u2019s company raises its capital expenditure forecast as it doubles down on AI infrastructure bet",
+    "category": "ai"
+  },
+  {
+    "title": "Why we built\u2014and donated\u2014the Model Context Protocol (MCP)",
+    "url": "https://www.youtube.com/watch?v=PLyCki2K0Lg",
+    "published_at": "2025-12-11T15:14:58-05:00",
+    "source": "Anthropic YouTube",
+    "summary": "Anthropic's Stuart Ritchie speaks with co-creator David Soria Parra about the development of the Model Context Protocol (MCP), an open standard to connect AI to external tools and services\u2014and why Anthropic is donating it to the Linux Foundation. 00:00 - What is MCP? 01:21 - The problem MCP solves 02:46 - The USB-C analogy 03:45 - How MCP began 05:36 - What makes MCP different 08:05 - Community a...",
+    "content_html": "",
+    "image_url": "https://i.ytimg.com/vi/PLyCki2K0Lg/maxresdefault.jpg",
+    "summary_text": "Anthropic's Stuart Ritchie speaks with co-creator David Soria Parra about the development of the Model Context Protocol (MCP), an open standard to connect AI to external tools and services\u2014and why Anthropic is donating it to the Linux Foundation. 00:00 - What...",
     "category": "ai"
   },
   {
