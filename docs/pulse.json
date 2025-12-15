@@ -1,5 +1,35 @@
 [
   {
+    "title": "Enterprise AI Matures as Companies Move Pilots to Unified Platforms",
+    "url": "https://www.pymnts.com/artificial-intelligence-2/2025/enterprise-ai-matures-as-companies-move-pilots-to-unified-platforms/",
+    "published_at": "2025-12-15T10:00:21-05:00",
+    "source": "PYMNTS",
+    "summary": "In 2025, enterprises reported meaningful gains from AI pilots, but fragmented deployments quickly ran into rising costs, governance gaps and operational complexity once adoption moved beyond small teams. After two years of rapid experimentation, companies are consolidating disconnected tools into unified AI platforms designed to support core workflows, control inference spending and operate relia...",
+    "content_html": "<p>In 2025, enterprises reported meaningful gains from AI pilots, but fragmented deployments quickly ran into rising costs, governance gaps and operational complexity once adoption moved beyond small teams.</p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p>After two years of rapid experimentation, companies are consolidating disconnected tools into unified AI platforms designed to support core workflows, control inference spending and operate reliably across the organization. The shift marks a turning point in enterprise AI adoption, moving the technology from isolated productivity gains toward infrastructure that must run continuously and at scale.</p>\n<h2><strong>Hidden Cost of AI Fragmentation</strong></h2>\n<p>The rush to pilot generative AI tools has created an unexpected problem for enterprise technology leaders. According to <a href=\"https://www.cio.com/article/4102506/how-you-can-turn-2025-ai-pilots-into-an-enterprise-platform.html\">CIO.com</a>, companies now face mounting challenges from isolated AI experiments that operate without unified governance or integration. Individual departments purchased overlapping solutions, created shadow IT deployments and built custom applications that cannot communicate with each other or with core enterprise systems.</p>\n<p>Fragmentation increased costs as well as complexity. Separate vendor contracts, redundant model deployments and disconnected inference pipelines drove spending upward while limiting visibility into performance and usage. CIO.com reported that organizations often underestimated inference costs during pilot phases, only to face rapid expense growth as AI usage spread across functions and workflows.</p>\n<p><a href=\"https://www.pymnts.com/artificial-intelligence-2/2025/openai-ai-business-adoption-soars-as-employees-save-over-an-hour-daily/\" rel=\"noopener\" target=\"_blank\">PYMNTS reported</a> that employees using AI tools save more than an hour daily on tasks including email composition, document analysis and research. However, these individual productivity improvements do not automatically translate into enterprise value without proper integration and governance structures.</p>\n<h2><strong>Building Maturity Through Governance and Standards</strong></h2>\n<p>Research from <a href=\"https://cisr.mit.edu/publication/2025_0801_EnterpriseAIMaturityUpdate_WoernerSebastianWeillKaganer\" rel=\"noopener\" target=\"_blank\">MIT CISR</a> helps explain how enterprises move beyond this impasse. The research found that organizations generating sustained value align AI initiatives to business strategy, invest in shared systems and establish governance that enables scale rather than constrains it. Research highlights a shift from experimentation toward platforms that embed AI into how organizations work.</p>\n<p>MIT CISR points to organizations such as Guardian Life and Italy\u2019s Italgas as examples of this transition. Guardian centralized responsibility for data and AI while working directly with business leaders to prioritize use cases tied to measurable outcomes, allowing successful pilots to scale across the enterprise.</p>\n<p>Italgas invested in a modular, cloud-based platform that integrates data, AI models and analytics, enabling multiple business units to reuse capabilities instead of building their own. In both cases, platformization reduced duplication and accelerated deployment while maintaining consistency.</p>\n<p>Companies advancing toward enterprise platforms establish cross-functional oversight committees, implement monitoring systems that track model performance and bias, and create clear accountability structures for AI-driven decisions. These governance mechanisms address both immediate operational risks and longer-term concerns about compliance, ethics and organizational change management.</p>\n<h2><strong>Workforce Transformation</strong></h2>\n<p>PYMNTS Intelligence <a href=\"https://www.pymnts.com/study_posts/no-roadmap-no-problem-how-enterprises-are-reinventing-the-ai-workforce/\" rel=\"noopener\" target=\"_blank\">found</a> that CFOs cited talent shortages as a major obstacle to scaling AI, alongside employee resistance and compliance concerns. About 60% of CFOs say their firms are at least somewhat prepared for AI\u2019s workforce impact, and only 12% feel very prepared. 50% of CFOs expect AI to create new roles requiring new skills, and 47% expect significant headcount reduction.</p>\n<p>As AI platforms replace pilots, companies increasingly focus on retraining domain experts, redefining accountability and embedding AI into everyday work rather than isolating it within technical teams.</p>\n<p>Looking ahead, the World Economic Forum <a href=\"https://www.weforum.org/stories/2025/10/ai-business-efficiency-resilience/\" rel=\"noopener\" target=\"_blank\">finds</a> AI delivers efficiency gains, but its long-term value lies in strengthening business resilience by enhancing human capabilities rather than replacing them. Leaders focused solely on short-term productivity risk creating brittle organizations; resilient firms integrate AI as a partner that amplifies human judgment and adaptability. AI can preserve institutional knowledge, improve collaboration and help workers focus on higher-value work by handling repetitive tasks. Thoughtful deployment, clear communication about role changes and investment in hybrid skills build trust and durability.</p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/artificial-intelligence-2/2025/enterprise-ai-matures-as-companies-move-pilots-to-unified-platforms/\">Enterprise AI Matures as Companies Move Pilots to Unified Platforms</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
+    "image_url": "https://www.pymnts.com/wp-content/uploads/2025/06/enterprises-AI-assistants.png?w=457",
+    "summary_text": "In 2025, enterprises reported meaningful gains from AI pilots, but fragmented deployments quickly ran into rising costs, governance gaps and operational complexity once adoption moved beyond small teams. After two years of rapid experimentation, companies are...",
+    "category": "ai",
+    "_permalink": "/p/c895e9c402/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/c895e9c402/",
+    "_summary_240": "In 2025, enterprises reported meaningful gains from AI pilots, but fragmented deployments quickly ran into rising costs, governance gaps and operational complexity once adoption...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/c895e9c402/thumbnail.png"
+  },
+  {
+    "title": "Tokenization takes the lead in the fight for data security",
+    "url": "https://venturebeat.com/ai/tokenization-takes-the-lead-in-the-fight-for-data-security",
+    "published_at": "2025-12-15T10:00:00-05:00",
+    "source": "VentureBeat",
+    "summary": "Presented by Capital One Software Tokenization is emerging as a cornerstone of modern data security, helping businesses separate the value of their data from its risk. During this VB in Conversation , Ravi Raghu, president, Capital One Software, talks about the ways tokenization can help reduce the value of breached data and preserve underlying data format and usability, including Capital One\u2019s o...",
+    "content_html": "",
+    "image_url": "https://images.ctfassets.net/jdtwqhzvc2n1/3TXe0hgWfdDkdCl4d3mMcL/848b1f96ed7aa639b6f5dc38e157f29e/Capital_One_VB_Convo_hero.jpg?w=800&amp;q=75",
+    "summary_text": "Presented by Capital One Software Tokenization is emerging as a cornerstone of modern data security, helping businesses separate the value of their data from its risk. During this VB in Conversation , Ravi Raghu, president, Capital One Software, talks about t...",
+    "category": "fintech",
+    "_permalink": "/p/57d5e9c5c3/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/57d5e9c5c3/",
+    "_summary_240": "Presented by Capital One Software Tokenization is emerging as a cornerstone of modern data security, helping businesses separate the value of their data from its risk. During...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/57d5e9c5c3/thumbnail.png"
+  },
+  {
     "title": "UK Eyes Rules to Keep \u2018Dodgy Actors\u2019 Out of Crypto",
     "url": "https://www.pymnts.com/cryptocurrency/2025/united-kingdom-eyes-rules-keep-dodgy-actors-out-crypto/",
     "published_at": "2025-12-15T09:31:38-05:00",
@@ -270,21 +300,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/15ac3b0c5d/thumbnail.png"
   },
   {
-    "title": "Agentic AI Splits Big Tech Between Open Alliances and Closed Control",
-    "url": "https://www.pymnts.com/artificial-intelligence-2/2025/agentic-ai-splits-big-tech-between-open-alliances-and-closed-control/",
-    "published_at": "2025-12-15T04:00:07-05:00",
-    "source": "PYMNTS",
-    "summary": "Standards. Protocols. Alliances. It was a big week as usual in the Prompt Economy with several announcements that show cooperation among some of the power players that will make agentic AI\u2019s infrastructure the commerce and communication engine of the future. The biggest one came from Block, which has joined with Anthropic and OpenAI to [\u2026] The post Agentic AI Splits Big Tech Between Open Alliance...",
-    "content_html": "<p><span>Standards. Protocols. Alliances. </span><span>It was a big week as usual in the Prompt Economy with several announcements that show cooperation among some of the power players </span><span>that</span><span> will make agentic AI\u2019s infrastructure the commerce and communication engine of the future.</span></p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p><a class=\"editor-rtfLink\" href=\"https://block.xyz/inside/block-anthropic-and-openai-launch-the-agentic-ai-foundation\" rel=\"noopener\" target=\"_blank\"><span>The </span><span>biggest</span><span> one came from Block</span></a><span>, which has </span><span>joined</span><span> with Anthropic and OpenAI to launch the Agentic AI Foundation (AAIF), an </span><span>open source</span><span> initiative housed under the Linux Foundation and designed to shape how autonomous AI systems are built and deployed.</span><span> In a statement published by Block, the company argues that agentic AI is reaching a critical inflection point, where early architectural choices will determine whether the technology evolves as an open, interoperable ecosystem or fragments into proprietary silos. </span></p>\n<p><span>The foundation is intended to serve as a neutral governance and standards body, similar in spirit to the role played by Linux or the World Wide Web Consortium, </span><span>with the goal of ensuring</span><span> that agentic AI infrastructure remains accessible, collaborative </span><span>and</span><span> competitive across the industry. </span></p>\n<p><span>\u201cWe\u2019re at a critical juncture,\u201d Block writes, warning that without open development, agentic AI risks concentrating power among a few providers and slowing enterprise adoption.</span></p>\n<p><span>As part of the launch, </span><a class=\"editor-rtfLink\" href=\"https://block.xyz/inside/block-anthropic-and-openai-launch-the-agentic-ai-foundation\" rel=\"noopener\" target=\"_blank\"><span>Block is contributing</span></a><span> its open-source agentic framework, goose, alongside Anthropic\u2019s Model Context Protocol and OpenAI\u2019s AGENTS.md, establishing a shared technical foundation for interoperability between agents, data sources </span><span>and</span><span> developer tools. The foundation already includes a broad coalition of technology and payments companies, cloud providers </span><span>and</span><span> software platforms, underscoring how alliances around agentic AI are increasingly forming at the infrastructure layer rather than around individual products. Block frames the effort as both a technical and strategic move, positioning open governance as a prerequisite for innovation at scale.</span></p>\n<p><span>\u201cThe next decade of AI development will be defined by choices we make today,\u201d the company writes, adding that the foundation is meant to ensure that \u201cthe best ideas win, regardless of where they come from.\u201d</span></p>\n<h2>Where\u2019s Meta?</h2>\n<p><span>Almost every major agentic player from Google to AWS to Microsoft </span><span>are</span><span> in with the AAIF.</span><span> One is not. </span><span>Meta has not signed on to the organization </span><span>and</span><span> published reports last week indicate </span><span>they</span><span> won\u2019t be anytime soon, which is odd because it has based its Llama LLM model on </span><span>open source</span><span> architecture.</span></p>\n<p><span>According to a </span><a class=\"editor-rtfLink\" href=\"https://www.cio.com/article/4104546/its-everyone-but-meta-in-a-new-ai-standards-group.html\" rel=\"noopener\" target=\"_blank\"><span>report published by\u00a0CIO,</span></a><span> most </span><span>of the</span><span> major technology platforms \u2014 including OpenAI, Google, Microsoft, AWS </span><span>and</span><span> IBM \u2014 have aligned behind the Linux Foundation\u2019s newly formed Agentic AI Foundation, which aims to create shared standards and open infrastructure for AI agents.</span><span> Meta\u2019s absence is deliberate. The article reports that Meta is shifting away from its prior open-weights posture and toward a proprietary strategy centered on a new revenue-generating model code-named Avocado. Analysts cited in the piece argue that Meta was never fully committed to open source in the traditional sense, instead retaining control over training data and governance as competitive levers. As one analyst put it, Meta\u2019s approach reflected openness in distribution, not in control.</span></p>\n<p><a class=\"editor-rtfLink\" href=\"https://www.cio.com/article/4104546/its-everyone-but-meta-in-a-new-ai-standards-group.html\" rel=\"noopener\" target=\"_blank\"><span>The article</span></a><span> frames Meta\u2019s move as a structural divergence rather than a short-term tactic, with meaningful implications for alliances in agentic AI. While the rest of the industry is coalescing around interoperable standards to accelerate enterprise adoption, Meta is opting for vertical integration and tighter ownership of the stack. That choice may enable clearer monetization and performance control, but it comes at the cost of isolation from the standards-driven ecosystem taking shape. </span></p>\n<p><span>\u201cThe move toward a closed model tells us Meta no longer sees its AI as fuel for the ecosystem,\u201d one analyst quoted in the </span><a class=\"editor-rtfLink\" href=\"https://www.cio.com/article/4104546/its-everyone-but-meta-in-a-new-ai-standards-group.html\" rel=\"noopener\" target=\"_blank\"><span>article said.</span></a><span> \u201cIt sees it as product \u2014 something to sell, protect, and scale.\u201d </span><span>The result, the article suggests, is a growing fault line in agentic AI between companies </span><span>betting</span><span> on shared infrastructure and those </span><span>prioritizing</span><span> platform control</span><span>, a divide that</span><span> will increasingly shape partnerships, compatibility </span><span>and</span><span> long-term influence.</span></p>\n<h2>Competition Continues</h2>\n<p><span>The Meta move and other developments last week show that competition won\u2019t be affected by the AAIF. </span><span>OpenAI released </span><span>Chat GPT</span><span> 5.2 last week </span><span>and</span><span> Google has introduced a significantly expanded version of its Gemini Deep Research agent, signaling how competition in agentic AI is increasingly unfolding through capabilities, timing </span><span>and</span><span> integration rather than standalone model releases.</span></p>\n<p><span>According to\u00a0</span><a class=\"editor-rtfLink\" href=\"https://techcrunch.com/2025/12/11/google-launched-its-deepest-ai-research-agent-yet-on-the-same-day-openai-dropped-gpt-5-2/\" rel=\"noopener\" target=\"_blank\"><span>TechCrunch,</span></a><span> the new agent is built on Google\u2019s Gemini 3 Pro foundation model and is designed to do more than generate research summaries. </span><span>It </span><span>allows</span><span> developers to </span><span>embed</span><span> deep research capabilities directly into their own applications through a new Interactions API, </span><span>giving</span><span> them greater control over how agents reason, retrieve information </span><span>and</span><span> act.</span><span> Google says customers are already using the agent for tasks such as due diligence and drug safety analysis, and plans to integrate it across core products </span><span>including</span><span> Google Search, Google Finance, NotebookLM </span><span>and</span><span> the Gemini app. The move reflects Google\u2019s view that in an agent-driven future, \u201chumans don\u2019t Google anything anymore \u2014 their AI agents do.\u201d</span></p>\n<p><a class=\"editor-rtfLink\" href=\"https://techcrunch.com/2025/12/11/google-launched-its-deepest-ai-research-agent-yet-on-the-same-day-openai-dropped-gpt-5-2/\" rel=\"noopener\" target=\"_blank\"><span>The article</span></a><span> also highlights how alliances and rivalry in agentic AI are accelerating through rapid, closely timed releases. Google emphasized the reliability of Gemini 3 Pro, describing it as its \u201cmost factual\u201d model and positioning reduced hallucinations as essential for long-running autonomous tasks. </span><span>To support </span><span>those</span><span> claims, the company introduced an </span><span>open source</span><span> benchmark, DeepSearchQA, while reporting strong performance against existing tests.</span> <span>But</span><span> those results were quickly </span><span>overtaken</span><span> by events.</span><span> On the same day Google made its announcement, OpenAI released GPT-5.2, immediately reframing the competitive narrative. </span></p>\n<p><span>The near-simultaneous launches underscore how agentic AI leaders are racing not just on model quality, but on ecosystems, benchmarks </span><span>and</span><span> developer access, shaping partnerships and expectations in </span><span>real time</span><span> as each player seeks to define the emerging standards for autonomous research agents.</span></p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/artificial-intelligence-2/2025/agentic-ai-splits-big-tech-between-open-alliances-and-closed-control/\">Agentic AI Splits Big Tech Between Open Alliances and Closed Control</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
-    "image_url": "https://www.pymnts.com/wp-content/uploads/2025/12/Meta-Gemini-ChatGPT-AI1.jpg?w=457",
-    "summary_text": "Standards. Protocols. Alliances. It was a big week as usual in the Prompt Economy with several announcements that show cooperation among some of the power players that will make agentic AI\u2019s infrastructure the commerce and communication engine of the future. ...",
-    "category": "ai",
-    "_permalink": "/p/f41a1a1aa1/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/f41a1a1aa1/",
-    "_summary_240": "Standards. Protocols. Alliances. It was a big week as usual in the Prompt Economy with several announcements that show cooperation among some of the power players that will make...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/f41a1a1aa1/thumbnail.png"
-  },
-  {
     "title": "Who is Picea Robotics, Roomba\u2019s new owner?",
     "url": "https://www.theverge.com/news/844474/who-is-picea-robotics-company-owns-irobot",
     "published_at": "2025-12-15T03:52:45-05:00",
@@ -343,6 +358,21 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/ac4ae55bf2/",
     "_summary_240": "Nvidia launched the new version of its frontier models, Nemotron 3, by leaning in on a model architecture that the world\u2019s most valuable company said offers more accuracy and...",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/ac4ae55bf2/thumbnail.png"
+  },
+  {
+    "title": "Why agentic AI needs a new category of customer data",
+    "url": "https://venturebeat.com/ai/why-agentic-ai-needs-a-new-category-of-customer-data",
+    "published_at": "2025-12-15T00:00:00-05:00",
+    "source": "VentureBeat",
+    "summary": "Presented by Twilio The customer data infrastructure powering most enterprises was architected for a world that no longer exists: one where marketing interactions could be captured and processed in batches, where campaign timing was measured in days (not milliseconds), and where \"personalization\" meant inserting a first name into an email template. Conversational AI has shattered those assumption...",
+    "content_html": "",
+    "image_url": "https://images.ctfassets.net/jdtwqhzvc2n1/4ONhyEvpMjhV5KWf469Zcm/3534179a6a3df355dab84e929e0db853/AdobeStock_1389144486.jpeg?w=800&amp;q=75",
+    "summary_text": "Presented by Twilio The customer data infrastructure powering most enterprises was architected for a world that no longer exists: one where marketing interactions could be captured and processed in batches, where campaign timing was measured in days (not mill...",
+    "category": "ai",
+    "_permalink": "/p/76626fe621/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/76626fe621/",
+    "_summary_240": "Presented by Twilio The customer data infrastructure powering most enterprises was architected for a world that no longer exists: one where marketing interactions could be...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/76626fe621/thumbnail.png"
   },
   {
     "title": "How iRobot lost its way home",
@@ -660,21 +690,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/ac4cb6b28e/thumbnail.png"
   },
   {
-    "title": "Wall Street Week | Hubbard on Fed Cut Fallout, Open Source AI, Nuclear Bet, Department Store Revival",
-    "url": "https://www.bloomberg.com/news/videos/2025-12-13/wall-street-week-hubbard-on-fed-cuts-open-source-ai-video",
-    "published_at": "2025-12-13T10:13:37-05:00",
-    "source": "Bloomberg Technology",
-    "summary": "This week, Glenn Hubbard warns that tariffs, shaky data and a mature credit cycle create risks as the Fed looks toward 2026. And, will open AI ecosystems win out over closed models, as AMD CEO Lisa Su and former IBM CEO Sam Palmisano suggest? Plus, from AI to manufacturing, soaring electricity demand is forcing a rethink of where our power comes from and how fast we can build to generate it. Late...",
-    "content_html": "",
-    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iGFXf_q86K1Q/v3/1200x-1.png",
-    "summary_text": "This week, Glenn Hubbard warns that tariffs, shaky data and a mature credit cycle create risks as the Fed looks toward 2026. And, will open AI ecosystems win out over closed models, as AMD CEO Lisa Su and former IBM CEO Sam Palmisano suggest? Plus, from AI to...",
-    "category": "ai",
-    "_permalink": "/p/5c053a71fd/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/5c053a71fd/",
-    "_summary_240": "This week, Glenn Hubbard warns that tariffs, shaky data and a mature credit cycle create risks as the Fed looks toward 2026. And, will open AI ecosystems win out over closed...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/5c053a71fd/thumbnail.png"
-  },
-  {
     "title": "Tether\u2019s \u20ac1.1 Billion Juventus Play Pits New Money Vs. Old",
     "url": "https://www.bloomberg.com/news/articles/2025-12-13/tether-s-1-1-billion-juventus-play-pits-new-money-against-old",
     "published_at": "2025-12-13T09:47:33-05:00",
@@ -885,21 +900,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/8cc4c9b656/thumbnail.png"
   },
   {
-    "title": "Data breach at credit check giant 700Credit affects at least 5.6 million",
-    "url": "https://techcrunch.com/2025/12/12/data-breach-at-credit-check-giant-700credit-affects-at-least-5-6-million/",
-    "published_at": "2025-12-12T12:35:46-05:00",
-    "source": "TechCrunch",
-    "summary": "700Credit, a company that runs credit checks and identity verification services for auto dealerships across the U.S., had a data breach that allowed a hacker to steal names, addresses, dates of birth, and Social Security numbers.",
-    "content_html": "",
-    "image_url": "https://techcrunch.com/wp-content/uploads/2025/05/social-security-cards-104145260.jpg?resize=1200,799",
-    "summary_text": "700Credit, a company that runs credit checks and identity verification services for auto dealerships across the U.S., had a data breach that allowed a hacker to steal names, addresses, dates of birth, and Social Security numbers.",
-    "category": "fintech",
-    "_permalink": "/p/a02f44d794/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/a02f44d794/",
-    "_summary_240": "700Credit, a company that runs credit checks and identity verification services for auto dealerships across the U.S., had a data breach that allowed a hacker to steal names,...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/a02f44d794/thumbnail.png"
-  },
-  {
     "title": "Agent Lightning: Making AI agents smarter without rewriting code",
     "url": "https://www.microsoft.com/en-us/research/blog/agent-lightning-adding-reinforcement-learning-to-ai-agents-without-code-rewrites/",
     "published_at": "2025-12-12T12:20:21-05:00",
@@ -983,11 +983,7 @@
     "content_html": "",
     "image_url": "https://static01.nyt.com/images/2025/12/02/us/politics/biz-hamm-promo/biz-hamm-promo-mediumSquareAt3X.jpg",
     "summary_text": "Harold Hamm, an Oklahoma oil tycoon, has played a central role in reshaping energy policy by allying himself with President Trump.",
-    "category": "software",
-    "_permalink": "/p/e26ae51b4f/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/e26ae51b4f/",
-    "_summary_240": "Harold Hamm, an Oklahoma oil tycoon, has played a central role in reshaping energy policy by allying himself with President Trump.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/e26ae51b4f/thumbnail.png"
+    "category": "software"
   },
   {
     "title": "Pakistan clears Binance and HTX to seek local crypto licenses",
@@ -1221,17 +1217,6 @@
     "category": "ai"
   },
   {
-    "title": "GPT-5.2 first impressions: a powerful update, especially for business tasks and workflows",
-    "url": "https://venturebeat.com/ai/gpt-5-2-first-impressions-a-powerful-update-especially-for-business-tasks",
-    "published_at": "2025-12-11T18:26:00-05:00",
-    "source": "VentureBeat",
-    "summary": "OpenAI has officially released GPT-5.2 , and the reactions from early testers \u2014 among whom OpenAI seeded the model several days prior to public release, in some cases weeks ago \u2014 paints a two toned picture: it is a monumental leap forward for deep, autonomous reasoning and coding, yet potentially an underwhelming \"incremental\" update for casual conversationalists. Following early access periods a...",
-    "content_html": "",
-    "image_url": "https://images.ctfassets.net/jdtwqhzvc2n1/6q1G4wvDXmIc0wvUICG9Xq/45d95c24a33f70247eb22cfd7222ea82/uXhTzWhCBc7Q5ud-vONqQ.jpg?w=800&amp;q=75",
-    "summary_text": "OpenAI has officially released GPT-5.2 , and the reactions from early testers \u2014 among whom OpenAI seeded the model several days prior to public release, in some cases weeks ago \u2014 paints a two toned picture: it is a monumental leap forward for deep, autonomous...",
-    "category": "ai"
-  },
-  {
     "title": "Do Kwon, Crypto Entrepreneur Who Caused 2022 Crash, Sentenced to 15 Years",
     "url": "https://www.nytimes.com/2025/12/11/technology/crypto-do-kwon-sentenced-prison.html",
     "published_at": "2025-12-11T17:54:52-05:00",
@@ -1276,17 +1261,6 @@
     "category": "ai"
   },
   {
-    "title": "10 years.",
-    "url": "https://www.youtube.com/watch?v=8JXwrVQQ4jw",
-    "published_at": "2025-12-11T16:33:02-05:00",
-    "source": "OpenAI YouTube",
-    "summary": "",
-    "content_html": "",
-    "image_url": "https://i.ytimg.com/vi/8JXwrVQQ4jw/maxresdefault.jpg",
-    "summary_text": "Enjoy the videos and music you love, upload original content, and share it all with friends, family, and the world on YouTube.",
-    "category": "ai"
-  },
-  {
     "title": "OpenAI releases GPT-5.2 after \u201ccode red\u201d Google threat alert",
     "url": "https://arstechnica.com/information-technology/2025/12/openai-releases-gpt-5-2-after-code-red-google-threat-alert/",
     "published_at": "2025-12-11T16:27:18-05:00",
@@ -1306,6 +1280,17 @@
     "content_html": "",
     "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/52c672d0-aa3c-450e-b01e-928c9109a6c6.png",
     "summary_text": "Larry Ellison\u2019s company raises its capital expenditure forecast as it doubles down on AI infrastructure bet",
+    "category": "ai"
+  },
+  {
+    "title": "Why we built\u2014and donated\u2014the Model Context Protocol (MCP)",
+    "url": "https://www.youtube.com/watch?v=PLyCki2K0Lg",
+    "published_at": "2025-12-11T15:14:58-05:00",
+    "source": "Anthropic YouTube",
+    "summary": "Anthropic's Stuart Ritchie speaks with co-creator David Soria Parra about the development of the Model Context Protocol (MCP), an open standard to connect AI to external tools and services\u2014and why Anthropic is donating it to the Linux Foundation. 00:00 - What is MCP? 01:21 - The problem MCP solves 02:46 - The USB-C analogy 03:45 - How MCP began 05:36 - What makes MCP different 08:05 - Community a...",
+    "content_html": "",
+    "image_url": "https://i.ytimg.com/vi/PLyCki2K0Lg/maxresdefault.jpg",
+    "summary_text": "Anthropic's Stuart Ritchie speaks with co-creator David Soria Parra about the development of the Model Context Protocol (MCP), an open standard to connect AI to external tools and services\u2014and why Anthropic is donating it to the Linux Foundation. 00:00 - What...",
     "category": "ai"
   },
   {
@@ -1350,17 +1335,6 @@
     "content_html": "",
     "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/7a9c801d-d27e-4f58-ab85-81a429d37d1f.jpg",
     "summary_text": "The database company\u2019s stock looks like a leveraged bet on OpenAI being able to meet its long-term promises",
-    "category": "ai"
-  },
-  {
-    "title": "OpenAI's GPT-5.2 is here: what enterprises need to know",
-    "url": "https://venturebeat.com/ai/openais-gpt-5-2-is-here-what-enterprises-need-to-know",
-    "published_at": "2025-12-11T13:16:00-05:00",
-    "source": "VentureBeat",
-    "summary": "The rumors were true: OpenAI on Thursday announced the release of its new frontier large language model (LLM) family, GPT-5.2 . It comes at a pivotal moment for the AI pioneer, which has faced intensifying pressure since rival Google\u2019s Gemini 3 LLM seized the top spot on major third-party performance leaderboards and many key benchmarks last month, though OpenAI leaders stressed in a press briefi...",
-    "content_html": "",
-    "image_url": "https://images.ctfassets.net/jdtwqhzvc2n1/3V50gYllm3mWHfplVg6RxG/a06f74823800f27a945af5a27c04bb5c/aXhBsF1CKZZnrxoHyH4hN.png?w=800&amp;q=75",
-    "summary_text": "The rumors were true: OpenAI on Thursday announced the release of its new frontier large language model (LLM) family, GPT-5.2 . It comes at a pivotal moment for the AI pioneer, which has faced intensifying pressure since rival Google\u2019s Gemini 3 LLM seized the...",
     "category": "ai"
   },
   {
@@ -1447,7 +1421,7 @@
     "source": "Financial Times - Technology",
     "summary": "A market correction will give the EU the chance to offer a trust-based alternative to American tech",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://images.ft.com/v3/image/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F853ef860-b644-425a-90d5-9d65ffee33e6.jpg?source=next-article&fit=scale-down&quality=highest&width=700&dpr=1",
     "summary_text": "A market correction will give the EU the chance to offer a trust-based alternative to American tech",
     "category": "ai"
   },
@@ -1581,17 +1555,6 @@
     "content_html": "",
     "image_url": "https://s3.amazonaws.com/cms.ipressroom.com/219/files/202512/6939bd5f3d633254e5e8fec2_cpu-to-gpu-platform-shift_1280x680-842x450/cpu-to-gpu-platform-shift_1280x680-842x450_thmb.jpg",
     "summary_text": "The NVIDIA accelerated computing platform is leading supercomputing benchmarks once dominated by CPUs, enabling AI, science, business and computing efficiency worldwide. Moore\u2019s Law has run its course, and parallel processing is the way forward. With this evo...",
-    "category": "ai"
-  },
-  {
-    "title": "Meta\u2019s New A.I. Superstars Are Chafing Against the Rest of the Company",
-    "url": "https://www.nytimes.com/2025/12/10/technology/meta-ai-tbd-lab-friction.html",
-    "published_at": "2025-12-10T10:16:23-05:00",
-    "source": "The New York Times - Technology",
-    "summary": "An us-versus-them mentality has emerged between Meta\u2019s top artificial intelligence team and longtime lieutenants to Mark Zuckerberg.",
-    "content_html": "",
-    "image_url": "https://static01.nyt.com/images/2025/12/10/business/00met-ai/00met-ai-mediumSquareAt3X.jpg",
-    "summary_text": "An us-versus-them mentality has emerged between Meta\u2019s top artificial intelligence team and longtime lieutenants to Mark Zuckerberg.",
     "category": "ai"
   },
   {
