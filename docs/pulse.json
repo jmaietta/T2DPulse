@@ -1,5 +1,20 @@
 [
   {
+    "title": "What 2025\u2019s Economic Warning Signs Mean for 2026",
+    "url": "https://www.bloomberg.com/news/articles/2025-12-15/what-2025-s-jobs-inflation-and-ai-risks-mean-for-the-economy-in-2026",
+    "published_at": "2025-12-15T17:28:37-05:00",
+    "source": "Bloomberg Technology",
+    "summary": "Today on the Big Take: All year, the jobs market, consumer sentiment, AI and inflation flashed economic warning signs \u2014 what does this mean for 2026?",
+    "content_html": "A Bloomberg 500 Consumer Discretionary ex Amazon and Tesla Index Total Return Chart on the floor of the New York Stock Exchange (NYSE) in New York, US, on Monday, Dec. 15, 2025. The last full trading week of 2025 started with stocks falling and bonds rising as Wall Street geared up for key economic data that will help shape the Federal Reserve rate outlook. Photographer: Michael Nagle/Bloomberg",
+    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iG1P1jDe6DW0/v0/1200x-1.jpg",
+    "summary_text": "Today on the Big Take: All year, the jobs market, consumer sentiment, AI and inflation flashed economic warning signs \u2014 what does this mean for 2026?",
+    "category": "ai",
+    "_permalink": "/p/ec3132b7d2/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/ec3132b7d2/",
+    "_summary_240": "Today on the Big Take: All year, the jobs market, consumer sentiment, AI and inflation flashed economic warning signs \u2014 what does this mean for 2026?",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/ec3132b7d2/thumbnail.png"
+  },
+  {
     "title": "Temu Enables Shopify Merchants to List Products on Its Marketplace",
     "url": "https://www.pymnts.com/news/ecommerce/2025/temu-enables-shopify-merchants-to-list-products-on-its-marketplace/",
     "published_at": "2025-12-15T16:59:47-05:00",
@@ -687,7 +702,7 @@
   },
   {
     "title": "Bolmo\u2019s architecture unlocks efficient byte\u2011level LM training without sacrificing quality",
-    "url": "https://venturebeat.com/orchestration/bolmos-architecture-unlocks-efficient-byte-level-lm-training-without",
+    "url": "https://venturebeat.com/ai/bolmos-architecture-unlocks-efficient-byte-level-lm-training-without",
     "published_at": "2025-12-15T00:00:00-05:00",
     "source": "VentureBeat",
     "summary": "Enterprises that want tokenizer-free multilingual models are increasingly turning to byte-level language models to reduce brittleness in noisy or low-resource text. To tap into that niche \u2014 and make it practical at scale \u2014 the Allen Institute of AI (Ai2) introduced Bolmo , a new family of models that leverage its Olmo 3 models by \u201cbytefiying\u201d them and reusing their backbone and capabilities. The ...",
@@ -695,10 +710,10 @@
     "image_url": "https://images.ctfassets.net/jdtwqhzvc2n1/3vX2sUyJCdUl0o3HxcSPiI/71266904e616238751a36b1e7e0aef79/crimedy7_illustration_of_robots_as_bytes_--ar_169_--v_7_97b9db0b-c676-4b02-82c9-af958afc193e_3.png?w=800&amp;q=75",
     "summary_text": "Enterprises that want tokenizer-free multilingual models are increasingly turning to byte-level language models to reduce brittleness in noisy or low-resource text. To tap into that niche \u2014 and make it practical at scale \u2014 the Allen Institute of AI (Ai2) intr...",
     "category": "ai",
-    "_permalink": "/p/4b3367428f/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/4b3367428f/",
+    "_permalink": "/p/784c757a0c/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/784c757a0c/",
     "_summary_240": "Enterprises that want tokenizer-free multilingual models are increasingly turning to byte-level language models to reduce brittleness in noisy or low-resource text. To tap into...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/4b3367428f/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/784c757a0c/thumbnail.png"
   },
   {
     "title": "Why agentic AI needs a new category of customer data",
@@ -1269,6 +1284,17 @@
     "category": "ai"
   },
   {
+    "title": "10 years.",
+    "url": "https://www.youtube.com/watch?v=8JXwrVQQ4jw",
+    "published_at": "2025-12-11T16:33:02-05:00",
+    "source": "OpenAI YouTube",
+    "summary": "",
+    "content_html": "",
+    "image_url": "https://i.ytimg.com/vi/8JXwrVQQ4jw/maxresdefault.jpg",
+    "summary_text": "Enjoy the videos and music you love, upload original content, and share it all with friends, family, and the world on YouTube.",
+    "category": "ai"
+  },
+  {
     "title": "OpenAI releases GPT-5.2 after \u201ccode red\u201d Google threat alert",
     "url": "https://arstechnica.com/information-technology/2025/12/openai-releases-gpt-5-2-after-code-red-google-threat-alert/",
     "published_at": "2025-12-11T16:27:18-05:00",
@@ -1288,17 +1314,6 @@
     "content_html": "",
     "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/52c672d0-aa3c-450e-b01e-928c9109a6c6.png",
     "summary_text": "Larry Ellison\u2019s company raises its capital expenditure forecast as it doubles down on AI infrastructure bet",
-    "category": "ai"
-  },
-  {
-    "title": "Why we built\u2014and donated\u2014the Model Context Protocol (MCP)",
-    "url": "https://www.youtube.com/watch?v=PLyCki2K0Lg",
-    "published_at": "2025-12-11T15:14:58-05:00",
-    "source": "Anthropic YouTube",
-    "summary": "Anthropic's Stuart Ritchie speaks with co-creator David Soria Parra about the development of the Model Context Protocol (MCP), an open standard to connect AI to external tools and services\u2014and why Anthropic is donating it to the Linux Foundation. 00:00 - What is MCP? 01:21 - The problem MCP solves 02:46 - The USB-C analogy 03:45 - How MCP began 05:36 - What makes MCP different 08:05 - Community a...",
-    "content_html": "",
-    "image_url": "https://i.ytimg.com/vi/PLyCki2K0Lg/maxresdefault.jpg",
-    "summary_text": "Anthropic's Stuart Ritchie speaks with co-creator David Soria Parra about the development of the Model Context Protocol (MCP), an open standard to connect AI to external tools and services\u2014and why Anthropic is donating it to the Linux Foundation. 00:00 - What...",
     "category": "ai"
   },
   {
@@ -1341,7 +1356,7 @@
     "source": "Financial Times - Technology",
     "summary": "The database company\u2019s stock looks like a leveraged bet on OpenAI being able to meet its long-term promises",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://images.ft.com/v3/image/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F7a9c801d-d27e-4f58-ab85-81a429d37d1f.jpg?source=next-article&fit=scale-down&quality=highest&width=700&dpr=1",
     "summary_text": "The database company\u2019s stock looks like a leveraged bet on OpenAI being able to meet its long-term promises",
     "category": "ai"
   },
@@ -1445,17 +1460,6 @@
     "category": "fintech"
   },
   {
-    "title": "Update to GPT-5 System Card: GPT-5.2",
-    "url": "https://openai.com/index/gpt-5-system-card-update-gpt-5-2",
-    "published_at": "2025-12-10T19:00:00-05:00",
-    "source": "OpenAI News",
-    "summary": "GPT-5.2 is the latest model family in the GPT-5 series. The comprehensive safety mitigation approach for these models is largely the same as that described in the GPT-5 System Card and GPT-5.1 System Card. Like OpenAI\u2019s other models, the GPT-5.2 models were trained on diverse datasets, including information that is publicly available on the internet, information that we partner with third parties...",
-    "content_html": "",
-    "image_url": "",
-    "summary_text": "GPT-5.2 is the latest model family in the GPT-5 series. The comprehensive safety mitigation approach for these models is largely the same as that described in the GPT-5 System Card and GPT-5.1 System Card. Like OpenAI\u2019s other models, the GPT-5.2 models were t...",
-    "category": "ai"
-  },
-  {
     "title": "Increasing revenue 300% by bringing AI to SMBs",
     "url": "https://openai.com/index/podium",
     "published_at": "2025-12-10T19:00:00-05:00",
@@ -1467,14 +1471,14 @@
     "category": "ai"
   },
   {
-    "title": "The Walt Disney Company and OpenAI reach landmark agreement to bring beloved characters to Sora",
-    "url": "https://openai.com/index/disney-sora-agreement",
+    "title": "Update to GPT-5 System Card: GPT-5.2",
+    "url": "https://openai.com/index/gpt-5-system-card-update-gpt-5-2",
     "published_at": "2025-12-10T19:00:00-05:00",
     "source": "OpenAI News",
-    "summary": "Disney and OpenAI have reached an agreement to bring more than 200 Disney, Marvel, Pixar and Star Wars characters to Sora for fan-inspired short videos. The agreement emphasizes responsible AI in entertainment and includes Disney\u2019s company-wide use of ChatGPT Enterprise and the OpenAI API.",
+    "summary": "GPT-5.2 is the latest model family in the GPT-5 series. The comprehensive safety mitigation approach for these models is largely the same as that described in the GPT-5 System Card and GPT-5.1 System Card. Like OpenAI\u2019s other models, the GPT-5.2 models were trained on diverse datasets, including information that is publicly available on the internet, information that we partner with third parties...",
     "content_html": "",
     "image_url": "",
-    "summary_text": "Disney and OpenAI have reached an agreement to bring more than 200 Disney, Marvel, Pixar and Star Wars characters to Sora for fan-inspired short videos. The agreement emphasizes responsible AI in entertainment and includes Disney\u2019s company-wide use of ChatGPT...",
+    "summary_text": "GPT-5.2 is the latest model family in the GPT-5 series. The comprehensive safety mitigation approach for these models is largely the same as that described in the GPT-5 System Card and GPT-5.1 System Card. Like OpenAI\u2019s other models, the GPT-5.2 models were t...",
     "category": "ai"
   },
   {
@@ -1497,6 +1501,17 @@
     "content_html": "",
     "image_url": "",
     "summary_text": "GPT-5.2 is our most advanced frontier model for everyday professional work, with state-of-the-art reasoning, long-context understanding, coding, and vision. Use it in ChatGPT and the OpenAI API to power faster, more reliable agentic workflows.",
+    "category": "ai"
+  },
+  {
+    "title": "The Walt Disney Company and OpenAI reach landmark agreement to bring beloved characters to Sora",
+    "url": "https://openai.com/index/disney-sora-agreement",
+    "published_at": "2025-12-10T19:00:00-05:00",
+    "source": "OpenAI News",
+    "summary": "Disney and OpenAI have reached an agreement to bring more than 200 Disney, Marvel, Pixar and Star Wars characters to Sora for fan-inspired short videos. The agreement emphasizes responsible AI in entertainment and includes Disney\u2019s company-wide use of ChatGPT Enterprise and the OpenAI API.",
+    "content_html": "",
+    "image_url": "",
+    "summary_text": "Disney and OpenAI have reached an agreement to bring more than 200 Disney, Marvel, Pixar and Star Wars characters to Sora for fan-inspired short videos. The agreement emphasizes responsible AI in entertainment and includes Disney\u2019s company-wide use of ChatGPT...",
     "category": "ai"
   },
   {
