@@ -1,5 +1,35 @@
 [
   {
+    "title": "Robinhood's Crypto GM on 2026 Plans for US, EU",
+    "url": "https://www.bloomberg.com/news/videos/2025-12-15/robinhood-s-crypto-gm-on-2026-plans-for-us-eu-video",
+    "published_at": "2025-12-15T18:07:56-05:00",
+    "source": "Bloomberg Technology",
+    "summary": "Johann Kerbrat, Robinhood SVP and General Manager of Crypto, discusses the company\u2019s crypto plans and new tools for advanced traders. He tells Romaine Bostick and Katie Greifeld on The Close that Robinhood plans to expand crypto features, including allowing users to manually add cost basis for crypto deposits, with a strong focus on serving advanced traders. (Source: Bloomberg)",
+    "content_html": "",
+    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/i4XYpn3696Mw/v3/1200x-1.jpg",
+    "summary_text": "Johann Kerbrat, Robinhood SVP and General Manager of Crypto, discusses the company\u2019s crypto plans and new tools for advanced traders. He tells Romaine Bostick and Katie Greifeld on The Close that Robinhood plans to expand crypto features, including allowing u...",
+    "category": "fintech",
+    "_permalink": "/p/fdf1ce608f/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/fdf1ce608f/",
+    "_summary_240": "Johann Kerbrat, Robinhood SVP and General Manager of Crypto, discusses the company\u2019s crypto plans and new tools for advanced traders. He tells Romaine Bostick and Katie Greifeld...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/fdf1ce608f/thumbnail.png"
+  },
+  {
+    "title": "Merriam-Webster\u2019s word of the year delivers a dismissive verdict on junk AI content",
+    "url": "https://arstechnica.com/ai/2025/12/merriam-webster-crowns-slop-word-of-the-year-as-ai-content-floods-internet/",
+    "published_at": "2025-12-15T17:41:43-05:00",
+    "source": "Ars Technica",
+    "summary": "Dictionary codifies the term that took hold in 2024 for low-quality AI-generated content.",
+    "content_html": "<p>Like most tools, generative AI models can be misused. And when the misuse gets bad enough that a major dictionary notices, you know it\u2019s become a cultural phenomenon.</p>\n<p>On Sunday, Merriam-Webster <a href=\"https://www.merriam-webster.com/wordplay/word-of-the-year\">announced</a> that \u201cslop\u201d is its 2025 Word of the Year, reflecting how the term has become shorthand for the flood of low-quality AI-generated content that has spread across <a href=\"https://www.404media.co/email/1cdf7620-2e2f-4450-9cd9-e041f4f0c27f/\">social media</a>, search results, and the web at large. The dictionary defines slop as \u201cdigital content of low quality that is produced usually in quantity by means of artificial intelligence.\u201d</p>\n<p>\u201cIt\u2019s such an illustrative word,\u201d Merriam-Webster president Greg Barlow <a href=\"https://apnews.com/article/merriam-webster-dictionary-word-year-2025-slop-2dffb2379cac6001aa30e148669e3393\">told</a> the Associated Press. \u201cIt\u2019s part of a transformative technology, AI, and it\u2019s something that people have found fascinating, annoying, and a little bit ridiculous.\u201d</p><p><a href=\"https://arstechnica.com/ai/2025/12/merriam-webster-crowns-slop-word-of-the-year-as-ai-content-floods-internet/\">Read full article</a></p>\n<p><a href=\"https://arstechnica.com/ai/2025/12/merriam-webster-crowns-slop-word-of-the-year-as-ai-content-floods-internet/#comments\">Comments</a></p>",
+    "image_url": "https://cdn.arstechnica.net/wp-content/uploads/2025/12/GettyImages-2241620003-1152x648-1765829622.jpg",
+    "summary_text": "Dictionary codifies the term that took hold in 2024 for low-quality AI-generated content.",
+    "category": "ai",
+    "_permalink": "/p/26bb3c83ad/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/26bb3c83ad/",
+    "_summary_240": "Dictionary codifies the term that took hold in 2024 for low-quality AI-generated content.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/26bb3c83ad/thumbnail.png"
+  },
+  {
     "title": "What 2025\u2019s Economic Warning Signs Mean for 2026",
     "url": "https://www.bloomberg.com/news/articles/2025-12-15/what-2025-s-jobs-inflation-and-ai-risks-mean-for-the-economy-in-2026",
     "published_at": "2025-12-15T17:28:37-05:00",
@@ -109,14 +139,14 @@
     "url": "https://arstechnica.com/security/2025/12/microsoft-will-finally-kill-obsolete-cipher-that-has-wreaked-decades-of-havoc/",
     "published_at": "2025-12-15T16:15:55-05:00",
     "source": "Ars Technica",
-    "summary": "The weak RC4 for administrative authentication has been a hacker Holy Grail for decades.",
+    "summary": "The weak RC4 for administrative authentication has been a hacker holy grail for decades.",
     "content_html": "<p>Microsoft is killing off an obsolete and vulnerable encryption cipher that Windows has supported by default for 26 years following more than a decade of devastating hacks that exploited it and recently faced blistering criticism from a prominent US senator.</p>\n<p>When the software maker rolled out Active Directory in 2000, it made RC4 a sole means of securing the Windows component, which administrators use to configure and provision fellow administrator and user accounts inside large organizations. RC4, short for Rivist Cipher 4, is a nod to mathematician and cryptographer Ron Rivest of RSA Security, who developed the stream cipher in 1987. Within days of the trade-secret-protected algorithm being leaked in 1994, a researcher demonstrated a cryptographic attack that significantly weakened the security it had been believed to provide. Despite the known susceptibility, RC4 remained a staple in encryption protocols, including SSL and its successor TLS, until about a decade ago.</p>\n<h2>Out with the old</h2>\n<p>One of the most visible holdouts in supporting RC4 has been Microsoft. Eventually, Microsoft upgraded Active Directory to support the much more secure AES encryption standard. But by default, Windows servers have continued to respond to RC4-based authentication requests and return an RC4-based response. The RC4 fallback has been a favorite weakness hackers have exploited to compromise enterprise networks. Use of RC4 played a <a href=\"https://arstechnica.com/security/2025/09/how-weak-passwords-and-other-failings-led-to-catastrophic-breach-of-ascension/\">key role</a> in last year\u2019s breach of health giant Ascension. The breach caused life-threatening disruptions at 140 hospitals and put the medical records of 5.6 million patients into the hands of the attackers. US Senator Ron Wyden (D-Ore.) <a href=\"https://arstechnica.com/security/2025/09/senator-blasts-microsoft-for-making-default-windows-vulnerable-to-kerberoasting\">in September</a> called on the Federal Trade Commission to investigate Microsoft for \u201cgross cybersecurity negligence,\u201d citing the continued default support for RC4.</p><p><a href=\"https://arstechnica.com/security/2025/12/microsoft-will-finally-kill-obsolete-cipher-that-has-wreaked-decades-of-havoc/\">Read full article</a></p>\n<p><a href=\"https://arstechnica.com/security/2025/12/microsoft-will-finally-kill-obsolete-cipher-that-has-wreaked-decades-of-havoc/#comments\">Comments</a></p>",
     "image_url": "https://cdn.arstechnica.net/wp-content/uploads/2025/09/microsoft-logo-1024x648.jpg",
-    "summary_text": "The weak RC4 for administrative authentication has been a hacker Holy Grail for decades.",
+    "summary_text": "The weak RC4 for administrative authentication has been a hacker holy grail for decades.",
     "category": "fintech",
     "_permalink": "/p/5cdee237cd/",
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/5cdee237cd/",
-    "_summary_240": "The weak RC4 for administrative authentication has been a hacker Holy Grail for decades.",
+    "_summary_240": "The weak RC4 for administrative authentication has been a hacker holy grail for decades.",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/5cdee237cd/thumbnail.png"
   },
   {
@@ -1024,11 +1054,7 @@
     "content_html": "",
     "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTIvMDE5YjE0OWMtMTkxYS03MjA2LWI1ODEtZWE3YjcyZjYxYTgyLmpwZw==.jpg",
     "summary_text": "Regulations must evolve for tokenized real-world assets to be better integrated with DeFi, so their immediate benefit won\u2019t be significant, says NYDIG\u2019s Greg Cipolaro.",
-    "category": "fintech",
-    "_permalink": "/p/703ef16bc1/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/703ef16bc1/",
-    "_summary_240": "Regulations must evolve for tokenized real-world assets to be better integrated with DeFi, so their immediate benefit won\u2019t be significant, says NYDIG\u2019s Greg Cipolaro.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/703ef16bc1/thumbnail.png"
+    "category": "fintech"
   },
   {
     "title": "OpenAI built an AI coding agent and uses it to improve the agent itself",
@@ -1218,17 +1244,6 @@
     "category": "ai"
   },
   {
-    "title": "How We Used Codex to Ship Sora for Android in 28 Days",
-    "url": "https://openai.com/index/shipping-sora-for-android-with-codex",
-    "published_at": "2025-12-11T19:00:00-05:00",
-    "source": "OpenAI News",
-    "summary": "OpenAI shipped Sora for Android in 28 days using Codex. AI-assisted planning, translation, and parallel coding workflows helped a nimble team deliver rapid, reliable development.",
-    "content_html": "",
-    "image_url": "",
-    "summary_text": "OpenAI shipped Sora for Android in 28 days using Codex. AI-assisted planning, translation, and parallel coding workflows helped a nimble team deliver rapid, reliable development.",
-    "category": "software"
-  },
-  {
     "title": "BNY builds \u201cAI for everyone, everywhere\u201d with OpenAI",
     "url": "https://openai.com/index/bny",
     "published_at": "2025-12-11T19:00:00-05:00",
@@ -1238,6 +1253,17 @@
     "image_url": "",
     "summary_text": "BNY is using OpenAI technology to expand AI adoption enterprise-wide. Through its Eliza platform, 20,000+ employees are building AI agents that enhance efficiency and improve client outcomes.",
     "category": "ai"
+  },
+  {
+    "title": "How We Used Codex to Ship Sora for Android in 28 Days",
+    "url": "https://openai.com/index/shipping-sora-for-android-with-codex",
+    "published_at": "2025-12-11T19:00:00-05:00",
+    "source": "OpenAI News",
+    "summary": "OpenAI shipped Sora for Android in 28 days using Codex. AI-assisted planning, translation, and parallel coding workflows helped a nimble team deliver rapid, reliable development.",
+    "content_html": "",
+    "image_url": "",
+    "summary_text": "OpenAI shipped Sora for Android in 28 days using Codex. AI-assisted planning, translation, and parallel coding workflows helped a nimble team deliver rapid, reliable development.",
+    "category": "software"
   },
   {
     "title": "Do Kwon, Crypto Entrepreneur Who Caused 2022 Crash, Sentenced to 15 Years",
@@ -1284,17 +1310,6 @@
     "category": "ai"
   },
   {
-    "title": "10 years.",
-    "url": "https://www.youtube.com/watch?v=8JXwrVQQ4jw",
-    "published_at": "2025-12-11T16:33:02-05:00",
-    "source": "OpenAI YouTube",
-    "summary": "",
-    "content_html": "",
-    "image_url": "https://i.ytimg.com/vi/8JXwrVQQ4jw/maxresdefault.jpg",
-    "summary_text": "Enjoy the videos and music you love, upload original content, and share it all with friends, family, and the world on YouTube.",
-    "category": "ai"
-  },
-  {
     "title": "OpenAI releases GPT-5.2 after \u201ccode red\u201d Google threat alert",
     "url": "https://arstechnica.com/information-technology/2025/12/openai-releases-gpt-5-2-after-code-red-google-threat-alert/",
     "published_at": "2025-12-11T16:27:18-05:00",
@@ -1314,6 +1329,17 @@
     "content_html": "",
     "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/52c672d0-aa3c-450e-b01e-928c9109a6c6.png",
     "summary_text": "Larry Ellison\u2019s company raises its capital expenditure forecast as it doubles down on AI infrastructure bet",
+    "category": "ai"
+  },
+  {
+    "title": "Why we built\u2014and donated\u2014the Model Context Protocol (MCP)",
+    "url": "https://www.youtube.com/watch?v=PLyCki2K0Lg",
+    "published_at": "2025-12-11T15:14:58-05:00",
+    "source": "Anthropic YouTube",
+    "summary": "Anthropic's Stuart Ritchie speaks with co-creator David Soria Parra about the development of the Model Context Protocol (MCP), an open standard to connect AI to external tools and services\u2014and why Anthropic is donating it to the Linux Foundation. 00:00 - What is MCP? 01:21 - The problem MCP solves 02:46 - The USB-C analogy 03:45 - How MCP began 05:36 - What makes MCP different 08:05 - Community a...",
+    "content_html": "",
+    "image_url": "https://i.ytimg.com/vi/PLyCki2K0Lg/maxresdefault.jpg",
+    "summary_text": "Anthropic's Stuart Ritchie speaks with co-creator David Soria Parra about the development of the Model Context Protocol (MCP), an open standard to connect AI to external tools and services\u2014and why Anthropic is donating it to the Linux Foundation. 00:00 - What...",
     "category": "ai"
   },
   {
@@ -1460,39 +1486,6 @@
     "category": "fintech"
   },
   {
-    "title": "Increasing revenue 300% by bringing AI to SMBs",
-    "url": "https://openai.com/index/podium",
-    "published_at": "2025-12-10T19:00:00-05:00",
-    "source": "OpenAI News",
-    "summary": "Discover how Podium used OpenAI\u2019s GPT-5 to build \u201cJerry,\u201d an AI teammate driving 300% growth and transforming how Main Street businesses serve customers.",
-    "content_html": "",
-    "image_url": "",
-    "summary_text": "Discover how Podium used OpenAI\u2019s GPT-5 to build \u201cJerry,\u201d an AI teammate driving 300% growth and transforming how Main Street businesses serve customers.",
-    "category": "ai"
-  },
-  {
-    "title": "Update to GPT-5 System Card: GPT-5.2",
-    "url": "https://openai.com/index/gpt-5-system-card-update-gpt-5-2",
-    "published_at": "2025-12-10T19:00:00-05:00",
-    "source": "OpenAI News",
-    "summary": "GPT-5.2 is the latest model family in the GPT-5 series. The comprehensive safety mitigation approach for these models is largely the same as that described in the GPT-5 System Card and GPT-5.1 System Card. Like OpenAI\u2019s other models, the GPT-5.2 models were trained on diverse datasets, including information that is publicly available on the internet, information that we partner with third parties...",
-    "content_html": "",
-    "image_url": "",
-    "summary_text": "GPT-5.2 is the latest model family in the GPT-5 series. The comprehensive safety mitigation approach for these models is largely the same as that described in the GPT-5 System Card and GPT-5.1 System Card. Like OpenAI\u2019s other models, the GPT-5.2 models were t...",
-    "category": "ai"
-  },
-  {
-    "title": "Ten years",
-    "url": "https://openai.com/index/ten-years",
-    "published_at": "2025-12-10T19:00:00-05:00",
-    "source": "OpenAI News",
-    "summary": "OpenAI reflects on ten years of progress, from early research breakthroughs to widely used AI systems that reshaped what\u2019s possible. We share lessons from the past decade and why we remain optimistic about building AGI that benefits all of humanity.",
-    "content_html": "",
-    "image_url": "",
-    "summary_text": "OpenAI reflects on ten years of progress, from early research breakthroughs to widely used AI systems that reshaped what\u2019s possible. We share lessons from the past decade and why we remain optimistic about building AGI that benefits all of humanity.",
-    "category": "ai"
-  },
-  {
     "title": "Introducing GPT-5.2",
     "url": "https://openai.com/index/introducing-gpt-5-2",
     "published_at": "2025-12-10T19:00:00-05:00",
@@ -1512,6 +1505,39 @@
     "content_html": "",
     "image_url": "",
     "summary_text": "Disney and OpenAI have reached an agreement to bring more than 200 Disney, Marvel, Pixar and Star Wars characters to Sora for fan-inspired short videos. The agreement emphasizes responsible AI in entertainment and includes Disney\u2019s company-wide use of ChatGPT...",
+    "category": "ai"
+  },
+  {
+    "title": "Ten years",
+    "url": "https://openai.com/index/ten-years",
+    "published_at": "2025-12-10T19:00:00-05:00",
+    "source": "OpenAI News",
+    "summary": "OpenAI reflects on ten years of progress, from early research breakthroughs to widely used AI systems that reshaped what\u2019s possible. We share lessons from the past decade and why we remain optimistic about building AGI that benefits all of humanity.",
+    "content_html": "",
+    "image_url": "",
+    "summary_text": "OpenAI reflects on ten years of progress, from early research breakthroughs to widely used AI systems that reshaped what\u2019s possible. We share lessons from the past decade and why we remain optimistic about building AGI that benefits all of humanity.",
+    "category": "ai"
+  },
+  {
+    "title": "Update to GPT-5 System Card: GPT-5.2",
+    "url": "https://openai.com/index/gpt-5-system-card-update-gpt-5-2",
+    "published_at": "2025-12-10T19:00:00-05:00",
+    "source": "OpenAI News",
+    "summary": "GPT-5.2 is the latest model family in the GPT-5 series. The comprehensive safety mitigation approach for these models is largely the same as that described in the GPT-5 System Card and GPT-5.1 System Card. Like OpenAI\u2019s other models, the GPT-5.2 models were trained on diverse datasets, including information that is publicly available on the internet, information that we partner with third parties...",
+    "content_html": "",
+    "image_url": "",
+    "summary_text": "GPT-5.2 is the latest model family in the GPT-5 series. The comprehensive safety mitigation approach for these models is largely the same as that described in the GPT-5 System Card and GPT-5.1 System Card. Like OpenAI\u2019s other models, the GPT-5.2 models were t...",
+    "category": "ai"
+  },
+  {
+    "title": "Increasing revenue 300% by bringing AI to SMBs",
+    "url": "https://openai.com/index/podium",
+    "published_at": "2025-12-10T19:00:00-05:00",
+    "source": "OpenAI News",
+    "summary": "Discover how Podium used OpenAI\u2019s GPT-5 to build \u201cJerry,\u201d an AI teammate driving 300% growth and transforming how Main Street businesses serve customers.",
+    "content_html": "",
+    "image_url": "",
+    "summary_text": "Discover how Podium used OpenAI\u2019s GPT-5 to build \u201cJerry,\u201d an AI teammate driving 300% growth and transforming how Main Street businesses serve customers.",
     "category": "ai"
   },
   {
