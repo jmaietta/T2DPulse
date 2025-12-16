@@ -540,6 +540,21 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/b75f197d78/thumbnail.png"
   },
   {
+    "title": "Black box AI isn\u2019t enough: Why enterprise consulting is moving to grounded models",
+    "url": "https://venturebeat.com/ai/black-box-ai-isnt-enough-why-enterprise-consulting-is-moving-to-grounded",
+    "published_at": "2025-12-16T00:00:00-05:00",
+    "source": "VentureBeat",
+    "summary": "Presented by SAP In an era where anyone can spin up an LLM, the real differentiator isn\u2019t the AI technology itself, but the institutional knowledge it\u2019s grounded in. Internal and partner consultants leading operational transformation can\u2019t risk hallucinated guidance when their recommendations impact integrated processes across supply chain, manufacturing, finance, and other core functions. \"Groun...",
+    "content_html": "",
+    "image_url": "https://images.ctfassets.net/jdtwqhzvc2n1/7qgqONMtKtXQLPIpAHmJcz/08126cd291920b5ce60125a0c59f7129/AdobeStock_734215442.jpeg?w=800&amp;q=75",
+    "summary_text": "Presented by SAP In an era where anyone can spin up an LLM, the real differentiator isn\u2019t the AI technology itself, but the institutional knowledge it\u2019s grounded in. Internal and partner consultants leading operational transformation can\u2019t risk hallucinated g...",
+    "category": "ai",
+    "_permalink": "/p/5a7e35e684/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/5a7e35e684/",
+    "_summary_240": "Presented by SAP In an era where anyone can spin up an LLM, the real differentiator isn\u2019t the AI technology itself, but the institutional knowledge it\u2019s grounded in. Internal and...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/5a7e35e684/thumbnail.png"
+  },
+  {
     "title": "MetaMask adds Bitcoin support after teasing it 10 months ago",
     "url": "https://cointelegraph.com/news/metamask-adds-bitcoin-support-after-teasing-february?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
     "published_at": "2025-12-15T23:47:18-05:00",
@@ -1031,21 +1046,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/f84193d626/thumbnail.png"
   },
   {
-    "title": "Why agentic AI needs a new category of customer data",
-    "url": "https://venturebeat.com/ai/why-agentic-ai-needs-a-new-category-of-customer-data",
-    "published_at": "2025-12-15T00:00:00-05:00",
-    "source": "VentureBeat",
-    "summary": "Presented by Twilio The customer data infrastructure powering most enterprises was architected for a world that no longer exists: one where marketing interactions could be captured and processed in batches, where campaign timing was measured in days (not milliseconds), and where \"personalization\" meant inserting a first name into an email template. Conversational AI has shattered those assumption...",
-    "content_html": "",
-    "image_url": "https://images.ctfassets.net/jdtwqhzvc2n1/4ONhyEvpMjhV5KWf469Zcm/3534179a6a3df355dab84e929e0db853/AdobeStock_1389144486.jpeg?w=800&amp;q=75",
-    "summary_text": "Presented by Twilio The customer data infrastructure powering most enterprises was architected for a world that no longer exists: one where marketing interactions could be captured and processed in batches, where campaign timing was measured in days (not mill...",
-    "category": "ai",
-    "_permalink": "/p/76626fe621/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/76626fe621/",
-    "_summary_240": "Presented by Twilio The customer data infrastructure powering most enterprises was architected for a world that no longer exists: one where marketing interactions could be...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/76626fe621/thumbnail.png"
-  },
-  {
     "title": "Investors seek protection from risk of AI debt bust",
     "url": "https://www.ft.com/content/c5f9380e-df86-42a9-a387-a0d5e04ad45f",
     "published_at": "2025-12-14T13:00:00-05:00",
@@ -1145,7 +1145,7 @@
     "source": "Financial Times - Technology",
     "summary": "Chipmaker Broadcom tumbles 11.4% after financial forecast disappoints Wall Street",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/fbc7a269-7cd4-47ed-91a0-2a87ff501817.jpg",
     "summary_text": "Chipmaker Broadcom tumbles 11.4% after financial forecast disappoints Wall Street",
     "category": "ai"
   },
@@ -1233,7 +1233,7 @@
     "source": "Financial Times - Technology",
     "summary": "The Nvidia chief executive has been the driving force behind the massive AI boom that has the capacity to reshape the global economy",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/86dcf3d5-cf74-4e8e-bebb-d0656be6beb0.jpg",
     "summary_text": "The Nvidia chief executive has been the driving force behind the massive AI boom that has the capacity to reshape the global economy",
     "category": "ai"
   },
@@ -1255,7 +1255,7 @@
     "source": "Financial Times - Technology",
     "summary": "Record hack of South Korean online retailer Coupang prompts calls for more investment in cyber security",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/9d1484f5-a85f-4877-aa51-f94998fe3fad.jpg",
     "summary_text": "Record hack of South Korean online retailer Coupang prompts calls for more investment in cyber security",
     "category": "fintech"
   },
@@ -1266,7 +1266,7 @@
     "source": "Financial Times - Technology",
     "summary": "Win for Silicon Valley lobbyists comes over opposition from some of the president\u2019s Maga allies",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/460af806-b18d-4dc7-9f31-37f93e83de3d.jpg",
     "summary_text": "Win for Silicon Valley lobbyists comes over opposition from some of the president\u2019s Maga allies",
     "category": "ai"
   },
@@ -1376,7 +1376,7 @@
     "source": "Financial Times - Technology",
     "summary": "Larry Ellison\u2019s company raises its capital expenditure forecast as it doubles down on AI infrastructure bet",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/52c672d0-aa3c-450e-b01e-928c9109a6c6.png",
     "summary_text": "Larry Ellison\u2019s company raises its capital expenditure forecast as it doubles down on AI infrastructure bet",
     "category": "ai"
   },
