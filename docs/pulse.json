@@ -1,5 +1,35 @@
 [
   {
+    "title": "How scammers target crypto users during the holidays and how to stay protected",
+    "url": "https://cointelegraph.com/explained/how-scammers-target-crypto-users-during-the-holidays-and-how-to-stay-protected?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "published_at": "2025-12-16T12:19:22-05:00",
+    "source": "Cointelegraph",
+    "summary": "From fake crypto investment offers to deepfake endorsements, here\u2019s how criminals trick users and what you can do to stay one step ahead.",
+    "content_html": "",
+    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTIvMDE5YjI4MjQtMjRiMi03NjFmLWJiNDItMWM2MjcyZDkwYjk3LmpwZWc=.jpeg",
+    "summary_text": "From fake crypto investment offers to deepfake endorsements, here\u2019s how criminals trick users and what you can do to stay one step ahead.",
+    "category": "fintech",
+    "_permalink": "/p/1487ef8688/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/1487ef8688/",
+    "_summary_240": "From fake crypto investment offers to deepfake endorsements, here\u2019s how criminals trick users and what you can do to stay one step ahead.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/1487ef8688/thumbnail.png"
+  },
+  {
+    "title": "Solana enters Brazil\u2019s main exchange as Valour expands regulated crypto access",
+    "url": "https://cointelegraph.com/news/valour-solana-etp-brazil-b3-approval?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "published_at": "2025-12-16T12:10:26-05:00",
+    "source": "Cointelegraph",
+    "summary": "The Solana-linked product expands Valour\u2019s Brazil footprint as demand for regulated crypto exposure grows among regional investors.",
+    "content_html": "",
+    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTIvMDE5YjI3Y2MtYzQyNi03YTI3LWExNDItMmVmYjk1MGZiZDRhLmpwZw==.jpg",
+    "summary_text": "The Solana-linked product expands Valour\u2019s Brazil footprint as demand for regulated crypto exposure grows among regional investors.",
+    "category": "fintech",
+    "_permalink": "/p/8850de5544/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/8850de5544/",
+    "_summary_240": "The Solana-linked product expands Valour\u2019s Brazil footprint as demand for regulated crypto exposure grows among regional investors.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/8850de5544/thumbnail.png"
+  },
+  {
     "title": "UK crypto ownership dropped to 8% in 2025: YouGov poll",
     "url": "https://cointelegraph.com/news/uk-crypto-ownership-dropped-poll-fca?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
     "published_at": "2025-12-16T11:45:44-05:00",
@@ -150,21 +180,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/523d7fbb83/thumbnail.png"
   },
   {
-    "title": "Zencoder drops Zenflow, a free AI orchestration tool that pits Claude against OpenAI\u2019s models to catch coding errors",
-    "url": "https://venturebeat.com/ai/zencoder-drops-zenflow-a-free-ai-orchestration-tool-that-pits-claude-against",
-    "published_at": "2025-12-16T09:00:00-05:00",
-    "source": "VentureBeat",
-    "summary": "Zencoder , the Silicon Valley startup that builds AI-powered coding agents, released a free desktop application on Monday that it says will fundamentally change how software engineers interact with artificial intelligence \u2014 moving the industry beyond the freewheeling era of \"vibe coding\" toward a more disciplined, verifiable approach to AI-assisted development. The product, called Zenflow , intro...",
-    "content_html": "",
-    "image_url": "https://images.ctfassets.net/jdtwqhzvc2n1/hCrfjXJOZJtvGggguzyQk/77b7b582d2e5725acbeb633ff25f8152/nuneybits_Vector_art_of_a_retro_desktop_computer_screen_with_a__c249085b-3fdb-4462-bdea-a029b200a558.webp?w=800&amp;q=75",
-    "summary_text": "Zencoder , the Silicon Valley startup that builds AI-powered coding agents, released a free desktop application on Monday that it says will fundamentally change how software engineers interact with artificial intelligence \u2014 moving the industry beyond the free...",
-    "category": "ai",
-    "_permalink": "/p/bcf5244380/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/bcf5244380/",
-    "_summary_240": "Zencoder , the Silicon Valley startup that builds AI-powered coding agents, released a free desktop application on Monday that it says will fundamentally change how software...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/bcf5244380/thumbnail.png"
-  },
-  {
     "title": "With 91% accuracy, open source Hindsight agentic memory provides 20/20 vision for AI agents stuck on failing RAG",
     "url": "https://venturebeat.com/data/with-91-accuracy-open-source-hindsight-agentic-memory-provides-20-20-vision",
     "published_at": "2025-12-16T09:00:00-05:00",
@@ -178,6 +193,21 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/1e701ffcd3/",
     "_summary_240": "It has become increasingly clear in 2025 that retrieval augmented generation (RAG) isn't enough to meet the growing data requirements for agentic AI. RAG emerged in the last...",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/1e701ffcd3/thumbnail.png"
+  },
+  {
+    "title": "Zencoder drops Zenflow, a free AI orchestration tool that pits Claude against OpenAI\u2019s models to catch coding errors",
+    "url": "https://venturebeat.com/ai/zencoder-drops-zenflow-a-free-ai-orchestration-tool-that-pits-claude-against",
+    "published_at": "2025-12-16T09:00:00-05:00",
+    "source": "VentureBeat",
+    "summary": "Zencoder , the Silicon Valley startup that builds AI-powered coding agents, released a free desktop application on Monday that it says will fundamentally change how software engineers interact with artificial intelligence \u2014 moving the industry beyond the freewheeling era of \"vibe coding\" toward a more disciplined, verifiable approach to AI-assisted development. The product, called Zenflow , intro...",
+    "content_html": "",
+    "image_url": "https://images.ctfassets.net/jdtwqhzvc2n1/hCrfjXJOZJtvGggguzyQk/77b7b582d2e5725acbeb633ff25f8152/nuneybits_Vector_art_of_a_retro_desktop_computer_screen_with_a__c249085b-3fdb-4462-bdea-a029b200a558.webp?w=800&amp;q=75",
+    "summary_text": "Zencoder , the Silicon Valley startup that builds AI-powered coding agents, released a free desktop application on Monday that it says will fundamentally change how software engineers interact with artificial intelligence \u2014 moving the industry beyond the free...",
+    "category": "ai",
+    "_permalink": "/p/bcf5244380/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/bcf5244380/",
+    "_summary_240": "Zencoder , the Silicon Valley startup that builds AI-powered coding agents, released a free desktop application on Monday that it says will fundamentally change how software...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/bcf5244380/thumbnail.png"
   },
   {
     "title": "Adobe Firefly now supports prompt-based video editing, adds more third-party models",
@@ -208,21 +238,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/45a5514a54/",
     "_summary_240": "Technology dealmakers are just beginning a supercharged period of mergers and acquisitions activity after racking up a record run this year, according to a senior Morgan Stanley...",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/45a5514a54/thumbnail.png"
-  },
-  {
-    "title": "Racks of AI chips are too damn heavy",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/844966/heavy-ai-data-center-buildout",
-    "published_at": "2025-12-16T08:30:00-05:00",
-    "source": "The Verge",
-    "summary": "In the span of a decade and a half, from 2010 to the end of 2024, the number of data centers in the US quadrupled. The trend is similar worldwide: more data centers, bigger, now or soon. The number of the construction projects of centers over 100 megawatts announced over the last four years total [\u2026]",
-    "content_html": "<figure>\n\n<img alt=\"\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/12/gettyimages-2242297015.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100\" />\n\t<figcaption>\n\tAn aerial view of a 33 megawatt data center (LOWER L) with closed-loop cooling system, amid warehouses on October 20, 2025 in Vernon, California. | Image: Mario Tama/Getty Images\t</figcaption>\n</figure>\n<p class=\"has-drop-cap has-text-align-none\">In the span of a decade and a half, from 2010 to the end of 2024, the number of data centers in the US <a href=\"https://www.businessinsider.com/how-calculate-data-center-cost-environmental-impact-methodology-2025-6\">quadrupled</a>. The <a href=\"https://www.iea.org/data-and-statistics/data-tools/energy-and-ai-observatory?tab=Energy+for+AI\">trend is similar worldwide</a>: more data centers, bigger, now or soon. <a href=\"https://intelligence.uptimeinstitute.com/resource/many-giant-data-center-projects-advance-despite-risks\">The number of the construction projects</a> of centers over 100 megawatts announced over the last four years total 377, according to data center certification and research agency Uptime Institute. </p>\n<p class=\"has-text-align-none\">But before we allow Big Tech's <a href=\"https://www.theverge.com/ai-artificial-intelligence/812455/ai-industry-earnings-bubble-fomo-hype\">feverish race</a> toward <a href=\"https://www.theverge.com/ai-artificial-intelligence/782624/nvidia-is-partnering-up-with-openai-to-offer-compute-and-cash\">more</a> <a href=\"https://www.theverge.com/ai-artificial-intelligence/784251/openai-oracle-and-softbank-announced-five-new-ai-data-centers-as-part-of-stargate\">compute</a>, which <a href=\"https://www.theverge.com/news/840883/data-center-moratorium-letter-congress\">environmentalists would not like us to allow</a>, let us pause and consider another option: making do with what we have. Can we retrofit our current data centers to match the needs of our newest tech \u2026</p>\n<p><a href=\"https://www.theverge.com/ai-artificial-intelligence/844966/heavy-ai-data-center-buildout\">Read the full story at The Verge.</a></p>",
-    "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/12/gettyimages-2242297015.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "summary_text": "In the span of a decade and a half, from 2010 to the end of 2024, the number of data centers in the US quadrupled. The trend is similar worldwide: more data centers, bigger, now or soon. The number of the construction projects of centers over 100 megawatts an...",
-    "category": "ai",
-    "_permalink": "/p/97ebf0f915/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/97ebf0f915/",
-    "_summary_240": "In the span of a decade and a half, from 2010 to the end of 2024, the number of data centers in the US quadrupled. The trend is similar worldwide: more data centers, bigger, now...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/97ebf0f915/thumbnail.png"
   },
   {
     "title": "Mozilla Elevates Firefox Boss to CEO as Company Adapts to AI Era",
@@ -420,19 +435,19 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/d91c24a123/thumbnail.png"
   },
   {
-    "title": "Banks Abandon Lift and Shift for Cloud-Native Payments",
-    "url": "https://www.pymnts.com/news/payments-innovation/2025/banks-abandon-lift-and-shift-for-cloud-native-payments/",
-    "published_at": "2025-12-16T04:02:19-05:00",
-    "source": "PYMNTS",
-    "summary": "Watch more: Live Roundtable: AWS and Form3\u2019s Mark Smith and Mark Fieldhouse The cloud hasn\u2019t just modernized payments. It\u2019s made them programmable. The institutions embracing that shift are accelerating faster than anyone imagined even five years ago. Against this backdrop, the banking sector\u2019s early experiments with lift-and-shift cloud migrations are giving way to fully [\u2026] The post Banks Aband...",
-    "content_html": "<p><strong>Watch more:</strong> <a href=\"https://tv.pymnts.com/detail/video/6385622049112\" rel=\"noopener\" target=\"_blank\">Live Roundtable: AWS and Form3\u2019s Mark Smith and Mark Fieldhouse</a></p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p><span>The cloud hasn\u2019t just modernized payments. It\u2019s made them programmable.</span></p>\n<p><span>The institutions embracing that shift are accelerating faster than anyone imagined even five years ago. Against this backdrop, the banking sector\u2019s early experiments with lift-and-shift cloud migrations are giving way to fully re-architected systems built for real-time performance, continuous testing and extensibility.</span></p>\n<p><span>To learn more about how building a cloud-based payments stack is no longer simply an operational necessity but a strategic engine, PYMNTS sat down with </span><a class=\"editor-rtfLink\" href=\"https://www.linkedin.com/in/markjsmith/\" rel=\"noopener\" target=\"_blank\"><span>Mark Smith</span></a><span>, </span><span>head</span><span> of Payments for Financial Services at </span><a class=\"editor-rtfLink\" href=\"https://aws.amazon.com/\" rel=\"noopener\" target=\"_blank\"><span>AWS</span></a><span>, and </span><a class=\"editor-rtfLink\" href=\"https://www.linkedin.com/in/markfieldhouse/\" rel=\"noopener\" target=\"_blank\"><span>Mark Fieldhouse</span></a><span>, </span><span>chief revenue officer</span><span> at </span><a class=\"editor-rtfLink\" href=\"https://www.form3.tech/\" rel=\"noopener\" target=\"_blank\"><span>Form3</span></a><span>.</span></p>\n<p><span>\u201cThe conversation has changed \u2026 from cost and even resiliency to more about <a href=\"https://www.pymnts.com/tag/innovation/\" rel=\"noopener\" target=\"_blank\">innovation</a> and how do we get time to market faster, time to value, and really just driving innovation,\u201d Smith said.</span></p>\n<p><span>A decade ago, <a href=\"https://www.pymnts.com/tag/banks/\" rel=\"noopener\" target=\"_blank\">banks</a> approached the cloud with understandable caution. Most were content to move what they already had, unchanged, into someone else\u2019s data center. That era is now over.</span></p>\n<p><span>As Form3\u2019s Fieldhouse put it, the shift toward </span><span>true</span><span> cloud-native rebuilding marks an inflection point for top-tier financial institutions.</span></p>\n<p><span>\u201cThe opportunity to actually modernize \u2026 comes with greater resiliency, better agility to market,\u201d he said.</span></p>\n<p><span>What\u2019s emerging is a new generation of modular, intelligent and infinitely scalable payment platforms. They don\u2019t just operate in the cloud; they behave like the cloud. They </span><span>are designed</span><span> to change quickly, fail safely and replicate reliably across markets.</span></p>\n<h2><strong><span>Innovation Engines</span></strong></h2>\n<p><span>For global banks and regulated FinTechs, payments modernization is less about cost savings and more about competitive differentiation. The faster a bank can deliver new payment features, the more effectively it can capture customers in a fluid marketplace where switching costs are eroding and <a href=\"https://www.pymnts.com/tag/digital-transformation/\" rel=\"noopener\" target=\"_blank\">digital</a> expectations continue to rise.</span></p>\n<p><span>\u201cWe have to be up all the time \u2026 people cannot have payments fail,\u201d Fieldhouse said. \u201cThey need the confidence to know that the second you click \u2018send,\u2019 that payment will reach its destination.\u201d</span></p>\n<p><span>Traditional payment systems </span><span>were engineered</span><span> for predictability, not agility. They ran monolithic codebases that resisted change, and their release cycles often resembled compliance reviews more than product launches.</span></p>\n<p><span>Against this backdrop, the </span><span>move</span><span> from monoliths and patchwork integrations is enabling a wave of new capabilities, from real-time fraud detection to sophisticated payment routing </span><span>to</span><span> embedded financial experiences.</span></p>\n<p><span>These are not theoretical wins. Smith pointed to multiple global systemically important banks (G-SIBs) that have already built modern transaction platforms using event-driven architecture on AWS. Others are deploying microservices for customer verification, open finance or real-time payment orchestration.</span></p>\n<p><span>Cloud-native design does not just modernize workloads. It unlocks strategic velocity.</span></p>\n<h2><strong><span>Data as a New Frontier</span></strong></h2>\n<p><span>Modern payments development resembles aerospace or automotive engineering, as </span><span>it\u2019s heavily simulated</span><span>, modeled and instrumented before anything ever goes live. Banks are assembling cloud-based testing factories that make software safer and faster to build.</span></p>\n<p><span>Testing was </span><span>long</span><span> one of the slowest</span><span>, </span><span>most cumbersome stages of launching new payment products.</span><span> Now, it has been transformed by the cloud, </span><span>in large part</span><span> due to the capabilities of synthetic <a href=\"https://www.pymnts.com/tag/data/\" rel=\"noopener\" target=\"_blank\">data</a>.</span></p>\n<p><span>\u201cWe created this simulation framework that allows them to send effectively real payments that don\u2019t actually hit the real rail or schemes \u2026 as quick as they engineer a product or a new feature, they can test and release,\u201d Fieldhouse said.</span></p>\n<p><span>For engineering teams under competitive pressure, uncoupling development from external dependencies can be </span><span>transformativ</span><span>e</span><span>.</span> <span>It means fewer bottlenecks, shorter feedback cycles, and the ability to continuously test everything from formatting to resiliency to edge-case behavior.</span></p>\n<p><span>\u201cA big part of getting to value fast is speeding up the test environment \u2026 teams spin up isolated test environments in minutes instead of days,\u201d Smith said. \u201cSynthetic data mimics real payment patterns without exposing sensitive customer information \u2026 eliminating lengthy security reviews.\u201d</span></p>\n<p><span>If modernization and testing create the foundation, data orchestration is the layer that transforms payments from transactions into intelligence. In practical terms, a payment may enter the system in one format and exit in another, from real-time to cryptocurrency, for example. Optionality, then, becomes a competitive advantage.</span></p>\n<p><span>Large institutions are converging on similar architectural patterns, </span><span>like</span><span> decoupled orchestration layers, event-driven data flows and modular microservices, Smith said.</span></p>\n<p><span>\u201cCustomers use Amazon MSK \u2026 as centralized event stores to capture payment events and allow multiple microservices to enrich data in parallel \u2026 without blocking the core payment flows,\u201d he said.</span></p>\n<p><span>Fieldhouse described Form3\u2019s own approach as an enrichment engine that operates \u201cat the ingress and egress\u201d of every payment. </span><span>It\u2019s a flexible workflow environment capable of inserting sanctions checks, identity logic or external datasets in </span><span>real time</span><span> without compromising latency.</span></p>\n<p><span>\u201cWe may want to start to look at sanctions listing, auditability \u2026 or add in a layer of identification,\u201d he said. \u201c\u2026 It\u2019s about the ingress and egress of additional data to a payment workflow.\u201d</span></p>\n<p><span>Form3\u2019s single-API platform </span><span>is designed</span><span> to give institutions multi-scheme access without the burden of integrating each rail separately, he said.</span></p>\n<h2><strong><span>Composable, Data-Rich, Globally Scalable</span></strong></h2>\n<p><span>Data-rich payments unlock new business models. Cloud-native platforms enrich transactions at the moment of authorization, not after the fact. </span><span>This</span><span> means attaching customer insights, risk signals, tokenization metadata or compliance attributes directly to the payment event. It transforms a once-static instruction (\u201cmove $100 from A to B\u201d) into an intelligent object that can trigger real-time personalization, dynamic limits, proactive fraud detection or automated reconciliation.</span></p>\n<p><span>Cloud-native platforms make this possible, but only if they\u2019re architected with discipline.</span></p>\n<p><span>Smith outlined three pillars: fault isolation across regions; continuous resilience testing (including chaos engineering); and automated security controls embedded in every deployment.</span></p>\n<p><span>\u201cWe advise tier one banks on architecting for fault isolation \u2026 proving resilience through continuous chaos engineering \u2026 and automating security at scale through infrastructure as code,\u201d he said.</span></p>\n<p><span>One of the top five banks in the United States reduced recovery times \u201cfrom hours to just minutes\u201d through automated failover built jointly with AWS. That shift, from disaster recovery as an annual exercise to a continuous discipline, is a structural change in how critical financial infrastructure operates.</span></p>\n<p><span>Global scalability becomes a native property. Modern payment stacks </span><span>are built</span><span> to be fault-tolerant across regions. If a European region becomes overloaded, traffic can shift to another zone with minimal latency impact. Banks can replicate entire payment systems into new markets using templatized infrastructure and configuration-as-code, cutting expansion timelines from years to months.</span></p>\n<p><span>The U.S. market is undergoing its own modernization push, driven by </span><a class=\"editor-rtfLink\" href=\"https://www.theclearinghouse.org/\" rel=\"noopener\" target=\"_blank\"><span>The Clearing </span><span>House</span></a><span>\u2019s </span><a class=\"editor-rtfLink\" href=\"https://www.theclearinghouse.org/payment-systems/rtp\" rel=\"noopener\" target=\"_blank\"><span>RTP\u00ae</span><span> network</span></a><span>, the </span><a class=\"editor-rtfLink\" href=\"https://www.federalreserve.gov/\" rel=\"noopener\" target=\"_blank\"><span>Federal </span><span>Reserve</span></a><span>\u2019s </span><a class=\"editor-rtfLink\" href=\"https://explore.fednow.org/\" rel=\"noopener\" target=\"_blank\"><span>FedNow\u00ae</span><span> Service</span></a><span>, and growing demand for </span><span>crypto</span><span> and cross-border capabilities.</span></p>\n<p><span>Real-time account-to-account payments </span><span>are poised</span><span> for global expansion, driven by consumer expectations for immediacy. But faster rails mean compressed fraud windows.</span></p>\n<p><span>Rather than build its own fraud engine, Form3 chose to become an orchestrator, integrating whichever fraud tools a bank relies on, including multiple engines running in parallel.</span></p>\n<p><span>\u201cWe become the integrator \u2026 almost a plug-and-play engine for that data to make those fraud decisions,\u201d Fieldhouse said.</span></p>\n<p><span>Between AWS\u2019 architectural rigor and Form3\u2019s specialization in cloud-native payment flows, the blueprint for the next decade is coming into focus. It includes modular services, integrated intelligence, continuous resilience and global reach without global overhead.</span></p>\n<p><em>For all PYMNTS digital transformation coverage, subscribe to the daily </em><a href=\"https://pymnts.com/subscribe/\" rel=\"noopener\" target=\"_blank\"><em>Digital Transformation Newsletter</em></a><em>.</em></p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/news/payments-innovation/2025/banks-abandon-lift-and-shift-for-cloud-native-payments/\">Banks Abandon Lift and Shift for Cloud-Native Payments</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
-    "image_url": "https://www.pymnts.com/wp-content/uploads/2025/12/AWS-cloud-video-panel.jpg?w=457",
-    "summary_text": "Watch more: Live Roundtable: AWS and Form3\u2019s Mark Smith and Mark Fieldhouse The cloud hasn\u2019t just modernized payments. It\u2019s made them programmable. The institutions embracing that shift are accelerating faster than anyone imagined even five years ago. Against...",
-    "category": "fintech",
-    "_permalink": "/p/b9a4697908/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/b9a4697908/",
-    "_summary_240": "Watch more: Live Roundtable: AWS and Form3\u2019s Mark Smith and Mark Fieldhouse The cloud hasn\u2019t just modernized payments. It\u2019s made them programmable. The institutions embracing...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/b9a4697908/thumbnail.png"
+    "title": "Evaluating AI\u2019s ability to perform scientific research tasks",
+    "url": "https://openai.com/index/frontierscience",
+    "published_at": "2025-12-16T04:00:00-05:00",
+    "source": "OpenAI News",
+    "summary": "OpenAI introduces FrontierScience, a benchmark testing AI reasoning in physics, chemistry, and biology to measure progress toward real scientific research.",
+    "content_html": "",
+    "image_url": "",
+    "summary_text": "OpenAI introduces FrontierScience, a benchmark testing AI reasoning in physics, chemistry, and biology to measure progress toward real scientific research.",
+    "category": "ai",
+    "_permalink": "/p/58c8d1c59f/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/58c8d1c59f/",
+    "_summary_240": "OpenAI introduces FrontierScience, a benchmark testing AI reasoning in physics, chemistry, and biology to measure progress toward real scientific research.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/58c8d1c59f/thumbnail.png"
   },
   {
     "title": "Bitcoin sharks stack at fastest pace in 13 years, with BTC down 30%",
@@ -772,21 +787,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/654f4954c3/thumbnail.png"
   },
   {
-    "title": "Stocks Fall as Bitcoin Extends 2025 Losses | Closing Bell",
-    "url": "https://www.bloomberg.com/news/videos/2025-12-15/stocks-fall-as-bitcoin-extends-losses-closing-bell-video",
-    "published_at": "2025-12-15T16:38:37-05:00",
-    "source": "Bloomberg Technology",
-    "summary": "Comprehensive cross-platform coverage of the U.S. market close on Bloomberg Television, Bloomberg Radio, and YouTube with Romaine Bostick, Katie Greifeld, Carol Massar and Tim Stenovec. (Source: Bloomberg)",
-    "content_html": "",
-    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iF0b77UPBGVI/v3/1200x-1.png",
-    "summary_text": "Comprehensive cross-platform coverage of the U.S. market close on Bloomberg Television, Bloomberg Radio, and YouTube with Romaine Bostick, Katie Greifeld, Carol Massar and Tim Stenovec. (Source: Bloomberg)",
-    "category": "fintech",
-    "_permalink": "/p/01928ae9ed/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/01928ae9ed/",
-    "_summary_240": "Comprehensive cross-platform coverage of the U.S. market close on Bloomberg Television, Bloomberg Radio, and YouTube with Romaine Bostick, Katie Greifeld, Carol Massar and Tim...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/01928ae9ed/thumbnail.png"
-  },
-  {
     "title": "Microsoft will finally kill obsolete cipher that has wreaked decades of havoc",
     "url": "https://arstechnica.com/security/2025/12/microsoft-will-finally-kill-obsolete-cipher-that-has-wreaked-decades-of-havoc/",
     "published_at": "2025-12-15T16:15:55-05:00",
@@ -830,21 +830,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/60f989c5a1/",
     "_summary_240": "The organization offered support for this idea of an AI marketplace, and suggested several guiding principles.",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/60f989c5a1/thumbnail.png"
-  },
-  {
-    "title": "SEC has dismissed or paused most crypto enforcement cases under Trump: Report",
-    "url": "https://cointelegraph.com/news/sec-crypto-enforcement-donald-trump-dropped?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-    "published_at": "2025-12-15T15:52:26-05:00",
-    "source": "Cointelegraph",
-    "summary": "The financial regulator dropped several cases against crypto companies in 2025, and is reportedly \u201cno longer actively pursuing a single case against a firm with known Trump ties.\u201d",
-    "content_html": "",
-    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTIvMDE5YjIyYzctYjlmNy03NzE2LThjNzEtNDA0NmEyODFmZWY4LmpwZw==.jpg",
-    "summary_text": "The financial regulator dropped several cases against crypto companies in 2025, and is reportedly \u201cno longer actively pursuing a single case against a firm with known Trump ties.\u201d",
-    "category": "fintech",
-    "_permalink": "/p/2abd34d6d6/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/2abd34d6d6/",
-    "_summary_240": "The financial regulator dropped several cases against crypto companies in 2025, and is reportedly \u201cno longer actively pursuing a single case against a firm with known Trump ties.\u201d",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/2abd34d6d6/thumbnail.png"
   },
   {
     "title": "Korean AI startup Motif reveals 4 big lessons for training enterprise LLMs",
