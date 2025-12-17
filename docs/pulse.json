@@ -1,5 +1,80 @@
 [
   {
+    "title": "Fraudsters Test the Limit of Banks\u2019 Defenses",
+    "url": "https://www.pymnts.com/authentication/2025/fraudsters-test-limit-banks-defenses/",
+    "published_at": "2025-12-17T12:23:01-05:00",
+    "source": "PYMNTS",
+    "summary": "Fraudsters no longer break in by force alone. Increasingly, they persuade, fatigue or impersonate their way past defenses that were designed to stop credential theft but now sit at the center of more complex attack chains. The shift is showing up in data. The PYMNTS Intelligence report \u201c2025 State of Fraud and Financial Crime [\u2026] The post Fraudsters Test the Limit of Banks\u2019 Defenses appeared firs...",
+    "content_html": "<p><span>Fraudsters no longer break in by force alone.</span></p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p><span>Increasingly, they persuade, fatigue or impersonate their way past defenses that </span><span>were designed</span><span> to stop credential theft but now sit at the center of more complex attack chains.</span></p>\n<p><span>The shift is </span><span>showing up</span><span> in data.</span><span> The PYMNTS Intelligence report \u201c</span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/study/2025-state-of-fraud-and-financial-crime-in-the-united-states/\" rel=\"noopener\" target=\"_blank\"><span>2025 State of Fraud and Financial Crime in the United States</span></a><span>,\u201d a collaboration with </span><a class=\"editor-rtfLink\" href=\"https://block.xyz/\" rel=\"noopener\" target=\"_blank\"><span>Block</span></a><span>, found that unauthorized-party fraud now accounts for 71% of total fraud incidents and dollar losses, reversing last year\u2019s pattern and signaling a resurgence of externally driven attacks rooted in compromised credentials and account takeovers.</span></p>\n<h2><strong><span>Unauthorized-Party Fraud Regains the Upper Hand</span></strong></h2>\n<p><span>The report described a fraud environment that is becoming more adaptive, not less. </span><span>Attackers are increasingly exploiting access points that sit upstream of payments, including login credentials, session tokens and authentication workflows, which </span><span>include</span><span> multifactor authentication protocols.</span></p>\n<p><span>At the same time, half of financial institutions report damage to customer loyalty and brand reputation tied directly to fraud, reframing the issue as a growth and trust problem rather than a narrow operational cost.</span></p>\n<h2><strong><span>When MFA Becomes the Weak Link</span></strong></h2>\n<p><span>Against that backdrop, MFA still stands out as a foundational defense. </span><span>But</span><span> the </span><a class=\"editor-rtfLink\" href=\"https://delinea.com/\" rel=\"noopener\" target=\"_blank\"><span>Delinea Labs</span></a><span> report, \u201c</span><a class=\"editor-rtfLink\" href=\"https://delinea.com/forbes-cybersecurity-and-the-ai-threat-landscape\" rel=\"noopener\" target=\"_blank\"><span>Cybersecurity and the AI Threat Landscape</span></a><span>,\u201d </span><span>showed how frequently</span><span> MFA is now implicated in successful attacks, not because it is absent, but because it is misused or manipulated.</span><span> Nearly half of security incidents analyzed by </span><a class=\"editor-rtfLink\" href=\"https://talosintelligence.com/\" rel=\"noopener\" target=\"_blank\"><span>Cisco Talos</span></a><span> involved MFA, with fraudulent push notifications present in roughly one-quarter of those cases. These attacks often rely on \u201cpush fatigue,\u201d where users are bombarded with repeated authentication requests until one is mistakenly approved.</span></p>\n<p><span>The mechanics are straightforward and effective. Attackers first obtain valid credentials through phishing, infostealer malware or token theft. Once inside the authentication flow, they trigger repeated MFA prompts, often outside </span><span>normal</span><span> working hours, betting that frustration or confusion will override caution. </span><span>In other cases, MFA protections are inconsistently configured or not enforced across all accounts, </span><span>creating</span><span> uneven coverage that attackers actively </span><span>probe</span><span>.</span></p>\n<h2><strong><span>Real-World MFA Failures Move Into the Spotlight</span></strong></h2>\n<p><span>Recent high-profile </span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/cybersecurity/2024/att-hacker-arrested-how-the-cybersecurity-landscape-evolved-post-snowflake-breach/\" rel=\"noopener\" target=\"_blank\"><span>breaches</span></a> <span>illustrate</span><span> how these weaknesses </span><span>play out</span><span> at scale.</span><span> Such incidents ripple outward, exposing not only data but also confidence in cloud and identity infrastructure. The lesson from these events is not that MFA is obsolete, but that attackers increasingly understand how it </span><span>is deployed</span><span> and where it breaks down.</span></p>\n<p><span>Timing also matters. The Delinea report found that attack volumes often dip during midyear holidays and then surge toward year-end, when staffing gaps, elevated transaction volumes and consumer urgency combine to create ideal conditions for fraud.</span></p>\n<p><span>That seasonal pressure overlaps with peak shopping periods, faster payment rails and heightened customer activity, raising the stakes for authentication systems already under strain.</span></p>\n<h2><strong><span>Defending With Tools Attackers Already Know</span></strong></h2>\n<p><span>The deeper issue is strategic. Many banks and payment firms still rely on MFA implementations that attackers have studied for years. Static controls, once effective, are now predictable. Fraudsters do not need to defeat MFA outright; they only need to persuade legitimate users to defeat it for them.</span></p>\n<p><span>This reality helps explain why institutions are shifting investment priorities. According to the PYMNTS Intelligence report, 68% of financial institutions increased fraud detection spending year over year, with artificial intelligence and behavioral analytics increasingly viewed as essential infrastructure rather than optional upgrades.</span></p>\n<h2><strong><span>Moving Beyond MFA Alone</span></strong></h2>\n<p><span>The data suggests that preventing MFA-based fraud requires layering intelligence on top of authentication, not replacing it. Behavioral signals, device fingerprinting, contextual risk analysis and continuous monitoring can help distinguish legitimate approvals from coerced or manipulated ones.</span></p>\n<p><span>Machine learning and behavioral analytics are now among the most widely adopted fraud prevention technologies, reflecting an industry move toward adaptive defense rather than fixed checkpoints.</span></p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/authentication/2025/fraudsters-test-limit-banks-defenses/\">Fraudsters Test the Limit of Banks\u2019 Defenses</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
+    "image_url": "https://www.pymnts.com/wp-content/uploads/2025/12/fraud-security-banks-authentication.jpeg?w=457",
+    "summary_text": "Fraudsters no longer break in by force alone. Increasingly, they persuade, fatigue or impersonate their way past defenses that were designed to stop credential theft but now sit at the center of more complex attack chains. The shift is showing up in data. The...",
+    "category": "fintech",
+    "_permalink": "/p/66976e7075/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/66976e7075/",
+    "_summary_240": "Fraudsters no longer break in by force alone. Increasingly, they persuade, fatigue or impersonate their way past defenses that were designed to stop credential theft but now sit...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/66976e7075/thumbnail.png"
+  },
+  {
+    "title": "Amazon Caught North Korean IT Worker By Tracing Keystroke Data",
+    "url": "https://www.bloomberg.com/news/newsletters/2025-12-17/amazon-caught-north-korean-it-worker-by-tracing-keystroke-data",
+    "published_at": "2025-12-17T12:17:49-05:00",
+    "source": "Bloomberg Technology",
+    "summary": "Security personnel tracked connections from a contractor.",
+    "content_html": "An Amazon Prime truck outside an Amazon fulfillment center on Cyber Monday in Robbinsville, New Jersey, US, on Monday, Dec. 1, 2025. US consumers are heading into the official start of the holiday shopping season with a host of economic concerns, including a cooling job market, stagnant wages, persistent inflation and the looming fallout from tariffs. Photographer: Michael Nagle/Bloomberg",
+    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iRQr2S5REvy0/v14/1200x-1.jpg",
+    "summary_text": "Security personnel tracked connections from a contractor.",
+    "category": "fintech",
+    "_permalink": "/p/b58e9eed0d/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/b58e9eed0d/",
+    "_summary_240": "Security personnel tracked connections from a contractor.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/b58e9eed0d/thumbnail.png"
+  },
+  {
+    "title": "Into the Omniverse: OpenUSD and NVIDIA Halos Accelerate Safety for Robotaxis, Physical AI Systems",
+    "url": "https://blogs.nvidia.com/blog/openusd-halos-safety-robotaxi-physical-ai/",
+    "published_at": "2025-12-17T12:00:49-05:00",
+    "source": "NVIDIA News",
+    "summary": "Editor\u2019s note: This post is part of Into the Omniverse, a series focused on how developers, 3D practitioners and enterprises can transform their workflows using the latest advancements in OpenUSD and NVIDIA Omniverse. Physical AI is moving from research labs into the real world, powering intelligent robots and autonomous vehicles (AVs) \u2014 such as robotaxis Read Article",
+    "content_html": "",
+    "image_url": "https://s3.amazonaws.com/cms.ipressroom.com/219/files/202512/6942e2403d63322543ef7c80_dec-ito-open-usd-halos-robotaxi-physical-ai-842x450/dec-ito-open-usd-halos-robotaxi-physical-ai-842x450_thmb.jpg",
+    "summary_text": "Editor\u2019s note: This post is part of Into the Omniverse, a series focused on how developers, 3D practitioners and enterprises can transform their workflows using the latest advancements in OpenUSD and NVIDIA Omniverse. Physical AI is moving from research labs ...",
+    "category": "ai",
+    "_permalink": "/p/c2f065aa38/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/c2f065aa38/",
+    "_summary_240": "Editor\u2019s note: This post is part of Into the Omniverse, a series focused on how developers, 3D practitioners and enterprises can transform their workflows using the latest...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/c2f065aa38/thumbnail.png"
+  },
+  {
+    "title": "US tech stocks slide as Oracle data centre setback reignites AI concerns",
+    "url": "https://www.ft.com/content/ce60f74f-ccc8-4bde-bbec-842041ecf8e7",
+    "published_at": "2025-12-17T11:59:15-05:00",
+    "source": "Financial Times - Technology",
+    "summary": "Software giant suffers renewed declines after backer Blue Owl pulls out of $10bn project",
+    "content_html": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/55166eae-df57-4378-863e-5311bebc0548.jpg",
+    "summary_text": "Software giant suffers renewed declines after backer Blue Owl pulls out of $10bn project",
+    "category": "ai",
+    "_permalink": "/p/b5629a80c2/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/b5629a80c2/",
+    "_summary_240": "Software giant suffers renewed declines after backer Blue Owl pulls out of $10bn project",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/b5629a80c2/thumbnail.png"
+  },
+  {
+    "title": "Open source could pop the AI bubble \u2014 and soon",
+    "url": "https://www.ft.com/content/353adf48-a5d6-4ea0-b5d7-9a94b141213a",
+    "published_at": "2025-12-17T11:56:45-05:00",
+    "source": "Financial Times - Technology",
+    "summary": "Valuations rest on the incorrect assumption that frontier model creators have built massive, durable moats",
+    "content_html": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/41887613-d47b-456c-b387-5f0602f2cef4.jpg",
+    "summary_text": "Valuations rest on the incorrect assumption that frontier model creators have built massive, durable moats",
+    "category": "ai",
+    "_permalink": "/p/47a0df3d0a/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/47a0df3d0a/",
+    "_summary_240": "Valuations rest on the incorrect assumption that frontier model creators have built massive, durable moats",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/47a0df3d0a/thumbnail.png"
+  },
+  {
     "title": "Bitcoin on Track For 4th Annual Decline Despite Crypto Adoption",
     "url": "https://www.pymnts.com/blockchain/bitcoin/2025/bitcoin-on-track-for-4th-annual-decline-despite-crypto-adoption/",
     "published_at": "2025-12-17T11:38:26-05:00",
@@ -225,21 +300,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/bdbf1e1cf7/thumbnail.png"
   },
   {
-    "title": "Rad Power Bikes files for bankruptcy protection",
-    "url": "https://www.theverge.com/news/846201/rad-power-bikes-chapter-11-bankruptcy",
-    "published_at": "2025-12-17T09:14:39-05:00",
-    "source": "The Verge",
-    "summary": "Rad Power Bikes, the once dominant electric bicycle brand in the US, filed for Chapter 11 bankruptcy protection this week as it seeks to sell off its company. The move comes less than a month after Rad Power said it could not afford to recall its older e-bike batteries that had been designated a fire [\u2026]",
-    "content_html": "<figure>\n\n<img alt=\"image of Rad Power Bikes e-bikes\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/24047508/444380_Runner_Wagon_09_copy_51b559_original_1663786808.jpeg?quality=90&#038;strip=all&#038;crop=0,0,100,100\" />\n\t<figcaption>\n\t\t</figcaption>\n</figure>\n<p class=\"has-text-align-none\">Rad Power Bikes, the once dominant electric bicycle brand in the US, filed for Chapter 11 bankruptcy protection this week as it seeks to sell off its company. The move comes less than a month after Rad Power said it could not afford to recall its older e-bike batteries that had been <a href=\"https://www.theverge.com/news/828004/rad-power-bikes-batteries-fire-cpsc\">designated a fire risk by the US Consumer Protection Safety Commission</a>.</p>\n<p class=\"has-text-align-none\">The bankruptcy, which was <a href=\"https://www.bicycleretailer.com/industry-news/2025/12/16/rad-power-bikes-files-bankruptcy-protection\">first reported by <em>Bicycle Retailer</em></a>, was filed in US Bankruptcy Court for the Eastern District of Washington, near the company's headquarters in Seattle. Rad Power lists its estimated assets at $32.1 million and estimated liabilities at $72.8 million. Its inventory o \u2026</p>\n<p><a href=\"https://www.theverge.com/news/846201/rad-power-bikes-chapter-11-bankruptcy\">Read the full story at The Verge.</a></p>",
-    "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/24047508/444380_Runner_Wagon_09_copy_51b559_original_1663786808.jpeg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "summary_text": "Rad Power Bikes, the once dominant electric bicycle brand in the US, filed for Chapter 11 bankruptcy protection this week as it seeks to sell off its company. The move comes less than a month after Rad Power said it could not afford to recall its older e-bike...",
-    "category": "fintech",
-    "_permalink": "/p/1c36973df4/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/1c36973df4/",
-    "_summary_240": "Rad Power Bikes, the once dominant electric bicycle brand in the US, filed for Chapter 11 bankruptcy protection this week as it seeks to sell off its company. The move comes less...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/1c36973df4/thumbnail.png"
-  },
-  {
     "title": "AI agents fail 63% of the time on complex tasks. Patronus AI says its new 'living' training worlds can fix that.",
     "url": "https://venturebeat.com/infrastructure/ai-agents-fail-63-of-the-time-on-complex-tasks-patronus-ai-says-its-new",
     "published_at": "2025-12-17T09:00:00-05:00",
@@ -450,21 +510,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/03389c0177/thumbnail.png"
   },
   {
-    "title": "Chinese Chip Firms Line Up for Hong Kong Listings in Coming Weeks",
-    "url": "https://www.bloomberg.com/news/articles/2025-12-17/chinese-chip-firms-line-up-for-hong-kong-listings-in-coming-weeks",
-    "published_at": "2025-12-17T04:58:03-05:00",
-    "source": "Bloomberg Technology",
-    "summary": "At least six Chinese companies related to artificial intelligence are set to go public in Hong Kong in the coming weeks, people familiar with the matter said, building on the strong recent listings on the mainland.",
-    "content_html": "A gong at the Hong Kong Stock Exchange. Photographer: Paul Yeung/Bloomberg",
-    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/i4NQ3c1JgjT4/v0/1200x-1.jpg",
-    "summary_text": "At least six Chinese companies related to artificial intelligence are set to go public in Hong Kong in the coming weeks, people familiar with the matter said, building on the strong recent listings on the mainland.",
-    "category": "ai",
-    "_permalink": "/p/950622fa1e/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/950622fa1e/",
-    "_summary_240": "At least six Chinese companies related to artificial intelligence are set to go public in Hong Kong in the coming weeks, people familiar with the matter said, building on the...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/950622fa1e/thumbnail.png"
-  },
-  {
     "title": "Bitcoin institutional buys flip new supply for the first time in 6 weeks",
     "url": "https://cointelegraph.com/news/bitcoin-institutional-buys-flip-new-supply-for-first-time-in-6-weeks?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
     "published_at": "2025-12-17T04:56:58-05:00",
@@ -510,21 +555,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/211d9abab5/thumbnail.png"
   },
   {
-    "title": "Instant Payments Take Center Stage as Construction Confronts Its Cash Flow Crisis",
-    "url": "https://www.pymnts.com/real-time-payments/2025/instant-payments-take-center-stage-as-construction-confronts-its-cash-flow-crisis/",
-    "published_at": "2025-12-17T04:02:54-05:00",
-    "source": "PYMNTS",
-    "summary": "Construction timelines depend on precision, coordination and confidence, but slow payments continue to undermine all three. Across the industry, contractors report that late disbursements are far more damaging than weather or materials issues. These late payments create cascading delays that fracture schedules, inflate bids and weaken trust between owners and crews. As financing pressures rise [\u2026...",
-    "content_html": "<p>Construction timelines depend on precision, coordination and confidence, but slow payments continue to undermine all three. Across the industry, contractors report that <a href=\"https://getbuilt.com/blog/70-percent-of-contractors-say-payment-delays-threaten-industry/\" rel=\"noopener\" target=\"_blank\">late disbursements</a> are far more damaging than weather or materials issues. These late payments create cascading delays that fracture schedules, inflate bids and weaken trust between owners and crews. As financing pressures rise and margins tighten, the cost of slow payments is becoming untenable, prompting construction firms to reassess how liquidity and payment speed shape both project delivery and competitiveness.</p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p>A recent industry study finds that 70% of general contractors and subcontractors regularly encounter <a href=\"https://getbuilt.com/blog/70-percent-of-contractors-say-payment-delays-threaten-industry/\" rel=\"noopener\" target=\"_blank\">payment delays</a>. Separate research shows that 47% of construction pros say these setbacks <a href=\"https://mobilizationfunding.com/2025-construction-delays-payment-report/\" rel=\"noopener\" target=\"_blank\">add one to two weeks</a> to project timelines. Nearly 30% report delays of three to six weeks. These disruptions require contractors to reassign crews, scale back work or halt construction projects entirely\u2014decisions that erode productivity and increase operational costs. The <a href=\"https://getbuilt.com/blog/70-percent-of-contractors-say-payment-delays-threaten-industry/\" rel=\"noopener\" target=\"_blank\">financial ripple effects</a> are equally significant. Contractors pad bids by an average of 8% to protect against cash flow gaps. Sixty percent say an owner\u2019s payment reliability influences whether they bid at all.</p>\n<p>Delays also expose structural weaknesses inside firms. According to industry data, the real source of late payments isn\u2019t macroeconomic stress but internal process failures. Disorganized workflows add nearly <a href=\"https://rabbet.com/reports/construction-payments-2025\" rel=\"noopener\" target=\"_blank\">$300 billion</a> in drag to the construction industry each year, while subcontractors increasingly file liens to mitigate risk. General contractors spend more than 60 hours per month managing payments\u2014time they could devote to coordinating work and reducing on-site risk.</p>\n<p>But the momentum for change in the construction industry is growing. Seventy-six percent of contractors are willing to offer <a href=\"https://getbuilt.com/blog/70-percent-of-contractors-say-payment-delays-threaten-industry/\" rel=\"noopener\" target=\"_blank\">discounts for guaranteed faster payments</a>. Eighty-two percent are open to digital systems that accelerate cash flow. Government-led modernization\u2014from federal adoption of <a href=\"https://www.whitehouse.gov/presidential-actions/2025/03/modernizing-payments-to-and-from-americas-bank-account/\" rel=\"noopener\" target=\"_blank\">instant rails</a> to new state-level penalties for <a href=\"https://www.constructionowners.com/news/california-sets-new-rules-for-private-construction-contracts\" rel=\"noopener\" target=\"_blank\">late payments</a>\u2014is pushing the construction industry toward faster, more predictable disbursements.</p>\n<p>Faster payments won\u2019t fix every challenge, but they can eliminate one of its biggest and most solvable sources of instability.</p>\n<div class=\"my-5\">\n<div id=\"DownloadForm\">\n  <div class=\"container free-download-sec\">\n    <div class=\"inner\">\n      <div class=\"row\">\n        <div class=\"col-md-5 d-flex flex-row justify-content-center align-items-center\">\n          <div>\n            <h2 class=\"report-title px-4 text-start fw-bold mb-3 mb-md-0\">\n              <small class=\"text-start fw-bold d-block small mb-2\">\n                Download the Tracker\n              </small>\n              Construction Payments Need an Instant Lift\n            </h2>\n            \n          </div>\n        </div>\n        <div class=\"col-md-7\">\n          <div class=\" bg-white rounded-3 p-4 shadow\">\n            \n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</div></div>\n<h3>About \u201cConstruction Payments Need an Instant Lift\u201d</h3>\n<p>The \u201c<strong>Money Mobility Tracker<sup>\u00ae</sup></strong>,\u201d a collaboration with <strong><a href=\"https://ingopayments.com/\" rel=\"noopener\" target=\"_blank\">Ingo Payments</a></strong>, explores how slow payments drive construction delays, inflate costs and weaken trust\u2014and how faster, instant disbursements can stabilize cash flow and strengthen project delivery.</p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/real-time-payments/2025/instant-payments-take-center-stage-as-construction-confronts-its-cash-flow-crisis/\">Instant Payments Take Center Stage as Construction Confronts Its Cash Flow Crisis</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
-    "image_url": "https://www.pymnts.com/wp-content/uploads/2025/12/instant-payments-take-center-stage-as-construction-confronts-its-cash-flow-crisis-hero.jpg?w=457",
-    "summary_text": "Construction timelines depend on precision, coordination and confidence, but slow payments continue to undermine all three. Across the industry, contractors report that late disbursements are far more damaging than weather or materials issues. These late paym...",
-    "category": "fintech",
-    "_permalink": "/p/729d5db61e/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/729d5db61e/",
-    "_summary_240": "Construction timelines depend on precision, coordination and confidence, but slow payments continue to undermine all three. Across the industry, contractors report that late...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/729d5db61e/thumbnail.png"
-  },
-  {
     "title": "SEC lawsuit puts Shima Capital\u2019s future in question as wind-down message surfaces",
     "url": "https://cointelegraph.com/news/sec-lawsuit-puts-shima-capital-s-future-in-question-as-wind-down-message-surfaces?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
     "published_at": "2025-12-17T03:43:15-05:00",
@@ -555,17 +585,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/48ee65f4ea/thumbnail.png"
   },
   {
-    "title": "Introducing OpenAI Academy for News Organizations",
-    "url": "https://openai.com/index/openai-academy-for-news-organizations",
-    "published_at": "2025-12-17T01:00:00-05:00",
-    "source": "OpenAI News",
-    "summary": "OpenAI is launching the OpenAI Academy for News Organizations, a new learning hub built with the American Journalism Project and The Lenfest Institute to help newsrooms use AI effectively. The Academy offers training, practical use cases, and responsible-use guidance to support journalists, editors, and publishers as they adopt AI in their reporting and operations.",
-    "content_html": "",
-    "image_url": "",
-    "summary_text": "OpenAI is launching the OpenAI Academy for News Organizations, a new learning hub built with the American Journalism Project and The Lenfest Institute to help newsrooms use AI effectively. The Academy offers training, practical use cases, and responsible-use ...",
-    "category": "ai"
-  },
-  {
     "title": "Bhutan pledges 10K Bitcoin to develop its \u2018mindfulness city\u2019",
     "url": "https://cointelegraph.com/news/bhutan-pledges-10000-bitcoin-gelephu-mindfulness-city?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
     "published_at": "2025-12-17T01:00:00-05:00",
@@ -579,6 +598,17 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/de502e58ec/",
     "_summary_240": "It\u2019s estimated that Bhutan has around 11,286 Bitcoin in total, a stash worth over $986 million, making it the fifth-largest known holder among countries.",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/de502e58ec/thumbnail.png"
+  },
+  {
+    "title": "Introducing OpenAI Academy for News Organizations",
+    "url": "https://openai.com/index/openai-academy-for-news-organizations",
+    "published_at": "2025-12-17T01:00:00-05:00",
+    "source": "OpenAI News",
+    "summary": "OpenAI is launching the OpenAI Academy for News Organizations, a new learning hub built with the American Journalism Project and The Lenfest Institute to help newsrooms use AI effectively. The Academy offers training, practical use cases, and responsible-use guidance to support journalists, editors, and publishers as they adopt AI in their reporting and operations.",
+    "content_html": "",
+    "image_url": "",
+    "summary_text": "OpenAI is launching the OpenAI Academy for News Organizations, a new learning hub built with the American Journalism Project and The Lenfest Institute to help newsrooms use AI effectively. The Academy offers training, practical use cases, and responsible-use ...",
+    "category": "ai"
   },
   {
     "title": "Saylor\u2019s Bitcoin stash will be very hard for anyone to match: Pomp",
@@ -731,6 +761,21 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/38a8bf4a83/thumbnail.png"
   },
   {
+    "title": "What does AI mean for education?",
+    "url": "https://www.youtube.com/watch?v=Uh98_aGhAuY",
+    "published_at": "2025-12-16T17:42:58-05:00",
+    "source": "Anthropic YouTube",
+    "summary": "How is AI affecting education? At Anthropic, we often talk about \u201cholding light and shade\u201d: taking seriously both the benefits and the risks of the AI systems we\u2019re building. In education, that trade-off is especially acute. AI offers the potential to scale up personalized learning, tutoring, and assessment, but it also invites some much more fundamental questions about how (and even what) studen...",
+    "content_html": "",
+    "image_url": "https://i.ytimg.com/vi/Uh98_aGhAuY/maxresdefault.jpg",
+    "summary_text": "How is AI affecting education? At Anthropic, we often talk about \u201cholding light and shade\u201d: taking seriously both the benefits and the risks of the AI systems we\u2019re building. In education, that trade-off is especially acute. AI offers the potential to scale u...",
+    "category": "ai",
+    "_permalink": "/p/c7cf35887e/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/c7cf35887e/",
+    "_summary_240": "How is AI affecting education? At Anthropic, we often talk about \u201cholding light and shade\u201d: taking seriously both the benefits and the risks of the AI systems we\u2019re building. In...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/c7cf35887e/thumbnail.png"
+  },
+  {
     "title": "In A.I. Boom, Venture Capital Firms Are Raising Loads More Money",
     "url": "https://www.nytimes.com/2025/12/15/technology/ai-venture-capital-big-funds.html",
     "published_at": "2025-12-16T14:26:09-05:00",
@@ -774,21 +819,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/981d586eb7/",
     "_summary_240": "Conversation focus uses the AI glasses' open-ear speakers to amplify the voice of the person you're talking to, says Meta.",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/981d586eb7/thumbnail.png"
-  },
-  {
-    "title": "ChatGPT Images",
-    "url": "https://www.youtube.com/watch?v=DPBtd57p5Mg",
-    "published_at": "2025-12-16T13:13:34-05:00",
-    "source": "OpenAI YouTube",
-    "summary": "We\u2019re releasing a new version of ChatGPT Images\u2060, powered by our new flagship image generation model. Now, whether you\u2019re creating something from scratch or editing a photo, you\u2019ll get the output you\u2019re picturing. It makes precise edits while keeping details intact, and generates images up to 4x faster. Alongside, we\u2019re introducing a new Images feature within ChatGPT, designed to make image gener...",
-    "content_html": "",
-    "image_url": "https://i.ytimg.com/vi/DPBtd57p5Mg/maxresdefault.jpg",
-    "summary_text": "We\u2019re releasing a new version of ChatGPT Images\u2060, powered by our new flagship image generation model. Now, whether you\u2019re creating something from scratch or editing a photo, you\u2019ll get the output you\u2019re picturing. It makes precise edits while keeping details ...",
-    "category": "ai",
-    "_permalink": "/p/ae20d86d17/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/ae20d86d17/",
-    "_summary_240": "We\u2019re releasing a new version of ChatGPT Images\u2060, powered by our new flagship image generation model. Now, whether you\u2019re creating something from scratch or editing a photo,...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/ae20d86d17/thumbnail.png"
   },
   {
     "title": "OpenAI hires George Osborne to spearhead global \u2018Stargate\u2019 expansion",
@@ -837,7 +867,7 @@
   },
   {
     "title": "Zencoder drops Zenflow, a free AI orchestration tool that pits Claude against OpenAI\u2019s models to catch coding errors",
-    "url": "https://venturebeat.com/ai/zencoder-drops-zenflow-a-free-ai-orchestration-tool-that-pits-claude-against",
+    "url": "https://venturebeat.com/orchestration/zencoder-drops-zenflow-a-free-ai-orchestration-tool-that-pits-claude-against",
     "published_at": "2025-12-16T09:00:00-05:00",
     "source": "VentureBeat",
     "summary": "Zencoder , the Silicon Valley startup that builds AI-powered coding agents, released a free desktop application on Monday that it says will fundamentally change how software engineers interact with artificial intelligence \u2014 moving the industry beyond the freewheeling era of \"vibe coding\" toward a more disciplined, verifiable approach to AI-assisted development. The product, called Zenflow , intro...",
@@ -845,10 +875,10 @@
     "image_url": "https://images.ctfassets.net/jdtwqhzvc2n1/hCrfjXJOZJtvGggguzyQk/77b7b582d2e5725acbeb633ff25f8152/nuneybits_Vector_art_of_a_retro_desktop_computer_screen_with_a__c249085b-3fdb-4462-bdea-a029b200a558.webp?w=800&amp;q=75",
     "summary_text": "Zencoder , the Silicon Valley startup that builds AI-powered coding agents, released a free desktop application on Monday that it says will fundamentally change how software engineers interact with artificial intelligence \u2014 moving the industry beyond the free...",
     "category": "ai",
-    "_permalink": "/p/bcf5244380/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/bcf5244380/",
+    "_permalink": "/p/b19863b262/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/b19863b262/",
     "_summary_240": "Zencoder , the Silicon Valley startup that builds AI-powered coding agents, released a free desktop application on Monday that it says will fundamentally change how software...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/bcf5244380/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/b19863b262/thumbnail.png"
   },
   {
     "title": "AWS CEO Matt Garman Doesn\u2019t Think AI Should Replace Junior Devs",
@@ -1174,7 +1204,7 @@
     "source": "Financial Times - Technology",
     "summary": "The US has gone all-in on artificial intelligence. But the idea of an end-of-times battle with China over tomorrow\u2019s key technology is part delusion, part lobbying tool for Silicon Valley",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/fc98cb58-0d9a-4760-b502-376aa9e3aa3c.jpg",
+    "image_url": "https://images.ft.com/v3/image/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Ffc98cb58-0d9a-4760-b502-376aa9e3aa3c.jpg?source=next-article&fit=scale-down&quality=highest&width=700&dpr=1",
     "summary_text": "The US has gone all-in on artificial intelligence. But the idea of an end-of-times battle with China over tomorrow\u2019s key technology is part delusion, part lobbying tool for Silicon Valley",
     "category": "ai"
   },
@@ -1187,28 +1217,6 @@
     "content_html": "<p>With the <a href=\"https://arstechnica.com/ai/2025/09/developers-joke-about-coding-like-cavemen-as-ai-service-suffers-major-outage/\">popularity</a> of AI coding tools rising among some software developers, their adoption has begun to touch every aspect of the process, including human developers using the tools to improve existing AI coding tools. We\u2019re not talking about runaway self-improvement here; just people using tools to improve the tools themselves.</p>\n<p>In interviews with Ars Technica this week, OpenAI employees revealed the extent to which the company now relies on its own AI coding agent, <a href=\"https://arstechnica.com/ai/2025/05/openai-introduces-codex-its-first-full-fledged-ai-agent-for-coding/\">Codex</a>, to build and improve the development tool. \u201cI think the vast majority of Codex is built by Codex, so it\u2019s almost entirely just being used to improve itself,\u201d said Alexander Embiricos, product lead for Codex at OpenAI, in a conversation on Tuesday. Codex now generates most of the code that OpenAI developers use to improve the tool itself.</p>\n<p>Codex, which OpenAI <a href=\"https://openai.com/index/introducing-codex/\">launched</a> in its modern incarnation as a research preview in May 2025, operates as a cloud-based software engineering agent that can handle tasks like writing features, fixing bugs, and proposing pull requests. The tool runs in sandboxed environments linked to a user\u2019s code repository and can execute multiple tasks in parallel. OpenAI offers Codex through ChatGPT\u2019s web interface, a command-line interface (CLI), and IDE extensions for VS Code, <a href=\"https://arstechnica.com/ai/2025/04/cursor-ai-support-bot-invents-fake-policy-and-triggers-user-uproar/\">Cursor</a>, and <a href=\"https://windsurf.com/\">Windsurf</a>.</p><p><a href=\"https://arstechnica.com/ai/2025/12/how-openai-is-using-gpt-5-codex-to-improve-the-ai-tool-itself/\">Read full article</a></p>\n<p><a href=\"https://arstechnica.com/ai/2025/12/how-openai-is-using-gpt-5-codex-to-improve-the-ai-tool-itself/#comments\">Comments</a></p>",
     "image_url": "https://cdn.arstechnica.net/wp-content/uploads/2025/12/AI_codehead_header-1152x648.jpg",
     "summary_text": "\"The vast majority of Codex is built by Codex,\" OpenAI told us about its new AI coding agent writing code.",
-    "category": "ai"
-  },
-  {
-    "title": "Agent Lightning: Making AI agents smarter without rewriting code",
-    "url": "https://www.microsoft.com/en-us/research/blog/agent-lightning-adding-reinforcement-learning-to-ai-agents-without-code-rewrites/",
-    "published_at": "2025-12-12T12:20:21-05:00",
-    "source": "Microsoft News",
-    "summary": "The post Agent Lightning: Making AI agents smarter without rewriting code appeared first on Source .",
-    "content_html": "<article class=\"mssrc-posts font-- has--theme\" id=\"single-23206\">\n\t<div class=\"acf-innerblocks-container\"></div>\t\t\t<section class=\"post-tags\">\n\t\t\t\t<div class=\"post-tags__content wp-block-columns\">\n\t\t\t\t\t<div class=\"post-tags__header wp-block-column flex-basis-25 has-text-align-right\">\n\t\t\t\t\t\t<h4 class=\"sr-only\">Tags: </h4>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"post-tags__body wp-block-column flex-basis-60\">\n\t\t\t\t\t\t<ul class=\"post-tags__list\"><li class=\"post-tags__item\"><a class=\"kicker inline-block post__meta--tags\" href=\"https://news.microsoft.com/source/tag/ai/\">AI</a></li></ul>\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</section>\n\t\t\t</article><p>The post <a href=\"https://www.microsoft.com/en-us/research/blog/agent-lightning-adding-reinforcement-learning-to-ai-agents-without-code-rewrites/\">Agent Lightning: Making AI agents smarter without rewriting code</a> appeared first on <a href=\"https://news.microsoft.com/source\">Source</a>.</p>",
-    "image_url": "https://www.microsoft.com/en-us/research/wp-content/uploads/2025/12/AgentLightning-TWLIFB-1200x627_NEW.jpg",
-    "summary_text": "The post Agent Lightning: Making AI agents smarter without rewriting code appeared first on Source .",
-    "category": "ai"
-  },
-  {
-    "title": "Do META and MSFT Reflect Adequate Downside Risk?",
-    "url": "https://newsletter.tek2dayholdings.com/p/do-meta-and-msft-reflect-adequate",
-    "published_at": "2025-12-12T12:03:41-05:00",
-    "source": "TEK2day Newsletter",
-    "summary": "Interesting chart directionally.",
-    "content_html": "<h4>Interesting chart directionally. GOOGL, NVDA, META and MSFT have behaved as one would expect. MSFT and META both still feel expensive in that neither seems to reflect downside risk. </h4><ul><li><p><strong>Microsoft (MSFT): </strong> Microsoft offers GPUs in the cloud at scale. OK. So does <strong>GOOGL</strong>, <strong>AMZN</strong>, and <strong>ORCL</strong>. MSFT lacks Gen AI intellectual property. Partnering with <strong>OpenAI</strong> does not justify the run MSFT shares have had over the past three years.  OpenAI is clearly pushing for an IPO before the masses figure out it does not stand a chance long-term. LLMs are a scale game and OpenAI lacks scale. I&#8217;m referring to size of balance sheet. OpenAI will not be able to maintain the pace of capital investment so long as Google and xAI continue to push the AI infrastructure investment pedal to the metal.</p></li><li><p><strong>Meta Platforms (META): </strong>Zuckerberg is bored with the core business and is therefore chasing shiny new objects. I give META a zero percent chance of building the world&#8217;s finest frontier LLM. META needs to acquire <strong>Anthropic</strong> or OpenAI in order to challenge <strong>Google Gemini</strong>. MSFT won&#8217;t allow an OpenAI sale to META. That means META needs to acquire Anthropic. The funny thing is, I was a fan of Zuckerberg building a fleet of opensource LLMs and SLMs. I guess that strategy did not stroke his ego.</p></li></ul><div class=\"captioned-image-container\"><figure><a class=\"image-link image2 is-viewable-img\" href=\"https://substackcdn.com/image/fetch/$s_!vGTO!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fcc93c9a0-cb83-4325-a591-2a8c21d91bc6_1244x672.png\" target=\"_blank\"><div class=\"image2-inset\"><source type=\"image/webp\" /><img alt=\"\" class=\"sizing-normal\" height=\"672\" src=\"https://substackcdn.com/image/fetch/$s_!vGTO!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fcc93c9a0-cb83-4325-a591-2a8c21d91bc6_1244x672.png\" width=\"1244\" /><div class=\"image-link-expand\"><div class=\"pencraft pc-display-flex pc-gap-8 pc-reset\"><button class=\"pencraft pc-reset pencraft icon-container restack-image\" tabindex=\"0\" type=\"button\"><svg fill=\"none\" height=\"20\" stroke=\"var(--color-fg-primary)\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" viewBox=\"0 0 20 20\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><g><title></title><path d=\"M2.53001 7.81595C3.49179 4.73911 6.43281 2.5 9.91173 2.5C13.1684 2.5 15.9537 4.46214 17.0852 7.23684L17.6179 8.67647M17.6179 8.67647L18.5002 4.26471M17.6179 8.67647L13.6473 6.91176M17.4995 12.1841C16.5378 15.2609 13.5967 17.5 10.1178 17.5C6.86118 17.5 4.07589 15.5379 2.94432 12.7632L2.41165 11.3235M2.41165 11.3235L1.5293 15.7353M2.41165 11.3235L6.38224 13.0882\"></path></g></svg></button><button class=\"pencraft pc-reset pencraft icon-container view-image\" tabindex=\"0\" type=\"button\"><svg class=\"lucide lucide-maximize2 lucide-maximize-2\" fill=\"none\" height=\"20\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" viewBox=\"0 0 24 24\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><polyline points=\"15 3 21 3 21 9\"></polyline><polyline points=\"9 21 3 21 3 15\"></polyline><line x1=\"21\" x2=\"14\" y1=\"3\" y2=\"10\"></line><line x1=\"3\" x2=\"10\" y1=\"21\" y2=\"14\"></line></svg></button></div></div></div></a></figure></div><div><hr /></div><p></p>",
-    "image_url": "https://substackcdn.com/image/fetch/$s_!vGTO!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fcc93c9a0-cb83-4325-a591-2a8c21d91bc6_1244x672.png",
-    "summary_text": "Interesting chart directionally.",
     "category": "ai"
   },
   {
