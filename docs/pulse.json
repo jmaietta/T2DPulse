@@ -1,5 +1,35 @@
 [
   {
+    "title": "Browser extensions with 8 million users collect extended AI conversations",
+    "url": "https://arstechnica.com/security/2025/12/browser-extensions-with-8-million-users-collect-extended-ai-conversations/",
+    "published_at": "2025-12-17T10:25:25-05:00",
+    "source": "Ars Technica",
+    "summary": "The extensions, available for Chromium browsers, harvest full AI conversations over months.",
+    "content_html": "<p>Browser extensions with more than 8 million installs are harvesting complete and extended conversations from users\u2019 AI conversations and selling them for marketing purposes, according to data collected from the Google and Microsoft pages hosting them.</p>\n<p><a href=\"https://www.koi.ai/blog/urban-vpn-browser-extension-ai-conversations-data-collection\">Security firm Koi discovered</a> the eight extensions, which as of late Tuesday night remained available in both Google\u2019s and Microsoft\u2019s extension stores. Seven of them carry \u201cFeatured\u201d badges, which are endorsements meant to signal that the companies have determined the extensions meet their quality standards. The free extensions provide functions such as VPN routing to safeguard online privacy and ad blocking for ad-free browsing. All provide assurances that user data remains anonymous and isn\u2019t shared for purposes other than their described use.</p>\n<h2>A gold mine for marketers and data brokers</h2>\n<p>An examination of the extensions\u2019 underlying code tells a much more complicated story. Each contains eight of what Koi calls \u201cexecutor\u201d scripts, with each being unique for ChatGPT, Claude, Gemini, and five other leading AI chat platforms. The scripts are injected into webpages anytime the user visits one of these platforms. From there, the scripts override browsers\u2019 built-in functions for making network requests and receiving responses.</p><p><a href=\"https://arstechnica.com/security/2025/12/browser-extensions-with-8-million-users-collect-extended-ai-conversations/\">Read full article</a></p>\n<p><a href=\"https://arstechnica.com/security/2025/12/browser-extensions-with-8-million-users-collect-extended-ai-conversations/#comments\">Comments</a></p>",
+    "image_url": "https://cdn.arstechnica.net/wp-content/uploads/2025/12/electronic-privacy-invasion-1152x648.jpg",
+    "summary_text": "The extensions, available for Chromium browsers, harvest full AI conversations over months.",
+    "category": "ai",
+    "_permalink": "/p/81fb3b525c/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/81fb3b525c/",
+    "_summary_240": "The extensions, available for Chromium browsers, harvest full AI conversations over months.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/81fb3b525c/thumbnail.png"
+  },
+  {
+    "title": "Ives: AI Bears Have It Wrong",
+    "url": "https://www.bloomberg.com/news/videos/2025-12-17/ives-ai-bears-have-it-wrong-video",
+    "published_at": "2025-12-17T10:18:35-05:00",
+    "source": "Bloomberg Technology",
+    "summary": "What AI bubble? Dan Ives of Wedbush says we're only in year three of a decade-long AI supercycle. He joined Bloomberg Open Interest to talk about why 2026 could be the monetization moment tech investors have been waiting for. (Source: Bloomberg)",
+    "content_html": "",
+    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/i.s3M6dbkGrg/v3/1200x-1.jpg",
+    "summary_text": "What AI bubble? Dan Ives of Wedbush says we're only in year three of a decade-long AI supercycle. He joined Bloomberg Open Interest to talk about why 2026 could be the monetization moment tech investors have been waiting for. (Source: Bloomberg)",
+    "category": "ai",
+    "_permalink": "/p/73ca66a7cc/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/73ca66a7cc/",
+    "_summary_240": "What AI bubble? Dan Ives of Wedbush says we're only in year three of a decade-long AI supercycle. He joined Bloomberg Open Interest to talk about why 2026 could be the...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/73ca66a7cc/thumbnail.png"
+  },
+  {
     "title": "Mozilla\u2019s new CEO says AI is coming to Firefox, but will remain a choice",
     "url": "https://techcrunch.com/2025/12/17/mozillas-new-ceo-says-ai-is-coming-to-firefox-but-will-remain-a-choice/",
     "published_at": "2025-12-17T10:17:52-05:00",
@@ -433,21 +463,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/e4a431ac1e/",
     "_summary_240": "Screenshots of an email shared online purportedly show founder Yida Gao stepping down as managing director of Shima Capital and outlining plans for an orderly wind-down of the...",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/e4a431ac1e/thumbnail.png"
-  },
-  {
-    "title": "State Street Says Tech to Drive Equity Gains in 2026",
-    "url": "https://www.bloomberg.com/news/videos/2025-12-17/state-street-says-tech-to-drive-equity-gains-in-2026-video",
-    "published_at": "2025-12-17T03:33:18-05:00",
-    "source": "Bloomberg Technology",
-    "summary": "Marija Veitmane, equity research head at State Street Global Markets, discusses the outlook for stocks in 2026. Speaking on Bloomberg Television, Veitmane sees technology firms driving gains and the health care sector \u201canother very interesting conversation.\u201d",
-    "content_html": "",
-    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iMHaf.WORMps/v3/1200x-1.jpg",
-    "summary_text": "Marija Veitmane, equity research head at State Street Global Markets, discusses the outlook for stocks in 2026. Speaking on Bloomberg Television, Veitmane sees technology firms driving gains and the health care sector \u201canother very interesting conversation.\u201d",
-    "category": "fintech",
-    "_permalink": "/p/b340478997/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/b340478997/",
-    "_summary_240": "Marija Veitmane, equity research head at State Street Global Markets, discusses the outlook for stocks in 2026. Speaking on Bloomberg Television, Veitmane sees technology firms...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/b340478997/thumbnail.png"
   },
   {
     "title": "AI is moving to the edge \u2013 and network security needs to catch up",
