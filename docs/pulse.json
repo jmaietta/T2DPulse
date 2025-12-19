@@ -1,5 +1,80 @@
 [
   {
+    "title": "Even Google and Replit struggle to deploy AI agents reliably \u2014 here's why",
+    "url": "https://venturebeat.com/orchestration/even-google-and-replit-struggle-to-deploy-ai-agents-reliably-heres-why",
+    "published_at": "2025-12-19T14:00:00-05:00",
+    "source": "VentureBeat",
+    "summary": "2025 was supposed to be the year of the AI agent, right? Not quite, acknowledge Google Cloud and Replit \u2014 two big players in the AI agent space and partners in the \" vibe coding \" movement \u2014 at a recent VB Impact Series event. Even as they build out agentic tools themselves, leaders from the two companies say the capabilities aren\u2019t quite there yet. This constrained reality comes down to struggle...",
+    "content_html": "",
+    "image_url": "https://images.ctfassets.net/jdtwqhzvc2n1/2XEEKrDQzD8nYfOVb79IrU/9a063848dbdb6c4051c49a9d46e3796e/Agent_building.png?w=800&amp;q=75",
+    "summary_text": "2025 was supposed to be the year of the AI agent, right? Not quite, acknowledge Google Cloud and Replit \u2014 two big players in the AI agent space and partners in the \" vibe coding \" movement \u2014 at a recent VB Impact Series event. Even as they build out agentic t...",
+    "category": "ai",
+    "_permalink": "/p/bc1b33d298/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/bc1b33d298/",
+    "_summary_240": "2025 was supposed to be the year of the AI agent, right? Not quite, acknowledge Google Cloud and Replit \u2014 two big players in the AI agent space and partners in the \" vibe coding...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/bc1b33d298/thumbnail.png"
+  },
+  {
+    "title": "OpenAI & CEORater",
+    "url": "https://newsletter.tek2dayholdings.com/p/openai-and-ceorater",
+    "published_at": "2025-12-19T13:44:28-05:00",
+    "source": "TEK2day Newsletter",
+    "summary": "We made some modest UI enhancements to CEORater, most notably, users may now compare up to 10 CEOs:",
+    "content_html": "<p><strong>We made some modest UI enhancements to <a href=\"https://www.ceorater.com/\">CEORater</a>, most notably, users may now compare up to 10 CEOs:</strong></p><div class=\"captioned-image-container\"><figure><a class=\"image-link image2 is-viewable-img\" href=\"https://substackcdn.com/image/fetch/$s_!uxo5!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F17dca019-35dc-42ef-970e-79d389090c7d_1366x723.png\" target=\"_blank\"><div class=\"image2-inset\"><source type=\"image/webp\" /><img alt=\"\" class=\"sizing-normal\" height=\"723\" src=\"https://substackcdn.com/image/fetch/$s_!uxo5!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F17dca019-35dc-42ef-970e-79d389090c7d_1366x723.png\" width=\"1366\" /><div class=\"image-link-expand\"><div class=\"pencraft pc-display-flex pc-gap-8 pc-reset\"><button class=\"pencraft pc-reset pencraft icon-container restack-image\" tabindex=\"0\" type=\"button\"><svg fill=\"none\" height=\"20\" stroke=\"var(--color-fg-primary)\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" viewBox=\"0 0 20 20\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><g><title></title><path d=\"M2.53001 7.81595C3.49179 4.73911 6.43281 2.5 9.91173 2.5C13.1684 2.5 15.9537 4.46214 17.0852 7.23684L17.6179 8.67647M17.6179 8.67647L18.5002 4.26471M17.6179 8.67647L13.6473 6.91176M17.4995 12.1841C16.5378 15.2609 13.5967 17.5 10.1178 17.5C6.86118 17.5 4.07589 15.5379 2.94432 12.7632L2.41165 11.3235M2.41165 11.3235L1.5293 15.7353M2.41165 11.3235L6.38224 13.0882\"></path></g></svg></button><button class=\"pencraft pc-reset pencraft icon-container view-image\" tabindex=\"0\" type=\"button\"><svg class=\"lucide lucide-maximize2 lucide-maximize-2\" fill=\"none\" height=\"20\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" viewBox=\"0 0 24 24\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><polyline points=\"15 3 21 3 21 9\"></polyline><polyline points=\"9 21 3 21 3 15\"></polyline><line x1=\"21\" x2=\"14\" y1=\"3\" y2=\"10\"></line><line x1=\"3\" x2=\"10\" y1=\"21\" y2=\"14\"></line></svg></button></div></div></div></a><figcaption class=\"image-caption\">Source: <a href=\"https://www.ceorater.com/\">CEORater</a></figcaption></figure></div><p><strong>We are on track to onboard the S&amp;P 500 CEO cohort to CEORater by month-end February.</strong></p><div><hr /></div><p><strong>If you missed Sam Altman last night, here is the interview.</strong> I am of the belief that model performance is not progressing at the same pace as two years ago, therefore <strong>OpenAI</strong> is putting more effort into building out the application layer of the stack. </p><p>It will be difficult for <strong>OpenAI</strong> to continue to push on the horizontal end of the spectrum with the <strong>Consumer</strong>, and simultaneously build out industry verticals and domain-specific functionality for <strong>Enterprise</strong> customers. </p><p>My view is focus on the Consumer and, to the extent you want to push on the Enterprise, do it at the API layer as opposed to working to productize the effort, which can get awfully expensive quickly. I believe the credit markets will impose discipline on OpenAI.</p><div class=\"youtube-wrap\" id=\"youtube2-2P27Ef-LLuQ\"><div class=\"youtube-inner\"></div></div><div><hr /></div><p></p>",
+    "image_url": "https://substackcdn.com/image/fetch/$s_!uxo5!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F17dca019-35dc-42ef-970e-79d389090c7d_1366x723.png",
+    "summary_text": "We made some modest UI enhancements to CEORater, most notably, users may now compare up to 10 CEOs:",
+    "category": "ai",
+    "_permalink": "/p/f6bd73eebc/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/f6bd73eebc/",
+    "_summary_240": "We made some modest UI enhancements to CEORater, most notably, users may now compare up to 10 CEOs:",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/f6bd73eebc/thumbnail.png"
+  },
+  {
+    "title": "Michael Saylor\u2019s Bitcoin thesis: Money or commodity?",
+    "url": "https://cointelegraph.com/news/michael-saylor-bitcoin-thesis-money-commodity?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "published_at": "2025-12-19T13:35:58-05:00",
+    "source": "Cointelegraph",
+    "summary": "Bitcoin advocates have been divided over Michael Saylor\u2019s updated BTC thesis, leaving question marks over how the Strategy CEO views the cryptocurrency.",
+    "content_html": "",
+    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTIvMDE5YjA1ODQtNjI0OS03MmJjLWI4NWYtY2JhMDg0Y2JmN2Ew.jpg",
+    "summary_text": "Bitcoin advocates have been divided over Michael Saylor\u2019s updated BTC thesis, leaving question marks over how the Strategy CEO views the cryptocurrency.",
+    "category": "fintech",
+    "_permalink": "/p/fdf5db4275/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/fdf5db4275/",
+    "_summary_240": "Bitcoin advocates have been divided over Michael Saylor\u2019s updated BTC thesis, leaving question marks over how the Strategy CEO views the cryptocurrency.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/fdf5db4275/thumbnail.png"
+  },
+  {
+    "title": "New Bitcoin whales are rewriting BTC\u2019s market structure: Data",
+    "url": "https://cointelegraph.com/news/new-bitcoin-whales-rewrite-btc-s-market-structure?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "published_at": "2025-12-19T13:31:18-05:00",
+    "source": "Cointelegraph",
+    "summary": "Bitcoin's onchain data reveals new BTC whales with 50% of the realized capital, highlighting a shift in how capital is shaping the market.",
+    "content_html": "",
+    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTIvMDE5YjM2ZjYtZTNjZS03NDliLWFmYjQtMjViMDQ1YWZjMTAxLmpwZw==.jpg",
+    "summary_text": "Bitcoin's onchain data reveals new BTC whales with 50% of the realized capital, highlighting a shift in how capital is shaping the market.",
+    "category": "fintech",
+    "_permalink": "/p/13c6501551/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/13c6501551/",
+    "_summary_240": "Bitcoin's onchain data reveals new BTC whales with 50% of the realized capital, highlighting a shift in how capital is shaping the market.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/13c6501551/thumbnail.png"
+  },
+  {
+    "title": "UK crypto regulation is coming: What the FCA\u2019s new consultation means",
+    "url": "https://cointelegraph.com/news/uk-crypto-regulation-fca-new-consultation-podcast?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "published_at": "2025-12-19T13:30:52-05:00",
+    "source": "Cointelegraph",
+    "summary": "The UK\u2019s financial watchdog has launched a sweeping consultation that could reshape how crypto exchanges, staking services and DeFi operate ahead of a 2027 rollout.",
+    "content_html": "",
+    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTIvMDE5YjM3Y2EtNWNmOC03OTVhLTk3MzQtZWQwOTQzNTZmMWU2LmpwZw==.jpg",
+    "summary_text": "The UK\u2019s financial watchdog has launched a sweeping consultation that could reshape how crypto exchanges, staking services and DeFi operate ahead of a 2027 rollout.",
+    "category": "fintech",
+    "_permalink": "/p/f440789f0a/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/f440789f0a/",
+    "_summary_240": "The UK\u2019s financial watchdog has launched a sweeping consultation that could reshape how crypto exchanges, staking services and DeFi operate ahead of a 2027 rollout.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/f440789f0a/thumbnail.png"
+  },
+  {
     "title": "How Microsoft Store elevated the customer experience in 2025",
     "url": "https://blogs.windows.com/windowsdeveloper/2025/12/18/2025-in-review-how-we-elevated-the-microsoft-store-experience/",
     "published_at": "2025-12-19T13:06:30-05:00",
@@ -476,21 +551,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/526bb19f4f/thumbnail.png"
   },
   {
-    "title": "Nigeria's Tech Unicorn: Flutterwave's Path to Profitability",
-    "url": "https://www.bloomberg.com/news/videos/2025-12-19/flutterwave-s-path-to-profitability-video",
-    "published_at": "2025-12-19T03:40:37-05:00",
-    "source": "Bloomberg Technology",
-    "summary": "Africa's fintech sector has seen remarkable growth over the past decade. It's now a key pillar of the continent's tech economy, reshaping how people access and use financial services. Flutterwave is Africa's most valuable unicorn, valued at more than $3 billion. CEO Olugbenga Agboola says the company's focus remains on profitability and an eventual IPO would be just a milestone, not a destination...",
-    "content_html": "",
-    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ioERgrsf7ilc/v3/1200x-1.jpg",
-    "summary_text": "Africa's fintech sector has seen remarkable growth over the past decade. It's now a key pillar of the continent's tech economy, reshaping how people access and use financial services. Flutterwave is Africa's most valuable unicorn, valued at more than $3 billi...",
-    "category": "fintech",
-    "_permalink": "/p/a8f61f19ef/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/a8f61f19ef/",
-    "_summary_240": "Africa's fintech sector has seen remarkable growth over the past decade. It's now a key pillar of the continent's tech economy, reshaping how people access and use financial...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/a8f61f19ef/thumbnail.png"
-  },
-  {
     "title": "Coinbase borrows Kalshi\u2019s playbook, sues three states over prediction markets",
     "url": "https://cointelegraph.com/news/coinbase-sues-states-prediction-markets?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
     "published_at": "2025-12-19T03:01:57-05:00",
@@ -686,36 +746,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/f741f82278/thumbnail.png"
   },
   {
-    "title": "Coinbase appoints former UK minister George Osborne to chair advisory council",
-    "url": "https://cointelegraph.com/news/coinbase-george-osborne-uk-minister-advisory-council?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-    "published_at": "2025-12-18T16:59:06-05:00",
-    "source": "Cointelegraph",
-    "summary": "Osborne began advising Coinbase in 2024 and has been critical of the UK government's lack of robust digital asset regulations.",
-    "content_html": "",
-    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTIvMDE5YjMzNzUtNGJlNy03Zjc3LWE3NzItZWEzMGFmMGFiYWI4LmpwZw==.jpg",
-    "summary_text": "Osborne began advising Coinbase in 2024 and has been critical of the UK government's lack of robust digital asset regulations.",
-    "category": "fintech",
-    "_permalink": "/p/268e707a9b/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/268e707a9b/",
-    "_summary_240": "Osborne began advising Coinbase in 2024 and has been critical of the UK government's lack of robust digital asset regulations.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/268e707a9b/thumbnail.png"
-  },
-  {
-    "title": "Brazilian stock exchange to launch tokenization platform and stablecoin",
-    "url": "https://cointelegraph.com/news/brazil-stocks-b3-tokenization-stablecoin?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-    "published_at": "2025-12-18T16:46:52-05:00",
-    "source": "Cointelegraph",
-    "summary": "A representative from Brazil's stock exchange, B3, said the stablecoin would be \u201ca tool to enable trading in tokens,\" which it planned to offer in 2026.",
-    "content_html": "",
-    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTIvMDE5YjMzMDMtMDVkYi03M2RiLTliYzItZjU4MjA5NGZlMTExLmpwZw==.jpg",
-    "summary_text": "A representative from Brazil's stock exchange, B3, said the stablecoin would be \u201ca tool to enable trading in tokens,\" which it planned to offer in 2026.",
-    "category": "fintech",
-    "_permalink": "/p/9fd934ea18/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/9fd934ea18/",
-    "_summary_240": "A representative from Brazil's stock exchange, B3, said the stablecoin would be \u201ca tool to enable trading in tokens,\" which it planned to offer in 2026.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/9fd934ea18/thumbnail.png"
-  },
-  {
     "title": "What is sycophancy in AI models?",
     "url": "https://www.youtube.com/watch?v=nvbq39yVYRk",
     "published_at": "2025-12-18T15:30:14-05:00",
@@ -821,6 +851,21 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/0bea58d427/thumbnail.png"
   },
   {
+    "title": "Palona goes vertical, launches Vision, Workflow: 4 key lessons for AI builders",
+    "url": "https://venturebeat.com/orchestration/palona-goes-vertical-launching-vision-workflow-features-4-key-lessons-for-ai",
+    "published_at": "2025-12-18T13:10:00-05:00",
+    "source": "VentureBeat",
+    "summary": "Building an enterprise AI company on a \"foundation of shifting sand\" is the central challenge for founders today, according to the leadership at Palona AI . Today, the Palo Alto-based startup\u2014led by former Google and Meta engineering veterans\u2014is making a decisive vertical push into the restaurant and hospitality space with today's launch of Palona Vision and Palona Workflow. The new offerings tra...",
+    "content_html": "",
+    "image_url": "https://images.ctfassets.net/jdtwqhzvc2n1/7o83pL3JkR4AtWCixTF1Vn/b5a86a9b546c10df9b90c10efab45bc5/fQUa9jYY1tHu1pCu1Y-vE.jpg?w=800&amp;q=75",
+    "summary_text": "Building an enterprise AI company on a \"foundation of shifting sand\" is the central challenge for founders today, according to the leadership at Palona AI . Today, the Palo Alto-based startup\u2014led by former Google and Meta engineering veterans\u2014is making a deci...",
+    "category": "ai",
+    "_permalink": "/p/958463c02c/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/958463c02c/",
+    "_summary_240": "Building an enterprise AI company on a \"foundation of shifting sand\" is the central challenge for founders today, according to the leadership at Palona AI . Today, the Palo...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/958463c02c/thumbnail.png"
+  },
+  {
     "title": "The AI adoption race in the workplace is on",
     "url": "https://www.ft.com/content/33a21782-9a69-4fa6-94e1-c6a6a0aaa333",
     "published_at": "2025-12-18T13:06:55-05:00",
@@ -834,6 +879,36 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/91adf7b29c/",
     "_summary_240": "Sector companies are seeking to show that time saved on one-off tasks can translate into real-world business value",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/91adf7b29c/thumbnail.png"
+  },
+  {
+    "title": "Anthropic launches enterprise \u2018Agent Skills\u2019 and opens the standard, challenging OpenAI in workplace AI",
+    "url": "https://venturebeat.com/technology/anthropic-launches-enterprise-agent-skills-and-opens-the-standard",
+    "published_at": "2025-12-18T12:00:00-05:00",
+    "source": "VentureBeat",
+    "summary": "Anthropic said on Wednesday it would release its Agent Skills technology as an open standard, a strategic bet that sharing its approach to making AI assistants more capable will cement the company's position in the fast-evolving enterprise software market. The San Francisco-based artificial intelligence company also unveiled organization-wide management tools for enterprise customers and a direct...",
+    "content_html": "",
+    "image_url": "https://images.ctfassets.net/jdtwqhzvc2n1/J3NYgqu1RNo5JeiBlj7Vc/a01c1b4c38ac8f0ba4ec1feb781c5333/nuneybits_Vector_art_of_retro_computer_screen_scrolling_code_fo_392f32d5-c9a7-4acb-8276-6336ec58d7a4.webp?w=800&amp;q=75",
+    "summary_text": "Anthropic said on Wednesday it would release its Agent Skills technology as an open standard, a strategic bet that sharing its approach to making AI assistants more capable will cement the company's position in the fast-evolving enterprise software market. Th...",
+    "category": "ai",
+    "_permalink": "/p/0aad0a828d/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/0aad0a828d/",
+    "_summary_240": "Anthropic said on Wednesday it would release its Agent Skills technology as an open standard, a strategic bet that sharing its approach to making AI assistants more capable will...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/0aad0a828d/thumbnail.png"
+  },
+  {
+    "title": "OpenAI now accepting ChatGPT app submissions from third-party devs, launches App Directory",
+    "url": "https://venturebeat.com/technology/openai-now-accepting-chatgpt-app-submissions-from-third-party-devs-launches",
+    "published_at": "2025-12-18T11:22:00-05:00",
+    "source": "VentureBeat",
+    "summary": "OpenAI has begun accepting submissions from third-party developers for their apps to be accessible directly in ChatGPT, and has launched a new App Directory (don't call it a \"store\"!) that can be opened from the ChatGPT sidebar and at the URL chatgpt.com/apps . This means the 800 million+ users of OpenAI's hit chatbot can search for, discover and begin using newly approved third-party apps immedi...",
+    "content_html": "",
+    "image_url": "https://images.ctfassets.net/jdtwqhzvc2n1/3onQY5stiekduudLOI0ylh/dea41236733f17f5976aea556e34b532/Screenshot_2025-12-18_at_10.37.28\u00e2__AM.png?w=800&amp;q=75",
+    "summary_text": "OpenAI has begun accepting submissions from third-party developers for their apps to be accessible directly in ChatGPT, and has launched a new App Directory (don't call it a \"store\"!) that can be opened from the ChatGPT sidebar and at the URL chatgpt.com/apps...",
+    "category": "ai",
+    "_permalink": "/p/b95cd3c6b3/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/b95cd3c6b3/",
+    "_summary_240": "OpenAI has begun accepting submissions from third-party developers for their apps to be accessible directly in ChatGPT, and has launched a new App Directory (don't call it a...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/b95cd3c6b3/thumbnail.png"
   },
   {
     "title": "Now Generally Available, NVIDIA RTX PRO 5000 72GB Blackwell GPU Expands Memory Options for Desktop Agentic AI",
@@ -974,6 +1049,21 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/b16bc39545/thumbnail.png"
   },
   {
+    "title": "Enterprise AI coding grows teeth: GPT\u20115.2\u2011Codex weaves security into large-scale software refactors",
+    "url": "https://venturebeat.com/technology/enterprise-ai-coding-grows-teeth-gpt-5-2-codex-weaves-security-into-large",
+    "published_at": "2025-12-18T00:00:00-05:00",
+    "source": "VentureBeat",
+    "summary": "With the recent release of GPT 5.2 , OpenAI updated other related models, including its popular coding model Codex, bringing more agentic use cases to its fold. GPT-5.2-Codex, which OpenAI called in a blog post \u201cthe most advanced agentic coding model yet for complex, real-world software engineer,\u201d has been optimized for long-horizon work with agents and will have stronger cybersecurity capabiliti...",
+    "content_html": "",
+    "image_url": "https://images.ctfassets.net/jdtwqhzvc2n1/7jzIFPAOzCMxe5UXspPqbo/e8a182a2a498380565d69d52a0e7d648/crimedy7_illustration_of_a_robot_coding_--ar_169_--v_7_8de721da-8509-42c8-8732-9f1d70fb8b84_3.png?w=800&amp;q=75",
+    "summary_text": "With the recent release of GPT 5.2 , OpenAI updated other related models, including its popular coding model Codex, bringing more agentic use cases to its fold. GPT-5.2-Codex, which OpenAI called in a blog post \u201cthe most advanced agentic coding model yet for ...",
+    "category": "ai",
+    "_permalink": "/p/9c33f72e38/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/9c33f72e38/",
+    "_summary_240": "With the recent release of GPT 5.2 , OpenAI updated other related models, including its popular coding model Codex, bringing more agentic use cases to its fold. GPT-5.2-Codex,...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/9c33f72e38/thumbnail.png"
+  },
+  {
     "title": "US tech stocks slide as Oracle data centre setback reignites AI concerns",
     "url": "https://www.ft.com/content/ce60f74f-ccc8-4bde-bbec-842041ecf8e7",
     "published_at": "2025-12-17T21:02:49-05:00",
@@ -1056,6 +1146,21 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/3537953b9b/thumbnail.png"
   },
   {
+    "title": "JP Morgan\u2019s AI adoption hit 50% of employees. The secret? A connectivity-first architecture",
+    "url": "https://venturebeat.com/orchestration/jp-morgans-ai-adoption-hit-50-of-employees-the-secret-a-connectivity-first",
+    "published_at": "2025-12-17T14:00:00-05:00",
+    "source": "VentureBeat",
+    "summary": "When Derek Waldron and his technical team at JPMorgan Chase first launched an LLM suite with personal assistants two-and-a-half years ago, they weren\u2019t sure what to expect. That wasn\u2019t long after the game-changing emergence of ChatGPT, but in enterprise, skepticism was still high. Surprisingly, employees opted into the internal platform organically \u2014 and quickly. Within months, usage jumped from ...",
+    "content_html": "",
+    "image_url": "https://images.ctfassets.net/jdtwqhzvc2n1/2enHa97PVIbaLzukEpRUth/8362fe4758604496771a13727fada179/JPMorgan.png?w=800&amp;q=75",
+    "summary_text": "When Derek Waldron and his technical team at JPMorgan Chase first launched an LLM suite with personal assistants two-and-a-half years ago, they weren\u2019t sure what to expect. That wasn\u2019t long after the game-changing emergence of ChatGPT, but in enterprise, skep...",
+    "category": "ai",
+    "_permalink": "/p/709cdb7f6e/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/709cdb7f6e/",
+    "_summary_240": "When Derek Waldron and his technical team at JPMorgan Chase first launched an LLM suite with personal assistants two-and-a-half years ago, they weren\u2019t sure what to expect. That...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/709cdb7f6e/thumbnail.png"
+  },
+  {
     "title": "Into the Omniverse: OpenUSD and NVIDIA Halos Accelerate Safety for Robotaxis, Physical AI Systems",
     "url": "https://blogs.nvidia.com/blog/openusd-halos-safety-robotaxi-physical-ai/",
     "published_at": "2025-12-17T12:00:49-05:00",
@@ -1122,13 +1227,9 @@
     "source": "Financial Times - Technology",
     "summary": "Ten sectors, including the creative industries and life sciences, will share \u00a312bn over four years",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/c4c56b0f-e0a4-4a33-84c7-28391afcc20d.jpg",
+    "image_url": "",
     "summary_text": "Ten sectors, including the creative industries and life sciences, will share \u00a312bn over four years",
-    "category": "ai",
-    "_permalink": "/p/f69cf0c275/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/f69cf0c275/",
-    "_summary_240": "Ten sectors, including the creative industries and life sciences, will share \u00a312bn over four years",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/f69cf0c275/thumbnail.png"
+    "category": "ai"
   },
   {
     "title": "What Trump\u2019s Embrace of Crypto Has Unleashed",
