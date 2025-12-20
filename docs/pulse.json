@@ -1323,11 +1323,7 @@
     "content_html": "<p>For most of photography\u2019s <a href=\"https://en.wikipedia.org/wiki/View_from_the_Window_at_Le_Gras\">roughly 200-year</a> history, altering a photo convincingly required either a darkroom, some Photoshop expertise, or, at minimum, a steady hand with scissors and glue. On Tuesday, OpenAI <a href=\"https://openai.com/index/new-chatgpt-images-is-here/\">released a tool</a> that reduces the process to typing a sentence.</p>\n<p>It\u2019s not the first company to do so. While OpenAI had a conversational image-editing model in the works since <a href=\"https://arstechnica.com/information-technology/2024/05/chatgpt-4o-lets-you-have-real-time-audio-video-conversations-with-emotional-chatbot/\">GPT-4o</a> in 2024, Google beat OpenAI to market <a href=\"https://arstechnica.com/ai/2025/03/farewell-photoshop-googles-new-ai-lets-you-edit-images-by-asking/\">in March</a> with a public prototype, then refined it to a popular model called <a href=\"https://arstechnica.com/ai/2025/08/google-improves-gemini-ai-image-editing-with-nano-banana-model/\">Nano Banana</a> image model (and <a href=\"https://arstechnica.com/google/2025/11/google-launches-nano-banana-pro-image-model-adds-ai-image-detection-in-gemini-app/\">Nano Banana Pro</a>). The enthusiastic response to Google\u2019s image-editing model in the AI community <a href=\"https://arstechnica.com/ai/2025/12/openai-ceo-declares-code-red-as-gemini-gains-200-million-users-in-3-months/\">got OpenAI\u2019s attention</a>.</p>\n<p>OpenAI\u2019s new <a href=\"https://openai.com/index/new-chatgpt-images-is-here/\">GPT Image 1.5</a> is an AI image synthesis model that reportedly generates images up to four times faster than its predecessor and costs about 20 percent less through the API. The model rolled out to all ChatGPT users on Tuesday and represents <a href=\"https://arstechnica.com/ai/2025/03/farewell-photoshop-googles-new-ai-lets-you-edit-images-by-asking/\">another step</a> toward making photorealistic image manipulation a casual process that requires no particular visual skills.</p><p><a href=\"https://arstechnica.com/ai/2025/12/openais-new-chatgpt-image-generator-makes-faking-photos-easy/\">Read full article</a></p>\n<p><a href=\"https://arstechnica.com/ai/2025/12/openais-new-chatgpt-image-generator-makes-faking-photos-easy/#comments\">Comments</a></p>",
     "image_url": "https://cdn.arstechnica.net/wp-content/uploads/2025/12/barbarian_crt_1-1152x648.jpg",
     "summary_text": "New GPT Image 1.5 allows more detailed conversational image editing, for better or worse.",
-    "category": "ai",
-    "_permalink": "/p/d682d3352a/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/d682d3352a/",
-    "_summary_240": "New GPT Image 1.5 allows more detailed conversational image editing, for better or worse.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/d682d3352a/thumbnail.png"
+    "category": "ai"
   },
   {
     "title": "Amazon overhauls AI team as chief declares an \u2018inflection point\u2019",
@@ -1490,7 +1486,7 @@
     "source": "Financial Times - Technology",
     "summary": "Former UK chancellor to lead start-up\u2019s effort to spread \u2018democratic\u2019 AI across the world",
     "content_html": "",
-    "image_url": "https://images.ft.com/v3/image/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F0e70635d-ec7a-44e4-8f9d-757247617fcf.jpg?source=next-article&fit=scale-down&quality=highest&width=700&dpr=1",
+    "image_url": "",
     "summary_text": "Former UK chancellor to lead start-up\u2019s effort to spread \u2018democratic\u2019 AI across the world",
     "category": "ai"
   },
