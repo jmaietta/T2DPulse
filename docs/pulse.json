@@ -971,6 +971,21 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/c19449abb3/thumbnail.png"
   },
   {
+    "title": "What is sycophancy in AI models?",
+    "url": "https://www.youtube.com/watch?v=nvbq39yVYRk",
+    "published_at": "2025-12-18T15:30:14-05:00",
+    "source": "Anthropic YouTube",
+    "summary": "Learn what AI researchers mean when they talk about sycophancy, when it's more likely to show up in conversations, and tactics you can use to steer AI towards truth.",
+    "content_html": "",
+    "image_url": "https://i.ytimg.com/vi/nvbq39yVYRk/maxresdefault.jpg",
+    "summary_text": "Learn what AI researchers mean when they talk about sycophancy, when it's more likely to show up in conversations, and tactics you can use to steer AI towards truth.",
+    "category": "ai",
+    "_permalink": "/p/ede2bef9e9/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/ede2bef9e9/",
+    "_summary_240": "Learn what AI researchers mean when they talk about sycophancy, when it's more likely to show up in conversations, and tactics you can use to steer AI towards truth.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/ede2bef9e9/thumbnail.png"
+  },
+  {
     "title": "NVIDIA, US Government to Boost AI Infrastructure and R&D Investments Through Landmark Genesis Mission",
     "url": "https://blogs.nvidia.com/blog/nvidia-us-government-to-boost-ai-infrastructure-and-rd-investments/",
     "published_at": "2025-12-18T14:02:12-05:00",
@@ -1454,17 +1469,6 @@
     "category": "software"
   },
   {
-    "title": "ChatGPT Images",
-    "url": "https://www.youtube.com/watch?v=DPBtd57p5Mg",
-    "published_at": "2025-12-16T13:13:34-05:00",
-    "source": "OpenAI YouTube",
-    "summary": "We\u2019re releasing a new version of ChatGPT Images\u2060, powered by our new flagship image generation model. Now, whether you\u2019re creating something from scratch or editing a photo, you\u2019ll get the output you\u2019re picturing. It makes precise edits while keeping details intact, and generates images up to 4x faster. Alongside, we\u2019re introducing a new Images feature within ChatGPT, designed to make image gener...",
-    "content_html": "",
-    "image_url": "https://i.ytimg.com/vi/DPBtd57p5Mg/maxresdefault.jpg",
-    "summary_text": "We\u2019re releasing a new version of ChatGPT Images\u2060, powered by our new flagship image generation model. Now, whether you\u2019re creating something from scratch or editing a photo, you\u2019ll get the output you\u2019re picturing. It makes precise edits while keeping details ...",
-    "category": "ai"
-  },
-  {
     "title": "OpenAI hires George Osborne to spearhead global \u2018Stargate\u2019 expansion",
     "url": "https://www.ft.com/content/a6a8c7aa-9677-4208-a28e-a3ca51cb7aa3",
     "published_at": "2025-12-16T12:30:05-05:00",
@@ -1551,17 +1555,6 @@
     "image_url": "https://cdn.arstechnica.net/wp-content/uploads/2025/12/GettyImages-2241620003-1152x648-1765829622.jpg",
     "summary_text": "Dictionary codifies the term that took hold in 2024 for low-quality AI-generated content.",
     "category": "ai"
-  },
-  {
-    "title": "Microsoft will finally kill obsolete cipher that has wreaked decades of havoc",
-    "url": "https://arstechnica.com/security/2025/12/microsoft-will-finally-kill-obsolete-cipher-that-has-wreaked-decades-of-havoc/",
-    "published_at": "2025-12-15T16:15:55-05:00",
-    "source": "Ars Technica",
-    "summary": "The weak RC4 for administrative authentication has been a hacker holy grail for decades.",
-    "content_html": "<p>Microsoft is killing off an obsolete and vulnerable encryption cipher that Windows has supported by default for 26 years following more than a decade of devastating hacks that exploited it and recently faced blistering criticism from a prominent US senator.</p>\n<p>When the software maker rolled out Active Directory in 2000, it made RC4 a sole means of securing the Windows component, which administrators use to configure and provision fellow administrator and user accounts inside large organizations. RC4, short for Rivest Cipher 4, is a nod to mathematician and cryptographer Ron Rivest of RSA Security, who developed the stream cipher in 1987. Within days of the trade-secret-protected algorithm being leaked in 1994, a researcher demonstrated a cryptographic attack that significantly weakened the security it had been believed to provide. Despite the known susceptibility, RC4 remained a staple in encryption protocols, including SSL and its successor TLS, until about a decade ago.</p>\n<h2>Out with the old</h2>\n<p>One of the most visible holdouts in supporting RC4 has been Microsoft. Eventually, Microsoft upgraded Active Directory to support the much more secure AES encryption standard. But by default, Windows servers have continued to respond to RC4-based authentication requests and return an RC4-based response. The RC4 fallback has been a favorite weakness hackers have exploited to compromise enterprise networks. Use of RC4 played a <a href=\"https://arstechnica.com/security/2025/09/how-weak-passwords-and-other-failings-led-to-catastrophic-breach-of-ascension/\">key role</a> in last year\u2019s breach of health giant Ascension. The breach caused life-threatening disruptions at 140 hospitals and put the medical records of 5.6 million patients into the hands of the attackers. US Senator Ron Wyden (D-Ore.) <a href=\"https://arstechnica.com/security/2025/09/senator-blasts-microsoft-for-making-default-windows-vulnerable-to-kerberoasting\">in September</a> called on the Federal Trade Commission to investigate Microsoft for \u201cgross cybersecurity negligence,\u201d citing the continued default support for RC4.</p><p><a href=\"https://arstechnica.com/security/2025/12/microsoft-will-finally-kill-obsolete-cipher-that-has-wreaked-decades-of-havoc/\">Read full article</a></p>\n<p><a href=\"https://arstechnica.com/security/2025/12/microsoft-will-finally-kill-obsolete-cipher-that-has-wreaked-decades-of-havoc/#comments\">Comments</a></p>",
-    "image_url": "https://cdn.arstechnica.net/wp-content/uploads/2025/09/microsoft-logo-1024x648.jpg",
-    "summary_text": "The weak RC4 for administrative authentication has been a hacker holy grail for decades.",
-    "category": "fintech"
   },
   {
     "title": "What does it take to be an AI whisperer?",
