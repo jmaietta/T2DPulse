@@ -660,36 +660,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/848cd233b3/thumbnail.png"
   },
   {
-    "title": "'Strong Demand for Tech Debt' as AI, M&A Booms",
-    "url": "https://www.bloomberg.com/news/videos/2025-12-19/-strong-demand-for-tech-debt-as-ai-m-a-booms-video",
-    "published_at": "2025-12-19T15:28:57-05:00",
-    "source": "Bloomberg Technology",
-    "summary": "On \"Bloomberg Real Yield\", Rashaan Reid, co-head of global FICC sales at the global markets division at BofA, and Patrice Altongy, head of debt capital markets at HSBC Americas, speaks with Scarlet Fu about demand for debt, the AI boom and M&A funding. Companies are hurrying to the bond market for cheap M&A funding. That\u2019s made this quarter the biggest in four years for acquisition financing at $...",
-    "content_html": "",
-    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/itoMh3xei_64/v3/1200x-1.jpg",
-    "summary_text": "On \"Bloomberg Real Yield\", Rashaan Reid, co-head of global FICC sales at the global markets division at BofA, and Patrice Altongy, head of debt capital markets at HSBC Americas, speaks with Scarlet Fu about demand for debt, the AI boom and M&A funding. Compan...",
-    "category": "software",
-    "_permalink": "/p/4d630f5f6e/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/4d630f5f6e/",
-    "_summary_240": "On \"Bloomberg Real Yield\", Rashaan Reid, co-head of global FICC sales at the global markets division at BofA, and Patrice Altongy, head of debt capital markets at HSBC Americas,...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/4d630f5f6e/thumbnail.png"
-  },
-  {
-    "title": "Balance Sheets Starting to Fray, Says JP Morgan\u2019s Aliaga",
-    "url": "https://www.bloomberg.com/news/videos/2025-12-19/balance-sheets-starting-to-fray-says-jp-morgan-s-aliaga-video",
-    "published_at": "2025-12-19T15:23:57-05:00",
-    "source": "Bloomberg Technology",
-    "summary": "JP Morgan Global Market Strategist Stephanie Aliaga discusses how investors are reacting to AI spending and private market fundraising. She joins Caroline Hyde on \u201cBloomberg Tech.\u201d (Source: Bloomberg)",
-    "content_html": "",
-    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iGa4h7in_lxo/v3/1200x-1.jpg",
-    "summary_text": "JP Morgan Global Market Strategist Stephanie Aliaga discusses how investors are reacting to AI spending and private market fundraising. She joins Caroline Hyde on \u201cBloomberg Tech.\u201d (Source: Bloomberg)",
-    "category": "ai",
-    "_permalink": "/p/becc9a7273/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/becc9a7273/",
-    "_summary_240": "JP Morgan Global Market Strategist Stephanie Aliaga discusses how investors are reacting to AI spending and private market fundraising. She joins Caroline Hyde on \u201cBloomberg...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/becc9a7273/thumbnail.png"
-  },
-  {
     "title": "Google releases FunctionGemma: a tiny edge model that can control mobile devices with natural language",
     "url": "https://venturebeat.com/technology/google-releases-functiongemma-a-tiny-edge-model-that-can-control-mobile",
     "published_at": "2025-12-19T14:57:00-05:00",
@@ -883,21 +853,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/c19449abb3/",
     "_summary_240": "Restricted chipmaking tools are being retrofitted to make advanced AI chips, exposing cracks in US-led export controls",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/c19449abb3/thumbnail.png"
-  },
-  {
-    "title": "What is sycophancy in AI models?",
-    "url": "https://www.youtube.com/watch?v=nvbq39yVYRk",
-    "published_at": "2025-12-18T15:30:14-05:00",
-    "source": "Anthropic YouTube",
-    "summary": "Learn what AI researchers mean when they talk about sycophancy, when it's more likely to show up in conversations, and tactics you can use to steer AI towards truth.",
-    "content_html": "",
-    "image_url": "https://i.ytimg.com/vi/nvbq39yVYRk/maxresdefault.jpg",
-    "summary_text": "Learn what AI researchers mean when they talk about sycophancy, when it's more likely to show up in conversations, and tactics you can use to steer AI towards truth.",
-    "category": "ai",
-    "_permalink": "/p/ede2bef9e9/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/ede2bef9e9/",
-    "_summary_240": "Learn what AI researchers mean when they talk about sycophancy, when it's more likely to show up in conversations, and tactics you can use to steer AI towards truth.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/ede2bef9e9/thumbnail.png"
   },
   {
     "title": "NVIDIA, US Government to Boost AI Infrastructure and R&D Investments Through Landmark Genesis Mission",
@@ -1271,6 +1226,17 @@
     "content_html": "",
     "image_url": "",
     "summary_text": "Developers can now submit apps for review and publication in ChatGPT, with approved apps appearing in a new in-product directory for easy discovery. Updated tools, guidelines, and the Apps SDK help developers build powerful chat-native experiences that bring ...",
+    "category": "ai"
+  },
+  {
+    "title": "ChatGPT Images",
+    "url": "https://www.youtube.com/watch?v=DPBtd57p5Mg",
+    "published_at": "2025-12-16T13:13:34-05:00",
+    "source": "OpenAI YouTube",
+    "summary": "We\u2019re releasing a new version of ChatGPT Images\u2060, powered by our new flagship image generation model. Now, whether you\u2019re creating something from scratch or editing a photo, you\u2019ll get the output you\u2019re picturing. It makes precise edits while keeping details intact, and generates images up to 4x faster. Alongside, we\u2019re introducing a new Images feature within ChatGPT, designed to make image gener...",
+    "content_html": "",
+    "image_url": "https://i.ytimg.com/vi/DPBtd57p5Mg/maxresdefault.jpg",
+    "summary_text": "We\u2019re releasing a new version of ChatGPT Images\u2060, powered by our new flagship image generation model. Now, whether you\u2019re creating something from scratch or editing a photo, you\u2019ll get the output you\u2019re picturing. It makes precise edits while keeping details ...",
     "category": "ai"
   },
   {
