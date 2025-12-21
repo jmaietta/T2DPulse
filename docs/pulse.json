@@ -1,5 +1,20 @@
 [
   {
+    "title": "TechCrunch Mobility: Bankruptcy takes out two",
+    "url": "https://techcrunch.com/2025/12/21/techcrunch-mobility-bankruptcy-takes-out-two/",
+    "published_at": "2025-12-21T12:00:00-05:00",
+    "source": "TechCrunch",
+    "summary": "Welcome back to TechCrunch Mobility, your hub for all things \u201cfuture of transportation.\u201d",
+    "content_html": "",
+    "image_url": "https://techcrunch.com/wp-content/uploads/2025/12/volvo-luminar-lidar.jpeg?resize=1200,877",
+    "summary_text": "Welcome back to TechCrunch Mobility, your hub for all things \u201cfuture of transportation.\u201d",
+    "category": "fintech",
+    "_permalink": "/p/ccef3b25f9/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/ccef3b25f9/",
+    "_summary_240": "Welcome back to TechCrunch Mobility, your hub for all things \u201cfuture of transportation.\u201d",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/ccef3b25f9/thumbnail.png"
+  },
+  {
     "title": "How AIM taught the internet to chat",
     "url": "https://www.theverge.com/podcast/848744/aim-aol-instant-messenger-version-history",
     "published_at": "2025-12-21T08:58:36-05:00",
@@ -765,21 +780,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/cd18ffe3c2/thumbnail.png"
   },
   {
-    "title": "OpenAI adds new teen safety rules to ChatGPT as lawmakers weigh AI standards for minors",
-    "url": "https://techcrunch.com/2025/12/19/openai-adds-new-teen-safety-rules-to-models-as-lawmakers-weigh-ai-standards-for-minors/",
-    "published_at": "2025-12-19T12:51:05-05:00",
-    "source": "TechCrunch",
-    "summary": "OpenAI updated its guidelines for how its AI models should behave with users under 18, and published new AI literacy resources for teens and parents. Still, questions remain about how well policies translate into practice.",
-    "content_html": "",
-    "image_url": "https://techcrunch.com/wp-content/uploads/2022/08/GettyImages-944229988-teens-on-phones.jpeg?resize=1200,800",
-    "summary_text": "OpenAI updated its guidelines for how its AI models should behave with users under 18, and published new AI literacy resources for teens and parents. Still, questions remain about how well policies translate into practice.",
-    "category": "ai",
-    "_permalink": "/p/f8e5f536c5/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/f8e5f536c5/",
-    "_summary_240": "OpenAI updated its guidelines for how its AI models should behave with users under 18, and published new AI literacy resources for teens and parents. Still, questions remain...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/f8e5f536c5/thumbnail.png"
-  },
-  {
     "title": "Can AI learn the language of biology to reimagine medicine?",
     "url": "https://news.microsoft.com/signal/articles/can-ai-learn-the-language-of-biology-to-reimagine-medicine/",
     "published_at": "2025-12-19T11:07:02-05:00",
@@ -968,11 +968,7 @@
     "content_html": "",
     "image_url": "https://images.ctfassets.net/jdtwqhzvc2n1/J3NYgqu1RNo5JeiBlj7Vc/a01c1b4c38ac8f0ba4ec1feb781c5333/nuneybits_Vector_art_of_retro_computer_screen_scrolling_code_fo_392f32d5-c9a7-4acb-8276-6336ec58d7a4.webp?w=800&amp;q=75",
     "summary_text": "Anthropic said on Wednesday it would release its Agent Skills technology as an open standard, a strategic bet that sharing its approach to making AI assistants more capable will cement the company's position in the fast-evolving enterprise software market. Th...",
-    "category": "ai",
-    "_permalink": "/p/0aad0a828d/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/0aad0a828d/",
-    "_summary_240": "Anthropic said on Wednesday it would release its Agent Skills technology as an open standard, a strategic bet that sharing its approach to making AI assistants more capable will...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/0aad0a828d/thumbnail.png"
+    "category": "ai"
   },
   {
     "title": "OpenAI now accepting ChatGPT app submissions from third-party devs, launches App Directory",
