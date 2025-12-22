@@ -827,6 +827,17 @@
     "category": "ai"
   },
   {
+    "title": "What is sycophancy in AI models?",
+    "url": "https://www.youtube.com/watch?v=nvbq39yVYRk",
+    "published_at": "2025-12-18T15:30:14-05:00",
+    "source": "Anthropic YouTube",
+    "summary": "Learn what AI researchers mean when they talk about sycophancy, when it's more likely to show up in conversations, and tactics you can use to steer AI towards truth.",
+    "content_html": "",
+    "image_url": "https://i.ytimg.com/vi/nvbq39yVYRk/maxresdefault.jpg",
+    "summary_text": "Learn what AI researchers mean when they talk about sycophancy, when it's more likely to show up in conversations, and tactics you can use to steer AI towards truth.",
+    "category": "ai"
+  },
+  {
     "title": "NVIDIA, US Government to Boost AI Infrastructure and R&D Investments Through Landmark Genesis Mission",
     "url": "https://blogs.nvidia.com/blog/nvidia-us-government-to-boost-ai-infrastructure-and-rd-investments/",
     "published_at": "2025-12-18T14:02:12-05:00",
@@ -1077,28 +1088,6 @@
     "content_html": "",
     "image_url": "https://s3.amazonaws.com/cms.ipressroom.com/219/files/202512/6942d3f53d6332dbf35d4e01_ucsd_feature_image_sized_720/ucsd_feature_image_sized_720_thmb.jpg",
     "summary_text": "The Hao AI Lab research team at the University of California San Diego \u2014 at the forefront of pioneering AI model innovation \u2014 recently received an NVIDIA DGX B200 system to elevate their critical work in large language model inference. Many LLM inference plat...",
-    "category": "ai"
-  },
-  {
-    "title": "Browser extensions with 8 million users collect extended AI conversations",
-    "url": "https://arstechnica.com/security/2025/12/browser-extensions-with-8-million-users-collect-extended-ai-conversations/",
-    "published_at": "2025-12-17T10:25:25-05:00",
-    "source": "Ars Technica",
-    "summary": "The extensions, available for Chromium browsers, harvest full AI conversations over months.",
-    "content_html": "<p>Browser extensions with more than 8 million installs are harvesting users\u2019 complete and extended AI conversations and selling them for marketing purposes, according to data collected from the Google and Microsoft pages hosting them.</p>\n<p><a href=\"https://www.koi.ai/blog/urban-vpn-browser-extension-ai-conversations-data-collection\">Security firm Koi discovered</a> the eight extensions, which as of late Tuesday night remained available in both Google\u2019s and Microsoft\u2019s extension stores. Seven of them carry \u201cFeatured\u201d badges, which are endorsements meant to signal that the companies have determined the extensions meet their quality standards. The free extensions provide functions such as VPN routing to safeguard online privacy and ad blocking for ad-free browsing. All provide assurances that user data remains anonymous and isn\u2019t shared for purposes other than their described use.</p>\n<h2>A gold mine for marketers and data brokers</h2>\n<p>An examination of the extensions\u2019 underlying code tells a much more complicated story. Each contains eight of what Koi calls \u201cexecutor\u201d scripts, with each being unique for ChatGPT, Claude, Gemini, and five other leading AI chat platforms. The scripts are injected into webpages any time the user visits one of these platforms. From there, the scripts override browsers\u2019 built-in functions for making network requests and receiving responses.</p><p><a href=\"https://arstechnica.com/security/2025/12/browser-extensions-with-8-million-users-collect-extended-ai-conversations/\">Read full article</a></p>\n<p><a href=\"https://arstechnica.com/security/2025/12/browser-extensions-with-8-million-users-collect-extended-ai-conversations/#comments\">Comments</a></p>",
-    "image_url": "https://cdn.arstechnica.net/wp-content/uploads/2025/12/electronic-privacy-invasion-1152x648.jpg",
-    "summary_text": "The extensions, available for Chromium browsers, harvest full AI conversations over months.",
-    "category": "ai"
-  },
-  {
-    "title": "ChatGPT Images",
-    "url": "https://www.youtube.com/watch?v=DPBtd57p5Mg",
-    "published_at": "2025-12-16T13:13:34-05:00",
-    "source": "OpenAI YouTube",
-    "summary": "We\u2019re releasing a new version of ChatGPT Images\u2060, powered by our new flagship image generation model. Now, whether you\u2019re creating something from scratch or editing a photo, you\u2019ll get the output you\u2019re picturing. It makes precise edits while keeping details intact, and generates images up to 4x faster. Alongside, we\u2019re introducing a new Images feature within ChatGPT, designed to make image gener...",
-    "content_html": "",
-    "image_url": "https://i.ytimg.com/vi/DPBtd57p5Mg/maxresdefault.jpg",
-    "summary_text": "We\u2019re releasing a new version of ChatGPT Images\u2060, powered by our new flagship image generation model. Now, whether you\u2019re creating something from scratch or editing a photo, you\u2019ll get the output you\u2019re picturing. It makes precise edits while keeping details ...",
     "category": "ai"
   },
   {
