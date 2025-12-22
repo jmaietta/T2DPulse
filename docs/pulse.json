@@ -1,5 +1,35 @@
 [
   {
+    "title": "Here\u2019s what happened in crypto today",
+    "url": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "published_at": "2025-12-22T08:05:40-05:00",
+    "source": "Cointelegraph",
+    "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, NFTs, Web3 and crypto regulation.",
+    "content_html": "",
+    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMDYvMDE5Nzk0MjMtZWY4ZS03YzYwLWI5MzctYjlkZGY3NWZlOGFk.jpg",
+    "summary_text": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, NFTs, Web3 and crypto regulation.",
+    "category": "fintech",
+    "_permalink": "/p/b9a56d288d/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/b9a56d288d/",
+    "_summary_240": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, NFTs, Web3 and crypto regulation.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/b9a56d288d/thumbnail.png"
+  },
+  {
+    "title": "Aave governance vote sparks backlash over rushed escalation",
+    "url": "https://cointelegraph.com/news/aave-governance-backlash-snapshot-vote-process-dispute?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "published_at": "2025-12-22T08:04:15-05:00",
+    "source": "Cointelegraph",
+    "summary": "Critics say the decision to fast-track a brand ownership vote exposed weaknesses in how one of DeFi\u2019s largest DAOs handles governance process.",
+    "content_html": "",
+    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTIvMDE5YjQ1YmQtNzQxZi03OWMyLTg2ZmEtYWIzYTFiZDc0YmI4LmpwZw==.jpg",
+    "summary_text": "Critics say the decision to fast-track a brand ownership vote exposed weaknesses in how one of DeFi\u2019s largest DAOs handles governance process.",
+    "category": "fintech",
+    "_permalink": "/p/3e7f9119d9/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/3e7f9119d9/",
+    "_summary_240": "Critics say the decision to fast-track a brand ownership vote exposed weaknesses in how one of DeFi\u2019s largest DAOs handles governance process.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/3e7f9119d9/thumbnail.png"
+  },
+  {
     "title": "Crypto may enter insurers\u2019 portfolios as Hong Kong reviews capital rules",
     "url": "https://cointelegraph.com/news/hong-kong-insurance-authority-proposes-allowing-insurances-to-invest-in-crypto-report?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
     "published_at": "2025-12-22T07:38:12-05:00",
@@ -315,21 +345,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/c2673d1240/thumbnail.png"
   },
   {
-    "title": "Here\u2019s what happened in crypto today",
-    "url": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-    "published_at": "2025-12-21T17:35:00-05:00",
-    "source": "Cointelegraph",
-    "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, NFTs, Web3 and crypto regulation.",
-    "content_html": "",
-    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMDYvMDE5Nzk0MjMtZWY4ZS03YzYwLWI5MzctYjlkZGY3NWZlOGFk.jpg",
-    "summary_text": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, NFTs, Web3 and crypto regulation.",
-    "category": "fintech",
-    "_permalink": "/p/d359a6fd42/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/d359a6fd42/",
-    "_summary_240": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, NFTs, Web3 and crypto regulation.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/d359a6fd42/thumbnail.png"
-  },
-  {
     "title": "Tokenization will disrupt finance faster than digital disrupted media: Crypto exec",
     "url": "https://cointelegraph.com/news/tokenization-disrupt-finance-faster-digital-disrupted-media?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
     "published_at": "2025-12-21T17:17:28-05:00",
@@ -372,7 +387,7 @@
   },
   {
     "title": "Agent autonomy without guardrails is an SRE nightmare",
-    "url": "https://venturebeat.com/ai/agent-autonomy-without-guardrails-is-an-sre-nightmare",
+    "url": "https://venturebeat.com/infrastructure/agent-autonomy-without-guardrails-is-an-sre-nightmare",
     "published_at": "2025-12-21T14:00:00-05:00",
     "source": "VentureBeat",
     "summary": "Jo\u00e3o Freitas is GM and VP of engineering for AI and automation at PagerDuty As AI use continues to evolve in large organizations, leaders are increasingly seeking the next development that will yield major ROI. The latest wave of this ongoing trend is the adoption of AI agents. However, as with any new technology, organizations must ensure they adopt AI agents in a responsible way that allows the...",
@@ -380,10 +395,10 @@
     "image_url": "https://images.ctfassets.net/jdtwqhzvc2n1/rxbKNH1o8tpwpScizzIEV/87402fa2b986b713ae0b029f2725250f/Building_agents.png?w=800&amp;q=75",
     "summary_text": "Jo\u00e3o Freitas is GM and VP of engineering for AI and automation at PagerDuty As AI use continues to evolve in large organizations, leaders are increasingly seeking the next development that will yield major ROI. The latest wave of this ongoing trend is the ado...",
     "category": "ai",
-    "_permalink": "/p/2133afb0fb/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/2133afb0fb/",
+    "_permalink": "/p/61d5ea711e/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/61d5ea711e/",
     "_summary_240": "Jo\u00e3o Freitas is GM and VP of engineering for AI and automation at PagerDuty As AI use continues to evolve in large organizations, leaders are increasingly seeking the next...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/2133afb0fb/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/61d5ea711e/thumbnail.png"
   },
   {
     "title": "TechCrunch Mobility: Bankruptcy takes out two",
@@ -548,7 +563,7 @@
   },
   {
     "title": "Hiring specialists made sense before AI \u2014 now generalists win",
-    "url": "https://venturebeat.com/ai/hiring-specialists-made-sense-before-ai-now-generalists-win",
+    "url": "https://venturebeat.com/technology/hiring-specialists-made-sense-before-ai-now-generalists-win",
     "published_at": "2025-12-20T14:00:00-05:00",
     "source": "VentureBeat",
     "summary": "Tony Stoyanov is CTO and co-founder of EliseAI In the 2010s, tech companies chased staff-level specialists: Backend engineers, data scientists, system architects. That model worked when technology evolved slowly. Specialists knew their craft, could deliver quickly and built careers on predictable foundations like cloud infrastructure or the latest JS framework Then AI went mainstream. The pace of...",
@@ -556,10 +571,10 @@
     "image_url": "https://images.ctfassets.net/jdtwqhzvc2n1/7GXeJplC5s3umRvVp4Qg64/1fb79aaaed1a6e90e507e6f945119954/Specialist_versus_generalist.png?w=800&amp;q=75",
     "summary_text": "Tony Stoyanov is CTO and co-founder of EliseAI In the 2010s, tech companies chased staff-level specialists: Backend engineers, data scientists, system architects. That model worked when technology evolved slowly. Specialists knew their craft, could deliver qu...",
     "category": "ai",
-    "_permalink": "/p/8f8064d0f0/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/8f8064d0f0/",
+    "_permalink": "/p/177ff197a4/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/177ff197a4/",
     "_summary_240": "Tony Stoyanov is CTO and co-founder of EliseAI In the 2010s, tech companies chased staff-level specialists: Backend engineers, data scientists, system architects. That model...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/8f8064d0f0/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/177ff197a4/thumbnail.png"
   },
   {
     "title": "New York Governor Kathy Hochul signs RAISE Act to regulate AI safety",
@@ -631,36 +646,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/ffee858663/",
     "_summary_240": "BlackRock\u2019s spot Bitcoin ETF ranked sixth in 2025 ETF inflows despite posting a negative annual return, a signal analysts say reflects long-term conviction.",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/ffee858663/thumbnail.png"
-  },
-  {
-    "title": "Fundstrat\u2019s circulating 2026 crypto outlook warns of pullback, contrasting Tom Lee",
-    "url": "https://cointelegraph.com/news/fundstrat-circulating-2026-crypto-outlook-pullback-tom-lee?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-    "published_at": "2025-12-20T02:38:36-05:00",
-    "source": "Cointelegraph",
-    "summary": "A circulating report attributed to Fundstrat warns of a potential crypto drawdown in early 2026, setting downside targets for Bitcoin, Ether and Solana.",
-    "content_html": "",
-    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTIvMDE5YjNhOWEtMTYzMC03MDQyLWE5MWItMWFkZWJmOWNmYWNjLmpwZw==.jpg",
-    "summary_text": "A circulating report attributed to Fundstrat warns of a potential crypto drawdown in early 2026, setting downside targets for Bitcoin, Ether and Solana.",
-    "category": "fintech",
-    "_permalink": "/p/9c3246ebee/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/9c3246ebee/",
-    "_summary_240": "A circulating report attributed to Fundstrat warns of a potential crypto drawdown in early 2026, setting downside targets for Bitcoin, Ether and Solana.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/9c3246ebee/thumbnail.png"
-  },
-  {
-    "title": "Adam Back slams Bitcoiner VC for \u2018uninformed noise\u2019 about quantum risk",
-    "url": "https://cointelegraph.com/news/quantum-computing-bitcoin-adam-back-nic-carter-debate?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-    "published_at": "2025-12-20T00:21:04-05:00",
-    "source": "Cointelegraph",
-    "summary": "Blockstream CEO Adam Back said that Castle Island Ventures founding partner Nic Carter is \u201cnot helping\u201d the ongoing quantum-Bitcoin narrative for Bitcoiners.",
-    "content_html": "",
-    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTIvMDE5YjM5MWQtMTA0ZC03ZDA3LWIwMDEtODUzMmQzOTQzNTQ0LmpwZw==.jpg",
-    "summary_text": "Blockstream CEO Adam Back said that Castle Island Ventures founding partner Nic Carter is \u201cnot helping\u201d the ongoing quantum-Bitcoin narrative for Bitcoiners.",
-    "category": "fintech",
-    "_permalink": "/p/5b4de3ca1b/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/5b4de3ca1b/",
-    "_summary_240": "Blockstream CEO Adam Back said that Castle Island Ventures founding partner Nic Carter is \u201cnot helping\u201d the ongoing quantum-Bitcoin narrative for Bitcoiners.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/5b4de3ca1b/thumbnail.png"
   },
   {
     "title": "Australia\u2019s biggest pension fund to cut global stocks allocation on AI concerns",
@@ -1047,7 +1032,7 @@
     "source": "Financial Times - Technology",
     "summary": "Baker Hughes, Halliburton and SLB move into sector by supplying power generation, cooling technology and expertise",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/6ffd3419-5f35-4d3e-803e-81c6271e9157.jpg",
     "summary_text": "Baker Hughes, Halliburton and SLB move into sector by supplying power generation, cooling technology and expertise",
     "category": "fintech"
   },
@@ -1058,7 +1043,7 @@
     "source": "Financial Times - Technology",
     "summary": "Software giant suffers renewed declines after backer Blue Owl pulls out of $10bn project",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/55166eae-df57-4378-863e-5311bebc0548.jpg",
     "summary_text": "Software giant suffers renewed declines after backer Blue Owl pulls out of $10bn project",
     "category": "ai"
   },
@@ -1113,7 +1098,7 @@
     "source": "Financial Times - Technology",
     "summary": "Peter DeSantis appointed to oversee a new group leading the company\u2019s artificial intelligence model development",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/0d51455c-29de-4f65-9699-a0fbb65b9b06.jpg",
     "summary_text": "Peter DeSantis appointed to oversee a new group leading the company\u2019s artificial intelligence model development",
     "category": "ai"
   },
@@ -1135,7 +1120,7 @@
     "source": "Financial Times - Technology",
     "summary": "Valuations rest on the incorrect assumption that frontier model creators have built massive, durable moats",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/41887613-d47b-456c-b387-5f0602f2cef4.jpg",
     "summary_text": "Valuations rest on the incorrect assumption that frontier model creators have built massive, durable moats",
     "category": "ai"
   },
@@ -1168,7 +1153,7 @@
     "source": "Financial Times - Technology",
     "summary": "Ten sectors, including the creative industries and life sciences, will share \u00a312bn over four years",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/c4c56b0f-e0a4-4a33-84c7-28391afcc20d.jpg",
     "summary_text": "Ten sectors, including the creative industries and life sciences, will share \u00a312bn over four years",
     "category": "ai"
   },
