@@ -1,5 +1,50 @@
 [
   {
+    "title": "Chipwrecked",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/848988/nvidia-chip-loans-coreweave-gpu-debt-ai-neocloud",
+    "published_at": "2025-12-22T11:00:00-05:00",
+    "source": "The Verge",
+    "summary": "The AI data center build-out, as it currently stands, is dependent on two things: Nvidia chips and borrowed money. Perhaps it was inevitable that people would begin using Nvidia chips to borrow money. As the craze has gone on, I have begun to worry about the weaknesses of the AI data center boom; looking deeper [\u2026]",
+    "content_html": "<figure>\n\n<img alt=\"\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/12/258155_How_Nvidia_is_benefitting_from_chip-backed_loans_CVirginia11.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100\" />\n\t<figcaption>\n\t\t</figcaption>\n</figure>\n<p class=\"has-drop-cap has-text-align-none\">The AI data center build-out, as it currently stands, is dependent on two things: Nvidia chips and borrowed money. Perhaps it was inevitable that people would begin using Nvidia chips <em>to</em> borrow money. As the craze has gone on, I have begun to worry about the weaknesses of the AI data center boom; looking deeper into the financial part of this world, I have not been reassured.</p>\n<p class=\"has-text-align-none\">Nvidia has plowed plenty of money into the AI space, with more than 70 investments in AI companies just this year, according to PitchBook data. Among the billions it's splashed out, there's one important category: neoclouds, <a href=\"https://www.theverge.com/ai-artificial-intelligence/822011/coreweave-debt-data-center-ai\">as exemplified by CoreWeave</a>, the publicly tr \u2026</p>\n<p><a href=\"https://www.theverge.com/ai-artificial-intelligence/848988/nvidia-chip-loans-coreweave-gpu-debt-ai-neocloud\">Read the full story at The Verge.</a></p>",
+    "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/12/258155_How_Nvidia_is_benefitting_from_chip-backed_loans_CVirginia11.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "summary_text": "The AI data center build-out, as it currently stands, is dependent on two things: Nvidia chips and borrowed money. Perhaps it was inevitable that people would begin using Nvidia chips to borrow money. As the craze has gone on, I have begun to worry about the ...",
+    "category": "ai",
+    "_permalink": "/p/73bb25972a/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/73bb25972a/",
+    "_summary_240": "The AI data center build-out, as it currently stands, is dependent on two things: Nvidia chips and borrowed money. Perhaps it was inevitable that people would begin using Nvidia...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/73bb25972a/thumbnail.png"
+  },
+  {
+    "title": "JPMorgan explores crypto trading for institutional clients: Report",
+    "url": "https://cointelegraph.com/news/jpmorgan-crypto-trading-institutional-clients?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "published_at": "2025-12-22T10:56:36-05:00",
+    "source": "Cointelegraph",
+    "summary": "The move by the traditional banking giant would represent a significant deepening of ties to the crypto industry and change in CEO Jamie Dimon\u2019s approach to digital assets.",
+    "content_html": "",
+    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTIvMDE5YjQ2NzQtNjE4NC03MGI3LTg2N2UtMWQ3ZjNjZTgyMGNmLmpwZw==.jpg",
+    "summary_text": "The move by the traditional banking giant would represent a significant deepening of ties to the crypto industry and change in CEO Jamie Dimon\u2019s approach to digital assets.",
+    "category": "fintech",
+    "_permalink": "/p/dd290fa34e/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/dd290fa34e/",
+    "_summary_240": "The move by the traditional banking giant would represent a significant deepening of ties to the crypto industry and change in CEO Jamie Dimon\u2019s approach to digital assets.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/dd290fa34e/thumbnail.png"
+  },
+  {
+    "title": "ChatGPT: Everything you need to know about the AI-powered chatbot",
+    "url": "https://techcrunch.com/2025/12/22/chatgpt-everything-to-know-about-the-ai-chatbot/",
+    "published_at": "2025-12-22T10:43:15-05:00",
+    "source": "TechCrunch",
+    "summary": "A timeline of ChatGPT product updates and releases, starting with the latest, which we\u2019ve been updating throughout the year.",
+    "content_html": "",
+    "image_url": "https://techcrunch.com/wp-content/uploads/2025/01/GettyImages-2191707579.jpg?w=1024",
+    "summary_text": "A timeline of ChatGPT product updates and releases, starting with the latest, which we\u2019ve been updating throughout the year.",
+    "category": "ai",
+    "_permalink": "/p/9992642d75/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/9992642d75/",
+    "_summary_240": "A timeline of ChatGPT product updates and releases, starting with the latest, which we\u2019ve been updating throughout the year.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/9992642d75/thumbnail.png"
+  },
+  {
     "title": "Coinbase to acquire The Clearing Company in prediction markets push",
     "url": "https://cointelegraph.com/news/coinbase-acquires-clearing-company-prediction-markets?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
     "published_at": "2025-12-22T10:04:43-05:00",
@@ -255,21 +300,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/ecba4d8be3/thumbnail.png"
   },
   {
-    "title": "The New Embedded Finance Playbook: Buy, Integrate, Scale",
-    "url": "https://www.pymnts.com/news/b2b-payments/2025/the-new-embedded-finance-playbook-buy-integrate-scale/",
-    "published_at": "2025-12-22T04:00:17-05:00",
-    "source": "PYMNTS",
-    "summary": "The biggest change in payments and commerce over the past five years has been the speed at which technology moves, and the speed at which it\u2019s being adopted. As artificial intelligence (AI), real-time payments, and global commerce converge, financial functionality will become even more deeply woven into digital experiences. Complexity will increase, not decrease. [\u2026] The post The New Embedded Fin...",
-    "content_html": "<p><span>The biggest change in payments and commerce over the past five years has been the </span><span>speed</span><span> at which technology </span><span>moves,</span><span> and </span><span>the speed at which it\u2019s being</span><span> adopted.</span></p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p><span>As artificial intelligence (AI), real-time payments, and global commerce converge, financial functionality will become </span><span>even more deeply woven</span><span> into digital experiences. Complexity will increase, not decrease. Expectations will continue to rise.</span></p>\n<p><span>Findings in the November 2025 </span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/tracker_posts/buy-dont-build-the-next-wave-of-embedded-finance/\" rel=\"noopener\" target=\"_blank\"><span>\u201cBusiness Payments Tracker\u00ae\u201d series</span></a><span>, a PYMNTS Intelligence collaboration with </span><a class=\"editor-rtfLink\" href=\"https://www.wexinc.com/\" rel=\"noopener\" target=\"_blank\"><span>Wex</span></a><span>, reveal that embedded finance is no longer a feature that differentiates companies by novelty. Rather, embedded finance has come to differentiate firms by execution.</span></p>\n<p><span>This</span><span>, of course, puts the pressure on execution. </span><span>The </span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/tracker_posts/buy-dont-build-the-next-wave-of-embedded-finance/\" rel=\"noopener\" target=\"_blank\"><span>report</span></a><span> found that the realities of doing business are leading companies to buy and integrate embedded finance capabilities rather than </span><span>choosing to build</span><span> them </span><span>out themselves</span><span>.</span></p>\n<p><span>This \u201cbuy, don\u2019t build\u201d transition is not about cost savings </span><span>alone</span><span>, nor is it a temporary reaction to engineering constraints.</span><span> It reflects a deeper reality: In an environment defined by speed, scale, and rising customer expectations, convenience and scalability have become decisive competitive advantages. </span></p>\n<p><span>Embedded finance is no longer a differentiator because it exists; it differentiates only when it works seamlessly, scales effortlessly, and adapts continuously.</span></p>\n<h2>Embedded Payments Mature</h2>\n<p><span>Embedded payments, financing, and payouts have become table stakes across industries </span><span>from</span><span> eCommerce </span><span>and</span><span> logistics </span><span>to</span><span> healthcare and B2B software.</span><span> But as adoption has widened, so has complexity. Payments now span multiple geographies, currencies, and regulatory regimes, while fraud has grown more sophisticated and compliance expectations have intensified. Adding to the layers of complexity, customers have come to expect real-time experiences, instant settlement, and near-perfect uptime as table-stakes. </span></p>\n<p><span>For firms needing </span><span>right-now</span><span> solutions, white-label embedded finance platforms </span><span>dramatically</span><span> reduce the </span><span>distance</span><span> between intent and execution.</span> <span>Instead of </span><span>months spent</span><span> designing architecture, securing licenses, and stress-testing systems, companies can launch in weeks.</span><span> Payments, wallets, payouts and compliance frameworks arrive prebuilt, battle-tested, and continuously updated.</span></p>\n<p><span>For fast-moving </span><span>markets</span><span> this can allow companies to respond to customer needs while they are still emerging, rather than after competitors have already standardized solutions.\u00a0</span></p>\n<p><span>As embedded finance becomes ubiquitous, customer expectations are rising in parallel. Users no longer distinguish between financial and nonfinancial experiences; they judge platforms holistically. A delayed payout, a declined transaction, or a clumsy checkout reflects on the brand, not the payments provider behind it.</span></p>\n<p><span>This</span><span> places extraordinary pressure on embedded finance experiences to be invisible when they work and instantly responsive when they do not. </span><span>On the </span><span>back end</span><span>, embedded finance platforms must perform under unpredictable conditions</span><span>: </span><span>seasonal spikes, viral growth, cross-border expansion and regulatory change.</span></p>\n<p><strong><span>Read the report:</span></strong> <a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/tracker_posts/buy-dont-build-the-next-wave-of-embedded-finance/\" rel=\"noopener\" target=\"_blank\"><span>Buy, Don\u2019t Build: The Next Wave of Embedded </span><span>Finance</span><span>\u00a0</span></a></p>\n<p><span>Scaling these systems is not linear. A tenfold increase in transaction volume </span><span>often produces</span><span> a hundredfold increase in operational complexity.</span></p>\n<p><span>White-label providers are designed for this reality. Their business depends on handling scale across many clients, geographies, and use cases. Fraud models improve as transaction data grows. Compliance frameworks evolve alongside regulatory shifts. Infrastructure is stress-tested continuously, not episodically.</span></p>\n<p><span>Separately, while regulation is frequently cited as a reason to hesitate on embedded finance, the report found that, in practice, it is accelerating the buy-over-build shift.</span></p>\n<p><span>Financial regulation is not static. </span><span>Requirements evolve </span><span>by</span><span> jurisdiction, product type and political climate.</span><span> Staying compliant is a continuous process, not a one-time milestone. For companies operating across markets, this creates an ongoing compliance tax that scales with ambition.</span></p>\n<p><span>White-label embedded finance platforms absorb much of this complexity. They maintain licenses, update controls, and monitor regulatory change as part of their core mandate. This does not eliminate risk, but it reallocates it to organizations structurally designed to manage it.</span></p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/news/b2b-payments/2025/the-new-embedded-finance-playbook-buy-integrate-scale/\">The New Embedded Finance Playbook: Buy, Integrate, Scale</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
-    "image_url": "https://www.pymnts.com/wp-content/uploads/2025/12/embedded-finance-buy-or-build1.jpg?w=457",
-    "summary_text": "The biggest change in payments and commerce over the past five years has been the speed at which technology moves, and the speed at which it\u2019s being adopted. As artificial intelligence (AI), real-time payments, and global commerce converge, financial function...",
-    "category": "fintech",
-    "_permalink": "/p/64d538f920/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/64d538f920/",
-    "_summary_240": "The biggest change in payments and commerce over the past five years has been the speed at which technology moves, and the speed at which it\u2019s being adopted. As artificial...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/64d538f920/thumbnail.png"
-  },
-  {
     "title": "HSBC's Sels on AI, Capex Cycle",
     "url": "https://www.bloomberg.com/news/videos/2025-12-22/hsbc-s-sels-on-ai-capex-cycle-video",
     "published_at": "2025-12-22T03:54:03-05:00",
@@ -343,6 +373,21 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/2d37f1109c/",
     "_summary_240": "Insurers including Munich Re are backing cover for AI mistakes, offering the potential to cut capital requirements",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/2d37f1109c/thumbnail.png"
+  },
+  {
+    "title": "From assistance to autonomy: How agentic AI is redefining enterprises",
+    "url": "https://venturebeat.com/technology/from-assistance-to-autonomy-how-agentic-ai-is-redefining-enterprises",
+    "published_at": "2025-12-22T00:00:00-05:00",
+    "source": "VentureBeat",
+    "summary": "Presented by EdgeVerve Artificial intelligence (AI) has long promised to change the way enterprises operate. For years, the focus was on assistants, systems that could surface information, summarize documents, or streamline repetitive tasks. While valuable, these technological assistants were reactive: they waited for human prompts and provided limited support within narrow boundaries. Today, a n...",
+    "content_html": "",
+    "image_url": "https://images.ctfassets.net/jdtwqhzvc2n1/25m5IkWENg9oga60pxJfyg/7162178b086b57e6277a81f077116973/AdobeStock_1666071459.jpeg?w=800&amp;q=75",
+    "summary_text": "Presented by EdgeVerve Artificial intelligence (AI) has long promised to change the way enterprises operate. For years, the focus was on assistants, systems that could surface information, summarize documents, or streamline repetitive tasks. While valuable, t...",
+    "category": "ai",
+    "_permalink": "/p/934b6be596/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/934b6be596/",
+    "_summary_240": "Presented by EdgeVerve Artificial intelligence (AI) has long promised to change the way enterprises operate. For years, the focus was on assistants, systems that could surface...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/934b6be596/thumbnail.png"
   },
   {
     "title": "Video game mods are spreading new \u2018Stealka\u2019 crypto infostealer: Kaspersky",
@@ -562,21 +607,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/0830190103/thumbnail.png"
   },
   {
-    "title": "Bitcoin's apparent demand shrinks, signals new bear market: Analysts",
-    "url": "https://cointelegraph.com/news/bitcoin-demand-q4shrink-bear-market-cryptoquant?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-    "published_at": "2025-12-20T16:39:29-05:00",
-    "source": "Cointelegraph",
-    "summary": "Multiple factors, including ETF outflows, contracting demand, and price falling below key support levels, indicate the start of a BTC bear market.",
-    "content_html": "",
-    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTIvMDE5YWRkNjMtMzdlMS03ZmI3LTk1NjEtYTc4YjZjNmVkZDlm.jpg",
-    "summary_text": "Multiple factors, including ETF outflows, contracting demand, and price falling below key support levels, indicate the start of a BTC bear market.",
-    "category": "fintech",
-    "_permalink": "/p/62de62a0c1/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/62de62a0c1/",
-    "_summary_240": "Multiple factors, including ETF outflows, contracting demand, and price falling below key support levels, indicate the start of a BTC bear market.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/62de62a0c1/thumbnail.png"
-  },
-  {
     "title": "OpenAI allows users to directly adjust ChatGPT\u2019s enthusiasm level",
     "url": "https://techcrunch.com/2025/12/20/openai-allows-users-to-directly-adjust-chatgpts-warmth-and-enthusiasm/",
     "published_at": "2025-12-20T15:34:07-05:00",
@@ -590,21 +620,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/1a34648a9e/",
     "_summary_240": "ChatGPT users can now tweak the chatbot\u2019s warmth, enthusiasm, and emoji use.",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/1a34648a9e/thumbnail.png"
-  },
-  {
-    "title": "Sell Bitcoin for gold? Not so fast, one analyst says",
-    "url": "https://cointelegraph.com/news/sell-btc-gold-not-so-fast?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-    "published_at": "2025-12-20T15:14:52-05:00",
-    "source": "Cointelegraph",
-    "summary": "Bitcoin's fundamental properties make it a better long-term bet than gold, according to Bitcoin maximalist and analyst Matthew Kratter.",
-    "content_html": "",
-    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTIvMDE5YjNkNTAtNGJjMS03ZDhjLWFjZmMtNzFiYzJlZDQ1YWJmLmpwZw==.jpg",
-    "summary_text": "Bitcoin's fundamental properties make it a better long-term bet than gold, according to Bitcoin maximalist and analyst Matthew Kratter.",
-    "category": "fintech",
-    "_permalink": "/p/1a21df6e1f/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/1a21df6e1f/",
-    "_summary_240": "Bitcoin's fundamental properties make it a better long-term bet than gold, according to Bitcoin maximalist and analyst Matthew Kratter.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/1a21df6e1f/thumbnail.png"
   },
   {
     "title": "Hiring specialists made sense before AI \u2014 now generalists win",
@@ -750,11 +765,7 @@
     "content_html": "<article class=\"mssrc-posts font-- has--theme\" id=\"single-23248\">\n\t<div class=\"acf-innerblocks-container\"></div>\t\t\t<section class=\"post-tags\">\n\t\t\t\t<div class=\"post-tags__content wp-block-columns\">\n\t\t\t\t\t<div class=\"post-tags__header wp-block-column flex-basis-25 has-text-align-right\">\n\t\t\t\t\t\t<h4 class=\"sr-only\">Tags: </h4>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"post-tags__body wp-block-column flex-basis-60\">\n\t\t\t\t\t\t<ul class=\"post-tags__list\"><li class=\"post-tags__item\"><a class=\"kicker inline-block post__meta--tags\" href=\"https://news.microsoft.com/source/tag/ai/\">AI</a></li></ul>\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</section>\n\t\t\t</article><p>The post <a href=\"https://news.microsoft.com/signal/articles/can-ai-learn-the-language-of-biology-to-reimagine-medicine/\">Can AI learn the language of biology to reimagine medicine?</a> appeared first on <a href=\"https://news.microsoft.com/source\">Source</a>.</p>",
     "image_url": "https://news.microsoft.com/signal/wp-content/uploads/2025/12/GettyImages-1368534275-1024x683.jpg",
     "summary_text": "The post Can AI learn the language of biology to reimagine medicine? appeared first on Source .",
-    "category": "ai",
-    "_permalink": "/p/c2ed6f530e/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/c2ed6f530e/",
-    "_summary_240": "The post Can AI learn the language of biology to reimagine medicine? appeared first on Source .",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/c2ed6f530e/thumbnail.png"
+    "category": "ai"
   },
   {
     "title": "6 Scary Predictions for AI in 2026",
@@ -765,11 +776,7 @@
     "content_html": "",
     "image_url": "https://media.wired.com/photos/6941b33591ee19520c4c54ed/master/pass/Backchannel-2026-Predictions-Business-1454862003.jpg",
     "summary_text": "Could the AI industry be on the verge of its first major layoffs? Will China spread propaganda to slow the US data-center building boom? Where are AI agents headed?",
-    "category": "ai",
-    "_permalink": "/p/a50b5564be/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/a50b5564be/",
-    "_summary_240": "Could the AI industry be on the verge of its first major layoffs? Will China spread propaganda to slow the US data-center building boom? Where are AI agents headed?",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/a50b5564be/thumbnail.png"
+    "category": "ai"
   },
   {
     "title": "NZ North one year on: Building the foundations of new Zealand\u2019s AI future",
@@ -879,17 +886,6 @@
     "content_html": "",
     "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/58ea4d35-0d6c-415b-9aba-1739eea26ab3.jpg",
     "summary_text": "Sector companies are seeking to show that time saved on one-off tasks can translate into real-world business value",
-    "category": "ai"
-  },
-  {
-    "title": "Anthropic launches enterprise \u2018Agent Skills\u2019 and opens the standard, challenging OpenAI in workplace AI",
-    "url": "https://venturebeat.com/technology/anthropic-launches-enterprise-agent-skills-and-opens-the-standard",
-    "published_at": "2025-12-18T12:00:00-05:00",
-    "source": "VentureBeat",
-    "summary": "Anthropic said on Wednesday it would release its Agent Skills technology as an open standard, a strategic bet that sharing its approach to making AI assistants more capable will cement the company's position in the fast-evolving enterprise software market. The San Francisco-based artificial intelligence company also unveiled organization-wide management tools for enterprise customers and a direct...",
-    "content_html": "",
-    "image_url": "https://images.ctfassets.net/jdtwqhzvc2n1/J3NYgqu1RNo5JeiBlj7Vc/a01c1b4c38ac8f0ba4ec1feb781c5333/nuneybits_Vector_art_of_retro_computer_screen_scrolling_code_fo_392f32d5-c9a7-4acb-8276-6336ec58d7a4.webp?w=800&amp;q=75",
-    "summary_text": "Anthropic said on Wednesday it would release its Agent Skills technology as an open standard, a strategic bet that sharing its approach to making AI assistants more capable will cement the company's position in the fast-evolving enterprise software market. Th...",
     "category": "ai"
   },
   {
@@ -1077,17 +1073,6 @@
     "content_html": "",
     "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/41887613-d47b-456c-b387-5f0602f2cef4.jpg",
     "summary_text": "Valuations rest on the incorrect assumption that frontier model creators have built massive, durable moats",
-    "category": "ai"
-  },
-  {
-    "title": "UC San Diego Lab Advances Generative AI Research With NVIDIA DGX B200 System",
-    "url": "https://blogs.nvidia.com/blog/ucsd-generative-ai-research-dgx-b200/",
-    "published_at": "2025-12-17T11:00:15-05:00",
-    "source": "NVIDIA News",
-    "summary": "The Hao AI Lab research team at the University of California San Diego \u2014 at the forefront of pioneering AI model innovation \u2014 recently received an NVIDIA DGX B200 system to elevate their critical work in large language model inference. Many LLM inference platforms in production today, such as NVIDIA Dynamo, use research concepts that Read Article",
-    "content_html": "",
-    "image_url": "https://s3.amazonaws.com/cms.ipressroom.com/219/files/202512/6942d3f53d6332dbf35d4e01_ucsd_feature_image_sized_720/ucsd_feature_image_sized_720_thmb.jpg",
-    "summary_text": "The Hao AI Lab research team at the University of California San Diego \u2014 at the forefront of pioneering AI model innovation \u2014 recently received an NVIDIA DGX B200 system to elevate their critical work in large language model inference. Many LLM inference plat...",
     "category": "ai"
   },
   {
