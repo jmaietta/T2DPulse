@@ -1,5 +1,20 @@
 [
   {
+    "title": "Crypto may enter insurers\u2019 portfolios as Hong Kong reviews capital rules",
+    "url": "https://cointelegraph.com/news/hong-kong-insurance-authority-proposes-allowing-insurances-to-invest-in-crypto-report?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "published_at": "2025-12-22T07:38:12-05:00",
+    "source": "Cointelegraph",
+    "summary": "Hong Kong\u2019s insurance regulator is reportedly weighing a proposal to let insurers invest in cryptocurrencies with a 100% capital charge.",
+    "content_html": "",
+    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTIvMDE5YjQ0ZTMtNjk1YS03ZWMwLWFmNjYtNDg4MmJkYzlmYTc1LmpwZw==.jpg",
+    "summary_text": "Hong Kong\u2019s insurance regulator is reportedly weighing a proposal to let insurers invest in cryptocurrencies with a 100% capital charge.",
+    "category": "fintech",
+    "_permalink": "/p/57e7d2f0d9/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/57e7d2f0d9/",
+    "_summary_240": "Hong Kong\u2019s insurance regulator is reportedly weighing a proposal to let insurers invest in cryptocurrencies with a 100% capital charge.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/57e7d2f0d9/thumbnail.png"
+  },
+  {
     "title": "Indonesia lists 29 licensed crypto platforms as global exchanges explore market",
     "url": "https://cointelegraph.com/news/indonesia-lists-licensed-crypto-platforms?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
     "published_at": "2025-12-22T05:20:01-05:00",
@@ -663,21 +678,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/50f8ab7da0/thumbnail.png"
   },
   {
-    "title": "Bitcoin rallies thwarted by fading Fed rate cut odds, softening US macro",
-    "url": "https://cointelegraph.com/news/bitcoin-rallies-thwarted-by-fading-fed-rate-cut-odds-softening-us-macro?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-    "published_at": "2025-12-19T21:42:00-05:00",
-    "source": "Cointelegraph",
-    "summary": "Bitcoin continued to sell near $90,000 as investors reacted to weak US jobs data and slowing economic growth by shifting into safer assets.",
-    "content_html": "",
-    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTIvMDE5YjM4NGYtNGQ4YS03ZmRmLWJlYzUtYjU3ZTg1NTMzNTM2LmpwZw==.jpg",
-    "summary_text": "Bitcoin continued to sell near $90,000 as investors reacted to weak US jobs data and slowing economic growth by shifting into safer assets.",
-    "category": "fintech",
-    "_permalink": "/p/9582870aa6/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/9582870aa6/",
-    "_summary_240": "Bitcoin continued to sell near $90,000 as investors reacted to weak US jobs data and slowing economic growth by shifting into safer assets.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/9582870aa6/thumbnail.png"
-  },
-  {
     "title": "WIRED Roundup: The 5 Tech and Politics Trends That Shaped 2025",
     "url": "https://www.wired.com/story/uncanny-valley-podcast-wired-roundup-tech-politics-trends-2025/",
     "published_at": "2025-12-19T17:58:41-05:00",
@@ -975,17 +975,6 @@
     "category": "ai"
   },
   {
-    "title": "AI literacy resources for teens and parents",
-    "url": "https://openai.com/index/ai-literacy-resources-for-teens-and-parents",
-    "published_at": "2025-12-18T06:00:00-05:00",
-    "source": "OpenAI News",
-    "summary": "OpenAI shares new AI literacy resources to help teens and parents use ChatGPT thoughtfully, safely, and with confidence. The guides include expert-vetted tips for responsible use, critical thinking, healthy boundaries, and supporting teens through emotional or sensitive topics.",
-    "content_html": "",
-    "image_url": "",
-    "summary_text": "OpenAI shares new AI literacy resources to help teens and parents use ChatGPT thoughtfully, safely, and with confidence. The guides include expert-vetted tips for responsible use, critical thinking, healthy boundaries, and supporting teens through emotional o...",
-    "category": "ai"
-  },
-  {
     "title": "Deepening our collaboration with the U.S. Department of Energy",
     "url": "https://openai.com/index/us-department-of-energy-collaboration",
     "published_at": "2025-12-18T06:00:00-05:00",
@@ -1005,6 +994,17 @@
     "content_html": "",
     "image_url": "",
     "summary_text": "OpenAI is updating its Model Spec with new Under-18 Principles that define how ChatGPT should support teens with safe, age-appropriate guidance grounded in developmental science. The update strengthens guardrails, clarifies expected model behavior in higher-r...",
+    "category": "ai"
+  },
+  {
+    "title": "AI literacy resources for teens and parents",
+    "url": "https://openai.com/index/ai-literacy-resources-for-teens-and-parents",
+    "published_at": "2025-12-18T06:00:00-05:00",
+    "source": "OpenAI News",
+    "summary": "OpenAI shares new AI literacy resources to help teens and parents use ChatGPT thoughtfully, safely, and with confidence. The guides include expert-vetted tips for responsible use, critical thinking, healthy boundaries, and supporting teens through emotional or sensitive topics.",
+    "content_html": "",
+    "image_url": "",
+    "summary_text": "OpenAI shares new AI literacy resources to help teens and parents use ChatGPT thoughtfully, safely, and with confidence. The guides include expert-vetted tips for responsible use, critical thinking, healthy boundaries, and supporting teens through emotional o...",
     "category": "ai"
   },
   {
@@ -1047,7 +1047,7 @@
     "source": "Financial Times - Technology",
     "summary": "Baker Hughes, Halliburton and SLB move into sector by supplying power generation, cooling technology and expertise",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/6ffd3419-5f35-4d3e-803e-81c6271e9157.jpg",
+    "image_url": "",
     "summary_text": "Baker Hughes, Halliburton and SLB move into sector by supplying power generation, cooling technology and expertise",
     "category": "fintech"
   },
@@ -1058,7 +1058,7 @@
     "source": "Financial Times - Technology",
     "summary": "Software giant suffers renewed declines after backer Blue Owl pulls out of $10bn project",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/55166eae-df57-4378-863e-5311bebc0548.jpg",
+    "image_url": "",
     "summary_text": "Software giant suffers renewed declines after backer Blue Owl pulls out of $10bn project",
     "category": "ai"
   },
@@ -1075,7 +1075,7 @@
   },
   {
     "title": "Introducing GPT-5.2-Codex",
-    "url": "https://openai.com/index/introducing-gpt-5-2-codex",
+    "url": "https://openai.com/index/gpt-5-2-codex",
     "published_at": "2025-12-17T19:00:00-05:00",
     "source": "OpenAI News",
     "summary": "GPT-5.2-Codex is OpenAI\u2019s most advanced coding model, offering long-horizon reasoning, large-scale code transformations, and enhanced cybersecurity capabilities.",
@@ -1113,7 +1113,7 @@
     "source": "Financial Times - Technology",
     "summary": "Peter DeSantis appointed to oversee a new group leading the company\u2019s artificial intelligence model development",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/0d51455c-29de-4f65-9699-a0fbb65b9b06.jpg",
+    "image_url": "",
     "summary_text": "Peter DeSantis appointed to oversee a new group leading the company\u2019s artificial intelligence model development",
     "category": "ai"
   },
@@ -1135,7 +1135,7 @@
     "source": "Financial Times - Technology",
     "summary": "Valuations rest on the incorrect assumption that frontier model creators have built massive, durable moats",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/41887613-d47b-456c-b387-5f0602f2cef4.jpg",
+    "image_url": "",
     "summary_text": "Valuations rest on the incorrect assumption that frontier model creators have built massive, durable moats",
     "category": "ai"
   },
@@ -1168,7 +1168,7 @@
     "source": "Financial Times - Technology",
     "summary": "Ten sectors, including the creative industries and life sciences, will share \u00a312bn over four years",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/c4c56b0f-e0a4-4a33-84c7-28391afcc20d.jpg",
+    "image_url": "",
     "summary_text": "Ten sectors, including the creative industries and life sciences, will share \u00a312bn over four years",
     "category": "ai"
   },
