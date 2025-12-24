@@ -1,5 +1,20 @@
 [
   {
+    "title": "Regulators Question How Big Tech Uses AI to Shape Markets",
+    "url": "https://www.pymnts.com/artificial-intelligence-2/2025/regulators-question-how-big-tech-uses-ai-to-shape-markets/",
+    "published_at": "2025-12-24T13:10:49-05:00",
+    "source": "PYMNTS",
+    "summary": "Artificial intelligence (AI) is rapidly embedding itself into the core decision-making systems of modern businesses, from pricing and marketing to supply chain management and customer targeting. As AI tools move from experimental add-ons to operational infrastructure, regulators on both sides of the Atlantic are focusing on how algorithmic decision-making could reshape competition, sometimes in w...",
+    "content_html": "<p><span>Artificial intelligence (AI) is rapidly embedding itself into the core decision-making systems of modern businesses, from pricing and marketing to supply chain management and customer targeting. As AI tools move from experimental add-ons to operational infrastructure, regulators on both sides of the Atlantic are focusing on how algorithmic decision-making could reshape competition, sometimes in ways that bypass traditional antitrust guardrails. </span><span>The concern</span><span> is no longer limited to whether companies explicitly collude, but whether AI systems themselves can produce market outcomes that look and feel anticompetitive.</span></p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p><span>Those risks are outlined in a </span><a class=\"editor-rtfLink\" href=\"https://www.mondaq.com/unitedstates/antitrust-eu-competition/1723474/emerging-antitrust-risks-in-the-expanded-use-of-ai?email_access=on\" rel=\"noopener\" target=\"_blank\"><span>recent analysis by Steptoe,</span></a><span> which examines how the expanded use of AI is widening the aperture of antitrust exposure beyond the well-worn debate over algorithmic price fixing. While U.S. and EU regulators have spent years scrutinizing whether shared pricing tools could facilitate unlawful coordination, the firm argues that AI\u2019s competitive impact extends far further into areas such as market allocation, personalized pricing, predatory strategies </span><span>and</span><span> data-driven </span><span>monopolization .</span></p>\n<p><span>The post </span><span>points</span><span> to</span><span> recent enforcement actions as early </span><span>signals</span><span> of how regulators are </span><span>thinking about</span><span> algorithmic conduct.</span><span> In the U.S., the Department of Justice\u2019s case against RealPage put a spotlight on AI-driven rent recommendations that allegedly relied on nonpublic competitor data. </span></p>\n<p><span>In Europe, guidance from the European Commission suggests that even the parallel use of a common pricing algorithm could breach competition law, regardless of whether firms ever directly communicat</span><span>e. </span></p>\n<p><span>But Steptoe emphasizes that these cases represent only a narrow slice of the emerging risk profile.</span></p>\n<p><span>\u201cWhile the price-fixing issues in RealPage and Gibson have dominated the landscape, the rapid integration of AI into business strategies across industries is creating new and evolving antitrust risks,\u201d the authors </span><span>write.</span></p>\n<p><span>Those risks include AI systems that learn to avoid competing head-to-head for customers or geographies, effectively replicating market or customer allocation without any human agreement. AI-driven personalized pricing could also trigger scrutiny under EU abuse-of-dominance rules or U.S. unfair competition standards if algorithms extract maximum willingness to pay from less price-sensitive consumers.</span></p>\n<p><span>The analysis also flags AI-enabled predatory pricing as a potential next frontier. Advanced systems could selectively underprice only those customers most likely to defect to rivals, while maintaining profitability elsewhere, raising questions about how traditional below-cost pricing tests apply in an algorithmic context. </span></p>\n<p><span>Beyond pricing, Steptoe highlights how control over large proprietary datasets can reinforce network effects, entrench dominance, </span><span>and</span><span> raise barriers to entry before consumer harm becomes obvious.</span></p>\n<p><span>Looking ahead, the post suggests that enforcement agencies are likely to adapt existing doctrines rather than create entirely new AI-specific rules. Companies deploying AI at scale should expect closer scrutiny of how algorithms are trained, what data they rely on </span><span>and</span><span> how their outputs affect competitive dynamics. </span><span>As AI becomes a standard feature of digital markets, Steptoe concludes, antitrust compliance will increasingly require </span><span>proactive</span><span> assessment of algorithmic tools long before regulators come </span><span>knocking.</span></p>\n<p><em>For all PYMNTS AI coverage, subscribe to the daily </em><a href=\"https://www.pymnts.com/subscribe/\">AI\u00a0Newsletter</a><em>.</em></p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/artificial-intelligence-2/2025/regulators-question-how-big-tech-uses-ai-to-shape-markets/\">Regulators Question How Big Tech Uses AI to Shape Markets</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
+    "image_url": "https://www.pymnts.com/wp-content/uploads/2025/12/AI-pricing1.jpg?w=457",
+    "summary_text": "Artificial intelligence (AI) is rapidly embedding itself into the core decision-making systems of modern businesses, from pricing and marketing to supply chain management and customer targeting. As AI tools move from experimental add-ons to operational infras...",
+    "category": "ai",
+    "_permalink": "/p/2ffb9c0a47/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/2ffb9c0a47/",
+    "_summary_240": "Artificial intelligence (AI) is rapidly embedding itself into the core decision-making systems of modern businesses, from pricing and marketing to supply chain management and...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/2ffb9c0a47/thumbnail.png"
+  },
+  {
     "title": "LT Interest Rates: The Next Shoe To Drop",
     "url": "https://newsletter.tek2dayholdings.com/p/lt-interest-rates-the-next-shoe-to",
     "published_at": "2025-12-24T12:31:24-05:00",
@@ -506,21 +521,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/8080d4061a/thumbnail.png"
   },
   {
-    "title": "Aflac Says Cybersecurity Incident Involved Personal Information of 22.65 Million People",
-    "url": "https://www.pymnts.com/cybersecurity/2025/aflac-says-cybersecurity-incident-involved-personal-information-23-million-people/",
-    "published_at": "2025-12-23T17:57:22-05:00",
-    "source": "PYMNTS",
-    "summary": "Insurance company Aflac said personal information associated with 22.65 million people was impacted by a cybersecurity incident within its U.S. business that the company reported in June. The company determined the number of affected people after reviewing the potentially impacted files, it said in a Friday (Dec. 19) press release. \u201cFollowing detection of the [\u2026] The post Aflac Says Cybersecurity...",
-    "content_html": "<p><span>Insurance company </span><a class=\"editor-rtfLink\" href=\"https://www.aflac.com/\" rel=\"noopener\" target=\"_blank\"><span>Aflac</span></a><span> said personal information associated with 22.65 million people was impacted by a cybersecurity incident within its U.S. business that the company reported in June.</span></p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p><span>The company determined the number of affected people after reviewing the potentially impacted files, it said in a Friday (Dec. 19) </span><a class=\"editor-rtfLink\" href=\"https://newsroom.aflac.com/2025-12-19-Aflac-updates-June-2025-security-incident\" rel=\"noopener\" target=\"_blank\"><span>press release</span></a><span>.</span></p>\n<p><span>\u201cFollowing detection of the security incident, Aflac promptly secured accounts identified as potentially impacted and took additional steps, including resetting passwords and further monitoring for signs of suspicious activity,\u201d the company said in the release. \u201cTo date, Aflac is not aware of any fraudulent use of personal information and\u2014along with third-party partners\u2014will continue to monitor any fraudulent activity.\u201d</span></p>\n<p><span>Aflac has begun to notify individuals impacted by the incident, per the release.</span></p>\n<p><span>When the company disclosed the </span><a class=\"editor-rtfLink\" href=\"https://newsroom.aflac.com/2025-06-20-Aflac-Incorporated-Discloses-Cybersecurity-Incident\" rel=\"noopener\" target=\"_blank\"><span>cybersecurity incident</span></a><span> in June, it </span><span>said</span><span> that it identified suspicious activity on its U.S. network, initiated its cyber incident response protocols </span><span>and</span><span> stopped the intrusion within hours.</span><span> The company\u2019s systems were not affected by ransomware </span><span>and</span><span> its business remained operational.</span></p>\n<p><span>\u201cThis attack, like many insurance companies are currently experiencing, was caused by a sophisticated cybercrime group,\u201d Aflac said in a June 20 press release. \u201cThis was part of a cybercrime campaign against the insurance industry.\u201d</span></p>\n<p><span>Aflac said in the June release that its review of potentially impacted files was in its early stages and that it had not determined the number of affected individuals.</span></p>\n<p><span>In an </span><a class=\"editor-rtfLink\" href=\"https://www.aflac.com/docs/aflac-cyber-incident-6-24-2025.pdf\" rel=\"noopener\" target=\"_blank\"><span>update</span></a><span> released along with the Friday press release, Aflac said it determined on Dec. 4 that the files that may have been impacted in the security incident likely contained personal information that triggers notification under applicable law.</span></p>\n<p><span>The review determined that this information was associated with customers, beneficiaries, employees, agents </span><span>and</span><span> other individuals related to Aflac, and that it included names, contact information, claims information, health information, Social Security numbers, and other information, per the update.</span></p>\n<p><span>Aflac said in the update that it provided its customers with credit monitoring, identity theft protection, medical fraud protection </span><span>and</span><span> other resources early in its response to the incident; it did not wait until it had finalized this review.</span></p>\n<p><span>The </span><a class=\"editor-rtfLink\" href=\"https://www.fbi.gov/\" rel=\"noopener\" target=\"_blank\"><span>FBI</span></a><span>\u2019s </span><a class=\"editor-rtfLink\" href=\"https://www.ic3.gov/\" rel=\"noopener\" target=\"_blank\"><span>Internet Crime Complaint Center</span></a><span> (IC3) said in April that </span><a class=\"editor-rtfLink\" href=\"https://www.fbi.gov/news/press-releases/fbi-releases-annual-internet-crime-report\" rel=\"noopener\" target=\"_blank\"><span>personal data breaches</span></a> <span>were</span><span> one of the top three types of cybercrime reported by victims in 2024.</span></p>\n<p><span>Among critical infrastructure organizations, data breaches </span><span>were</span><span> one of the top two most reported cyber threats, according to IC3\u2019s \u201c</span><a class=\"editor-rtfLink\" href=\"https://www.ic3.gov/AnnualReport/Reports/2024_IC3Report.pdf\" rel=\"noopener\" target=\"_blank\"><span>Internet Crime Report 2024</span></a><span>.\u201d</span></p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/cybersecurity/2025/aflac-says-cybersecurity-incident-involved-personal-information-23-million-people/\">Aflac Says Cybersecurity Incident Involved Personal Information of 22.65 Million People</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
-    "image_url": "https://www.pymnts.com/wp-content/uploads/2025/12/Aflac-insurance-cybersecurity-fraud.jpeg?w=457",
-    "summary_text": "Insurance company Aflac said personal information associated with 22.65 million people was impacted by a cybersecurity incident within its U.S. business that the company reported in June. The company determined the number of affected people after reviewing th...",
-    "category": "fintech",
-    "_permalink": "/p/25e10c1b94/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/25e10c1b94/",
-    "_summary_240": "Insurance company Aflac said personal information associated with 22.65 million people was impacted by a cybersecurity incident within its U.S. business that the company reported...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/25e10c1b94/thumbnail.png"
-  },
-  {
     "title": "ServiceNow CEO McDermott Extends Contract Through 2030",
     "url": "https://www.bloomberg.com/news/articles/2025-12-23/servicenow-ceo-mcdermott-extends-contract-through-2030",
     "published_at": "2025-12-23T17:56:25-05:00",
@@ -609,21 +609,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/f567d45899/",
     "_summary_240": "Bloomberg\u2019s Caroline Hyde discusses ServiceNow\u2019s plan to buy cybersecurity startup Armis for $7.75 billion, its largest acquisition to date. Plus, Nvidia's biggest buyer in...",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/f567d45899/thumbnail.png"
-  },
-  {
-    "title": "Gnosis announces hard fork to recover funds from Balancer exploit",
-    "url": "https://cointelegraph.com/news/gnosis-hard-fork-balancer-exploit?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-    "published_at": "2025-12-23T15:11:37-05:00",
-    "source": "Cointelegraph",
-    "summary": "The hard fork on Monday followed a majority of Gnosis validators adopting a soft fork in response to a November Balancer exploit, in which about $116 million in crypto was stolen.",
-    "content_html": "",
-    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTIvMDE5YjRjMjMtMmE1MS03YTBhLWFhY2EtODI2MTIwYjU0M2M5LmpwZw==.jpg",
-    "summary_text": "The hard fork on Monday followed a majority of Gnosis validators adopting a soft fork in response to a November Balancer exploit, in which about $116 million in crypto was stolen.",
-    "category": "fintech",
-    "_permalink": "/p/c048dd12e6/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/c048dd12e6/",
-    "_summary_240": "The hard fork on Monday followed a majority of Gnosis validators adopting a soft fork in response to a November Balancer exploit, in which about $116 million in crypto was stolen.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/c048dd12e6/thumbnail.png"
   },
   {
     "title": "Zoox issues software recall over lane crossings",
@@ -774,21 +759,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/ff4300024f/",
     "_summary_240": "The new integrations join other services like Yelp, Uber, OpenTable and others.",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/ff4300024f/thumbnail.png"
-  },
-  {
-    "title": "France\u2019s postal and banking services disrupted by suspected DDoS attack",
-    "url": "https://techcrunch.com/2025/12/23/frances-postal-and-banking-services-disrupted-by-suspected-ddos-attack/",
-    "published_at": "2025-12-23T10:42:23-05:00",
-    "source": "TechCrunch",
-    "summary": "France's postal service, La Poste, said it was hit by a disruptive cyberattack that knocked its services offline.",
-    "content_html": "",
-    "image_url": "https://techcrunch.com/wp-content/uploads/2025/12/la-poste-2247017702.jpg?w=1024",
-    "summary_text": "France's postal service, La Poste, said it was hit by a disruptive cyberattack that knocked its services offline.",
-    "category": "fintech",
-    "_permalink": "/p/c76cbf468a/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/c76cbf468a/",
-    "_summary_240": "France's postal service, La Poste, said it was hit by a disruptive cyberattack that knocked its services offline.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/c76cbf468a/thumbnail.png"
   },
   {
     "title": "Memory Chip Makers Say AI Alters Boom-and-Bust Cycle",
@@ -1019,17 +989,6 @@
     "image_url": "https://substackcdn.com/image/fetch/$s_!uxo5!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F17dca019-35dc-42ef-970e-79d389090c7d_1366x723.png",
     "summary_text": "We made some modest UI enhancements to CEORater, most notably, users may now compare up to 10 CEOs:",
     "category": "ai"
-  },
-  {
-    "title": "How Microsoft Store elevated the customer experience in 2025",
-    "url": "https://blogs.windows.com/windowsdeveloper/2025/12/18/2025-in-review-how-we-elevated-the-microsoft-store-experience/",
-    "published_at": "2025-12-19T13:06:30-05:00",
-    "source": "Microsoft News",
-    "summary": "The post How Microsoft Store elevated the customer experience in 2025 appeared first on Source .",
-    "content_html": "<article class=\"mssrc-posts font-- has--theme\" id=\"single-23251\">\n\t<div class=\"acf-innerblocks-container\"></div>\t\t\t<section class=\"post-tags\">\n\t\t\t\t<div class=\"post-tags__content wp-block-columns\">\n\t\t\t\t\t<div class=\"post-tags__header wp-block-column flex-basis-25 has-text-align-right\">\n\t\t\t\t\t\t<h4 class=\"sr-only\">Tags: </h4>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"post-tags__body wp-block-column flex-basis-60\">\n\t\t\t\t\t\t<ul class=\"post-tags__list\"><li class=\"post-tags__item\"><a class=\"kicker inline-block post__meta--tags\" href=\"https://news.microsoft.com/source/tag/work-life/\">Work &amp; Life</a></li></ul>\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</section>\n\t\t\t</article><p>The post <a href=\"https://blogs.windows.com/windowsdeveloper/2025/12/18/2025-in-review-how-we-elevated-the-microsoft-store-experience/\">How Microsoft Store elevated the customer experience in 2025</a> appeared first on <a href=\"https://news.microsoft.com/source\">Source</a>.</p>",
-    "image_url": "https://blogs.windows.com/wp-content/uploads/sites/3/2025/10/1.-hero-Image.png",
-    "summary_text": "The post How Microsoft Store elevated the customer experience in 2025 appeared first on Source .",
-    "category": "software"
   },
   {
     "title": "What is sycophancy in AI models?",
