@@ -735,21 +735,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/b96dff4991/thumbnail.png"
   },
   {
-    "title": "Crypto hack counts fall but supply chain attacks reshape threat landscape",
-    "url": "https://cointelegraph.com/news/crypto-security-phishing-supply-chain-attacks?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-    "published_at": "2025-12-23T09:01:00-05:00",
-    "source": "Cointelegraph",
-    "summary": "Concerns about code vulnerabilities are fading in the crypto space, but more sophisticated scam tactics are emerging as protocol security improves.",
-    "content_html": "",
-    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTIvMDE5YjRhOTMtYmE3Mi03NzM4LWJkMDYtNjVmMmYxN2Q3ZGIxLmpwZw==.jpg",
-    "summary_text": "Concerns about code vulnerabilities are fading in the crypto space, but more sophisticated scam tactics are emerging as protocol security improves.",
-    "category": "fintech",
-    "_permalink": "/p/29b001a2f9/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/29b001a2f9/",
-    "_summary_240": "Concerns about code vulnerabilities are fading in the crypto space, but more sophisticated scam tactics are emerging as protocol security improves.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/29b001a2f9/thumbnail.png"
-  },
-  {
     "title": "Memory Chip Makers Say AI Alters Boom-and-Bust Cycle",
     "url": "https://www.bloomberg.com/news/newsletters/2025-12-23/memory-chip-makers-say-ai-alters-boom-and-bust-cycle",
     "published_at": "2025-12-23T07:02:08-05:00",
@@ -1148,6 +1133,17 @@
     "content_html": "<article class=\"mssrc-posts font-- has--theme\" id=\"single-23242\">\n\t<div class=\"acf-innerblocks-container\"></div>\t\t\t<section class=\"post-tags\">\n\t\t\t\t<div class=\"post-tags__content wp-block-columns\">\n\t\t\t\t\t<div class=\"post-tags__header wp-block-column flex-basis-25 has-text-align-right\">\n\t\t\t\t\t\t<h4 class=\"sr-only\">Tags: </h4>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"post-tags__body wp-block-column flex-basis-60\">\n\t\t\t\t\t\t<ul class=\"post-tags__list\"><li class=\"post-tags__item\"><a class=\"kicker inline-block post__meta--tags\" href=\"https://news.microsoft.com/source/tag/ai/\">AI</a></li></ul>\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</section>\n\t\t\t</article><p>The post <a href=\"https://news.microsoft.com/source/emea/2025/12/microsoft-empowers-350000-more-nigerians-with-ai-skills/\">Microsoft empowers 350,000 more Nigerians with AI skills</a> appeared first on <a href=\"https://news.microsoft.com/source\">Source</a>.</p>",
     "image_url": "https://news.microsoft.com/source/emea/wp-content/uploads/2025/12/Nigeria-Skills-Release_Social.jpg",
     "summary_text": "The post Microsoft empowers 350,000 more Nigerians with AI skills appeared first on Source .",
+    "category": "ai"
+  },
+  {
+    "title": "What is sycophancy in AI models?",
+    "url": "https://www.youtube.com/watch?v=nvbq39yVYRk",
+    "published_at": "2025-12-18T15:30:14-05:00",
+    "source": "Anthropic YouTube",
+    "summary": "Learn what AI researchers mean when they talk about sycophancy, when it's more likely to show up in conversations, and tactics you can use to steer AI towards truth.",
+    "content_html": "",
+    "image_url": "https://i.ytimg.com/vi/nvbq39yVYRk/maxresdefault.jpg",
+    "summary_text": "Learn what AI researchers mean when they talk about sycophancy, when it's more likely to show up in conversations, and tactics you can use to steer AI towards truth.",
     "category": "ai"
   },
   {
