@@ -851,6 +851,21 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/b51e5a4c51/thumbnail.png"
   },
   {
+    "title": "Research shows \u2018more agents\u2019 isn\u2019t a reliable path to better enterprise AI systems",
+    "url": "https://venturebeat.com/orchestration/research-shows-more-agents-isnt-a-reliable-path-to-better-enterprise-ai",
+    "published_at": "2025-12-22T19:00:00-05:00",
+    "source": "VentureBeat",
+    "summary": "Researchers at Google and MIT have conducted a comprehensive analysis of agentic systems and the dynamics between the number of agents, coordination structure, model capability, and task properties. While the prevailing sentiment in the industry has been \"more agents is all you need,\" the research suggests that scaling agent teams is not a guaranteed path to better performance. Based on their fin...",
+    "content_html": "",
+    "image_url": "https://images.ctfassets.net/jdtwqhzvc2n1/54LMZdDXK2kRq9HN1g0Umn/5f74bb8110aa489696560a2220f633b5/Multi-agent_systems.jpg?w=800&amp;q=75",
+    "summary_text": "Researchers at Google and MIT have conducted a comprehensive analysis of agentic systems and the dynamics between the number of agents, coordination structure, model capability, and task properties. While the prevailing sentiment in the industry has been \"mor...",
+    "category": "ai",
+    "_permalink": "/p/e4cc7fa7f2/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/e4cc7fa7f2/",
+    "_summary_240": "Researchers at Google and MIT have conducted a comprehensive analysis of agentic systems and the dynamics between the number of agents, coordination structure, model capability,...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/e4cc7fa7f2/thumbnail.png"
+  },
+  {
     "title": "She Fell in Love With ChatGPT. Then She Ghosted It.",
     "url": "https://www.nytimes.com/2025/12/22/technology/ai-boyfriend-chatgpt.html",
     "published_at": "2025-12-22T15:16:04-05:00",
@@ -992,17 +1007,6 @@
     "content_html": "",
     "image_url": "https://images.ctfassets.net/jdtwqhzvc2n1/7GXeJplC5s3umRvVp4Qg64/1fb79aaaed1a6e90e507e6f945119954/Specialist_versus_generalist.png?w=800&amp;q=75",
     "summary_text": "Tony Stoyanov is CTO and co-founder of EliseAI In the 2010s, tech companies chased staff-level specialists: Backend engineers, data scientists, system architects. That model worked when technology evolved slowly. Specialists knew their craft, could deliver qu...",
-    "category": "ai"
-  },
-  {
-    "title": "What is sycophancy in AI models?",
-    "url": "https://www.youtube.com/watch?v=nvbq39yVYRk",
-    "published_at": "2025-12-18T15:30:14-05:00",
-    "source": "Anthropic YouTube",
-    "summary": "Learn what AI researchers mean when they talk about sycophancy, when it's more likely to show up in conversations, and tactics you can use to steer AI towards truth.",
-    "content_html": "",
-    "image_url": "https://i.ytimg.com/vi/nvbq39yVYRk/maxresdefault.jpg",
-    "summary_text": "Learn what AI researchers mean when they talk about sycophancy, when it's more likely to show up in conversations, and tactics you can use to steer AI towards truth.",
     "category": "ai"
   },
   {
