@@ -1,5 +1,20 @@
 [
   {
+    "title": "Coupang Says Data Leak Perpetrator Did Not Transfer Data to Others",
+    "url": "https://www.pymnts.com/cybersecurity/2025/coupang-says-data-leak-perpetrator-did-not-transfer-data-to-others/",
+    "published_at": "2025-12-26T15:00:44-05:00",
+    "source": "PYMNTS",
+    "summary": "Coupang said that while the perpetrator of a previously announced data leak accessed 33 million accounts, he retained data from only 3,000 accounts, did not transfer the data to others, and later deleted the data when news outlets began reporting the incident. The company said this in a Thursday (Dec. 25) update in which it [\u2026] The post Coupang Says Data Leak Perpetrator Did Not Transfer Data to ...",
+    "content_html": "<div class=\"elementToProof\">\n<p><a href=\"https://www.aboutcoupang.com/\" rel=\"noopener\" target=\"_blank\">Coupang</a> said that while the perpetrator of a previously announced data leak accessed 33 million accounts, he retained data from only 3,000 accounts, did not transfer the data to others, and later deleted the data when news outlets began reporting the incident.</p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p>The company said this in a Thursday (Dec. 25)\u00a0<a href=\"https://www.aboutcoupang.com/English/news/news-details/2025/update-on-coupang-korea-cybersecurity-incident/\" rel=\"noopener\" target=\"_blank\">update</a> in which it shared findings from an ongoing investigation involving Coupang, the South Korean government, three global cybersecurity firms and the perpetrator\u2019s confession.</p>\n<p>The perpetrator, who is a former Coupang employee, has been identified and all devices used in the leak have been retrieved, including a laptop that the perpetrator threw in a river, according to the update.</p>\n<p>To date, the investigation has found that the perpetrator accessed basic user data using an internal security key he stole while working at Coupang, retained only the order history and building entrance codes for about 3,000 accounts, never transmitted the data to a third party, and deleted the stored data after seeing news reports about the incident, the update said.</p>\n<p>The basic data access by the perpetrator included names, emails, addresses and phone numbers; it did not include payment data, log-in\u00a0data\u00a0or individual customs numbers, per the update.</p>\n<p>\u201cWe will provide updates following the investigation and plan to separately announce compensation plans to our customers in the near future,\u201d Coupang said in the update. \u201cCoupang remains fully committed to protecting customer data. We will cooperate fully with the government\u2019s investigation, take all necessary steps to prevent further harm, and strengthen our measures to prevent recurrence.\u201d</p>\n<p>It was reported Nov. 30 that Coupang revealed the\u00a0<a href=\"https://www.pymnts.com/cybersecurity/2025/coupang-data-breach-targets-34-million-customer-accounts/\" rel=\"noopener\" target=\"_blank\">data breach</a>\u00a0on Nov. 29 and that the incident exposed personal information of\u00a0nearly 33.7\u00a0million customers, all in South Korea.</p>\n<p>The company said it became aware of the data breach on Nov. 18 and reported the incident to authorities.</p>\n<p>It was reported Monday (Dec. 22) that Coupon faces an investor class action lawsuit alleging that it violated securities laws after the\u00a0<a href=\"https://www.pymnts.com/news/ecommerce/2025/coupang-faces-class-action-lawsuit-alleging-violations-after-data-breach/\" rel=\"noopener\" target=\"_blank\">data breach</a>.</p>\n<p>The lawsuit was filed in California and alleges that the eCommerce company, which operates globally and is South Korea\u2019s biggest online retailer, misled investors about its data security practices and failed to disclose the breach in a timely manner.</p>\n</div>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/cybersecurity/2025/coupang-says-data-leak-perpetrator-did-not-transfer-data-to-others/\">Coupang Says Data Leak Perpetrator Did Not Transfer Data to Others</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
+    "image_url": "https://www.pymnts.com/wp-content/uploads/2025/12/Coupang.jpeg?w=457",
+    "summary_text": "Coupang said that while the perpetrator of a previously announced data leak accessed 33 million accounts, he retained data from only 3,000 accounts, did not transfer the data to others, and later deleted the data when news outlets began reporting the incident...",
+    "category": "fintech",
+    "_permalink": "/p/c6626749ce/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/c6626749ce/",
+    "_summary_240": "Coupang said that while the perpetrator of a previously announced data leak accessed 33 million accounts, he retained data from only 3,000 accounts, did not transfer the data to...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/c6626749ce/thumbnail.png"
+  },
+  {
     "title": "Goldman Sachs Says Some Client Data May Have Been Exposed in Third-Party Data Breach",
     "url": "https://www.pymnts.com/cybersecurity/2025/goldman-sachs-says-some-client-data-may-have-been-exposed-in-third-party-data-breach/",
     "published_at": "2025-12-26T14:09:32-05:00",
@@ -420,21 +435,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/0c37979736/thumbnail.png"
   },
   {
-    "title": "Fed Q1 2026 outlook: Potential impact on Bitcoin and crypto markets",
-    "url": "https://cointelegraph.com/news/fed-q1-2026-outlook-potential-impact-on-bitcoin-crypto-markets?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-    "published_at": "2025-12-25T09:10:00-05:00",
-    "source": "Cointelegraph",
-    "summary": "BTC may fall to $70,000 and ETH to $2,400 if the Fed pauses rate cuts in the first quarter of 2026 and inflationary pressure persists.",
-    "content_html": "",
-    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTIvMDE5YjBhMmYtOTc3OS03NGI4LWIwYjUtZTcwZjIyOTExYTQ0.jpg",
-    "summary_text": "BTC may fall to $70,000 and ETH to $2,400 if the Fed pauses rate cuts in the first quarter of 2026 and inflationary pressure persists.",
-    "category": "fintech",
-    "_permalink": "/p/f6704067fd/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/f6704067fd/",
-    "_summary_240": "BTC may fall to $70,000 and ETH to $2,400 if the Fed pauses rate cuts in the first quarter of 2026 and inflationary pressure persists.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/f6704067fd/thumbnail.png"
-  },
-  {
     "title": "I re-created Google\u2019s cute Gemini ad with my own kid\u2019s stuffie, and I wish I hadn\u2019t",
     "url": "https://www.theverge.com/tech/849998/gemini-ai-stuffed-animal-commercial",
     "published_at": "2025-12-25T09:00:00-05:00",
@@ -448,21 +448,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/f010519093/",
     "_summary_240": "When your kid starts showing a preference for one of their stuffed animals, you're supposed to buy a backup in case it goes missing. I've heard this advice again and again, but...",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/f010519093/thumbnail.png"
-  },
-  {
-    "title": "Quantum computing in 2026: No crypto doomsday, but time to prepare",
-    "url": "https://cointelegraph.com/news/quantum-computing-in-2026-no-crypto-doomsday-time-to-prepare?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-    "published_at": "2025-12-25T09:00:00-05:00",
-    "source": "Cointelegraph",
-    "summary": "Quantum computing won\u2019t break Bitcoin in 2026, but the growing practice of \u201charvest now, decrypt later\u201d is pushing the crypto industry to prepare sooner rather than later.",
-    "content_html": "",
-    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTIvMDE5YjJiOTEtMmIzMS03OWIyLWE1ZTMtNDlmYzIzZjgwZjRmLmpwZw==.jpg",
-    "summary_text": "Quantum computing won\u2019t break Bitcoin in 2026, but the growing practice of \u201charvest now, decrypt later\u201d is pushing the crypto industry to prepare sooner rather than later.",
-    "category": "fintech",
-    "_permalink": "/p/a378248e5e/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/a378248e5e/",
-    "_summary_240": "Quantum computing won\u2019t break Bitcoin in 2026, but the growing practice of \u201charvest now, decrypt later\u201d is pushing the crypto industry to prepare sooner rather than later.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/a378248e5e/thumbnail.png"
   },
   {
     "title": "AI upheaval shows little sign of lessening",
@@ -523,21 +508,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/54283c3d37/",
     "_summary_240": "With Groq on its side, Nvidia is poised to become even more dominant in chip manufacturing.",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/54283c3d37/thumbnail.png"
-  },
-  {
-    "title": "Goldman Warns Clients About Outside Law Firm\u2019s Data Breach",
-    "url": "https://www.bloomberg.com/news/articles/2025-12-24/goldman-warns-fund-clients-about-outside-law-firm-s-data-breach",
-    "published_at": "2025-12-24T14:28:30-05:00",
-    "source": "Bloomberg Technology",
-    "summary": "Goldman Sachs Group Inc. warned investors in some of its alternative investment funds that their data may have been exposed in a breach at one of the bank\u2019s law firms.",
-    "content_html": "The Goldman Sachs & Co. logo booth on the floor of the New York Stock Exchange. Photographer: Scott Eells",
-    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/i0Dnmj5YqsxU/v0/1200x-1.jpg",
-    "summary_text": "Goldman Sachs Group Inc. warned investors in some of its alternative investment funds that their data may have been exposed in a breach at one of the bank\u2019s law firms.",
-    "category": "fintech",
-    "_permalink": "/p/239052096d/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/239052096d/",
-    "_summary_240": "Goldman Sachs Group Inc. warned investors in some of its alternative investment funds that their data may have been exposed in a breach at one of the bank\u2019s law firms.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/239052096d/thumbnail.png"
   },
   {
     "title": "OpenAI admits prompt injection is here to stay as enterprises lag on defenses",
