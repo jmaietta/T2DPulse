@@ -656,21 +656,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/e8e7fe0719/thumbnail.png"
   },
   {
-    "title": "Can AI fix the operating room? This startup thinks so",
-    "url": "https://techcrunch.com/video/can-ai-fix-the-operating-room-this-startup-thinks-so/",
-    "published_at": "2025-12-23T23:48:00-05:00",
-    "source": "TechCrunch",
-    "summary": "There\u2019s plenty of hype around AI and robots in healthcare, but the problem that\u2019s actually costing hospitals money right now is operating room coordination. Two to four hours of OR time is lost every single day, not because of the surgeries themselves, but because of everything in between from manual scheduling and coordination chaos to guesswork about room [\u2026]",
-    "content_html": "",
-    "image_url": "https://techcrunch.com/wp-content/uploads/2025/12/Akara-Team.webp?resize=1200,623",
-    "summary_text": "There\u2019s plenty of hype around AI and robots in healthcare, but the problem that\u2019s actually costing hospitals money right now is operating room coordination. Two to four hours of OR time is lost every single day, not because of the surgeries themselves, but be...",
-    "category": "ai",
-    "_permalink": "/p/6d08f9833a/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/6d08f9833a/",
-    "_summary_240": "There\u2019s plenty of hype around AI and robots in healthcare, but the problem that\u2019s actually costing hospitals money right now is operating room coordination. Two to four hours of...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/6d08f9833a/thumbnail.png"
-  },
-  {
     "title": "Tell Me Lies Tell Me Sweet Little Lies",
     "url": "https://newsletter.tek2dayholdings.com/p/tell-me-lies-tell-me-sweet-little",
     "published_at": "2025-12-23T14:16:48-05:00",
@@ -778,6 +763,17 @@
     "content_html": "",
     "image_url": "",
     "summary_text": "OpenAI is strengthening ChatGPT Atlas against prompt injection attacks using automated red teaming trained with reinforcement learning. This proactive discover-and-patch loop helps identify novel exploits early and harden the browser agent\u2019s defenses as AI be...",
+    "category": "ai"
+  },
+  {
+    "title": "What is sycophancy in AI models?",
+    "url": "https://www.youtube.com/watch?v=nvbq39yVYRk",
+    "published_at": "2025-12-18T15:30:14-05:00",
+    "source": "Anthropic YouTube",
+    "summary": "Learn what AI researchers mean when they talk about sycophancy, when it's more likely to show up in conversations, and tactics you can use to steer AI towards truth.",
+    "content_html": "",
+    "image_url": "https://i.ytimg.com/vi/nvbq39yVYRk/maxresdefault.jpg",
+    "summary_text": "Learn what AI researchers mean when they talk about sycophancy, when it's more likely to show up in conversations, and tactics you can use to steer AI towards truth.",
     "category": "ai"
   },
   {
