@@ -733,17 +733,6 @@
     "category": "ai"
   },
   {
-    "title": "Red teaming LLMs exposes a harsh truth about the AI security arms race",
-    "url": "https://venturebeat.com/security/red-teaming-llms-harsh-truth-ai-security-arms-race",
-    "published_at": "2025-12-22T08:00:00-05:00",
-    "source": "VentureBeat",
-    "summary": "Unrelenting, persistent attacks on frontier models make them fail, with the patterns of failure varying by model and developer. Red teaming shows that it\u2019s not the sophisticated, complex attacks that can bring a model down; it\u2019s the attacker automating continuous, random attempts that will inevitably force a model to fail. That\u2019s the harsh truth that AI apps and platform builders need to plan for...",
-    "content_html": "",
-    "image_url": "https://images.ctfassets.net/jdtwqhzvc2n1/7cjaJ8H9KPlezjj3uWQMVN/f2f716792fa219429571ed75b7b1903f/red_teaming.jpg?w=800&amp;q=75",
-    "summary_text": "Unrelenting, persistent attacks on frontier models make them fail, with the patterns of failure varying by model and developer. Red teaming shows that it\u2019s not the sophisticated, complex attacks that can bring a model down; it\u2019s the attacker automating contin...",
-    "category": "ai"
-  },
-  {
     "title": "What is sycophancy in AI models?",
     "url": "https://www.youtube.com/watch?v=nvbq39yVYRk",
     "published_at": "2025-12-18T15:30:14-05:00",
