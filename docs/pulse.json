@@ -1,5 +1,20 @@
 [
   {
+    "title": "Europe\u2019s Space Agency Says Cyber Incident May Have Hit Servers",
+    "url": "https://www.bloomberg.com/news/articles/2025-12-31/europe-s-space-agency-says-cyber-incident-may-have-hit-servers",
+    "published_at": "2025-12-31T13:29:46-05:00",
+    "source": "Bloomberg Technology",
+    "summary": "The European Space Agency said a cybersecurity issue may have impacted a \u201cvery small number\u201d of external servers.",
+    "content_html": "A server room at the European Space Agency. Photographer: Boris Roessler/picture alliance/Getty Images",
+    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iP3KxYAGDWNc/v0/1200x-1.jpg",
+    "summary_text": "The European Space Agency said a cybersecurity issue may have impacted a \u201cvery small number\u201d of external servers.",
+    "category": "fintech",
+    "_permalink": "/p/76eda367fd/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/76eda367fd/",
+    "_summary_240": "The European Space Agency said a cybersecurity issue may have impacted a \u201cvery small number\u201d of external servers.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/76eda367fd/thumbnail.png"
+  },
+  {
     "title": "How an AI-fueled romance scam drained a Bitcoin retirement fund",
     "url": "https://cointelegraph.com/news/how-an-ai-fueled-romance-scam-drained-a-bitcoin-retirement-fund?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
     "published_at": "2025-12-31T13:16:45-05:00",
@@ -253,6 +268,21 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/a40b264f7d/",
     "_summary_240": "The technology is changing the way many people meet and form relationships but some experts believe it may do more harm than good",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/a40b264f7d/thumbnail.png"
+  },
+  {
+    "title": "Six data shifts that will shape enterprise AI in 2026",
+    "url": "https://venturebeat.com/data/six-data-shifts-that-will-shape-enterprise-ai-in-2026",
+    "published_at": "2025-12-31T00:00:00-05:00",
+    "source": "VentureBeat",
+    "summary": "For decades the data landscape was relatively static. Relational databases (hello, Oracle!) were the default and dominated, organizing information into familiar columns and rows. That stability eroded as successive waves introduced NoSQL document stores, graph databases, and most recently vector-based systems. In the era of agentic AI, data infrastructure is once again in flux \u2014 and evolving fast...",
+    "content_html": "",
+    "image_url": "https://images.ctfassets.net/jdtwqhzvc2n1/1Am5h54S0EVCRIKGeWcWmG/49983d561b05cc8f59f08aea19a9e3c9/data-in-2026.jpg?w=800&amp;q=75",
+    "summary_text": "For decades the data landscape was relatively static. Relational databases (hello, Oracle!) were the default and dominated, organizing information into familiar columns and rows. That stability eroded as successive waves introduced NoSQL document stores, grap...",
+    "category": "ai",
+    "_permalink": "/p/6506dab45c/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/6506dab45c/",
+    "_summary_240": "For decades the data landscape was relatively static. Relational databases (hello, Oracle!) were the default and dominated, organizing information into familiar columns and rows....",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/6506dab45c/thumbnail.png"
   },
   {
     "title": "Starbucks Plans to Add and Remodel Stores After Closing 400 This Year",
@@ -870,17 +900,6 @@
     "content_html": "",
     "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/2cb58467-a347-4a58-a75f-f51c5eb67012.jpg",
     "summary_text": "First, tech companies usurped the meaning of \u2018friends\u2019 and \u2018connection\u2019 \u2014 now they are coming for \u2018companionship\u2019",
-    "category": "ai"
-  },
-  {
-    "title": "Why CIOs must lead AI experimentation, not just govern it",
-    "url": "https://venturebeat.com/technology/why-cios-must-lead-ai-experimentation-not-just-govern-it",
-    "published_at": "2025-12-27T14:00:00-05:00",
-    "source": "VentureBeat",
-    "summary": "The drumbeat for AI is deafening. We\u2019re surrounded by a mix of hype, fear and intense pressure to do something with this technology that seems to be advancing at the speed of light. For CIOs and enterprise technology leaders, the path forward can seem murky and fraught with the risk of missteps. But I believe the greatest risk isn't getting it wrong; it's waiting for a \u201cperfect\u201d AI strategy while...",
-    "content_html": "",
-    "image_url": "https://images.ctfassets.net/jdtwqhzvc2n1/53sUK4hpj3WL1QmYw4jBgP/c2a81838e6bc1a5712a5a5331755e5a8/CIOs.png?w=800&amp;q=75",
-    "summary_text": "The drumbeat for AI is deafening. We\u2019re surrounded by a mix of hype, fear and intense pressure to do something with this technology that seems to be advancing at the speed of light. For CIOs and enterprise technology leaders, the path forward can seem murky a...",
     "category": "ai"
   },
   {
