@@ -875,7 +875,7 @@
     "source": "Financial Times - Technology",
     "summary": "Valuations may be spectacular and a bust could come \u2014 but while there\u2019s exuberance there is no mania or irrationality",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/9005367e-9a71-4c67-bc26-e9f8746ad9dc.jpg",
+    "image_url": "",
     "summary_text": "Valuations may be spectacular and a bust could come \u2014 but while there\u2019s exuberance there is no mania or irrationality",
     "category": "ai"
   },
@@ -908,8 +908,19 @@
     "source": "Financial Times - Technology",
     "summary": "First, tech companies usurped the meaning of \u2018friends\u2019 and \u2018connection\u2019 \u2014 now they are coming for \u2018companionship\u2019",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/2cb58467-a347-4a58-a75f-f51c5eb67012.jpg",
+    "image_url": "",
     "summary_text": "First, tech companies usurped the meaning of \u2018friends\u2019 and \u2018connection\u2019 \u2014 now they are coming for \u2018companionship\u2019",
+    "category": "ai"
+  },
+  {
+    "title": "What is sycophancy in AI models?",
+    "url": "https://www.youtube.com/watch?v=nvbq39yVYRk",
+    "published_at": "2025-12-18T15:30:14-05:00",
+    "source": "Anthropic YouTube",
+    "summary": "Learn what AI researchers mean when they talk about sycophancy, when it's more likely to show up in conversations, and tactics you can use to steer AI towards truth.",
+    "content_html": "",
+    "image_url": "https://i.ytimg.com/vi/nvbq39yVYRk/maxresdefault.jpg",
+    "summary_text": "Learn what AI researchers mean when they talk about sycophancy, when it's more likely to show up in conversations, and tactics you can use to steer AI towards truth.",
     "category": "ai"
   },
   {
