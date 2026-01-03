@@ -697,21 +697,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/1e69fcef20/thumbnail.png"
   },
   {
-    "title": "Why Notion\u2019s biggest AI breakthrough came from simplifying everything",
-    "url": "https://venturebeat.com/infrastructure/why-notions-biggest-ai-breakthrough-came-from-simplifying-everything",
-    "published_at": "2026-01-02T03:00:00-05:00",
-    "source": "VentureBeat",
-    "summary": "When initially experimenting with LLMs and agentic AI, software engineers at Notion AI applied advanced code generation, complex schemas, and heavy instructioning. Quickly, though, trial and error taught the team that it could get rid of all of that complicated data modeling . Notion\u2019s AI engineering lead Ryan Nystrom and his team pivoted to simple prompts, human-readable representations, minimal...",
-    "content_html": "",
-    "image_url": "https://images.ctfassets.net/jdtwqhzvc2n1/3M1D8BKy3SOEeg6eX5FsHw/1e8b91cccb75c0006777105677d059e6/an-art-deco-illustration-depicting-an-ai_0aPpBA4LR8yOmqmoIXg9lw_5PLasmgGTV-UJWHiihV0SA.jpeg?w=800&amp;q=75",
-    "summary_text": "When initially experimenting with LLMs and agentic AI, software engineers at Notion AI applied advanced code generation, complex schemas, and heavy instructioning. Quickly, though, trial and error taught the team that it could get rid of all of that complicat...",
-    "category": "ai",
-    "_permalink": "/p/56d428604e/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/56d428604e/",
-    "_summary_240": "When initially experimenting with LLMs and agentic AI, software engineers at Notion AI applied advanced code generation, complex schemas, and heavy instructioning. Quickly,...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/56d428604e/thumbnail.png"
-  },
-  {
     "title": "Seven steps to AI supply chain visibility \u2014 before a breach forces the issue",
     "url": "https://venturebeat.com/security/seven-steps-to-ai-supply-chain-visibility",
     "published_at": "2026-01-02T03:00:00-05:00",
@@ -725,6 +710,21 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/e8eed27a77/",
     "_summary_240": "Four in 10 enterprise applications will feature task-specific AI agents this year . Yet, research from Stanford University\u2019s 2025 Index Report shows that a mere 6% of...",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/e8eed27a77/thumbnail.png"
+  },
+  {
+    "title": "Why Notion\u2019s biggest AI breakthrough came from simplifying everything",
+    "url": "https://venturebeat.com/infrastructure/why-notions-biggest-ai-breakthrough-came-from-simplifying-everything",
+    "published_at": "2026-01-02T03:00:00-05:00",
+    "source": "VentureBeat",
+    "summary": "When initially experimenting with LLMs and agentic AI, software engineers at Notion AI applied advanced code generation, complex schemas, and heavy instructioning. Quickly, though, trial and error taught the team that it could get rid of all of that complicated data modeling . Notion\u2019s AI engineering lead Ryan Nystrom and his team pivoted to simple prompts, human-readable representations, minimal...",
+    "content_html": "",
+    "image_url": "https://images.ctfassets.net/jdtwqhzvc2n1/3M1D8BKy3SOEeg6eX5FsHw/1e8b91cccb75c0006777105677d059e6/an-art-deco-illustration-depicting-an-ai_0aPpBA4LR8yOmqmoIXg9lw_5PLasmgGTV-UJWHiihV0SA.jpeg?w=800&amp;q=75",
+    "summary_text": "When initially experimenting with LLMs and agentic AI, software engineers at Notion AI applied advanced code generation, complex schemas, and heavy instructioning. Quickly, though, trial and error taught the team that it could get rid of all of that complicat...",
+    "category": "ai",
+    "_permalink": "/p/56d428604e/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/56d428604e/",
+    "_summary_240": "When initially experimenting with LLMs and agentic AI, software engineers at Notion AI applied advanced code generation, complex schemas, and heavy instructioning. Quickly,...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/56d428604e/thumbnail.png"
   },
   {
     "title": "Europe has \u2018lost the internet\u2019, warns Belgium\u2019s cyber security chief",
@@ -1022,17 +1022,6 @@
     "content_html": "",
     "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/1bec0515-8848-4c50-a55e-c1ab268bc5e1.jpg",
     "summary_text": "Mark Zuckerberg is pouring billions of dollars into artificial intelligence",
-    "category": "ai"
-  },
-  {
-    "title": "What is sycophancy in AI models?",
-    "url": "https://www.youtube.com/watch?v=nvbq39yVYRk",
-    "published_at": "2025-12-18T15:30:14-05:00",
-    "source": "Anthropic YouTube",
-    "summary": "Learn what AI researchers mean when they talk about sycophancy, when it's more likely to show up in conversations, and tactics you can use to steer AI towards truth.",
-    "content_html": "",
-    "image_url": "https://i.ytimg.com/vi/nvbq39yVYRk/maxresdefault.jpg",
-    "summary_text": "Learn what AI researchers mean when they talk about sycophancy, when it's more likely to show up in conversations, and tactics you can use to steer AI towards truth.",
     "category": "ai"
   },
   {
