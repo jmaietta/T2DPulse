@@ -1,5 +1,20 @@
 [
   {
+    "title": "Metaplanet has key advantage over US-based Bitcoin treasuries: Analyst",
+    "url": "https://cointelegraph.com/news/metaplanet-edge-us-dats-jpy-weakness?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "published_at": "2026-01-04T13:33:03-05:00",
+    "source": "Cointelegraph",
+    "summary": "The Japanese yen is commonly used by macroeconomic investors to carry out levered bets because of its artificially low interest rates.",
+    "content_html": "",
+    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTIvMDE5YjZlNDgtMmJmNy03OTFkLWI4ZTktYzU3ZDYwMzhmMzk5LmpwZw==.jpg",
+    "summary_text": "The Japanese yen is commonly used by macroeconomic investors to carry out levered bets because of its artificially low interest rates.",
+    "category": "fintech",
+    "_permalink": "/p/476d223a3e/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/476d223a3e/",
+    "_summary_240": "The Japanese yen is commonly used by macroeconomic investors to carry out levered bets because of its artificially low interest rates.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/476d223a3e/thumbnail.png"
+  },
+  {
     "title": "Plaud updates the NotePin with a button",
     "url": "https://www.theverge.com/tech/851393/plaud-notepin-s-desktop-app-ces",
     "published_at": "2026-01-04T12:00:00-05:00",
@@ -506,21 +521,6 @@
     "category": "fintech"
   },
   {
-    "title": "Wall Street Shifts Focus to AI as Key Growth Driver",
-    "url": "https://www.bloomberg.com/news/videos/2026-01-02/for-review-wall-street-shifts-focus-to-ai-as-key-driver-of-economic-and-market-growth-in-2026",
-    "published_at": "2026-01-02T13:38:01-05:00",
-    "source": "Bloomberg Technology",
-    "summary": "By now every firm on Wall Street is well aware of the risks surrounding the artificial intelligence boom. But when it comes to the year ahead, few advocate walking away from what they describe as a \u201crevolutionary\u201d technology. Sam Potter has more. (Source: Bloomberg)",
-    "content_html": "",
-    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iPRf.IlC6LOw/v3/1200x-1.jpg",
-    "summary_text": "By now every firm on Wall Street is well aware of the risks surrounding the artificial intelligence boom. But when it comes to the year ahead, few advocate walking away from what they describe as a \u201crevolutionary\u201d technology. Sam Potter has more. (Source: Blo...",
-    "category": "ai",
-    "_permalink": "/p/77260d1422/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/77260d1422/",
-    "_summary_240": "By now every firm on Wall Street is well aware of the risks surrounding the artificial intelligence boom. But when it comes to the year ahead, few advocate walking away from what...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/77260d1422/thumbnail.png"
-  },
-  {
     "title": "SEC\u2019s Crenshaw set to depart, leaving US financial watchdog all Republican",
     "url": "https://cointelegraph.com/news/sec-commissioner-caroline-crenshaw-term-ending?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
     "published_at": "2026-01-02T13:30:33-05:00",
@@ -870,7 +870,7 @@
     "source": "Financial Times - Technology",
     "summary": "Three biggest US private tech groups plan listings as early as this year, raising hopes of windfall for banks, lawyers and investors",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/64959b97-fce8-4446-80f3-a6968630d72e.jpg",
+    "image_url": "https://images.ft.com/v3/image/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F64959b97-fce8-4446-80f3-a6968630d72e.jpg?source=next-article&fit=scale-down&quality=highest&width=700&dpr=1",
     "summary_text": "Three biggest US private tech groups plan listings as early as this year, raising hopes of windfall for banks, lawyers and investors",
     "category": "ai"
   },
@@ -881,7 +881,7 @@
     "source": "Financial Times - Technology",
     "summary": "The question of my authenticity highlights the confusion felt in this age of media distrust",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/54e5e2e3-7dbc-4092-8d85-5d2ef34da395.jpg",
+    "image_url": "",
     "summary_text": "The question of my authenticity highlights the confusion felt in this age of media distrust",
     "category": "ai"
   },
@@ -925,20 +925,9 @@
     "source": "Financial Times - Technology",
     "summary": "The technology is changing the way many people meet and form relationships but some experts believe it may do more harm than good",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/6d86cd7a-7bfb-4b2e-96e5-0d6bed4c406e.jpg",
+    "image_url": "",
     "summary_text": "The technology is changing the way many people meet and form relationships but some experts believe it may do more harm than good",
     "category": "ai"
-  },
-  {
-    "title": "Cond\u00e9 Nast user database reportedly breached, Ars unaffected",
-    "url": "https://arstechnica.com/information-technology/2025/12/conde-nast-user-database-reportedly-breached-ars-unaffected/",
-    "published_at": "2025-12-30T13:45:54-05:00",
-    "source": "Ars Technica",
-    "summary": "A serious data breach has occurred, but Ars users have nothing to worry about.",
-    "content_html": "<p>Earlier this month, a hacker named Lovely claimed to have breached a Cond\u00e9 Nast user database and released a list of more than <a href=\"https://haveibeenpwned.com/Breach/WIRED\">2.3 million user records from our sister publication WIRED</a>. The released materials contain demographic information (name, email, address, phone, etc.) but no passwords.</p>\n<p>The hacker also says that they will release an additional 40 million records for other Cond\u00e9 Nast properties, including our other sister publications <em>Vogue</em>, <em>The New Yorker</em>, <em>Vanity Fair</em>, and more. Of critical note to our readers, <em>Ars Technica</em> was not affected as we run on our own bespoke tech stack.</p>\n<p>The hacker said that they had urged Cond\u00e9 Nast to patch vulnerabilities to no avail. \u201cCond\u00e9 Nast does not care about the security of their users data,\u201d the hacker wrote. \u201cIt took us an entire month to convince them to fix the vulnerabilities on their websites. We will leak more of their users\u2019 data (40+ million) over the next few weeks. Enjoy!\u201d</p><p><a href=\"https://arstechnica.com/information-technology/2025/12/conde-nast-user-database-reportedly-breached-ars-unaffected/\">Read full article</a></p>\n<p><a href=\"https://arstechnica.com/information-technology/2025/12/conde-nast-user-database-reportedly-breached-ars-unaffected/#comments\">Comments</a></p>",
-    "image_url": "https://cdn.arstechnica.net/wp-content/uploads/2025/12/conde-hack-20205-1152x648-1767119864.jpg",
-    "summary_text": "A serious data breach has occurred, but Ars users have nothing to worry about.",
-    "category": "software"
   },
   {
     "title": "What is sycophancy in AI models?",
