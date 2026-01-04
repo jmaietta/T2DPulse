@@ -1,18 +1,33 @@
 [
   {
+    "title": "Alibaba Brings Visual AI Into Food Fight with China\u2019s Meituan",
+    "url": "https://www.bloomberg.com/news/articles/2026-01-04/alibaba-brings-visual-ai-into-food-fight-with-china-s-meituan",
+    "published_at": "2026-01-04T18:00:00-05:00",
+    "source": "Bloomberg Technology",
+    "summary": "Alibaba Group Holding Ltd. is launching a service to help restaurants use AI to showcase interiors, part of a broader effort to compete with Meituan in the Chinese food and dining sector.",
+    "content_html": "",
+    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iZgwdV8PUfi4/v0/1200x-1.png",
+    "summary_text": "Alibaba Group Holding Ltd. is launching a service to help restaurants use AI to showcase interiors, part of a broader effort to compete with Meituan in the Chinese food and dining sector.",
+    "category": "ai",
+    "_permalink": "/p/5c9c2e4cd2/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/5c9c2e4cd2/",
+    "_summary_240": "Alibaba Group Holding Ltd. is launching a service to help restaurants use AI to showcase interiors, part of a broader effort to compete with Meituan in the Chinese food and...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/5c9c2e4cd2/thumbnail.png"
+  },
+  {
     "title": "Here\u2019s what happened in crypto today",
     "url": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-    "published_at": "2026-01-04T17:38:18-05:00",
+    "published_at": "2026-01-04T17:41:35-05:00",
     "source": "Cointelegraph",
     "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, NFTs, Web3 and crypto regulation.",
     "content_html": "",
     "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMDYvMDE5Nzk0MjMtZWY4ZS03YzYwLWI5MzctYjlkZGY3NWZlOGFk.jpg",
     "summary_text": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, NFTs, Web3 and crypto regulation.",
     "category": "fintech",
-    "_permalink": "/p/30ebc23a1a/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/30ebc23a1a/",
+    "_permalink": "/p/7ad5c733b3/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/7ad5c733b3/",
     "_summary_240": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, NFTs, Web3 and crypto regulation.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/30ebc23a1a/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/7ad5c733b3/thumbnail.png"
   },
   {
     "title": "Crypto Fear and Greed Index flips to 'neutral' for first time since Oct",
@@ -540,21 +555,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/b810459e65/thumbnail.png"
   },
   {
-    "title": "Google Pushes AI Onto Devices",
-    "url": "https://www.pymnts.com/artificial-intelligence-2/2026/google-pushes-ai-onto-devices/",
-    "published_at": "2026-01-02T14:34:38-05:00",
-    "source": "PYMNTS",
-    "summary": "For much of the past decade, artificial intelligence has been concentrated in the cloud. Large models trained and run in centralized data centers have powered chatbots, enterprise tools and consumer applications, but that approach comes with trade-offs. Cloud dependence introduces latency, increases infrastructure costs and requires user data to move across networks. As AI becomes [\u2026] The post Go...",
-    "content_html": "<p style=\"font-weight: 400;\">For much of the past decade, artificial intelligence has been concentrated in the cloud. Large models trained and run in centralized data centers have powered chatbots, enterprise tools and consumer applications, but that approach comes with trade-offs. Cloud dependence introduces latency, increases infrastructure costs and requires user data to move across networks. As AI becomes embedded into operating systems and everyday software, those constraints are becoming more visible.</p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p style=\"font-weight: 400;\">Google is now signaling a shift in how it wants AI to be deployed. Alongside its cloud-based Gemini models, the company has been expanding its edge AI stack, including <a href=\"https://ai.google.dev/edge\" rel=\"noopener\" target=\"_blank\">Google Edge</a> tooling and a new compact model called <a href=\"https://blog.google/technology/developers/functiongemma/\" rel=\"noopener\" target=\"_blank\">FunctionGemma</a>. Together, these efforts point to a strategy that treats local execution as a core layer of AI infrastructure rather than a niche optimization.</p>\n<p style=\"font-weight: 400;\">FunctionGemma is designed to run directly on mobile devices and interpret natural language commands into actions without relying on cloud inference, allowing phones to respond instantly to user intent. The model fits into Google\u2019s broader effort to make AI usable even when connectivity is limited, and to reduce the need for every interaction to pass through centralized systems. As VentureBeat <a href=\"https://venturebeat.com/technology/google-releases-functiongemma-a-tiny-edge-model-that-can-control-mobile\" rel=\"noopener\" target=\"_blank\">reported</a>, the model is intended to \u201ccontrol mobile\u201d by translating language into executable device commands, underscoring its role as an on-device control layer rather than a conversational interface.</p>\n<h2 style=\"font-weight: 400;\"><strong>FunctionGemma Is Built for Execution at the Edge</strong></h2>\n<p style=\"font-weight: 400;\">FunctionGemma is a specialized variant of Google\u2019s Gemma 3 270M model, but its training and purpose differ sharply from general language models. As <a href=\"https://www.marktechpost.com/2025/12/26/from-gemma-3-270m-to-functiongemma-how-google-ai-built-a-compact-function-calling-specialist-for-edge-workloads/\" rel=\"noopener\" target=\"_blank\">detailed by MarkTechPost</a>, FunctionGemma is <a href=\"https://ai.google.dev/gemma/docs/functiongemma\" rel=\"noopener\" target=\"_blank\">optimized</a> for function calling, meaning it converts natural language into structured outputs that software systems can execute directly. Rather than producing free-form text, the model outputs instructions that map to defined actions.</p>\n<p style=\"font-weight: 400;\">This focus reflects a growing realization that many AI interactions are operational rather than conversational. Users expect AI embedded in devices to do things, not just explain them. General-purpose models can understand intent, but they often struggle to reliably trigger precise actions. Google\u2019s internal testing highlights this gap. A baseline small model performed inconsistently on mobile action tasks, but after targeted fine-tuning, FunctionGemma\u2019s accuracy improved substantially, demonstrating how specialization improves reliability.</p>\n<p style=\"font-weight: 400;\">Because FunctionGemma runs locally, those actions happen immediately. There is no network round trip and no need to transmit user data to external servers. VentureBeat <a href=\"https://venturebeat.com/technology/google-releases-functiongemma-a-tiny-edge-model-that-can-control-mobile\" rel=\"noopener\" target=\"_blank\">notes</a> that this enables real-time device control, even in offline scenarios, making the model well suited for mobile and embedded environments. This local execution also aligns with rising privacy expectations, as sensitive data remains on the device rather than being processed remotely.</p>\n<p style=\"font-weight: 400;\">FunctionGemma\u2019s small footprint is central to its role. As MarkTechPost <a href=\"https://www.marktechpost.com/2025/12/26/from-gemma-3-270m-to-functiongemma-how-google-ai-built-a-compact-function-calling-specialist-for-edge-workloads/\" rel=\"noopener\" target=\"_blank\">writes</a>, the model was designed to operate on constrained hardware while maintaining enough contextual understanding to handle practical commands. Instead of positioning it as a standalone assistant, Google is treating FunctionGemma as a component that can be embedded into applications, quietly enabling action-oriented AI beneath the surface.</p>\n<h2 style=\"font-weight: 400;\"><strong>Rise of Hybrid AI Architectures</strong></h2>\n<p style=\"font-weight: 400;\">FunctionGemma fits into Google\u2019s broader edge AI push, which includes Google Edge tooling designed to help developers deploy and run models locally across phones, browsers and embedded devices. Together, these efforts reflect a shift toward hybrid AI architectures that divide responsibilities between local and cloud systems.</p>\n<p style=\"font-weight: 400;\">In this model, lightweight edge models handle routine, high-frequency tasks where speed and reliability matter most, while larger cloud models are reserved for complex reasoning, analysis and generation. This division reduces cloud compute usage and improves responsiveness without sacrificing access to advanced capabilities when needed.</p>\n<p style=\"font-weight: 400;\">The economics of AI deployment also change under this approach. Cloud inference costs scale with usage, which becomes expensive as artificial intelligence features proliferate across products. Running targeted models on devices reduces ongoing infrastructure demand and makes performance more predictable. As AI becomes part of operating systems and core applications, that predictability becomes increasingly important.</p>\n<p style=\"font-weight: 400;\">There are governance implications as well. Processing data locally limits how much information must be transmitted or stored centrally, reducing exposure as scrutiny around AI data practices increases. Edge execution allows AI features to function while minimizing the risks associated with large-scale data aggregation.</p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/artificial-intelligence-2/2026/google-pushes-ai-onto-devices/\">Google Pushes AI Onto Devices</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
-    "image_url": "https://www.pymnts.com/wp-content/uploads/2024/12/Google-AI-4.jpg?w=457",
-    "summary_text": "For much of the past decade, artificial intelligence has been concentrated in the cloud. Large models trained and run in centralized data centers have powered chatbots, enterprise tools and consumer applications, but that approach comes with trade-offs. Cloud...",
-    "category": "ai",
-    "_permalink": "/p/a95f3921c6/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/a95f3921c6/",
-    "_summary_240": "For much of the past decade, artificial intelligence has been concentrated in the cloud. Large models trained and run in centralized data centers have powered chatbots,...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/a95f3921c6/thumbnail.png"
-  },
-  {
     "title": "\u2018Hundreds\u2019 of EVM wallets drained in mysterious attack: ZachXBT",
     "url": "https://cointelegraph.com/news/hundreds-evm-wallets-drained-mysterious-attack?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
     "published_at": "2026-01-02T14:08:37-05:00",
@@ -901,17 +901,6 @@
     "content_html": "",
     "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/6d86cd7a-7bfb-4b2e-96e5-0d6bed4c406e.jpg",
     "summary_text": "The technology is changing the way many people meet and form relationships but some experts believe it may do more harm than good",
-    "category": "ai"
-  },
-  {
-    "title": "What is sycophancy in AI models?",
-    "url": "https://www.youtube.com/watch?v=nvbq39yVYRk",
-    "published_at": "2025-12-18T15:30:14-05:00",
-    "source": "Anthropic YouTube",
-    "summary": "Learn what AI researchers mean when they talk about sycophancy, when it's more likely to show up in conversations, and tactics you can use to steer AI towards truth.",
-    "content_html": "",
-    "image_url": "https://i.ytimg.com/vi/nvbq39yVYRk/maxresdefault.jpg",
-    "summary_text": "Learn what AI researchers mean when they talk about sycophancy, when it's more likely to show up in conversations, and tactics you can use to steer AI towards truth.",
     "category": "ai"
   },
   {
