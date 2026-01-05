@@ -1,5 +1,110 @@
 [
   {
+    "title": "Nvidia launches Alpamayo, open AI models that allow autonomous vehicles to \u2018think like a human\u2019",
+    "url": "https://techcrunch.com/2026/01/05/nvidia-launches-alpamayo-open-ai-models-that-allow-autonomous-vehicles-to-think-like-a-human/",
+    "published_at": "2026-01-05T15:27:03-05:00",
+    "source": "TechCrunch",
+    "summary": "Nvidia unveiled Alpamayo at CES 2026, which includes a reasoning vision language action model that allows an autonomous vehicle to think more like a human and provide chain-of-thought reasoning.",
+    "content_html": "",
+    "image_url": "https://techcrunch.com/wp-content/uploads/2026/01/Alpamayo-Image.jpg?resize=1200,675",
+    "summary_text": "Nvidia unveiled Alpamayo at CES 2026, which includes a reasoning vision language action model that allows an autonomous vehicle to think more like a human and provide chain-of-thought reasoning.",
+    "category": "ai",
+    "_permalink": "/p/3a7414562e/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/3a7414562e/",
+    "_summary_240": "Nvidia unveiled Alpamayo at CES 2026, which includes a reasoning vision language action model that allows an autonomous vehicle to think more like a human and provide...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/3a7414562e/thumbnail.png"
+  },
+  {
+    "title": "DeepSeek Says AI Performance Gains Don\u2019t Require Higher Training Costs",
+    "url": "https://www.pymnts.com/artificial-intelligence-2/2026/deepseek-says-ai-performance-gains-dont-require-higher-training-costs/",
+    "published_at": "2026-01-05T15:08:09-05:00",
+    "source": "PYMNTS",
+    "summary": "DeepSeek says it has developed a new way to train large language models that allows performance to improve without a proportional increase in training costs, challenging one of the core assumptions that has shaped how the artificial intelligence (AI) industry has scaled over the past several years. DeepSeek outlined the approach in a recent [\u2026] The post DeepSeek Says AI Performance Gains Don\u2019t Re...",
+    "content_html": "<p style=\"font-weight: 400;\">DeepSeek says it has developed a new way to train large language models that allows performance to improve without a proportional increase in training costs, challenging one of the core assumptions that has shaped how the artificial intelligence (AI) industry has scaled over the past several years.</p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p style=\"font-weight: 400;\">DeepSeek outlined the approach in a <a href=\"https://arxiv.org/pdf/2512.24880\" rel=\"noopener\" target=\"_blank\">recent research paper</a> and has positioned it as part of a broader effort to extract more value from limited compute resources, <a href=\"https://www.bloomberg.com/news/articles/2026-01-02/deepseek-touts-new-training-method-as-china-pushes-ai-efficiency\" rel=\"noopener\" target=\"_blank\">according to Bloomberg</a>. While the company has not disclosed specific cost savings, the research is aimed squarely at a problem that has become increasingly central to AI economics: the rising expense of training ever-larger models.</p>\n<h2 style=\"font-weight: 400;\"><strong>Training Costs Become the Bottleneck</strong></h2>\n<p style=\"font-weight: 400;\">For much of the past decade, advances in AI have been driven by a simple formula: larger models trained on more data using more compute tend to perform better. That approach fueled an arms race in chips and infrastructure, concentrating model development among a small number of well-capitalized companies with access to massive GPU clusters.</p>\n<p style=\"font-weight: 400;\">But as models have grown deeper and more complex, training costs have risen faster than performance gains. A significant share of that cost inflation has come not from expanding ambition alone, but from inefficiencies that emerge during training at scale. As models grow, training becomes less predictable, forcing developers to extend training runs, restart failed attempts, or add redundancy to prevent performance from degrading. Each of those safeguards consumes additional compute without directly improving model quality.</p>\n<p style=\"font-weight: 400;\">Even companies that can afford to deploy models at scale increasingly face trade-offs around how often models can be updated, specialized or retrained for specific tasks.</p>\n<h2 style=\"font-weight: 400;\"><strong>A Shift From Brute Force to Stability</strong></h2>\n<p style=\"font-weight: 400;\">DeepSeek\u2019s research does not claim a breakthrough in model intelligence or data. Instead, it targets the mechanics of how models are trained as they scale. The company argues that many of the inefficiencies that drive up training costs stem from instability during learning, rather than from fundamental limits on model capability.</p>\n<p style=\"font-weight: 400;\">As large models train, small errors can compound across layers, causing learning to overshoot, oscillate, or degrade. To compensate, developers typically slow training, add redundancy or rely on sheer compute volume to smooth out those effects. DeepSeek says it has redesigned aspects of the training process so that models remain stable as they grow, allowing performance gains to persist without requiring the same increase in compute.</p>\n<p style=\"font-weight: 400;\">In tests across multiple model sizes, the company reported that performance improvements held without the volatility that usually forces higher training overhead. While the paper does not provide dollar figures, researchers familiar with the work say the focus on stabilizing training addresses one of the less visible drivers of AI cost growth: wasted computation spent managing instability rather than improving outcomes.</p>\n<h2 style=\"font-weight: 400;\"><strong>Implications for Commercial AI Deployment</strong></h2>\n<p style=\"font-weight: 400;\">If approaches like DeepSeek\u2019s prove reliable beyond research settings, they could alter the economics of AI deployment in sectors that depend on cost discipline, including commerce, payments, and enterprise software. Lower training costs make it easier to build and maintain specialized models tailored to specific workflows, rather than relying on generalized systems that are expensive to update.</p>\n<p style=\"font-weight: 400;\">The broader context also underscores why efficiency is gaining attention. As access to top-tier chips becomes more uneven globally, competitive advantage is increasingly shaped by how effectively companies use compute rather than how much they can acquire. Architectural and training-level improvements offer a path to progress that is less dependent on capital expenditure.</p>\n<p style=\"font-weight: 400;\">At the same time, the approach has limits. Training efficiency does not eliminate the need for significant compute, nor does it automatically reduce inference costs once models are deployed. Some efficiency gains demonstrated in research settings have historically been difficult to replicate in large production environments, particularly when models are integrated into complex, real-time systems.</p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/artificial-intelligence-2/2026/deepseek-says-ai-performance-gains-dont-require-higher-training-costs/\">DeepSeek Says AI Performance Gains Don\u2019t Require Higher Training Costs</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
+    "image_url": "https://www.pymnts.com/wp-content/uploads/2025/01/DeepSeek-AI-artificial-intelligence.jpg?w=457",
+    "summary_text": "DeepSeek says it has developed a new way to train large language models that allows performance to improve without a proportional increase in training costs, challenging one of the core assumptions that has shaped how the artificial intelligence (AI) industry...",
+    "category": "ai",
+    "_permalink": "/p/5fe4f0d559/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/5fe4f0d559/",
+    "_summary_240": "DeepSeek says it has developed a new way to train large language models that allows performance to improve without a proportional increase in training costs, challenging one of...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/5fe4f0d559/thumbnail.png"
+  },
+  {
+    "title": "Here\u2019s what happened in crypto today",
+    "url": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "published_at": "2026-01-05T14:59:35-05:00",
+    "source": "Cointelegraph",
+    "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, NFTs, Web3 and crypto regulation.",
+    "content_html": "",
+    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMDYvMDE5Nzk0MjMtZWY4ZS03YzYwLWI5MzctYjlkZGY3NWZlOGFk.jpg",
+    "summary_text": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, NFTs, Web3 and crypto regulation.",
+    "category": "fintech",
+    "_permalink": "/p/fd40cee8d8/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/fd40cee8d8/",
+    "_summary_240": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, NFTs, Web3 and crypto regulation.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/fd40cee8d8/thumbnail.png"
+  },
+  {
+    "title": "Investors Pivot to Agentic AI and on-Device Hardware",
+    "url": "https://www.pymnts.com/news/artificial-intelligence/2026/investors-pivot-to-agentic-ai-and-on-device-hardware/",
+    "published_at": "2026-01-05T14:55:29-05:00",
+    "source": "PYMNTS",
+    "summary": "From agentic finance platforms to on-device artificial intelligence (AI) hardware and late-stage model builders in China, this week\u2019s deals point to a market prioritizing deployment over experimentation. Several new funding announcements supported AI systems designed to run locally rather than in the cloud, reflecting growing concern over latency, privacy and compute costs. In a [\u2026] The post Inve...",
+    "content_html": "<p>From agentic finance platforms to on-device artificial intelligence (AI) hardware and late-stage model builders in China, this week\u2019s deals point to a market prioritizing deployment over experimentation.</p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p>Several new funding announcements supported AI systems designed to run locally rather than in the cloud, reflecting growing concern over latency, privacy and compute costs.</p>\n<p>In a Monday (Jan. 5) <a href=\"https://www.globenewswire.com/news-release/2026/01/05/3212803/0/en/Clipto-AI-Announces-New-Funding-to-Accelerate-On-Device-AI-Innovation.html\" rel=\"noopener\" target=\"_blank\">press release</a>, <a href=\"https://www.clipto.com/\" rel=\"noopener\" target=\"_blank\">Clipto AI</a> disclosed new funding to accelerate the development of its on-device multimodal AI platform, which processes video, audio and images directly on consumer devices. The company said the capital, which brings its valuation to over $250 million, would support product development and global expansion ahead of a planned 2026 launch.</p>\n<p>Clipto\u2019s positioning reflects a broader investor bet that meaningful AI adoption will increasingly happen at the edge. As generative models become more capable, running inference locally can reduce cloud expenses and address privacy constraints, particularly for consumer media and enterprise use cases involving sensitive data.</p>\n<p>A similar thesis underpins <a href=\"https://neosapien.xyz/\" rel=\"noopener\" target=\"_blank\">NeoSapien</a>\u2019s seed funding round. The India-based startup <a href=\"https://www.digitalhealthnews.com/healthtech-startup-neosapien-raises-2-mn-in-seed-funding-to-scale-ai-native-devices\" rel=\"noopener\" target=\"_blank\">raised</a> $2 million to build AI-native wearable devices designed to function as always-on personal assistants. Unlike software-only assistants, NeoSapien\u2019s hardware is built for continuous context capture and local intelligence. The company said the funding would be used to expand its engineering team and prepare for market entry.</p>\n<h2><strong>Agentic AI Moves Deeper Into Financial Operations</strong></h2>\n<p>Enterprise automation also featured prominently in this week\u2019s funding activity. <a href=\"https://www.oncorps.ai/\" rel=\"noopener\" target=\"_blank\">OnCorps</a> AI <a href=\"https://www.prnewswire.com/news-releases/oncorps-ai-raises-55-million-to-scale-agentic-fund-operations-for-asset-managers-302638865.html\" rel=\"noopener\" target=\"_blank\">raised</a> $55 million to scale its agentic AI platform for asset managers and fund administrators. The company focuses on automating operational workflows such as reconciliations, dispute resolution and reporting, areas that remain heavily manual across much of the investment industry.</p>\n<p>OnCorps positions its software as agentic, meaning systems can interpret exceptions, initiate actions and coordinate across workflows without human prompts at every step. Investors backing the company are betting that financial institutions are now ready to deploy AI systems that go beyond assistance and into execution, particularly in cost-pressured operational functions.</p>\n<h2><strong>Late-Stage Capital Backs Model Developers With Scale</strong></h2>\n<p>At the other end of the market, late-stage funding activity highlighted continued appetite for large AI model developers, particularly outside the United States. China-based <a href=\"https://www.moonshot.ai/\" rel=\"noopener\" target=\"_blank\">Moonshot AI</a> reportedly <a href=\"https://www.scmp.com/tech/tech-trends/article/3338334/chinas-moonshot-ai-raises-us500-million-latest-funding-round-report\" rel=\"noopener\" target=\"_blank\">raised</a> $500 million in its latest funding round, boosting its valuation and reinforcing its position among the country\u2019s most well-capitalized AI companies.</p>\n<p>Moonshot\u2019s ability to raise at that scale underscores two dynamics. First, investors remain willing to back model developers that have achieved user traction and platform visibility. Second, capital formation in AI is increasingly shaped by regional ecosystems, with domestic champions attracting funding aligned with local regulatory and market structures.</p>\n<p>While Moonshot\u2019s business differs markedly from enterprise automation or on-device AI startups, its funding round reflects the same underlying investor preference for scale, defensibility and deployment.</p>\n<h2><strong>Venture Firms Channel More Disciplined AI Investments</strong></h2>\n<p>Venture capital firms themselves are also recalibrating. According to <a href=\"https://www.wsj.com/articles/venture-firm-antler-made-over-400-investments-last-yearand-just-reloaded-with-160-million-25ed800b\" rel=\"noopener\" target=\"_blank\">The Wall Street Journal</a>, <a href=\"https://www.antler.co/\" rel=\"noopener\" target=\"_blank\">Antler</a> disclosed a $160 million U.S. fund after making more than 400 investments last year, many of them AI-focused. The firm\u2019s model of backing large numbers of early-stage companies reflects a belief that the next wave of AI winners will emerge from applied use cases rather than foundational breakthroughs alone.</p>\n<p>At the same time, broader venture sentiment suggests enterprises are becoming more selective in where they deploy AI capital. <a href=\"https://www.pymnts.com/news/artificial-intelligence/2025/venture-capital-firms-expect-enterprises-concentrate-ai-spending-proven-solutions/#wpcf7-f2699550-p3343036-o1\" rel=\"noopener\" target=\"_blank\">As reported by PYMNTS</a>, venture capital firms say enterprises are likely to increase AI spending in 2026 but concentrate that spend on a narrower set of proven solutions after years of broad experimentation. Investors also speculate that enterprises will focus budgets on areas such as AI safeguards and oversight, stronger data foundations, model post-training optimization, consolidation of tools, vertical solutions and products built on proprietary data rather than testing many vendors.</p>\n<p>The shift reflects investor expectations that enterprises will prioritize technologies with demonstrated operational value.</p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/news/artificial-intelligence/2026/investors-pivot-to-agentic-ai-and-on-device-hardware/\">Investors Pivot to Agentic AI and on-Device Hardware</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
+    "image_url": "https://www.pymnts.com/wp-content/uploads/2025/01/AI-investments-startups-funding.jpg?w=457",
+    "summary_text": "From agentic finance platforms to on-device artificial intelligence (AI) hardware and late-stage model builders in China, this week\u2019s deals point to a market prioritizing deployment over experimentation. Several new funding announcements supported AI systems ...",
+    "category": "ai",
+    "_permalink": "/p/58cfd24833/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/58cfd24833/",
+    "_summary_240": "From agentic finance platforms to on-device artificial intelligence (AI) hardware and late-stage model builders in China, this week\u2019s deals point to a market prioritizing...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/58cfd24833/thumbnail.png"
+  },
+  {
+    "title": "AI Buildout Bottlenecks for 2026",
+    "url": "https://www.bloomberg.com/news/videos/2026-01-05/ai-buildout-bottlenecks-for-2026-video",
+    "published_at": "2026-01-05T14:48:09-05:00",
+    "source": "Bloomberg Technology",
+    "summary": "Ryan Mallory, CEO of Flexential, one of the largest privately held data center operator in the US, discusses the sticking points in the AI buildout as questions grow around power and infrastructure constraints. He joins Caroline Hyde on \u201cBloomberg Tech.\u201d (Source: Bloomberg)",
+    "content_html": "",
+    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ie4WscdhmpPg/v3/1200x-1.jpg",
+    "summary_text": "Ryan Mallory, CEO of Flexential, one of the largest privately held data center operator in the US, discusses the sticking points in the AI buildout as questions grow around power and infrastructure constraints. He joins Caroline Hyde on \u201cBloomberg Tech.\u201d (Sou...",
+    "category": "ai",
+    "_permalink": "/p/5b2e0f0c05/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/5b2e0f0c05/",
+    "_summary_240": "Ryan Mallory, CEO of Flexential, one of the largest privately held data center operator in the US, discusses the sticking points in the AI buildout as questions grow around power...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/5b2e0f0c05/thumbnail.png"
+  },
+  {
+    "title": "The Outlook for AI Regulation in 2026",
+    "url": "https://www.bloomberg.com/news/videos/2026-01-05/the-outlook-for-ai-regulation-in-2026-video",
+    "published_at": "2026-01-05T14:42:20-05:00",
+    "source": "Bloomberg Technology",
+    "summary": "The prospect of a fragmented regulatory landscape is hanging over the AI market. Jessica Melugin, director of the Center for Technology and Innovation with the Competitive Enterprise Institute, discusses the outlook for federal rules. She joins Caroline Hyde on \u201cBloomberg Tech.\u201d (Source: Bloomberg)",
+    "content_html": "",
+    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iqIZ0lzCOvFU/v3/1200x-1.jpg",
+    "summary_text": "The prospect of a fragmented regulatory landscape is hanging over the AI market. Jessica Melugin, director of the Center for Technology and Innovation with the Competitive Enterprise Institute, discusses the outlook for federal rules. She joins Caroline Hyde ...",
+    "category": "ai",
+    "_permalink": "/p/5b9867fed0/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/5b9867fed0/",
+    "_summary_240": "The prospect of a fragmented regulatory landscape is hanging over the AI market. Jessica Melugin, director of the Center for Technology and Innovation with the Competitive...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/5b9867fed0/thumbnail.png"
+  },
+  {
+    "title": "Investors Hunting for Something New in AI: Anna Rathbun",
+    "url": "https://www.bloomberg.com/news/videos/2026-01-05/investors-hunting-for-something-new-in-ai-anna-rathbun-video",
+    "published_at": "2026-01-05T14:36:49-05:00",
+    "source": "Bloomberg Technology",
+    "summary": "Investors are looking for something new from Nvidia and other AI companies in 2026, says Anna Rathbun, CEO of Grenadilla Advisory. She discusses what markets are watching for and where there is still room to run with Caroline Hyde on \u201cBloomberg Tech.\u201d (Source: Bloomberg)",
+    "content_html": "",
+    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iit00IKaN984/v3/1200x-1.jpg",
+    "summary_text": "Investors are looking for something new from Nvidia and other AI companies in 2026, says Anna Rathbun, CEO of Grenadilla Advisory. She discusses what markets are watching for and where there is still room to run with Caroline Hyde on \u201cBloomberg Tech.\u201d (Source...",
+    "category": "ai",
+    "_permalink": "/p/d3ba55875b/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/d3ba55875b/",
+    "_summary_240": "Investors are looking for something new from Nvidia and other AI companies in 2026, says Anna Rathbun, CEO of Grenadilla Advisory. She discusses what markets are watching for and...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/d3ba55875b/thumbnail.png"
+  },
+  {
     "title": "That viral Reddit post about food delivery apps was an AI scam",
     "url": "https://www.theverge.com/news/855328/viral-reddit-delivery-app-ai-scam",
     "published_at": "2026-01-05T13:43:02-05:00",
@@ -165,21 +270,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/2b92645dc5/thumbnail.png"
   },
   {
-    "title": "Kardome Brings AI Voice Interaction Home With Cognition AI",
-    "url": "https://www.pymnts.com/artificial-intelligence-2/2026/kardome-brings-ai-voice-interaction-home-with-cognition-ai/",
-    "published_at": "2026-01-05T11:04:10-05:00",
-    "source": "PYMNTS",
-    "summary": "Kardome has debuted a tool designed to bring voice interaction to cars, homes and workplaces. Those are all places where traditional systems struggle, the voice artificial intelligence (AI) company said in a Monday (Jan. 5) news release. Kardome\u2019s Cognition AI lets systems identify who is speaking and understand their intent, without \u201crelying on rigid commands [\u2026] The post Kardome Brings AI Voice...",
-    "content_html": "<p style=\"font-weight: 400;\"><a href=\"https://www.kardome.com/\" rel=\"noopener\" target=\"_blank\">Kardome</a> has debuted a tool designed to bring voice interaction to cars, homes and workplaces.</p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p style=\"font-weight: 400;\">Those are all places where traditional systems struggle, the voice artificial intelligence (AI) company said in a Monday (Jan. 5)\u00a0<a href=\"https://www.twice.com/the-wire/kardome-launches-cognition-ai-at-ces-2026-on-device-context-aware-voice-ui\" rel=\"noopener\" target=\"_blank\">news release</a>.</p>\n<p style=\"font-weight: 400;\">Kardome\u2019s Cognition AI lets systems identify who is speaking and understand their intent, without \u201crelying on rigid commands or constant cloud connectivity,\u201d the release added.</p>\n<p style=\"font-weight: 400;\">\u201cThe integration of AI devices into everyday life won\u2019t happen until those devices can continuously listen to their environment and understand the context of what\u2019s happening around them-and that processing must occur on the device itself,\u201d said\u00a0<a href=\"https://il.linkedin.com/in/dani-cherkassky\" rel=\"noopener\" target=\"_blank\">Dani Cherkassky</a>, CEO of Kardome. \u201cCognition AI enables exactly that: on-device, intent-aware voice UI that works reliably, even in noisy, complex environments.\u201d</p>\n<p style=\"font-weight: 400;\">According to the release, Cognition AI is an on-device small language model that mimics the human auditory-cognition system. It allows for faster, more reliable, and more private voice interactions by deciphering intent and context in real time, taking care of simple tasks directly on the device and turning to cloud large language models only when deeper reasoning is needed.</p>\n<p style=\"font-weight: 400;\">\u201cThis hybrid-AI approach brings voice interfaces closer to natural human communication,\u201d the release added.</p>\n<p style=\"font-weight: 400;\">PYMNTS examined the rise of voice AI technology last year following a report by venture capital firm\u00a0<a href=\"https://a16z.com/\" rel=\"noopener\" target=\"_blank\">Andreessen Horowitz</a>\u00a0on its use in the professional world.</p>\n<p style=\"font-weight: 400;\">\u201cVoice is one of the\u00a0<a href=\"https://www.pymnts.com/artificial-intelligence-2/2025/voice-ai-funding-surges-8x-as-businesses-humanize-chatbots/\" rel=\"noopener\" target=\"_blank\">most powerful unlocks</a>\u00a0for AI application companies,\u201d Olivia Moore, a partner at Andreessen Horowitz, wrote in a blog post. \u201cIt is the most frequent and information-dense form of communication, made programmable for the first time due to AI.\u201d</p>\n<p style=\"font-weight: 400;\">She said artificial intelligence lets businesses respond to customers 24/7 instead of having to wait until an office is staffed.</p>\n<p style=\"font-weight: 400;\">For consumers, Moore wrote, the firm believes that \u201cvoice will be the first \u2014 and perhaps primary \u2014 way people interact with AI.\u201d</p>\n<p style=\"font-weight: 400;\">Research by PYMNTS Intelligence has found that 30.4% of Gen Z consumers already shop by voice each week. The report, \u201c<a href=\"https://www.pymnts.com/tag/how-the-world-does-digital/\" rel=\"noopener\" target=\"_blank\">How the World Does Digital</a>,\u201d\u00a0showed that millennials came in second, at 27.6%. Across all age groups, the average is 17.9% of consumers turning to voice AI to shop.</p>\n<p style=\"font-weight: 400;\">Cognition AI will be on display at this year\u2019s CES showcase in Las Vegas, part of a variety of products whose <a href=\"https://www.pymnts.com/ces/2025/ces-to-showcase-ai-powered-robots-and-smart-glasses/\">chief selling point</a> is artificial intelligence, as covered here last week.</p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/artificial-intelligence-2/2026/kardome-brings-ai-voice-interaction-home-with-cognition-ai/\">Kardome Brings AI Voice Interaction Home With Cognition AI</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
-    "image_url": "https://www.pymnts.com/wp-content/uploads/2025/06/voice-AI.jpg?w=457",
-    "summary_text": "Kardome has debuted a tool designed to bring voice interaction to cars, homes and workplaces. Those are all places where traditional systems struggle, the voice artificial intelligence (AI) company said in a Monday (Jan. 5) news release. Kardome\u2019s Cognition A...",
-    "category": "ai",
-    "_permalink": "/p/5ed76f313b/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/5ed76f313b/",
-    "_summary_240": "Kardome has debuted a tool designed to bring voice interaction to cars, homes and workplaces. Those are all places where traditional systems struggle, the voice artificial...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/5ed76f313b/thumbnail.png"
-  },
-  {
     "title": "Amazon\u2019s AI assistant comes to the web with Alexa.com",
     "url": "https://techcrunch.com/2026/01/05/alexa-without-an-echo-amazons-ai-chatbot-comes-to-the-web-and-a-revamped-alexa-app/",
     "published_at": "2026-01-05T10:00:00-05:00",
@@ -223,21 +313,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/601a2b21ed/",
     "_summary_240": "How an onchain investigator linked a Coinbase impersonation scam to $2 million in losses and why social engineering remains the real risk.",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/601a2b21ed/thumbnail.png"
-  },
-  {
-    "title": "Here\u2019s what happened in crypto today",
-    "url": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-    "published_at": "2026-01-05T08:17:26-05:00",
-    "source": "Cointelegraph",
-    "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, NFTs, Web3 and crypto regulation.",
-    "content_html": "",
-    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMDYvMDE5Nzk0MjMtZWY4ZS03YzYwLWI5MzctYjlkZGY3NWZlOGFk.jpg",
-    "summary_text": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, NFTs, Web3 and crypto regulation.",
-    "category": "fintech",
-    "_permalink": "/p/ed26291869/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/ed26291869/",
-    "_summary_240": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, NFTs, Web3 and crypto regulation.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/ed26291869/thumbnail.png"
   },
   {
     "title": "AI Regulation Battle Looms in California Despite Trump Threats",
@@ -373,6 +448,21 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/ba29cbbaa1/",
     "_summary_240": "Africa\u2019s largest fintech company, Flutterwave, has acquired Nigerian open banking startup Mono in an all-stock deal.",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/ba29cbbaa1/thumbnail.png"
+  },
+  {
+    "title": "Brex bets on \u2018less orchestration\u2019 as it builds an Agent Mesh for autonomous finance",
+    "url": "https://venturebeat.com/orchestration/brex-bets-on-less-orchestration-as-it-builds-an-agent-mesh-for-autonomous",
+    "published_at": "2026-01-05T03:00:00-05:00",
+    "source": "VentureBeat",
+    "summary": "Fintech Brex is betting that the future of enterprise AI isn\u2019t better orchestration \u2014 it\u2019s less of it. As generative AI agents move from copilots to autonomous systems, Brex CTO James Reggio says traditional agent orchestration frameworks are becoming a constraint rather than an enabler. Instead of relying on a central coordinator or rigid workflows, Brex has built what it calls an \u201cAgent Mesh\u201d: ...",
+    "content_html": "",
+    "image_url": "https://images.ctfassets.net/jdtwqhzvc2n1/2bn5jMREgSASEDf2vDQ6HQ/e5229bf4536b36825a2dbb7cb92fcf6e/crimedy7_illustration_of_a_robot_poring_through_expense_repor_a03892f6-f441-4dab-a57b-8e664b411198_1.png?w=800&amp;q=75",
+    "summary_text": "Fintech Brex is betting that the future of enterprise AI isn\u2019t better orchestration \u2014 it\u2019s less of it. As generative AI agents move from copilots to autonomous systems, Brex CTO James Reggio says traditional agent orchestration frameworks are becoming a const...",
+    "category": "ai",
+    "_permalink": "/p/56e705f453/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/56e705f453/",
+    "_summary_240": "Fintech Brex is betting that the future of enterprise AI isn\u2019t better orchestration \u2014 it\u2019s less of it. As generative AI agents move from copilots to autonomous systems, Brex CTO...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/56e705f453/thumbnail.png"
   },
   {
     "title": "Nine myths about Bitcoin energy use challenged by data, ESG expert says",
@@ -615,21 +705,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/33eceff644/thumbnail.png"
   },
   {
-    "title": "Metaplanet has key advantage over US-based Bitcoin treasuries: Analyst",
-    "url": "https://cointelegraph.com/news/metaplanet-edge-us-dats-jpy-weakness?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-    "published_at": "2026-01-04T13:33:03-05:00",
-    "source": "Cointelegraph",
-    "summary": "The Japanese yen is commonly used by macroeconomic investors to carry out levered bets because of its artificially low interest rates.",
-    "content_html": "",
-    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTIvMDE5YjZlNDgtMmJmNy03OTFkLWI4ZTktYzU3ZDYwMzhmMzk5LmpwZw==.jpg",
-    "summary_text": "The Japanese yen is commonly used by macroeconomic investors to carry out levered bets because of its artificially low interest rates.",
-    "category": "fintech",
-    "_permalink": "/p/476d223a3e/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/476d223a3e/",
-    "_summary_240": "The Japanese yen is commonly used by macroeconomic investors to carry out levered bets because of its artificially low interest rates.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/476d223a3e/thumbnail.png"
-  },
-  {
     "title": "Plaud launches a new AI pin and a desktop meeting notetaker",
     "url": "https://techcrunch.com/2026/01/04/plaud-launches-a-new-ai-pin-and-a-desktop-meeting-notetaker/",
     "published_at": "2026-01-04T11:28:10-05:00",
@@ -643,21 +718,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/884d29cfc2/",
     "_summary_240": "Plaud is going after the likes of Granola to launch a desktop app that records online meetings.",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/884d29cfc2/thumbnail.png"
-  },
-  {
-    "title": "Is the AI Boom a Bubble Waiting to Pop? Here\u2019s What History Says",
-    "url": "https://www.bloomberg.com/news/articles/2026-01-04/is-the-ai-boom-a-bubble-waiting-to-pop-here-s-what-history-says",
-    "published_at": "2026-01-04T09:00:07-05:00",
-    "source": "Bloomberg Technology",
-    "summary": "As the artificial intelligence trade continues to push the stock market to new highs, investors are increasingly asking if we\u2019re living through another financial bubble that\u2019s destined to burst.",
-    "content_html": "A Samsung Electronics Co. sign with a slogan reading, \"AI for All\" at the IFA Consumer Electronics and Home Appliances trade fair in Berlin, Germany, on Thursday, Sept. 5, 2024. The technology show runs until Sept. 10.",
-    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ipLN7G_E5sGI/v1/1200x-1.jpg",
-    "summary_text": "As the artificial intelligence trade continues to push the stock market to new highs, investors are increasingly asking if we\u2019re living through another financial bubble that\u2019s destined to burst.",
-    "category": "ai",
-    "_permalink": "/p/8bc328ee6c/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/8bc328ee6c/",
-    "_summary_240": "As the artificial intelligence trade continues to push the stock market to new highs, investors are increasingly asking if we\u2019re living through another financial bubble that\u2019s...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/8bc328ee6c/thumbnail.png"
   },
   {
     "title": "The U.S. Captures Venezuela's Oil and Lithium Reserves",
@@ -703,21 +763,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/77edb49d51/",
     "_summary_240": "For decades, we have adapted to software. We learned shell commands, memorized HTTP method names and wired together SDKs. Each interface assumed we would speak its language. In...",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/77edb49d51/thumbnail.png"
-  },
-  {
-    "title": "AI Debt Spree Is Fueling a Credit Trading Frenzy: Credit Weekly",
-    "url": "https://www.bloomberg.com/news/articles/2026-01-03/ai-debt-spree-is-fueling-a-credit-trading-frenzy-credit-weekly",
-    "published_at": "2026-01-03T15:00:00-05:00",
-    "source": "Bloomberg Technology",
-    "summary": "Artificial intelligence spending and the growth of the private credit market aren\u2019t just spurring companies to borrow more, they\u2019re also helping to generate fresh records for corporate-bond trading.",
-    "content_html": "",
-    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iQf2lGRxJvJM/v3/1200x-1.png",
-    "summary_text": "Artificial intelligence spending and the growth of the private credit market aren\u2019t just spurring companies to borrow more, they\u2019re also helping to generate fresh records for corporate-bond trading.",
-    "category": "ai",
-    "_permalink": "/p/ce942f675d/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/ce942f675d/",
-    "_summary_240": "Artificial intelligence spending and the growth of the private credit market aren\u2019t just spurring companies to borrow more, they\u2019re also helping to generate fresh records for...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/ce942f675d/thumbnail.png"
   },
   {
     "title": "BYD Topples Tesla as EV King",
@@ -861,17 +906,6 @@
     "category": "ai"
   },
   {
-    "title": "Seven steps to AI supply chain visibility \u2014 before a breach forces the issue",
-    "url": "https://venturebeat.com/security/seven-steps-to-ai-supply-chain-visibility",
-    "published_at": "2026-01-02T03:00:00-05:00",
-    "source": "VentureBeat",
-    "summary": "Four in 10 enterprise applications will feature task-specific AI agents this year . Yet, research from Stanford University\u2019s 2025 Index Report shows that a mere 6% of organizations have an advanced AI security strategy in place. Palo Alto Networks predicts 2026 will bring the first major lawsuits holding executives personally liable for rogue AI actions . Many organizations are grappling with how...",
-    "content_html": "",
-    "image_url": "https://images.ctfassets.net/jdtwqhzvc2n1/1w9RRqYG2D8VbRv0ScvtQ7/0164109497a6648b33019ee766b77aef/HERO_IMAGE.png?w=800&amp;q=75",
-    "summary_text": "Four in 10 enterprise applications will feature task-specific AI agents this year . Yet, research from Stanford University\u2019s 2025 Index Report shows that a mere 6% of organizations have an advanced AI security strategy in place. Palo Alto Networks predicts 20...",
-    "category": "ai"
-  },
-  {
     "title": "Why Notion\u2019s biggest AI breakthrough came from simplifying everything",
     "url": "https://venturebeat.com/infrastructure/why-notions-biggest-ai-breakthrough-came-from-simplifying-everything",
     "published_at": "2026-01-02T03:00:00-05:00",
@@ -880,6 +914,17 @@
     "content_html": "",
     "image_url": "https://images.ctfassets.net/jdtwqhzvc2n1/3M1D8BKy3SOEeg6eX5FsHw/1e8b91cccb75c0006777105677d059e6/an-art-deco-illustration-depicting-an-ai_0aPpBA4LR8yOmqmoIXg9lw_5PLasmgGTV-UJWHiihV0SA.jpeg?w=800&amp;q=75",
     "summary_text": "When initially experimenting with LLMs and agentic AI, software engineers at Notion AI applied advanced code generation, complex schemas, and heavy instructioning. Quickly, though, trial and error taught the team that it could get rid of all of that complicat...",
+    "category": "ai"
+  },
+  {
+    "title": "Seven steps to AI supply chain visibility \u2014 before a breach forces the issue",
+    "url": "https://venturebeat.com/security/seven-steps-to-ai-supply-chain-visibility",
+    "published_at": "2026-01-02T03:00:00-05:00",
+    "source": "VentureBeat",
+    "summary": "Four in 10 enterprise applications will feature task-specific AI agents this year . Yet, research from Stanford University\u2019s 2025 Index Report shows that a mere 6% of organizations have an advanced AI security strategy in place. Palo Alto Networks predicts 2026 will bring the first major lawsuits holding executives personally liable for rogue AI actions . Many organizations are grappling with how...",
+    "content_html": "",
+    "image_url": "https://images.ctfassets.net/jdtwqhzvc2n1/1w9RRqYG2D8VbRv0ScvtQ7/0164109497a6648b33019ee766b77aef/HERO_IMAGE.png?w=800&amp;q=75",
+    "summary_text": "Four in 10 enterprise applications will feature task-specific AI agents this year . Yet, research from Stanford University\u2019s 2025 Index Report shows that a mere 6% of organizations have an advanced AI security strategy in place. Palo Alto Networks predicts 20...",
     "category": "ai"
   },
   {
@@ -946,17 +991,6 @@
     "content_html": "",
     "image_url": "https://static01.nyt.com/images/2025/12/30/business/00ai-space/00ai-space-mediumSquareAt3X.jpg",
     "summary_text": "Some tech leaders are concerned that the artificial intelligence race will exhaust available land and energy. The solution might lie in orbit.",
-    "category": "ai"
-  },
-  {
-    "title": "Four AI research trends enterprise teams should watch in 2026",
-    "url": "https://venturebeat.com/technology/four-ai-research-trends-enterprise-teams-should-watch-in-2026",
-    "published_at": "2026-01-01T03:00:00-05:00",
-    "source": "VentureBeat",
-    "summary": "The AI narrative has mostly been dominated by model performance on key industry benchmarks. But as the field matures and enterprises look to draw real value from advances in AI, we\u2019re seeing parallel research in techniques that help productionize AI applications. At VentureBeat, we are tracking AI research that can help understand where the practical implementation of technology is heading. We ar...",
-    "content_html": "",
-    "image_url": "https://images.ctfassets.net/jdtwqhzvc2n1/388FvHgrtREmt4SIX9wUBh/4bbed81a266f9d68770660b4b81a650b/AI_trends_2026.jpg?w=800&amp;q=75",
-    "summary_text": "The AI narrative has mostly been dominated by model performance on key industry benchmarks. But as the field matures and enterprises look to draw real value from advances in AI, we\u2019re seeing parallel research in techniques that help productionize AI applicati...",
     "category": "ai"
   },
   {
