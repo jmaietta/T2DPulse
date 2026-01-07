@@ -1,5 +1,35 @@
 [
   {
+    "title": "JPMorgan\u2019s Proxy Shift Signals AI\u2019s Expanding Beachhead",
+    "url": "https://www.pymnts.com/news/artificial-intelligence/2026/jpmorgan-proxy-shift-signals-ai-expanding-beachhead/",
+    "published_at": "2026-01-07T12:31:04-05:00",
+    "source": "PYMNTS",
+    "summary": "Artificial intelligence\u2019s most visible applications might arguably be chatbots and customer service experiments. However, AI is steadily finding inroads into the operational core of financial services, reshaping how banks analyze information, make decisions and allocate human effort. In the most recent example, reported Wednesday (Jan 7) across news outlets including The Wall Street Journal, [\u2026] ...",
+    "content_html": "<p><span>Artificial intelligence\u2019s most visible applications might arguably be chatbots and customer service experiments.</span></p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p><span>However, AI is steadily finding inroads into the operational core of financial services, reshaping how banks analyze information, make decisions and allocate human effort.</span></p>\n<p><span>In the most recent example, reported Wednesday (</span><span>Jan</span><span> 7) across news outlets including </span><a class=\"editor-rtfLink\" href=\"https://www.wsj.com/finance/banking/jpmorgan-cuts-all-ties-with-proxy-advisers-in-industry-first-78c43d5f\" rel=\"noopener\" target=\"_blank\"><span>The Wall Street Journal</span></a><span>, </span><a class=\"editor-rtfLink\" href=\"https://www.jpmorgan.com/global\" rel=\"noopener\" target=\"_blank\"><span>JPMorgan</span></a><span> decided to move away from traditional proxy advisory firms and rely instead on an internally built AI system, known as Proxy IQ.</span></p>\n<p><span>The move is about shareholder voting, to be sure, but it also signals something larger across </span><span>bankin</span><span>g</span><span>.</span> <span>AI is increasingly trusted to handle tasks that were once highly manual, externally sourced and deeply embedded in institutional workflows.</span></p>\n<h2><strong><span>From Cognitive Banking to Operational AI</span></strong></h2>\n<p><span>PYMNTS Intelligence has tracked this evolution under the banner of \u201c</span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/artificial-intelligence-2/2025/cognitive-banking-anticipates-customer-needs-before-they-ask/\" rel=\"noopener\" target=\"_blank\"><span>cognitive banking</span></a><span>,\u201d a model in which AI sits atop permissioned data </span><span>to shift</span><span> banks from reactive </span><span>problem solving</span><span> to proactive guidance and insight.</span> <span>Rather than waiting for human prompts, cognitive systems infer intent, surface patterns and suggest next-best actions in </span><span>real time</span><span>.</span></p>\n<p><span>This approach has already </span><span>taken hold</span><span> in areas such as customer engagement, fraud detection and internal knowledge management.</span> <a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/artificial-intelligence-2/2025/employers-encourage-ai-at-work-with-or-without-guardrails/\" rel=\"noopener\" target=\"_blank\"><span>Conversational AI</span></a><span> tools are </span><span>moving</span><span> beyond simple Q&amp;A to deliver context-aware analysis </span><span>that speeds</span><span> decision-making and frees staff from repetitive </span><span>work</span><span>.</span></p>\n<p><span>JPMorgan\u2019s proxy voting move extends that logic into asset management and governance, an arena long dominated by manual review, external data gathering and third-party recommendations.</span></p>\n<h2><strong><span>What Proxy Advisers Do and Why They Matter</span></strong></h2>\n<p><span>Proxy advisory firms play a central role in asset management. They collect and analyze proxy statements from thousands of public companies, assess ballot items such as board elections and shareholder proposals, and issue voting recommendations to institutional investors. For large asset managers, this process helps scale governance decisions across sprawling portfolios, but it is also time-intensive and dependent on outside firms.</span></p>\n<p><span>Traditionally, banks and asset managers rely on these advisers for guidance. That reliance introduces cost, latency and an additional layer between institutions and the underlying corporate information they are voting on.</span></p>\n<p><span>According to </span><span>JPMorgan\u2019s</span><span> internal memo discussed in media reports, the bank concluded it no longer needed third-party data collection or voting recommendations.</span> <span>Instead, its AI tool </span><span>is designed</span><span> to aggregate and analyze proxy data from </span><span>roughly</span><span> 3,000 annual company meetings, </span><span>using</span><span> machine-driven analysis rather than outsourced human review, CNBC </span><a class=\"editor-rtfLink\" href=\"https://www.cnbc.com/2026/01/07/jpmorgan-wont-use-controversial-proxy-advisors-for-shareholder-votes.html\" rel=\"noopener\" target=\"_blank\"><span>reported</span></a><span> Wednesday.</span></p>\n<h2><strong><span>Cutting Out the Middleman, Speeding the Process</span></strong></h2>\n<p><span>The immediate effect is the disintermediation of those advisers. </span><span>On the other hand</span><span>, by bringing proxy analysis in-house, JPMorgan reduces dependence on external advisers and shortens the time between information release and decision-making. AI systems can scan, classify and compare proxy disclosures at scale, a task that would otherwise require large teams and weeks of effort.</span></p>\n<p><span>This</span><span> mirrors a broader trend </span><span>PYMNTS</span><span> has documented across </span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/news/artificial-intelligence/2025/2025-the-year-ai-agents-entered-payments-and-changed-whos-in-control/\" rel=\"noopener\" target=\"_blank\"><span>bankin</span><span>g</span></a><span>.</span> <span>AI </span><span>is increasingly deployed</span><span> where speed and scale matter, particularly in environments where </span><span>decisions must be made</span><span> repeatedly and consistently. </span><span>In </span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/news/security-and-risk/2025/ai-powered-scams-force-banks-into-real-time-fraud-defense/\" rel=\"noopener\" target=\"_blank\"><span>fraud prevention</span></a><span>, for example, banks are shifting from retrospective reviews to real-time AI-driven defenses that intervene before funds </span><span>move</span><span>.</span></p>\n<p><span>In asset management, faster analysis </span><span>means</span><span> portfolio managers and governance teams </span><span>can</span><span> focus more on judgment and policy alignment, rather than document processing and data reconciliation.</span></p>\n<h2><strong><span>Efficiency Gains With Guardrails Still Required</span></strong></h2>\n<p><span>The promise of AI-driven automation does not eliminate the need for oversigh</span><span>t. </span><span>Banking systems work best when paired with governance frameworks that ensure transparency, explainability and human accountability.</span></p>\n<p><span>Proxy voting carries regulatory, fiduciary and reputational implications. While AI can surface patterns and flag inconsistencies, institutions must still define voting principles and retain responsibility for outcomes. JPMorgan\u2019s move highlights that AI is not replacing governance, but rather reshaping how governance </span><span>is executed</span><span>.</span></p>\n<p><span>Taken together, JPMorgan\u2019s Proxy IQ initiative </span><span>fits</span><span> squarely </span><span>within</span><span> a </span><span>wider</span><span> industry shift.</span> <span>AI is </span><span>moving</span><span> from peripheral support tools to engines that </span><span>reshape</span><span> core banking functions, from fraud </span><span>defense</span><span> to asset management.</span></p>\n<p><em>For all PYMNTS AI coverage, subscribe to the daily </em><a href=\"https://pymnts.com/subscribe/\" rel=\"noopener\" target=\"_blank\"><em>AI Newsletter</em></a><em>.</em></p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/news/artificial-intelligence/2026/jpmorgan-proxy-shift-signals-ai-expanding-beachhead/\">JPMorgan\u2019s Proxy Shift Signals AI\u2019s Expanding Beachhead</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
+    "image_url": "https://www.pymnts.com/wp-content/uploads/2026/01/JPMorgan.jpeg?w=457",
+    "summary_text": "Artificial intelligence\u2019s most visible applications might arguably be chatbots and customer service experiments. However, AI is steadily finding inroads into the operational core of financial services, reshaping how banks analyze information, make decisions a...",
+    "category": "ai",
+    "_permalink": "/p/316695206c/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/316695206c/",
+    "_summary_240": "Artificial intelligence\u2019s most visible applications might arguably be chatbots and customer service experiments. However, AI is steadily finding inroads into the operational core...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/316695206c/thumbnail.png"
+  },
+  {
+    "title": "Steel, Sensors and Silicon: How Caterpillar Is Bringing Edge AI to the Jobsite",
+    "url": "https://blogs.nvidia.com/blog/caterpillar-ces-2026/",
+    "published_at": "2026-01-07T12:15:15-05:00",
+    "source": "NVIDIA News",
+    "summary": "At CES, Caterpillar reveals how it\u2019s integrating NVIDIA technologies, from NVIDIA Jetson Thor to speech models, to transform the world\u2019s heavy industries.",
+    "content_html": "",
+    "image_url": "https://s3.amazonaws.com/cms.ipressroom.com/219/files/202601/695e994e3d63323547c7c6e7_Copy-of-ces26-robotics-cat-blog-1600x900-linkedin-842x450/Copy-of-ces26-robotics-cat-blog-1600x900-linkedin-842x450_thmb.jpg",
+    "summary_text": "At CES, Caterpillar reveals how it\u2019s integrating NVIDIA technologies, from NVIDIA Jetson Thor to speech models, to transform the world\u2019s heavy industries.",
+    "category": "ai",
+    "_permalink": "/p/9a76243fbe/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/9a76243fbe/",
+    "_summary_240": "At CES, Caterpillar reveals how it\u2019s integrating NVIDIA technologies, from NVIDIA Jetson Thor to speech models, to transform the world\u2019s heavy industries.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/9a76243fbe/thumbnail.png"
+  },
+  {
     "title": "Caterpillar taps Nvidia to bring AI to its construction equipment",
     "url": "https://techcrunch.com/2026/01/07/caterpillar-taps-nvidia-to-bring-ai-to-its-construction-equipment/",
     "published_at": "2026-01-07T12:00:00-05:00",
@@ -64,14 +94,14 @@
     "url": "https://cointelegraph.com/news/bitcoin-not-likely-new-all-time-high-in-2026-new-research?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
     "published_at": "2026-01-07T11:42:26-05:00",
     "source": "Cointelegraph",
-    "summary": "Bitcoin long-term short signals from trading tools caused analysis to conclude that no new BTC price all-time high would come this year.",
+    "summary": "Bitcoin long-term short signals from trading tools led analysis to conclude that no new BTC price all-time high would come this year.",
     "content_html": "",
     "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjYtMDEvMDE5Yjk5NTEtNzg5Yy03NzFmLWFlMjItOTc4MjQ2OTY3YThmLmpwZw==.jpg",
-    "summary_text": "Bitcoin long-term short signals from trading tools caused analysis to conclude that no new BTC price all-time high would come this year.",
+    "summary_text": "Bitcoin long-term short signals from trading tools led analysis to conclude that no new BTC price all-time high would come this year.",
     "category": "fintech",
     "_permalink": "/p/dbc2f72213/",
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/dbc2f72213/",
-    "_summary_240": "Bitcoin long-term short signals from trading tools caused analysis to conclude that no new BTC price all-time high would come this year.",
+    "_summary_240": "Bitcoin long-term short signals from trading tools led analysis to conclude that no new BTC price all-time high would come this year.",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/dbc2f72213/thumbnail.png"
   },
   {
@@ -495,21 +525,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/3bf7996837/thumbnail.png"
   },
   {
-    "title": "Fraud Orchestration Puts Merchants Back in Charge",
-    "url": "https://www.pymnts.com/fraud-prevention/2026/fraud-orchestration-puts-merchants-back-in-charge/",
-    "published_at": "2026-01-07T04:00:37-05:00",
-    "source": "PYMNTS",
-    "summary": "For years, fraud prevention lived in the shadows of digital commerce. It was essential, yes, but also costly and largely invisible. Merchants typically treated it as a tax on growth, something to be minimized rather than mastered. Risk decisions were outsourced to payment processors and banks, accepted as black-box outcomes that merchants absorbed with [\u2026] The post Fraud Orchestration Puts Mercha...",
-    "content_html": "<p><span>For years, fraud prevention lived in the shadows of digital commerce. It was essential, yes, but also costly and largely invisible. </span></p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p><span>Merchants typically treated it as a tax on growth, something to be minimized rather than mastered. Risk decisions were outsourced to payment processors and banks, accepted as black-box outcomes that merchants absorbed with little recourse. When transactions failed, revenue disappeared quietly. When fraud rose, costs followed.</span></p>\n<p><span>But</span><span> findings in the </span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/tracker_posts/orchestrating-trust-the-future-of-fraud-prevention-in-payments/\" rel=\"noopener\" target=\"_blank\"><span>December 2025 edition</span></a><span> of the </span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/tracker_posts/orchestrating-trust-the-future-of-fraud-prevention-in-payments/\" rel=\"noopener\" target=\"_blank\"><span>Payments Orchestration </span><span>Tracker\u00ae</span><span> Series,</span></a><span> a PYMNTS Intelligence and </span><a class=\"editor-rtfLink\" href=\"https://www.spreedly.com/\" rel=\"noopener\" target=\"_blank\"><span>Spreedly</span></a> <span>collaboration</span><span>, reveal that model no longer holds.</span><span> As fraud becomes more adaptive and digital commerce more fragmented, merchants are discovering that fraud prevention is no longer just about stopping bad actors. It is about owning the logic of trust. </span></p>\n<p><span>And in an economy where trust determines who can transact, how smoothly, and at what scale, ownership is becoming a competitive differentiator.</span></p>\n<h2>Old Fraud Model Is Breaking Down</h2>\n<p><span>The traditional approach to fraud prevention was built for a simpler era. Card-not-present transactions dominated, attack patterns were relatively static, and rules-based systems could keep pac</span><span>e. </span><span>Merchants leaned on their payment service providers\u2019 default risk settings, layering in point solutions only when losses spiked.</span></p>\n<p><span>Today\u2019s fraud landscape looks nothing like that. Bots test login flows at scale. Synthetic identities bypass onboarding checks. Account takeovers unfold across devices and channels. Disputes increasingly reflect customer confusion or buyer\u2019s remorse rather than criminal intent. Fraud is no longer a single event at checkout \u2014 it is a life cycle problem.</span></p>\n<p><span>At the same time, customer expectations have </span><span>hardened</span><span>. Shoppers expect instant approvals and minimal friction, regardless of channel or payment method. Merchants are caught in the middle, accountable for both fraud losses and customer experience, but with limited control over how risk decisions are made.</span></p>\n<p><span>Fraud orchestration offers merchants a way out of this bind. Rather than relying on isolated tools and processor-defined logic, orchestration introduces a centralized decision layer that sits above fraud vendors and payment gateways. </span><span>It </span><span>connects</span><span> identity signals, behavioral data, device intelligence, and transaction context into a </span><span>single</span><span> system that determines how risk is assessed and </span><span>acted upon</span><span>.</span></p>\n<p><strong><span>Read the report:</span></strong> <a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/tracker_posts/orchestrating-trust-the-future-of-fraud-prevention-in-payments/\" rel=\"noopener\" target=\"_blank\"><span>Orchestrating Trust: The Future of Fraud Prevention in </span><span>Payments</span></a></p>\n<p><span>The technology itself is not revolutionary. What is new is the shift in control. </span><span>Orchestration </span><span>allows</span><span> merchants to define their own risk strategies, test </span><span>different</span><span> approaches, and adapt in </span><span>real time</span><span>.</span><span> Instead of inheriting declines from upstream providers, merchants can decide when to trust, when to challenge, and when to say no.</span></p>\n<p><span>Merchants moving toward orchestration typically start by decoupling fraud decisioning from any single provider. Instead of allowing a processor\u2019s model to dictate outcomes, they introduce an abstraction layer that can route transactions, sequence checks and apply rules dynamically.</span></p>\n<p><span>This shifts merchants from being downstream recipients of risk decisions to active architects of trus</span><span>t \u2014 p</span><span>ositioning them to scale faster, negotiate better with providers, and adapt quickly as payments, </span><span>regulation</span><span>\u00a0and fraud tactics continue to evolve.</span></p>\n<h2>From Fraud Prevention to Trust Management</h2>\n<p><span>The most forward-looking merchants are using orchestration to reframe fraud altogether. </span><span>The goal is no longer </span><span>simply</span><span> to block bad transactions, but to manage trust dynamically across the customer life cycle.</span></p>\n<p><span>In practice, this means treating trust as something that can be earned and reinforced over time. Known customers with consistent behavior encounter less friction. New or anomalous behavior triggers additional verification. </span><span>The system adapts as customers interact more frequently, </span><span>creating</span><span> smoother experiences without </span><span>sacrificing</span><span> security.</span></p>\n<p><span>This approach recognizes a fundamental reality of digital commerce: Trust is contextual. A customer may be low risk in one scenario and higher risk in another. Static rules cannot capture that nuance. Orchestration can.</span></p>\n<p><span>Merchants can adapt decision flows to regional regulations, insert human review where required, and demonstrate governance over risk decisions. This is more important as trust becomes not just a technical issue, but a reputational and regulatory one.</span></p>\n<p><span>Fraud orchestration is not a silver bullet. But for merchants willing to invest, it represents a shift from being downstream recipients of risk decisions to active architects of trust. In the years ahead, that distinction may define the leaders of digital commerce.</span></p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/fraud-prevention/2026/fraud-orchestration-puts-merchants-back-in-charge/\">Fraud Orchestration Puts Merchants Back in Charge</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
-    "image_url": "https://www.pymnts.com/wp-content/uploads/2026/01/risk-fraud-orchestration1.jpg?w=457",
-    "summary_text": "For years, fraud prevention lived in the shadows of digital commerce. It was essential, yes, but also costly and largely invisible. Merchants typically treated it as a tax on growth, something to be minimized rather than mastered. Risk decisions were outsourc...",
-    "category": "fintech",
-    "_permalink": "/p/13b84b599d/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/13b84b599d/",
-    "_summary_240": "For years, fraud prevention lived in the shadows of digital commerce. It was essential, yes, but also costly and largely invisible. Merchants typically treated it as a tax on...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/13b84b599d/thumbnail.png"
-  },
-  {
     "title": "Hedge Fund Enko Flags Africa Risks for 2026 After Dollar-Linked Boom Year",
     "url": "https://www.bloomberg.com/news/articles/2026-01-07/hedge-fund-enko-flags-africa-risks-for-2026-after-dollar-linked-boom-year",
     "published_at": "2026-01-07T03:30:00-05:00",
@@ -765,36 +780,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/481afe56cb/thumbnail.png"
   },
   {
-    "title": "Lenovo CTO on AI Product Rollout, Vision",
-    "url": "https://www.bloomberg.com/news/videos/2026-01-07/lenovo-cto-on-ai-product-rollout-vision",
-    "published_at": "2026-01-06T20:33:47-05:00",
-    "source": "Bloomberg Technology",
-    "summary": "Lenovo is unveiling its new AI products and partnerships at its annual Tech World conference, which this year coincides with CES in Las Vegas. CTO Tolga Kurto\u011flu says the company is focusing on providing on-device Hybrid AI technology for its customers and sees embedding artificial intelligence into robotics as the future of its adoption. He spoke with Annabelle Droulers in the sidelines of CES. ...",
-    "content_html": "",
-    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/isnoYugdAK.s/v3/1200x-1.jpg",
-    "summary_text": "Lenovo is unveiling its new AI products and partnerships at its annual Tech World conference, which this year coincides with CES in Las Vegas. CTO Tolga Kurto\u011flu says the company is focusing on providing on-device Hybrid AI technology for its customers and se...",
-    "category": "ai",
-    "_permalink": "/p/05cdb8a1b1/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/05cdb8a1b1/",
-    "_summary_240": "Lenovo is unveiling its new AI products and partnerships at its annual Tech World conference, which this year coincides with CES in Las Vegas. CTO Tolga Kurto\u011flu says the company...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/05cdb8a1b1/thumbnail.png"
-  },
-  {
-    "title": "Lenovo Debuts Qira AI Platform and Concept Devices at CES",
-    "url": "https://www.bloomberg.com/news/articles/2026-01-07/lenovo-debuts-qira-ai-platform-and-concept-devices-in-ces-launch",
-    "published_at": "2026-01-06T20:00:00-05:00",
-    "source": "Bloomberg Technology",
-    "summary": "Lenovo Group Ltd. unveiled a new artificial intelligence platform and several proof-of-concept devices, an attempt by the world\u2019s best-selling PC maker to show it can be a serious player in AI.",
-    "content_html": "Lenovo's Legion concept laptop. Photographer: Chris Welch/Bloomberg",
-    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/i2vVo5SKWfkQ/v0/1200x-1.jpg",
-    "summary_text": "Lenovo Group Ltd. unveiled a new artificial intelligence platform and several proof-of-concept devices, an attempt by the world\u2019s best-selling PC maker to show it can be a serious player in AI.",
-    "category": "ai",
-    "_permalink": "/p/759fc01ed9/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/759fc01ed9/",
-    "_summary_240": "Lenovo Group Ltd. unveiled a new artificial intelligence platform and several proof-of-concept devices, an attempt by the world\u2019s best-selling PC maker to show it can be a...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/759fc01ed9/thumbnail.png"
-  },
-  {
     "title": "Amazon accused of listing products from independent shops without permission",
     "url": "https://www.ft.com/content/724c2910-76f2-45d7-8f2e-0ac5c82a5ad2",
     "published_at": "2026-01-06T17:58:44-05:00",
@@ -814,10 +799,10 @@
     "url": "https://techcrunch.com/2026/01/06/ces-2026-everything-revealed-from-nvidias-debuts-to-amds-new-chips-to-razers-ai-oddities/",
     "published_at": "2026-01-06T17:47:48-05:00",
     "source": "TechCrunch",
-    "summary": "CES 2026 is in full swing in Las Vegas, with the show floor open to the public after a packed couple of days occupied by press conferences from the likes of Nvidia, Sony, and AMD and previews from Sunday\u2019s Unveiled event. As has been the case for the past two years at CES, AI is at the forefront of [\u2026]",
+    "summary": "CES 2026 is in full swing in Las Vegas, with the show floor open to the public after a packed couple of days occupied by press conferences from the likes of Nvidia, Sony, and AMD and previews from Sunday\u2019s Unveiled event.",
     "content_html": "",
     "image_url": "https://techcrunch.com/wp-content/uploads/2026/01/GettyImages-2254217759.jpg?w=1024",
-    "summary_text": "CES 2026 is in full swing in Las Vegas, with the show floor open to the public after a packed couple of days occupied by press conferences from the likes of Nvidia, Sony, and AMD and previews from Sunday\u2019s Unveiled event. As has been the case for the past two...",
+    "summary_text": "CES 2026 is in full swing in Las Vegas, with the show floor open to the public after a packed couple of days occupied by press conferences from the likes of Nvidia, Sony, and AMD and previews from Sunday\u2019s Unveiled event.",
     "category": "ai",
     "_permalink": "/p/c621345cfb/",
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/c621345cfb/",
@@ -1254,13 +1239,9 @@
     "source": "Financial Times - Technology",
     "summary": "The surge in investment may end up looking more like previous cycles of over-optimism and heavy capital spending",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/1ca3f218-e352-4207-a931-3c07295508e8.jpg",
+    "image_url": "",
     "summary_text": "The surge in investment may end up looking more like previous cycles of over-optimism and heavy capital spending",
-    "category": "ai",
-    "_permalink": "/p/4a0003256b/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/4a0003256b/",
-    "_summary_240": "The surge in investment may end up looking more like previous cycles of over-optimism and heavy capital spending",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/4a0003256b/thumbnail.png"
+    "category": "ai"
   },
   {
     "title": "AI start-ups take on Google in fight to reshape web browser market",
@@ -1269,13 +1250,9 @@
     "source": "Financial Times - Technology",
     "summary": "OpenAI and Perplexity bet on cutting-edge technology transforming the way people access the internet",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/905feb5a-8cdd-442d-9658-ffe0ac22141b.jpg",
+    "image_url": "",
     "summary_text": "OpenAI and Perplexity bet on cutting-edge technology transforming the way people access the internet",
-    "category": "ai",
-    "_permalink": "/p/ca4bb87686/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/ca4bb87686/",
-    "_summary_240": "OpenAI and Perplexity bet on cutting-edge technology transforming the way people access the internet",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/ca4bb87686/thumbnail.png"
+    "category": "ai"
   },
   {
     "title": "The U.S. Captures Venezuela's Oil and Lithium Reserves",
@@ -1317,7 +1294,7 @@
     "source": "Financial Times - Technology",
     "summary": "Waymo and Baidu prepare to launch autonomous ride-hailing vehicles in UK capital as soon as 2026",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/fc9ff7b8-bef5-4b44-ad66-5b49f4f90dc7.jpg",
+    "image_url": "",
     "summary_text": "Waymo and Baidu prepare to launch autonomous ride-hailing vehicles in UK capital as soon as 2026",
     "category": "software"
   },
@@ -1339,7 +1316,7 @@
     "source": "Financial Times - Technology",
     "summary": "So much of bubble activity is driven by feedback loops, dubbed reflexivity by the well-known investor",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/5f7495c0-6d56-4dae-b2c0-53673e04291e.jpg",
+    "image_url": "",
     "summary_text": "So much of bubble activity is driven by feedback loops, dubbed reflexivity by the well-known investor",
     "category": "ai"
   },
