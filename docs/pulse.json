@@ -1,5 +1,65 @@
 [
   {
+    "title": "Automakers Replace Drivers With Software at CES",
+    "url": "https://www.pymnts.com/news/artificial-intelligence/2026/automakers-replace-drivers-with-software-ces/",
+    "published_at": "2026-01-07T17:16:57-05:00",
+    "source": "PYMNTS",
+    "summary": "At CES 2026 this week, automakers and suppliers showed vehicles designed with the assumption that humans will not always be driving, shifting attention from driver-assist features toward software that increasingly manages control inside the car. All these design choices are already being locked into vehicles scheduled for release over the next several years, making [\u2026] The post Automakers Replace...",
+    "content_html": "<p><span>At </span><a class=\"editor-rtfLink\" href=\"https://www.ces.tech/\" rel=\"noopener\" target=\"_blank\"><span>CES 2026</span></a><span> this week, automakers and suppliers showed vehicles designed with the assumption that humans will not always be driving, shifting attention from driver-assist features toward software that increasingly manages control inside the car.</span></p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p><span>All these design choices are already being </span><span>locked</span><span> into vehicles scheduled for release over the next several years, making software-led control a foundational element of how cars </span><span>are built</span><span>, not a feature waiting to be </span><span>switched on</span><span> later.</span></p>\n<h2><strong><span>Nvidia Builds Software That Decides for Drivers</span></strong></h2>\n<p><a class=\"editor-rtfLink\" href=\"https://www.nvidia.com/en-us/\" rel=\"noopener\" target=\"_blank\"><span>Nvidia</span></a><span> introduced </span><a class=\"editor-rtfLink\" href=\"https://nvidianews.nvidia.com/news/alpamayo-autonomous-vehicle-development\" rel=\"noopener\" target=\"_blank\"><span>Alpamayo</span></a><span>, a system built to handle driving situations that fall outside predefined rules. Unlike most advanced driver-assistance systems, which detect objects and follow scripted responses, Alpamayo </span><span>is designed</span><span> to evaluate context and choose an action when conditions become ambiguous.</span></p>\n<p><span>Nvidia said the system can plan a maneuver, execute it, and generate an explanation for why it took that action. That explanation layer </span><span>is meant</span><span> to support testing and regulatory review, addressing a long-standing problem for autonomous systems that behave unpredictably in rare scenarios.</span></p>\n<p><span>The company </span><span>said</span><span> Alpamayo will be deployed in production vehicles, </span><span>naming</span> <a class=\"editor-rtfLink\" href=\"https://www.mbusa.com/en/home\" rel=\"noopener\" target=\"_blank\"><span>Mercedes-Benz</span></a><span> as an early adopter.</span><span> That moves decision-making software out of research fleets and into consumer cars, where the system </span><span>is expected</span><span> to act without waiting for a human driver to intervene.</span></p>\n<p><span>Nvidia\u2019s framing marks a shift in how autonomy is </span><span>being engineered</span><span>. Instead of assuming a human will resolve edge cases, the software </span><span>is built</span><span> to </span><span>resolve</span><span> them itself and return control only when needed.</span></p>\n<h2><strong><span>Mercedes and BMW Centralize Control Around Software</span></strong></h2>\n<p><span>For its part, Mercedes-Benz showcased how decision-making </span><a class=\"editor-rtfLink\" href=\"https://media.mbusa.com/releases/mercedes-benz-at-ces-2026-showcasing-digital-innovations-with-leading-partners\" rel=\"noopener\" target=\"_blank\"><span>software</span></a><span> fits into a production vehicle. The company highlighted updates to its </span><a class=\"editor-rtfLink\" href=\"https://www.mbusa.com/en/future-vehicles/mbux-hyperscreen\" rel=\"noopener\" target=\"_blank\"><span>MBUX</span></a><span> platform, which now coordinates navigation, driver assistance, media playback and vehicle controls as a single system rather than separate features.</span></p>\n<p><span>Rather than requiring drivers to manage each function manually, Mercedes positions software as continuously active in the background. The vehicle adjusts speed, lane positioning, routing and cabin settings together, reducing the need for constant driver input. Mercedes emphasized its partnership with Nvidia as part of a broader move toward centralized software stacks that govern vehicle behavior.</span></p>\n<p><a class=\"editor-rtfLink\" href=\"https://www.bmwusa.com/\" rel=\"noopener\" target=\"_blank\"><span>BMW</span></a><span> presented a similar shift through the iX3 and its next-generation </span><a class=\"editor-rtfLink\" href=\"https://www.press.bmwgroup.com/global/article/detail/T0454649EN/the-bmw-ix3-ushers-in-next-generation-innovations-at-ces-2026\" rel=\"noopener\" target=\"_blank\"><span>digital systems</span></a><span>. BMW highlighted an expanded conversational interface integrated with Amazon </span><a class=\"editor-rtfLink\" href=\"https://www.amazon.com/s/browse/node=213910588011\" rel=\"noopener\" target=\"_blank\"><span>Alexa+</span></a><span>, allowing drivers to issue natural language commands for navigation, climate control, media and connected services.</span></p>\n<p><span>BMW framed voice interaction as the primary control surface inside the vehicle. Instead of navigating menus or relying on physical controls, drivers speak, and the system executes. </span><span>The approach assumes driver attention will </span><span>move in and out</span><span>, rather than remain fixed on the road.</span></p>\n<p><span>In both cases, software </span><span>is no longer positioned</span><span> as an add-on. It acts as the organizing authority inside the vehicle, with physical controls playing a secondary role.</span></p>\n<h2><strong><span>Sony Honda Introduces Electric SUV</span></strong></h2>\n<p><a class=\"editor-rtfLink\" href=\"https://www.shm-afeela.com/en/\" rel=\"noopener\" target=\"_blank\"><span>Sony Honda Mobility</span></a><span> made the design implications of that shift explicit. At CES, the company </span><a class=\"editor-rtfLink\" href=\"https://www.reuters.com/business/autos-transportation/sony-honda-mobility-unveils-new-prototype-ev-at-ces-las-vegas-2026-01-06/\" rel=\"noopener\" target=\"_blank\"><span>unveiled</span></a><span> a new electric SUV prototype </span><span>and provided</span><span> updates on </span><a class=\"editor-rtfLink\" href=\"https://www.shm-afeela.com/en/news/2026-01-06/\" rel=\"noopener\" target=\"_blank\"><span>Afeela 1</span></a><span>, its first production vehicle scheduled to begin deliveries in California later this year, according to Reuters.</span></p>\n<p><span>The Afeela 1 </span><span>is expected</span><span> to offer roughly 300 miles of range and expand to additional U.S. states and Japan in 2027. Its most distinctive feature is the interior. </span><span>A full-width digital display spans the dashboard, </span><span>running</span><span> navigation, media, communication and vehicle settings </span><span>through a unified interface</span><span>.</span><span> Traditional cockpit elements </span><span>are minimized</span><span>.</span></p>\n<p><span>Sony Honda described the vehicle as a mobility and entertainment space, combining Honda\u2019s manufacturing expertise with Sony\u2019s software, sensing and media capabilities. The layout assumes occupants will spend extended periods interacting with screens rather than actively driving.</span></p>\n<p><span>That assumption aligns with the other software strategies shown by Nvidia, Mercedes and BMW. Sony Honda differs in that it builds the assumption directly into the physical design of the vehicle rather than layering it onto existing architectures.</span></p>\n<p><em>For all PYMNTS AI coverage, subscribe to the daily </em><a href=\"https://pymnts.com/subscribe/\" rel=\"noopener\" target=\"_blank\"><em>AI Newsletter</em></a><em>.</em></p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/news/artificial-intelligence/2026/automakers-replace-drivers-with-software-ces/\">Automakers Replace Drivers With Software at CES</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
+    "image_url": "https://www.pymnts.com/wp-content/uploads/2026/01/automakers-AI-software-CES.jpg?w=457",
+    "summary_text": "At CES 2026 this week, automakers and suppliers showed vehicles designed with the assumption that humans will not always be driving, shifting attention from driver-assist features toward software that increasingly manages control inside the car. All these des...",
+    "category": "fintech",
+    "_permalink": "/p/c5c9bea3a2/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/c5c9bea3a2/",
+    "_summary_240": "At CES 2026 this week, automakers and suppliers showed vehicles designed with the assumption that humans will not always be driving, shifting attention from driver-assist...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/c5c9bea3a2/thumbnail.png"
+  },
+  {
+    "title": "Yes, LinkedIn banned AI agent startup Artisan, but now it\u2019s back",
+    "url": "https://techcrunch.com/2026/01/07/yes-linkedin-banned-ai-agent-startup-artisan-but-now-its-back/",
+    "published_at": "2026-01-07T17:04:30-05:00",
+    "source": "TechCrunch",
+    "summary": "Several viral posts noticed that Artisan was banned. But the CEO tells us it wasn't for the reasons many thought.",
+    "content_html": "",
+    "image_url": "https://techcrunch.com/wp-content/uploads/2025/04/Artisan-founders.jpg?resize=1200,800",
+    "summary_text": "Several viral posts noticed that Artisan was banned. But the CEO tells us it wasn't for the reasons many thought.",
+    "category": "ai",
+    "_permalink": "/p/4e7614d69a/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/4e7614d69a/",
+    "_summary_240": "Several viral posts noticed that Artisan was banned. But the CEO tells us it wasn't for the reasons many thought.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/4e7614d69a/thumbnail.png"
+  },
+  {
+    "title": "Crypto reps fly to US capitol this week to address market structure bill",
+    "url": "https://cointelegraph.com/news/crypto-companies-dc-market-structure-bill?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "published_at": "2026-01-07T16:50:58-05:00",
+    "source": "Cointelegraph",
+    "summary": "The Digital Chamber will facilitate engagement with representatives from several digital asset companies in Washington, D.C., on Thursday, ahead of a markup on a major crypto bill.",
+    "content_html": "",
+    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjYtMDEvMDE5Yjk5ZjEtYjYzZS03MDVkLWE4NjktM2RkYTdkY2VhYjE3LmpwZw==.jpg",
+    "summary_text": "The Digital Chamber will facilitate engagement with representatives from several digital asset companies in Washington, D.C., on Thursday, ahead of a markup on a major crypto bill.",
+    "category": "fintech",
+    "_permalink": "/p/726520656c/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/726520656c/",
+    "_summary_240": "The Digital Chamber will facilitate engagement with representatives from several digital asset companies in Washington, D.C., on Thursday, ahead of a markup on a major crypto bill.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/726520656c/thumbnail.png"
+  },
+  {
+    "title": "Gate becomes latest crypto exchange to embed AI market intelligence",
+    "url": "https://cointelegraph.com/news/gate-ai-powered-market-assistant-crypto-traders?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "published_at": "2026-01-07T16:40:46-05:00",
+    "source": "Cointelegraph",
+    "summary": "The new GateAI feature offers automated market summaries and decision-support tools without enabling automated trading.",
+    "content_html": "",
+    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTEvMDE5YTRjMmMtNTQzZS03NmNkLWIyNmQtMTIyMzY2MWMyMDky.jpg",
+    "summary_text": "The new GateAI feature offers automated market summaries and decision-support tools without enabling automated trading.",
+    "category": "fintech",
+    "_permalink": "/p/e98f937bca/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/e98f937bca/",
+    "_summary_240": "The new GateAI feature offers automated market summaries and decision-support tools without enabling automated trading.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/e98f937bca/thumbnail.png"
+  },
+  {
     "title": "Anthropic Aims to Nearly Double Valuation in New Funding Round",
     "url": "https://www.pymnts.com/news/artificial-intelligence/2026/anthropic-aims-to-nearly-double-valuation-in-new-funding-round/",
     "published_at": "2026-01-07T16:24:30-05:00",
@@ -268,21 +328,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/9d27643303/",
     "_summary_240": "Fiserv-owned commerce solution Clover has launched a partnership with biometric identity/payments platform Wink. The collaboration integrates Wink\u2019s face and palm payments...",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/9d27643303/thumbnail.png"
-  },
-  {
-    "title": "Albertsons Says AI Shopping Assistant Increased Customers\u2019 Basket Size by 10%",
-    "url": "https://www.pymnts.com/news/artificial-intelligence/2026/albertsons-says-ai-shopping-assistant-increased-customers-basket-size-10percent/",
-    "published_at": "2026-01-07T13:03:01-05:00",
-    "source": "PYMNTS",
-    "summary": "Albertsons Companies is seeing early results of its deeper integration of data and artificial intelligence, and the firm expects these resources to serve as the core of its transformation efforts, executives said Wednesday (Jan. 7) during an earnings call. The food and drug retailer, whose company banners include Albertsons, Jewel Osco, Safeway and Vons, [\u2026] The post Albertsons Says AI Shopping A...",
-    "content_html": "<p><a class=\"editor-rtfLink\" href=\"https://www.albertsonscompanies.com/home/default.aspx\" rel=\"noopener\" target=\"_blank\"><span>Albertsons Companies</span></a><span> is seeing early results of its deeper integration of data and artificial intelligence, and the firm expects these resources to serve as the core of its transformation efforts, executives said Wednesday (Jan. 7) during an </span><a class=\"editor-rtfLink\" href=\"https://www.albertsonscompanies.com/newsroom/press-releases/news-details/2026/Albertsons-Companies-Inc--Reports-Third-Quarter-Fiscal-2025-Results/default.aspx\" rel=\"noopener\" target=\"_blank\"><span>earnings</span></a><span> call.</span></p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p><span>The food and drug retailer, whose company banners include </span><a class=\"editor-rtfLink\" href=\"https://www.albertsons.com/\" rel=\"noopener\" target=\"_blank\"><span>Albertsons</span></a><span>, </span><a class=\"editor-rtfLink\" href=\"https://www.jewelosco.com/#1\" rel=\"noopener\" target=\"_blank\"><span>Jewel Osco</span></a><span>, </span><a class=\"editor-rtfLink\" href=\"https://www.safeway.com/\" rel=\"noopener\" target=\"_blank\"><span>Safeway</span></a><span> and </span><a class=\"editor-rtfLink\" href=\"https://www.vons.com/\" rel=\"noopener\" target=\"_blank\"><span>Vons</span></a><span>, has seen these initiatives contribute to third-quarter fiscal 2025 results that included year-over-year growth of 2.4% in identical sales and 21% in digital sales, Albertsons Companies President and Chief Financial Officer </span><a class=\"editor-rtfLink\" href=\"https://www.albertsonscompanies.com/investors/governance/board-of-directors/person-details/default.aspx?ItemId=5afec593-12d9-48e9-bada-b024a0c33dbc\" rel=\"noopener\" target=\"_blank\"><span>Sharon McCollam</span></a><span> said during the call.</span></p>\n<p><span>Albertsons Companies CEO </span><a class=\"editor-rtfLink\" href=\"https://www.linkedin.com/in/morris-susan/\" rel=\"noopener\" target=\"_blank\"><span>Susan Morris</span></a><span> said during the call that the firm is not using AI \u201cas a short-term lever.\u201d</span></p>\n<p><span>\u201cWe\u2019re embedding it into merchandising, labor and supply chain to create a durable structural advantage,\u201d Morris said. \u201cFrom personalized shopping and merchandising intelligence to supply chain optimization, these capabilities are already scaling, driving lower costs, faster execution and compounding returns that will support growth and profitability for years to come.\u201d</span></p>\n<p><span>By </span><span>using</span><span> AI in its digital customer experience, Albertsons has </span><span>earned</span><span> increases in basket size, repeat trips and loyalty, Morris said.</span><span> She highlighted the company\u2019s Ask AI.</span></p>\n<p><span>Albertsons announced in September that this </span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/artificial-intelligence-2/2025/albertsons-deploys-google-clouds-new-conversational-commerce-agent/\" rel=\"noopener\" target=\"_blank\"><span>AI shopping assistant</span></a><span> was accessible via the search bar in the apps of all its banner stores and was helping customers shop, plan meals and discover new products.</span></p>\n<p><span>\u201cOur Ask AI search capability is already delivering a 10% increase in basket size for those customers using it, signaling a meaningful upside as adoption scales,\u201d Morris said during the Wednesday earnings call.</span></p>\n<p><span>Other customer-facing tools powered by AI include Albertsons\u2019 autonomous shopping assistants.</span></p>\n<p><span>Albertsons announced in December that these </span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/artificial-intelligence-2/2025/albertsons-rolls-out-ai-shopping-assistant-for-end-to-end-grocery-tasks/\" rel=\"noopener\" target=\"_blank\"><span>agentic AI</span></a><span> tools were available across all its banner websites </span><span>and were</span><span> streamlining customers\u2019 grocery trips by planning meals, building carts and executing complete end-to-end tasks.</span></p>\n<p><span>\u201cOur autonomous shopping assistants are meeting customers where they are and delivering frictionless personalized journeys, keeping our omnichannel customer experience modernized and on trend,\u201d Morris said.</span></p>\n<p><span>Albertsons is also </span><span>applying</span><span> AI </span><span>to</span><span> its merchandising intelligence to </span><span>transform</span><span> category management and drive margin improvement.</span><span> The company plans to equip its merchants with AI-driven insights and automation that will optimize pricing, promotions and assortment decisions.</span></p>\n<p><span>\u201cOur vision is a future where intelligent automation guides these decisions, freeing our people to focus on strategy and innovation,\u201d Morris said.</span></p>\n<p><span>For managing labor, Albertsons is deploying generative AI to optimize labor forecasting and scheduling. </span><span>This</span><span> improves productivity and customer service by ensuring that the right associates are where they\u2019re needed, when they\u2019re needed.</span></p>\n<p><span>\u201cThis transformation simplifies complex scheduling tasks, frees up associates to focus on the customer, and positions us to deliver consistent execution across thousands of stores,\u201d Morris said.</span></p>\n<p><span>AI demand forecasting has become central to Albertsons\u2019 supply chain information. The technology has improved the company\u2019s forecasting accuracy, fulfillment, quality and on-shelf availability.</span></p>\n<p><span>\u201cIn sum, our tech and AI initiatives </span><span>are designed</span><span> to be scalable, enterprise-wide programs that can deliver measurable impact and build the foundation for tomorrow,\u201d Morris said.</span></p>\n<p><em>For all PYMNTS AI coverage, subscribe to the daily </em><a href=\"https://pymnts.com/subscribe/\" rel=\"noopener\" target=\"_blank\"><em>AI Newsletter</em></a><em>.</em></p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/news/artificial-intelligence/2026/albertsons-says-ai-shopping-assistant-increased-customers-basket-size-10percent/\">Albertsons Says AI Shopping Assistant Increased Customers\u2019 Basket Size by 10%</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
-    "image_url": "https://www.pymnts.com/wp-content/uploads/2025/03/Albertsons-1.jpg?w=457",
-    "summary_text": "Albertsons Companies is seeing early results of its deeper integration of data and artificial intelligence, and the firm expects these resources to serve as the core of its transformation efforts, executives said Wednesday (Jan. 7) during an earnings call. Th...",
-    "category": "ai",
-    "_permalink": "/p/5182693b60/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/5182693b60/",
-    "_summary_240": "Albertsons Companies is seeing early results of its deeper integration of data and artificial intelligence, and the firm expects these resources to serve as the core of its...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/5182693b60/thumbnail.png"
   },
   {
     "title": "Skylight debuts Calendar 2 to keep your family organized",
@@ -744,36 +789,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/e5cbaaa420/",
     "_summary_240": "US President Donald Trump says he will be impeached by the Democrats if the Republicans fail to win the midterms, which could galvanize resistance to his crypto policy agenda.",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/e5cbaaa420/thumbnail.png"
-  },
-  {
-    "title": "Bloomberg Tech: Asia CES Special 1/7/26",
-    "url": "https://www.bloomberg.com/news/videos/2026-01-07/bloomberg-tech-asia-ces-special-1-7-26-video",
-    "published_at": "2026-01-07T01:24:08-05:00",
-    "source": "Bloomberg Technology",
-    "summary": "Bloomberg's Shery Ahn and Annabelle Droulers host a special edition of 'Bloomberg Tech: Asia' at CES 2026 in Las Vegas, featuring one of China's rising stars, Deep Robotics. Plus, an exclusive interview with Samsung on their latest AI developments and outlook for the year ahead. (Source: Bloomberg)",
-    "content_html": "",
-    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iTFpzkThiKpk/v3/1200x-1.jpg",
-    "summary_text": "Bloomberg's Shery Ahn and Annabelle Droulers host a special edition of 'Bloomberg Tech: Asia' at CES 2026 in Las Vegas, featuring one of China's rising stars, Deep Robotics. Plus, an exclusive interview with Samsung on their latest AI developments and outlook...",
-    "category": "ai",
-    "_permalink": "/p/828de4ba80/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/828de4ba80/",
-    "_summary_240": "Bloomberg's Shery Ahn and Annabelle Droulers host a special edition of 'Bloomberg Tech: Asia' at CES 2026 in Las Vegas, featuring one of China's rising stars, Deep Robotics....",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/828de4ba80/thumbnail.png"
-  },
-  {
-    "title": "Why XRP is outperforming Bitcoin and Ether at the start of 2026",
-    "url": "https://cointelegraph.com/news/4-reasons-xrp-called-hottest-trade-this-year?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-    "published_at": "2026-01-07T00:55:00-05:00",
-    "source": "Cointelegraph",
-    "summary": "XRP is having an explosive start to the year, driven by strong ETF inflows, bullish sentiment, and declining exchange reserves.",
-    "content_html": "",
-    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjYtMDEvMDE5Yjk2ZDgtYjJiYy03NDU4LWI3Y2YtMzc0M2NlNzVmYWEyLmpwZw==.jpg",
-    "summary_text": "XRP is having an explosive start to the year, driven by strong ETF inflows, bullish sentiment, and declining exchange reserves.",
-    "category": "fintech",
-    "_permalink": "/p/9d1ce38de9/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/9d1ce38de9/",
-    "_summary_240": "XRP is having an explosive start to the year, driven by strong ETF inflows, bullish sentiment, and declining exchange reserves.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/9d1ce38de9/thumbnail.png"
   },
   {
     "title": "Tech Exchange",
@@ -1290,17 +1305,6 @@
     "image_url": "https://media.wired.com/photos/69593512075f12616523b0cf/master/pass/2254463527",
     "summary_text": "Some AI chatbots have a surprisingly good handle on breaking news. Others decidedly don\u2019t.",
     "category": "ai"
-  },
-  {
-    "title": "London emerges as frontline in US-China battle over robotaxis",
-    "url": "https://www.ft.com/content/a507f9d0-c0b2-43e3-9e2b-7ea04dbdb8d4",
-    "published_at": "2026-01-03T00:00:25-05:00",
-    "source": "Financial Times - Technology",
-    "summary": "Waymo and Baidu prepare to launch autonomous ride-hailing vehicles in UK capital as soon as 2026",
-    "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/fc9ff7b8-bef5-4b44-ad66-5b49f4f90dc7.jpg",
-    "summary_text": "Waymo and Baidu prepare to launch autonomous ride-hailing vehicles in UK capital as soon as 2026",
-    "category": "software"
   },
   {
     "title": "Local AI Models vs. Centralized AI Models",
