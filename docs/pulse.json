@@ -1,5 +1,50 @@
 [
   {
+    "title": "Hipster robots and cuddly AI take over Las Vegas",
+    "url": "https://www.ft.com/content/50aaf254-a659-4970-b199-ab0feff71d79",
+    "published_at": "2026-01-07T11:17:48-05:00",
+    "source": "Financial Times - Technology",
+    "summary": "The annual Consumer Electronics Show is a smorgasbord of futuristic tech products",
+    "content_html": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/b8755d5e-6857-479a-95d2-5dc93993f084.jpg",
+    "summary_text": "The annual Consumer Electronics Show is a smorgasbord of futuristic tech products",
+    "category": "ai",
+    "_permalink": "/p/8217d0e4d4/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/8217d0e4d4/",
+    "_summary_240": "The annual Consumer Electronics Show is a smorgasbord of futuristic tech products",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/8217d0e4d4/thumbnail.png"
+  },
+  {
+    "title": "Why Messy Merchant Data Could Make B2B Payments More Expensive",
+    "url": "https://www.pymnts.com/news/b2b-payments/2026/why-messy-merchant-data-could-make-b2b-payments-more-expensive/",
+    "published_at": "2026-01-07T11:12:19-05:00",
+    "source": "PYMNTS",
+    "summary": "The mechanics of many merchants\u2019 B2B payments have long been a source of frustration rather than transformation. Negotiating interchange, switching processors or steering customers toward cheaper rails were the primary levers available to merchant finance teams, and the headaches of manual entry were simply accepted as part of doing business. But in 2026, something [\u2026] The post Why Messy Merchant...",
+    "content_html": "<p><span>The mechanics of many merchants\u2019 B2B payments have long been a source of frustration rather than </span><span>transformation</span><span>.</span></p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p><span>Negotiating interchange, switching processors or steering customers toward cheaper rails were the primary levers available to merchant finance teams, and the headaches of manual entry </span><span>were </span><span>simply</span><span> accepted</span><span> as part of doing business.</span></p>\n<p><span>But in 2026, something fundamental is changing. </span><span>The rules </span><span>that govern</span><span> B2B card payments, being rewritten by initiatives from </span><a class=\"editor-rtfLink\" href=\"https://www.visa.com/en-us\" rel=\"noopener\" target=\"_blank\"><span>Visa</span></a><span>, </span><a class=\"editor-rtfLink\" href=\"https://www.mastercard.com/us/en.html\" rel=\"noopener\" target=\"_blank\"><span>Mastercard</span></a><span> and other networks, are elevating data quality from a compliance footnote to a driver of profit and working capital.</span></p>\n<p><span>While Level 2 transaction data, such as sales tax and purchase order </span><span>number</span><span>, has traditionally represented the good-enough </span><span>middle-tier</span><span> for B2B payments (a step above just date and amount), Visa\u2019s launch of the Commercial Enhanced Data Program and related moves by Mastercard have put Level 3 and above as the new benchmark.</span><span> That requires merchants to include line-item details, such as product descriptions, SKUs, unit prices and more, as the new benchmark.</span></p>\n<p><span>This April </span><span>is</span><span> the official sunset of Level 2 for nearly all Visa commercial and small business cards, </span><span>and</span><span> other networks </span><span>are on</span><span> similar timelines.</span><span> Money can move without data, but it will cost more, reconcile more slowly and invite scrutiny. For merchants willing to invest in automation and integrity, the reward is not just lower fees, but a more profitable, more scalable way to do business.</span></p>\n<p><strong><span>Read also:</span></strong> <a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/data/2025/how-payments-automation-helps-cfos-keep-up-with-their-own-data/\" rel=\"noopener\" target=\"_blank\"><span>How Payments Automation Helps CFOs Keep Up With Their Own Data</span></a></p>\n<h2><strong><span>The End of Good-Enough Data</span></strong></h2>\n<p><span>Beginning in late 2025, Visa rolled out artificial intelligence-driven validation of what it now calls Product 3 data, a rebranding and tightening of what was previously known as Level 3. Mastercard has followed a parallel path with enhanced scrutiny under its Commercial Connect framework. These systems no longer check whether fields are populated; they verify whether the transaction math reconciles. </span><span>Unit</span><span> price multiplied by quantity, plus tax and freight, must equal the authorized total.</span><span> Even minor rounding discrepancies can cause a transaction to fail validation.</span></p>\n<p><span>From the networks\u2019 perspective, the push toward data integrity is defensive and strategic. </span><span>AI-powered spend management and </span><span>agentic</span><span> commerce require </span><span>invoice-quality</span><span> data to function.</span> <span>Enforcing </span><span>that</span><span> standard at the network level ensures consistency while </span><span>feeding</span><span> higher-quality data </span><span>into</span><span> fraud detection and analytics systems.</span></p>\n<p><a class=\"editor-rtfLink\" href=\"https://www.linkedin.com/in/zachary-lynn-835992a/\" rel=\"noopener\" target=\"_blank\"><span>Zach Lynn</span></a><span>, </span><span>head</span><span> of </span><span>customer data</span><span> and </span><span>insights</span><span> at </span><a class=\"editor-rtfLink\" href=\"https://www.boostb2b.com/\" rel=\"noopener\" target=\"_blank\"><span>Boost Payment Solutions</span></a><span>, wrote in the PYMNTS eBook \u201c</span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/news/payments-innovation/2025/top-payments-leaders-on-why-trust-is-the-new-currency-in-real-time-money\" rel=\"noopener\" target=\"_blank\"><span>Headlines That Will Shape the Close of 2025</span></a><span>\u201d that </span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/opinion/2025/data-becomes-the-new-currency-in-b2b-payments/\" rel=\"noopener\" target=\"_blank\"><span>data exchange</span></a><span> has become non-negotiable in the payments industry.</span></p>\n<p><span>\u201cIn today\u2019s environment, seamless, secure data flows between buyers, suppliers and financial institutions are essential,\u201d Lynn wrote. \u201cWhether it is enabling real-time reconciliation or supporting advanced analytics, the ability to move and leverage data is now table stakes for any organization serious about optimizing working capital.\u201d</span></p>\n<p><span>Until recently, commercial card transactions operated on an honor system. </span><span>Merchants could pass along additional data, </span><span>like</span><span> tax totals, purchase order numbers and line-item </span><span>detail</span><span>, to qualify for lower interchange rates.</span><span> In practice, much of that data was messy. Gateways auto-filled fields with zeros. Descriptions were generic. Arithmetic inconsistencies were </span><span>common</span><span>. The data existed, but it </span><span>was rarely audited</span><span>.</span></p>\n<p><span>At first glance, the updated data requirements may sound like a compliance headache. For many merchants, they may end up becoming one. Failed validation can result in immediate downgrades to standard interchange rates, often increasing costs by 40% to 50% on affected transactions. </span><span>But</span><span> for merchants who adapt, the same system creates a clear</span><span>, </span><span>repeatable way to </span><span>make more money</span><span> without raising prices or volume.</span></p>\n<p><strong><span>See also:</span></strong> <a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/news/b2b-payments/2026/why-smart-cfos-are-rethinking-how-money-moves/\" rel=\"noopener\" target=\"_blank\"><span>Why Smart CFOs Are Rethinking How Money Moves</span></a></p>\n<h2><strong><span>How Automation Is Becoming a New Margin Lever</span></strong></h2>\n<p><span>As the April transition deadline approaches for merchants, the networks\u2019 technical updates to commercial interchange are evolving into a structural change in how value </span><span>is distributed</span><span> across the B2B payments ecosystem. Accuracy, once treated as overhead, is now a measurable asset. Payments, once a cost center, are becoming a place where disciplined merchants can outperform their peers.</span></p>\n<p><span>\u201c</span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/news/b2b-payments/2025/how-volatility-will-shape-the-future-of-b2b-payments/\" rel=\"noopener\" target=\"_blank\"><span>Payments</span></a><span> are no longer a commodity,\u201d Boost Payment Solutions Chief Revenue Officer </span><a class=\"editor-rtfLink\" href=\"https://www.linkedin.com/in/sethrg/\" rel=\"noopener\" target=\"_blank\"><span>Seth Goodman</span></a><span> told PYMNTS in October. \u201cThey\u2019re truly a strategic advantage when properly optimized.\u201d</span></p>\n<p><span>The merchants best positioned to benefit from this system share </span><span>the</span><span> common trait </span><span>of</span><span> automation.</span> <span>Specifically, they have direct integrations between their ERP </span><span>or invoicing</span><span> systems and </span><span>their</span><span> payment gateways.</span><span> When line-item data flows programmatically from invoice to authorization without manual re-entry, the risk of arithmetic mismatch drops. What once seemed like an IT hygiene project now functions as a margin optimization strategy.</span></p>\n<p><span>This</span><span> is where the story turns from payments infrastructure to business strategy. Clean transaction data does more than reduce interchange. It accelerates reconciliation, shortens </span><span>days sales outstanding</span><span> and reduces disputes. </span><span>For buyers using modern spend management platforms, it </span><span>improves</span><span> visibility and control, making </span><span>verified merchants</span><span> easier to work with.</span><span> Over time, that ease translates into preference, faster approvals and repeat business.</span></p>\n<p><em>For all PYMNTS B2B coverage, subscribe to the daily </em><a href=\"https://pymnts.com/subscribe/\" rel=\"noopener\" target=\"_blank\"><em>B2B Newsletter</em></a><em>.</em></p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/news/b2b-payments/2026/why-messy-merchant-data-could-make-b2b-payments-more-expensive/\">Why Messy Merchant Data Could Make B2B Payments More Expensive</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
+    "image_url": "https://www.pymnts.com/wp-content/uploads/2026/01/credit-card-data.jpeg?w=457",
+    "summary_text": "The mechanics of many merchants\u2019 B2B payments have long been a source of frustration rather than transformation. Negotiating interchange, switching processors or steering customers toward cheaper rails were the primary levers available to merchant finance tea...",
+    "category": "fintech",
+    "_permalink": "/p/5b1104e5d5/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/5b1104e5d5/",
+    "_summary_240": "The mechanics of many merchants\u2019 B2B payments have long been a source of frustration rather than transformation. Negotiating interchange, switching processors or steering...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/5b1104e5d5/thumbnail.png"
+  },
+  {
+    "title": "\u2018We still plan to remain private,\u2018 says Ripple president on IPO plans",
+    "url": "https://cointelegraph.com/news/ripple-labs-private-president-ipo-plans?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "published_at": "2026-01-07T11:06:43-05:00",
+    "source": "Cointelegraph",
+    "summary": "The reiteration of the payment company\u2018s plans not to pursue a public offering followed a $500 million fundraise in November, leading to a $40 billion valuation for Ripple.",
+    "content_html": "",
+    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjYtMDEvMDE5Yjk4ZTItMWNmYi03Y2IxLWEyNjEtNjIyMjgyNjg3NmEwLmpwZw==.jpg",
+    "summary_text": "The reiteration of the payment company\u2018s plans not to pursue a public offering followed a $500 million fundraise in November, leading to a $40 billion valuation for Ripple.",
+    "category": "fintech",
+    "_permalink": "/p/76edc670e6/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/76edc670e6/",
+    "_summary_240": "The reiteration of the payment company\u2018s plans not to pursue a public offering followed a $500 million fundraise in November, leading to a $40 billion valuation for Ripple.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/76edc670e6/thumbnail.png"
+  },
+  {
     "title": "OpenAI Says AI Will Help Handle Household Chores",
     "url": "https://www.pymnts.com/news/artificial-intelligence/2026/openai-says-ai-will-help-handle-household-chores/",
     "published_at": "2026-01-07T10:33:29-05:00",
@@ -660,21 +705,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/759fc01ed9/thumbnail.png"
   },
   {
-    "title": "Understanding Inflammation | with ChatGPT",
-    "url": "https://www.youtube.com/watch?v=X4birkVaLas",
-    "published_at": "2026-01-06T19:22:30-05:00",
-    "source": "OpenAI YouTube",
-    "summary": "Living with heart failure, Steve uses ChatGPT to carry out his doctor\u2019s care plan by tracking his diet, medications, and inflammation.",
-    "content_html": "",
-    "image_url": "https://i.ytimg.com/vi/X4birkVaLas/maxresdefault.jpg",
-    "summary_text": "Living with heart failure, Steve uses ChatGPT to carry out his doctor\u2019s care plan by tracking his diet, medications, and inflammation.",
-    "category": "ai",
-    "_permalink": "/p/3cd8847bdb/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/3cd8847bdb/",
-    "_summary_240": "Living with heart failure, Steve uses ChatGPT to carry out his doctor\u2019s care plan by tracking his diet, medications, and inflammation.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/3cd8847bdb/thumbnail.png"
-  },
-  {
     "title": "US Stocks Flirt with Record, Bull Run Extends | The Close 1/6/2026",
     "url": "https://www.bloomberg.com/news/videos/2026-01-06/the-close-1-6-2026-video",
     "published_at": "2026-01-06T18:55:55-05:00",
@@ -1305,8 +1335,19 @@
     "source": "Financial Times - Technology",
     "summary": "Grok created sexually explicit images of minors in recent days that have been shared on social media platform X",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/e950db35-4fdf-4e84-a5d1-920bfcec7759.jpg",
+    "image_url": "https://images.ft.com/v3/image/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Fe950db35-4fdf-4e84-a5d1-920bfcec7759.jpg?source=next-article&fit=scale-down&quality=highest&width=700&dpr=1",
     "summary_text": "Grok created sexually explicit images of minors in recent days that have been shared on social media platform X",
+    "category": "ai"
+  },
+  {
+    "title": "What is sycophancy in AI models?",
+    "url": "https://www.youtube.com/watch?v=nvbq39yVYRk",
+    "published_at": "2025-12-18T15:30:14-05:00",
+    "source": "Anthropic YouTube",
+    "summary": "Learn what AI researchers mean when they talk about sycophancy, when it's more likely to show up in conversations, and tactics you can use to steer AI towards truth.",
+    "content_html": "",
+    "image_url": "https://i.ytimg.com/vi/nvbq39yVYRk/maxresdefault.jpg",
+    "summary_text": "Learn what AI researchers mean when they talk about sycophancy, when it's more likely to show up in conversations, and tactics you can use to steer AI towards truth.",
     "category": "ai"
   },
   {
