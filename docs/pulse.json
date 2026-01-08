@@ -1,5 +1,20 @@
 [
   {
+    "title": "Banks must upgrade their blockchain infrastructure",
+    "url": "https://cointelegraph.com/news/banks-blockchain-infrastructure?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "published_at": "2026-01-08T07:30:00-05:00",
+    "source": "Cointelegraph",
+    "summary": "Banks risk falling behind if they cling to private blockchains. Upgrading to public, permissioned layer-2 infrastructure with ZK-proofs is essential for modern finance.",
+    "content_html": "",
+    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMDQvMDE5NjFhNTctOTAzOC03YmFlLWE0NDYtYzc3N2RiM2YyYWEw.jpg",
+    "summary_text": "Banks risk falling behind if they cling to private blockchains. Upgrading to public, permissioned layer-2 infrastructure with ZK-proofs is essential for modern finance.",
+    "category": "fintech",
+    "_permalink": "/p/8ed8362302/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/8ed8362302/",
+    "_summary_240": "Banks risk falling behind if they cling to private blockchains. Upgrading to public, permissioned layer-2 infrastructure with ZK-proofs is essential for modern finance.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/8ed8362302/thumbnail.png"
+  },
+  {
     "title": "Can A.I. Match Moli\u00e8re\u2019s Wit? These Researchers Think So.",
     "url": "https://www.nytimes.com/2026/01/08/theater/moliere-ai-sorbonne-the-astrologer.html",
     "published_at": "2026-01-08T05:02:48-05:00",
@@ -480,21 +495,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/9213e92a4c/thumbnail.png"
   },
   {
-    "title": "China\u2019s AI Firm Zhipu Climbs in Debut, Lagging Hardware Peers",
-    "url": "https://www.bloomberg.com/news/articles/2026-01-07/china-s-openai-rival-zhipu-debuts-in-hk-after-558-million-ipo",
-    "published_at": "2026-01-07T18:00:00-05:00",
-    "source": "Bloomberg Technology",
-    "summary": "Shares of Knowledge Atlas Technology JSC Ltd. gained in their Hong Kong debut after a $558 million initial public offering, making it the first major Chinese generative-AI startup to go public.",
-    "content_html": "The Zhipu AI logo. Source: SOPA Images/Getty Images",
-    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ivQ1oTOK8_h0/v0/1200x-1.jpg",
-    "summary_text": "Shares of Knowledge Atlas Technology JSC Ltd. gained in their Hong Kong debut after a $558 million initial public offering, making it the first major Chinese generative-AI startup to go public.",
-    "category": "ai",
-    "_permalink": "/p/913bed9bda/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/913bed9bda/",
-    "_summary_240": "Shares of Knowledge Atlas Technology JSC Ltd. gained in their Hong Kong debut after a $558 million initial public offering, making it the first major Chinese generative-AI...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/913bed9bda/thumbnail.png"
-  },
-  {
     "title": "Why AI feels generic: Replit CEO on slop, toys, and the missing ingredient of taste",
     "url": "https://venturebeat.com/infrastructure/why-ai-feels-generic-replit-ceo-on-slop-toys-and-the-missing-ingredient-of",
     "published_at": "2026-01-07T18:00:00-05:00",
@@ -510,6 +510,21 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/74900e80e9/thumbnail.png"
   },
   {
+    "title": "China\u2019s AI Firm Zhipu Climbs in Debut, Lagging Hardware Peers",
+    "url": "https://www.bloomberg.com/news/articles/2026-01-07/china-s-openai-rival-zhipu-debuts-in-hk-after-558-million-ipo",
+    "published_at": "2026-01-07T18:00:00-05:00",
+    "source": "Bloomberg Technology",
+    "summary": "Shares of Knowledge Atlas Technology JSC Ltd. gained in their Hong Kong debut after a $558 million initial public offering, making it the first major Chinese generative-AI startup to go public.",
+    "content_html": "The Zhipu AI logo. Source: SOPA Images/Getty Images",
+    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ivQ1oTOK8_h0/v0/1200x-1.jpg",
+    "summary_text": "Shares of Knowledge Atlas Technology JSC Ltd. gained in their Hong Kong debut after a $558 million initial public offering, making it the first major Chinese generative-AI startup to go public.",
+    "category": "ai",
+    "_permalink": "/p/913bed9bda/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/913bed9bda/",
+    "_summary_240": "Shares of Knowledge Atlas Technology JSC Ltd. gained in their Hong Kong debut after a $558 million initial public offering, making it the first major Chinese generative-AI...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/913bed9bda/thumbnail.png"
+  },
+  {
     "title": "Samsung\u2019s Profit Triples After AI Supercharges Memory Market",
     "url": "https://www.bloomberg.com/news/articles/2026-01-07/samsung-posts-record-profit-after-ai-supercharges-memory-market",
     "published_at": "2026-01-07T17:43:08-05:00",
@@ -518,7 +533,11 @@
     "content_html": "An AI signage on a screen at the Samsung Electronics Co. booth at the APEC CEO Summit in Gyeongju, South Korea, on Friday, Oct. 31, 2025. The summit concludes today. Photographer: SeongJoon Cho/Bloomberg",
     "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ivaxr4RrZmbA/v0/1200x-1.jpg",
     "summary_text": "Samsung Electronics Co.\u2019s quarterly profit more than tripled to a record high after global demand for AI servers sharply lifted memory chip prices.",
-    "category": "ai"
+    "category": "ai",
+    "_permalink": "/p/086c80705e/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/086c80705e/",
+    "_summary_240": "Samsung Electronics Co.\u2019s quarterly profit more than tripled to a record high after global demand for AI servers sharply lifted memory chip prices.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/086c80705e/thumbnail.png"
   },
   {
     "title": "Yes, LinkedIn banned AI agent startup Artisan, but now it\u2019s back",
@@ -609,21 +628,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/e73c66c4ad/",
     "_summary_240": "Nous Research , the open-source artificial intelligence startup backed by crypto venture firm Paradigm , released a new competitive programming model on Monday that it says...",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/e73c66c4ad/thumbnail.png"
-  },
-  {
-    "title": "Securely connecting your information and apps with ChatGPT Health",
-    "url": "https://www.youtube.com/watch?v=Z82cxeuCZ_I",
-    "published_at": "2026-01-07T14:45:57-05:00",
-    "source": "OpenAI YouTube",
-    "summary": "We\u2019re introducing ChatGPT Health, a dedicated experience that securely brings your health information and ChatGPT\u2019s intelligence together, to help you feel more informed, prepared, and confident navigating your health. When you choose to connect your health data, such as medical records or wellness apps, your responses are grounded in your own health information. You can also connect your Apple H...",
-    "content_html": "",
-    "image_url": "https://i.ytimg.com/vi/Z82cxeuCZ_I/maxresdefault.jpg",
-    "summary_text": "We\u2019re introducing ChatGPT Health, a dedicated experience that securely brings your health information and ChatGPT\u2019s intelligence together, to help you feel more informed, prepared, and confident navigating your health. When you choose to connect your health d...",
-    "category": "ai",
-    "_permalink": "/p/a6009d67df/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/a6009d67df/",
-    "_summary_240": "We\u2019re introducing ChatGPT Health, a dedicated experience that securely brings your health information and ChatGPT\u2019s intelligence together, to help you feel more informed,...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/a6009d67df/thumbnail.png"
   },
   {
     "title": "Bitcoin averages 100% return after down years: Will the pattern repeat in 2026?",
@@ -789,32 +793,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/ab7e88a853/",
     "_summary_240": "Caterpillar is piloting Cat AI, a system of AI agents in one of its excavators built on Nvidia's physical AI platform.",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/ab7e88a853/thumbnail.png"
-  },
-  {
-    "title": "Tether, video platform Rumble launch non-custodial crypto wallet for creator tipping",
-    "url": "https://cointelegraph.com/news/tether-rumble-launch-non-custodial-crypto-wallet?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-    "published_at": "2026-01-07T11:55:01-05:00",
-    "source": "Cointelegraph",
-    "summary": "The wallet enables Rumble users to tip creators in Bitcoin and Tether-issued tokens, with MoonPay providing fiat on- and off-ramps.",
-    "content_html": "",
-    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjYtMDEvMDE5Yjk5MmEtY2U0Ni03OWY3LTgwZDYtZmFmYjc3NTM3MDYyLmpwZw==.jpg",
-    "summary_text": "The wallet enables Rumble users to tip creators in Bitcoin and Tether-issued tokens, with MoonPay providing fiat on- and off-ramps.",
-    "category": "fintech"
-  },
-  {
-    "title": "Bitcoin vs. luxury homes: How China\u2019s wealthy are rethinking stores of value",
-    "url": "https://cointelegraph.com/explained/bitcoin-vs-luxury-homes-how-china-s-wealthy-are-rethinking-stores-of-value?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-    "published_at": "2026-01-07T11:42:47-05:00",
-    "source": "Cointelegraph",
-    "summary": "From Shenzhen Bay luxury homes to Bitcoin, affluent Chinese investors are reassessing stores of value as views on liquidity, mobility and risk continue to shift.",
-    "content_html": "",
-    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjYtMDEvMDE5Yjk5NGYtY2NmYy03ZTNkLTk2MWItYzQ4YmE0ZDU3OTEwLmpwZw==.jpg",
-    "summary_text": "From Shenzhen Bay luxury homes to Bitcoin, affluent Chinese investors are reassessing stores of value as views on liquidity, mobility and risk continue to shift.",
-    "category": "fintech",
-    "_permalink": "/p/31a67fd266/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/31a67fd266/",
-    "_summary_240": "From Shenzhen Bay luxury homes to Bitcoin, affluent Chinese investors are reassessing stores of value as views on liquidity, mobility and risk continue to shift.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/31a67fd266/thumbnail.png"
   },
   {
     "title": "Hipster robots and cuddly AI take over Las Vegas",
@@ -1337,6 +1315,17 @@
     "content_html": "",
     "image_url": "https://media.wired.com/photos/69593512075f12616523b0cf/master/pass/2254463527",
     "summary_text": "Some AI chatbots have a surprisingly good handle on breaking news. Others decidedly don\u2019t.",
+    "category": "ai"
+  },
+  {
+    "title": "What is sycophancy in AI models?",
+    "url": "https://www.youtube.com/watch?v=nvbq39yVYRk",
+    "published_at": "2025-12-18T15:30:14-05:00",
+    "source": "Anthropic YouTube",
+    "summary": "Learn what AI researchers mean when they talk about sycophancy, when it's more likely to show up in conversations, and tactics you can use to steer AI towards truth.",
+    "content_html": "",
+    "image_url": "https://i.ytimg.com/vi/nvbq39yVYRk/maxresdefault.jpg",
+    "summary_text": "Learn what AI researchers mean when they talk about sycophancy, when it's more likely to show up in conversations, and tactics you can use to steer AI towards truth.",
     "category": "ai"
   },
   {
