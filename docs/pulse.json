@@ -1,5 +1,35 @@
 [
   {
+    "title": "More On Claude Code..",
+    "url": "https://newsletter.tek2dayholdings.com/p/more-on-claude-code",
+    "published_at": "2026-01-09T08:32:04-05:00",
+    "source": "TEK2day Newsletter",
+    "summary": "Once we get CEORater Premium (try our new S&P 500 CEO universe), out the door next month I will ramp up on Claude Code and report back.",
+    "content_html": "<div class=\"captioned-image-container\"><figure><a class=\"image-link image2 is-viewable-img\" href=\"https://substackcdn.com/image/fetch/$s_!t3-w!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ff19213eb-1d24-4242-8740-fce077eb2a8b_1536x864.png\" target=\"_blank\"><div class=\"image2-inset\"><source type=\"image/webp\" /><img alt=\"\" class=\"sizing-normal\" height=\"819\" src=\"https://substackcdn.com/image/fetch/$s_!t3-w!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ff19213eb-1d24-4242-8740-fce077eb2a8b_1536x864.png\" width=\"1456\" /><div class=\"image-link-expand\"><div class=\"pencraft pc-display-flex pc-gap-8 pc-reset\"><button class=\"pencraft pc-reset pencraft icon-container restack-image\" tabindex=\"0\" type=\"button\"><svg fill=\"none\" height=\"20\" stroke=\"var(--color-fg-primary)\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" viewBox=\"0 0 20 20\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><g><title></title><path d=\"M2.53001 7.81595C3.49179 4.73911 6.43281 2.5 9.91173 2.5C13.1684 2.5 15.9537 4.46214 17.0852 7.23684L17.6179 8.67647M17.6179 8.67647L18.5002 4.26471M17.6179 8.67647L13.6473 6.91176M17.4995 12.1841C16.5378 15.2609 13.5967 17.5 10.1178 17.5C6.86118 17.5 4.07589 15.5379 2.94432 12.7632L2.41165 11.3235M2.41165 11.3235L1.5293 15.7353M2.41165 11.3235L6.38224 13.0882\"></path></g></svg></button><button class=\"pencraft pc-reset pencraft icon-container view-image\" tabindex=\"0\" type=\"button\"><svg class=\"lucide lucide-maximize2 lucide-maximize-2\" fill=\"none\" height=\"20\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" viewBox=\"0 0 24 24\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><polyline points=\"15 3 21 3 21 9\"></polyline><polyline points=\"9 21 3 21 3 15\"></polyline><line x1=\"21\" x2=\"14\" y1=\"3\" y2=\"10\"></line><line x1=\"3\" x2=\"10\" y1=\"21\" y2=\"14\"></line></svg></button></div></div></div></a></figure></div><p>Once we get <strong>CEORater Premium</strong> (try our <a href=\"https://www.ceorater.com/\">new S&amp;P 500 CEO universe</a>), out the door next month I will ramp up on <a href=\"https://code.claude.com/docs/en/overview\">Claude Code</a> and report back. I have been hesitant to use agentic coding as if you are not careful in your prompting, AI agents will blow through tokens, potentially blow out your data, and download malware (I&#8217;m not sure how AI agents can protect themselves from prompt injections). Here are a couple of Tweets from <strong>Google</strong> engineers on <strong>Claude Code</strong>. While I don&#8217;t use Claude Code, Claude Opus 4.5 is my preferred LLM for coding assistance. </p><div><hr /></div><p><strong>Jaana Dogan, Principal Engineer at Google. @rakyll</strong></p><div class=\"captioned-image-container\"><figure><a class=\"image-link image2 is-viewable-img\" href=\"https://substackcdn.com/image/fetch/$s_!5bVA!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F1bb61bcb-6ae9-4d73-8bcc-f26513265f2c_554x585.png\" target=\"_blank\"><div class=\"image2-inset\"><source type=\"image/webp\" /><img alt=\"\" class=\"sizing-normal\" height=\"585\" src=\"https://substackcdn.com/image/fetch/$s_!5bVA!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F1bb61bcb-6ae9-4d73-8bcc-f26513265f2c_554x585.png\" width=\"554\" /><div class=\"image-link-expand\"><div class=\"pencraft pc-display-flex pc-gap-8 pc-reset\"><button class=\"pencraft pc-reset pencraft icon-container restack-image\" tabindex=\"0\" type=\"button\"><svg fill=\"none\" height=\"20\" stroke=\"var(--color-fg-primary)\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" viewBox=\"0 0 20 20\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><g><title></title><path d=\"M2.53001 7.81595C3.49179 4.73911 6.43281 2.5 9.91173 2.5C13.1684 2.5 15.9537 4.46214 17.0852 7.23684L17.6179 8.67647M17.6179 8.67647L18.5002 4.26471M17.6179 8.67647L13.6473 6.91176M17.4995 12.1841C16.5378 15.2609 13.5967 17.5 10.1178 17.5C6.86118 17.5 4.07589 15.5379 2.94432 12.7632L2.41165 11.3235M2.41165 11.3235L1.5293 15.7353M2.41165 11.3235L6.38224 13.0882\"></path></g></svg></button><button class=\"pencraft pc-reset pencraft icon-container view-image\" tabindex=\"0\" type=\"button\"><svg class=\"lucide lucide-maximize2 lucide-maximize-2\" fill=\"none\" height=\"20\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" viewBox=\"0 0 24 24\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><polyline points=\"15 3 21 3 21 9\"></polyline><polyline points=\"9 21 3 21 3 15\"></polyline><line x1=\"21\" x2=\"14\" y1=\"3\" y2=\"10\"></line><line x1=\"3\" x2=\"10\" y1=\"21\" y2=\"14\"></line></svg></button></div></div></div></a></figure></div><div><hr /></div><p><strong><a href=\"https://scholar.google.com/citations?user=m2qHgbwAAAAJ&amp;hl=en\">Rohan Anil</a>, ex-Google and Meta distinguished engineer, Gemini co-author @_arohan_</strong></p><div class=\"captioned-image-container\"><figure><a class=\"image-link image2 is-viewable-img\" href=\"https://substackcdn.com/image/fetch/$s_!2mbk!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F3567a45c-d46c-4384-8ae6-8089922cf9ab_550x611.jpeg\" target=\"_blank\"><div class=\"image2-inset\"><source type=\"image/webp\" /><img alt=\"\" class=\"sizing-normal\" height=\"611\" src=\"https://substackcdn.com/image/fetch/$s_!2mbk!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F3567a45c-d46c-4384-8ae6-8089922cf9ab_550x611.jpeg\" width=\"550\" /><div class=\"image-link-expand\"><div class=\"pencraft pc-display-flex pc-gap-8 pc-reset\"><button class=\"pencraft pc-reset pencraft icon-container restack-image\" tabindex=\"0\" type=\"button\"><svg fill=\"none\" height=\"20\" stroke=\"var(--color-fg-primary)\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" viewBox=\"0 0 20 20\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><g><title></title><path d=\"M2.53001 7.81595C3.49179 4.73911 6.43281 2.5 9.91173 2.5C13.1684 2.5 15.9537 4.46214 17.0852 7.23684L17.6179 8.67647M17.6179 8.67647L18.5002 4.26471M17.6179 8.67647L13.6473 6.91176M17.4995 12.1841C16.5378 15.2609 13.5967 17.5 10.1178 17.5C6.86118 17.5 4.07589 15.5379 2.94432 12.7632L2.41165 11.3235M2.41165 11.3235L1.5293 15.7353M2.41165 11.3235L6.38224 13.0882\"></path></g></svg></button><button class=\"pencraft pc-reset pencraft icon-container view-image\" tabindex=\"0\" type=\"button\"><svg class=\"lucide lucide-maximize2 lucide-maximize-2\" fill=\"none\" height=\"20\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" viewBox=\"0 0 24 24\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><polyline points=\"15 3 21 3 21 9\"></polyline><polyline points=\"9 21 3 21 3 15\"></polyline><line x1=\"21\" x2=\"14\" y1=\"3\" y2=\"10\"></line><line x1=\"3\" x2=\"10\" y1=\"21\" y2=\"14\"></line></svg></button></div></div></div></a></figure></div><div><hr /></div><p></p>",
+    "image_url": "https://substackcdn.com/image/fetch/$s_!t3-w!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ff19213eb-1d24-4242-8740-fce077eb2a8b_1536x864.png",
+    "summary_text": "Once we get CEORater Premium (try our new S&P 500 CEO universe), out the door next month I will ramp up on Claude Code and report back.",
+    "category": "ai",
+    "_permalink": "/p/9c34cbed90/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/9c34cbed90/",
+    "_summary_240": "Once we get CEORater Premium (try our new S&P 500 CEO universe), out the door next month I will ramp up on Claude Code and report back.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/9c34cbed90/thumbnail.png"
+  },
+  {
+    "title": "Ripple scores UK regulatory approval via local subsidiary",
+    "url": "https://cointelegraph.com/news/ripple-uk-regulatory-approval-local-subsidiary-fca?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "published_at": "2026-01-09T08:23:54-05:00",
+    "source": "Cointelegraph",
+    "summary": "Ripple\u2019s UK subsidiary gained regulatory approval as an Electronic Money Institution to provide payment services, but faces limits on certain crypto activities.",
+    "content_html": "",
+    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjYtMDEvMDE5YmEyZGEtMjkwYy03NmUxLTgxZDAtNjIwMDU3YmE5YjA5LmpwZw==.jpg",
+    "summary_text": "Ripple\u2019s UK subsidiary gained regulatory approval as an Electronic Money Institution to provide payment services, but faces limits on certain crypto activities.",
+    "category": "fintech",
+    "_permalink": "/p/97683e50ad/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/97683e50ad/",
+    "_summary_240": "Ripple\u2019s UK subsidiary gained regulatory approval as an Electronic Money Institution to provide payment services, but faces limits on certain crypto activities.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/97683e50ad/thumbnail.png"
+  },
+  {
     "title": "Reality still matters",
     "url": "https://www.theverge.com/policy/859055/minneapolis-renee-good-ice-shooting",
     "published_at": "2026-01-09T08:00:00-05:00",
@@ -28,21 +58,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/e88f26e056/",
     "_summary_240": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, NFTs, Web3 and crypto regulation.",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/e88f26e056/thumbnail.png"
-  },
-  {
-    "title": "The 24/7 global stock market is impossible on today\u2019s blockchain",
-    "url": "https://cointelegraph.com/news/global-stock-market-blockchain?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-    "published_at": "2026-01-09T07:30:00-05:00",
-    "source": "Cointelegraph",
-    "summary": "Current blockchain infrastructure has inadequate throughput and systematic front-running. Real-world finance demands sub-second finality and fair transaction ordering.",
-    "content_html": "",
-    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTEvMDE5YTU4MjAtY2M5My03NTgwLWE3NzQtN2ZjOTFiNDA5MmE4.jpg",
-    "summary_text": "Current blockchain infrastructure has inadequate throughput and systematic front-running. Real-world finance demands sub-second finality and fair transaction ordering.",
-    "category": "fintech",
-    "_permalink": "/p/1112f9680e/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/1112f9680e/",
-    "_summary_240": "Current blockchain infrastructure has inadequate throughput and systematic front-running. Real-world finance demands sub-second finality and fair transaction ordering.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/1112f9680e/thumbnail.png"
   },
   {
     "title": "The hidden risk of public WiFi: How a single approval wiped a crypto wallet",
@@ -1183,13 +1198,9 @@
     "source": "Financial Times - Technology",
     "summary": "The annual Consumer Electronics Show is a smorgasbord of futuristic tech products",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/b8755d5e-6857-479a-95d2-5dc93993f084.jpg",
+    "image_url": "",
     "summary_text": "The annual Consumer Electronics Show is a smorgasbord of futuristic tech products",
-    "category": "ai",
-    "_permalink": "/p/8217d0e4d4/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/8217d0e4d4/",
-    "_summary_240": "The annual Consumer Electronics Show is a smorgasbord of futuristic tech products",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/8217d0e4d4/thumbnail.png"
+    "category": "ai"
   },
   {
     "title": "From Signal magazine: How Jaron Lanier is reframing what it means to build \u2013 and trust \u2013 AI",
@@ -1228,13 +1239,9 @@
     "source": "Financial Times - Technology",
     "summary": "East London landmark is latest site in capital to be identified for high-tech redevelopment",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/792b590c-8376-4fab-8d9a-77661fdebd7d.jpg",
+    "image_url": "",
     "summary_text": "East London landmark is latest site in capital to be identified for high-tech redevelopment",
-    "category": "software",
-    "_permalink": "/p/4c78a02e25/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/4c78a02e25/",
-    "_summary_240": "East London landmark is latest site in capital to be identified for high-tech redevelopment",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/4c78a02e25/thumbnail.png"
+    "category": "software"
   },
   {
     "title": "AI will free households from chores and boost hidden productivity, says OpenAI",
@@ -1243,13 +1250,9 @@
     "source": "Financial Times - Technology",
     "summary": "Tools such as ChatGPT provide personal benefits that do not show up in traditional statistics, argues chief economist",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/5561b1c5-2096-4224-8b96-9b8b762fbcf9.jpg",
+    "image_url": "",
     "summary_text": "Tools such as ChatGPT provide personal benefits that do not show up in traditional statistics, argues chief economist",
-    "category": "ai",
-    "_permalink": "/p/ace266b9f7/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/ace266b9f7/",
-    "_summary_240": "Tools such as ChatGPT provide personal benefits that do not show up in traditional statistics, argues chief economist",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/ace266b9f7/thumbnail.png"
+    "category": "ai"
   },
   {
     "title": "How Tolan builds voice-first AI with GPT-5.1",
@@ -1269,13 +1272,9 @@
     "source": "Financial Times - Technology",
     "summary": "This series features conversations between FT journalists and the technology industry\u2019s leaders, innovators, and thinkers. In the latest instalment, Google\u2019s Koray Kavukcuoglu discusses the company\u2019s most recent LLM, Gemini 3, and progress towards the goal of artificial general intelligence",
     "content_html": "",
-    "image_url": "https://images.ft.com/v3/image/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Fa93c85bd-5cf2-4241-8e53-3f8e5dd96bfc.jpg?source=next-article&fit=scale-down&quality=highest&width=700&dpr=1",
+    "image_url": "",
     "summary_text": "This series features conversations between FT journalists and the technology industry\u2019s leaders, innovators, and thinkers. In the latest instalment, Google\u2019s Koray Kavukcuoglu discusses the company\u2019s most recent LLM, Gemini 3, and progress towards the goal of...",
-    "category": "ai",
-    "_permalink": "/p/0b011bb40c/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/0b011bb40c/",
-    "_summary_240": "This series features conversations between FT journalists and the technology industry\u2019s leaders, innovators, and thinkers. In the latest instalment, Google\u2019s Koray Kavukcuoglu...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/0b011bb40c/thumbnail.png"
+    "category": "ai"
   },
   {
     "title": "Google\u2019s Koray Kavukcuoglu: Turning abstract AI thinking into user-friendly products",
@@ -1284,13 +1283,9 @@
     "source": "Financial Times - Technology",
     "summary": "The tech giant\u2019s chief AI architect and CTO of DeepMind discusses the Gemini 3 LLM and progress towards the goal of artificial general intelligence",
     "content_html": "",
-    "image_url": "https://images.ft.com/v3/image/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F4f164d87-97d1-4ced-bffa-444e33b2fec6.jpg?source=next-article&fit=scale-down&quality=highest&width=700&dpr=1",
+    "image_url": "",
     "summary_text": "The tech giant\u2019s chief AI architect and CTO of DeepMind discusses the Gemini 3 LLM and progress towards the goal of artificial general intelligence",
-    "category": "ai",
-    "_permalink": "/p/2383de01b9/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/2383de01b9/",
-    "_summary_240": "The tech giant\u2019s chief AI architect and CTO of DeepMind discusses the Gemini 3 LLM and progress towards the goal of artificial general intelligence",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/2383de01b9/thumbnail.png"
+    "category": "ai"
   },
   {
     "title": "Introducing ChatGPT Health",
@@ -1310,13 +1305,9 @@
     "source": "Financial Times - Technology",
     "summary": "Complaints from retailers come as ecommerce giant sues start-up for sending AI \u2018agents\u2019 to shop without its consent",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/7c31cd52-1eef-4207-af32-b98b291e2881.jpg",
+    "image_url": "",
     "summary_text": "Complaints from retailers come as ecommerce giant sues start-up for sending AI \u2018agents\u2019 to shop without its consent",
-    "category": "ai",
-    "_permalink": "/p/85779c98f1/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/85779c98f1/",
-    "_summary_240": "Complaints from retailers come as ecommerce giant sues start-up for sending AI \u2018agents\u2019 to shop without its consent",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/85779c98f1/thumbnail.png"
+    "category": "ai"
   },
   {
     "title": "How Ralph Wiggum went from 'The Simpsons' to the biggest name in AI right now",
