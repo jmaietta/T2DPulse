@@ -105,6 +105,21 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/32a8e27cbf/thumbnail.png"
   },
   {
+    "title": "This Year with ChatGPT",
+    "url": "https://www.youtube.com/watch?v=cjveRUfE7dc",
+    "published_at": "2026-01-09T11:00:11-05:00",
+    "source": "OpenAI YouTube",
+    "summary": "Set goals and stick to them all year with ChatGPT.",
+    "content_html": "",
+    "image_url": "https://i.ytimg.com/vi/cjveRUfE7dc/maxresdefault.jpg",
+    "summary_text": "Set goals and stick to them all year with ChatGPT.",
+    "category": "ai",
+    "_permalink": "/p/eb1bd445f5/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/eb1bd445f5/",
+    "_summary_240": "Set goals and stick to them all year with ChatGPT.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/eb1bd445f5/thumbnail.png"
+  },
+  {
     "title": "Allianz Taps Anthropic to Help Deploy AI Throughout Its Insurance Business",
     "url": "https://www.pymnts.com/artificial-intelligence-2/2026/allianz-taps-anthropic-to-help-deploy-ai-throughout-its-insurance-business/",
     "published_at": "2026-01-09T10:41:11-05:00",
@@ -499,14 +514,14 @@
     "url": "https://techcrunch.com/2026/01/09/anthropic-adds-allianz-to-growing-list-of-enterprise-wins/",
     "published_at": "2026-01-09T04:00:00-05:00",
     "source": "TechCrunch",
-    "summary": "Anthropic announces its first enterprise deal of 2026 which includes building agents and for, and giving Claude code, to Allianz.",
+    "summary": "Anthropic announces its first enterprise deal of 2026, which includes building agents for, and giving Claude code to, Allianz.",
     "content_html": "",
     "image_url": "https://techcrunch.com/wp-content/uploads/2025/09/Screenshot-2025-09-02-at-12.22.37PM.png?resize=1200,671",
-    "summary_text": "Anthropic announces its first enterprise deal of 2026 which includes building agents and for, and giving Claude code, to Allianz.",
+    "summary_text": "Anthropic announces its first enterprise deal of 2026, which includes building agents for, and giving Claude code to, Allianz.",
     "category": "ai",
     "_permalink": "/p/abd1295ab0/",
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/abd1295ab0/",
-    "_summary_240": "Anthropic announces its first enterprise deal of 2026 which includes building agents and for, and giving Claude code, to Allianz.",
+    "_summary_240": "Anthropic announces its first enterprise deal of 2026, which includes building agents for, and giving Claude code to, Allianz.",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/abd1295ab0/thumbnail.png"
   },
   {
@@ -1269,9 +1284,13 @@
     "source": "Financial Times - Technology",
     "summary": "The annual Consumer Electronics Show is a smorgasbord of futuristic tech products",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/b8755d5e-6857-479a-95d2-5dc93993f084.jpg",
     "summary_text": "The annual Consumer Electronics Show is a smorgasbord of futuristic tech products",
-    "category": "ai"
+    "category": "ai",
+    "_permalink": "/p/8217d0e4d4/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/8217d0e4d4/",
+    "_summary_240": "The annual Consumer Electronics Show is a smorgasbord of futuristic tech products",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/8217d0e4d4/thumbnail.png"
   },
   {
     "title": "From Signal magazine: How Jaron Lanier is reframing what it means to build \u2013 and trust \u2013 AI",
@@ -1310,9 +1329,13 @@
     "source": "Financial Times - Technology",
     "summary": "East London landmark is latest site in capital to be identified for high-tech redevelopment",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/792b590c-8376-4fab-8d9a-77661fdebd7d.jpg",
     "summary_text": "East London landmark is latest site in capital to be identified for high-tech redevelopment",
-    "category": "software"
+    "category": "software",
+    "_permalink": "/p/4c78a02e25/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/4c78a02e25/",
+    "_summary_240": "East London landmark is latest site in capital to be identified for high-tech redevelopment",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/4c78a02e25/thumbnail.png"
   },
   {
     "title": "AI will free households from chores and boost hidden productivity, says OpenAI",
@@ -1321,9 +1344,13 @@
     "source": "Financial Times - Technology",
     "summary": "Tools such as ChatGPT provide personal benefits that do not show up in traditional statistics, argues chief economist",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/5561b1c5-2096-4224-8b96-9b8b762fbcf9.jpg",
     "summary_text": "Tools such as ChatGPT provide personal benefits that do not show up in traditional statistics, argues chief economist",
-    "category": "ai"
+    "category": "ai",
+    "_permalink": "/p/ace266b9f7/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/ace266b9f7/",
+    "_summary_240": "Tools such as ChatGPT provide personal benefits that do not show up in traditional statistics, argues chief economist",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/ace266b9f7/thumbnail.png"
   },
   {
     "title": "How Tolan builds voice-first AI with GPT-5.1",
@@ -1343,9 +1370,13 @@
     "source": "Financial Times - Technology",
     "summary": "This series features conversations between FT journalists and the technology industry\u2019s leaders, innovators, and thinkers. In the latest instalment, Google\u2019s Koray Kavukcuoglu discusses the company\u2019s most recent LLM, Gemini 3, and progress towards the goal of artificial general intelligence",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://images.ft.com/v3/image/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Fa93c85bd-5cf2-4241-8e53-3f8e5dd96bfc.jpg?source=next-article&fit=scale-down&quality=highest&width=700&dpr=1",
     "summary_text": "This series features conversations between FT journalists and the technology industry\u2019s leaders, innovators, and thinkers. In the latest instalment, Google\u2019s Koray Kavukcuoglu discusses the company\u2019s most recent LLM, Gemini 3, and progress towards the goal of...",
-    "category": "ai"
+    "category": "ai",
+    "_permalink": "/p/0b011bb40c/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/0b011bb40c/",
+    "_summary_240": "This series features conversations between FT journalists and the technology industry\u2019s leaders, innovators, and thinkers. In the latest instalment, Google\u2019s Koray Kavukcuoglu...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/0b011bb40c/thumbnail.png"
   },
   {
     "title": "Google\u2019s Koray Kavukcuoglu: Turning abstract AI thinking into user-friendly products",
@@ -1354,9 +1385,13 @@
     "source": "Financial Times - Technology",
     "summary": "The tech giant\u2019s chief AI architect and CTO of DeepMind discusses the Gemini 3 LLM and progress towards the goal of artificial general intelligence",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://images.ft.com/v3/image/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F4f164d87-97d1-4ced-bffa-444e33b2fec6.jpg?source=next-article&fit=scale-down&quality=highest&width=700&dpr=1",
     "summary_text": "The tech giant\u2019s chief AI architect and CTO of DeepMind discusses the Gemini 3 LLM and progress towards the goal of artificial general intelligence",
-    "category": "ai"
+    "category": "ai",
+    "_permalink": "/p/2383de01b9/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/2383de01b9/",
+    "_summary_240": "The tech giant\u2019s chief AI architect and CTO of DeepMind discusses the Gemini 3 LLM and progress towards the goal of artificial general intelligence",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/2383de01b9/thumbnail.png"
   },
   {
     "title": "Introducing ChatGPT Health",
@@ -1376,24 +1411,13 @@
     "source": "Financial Times - Technology",
     "summary": "Complaints from retailers come as ecommerce giant sues start-up for sending AI \u2018agents\u2019 to shop without its consent",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/7c31cd52-1eef-4207-af32-b98b291e2881.jpg",
     "summary_text": "Complaints from retailers come as ecommerce giant sues start-up for sending AI \u2018agents\u2019 to shop without its consent",
-    "category": "ai"
-  },
-  {
-    "title": "How Ralph Wiggum went from 'The Simpsons' to the biggest name in AI right now",
-    "url": "https://venturebeat.com/technology/how-ralph-wiggum-went-from-the-simpsons-to-the-biggest-name-in-ai-right-now",
-    "published_at": "2026-01-06T15:11:00-05:00",
-    "source": "VentureBeat",
-    "summary": "In the fast-moving world of AI development, it is rare for a tool to be described as both \"a meme\" and AGI, artificial generalized intelligence, the \"holy grail\" of a model or system that can reliably outperform humans on economically valuable work. Yet, that is exactly where t he Ralph Wiggum plugin for Claude Code now sits. Named after the infamously high-pitched, hapless yet persistent charact...",
-    "content_html": "",
-    "image_url": "https://images.ctfassets.net/jdtwqhzvc2n1/4noz34EAOxR22KmaNc7jXi/ea6fa9616bdd66f61253b5b69f662527/INsm1_lvrE4rQPmTkgC_N.png?w=800&amp;q=75",
-    "summary_text": "In the fast-moving world of AI development, it is rare for a tool to be described as both \"a meme\" and AGI, artificial generalized intelligence, the \"holy grail\" of a model or system that can reliably outperform humans on economically valuable work. Yet, that...",
     "category": "ai",
-    "_permalink": "/p/999e525e71/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/999e525e71/",
-    "_summary_240": "In the fast-moving world of AI development, it is rare for a tool to be described as both \"a meme\" and AGI, artificial generalized intelligence, the \"holy grail\" of a model or...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/999e525e71/thumbnail.png"
+    "_permalink": "/p/85779c98f1/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/85779c98f1/",
+    "_summary_240": "Complaints from retailers come as ecommerce giant sues start-up for sending AI \u2018agents\u2019 to shop without its consent",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/85779c98f1/thumbnail.png"
   },
   {
     "title": "Siemens and NVIDIA Expand Partnership to Build the Industrial AI Operating System",
@@ -1547,17 +1571,6 @@
     "content_html": "",
     "image_url": "https://media.wired.com/photos/695c067688c4535fb1546355/master/pass/Googles-AI-Taking-Control-of-Humanoids-On-Auto-Factory-Floor-Business-YT-Pre-Launch-Thumbnail.jpg",
     "summary_text": "Google DeepMind and Boston Dynamics are teaming up to integrate Gemini into a humanoid robot called Atlas.",
-    "category": "ai"
-  },
-  {
-    "title": "What is sycophancy in AI models?",
-    "url": "https://www.youtube.com/watch?v=nvbq39yVYRk",
-    "published_at": "2025-12-18T15:30:14-05:00",
-    "source": "Anthropic YouTube",
-    "summary": "Learn what AI researchers mean when they talk about sycophancy, when it's more likely to show up in conversations, and tactics you can use to steer AI towards truth.",
-    "content_html": "",
-    "image_url": "https://i.ytimg.com/vi/nvbq39yVYRk/maxresdefault.jpg",
-    "summary_text": "Learn what AI researchers mean when they talk about sycophancy, when it's more likely to show up in conversations, and tactics you can use to steer AI towards truth.",
     "category": "ai"
   },
   {
