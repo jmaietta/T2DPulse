@@ -510,21 +510,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/44b44c9dd9/thumbnail.png"
   },
   {
-    "title": "This Year with ChatGPT",
-    "url": "https://www.youtube.com/watch?v=cjveRUfE7dc",
-    "published_at": "2026-01-09T11:00:11-05:00",
-    "source": "OpenAI YouTube",
-    "summary": "Set goals and stick to them all year with ChatGPT.",
-    "content_html": "",
-    "image_url": "https://i.ytimg.com/vi/cjveRUfE7dc/maxresdefault.jpg",
-    "summary_text": "Set goals and stick to them all year with ChatGPT.",
-    "category": "ai",
-    "_permalink": "/p/eb1bd445f5/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/eb1bd445f5/",
-    "_summary_240": "Set goals and stick to them all year with ChatGPT.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/eb1bd445f5/thumbnail.png"
-  },
-  {
     "title": "Oklo and Vistra Shares Surge as Meta Turns to Nuclear Power for AI",
     "url": "https://www.bloomberg.com/news/articles/2026-01-09/oklo-vistra-shares-surge-as-meta-turns-to-nuclear-power-for-ai",
     "published_at": "2026-01-09T10:06:55-05:00",
@@ -628,6 +613,21 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/21e0723a9e/",
     "_summary_240": "Welcome to Tech In Depth, our daily newsletter about the business of tech from Bloomberg\u2019s journalists around the world. Today, Olivia Solon addresses the unintended use of AI...",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/21e0723a9e/thumbnail.png"
+  },
+  {
+    "title": "European Sectors to Watch Ahead of Supreme Court Tariff Ruling",
+    "url": "https://www.bloomberg.com/news/articles/2026-01-09/european-sectors-to-watch-ahead-of-supreme-court-tariff-ruling",
+    "published_at": "2026-01-09T06:59:37-05:00",
+    "source": "Bloomberg Technology",
+    "summary": "European stock investors are preparing for the implications of a US Supreme Court ruling on the legality of President Donald Trump\u2019s \u201cLiberation Day\u201d tariffs.",
+    "content_html": "",
+    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iCae1S20tNrM/v3/1200x-1.png",
+    "summary_text": "European stock investors are preparing for the implications of a US Supreme Court ruling on the legality of President Donald Trump\u2019s \u201cLiberation Day\u201d tariffs.",
+    "category": "fintech",
+    "_permalink": "/p/6666bbabb4/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/6666bbabb4/",
+    "_summary_240": "European stock investors are preparing for the implications of a US Supreme Court ruling on the legality of President Donald Trump\u2019s \u201cLiberation Day\u201d tariffs.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/6666bbabb4/thumbnail.png"
   },
   {
     "title": "OpenAI and SoftBank Group partner with SB Energy",
@@ -1416,6 +1416,17 @@
     "content_html": "",
     "image_url": "https://media.wired.com/photos/695c067688c4535fb1546355/master/pass/Googles-AI-Taking-Control-of-Humanoids-On-Auto-Factory-Floor-Business-YT-Pre-Launch-Thumbnail.jpg",
     "summary_text": "Google DeepMind and Boston Dynamics are teaming up to integrate Gemini into a humanoid robot called Atlas.",
+    "category": "ai"
+  },
+  {
+    "title": "What is sycophancy in AI models?",
+    "url": "https://www.youtube.com/watch?v=nvbq39yVYRk",
+    "published_at": "2025-12-18T15:30:14-05:00",
+    "source": "Anthropic YouTube",
+    "summary": "Learn what AI researchers mean when they talk about sycophancy, when it's more likely to show up in conversations, and tactics you can use to steer AI towards truth.",
+    "content_html": "",
+    "image_url": "https://i.ytimg.com/vi/nvbq39yVYRk/maxresdefault.jpg",
+    "summary_text": "Learn what AI researchers mean when they talk about sycophancy, when it's more likely to show up in conversations, and tactics you can use to steer AI towards truth.",
     "category": "ai"
   },
   {
