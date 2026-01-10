@@ -1,6 +1,6 @@
 [
   {
-    "title": "Musk Calls UK \u2018Fascist\u2019 as Row Over X\u2019s Grok AI Images Escalates",
+    "title": "Musk Calls UK \u2018Fascist\u2019 as Row Over Grok AI Images Escalates",
     "url": "https://www.bloomberg.com/news/articles/2026-01-10/musk-calls-uk-fascist-as-row-over-x-s-grok-ai-images-escalates",
     "published_at": "2026-01-10T10:33:36-05:00",
     "source": "Bloomberg Technology",
@@ -8,11 +8,7 @@
     "content_html": "Elon Musk, chief executive officer of Tesla Inc., during the US-Saudi Investment Forum at the Kennedy Center in Washington on Nov. 19, 2025.",
     "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/i8wICISkHLEE/v1/1200x-1.jpg",
     "summary_text": "Elon Musk accused the UK government of being \u201cfascist\u201d after it stepped up threats to block X over sexualized images of women and children produced by his artificial intelligence tool Grok.",
-    "category": "ai",
-    "_permalink": "/p/9d04dc124d/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/9d04dc124d/",
-    "_summary_240": "Elon Musk accused the UK government of being \u201cfascist\u201d after it stepped up threats to block X over sexualized images of women and children produced by his artificial intelligence...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/9d04dc124d/thumbnail.png"
+    "category": "ai"
   },
   {
     "title": "What\u2019s on your desk, Stevie Bonifield?",
@@ -493,21 +489,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/44b44c9dd9/",
     "_summary_240": "From PRISM to AI, mass surveillance has only grown more powerful. Bruce Schneier warns the post-Snowden world may be entering an even darker phase.",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/44b44c9dd9/thumbnail.png"
-  },
-  {
-    "title": "This Year with ChatGPT",
-    "url": "https://www.youtube.com/watch?v=cjveRUfE7dc",
-    "published_at": "2026-01-09T11:00:11-05:00",
-    "source": "OpenAI YouTube",
-    "summary": "Set goals and stick to them all year with ChatGPT.",
-    "content_html": "",
-    "image_url": "https://i.ytimg.com/vi/cjveRUfE7dc/maxresdefault.jpg",
-    "summary_text": "Set goals and stick to them all year with ChatGPT.",
-    "category": "ai",
-    "_permalink": "/p/eb1bd445f5/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/eb1bd445f5/",
-    "_summary_240": "Set goals and stick to them all year with ChatGPT.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/eb1bd445f5/thumbnail.png"
   },
   {
     "title": "Oklo and Vistra Shares Surge as Meta Turns to Nuclear Power for AI",
@@ -1173,7 +1154,7 @@
     "source": "Financial Times - Technology",
     "summary": "The tech giant\u2019s chief AI architect and CTO of DeepMind discusses the Gemini 3 LLM and progress towards the goal of artificial general intelligence",
     "content_html": "",
-    "image_url": "https://images.ft.com/v3/image/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F4f164d87-97d1-4ced-bffa-444e33b2fec6.jpg?source=next-article&fit=scale-down&quality=highest&width=700&dpr=1",
+    "image_url": "",
     "summary_text": "The tech giant\u2019s chief AI architect and CTO of DeepMind discusses the Gemini 3 LLM and progress towards the goal of artificial general intelligence",
     "category": "ai"
   },
@@ -1340,6 +1321,17 @@
     "content_html": "",
     "image_url": "https://media.wired.com/photos/695c067688c4535fb1546355/master/pass/Googles-AI-Taking-Control-of-Humanoids-On-Auto-Factory-Floor-Business-YT-Pre-Launch-Thumbnail.jpg",
     "summary_text": "Google DeepMind and Boston Dynamics are teaming up to integrate Gemini into a humanoid robot called Atlas.",
+    "category": "ai"
+  },
+  {
+    "title": "What is sycophancy in AI models?",
+    "url": "https://www.youtube.com/watch?v=nvbq39yVYRk",
+    "published_at": "2025-12-18T15:30:14-05:00",
+    "source": "Anthropic YouTube",
+    "summary": "Learn what AI researchers mean when they talk about sycophancy, when it's more likely to show up in conversations, and tactics you can use to steer AI towards truth.",
+    "content_html": "",
+    "image_url": "https://i.ytimg.com/vi/nvbq39yVYRk/maxresdefault.jpg",
+    "summary_text": "Learn what AI researchers mean when they talk about sycophancy, when it's more likely to show up in conversations, and tactics you can use to steer AI towards truth.",
     "category": "ai"
   },
   {
