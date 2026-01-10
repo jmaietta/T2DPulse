@@ -1081,7 +1081,7 @@
     "source": "Financial Times - Technology",
     "summary": "Veteran executive Eric Horvitz argues talent and ideas will move abroad without US support for universities",
     "content_html": "",
-    "image_url": "https://images.ft.com/v3/image/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Ffcd4d6ba-53e1-412b-b72b-c48aa0bf7601.jpg?source=next-article&fit=scale-down&quality=highest&width=700&dpr=1",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/fcd4d6ba-53e1-412b-b72b-c48aa0bf7601.jpg",
     "summary_text": "Veteran executive Eric Horvitz argues talent and ideas will move abroad without US support for universities",
     "category": "ai",
     "_permalink": "/p/9fab628549/",
@@ -1096,9 +1096,13 @@
     "source": "Financial Times - Technology",
     "summary": "Strong guidance marks turnaround and reflects how South Korean chipmaker has benefited from chip supply crunch",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/ca2c13a5-396a-4229-a78e-37a9afd7a5dc.jpg",
     "summary_text": "Strong guidance marks turnaround and reflects how South Korean chipmaker has benefited from chip supply crunch",
-    "category": "ai"
+    "category": "ai",
+    "_permalink": "/p/96ab691582/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/96ab691582/",
+    "_summary_240": "Strong guidance marks turnaround and reflects how South Korean chipmaker has benefited from chip supply crunch",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/96ab691582/thumbnail.png"
   },
   {
     "title": "Podcast: Economist Tyler Cowen on the positive side of AI negativity",
@@ -1140,7 +1144,7 @@
     "source": "Financial Times - Technology",
     "summary": "The annual Consumer Electronics Show is a smorgasbord of futuristic tech products",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/b8755d5e-6857-479a-95d2-5dc93993f084.jpg",
     "summary_text": "The annual Consumer Electronics Show is a smorgasbord of futuristic tech products",
     "category": "ai"
   },
@@ -1173,7 +1177,7 @@
     "source": "Financial Times - Technology",
     "summary": "East London landmark is latest site in capital to be identified for high-tech redevelopment",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/792b590c-8376-4fab-8d9a-77661fdebd7d.jpg",
     "summary_text": "East London landmark is latest site in capital to be identified for high-tech redevelopment",
     "category": "software"
   },
@@ -1184,7 +1188,7 @@
     "source": "Financial Times - Technology",
     "summary": "Tools such as ChatGPT provide personal benefits that do not show up in traditional statistics, argues chief economist",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/5561b1c5-2096-4224-8b96-9b8b762fbcf9.jpg",
     "summary_text": "Tools such as ChatGPT provide personal benefits that do not show up in traditional statistics, argues chief economist",
     "category": "ai"
   },
@@ -1206,7 +1210,7 @@
     "source": "Financial Times - Technology",
     "summary": "This series features conversations between FT journalists and the technology industry\u2019s leaders, innovators, and thinkers. In the latest instalment, Google\u2019s Koray Kavukcuoglu discusses the company\u2019s most recent LLM, Gemini 3, and progress towards the goal of artificial general intelligence",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://images.ft.com/v3/image/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Fa93c85bd-5cf2-4241-8e53-3f8e5dd96bfc.jpg?source=next-article&fit=scale-down&quality=highest&width=700&dpr=1",
     "summary_text": "This series features conversations between FT journalists and the technology industry\u2019s leaders, innovators, and thinkers. In the latest instalment, Google\u2019s Koray Kavukcuoglu discusses the company\u2019s most recent LLM, Gemini 3, and progress towards the goal of...",
     "category": "ai"
   },
@@ -1329,17 +1333,6 @@
     "content_html": "",
     "image_url": "https://s3.amazonaws.com/cms.ipressroom.com/219/files/202601/695c405e3d63326378313e95_dgx-spark-dgx-station-1280x680-1-842x450/dgx-spark-dgx-station-1280x680-1-842x450_thmb.jpg",
     "summary_text": "Open-source AI is accelerating innovation across industries, and NVIDIA DGX Spark and DGX Station are built to help developers turn innovation into impact. NVIDIA today unveiled at the CES trade show how the DGX Spark and DGX Station deskside AI supercomputer...",
-    "category": "ai"
-  },
-  {
-    "title": "NVIDIA BlueField-4 Powers New Class of AI-Native Storage Infrastructure for the Next Frontier of AI",
-    "url": "http://nvidianews.nvidia.com/news/nvidia-bluefield-4-powers-new-class-of-ai-native-storage-infrastructure-for-the-next-frontier-of-ai",
-    "published_at": "2026-01-05T17:37:00-05:00",
-    "source": "NVIDIA News",
-    "summary": "NVIDIA today announced that the NVIDIA BlueField\u00ae-4 data processor, part of the full-stack NVIDIA BlueField platform, powers NVIDIA Inference Context Memory Storage Platform, a new class of AI-native storage infrastructure for the next frontier of AI.",
-    "content_html": "",
-    "image_url": "https://s3.amazonaws.com/cms.ipressroom.com/219/files/202601/695c36b13d633225b1b85465_bluefield-cme/bluefield-cme_thmb.jpg",
-    "summary_text": "NVIDIA today announced that the NVIDIA BlueField\u00ae-4 data processor, part of the full-stack NVIDIA BlueField platform, powers NVIDIA Inference Context Memory Storage Platform, a new class of AI-native storage infrastructure for the next frontier of AI.",
     "category": "ai"
   },
   {
