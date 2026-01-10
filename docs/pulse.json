@@ -1,5 +1,20 @@
 [
   {
+    "title": "OpenAI is reportedly asking contractors to upload real work from past jobs",
+    "url": "https://techcrunch.com/2026/01/10/openai-is-reportedly-asking-contractors-to-upload-real-work-from-past-jobs/",
+    "published_at": "2026-01-10T16:18:29-05:00",
+    "source": "TechCrunch",
+    "summary": "An intellectual property lawyer says OpenAI is \"putting itself at great risk\" with this approach.",
+    "content_html": "",
+    "image_url": "https://techcrunch.com/wp-content/uploads/2025/01/GettyImages-2170386424.jpg?w=1024",
+    "summary_text": "An intellectual property lawyer says OpenAI is \"putting itself at great risk\" with this approach.",
+    "category": "ai",
+    "_permalink": "/p/fff67f1611/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/fff67f1611/",
+    "_summary_240": "An intellectual property lawyer says OpenAI is \"putting itself at great risk\" with this approach.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/fff67f1611/thumbnail.png"
+  },
+  {
     "title": "Starknet publishes post-mortem report after temporary network outage",
     "url": "https://cointelegraph.com/news/starknet-post-mortem-report-outage?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
     "published_at": "2026-01-10T15:06:00-05:00",
@@ -15,7 +30,7 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/dc7551d44e/thumbnail.png"
   },
   {
-    "title": "Elon Musk Says X to Make Its Algorithm Open Source in Seven Days",
+    "title": "Elon Musk Says X to Make Algorithm Open Source in Seven Days",
     "url": "https://www.bloomberg.com/news/articles/2026-01-10/elon-musk-says-x-to-make-its-algorithm-open-source-in-seven-days",
     "published_at": "2026-01-10T14:34:13-05:00",
     "source": "Bloomberg Technology",
@@ -23,11 +38,7 @@
     "content_html": "The X app in the Apple App Store on a smartphone arranged in Germantown, New York, US, on Thursday, April 24, 2025. Elon Musk's X Holdings Corp. is evolving from a social media platform powered by mainstream advertisers to one betting on dollars generated from artificial intelligence and subscriptions, a change that appears to have buoyed its revenue lately.",
     "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ifoUWWEIKm8Q/v1/1200x-1.jpg",
     "summary_text": "Social media platform X will open its new algorithm to the public in seven days, Elon Musk said on Saturday, including the code used to decide what posts and advertisements are recommended to users.",
-    "category": "software",
-    "_permalink": "/p/7f597f5ece/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/7f597f5ece/",
-    "_summary_240": "Social media platform X will open its new algorithm to the public in seven days, Elon Musk said on Saturday, including the code used to decide what posts and advertisements are...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/7f597f5ece/thumbnail.png"
+    "category": "software"
   },
   {
     "title": "Hyperscaler Equity Issuance in 2026?",
@@ -1055,13 +1066,9 @@
     "source": "Financial Times - Technology",
     "summary": "Strong guidance marks turnaround and reflects how South Korean chipmaker has benefited from chip supply crunch",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/ca2c13a5-396a-4229-a78e-37a9afd7a5dc.jpg",
+    "image_url": "",
     "summary_text": "Strong guidance marks turnaround and reflects how South Korean chipmaker has benefited from chip supply crunch",
-    "category": "ai",
-    "_permalink": "/p/96ab691582/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/96ab691582/",
-    "_summary_240": "Strong guidance marks turnaround and reflects how South Korean chipmaker has benefited from chip supply crunch",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/96ab691582/thumbnail.png"
+    "category": "ai"
   },
   {
     "title": "Podcast: Economist Tyler Cowen on the positive side of AI negativity",
@@ -1103,7 +1110,7 @@
     "source": "Financial Times - Technology",
     "summary": "The annual Consumer Electronics Show is a smorgasbord of futuristic tech products",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/b8755d5e-6857-479a-95d2-5dc93993f084.jpg",
+    "image_url": "",
     "summary_text": "The annual Consumer Electronics Show is a smorgasbord of futuristic tech products",
     "category": "ai"
   },
@@ -1136,7 +1143,7 @@
     "source": "Financial Times - Technology",
     "summary": "East London landmark is latest site in capital to be identified for high-tech redevelopment",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/792b590c-8376-4fab-8d9a-77661fdebd7d.jpg",
+    "image_url": "",
     "summary_text": "East London landmark is latest site in capital to be identified for high-tech redevelopment",
     "category": "software"
   },
@@ -1147,7 +1154,7 @@
     "source": "Financial Times - Technology",
     "summary": "Tools such as ChatGPT provide personal benefits that do not show up in traditional statistics, argues chief economist",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/5561b1c5-2096-4224-8b96-9b8b762fbcf9.jpg",
+    "image_url": "",
     "summary_text": "Tools such as ChatGPT provide personal benefits that do not show up in traditional statistics, argues chief economist",
     "category": "ai"
   },
@@ -1169,7 +1176,7 @@
     "source": "Financial Times - Technology",
     "summary": "This series features conversations between FT journalists and the technology industry\u2019s leaders, innovators, and thinkers. In the latest instalment, Google\u2019s Koray Kavukcuoglu discusses the company\u2019s most recent LLM, Gemini 3, and progress towards the goal of artificial general intelligence",
     "content_html": "",
-    "image_url": "https://images.ft.com/v3/image/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Fa93c85bd-5cf2-4241-8e53-3f8e5dd96bfc.jpg?source=next-article&fit=scale-down&quality=highest&width=700&dpr=1",
+    "image_url": "",
     "summary_text": "This series features conversations between FT journalists and the technology industry\u2019s leaders, innovators, and thinkers. In the latest instalment, Google\u2019s Koray Kavukcuoglu discusses the company\u2019s most recent LLM, Gemini 3, and progress towards the goal of...",
     "category": "ai"
   },
@@ -1180,7 +1187,7 @@
     "source": "Financial Times - Technology",
     "summary": "The tech giant\u2019s chief AI architect and CTO of DeepMind discusses the Gemini 3 LLM and progress towards the goal of artificial general intelligence",
     "content_html": "",
-    "image_url": "https://images.ft.com/v3/image/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F4f164d87-97d1-4ced-bffa-444e33b2fec6.jpg?source=next-article&fit=scale-down&quality=highest&width=700&dpr=1",
+    "image_url": "",
     "summary_text": "The tech giant\u2019s chief AI architect and CTO of DeepMind discusses the Gemini 3 LLM and progress towards the goal of artificial general intelligence",
     "category": "ai"
   },
@@ -1336,17 +1343,6 @@
     "content_html": "",
     "image_url": "https://s3.amazonaws.com/cms.ipressroom.com/219/files/202601/695c32503d63321837f6793a_ces-2026-open-model-blog-842x450/ces-2026-open-model-blog-842x450_thmb.jpg",
     "summary_text": "Expanding the open model universe, NVIDIA today released new open models, data and tools to advance AI across every industry. These models \u2014 spanning the NVIDIA Nemotron family for agentic AI, the NVIDIA Cosmos platform for physical AI, the new NVIDIA Alpamay...",
-    "category": "ai"
-  },
-  {
-    "title": "Google Gemini Is Taking Control of Humanoid Robots on Auto Factory Floors",
-    "url": "https://www.wired.com/story/google-boston-dynamics-gemini-powered-robot-atlas/",
-    "published_at": "2026-01-05T16:00:00-05:00",
-    "source": "Wired",
-    "summary": "Google DeepMind and Boston Dynamics are teaming up to integrate Gemini into a humanoid robot called Atlas.",
-    "content_html": "",
-    "image_url": "https://media.wired.com/photos/695c067688c4535fb1546355/master/pass/Googles-AI-Taking-Control-of-Humanoids-On-Auto-Factory-Floor-Business-YT-Pre-Launch-Thumbnail.jpg",
-    "summary_text": "Google DeepMind and Boston Dynamics are teaming up to integrate Gemini into a humanoid robot called Atlas.",
     "category": "ai"
   },
   {
