@@ -495,6 +495,21 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/44b44c9dd9/thumbnail.png"
   },
   {
+    "title": "This Year with ChatGPT",
+    "url": "https://www.youtube.com/watch?v=cjveRUfE7dc",
+    "published_at": "2026-01-09T11:00:11-05:00",
+    "source": "OpenAI YouTube",
+    "summary": "Set goals and stick to them all year with ChatGPT.",
+    "content_html": "",
+    "image_url": "https://i.ytimg.com/vi/cjveRUfE7dc/maxresdefault.jpg",
+    "summary_text": "Set goals and stick to them all year with ChatGPT.",
+    "category": "ai",
+    "_permalink": "/p/eb1bd445f5/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/eb1bd445f5/",
+    "_summary_240": "Set goals and stick to them all year with ChatGPT.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/eb1bd445f5/thumbnail.png"
+  },
+  {
     "title": "Oklo and Vistra Shares Surge as Meta Turns to Nuclear Power for AI",
     "url": "https://www.bloomberg.com/news/articles/2026-01-09/oklo-vistra-shares-surge-as-meta-turns-to-nuclear-power-for-ai",
     "published_at": "2026-01-09T10:06:55-05:00",
@@ -1085,7 +1100,7 @@
     "source": "Financial Times - Technology",
     "summary": "Strong guidance marks turnaround and reflects how South Korean chipmaker has benefited from chip supply crunch",
     "content_html": "",
-    "image_url": "https://images.ft.com/v3/image/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Fca2c13a5-396a-4229-a78e-37a9afd7a5dc.jpg?source=next-article&fit=scale-down&quality=highest&width=700&dpr=1",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/ca2c13a5-396a-4229-a78e-37a9afd7a5dc.jpg",
     "summary_text": "Strong guidance marks turnaround and reflects how South Korean chipmaker has benefited from chip supply crunch",
     "category": "ai",
     "_permalink": "/p/96ab691582/",
@@ -1397,17 +1412,6 @@
     "content_html": "",
     "image_url": "https://media.wired.com/photos/695c067688c4535fb1546355/master/pass/Googles-AI-Taking-Control-of-Humanoids-On-Auto-Factory-Floor-Business-YT-Pre-Launch-Thumbnail.jpg",
     "summary_text": "Google DeepMind and Boston Dynamics are teaming up to integrate Gemini into a humanoid robot called Atlas.",
-    "category": "ai"
-  },
-  {
-    "title": "What is sycophancy in AI models?",
-    "url": "https://www.youtube.com/watch?v=nvbq39yVYRk",
-    "published_at": "2025-12-18T15:30:14-05:00",
-    "source": "Anthropic YouTube",
-    "summary": "Learn what AI researchers mean when they talk about sycophancy, when it's more likely to show up in conversations, and tactics you can use to steer AI towards truth.",
-    "content_html": "",
-    "image_url": "https://i.ytimg.com/vi/nvbq39yVYRk/maxresdefault.jpg",
-    "summary_text": "Learn what AI researchers mean when they talk about sycophancy, when it's more likely to show up in conversations, and tactics you can use to steer AI towards truth.",
     "category": "ai"
   },
   {
