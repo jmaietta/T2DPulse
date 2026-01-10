@@ -1221,7 +1221,7 @@
     "source": "Financial Times - Technology",
     "summary": "The tech giant\u2019s chief AI architect and CTO of DeepMind discusses the Gemini 3 LLM and progress towards the goal of artificial general intelligence",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://images.ft.com/v3/image/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F4f164d87-97d1-4ced-bffa-444e33b2fec6.jpg?source=next-article&fit=scale-down&quality=highest&width=700&dpr=1",
     "summary_text": "The tech giant\u2019s chief AI architect and CTO of DeepMind discusses the Gemini 3 LLM and progress towards the goal of artificial general intelligence",
     "category": "ai"
   },
@@ -1289,50 +1289,6 @@
     "content_html": "",
     "image_url": "https://s3.amazonaws.com/cms.ipressroom.com/219/files/20260/695c50703d6332b2e72ed7d7_ces26-nvidialive-JL3_1386-3-1280x680/ces26-nvidialive-JL3_1386-3-1280x680_thmb.jpg",
     "summary_text": "NVIDIA founder and CEO Jensen Huang took the stage at the Fontainebleau Las Vegas today to open CES 2026, declaring that AI is scaling into every domain and every device. \u201cComputing has been fundamentally reshaped as a result of accelerated computing, as a re...",
-    "category": "ai"
-  },
-  {
-    "title": "Jensen Huang Says Nvidia\u2019s New Vera Rubin Chips Are in \u2018Full Production\u2019",
-    "url": "https://www.wired.com/story/nvidias-rubin-chips-are-going-into-production/",
-    "published_at": "2026-01-05T18:05:32-05:00",
-    "source": "Wired",
-    "summary": "The chip giant says Vera Rubin will sharply cut the cost of training and running AI models, strengthening the appeal of its integrated computing platform.",
-    "content_html": "",
-    "image_url": "https://media.wired.com/photos/695bffe313835ca4d6b41e4a/master/pass/Nvidia-Rubin-Chips-Going-Into-Production-Business-2192346797.jpg",
-    "summary_text": "The chip giant says Vera Rubin will sharply cut the cost of training and running AI models, strengthening the appeal of its integrated computing platform.",
-    "category": "ai"
-  },
-  {
-    "title": "NVIDIA BlueField-Powered Cybersecurity and Acceleration Arrive on NVIDIA Enterprise AI Factory Validated Design",
-    "url": "https://blogs.nvidia.com/blog/bluefield-cybersecurity-acceleration-enterprise-ai-factory-validated-design/",
-    "published_at": "2026-01-05T17:50:20-05:00",
-    "source": "NVIDIA News",
-    "summary": "AI is powering breakthroughs across industries, helping enterprises operate with greater intelligence and speed. As AI factories scale, the next generation of enterprise AI depends on infrastructure that can efficiently manage data, secure every stage of the pipeline and accelerate the core services that move, protect and process information alongside AI workloads. NVIDIA has expanded Read Article",
-    "content_html": "",
-    "image_url": "https://s3.amazonaws.com/cms.ipressroom.com/219/files/202601/695c409b3d6332647c4decbb_bluefield-ai-factory-validated-design-1280x680-1-842x450/bluefield-ai-factory-validated-design-1280x680-1-842x450_thmb.jpg",
-    "summary_text": "AI is powering breakthroughs across industries, helping enterprises operate with greater intelligence and speed. As AI factories scale, the next generation of enterprise AI depends on infrastructure that can efficiently manage data, secure every stage of the ...",
-    "category": "ai"
-  },
-  {
-    "title": "NVIDIA DGX SuperPOD Sets the Stage for Rubin-Based Systems",
-    "url": "https://blogs.nvidia.com/blog/dgx-superpod-rubin/",
-    "published_at": "2026-01-05T17:50:10-05:00",
-    "source": "NVIDIA News",
-    "summary": "NVIDIA DGX SuperPOD is paving the way for large-scale system deployments built on the NVIDIA Rubin platform \u2014 the next leap forward in AI computing. At the CES trade show in Las Vegas, NVIDIA today introduced the Rubin platform, comprising six new chips designed to deliver one incredible AI supercomputer, and engineered to accelerate agentic Read Article",
-    "content_html": "",
-    "image_url": "https://s3.amazonaws.com/cms.ipressroom.com/219/files/202601/695c40593d63326378313e8e_scale-ai-infrastructure-dgx-vera-rubin-nvl72-promo-pack-plan-a-1280x680-1-842x450/scale-ai-infrastructure-dgx-vera-rubin-nvl72-promo-pack-plan-a-1280x680-1-842x450_thmb.jpg",
-    "summary_text": "NVIDIA DGX SuperPOD is paving the way for large-scale system deployments built on the NVIDIA Rubin platform \u2014 the next leap forward in AI computing. At the CES trade show in Las Vegas, NVIDIA today introduced the Rubin platform, comprising six new chips desig...",
-    "category": "ai"
-  },
-  {
-    "title": "NVIDIA DGX Spark and DGX Station Power the Latest Open-Source and Frontier Models From the Desktop",
-    "url": "https://blogs.nvidia.com/blog/dgx-spark-and-station-open-source-frontier-models/",
-    "published_at": "2026-01-05T17:49:06-05:00",
-    "source": "NVIDIA News",
-    "summary": "Open-source AI is accelerating innovation across industries, and NVIDIA DGX Spark and DGX Station are built to help developers turn innovation into impact. NVIDIA today unveiled at the CES trade show how the DGX Spark and DGX Station deskside AI supercomputers let developers harness the latest open and frontier AI models on a local deskside Read Article",
-    "content_html": "",
-    "image_url": "https://s3.amazonaws.com/cms.ipressroom.com/219/files/202601/695c405e3d63326378313e95_dgx-spark-dgx-station-1280x680-1-842x450/dgx-spark-dgx-station-1280x680-1-842x450_thmb.jpg",
-    "summary_text": "Open-source AI is accelerating innovation across industries, and NVIDIA DGX Spark and DGX Station are built to help developers turn innovation into impact. NVIDIA today unveiled at the CES trade show how the DGX Spark and DGX Station deskside AI supercomputer...",
     "category": "ai"
   },
   {
