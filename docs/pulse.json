@@ -716,21 +716,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/44b44c9dd9/thumbnail.png"
   },
   {
-    "title": "This Year with ChatGPT",
-    "url": "https://www.youtube.com/watch?v=cjveRUfE7dc",
-    "published_at": "2026-01-09T11:00:11-05:00",
-    "source": "OpenAI YouTube",
-    "summary": "Set goals and stick to them all year with ChatGPT.",
-    "content_html": "",
-    "image_url": "https://i.ytimg.com/vi/cjveRUfE7dc/maxresdefault.jpg",
-    "summary_text": "Set goals and stick to them all year with ChatGPT.",
-    "category": "ai",
-    "_permalink": "/p/eb1bd445f5/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/eb1bd445f5/",
-    "_summary_240": "Set goals and stick to them all year with ChatGPT.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/eb1bd445f5/thumbnail.png"
-  },
-  {
     "title": "Oklo and Vistra Shares Surge as Meta Turns to Nuclear Power for AI",
     "url": "https://www.bloomberg.com/news/articles/2026-01-09/oklo-vistra-shares-surge-as-meta-turns-to-nuclear-power-for-ai",
     "published_at": "2026-01-09T10:06:55-05:00",
@@ -1312,6 +1297,17 @@
     "content_html": "",
     "image_url": "https://s3.amazonaws.com/cms.ipressroom.com/219/files/202601/695c57283d6332b423b8543e_siemens-and-nvidia-industrial-manufacturing/siemens-and-nvidia-industrial-manufacturing_thmb.jpg",
     "summary_text": "Siemens and NVIDIA today announced a significant expansion of their strategic partnership to bring artificial intelligence into the real world.",
+    "category": "ai"
+  },
+  {
+    "title": "What is sycophancy in AI models?",
+    "url": "https://www.youtube.com/watch?v=nvbq39yVYRk",
+    "published_at": "2025-12-18T15:30:14-05:00",
+    "source": "Anthropic YouTube",
+    "summary": "Learn what AI researchers mean when they talk about sycophancy, when it's more likely to show up in conversations, and tactics you can use to steer AI towards truth.",
+    "content_html": "",
+    "image_url": "https://i.ytimg.com/vi/nvbq39yVYRk/maxresdefault.jpg",
+    "summary_text": "Learn what AI researchers mean when they talk about sycophancy, when it's more likely to show up in conversations, and tactics you can use to steer AI towards truth.",
     "category": "ai"
   },
   {
