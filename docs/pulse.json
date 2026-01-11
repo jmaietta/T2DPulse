@@ -701,21 +701,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/822d68ac46/thumbnail.png"
   },
   {
-    "title": "Security expert Bruce Schneier \u2018guarantees\u2019 governments are bulk spying with AI",
-    "url": "https://cointelegraph.com/news/security-expert-bruce-schneier-guarantees-governments-are-bulk-spying-with-ai?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-    "published_at": "2026-01-09T11:16:15-05:00",
-    "source": "Cointelegraph",
-    "summary": "From PRISM to AI, mass surveillance has only grown more powerful. Bruce Schneier warns the post-Snowden world may be entering an even darker phase.",
-    "content_html": "",
-    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjYtMDEvMDE5YmEzODktMDQxOS03YTFiLWI4MTItYWQzYWMzN2NiYzQ3LmpwZw==.jpg",
-    "summary_text": "From PRISM to AI, mass surveillance has only grown more powerful. Bruce Schneier warns the post-Snowden world may be entering an even darker phase.",
-    "category": "fintech",
-    "_permalink": "/p/44b44c9dd9/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/44b44c9dd9/",
-    "_summary_240": "From PRISM to AI, mass surveillance has only grown more powerful. Bruce Schneier warns the post-Snowden world may be entering an even darker phase.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/44b44c9dd9/thumbnail.png"
-  },
-  {
     "title": "Oklo and Vistra Shares Surge as Meta Turns to Nuclear Power for AI",
     "url": "https://www.bloomberg.com/news/articles/2026-01-09/oklo-vistra-shares-surge-as-meta-turns-to-nuclear-power-for-ai",
     "published_at": "2026-01-09T10:06:55-05:00",
@@ -1091,11 +1076,7 @@
     "content_html": "<article class=\"mssrc-posts font-- has--theme\" id=\"single-23297\">\n\t<div class=\"acf-innerblocks-container\"></div>\t\t\t<section class=\"post-tags\">\n\t\t\t\t<div class=\"post-tags__content wp-block-columns\">\n\t\t\t\t\t<div class=\"post-tags__header wp-block-column flex-basis-25 has-text-align-right\">\n\t\t\t\t\t\t<h4 class=\"sr-only\">Tags: </h4>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"post-tags__body wp-block-column flex-basis-60\">\n\t\t\t\t\t\t<ul class=\"post-tags__list\"><li class=\"post-tags__item\"><a class=\"kicker inline-block post__meta--tags\" href=\"https://news.microsoft.com/source/tag/ai/\">AI</a></li></ul>\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</section>\n\t\t\t</article><p>The post <a href=\"https://news.microsoft.com/source/emea/features/ai-that-drives-change-wayve-rewrites-self-driving-playbook-with-deep-learning-in-azure/\">AI\u00a0that\u00a0drives\u00a0change:\u00a0Wayve\u00a0rewrites\u00a0self-driving playbook with deep\u00a0learning\u00a0in\u00a0Azure</a> appeared first on <a href=\"https://news.microsoft.com/source\">Source</a>.</p>",
     "image_url": "https://news.microsoft.com/source/emea/wp-content/uploads/2026/01/Alex_Kandall_Wayve_Microsoft_1.jpg",
     "summary_text": "The post AI that drives change: Wayve rewrites self-driving playbook with deep learning in Azure appeared first on Source .",
-    "category": "ai",
-    "_permalink": "/p/c5d7f7cb23/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/c5d7f7cb23/",
-    "_summary_240": "The post AI that drives change: Wayve rewrites self-driving playbook with deep learning in Azure appeared first on Source .",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/c5d7f7cb23/thumbnail.png"
+    "category": "ai"
   },
   {
     "title": "ChatGPT falls to new data-pilfering attack as a vicious cycle in AI continues",
