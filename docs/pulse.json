@@ -1,5 +1,20 @@
 [
   {
+    "title": "Google pulls AI overviews for some medical searches",
+    "url": "https://www.theverge.com/news/860356/google-pulls-alarming-dangerous-medical-ai-overviews",
+    "published_at": "2026-01-11T14:19:40-05:00",
+    "source": "The Verge",
+    "summary": "Earlier this month, The Guardian published an investigation that showed Google was serving up misleading and outright false information via its AI overviews in response to certain medical inquiries. Now those results appear to have been removed. According to the original report: In one case that experts described as \"really dangerous\", Google wrongly advised people [\u2026]",
+    "content_html": "<figure>\n\n<img alt=\"\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/03/STK093_GOOGLE_A-1.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100\" />\n\t<figcaption>\n\t\t</figcaption>\n</figure>\n<p class=\"has-text-align-none\">Earlier this month, <em>The Guardian</em> published an investigation that showed Google was serving up misleading and outright false information via its AI overviews in response to certain medical inquiries. Now those results appear to have been removed. According to the <a href=\"https://www.theguardian.com/technology/2026/jan/02/google-ai-overviews-risk-harm-misleading-health-information\">original report</a>:</p>\n<blockquote class=\"wp-block-quote is-layout-flow wp-block-quote-is-layout-flow\">\n<p class=\"has-text-align-none\">In one case that experts described as \"really dangerous\", Google wrongly advised people with pancreatic cancer to avoid high-fat foods. Experts said this was the exact opposite of what should be recommended, and may increase the risk of patients dying from the disease.</p>\n<p class=\"has-text-align-none\">In another \"alarming\" example, the company provided bogus information about crucial liver func \u2026</p></blockquote>\n<p><a href=\"https://www.theverge.com/news/860356/google-pulls-alarming-dangerous-medical-ai-overviews\">Read the full story at The Verge.</a></p>",
+    "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/03/STK093_GOOGLE_A-1.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "summary_text": "Earlier this month, The Guardian published an investigation that showed Google was serving up misleading and outright false information via its AI overviews in response to certain medical inquiries. Now those results appear to have been removed. According to ...",
+    "category": "ai",
+    "_permalink": "/p/d6f3d79d33/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/d6f3d79d33/",
+    "_summary_240": "Earlier this month, The Guardian published an investigation that showed Google was serving up misleading and outright false information via its AI overviews in response to...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/d6f3d79d33/thumbnail.png"
+  },
+  {
     "title": "Google introduces personalised shopping ads to AI tools",
     "url": "https://www.ft.com/content/957c7438-b2e0-4605-a276-caa8a7ec363c",
     "published_at": "2026-01-11T13:36:42-05:00",
@@ -900,11 +915,7 @@
     "content_html": "",
     "image_url": "https://techcrunch.com/wp-content/uploads/2026/01/DSC_6131.jpg?w=1024",
     "summary_text": "Building software products has never been easier, so why are so many well-funded startups failing to take off no matter how good their product is? In this season finale episode of Build Mode, our guest has an answer: Startups have focused too much on product ...",
-    "category": "ai",
-    "_permalink": "/p/ed4625b0b6/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/ed4625b0b6/",
-    "_summary_240": "Building software products has never been easier, so why are so many well-funded startups failing to take off no matter how good their product is? In this season finale episode...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/ed4625b0b6/thumbnail.png"
+    "category": "ai"
   },
   {
     "title": "AI Devices Are Coming. Will Your Favorite Apps Be Along for the Ride?",
@@ -1177,7 +1188,7 @@
     "source": "Financial Times - Technology",
     "summary": "Tools such as ChatGPT provide personal benefits that do not show up in traditional statistics, argues chief economist",
     "content_html": "",
-    "image_url": "https://images.ft.com/v3/image/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F5561b1c5-2096-4224-8b96-9b8b762fbcf9.jpg?source=next-article&fit=scale-down&quality=highest&width=700&dpr=1",
+    "image_url": "",
     "summary_text": "Tools such as ChatGPT provide personal benefits that do not show up in traditional statistics, argues chief economist",
     "category": "ai"
   },
