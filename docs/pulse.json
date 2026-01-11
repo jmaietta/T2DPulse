@@ -1,5 +1,20 @@
 [
   {
+    "title": "Google removes AI Overviews for certain medical queries",
+    "url": "https://techcrunch.com/2026/01/11/google-removes-ai-overviews-for-certain-medical-queries/",
+    "published_at": "2026-01-11T12:56:41-05:00",
+    "source": "TechCrunch",
+    "summary": "This follows an investigation by the Guardian that found Google AI Overviews offering misleading information in response to some health-related queries.",
+    "content_html": "",
+    "image_url": "https://techcrunch.com/wp-content/uploads/2024/05/Sundar-AI-Overviews-IO-2024.png?resize=1200,698",
+    "summary_text": "This follows an investigation by the Guardian that found Google AI Overviews offering misleading information in response to some health-related queries.",
+    "category": "ai",
+    "_permalink": "/p/b398bea834/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/b398bea834/",
+    "_summary_240": "This follows an investigation by the Guardian that found Google AI Overviews offering misleading information in response to some health-related queries.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/b398bea834/thumbnail.png"
+  },
+  {
     "title": "Ethereum treasury company BitMine crosses 1 million staked ETH milestone",
     "url": "https://cointelegraph.com/news/ethereum-bitmine-1-million-staked-eth?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
     "published_at": "2026-01-11T11:46:14-05:00",
@@ -821,21 +836,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/61fe8f67a7/thumbnail.png"
   },
   {
-    "title": "XAI Limits Grok Images After Uproar Over Sexualized Content",
-    "url": "https://www.bloomberg.com/news/articles/2026-01-09/musk-s-grok-limits-image-generation-to-paid-users-on-x",
-    "published_at": "2026-01-09T04:06:42-05:00",
-    "source": "Bloomberg Technology",
-    "summary": "Elon Musk\u2019s xAI restricted Grok\u2019s image-generation feature for most users on the X social media platform after the artificial intelligence tool drew widespread condemnation for generating undressed images of women and children.",
-    "content_html": "The chat window for chatbot Grok on a laptop arranged in Riga, Latvia, on Monday, June 9, 2025. Announced in March, XAI Holdings was created from the combination of X, formerly Twitter, and Musk's AI venture, xAI. Photographer: Bloomberg/Bloomberg",
-    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/i7fEJGbz2ykI/v0/1200x-1.jpg",
-    "summary_text": "Elon Musk\u2019s xAI restricted Grok\u2019s image-generation feature for most users on the X social media platform after the artificial intelligence tool drew widespread condemnation for generating undressed images of women and children.",
-    "category": "ai",
-    "_permalink": "/p/231fe272d1/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/231fe272d1/",
-    "_summary_240": "Elon Musk\u2019s xAI restricted Grok\u2019s image-generation feature for most users on the X social media platform after the artificial intelligence tool drew widespread condemnation for...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/231fe272d1/thumbnail.png"
-  },
-  {
     "title": "Anthropic adds Allianz to growing list of enterprise wins",
     "url": "https://techcrunch.com/2026/01/09/anthropic-adds-allianz-to-growing-list-of-enterprise-wins/",
     "published_at": "2026-01-09T04:00:00-05:00",
@@ -960,11 +960,7 @@
     "content_html": "<p>On Wednesday, OpenAI <a href=\"https://openai.com/index/introducing-chatgpt-health/\">announced</a> ChatGPT Health, a dedicated section of the AI chatbot designed for \"health and wellness conversations\" intended to connect a user's health and medical records to the chatbot in a secure way.</p>\n<p>But mixing generative AI technology like ChatGPT with health advice or analysis of any kind has been a <a href=\"https://arstechnica.com/science/2024/01/dont-use-chatgpt-to-diagnose-your-kids-illness-study-finds-83-error-rate/\">controversial idea</a> since the launch of the service in late 2022. Just days ago, <a href=\"https://www.sfgate.com/tech/article/calif-teen-chatgpt-drug-advice-fatal-overdose-21266718.php\">SFGate published an investigation</a> detailing how a 19-year-old California man died of a drug overdose in May 2025 after 18 months of seeking recreational drug advice from ChatGPT. It's a telling example of what can go wrong when chatbot guardrails <a href=\"https://arstechnica.com/information-technology/2025/08/after-teen-suicide-openai-claims-it-is-helping-people-when-they-need-it-most/\">fail</a> during long conversations and people follow erroneous AI guidance.</p>\n<p>Despite the known accuracy issues with AI chatbots, OpenAI's new Health feature will allow users to connect medical records and wellness apps like Apple Health and MyFitnessPal so that ChatGPT can provide personalized health responses like summarizing care instructions, preparing for doctor appointments, and understanding test results.</p><p><a href=\"https://arstechnica.com/ai/2026/01/chatgpt-health-lets-you-connect-medical-records-to-an-ai-that-makes-things-up/\">Read full article</a></p>\n<p><a href=\"https://arstechnica.com/ai/2026/01/chatgpt-health-lets-you-connect-medical-records-to-an-ai-that-makes-things-up/#comments\">Comments</a></p>",
     "image_url": "https://cdn.arstechnica.net/wp-content/uploads/2026/01/ai_doctor-1152x648.jpg",
     "summary_text": "New feature will allow users to link medical and wellness records to AI chatbot.",
-    "category": "ai",
-    "_permalink": "/p/ca8e2e5708/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/ca8e2e5708/",
-    "_summary_240": "New feature will allow users to link medical and wellness records to AI chatbot.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/ca8e2e5708/thumbnail.png"
+    "category": "ai"
   },
   {
     "title": "Starmer vows action against X over Grok\u2019s AI sexualised images of children",
@@ -975,11 +971,7 @@
     "content_html": "",
     "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/82f217bd-43d4-45a0-9c93-694a0a622732.jpg",
     "summary_text": "UK prime minister steps in amid growing public anger at \u2018disgraceful\u2019 images, saying it is \u2018simply not tolerable\u2019",
-    "category": "ai",
-    "_permalink": "/p/65a9622501/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/65a9622501/",
-    "_summary_240": "UK prime minister steps in amid growing public anger at \u2018disgraceful\u2019 images, saying it is \u2018simply not tolerable\u2019",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/65a9622501/thumbnail.png"
+    "category": "ai"
   },
   {
     "title": "The future of PCs in the age of AI",
@@ -1054,7 +1046,7 @@
     "source": "Financial Times - Technology",
     "summary": "AI must learn to reckon with a world much messier than any computer simulation",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/f0a54581-24fa-4b60-a54a-9975035686ff.jpg",
     "summary_text": "AI must learn to reckon with a world much messier than any computer simulation",
     "category": "ai"
   },
@@ -1120,7 +1112,7 @@
     "source": "Financial Times - Technology",
     "summary": "Veteran executive Eric Horvitz argues talent and ideas will move abroad without US support for universities",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/fcd4d6ba-53e1-412b-b72b-c48aa0bf7601.jpg",
     "summary_text": "Veteran executive Eric Horvitz argues talent and ideas will move abroad without US support for universities",
     "category": "ai"
   },
@@ -1131,7 +1123,7 @@
     "source": "Financial Times - Technology",
     "summary": "Strong guidance marks turnaround and reflects how South Korean chipmaker has benefited from chip supply crunch",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/ca2c13a5-396a-4229-a78e-37a9afd7a5dc.jpg",
     "summary_text": "Strong guidance marks turnaround and reflects how South Korean chipmaker has benefited from chip supply crunch",
     "category": "ai"
   },
@@ -1175,7 +1167,7 @@
     "source": "Financial Times - Technology",
     "summary": "The annual Consumer Electronics Show is a smorgasbord of futuristic tech products",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/b8755d5e-6857-479a-95d2-5dc93993f084.jpg",
     "summary_text": "The annual Consumer Electronics Show is a smorgasbord of futuristic tech products",
     "category": "ai"
   },
@@ -1208,7 +1200,7 @@
     "source": "Financial Times - Technology",
     "summary": "East London landmark is latest site in capital to be identified for high-tech redevelopment",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/792b590c-8376-4fab-8d9a-77661fdebd7d.jpg",
     "summary_text": "East London landmark is latest site in capital to be identified for high-tech redevelopment",
     "category": "software"
   },
@@ -1219,7 +1211,7 @@
     "source": "Financial Times - Technology",
     "summary": "Tools such as ChatGPT provide personal benefits that do not show up in traditional statistics, argues chief economist",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://images.ft.com/v3/image/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F5561b1c5-2096-4224-8b96-9b8b762fbcf9.jpg?source=next-article&fit=scale-down&quality=highest&width=700&dpr=1",
     "summary_text": "Tools such as ChatGPT provide personal benefits that do not show up in traditional statistics, argues chief economist",
     "category": "ai"
   },
