@@ -1,5 +1,20 @@
 [
   {
+    "title": "Google introduces personalised shopping ads to AI tools",
+    "url": "https://www.ft.com/content/957c7438-b2e0-4605-a276-caa8a7ec363c",
+    "published_at": "2026-01-11T13:36:42-05:00",
+    "source": "Financial Times - Technology",
+    "summary": "Tech giant moves to gain an edge in race to monetise popular AI tools",
+    "content_html": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/b2a8fb71-96b1-469f-8433-6622b94675a4.jpg",
+    "summary_text": "Tech giant moves to gain an edge in race to monetise popular AI tools",
+    "category": "ai",
+    "_permalink": "/p/c4c4b3f4ae/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/c4c4b3f4ae/",
+    "_summary_240": "Tech giant moves to gain an edge in race to monetise popular AI tools",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/c4c4b3f4ae/thumbnail.png"
+  },
+  {
     "title": "Google removes AI Overviews for certain medical queries",
     "url": "https://techcrunch.com/2026/01/11/google-removes-ai-overviews-for-certain-medical-queries/",
     "published_at": "2026-01-11T12:56:41-05:00",
@@ -43,21 +58,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/ee34366df8/",
     "_summary_240": "This week, Google announced a new AI Inbox view for Gmail that replaces the traditional list of emails with an AI-generated list of to-dos and topics to track based on what's in...",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/ee34366df8/thumbnail.png"
-  },
-  {
-    "title": "Google introduces personalised shopping ads to Gemini chatbot",
-    "url": "https://www.ft.com/content/957c7438-b2e0-4605-a276-caa8a7ec363c",
-    "published_at": "2026-01-11T10:00:03-05:00",
-    "source": "Financial Times - Technology",
-    "summary": "Tech giant moves to gain an edge in race to monetise popular AI tools",
-    "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/b2a8fb71-96b1-469f-8433-6622b94675a4.jpg",
-    "summary_text": "Tech giant moves to gain an edge in race to monetise popular AI tools",
-    "category": "ai",
-    "_permalink": "/p/8a14ac65c1/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/8a14ac65c1/",
-    "_summary_240": "Tech giant moves to gain an edge in race to monetise popular AI tools",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/8a14ac65c1/thumbnail.png"
   },
   {
     "title": "Google announces a new protocol to facilitate commerce using AI agents",
@@ -750,21 +750,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/d053306c85/thumbnail.png"
   },
   {
-    "title": "This Year with ChatGPT",
-    "url": "https://www.youtube.com/watch?v=cjveRUfE7dc",
-    "published_at": "2026-01-09T11:00:11-05:00",
-    "source": "OpenAI YouTube",
-    "summary": "Set goals and stick to them all year with ChatGPT.",
-    "content_html": "",
-    "image_url": "https://i.ytimg.com/vi/cjveRUfE7dc/maxresdefault.jpg",
-    "summary_text": "Set goals and stick to them all year with ChatGPT.",
-    "category": "ai",
-    "_permalink": "/p/eb1bd445f5/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/eb1bd445f5/",
-    "_summary_240": "Set goals and stick to them all year with ChatGPT.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/eb1bd445f5/thumbnail.png"
-  },
-  {
     "title": "NVIDIA Unveils Multi-Agent Intelligent Warehouse and Catalog Enrichment AI Blueprints to Power the Retail Pipeline",
     "url": "https://blogs.nvidia.com/blog/multi-agent-intelligent-warehouse-and-catalog-enrichment-blueprints/",
     "published_at": "2026-01-09T09:00:02-05:00",
@@ -1235,6 +1220,17 @@
     "content_html": "",
     "image_url": "",
     "summary_text": "ChatGPT Health is a dedicated experience that securely connects your health data and apps, with privacy protections and a physician-informed design.",
+    "category": "ai"
+  },
+  {
+    "title": "What is sycophancy in AI models?",
+    "url": "https://www.youtube.com/watch?v=nvbq39yVYRk",
+    "published_at": "2025-12-18T15:30:14-05:00",
+    "source": "Anthropic YouTube",
+    "summary": "Learn what AI researchers mean when they talk about sycophancy, when it's more likely to show up in conversations, and tactics you can use to steer AI towards truth.",
+    "content_html": "",
+    "image_url": "https://i.ytimg.com/vi/nvbq39yVYRk/maxresdefault.jpg",
+    "summary_text": "Learn what AI researchers mean when they talk about sycophancy, when it's more likely to show up in conversations, and tactics you can use to steer AI towards truth.",
     "category": "ai"
   },
   {
