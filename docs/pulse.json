@@ -1,5 +1,35 @@
 [
   {
+    "title": "OpenAI and Anthropic Take Divergent Paths Into Healthcare",
+    "url": "https://www.pymnts.com/artificial-intelligence-2/2026/openai-and-anthropic-take-divergent-paths-into-healthcare/",
+    "published_at": "2026-01-12T17:45:20-05:00",
+    "source": "PYMNTS",
+    "summary": "The artificial intelligence (AI) race has moved from the laboratory to the clinic, marking a pivotal shift in how the digital economy\u2019s most valuable data \u2014 health information \u2014 is processed. As OpenAI and Anthropic formalize their healthcare and life sciences divisions, they are doing more than just selling software; they are auditioning to [\u2026] The post OpenAI and Anthropic Take Divergent Paths ...",
+    "content_html": "<p><span>The artificial intelligence (AI) race has moved from the laboratory to the clinic, marking a pivotal shift in how the digital economy\u2019s most valuable data \u2014 health information \u2014 is processed. </span></p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p><span>As </span><a class=\"editor-rtfLink\" href=\"https://openai.com/\" rel=\"noopener\" target=\"_blank\"><span>OpenAI</span></a><span> and </span><a class=\"editor-rtfLink\" href=\"https://www.anthropic.com/\" rel=\"noopener\" target=\"_blank\"><span>Anthropic</span></a><span> formalize their healthcare and life sciences divisions, they are doing more than just selling software; they are auditioning to become the foundational \u201coperating system\u201d for a multitrillion-dollar industry. While their </span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/artificial-intelligence-2/2025/generative-ai-in-healthcare/\" rel=\"noopener\" target=\"_blank\"><span>goals</span></a><span> are identical \u2014 capturing clinical workflows and research cycles \u2014 their strategies reveal a fundamental divergence over how a risk-averse sector will ultimately adopt generative AI.</span></p>\n<h2>OpenAI: Healthcare at Scale</h2>\n<p><span>OpenAI is approaching healthcare as an extension of its broader platform strategy. Its recently </span><a class=\"editor-rtfLink\" href=\"https://openai.com/index/openai-for-healthcare/\" rel=\"noopener\" target=\"_blank\"><span>announced</span></a><span> OpenAI for Healthcare </span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/artificial-intelligence-2/2026/openai-says-ai-is-now-informal-front-door-to-healthcare/\" rel=\"noopener\" target=\"_blank\"><span>initiative</span></a><span> is framed as an enterprise AI stack designed to slot into existing health system workflows, helping organizations automate documentation, reduce administrative burden, and standardize care delivery while meeting HIPAA </span><span>requirements.</span></p>\n<p><span>Rather than offering a single healthcare product, OpenAI is emphasizing APIs, business associate agreements, and integrations that allow hospitals, insurers and software vendors to embed its models into clinical decision support tools, chart summarization, care coordination and analytics. The company has highlighted physician-led benchmarking efforts such as HealthBench to demonstrate that its models can meet clinical expectations for reliability and alignment.</span></p>\n<p><span>At the same time, OpenAI is leveraging a consumer channel that few competitors can match. ChatGPT is already used at </span><span>massive</span><span> scale for health-related questions, from interpreting lab results to understanding symptoms and insurance options. </span><span>That usage is now being formalized through </span><a class=\"editor-rtfLink\" href=\"https://openai.com/index/introducing-chatgpt-health/\" rel=\"noopener\" target=\"_blank\"><span>ChatGPT Health</span></a><span>, which </span><span>allows</span><span> users to securely connect personal health data </span><span>so</span><span> responses </span><span>can</span><span> be grounded in individual context.</span></p>\n<p><span>On Monday (Jan. 12</span><span>) </span><span>OpenAI</span><span> announced in a </span><a class=\"editor-rtfLink\" href=\"https://x.com/OpenAI/status/2010813780671021106\" rel=\"noopener\" target=\"_blank\"><span>post</span></a><span> on X that it </span><span>acquired</span><span> healthcare startup Torch, which unifies lab results, medications </span><span>and</span><span> visit recordings, and will combine it with ChatGPT Health.</span><span> In its own </span><a class=\"editor-rtfLink\" href=\"https://torchapp.com/\" rel=\"noopener\" target=\"_blank\"><span>blog post</span></a><span> about the acquisition, Torch </span><span>that</span><span> by bringing together health information that is otherwise scattered, it builds \u201ca medical memory for AI\u201d that helps patients see the whole picture. OpenAI said in its post: \u201cBringing this together with ChatGPT Health opens up a new way to understand and manage your health.\u201d</span></p>\n<p><span>OpenAI is careful to position the consumer experience delivered by ChatGPT Health as informational rather than diagnostic, and it is not </span><span>regulated under</span><span> HIPAA.</span><span> Still, the company has acknowledged that healthcare is already one of ChatGPT\u2019s largest use cases, with tens of millions of health-related queries flowing through the system </span><span>daily,</span> <a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/artificial-intelligence-2/2026/openai-says-ai-is-now-informal-front-door-to-healthcare/\" rel=\"noopener\" target=\"_blank\"><span>as reported by PYMNTS</span></a><span>. That demand effectively serves as a top-of-funnel for enterprise adoption, familiarizing patients and clinicians alike with AI as a default interface for medical information.</span></p>\n<h2>Anthropic: Bet on Specialization</h2>\n<p><span>Anthropic is taking a more </span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/news/artificial-intelligence/2026/anthropic-increases-medical-focus-with-new-claude-program/\" rel=\"noopener\" target=\"_blank\"><span>targeted approach</span></a><span>. Instead of extending a mass-market assistant into healthcare, it is building healthcare and life sciences offerings on top of the Claude model family, with an emphasis on tightly controlled, domain-specific deployments. </span></p>\n<p><span>The company\u2019s </span><a class=\"editor-rtfLink\" href=\"https://www.anthropic.com/news/healthcare-life-sciences.\" rel=\"noopener\" target=\"_blank\"><span>Claude for Healthcare</span></a><span> product is designed for clinicians, insurers and healthcare administrators, </span><span>with</span> <span>HIPAA-ready</span><span> infrastructure and direct integrations into authoritative datasets </span><span>such as</span><span> ICD-10 coding systems, CMS coverage data, the National Provider Identifier Registry, and PubMed.</span> <span>These connectors enable concrete workflows </span><span>like</span><span> prior authorization, report generation, and medical coding interpretation, rather than broad conversational use.</span></p>\n<p><span>Anthropic is also </span><span>pushing deeper into</span><span> life sciences. Through Claude for Life Sciences, the company is positioning its models as research partners embedded in scientific environments, connected to platforms like PubMed, Benchling and ClinicalTrials.gov. The focus is on tasks such as literature synthesis, hypothesis generation, clinical trial planning, and regulatory documentation, placing Claude closer to the core of biomedical research rather than at the patient-facing edge.</span></p>\n<p><span>A central theme in Anthropic\u2019s messaging is control. The company emphasizes that data accessed through healthcare and research integrations is not used to train its models</span><span>, and it</span><span> highlights customizable agent skills, including FHIR-based tool building, that allow organizations to define how Claude operates within strict boundaries. This reflects a view of healthcare as a market where trust, auditability and predictability matter more than rapid experimentation.</span></p>\n<p><em>For all PYMNTS AI coverage, subscribe to the daily </em><a href=\"https://www.pymnts.com/subscribe/\">AI\u00a0Newsletter</a><em>.</em></p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/artificial-intelligence-2/2026/openai-and-anthropic-take-divergent-paths-into-healthcare/\">OpenAI and Anthropic Take Divergent Paths Into Healthcare</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
+    "image_url": "https://www.pymnts.com/wp-content/uploads/2026/01/AI-healthcare-OpenAI-Anthropic2.jpg?w=457",
+    "summary_text": "The artificial intelligence (AI) race has moved from the laboratory to the clinic, marking a pivotal shift in how the digital economy\u2019s most valuable data \u2014 health information \u2014 is processed. As OpenAI and Anthropic formalize their healthcare and life science...",
+    "category": "ai",
+    "_permalink": "/p/54b8bf537d/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/54b8bf537d/",
+    "_summary_240": "The artificial intelligence (AI) race has moved from the laboratory to the clinic, marking a pivotal shift in how the digital economy\u2019s most valuable data \u2014 health information \u2014...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/54b8bf537d/thumbnail.png"
+  },
+  {
+    "title": "AI on campus",
+    "url": "https://www.youtube.com/watch?v=N5yJJA0NCU0",
+    "published_at": "2026-01-12T17:41:27-05:00",
+    "source": "Anthropic YouTube",
+    "summary": "AI is ubiquitous on college campuses. We sat down with students to hear what's going well, what isn't, and how students, professors, and universities alike are navigating it in real time. 0:00 - Introduction 0:22 - Meet the panel 1:06 - Vibes on campus 6:28 - What are students building? 11:27 - AI as tool vs. crutch 16:44 - Are professors keeping up? 20:15 - Downsides 25:55 - AI and the job marke...",
+    "content_html": "",
+    "image_url": "https://i.ytimg.com/vi/N5yJJA0NCU0/maxresdefault.jpg",
+    "summary_text": "AI is ubiquitous on college campuses. We sat down with students to hear what's going well, what isn't, and how students, professors, and universities alike are navigating it in real time. 0:00 - Introduction 0:22 - Meet the panel 1:06 - Vibes on campus 6:28 -...",
+    "category": "ai",
+    "_permalink": "/p/159c473986/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/159c473986/",
+    "_summary_240": "AI is ubiquitous on college campuses. We sat down with students to hear what's going well, what isn't, and how students, professors, and universities alike are navigating it in...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/159c473986/thumbnail.png"
+  },
+  {
     "title": "Dina Powell McCormick appointed president and vice-chair at Meta",
     "url": "https://www.ft.com/content/1255421d-4634-4258-9ea0-c2365010a862",
     "published_at": "2026-01-12T17:37:27-05:00",
@@ -240,21 +270,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/99d563879f/thumbnail.png"
   },
   {
-    "title": "Introducing Cowork: Claude Code for the rest of your work",
-    "url": "https://www.youtube.com/watch?v=UAmKyyZ-b9E",
-    "published_at": "2026-01-12T15:02:22-05:00",
-    "source": "Anthropic YouTube",
-    "summary": "Cowork brings Claude Code\u2019s agentic capabilities to the Claude desktop app. Give Claude access to a folder, set a task, and let it work. It loops you in along the way. Try it at claude.com/download.",
-    "content_html": "",
-    "image_url": "https://i.ytimg.com/vi/UAmKyyZ-b9E/maxresdefault.jpg",
-    "summary_text": "Cowork brings Claude Code\u2019s agentic capabilities to the Claude desktop app. Give Claude access to a folder, set a task, and let it work. It loops you in along the way. Try it at claude.com/download.",
-    "category": "ai",
-    "_permalink": "/p/9df1b7c781/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/9df1b7c781/",
-    "_summary_240": "Cowork brings Claude Code\u2019s agentic capabilities to the Claude desktop app. Give Claude access to a folder, set a task, and let it work. It loops you in along the way. Try it at...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/9df1b7c781/thumbnail.png"
-  },
-  {
     "title": "The Stranger Things behind-the-scenes doc is a lot more boring than a secret episode",
     "url": "https://www.theverge.com/entertainment/860692/one-last-adventure-the-making-of-stranger-things-5-netflix-review",
     "published_at": "2026-01-12T15:00:00-05:00",
@@ -283,21 +298,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/9904001376/",
     "_summary_240": "With Bakkt's share price surging following the announcement, the stock deal could be worth about $178 million.",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/9904001376/thumbnail.png"
-  },
-  {
-    "title": "Investors Shift Focus to AI Infrastructure, Security and Commerce",
-    "url": "https://www.pymnts.com/artificial-intelligence-2/2026/investors-shift-focus-to-ai-infrastructure-security-and-commerce/",
-    "published_at": "2026-01-12T14:47:51-05:00",
-    "source": "PYMNTS",
-    "summary": "Artificial intelligence (AI) startups Cast AI, Cyera and Swap headlined a wave of capital injections this week, reflecting where investors see near-term demand as enterprises scale production AI systems. The deals point to continued interest in tools that manage compute constraints, govern sensitive data and apply AI directly to revenue-generating workflows. Cast AI Hits [\u2026] The post Investors Sh...",
-    "content_html": "<p style=\"font-weight: 400;\">Artificial intelligence (AI) startups Cast AI, Cyera and Swap headlined a wave of capital injections this week, reflecting where investors see near-term demand as enterprises scale production AI systems. The deals point to continued interest in tools that manage compute constraints, govern sensitive data and apply AI directly to revenue-generating workflows.</p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<h2 style=\"font-weight: 400;\"><strong>Cast AI Hits Unicorn Status With GPU Marketplace Expansion</strong></h2>\n<p style=\"font-weight: 400;\"><a href=\"https://cast.ai/\" rel=\"noopener\" target=\"_blank\">Cast AI</a>, a cloud and Kubernetes automation specialist, <a href=\"https://www.businesswire.com/news/home/20260112261202/en/Cast-AI-Valued-at-Over-%241-Billion-With-the-Launch-of-Its-GPU-Marketplace\" rel=\"noopener\" target=\"_blank\">announced</a> a strategic investment that pushed its valuation beyond $1 billion with the launch of OMNI Compute, a unified GPU marketplace designed to simplify AI infrastructure deployment. The platform lets enterprises automatically discover and provision GPU resources across cloud providers and regions without code changes, tackling one of the biggest bottlenecks in scaling AI workloads.</p>\n<p style=\"font-weight: 400;\">The new funding includes participation from Pacific Alliance Ventures, the corporate venture arm of South Korea\u2019s Shinsegae Group, and follows a previous Series C where Cast AI raised capital from G2 Venture Partners and SoftBank Vision Fund 2. Families of global customers, including Huawei, Cisco and Samsung, are cited as part of Cast AI\u2019s diversified user base. The company said this injection of capital and product expansion will fuel scaling operations and wider regional presence across Asia, Europe and North America.</p>\n<h2 style=\"font-weight: 400;\"><strong>Cyera Secures $400 Million for AI Security</strong></h2>\n<p style=\"font-weight: 400;\"><a href=\"https://www.cyera.com/\" rel=\"noopener\" target=\"_blank\">Cyera</a>, an AI and data security platform, <a href=\"https://www.businesswire.com/news/home/20260108628439/en/Cyera-Raises-%24400M-to-Meet-Rapidly-Growing-Demand-for-AI-Security-Among-Enterprises\" rel=\"noopener\" target=\"_blank\">announced</a> a significant $400 million Series F round that triples its valuation to $9 billion. Led by Blackstone alongside existing investors including Accel, Coatue and Sequoia Capital, this funding comes as AI deployments accelerate across enterprises and security concerns intensify. Cyera offers a unified platform that converges data-security posture management, data loss prevention and identity insights to give organizations a consolidated view of their data environments.</p>\n<p style=\"font-weight: 400;\">The company says it now protects data for around 20% of the Fortune 500, having grown its team to over 1,100 and expanded into 15 countries. Strategic partnerships with Microsoft Purview and AWS further position Cyera as a key player in governing artificial intelligence at scale. Executives argue that as AI adoption grows, secure governance has become essential for trust, compliance and operational continuity.</p>\n<h2 style=\"font-weight: 400;\"><strong>Protege Raises $30 Million to Unlock Data for AI</strong></h2>\n<p style=\"font-weight: 400;\">A parallel funding story comes from <a href=\"https://www.withprotege.ai/\" rel=\"noopener\" target=\"_blank\">Protege</a>, which <a href=\"https://www.businesswire.com/news/home/20260108257753/en/Protege-Raises-%2430-Million-Led-by-a16z-to-Unlock-Access-to-Data-for-AI-Development\" rel=\"noopener\" target=\"_blank\">closed</a> a $30 million Series A led by Andreessen Horowitz (a16z) to expand access to real-world data sets for AI development. The company aggregates and curates high-quality datasets, spanning sectors like healthcare, media and audio, to feed AI-training workflows while ensuring rights-protected access and revenue opportunities for data holders.</p>\n<p style=\"font-weight: 400;\">Protege\u2019s executives pointed to fragmented data markets and rising demand from AI builders as drivers for a more structured, scalable approach to real-world data provisioning. Returning investors include Footwork, CRV and Bloomberg Beta, bringing the startup\u2019s total funding to $65 million since its 2024 founding. Protege\u2019s model touches on one of AI\u2019s most persistent bottlenecks: how to responsibly secure and operationalize diverse data sources while driving innovation.</p>\n<h2 style=\"font-weight: 400;\"><strong>Spangle AI Raises $15 Million for Agentic Commerce Infrastructure</strong></h2>\n<p style=\"font-weight: 400;\">In the commerce tech space, <a href=\"https://www.spangle.ai/\" rel=\"noopener\" target=\"_blank\">Spangle AI</a> <a href=\"https://www.businesswire.com/news/home/20260108311127/en/Spangle-AI-Raises-%2415M-Series-A-as-AI-Agents-Reshape-%246.8T-Commerce-Market\" rel=\"noopener\" target=\"_blank\">disclosed</a> a $15 million Series A led by NewRoad Capital Partners to build what it calls an agentic infrastructure layer for online commerce. Founded by former Amazon engineers, Spangle aims to unify AI-driven discovery with real-time conversion through an intelligence layer that interprets shopper intent and executes actions across eCommerce stacks.</p>\n<p style=\"font-weight: 400;\">Early customers, including REVOLVE, Steve Madden and Alexander Wang\u00a0, have already reported gains in conversion and return on ad spending. The company plans to use its new funding to deepen R&amp;D, expand its engineering team and refine its models as consumer behavior increasingly intersects with AI-powered discovery and shopping workflows.</p>\n<h2 style=\"font-weight: 400;\"><strong>Swap Closes $100 Million Series C for Global Commerce Tools</strong></h2>\n<p style=\"font-weight: 400;\"><a href=\"https://www.swap-commerce.com/\" rel=\"noopener\" target=\"_blank\">Swap</a>, a commerce operations platform, <a href=\"https://www.businesswire.com/news/home/20260107934395/en/Swap-Secures-%24100-Million-Series-C-Funding-Strengthens-Position-as-Leading-Commerce-Solutions-Platform\" rel=\"noopener\" target=\"_blank\">announced</a> a $100 million Series C co-led by DST Global and ICONIQ, reinforcing its position as a full-stack commerce solutions provider as <a href=\"https://www.pymnts.com/news/fintech-investments/2026/swap-raises-100-million-dollars-expand-global-commerce-solutions-platform/\" rel=\"noopener\" target=\"_blank\">reported by PYMNTS</a>.</p>\n<p style=\"font-weight: 400;\">Originally focused on returns, Swap has broadened into cross-border logistics, tax and demand planning, and now integrates AI-enabled commerce infrastructure that aims to help brands transact and make logistics decisions through real-time insights. The capital will support geographic expansion, payments integrations and enhancements to its product suite to meet increasing brand demand for seamless global commerce tooling.</p>\n<div>\n<p class=\"elementtoproof\"><i>For all PYMNTS AI coverage, subscribe to the daily<span class=\"apple-converted-space\">\u00a0</span></i><a href=\"https://www.pymnts.com/subscribe/\" rel=\"noopener\" target=\"_blank\" title=\"https://www.pymnts.com/subscribe/\">AI\u00a0Newsletter</a><i>.</i></p>\n</div>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/artificial-intelligence-2/2026/investors-shift-focus-to-ai-infrastructure-security-and-commerce/\">Investors Shift Focus to AI Infrastructure, Security and Commerce</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
-    "image_url": "https://www.pymnts.com/wp-content/uploads/2025/07/This-Week-in-AI-funding-investments.jpg?w=457",
-    "summary_text": "Artificial intelligence (AI) startups Cast AI, Cyera and Swap headlined a wave of capital injections this week, reflecting where investors see near-term demand as enterprises scale production AI systems. The deals point to continued interest in tools that man...",
-    "category": "ai",
-    "_permalink": "/p/52f638e729/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/52f638e729/",
-    "_summary_240": "Artificial intelligence (AI) startups Cast AI, Cyera and Swap headlined a wave of capital injections this week, reflecting where investors see near-term demand as enterprises...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/52f638e729/thumbnail.png"
   },
   {
     "title": "Anthropic wants you to use Claude to \u2018Cowork\u2019 in latest AI agent push",
@@ -507,7 +507,7 @@
   },
   {
     "title": "NVIDIA and Lilly Announce Co-Innovation AI Lab to Reinvent Drug Discovery in the Age of AI",
-    "url": "http://nvidianews.nvidia.com/news/nvidia-and-lilly-announce-co-innovation-lab-to-reinvent-drug-discovery-in-the-age-of-ai",
+    "url": "https://nvidianews.nvidia.com/news/nvidia-and-lilly-announce-co-innovation-lab-to-reinvent-drug-discovery-in-the-age-of-ai",
     "published_at": "2026-01-12T10:00:00-05:00",
     "source": "NVIDIA News",
     "summary": "NVIDIA and Eli Lilly and Company today announced a first-of-its-kind AI co-innovation lab focused on applying AI to tackle some of the most enduring challenges in the pharmaceutical industry.",
@@ -515,10 +515,10 @@
     "image_url": "https://s3.amazonaws.com/cms.ipressroom.com/219/files/202601/6964852e3d63327aa95af785_nvidia-lilly/nvidia-lilly_thmb.jpg",
     "summary_text": "NVIDIA and Eli Lilly and Company today announced a first-of-its-kind AI co-innovation lab focused on applying AI to tackle some of the most enduring challenges in the pharmaceutical industry.",
     "category": "ai",
-    "_permalink": "/p/b75d87c317/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/b75d87c317/",
+    "_permalink": "/p/4f18e2eda9/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/4f18e2eda9/",
     "_summary_240": "NVIDIA and Eli Lilly and Company today announced a first-of-its-kind AI co-innovation lab focused on applying AI to tackle some of the most enduring challenges in the...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/b75d87c317/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/4f18e2eda9/thumbnail.png"
   },
   {
     "title": "Meta hires former Trump advisor Dina Powell McCormick as president and vice chair",
@@ -922,11 +922,7 @@
     "content_html": "",
     "image_url": "https://images.ctfassets.net/jdtwqhzvc2n1/6Hhc39ApUGLrUtrCer8FkW/3e14e40718b84e4364ce7136a444b9a5/Gemini_Generated_Image_qj0p4kqj0p4kqj0p.png?w=800&amp;q=75",
     "summary_text": "Anthropic has confirmed the implementation of strict new technical safeguards preventing third-party applications from spoofing its official coding client, Claude Code, in order to access the underlying Claude AI models for more favorably pricing and limits \u2014...",
-    "category": "ai",
-    "_permalink": "/p/9b7774a474/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/9b7774a474/",
-    "_summary_240": "Anthropic has confirmed the implementation of strict new technical safeguards preventing third-party applications from spoofing its official coding client, Claude Code, in order...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/9b7774a474/thumbnail.png"
+    "category": "ai"
   },
   {
     "title": "Orchestral replaces LangChain\u2019s complexity with reproducible, provider-agnostic LLM orchestration",
@@ -1012,7 +1008,7 @@
     "source": "Financial Times - Technology",
     "summary": "MiniMax joins wave of technology companies in China going public",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/134e13e6-6902-4175-90a8-48cb57f21aa3.jpg",
+    "image_url": "https://images.ft.com/v3/image/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F134e13e6-6902-4175-90a8-48cb57f21aa3.jpg?source=next-article&fit=scale-down&quality=highest&width=700&dpr=1",
     "summary_text": "MiniMax joins wave of technology companies in China going public",
     "category": "ai"
   },
@@ -1023,7 +1019,7 @@
     "source": "Financial Times - Technology",
     "summary": "The three newly listed makers of semiconductors are lossmaking, and none has sales worth more than a tenth of their bigger rival",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/f6ac1452-f138-4b93-8565-2a66aaf66963.jpg",
+    "image_url": "",
     "summary_text": "The three newly listed makers of semiconductors are lossmaking, and none has sales worth more than a tenth of their bigger rival",
     "category": "ai"
   },
@@ -1067,7 +1063,7 @@
     "source": "Financial Times - Technology",
     "summary": "UK prime minister steps in amid growing public anger at \u2018disgraceful\u2019 images, saying it is \u2018simply not tolerable\u2019",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/82f217bd-43d4-45a0-9c93-694a0a622732.jpg",
+    "image_url": "",
     "summary_text": "UK prime minister steps in amid growing public anger at \u2018disgraceful\u2019 images, saying it is \u2018simply not tolerable\u2019",
     "category": "ai"
   },
@@ -1078,7 +1074,7 @@
     "source": "Financial Times - Technology",
     "summary": "Processing of the technology is starting to migrate from data centres to \u2018the edge\u2019 \u2014 devices like personal computers",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/8148e445-c12e-4b70-85a4-ef79ddaaa13b.jpg",
+    "image_url": "",
     "summary_text": "Processing of the technology is starting to migrate from data centres to \u2018the edge\u2019 \u2014 devices like personal computers",
     "category": "ai"
   },
@@ -1133,7 +1129,7 @@
     "source": "Financial Times - Technology",
     "summary": "AI must learn to reckon with a world much messier than any computer simulation",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/f0a54581-24fa-4b60-a54a-9975035686ff.jpg",
+    "image_url": "",
     "summary_text": "AI must learn to reckon with a world much messier than any computer simulation",
     "category": "ai"
   },
@@ -1199,7 +1195,7 @@
     "source": "Financial Times - Technology",
     "summary": "Veteran executive Eric Horvitz argues talent and ideas will move abroad without US support for universities",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/fcd4d6ba-53e1-412b-b72b-c48aa0bf7601.jpg",
+    "image_url": "",
     "summary_text": "Veteran executive Eric Horvitz argues talent and ideas will move abroad without US support for universities",
     "category": "ai"
   },
@@ -1210,7 +1206,7 @@
     "source": "Financial Times - Technology",
     "summary": "Strong guidance marks turnaround and reflects how South Korean chipmaker has benefited from chip supply crunch",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/ca2c13a5-396a-4229-a78e-37a9afd7a5dc.jpg",
+    "image_url": "",
     "summary_text": "Strong guidance marks turnaround and reflects how South Korean chipmaker has benefited from chip supply crunch",
     "category": "ai"
   },
