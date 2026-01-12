@@ -1,5 +1,110 @@
 [
   {
+    "title": "SEC Chair: \u2018Remains to be seen\u2018 whether US will seize Venezuela\u2018s reported Bitcoin",
+    "url": "https://cointelegraph.com/news/sec-chair-paul-atkins-us-seize-venezuela-bitcoin?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "published_at": "2026-01-12T16:56:14-05:00",
+    "source": "Cointelegraph",
+    "summary": "Several blockchain analysts said they were unable to verify whether the Latin American nation held $60 billion in the cryptocurrency.",
+    "content_html": "",
+    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjYtMDEvMDE5YmIzYWItN2ViNS03OTFmLTkyMDAtYTRhZGNiMmIwODc2LmpwZw==.jpg",
+    "summary_text": "Several blockchain analysts said they were unable to verify whether the Latin American nation held $60 billion in the cryptocurrency.",
+    "category": "fintech",
+    "_permalink": "/p/c1cdbfb571/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/c1cdbfb571/",
+    "_summary_240": "Several blockchain analysts said they were unable to verify whether the Latin American nation held $60 billion in the cryptocurrency.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/c1cdbfb571/thumbnail.png"
+  },
+  {
+    "title": "Why Amazon bought Bee, an AI wearable",
+    "url": "https://techcrunch.com/2026/01/12/why-amazon-bought-bee-an-ai-wearable/",
+    "published_at": "2026-01-12T16:55:44-05:00",
+    "source": "TechCrunch",
+    "summary": "Amazon explains where its wearable Bee fits in and whether it will merge with Alexa.",
+    "content_html": "",
+    "image_url": "https://techcrunch.com/wp-content/uploads/2024/07/HD_8500c2.jpg?resize=1200,675",
+    "summary_text": "Amazon explains where its wearable Bee fits in and whether it will merge with Alexa.",
+    "category": "ai",
+    "_permalink": "/p/ff074a0990/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/ff074a0990/",
+    "_summary_240": "Amazon explains where its wearable Bee fits in and whether it will merge with Alexa.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/ff074a0990/thumbnail.png"
+  },
+  {
+    "title": "The 3 Horsemen of B2B Progress: APIs, Data and AI",
+    "url": "https://www.pymnts.com/news/b2b-payments/2026/the-3-horsemen-of-b2b-progress-apis-data-and-ai/",
+    "published_at": "2026-01-12T16:53:30-05:00",
+    "source": "PYMNTS",
+    "summary": "The B2B payments playbook has historically revolved around winning on cost. This made the landscape, in many ways, relatively transactional and adversarial. Buyers wanted the lowest cost per transaction; providers competed on price, volume discounts and reliability. Differentiation was thin, and switching costs, while operationally annoying, were rarely strategic. But global supply chains, real-t...",
+    "content_html": "<p>The B2B payments playbook has historically revolved around winning on cost. This made the landscape, in many ways, relatively transactional and adversarial.</p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p>Buyers wanted the lowest cost per transaction; providers competed on price, volume discounts and reliability. Differentiation was thin, and switching costs, while operationally annoying, were rarely strategic.</p>\n<p>But global supply chains, real-time commerce and platform-based business models have changed the stakes. A payment is no longer just the end of a transaction in today\u2019s B2B world. It is a data event, a risk signal, a reconciliation artifact, and when done right, a source of insight that can compound over time.</p>\n<p>This, in turn, has shifted the operational focus from\u00a0fees\u00a0to\u00a0flow: how fast payments move, how rich and usable the data is along the way, and how effectively risk can be managed across entire networks.</p>\n<p>In today\u2019s environment, the question is no longer how cheaply can B2B payments be sent but how intelligently can firms and providers orchestrate value across the entire lifecycle of a payment. And that orchestration increasingly depends on three interlocking capabilities: application programming interfaces (APIs), data standardization and artificial intelligence (AI).</p>\n<p>Call them the three horsemen of B2B payments progress.</p>\n<p><strong>More here</strong>: <a href=\"https://www.pymnts.com/news/b2b-payments/2026/why-messy-merchant-data-could-make-b2b-payments-more-expensive/\" rel=\"noopener\" target=\"_blank\">Why Messy Merchant Data Could Make B2B Payments More Expensive</a></p>\n<h2><strong>From Cost Wars to Flow Wars</strong></h2>\n<p>APIs are often described as plumbing, but in B2B payments they are more like a nervous system. They transform static rails into programmable infrastructure, allowing money movement to be embedded directly into business workflows rather than bolted on at the end.</p>\n<p>With modern payment APIs, a procurement system can trigger a payment the moment goods are confirmed. A treasury platform can query liquidity in real time. A marketplace can embed compliance, payouts and FX directly into its core product. The payment becomes a function call\u2014repeatable, observable and composable. Payment APIs are a key function of embedded finance innovations, too.</p>\n<p>Findings in the report,\u00a0<a href=\"https://www.pymnts.com/study/b2b-platforms-expand-embedded-finance-customer-experience-revenue-gains/\" rel=\"noopener\" target=\"_blank\">\u201cB2B Platforms Expand Embedded Finance to Enhance Customer Experience, Drive Revenue,\u201d</a> a December PYMNTS Intelligence data brief produced in collaboration with <a href=\"https://www.marqeta.com/\" rel=\"noopener\" target=\"_blank\">Marqeta</a>, reveal that 54% of all B2B platforms surveyed report direct revenue increases from embedded finance, with platforms generating more than $1 billion annually far more likely to see material gains.</p>\n<p>APIs alone, however, are not enough. Without shared data standards, they may simply accelerate operational fragmentation.</p>\n<p><strong>See also</strong>: <a href=\"https://www.pymnts.com/news/b2b-payments/2026/banks-are-2026-secret-weapon-supplier-enablement/\" rel=\"noopener\" target=\"_blank\">Banks Are 2026\u2019s Secret Weapon for Supplier Enablement</a></p>\n<p>B2B payments generate enormous volumes of metadata: invoice numbers, purchase orders, tax details, shipping references and contractual terms. Historically, this data has been fragmented across formats, fields and systems. The result is a reconciliation tax that grows with scale and can silently erode margins.</p>\n<p><a href=\"https://www.linkedin.com/in/zachary-lynn-835992a/\" rel=\"noopener\" target=\"_blank\">Zach Lynn</a>,\u00a0head\u00a0of\u00a0customer data\u00a0and\u00a0insights\u00a0at\u00a0<a href=\"https://www.boostb2b.com/\" rel=\"noopener\" target=\"_blank\">Boost Payment Solutions</a>, wrote in the PYMNTS eBook \u201c<a href=\"https://www.pymnts.com/news/payments-innovation/2025/top-payments-leaders-on-why-trust-is-the-new-currency-in-real-time-money\" rel=\"noopener\" target=\"_blank\">Headlines That Will Shape the Close of 2025</a>\u201d that\u00a0<a href=\"https://www.pymnts.com/opinion/2025/data-becomes-the-new-currency-in-b2b-payments/\" rel=\"noopener\" target=\"_blank\">data exchange</a>\u00a0has become non-negotiable in the payments industry.</p>\n<p>\u201cIn today\u2019s environment, seamless, secure data flows between buyers, suppliers and financial institutions are essential,\u201d Lynn wrote. \u201cWhether it is enabling real-time reconciliation or supporting advanced analytics, the ability to move and leverage data is now table stakes for any organization serious about optimizing working capital.\u201d</p>\n<p>Standardized data can enable straight-through processing, reduce manual intervention and dramatically shorten cash cycles. More importantly, it can allow value to compound. Each transaction enriches the dataset, improving forecasting, working capital optimization and supplier intelligence.</p>\n<p><strong>Read more</strong>: <a href=\"https://www.pymnts.com/news/b2b-payments/2026/what-agentic-commerce-can-learn-from-b2b-payments/\" rel=\"noopener\" target=\"_blank\">What Agentic Commerce Can Learn From B2B Payments</a></p>\n<h2><strong>Why the Horsemen Matter More Together Than Alone</strong></h2>\n<p>If APIs are the nervous system of B2B payments modernization, and data standards the shared language, AI is the brain.</p>\n<p>Artificial intelligence can change what is possible in B2B payments by shifting risk management, fraud detection and decision-making from reactive to predictive. Instead of flagging problems after they occur, AI models can anticipate them across entire networks.</p>\n<p>Crucially, AI thrives in ecosystems where data is both abundant and high-quality, a state only possible when APIs and standardization are in place. As B2B networks digitize, the feedback loops become more powerful. Each transaction not only moves money, but also trains the system to become smarter, faster and with more predictive skill.</p>\n<p>In this world, payments are no longer just executed. They are interpreted. In the not-so-distant future, CFOs and treasurers could spend less time troubleshooting payments and more time orchestrating liquidity, optimizing working capital in real time and unlocking new financing models.</p>\n<p>As these three horsemen reshape the landscape, they are also redefining what it means to be a B2B payments company.</p>\n<p>Investing in APIs without addressing data standards creates technical debt. Standardizing data without leveraging AI leaves insight on the table. Deploying AI without real-time, high-quality inputs produces noise, not intelligence.</p>\n<p>The traditional model of processing transactions and charging a fee is giving way to something closer to network orchestration where value accrues not from moving money, but from optimizing how money, data and risk move together.</p>\n<p>\u201cIn the payments industry today,\u00a0<a href=\"https://www.pymnts.com/news/payments-innovation/2025/aws-ai-driven-payments-arent-the-future-theyre-the-present/\" rel=\"noopener\" target=\"_blank\">innovation</a>\u00a0is not a luxury; it\u2019s a lifeline,\u201d\u00a0<a href=\"https://www.linkedin.com/in/nileshdusane/\" rel=\"noopener\" target=\"_blank\">Nilesh Dusane</a>, global head of institutional payments at\u00a0<a href=\"https://aws.amazon.com/\" rel=\"noopener\" target=\"_blank\">AWS</a>, told PYMNTS in July.</p>\n<p>\u201cLegacy infrastructure simply can\u2019t keep up,\u201d he added. \u201cAnd the traditional model \u2026 those cycles are now too long and too costly.\u201d</p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/news/b2b-payments/2026/the-3-horsemen-of-b2b-progress-apis-data-and-ai/\">The 3 Horsemen of B2B Progress: APIs, Data and AI</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
+    "image_url": "https://www.pymnts.com/wp-content/uploads/2026/01/b2b-payments-three-horsemen.jpeg?w=457",
+    "summary_text": "The B2B payments playbook has historically revolved around winning on cost. This made the landscape, in many ways, relatively transactional and adversarial. Buyers wanted the lowest cost per transaction; providers competed on price, volume discounts and relia...",
+    "category": "fintech",
+    "_permalink": "/p/562836e8c5/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/562836e8c5/",
+    "_summary_240": "The B2B payments playbook has historically revolved around winning on cost. This made the landscape, in many ways, relatively transactional and adversarial. Buyers wanted the...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/562836e8c5/thumbnail.png"
+  },
+  {
+    "title": "Google removes some AI health summaries after investigation finds \u201cdangerous\u201d flaws",
+    "url": "https://arstechnica.com/ai/2026/01/google-removes-some-ai-health-summaries-after-investigation-finds-dangerous-flaws/",
+    "published_at": "2026-01-12T16:47:32-05:00",
+    "source": "Ars Technica",
+    "summary": "AI Overviews provided false liver test information experts called alarming.",
+    "content_html": "<p>On Sunday, Google <a href=\"https://www.theguardian.com/technology/2026/jan/11/google-ai-overviews-health-guardian-investigation\">removed</a> some of its <a href=\"https://arstechnica.com/information-technology/2024/05/googles-ai-overview-can-give-false-misleading-and-dangerous-answers/\">AI Overviews</a> health summaries after a Guardian investigation found people were being put at risk by false and misleading information. The removals came after the newspaper found that Google's generative AI feature delivered inaccurate health information at the top of search results, potentially leading seriously ill patients to mistakenly conclude they are in good health.</p>\n<p>Google disabled specific queries, such as \"what is the normal range for liver blood tests,\" after experts contacted by The Guardian flagged the results as dangerous. The report also highlighted a critical error regarding pancreatic cancer: The AI suggested patients avoid high-fat foods, a recommendation that contradicts standard medical guidance to maintain weight and could jeopardize patient health. Despite these findings, Google only deactivated the summaries for the liver test queries, leaving other potentially harmful answers accessible.</p>\n<p>The investigation revealed that searching for liver test norms generated raw data tables (listing specific enzymes like ALT, AST, and alkaline phosphatase) that lacked essential context. The AI feature also failed to adjust these figures for patient demographics such as age, sex, and ethnicity. Experts warned that because the AI model's definition of \"normal\" often differed from actual medical standards, patients with serious liver conditions might mistakenly believe they are healthy and skip necessary follow-up care.</p><p><a href=\"https://arstechnica.com/ai/2026/01/google-removes-some-ai-health-summaries-after-investigation-finds-dangerous-flaws/\">Read full article</a></p>\n<p><a href=\"https://arstechnica.com/ai/2026/01/google-removes-some-ai-health-summaries-after-investigation-finds-dangerous-flaws/#comments\">Comments</a></p>",
+    "image_url": "https://cdn.arstechnica.net/wp-content/uploads/2024/05/GettyImages-1488311999-1152x648.jpg",
+    "summary_text": "AI Overviews provided false liver test information experts called alarming.",
+    "category": "ai",
+    "_permalink": "/p/61af5b5360/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/61af5b5360/",
+    "_summary_240": "AI Overviews provided false liver test information experts called alarming.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/61af5b5360/thumbnail.png"
+  },
+  {
+    "title": "Fitch Ratings flags Bitcoin-backed securities for \u2018high market value risk\u2019",
+    "url": "https://cointelegraph.com/news/fitch-warns-bitcoin-backed-securities-market-value-risk?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "published_at": "2026-01-12T16:46:58-05:00",
+    "source": "Cointelegraph",
+    "summary": "Fitch said sharp Bitcoin price swings could quickly erode collateral backing these securities, increasing the risk of losses for lenders and investors.",
+    "content_html": "",
+    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjYtMDEvMDE5YmIzNDQtZmM2ZC03OTM4LWE3NzQtZTczOTg2ZWE0ZGJiLmpwZw==.jpg",
+    "summary_text": "Fitch said sharp Bitcoin price swings could quickly erode collateral backing these securities, increasing the risk of losses for lenders and investors.",
+    "category": "fintech",
+    "_permalink": "/p/04ab9e5693/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/04ab9e5693/",
+    "_summary_240": "Fitch said sharp Bitcoin price swings could quickly erode collateral backing these securities, increasing the risk of losses for lenders and investors.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/04ab9e5693/thumbnail.png"
+  },
+  {
+    "title": "Mark Zuckerberg says Meta is launching its own AI infrastructure initiative",
+    "url": "https://techcrunch.com/2026/01/12/mark-zuckerberg-says-meta-is-launching-its-own-ai-infrastructure-initiative/",
+    "published_at": "2026-01-12T16:44:43-05:00",
+    "source": "TechCrunch",
+    "summary": "Meta is ramping up its efforts to build out its AI capacity.",
+    "content_html": "",
+    "image_url": "https://techcrunch.com/wp-content/uploads/2025/01/GettyImages-2173579488.jpg?resize=1200,799",
+    "summary_text": "Meta is ramping up its efforts to build out its AI capacity.",
+    "category": "ai",
+    "_permalink": "/p/3c9e861fc4/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/3c9e861fc4/",
+    "_summary_240": "Meta is ramping up its efforts to build out its AI capacity.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/3c9e861fc4/thumbnail.png"
+  },
+  {
+    "title": "Musk Moves Back Into Trump Orbit",
+    "url": "https://www.bloomberg.com/news/videos/2026-01-12/musk-moves-back-into-trump-orbit-video",
+    "published_at": "2026-01-12T16:38:57-05:00",
+    "source": "Bloomberg Technology",
+    "summary": "Elon Musk appears to be getting closer to President Donald Trump again. He'll be speaking at an event with Defense Secretary Pete Hegseth. The political panel on Balance of Power discusses. (Source: Bloomberg)",
+    "content_html": "",
+    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ieeiw6RCPIxQ/v3/1200x-1.jpg",
+    "summary_text": "Elon Musk appears to be getting closer to President Donald Trump again. He'll be speaking at an event with Defense Secretary Pete Hegseth. The political panel on Balance of Power discusses. (Source: Bloomberg)",
+    "category": "fintech",
+    "_permalink": "/p/d060ee13bf/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/d060ee13bf/",
+    "_summary_240": "Elon Musk appears to be getting closer to President Donald Trump again. He'll be speaking at an event with Defense Secretary Pete Hegseth. The political panel on Balance of Power...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/d060ee13bf/thumbnail.png"
+  },
+  {
     "title": "Apple Teams Up With Google for A.I. in Its Products",
     "url": "https://www.nytimes.com/2026/01/12/technology/apple-google-ai-partnership.html",
     "published_at": "2026-01-12T16:23:30-05:00",
@@ -180,21 +285,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/52f638e729/thumbnail.png"
   },
   {
-    "title": "Meta Picks Former White House Advisor to Drive AI Projects",
-    "url": "https://www.pymnts.com/meta/2026/meta-picks-former-white-house-advisor-to-drive-ai-projects/",
-    "published_at": "2026-01-12T14:46:32-05:00",
-    "source": "PYMNTS",
-    "summary": "Meta has appointed new executives to head various aspects of its artificial intelligence (AI) initiatives. \u201cMeta is planning to build tens of gigawatts this decade, and hundreds of gigawatts or more over time,\u201d CEO Mark Zuckerberg wrote on Facebook Monday (Jan. 12). \u201cHow we engineer, invest, and partner to build this infrastructure will become [\u2026] The post Meta Picks Former White House Advisor to...",
-    "content_html": "<p><a href=\"https://www.meta.com/?srsltid=AfmBOop4SInMqHeVpbJF1kk3aJQB4fxHnqzWjqp1SFKT37S7MC0cBJ3r\" rel=\"noopener\" target=\"_blank\">Meta</a> has appointed new executives to head various aspects of its artificial intelligence (AI) initiatives.</p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p>\u201cMeta is planning to build tens of gigawatts this decade, and hundreds of gigawatts or more over time,\u201d CEO Mark Zuckerberg <a href=\"https://www.facebook.com/zuck/posts/pfbid02ZL5513GnvhGVn1oYr9eqgohK2TpML2ZTQf9omg3HYtXCHCuCEPTwXWGWxp8LuWmil\" rel=\"noopener\" target=\"_blank\">wrote</a> on Facebook Monday (Jan. 12). \u201cHow we engineer, invest, and partner to build this infrastructure will become a strategic advantage.\u201d</p>\n<p>Zuckerberg made that announcement soon after revealing Meta had appointed <a href=\"https://about.fb.com/news/2026/01/dina-powell-mccormick-joins-meta-as-president-and-vice-chairman/\" rel=\"noopener\" target=\"_blank\">Dina Powell McCormick</a>, a one-time top adviser to President Donald Trump, to a newly created senior management position focused on collaborating with governments and investors on artificial intelligence (AI) projects.</p>\n<p>In addition, the company has promoted a pair of executives to run its \u201cMeta Compute\u201d data center project.</p>\n<p><a href=\"https://www.linkedin.com/in/sjanardhan/\" rel=\"noopener\" target=\"_blank\">Santosh Janardhan,</a> Meta\u2019s head of infrastructure, will continue overseeing the company\u2019s fleet of data centers and their technical architecture.</p>\n<p>Meanwhile <a href=\"https://www.linkedin.com/in/dannygross1/\" rel=\"noopener\" target=\"_blank\">Daniel Gross</a>, one of the <a href=\"https://www.pymnts.com/artificial-intelligence-2/2025/report-ai-startup-safe-superintelligence-aims-to-quadruple-valuation-to-20-billion/\" rel=\"noopener\" target=\"_blank\">co-founders</a> of <a href=\"https://ssi.inc/\" rel=\"noopener\" target=\"_blank\">Safe Superintelligence</a> who joined Meta last year, will oversee a new group focused on \u201clong-term capacity strategy, supplier partnerships, industry analysis, planning, and business modeling,\u201d Zuckerberg wrote.</p>\n<p>Powell McCormick, herself a former member of Meta\u2019s board, will become a new president and vice chairman to \u201cwork on partnering with governments and sovereigns to build, deploy, invest in, and finance Meta\u2019s infrastructure,\u201d the CEO added.</p>\n<p>In related news, Meta last week inked agreements with <a href=\"https://www.pymnts.com/meta/2026/meta-signs-deals-with-3-nuclear-energy-companies-power-data-centers/\" rel=\"noopener\" target=\"_blank\">three nuclear energy companies</a> to help power its data centers. The company said the agreements with Vistra, TerraPower and Oklo, along with one signed with Constellation Energy last year, make Meta one of the top buyers of nuclear energy in the United States.</p>\n<p>\u201cState-of-the-art data centers and AI infrastructure are essential to securing America\u2019s position as a global leader in AI,\u201d <a href=\"https://www.linkedin.com/in/joel-kaplan-63905618\" rel=\"noopener\" target=\"_blank\">Joel Kaplan</a>, Meta\u2019s chief global affairs officer, said in a news release. \u201cNuclear energy will help power our AI future, strengthen our country\u2019s energy infrastructure, and provide clean, reliable electricity for everyone.\u201d</p>\n<p>Meta also recently Meta acquired <a href=\"https://manus.im/\" rel=\"noopener\" target=\"_blank\">Manus</a>, an AI startup that offers a <a href=\"https://www.pymnts.com/news/regulation/2026/meta-2-billion-dollar-manus-deal-meets-regulatory-scrutiny-china/\" rel=\"noopener\" target=\"_blank\">consumer-facing assistant</a> with millions of paying users, for upwards of $2 billion.</p>\n<p>\u201cBy acquiring Manus, Meta gains technology and distribution, along with immediate exposure to subscription revenue and insight into consumer willingness to pay for AI-powered assistance,\u201d PYMNTS wrote last month. \u201cThe transaction also <a href=\"https://www.pymnts.com/big-tech/2025/big-tech-momentum-holds-year-end-with-meta-buying-manus/\" rel=\"noopener\" target=\"_blank\">shortens the timeline</a> for rolling out premium AI offerings without having to build a paid user base from scratch.\u201d</p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/meta/2026/meta-picks-former-white-house-advisor-to-drive-ai-projects/\">Meta Picks Former White House Advisor to Drive AI Projects</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
-    "image_url": "https://www.pymnts.com/wp-content/uploads/2025/11/Meta-data-centers.jpg?w=457",
-    "summary_text": "Meta has appointed new executives to head various aspects of its artificial intelligence (AI) initiatives. \u201cMeta is planning to build tens of gigawatts this decade, and hundreds of gigawatts or more over time,\u201d CEO Mark Zuckerberg wrote on Facebook Monday (Ja...",
-    "category": "ai",
-    "_permalink": "/p/e2be662496/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/e2be662496/",
-    "_summary_240": "Meta has appointed new executives to head various aspects of its artificial intelligence (AI) initiatives. \u201cMeta is planning to build tens of gigawatts this decade, and hundreds...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/e2be662496/thumbnail.png"
-  },
-  {
     "title": "Anthropic wants you to use Claude to \u2018Cowork\u2019 in latest AI agent push",
     "url": "https://www.theverge.com/ai-artificial-intelligence/860730/anthropic-cowork-feature-ai-agents-claude-code",
     "published_at": "2026-01-12T14:30:00-05:00",
@@ -223,21 +313,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/f996ee9e5e/",
     "_summary_240": "Amazon is counting on its Alexa footprint to help it gain traction in the consumer AI race.",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/f996ee9e5e/thumbnail.png"
-  },
-  {
-    "title": "Anthropic Increases Medical Focus With New Claude Program",
-    "url": "https://www.pymnts.com/news/artificial-intelligence/2026/anthropic-increases-medical-focus-with-new-claude-program/",
-    "published_at": "2026-01-12T14:03:26-05:00",
-    "source": "PYMNTS",
-    "summary": "Anthropic has introduced a series of healthcare-focused integrations for its Claude AI model. The artificial intelligence (AI) startup\u2019s \u201cClaude for Healthcare\u201d program, announced Sunday (Jan. 11), is a set of tools and resources that lets healthcare providers, patients and payers use Claude for medical purposes via \u201cHIPAA-ready products.\u201d Among the offerings is a new [\u2026] The post Anthropic Incre...",
-    "content_html": "<p><a href=\"https://www.anthropic.com/\" rel=\"noopener\" target=\"_blank\">Anthropic</a> has introduced a series of healthcare-focused integrations for its Claude AI model.</p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p>The artificial intelligence (AI) startup\u2019s \u201cClaude for Healthcare\u201d program, <a href=\"https://www.anthropic.com/news/healthcare-life-sciences\" rel=\"noopener\" target=\"_blank\">announced</a> Sunday (Jan. 11), is a set of tools and resources that lets healthcare providers, patients and payers use Claude for medical purposes via \u201cHIPAA-ready products.\u201d</p>\n<p>Among the offerings is a new connection to federal databases like the <a href=\"https://www.cms.gov/\" rel=\"noopener\" target=\"_blank\">Centers for Medicare &amp; Medicaid Services (CMS)</a>.</p>\n<p>\u201cThis enables Claude to verify locally-accurate coverage requirements, support prior authorization checks, and help build stronger claims appeals,\u201d the company said. \u201cThis connector is designed to help revenue cycle, compliance, and patient-facing teams work more efficiently with Medicare policy.\u201d</p>\n<p>In addition, the model can assist with medical billing accuracy, provider verification and the coordination of patient messages to ensure urgent inquiries are prioritized.</p>\n<p>On the consumer side, Anthropic is integrating Claude with personal health platforms like Apple Health and Android Health Connect. Subscribers to Claude\u2019s premium tiers can let AI analyze their lab results, summarize medical histories, and prepare specific questions for upcoming doctor visits.</p>\n<p>To address privacy concerns in the tightly regulated medical field, the company said that users must explicitly opt-in to share data and that health information is not used to train its underlying models. The latest version, Opus 4.5, also features improved factual accuracy to lower the risk of \u201challucinations\u201d in clinical settings.</p>\n<p>Writing about the use of <a href=\"https://www.pymnts.com/artificial-intelligence-2/2026/openai-says-ai-is-now-informal-front-door-to-healthcare/\" rel=\"noopener\" target=\"_blank\">AI in the healthcare field</a> last week, PYMNTS noted that the expansion of the technology creates both benefits and risks.</p>\n<p>\u201cOn the benefit side, AI absorbs demand that healthcare systems struggle to manage efficiently,\u201d the report said. \u201cBy answering basic questions, clarifying medical language, and helping users navigate insurance and administrative complexity, AI reduces friction for both patients and providers.\u201d</p>\n<p>All the same, scale can magnify risk. Generative AI can produce responses that seem reliable but are <a href=\"https://www.pymnts.com/artificial-intelligence-2/2026/27percent-health-systems-have-commercial-ai-licenses/\" rel=\"noopener\" target=\"_blank\">incomplete or inaccurate</a>, and mistakes in healthcare come with higher stakes than in most consumer applications. Researchers and clinicians have cautioned that AI may generate unsafe guidance when users don\u2019t have the right context or ask ambiguous questions.</p>\n<p>\u201cPrivacy and accountability remain open issues,\u201d PYMNTS added. \u201cAs consumers share sensitive health information with AI tools, concerns persist about data protection and regulatory oversight. Liability also remains unclear when AI-generated guidance influences patient outcomes, raising questions for developers, providers and policymakers.\u201d</p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/news/artificial-intelligence/2026/anthropic-increases-medical-focus-with-new-claude-program/\">Anthropic Increases Medical Focus With New Claude Program</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
-    "image_url": "https://www.pymnts.com/wp-content/uploads/2024/07/Anthropic-Claude-AI.jpg?w=457",
-    "summary_text": "Anthropic has introduced a series of healthcare-focused integrations for its Claude AI model. The artificial intelligence (AI) startup\u2019s \u201cClaude for Healthcare\u201d program, announced Sunday (Jan. 11), is a set of tools and resources that lets healthcare provider...",
-    "category": "ai",
-    "_permalink": "/p/649bf08be0/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/649bf08be0/",
-    "_summary_240": "Anthropic has introduced a series of healthcare-focused integrations for its Claude AI model. The artificial intelligence (AI) startup\u2019s \u201cClaude for Healthcare\u201d program,...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/649bf08be0/thumbnail.png"
   },
   {
     "title": "Why your LLM bill is exploding \u2014 and how semantic caching can cut it by 73%",
@@ -461,14 +536,14 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/afbc033838/thumbnail.png"
   },
   {
-    "title": "Meta Taps Powell McCormick, Executive Group to Drive AI Buildout",
+    "title": "Meta Hires Trump Ally Powell McCormick to Drive AI Buildout",
     "url": "https://www.bloomberg.com/news/articles/2026-01-12/meta-taps-former-trump-advisor-for-new-role-driving-ai-buildout",
     "published_at": "2026-01-12T08:45:00-05:00",
     "source": "Bloomberg Technology",
-    "summary": "Meta Platforms Inc. has assembled a new team of senior executives to focus on the company\u2019s growing list of expensive data center projects \u2014 a group that will help steward the hundreds of billions it plans to investment into artificial intelligence infrastructure as it pursues \u201csuperintelligence\u201d",
+    "summary": "Meta Platforms Inc. has appointed a former top adviser to US President Donald Trump to a newly created senior management role focused on partnering with governments and investors on AI.",
     "content_html": "Dina Powell McCormick",
     "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iKG7SKKTivtQ/v1/1200x-1.jpg",
-    "summary_text": "Meta Platforms Inc. has assembled a new team of senior executives to focus on the company\u2019s growing list of expensive data center projects \u2014 a group that will help steward the hundreds of billions it plans to investment into artificial intelligence infrastruc...",
+    "summary_text": "Meta Platforms Inc. has appointed a former top adviser to US President Donald Trump to a newly created senior management role focused on partnering with governments and investors on AI.",
     "category": "ai"
   },
   {
@@ -659,21 +734,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/a620401436/thumbnail.png"
   },
   {
-    "title": "India Space Agency Rocket Fails to Launch Second Time in A Year",
-    "url": "https://www.bloomberg.com/news/articles/2026-01-12/india-space-agency-rocket-fails-to-launch-second-time-in-a-year",
-    "published_at": "2026-01-12T01:20:55-05:00",
-    "source": "Bloomberg Technology",
-    "summary": "India\u2019s space agency began 2026 with a setback after its rocket failed for the second time to achieve the desired orbit, underscoring challenges to the country\u2019s ambitions.",
-    "content_html": "",
-    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iVGCE5GEDMEY/v0/1200x-1.jpg",
-    "summary_text": "India\u2019s space agency began 2026 with a setback after its rocket failed for the second time to achieve the desired orbit, underscoring challenges to the country\u2019s ambitions.",
-    "category": "fintech",
-    "_permalink": "/p/340fd10cd6/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/340fd10cd6/",
-    "_summary_240": "India\u2019s space agency began 2026 with a setback after its rocket failed for the second time to achieve the desired orbit, underscoring challenges to the country\u2019s ambitions.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/340fd10cd6/thumbnail.png"
-  },
-  {
     "title": "Tether\u2019s role in Venezuela, Iran highlights the duality of stablecoins",
     "url": "https://cointelegraph.com/news/tether-role-venezuela-iran-highlights-stablecoin-duality?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
     "published_at": "2026-01-12T01:20:54-05:00",
@@ -717,36 +777,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/7b9aa21af1/",
     "_summary_240": "South Korea\u2019s FSC reportedly shared guidelines allowing listed companies to invest up to 5% of equity in the top 20 cryptocurrencies, ending a 2017 ban.",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/7b9aa21af1/thumbnail.png"
-  },
-  {
-    "title": "\u200b\u200bTop UK Labour lawmakers push to ban political donations made in crypto",
-    "url": "https://cointelegraph.com/news/uk-lawmakers-push-ban-political-donations-crypto?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-    "published_at": "2026-01-12T00:48:18-05:00",
-    "source": "Cointelegraph",
-    "summary": "The chairs of seven UK government committees have asked for a ban on crypto donations to be added to an elections bill set to be introduced soon.",
-    "content_html": "",
-    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjYtMDEvMDE5YmFmODktMmNlZS03YWM4LTg1NDItZDU3YTM3MThmN2I0LmpwZw==.jpg",
-    "summary_text": "The chairs of seven UK government committees have asked for a ban on crypto donations to be added to an elections bill set to be introduced soon.",
-    "category": "fintech",
-    "_permalink": "/p/76145ad86e/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/76145ad86e/",
-    "_summary_240": "The chairs of seven UK government committees have asked for a ban on crypto donations to be added to an elections bill set to be introduced soon.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/76145ad86e/thumbnail.png"
-  },
-  {
-    "title": "Ethereum needs better decentralized stablecoins: Vitalik Buterin",
-    "url": "https://cointelegraph.com/news/vitalik-buterin-calls-for-better-decentralized-stablecoins?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-    "published_at": "2026-01-12T00:09:46-05:00",
-    "source": "Cointelegraph",
-    "summary": "It isn\u2019t a good idea to fully back a stablecoin with a single fiat currency, because if that nation-state fails, so will the stablecoin, argues Ethereum co-founder Vitalik Buterin.",
-    "content_html": "",
-    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjYtMDEvMDE5YmFmZjktNDRiZS03MGE5LTkzZjgtMjdhMmRmYzcyNmM3LmpwZw==.jpg",
-    "summary_text": "It isn\u2019t a good idea to fully back a stablecoin with a single fiat currency, because if that nation-state fails, so will the stablecoin, argues Ethereum co-founder Vitalik Buterin.",
-    "category": "fintech",
-    "_permalink": "/p/b71b4c86db/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/b71b4c86db/",
-    "_summary_240": "It isn\u2019t a good idea to fully back a stablecoin with a single fiat currency, because if that nation-state fails, so will the stablecoin, argues Ethereum co-founder Vitalik Buterin.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/b71b4c86db/thumbnail.png"
   },
   {
     "title": "The risky bet by AI start-ups",
@@ -839,21 +869,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/14794d115a/thumbnail.png"
   },
   {
-    "title": "Google removes AI Overviews for certain medical queries",
-    "url": "https://techcrunch.com/2026/01/11/google-removes-ai-overviews-for-certain-medical-queries/",
-    "published_at": "2026-01-11T12:56:41-05:00",
-    "source": "TechCrunch",
-    "summary": "This follows an investigation by The Guardian that found Google AI Overviews offering misleading information in response to some health-related queries.",
-    "content_html": "",
-    "image_url": "https://techcrunch.com/wp-content/uploads/2024/05/Sundar-AI-Overviews-IO-2024.png?resize=1200,698",
-    "summary_text": "This follows an investigation by The Guardian that found Google AI Overviews offering misleading information in response to some health-related queries.",
-    "category": "ai",
-    "_permalink": "/p/b398bea834/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/b398bea834/",
-    "_summary_240": "This follows an investigation by The Guardian that found Google AI Overviews offering misleading information in response to some health-related queries.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/b398bea834/thumbnail.png"
-  },
-  {
     "title": "\u2018South Korea\u2019s Google\u2019 pitches AI alternative to US and China",
     "url": "https://www.ft.com/content/973d668a-ebaf-493e-b278-a4f584937d45",
     "published_at": "2026-01-11T00:00:02-05:00",
@@ -922,11 +937,7 @@
     "content_html": "",
     "image_url": "https://images.ctfassets.net/jdtwqhzvc2n1/2xoHRN3zObBBPoj4Q6g1BB/252e8dcdf84db736d445bd5202bbcf20/crimedy7_illustration_of_a_robot_orchestra_abstract_--ar_169__c115b42c-004a-4563-b055-bc4a5faa08c6_0.png?w=800&amp;q=75",
     "summary_text": "A new framework from researchers Alexander and Jacob Roman rejects the complexity of current AI tools, offering a synchronous, type-safe alternative designed for reproducibility and cost-conscious science. In the rush to build autonomous AI agents, developers...",
-    "category": "ai",
-    "_permalink": "/p/2b2d090ac8/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/2b2d090ac8/",
-    "_summary_240": "A new framework from researchers Alexander and Jacob Roman rejects the complexity of current AI tools, offering a synchronous, type-safe alternative designed for reproducibility...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/2b2d090ac8/thumbnail.png"
+    "category": "ai"
   },
   {
     "title": "How Elon Musk\u2019s Grok spread sexual deepfakes and child exploitation images",
