@@ -1,5 +1,35 @@
 [
   {
+    "title": "Why your LLM bill is exploding \u2014 and how semantic caching can cut it by 73%",
+    "url": "https://venturebeat.com/orchestration/why-your-llm-bill-is-exploding-and-how-semantic-caching-can-cut-it-by-73",
+    "published_at": "2026-01-12T14:00:00-05:00",
+    "source": "VentureBeat",
+    "summary": "Our LLM API bill was growing 30% month-over-month. Traffic was increasing, but not that fast. When I analyzed our query logs, I found the real problem: Users ask the same questions in different ways. \"What's your return policy?,\" \"How do I return something?\", and \"Can I get a refund?\" were all hitting our LLM separately, generating nearly identical responses, each incurring full API costs. Exact-...",
+    "content_html": "",
+    "image_url": "https://images.ctfassets.net/jdtwqhzvc2n1/7iyQoeSwdOqqpfcE0PFWgF/48db7d0305019eee107028d9f018d2ac/Semantic_caching.png?w=800&amp;q=75",
+    "summary_text": "Our LLM API bill was growing 30% month-over-month. Traffic was increasing, but not that fast. When I analyzed our query logs, I found the real problem: Users ask the same questions in different ways. \"What's your return policy?,\" \"How do I return something?\",...",
+    "category": "ai",
+    "_permalink": "/p/c5a3e2919a/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/c5a3e2919a/",
+    "_summary_240": "Our LLM API bill was growing 30% month-over-month. Traffic was increasing, but not that fast. When I analyzed our query logs, I found the real problem: Users ask the same...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/c5a3e2919a/thumbnail.png"
+  },
+  {
+    "title": "New AI Model Lets Robot Neo Learn Tasks From Scratch",
+    "url": "https://www.bloomberg.com/news/videos/2026-01-12/new-ai-model-lets-robot-neo-learn-tasks-from-scratch-video",
+    "published_at": "2026-01-12T13:45:26-05:00",
+    "source": "Bloomberg Technology",
+    "summary": "Humanoid maker 1X Technologies has introduced a new AI model that it says allows its home robot Neo to perform new tasks from a video or voice prompt even if the robot has zero experience doing the task before. 1X Technologies CEO and CTO Bernt B\u00f8rnich joins Caroline Hyde and Ed Ludlow on \u201cBloomberg Tech.\u201d (Source: Bloomberg)",
+    "content_html": "",
+    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/i.VpzQBvimv4/v3/1200x-1.jpg",
+    "summary_text": "Humanoid maker 1X Technologies has introduced a new AI model that it says allows its home robot Neo to perform new tasks from a video or voice prompt even if the robot has zero experience doing the task before. 1X Technologies CEO and CTO Bernt B\u00f8rnich joins ...",
+    "category": "ai",
+    "_permalink": "/p/14b2fdcea2/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/14b2fdcea2/",
+    "_summary_240": "Humanoid maker 1X Technologies has introduced a new AI model that it says allows its home robot Neo to perform new tasks from a video or voice prompt even if the robot has zero...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/14b2fdcea2/thumbnail.png"
+  },
+  {
     "title": "Fintech firm Betterment confirms data breach after hackers send fake crypto scam notification to users",
     "url": "https://techcrunch.com/2026/01/12/fintech-firm-betterment-confirms-data-breach-after-hackers-send-fake-crypto-scam-notification-to-users/",
     "published_at": "2026-01-12T13:14:10-05:00",
@@ -96,7 +126,7 @@
     "source": "Microsoft News",
     "summary": "The post Bridging the gap between AI and medicine: Claude in Microsoft Foundry advances capabilities appeared first on Source .",
     "content_html": "<article class=\"mssrc-posts font-- has--theme\" id=\"single-23363\">\n\t<div class=\"acf-innerblocks-container\"></div>\t\t\t<section class=\"post-tags\">\n\t\t\t\t<div class=\"post-tags__content wp-block-columns\">\n\t\t\t\t\t<div class=\"post-tags__header wp-block-column flex-basis-25 has-text-align-right\">\n\t\t\t\t\t\t<h4 class=\"sr-only\">Tags: </h4>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"post-tags__body wp-block-column flex-basis-60\">\n\t\t\t\t\t\t<ul class=\"post-tags__list\"><li class=\"post-tags__item\"><a class=\"kicker inline-block post__meta--tags\" href=\"https://news.microsoft.com/source/tag/ai/\">AI</a></li></ul>\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</section>\n\t\t\t</article><p>The post <a href=\"https://www.microsoft.com/en-us/industry/blog/healthcare/2026/01/11/bridging-the-gap-between-ai-and-medicine-claude-in-microsoft-foundry-advances-capabilities-for-healthcare-and-life-sciences-customers/\">Bridging the gap between AI and medicine: Claude in Microsoft Foundry advances capabilities</a> appeared first on <a href=\"https://news.microsoft.com/source\">Source</a>.</p>",
-    "image_url": "https://www.microsoft.com/en-us/industry/blog/wp-content/uploads/2026/01/Image-3-1024x576.png",
+    "image_url": "https://www.microsoft.com/en-us/industry/blog/wp-content/uploads/2026/01/1-12-Moment_v5.jpg",
     "summary_text": "The post Bridging the gap between AI and medicine: Claude in Microsoft Foundry advances capabilities appeared first on Source .",
     "category": "ai",
     "_permalink": "/p/c17d0be464/",
@@ -524,21 +554,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/10583d87ca/thumbnail.png"
   },
   {
-    "title": "North American Middle-Market Firms Signal Major Working Capital Expansion in 2026",
-    "url": "https://www.pymnts.com/visa/2026/north-american-middle-market-firms-signal-major-working-capital-expansion-in-2026/",
-    "published_at": "2026-01-12T04:02:22-05:00",
-    "source": "PYMNTS",
-    "summary": "The \u201c2025\u20132026 Growth Corporates Working Capital Index: North America Edition,\u201d a collaboration between PYMNTS Intelligence and Visa, examines how middle-market companies across the United States and Canada are rethinking working capital as a strategic asset rather than as a defensive necessity. Based on a double-blind survey of 322 CFOs and Treasurers at companies with $50 million [\u2026] The post N...",
-    "content_html": "<p>The\u00a0\u201c<strong>2025\u20132026 Growth Corporates Working Capital Index: North America Edition</strong>,\u201d a collaboration between <strong>PYMNTS Intelligence</strong> and <strong><a href=\"https://usa.visa.com/\" rel=\"noopener\" target=\"_blank\">Visa</a></strong>, examines how middle-market companies across the United States and Canada are rethinking working capital as a strategic asset rather than as a defensive necessity. Based on a double-blind survey of 322 CFOs and Treasurers at companies with $50 million to $1 billion in annual revenue, the report reveals a decisive shift in how liquidity is managed, deployed and measured as firms navigate economic uncertainty and prepare for growth in 2026.</p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p>Working capital adoption is now widespread, particularly in the U.S., where 85% of Growth Corporates use external solutions. Yet the report also highlights meaningful differences across North America. Although they adopt these tools at lower rates, Canadian firms generate higher returns when they deploy them. The results? They\u2019ve unlocked a higher share of revenue through early payments, improved supplier terms and tightened inventory control. Across both markets, better cash-flow visibility is reducing unpredictable financing needs and allowing finance leaders to shift from a reactive liquidity management to a more deliberate, planned use of capital.</p>\n<p>Technology plays a central role in this evolution. Commercial cards are gaining traction as tools that streamline payment workflows, improve control and accelerate receivables. Adoption of artificial intelligence for working capital efficiency has reached 42% across North America. Firms using AI report significantly higher bottom-line gains, underscoring the connection between automation, visibility and smarter capital deployment. Looking ahead, momentum continues to build. More than eight in 10 Growth Corporates plan to use working capital solutions in 2026, with increasing emphasis on agility, resilience and readiness for both planned investments and unexpected opportunities.</p>\n<h3>Inside the 2025\u20132026 Growth Corporates Working Capital Index: North America Edition:</h3>\n<ul>\n<li><strong>Working capital strategy is reshaping payment behavior.</strong> Growth Corporates are using liquidity to pay suppliers faster while collecting receivables sooner. Doing so tightens cash cycles and reduces revenue lost to late payments.</li>\n<li><strong>Cards are emerging as a control and speed mechanism.</strong> Expanded use of commercial card payments and card acceptance is helping CFOs and Treasurers reduce operational friction, lower days sales outstanding and protect earned revenue.</li>\n<li><strong>Finance leaders are preparing for volatility with agility.</strong> Projected 2026 usage shows a shift toward adaptive and emergency-driven applications of working capital. This signals a growing focus on resilience alongside growth.</li>\n</ul>\n<p>Together, these insights reveal how North American Growth Corporates are redefining working capital as a lever for competitiveness, efficiency and long-term financial readiness.</p>\n<div class=\"my-5\">\n<div id=\"DownloadForm\">\n  <div class=\"container free-download-sec\">\n    <div class=\"inner\">\n      <div class=\"row\">\n        <div class=\"col-md-5 d-flex flex-row justify-content-center align-items-center\">\n          <div>\n            <h2 class=\"report-title px-4 text-start fw-bold mb-3 mb-md-0\">\n              <small class=\"text-start fw-bold d-block small mb-2\">\n                Download the Index\n              </small>\n              2025\u20132026 Growth Corporates Working Capital Index: North America Edition\n            </h2>\n            \n          </div>\n        </div>\n        <div class=\"col-md-7\">\n          <div class=\" bg-white rounded-3 p-4 shadow\">\n            \n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</div></div>\n<h3>About the report</h3>\n<p>The \u201c<strong>2025\u20132026 Growth Corporates Working Capital Index: North America Edition</strong>\u201d is a <strong>PYMNTS Intelligence</strong> report commissioned by <a href=\"https://usa.visa.com/\" rel=\"noopener\" target=\"_blank\"><strong>Visa</strong></a>. The report is based on a survey held between May 23, 2025, and July 18, 2025. We surveyed 322 CFOs and Treasurers across 10 industry segments in the United States and Canada. The questionnaire included 40 questions on business metrics, utilization of external working capital, plans for the coming year, perceptions of future macroeconomic conditions and other survey concepts. Firms were then assigned a score from 0 to 100. A higher score indicates a greater likelihood of reduced DPO within the next 12 months. Firms scoring in the top and bottom 20% were classified into the corresponding top and bottom performance tiers.</p>\n<p>For more on Growth Corporate\u2019s working capital use, view Visa\u2019s <strong><a href=\"https://workingcapitalindex.visa.com/en\" rel=\"noopener\" target=\"_blank\">WCI Dynamic Report</a></strong>.</p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/visa/2026/north-american-middle-market-firms-signal-major-working-capital-expansion-in-2026/\">North American Middle-Market Firms Signal Major Working Capital Expansion in 2026</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
-    "image_url": "https://www.pymnts.com/wp-content/uploads/2026/01/north-american-growth-corporates-plan-working-capital-expansion-in-2026-hero.jpg?w=457",
-    "summary_text": "The \u201c2025\u20132026 Growth Corporates Working Capital Index: North America Edition,\u201d a collaboration between PYMNTS Intelligence and Visa, examines how middle-market companies across the United States and Canada are rethinking working capital as a strategic asset ...",
-    "category": "fintech",
-    "_permalink": "/p/8383f3ba6f/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/8383f3ba6f/",
-    "_summary_240": "The \u201c2025\u20132026 Growth Corporates Working Capital Index: North America Edition,\u201d a collaboration between PYMNTS Intelligence and Visa, examines how middle-market companies across...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/8383f3ba6f/thumbnail.png"
-  },
-  {
     "title": "Fed rate cuts under fire: 5 things to know in Bitcoin this week",
     "url": "https://cointelegraph.com/news/fed-rate-cuts-under-fire-5-things-bitcoin-this-week?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
     "published_at": "2026-01-12T04:01:37-05:00",
@@ -734,21 +749,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/39a33184fd/thumbnail.png"
   },
   {
-    "title": "HD Hyundai Robotics Hires Banks for South Korea IPO",
-    "url": "https://www.bloomberg.com/news/articles/2026-01-12/hd-hyundai-robotics-hires-banks-for-south-korea-ipo",
-    "published_at": "2026-01-11T23:53:06-05:00",
-    "source": "Bloomberg Technology",
-    "summary": "HD Hyundai Robotics Co. has hired banks to work on its South Korea initial public offering at a time when global companies are racing to develop human-like robots.",
-    "content_html": "",
-    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ia6e.z5qAJo0/v0/1200x-1.jpg",
-    "summary_text": "HD Hyundai Robotics Co. has hired banks to work on its South Korea initial public offering at a time when global companies are racing to develop human-like robots.",
-    "category": "fintech",
-    "_permalink": "/p/0bc9a20eb6/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/0bc9a20eb6/",
-    "_summary_240": "HD Hyundai Robotics Co. has hired banks to work on its South Korea initial public offering at a time when global companies are racing to develop human-like robots.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/0bc9a20eb6/thumbnail.png"
-  },
-  {
     "title": "Crypto YouTube views sink to lowest level since early 2021, \u2018it\u2019s not just X'",
     "url": "https://cointelegraph.com/news/crypto-youtube-viewership-sinks-2021-lows-as-retail-interest-evaporates?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
     "published_at": "2026-01-11T22:56:22-05:00",
@@ -858,14 +858,14 @@
     "url": "https://techcrunch.com/2026/01/11/google-removes-ai-overviews-for-certain-medical-queries/",
     "published_at": "2026-01-11T12:56:41-05:00",
     "source": "TechCrunch",
-    "summary": "This follows an investigation by the Guardian that found Google AI Overviews offering misleading information in response to some health-related queries.",
+    "summary": "This follows an investigation by The Guardian that found Google AI Overviews offering misleading information in response to some health-related queries.",
     "content_html": "",
     "image_url": "https://techcrunch.com/wp-content/uploads/2024/05/Sundar-AI-Overviews-IO-2024.png?resize=1200,698",
-    "summary_text": "This follows an investigation by the Guardian that found Google AI Overviews offering misleading information in response to some health-related queries.",
+    "summary_text": "This follows an investigation by The Guardian that found Google AI Overviews offering misleading information in response to some health-related queries.",
     "category": "ai",
     "_permalink": "/p/b398bea834/",
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/b398bea834/",
-    "_summary_240": "This follows an investigation by the Guardian that found Google AI Overviews offering misleading information in response to some health-related queries.",
+    "_summary_240": "This follows an investigation by The Guardian that found Google AI Overviews offering misleading information in response to some health-related queries.",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/b398bea834/thumbnail.png"
   },
   {
@@ -873,14 +873,14 @@
     "url": "https://techcrunch.com/2026/01/11/google-announces-a-new-protocol-to-facilitate-commerce-using-ai-agents/",
     "published_at": "2026-01-11T10:00:00-05:00",
     "source": "TechCrunch",
-    "summary": "Google said that merchants can now offer discounts to users directly in AI mode results",
+    "summary": "Google said that merchants can now offer discounts to users directly in AI mode results.",
     "content_html": "",
     "image_url": "https://techcrunch.com/wp-content/uploads/2025/09/google-ai-mode-techcrunch.jpg?resize=1200,800",
-    "summary_text": "Google said that merchants can now offer discounts to users directly in AI mode results",
+    "summary_text": "Google said that merchants can now offer discounts to users directly in AI mode results.",
     "category": "ai",
     "_permalink": "/p/e20771f8c7/",
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/e20771f8c7/",
-    "_summary_240": "Google said that merchants can now offer discounts to users directly in AI mode results",
+    "_summary_240": "Google said that merchants can now offer discounts to users directly in AI mode results.",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/e20771f8c7/thumbnail.png"
   },
   {
@@ -897,21 +897,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/497410f040/",
     "_summary_240": "Naver targets countries reluctant to use American and Chinese cloud systems out of security concerns",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/497410f040/thumbnail.png"
-  },
-  {
-    "title": "Why your LLM bill is exploding \u2014 and how semantic caching can cut it by 73%",
-    "url": "https://venturebeat.com/orchestration/why-your-llm-bill-is-exploding-and-how-semantic-caching-can-cut-it-by-73",
-    "published_at": "2026-01-10T14:00:00-05:00",
-    "source": "VentureBeat",
-    "summary": "Our LLM API bill was growing 30% month-over-month. Traffic was increasing, but not that fast. When I analyzed our query logs, I found the real problem: Users ask the same questions in different ways. \"What's your return policy?,\" \"How do I return something?\", and \"Can I get a refund?\" were all hitting our LLM separately, generating nearly identical responses, each incurring full API costs. Exact-...",
-    "content_html": "",
-    "image_url": "https://images.ctfassets.net/jdtwqhzvc2n1/7iyQoeSwdOqqpfcE0PFWgF/48db7d0305019eee107028d9f018d2ac/Semantic_caching.png?w=800&amp;q=75",
-    "summary_text": "Our LLM API bill was growing 30% month-over-month. Traffic was increasing, but not that fast. When I analyzed our query logs, I found the real problem: Users ask the same questions in different ways. \"What's your return policy?,\" \"How do I return something?\",...",
-    "category": "ai",
-    "_permalink": "/p/b77f0805e1/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/b77f0805e1/",
-    "_summary_240": "Our LLM API bill was growing 30% month-over-month. Traffic was increasing, but not that fast. When I analyzed our query logs, I found the real problem: Users ask the same...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/b77f0805e1/thumbnail.png"
   },
   {
     "title": "Hyperscaler Equity Issuance in 2026?",
