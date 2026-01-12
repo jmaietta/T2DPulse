@@ -1,5 +1,20 @@
 [
   {
+    "title": "Apple Teams Up With Google for A.I. in Its Products",
+    "url": "https://www.nytimes.com/2026/01/12/technology/apple-google-ai-partnership.html",
+    "published_at": "2026-01-12T15:09:58-05:00",
+    "source": "The New York Times - Technology",
+    "summary": "Apple was facing increasing questions about its plans for artificial intelligence as other big tech companies invested tens of billions in the technology.",
+    "content_html": "New versions of Apple\u2019s Apple Intelligence models will be based on Google\u2019s Gemini A.I. models and its cloud computing services.",
+    "image_url": "https://static01.nyt.com/images/2026/01/12/multimedia/12biz-apple-google-vcmp/12biz-apple-google-vcmp-mediumSquareAt3X.jpg",
+    "summary_text": "Apple was facing increasing questions about its plans for artificial intelligence as other big tech companies invested tens of billions in the technology.",
+    "category": "ai",
+    "_permalink": "/p/efa39c76d0/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/efa39c76d0/",
+    "_summary_240": "Apple was facing increasing questions about its plans for artificial intelligence as other big tech companies invested tens of billions in the technology.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/efa39c76d0/thumbnail.png"
+  },
+  {
     "title": "UK pushes up a law criminalizing deepfake nudes in response to Grok",
     "url": "https://www.theverge.com/news/860881/uk-ai-x-grok-law-criminalizing-deepfake-nudes-ai",
     "published_at": "2026-01-12T15:03:49-05:00",
@@ -195,6 +210,21 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/ca9ecaf09d/thumbnail.png"
   },
   {
+    "title": "Helping you choose the right insurance plan for you with ChatGPT",
+    "url": "https://www.youtube.com/watch?v=g4MTiidxp8I",
+    "published_at": "2026-01-12T12:13:07-05:00",
+    "source": "OpenAI YouTube",
+    "summary": "We\u2019re introducing ChatGPT Health, a dedicated experience that securely brings your health information and ChatGPT\u2019s intelligence together, to help you feel more informed, prepared, and confident navigating your health. With Health, ChatGPT can help you understand recent test results, prepare for appointments with your doctor, get advice on how to approach your diet and workout routine, or underst...",
+    "content_html": "",
+    "image_url": "https://i.ytimg.com/vi/g4MTiidxp8I/maxresdefault.jpg",
+    "summary_text": "We\u2019re introducing ChatGPT Health, a dedicated experience that securely brings your health information and ChatGPT\u2019s intelligence together, to help you feel more informed, prepared, and confident navigating your health. With Health, ChatGPT can help you unders...",
+    "category": "ai",
+    "_permalink": "/p/94b6762e8a/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/94b6762e8a/",
+    "_summary_240": "We\u2019re introducing ChatGPT Health, a dedicated experience that securely brings your health information and ChatGPT\u2019s intelligence together, to help you feel more informed,...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/94b6762e8a/thumbnail.png"
+  },
+  {
     "title": "Google\u2019s Gemini to power Apple\u2019s AI features like Siri",
     "url": "https://techcrunch.com/2026/01/12/googles-gemini-to-power-apples-ai-features-like-siri/",
     "published_at": "2026-01-12T12:12:41-05:00",
@@ -223,21 +253,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/94e7c84ed8/",
     "_summary_240": "Global digital payments provider Checkout.com secured approval for a Georgia bank charter. The approval for its Merchant Acquirer Limited Purpose Bank (MALPB) charter from the...",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/94e7c84ed8/thumbnail.png"
-  },
-  {
-    "title": "AI Rewrites Lending for Borrowers FICO Scores Miss",
-    "url": "https://www.pymnts.com/consumer-finance/2026/ai-rewrites-lending-for-borrowers-fico-scores-miss/",
-    "published_at": "2026-01-12T11:53:07-05:00",
-    "source": "PYMNTS",
-    "summary": "For millions of individuals in the U.S., exclusion from credit markets has less to do with repayment risk than with how creditworthiness has traditionally been measured. PYMNTS reported in 2025 that while the Consumer Financial Protection Bureau revised its estimate of strictly \u201ccredit invisible\u201d consumers downward, a much larger population remains unscored. Roughly 25 [\u2026] The post AI Rewrites Le...",
-    "content_html": "<p style=\"font-weight: 400;\">For millions of individuals in the U.S., exclusion from credit markets has less to do with repayment risk than with how creditworthiness has traditionally been measured.</p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p style=\"font-weight: 400;\"><a href=\"https://www.pymnts.com/consumer-finance/2025/cfpb-corrects-invisible-count-as-millions-struggle-to-shake-credit-limbo/\" rel=\"noopener\" target=\"_blank\">PYMNTS reported in 2025</a> that while the Consumer Financial Protection Bureau revised its estimate of strictly \u201ccredit invisible\u201d consumers downward, a much larger population remains unscored. Roughly 25 million U.S. adults lack sufficient recent credit activity to generate a usable score, meaning they are often excluded from traditional underwriting despite having income and recurring financial obligations.</p>\n<h2 style=\"font-weight: 400;\"><strong>Static Credit Scores Leave Structural Blind Spots</strong></h2>\n<p style=\"font-weight: 400;\">Traditional credit scoring models rely heavily on static bureau data such as credit cards, installment loans and repayment histories. Those signals work well for consumers already embedded in the credit system but fail to capture financial behavior that occurs outside conventional credit products, especially for so-called \u201cthin file\u201d individuals who have limited information detailing their financial lives.</p>\n<p style=\"font-weight: 400;\">PYMNTS Intelligence flagged <a href=\"https://www.pymnts.com/study/credit-insecurity-changing-us-consumer-borrowing-habits-credit-score-personal-finance/\" rel=\"noopener\" target=\"_blank\">the consequences</a> of that design in its 2023 collaboration with Sezzle, which found that nearly one-third of U.S. consumers were credit insecure. The research showed that repeated rejection often pushes consumers from being credit marginalized into becoming credit avoidant, shrinking access to safer credit products over time.</p>\n<h2 style=\"font-weight: 400;\"><strong>AI Brings New Credit Signals Into Focus</strong></h2>\n<p style=\"font-weight: 400;\">Much has changed in terms of the data lenders can now analyze.</p>\n<p style=\"font-weight: 400;\">Lenders are increasingly using artificial intelligence to process <a href=\"https://www.pymnts.com/loans/2025/lenders-fight-fraud-and-find-borrowers-with-alternative-data\" rel=\"noopener\" target=\"_blank\">alternative data</a> to identify creditworthy borrowers who would otherwise be missed by traditional models. In particular, AI systems are being used to analyze transaction-level data and behavioral patterns to simultaneously improve fraud detection and credit decisioning.</p>\n<p style=\"font-weight: 400;\">Rather than relying on a single score, AI allows lenders to evaluate consistency, volatility and resilience across time, and in real time, helping distinguish between temporary disruption and structural risk.</p>\n<h2 style=\"font-weight: 400;\"><strong>Cash-Flow Data Shows What Scores Miss</strong></h2>\n<p style=\"font-weight: 400;\">Among the most impactful alternative signals is cash-flow data.</p>\n<p style=\"font-weight: 400;\">PYMNTS has <a href=\"https://www.pymnts.com/loans/2025/cash-flow-underwriting-rewrites-credit-access-rules/?utm_source=chatgpt.com\" rel=\"noopener\" target=\"_blank\">reported that cash-flow-based underwriting</a> enables banks and FinTechs to see borrowers that FICO scores miss by analyzing income deposits, expense patterns and the ability to meet recurring obligations such as rent, utilities and subscriptions. These data points reflect real financial commitments, even when no formal credit line exists.</p>\n<p style=\"font-weight: 400;\">For consumers with irregular income or limited credit histories, cash-flow analysis often provides a more accurate picture of repayment capacity than relying simply on averaged bureau metrics.</p>\n<h2 style=\"font-weight: 400;\"><strong>Regulators Signal Support for Responsible Alternative Data Use</strong></h2>\n<p style=\"font-weight: 400;\">The expansion of alternative data in lending is occurring with increasing regulatory acknowledgment.</p>\n<p style=\"font-weight: 400;\">The Office of the Comptroller of the Currency has publicly <a href=\"https://www.pymnts.com/credit-frictions/2025/occs-hood-sees-value-in-using-alternative-data-to-expand-credit-access\" rel=\"noopener\" target=\"_blank\">recognized the value</a> of alternative data in expanding credit access when used responsibly. OCC leadership emphasized that these data sources can help lenders better assess risk and responsibly serve consumers who are poorly represented by traditional credit models. That position reinforces the idea that inclusion and safety are not mutually exclusive.</p>\n<p style=\"font-weight: 400;\">Companies are already deploying AI and alternative data to enhance underwriting and expand access for thin-file or previously overlooked borrowers. Banks and FinTechs are partnering for cash-flow-based underwriting to better evaluate actual repayment capacity instead of relying solely on legacy credit scores.</p>\n<p style=\"font-weight: 400;\">Firms are tapping data such as bank account transactions, payroll deposits and spending patterns to assess real-time income stability and liquidity, enabling credit decisions for individuals whose traditional bureau footprints would have left them unscorable.</p>\n<p style=\"font-weight: 400;\">Notably, <a href=\"https://www.pymnts.com/loans/2025/chase-uses-nova-credit-bolster-cash-flow-underwriting/\" rel=\"noopener\" target=\"_blank\">banks including Chase</a> and digital lenders including PayPal have announced integrations with cash-flow <a href=\"https://www.businesswire.com/news/home/20250904893943/en/PayPal-Selects-Nova-Credit-to-Power-U.S.-Cash-Flow-Underwriting\" rel=\"noopener\" target=\"_blank\">data partners such as Nova Credit</a> to power these underwriting capabilities \u2026 which allows lenders to fine-tune credit boxes rather than abandon them.</p>\n<p style=\"font-weight: 400;\">For credit invisibles and for thin file individuals, this approach creates an on ramp into safer, mainstream credit products for the borrowers. It replaces blunt exclusion with calibrated risk management. The result, for the lenders, is positive too, paying off not in risk-free lending, but better-aligned lending, narrowing the gap between invisible and investable.</p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/consumer-finance/2026/ai-rewrites-lending-for-borrowers-fico-scores-miss/\">AI Rewrites Lending for Borrowers FICO Scores Miss</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
-    "image_url": "https://www.pymnts.com/wp-content/uploads/2025/08/consumers-finances-inflation.png?w=457",
-    "summary_text": "For millions of individuals in the U.S., exclusion from credit markets has less to do with repayment risk than with how creditworthiness has traditionally been measured. PYMNTS reported in 2025 that while the Consumer Financial Protection Bureau revised its e...",
-    "category": "fintech",
-    "_permalink": "/p/9b6861598d/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/9b6861598d/",
-    "_summary_240": "For millions of individuals in the U.S., exclusion from credit markets has less to do with repayment risk than with how creditworthiness has traditionally been measured. PYMNTS...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/9b6861598d/thumbnail.png"
   },
   {
     "title": "Bridging the gap between AI and medicine: Claude in Microsoft Foundry advances capabilities",
@@ -1045,7 +1060,7 @@
     "source": "Financial Times - Technology",
     "summary": "UK prime minister steps in amid growing public anger at \u2018disgraceful\u2019 images, saying it is \u2018simply not tolerable\u2019",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/82f217bd-43d4-45a0-9c93-694a0a622732.jpg",
     "summary_text": "UK prime minister steps in amid growing public anger at \u2018disgraceful\u2019 images, saying it is \u2018simply not tolerable\u2019",
     "category": "ai"
   },
@@ -1056,7 +1071,7 @@
     "source": "Financial Times - Technology",
     "summary": "Processing of the technology is starting to migrate from data centres to \u2018the edge\u2019 \u2014 devices like personal computers",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/8148e445-c12e-4b70-85a4-ef79ddaaa13b.jpg",
     "summary_text": "Processing of the technology is starting to migrate from data centres to \u2018the edge\u2019 \u2014 devices like personal computers",
     "category": "ai"
   },
@@ -1111,7 +1126,7 @@
     "source": "Financial Times - Technology",
     "summary": "AI must learn to reckon with a world much messier than any computer simulation",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/f0a54581-24fa-4b60-a54a-9975035686ff.jpg",
     "summary_text": "AI must learn to reckon with a world much messier than any computer simulation",
     "category": "ai"
   },
@@ -1177,7 +1192,7 @@
     "source": "Financial Times - Technology",
     "summary": "Veteran executive Eric Horvitz argues talent and ideas will move abroad without US support for universities",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/fcd4d6ba-53e1-412b-b72b-c48aa0bf7601.jpg",
     "summary_text": "Veteran executive Eric Horvitz argues talent and ideas will move abroad without US support for universities",
     "category": "ai"
   },
@@ -1188,19 +1203,8 @@
     "source": "Financial Times - Technology",
     "summary": "Strong guidance marks turnaround and reflects how South Korean chipmaker has benefited from chip supply crunch",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/ca2c13a5-396a-4229-a78e-37a9afd7a5dc.jpg",
     "summary_text": "Strong guidance marks turnaround and reflects how South Korean chipmaker has benefited from chip supply crunch",
-    "category": "ai"
-  },
-  {
-    "title": "What is sycophancy in AI models?",
-    "url": "https://www.youtube.com/watch?v=nvbq39yVYRk",
-    "published_at": "2025-12-18T15:30:14-05:00",
-    "source": "Anthropic YouTube",
-    "summary": "Learn what AI researchers mean when they talk about sycophancy, when it's more likely to show up in conversations, and tactics you can use to steer AI towards truth.",
-    "content_html": "",
-    "image_url": "https://i.ytimg.com/vi/nvbq39yVYRk/maxresdefault.jpg",
-    "summary_text": "Learn what AI researchers mean when they talk about sycophancy, when it's more likely to show up in conversations, and tactics you can use to steer AI towards truth.",
     "category": "ai"
   },
   {
