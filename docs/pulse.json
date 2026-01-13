@@ -51,7 +51,7 @@
     "source": "Bloomberg Technology",
     "summary": "Meta Platforms and EssilorLuxottica are discussing potentially doubling production capacity for AI-powered smart glasses by the end of this year. Meta previously announced it is cutting more than 1,000 jobs from the Reality Labs division as part of a plan to redirect resources toward AI wearables and phone features. Ed Ludlow has more on \"Bloomberg Open Interest.\" (Source: Bloomberg)",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iHETR9waVz_A/v3/1200x-1.jpg",
     "summary_text": "Meta Platforms and EssilorLuxottica are discussing potentially doubling production capacity for AI-powered smart glasses by the end of this year. Meta previously announced it is cutting more than 1,000 jobs from the Reality Labs division as part of a plan to ...",
     "category": "ai",
     "_permalink": "/p/dc42d99ff3/",
@@ -95,10 +95,14 @@
     "published_at": "2026-01-13T09:43:16-05:00",
     "source": "Bloomberg Technology",
     "summary": "Meta Platforms Inc. and EssilorLuxottica SA are discussing potentially doubling production capacity for AI-powered smart glasses by the end of this year, in a bid to capture growing demand and head off rivals, according to people familiar with the matter.",
-    "content_html": "Meta Ray-Ban AI glasses.",
-    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/i0PwbhNuNMjU/v1/1200x-1.jpg",
+    "content_html": "",
+    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/i4A9FlhXdRGI/v2/1200x-1.png",
     "summary_text": "Meta Platforms Inc. and EssilorLuxottica SA are discussing potentially doubling production capacity for AI-powered smart glasses by the end of this year, in a bid to capture growing demand and head off rivals, according to people familiar with the matter.",
-    "category": "ai"
+    "category": "ai",
+    "_permalink": "/p/bdd9d79a40/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/bdd9d79a40/",
+    "_summary_240": "Meta Platforms Inc. and EssilorLuxottica SA are discussing potentially doubling production capacity for AI-powered smart glasses by the end of this year, in a bid to capture...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/bdd9d79a40/thumbnail.png"
   },
   {
     "title": "Ingenico taps WalletConnect to support stablecoin payments at checkout",
@@ -761,6 +765,21 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/10a5f04b5c/thumbnail.png"
   },
   {
+    "title": "AI on campus",
+    "url": "https://www.youtube.com/watch?v=N5yJJA0NCU0",
+    "published_at": "2026-01-12T17:41:27-05:00",
+    "source": "Anthropic YouTube",
+    "summary": "AI is ubiquitous on college campuses. We sat down with students to hear what's going well, what isn't, and how students, professors, and universities alike are navigating it in real time. 0:00 - Introduction 0:22 - Meet the panel 1:06 - Vibes on campus 6:28 - What are students building? 11:27 - AI as tool vs. crutch 16:44 - Are professors keeping up? 20:15 - Downsides 25:55 - AI and the job marke...",
+    "content_html": "",
+    "image_url": "https://i.ytimg.com/vi/N5yJJA0NCU0/maxresdefault.jpg",
+    "summary_text": "AI is ubiquitous on college campuses. We sat down with students to hear what's going well, what isn't, and how students, professors, and universities alike are navigating it in real time. 0:00 - Introduction 0:22 - Meet the panel 1:06 - Vibes on campus 6:28 -...",
+    "category": "ai",
+    "_permalink": "/p/159c473986/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/159c473986/",
+    "_summary_240": "AI is ubiquitous on college campuses. We sat down with students to hear what's going well, what isn't, and how students, professors, and universities alike are navigating it in...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/159c473986/thumbnail.png"
+  },
+  {
     "title": "Why Amazon bought Bee, an AI wearable",
     "url": "https://techcrunch.com/2026/01/12/why-amazon-bought-bee-an-ai-wearable/",
     "published_at": "2026-01-12T16:55:44-05:00",
@@ -879,21 +898,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/3c04426f09/",
     "_summary_240": "Hackers gained access to some Betterment customers\u2019 personal information through a social engineering attack, then targeted some of them with a crypto-related phishing message.",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/3c04426f09/thumbnail.png"
-  },
-  {
-    "title": "Helping you choose the right insurance plan for you with ChatGPT",
-    "url": "https://www.youtube.com/watch?v=g4MTiidxp8I",
-    "published_at": "2026-01-12T12:13:07-05:00",
-    "source": "OpenAI YouTube",
-    "summary": "We\u2019re introducing ChatGPT Health, a dedicated experience that securely brings your health information and ChatGPT\u2019s intelligence together, to help you feel more informed, prepared, and confident navigating your health. With Health, ChatGPT can help you understand recent test results, prepare for appointments with your doctor, get advice on how to approach your diet and workout routine, or underst...",
-    "content_html": "",
-    "image_url": "https://i.ytimg.com/vi/g4MTiidxp8I/maxresdefault.jpg",
-    "summary_text": "We\u2019re introducing ChatGPT Health, a dedicated experience that securely brings your health information and ChatGPT\u2019s intelligence together, to help you feel more informed, prepared, and confident navigating your health. With Health, ChatGPT can help you unders...",
-    "category": "ai",
-    "_permalink": "/p/94b6762e8a/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/94b6762e8a/",
-    "_summary_240": "We\u2019re introducing ChatGPT Health, a dedicated experience that securely brings your health information and ChatGPT\u2019s intelligence together, to help you feel more informed,...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/94b6762e8a/thumbnail.png"
   },
   {
     "title": "Google\u2019s Gemini to power Apple\u2019s AI features like Siri",
