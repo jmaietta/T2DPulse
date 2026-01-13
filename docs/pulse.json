@@ -1,5 +1,20 @@
 [
   {
+    "title": "Crypto\u2019s 2026 comeback hinges on three outcomes, Wintermute says",
+    "url": "https://cointelegraph.com/news/crypto-2026-comeback-hinges-three-outcomes-wintermute?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "published_at": "2026-01-13T14:16:12-05:00",
+    "source": "Cointelegraph",
+    "summary": "Bitcoin\u2019s muted 2025 rally and fading altcoin cycle point to a structural market shift, leaving crypto\u2019s 2026 outlook tied to institutions, rates and retail return.",
+    "content_html": "",
+    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjYtMDEvMDE5YmI4M2ItNTQ2OS03ODgyLTg3YWEtNzUwNDZlY2JlZDNkLmpwZw==.jpg",
+    "summary_text": "Bitcoin\u2019s muted 2025 rally and fading altcoin cycle point to a structural market shift, leaving crypto\u2019s 2026 outlook tied to institutions, rates and retail return.",
+    "category": "fintech",
+    "_permalink": "/p/209b40ca13/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/209b40ca13/",
+    "_summary_240": "Bitcoin\u2019s muted 2025 rally and fading altcoin cycle point to a structural market shift, leaving crypto\u2019s 2026 outlook tied to institutions, rates and retail return.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/209b40ca13/thumbnail.png"
+  },
+  {
     "title": "The Governance Problem Stablecoins Weren\u2019t Built to Solve",
     "url": "https://www.pymnts.com/blockchain/2026/the-governance-problem-stablecoins-werent-built-to-solve/",
     "published_at": "2026-01-13T13:51:51-05:00",
@@ -298,6 +313,21 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/ad3b4c0d45/",
     "_summary_240": "The eight-figure investment in Genius Trading highlights how execution-focused tools are gaining relevance as crypto trading activity spreads across blockchains.",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/ad3b4c0d45/thumbnail.png"
+  },
+  {
+    "title": "DeepSeek\u2019s conditional memory fixes silent LLM waste: GPU cycles lost to static lookups",
+    "url": "https://venturebeat.com/data/deepseeks-conditional-memory-fixes-silent-llm-waste-gpu-cycles-lost-to",
+    "published_at": "2026-01-13T11:00:00-05:00",
+    "source": "VentureBeat",
+    "summary": "When an enterprise LLM retrieves a product name, technical specification, or standard contract clause, it's using expensive GPU computation designed for complex reasoning \u2014 just to access static information. This happens millions of times per day. Each lookup wastes cycles and inflates infrastructure costs. DeepSeek's newly released research on \"conditional memory\" addresses this architectural li...",
+    "content_html": "",
+    "image_url": "https://images.ctfassets.net/jdtwqhzvc2n1/5QbXis6MzFunSR0Q7iejyX/2cd47fca23ad6f0fd1e3094fc096252e/conditional-memory-smk.jpg?w=800&amp;q=75",
+    "summary_text": "When an enterprise LLM retrieves a product name, technical specification, or standard contract clause, it's using expensive GPU computation designed for complex reasoning \u2014 just to access static information. This happens millions of times per day. Each lookup...",
+    "category": "ai",
+    "_permalink": "/p/1ad46e50f5/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/1ad46e50f5/",
+    "_summary_240": "When an enterprise LLM retrieves a product name, technical specification, or standard contract clause, it's using expensive GPU computation designed for complex reasoning \u2014 just...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/1ad46e50f5/thumbnail.png"
   },
   {
     "title": "Kraken-Affiliated KRAKacquisition Plans to Go Public",
@@ -870,21 +900,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/822cfdd262/thumbnail.png"
   },
   {
-    "title": "DeepSeek\u2019s conditional memory fixes silent LLM waste: GPU cycles lost to static lookups",
-    "url": "https://venturebeat.com/data/deepseeks-conditional-memory-fixes-silent-llm-waste-gpu-cycles-lost-to",
-    "published_at": "2026-01-13T00:00:00-05:00",
-    "source": "VentureBeat",
-    "summary": "When an enterprise LLM retrieves a product name, technical specification, or standard contract clause, it's using expensive GPU computation designed for complex reasoning \u2014 just to access static information. This happens millions of times per day. Each lookup wastes cycles and inflates infrastructure costs. DeepSeek's newly released research on \"conditional memory\" addresses this architectural li...",
-    "content_html": "",
-    "image_url": "https://images.ctfassets.net/jdtwqhzvc2n1/5QbXis6MzFunSR0Q7iejyX/2cd47fca23ad6f0fd1e3094fc096252e/conditional-memory-smk.jpg?w=800&amp;q=75",
-    "summary_text": "When an enterprise LLM retrieves a product name, technical specification, or standard contract clause, it's using expensive GPU computation designed for complex reasoning \u2014 just to access static information. This happens millions of times per day. Each lookup...",
-    "category": "ai",
-    "_permalink": "/p/1f28ab67e2/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/1f28ab67e2/",
-    "_summary_240": "When an enterprise LLM retrieves a product name, technical specification, or standard contract clause, it's using expensive GPU computation designed for complex reasoning \u2014 just...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/1f28ab67e2/thumbnail.png"
-  },
-  {
     "title": "Dina Powell McCormick appointed president and vice-chair at Meta",
     "url": "https://www.ft.com/content/1255421d-4634-4258-9ea0-c2365010a862",
     "published_at": "2026-01-12T20:10:19-05:00",
@@ -988,21 +1003,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/4c30d8a11b/",
     "_summary_240": "Apple was facing increasing questions about its plans for artificial intelligence as other big tech companies invested tens of billions in the technology.",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/4c30d8a11b/thumbnail.png"
-  },
-  {
-    "title": "Anthropic announces Claude for Healthcare following OpenAI\u2019s ChatGPT Health reveal",
-    "url": "https://techcrunch.com/2026/01/12/anthropic-announces-claude-for-healthcare-following-openais-chatgpt-health-reveal/",
-    "published_at": "2026-01-12T15:48:21-05:00",
-    "source": "TechCrunch",
-    "summary": "Anthropic's Claude for Healthcare is unveiled about a week after OpenAI announced its ChatGPT Health product.",
-    "content_html": "",
-    "image_url": "https://techcrunch.com/wp-content/uploads/2026/01/GettyImages-2252871842.jpg?w=1024",
-    "summary_text": "Anthropic's Claude for Healthcare is unveiled about a week after OpenAI announced its ChatGPT Health product.",
-    "category": "ai",
-    "_permalink": "/p/338eff265b/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/338eff265b/",
-    "_summary_240": "Anthropic's Claude for Healthcare is unveiled about a week after OpenAI announced its ChatGPT Health product.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/338eff265b/thumbnail.png"
   },
   {
     "title": "Why your LLM bill is exploding \u2014 and how semantic caching can cut it by 73%",
@@ -1168,13 +1168,9 @@
     "source": "Financial Times - Technology",
     "summary": "Naver targets countries reluctant to use American and Chinese cloud systems out of security concerns",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/8dbba375-c348-4e8b-bb98-47e0ab93c702.jpg",
+    "image_url": "",
     "summary_text": "Naver targets countries reluctant to use American and Chinese cloud systems out of security concerns",
-    "category": "ai",
-    "_permalink": "/p/497410f040/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/497410f040/",
-    "_summary_240": "Naver targets countries reluctant to use American and Chinese cloud systems out of security concerns",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/497410f040/thumbnail.png"
+    "category": "ai"
   },
   {
     "title": "Hyperscaler Equity Issuance in 2026?",
@@ -1205,7 +1201,7 @@
     "source": "Financial Times - Technology",
     "summary": "Billionaire\u2019s xAI start-up lacks adequate safeguards, say experts, but many AI models are trained on troubling material",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/aab04495-37f2-41a7-af72-92e106a6be27.jpg",
+    "image_url": "",
     "summary_text": "Billionaire\u2019s xAI start-up lacks adequate safeguards, say experts, but many AI models are trained on troubling material",
     "category": "ai"
   },
@@ -1260,7 +1256,7 @@
     "source": "Financial Times - Technology",
     "summary": "MiniMax joins wave of technology companies in China going public",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/134e13e6-6902-4175-90a8-48cb57f21aa3.jpg",
+    "image_url": "",
     "summary_text": "MiniMax joins wave of technology companies in China going public",
     "category": "ai"
   },
@@ -1271,7 +1267,7 @@
     "source": "Financial Times - Technology",
     "summary": "The three newly listed makers of semiconductors are lossmaking, and none has sales worth more than a tenth of their bigger rival",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/f6ac1452-f138-4b93-8565-2a66aaf66963.jpg",
+    "image_url": "",
     "summary_text": "The three newly listed makers of semiconductors are lossmaking, and none has sales worth more than a tenth of their bigger rival",
     "category": "ai"
   },
@@ -1284,17 +1280,6 @@
     "content_html": "",
     "image_url": "",
     "summary_text": "OpenAI and Datadog brand graphic with the OpenAI wordmark on the left, the Datadog logo on the right, and a central abstract brown fur-like texture panel on a white background.",
-    "category": "ai"
-  },
-  {
-    "title": "AI Devices Are Coming. Will Your Favorite Apps Be Along for the Ride?",
-    "url": "https://www.wired.com/story/openai-amazon-operating-system-ai-apps-ads/",
-    "published_at": "2026-01-08T14:00:00-05:00",
-    "source": "Wired",
-    "summary": "Tech companies are calling AI the next platform. But some developers are reluctant to let AI agents stand between them and their users.",
-    "content_html": "",
-    "image_url": "https://media.wired.com/photos/695de0447ff06f235feecd54/master/pass/Model-Behavior-OpenAI-Meta-Amazon-Racing-to-Build-AI-Powered-Operating-Systems-Business.jpg",
-    "summary_text": "Tech companies are calling AI the next platform. But some developers are reluctant to let AI agents stand between them and their users.",
     "category": "ai"
   },
   {
