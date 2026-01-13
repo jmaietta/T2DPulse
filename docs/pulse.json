@@ -1,5 +1,80 @@
 [
   {
+    "title": "Microsoft announces glut of new data centers but says it won\u2019t let your electricity bill go up",
+    "url": "https://techcrunch.com/2026/01/13/microsoft-announces-glut-of-new-data-centers-but-says-it-wont-let-your-electricity-bill-go-up/",
+    "published_at": "2026-01-13T15:15:58-05:00",
+    "source": "TechCrunch",
+    "summary": "The tech giant has pledged to be a \"good neighbor\" as it continues to invest in AI infrastructure throughout the country.",
+    "content_html": "",
+    "image_url": "https://techcrunch.com/wp-content/uploads/2025/07/microsoft-store-1185699758.jpg?resize=1200,800",
+    "summary_text": "The tech giant has pledged to be a \"good neighbor\" as it continues to invest in AI infrastructure throughout the country.",
+    "category": "ai",
+    "_permalink": "/p/fb457c1951/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/fb457c1951/",
+    "_summary_240": "The tech giant has pledged to be a \"good neighbor\" as it continues to invest in AI infrastructure throughout the country.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/fb457c1951/thumbnail.png"
+  },
+  {
+    "title": "CEOs of NVIDIA and Lilly Share \u2018Blueprint for What Is Possible\u2019 in AI and Drug Discovery",
+    "url": "https://blogs.nvidia.com/blog/jpmorgan-healthcare-nvidia-lilly/",
+    "published_at": "2026-01-13T15:00:43-05:00",
+    "source": "NVIDIA News",
+    "summary": "NVIDIA and Lilly are putting together \u201ca blueprint for what is possible in the future of drug discovery,\u201d NVIDIA founder and CEO Jensen Huang told attendees at a fireside chat Monday with Dave Ricks, chair and CEO of Lilly. The conversation \u2014 which took place during the annual J.P. Morgan Healthcare Conference in San Francisco Read Article",
+    "content_html": "",
+    "image_url": "https://s3.amazonaws.com/cms.ipressroom.com/219/files/202601/6966a4c83d63325358ec7c45_26jpmorgan-fireside-blog-1280x680-8231-842x450/26jpmorgan-fireside-blog-1280x680-8231-842x450_thmb.jpg",
+    "summary_text": "NVIDIA and Lilly are putting together \u201ca blueprint for what is possible in the future of drug discovery,\u201d NVIDIA founder and CEO Jensen Huang told attendees at a fireside chat Monday with Dave Ricks, chair and CEO of Lilly. The conversation \u2014 which took place...",
+    "category": "ai",
+    "_permalink": "/p/e0d1d0f6bb/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/e0d1d0f6bb/",
+    "_summary_240": "NVIDIA and Lilly are putting together \u201ca blueprint for what is possible in the future of drug discovery,\u201d NVIDIA founder and CEO Jensen Huang told attendees at a fireside chat...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/e0d1d0f6bb/thumbnail.png"
+  },
+  {
+    "title": "This new, dead simple prompt technique boosts accuracy on LLMs by up to 76% on non-reasoning tasks",
+    "url": "https://venturebeat.com/orchestration/this-new-dead-simple-prompt-technique-boosts-accuracy-on-llms-by-up-to-76-on",
+    "published_at": "2026-01-13T14:57:00-05:00",
+    "source": "VentureBeat",
+    "summary": "In the chaotic world of Large Language Model (LLM) optimization, engineers have spent the last few years developing increasingly esoteric rituals to get better answers. We\u2019ve seen \"Chain of Thought\" (asking the model to think step-by-step and often, show those \"reasoning traces\" to the user), \"Emotional Blackmail\" (telling the model its career depends on the answer, or that it is being accused of...",
+    "content_html": "",
+    "image_url": "https://images.ctfassets.net/jdtwqhzvc2n1/6PTJl3Wssuvl5m3nljR103/21ab6a44da755c1cf2dca3b8fdd4ad08/cool-guys.png?w=800&amp;q=75",
+    "summary_text": "In the chaotic world of Large Language Model (LLM) optimization, engineers have spent the last few years developing increasingly esoteric rituals to get better answers. We\u2019ve seen \"Chain of Thought\" (asking the model to think step-by-step and often, show thos...",
+    "category": "ai",
+    "_permalink": "/p/6b56ea7932/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/6b56ea7932/",
+    "_summary_240": "In the chaotic world of Large Language Model (LLM) optimization, engineers have spent the last few years developing increasingly esoteric rituals to get better answers. We\u2019ve...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/6b56ea7932/thumbnail.png"
+  },
+  {
+    "title": "A consumer watchdog issued a warning about Google\u2019s AI agent shopping protocol \u2014 Google says she\u2019s wrong",
+    "url": "https://techcrunch.com/2026/01/13/a-consumer-watchdog-issued-a-warning-about-googles-ai-agent-shopping-protocol-google-says-shes-wrong/",
+    "published_at": "2026-01-13T14:40:57-05:00",
+    "source": "TechCrunch",
+    "summary": "A consumer economics watchdog says Google's new Universal Commerce Protocol is ripe for misuse where consumers could pay more for items. Google denies this.",
+    "content_html": "",
+    "image_url": "https://techcrunch.com/wp-content/uploads/2024/05/GettyImages-1354022389.jpg?resize=1200,789",
+    "summary_text": "A consumer economics watchdog says Google's new Universal Commerce Protocol is ripe for misuse where consumers could pay more for items. Google denies this.",
+    "category": "ai",
+    "_permalink": "/p/6c01368135/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/6c01368135/",
+    "_summary_240": "A consumer economics watchdog says Google's new Universal Commerce Protocol is ripe for misuse where consumers could pay more for items. Google denies this.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/6c01368135/thumbnail.png"
+  },
+  {
+    "title": "Apple Picks Gemini AI in Win for Google\u2019s Tensor Chip",
+    "url": "https://www.bloomberg.com/news/videos/2026-01-13/apple-picks-gemini-ai-in-win-for-google-s-tensor-chip-video",
+    "published_at": "2026-01-13T14:36:40-05:00",
+    "source": "Bloomberg Technology",
+    "summary": "Apple chooses Google AI in a multiyear deal that highlights the cost advantage of Google\u2019s tensor processing unit chips and Apple\u2019s need to improve AI offerings. Dan Ives, managing director and senior equity analyst at Wedbush, discusses the deal with Caroline Hyde and Ed Ludlow on \"Bloomberg Tech.\" (Source: Bloomberg)",
+    "content_html": "",
+    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iwOqJHsl4ikc/v3/1200x-1.jpg",
+    "summary_text": "Apple chooses Google AI in a multiyear deal that highlights the cost advantage of Google\u2019s tensor processing unit chips and Apple\u2019s need to improve AI offerings. Dan Ives, managing director and senior equity analyst at Wedbush, discusses the deal with Carolin...",
+    "category": "ai",
+    "_permalink": "/p/d19b89c065/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/d19b89c065/",
+    "_summary_240": "Apple chooses Google AI in a multiyear deal that highlights the cost advantage of Google\u2019s tensor processing unit chips and Apple\u2019s need to improve AI offerings. Dan Ives,...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/d19b89c065/thumbnail.png"
+  },
+  {
     "title": "'Lot of Good' in Market Structure Bill: Coinbase's Calvert",
     "url": "https://www.bloomberg.com/news/videos/2026-01-13/-lot-of-good-in-market-structure-bill-coinbase-s-calvert",
     "published_at": "2026-01-13T14:32:44-05:00",
@@ -315,21 +390,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/3559f918d4/thumbnail.png"
   },
   {
-    "title": "Does Google\u2019s Agentic Partnership With Walmart Signal the End of Click-and-Buy Retail?",
-    "url": "https://www.pymnts.com/artificial-intelligence-2/2026/does-googles-agentic-partnership-with-walmart-signal-the-end-of-click-and-buy-retail/",
-    "published_at": "2026-01-13T11:19:04-05:00",
-    "source": "PYMNTS",
-    "summary": "What\u2019s next in commerce and retail changes almost every day. But some days bring bigger changes than others. Sunday (Jan. 11) was one of those days, with the announcement that Google and Walmart have teamed up to embed Walmart and Sam\u2019s Club\u2019s vast inventory directly into Google\u2019s artificial intelligence assistant Gemini, using Google\u2019s Universal Commerce [\u2026] The post Does Google\u2019s Agentic Partne...",
-    "content_html": "<p style=\"font-weight: 400;\">What\u2019s next in commerce and retail changes almost every day. But some days bring bigger changes than others.</p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p style=\"font-weight: 400;\">Sunday (Jan. 11) was one of those days, with the <a href=\"https://corporate.walmart.com/news/2026/01/11/walmart-and-google-turn-ai-discovery-into-effortless-shopping-experiences\" rel=\"noopener\" target=\"_blank\">announcement</a> that <a href=\"https://www.google.com/\" rel=\"noopener\" target=\"_blank\">Google</a> and <a href=\"https://www.walmart.com/\" rel=\"noopener\" target=\"_blank\">Walmart</a> have <a href=\"https://www.pymnts.com/walmart/2026/walmart-teams-with-google-to-promote-agent-led-commerce/\" rel=\"noopener\" target=\"_blank\">teamed up</a> to embed Walmart and Sam\u2019s Club\u2019s vast inventory directly into Google\u2019s artificial intelligence assistant Gemini, using Google\u2019s\u00a0<a href=\"https://www.pymnts.com/google/2026/google-takes-a-step-toward-owning-the-checkout-with-ucp/\" rel=\"noopener\" target=\"_blank\">Universal Commerce Protocol</a>, and shifting retail from a static search-and-buy model toward a more conversational, AI-driven \u201cagentic commerce\u201d paradigm.</p>\n<p style=\"font-weight: 400;\">The goal of the partnership and launch is to eliminate the friction between\u00a0want\u00a0and\u00a0buy\u00a0by allowing shoppers to browse, personalize, and complete purchases directly through conversational AI.</p>\n<p style=\"font-weight: 400;\">During an <a href=\"https://corporate.walmart.com/news/events/2026-icr-conference\" rel=\"noopener\" target=\"_blank\">investor call</a> on Tuesday (Jan. 13), Daniel Danker, Walmart\u2019s EVP of AI Acceleration, Product and Design,\u00a0 told the audience he \u201cvery clearly sees this as a growth opportunity,\u201d noting that the agentic-focused partnership will continue to allow Walmart to \u201creach the customer where they are as commerce shifts.\u201d</p>\n<p style=\"font-weight: 400;\">\u201cThere are so many shopping occasions that don\u2019t begin as a shopping occasion, and this allows us to serve those moments,\u201d Danker said.</p>\n<p style=\"font-weight: 400;\"><strong>Read also:</strong> <a href=\"https://www.pymnts.com/news/retail/2026/mid-tier-retailers-caught-between-amazon-and-walmart/\" rel=\"noopener\" target=\"_blank\">Mid-Tier Retailers Caught Between Amazon and Walmart</a><strong>\u00a0</strong></p>\n<h2 style=\"font-weight: 400;\"><strong>From Search to Conversation to Conversion</strong></h2>\n<p style=\"font-weight: 400;\">For decades, eCommerce followed a familiar architecture: static search bars funnel customers to lists of products, and the consumer then navigates brand websites and marketplaces to complete a purchase. That model, while familiar, is increasingly at odds with modern digital behavior, where users expect fluid, intuitive interfaces that anticipate needs rather than react to queries.</p>\n<p style=\"font-weight: 400;\">Walmart and Google\u2019s collaboration aims to invert this paradigm. Instead of typing keywords into a website, consumers will engage Gemini with natural language prompts, for example, \u201chelp me build a fall camping kit under $300,\u201d or, \u201cI just spilled wine on my couch, what will get it out?\u201d Gemini will then tap into Walmart\u2019s product catalog, pricing, and availability in real time, offering personalized recommendations and, crucially, the option to purchase without leaving the chat interface.</p>\n<p style=\"font-weight: 400;\">A cornerstone of this new experience is the\u00a0Universal Commerce Protocol (UCP)\u00a0\u2014 an open standard <a href=\"https://www.pymnts.com/artificial-intelligence-2/2026/wayfair-participates-in-googles-new-standard-for-agentic-commerce/\" rel=\"noopener\" target=\"_blank\">championed</a> by Google, Walmart and other major retailers like Shopify and Wayfair, designed to streamline AI-retail interactions. In essence, UCP enables AI agents such as Gemini to access product catalogs, pricing, availability, cart handling, personalization signals and checkout functionality through a common language.</p>\n<p style=\"font-weight: 400;\">This technical groundwork is far from trivial. Retail systems are typically siloed, made up of disparate platforms that separately handle search, inventory, payment and loyalty programs. By aligning infrastructure through UCP, both Google and Walmart aim to deliver a seamless interaction in which AI can intelligently retrieve and act upon commerce data without manual integration headaches.</p>\n<p style=\"font-weight: 400;\">And the applications aren\u2019t just tied to eCommerce; Walmart sees in-store applications as well.</p>\n<p style=\"font-weight: 400;\">\u201cOur goal is to digitize the in-store experience as much as the online experience,\u201d Danker said on Tuesday\u2019s investor call. \u201cWe\u2019re going to do less scrolling as our products understand our customers better.\u201d</p>\n<p style=\"font-weight: 400;\"><strong>Read also:</strong> <a href=\"https://www.pymnts.com/whats-trending/2026/karen-webster-2026-trends-legacy-business-models-break/\" rel=\"noopener\" target=\"_blank\">Legacy Business Models Break\u00a0</a></p>\n<h2 style=\"font-weight: 400;\"><strong>The Future of Retail Is Evolving</strong></h2>\n<p style=\"font-weight: 400;\">The fireside chat and the Walmart and Google partnership touch squarely on several trends highlighted at the start of the year by PYMNTS CEO Karen Webster in her thought leadership series, \u201c<a href=\"https://www.pymnts.com/tag/what-2026-will-make-obvious/\" rel=\"noopener\" target=\"_blank\">What 2026 Will Make Obvious:</a> <a href=\"https://www.pymnts.com/tag/what-2026-will-make-obvious/\" rel=\"noopener\" target=\"_blank\">Ten Structural Shifts Reshaping Payments, Commerce and the AI Economy</a>.\u201d</p>\n<p style=\"font-weight: 400;\">Particularly, Webster <a href=\"https://www.pymnts.com/whats-trending/2026/smart-agents-replace-super-apps-2/\" rel=\"noopener\" target=\"_blank\">said</a> of agentic commerce, \u201c<a href=\"https://www.pymnts.com/artificial-intelligence-2/2025/why-the-person-of-the-year-in-2025-should-be-the-chatbot/\" rel=\"noopener\" target=\"_blank\">Smart agents</a>\u00a0take the work of searching, comparing, and deciding out of the consumer\u2019s hands and give it to software instructed to act in the consumer\u2019s interest. That changes everything: how retailers compete, how platforms monetize, and how\u00a0<a href=\"https://www.pymnts.com/artificial-intelligence-2/2025/why-30-million-us-consumers-no-longer-search/\" rel=\"noopener\" target=\"_blank\">buying decisions</a>\u00a0are made.\u201d</p>\n<p style=\"font-weight: 400;\">As Webster also <a href=\"https://www.pymnts.com/whats-trending/2026/karen-webster-2026-trends-legacy-business-models-break/\" rel=\"noopener\" target=\"_blank\">highlighted</a>, \u201cBezos popularized \u2018<a href=\"https://www.inc.com/jessica-stillman/7-jeff-bezos-quotes-that-will-make-you-rethink-success.html?utm_source=chatgpt.com\" rel=\"noopener\" target=\"_blank\">your margin is my opportunity</a>\u2019 to capture Amazon\u2019s strategy of using technology, scale and obsessive customer focus to attack incumbents\u2019 profit pools and pass much of that surplus back to customers in the form of lower prices and better experiences. In the\u00a0<a href=\"https://www.pymnts.com/wp-content/uploads/2025/08/PYMNTS-The-Prompt-Economy-August-2025.pdf\" rel=\"noopener\" target=\"_blank\">Prompt Economy</a>, that instinct becomes systemic: instead of one company hunting margins, AI agents acting for millions of consumers and enterprises hunt margins everywhere, all the time.\u200b\u201d</p>\n<p style=\"font-weight: 400;\">She <a href=\"https://www.pymnts.com/whats-trending/2026/karen-webster-2026-trends-ai-adoption/\" rel=\"noopener\" target=\"_blank\">separately noted</a>, \u201cenough organizations crossed the line from\u00a0<a href=\"https://www.pymnts.com/news/artificial-intelligence/2025/2025-the-year-ai-agents-entered-payments-and-changed-whos-in-control/\" rel=\"noopener\" target=\"_blank\">experimentation to use</a>\u00a0that the argument about whether AI is \u2018real\u2019 \u00a0has largely been resolved.\u201d</p>\n<p style=\"font-weight: 400;\">PYMNTS Intelligence\u2019s Prompt Economy work shows how\u00a0<a href=\"https://www.pymnts.com/study_posts/getting-to-know-you-how-ai-is-shaping-the-future-of-shopping/\" rel=\"noopener\" target=\"_blank\">far along</a>\u00a0this shift already is.</p>\n<p style=\"font-weight: 400;\">Nearly 70% of consumers say they are interested in using artificial intelligence agents to simplify shopping tasks; more than half would like an autonomous agent to monitor and do their weekly shopping for them, or look through personal interactions with a friend to identify and purchase a gift.</p>\n<p style=\"font-weight: 400;\">Ultimately, by bringing Walmart\u2019s expansive inventory and fulfillment muscle into Google\u2019s conversational AI ecosystem, both companies are making the long-term bet that the future of retail is\u00a0contextual, proactive and personalized. Whether this vision becomes the dominant shopping paradigm will depend on execution, but the stakes are high, and the first moves suggest a profound shift in how consumers will interact with commerce in the years ahead.</p>\n<div>\n<p class=\"elementtoproof\"><i>For all PYMNTS AI coverage, subscribe to the daily<span class=\"apple-converted-space\">\u00a0</span></i><a href=\"https://www.pymnts.com/subscribe/\" rel=\"noopener\" target=\"_blank\" title=\"https://www.pymnts.com/subscribe/\">AI\u00a0Newsletter</a><i>.</i></p>\n</div>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/artificial-intelligence-2/2026/does-googles-agentic-partnership-with-walmart-signal-the-end-of-click-and-buy-retail/\">Does Google\u2019s Agentic Partnership With Walmart Signal the End of Click-and-Buy Retail?</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
-    "image_url": "https://www.pymnts.com/wp-content/uploads/2025/08/Walmart-AI-2.jpg?w=457",
-    "summary_text": "What\u2019s next in commerce and retail changes almost every day. But some days bring bigger changes than others. Sunday (Jan. 11) was one of those days, with the announcement that Google and Walmart have teamed up to embed Walmart and Sam\u2019s Club\u2019s vast inventory ...",
-    "category": "ai",
-    "_permalink": "/p/75e876e939/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/75e876e939/",
-    "_summary_240": "What\u2019s next in commerce and retail changes almost every day. But some days bring bigger changes than others. Sunday (Jan. 11) was one of those days, with the announcement that...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/75e876e939/thumbnail.png"
-  },
-  {
     "title": "Stablecoins vs. Bitcoin salaries: Why regulation pushes one ahead of the other",
     "url": "https://cointelegraph.com/explained/stablecoins-vs-bitcoin-salaries-why-regulation-pushes-one-ahead-of-the-other?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
     "published_at": "2026-01-13T11:15:00-05:00",
@@ -373,21 +433,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/1ad46e50f5/",
     "_summary_240": "When an enterprise LLM retrieves a product name, technical specification, or standard contract clause, it's using expensive GPU computation designed for complex reasoning \u2014 just...",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/1ad46e50f5/thumbnail.png"
-  },
-  {
-    "title": "Kraken-Affiliated KRAKacquisition Plans to Go Public",
-    "url": "https://www.pymnts.com/news/ipo/2026/kraken-affiliated-krakacquisition-plans-go-public/",
-    "published_at": "2026-01-13T10:48:13-05:00",
-    "source": "PYMNTS",
-    "summary": "Kraken-affiliated company KRAKacquisition Corp is the latest cryptocurrency firm planning to go public. KRAKacquisition, a special purpose acquisition company (SPAC) backed by an affiliate of crypto exchange Kraken, filed Monday (Jan. 12) to go public with a $250 million initial public offering (IPO). The company plans to offer 25 million shares at $10 each. [\u2026] The post Kraken-Affiliated KRAKacq...",
-    "content_html": "<p><a class=\"editor-rtfLink\" href=\"https://www.kraken.com/\" rel=\"noopener\" target=\"_blank\"><span>Kraken</span></a><span>-affiliated company </span><a class=\"editor-rtfLink\" href=\"https://www.globenewswire.com/news-release/2026/01/12/3217408/0/en/KRAKacquisition-Corp-Announces-Filing-of-Registration-Statement-on-Form-S-1-for-Proposed-Initial-Public-Offering.html\" rel=\"noopener\" target=\"_blank\"><span>KRAKacquisition Corp</span></a><span> is the latest cryptocurrency firm planning to go public.</span></p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p><span>KRAKacquisition, a special purpose acquisition company (SPAC) backed by an affiliate of crypto exchange Kraken, </span><a class=\"editor-rtfLink\" href=\"https://www.sec.gov/ix?doc=/Archives/edgar/data/2082119/000114036126000997/ny20054630x5_s1.htm#fact-identifier-1\" rel=\"noopener\" target=\"_blank\"><span>filed</span></a><span> Monday (Jan. 12) to go public with a $250 million initial public offering (IPO). The company plans to offer 25 million shares at $10 each.</span></p>\n<p><span>The name \u201cKRAKaquision\u201d denotes a connection between the SPAC and Kraken\u2019s in-house payments solution, </span><a class=\"editor-rtfLink\" href=\"https://www.kraken.com/krak\" rel=\"noopener\" target=\"_blank\"><span>Krak</span></a><span>, CoinDesk </span><a class=\"editor-rtfLink\" href=\"https://www.coindesk.com/business/2026/01/13/kraken-backed-spac-files-for-usd250-million-initial-public-offering\" rel=\"noopener\" target=\"_blank\"><span>reported</span></a><span> Tuesday (Jan. 13). The IPO offers Kraken a new path to bring crypto businesses into public markets, while also potentially boosting its own crypto infrastructure services.</span></p>\n<p><span>The filing is the latest in a series of IPOs by crypto firms in the last year, with </span><a class=\"editor-rtfLink\" href=\"https://circle.so/\" rel=\"noopener\" target=\"_blank\"><span>Circle</span></a><span>, </span><a class=\"editor-rtfLink\" href=\"https://www.bullish.com/us\" rel=\"noopener\" target=\"_blank\"><span>Bullish</span></a><span> and </span><a class=\"editor-rtfLink\" href=\"https://www.gemini.com/\" rel=\"noopener\" target=\"_blank\"><span>Gemini</span></a><span> all </span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/cryptocurrency/2025/crypto-acquisitions-and-ipos-surged-in-2025-driven-by-trump-administration-policies/\" rel=\"noopener\" target=\"_blank\"><span>going public</span></a><span>. The trend continued into the new year, with crypto custody startup </span><a class=\"editor-rtfLink\" href=\"https://www.bitgo.com/\" rel=\"noopener\" target=\"_blank\"><span>BitGo</span></a><span> announcing Monday that it is seeking a valuation of up to $1.96 billion with its </span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/cryptocurrency/2026/bitgo-targets-1-9-billion-ipo-for-crypto-custody-firm/\" rel=\"noopener\" target=\"_blank\"><span>IPO</span></a><span>.</span></p>\n<p><span>Kraken itself filed for an </span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/cryptocurrency/2025/kraken-becomes-latest-crypto-firm-with-ipo-plans/\" rel=\"noopener\" target=\"_blank\"><span>IPO</span></a><span> in November and weeks later announced plans to </span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/acquisitions/2025/kraken-makes-bigger-bet-on-tokenization-with-backed-acquisition/\" rel=\"noopener\" target=\"_blank\"><span>acquire</span></a><span> tokenized assets platform </span><a class=\"editor-rtfLink\" href=\"https://backed.fi/\" rel=\"noopener\" target=\"_blank\"><span>Backed Finance</span></a><span>.</span></p>\n<p><span>Kraken co-CEO </span><a class=\"editor-rtfLink\" href=\"https://www.linkedin.com/in/asethi\" rel=\"noopener\" target=\"_blank\"><span>Arjun Sethi</span></a><span> said at the time that the acquisition lets the company integrate stocks and exchange-traded funds more deeply into its platform.</span></p>\n<p><span>In other crypto news, </span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/\" rel=\"noopener\" target=\"_blank\"><span>PYMNTS</span></a><span> on Tuesday debuted \u201c</span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/podcast/from-the-block/\" rel=\"noopener\" target=\"_blank\"><span>From the Block</span></a><span>,\u201d a podcast created in partnership with </span><a class=\"editor-rtfLink\" href=\"https://www.citi.com/\" rel=\"noopener\" target=\"_blank\"><span>Citi</span></a><span>.</span></p>\n<p><span>The first episode featured a conversation between PYMNTS CEO </span><a class=\"editor-rtfLink\" href=\"https://www.linkedin.com/in/karenwebsterboston\" rel=\"noopener\" target=\"_blank\"><span>Karen Webster</span></a><span> and </span><a class=\"editor-rtfLink\" href=\"https://www.linkedin.com/in/ryanrugg\" rel=\"noopener\" target=\"_blank\"><span>Ryan Rugg</span></a><span>, </span><span>global head</span><span> of </span><span>digital assets</span><span> for </span><a class=\"editor-rtfLink\" href=\"https://www.citigroup.com/global/businesses/services\" rel=\"noopener\" target=\"_blank\"><span>Citi Treasury and Trade Solutions</span></a><span>, about </span><a class=\"editor-rtfLink\" href=\"https://www.pymnts.com/blockchain/2026/citi-links-regulation-and-reality-in-the-next-phase-of-digital-assets/\" rel=\"noopener\" target=\"_blank\"><span>regulation</span></a><span> following the passage of last year\u2019s </span><a class=\"editor-rtfLink\" href=\"https://www.congress.gov/bill/119th-congress/senate-bill/1582/text\" rel=\"noopener\" target=\"_blank\"><span>GENIUS Act</span></a><span>.</span></p>\n<p><span>Rugg framed the bill as part of a </span><span>larger</span><span> shift in how the U.S. government </span><span>is thinking about</span><span> innovation in financial services.</span></p>\n<p><span>\u201cLooking back on 2025, GENIUS was one key legislative piece,\u201d Rugg said. \u201cBut if you think about it, there was also an executive order signed by President [Donald] Trump. The bitcoin reserve </span><span>is established</span><span>. So clearly, a foundational shift in the way that this administration is thinking about not just digital assets, but innovation overall.\u201d</span></p>\n<p><span>For regulated institutions, that posture is important, she said, adding that banks aren\u2019t operating in gray areas. They require defined rules to invest, integrate and scale.</span></p>\n<p><span>\u201cThis is giving that pathway to our regulators to start laying those foundations for many institutions,\u201d Rugg said.</span></p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/news/ipo/2026/kraken-affiliated-krakacquisition-plans-go-public/\">Kraken-Affiliated KRAKacquisition Plans to Go Public</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
-    "image_url": "https://www.pymnts.com/wp-content/uploads/2025/04/Kraken.jpg?w=457",
-    "summary_text": "Kraken-affiliated company KRAKacquisition Corp is the latest cryptocurrency firm planning to go public. KRAKacquisition, a special purpose acquisition company (SPAC) backed by an affiliate of crypto exchange Kraken, filed Monday (Jan. 12) to go public with a ...",
-    "category": "fintech",
-    "_permalink": "/p/971f5615ae/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/971f5615ae/",
-    "_summary_240": "Kraken-affiliated company KRAKacquisition Corp is the latest cryptocurrency firm planning to go public. KRAKacquisition, a special purpose acquisition company (SPAC) backed by an...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/971f5615ae/thumbnail.png"
   },
   {
     "title": "What the NFT Paris cancellation says about the current state of the NFT market",
@@ -705,21 +750,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/101a59b409/thumbnail.png"
   },
   {
-    "title": "Spotify\u2019s New CEOs Are Battling Algo Fatigue and Angry Artists",
-    "url": "https://www.bloomberg.com/news/features/2026-01-13/spotify-s-new-ceos-are-battling-angry-artists-and-algo-fatigue",
-    "published_at": "2026-01-13T05:00:35-05:00",
-    "source": "Bloomberg Technology",
-    "summary": "And they\u2019re hoping AI can help solve some of those problems.",
-    "content_html": "",
-    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iwr2G8TBvNek/v0/1200x-1.gif",
-    "summary_text": "And they\u2019re hoping AI can help solve some of those problems.",
-    "category": "ai",
-    "_permalink": "/p/9ed45a0d91/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/9ed45a0d91/",
-    "_summary_240": "And they\u2019re hoping AI can help solve some of those problems.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/9ed45a0d91/thumbnail.png"
-  },
-  {
     "title": "Italy\u2019s CONSOB puts \u2018finfluencers\u2019 on notice amid ESMA\u2019s crypto risk warnings",
     "url": "https://cointelegraph.com/news/italy-consob-esma-crypto-finfluencers-advertising-rules?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
     "published_at": "2026-01-13T04:53:28-05:00",
@@ -855,21 +885,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/9aa3864bb5/thumbnail.png"
   },
   {
-    "title": "Banks\u2019 stablecoin concerns are \u2018unsubstantiated myths\u2018: Professor",
-    "url": "https://cointelegraph.com/news/debunking-unsubstantiated-banking-industry-concerns-about-stablecoins?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-    "published_at": "2026-01-13T00:17:18-05:00",
-    "source": "Cointelegraph",
-    "summary": "A Columbia Business School professor debunked five banking industry misunderstandings about stablecoin yields as the market structure bill heads for markups this month.",
-    "content_html": "",
-    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTIvMDE5YjMyNGEtZTdmZC03NjM0LWFhMmYtOTU4NzZlOGJjMjA4LmpwZw==.jpg",
-    "summary_text": "A Columbia Business School professor debunked five banking industry misunderstandings about stablecoin yields as the market structure bill heads for markups this month.",
-    "category": "fintech",
-    "_permalink": "/p/f2cb7dd31e/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/f2cb7dd31e/",
-    "_summary_240": "A Columbia Business School professor debunked five banking industry misunderstandings about stablecoin yields as the market structure bill heads for markups this month.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/f2cb7dd31e/thumbnail.png"
-  },
-  {
     "title": "Don\u2019t hold your breath for robots\u2019 ChatGPT moment",
     "url": "https://www.ft.com/content/ed4e523e-923c-493d-b402-98a03f0cf7dd",
     "published_at": "2026-01-13T00:00:28-05:00",
@@ -960,21 +975,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/159c473986/thumbnail.png"
   },
   {
-    "title": "Why Amazon bought Bee, an AI wearable",
-    "url": "https://techcrunch.com/2026/01/12/why-amazon-bought-bee-an-ai-wearable/",
-    "published_at": "2026-01-12T16:55:44-05:00",
-    "source": "TechCrunch",
-    "summary": "Amazon explains where its wearable Bee fits in and whether it will merge with Alexa.",
-    "content_html": "",
-    "image_url": "https://techcrunch.com/wp-content/uploads/2024/07/HD_8500c2.jpg?resize=1200,675",
-    "summary_text": "Amazon explains where its wearable Bee fits in and whether it will merge with Alexa.",
-    "category": "ai",
-    "_permalink": "/p/ff074a0990/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/ff074a0990/",
-    "_summary_240": "Amazon explains where its wearable Bee fits in and whether it will merge with Alexa.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/ff074a0990/thumbnail.png"
-  },
-  {
     "title": "Google removes some AI health summaries after investigation finds \u201cdangerous\u201d flaws",
     "url": "https://arstechnica.com/ai/2026/01/google-removes-some-ai-health-summaries-after-investigation-finds-dangerous-flaws/",
     "published_at": "2026-01-12T16:47:32-05:00",
@@ -988,21 +988,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/61af5b5360/",
     "_summary_240": "AI Overviews provided false liver test information experts called alarming.",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/61af5b5360/thumbnail.png"
-  },
-  {
-    "title": "Mark Zuckerberg says Meta is launching its own AI infrastructure initiative",
-    "url": "https://techcrunch.com/2026/01/12/mark-zuckerberg-says-meta-is-launching-its-own-ai-infrastructure-initiative/",
-    "published_at": "2026-01-12T16:44:43-05:00",
-    "source": "TechCrunch",
-    "summary": "Meta is ramping up its efforts to build out its AI capacity \u2014 Zuckerberg said the company intended to drastically expand its energy footprint in the coming years.",
-    "content_html": "",
-    "image_url": "https://techcrunch.com/wp-content/uploads/2025/01/GettyImages-2173579488.jpg?resize=1200,799",
-    "summary_text": "Meta is ramping up its efforts to build out its AI capacity \u2014 Zuckerberg said the company intended to drastically expand its energy footprint in the coming years.",
-    "category": "ai",
-    "_permalink": "/p/3c9e861fc4/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/3c9e861fc4/",
-    "_summary_240": "Meta is ramping up its efforts to build out its AI capacity \u2014 Zuckerberg said the company intended to drastically expand its energy footprint in the coming years.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/3c9e861fc4/thumbnail.png"
   },
   {
     "title": "Apple Teams Up With Google for A.I. in Its Products",
@@ -1093,21 +1078,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/4f18e2eda9/",
     "_summary_240": "NVIDIA and Eli Lilly and Company today announced a first-of-its-kind AI co-innovation lab focused on applying AI to tackle some of the most enduring challenges in the...",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/4f18e2eda9/thumbnail.png"
-  },
-  {
-    "title": "Anthropic launches Cowork, a Claude Desktop agent that works in your files \u2014 no coding required",
-    "url": "https://venturebeat.com/technology/anthropic-launches-cowork-a-claude-desktop-agent-that-works-in-your-files-no",
-    "published_at": "2026-01-12T06:30:00-05:00",
-    "source": "VentureBeat",
-    "summary": "Anthropic released Cowork on Monday, a new AI agent capability that extends the power of its wildly successful Claude Code tool to non-technical users \u2014 and according to company insiders, the team built the entire feature in approximately a week and a half, largely using Claude Code itself. The launch marks a major inflection point in the race to deliver practical AI agents to mainstream users, p...",
-    "content_html": "",
-    "image_url": "https://images.ctfassets.net/jdtwqhzvc2n1/wHv1Wez7Ps9wYVYAo9fwT/14b41f606dbf1f5b17994be510407449/nuneybits_Hyper-realistic_image_of_a_retro_computer_with_a_glos_61ffb6e2-7c33-4d45-85f7-69c28693b3ec.webp?w=800&amp;q=75",
-    "summary_text": "Anthropic released Cowork on Monday, a new AI agent capability that extends the power of its wildly successful Claude Code tool to non-technical users \u2014 and according to company insiders, the team built the entire feature in approximately a week and a half, l...",
-    "category": "ai",
-    "_permalink": "/p/b018b3614d/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/b018b3614d/",
-    "_summary_240": "Anthropic released Cowork on Monday, a new AI agent capability that extends the power of its wildly successful Claude Code tool to non-technical users \u2014 and according to company...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/b018b3614d/thumbnail.png"
   },
   {
     "title": "Follow Ian McKellen Into the Mixed Reality Future in \u2018An Ark\u2019",
