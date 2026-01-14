@@ -1356,7 +1356,7 @@ def build_section(date_str: str, by_cat: dict) -> str:
                 except Exception:
                     pass
             else:
-                thumbnail = it.get("_thumbnail") or it.get("image_url") or "/icons/T2D_Pulse_Banner.png"
+                thumbnail = it.get("_thumbnail") or it.get("image_url") or ""
 
             src = html.escape(it["source"])
             try:
