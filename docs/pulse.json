@@ -19,14 +19,14 @@
     "url": "https://cointelegraph.com/news/warren-urges-occ-delay-world-liberty-bank-bid-trump-cuts-ties?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
     "published_at": "2026-01-13T20:48:59-05:00",
     "source": "Cointelegraph",
-    "summary": "\u201cWe have never seen financial conflicts or corruption of this magnitude,\u201d said Senator Elizabeth Warren on US President Donald Trump's links to World Liberty Financial.",
+    "summary": "\u201cWe have never seen financial conflicts or corruption of this magnitude,\u201d Senator Elizabeth Warren says of US President Donald Trump\u2019s links to World Liberty Financial.",
     "content_html": "",
     "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjYtMDEvMDE5YmI5OWQtMmQxOS03Mjc5LWExMzAtZDkwZjczYjk1ZjJhLmpwZw==.jpg",
-    "summary_text": "\u201cWe have never seen financial conflicts or corruption of this magnitude,\u201d said Senator Elizabeth Warren on US President Donald Trump's links to World Liberty Financial.",
+    "summary_text": "\u201cWe have never seen financial conflicts or corruption of this magnitude,\u201d Senator Elizabeth Warren says of US President Donald Trump\u2019s links to World Liberty Financial.",
     "category": "fintech",
     "_permalink": "/p/8bc07eed81/",
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/8bc07eed81/",
-    "_summary_240": "\u201cWe have never seen financial conflicts or corruption of this magnitude,\u201d said Senator Elizabeth Warren on US President Donald Trump's links to World Liberty Financial.",
+    "_summary_240": "\u201cWe have never seen financial conflicts or corruption of this magnitude,\u201d Senator Elizabeth Warren says of US President Donald Trump\u2019s links to World Liberty Financial.",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/8bc07eed81/thumbnail.png"
   },
   {
@@ -990,21 +990,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/e2e65e6c8c/thumbnail.png"
   },
   {
-    "title": "AI on campus",
-    "url": "https://www.youtube.com/watch?v=N5yJJA0NCU0",
-    "published_at": "2026-01-12T17:41:27-05:00",
-    "source": "Anthropic YouTube",
-    "summary": "AI is ubiquitous on college campuses. We sat down with students to hear what's going well, what isn't, and how students, professors, and universities alike are navigating it in real time. 0:00 - Introduction 0:22 - Meet the panel 1:06 - Vibes on campus 6:28 - What are students building? 11:27 - AI as tool vs. crutch 16:44 - Are professors keeping up? 20:15 - Downsides 25:55 - AI and the job marke...",
-    "content_html": "",
-    "image_url": "https://i.ytimg.com/vi/N5yJJA0NCU0/maxresdefault.jpg",
-    "summary_text": "AI is ubiquitous on college campuses. We sat down with students to hear what's going well, what isn't, and how students, professors, and universities alike are navigating it in real time. 0:00 - Introduction 0:22 - Meet the panel 1:06 - Vibes on campus 6:28 -...",
-    "category": "ai",
-    "_permalink": "/p/159c473986/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/159c473986/",
-    "_summary_240": "AI is ubiquitous on college campuses. We sat down with students to hear what's going well, what isn't, and how students, professors, and universities alike are navigating it in...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/159c473986/thumbnail.png"
-  },
-  {
     "title": "Google removes some AI health summaries after investigation finds \u201cdangerous\u201d flaws",
     "url": "https://arstechnica.com/ai/2026/01/google-removes-some-ai-health-summaries-after-investigation-finds-dangerous-flaws/",
     "published_at": "2026-01-12T16:47:32-05:00",
@@ -1048,6 +1033,21 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/c5a3e2919a/",
     "_summary_240": "Our LLM API bill was growing 30% month-over-month. Traffic was increasing, but not that fast. When I analyzed our query logs, I found the real problem: Users ask the same...",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/c5a3e2919a/thumbnail.png"
+  },
+  {
+    "title": "Helping you choose the right insurance plan for you with ChatGPT",
+    "url": "https://www.youtube.com/watch?v=g4MTiidxp8I",
+    "published_at": "2026-01-12T12:13:07-05:00",
+    "source": "OpenAI YouTube",
+    "summary": "We\u2019re introducing ChatGPT Health, a dedicated experience that securely brings your health information and ChatGPT\u2019s intelligence together, to help you feel more informed, prepared, and confident navigating your health. With Health, ChatGPT can help you understand recent test results, prepare for appointments with your doctor, get advice on how to approach your diet and workout routine, or underst...",
+    "content_html": "",
+    "image_url": "https://i.ytimg.com/vi/g4MTiidxp8I/maxresdefault.jpg",
+    "summary_text": "We\u2019re introducing ChatGPT Health, a dedicated experience that securely brings your health information and ChatGPT\u2019s intelligence together, to help you feel more informed, prepared, and confident navigating your health. With Health, ChatGPT can help you unders...",
+    "category": "ai",
+    "_permalink": "/p/94b6762e8a/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/94b6762e8a/",
+    "_summary_240": "We\u2019re introducing ChatGPT Health, a dedicated experience that securely brings your health information and ChatGPT\u2019s intelligence together, to help you feel more informed,...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/94b6762e8a/thumbnail.png"
   },
   {
     "title": "Bridging the gap between AI and medicine: Claude in Microsoft Foundry advances capabilities",
@@ -1172,9 +1172,13 @@
     "source": "Financial Times - Technology",
     "summary": "Naver targets countries reluctant to use American and Chinese cloud systems out of security concerns",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/8dbba375-c348-4e8b-bb98-47e0ab93c702.jpg",
     "summary_text": "Naver targets countries reluctant to use American and Chinese cloud systems out of security concerns",
-    "category": "ai"
+    "category": "ai",
+    "_permalink": "/p/497410f040/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/497410f040/",
+    "_summary_240": "Naver targets countries reluctant to use American and Chinese cloud systems out of security concerns",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/497410f040/thumbnail.png"
   },
   {
     "title": "Hyperscaler Equity Issuance in 2026?",
@@ -1205,7 +1209,7 @@
     "source": "Financial Times - Technology",
     "summary": "Billionaire\u2019s xAI start-up lacks adequate safeguards, say experts, but many AI models are trained on troubling material",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/aab04495-37f2-41a7-af72-92e106a6be27.jpg",
     "summary_text": "Billionaire\u2019s xAI start-up lacks adequate safeguards, say experts, but many AI models are trained on troubling material",
     "category": "ai"
   },
@@ -1260,7 +1264,7 @@
     "source": "Financial Times - Technology",
     "summary": "MiniMax joins wave of technology companies in China going public",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/134e13e6-6902-4175-90a8-48cb57f21aa3.jpg",
     "summary_text": "MiniMax joins wave of technology companies in China going public",
     "category": "ai"
   },
@@ -1271,7 +1275,7 @@
     "source": "Financial Times - Technology",
     "summary": "The three newly listed makers of semiconductors are lossmaking, and none has sales worth more than a tenth of their bigger rival",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/f6ac1452-f138-4b93-8565-2a66aaf66963.jpg",
     "summary_text": "The three newly listed makers of semiconductors are lossmaking, and none has sales worth more than a tenth of their bigger rival",
     "category": "ai"
   },
