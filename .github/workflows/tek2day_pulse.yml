@@ -1,40 +1,64 @@
 name: Build TEK2day Pulse (Website Only)
+
 on:
-  # Every 30 minutes, 11:30-23:00 UTC (covers 7:30am-6pm ET in both EST/EDT), Mon-Fri only
+  # Every 30 minutes, 11:30-23:00 UTC (covers ~7:30am-6pm ET in both EST/EDT) across all days.
   schedule:
     - cron: "30 11-22 * * 0-6"  # :30 minutes from 11:30-22:30 UTC
     - cron: "0 12-23 * * 0-6"   # :00 minutes from 12:00-23:00 UTC
   # Manual "Run workflow" button in Actions
   workflow_dispatch: {}
+
 permissions:
   contents: write
   pages: write
   id-token: write
+
 # Prevent overlapping runs; newest run wins
 concurrency:
   group: pulse-prod
   cancel-in-progress: true
+
 jobs:
   build:
     env:
       DISABLE_WEEKEND_CACHE: "1"
+      # Avoid filling the runner with pip wheel caches
+      PIP_NO_CACHE_DIR: "1"
+      # Retention knobs for scripts/prune_generated.py
+      KEEP_ARCHIVE_DAYS: "30"
+      KEEP_PERMALINK_DAYS: "7"
+      MAX_PERMALINK_DIRS: "1200"
+      KEEP_TIMESTAMPED_DAYS: "2"
     # Extra safety: only operate on main
     if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout main
         uses: actions/checkout@v4
         with:
           ref: main
+          fetch-depth: 1
+
+      - name: Free disk space on runner
+        run: |
+          df -h
+          # Remove large preinstalled toolchains we don't use to free space
+          sudo rm -rf /usr/share/dotnet /opt/ghc /usr/local/lib/android /usr/local/.ghcup || true
+          sudo rm -rf /opt/hostedtoolcache/CodeQL || true
+          df -h
+
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
+
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          if [ -f generator/requirements.txt ]; then pip install -r generator/requirements.txt; fi
-          pip install tldextract==5.1.2
+          if [ -f generator/requirements.txt ]; then pip install --no-cache-dir -r generator/requirements.txt; fi
+          pip install --no-cache-dir tldextract==5.1.2
+
       # Safety check: verify we're in ET business hours (cron handles most filtering)
       - name: ET weekday window verification
         run: |
@@ -50,36 +74,43 @@ jobs:
             print("Outside business hours - exiting gracefully")
             raise SystemExit(0)
           PY
+
+      - name: Pre-prune generated folders (before build)
+        run: |
+          python scripts/prune_generated.py --stage pre
+          echo "After pre-prune:"
+          du -sh docs/ || true
+          df -h
+
       - name: Build site (writes to docs/)
         run: |
           python generator/generate_pulse.py
-      - name: Clean old timestamped snapshots
+
+      - name: Post-prune generated folders (after build)
         run: |
-          # Keep only last 7 days of timestamped snapshots
-          if [ -d "docs/archive/timestamped" ]; then
-            echo "Cleaning old timestamped snapshots..."
-            find docs/archive/timestamped -name "*.json" -mtime +7 -delete
-            echo "Remaining timestamped files:"
-            ls -lh docs/archive/timestamped | wc -l
-          fi
-          
-          # Keep only last 30 days of permalinks
-          if [ -d "docs/p" ]; then
-            echo "Cleaning old permalinks..."
-            find docs/p -type d -mtime +30 -exec rm -rf {} + 2>/dev/null || true
-            echo "Remaining permalink dirs:"
-            ls -d docs/p/*/ 2>/dev/null | wc -l
-          fi
-          
-          # Show disk usage
-          echo "Docs folder size:"
-          du -sh docs/
+          python scripts/prune_generated.py --stage post
+          echo "After post-prune:"
+          du -sh docs/ || true
           df -h
+
+      - name: Disk usage report (top offenders)
+        run: |
+          echo "== df -h =="
+          df -h
+          echo
+          echo "== Largest subfolders under docs/ =="
+          du -h -d 3 docs | sort -h | tail -n 50
+          echo
+          echo "== Files over 50MB under docs/ =="
+          find docs -type f -size +50M -print -exec ls -lh {} \; || true
+
       - name: Commit & push if changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          # stage only docs
+          # Ensure permalink directories are not committed if they reappear
+          rm -rf docs/p || true
+          # Stage only docs
           git add docs/
           if git diff --cached --quiet; then
             echo "No changes to commit."
@@ -87,10 +118,12 @@ jobs:
             git commit -m "chore: TEK2day Pulse auto-update (prod)"
             git push origin HEAD:main
           fi
+
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: docs/
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
