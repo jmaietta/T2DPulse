@@ -1,96 +1,165 @@
-name: Build TEK2day Pulse (Website Only)
+name: Generate and Publish Tek2Day Pulse
+
 on:
-  # Every 30 minutes, 11:30-23:00 UTC (covers 7:30am-6pm ET in both EST/EDT), Mon-Fri only
   schedule:
+    # Runs at minute 0 every 5 hours (UTC). Example: 00:00, 05:00, 10:00, 15:00, 20:00 UTC
     - cron: "0 */5 * * *"
-    
-  # Manual "Run workflow" button in Actions
-  workflow_dispatch: {}
+  workflow_dispatch:
+
+# Needed to push commits back to the repo
 permissions:
   contents: write
-  pages: write
-  id-token: write
-# Prevent overlapping runs; newest run wins
+
 concurrency:
-  group: pulse-prod
-  cancel-in-progress: true
+  group: tek2day-pulse
+  cancel-in-progress: false
+
 jobs:
-  build:
-    env:
-      DISABLE_WEEKEND_CACHE: "1"
-    # Extra safety: only operate on main
-    if: github.ref == 'refs/heads/main'
+  build-and-deploy:
     runs-on: ubuntu-latest
+    env:
+      TZ: America/New_York
+
     steps:
-      - name: Checkout main
+      - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          ref: main
-      - name: Setup Python
+          # IMPORTANT: we need full history to determine "age" of docs/p folders via git log
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: "3.11"
+          python-version: "3.x"
+
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          if [ -f generator/requirements.txt ]; then pip install -r generator/requirements.txt; fi
-          pip install tldextract==5.1.2
-      # Safety check: verify we're in ET business hours (cron handles most filtering)
-      - name: ET weekday window verification
-        run: |
-          python - <<'PY'
-          from datetime import datetime, time
-          from zoneinfo import ZoneInfo
-          now = datetime.now(ZoneInfo("America/New_York"))
-          wd = now.weekday()  # 0=Mon, 6=Sun
-          start = time(7,30); end = time(18,0)
-          within = (0 <= wd <= 4) and (start <= now.time() <= end)
-          print(f"Now ET: {now.isoformat(timespec='seconds')}  weekday={wd}  within_window={within}")
-          if not within:
-            print("Outside business hours - exiting gracefully")
-            raise SystemExit(0)
-          PY
-      - name: Build site (writes to docs/)
+          pip install -r generator/requirements.txt
+
+      - name: Generate content
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          RAPIDAPI_KEY: ${{ secrets.RAPIDAPI_KEY }}
         run: |
           python generator/generate_pulse.py
-      - name: Clean old timestamped snapshots
+
+      - name: Purge files older than 3 days (docs/p + archives)
         run: |
-          # Keep only last 7 days of timestamped snapshots
-          if [ -d "docs/archive/timestamped" ]; then
-            echo "Cleaning old timestamped snapshots..."
-            find docs/archive/timestamped -name "*.json" -mtime +7 -delete
-            echo "Remaining timestamped files:"
-            ls -lh docs/archive/timestamped | wc -l
-          fi
-          
-          # Keep only last 30 days of permalinks
-          if [ -d "docs/p" ]; then
-            echo "Cleaning old permalinks..."
-            find docs/p -type d -mtime +30 -exec rm -rf {} + 2>/dev/null || true
-            echo "Remaining permalink dirs:"
-            ls -d docs/p/*/ 2>/dev/null | wc -l
-          fi
-          
-          # Show disk usage
-          echo "Docs folder size:"
-          du -sh docs/
-          df -h
-      - name: Commit & push if changed
+          python - <<'PY'
+          import os, re, shutil, subprocess
+          from datetime import datetime, timedelta
+          try:
+            from zoneinfo import ZoneInfo
+            TZ = ZoneInfo("America/New_York")
+          except Exception:
+            TZ = None  # fallback: naive datetimes
+
+          def now_et():
+            if TZ:
+              return datetime.now(TZ)
+            return datetime.now()
+
+          cutoff_et = now_et() - timedelta(days=3)
+          cutoff_utc_epoch = int(datetime.utcnow().timestamp() - 3 * 86400)
+
+          def parse_archive_dt(filename: str):
+            # Matches:
+            #   2026-01-13.json
+            #   2026-01-13_064827.json
+            m = re.match(r"^(\d{4}-\d{2}-\d{2})(?:_(\d{6}))?\.json$", filename)
+            if not m:
+              return None
+            date_part, time_part = m.group(1), m.group(2)
+            if time_part:
+              dt = datetime.strptime(date_part + time_part, "%Y-%m-%d%H%M%S")
+            else:
+              dt = datetime.strptime(date_part, "%Y-%m-%d")
+            if TZ:
+              dt = dt.replace(tzinfo=TZ)
+            return dt
+
+          def purge_archive_dir(dirpath: str):
+            if not os.path.isdir(dirpath):
+              print(f"[skip] missing {dirpath}")
+              return 0
+            deleted = 0
+            for name in os.listdir(dirpath):
+              if name.startswith("."):  # keeps .gitkeep, etc.
+                continue
+              full = os.path.join(dirpath, name)
+              if not os.path.isfile(full):
+                continue
+              dt = parse_archive_dt(name)
+              if dt is None:
+                continue
+              if dt < cutoff_et:
+                os.remove(full)
+                deleted += 1
+                print(f"[delete] {full}")
+            return deleted
+
+          def git_last_commit_epoch(path: str):
+            try:
+              out = subprocess.check_output(
+                ["git", "log", "-1", "--format=%ct", "--", path],
+                text=True,
+                stderr=subprocess.DEVNULL,
+              ).strip()
+              return int(out) if out else None
+            except Exception:
+              return None
+
+          def purge_permalink_dirs(p_root: str):
+            if not os.path.isdir(p_root):
+              print(f"[skip] missing {p_root}")
+              return 0
+            deleted = 0
+            for entry in os.listdir(p_root):
+              if entry.startswith("."):
+                continue
+              full = os.path.join(p_root, entry)
+              if not os.path.isdir(full):
+                continue
+
+              # If folder is newly created in this run and not committed yet,
+              # git log will be empty -> keep it.
+              last_ct = git_last_commit_epoch(full)
+              if last_ct is None:
+                continue
+
+              if last_ct < cutoff_utc_epoch:
+                shutil.rmtree(full)
+                deleted += 1
+                print(f"[delete] {full} (last commit epoch={last_ct})")
+            return deleted
+
+          d1 = purge_archive_dir("docs/archive/json")
+          d2 = purge_archive_dir("docs/archive/timestamped")
+          d3 = purge_permalink_dirs("docs/p")
+
+          print(f"Done. Deleted: archive/json={d1}, archive/timestamped={d2}, docs/p dirs={d3}")
+          PY
+
+      - name: Commit and push changes (if any)
+        env:
+          # Recommended: set a PAT secret named REPO_PUSH_TOKEN (see note below).
+          # Fallback: github.token (GITHUB_TOKEN).
+          PUSH_TOKEN: ${{ secrets.REPO_PUSH_TOKEN || github.token }}
         run: |
+          if [ -z "$(git status --porcelain docs/)" ]; then
+            echo "No changes to commit."
+            exit 0
+          fi
+
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          # stage only docs
-          git add docs/
-          if git diff --cached --quiet; then
-            echo "No changes to commit."
-          else
-            git commit -m "chore: TEK2day Pulse auto-update (prod)"
-            git push origin HEAD:main
-          fi
-      - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: docs/
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+
+          # Stage additions/modifications/deletions
+          git add -A docs/
+
+          git commit -m "Auto-update docs and purge files older than 3 days"
+
+          git remote set-url origin "https://x-access-token:${PUSH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          git push origin HEAD:${GITHUB_REF_NAME}
