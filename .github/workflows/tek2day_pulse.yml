@@ -130,7 +130,7 @@ jobs:
               fi
               [ -n "${created_epoch}" ] || continue
 
-              if [ "${created_epoch}" -lt "${cutoff}" ]; then
+              if [ "${created_epoch}" -lt "${CUTOFF_EPOCH}" ]; then
                 echo "Deleting permalink dir: $d (created $(date -u -d @${created_epoch}))"
                 rm -rf "$d"
               fi
@@ -148,7 +148,7 @@ jobs:
               fi
               [ -n "${created_epoch}" ] || continue
 
-              if [ "${created_epoch}" -lt "${cutoff}" ]; then
+              if [ "${created_epoch}" -lt "${CUTOFF_EPOCH}" ]; then
                 echo "Deleting permalink file: $f (created $(date -u -d @${created_epoch}))"
                 rm -f "$f"
               fi
