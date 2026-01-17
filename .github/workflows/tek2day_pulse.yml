@@ -1,165 +1,156 @@
-name: Generate and Publish Tek2Day Pulse
+name: Build TEK2day Pulse (Website Only)
 
 on:
+  # NOTE: This cron runs every 5 hours (minute 0). If you truly want every 30 minutes, use: "*/30 * * * *"
   schedule:
-    # Runs at minute 0 every 5 hours (UTC). Example: 00:00, 05:00, 10:00, 15:00, 20:00 UTC
     - cron: "0 */5 * * *"
-  workflow_dispatch:
 
-# Needed to push commits back to the repo
+  workflow_dispatch: {}
+
 permissions:
   contents: write
+  pages: write
+  id-token: write
 
 concurrency:
-  group: tek2day-pulse
-  cancel-in-progress: false
+  group: pulse-prod
+  cancel-in-progress: true
 
 jobs:
-  build-and-deploy:
-    runs-on: ubuntu-latest
+  build:
     env:
-      TZ: America/New_York
+      DISABLE_WEEKEND_CACHE: "1"
+      RETENTION_DAYS: "3"
+      RETENTION_TZ: "America/New_York"
+
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout main
         uses: actions/checkout@v4
         with:
-          # IMPORTANT: we need full history to determine "age" of docs/p folders via git log
+          ref: main
+          # IMPORTANT: needed so git log can see when permalinks were last committed
           fetch-depth: 0
-          persist-credentials: false
 
-      - name: Set up Python
+      - name: Setup Python
         uses: actions/setup-python@v5
         with:
-          python-version: "3.x"
+          python-version: "3.11"
 
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install -r generator/requirements.txt
+          if [ -f generator/requirements.txt ]; then pip install -r generator/requirements.txt; fi
+          pip install tldextract==5.1.2
 
-      - name: Generate content
-        env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          RAPIDAPI_KEY: ${{ secrets.RAPIDAPI_KEY }}
+      - name: ET weekday window verification
+        run: |
+          python - <<'PY'
+          from datetime import datetime, time
+          from zoneinfo import ZoneInfo
+          now = datetime.now(ZoneInfo("America/New_York"))
+          wd = now.weekday()  # 0=Mon, 6=Sun
+          start = time(7,30); end = time(18,0)
+          within = (0 <= wd <= 4) and (start <= now.time() <= end)
+          print(f"Now ET: {now.isoformat(timespec='seconds')}  weekday={wd}  within_window={within}")
+          if not within:
+            print("Outside business hours - exiting gracefully")
+            raise SystemExit(0)
+          PY
+
+      - name: Build site (writes to docs/)
         run: |
           python generator/generate_pulse.py
 
-      - name: Purge files older than 3 days (docs/p + archives)
+      - name: Prune archives & permalinks older than retention window
+        shell: bash
         run: |
-          python - <<'PY'
-          import os, re, shutil, subprocess
-          from datetime import datetime, timedelta
-          try:
-            from zoneinfo import ZoneInfo
-            TZ = ZoneInfo("America/New_York")
-          except Exception:
-            TZ = None  # fallback: naive datetimes
+          set -euo pipefail
+          shopt -s nullglob
 
-          def now_et():
-            if TZ:
-              return datetime.now(TZ)
-            return datetime.now()
+          DAYS="${RETENTION_DAYS}"
+          TZNAME="${RETENTION_TZ}"
 
-          cutoff_et = now_et() - timedelta(days=3)
-          cutoff_utc_epoch = int(datetime.utcnow().timestamp() - 3 * 86400)
+          # Filenames are created using America/New_York in your generator, so compute cutoff in that TZ too.
+          CUTOFF_DATE="$(TZ="${TZNAME}" date -d "${DAYS} days ago" +%F)"
+          CUTOFF_EPOCH="$(TZ="${TZNAME}" date -d "${DAYS} days ago" +%s)"
 
-          def parse_archive_dt(filename: str):
-            # Matches:
-            #   2026-01-13.json
-            #   2026-01-13_064827.json
-            m = re.match(r"^(\d{4}-\d{2}-\d{2})(?:_(\d{6}))?\.json$", filename)
-            if not m:
-              return None
-            date_part, time_part = m.group(1), m.group(2)
-            if time_part:
-              dt = datetime.strptime(date_part + time_part, "%Y-%m-%d%H%M%S")
-            else:
-              dt = datetime.strptime(date_part, "%Y-%m-%d")
-            if TZ:
-              dt = dt.replace(tzinfo=TZ)
-            return dt
+          echo "Retention: keep dates >= ${CUTOFF_DATE} (${TZNAME}); delete anything earlier."
+          echo "Cutoff epoch: ${CUTOFF_EPOCH}"
 
-          def purge_archive_dir(dirpath: str):
-            if not os.path.isdir(dirpath):
-              print(f"[skip] missing {dirpath}")
-              return 0
-            deleted = 0
-            for name in os.listdir(dirpath):
-              if name.startswith("."):  # keeps .gitkeep, etc.
-                continue
-              full = os.path.join(dirpath, name)
-              if not os.path.isfile(full):
-                continue
-              dt = parse_archive_dt(name)
-              if dt is None:
-                continue
-              if dt < cutoff_et:
-                os.remove(full)
-                deleted += 1
-                print(f"[delete] {full}")
-            return deleted
+          # Ensure base dirs always exist (Git doesn't track empty dirs)
+          mkdir -p docs/p docs/archive/json docs/archive/timestamped
+          touch docs/p/.gitkeep docs/archive/json/.gitkeep docs/archive/timestamped/.gitkeep
 
-          def git_last_commit_epoch(path: str):
-            try:
-              out = subprocess.check_output(
-                ["git", "log", "-1", "--format=%ct", "--", path],
-                text=True,
-                stderr=subprocess.DEVNULL,
-              ).strip()
-              return int(out) if out else None
-            except Exception:
-              return None
-
-          def purge_permalink_dirs(p_root: str):
-            if not os.path.isdir(p_root):
-              print(f"[skip] missing {p_root}")
-              return 0
-            deleted = 0
-            for entry in os.listdir(p_root):
-              if entry.startswith("."):
-                continue
-              full = os.path.join(p_root, entry)
-              if not os.path.isdir(full):
-                continue
-
-              # If folder is newly created in this run and not committed yet,
-              # git log will be empty -> keep it.
-              last_ct = git_last_commit_epoch(full)
-              if last_ct is None:
-                continue
-
-              if last_ct < cutoff_utc_epoch:
-                shutil.rmtree(full)
-                deleted += 1
-                print(f"[delete] {full} (last commit epoch={last_ct})")
-            return deleted
-
-          d1 = purge_archive_dir("docs/archive/json")
-          d2 = purge_archive_dir("docs/archive/timestamped")
-          d3 = purge_permalink_dirs("docs/p")
-
-          print(f"Done. Deleted: archive/json={d1}, archive/timestamped={d2}, docs/p dirs={d3}")
-          PY
-
-      - name: Commit and push changes (if any)
-        env:
-          # Recommended: set a PAT secret named REPO_PUSH_TOKEN (see note below).
-          # Fallback: github.token (GITHUB_TOKEN).
-          PUSH_TOKEN: ${{ secrets.REPO_PUSH_TOKEN || github.token }}
-        run: |
-          if [ -z "$(git status --porcelain docs/)" ]; then
-            echo "No changes to commit."
-            exit 0
+          # 1) docs/archive/json/YYYY-MM-DD.json
+          if [ -d "docs/archive/json" ]; then
+            for f in docs/archive/json/*.json; do
+              base="$(basename "$f")"
+              d="${base%.json}"
+              if [[ "$d" =~ ^[0-9]{4}-[0-9]{2}-[0-9]{2}$ ]] && [[ "$d" < "$CUTOFF_DATE" ]]; then
+                echo "Deleting (daily json) $f"
+                rm -f "$f"
+              fi
+            done
           fi
 
+          # 2) docs/archive/timestamped/YYYY-MM-DD_HHMMSS.json
+          if [ -d "docs/archive/timestamped" ]; then
+            for f in docs/archive/timestamped/*.json; do
+              base="$(basename "$f")"
+              d="${base:0:10}"
+              if [[ "$d" =~ ^[0-9]{4}-[0-9]{2}-[0-9]{2}$ ]] && [[ "$d" < "$CUTOFF_DATE" ]]; then
+                echo "Deleting (timestamped) $f"
+                rm -f "$f"
+              fi
+            done
+          fi
+
+          # 3) docs/p/<hash>/... (no timestamp in name)
+          # Use git commit time of docs/p/<hash>/index.html to decide age.
+          if [ -d "docs/p" ]; then
+            for dir in docs/p/*/; do
+              dir="${dir%/}"
+              idx="${dir}/index.html"
+              [ -f "$idx" ] || continue
+
+              last_epoch="$(git log -1 --format=%ct -- "$idx" 2>/dev/null || echo 0)"
+              if [ "$last_epoch" -lt "$CUTOFF_EPOCH" ]; then
+                echo "Deleting permalink dir $dir (last commit epoch: $last_epoch)"
+                rm -rf "$dir"
+              fi
+            done
+          fi
+
+          echo "Post-cleanup sizes:"
+          du -sh docs/ || true
+          echo "Counts:"
+          echo "  archive/json:        $(ls -1 docs/archive/json 2>/dev/null | wc -l || true)"
+          echo "  archive/timestamped: $(ls -1 docs/archive/timestamped 2>/dev/null | wc -l || true)"
+          echo "  permalink dirs:      $(ls -d docs/p/*/ 2>/dev/null | wc -l || true)"
+
+      - name: Commit & push if changed
+        run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-          # Stage additions/modifications/deletions
+          # IMPORTANT: -A is what actually stages deletions
           git add -A docs/
 
-          git commit -m "Auto-update docs and purge files older than 3 days"
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "chore: prune docs archives (keep ${RETENTION_DAYS} days)"
+            git push origin HEAD:main
+          fi
 
-          git remote set-url origin "https://x-access-token:${PUSH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
-          git push origin HEAD:${GITHUB_REF_NAME}
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs/
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
