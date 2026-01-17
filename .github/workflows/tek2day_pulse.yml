@@ -109,20 +109,82 @@ jobs:
           fi
 
           # 3) docs/p/<hash>/... (no timestamp in name)
-          # Use git commit time of docs/p/<hash>/index.html to decide age.
-          if [ -d "docs/p" ]; then
-            for dir in docs/p/*/; do
-              dir="${dir%/}"
-              idx="${dir}/index.html"
-              [ -f "$idx" ] || continue
+          #    Keep only permalinks that are referenced by the *remaining* (recent) JSON files.
+          #    This avoids relying on git commit times, which can be misleading.
+          python - <<'PY'
+          import json, glob, re, os, sys
+          keep=set()
+          rx_url = re.compile(r"/p/([A-Za-z0-9_-]{6,80})")
+          rx_token = re.compile(r"^[A-Za-z0-9_-]{6,80}$")
+          key_names = {"p","permalink","permalink_id","permalink_hash","permalinkkey","permalink_key","permalinkvalue","permalink_value"}
 
-              last_epoch="$(git log -1 --format=%ct -- "$idx" 2>/dev/null || echo 0)"
-              if [ "$last_epoch" -lt "$CUTOFF_EPOCH" ]; then
-                echo "Deleting permalink dir $dir (last commit epoch: $last_epoch)"
-                rm -rf "$dir"
-              fi
-            done
+          def add(tok: str) -> None:
+            if not tok:
+              return
+            tok = tok.strip()
+            # Extract from URL-ish strings like https://.../p/<hash>
+            m = rx_url.search(tok)
+            if m:
+              tok = m.group(1)
+            # Allow forms like p/<hash>
+            if tok.startswith('p/'):
+              tok = tok[2:]
+            if '/' in tok:
+              return
+            if rx_token.match(tok):
+              keep.add(tok)
+              # Some generators store a longer token but docs/p uses a shortened folder name (often 10 chars).
+              if len(tok) > 10:
+                keep.add(tok[:10])
+
+          def walk(obj) -> None:
+            if isinstance(obj, dict):
+              for k, v in obj.items():
+                lk = str(k).lower()
+                if isinstance(v, str):
+                  if lk in key_names:
+                    add(v)
+                  for t in rx_url.findall(v):
+                    add(t)
+                walk(v)
+            elif isinstance(obj, list):
+              for it in obj:
+                walk(it)
+            elif isinstance(obj, str):
+              for t in rx_url.findall(obj):
+                add(t)
+
+          files = glob.glob('docs/archive/json/*.json') + glob.glob('docs/archive/timestamped/*.json')
+          for fp in files:
+            try:
+              with open(fp, 'r', encoding='utf-8') as f:
+                walk(json.load(f))
+            except Exception as e:
+              print(f'warn: {fp}: {e}', file=sys.stderr)
+
+          os.makedirs('.tmp', exist_ok=True)
+          with open('.tmp/keep_p.txt', 'w', encoding='utf-8') as out:
+            for t in sorted(keep):
+              out.write(t + '\n')
+          print(f'Active permalink tokens found: {len(keep)}')
+          PY
+
+          if [ -d "docs/p" ]; then
+            echo "Pruning docs/p by JSON reference..."
+            if [ ! -s .tmp/keep_p.txt ]; then
+              echo "WARN: keep list is empty; skipping docs/p pruning to avoid deleting everything."
+            else
+              for dir in docs/p/*/; do
+                dir="${dir%/}"
+                base="$(basename "$dir")"
+                if ! grep -Fxq "$base" .tmp/keep_p.txt; then
+                  echo "Deleting orphaned permalink dir $dir"
+                  rm -rf "$dir"
+                fi
+              done
+            fi
           fi
+
 
           echo "Post-cleanup sizes:"
           du -sh docs/ || true
