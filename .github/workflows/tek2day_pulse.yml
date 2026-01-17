@@ -108,22 +108,54 @@ jobs:
             done
           fi
 
-          # 3) docs/p/<hash>/... (no timestamp in name)
-          # Use git commit time of docs/p/<hash>/index.html to decide age.
+          # 3) docs/p permalink pages (delete files older than the retention window)
+          #    Why this approach:
+          #    - GitHub checkouts set file mtimes to 'now'.
+          #    - The build can rewrite permalink files, which keeps 'last commit' fresh.
+          #    So we prune based on when a permalink file was FIRST introduced in git.
           if [ -d "docs/p" ]; then
-            for dir in docs/p/*/; do
-              dir="${dir%/}"
-              idx="${dir}/index.html"
+            echo "Pruning docs/p permalinks older than $RETENTION_DAYS days..."
+            shopt -s nullglob
+
+            # A) hashed permalink folders: docs/p/<hash>/...
+            for d in docs/p/*/; do
+              idx="${d}index.html"
               [ -f "$idx" ] || continue
 
-              last_epoch="$(git log -1 --format=%ct -- "$idx" 2>/dev/null || echo 0)"
-              if [ "$last_epoch" -lt "$CUTOFF_EPOCH" ]; then
-                echo "Deleting permalink dir $dir (last commit epoch: $last_epoch)"
-                rm -rf "$dir"
+              # created_epoch = oldest (first) commit that introduced this file
+              created_epoch=$(git log --follow --diff-filter=A --format=%ct -- "$idx" 2>/dev/null | tail -n 1 || true)
+              if [ -z "${created_epoch}" ]; then
+                # fallback: oldest commit touching the file
+                created_epoch=$(git log --follow --format=%ct -- "$idx" 2>/dev/null | tail -n 1 || true)
+              fi
+              [ -n "${created_epoch}" ] || continue
+
+              if [ "${created_epoch}" -lt "${cutoff}" ]; then
+                echo "Deleting permalink dir: $d (created $(date -u -d @${created_epoch}))"
+                rm -rf "$d"
               fi
             done
-          fi
 
+            # B) any loose files directly under docs/p (covers flat layouts)
+            for f in docs/p/*; do
+              [ -f "$f" ] || continue
+              base=$(basename "$f")
+              [ "$base" = ".gitkeep" ] && continue
+
+              created_epoch=$(git log --follow --diff-filter=A --format=%ct -- "$f" 2>/dev/null | tail -n 1 || true)
+              if [ -z "${created_epoch}" ]; then
+                created_epoch=$(git log --follow --format=%ct -- "$f" 2>/dev/null | tail -n 1 || true)
+              fi
+              [ -n "${created_epoch}" ] || continue
+
+              if [ "${created_epoch}" -lt "${cutoff}" ]; then
+                echo "Deleting permalink file: $f (created $(date -u -d @${created_epoch}))"
+                rm -f "$f"
+              fi
+            done
+
+            shopt -u nullglob
+          fi
           echo "Post-cleanup sizes:"
           du -sh docs/ || true
           echo "Counts:"
