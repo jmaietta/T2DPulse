@@ -690,21 +690,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/80de88cf1c/thumbnail.png"
   },
   {
-    "title": "From memecoins to machines: Why Web3\u2019s \u2018real economy\u2019 narrative is relevant in 2026",
-    "url": "https://cointelegraph.com/news/from-memecoins-to-machines-why-web3-s-real-economy-narrative-is-back-in-2026?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-    "published_at": "2026-01-16T09:00:00-05:00",
-    "source": "Cointelegraph",
-    "summary": "As DePIN projects generate revenue and AI agents move onchain, builders are shifting focus from speculation to fundamentals, but questions remain about Web3\u2019s decentralization ethos.",
-    "content_html": "",
-    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjYtMDEvMDE5YmM2MWEtZDNmNi03OTJjLThhZDEtOWJiZGY1OWZmYTVmLmpwZw==.jpg",
-    "summary_text": "As DePIN projects generate revenue and AI agents move onchain, builders are shifting focus from speculation to fundamentals, but questions remain about Web3\u2019s decentralization ethos.",
-    "category": "ai",
-    "_permalink": "/p/3f4b3d9c83/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/3f4b3d9c83/",
-    "_summary_240": "As DePIN projects generate revenue and AI agents move onchain, builders are shifting focus from speculation to fundamentals, but questions remain about Web3\u2019s decentralization...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/3f4b3d9c83/thumbnail.png"
-  },
-  {
     "title": "Kilo launches AI-powered Slack bot that ships code from a chat message",
     "url": "https://venturebeat.com/technology/kilo-launches-ai-powered-slack-bot-that-ships-code-from-a-chat-message",
     "published_at": "2026-01-16T09:00:00-05:00",
@@ -718,6 +703,21 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/f2bf427c2d/",
     "_summary_240": "Kilo Code , the open-source AI coding startup backed by GitLab cofounder Sid Sijbrandij, is launching a Slack integration that allows software engineering teams to execute code...",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/f2bf427c2d/thumbnail.png"
+  },
+  {
+    "title": "From memecoins to machines: Why Web3\u2019s \u2018real economy\u2019 narrative is relevant in 2026",
+    "url": "https://cointelegraph.com/news/from-memecoins-to-machines-why-web3-s-real-economy-narrative-is-back-in-2026?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "published_at": "2026-01-16T09:00:00-05:00",
+    "source": "Cointelegraph",
+    "summary": "As DePIN projects generate revenue and AI agents move onchain, builders are shifting focus from speculation to fundamentals, but questions remain about Web3\u2019s decentralization ethos.",
+    "content_html": "",
+    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjYtMDEvMDE5YmM2MWEtZDNmNi03OTJjLThhZDEtOWJiZGY1OWZmYTVmLmpwZw==.jpg",
+    "summary_text": "As DePIN projects generate revenue and AI agents move onchain, builders are shifting focus from speculation to fundamentals, but questions remain about Web3\u2019s decentralization ethos.",
+    "category": "ai",
+    "_permalink": "/p/3f4b3d9c83/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/3f4b3d9c83/",
+    "_summary_240": "As DePIN projects generate revenue and AI agents move onchain, builders are shifting focus from speculation to fundamentals, but questions remain about Web3\u2019s decentralization...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/3f4b3d9c83/thumbnail.png"
   },
   {
     "title": "Web3 revenue shifts from blockchains to wallets and DeFi apps",
@@ -1355,17 +1355,6 @@
     "category": "ai"
   },
   {
-    "title": "AI on campus",
-    "url": "https://www.youtube.com/watch?v=N5yJJA0NCU0",
-    "published_at": "2026-01-12T17:41:27-05:00",
-    "source": "Anthropic YouTube",
-    "summary": "AI is ubiquitous on college campuses. We sat down with students to hear what's going well, what isn't, and how students, professors, and universities alike are navigating it in real time. 0:00 - Introduction 0:22 - Meet the panel 1:06 - Vibes on campus 6:28 - What are students building? 11:27 - AI as tool vs. crutch 16:44 - Are professors keeping up? 20:15 - Downsides 25:55 - AI and the job marke...",
-    "content_html": "",
-    "image_url": "https://i.ytimg.com/vi/N5yJJA0NCU0/maxresdefault.jpg",
-    "summary_text": "AI is ubiquitous on college campuses. We sat down with students to hear what's going well, what isn't, and how students, professors, and universities alike are navigating it in real time. 0:00 - Introduction 0:22 - Meet the panel 1:06 - Vibes on campus 6:28 -...",
-    "category": "ai"
-  },
-  {
     "title": "Google removes some AI health summaries after investigation finds \u201cdangerous\u201d flaws",
     "url": "https://arstechnica.com/ai/2026/01/google-removes-some-ai-health-summaries-after-investigation-finds-dangerous-flaws/",
     "published_at": "2026-01-12T16:47:32-05:00",
@@ -1385,6 +1374,17 @@
     "content_html": "New versions of Apple\u2019s Apple Intelligence models will be based on Google\u2019s Gemini A.I. models and its cloud computing services.",
     "image_url": "https://static01.nyt.com/images/2026/01/12/multimedia/12biz-apple-google-vcmp/12biz-apple-google-vcmp-mediumSquareAt3X.jpg",
     "summary_text": "Apple was facing increasing questions about its plans for artificial intelligence as other big tech companies invested tens of billions in the technology.",
+    "category": "ai"
+  },
+  {
+    "title": "Helping you choose the right insurance plan for you with ChatGPT",
+    "url": "https://www.youtube.com/watch?v=g4MTiidxp8I",
+    "published_at": "2026-01-12T12:13:07-05:00",
+    "source": "OpenAI YouTube",
+    "summary": "We\u2019re introducing ChatGPT Health, a dedicated experience that securely brings your health information and ChatGPT\u2019s intelligence together, to help you feel more informed, prepared, and confident navigating your health. With Health, ChatGPT can help you understand recent test results, prepare for appointments with your doctor, get advice on how to approach your diet and workout routine, or underst...",
+    "content_html": "",
+    "image_url": "https://i.ytimg.com/vi/g4MTiidxp8I/maxresdefault.jpg",
+    "summary_text": "We\u2019re introducing ChatGPT Health, a dedicated experience that securely brings your health information and ChatGPT\u2019s intelligence together, to help you feel more informed, prepared, and confident navigating your health. With Health, ChatGPT can help you unders...",
     "category": "ai"
   },
   {
