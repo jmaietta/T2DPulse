@@ -1,5 +1,35 @@
 [
   {
+    "title": "Artificial intelligence researchers hit by flood of \u2018slop\u2019",
+    "url": "https://www.ft.com/content/54e274c5-de86-4b3e-96a9-95a46b5e48a0",
+    "published_at": "2026-02-01T00:00:03-05:00",
+    "source": "Financial Times - Technology",
+    "summary": "Conferences restrict use of LLMs after surge of low-quality AI-generated papers and reviews",
+    "content_html": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/b9d3d26f-99f8-49f6-95cc-ea56abb1fb1b.jpg",
+    "summary_text": "Conferences restrict use of LLMs after surge of low-quality AI-generated papers and reviews",
+    "category": "ai",
+    "_permalink": "/p/97588f1c29/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/97588f1c29/",
+    "_summary_240": "Conferences restrict use of LLMs after surge of low-quality AI-generated papers and reviews",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/97588f1c29/thumbnail.png"
+  },
+  {
+    "title": "Abu Dhabi Royal Bought Stake in Trump\u2019s Crypto Venture, WSJ Says",
+    "url": "https://www.bloomberg.com/news/articles/2026-02-01/abu-dhabi-royal-bought-stake-in-trump-s-crypto-venture-wsj-says",
+    "published_at": "2026-01-31T23:08:34-05:00",
+    "source": "Bloomberg Technology",
+    "summary": "An Abu Dhabi royal signed a secret deal with the Trump family to buy a stake in their cryptocurrency venture, the Wall Street Journal reported, citing company documents and people familiar with the matter.",
+    "content_html": "",
+    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iJj3GeAZZ1Lk/v0/1200x-1.jpg",
+    "summary_text": "An Abu Dhabi royal signed a secret deal with the Trump family to buy a stake in their cryptocurrency venture, the Wall Street Journal reported, citing company documents and people familiar with the matter.",
+    "category": "fintech",
+    "_permalink": "/p/bc9355dd7f/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/bc9355dd7f/",
+    "_summary_240": "An Abu Dhabi royal signed a secret deal with the Trump family to buy a stake in their cryptocurrency venture, the Wall Street Journal reported, citing company documents and...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/bc9355dd7f/thumbnail.png"
+  },
+  {
     "title": "Nvidia CEO denies he\u2019s \u2018unhappy\u2019 with OpenAI",
     "url": "https://www.theverge.com/tech/871818/nvidia-ceo-jensen-huang-unhappy-openai",
     "published_at": "2026-01-31T18:37:56-05:00",
@@ -195,7 +225,7 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/27b6244a93/thumbnail.png"
   },
   {
-    "title": "Nvidia CEO Signals Investment in OpenAI Round May Be Largest Yet",
+    "title": "Nvidia CEO Says New OpenAI Investment May Be Largest Yet",
     "url": "https://www.bloomberg.com/news/articles/2026-01-31/nvidia-to-join-openai-s-current-funding-round-huang-says",
     "published_at": "2026-01-31T07:26:02-05:00",
     "source": "Bloomberg Technology",
@@ -203,11 +233,7 @@
     "content_html": "Jensen Huang, chief executive officer of Nvidia Corp., speaks during a dinner event with the company\u2019s Taiwanese suppliers in Taipei, Taiwan, on Saturday, Jan. 31, 2026. Nvidia will \u201cabsolutely\u201d be involved in OpenAI\u2019s current funding round, likely marking the company\u2019s largest-ever investment, Huang said.",
     "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iKGtfaOjgGN8/v1/1200x-1.jpg",
     "summary_text": "Nvidia Corp. Chief Executive Officer Jensen Huang said the company will be participating in OpenAI\u2019s latest funding round, describing it as potentially \u201cthe largest investment we\u2019ve ever made.\u201d",
-    "category": "ai",
-    "_permalink": "/p/907833e85d/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/907833e85d/",
-    "_summary_240": "Nvidia Corp. Chief Executive Officer Jensen Huang said the company will be participating in OpenAI\u2019s latest funding round, describing it as potentially \u201cthe largest investment...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/907833e85d/thumbnail.png"
+    "category": "ai"
   },
   {
     "title": "Active Solana addresses spike 115%, four in 10 merchants take Bitcoin: Month in Charts",
@@ -1319,7 +1345,7 @@
     "source": "Financial Times - Technology",
     "summary": "Cuts will bring total number of lay-offs to 30,000 over past three months amid higher spending on AI",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/63429fe1-4c66-473b-8885-6777e0ee1a95.jpg",
+    "image_url": "https://images.ft.com/v3/image/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F63429fe1-4c66-473b-8885-6777e0ee1a95.jpg?source=next-article&fit=scale-down&quality=highest&width=700&dpr=1",
     "summary_text": "Cuts will bring total number of lay-offs to 30,000 over past three months amid higher spending on AI",
     "category": "ai"
   },
@@ -1379,17 +1405,6 @@
     "category": "ai"
   },
   {
-    "title": "Introducing Prism, a free workspace for scientists to write and collaborate on research",
-    "url": "https://www.youtube.com/watch?v=xnInEsaaj9c",
-    "published_at": "2026-01-27T13:00:11-05:00",
-    "source": "OpenAI YouTube",
-    "summary": "As AI begins to meaningfully accelerate scientific discovery, we\u2019re taking an early step to reduce friction in day-to-day research work with Prism. Prism is a free workspace for scientists to write and collaborate on research, powered by GPT-5.2. Prism offers unlimited projects and collaborators in a single, cloud-based, LaTeX-native workspace, and is designed to expand access to scientific tools...",
-    "content_html": "",
-    "image_url": "https://i.ytimg.com/vi/xnInEsaaj9c/maxresdefault.jpg",
-    "summary_text": "As AI begins to meaningfully accelerate scientific discovery, we\u2019re taking an early step to reduce friction in day-to-day research work with Prism. Prism is a free workspace for scientists to write and collaborate on research, powered by GPT-5.2. Prism offers...",
-    "category": "ai"
-  },
-  {
     "title": "Where Tech Leaders and Students Really Think AI Is Going",
     "url": "https://www.wired.com/story/for-future-reference-ai-technology/",
     "published_at": "2026-01-27T05:30:00-05:00",
@@ -1401,14 +1416,14 @@
     "category": "ai"
   },
   {
-    "title": "PVH reimagines the future of fashion with OpenAI",
-    "url": "https://openai.com/index/pvh-future-of-fashion",
-    "published_at": "2026-01-27T01:00:00-05:00",
-    "source": "OpenAI News",
-    "summary": "PVH Corp., parent company of Calvin Klein and Tommy Hilfiger, is adopting ChatGPT Enterprise to bring AI into fashion design, supply chain, and consumer engagement.",
+    "title": "Your tools are now interactive in Claude",
+    "url": "https://www.youtube.com/watch?v=bluAmTHoEow",
+    "published_at": "2026-01-26T14:06:25-05:00",
+    "source": "Anthropic YouTube",
+    "summary": "Your connected tools are now interactive inside Claude. Manage projects in Asana, draft messages in Slack, build charts in Amplitude, and create diagrams in Figma\u2014without switching tabs.",
     "content_html": "",
-    "image_url": "",
-    "summary_text": "PVH Corp., parent company of Calvin Klein and Tommy Hilfiger, is adopting ChatGPT Enterprise to bring AI into fashion design, supply chain, and consumer engagement.",
+    "image_url": "https://i.ytimg.com/vi/bluAmTHoEow/maxresdefault.jpg",
+    "summary_text": "Your connected tools are now interactive inside Claude. Manage projects in Asana, draft messages in Slack, build charts in Amplitude, and create diagrams in Figma\u2014without switching tabs.",
     "category": "ai"
   },
   {
