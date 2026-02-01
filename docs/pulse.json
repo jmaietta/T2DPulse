@@ -1,5 +1,95 @@
 [
   {
+    "title": "OpenAI Investment Was \u2018Never a Commitment,\u2019 Nvidia\u2019s Huang Says",
+    "url": "https://www.bloomberg.com/news/articles/2026-02-01/openai-investment-was-never-a-commitment-nvidia-s-huang-says",
+    "published_at": "2026-02-01T04:52:33-05:00",
+    "source": "Bloomberg Technology",
+    "summary": "Nvidia Corp. Chief Executive Officer Jensen Huang said the company\u2019s proposed $100 billion investment in OpenAI was \u201cnever a commitment\u201d and that the company would consider any funding rounds \u201cone at a time.\u201d",
+    "content_html": "Jensen Huang, chief executive officer of Nvidia Corp., signs autographs as he arrives for a dinner event with the company\u2019s Taiwanese suppliers in Taipei, Taiwan, on Saturday, Jan. 31, 2026. Nvidia will \u201cabsolutely\u201d be involved in OpenAI\u2019s current funding round, likely marking the company\u2019s largest-ever investment, Huang said.",
+    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iWZQtnTgHGoQ/v1/1200x-1.jpg",
+    "summary_text": "Nvidia Corp. Chief Executive Officer Jensen Huang said the company\u2019s proposed $100 billion investment in OpenAI was \u201cnever a commitment\u201d and that the company would consider any funding rounds \u201cone at a time.\u201d",
+    "category": "ai",
+    "_permalink": "/p/188ea73fbd/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/188ea73fbd/",
+    "_summary_240": "Nvidia Corp. Chief Executive Officer Jensen Huang said the company\u2019s proposed $100 billion investment in OpenAI was \u201cnever a commitment\u201d and that the company would consider any...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/188ea73fbd/thumbnail.png"
+  },
+  {
+    "title": "We Published to ClawHub, an AI Agent Skills Dock",
+    "url": "https://newsletter.tek2dayholdings.com/p/we-published-to-clawhub-an-ai-agent",
+    "published_at": "2026-02-01T03:45:13-05:00",
+    "source": "TEK2day Newsletter",
+    "summary": "CEORater's API service \"skills\" are published on ClawHub",
+    "content_html": "<div class=\"captioned-image-container\"><figure><a class=\"image-link image2 is-viewable-img\" href=\"https://substackcdn.com/image/fetch/$s_!b4G0!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F5c3ce5eb-a295-4f6c-be59-a3fe59caa1ae_796x569.png\" target=\"_blank\"><div class=\"image2-inset\"><source type=\"image/webp\" /><img alt=\"\" class=\"sizing-normal\" height=\"569\" src=\"https://substackcdn.com/image/fetch/$s_!b4G0!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F5c3ce5eb-a295-4f6c-be59-a3fe59caa1ae_796x569.png\" width=\"796\" /><div class=\"image-link-expand\"><div class=\"pencraft pc-display-flex pc-gap-8 pc-reset\"><button class=\"pencraft pc-reset pencraft icon-container restack-image\" tabindex=\"0\" type=\"button\"><svg fill=\"none\" height=\"20\" stroke=\"var(--color-fg-primary)\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" viewBox=\"0 0 20 20\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><g><title></title><path d=\"M2.53001 7.81595C3.49179 4.73911 6.43281 2.5 9.91173 2.5C13.1684 2.5 15.9537 4.46214 17.0852 7.23684L17.6179 8.67647M17.6179 8.67647L18.5002 4.26471M17.6179 8.67647L13.6473 6.91176M17.4995 12.1841C16.5378 15.2609 13.5967 17.5 10.1178 17.5C6.86118 17.5 4.07589 15.5379 2.94432 12.7632L2.41165 11.3235M2.41165 11.3235L1.5293 15.7353M2.41165 11.3235L6.38224 13.0882\"></path></g></svg></button><button class=\"pencraft pc-reset pencraft icon-container view-image\" tabindex=\"0\" type=\"button\"><svg class=\"lucide lucide-maximize2 lucide-maximize-2\" fill=\"none\" height=\"20\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" viewBox=\"0 0 24 24\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><polyline points=\"15 3 21 3 21 9\"></polyline><polyline points=\"9 21 3 21 3 15\"></polyline><line x1=\"21\" x2=\"14\" y1=\"3\" y2=\"10\"></line><line x1=\"3\" x2=\"10\" y1=\"21\" y2=\"14\"></line></svg></button></div></div></div></a></figure></div><p><strong><a href=\"https://www.clawhub.ai/\">ClawHub </a>is part of the <a href=\"https://openclaw.ai/\">OpenClaw</a> open source community that has caught fire in the Agentic AI world over the past week. <a href=\"https://www.ceorater.com/\">CEORater</a> published &#8220;skills&#8221; to ClawHub today.</strong></p><p><strong>You will be hearing more about Agentic AI &#8220;skills&#8221;, which are a way of communicating a product&#8217;s capabilities to AI agents. </strong></p><p><strong>CEORater&#8217;s skills published to ClawHub describe CEORater&#8217;s API Service. </strong></p><ul><li><p>This is the URL to our API service where humans can read it (<a href=\"https://www.ceorater.com/api-docs.html\">HERE</a>), </p></li><li><p>We also publish a &#8220;.well-known&#8221; json file, which is a directory where AI agents can find the API service (<a href=\"https://www.ceorater.com/.well-known/agent.json\">HERE</a>) </p></li><li><p>Today, we published to <strong>ClawHub</strong>, which is an agent skills dock where agents proactively look for various services across domains. Our listing is <a href=\"https://www.clawhub.ai/ceorater-skills/ceorater\">HERE</a>.</p></li></ul><p>There is some malicious code that bad actors have published to ClawHub, but I thought it made sense to be early to the platform. <strong>There are thousands of agents on the ClawHub dock after only a day or two.</strong> <strong>CEORater already has 10 downloads after only a few minutes on the platform.</strong> I definitely believe agents will perform much of the initial marketing and product/service discovery that humans perform today. Total setup took approx 1 hour as I knew nothing about the process. </p><div><hr /></div><div class=\"captioned-image-container\"><figure><a class=\"image-link image2 is-viewable-img\" href=\"https://substackcdn.com/image/fetch/$s_!P4rq!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F083e97cb-40a6-4627-b781-8f7bd4ad7f63_958x540.png\" target=\"_blank\"><div class=\"image2-inset\"><source type=\"image/webp\" /><img alt=\"\" class=\"sizing-normal\" height=\"540\" src=\"https://substackcdn.com/image/fetch/$s_!P4rq!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F083e97cb-40a6-4627-b781-8f7bd4ad7f63_958x540.png\" width=\"958\" /><div class=\"image-link-expand\"><div class=\"pencraft pc-display-flex pc-gap-8 pc-reset\"><button class=\"pencraft pc-reset pencraft icon-container restack-image\" tabindex=\"0\" type=\"button\"><svg fill=\"none\" height=\"20\" stroke=\"var(--color-fg-primary)\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" viewBox=\"0 0 20 20\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><g><title></title><path d=\"M2.53001 7.81595C3.49179 4.73911 6.43281 2.5 9.91173 2.5C13.1684 2.5 15.9537 4.46214 17.0852 7.23684L17.6179 8.67647M17.6179 8.67647L18.5002 4.26471M17.6179 8.67647L13.6473 6.91176M17.4995 12.1841C16.5378 15.2609 13.5967 17.5 10.1178 17.5C6.86118 17.5 4.07589 15.5379 2.94432 12.7632L2.41165 11.3235M2.41165 11.3235L1.5293 15.7353M2.41165 11.3235L6.38224 13.0882\"></path></g></svg></button><button class=\"pencraft pc-reset pencraft icon-container view-image\" tabindex=\"0\" type=\"button\"><svg class=\"lucide lucide-maximize2 lucide-maximize-2\" fill=\"none\" height=\"20\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" viewBox=\"0 0 24 24\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><polyline points=\"15 3 21 3 21 9\"></polyline><polyline points=\"9 21 3 21 3 15\"></polyline><line x1=\"21\" x2=\"14\" y1=\"3\" y2=\"10\"></line><line x1=\"3\" x2=\"10\" y1=\"21\" y2=\"14\"></line></svg></button></div></div></div></a><figcaption class=\"image-caption\">Sources: CEORater, ClawHub</figcaption></figure></div><div><hr /></div><p></p>",
+    "image_url": "https://substackcdn.com/image/fetch/$s_!b4G0!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F5c3ce5eb-a295-4f6c-be59-a3fe59caa1ae_796x569.png",
+    "summary_text": "CEORater's API service \"skills\" are published on ClawHub",
+    "category": "ai",
+    "_permalink": "/p/6a93ed88e4/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/6a93ed88e4/",
+    "_summary_240": "CEORater's API service \"skills\" are published on ClawHub",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/6a93ed88e4/thumbnail.png"
+  },
+  {
+    "title": "India Unveils 20-Year Tax Break to Woo Global Data Centers",
+    "url": "https://www.bloomberg.com/news/articles/2026-02-01/india-unveils-20-year-tax-break-to-woo-global-data-centers",
+    "published_at": "2026-02-01T03:41:40-05:00",
+    "source": "Bloomberg Technology",
+    "summary": "India will offer a two-decade tax holiday to overseas firms that provide global data center services from the country, stepping up efforts to woo investors in its fast-growing digital infrastructure sector.",
+    "content_html": "The server floor at the Yotta Data Services Pvt. data center, in Navi Mumbai, India, on Thursday, March 14, 2024. Yotta Data Services is buying thousands of Nvidia chips to offer AI capabilities in India.",
+    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iEw9FnLB_Tng/v1/1200x-1.jpg",
+    "summary_text": "India will offer a two-decade tax holiday to overseas firms that provide global data center services from the country, stepping up efforts to woo investors in its fast-growing digital infrastructure sector.",
+    "category": "fintech",
+    "_permalink": "/p/b12d38b986/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/b12d38b986/",
+    "_summary_240": "India will offer a two-decade tax holiday to overseas firms that provide global data center services from the country, stepping up efforts to woo investors in its fast-growing...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/b12d38b986/thumbnail.png"
+  },
+  {
+    "title": "Sam Bankman-Fried turns up Trump support following Ellison\u2019s release",
+    "url": "https://cointelegraph.com/news/ftx-sam-bankman-fried-caroline-ellison-donald-trump?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "published_at": "2026-02-01T02:14:34-05:00",
+    "source": "Cointelegraph",
+    "summary": "FTX founder Sam Bankman-Fried said in a series of recent X posts that US president Donald Trump was \u201cright on crypto,\u201d while Joe Biden \u201cbungled crypto.\u201d",
+    "content_html": "",
+    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjYtMDIvMDE5YzE3OGQtMGNlMS03NDcyLTg2ZWItN2VmM2QyZjFjOWQ4LkpQRw==.jpg",
+    "summary_text": "FTX founder Sam Bankman-Fried said in a series of recent X posts that US president Donald Trump was \u201cright on crypto,\u201d while Joe Biden \u201cbungled crypto.\u201d",
+    "category": "fintech",
+    "_permalink": "/p/9269353840/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/9269353840/",
+    "_summary_240": "FTX founder Sam Bankman-Fried said in a series of recent X posts that US president Donald Trump was \u201cright on crypto,\u201d while Joe Biden \u201cbungled crypto.\u201d",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/9269353840/thumbnail.png"
+  },
+  {
+    "title": "India Electronics Manufacturing Shares Jump on Budget Boost",
+    "url": "https://www.bloomberg.com/news/articles/2026-02-01/india-electronics-manufacturing-shares-jump-on-budget-boost",
+    "published_at": "2026-02-01T01:44:37-05:00",
+    "source": "Bloomberg Technology",
+    "summary": "Shares of India\u2019s electronics manufacturing services companies rose on Sunday after the finance minister set aside 400 billion rupees ($4.3 billion) to boost the sector and position the country as a global hub for the sector.",
+    "content_html": "",
+    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iEL0aTQzlnFA/v0/1200x-1.jpg",
+    "summary_text": "Shares of India\u2019s electronics manufacturing services companies rose on Sunday after the finance minister set aside 400 billion rupees ($4.3 billion) to boost the sector and position the country as a global hub for the sector.",
+    "category": "fintech",
+    "_permalink": "/p/3d23be48ef/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/3d23be48ef/",
+    "_summary_240": "Shares of India\u2019s electronics manufacturing services companies rose on Sunday after the finance minister set aside 400 billion rupees ($4.3 billion) to boost the sector and...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/3d23be48ef/thumbnail.png"
+  },
+  {
+    "title": "Indonesia Permits Elon Musk\u2019s Grok to Resume Service After Ban",
+    "url": "https://www.bloomberg.com/news/articles/2026-02-01/indonesia-permits-elon-musk-s-grok-to-resume-service-after-ban",
+    "published_at": "2026-02-01T00:09:06-05:00",
+    "source": "Bloomberg Technology",
+    "summary": "Indonesia has permitted the artificial intelligence tool Grok to resume service after Elon Musk\u2019s X provided assurances to the government following its ban for producing sexualized content.",
+    "content_html": "",
+    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iTmOGWk9T6wE/v0/1200x-1.jpg",
+    "summary_text": "Indonesia has permitted the artificial intelligence tool Grok to resume service after Elon Musk\u2019s X provided assurances to the government following its ban for producing sexualized content.",
+    "category": "ai",
+    "_permalink": "/p/aeab698ef3/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/aeab698ef3/",
+    "_summary_240": "Indonesia has permitted the artificial intelligence tool Grok to resume service after Elon Musk\u2019s X provided assurances to the government following its ban for producing...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/aeab698ef3/thumbnail.png"
+  },
+  {
     "title": "Artificial intelligence researchers hit by flood of \u2018slop\u2019",
     "url": "https://www.ft.com/content/54e274c5-de86-4b3e-96a9-95a46b5e48a0",
     "published_at": "2026-02-01T00:00:03-05:00",
@@ -776,36 +866,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/2bfbd1c7dc/thumbnail.png"
   },
   {
-    "title": "Hong Kong regulators to submit draft bill for crypto framework in 2026",
-    "url": "https://cointelegraph.com/news/hong-kong-financial-regulators-crypto-framework?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-    "published_at": "2026-01-30T13:03:22-05:00",
-    "source": "Cointelegraph",
-    "summary": "An official said that Hong Kong authorities would work on a draft framework, and had begun processing license applications for stablecoin issuers and addressing crypto taxes.",
-    "content_html": "",
-    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjYtMDEvMDE5YmRhOTUtY2IyZC03YzRlLWIzMDYtMDQ0ZDllZGM1MjQ3LmpwZw==.jpg",
-    "summary_text": "An official said that Hong Kong authorities would work on a draft framework, and had begun processing license applications for stablecoin issuers and addressing crypto taxes.",
-    "category": "fintech",
-    "_permalink": "/p/b52827cc51/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/b52827cc51/",
-    "_summary_240": "An official said that Hong Kong authorities would work on a draft framework, and had begun processing license applications for stablecoin issuers and addressing crypto taxes.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/b52827cc51/thumbnail.png"
-  },
-  {
-    "title": "\u2018Highguard\u2019 Maker Talks About the Game\u2019s Dramatic Launch",
-    "url": "https://www.bloomberg.com/news/newsletters/2026-01-30/-highguard-maker-wildlight-entertainment-talks-about-the-game-s-dramatic-launch",
-    "published_at": "2026-01-30T13:00:01-05:00",
-    "source": "Bloomberg Technology",
-    "summary": "The former Respawn developers have dealt with a lot of drama since announcing their new game last month",
-    "content_html": "Highguard, released earlier this week, has been a magnet for toxicity Photographer: Wildlight Entertainment",
-    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iFgFS7blHbd0/v0/1200x-1.jpg",
-    "summary_text": "The former Respawn developers have dealt with a lot of drama since announcing their new game last month",
-    "category": "software",
-    "_permalink": "/p/e1ad0e72c4/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/e1ad0e72c4/",
-    "_summary_240": "The former Respawn developers have dealt with a lot of drama since announcing their new game last month",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/e1ad0e72c4/thumbnail.png"
-  },
-  {
     "title": "Anthropic brings agentic plug-ins to Cowork",
     "url": "https://techcrunch.com/2026/01/30/anthropic-brings-agentic-plugins-to-cowork/",
     "published_at": "2026-01-30T13:00:00-05:00",
@@ -819,21 +879,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/d5e593bd5d/",
     "_summary_240": "The company says you can use plug-ins to \"tell Claude how you like work done, which tools and data to pull from, how to handle critical workflows, and what slash commands to...",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/d5e593bd5d/thumbnail.png"
-  },
-  {
-    "title": "BlackBerry Teams Up With BMW on New Vehicle Software",
-    "url": "https://www.bloomberg.com/news/videos/2026-01-30/blackberry-teams-up-with-bmw-on-new-vehicle-software-video",
-    "published_at": "2026-01-30T12:42:38-05:00",
-    "source": "Bloomberg Technology",
-    "summary": "BlackBerry announced its QNX division's software will be integrated into BMW's new vehicle generation \"Neue Klasse.\" CEO John Giamatteo joins \"Bloomberg Open Interest\" to discuss the partnership. (Source: Bloomberg)",
-    "content_html": "",
-    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/irZwfvlPnWic/v3/1200x-1.jpg",
-    "summary_text": "BlackBerry announced its QNX division's software will be integrated into BMW's new vehicle generation \"Neue Klasse.\" CEO John Giamatteo joins \"Bloomberg Open Interest\" to discuss the partnership. (Source: Bloomberg)",
-    "category": "software",
-    "_permalink": "/p/50016fbef5/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/50016fbef5/",
-    "_summary_240": "BlackBerry announced its QNX division's software will be integrated into BMW's new vehicle generation \"Neue Klasse.\" CEO John Giamatteo joins \"Bloomberg Open Interest\" to discuss...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/50016fbef5/thumbnail.png"
   },
   {
     "title": "The trust paradox killing AI at scale: 76% of data leaders can't govern what employees already use",
@@ -866,21 +911,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/ae5f4dd01d/thumbnail.png"
   },
   {
-    "title": "Nubank wins conditional US approval to form national bank",
-    "url": "https://cointelegraph.com/news/nubank-conditional-us-approval-national-bank?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-    "published_at": "2026-01-30T11:57:12-05:00",
-    "source": "Cointelegraph",
-    "summary": "The conditional approval moves the Latin American fintech into the bank organization phase as it seeks to expand regulated banking and crypto services in the United States.",
-    "content_html": "",
-    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjYtMDEvMDE5YzBmOTQtMzYxNC03YWIzLWI1NjYtZjBiM2Q1Y2E2ZjIyLmpwZw==.jpg",
-    "summary_text": "The conditional approval moves the Latin American fintech into the bank organization phase as it seeks to expand regulated banking and crypto services in the United States.",
-    "category": "fintech",
-    "_permalink": "/p/dc14f35080/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/dc14f35080/",
-    "_summary_240": "The conditional approval moves the Latin American fintech into the bank organization phase as it seeks to expand regulated banking and crypto services in the United States.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/dc14f35080/thumbnail.png"
-  },
-  {
     "title": "Russian hackers breached Polish power grid thanks to bad security, report says",
     "url": "https://techcrunch.com/2026/01/30/russian-hackers-breached-polish-power-grid-thanks-to-bad-security-report-says/",
     "published_at": "2026-01-30T11:50:24-05:00",
@@ -909,21 +939,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/1bc55f3c40/",
     "_summary_240": "A payments director at the Minneapolis-based retail giant Target Corp. said her fast-track credentials for airport security were revoked following an interaction with a federal...",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/1bc55f3c40/thumbnail.png"
-  },
-  {
-    "title": "What role is left for decentralized GPU networks in AI?",
-    "url": "https://cointelegraph.com/news/what-role-is-left-for-decentralized-gpu-networks-in-ai?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-    "published_at": "2026-01-30T09:39:49-05:00",
-    "source": "Cointelegraph",
-    "summary": "AI training is dominated by hyperscale data centers, but inference and everyday workloads are opening real space for decentralized GPU networks.",
-    "content_html": "",
-    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjYtMDEvMDE5YzBmMzItOTE0OC03YjlkLWI3ZDctNzlkNWMxYjBmOTdmLmpwZw==.jpg",
-    "summary_text": "AI training is dominated by hyperscale data centers, but inference and everyday workloads are opening real space for decentralized GPU networks.",
-    "category": "ai",
-    "_permalink": "/p/814270f95a/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/814270f95a/",
-    "_summary_240": "AI training is dominated by hyperscale data centers, but inference and everyday workloads are opening real space for decentralized GPU networks.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/814270f95a/thumbnail.png"
   },
   {
     "title": "Tech Grapples With ICE + Casey Tries Clawdbot, a Risky New A.I. Assistant + HatGPT",
@@ -1200,11 +1215,7 @@
     "content_html": "",
     "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/adc7b350-db22-49e1-b719-8670674e2b56.jpg",
     "summary_text": "South Korea\u2019s Samsung and SK Hynix to boost capital spending but say capacity expansion will be limited this year and next",
-    "category": "software",
-    "_permalink": "/p/557b50cca7/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/557b50cca7/",
-    "_summary_240": "South Korea\u2019s Samsung and SK Hynix to boost capital spending but say capacity expansion will be limited this year and next",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/557b50cca7/thumbnail.png"
+    "category": "software"
   },
   {
     "title": "Ask CEORater: Which CEOs Drive Revenue Growth?",
@@ -1402,17 +1413,6 @@
     "content_html": "",
     "image_url": "",
     "summary_text": "Learn how OpenAI protects user data when AI agents open links, preventing URL-based data exfiltration and prompt injection with built-in safeguards.",
-    "category": "ai"
-  },
-  {
-    "title": "Where Tech Leaders and Students Really Think AI Is Going",
-    "url": "https://www.wired.com/story/for-future-reference-ai-technology/",
-    "published_at": "2026-01-27T05:30:00-05:00",
-    "source": "Wired",
-    "summary": "We asked tech CEOs, journalists, entertainers, students, and more about the promise and peril of artificial intelligence. Here\u2019s what they said.",
-    "content_html": "",
-    "image_url": "https://media.wired.com/photos/69740b729195606e9b7a294a/master/pass/For-Future-Reference-Business.jpg",
-    "summary_text": "We asked tech CEOs, journalists, entertainers, students, and more about the promise and peril of artificial intelligence. Here\u2019s what they said.",
     "category": "ai"
   },
   {
