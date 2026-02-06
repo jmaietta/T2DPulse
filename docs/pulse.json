@@ -1,5 +1,80 @@
 [
   {
+    "title": "Windows OS Is Losing Customers To Linux. Claude Opus 4.6 Is Cool.",
+    "url": "https://newsletter.tek2dayholdings.com/p/windows-os-is-losing-customers-to",
+    "published_at": "2026-02-06T00:07:46-05:00",
+    "source": "TEK2day Newsletter",
+    "summary": "Windows OS for Consumers is awful.",
+    "content_html": "<div class=\"captioned-image-container\"><figure><a class=\"image-link image2 is-viewable-img\" href=\"https://substackcdn.com/image/fetch/$s_!lD8e!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F6544a98c-ba92-4537-bbfd-67550b7e4ed0_1344x768.png\" target=\"_blank\"><div class=\"image2-inset\"><source type=\"image/webp\" /><img alt=\"\" class=\"sizing-normal\" height=\"768\" src=\"https://substackcdn.com/image/fetch/$s_!lD8e!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F6544a98c-ba92-4537-bbfd-67550b7e4ed0_1344x768.png\" width=\"1344\" /><div class=\"image-link-expand\"><div class=\"pencraft pc-display-flex pc-gap-8 pc-reset\"><button class=\"pencraft pc-reset pencraft icon-container restack-image\" tabindex=\"0\" type=\"button\"><svg fill=\"none\" height=\"20\" stroke=\"var(--color-fg-primary)\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" viewBox=\"0 0 20 20\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><g><title></title><path d=\"M2.53001 7.81595C3.49179 4.73911 6.43281 2.5 9.91173 2.5C13.1684 2.5 15.9537 4.46214 17.0852 7.23684L17.6179 8.67647M17.6179 8.67647L18.5002 4.26471M17.6179 8.67647L13.6473 6.91176M17.4995 12.1841C16.5378 15.2609 13.5967 17.5 10.1178 17.5C6.86118 17.5 4.07589 15.5379 2.94432 12.7632L2.41165 11.3235M2.41165 11.3235L1.5293 15.7353M2.41165 11.3235L6.38224 13.0882\"></path></g></svg></button><button class=\"pencraft pc-reset pencraft icon-container view-image\" tabindex=\"0\" type=\"button\"><svg class=\"lucide lucide-maximize2 lucide-maximize-2\" fill=\"none\" height=\"20\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" viewBox=\"0 0 24 24\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><polyline points=\"15 3 21 3 21 9\"></polyline><polyline points=\"9 21 3 21 3 15\"></polyline><line x1=\"21\" x2=\"14\" y1=\"3\" y2=\"10\"></line><line x1=\"3\" x2=\"10\" y1=\"21\" y2=\"14\"></line></svg></button></div></div></div></a></figure></div><h4><strong>Windows OS for Consumers is awful.</strong> </h4><p><strong>Microsoft (MSFT) Windows 11 - so much AI bloatware, so many software updates and security patches.</strong> When we completed our 16-week <a href=\"https://www.ceorater.com/\">CEORater</a> product enhancement road map last week, I <strong>migrated from Windows OS to Linux </strong>(<strong><a href=\"https://linuxmint.com/\">Linux Mint</a> specifically</strong>). I simply got tired of apps running slow in the Windows ecosystem, not to mention the constant security updates, software updates, and lack of privacy due to Office Telemetry.</p><p><strong>Since I switched to Linux my apps run significantly faster </strong>(I still count MSFT apps among the apps I use), <strong>and I am more productive as I am not regularly running updates and security patches</strong> (I don&#8217;t miss having to deal with the patches and updates that break performance). </p><p>Check out any of a number of YouTube videos people have published in the past month about <strong>Microsoft </strong>wreaking havoc with non-enterprise customers as it <strong>forces CoPilot and AI hardware on people that have zero use for Microsoft&#8217;s failed AI products.</strong></p><div><hr /></div><h4><strong>In other news, I&#8217;ve used Claude Opus 4.6 for several hours today. </strong></h4><p>My sense is that Opus 4.6 uses its context window more efficiently than Opus 4.5. Specifically, when in extended reasoning mode, every response does not necessarily require extended &#8220;thinking&#8221;. If my prompt requires legwork, Opus 4.6 will do the legwork. If not, Opus 4.6 will respond quickly, whereas with Opus 4.5 most every prompt triggered extended thinking. </p><p>I will say that Opus 4.6 still makes the same lazy errors that 4.5 and other models make in that they fail to ingest complete information when files are uploaded and as a result, given erroneous responses. <strong>Opus models have been swimming in CEORater code for months and still don&#8217;t know it as well as me. That&#8217;s saying something. </strong></p><div class=\"captioned-image-container\"><figure><a class=\"image-link image2 is-viewable-img\" href=\"https://substackcdn.com/image/fetch/$s_!AF_F!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fb08f77f2-1bb2-4669-93b6-f85d30fd6954_3840x2160.png\" target=\"_blank\"><div class=\"image2-inset\"><source type=\"image/webp\" /><img alt=\"\" class=\"sizing-normal\" height=\"819\" src=\"https://substackcdn.com/image/fetch/$s_!AF_F!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fb08f77f2-1bb2-4669-93b6-f85d30fd6954_3840x2160.png\" width=\"1456\" /><div class=\"image-link-expand\"><div class=\"pencraft pc-display-flex pc-gap-8 pc-reset\"><button class=\"pencraft pc-reset pencraft icon-container restack-image\" tabindex=\"0\" type=\"button\"><svg fill=\"none\" height=\"20\" stroke=\"var(--color-fg-primary)\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" viewBox=\"0 0 20 20\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><g><title></title><path d=\"M2.53001 7.81595C3.49179 4.73911 6.43281 2.5 9.91173 2.5C13.1684 2.5 15.9537 4.46214 17.0852 7.23684L17.6179 8.67647M17.6179 8.67647L18.5002 4.26471M17.6179 8.67647L13.6473 6.91176M17.4995 12.1841C16.5378 15.2609 13.5967 17.5 10.1178 17.5C6.86118 17.5 4.07589 15.5379 2.94432 12.7632L2.41165 11.3235M2.41165 11.3235L1.5293 15.7353M2.41165 11.3235L6.38224 13.0882\"></path></g></svg></button><button class=\"pencraft pc-reset pencraft icon-container view-image\" tabindex=\"0\" type=\"button\"><svg class=\"lucide lucide-maximize2 lucide-maximize-2\" fill=\"none\" height=\"20\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" viewBox=\"0 0 24 24\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><polyline points=\"15 3 21 3 21 9\"></polyline><polyline points=\"9 21 3 21 3 15\"></polyline><line x1=\"21\" x2=\"14\" y1=\"3\" y2=\"10\"></line><line x1=\"3\" x2=\"10\" y1=\"21\" y2=\"14\"></line></svg></button></div></div></div></a><figcaption class=\"image-caption\">Source: Anthropic</figcaption></figure></div><div><hr /></div><p></p>",
+    "image_url": "https://substackcdn.com/image/fetch/$s_!lD8e!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F6544a98c-ba92-4537-bbfd-67550b7e4ed0_1344x768.png",
+    "summary_text": "Windows OS for Consumers is awful.",
+    "category": "ai",
+    "_permalink": "/p/53fefdba35/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/53fefdba35/",
+    "_summary_240": "Windows OS for Consumers is awful.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/53fefdba35/thumbnail.png"
+  },
+  {
+    "title": "Atlassian CEO Says AI Positive for Company as Tech Shares Fall",
+    "url": "https://www.bloomberg.com/news/articles/2026-02-06/atlassian-ceo-says-ai-positive-for-company-as-tech-shares-fall",
+    "published_at": "2026-02-06T00:04:00-05:00",
+    "source": "Bloomberg Technology",
+    "summary": "AI has been one of the best things to happen to Atlassian Corp., Chief Executive Officer Mike Cannon-Brookes said, as shares fell in the US in late Thursday trading following the company\u2019s second-quarter results, amid a broader AI-driven tech sector slump.",
+    "content_html": "Mike Cannon-Brookes Photographer: Lisa Maree Williams/Bloomberg",
+    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iAoF5Z5DjRgI/v0/1200x-1.jpg",
+    "summary_text": "AI has been one of the best things to happen to Atlassian Corp., Chief Executive Officer Mike Cannon-Brookes said, as shares fell in the US in late Thursday trading following the company\u2019s second-quarter results, amid a broader AI-driven tech sector slump.",
+    "category": "ai",
+    "_permalink": "/p/cbcd0ca27a/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/cbcd0ca27a/",
+    "_summary_240": "AI has been one of the best things to happen to Atlassian Corp., Chief Executive Officer Mike Cannon-Brookes said, as shares fell in the US in late Thursday trading following the...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/cbcd0ca27a/thumbnail.png"
+  },
+  {
+    "title": "Bitcoin miners IREN, CleanSpark shares plunge as earnings fall short",
+    "url": "https://cointelegraph.com/news/bitcoin-miners-iren-cleanspark-financial-earnings-short?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "published_at": "2026-02-05T23:45:26-05:00",
+    "source": "Cointelegraph",
+    "summary": "Crypto mining stocks have declined across the board the value of the entire crypto market fell almost 9% on Thursday.",
+    "content_html": "",
+    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjYtMDEvMDE5YmQ1ZTMtYWJlNi03MjAzLTlmYTgtNTljZjVkMDBlYmIyLmpwZw==.jpg",
+    "summary_text": "Crypto mining stocks have declined across the board the value of the entire crypto market fell almost 9% on Thursday.",
+    "category": "fintech",
+    "_permalink": "/p/a41554792c/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/a41554792c/",
+    "_summary_240": "Crypto mining stocks have declined across the board the value of the entire crypto market fell almost 9% on Thursday.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/a41554792c/thumbnail.png"
+  },
+  {
+    "title": "Google Plans to Double Spending Amid A.I. Race",
+    "url": "https://www.nytimes.com/2026/02/04/business/google-earnings-ai.html",
+    "published_at": "2026-02-05T23:33:17-05:00",
+    "source": "The New York Times - Technology",
+    "summary": "Profits jumped 30 percent to $34.5 billion last quarter, and the tech giant is increasing its capital spending this year to as much as $185 billion.",
+    "content_html": "A Google ad in Times Square.",
+    "image_url": "https://static01.nyt.com/images/2026/02/04/multimedia/04biz-google-jqlh/04biz-google-jqlh-mediumSquareAt3X.jpg",
+    "summary_text": "Profits jumped 30 percent to $34.5 billion last quarter, and the tech giant is increasing its capital spending this year to as much as $185 billion.",
+    "category": "software",
+    "_permalink": "/p/6a751ef980/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/6a751ef980/",
+    "_summary_240": "Profits jumped 30 percent to $34.5 billion last quarter, and the tech giant is increasing its capital spending this year to as much as $185 billion.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/6a751ef980/thumbnail.png"
+  },
+  {
+    "title": "Small Businesses Dump Manual Workflows for BILL AI Tools",
+    "url": "https://www.pymnts.com/earnings/2026/small-businesses-dump-manual-workflows-for-bill-ai-tools/",
+    "published_at": "2026-02-05T22:10:12-05:00",
+    "source": "PYMNTS",
+    "summary": "Businesses and their accountants continued to adopt artificial intelligence (AI) agents and other digital tools in the quarter ended Dec. 31, BILL executives said Thursday (Feb. 5) during the company\u2019s second quarter fiscal 2026 earnings call. BILL\u2019s financial operations platform is used by 498,000 businesses and 9,500 accounting firms, according to an investor deck [\u2026] The post Small Businesses ...",
+    "content_html": "<p>Businesses and their accountants continued to adopt artificial intelligence (AI) agents and other digital tools in the quarter ended Dec. 31, <a href=\"https://www.bill.com/\">BILL</a> executives said Thursday (Feb. 5) during the company\u2019s second quarter fiscal 2026 <a href=\"https://www.google.com/finance/beta/quote/BILL:NYSE?tab=earnings\">earnings call</a>.</p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p>BILL\u2019s financial operations platform is used by 498,000 businesses and 9,500 accounting firms, according to an <a href=\"https://s202.q4cdn.com/561055838/files/doc_financials/2026/q2/BILL-Q2-26-Investor-Deck-2-5-26-1.pdf\">investor deck</a> released in conjunction with the call. The number of businesses is up from 481,000 a year earlier. In addition, 8.3 million businesses use BILL\u2019s proprietary B2B payment network.</p>\n<p>\u201cBy spanning the critical workflows our customers rely on every day, we are driving higher engagement and more transaction volume across the entire platform,\u201d BILL CEO and Founder <a href=\"https://www.bill.com/leadership/rene-lacerte\">Ren\u00e9 Lacerte</a> said during the call.</p>\n<p>The number of small and medium-sized businesses (SMBs) using BILL\u2019s invoice financing offering increased by nearly 50% year over year during the latest quarter, and the origination volume increased by over 30%, Lacerte said.</p>\n<p>\u201cInvoice financing is a fast-growing, emerging payment solution that provides flexible capital exactly when it\u2019s needed, addressing a critical operating need for many SMBs,\u201d Lacerte said.</p>\n<p>SMBs are also adopting the BILL Cash Account that was launched during the quarter. This <a href=\"https://www.pymnts.com/smbs/2025/bill-debuts-cash-accounts-to-boost-smb-working-capital/\">cash flow</a> solution enables businesses to hold their operating cash in a high APY account, the company said when introducing the product in October.</p>\n<p>\u201cWe see Cash Account as an opportunity to bring billions of dollars of monthly offline spend onto our network, increasing our wallet share,\u201d Lacerte said. \u201cEarly indications since launching in Q2 show that more than 70% of Cash Account users have increased their spend volumes on our network.\u201d</p>\n<p>BILL\u2019s AI agents began completing tasks for SMBs during the quarter. Launched in October, the <a href=\"https://www.pymnts.com/artificial-intelligence-2/2025/bill-debuts-ai-agents-focused-on-small-business-needs/\">AI agents</a> collect and validate W-9s, reconcile receipts, accelerate user onboarding and carry out routine tasks.</p>\n<p>Lacerte said during the call that nearly 10,000 customers have activated the W-9 agent, and that agent has collected 40,000 W-9s. He added the BILL expects the agent to collect and automate 3 million W-9s by the end of 2026, \u201csaving thousands of weeks of manual work for our customers.\u201d</p>\n<p>BILL has also added new features for accountants. Among them are procurement, multi-entity support, and advanced reporting in the platform\u2019s Accountant Console. Lacerte said during the call that these tools are increasingly important as AI reshapes the accounting profession.</p>\n<p>\u201cAs the profession adapts to a rapidly changing technology landscape, our foundational knowledge of the back office for SMBs and the accountants that serve them is unique,\u201d Lacerte said. \u201cThis capability, combined with the breadth of our platform, is enabling firms to transform their mundane transactional work into high-value, automated advisory services.\u201d</p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/earnings/2026/small-businesses-dump-manual-workflows-for-bill-ai-tools/\">Small Businesses Dump Manual Workflows for BILL AI Tools</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
+    "image_url": "https://www.pymnts.com/wp-content/uploads/2026/02/BILL-earnings-11.jpg?w=457",
+    "summary_text": "Businesses and their accountants continued to adopt artificial intelligence (AI) agents and other digital tools in the quarter ended Dec. 31, BILL executives said Thursday (Feb. 5) during the company\u2019s second quarter fiscal 2026 earnings call. BILL\u2019s financia...",
+    "category": "ai",
+    "_permalink": "/p/7fdd42b906/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/7fdd42b906/",
+    "_summary_240": "Businesses and their accountants continued to adopt artificial intelligence (AI) agents and other digital tools in the quarter ended Dec. 31, BILL executives said Thursday (Feb....",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/7fdd42b906/thumbnail.png"
+  },
+  {
     "title": "Amazon Q4 Results Show Agentic Shopping Push Beyond AI Spending",
     "url": "https://www.pymnts.com/amazon/2026/amazon-q4-results-show-agentic-shopping-push-beyond-ai-spending/",
     "published_at": "2026-02-05T21:34:28-05:00",
@@ -28,21 +103,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/22001ab579/",
     "_summary_240": "Affirm\u2019s fiscal second quarter illustrated how buy now, pay later is becoming embedded in routine commerce, where paying over time was once reserved for occasional large...",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/22001ab579/thumbnail.png"
-  },
-  {
-    "title": "AI Race Sends Big Tech\u2019s Capital Spending to Stratospheric High",
-    "url": "https://www.bloomberg.com/news/articles/2026-02-06/how-much-is-big-tech-spending-on-ai-computing-a-staggering-650-billion-in-2026",
-    "published_at": "2026-02-05T20:27:16-05:00",
-    "source": "Bloomberg Technology",
-    "summary": "Four of the biggest US technology companies together have forecast capital expenditures that will reach about $650 billion in 2026 \u2014 a mind-boggling tide of cash earmarked for new data centers and the long list of equipment needed to make them tick, including artificial intelligence chips, networking cables and backup generators.",
-    "content_html": "",
-    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iZqLCXAIMDuA/v0/1200x-1.jpg",
-    "summary_text": "Four of the biggest US technology companies together have forecast capital expenditures that will reach about $650 billion in 2026 \u2014 a mind-boggling tide of cash earmarked for new data centers and the long list of equipment needed to make them tick, including...",
-    "category": "software",
-    "_permalink": "/p/7532d937f7/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/7532d937f7/",
-    "_summary_240": "Four of the biggest US technology companies together have forecast capital expenditures that will reach about $650 billion in 2026 \u2014 a mind-boggling tide of cash earmarked for...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/7532d937f7/thumbnail.png"
   },
   {
     "title": "SoftBank Taps on OpenAI Investment, While Japanese Automakers Drag",
@@ -195,21 +255,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/432da4a61a/thumbnail.png"
   },
   {
-    "title": "TTT-Discover optimizes GPU kernels 2x faster than human experts \u2014 by training during inference",
-    "url": "https://venturebeat.com/infrastructure/ttt-discover-optimizes-gpu-kernels-2x-faster-than-human-experts-by-training",
-    "published_at": "2026-02-05T17:00:00-05:00",
-    "source": "VentureBeat",
-    "summary": "Researchers from Stanford, Nvidia, and Together AI have developed a new technique that can discover new solutions to very complex problems. For example, they managed to optimize a critical GPU kernel to run 2x faster than the previous state-of-the-art written by human experts. Their technique, called \u201c Test-Time Training to Discover \u201d (TTT-Discover), challenges the current paradigm of letting mod...",
-    "content_html": "",
-    "image_url": "https://images.ctfassets.net/jdtwqhzvc2n1/VdyB1WZ47N0MK0BqEYldH/5006b63a69fb8372a801f93808aeb441/AI_discovery.jpg?w=800&q=75",
-    "summary_text": "Researchers from Stanford, Nvidia, and Together AI have developed a new technique that can discover new solutions to very complex problems. For example, they managed to optimize a critical GPU kernel to run 2x faster than the previous state-of-the-art written...",
-    "category": "ai",
-    "_permalink": "/p/07e60c72e5/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/07e60c72e5/",
-    "_summary_240": "Researchers from Stanford, Nvidia, and Together AI have developed a new technique that can discover new solutions to very complex problems. For example, they managed to optimize...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/07e60c72e5/thumbnail.png"
-  },
-  {
     "title": "MUFG Bets on AI to Stay Hot With Hiring for Data Center Finance",
     "url": "https://www.bloomberg.com/news/articles/2026-02-05/mufg-bets-on-ai-to-stay-hot-with-hiring-for-data-center-finance",
     "published_at": "2026-02-05T17:00:00-05:00",
@@ -223,6 +268,21 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/a3a690e771/",
     "_summary_240": "Mitsubishi UFJ Financial Group Inc. plans to hire bankers to arrange financing deals for data centers as Japan\u2019s biggest bank jumps on the artificial intelligence boom.",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/a3a690e771/thumbnail.png"
+  },
+  {
+    "title": "TTT-Discover optimizes GPU kernels 2x faster than human experts \u2014 by training during inference",
+    "url": "https://venturebeat.com/infrastructure/ttt-discover-optimizes-gpu-kernels-2x-faster-than-human-experts-by-training",
+    "published_at": "2026-02-05T17:00:00-05:00",
+    "source": "VentureBeat",
+    "summary": "Researchers from Stanford, Nvidia, and Together AI have developed a new technique that can discover new solutions to very complex problems. For example, they managed to optimize a critical GPU kernel to run 2x faster than the previous state-of-the-art written by human experts. Their technique, called \u201c Test-Time Training to Discover \u201d (TTT-Discover), challenges the current paradigm of letting mod...",
+    "content_html": "",
+    "image_url": "https://images.ctfassets.net/jdtwqhzvc2n1/VdyB1WZ47N0MK0BqEYldH/5006b63a69fb8372a801f93808aeb441/AI_discovery.jpg?w=800&q=75",
+    "summary_text": "Researchers from Stanford, Nvidia, and Together AI have developed a new technique that can discover new solutions to very complex problems. For example, they managed to optimize a critical GPU kernel to run 2x faster than the previous state-of-the-art written...",
+    "category": "ai",
+    "_permalink": "/p/07e60c72e5/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/07e60c72e5/",
+    "_summary_240": "Researchers from Stanford, Nvidia, and Together AI have developed a new technique that can discover new solutions to very complex problems. For example, they managed to optimize...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/07e60c72e5/thumbnail.png"
   },
   {
     "title": "ClassPass Hands Most Customer Inquiries to AI in 24/7 Support Shift",
@@ -255,21 +315,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/aa7524e243/thumbnail.png"
   },
   {
-    "title": "Amazon to Spend Billions More Than Expected on AI Data Centers",
-    "url": "https://www.bloomberg.com/news/videos/2026-02-05/amazon-to-spend-more-than-expected-on-data-centers-video",
-    "published_at": "2026-02-05T16:32:45-05:00",
-    "source": "Bloomberg Technology",
-    "summary": "Amazon's latest quarterly results came largely in line with expectations, with AWS revenue growth surpassing forecasts at 24% versus an expected 21%. The company also projected a significant increase in capital expenditures for 2026, guiding to approximately $200 billion. Poonam Goyal has more on \"Bloomberg The Close.\" (Source: Bloomberg)",
-    "content_html": "",
-    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ikqELmOwmu_w/v3/1200x-1.jpg",
-    "summary_text": "Amazon's latest quarterly results came largely in line with expectations, with AWS revenue growth surpassing forecasts at 24% versus an expected 21%. The company also projected a significant increase in capital expenditures for 2026, guiding to approximately ...",
-    "category": "ai",
-    "_permalink": "/p/cff5357995/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/cff5357995/",
-    "_summary_240": "Amazon's latest quarterly results came largely in line with expectations, with AWS revenue growth surpassing forecasts at 24% versus an expected 21%. The company also projected a...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/cff5357995/thumbnail.png"
-  },
-  {
     "title": "a16z VC wants founders to stop stressing over insane ARR numbers",
     "url": "https://techcrunch.com/2026/02/05/a16z-vc-wants-founders-to-stop-stressing-over-insane-arr-numbers/",
     "published_at": "2026-02-05T16:28:46-05:00",
@@ -298,21 +343,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/179bfc55a5/",
     "_summary_240": "Ares, Blue Owl and KKR warn on outlook for 2026 as concern about exposure to software investments weighs on sector",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/179bfc55a5/thumbnail.png"
-  },
-  {
-    "title": "Tech Earnings: Google\u2019s Spending, Arm\u2019s AI Data Center Push | Bloomberg Tech 2/5/2026",
-    "url": "https://www.bloomberg.com/news/videos/2026-02-05/bloomberg-tech-2-5-2026-video",
-    "published_at": "2026-02-05T16:27:14-05:00",
-    "source": "Bloomberg Technology",
-    "summary": "Bloomberg\u2019s Caroline Hyde and Ed Ludlow discuss tech earnings as investors react to a huge capital expenditure increase from Google. Plus, Arm CEO Rene Haas explains the chip designer\u2019s outlook and growth in its data center business. And Qualcomm CEO Cristiano Amon talks about the potential impact from component shortages on its revenue for the period. (Source: Bloomberg)",
-    "content_html": "",
-    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ir.yVSrV7syU/v3/1200x-1.jpg",
-    "summary_text": "Bloomberg\u2019s Caroline Hyde and Ed Ludlow discuss tech earnings as investors react to a huge capital expenditure increase from Google. Plus, Arm CEO Rene Haas explains the chip designer\u2019s outlook and growth in its data center business. And Qualcomm CEO Cristian...",
-    "category": "ai",
-    "_permalink": "/p/5c1a223748/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/5c1a223748/",
-    "_summary_240": "Bloomberg\u2019s Caroline Hyde and Ed Ludlow discuss tech earnings as investors react to a huge capital expenditure increase from Google. Plus, Arm CEO Rene Haas explains the chip...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/5c1a223748/thumbnail.png"
   },
   {
     "title": "Big Tech shares slide for third day with AI stocks under pressure",
@@ -798,36 +828,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/0a7684bd07/thumbnail.png"
   },
   {
-    "title": "Crypto wallet provider Payy launches Ethereum L2 with built-in transaction privacy",
-    "url": "https://cointelegraph.com/news/privacy-enabled-evm-l2-payy-launches-ethereum?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-    "published_at": "2026-02-04T23:22:58-05:00",
-    "source": "Cointelegraph",
-    "summary": "Payy says its new layer-2 network routes ERC-20 transfers through privacy pools by default without requiring new wallets or tokens.",
-    "content_html": "",
-    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjYtMDIvMDE5YzJiMWItYmE3Ni03Y2FmLTk0Y2YtZWI5NjM4MmE5MjUwLmpwZw==.jpg",
-    "summary_text": "Payy says its new layer-2 network routes ERC-20 transfers through privacy pools by default without requiring new wallets or tokens.",
-    "category": "fintech",
-    "_permalink": "/p/8e95edbe2e/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/8e95edbe2e/",
-    "_summary_240": "Payy says its new layer-2 network routes ERC-20 transfers through privacy pools by default without requiring new wallets or tokens.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/8e95edbe2e/thumbnail.png"
-  },
-  {
-    "title": "XRP traders more optimistic as BTC, ETH mood turns sour: Santiment",
-    "url": "https://cointelegraph.com/news/xrp-traders-sentiment-high-bitcoin-ethereum-santiment?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-    "published_at": "2026-02-04T23:10:44-05:00",
-    "source": "Cointelegraph",
-    "summary": "Social media sentiment has turned \u201cextremely bearish\u201d toward Bitcoin and Ethereum this week, according to analytics platform Santiment.",
-    "content_html": "",
-    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjYtMDIvMDE5YzJiOTctZjM5Yy03YjM1LWFlNGUtZTRkNDM3ODBhZmM0LmpwZw==.jpg",
-    "summary_text": "Social media sentiment has turned \u201cextremely bearish\u201d toward Bitcoin and Ethereum this week, according to analytics platform Santiment.",
-    "category": "fintech",
-    "_permalink": "/p/35369f2848/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/35369f2848/",
-    "_summary_240": "Social media sentiment has turned \u201cextremely bearish\u201d toward Bitcoin and Ethereum this week, according to analytics platform Santiment.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/35369f2848/thumbnail.png"
-  },
-  {
     "title": "I Like Cloudflare (NET), Netlify, and Especially Vercel",
     "url": "https://newsletter.tek2dayholdings.com/p/i-like-cloudflare-net-netlify-and",
     "published_at": "2026-02-04T21:42:43-05:00",
@@ -841,21 +841,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/d9a410a974/",
     "_summary_240": "For back-end app deployments/hosting, I prefer Vercel for ease of use, Netlify a close 2nd, Cloudflare 3rd",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/d9a410a974/thumbnail.png"
-  },
-  {
-    "title": "Google Plans to Double Spending Amid A.I. Race",
-    "url": "https://www.nytimes.com/2026/02/04/business/google-earnings-ai.html",
-    "published_at": "2026-02-04T19:43:08-05:00",
-    "source": "The New York Times - Technology",
-    "summary": "Profits jumped 30 percent to $34.5 billion last quarter, and the tech giant is increasing its capital spending this year to as much as $185 billion.",
-    "content_html": "A Google ad in Times Square.",
-    "image_url": "https://static01.nyt.com/images/2026/02/04/multimedia/04biz-google-jqlh/04biz-google-jqlh-mediumSquareAt3X.jpg",
-    "summary_text": "Profits jumped 30 percent to $34.5 billion last quarter, and the tech giant is increasing its capital spending this year to as much as $185 billion.",
-    "category": "software",
-    "_permalink": "/p/e23f358941/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/e23f358941/",
-    "_summary_240": "Profits jumped 30 percent to $34.5 billion last quarter, and the tech giant is increasing its capital spending this year to as much as $185 billion.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/e23f358941/thumbnail.png"
   },
   {
     "title": "Navigating health questions with ChatGPT",
@@ -972,9 +957,13 @@
     "source": "Financial Times - Technology",
     "summary": "From security services to those able to reinvent themselves, many may survive the AI armageddon",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/dc8f4cc6-6e59-499e-acbc-beeaf3da0612.jpg",
     "summary_text": "From security services to those able to reinvent themselves, many may survive the AI armageddon",
-    "category": "ai"
+    "category": "ai",
+    "_permalink": "/p/e196a6be48/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/e196a6be48/",
+    "_summary_240": "From security services to those able to reinvent themselves, many may survive the AI armageddon",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/e196a6be48/thumbnail.png"
   },
   {
     "title": "How Anthropic achieved AI coding breakthroughs \u2014 and rattled business",
@@ -983,9 +972,13 @@
     "source": "Financial Times - Technology",
     "summary": "New AI-powered tools reduce time and cost of software development, threatening industries from law to advertising",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/53dd9056-4df8-4fdd-9851-3b5a887bcf46.jpg",
     "summary_text": "New AI-powered tools reduce time and cost of software development, threatening industries from law to advertising",
-    "category": "ai"
+    "category": "ai",
+    "_permalink": "/p/205a0f26c4/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/205a0f26c4/",
+    "_summary_240": "New AI-powered tools reduce time and cost of software development, threatening industries from law to advertising",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/205a0f26c4/thumbnail.png"
   },
   {
     "title": "Nemotron Labs: How AI Agents Are Turning Documents Into Real-Time Business Intelligence",
@@ -1091,9 +1084,13 @@
     "source": "Financial Times - Technology",
     "summary": "New Anthropic legal tool sends shares in companies including S&P Global and Intuit sliding",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/9f662b57-b7af-4367-b935-a001a062a8a5.jpg",
     "summary_text": "New Anthropic legal tool sends shares in companies including S&P Global and Intuit sliding",
-    "category": "ai"
+    "category": "ai",
+    "_permalink": "/p/e73001365c/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/e73001365c/",
+    "_summary_240": "New Anthropic legal tool sends shares in companies including S&P Global and Intuit sliding",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/e73001365c/thumbnail.png"
   },
   {
     "title": "Tech Exchange",
@@ -1102,9 +1099,13 @@
     "source": "Financial Times - Technology",
     "summary": "This series features conversations between FT journalists and the technology industry\u2019s leaders, innovators, and thinkers. In the latest instalment, Chinese AI pioneer Kai-Fu Lee talks about the competition between the technology\u2019s two superpowers",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://images.ft.com/v3/image/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Fa93c85bd-5cf2-4241-8e53-3f8e5dd96bfc.jpg?source=next-article&fit=scale-down&quality=highest&width=700&dpr=1",
     "summary_text": "This series features conversations between FT journalists and the technology industry\u2019s leaders, innovators, and thinkers. In the latest instalment, Chinese AI pioneer Kai-Fu Lee talks about the competition between the technology\u2019s two superpowers",
-    "category": "ai"
+    "category": "ai",
+    "_permalink": "/p/48b40f0628/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/48b40f0628/",
+    "_summary_240": "This series features conversations between FT journalists and the technology industry\u2019s leaders, innovators, and thinkers. In the latest instalment, Chinese AI pioneer Kai-Fu Lee...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/48b40f0628/thumbnail.png"
   },
   {
     "title": "Banks seek out new buyers for Oracle data centre loans",
@@ -1113,9 +1114,13 @@
     "source": "Financial Times - Technology",
     "summary": "Rare investment-grade rating helps attract insurers and private credit funds to construction debt",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/eea1f446-bd38-4bc3-9be6-0f95e6efc122.jpg",
     "summary_text": "Rare investment-grade rating helps attract insurers and private credit funds to construction debt",
-    "category": "fintech"
+    "category": "fintech",
+    "_permalink": "/p/a181606ed4/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/a181606ed4/",
+    "_summary_240": "Rare investment-grade rating helps attract insurers and private credit funds to construction debt",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/a181606ed4/thumbnail.png"
   },
   {
     "title": "Why absolutely everyone is peddling an AI application",
@@ -1124,7 +1129,7 @@
     "source": "Financial Times - Technology",
     "summary": "We are either on the verge of widespread adoption or a terrible crash",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/8fa0a969-cf14-4468-8888-b50410d03fad.jpg",
     "summary_text": "We are either on the verge of widespread adoption or a terrible crash",
     "category": "ai"
   },
@@ -1135,9 +1140,13 @@
     "source": "Financial Times - Technology",
     "summary": "Chinese AI pioneer talks about the competition between the technology\u2019s two superpowers and why companies need to be more proactive in adopting it",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://images.ft.com/v3/image/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F350a8448-760c-4bb6-9690-af5d9014e0b4.jpg?source=next-article&fit=scale-down&quality=highest&width=700&dpr=1",
     "summary_text": "Chinese AI pioneer talks about the competition between the technology\u2019s two superpowers and why companies need to be more proactive in adopting it",
-    "category": "ai"
+    "category": "ai",
+    "_permalink": "/p/15d55aa766/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/15d55aa766/",
+    "_summary_240": "Chinese AI pioneer talks about the competition between the technology\u2019s two superpowers and why companies need to be more proactive in adopting it",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/15d55aa766/thumbnail.png"
   },
   {
     "title": "I Cloned ClawHub. Meet FinClaw.",
@@ -1279,11 +1288,7 @@
     "content_html": "<div class=\"captioned-image-container\"><figure><a class=\"image-link image2 is-viewable-img\" href=\"https://substackcdn.com/image/fetch/$s_!ALWh!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ffe73832b-f086-4036-82b7-189c095fb576_2432x1728.png\" target=\"_blank\"><div class=\"image2-inset\"><source type=\"image/webp\" /><img alt=\"\" class=\"sizing-normal\" height=\"1035\" src=\"https://substackcdn.com/image/fetch/$s_!ALWh!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ffe73832b-f086-4036-82b7-189c095fb576_2432x1728.png\" width=\"1456\" /><div class=\"image-link-expand\"><div class=\"pencraft pc-display-flex pc-gap-8 pc-reset\"><button class=\"pencraft pc-reset pencraft icon-container restack-image\" tabindex=\"0\" type=\"button\"><svg fill=\"none\" height=\"20\" stroke=\"var(--color-fg-primary)\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" viewBox=\"0 0 20 20\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><g><title></title><path d=\"M2.53001 7.81595C3.49179 4.73911 6.43281 2.5 9.91173 2.5C13.1684 2.5 15.9537 4.46214 17.0852 7.23684L17.6179 8.67647M17.6179 8.67647L18.5002 4.26471M17.6179 8.67647L13.6473 6.91176M17.4995 12.1841C16.5378 15.2609 13.5967 17.5 10.1178 17.5C6.86118 17.5 4.07589 15.5379 2.94432 12.7632L2.41165 11.3235M2.41165 11.3235L1.5293 15.7353M2.41165 11.3235L6.38224 13.0882\"></path></g></svg></button><button class=\"pencraft pc-reset pencraft icon-container view-image\" tabindex=\"0\" type=\"button\"><svg class=\"lucide lucide-maximize2 lucide-maximize-2\" fill=\"none\" height=\"20\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" viewBox=\"0 0 24 24\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><polyline points=\"15 3 21 3 21 9\"></polyline><polyline points=\"9 21 3 21 3 15\"></polyline><line x1=\"21\" x2=\"14\" y1=\"3\" y2=\"10\"></line><line x1=\"3\" x2=\"10\" y1=\"21\" y2=\"14\"></line></svg></button></div></div></div></a></figure></div><h4>I built an opensource &#8220;Edgar SEC Filing Watcher&#8221;. </h4><ul><li><p>The script I built will automate some of the data maintenance for <a href=\"https://www.ceorater.com/\">CEORater</a>. I decided to opensource the tool. It is free to use, just download the script from my <a href=\"https://github.com/jmaietta/edgar-filing-watcher\">Github page</a> and run at will.</p></li><li><p>Here is the link to the tool&#8217;s Github <a href=\"https://github.com/jmaietta/edgar-filing-watcher\">README</a> file.</p></li><li><p>The way the tool works is a user would simply load a list of tickers and run the provided script in terminal. The script will return those tickers for which there was an 8K and/or DEF 14A SEC filing.</p></li><li><p>The output is a Webpage summary with company name, date of filing, type of filing, and a link to that filing (screenshot of partial output below).</p></li></ul><div class=\"captioned-image-container\"><figure><a class=\"image-link image2 is-viewable-img\" href=\"https://substackcdn.com/image/fetch/$s_!JkZ4!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F3a82b559-2795-496f-bff7-8c403f328ec2_909x664.png\" target=\"_blank\"><div class=\"image2-inset\"><source type=\"image/webp\" /><img alt=\"\" class=\"sizing-normal\" height=\"664\" src=\"https://substackcdn.com/image/fetch/$s_!JkZ4!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F3a82b559-2795-496f-bff7-8c403f328ec2_909x664.png\" width=\"909\" /><div class=\"image-link-expand\"><div class=\"pencraft pc-display-flex pc-gap-8 pc-reset\"><button class=\"pencraft pc-reset pencraft icon-container restack-image\" tabindex=\"0\" type=\"button\"><svg fill=\"none\" height=\"20\" stroke=\"var(--color-fg-primary)\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" viewBox=\"0 0 20 20\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><g><title></title><path d=\"M2.53001 7.81595C3.49179 4.73911 6.43281 2.5 9.91173 2.5C13.1684 2.5 15.9537 4.46214 17.0852 7.23684L17.6179 8.67647M17.6179 8.67647L18.5002 4.26471M17.6179 8.67647L13.6473 6.91176M17.4995 12.1841C16.5378 15.2609 13.5967 17.5 10.1178 17.5C6.86118 17.5 4.07589 15.5379 2.94432 12.7632L2.41165 11.3235M2.41165 11.3235L1.5293 15.7353M2.41165 11.3235L6.38224 13.0882\"></path></g></svg></button><button class=\"pencraft pc-reset pencraft icon-container view-image\" tabindex=\"0\" type=\"button\"><svg class=\"lucide lucide-maximize2 lucide-maximize-2\" fill=\"none\" height=\"20\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" viewBox=\"0 0 24 24\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><polyline points=\"15 3 21 3 21 9\"></polyline><polyline points=\"9 21 3 21 3 15\"></polyline><line x1=\"21\" x2=\"14\" y1=\"3\" y2=\"10\"></line><line x1=\"3\" x2=\"10\" y1=\"21\" y2=\"14\"></line></svg></button></div></div></div></a><figcaption class=\"image-caption\">Source: <a href=\"https://github.com/jmaietta/edgar-filing-watcher\">jmaietta</a></figcaption></figure></div><div><hr /></div><p></p>",
     "image_url": "https://substackcdn.com/image/fetch/$s_!ALWh!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ffe73832b-f086-4036-82b7-189c095fb576_2432x1728.png",
     "summary_text": "I built an opensource \u201cEdgar SEC Filing Watcher\u201d.",
-    "category": "ai",
-    "_permalink": "/p/7c41e44ed0/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/7c41e44ed0/",
-    "_summary_240": "I built an opensource \u201cEdgar SEC Filing Watcher\u201d.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/7c41e44ed0/thumbnail.png"
+    "category": "ai"
   },
   {
     "title": "Anthropic Is Throttling Again",
