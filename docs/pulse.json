@@ -1,5 +1,50 @@
 [
   {
+    "title": "Anthropic vs. OpenAI IPO Filings",
+    "url": "https://newsletter.tek2dayholdings.com/p/anthropic-vs-openai-ipo-filings",
+    "published_at": "2026-02-07T12:23:55-05:00",
+    "source": "TEK2day Newsletter",
+    "summary": "Anthropic feels like the better business",
+    "content_html": "<div class=\"captioned-image-container\"><figure><a class=\"image-link image2 is-viewable-img\" href=\"https://substackcdn.com/image/fetch/$s_!-yH2!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F86c79a06-90b1-48b9-9bdc-d1605d935c32_2432x1728.png\" target=\"_blank\"><div class=\"image2-inset\"><source type=\"image/webp\" /><img alt=\"\" class=\"sizing-normal\" height=\"1035\" src=\"https://substackcdn.com/image/fetch/$s_!-yH2!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F86c79a06-90b1-48b9-9bdc-d1605d935c32_2432x1728.png\" width=\"1456\" /><div class=\"image-link-expand\"><div class=\"pencraft pc-display-flex pc-gap-8 pc-reset\"><button class=\"pencraft pc-reset pencraft icon-container restack-image\" tabindex=\"0\" type=\"button\"><svg fill=\"none\" height=\"20\" stroke=\"var(--color-fg-primary)\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" viewBox=\"0 0 20 20\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><g><title></title><path d=\"M2.53001 7.81595C3.49179 4.73911 6.43281 2.5 9.91173 2.5C13.1684 2.5 15.9537 4.46214 17.0852 7.23684L17.6179 8.67647M17.6179 8.67647L18.5002 4.26471M17.6179 8.67647L13.6473 6.91176M17.4995 12.1841C16.5378 15.2609 13.5967 17.5 10.1178 17.5C6.86118 17.5 4.07589 15.5379 2.94432 12.7632L2.41165 11.3235M2.41165 11.3235L1.5293 15.7353M2.41165 11.3235L6.38224 13.0882\"></path></g></svg></button><button class=\"pencraft pc-reset pencraft icon-container view-image\" tabindex=\"0\" type=\"button\"><svg class=\"lucide lucide-maximize2 lucide-maximize-2\" fill=\"none\" height=\"20\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" viewBox=\"0 0 24 24\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><polyline points=\"15 3 21 3 21 9\"></polyline><polyline points=\"9 21 3 21 3 15\"></polyline><line x1=\"21\" x2=\"14\" y1=\"3\" y2=\"10\"></line><line x1=\"3\" x2=\"10\" y1=\"21\" y2=\"14\"></line></svg></button></div></div></div></a></figure></div><h4>Both companies will file for an IPO this year. </h4><p><strong>Here is what the filings will show:</strong></p><ul><li><p>The vast majority of <strong>Anthropic&#8217;s revenue</strong> is generated from Enterprise customers <strong>(80-85%)</strong> who primarily use Claude for coding. <strong>OpenAI&#8217;s revenue</strong> in contrast primarily come from the <strong>Consumer (70-75%)</strong>.</p></li><li><p><strong>Anthropic should have better dollar renewal rates given its Enterprise focus.</strong> I would expect churn to be quite high among all LLM providers on the Consumer side. I tend to keep a subscription until somewhere in the coding process the LLM has such a large brain fart or consecutive brain farts that I lose patience and kill the subscription. I&#8217;ve heard of many other people, particularly those that use for coding, who take the same approach. There is a mental breaking point where it is time for a model change. </p></li><li><p><strong>Anthropic has better profit margins due to its Enterprise focus. </strong>Perhaps post-IPO Anthropic will have enough capital to deliver consistent performance on the Consumer-side, particularly at the low-end. </p></li><li><p><strong>Anthropic will have a superior organic revenue growth rate on the Enterprise side vs. OpenAI.</strong> I am thinking more about the future when I make this comment. Claude Opus is so superior to GPT on the coding side that the uptake by Software developers of Claude will provide Anthropic with enormous runway. </p></li><li><p><strong>Google will ultimately have no choice but to acquire Anthropic if it truly cares about automating the coding function. </strong>I&#8217;m not confident that Google&#8217;s spend will necessarily ever make Gemini better at coding than Claude. Gemini feels more like a general purpose app given it is integrated into Gmail, Photos, Google Travel, Genie, Nano Banana, etc. However, the coding opportunity is so attractive that Google would be foolish to not pursue an acquisition of Anthropic. </p><ul><li><p>I doubt that <strong>Dario Amodei</strong> (Anthropic CEO and founder) wants to be part of <strong>Microsoft</strong> or <strong>Amazon</strong>. Whereas Dario has kindred spirits at <strong>Google</strong>, particularly at <strong>DeepMind</strong> (Dario used to work at Google and is friendly with <strong>DeepMind founder and CEO Demis Hassabis</strong>).</p><div><hr /></div><p> </p></li></ul></li></ul><p></p>",
+    "image_url": "https://substackcdn.com/image/fetch/$s_!-yH2!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F86c79a06-90b1-48b9-9bdc-d1605d935c32_2432x1728.png",
+    "summary_text": "Anthropic feels like the better business",
+    "category": "ai",
+    "_permalink": "/p/272fa782b3/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/272fa782b3/",
+    "_summary_240": "Anthropic feels like the better business",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/272fa782b3/thumbnail.png"
+  },
+  {
+    "title": "These Mathematicians Are Trying to Educate A.I.",
+    "url": "https://www.nytimes.com/2026/02/07/science/mathematics-ai-proof-hairer.html",
+    "published_at": "2026-02-07T12:08:56-05:00",
+    "source": "The New York Times - Technology",
+    "summary": "Large language models struggle to solve research-level math questions. It takes a human to assess just how poorly they perform.",
+    "content_html": "Martin Hairer, a mathematician at the Swiss Federal Technology Institute of Lausanne. He splits his time between there and the Imperial College London.",
+    "image_url": "https://static01.nyt.com/images/2026/02/07/multimedia/07SCI-FIRSTPROOF-01-tljw/07SCI-FIRSTPROOF-01-tljw-mediumSquareAt3X.jpg",
+    "summary_text": "Large language models struggle to solve research-level math questions. It takes a human to assess just how poorly they perform.",
+    "category": "ai",
+    "_permalink": "/p/909799a66b/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/909799a66b/",
+    "_summary_240": "Large language models struggle to solve research-level math questions. It takes a human to assess just how poorly they perform.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/909799a66b/thumbnail.png"
+  },
+  {
+    "title": "Claude Opus 4.6 Is Outstanding",
+    "url": "https://newsletter.tek2dayholdings.com/p/claude-opus-46-is-outstanding",
+    "published_at": "2026-02-07T11:32:39-05:00",
+    "source": "TEK2day Newsletter",
+    "summary": "However, it is very expensive",
+    "content_html": "<div class=\"captioned-image-container\"><figure><a class=\"image-link image2 is-viewable-img\" href=\"https://substackcdn.com/image/fetch/$s_!4mK-!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F9b36273b-d302-43b0-a98d-00f5e5ec8d71_2432x1728.png\" target=\"_blank\"><div class=\"image2-inset\"><source type=\"image/webp\" /><img alt=\"\" class=\"sizing-normal\" height=\"1035\" src=\"https://substackcdn.com/image/fetch/$s_!4mK-!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F9b36273b-d302-43b0-a98d-00f5e5ec8d71_2432x1728.png\" width=\"1456\" /><div class=\"image-link-expand\"><div class=\"pencraft pc-display-flex pc-gap-8 pc-reset\"><button class=\"pencraft pc-reset pencraft icon-container restack-image\" tabindex=\"0\" type=\"button\"><svg fill=\"none\" height=\"20\" stroke=\"var(--color-fg-primary)\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" viewBox=\"0 0 20 20\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><g><title></title><path d=\"M2.53001 7.81595C3.49179 4.73911 6.43281 2.5 9.91173 2.5C13.1684 2.5 15.9537 4.46214 17.0852 7.23684L17.6179 8.67647M17.6179 8.67647L18.5002 4.26471M17.6179 8.67647L13.6473 6.91176M17.4995 12.1841C16.5378 15.2609 13.5967 17.5 10.1178 17.5C6.86118 17.5 4.07589 15.5379 2.94432 12.7632L2.41165 11.3235M2.41165 11.3235L1.5293 15.7353M2.41165 11.3235L6.38224 13.0882\"></path></g></svg></button><button class=\"pencraft pc-reset pencraft icon-container view-image\" tabindex=\"0\" type=\"button\"><svg class=\"lucide lucide-maximize2 lucide-maximize-2\" fill=\"none\" height=\"20\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" viewBox=\"0 0 24 24\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><polyline points=\"15 3 21 3 21 9\"></polyline><polyline points=\"9 21 3 21 3 15\"></polyline><line x1=\"21\" x2=\"14\" y1=\"3\" y2=\"10\"></line><line x1=\"3\" x2=\"10\" y1=\"21\" y2=\"14\"></line></svg></button></div></div></div></a></figure></div><p><strong>I have used Claude Opus 4.6 for a few more hours <a href=\"https://newsletter.tek2dayholdings.com/p/windows-os-is-losing-customers-to\">since my last note</a>. It is outstanding for coding.</strong> I am using it to turn this <a href=\"https://newsletter.tek2dayholdings.com/p/free-tool-edgar-sec-filing-watcher\">SEC Edgar Watcher CLI tool</a> into an application that we will host either at <a href=\"https://www.ceorater.com/\">CEORater</a> or as a standalone application. </p><p><strong>My only issue with Opus 4.6 is that it is expensive.</strong> I have burned through my weekly token allotment in approximately 3 hours (I am on the low-end premium plan at $20/month). </p><p><strong>Opus 4.6 has a superior context window / &#8220;memory&#8221; compared to Opus 4.5 - more memory and it makes better use of it.</strong> However, I have been throttled and will not be able to use 4.6 for the next 32 hours. Too bad, I was trucking along and would have had a Beta out to the world by Monday. </p><p><strong>What Claude Opus 4.6 helped me build looked better than Bloomberg&#8217;s, Factset&#8217;s, and Reuters&#8217; News functions.</strong> The only differences are the tool I built does not have a real-time SEC feed nor does it capture company press releases - only SEC filings. </p><p>Edgar Watcher will run SEC queries every 15, 30 or 60 minutes. I haven&#8217;t decided what the interval will be. <strong>I can price such a tool at $10/user/month. A real-time SEC feed would bump the price significantly. Perhaps two versions are in order?</strong></p><div class=\"captioned-image-container\"><figure><a class=\"image-link image2 is-viewable-img\" href=\"https://substackcdn.com/image/fetch/$s_!wn1t!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa196b789-870b-402c-8817-ce4a09e28b96_1356x631.png\" target=\"_blank\"><div class=\"image2-inset\"><source type=\"image/webp\" /><img alt=\"\" class=\"sizing-normal\" height=\"631\" src=\"https://substackcdn.com/image/fetch/$s_!wn1t!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa196b789-870b-402c-8817-ce4a09e28b96_1356x631.png\" width=\"1356\" /><div class=\"image-link-expand\"><div class=\"pencraft pc-display-flex pc-gap-8 pc-reset\"><button class=\"pencraft pc-reset pencraft icon-container restack-image\" tabindex=\"0\" type=\"button\"><svg fill=\"none\" height=\"20\" stroke=\"var(--color-fg-primary)\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" viewBox=\"0 0 20 20\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><g><title></title><path d=\"M2.53001 7.81595C3.49179 4.73911 6.43281 2.5 9.91173 2.5C13.1684 2.5 15.9537 4.46214 17.0852 7.23684L17.6179 8.67647M17.6179 8.67647L18.5002 4.26471M17.6179 8.67647L13.6473 6.91176M17.4995 12.1841C16.5378 15.2609 13.5967 17.5 10.1178 17.5C6.86118 17.5 4.07589 15.5379 2.94432 12.7632L2.41165 11.3235M2.41165 11.3235L1.5293 15.7353M2.41165 11.3235L6.38224 13.0882\"></path></g></svg></button><button class=\"pencraft pc-reset pencraft icon-container view-image\" tabindex=\"0\" type=\"button\"><svg class=\"lucide lucide-maximize2 lucide-maximize-2\" fill=\"none\" height=\"20\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" viewBox=\"0 0 24 24\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><polyline points=\"15 3 21 3 21 9\"></polyline><polyline points=\"9 21 3 21 3 15\"></polyline><line x1=\"21\" x2=\"14\" y1=\"3\" y2=\"10\"></line><line x1=\"3\" x2=\"10\" y1=\"21\" y2=\"14\"></line></svg></button></div></div></div></a></figure></div><div><hr /></div><p></p>",
+    "image_url": "https://substackcdn.com/image/fetch/$s_!4mK-!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F9b36273b-d302-43b0-a98d-00f5e5ec8d71_2432x1728.png",
+    "summary_text": "However, it is very expensive",
+    "category": "ai",
+    "_permalink": "/p/a83f1d374c/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/a83f1d374c/",
+    "_summary_240": "However, it is very expensive",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/a83f1d374c/thumbnail.png"
+  },
+  {
     "title": "The second-gen AirTags are a scatterbrain\u2019s best friend",
     "url": "https://www.theverge.com/tech/875314/airtags-second-gen-review-item-tracker",
     "published_at": "2026-02-07T10:30:00-05:00",
@@ -58,21 +103,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/65595cf1d2/",
     "_summary_240": "Increasing AI scrutiny is dividing the group into winners and losers",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/65595cf1d2/thumbnail.png"
-  },
-  {
-    "title": "These Mathematicians Are Trying to Educate A.I.",
-    "url": "https://www.nytimes.com/2026/02/07/science/mathematics-ai-proof-hairer.html",
-    "published_at": "2026-02-07T05:02:25-05:00",
-    "source": "The New York Times - Technology",
-    "summary": "Large language models struggle to solve research-level math questions. It takes a human to measure just how poorly they perform.",
-    "content_html": "Martin Hairer, a mathematician at the Swiss Federal Technology Institute of Lausanne. He splits his time between there and the Imperial College London.",
-    "image_url": "https://static01.nyt.com/images/2026/02/07/multimedia/07SCI-FIRSTPROOF-01-tljw/07SCI-FIRSTPROOF-01-tljw-mediumSquareAt3X.jpg",
-    "summary_text": "Large language models struggle to solve research-level math questions. It takes a human to measure just how poorly they perform.",
-    "category": "ai",
-    "_permalink": "/p/666563cf73/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/666563cf73/",
-    "_summary_240": "Large language models struggle to solve research-level math questions. It takes a human to measure just how poorly they perform.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/666563cf73/thumbnail.png"
   },
   {
     "title": "Malaysia Draws First Data Center Protest Over Pollution, Water",
@@ -398,7 +428,11 @@
     "content_html": "",
     "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/7eba13fe-d37f-4798-b5dd-ed6dc3150ba7.jpg",
     "summary_text": "Nasdaq climbs after sell-off fuelled by worries over vast AI spending",
-    "category": "ai"
+    "category": "ai",
+    "_permalink": "/p/83a8569d50/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/83a8569d50/",
+    "_summary_240": "Nasdaq climbs after sell-off fuelled by worries over vast AI spending",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/83a8569d50/thumbnail.png"
   },
   {
     "title": "Anthropic\u2019s breakout moment: how Claude cracked AI for business",
@@ -821,21 +855,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/9a4a43de8a/thumbnail.png"
   },
   {
-    "title": "Spotify changes developer mode API to require premium accounts, limits test users",
-    "url": "https://techcrunch.com/2026/02/06/spotify-changes-developer-mode-api-to-require-premium-accounts-limits-test-users/",
-    "published_at": "2026-02-06T09:00:00-05:00",
-    "source": "TechCrunch",
-    "summary": "Spotify is now limiting each app to only five users and requires devs to have a Premium subscription. If developers need to make their app available to a wider user base, they will have to apply for extended quota.",
-    "content_html": "",
-    "image_url": "https://techcrunch.com/wp-content/uploads/2025/11/blog-header.jpg?resize=1200,683",
-    "summary_text": "Spotify is now limiting each app to only five users and requires devs to have a Premium subscription. If developers need to make their app available to a wider user base, they will have to apply for extended quota.",
-    "category": "software",
-    "_permalink": "/p/6a9ab92d78/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/6a9ab92d78/",
-    "_summary_240": "Spotify is now limiting each app to only five users and requires devs to have a Premium subscription. If developers need to make their app available to a wider user base, they...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/6a9ab92d78/thumbnail.png"
-  },
-  {
     "title": "Bitcoin Core dev Gloria Zhao quits maintainer role after six-year stint",
     "url": "https://cointelegraph.com/news/bitcoin-core-dev-gloria-zhao-quits?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
     "published_at": "2026-02-06T08:59:47-05:00",
@@ -1249,9 +1268,13 @@
     "source": "Financial Times - Technology",
     "summary": "Declines follow steep falls for software shares in previous session over worries about new AI tool",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/c308aae2-b7c5-4570-80de-f2a823e752e9.jpg",
     "summary_text": "Declines follow steep falls for software shares in previous session over worries about new AI tool",
-    "category": "ai"
+    "category": "ai",
+    "_permalink": "/p/a4bcab079f/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/a4bcab079f/",
+    "_summary_240": "Declines follow steep falls for software shares in previous session over worries about new AI tool",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/a4bcab079f/thumbnail.png"
   },
   {
     "title": "Should AI chatbots have ads? Anthropic says no.",
@@ -1292,11 +1315,7 @@
     "content_html": "<article class=\"mssrc-posts font-- has--theme\" id=\"single-23652\">\n\t<div class=\"acf-innerblocks-container\"></div>\t\t\t<section class=\"post-tags\">\n\t\t\t\t<div class=\"post-tags__content wp-block-columns\">\n\t\t\t\t\t<div class=\"post-tags__header wp-block-column flex-basis-25 has-text-align-right\">\n\t\t\t\t\t\t<h4 class=\"sr-only\">Tags: </h4>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"post-tags__body wp-block-column flex-basis-60\">\n\t\t\t\t\t\t<ul class=\"post-tags__list\"><li class=\"post-tags__item\"><a class=\"kicker inline-block post__meta--tags\" href=\"https://news.microsoft.com/source/tag/security/\">Security</a></li></ul>\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</section>\n\t\t\t</article><p>The post <a href=\"https://www.microsoft.com/en-us/security/blog/2026/02/04/detecting-backdoored-language-models-at-scale/\">New research: Detecting backdoored language models at scale</a> appeared first on <a href=\"https://news.microsoft.com/source\">Source</a>.</p>",
     "image_url": "https://www.microsoft.com/en-us/security/blog/wp-content/uploads/2026/02/MDC23_DatacenterHotaisle_008.jpg",
     "summary_text": "The post New research: Detecting backdoored language models at scale appeared first on Source .",
-    "category": "ai",
-    "_permalink": "/p/02b2fdfab8/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/02b2fdfab8/",
-    "_summary_240": "The post New research: Detecting backdoored language models at scale appeared first on Source .",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/02b2fdfab8/thumbnail.png"
+    "category": "ai"
   },
   {
     "title": "Not all software faces the same threat from AI",
@@ -1305,7 +1324,7 @@
     "source": "Financial Times - Technology",
     "summary": "From security services to those able to reinvent themselves, many may survive the AI armageddon",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/dc8f4cc6-6e59-499e-acbc-beeaf3da0612.jpg",
     "summary_text": "From security services to those able to reinvent themselves, many may survive the AI armageddon",
     "category": "ai"
   },
@@ -1316,7 +1335,7 @@
     "source": "Financial Times - Technology",
     "summary": "New AI-powered tools reduce time and cost of software development, threatening industries from law to advertising",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/53dd9056-4df8-4fdd-9851-3b5a887bcf46.jpg",
     "summary_text": "New AI-powered tools reduce time and cost of software development, threatening industries from law to advertising",
     "category": "ai"
   },
@@ -1329,11 +1348,7 @@
     "content_html": "",
     "image_url": "https://s3.amazonaws.com/cms.ipressroom.com/219/files/202602/69836d8b3d6332ce7fe1f9c0_nemotron-labs-featured-842x450/nemotron-labs-featured-842x450_thmb.jpg",
     "summary_text": "Businesses today face the challenge of uncovering valuable insights buried within a wide variety of documents \u2014 including reports, presentations, PDFs, web pages and spreadsheets.",
-    "category": "ai",
-    "_permalink": "/p/76c05336c1/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/76c05336c1/",
-    "_summary_240": "Businesses today face the challenge of uncovering valuable insights buried within a wide variety of documents \u2014 including reports, presentations, PDFs, web pages and spreadsheets.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/76c05336c1/thumbnail.png"
+    "category": "ai"
   },
   {
     "title": "Mistral's New Ultra-Fast Translation Model Gives Big AI Labs a Run for Their Money",
