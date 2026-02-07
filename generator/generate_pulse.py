@@ -951,7 +951,18 @@ def dedupe(items: list) -> list:
         title = it.get("title", "")
         try:
             parsed = urlparse(url)
-            normalized_url = f"{parsed.netloc}{parsed.path}".lower().rstrip("/")
+            netloc = (parsed.netloc or "").lower()
+            path = (parsed.path or "").rstrip("/")
+            # Keep YouTube video identity (avoid collapsing all /watch URLs into one).
+            if ("youtube.com" in netloc or "m.youtube.com" in netloc) and path == "/watch":
+                qs = urllib.parse.parse_qs(parsed.query or "")
+                vid = (qs.get("v") or [""])[0]
+                if vid:
+                    normalized_url = f"youtube.com/watch?v={vid}"
+                else:
+                    normalized_url = f"{netloc}{path}".lower()
+            else:
+                normalized_url = f"{netloc}{path}".lower()
         except Exception:
             normalized_url = url.lower()
         if normalized_url in seen_urls:
