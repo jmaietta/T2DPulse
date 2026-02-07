@@ -689,6 +689,150 @@
         border: 1px solid currentColor;
       }
     }
+  
+    /* ============================================
+       PULSE BRIEF (Expandable Daily Summary)
+       ============================================ */
+    details.pulse-brief {
+      margin: 1.5rem 0 2rem;
+      border: 1px solid rgba(99, 102, 241, 0.18);
+      border-radius: var(--radius);
+      background: linear-gradient(180deg, rgba(99, 102, 241, 0.06) 0%, rgba(255,255,255,0.92) 55%, var(--card) 100%);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    details.pulse-brief > summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 1rem 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      user-select: none;
+      border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+    }
+
+    details.pulse-brief > summary::-webkit-details-marker { display: none; }
+
+    .pb-left {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      min-width: 220px;
+    }
+
+    .pb-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.25rem 0.55rem;
+      border-radius: 999px;
+      background: rgba(99, 102, 241, 0.14);
+      color: #3730a3;
+      font-weight: 800;
+      letter-spacing: 0.03em;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+    }
+
+    .pb-date {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--ink);
+      font-family: 'Orbitron', system-ui, sans-serif;
+      letter-spacing: 0.02em;
+    }
+
+    .pb-right {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      flex: 1;
+      justify-content: space-between;
+      min-width: 0;
+    }
+
+    .pb-teaser {
+      color: var(--muted);
+      font-weight: 600;
+      font-size: 0.875rem;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 70ch;
+    }
+
+    .pb-chevron {
+      width: 34px;
+      height: 34px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.9);
+      display: grid;
+      place-items: center;
+      transition: transform var(--transition-fast), background var(--transition-fast);
+      flex: 0 0 auto;
+    }
+
+    details.pulse-brief[open] .pb-chevron { transform: rotate(180deg); }
+
+    .pb-body {
+      padding: 1.1rem 1.25rem 1.25rem;
+    }
+
+    .pb-one {
+      margin: 0 0 1rem;
+      color: var(--ink-soft);
+      font-weight: 600;
+      line-height: 1.55;
+    }
+
+    .pb-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.25rem;
+    }
+
+    @media (min-width: 900px) {
+      .pb-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    .pb-card {
+      border: 1px solid var(--line-light);
+      border-radius: var(--radius-sm);
+      background: rgba(248,250,252,0.6);
+      padding: 1rem 1rem 0.9rem;
+    }
+
+    .pb-card h4 {
+      margin: 0 0 0.75rem;
+      font-size: 0.95rem;
+      letter-spacing: -0.01em;
+    }
+
+    .pb-list {
+      margin: 0;
+      padding-left: 1.2rem;
+      display: grid;
+      gap: 0.55rem;
+    }
+
+    .pb-list a {
+      color: var(--ink);
+      text-decoration: none;
+      font-weight: 650;
+    }
+
+    .pb-list a:hover { color: var(--ai); }
+
+    .pb-note {
+      margin-top: 0.9rem;
+      color: var(--muted);
+      font-size: 0.78rem;
+      line-height: 1.45;
+    }
+
   </style>
 
   <link rel="icon" type="image/x-icon" href="./icons/favicon.ico">
@@ -726,6 +870,7 @@
 
   <div id="app">
     <section id="tek2day-pulse" aria-labelledby="tek2day-title">
+      {{DAILY_BRIEF}}
       <div class="items">
         {{AI_ITEMS}}
         {{SW_ITEMS}}
