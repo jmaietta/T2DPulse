@@ -1,5 +1,20 @@
 [
   {
+    "title": "GOG is already working on native Linux support",
+    "url": "https://www.theverge.com/tech/875425/gog-native-linux-support",
+    "published_at": "2026-02-07T15:23:46-05:00",
+    "source": "The Verge",
+    "summary": "GOG recently posted a job listing for a senior software engineer focused on porting its Galaxy desktop client to Linux. Now, in reply to a Reddit AMA, the GOG team has revealed that work on native Linux support is already underway. It's still too early to give an ETA, according to the Reddit thread. But [\u2026]",
+    "content_html": "<figure>\n\n<img alt=\"An image of the GOG logo\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/12/gog-logo.webp?quality=90&#038;strip=all&#038;crop=0,0,100,100\" />\n\t<figcaption>\n\t\t</figcaption>\n</figure>\n<p class=\"has-text-align-none\">GOG recently posted a <a href=\"https://www.gog.com/en/work/senior-software-engineer-c-gog-galaxy\">job listing</a> for a senior software engineer focused on porting its Galaxy desktop client to Linux. Now, in reply to a <a href=\"https://www.reddit.com/r/gog/comments/1qu09vg/ask_the_gog_team_and_micha%C5%82_kici%C5%84ski_anything/\">Reddit AMA</a>, the GOG team has revealed that work on native Linux support is <a href=\"https://www.pcguide.com/news/work-has-started-on-native-linux-support-for-gog-galaxy-co-founder-says-theyre-a-big-fan-of-linux/\">already underway</a>. </p>\n<p class=\"has-text-align-none\">It's still too early to give an ETA, according to the Reddit thread. But founder and CEO, Micha&#322; Kici&#324;ski, said, \"personally, I'm a big fan of Linux.\" The job listing also calls Linux the \"next major frontier\" in gaming. It's obvious at this point that Linux is becoming an <a href=\"https://www.theverge.com/2024/12/30/24329005/bazzite-asus-rog-ally-x-steam-os-editorial\">increasingly</a> <a href=\"https://www.theverge.com/23951655/steam-deck-oled-review\">important</a> part of the <a href=\"https://www.theverge.com/games/761025/framework-desktop-bazzite-linux-steam-machine-pc-game-console-impressions\">PC gaming</a> landscape. Especially as Microsoft continues to frustrate users by cramming every nook and crann \u2026</p>\n<p><a href=\"https://www.theverge.com/tech/875425/gog-native-linux-support\">Read the full story at The Verge.</a></p>",
+    "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/12/gog-logo.webp?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "summary_text": "GOG recently posted a job listing for a senior software engineer focused on porting its Galaxy desktop client to Linux. Now, in reply to a Reddit AMA, the GOG team has revealed that work on native Linux support is already underway. It's still too early to giv...",
+    "category": "software",
+    "_permalink": "/p/dbea0b29a8/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/dbea0b29a8/",
+    "_summary_240": "GOG recently posted a job listing for a senior software engineer focused on porting its Galaxy desktop client to Linux. Now, in reply to a Reddit AMA, the GOG team has revealed...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/dbea0b29a8/thumbnail.png"
+  },
+  {
     "title": "Tech\u2019s AI Push Risks a Bond Market Blowback: Credit Weekly",
     "url": "https://www.bloomberg.com/news/articles/2026-02-07/tech-s-ai-push-risks-a-bond-blowback-amzn-googl-msft-orcl",
     "published_at": "2026-02-07T14:01:32-05:00",
@@ -1799,17 +1814,6 @@
     "image_url": "https://i.ytimg.com/vi/NAcdcunPfJg/maxresdefault.jpg",
     "summary_text": "When you look at scientific tooling, a lot of it hasn\u2019t changed in decades. That\u2019s why we recently launched Prism: a free, AI-native environment for scientific writing and collaboration, designed to mean less time in your editor and more time doing research. ...",
     "category": "ai"
-  },
-  {
-    "title": "Notepad++ users take note: It's time to check if you're hacked",
-    "url": "https://arstechnica.com/security/2026/02/notepad-updater-was-compromised-for-6-months-in-supply-chain-attack/",
-    "published_at": "2026-02-02T15:30:56-05:00",
-    "source": "Ars Technica",
-    "summary": "Suspected China-state hackers used update infrastructure to deliver backdoored version.",
-    "content_html": "<p>Infrastructure delivering updates for Notepad++\u2014a widely used text editor for Windows\u2014was compromised for six months by suspected China-state hackers who used their control to deliver backdoored versions of the app to select targets, developers said Monday.</p>\n<p>\u201cI deeply apologize to all users affected by this hijacking,\u201d the author of a <a href=\"https://notepad-plus-plus.org/news/hijacked-incident-info-update/\">post</a> published to the official <a href=\"https://notepad-plus-plus.org/\">notepad-plus-plus.org</a> site wrote Monday. The post said that the attack began last June with an \u201cinfrastructure-level compromise that allowed malicious actors to intercept and redirect update traffic destined for notepad-plus-plus.org.\u201d The attackers, whom multiple investigators tied to the Chinese government, then selectively redirected certain targeted users to malicious update servers where they received backdoored updates. Notepad++ didn\u2019t regain control of its infrastructure until December.</p>\n<p>The attackers used their access to install a <a href=\"https://www.rapid7.com/blog/post/tr-chrysalis-backdoor-dive-into-lotus-blossoms-toolkit/\">never-before-seen payload</a> that has been dubbed Chrysalis. Security firm Rapid 7 descrbed it as a \"custom, feature-rich backdoor.\"</p><p><a href=\"https://arstechnica.com/security/2026/02/notepad-updater-was-compromised-for-6-months-in-supply-chain-attack/\">Read full article</a></p>\n<p><a href=\"https://arstechnica.com/security/2026/02/notepad-updater-was-compromised-for-6-months-in-supply-chain-attack/#comments\">Comments</a></p>",
-    "image_url": "https://cdn.arstechnica.net/wp-content/uploads/2023/07/exploit-vulnerability-security.jpg",
-    "summary_text": "Suspected China-state hackers used update infrastructure to deliver backdoored version.",
-    "category": "fintech"
   },
   {
     "title": "A first look at the Codex app",
