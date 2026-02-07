@@ -1,5 +1,20 @@
 [
   {
+    "title": "Bitcoin difficulty drops by over 11%, sharpest drop since 2021 China ban",
+    "url": "https://cointelegraph.com/news/bitcoin-difficulty-drops-11-worst-2021-china-ban?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "published_at": "2026-02-07T13:57:04-05:00",
+    "source": "Cointelegraph",
+    "summary": "The Bitcoin network's mining difficulty dropped by as much as 27% within a single adjustment period during China's 2021 crypto mining ban.",
+    "content_html": "",
+    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjYtMDEvMDE5YmEwZGYtM2IwMC03Mzk4LWE5YTUtODJjZGMzNDQwMTEwLmpwZw==.jpg",
+    "summary_text": "The Bitcoin network's mining difficulty dropped by as much as 27% within a single adjustment period during China's 2021 crypto mining ban.",
+    "category": "fintech",
+    "_permalink": "/p/04b4b44bf0/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/04b4b44bf0/",
+    "_summary_240": "The Bitcoin network's mining difficulty dropped by as much as 27% within a single adjustment period during China's 2021 crypto mining ban.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/04b4b44bf0/thumbnail.png"
+  },
+  {
     "title": "Anthropic vs. OpenAI IPO Filings",
     "url": "https://newsletter.tek2dayholdings.com/p/anthropic-vs-openai-ipo-filings",
     "published_at": "2026-02-07T12:23:55-05:00",
@@ -765,6 +780,21 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/49e15dbeea/thumbnail.png"
   },
   {
+    "title": "CEORater AI chat overview powered by @anthropic-ai",
+    "url": "https://www.youtube.com/watch?v=IiE_ElRviD4",
+    "published_at": "2026-02-06T11:14:54-05:00",
+    "source": "YouTube (T2D Pulse)",
+    "summary": "Check out our unique data and analytics for S&P 500 CEOs: https://www.ceorater.com/",
+    "content_html": "",
+    "image_url": "https://i.ytimg.com/vi/IiE_ElRviD4/maxresdefault.jpg",
+    "summary_text": "Check out our unique data and analytics for S&P 500 CEOs: https://www.ceorater.com/",
+    "category": "ai",
+    "_permalink": "/p/24d1f5a617/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/24d1f5a617/",
+    "_summary_240": "Check out our unique data and analytics for S&P 500 CEOs: https://www.ceorater.com/",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/24d1f5a617/thumbnail.png"
+  },
+  {
     "title": "Bitcoin beats FTX, COVID-19 crash with record dive below 200-day trend line",
     "url": "https://cointelegraph.com/news/bitcoin-beats-ftx-covid-19-crash-record-dive-below-200-day-trend-line?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
     "published_at": "2026-02-06T10:52:48-05:00",
@@ -1076,21 +1106,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/61c3d0f331/thumbnail.png"
   },
   {
-    "title": "Introducing Claude Opus 4.6",
-    "url": "https://www.youtube.com/watch?v=dPn3GBI8lII",
-    "published_at": "2026-02-05T12:45:22-05:00",
-    "source": "Anthropic YouTube",
-    "summary": "Our smartest model got an upgrade. Claude Opus 4.6 plans more carefully, stays on task longer, and works more autonomously, so you can do more with less back-and-forth. Read more: https://anthropic.com/news/claude-opus-4-6",
-    "content_html": "",
-    "image_url": "https://i.ytimg.com/vi/dPn3GBI8lII/maxresdefault.jpg",
-    "summary_text": "Our smartest model got an upgrade. Claude Opus 4.6 plans more carefully, stays on task longer, and works more autonomously, so you can do more with less back-and-forth. Read more: https://anthropic.com/news/claude-opus-4-6",
-    "category": "ai",
-    "_permalink": "/p/a6def08de1/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/a6def08de1/",
-    "_summary_240": "Our smartest model got an upgrade. Claude Opus 4.6 plans more carefully, stays on task longer, and works more autonomously, so you can do more with less back-and-forth. Read...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/a6def08de1/thumbnail.png"
-  },
-  {
     "title": "Anthropic launches new Claude model as AI fears rattle markets",
     "url": "https://www.ft.com/content/a0cd0281-8367-4ed3-9f18-038e4a9f79e0",
     "published_at": "2026-02-05T12:45:05-05:00",
@@ -1268,13 +1283,9 @@
     "source": "Financial Times - Technology",
     "summary": "Declines follow steep falls for software shares in previous session over worries about new AI tool",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/c308aae2-b7c5-4570-80de-f2a823e752e9.jpg",
+    "image_url": "",
     "summary_text": "Declines follow steep falls for software shares in previous session over worries about new AI tool",
-    "category": "ai",
-    "_permalink": "/p/a4bcab079f/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/a4bcab079f/",
-    "_summary_240": "Declines follow steep falls for software shares in previous session over worries about new AI tool",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/a4bcab079f/thumbnail.png"
+    "category": "ai"
   },
   {
     "title": "Should AI chatbots have ads? Anthropic says no.",
@@ -1300,11 +1311,7 @@
     "content_html": "",
     "image_url": "https://media.wired.com/photos/69826734b1483a13eb667d4f/master/pass/AI-Lab-Axiom-Solves-Previously-Unsolvable-Math-Problem-Business.jpg",
     "summary_text": "Axiom says its AI found solutions to several long-standing math problems, a sign of the technology\u2019s steadily advancing reasoning capabilities.",
-    "category": "ai",
-    "_permalink": "/p/385b4ad218/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/385b4ad218/",
-    "_summary_240": "Axiom says its AI found solutions to several long-standing math problems, a sign of the technology\u2019s steadily advancing reasoning capabilities.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/385b4ad218/thumbnail.png"
+    "category": "ai"
   },
   {
     "title": "New research: Detecting backdoored language models at scale",
@@ -1324,7 +1331,7 @@
     "source": "Financial Times - Technology",
     "summary": "From security services to those able to reinvent themselves, many may survive the AI armageddon",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/dc8f4cc6-6e59-499e-acbc-beeaf3da0612.jpg",
+    "image_url": "",
     "summary_text": "From security services to those able to reinvent themselves, many may survive the AI armageddon",
     "category": "ai"
   },
@@ -1335,7 +1342,7 @@
     "source": "Financial Times - Technology",
     "summary": "New AI-powered tools reduce time and cost of software development, threatening industries from law to advertising",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/53dd9056-4df8-4fdd-9851-3b5a887bcf46.jpg",
+    "image_url": "",
     "summary_text": "New AI-powered tools reduce time and cost of software development, threatening industries from law to advertising",
     "category": "ai"
   },
