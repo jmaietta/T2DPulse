@@ -73,8 +73,10 @@ companies:
   rss: https://nvidianews.nvidia.com/releases.xml
 youtube_feeds:
 - name: YouTube (T2D Pulse)
-  url: https://www.youtube.com/feeds/videos.xml?channel_id=UCV6aM1V38dsdo3KTHt_SSNw
+  channel_id: UCV6aM1V38dsdo3KTHt_SSNw
 - name: Anthropic YouTube
   channel_id: UCrDwWp7EBBv4NwvScIpBDOA
 - name: OpenAI YouTube
   channel_id: UCXZCJLdBC09xxGZ6gcdrc6A
+- name: SS&C Blue Prism YouTube
+  channel_id: UCUKZj81tFPyc0sb2vo5wRSA
