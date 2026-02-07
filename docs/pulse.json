@@ -1,17 +1,347 @@
 [
   {
+    "title": "AI Enters the Race at the Winter Olympic Games",
+    "url": "https://www.pymnts.com/artificial-intelligence-2/2026/ai-enters-the-race-at-the-winter-olympic-games/",
+    "published_at": "2026-02-06T20:48:21-05:00",
+    "source": "PYMNTS",
+    "summary": "Artificial intelligence (AI) is also entering the race at the 2026 Winter Olympics in Milano Cortina, Italy, which runs through Feb. 22, bringing a layer of machine intelligence to an event long defined as a showcase of human performance. From athlete training and broadcast production to fan engagement and judging, AI systems are increasingly [\u2026] The post AI Enters the Race at the Winter Olympic ...",
+    "content_html": "<p>Artificial intelligence (AI) is also entering the race at the <a href=\"https://www.olympics.com/en/milano-cortina-2026\" rel=\"noopener\" target=\"_blank\">2026 Winter Olympics</a> in Milano Cortina, Italy, which runs through Feb. 22, bringing a layer of machine intelligence to an event long defined as a showcase of human performance.</p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p>From athlete training and broadcast production to fan engagement and judging, AI systems are increasingly embedded in how the games are prepared for, experienced and evaluated.</p>\n<h2><strong>Training Edge for Olympic Athletes</strong></h2>\n<p>For elite athletes, micro-second gains often separate podium finishes from near misses. That reality is driving adoption of an AI-powered performance analysis tool developed through a <a href=\"https://blog.google/innovation-and-ai/infrastructure-and-cloud/google-cloud/us-ski-snowboard-tool-winter-olympics-2026/\" rel=\"noopener\" target=\"_blank\">collaboration</a> between <a href=\"https://cloud.google.com/\" rel=\"noopener\" target=\"_blank\">Google Cloud</a> and <a href=\"https://www.usskiandsnowboard.org/\" rel=\"noopener\" target=\"_blank\">U.S. Ski &amp; Snowboard</a>. The system uses computer vision and large language models to convert ordinary video footage into detailed biomechanical insights, allowing coaches and athletes to analyze rotations, takeoff angles, airtime and landings without specialized motion-capture equipment.</p>\n<p>The technology has already influenced Olympic preparation. Halfpipe snowboarder <a href=\"https://www.nbcolympics.com/news/maddie-mastro-meet-athlete-0\" rel=\"noopener\" target=\"_blank\">Maddie Mastro</a>, known for her signature \u201ccrippler\u201d trick, <a href=\"https://www.wsj.com/articles/how-ai-changed-this-olympic-snowboarders-signature-trick-029f0c5d?gaa_at=eafs&amp;gaa_n=AWEtsqfvSJYlvEjc_4riNC5V_O1TaQbReIB3s3DwscorPdORQv1AeWQYXRKUqnHzCNg%3D&amp;gaa_ts=69863db8&amp;gaa_sig=s24i5BWQCHVekgwtthof3zMzxj-YEQgUp-i9I-9N7RuEEdy-2qxLfYyoCewvvjtn08c_TSRX9MeOzGKsBhaLWQ%3D%3D\" rel=\"noopener\" target=\"_blank\">used</a> the AI system to identify subtle flaws in arm positioning during landings that were not apparent through traditional video review. By adjusting technique based on AI feedback, athletes can make data-backed refinements earlier in training cycles, reducing reliance on trial and error as competition approaches.</p>\n<p>\u201cOur collaboration with U.S. Ski &amp; Snowboard is the blueprint for a global shift in how humans move, train, and recover, moving beyond historical data to provide athletes with near real-time, prescriptive coaching,\u201d said <a href=\"https://www.linkedin.com/in/oliver-parker-108266/\" rel=\"noopener\" target=\"_blank\">Oliver Parker</a>, vice president, global generative AI, Google Cloud, in a <a href=\"https://www.usskiandsnowboard.org/news/us-ski-snowboard-and-google-announce-collaboration-build-ai-based-athlete-performance-tool\" rel=\"noopener\" target=\"_blank\">statement</a>.</p>\n<p>Beyond individual athletes, the tool signals a broader shift in how national teams approach training. Cloud-based AI allows performance analysis to happen faster, more consistently and at lower cost, potentially narrowing gaps between well-funded programs and those with fewer resources.</p>\n<h2><strong>AI Powering the Olympic Digital Experience</strong></h2>\n<p>AI at the 2026 Olympics isn\u2019t limited to athlete performance. The technology has also been embedded into how the games are experienced by spectators, officials and broadcasters.</p>\n<p><a href=\"https://www.alibabacloud.com/en?_p_lc=1\" rel=\"noopener\" target=\"_blank\">Alibaba Cloud</a> has <a href=\"https://www.scmp.com/tech/big-tech/article/3342418/chatbots-replays-alibaba-rolls-out-ai-suite-2026-winter-olympics\" rel=\"noopener\" target=\"_blank\">announced</a> a suite of AI tools built on its Qwen large language model that will be integrated into the digital ecosystem of the Milano Cortina Games. These \u201cOlympic AI Assistants\u201d will be deployed on the International Olympic Committee\u2019s (IOC) global platforms to provide multilingual conversational support for fans seeking schedules, results and event information in real time via chat interfaces.</p>\n<p>Beyond fan engagement, the same AI models will also support internal Olympic operations. On secure IOC portals, AI assistants will help National Olympic Committees access documents and guidelines through natural language queries, a first for LLMs in the Olympics\u2019 digital infrastructure.</p>\n<p>Alibaba\u2019s AI initiatives also include enhanced broadcast technology. AI-powered replay systems promise faster, more insightful visual breakdowns of events across multiple sports, enabling broadcasters to deliver compelling, near-live replays that isolate athletes from complex backgrounds like snow or ice. This could help viewers better appreciate technique and speed in disciplines like freestyle skiing, figure skating and ice hockey.</p>\n<h2><strong>From Subjective Calls to Objective Data</strong></h2>\n<p>For sports where subjective evaluation plays a large role\u2014such as skiing, snowboarding and figure skating\u2014the IOC is exploring AI systems to support judges with more consistent, data-backed assessments.</p>\n<p>According to <a href=\"https://theconversation.com/ai-is-coming-to-olympic-judging-what-makes-it-a-game-changer-274313\" rel=\"noopener\" target=\"_blank\">The Conversation</a>, AI systems being explored for Olympic judging focus on breaking down complex athletic movements into measurable components, offering officials a data-driven reference point in events where scoring has historically depended on human interpretation.</p>\n<p>For example, AI systems can measure body angles, rotation speeds and airtime with precision that exceeds the human eye, flagging potential scoring issues or technical details that might otherwise be missed. These tools to augment human decision-making by offering unbiased metrics that reduce error and promote fairness in competitive outcomes.</p>\n<p><em>For all PYMNTS AI and digital transformation coverage, subscribe to the daily\u00a0</em><a href=\"https://pymnts.com/subscribe/\" rel=\"noopener\" target=\"_blank\"><em>AI and Digital Transformation Newsletters</em></a><em>.</em></p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/artificial-intelligence-2/2026/ai-enters-the-race-at-the-winter-olympic-games/\">AI Enters the Race at the Winter Olympic Games</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
+    "image_url": "https://www.pymnts.com/wp-content/uploads/2026/02/Olympics-AI.png?w=457",
+    "summary_text": "Artificial intelligence (AI) is also entering the race at the 2026 Winter Olympics in Milano Cortina, Italy, which runs through Feb. 22, bringing a layer of machine intelligence to an event long defined as a showcase of human performance. From athlete trainin...",
+    "category": "ai",
+    "_permalink": "/p/898fde9011/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/898fde9011/",
+    "_summary_240": "Artificial intelligence (AI) is also entering the race at the 2026 Winter Olympics in Milano Cortina, Italy, which runs through Feb. 22, bringing a layer of machine intelligence...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/898fde9011/thumbnail.png"
+  },
+  {
+    "title": "Apple Opens CarPlay to AI Rivals Following Driver Demand",
+    "url": "https://www.pymnts.com/apple/2026/apple-opens-carplay-to-ai-rivals-following-driver-demand/",
+    "published_at": "2026-02-06T20:03:15-05:00",
+    "source": "PYMNTS",
+    "summary": "Apple plans to allow other companies\u2019 voice-controlled artificial intelligence (AI) chatbots to operate within its vehicle interface, CarPlay, Bloomberg reported Friday (Feb. 6), citing unnamed sources. The company is working to support these third-party apps in CarPlay and plans to make this capability available to AI providers within months, according to the report. Currently, Apple allows [\u2026] ...",
+    "content_html": "<p><a href=\"https://www.apple.com/\" rel=\"noopener\" target=\"_blank\">Apple</a> plans to allow other companies\u2019 voice-controlled artificial intelligence (AI) chatbots to operate within its vehicle interface, <a href=\"https://www.apple.com/ios/carplay/\" rel=\"noopener\" target=\"_blank\">CarPlay</a>, Bloomberg\u00a0<a href=\"https://www.bloomberg.com/news/articles/2026-02-06/apple-plans-to-allow-outside-voice-controlled-ai-chatbots-in-carplay\" rel=\"noopener\" target=\"_blank\">reported</a>\u00a0Friday (Feb. 6), citing unnamed sources.</p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p>The company is working to support these third-party apps in CarPlay and plans to make this capability available to AI providers within months, according to the report.</p>\n<p>Currently, Apple allows only its own assistant,\u00a0<a href=\"https://www.apple.com/siri/\" rel=\"noopener\" target=\"_blank\">Siri</a>, as a voice-control option in CarPlay, the report said.</p>\n<p>CarPlay users have been demanding the option to use third-party AI chatbots because Siri\u2019s capabilities are limited to managing music playback, sending messages and handling navigation, per the report.</p>\n<p>A third-party AI chatbot could do things such as providing restaurant recommendations when asked by the driver, the report said.</p>\n<p>Apple did not immediately reply to PYMNTS\u2019 request for comment.</p>\n<p>This report comes about two weeks after it was reported that Apple plans to use a custom AI model provided by\u00a0<a href=\"https://about.google/\" rel=\"noopener\" target=\"_blank\">Google</a>\u00a0to increase the capabilities of Siri, turning the digital assistant into\u00a0an\u00a0<a href=\"https://www.pymnts.com/apple/2026/apple-to-turn-siri-into-ai-chatbot-powered-by-googles-gemini/\" rel=\"noopener\" target=\"_blank\">AI chatbot</a>\u00a0later this year.</p>\n<p>The chatbot will be added to the operating systems of the iPhone,\u00a0iPad\u00a0and Mac. While Google will provide the AI model, Apple will design the user interface.</p>\n<p>The PYMNTS Intelligence report \u201c<a href=\"https://www.pymnts.com/study_posts/genai-and-voice-assistants-adoption-and-trust-across-generations/\" rel=\"noopener\" target=\"_blank\">GenAI and Voice Assistants: Adoption and Trust Across Generations</a>\u201d found that 60% of consumers believed\u00a0<a href=\"https://www.pymnts.com/artificial-intelligence-2/2025/63-percent-adoption-rate-shows-genai-enthusiasm-among-younger-consumers/\" rel=\"noopener\" target=\"_blank\">voice assistants</a>\u00a0would become as smart and reliable as humans.</p>\n<p>The report also found that millennials and bridge millennials were the most frequent users of voice-activated devices. Among each group, 32% of consumers used the devices.</p>\n<p>Meanwhile, it was reported in November that <a href=\"https://www.tesla.com/\" rel=\"noopener\" target=\"_blank\">Tesla</a> is developing support for Apple CarPlay in its vehicles after ignoring calls from customers to <a href=\"https://www.pymnts.com/apple/2025/apples-carplay-could-soon-become-part-of-tesla-vehicles/\" rel=\"noopener\" target=\"_blank\">add the\u00a0software</a>\u00a0designed for vehicle infotainment systems. CarPlay is already supported by other car companies.</p>\n<p>Apple began rolling out the next generation of CarPlay in May, saying it provides \u201cthe ultimate\u00a0<a href=\"https://www.apple.com/newsroom/2025/05/carplay-ultra-the-next-generation-of-carplay-begins-rolling-out-today/\" rel=\"noopener\" target=\"_blank\">in-car experience</a>\u201d by deeply integrating with the vehicle.</p>\n<p>\u201ciPhone users love CarPlay, and it has transformed how people connect with their vehicles,\u201d\u00a0<a href=\"https://www.linkedin.com/in/bborchers\" rel=\"noopener\" target=\"_blank\">Bob Borchers</a>, vice president of worldwide product marketing, said at the time in a press release. \u201cWith CarPlay Ultra, together with automakers, we are reimagining the in-car experience, making it even more unified and consistent.\u201d</p>\n<p><em>For all PYMNTS digital transformation coverage, subscribe to the daily\u00a0</em><a href=\"https://www.pymnts.com/subscribe/\" rel=\"noopener\" target=\"_blank\"><em>Digital Transformation Newsletter</em></a>.</p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/apple/2026/apple-opens-carplay-to-ai-rivals-following-driver-demand/\">Apple Opens CarPlay to AI Rivals Following Driver Demand</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
+    "image_url": "https://www.pymnts.com/wp-content/uploads/2026/02/Apple-CarPlay-AI.jpeg?w=457",
+    "summary_text": "Apple plans to allow other companies\u2019 voice-controlled artificial intelligence (AI) chatbots to operate within its vehicle interface, CarPlay, Bloomberg reported Friday (Feb. 6), citing unnamed sources. The company is working to support these third-party apps...",
+    "category": "ai",
+    "_permalink": "/p/c4ce5c358c/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/c4ce5c358c/",
+    "_summary_240": "Apple plans to allow other companies\u2019 voice-controlled artificial intelligence (AI) chatbots to operate within its vehicle interface, CarPlay, Bloomberg reported Friday (Feb. 6),...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/c4ce5c358c/thumbnail.png"
+  },
+  {
+    "title": "An AI startup founder says he\u2019s planning a \u2018March for Billionaires\u2019 in protest of California\u2019s wealth tax",
+    "url": "https://techcrunch.com/2026/02/06/an-ai-startup-founder-says-hes-planning-a-march-for-billionaires-in-protest-of-californias-wealth-tax/",
+    "published_at": "2026-02-06T20:00:52-05:00",
+    "source": "TechCrunch",
+    "summary": "The organizer of the event swears it's not a joke.",
+    "content_html": "",
+    "image_url": "https://techcrunch.com/wp-content/uploads/2024/12/Grand-Hyatt-San-Francisco-Hotel-Exterior.16x9.webp?resize=1200,675",
+    "summary_text": "The organizer of the event swears it's not a joke.",
+    "category": "ai",
+    "_permalink": "/p/f6902130be/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/f6902130be/",
+    "_summary_240": "The organizer of the event swears it's not a joke.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/f6902130be/thumbnail.png"
+  },
+  {
+    "title": "Home Depot AI Battles for the Pro Wallet",
+    "url": "https://www.pymnts.com/artificial-intelligence-2/2026/home-depot-ai-battles-for-the-pro-wallet/",
+    "published_at": "2026-02-06T19:35:48-05:00",
+    "source": "PYMNTS",
+    "summary": "The Home Depot has launched an artificial intelligence (AI)-powered feature that helps professional renovators, remodelers, builders and specialty tradespeople create a list of the materials they will need for a project. With the new Material List Builder AI, these professionals can input details of the project and then receive a draft material list that [\u2026] The post Home Depot AI Battles for the...",
+    "content_html": "<p><a href=\"https://corporate.homedepot.com/page/about-us\" rel=\"noopener\" target=\"_blank\">The Home Depot</a> has launched an artificial intelligence (AI)-powered feature that helps professional renovators, remodelers, builders and specialty tradespeople create a list of the materials they will need for a project.</p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p>With the new Material List Builder AI, these professionals can input details of the project and then receive a draft material list that they can edit before accepting, the company said\u00a0in\u00a0a Jan. 26\u00a0<a href=\"https://corporate.homedepot.com/news/company/home-depot-launches-ai-powered-material-lists-help-pros-save-time-building-complete\" rel=\"noopener\" target=\"_blank\">press release</a>.</p>\n<p>Once they accept the list, the AI tool will deliver product recommendations together with pricing and inventory availability, according to the release. They can then select and order the products they need for the project.</p>\n<p>Master List Builder AI enables users to input the project details by typing them in natural language, using voice-to-text, pasting an existing list from other\u00a0documents\u00a0or leveraging one of the AI tool\u2019s starter templates for common projects, the release said.</p>\n<p>Once\u00a0they\u2019ve\u00a0done this, and the AI tool has generated the product recommendation, users can save the material lists and\u00a0return to\u00a0them whenever they begin a similar job, per the release.</p>\n<p>The tool is designed to save these professionals the time they would otherwise spend manually creating a list of products, searching for the right\u00a0ones\u00a0and comparing prices, according to the release.</p>\n<p>Material List Builder AI is available to members of The Home Depot\u2019s loyalty program for professionals,\u00a0<a href=\"https://corporate.homedepot.com/news/company/built-pros-powered-rewards-how-home-depots-loyalty-program-helps-build-stronger\" rel=\"noopener\" target=\"_blank\">Pro Xtra</a>, and can be accessed within the company\u2019s\u00a0<a href=\"https://www.homedepot.com/c/create-a-project\" rel=\"noopener\" target=\"_blank\">Project Planning</a>\u00a0digital platform, per the release.</p>\n<p>\u201cPros often tell us that their most valuable resource for any job is time, so\u00a0we\u2019re\u00a0focused on delivering solutions that empower Pros to work smarter and faster,\u201d\u00a0<a href=\"https://corporate.homedepot.com/bio/michael-rowe-executive-vice-president-pro\" rel=\"noopener\" target=\"_blank\">Mike Rowe</a>, executive vice president of Pro for The Home Depot, said in the release.</p>\n<p>PYMNTS reported in August that The Home Depot told investors during\u00a0an earnings\u00a0call that contractors,\u00a0remodelers\u00a0and other\u00a0<a href=\"https://www.pymnts.com/earnings/2025/home-depot-targets-450-billion-dollar-pro-market-with-digital-distribution-power/\" rel=\"noopener\" target=\"_blank\">pro customers</a>\u00a0make up the key base that will shape the company\u2019s market positioning for the next decade.</p>\n<p>In September, The Home Depot launched its Project Planning\u00a0<a href=\"https://www.pymnts.com/news/retail/2025/home-depot-bolsters-b2b-business-with-digital-planning-tool-for-contractors/\" rel=\"noopener\" target=\"_blank\">digital platform</a>, saying it helps professional renovators, remodelers and specialty tradespeople plan, manage and execute complex projects. The company said the platform helps these pros manage their projects through a single supplier and collaborate with Home Depot staff in real time.</p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/artificial-intelligence-2/2026/home-depot-ai-battles-for-the-pro-wallet/\">Home Depot AI Battles for the Pro Wallet</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
+    "image_url": "https://www.pymnts.com/wp-content/uploads/2025/08/Home-Depot.jpg?w=457",
+    "summary_text": "The Home Depot has launched an artificial intelligence (AI)-powered feature that helps professional renovators, remodelers, builders and specialty tradespeople create a list of the materials they will need for a project. With the new Material List Builder AI,...",
+    "category": "ai",
+    "_permalink": "/p/fe51801d2c/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/fe51801d2c/",
+    "_summary_240": "The Home Depot has launched an artificial intelligence (AI)-powered feature that helps professional renovators, remodelers, builders and specialty tradespeople create a list of...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/fe51801d2c/thumbnail.png"
+  },
+  {
+    "title": "Coursera, Udemy Merger to Boost Online AI Education",
+    "url": "https://www.bloomberg.com/news/videos/2026-02-07/coursera-udemy-merger-to-boost-online-ai-education-video",
+    "published_at": "2026-02-06T19:28:58-05:00",
+    "source": "Bloomberg Technology",
+    "summary": "Greg Hart, President and CEO of Coursera, joins Bloomberg Businessweek Daily to discuss the firm's plans to merge with fellow online learning platform Udemy. Hart says he will remain CEO of the newly merged company as it continues to focus on providing AI-focused training tools and courses for its customers. He speaks with Carol Massar and Tim Stenovec. (Source: Bloomberg)",
+    "content_html": "",
+    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/i6zYR58dwQ_w/v3/1200x-1.jpg",
+    "summary_text": "Greg Hart, President and CEO of Coursera, joins Bloomberg Businessweek Daily to discuss the firm's plans to merge with fellow online learning platform Udemy. Hart says he will remain CEO of the newly merged company as it continues to focus on providing AI-foc...",
+    "category": "ai",
+    "_permalink": "/p/ce6d7c1746/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/ce6d7c1746/",
+    "_summary_240": "Greg Hart, President and CEO of Coursera, joins Bloomberg Businessweek Daily to discuss the firm's plans to merge with fellow online learning platform Udemy. Hart says he will...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/ce6d7c1746/thumbnail.png"
+  },
+  {
+    "title": "Credit Data Shows Spending Discipline as Card Balances Rise",
+    "url": "https://www.pymnts.com/consumer-finance/2026/credit-data-shows-spending-discipline-as-card-balances-rise/",
+    "published_at": "2026-02-06T19:19:47-05:00",
+    "source": "PYMNTS",
+    "summary": "The Federal Reserve\u2019s latest consumer credit data points to a familiar seasonal pattern, with revolving balances moving higher as households navigated year-end expenses and holiday purchases. According to the Fed\u2019s December G.19 report released Friday afternoon (Feb. 6), total consumer credit expanded at a seasonally adjusted annual rate of 5.7%, a sharp pickup from [\u2026] The post Credit Data Shows...",
+    "content_html": "<p>The <a href=\"https://www.federalreserve.gov/\" rel=\"noopener\" target=\"_blank\">Federal Reserve</a>\u2019s latest consumer credit data points to a familiar seasonal pattern, with revolving balances moving higher as households navigated year-end expenses and holiday purchases.</p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p>According to the Fed\u2019s <a href=\"https://www.federalreserve.gov/releases/g19/current/\">December G.19 report</a> released Friday afternoon (Feb. 6), total consumer credit expanded at a seasonally adjusted annual rate of 5.7%, a sharp pickup from November\u2019s 1.1% pace.</p>\n<p>Revolving credit led the acceleration, rising at an annualized 12.6% after contracting the prior month. In level terms, overall consumer credit outstanding reached roughly $5.11 trillion, underscoring the scale of borrowing now embedded in household finances.</p>\n<p>&nbsp;</p>\n<p></p>\n<p>Revolving credit includes, but is not limited to, credit cards. Its late-year resurgence highlights how households used credit lines to navigate holiday expenses and ongoing cost pressures. Installment lending continued to grow at a steadier 3.2% annual rate, reflecting more cautious borrowing for non-revolving, big-ticket purchases such as autos and education.</p>\n<p>Credit card APRs continue to hover near 21%, with auto and personal loan rates also well above pre-pandemic levels. Yet December\u2019s rebound shows consumers still engaging with credit selectively, using revolving lines as short-term liquidity even in a higher-rate environment.</p>\n<h2><strong>Revolving Credit as Holiday Bridge</strong></h2>\n<p><a href=\"https://www.pymnts.com/study/consumer-credit-economy-great-credit-divide/\">PYMNTS Intelligence research</a> helps explain why revolving credit remains so central. Consumers use credit in two distinct ways: as a planning tool for anticipated purchases and as a safety net for unexpected expenses. Slightly more than half of consumers who used credit said those purchases were mostly planned, while nearly one-third reported a mix of planned and spontaneous spending, highlighting credit\u2019s dual role in household cash-flow management. That flexibility matters most for younger consumers and those under financial strain.</p>\n<p>Subprime consumers leaned more heavily on credit for essentials than for non-essentials, illustrating how revolving balances often absorb rising living costs when income falls short.</p>\n<p>Payment behavior reflects that pressure. The data show that 42% of consumers reported paying off their full credit card balance, while 15% paid the minimum or less. Among households struggling to pay monthly bills, nearly three in 10 made only minimum payments. Even consumers not living paycheck to paycheck saw balances rise, pointing to a broad seasonal draw on revolving credit rather than stress confined to a narrow segment.</p>\n<p>The climb in revolving balances is visible in PYMNTS Intelligence\u2019s January data on credit card usage. <a href=\"https://www.pymnts.com/study_posts/pay-later-reshapes-how-america-finances-the-holidays/\">Average monthly card balances rose</a> by nearly $200 from April into December, reaching $3,564, with increases recorded across most income and financial lifestyle groups.</p>\n<p>For consumers living paycheck to paycheck and struggling to cover monthly bills, balances rose by almost $600 over the same period. Even households not living paycheck to paycheck saw their average balances move higher, a reminder that seasonal spending and rising living costs are affecting a wide swath of the population.</p>\n<h2><strong>Networks See Spending Hold Firm</strong></h2>\n<p>While revolving balances climbed, the payments ecosystem itself showed steady momentum. PYMNTS coverage of <a href=\"https://www.pymnts.com/earnings/2026/visa-credentials-soar-as-payments-hyperscaler-eyes-agentic-commerce/\" rel=\"noopener\" target=\"_blank\">Visa</a>, <a href=\"https://www.pymnts.com/earnings/2026/mastercard-leans-into-agentic-commerce-stablecoins-while-card-volumes-rise/\" rel=\"noopener\" target=\"_blank\">Mastercard</a> and <a href=\"https://www.pymnts.com/earnings/2026/american-express-counts-on-millennials-to-power-spending-through-2026/\" rel=\"noopener\" target=\"_blank\">American Express</a> earnings indicates that all three networks posted transaction and spending volume growth in their most recent quarters, supported by everyday purchases, travel and digital commerce.</p>\n<p>Taken together, those results align with the Fed\u2019s aggregate data. Consumers may be borrowing more on revolving lines, but they are also continuing to transact at scale. Holiday commerce did not stall, even as households leaned more heavily on credit to manage timing mismatches between income and expenses.</p>\n<p>Importantly, PYMNTS Intelligence finds that credit is not viewed solely as emergency funding. Many consumers see revolving products as part of a longer-term financial strategy. <a href=\"https://www.pymnts.com/study/consumer-credit-economy-great-credit-divide/\">Building or improving a credit score</a> ranks among the top motivations for seeking credit products, particularly among younger adults, framing card use as a pathway toward broader financial access rather than merely short-term borrowing.</p>\n<h2><strong>What December\u2019s Jump Signals</strong></h2>\n<p>The December surge in revolving consumer credit carries a multi-faceted message. Elevated balances and high APRs point to affordability pressures that remain unresolved. At the same time, rising network volumes and PYMNTS Intelligence data underscore consumer resilience and the stabilizing role of revolving credit in sustaining holiday spending.</p>\n<p>In practical terms, the rebound shows a system performing its core function. Credit provided liquidity when households needed it most, allowing consumers to bridge cash-flow gaps, cover essentials and participate in seasonal commerce. Just a few weeks into 2026, some observers look toward credit as a barometer of strain, but it continues to be a central pillar supporting both household finances and the broader economy.</p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/consumer-finance/2026/credit-data-shows-spending-discipline-as-card-balances-rise/\">Credit Data Shows Spending Discipline as Card Balances Rise</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
+    "image_url": "https://www.pymnts.com/wp-content/uploads/2026/02/credit-consumer-finances.jpeg?w=457",
+    "summary_text": "The Federal Reserve\u2019s latest consumer credit data points to a familiar seasonal pattern, with revolving balances moving higher as households navigated year-end expenses and holiday purchases. According to the Fed\u2019s December G.19 report released Friday afterno...",
+    "category": "fintech",
+    "_permalink": "/p/c0d3c08080/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/c0d3c08080/",
+    "_summary_240": "The Federal Reserve\u2019s latest consumer credit data points to a familiar seasonal pattern, with revolving balances moving higher as households navigated year-end expenses and...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/c0d3c08080/thumbnail.png"
+  },
+  {
+    "title": "Apple is working to make CarPlay compatible with AI chatbots like ChatGPT",
+    "url": "https://techcrunch.com/2026/02/06/apple-is-working-to-make-carplay-compatible-with-ai-chatbots-like-chatgpt/",
+    "published_at": "2026-02-06T18:53:43-05:00",
+    "source": "TechCrunch",
+    "summary": "Apple engineers are working to support AI chatbot apps over the next few months.",
+    "content_html": "",
+    "image_url": "https://techcrunch.com/wp-content/uploads/2025/01/apple-wwdc-2022-2022-06-06-at-1.41.57-PM.jpg?resize=1200,669",
+    "summary_text": "Apple engineers are working to support AI chatbot apps over the next few months.",
+    "category": "ai",
+    "_permalink": "/p/96bba70458/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/96bba70458/",
+    "_summary_240": "Apple engineers are working to support AI chatbot apps over the next few months.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/96bba70458/thumbnail.png"
+  },
+  {
+    "title": "Sixteen Claude AI agents working together created a new C compiler",
+    "url": "https://arstechnica.com/ai/2026/02/sixteen-claude-ai-agents-working-together-created-a-new-c-compiler/",
+    "published_at": "2026-02-06T18:40:58-05:00",
+    "source": "Ars Technica",
+    "summary": "The $20,000 experiment compiled a Linux kernel but needed deep human management.",
+    "content_html": "<p>Amid a <a href=\"https://arstechnica.com/information-technology/2026/02/ai-companies-want-you-to-stop-chatting-with-bots-and-start-managing-them/\">push toward AI agents</a>, with both Anthropic and OpenAI shipping multi-agent tools this week, Anthropic is more than ready to show off some of its more daring AI coding experiments. But as usual with claims of AI-related achievement, you'll find some key caveats ahead.</p>\n<p>On Thursday, Anthropic researcher Nicholas Carlini <a href=\"https://www.anthropic.com/engineering/building-c-compiler\">published a blog post</a> describing how he set 16 instances of the company's Claude Opus 4.6 AI model loose on a shared codebase with minimal supervision, tasking them with building a C compiler from scratch.</p>\n<p>Over two weeks and nearly 2,000 Claude Code sessions costing about $20,000 in API fees, the AI model agents reportedly produced a 100,000-line Rust-based compiler capable of building a bootable Linux 6.9 kernel on x86, ARM, and RISC-V architectures.</p><p><a href=\"https://arstechnica.com/ai/2026/02/sixteen-claude-ai-agents-working-together-created-a-new-c-compiler/\">Read full article</a></p>\n<p><a href=\"https://arstechnica.com/ai/2026/02/sixteen-claude-ai-agents-working-together-created-a-new-c-compiler/#comments\">Comments</a></p>",
+    "image_url": "https://cdn.arstechnica.net/wp-content/uploads/2026/01/coding_robots_agents-1152x648.jpg",
+    "summary_text": "The $20,000 experiment compiled a Linux kernel but needed deep human management.",
+    "category": "ai",
+    "_permalink": "/p/3e99cdb838/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/3e99cdb838/",
+    "_summary_240": "The $20,000 experiment compiled a Linux kernel but needed deep human management.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/3e99cdb838/thumbnail.png"
+  },
+  {
+    "title": "Google World Model AI Accelerates Waymo Robotaxi Expansion",
+    "url": "https://www.pymnts.com/transportation/2026/google-world-model-ai-accelerates-waymo-robotaxi-expansion/",
+    "published_at": "2026-02-06T18:32:24-05:00",
+    "source": "PYMNTS",
+    "summary": "Self-driving vehicle startup Waymo said Friday (Feb. 6) that the latest virtual world in which it is developing its artificial intelligence (AI) will enhance the company\u2019s ability to scale its service in the real world. The company\u2019s newly introduced Waymo World Model is built on Google DeepMind\u2019s general purpose world model Genie 3, which Waymo then adapted [\u2026] The post Google World Model AI Acc...",
+    "content_html": "<p>Self-driving vehicle startup\u00a0<a href=\"https://waymo.com/\" rel=\"noopener\" target=\"_blank\">Waymo</a> said Friday (Feb. 6) that the latest virtual world in which it is developing its artificial intelligence (AI) will enhance the company\u2019s ability to scale its service in the real world.</p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p>The company\u2019s newly introduced Waymo World Model is built on\u00a0<a href=\"https://deepmind.google/\" rel=\"noopener\" target=\"_blank\">Google DeepMind</a>\u2019s general purpose world model\u00a0<a href=\"https://deepmind.google/models/genie/\" rel=\"noopener\" target=\"_blank\">Genie 3</a>, which Waymo then adapted for autonomous driving simulation, Waymo said\u00a0in\u00a0a Friday\u00a0<a href=\"https://waymo.com/blog/2026/02/the-waymo-world-model-a-new-frontier-for-autonomous-driving-simulation\" rel=\"noopener\" target=\"_blank\">blog post</a>.</p>\n<p>With Genie 3\u2019s world knowledge, Waymo World Model can simulate a wider range of events, including extreme weather conditions, natural disasters, and rare and safety-critical events, according to the post.</p>\n<p>Waymo World Model also enables engineers to use simple language prompts, driving inputs and scene layouts to modify simulations, per the post.</p>\n<p>\u201cThis combination of broad world knowledge, fine-grained controllability and multi-modal realism enhances Waymo\u2019s ability to safely scale our service across more places and new driving environments,\u201d Waymo said in the post.</p>\n<p>PYMNTS reported in November that\u00a0<a href=\"https://www.pymnts.com/artificial-intelligence-2/2025/ai-needs-spatial-intelligence-for-next-leap-experts-say/\" rel=\"noopener\" target=\"_blank\">world models</a> are systems designed to understand how the world behaves rather than just how it looks. These models integrate perception, simulation, spatial reasoning and prediction so that machines build an internal model of cause and effect.</p>\n<p>Genie 3 is one of these models, and it can generate 3D environments governed by physics, where AI agents learn by exploring virtual worlds rather than static datasets.</p>\n<p>Google DeepMind introduced an <a href=\"https://www.pymnts.com/google/2026/google-deepmind-introduces-project-genie-for-interactive-ai-world-building/\" rel=\"noopener\" target=\"_blank\">experimental research prototype</a> powered by Genie 3 on Jan. 29, saying it uses the latest\u00a0world model AI to generate and explore interactive virtual environments. The company opened access to this prototype, Project Genie, for Google AI Ultra subscribers in the United States, allowing them to experiment with the world-generation features.</p>\n<p>It was reported Jan. 31 that Wall Street reacted to the unveiling of Genie 3 by erasing billions in market value throughout the video game industry due to concerns that the\u00a0<a href=\"https://www.pymnts.com/cpi-posts/googles-new-ai-tool-draws-scrutiny-from-the-gaming-industry/\" rel=\"noopener\" target=\"_blank\">AI system</a>\u00a0can generate video games from scratch.</p>\n<p>Meanwhile, Waymo announced Monday (Feb. 2) that it raised\u00a0$16 billion\u00a0in an\u00a0<a href=\"https://waymo.com/blog/2026/02/waymo-raises-usd16-billion-investment-round\" rel=\"noopener\" target=\"_blank\">investment round</a> that valued the company at $126 billion post-money. The company said Google parent company <a href=\"https://abc.xyz/\" rel=\"noopener\" target=\"_blank\">Alphabet</a> continued to support Waymo as the company\u2019s majority investor.</p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/transportation/2026/google-world-model-ai-accelerates-waymo-robotaxi-expansion/\">Google World Model AI Accelerates Waymo Robotaxi Expansion</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
+    "image_url": "https://www.pymnts.com/wp-content/uploads/2025/01/Waymo-self-driving-cars.jpg?w=457",
+    "summary_text": "Self-driving vehicle startup Waymo said Friday (Feb. 6) that the latest virtual world in which it is developing its artificial intelligence (AI) will enhance the company\u2019s ability to scale its service in the real world. The company\u2019s newly introduced Waymo Wo...",
+    "category": "ai",
+    "_permalink": "/p/2d8a80ae7b/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/2d8a80ae7b/",
+    "_summary_240": "Self-driving vehicle startup Waymo said Friday (Feb. 6) that the latest virtual world in which it is developing its artificial intelligence (AI) will enhance the company\u2019s...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/2d8a80ae7b/thumbnail.png"
+  },
+  {
+    "title": "What the OpenClaw moment means for enterprises: 5 big takeaways",
+    "url": "https://venturebeat.com/technology/what-the-openclaw-moment-means-for-enterprises-5-big-takeaways",
+    "published_at": "2026-02-06T17:50:00-05:00",
+    "source": "VentureBeat",
+    "summary": "The \" OpenClaw moment\" represents the first time autonomous AI agents have successfully \"escaped the lab\" and moved into the hands of the general workforce. Originally developed by Austrian engineer Peter Steinberger as a hobby project called \"Clawdbot\" in November 2025, the framework went through a rapid branding evolution to \"Moltbot\" before settling on \"OpenClaw\" in late January 2026. Unlike p...",
+    "content_html": "",
+    "image_url": "https://images.ctfassets.net/jdtwqhzvc2n1/3q67hIphrWar1zZdhKR2ss/1f8157dcb5adbad8e42943351fa74f42/XR7z-YHBn3iPBbV1IrWrk_w5M6NPon.png?w=800&q=75",
+    "summary_text": "The \" OpenClaw moment\" represents the first time autonomous AI agents have successfully \"escaped the lab\" and moved into the hands of the general workforce. Originally developed by Austrian engineer Peter Steinberger as a hobby project called \"Clawdbot\" in No...",
+    "category": "ai",
+    "_permalink": "/p/938233438e/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/938233438e/",
+    "_summary_240": "The \" OpenClaw moment\" represents the first time autonomous AI agents have successfully \"escaped the lab\" and moved into the hands of the general workforce. Originally developed...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/938233438e/thumbnail.png"
+  },
+  {
+    "title": "From Svedka to Anthropic, brands make bold plays with AI in Super Bowl ads",
+    "url": "https://techcrunch.com/2026/02/06/super-bowl-60-ai-ads-svedka-anthropic-brands-commercials/",
+    "published_at": "2026-02-06T17:43:22-05:00",
+    "source": "TechCrunch",
+    "summary": "From the first AI-generated Big Game ad courtesy of Svedka to Anthropic's beef with OpenAI, here are the biggest ads from Super Bowl LX.",
+    "content_html": "",
+    "image_url": "https://techcrunch.com/wp-content/uploads/2026/02/svedkasuperbowl2026.png?w=1200",
+    "summary_text": "From the first AI-generated Big Game ad courtesy of Svedka to Anthropic's beef with OpenAI, here are the biggest ads from Super Bowl LX.",
+    "category": "ai",
+    "_permalink": "/p/2c811aa1ae/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/2c811aa1ae/",
+    "_summary_240": "From the first AI-generated Big Game ad courtesy of Svedka to Anthropic's beef with OpenAI, here are the biggest ads from Super Bowl LX.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/2c811aa1ae/thumbnail.png"
+  },
+  {
+    "title": "Malicious packages for dYdX cryptocurrency exchange empties user wallets",
+    "url": "https://arstechnica.com/security/2026/02/malicious-packages-for-dydx-cryptocurrency-exchange-empties-user-wallets/",
+    "published_at": "2026-02-06T17:16:51-05:00",
+    "source": "Ars Technica",
+    "summary": "Incident is at least the third time the exchange has been targeted by thieves.",
+    "content_html": "<p>Open source packages published on the npm and PyPI repositories were laced with code that stole wallet credentials from dYdX developers and backend systems and, in some cases, backdoored devices, researchers said.</p>\n<p>\u201cEvery application using the compromised npm versions is at risk \u2026.\u201d the researchers, from security firm Socket, <a href=\"https://socket.dev/blog/malicious-dydx-packages-published-to-npm-and-pypi\">said Friday</a>. \u201cDirect impact includes complete wallet compromise and irreversible cryptocurrency theft. The attack scope includes all applications depending on the compromised versions and both developers testing with real credentials and production end-users.\"</p>\n<p>Packages that were infected were:</p><p><a href=\"https://arstechnica.com/security/2026/02/malicious-packages-for-dydx-cryptocurrency-exchange-empties-user-wallets/\">Read full article</a></p>\n<p><a href=\"https://arstechnica.com/security/2026/02/malicious-packages-for-dydx-cryptocurrency-exchange-empties-user-wallets/#comments\">Comments</a></p>",
+    "image_url": "https://cdn.arstechnica.net/wp-content/uploads/2026/02/cryptocurrency-theft-heist-1152x648.jpg",
+    "summary_text": "Incident is at least the third time the exchange has been targeted by thieves.",
+    "category": "fintech",
+    "_permalink": "/p/6446d6086a/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/6446d6086a/",
+    "_summary_240": "Incident is at least the third time the exchange has been targeted by thieves.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/6446d6086a/thumbnail.png"
+  },
+  {
+    "title": "AI Chatbot Market Share",
+    "url": "https://newsletter.tek2dayholdings.com/p/ai-chatbot-market-share",
+    "published_at": "2026-02-06T17:13:20-05:00",
+    "source": "TEK2day Newsletter",
+    "summary": "This is across all uses cases.",
+    "content_html": "<p><strong>This is across all uses cases. I believe that Anthropic&#8217;s Claude LLM family is leading across software development uses cases.</strong></p><div class=\"captioned-image-container\"><figure><a class=\"image-link image2 is-viewable-img\" href=\"https://substackcdn.com/image/fetch/$s_!_07q!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F52b91e40-59f8-48a0-9431-4755943abdd4_832x457.png\" target=\"_blank\"><div class=\"image2-inset\"><source type=\"image/webp\" /><img alt=\"\" class=\"sizing-normal\" height=\"457\" src=\"https://substackcdn.com/image/fetch/$s_!_07q!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F52b91e40-59f8-48a0-9431-4755943abdd4_832x457.png\" width=\"832\" /><div class=\"image-link-expand\"><div class=\"pencraft pc-display-flex pc-gap-8 pc-reset\"><button class=\"pencraft pc-reset pencraft icon-container restack-image\" tabindex=\"0\" type=\"button\"><svg fill=\"none\" height=\"20\" stroke=\"var(--color-fg-primary)\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" viewBox=\"0 0 20 20\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><g><title></title><path d=\"M2.53001 7.81595C3.49179 4.73911 6.43281 2.5 9.91173 2.5C13.1684 2.5 15.9537 4.46214 17.0852 7.23684L17.6179 8.67647M17.6179 8.67647L18.5002 4.26471M17.6179 8.67647L13.6473 6.91176M17.4995 12.1841C16.5378 15.2609 13.5967 17.5 10.1178 17.5C6.86118 17.5 4.07589 15.5379 2.94432 12.7632L2.41165 11.3235M2.41165 11.3235L1.5293 15.7353M2.41165 11.3235L6.38224 13.0882\"></path></g></svg></button><button class=\"pencraft pc-reset pencraft icon-container view-image\" tabindex=\"0\" type=\"button\"><svg class=\"lucide lucide-maximize2 lucide-maximize-2\" fill=\"none\" height=\"20\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" viewBox=\"0 0 24 24\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><polyline points=\"15 3 21 3 21 9\"></polyline><polyline points=\"9 21 3 21 3 15\"></polyline><line x1=\"21\" x2=\"14\" y1=\"3\" y2=\"10\"></line><line x1=\"3\" x2=\"10\" y1=\"21\" y2=\"14\"></line></svg></button></div></div></div></a><figcaption class=\"image-caption\">Source: Statcounter</figcaption></figure></div><div><hr /></div><p></p>",
+    "image_url": "https://substackcdn.com/image/fetch/$s_!_07q!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F52b91e40-59f8-48a0-9431-4755943abdd4_832x457.png",
+    "summary_text": "This is across all uses cases.",
+    "category": "ai",
+    "_permalink": "/p/cdb9d01d97/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/cdb9d01d97/",
+    "_summary_240": "This is across all uses cases.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/cdb9d01d97/thumbnail.png"
+  },
+  {
+    "title": "San Francisco Fed Chief Spots Risky Economic Disconnect",
+    "url": "https://www.pymnts.com/economy/2026/san-francisco-fed-chief-spots-risky-economic-disconnect/",
+    "published_at": "2026-02-06T17:12:03-05:00",
+    "source": "PYMNTS",
+    "summary": "Businesses and workers have different views of the economy, Federal Reserve Bank of San Francisco President and CEO Mary C. Daly said in a Friday (Feb. 6) post on LinkedIn. Businesses are \u201ccautiously optimistic,\u201d with good growth, solid consumer spending easy hiring and rising productivity, Daly said. Workers are \u201cnot so sure,\u201d as they [\u2026] The post San Francisco Fed Chief Spots Risky Economic Dis...",
+    "content_html": "<p style=\"font-weight: 400;\">Businesses and workers have different views of the economy, <a href=\"https://www.frbsf.org/\" rel=\"noopener\" target=\"_blank\">Federal Reserve Bank of San Francisco</a> President and CEO <a href=\"https://www.frbsf.org/our-people/leadership/office-of-the-president/\" rel=\"noopener\" target=\"_blank\">Mary C. Daly</a> said in a Friday (Feb. 6) <a href=\"https://www.linkedin.com/posts/marydalyecon_is-the-economic-outlook-good-or-bad-if-activity-7425569088007180288-o9hl?utm_source=share&amp;utm_medium=member_ios&amp;rcm=ACoAAAat3SMBEgADfNlTqwJlqeMPwRjBZGD_D84\" rel=\"noopener\" target=\"_blank\">post</a> on LinkedIn.</p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p style=\"font-weight: 400;\">Businesses are \u201ccautiously optimistic,\u201d with good growth, solid consumer spending easy hiring and rising productivity, Daly said. Workers are \u201cnot so sure,\u201d as they are concerned about employment.</p>\n<p style=\"font-weight: 400;\">\u201cIn many ways, this disconnect makes sense,\u201d Daly said in the post. \u201cWe\u2019ve been in a relatively low-hiring, low-firing environment for some time. That may persist, but workers are aware that things could change quickly, leaving them in a no-hiring, more-firing labor market. With inflation printing above the <a href=\"https://www.federalreserve.gov/monetarypolicy/fomc.htm\" rel=\"noopener\" target=\"_blank\">FOMC</a>\u2019s 2 percent goal, this rightly feels precarious.\u201d</p>\n<p style=\"font-weight: 400;\">\u201cWhat does this mean for policy? We must watch both sides of our mandate,\u201d Daly said. \u201cAmericans deserve both price stability and full employment, and we can\u2019t take either for granted.\u201d</p>\n<p style=\"font-weight: 400;\">Reuters, which flagged Daly\u2019s post in a Friday <a href=\"https://www.reuters.com/business/feds-daly-says-outlook-feels-precarious-2026-02-06/\" rel=\"noopener\" target=\"_blank\">report</a>, said that in the time since last week\u2019s decision by the Federal Reserve to leave short-term borrowing costs on hold, policymakers have split on what should be done next. Some have cited a growing risk of higher inflation, while others have pointed to uncertainty around employment.</p>\n<p style=\"font-weight: 400;\">PYMNTS reported Friday that consumers are encouraged by cooling inflation but unsettled by a volatile <a href=\"https://www.pymnts.com/economy/2026/consumer-sentiment-improves-but-workers-see-little-income-growth-ahead/\" rel=\"noopener\" target=\"_blank\">labor market</a>. Provisional February figures released Friday by the University of Michigan showed consumer sentiment edging up 1.6% from January after deteriorating for months.</p>\n<p style=\"font-weight: 400;\">Widespread consumer concerns about potential job loss were reinforced by federal data this week that showed that job openings have declined sharply. The openings rate fell to 3.9% in December, down from 4.5% a year earlier and 5.2% in 2023. Currently there are 1.2 unemployed workers for every available position.</p>\n<p style=\"font-weight: 400;\">The <a href=\"https://institute.bankofamerica.com/\" rel=\"noopener\" target=\"_blank\">Bank of America Institute</a> said Friday that January saw payrolls rise 0.8% year over year and the growth in the number of households receiving unemployment benefits dip slightly, pointing to \u201ca stabilizing, and possibly re-accelerating, <a href=\"https://www.pymnts.com/economy/2026/bank-of-america-warns-middle-class-wages-are-stalling/\" rel=\"noopener\" target=\"_blank\">labor market</a>.\u201d</p>\n<p style=\"font-weight: 400;\">Human resources and payroll solutions provider <a href=\"https://www.adp.com/\" rel=\"noopener\" target=\"_blank\">ADP</a> said Wednesday (Feb. 4) that January was a \u201clackluster month for <a href=\"https://www.pymnts.com/economy/2026/private-sector-added-22k-jobs-in-january-as-labor-slowdown-continues/\" rel=\"noopener\" target=\"_blank\">hiring</a>,\u201d as the number of jobs added by the private sector dropped from 37,000 in December to 22,000.</p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/economy/2026/san-francisco-fed-chief-spots-risky-economic-disconnect/\">San Francisco Fed Chief Spots Risky Economic Disconnect</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
+    "image_url": "https://www.pymnts.com/wp-content/uploads/2026/02/Fed-economic-disconnect.png?w=457",
+    "summary_text": "Businesses and workers have different views of the economy, Federal Reserve Bank of San Francisco President and CEO Mary C. Daly said in a Friday (Feb. 6) post on LinkedIn. Businesses are \u201ccautiously optimistic,\u201d with good growth, solid consumer spending easy...",
+    "category": "fintech",
+    "_permalink": "/p/6a690b17e7/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/6a690b17e7/",
+    "_summary_240": "Businesses and workers have different views of the economy, Federal Reserve Bank of San Francisco President and CEO Mary C. Daly said in a Friday (Feb. 6) post on LinkedIn....",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/6a690b17e7/thumbnail.png"
+  },
+  {
+    "title": "Apple might let you use ChatGPT from CarPlay",
+    "url": "https://www.theverge.com/transportation/875199/apple-carplay-third-party-chatbots-rumor",
+    "published_at": "2026-02-06T16:32:44-05:00",
+    "source": "The Verge",
+    "summary": "CarPlay users could soon be able to use their chatbot of choice instead of Siri. As Bloomberg reports, Apple is working to add support for CarPlay voice control apps from OpenAI, Anthropic, Google, and others. Previously, users who wanted to access third-party chatbots in the car would need to go through their iPhone, but soon [\u2026]",
+    "content_html": "<figure>\n\n<img alt=\"Apple\u2019s CarPlay concept, showing a badge that reads \u201cFirst models arrive in 2024.\u201d\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/25810559/Screenshot_2024_12_30_at_11.31.37_AM.png?quality=90&#038;strip=all&#038;crop=12.543285879184,0,74.797999230473,100\" />\n\t<figcaption>\n\t\t</figcaption>\n</figure>\n<p class=\"has-text-align-none\">CarPlay users could soon be able to use their chatbot of choice instead of Siri. As <a href=\"https://www.bloomberg.com/news/articles/2026-02-06/apple-plans-to-allow-outside-voice-controlled-ai-chatbots-in-carplay\"><em>Bloomberg</em></a> reports, Apple is working to add support for CarPlay voice control apps from OpenAI, Anthropic, Google, and others. Previously, users who wanted to access third-party chatbots in the car would need to go through their iPhone, but soon they may be able to talk with ChatGPT, Claude, or Gemini directly in CarPlay. </p>\n<p class=\"has-text-align-none\">However, Apple reportedly \"won't let users replace the Siri button on CarPlay or the wake word that summons the service.\" So, users will need to manually open their preferred chatbot's app. Developers will be able to set their apps to autom \u2026</p>\n<p><a href=\"https://www.theverge.com/transportation/875199/apple-carplay-third-party-chatbots-rumor\">Read the full story at The Verge.</a></p>",
+    "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/25810559/Screenshot_2024_12_30_at_11.31.37_AM.png?quality=90&#038;strip=all&#038;crop=12.543285879184,0,74.797999230473,100",
+    "summary_text": "CarPlay users could soon be able to use their chatbot of choice instead of Siri. As Bloomberg reports, Apple is working to add support for CarPlay voice control apps from OpenAI, Anthropic, Google, and others. Previously, users who wanted to access third-part...",
+    "category": "ai",
+    "_permalink": "/p/c2252b94cb/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/c2252b94cb/",
+    "_summary_240": "CarPlay users could soon be able to use their chatbot of choice instead of Siri. As Bloomberg reports, Apple is working to add support for CarPlay voice control apps from OpenAI,...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/c2252b94cb/thumbnail.png"
+  },
+  {
+    "title": "Prince Andrew advisor pitched Jeffrey Epstein on investing in EV startups like Lucid Motors",
+    "url": "https://techcrunch.com/2026/02/06/prince-andrew-advisor-pitched-jeffrey-epstein-on-investing-in-ev-startups-like-lucid-motors/",
+    "published_at": "2026-02-06T16:23:50-05:00",
+    "source": "TechCrunch",
+    "summary": "The mysterious businessman pitched Jeffrey Epstein on numerous mobility startups in an era when the sector was white hot, according to TechCrunch's review of hundreds of documents released by the Department of Justice.",
+    "content_html": "",
+    "image_url": "https://techcrunch.com/wp-content/uploads/2026/02/Prince-andrew-Getty.jpg?resize=1200,800",
+    "summary_text": "The mysterious businessman pitched Jeffrey Epstein on numerous mobility startups in an era when the sector was white hot, according to TechCrunch's review of hundreds of documents released by the Department of Justice.",
+    "category": "fintech",
+    "_permalink": "/p/62e60e14da/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/62e60e14da/",
+    "_summary_240": "The mysterious businessman pitched Jeffrey Epstein on numerous mobility startups in an era when the sector was white hot, according to TechCrunch's review of hundreds of...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/62e60e14da/thumbnail.png"
+  },
+  {
+    "title": "Gemini Slashes Staff and Exits Europe to Chase Prediction Market Profits",
+    "url": "https://www.pymnts.com/cryptocurrency/2026/gemini-slashes-staff-and-exits-europe-to-chase-prediction-market-profits/",
+    "published_at": "2026-02-06T16:10:51-05:00",
+    "source": "PYMNTS",
+    "summary": "Crypto company Gemini is cutting its workforce by 25% and exiting the United Kingdom, European Union and Australia as it sharpens its focus on prediction markets and the United States. Gemini CEO Tyler Winklevoss and President Cameron Winklevoss announced the changes in a Thursday (Feb. 5) blog post. The company\u2019s withdrawal from overseas markets and its headcount [\u2026] The post Gemini Slashes Staf...",
+    "content_html": "<div class=\"elementToProof\">\n<p>Crypto company <a href=\"https://www.gemini.com/\" rel=\"noopener\" target=\"_blank\">Gemini</a> is cutting its workforce by 25% and exiting the United Kingdom, European Union\u00a0and Australia as it sharpens its focus on prediction markets and the United States.</p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p>Gemini CEO <a href=\"https://www.linkedin.com/in/tylerwinklevoss/\" rel=\"noopener\" target=\"_blank\">Tyler Winklevoss</a>\u00a0and President <a href=\"https://www.linkedin.com/in/winklevoss/\" rel=\"noopener\" target=\"_blank\">Cameron Winklevoss</a>\u00a0announced the changes in a Thursday (Feb. 5) <a href=\"https://www.gemini.com/blog/gemini-2-0-a-bridge-to-the-future-of-money-and-markets\" rel=\"noopener\" target=\"_blank\">blog post</a>.</p>\n<p>The company\u2019s withdrawal from overseas markets and its headcount reduction will help reduce expenses and \u201cmeaningfully accelerate our path to profitability even in the backdrop of the current crypto market,\u201d they said in the post. \u201cSimplify, consolidate, then accelerate.\u201d</p>\n<p>The executives said in the post that Gemini\u2019s mission is evolving, and its business is being reshaped because of how prediction markets have begun to transform marketplaces.</p>\n<p>They added that the company\u2019s own prediction market, <a href=\"https://www.gemini.com/predictions\">Gemini Predictions</a>, has gained more than 10,000 users\u00a0who have traded over $24 million since its <a href=\"https://www.pymnts.com/consumer-finance/2025/gemini-adds-prediction-markets-to-financial-super-app-in-us/\">launch</a> in December.</p>\n<p>This has made Gemini an early mover in the prediction\u00a0market space and has led it to make Gemini Predictions a more central piece of the experience it offers, they said.</p>\n<p>\u201cIf Gemini\u2019s first decade was building a \u2018bridge to the future of money,\u2019 today we are building a \u2018bridge to the future of money and markets\u2019 via a super app,\u201d the executives said in the post.</p>\n<p>In order to\u00a0succeed in this shift, they said, \u201cwe will narrow our focus.\u201d</p>\n<p>The executives also pointed to the impact of artificial intelligence when announcing the cuts to Gemini\u2019s workforce. They said the technology has magnified the impact of both engineers and non-engineers 10 times and made it more possible than ever to do more with less.</p>\n<p>With the 25% reduction in the workforce, they said, \u201cWe believe this is the right size to carry out our mission.\u201d</p>\n<p>As Gemini withdraws from the U.K., European Economic Area and Australia, it will place all customer accounts in these regions in withdrawal-only mode on March 5 and will close all customer accounts on April 6, according to a company <a href=\"https://support.gemini.com/hc/en-gb/articles/46255474469275-Gemini-closing-accounts-in-the-UK-EU-and-Australia-Everything-you-need-to-know\">support</a> page.</p>\n<p>The U.K.\u2019s <a href=\"https://www.fca.org.uk/\">Financial Conduct Authority</a>\u00a0said in a Friday <a href=\"https://www.fca.org.uk/news/news-stories/gemini-exit-uk-market\">press release</a> that it recommends that customers read Gemini\u2019s support page and if they have a complaint about Gemini Payments UK, to consider making a complaint to the <a href=\"https://www.financial-ombudsman.org.uk/\">Financial Ombudsman Service</a>.</p>\n<p>Gemini closed its <a href=\"https://investors.gemini.com/news-releases/news-release-details/gemini-announces-closing-initial-public-offering-and-full\">initial public offering</a>\u00a0on Sept. 15. The company said at the time in a press release that it offered a wide range of crypto products and services in more than 60 countries.</p>\n</div>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/cryptocurrency/2026/gemini-slashes-staff-and-exits-europe-to-chase-prediction-market-profits/\">Gemini Slashes Staff and Exits Europe to Chase Prediction Market Profits</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
+    "image_url": "https://www.pymnts.com/wp-content/uploads/2026/02/Gemini-prediction-markets.jpeg?w=457",
+    "summary_text": "Crypto company Gemini is cutting its workforce by 25% and exiting the United Kingdom, European Union and Australia as it sharpens its focus on prediction markets and the United States. Gemini CEO Tyler Winklevoss and President Cameron Winklevoss announced the...",
+    "category": "fintech",
+    "_permalink": "/p/b45e0b56fd/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/b45e0b56fd/",
+    "_summary_240": "Crypto company Gemini is cutting its workforce by 25% and exiting the United Kingdom, European Union and Australia as it sharpens its focus on prediction markets and the United...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/b45e0b56fd/thumbnail.png"
+  },
+  {
+    "title": "US tech stocks rally strongly after three days of heavy selling",
+    "url": "https://www.ft.com/content/d1d851cf-05d3-4639-a7a1-1d9d8970d012",
+    "published_at": "2026-02-06T16:03:52-05:00",
+    "source": "Financial Times - Technology",
+    "summary": "Nasdaq climbs after sell-off fuelled by worries over vast AI spending",
+    "content_html": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/7eba13fe-d37f-4798-b5dd-ed6dc3150ba7.jpg",
+    "summary_text": "Nasdaq climbs after sell-off fuelled by worries over vast AI spending",
+    "category": "ai",
+    "_permalink": "/p/f02f850975/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/f02f850975/",
+    "_summary_240": "Nasdaq climbs after sell-off fuelled by worries over vast AI spending",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/f02f850975/thumbnail.png"
+  },
+  {
+    "title": "Anthropic\u2019s breakout moment: how Claude cracked AI for business",
+    "url": "https://www.ft.com/content/a75555a6-24c3-4468-aba9-7fe12b5def31",
+    "published_at": "2026-02-06T16:00:06-05:00",
+    "source": "Financial Times - Technology",
+    "summary": "Start-up\u2019s bet on enterprise users is paying off as coding tools fuel revenue and investor frenzy",
+    "content_html": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/52a12afc-2609-4327-a308-62bafeedf17e.jpg",
+    "summary_text": "Start-up\u2019s bet on enterprise users is paying off as coding tools fuel revenue and investor frenzy",
+    "category": "ai",
+    "_permalink": "/p/3eb6b74258/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/3eb6b74258/",
+    "_summary_240": "Start-up\u2019s bet on enterprise users is paying off as coding tools fuel revenue and investor frenzy",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/3eb6b74258/thumbnail.png"
+  },
+  {
+    "title": "Crypto\u2019s stress test hits balance sheets as Bitcoin, Ether collapse",
+    "url": "https://cointelegraph.com/news/crypto-stress-test-hits-balance-sheets-bitcoin-ether-collapse?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "published_at": "2026-02-06T16:00:00-05:00",
+    "source": "Cointelegraph",
+    "summary": "Crypto\u2019s downturn is rippling through treasuries, ETFs and mining infrastructure, exposing how digital asset volatility reshapes balance sheets and operations.",
+    "content_html": "",
+    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjYtMDEvMDE5YmRkODEtNTQ5NS03M2FhLWIzNGMtNjM1YWU2YzVlZmFmLmpwZw==.jpg",
+    "summary_text": "Crypto\u2019s downturn is rippling through treasuries, ETFs and mining infrastructure, exposing how digital asset volatility reshapes balance sheets and operations.",
+    "category": "fintech",
+    "_permalink": "/p/a49f1c86b6/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/a49f1c86b6/",
+    "_summary_240": "Crypto\u2019s downturn is rippling through treasuries, ETFs and mining infrastructure, exposing how digital asset volatility reshapes balance sheets and operations.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/a49f1c86b6/thumbnail.png"
+  },
+  {
+    "title": "Google Employees Call on Company to End ICE, CBP Contracts",
+    "url": "https://www.bloomberg.com/news/articles/2026-02-06/google-employees-call-on-company-to-end-ice-cbp-contracts",
+    "published_at": "2026-02-06T15:49:32-05:00",
+    "source": "Bloomberg Technology",
+    "summary": "More than 900 employees at Alphabet Inc.\u2019s Google have signed a petition demanding that the company sever ties with the US Department of Homeland Security in the wake of the Trump administration\u2019s mass deportation efforts.",
+    "content_html": "ICE agents depart the Bishop Henry Whipple Federal Building in Minneapolis on Feb. 4.",
+    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/i7seLa2Q7JAI/v1/1200x-1.jpg",
+    "summary_text": "More than 900 employees at Alphabet Inc.\u2019s Google have signed a petition demanding that the company sever ties with the US Department of Homeland Security in the wake of the Trump administration\u2019s mass deportation efforts.",
+    "category": "fintech",
+    "_permalink": "/p/7e1d4f26f9/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/7e1d4f26f9/",
+    "_summary_240": "More than 900 employees at Alphabet Inc.\u2019s Google have signed a petition demanding that the company sever ties with the US Department of Homeland Security in the wake of the...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/7e1d4f26f9/thumbnail.png"
+  },
+  {
+    "title": "Amazon's Big Spending Plans and Bitcoin's Rebound | Bloomberg Tech 2/6/2026",
+    "url": "https://www.bloomberg.com/news/videos/2026-02-06/bloomberg-tech-2-6-2026-video",
+    "published_at": "2026-02-06T15:33:17-05:00",
+    "source": "Bloomberg Technology",
+    "summary": "Bloomberg's Caroline Hyde and Ed Ludlow take a look at shares of Amazon dropping after announcing plans to spend $200 billion this year on data centers, chips, and other equipment. Plus, Bitcoin rebounded after plummeting on Thursday and nearing the $60,000 level, and the CEOs of Roblox, Affirm, and Warner Music Group break down their companies' earnings. (Source: Bloomberg)",
+    "content_html": "",
+    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/i2BMHwZr.T.c/v3/1200x-1.jpg",
+    "summary_text": "Bloomberg's Caroline Hyde and Ed Ludlow take a look at shares of Amazon dropping after announcing plans to spend $200 billion this year on data centers, chips, and other equipment. Plus, Bitcoin rebounded after plummeting on Thursday and nearing the $60,000 l...",
+    "category": "fintech",
+    "_permalink": "/p/6f6bd89d56/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/6f6bd89d56/",
+    "_summary_240": "Bloomberg's Caroline Hyde and Ed Ludlow take a look at shares of Amazon dropping after announcing plans to spend $200 billion this year on data centers, chips, and other...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/6f6bd89d56/thumbnail.png"
+  },
+  {
     "title": "Maybe AI agents can be lawyers after all",
     "url": "https://techcrunch.com/2026/02/06/maybe-ai-agents-can-be-lawyers-after-all/",
     "published_at": "2026-02-06T15:26:23-05:00",
     "source": "TechCrunch",
-    "summary": "This week's release of Opus 4.6 shook up the Agentic leaderboards",
+    "summary": "This week's release of Opus 4.6 shook up the agentic AI leaderboards.",
     "content_html": "",
     "image_url": "https://techcrunch.com/wp-content/uploads/2025/10/54888410931_c37fed4674_k.jpg?resize=1200,800",
-    "summary_text": "This week's release of Opus 4.6 shook up the Agentic leaderboards",
+    "summary_text": "This week's release of Opus 4.6 shook up the agentic AI leaderboards.",
     "category": "ai",
     "_permalink": "/p/7a2a48ffb0/",
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/7a2a48ffb0/",
-    "_summary_240": "This week's release of Opus 4.6 shook up the Agentic leaderboards",
+    "_summary_240": "This week's release of Opus 4.6 shook up the agentic AI leaderboards.",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/7a2a48ffb0/thumbnail.png"
   },
   {
@@ -32,17 +362,17 @@
   {
     "title": "Fear of AI Replacing Software Makers Hits Stocks. Here\u2019s What to Know.",
     "url": "https://www.nytimes.com/2026/02/06/business/ai-stock-market-anthropic-openai.html",
-    "published_at": "2026-02-06T15:11:03-05:00",
+    "published_at": "2026-02-06T15:11:04-05:00",
     "source": "The New York Times - Technology",
     "summary": "The prospect of disruptions from artificial intelligence has hung over the economy for years. But this week advances in software tools precipitated a sell-off on Wall Street.",
     "content_html": "",
     "image_url": "https://static01.nyt.com/images/2026/02/05/multimedia/2025-biz-standalone-promos-new-2026-02-06-stocks/2025-biz-standalone-promos-new-2026-02-06-stocks-mediumSquareAt3X-v3.png",
     "summary_text": "The prospect of disruptions from artificial intelligence has hung over the economy for years. But this week advances in software tools precipitated a sell-off on Wall Street.",
     "category": "ai",
-    "_permalink": "/p/c782abe85e/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/c782abe85e/",
+    "_permalink": "/p/e9e247b289/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/e9e247b289/",
     "_summary_240": "The prospect of disruptions from artificial intelligence has hung over the economy for years. But this week advances in software tools precipitated a sell-off on Wall Street.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/c782abe85e/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/e9e247b289/thumbnail.png"
   },
   {
     "title": "Here\u2019s what happened in crypto today",
@@ -90,21 +420,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/6cd0458850/thumbnail.png"
   },
   {
-    "title": "US tech stocks rally strongly after three days of heavy selling",
-    "url": "https://www.ft.com/content/d1d851cf-05d3-4639-a7a1-1d9d8970d012",
-    "published_at": "2026-02-06T14:37:16-05:00",
-    "source": "Financial Times - Technology",
-    "summary": "Nasdaq climbs after sell-off fuelled by worries over vast AI spending",
-    "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/7eba13fe-d37f-4798-b5dd-ed6dc3150ba7.jpg",
-    "summary_text": "Nasdaq climbs after sell-off fuelled by worries over vast AI spending",
-    "category": "ai",
-    "_permalink": "/p/6f20a248d7/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/6f20a248d7/",
-    "_summary_240": "Nasdaq climbs after sell-off fuelled by worries over vast AI spending",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/6f20a248d7/thumbnail.png"
-  },
-  {
     "title": "Crypto.com CEO Launches Platform to Mainstream Personal AI Agents",
     "url": "https://www.pymnts.com/artificial-intelligence-2/2026/crypto-com-ceo-launches-platform-to-mainstream-personal-ai-agents/",
     "published_at": "2026-02-06T14:35:54-05:00",
@@ -133,21 +448,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/f62bc6d345/",
     "_summary_240": "Apple Inc. is preparing to allow voice-controlled artificial intelligence apps from other companies in CarPlay, according to people familiar with the matter, a move that will let...",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/f62bc6d345/thumbnail.png"
-  },
-  {
-    "title": "What AI Delivers Versus What It Doesn\u2019t for B2B Payments",
-    "url": "https://www.pymnts.com/artificial-intelligence-2/2026/what-ai-delivers-versus-what-it-doesnt-for-b2b-payments/",
-    "published_at": "2026-02-06T14:15:56-05:00",
-    "source": "PYMNTS",
-    "summary": "Enterprise software has spent the past decade promising transformation while mostly delivering optimization. But artificial intelligence is now coming for the \u201cmission critical\u201d workflows of businesses and their back offices. And that\u2019s becoming situation critical for the enterprise software space. As of Wednesday (Feb. 4), more than $800 billion in market value was wiped [\u2026] The post What AI Del...",
-    "content_html": "<p style=\"font-weight: 400;\">Enterprise software has spent the past decade promising transformation while mostly delivering optimization. But artificial intelligence is now coming for the \u201cmission critical\u201d workflows of businesses and their back offices.</p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p style=\"font-weight: 400;\">\u00a0And that\u2019s becoming situation critical for the enterprise software space.</p>\n<p style=\"font-weight: 400;\">As of Wednesday (Feb. 4), more than $800 billion in market value was <a href=\"https://www.reuters.com/business/media-telecom/global-software-stocks-hit-by-anthropic-wake-up-call-ai-disruption-2026-02-04/\" rel=\"noopener\" target=\"_blank\">wiped out</a> of the enterprise technology sector after Wall Street analysts pointed to the disruptive potential of new enterprise AI tools from providers such as Anthropic designed to automate processes like contract reviews and legal briefings.</p>\n<p style=\"font-weight: 400;\">The growth of enterprise AI is emerging at a key juncture in the enterprise software landscape where, after years of software lockups across inflexible and monolithic solutions, corporate customers are increasingly demanding more from their B2B vendors because they know that more is possible.</p>\n<p style=\"font-weight: 400;\">For B2B payments, this moment is especially consequential. Payments sit at the intersection of finance, operations, risk and trust. They are repetitive, data-rich and historically manual, representing exactly the sort of environment where AI should shine. At the same time, they are unforgiving when it comes to workflow failures and downtime.</p>\n<p style=\"font-weight: 400;\">The challenge for C-suite leaders is distinguishing between artificial intelligence applications that genuinely improve decision quality and resilience, and those that simply accelerate existing inefficiencies or may prove ultimately to be too fragile for the security-critical heavy-lifting many enterprise systems perform.</p>\n<p style=\"font-weight: 400;\"><strong>See also:</strong>\u00a0<a href=\"https://www.pymnts.com/news/b2b-payments/2026/the-classic-erp-model-is-dying-what-comes-next/\" rel=\"noopener\" target=\"_blank\">The Classic ERP Model Is Dying. What Comes Next?</a></p>\n<h2 style=\"font-weight: 400;\"><strong>Where AI\u2019s Early Wins Are Accumulating </strong></h2>\n<p style=\"font-weight: 400;\">If there is one area where AI has already proven its value in B2B payments, it is fraud detection. For enterprises processing millions of invoices or payments, the impact of AI\u2019s capabilities to counter modern fraud techniques are tangible: fewer blocked legitimate transactions, faster resolution times and lower fraud losses.</p>\n<p style=\"font-weight: 400;\">The same dynamic applies to cash forecasting, long a resource bottleneck in corporate finance. Forecasts often depend on manual inputs from business units and spreadsheet-based assumptions that can age poorly. AI-driven models, by contrast, can update in near real time, learning how customers actually pay rather than how contracts say they should. They can frequently incorporate seasonality, behavioral drift and macro signals automatically.</p>\n<p style=\"font-weight: 400;\">According to the PYMNTS Intelligence report \u201c<a href=\"https://www.pymnts.com/study/time-to-cash-new-measure-business-resilience/\" rel=\"noopener\" target=\"_blank\">Time to Cash<img alt=\"\u2122\" class=\"wp-smiley\" src=\"https://s.w.org/images/core/emoji/17.0.2/72x72/2122.png\" style=\"height: 1em;\" />: A New Measure of Business Resilience</a>,\u201d 77.9% of chief financial officers (CFOs) see improving the cash flow cycle as \u201cvery or extremely important\u201d to their strategy in the year ahead.</p>\n<p style=\"font-weight: 400;\">\u201cThere\u2019s a continuous evolution and \u2026 dynamic disruption in finance that requires\u00a0<a href=\"https://www.pymnts.com/artificial-intelligence-2/2025/mastercard-shares-its-ai-playbook-for-business-payments\" rel=\"noopener\" target=\"_blank\">CFOs</a>\u00a0to harness data and AI to make finance more efficient, more effective and substantially more strategic,\u201d\u00a0<a href=\"https://www.linkedin.com/in/seshadriraj/\" rel=\"noopener\" target=\"_blank\">Raj Seshadri</a>,\u202fchief commercial payments officer at Mastercard, told PYMNTS in an earlier interview.</p>\n<p style=\"font-weight: 400;\">Perhaps the least visible but most powerful impact may be in <a href=\"https://www.pymnts.com/tracker_posts/ai-driven-accounts-payable-elevating-ap-from-cost-center-to-strategic-asset/\" rel=\"noopener\" target=\"_blank\">automating</a> accounts payable and receivable. AP and AR are still riddled with manual steps: matching invoices to purchase orders, resolving exceptions, chasing discrepancies, prioritizing collections. AI <a href=\"https://www.pymnts.com/tracker_posts/smarter-spend-ai-powered-ap-for-data-based-decision-making/\" rel=\"noopener\" target=\"_blank\">excels</a> at this kind of probabilistic, pattern-heavy work, due to its capability for learning which mismatches resolve themselves, which customers respond to which nudges and which invoices may be likely to become overdue.</p>\n<p style=\"font-weight: 400;\">The PYMNTS Intelligence report \u201c<a href=\"https://www.pymnts.com/study_posts/smart-spending-how-ai-is-transforming-financial-decision-making/\" rel=\"noopener\" target=\"_blank\">Smart Spending: How AI Is Transforming Financial Decision Making</a>\u201d found that more than 8 in 10 CFOs at large companies are either already using AI or considering adopting it.</p>\n<p style=\"font-weight: 400;\"><strong>See also:\u00a0</strong><a href=\"https://www.pymnts.com/news/artificial-intelligence/2026/vibe-coding-comes-finance-cfos-embrace-conversational-ai/\" rel=\"noopener\" target=\"_blank\">Vibe Coding Comes to Finance as CFOs Embrace Conversational AI</a></p>\n<h2 style=\"font-weight: 400;\"><strong>Where AI Still Falls Short Across the Finance Function</strong></h2>\n<p style=\"font-weight: 400;\">The market\u2019s recent unease around AI-driven enterprise software may reflect a broader concern around over-automation of mission-critical processes before governance frameworks are ready. Automating contract reviews or payment approvals at scale can deliver efficiency, but it also concentrates risk. A flawed model, a data drift issue or a misaligned incentive can propagate errors faster than any human team ever could.</p>\n<p style=\"font-weight: 400;\">For all its strengths, artificial intelligence remains limited in areas that require contextual judgment, ethical reasoning or accountability. B2B payments decisions often involve trade-offs that extend beyond data patterns. Should a delayed payment be escalated, renegotiated or quietly absorbed to preserve a strategic relationship? Should a borderline transaction be approved to avoid operational disruption, or blocked to enforce policy consistency?</p>\n<p style=\"font-weight: 400;\">At the same time, buyers are becoming more discerning. They are asking where models are trained, how decisions can be explained and what happens when the system is wrong.</p>\n<p style=\"font-weight: 400;\">It\u2019s against this backdrop that the shift underway is increasingly not about whether AI belongs in B2B payments. The real question facing CFOs, same as with any other digital transformation initiative, is how thoughtfully and effectively it can be deployed.</p>\n<p style=\"font-weight: 400;\"><em>For all PYMNTS B2B coverage, subscribe to the daily\u00a0</em><a href=\"https://www.pymnts.com/subscribe/\" rel=\"noopener\" target=\"_blank\">B2B Newsletter</a><em>.</em></p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/artificial-intelligence-2/2026/what-ai-delivers-versus-what-it-doesnt-for-b2b-payments/\">What AI Delivers Versus What It Doesn\u2019t for B2B Payments</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
-    "image_url": "https://www.pymnts.com/wp-content/uploads/2024/09/CMO-B2B-AI.jpg?w=457",
-    "summary_text": "Enterprise software has spent the past decade promising transformation while mostly delivering optimization. But artificial intelligence is now coming for the \u201cmission critical\u201d workflows of businesses and their back offices. And that\u2019s becoming situation cri...",
-    "category": "fintech",
-    "_permalink": "/p/2d2aec3d2a/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/2d2aec3d2a/",
-    "_summary_240": "Enterprise software has spent the past decade promising transformation while mostly delivering optimization. But artificial intelligence is now coming for the \u201cmission critical\u201d...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/2d2aec3d2a/thumbnail.png"
   },
   {
     "title": "The Jeffrey Epstein Fortnite account is fake",
@@ -182,17 +482,17 @@
   {
     "title": "Google Workers Demand End to Cloud Services for Immigration Agencies",
     "url": "https://www.nytimes.com/2026/02/06/business/google-employees-protest.html",
-    "published_at": "2026-02-06T13:52:25-05:00",
+    "published_at": "2026-02-06T13:52:26-05:00",
     "source": "The New York Times - Technology",
     "summary": "More than 800 employees delivered a petition to management, condemning the Trump administration\u2019s use of Google technology in immigration enforcement.",
     "content_html": "Federal agents leaving the area where Renee Good was killed in Minneapolis.",
     "image_url": "https://static01.nyt.com/images/2026/02/06/multimedia/06biz-google-2-kfbl/06biz-google-2-kfbl-mediumSquareAt3X.jpg",
     "summary_text": "More than 800 employees delivered a petition to management, condemning the Trump administration\u2019s use of Google technology in immigration enforcement.",
     "category": "software",
-    "_permalink": "/p/628e80ed9f/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/628e80ed9f/",
+    "_permalink": "/p/cce7228bb1/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/cce7228bb1/",
     "_summary_240": "More than 800 employees delivered a petition to management, condemning the Trump administration\u2019s use of Google technology in immigration enforcement.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/628e80ed9f/thumbnail.png"
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/cce7228bb1/thumbnail.png"
   },
   {
     "title": "Nvidia CEO Says AI Capital Spending Is Appropriate, Sustainable",
@@ -300,7 +600,7 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/bf0d700766/thumbnail.png"
   },
   {
-    "title": "Why Did BitcoinCrash, and WhenWill Crypto Recover?",
+    "title": "Why Did BitcoinCrash and WhenWill Crypto Recover?",
     "url": "https://www.bloomberg.com/news/videos/2026-02-06/why-did-bitcoin-crash-and-when-will-crypto-recover-video",
     "published_at": "2026-02-06T12:17:32-05:00",
     "source": "Bloomberg Technology",
@@ -308,11 +608,7 @@
     "content_html": "",
     "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/icZ4hJG.Z1ko/v3/1200x-1.png",
     "summary_text": "Bitcoin has fallen about 50% since its October peak. What went wrong for the world's biggest cryptocurrency? Anna Irrera explains. (Source: Bloomberg)",
-    "category": "fintech",
-    "_permalink": "/p/10dbcc4a27/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/10dbcc4a27/",
-    "_summary_240": "Bitcoin has fallen about 50% since its October peak. What went wrong for the world's biggest cryptocurrency? Anna Irrera explains. (Source: Bloomberg)",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/10dbcc4a27/thumbnail.png"
+    "category": "fintech"
   },
   {
     "title": "Nvidia Is Heading Back to China. Here\u2019s Why It\u2019s Fraught",
@@ -330,21 +626,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/d3dbc9783f/thumbnail.png"
   },
   {
-    "title": "Amazon Leverages New Tax Laws to Fuel AI Buildout",
-    "url": "https://www.pymnts.com/amazon/2026/amazon-leverages-new-tax-laws-to-fuel-ai-buildout/",
-    "published_at": "2026-02-06T11:34:41-05:00",
-    "source": "PYMNTS",
-    "summary": "New tax laws around research and capital investment reduced Amazon\u2019s U.S. corporate income taxes by more than half in 2025, even as the company\u2019s profits rose, the Wall Street Journal reported Friday (Feb. 6). Amazon\u2019s current U.S. taxes declined from $9 billion to $1.2 billion, and its federal income taxes paid on a cash basis dropped from $7 billion to $2.8 billion, [\u2026] The post Amazon Leverage...",
-    "content_html": "<p>New tax laws around research and capital investment reduced\u00a0<a href=\"https://www.aboutamazon.com/about-us\" rel=\"noopener\" target=\"_blank\">Amazon</a>\u2019s U.S. corporate income taxes by more than half in 2025, even as the company\u2019s profits rose, the Wall Street Journal\u00a0<a href=\"https://www.wsj.com/business/trumps-tax-law-sharply-cuts-amazons-corporate-tax-bill-ee94ac24?mod=business_lead_story\" rel=\"noopener\" target=\"_blank\">reported</a>\u00a0Friday (Feb. 6).</p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p>Amazon\u2019s current U.S. taxes declined from\u00a0$9 billion\u00a0to $1.2 billion, and its federal income taxes paid on a cash basis dropped from\u00a0$7 billion\u00a0to\u00a0$2.8 billion, according to the report.</p>\n<p>These declines happened during a year in which Amazon\u2019s pretax U.S. profit rose by 44.5% to reach $89.5 billion, per the report.</p>\n<p>The report attributed tax cuts to two changes made in a tax law signed by President Donald Trump in July. One change allowed companies to claim immediate deductions for some capital investments, rather than spreading them out over several years, while the other permits immediate deductions for new domestic research, instead of spreading them out, according to the report.</p>\n<p>Much of the equipment used in data centers qualifies for the immediate deductions on capital investments, and Amazon spent\u00a0$340 billion\u00a0on operating costs and capital investments on data centers in the U.S. in 2025, per the report.</p>\n<p>Amazon told the WSJ, per the report: \u201cCongress made changes to the tax code to encourage greater investment in the American economy, its innovation and its workers \u2014 all areas where Amazon has long been a leader. Due to Amazon\u2019s unprecedented U.S. investments, our tax bill this year reflects those changes.\u201d</p>\n<p>The company added that the accelerated adjustments provide a short-term benefit but\u00a0don\u2019t\u00a0change the amount of tax it\u00a0ultimately pays.</p>\n<p>The White House says on a web page about the One Big Beautiful Bill that the legislation incentivizes made-in-America manufacturing by delivering \u201cfull 100% <a href=\"https://www.whitehouse.gov/priorities/economic-growth/\" rel=\"noopener\" target=\"_blank\">expensing</a>\u00a0for new factories, equipment and machinery to unleash domestic production.\u201d</p>\n<p>It was reported in September that AI-related\u00a0<a href=\"https://www.pymnts.com/artificial-intelligence-2/2025/ai-spending-could-exceed-2-8-trillion-through-2029/\" rel=\"noopener\" target=\"_blank\">infrastructure spending</a> by Big Tech is expected to surpass\u00a0$2.8 trillion\u00a0through 2029 due to early investments by hyperscalers and rising demand for enterprise AI use.</p>\n<p><a href=\"https://www.citigroup.com/global\" rel=\"noopener\" target=\"_blank\">Citigroup</a>, which made these projections, also said it expects capital expenditures among hyperscalers, or data center operators, to reach\u00a0$490 billion\u00a0by the end of 2026.</p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/amazon/2026/amazon-leverages-new-tax-laws-to-fuel-ai-buildout/\">Amazon Leverages New Tax Laws to Fuel AI Buildout</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
-    "image_url": "https://www.pymnts.com/wp-content/uploads/2026/02/Amazon-corporate-taxes.jpeg?w=457",
-    "summary_text": "New tax laws around research and capital investment reduced Amazon\u2019s U.S. corporate income taxes by more than half in 2025, even as the company\u2019s profits rose, the Wall Street Journal reported Friday (Feb. 6). Amazon\u2019s current U.S. taxes declined from $9 bill...",
-    "category": "ai",
-    "_permalink": "/p/12d31bdc2b/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/12d31bdc2b/",
-    "_summary_240": "New tax laws around research and capital investment reduced Amazon\u2019s U.S. corporate income taxes by more than half in 2025, even as the company\u2019s profits rose, the Wall Street...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/12d31bdc2b/thumbnail.png"
-  },
-  {
     "title": "The Only Thing Standing Between Humanity and AI Apocalypse Is \u2026 Claude?",
     "url": "https://www.wired.com/story/the-only-thing-standing-between-humanity-and-ai-apocalypse-is-claude/",
     "published_at": "2026-02-06T11:33:18-05:00",
@@ -358,36 +639,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/49e15dbeea/",
     "_summary_240": "As AI systems grow more powerful, Anthropic\u2019s resident philosopher says the startup is betting Claude itself can learn the wisdom needed to avoid disaster.",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/49e15dbeea/thumbnail.png"
-  },
-  {
-    "title": "Stablecoin Weekly: Bitcoin, Meme Coins Plunge While Blockchain Goes Corporate",
-    "url": "https://www.pymnts.com/cryptocurrency/2026/stablecoin-weekly-bitcoin-meme-coins-plunge-while-blockchain-goes-corporate/",
-    "published_at": "2026-02-06T11:01:59-05:00",
-    "source": "PYMNTS",
-    "summary": "The cryptocurrency market\u2019s familiar boom-and-bust cycle has entered another pronounced downswing. Capital is leaving digital assets at a pace not seen since the depths of the last crypto winter, institutional allocations are shrinking as outflows grow and the speculative energy that once powered the crypto-native verticals of the blockchain space is beginning to run on [\u2026] The post Stablecoin We...",
-    "content_html": "<p style=\"font-weight: 400;\">The cryptocurrency market\u2019s familiar boom-and-bust cycle has <a href=\"https://www.pymnts.com/cryptocurrency/2026/bitcoin-to-zero-big-short-investor-flags-cryptos-death-spiral-risk?utm_source=Sailthru&amp;utm_medium=email&amp;utm_campaign=02062026%20B2B%20NL&amp;utm_term=B2B%20Newsletter\" rel=\"noopener\" target=\"_blank\">entered another</a> pronounced downswing. Capital is leaving digital assets at a pace not seen since the depths of the last crypto winter, institutional allocations are shrinking as outflows grow and the speculative energy that once powered the crypto-native verticals of the blockchain space is beginning to run on fumes.</p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p style=\"font-weight: 400;\">As of reporting, bitcoin\u2019s price has dropped below $70,000, erasing all of its bull-market gains and sending shocks throughout the broader marketplace. Crypto treasury firm Strategy is down 81% from its all-time-high, while meme coins such as Trump Coin and Melania Coin are down 95% and 99% from their own respective upper limit valuations.</p>\n<p style=\"font-weight: 400;\">Against this chilly backdrop, one might expect broader blockchain sentiment to be down. Instead, the inverse is happening, with the value proposition of stablecoins and other institutional blockchain instruments in fact rising inside traditional financial workflows.</p>\n<p style=\"font-weight: 400;\">The explanation lies outside the crypto ecosystem itself. Stablecoins are being pulled into <a href=\"https://www.pymnts.com/blockchain/2026/citi-argues-tokenized-deposits-belong-at-the-core-of-finance/\" rel=\"noopener\" target=\"_blank\">traditional financial contexts</a> where their appeal has little to do with speculation and everything to do with speed, programmability and access.</p>\n<p style=\"font-weight: 400;\">From the European Union\u2019s digital euro push to Tether\u2019s U.S. updates, stablecoin corporate payroll wallets for global workforces, Y-Combinator\u2019s stablecoin seed funding move, U.S. regulatory gridlock and white label issuance, this was a week that showed how the chips are starting to fall for the blockchain finance landscape and why it more and more looks like real-world utility over web3 speculation.</p>\n<p style=\"font-weight: 400;\"><strong>See also:</strong> <a href=\"https://www.pymnts.com/cryptocurrency/2026/how-banking-grade-crypto-is-replacing-bitcoins-cowboy-finance/\" rel=\"noopener\" target=\"_blank\">How Banking-Grade Crypto Is Replacing Bitcoin\u2019s Cowboy Finance</a><strong>\u00a0</strong></p>\n<h2 style=\"font-weight: 400;\"><strong>Stablecoins Find an Inverse Correlation to Crypto Markets </strong></h2>\n<p style=\"font-weight: 400;\">Cross-border payments, treasury management for global companies and payroll for distributed workforces are all areas where legacy systems remain expensive and slow. Stablecoins offer an alternative that does not require belief in token appreciation, only trust in the peg and the issuer. In that sense, they are starting to resemble narrow banking instruments rather than crypto assets.</p>\n<p style=\"font-weight: 400;\">As <a href=\"https://www.pymnts.com/blockchain/2026/y-combinators-stablecoin-funding-move-gives-blueprint-for-enterprise-crypto-finance/\" rel=\"noopener\" target=\"_blank\">covered here</a> Tuesday (Feb. 3), startup incubator\u00a0<a href=\"https://www.ycombinator.com/\" rel=\"noopener\" target=\"_blank\">Y Combinator</a>\u00a0(YC) announced that its latest class of startups can now choose to receive their seed funding of $500,000 from YC in stablecoins.</p>\n<p style=\"font-weight: 400;\">Meanwhile, <a href=\"https://www.pymnts.com/cryptocurrency/2026/nymcard-visa-launch-stablecoin-settlement-gulf-cooperation-council-region/\" rel=\"noopener\" target=\"_blank\">news broke</a> Monday (Feb. 2) that payments infrastructure company\u00a0<a href=\"https://nymcard.com/\" rel=\"noopener\" target=\"_blank\">NymCard</a>\u00a0can now settle card transactions with\u00a0<a href=\"https://ae.visamiddleeast.com/en_AE\" rel=\"noopener\" target=\"_blank\">Visa</a>\u00a0using\u00a0<a href=\"https://www.circle.com/usdc\" rel=\"noopener\" target=\"_blank\">USDC</a>\u00a0stablecoins in the Gulf Cooperation Council (GCC) region.</p>\n<p style=\"font-weight: 400;\">And this most recent earnings season offered a look into how the world\u2019s biggest payment networks are already moving from <a href=\"https://www.pymnts.com/blockchain/2026/payment-networks-use-earnings-season-to-press-their-case-on-stablecoins/\" rel=\"noopener\" target=\"_blank\">concept to execution</a> with their stablecoin products. Visa, for example, reported an annualized global stablecoin settlement run rate of $4.6 billion and said it now enables stablecoin card issuance in more than 50 countries; while Mastercard stressed that stablecoins are beginning to function as just another form of currency that benefits from being routed through a trusted global network.</p>\n<p style=\"font-weight: 400;\">Elsewhere, on Jan. 28, the payroll and payments platform Papaya Global <a href=\"https://www.prnewswire.com/news-releases/papaya-global-launches-global-workforce-wallet-powered-by-fireblocks-302672562.html\" rel=\"noopener\" target=\"_blank\">partnered</a> with digital asset infrastructure firm Fireblocks to power its global payroll offerings with stablecoin payouts.</p>\n<p style=\"font-weight: 400;\">These use cases matter because they anchor stablecoins in recurring, non-speculative demand.</p>\n<p style=\"font-weight: 400;\">Of course, as the Thursday (Feb. 5) <a href=\"https://www.pymnts.com/blockchain/2026/polymarket-taps-circle-to-support-dollar-denominated-settlements/\" rel=\"noopener\" target=\"_blank\">partnership</a> between stablecoin issuer\u00a0<a href=\"https://circle.so/\" rel=\"noopener\" target=\"_blank\">Circle</a>\u00a0and prediction market\u00a0<a href=\"https://polymarket.com/\" rel=\"noopener\" target=\"_blank\">Polymarket</a> shows, speculation hasn\u2019t entirely left the landscape, just taken up a different form.</p>\n<p style=\"font-weight: 400;\"><strong>See also:</strong>\u00a0<a href=\"https://www.pymnts.com/cryptocurrency/2026/stablecoin-fragmentation-creates-new-risks-for-businesses/\" rel=\"noopener\" target=\"_blank\">Stablecoin Fragmentation Creates New Risks for Businesses\u00a0</a></p>\n<h2 style=\"font-weight: 400;\"><strong>The Global Regulatory Landscape </strong></h2>\n<p style=\"font-weight: 400;\">The\u00a0<a href=\"https://www.pymnts.com/pymnts-intelligence/\" rel=\"noopener\" target=\"_blank\">PYMNTS Intelligence</a>\u00a0and Citi report \u201c<a href=\"https://www.pymnts.com/tracker_posts/chain-reaction-regulatory-clarity-as-the-catalyst-for-blockchain-adoption/\" rel=\"noopener\" target=\"_blank\">Chain Reaction: Regulatory Clarity as the Catalyst for Blockchain Adoption</a>\u201d found that blockchain\u2019s next leap will\u00a0be shaped\u00a0by regulation; that evolving guidance is beginning to create the foundations for safe,\u00a0scalable blockchain adoption; and that implementation challenges continue to complicate progress.</p>\n<p style=\"font-weight: 400;\">In the United States, however, <a href=\"https://www.pymnts.com/cryptocurrency/2026/while-us-debates-stablecoin-yield-europe-and-asia-set-clearer-rules/\" rel=\"noopener\" target=\"_blank\">lawmaker gridlock</a> around key <a href=\"https://www.pymnts.com/cryptocurrency/2026/stablecoin-rewards-remain-roadblock-to-crypto-bill-after-white-house-summit/\" rel=\"noopener\" target=\"_blank\">stablecoin yield questions</a>\u00a0has left crypto market legislation in limbo. The debate has reached such a crescendo that\u00a0<a href=\"https://www.citi.com/\" rel=\"noopener\" target=\"_blank\">Citi</a>\u00a0analysts have\u00a0<a href=\"https://www.pymnts.com/cryptocurrency/2026/citi-analysts-say-crypto-bill-could-be-delayed-beyond-2026/\" rel=\"noopener\" target=\"_blank\">noted</a> the growing chance that the\u00a0<a href=\"https://www.congress.gov/bill/119th-congress/house-bill/3633/text\" rel=\"noopener\" target=\"_blank\">CLARITY Act</a>\u2019s passage could\u00a0be delayed beyond 2026, although there is also a chance it may still pass this year.</p>\n<p style=\"font-weight: 400;\">Across the Atlantic in the EU, tokenized instrument such as the digital euro are gaining steam as a payment sovereignty play.</p>\n<p style=\"font-weight: 400;\">\u201cTo put it bluntly, we are very dependent on\u00a0US\u00a0corporations in payments today\u202f\u2013\u202ftoo dependent. Payments are part of our critical infrastructure. And we really ought to stand on our own two feet when it comes to critical infrastructure. The digital euro would be the first and only digital means of payment built on a European infrastructure that could be used seamlessly throughout the euro area,\u201d Burkhard Balz, member of the Executive Board of the Deutsche Bundesbank, <a href=\"https://www.bis.org/review/r260204b.htm\" rel=\"noopener\" target=\"_blank\">said</a> in a Jan. 27 speech.</p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/cryptocurrency/2026/stablecoin-weekly-bitcoin-meme-coins-plunge-while-blockchain-goes-corporate/\">Stablecoin Weekly: Bitcoin, Meme Coins Plunge While Blockchain Goes Corporate</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
-    "image_url": "https://www.pymnts.com/wp-content/uploads/2025/05/Stablecoins-economy-digital-assets.jpg?w=457",
-    "summary_text": "The cryptocurrency market\u2019s familiar boom-and-bust cycle has entered another pronounced downswing. Capital is leaving digital assets at a pace not seen since the depths of the last crypto winter, institutional allocations are shrinking as outflows grow and th...",
-    "category": "fintech",
-    "_permalink": "/p/4d0f0fa134/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/4d0f0fa134/",
-    "_summary_240": "The cryptocurrency market\u2019s familiar boom-and-bust cycle has entered another pronounced downswing. Capital is leaving digital assets at a pace not seen since the depths of the...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/4d0f0fa134/thumbnail.png"
-  },
-  {
-    "title": "Waymo Says Genie 3 Simulations Can Help Boost Robotaxi Rollout",
-    "url": "https://www.bloomberg.com/news/articles/2026-02-06/waymo-says-genie-3-simulations-can-help-boost-robotaxi-rollout",
-    "published_at": "2026-02-06T11:00:00-05:00",
-    "source": "Bloomberg Technology",
-    "summary": "Alphabet Inc.\u2019s Waymo said it is using DeepMind\u2019s Genie 3 AI model to create realistic, digital worlds for its autonomous driving technology to train on edge-case scenarios.",
-    "content_html": "Waymo cars at a Waymo facility in San Francisco.",
-    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ihw08UQp6htM/v1/1200x-1.jpg",
-    "summary_text": "Alphabet Inc.\u2019s Waymo said it is using DeepMind\u2019s Genie 3 AI model to create realistic, digital worlds for its autonomous driving technology to train on edge-case scenarios.",
-    "category": "ai",
-    "_permalink": "/p/fd24bc3edf/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/fd24bc3edf/",
-    "_summary_240": "Alphabet Inc.\u2019s Waymo said it is using DeepMind\u2019s Genie 3 AI model to create realistic, digital worlds for its autonomous driving technology to train on edge-case scenarios.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/fd24bc3edf/thumbnail.png"
   },
   {
     "title": "Bitcoin beats FTX, COVID-19 crash with record dive below 200-day trend line",
@@ -405,21 +656,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/a7ffd8cc4d/thumbnail.png"
   },
   {
-    "title": "Broadcom Faces Mounting EU Scrutiny Over VMware Licensing Curbs",
-    "url": "https://www.bloomberg.com/news/articles/2026-02-06/broadcom-faces-mounting-eu-scrutiny-over-vmware-licensing-curbs",
-    "published_at": "2026-02-06T10:51:19-05:00",
-    "source": "Bloomberg Technology",
-    "summary": "Broadcom Inc. faces an increased threat of an in-depth European Union antitrust probe over alleged licensing restrictions on VMware Inc. software, with regulators taking a closer look at fresh evidence of abuse of dominance.",
-    "content_html": "The Broadcom website on a laptop arranged in New York, US, on Friday, Aug. 18, 2023. Broadcom Inc. is scheduled to release earnings figures on August 31. Photographer: Gabby Jones/Bloomberg",
-    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iLTDDBzR1ZUw/v0/1200x-1.jpg",
-    "summary_text": "Broadcom Inc. faces an increased threat of an in-depth European Union antitrust probe over alleged licensing restrictions on VMware Inc. software, with regulators taking a closer look at fresh evidence of abuse of dominance.",
-    "category": "software",
-    "_permalink": "/p/ecb8a7ecd5/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/ecb8a7ecd5/",
-    "_summary_240": "Broadcom Inc. faces an increased threat of an in-depth European Union antitrust probe over alleged licensing restrictions on VMware Inc. software, with regulators taking a closer...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/ecb8a7ecd5/thumbnail.png"
-  },
-  {
     "title": "Funding the Muskverse will require ever more audacious moves",
     "url": "https://www.ft.com/content/282c3faa-f0ab-4a9f-b6f7-698c6baab6ae",
     "published_at": "2026-02-06T10:50:59-05:00",
@@ -435,36 +671,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/b034ef0ef6/thumbnail.png"
   },
   {
-    "title": "JPMorgan's Kelly Sees Something Artificial in AI Profits",
-    "url": "https://www.bloomberg.com/news/videos/2026-02-06/jpmorgan-s-kelly-sees-something-artificial-in-ai-profits-video",
-    "published_at": "2026-02-06T10:38:49-05:00",
-    "source": "Bloomberg Technology",
-    "summary": "David Kelly, JPMorgan Asset Management chief global strategist, says investors are \"prudently rebalancing\" while reacting to the recent selloff in tech stocks on \"Bloomberg Open Interest.\" (Source: Bloomberg)",
-    "content_html": "",
-    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iDFo8BWCQlRo/v3/1200x-1.jpg",
-    "summary_text": "David Kelly, JPMorgan Asset Management chief global strategist, says investors are \"prudently rebalancing\" while reacting to the recent selloff in tech stocks on \"Bloomberg Open Interest.\" (Source: Bloomberg)",
-    "category": "ai",
-    "_permalink": "/p/7eee72e910/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/7eee72e910/",
-    "_summary_240": "David Kelly, JPMorgan Asset Management chief global strategist, says investors are \"prudently rebalancing\" while reacting to the recent selloff in tech stocks on \"Bloomberg Open...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/7eee72e910/thumbnail.png"
-  },
-  {
-    "title": "Bank of America Warns Middle Class Wages Are Stalling",
-    "url": "https://www.pymnts.com/economy/2026/bank-of-america-warns-middle-class-wages-are-stalling/",
-    "published_at": "2026-02-06T10:12:37-05:00",
-    "source": "PYMNTS",
-    "summary": "Wage growth for middle-income households showed some weakness in January, while that of lower- and higher-income households remained steady, the Bank of America Institute said Thursday (Feb. 5). Middle-income households\u2019 after-tax wage growth dropped to 0.4 percentage points below its second-half 2025 average during a month in which that of both lower- and higher-income [\u2026] The post Bank of Ameri...",
-    "content_html": "<p style=\"font-weight: 400;\">Wage growth for middle-income households showed some weakness in January, while that of lower- and higher-income households remained steady, the <a href=\"https://institute.bankofamerica.com/\" rel=\"noopener\" target=\"_blank\">Bank of America Institute</a> said Thursday (Feb. 5).</p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p style=\"font-weight: 400;\">Middle-income households\u2019 after-tax wage growth dropped to 0.4 percentage points below its second-half 2025 average during a month in which that of both lower- and higher-income households were within 0.1 percentage points of the average, according to the <a href=\"https://institute.bankofamerica.com/content/dam/economic-insights/monthly-employment-report-january-2026.pdf\" rel=\"noopener\" target=\"_blank\">Institute Employment Report</a> for January.</p>\n<p style=\"font-weight: 400;\">\u201cThis relative softness may unwind, but if it persists it may lead to downside risks to consumer spending once the expected lift from tax refunds is over,\u201d <a href=\"https://uk.linkedin.com/in/david-tinsley-13ba7b1\" rel=\"noopener\" target=\"_blank\">David Michael Tinsley</a>, senior economist at the Bank of America Institute, wrote in the report.</p>\n<p style=\"font-weight: 400;\">January also saw a continued gap between the wage growth of lower- and higher-income households, according to the report.</p>\n<p style=\"font-weight: 400;\">Lower-income households\u2019 after-tax wage growth was 0.9% year over year in January, while that of higher-income households was 3.7%. The 2.8 percentage point gap between the two was close to the average 2.6 percentage point gap seen in the second half of 2025, per the report. Middle-income households\u2019 after-tax wage growth was 1.6% in January.</p>\n<p style=\"font-weight: 400;\">Tinsley wrote in the report that \u201cwhile the gap between higher- and lower-income after-tax wage growth is persistent, it is not showing obvious signs of increasing.\u201d</p>\n<p style=\"font-weight: 400;\">It was reported Thursday (Feb. 5) that companies are adjusting their strategies to meet a market that is increasingly divided by <a href=\"https://www.pymnts.com/news/retail/2026/companies-pivot-to-higher-income-consumers-as-middle-class-spending-drops/\" rel=\"noopener\" target=\"_blank\">income levels</a>, with some consumers continuing to buy luxury items while others struggle with rising prices.</p>\n<p style=\"font-weight: 400;\">The PYMNTS Intelligence report \u201c<a href=\"https://www.pymnts.com/study_posts/financial-fragility-in-the-middle-how-income-and-history-shape-consumer-risk/\" rel=\"noopener\" target=\"_blank\">Financial Fragility in the Middle: How Income and History Shape Consumer Risk</a>\u201d found <a href=\"https://www.pymnts.com/consumer-finance/2025/why-75k-feels-broke-in-2025/\" rel=\"noopener\" target=\"_blank\">middle-income households</a> make up a rapidly growing share of the 70% of U.S. consumers who report living paycheck to paycheck.</p>\n<p style=\"font-weight: 400;\">The Bank of America report released Friday also included data that showed \u201ca stabilizing, and possibly re-accelerating, labor market,\u201d Tinsley wrote.</p>\n<p style=\"font-weight: 400;\">January saw payrolls rise 0.8% year over year, while the growth in the number of households receiving unemployment benefits dipped slightly to 9.0%, according to the report.</p>\n<p style=\"font-weight: 400;\">The <a href=\"https://www.dol.gov/\" rel=\"noopener\" target=\"_blank\">Labor Department</a>\u2019s <a href=\"https://www.bls.gov/\" rel=\"noopener\" target=\"_blank\">Bureau of Labor Statistics</a> reported Jan. 29 that <a href=\"https://www.pymnts.com/economy/2026/jobless-claims-dip-slightly-worker-unease-grows/\" rel=\"noopener\" target=\"_blank\">jobless claims</a> ticked down slightly during the week ended Jan. 24. Initial unemployment claims totaled 209,000, which was 1,000 fewer than the previous week.</p>\n<p style=\"font-weight: 400;\">Human resources and payroll solutions provider <a href=\"https://www.adp.com/\">ADP</a> said Wednesday (Feb. 4) that January was a \u201clackluster month for <a href=\"https://www.pymnts.com/economy/2026/private-sector-added-22k-jobs-in-january-as-labor-slowdown-continues/\" rel=\"noopener\" target=\"_blank\">hiring</a>,\u201d as the private sector added 22,000, down from the 37,000 added in December.</p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/economy/2026/bank-of-america-warns-middle-class-wages-are-stalling/\">Bank of America Warns Middle Class Wages Are Stalling</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
-    "image_url": "https://www.pymnts.com/wp-content/uploads/2024/04/inflation-wages-economy.png?w=457",
-    "summary_text": "Wage growth for middle-income households showed some weakness in January, while that of lower- and higher-income households remained steady, the Bank of America Institute said Thursday (Feb. 5). Middle-income households\u2019 after-tax wage growth dropped to 0.4 p...",
-    "category": "fintech",
-    "_permalink": "/p/8e64d2a689/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/8e64d2a689/",
-    "_summary_240": "Wage growth for middle-income households showed some weakness in January, while that of lower- and higher-income households remained steady, the Bank of America Institute said...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/8e64d2a689/thumbnail.png"
-  },
-  {
     "title": "Ether leads crypto losses with 30% crash: Where is the bottom?",
     "url": "https://cointelegraph.com/news/ether-leads-crypto-losses-30-percent-crash-where-is-the-bottom?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
     "published_at": "2026-02-06T10:10:16-05:00",
@@ -478,21 +684,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/2dd5a0b685/",
     "_summary_240": "Ether price still risks declining toward the $1,000-$1,400 range, according to a confluence of bearish technical and onchain indicators.",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/2dd5a0b685/thumbnail.png"
-  },
-  {
-    "title": "AG1 is a lot less science-y than it sounds",
-    "url": "https://www.theverge.com/column/874696/optimizer-ag1-wellness-report-card-greens-powder",
-    "published_at": "2026-02-06T10:00:00-05:00",
-    "source": "The Verge",
-    "summary": "This is Optimizer, a weekly newsletter sent every Friday from Verge senior reviewer Victoria Song that dissects and discusses the latest gizmos and potions that swear they're going to change your life. Optimizer arrives in our subscribers' inboxes at 10AM ET. Opt in for Optimizer here. I'm willing to bet you've been served an ad [\u2026]",
-    "content_html": "<figure>\n\n<img alt=\"\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2026/02/AG1.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100\" />\n\t<figcaption>\n\tScience washing is afoot. | \ufeffImage: The Verge, AG1\t</figcaption>\n</figure>\n<p class=\"has-text-align-none\"><em>This is </em><a href=\"https://www.theverge.com/optimizer-newsletter\" rel=\"noreferrer noopener\" target=\"_blank\">Optimizer</a><em>, a weekly newsletter sent every Friday from Verge senior reviewer</em> <a href=\"https://www.theverge.com/authors/victoria-song\" rel=\"noreferrer noopener\" target=\"_blank\"><em>Victoria Song</em></a><em> that dissects and discusses the latest gizmos and potions that swear they're going to change your life. </em>Optimizer<em> arrives in our subscribers' inboxes at 10AM ET. Opt in for </em>Optimizer <em><a href=\"https://www.theverge.com/newsletters\" rel=\"noreferrer noopener\" target=\"_blank\">here</a>.</em></p>\n<p class=\"has-drop-cap has-text-align-none\">I'm willing to bet you've been served an ad for Athletic Greens - also known as AG1. It's impossible to escape them in podcasts, and it seems like almost every wellness influencer on every social media platform has done an ad for them at some point.</p>\n<p class=\"has-text-align-none\">AG1 is a greens powder containing over 70 ingredients. Most of it is freeze-dried vegetable powder blends. Bas \u2026</p>\n<p><a href=\"https://www.theverge.com/column/874696/optimizer-ag1-wellness-report-card-greens-powder\">Read the full story at The Verge.</a></p>",
-    "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/02/AG1.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "summary_text": "This is Optimizer, a weekly newsletter sent every Friday from Verge senior reviewer Victoria Song that dissects and discusses the latest gizmos and potions that swear they're going to change your life. Optimizer arrives in our subscribers' inboxes at 10AM ET....",
-    "category": "fintech",
-    "_permalink": "/p/41bb0fb822/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/41bb0fb822/",
-    "_summary_240": "This is Optimizer, a weekly newsletter sent every Friday from Verge senior reviewer Victoria Song that dissects and discusses the latest gizmos and potions that swear they're...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/41bb0fb822/thumbnail.png"
   },
   {
     "title": "How AI is helping solve the labor issue in treating rare diseases",
@@ -570,21 +761,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/542ae7b2d4/thumbnail.png"
   },
   {
-    "title": "New AI Tool Pressures Indian IT Firms",
-    "url": "https://www.bloomberg.com/news/videos/2026-02-06/new-ai-tool-pressures-indian-it-firms-video",
-    "published_at": "2026-02-06T08:21:37-05:00",
-    "source": "Bloomberg Technology",
-    "summary": "Shares of India\u2019s top IT firms slid as fears grow that AI could undercut the traditional software services model, raising questions about jobs, growth and the future of outsourcing. (Source: Bloomberg)",
-    "content_html": "",
-    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iCosoVu_dS2U/v3/1200x-1.jpg",
-    "summary_text": "Shares of India\u2019s top IT firms slid as fears grow that AI could undercut the traditional software services model, raising questions about jobs, growth and the future of outsourcing. (Source: Bloomberg)",
-    "category": "ai",
-    "_permalink": "/p/1489ca95c5/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/1489ca95c5/",
-    "_summary_240": "Shares of India\u2019s top IT firms slid as fears grow that AI could undercut the traditional software services model, raising questions about jobs, growth and the future of...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/1489ca95c5/thumbnail.png"
-  },
-  {
     "title": "China Bars Unapproved Issuance of Yuan Stablecoins Abroad",
     "url": "https://www.bloomberg.com/news/articles/2026-02-06/china-bars-unapproved-issuance-of-yuan-linked-stablecoins-abroad",
     "published_at": "2026-02-06T08:19:30-05:00",
@@ -600,21 +776,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/7bd90cc921/thumbnail.png"
   },
   {
-    "title": "Apple Scales Back AI Health Coach Plans",
-    "url": "https://www.pymnts.com/apple/2026/apple-scales-back-ai-health-coach-plans/",
-    "published_at": "2026-02-06T06:43:12-05:00",
-    "source": "PYMNTS",
-    "summary": "Apple Inc. is scaling back plans for an AI-based health coach, a retreat that underscores the difficulty of turning health tracking into a paid service. The shift matters for Apple\u2019s wearables and services goals. Bloomberg reported on Feb. 5 that Apple has wound down the initiative, code-named Mulberry, citing people familiar with the matter. [\u2026] The post Apple Scales Back AI Health Coach Plans a...",
-    "content_html": "<p>Apple Inc. is scaling back plans for an AI-based health coach, a retreat that underscores the difficulty of turning health tracking into a paid service. The shift matters for Apple\u2019s wearables and services goals.</p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p><a href=\"https://www.bloomberg.com/news/articles/2026-02-05/apple-is-scaling-back-plans-for-new-ai-based-health-coach-service?embedded-checkout=true\">Bloomberg reported on Feb. 5</a> that Apple has wound down the initiative, code-named Mulberry, citing people familiar with the matter. Apple referred to the effort internally as Health+. Instead of launching the coach as a standalone offering, Apple plans to roll out some of the planned features inside the Health app over time. Apple declined to comment.</p>\n<p>The move followed a leadership shift in Apple\u2019s health organization, Bloomberg said. Services chief Eddy Cue took over the division after longtime executive Jeff Williams retired at the end of last year. Cue has told colleagues Apple needs to move faster, and he has pointed to rivals such as Oura and Whoop as offering more compelling features. Cue is also weighing changes to Apple Fitness+, the company\u2019s $9.99-a-month guided workout subscription.</p>\n<p><a href=\"https://www.bloomberg.com/news/articles/2026-02-05/apple-is-scaling-back-plans-for-new-ai-based-health-coach-service?embedded-checkout=true\">Bloomberg said</a> Apple had delayed the coach more than once, first targeting iOS 26 and later pushing it to iOS 27, scheduled for September. The service was designed to generate health reports and provide AI-driven recommendations using surveys and assessments, paired with Apple Watch data and external lab reports. Apple built a content studio in Oakland, California, to produce videos for the Health app. Bloomberg said Apple will repurpose some of that video content and features such as suggestions based on existing Health app data, potentially as soon as this year. Another feature still in the works uses an iPhone camera to analyze how a person walks.</p>\n<p>Competition is rising. Bloomberg said Samsung is gaining traction in health tracking, and OpenAI has launched \u201cChatGPT Health\u201d to analyze data and provide feedback. Apple is also working on an AI chatbot for health questions and expects a future Siri chatbot to handle more advanced health queries, Bloomberg reported.</p>\n<p>In a 2024 Apple <a href=\"https://www.apple.com/newsroom/2024/09/apple-introduces-groundbreaking-health-features/\">press release,</a> Apple health vice president Sumbul Desai said: \u201cAt Apple, we believe that technology can help you live a healthier life, and we\u2019re excited to enable incredible new health capabilities.\u201d</p>\n<p>In PYMNTS\u2019 recent Apple coverage, we reported on \u201c<a href=\"https://www.pymnts.com/apple/2025/apple-brings-tap-to-pay-to-9-new-european-countries/?utm_source=chatgpt.com\">Apple Brings Tap to Pay to 9 New European Countries</a>,\u201d and its recent <a href=\"https://www.pymnts.com/earnings/2026/apple-signals-ai-will-power-payments-security-and-growth/\">earnings announcement</a> which focused on AI and iPhones sales.</p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/apple/2026/apple-scales-back-ai-health-coach-plans/\">Apple Scales Back AI Health Coach Plans</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
-    "image_url": "https://www.pymnts.com/wp-content/uploads/2021/10/Paceline-Credit-Card-Apple-Watch-health-and-wellness-exercise.jpg?w=457",
-    "summary_text": "Apple Inc. is scaling back plans for an AI-based health coach, a retreat that underscores the difficulty of turning health tracking into a paid service. The shift matters for Apple\u2019s wearables and services goals. Bloomberg reported on Feb. 5 that Apple has wo...",
-    "category": "ai",
-    "_permalink": "/p/d4ceaa3228/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/d4ceaa3228/",
-    "_summary_240": "Apple Inc. is scaling back plans for an AI-based health coach, a retreat that underscores the difficulty of turning health tracking into a paid service. The shift matters for...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/d4ceaa3228/thumbnail.png"
-  },
-  {
     "title": "Tesla Eyes NY, Arizona, Idaho to Lift Solar Cell Output",
     "url": "https://www.bloomberg.com/news/articles/2026-02-06/tesla-weighs-new-york-arizona-idaho-to-lift-solar-cell-output",
     "published_at": "2026-02-06T06:00:02-05:00",
@@ -623,6 +784,21 @@
     "content_html": "Rows of photovoltaic panels. Photographer: Dhiraj Singh/Bloomberg",
     "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iehUwafxdEOQ/v0/1200x-1.jpg",
     "summary_text": "Tesla Inc. isn\u2019t waiting around to see if Elon Musk\u2019s 100-gigawatt solar ambition is feasible \u2014 it\u2019s already acting on it. The company is evaluating multiple sites across the US to begin manufacturing solar cells, according to people familiar with the matter,...",
+    "category": "ai",
+    "_permalink": "/p/4f80073f2e/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/4f80073f2e/",
+    "_summary_240": "Tesla Inc. isn\u2019t waiting around to see if Elon Musk\u2019s 100-gigawatt solar ambition is feasible \u2014 it\u2019s already acting on it. The company is evaluating multiple sites across the US...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/4f80073f2e/thumbnail.png"
+  },
+  {
+    "title": "Nvidia-Led Boom to Turn Chips Into Trillion-Dollar Industry",
+    "url": "https://www.bloomberg.com/news/articles/2026-02-06/nvidia-led-boom-set-to-turn-chips-into-trillion-dollar-industry",
+    "published_at": "2026-02-06T06:00:00-05:00",
+    "source": "Bloomberg Technology",
+    "summary": "The semiconductor industry will reach $1 trillion in revenue this year for the first time ever, fueled by artificial intelligence and the spread of computer chips to virtually every part of the economy.",
+    "content_html": "A chip of the Nvidia Corp. Quantum-X platform displayed during the 2026 CES event in Las Vegas, Nevada, US, on Tuesday, Jan. 6, 2026. At CES, the biggest names in tech will make the case for artificial intelligence for a target audience of investors, corporate clients and, perhaps just as importantly, ordinary shoppers who have yet to be fully sold on the idea of AI-infused gadgets.",
+    "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/is77XGvWFXd8/v1/1200x-1.jpg",
+    "summary_text": "The semiconductor industry will reach $1 trillion in revenue this year for the first time ever, fueled by artificial intelligence and the spread of computer chips to virtually every part of the economy.",
     "category": "ai"
   },
   {
@@ -649,26 +825,7 @@
     "content_html": "",
     "image_url": "",
     "summary_text": "OpenAI shares its approach to AI localization, showing how globally shared frontier models can be adapted to local languages, laws, and cultures without compromising safety.",
-    "category": "ai",
-    "_permalink": "/p/b8ef85c237/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/b8ef85c237/",
-    "_summary_240": "OpenAI shares its approach to AI localization, showing how globally shared frontier models can be adapted to local languages, laws, and cultures without compromising safety.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/b8ef85c237/thumbnail.png"
-  },
-  {
-    "title": "Citi Argues Tokenized Deposits Belong at the Core of Finance",
-    "url": "https://www.pymnts.com/blockchain/2026/citi-argues-tokenized-deposits-belong-at-the-core-of-finance/",
-    "published_at": "2026-02-06T04:03:32-05:00",
-    "source": "PYMNTS",
-    "summary": "Watch more: The Digital Shift With Citi\u2019s Biswarup Chatterjee As blockchain infrastructure inches closer to the core of global finance, a consequential debate is taking shape inside banks and among institutional investors. What form of digital money will ultimately dominate on-chain settlement? Stablecoins have so far captured the spotlight, buoyed by rapid adoption and [\u2026] The post Citi Argues T...",
-    "content_html": "<p><strong>Watch more: </strong><a href=\"https://tv.pymnts.com/detail/video/6388452813112\" rel=\"noopener\" target=\"_blank\">The Digital Shift With Citi\u2019s Biswarup Chatterjee</a></p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p><span>As <a href=\"https://www.pymnts.com/tag/blockchain/\" rel=\"noopener\" target=\"_blank\">blockchain</a> infrastructure inches closer to the core of global finance, a consequential debate is </span><span>taking shape inside</span><span> <a href=\"https://www.pymnts.com/tag/banks/\" rel=\"noopener\" target=\"_blank\">banks</a> and among institutional investors.</span></p>\n<p><span>What form of <a href=\"https://www.pymnts.com/tag/digital-transformation/\" rel=\"noopener\" target=\"_blank\">digital money</a> will ultimately dominate on-chain settlement?</span></p>\n<p><span><a href=\"https://www.pymnts.com/tag/stablecoins/\" rel=\"noopener\" target=\"_blank\">Stablecoins</a> have so far captured the spotlight, buoyed by rapid adoption and growing regulatory attention. </span><span>But</span><span> a different shift is underway </span><span>inside</span><span> the <a href=\"https://www.pymnts.com/tag/banking-2/\" rel=\"noopener\" target=\"_blank\">banking</a> sector, where executives are increasingly confident that <a href=\"https://www.pymnts.com/tag/tokenization/\" rel=\"noopener\" target=\"_blank\">tokenized</a> bank deposits, </span><span>and not</span><span> privately issued stablecoins, could become the preferred on-chain dollar for institutional and wholesale use.</span></p>\n<p><span>\u201cWe don\u2019t start with the asset,\u201d </span><a class=\"editor-rtfLink\" href=\"https://www.linkedin.com/m/in/biswarup-chatterjee-2a8019170\" rel=\"noopener\" target=\"_blank\"><span>Biswarup Chatterjee</span></a><span>, global head of partnerships and innovation, Citi Services at </span><a class=\"editor-rtfLink\" href=\"https://www.citigroup.com/global\" rel=\"noopener\" target=\"_blank\"><span>Citi</span></a><span>, told PYMNTS. \u201cWe typically start with our client need, and then we look at the pros and cons of each type of asset or financing instrument.\u201d</span></p>\n<p><span>For institutional money, <a href=\"https://www.pymnts.com/tag/innovation/\" rel=\"noopener\" target=\"_blank\">innovation</a> can often begin with constraint.</span></p>\n<p><span>\u201cWhen you\u2019re dealing with money as a financial institution, you\u2019re acting in a fiduciary capacity,\u201d Chatterjee said, framing why safety and soundness dominate early conversations with clients.</span></p>\n<p><span>From that perspective, the critical questions around new digital instruments are regulatory and operational before they are technological. Are these assets well-regulated? Do they operate within clearly defined legal frameworks? Can they be governed with the same rigor as traditional deposits or securities?</span></p>\n<p><span>For institutions that manage systemic liquidity, and their clients, those questions are becoming non-negotiable. Within that context, tokenized deposits are what is emerging as a natural evolution of existing bank money.</span></p>\n<p><span>\u201cWithin the bank\u2019s network, tokenized deposits are an efficient way for our clients to be able to get that 24/7, always-on availability,\u201d Chatterjee said.</span></p>\n<h2><strong><span>The Race to Define the On-Chain Dollar for Institutional Use</span></strong></h2>\n<p><span>By anchoring decisions in client economics and workflows, banks are positioning themselves less as promoters of specific technologies and more as integrators tasked with assembling the right mix of tools for each use case. Institutional clients are not simply looking for digital replicas of existing money; they are grappling with the friction of moving funds across use cases and jurisdictions.</span></p>\n<p><span>\u201cThere\u2019s this constant need to transform money across its various forms and shapes,\u201d Chatterjee said, adding that payments, working capital and financing increasingly overlap, and inefficiencies emerge when money cannot move fluidly between those roles.</span></p>\n<p><span>By representing deposits on distributed ledgers, banks can offer real-time movement of money across accounts, entities and geographies without leaving the regulated perimeter. For enterprises and institutions, this promises faster settlement, improved liquidity management and reduced operational friction, all without introducing new balance sheet or counterparty risks.</span></p>\n<p><span>In this sense, tokenized deposits may </span><span>turn out</span><span> to be less disruptive than they appear.</span> <span>They modernize </span><span>the</span><span> plumbing </span><span>of banking</span><span> rather than bypassing it, extending familiar money into programmable environments.</span></p>\n<h2><strong><span>Regulation, Interoperability and the Velocity of Money</span></strong></h2>\n<p><span>The moment money exits a bank\u2019s direct network, however, the strengths of tokenized deposits begin to fade. Cross-border payments, underbanked regions and counterparties outside major financial institutions can expose gaps in reach and efficiency when it comes to tokenized deposits.</span></p>\n<p><span>This</span><span> is where Chatterjee </span><span>said he</span><span> sees a role for stablecoins, not as competitors to banks, but as connective tissue.</span></p>\n<p><span>\u201cWhen money leaves the bank\u2019s network and goes out into the external ecosystem, that\u2019s where we see the role of stablecoins coming in,\u201d he said, assuming they operate in a \u201cvery safe and sound and regulated manner.\u201d</span></p>\n<p><span>The result is likely to represent not a binary choice but a continuum. Just as checks, wires, cash and instant payments coexist today, digital money is likely to fragment into specialized forms optimized for different environments.</span></p>\n<p><span>At the heart of the impact financial blockchain is having on digital </span><span>money\u2019s evolution</span><span> lies a deceptively simple question: What makes money \u201cgood\u201d?</span></p>\n<p><span>For Chatterjee, the answer hinges on universal acceptance and trust.</span></p>\n<p><span>\u201cWhat makes a currency strong \u2026 has a lot to do with universal acceptance,\u201d he said.</span></p>\n<p><span>Assets that cannot be readily transferred or accepted risk becoming stranded, unable to circulate productively; while trust is fundamental to the value and stability of money, no matter its form. That logic applies equally to tokenized deposits and stablecoins. Without trust and transferability, neither is likely to function as a true institutional settlement asset.</span></p>\n<p><span>Despite the focus on tokens and technology, Chatterjee was clear about where long-term value resides. It is not in the token itself, but in service.</span></p>\n<p><span>\u201cClient service and the client experience is what is going to drive the winning proposition,\u201d he said.</span></p>\n<p><em>For all PYMNTS digital transformation coverage, subscribe to the daily </em><a href=\"https://pymnts.com/subscribe/\" rel=\"noopener\" target=\"_blank\"><em>Digital Transformation Newsletter</em></a><em>.</em></p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/blockchain/2026/citi-argues-tokenized-deposits-belong-at-the-core-of-finance/\">Citi Argues Tokenized Deposits Belong at the Core of Finance</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
-    "image_url": "https://www.pymnts.com/wp-content/uploads/2026/02/Digital-Shift-Sidebar-1.png?w=457",
-    "summary_text": "Watch more: The Digital Shift With Citi\u2019s Biswarup Chatterjee As blockchain infrastructure inches closer to the core of global finance, a consequential debate is taking shape inside banks and among institutional investors. What form of digital money will ulti...",
-    "category": "fintech",
-    "_permalink": "/p/6705e8ef23/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/6705e8ef23/",
-    "_summary_240": "Watch more: The Digital Shift With Citi\u2019s Biswarup Chatterjee As blockchain infrastructure inches closer to the core of global finance, a consequential debate is taking shape...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/6705e8ef23/thumbnail.png"
+    "category": "ai"
   },
   {
     "title": "Metaplanet vows to keep buying Bitcoin as sentiment craters",
@@ -716,36 +873,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/a41554792c/thumbnail.png"
   },
   {
-    "title": "Reddit looks to AI search as its next big opportunity",
-    "url": "https://techcrunch.com/2026/02/05/reddit-looks-to-ai-search-as-its-next-big-opportunity/",
-    "published_at": "2026-02-05T18:20:27-05:00",
-    "source": "TechCrunch",
-    "summary": "During the company's fourth-quarter earnings call on Thursday, it offered an update on its plans to merge traditional and AI search together and hinted that although search is not yet monetized, \"it's an enormous market and opportunity.\"",
-    "content_html": "",
-    "image_url": "https://techcrunch.com/wp-content/uploads/2024/05/reddit-ipo-v2.webp?resize=1200,674",
-    "summary_text": "During the company's fourth-quarter earnings call on Thursday, it offered an update on its plans to merge traditional and AI search together and hinted that although search is not yet monetized, \"it's an enormous market and opportunity.\"",
-    "category": "ai",
-    "_permalink": "/p/f4afa43745/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/f4afa43745/",
-    "_summary_240": "During the company's fourth-quarter earnings call on Thursday, it offered an update on its plans to merge traditional and AI search together and hinted that although search is...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/f4afa43745/thumbnail.png"
-  },
-  {
-    "title": "AWS revenue continues to soar as cloud demand remains high",
-    "url": "https://techcrunch.com/2026/02/05/aws-revenue-continues-to-soar-as-cloud-demand-remains-high/",
-    "published_at": "2026-02-05T18:11:37-05:00",
-    "source": "TechCrunch",
-    "summary": "AWS recorded its best quarter, in terms of revenue growth, in 13 quarters in Q4 2025 as AI drives AWS adoption.",
-    "content_html": "",
-    "image_url": "https://techcrunch.com/wp-content/uploads/2024/05/IMG_4752.jpg?resize=1200,797",
-    "summary_text": "AWS recorded its best quarter, in terms of revenue growth, in 13 quarters in Q4 2025 as AI drives AWS adoption.",
-    "category": "software",
-    "_permalink": "/p/7e405144c0/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/7e405144c0/",
-    "_summary_240": "AWS recorded its best quarter, in terms of revenue growth, in 13 quarters in Q4 2025 as AI drives AWS adoption.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/7e405144c0/thumbnail.png"
-  },
-  {
     "title": "AI companies want you to stop chatting with bots and start managing them",
     "url": "https://arstechnica.com/information-technology/2026/02/ai-companies-want-you-to-stop-chatting-with-bots-and-start-managing-them/",
     "published_at": "2026-02-05T17:47:54-05:00",
@@ -761,21 +888,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/7b595a468c/thumbnail.png"
   },
   {
-    "title": "Amazon and Google are winning the AI capex race \u2014 but what\u2019s the prize?",
-    "url": "https://techcrunch.com/2026/02/05/amazon-and-google-are-winning-the-ai-capex-race-but-whats-the-prize/",
-    "published_at": "2026-02-05T17:43:11-05:00",
-    "source": "TechCrunch",
-    "summary": "In 2026, Amazon plans to spend $200 billion in capex. Google is just behind at $175 billion to $185 billion. It's a lot of money!",
-    "content_html": "",
-    "image_url": "https://techcrunch.com/wp-content/uploads/2025/05/GettyImages-2215577882.jpg?resize=1200,800",
-    "summary_text": "In 2026, Amazon plans to spend $200 billion in capex. Google is just behind at $175 billion to $185 billion. It's a lot of money!",
-    "category": "ai",
-    "_permalink": "/p/432da4a61a/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/432da4a61a/",
-    "_summary_240": "In 2026, Amazon plans to spend $200 billion in capex. Google is just behind at $175 billion to $185 billion. It's a lot of money!",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/432da4a61a/thumbnail.png"
-  },
-  {
     "title": "TTT-Discover optimizes GPU kernels 2x faster than human experts \u2014 by training during inference",
     "url": "https://venturebeat.com/infrastructure/ttt-discover-optimizes-gpu-kernels-2x-faster-than-human-experts-by-training",
     "published_at": "2026-02-05T17:00:00-05:00",
@@ -789,21 +901,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/07e60c72e5/",
     "_summary_240": "Researchers from Stanford, Nvidia, and Together AI have developed a new technique that can discover new solutions to very complex problems. For example, they managed to optimize...",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/07e60c72e5/thumbnail.png"
-  },
-  {
-    "title": "a16z VC wants founders to stop stressing over insane ARR numbers",
-    "url": "https://techcrunch.com/2026/02/05/a16z-vc-wants-founders-to-stop-stressing-over-insane-arr-numbers/",
-    "published_at": "2026-02-05T16:28:46-05:00",
-    "source": "TechCrunch",
-    "summary": "Andreessen Horowitz VC Jennifer Li\u2060, who oversees some of the firm's fastest-growing AI companies, warns founders not to believe every ARR claim made on X.",
-    "content_html": "",
-    "image_url": "https://techcrunch.com/wp-content/uploads/2023/04/GettyImages-1270910681.jpg?resize=1200,772",
-    "summary_text": "Andreessen Horowitz VC Jennifer Li\u2060, who oversees some of the firm's fastest-growing AI companies, warns founders not to believe every ARR claim made on X.",
-    "category": "ai",
-    "_permalink": "/p/0e15aa7a6e/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/0e15aa7a6e/",
-    "_summary_240": "Andreessen Horowitz VC Jennifer Li\u2060, who oversees some of the firm's fastest-growing AI companies, warns founders not to believe every ARR claim made on X.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/0e15aa7a6e/thumbnail.png"
   },
   {
     "title": "Shares of private capital giants sink on worries AI risks hitting growth",
@@ -834,21 +931,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/02dc696bbc/",
     "_summary_240": "Nasdaq drops as recent high-flying companies pull market lower",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/02dc696bbc/thumbnail.png"
-  },
-  {
-    "title": "OpenAI launches new agentic coding model only minutes after Anthropic drops its own",
-    "url": "https://techcrunch.com/2026/02/05/openai-launches-new-agentic-coding-model-only-minutes-after-anthropic-drops-its-own/",
-    "published_at": "2026-02-05T15:01:39-05:00",
-    "source": "TechCrunch",
-    "summary": "The new model is built to accelerate the capabilities of Codex, the agentic coding tool OpenAI launched earlier this week.",
-    "content_html": "",
-    "image_url": "https://techcrunch.com/wp-content/uploads/2025/09/GettyImages-2224158119.jpg?resize=1200,837",
-    "summary_text": "The new model is built to accelerate the capabilities of Codex, the agentic coding tool OpenAI launched earlier this week.",
-    "category": "ai",
-    "_permalink": "/p/d1633e6a74/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/d1633e6a74/",
-    "_summary_240": "The new model is built to accelerate the capabilities of Codex, the agentic coding tool OpenAI launched earlier this week.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/d1633e6a74/thumbnail.png"
   },
   {
     "title": "LLM Context Windows Need to Expand.",
@@ -1049,21 +1131,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/d4fc0d20c1/thumbnail.png"
   },
   {
-    "title": "AI for transformation: How SAP\u2019s Joule for Consultants reimagines project delivery",
-    "url": "https://venturebeat.com/orchestration/ai-for-transformation-how-saps-joule-for-consultants-reimagines-project",
-    "published_at": "2026-02-05T00:00:00-05:00",
-    "source": "VentureBeat",
-    "summary": "Presented by SAP SAP\u2019s AI solution, Joule, has already transformed how business users work \u2014 turning siloed data and tasks into intelligent, connected workflows. But consultants on SAP projects face a different set of needs: navigating complex implementations, evolving best practices, and the pressure to deliver faster. They need timely, expert-level guidance. They need an AI partner that can del...",
-    "content_html": "",
-    "image_url": "https://images.ctfassets.net/jdtwqhzvc2n1/zpzPUmfGYyOfoL2f0SekL/d5b4947a2e521ad8c698187bd0ceeffd/AdobeStock_320406170.jpeg?w=800&q=75",
-    "summary_text": "Presented by SAP SAP\u2019s AI solution, Joule, has already transformed how business users work \u2014 turning siloed data and tasks into intelligent, connected workflows. But consultants on SAP projects face a different set of needs: navigating complex implementations...",
-    "category": "ai",
-    "_permalink": "/p/0a7684bd07/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/0a7684bd07/",
-    "_summary_240": "Presented by SAP SAP\u2019s AI solution, Joule, has already transformed how business users work \u2014 turning siloed data and tasks into intelligent, connected workflows. But consultants...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/0a7684bd07/thumbnail.png"
-  },
-  {
     "title": "I Like Cloudflare (NET), Netlify, and Especially Vercel",
     "url": "https://newsletter.tek2dayholdings.com/p/i-like-cloudflare-net-netlify-and",
     "published_at": "2026-02-04T21:42:43-05:00",
@@ -1090,17 +1157,6 @@
     "category": "ai"
   },
   {
-    "title": "Introducing GPT-5.3-Codex",
-    "url": "https://openai.com/index/introducing-gpt-5-3-codex",
-    "published_at": "2026-02-04T19:00:00-05:00",
-    "source": "OpenAI News",
-    "summary": "GPT-5.3-Codex is a Codex-native agent that pairs frontier coding performance with general reasoning to support long-horizon, real-world technical work.",
-    "content_html": "",
-    "image_url": "",
-    "summary_text": "GPT-5.3-Codex is a Codex-native agent that pairs frontier coding performance with general reasoning to support long-horizon, real-world technical work.",
-    "category": "ai"
-  },
-  {
     "title": "GPT-5.3-Codex System Card",
     "url": "https://openai.com/index/gpt-5-3-codex-system-card",
     "published_at": "2026-02-04T19:00:00-05:00",
@@ -1112,15 +1168,30 @@
     "category": "ai"
   },
   {
+    "title": "Introducing GPT-5.3-Codex",
+    "url": "https://openai.com/index/introducing-gpt-5-3-codex",
+    "published_at": "2026-02-04T19:00:00-05:00",
+    "source": "OpenAI News",
+    "summary": "GPT-5.3-Codex is a Codex-native agent that pairs frontier coding performance with general reasoning to support long-horizon, real-world technical work.",
+    "content_html": "",
+    "image_url": "",
+    "summary_text": "GPT-5.3-Codex is a Codex-native agent that pairs frontier coding performance with general reasoning to support long-horizon, real-world technical work.",
+    "category": "ai"
+  },
+  {
     "title": "US tech stocks hit by fresh wave of selling as Qualcomm and AMD tumble",
     "url": "https://www.ft.com/content/4254946f-2425-40a2-a8b3-abb3e7d7d016",
     "published_at": "2026-02-04T18:00:41-05:00",
     "source": "Financial Times - Technology",
     "summary": "Declines follow steep falls for software shares in previous session over worries about new AI tool",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/c308aae2-b7c5-4570-80de-f2a823e752e9.jpg",
     "summary_text": "Declines follow steep falls for software shares in previous session over worries about new AI tool",
-    "category": "ai"
+    "category": "ai",
+    "_permalink": "/p/a4bcab079f/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/a4bcab079f/",
+    "_summary_240": "Declines follow steep falls for software shares in previous session over worries about new AI tool",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/a4bcab079f/thumbnail.png"
   },
   {
     "title": "Should AI chatbots have ads? Anthropic says no.",
@@ -1174,9 +1245,13 @@
     "source": "Financial Times - Technology",
     "summary": "From security services to those able to reinvent themselves, many may survive the AI armageddon",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/dc8f4cc6-6e59-499e-acbc-beeaf3da0612.jpg",
     "summary_text": "From security services to those able to reinvent themselves, many may survive the AI armageddon",
-    "category": "ai"
+    "category": "ai",
+    "_permalink": "/p/e196a6be48/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/e196a6be48/",
+    "_summary_240": "From security services to those able to reinvent themselves, many may survive the AI armageddon",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/e196a6be48/thumbnail.png"
   },
   {
     "title": "How Anthropic achieved AI coding breakthroughs \u2014 and rattled business",
@@ -1185,9 +1260,13 @@
     "source": "Financial Times - Technology",
     "summary": "New AI-powered tools reduce time and cost of software development, threatening industries from law to advertising",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/53dd9056-4df8-4fdd-9851-3b5a887bcf46.jpg",
     "summary_text": "New AI-powered tools reduce time and cost of software development, threatening industries from law to advertising",
-    "category": "ai"
+    "category": "ai",
+    "_permalink": "/p/205a0f26c4/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/205a0f26c4/",
+    "_summary_240": "New AI-powered tools reduce time and cost of software development, threatening industries from law to advertising",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/205a0f26c4/thumbnail.png"
   },
   {
     "title": "Nemotron Labs: How AI Agents Are Turning Documents Into Real-Time Business Intelligence",
@@ -1293,9 +1372,13 @@
     "source": "Financial Times - Technology",
     "summary": "New Anthropic legal tool sends shares in companies including S&P Global and Intuit sliding",
     "content_html": "",
-    "image_url": "",
+    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/9f662b57-b7af-4367-b935-a001a062a8a5.jpg",
     "summary_text": "New Anthropic legal tool sends shares in companies including S&P Global and Intuit sliding",
-    "category": "ai"
+    "category": "ai",
+    "_permalink": "/p/e73001365c/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/e73001365c/",
+    "_summary_240": "New Anthropic legal tool sends shares in companies including S&P Global and Intuit sliding",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/e73001365c/thumbnail.png"
   },
   {
     "title": "Tech Exchange",
@@ -1307,17 +1390,6 @@
     "image_url": "",
     "summary_text": "This series features conversations between FT journalists and the technology industry\u2019s leaders, innovators, and thinkers. In the latest instalment, Chinese AI pioneer Kai-Fu Lee talks about the competition between the technology\u2019s two superpowers",
     "category": "ai"
-  },
-  {
-    "title": "Banks seek out new buyers for Oracle data centre loans",
-    "url": "https://www.ft.com/content/90aa74a5-b39d-4131-a138-367726cb18fb",
-    "published_at": "2026-02-04T00:00:26-05:00",
-    "source": "Financial Times - Technology",
-    "summary": "Rare investment-grade rating helps attract insurers and private credit funds to construction debt",
-    "content_html": "",
-    "image_url": "",
-    "summary_text": "Rare investment-grade rating helps attract insurers and private credit funds to construction debt",
-    "category": "fintech"
   },
   {
     "title": "I Cloned ClawHub. Meet FinClaw.",
@@ -1343,11 +1415,7 @@
     "content_html": "<div class=\"captioned-image-container\"><figure><a class=\"image-link image2 is-viewable-img\" href=\"https://substackcdn.com/image/fetch/$s_!62f6!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fda05525b-00a1-4ab7-8be2-f1f309150e72_2816x1536.png\" target=\"_blank\"><div class=\"image2-inset\"><source type=\"image/webp\" /><img alt=\"\" class=\"sizing-normal\" height=\"794\" src=\"https://substackcdn.com/image/fetch/$s_!62f6!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fda05525b-00a1-4ab7-8be2-f1f309150e72_2816x1536.png\" width=\"1456\" /><div class=\"image-link-expand\"><div class=\"pencraft pc-display-flex pc-gap-8 pc-reset\"><button class=\"pencraft pc-reset pencraft icon-container restack-image\" tabindex=\"0\" type=\"button\"><svg fill=\"none\" height=\"20\" stroke=\"var(--color-fg-primary)\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" viewBox=\"0 0 20 20\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><g><title></title><path d=\"M2.53001 7.81595C3.49179 4.73911 6.43281 2.5 9.91173 2.5C13.1684 2.5 15.9537 4.46214 17.0852 7.23684L17.6179 8.67647M17.6179 8.67647L18.5002 4.26471M17.6179 8.67647L13.6473 6.91176M17.4995 12.1841C16.5378 15.2609 13.5967 17.5 10.1178 17.5C6.86118 17.5 4.07589 15.5379 2.94432 12.7632L2.41165 11.3235M2.41165 11.3235L1.5293 15.7353M2.41165 11.3235L6.38224 13.0882\"></path></g></svg></button><button class=\"pencraft pc-reset pencraft icon-container view-image\" tabindex=\"0\" type=\"button\"><svg class=\"lucide lucide-maximize2 lucide-maximize-2\" fill=\"none\" height=\"20\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" viewBox=\"0 0 24 24\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><polyline points=\"15 3 21 3 21 9\"></polyline><polyline points=\"9 21 3 21 3 15\"></polyline><line x1=\"21\" x2=\"14\" y1=\"3\" y2=\"10\"></line><line x1=\"3\" x2=\"10\" y1=\"21\" y2=\"14\"></line></svg></button></div></div></div></a></figure></div><p>All day today <strong>GPT 5.2</strong> has been slow as the stuff that Bess Truman used to try to get Harry Truman to call &#8220;manure&#8221;. This is a first for me with 5.2 and probably a first since I started using GPT in 2023. </p><div><hr /></div><p></p>",
     "image_url": "https://substackcdn.com/image/fetch/$s_!62f6!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fda05525b-00a1-4ab7-8be2-f1f309150e72_2816x1536.png",
     "summary_text": "OpenAI Throttling Is A First for Me",
-    "category": "ai",
-    "_permalink": "/p/49368f43d5/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/49368f43d5/",
-    "_summary_240": "OpenAI Throttling Is A First for Me",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/49368f43d5/thumbnail.png"
+    "category": "ai"
   },
   {
     "title": "VfL Wolfsburg turns ChatGPT into a club-wide capability",
@@ -1369,11 +1437,7 @@
     "content_html": "",
     "image_url": "https://s3.amazonaws.com/cms.ipressroom.com/219/files/20261/69828b773d6332534bc863fd_dassault-jhh-email-1280x680-28/dassault-jhh-email-1280x680-28_thmb.jpg",
     "summary_text": "NVIDIA founder and CEO Jensen Huang and Dassault Syst\u00e8mes CEO Pascal Daloz announced a partnership to build a shared industrial AI architecture, merging virtual twins with physics-based AI to redefine the future of design, engineering and manufacturing.",
-    "category": "ai",
-    "_permalink": "/p/56bc407619/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/56bc407619/",
-    "_summary_240": "NVIDIA founder and CEO Jensen Huang and Dassault Syst\u00e8mes CEO Pascal Daloz announced a partnership to build a shared industrial AI architecture, merging virtual twins with...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/56bc407619/thumbnail.png"
+    "category": "ai"
   },
   {
     "title": "\u2018Don Colossus,\u2019 a Golden Statue of President Trump, Waits for Its Home",
@@ -1384,11 +1448,7 @@
     "content_html": "",
     "image_url": "https://static01.nyt.com/images/2026/02/02/multimedia/00biz-trump-statue-09-cgfk/00biz-trump-statue-09-cgfk-mediumSquareAt3X.jpg",
     "summary_text": "A group of cryptocurrency investors backing a memecoin hopes the statue will soon be installed at one of Mr. Trump\u2019s golf courses in Florida.",
-    "category": "fintech",
-    "_permalink": "/p/02c6b6a27c/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/02c6b6a27c/",
-    "_summary_240": "A group of cryptocurrency investors backing a memecoin hopes the statue will soon be installed at one of Mr. Trump\u2019s golf courses in Florida.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/02c6b6a27c/thumbnail.png"
+    "category": "fintech"
   },
   {
     "title": "Microsoft SDL: Evolving security practices for an AI-powered world",
@@ -1521,17 +1581,6 @@
     "image_url": "",
     "summary_text": "OpenAI and Snowflake partner in a $200M agreement to bring frontier intelligence into enterprise data, enabling AI agents and insights directly in Snowflake.",
     "category": "ai"
-  },
-  {
-    "title": "Introducing the Codex app",
-    "url": "https://openai.com/index/introducing-the-codex-app",
-    "published_at": "2026-02-01T19:00:00-05:00",
-    "source": "OpenAI News",
-    "summary": "Introducing the Codex app for macOS\u2014a command center for AI coding and software development with multiple agents, parallel workflows, and long-running tasks.",
-    "content_html": "",
-    "image_url": "",
-    "summary_text": "Introducing the Codex app for macOS\u2014a command center for AI coding and software development with multiple agents, parallel workflows, and long-running tasks.",
-    "category": "software"
   },
   {
     "title": "Claude on Mars",
