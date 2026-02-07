@@ -1295,6 +1295,9 @@ def write_permalink_page(it: dict) -> str:
     with open(PERMA_TPL, "r", encoding="utf-8") as f:
         tpl = f.read()
 
+    brief = brief or compute_pulse_brief(by_cat, now_local=now_et())
+    brief_html = render_pulse_brief_html(brief, date_str=date_str)
+
     page = _render_template_string(
         tpl,
         TITLE=title,
@@ -1320,7 +1323,236 @@ def write_permalink_page(it: dict) -> str:
 # HTML GENERATION
 # ============================================================================
 
-def build_section(date_str: str, by_cat: dict) -> str:
+
+# ============================================================================
+# PULSE BRIEF (Expandable Daily Summary) - Heuristic / No-LLM
+# ============================================================================
+#
+# Summarizes the *subject matter* of the day's items using only what we have in
+# RSS (titles + snippets). No source weighting and no scraping required.
+# Deterministic, fast, and zero-cost.
+#
+
+_BRIEF_STOPWORDS = {
+    "a","an","and","are","as","at","be","been","but","by","can","could","did","do","does","for","from",
+    "had","has","have","he","her","hers","him","his","how","i","if","in","into","is","it","its","just",
+    "may","more","most","new","no","not","of","on","or","our","out","over","s","she","so","that","the",
+    "their","them","then","there","these","they","this","those","to","too","under","up","us","was","we",
+    "were","what","when","where","which","who","why","will","with","you","your",
+    # news boilerplate
+    "today","yesterday","week","year","years","month","months","daily","report","reports","update","updates",
+    "breaking","live","read","watch","video","podcast","exclusive","analysis","opinion",
+}
+
+_BRIEF_IMPACT_PATTERNS = [
+    r"\b(acquire|acquires|acquired|acquisition|merge|merger)\b",
+    r"\b(ipo|public offering|files for ipo)\b",
+    r"\b(raises|raised|funding|round|seed|series\s?[a-e])\b",
+    r"\b(layoff|layoffs|cuts|cutting|job cuts)\b",
+    r"\b(lawsuit|sues|suing|settlement|antitrust|doj|ftc)\b",
+    r"\b(sec|regulator|regulatory|ban|banned)\b",
+    r"\b(release|releases|launch|launches|introduces|unveils|ships)\b",
+    r"\b(earnings|guidance|revenue|profit|loss|forecast)\b",
+    r"\b(chip|gpu|semiconductor|nvidia|amd|intel)\b",
+    r"\b(model|llm|chatgpt|gpt-?4|gpt-?5|claude|gemini)\b",
+    r"\b(cyber|breach|hack|ransomware|outage)\b",
+]
+
+_BRIEF_BIG_NAMES = [
+    "openai","anthropic","nvidia","microsoft","apple","google","alphabet","meta","amazon","aws",
+    "tesla","oracle","ibm","salesforce","adobe","intel","amd","tencent","samsung","tsmc",
+    "coinbase","stripe","paypal","visa","mastercard",
+]
+
+def _brief_clean_text(s: str) -> str:
+    s = (s or "").strip()
+    s = re.sub(r"\s+", " ", s)
+    return s
+
+def _brief_tokens(s: str) -> list:
+    s = _brief_clean_text(s).lower()
+    toks = re.split(r"[^a-z0-9]+", s)
+    out = []
+    for t in toks:
+        if not t or len(t) < 3:
+            continue
+        if t in _BRIEF_STOPWORDS:
+            continue
+        if t.isdigit() and len(t) <= 2:
+            continue
+        out.append(t)
+    return out
+
+def _brief_top_keyword(s: str) -> str:
+    toks = _brief_tokens(s)
+    if not toks:
+        return ""
+    freq = defaultdict(int)
+    for t in toks:
+        freq[t] += 1
+    return max(freq.items(), key=lambda kv: kv[1])[0]
+
+def _brief_global_topics(items: list, top_n: int = 6) -> list:
+    freq = defaultdict(int)
+    for it in items:
+        txt = f"{it.get('title','')} {it.get('summary_text','')} {it.get('summary','')}"
+        for t in _brief_tokens(txt):
+            freq[t] += 1
+
+    def _score(kv):
+        k, v = kv
+        bonus = 2 if k in _BRIEF_BIG_NAMES else 0
+        penalty = 2 if k in ("ai","amp","via","new") else 0
+        return (v + bonus - penalty, len(k))
+
+    ranked = sorted(freq.items(), key=_score, reverse=True)
+    return [k for k, _ in ranked[:top_n]]
+
+def _brief_article_score(it: dict, now_local: datetime) -> float:
+    title = _brief_clean_text(it.get("title",""))
+    summ = _brief_clean_text(it.get("summary_text","") or it.get("summary",""))
+    blob = f"{title} {summ}".lower()
+
+    dt = safe_parse_dt(it.get("published_at"))
+    if dt:
+        try:
+            dt_l = dt.astimezone(TZ)
+            hours = max(0.0, (now_local - dt_l).total_seconds() / 3600.0)
+        except Exception:
+            hours = 24.0
+    else:
+        hours = 24.0
+
+    recency = math.exp(-hours / 18.0)  # ~0.25 after ~25h
+
+    impact = 0.0
+    for pat in _BRIEF_IMPACT_PATTERNS:
+        if re.search(pat, blob):
+            impact += 1.0
+
+    for nm in _BRIEF_BIG_NAMES:
+        if nm in blob:
+            impact += 0.35
+
+    if re.search(r"[$€£]\s?\d", title) or re.search(r"\b\d+(\.\d+)?\s?(billion|million|bn|m)\b", blob):
+        impact += 0.6
+
+    if len(title) < 18:
+        impact -= 0.4
+
+    return (1.15 * recency) + (0.25 * impact)
+
+def compute_pulse_brief(by_cat: dict, now_local: datetime = None, max_highlights: int = 5, max_notable: int = 8) -> dict:
+    now_local = now_local or now_et()
+
+    all_items = []
+    seen = set()
+    for cat, items in (by_cat or {}).items():
+        for it in (items or []):
+            u = (it.get("url") or "").strip()
+            if not u or u in seen:
+                continue
+            seen.add(u)
+            all_items.append(it)
+
+    all_items.sort(key=lambda it: _brief_article_score(it, now_local), reverse=True)
+
+    highlights = []
+    used_kw = set()
+    for it in all_items:
+        if len(highlights) >= max_highlights:
+            break
+        kw = _brief_top_keyword(f"{it.get('title','')} {it.get('summary_text','')}")
+        if kw and kw in used_kw:
+            continue
+        used_kw.add(kw)
+        highlights.append(it)
+
+    notable = []
+    for it in all_items:
+        if it in highlights:
+            continue
+        if len(notable) >= max_notable:
+            break
+        kw = _brief_top_keyword(f"{it.get('title','')} {it.get('summary_text','')}")
+        if kw and kw in used_kw:
+            continue
+        used_kw.add(kw)
+        notable.append(it)
+
+    topics = _brief_global_topics(highlights + notable, top_n=6)
+    topic_teaser = ", ".join(topics[:3]) if topics else "Top stories and signals"
+    one_liner = f"Top themes: {', '.join(topics[:3])}." if topics else "Top themes: product launches, funding, regulation, and platform shifts."
+
+    return {
+        "date": now_local.strftime("%Y-%m-%d"),
+        "generated_at": now_local.strftime("%Y-%m-%d %H:%M:%S %Z"),
+        "topic_teaser": topic_teaser,
+        "one_liner": one_liner,
+        "highlights": [{"title": it.get("title",""), "url": it.get("url","")} for it in highlights],
+        "notable": [{"title": it.get("title",""), "url": it.get("url","")} for it in notable],
+    }
+
+def render_pulse_brief_html(brief: dict, date_str: str = "") -> str:
+    if not brief:
+        return ""
+    highlights = brief.get("highlights") or []
+    notable = brief.get("notable") or []
+    if not highlights and not notable:
+        return ""
+
+    teaser = html.escape(_brief_clean_text(brief.get("topic_teaser") or "Top stories and signals"))
+    one = html.escape(_brief_clean_text(brief.get("one_liner") or ""))
+    date_label = html.escape(date_str or brief.get("date",""))
+
+    def _li(items, ordered=False):
+        if not items:
+            return "<p class='pb-note'>No items available.</p>"
+        tag = "ol" if ordered else "ul"
+        parts = [f"<{tag} class='pb-list'>"]
+        for x in items:
+            t = html.escape(_brief_clean_text(x.get("title","")))
+            u = add_utm(_brief_clean_text(x.get("url","")))
+            if not t or not u:
+                continue
+            parts.append(f"<li><a href='{u}' target='_blank' rel='noopener'>{t}</a></li>")
+        parts.append(f"</{tag}>")
+        return "\n".join(parts)
+
+    gen = html.escape(_brief_clean_text(brief.get("generated_at","")))
+
+    return f"""
+      <details class="pulse-brief" id="pulse-brief">
+        <summary>
+          <div class="pb-left">
+            <span class="pb-badge">Pulse Brief</span>
+            <span class="pb-date">{date_label}</span>
+          </div>
+          <div class="pb-right">
+            <span class="pb-teaser">{teaser}</span>
+            <span class="pb-chevron" aria-hidden="true">⌄</span>
+          </div>
+        </summary>
+
+        <div class="pb-body">
+          <p class="pb-one">{one}</p>
+          <div class="pb-grid">
+            <div class="pb-card">
+              <h4>Key highlights</h4>
+              {_li(highlights, ordered=True)}
+            </div>
+            <div class="pb-card">
+              <h4>Notable updates</h4>
+              {_li(notable, ordered=False)}
+            </div>
+          </div>
+          <div class="pb-note">Generated from RSS titles + snippets (no source weighting). Updated at {gen}.</div>
+        </div>
+      </details>
+    """.strip()
+
+
+def build_section(date_str: str, by_cat: dict, brief: dict = None) -> str:
     """Build HTML section from categorized items."""
     with open(os.path.join(ROOT, "templates/section_template.html"), "r", encoding="utf-8") as f:
         tpl = f.read()
@@ -1409,6 +1641,7 @@ def build_section(date_str: str, by_cat: dict) -> str:
     all_articles.sort(key=_final_sort_dt, reverse=True)
     all_items_html = render_items(all_articles) if all_articles else "<p>No items today.</p>"
 
+    html_out = html_out.replace("{{DAILY_BRIEF}}", brief_html)
     html_out = html_out.replace("{{AI_ITEMS}}", all_items_html)
     html_out = html_out.replace("{{SW_ITEMS}}", "")
     html_out = html_out.replace("{{FT_ITEMS}}", "")
@@ -1444,7 +1677,7 @@ def _weekend_use_friday_payload_if_available() -> Optional[bool]:
             if cached.get("ref_date") == want_friday.strftime("%Y-%m-%d"):
                 by_cat = cached.get("by_cat", {})
                 date_str = today.strftime("%b %-d, %Y")
-                section = build_section(date_str, by_cat)
+                brief = compute_pulse_brief(by_cat, now_local=now_et()); section = build_section(date_str, by_cat, brief)
                 docs = os.path.join(REPO, "docs")
                 os.makedirs(docs, exist_ok=True)
                 with open(os.path.join(docs, "index.html"), "w", encoding="utf-8") as f:
@@ -1588,7 +1821,8 @@ def main():
 
     # Render
     date_str = now_et().strftime("%b %-d, %Y")
-    section = build_section(date_str, by_cat)
+    brief = compute_pulse_brief(by_cat, now_local=now_et())
+    section = build_section(date_str, by_cat, brief)
 
     # Save Friday snapshot for weekend reuse
     _save_friday_snapshot_if_today(all_items, by_cat)
@@ -1608,7 +1842,7 @@ def main():
         ts_name = now_et().strftime("%Y-%m-%d_%H%M%S") + ".json"
         ts_path = os.path.join(ts_dir, ts_name)
         with open(ts_path, "w", encoding="utf-8") as tf:
-            json.dump({"items": all_items}, tf, indent=2)
+            json.dump({"items": all_items, "brief": brief}, tf, indent=2)
     except FileExistsError:
         pass
     except Exception:
@@ -1616,15 +1850,14 @@ def main():
 
     # REMOVED: Trending analytics JSON
 
-    # Daily snapshot
+    # Daily snapshot (overwrite each run so the homepage + brief stay consistent)
     try:
         arch_dir = os.path.join(docs, "archive", "json")
         os.makedirs(arch_dir, exist_ok=True)
         snap_name = now_et().strftime("%Y-%m-%d") + ".json"
         arch_path = os.path.join(arch_dir, snap_name)
-        if not os.path.exists(arch_path):
-            with open(arch_path, "x", encoding="utf-8") as f:
-                json.dump({"date": now_et().strftime("%Y-%m-%d"), "by_cat": by_cat}, f, indent=2)
+        with open(arch_path, "w", encoding="utf-8") as f:
+            json.dump({"date": now_et().strftime("%Y-%m-%d"), "by_cat": by_cat, "brief": brief}, f, indent=2)
     except Exception:
         pass
 
