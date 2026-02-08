@@ -1491,97 +1491,152 @@ def _brief_pick_diverse(items: list, max_n: int, now_local: datetime, max_per_do
 
     return chosen
 
-def compute_pulse_brief(by_cat: dict, now_local: datetime = None, max_highlights: int = 5, max_notable: int = 8) -> dict:
-    """
-    Build a compact daily brief from RSS titles + snippets.
-    Deterministic (no LLM), source-agnostic, with de-duplication.
-    """
-    now_local = now_local or now_et()
-
+def compute_pulse_brief(by_cat: dict, now_local, max_items: int = 6, max_keywords: int = 12) -> dict:
+    """Deterministic brief from RSS titles + snippets (no LLM, no scraping)."""
     all_items = []
     seen = set()
-    for cat, items in (by_cat or {}).items():
-        for it in (items or []):
+    for cat_items in (by_cat or {}).values():
+        for it in (cat_items or []):
             u = (it.get("url") or "").strip()
             if not u or u in seen:
                 continue
             seen.add(u)
             all_items.append(it)
 
-    # Highlights: max 1 per domain, avoid near-duplicates
-    highlights = _brief_pick_diverse(all_items, max_highlights, now_local, max_per_domain=1, sim_threshold=0.55)
+    # Keywords: most-mentioned tokens (with small boosts for big names)
+    keywords = _brief_global_topics(all_items, top_n=max_keywords)
 
-    # Notable: allow a bit more per domain, still avoid near-duplicates
-    remainder = [it for it in all_items if it not in highlights]
-    notable = _brief_pick_diverse(remainder, max_notable, now_local, max_per_domain=2, sim_threshold=0.60)
+    # Score once
+    scored = [(_brief_article_score(it, now_local), it) for it in all_items]
+    scored.sort(key=lambda x: x[0], reverse=True)
 
-    topics = _brief_global_topics(highlights + notable, top_n=6)
-    topic_teaser = ", ".join(topics[:3]) if topics else "Top stories and signals"
-    one_liner = f"Top themes: {', '.join(topics[:3])}." if topics else "Top themes: product launches, funding, regulation, and platform shifts."
+    def _has_kw(it, kw: str) -> bool:
+        txt = f"{it.get('title','')} {it.get('summary_text','')} {it.get('summary','')}"
+        return kw in set(_brief_tokens(txt))
+
+    chosen = []
+    chosen_urls = set()
+    chosen_domains = set()
+
+    # Theme-driven pick: best 1 per keyword (domain-capped) until we hit max_items
+    for kw in keywords:
+        if len(chosen) >= max_items:
+            break
+        for score, it in scored:
+            u = (it.get("url") or "").strip()
+            if not u or u in chosen_urls:
+                continue
+            dom = _brief_domain(u)
+            if dom and dom in chosen_domains:
+                continue
+            if not _has_kw(it, kw):
+                continue
+
+            # Avoid near-duplicates vs what we've already picked
+            if any(_brief_jaccard_sim(it.get("title",""), prev.get("title","")) >= 0.62 for prev in chosen):
+                continue
+
+            chosen.append(it)
+            chosen_urls.add(u)
+            if dom:
+                chosen_domains.add(dom)
+            break
+
+    # Fill remaining slots with diverse picks
+    if len(chosen) < max_items:
+        remainder = [it for it in all_items if (it.get("url") or "").strip() not in chosen_urls]
+        fill = _brief_pick_diverse(
+            remainder,
+            max_items - len(chosen),
+            now_local,
+            max_per_domain=1,
+            sim_threshold=0.62,
+        )
+        for it in fill:
+            u = (it.get("url") or "").strip()
+            dom = _brief_domain(u)
+            if u:
+                chosen_urls.add(u)
+            if dom:
+                chosen_domains.add(dom)
+            chosen.append(it)
+
+    items_out = []
+    for it in chosen[:max_items]:
+        u = (it.get("url") or "").strip()
+        thumb = it.get("_thumbnail") or it.get("image_url") or ""
+        items_out.append({
+            "title": it.get("title", "") or "",
+            "url": u,
+            "thumbnail": thumb,
+            "source": it.get("source", "") or "",
+            "domain": _brief_domain(u),
+        })
 
     return {
         "date": now_local.strftime("%Y-%m-%d"),
         "generated_at": now_local.strftime("%Y-%m-%d %H:%M:%S %Z"),
-        "topic_teaser": topic_teaser,
-        "one_liner": one_liner,
-        "highlights": [{"title": it.get("title",""), "url": it.get("url","")} for it in highlights],
-        "notable": [{"title": it.get("title",""), "url": it.get("url","")} for it in notable],
+        "keywords": keywords,
+        "items": items_out,
     }
 
 def render_pulse_brief_html(brief: dict, date_str: str = "") -> str:
-    """
-    Compact, styled <details> block. We intentionally do NOT repeat the page header;
-    the summary line is just "Brief" + themes.
-    """
+    """Simple, low-noise brief: keyword chips + up to 6 thumbnail items."""
     if not brief:
         return ""
 
-    topics = (brief.get("topic_teaser") or "").strip()
-    one_liner = (brief.get("one_liner") or "").strip()
-    highlights = brief.get("highlights") or []
-    notable = brief.get("notable") or []
+    keywords = brief.get("keywords") or []
+    items = brief.get("items") or []
     gen = (brief.get("generated_at") or "").strip()
 
-    def _li(items, ordered=True):
-        if not items:
-            return "<p class='pb-empty'>No items.</p>"
-        tag = "ol" if ordered else "ul"
-        lis = []
-        for it in items:
-            t = (it.get("title") or "").strip()
-            u = (it.get("url") or "").strip()
-            if not t:
-                continue
-            if u:
-                lis.append(f"<li><a href='{html.escape(u)}' target='_blank' rel='noopener'>{html.escape(t)}</a></li>")
-            else:
-                lis.append(f"<li>{html.escape(t)}</li>")
-        return f"<{tag}>" + "".join(lis) + f"</{tag}>"
+    chips = "".join([f"<span class='pb-chip'>{html.escape(k)}</span>" for k in keywords[:12]])
 
+    def _item_li(it: dict) -> str:
+        t = (it.get("title") or "").strip()
+        u = (it.get("url") or "").strip()
+        src = (it.get("source") or "").strip()
+        dom = (it.get("domain") or "").strip()
+        thumb = (it.get("thumbnail") or "").strip()
+
+        meta = src or dom
+        meta_html = f"<div class='pb-meta'>{html.escape(meta)}</div>" if meta else ""
+
+        # If thumbnail missing, still render a placeholder box via CSS background
+        thumb_html = f"<img class='pb-thumb' src='{html.escape(thumb)}' alt='' loading='lazy' />" if thumb else "<span class='pb-thumb pb-thumb--empty' aria-hidden='true'></span>"
+
+        if u:
+            return (
+                "<li class='pb-item'>"
+                f"<a href='{html.escape(u)}' target='_blank' rel='noopener'>"
+                f"{thumb_html}"
+                "<div class='pb-txt'>"
+                f"<div class='pb-title'>{html.escape(t)}</div>"
+                f"{meta_html}"
+                "</div>"
+                "</a>"
+                "</li>"
+            )
+        return f"<li class='pb-item'><div class='pb-title'>{html.escape(t)}</div></li>"
+
+    if items:
+        items_html = "<ul class='pb-list'>" + "".join(_item_li(it) for it in items[:6]) + "</ul>"
+    else:
+        items_html = "<p class='pb-empty'>No brief items available.</p>"
+
+    # Collapsed by default; summary line intentionally minimal (no redundant text)
     return f"""
       <details class="pb">
         <summary>
           <span class="pb-pill">Brief</span>
-          <span class="pb-themes">{html.escape(topics)}</span>
           <span class="pb-chev" aria-hidden="true">▾</span>
         </summary>
         <div class="pb-body">
-          <div class="pb-oneliner">{html.escape(one_liner)}</div>
-          <div class="pb-grid">
-            <div class="pb-card">
-              <h4>Key highlights</h4>
-              {_li(highlights, ordered=True)}
-            </div>
-            <div class="pb-card">
-              <h4>Notable updates</h4>
-              {_li(notable, ordered=False)}
-            </div>
-          </div>
+          <div class="pb-chips">{chips}</div>
+          {items_html}
           <div class="pb-note">Generated from RSS titles + snippets (no source weighting). Updated at {html.escape(gen)}.</div>
         </div>
       </details>
     """.strip()
-
 def build_section(date_str: str, by_cat: dict, brief: dict = None) -> str:
     """Build HTML section from categorized items."""
     with open(os.path.join(ROOT, "templates/section_template.html"), "r", encoding="utf-8") as f:
