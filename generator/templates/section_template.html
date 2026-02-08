@@ -365,10 +365,7 @@
       .items > article.top {
         grid-column: span 2;
       }
-      .items > article.top .article-thumb {
-         height: 300px;
-      }
-    }
+      .items > article}
     
     @media (min-width: 1100px) {
       .items > article.top {
@@ -376,18 +373,7 @@
         flex-direction: row; /* Side-by-side for hero */
         align-items: stretch;
       }
-      .items > article.top .article-thumb {
-        width: 50%;
-        height: auto;
-        min-height: 350px;
-        border-bottom: none;
-        border-right: 1px solid var(--line-light);
-      }
-      .items > article.top .article-content {
-        padding: 2rem;
-        justify-content: center;
-      }
-      .items > article.top h3 {
+      .items > article.items > article.items > article.top h3 {
         font-size: 1.75rem;
       }
     }
@@ -632,17 +618,7 @@
       }
       
       /* Reset hero styles on mobile */
-      .items > article.top .article-thumb {
-        width: 100%;
-        height: 180px;
-        border-right: none;
-        border-bottom: 1px solid var(--line-light);
-      }
-      .items > article.top .article-content {
-        padding: 1.25rem;
-      }
-      
-      h3 {
+      .items > article.items > articleh3 {
         font-size: 1.125rem;
       }
       
@@ -689,7 +665,260 @@
         border: 1px solid currentColor;
       }
     }
-  </style>
+  
+
+    /* ============================================
+       PULSE BRIEF — Enhanced for reader engagement
+       ============================================ */
+    .pb {
+      margin: 1.25rem 0 1.75rem;
+      background: var(--card);
+      border: 1px solid var(--ai-border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-lg);
+      overflow: hidden;
+      position: relative;
+    }
+
+    /* Accent gradient bar — visual anchor ("start here") */
+    .pb::before {
+      content: "";
+      display: block;
+      height: 4px;
+      background: linear-gradient(90deg, var(--ai) 0%, #818cf8 40%, var(--sw) 70%, var(--ft) 100%);
+      border-radius: var(--radius) var(--radius) 0 0;
+    }
+
+    .pb > summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 1rem 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: .75rem;
+      user-select: none;
+      transition: background var(--transition-fast);
+    }
+    .pb > summary:hover {
+      background: var(--bg-subtle);
+    }
+    .pb > summary::-webkit-details-marker { display: none; }
+
+    /* BRIEF pill — bold label */
+    .pb-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: .4rem;
+      padding: .3rem .7rem;
+      border-radius: 999px;
+      font-size: .7rem;
+      font-weight: 800;
+      letter-spacing: .07em;
+      text-transform: uppercase;
+      background: var(--ai);
+      color: #fff;
+      flex-shrink: 0;
+    }
+
+    /* Story count badge */
+    .pb-count {
+      font-size: .7rem;
+      font-weight: 700;
+      color: var(--muted);
+      background: var(--bg-subtle);
+      padding: .2rem .55rem;
+      border-radius: 999px;
+      letter-spacing: .02em;
+      flex-shrink: 0;
+    }
+
+    /* [A] Editorial hook — dynamic summary in the collapsed bar */
+    .pb-hook {
+      color: var(--ink-soft);
+      font-size: .82rem;
+      font-weight: 500;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      flex: 1;
+      min-width: 0;
+    }
+
+    /* Chevron */
+    .pb-chev {
+      margin-left: auto;
+      width: 32px;
+      height: 32px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      display: grid;
+      place-items: center;
+      background: var(--bg-subtle);
+      transition: transform 0.25s ease, background var(--transition-fast);
+      flex-shrink: 0;
+    }
+    .pb > summary:hover .pb-chev {
+      background: var(--line);
+    }
+    details[open].pb .pb-chev { transform: rotate(180deg); }
+
+    /* Body area */
+    .pb-body {
+      padding: 0 1.25rem 1.25rem;
+    }
+
+    /* Numbered takeaway list */
+    .pb-takeaways {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      gap: 0;
+    }
+
+    /* [D] Each row is a flex container with CTA pushed right */
+    .pb-takeaways li {
+      display: flex;
+      align-items: center;
+      gap: .65rem;
+      padding: .75rem .6rem;
+      border-radius: var(--radius-xs);
+      transition: background var(--transition-fast);
+      border-bottom: 1px solid var(--line-light);
+    }
+    .pb-takeaways li:last-child {
+      border-bottom: none;
+    }
+    .pb-takeaways li:hover {
+      background: var(--bg-subtle);
+    }
+
+    /* Rank number */
+    .pb-rank {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 24px;
+      height: 24px;
+      border-radius: 8px;
+      background: var(--bg-subtle);
+      color: var(--muted);
+      font-size: .72rem;
+      font-weight: 800;
+      flex-shrink: 0;
+      border: 1px solid var(--line);
+    }
+
+    /* [E] Category text label (replaces dot) */
+    .pb-cat {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: .15rem .4rem;
+      border-radius: 6px;
+      font-size: .6rem;
+      font-weight: 800;
+      letter-spacing: .05em;
+      text-transform: uppercase;
+      flex-shrink: 0;
+      line-height: 1;
+    }
+    .pb-cat--ai  { background: rgba(99,102,241,0.1);  color: var(--ai); }
+    .pb-cat--sw  { background: rgba(249,115,22,0.1);  color: var(--sw); }
+    .pb-cat--ft  { background: rgba(16,185,129,0.1);  color: var(--ft); }
+
+    /* Takeaway content — middle column, grows to fill */
+    .pb-takeaway-body {
+      flex: 1;
+      min-width: 0;
+    }
+    .pb-takeaway-body strong {
+      font-size: .92rem;
+      font-weight: 700;
+      line-height: 1.35;
+      color: var(--ink);
+      display: block;
+    }
+
+    /* [B] Impact line — hidden by default, shown on hover */
+    .pb-impact {
+      color: var(--ink-soft);
+      font-size: .82rem;
+      line-height: 1.45;
+      display: block;
+      margin-top: .15rem;
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      transition: max-height 0.25s ease, opacity 0.2s ease, margin 0.25s ease;
+    }
+
+    /* [C] Hover preview — expand impact on row hover */
+    .pb-takeaways li:hover .pb-impact {
+      max-height: 4rem;
+      opacity: 1;
+      margin-top: .3rem;
+    }
+
+    /* Source label under title (always visible) */
+    .pb-src {
+      color: var(--muted);
+      font-size: .72rem;
+      font-weight: 600;
+      margin-top: .15rem;
+      display: block;
+    }
+
+    /* [D] Read CTA — right-aligned, vertically centered in row */
+    .pb-read {
+      color: var(--ai);
+      font-weight: 700;
+      font-size: .78rem;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: .2rem;
+      flex-shrink: 0;
+      margin-left: auto;
+      padding: .35rem .65rem;
+      border-radius: 999px;
+      transition: color var(--transition-fast), background var(--transition-fast), gap var(--transition-fast);
+      white-space: nowrap;
+    }
+    .pb-read:hover {
+      color: #4f46e5;
+      background: var(--ai-light);
+      gap: .35rem;
+    }
+    .pb-read::after {
+      content: "→";
+      font-size: .85rem;
+      transition: transform var(--transition-fast);
+    }
+    .pb-read:hover::after {
+      transform: translateX(2px);
+    }
+
+    .pb-empty { color: var(--muted); margin: 0; }
+
+    /* Brief responsive */
+    @media (max-width: 520px) {
+      .pb > summary { padding: .9rem 1rem; }
+      .pb-hook { font-size: .78rem; }
+      .pb-body { padding: 0 1rem 1rem; }
+      .pb-takeaways li { gap: .45rem; padding: .65rem .35rem; }
+      .pb-rank { width: 22px; height: 22px; font-size: .68rem; }
+      .pb-takeaway-body strong { font-size: .88rem; }
+      /* On mobile, show impact by default (no hover) */
+      .pb-impact {
+        max-height: none;
+        opacity: 1;
+        margin-top: .2rem;
+      }
+      .pb-read { padding: .3rem .45rem; font-size: .75rem; }
+    }
+
+</style>
 
   <link rel="icon" type="image/x-icon" href="./icons/favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="./icons/t2d-pulse-32.png">
@@ -726,7 +955,8 @@
 
   <div id="app">
     <section id="tek2day-pulse" aria-labelledby="tek2day-title">
-      <div class="items">
+            {{DAILY_BRIEF}}
+<div class="items">
         {{AI_ITEMS}}
         {{SW_ITEMS}}
         {{FT_ITEMS}}
