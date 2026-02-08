@@ -1381,6 +1381,75 @@ def _brief_tokens(s: str) -> list:
     return out
 
 
+
+def _brief_extract_keywords(text_blob: str) -> list[str]:
+    """Extract candidate *display* keywords for the Daily Brief chips.
+
+    We purposely keep this lightweight and deterministic (no LLM calls).
+    It looks at titles + RSS summaries and tries to surface repeated proper nouns,
+    acronyms, and a small set of high-signal topic words.
+    """
+    if not text_blob:
+        return []
+
+    blob = text_blob
+    out: list[str] = []
+    seen = set()
+
+    def _add(tok: str):
+        t = (tok or "").strip()
+        if not t:
+            return
+        key = t.lower()
+        if key in _BRIEF_STOPWORDS:
+            return
+        if len(key) < 2:
+            return
+        if key in seen:
+            return
+        seen.add(key)
+        out.append(t)
+
+    # 1) Proper nouns / product names (Anthropic, OpenAI, Microsoft, Blue Prism, etc.)
+    # Keep single tokens; multi-word entities will often show up as repeated single tokens ("Microsoft").
+    for m in re.finditer(r"\b[A-Z][A-Za-z0-9&.+_-]{2,}\b", blob):
+        w = m.group(0)
+        if w.lower() in _BRIEF_STOPWORDS:
+            continue
+        if w in {"The", "A", "An"}:
+            continue
+        _add(w)
+
+    # 2) Acronyms (AI, GPU, SEC, ETF, etc.)
+    for m in re.finditer(r"\b[A-Z]{2,}\b", blob):
+        _add(m.group(0))
+
+    # 3) High-signal topic words from normalized tokens
+    topic_map = {
+        "ai": "AI",
+        "crypto": "Crypto",
+        "fintech": "FinTech",
+        "security": "Security",
+        "privacy": "Privacy",
+        "payments": "Payments",
+        "banking": "Banking",
+        "stablecoins": "Stablecoins",
+        "regulation": "Regulation",
+        "policy": "Policy",
+        "models": "Models",
+        "model": "Model",
+        "llm": "LLM",
+        "gpu": "GPU",
+        "chips": "Chips",
+        "cloud": "Cloud",
+    }
+    toks = _brief_tokens(blob)
+    for t in toks:
+        if t in topic_map:
+            _add(topic_map[t])
+
+    return out
+
 def _brief_jaccard_sim(a: str, b: str) -> float:
     """Jaccard similarity of token sets for two strings (0..1)."""
     sa = set(_brief_tokens(a or ""))
