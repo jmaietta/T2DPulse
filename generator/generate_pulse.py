@@ -1728,7 +1728,7 @@ def compute_pulse_brief(by_cat: dict, now_local, max_items: int = 6) -> dict:
     lede = _brief_make_lede(themes)
 
     # Pick takeaway items: score + de-dupe + domain diversity
-    picked = _brief_pick_diverse(all_items, now_local=now_local, max_total=max_items, max_per_domain=1, sim_threshold=0.55)
+    picked = _brief_pick_diverse(all_items, now_local=now_local, max_n=max_items, max_per_domain=1, sim_threshold=0.55)
     if not picked:
         picked = sort_by_recency(all_items)[:max_items]
 
