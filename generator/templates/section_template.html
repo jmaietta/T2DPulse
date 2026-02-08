@@ -1108,19 +1108,6 @@ button.pb-tag:focus-visible{ outline: 2px solid rgba(255,255,255,0.25); outline-
     
     input.addEventListener('input', () => applyFilter(input.value), { passive: true });
 
-// Brief topic chips (top of page) -> filter the list below
-document.addEventListener('click', (e) => {
-  const chip = e.target.closest && e.target.closest('.pb-tag[data-q]');
-  if (!chip) return;
-  e.preventDefault();
-  const q = chip.getAttribute('data-q') || '';
-  if (!q) return;
-  input.value = q;
-  applyFilter(q);
-  if (window.innerWidth > 720) {
-    container.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  }
-}, { passive: false });
 
     // Check for initial query param
     try {
