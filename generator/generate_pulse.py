@@ -1380,6 +1380,20 @@ def _brief_tokens(s: str) -> list:
         out.append(t)
     return out
 
+
+def _brief_jaccard_sim(a: str, b: str) -> float:
+    """Jaccard similarity of token sets for two strings (0..1)."""
+    sa = set(_brief_tokens(a or ""))
+    sb = set(_brief_tokens(b or ""))
+    if not sa or not sb:
+        return 0.0
+    inter = sa.intersection(sb)
+    union = sa.union(sb)
+    if not union:
+        return 0.0
+    return len(inter) / len(union)
+
+
 def _brief_top_keyword(s: str) -> str:
     toks = _brief_tokens(s)
     if not toks:
