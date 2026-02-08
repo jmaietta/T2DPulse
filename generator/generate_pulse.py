@@ -1547,36 +1547,39 @@ def _brief_domain(url: str) -> str:
 
 def _brief_pick_diverse(items: list, max_n: int = None, now_local=None, max_per_domain: int = 1, sim_threshold: float = 0.55, max_total: int = None) -> list:
     """Pick items with high score but avoid near-duplicates + domain clustering."""
-# Backward-compatible arg name: allow max_total (older call sites)
-if max_total is not None:
-    max_n = max_total
-if max_n is None:
-    max_n = 6
-if now_local is None:
-    try:
-        now_local = now_et()
-    except Exception:
-        now_local = datetime.now(timezone.utc)
-
-    chosen = []
-    domain_counts = {}
+    # Backward-compatible arg name: allow max_total (older call sites)
+    if max_total is not None:
+        max_n = max_total
+    if max_n is None:
+        max_n = 6
+    if now_local is None:
+        try:
+            now_local = now_et()
+        except Exception:
+            now_local = datetime.now(timezone.utc)
 
     scored = []
     for it in (items or []):
-        scored.append((_brief_article_score(it, now_local), it))
+        try:
+            s = _brief_article_score(it, now_local)
+        except Exception:
+            s = 0.0
+        scored.append((s, it))
     scored.sort(key=lambda x: x[0], reverse=True)
 
-    for score, it in scored:
+    chosen = []
+    domain_counts = {}
+    for _score, it in scored:
         if len(chosen) >= max_n:
             break
 
-        url = (it.get("url") or "").strip()
-        dom = _brief_domain(url)
+        url = it.get("link") or it.get("url") or ""
+        dom = _brief_domain(url) if url else ""
         if dom and domain_counts.get(dom, 0) >= max_per_domain:
             continue
 
         title = it.get("title", "") or ""
-        if any(_brief_title_similarity(title, c.get("title","")) >= sim_threshold for c in chosen):
+        if any(_brief_title_similarity(title, (c.get("title", "") or "")) >= sim_threshold for c in chosen):
             continue
 
         chosen.append(it)
@@ -1584,6 +1587,7 @@ if now_local is None:
             domain_counts[dom] = domain_counts.get(dom, 0) + 1
 
     return chosen
+
 
 def _brief_first_sentence(s: str) -> str:
     """Return a clean first sentence for brief 'impact' lines."""
