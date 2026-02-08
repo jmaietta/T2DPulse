@@ -709,16 +709,16 @@
   gap: 0.75rem;
   padding: 0.9rem 1rem;
 }
-.pb-row .pb-chips {
+.pb-row .pb-tags {
   display: flex;
   gap: 0.45rem;
   overflow-x: auto;
   padding-bottom: 0.1rem;
   scrollbar-width: thin;
 }
-.pb-row .pb-chips::-webkit-scrollbar { height: 6px; }
-.pb-row .pb-chips::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.12); border-radius: 999px; }
-.pb-row .pb-chips::-webkit-scrollbar-track { background: transparent; }
+.pb-row .pb-tags::-webkit-scrollbar { height: 6px; }
+.pb-row .pb-tags::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.12); border-radius: 999px; }
+.pb-row .pb-tags::-webkit-scrollbar-track { background: transparent; }
     .pb > summary {
       list-style: none;
       cursor: pointer;
@@ -766,74 +766,13 @@
     .pb-body {
       padding: 0 1.25rem 1.25rem;
     }
-        
-    .pb-lede{
-      margin: .85rem 0 .75rem;
-      color: var(--ink-soft);
-      font-size: .95rem;
-      line-height: 1.55;
-      font-weight: 700;
-    }
-    .pb-takeaways{
-      margin: 0 0 .75rem;
-      padding-left: 1.1rem;
-      color: var(--ink-soft);
-      font-size: .9rem;
-      line-height: 1.55;
-    }
-    .pb-takeaways li{ margin: .35rem 0; }
-    .pb-takeaways strong{ color: var(--ink); }
-    .pb-takeaways em{ font-style: normal; opacity: .95; }
-    .pb-watch{
-      margin: .25rem 0 .75rem;
-      color: var(--muted);
-      font-size: .88rem;
-      font-weight: 800;
-    }
-    .pb-watch a{
-      color: inherit;
-      text-decoration: underline;
-      text-underline-offset: 2px;
-    }
-
-    /* Brief filters + inline actions */
-    .pb-tags{
-      display:flex;
-      align-items: center;
-      gap:.6rem;
-      margin: 0;
-      flex-wrap: wrap;
-    }
-    .pb-tags-label{
-      font-size:.72rem;
-      font-weight: 900;
-      letter-spacing: .08em;
-      text-transform: uppercase;
-      color: var(--muted);
-    }
-    .pb-read{
-      font-weight: 800;
-      color: inherit;
-      text-decoration: underline;
-      text-underline-offset: 2px;
-      margin-left: .25rem;
-      white-space: nowrap;
-    }
-    .pb-src{
-      color: var(--muted);
-      font-size: .78rem;
-      font-weight: 700;
-      white-space: nowrap;
-    }
-.pb-chips{
+        .pb-tags{
       display:flex;
       flex-wrap:wrap;
       gap:.5rem;
       margin: .75rem 0 1rem;
     }
-    .pb-chip{
-      appearance:none;
-      cursor:pointer;
+    .pb-tag{
       font-size:.78rem;
       font-weight:800;
       letter-spacing:.02em;
@@ -843,8 +782,23 @@
       background: rgba(255,255,255,0.03);
       color: var(--muted);
     }
-    .pb-chip:hover{ background: rgba(15, 23, 42, 0.04); color: var(--ink-soft); }
-    .pb-chip:active{ transform: translateY(1px); }
+    
+
+/* Brief (editorial) additions */
+.pb-head { display:flex; align-items:center; gap: .75rem; width:100%; }
+.pb-lede{ margin:.75rem 0 .5rem; color: var(--text); line-height:1.35; }
+.pb-takeaways{ margin:.35rem 0 0; padding-left: 1.2rem; }
+.pb-takeaways li{ margin:.4rem 0; color: var(--text); }
+.pb-takeaways em{ font-style: normal; color: var(--muted); }
+.pb-read{ font-weight: 800; text-decoration: none; margin-left: .15rem; }
+.pb-read:hover{ text-decoration: underline; }
+.pb-src{ color: var(--muted); font-size: .9em; margin-left: .1rem; }
+.pb-watch{ margin:.75rem 0 0; color: var(--muted); }
+.pb-tags{ display:flex; flex-wrap:wrap; gap:.45rem; align-items:center; margin-top:.75rem; }
+.pb-tags-label{ color: var(--muted); font-size:.82rem; margin-right:.25rem; }
+.pb-tag{ cursor:pointer; user-select:none; }
+button.pb-tag{ appearance:none; -webkit-appearance:none; border:1px solid var(--line); }
+button.pb-tag:focus-visible{ outline: 2px solid rgba(255,255,255,0.25); outline-offset: 2px; }
 .pb-list{
       list-style:none;
       padding:0;
@@ -879,7 +833,7 @@
       background: rgba(255,255,255,0.03);
     }
     .pb-title{
-      color: var(--ink);
+      color: var(--text);
       font-weight:900;
       font-size:.95rem;
       line-height:1.15;
@@ -1154,23 +1108,19 @@
     
     input.addEventListener('input', () => applyFilter(input.value), { passive: true });
 
-    // Brief filter chips: clicking sets the search box and filters the list (no page reload)
-    document.addEventListener('click', (e) => {
-      const chip = e.target && e.target.closest ? e.target.closest('.pb-chip[data-q]') : null;
-      if (!chip) return;
-      const q = chip.getAttribute('data-q') || (chip.textContent || '').trim();
-      if (!q) return;
-      input.value = q;
-      applyFilter(q);
-      try {
-        const u = new URL(location.href);
-        u.searchParams.set('q', q);
-        history.replaceState({}, '', u);
-      } catch (err) {}
-      if (window.innerWidth > 720) {
-        container.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
-    });
+// Brief topic chips (top of page) -> filter the list below
+document.addEventListener('click', (e) => {
+  const chip = e.target.closest && e.target.closest('.pb-tag[data-q]');
+  if (!chip) return;
+  e.preventDefault();
+  const q = chip.getAttribute('data-q') || '';
+  if (!q) return;
+  input.value = q;
+  applyFilter(q);
+  if (window.innerWidth > 720) {
+    container.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+}, { passive: false });
 
     // Check for initial query param
     try {
