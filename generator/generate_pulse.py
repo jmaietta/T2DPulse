@@ -1638,14 +1638,32 @@ def _brief_lede(themes: list) -> str:
         t = f"{themes[0]} and {themes[1]}"
     else:
         t = f"{themes[0]}, {themes[1]}, and {themes[2]}"
-    return f"Top storylines today: {t} across AI, Software, and FinTech."
+    # Rotate through editorial phrasings for variety
+    templates = [
+        f"Today's signal: {t} dominating the conversation across AI, Software, and FinTech.",
+        f"What's moving: {t} — here's what matters across AI, Software, and FinTech.",
+        f"The headlines converge on {t} across AI, Software, and FinTech today.",
+        f"Pulse check: {t} leading the day across AI, Software, and FinTech.",
+    ]
+    # Deterministic pick based on day of year
+    try:
+        idx = now_et().timetuple().tm_yday % len(templates)
+    except Exception:
+        idx = 0
+    return templates[idx]
 
 def compute_pulse_brief(by_cat: dict, now_local, max_items: int = 6) -> dict:
     """Build an editorial brief (themes + takeaways) from today's articles."""
     if not by_cat:
         return {}
 
-    all_items = [it for _cat, items in (by_cat or {}).items() for it in (items or [])]
+    # Tag each item with its category before merging
+    all_items = []
+    for cat_key, items in (by_cat or {}).items():
+        for it in (items or []):
+            it_copy = dict(it)
+            it_copy["_brief_cat"] = cat_key
+            all_items.append(it_copy)
     if not all_items:
         return {}
 
@@ -1667,12 +1685,14 @@ def compute_pulse_brief(by_cat: dict, now_local, max_items: int = 6) -> dict:
 
         url = (it.get("url") or "").strip()
         src = (it.get("source") or it.get("domain") or "").strip()
+        cat = (it.get("_brief_cat") or it.get("category") or "ai").strip().lower()
 
         takeaways.append({
             "title": title,
             "impact": impact,
             "url": url,
             "source": src,
+            "category": cat,
         })
 
     return {
@@ -1680,37 +1700,67 @@ def compute_pulse_brief(by_cat: dict, now_local, max_items: int = 6) -> dict:
         "themes": themes,
         "lede": lede,
         "takeaways": takeaways,
+        "story_count": len(takeaways),
     }
 
 def render_pulse_brief_html(brief: dict, date_str: str = "") -> str:
-    """Render the Brief card."""
+    """Render the Brief card with engagement-optimized layout."""
     if not brief:
         return ""
 
     themes = brief.get("themes") or []
     lede = (brief.get("lede") or "").strip()
     takeaways = brief.get("takeaways") or []
+    story_count = brief.get("story_count") or len(takeaways)
 
+    # Theme chips as styled pills
+    chips_html = ""
+    if themes:
+        chips = "".join([f"<span class='pb-chip'>{html.escape(t)}</span>" for t in themes if t])
+        chips_html = f"<div class='pb-chips'>{chips}</div>"
+
+    # Summary bar theme text
     theme_str = " · ".join([html.escape(t) for t in themes if t]) if themes else ""
     themes_html = f"<span class='pb-themes'>{theme_str}</span>" if theme_str else ""
 
+    # Story count badge
+    count_html = f"<span class='pb-count'>{story_count} stories</span>" if story_count else ""
+
+    # Category CSS class map
+    cat_class = {"ai": "ai", "software": "sw", "fintech": "ft"}
+
+    # Build numbered takeaway items
     items_html = []
-    for t in takeaways[:8]:
+    for idx, t in enumerate(takeaways[:8], start=1):
         title = html.escape((t.get("title") or "").strip())
         impact = html.escape((t.get("impact") or "").strip())
         url = (t.get("url") or "").strip()
         src = html.escape((t.get("source") or "").strip())
-
-        read = f"<a class='pb-read' href='{html.escape(url)}' target='_blank' rel='noopener'>Read</a>" if url else ""
-        src_span = f"<span class='pb-src'>· {src}</span>" if src else ""
+        cat = (t.get("category") or "ai").strip().lower()
+        dot_cls = cat_class.get(cat, "ai")
 
         if not title:
             continue
 
-        if impact:
-            items_html.append(f"<li><strong>{title}</strong> — <span class='pb-impact'>{impact}</span> {read} {src_span}</li>")
-        else:
-            items_html.append(f"<li><strong>{title}</strong> {read} {src_span}</li>")
+        # Build action row (source + read CTA)
+        read_link = f"<a class='pb-read' href='{html.escape(url)}' target='_blank' rel='noopener'>Read</a>" if url else ""
+        src_span = f"<span class='pb-src'>{src}</span>" if src else ""
+        action_row = f"<div class='pb-action-row'>{src_span}{read_link}</div>"
+
+        # Impact line
+        impact_html = f"<span class='pb-impact'>{impact}</span>" if impact else ""
+
+        items_html.append(
+            f"<li>"
+            f"<span class='pb-rank'>{idx}</span>"
+            f"<span class='pb-cat-dot pb-cat-dot--{dot_cls}' aria-label='{html.escape(cat)}'></span>"
+            f"<div class='pb-takeaway-body'>"
+            f"<strong>{title}</strong>"
+            f"{impact_html}"
+            f"{action_row}"
+            f"</div>"
+            f"</li>"
+        )
 
     takeaways_html = "<ul class='pb-takeaways'>" + "".join(items_html) + "</ul>" if items_html else ""
     lede_html = f"<p class='pb-lede'>{html.escape(lede)}</p>" if lede else ""
@@ -1719,10 +1769,12 @@ def render_pulse_brief_html(brief: dict, date_str: str = "") -> str:
         "<details class='pb' open>"
         "<summary>"
         "<span class='pb-pill'>BRIEF</span>"
+        f"{count_html}"
         f"{themes_html}"
         "<span class='pb-chev' aria-hidden='true'>▲</span>"
         "</summary>"
         "<div class='pb-body'>"
+        f"{chips_html}"
         f"{lede_html}"
         f"{takeaways_html}"
         "</div>"
