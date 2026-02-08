@@ -28,7 +28,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
+    /* ============================================
+       DESIGN TOKENS - Modern Color Palette
+       ============================================ */
     :root {
+      /* Refined neutrals */
       --bg: #f8fafc;
       --bg-subtle: #f1f5f9;
       --card: #ffffff;
@@ -37,20 +41,30 @@
       --muted: #64748b;
       --line: #e2e8f0;
       --line-light: #f1f5f9;
+      
+      /* Vibrant accents */
       --ai: #6366f1;
       --ai-light: #eef2ff;
       --ai-border: rgba(99, 102, 241, 0.2);
       --sw: #f97316;
       --ft: #10b981;
+      
+      /* Layout */
       --radius: 16px;
       --radius-sm: 12px;
       --radius-xs: 8px;
       --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.04);
       --shadow: 0 1px 3px rgba(15, 23, 42, 0.04), 0 4px 12px rgba(15, 23, 42, 0.03);
       --shadow-lg: 0 4px 16px rgba(15, 23, 42, 0.08), 0 8px 32px rgba(15, 23, 42, 0.04);
+      
+      /* Transitions */
       --transition-fast: 0.15s ease;
       --transition: 0.2s ease;
     }
+
+    /* ============================================
+       BASE STYLES
+       ============================================ */
     *, *::before, *::after {
       box-sizing: border-box;
     }
@@ -69,6 +83,8 @@
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
     }
+
+    /* Accessibility - Screen reader only */
     .sr-only {
       position: absolute !important;
       width: 1px;
@@ -80,18 +96,26 @@
       white-space: nowrap;
       border: 0;
     }
+
+    /* Focus states for keyboard navigation */
     a:focus-visible,
     button:focus-visible,
     input:focus-visible {
       outline: 2px solid var(--ai);
       outline-offset: 2px;
     }
+
+    /* Reduced motion preference */
     @media (prefers-reduced-motion: reduce) {
       *, *::before, *::after {
         animation-duration: 0.01ms !important;
         transition-duration: 0.01ms !important;
       }
     }
+
+    /* ============================================
+       HEADER - Sticky with blur effect
+       ============================================ */
     header.site {
       position: sticky;
       top: 0;
@@ -115,6 +139,8 @@
       align-items: center;
       gap: 1rem;
     }
+
+    /* Logo */
     header.site img.brand-mark {
       width: 52px;
       height: 52px;
@@ -135,6 +161,8 @@
       margin: 0;
       color: var(--ink);
     }
+
+    /* Header tag line */
     header .tag {
       display: flex;
       align-items: center;
@@ -170,12 +198,16 @@
     }
 
     .grow { flex: 1; }
+
+    /* Header actions */
     .hdr-actions {
       display: flex;
       gap: 0.5rem;
       margin-left: auto;
       align-items: center;
     }
+
+    /* Button styles */
     .btn {
       appearance: none;
       border: 1px solid var(--line);
@@ -196,6 +228,10 @@
     }
     
     .install { display: none; }
+
+    /* ============================================
+       SEARCH INPUT - Polished design
+       ============================================ */
     .hdr-actions .search {
       display: flex;
       align-items: center;
@@ -227,6 +263,8 @@
     .hdr-actions .search input::placeholder {
       color: var(--muted);
     }
+    
+    /* Hide browser search UI */
     .hdr-actions .search input[type="search"]::-webkit-search-decoration,
     .hdr-actions .search input[type="search"]::-webkit-search-cancel-button,
     .hdr-actions .search input[type="search"]::-webkit-search-results-button,
@@ -245,11 +283,17 @@
       width: 0;
       height: 0;
     }
+
+    /* ============================================
+       MAIN CONTAINER
+       ============================================ */
     #app {
       max-width: 1200px;
       margin: 0 auto 3rem;
       padding: 0 1.5rem;
     }
+
+    /* Section container */
     #tek2day-pulse {
       background: transparent;
       border: none;
@@ -257,12 +301,21 @@
       box-shadow: none;
       margin-top: 2rem;
     }
+
+    /* ============================================
+       GRID LAYOUT
+       ============================================ */
     .items {
       display: grid;
       gap: 1.5rem;
+      /* Intelligent 3-column grid that falls back automatically */
       grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
       align-items: start;
     }
+
+    /* ============================================
+       ARTICLE CARDS - Grid Style
+       ============================================ */
     article {
       position: relative;
       background: var(--card);
@@ -282,6 +335,8 @@
       border-color: var(--line-light);
       z-index: 2;
     }
+    
+    /* Article thumbnail - Full width card header */
     .article-thumb {
       width: 100%;
       height: 180px;
@@ -290,19 +345,37 @@
       background: var(--bg-subtle);
       border-bottom: 1px solid var(--line-light);
     }
+
+    /* Article content wrapper */
     .article-content {
       padding: 1.25rem;
       flex: 1;
       display: flex;
       flex-direction: column;
     }
+
+    /* Featured/top article - Spans columns on larger screens */
+    article.top {
+      background: linear-gradient(180deg, rgba(99, 102, 241, 0.03) 0%, var(--card) 100%);
+      border-color: var(--ai-border);
+    }
+    
+    /* Hero layout logic */
     @media (min-width: 768px) {
+      .items > article.top {
+        grid-column: span 2;
+      }
       .items > article.top .article-thumb {
          height: 300px;
       }
     }
     
     @media (min-width: 1100px) {
+      .items > article.top {
+        grid-column: 1 / -1; /* Full width */
+        flex-direction: row; /* Side-by-side for hero */
+        align-items: stretch;
+      }
       .items > article.top .article-thumb {
         width: 50%;
         height: auto;
@@ -322,6 +395,8 @@
     article.top:hover {
       border-color: rgba(99, 102, 241, 0.3);
     }
+
+    /* Article title */
     h3 {
       margin: 0 0 0.75rem;
       font-size: 1.125rem;
@@ -340,6 +415,8 @@
     h3 a:hover {
       color: var(--ai);
     }
+
+    /* Article meta */
     .meta {
       color: var(--muted);
       font-size: 0.75rem;
@@ -355,6 +432,8 @@
       color: var(--ink-soft);
       letter-spacing: 0.01em;
     }
+
+    /* Badges */
     .badge {
       display: inline-block;
       padding: 0.15rem 0.4rem;
@@ -371,17 +450,24 @@
       background: var(--muted);
       opacity: 0.7;
     }
+
+    /* Article summary */
     p[data-summary] {
       margin: 0;
       color: var(--ink-soft);
       font-size: 0.9375rem;
       line-height: 1.6;
+      /* Clamp text to 3 lines for clean grid */
       display: -webkit-box;
       -webkit-line-clamp: 4;
       -webkit-box-orient: vertical;
       overflow: hidden;
       flex-grow: 1; /* Push footer down */
     }
+
+    /* ============================================
+       SHARE TOOLBAR
+       ============================================ */
     .share {
       display: flex;
       gap: 0.5rem;
@@ -412,6 +498,10 @@
     .share-btn.copy-url {
         margin-left: auto;
     }
+
+    /* ============================================
+       BACK TO TOP BUTTON
+       ============================================ */
     .back-to-top {
       position: fixed;
       bottom: 2rem;
@@ -461,6 +551,10 @@
     .back-to-top:focus-visible {
       box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.3);
     }
+
+    /* ============================================
+       FOOTER
+       ============================================ */
     .foot {
       margin-top: 3rem;
       padding-top: 2rem;
@@ -469,6 +563,10 @@
       font-size: 0.8125rem;
       text-align: center;
     }
+
+    /* ============================================
+       RESPONSIVE - Mobile
+       ============================================ */
     @media (max-width: 768px) {
       .site-inner {
         padding: 0.625rem 1rem;
@@ -529,8 +627,11 @@
       }
       
       article {
+        /* On mobile, standard card stack */
         flex-direction: column;
       }
+      
+      /* Reset hero styles on mobile */
       .items > article.top .article-thumb {
         width: 100%;
         height: 180px;
@@ -575,6 +676,10 @@
         border-radius: var(--radius-sm);
       }
     }
+
+    /* ============================================
+       HIGH CONTRAST MODE
+       ============================================ */
     @media (prefers-contrast: high) {
       article {
         border: 2px solid var(--ink);
@@ -584,6 +689,11 @@
         border: 1px solid currentColor;
       }
     }
+  
+
+    /* ============================================
+       PULSE BRIEF
+       ============================================ */
     .pb {
       margin: 1.25rem 0 0.25rem;
       background: var(--card);
@@ -599,70 +709,16 @@
   gap: 0.75rem;
   padding: 0.9rem 1rem;
 }
-
-.search-wrap { position: relative; width: 100%; }
-.search input { padding-right: 40px; }
-.search-clear{
-  position:absolute; right:10px; top:50%; transform:translateY(-50%);
-  width:28px; height:28px; border-radius:999px;
-  border:1px solid var(--line);
-  background:#fff; color:var(--muted);
-  display:flex; align-items:center; justify-content:center;
-  cursor:pointer;
-}
-.search-clear:hover{ background: #f6f7fb; color: var(--ink); }
-
-.filter-status{
-  max-width: var(--wrap);
-  margin: 10px auto 0;
-  padding: 10px 14px;
-  border: 1px solid var(--line);
-  background: #fff;
-  border-radius: 14px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  font-size: 14px;
-}
-.filter-status strong{ color: var(--ink); }
-.filter-pill{
-  display:inline-flex; align-items:center;
-  padding: 4px 10px;
-  border-radius: 999px;
-  border: 1px solid var(--line);
-  background: #f6f7fb;
-  color: var(--ink);
-  max-width: 240px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  vertical-align: middle;
-}
-.filter-clear{
-  margin-left: 8px;
-  border: 1px solid var(--line);
-  background: #fff;
-  color: var(--ink);
-  border-radius: 10px;
-  padding: 6px 10px;
-  cursor: pointer;
-}
-.filter-clear:hover{ background:#f6f7fb; }
-@media (max-width: 720px){
-  .filter-status{ flex-direction: column; align-items: flex-start; }
-  .filter-pill{ max-width: 100%; }
-}
-.pb-row .pb-chips {
+.pb-row .pb-tags {
   display: flex;
   gap: 0.45rem;
   overflow-x: auto;
   padding-bottom: 0.1rem;
   scrollbar-width: thin;
 }
-.pb-row .pb-chips::-webkit-scrollbar { height: 6px; }
-.pb-row .pb-chips::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.12); border-radius: 999px; }
-.pb-row .pb-chips::-webkit-scrollbar-track { background: transparent; }
+.pb-row .pb-tags::-webkit-scrollbar { height: 6px; }
+.pb-row .pb-tags::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.12); border-radius: 999px; }
+.pb-row .pb-tags::-webkit-scrollbar-track { background: transparent; }
     .pb > summary {
       list-style: none;
       cursor: pointer;
@@ -710,13 +766,13 @@
     .pb-body {
       padding: 0 1.25rem 1.25rem;
     }
-        .pb-chips{
+        .pb-tags{
       display:flex;
       flex-wrap:wrap;
       gap:.5rem;
       margin: .75rem 0 1rem;
     }
-    .pb-chip{
+    .pb-tag{
       font-size:.78rem;
       font-weight:800;
       letter-spacing:.02em;
@@ -726,7 +782,24 @@
       background: rgba(255,255,255,0.03);
       color: var(--muted);
     }
-    .pb-list{
+    
+
+/* Brief (editorial) additions */
+.pb-head { display:flex; align-items:center; gap: .75rem; width:100%; }
+.pb-lede{ margin:.75rem 0 .5rem; color: var(--text); line-height:1.35; }
+.pb-takeaways{ margin:.35rem 0 0; padding-left: 1.2rem; }
+.pb-takeaways li{ margin:.4rem 0; color: var(--text); }
+.pb-takeaways em{ font-style: normal; color: var(--muted); }
+.pb-read{ font-weight: 800; text-decoration: none; margin-left: .15rem; }
+.pb-read:hover{ text-decoration: underline; }
+.pb-src{ color: var(--muted); font-size: .9em; margin-left: .1rem; }
+.pb-watch{ margin:.75rem 0 0; color: var(--muted); }
+.pb-tags{ display:flex; flex-wrap:wrap; gap:.45rem; align-items:center; margin-top:.75rem; }
+.pb-tags-label{ color: var(--muted); font-size:.82rem; margin-right:.25rem; }
+.pb-tag{ cursor:pointer; user-select:none; }
+button.pb-tag{ appearance:none; -webkit-appearance:none; border:1px solid var(--line); }
+button.pb-tag:focus-visible{ outline: 2px solid rgba(255,255,255,0.25); outline-offset: 2px; }
+.pb-list{
       list-style:none;
       padding:0;
       margin:0;
@@ -812,17 +885,12 @@
       <div class="grow"></div>
       <div class="hdr-actions">
         <form class="search" role="search" method="GET" action="/">
-        <label class="sr-only" for="t2d-q">Search articles</label>
-        <div class="search-wrap">
-          <input id="t2d-q" name="q" type="search" placeholder="Search…" enterkeyhint="search" autocapitalize="off" autocomplete="off" />
-          <button type="button" class="search-clear" aria-label="Clear search" hidden>&times;</button>
-        </div>
-      </form>
+          <label for="t2d-q" class="sr-only">Search articles</label>
+          <input id="t2d-q" name="q" type="search" placeholder="Search..." enterkeyhint="search" autocapitalize="off" autocomplete="off" />
+        </form>
       </div>
     </div>
   </header>
-  <div id="filter-status" class="filter-status" hidden></div>
-
 
   <div id="app">
     <section id="tek2day-pulse" aria-labelledby="tek2day-title">
@@ -971,151 +1039,86 @@
   </script>
 
   <script>
-  (function () {
+  (function() {
     const container = document.getElementById('tek2day-pulse');
-    if (!container) return;
-
-    const itemsContainer = container.querySelector('.items');
-    if (!itemsContainer) return;
-
-    const form = document.querySelector('form.search');
+    const form = document.querySelector('.hdr-actions .search');
     const input = document.getElementById('t2d-q');
-    const clearBtn = document.querySelector('.search-clear');
-    const statusEl = document.getElementById('filter-status');
-
-    const cards = Array.from(itemsContainer.querySelectorAll('article'));
-    const totalAll = cards.length;
-
-    const cache = new WeakMap();
+    if (!form || !input || !container) return;
 
     function buildHaystack(card) {
-      let hay = cache.get(card);
-      if (hay) return hay;
-
-      // Remove UI chrome text so search feels “editorial”
       const clone = card.cloneNode(true);
-      for (const sel of ['.host-pill', '.byline', '.count', '.date', '.publisher']) {
-        const els = clone.querySelectorAll(sel);
-        els.forEach((n) => n.remove());
+      // Remove elements we don't want to search
+      clone.querySelectorAll('.host-pill, .byline, .count, .date, .publisher').forEach(n => n.remove());
+      
+      const selectors = ['h3', 'h2', '.title', '.headline', '.desc', '.summary', '.snippet', 'p', '.src'];
+      const parts = [];
+      
+      for (const sel of selectors) {
+        clone.querySelectorAll(sel).forEach(n => parts.push(n.textContent || ''));
       }
-
-      hay = (clone.textContent || '').toLowerCase();
-      cache.set(card, hay);
-      return hay;
-    }
-
-    function setUrl(q) {
-      const url = new URL(window.location.href);
-      const clean = (q || '').trim();
-      if (clean) url.searchParams.set('q', clean);
-      else url.searchParams.delete('q');
-      const next = url.pathname + (url.searchParams.toString() ? '?' + url.searchParams.toString() : '') + url.hash;
-      history.replaceState(null, '', next);
-    }
-
-    function renderStatus(q, shown) {
-      if (!statusEl) return;
-      const clean = (q || '').trim();
-      if (!clean) {
-        statusEl.hidden = true;
-        statusEl.innerHTML = '';
-        return;
-      }
-      statusEl.hidden = false;
-      statusEl.innerHTML = '';
-
-      const left = document.createElement('div');
-      left.className = 'filter-left';
-      left.innerHTML = 'Showing <strong>' + shown + '</strong> of <strong>' + totalAll + '</strong> articles';
-
-      const right = document.createElement('div');
-      right.className = 'filter-right';
-
-      const label = document.createElement('span');
-      label.textContent = 'Filter: ';
-
-      const pill = document.createElement('span');
-      pill.className = 'filter-pill';
-      pill.textContent = clean;
-
-      const btn = document.createElement('button');
-      btn.type = 'button';
-      btn.className = 'filter-clear';
-      btn.textContent = 'Clear';
-      btn.addEventListener('click', () => {
-        if (input) input.value = '';
-        applyFilter('', { updateUrl: true, scroll: false });
-        if (input) input.focus();
+      
+      // Include data attributes
+      ['data-tickers', 'data-companies', 'data-keywords', 'data-source'].forEach(attr => {
+        const v = card.getAttribute(attr);
+        if (v) parts.push(v);
       });
-
-      right.append(label, pill, btn);
-
-      statusEl.append(left, right);
+      
+      return parts.join(' ').replace(/\s+/g, ' ').trim().toLowerCase();
     }
 
-    function applyFilter(q, opts) {
-      const options = Object.assign({ updateUrl: true, scroll: false }, opts || {});
-      const clean = (q || '').trim();
-      const tokens = clean.toLowerCase().split(/\s+/).filter(Boolean);
+    const itemsContainer = container.querySelector('.items');
+    
+    function tokenize(q) {
+      return (q || '').toLowerCase().trim().split(/\s+/).filter(Boolean);
+    }
 
-      let shown = 0;
-      for (const card of cards) {
-        if (!tokens.length) {
-          card.hidden = false;
-          shown += 1;
-          continue;
-        }
-        const hay = buildHaystack(card);
-        const ok = tokens.every((t) => hay.includes(t));
-        card.hidden = !ok;
-        if (ok) shown += 1;
+    function applyFilter(q) {
+      const tokens = tokenize(q);
+      let total = 0;
+
+      if (itemsContainer) {
+        Array.from(itemsContainer.children).forEach(card => {
+          const hay = buildHaystack(card);
+          const match = tokens.every(t => hay.includes(t));
+          card.style.display = match ? '' : 'none';
+          if (match) total++;
+        });
       }
 
-      // UI chrome
-      if (clearBtn) clearBtn.hidden = !clean;
-      document.documentElement.classList.toggle('has-filter', !!clean);
+      // Show/hide empty state
+      let empty = document.getElementById('search-empty');
+      if (!empty) {
+        empty = document.createElement('div');
+        empty.id = 'search-empty';
+        empty.style.cssText = 'display:none;padding:2rem;color:var(--muted);text-align:center;grid-column:1/-1;';
+        empty.setAttribute('role', 'status');
+        empty.textContent = 'No articles found matching your search.';
+        itemsContainer.appendChild(empty);
+      }
+      empty.style.display = tokens.length && total === 0 ? 'block' : 'none';
+    }
 
-      renderStatus(clean, shown);
-
-      if (options.updateUrl) setUrl(clean);
-      if (options.scroll && container.scrollIntoView) {
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      applyFilter(input.value);
+      if (window.innerWidth > 720) {
         container.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
-    }
+    });
+    
+    input.addEventListener('input', () => applyFilter(input.value), { passive: true });
 
-    // Initialize from URL
-    const params = new URLSearchParams(window.location.search);
-    const q0 = (params.get('q') || '').trim();
-    if (input) input.value = q0;
-    applyFilter(q0, { updateUrl: false, scroll: false });
 
-    // Events
-    if (input) {
-      input.addEventListener('input', () => applyFilter(input.value, { updateUrl: true, scroll: false }));
-      input.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') {
-          input.value = '';
-          applyFilter('', { updateUrl: true, scroll: false });
-        }
-      });
-    }
-
-    if (form) {
-      form.addEventListener('submit', (e) => {
-        e.preventDefault();
-        applyFilter(input ? input.value : '', { updateUrl: true, scroll: true });
-      });
-    }
-
-    if (clearBtn) {
-      clearBtn.addEventListener('click', () => {
-        if (input) input.value = '';
-        applyFilter('', { updateUrl: true, scroll: false });
-        if (input) input.focus();
-      });
-    }
+    // Check for initial query param
+    try {
+      const q0 = new URLSearchParams(location.search).get('q');
+      if (q0) {
+        input.value = q0;
+        applyFilter(q0);
+      }
+    } catch (_) {}
   })();
-</script>
+  </script>
 
   <script>
   (function() {
