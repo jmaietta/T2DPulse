@@ -365,10 +365,7 @@
       .items > article.top {
         grid-column: span 2;
       }
-      .items > article.top .article-thumb {
-         height: 300px;
-      }
-    }
+      .items > article}
     
     @media (min-width: 1100px) {
       .items > article.top {
@@ -376,18 +373,7 @@
         flex-direction: row; /* Side-by-side for hero */
         align-items: stretch;
       }
-      .items > article.top .article-thumb {
-        width: 50%;
-        height: auto;
-        min-height: 350px;
-        border-bottom: none;
-        border-right: 1px solid var(--line-light);
-      }
-      .items > article.top .article-content {
-        padding: 2rem;
-        justify-content: center;
-      }
-      .items > article.top h3 {
+      .items > article.items > article.items > article.top h3 {
         font-size: 1.75rem;
       }
     }
@@ -632,17 +618,7 @@
       }
       
       /* Reset hero styles on mobile */
-      .items > article.top .article-thumb {
-        width: 100%;
-        height: 180px;
-        border-right: none;
-        border-bottom: 1px solid var(--line-light);
-      }
-      .items > article.top .article-content {
-        padding: 1.25rem;
-      }
-      
-      h3 {
+      .items > article.items > articleh3 {
         font-size: 1.125rem;
       }
       
@@ -709,16 +685,16 @@
   gap: 0.75rem;
   padding: 0.9rem 1rem;
 }
-.pb-row .pb-tags {
+.pb-row .pb-chips {
   display: flex;
   gap: 0.45rem;
   overflow-x: auto;
   padding-bottom: 0.1rem;
   scrollbar-width: thin;
 }
-.pb-row .pb-tags::-webkit-scrollbar { height: 6px; }
-.pb-row .pb-tags::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.12); border-radius: 999px; }
-.pb-row .pb-tags::-webkit-scrollbar-track { background: transparent; }
+.pb-row .pb-chips::-webkit-scrollbar { height: 6px; }
+.pb-row .pb-chips::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.12); border-radius: 999px; }
+.pb-row .pb-chips::-webkit-scrollbar-track { background: transparent; }
     .pb > summary {
       list-style: none;
       cursor: pointer;
@@ -766,13 +742,13 @@
     .pb-body {
       padding: 0 1.25rem 1.25rem;
     }
-        .pb-tags{
+        .pb-chips{
       display:flex;
       flex-wrap:wrap;
       gap:.5rem;
       margin: .75rem 0 1rem;
     }
-    .pb-tag{
+    .pb-chip{
       font-size:.78rem;
       font-weight:800;
       letter-spacing:.02em;
@@ -784,21 +760,34 @@
     }
     
 
-/* Brief (editorial) additions */
-.pb-head { display:flex; align-items:center; gap: .75rem; width:100%; }
-.pb-lede{ margin:.75rem 0 .5rem; color: var(--text); line-height:1.35; }
-.pb-takeaways{ margin:.35rem 0 0; padding-left: 1.2rem; }
-.pb-takeaways li{ margin:.4rem 0; color: var(--text); }
-.pb-takeaways em{ font-style: normal; color: var(--muted); }
-.pb-read{ font-weight: 800; text-decoration: none; margin-left: .15rem; }
-.pb-read:hover{ text-decoration: underline; }
-.pb-src{ color: var(--muted); font-size: .9em; margin-left: .1rem; }
-.pb-watch{ margin:.75rem 0 0; color: var(--muted); }
-.pb-tags{ display:flex; flex-wrap:wrap; gap:.45rem; align-items:center; margin-top:.75rem; }
-.pb-tags-label{ color: var(--muted); font-size:.82rem; margin-right:.25rem; }
-.pb-tag{ cursor:pointer; user-select:none; }
-button.pb-tag{ appearance:none; -webkit-appearance:none; border:1px solid var(--line); }
-button.pb-tag:focus-visible{ outline: 2px solid rgba(255,255,255,0.25); outline-offset: 2px; }
+/* Brief takeaways (editorial) */
+.pb-lede{
+  margin:.5rem 0 .25rem;
+  color:var(--muted);
+  font-size:.98rem;
+  line-height:1.35;
+}
+.pb-takeaways{
+  margin:.5rem 0 0;
+  padding-left:1.15rem;
+}
+.pb-takeaways li{ margin:.55rem 0; }
+.pb-impact{ color:var(--muted); }
+.pb-read{
+  color:var(--accent);
+  font-weight:700;
+  text-decoration:none;
+  margin-left:.25rem;
+}
+.pb-read:hover{ text-decoration:underline; }
+.pb-src{
+  color:var(--muted);
+  font-size:.9rem;
+  margin-left:.25rem;
+  white-space:nowrap;
+}
+.pb-chev{ margin-left:auto; }
+
 .pb-list{
       list-style:none;
       padding:0;
@@ -1107,7 +1096,6 @@ button.pb-tag:focus-visible{ outline: 2px solid rgba(255,255,255,0.25); outline-
     });
     
     input.addEventListener('input', () => applyFilter(input.value), { passive: true });
-
 
     // Check for initial query param
     try {
