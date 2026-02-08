@@ -1521,8 +1521,7 @@ def compute_pulse_brief(by_cat: dict, now_local, max_items: int = 6) -> dict:
             title = (it.get("title") or "").strip()
             summ = (it.get("summary") or it.get("description") or it.get("snippet") or "").strip()
             if title or summ:
-                rows.append(f"{title}
-{summ}")
+                rows.append(f"{title}\n{summ}")
 
     if not rows:
         return {}
