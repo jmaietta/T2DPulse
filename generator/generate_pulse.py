@@ -1295,9 +1295,6 @@ def write_permalink_page(it: dict) -> str:
     with open(PERMA_TPL, "r", encoding="utf-8") as f:
         tpl = f.read()
 
-    brief = brief or compute_pulse_brief(by_cat, now_local=now_et())
-    brief_html = render_pulse_brief_html(brief, date_str=date_str)
-
     page = _render_template_string(
         tpl,
         TITLE=title,
@@ -1556,6 +1553,11 @@ def build_section(date_str: str, by_cat: dict, brief: dict = None) -> str:
     """Build HTML section from categorized items."""
     with open(os.path.join(ROOT, "templates/section_template.html"), "r", encoding="utf-8") as f:
         tpl = f.read()
+
+    # Build the daily brief HTML for this date (used by {{DAILY_BRIEF}})
+    if brief is None:
+        brief = compute_pulse_brief(by_cat, now_local=now_et())
+    brief_html = render_pulse_brief_html(brief, date_str=date_str)
 
     def render_item_badges(it: dict, now: datetime = None) -> str:
         now = now or datetime.now(timezone.utc)
