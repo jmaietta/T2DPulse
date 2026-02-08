@@ -1439,7 +1439,63 @@ def _brief_article_score(it: dict, now_local: datetime) -> float:
 
     return (1.15 * recency) + (0.25 * impact)
 
+def _brief_word_shingles(text: str, k: int = 3) -> set:
+    text = (text or "").lower()
+    text = re.sub(r"[^a-z0-9\s]+", " ", text)
+    words = [w for w in text.split() if len(w) > 2]
+    if len(words) < k:
+        return set(words)
+    return {" ".join(words[i:i+k]) for i in range(0, len(words) - k + 1)}
+
+def _brief_title_similarity(a: str, b: str) -> float:
+    sa = _brief_word_shingles(a, 3)
+    sb = _brief_word_shingles(b, 3)
+    if not sa or not sb:
+        return 0.0
+    return len(sa & sb) / len(sa | sb)
+
+def _brief_domain(url: str) -> str:
+    try:
+        ext = tldextract.extract(url or "")
+        dom = ".".join([p for p in [ext.domain, ext.suffix] if p])
+        return (dom or "").lower()
+    except Exception:
+        return ""
+
+def _brief_pick_diverse(items: list, max_n: int, now_local: datetime, max_per_domain: int = 1, sim_threshold: float = 0.55) -> list:
+    """Pick items with high score but avoid near-duplicates + domain clustering."""
+    chosen = []
+    domain_counts = {}
+
+    scored = []
+    for it in (items or []):
+        scored.append((_brief_article_score(it, now_local), it))
+    scored.sort(key=lambda x: x[0], reverse=True)
+
+    for score, it in scored:
+        if len(chosen) >= max_n:
+            break
+
+        url = (it.get("url") or "").strip()
+        dom = _brief_domain(url)
+        if dom and domain_counts.get(dom, 0) >= max_per_domain:
+            continue
+
+        title = it.get("title", "") or ""
+        if any(_brief_title_similarity(title, c.get("title","")) >= sim_threshold for c in chosen):
+            continue
+
+        chosen.append(it)
+        if dom:
+            domain_counts[dom] = domain_counts.get(dom, 0) + 1
+
+    return chosen
+
 def compute_pulse_brief(by_cat: dict, now_local: datetime = None, max_highlights: int = 5, max_notable: int = 8) -> dict:
+    """
+    Build a compact daily brief from RSS titles + snippets.
+    Deterministic (no LLM), source-agnostic, with de-duplication.
+    """
     now_local = now_local or now_et()
 
     all_items = []
@@ -1452,30 +1508,12 @@ def compute_pulse_brief(by_cat: dict, now_local: datetime = None, max_highlights
             seen.add(u)
             all_items.append(it)
 
-    all_items.sort(key=lambda it: _brief_article_score(it, now_local), reverse=True)
+    # Highlights: max 1 per domain, avoid near-duplicates
+    highlights = _brief_pick_diverse(all_items, max_highlights, now_local, max_per_domain=1, sim_threshold=0.55)
 
-    highlights = []
-    used_kw = set()
-    for it in all_items:
-        if len(highlights) >= max_highlights:
-            break
-        kw = _brief_top_keyword(f"{it.get('title','')} {it.get('summary_text','')}")
-        if kw and kw in used_kw:
-            continue
-        used_kw.add(kw)
-        highlights.append(it)
-
-    notable = []
-    for it in all_items:
-        if it in highlights:
-            continue
-        if len(notable) >= max_notable:
-            break
-        kw = _brief_top_keyword(f"{it.get('title','')} {it.get('summary_text','')}")
-        if kw and kw in used_kw:
-            continue
-        used_kw.add(kw)
-        notable.append(it)
+    # Notable: allow a bit more per domain, still avoid near-duplicates
+    remainder = [it for it in all_items if it not in highlights]
+    notable = _brief_pick_diverse(remainder, max_notable, now_local, max_per_domain=2, sim_threshold=0.60)
 
     topics = _brief_global_topics(highlights + notable, top_n=6)
     topic_teaser = ", ".join(topics[:3]) if topics else "Top stories and signals"
@@ -1491,48 +1529,44 @@ def compute_pulse_brief(by_cat: dict, now_local: datetime = None, max_highlights
     }
 
 def render_pulse_brief_html(brief: dict, date_str: str = "") -> str:
+    """
+    Compact, styled <details> block. We intentionally do NOT repeat the page header;
+    the summary line is just "Brief" + themes.
+    """
     if not brief:
         return ""
+
+    topics = (brief.get("topic_teaser") or "").strip()
+    one_liner = (brief.get("one_liner") or "").strip()
     highlights = brief.get("highlights") or []
     notable = brief.get("notable") or []
-    if not highlights and not notable:
-        return ""
+    gen = (brief.get("generated_at") or "").strip()
 
-    teaser = html.escape(_brief_clean_text(brief.get("topic_teaser") or "Top stories and signals"))
-    one = html.escape(_brief_clean_text(brief.get("one_liner") or ""))
-    date_label = html.escape(date_str or brief.get("date",""))
-
-    def _li(items, ordered=False):
+    def _li(items, ordered=True):
         if not items:
-            return "<p class='pb-note'>No items available.</p>"
+            return "<p class='pb-empty'>No items.</p>"
         tag = "ol" if ordered else "ul"
-        parts = [f"<{tag} class='pb-list'>"]
-        for x in items:
-            t = html.escape(_brief_clean_text(x.get("title","")))
-            u = add_utm(_brief_clean_text(x.get("url","")))
-            if not t or not u:
+        lis = []
+        for it in items:
+            t = (it.get("title") or "").strip()
+            u = (it.get("url") or "").strip()
+            if not t:
                 continue
-            parts.append(f"<li><a href='{u}' target='_blank' rel='noopener'>{t}</a></li>")
-        parts.append(f"</{tag}>")
-        return "\n".join(parts)
-
-    gen = html.escape(_brief_clean_text(brief.get("generated_at","")))
+            if u:
+                lis.append(f"<li><a href='{html.escape(u)}' target='_blank' rel='noopener'>{html.escape(t)}</a></li>")
+            else:
+                lis.append(f"<li>{html.escape(t)}</li>")
+        return f"<{tag}>" + "".join(lis) + f"</{tag}>"
 
     return f"""
-      <details class="pulse-brief" id="pulse-brief">
+      <details class="pb">
         <summary>
-          <div class="pb-left">
-            <span class="pb-badge">Pulse Brief</span>
-            <span class="pb-date">{date_label}</span>
-          </div>
-          <div class="pb-right">
-            <span class="pb-teaser">{teaser}</span>
-            <span class="pb-chevron" aria-hidden="true">⌄</span>
-          </div>
+          <span class="pb-pill">Brief</span>
+          <span class="pb-themes">{html.escape(topics)}</span>
+          <span class="pb-chev" aria-hidden="true">▾</span>
         </summary>
-
         <div class="pb-body">
-          <p class="pb-one">{one}</p>
+          <div class="pb-oneliner">{html.escape(one_liner)}</div>
           <div class="pb-grid">
             <div class="pb-card">
               <h4>Key highlights</h4>
@@ -1543,11 +1577,10 @@ def render_pulse_brief_html(brief: dict, date_str: str = "") -> str:
               {_li(notable, ordered=False)}
             </div>
           </div>
-          <div class="pb-note">Generated from RSS titles + snippets (no source weighting). Updated at {gen}.</div>
+          <div class="pb-note">Generated from RSS titles + snippets (no source weighting). Updated at {html.escape(gen)}.</div>
         </div>
       </details>
     """.strip()
-
 
 def build_section(date_str: str, by_cat: dict, brief: dict = None) -> str:
     """Build HTML section from categorized items."""
