@@ -1652,7 +1652,7 @@ def _brief_lede(themes: list) -> str:
         idx = 0
     return templates[idx]
 
-def compute_pulse_brief(by_cat: dict, now_local, max_items: int = 6) -> dict:
+def compute_pulse_brief(by_cat: dict, now_local, max_items: int = 5) -> dict:
     """Build an editorial brief (themes + takeaways) from today's articles."""
     if not by_cat:
         return {}
@@ -1708,20 +1708,8 @@ def render_pulse_brief_html(brief: dict, date_str: str = "") -> str:
     if not brief:
         return ""
 
-    themes = brief.get("themes") or []
-    lede = (brief.get("lede") or "").strip()
     takeaways = brief.get("takeaways") or []
     story_count = brief.get("story_count") or len(takeaways)
-
-    # Theme chips as styled pills
-    chips_html = ""
-    if themes:
-        chips = "".join([f"<span class='pb-chip'>{html.escape(t)}</span>" for t in themes if t])
-        chips_html = f"<div class='pb-chips'>{chips}</div>"
-
-    # Summary bar theme text
-    theme_str = " · ".join([html.escape(t) for t in themes if t]) if themes else ""
-    themes_html = f"<span class='pb-themes'>{theme_str}</span>" if theme_str else ""
 
     # Story count badge
     count_html = f"<span class='pb-count'>{story_count} stories</span>" if story_count else ""
@@ -1763,19 +1751,15 @@ def render_pulse_brief_html(brief: dict, date_str: str = "") -> str:
         )
 
     takeaways_html = "<ul class='pb-takeaways'>" + "".join(items_html) + "</ul>" if items_html else ""
-    lede_html = f"<p class='pb-lede'>{html.escape(lede)}</p>" if lede else ""
 
     return (
         "<details class='pb' open>"
         "<summary>"
         "<span class='pb-pill'>BRIEF</span>"
         f"{count_html}"
-        f"{themes_html}"
         "<span class='pb-chev' aria-hidden='true'>▲</span>"
         "</summary>"
         "<div class='pb-body'>"
-        f"{chips_html}"
-        f"{lede_html}"
         f"{takeaways_html}"
         "</div>"
         "</details>"
