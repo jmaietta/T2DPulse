@@ -2840,37 +2840,53 @@
         "_abs_permalink": "https://pulse.tek2dayholdings.com/p/08bfd2bc3e/",
         "_summary_240": "Nearly three-quarters of credit cardholders who requested a limit increase and were denied turned to installment plans as an alternative source of credit, revealing how rejection...",
         "_thumbnail": "https://pulse.tek2dayholdings.com/p/08bfd2bc3e/thumbnail.png"
-      },
-      {
-        "title": "Bitcoin ETFs \u2018hanging in there\u2019 despite BTC plunge: Analyst",
-        "url": "https://cointelegraph.com/news/bitcoin-etf-flows-performance-btc-downtrend-analyst?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-        "published_at": "2026-02-05T01:13:30-05:00",
-        "source": "Cointelegraph",
-        "summary": "Bitcoin ETFs may be sitting on their \u201cbiggest losses\u201d since launching in January 2024, but there is a silver lining, according to an ETF analyst.",
-        "content_html": "",
-        "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjYtMDIvMDE5YzJjMTMtYmZlZi03Njg5LTk0Y2ItYmFjYmY2ZWU0MmMxLmpwZw==.jpg",
-        "summary_text": "Bitcoin ETFs may be sitting on their \u201cbiggest losses\u201d since launching in January 2024, but there is a silver lining, according to an ETF analyst.",
-        "category": "fintech",
-        "_permalink": "/p/6671cf5ff4/",
-        "_abs_permalink": "https://pulse.tek2dayholdings.com/p/6671cf5ff4/",
-        "_summary_240": "Bitcoin ETFs may be sitting on their \u201cbiggest losses\u201d since launching in January 2024, but there is a silver lining, according to an ETF analyst.",
-        "_thumbnail": "https://pulse.tek2dayholdings.com/p/6671cf5ff4/thumbnail.png"
-      },
-      {
-        "title": "Coinbase premium hits yearly low, hinting at institutional selling",
-        "url": "https://cointelegraph.com/news/coinbase-premium-gap-falls-to-yearly-low-signalling-institutional-selling-cryptoquant?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-        "published_at": "2026-02-05T01:11:31-05:00",
-        "source": "Cointelegraph",
-        "summary": "Bitcoin\u2019s Coinbase Premium Gap has fallen to a yearly low, a move analysts say may reflect weaker relative demand on Coinbase-linked venues tied to institutional trading.",
-        "content_html": "",
-        "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTIvMDE5YjExODYtMjIxYy03MmEzLWIyZDUtMTNjMGQ3MTQ1Mjhk.jpg",
-        "summary_text": "Bitcoin\u2019s Coinbase Premium Gap has fallen to a yearly low, a move analysts say may reflect weaker relative demand on Coinbase-linked venues tied to institutional trading.",
-        "category": "fintech",
-        "_permalink": "/p/e1ad063c51/",
-        "_abs_permalink": "https://pulse.tek2dayholdings.com/p/e1ad063c51/",
-        "_summary_240": "Bitcoin\u2019s Coinbase Premium Gap has fallen to a yearly low, a move analysts say may reflect weaker relative demand on Coinbase-linked venues tied to institutional trading.",
-        "_thumbnail": "https://pulse.tek2dayholdings.com/p/e1ad063c51/thumbnail.png"
       }
     ]
+  },
+  "brief": {
+    "generated_at": "2026-02-08T02:06:39.322103-05:00",
+    "themes": [
+      "AI agents & coding",
+      "Earnings"
+    ],
+    "lede": "Pulse check: AI agents & coding and Earnings leading the day across AI, Software, and FinTech.",
+    "takeaways": [
+      {
+        "title": "Anthropic's Claude Opus 4.6 brings 1M token context and 'agent teams' to take on OpenAI's Codex",
+        "impact": "Anthropic on Thursday released Claude Opus 4.6 , a major upgrade to its flagship artificial intelligence model that the company says plans more carefully, sustains longer autonomous workflows, and outperforms competitors including OpenAI's...",
+        "url": "https://venturebeat.com/technology/anthropics-claude-opus-4-6-brings-1m-token-context-and-agent-teams-to-take",
+        "source": "VentureBeat",
+        "category": "ai"
+      },
+      {
+        "title": "Apple might let you use ChatGPT from CarPlay",
+        "impact": "CarPlay users could soon be able to use their chatbot of choice instead of Siri.",
+        "url": "https://www.theverge.com/transportation/875199/apple-carplay-third-party-chatbots-rumor",
+        "source": "The Verge",
+        "category": "ai"
+      },
+      {
+        "title": "Nvidia-Led Boom to Turn Chips Into Trillion-Dollar Industry",
+        "impact": "The semiconductor industry will reach $1 trillion in revenue this year for the first time ever, fueled by artificial intelligence and the spread of computer chips to virtually every part of the economy.",
+        "url": "https://www.bloomberg.com/news/articles/2026-02-06/nvidia-led-boom-set-to-turn-chips-into-trillion-dollar-industry",
+        "source": "Bloomberg Technology",
+        "category": "ai"
+      },
+      {
+        "title": "Tokyo Electron Lifts Outlook in Sign of AI-Spurred Chip Spending",
+        "impact": "Tokyo Electron Ltd.",
+        "url": "https://www.bloomberg.com/news/articles/2026-02-06/tokyo-electron-lifts-outlook-in-sign-of-ai-spurred-chip-spending",
+        "source": "Bloomberg Technology",
+        "category": "ai"
+      },
+      {
+        "title": "OpenAI launches new agentic coding model only minutes after Anthropic drops its own",
+        "impact": "The new model is built to accelerate the capabilities of Codex, the agentic coding tool OpenAI launched earlier this week.",
+        "url": "https://techcrunch.com/2026/02/05/openai-launches-new-agentic-coding-model-only-minutes-after-anthropic-drops-its-own/",
+        "source": "TechCrunch",
+        "category": "ai"
+      }
+    ],
+    "story_count": 5
   }
 }
