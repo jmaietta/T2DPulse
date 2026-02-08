@@ -1601,8 +1601,16 @@ def compute_pulse_brief(by_cat: dict, now_local, max_items: int = 6) -> dict:
         counts.update(_brief_extract_keywords(blob))
 
     # Remove globally-common topics (helps reduce "AI" / "users" type noise)
-    for t in _brief_global_topics:
-        counts.pop(t, None)
+    # NOTE: _brief_global_topics is a function; we need to call it with today's items.
+    all_items = [it for _cat, items in (by_cat or {}).items() for it in (items or [])]
+    global_topics = set(_brief_global_topics(all_items, top_n=6))
+
+    # counts keys are "display" tokens (e.g., "OpenAI", "AI", "Payments").
+    # Remove any chip whose lowercase form matches a global topic token.
+    if global_topics:
+        for k in list(counts.keys()):
+            if (k or "").lower() in global_topics:
+                counts.pop(k, None)
 
     # Keep top ~12 keywords
     keywords = [w for (w, _n) in counts.most_common(12) if w]
