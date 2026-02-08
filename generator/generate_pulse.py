@@ -1384,6 +1384,22 @@ def _brief_clean_text(s: str) -> str:
     s = re.sub(r"\s+", " ", s)
     return s
 
+def _brief_first_sentence(text: str, max_chars: int = 180) -> str:
+    """Return a short first-sentence style blurb from a summary/snippet."""
+    s = _brief_clean_text(text)
+    if not s:
+        return ""
+    # Normalize common truncation artifacts.
+    s = s.replace("…", ". ").replace("...", ". ")
+    # Split on sentence-ish boundaries.
+    parts = re.split(r'(?<=[.!?])\s+', s, maxsplit=1)
+    first = parts[0].strip()
+    # If it's still too long (or no punctuation), hard-trim.
+    if len(first) > max_chars:
+        first = first[:max_chars].rsplit(" ", 1)[0].rstrip(" ,;:-")
+        first = first + "…"
+    return first
+
 def _brief_tokens(s: str) -> list:
     s = _brief_clean_text(s).lower()
     toks = re.split(r"[^a-z0-9]+", s)
