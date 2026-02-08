@@ -795,6 +795,36 @@
       text-decoration: underline;
       text-underline-offset: 2px;
     }
+
+    /* Brief filters + inline actions */
+    .pb-tags{
+      display:flex;
+      align-items: center;
+      gap:.6rem;
+      margin: 0;
+      flex-wrap: wrap;
+    }
+    .pb-tags-label{
+      font-size:.72rem;
+      font-weight: 900;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .pb-read{
+      font-weight: 800;
+      color: inherit;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+      margin-left: .25rem;
+      white-space: nowrap;
+    }
+    .pb-src{
+      color: var(--muted);
+      font-size: .78rem;
+      font-weight: 700;
+      white-space: nowrap;
+    }
 .pb-chips{
       display:flex;
       flex-wrap:wrap;
@@ -802,6 +832,8 @@
       margin: .75rem 0 1rem;
     }
     .pb-chip{
+      appearance:none;
+      cursor:pointer;
       font-size:.78rem;
       font-weight:800;
       letter-spacing:.02em;
@@ -811,7 +843,9 @@
       background: rgba(255,255,255,0.03);
       color: var(--muted);
     }
-    .pb-list{
+    .pb-chip:hover{ background: rgba(15, 23, 42, 0.04); color: var(--ink-soft); }
+    .pb-chip:active{ transform: translateY(1px); }
+.pb-list{
       list-style:none;
       padding:0;
       margin:0;
@@ -1119,6 +1153,24 @@
     });
     
     input.addEventListener('input', () => applyFilter(input.value), { passive: true });
+
+    // Brief filter chips: clicking sets the search box and filters the list (no page reload)
+    document.addEventListener('click', (e) => {
+      const chip = e.target && e.target.closest ? e.target.closest('.pb-chip[data-q]') : null;
+      if (!chip) return;
+      const q = chip.getAttribute('data-q') || (chip.textContent || '').trim();
+      if (!q) return;
+      input.value = q;
+      applyFilter(q);
+      try {
+        const u = new URL(location.href);
+        u.searchParams.set('q', q);
+        history.replaceState({}, '', u);
+      } catch (err) {}
+      if (window.innerWidth > 720) {
+        container.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
 
     // Check for initial query param
     try {
