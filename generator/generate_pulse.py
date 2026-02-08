@@ -1341,24 +1341,6 @@ _BRIEF_STOPWORDS = {
     "breaking","live","read","watch","video","podcast","exclusive","analysis","opinion",
 }
 
-# Add broader editorial stopwords (months, weekdays, corporate suffixes, and generic label-words)
-_BRIEF_STOPWORDS.update({
-    # months
-    "jan","january","feb","february","mar","march","apr","april","jun","june","jul","july","aug","august",
-    "sep","sept","september","oct","october","nov","november","dec","december",
-    # weekdays
-    "mon","monday","tue","tues","tuesday","wed","wednesday","thu","thur","thurs","thursday","fri","friday","sat","saturday","sun","sunday",
-    # corporate/legal boilerplate
-    "inc","inc.","corp","corp.","corporation","co","co.","company","ltd","ltd.","limited","llc","plc","ag","sa","se","nv","gmbh","group","holdings",
-    # role words that read weird as topics
-    "ceo","cfo","cto","cio","svp","evp","vp",
-    # UI/meta words
-    "source","sources","brief","pulse","newsletter",
-    # generic tech words that are too vague as a *theme*
-    "model","models",
-})
-
-
 _BRIEF_IMPACT_PATTERNS = [
     r"\b(acquire|acquires|acquired|acquisition|merge|merger)\b",
     r"\b(ipo|public offering|files for ipo)\b",
@@ -1383,22 +1365,6 @@ def _brief_clean_text(s: str) -> str:
     s = (s or "").strip()
     s = re.sub(r"\s+", " ", s)
     return s
-
-def _brief_first_sentence(text: str, max_chars: int = 180) -> str:
-    """Return a short first-sentence style blurb from a summary/snippet."""
-    s = _brief_clean_text(text)
-    if not s:
-        return ""
-    # Normalize common truncation artifacts.
-    s = s.replace("…", ". ").replace("...", ". ")
-    # Split on sentence-ish boundaries.
-    parts = re.split(r'(?<=[.!?])\s+', s, maxsplit=1)
-    first = parts[0].strip()
-    # If it's still too long (or no punctuation), hard-trim.
-    if len(first) > max_chars:
-        first = first[:max_chars].rsplit(" ", 1)[0].rstrip(" ,;:-")
-        first = first + "…"
-    return first
 
 def _brief_tokens(s: str) -> list:
     s = _brief_clean_text(s).lower()
@@ -1579,8 +1545,19 @@ def _brief_domain(url: str) -> str:
     except Exception:
         return ""
 
-def _brief_pick_diverse(items: list, max_n: int, now_local: datetime, max_per_domain: int = 1, sim_threshold: float = 0.55) -> list:
+def _brief_pick_diverse(items: list, max_n: int = None, now_local=None, max_per_domain: int = 1, sim_threshold: float = 0.55, max_total: int = None) -> list:
     """Pick items with high score but avoid near-duplicates + domain clustering."""
+# Backward-compatible arg name: allow max_total (older call sites)
+if max_total is not None:
+    max_n = max_total
+if max_n is None:
+    max_n = 6
+if now_local is None:
+    try:
+        now_local = now_et()
+    except Exception:
+        now_local = datetime.now(timezone.utc)
+
     chosen = []
     domain_counts = {}
 
@@ -1608,135 +1585,84 @@ def _brief_pick_diverse(items: list, max_n: int, now_local: datetime, max_per_do
 
     return chosen
 
-# ---------------------------------------------------------------------------
-# Daily Brief: editorial-style summary
-# ---------------------------------------------------------------------------
+def _brief_first_sentence(s: str) -> str:
+    """Return a clean first sentence for brief 'impact' lines."""
+    if not s:
+        return ""
+    s = clean_text(strip_html_to_text(s), 240).strip()
+    if not s:
+        return ""
+    parts = re.split(r'(?<=[.!?])\s+', s, maxsplit=1)
+    out = (parts[0] or "").strip()
+    if len(out) < 40 and len(parts) > 1:
+        out2 = (out + " " + parts[1][:140]).strip()
+        out = re.split(r'(?<=[.!?])\s+', out2, maxsplit=1)[0].strip()
+    return out
 
-_BRIEF_THEME_RULES: list[tuple[str, list[str]]] = [
-    ("AI agents & coding", [r"\bagentic\b", r"\bagents?\b", r"\bcodex\b", r"\bcoding\b", r"\bdeveloper(s)?\b", r"\bcopilot\b"]),
-    ("IPO watch", [r"\bipo\b", r"\bfiles?\b", r"\bfilings?\b", r"\bprospectus\b", r"\bpublic offering\b"]),
-    ("Efficiency cuts", [r"\blayoff(s)?\b", r"\bjob cuts?\b", r"\bstaff(ing)?\b", r"\bheadcount\b", r"\bcost cuts?\b", r"\befficienc(y|ies)\b"]),
-    ("Crypto markets", [r"\bbitcoin\b", r"\bcrypto\b", r"\bstablecoin(s)?\b", r"\beth\b", r"\bmining\b", r"\bhashrate\b", r"\bdifficulty\b"]),
-    ("Payments & cards", [r"\bpayments?\b", r"\bvisa\b", r"\bmastercard\b", r"\bcard(s)?\b", r"\bmerchant(s)?\b", r"\bcheckout\b"]),
-    ("Regulation & policy", [r"\bsec\b", r"\bcfpb\b", r"\bftc\b", r"\bdoj\b", r"\bantitrust\b", r"\bregulat\w*\b", r"\bban(ned|s)?\b"]),
-    ("Cybersecurity", [r"\bransom\w*\b", r"\bhack\w*\b", r"\bbreach\w*\b", r"\bmalware\b", r"\bphish\w*\b", r"\bexploit\w*\b", r"\bzero[- ]day\b"]),
-    ("Earnings & guidance", [r"\bearnings\b", r"\bresults\b", r"\bguidance\b", r"\brevenue\b", r"\bprofit\b", r"\bquarter\b", r"\bq[1-4]\b"]),
+_BRIEF_THEME_RULES = [
+    ("Crypto markets", [r"\bcrypto\b", r"\bbitcoin\b", r"\bethereum\b", r"\bstablecoin\b", r"\bdefi\b", r"\bmining\b"]),
+    ("AI agents & coding", [r"\bagent\b", r"\bagents\b", r"\bagentic\b", r"\bcodex\b", r"\bcopilot\b", r"\bcoding\b", r"\bdeveloper\b", r"\bcode\b"]),
+    ("IPO watch", [r"\bipo\b", r"\bfiling\b", r"\bs-1\b", r"\bprospectus\b", r"\bpublic\b"]),
+    ("Earnings", [r"\bearnings\b", r"\bresults\b", r"\bguidance\b", r"\brevenue\b", r"\bprofit\b"]),
+    ("Regulation", [r"\bsec\b", r"\bcfpb\b", r"\bftc\b", r"\bregulator\b", r"\bban\b", r"\blaw\b"]),
+    ("Security", [r"\bhack\b", r"\bbreach\b", r"\bransom\b", r"\bmalware\b", r"\bsecurity\b"]),
+    ("Efficiency cuts", [r"\blayoff\b", r"\bcuts\b", r"\bheadcount\b", r"\befficiency\b", r"\bjob\b", r"\beliminated\b"]),
 ]
 
-_BRIEF_BANNED_THEMES = {"ai", "software", "fintech", "model", "models", "source", "ceo"}
-
-def _brief_infer_themes(items: list[dict], fallback_keywords: list[str] | None = None, max_themes: int = 3) -> list[str]:
-    """Infer 2–3 editorial themes from the selected items (deterministic, no LLM)."""
+def _brief_infer_themes(items: list, max_themes: int = 3) -> list:
+    """Infer editorial themes from the picked items using simple rules."""
     if not items:
         return []
-    counts = Counter()
-    for it in items:
-        t = (it.get("title") or "").strip()
-        s = (it.get("summary") or it.get("summary_text") or it.get("description") or it.get("snippet") or "").strip()
-        blob = f"{t} {s}".lower()
-        for label, pats in _BRIEF_THEME_RULES:
-            if any(re.search(p, blob) for p in pats):
-                counts[label] += 1
-
+    blob = " ".join([
+        ((it.get("title") or "") + " " + (it.get("summary") or it.get("description") or it.get("snippet") or it.get("summary_text") or "")).lower()
+        for it in (items or [])
+    ])
     themes = []
-    for label, _ in counts.most_common():
-        themes.append(label)
+    for label, pats in _BRIEF_THEME_RULES:
+        if any(re.search(p, blob, flags=re.I) for p in pats):
+            themes.append(label)
         if len(themes) >= max_themes:
             break
+    return themes
 
-    # Fallback: use cleaned keywords (proper nouns) if we didn't get enough
-    if fallback_keywords and len(themes) < max_themes:
-        for k in fallback_keywords:
-            kk = (k or "").strip()
-            if not kk:
-                continue
-            if kk.lower() in _BRIEF_BANNED_THEMES or kk.lower() in _BRIEF_STOPWORDS:
-                continue
-            if kk.lower() in {t.lower() for t in themes}:
-                continue
-            themes.append(kk)
-            if len(themes) >= max_themes:
-                break
-
-    return themes[:max_themes]
-
-def _brief_make_lede(themes: list[str]) -> str:
-    """Single-sentence lede that reads like an edited desk note."""
+def _brief_lede(themes: list) -> str:
     if not themes:
-        return "Today’s Pulse highlights the most important developments across AI, Software, and FinTech."
+        return ""
     if len(themes) == 1:
-        return f"Top storyline today: {themes[0]} across AI, Software, and FinTech."
-    if len(themes) == 2:
-        return f"Top storylines today: {themes[0]} and {themes[1]} across AI, Software, and FinTech."
-    return f"Top storylines today: {themes[0]}, {themes[1]}, and {themes[2]} across AI, Software, and FinTech."
-
-def _brief_watch_candidate(items: list[dict]) -> dict | None:
-    """Pick a single 'Watch' item: time-sensitive or forward-looking."""
-    if not items:
-        return None
-    watch_re = re.compile(r"\b(earnings|guidance|ipo|filing|files|sec|cfpb|ftc|doj|deadline|vote|hearing|tomorrow|this week|next week)\b", re.I)
-    for it in items:
-        blob = f"{it.get('title','')} {it.get('summary','')} {it.get('description','')}".lower()
-        if watch_re.search(blob):
-            return it
-    return items[0]
+        t = themes[0]
+    elif len(themes) == 2:
+        t = f"{themes[0]} and {themes[1]}"
+    else:
+        t = f"{themes[0]}, {themes[1]}, and {themes[2]}"
+    return f"Top storylines today: {t} across AI, Software, and FinTech."
 
 def compute_pulse_brief(by_cat: dict, now_local, max_items: int = 6) -> dict:
-    """Build an editorial-style 'Brief' (lede + takeaways + topic chips)."""
+    """Build an editorial brief (themes + takeaways) from today's articles."""
     if not by_cat:
         return {}
 
-    # Flatten all items
-    all_items: list[dict] = []
-    for _cat, items in (by_cat or {}).items():
-        for it in (items or []):
-            if isinstance(it, dict):
-                all_items.append(it)
-
+    all_items = [it for _cat, items in (by_cat or {}).items() for it in (items or [])]
     if not all_items:
         return {}
 
-    # Keywords from titles+summaries (used for topic chips)
-    blob_parts = []
-    for it in all_items:
-        title = (it.get("title") or "").strip()
-        summ = (it.get("summary") or it.get("summary_text") or it.get("description") or it.get("snippet") or "").strip()
-        if title:
-            blob_parts.append(title)
-        if summ:
-            blob_parts.append(summ)
-    keywords = _brief_extract_keywords("\n".join(blob_parts))
+    picked = _brief_pick_diverse(all_items, now_local=now_local, max_n=max_items, max_per_domain=1, sim_threshold=0.55)
+    if not picked:
+        picked = all_items[:max_items]
 
-    # Pick a diverse set of items for the bullets
-    try:
-        picked = _brief_pick_diverse(all_items, max_n=max_items, now_local=now_local, max_per_domain=1, sim_threshold=0.55)
-    except TypeError:
-        # Backward compatibility if signature differs
-        picked = _brief_pick_diverse(all_items, max_items, now_local, 1, 0.55)
+    themes = _brief_infer_themes(picked, max_themes=3)
+    lede = _brief_lede(themes)
 
-    picked = picked or all_items[:max_items]
-
-    themes = _brief_infer_themes(picked, fallback_keywords=keywords, max_themes=3)
-    lede = _brief_make_lede(themes)
-
-    # Build takeaways: include headline for context, but keep the copy tight
     takeaways = []
-    for it in picked:
+    for it in picked[:max_items]:
         title = (it.get("title") or "").strip()
-        url = (it.get("link") or it.get("url") or "").strip()
-        src = (it.get("source") or it.get("publisher") or it.get("domain") or "").strip()
+        if not title:
+            continue
 
-        summary = (it.get("summary") or it.get("summary_text") or it.get("description") or it.get("snippet") or "").strip()
+        summary = (it.get("summary") or it.get("description") or it.get("snippet") or it.get("summary_text") or "").strip()
         impact = _brief_first_sentence(summary) if summary else ""
-        # Avoid repeating the headline verbatim as the takeaway text
-        if impact and title:
-            t0 = title.lower().strip()
-            i0 = impact.lower().strip()
-            if i0.startswith(t0) or t0 in i0[:max(40, len(t0))]:
-                impact = ""
-        if not impact:
-            # Minimal fallback: preserve meaning without duplicating the headline
-            impact = "Why it matters: this is one of the day’s most discussed developments."
+
+        url = (it.get("url") or "").strip()
+        src = (it.get("source") or it.get("domain") or "").strip()
 
         takeaways.append({
             "title": title,
@@ -1745,71 +1671,60 @@ def compute_pulse_brief(by_cat: dict, now_local, max_items: int = 6) -> dict:
             "source": src,
         })
 
-    # Watch: choose a time-sensitive item *not already used* when possible
-    used_urls = {t.get("url") for t in takeaways if t.get("url")}
-    watch_pool = [it for it in all_items if (it.get("link") or it.get("url")) not in used_urls]
-    watch_it = _brief_watch_candidate(watch_pool) or None
-    watch = None
-    if watch_it:
-        watch = {
-            "title": (watch_it.get("title") or "").strip(),
-            "url": (watch_it.get("link") or watch_it.get("url") or "").strip(),
-        }
-
     return {
+        "generated_at": now_local.isoformat() if hasattr(now_local, "isoformat") else "",
         "themes": themes,
         "lede": lede,
         "takeaways": takeaways,
-        "watch": watch,
-        "keywords": keywords[:12],
     }
 
 def render_pulse_brief_html(brief: dict, date_str: str = "") -> str:
-    """Render the Brief as a compact editorial summary block.
-
-    Per UX: no 'Watch' line and no topic tags/pills (they were confusing and low-signal).
-    """
+    """Render the Brief card."""
     if not brief:
         return ""
 
     themes = brief.get("themes") or []
-    lede = brief.get("lede") or ""
+    lede = (brief.get("lede") or "").strip()
     takeaways = brief.get("takeaways") or []
 
     theme_str = " · ".join([html.escape(t) for t in themes if t]) if themes else ""
-    hdr_right = f"<span class='pb-themes'>{theme_str}</span>" if theme_str else ""
+    themes_html = f"<span class='pb-themes'>{theme_str}</span>" if theme_str else ""
 
-    # Takeaways list (headline + context + read link)
-    li = []
-    for row in takeaways:
-        title = (row.get("title") or "").strip()
-        url = (row.get("url") or "").strip()
-        source = (row.get("source") or "").strip()
-        impact = (row.get("impact") or "").strip()
+    items_html = []
+    for t in takeaways[:8]:
+        title = html.escape((t.get("title") or "").strip())
+        impact = html.escape((t.get("impact") or "").strip())
+        url = (t.get("url") or "").strip()
+        src = html.escape((t.get("source") or "").strip())
 
-        title_html = f"<strong>{html.escape(title)}</strong>" if title else "<strong>Item</strong>"
-        impact_html = f" — <span class='pb-impact'>{html.escape(impact)}</span>" if impact else ""
-        read_html = f" <a class='pb-read' href='{html.escape(url)}' target='_blank' rel='noopener'>Read</a>" if url else ""
-        src_html = f" <span class='pb-src'>· {html.escape(source)}</span>" if source else ""
+        read = f"<a class='pb-read' href='{html.escape(url)}' target='_blank' rel='noopener'>Read</a>" if url else ""
+        src_span = f"<span class='pb-src'>· {src}</span>" if src else ""
 
-        li.append(f"<li>{title_html}{impact_html}{read_html}{src_html}</li>")
+        if not title:
+            continue
 
-    takeaways_html = f"<ul class='pb-takeaways'>" + "".join(li) + "</ul>" if li else ""
+        if impact:
+            items_html.append(f"<li><strong>{title}</strong> — <span class='pb-impact'>{impact}</span> {read} {src_span}</li>")
+        else:
+            items_html.append(f"<li><strong>{title}</strong> {read} {src_span}</li>")
+
+    takeaways_html = "<ul class='pb-takeaways'>" + "".join(items_html) + "</ul>" if items_html else ""
     lede_html = f"<p class='pb-lede'>{html.escape(lede)}</p>" if lede else ""
 
     return (
         "<details class='pb' open>"
-        "<summary class='pb-head'>"
-        "<span class='pb-pill'>Brief</span>"
-        + hdr_right +
-        "<span class='pb-chev' aria-hidden='true'>▾</span>"
+        "<summary>"
+        "<span class='pb-pill'>BRIEF</span>"
+        f"{themes_html}"
+        "<span class='pb-chev' aria-hidden='true'>▲</span>"
         "</summary>"
         "<div class='pb-body'>"
-        + lede_html +
-        takeaways_html +
+        f"{lede_html}"
+        f"{takeaways_html}"
         "</div>"
         "</details>"
     )
+
 
 def build_section(date_str: str, by_cat: dict, brief: dict = None) -> str:
     """Build HTML section from categorized items."""
@@ -1873,7 +1788,7 @@ def build_section(date_str: str, by_cat: dict, brief: dict = None) -> str:
                 dt_str = date_str
             summary_txt = clean_text(strip_html_to_text(it.get("summary_text", "")), 180)
             summary_html = html.escape(summary_txt)
-            top_cls = " top" if idx == 0 else ""
+            top_cls = ""  # no hero/top article
             thumb_html = f'<img src="{thumbnail}" alt="{html.escape(title_raw, quote=True)}" class="article-thumb" loading="lazy">' if thumbnail else ''
 
             # CLEANED UP HTML STRUCTURE (No trends)
