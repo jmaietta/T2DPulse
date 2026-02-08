@@ -1339,6 +1339,7 @@ _BRIEF_STOPWORDS = {
     # news boilerplate
     "today","yesterday","week","year","years","month","months","daily","report","reports","update","updates",
     "breaking","live","read","watch","video","podcast","exclusive","analysis","opinion",
+    "jan","january","feb","february","mar","march","apr","april","may","jun","june","jul","july","aug","august","sep","sept","september","oct","october","nov","november","dec","december","mon","monday","tue","tues","tuesday","wed","wednesday","thu","thurs","thursday","fri","friday","sat","saturday","sun","sunday","source","sources","ceo","ceos","inc","co","corp","ltd","llc","plc","group","groups","company","companies",
 }
 
 _BRIEF_IMPACT_PATTERNS = [
@@ -1440,7 +1441,7 @@ def _brief_extract_keywords(text_blob: str) -> list[str]:
         "model": "Model",
         "llm": "LLM",
         "gpu": "GPU",
-        "chips": "Chips",
+        "chips": "Semiconductors",
         "cloud": "Cloud",
     }
     toks = _brief_tokens(blob)
@@ -1545,8 +1546,12 @@ def _brief_domain(url: str) -> str:
     except Exception:
         return ""
 
-def _brief_pick_diverse(items: list, max_n: int, now_local: datetime, max_per_domain: int = 1, sim_threshold: float = 0.55) -> list:
+def _brief_pick_diverse(items: list, max_n: int, now_local: datetime, max_per_domain: int = 1, sim_threshold: float = 0.55, *, max_total: Optional[int] = None) -> list:
     """Pick items with high score but avoid near-duplicates + domain clustering."""
+    # Backward-compatible alias: allow callers to pass max_total instead of max_n
+    if max_total is not None:
+        max_n = max_total
+
     chosen = []
     domain_counts = {}
 
@@ -1767,7 +1772,7 @@ def compute_pulse_brief(by_cat: dict, now_local, max_items: int = 6) -> dict:
 
 
 def render_pulse_brief_html(brief: dict, date_str: str = "") -> str:
-    """Render the Editorial Brief (lede + takeaways + watch + tags + top links)."""
+    """Render the Editorial Brief (lede + takeaways + watch + filters)."""
     if not brief:
         return ""
 
@@ -1784,19 +1789,28 @@ def render_pulse_brief_html(brief: dict, date_str: str = "") -> str:
     # Lede
     lede_html = f"<p class='pb-lede'>{html.escape(lede)}</p>" if lede else ""
 
-    # Takeaways (3–6)
+    # Takeaways (3–6): *why it matters* bullets (avoid repeating headlines)
     li = []
     for t in takeaways[:6]:
-        title = html.escape((t.get("title") or "").strip())
-        impact = html.escape((t.get("impact") or "").strip())
-        if not title and not impact:
+        impact = (t.get("impact") or "").strip()
+        if not impact:
             continue
-        if title and impact:
-            li.append(f"<li><strong>{title}</strong> — <em>{impact}</em></li>")
-        elif title:
-            li.append(f"<li><strong>{title}</strong></li>")
-        else:
-            li.append(f"<li>{impact}</li>")
+        impact_html = html.escape(impact)
+
+        url = (t.get("url") or "").strip()
+        src = (t.get("source") or "").strip()
+
+        read_html = ""
+        if url:
+            read_html = (
+                " <a class='pb-read' href='"
+                + html.escape(url)
+                + "' target='_blank' rel='noopener'>Read</a>"
+            )
+
+        src_html = f" <span class='pb-src'>· {html.escape(src)}</span>" if src else ""
+        li.append(f"<li>{impact_html}{read_html}{src_html}</li>")
+
     takeaways_html = f"<ul class='pb-takeaways'>{''.join(li)}</ul>" if li else ""
 
     # Watch line (linked if possible)
@@ -1811,46 +1825,22 @@ def render_pulse_brief_html(brief: dict, date_str: str = "") -> str:
         else:
             watch_html = f"<p class='pb-watch'><strong>Watch:</strong> {html.escape(watch_title)}</p>"
 
-    # Chips as topic tags (retain)
-    chip_html = ""
+    # Filters (topic tags)
+    filter_html = ""
     if keywords:
-        chips = "".join([f"<span class='pb-chip'>{html.escape(k)}</span>" for k in keywords[:12] if k])
-        chip_html = f"<div class='pb-chips' aria-label='Topics'>{chips}</div>"
-
-    # Top links list (use the same items as takeaways; cap at 6)
-    items_html = ""
-    if takeaways:
-        rows = []
-        for t in takeaways[:6]:
-            url = (t.get("url") or "").strip()
-            if not url:
-                continue
-            title = html.escape((t.get("title") or "").strip())
-            src = html.escape((t.get("source") or "").strip())
-            cat = html.escape((t.get("category") or "").strip())
-            dt = (t.get("published_at") or "").strip()
-            meta_parts = [p for p in [src, cat, dt] if p]
-            meta = " · ".join(meta_parts)
-
-            img = (t.get("image_url") or "").strip()
-            if img:
-                thumb = f"<img class='pb-thumb' src='{html.escape(img)}' alt='' loading='lazy'>"
-            else:
-                thumb = "<div class='pb-thumb pb-thumb--empty' aria-hidden='true'></div>"
-
-            rows.append(
-                "<li class='pb-item'>"
-                f"<a href='{html.escape(url)}' target='_blank' rel='noopener'>"
-                f"{thumb}"
-                "<div>"
-                f"<div class='pb-title'>{title}</div>"
-                f"<div class='pb-meta'>{meta}</div>"
-                "</div>"
-                "</a>"
-                "</li>"
-            )
-        if rows:
-            items_html = f"<ul class='pb-list' aria-label='Top links'>{''.join(rows)}</ul>"
+        buttons = "".join(
+            [
+                f"<button class='pb-chip' type='button' data-q='{html.escape(k, quote=True)}'>{html.escape(k)}</button>"
+                for k in keywords[:12]
+                if k
+            ]
+        )
+        filter_html = (
+            "<div class='pb-tags' aria-label='Filters'>"
+            "<span class='pb-tags-label'>Filters:</span>"
+            f"<div class='pb-chips'>{buttons}</div>"
+            "</div>"
+        )
 
     # Build details card (open by default; matches CSS already in template)
     return (
@@ -1864,9 +1854,8 @@ def render_pulse_brief_html(brief: dict, date_str: str = "") -> str:
         f"{lede_html}"
         f"{takeaways_html}"
         f"{watch_html}"
-        f"{chip_html}"
-        f"{items_html}"
-        "<p class='pb-note'>Skim the takeaways, then open any link that matches your interests.</p>"
+        f"{filter_html}"
+        "<p class='pb-note'>Skim the takeaways, then scroll for the full article list.</p>"
         "</div>"
         "</details>"
     )
