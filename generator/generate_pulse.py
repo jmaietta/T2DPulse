@@ -23,7 +23,7 @@ from typing import Optional
 from dataclasses import dataclass, field
 from datetime import datetime, timedelta, timezone
 from urllib.parse import urlparse, urljoin
-from collections import defaultdict, deque
+from collections import defaultdict, deque, Counter
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 import feedparser
@@ -1320,10 +1320,540 @@ def write_permalink_page(it: dict) -> str:
 # HTML GENERATION
 # ============================================================================
 
-def build_section(date_str: str, by_cat: dict) -> str:
+
+# ============================================================================
+# PULSE BRIEF (Expandable Daily Summary) - Heuristic / No-LLM
+# ============================================================================
+#
+# Summarizes the *subject matter* of the day's items using only what we have in
+# RSS (titles + snippets). No source weighting and no scraping required.
+# Deterministic, fast, and zero-cost.
+#
+
+_BRIEF_STOPWORDS = {
+    "a","an","and","are","as","at","be","been","but","by","can","could","did","do","does","for","from",
+    "had","has","have","he","her","hers","him","his","how","i","if","in","into","is","it","its","just",
+    "may","more","most","new","no","not","of","on","or","our","out","over","s","she","so","that","the",
+    "their","them","then","there","these","they","this","those","to","too","under","up","us","was","we",
+    "were","what","when","where","which","who","why","will","with","you","your",
+    # news boilerplate
+    "today","yesterday","week","year","years","month","months","daily","report","reports","update","updates",
+    "breaking","live","read","watch","video","podcast","exclusive","analysis","opinion",
+}
+
+_BRIEF_IMPACT_PATTERNS = [
+    r"\b(acquire|acquires|acquired|acquisition|merge|merger)\b",
+    r"\b(ipo|public offering|files for ipo)\b",
+    r"\b(raises|raised|funding|round|seed|series\s?[a-e])\b",
+    r"\b(layoff|layoffs|cuts|cutting|job cuts)\b",
+    r"\b(lawsuit|sues|suing|settlement|antitrust|doj|ftc)\b",
+    r"\b(sec|regulator|regulatory|ban|banned)\b",
+    r"\b(release|releases|launch|launches|introduces|unveils|ships)\b",
+    r"\b(earnings|guidance|revenue|profit|loss|forecast)\b",
+    r"\b(chip|gpu|semiconductor|nvidia|amd|intel)\b",
+    r"\b(model|llm|chatgpt|gpt-?4|gpt-?5|claude|gemini)\b",
+    r"\b(cyber|breach|hack|ransomware|outage)\b",
+]
+
+_BRIEF_BIG_NAMES = [
+    "openai","anthropic","nvidia","microsoft","apple","google","alphabet","meta","amazon","aws",
+    "tesla","oracle","ibm","salesforce","adobe","intel","amd","tencent","samsung","tsmc",
+    "coinbase","stripe","paypal","visa","mastercard",
+]
+
+def _brief_clean_text(s: str) -> str:
+    s = (s or "").strip()
+    s = re.sub(r"\s+", " ", s)
+    return s
+
+def _brief_tokens(s: str) -> list:
+    s = _brief_clean_text(s).lower()
+    toks = re.split(r"[^a-z0-9]+", s)
+    out = []
+    for t in toks:
+        if not t or len(t) < 3:
+            continue
+        if t in _BRIEF_STOPWORDS:
+            continue
+        if t.isdigit() and len(t) <= 2:
+            continue
+        out.append(t)
+    return out
+
+
+
+def _brief_extract_keywords(text_blob: str) -> list[str]:
+    """Extract candidate *display* keywords for the Daily Brief chips.
+
+    We purposely keep this lightweight and deterministic (no LLM calls).
+    It looks at titles + RSS summaries and tries to surface repeated proper nouns,
+    acronyms, and a small set of high-signal topic words.
+    """
+    if not text_blob:
+        return []
+
+    blob = text_blob
+    out: list[str] = []
+    seen = set()
+
+    def _add(tok: str):
+        t = (tok or "").strip()
+        if not t:
+            return
+        key = t.lower()
+        if key in _BRIEF_STOPWORDS:
+            return
+        if len(key) < 2:
+            return
+        if key in seen:
+            return
+        seen.add(key)
+        out.append(t)
+
+    # 1) Proper nouns / product names (Anthropic, OpenAI, Microsoft, Blue Prism, etc.)
+    # Keep single tokens; multi-word entities will often show up as repeated single tokens ("Microsoft").
+    for m in re.finditer(r"\b[A-Z][A-Za-z0-9&.+_-]{2,}\b", blob):
+        w = m.group(0)
+        if w.lower() in _BRIEF_STOPWORDS:
+            continue
+        if w in {"The", "A", "An"}:
+            continue
+        _add(w)
+
+    # 2) Acronyms (AI, GPU, SEC, ETF, etc.)
+    for m in re.finditer(r"\b[A-Z]{2,}\b", blob):
+        _add(m.group(0))
+
+    # 3) High-signal topic words from normalized tokens
+    topic_map = {
+        "ai": "AI",
+        "crypto": "Crypto",
+        "fintech": "FinTech",
+        "security": "Security",
+        "privacy": "Privacy",
+        "payments": "Payments",
+        "banking": "Banking",
+        "stablecoins": "Stablecoins",
+        "regulation": "Regulation",
+        "policy": "Policy",
+        "models": "Models",
+        "model": "Model",
+        "llm": "LLM",
+        "gpu": "GPU",
+        "chips": "Chips",
+        "cloud": "Cloud",
+    }
+    toks = _brief_tokens(blob)
+    for t in toks:
+        if t in topic_map:
+            _add(topic_map[t])
+
+    return out
+
+def _brief_jaccard_sim(a: str, b: str) -> float:
+    """Jaccard similarity of token sets for two strings (0..1)."""
+    sa = set(_brief_tokens(a or ""))
+    sb = set(_brief_tokens(b or ""))
+    if not sa or not sb:
+        return 0.0
+    inter = sa.intersection(sb)
+    union = sa.union(sb)
+    if not union:
+        return 0.0
+    return len(inter) / len(union)
+
+
+def _brief_top_keyword(s: str) -> str:
+    toks = _brief_tokens(s)
+    if not toks:
+        return ""
+    freq = defaultdict(int)
+    for t in toks:
+        freq[t] += 1
+    return max(freq.items(), key=lambda kv: kv[1])[0]
+
+def _brief_global_topics(items: list, top_n: int = 6) -> list:
+    freq = defaultdict(int)
+    for it in items:
+        txt = f"{it.get('title','')} {it.get('summary_text','')} {it.get('summary','')}"
+        for t in _brief_tokens(txt):
+            freq[t] += 1
+
+    def _score(kv):
+        k, v = kv
+        bonus = 2 if k in _BRIEF_BIG_NAMES else 0
+        penalty = 2 if k in ("ai","amp","via","new") else 0
+        return (v + bonus - penalty, len(k))
+
+    ranked = sorted(freq.items(), key=_score, reverse=True)
+    return [k for k, _ in ranked[:top_n]]
+
+def _brief_article_score(it: dict, now_local: datetime) -> float:
+    """Score articles for the brief — topicality/impact first, recency second."""
+    title = _brief_clean_text(it.get("title",""))
+    summ = _brief_clean_text(it.get("summary_text","") or it.get("summary",""))
+    blob = f"{title} {summ}".lower()
+
+    dt = safe_parse_dt(it.get("published_at"))
+    if dt:
+        try:
+            dt_l = dt.astimezone(TZ)
+            hours = max(0.0, (now_local - dt_l).total_seconds() / 3600.0)
+        except Exception:
+            hours = 24.0
+    else:
+        hours = 24.0
+
+    # Recency: gentle decay — keeps recent articles competitive but doesn't dominate
+    recency = math.exp(-hours / 24.0)  # ~0.37 after 24h
+
+    # Impact: primary driver of score
+    impact = 0.0
+    for pat in _BRIEF_IMPACT_PATTERNS:
+        if re.search(pat, blob):
+            impact += 1.0
+
+    for nm in _BRIEF_BIG_NAMES:
+        if nm in blob:
+            impact += 0.5
+
+    # Monetary figures signal hard news
+    if re.search(r"[$€£]\s?\d", title) or re.search(r"\b\d+(\.\d+)?\s?(billion|million|bn|m)\b", blob):
+        impact += 0.8
+
+    # Substantive summary bonus — articles with real content rank higher
+    if len(summ) > 120:
+        impact += 0.4
+    elif len(summ) > 60:
+        impact += 0.2
+
+    # Penalize very short/vague titles
+    if len(title) < 18:
+        impact -= 0.5
+
+    # Impact-first weighting: topicality drives selection, recency breaks ties
+    return (0.40 * recency) + (1.0 * impact)
+
+def _brief_word_shingles(text: str, k: int = 3) -> set:
+    text = (text or "").lower()
+    text = re.sub(r"[^a-z0-9\s]+", " ", text)
+    words = [w for w in text.split() if len(w) > 2]
+    if len(words) < k:
+        return set(words)
+    return {" ".join(words[i:i+k]) for i in range(0, len(words) - k + 1)}
+
+def _brief_title_similarity(a: str, b: str) -> float:
+    sa = _brief_word_shingles(a, 3)
+    sb = _brief_word_shingles(b, 3)
+    if not sa or not sb:
+        return 0.0
+    return len(sa & sb) / len(sa | sb)
+
+def _brief_domain(url: str) -> str:
+    try:
+        ext = tldextract.extract(url or "")
+        dom = ".".join([p for p in [ext.domain, ext.suffix] if p])
+        return (dom or "").lower()
+    except Exception:
+        return ""
+
+def _brief_pick_diverse(items: list, max_n: int = None, now_local=None, max_per_domain: int = 2, sim_threshold: float = 0.55, max_total: int = None) -> list:
+    """Pick items with high score but avoid near-duplicates + domain clustering."""
+    # Backward-compatible arg name: allow max_total (older call sites)
+    if max_total is not None:
+        max_n = max_total
+    if max_n is None:
+        max_n = 6
+    if now_local is None:
+        try:
+            now_local = now_et()
+        except Exception:
+            now_local = datetime.now(timezone.utc)
+
+    scored = []
+    for it in (items or []):
+        try:
+            s = _brief_article_score(it, now_local)
+        except Exception:
+            s = 0.0
+        scored.append((s, it))
+    scored.sort(key=lambda x: x[0], reverse=True)
+
+    chosen = []
+    domain_counts = {}
+    for _score, it in scored:
+        if len(chosen) >= max_n:
+            break
+
+        url = it.get("link") or it.get("url") or ""
+        dom = _brief_domain(url) if url else ""
+        if dom and domain_counts.get(dom, 0) >= max_per_domain:
+            continue
+
+        title = it.get("title", "") or ""
+        if any(_brief_title_similarity(title, (c.get("title", "") or "")) >= sim_threshold for c in chosen):
+            continue
+
+        chosen.append(it)
+        if dom:
+            domain_counts[dom] = domain_counts.get(dom, 0) + 1
+
+    return chosen
+
+
+def _brief_first_sentence(s: str) -> str:
+    """Return a clean first sentence for brief 'impact' lines."""
+    if not s:
+        return ""
+    s = clean_text(strip_html_to_text(s), 240).strip()
+    if not s:
+        return ""
+    parts = re.split(r'(?<=[.!?])\s+', s, maxsplit=1)
+    out = (parts[0] or "").strip()
+    if len(out) < 40 and len(parts) > 1:
+        out2 = (out + " " + parts[1][:140]).strip()
+        out = re.split(r'(?<=[.!?])\s+', out2, maxsplit=1)[0].strip()
+    return out
+
+_BRIEF_THEME_RULES = [
+    ("Crypto markets", [r"\bcrypto\b", r"\bbitcoin\b", r"\bethereum\b", r"\bstablecoin\b", r"\bdefi\b", r"\bmining\b"]),
+    ("AI agents & coding", [r"\bagent\b", r"\bagents\b", r"\bagentic\b", r"\bcodex\b", r"\bcopilot\b", r"\bcoding\b", r"\bdeveloper\b", r"\bcode\b"]),
+    ("IPO watch", [r"\bipo\b", r"\bfiling\b", r"\bs-1\b", r"\bprospectus\b", r"\bpublic\b"]),
+    ("Earnings", [r"\bearnings\b", r"\bresults\b", r"\bguidance\b", r"\brevenue\b", r"\bprofit\b"]),
+    ("Regulation", [r"\bsec\b", r"\bcfpb\b", r"\bftc\b", r"\bregulator\b", r"\bban\b", r"\blaw\b"]),
+    ("Security", [r"\bhack\b", r"\bbreach\b", r"\bransom\b", r"\bmalware\b", r"\bsecurity\b"]),
+    ("Efficiency cuts", [r"\blayoff\b", r"\bcuts\b", r"\bheadcount\b", r"\befficiency\b", r"\bjob\b", r"\beliminated\b"]),
+]
+
+def _brief_infer_themes(items: list, max_themes: int = 3) -> list:
+    """Infer editorial themes from the picked items using simple rules."""
+    if not items:
+        return []
+    blob = " ".join([
+        ((it.get("title") or "") + " " + (it.get("summary") or it.get("description") or it.get("snippet") or it.get("summary_text") or "")).lower()
+        for it in (items or [])
+    ])
+    themes = []
+    for label, pats in _BRIEF_THEME_RULES:
+        if any(re.search(p, blob, flags=re.I) for p in pats):
+            themes.append(label)
+        if len(themes) >= max_themes:
+            break
+    return themes
+
+def _brief_lede(themes: list) -> str:
+    if not themes:
+        return ""
+    if len(themes) == 1:
+        t = themes[0]
+    elif len(themes) == 2:
+        t = f"{themes[0]} and {themes[1]}"
+    else:
+        t = f"{themes[0]}, {themes[1]}, and {themes[2]}"
+    # Rotate through editorial phrasings for variety
+    templates = [
+        f"Today's signal: {t} dominating the conversation across AI, Software, and FinTech.",
+        f"What's moving: {t} — here's what matters across AI, Software, and FinTech.",
+        f"The headlines converge on {t} across AI, Software, and FinTech today.",
+        f"Pulse check: {t} leading the day across AI, Software, and FinTech.",
+    ]
+    # Deterministic pick based on day of year
+    try:
+        idx = now_et().timetuple().tm_yday % len(templates)
+    except Exception:
+        idx = 0
+    return templates[idx]
+
+def compute_pulse_brief(by_cat: dict, now_local, max_items: int = 5) -> dict:
+    """Build an editorial brief (themes + takeaways) from today's articles."""
+    if not by_cat:
+        return {}
+
+    # Tag each item with its category before merging
+    all_items = []
+    for cat_key, items in (by_cat or {}).items():
+        for it in (items or []):
+            it_copy = dict(it)
+            it_copy["_brief_cat"] = cat_key
+            all_items.append(it_copy)
+    if not all_items:
+        return {}
+
+    picked = _brief_pick_diverse(all_items, now_local=now_local, max_n=max_items, max_per_domain=2, sim_threshold=0.55)
+    if not picked:
+        picked = all_items[:max_items]
+
+    themes = _brief_infer_themes(picked, max_themes=3)
+    lede = _brief_lede(themes)
+
+    takeaways = []
+    for it in picked[:max_items]:
+        title = (it.get("title") or "").strip()
+        if not title:
+            continue
+
+        summary = (it.get("summary") or it.get("description") or it.get("snippet") or it.get("summary_text") or "").strip()
+        impact = _brief_first_sentence(summary) if summary else ""
+
+        url = (it.get("url") or "").strip()
+        src = (it.get("source") or it.get("domain") or "").strip()
+        cat = (it.get("_brief_cat") or it.get("category") or "ai").strip().lower()
+
+        takeaways.append({
+            "title": title,
+            "impact": impact,
+            "url": url,
+            "source": src,
+            "category": cat,
+        })
+
+    return {
+        "generated_at": now_local.isoformat() if hasattr(now_local, "isoformat") else "",
+        "themes": themes,
+        "lede": lede,
+        "takeaways": takeaways,
+        "story_count": len(takeaways),
+    }
+
+
+def _brief_impact_is_useful(impact: str, title: str) -> bool:
+    """[B] Quality gate: suppress impact lines that are too short or just repeat the title."""
+    if not impact:
+        return False
+    impact_clean = impact.strip()
+    # Too short to be informative
+    if len(impact_clean) < 40:
+        return False
+    # Check if impact mostly repeats the title's nouns
+    title_tokens = set(_brief_tokens(title))
+    impact_tokens = set(_brief_tokens(impact_clean))
+    if not impact_tokens:
+        return False
+    overlap = title_tokens & impact_tokens
+    # If >70% of impact words already appear in title, it's filler
+    if len(overlap) / len(impact_tokens) > 0.70:
+        return False
+    return True
+
+
+def _brief_editorial_hook(takeaways: list, max_items: int = 3) -> str:
+    """[A] Generate a dynamic one-line hook from the top article titles for the summary bar."""
+    if not takeaways:
+        return ""
+    # Extract short fragments from the top titles
+    fragments = []
+    for t in takeaways[:max_items]:
+        title = (t.get("title") or "").strip()
+        if not title:
+            continue
+        # Use first ~35 chars, break at word boundary
+        if len(title) > 38:
+            cut = title[:38].rsplit(" ", 1)[0]
+            fragments.append(cut + "…")
+        else:
+            fragments.append(title)
+    if not fragments:
+        return ""
+    if len(fragments) == 1:
+        return fragments[0]
+    elif len(fragments) == 2:
+        return f"{fragments[0]}, {fragments[1]}"
+    else:
+        return f"{fragments[0]}, {fragments[1]}, {fragments[2]}"
+
+
+def render_pulse_brief_html(brief: dict, date_str: str = "") -> str:
+    """Render the Brief card with engagement-optimized layout.
+
+    Implements:
+    [A] Dynamic editorial hook in collapsed summary bar
+    [B] Impact quality gate — suppress weak/redundant impact lines
+    [C] Hover preview — impact shown on hover via CSS (no JS needed)
+    [D] Right-aligned Read CTA — vertically centered in each row
+    [E] Category text labels — "AI"/"SW"/"FT" replace color dots
+    """
+    if not brief:
+        return ""
+
+    takeaways = brief.get("takeaways") or []
+    story_count = brief.get("story_count") or len(takeaways)
+
+    # Story count badge
+    count_html = f"<span class='pb-count'>{story_count} stories</span>" if story_count else ""
+
+    # [A] Editorial hook for the summary bar
+    hook_text = _brief_editorial_hook(takeaways)
+    hook_html = f"<span class='pb-hook'>{html.escape(hook_text)}</span>" if hook_text else ""
+
+    # Category label map [E]
+    cat_label = {"ai": "AI", "software": "SW", "fintech": "FT"}
+    cat_class = {"ai": "ai", "software": "sw", "fintech": "ft"}
+
+    # Build takeaway items
+    items_html = []
+    for idx, t in enumerate(takeaways[:8], start=1):
+        title = html.escape((t.get("title") or "").strip())
+        raw_impact = (t.get("impact") or "").strip()
+        url = (t.get("url") or "").strip()
+        src = html.escape((t.get("source") or "").strip())
+        cat = (t.get("category") or "ai").strip().lower()
+        label = cat_label.get(cat, "AI")
+        cls = cat_class.get(cat, "ai")
+
+        if not title:
+            continue
+
+        # [B] Impact quality gate
+        if _brief_impact_is_useful(raw_impact, t.get("title", "")):
+            impact_html = f"<span class='pb-impact'>{html.escape(raw_impact)}</span>"
+        else:
+            impact_html = ""
+
+        # Source line (always visible)
+        src_html = f"<span class='pb-src'>{src}</span>" if src else ""
+
+        # [D] Read CTA — right-aligned, vertically centered
+        read_html = f"<a class='pb-read' href='{html.escape(url)}' target='_blank' rel='noopener'>Read</a>" if url else ""
+
+        items_html.append(
+            f"<li>"
+            f"<span class='pb-rank'>{idx}</span>"
+            f"<span class='pb-cat pb-cat--{cls}'>{label}</span>"
+            f"<div class='pb-takeaway-body'>"
+            f"<strong>{title}</strong>"
+            f"{impact_html}"
+            f"{src_html}"
+            f"</div>"
+            f"{read_html}"
+            f"</li>"
+        )
+
+    takeaways_html = "<ul class='pb-takeaways'>" + "".join(items_html) + "</ul>" if items_html else ""
+
+    return (
+        "<details class='pb' open>"
+        "<summary>"
+        "<span class='pb-pill'>BRIEF</span>"
+        f"{count_html}"
+        f"{hook_html}"
+        "<span class='pb-chev' aria-hidden='true'>▲</span>"
+        "</summary>"
+        "<div class='pb-body'>"
+        f"{takeaways_html}"
+        "</div>"
+        "</details>"
+    )
+
+
+def build_section(date_str: str, by_cat: dict, brief: dict = None) -> str:
     """Build HTML section from categorized items."""
     with open(os.path.join(ROOT, "templates/section_template.html"), "r", encoding="utf-8") as f:
         tpl = f.read()
+
+    # Build the daily brief HTML for this date (used by {{DAILY_BRIEF}})
+    if brief is None:
+        brief = compute_pulse_brief(by_cat, now_local=now_et())
+    brief_html = render_pulse_brief_html(brief, date_str=date_str)
 
     def render_item_badges(it: dict, now: datetime = None) -> str:
         now = now or datetime.now(timezone.utc)
@@ -1377,7 +1907,7 @@ def build_section(date_str: str, by_cat: dict) -> str:
                 dt_str = date_str
             summary_txt = clean_text(strip_html_to_text(it.get("summary_text", "")), 180)
             summary_html = html.escape(summary_txt)
-            top_cls = " top" if idx == 0 else ""
+            top_cls = ""  # no hero/top article
             thumb_html = f'<img src="{thumbnail}" alt="{html.escape(title_raw, quote=True)}" class="article-thumb" loading="lazy">' if thumbnail else ''
 
             # CLEANED UP HTML STRUCTURE (No trends)
@@ -1409,6 +1939,7 @@ def build_section(date_str: str, by_cat: dict) -> str:
     all_articles.sort(key=_final_sort_dt, reverse=True)
     all_items_html = render_items(all_articles) if all_articles else "<p>No items today.</p>"
 
+    html_out = html_out.replace("{{DAILY_BRIEF}}", brief_html)
     html_out = html_out.replace("{{AI_ITEMS}}", all_items_html)
     html_out = html_out.replace("{{SW_ITEMS}}", "")
     html_out = html_out.replace("{{FT_ITEMS}}", "")
@@ -1444,7 +1975,7 @@ def _weekend_use_friday_payload_if_available() -> Optional[bool]:
             if cached.get("ref_date") == want_friday.strftime("%Y-%m-%d"):
                 by_cat = cached.get("by_cat", {})
                 date_str = today.strftime("%b %-d, %Y")
-                section = build_section(date_str, by_cat)
+                brief = compute_pulse_brief(by_cat, now_local=now_et()); section = build_section(date_str, by_cat, brief)
                 docs = os.path.join(REPO, "docs")
                 os.makedirs(docs, exist_ok=True)
                 with open(os.path.join(docs, "index.html"), "w", encoding="utf-8") as f:
@@ -1588,7 +2119,8 @@ def main():
 
     # Render
     date_str = now_et().strftime("%b %-d, %Y")
-    section = build_section(date_str, by_cat)
+    brief = compute_pulse_brief(by_cat, now_local=now_et())
+    section = build_section(date_str, by_cat, brief)
 
     # Save Friday snapshot for weekend reuse
     _save_friday_snapshot_if_today(all_items, by_cat)
@@ -1608,7 +2140,7 @@ def main():
         ts_name = now_et().strftime("%Y-%m-%d_%H%M%S") + ".json"
         ts_path = os.path.join(ts_dir, ts_name)
         with open(ts_path, "w", encoding="utf-8") as tf:
-            json.dump({"items": all_items}, tf, indent=2)
+            json.dump({"items": all_items, "brief": brief}, tf, indent=2)
     except FileExistsError:
         pass
     except Exception:
@@ -1616,15 +2148,14 @@ def main():
 
     # REMOVED: Trending analytics JSON
 
-    # Daily snapshot
+    # Daily snapshot (overwrite each run so the homepage + brief stay consistent)
     try:
         arch_dir = os.path.join(docs, "archive", "json")
         os.makedirs(arch_dir, exist_ok=True)
         snap_name = now_et().strftime("%Y-%m-%d") + ".json"
         arch_path = os.path.join(arch_dir, snap_name)
-        if not os.path.exists(arch_path):
-            with open(arch_path, "x", encoding="utf-8") as f:
-                json.dump({"date": now_et().strftime("%Y-%m-%d"), "by_cat": by_cat}, f, indent=2)
+        with open(arch_path, "w", encoding="utf-8") as f:
+            json.dump({"date": now_et().strftime("%Y-%m-%d"), "by_cat": by_cat, "brief": brief}, f, indent=2)
     except Exception:
         pass
 
