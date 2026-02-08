@@ -1489,6 +1489,7 @@ def _brief_global_topics(items: list, top_n: int = 6) -> list:
     return [k for k, _ in ranked[:top_n]]
 
 def _brief_article_score(it: dict, now_local: datetime) -> float:
+    """Score articles for the brief — topicality/impact first, recency second."""
     title = _brief_clean_text(it.get("title",""))
     summ = _brief_clean_text(it.get("summary_text","") or it.get("summary",""))
     blob = f"{title} {summ}".lower()
@@ -1503,8 +1504,10 @@ def _brief_article_score(it: dict, now_local: datetime) -> float:
     else:
         hours = 24.0
 
-    recency = math.exp(-hours / 18.0)  # ~0.25 after ~25h
+    # Recency: gentle decay — keeps recent articles competitive but doesn't dominate
+    recency = math.exp(-hours / 24.0)  # ~0.37 after 24h
 
+    # Impact: primary driver of score
     impact = 0.0
     for pat in _BRIEF_IMPACT_PATTERNS:
         if re.search(pat, blob):
@@ -1512,15 +1515,24 @@ def _brief_article_score(it: dict, now_local: datetime) -> float:
 
     for nm in _BRIEF_BIG_NAMES:
         if nm in blob:
-            impact += 0.35
+            impact += 0.5
 
+    # Monetary figures signal hard news
     if re.search(r"[$€£]\s?\d", title) or re.search(r"\b\d+(\.\d+)?\s?(billion|million|bn|m)\b", blob):
-        impact += 0.6
+        impact += 0.8
 
+    # Substantive summary bonus — articles with real content rank higher
+    if len(summ) > 120:
+        impact += 0.4
+    elif len(summ) > 60:
+        impact += 0.2
+
+    # Penalize very short/vague titles
     if len(title) < 18:
-        impact -= 0.4
+        impact -= 0.5
 
-    return (1.15 * recency) + (0.25 * impact)
+    # Impact-first weighting: topicality drives selection, recency breaks ties
+    return (0.40 * recency) + (1.0 * impact)
 
 def _brief_word_shingles(text: str, k: int = 3) -> set:
     text = (text or "").lower()
@@ -1545,7 +1557,7 @@ def _brief_domain(url: str) -> str:
     except Exception:
         return ""
 
-def _brief_pick_diverse(items: list, max_n: int = None, now_local=None, max_per_domain: int = 1, sim_threshold: float = 0.55, max_total: int = None) -> list:
+def _brief_pick_diverse(items: list, max_n: int = None, now_local=None, max_per_domain: int = 2, sim_threshold: float = 0.55, max_total: int = None) -> list:
     """Pick items with high score but avoid near-duplicates + domain clustering."""
     # Backward-compatible arg name: allow max_total (older call sites)
     if max_total is not None:
@@ -1667,7 +1679,7 @@ def compute_pulse_brief(by_cat: dict, now_local, max_items: int = 5) -> dict:
     if not all_items:
         return {}
 
-    picked = _brief_pick_diverse(all_items, now_local=now_local, max_n=max_items, max_per_domain=1, sim_threshold=0.55)
+    picked = _brief_pick_diverse(all_items, now_local=now_local, max_n=max_items, max_per_domain=2, sim_threshold=0.55)
     if not picked:
         picked = all_items[:max_items]
 
@@ -1703,8 +1715,63 @@ def compute_pulse_brief(by_cat: dict, now_local, max_items: int = 5) -> dict:
         "story_count": len(takeaways),
     }
 
+
+def _brief_impact_is_useful(impact: str, title: str) -> bool:
+    """[B] Quality gate: suppress impact lines that are too short or just repeat the title."""
+    if not impact:
+        return False
+    impact_clean = impact.strip()
+    # Too short to be informative
+    if len(impact_clean) < 40:
+        return False
+    # Check if impact mostly repeats the title's nouns
+    title_tokens = set(_brief_tokens(title))
+    impact_tokens = set(_brief_tokens(impact_clean))
+    if not impact_tokens:
+        return False
+    overlap = title_tokens & impact_tokens
+    # If >70% of impact words already appear in title, it's filler
+    if len(overlap) / len(impact_tokens) > 0.70:
+        return False
+    return True
+
+
+def _brief_editorial_hook(takeaways: list, max_items: int = 3) -> str:
+    """[A] Generate a dynamic one-line hook from the top article titles for the summary bar."""
+    if not takeaways:
+        return ""
+    # Extract short fragments from the top titles
+    fragments = []
+    for t in takeaways[:max_items]:
+        title = (t.get("title") or "").strip()
+        if not title:
+            continue
+        # Use first ~35 chars, break at word boundary
+        if len(title) > 38:
+            cut = title[:38].rsplit(" ", 1)[0]
+            fragments.append(cut + "…")
+        else:
+            fragments.append(title)
+    if not fragments:
+        return ""
+    if len(fragments) == 1:
+        return fragments[0]
+    elif len(fragments) == 2:
+        return f"{fragments[0]}, {fragments[1]}"
+    else:
+        return f"{fragments[0]}, {fragments[1]}, {fragments[2]}"
+
+
 def render_pulse_brief_html(brief: dict, date_str: str = "") -> str:
-    """Render the Brief card with engagement-optimized layout."""
+    """Render the Brief card with engagement-optimized layout.
+
+    Implements:
+    [A] Dynamic editorial hook in collapsed summary bar
+    [B] Impact quality gate — suppress weak/redundant impact lines
+    [C] Hover preview — impact shown on hover via CSS (no JS needed)
+    [D] Right-aligned Read CTA — vertically centered in each row
+    [E] Category text labels — "AI"/"SW"/"FT" replace color dots
+    """
     if not brief:
         return ""
 
@@ -1714,39 +1781,50 @@ def render_pulse_brief_html(brief: dict, date_str: str = "") -> str:
     # Story count badge
     count_html = f"<span class='pb-count'>{story_count} stories</span>" if story_count else ""
 
-    # Category CSS class map
+    # [A] Editorial hook for the summary bar
+    hook_text = _brief_editorial_hook(takeaways)
+    hook_html = f"<span class='pb-hook'>{html.escape(hook_text)}</span>" if hook_text else ""
+
+    # Category label map [E]
+    cat_label = {"ai": "AI", "software": "SW", "fintech": "FT"}
     cat_class = {"ai": "ai", "software": "sw", "fintech": "ft"}
 
-    # Build numbered takeaway items
+    # Build takeaway items
     items_html = []
     for idx, t in enumerate(takeaways[:8], start=1):
         title = html.escape((t.get("title") or "").strip())
-        impact = html.escape((t.get("impact") or "").strip())
+        raw_impact = (t.get("impact") or "").strip()
         url = (t.get("url") or "").strip()
         src = html.escape((t.get("source") or "").strip())
         cat = (t.get("category") or "ai").strip().lower()
-        dot_cls = cat_class.get(cat, "ai")
+        label = cat_label.get(cat, "AI")
+        cls = cat_class.get(cat, "ai")
 
         if not title:
             continue
 
-        # Build action row (source + read CTA)
-        read_link = f"<a class='pb-read' href='{html.escape(url)}' target='_blank' rel='noopener'>Read</a>" if url else ""
-        src_span = f"<span class='pb-src'>{src}</span>" if src else ""
-        action_row = f"<div class='pb-action-row'>{src_span}{read_link}</div>"
+        # [B] Impact quality gate
+        if _brief_impact_is_useful(raw_impact, t.get("title", "")):
+            impact_html = f"<span class='pb-impact'>{html.escape(raw_impact)}</span>"
+        else:
+            impact_html = ""
 
-        # Impact line
-        impact_html = f"<span class='pb-impact'>{impact}</span>" if impact else ""
+        # Source line (always visible)
+        src_html = f"<span class='pb-src'>{src}</span>" if src else ""
+
+        # [D] Read CTA — right-aligned, vertically centered
+        read_html = f"<a class='pb-read' href='{html.escape(url)}' target='_blank' rel='noopener'>Read</a>" if url else ""
 
         items_html.append(
             f"<li>"
             f"<span class='pb-rank'>{idx}</span>"
-            f"<span class='pb-cat-dot pb-cat-dot--{dot_cls}' aria-label='{html.escape(cat)}'></span>"
+            f"<span class='pb-cat pb-cat--{cls}'>{label}</span>"
             f"<div class='pb-takeaway-body'>"
             f"<strong>{title}</strong>"
             f"{impact_html}"
-            f"{action_row}"
+            f"{src_html}"
             f"</div>"
+            f"{read_html}"
             f"</li>"
         )
 
@@ -1757,6 +1835,7 @@ def render_pulse_brief_html(brief: dict, date_str: str = "") -> str:
         "<summary>"
         "<span class='pb-pill'>BRIEF</span>"
         f"{count_html}"
+        f"{hook_html}"
         "<span class='pb-chev' aria-hidden='true'>▲</span>"
         "</summary>"
         "<div class='pb-body'>"
