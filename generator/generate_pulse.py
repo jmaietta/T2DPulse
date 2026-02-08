@@ -1505,152 +1505,65 @@ def _brief_pick_diverse(items: list, max_n: int, now_local: datetime, max_per_do
 
     return chosen
 
-def compute_pulse_brief(by_cat: dict, now_local, max_items: int = 6, max_keywords: int = 12) -> dict:
-    """Deterministic brief from RSS titles + snippets (no LLM, no scraping)."""
-    all_items = []
-    seen = set()
-    for cat_items in (by_cat or {}).values():
-        for it in (cat_items or []):
-            u = (it.get("url") or "").strip()
-            if not u or u in seen:
-                continue
-            seen.add(u)
-            all_items.append(it)
+def compute_pulse_brief(by_cat: dict, now_local, max_items: int = 6) -> dict:
+    """
+    OPTION A (keywords-only):
+    Build a small "brief" consisting of the most-mentioned keywords across today's
+    article titles + summaries (snippets). No story selection / theming beyond counts.
+    """
+    if not by_cat:
+        return {}
 
-    # Keywords: most-mentioned tokens (with small boosts for big names)
-    keywords = _brief_global_topics(all_items, top_n=max_keywords)
+    # Collect text from all items we already have (titles + summaries/snippets)
+    rows = []
+    for _cat, items in (by_cat or {}).items():
+        for it in (items or []):
+            title = (it.get("title") or "").strip()
+            summ = (it.get("summary") or it.get("description") or it.get("snippet") or "").strip()
+            if title or summ:
+                rows.append(f"{title}
+{summ}")
 
-    # Score once
-    scored = [(_brief_article_score(it, now_local), it) for it in all_items]
-    scored.sort(key=lambda x: x[0], reverse=True)
+    if not rows:
+        return {}
 
-    def _has_kw(it, kw: str) -> bool:
-        txt = f"{it.get('title','')} {it.get('summary_text','')} {it.get('summary','')}"
-        return kw in set(_brief_tokens(txt))
+    # Tokenize + count keywords
+    counts = Counter()
+    for blob in rows:
+        counts.update(_brief_extract_keywords(blob))
 
-    chosen = []
-    chosen_urls = set()
-    chosen_domains = set()
+    # Remove globally-common topics (helps reduce "AI" / "users" type noise)
+    for t in _brief_global_topics:
+        counts.pop(t, None)
 
-    # Theme-driven pick: best 1 per keyword (domain-capped) until we hit max_items
-    for kw in keywords:
-        if len(chosen) >= max_items:
-            break
-        for score, it in scored:
-            u = (it.get("url") or "").strip()
-            if not u or u in chosen_urls:
-                continue
-            dom = _brief_domain(u)
-            if dom and dom in chosen_domains:
-                continue
-            if not _has_kw(it, kw):
-                continue
-
-            # Avoid near-duplicates vs what we've already picked
-            if any(_brief_jaccard_sim(it.get("title",""), prev.get("title","")) >= 0.62 for prev in chosen):
-                continue
-
-            chosen.append(it)
-            chosen_urls.add(u)
-            if dom:
-                chosen_domains.add(dom)
-            break
-
-    # Fill remaining slots with diverse picks
-    if len(chosen) < max_items:
-        remainder = [it for it in all_items if (it.get("url") or "").strip() not in chosen_urls]
-        fill = _brief_pick_diverse(
-            remainder,
-            max_items - len(chosen),
-            now_local,
-            max_per_domain=1,
-            sim_threshold=0.62,
-        )
-        for it in fill:
-            u = (it.get("url") or "").strip()
-            dom = _brief_domain(u)
-            if u:
-                chosen_urls.add(u)
-            if dom:
-                chosen_domains.add(dom)
-            chosen.append(it)
-
-    items_out = []
-    for it in chosen[:max_items]:
-        u = (it.get("url") or "").strip()
-        thumb = it.get("_thumbnail") or it.get("image_url") or ""
-        items_out.append({
-            "title": it.get("title", "") or "",
-            "url": u,
-            "thumbnail": thumb,
-            "source": it.get("source", "") or "",
-            "domain": _brief_domain(u),
-        })
+    # Keep top ~12 keywords
+    keywords = [w for (w, _n) in counts.most_common(12) if w]
 
     return {
-        "date": now_local.strftime("%Y-%m-%d"),
-        "generated_at": now_local.strftime("%Y-%m-%d %H:%M:%S %Z"),
+        "generated_at": now_local.isoformat() if hasattr(now_local, "isoformat") else "",
         "keywords": keywords,
-        "items": items_out,
+        "items": [],  # intentionally empty for keywords-only brief
     }
 
 def render_pulse_brief_html(brief: dict, date_str: str = "") -> str:
-    """Simple, low-noise brief: keyword chips + up to 6 thumbnail items."""
+    """Render OPTION A brief: a single row of keyword chips."""
     if not brief:
         return ""
 
     keywords = brief.get("keywords") or []
-    items = brief.get("items") or []
-    gen = (brief.get("generated_at") or "").strip()
+    if not keywords:
+        return ""
 
     chips = "".join([f"<span class='pb-chip'>{html.escape(k)}</span>" for k in keywords[:12]])
 
-    def _item_li(it: dict) -> str:
-        t = (it.get("title") or "").strip()
-        u = (it.get("url") or "").strip()
-        src = (it.get("source") or "").strip()
-        dom = (it.get("domain") or "").strip()
-        thumb = (it.get("thumbnail") or "").strip()
+    # Minimal, non-redundant: no extra explanatory text next to the "Brief" pill.
+    return (
+        "<div class='pb pb-row' role='region' aria-label='Daily brief keywords'>"
+        "<span class='pb-pill'>Brief</span>"
+        f"<div class='pb-chips' aria-label='Top keywords'>{chips}</div>"
+        "</div>"
+    )
 
-        meta = src or dom
-        meta_html = f"<div class='pb-meta'>{html.escape(meta)}</div>" if meta else ""
-
-        # If thumbnail missing, still render a placeholder box via CSS background
-        thumb_html = f"<img class='pb-thumb' src='{html.escape(thumb)}' alt='' loading='lazy' />" if thumb else "<span class='pb-thumb pb-thumb--empty' aria-hidden='true'></span>"
-
-        if u:
-            return (
-                "<li class='pb-item'>"
-                f"<a href='{html.escape(u)}' target='_blank' rel='noopener'>"
-                f"{thumb_html}"
-                "<div class='pb-txt'>"
-                f"<div class='pb-title'>{html.escape(t)}</div>"
-                f"{meta_html}"
-                "</div>"
-                "</a>"
-                "</li>"
-            )
-        return f"<li class='pb-item'><div class='pb-title'>{html.escape(t)}</div></li>"
-
-    if items:
-        items_html = "<ul class='pb-list'>" + "".join(_item_li(it) for it in items[:6]) + "</ul>"
-    else:
-        items_html = "<p class='pb-empty'>No brief items available.</p>"
-
-    # Collapsed by default; summary line intentionally minimal (no redundant text)
-    return f"""
-      <details class="pb">
-        <summary>
-          <span class="pb-pill">Brief</span>
-          <span class="pb-chev" aria-hidden="true">▾</span>
-        </summary>
-        <div class="pb-body">
-          <div class="pb-chips">{chips}</div>
-          {items_html}
-          <div class="pb-note">Generated from RSS titles + snippets (no source weighting). Updated at {html.escape(gen)}.</div>
-        </div>
-      </details>
-    """.strip()
 def build_section(date_str: str, by_cat: dict, brief: dict = None) -> str:
     """Build HTML section from categorized items."""
     with open(os.path.join(ROOT, "templates/section_template.html"), "r", encoding="utf-8") as f:
