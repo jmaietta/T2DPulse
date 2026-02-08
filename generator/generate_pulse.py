@@ -23,7 +23,7 @@ from typing import Optional
 from dataclasses import dataclass, field
 from datetime import datetime, timedelta, timezone
 from urllib.parse import urlparse, urljoin
-from collections import defaultdict, deque
+from collections import defaultdict, deque, Counter
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 import feedparser
