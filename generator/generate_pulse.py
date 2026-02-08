@@ -1765,59 +1765,36 @@ def compute_pulse_brief(by_cat: dict, now_local, max_items: int = 6) -> dict:
     }
 
 def render_pulse_brief_html(brief: dict, date_str: str = "") -> str:
-    """Render the Brief as a compact, non-redundant summary block."""
+    """Render the Brief as a compact editorial summary block.
+
+    Per UX: no 'Watch' line and no topic tags/pills (they were confusing and low-signal).
+    """
     if not brief:
         return ""
 
     themes = brief.get("themes") or []
     lede = brief.get("lede") or ""
     takeaways = brief.get("takeaways") or []
-    watch = brief.get("watch") or None
-    keywords = brief.get("keywords") or []
 
     theme_str = " · ".join([html.escape(t) for t in themes if t]) if themes else ""
     hdr_right = f"<span class='pb-themes'>{theme_str}</span>" if theme_str else ""
 
-    # Takeaways list
+    # Takeaways list (headline + context + read link)
     li = []
-    for t in takeaways[:8]:
-        title = html.escape((t.get("title") or "").strip())
-        impact = html.escape((t.get("impact") or "").strip())
-        url = (t.get("url") or "").strip()
-        src = html.escape((t.get("source") or "").strip())
+    for row in takeaways:
+        title = (row.get("title") or "").strip()
+        url = (row.get("url") or "").strip()
+        source = (row.get("source") or "").strip()
+        impact = (row.get("impact") or "").strip()
 
-        read = f"<a class='pb-read' href='{html.escape(url)}' target='_blank' rel='noopener'>Read</a>" if url else ""
-        src_span = f"<span class='pb-src'>· {src}</span>" if src else ""
+        title_html = f"<strong>{html.escape(title)}</strong>" if title else "<strong>Item</strong>"
+        impact_html = f" — <span class='pb-impact'>{html.escape(impact)}</span>" if impact else ""
+        read_html = f" <a class='pb-read' href='{html.escape(url)}' target='_blank' rel='noopener'>Read</a>" if url else ""
+        src_html = f" <span class='pb-src'>· {html.escape(source)}</span>" if source else ""
 
-        if title:
-            li.append(f"<li><strong>{title}</strong>{' — ' if impact else ''}<em>{impact}</em> {read} {src_span}</li>")
-        else:
-            li.append(f"<li><em>{impact}</em> {read} {src_span}</li>")
+        li.append(f"<li>{title_html}{impact_html}{read_html}{src_html}</li>")
 
-    takeaways_html = "<ul class='pb-takeaways'>" + "".join(li) + "</ul>" if li else "<p class='pb-empty'>No highlights yet.</p>"
-
-    # Watch line
-    watch_html = ""
-    if watch and (watch.get("title") or watch.get("url")):
-        wt = html.escape((watch.get("title") or "").strip())
-        wu = (watch.get("url") or "").strip()
-        if wu:
-            watch_html = f"<p class='pb-watch'><strong>Watch:</strong> <a href='{html.escape(wu)}' target='_blank' rel='noopener'>{wt or 'Link'}</a></p>"
-        else:
-            watch_html = f"<p class='pb-watch'><strong>Watch:</strong> {wt}</p>"
-
-    # Topic chips (drive search filter)
-    chips = ""
-    if keywords:
-        chip_btns = []
-        for k in keywords[:12]:
-            kk = (k or "").strip()
-            if not kk:
-                continue
-            chip_btns.append(f"<button type='button' class='pb-tag' data-q='{html.escape(kk)}'>{html.escape(kk)}</button>")
-        if chip_btns:
-            chips = "<div class='pb-tags'><span class='pb-tags-label'>Topics:</span>" + "".join(chip_btns) + "</div>"
-
+    takeaways_html = f"<ul class='pb-takeaways'>" + "".join(li) + "</ul>" if li else ""
     lede_html = f"<p class='pb-lede'>{html.escape(lede)}</p>" if lede else ""
 
     return (
@@ -1830,8 +1807,6 @@ def render_pulse_brief_html(brief: dict, date_str: str = "") -> str:
         "<div class='pb-body'>"
         + lede_html +
         takeaways_html +
-        watch_html +
-        chips +
         "</div>"
         "</details>"
     )
