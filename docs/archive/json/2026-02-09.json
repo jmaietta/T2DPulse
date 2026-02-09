@@ -946,24 +946,24 @@
         "_abs_permalink": "https://pulse.tek2dayholdings.com/p/24d1f5a617/",
         "_summary_240": "Check out our unique data and analytics for S&P 500 CEOs: https://www.ceorater.com/",
         "_thumbnail": "https://pulse.tek2dayholdings.com/p/24d1f5a617/thumbnail.png"
-      },
-      {
-        "title": "Waymo Says Genie 3 Simulations Can Help Boost Robotaxi Rollout",
-        "url": "https://www.bloomberg.com/news/articles/2026-02-06/waymo-says-genie-3-simulations-can-help-boost-robotaxi-rollout",
-        "published_at": "2026-02-06T11:00:00-05:00",
-        "source": "Bloomberg Technology",
-        "summary": "Alphabet Inc.\u2019s Waymo said it is using DeepMind\u2019s Genie 3 AI model to create realistic, digital worlds for its autonomous driving technology to train on edge-case scenarios.",
-        "content_html": "Waymo cars at a Waymo facility in San Francisco.",
-        "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ihw08UQp6htM/v1/1200x-1.jpg",
-        "summary_text": "Alphabet Inc.\u2019s Waymo said it is using DeepMind\u2019s Genie 3 AI model to create realistic, digital worlds for its autonomous driving technology to train on edge-case scenarios.",
-        "category": "ai",
-        "_permalink": "/p/fd24bc3edf/",
-        "_abs_permalink": "https://pulse.tek2dayholdings.com/p/fd24bc3edf/",
-        "_summary_240": "Alphabet Inc.\u2019s Waymo said it is using DeepMind\u2019s Genie 3 AI model to create realistic, digital worlds for its autonomous driving technology to train on edge-case scenarios.",
-        "_thumbnail": "https://pulse.tek2dayholdings.com/p/fd24bc3edf/thumbnail.png"
       }
     ],
     "software": [
+      {
+        "title": "Linux 6.19 arrives with a teaser for Linux 7.0",
+        "url": "https://www.theverge.com/tech/875784/linux-kernel-7-0-announced",
+        "published_at": "2026-02-09T10:58:43-05:00",
+        "source": "The Verge",
+        "summary": "On Sunday, Linux developer Linus Torvalds announced the release of Linux 6.19, which will be the last update in this kernel cycle, as previously reported by Phoronix. It adds support for the modern AMDGPU driver for older AMD GCN 1.0 and 1.1 graphics cards, like Radeon HD 7000 series GPUs, along with Vulkan support through [\u2026]",
+        "content_html": "<figure>\n\n<img alt=\"A screenshot of a Fedora 43 desktop running on Linux kernel 6.17. \" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2026/01/one-year-on-linux-mac-style-homescreen.png?quality=90&#038;strip=all&#038;crop=0,0,100,100\" />\n\t<figcaption>\n\tFedora systems like this one running Linux kernel 6.17 could soon get an update. | Image: Stevie Bonifield / The Verge\t</figcaption>\n</figure>\n<p class=\"has-text-align-none\">On Sunday, Linux developer Linus Torvalds announced the <a href=\"https://lkml.iu.edu/hypermail/linux/kernel/2602.1/00382.html\">release of Linux 6.19</a>, which will be the last update in this kernel cycle, as previously reported by <a href=\"https://www.phoronix.com/news/Linux-6.19-Released\"><em>Phoronix</em></a>. It adds support for the modern AMDGPU driver for older AMD GCN 1.0 and 1.1 graphics cards, like Radeon HD 7000 series GPUs, along with Vulkan support through the RADV driver, and improved power management. </p>\n<p class=\"has-text-align-none\">Linux 6.19 also includes improved HDR support with the addition of the DRM Color Pipeline, an updated Asus Armoury driver, expanded support for newer Intel Wildcat Lake and Nova Lake chips, PCIe link encryption and device authentication, and more.</p>\n<div class=\"youtube-embed\"></div>\n<p class=\"has-text-align-none\">Along with the launch of  \u2026</p>\n<p><a href=\"https://www.theverge.com/tech/875784/linux-kernel-7-0-announced\">Read the full story at The Verge.</a></p>",
+        "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/01/one-year-on-linux-mac-style-homescreen.png?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+        "summary_text": "On Sunday, Linux developer Linus Torvalds announced the release of Linux 6.19, which will be the last update in this kernel cycle, as previously reported by Phoronix. It adds support for the modern AMDGPU driver for older AMD GCN 1.0 and 1.1 graphics cards, l...",
+        "category": "software",
+        "_permalink": "/p/73b0fb7952/",
+        "_abs_permalink": "https://pulse.tek2dayholdings.com/p/73b0fb7952/",
+        "_summary_240": "On Sunday, Linux developer Linus Torvalds announced the release of Linux 6.19, which will be the last update in this kernel cycle, as previously reported by Phoronix. It adds...",
+        "_thumbnail": "https://pulse.tek2dayholdings.com/p/73b0fb7952/thumbnail.png"
+      },
       {
         "title": "Siemens CEO Roland Busch\u2019s mission to automate everything",
         "url": "https://www.theverge.com/podcast/875233/siemens-ceo-roland-busch-ai-automation-digital-twins-nato-tariffs",
@@ -1910,26 +1910,11 @@
         "_abs_permalink": "https://pulse.tek2dayholdings.com/p/a56d52c4ef/",
         "_summary_240": "Bitcoin has fallen about 50% since its October peak. What went wrong for the world's biggest cryptocurrency? Anna Irrera explains. (Source: Bloomberg)",
         "_thumbnail": "https://pulse.tek2dayholdings.com/p/a56d52c4ef/thumbnail.png"
-      },
-      {
-        "title": "Stablecoin Weekly: Bitcoin, Meme Coins Plunge While Blockchain Goes Corporate",
-        "url": "https://www.pymnts.com/cryptocurrency/2026/stablecoin-weekly-bitcoin-meme-coins-plunge-while-blockchain-goes-corporate/",
-        "published_at": "2026-02-06T11:01:59-05:00",
-        "source": "PYMNTS",
-        "summary": "The cryptocurrency market\u2019s familiar boom-and-bust cycle has entered another pronounced downswing. Capital is leaving digital assets at a pace not seen since the depths of the last crypto winter, institutional allocations are shrinking as outflows grow and the speculative energy that once powered the crypto-native verticals of the blockchain space is beginning to run on [\u2026] The post Stablecoin We...",
-        "content_html": "<p style=\"font-weight: 400;\">The cryptocurrency market\u2019s familiar boom-and-bust cycle has <a href=\"https://www.pymnts.com/cryptocurrency/2026/bitcoin-to-zero-big-short-investor-flags-cryptos-death-spiral-risk?utm_source=Sailthru&amp;utm_medium=email&amp;utm_campaign=02062026%20B2B%20NL&amp;utm_term=B2B%20Newsletter\" rel=\"noopener\" target=\"_blank\">entered another</a> pronounced downswing. Capital is leaving digital assets at a pace not seen since the depths of the last crypto winter, institutional allocations are shrinking as outflows grow and the speculative energy that once powered the crypto-native verticals of the blockchain space is beginning to run on fumes.</p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p style=\"font-weight: 400;\">As of reporting, bitcoin\u2019s price has dropped below $70,000, erasing all of its bull-market gains and sending shocks throughout the broader marketplace. Crypto treasury firm Strategy is down 81% from its all-time-high, while meme coins such as Trump Coin and Melania Coin are down 95% and 99% from their own respective upper limit valuations.</p>\n<p style=\"font-weight: 400;\">Against this chilly backdrop, one might expect broader blockchain sentiment to be down. Instead, the inverse is happening, with the value proposition of stablecoins and other institutional blockchain instruments in fact rising inside traditional financial workflows.</p>\n<p style=\"font-weight: 400;\">The explanation lies outside the crypto ecosystem itself. Stablecoins are being pulled into <a href=\"https://www.pymnts.com/blockchain/2026/citi-argues-tokenized-deposits-belong-at-the-core-of-finance/\" rel=\"noopener\" target=\"_blank\">traditional financial contexts</a> where their appeal has little to do with speculation and everything to do with speed, programmability and access.</p>\n<p style=\"font-weight: 400;\">From the European Union\u2019s digital euro push to Tether\u2019s U.S. updates, stablecoin corporate payroll wallets for global workforces, Y-Combinator\u2019s stablecoin seed funding move, U.S. regulatory gridlock and white label issuance, this was a week that showed how the chips are starting to fall for the blockchain finance landscape and why it more and more looks like real-world utility over web3 speculation.</p>\n<p style=\"font-weight: 400;\"><strong>See also:</strong> <a href=\"https://www.pymnts.com/cryptocurrency/2026/how-banking-grade-crypto-is-replacing-bitcoins-cowboy-finance/\" rel=\"noopener\" target=\"_blank\">How Banking-Grade Crypto Is Replacing Bitcoin\u2019s Cowboy Finance</a><strong>\u00a0</strong></p>\n<h2 style=\"font-weight: 400;\"><strong>Stablecoins Find an Inverse Correlation to Crypto Markets </strong></h2>\n<p style=\"font-weight: 400;\">Cross-border payments, treasury management for global companies and payroll for distributed workforces are all areas where legacy systems remain expensive and slow. Stablecoins offer an alternative that does not require belief in token appreciation, only trust in the peg and the issuer. In that sense, they are starting to resemble narrow banking instruments rather than crypto assets.</p>\n<p style=\"font-weight: 400;\">As <a href=\"https://www.pymnts.com/blockchain/2026/y-combinators-stablecoin-funding-move-gives-blueprint-for-enterprise-crypto-finance/\" rel=\"noopener\" target=\"_blank\">covered here</a> Tuesday (Feb. 3), startup incubator\u00a0<a href=\"https://www.ycombinator.com/\" rel=\"noopener\" target=\"_blank\">Y Combinator</a>\u00a0(YC) announced that its latest class of startups can now choose to receive their seed funding of $500,000 from YC in stablecoins.</p>\n<p style=\"font-weight: 400;\">Meanwhile, <a href=\"https://www.pymnts.com/cryptocurrency/2026/nymcard-visa-launch-stablecoin-settlement-gulf-cooperation-council-region/\" rel=\"noopener\" target=\"_blank\">news broke</a> Monday (Feb. 2) that payments infrastructure company\u00a0<a href=\"https://nymcard.com/\" rel=\"noopener\" target=\"_blank\">NymCard</a>\u00a0can now settle card transactions with\u00a0<a href=\"https://ae.visamiddleeast.com/en_AE\" rel=\"noopener\" target=\"_blank\">Visa</a>\u00a0using\u00a0<a href=\"https://www.circle.com/usdc\" rel=\"noopener\" target=\"_blank\">USDC</a>\u00a0stablecoins in the Gulf Cooperation Council (GCC) region.</p>\n<p style=\"font-weight: 400;\">And this most recent earnings season offered a look into how the world\u2019s biggest payment networks are already moving from <a href=\"https://www.pymnts.com/blockchain/2026/payment-networks-use-earnings-season-to-press-their-case-on-stablecoins/\" rel=\"noopener\" target=\"_blank\">concept to execution</a> with their stablecoin products. Visa, for example, reported an annualized global stablecoin settlement run rate of $4.6 billion and said it now enables stablecoin card issuance in more than 50 countries; while Mastercard stressed that stablecoins are beginning to function as just another form of currency that benefits from being routed through a trusted global network.</p>\n<p style=\"font-weight: 400;\">Elsewhere, on Jan. 28, the payroll and payments platform Papaya Global <a href=\"https://www.prnewswire.com/news-releases/papaya-global-launches-global-workforce-wallet-powered-by-fireblocks-302672562.html\" rel=\"noopener\" target=\"_blank\">partnered</a> with digital asset infrastructure firm Fireblocks to power its global payroll offerings with stablecoin payouts.</p>\n<p style=\"font-weight: 400;\">These use cases matter because they anchor stablecoins in recurring, non-speculative demand.</p>\n<p style=\"font-weight: 400;\">Of course, as the Thursday (Feb. 5) <a href=\"https://www.pymnts.com/blockchain/2026/polymarket-taps-circle-to-support-dollar-denominated-settlements/\" rel=\"noopener\" target=\"_blank\">partnership</a> between stablecoin issuer\u00a0<a href=\"https://circle.so/\" rel=\"noopener\" target=\"_blank\">Circle</a>\u00a0and prediction market\u00a0<a href=\"https://polymarket.com/\" rel=\"noopener\" target=\"_blank\">Polymarket</a> shows, speculation hasn\u2019t entirely left the landscape, just taken up a different form.</p>\n<p style=\"font-weight: 400;\"><strong>See also:</strong>\u00a0<a href=\"https://www.pymnts.com/cryptocurrency/2026/stablecoin-fragmentation-creates-new-risks-for-businesses/\" rel=\"noopener\" target=\"_blank\">Stablecoin Fragmentation Creates New Risks for Businesses\u00a0</a></p>\n<h2 style=\"font-weight: 400;\"><strong>The Global Regulatory Landscape </strong></h2>\n<p style=\"font-weight: 400;\">The\u00a0<a href=\"https://www.pymnts.com/pymnts-intelligence/\" rel=\"noopener\" target=\"_blank\">PYMNTS Intelligence</a>\u00a0and Citi report \u201c<a href=\"https://www.pymnts.com/tracker_posts/chain-reaction-regulatory-clarity-as-the-catalyst-for-blockchain-adoption/\" rel=\"noopener\" target=\"_blank\">Chain Reaction: Regulatory Clarity as the Catalyst for Blockchain Adoption</a>\u201d found that blockchain\u2019s next leap will\u00a0be shaped\u00a0by regulation; that evolving guidance is beginning to create the foundations for safe,\u00a0scalable blockchain adoption; and that implementation challenges continue to complicate progress.</p>\n<p style=\"font-weight: 400;\">In the United States, however, <a href=\"https://www.pymnts.com/cryptocurrency/2026/while-us-debates-stablecoin-yield-europe-and-asia-set-clearer-rules/\" rel=\"noopener\" target=\"_blank\">lawmaker gridlock</a> around key <a href=\"https://www.pymnts.com/cryptocurrency/2026/stablecoin-rewards-remain-roadblock-to-crypto-bill-after-white-house-summit/\" rel=\"noopener\" target=\"_blank\">stablecoin yield questions</a>\u00a0has left crypto market legislation in limbo. The debate has reached such a crescendo that\u00a0<a href=\"https://www.citi.com/\" rel=\"noopener\" target=\"_blank\">Citi</a>\u00a0analysts have\u00a0<a href=\"https://www.pymnts.com/cryptocurrency/2026/citi-analysts-say-crypto-bill-could-be-delayed-beyond-2026/\" rel=\"noopener\" target=\"_blank\">noted</a> the growing chance that the\u00a0<a href=\"https://www.congress.gov/bill/119th-congress/house-bill/3633/text\" rel=\"noopener\" target=\"_blank\">CLARITY Act</a>\u2019s passage could\u00a0be delayed beyond 2026, although there is also a chance it may still pass this year.</p>\n<p style=\"font-weight: 400;\">Across the Atlantic in the EU, tokenized instrument such as the digital euro are gaining steam as a payment sovereignty play.</p>\n<p style=\"font-weight: 400;\">\u201cTo put it bluntly, we are very dependent on\u00a0US\u00a0corporations in payments today\u202f\u2013\u202ftoo dependent. Payments are part of our critical infrastructure. And we really ought to stand on our own two feet when it comes to critical infrastructure. The digital euro would be the first and only digital means of payment built on a European infrastructure that could be used seamlessly throughout the euro area,\u201d Burkhard Balz, member of the Executive Board of the Deutsche Bundesbank, <a href=\"https://www.bis.org/review/r260204b.htm\" rel=\"noopener\" target=\"_blank\">said</a> in a Jan. 27 speech.</p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/cryptocurrency/2026/stablecoin-weekly-bitcoin-meme-coins-plunge-while-blockchain-goes-corporate/\">Stablecoin Weekly: Bitcoin, Meme Coins Plunge While Blockchain Goes Corporate</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
-        "image_url": "https://www.pymnts.com/wp-content/uploads/2025/05/Stablecoins-economy-digital-assets.jpg?w=457",
-        "summary_text": "The cryptocurrency market\u2019s familiar boom-and-bust cycle has entered another pronounced downswing. Capital is leaving digital assets at a pace not seen since the depths of the last crypto winter, institutional allocations are shrinking as outflows grow and th...",
-        "category": "fintech",
-        "_permalink": "/p/4d0f0fa134/",
-        "_abs_permalink": "https://pulse.tek2dayholdings.com/p/4d0f0fa134/",
-        "_summary_240": "The cryptocurrency market\u2019s familiar boom-and-bust cycle has entered another pronounced downswing. Capital is leaving digital assets at a pace not seen since the depths of the...",
-        "_thumbnail": "https://pulse.tek2dayholdings.com/p/4d0f0fa134/thumbnail.png"
       }
     ]
   },
   "brief": {
-    "generated_at": "2026-02-09T10:57:35.380049-05:00",
+    "generated_at": "2026-02-09T11:04:41.075180-05:00",
     "themes": [
       "AI agents & coding",
       "Earnings"
@@ -1942,6 +1927,13 @@
         "url": "https://www.theverge.com/transportation/875199/apple-carplay-third-party-chatbots-rumor",
         "source": "The Verge",
         "category": "ai"
+      },
+      {
+        "title": "Linux 6.19 arrives with a teaser for Linux 7.0",
+        "impact": "On Sunday, Linux developer Linus Torvalds announced the release of Linux 6.19, which will be the last update in this kernel cycle, as previously reported by Phoronix.",
+        "url": "https://www.theverge.com/tech/875784/linux-kernel-7-0-announced",
+        "source": "The Verge",
+        "category": "software"
       },
       {
         "title": "EU Tells Meta to Allow Room for Rival AI Assistants",
@@ -1963,13 +1955,6 @@
         "url": "https://www.bloomberg.com/news/articles/2026-02-09/amazon-deepens-ties-with-chipmaker-stmicro-for-data-centers",
         "source": "Bloomberg Technology",
         "category": "software"
-      },
-      {
-        "title": "China Digital Exports Surge As Alibaba, Tencent Lead Global Push",
-        "impact": "Chinese revenue from digital services sold abroad is soaring as tech champions from ByteDance Ltd.",
-        "url": "https://www.bloomberg.com/news/articles/2026-02-09/china-digital-exports-surge-as-alibaba-tencent-lead-global-push",
-        "source": "Bloomberg Technology",
-        "category": "ai"
       }
     ],
     "story_count": 5

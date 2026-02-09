@@ -1,5 +1,20 @@
 [
   {
+    "title": "Linux 6.19 arrives with a teaser for Linux 7.0",
+    "url": "https://www.theverge.com/tech/875784/linux-kernel-7-0-announced",
+    "published_at": "2026-02-09T10:58:43-05:00",
+    "source": "The Verge",
+    "summary": "On Sunday, Linux developer Linus Torvalds announced the release of Linux 6.19, which will be the last update in this kernel cycle, as previously reported by Phoronix. It adds support for the modern AMDGPU driver for older AMD GCN 1.0 and 1.1 graphics cards, like Radeon HD 7000 series GPUs, along with Vulkan support through [\u2026]",
+    "content_html": "<figure>\n\n<img alt=\"A screenshot of a Fedora 43 desktop running on Linux kernel 6.17. \" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2026/01/one-year-on-linux-mac-style-homescreen.png?quality=90&#038;strip=all&#038;crop=0,0,100,100\" />\n\t<figcaption>\n\tFedora systems like this one running Linux kernel 6.17 could soon get an update. | Image: Stevie Bonifield / The Verge\t</figcaption>\n</figure>\n<p class=\"has-text-align-none\">On Sunday, Linux developer Linus Torvalds announced the <a href=\"https://lkml.iu.edu/hypermail/linux/kernel/2602.1/00382.html\">release of Linux 6.19</a>, which will be the last update in this kernel cycle, as previously reported by <a href=\"https://www.phoronix.com/news/Linux-6.19-Released\"><em>Phoronix</em></a>. It adds support for the modern AMDGPU driver for older AMD GCN 1.0 and 1.1 graphics cards, like Radeon HD 7000 series GPUs, along with Vulkan support through the RADV driver, and improved power management. </p>\n<p class=\"has-text-align-none\">Linux 6.19 also includes improved HDR support with the addition of the DRM Color Pipeline, an updated Asus Armoury driver, expanded support for newer Intel Wildcat Lake and Nova Lake chips, PCIe link encryption and device authentication, and more.</p>\n<div class=\"youtube-embed\"></div>\n<p class=\"has-text-align-none\">Along with the launch of  \u2026</p>\n<p><a href=\"https://www.theverge.com/tech/875784/linux-kernel-7-0-announced\">Read the full story at The Verge.</a></p>",
+    "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/01/one-year-on-linux-mac-style-homescreen.png?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+    "summary_text": "On Sunday, Linux developer Linus Torvalds announced the release of Linux 6.19, which will be the last update in this kernel cycle, as previously reported by Phoronix. It adds support for the modern AMDGPU driver for older AMD GCN 1.0 and 1.1 graphics cards, l...",
+    "category": "software",
+    "_permalink": "/p/73b0fb7952/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/73b0fb7952/",
+    "_summary_240": "On Sunday, Linux developer Linus Torvalds announced the release of Linux 6.19, which will be the last update in this kernel cycle, as previously reported by Phoronix. It adds...",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/73b0fb7952/thumbnail.png"
+  },
+  {
     "title": "Michael Grimes returns to Morgan Stanley after Trump administration stint",
     "url": "https://www.ft.com/content/7d960fcc-c80f-4c12-8b8e-1fd41fc7a444",
     "published_at": "2026-02-09T10:55:08-05:00",
@@ -538,21 +553,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/4f9b630be9/",
     "_summary_240": "Presented by F5 As enterprises pour billions into GPU infrastructure for AI workloads, many are discovering that their expensive compute resources sit idle far more than...",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/4f9b630be9/thumbnail.png"
-  },
-  {
-    "title": "OpenAI\u2019s supposedly \u2018leaked\u2019 Super Bowl ad with ear buds and a shiny orb was a hoax",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/875615/openai-super-bowl-ai-hardware-leak-hoax-fake",
-    "published_at": "2026-02-08T23:54:36-05:00",
-    "source": "The Verge",
-    "summary": "As if OpenAI didn't have enough drama around the Super Bowl and advertising, as the game wound down, word spread of a \"leaked\" ad that actually wasn't leaked at all; it was just a fake. Screenshots of a now-deleted Reddit thread told the tale of a frustrated employee who, while posting about how upset they [\u2026]",
-    "content_html": "<figure>\n\n<img alt=\"Vector illustration of the Open AI logo.\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2025/02/STK155_OPEN_AI_2025_CVirgiia_C.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100\" />\n\t<figcaption>\n\t\t</figcaption>\n</figure>\n<p class=\"has-text-align-none\">As if OpenAI didn't have enough <a href=\"https://www.theverge.com/news/874084/ai-chatgpt-claude-super-bowl-ads-openai-anthropic#comments\">drama around the Super Bowl and advertising</a>, as the game wound down, word spread of a \"leaked\" ad that actually wasn't leaked at all; it was just a fake. Screenshots of a <a href=\"https://www.reddit.com/r/ChatGPT/comments/1qzq976/a_dark_week/\">now-deleted Reddit thread</a> told the tale of a frustrated employee who, while posting about how upset they were because the ad they'd worked on didn't run, accidentally leaked the <a href=\"https://streamable.com/6p1n29\">entire advertisement video</a>, seemingly showing <em><a href=\"https://www.theverge.com/news/704047/murderbot-season-2-apple-tv-plus\">Murderbot</a></em> star Alexander Skarsg&aring;rd with what could have been OpenAI's <a href=\"https://www.theverge.com/news/703114/openai-io-jony-ive-sam-altman-ai-hardware\">first hardware device</a>, portrayed as a shiny orb that went with some wraparound earbuds. </p>\n<p class=\"has-text-align-none\">OpenAI president Greg Brockman commented on X <a href=\"https://x.com/gdb/status/2020707622962471348?s=46\">with a tweet</a> cal \u2026</p>\n<p><a href=\"https://www.theverge.com/ai-artificial-intelligence/875615/openai-super-bowl-ai-hardware-leak-hoax-fake\">Read the full story at The Verge.</a></p>",
-    "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/02/STK155_OPEN_AI_2025_CVirgiia_C.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-    "summary_text": "As if OpenAI didn't have enough drama around the Super Bowl and advertising, as the game wound down, word spread of a \"leaked\" ad that actually wasn't leaked at all; it was just a fake. Screenshots of a now-deleted Reddit thread told the tale of a frustrated ...",
-    "category": "ai",
-    "_permalink": "/p/5ddd1b32b0/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/5ddd1b32b0/",
-    "_summary_240": "As if OpenAI didn't have enough drama around the Super Bowl and advertising, as the game wound down, word spread of a \"leaked\" ad that actually wasn't leaked at all; it was just...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/5ddd1b32b0/thumbnail.png"
   },
   {
     "title": "Crypto and banks spar in comments on Fed\u2019s \u2018skinny master account\u2019 idea",
@@ -1417,17 +1417,6 @@
     "content_html": "<article class=\"mssrc-posts font-- has--theme\" id=\"single-23652\">\n\t<div class=\"acf-innerblocks-container\"></div>\t\t\t<section class=\"post-tags\">\n\t\t\t\t<div class=\"post-tags__content wp-block-columns\">\n\t\t\t\t\t<div class=\"post-tags__header wp-block-column flex-basis-25 has-text-align-right\">\n\t\t\t\t\t\t<h4 class=\"sr-only\">Tags: </h4>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"post-tags__body wp-block-column flex-basis-60\">\n\t\t\t\t\t\t<ul class=\"post-tags__list\"><li class=\"post-tags__item\"><a class=\"kicker inline-block post__meta--tags\" href=\"https://news.microsoft.com/source/tag/security/\">Security</a></li></ul>\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</section>\n\t\t\t</article><p>The post <a href=\"https://www.microsoft.com/en-us/security/blog/2026/02/04/detecting-backdoored-language-models-at-scale/\">New research: Detecting backdoored language models at scale</a> appeared first on <a href=\"https://news.microsoft.com/source\">Source</a>.</p>",
     "image_url": "https://www.microsoft.com/en-us/security/blog/wp-content/uploads/2026/02/MDC23_DatacenterHotaisle_008.jpg",
     "summary_text": "The post New research: Detecting backdoored language models at scale appeared first on Source .",
-    "category": "ai"
-  },
-  {
-    "title": "Nemotron Labs: How AI Agents Are Turning Documents Into Real-Time Business Intelligence",
-    "url": "https://blogs.nvidia.com/blog/ai-agents-intelligent-document-processing/",
-    "published_at": "2026-02-04T11:00:36-05:00",
-    "source": "NVIDIA News",
-    "summary": "Businesses today face the challenge of uncovering valuable insights buried within a wide variety of documents \u2014 including reports, presentations, PDFs, web pages and spreadsheets.",
-    "content_html": "",
-    "image_url": "https://s3.amazonaws.com/cms.ipressroom.com/219/files/202602/69836d8b3d6332ce7fe1f9c0_nemotron-labs-featured-842x450/nemotron-labs-featured-842x450_thmb.jpg",
-    "summary_text": "Businesses today face the challenge of uncovering valuable insights buried within a wide variety of documents \u2014 including reports, presentations, PDFs, web pages and spreadsheets.",
     "category": "ai"
   },
   {
