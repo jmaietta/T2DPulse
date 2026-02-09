@@ -1169,15 +1169,26 @@
     
     input.addEventListener('input', () => applyFilter(input.value), { passive: true });
 
-    // Check for initial query param
+    // Support legacy inbound links like /?q=... but keep the canonical URL clean.
     try {
-      const q0 = new URLSearchParams(location.search).get('q');
+      const u = new URL(window.location.href);
+      const q0 = u.searchParams.get('q');
+
+      if (u.searchParams.has('q')) {
+        u.searchParams.delete('q');
+        const clean =
+          u.pathname +
+          (u.searchParams.toString() ? `?${u.searchParams.toString()}` : '') +
+          u.hash;
+        history.replaceState({}, '', clean);
+      }
+
       if (q0) {
         input.value = q0;
         applyFilter(q0);
       }
     } catch (_) {}
-  })();
+})();
   </script>
 
   <script>
