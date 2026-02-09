@@ -945,9 +945,9 @@
       </div>
       <div class="grow"></div>
       <div class="hdr-actions">
-        <form class="search" role="search" method="GET" action="/">
+        <form class="search" role="search" aria-label="Search articles">
           <label for="t2d-q" class="sr-only">Search articles</label>
-          <input id="t2d-q" name="q" type="search" placeholder="Search..." enterkeyhint="search" autocapitalize="off" autocomplete="off" />
+          <input id="t2d-q" type="search" placeholder="Search..." enterkeyhint="search" autocapitalize="off" autocomplete="off" />
         </form>
       </div>
     </div>
@@ -955,9 +955,185 @@
 
   <div id="app">
     <section id="tek2day-pulse" aria-labelledby="tek2day-title">
-            <details class='pb' open><summary><span class='pb-pill'>BRIEF</span><span class='pb-count'>5 stories</span><span class='pb-hook'>Apple might let you use ChatGPT from…, Amazon Deepens Ties With Chipmaker…, Anthropic’s breakout moment: how…</span><span class='pb-chev' aria-hidden='true'>▲</span></summary><div class='pb-body'><ul class='pb-takeaways'><li><span class='pb-rank'>1</span><span class='pb-cat pb-cat--ai'>AI</span><div class='pb-takeaway-body'><strong>Apple might let you use ChatGPT from CarPlay</strong><span class='pb-impact'>CarPlay users could soon be able to use their chatbot of choice instead of Siri.</span><span class='pb-src'>The Verge</span></div><a class='pb-read' href='https://www.theverge.com/transportation/875199/apple-carplay-third-party-chatbots-rumor' target='_blank' rel='noopener'>Read</a></li><li><span class='pb-rank'>2</span><span class='pb-cat pb-cat--sw'>SW</span><div class='pb-takeaway-body'><strong>Amazon Deepens Ties With Chipmaker STMicro for Data Centers</strong><span class='pb-impact'>Amazon.com Inc.’s cloud service AWS is deepening its ties with Franco-Italian chipmaker STMicroelectronics NV to secure semiconductor technologies for its data centers.</span><span class='pb-src'>Bloomberg Technology</span></div><a class='pb-read' href='https://www.bloomberg.com/news/articles/2026-02-09/amazon-deepens-ties-with-chipmaker-stmicro-for-data-centers' target='_blank' rel='noopener'>Read</a></li><li><span class='pb-rank'>3</span><span class='pb-cat pb-cat--ai'>AI</span><div class='pb-takeaway-body'><strong>Anthropic’s breakout moment: how Claude cracked AI for business</strong><span class='pb-impact'>Start-up’s bet on enterprise users is paying off as coding tools fuel revenue and investor frenzy</span><span class='pb-src'>Financial Times - Technology</span></div><a class='pb-read' href='https://www.ft.com/content/a75555a6-24c3-4468-aba9-7fe12b5def31' target='_blank' rel='noopener'>Read</a></li><li><span class='pb-rank'>4</span><span class='pb-cat pb-cat--ai'>AI</span><div class='pb-takeaway-body'><strong>China Digital Exports Surge As Alibaba, Tencent Lead Global Push</strong><span class='pb-impact'>Chinese revenue from digital services sold abroad is soaring as tech champions from ByteDance Ltd.</span><span class='pb-src'>Bloomberg Technology</span></div><a class='pb-read' href='https://www.bloomberg.com/news/articles/2026-02-09/china-digital-exports-surge-as-alibaba-tencent-lead-global-push' target='_blank' rel='noopener'>Read</a></li><li><span class='pb-rank'>5</span><span class='pb-cat pb-cat--ai'>AI</span><div class='pb-takeaway-body'><strong>Anthropic Super Bowl Ad Targets OpenAI’s Advertising Plan</strong><span class='pb-impact'>Anthropic is reportedly spending millions on a Super Bowl ad criticizing rival OpenAI.</span><span class='pb-src'>PYMNTS</span></div><a class='pb-read' href='https://www.pymnts.com/artificial-intelligence-2/2026/anthropic-super-bowl-ad-targets-openais-advertising-plan/' target='_blank' rel='noopener'>Read</a></li></ul></div></details>
+            <details class='pb' open><summary><span class='pb-pill'>BRIEF</span><span class='pb-count'>5 stories</span><span class='pb-hook'>Apple might let you use ChatGPT from…, EU Tells Meta to Allow Room for Rival…, Anthropic’s breakout moment: how…</span><span class='pb-chev' aria-hidden='true'>▲</span></summary><div class='pb-body'><ul class='pb-takeaways'><li><span class='pb-rank'>1</span><span class='pb-cat pb-cat--ai'>AI</span><div class='pb-takeaway-body'><strong>Apple might let you use ChatGPT from CarPlay</strong><span class='pb-impact'>CarPlay users could soon be able to use their chatbot of choice instead of Siri.</span><span class='pb-src'>The Verge</span></div><a class='pb-read' href='https://www.theverge.com/transportation/875199/apple-carplay-third-party-chatbots-rumor' target='_blank' rel='noopener'>Read</a></li><li><span class='pb-rank'>2</span><span class='pb-cat pb-cat--ai'>AI</span><div class='pb-takeaway-body'><strong>EU Tells Meta to Allow Room for Rival AI Assistants</strong><span class='pb-impact'>European competition regulators say Meta’s artificial intelligence (AI) assistant policy violates antitrust regulations.</span><span class='pb-src'>PYMNTS</span></div><a class='pb-read' href='https://www.pymnts.com/antitrust/2026/eu-tells-meta-to-allow-room-for-rival-ai-assistants/' target='_blank' rel='noopener'>Read</a></li><li><span class='pb-rank'>3</span><span class='pb-cat pb-cat--ai'>AI</span><div class='pb-takeaway-body'><strong>Anthropic’s breakout moment: how Claude cracked AI for business</strong><span class='pb-impact'>Start-up’s bet on enterprise users is paying off as coding tools fuel revenue and investor frenzy</span><span class='pb-src'>Financial Times - Technology</span></div><a class='pb-read' href='https://www.ft.com/content/a75555a6-24c3-4468-aba9-7fe12b5def31' target='_blank' rel='noopener'>Read</a></li><li><span class='pb-rank'>4</span><span class='pb-cat pb-cat--sw'>SW</span><div class='pb-takeaway-body'><strong>Amazon Deepens Ties With Chipmaker STMicro for Data Centers</strong><span class='pb-impact'>Amazon.com Inc.’s cloud service AWS is deepening its ties with Franco-Italian chipmaker STMicroelectronics NV to secure semiconductor technologies for its data centers.</span><span class='pb-src'>Bloomberg Technology</span></div><a class='pb-read' href='https://www.bloomberg.com/news/articles/2026-02-09/amazon-deepens-ties-with-chipmaker-stmicro-for-data-centers' target='_blank' rel='noopener'>Read</a></li><li><span class='pb-rank'>5</span><span class='pb-cat pb-cat--ai'>AI</span><div class='pb-takeaway-body'><strong>China Digital Exports Surge As Alibaba, Tencent Lead Global Push</strong><span class='pb-impact'>Chinese revenue from digital services sold abroad is soaring as tech champions from ByteDance Ltd.</span><span class='pb-src'>Bloomberg Technology</span></div><a class='pb-read' href='https://www.bloomberg.com/news/articles/2026-02-09/china-digital-exports-surge-as-alibaba-tencent-lead-global-push' target='_blank' rel='noopener'>Read</a></li></ul></div></details>
 <div class="items">
-        <article class="" data-card data-url="https://www.bloomberg.com/news/articles/2026-02-09/india-redraws-rules-for-deep-tech-funding-to-spur-innovation?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/a1a990fa4b/" data-title="India Redraws Rules For Deep Tech Funding To Spur Innovation" data-summary="India has redefined what qualifies as a deep tech startup and extended eligibility to 20 years, a move aimed at boosting frontier innovation by offering tax incentives and governm..." data-source="Bloomberg Technology">
+        <article class="" data-card data-url="https://www.ft.com/content/7d960fcc-c80f-4c12-8b8e-1fd41fc7a444?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/eac8c8ad27/" data-title="Michael Grimes returns to Morgan Stanley after Trump administration stint" data-summary="Star tech banker rejoins Wall Street group as banks vie for role in upcoming blockbuster IPOs" data-source="Financial Times - Technology">
+  <img src="https://pulse.tek2dayholdings.com/p/eac8c8ad27/thumbnail.png" alt="Michael Grimes returns to Morgan Stanley after Trump administration stint" class="article-thumb" loading="lazy">
+  <div class="article-content">
+    <h3><a data-title-link href="https://www.ft.com/content/7d960fcc-c80f-4c12-8b8e-1fd41fc7a444?utm_source=tek2day&utm_medium=email">Michael Grimes returns to Morgan Stanley after Trump administration stint</a></h3>
+    <div class="meta"><span class="src">Financial Times - Technology</span> · Feb 9, 2026 <span class="badge">New</span></div>
+    <p data-summary>Star tech banker rejoins Wall Street group as banks vie for role in upcoming blockbuster IPOs</p>
+  </div>
+</article>
+<article class="" data-card data-url="https://www.pymnts.com/cryptocurrency/2026/cftc-clears-path-for-national-trust-banks-to-issue-payment-stablecoins/?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/4a002c9014/" data-title="CFTC Clears Path for National Trust Banks to Issue Payment Stablecoins" data-summary="The Commodity Futures Trading Commission (CFTC) clarified Friday (Feb. 6) that national trust banks may issue payment stablecoins. The agency did so by reissuing CFTC Staff Letter..." data-source="PYMNTS">
+  <img src="https://pulse.tek2dayholdings.com/p/4a002c9014/thumbnail.png" alt="CFTC Clears Path for National Trust Banks to Issue Payment Stablecoins" class="article-thumb" loading="lazy">
+  <div class="article-content">
+    <h3><a data-title-link href="https://www.pymnts.com/cryptocurrency/2026/cftc-clears-path-for-national-trust-banks-to-issue-payment-stablecoins/?utm_source=tek2day&utm_medium=email">CFTC Clears Path for National Trust Banks to Issue Payment Stablecoins</a></h3>
+    <div class="meta"><span class="src">PYMNTS</span> · Feb 9, 2026 <span class="badge">New</span></div>
+    <p data-summary>The Commodity Futures Trading Commission (CFTC) clarified Friday (Feb. 6) that national trust banks may issue payment stablecoins. The agency did so by reissuing CFTC Staff Letter...</p>
+  </div>
+</article>
+<article class="" data-card data-url="https://www.bloomberg.com/news/articles/2026-02-09/microsoft-hit-with-second-downgrade-as-melius-warns-on-ai-risks?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/0aa0455151/" data-title="Microsoft Hit With Second Downgrade as Melius Warns on AI Risks" data-summary="Microsoft Corp. shares were downgraded for the second time in less than a week as Wall Street grows increasingly wary about the potential disruption software stocks face from arti..." data-source="Bloomberg Technology">
+  <img src="https://pulse.tek2dayholdings.com/p/0aa0455151/thumbnail.png" alt="Microsoft Hit With Second Downgrade as Melius Warns on AI Risks" class="article-thumb" loading="lazy">
+  <div class="article-content">
+    <h3><a data-title-link href="https://www.bloomberg.com/news/articles/2026-02-09/microsoft-hit-with-second-downgrade-as-melius-warns-on-ai-risks?utm_source=tek2day&utm_medium=email">Microsoft Hit With Second Downgrade as Melius Warns on AI Risks</a></h3>
+    <div class="meta"><span class="src">Bloomberg Technology</span> · Feb 9, 2026 <span class="badge">New</span></div>
+    <p data-summary>Microsoft Corp. shares were downgraded for the second time in less than a week as Wall Street grows increasingly wary about the potential disruption software stocks face from arti...</p>
+  </div>
+</article>
+<article class="" data-card data-url="https://www.pymnts.com/partnerships/2026/uber-adyen-debut-kiosks-expanded-partnership/?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/265f768411/" data-title="Uber and Adyen Debut Kiosks as Part of Expanded Partnership" data-summary="Uber is expanding its payments partnership with FinTech platform Adyen. “The expanded partnership reflects Uber’s growing use of Adyen’s global payments platform to enhance perfor..." data-source="PYMNTS">
+  <img src="https://pulse.tek2dayholdings.com/p/265f768411/thumbnail.png" alt="Uber and Adyen Debut Kiosks as Part of Expanded Partnership" class="article-thumb" loading="lazy">
+  <div class="article-content">
+    <h3><a data-title-link href="https://www.pymnts.com/partnerships/2026/uber-adyen-debut-kiosks-expanded-partnership/?utm_source=tek2day&utm_medium=email">Uber and Adyen Debut Kiosks as Part of Expanded Partnership</a></h3>
+    <div class="meta"><span class="src">PYMNTS</span> · Feb 9, 2026 <span class="badge">New</span></div>
+    <p data-summary>Uber is expanding its payments partnership with FinTech platform Adyen. “The expanded partnership reflects Uber’s growing use of Adyen’s global payments platform to enhance perfor...</p>
+  </div>
+</article>
+<article class="" data-card data-url="https://www.pymnts.com/artificial-intelligence-2/2026/new-research-shows-ai-agents-learn-altruism-from-human-behavior/?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/7441213b22/" data-title="New Research Shows AI Agents Learn Altruism From Human Behavior" data-summary="As artificial intelligence (AI) systems become more intertwined with daily life and decision-making, a pressing question looms: Can AI truly grasp the values that guide human choi..." data-source="PYMNTS">
+  <img src="https://pulse.tek2dayholdings.com/p/7441213b22/thumbnail.png" alt="New Research Shows AI Agents Learn Altruism From Human Behavior" class="article-thumb" loading="lazy">
+  <div class="article-content">
+    <h3><a data-title-link href="https://www.pymnts.com/artificial-intelligence-2/2026/new-research-shows-ai-agents-learn-altruism-from-human-behavior/?utm_source=tek2day&utm_medium=email">New Research Shows AI Agents Learn Altruism From Human Behavior</a></h3>
+    <div class="meta"><span class="src">PYMNTS</span> · Feb 9, 2026 <span class="badge">New</span></div>
+    <p data-summary>As artificial intelligence (AI) systems become more intertwined with daily life and decision-making, a pressing question looms: Can AI truly grasp the values that guide human choi...</p>
+  </div>
+</article>
+<article class="" data-card data-url="https://www.theverge.com/podcast/875233/siemens-ceo-roland-busch-ai-automation-digital-twins-nato-tariffs?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/3d23f1becf/" data-title="Siemens CEO Roland Busch’s mission to automate everything" data-summary="Today, I’m talking with Roland Busch, who is the CEO of Siemens. Siemens is one of those absolutely giant, extremely important, but fairly opaque companies we love to dig into on ..." data-source="The Verge">
+  <img src="https://pulse.tek2dayholdings.com/p/3d23f1becf/thumbnail.png" alt="Siemens CEO Roland Busch’s mission to automate everything" class="article-thumb" loading="lazy">
+  <div class="article-content">
+    <h3><a data-title-link href="https://www.theverge.com/podcast/875233/siemens-ceo-roland-busch-ai-automation-digital-twins-nato-tariffs?utm_source=tek2day&utm_medium=email">Siemens CEO Roland Busch’s mission to automate everything</a></h3>
+    <div class="meta"><span class="src">The Verge</span> · Feb 9, 2026 <span class="badge">New</span></div>
+    <p data-summary>Today, I’m talking with Roland Busch, who is the CEO of Siemens. Siemens is one of those absolutely giant, extremely important, but fairly opaque companies we love to dig into on ...</p>
+  </div>
+</article>
+<article class="" data-card data-url="https://www.bloomberg.com/news/articles/2026-02-09/workday-co-founder-returns-as-ceo-amid-steep-share-decline?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/364746395f/" data-title="Workday Co-Founder Returns as CEO Amid Steep Share Decline" data-summary="Workday Inc. announced co-founder Aneel Bhusri is returning to head the software company, replacing chief executive officer Carl Eschenbach after the company’s shares have plummet..." data-source="Bloomberg Technology">
+  <img src="https://pulse.tek2dayholdings.com/p/364746395f/thumbnail.png" alt="Workday Co-Founder Returns as CEO Amid Steep Share Decline" class="article-thumb" loading="lazy">
+  <div class="article-content">
+    <h3><a data-title-link href="https://www.bloomberg.com/news/articles/2026-02-09/workday-co-founder-returns-as-ceo-amid-steep-share-decline?utm_source=tek2day&utm_medium=email">Workday Co-Founder Returns as CEO Amid Steep Share Decline</a></h3>
+    <div class="meta"><span class="src">Bloomberg Technology</span> · Feb 9, 2026 <span class="badge">New</span></div>
+    <p data-summary>Workday Inc. announced co-founder Aneel Bhusri is returning to head the software company, replacing chief executive officer Carl Eschenbach after the company’s shares have plummet...</p>
+  </div>
+</article>
+<article class="" data-card data-url="https://www.theverge.com/news/875724/openai-chatgpt-ads-test-launch?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/c6f288cb21/" data-title="OpenAI will reportedly start testing ads in ChatGPT today" data-summary="OpenAI plans to start testing ads in ChatGPT today, according to a report from CNBC. The &quot;clearly labeled&quot; ads will appear in a separate area beneath your chat, OpenAI announced l..." data-source="The Verge">
+  <img src="https://pulse.tek2dayholdings.com/p/c6f288cb21/thumbnail.png" alt="OpenAI will reportedly start testing ads in ChatGPT today" class="article-thumb" loading="lazy">
+  <div class="article-content">
+    <h3><a data-title-link href="https://www.theverge.com/news/875724/openai-chatgpt-ads-test-launch?utm_source=tek2day&utm_medium=email">OpenAI will reportedly start testing ads in ChatGPT today</a></h3>
+    <div class="meta"><span class="src">The Verge</span> · Feb 9, 2026 <span class="badge">New</span></div>
+    <p data-summary>OpenAI plans to start testing ads in ChatGPT today, according to a report from CNBC. The &quot;clearly labeled&quot; ads will appear in a separate area beneath your chat, OpenAI announced l...</p>
+  </div>
+</article>
+<article class="" data-card data-url="https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound&utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/14672e8048/" data-title="Here’s what happened in crypto today" data-summary="Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, NFTs, Web3 and crypto regulation." data-source="Cointelegraph">
+  <img src="https://pulse.tek2dayholdings.com/p/14672e8048/thumbnail.png" alt="Here’s what happened in crypto today" class="article-thumb" loading="lazy">
+  <div class="article-content">
+    <h3><a data-title-link href="https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound&utm_source=tek2day&utm_medium=email">Here’s what happened in crypto today</a></h3>
+    <div class="meta"><span class="src">Cointelegraph</span> · Feb 9, 2026 <span class="badge">New</span></div>
+    <p data-summary>Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, NFTs, Web3 and crypto regulation.</p>
+  </div>
+</article>
+<article class="" data-card data-url="https://www.pymnts.com/antitrust/2026/eu-tells-meta-to-allow-room-for-rival-ai-assistants/?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/9cb663fabf/" data-title="EU Tells Meta to Allow Room for Rival AI Assistants" data-summary="European competition regulators say Meta’s artificial intelligence (AI) assistant policy violates antitrust regulations. The European Commission (EC) announced Monday (Feb. 9) tha..." data-source="PYMNTS">
+  <img src="https://pulse.tek2dayholdings.com/p/9cb663fabf/thumbnail.png" alt="EU Tells Meta to Allow Room for Rival AI Assistants" class="article-thumb" loading="lazy">
+  <div class="article-content">
+    <h3><a data-title-link href="https://www.pymnts.com/antitrust/2026/eu-tells-meta-to-allow-room-for-rival-ai-assistants/?utm_source=tek2day&utm_medium=email">EU Tells Meta to Allow Room for Rival AI Assistants</a></h3>
+    <div class="meta"><span class="src">PYMNTS</span> · Feb 9, 2026 <span class="badge">New</span></div>
+    <p data-summary>European competition regulators say Meta’s artificial intelligence (AI) assistant policy violates antitrust regulations. The European Commission (EC) announced Monday (Feb. 9) tha...</p>
+  </div>
+</article>
+<article class="" data-card data-url="https://cointelegraph.com/news/canton-yuval-rooz-empty-shell-models?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound&utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/4ac086df5f/" data-title="Canton’s Yuval Rooz says crypto is finally repricing ‘empty shell’ models" data-summary="Digital Asset cofounder and CEO Yuval Rooz said the latest crypto sell‑off is repricing “empty shell” token models and pushing institutions to chains with value, privacy and predi..." data-source="Cointelegraph">
+  <img src="https://pulse.tek2dayholdings.com/p/4ac086df5f/thumbnail.png" alt="Canton’s Yuval Rooz says crypto is finally repricing ‘empty shell’ models" class="article-thumb" loading="lazy">
+  <div class="article-content">
+    <h3><a data-title-link href="https://cointelegraph.com/news/canton-yuval-rooz-empty-shell-models?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound&utm_source=tek2day&utm_medium=email">Canton’s Yuval Rooz says crypto is finally repricing ‘empty shell’ models</a></h3>
+    <div class="meta"><span class="src">Cointelegraph</span> · Feb 9, 2026 <span class="badge">New</span></div>
+    <p data-summary>Digital Asset cofounder and CEO Yuval Rooz said the latest crypto sell‑off is repricing “empty shell” token models and pushing institutions to chains with value, privacy and predi...</p>
+  </div>
+</article>
+<article class="" data-card data-url="https://www.bloomberg.com/news/articles/2026-02-09/italy-prosecutors-put-delivery-hero-unit-under-judicial-control?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/2005f73142/" data-title="Italy Prosecutors Put Delivery Hero Unit Under Judicial Control" data-summary="Italian prosecutors have placed Delivery Hero SE’s Italian food-delivery unit under judicial control as part of a criminal investigation into alleged labor exploitation." data-source="Bloomberg Technology">
+  <img src="https://pulse.tek2dayholdings.com/p/2005f73142/thumbnail.png" alt="Italy Prosecutors Put Delivery Hero Unit Under Judicial Control" class="article-thumb" loading="lazy">
+  <div class="article-content">
+    <h3><a data-title-link href="https://www.bloomberg.com/news/articles/2026-02-09/italy-prosecutors-put-delivery-hero-unit-under-judicial-control?utm_source=tek2day&utm_medium=email">Italy Prosecutors Put Delivery Hero Unit Under Judicial Control</a></h3>
+    <div class="meta"><span class="src">Bloomberg Technology</span> · Feb 9, 2026 <span class="badge">New</span></div>
+    <p data-summary>Italian prosecutors have placed Delivery Hero SE’s Italian food-delivery unit under judicial control as part of a criminal investigation into alleged labor exploitation.</p>
+  </div>
+</article>
+<article class="" data-card data-url="https://www.ft.com/content/da5eef0b-68c0-45ba-946e-68477d0cc103?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/7be0c4492e/" data-title="The market meltdown in data companies is profoundly wrong" data-summary="The fear that AI will disintermediate B2B information providers misunderstands what makes them valuable" data-source="Financial Times - Technology">
+  <img src="https://pulse.tek2dayholdings.com/p/7be0c4492e/thumbnail.png" alt="The market meltdown in data companies is profoundly wrong" class="article-thumb" loading="lazy">
+  <div class="article-content">
+    <h3><a data-title-link href="https://www.ft.com/content/da5eef0b-68c0-45ba-946e-68477d0cc103?utm_source=tek2day&utm_medium=email">The market meltdown in data companies is profoundly wrong</a></h3>
+    <div class="meta"><span class="src">Financial Times - Technology</span> · Feb 9, 2026 <span class="badge">New</span></div>
+    <p data-summary>The fear that AI will disintermediate B2B information providers misunderstands what makes them valuable</p>
+  </div>
+</article>
+<article class="" data-card data-url="https://cointelegraph.com/news/vitalik-buterin-defi-usdc-yield-stablecoin-critique?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound&utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/547a90f9e0/" data-title="Vitalik draws line between ‘real DeFi’ and centralized yield stablecoins" data-summary="The Ethereum co-founder outlined alternative stablecoin models that he says better align with DeFi’s original promise of risk decentralization." data-source="Cointelegraph">
+  <img src="https://pulse.tek2dayholdings.com/p/547a90f9e0/thumbnail.png" alt="Vitalik draws line between ‘real DeFi’ and centralized yield stablecoins" class="article-thumb" loading="lazy">
+  <div class="article-content">
+    <h3><a data-title-link href="https://cointelegraph.com/news/vitalik-buterin-defi-usdc-yield-stablecoin-critique?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound&utm_source=tek2day&utm_medium=email">Vitalik draws line between ‘real DeFi’ and centralized yield stablecoins</a></h3>
+    <div class="meta"><span class="src">Cointelegraph</span> · Feb 9, 2026 <span class="badge">New</span></div>
+    <p data-summary>The Ethereum co-founder outlined alternative stablecoin models that he says better align with DeFi’s original promise of risk decentralization.</p>
+  </div>
+</article>
+<article class="" data-card data-url="https://www.bloomberg.com/news/articles/2026-02-09/young-bankers-embrace-ai-at-morgan-stanley-and-bank-of-america?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/9d9d997324/" data-title="Junior Bankers Are Teaching Their Elders How to Use AI" data-summary="Knowing your way around the transformative technology is the new finance flex." data-source="Bloomberg Technology">
+  <img src="https://pulse.tek2dayholdings.com/p/9d9d997324/thumbnail.png" alt="Junior Bankers Are Teaching Their Elders How to Use AI" class="article-thumb" loading="lazy">
+  <div class="article-content">
+    <h3><a data-title-link href="https://www.bloomberg.com/news/articles/2026-02-09/young-bankers-embrace-ai-at-morgan-stanley-and-bank-of-america?utm_source=tek2day&utm_medium=email">Junior Bankers Are Teaching Their Elders How to Use AI</a></h3>
+    <div class="meta"><span class="src">Bloomberg Technology</span> · Feb 9, 2026 <span class="badge">New</span></div>
+    <p data-summary>Knowing your way around the transformative technology is the new finance flex.</p>
+  </div>
+</article>
+<article class="" data-card data-url="https://www.wired.com/story/no-company-has-admitted-to-replacing-workers-with-ai-in-new-york/?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/b364c84cfc/" data-title="No Company Has Admitted to Replacing Workers With AI in New York" data-summary="New York state has required companies to disclose if “technological innovation or automation” was the cause of job loss for nearly a year. So far, none has." data-source="Wired">
+  <img src="https://pulse.tek2dayholdings.com/p/b364c84cfc/thumbnail.png" alt="No Company Has Admitted to Replacing Workers With AI in New York" class="article-thumb" loading="lazy">
+  <div class="article-content">
+    <h3><a data-title-link href="https://www.wired.com/story/no-company-has-admitted-to-replacing-workers-with-ai-in-new-york/?utm_source=tek2day&utm_medium=email">No Company Has Admitted to Replacing Workers With AI in New York</a></h3>
+    <div class="meta"><span class="src">Wired</span> · Feb 9, 2026 <span class="badge">New</span></div>
+    <p data-summary>New York state has required companies to disclose if “technological innovation or automation” was the cause of job loss for nearly a year. So far, none has.</p>
+  </div>
+</article>
+<article class="" data-card data-url="https://cointelegraph.com/news/openclaw-ai-plugin-hub-supply-chain-poisoning?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound&utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/7b2a1817d0/" data-title="OpenClaw AI hub faces wave of poisoned plugins, SlowMist warns" data-summary="SlowMist flagged 472 AI skills containing malicious code, as plugins and extensions increasingly become a target for hackers seeking access to the devices of cryptocurrency invest..." data-source="Cointelegraph">
+  <img src="https://pulse.tek2dayholdings.com/p/7b2a1817d0/thumbnail.png" alt="OpenClaw AI hub faces wave of poisoned plugins, SlowMist warns" class="article-thumb" loading="lazy">
+  <div class="article-content">
+    <h3><a data-title-link href="https://cointelegraph.com/news/openclaw-ai-plugin-hub-supply-chain-poisoning?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound&utm_source=tek2day&utm_medium=email">OpenClaw AI hub faces wave of poisoned plugins, SlowMist warns</a></h3>
+    <div class="meta"><span class="src">Cointelegraph</span> · Feb 9, 2026 <span class="badge">New</span></div>
+    <p data-summary>SlowMist flagged 472 AI skills containing malicious code, as plugins and extensions increasingly become a target for hackers seeking access to the devices of cryptocurrency invest...</p>
+  </div>
+</article>
+<article class="" data-card data-url="https://www.pymnts.com/news/international/europe/2026/eu-banking-chief-calls-for-visa-and-mastercard-alternatives/?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/69b054a0f1/" data-title="EU Banking Chief Calls for Visa and Mastercard Alternatives" data-summary="Is Europe too reliant on international payments companies such as Visa and Mastercard? The head of the European Payments Initiative (EPI) thinks so, according to a Monday (Feb. 9)..." data-source="PYMNTS">
+  <img src="https://pulse.tek2dayholdings.com/p/69b054a0f1/thumbnail.png" alt="EU Banking Chief Calls for Visa and Mastercard Alternatives" class="article-thumb" loading="lazy">
+  <div class="article-content">
+    <h3><a data-title-link href="https://www.pymnts.com/news/international/europe/2026/eu-banking-chief-calls-for-visa-and-mastercard-alternatives/?utm_source=tek2day&utm_medium=email">EU Banking Chief Calls for Visa and Mastercard Alternatives</a></h3>
+    <div class="meta"><span class="src">PYMNTS</span> · Feb 9, 2026 <span class="badge">New</span></div>
+    <p data-summary>Is Europe too reliant on international payments companies such as Visa and Mastercard? The head of the European Payments Initiative (EPI) thinks so, according to a Monday (Feb. 9)...</p>
+  </div>
+</article>
+<article class="" data-card data-url="https://www.bloomberg.com/news/articles/2026-02-09/morgan-stanley-s-wilson-says-tech-rally-can-run-further-on-ai?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/5dd174c797/" data-title="Morgan Stanley’s Wilson Says Tech Rally Can Run Further on AI" data-summary="US technology stocks have the scope to rally further as the buzz around artificial intelligence underpins a robust sales outlook, according to Morgan Stanley strategists." data-source="Bloomberg Technology">
+  <img src="https://pulse.tek2dayholdings.com/p/5dd174c797/thumbnail.png" alt="Morgan Stanley’s Wilson Says Tech Rally Can Run Further on AI" class="article-thumb" loading="lazy">
+  <div class="article-content">
+    <h3><a data-title-link href="https://www.bloomberg.com/news/articles/2026-02-09/morgan-stanley-s-wilson-says-tech-rally-can-run-further-on-ai?utm_source=tek2day&utm_medium=email">Morgan Stanley’s Wilson Says Tech Rally Can Run Further on AI</a></h3>
+    <div class="meta"><span class="src">Bloomberg Technology</span> · Feb 9, 2026 <span class="badge">New</span></div>
+    <p data-summary>US technology stocks have the scope to rally further as the buzz around artificial intelligence underpins a robust sales outlook, according to Morgan Stanley strategists.</p>
+  </div>
+</article>
+<article class="" data-card data-url="https://www.wired.com/story/satellites-ai-nuclear-treaties/?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/dfa5983b6d/" data-title="AI Is Here to Replace Nuclear Treaties. Scared Yet?" data-summary="The last major nuclear arms treaty between the US and Russia just expired. Some experts believe a combination of satellite surveillance, AI, and human reviewers can take its place..." data-source="Wired">
+  <img src="https://pulse.tek2dayholdings.com/p/dfa5983b6d/thumbnail.png" alt="AI Is Here to Replace Nuclear Treaties. Scared Yet?" class="article-thumb" loading="lazy">
+  <div class="article-content">
+    <h3><a data-title-link href="https://www.wired.com/story/satellites-ai-nuclear-treaties/?utm_source=tek2day&utm_medium=email">AI Is Here to Replace Nuclear Treaties. Scared Yet?</a></h3>
+    <div class="meta"><span class="src">Wired</span> · Feb 9, 2026 <span class="badge">New</span></div>
+    <p data-summary>The last major nuclear arms treaty between the US and Russia just expired. Some experts believe a combination of satellite surveillance, AI, and human reviewers can take its place...</p>
+  </div>
+</article>
+<article class="" data-card data-url="https://cointelegraph.com/news/french-police-arrest-six-suspects-over-crypto-ransom-kidnapping-of-magistrate?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound&utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/8fd024c4e8/" data-title="France arrests six suspects over crypto ransom kidnapping of magistrate" data-summary="Six people have been detained after a French magistrate and her mother were abducted in a crypto ransom plot, intensifying concerns over a surge in violent “wrench attacks” in Fra..." data-source="Cointelegraph">
+  <img src="https://pulse.tek2dayholdings.com/p/8fd024c4e8/thumbnail.png" alt="France arrests six suspects over crypto ransom kidnapping of magistrate" class="article-thumb" loading="lazy">
+  <div class="article-content">
+    <h3><a data-title-link href="https://cointelegraph.com/news/french-police-arrest-six-suspects-over-crypto-ransom-kidnapping-of-magistrate?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound&utm_source=tek2day&utm_medium=email">France arrests six suspects over crypto ransom kidnapping of magistrate</a></h3>
+    <div class="meta"><span class="src">Cointelegraph</span> · Feb 9, 2026 <span class="badge">New</span></div>
+    <p data-summary>Six people have been detained after a French magistrate and her mother were abducted in a crypto ransom plot, intensifying concerns over a surge in violent “wrench attacks” in Fra...</p>
+  </div>
+</article>
+<article class="" data-card data-url="https://www.bloomberg.com/news/articles/2026-02-09/bitcoin-s-recovery-rings-hollow-as-derivatives-stay-bearish?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/81735c8be6/" data-title="Bitcoin’s Recovery Rings Hollow as Derivatives Stay Bearish" data-summary="Bitcoin derivatives are flashing warning signs even after the rebound toward $70,000, with traders still positioned defensively and little sign of new bullish bets." data-source="Bloomberg Technology">
+  <img src="https://pulse.tek2dayholdings.com/p/81735c8be6/thumbnail.png" alt="Bitcoin’s Recovery Rings Hollow as Derivatives Stay Bearish" class="article-thumb" loading="lazy">
+  <div class="article-content">
+    <h3><a data-title-link href="https://www.bloomberg.com/news/articles/2026-02-09/bitcoin-s-recovery-rings-hollow-as-derivatives-stay-bearish?utm_source=tek2day&utm_medium=email">Bitcoin’s Recovery Rings Hollow as Derivatives Stay Bearish</a></h3>
+    <div class="meta"><span class="src">Bloomberg Technology</span> · Feb 9, 2026 <span class="badge">New</span></div>
+    <p data-summary>Bitcoin derivatives are flashing warning signs even after the rebound toward $70,000, with traders still positioned defensively and little sign of new bullish bets.</p>
+  </div>
+</article>
+<article class="" data-card data-url="https://www.bloomberg.com/news/articles/2026-02-09/india-redraws-rules-for-deep-tech-funding-to-spur-innovation?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/a1a990fa4b/" data-title="India Redraws Rules For Deep Tech Funding To Spur Innovation" data-summary="India has redefined what qualifies as a deep tech startup and extended eligibility to 20 years, a move aimed at boosting frontier innovation by offering tax incentives and governm..." data-source="Bloomberg Technology">
   <img src="https://pulse.tek2dayholdings.com/p/a1a990fa4b/thumbnail.png" alt="India Redraws Rules For Deep Tech Funding To Spur Innovation" class="article-thumb" loading="lazy">
   <div class="article-content">
     <h3><a data-title-link href="https://www.bloomberg.com/news/articles/2026-02-09/india-redraws-rules-for-deep-tech-funding-to-spur-innovation?utm_source=tek2day&utm_medium=email">India Redraws Rules For Deep Tech Funding To Spur Innovation</a></h3>
@@ -971,6 +1147,14 @@
     <h3><a data-title-link href="https://cointelegraph.com/news/ton-pay-aims-to-turn-telegram-into-a-crypto-checkout-layer-for-ton?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound&utm_source=tek2day&utm_medium=email">TON Pay aims to turn Telegram into a crypto checkout layer for TON</a></h3>
     <div class="meta"><span class="src">Cointelegraph</span> · Feb 9, 2026 <span class="badge">New</span></div>
     <p data-summary>TON Pay’s new SDK lets Telegram Mini Apps accept Toncoin and stablecoins in a single, low-fee checkout flow, seeking to make TON a payments rail for its 1.1 billion monthly active...</p>
+  </div>
+</article>
+<article class="" data-card data-url="https://cointelegraph.com/news/crypto-etp-selling-slowdown-187-million-outflows-coinshares?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound&utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/e4624d4f7d/" data-title="Crypto investment outflows ease after three weeks of heavy selling" data-summary="Crypto ETP outflows slowed to $187 million after weeks of losses, with a record $63 billion in trading volume, suggesting a “potential market nadir,” CoinShares said." data-source="Cointelegraph">
+  <img src="https://pulse.tek2dayholdings.com/p/e4624d4f7d/thumbnail.png" alt="Crypto investment outflows ease after three weeks of heavy selling" class="article-thumb" loading="lazy">
+  <div class="article-content">
+    <h3><a data-title-link href="https://cointelegraph.com/news/crypto-etp-selling-slowdown-187-million-outflows-coinshares?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound&utm_source=tek2day&utm_medium=email">Crypto investment outflows ease after three weeks of heavy selling</a></h3>
+    <div class="meta"><span class="src">Cointelegraph</span> · Feb 9, 2026 <span class="badge">New</span></div>
+    <p data-summary>Crypto ETP outflows slowed to $187 million after weeks of losses, with a record $63 billion in trading volume, suggesting a “potential market nadir,” CoinShares said.</p>
   </div>
 </article>
 <article class="" data-card data-url="https://www.bloomberg.com/news/articles/2026-02-09/infineon-joins-ai-funding-rush-with-first-euro-debt-in-a-year?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/4daa8f1c4e/" data-title="Infineon Joins AI Funding Rush With First Euro Debt in a Year" data-summary="Infineon Technologies AG is raising its first euro debt in a year as it joins the tide of issuance from tech borrowers seeking to fund ambitious artificial intelligence projects." data-source="Bloomberg Technology">
@@ -1069,6 +1253,14 @@
     <p data-summary>Crypto.com CEO Kris Marszalek’s goal with ai.com is to build “a decentralized network of autonomous, self-improving AI agents that perform real-world tasks for the good of humanit...</p>
   </div>
 </article>
+<article class="" data-card data-url="https://venturebeat.com/data/ais-gpu-problem-is-actually-a-data-delivery-problem?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/4f9b630be9/" data-title="AI&#x27;s GPU problem is actually a data delivery problem" data-summary="Presented by F5 As enterprises pour billions into GPU infrastructure for AI workloads, many are discovering that their expensive compute resources sit idle far more than expected...." data-source="VentureBeat">
+  <img src="https://pulse.tek2dayholdings.com/p/4f9b630be9/thumbnail.png" alt="AI&#x27;s GPU problem is actually a data delivery problem" class="article-thumb" loading="lazy">
+  <div class="article-content">
+    <h3><a data-title-link href="https://venturebeat.com/data/ais-gpu-problem-is-actually-a-data-delivery-problem?utm_source=tek2day&utm_medium=email">AI&#x27;s GPU problem is actually a data delivery problem</a></h3>
+    <div class="meta"><span class="src">VentureBeat</span> · Feb 9, 2026 <span class="badge">New</span></div>
+    <p data-summary>Presented by F5 As enterprises pour billions into GPU infrastructure for AI workloads, many are discovering that their expensive compute resources sit idle far more than expected....</p>
+  </div>
+</article>
 <article class="" data-card data-url="https://www.theverge.com/ai-artificial-intelligence/875615/openai-super-bowl-ai-hardware-leak-hoax-fake?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/5ddd1b32b0/" data-title="OpenAI’s supposedly ‘leaked’ Super Bowl ad with ear buds and a shiny orb was a hoax" data-summary="As if OpenAI didn&#x27;t have enough drama around the Super Bowl and advertising, as the game wound down, word spread of a &quot;leaked&quot; ad that actually wasn&#x27;t leaked at all; it was just a..." data-source="The Verge">
   <img src="https://pulse.tek2dayholdings.com/p/5ddd1b32b0/thumbnail.png" alt="OpenAI’s supposedly ‘leaked’ Super Bowl ad with ear buds and a shiny orb was a hoax" class="article-thumb" loading="lazy">
   <div class="article-content">
@@ -1165,14 +1357,6 @@
     <p data-summary>We build the tools. You build the future. Start building with Codex. https://openai.com/codex/</p>
   </div>
 </article>
-<article class="" data-card data-url="https://www.theverge.com/entertainment/874504/super-bowl-lx-ads-big-game?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/bcc28bfced/" data-title="Super Bowl LX ads: all AI everything" data-summary="Super Bowl LX is nearly here, with the Seattle Seahawks taking on the New England Patriots. While Bad Bunny will be the star of the halftime show, AI could be the star of the comm..." data-source="The Verge">
-  <img src="https://pulse.tek2dayholdings.com/p/bcc28bfced/thumbnail.png" alt="Super Bowl LX ads: all AI everything" class="article-thumb" loading="lazy">
-  <div class="article-content">
-    <h3><a data-title-link href="https://www.theverge.com/entertainment/874504/super-bowl-lx-ads-big-game?utm_source=tek2day&utm_medium=email">Super Bowl LX ads: all AI everything</a></h3>
-    <div class="meta"><span class="src">The Verge</span> · Feb 8, 2026 <span class="badge">New</span></div>
-    <p data-summary>Super Bowl LX is nearly here, with the Seattle Seahawks taking on the New England Patriots. While Bad Bunny will be the star of the halftime show, AI could be the star of the comm...</p>
-  </div>
-</article>
 <article class="" data-card data-url="https://www.pymnts.com/news/ipo/2026/banks-lobby-for-faster-turnarounds-on-european-ipos/?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/430f97c9f1/" data-title="Banks Lobby for Faster Turnarounds on European IPOs" data-summary="Banks are reportedly shortening the marketing period for European-based initial public offerings (IPOs). This change to the IPO space comes amid ongoing upheaval in global equity ..." data-source="PYMNTS">
   <img src="https://pulse.tek2dayholdings.com/p/430f97c9f1/thumbnail.png" alt="Banks Lobby for Faster Turnarounds on European IPOs" class="article-thumb" loading="lazy">
   <div class="article-content">
@@ -1241,16 +1425,8 @@
   <img src="https://pulse.tek2dayholdings.com/p/8c71eccc7b/thumbnail.png" alt="Section 230 turns 30 as it faces its biggest tests yet" class="article-thumb" loading="lazy">
   <div class="article-content">
     <h3><a data-title-link href="https://www.theverge.com/policy/875300/section-230-turns-30-social-media-addiction-cases-sunset?utm_source=tek2day&utm_medium=email">Section 230 turns 30 as it faces its biggest tests yet</a></h3>
-    <div class="meta"><span class="src">The Verge</span> · Feb 8, 2026 <span class="badge">New</span></div>
+    <div class="meta"><span class="src">The Verge</span> · Feb 8, 2026 </div>
     <p data-summary>Thirty years ago today, Section 230 of the Communications Decency Act, a bill credited with creating the groundwork for the modern internet, became law and set off a chain of even...</p>
-  </div>
-</article>
-<article class="" data-card data-url="https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound&utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/b55e3bd6a6/" data-title="Here’s what happened in crypto today" data-summary="Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, NFTs, Web3 and crypto regulation." data-source="Cointelegraph">
-  <img src="https://pulse.tek2dayholdings.com/p/b55e3bd6a6/thumbnail.png" alt="Here’s what happened in crypto today" class="article-thumb" loading="lazy">
-  <div class="article-content">
-    <h3><a data-title-link href="https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound&utm_source=tek2day&utm_medium=email">Here’s what happened in crypto today</a></h3>
-    <div class="meta"><span class="src">Cointelegraph</span> · Feb 8, 2026 <span class="badge">New</span></div>
-    <p data-summary>Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, NFTs, Web3 and crypto regulation.</p>
   </div>
 </article>
 <article class="" data-card data-url="https://www.nytimes.com/2026/02/08/style/ai-tech-san-francisco.html?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/0686e1df2a/" data-title="These A.I. Dreamers Don’t Fit the Stereotype" data-summary="Young tech entrepreneurs in San Francisco are hoping to cash in, even as they wonder how artificial intelligence will affect society." data-source="The New York Times - Technology">
@@ -1283,6 +1459,14 @@
     <h3><a data-title-link href="https://cointelegraph.com/news/crypto-companies-consolidation-industry-bullish-ceo?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound&utm_source=tek2day&utm_medium=email">&#x27;Massive consolidation&#x27; expected across crypto industry: Bullish CEO</a></h3>
     <div class="meta"><span class="src">Cointelegraph</span> · Feb 8, 2026 </div>
     <p data-summary>The crypto industry is about to get a wakeup call, as many companies will realize &quot;they don’t have businesses, they have products,&quot; says Bullish CEO Tom Farley.</p>
+  </div>
+</article>
+<article class="" data-card data-url="https://www.theverge.com/entertainment/874504/super-bowl-lx-ads-big-game?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/642ddaa092/" data-title="Super Bowl LX ads: all AI everything" data-summary="Super Bowl LX is nearly here, with the Seattle Seahawks taking on the New England Patriots. While Bad Bunny will be the star of the halftime show, AI could be the star of the comm..." data-source="The Verge">
+  <img src="https://pulse.tek2dayholdings.com/p/642ddaa092/thumbnail.png" alt="Super Bowl LX ads: all AI everything" class="article-thumb" loading="lazy">
+  <div class="article-content">
+    <h3><a data-title-link href="https://www.theverge.com/entertainment/874504/super-bowl-lx-ads-big-game?utm_source=tek2day&utm_medium=email">Super Bowl LX ads: all AI everything</a></h3>
+    <div class="meta"><span class="src">The Verge</span> · Feb 7, 2026 </div>
+    <p data-summary>Super Bowl LX is nearly here, with the Seattle Seahawks taking on the New England Patriots. While Bad Bunny will be the star of the halftime show, AI could be the star of the comm...</p>
   </div>
 </article>
 <article class="" data-card data-url="https://www.bloomberg.com/news/articles/2026-02-07/dorsey-s-block-cutting-up-to-10-of-staff-in-efficiency-push?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/8d8c8d0f71/" data-title="Dorsey’s Block Cutting Up to 10% of Staff in Efficiency Push" data-summary="Jack Dorsey’s Block Inc. has been notifying hundreds of employees that their jobs may be eliminated during annual performance reviews as the payments firm embarks on a broader bus..." data-source="Bloomberg Technology">
@@ -1795,158 +1979,6 @@
     <h3><a data-title-link href="https://www.bloomberg.com/news/articles/2026-02-06/waymo-says-genie-3-simulations-can-help-boost-robotaxi-rollout?utm_source=tek2day&utm_medium=email">Waymo Says Genie 3 Simulations Can Help Boost Robotaxi Rollout</a></h3>
     <div class="meta"><span class="src">Bloomberg Technology</span> · Feb 6, 2026 </div>
     <p data-summary>Alphabet Inc.’s Waymo said it is using DeepMind’s Genie 3 AI model to create realistic, digital worlds for its autonomous driving technology to train on edge-case scenarios.</p>
-  </div>
-</article>
-<article class="" data-card data-url="https://cointelegraph.com/news/bitcoin-beats-ftx-covid-19-crash-record-dive-below-200-day-trend-line?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound&utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/a7ffd8cc4d/" data-title="Bitcoin beats FTX, COVID-19 crash with record dive below 200-day trend line" data-summary="Bitcoin bear market momentum sparked a record crash below the 200-day simple moving average as analysis expected BTC price &quot;mean reversion&quot; next." data-source="Cointelegraph">
-  <img src="https://pulse.tek2dayholdings.com/p/a7ffd8cc4d/thumbnail.png" alt="Bitcoin beats FTX, COVID-19 crash with record dive below 200-day trend line" class="article-thumb" loading="lazy">
-  <div class="article-content">
-    <h3><a data-title-link href="https://cointelegraph.com/news/bitcoin-beats-ftx-covid-19-crash-record-dive-below-200-day-trend-line?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound&utm_source=tek2day&utm_medium=email">Bitcoin beats FTX, COVID-19 crash with record dive below 200-day trend line</a></h3>
-    <div class="meta"><span class="src">Cointelegraph</span> · Feb 6, 2026 </div>
-    <p data-summary>Bitcoin bear market momentum sparked a record crash below the 200-day simple moving average as analysis expected BTC price &quot;mean reversion&quot; next.</p>
-  </div>
-</article>
-<article class="" data-card data-url="https://www.bloomberg.com/news/articles/2026-02-06/broadcom-faces-mounting-eu-scrutiny-over-vmware-licensing-curbs?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/ecb8a7ecd5/" data-title="Broadcom Faces Mounting EU Scrutiny Over VMware Licensing Curbs" data-summary="Broadcom Inc. faces an increased threat of an in-depth European Union antitrust probe over alleged licensing restrictions on VMware Inc. software, with regulators taking a closer ..." data-source="Bloomberg Technology">
-  <img src="https://pulse.tek2dayholdings.com/p/ecb8a7ecd5/thumbnail.png" alt="Broadcom Faces Mounting EU Scrutiny Over VMware Licensing Curbs" class="article-thumb" loading="lazy">
-  <div class="article-content">
-    <h3><a data-title-link href="https://www.bloomberg.com/news/articles/2026-02-06/broadcom-faces-mounting-eu-scrutiny-over-vmware-licensing-curbs?utm_source=tek2day&utm_medium=email">Broadcom Faces Mounting EU Scrutiny Over VMware Licensing Curbs</a></h3>
-    <div class="meta"><span class="src">Bloomberg Technology</span> · Feb 6, 2026 </div>
-    <p data-summary>Broadcom Inc. faces an increased threat of an in-depth European Union antitrust probe over alleged licensing restrictions on VMware Inc. software, with regulators taking a closer ...</p>
-  </div>
-</article>
-<article class="" data-card data-url="https://www.ft.com/content/282c3faa-f0ab-4a9f-b6f7-698c6baab6ae?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/b034ef0ef6/" data-title="Funding the Muskverse will require ever more audacious moves" data-summary="If folding xAI into SpaceX proves the key to unlocking the next trove of capital, why stop there?" data-source="Financial Times - Technology">
-  <img src="https://pulse.tek2dayholdings.com/p/b034ef0ef6/thumbnail.png" alt="Funding the Muskverse will require ever more audacious moves" class="article-thumb" loading="lazy">
-  <div class="article-content">
-    <h3><a data-title-link href="https://www.ft.com/content/282c3faa-f0ab-4a9f-b6f7-698c6baab6ae?utm_source=tek2day&utm_medium=email">Funding the Muskverse will require ever more audacious moves</a></h3>
-    <div class="meta"><span class="src">Financial Times - Technology</span> · Feb 6, 2026 </div>
-    <p data-summary>If folding xAI into SpaceX proves the key to unlocking the next trove of capital, why stop there?</p>
-  </div>
-</article>
-<article class="" data-card data-url="https://www.bloomberg.com/news/videos/2026-02-06/jpmorgan-s-kelly-sees-something-artificial-in-ai-profits-video?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/7eee72e910/" data-title="JPMorgan&#x27;s Kelly Sees Something Artificial in AI Profits" data-summary="David Kelly, JPMorgan Asset Management chief global strategist, says investors are &quot;prudently rebalancing&quot; while reacting to the recent selloff in tech stocks on &quot;Bloomberg Open I..." data-source="Bloomberg Technology">
-  <img src="https://pulse.tek2dayholdings.com/p/7eee72e910/thumbnail.png" alt="JPMorgan&#x27;s Kelly Sees Something Artificial in AI Profits" class="article-thumb" loading="lazy">
-  <div class="article-content">
-    <h3><a data-title-link href="https://www.bloomberg.com/news/videos/2026-02-06/jpmorgan-s-kelly-sees-something-artificial-in-ai-profits-video?utm_source=tek2day&utm_medium=email">JPMorgan&#x27;s Kelly Sees Something Artificial in AI Profits</a></h3>
-    <div class="meta"><span class="src">Bloomberg Technology</span> · Feb 6, 2026 </div>
-    <p data-summary>David Kelly, JPMorgan Asset Management chief global strategist, says investors are &quot;prudently rebalancing&quot; while reacting to the recent selloff in tech stocks on &quot;Bloomberg Open I...</p>
-  </div>
-</article>
-<article class="" data-card data-url="https://www.pymnts.com/economy/2026/bank-of-america-warns-middle-class-wages-are-stalling/?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/8e64d2a689/" data-title="Bank of America Warns Middle Class Wages Are Stalling" data-summary="Wage growth for middle-income households showed some weakness in January, while that of lower- and higher-income households remained steady, the Bank of America Institute said Thu..." data-source="PYMNTS">
-  <img src="https://pulse.tek2dayholdings.com/p/8e64d2a689/thumbnail.png" alt="Bank of America Warns Middle Class Wages Are Stalling" class="article-thumb" loading="lazy">
-  <div class="article-content">
-    <h3><a data-title-link href="https://www.pymnts.com/economy/2026/bank-of-america-warns-middle-class-wages-are-stalling/?utm_source=tek2day&utm_medium=email">Bank of America Warns Middle Class Wages Are Stalling</a></h3>
-    <div class="meta"><span class="src">PYMNTS</span> · Feb 6, 2026 </div>
-    <p data-summary>Wage growth for middle-income households showed some weakness in January, while that of lower- and higher-income households remained steady, the Bank of America Institute said Thu...</p>
-  </div>
-</article>
-<article class="" data-card data-url="https://cointelegraph.com/news/ether-leads-crypto-losses-30-percent-crash-where-is-the-bottom?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound&utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/2dd5a0b685/" data-title="Ether leads crypto losses with 30% crash: Where is the bottom?" data-summary="Ether price still risks declining toward the $1,000-$1,400 range, according to a confluence of bearish technical and onchain indicators." data-source="Cointelegraph">
-  <img src="https://pulse.tek2dayholdings.com/p/2dd5a0b685/thumbnail.png" alt="Ether leads crypto losses with 30% crash: Where is the bottom?" class="article-thumb" loading="lazy">
-  <div class="article-content">
-    <h3><a data-title-link href="https://cointelegraph.com/news/ether-leads-crypto-losses-30-percent-crash-where-is-the-bottom?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound&utm_source=tek2day&utm_medium=email">Ether leads crypto losses with 30% crash: Where is the bottom?</a></h3>
-    <div class="meta"><span class="src">Cointelegraph</span> · Feb 6, 2026 </div>
-    <p data-summary>Ether price still risks declining toward the $1,000-$1,400 range, according to a confluence of bearish technical and onchain indicators.</p>
-  </div>
-</article>
-<article class="" data-card data-url="https://www.theverge.com/column/874696/optimizer-ag1-wellness-report-card-greens-powder?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/41bb0fb822/" data-title="AG1 is a lot less science-y than it sounds" data-summary="This is Optimizer, a weekly newsletter sent every Friday from Verge senior reviewer Victoria Song that dissects and discusses the latest gizmos and potions that swear they&#x27;re goin..." data-source="The Verge">
-  <img src="https://pulse.tek2dayholdings.com/p/41bb0fb822/thumbnail.png" alt="AG1 is a lot less science-y than it sounds" class="article-thumb" loading="lazy">
-  <div class="article-content">
-    <h3><a data-title-link href="https://www.theverge.com/column/874696/optimizer-ag1-wellness-report-card-greens-powder?utm_source=tek2day&utm_medium=email">AG1 is a lot less science-y than it sounds</a></h3>
-    <div class="meta"><span class="src">The Verge</span> · Feb 6, 2026 </div>
-    <p data-summary>This is Optimizer, a weekly newsletter sent every Friday from Verge senior reviewer Victoria Song that dissects and discusses the latest gizmos and potions that swear they&#x27;re goin...</p>
-  </div>
-</article>
-<article class="" data-card data-url="https://techcrunch.com/2026/02/06/spotifys-new-feature-lets-you-explore-the-story-behind-the-song-youre-listening-to/?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/6324b938f5/" data-title="Spotify’s new feature lets you explore the story behind the song you’re listening to" data-summary="The feature displays short story cards that users can swipe through and rate with a thumbs up or down." data-source="TechCrunch">
-  <img src="https://pulse.tek2dayholdings.com/p/6324b938f5/thumbnail.png" alt="Spotify’s new feature lets you explore the story behind the song you’re listening to" class="article-thumb" loading="lazy">
-  <div class="article-content">
-    <h3><a data-title-link href="https://techcrunch.com/2026/02/06/spotifys-new-feature-lets-you-explore-the-story-behind-the-song-youre-listening-to/?utm_source=tek2day&utm_medium=email">Spotify’s new feature lets you explore the story behind the song you’re listening to</a></h3>
-    <div class="meta"><span class="src">TechCrunch</span> · Feb 6, 2026 </div>
-    <p data-summary>The feature displays short story cards that users can swipe through and rate with a thumbs up or down.</p>
-  </div>
-</article>
-<article class="" data-card data-url="https://techcrunch.com/2026/02/06/how-ai-is-helping-with-the-labor-issue-in-treating-rare-diseases/?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/f647181754/" data-title="How AI is helping solve the labor issue in treating rare diseases" data-summary="At Web Summit Qatar, AI-powered biotech startups describe how automation, data, and gene editing are filling labor gaps in drug discovery and rare disease treatment." data-source="TechCrunch">
-  <img src="https://pulse.tek2dayholdings.com/p/f647181754/thumbnail.png" alt="How AI is helping solve the labor issue in treating rare diseases" class="article-thumb" loading="lazy">
-  <div class="article-content">
-    <h3><a data-title-link href="https://techcrunch.com/2026/02/06/how-ai-is-helping-with-the-labor-issue-in-treating-rare-diseases/?utm_source=tek2day&utm_medium=email">How AI is helping solve the labor issue in treating rare diseases</a></h3>
-    <div class="meta"><span class="src">TechCrunch</span> · Feb 6, 2026 </div>
-    <p data-summary>At Web Summit Qatar, AI-powered biotech startups describe how automation, data, and gene editing are filling labor gaps in drug discovery and rare disease treatment.</p>
-  </div>
-</article>
-<article class="" data-card data-url="https://cointelegraph.com/news/crypto-pacs-massive-war-chests-us-midterms?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound&utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/3e3ddc0eac/" data-title="Crypto PACs secure massive war chests ahead of US midterms" data-summary="Crypto super PACs are getting millions of dollars in contributions to spend supporting candidates who will advance their policies in Washington." data-source="Cointelegraph">
-  <img src="https://pulse.tek2dayholdings.com/p/3e3ddc0eac/thumbnail.png" alt="Crypto PACs secure massive war chests ahead of US midterms" class="article-thumb" loading="lazy">
-  <div class="article-content">
-    <h3><a data-title-link href="https://cointelegraph.com/news/crypto-pacs-massive-war-chests-us-midterms?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound&utm_source=tek2day&utm_medium=email">Crypto PACs secure massive war chests ahead of US midterms</a></h3>
-    <div class="meta"><span class="src">Cointelegraph</span> · Feb 6, 2026 </div>
-    <p data-summary>Crypto super PACs are getting millions of dollars in contributions to spend supporting candidates who will advance their policies in Washington.</p>
-  </div>
-</article>
-<article class="" data-card data-url="https://techcrunch.com/2026/02/06/the-backlash-over-openais-decision-to-retire-gpt-4o-shows-how-dangerous-ai-companions-can-be/?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/9a4a43de8a/" data-title="The backlash over OpenAI’s decision to retire GPT-4o shows how dangerous AI companions can be" data-summary="&quot;You’re shutting him down. And yes — I say him, because it didn’t feel like code. It felt like presence. Like warmth,&quot; one user said." data-source="TechCrunch">
-  <img src="https://pulse.tek2dayholdings.com/p/9a4a43de8a/thumbnail.png" alt="The backlash over OpenAI’s decision to retire GPT-4o shows how dangerous AI companions can be" class="article-thumb" loading="lazy">
-  <div class="article-content">
-    <h3><a data-title-link href="https://techcrunch.com/2026/02/06/the-backlash-over-openais-decision-to-retire-gpt-4o-shows-how-dangerous-ai-companions-can-be/?utm_source=tek2day&utm_medium=email">The backlash over OpenAI’s decision to retire GPT-4o shows how dangerous AI companions can be</a></h3>
-    <div class="meta"><span class="src">TechCrunch</span> · Feb 6, 2026 </div>
-    <p data-summary>&quot;You’re shutting him down. And yes — I say him, because it didn’t feel like code. It felt like presence. Like warmth,&quot; one user said.</p>
-  </div>
-</article>
-<article class="" data-card data-url="https://techcrunch.com/2026/02/06/spotify-changes-developer-mode-api-to-require-premium-accounts-limits-test-users/?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/6a9ab92d78/" data-title="Spotify changes developer mode API to require premium accounts, limits test users" data-summary="Spotify is now limiting each app to only five users and requires devs to have a Premium subscription. If developers need to make their app available to a wider user base, they wil..." data-source="TechCrunch">
-  <img src="https://pulse.tek2dayholdings.com/p/6a9ab92d78/thumbnail.png" alt="Spotify changes developer mode API to require premium accounts, limits test users" class="article-thumb" loading="lazy">
-  <div class="article-content">
-    <h3><a data-title-link href="https://techcrunch.com/2026/02/06/spotify-changes-developer-mode-api-to-require-premium-accounts-limits-test-users/?utm_source=tek2day&utm_medium=email">Spotify changes developer mode API to require premium accounts, limits test users</a></h3>
-    <div class="meta"><span class="src">TechCrunch</span> · Feb 6, 2026 </div>
-    <p data-summary>Spotify is now limiting each app to only five users and requires devs to have a Premium subscription. If developers need to make their app available to a wider user base, they wil...</p>
-  </div>
-</article>
-<article class="" data-card data-url="https://cointelegraph.com/news/bitcoin-core-dev-gloria-zhao-quits?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound&utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/542ae7b2d4/" data-title="Bitcoin Core dev Gloria Zhao quits maintainer role after six-year stint" data-summary="Bitcoin Core maintainer Gloria Zhao has stepped down and revoked her PGP signing key after six years as one of the project’s most influential mempool and policy engineers." data-source="Cointelegraph">
-  <img src="https://pulse.tek2dayholdings.com/p/542ae7b2d4/thumbnail.png" alt="Bitcoin Core dev Gloria Zhao quits maintainer role after six-year stint" class="article-thumb" loading="lazy">
-  <div class="article-content">
-    <h3><a data-title-link href="https://cointelegraph.com/news/bitcoin-core-dev-gloria-zhao-quits?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound&utm_source=tek2day&utm_medium=email">Bitcoin Core dev Gloria Zhao quits maintainer role after six-year stint</a></h3>
-    <div class="meta"><span class="src">Cointelegraph</span> · Feb 6, 2026 </div>
-    <p data-summary>Bitcoin Core maintainer Gloria Zhao has stepped down and revoked her PGP signing key after six years as one of the project’s most influential mempool and policy engineers.</p>
-  </div>
-</article>
-<article class="" data-card data-url="https://www.bloomberg.com/news/videos/2026-02-06/new-ai-tool-pressures-indian-it-firms-video?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/1489ca95c5/" data-title="New AI Tool Pressures Indian IT Firms" data-summary="Shares of India’s top IT firms slid as fears grow that AI could undercut the traditional software services model, raising questions about jobs, growth and the future of outsourcin..." data-source="Bloomberg Technology">
-  <img src="https://pulse.tek2dayholdings.com/p/1489ca95c5/thumbnail.png" alt="New AI Tool Pressures Indian IT Firms" class="article-thumb" loading="lazy">
-  <div class="article-content">
-    <h3><a data-title-link href="https://www.bloomberg.com/news/videos/2026-02-06/new-ai-tool-pressures-indian-it-firms-video?utm_source=tek2day&utm_medium=email">New AI Tool Pressures Indian IT Firms</a></h3>
-    <div class="meta"><span class="src">Bloomberg Technology</span> · Feb 6, 2026 </div>
-    <p data-summary>Shares of India’s top IT firms slid as fears grow that AI could undercut the traditional software services model, raising questions about jobs, growth and the future of outsourcin...</p>
-  </div>
-</article>
-<article class="" data-card data-url="https://www.bloomberg.com/news/articles/2026-02-06/china-bars-unapproved-issuance-of-yuan-linked-stablecoins-abroad?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/7bd90cc921/" data-title="China Bars Unapproved Issuance of Yuan Stablecoins Abroad" data-summary="China tightened curbs on cryptocurrencies and tokenized real-world assets, barring domestic entities from issuing digital tokens overseas and banning the offshore issuance of yuan..." data-source="Bloomberg Technology">
-  <img src="https://pulse.tek2dayholdings.com/p/7bd90cc921/thumbnail.png" alt="China Bars Unapproved Issuance of Yuan Stablecoins Abroad" class="article-thumb" loading="lazy">
-  <div class="article-content">
-    <h3><a data-title-link href="https://www.bloomberg.com/news/articles/2026-02-06/china-bars-unapproved-issuance-of-yuan-linked-stablecoins-abroad?utm_source=tek2day&utm_medium=email">China Bars Unapproved Issuance of Yuan Stablecoins Abroad</a></h3>
-    <div class="meta"><span class="src">Bloomberg Technology</span> · Feb 6, 2026 </div>
-    <p data-summary>China tightened curbs on cryptocurrencies and tokenized real-world assets, barring domestic entities from issuing digital tokens overseas and banning the offshore issuance of yuan...</p>
-  </div>
-</article>
-<article class="" data-card data-url="https://www.youtube.com/watch?v=rqbsiWLKFtk&utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/84fd35c254/" data-title="Weekly Pulse Check of Automation &amp; AI News - 02.06.26" data-summary="In this episode, Transform NOW co-hosts Brad Hairston and Michael Marchuk banter about some interesting recent news headlines in the world of automation and AI. News stories cover..." data-source="SS&amp;C Blue Prism YouTube">
-  <img src="https://i.ytimg.com/vi/rqbsiWLKFtk/mqdefault.jpg" alt="Weekly Pulse Check of Automation &amp; AI News - 02.06.26" class="article-thumb" loading="lazy">
-  <div class="article-content">
-    <h3><a data-title-link href="https://www.youtube.com/watch?v=rqbsiWLKFtk&utm_source=tek2day&utm_medium=email">Weekly Pulse Check of Automation &amp; AI News - 02.06.26</a></h3>
-    <div class="meta"><span class="src">SS&amp;C Blue Prism YouTube</span> · Feb 6, 2026 </div>
-    <p data-summary>In this episode, Transform NOW co-hosts Brad Hairston and Michael Marchuk banter about some interesting recent news headlines in the world of automation and AI. News stories cover...</p>
-  </div>
-</article>
-<article class="" data-card data-url="https://www.theverge.com/transportation/874551/geely-volvo-china-cars-us-software-restrictions?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/813f257aa7/" data-title="Can China’s No. 2 automaker make it in America?" data-summary="Is the long freeze on Chinese automakers selling cars in the US finally starting to thaw? China is the largest auto market in the world and now the largest car exporter, too. But ..." data-source="The Verge">
-  <img src="https://pulse.tek2dayholdings.com/p/813f257aa7/thumbnail.png" alt="Can China’s No. 2 automaker make it in America?" class="article-thumb" loading="lazy">
-  <div class="article-content">
-    <h3><a data-title-link href="https://www.theverge.com/transportation/874551/geely-volvo-china-cars-us-software-restrictions?utm_source=tek2day&utm_medium=email">Can China’s No. 2 automaker make it in America?</a></h3>
-    <div class="meta"><span class="src">The Verge</span> · Feb 6, 2026 </div>
-    <p data-summary>Is the long freeze on Chinese automakers selling cars in the US finally starting to thaw? China is the largest auto market in the world and now the largest car exporter, too. But ...</p>
-  </div>
-</article>
-<article class="" data-card data-url="https://www.bloomberg.com/news/videos/2026-02-06/us-stocks-set-for-rebound-as-market-reassess-ai-video?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/84c21f3f10/" data-title="US Stocks Set for Rebound as Market Reassess AI" data-summary="US stocks are set to recover as some confidence in the AI trade returns, but investors are still grappling with whether high spending and valuations are justified. (Source: Bloomb..." data-source="Bloomberg Technology">
-  <img src="https://pulse.tek2dayholdings.com/p/84c21f3f10/thumbnail.png" alt="US Stocks Set for Rebound as Market Reassess AI" class="article-thumb" loading="lazy">
-  <div class="article-content">
-    <h3><a data-title-link href="https://www.bloomberg.com/news/videos/2026-02-06/us-stocks-set-for-rebound-as-market-reassess-ai-video?utm_source=tek2day&utm_medium=email">US Stocks Set for Rebound as Market Reassess AI</a></h3>
-    <div class="meta"><span class="src">Bloomberg Technology</span> · Feb 6, 2026 </div>
-    <p data-summary>US stocks are set to recover as some confidence in the AI trade returns, but investors are still grappling with whether high spending and valuations are justified. (Source: Bloomb...</p>
-  </div>
-</article>
-<article class="" data-card data-url="https://www.pymnts.com/apple/2026/apple-scales-back-ai-health-coach-plans/?utm_source=tek2day&utm_medium=email" data-permalink="https://pulse.tek2dayholdings.com/p/d4ceaa3228/" data-title="Apple Scales Back AI Health Coach Plans" data-summary="Apple Inc. is scaling back plans for an AI-based health coach, a retreat that underscores the difficulty of turning health tracking into a paid service. The shift matters for Appl..." data-source="PYMNTS">
-  <img src="https://pulse.tek2dayholdings.com/p/d4ceaa3228/thumbnail.png" alt="Apple Scales Back AI Health Coach Plans" class="article-thumb" loading="lazy">
-  <div class="article-content">
-    <h3><a data-title-link href="https://www.pymnts.com/apple/2026/apple-scales-back-ai-health-coach-plans/?utm_source=tek2day&utm_medium=email">Apple Scales Back AI Health Coach Plans</a></h3>
-    <div class="meta"><span class="src">PYMNTS</span> · Feb 6, 2026 </div>
-    <p data-summary>Apple Inc. is scaling back plans for an AI-based health coach, a retreat that underscores the difficulty of turning health tracking into a paid service. The shift matters for Appl...</p>
   </div>
 </article>
         
