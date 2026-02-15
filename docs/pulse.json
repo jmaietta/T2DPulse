@@ -1,5 +1,65 @@
 [
   {
+    "title": "AI Strategy: Software as a Container (SaaC)",
+    "url": "https://newsletter.tek2dayholdings.com/p/ai-strategy-software-as-a-container",
+    "published_at": "2026-02-14T19:18:59-05:00",
+    "source": "TEK2day Newsletter",
+    "summary": "New business model for Software companies",
+    "content_html": "<h4>One go-to-market approach that I know some Software companies are considering and that all are likely to consider would be to present customers two options:</h4><ul><li><p><strong>Option 1.) </strong>Continue to subscribe to our Software &#8220;as is&#8221;, </p></li><li><p><strong>Option 2.) </strong>Subscription covers an application toolkit where the data layer, the middleware, the security layer all go inside the Software company&#8217;s container, and the customer designs a custom User Interface with AI tools for small dollars. The Software company handles 95% of the cost on a go-forward basis (doing the hard stuff), while the customer maintains the UI.</p></li></ul><div><hr /></div><h4>More on OpenAI Codex</h4><p>I refactored a CEORater back-end file with 3,000 lines of code using Codex. It took Codex approximately 3 hours to build the test environment and refactor the code. I&#8217;ll will review as I have time, but smoke tests that Codex performed all came back clean. </p><h5>This is what Codex did in summary:</h5><div class=\"captioned-image-container\"><figure><a class=\"image-link image2 is-viewable-img\" href=\"https://substackcdn.com/image/fetch/$s_!x7iP!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa4d05019-7d6a-4b1f-a6e1-087f933262fd_1365x699.png\" target=\"_blank\"><div class=\"image2-inset\"><source type=\"image/webp\" /><img alt=\"\" class=\"sizing-normal\" height=\"699\" src=\"https://substackcdn.com/image/fetch/$s_!x7iP!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa4d05019-7d6a-4b1f-a6e1-087f933262fd_1365x699.png\" width=\"1365\" /><div class=\"image-link-expand\"><div class=\"pencraft pc-display-flex pc-gap-8 pc-reset\"><button class=\"pencraft pc-reset pencraft icon-container restack-image\" tabindex=\"0\" type=\"button\"><svg fill=\"none\" height=\"20\" stroke=\"var(--color-fg-primary)\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" viewBox=\"0 0 20 20\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><g><title></title><path d=\"M2.53001 7.81595C3.49179 4.73911 6.43281 2.5 9.91173 2.5C13.1684 2.5 15.9537 4.46214 17.0852 7.23684L17.6179 8.67647M17.6179 8.67647L18.5002 4.26471M17.6179 8.67647L13.6473 6.91176M17.4995 12.1841C16.5378 15.2609 13.5967 17.5 10.1178 17.5C6.86118 17.5 4.07589 15.5379 2.94432 12.7632L2.41165 11.3235M2.41165 11.3235L1.5293 15.7353M2.41165 11.3235L6.38224 13.0882\"></path></g></svg></button><button class=\"pencraft pc-reset pencraft icon-container view-image\" tabindex=\"0\" type=\"button\"><svg class=\"lucide lucide-maximize2 lucide-maximize-2\" fill=\"none\" height=\"20\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" viewBox=\"0 0 24 24\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><polyline points=\"15 3 21 3 21 9\"></polyline><polyline points=\"9 21 3 21 3 15\"></polyline><line x1=\"21\" x2=\"14\" y1=\"3\" y2=\"10\"></line><line x1=\"3\" x2=\"10\" y1=\"21\" y2=\"14\"></line></svg></button></div></div></div></a></figure></div><div class=\"captioned-image-container\"><figure><a class=\"image-link image2 is-viewable-img\" href=\"https://substackcdn.com/image/fetch/$s_!KVwu!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F5c5bae73-de8d-450f-b8f5-cb781523bb36_1355x661.png\" target=\"_blank\"><div class=\"image2-inset\"><source type=\"image/webp\" /><img alt=\"\" class=\"sizing-normal\" height=\"661\" src=\"https://substackcdn.com/image/fetch/$s_!KVwu!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F5c5bae73-de8d-450f-b8f5-cb781523bb36_1355x661.png\" width=\"1355\" /><div class=\"image-link-expand\"><div class=\"pencraft pc-display-flex pc-gap-8 pc-reset\"><button class=\"pencraft pc-reset pencraft icon-container restack-image\" tabindex=\"0\" type=\"button\"><svg fill=\"none\" height=\"20\" stroke=\"var(--color-fg-primary)\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" viewBox=\"0 0 20 20\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><g><title></title><path d=\"M2.53001 7.81595C3.49179 4.73911 6.43281 2.5 9.91173 2.5C13.1684 2.5 15.9537 4.46214 17.0852 7.23684L17.6179 8.67647M17.6179 8.67647L18.5002 4.26471M17.6179 8.67647L13.6473 6.91176M17.4995 12.1841C16.5378 15.2609 13.5967 17.5 10.1178 17.5C6.86118 17.5 4.07589 15.5379 2.94432 12.7632L2.41165 11.3235M2.41165 11.3235L1.5293 15.7353M2.41165 11.3235L6.38224 13.0882\"></path></g></svg></button><button class=\"pencraft pc-reset pencraft icon-container view-image\" tabindex=\"0\" type=\"button\"><svg class=\"lucide lucide-maximize2 lucide-maximize-2\" fill=\"none\" height=\"20\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" viewBox=\"0 0 24 24\" width=\"20\" xmlns=\"http://www.w3.org/2000/svg\"><polyline points=\"15 3 21 3 21 9\"></polyline><polyline points=\"9 21 3 21 3 15\"></polyline><line x1=\"21\" x2=\"14\" y1=\"3\" y2=\"10\"></line><line x1=\"3\" x2=\"10\" y1=\"21\" y2=\"14\"></line></svg></button></div></div></div></a></figure></div><h5>Here&#8217;s the music video:</h5><div class=\"native-video-embed\"></div><div><hr /></div><p></p><p></p>",
+    "image_url": "https://substack-post-media.s3.amazonaws.com/public/images/739ca61d-7767-48ea-b241-73975bd2bdb5_2752x1536.png",
+    "summary_text": "New business model for Software companies",
+    "category": "ai",
+    "_permalink": "/p/e8b4e75b38/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/e8b4e75b38/",
+    "_summary_240": "New business model for Software companies",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/e8b4e75b38/thumbnail.png"
+  },
+  {
+    "title": "Here\u2019s what happened in crypto today",
+    "url": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "published_at": "2026-02-14T17:31:39-05:00",
+    "source": "Cointelegraph",
+    "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, NFTs, Web3 and crypto regulation.",
+    "content_html": "",
+    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMDYvMDE5Nzk0MjMtZWY4ZS03YzYwLWI5MzctYjlkZGY3NWZlOGFk.jpg",
+    "summary_text": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, NFTs, Web3 and crypto regulation.",
+    "category": "fintech",
+    "_permalink": "/p/cabb557279/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/cabb557279/",
+    "_summary_240": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, NFTs, Web3 and crypto regulation.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/cabb557279/thumbnail.png"
+  },
+  {
+    "title": "Homeland Security reportedly sent hundreds of subpoenas seeking to unmask anti-ICE accounts",
+    "url": "https://techcrunch.com/2026/02/14/homeland-security-reportedly-sent-hundreds-of-subpoenas-seeking-to-unmask-anti-ice-accounts/",
+    "published_at": "2026-02-14T17:30:00-05:00",
+    "source": "TechCrunch",
+    "summary": "The Department of Homeland Security has been increasing pressure on tech companies to identify the owners of accounts that criticize ICE.",
+    "content_html": "",
+    "image_url": "https://techcrunch.com/wp-content/uploads/2026/02/GettyImages-2258756561.jpg?w=1024",
+    "summary_text": "The Department of Homeland Security has been increasing pressure on tech companies to identify the owners of accounts that criticize ICE.",
+    "category": "fintech",
+    "_permalink": "/p/0a40a5087e/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/0a40a5087e/",
+    "_summary_240": "The Department of Homeland Security has been increasing pressure on tech companies to identify the owners of accounts that criticize ICE.",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/0a40a5087e/thumbnail.png"
+  },
+  {
+    "title": "In a changed VC landscape, this exec is doubling down on overlooked founders",
+    "url": "https://techcrunch.com/2026/02/14/stacy-brown-philpot-cherryrock-capital-vc/",
+    "published_at": "2026-02-14T15:37:42-05:00",
+    "source": "TechCrunch",
+    "summary": "As much of Silicon Valley chases mega-rounds and buzzy AI deals, Stacy Brown-Philpot is running Cherryrock Capital like a throwback to venture capital's earlier days",
+    "content_html": "",
+    "image_url": "https://techcrunch.com/wp-content/uploads/2026/02/Screenshot-2026-02-12-at-8.42.46-AM.png?resize=1200,1008",
+    "summary_text": "As much of Silicon Valley chases mega-rounds and buzzy AI deals, Stacy Brown-Philpot is running Cherryrock Capital like a throwback to venture capital's earlier days",
+    "category": "software",
+    "_permalink": "/p/1edfaeb2e9/",
+    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/1edfaeb2e9/",
+    "_summary_240": "As much of Silicon Valley chases mega-rounds and buzzy AI deals, Stacy Brown-Philpot is running Cherryrock Capital like a throwback to venture capital's earlier days",
+    "_thumbnail": "https://pulse.tek2dayholdings.com/p/1edfaeb2e9/thumbnail.png"
+  },
+  {
     "title": "Hollywood isn\u2019t happy about the new Seedance 2.0 video generator",
     "url": "https://techcrunch.com/2026/02/14/hollywood-isnt-happy-about-the-new-seedance-2-0-video-generator/",
     "published_at": "2026-02-14T13:26:52-05:00",
@@ -73,21 +133,6 @@
     "_abs_permalink": "https://pulse.tek2dayholdings.com/p/7171327e44/",
     "_summary_240": "It was supposed to be a relatively relaxing work week in the South Florida sun for the hundreds of bankers, brokers, advisers, portfolio managers, analysts and investors...",
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/7171327e44/thumbnail.png"
-  },
-  {
-    "title": "Here\u2019s what happened in crypto today",
-    "url": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-    "published_at": "2026-02-14T08:04:42-05:00",
-    "source": "Cointelegraph",
-    "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, NFTs, Web3 and crypto regulation.",
-    "content_html": "",
-    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMDYvMDE5Nzk0MjMtZWY4ZS03YzYwLWI5MzctYjlkZGY3NWZlOGFk.jpg",
-    "summary_text": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, NFTs, Web3 and crypto regulation.",
-    "category": "fintech",
-    "_permalink": "/p/6e4fdc87af/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/6e4fdc87af/",
-    "_summary_240": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, NFTs, Web3 and crypto regulation.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/6e4fdc87af/thumbnail.png"
   },
   {
     "title": "Ring\u2019s Flock breakup doesn\u2019t fix its real problem",
@@ -735,21 +780,6 @@
     "_thumbnail": "https://pulse.tek2dayholdings.com/p/d136473d60/thumbnail.png"
   },
   {
-    "title": "Elon Musk suggests spate of xAI exits have been push, not pull",
-    "url": "https://techcrunch.com/2026/02/13/elon-musk-suggests-spate-of-xai-exits-have-been-push-not-pull/",
-    "published_at": "2026-02-13T11:11:01-05:00",
-    "source": "TechCrunch",
-    "summary": "At least nine engineers, including two co-founders, have announced their exits from xAI in the past week, fueling online speculation and raising questions about stability at Musk\u2019s AI company amid mounting controversy.",
-    "content_html": "",
-    "image_url": "https://techcrunch.com/wp-content/uploads/2025/07/GettyImages-2199701496.jpg?resize=1200,800",
-    "summary_text": "At least nine engineers, including two co-founders, have announced their exits from xAI in the past week, fueling online speculation and raising questions about stability at Musk\u2019s AI company amid mounting controversy.",
-    "category": "ai",
-    "_permalink": "/p/a986810f9a/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/a986810f9a/",
-    "_summary_240": "At least nine engineers, including two co-founders, have announced their exits from xAI in the past week, fueling online speculation and raising questions about stability at...",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/a986810f9a/thumbnail.png"
-  },
-  {
     "title": "Goldman Traders Launch AI-Proof Software Basket Amid Sector Rout",
     "url": "https://www.bloomberg.com/news/articles/2026-02-13/goldman-traders-launch-ai-proof-software-basket-amid-sector-rout",
     "published_at": "2026-02-13T11:00:06-05:00",
@@ -884,21 +914,6 @@
     "category": "ai"
   },
   {
-    "title": "Crypto use in human trafficking networks surged in 2025: Chainalysis",
-    "url": "https://cointelegraph.com/news/crypto-use-in-human-trafficking-networks-surged-in-2025-chainalysis?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-    "published_at": "2026-02-13T00:21:28-05:00",
-    "source": "Cointelegraph",
-    "summary": "Chainalysis says that despite the rising use of crypto in trafficking networks, the transparency of blockchain may give visibility into the operations, aiding law enforcement.",
-    "content_html": "",
-    "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjYtMDIvMDE5YzU1NTMtOTU3Yi03MTc5LWJjYmItNTgwMjVkNDY5N2FiLmpwZw==.jpg",
-    "summary_text": "Chainalysis says that despite the rising use of crypto in trafficking networks, the transparency of blockchain may give visibility into the operations, aiding law enforcement.",
-    "category": "fintech",
-    "_permalink": "/p/19bf187791/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/19bf187791/",
-    "_summary_240": "Chainalysis says that despite the rising use of crypto in trafficking networks, the transparency of blockchain may give visibility into the operations, aiding law enforcement.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/19bf187791/thumbnail.png"
-  },
-  {
     "title": "Wall Street hunts next casualty from AI threat to white-collar work",
     "url": "https://www.ft.com/content/40d04966-d526-4314-9c2a-c721c88aaab1",
     "published_at": "2026-02-13T00:00:20-05:00",
@@ -920,13 +935,9 @@
     "source": "Financial Times - Technology",
     "summary": "Abattoirs turn to technology to monitor numbers and labelling after decades of disputes over miscounts",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/833aee2e-ae40-4cfb-9a66-3ebaaf14bb3a.jpg",
+    "image_url": "",
     "summary_text": "Abattoirs turn to technology to monitor numbers and labelling after decades of disputes over miscounts",
-    "category": "ai",
-    "_permalink": "/p/ef82aa76da/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/ef82aa76da/",
-    "_summary_240": "Abattoirs turn to technology to monitor numbers and labelling after decades of disputes over miscounts",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/ef82aa76da/thumbnail.png"
+    "category": "ai"
   },
   {
     "title": "OpenAI sidesteps Nvidia with unusually fast coding model on plate-sized chips",
@@ -1025,13 +1036,9 @@
     "source": "Financial Times - Technology",
     "summary": "Big Tech group\u2019s AI chief predicts white-collar work could be automated within 18 months",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/e5ab2318-6734-484e-9448-df3600090769.jpg",
+    "image_url": "",
     "summary_text": "Big Tech group\u2019s AI chief predicts white-collar work could be automated within 18 months",
-    "category": "ai",
-    "_permalink": "/p/974e782244/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/974e782244/",
-    "_summary_240": "Big Tech group\u2019s AI chief predicts white-collar work could be automated within 18 months",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/974e782244/thumbnail.png"
+    "category": "ai"
   },
   {
     "title": "OpenAI\u2019s President Gave Millions to Trump. He Says It\u2019s for Humanity",
@@ -1055,13 +1062,9 @@
     "source": "Financial Times - Technology",
     "summary": "The battle over the use of agents is starting to come into focus",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/a26bf8cb-77cd-4cd6-88d5-5c4c8db60b6d.jpg",
+    "image_url": "",
     "summary_text": "The battle over the use of agents is starting to come into focus",
-    "category": "ai",
-    "_permalink": "/p/b1432d8905/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/b1432d8905/",
-    "_summary_240": "The battle over the use of agents is starting to come into focus",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/b1432d8905/thumbnail.png"
+    "category": "ai"
   },
   {
     "title": "Complete guide to Microsoft experiences at RSAC security conference March 22-26",
@@ -1190,7 +1193,7 @@
     "source": "Financial Times - Technology",
     "summary": "Civilian and reservist charged with security offences, bribery and obstructing justice after \u2018red line\u2019 crossed with online gambling",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/5dd0a0c0-973c-4fb6-9b0e-24eb94ad2a36.jpg",
+    "image_url": "",
     "summary_text": "Civilian and reservist charged with security offences, bribery and obstructing justice after \u2018red line\u2019 crossed with online gambling",
     "category": "fintech"
   },
@@ -1201,13 +1204,9 @@
     "source": "Financial Times - Technology",
     "summary": "It takes more than an app to come up with an innovative gameplay loop",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/dcff2865-5da7-4304-aa21-ef403960c428.jpg",
+    "image_url": "",
     "summary_text": "It takes more than an app to come up with an innovative gameplay loop",
-    "category": "ai",
-    "_permalink": "/p/ed91d556d7/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/ed91d556d7/",
-    "_summary_240": "It takes more than an app to come up with an innovative gameplay loop",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/ed91d556d7/thumbnail.png"
+    "category": "ai"
   },
   {
     "title": "What has AI done to illustrators?",
@@ -1216,13 +1215,9 @@
     "source": "Financial Times - Technology",
     "summary": "Disruption has led some to pull back while others are changing the type of work they produce",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/727163f3-5fbb-428b-bb66-0862aff9acfe.jpg",
+    "image_url": "",
     "summary_text": "Disruption has led some to pull back while others are changing the type of work they produce",
-    "category": "ai",
-    "_permalink": "/p/c99004b6cc/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/c99004b6cc/",
-    "_summary_240": "Disruption has led some to pull back while others are changing the type of work they produce",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/c99004b6cc/thumbnail.png"
+    "category": "ai"
   },
   {
     "title": "Introducing GPT-5.3-Codex-Spark",
@@ -1242,13 +1237,9 @@
     "source": "Financial Times - Technology",
     "summary": "This is the year that stablecoins are becoming part of the mainstream for online and international payments",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/bd0db196-289d-468c-8286-2cbe7ce722c8.jpg",
+    "image_url": "",
     "summary_text": "This is the year that stablecoins are becoming part of the mainstream for online and international payments",
-    "category": "fintech",
-    "_permalink": "/p/e12c828461/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/e12c828461/",
-    "_summary_240": "This is the year that stablecoins are becoming part of the mainstream for online and international payments",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/e12c828461/thumbnail.png"
+    "category": "fintech"
   },
   {
     "title": "How private equity\u2019s big bet on software was derailed by AI",
@@ -1257,13 +1248,9 @@
     "source": "Financial Times - Technology",
     "summary": "Dealmakers and lenders are facing a \u2018Darwinian moment\u2019 as digital services risk being made obsolete by new technologies",
     "content_html": "",
-    "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/2f3f182d-7731-4705-830e-335558d1d74e.jpg",
+    "image_url": "",
     "summary_text": "Dealmakers and lenders are facing a \u2018Darwinian moment\u2019 as digital services risk being made obsolete by new technologies",
-    "category": "software",
-    "_permalink": "/p/6f0d1d90b4/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/6f0d1d90b4/",
-    "_summary_240": "Dealmakers and lenders are facing a \u2018Darwinian moment\u2019 as digital services risk being made obsolete by new technologies",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/6f0d1d90b4/thumbnail.png"
+    "category": "software"
   },
   {
     "title": "Not All Software Companies Are At Risk of LLM Disintermediation",
@@ -1289,11 +1276,7 @@
     "content_html": "<p>Last May, law enforcement authorities around the world scored a key win when they hobbled the infrastructure of Lumma, an infostealer that infected nearly 395,000 Windows computers over just a two-month span leading up to the international operation. Researchers said Wednesday that Lumma is once again \u201cback at scale\u201d in hard-to-detect attacks that pilfer credentials and sensitive files.</p>\n<p>Lumma, also known as Lumma Stealer, first appeared in Russian-speaking cybercrime forums in 2022. Its cloud-based malware-as-a-service model provided a sprawling infrastructure of domains for hosting lure sites offering free cracked software, games, and pirated movies, as well as command-and-control channels and everything else a threat actor needed to run their infostealing enterprise. Within a year, Lumma was selling for as much as $2,500 for premium versions. By the spring of 2024, the FBI counted more than 21,000 listings on crime forums. Last year, Microsoft said Lumma had become the \u201cgo-to tool\u201d for multiple crime groups, including Scattered Spider, one of the most prolific groups.</p>\n<h2>Takedowns are hard</h2>\n<p>The FBI and an international coalition of its counterparts <a href=\"https://arstechnica.com/security/2025/05/authorities-carry-out-global-takedown-of-infostealer-used-by-cybercriminals/\">took action</a> early last year. In May, they said they seized 2,300 domains, command-and-control infrastructure, and crime marketplaces that had enabled the infostealer to thrive. Recently, however, the malware has made a comeback, allowing it to infect a significant number of machines again.</p><p><a href=\"https://arstechnica.com/security/2026/02/once-hobbled-lumma-stealer-is-back-with-lures-that-are-hard-to-resist/\">Read full article</a></p>\n<p><a href=\"https://arstechnica.com/security/2026/02/once-hobbled-lumma-stealer-is-back-with-lures-that-are-hard-to-resist/#comments\">Comments</a></p>",
     "image_url": "https://cdn.arstechnica.net/wp-content/uploads/2023/07/exploit-vulnerability-security.jpg",
     "summary_text": "ClickFix bait, combined with advanced Castleloader malware, is installing Lumma \"at scale.\"",
-    "category": "fintech",
-    "_permalink": "/p/c4709c1f62/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/c4709c1f62/",
-    "_summary_240": "ClickFix bait, combined with advanced Castleloader malware, is installing Lumma \"at scale.\"",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/c4709c1f62/thumbnail.png"
+    "category": "fintech"
   },
   {
     "title": "These A.I. Dreamers Don\u2019t Fit the Stereotype",
@@ -1304,11 +1287,7 @@
     "content_html": "The office of the San Francisco start-up Usul.",
     "image_url": "https://static01.nyt.com/images/2026/02/12/multimedia/08ST-YOUNG-AI-01-mqvh/08ST-YOUNG-AI-01-mqvh-mediumSquareAt3X.jpg",
     "summary_text": "Young tech entrepreneurs in San Francisco are hoping to cash in, even as they wonder how artificial intelligence will affect society.",
-    "category": "ai",
-    "_permalink": "/p/e017701185/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/e017701185/",
-    "_summary_240": "Young tech entrepreneurs in San Francisco are hoping to cash in, even as they wonder how artificial intelligence will affect society.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/e017701185/thumbnail.png"
+    "category": "ai"
   },
   {
     "title": "OpenAI researcher quits over ChatGPT ads, warns of \"Facebook\" path",
@@ -1319,11 +1298,7 @@
     "content_html": "<p>On Wednesday, former OpenAI researcher Zo\u00eb Hitzig <a href=\"https://www.nytimes.com/2026/02/11/opinion/openai-ads-chatgpt.html\">published</a> a guest essay in The New York Times announcing that she resigned from the company on Monday, the same day OpenAI <a href=\"https://arstechnica.com/information-technology/2026/01/openai-to-test-ads-in-chatgpt-as-it-burns-through-billions/\">began testing</a> advertisements inside ChatGPT. Hitzig, an economist and published poet who holds a junior fellowship at the Harvard Society of Fellows, spent two years at OpenAI helping shape how its AI models were built and priced. She wrote that OpenAI's advertising strategy risks repeating the same mistakes that Facebook made a decade ago.</p>\n<p>\"I once believed I could help the people building A.I. get ahead of the problems it would create,\" Hitzig wrote. \"This week confirmed my slow realization that OpenAI seems to have stopped asking the questions I'd joined to help answer.\"</p>\n<p>Hitzig did not call advertising itself immoral. Instead, she argued that the nature of the data at stake makes ChatGPT ads especially risky. Users have shared medical fears, relationship problems, and religious beliefs with the chatbot, she wrote, often \"because people believed they were talking to something that had no ulterior agenda.\" She called this accumulated record of personal disclosures \"an archive of human candor that has no precedent.\"</p><p><a href=\"https://arstechnica.com/information-technology/2026/02/openai-researcher-quits-over-fears-that-chatgpt-ads-could-manipulate-users/\">Read full article</a></p>\n<p><a href=\"https://arstechnica.com/information-technology/2026/02/openai-researcher-quits-over-fears-that-chatgpt-ads-could-manipulate-users/#comments\">Comments</a></p>",
     "image_url": "https://cdn.arstechnica.net/wp-content/uploads/2026/02/open-ai-monkey-ad-1152x648.jpg",
     "summary_text": "Zo\u00eb Hitzig resigned on the same day OpenAI began testing ads in its chatbot.",
-    "category": "ai",
-    "_permalink": "/p/1d740b0125/",
-    "_abs_permalink": "https://pulse.tek2dayholdings.com/p/1d740b0125/",
-    "_summary_240": "Zo\u00eb Hitzig resigned on the same day OpenAI began testing ads in its chatbot.",
-    "_thumbnail": "https://pulse.tek2dayholdings.com/p/1d740b0125/thumbnail.png"
+    "category": "ai"
   },
   {
     "title": "Codex checks its work for you",
