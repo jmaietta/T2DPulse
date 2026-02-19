@@ -1,0 +1,26 @@
+name: Cleanup Tracked Generated Docs
+on:
+  workflow_dispatch: {}
+permissions:
+  contents: write
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 1
+      - name: Stop tracking generated files
+        run: |
+          git rm -r --cached --ignore-unmatch docs/p docs/archive/json docs/archive/timestamped
+          git rm --cached --ignore-unmatch docs/index.html docs/pulse.json docs/trending_analytics.json
+          git add .gitignore
+          if git diff --cached --quiet; then
+            echo "Nothing to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git commit -m "chore: stop tracking generated docs output"
+          git push
