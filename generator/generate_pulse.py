@@ -16,12 +16,13 @@ import time
 import random
 import hashlib
 import math
+import shutil
 import urllib.parse
 from io import BytesIO
 from pathlib import Path
 from typing import Optional
 from dataclasses import dataclass, field
-from datetime import datetime, timedelta, timezone
+from datetime import datetime, timedelta, timezone, date
 from urllib.parse import urlparse, urljoin
 from collections import defaultdict, deque, Counter
 from concurrent.futures import ThreadPoolExecutor, as_completed
@@ -100,6 +101,7 @@ FORCE_INCLUDE_SOURCES = {"tek2day", "tek2day newsletter"}
 FRESH_WINDOW_DAYS = 3
 BACKFILL_WINDOW_DAYS = 5
 FLOORS = {"ai": 10, "software": 6, "fintech": 6}
+RETENTION_DAYS = int(CFG.get("retention_days", 7))
 
 # Permalink paths
 PERMA_ROOT = os.path.join(REPO, "docs", "p")
@@ -324,6 +326,50 @@ def add_utm(url: str) -> str:
     return f"{url}{'&' if '?' in url else '?'}utm_source={UTM['source']}&utm_medium={UTM['medium']}"
 
 
+TRACKING_QUERY_KEYS = {
+    "fbclid", "gclid", "igshid", "mc_cid", "mc_eid", "mkt_tok", "ref", "ref_src",
+    "source", "src", "s", "si", "spm", "trk", "utm_campaign", "utm_content",
+    "utm_id", "utm_medium", "utm_name", "utm_source", "utm_term", "ved", "wpisrc",
+}
+IDENTITY_QUERY_KEYS = {"id", "p", "post", "story", "article", "item", "v"}
+
+
+def canonicalize_url(url: str) -> str:
+    """Normalize URL for de-duplication while preserving identity query params."""
+    if not url:
+        return ""
+    try:
+        parsed = urlparse(url.strip())
+        host = (parsed.netloc or "").lower()
+        if host.startswith("www."):
+            host = host[4:]
+        path = (parsed.path or "/").strip()
+        if not path.startswith("/"):
+            path = "/" + path
+        path = path if path == "/" else path.rstrip("/")
+
+        # YouTube watch URLs must preserve video ID.
+        if "youtube.com" in host and path == "/watch":
+            qs = urllib.parse.parse_qs(parsed.query or "")
+            vid = (qs.get("v") or [""])[0]
+            return f"{host}{path}?v={vid}".rstrip("?")
+
+        query_pairs = urllib.parse.parse_qsl(parsed.query or "", keep_blank_values=False)
+        kept = []
+        for k, v in query_pairs:
+            key = (k or "").strip().lower()
+            if not key:
+                continue
+            if key in TRACKING_QUERY_KEYS or key.startswith("utm_"):
+                continue
+            if key in IDENTITY_QUERY_KEYS:
+                kept.append((key, v))
+        query = urllib.parse.urlencode(sorted(kept)) if kept else ""
+        return f"{host}{path}{('?' + query) if query else ''}"
+    except Exception:
+        return (url or "").strip().lower()
+
+
 def _abs_url(u: str, base: str) -> str:
     """Convert relative URL to absolute."""
     if not u:
@@ -340,6 +386,101 @@ def _stable_id(title: str, url: str, published_at: str) -> str:
     """Generate stable ID for permalink."""
     key = f"{(title or '').strip()}|{(url or '').strip()}|{(published_at or '').strip()}"
     return hashlib.sha1(key.encode("utf-8")).hexdigest()[:10]
+
+
+def permalink_id_for_item(item: dict) -> str:
+    """Derive permalink ID exactly as permalink page generation does."""
+    return _stable_id(item.get("title", ""), item.get("url", ""), item.get("published_at", ""))
+
+
+def is_within_retention(item: dict, now: datetime, retention_days: int = RETENTION_DAYS) -> bool:
+    """True when item timestamp is within retention window."""
+    dt = safe_parse_dt(item.get("published_at"))
+    if not dt:
+        return False
+    return dt.astimezone(timezone.utc) >= (now.astimezone(timezone.utc) - timedelta(days=retention_days))
+
+
+def retain_recent_items(items: list, now: datetime, retention_days: int = RETENTION_DAYS) -> list:
+    """Keep only items within retention window."""
+    return [it for it in items if is_within_retention(it, now=now, retention_days=retention_days)]
+
+
+def _extract_date_from_filename(filename: str, fmt: str) -> Optional[date]:
+    try:
+        date_part = filename.split("_")[0] if "_" in filename else filename.replace(".json", "")
+        return datetime.strptime(date_part, fmt).date()
+    except Exception:
+        return None
+
+
+def _extract_permalink_id(item: dict) -> str:
+    perma = (item.get("_permalink") or "").strip()
+    m = re.search(r"/p/([a-f0-9]{10})/?", perma)
+    if m:
+        return m.group(1)
+    return permalink_id_for_item(item)
+
+
+def purge_old_outputs(docs_dir: str, now_local: datetime, retention_days: int, seed_items: list) -> None:
+    """Delete old snapshots and orphaned permalink folders outside retention window."""
+    cutoff_date = (now_local - timedelta(days=retention_days)).date()
+    ts_dir = os.path.join(docs_dir, "archive", "timestamped")
+    day_dir = os.path.join(docs_dir, "archive", "json")
+
+    for base_dir, date_fmt in ((ts_dir, "%Y-%m-%d"), (day_dir, "%Y-%m-%d")):
+        if not os.path.isdir(base_dir):
+            continue
+        for name in os.listdir(base_dir):
+            if not name.endswith(".json"):
+                continue
+            file_date = _extract_date_from_filename(name, date_fmt)
+            if file_date and file_date < cutoff_date:
+                try:
+                    os.remove(os.path.join(base_dir, name))
+                except Exception:
+                    pass
+
+    keep_ids = {_extract_permalink_id(it) for it in seed_items if it.get("title") and it.get("url")}
+
+    def _load_and_collect(path: str):
+        try:
+            with open(path, "r", encoding="utf-8") as f:
+                data = json.load(f)
+        except Exception:
+            return
+
+        if isinstance(data, dict):
+            if isinstance(data.get("items"), list):
+                for it in data["items"]:
+                    keep_ids.add(_extract_permalink_id(it))
+            by_cat = data.get("by_cat")
+            if isinstance(by_cat, dict):
+                for cat_items in by_cat.values():
+                    if isinstance(cat_items, list):
+                        for it in cat_items:
+                            keep_ids.add(_extract_permalink_id(it))
+
+    for base_dir in (ts_dir, day_dir):
+        if not os.path.isdir(base_dir):
+            continue
+        for name in os.listdir(base_dir):
+            if name.endswith(".json"):
+                _load_and_collect(os.path.join(base_dir, name))
+
+    perma_root = os.path.join(docs_dir, "p")
+    if os.path.isdir(perma_root):
+        for pid in os.listdir(perma_root):
+            perma_dir = os.path.join(perma_root, pid)
+            if not os.path.isdir(perma_dir):
+                continue
+            if not re.fullmatch(r"[a-f0-9]{10}", pid):
+                continue
+            if pid not in keep_ids:
+                try:
+                    shutil.rmtree(perma_dir)
+                except Exception:
+                    pass
 
 
 # ============================================================================
@@ -906,7 +1047,9 @@ def dedupe_story_variants(items: list) -> list:
         title = (it.get("title") or it.get("headline") or "").strip()
         key = _strip_publisher_suffix(title).lower()
         if not key:
-            key = (it.get("id") or it.get("url") or it.get("permalink") or "").lower()
+            key = canonicalize_url(it.get("url") or it.get("permalink") or "")
+        if not key:
+            key = (it.get("id") or "").lower()
         if not key:
             continue
 
@@ -949,22 +1092,7 @@ def dedupe(items: list) -> list:
     for it in items:
         url = it.get("url", "")
         title = it.get("title", "")
-        try:
-            parsed = urlparse(url)
-            netloc = (parsed.netloc or "").lower()
-            path = (parsed.path or "").rstrip("/")
-            # Keep YouTube video identity (avoid collapsing all /watch URLs into one).
-            if ("youtube.com" in netloc or "m.youtube.com" in netloc) and path == "/watch":
-                qs = urllib.parse.parse_qs(parsed.query or "")
-                vid = (qs.get("v") or [""])[0]
-                if vid:
-                    normalized_url = f"youtube.com/watch?v={vid}"
-                else:
-                    normalized_url = f"{netloc}{path}".lower()
-            else:
-                normalized_url = f"{netloc}{path}".lower()
-        except Exception:
-            normalized_url = url.lower()
+        normalized_url = canonicalize_url(url)
         if normalized_url in seen_urls:
             continue
         title_key = re.sub(r"[^a-z0-9]+", "", title.lower())
@@ -1072,9 +1200,9 @@ def build_preferred_today_with_floors(all_items: list, now_local: datetime = Non
     seen_urls = set()
     unique_items = []
     for it in all_combined:
-        url = it.get("url", "")
-        if url and url not in seen_urls:
-            seen_urls.add(url)
+        url_key = canonicalize_url(it.get("url", ""))
+        if url_key and url_key not in seen_urls:
+            seen_urls.add(url_key)
             unique_items.append(it)
 
     def _dt_local(it):
@@ -2004,6 +2132,8 @@ def _save_friday_snapshot_if_today(all_items: list, by_cat: dict) -> None:
 # ============================================================================
 
 def main():
+    now_local = now_et()
+
     # Weekend: reuse Friday snapshot if available
     if os.environ.get('DISABLE_WEEKEND_CACHE', '0') != '1':
         if _weekend_use_friday_payload_if_available():
@@ -2021,6 +2151,10 @@ def main():
     print(f"\n--- Before dedupe: {len(all_items)} total articles ---")
     all_items = dedupe(all_items)
     print(f"--- After dedupe: {len(all_items)} unique articles ---")
+
+    # Retention cap for storage and downstream processing.
+    all_items = retain_recent_items(all_items, now=now_local, retention_days=RETENTION_DAYS)
+    print(f"--- Within {RETENTION_DAYS}-day retention: {len(all_items)} articles ---")
 
     # Final filtering, relevance, enrichment
     pruned = []
@@ -2079,7 +2213,7 @@ def main():
     # Bucket
     by_cat = build_preferred_today_with_floors(
         all_items,
-        now_local=now_et(),
+        now_local=now_local,
         floors=None,
         backfill_days=BACKFILL_WINDOW_DAYS
     )
@@ -2118,8 +2252,8 @@ def main():
         print(f"--- Permalink generation complete: {len(items_to_process)} pages created ---")
 
     # Render
-    date_str = now_et().strftime("%b %-d, %Y")
-    brief = compute_pulse_brief(by_cat, now_local=now_et())
+    date_str = now_local.strftime("%b %-d, %Y")
+    brief = compute_pulse_brief(by_cat, now_local=now_local)
     section = build_section(date_str, by_cat, brief)
 
     # Save Friday snapshot for weekend reuse
@@ -2137,7 +2271,7 @@ def main():
     try:
         ts_dir = os.path.join(docs, "archive", "timestamped")
         os.makedirs(ts_dir, exist_ok=True)
-        ts_name = now_et().strftime("%Y-%m-%d_%H%M%S") + ".json"
+        ts_name = now_local.strftime("%Y-%m-%d_%H%M%S") + ".json"
         ts_path = os.path.join(ts_dir, ts_name)
         with open(ts_path, "w", encoding="utf-8") as tf:
             json.dump({"items": all_items, "brief": brief}, tf, indent=2)
@@ -2152,12 +2286,14 @@ def main():
     try:
         arch_dir = os.path.join(docs, "archive", "json")
         os.makedirs(arch_dir, exist_ok=True)
-        snap_name = now_et().strftime("%Y-%m-%d") + ".json"
+        snap_name = now_local.strftime("%Y-%m-%d") + ".json"
         arch_path = os.path.join(arch_dir, snap_name)
         with open(arch_path, "w", encoding="utf-8") as f:
-            json.dump({"date": now_et().strftime("%Y-%m-%d"), "by_cat": by_cat, "brief": brief}, f, indent=2)
+            json.dump({"date": now_local.strftime("%Y-%m-%d"), "by_cat": by_cat, "brief": brief}, f, indent=2)
     except Exception:
         pass
+
+    purge_old_outputs(docs, now_local=now_local, retention_days=RETENTION_DAYS, seed_items=all_items)
 
     # REMOVED: Backfill retro-tagging logic
 
