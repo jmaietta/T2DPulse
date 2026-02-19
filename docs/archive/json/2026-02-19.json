@@ -3,6 +3,51 @@
   "by_cat": {
     "ai": [
       {
+        "title": "Google says its AI systems helped deter Play Store malware in 2025",
+        "url": "https://techcrunch.com/2026/02/19/google-says-its-ai-systems-helped-deter-play-store-malware-in-2025/",
+        "published_at": "2026-02-19T16:27:39-05:00",
+        "source": "TechCrunch",
+        "summary": "Google said it prevented 1.75 million bad apps from going live on Google Play during 2025, a figure that's down from previous years.",
+        "content_html": "",
+        "image_url": "https://techcrunch.com/wp-content/uploads/2024/10/google-play-getty.jpg?w=1200",
+        "summary_text": "Google said it prevented 1.75 million bad apps from going live on Google Play during 2025, a figure that's down from previous years.",
+        "category": "ai",
+        "_permalink": "/p/2b2a286be0/",
+        "_abs_permalink": "https://pulse.tek2dayholdings.com/p/2b2a286be0/",
+        "_summary_240": "Google said it prevented 1.75 million bad apps from going live on Google Play during 2025, a figure that's down from previous years.",
+        "_thumbnail": "https://pulse.tek2dayholdings.com/p/2b2a286be0/thumbnail.png"
+      },
+      {
+        "title": "AI vs AI: Defense Without Humans in the Loop",
+        "url": "https://www.pymnts.com/artificial-intelligence-2/2026/ai-vs-ai-defense-without-humans-in-the-loop/",
+        "published_at": "2026-02-19T16:12:30-05:00",
+        "source": "PYMNTS",
+        "summary": "Imagine this scenario: Suspicious activity begins moving across an enterprise\u2019s network. It is not triggered by a phishing email or a careless user mistake. An automated system is attempting to breach defenses, probing for weaknesses and assessing how much access it can gain before detection. Seconds later, another system steps in. A defensive AI [\u2026] The post AI vs AI: Defense Without Humans in t...",
+        "content_html": "<p style=\"font-weight: 400;\">Imagine this scenario: Suspicious activity begins moving across an enterprise\u2019s network. It is not triggered by a phishing email or a careless user mistake. An automated system is attempting to breach defenses, probing for weaknesses and assessing how much access it can gain before detection.</p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p style=\"font-weight: 400;\">Seconds later, another system steps in. A defensive AI spots the abnormal pattern, tightens controls and pauses a set of transactions before any money moves or data leaves the company. By the time a human analyst reviews the dashboard, the episode is already over.</p>\n<p style=\"font-weight: 400;\">This is the new operational reality facing enterprise security teams. The most consequential decisions inside corporate networks are increasingly made not by analysts in a security operations center, but by competing artificial intelligence systems acting autonomously.</p>\n<p style=\"font-weight: 400;\">Offensive AI agents probe APIs, manipulate retrieval layers and adapt continuously to countermeasures. Defensive agents triage alerts, isolate workflows and remediate vulnerabilities without waiting for human approval. What once required coordinated attackers and days of reconnaissance now unfolds in automated cycles, often before anyone realizes a conflict has begun.</p>\n<h2 style=\"font-weight: 400;\"><strong>Offensive AI Rewrites the Threat Model</strong></h2>\n<p style=\"font-weight: 400;\">The World Economic Forum <a href=\"https://www.weforum.org/stories/2026/02/how-can-we-build-intelligent-resilience-against-cyber-threats-in-the-age-of-ai/\">reported</a> that 87% of organizations believe AI-related vulnerabilities are increasing risk across their environments. The threat landscape has shifted from AI as a tool to AI as an operation embedded throughout the attack lifecycle.</p>\n<p style=\"font-weight: 400;\">Gartner <a href=\"https://www.cpapracticeadvisor.com/2025/06/24/gartner-predicts-that-17-of-total-cyberattacks-will-involve-generative-ai-by-2027/163653/\">projects</a> that 17% of cyberattacks will employ generative AI by 2027, signaling that AI-driven techniques are moving from experimentation to mainstream threat capability.</p>\n<p style=\"font-weight: 400;\">The result is compounding scale and variability. Artificial intelligence systems can generate unique attack instances while pursuing the same objective, weakening signature-based detection models that rely on pattern repetition. When each payload or prompt sequence is slightly different, static defenses struggle to keep pace.</p>\n<p style=\"font-weight: 400;\">The attack surface is also expanding beyond traditional endpoints. Microsoft researchers have <a href=\"https://blogs.microsoft.com/blog/2025/11/05/beware-of-double-agents-how-ai-can-fortify-or-fracture-your-cybersecurity/\">highlighted</a> how AI integrations themselves can become entry points, particularly through indirect prompt injection. In these scenarios, malicious instructions are embedded in content that enterprise AI systems later ingest, redirecting agent behavior without breaching hardened infrastructure.</p>\n<h2 style=\"font-weight: 400;\"><strong>Defense Without Human Intervention</strong></h2>\n<p style=\"font-weight: 400;\">In response, enterprises and investors are shifting toward autonomous remediation. Bain Capital Ventures and Greylock <a href=\"https://www.prnewswire.com/news-releases/cogent-security-raises-42m-series-a-to-arm-security-teams-with-autonomous-ai-agents-302691566.html\">led</a> a $42 million Series A in <a href=\"https://www.cogent.com\" rel=\"noopener\" target=\"_blank\">Cogent Security</a>, betting that AI agents can compress the gap between vulnerability detection and resolution. The scale of the backlog illustrates the urgency. More than 48,000 new common vulnerabilities and exposures were <a href=\"https://www.techtarget.com/searchsecurity/news/366638312/News-brief-Patch-critical-and-high-severity-vulnerabilities-now\">reported</a> in 2025, per TechTarget, a 162% increase from five years earlier, with attackers often probing new disclosures within minutes.</p>\n<p style=\"font-weight: 400;\">Cogent\u2019s model reflects a broader architectural change. Rather than replacing existing tools, it aggregates signals from scanners, asset inventories and cloud security platforms, then uses AI to prioritize and trigger remediation workflows automatically through ticketing and patching systems.</p>\n<p style=\"font-weight: 400;\">\u201cSecurity teams are drowning in coordination work, chasing down system owners, writing tickets, proving fixes happened,\u201d Cogent CEO <a href=\"https://www.linkedin.com/in/vineetedupuganti/\" rel=\"noopener\" target=\"_blank\">Vineet Edupuganti</a> <a href=\"https://fortune.com/2026/02/18/exclusive-bain-and-greylock-bet-42-million-that-ai-agents-can-finally-fix-cybersecuritys-messiest-bottleneck/\">told Fortune</a>. The company says customers are resolving their most serious vulnerabilities 97% faster using autonomous workflows.</p>\n<p style=\"font-weight: 400;\">In optimal scenarios, defensive agents remove the need for human intervention on a specific class of vulnerability. In others, they compress triage and coordination, so engineers focus on higher-order judgment. The common thread is speed. Human-speed remediation is no longer sufficient when AI-driven attackers operate in continuous loops.</p>\n<p style=\"font-weight: 400;\">Data quality remains a constraint. Behavioral detection and anomaly classification depend on high-fidelity telemetry and clean baselines. Defensive systems trained on incomplete or noisy data risk generating excessive false positives or missing novel attack paths entirely.</p>\n<p style=\"font-weight: 400;\">At the same time, attackers are increasingly deploying fraudulent AI assistants designed to impersonate legitimate tools and harvest sensitive user information. As PYMNTS <a href=\"https://www.pymnts.com/cybersecurity/2026/fraudulent-ai-assistants-target-user-information/\">reported</a>, these malicious assistants can quietly collect credentials and financial data by exploiting user trust in AI interfaces, reinforcing the need for enterprises to secure not just their networks, but the AI agents themselves.</p>\n<div>\n<p class=\"elementtoproof\"><i>For all PYMNTS AI coverage, subscribe to the daily<span class=\"apple-converted-space\">\u00a0</span></i><a href=\"https://www.pymnts.com/subscribe/\" title=\"https://www.pymnts.com/subscribe/\">AI\u00a0Newsletter</a><i>.</i></p>\n</div>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/artificial-intelligence-2/2026/ai-vs-ai-defense-without-humans-in-the-loop/\">AI vs AI: Defense Without Humans in the Loop</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
+        "image_url": "https://www.pymnts.com/wp-content/uploads/2024/02/AI-cybersecurity.jpg?w=457",
+        "summary_text": "Imagine this scenario: Suspicious activity begins moving across an enterprise\u2019s network. It is not triggered by a phishing email or a careless user mistake. An automated system is attempting to breach defenses, probing for weaknesses and assessing how much ac...",
+        "category": "ai",
+        "_permalink": "/p/8eb38725bd/",
+        "_abs_permalink": "https://pulse.tek2dayholdings.com/p/8eb38725bd/",
+        "_summary_240": "Imagine this scenario: Suspicious activity begins moving across an enterprise\u2019s network. It is not triggered by a phishing email or a careless user mistake. An automated system...",
+        "_thumbnail": "https://pulse.tek2dayholdings.com/p/8eb38725bd/thumbnail.png"
+      },
+      {
+        "title": "An AI data center boom is fueling Redwood\u2019s energy storage business",
+        "url": "https://techcrunch.com/2026/02/19/an-ai-data-center-boom-is-fueling-redwoods-energy-storage-business/",
+        "published_at": "2026-02-19T16:10:13-05:00",
+        "source": "TechCrunch",
+        "summary": "Redwood Materials says its new energy storage business is the fastest growing unit within the company.",
+        "content_html": "",
+        "image_url": "https://techcrunch.com/wp-content/uploads/2026/02/Redwood-Engineering-SF.jpg?resize=1200,675",
+        "summary_text": "Redwood Materials says its new energy storage business is the fastest growing unit within the company.",
+        "category": "ai",
+        "_permalink": "/p/dc622e71d0/",
+        "_abs_permalink": "https://pulse.tek2dayholdings.com/p/dc622e71d0/",
+        "_summary_240": "Redwood Materials says its new energy storage business is the fastest growing unit within the company.",
+        "_thumbnail": "https://pulse.tek2dayholdings.com/p/dc622e71d0/thumbnail.png"
+      },
+      {
         "title": "Why these startup CEOs don\u2019t think AI will replace human roles",
         "url": "https://techcrunch.com/2026/02/19/web-summit-qatar-read-ai-lucidya-notetakers-customer-support/",
         "published_at": "2026-02-19T15:47:22-05:00",
@@ -183,21 +228,6 @@
         "_thumbnail": "https://pulse.tek2dayholdings.com/p/24c7a76612/thumbnail.png"
       },
       {
-        "title": "Money no longer matters to AI\u2019s top talent",
-        "url": "https://www.theverge.com/podcast/880778/ai-talent-war-hiring-frenzy-openai-anthropic-ipo",
-        "published_at": "2026-02-19T10:00:00-05:00",
-        "source": "The Verge",
-        "summary": "Today on Decoder we\u2019re going to talk about the war for AI talent. Right now, the hottest job market on the planet is for AI researchers. The vast majority of these people are concentrated into a small number of hugely valuable, extremely fast-growing companies in the San Francisco Bay Area. Nowadays, such companies are paying [\u2026]",
-        "content_html": "<figure>\n\n<img alt=\"A photo illustration featuring Anthropic CEO Dario Amodei and OpenAI CEO Sam Altman.\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2026/02/DCD_0219.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100\" />\n\t<figcaption>\n\t\t</figcaption>\n</figure>\n<p class=\"has-drop-cap has-text-align-none\">Today on <em>Decoder</em> we&#8217;re going to talk about the war for AI talent. Right now, the hottest job market on the planet is for AI researchers.</p>\n\n<p class=\"has-text-align-none\">The vast majority of these people are concentrated into a small number of hugely valuable, extremely fast-growing companies in the San Francisco Bay Area. Nowadays, such companies are paying some of the highest salaries in the history of the tech industry to poach researchers from one another.</p>\n\n<p class=\"has-text-align-none\">It feels like every time one of these AI researchers leaves one company for another, they tell us exactly why. Sometimes they&#8217;re simply <a href=\"https://www.bbc.com/news/articles/c62dlvdq3e3o\">resigning to go be a poet</a>. Sometimes they&#8217;re chasing a mission. Sometimes they&#8217;re worried that AI is going to imperil humanity, destroy all jobs, and plunge the world into chaos.</p>\n\n<div class=\"wp-block-vox-media-highlight vox-media-highlight\"><img alt=\"\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/24792604/The_Verge_Decoder_Tileart.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100\" title=\"\" />\n\n\n<p><em>Verge</em> subscribers, don&#8217;t forget you get exclusive access to ad-free\u00a0<em>Decoder</em>\u00a0wherever you get your podcasts. Head <a href=\"https://www.theverge.com/account/podcasts\">here</a>. Not a subscriber? You can <a href=\"https://www.theverge.com/subscribe\">sign up here</a>. </p>\n</div>\n\n<p class=\"has-text-align-none\">They&#8217;re really saying these things. They&#8217;re publishing these notes on X, in blog posts, or in the case of one former OpenAI safety researcher by writing a <a href=\"https://www.nytimes.com/2026/02/11/opinion/openai-ads-chatgpt.html\">full <em>New York Times</em> op-ed</a>. </p>\n\n<p class=\"has-text-align-none\">I&#8217;ve been dying to really dig in and try to unpack what&#8217;s going on with all these talent moves in AI. So my guest today is <em>Verge</em> senior AI reporter Hayden Field, who&#8217;s been covering the revolving door of the AI industry really closely and also the broader culture that&#8217;s motivating the AI workers to jump ship and the companies that are ruthlessly trying to hire them.</p>\n\n<p class=\"has-text-align-none\">Those motivations vary. Sure, all these people are paid extravagant salaries, but as you&#8217;ll hear Hayden say, a stronger motivating force is ideology and mission. The people working on AI, by and large, believe that what they&#8217;re doing is going to radically change the world, and they&#8217;re not really in desperate need of more money. So that really changes the incentive structures that might push people to leave, say, OpenAI for Anthropic, or to <a href=\"https://www.theverge.com/ai-artificial-intelligence/878761/mass-exodus-at-xai-grok-elon-musk-restructuring\">quit Elon Musk&#8217;s xAI</a> now that it&#8217;s been acquired by SpaceX.</p>\n\n<p class=\"has-text-align-none\">At the same time, the incentives of the AI companies themselves are going from raising money to making money. Reporting suggests OpenAI and maybe even Anthropic <a href=\"https://www.wsj.com/tech/ai/openai-ipo-anthropic-race-69f06a42\">could go public this year,</a> and doing so would create a historic amount of wealth. It would also put new kinds of pressure on these companies to be more transparent about how they spend money and to be much more accountable for returning on the huge investments that they&#8217;ve raised so far.</p>\n\n<p class=\"has-text-align-none\">There&#8217;s a lot in this conversation. The AI industry right now is full of drama. There&#8217;s big characters, bitter rivalries, lots of money, and really, really long blog posts about the end of the world.</p>\n\n\n\n<p class=\"has-text-align-none\"><em>If you\u2019d like to read more about what we discussed in this episode, check out these links:</em></p>\n\n<ul class=\"wp-block-list\">\n<li>What\u2019s behind the mass exodus at xAI? | <a href=\"https://www.theverge.com/ai-artificial-intelligence/878761/mass-exodus-at-xai-grok-elon-musk-restructuring\"><em>The Verge</em></a></li>\n\n\n\n<li>OpenClaw founder Peter Steinberger is joining OpenAI | <a href=\"https://www.theverge.com/ai-artificial-intelligence/879623/openclaw-founder-peter-steinberger-joins-openai\"><em>The Verge</em></a></li>\n\n\n\n<li>Two more xAI co-founders leave after the SpaceX merger | <a href=\"https://www.theverge.com/ai-artificial-intelligence/877609/two-more-xai-co-founders-are-among-those-leaving-after-the-spacex-merger\"><em>The Verge</em></a></li>\n\n\n\n<li>AI safety leader says &#8216;world is in peril&#8217; and quits to study poetry | <a href=\"https://www.bbc.com/news/articles/c62dlvdq3e3o\">BBC</a></li>\n\n\n\n<li>OpenAI is making the mistakes Facebook made. I quit. | <a href=\"https://www.nytimes.com/2026/02/11/opinion/openai-ads-chatgpt.html\"><em>The New York Times</em></a></li>\n\n\n\n<li>Anthropic\u2019s chief on AI: \u2018We don\u2019t know if the models are conscious\u2019 | <a href=\"https://www.nytimes.com/2026/02/12/opinion/artificial-intelligence-anthropic-amodei.html\"><em>The New York Times</em></a></li>\n\n\n\n<li>Meet the one woman Anthropic trusts to teach AI morals | <a href=\"https://www.wsj.com/tech/ai/anthropic-amanda-askell-philosopher-ai-3c031883?gaa_at=eafs&amp;gaa_n=AWEtsqfXBfeXgO6fBo8JzOvVyIAMRD4uJgMSTYfUJ7_V36uoSk3m261FNmUyni-zh-A%3D&amp;gaa_ts=699495e0&amp;gaa_sig=c_fHBU1lpTV-fL9dy8w6OOyhM8T1v43D-KngyDMAwuvaO5My3Iqnuq733uDOnmUFikrex1LBLElsbS0wXaUZqw%3D%3D\"><em>The Wall Street Journal</em></a></li>\n\n\n\n<li>OpenAI plans fourth-quarter IPO in race to beat Anthropic to market | <a href=\"https://www.wsj.com/tech/ai/openai-ipo-anthropic-race-69f06a42\"><em>The Wall Street Journal</em></a></li>\n</ul>\n\n<p class=\"has-text-align-none\"><em><sub>Questions or comments about this episode? Hit us up at decoder@theverge.com. We really do read every email!</sub></em></p>",
-        "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/02/DCD_0219.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-        "summary_text": "Today on Decoder we\u2019re going to talk about the war for AI talent. Right now, the hottest job market on the planet is for AI researchers. The vast majority of these people are concentrated into a small number of hugely valuable, extremely fast-growing companie...",
-        "category": "ai",
-        "_permalink": "/p/364866e0c1/",
-        "_abs_permalink": "https://pulse.tek2dayholdings.com/p/364866e0c1/",
-        "_summary_240": "Today on Decoder we\u2019re going to talk about the war for AI talent. Right now, the hottest job market on the planet is for AI researchers. The vast majority of these people are...",
-        "_thumbnail": "https://pulse.tek2dayholdings.com/p/364866e0c1/thumbnail.png"
-      },
-      {
         "title": "Reload wants to give your AI agents a shared memory",
         "url": "https://techcrunch.com/2026/02/19/reload-an-ai-employee-agent-management-platform-raises-2-275m-and-launches-an-ai-employee/",
         "published_at": "2026-02-19T10:00:00-05:00",
@@ -211,6 +241,21 @@
         "_abs_permalink": "https://pulse.tek2dayholdings.com/p/f4f05d8e19/",
         "_summary_240": "Reload announces a $2.275 million raise in a round led by Anthemis and the launch of its first AI employee, Epic.",
         "_thumbnail": "https://pulse.tek2dayholdings.com/p/f4f05d8e19/thumbnail.png"
+      },
+      {
+        "title": "Money no longer matters to AI\u2019s top talent",
+        "url": "https://www.theverge.com/podcast/880778/ai-talent-war-hiring-frenzy-openai-anthropic-ipo",
+        "published_at": "2026-02-19T10:00:00-05:00",
+        "source": "The Verge",
+        "summary": "Today on Decoder we\u2019re going to talk about the war for AI talent. Right now, the hottest job market on the planet is for AI researchers. The vast majority of these people are concentrated into a small number of hugely valuable, extremely fast-growing companies in the San Francisco Bay Area. Nowadays, such companies are paying [\u2026]",
+        "content_html": "<figure>\n\n<img alt=\"A photo illustration featuring Anthropic CEO Dario Amodei and OpenAI CEO Sam Altman.\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/2026/02/DCD_0219.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100\" />\n\t<figcaption>\n\t\t</figcaption>\n</figure>\n<p class=\"has-drop-cap has-text-align-none\">Today on <em>Decoder</em> we&#8217;re going to talk about the war for AI talent. Right now, the hottest job market on the planet is for AI researchers.</p>\n\n<p class=\"has-text-align-none\">The vast majority of these people are concentrated into a small number of hugely valuable, extremely fast-growing companies in the San Francisco Bay Area. Nowadays, such companies are paying some of the highest salaries in the history of the tech industry to poach researchers from one another.</p>\n\n<p class=\"has-text-align-none\">It feels like every time one of these AI researchers leaves one company for another, they tell us exactly why. Sometimes they&#8217;re simply <a href=\"https://www.bbc.com/news/articles/c62dlvdq3e3o\">resigning to go be a poet</a>. Sometimes they&#8217;re chasing a mission. Sometimes they&#8217;re worried that AI is going to imperil humanity, destroy all jobs, and plunge the world into chaos.</p>\n\n<div class=\"wp-block-vox-media-highlight vox-media-highlight\"><img alt=\"\" src=\"https://platform.theverge.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/24792604/The_Verge_Decoder_Tileart.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100\" title=\"\" />\n\n\n<p><em>Verge</em> subscribers, don&#8217;t forget you get exclusive access to ad-free\u00a0<em>Decoder</em>\u00a0wherever you get your podcasts. Head <a href=\"https://www.theverge.com/account/podcasts\">here</a>. Not a subscriber? You can <a href=\"https://www.theverge.com/subscribe\">sign up here</a>. </p>\n</div>\n\n<p class=\"has-text-align-none\">They&#8217;re really saying these things. They&#8217;re publishing these notes on X, in blog posts, or in the case of one former OpenAI safety researcher by writing a <a href=\"https://www.nytimes.com/2026/02/11/opinion/openai-ads-chatgpt.html\">full <em>New York Times</em> op-ed</a>. </p>\n\n<p class=\"has-text-align-none\">I&#8217;ve been dying to really dig in and try to unpack what&#8217;s going on with all these talent moves in AI. So my guest today is <em>Verge</em> senior AI reporter Hayden Field, who&#8217;s been covering the revolving door of the AI industry really closely and also the broader culture that&#8217;s motivating the AI workers to jump ship and the companies that are ruthlessly trying to hire them.</p>\n\n<p class=\"has-text-align-none\">Those motivations vary. Sure, all these people are paid extravagant salaries, but as you&#8217;ll hear Hayden say, a stronger motivating force is ideology and mission. The people working on AI, by and large, believe that what they&#8217;re doing is going to radically change the world, and they&#8217;re not really in desperate need of more money. So that really changes the incentive structures that might push people to leave, say, OpenAI for Anthropic, or to <a href=\"https://www.theverge.com/ai-artificial-intelligence/878761/mass-exodus-at-xai-grok-elon-musk-restructuring\">quit Elon Musk&#8217;s xAI</a> now that it&#8217;s been acquired by SpaceX.</p>\n\n<p class=\"has-text-align-none\">At the same time, the incentives of the AI companies themselves are going from raising money to making money. Reporting suggests OpenAI and maybe even Anthropic <a href=\"https://www.wsj.com/tech/ai/openai-ipo-anthropic-race-69f06a42\">could go public this year,</a> and doing so would create a historic amount of wealth. It would also put new kinds of pressure on these companies to be more transparent about how they spend money and to be much more accountable for returning on the huge investments that they&#8217;ve raised so far.</p>\n\n<p class=\"has-text-align-none\">There&#8217;s a lot in this conversation. The AI industry right now is full of drama. There&#8217;s big characters, bitter rivalries, lots of money, and really, really long blog posts about the end of the world.</p>\n\n\n\n<p class=\"has-text-align-none\"><em>If you\u2019d like to read more about what we discussed in this episode, check out these links:</em></p>\n\n<ul class=\"wp-block-list\">\n<li>What\u2019s behind the mass exodus at xAI? | <a href=\"https://www.theverge.com/ai-artificial-intelligence/878761/mass-exodus-at-xai-grok-elon-musk-restructuring\"><em>The Verge</em></a></li>\n\n\n\n<li>OpenClaw founder Peter Steinberger is joining OpenAI | <a href=\"https://www.theverge.com/ai-artificial-intelligence/879623/openclaw-founder-peter-steinberger-joins-openai\"><em>The Verge</em></a></li>\n\n\n\n<li>Two more xAI co-founders leave after the SpaceX merger | <a href=\"https://www.theverge.com/ai-artificial-intelligence/877609/two-more-xai-co-founders-are-among-those-leaving-after-the-spacex-merger\"><em>The Verge</em></a></li>\n\n\n\n<li>AI safety leader says &#8216;world is in peril&#8217; and quits to study poetry | <a href=\"https://www.bbc.com/news/articles/c62dlvdq3e3o\">BBC</a></li>\n\n\n\n<li>OpenAI is making the mistakes Facebook made. I quit. | <a href=\"https://www.nytimes.com/2026/02/11/opinion/openai-ads-chatgpt.html\"><em>The New York Times</em></a></li>\n\n\n\n<li>Anthropic\u2019s chief on AI: \u2018We don\u2019t know if the models are conscious\u2019 | <a href=\"https://www.nytimes.com/2026/02/12/opinion/artificial-intelligence-anthropic-amodei.html\"><em>The New York Times</em></a></li>\n\n\n\n<li>Meet the one woman Anthropic trusts to teach AI morals | <a href=\"https://www.wsj.com/tech/ai/anthropic-amanda-askell-philosopher-ai-3c031883?gaa_at=eafs&amp;gaa_n=AWEtsqfXBfeXgO6fBo8JzOvVyIAMRD4uJgMSTYfUJ7_V36uoSk3m261FNmUyni-zh-A%3D&amp;gaa_ts=699495e0&amp;gaa_sig=c_fHBU1lpTV-fL9dy8w6OOyhM8T1v43D-KngyDMAwuvaO5My3Iqnuq733uDOnmUFikrex1LBLElsbS0wXaUZqw%3D%3D\"><em>The Wall Street Journal</em></a></li>\n\n\n\n<li>OpenAI plans fourth-quarter IPO in race to beat Anthropic to market | <a href=\"https://www.wsj.com/tech/ai/openai-ipo-anthropic-race-69f06a42\"><em>The Wall Street Journal</em></a></li>\n</ul>\n\n<p class=\"has-text-align-none\"><em><sub>Questions or comments about this episode? Hit us up at decoder@theverge.com. We really do read every email!</sub></em></p>",
+        "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/02/DCD_0219.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+        "summary_text": "Today on Decoder we\u2019re going to talk about the war for AI talent. Right now, the hottest job market on the planet is for AI researchers. The vast majority of these people are concentrated into a small number of hugely valuable, extremely fast-growing companie...",
+        "category": "ai",
+        "_permalink": "/p/364866e0c1/",
+        "_abs_permalink": "https://pulse.tek2dayholdings.com/p/364866e0c1/",
+        "_summary_240": "Today on Decoder we\u2019re going to talk about the war for AI talent. Right now, the hottest job market on the planet is for AI researchers. The vast majority of these people are...",
+        "_thumbnail": "https://pulse.tek2dayholdings.com/p/364866e0c1/thumbnail.png"
       },
       {
         "title": "OpenAI, Reliance partner to add AI search to JioHotstar",
@@ -232,14 +277,14 @@
         "url": "https://techcrunch.com/2026/02/19/co-founders-behind-reface-and-prisma-join-hands-to-improve-on-device-model-inference-with-mirai/",
         "published_at": "2026-02-19T09:43:58-05:00",
         "source": "TechCrunch",
-        "summary": "Mirai raised a $10 million seed round to improve how AI models run on devices like smartphones and laptops.",
+        "summary": "Mirai raised a $10 million seed to improve how AI models run on devices like smartphones and laptops.",
         "content_html": "",
         "image_url": "https://techcrunch.com/wp-content/uploads/2026/02/mirai-logo2.png?resize=1200,675",
-        "summary_text": "Mirai raised a $10 million seed round to improve how AI models run on devices like smartphones and laptops.",
+        "summary_text": "Mirai raised a $10 million seed to improve how AI models run on devices like smartphones and laptops.",
         "category": "ai",
         "_permalink": "/p/d6d0871ce2/",
         "_abs_permalink": "https://pulse.tek2dayholdings.com/p/d6d0871ce2/",
-        "_summary_240": "Mirai raised a $10 million seed round to improve how AI models run on devices like smartphones and laptops.",
+        "_summary_240": "Mirai raised a $10 million seed to improve how AI models run on devices like smartphones and laptops.",
         "_thumbnail": "https://pulse.tek2dayholdings.com/p/d6d0871ce2/thumbnail.png"
       },
       {
@@ -363,21 +408,6 @@
         "_thumbnail": "https://pulse.tek2dayholdings.com/p/6f959648c6/thumbnail.png"
       },
       {
-        "title": "The 'last-mile' data problem is stalling enterprise agentic AI \u2014 'golden pipelines' aim to fix it",
-        "url": "https://venturebeat.com/data/the-last-mile-data-problem-is-stalling-enterprise-agentic-ai-golden",
-        "published_at": "2026-02-19T08:00:00-05:00",
-        "source": "VentureBeat",
-        "summary": "Traditional ETL tools like dbt or Fivetran prepare data for reporting: structured analytics and dashboards with stable schemas. AI applications need something different: preparing messy, evolving operational data for model inference in real-time. Empromptu calls this distinction \"inference integrity\" versus \"reporting integrity.\" Instead of treating data preparation as a separate discipline, gold...",
-        "content_html": "",
-        "image_url": "https://images.ctfassets.net/jdtwqhzvc2n1/5egQ46IjwiShQrV06KpeEk/785fd79433bb0a678b4ab1d2fbf88fb3/golden-pipeline-smk1.jpg?w=800&q=75",
-        "summary_text": "Traditional ETL tools like dbt or Fivetran prepare data for reporting: structured analytics and dashboards with stable schemas. AI applications need something different: preparing messy, evolving operational data for model inference in real-time. Empromptu ca...",
-        "category": "ai",
-        "_permalink": "/p/e0e044ce8d/",
-        "_abs_permalink": "https://pulse.tek2dayholdings.com/p/e0e044ce8d/",
-        "_summary_240": "Traditional ETL tools like dbt or Fivetran prepare data for reporting: structured analytics and dashboards with stable schemas. AI applications need something different:...",
-        "_thumbnail": "https://pulse.tek2dayholdings.com/p/e0e044ce8d/thumbnail.png"
-      },
-      {
         "title": "ByteDance Building Out Artificial Intelligence Team in US",
         "url": "https://www.bloomberg.com/news/articles/2026-02-19/bytedance-building-out-artificial-intelligence-team-in-us",
         "published_at": "2026-02-19T08:00:00-05:00",
@@ -391,6 +421,21 @@
         "_abs_permalink": "https://pulse.tek2dayholdings.com/p/4fda0ef09a/",
         "_summary_240": "Chinese tech giant ByteDance Ltd. is hiring in the US for nearly 100 open roles within its artificial intelligence division, an effort to compete with the world\u2019s leading...",
         "_thumbnail": "https://pulse.tek2dayholdings.com/p/4fda0ef09a/thumbnail.png"
+      },
+      {
+        "title": "The 'last-mile' data problem is stalling enterprise agentic AI \u2014 'golden pipelines' aim to fix it",
+        "url": "https://venturebeat.com/data/the-last-mile-data-problem-is-stalling-enterprise-agentic-ai-golden",
+        "published_at": "2026-02-19T08:00:00-05:00",
+        "source": "VentureBeat",
+        "summary": "Traditional ETL tools like dbt or Fivetran prepare data for reporting: structured analytics and dashboards with stable schemas. AI applications need something different: preparing messy, evolving operational data for model inference in real-time. Empromptu calls this distinction \"inference integrity\" versus \"reporting integrity.\" Instead of treating data preparation as a separate discipline, gold...",
+        "content_html": "",
+        "image_url": "https://images.ctfassets.net/jdtwqhzvc2n1/5egQ46IjwiShQrV06KpeEk/785fd79433bb0a678b4ab1d2fbf88fb3/golden-pipeline-smk1.jpg?w=800&q=75",
+        "summary_text": "Traditional ETL tools like dbt or Fivetran prepare data for reporting: structured analytics and dashboards with stable schemas. AI applications need something different: preparing messy, evolving operational data for model inference in real-time. Empromptu ca...",
+        "category": "ai",
+        "_permalink": "/p/e0e044ce8d/",
+        "_abs_permalink": "https://pulse.tek2dayholdings.com/p/e0e044ce8d/",
+        "_summary_240": "Traditional ETL tools like dbt or Fivetran prepare data for reporting: structured analytics and dashboards with stable schemas. AI applications need something different:...",
+        "_thumbnail": "https://pulse.tek2dayholdings.com/p/e0e044ce8d/thumbnail.png"
       },
       {
         "title": "Traders Left With \u2018Unscratchable Itch\u2019 for Anthropic Exposure",
@@ -543,7 +588,7 @@
         "_thumbnail": "https://pulse.tek2dayholdings.com/p/4c25286328/thumbnail.png"
       },
       {
-        "title": "Altman vs. Amodei: AI Rivals Refuse to Hold Hands at Modi Summit",
+        "title": "Altman-Amodei Hand-Holding Snub Goes Viral at India AI Event",
         "url": "https://www.bloomberg.com/news/articles/2026-02-19/altman-vs-amodei-ai-rivals-refuse-to-hold-hands-at-modi-summit",
         "published_at": "2026-02-19T03:59:32-05:00",
         "source": "Bloomberg Technology",
@@ -552,10 +597,10 @@
         "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iL3IhFo3W8ys/v1/1200x-1.jpg",
         "summary_text": "Once a rival, always a rival.",
         "category": "ai",
-        "_permalink": "/p/7e24522a5b/",
-        "_abs_permalink": "https://pulse.tek2dayholdings.com/p/7e24522a5b/",
+        "_permalink": "/p/5d3a03556d/",
+        "_abs_permalink": "https://pulse.tek2dayholdings.com/p/5d3a03556d/",
         "_summary_240": "Once a rival, always a rival.",
-        "_thumbnail": "https://pulse.tek2dayholdings.com/p/7e24522a5b/thumbnail.png"
+        "_thumbnail": "https://pulse.tek2dayholdings.com/p/5d3a03556d/thumbnail.png"
       },
       {
         "title": "Modi Touts India as Hub for Affordable AI at New Delhi Summit",
@@ -2581,36 +2626,6 @@
         "_abs_permalink": "https://pulse.tek2dayholdings.com/p/21dc655547/",
         "_summary_240": "Six months ago, Indian Prime Minister Narendra Modi was fending off verbal attacks from US President Donald Trump, trying to regain the upper hand over Pakistan after an armed...",
         "_thumbnail": "https://pulse.tek2dayholdings.com/p/21dc655547/thumbnail.png"
-      },
-      {
-        "title": "Tech Giants Look to Bridge AI and Publishing Worlds",
-        "url": "https://www.pymnts.com/artificial-intelligence-2/2026/tech-giants-look-to-bridge-ai-and-publishing-worlds/",
-        "published_at": "2026-02-16T16:13:20-05:00",
-        "source": "PYMNTS",
-        "summary": "Amazon and Microsoft are reportedly pushing into a new part of the AI world: arranging deals with news publishers. That\u2019s according to a report Monday (Feb. 16) from the Wall Street Journal (WSJ), which notes that the advent of new content marketplaces marks a major evolution in the relationship between companies like OpenAI, Meta [\u2026] The post Tech Giants Look to Bridge AI and Publishing Worlds a...",
-        "content_html": "<p><a href=\"https://www.amazon.com/\">Amazon</a> and <a href=\"https://www.microsoft.com/\">Microsoft</a> are reportedly pushing into a new part of the AI world: arranging deals with news publishers.</p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p>That\u2019s according to a <a href=\"https://www.wsj.com/business/media/marketplaces-are-the-next-frontier-in-publisher-deals-with-ai-companies-11515b00?mod=business_lead_story\">report</a> Monday (Feb. 16) from the Wall Street Journal (WSJ), which notes that the advent of new content marketplaces marks a major evolution in the relationship between companies like OpenAI, Meta and Perplexity and the publishers whose material helps their AI tools answer queries.</p>\n<p>News companies have turned to <a href=\"https://www.pymnts.com/artificial-intelligence-2/2024/openai-says-new-york-times-lawsuit-surprising-and-without-merit/\">litigation</a> and/or licensing deals in response, with the likes of <a href=\"https://www.condenast.com/\">Cond\u00e9 Nast</a> and <a href=\"https://www.nytimes.com/\">The New York Times</a> getting tens of millions of dollars per year from AI firms, the WSJ said. Smaller publishers, however, haven\u2019t been as lucky, and larger companies want to be sure they\u2019re properly compensated.</p>\n<p>\u201cThe one-off deals are always going to be desirable, they\u2019re just not readily available,\u201d said <a href=\"https://www.linkedin.com/in/markdhoward\">Mark Howard</a>, chief operating officer at Time, which has a licensing agreement with OpenAI. \u201cA vibrant marketplace with enough of the supply will attract demand.\u201d</p>\n<p>Enter what the WSJ calls a fledgling \u201cmatchmaking\u201d service. Microsoft recently began a pilot with publishers such as People, the Associated Press and Hearst, whose content will be purchased by Yahoo and Microsoft\u2019s Copilot.</p>\n<p>\u201cWe very much intend to scale this,\u201d said <a href=\"https://www.linkedin.com/in/timfrank\">Tim Frank</a>, corporate vice president at Microsoft, who noted that the company has invested $10 million in the program.</p>\n<p>The aim is to let publishers set their own pricing and terms, which could vary according to factors like how new the material is or what type of content they sell.</p>\n<p>The WSJ report follows a similar story last week from The Information, which said that Amazon was in talks with publishing executives about <a href=\"https://www.pymnts.com/artificial-intelligence-2/2026/amazon-considers-ai-content-marketplace-for-publishers/\">developing a marketplace</a> that would allow publishers to sell their content directly to companies creating AI products.</p>\n<p>The program would establish Amazon as an intermediary in the increasing dispute over how AI developers access, license and pay for digital content, the report added.</p>\n<p>\u201cPublishers increasingly favor usage-based compensation models that scale with how often AI systems rely on their content, rather than flat licensing fees,\u201d PYMNTS wrote at the time.\u00a0\u201cIndustry executives say such models could offer a more sustainable <a href=\"https://www.pymnts.com/news/artificial-intelligence/2025/amazon-paying-new-york-times-25-million-dollars-ai-licensing/\">revenue stream</a> as artificial intelligence usage grows, but many also worry that AI companies may not participate in sufficient numbers to make marketplaces economically meaningful.\u201d</p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/artificial-intelligence-2/2026/tech-giants-look-to-bridge-ai-and-publishing-worlds/\">Tech Giants Look to Bridge AI and Publishing Worlds</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
-        "image_url": "https://www.pymnts.com/wp-content/uploads/2026/02/AI-publishers-Big-Tech-news.jpeg?w=457",
-        "summary_text": "Amazon and Microsoft are reportedly pushing into a new part of the AI world: arranging deals with news publishers. That\u2019s according to a report Monday (Feb. 16) from the Wall Street Journal (WSJ), which notes that the advent of new content marketplaces marks ...",
-        "category": "ai",
-        "_permalink": "/p/8821de0ab5/",
-        "_abs_permalink": "https://pulse.tek2dayholdings.com/p/8821de0ab5/",
-        "_summary_240": "Amazon and Microsoft are reportedly pushing into a new part of the AI world: arranging deals with news publishers. That\u2019s according to a report Monday (Feb. 16) from the Wall...",
-        "_thumbnail": "https://pulse.tek2dayholdings.com/p/8821de0ab5/thumbnail.png"
-      },
-      {
-        "title": "Fraudulent AI Assistants Target User Information",
-        "url": "https://www.pymnts.com/cybersecurity/2026/fraudulent-ai-assistants-target-user-information/",
-        "published_at": "2026-02-16T15:59:21-05:00",
-        "source": "PYMNTS",
-        "summary": "Google\u2019s Chrome web store is reportedly being plagued by a wave of malicious browser extensions. According to a report Monday (Feb. 16) by cybersecurity publication Dark Reading, these extensions claim to offer the abilities of an artificial intelligence (AI) assistant, while stealing users\u2019 personal information in secret. The report cites research from security firm [\u2026] The post Fraudulent AI As...",
-        "content_html": "<p><a href=\"https://www.google.com/\">Google\u2019s</a> Chrome web store is reportedly being plagued by a wave of malicious browser extensions.</p><div class=\"d-none\" id=\"article-paywall-overlay\">\n\t<div class=\"my-4\" id=\"article-paywall-content\">\n\t\t\n\t</div>\n</div>\n<div id=\"article-paywall-hidden-content\">\n\t\n<p>According to a <a href=\"https://www.darkreading.com/cyber-risk/chrome-fake-ai-browser-extensions\">report</a> Monday (Feb. 16) by cybersecurity publication Dark Reading, these extensions claim to offer the abilities of an artificial intelligence (AI) assistant, while stealing users\u2019 personal information in secret.</p>\n<p>The report cites research from security firm <a href=\"https://layerxsecurity.com/\">LayerX</a>, which found 30 Google Chrome extensions that are carbon copies of each other, aside from some superficial branding differences, many of which have tens of thousands of downloads each.</p>\n<p>While these extensions purport to act as AI assistants, they are in fact there to steal email content, browser content and anything else the user willingly offers them.</p>\n<p>\u201cWhile we\u2019ve seen [similar tactics] used by malicious extensions in the past, what is new and concerning is how it\u2019s being applied,\u201d says LayerX security researcher <a href=\"https://layerxsecurity.com/blog/aiframe-fake-ai-assistant-extensions-targeting-260000-chrome-users-via-injected-iframes/\">Natalie Zargarov</a>.\u00a0\u201cInstead of <a href=\"https://www.pymnts.com/news/security-and-risk/2025/ai-powered-scams-force-banks-into-real-time-fraud-defense/\">spoofing banks</a> or email logins, attackers are now impersonating artificial intelligence interfaces and developer tools, places where users are conditioned to paste application programming interface (API) keys, tokens and sensitive data without hesitation.\u201d</p>\n<p>The research found 30 tools, with names like \u201cGemini AI Sidebar,\u201d \u201cChatGPT Translate,\u201d or more generic monikers like \u201cAI Assistant,\u201d which amassed more than 260,000 downloads.</p>\n<p>PYMNTS has contacted Google for comment but has not yet gotten a reply.</p>\n<p>The findings come at a time when\u2014as PYMNTS wrote last month\u2014AI is \u201cpushing intervention earlier in the <a href=\"https://www.pymnts.com/artificial-intelligence-2/2026/predictive-ai-bridges-the-security-response-gap-in-automated-attacks/\">attack cycle</a> by identifying coordinated behavior and emerging risk signals before fraud scales.\u201d</p>\n<p>As covered here, companies are ramping up their use of AI to guard against suspicious activities, even as they deal with an increasing risk from <a href=\"https://www.pymnts.com/artificial-intelligence-2/2026/shadow-ai-emerges-as-the-new-front-line-in-genai-compliance/\">shadow AI</a>, third-party agents and apps that could subject the businesses to cyber risks.</p>\n<p>Research from PYMNTS Intelligence has found a gap between companies\u2019 belief in their defenses against AI-powered fraud and the prevalence of those fraud cases.</p>\n<p>While nearly all companies surveyed said they were confident in their protections, nearly 59% said they were struggling with bot-driven fraud. This gap is especially pronounced in the financial services sector, where 60.6% of companies have seen bot traffic rise in the past year, according to the PYMNTS Intelligence report <a href=\"https://www.pymnts.com/cybersecurity/2025/the-95b-wake-up-call-good-enough-digital-identity-is-costing-firms-growth/\">\u201cThe Hidden Costs of \u2018Good Enough\u2019: Identity Verification in the Age of Bots and Agents.\u201d</a></p>\n<p>\u201cMany assume their <a href=\"https://www.pymnts.com/digital-identity/2025/nearly-60percent-of-companies-struggle-with-bot-fraud/\">fraud controls</a> are mature because they\u2019ve passed compliance audits or updated authentication steps,\u201d PYMNTS wrote. \u201cBut the report\u2019s findings show that fraudsters\u2019 use of artificial intelligence\u2014from deepfakes to credential stuffing\u2014is evolving faster than those defenses. What looks compliant may, in practice, be porous.\u201d</p>\n\n</div>\n<p>The post <a href=\"https://www.pymnts.com/cybersecurity/2026/fraudulent-ai-assistants-target-user-information/\">Fraudulent AI Assistants Target User Information</a> appeared first on <a href=\"https://www.pymnts.com\">PYMNTS.com</a>.</p>",
-        "image_url": "https://www.pymnts.com/wp-content/uploads/2025/03/Google-Chrome.jpg?w=457",
-        "summary_text": "Google\u2019s Chrome web store is reportedly being plagued by a wave of malicious browser extensions. According to a report Monday (Feb. 16) by cybersecurity publication Dark Reading, these extensions claim to offer the abilities of an artificial intelligence (AI)...",
-        "category": "ai",
-        "_permalink": "/p/4ad84b40c2/",
-        "_abs_permalink": "https://pulse.tek2dayholdings.com/p/4ad84b40c2/",
-        "_summary_240": "Google\u2019s Chrome web store is reportedly being plagued by a wave of malicious browser extensions. According to a report Monday (Feb. 16) by cybersecurity publication Dark Reading,...",
-        "_thumbnail": "https://pulse.tek2dayholdings.com/p/4ad84b40c2/thumbnail.png"
       }
     ],
     "software": [
@@ -2932,6 +2947,96 @@
     ],
     "fintech": [
       {
+        "title": "Sidley Austin\u2019s Tessler on Bitcoin\u2019s Current State",
+        "url": "https://www.bloomberg.com/news/videos/2026-02-19/sidley-austin-s-tessler-on-bitcoin-s-current-state-video",
+        "published_at": "2026-02-19T16:29:25-05:00",
+        "source": "Bloomberg Technology",
+        "summary": "Lilya Tessler, head of global fintech and blockchain at Sidley Austin, discusses Bitcoin\u2019s recent softness and the broader crypto outlook. She tells Romaine Bostick and Katie Greifeld on \u201cThe Close\u201d that stalled legislative progress on cryptocurrency regulation is adding uncertainty to the market. (Source: Bloomberg)",
+        "content_html": "",
+        "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ichRwcYM1QCU/v3/1200x-1.jpg",
+        "summary_text": "Lilya Tessler, head of global fintech and blockchain at Sidley Austin, discusses Bitcoin\u2019s recent softness and the broader crypto outlook. She tells Romaine Bostick and Katie Greifeld on \u201cThe Close\u201d that stalled legislative progress on cryptocurrency regulati...",
+        "category": "fintech",
+        "_permalink": "/p/334ce842fd/",
+        "_abs_permalink": "https://pulse.tek2dayholdings.com/p/334ce842fd/",
+        "_summary_240": "Lilya Tessler, head of global fintech and blockchain at Sidley Austin, discusses Bitcoin\u2019s recent softness and the broader crypto outlook. She tells Romaine Bostick and Katie...",
+        "_thumbnail": "https://pulse.tek2dayholdings.com/p/334ce842fd/thumbnail.png"
+      },
+      {
+        "title": "Klarna stock sinks 27% after bad loan costs soar",
+        "url": "https://www.ft.com/content/dbe5de32-1274-4adc-9e14-c05823ca9d76",
+        "published_at": "2026-02-19T16:27:16-05:00",
+        "source": "Financial Times - Technology",
+        "summary": "Swedish fintech\u2019s share price has plummeted by two-thirds since September IPO",
+        "content_html": "",
+        "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/8efc8d7d-4ba4-44b8-9285-248809309f5e.jpg",
+        "summary_text": "Swedish fintech\u2019s share price has plummeted by two-thirds since September IPO",
+        "category": "fintech",
+        "_permalink": "/p/5e6fdcc4f4/",
+        "_abs_permalink": "https://pulse.tek2dayholdings.com/p/5e6fdcc4f4/",
+        "_summary_240": "Swedish fintech\u2019s share price has plummeted by two-thirds since September IPO",
+        "_thumbnail": "https://pulse.tek2dayholdings.com/p/5e6fdcc4f4/thumbnail.png"
+      },
+      {
+        "title": "Bitcoin\u2019s monthly losses break records, but history says a turnaround is brewing",
+        "url": "https://cointelegraph.com/news/bitcoin-s-monthly-losses-break-records-but-history-says-a-turnaround-is-brewing?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+        "published_at": "2026-02-19T16:15:00-05:00",
+        "source": "Cointelegraph",
+        "summary": "Bitcoin is on course to lock in another negative month, but one analyst says major differences in the current market structure could be a sign of a pending trend reversal.",
+        "content_html": "",
+        "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjYtMDIvMDE5YzM3YmItMmM2NC03NzBlLWE0YWMtYTI0N2Y1ZGIyYWFmLmpwZw==.jpg",
+        "summary_text": "Bitcoin is on course to lock in another negative month, but one analyst says major differences in the current market structure could be a sign of a pending trend reversal.",
+        "category": "fintech",
+        "_permalink": "/p/8087430a67/",
+        "_abs_permalink": "https://pulse.tek2dayholdings.com/p/8087430a67/",
+        "_summary_240": "Bitcoin is on course to lock in another negative month, but one analyst says major differences in the current market structure could be a sign of a pending trend reversal.",
+        "_thumbnail": "https://pulse.tek2dayholdings.com/p/8087430a67/thumbnail.png"
+      },
+      {
+        "title": "SEC leaders seek to clarify how tokenized securities interact with existing regulation",
+        "url": "https://cointelegraph.com/news/sec-leadership-future-securities-ethdenver?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+        "published_at": "2026-02-19T16:09:52-05:00",
+        "source": "Cointelegraph",
+        "summary": "Paul Atkins and Hester Peirce spoke at ETHDenver on Wednesday on the future of regulation at the SEC and its response to crypto market volatility.",
+        "content_html": "",
+        "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjYtMDIvMDE5Yzc2YzAtNWU0NC03ZTM5LTkwZWQtYjI4NWRjOWNkZTNiLmpwZw==.jpg",
+        "summary_text": "Paul Atkins and Hester Peirce spoke at ETHDenver on Wednesday on the future of regulation at the SEC and its response to crypto market volatility.",
+        "category": "fintech",
+        "_permalink": "/p/ff14892283/",
+        "_abs_permalink": "https://pulse.tek2dayholdings.com/p/ff14892283/",
+        "_summary_240": "Paul Atkins and Hester Peirce spoke at ETHDenver on Wednesday on the future of regulation at the SEC and its response to crypto market volatility.",
+        "_thumbnail": "https://pulse.tek2dayholdings.com/p/ff14892283/thumbnail.png"
+      },
+      {
+        "title": "Community banks see net deposit outflows to Coinbase: Study",
+        "url": "https://cointelegraph.com/news/community-banks-see-net-deposit-outflows-to-coinbase-study?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+        "published_at": "2026-02-19T16:06:23-05:00",
+        "source": "Cointelegraph",
+        "summary": "A transaction-level analysis of 92 community banks found $78.3 million in net deposits moved to Coinbase over 13 months, with money market accounts losing most outflows.",
+        "content_html": "",
+        "image_url": "https://images.cointelegraph.com/images/528_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjUtMTIvMDE5YjJjMWYtNzI4MC03MmUzLWFiNjQtMDhiYmE1NzI1OTNhLmpwZw==.jpg",
+        "summary_text": "A transaction-level analysis of 92 community banks found $78.3 million in net deposits moved to Coinbase over 13 months, with money market accounts losing most outflows.",
+        "category": "fintech",
+        "_permalink": "/p/55a93aa30e/",
+        "_abs_permalink": "https://pulse.tek2dayholdings.com/p/55a93aa30e/",
+        "_summary_240": "A transaction-level analysis of 92 community banks found $78.3 million in net deposits moved to Coinbase over 13 months, with money market accounts losing most outflows.",
+        "_thumbnail": "https://pulse.tek2dayholdings.com/p/55a93aa30e/thumbnail.png"
+      },
+      {
+        "title": "Germany Seeks to Ease Lawmakers\u2019 Fears of Thiel Drone Firm Stake",
+        "url": "https://www.bloomberg.com/news/articles/2026-02-19/germany-seeks-to-ease-lawmakers-fears-of-thiel-drone-firm-stake",
+        "published_at": "2026-02-19T16:05:05-05:00",
+        "source": "Bloomberg Technology",
+        "summary": "Germany is looking to dispel concerns that its planned \u20ac3 billion ($3.5 billion) order for attack drones from a Peter Thiel-backed defense start-up could pose a security threat due to the role of the controversial US investor.",
+        "content_html": "Peter Thiel, president and founder of Clarium Capital Management LLC, speaks during the Bitcoin 2022 conference in Miami, Florida, U.S., on Thursday, April 7, 2022. The Bitcoin 2022 four-day conference is touted by organizers as \"the biggest Bitcoin event in the world.\"",
+        "image_url": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/i4xL0WOVslA4/v1/1200x-1.jpg",
+        "summary_text": "Germany is looking to dispel concerns that its planned \u20ac3 billion ($3.5 billion) order for attack drones from a Peter Thiel-backed defense start-up could pose a security threat due to the role of the controversial US investor.",
+        "category": "fintech",
+        "_permalink": "/p/dc5874cfb1/",
+        "_abs_permalink": "https://pulse.tek2dayholdings.com/p/dc5874cfb1/",
+        "_summary_240": "Germany is looking to dispel concerns that its planned \u20ac3 billion ($3.5 billion) order for attack drones from a Peter Thiel-backed defense start-up could pose a security threat...",
+        "_thumbnail": "https://pulse.tek2dayholdings.com/p/dc5874cfb1/thumbnail.png"
+      },
+      {
         "title": "Donald Trump Jr\u2019s Private DC Club Has Mysterious Ties to an Ex-Cop With a Controversial Past",
         "url": "https://www.wired.com/story/magas-secretive-members-only-club-is-partly-owned-by-an-ex-cop/",
         "published_at": "2026-02-19T15:45:40-05:00",
@@ -3005,21 +3110,6 @@
         "_abs_permalink": "https://pulse.tek2dayholdings.com/p/180408e116/",
         "_summary_240": "Trump administration officials held a similar event last week to discuss stablecoin yield within a market structure bill under consideration in Congress.",
         "_thumbnail": "https://pulse.tek2dayholdings.com/p/180408e116/thumbnail.png"
-      },
-      {
-        "title": "Klarna stock sinks 25% after bad loan costs soar",
-        "url": "https://www.ft.com/content/dbe5de32-1274-4adc-9e14-c05823ca9d76",
-        "published_at": "2026-02-19T13:14:52-05:00",
-        "source": "Financial Times - Technology",
-        "summary": "Swedish fintech\u2019s share price has plummeted by two-thirds since September IPO",
-        "content_html": "",
-        "image_url": "https://d1e00ek4ebabms.cloudfront.net/production/8efc8d7d-4ba4-44b8-9285-248809309f5e.jpg",
-        "summary_text": "Swedish fintech\u2019s share price has plummeted by two-thirds since September IPO",
-        "category": "fintech",
-        "_permalink": "/p/ca6479fd47/",
-        "_abs_permalink": "https://pulse.tek2dayholdings.com/p/ca6479fd47/",
-        "_summary_240": "Swedish fintech\u2019s share price has plummeted by two-thirds since September IPO",
-        "_thumbnail": "https://pulse.tek2dayholdings.com/p/ca6479fd47/thumbnail.png"
       },
       {
         "title": "\u2018Resilient\u2019 Bitcoin holders defend BTC, but bear floor sits 20% lower: Glassnode",
@@ -4644,7 +4734,7 @@
     ]
   },
   "brief": {
-    "generated_at": "2026-02-19T15:51:59.621039-05:00",
+    "generated_at": "2026-02-19T16:38:11.937258-05:00",
     "themes": [
       "Crypto markets",
       "AI agents & coding",
