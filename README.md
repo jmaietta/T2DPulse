@@ -1,16 +1,21 @@
-# T2D Pulse
+# TEK2day Pulse
 
-  Automated tech, AI, and fintech news aggregation platform published by [Tek2Day Holdings](https://tek2dayholdings.com). Pulls from 20+ curated RSS sources,
-  deduplicates, categorizes, and publishes a clean JSON feed and static site — updated five times per day on weekdays.
+  Read TEK2day Pulse for the latest Technology news.
 
   **Live site:** [pulse.tek2dayholdings.com](https://pulse.tek2dayholdings.com)
+
+  ![TEK2day Pulse](docs/screenshots/readme-home.png)
+
+  Automated technology news aggregation platform published by [TEK2day Holdings](https://tek2dayholdings.com). Pulls from 20+ curated RSS sources,
+  deduplicates, categorizes, and publishes a clean JSON feed and static site — updated five times per day on weekdays.
+
   **JSON feed:** [pulse.tek2dayholdings.com/pulse.json](https://pulse.tek2dayholdings.com/pulse.json)
 
   ---
 
   ## What It Does
 
-  T2D Pulse ingests RSS feeds from high-quality tech and finance publishers, applies multi-layer deduplication, categorizes articles into three verticals, and publishes:
+  TEK2day Pulse ingests RSS feeds from high-quality tech and finance publishers, applies multi-layer deduplication, categorizes articles into three verticals, and publishes:
 
   - A responsive static web page updated throughout the day
   - A structured JSON API (`pulse.json`) consumed by Kilby AI and other tools
@@ -138,4 +143,4 @@
   ---
   License
 
-  Proprietary — © Tek2Day Holdings. All rights reserved.
+  Proprietary — © TEK2day Holdings. All rights reserved.
