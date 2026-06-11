@@ -2127,6 +2127,32 @@ def _save_friday_snapshot_if_today(all_items: list, by_cat: dict) -> None:
             pass
 
 
+def write_sitemap(docs_dir: str) -> None:
+    """Rewrite sitemap.xml each build: homepage + every article permalink page."""
+    base = "https://pulse.tek2dayholdings.com"
+    today = now_et().strftime("%Y-%m-%d")
+    entries = [
+        f"  <url>\n    <loc>{base}/</loc>\n    <lastmod>{today}</lastmod>\n"
+        f"    <changefreq>hourly</changefreq>\n    <priority>1.0</priority>\n  </url>"
+    ]
+    perma_root = os.path.join(docs_dir, "p")
+    if os.path.isdir(perma_root):
+        for pid in sorted(os.listdir(perma_root)):
+            page = os.path.join(perma_root, pid, "index.html")
+            if os.path.isfile(page):
+                mod = datetime.fromtimestamp(os.path.getmtime(page)).strftime("%Y-%m-%d")
+                entries.append(f"  <url>\n    <loc>{base}/p/{pid}/</loc>\n    <lastmod>{mod}</lastmod>\n  </url>")
+    xml = (
+        '<?xml version="1.0" encoding="UTF-8"?>\n'
+        '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+        + "\n".join(entries)
+        + "\n</urlset>\n"
+    )
+    with open(os.path.join(docs_dir, "sitemap.xml"), "w", encoding="utf-8") as f:
+        f.write(xml)
+    print(f"Sitemap written: {len(entries)} URLs")
+
+
 # ============================================================================
 # MAIN
 # ============================================================================
@@ -2294,6 +2320,9 @@ def main():
         pass
 
     purge_old_outputs(docs, now_local=now_local, retention_days=RETENTION_DAYS, seed_items=all_items)
+
+    # Rewrite sitemap.xml with whatever article pages exist after this build
+    write_sitemap(docs)
 
     # REMOVED: Backfill retro-tagging logic
 
