@@ -1,4 +1,4 @@
-const CACHE = 't2d-pulse-v1';
+const CACHE = 't2d-pulse-v2';
 const ASSETS = [
   './index.html',
   './manifest.webmanifest',

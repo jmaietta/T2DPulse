@@ -1290,7 +1290,7 @@ def _plain_text_summary(it: dict, limit: int = 180) -> str:
 
 def create_branded_og_image(source_url: str, permalink_dir: str, pre_extracted_image_url: str = "") -> tuple[str, str]:
     """Create branded OG image and thumbnail."""
-    logo_path = os.path.join(REPO, "docs", "icons", "T2D_Pulse_Logo_2.png")
+    logo_path = os.path.join(REPO, "docs", "icons", "t2d-pulse-512.png")
     banner_path = os.path.join(REPO, "docs", "icons", "T2D_Pulse_Banner.png")
     output_path = os.path.join(permalink_dir, "og-image.png")
     thumbnail_path = os.path.join(permalink_dir, "thumbnail.png")
