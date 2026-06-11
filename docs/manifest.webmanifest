@@ -1,7 +1,7 @@
 {
   "name": "TEK2day Pulse",
-  "short_name": "T2D Pulse",
-  "description": "Daily AI, Software, and FinTech headlines from TEK2day.",
+  "short_name": "TEK2day Pulse",
+  "description": "Read TEK2day Pulse for the latest Technology news.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
