@@ -1116,14 +1116,20 @@ body.is-filtered .items > article[data-lead] { display: flex; }
   .lead h2 { font-size: 1.5rem; }
 }
 @media (max-width: 768px) {
+  /* Row 1: logo + wordmark. Row 2: search, full width. Row 3: date + tagline. */
   header.site h1 { order: 1; }
   .hdr-actions { flex: 1 1 100%; }
-  .hdr-actions .search { width: 100%; }
+  .hdr-actions .search { width: 100%; max-width: none; }
   .hdr-actions .search input { width: 100%; max-width: none; flex: 1; }
   .tabs-inner { gap: 1.25rem; padding: 0 1rem; }
   .tabs .updated { display: none; }
 }
 @media (max-width: 520px) {
+  /* Tabs must never run off the screen: drop the count pills, tighten, and
+     wrap onto a second line if a very narrow phone still needs it. */
+  .tabs-inner { gap: 0.875rem; flex-wrap: wrap; row-gap: 0; }
+  .tab { font-size: 0.8125rem; padding: 0.7rem 0; gap: 0.35rem; }
+  .tab .count { display: none; }
   .lead .article-thumb { height: 200px; }
   .lead .article-content { padding: 1.125rem 1.25rem 1.25rem; }
   .lead h2 { font-size: 1.3rem; }
