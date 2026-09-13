@@ -4,8 +4,6 @@
 
   **Live site:** [pulse.tek2dayholdings.com](https://pulse.tek2dayholdings.com)
 
-  ![TEK2day Pulse](docs/screenshots/readme-home.png)
-
   Automated technology news aggregation platform published by [TEK2day Holdings](https://tek2dayholdings.com). Pulls from 20+ curated RSS sources,
   deduplicates, categorizes, and publishes a clean JSON feed and static site — updated five times per weekday.
 
