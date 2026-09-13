@@ -123,21 +123,19 @@ window.addEventListener('scroll', () => {
 })();
 
 (function() {
-  // Section tabs + search share one filter. While nothing is filtered the
-  // hero (lead story + Brief) shows and the lead's grid copy stays hidden;
-  // any tab or query hides the hero and filters the grid, lead included.
+  // Search filter. While the query is empty the hero (lead story + Brief)
+  // shows and the lead's grid copy stays hidden; a query hides the hero and
+  // filters the grid, lead included.
   const container = document.getElementById('tek2day-pulse');
   const form = document.querySelector('.hdr-actions .search');
   const input = document.getElementById('t2d-q');
   const itemsContainer = container && container.querySelector('.items');
-  const tabs = Array.from(document.querySelectorAll('.tabs .tab'));
   const resultCount = document.getElementById('result-count');
   if (!form || !input || !container || !itemsContainer) return;
 
   const cards = Array.from(itemsContainer.querySelectorAll('article[data-card]'));
   const totalStories = cards.length;
   const defaultNote = resultCount ? resultCount.textContent : '';
-  let category = 'all';
 
   function haystack(card) {
     return [card.dataset.title, card.dataset.summary, card.dataset.source]
@@ -151,21 +149,14 @@ window.addEventListener('scroll', () => {
 
   function applyFilter() {
     const tokens = tokenize(input.value);
-    const filtered = tokens.length > 0 || category !== 'all';
+    const filtered = tokens.length > 0;
     document.body.classList.toggle('is-filtered', filtered);
 
     let shown = 0;
     for (const { card, text } of index) {
-      const match = (category === 'all' || card.dataset.category === category)
-        && tokens.every(t => text.includes(t));
+      const match = tokens.every(t => text.includes(t));
       card.hidden = !match;
       if (match) shown++;
-    }
-
-    for (const tab of tabs) {
-      const active = tab.dataset.category === category;
-      tab.classList.toggle('is-active', active);
-      tab.setAttribute('aria-pressed', String(active));
     }
 
     let empty = document.getElementById('search-empty');
@@ -184,13 +175,6 @@ window.addEventListener('scroll', () => {
         ? `${shown} ${shown === 1 ? 'story' : 'stories'} of ${totalStories}`
         : defaultNote;
     }
-  }
-
-  for (const tab of tabs) {
-    tab.addEventListener('click', () => {
-      category = tab.dataset.category || 'all';
-      applyFilter();
-    });
   }
 
   form.addEventListener('submit', (e) => {

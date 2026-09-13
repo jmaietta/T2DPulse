@@ -29,7 +29,6 @@ class RenderingTests(unittest.TestCase):
                        _abs_permalink='https://example.com/p/" onclick="alert(1)')
         document = BeautifulSoup(pulse.build_section('Sep 14, 2026', {'ai': [item]}, brief={}, generated_at=NOW), 'html.parser')
         card = document.select_one('.items [data-card]')
-        self.assertEqual(card['data-category'], 'ai')
         self.assertEqual(card.select_one('h3').get_text(), item['title'])
         self.assertIsNone(card.select_one('script'))
         self.assertFalse(document.select('[onerror], [onclick]'))
@@ -37,7 +36,8 @@ class RenderingTests(unittest.TestCase):
         self.assertEqual(card.select_one('.meta time').get_text(), '10:00 AM')
         self.assertTrue(card.select_one('.meta time')['datetime'].startswith('2026-09-14T10:00:00'))
         self.assertEqual(card.select_one('img.article-thumb')['alt'], item['title'])
-        self.assertEqual(card.select_one('.eyebrow .topic').get_text(), 'AI')
+        self.assertIsNone(card.select_one('.eyebrow'))  # no category labels on the page
+        self.assertNotIn('AI', card.select_one('.article-content').get_text(' ', strip=True).split(' ')[:1])
         self.assertEqual(document.select_one('#last-updated')['datetime'], NOW.isoformat())
         self.assertNotIn('{{', str(document))
 
@@ -52,16 +52,16 @@ class RenderingTests(unittest.TestCase):
         lead = document.select_one('.hero article.lead')
         self.assertEqual(lead['data-title'], 'Older story')
         self.assertEqual(lead.select_one('h2 a').get_text(), 'Older story')
-        self.assertEqual(lead.select_one('.eyebrow').get_text(' ', strip=True), 'FinTech Lead story')
+        self.assertEqual(lead.select_one('.eyebrow').get_text(' ', strip=True), 'Lead story')
+        self.assertFalse(lead.has_attr('data-category'))
         self.assertEqual(lead.select_one('.meta time').get_text(), 'Sep 12')
         self.assertEqual(lead.select_one('img')['src'], '/p/aaaaaaaaaa/thumbnail.jpg')
         # Its grid copy is marked so the page can hide it while the hero is visible.
         grid = document.select('.items article[data-card]')
         self.assertEqual([c['data-title'] for c in grid], ['Newest story', 'Older story'])
         self.assertEqual([c.has_attr('data-lead') for c in grid], [False, True])
-        # Section tabs carry counts.
-        tabs = {t['data-category']: t.select_one('.count').get_text() for t in document.select('.tabs .tab')}
-        self.assertEqual(tabs, {'all': '2', 'ai': '1', 'software': '0', 'fintech': '1'})
+        # No section tabs or category chips anywhere on the page.
+        self.assertFalse(document.select('.tabs, .topic, .pb-cat'))
         self.assertIn('1 more stories', document.select_one('#result-count').get_text())
 
     def test_lead_prefers_real_image_over_fallback_banner(self):
@@ -269,6 +269,41 @@ class PipelineTests(unittest.TestCase):
             titles = [it['title'] for it in by_cat['ai']]
             self.assertIn('Archived story', titles)
             self.assertNotIn('Stale story', titles)
+
+
+class ClassifierTests(unittest.TestCase):
+    def test_terms_match_whole_words_not_substrings(self):
+        # "second" used to score FinTech via "sec"; "capital" used to score Software via "api".
+        roadster = article(title='Tesla says it will finally unveil the second generation Roadster on October 1',
+                           url='https://techcrunch.com/2026/09/12/tesla-says-it-will-finally-unveil-the-second-generation-roadster-on-october-1/',
+                           summary_text='Tesla’s halo sports car was first announced in November 2017.', source='TechCrunch')
+        self.assertEqual(pulse.compute_scores(roadster['title'], roadster['url'], roadster['summary_text']),
+                         {'ai': 0, 'software': 0, 'fintech': 0})
+        self.assertIsNone(pulse.classify_item(roadster))
+        self.assertEqual(pulse.compute_scores('Thrive Capital led VCs into pro sports ownership', '', '')['software'], 0)
+        # ...while genuine whole-word and plural hits still count.
+        # sec, crypto, crypto exchange, stablecoin, payments: five title hits x 3
+        self.assertEqual(pulse.compute_scores('SEC sues crypto exchange over stablecoin payments', '', '')['fintech'], 15)
+        self.assertGreater(pulse.compute_scores('Developers get new APIs', '', '')['software'], 0)
+
+    def test_off_topic_stories_are_dropped_and_on_topic_kept(self):
+        self.assertIsNone(pulse.classify_item(article(title='One week left to book your exhibit table at TechCrunch Disrupt 2026', url='https://techcrunch.com/x', summary_text='', source='TechCrunch')))
+        self.assertIsNone(pulse.classify_item(article(title='Laika’s stop-motion fantasy Wildwood looks so smooth', url='https://theverge.com/x', summary_text='A new trailer.', source='The Verge')))
+        self.assertEqual(pulse.classify_item(article(title='How Amazon’s Zoox Is Taking On Waymo in San Francisco', url='https://nytimes.com/x', summary_text='Robotaxi rivals.', source='NYT')), 'ai')
+        self.assertEqual(pulse.classify_item(article(title='ClickFix attacks infecting PCs and Macs are going viral', url='https://arstechnica.com/x', summary_text='', source='Ars Technica')), 'software')
+        self.assertEqual(pulse.classify_item(article(title='Klarna expands buy now pay later to new merchants', url='https://example.com/x', summary_text='', source='Example')), 'fintech')
+
+    def test_source_routing_matches_feed_names_and_yields_to_strong_ai(self):
+        # "OpenAI News" never matched the old exact-name rule, so its posts were scored like any other.
+        self.assertEqual(pulse.classify_item(article(title='Introducing the Agents API', url='https://openai.com/x', summary_text='Build with the API.', source='OpenAI News')), 'ai')
+        self.assertEqual(pulse.classify_item(article(title='The Tooth Fairy Approves a 17% Raise', url='https://pymnts.com/x', summary_text='', source='PYMNTS')), 'fintech')
+        self.assertEqual(pulse.classify_item(article(title='OpenAI unveils new AI model for banks', url='https://pymnts.com/x', summary_text='The AI lab’s new LLM targets banking.', source='PYMNTS')), 'ai')
+        self.assertEqual(pulse.classify_item(article(title='Gaming laptop unboxing', url='https://youtube.com/watch?v=1', summary_text='', source='OpenAI YouTube')), 'ai')
+
+    def test_ties_go_to_ai(self):
+        scores = pulse.compute_scores('Microsoft brings AI to Windows', '', '')
+        self.assertEqual((scores['ai'], scores['software']), (3, 3))
+        self.assertEqual(pulse.classify_item(article(title='Microsoft brings AI to Windows', url='https://example.com/x', summary_text='', source='FT')), 'ai')
 
 
 class ScheduleTests(unittest.TestCase):

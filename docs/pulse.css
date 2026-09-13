@@ -890,7 +890,7 @@ details[open].pb .pb-chev { transform: rotate(180deg); }
 
 /* ============================================
    FRONT PAGE LAYOUT
-   Section tabs, lead story + Brief hero, section head, category eyebrows.
+   Lead story + Brief hero, section head, search-only filtering.
    Everything below extends the tokens and components above.
    ============================================ */
 
@@ -912,73 +912,6 @@ header.site h1 {
 }
 .hdr-actions .search input {
   width: 220px;
-}
-
-/* Section tabs ------------------------------------------------------------ */
-.tabs {
-  background: var(--card);
-  border-bottom: 1px solid var(--line);
-}
-.tabs-inner {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1.5rem;
-  display: flex;
-  align-items: stretch;
-  gap: 1.75rem;
-  overflow-x: auto;
-  scrollbar-width: none;
-}
-.tabs-inner::-webkit-scrollbar { display: none; }
-.tab {
-  appearance: none;
-  -webkit-appearance: none;
-  border: 0;
-  background: transparent;
-  font: inherit;
-  cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.875rem 0;
-  border-bottom: 2px solid transparent;
-  font-size: 0.875rem;
-  font-weight: 600;
-  color: var(--ink-soft);
-  white-space: nowrap;
-  transition: color var(--transition-fast), border-color var(--transition-fast);
-}
-.tab:hover { color: var(--ink); }
-.tab:focus-visible { outline: 2px solid var(--ai); outline-offset: -2px; border-radius: 4px; }
-.tab.is-active {
-  color: var(--ink);
-  font-weight: 700;
-  border-bottom-color: var(--ink);
-}
-.tab .count {
-  font-size: 0.6875rem;
-  font-weight: 700;
-  color: var(--muted);
-  background: var(--bg-subtle);
-  padding: 0.125rem 0.45rem;
-  border-radius: 999px;
-}
-.tab .dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 999px;
-  flex-shrink: 0;
-}
-.dot--ai { background: var(--ai); }
-.dot--software { background: var(--sw); }
-.dot--fintech { background: var(--ft); }
-.tabs .updated {
-  display: flex;
-  align-items: center;
-  gap: 0.3rem;
-  font-size: 0.75rem;
-  color: var(--muted);
-  white-space: nowrap;
 }
 
 /* Hero: lead story + Brief -------------------------------------------------- */
@@ -1039,7 +972,7 @@ article.lead:hover {
 .hero .pb-body { padding: 0.25rem 1.25rem 0.75rem; }
 .hero .pb-takeaways li {
   display: grid;
-  grid-template-columns: 24px auto minmax(0, 1fr) auto;
+  grid-template-columns: 24px minmax(0, 1fr) auto;
   gap: 0.25rem 0.6rem;
   align-items: start;
   padding: 0.75rem 0;
@@ -1047,7 +980,6 @@ article.lead:hover {
 }
 .hero .pb-takeaways li:hover { background: transparent; }
 .hero .pb-rank { border-radius: 999px; }
-.hero .pb-cat { margin-top: 0.3rem; }
 .hero .pb-takeaway-body strong { font-size: 0.875rem; }
 .hero .pb-impact { display: none; }
 .hero .pb-read {
@@ -1076,23 +1008,20 @@ article.lead:hover {
   font-size: 0.75rem;
   color: var(--muted);
 }
+.section-head .updated {
+  margin-left: auto;
+  display: flex;
+  gap: 0.3rem;
+  white-space: nowrap;
+}
 
-/* Category eyebrow on every card ------------------------------------------ */
+/* "Lead story" marker on the hero card ---------------------------------- */
 .eyebrow {
   display: flex;
   align-items: center;
   gap: 0.6rem;
   margin-bottom: 0.5rem;
 }
-.topic {
-  font-size: 0.6875rem;
-  font-weight: 800;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-.topic--ai { color: var(--ai); }
-.topic--software { color: var(--sw); }
-.topic--fintech { color: var(--ft); }
 .eyebrow-note {
   font-size: 0.6875rem;
   font-weight: 700;
@@ -1102,8 +1031,8 @@ article.lead:hover {
 }
 
 /* Filtering states -------------------------------------------------------- */
-/* The lead's grid copy is hidden while the hero shows it; a section tab or a
-   search hides the hero and lets the grid copy through. */
+/* The lead's grid copy is hidden while the hero shows it; a search hides the
+   hero and lets the grid copy through. */
 .items > article[data-lead] { display: none; }
 body.is-filtered .hero { display: none; }
 body.is-filtered .items > article[data-lead] { display: flex; }
@@ -1121,15 +1050,9 @@ body.is-filtered .items > article[data-lead] { display: flex; }
   .hdr-actions { flex: 1 1 100%; }
   .hdr-actions .search { width: 100%; max-width: none; }
   .hdr-actions .search input { width: 100%; max-width: none; flex: 1; }
-  .tabs-inner { gap: 1.25rem; padding: 0 1rem; }
-  .tabs .updated { display: none; }
+  .section-head .updated { display: none; }
 }
 @media (max-width: 520px) {
-  /* Tabs must never run off the screen: drop the count pills, tighten, and
-     wrap onto a second line if a very narrow phone still needs it. */
-  .tabs-inner { gap: 0.875rem; flex-wrap: wrap; row-gap: 0; }
-  .tab { font-size: 0.8125rem; padding: 0.7rem 0; gap: 0.35rem; }
-  .tab .count { display: none; }
   .lead .article-thumb { height: 200px; }
   .lead .article-content { padding: 1.125rem 1.25rem 1.25rem; }
   .lead h2 { font-size: 1.3rem; }
