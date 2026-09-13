@@ -7,3 +7,7 @@ docs/archive/json/
 docs/archive/timestamped/
 cache/
 .tmp/
+.venv/
+__pycache__/
+.pytest_cache/
+docs/build-status.json
