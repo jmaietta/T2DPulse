@@ -97,10 +97,8 @@ SOURCE_NAME_MAP = {
     "youtube.com": "YouTube",
 }
 
-FORCE_FINTECH_DOMAINS = {"pymnts.com"}
-FORCE_FINTECH_SOURCES = {"pymnts"}
-FORCE_AI_SOURCES = {"openai", "anthropic", "claude"}
-FORCE_INCLUDE_SOURCES = {"tek2day", "tek2day newsletter"}
+# Feeds whose stories are always kept and exempt from the per-source cap.
+FORCE_INCLUDE_SOURCES = {"tek2day"}
 
 # Freshness & diversity settings
 FRESH_WINDOW_DAYS = 3
@@ -682,97 +680,145 @@ def _download_image_with_retries(img_url: str, referer: str | None, attempts: in
 
 
 # ============================================================================
-# CATEGORIZATION (CONSOLIDATED)
+# RELEVANCE GATE / CATEGORIZATION
+#
+# Every story is scored against three vocabularies (AI, software, fintech).
+# The score decides two things: whether the story belongs on the site at all
+# (a story that clears no vocabulary is dropped as off-topic), and the
+# `category` value recorded in pulse.json for API consumers. Categories are
+# not shown on the page.
+#
+# Terms match whole words with light suffix tolerance (payment/payments,
+# developer/developers) so "sec" no longer fires inside "second" and "api"
+# no longer fires inside "capital" - the substring matching this replaces
+# was the main source of misfiled stories.
 # ============================================================================
 
-AI_STRONG = [
-    " ai ", "artificial intelligence", "llm", "gpt", "transformer", "diffusion",
-    "inference", "fine-tun", "multimodal", "rlhf", "prompting", "agentic",
-    "embedding", "vector db", "tokenization", "pretrain", "checkpoint", "weights",
-    "npu", "tpu", "cuda", "rocm", "tensor", "accelerator",
-    "openai", "anthropic", "deepmind", "mistral", "cohere", "perplexity", "hugging face",
-]
-AI_WEAK = [
-    "model", "models", "neural", "dataset", "benchmark", "hallucination",
-    "safety", "guardrail", "alignment", "generation", "genai", "gen ai"
-]
-AI_NEGATIVE = [
-    " deal", " deals", "discount", "sale", "prime day", "coupon", "snag", "lowest price",
-    " tv", "headphone", "earbuds", "soundbar", "smartphone", "iphone", "galaxy",
-    "movie", "celebrity", "gossip", "trailer"
-]
-SW_STRONG = [
-    "software", "developer", "sdk", "api", "kubernetes", "docker",
-    "github", "vscode", "framework", "runtime", "serverless", "cloud", "saas",
-    "microservices", "observability", "database", "postgres", "mysql", "redis",
-    "code", "programming", "devops", "ci/cd", "deployment"
-]
-SW_NEGATIVE = [
-    "movie", "movies", "film", "show", "shows", "series", "tv", "television",
-    "streaming", "netflix", "hulu", "disney+", "marvel", "dc comics",
-    "trailer", "premiere", "episode", "season", "actor", "actress"
-]
-FT_STRONG = [
-    "fintech", "payments", "payment", "bank", "banking", "visa", "mastercard", "stripe",
-    "paypal", "plaid", "lending", "loan", "crypto", "bitcoin", "ethereum", "stablecoin",
-    "defi", "aml", "kyc", "sec", "fdic", "treasury", "card", "tokenization", "coinbase", "merchant"
-]
+_TERM_SUFFIX = r"(?:s|es|ed|ing)?"
 
 
-def _count_hits(text: str, terms: list[str]) -> int:
-    """Count how many terms appear in text."""
+def _compile_terms(terms: list[str]) -> list[re.Pattern]:
+    return [re.compile(rf"(?<![a-z0-9]){re.escape(t.strip().lower())}{_TERM_SUFFIX}(?![a-z0-9])")
+            for t in terms if t.strip()]
+
+
+AI_STRONG = _compile_terms([
+    "ai", "a.i.", "artificial intelligence", "machine learning", "deep learning", "neural network",
+    "llm", "large language model", "foundation model", "generative", "genai", "gen ai",
+    "chatgpt", "gpt", "gpt-4", "gpt-5", "claude", "gemini", "copilot", "codex", "grok", "llama", "sora",
+    "openai", "anthropic", "deepmind", "mistral", "cohere", "perplexity", "hugging face", "xai",
+    "transformer", "diffusion", "inference", "fine-tune", "fine-tuning", "multimodal", "rlhf",
+    "prompt engineering", "prompt injection", "agentic", "ai agent", "chatbot", "embedding", "vector database",
+    "pretraining", "model weights", "npu", "tpu", "cuda", "gpu",
+    "autonomous", "self-driving", "robotaxi", "waymo", "robot", "robotics", "humanoid", "computer vision",
+    "superintelligence", "agi", "nvidia", "jensen huang", "ai chip", "ai chips",
+])
+AI_WEAK = _compile_terms([
+    "model", "neural", "dataset", "benchmark", "hallucination", "alignment", "guardrail",
+    "training data", "compute", "data center", "datacenter", "semiconductor",
+])
+AI_NEGATIVE = _compile_terms([
+    "deal", "discount", "sale", "prime day", "coupon", "lowest price",
+    "headphone", "earbud", "soundbar", "movie", "celebrity", "gossip", "trailer",
+    "game", "gaming", "gamer", "geforce", "playstation", "xbox", "nintendo",
+])
+SW_STRONG = _compile_terms([
+    "software", "developer", "dev", "sdk", "api", "kubernetes", "docker", "github", "gitlab",
+    "vscode", "visual studio", "ide", "framework", "runtime", "serverless", "cloud", "saas",
+    "microservice", "observability", "database", "postgres", "mysql", "redis", "sql",
+    "open source", "open-source", "programming", "coding", "code", "devops", "ci/cd", "deployment",
+    "javascript", "typescript", "python", "java", "rust", "linux", "windows", "macos", "ios", "android",
+    "enterprise software", "erp", "crm", "salesforce", "servicenow", "workday", "atlassian", "oracle", "sap",
+    "microsoft 365", "office 365", "azure", "aws", "google cloud", "platform",
+    "cybersecurity", "security", "malware", "ransomware", "breach", "vulnerability", "zero-day", "hacker", "hack",
+    "app store", "operating system", "browser", "chrome", "firefox", "patch tuesday", "phishing", "exploit",
+    "infect", "infection", "attacker", "botnet", "spyware", "cyberattack",
+    "software company", "software companies",
+    "wordpress", "automattic", "adobe", "intuit", "shopify", "snowflake", "databricks", "palantir", "ibm",
+    "vmware", "red hat", "twilio", "zendesk", "hubspot", "docusign", "okta", "crowdstrike", "datadog",
+    "mongodb", "splunk", "hashicorp",
+])
+SW_NEGATIVE = _compile_terms([
+    "movie", "film", "tv show", "television", "netflix", "hulu", "disney+", "marvel",
+    "trailer", "premiere", "episode", "season", "actor", "actress", "stop-motion",
+    "video game", "game", "gaming", "gamer", "playstation", "xbox", "nintendo", "esports", "shooter",
+])
+FT_STRONG = _compile_terms([
+    "fintech", "payment", "digital payment", "bank", "banking", "neobank", "lending", "lender", "loan",
+    "credit card", "debit card", "gift card", "prepaid card", "visa inc", "mastercard", "american express",
+    "amex", "stripe", "paypal", "plaid", "klarna", "affirm", "revolut", "chime", "sofi", "robinhood",
+    "coinbase", "binance", "kraken",
+    "crypto", "cryptocurrency", "crypto exchange", "bitcoin", "btc", "ethereum", "eth", "stablecoin", "defi",
+    "blockchain", "web3", "nft", "wallet", "remittance", "cross-border payment", "interchange", "merchant",
+    "checkout", "buy now pay later", "bnpl", "aml", "kyc", "sec", "fdic", "cfpb", "occ", "federal reserve",
+    "treasury", "treasuries", "brokerage", "insurtech", "underwriting", "mortgage", "wealth management",
+    "fraud", "money laundering", "central bank", "cbdc", "open banking", "embedded finance",
+    "payments company", "payment processor", "card network", "point of sale", "pos terminal",
+    "prediction market", "polymarket", "kalshi", "tokenized", "tokenization",
+])
+
+# Title hits count most, then the summary, then the URL slug.
+SCORE_TITLE, SCORE_SUMMARY, SCORE_URL = 3, 2, 1
+# Minimum winning score to be considered on-topic: one strong hit in the
+# summary, or two in the URL slug. Forced sources bypass this.
+MIN_RELEVANCE = 2
+
+# Publications whose whole output belongs to one vertical. Matched as a
+# substring of the lower-cased feed name ("OpenAI News", "OpenAI YouTube").
+SOURCE_CATEGORY = {
+    "pymnts": "fintech", "cointelegraph": "fintech",
+    "openai": "ai", "anthropic": "ai", "youtube": "ai", "tek2day": "ai",
+}
+
+
+def _count_hits(text: str, patterns: list[re.Pattern]) -> int:
     if not text:
         return 0
-    t = f" {text.lower()} "
-    return sum(1 for w in terms if w in t)
+    t = text.lower()
+    return sum(1 for p in patterns if p.search(t))
 
 
 def compute_scores(title: str, url: str, summary: str = "") -> dict[str, int]:
-    """
-    Single source of truth for category scoring.
-    Returns dict with 'ai', 'software', 'fintech' scores.
-    """
-    title_l = title or ""
-    summary_l = summary or ""
-    url_l = url or ""
-    combined = f"{title_l} {summary_l} {url_l}"
+    """Score a story against each vertical. URL slugs are split on '-' and '/'."""
+    title = title or ""
+    summary = summary or ""
+    url = (url or "").replace("-", " ").replace("/", " ")
+    combined = f"{title} {summary} {url}"
 
-    ai = (
-        3 * _count_hits(title_l, AI_STRONG)
-        + 2 * _count_hits(summary_l, AI_STRONG)
-        + _count_hits(url_l, AI_STRONG)
-        + _count_hits(title_l, AI_WEAK)
-        + _count_hits(summary_l, AI_WEAK)
-        - min(2, _count_hits(combined, AI_NEGATIVE))
-    )
+    def score(strong, weak=(), negative=()):
+        s = (SCORE_TITLE * _count_hits(title, strong)
+             + SCORE_SUMMARY * _count_hits(summary, strong)
+             + SCORE_URL * _count_hits(url, strong)
+             + _count_hits(title, weak) + _count_hits(summary, weak))
+        return s - min(3, 2 * _count_hits(combined, negative))
 
-    sw = (
-        2 * _count_hits(title_l, SW_STRONG)
-        + _count_hits(summary_l, SW_STRONG)
-        + _count_hits(url_l, SW_STRONG)
-        - min(2, _count_hits(combined, SW_NEGATIVE))
-    )
-
-    ft = (
-        2 * _count_hits(title_l, FT_STRONG)
-        + _count_hits(summary_l, FT_STRONG)
-        + _count_hits(url_l, FT_STRONG)
-    )
-
-    return {"ai": ai, "software": sw, "fintech": ft}
+    return {"ai": score(AI_STRONG, AI_WEAK, AI_NEGATIVE),
+            "software": score(SW_STRONG, (), SW_NEGATIVE),
+            "fintech": score(FT_STRONG, (), (), )}
 
 
-def categorize_with_score(title: str, url: str, summary: str = "") -> tuple[str, int]:
-    """
-    Returns (category, score) using compute_scores.
-    AI wins if score >= 2 and beats others by at least 1.
-    """
-    scores = compute_scores(title, url, summary)
-    ai, sw, ft = scores["ai"], scores["software"], scores["fintech"]
+def source_category(source: str) -> Optional[str]:
+    src = (source or "").lower()
+    return next((cat for key, cat in SOURCE_CATEGORY.items() if key in src), None)
 
-    if ai >= 2 and ai >= max(sw, ft) + 1:
-        return "ai", ai
-    return ("software", sw) if sw >= ft else ("fintech", ft)
+
+def classify_item(it: dict) -> Optional[str]:
+    """Return the story's category, or None when it is off-topic for the site."""
+    scores = compute_scores(it.get("title", ""), it.get("url", ""), it.get("summary_text") or it.get("summary") or "")
+    forced = source_category(it.get("source", ""))
+    if forced:
+        # A fintech publication writing squarely about AI still files under AI.
+        if forced == "fintech" and scores["ai"] >= 6 and scores["ai"] >= scores["fintech"] + 3:
+            return "ai"
+        return forced
+    best = max(scores.values())
+    if best < MIN_RELEVANCE:
+        return None
+    # Ties go to AI (the site's primary vertical), then software, then fintech.
+    for cat in ("ai", "software", "fintech"):
+        if scores[cat] == best:
+            return cat
+    return None
 
 
 # ============================================================================
@@ -1678,7 +1724,6 @@ def render_pulse_brief_html(brief: dict, date_str: str = "") -> str:
     [B] Impact quality gate — suppress weak/redundant impact lines
     [C] Hover preview — impact shown on hover via CSS (no JS needed)
     [D] Right-aligned Read CTA — vertically centered in each row
-    [E] Category text labels — "AI"/"SW"/"FT" replace color dots
     """
     if not brief:
         return ""
@@ -1693,9 +1738,6 @@ def render_pulse_brief_html(brief: dict, date_str: str = "") -> str:
     hook_text = _brief_editorial_hook(takeaways)
     hook_html = f"<span class='pb-hook'>{html.escape(hook_text)}</span>" if hook_text else ""
 
-    # Category label map [E]
-    cat_label = {"ai": "AI", "software": "SW", "fintech": "FT"}
-    cat_class = {"ai": "ai", "software": "sw", "fintech": "ft"}
 
     # Build takeaway items
     items_html = []
@@ -1704,9 +1746,6 @@ def render_pulse_brief_html(brief: dict, date_str: str = "") -> str:
         raw_impact = (t.get("impact") or "").strip()
         url = safe_web_url(t.get("url"))
         src = html.escape((t.get("source") or "").strip())
-        cat = (t.get("category") or "ai").strip().lower()
-        label = cat_label.get(cat, "AI")
-        cls = cat_class.get(cat, "ai")
 
         if not title:
             continue
@@ -1726,7 +1765,6 @@ def render_pulse_brief_html(brief: dict, date_str: str = "") -> str:
         items_html.append(
             f"<li>"
             f"<span class='pb-rank'>{idx}</span>"
-            f"<span class='pb-cat pb-cat--{cls}'>{label}</span>"
             f"<div class='pb-takeaway-body'>"
             f"<strong>{title}</strong>"
             f"{impact_html}"
@@ -1781,7 +1819,6 @@ def build_section(date_str: str, by_cat: dict, brief: dict = None, generated_at:
             pass
         return ""
 
-    CATEGORY_LABEL = {"ai": "AI", "software": "Software", "fintech": "FinTech"}
     today_local = generated_at.astimezone(TZ).date()
 
     def _when(it: dict) -> tuple[str, str]:
@@ -1829,26 +1866,19 @@ def build_section(date_str: str, by_cat: dict, brief: dict = None, generated_at:
         when, when_iso = _when(it)
         summary_txt = clean_text(strip_html_to_text(it.get("summary_text", "")), 260 if lead else 180)
         summary_html = html.escape(summary_txt)
-        category = it.get("category", "ai")
-        if category not in CATEGORY_LABEL:
-            category = "ai"
-
         # width/height match the 16:9 thumbnails; CSS controls the displayed size.
         thumb_html = (f'<img src="{html.escape(thumbnail, quote=True)}" alt="{html.escape(title_raw, quote=True)}" '
                       f'class="article-thumb" width="400" height="225" loading="{"eager" if lead else "lazy"}" '
                       f'decoding="async">') if thumbnail else ''
-        eyebrow = f'<span class="topic topic--{category}">{CATEGORY_LABEL[category]}</span>'
-        if lead:
-            eyebrow += '<span class="eyebrow-note">Lead story</span>'
+        eyebrow = '<div class="eyebrow"><span class="eyebrow-note">Lead story</span></div>' if lead else ""
         classes = " ".join(c for c in ("lead" if lead else "",) if c)
         lead_attr = " data-lead" if in_grid else ""
         heading = "h2" if lead else "h3"
 
-        return f"""<article{' class="' + classes + '"' if classes else ''} data-card data-category="{category}" data-url="{url}" data-permalink="{permalink}" data-title="{html.escape(title_raw, quote=True)}" data-summary="{summary_html}" data-source="{src}"{lead_attr}>
+        return f"""<article{' class="' + classes + '"' if classes else ''} data-card data-url="{url}" data-permalink="{permalink}" data-title="{html.escape(title_raw, quote=True)}" data-summary="{summary_html}" data-source="{src}"{lead_attr}>
   {thumb_html}
   <div class="article-content">
-    <div class="eyebrow">{eyebrow}</div>
-    <{heading}><a data-title-link href="{url}">{title}</a></{heading}>
+    {eyebrow}<{heading}><a data-title-link href="{url}">{title}</a></{heading}>
     <div class="meta"><span class="src">{src}</span> · <time datetime="{html.escape(when_iso, quote=True)}">{when}</time> {render_item_badges(it, generated_at)}</div>
     <p data-summary>{summary_html}</p>
   </div>
@@ -1874,17 +1904,12 @@ def build_section(date_str: str, by_cat: dict, brief: dict = None, generated_at:
     ) or "<p>No items today.</p>"
     lead_html = render_card(lead, lead=True) if lead else ""
 
-    counts = {k: len(by_cat.get(k, [])[:MAX_ITEMS]) for k in ("ai", "software", "fintech")}
     updated_label = f"{display_date(generated_at)} · {generated_at:%I:%M %p %Z}".replace("· 0", "· ")
 
     html_out = tpl.replace("{{DATE_STR}}", html.escape(date_str))
     html_out = html_out.replace("{{DAILY_BRIEF}}", brief_html)
     html_out = html_out.replace("{{LEAD}}", lead_html)
     html_out = html_out.replace("{{ITEMS}}", grid_html)
-    html_out = html_out.replace("{{COUNT_ALL}}", str(len(all_articles)))
-    html_out = html_out.replace("{{COUNT_AI}}", str(counts["ai"]))
-    html_out = html_out.replace("{{COUNT_SW}}", str(counts["software"]))
-    html_out = html_out.replace("{{COUNT_FT}}", str(counts["fintech"]))
     html_out = html_out.replace("{{MORE_COUNT}}", str(max(0, len(all_articles) - (1 if lead else 0))))
     html_out = html_out.replace("{{UPDATED_ISO}}", html.escape(generated_at.isoformat(), quote=True))
     html_out = html_out.replace("{{UPDATED_LABEL}}", html.escape(updated_label))
@@ -1976,37 +2001,25 @@ def main():
     all_items = retain_recent_items(all_items, now=now_local, retention_days=RETENTION_DAYS)
     print(f"--- Within {RETENTION_DAYS}-day retention: {len(all_items)} articles ---")
 
-    # Final filtering, relevance, enrichment
-    pruned = []
+    # Final filtering: blocked domains, shopping posts, then the relevance gate.
+    pruned, off_topic = [], []
     for it in all_items:
         if is_blocked(it["url"]):
             continue
         if is_deals_or_consumer_shopping(it["title"], it["url"]):
             continue
         it["summary_text"] = summarize(it)
-        cat, score = categorize_with_score(it["title"], it["url"], it.get("summary_text", ""))
-        src_norm = (it.get("source") or "").strip().lower()
-
-        is_youtube_src = ("youtube" in src_norm)
-        is_force_included = any(term.lower() in src_norm for term in FORCE_INCLUDE_SOURCES)
-        if is_force_included:
-            print(f"[INCLUDE] {it.get('source')}: '{it.get('title', '')[:70]}' score={score}")
-
-        if score == 0 and (src_norm not in FORCE_AI_SOURCES) and (not is_youtube_src) and (not is_force_included):
+        cat = classify_item(it)
+        if cat is None:
+            off_topic.append(it)
             continue
         it["category"] = cat
-
-        # Force-routing for certain sources/domains
-        d = domain_of(it["url"])
-        if is_youtube_src or (src_norm in FORCE_AI_SOURCES) or is_force_included:
-            it["category"] = "ai"
-        elif d in FORCE_FINTECH_DOMAINS or src_norm in FORCE_FINTECH_SOURCES:
-            scores = compute_scores(it["title"], it["url"], it.get("summary_text", ""))
-            if not (scores["ai"] >= 3 and scores["ai"] >= scores["fintech"] + 1):
-                it["category"] = "fintech"
-
         pruned.append(it)
 
+    if off_topic:
+        print(f"--- Off-topic (no vertical): {len(off_topic)} dropped ---")
+        for it in off_topic:
+            print(f"    [DROP] {it.get('source')}: {it.get('title', '')[:80]}")
     all_items = pruned
     if not all_items:
         raise RuntimeError("No publishable articles fetched. Keeping the existing deployment intact.")

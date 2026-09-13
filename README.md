@@ -15,7 +15,7 @@
 
   ## What It Does
 
-  TEK2day Pulse ingests RSS feeds from high-quality tech and finance publishers, applies multi-layer deduplication, categorizes articles into three verticals, and publishes:
+  TEK2day Pulse ingests RSS feeds from high-quality tech and finance publishers, applies multi-layer deduplication, keeps only stories about AI, software or fintech, and publishes:
 
   - A responsive static web page updated throughout the day
   - A structured JSON API (`pulse.json`) consumed by Kilby AI and other tools
@@ -24,13 +24,24 @@
 
   ---
 
-  ## Categories
+  ## Scope (relevance gate)
 
-  | Category | Color | Focus |
-  |----------|-------|-------|
-  | **AI** | Indigo | Models, research, infrastructure, agents |
-  | **Software** | Orange | Dev tools, platforms, enterprise software |
-  | **FinTech** | Emerald | Payments, banking, crypto, capital markets |
+  The page is one chronological feed with no category labels. Behind it, every
+  story is scored against three vocabularies and kept only if it clears one:
+
+  | Vertical | Focus |
+  |----------|-------|
+  | **AI** | Models, research, infrastructure, agents, robotics, AI chips |
+  | **Software** | Dev tools, platforms, enterprise software, cybersecurity |
+  | **FinTech** | Payments, banking, crypto, stablecoins, regulators, prediction markets |
+
+  Stories that fit none of these — car launches, game releases, conference
+  promos, entertainment — are dropped and listed under `Off-topic` in the build
+  log. Terms match whole words (with plural/verb suffixes), title hits count 3×,
+  summary 2×, URL slug 1×, and a story needs a score of at least 2. A few feeds
+  are routed by publication (PYMNTS and Cointelegraph → fintech; OpenAI,
+  Anthropic and the YouTube channels → AI). The winning vertical is recorded as
+  `category` in `pulse.json` for API consumers; it is not shown on the page.
 
   ---
 
@@ -55,6 +66,7 @@
 
   - **Frequency:** Five weekday runs (`23 13,15,17,19,21 * * 1-5`) — roughly 9:23 AM, 11:23 AM, 1:23 PM, 3:23 PM and 5:23 PM Eastern in summer, one hour earlier in winter. Minute 23 avoids GitHub's congested on-the-hour cron slots.
   - **Weekends:** No scheduled builds; Friday's edition stays live. `generator/check_schedule.py` enforces this and writes a step output the workflow gates on. Set `PULSE_WEEKDAYS_ONLY` to `"0"` in the workflow to publish seven days a week.
+  - **On merge:** every push to `main` builds and deploys immediately, any day.
   - **Manual trigger:** `workflow_dispatch` always builds, any day.
   - **Incremental builds:** Permalink pages, social images and JSON archives persist between runs via the Actions cache, so only new articles are fetched and encoded. A typical run reuses everything from the previous run.
   - **Failures:** An empty result fails the build before upload, preserving the deployed edition. Individual source failures are logged and recorded in `build-status.json` while healthy sources continue.
@@ -89,7 +101,7 @@
           ↓
     Deduplication (URL + title similarity)
           ↓
-    Categorization (keyword scoring, 3× title weight)
+    Relevance gate (whole-word scoring, 3× title weight)
           ↓
     Image processing + OG card generation
           ↓
@@ -161,15 +173,13 @@ The homepage is `generator/templates/section_template.html` plus `docs/pulse.css
 and `docs/pulse.js`. Edit these sources, then regenerate the homepage.
 Generated `docs/index.html` and `docs/pulse.json` are intentionally not tracked.
 
-Layout, top to bottom: header (logo, wordmark, date, search); section tabs
-(All / AI / Software / FinTech with live counts, plus the build time); a hero
-with the **lead story** beside the Brief; then the chronological card grid with
-a category eyebrow on each card. The lead is the Brief's top pick when it has a
+Layout, top to bottom: header (logo, wordmark, date, search); a hero with the
+**lead story** beside the Brief; then the chronological card grid, with the
+build time in the section head. The lead is the Brief's top pick when it has a
 real image (`pick_lead_story` in the generator), otherwise the first pick with
-any thumbnail, otherwise the newest story. Tabs and search share one client-side
-filter: while nothing is filtered the hero shows and the lead's grid copy
-(`data-lead`) stays hidden; a tab or a query hides the hero and filters the
-grid, lead included.
+any thumbnail, otherwise the newest story. Search is the only filter: while the
+query is empty the hero shows and the lead's grid copy (`data-lead`) stays
+hidden; a query hides the hero and filters the grid, lead included.
 
 The service worker checks the network first, with a five-second timeout and a
 bounded cache of previously loaded content. Cached headlines and summaries are

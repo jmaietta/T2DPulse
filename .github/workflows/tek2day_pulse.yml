@@ -8,6 +8,11 @@ on:
   schedule:
     - cron: "23 13,15,17,19,21 * * 1-5"
 
+  # A merge to main deploys immediately (any day); the weekday gate below
+  # only applies to scheduled runs.
+  push:
+    branches: [main]
+
   workflow_dispatch: {}
 
 permissions:

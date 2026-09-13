@@ -84,17 +84,6 @@
     </div>
   </header>
 
-  <nav class="tabs" aria-label="Sections">
-    <div class="tabs-inner" role="group" aria-label="Filter stories by section">
-      <button type="button" class="tab is-active" data-category="all" aria-pressed="true">All stories <span class="count">{{COUNT_ALL}}</span></button>
-      <button type="button" class="tab" data-category="ai" aria-pressed="false"><span class="dot dot--ai" aria-hidden="true"></span>AI <span class="count">{{COUNT_AI}}</span></button>
-      <button type="button" class="tab" data-category="software" aria-pressed="false"><span class="dot dot--software" aria-hidden="true"></span>Software <span class="count">{{COUNT_SW}}</span></button>
-      <button type="button" class="tab" data-category="fintech" aria-pressed="false"><span class="dot dot--fintech" aria-hidden="true"></span>FinTech <span class="count">{{COUNT_FT}}</span></button>
-      <div class="grow"></div>
-      <div class="updated">Updated <time id="last-updated" datetime="{{UPDATED_ISO}}">{{UPDATED_LABEL}}</time></div>
-    </div>
-  </nav>
-
   <div id="app">
     <section id="tek2day-pulse" aria-labelledby="tek2day-title">
       <div class="hero" id="hero">
@@ -104,6 +93,7 @@
       <div class="section-head">
         <h2 id="tek2day-title" class="section-title">Latest</h2>
         <p class="section-note" id="result-count" role="status" aria-live="polite">Newest first · {{MORE_COUNT}} more stories</p>
+        <p class="section-note updated">Updated <time id="last-updated" datetime="{{UPDATED_ISO}}">{{UPDATED_LABEL}}</time></p>
       </div>
       <div class="items">
         {{ITEMS}}
