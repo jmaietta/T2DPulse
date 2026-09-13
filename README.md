@@ -158,10 +158,18 @@
 ## Website maintenance and local previews
 
 The homepage is `generator/templates/section_template.html` plus `docs/pulse.css`
-and `docs/pulse.js`. The stylesheet and scripts used to be inline in the template;
-they are now separate files with identical content so browsers cache them across
-the five daily rebuilds. Edit these sources, then regenerate the homepage.
+and `docs/pulse.js`. Edit these sources, then regenerate the homepage.
 Generated `docs/index.html` and `docs/pulse.json` are intentionally not tracked.
+
+Layout, top to bottom: header (logo, wordmark, date, search); section tabs
+(All / AI / Software / FinTech with live counts, plus the build time); a hero
+with the **lead story** beside the Brief; then the chronological card grid with
+a category eyebrow on each card. The lead is the Brief's top pick when it has a
+real image (`pick_lead_story` in the generator), otherwise the first pick with
+any thumbnail, otherwise the newest story. Tabs and search share one client-side
+filter: while nothing is filtered the hero shows and the lead's grid copy
+(`data-lead`) stays hidden; a tab or a query hides the hero and filters the
+grid, lead included.
 
 The service worker checks the network first, with a five-second timeout and a
 bounded cache of previously loaded content. Cached headlines and summaries are

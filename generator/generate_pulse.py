@@ -1781,68 +1781,78 @@ def build_section(date_str: str, by_cat: dict, brief: dict = None, generated_at:
             pass
         return ""
 
-    def render_items(items: list) -> str:
-        parts = []
-        for idx, it in enumerate(items):
-            # REMOVED: Trending Badge Logic
-            # REMOVED: Trending Chips Logic
+    CATEGORY_LABEL = {"ai": "AI", "software": "Software", "fintech": "FinTech"}
+    today_local = generated_at.astimezone(TZ).date()
 
-            title_raw = it["title"]
-            title = html.escape(title_raw)
-            url_raw = safe_web_url(it["url"])
-            if not url_raw:
-                continue
-            url = html.escape(add_utm(url_raw), quote=True)
-            permalink = html.escape(safe_web_url(it.get("_abs_permalink")), quote=True)
+    def _when(it: dict) -> tuple[str, str]:
+        """(display text, ISO datetime): clock time for today's stories, month + day otherwise."""
+        try:
+            dt_local = dtparser.parse(it["published_at"]).astimezone(TZ)
+        except Exception:
+            return date_str, ""
+        if dt_local.date() == today_local:
+            disp = f"{dt_local:%I:%M %p}".lstrip("0")
+        else:
+            disp = f"{dt_local:%b} {dt_local.day}"
+        return disp, dt_local.isoformat()
 
-            if "youtube.com" in url_raw or "youtu.be" in url_raw:
-                thumbnail = ""
-                try:
-                    video_id = None
-                    if "watch?v=" in url_raw:
-                        video_id = url_raw.split("watch?v=")[1].split("&")[0]
-                    elif "youtu.be/" in url_raw:
-                        video_id = url_raw.split("youtu.be/")[1].split("?")[0]
-                    if video_id:
-                        thumbnail = f"https://i.ytimg.com/vi/{video_id}/mqdefault.jpg"
-                except Exception:
-                    pass
-            else:
-                thumbnail = it.get("_thumbnail") or it.get("image_url") or ""
+    def _thumbnail_for(it: dict, url_raw: str) -> str:
+        if "youtube.com" in url_raw or "youtu.be" in url_raw:
+            video_id = None
+            if "watch?v=" in url_raw:
+                video_id = url_raw.split("watch?v=")[1].split("&")[0]
+            elif "youtu.be/" in url_raw:
+                video_id = url_raw.split("youtu.be/")[1].split("?")[0]
+            return f"https://i.ytimg.com/vi/{video_id}/mqdefault.jpg" if video_id else ""
+        thumbnail = it.get("_thumbnail") or it.get("image_url") or ""
+        # Our own generated thumbnails are referenced same-origin (root-relative)
+        # so the page works in local previews and the service worker treats
+        # them like any other site asset. External images must be http(s).
+        if SITE_BASE and thumbnail.startswith(f"{SITE_BASE}/p/"):
+            return thumbnail[len(SITE_BASE):]
+        if thumbnail.startswith("/p/"):
+            return thumbnail
+        return safe_web_url(thumbnail)
 
-            src = html.escape(it["source"])
-            try:
-                dt_local = dtparser.parse(it["published_at"]).astimezone(TZ)
-                dt_str = display_date(dt_local)
-            except Exception:
-                dt_str = date_str
-            summary_txt = clean_text(strip_html_to_text(it.get("summary_text", "")), 180)
-            summary_html = html.escape(summary_txt)
-            # Our own generated thumbnails are referenced same-origin (root-relative)
-            # so the page works in local previews and the service worker treats
-            # them like any other site asset. External images must be http(s).
-            if SITE_BASE and thumbnail.startswith(f"{SITE_BASE}/p/"):
-                thumbnail = thumbnail[len(SITE_BASE):]
-            elif not thumbnail.startswith("/p/"):
-                thumbnail = safe_web_url(thumbnail)
-            # width/height match the 16:9 thumbnails; CSS controls the displayed size.
-            thumb_html = (f'<img src="{html.escape(thumbnail, quote=True)}" alt="{html.escape(title_raw, quote=True)}" '
-                          f'class="article-thumb" width="400" height="225" loading="lazy" decoding="async">') if thumbnail else ''
-            category = it.get("category", "ai")
-            if category not in ("ai", "software", "fintech"):
-                category = "ai"
+    def render_card(it: dict, lead: bool = False, in_grid: bool = False) -> str:
+        """One story card. The lead renders large in the hero; its grid copy is
+        marked data-lead so the page can hide it while the hero is visible."""
+        title_raw = it["title"]
+        title = html.escape(title_raw)
+        url_raw = safe_web_url(it["url"])
+        if not url_raw:
+            return ""
+        url = html.escape(add_utm(url_raw), quote=True)
+        permalink = html.escape(safe_web_url(it.get("_abs_permalink")), quote=True)
+        thumbnail = _thumbnail_for(it, url_raw)
+        src = html.escape(it["source"])
+        when, when_iso = _when(it)
+        summary_txt = clean_text(strip_html_to_text(it.get("summary_text", "")), 260 if lead else 180)
+        summary_html = html.escape(summary_txt)
+        category = it.get("category", "ai")
+        if category not in CATEGORY_LABEL:
+            category = "ai"
 
-            parts.append(f"""<article data-card data-category="{category}" data-url="{url}" data-permalink="{permalink}" data-title="{html.escape(title_raw, quote=True)}" data-summary="{summary_html}" data-source="{src}">
+        # width/height match the 16:9 thumbnails; CSS controls the displayed size.
+        thumb_html = (f'<img src="{html.escape(thumbnail, quote=True)}" alt="{html.escape(title_raw, quote=True)}" '
+                      f'class="article-thumb" width="400" height="225" loading="{"eager" if lead else "lazy"}" '
+                      f'decoding="async">') if thumbnail else ''
+        eyebrow = f'<span class="topic topic--{category}">{CATEGORY_LABEL[category]}</span>'
+        if lead:
+            eyebrow += '<span class="eyebrow-note">Lead story</span>'
+        classes = " ".join(c for c in ("lead" if lead else "",) if c)
+        lead_attr = " data-lead" if in_grid else ""
+        heading = "h2" if lead else "h3"
+
+        return f"""<article{' class="' + classes + '"' if classes else ''} data-card data-category="{category}" data-url="{url}" data-permalink="{permalink}" data-title="{html.escape(title_raw, quote=True)}" data-summary="{summary_html}" data-source="{src}"{lead_attr}>
   {thumb_html}
   <div class="article-content">
-    <h3><a data-title-link href="{url}">{title}</a></h3>
-    <div class="meta"><span class="src">{src}</span> · {dt_str} {render_item_badges(it, generated_at)}</div>
+    <div class="eyebrow">{eyebrow}</div>
+    <{heading}><a data-title-link href="{url}">{title}</a></{heading}>
+    <div class="meta"><span class="src">{src}</span> · <time datetime="{html.escape(when_iso, quote=True)}">{when}</time> {render_item_badges(it, generated_at)}</div>
     <p data-summary>{summary_html}</p>
   </div>
-</article>""")
-        return "\n".join(parts)
-
-    html_out = tpl.replace("{{DATE_STR}}", html.escape(date_str))
+</article>"""
 
     def _final_sort_dt(it):
         try:
@@ -1850,16 +1860,55 @@ def build_section(date_str: str, by_cat: dict, brief: dict = None, generated_at:
         except Exception:
             return datetime.min.replace(tzinfo=TZ)
 
-    # One chronological grid across all categories
+    # One chronological grid across all categories; the tabs filter it client-side.
     all_articles = []
     for cat_key in ("ai", "software", "fintech"):
         all_articles.extend(by_cat.get(cat_key, [])[:MAX_ITEMS])
     all_articles.sort(key=_final_sort_dt, reverse=True)
-    all_items_html = render_items(all_articles) if all_articles else "<p>No items today.</p>"
 
+    lead = pick_lead_story(all_articles, brief)
+    lead_key = canonicalize_url(lead.get("url", "")) if lead else ""
+    grid_html = "\n".join(
+        render_card(it, in_grid=bool(lead_key) and canonicalize_url(it.get("url", "")) == lead_key)
+        for it in all_articles
+    ) or "<p>No items today.</p>"
+    lead_html = render_card(lead, lead=True) if lead else ""
+
+    counts = {k: len(by_cat.get(k, [])[:MAX_ITEMS]) for k in ("ai", "software", "fintech")}
+    updated_label = f"{display_date(generated_at)} · {generated_at:%I:%M %p %Z}".replace("· 0", "· ")
+
+    html_out = tpl.replace("{{DATE_STR}}", html.escape(date_str))
     html_out = html_out.replace("{{DAILY_BRIEF}}", brief_html)
-    html_out = html_out.replace("{{ITEMS}}", all_items_html)
+    html_out = html_out.replace("{{LEAD}}", lead_html)
+    html_out = html_out.replace("{{ITEMS}}", grid_html)
+    html_out = html_out.replace("{{COUNT_ALL}}", str(len(all_articles)))
+    html_out = html_out.replace("{{COUNT_AI}}", str(counts["ai"]))
+    html_out = html_out.replace("{{COUNT_SW}}", str(counts["software"]))
+    html_out = html_out.replace("{{COUNT_FT}}", str(counts["fintech"]))
+    html_out = html_out.replace("{{MORE_COUNT}}", str(max(0, len(all_articles) - (1 if lead else 0))))
+    html_out = html_out.replace("{{UPDATED_ISO}}", html.escape(generated_at.isoformat(), quote=True))
+    html_out = html_out.replace("{{UPDATED_LABEL}}", html.escape(updated_label))
     return html_out
+
+
+def pick_lead_story(articles: list, brief: Optional[dict]) -> Optional[dict]:
+    """The Brief's top pick becomes the lead story when it has a real image;
+    otherwise the first Brief pick with any thumbnail, then the newest story."""
+    if not articles:
+        return None
+    by_url = {canonicalize_url(a.get("url", "")): a for a in articles}
+    picks = [by_url.get(canonicalize_url(t.get("url", ""))) for t in (brief or {}).get("takeaways", [])]
+    picks = [p for p in picks if p]
+    for candidate in picks:
+        if candidate.get("image_url") and candidate.get("_thumbnail"):
+            return candidate
+    for candidate in picks:
+        if candidate.get("_thumbnail"):
+            return candidate
+    for candidate in articles:
+        if candidate.get("_thumbnail"):
+            return candidate
+    return articles[0]
 
 
 # ============================================================================
