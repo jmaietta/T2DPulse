@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 # generator/generate_pulse.py
-# Refactored version with:
-# - REMOVED: Google Trends / Trending Chips / Trending Badges
-# - Consolidated duplicate functions
-# - Dataclasses for type safety
-# - Parallel RSS fetching
-# - Session with retry adapter
-# - Updated for Grid Layout
+#
+# Pipeline: fetch RSS in parallel -> dedupe -> filter/categorize -> generate
+# permalink pages + social images -> render index.html + pulse.json.
+#
+# Generated output under docs/ (p/, archive/, index.html, pulse.json) is not
+# tracked in git; the workflow restores p/ and archive/ from the Actions cache
+# so unchanged articles are not re-downloaded and re-encoded on every run.
 
 import os
 import re
@@ -17,14 +17,13 @@ import random
 import hashlib
 import math
 import shutil
+import threading
 import urllib.parse
 from io import BytesIO
-from pathlib import Path
 from typing import Optional
-from dataclasses import dataclass, field
 from datetime import datetime, timedelta, timezone, date
-from urllib.parse import urlparse, urljoin
-from collections import defaultdict, deque, Counter
+from urllib.parse import urlparse
+from collections import defaultdict
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 import feedparser
@@ -65,11 +64,17 @@ else:
 UTM = CFG.get("utm", {"source": "tek2day", "medium": "email"})
 BLOCK_SUFFIXES = [s.lower() for s in CFG.get("exclude_domains_suffix", [])]
 ALWAYS_BLOCK = {"news.ycombinator.com", "ycombinator.com"}
+SITE_BASE = (os.environ.get("SITE_BASE_URL") or CFG.get("site_base") or "").rstrip("/")
 
-# Cache configuration
-CACHE_DIR = Path(os.path.join(REPO, "cache"))
-CACHE_DIR.mkdir(exist_ok=True)
-CACHE_FILE = CACHE_DIR / "friday_snapshot.json"
+# Newest-first cap per source so one high-volume feed cannot dominate the page.
+# Sources in FORCE_INCLUDE_SOURCES are exempt.
+_raw_source_cap = CFG.get("max_items_per_source", 10)
+try:
+    MAX_ITEMS_PER_SOURCE = int(_raw_source_cap) if _raw_source_cap not in (None, "", "none", "null") else None
+    if MAX_ITEMS_PER_SOURCE is not None and MAX_ITEMS_PER_SOURCE <= 0:
+        MAX_ITEMS_PER_SOURCE = None
+except (TypeError, ValueError):
+    MAX_ITEMS_PER_SOURCE = None
 
 # Source mappings
 SOURCE_NAME_MAP = {
@@ -100,89 +105,11 @@ FORCE_INCLUDE_SOURCES = {"tek2day", "tek2day newsletter"}
 # Freshness & diversity settings
 FRESH_WINDOW_DAYS = 3
 BACKFILL_WINDOW_DAYS = 5
-FLOORS = {"ai": 10, "software": 6, "fintech": 6}
 RETENTION_DAYS = int(CFG.get("retention_days", 7))
 
 # Permalink paths
 PERMA_ROOT = os.path.join(REPO, "docs", "p")
 PERMA_TPL = os.path.join(ROOT, "templates", "item_template.html")
-
-# ============================================================================
-# DATACLASS FOR ARTICLES
-# ============================================================================
-
-@dataclass
-class Article:
-    """Structured representation of a news article."""
-    title: str
-    url: str
-    published_at: str
-    source: str
-    summary: str = ""
-    content_html: str = ""
-    image_url: str = ""
-    category: str = ""
-    summary_text: str = ""
-    permalink: str = ""
-    abs_permalink: str = ""
-    summary_240: str = ""
-    thumbnail: str = ""
-    backfilled: bool = False
-    older_than_fresh_window: bool = False
-
-    def to_dict(self) -> dict:
-        """Convert to dictionary for JSON serialization."""
-        result = {
-            "title": self.title,
-            "url": self.url,
-            "published_at": self.published_at,
-            "source": self.source,
-        }
-        if self.summary:
-            result["summary"] = self.summary
-        if self.content_html:
-            result["content_html"] = self.content_html
-        if self.image_url:
-            result["image_url"] = self.image_url
-        if self.category:
-            result["category"] = self.category
-        if self.summary_text:
-            result["summary_text"] = self.summary_text
-        if self.permalink:
-            result["_permalink"] = self.permalink
-        if self.abs_permalink:
-            result["_abs_permalink"] = self.abs_permalink
-        if self.summary_240:
-            result["_summary_240"] = self.summary_240
-        if self.thumbnail:
-            result["_thumbnail"] = self.thumbnail
-        if self.backfilled:
-            result["_backfilled"] = True
-        if self.older_than_fresh_window:
-            result["_older_than_fresh_window"] = True
-        return result
-
-    @classmethod
-    def from_dict(cls, data: dict) -> "Article":
-        """Create Article from dictionary."""
-        return cls(
-            title=data.get("title", ""),
-            url=data.get("url", ""),
-            published_at=data.get("published_at", ""),
-            source=data.get("source", ""),
-            summary=data.get("summary", ""),
-            content_html=data.get("content_html", ""),
-            image_url=data.get("image_url", ""),
-            category=data.get("category", ""),
-            summary_text=data.get("summary_text", ""),
-            permalink=data.get("_permalink", ""),
-            abs_permalink=data.get("_abs_permalink", ""),
-            summary_240=data.get("_summary_240", ""),
-            thumbnail=data.get("_thumbnail", ""),
-            backfilled=data.get("_backfilled", False),
-            older_than_fresh_window=data.get("_older_than_fresh_window", False),
-        )
-
 
 # ============================================================================
 # DOMAIN HELPER CLASS
@@ -268,6 +195,7 @@ def create_session() -> requests.Session:
 
 
 SESSION = create_session()
+FEED_STATUS = []
 
 
 def fetch_html(url: str, referer: str | None = None, timeout: int = 15) -> str:
@@ -280,6 +208,32 @@ def fetch_html(url: str, referer: str | None = None, timeout: int = 15) -> str:
     return r.text
 
 
+# Article pages are needed by up to three steps (summary fallback, image
+# scraping, social-card generation). Fetch each URL at most once per run.
+_PAGE_CACHE: dict[str, str] = {}
+_PAGE_CACHE_LOCK = threading.Lock()
+IMAGE_STATS = {"reused": 0, "generated": 0}
+
+
+def fetch_page_cached(url: str, timeout: int = 10) -> str:
+    """Fetch an article page once per run; later callers get the cached HTML.
+
+    Failures are cached too (as an empty string) so a dead page is not retried
+    by every downstream step.
+    """
+    with _PAGE_CACHE_LOCK:
+        if url in _PAGE_CACHE:
+            return _PAGE_CACHE[url]
+    try:
+        text = fetch_html(url, referer=url, timeout=timeout)
+    except Exception as e:
+        print(f"[PAGE] fetch failed: {url[:80]}: {e}")
+        text = ""
+    with _PAGE_CACHE_LOCK:
+        _PAGE_CACHE[url] = text
+    return text
+
+
 # ============================================================================
 # UTILITY FUNCTIONS
 # ============================================================================
@@ -287,6 +241,21 @@ def fetch_html(url: str, referer: str | None = None, timeout: int = 15) -> str:
 def now_et() -> datetime:
     """Get current time in Eastern timezone."""
     return datetime.now(TZ)
+
+
+def display_date(value: datetime) -> str:
+    """Portable date formatting for Windows previews and Linux publishing."""
+    return f"{value:%b} {value.day}, {value:%Y}"
+
+
+def safe_web_url(value: str) -> str:
+    """Only allow HTTP(S) links in feed-derived HTML attributes."""
+    value = (value or "").strip()
+    try:
+        parsed = urlparse(value)
+        return value if parsed.scheme.lower() in ("http", "https") and parsed.hostname else ""
+    except ValueError:
+        return ""
 
 
 def safe_parse_dt(dt_str: str) -> Optional[datetime]:
@@ -316,7 +285,7 @@ def strip_html_to_text(s: str) -> str:
     if not s:
         return ""
     try:
-        return BeautifulSoup(s, "html5lib").get_text(" ", strip=True)
+        return BeautifulSoup(s, "html.parser").get_text(" ", strip=True)
     except Exception:
         return s
 
@@ -404,6 +373,34 @@ def is_within_retention(item: dict, now: datetime, retention_days: int = RETENTI
 def retain_recent_items(items: list, now: datetime, retention_days: int = RETENTION_DAYS) -> list:
     """Keep only items within retention window."""
     return [it for it in items if is_within_retention(it, now=now, retention_days=retention_days)]
+
+
+_CONFIG_CAP = object()  # sentinel: resolve MAX_ITEMS_PER_SOURCE at call time, not def time
+
+
+def cap_per_source(items: list, cap=_CONFIG_CAP) -> list:
+    """Keep at most `cap` items per source, preserving order (call on a newest-first list)."""
+    if cap is _CONFIG_CAP:
+        cap = MAX_ITEMS_PER_SOURCE
+    if not cap:
+        return list(items)
+    counts: dict[str, int] = defaultdict(int)
+    out = []
+    for it in items:
+        src = (it.get("source") or "").strip().lower()
+        if any(term in src for term in FORCE_INCLUDE_SOURCES):
+            out.append(it)
+            continue
+        if counts[src] >= cap:
+            continue
+        counts[src] += 1
+        out.append(it)
+    return out
+
+
+def public_item(it: dict) -> dict:
+    """Shape an item for pulse.json / archives: drop raw feed HTML that no consumer uses."""
+    return {k: v for k, v in it.items() if k != "content_html"}
 
 
 def _extract_date_from_filename(filename: str, fmt: str) -> Optional[date]:
@@ -495,39 +492,6 @@ def _nyt_prefer_super_jumbo(u: str) -> str:
     )
 
 
-def _nyt_force_jpeg(u: str) -> str:
-    """Coerce NYT image URL to JPEG to avoid AVIF/WEBP incompatibilities."""
-    try:
-        u = re.sub(r'([?&])(auto|format|fm)=(webp|avif)', r'\1\2=jpg', u, flags=re.I)
-        u = re.sub(r'\.(webp|avif)(\?.*)?$', r'.jpg\2', u, flags=re.I)
-        if ('format=' not in u.lower()) and ('fm=' not in u.lower()) and ('auto=' not in u.lower()):
-            u = u + ('&' if '?' in u else '?') + 'format=jpg'
-    except Exception:
-        pass
-    return u
-
-
-def _nyt_candidates(u: str) -> list[str]:
-    """Return a small ladder of NYT image URLs to try (largest first)."""
-    sizes = ["superJumbo", "threeByTwoLargeAt2X", "articleLarge"]
-    out = []
-    m = re.search(r'-(\w+)\.(jpg|jpeg|png|webp)$', u)
-    if m:
-        ext = m.group(2)
-        base = u[:m.start()]
-        for s in sizes:
-            out.append(f"{base}-{s}.{ext}")
-        out.append(u)
-    else:
-        out.append(u)
-    seen, uniq = set(), []
-    for x in out:
-        if x not in seen:
-            seen.add(x)
-            uniq.append(x)
-    return uniq
-
-
 def _pick_from_srcset(srcset: str) -> str:
     """Pick best image from srcset attribute."""
     best_url, best_w = "", -1
@@ -550,39 +514,6 @@ def _pick_from_srcset(srcset: str) -> str:
 # ============================================================================
 # IMAGE EXTRACTION
 # ============================================================================
-
-def _extract_json_ld_images(soup: BeautifulSoup) -> list[str]:
-    """Extract images from JSON-LD structured data."""
-    out = []
-    for tag in soup.find_all("script", {"type": "application/ld+json"}):
-        try:
-            data = json.loads(tag.string or "")
-        except Exception:
-            continue
-
-        def walk(obj):
-            if isinstance(obj, dict):
-                if "image" in obj:
-                    img = obj["image"]
-                    if isinstance(img, str):
-                        out.append(img)
-                    elif isinstance(img, dict) and "url" in img:
-                        out.append(img["url"])
-                    elif isinstance(img, list):
-                        for i in img:
-                            if isinstance(i, str):
-                                out.append(i)
-                            elif isinstance(i, dict) and "url" in i:
-                                out.append(i["url"])
-                for v in obj.values():
-                    walk(v)
-            elif isinstance(obj, list):
-                for v in obj:
-                    walk(v)
-
-        walk(data)
-    return out
-
 
 def find_best_image_in_soup(soup: BeautifulSoup, page_url: str) -> str:
     """Return a best-guess absolute image URL for a page."""
@@ -922,25 +853,37 @@ def parse_pubdate(entry) -> datetime:
 
 def within_window(dt_local: datetime) -> bool:
     """Check if datetime is within backfill window."""
-    cutoff = now_et() - timedelta(days=BACKFILL_WINDOW_DAYS)
-    return dt_local >= cutoff
+    current = now_et()
+    cutoff = current - timedelta(days=BACKFILL_WINDOW_DAYS)
+    return cutoff <= dt_local <= current + timedelta(minutes=15)
 
 
 def fetch_rss(feed_name: str, url: str) -> list[dict]:
     """Fetch RSS feed with fallback image scraping."""
     try:
-        d = feedparser.parse(url)
+        # Fetch through the retrying HTTP client; feedparser's URL path has no timeout.
+        with create_session() as session:
+            response = session.get(url, timeout=(10, 30))
+            response.raise_for_status()
+            d = feedparser.parse(response.content, response_headers={
+                "content-location": response.url,
+                "content-type": response.headers.get("content-type", ""),
+            })
+        if not d.entries and (d.bozo or not d.get("version")):
+            raise ValueError("Response is not a usable RSS or Atom feed")
         items = []
         for e in d.entries[:60]:
             title = clean_text(getattr(e, "title", ""))
-            link = getattr(e, "link", "")
+            link = safe_web_url(getattr(e, "link", ""))
             if not title or not link:
                 continue
             if is_blocked(link) and "youtube.com/feeds/videos.xml" not in (url or ""):
                 continue
             dt_local = parse_pubdate(e)
             is_youtube_feed = 'youtube.com/feeds/videos.xml' in (url or '')
-            if (not is_youtube_feed) and (not within_window(dt_local)):
+            if dt_local > now_et() + timedelta(minutes=15):
+                continue
+            if not is_youtube_feed and not within_window(dt_local):
                 continue
             raw_sum = getattr(e, "summary", "") or getattr(e, "description", "")
             summary = clean_text(strip_html_to_text(raw_sum), 400)
@@ -950,23 +893,9 @@ def fetch_rss(feed_name: str, url: str) -> list[dict]:
                     content_html = e.content[0].value
                 except Exception:
                     pass
+            # Only what the feed itself carries. Entries without an image are
+            # scraped later, after dedupe/filtering, in create_branded_og_image.
             image_url = extract_image_url(e)
-
-            if image_url:
-                print(f"[RSS] {feed_name}: found image in entry: {image_url[:80]}")
-
-            if not image_url and link:
-                try:
-                    print(f"[RSS] {feed_name}: no image in entry, scraping page: {link[:80]}")
-                    page_html = fetch_html(link, referer=link, timeout=10)
-                    page_soup = BeautifulSoup(page_html, "html.parser")
-                    image_url = find_best_image_in_soup(page_soup, link)
-                    if image_url:
-                        print(f"[RSS] {feed_name}: scraped image: {image_url[:80]}")
-                    else:
-                        print(f"[RSS] {feed_name}: no image found after scraping")
-                except Exception as scrape_err:
-                    print(f"[RSS] {feed_name}: scraping failed: {scrape_err}")
 
             if "youtube.com/feeds/videos.xml" in (url or ""):
                 try:
@@ -992,12 +921,13 @@ def fetch_rss(feed_name: str, url: str) -> list[dict]:
         return items
     except Exception as e:
         print(f"[RSS] Error fetching {feed_name} from {url}: {e}")
-        return []
+        raise RuntimeError(f"Feed failed: {feed_name}") from e
 
 
 def fetch_all_rss_parallel(sources: list[dict], max_workers: int = 8) -> list[dict]:
     """Fetch all RSS feeds in parallel for better performance."""
     all_items = []
+    FEED_STATUS.clear()
 
     with ThreadPoolExecutor(max_workers=max_workers) as executor:
         futures = {
@@ -1008,10 +938,12 @@ def fetch_all_rss_parallel(sources: list[dict], max_workers: int = 8) -> list[di
             name = futures[future]
             try:
                 items = future.result()
-                print(f"✓ {name}: {len(items)} articles")
+                print(f"[OK] {name}: {len(items)} articles")
                 all_items.extend(items)
+                FEED_STATUS.append({"source": name, "status": "ok", "articles": len(items)})
             except Exception as e:
-                print(f"✗ {name}: {e}")
+                print(f"[ERROR] {name}: {e}")
+                FEED_STATUS.append({"source": name, "status": "error", "articles": 0})
 
     return all_items
 
@@ -1123,80 +1055,35 @@ def dedupe(items: list) -> list:
 
 
 # ============================================================================
-# FRESHNESS & DIVERSITY
+# BUCKETING (merge archive + fresh fetch, keep the last FRESH_WINDOW_DAYS)
 # ============================================================================
 
-def is_fresh(item: dict, window_days: int = FRESH_WINDOW_DAYS, now: datetime = None) -> bool:
-    """Check if item is within freshness window."""
-    now = now or datetime.now(timezone.utc)
-    dt = safe_parse_dt(item.get("published_at"))
-    if not dt:
-        return False
-    return (now - dt.astimezone(timezone.utc)) <= timedelta(days=window_days)
-
-
-def filter_fresh(items: list, window_days: int = FRESH_WINDOW_DAYS, now: datetime = None) -> list:
-    """Filter items to only fresh ones."""
-    now = now or datetime.now(timezone.utc)
-    return [it for it in items if is_fresh(it, window_days, now)]
-
-
-def prefer_diverse_round_robin(items: list, max_total: int) -> list:
-    """Select items with domain diversity using round-robin."""
-    if not items:
-        return []
-    buckets = defaultdict(list)
-    for it in items:
-        buckets[domain_of(it.get("url", ""))].append(it)
-    for d in buckets:
-        buckets[d].sort(key=lambda x: safe_parse_dt(x.get("published_at")) or datetime.min.replace(tzinfo=timezone.utc),
-                        reverse=True)
-        random.shuffle(buckets[d])
-    domains = list(buckets.keys())
-    soft_cap = max(1, math.ceil(max_total / max(1, len(domains))))
-    queues = [deque(v[:soft_cap]) for v in buckets.values() if v]
-    out = []
-    i = 0
-    while queues and len(out) < max_total:
-        q = queues[i % len(queues)]
-        if q:
-            out.append(q.popleft())
-        queues = [qq for qq in queues if qq]
-        i += 1
-    return out
-
-
-def sort_by_recency(items: list) -> list:
-    """Sort items by publication date, newest first."""
-    return sorted(items,
-                  key=lambda x: safe_parse_dt(x.get("published_at")) or datetime.min.replace(tzinfo=timezone.utc),
-                  reverse=True)
-
-
-def build_preferred_today_with_floors(all_items: list, now_local: datetime = None, floors: dict = None,
-                                       backfill_days: int = None) -> dict:
-    """Build categorized items with freshness preferences."""
-    now_local = now_local or now_et()
+def _load_archived_items(now_local: datetime) -> list:
+    """Items from timestamped archives within the fresh window (restored by the Actions cache)."""
     arch_dir = os.path.join(REPO, "docs", "archive", "timestamped")
-    cutoff_date = (now_local - timedelta(days=3)).date()
-    archived_items = []
-    if os.path.exists(arch_dir):
-        for filename in os.listdir(arch_dir):
-            if not filename.endswith(".json"):
+    cutoff_date = (now_local - timedelta(days=FRESH_WINDOW_DAYS)).date()
+    archived = []
+    if not os.path.isdir(arch_dir):
+        return archived
+    for filename in os.listdir(arch_dir):
+        if not filename.endswith(".json"):
+            continue
+        try:
+            file_date = datetime.strptime(filename.split("_")[0], "%Y-%m-%d").date()
+            if file_date < cutoff_date:
                 continue
-            try:
-                date_part = filename.split("_")[0]
-                file_date = datetime.strptime(date_part, "%Y-%m-%d").date()
-                if file_date >= cutoff_date:
-                    filepath = os.path.join(arch_dir, filename)
-                    with open(filepath, "r", encoding="utf-8") as f:
-                        data = json.load(f)
-                        archived_items.extend(data.get("items", []))
-            except Exception:
-                continue
+            with open(os.path.join(arch_dir, filename), "r", encoding="utf-8") as f:
+                archived.extend(json.load(f).get("items", []))
+        except Exception:
+            continue
+    return archived
 
-    all_combined = archived_items + all_items
-    all_combined = dedupe_story_variants(all_combined)
+
+def bucket_recent_by_category(all_items: list, now_local: datetime = None) -> dict:
+    """Merge archived + freshly fetched items, dedupe, cap per source, bucket by category."""
+    now_local = now_local or now_et()
+
+    all_combined = dedupe_story_variants(_load_archived_items(now_local) + all_items)
     seen_urls = set()
     unique_items = []
     for it in all_combined:
@@ -1211,43 +1098,17 @@ def build_preferred_today_with_floors(all_items: list, now_local: datetime = Non
         except Exception:
             return now_local
 
+    unique_items.sort(key=_dt_local, reverse=True)
+    unique_items = cap_per_source(unique_items)
+
     pool_by_cat = {"ai": [], "software": [], "fintech": []}
     for it in unique_items:
-        try:
-            dtl = _dt_local(it)
-        except Exception:
-            continue
-        if dtl >= now_local - timedelta(days=3):
+        if _dt_local(it) >= now_local - timedelta(days=FRESH_WINDOW_DAYS):
             cat = it.get("category")
             if cat in pool_by_cat:
                 pool_by_cat[cat].append(it)
 
-    for k in pool_by_cat:
-        pool_by_cat[k].sort(key=_dt_local, reverse=True)
-
-    out = {}
-    for cat in ("ai", "software", "fintech"):
-        pool = pool_by_cat.get(cat, [])
-        pool.sort(key=_dt_local, reverse=True)
-        out[cat] = pool[:MAX_ITEMS]
-        out[cat].sort(key=_dt_local, reverse=True)
-    return out
-
-
-def finalize_section_with_backfill(items: list, section_max: int, now: datetime = None,
-                                    max_backfill_days: int = 7) -> list:
-    """Finalize section items with backfill if needed."""
-    now = now or datetime.now(timezone.utc)
-    fresh = filter_fresh(items, FRESH_WINDOW_DAYS, now=now)
-    if fresh:
-        interleaved = prefer_diverse_round_robin(fresh, max_total=section_max)
-        return sort_by_recency(interleaved)[:section_max]
-    cutoff = now - timedelta(days=max_backfill_days)
-    cands = [it for it in items if (dt := safe_parse_dt(it.get("published_at"))) and dt >= cutoff]
-    cands = sort_by_recency(cands)[:section_max]
-    for it in cands:
-        it["_older_than_fresh_window"] = True
-    return cands
+    return {cat: pool_by_cat[cat][:MAX_ITEMS] for cat in ("ai", "software", "fintech")}
 
 
 # ============================================================================
@@ -1259,12 +1120,13 @@ def summarize(item: dict) -> str:
     if item.get("summary"):
         return clean_text(item["summary"], 260)
     try:
-        r = SESSION.get(item["url"], timeout=12)
-        soup = BeautifulSoup(r.text, "html5lib")
-        for sel in [("meta", {"property": "og:description"}), ("meta", {"name": "description"})]:
-            m = soup.find(*sel)
-            if m and m.get("content"):
-                return clean_text(m["content"], 260)
+        page_html = fetch_page_cached(item["url"], timeout=12)
+        if page_html:
+            soup = BeautifulSoup(page_html, "html.parser")
+            for sel in [("meta", {"property": "og:description"}), ("meta", {"name": "description"})]:
+                m = soup.find(*sel)
+                if m and m.get("content"):
+                    return clean_text(m["content"], 260)
     except Exception:
         pass
     return clean_text(item["title"], 200)
@@ -1288,15 +1150,27 @@ def _plain_text_summary(it: dict, limit: int = 180) -> str:
 # PERMALINK & OG IMAGE GENERATION
 # ============================================================================
 
-def create_branded_og_image(source_url: str, permalink_dir: str, pre_extracted_image_url: str = "") -> tuple[str, str]:
-    """Create branded OG image and thumbnail."""
+OG_IMAGE_NAME = "og-image.jpg"
+THUMBNAIL_NAME = "thumbnail.jpg"
+# JPEG instead of PNG: photos compress ~6-10x smaller with no visible loss,
+# and every card on the homepage loads a thumbnail.
+OG_JPEG_QUALITY = 82
+THUMB_JPEG_QUALITY = 80
+
+
+def create_branded_og_image(source_url: str, permalink_dir: str, pre_extracted_image_url: str = "") -> tuple[str, str, str]:
+    """Create branded OG image + thumbnail.
+
+    Returns (og_image_rel_path, thumbnail_rel_path, source_image_url). The
+    source image URL is whichever image was actually used (RSS-provided or
+    scraped), so callers can record it on the item.
+    """
     logo_path = os.path.join(REPO, "docs", "icons", "t2d-pulse-512.png")
     banner_path = os.path.join(REPO, "docs", "icons", "T2D_Pulse_Banner.png")
-    output_path = os.path.join(permalink_dir, "og-image.png")
-    thumbnail_path = os.path.join(permalink_dir, "thumbnail.png")
+    output_path = os.path.join(permalink_dir, OG_IMAGE_NAME)
+    thumbnail_path = os.path.join(permalink_dir, THUMBNAIL_NAME)
 
     TARGET_WIDTH, TARGET_HEIGHT = 1200, 630
-    # Increased THUMB_WIDTH for grid layout (was 240)
     THUMB_WIDTH, THUMB_HEIGHT = 400, 225
     LOGO_SIZE, PADDING = 120, 20
 
@@ -1326,7 +1200,7 @@ def create_branded_og_image(source_url: str, permalink_dir: str, pre_extracted_i
         except Exception:
             pass
 
-        og_img.save(output_path, "PNG", optimize=True)
+        og_img.save(output_path, "JPEG", quality=OG_JPEG_QUALITY, optimize=True, progressive=True)
 
         thumb = base_img.copy()
         t_as = thumb.width / thumb.height
@@ -1344,10 +1218,10 @@ def create_branded_og_image(source_url: str, permalink_dir: str, pre_extracted_i
             top = (nh - THUMB_HEIGHT * 2) // 2
             thumb = thumb.crop((0, top, THUMB_WIDTH * 2, top + THUMB_HEIGHT * 2))
         thumb = thumb.resize((THUMB_WIDTH, THUMB_HEIGHT), Image.LANCZOS)
-        thumb.save(thumbnail_path, "PNG", optimize=True)
+        thumb.save(thumbnail_path, "JPEG", quality=THUMB_JPEG_QUALITY, optimize=True, progressive=True)
 
         pid = os.path.basename(permalink_dir)
-        return (f"/p/{pid}/og-image.png", f"/p/{pid}/thumbnail.png")
+        return (f"/p/{pid}/{OG_IMAGE_NAME}", f"/p/{pid}/{THUMBNAIL_NAME}")
 
     # Priority 1: Use pre-extracted image from RSS if provided
     if pre_extracted_image_url:
@@ -1356,55 +1230,57 @@ def create_branded_og_image(source_url: str, permalink_dir: str, pre_extracted_i
             img_bytes = _download_image_with_retries(pre_extracted_image_url, referer=source_url, attempts=3,
                                                       timeout=25)
             base_img = Image.open(BytesIO(img_bytes)).convert("RGB")
-            return _compose_and_save(base_img)
+            return (*_compose_and_save(base_img), pre_extracted_image_url)
         except Exception as e:
             print(f"[OG] Pre-extracted image failed: {e}, trying page scrape")
 
-    # Priority 2: Try to fetch and parse the article page
+    # Priority 2: Try to fetch and parse the article page (fetched at most once per run)
     try:
-        html_text = fetch_html(source_url, referer=source_url, timeout=10)
-        soup = BeautifulSoup(html_text, "html5lib")
-        source_img_url = find_best_image_in_soup(soup, source_url)
+        html_text = fetch_page_cached(source_url, timeout=10)
+        source_img_url = find_best_image_in_soup(BeautifulSoup(html_text, "html.parser"), source_url) if html_text else ""
         if source_img_url:
             print(f"[OG] Scraped image from page: {source_img_url[:80]}")
             img_bytes = _download_image_with_retries(source_img_url, referer=source_url, attempts=3, timeout=25)
             base_img = Image.open(BytesIO(img_bytes)).convert("RGB")
-            return _compose_and_save(base_img)
+            return (*_compose_and_save(base_img), source_img_url)
     except Exception as e:
         print(f"[OG] Could not build branded image from page: {e}")
 
     # Priority 3: Fallback to placeholder banner
     try:
         if os.path.exists(banner_path):
-            print(f"[OG] Using fallback banner")
+            print("[OG] Using fallback banner")
             banner = Image.open(banner_path).convert("RGB")
-            return _compose_and_save(banner)
+            return (*_compose_and_save(banner), "")
     except Exception as e:
         print(f"[OG] Fallback banner failed: {e}")
 
-    return ("", "")
+    return ("", "", "")
 
 
 def _render_template_string(tpl: str, **kv) -> str:
-    """Simple template rendering."""
-    html_out = tpl
-    for k, v in kv.items():
-        html_out = html_out.replace(f"{{{{{k}}}}}", v or "")
-    return html_out
+    """Escape feed text once without interpreting placeholders inside that text."""
+    return re.sub(r"\{\{(\w+)\}\}", lambda match: html.escape(str(kv.get(match[1]) or ""), quote=True), tpl)
 
 
 def write_permalink_page(it: dict) -> str:
-    """Write permalink page for an item."""
-    site_base = os.environ.get("SITE_BASE_URL") or (CFG.get("site_base") or "")
-    site_base = site_base.rstrip("/")
+    """Write permalink page for an item.
+
+    The page itself is always re-rendered (cheap, and picks up template
+    changes). The social image + thumbnail are reused when a previous run
+    already produced them for this permalink id, which is the expensive part.
+    """
+    site_base = SITE_BASE
 
     title = (it.get("title") or "").strip()
-    url = (it.get("url") or "").strip()
+    url = safe_web_url(it.get("url"))
+    if not url:
+        raise ValueError("Article URL must use HTTP or HTTPS")
     src = (it.get("source") or "").strip()
     dtstr = it.get("published_at") or ""
     dom = domain_of(url)
     try:
-        date_fmt = dtparser.parse(dtstr).astimezone(TZ).strftime("%b %-d, %Y") if dtstr else ""
+        date_fmt = display_date(dtparser.parse(dtstr).astimezone(TZ)) if dtstr else ""
     except Exception:
         date_fmt = ""
 
@@ -1416,7 +1292,17 @@ def write_permalink_page(it: dict) -> str:
     abs_permalink = f"{site_base}{rel_permalink}" if site_base else rel_permalink
 
     summary = _plain_text_summary(it, limit=180)
-    og_image_rel, thumbnail_rel = create_branded_og_image(url, perma_dir, pre_extracted_image_url=it.get("image_url", ""))
+    if os.path.isfile(os.path.join(perma_dir, OG_IMAGE_NAME)) and os.path.isfile(os.path.join(perma_dir, THUMBNAIL_NAME)):
+        og_image_rel, thumbnail_rel = f"/p/{pid}/{OG_IMAGE_NAME}", f"/p/{pid}/{THUMBNAIL_NAME}"
+        with _PAGE_CACHE_LOCK:
+            IMAGE_STATS["reused"] += 1
+    else:
+        with _PAGE_CACHE_LOCK:
+            IMAGE_STATS["generated"] += 1
+        og_image_rel, thumbnail_rel, used_image_url = create_branded_og_image(
+            url, perma_dir, pre_extracted_image_url=it.get("image_url", ""))
+        if used_image_url and not it.get("image_url"):
+            it["image_url"] = used_image_url
     og_image_abs = f"{site_base}{og_image_rel}" if og_image_rel and site_base else og_image_rel
     thumbnail_abs = f"{site_base}{thumbnail_rel}" if thumbnail_rel and site_base else thumbnail_rel
 
@@ -1509,112 +1395,6 @@ def _brief_tokens(s: str) -> list:
     return out
 
 
-
-def _brief_extract_keywords(text_blob: str) -> list[str]:
-    """Extract candidate *display* keywords for the Daily Brief chips.
-
-    We purposely keep this lightweight and deterministic (no LLM calls).
-    It looks at titles + RSS summaries and tries to surface repeated proper nouns,
-    acronyms, and a small set of high-signal topic words.
-    """
-    if not text_blob:
-        return []
-
-    blob = text_blob
-    out: list[str] = []
-    seen = set()
-
-    def _add(tok: str):
-        t = (tok or "").strip()
-        if not t:
-            return
-        key = t.lower()
-        if key in _BRIEF_STOPWORDS:
-            return
-        if len(key) < 2:
-            return
-        if key in seen:
-            return
-        seen.add(key)
-        out.append(t)
-
-    # 1) Proper nouns / product names (Anthropic, OpenAI, Microsoft, Blue Prism, etc.)
-    # Keep single tokens; multi-word entities will often show up as repeated single tokens ("Microsoft").
-    for m in re.finditer(r"\b[A-Z][A-Za-z0-9&.+_-]{2,}\b", blob):
-        w = m.group(0)
-        if w.lower() in _BRIEF_STOPWORDS:
-            continue
-        if w in {"The", "A", "An"}:
-            continue
-        _add(w)
-
-    # 2) Acronyms (AI, GPU, SEC, ETF, etc.)
-    for m in re.finditer(r"\b[A-Z]{2,}\b", blob):
-        _add(m.group(0))
-
-    # 3) High-signal topic words from normalized tokens
-    topic_map = {
-        "ai": "AI",
-        "crypto": "Crypto",
-        "fintech": "FinTech",
-        "security": "Security",
-        "privacy": "Privacy",
-        "payments": "Payments",
-        "banking": "Banking",
-        "stablecoins": "Stablecoins",
-        "regulation": "Regulation",
-        "policy": "Policy",
-        "models": "Models",
-        "model": "Model",
-        "llm": "LLM",
-        "gpu": "GPU",
-        "chips": "Chips",
-        "cloud": "Cloud",
-    }
-    toks = _brief_tokens(blob)
-    for t in toks:
-        if t in topic_map:
-            _add(topic_map[t])
-
-    return out
-
-def _brief_jaccard_sim(a: str, b: str) -> float:
-    """Jaccard similarity of token sets for two strings (0..1)."""
-    sa = set(_brief_tokens(a or ""))
-    sb = set(_brief_tokens(b or ""))
-    if not sa or not sb:
-        return 0.0
-    inter = sa.intersection(sb)
-    union = sa.union(sb)
-    if not union:
-        return 0.0
-    return len(inter) / len(union)
-
-
-def _brief_top_keyword(s: str) -> str:
-    toks = _brief_tokens(s)
-    if not toks:
-        return ""
-    freq = defaultdict(int)
-    for t in toks:
-        freq[t] += 1
-    return max(freq.items(), key=lambda kv: kv[1])[0]
-
-def _brief_global_topics(items: list, top_n: int = 6) -> list:
-    freq = defaultdict(int)
-    for it in items:
-        txt = f"{it.get('title','')} {it.get('summary_text','')} {it.get('summary','')}"
-        for t in _brief_tokens(txt):
-            freq[t] += 1
-
-    def _score(kv):
-        k, v = kv
-        bonus = 2 if k in _BRIEF_BIG_NAMES else 0
-        penalty = 2 if k in ("ai","amp","via","new") else 0
-        return (v + bonus - penalty, len(k))
-
-    ranked = sorted(freq.items(), key=_score, reverse=True)
-    return [k for k, _ in ranked[:top_n]]
 
 def _brief_article_score(it: dict, now_local: datetime) -> float:
     """Score articles for the brief — topicality/impact first, recency second."""
@@ -1922,7 +1702,7 @@ def render_pulse_brief_html(brief: dict, date_str: str = "") -> str:
     for idx, t in enumerate(takeaways[:8], start=1):
         title = html.escape((t.get("title") or "").strip())
         raw_impact = (t.get("impact") or "").strip()
-        url = (t.get("url") or "").strip()
+        url = safe_web_url(t.get("url"))
         src = html.escape((t.get("source") or "").strip())
         cat = (t.get("category") or "ai").strip().lower()
         label = cat_label.get(cat, "AI")
@@ -1941,7 +1721,7 @@ def render_pulse_brief_html(brief: dict, date_str: str = "") -> str:
         src_html = f"<span class='pb-src'>{src}</span>" if src else ""
 
         # [D] Read CTA — right-aligned, vertically centered
-        read_html = f"<a class='pb-read' href='{html.escape(url)}' target='_blank' rel='noopener'>Read</a>" if url else ""
+        read_html = f"<a class='pb-read' href='{html.escape(url)}' target='_blank' rel='noopener' aria-label='Read {title} (opens in a new tab)'>Read</a>" if url else ""
 
         items_html.append(
             f"<li>"
@@ -1973,10 +1753,11 @@ def render_pulse_brief_html(brief: dict, date_str: str = "") -> str:
     )
 
 
-def build_section(date_str: str, by_cat: dict, brief: dict = None) -> str:
+def build_section(date_str: str, by_cat: dict, brief: dict = None, generated_at: datetime = None) -> str:
     """Build HTML section from categorized items."""
     with open(os.path.join(ROOT, "templates/section_template.html"), "r", encoding="utf-8") as f:
         tpl = f.read()
+    generated_at = generated_at or now_et()
 
     # Build the daily brief HTML for this date (used by {{DAILY_BRIEF}})
     if brief is None:
@@ -1994,7 +1775,7 @@ def build_section(date_str: str, by_cat: dict, brief: dict = None) -> str:
             return '<span class="badge muted">Older</span>'
         try:
             age = (now - dt.astimezone(timezone.utc)).total_seconds()
-            if age < 24 * 3600:
+            if 0 <= age < 24 * 3600:
                 return '<span class="badge">New</span>'
         except Exception:
             pass
@@ -2008,9 +1789,11 @@ def build_section(date_str: str, by_cat: dict, brief: dict = None) -> str:
 
             title_raw = it["title"]
             title = html.escape(title_raw)
-            url_raw = it["url"]
-            url = add_utm(url_raw)
-            permalink = it.get("_abs_permalink", "")
+            url_raw = safe_web_url(it["url"])
+            if not url_raw:
+                continue
+            url = html.escape(add_utm(url_raw), quote=True)
+            permalink = html.escape(safe_web_url(it.get("_abs_permalink")), quote=True)
 
             if "youtube.com" in url_raw or "youtu.be" in url_raw:
                 thumbnail = ""
@@ -2030,27 +1813,36 @@ def build_section(date_str: str, by_cat: dict, brief: dict = None) -> str:
             src = html.escape(it["source"])
             try:
                 dt_local = dtparser.parse(it["published_at"]).astimezone(TZ)
-                dt_str = dt_local.strftime("%b %-d, %Y")
+                dt_str = display_date(dt_local)
             except Exception:
                 dt_str = date_str
             summary_txt = clean_text(strip_html_to_text(it.get("summary_text", "")), 180)
             summary_html = html.escape(summary_txt)
-            top_cls = ""  # no hero/top article
-            thumb_html = f'<img src="{thumbnail}" alt="{html.escape(title_raw, quote=True)}" class="article-thumb" loading="lazy">' if thumbnail else ''
+            # Our own generated thumbnails are referenced same-origin (root-relative)
+            # so the page works in local previews and the service worker treats
+            # them like any other site asset. External images must be http(s).
+            if SITE_BASE and thumbnail.startswith(f"{SITE_BASE}/p/"):
+                thumbnail = thumbnail[len(SITE_BASE):]
+            elif not thumbnail.startswith("/p/"):
+                thumbnail = safe_web_url(thumbnail)
+            # width/height match the 16:9 thumbnails; CSS controls the displayed size.
+            thumb_html = (f'<img src="{html.escape(thumbnail, quote=True)}" alt="{html.escape(title_raw, quote=True)}" '
+                          f'class="article-thumb" width="400" height="225" loading="lazy" decoding="async">') if thumbnail else ''
+            category = it.get("category", "ai")
+            if category not in ("ai", "software", "fintech"):
+                category = "ai"
 
-            # CLEANED UP HTML STRUCTURE (No trends)
-            parts.append(f"""<article class="{top_cls.strip()}" data-card data-url="{url}" data-permalink="{permalink}" data-title="{html.escape(title_raw, quote=True)}" data-summary="{summary_html}" data-source="{src}">
+            parts.append(f"""<article data-card data-category="{category}" data-url="{url}" data-permalink="{permalink}" data-title="{html.escape(title_raw, quote=True)}" data-summary="{summary_html}" data-source="{src}">
   {thumb_html}
   <div class="article-content">
     <h3><a data-title-link href="{url}">{title}</a></h3>
-    <div class="meta"><span class="src">{src}</span> · {dt_str} {render_item_badges(it)}</div>
+    <div class="meta"><span class="src">{src}</span> · {dt_str} {render_item_badges(it, generated_at)}</div>
     <p data-summary>{summary_html}</p>
   </div>
 </article>""")
         return "\n".join(parts)
 
-    html_out = tpl.replace("{{DATE_STR}}", date_str)
-    total_count = sum(len(by_cat.get(k, [])) for k in ("ai", "software", "fintech"))
+    html_out = tpl.replace("{{DATE_STR}}", html.escape(date_str))
 
     def _final_sort_dt(it):
         try:
@@ -2058,78 +1850,30 @@ def build_section(date_str: str, by_cat: dict, brief: dict = None) -> str:
         except Exception:
             return datetime.min.replace(tzinfo=TZ)
 
-    # Combine all articles into one chronological list
+    # One chronological grid across all categories
     all_articles = []
     for cat_key in ("ai", "software", "fintech"):
-        items = by_cat.get(cat_key, [])[:MAX_ITEMS]
-        all_articles.extend(items)
-
+        all_articles.extend(by_cat.get(cat_key, [])[:MAX_ITEMS])
     all_articles.sort(key=_final_sort_dt, reverse=True)
     all_items_html = render_items(all_articles) if all_articles else "<p>No items today.</p>"
 
     html_out = html_out.replace("{{DAILY_BRIEF}}", brief_html)
-    html_out = html_out.replace("{{AI_ITEMS}}", all_items_html)
-    html_out = html_out.replace("{{SW_ITEMS}}", "")
-    html_out = html_out.replace("{{FT_ITEMS}}", "")
-    html_out = html_out.replace("{{AI_COUNT}}", str(len(all_articles)))
-    html_out = html_out.replace("{{SW_COUNT}}", "0")
-    html_out = html_out.replace("{{FT_COUNT}}", "0")
-    html_out = html_out.replace("{{TOTAL_COUNT}}", str(total_count))
-    html_out = html_out.replace("{{COUNT}}", str(total_count))
+    html_out = html_out.replace("{{ITEMS}}", all_items_html)
     return html_out
 
 
 # ============================================================================
-# WEEKEND CACHE
+# SITEMAP
 # ============================================================================
 
-def _last_friday(d: datetime) -> datetime:
-    """Get last Friday's date."""
-    wd = d.weekday()
-    delta = (wd - 4) % 7
-    return d - timedelta(days=delta)
+def write_sitemap(docs_dir: str, lastmod_by_pid: Optional[dict] = None) -> None:
+    """Rewrite sitemap.xml each build: homepage + every article permalink page.
 
-
-def _weekend_use_friday_payload_if_available() -> Optional[bool]:
-    """Reuse Friday's payload on weekends if available."""
-    today = now_et().date()
-    wd = today.weekday()
-    if wd not in (5, 6):
-        return None
-    want_friday = _last_friday(today)
-    if CACHE_FILE.exists():
-        try:
-            cached = json.loads(CACHE_FILE.read_text(encoding="utf-8"))
-            if cached.get("ref_date") == want_friday.strftime("%Y-%m-%d"):
-                by_cat = cached.get("by_cat", {})
-                date_str = today.strftime("%b %-d, %Y")
-                brief = compute_pulse_brief(by_cat, now_local=now_et()); section = build_section(date_str, by_cat, brief)
-                docs = os.path.join(REPO, "docs")
-                os.makedirs(docs, exist_ok=True)
-                with open(os.path.join(docs, "index.html"), "w", encoding="utf-8") as f:
-                    f.write(section)
-                with open(os.path.join(docs, "pulse.json"), "w", encoding="utf-8") as f:
-                    json.dump(cached.get("all_items", []), f, indent=2)
-                return True
-        except Exception:
-            pass
-    return False
-
-
-def _save_friday_snapshot_if_today(all_items: list, by_cat: dict) -> None:
-    """Save Friday snapshot for weekend reuse."""
-    today = now_et().date()
-    if today.weekday() == 4:
-        payload = {"ref_date": today.strftime("%Y-%m-%d"), "all_items": all_items, "by_cat": by_cat}
-        try:
-            CACHE_FILE.write_text(json.dumps(payload, ensure_ascii=False), encoding="utf-8")
-        except Exception:
-            pass
-
-
-def write_sitemap(docs_dir: str) -> None:
-    """Rewrite sitemap.xml each build: homepage + every article permalink page."""
-    base = "https://pulse.tek2dayholdings.com"
+    `lastmod` for an article is its publication date (stable across rebuilds);
+    file mtime is only a fallback for pages whose item is no longer in memory.
+    """
+    base = SITE_BASE or "https://pulse.tek2dayholdings.com"
+    lastmod_by_pid = lastmod_by_pid or {}
     today = now_et().strftime("%Y-%m-%d")
     entries = [
         f"  <url>\n    <loc>{base}/</loc>\n    <lastmod>{today}</lastmod>\n"
@@ -2139,9 +1883,10 @@ def write_sitemap(docs_dir: str) -> None:
     if os.path.isdir(perma_root):
         for pid in sorted(os.listdir(perma_root)):
             page = os.path.join(perma_root, pid, "index.html")
-            if os.path.isfile(page):
-                mod = datetime.fromtimestamp(os.path.getmtime(page)).strftime("%Y-%m-%d")
-                entries.append(f"  <url>\n    <loc>{base}/p/{pid}/</loc>\n    <lastmod>{mod}</lastmod>\n  </url>")
+            if not os.path.isfile(page):
+                continue
+            mod = lastmod_by_pid.get(pid) or datetime.fromtimestamp(os.path.getmtime(page)).strftime("%Y-%m-%d")
+            entries.append(f"  <url>\n    <loc>{base}/p/{pid}/</loc>\n    <lastmod>{mod}</lastmod>\n  </url>")
     xml = (
         '<?xml version="1.0" encoding="UTF-8"?>\n'
         '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
@@ -2153,32 +1898,32 @@ def write_sitemap(docs_dir: str) -> None:
     print(f"Sitemap written: {len(entries)} URLs")
 
 
+def _lastmod_map(items: list) -> dict:
+    """pid -> YYYY-MM-DD publication date, for sitemap lastmod."""
+    out = {}
+    for it in items:
+        dt = safe_parse_dt(it.get("published_at"))
+        if not dt:
+            continue
+        out[_extract_permalink_id(it)] = dt.astimezone(TZ).strftime("%Y-%m-%d")
+    return out
+
+
 # ============================================================================
 # MAIN
 # ============================================================================
 
 def main():
     now_local = now_et()
-
-    # Weekend: reuse Friday snapshot if available
-    if os.environ.get('DISABLE_WEEKEND_CACHE', '0') != '1':
-        if _weekend_use_friday_payload_if_available():
-            return
-
     print("=== Starting T2D Pulse Generation ===")
 
-    # REMOVED: Fetching trending keywords logic
-
-    # Fetch RSS feeds in parallel (major performance improvement)
     print(f"\n--- Fetching {len(CFG['sources']['rss'])} RSS feeds (parallel) ---")
     all_items = fetch_all_rss_parallel(CFG["sources"]["rss"], max_workers=8)
 
-    # Dedupe
     print(f"\n--- Before dedupe: {len(all_items)} total articles ---")
     all_items = dedupe(all_items)
     print(f"--- After dedupe: {len(all_items)} unique articles ---")
 
-    # Retention cap for storage and downstream processing.
     all_items = retain_recent_items(all_items, now=now_local, retention_days=RETENTION_DAYS)
     print(f"--- Within {RETENTION_DAYS}-day retention: {len(all_items)} articles ---")
 
@@ -2193,30 +1938,18 @@ def main():
         cat, score = categorize_with_score(it["title"], it["url"], it.get("summary_text", ""))
         src_norm = (it.get("source") or "").strip().lower()
 
-        # Debug logging for TEK2day articles
-        if "tek2day" in src_norm:
-            print(f"[DEBUG] TEK2day article found: '{it.get('title', 'Unknown')}' | Source: '{it.get('source')}' | Score: {score}")
-
         is_youtube_src = ("youtube" in src_norm)
         is_force_included = any(term.lower() in src_norm for term in FORCE_INCLUDE_SOURCES)
-
-        if "tek2day" in src_norm:
-            print(f"[DEBUG] TEK2day article - is_force_included: {is_force_included}, will keep: {score > 0 or is_force_included}")
+        if is_force_included:
+            print(f"[INCLUDE] {it.get('source')}: '{it.get('title', '')[:70]}' score={score}")
 
         if score == 0 and (src_norm not in FORCE_AI_SOURCES) and (not is_youtube_src) and (not is_force_included):
             continue
         it["category"] = cat
 
-        # REMOVED: Tagging with trending keywords
-
         # Force-routing for certain sources/domains
-        try:
-            d = domain_of(it["url"])
-        except Exception:
-            d = ""
-        is_force_included_src = any(term.lower() in src_norm for term in FORCE_INCLUDE_SOURCES)
-
-        if ("youtube" in src_norm) or (src_norm in FORCE_AI_SOURCES) or is_force_included_src:
+        d = domain_of(it["url"])
+        if is_youtube_src or (src_norm in FORCE_AI_SOURCES) or is_force_included:
             it["category"] = "ai"
         elif d in FORCE_FINTECH_DOMAINS or src_norm in FORCE_FINTECH_SOURCES:
             scores = compute_scores(it["title"], it["url"], it.get("summary_text", ""))
@@ -2226,30 +1959,26 @@ def main():
         pruned.append(it)
 
     all_items = pruned
+    if not all_items:
+        raise RuntimeError("No publishable articles fetched. Keeping the existing deployment intact.")
 
-    # Sort newest first
     def parsed_dt(it):
         try:
             return dtparser.parse(it["published_at"]).astimezone(TZ)
         except Exception:
-            return now_et()
+            return now_local
 
     all_items.sort(key=parsed_dt, reverse=True)
+    before_cap = len(all_items)
+    all_items = cap_per_source(all_items)
+    if len(all_items) != before_cap:
+        print(f"--- Per-source cap ({MAX_ITEMS_PER_SOURCE}): {before_cap} -> {len(all_items)} articles ---")
 
-    # Bucket
-    by_cat = build_preferred_today_with_floors(
-        all_items,
-        now_local=now_local,
-        floors=None,
-        backfill_days=BACKFILL_WINDOW_DAYS
-    )
+    # Bucket for the homepage: merges archived items restored from the Actions cache.
+    by_cat = bucket_recent_by_category(all_items, now_local=now_local)
 
-    # REMOVED: Loop to ensure chips are present
-
-    # Generate permalinks and concise summaries for today's items (PARALLEL for speed)
-    unique_items, _seen = [], set()
-    items_to_process = []
-    
+    # Permalink pages + social images for everything on the page (parallel).
+    items_to_process, _seen = [], set()
     for cat in ("ai", "software", "fintech"):
         for it in by_cat.get(cat, []):
             key = f"{re.sub(r'[^a-z0-9]+', '', (it.get('title') or '').lower())}::{domain_of(it.get('url', ''))}"
@@ -2257,9 +1986,7 @@ def main():
                 continue
             _seen.add(key)
             items_to_process.append(it)
-            unique_items.append(it)
-    
-    # Parallel permalink generation (OG images) - major speed improvement
+
     print(f"\n--- Generating {len(items_to_process)} permalink pages (parallel, 6 workers) ---")
     failed_count = 0
     with ThreadPoolExecutor(max_workers=6) as executor:
@@ -2271,19 +1998,23 @@ def main():
             except Exception as e:
                 failed_count += 1
                 print(f"Warning: Failed to create permalink for '{it.get('title', 'Unknown')[:50]}': {e}")
-    
-    if failed_count:
-        print(f"--- Permalink generation complete: {len(items_to_process) - failed_count} succeeded, {failed_count} failed ---")
-    else:
-        print(f"--- Permalink generation complete: {len(items_to_process)} pages created ---")
+
+    print(f"--- Permalinks: {len(items_to_process) - failed_count} ok, {failed_count} failed; "
+          f"images reused={IMAGE_STATS['reused']} generated={IMAGE_STATS['generated']}; "
+          f"pages fetched={len(_PAGE_CACHE)} ---")
 
     # Render
-    date_str = now_local.strftime("%b %-d, %Y")
+    date_str = display_date(now_local)
     brief = compute_pulse_brief(by_cat, now_local=now_local)
-    section = build_section(date_str, by_cat, brief)
+    section = build_section(date_str, by_cat, brief, generated_at=now_local)
 
-    # Save Friday snapshot for weekend reuse
-    _save_friday_snapshot_if_today(all_items, by_cat)
+    # Public feed = everything on the page, plus fetched items older than the
+    # fresh window but still within retention. Newest first.
+    page_items = [it for cat in ("ai", "software", "fintech") for it in by_cat.get(cat, [])]
+    seen_urls = {canonicalize_url(it.get("url", "")) for it in page_items}
+    feed_items = page_items + [it for it in all_items if canonicalize_url(it.get("url", "")) not in seen_urls]
+    feed_items.sort(key=parsed_dt, reverse=True)
+    public_feed = [public_item(it) for it in feed_items]
 
     # Write outputs
     docs = os.path.join(REPO, "docs")
@@ -2291,43 +2022,41 @@ def main():
     with open(os.path.join(docs, "index.html"), "w", encoding="utf-8") as f:
         f.write(section)
     with open(os.path.join(docs, "pulse.json"), "w", encoding="utf-8") as f:
-        json.dump(all_items, f, indent=2)
+        json.dump(public_feed, f, ensure_ascii=False, separators=(",", ":"))
+    with open(os.path.join(docs, "build-status.json"), "w", encoding="utf-8") as f:
+        json.dump({"generated_at": now_local.isoformat(), "articles": len(public_feed),
+                   "by_category": {k: len(by_cat.get(k, [])) for k in ("ai", "software", "fintech")},
+                   "sources": sorted(FEED_STATUS, key=lambda s: s["source"]),
+                   "permalink_failures": failed_count,
+                   "images": dict(IMAGE_STATS)}, f, indent=2)
 
-    # Timestamped snapshot
+    # Timestamped snapshot (read back by the next run's archive merge)
     try:
         ts_dir = os.path.join(docs, "archive", "timestamped")
         os.makedirs(ts_dir, exist_ok=True)
-        ts_name = now_local.strftime("%Y-%m-%d_%H%M%S") + ".json"
-        ts_path = os.path.join(ts_dir, ts_name)
+        ts_path = os.path.join(ts_dir, now_local.strftime("%Y-%m-%d_%H%M%S") + ".json")
         with open(ts_path, "w", encoding="utf-8") as tf:
-            json.dump({"items": all_items, "brief": brief}, tf, indent=2)
-    except FileExistsError:
-        pass
-    except Exception:
-        pass
+            json.dump({"items": public_feed, "brief": brief}, tf, ensure_ascii=False, separators=(",", ":"))
+    except Exception as e:
+        print(f"Warning: timestamped snapshot not written: {e}")
 
-    # REMOVED: Trending analytics JSON
-
-    # Daily snapshot (overwrite each run so the homepage + brief stay consistent)
+    # Daily snapshot (overwritten each run so the homepage + brief stay consistent)
     try:
         arch_dir = os.path.join(docs, "archive", "json")
         os.makedirs(arch_dir, exist_ok=True)
-        snap_name = now_local.strftime("%Y-%m-%d") + ".json"
-        arch_path = os.path.join(arch_dir, snap_name)
+        arch_path = os.path.join(arch_dir, now_local.strftime("%Y-%m-%d") + ".json")
+        public_by_cat = {k: [public_item(it) for it in v] for k, v in by_cat.items()}
         with open(arch_path, "w", encoding="utf-8") as f:
-            json.dump({"date": now_local.strftime("%Y-%m-%d"), "by_cat": by_cat, "brief": brief}, f, indent=2)
-    except Exception:
-        pass
+            json.dump({"date": now_local.strftime("%Y-%m-%d"), "by_cat": public_by_cat, "brief": brief},
+                      f, ensure_ascii=False, separators=(",", ":"))
+    except Exception as e:
+        print(f"Warning: daily snapshot not written: {e}")
 
-    purge_old_outputs(docs, now_local=now_local, retention_days=RETENTION_DAYS, seed_items=all_items)
+    purge_old_outputs(docs, now_local=now_local, retention_days=RETENTION_DAYS, seed_items=feed_items)
+    write_sitemap(docs, lastmod_by_pid=_lastmod_map(feed_items))
 
-    # Rewrite sitemap.xml with whatever article pages exist after this build
-    write_sitemap(docs)
-
-    # REMOVED: Backfill retro-tagging logic
-
-    print(f"\n=== T2D Pulse Generation Complete ===")
-    print(f"Total articles: {len(all_items)}")
+    print("\n=== T2D Pulse Generation Complete ===")
+    print(f"Total articles: {len(public_feed)}")
     print(f"By category: AI={len(by_cat.get('ai', []))}, Software={len(by_cat.get('software', []))}, FinTech={len(by_cat.get('fintech', []))}")
 
 
