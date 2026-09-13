@@ -887,3 +887,244 @@ details[open].pb .pb-chev { transform: rotate(180deg); }
   }
   .pb-read { padding: .3rem .45rem; font-size: .75rem; }
 }
+
+/* ============================================
+   FRONT PAGE LAYOUT
+   Section tabs, lead story + Brief hero, section head, category eyebrows.
+   Everything below extends the tokens and components above.
+   ============================================ */
+
+/* Wordmark is visible again next to the logo */
+header.site h1 {
+  white-space: nowrap;
+}
+
+/* Search box: icon + wider placeholder */
+.hdr-actions .search .search-icon {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  fill: none;
+  stroke: var(--muted);
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.hdr-actions .search input {
+  width: 220px;
+}
+
+/* Section tabs ------------------------------------------------------------ */
+.tabs {
+  background: var(--card);
+  border-bottom: 1px solid var(--line);
+}
+.tabs-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: stretch;
+  gap: 1.75rem;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.tabs-inner::-webkit-scrollbar { display: none; }
+.tab {
+  appearance: none;
+  -webkit-appearance: none;
+  border: 0;
+  background: transparent;
+  font: inherit;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.875rem 0;
+  border-bottom: 2px solid transparent;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--ink-soft);
+  white-space: nowrap;
+  transition: color var(--transition-fast), border-color var(--transition-fast);
+}
+.tab:hover { color: var(--ink); }
+.tab:focus-visible { outline: 2px solid var(--ai); outline-offset: -2px; border-radius: 4px; }
+.tab.is-active {
+  color: var(--ink);
+  font-weight: 700;
+  border-bottom-color: var(--ink);
+}
+.tab .count {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  color: var(--muted);
+  background: var(--bg-subtle);
+  padding: 0.125rem 0.45rem;
+  border-radius: 999px;
+}
+.tab .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  flex-shrink: 0;
+}
+.dot--ai { background: var(--ai); }
+.dot--software { background: var(--sw); }
+.dot--fintech { background: var(--ft); }
+.tabs .updated {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.75rem;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+/* Hero: lead story + Brief -------------------------------------------------- */
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+  gap: 1.5rem;
+  align-items: start;
+  margin-bottom: 2.25rem;
+}
+.hero:empty { display: none; }
+
+article.lead {
+  height: auto;
+  box-shadow: var(--shadow);
+}
+article.lead:hover {
+  transform: none;
+  box-shadow: var(--shadow-lg);
+}
+.lead .article-thumb {
+  height: 420px;
+}
+.lead .article-content {
+  padding: 1.5rem 1.75rem 1.625rem;
+}
+.lead h2 {
+  margin: 0 0 0.75rem;
+  font-size: 1.875rem;
+  line-height: 1.22;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+}
+.lead h2 a { color: var(--ink); text-decoration: none; }
+.lead h2 a:hover { color: var(--ai); }
+.lead p[data-summary] {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: var(--ink-soft);
+  max-width: 640px;
+  -webkit-line-clamp: unset;
+}
+.lead .meta { order: 2; margin: 0.5rem 0 0; }
+.lead p[data-summary] { order: 1; }
+.lead .share { order: 3; }
+
+/* Brief in the sidebar: same card, narrower rows */
+.hero .pb {
+  margin: 0;
+  align-self: stretch;
+}
+.hero .pb-hook { display: none; }
+.hero .pb > summary {
+  padding: 0.875rem 1.25rem 0.75rem;
+  border-bottom: 1px solid var(--line-light);
+}
+.hero .pb-body { padding: 0.25rem 1.25rem 0.75rem; }
+.hero .pb-takeaways li {
+  display: grid;
+  grid-template-columns: 24px auto minmax(0, 1fr) auto;
+  gap: 0.25rem 0.6rem;
+  align-items: start;
+  padding: 0.75rem 0;
+  border-radius: 0;
+}
+.hero .pb-takeaways li:hover { background: transparent; }
+.hero .pb-rank { border-radius: 999px; }
+.hero .pb-cat { margin-top: 0.3rem; }
+.hero .pb-takeaway-body strong { font-size: 0.875rem; }
+.hero .pb-impact { display: none; }
+.hero .pb-read {
+  margin-top: 0.15rem;
+  padding: 0.25rem 0.4rem;
+  font-size: 0.72rem;
+}
+
+/* Section head ------------------------------------------------------------ */
+.section-head {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  margin: 0 0 1rem;
+}
+.section-title {
+  margin: 0;
+  font-size: 0.8125rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+.section-note {
+  margin: 0;
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+
+/* Category eyebrow on every card ------------------------------------------ */
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.5rem;
+}
+.topic {
+  font-size: 0.6875rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.topic--ai { color: var(--ai); }
+.topic--software { color: var(--sw); }
+.topic--fintech { color: var(--ft); }
+.eyebrow-note {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* Filtering states -------------------------------------------------------- */
+/* The lead's grid copy is hidden while the hero shows it; a section tab or a
+   search hides the hero and lets the grid copy through. */
+.items > article[data-lead] { display: none; }
+body.is-filtered .hero { display: none; }
+body.is-filtered .items > article[data-lead] { display: flex; }
+.items > article[hidden] { display: none !important; }
+
+/* Responsive -------------------------------------------------------------- */
+@media (max-width: 960px) {
+  .hero { grid-template-columns: minmax(0, 1fr); }
+  .lead .article-thumb { height: 260px; }
+  .lead h2 { font-size: 1.5rem; }
+}
+@media (max-width: 768px) {
+  header.site h1 { order: 1; }
+  .hdr-actions { flex: 1 1 100%; }
+  .hdr-actions .search { width: 100%; }
+  .hdr-actions .search input { width: 100%; max-width: none; flex: 1; }
+  .tabs-inner { gap: 1.25rem; padding: 0 1rem; }
+  .tabs .updated { display: none; }
+}
+@media (max-width: 520px) {
+  .lead .article-thumb { height: 200px; }
+  .lead .article-content { padding: 1.125rem 1.25rem 1.25rem; }
+  .lead h2 { font-size: 1.3rem; }
+}

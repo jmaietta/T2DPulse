@@ -28,14 +28,50 @@ class RenderingTests(unittest.TestCase):
                        image_url='https://example.com/a.jpg" onerror="alert(1)',
                        _abs_permalink='https://example.com/p/" onclick="alert(1)')
         document = BeautifulSoup(pulse.build_section('Sep 14, 2026', {'ai': [item]}, brief={}, generated_at=NOW), 'html.parser')
-        card = document.select_one('[data-card]')
+        card = document.select_one('.items [data-card]')
         self.assertEqual(card['data-category'], 'ai')
         self.assertEqual(card.select_one('h3').get_text(), item['title'])
         self.assertIsNone(card.select_one('script'))
         self.assertFalse(document.select('[onerror], [onclick]'))
-        self.assertIn('Sep 14, 2026', card.select_one('.meta').get_text())
+        # Same-day stories show a clock time (Eastern); the ISO stamp rides on <time>.
+        self.assertEqual(card.select_one('.meta time').get_text(), '10:00 AM')
+        self.assertTrue(card.select_one('.meta time')['datetime'].startswith('2026-09-14T10:00:00'))
         self.assertEqual(card.select_one('img.article-thumb')['alt'], item['title'])
+        self.assertEqual(card.select_one('.eyebrow .topic').get_text(), 'AI')
+        self.assertEqual(document.select_one('#last-updated')['datetime'], NOW.isoformat())
         self.assertNotIn('{{', str(document))
+
+    def test_front_page_lead_tabs_and_grid_copy(self):
+        older = article(title='Older story', url='https://example.com/older', category='fintech',
+                        published_at=(NOW - timedelta(days=2)).isoformat(), _thumbnail='https://pulse.tek2dayholdings.com/p/aaaaaaaaaa/thumbnail.jpg')
+        newest = article(title='Newest story', url='https://example.com/newest', _thumbnail='https://pulse.tek2dayholdings.com/p/bbbbbbbbbb/thumbnail.jpg')
+        brief = {'takeaways': [dict(title='Older story', url='https://example.com/older', source='Example News', category='fintech')], 'story_count': 1}
+        page = pulse.build_section('Sep 14, 2026', {'ai': [newest], 'fintech': [older]}, brief=brief, generated_at=NOW)
+        document = BeautifulSoup(page, 'html.parser')
+        # The Brief's top pick leads, even though it is not the newest story.
+        lead = document.select_one('.hero article.lead')
+        self.assertEqual(lead['data-title'], 'Older story')
+        self.assertEqual(lead.select_one('h2 a').get_text(), 'Older story')
+        self.assertEqual(lead.select_one('.eyebrow').get_text(' ', strip=True), 'FinTech Lead story')
+        self.assertEqual(lead.select_one('.meta time').get_text(), 'Sep 12')
+        self.assertEqual(lead.select_one('img')['src'], '/p/aaaaaaaaaa/thumbnail.jpg')
+        # Its grid copy is marked so the page can hide it while the hero is visible.
+        grid = document.select('.items article[data-card]')
+        self.assertEqual([c['data-title'] for c in grid], ['Newest story', 'Older story'])
+        self.assertEqual([c.has_attr('data-lead') for c in grid], [False, True])
+        # Section tabs carry counts.
+        tabs = {t['data-category']: t.select_one('.count').get_text() for t in document.select('.tabs .tab')}
+        self.assertEqual(tabs, {'all': '2', 'ai': '1', 'software': '0', 'fintech': '1'})
+        self.assertIn('1 more stories', document.select_one('#result-count').get_text())
+
+    def test_lead_prefers_real_image_over_fallback_banner(self):
+        banner_only = article(title='Banner', url='https://example.com/banner', image_url='', _thumbnail='/p/cccccccccc/thumbnail.jpg')
+        with_photo = article(title='Photo', url='https://example.com/photo', image_url='https://example.com/x.jpg', _thumbnail='/p/dddddddddd/thumbnail.jpg')
+        brief = {'takeaways': [dict(url='https://example.com/banner'), dict(url='https://example.com/photo')]}
+        self.assertEqual(pulse.pick_lead_story([banner_only, with_photo], brief)['title'], 'Photo')
+        self.assertEqual(pulse.pick_lead_story([banner_only], brief)['title'], 'Banner')
+        self.assertEqual(pulse.pick_lead_story([article(_thumbnail='')], None)['title'], article()['title'])
+        self.assertIsNone(pulse.pick_lead_story([], brief))
 
     def test_unsafe_article_and_brief_links_are_not_rendered(self):
         page = pulse.build_section('Sep 14, 2026', {'ai': [article(url='javascript:alert(1)')]}, brief={}, generated_at=NOW)
@@ -146,7 +182,8 @@ class FetchTests(unittest.TestCase):
             self.assertTrue({'title', 'url', 'published_at', 'source', 'category', 'summary_text'}.issubset(feed[0]))
             self.assertNotIn('content_html', feed[0])
             document = BeautifulSoup((docs / 'index.html').read_text(encoding='utf-8'), 'html.parser')
-            self.assertEqual(len(document.select('[data-card]')), 1)
+            self.assertEqual(len(document.select('.items [data-card]')), 1)
+            self.assertEqual(document.select_one('.hero article.lead')['data-title'], feed[0]['title'])
             self.assertEqual(len(list((docs / 'p').glob('*/index.html'))), 1)
             status = json.loads((docs / 'build-status.json').read_text())
             self.assertEqual(status['articles'], 1)

@@ -123,52 +123,51 @@ window.addEventListener('scroll', () => {
 })();
 
 (function() {
+  // Section tabs + search share one filter. While nothing is filtered the
+  // hero (lead story + Brief) shows and the lead's grid copy stays hidden;
+  // any tab or query hides the hero and filters the grid, lead included.
   const container = document.getElementById('tek2day-pulse');
   const form = document.querySelector('.hdr-actions .search');
   const input = document.getElementById('t2d-q');
-  if (!form || !input || !container) return;
+  const itemsContainer = container && container.querySelector('.items');
+  const tabs = Array.from(document.querySelectorAll('.tabs .tab'));
+  const resultCount = document.getElementById('result-count');
+  if (!form || !input || !container || !itemsContainer) return;
 
-  function buildHaystack(card) {
-    const clone = card.cloneNode(true);
-    // Remove elements we don't want to search
-    clone.querySelectorAll('.host-pill, .byline, .count, .date, .publisher').forEach(n => n.remove());
-    
-    const selectors = ['h3', 'h2', '.title', '.headline', '.desc', '.summary', '.snippet', 'p', '.src'];
-    const parts = [];
-    
-    for (const sel of selectors) {
-      clone.querySelectorAll(sel).forEach(n => parts.push(n.textContent || ''));
-    }
-    
-    // Include data attributes
-    ['data-tickers', 'data-companies', 'data-keywords', 'data-source'].forEach(attr => {
-      const v = card.getAttribute(attr);
-      if (v) parts.push(v);
-    });
-    
-    return parts.join(' ').replace(/\s+/g, ' ').trim().toLowerCase();
+  const cards = Array.from(itemsContainer.querySelectorAll('article[data-card]'));
+  const totalStories = cards.length;
+  const defaultNote = resultCount ? resultCount.textContent : '';
+  let category = 'all';
+
+  function haystack(card) {
+    return [card.dataset.title, card.dataset.summary, card.dataset.source]
+      .join(' ').replace(/\s+/g, ' ').trim().toLowerCase();
   }
+  const index = cards.map(card => ({ card, text: haystack(card) }));
 
-  const itemsContainer = container.querySelector('.items');
-  
   function tokenize(q) {
     return (q || '').toLowerCase().trim().split(/\s+/).filter(Boolean);
   }
 
-  function applyFilter(q) {
-    const tokens = tokenize(q);
-    let total = 0;
+  function applyFilter() {
+    const tokens = tokenize(input.value);
+    const filtered = tokens.length > 0 || category !== 'all';
+    document.body.classList.toggle('is-filtered', filtered);
 
-    if (itemsContainer) {
-      Array.from(itemsContainer.children).forEach(card => {
-        const hay = buildHaystack(card);
-        const match = tokens.every(t => hay.includes(t));
-        card.style.display = match ? '' : 'none';
-        if (match) total++;
-      });
+    let shown = 0;
+    for (const { card, text } of index) {
+      const match = (category === 'all' || card.dataset.category === category)
+        && tokens.every(t => text.includes(t));
+      card.hidden = !match;
+      if (match) shown++;
     }
 
-    // Show/hide empty state
+    for (const tab of tabs) {
+      const active = tab.dataset.category === category;
+      tab.classList.toggle('is-active', active);
+      tab.setAttribute('aria-pressed', String(active));
+    }
+
     let empty = document.getElementById('search-empty');
     if (!empty) {
       empty = document.createElement('div');
@@ -178,18 +177,31 @@ window.addEventListener('scroll', () => {
       empty.textContent = 'No articles found matching your search.';
       itemsContainer.appendChild(empty);
     }
-    empty.style.display = tokens.length && total === 0 ? 'block' : 'none';
+    empty.style.display = filtered && shown === 0 ? 'block' : 'none';
+
+    if (resultCount) {
+      resultCount.textContent = filtered
+        ? `${shown} ${shown === 1 ? 'story' : 'stories'} of ${totalStories}`
+        : defaultNote;
+    }
+  }
+
+  for (const tab of tabs) {
+    tab.addEventListener('click', () => {
+      category = tab.dataset.category || 'all';
+      applyFilter();
+    });
   }
 
   form.addEventListener('submit', (e) => {
     e.preventDefault();
-    applyFilter(input.value);
+    applyFilter();
     if (window.innerWidth > 720) {
       container.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   });
-  
-  input.addEventListener('input', () => applyFilter(input.value), { passive: true });
+
+  input.addEventListener('input', applyFilter, { passive: true });
 
   // Support legacy inbound links like /?q=... but keep the canonical URL clean.
   try {
@@ -207,7 +219,7 @@ window.addEventListener('scroll', () => {
 
     if (q0) {
       input.value = q0;
-      applyFilter(q0);
+      applyFilter();
     }
   } catch (_) {}
 })();
