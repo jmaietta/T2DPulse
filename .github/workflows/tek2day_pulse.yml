@@ -1,9 +1,12 @@
 name: Build TEK2day Pulse (Website Only)
 
 on:
-  # NOTE: This cron runs every 5 hours (minute 0). If you truly want every 30 minutes, use: "*/30 * * * *"
+  # Five weekday runs inside the 7:30 AM - 6:00 PM Eastern publishing window,
+  # all year (EDT: 9:23, 11:23, 1:23, 3:23, 5:23 / EST: one hour earlier).
+  # Minute 23 avoids GitHub's congested on-the-hour slots, which were delaying
+  # the previous "0 */5" schedule by 2-3 hours.
   schedule:
-    - cron: "0 */5 * * *"
+    - cron: "23 13,15,17,19,21 * * 1-5"
 
   workflow_dispatch: {}
 
@@ -19,10 +22,13 @@ concurrency:
 jobs:
   build:
     env:
-      DISABLE_WEEKEND_CACHE: "1"
+      # "1": scheduled runs only build Monday-Friday (Eastern). Manual runs always build.
+      # Set to "0" to publish seven days a week.
+      PULSE_WEEKDAYS_ONLY: "1"
 
     if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
+    timeout-minutes: 20
 
     steps:
       - name: Checkout main
@@ -35,40 +41,52 @@ jobs:
         uses: actions/setup-python@v6
         with:
           python-version: "3.11"
+          cache: pip
+          cache-dependency-path: generator/requirements.txt
+
+      - name: Check publishing schedule
+        id: schedule
+        run: python generator/check_schedule.py
 
       - name: Install dependencies
+        if: steps.schedule.outputs.build == 'true'
         run: |
           python -m pip install --upgrade pip
-          if [ -f generator/requirements.txt ]; then pip install -r generator/requirements.txt; fi
-          pip install tldextract==5.1.2
+          pip install -r generator/requirements.txt
 
-      - name: ET weekday window verification
-        run: |
-          python - <<'PY'
-          from datetime import datetime, time
-          from zoneinfo import ZoneInfo
-          now = datetime.now(ZoneInfo("America/New_York"))
-          wd = now.weekday()  # 0=Mon, 6=Sun
-          start = time(7,30); end = time(18,0)
-          within = (0 <= wd <= 4) and (start <= now.time() <= end)
-          print(f"Now ET: {now.isoformat(timespec='seconds')}  weekday={wd}  within_window={within}")
-          if not within:
-            print("Outside business hours - exiting gracefully")
-            raise SystemExit(0)
-          PY
+      - name: Run regression checks
+        if: steps.schedule.outputs.build == 'true'
+        run: python -m unittest discover -s tests -v
+
+      # Generated permalink pages, social images and JSON archives persist
+      # between runs so unchanged articles are not re-fetched and re-encoded.
+      # The key is unique per run; restore-keys picks up the newest prior save.
+      - name: Restore generated output from previous run
+        if: steps.schedule.outputs.build == 'true'
+        uses: actions/cache@v4
+        with:
+          path: |
+            docs/p
+            docs/archive
+          key: pulse-output-${{ github.run_id }}
+          restore-keys: |
+            pulse-output-
 
       - name: Build site (writes to docs/)
-        run: |
-          python generator/generate_pulse.py
+        if: steps.schedule.outputs.build == 'true'
+        run: python generator/generate_pulse.py
 
       - name: Configure Pages
+        if: steps.schedule.outputs.build == 'true'
         uses: actions/configure-pages@v6
 
       - name: Upload Pages artifact
+        if: steps.schedule.outputs.build == 'true'
         uses: actions/upload-pages-artifact@v5
         with:
           path: docs/
 
       - name: Deploy to GitHub Pages
+        if: steps.schedule.outputs.build == 'true'
         id: deployment
         uses: actions/deploy-pages@v5

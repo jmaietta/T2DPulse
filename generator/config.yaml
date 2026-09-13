@@ -2,6 +2,9 @@ timezone: America/New_York
 site_base: https://pulse.tek2dayholdings.com
 run_window_hours: 24
 max_items_per_category: null
+# Newest-first cap per source so one high-volume feed cannot dominate the page
+# (sources matching the TEK2day newsletter are exempt). null disables the cap.
+max_items_per_source: 10
 sources:
   rss:
   - name: VentureBeat
@@ -46,10 +49,6 @@ sources:
     url: https://newsletter.tek2dayholdings.com/feed
   - name: Cointelegraph
     url: https://cointelegraph.com/rss
-  google_news_queries:
-    ai: []
-    software: []
-    fintech: []
 exclude_domains_suffix:
 - news.ycombinator.com
 - ycombinator.com
@@ -58,29 +57,3 @@ exclude_domains_suffix:
 utm:
   source: tek2day
   medium: email
-companies:
-- name: Apple Inc.
-  ticker: AAPL
-  domains:
-  - apple.com/newsroom
-  rss: https://www.apple.com/ca/newsroom/rss-feed.rss
-- name: Microsoft
-  ticker: MSFT
-  domains:
-  - news.microsoft.com
-  rss: https://news.microsoft.com/source/feed/
-- name: NVIDIA
-  ticker: NVDA
-  domains:
-  - nvidianews.nvidia.com
-  - blogs.nvidia.com
-  rss: https://nvidianews.nvidia.com/releases.xml
-youtube_feeds:
-- name: YouTube (T2D Pulse)
-  channel_id: UCV6aM1V38dsdo3KTHt_SSNw
-- name: SS&C Blue Prism YouTube
-  channel_id: UCUKZj81tFPyc0sb2vo5wRSA
-- name: Anthropic YouTube
-  channel_id: UCrDwWp7EBBv4NwvScIpBDOA
-- name: OpenAI YouTube
-  channel_id: UCXZCJLdBC09xxGZ6gcdrc6A
