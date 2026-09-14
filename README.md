@@ -8,7 +8,8 @@ Read TEK2day Pulse for the latest technology news.
 TEK2day Pulse is an automated technology news site published by
 [TEK2day Holdings](https://tek2dayholdings.com). It pulls from 21 curated RSS
 feeds, removes duplicates, keeps the stories that are about AI, software or
-fintech, and publishes a static site and a JSON feed five times each weekday.
+fintech, and publishes a static site and a JSON feed hourly during weekday
+business hours.
 
 ## What it publishes
 
@@ -66,14 +67,25 @@ the hero; clearing it brings the hero back.
 
 GitHub Actions builds and deploys the site:
 
-- **Weekdays:** five runs (`23 13,15,17,19,21 * * 1-5`) — about 9:23 AM,
-  11:23 AM, 1:23 PM, 3:23 PM and 5:23 PM Eastern in summer, an hour earlier in
-  winter. Minute 23 avoids GitHub's congested on-the-hour slots.
+- **Weekdays:** hourly runs (`23 8-17 * * 1-5`, timezone `America/New_York`)
+  from 8:23 AM through 5:23 PM Eastern, with automatic daylight saving
+  adjustment. Minute 23 avoids GitHub's congested on-the-hour slots. GitHub
+  schedules are best-effort: runs can be delayed or dropped, so these are
+  target times rather than guaranteed publication times. Hourly attempts
+  provide another opportunity to refresh after a missed trigger.
 - **Weekends:** no scheduled builds; Friday's edition stays live.
   `generator/check_schedule.py` enforces this. Set `PULSE_WEEKDAYS_ONLY` to
   `"0"` in the workflow to publish seven days a week.
 - **On merge:** every push to `main` builds and deploys immediately.
 - **Manual:** *Actions → Build TEK2day Pulse → Run workflow* builds any day.
+
+To check freshness, compare `generated_at` in the live
+[`build-status.json`](https://pulse.tek2dayholdings.com/build-status.json) with
+the [workflow run history](https://github.com/jmaietta/T2DPulse/actions/workflows/tek2day_pulse.yml).
+A green push or manual run verifies the build and deployment, but does not
+verify that scheduled triggers are firing. If no scheduled run appears for
+more than two hours during the publishing window, trigger a manual build and
+investigate the scheduler.
 
 Builds are incremental: story pages, images and archives persist between runs
 in the Actions cache, so a run only fetches and encodes new stories (typically
