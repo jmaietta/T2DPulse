@@ -36,7 +36,18 @@ window.addEventListener('scroll', () => {
   if (!cards.length) return;
 
   for (const card of cards) {
-    const link = card.querySelector('h3 a');
+    // Batch 3.13: hide already-broken thumbs/favicons (cached 404s) via JS —
+    // keeps inline handlers out of generator output (XSS-test safe).
+    const thumb = card.querySelector('img.article-thumb');
+    if (thumb) {
+      if (thumb.complete && thumb.naturalWidth === 0) thumb.classList.add('is-broken');
+      thumb.addEventListener('error', () => thumb.classList.add('is-broken'));
+    }
+    card.querySelectorAll('img.src-icon').forEach((icon) => {
+      if (icon.complete && icon.naturalWidth === 0) icon.remove();
+      else icon.addEventListener('error', () => icon.remove());
+    });
+    const link = card.querySelector('h3 a, h2 a');
     if (!link) continue;
 
     const originalUrl = link.href;
@@ -123,19 +134,26 @@ window.addEventListener('scroll', () => {
 })();
 
 (function() {
-  // Search filter. While the query is empty the hero (lead story + Brief)
-  // shows and the lead's grid copy stays hidden; a query hides the hero and
-  // filters the grid, lead included.
+  // Search filter + Latest paging. While the query is empty the hero (lead
+  // story + Brief) shows and the lead's grid copy stays hidden; a query hides
+  // the hero and filters the grid, lead included. Paging reveals PAGE_SIZE
+  // cards at a time via `hidden` (markup/tests untouched).
+  const PAGE_SIZE = 24;
   const container = document.getElementById('tek2day-pulse');
   const form = document.querySelector('.hdr-actions .search');
   const input = document.getElementById('t2d-q');
+  const clearBtn = document.getElementById('clear-search');
   const itemsContainer = container && container.querySelector('.items');
   const resultCount = document.getElementById('result-count');
+  const pager = document.getElementById('pager');
+  const loadMore = document.getElementById('load-more');
+  const pagerCount = document.getElementById('pager-count');
   if (!form || !input || !container || !itemsContainer) return;
 
   const cards = Array.from(itemsContainer.querySelectorAll('article[data-card]'));
   const totalStories = cards.length;
   const defaultNote = resultCount ? resultCount.textContent : '';
+  let visibleCap = PAGE_SIZE;
 
   function haystack(card) {
     return [card.dataset.title, card.dataset.summary, card.dataset.source]
@@ -147,17 +165,37 @@ window.addEventListener('scroll', () => {
     return (q || '').toLowerCase().trim().split(/\s+/).filter(Boolean);
   }
 
+  function matches(card, text, tokens) {
+    return tokens.every(t => text.includes(t));
+  }
+
+  function updatePager(matchedCount, filtered) {
+    if (!pager || !loadMore) return;
+    const showPager = !filtered && matchedCount > visibleCap;
+    pager.hidden = !showPager;
+    if (pagerCount) {
+      pagerCount.textContent = showPager
+        ? `Showing ${Math.min(visibleCap, matchedCount)} of ${matchedCount} stories`
+        : '';
+    }
+  }
+
   function applyFilter() {
     const tokens = tokenize(input.value);
     const filtered = tokens.length > 0;
     document.body.classList.toggle('is-filtered', filtered);
+    if (clearBtn) clearBtn.hidden = !filtered;
 
     let shown = 0;
-    for (const { card, text } of index) {
-      const match = tokens.every(t => text.includes(t));
-      card.hidden = !match;
-      if (match) shown++;
-    }
+    let matched = 0;
+    index.forEach(({ card, text }, i) => {
+      const match = matches(card, text, tokens);
+      if (match) matched++;
+      // Paging applies only when unfiltered; filtered search shows all matches.
+      const inPage = filtered || i < visibleCap;
+      card.hidden = !(match && inPage);
+      if (match && inPage) shown++;
+    });
 
     let empty = document.getElementById('search-empty');
     if (!empty) {
@@ -172,10 +210,13 @@ window.addEventListener('scroll', () => {
 
     if (resultCount) {
       resultCount.textContent = filtered
-        ? `${shown} ${shown === 1 ? 'story' : 'stories'} of ${totalStories}`
+        ? `Showing ${shown} ${shown === 1 ? 'match' : 'matches'} · ${matched} of ${totalStories} stories — press Esc to clear`
         : defaultNote;
     }
+    updatePager(matched, filtered);
   }
+
+  function resetPaging() { visibleCap = PAGE_SIZE; }
 
   form.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -185,7 +226,32 @@ window.addEventListener('scroll', () => {
     }
   });
 
-  input.addEventListener('input', applyFilter, { passive: true });
+  input.addEventListener('input', () => { resetPaging(); applyFilter(); }, { passive: true });
+  clearBtn?.addEventListener('click', () => {
+    input.value = '';
+    resetPaging();
+    applyFilter();
+    input.focus();
+  });
+  input.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && input.value) {
+      input.value = '';
+      resetPaging();
+      applyFilter();
+    }
+  });
+  // `/` focuses search from anywhere (except when typing in a field).
+  document.addEventListener('keydown', (e) => {
+    if (e.key !== '/' || e.ctrlKey || e.metaKey || e.altKey) return;
+    const tag = (document.activeElement?.tagName || '').toLowerCase();
+    if (tag === 'input' || tag === 'textarea' || document.activeElement?.isContentEditable) return;
+    e.preventDefault();
+    input.focus();
+  });
+  loadMore?.addEventListener('click', () => {
+    visibleCap += PAGE_SIZE;
+    applyFilter();
+  });
 
   // Support legacy inbound links like /?q=... but keep the canonical URL clean.
   try {

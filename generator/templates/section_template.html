@@ -65,26 +65,26 @@
   <header class="site">
     <div class="site-inner">
       <a href="/" aria-label="TEK2day Pulse Home">
-        <img class="brand-mark" src="./icons/t2d-pulse-192.png" alt="TEK2day Pulse">
+        <img class="brand-mark" src="./icons/t2d-pulse-192.png" alt="TEK2day Pulse" width="52" height="52">
       </a>
       <h1>TEK2day Pulse</h1>
-      <div class="tag">
+      <div class="tag tag-compact">
         <span class="date">{{DATE_STR}}</span>
-        <span class="divider"></span>
-        <span class="desc">Read <strong>TEK2day Pulse</strong> for the latest <strong>Technology</strong> news.</span>
       </div>
       <div class="grow"></div>
       <div class="hdr-actions">
         <form class="search" role="search" aria-label="Search articles">
           <label for="t2d-q" class="sr-only">Search articles</label>
           <svg class="search-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path></svg>
-          <input id="t2d-q" type="search" placeholder="Search stories or sources" enterkeyhint="search" autocapitalize="off" autocomplete="off" />
+          <input id="t2d-q" type="search" placeholder="Search stories or sources  ( / )" enterkeyhint="search" autocapitalize="off" autocomplete="off" aria-controls="news-items" />
+          <button id="clear-search" class="clear-search" type="button" aria-label="Clear search" hidden>×</button>
         </form>
       </div>
     </div>
   </header>
 
   <div id="app">
+    <p class="edition-line">Read <strong>TEK2day Pulse</strong> for the latest <strong>Technology</strong> news — AI, Software &amp; FinTech.</p>
     <section id="tek2day-pulse" aria-labelledby="tek2day-title">
       <div class="hero" id="hero">
         {{LEAD}}
@@ -92,11 +92,15 @@
       </div>
       <div class="section-head">
         <h2 id="tek2day-title" class="section-title">Latest</h2>
-        <p class="section-note" id="result-count" role="status" aria-live="polite">Newest first · {{MORE_COUNT}} more stories</p>
+        <p class="section-note" id="result-count" role="status" aria-live="polite" aria-atomic="true">Newest first · {{MORE_COUNT}} more stories</p>
         <p class="section-note updated">Updated <time id="last-updated" datetime="{{UPDATED_ISO}}">{{UPDATED_LABEL}}</time></p>
       </div>
-      <div class="items">
+      <div class="items" id="news-items">
         {{ITEMS}}
+      </div>
+      <div class="pager" id="pager" hidden>
+        <button id="load-more" class="btn" type="button">Load more stories</button>
+        <p class="section-note" id="pager-count" role="status"></p>
       </div>
       <p class="foot">© 2026 TEK2day Pulse. All rights reserved.</p>
     </section>

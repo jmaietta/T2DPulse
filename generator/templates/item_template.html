@@ -34,30 +34,39 @@
   <link rel="canonical" href="{{ABS_PERMALINK}}">
   
   <style>
+    /* Batch 3.12: permalink shares the front-page Editorial Premium tokens —
+       warm paper, indigo ink, serif headlines. Placeholders unchanged. */
     :root {
-      --bg: #f7f9fc;
+      --bg: #f7f7f4;
       --card: #ffffff;
       --ink: #0f172a;
-      --muted: #64748b;
-      --line: #e2e8f0;
-      --brand: #ef4444;
+      --ink-soft: #334155;
+      --muted: #5b6b7f;
+      --line: #e5e3dc;
+      --line-light: #f0efe9;
+      --ai: #4f46e5;
+      --ai-deep: #4338ca;
+      --ai-light: #eef2ff;
+      --serif: Georgia, 'Times New Roman', 'Source Serif 4', serif;
+      --sans: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
-      font-family: system-ui, -apple-system, sans-serif;
+      font-family: var(--sans);
       background: var(--bg);
       color: var(--ink);
       line-height: 1.6;
       padding: 2rem 1rem;
+      -webkit-font-smoothing: antialiased;
     }
     .container {
       max-width: 720px;
       margin: 0 auto;
       background: var(--card);
       border: 1px solid var(--line);
-      border-radius: 16px;
+      border-radius: 18px;
       padding: 2rem;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+      box-shadow: 0 2px 8px rgba(15, 23, 42, 0.06), 0 16px 40px rgba(15, 23, 42, 0.08);
     }
     .header {
       text-align: center;
@@ -66,72 +75,83 @@
       margin-bottom: 1.25rem;
     }
     .logo {
-      width: 120px;
-      height: auto;
-      margin-bottom: 1rem;
+      width: 52px;
+      height: 52px;
+      border-radius: 14px;
+      margin-bottom: 0.75rem;
     }
     .site-name {
-      font-size: 1.25rem;
-      font-weight: 700;
-      color: var(--brand);
+      font-size: 1.1rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: var(--ink);
       text-decoration: none;
     }
+    .site-name:hover { color: var(--ai-deep); }
     h1 {
+      font-family: var(--serif);
       font-size: 2rem;
       font-weight: 800;
       line-height: 1.2;
+      letter-spacing: -0.02em;
       margin-bottom: 1rem;
       color: var(--ink);
+      text-wrap: balance;
     }
     .meta {
       display: flex;
-      gap: 1rem;
-      align-items: center;
+      gap: 0.75rem;
+      align-items: baseline;
       flex-wrap: wrap;
       color: var(--muted);
-      font-size: 0.9rem;
+      font-size: 0.85rem;
       margin-bottom: 1.5rem;
+      line-height: 1.6;
     }
     .meta strong {
-      color: var(--ink);
+      color: var(--ink-soft);
     }
     .summary {
-      font-size: 1.1rem;
-      line-height: 1.7;
-      color: var(--ink);
+      font-size: 1.05rem;
+      line-height: 1.65;
+      color: var(--ink-soft);
       margin-bottom: 2rem;
       padding: 1.5rem;
       background: var(--bg);
-      border-left: 4px solid var(--brand);
+      border-left: 4px solid var(--ai);
       border-radius: 8px;
     }
     .cta {
       display: inline-flex;
       align-items: center;
       gap: 0.5rem;
-      background: var(--brand);
+      background: var(--ai);
       color: white;
-      padding: 0.75rem 1.5rem;
-      border-radius: 8px;
+      padding: 0.75rem 1.75rem;
+      min-height: 44px;
+      border-radius: 999px;
       text-decoration: none;
-      font-weight: 600;
-      transition: transform 0.2s, box-shadow 0.2s;
+      font-weight: 700;
+      transition: transform 0.15s ease, box-shadow 0.22s ease, background 0.15s ease;
     }
     .cta:hover {
+      background: var(--ai-deep);
       transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
+      box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
     }
+    .cta:focus-visible { outline: 2px solid var(--ai-deep); outline-offset: 3px; }
     .footer {
       margin-top: 3rem;
       padding-top: 1.5rem;
       border-top: 1px solid var(--line);
       text-align: center;
       color: var(--muted);
-      font-size: 0.9rem;
+      font-size: 0.85rem;
     }
     .footer a {
-      color: var(--brand);
+      color: var(--ai-deep);
       text-decoration: none;
+      font-weight: 600;
     }
     .footer a:hover {
       text-decoration: underline;
@@ -141,9 +161,10 @@
 <body>
   <div class="container">
     <div class="header">
-      <a href="/">
-        <img src="/icons/t2d-pulse-192.png" alt="TEK2day Pulse" class="logo">
+      <a href="/" aria-label="TEK2day Pulse Home">
+        <img src="/icons/t2d-pulse-192.png" alt="TEK2day Pulse" class="logo" width="52" height="52">
       </a>
+      <div><a href="/" class="site-name">TEK2day Pulse</a></div>
     </div>
     
     <article>
@@ -167,7 +188,8 @@
     </article>
     
     <div class="footer">
-      <p>Curated by <a href="/">TEK2day Pulse</a> — the latest Technology news</p>
+      <p>Curated by <a href="/">TEK2day Pulse</a> — AI, Software &amp; FinTech</p>
+      <p>Headlines and excerpts link to the original publishers.</p>
     </div>
   </div>
 </body>

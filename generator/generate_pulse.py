@@ -1776,13 +1776,29 @@ def render_pulse_brief_html(brief: dict, date_str: str = "") -> str:
 
     takeaways_html = "<ul class='pb-takeaways'>" + "".join(items_html) + "</ul>" if items_html else ""
 
+    # Batch 2.8: descriptive Brief header + corrected chevron (▾ = open).
+    sub = f"The Brief — {story_count} need-to-knows" if story_count else "The Brief"
+    updated = ""
+    gen = brief.get("generated_at") or ""
+    try:
+        gen_local = dtparser.parse(gen).astimezone(TZ) if gen else None
+    except Exception:
+        gen_local = None
+    if gen_local is not None:
+        try:
+            updated = " · Updated " + gen_local.strftime("%I:%M %p").lstrip("0")
+        except Exception:
+            updated = ""
+    sub_html = f"<span class='pb-sub'>{html.escape(sub + updated)}</span>" if sub else ""
+
     return (
         "<details class='pb' open>"
         "<summary>"
         "<span class='pb-pill'>BRIEF</span>"
         f"{count_html}"
         f"{hook_html}"
-        "<span class='pb-chev' aria-hidden='true'>▲</span>"
+        f"{sub_html}"
+        "<span class='pb-chev' aria-hidden='true'>▾</span>"
         "</summary>"
         "<div class='pb-body'>"
         f"{takeaways_html}"
@@ -1813,11 +1829,36 @@ def build_section(date_str: str, by_cat: dict, brief: dict = None, generated_at:
             return '<span class="badge muted">Older</span>'
         try:
             age = (now - dt.astimezone(timezone.utc)).total_seconds()
-            if 0 <= age < 24 * 3600:
+            # Batch 2: quiet the badge wall — only stories <6h old earn NEW.
+            if 0 <= age < 6 * 3600:
                 return '<span class="badge">New</span>'
         except Exception:
             pass
         return ""
+
+    def _read_time(summary_txt: str) -> str:
+        """Batch 2.7: rough read time from summary words (200 wpm, min 1)."""
+        words = len(re.findall(r"[A-Za-z0-9']+", summary_txt or ""))
+        return f"{max(1, math.ceil(words / 200))} min read"
+
+    def _relative_time(it: dict, now: datetime) -> str:
+        """Batch 2.7: short relative age for the lead meta row."""
+        dt = safe_parse_dt(it.get("published_at"))
+        if not dt:
+            return ""
+        try:
+            mins = int((now - dt.astimezone(timezone.utc)).total_seconds() // 60)
+        except Exception:
+            return ""
+        if mins < 0:
+            return ""
+        if mins < 60:
+            return f"{max(1, mins)}m ago"
+        hours = mins // 60
+        if hours < 24:
+            return f"{hours}h ago"
+        days = hours // 24
+        return f"{days}d ago"
 
     today_local = generated_at.astimezone(TZ).date()
 
@@ -1866,20 +1907,45 @@ def build_section(date_str: str, by_cat: dict, brief: dict = None, generated_at:
         when, when_iso = _when(it)
         summary_txt = clean_text(strip_html_to_text(it.get("summary_text", "")), 260 if lead else 180)
         summary_html = html.escape(summary_txt)
+        # Batch 3.13: typographic fallback — source initial when no thumbnail.
+        # Keeps data-card contract; CSS styles .thumb-fallback like a cover.
+        src_initial = html.escape((it.get("source") or "P").strip()[:1].upper() or "P")
         # width/height match the 16:9 thumbnails; CSS controls the displayed size.
-        thumb_html = (f'<img src="{html.escape(thumbnail, quote=True)}" alt="{html.escape(title_raw, quote=True)}" '
-                      f'class="article-thumb" width="400" height="225" loading="{"eager" if lead else "lazy"}" '
-                      f'decoding="async">') if thumbnail else ''
+        # Batch 3.16: lead thumb gets fetchpriority=high for LCP.
+        if thumbnail:
+            # Batch 3.16: lead thumb gets fetchpriority=high for LCP.
+            prio = ' fetchpriority="high"' if lead else ''
+            thumb_html = (f'<img src="{html.escape(thumbnail, quote=True)}" alt="{html.escape(title_raw, quote=True)}" '
+                          f'class="article-thumb" width="400" height="225" loading="{"eager" if lead else "lazy"}"{prio} '
+                          f'decoding="async">')
+        else:
+            thumb_html = (f'<div class="article-thumb thumb-fallback" aria-hidden="true">'
+                          f'<span class="thumb-fallback-mark">{src_initial}</span></div>')
+        # Batch 3.13: broken-image handling lives in pulse.js listeners
+        # (no inline handlers — keeps the escaping test green).
         eyebrow = '<div class="eyebrow"><span class="eyebrow-note">Lead story</span></div>' if lead else ""
         classes = " ".join(c for c in ("lead" if lead else "",) if c)
         lead_attr = " data-lead" if in_grid else ""
         heading = "h2" if lead else "h3"
+        # Batch 2.7: lead meta row — favicon + source · relative age · read time.
+        # Batch 3.13: favicon hides itself on error (no broken icon glyph).
+        lead_extra = ""
+        if lead:
+            favicon = f"https://www.google.com/s2/favicons?domain={html.escape(domain_of(url_raw), quote=True)}&sz=32"
+            rel = _relative_time(it, generated_at)
+            read = _read_time(summary_txt)
+            rel_html = f" · <span class='rel'>{html.escape(rel)}</span>" if rel else ""
+            lead_extra = (
+                f"<img class='src-icon' src='{favicon}' alt='' width='16' height='16' "
+                f"loading='lazy' decoding='async' aria-hidden='true' />"
+                f"<span class='read'>{html.escape(read)}</span>{rel_html}"
+            )
 
         return f"""<article{' class="' + classes + '"' if classes else ''} data-card data-url="{url}" data-permalink="{permalink}" data-title="{html.escape(title_raw, quote=True)}" data-summary="{summary_html}" data-source="{src}"{lead_attr}>
   {thumb_html}
   <div class="article-content">
     {eyebrow}<{heading}><a data-title-link href="{url}">{title}</a></{heading}>
-    <div class="meta"><span class="src">{src}</span> · <time datetime="{html.escape(when_iso, quote=True)}">{when}</time> {render_item_badges(it, generated_at)}</div>
+    <div class="meta"><span class="src">{src}</span> · <time datetime="{html.escape(when_iso, quote=True)}">{when}</time> {render_item_badges(it, generated_at)}{lead_extra}</div>
     <p data-summary>{summary_html}</p>
   </div>
 </article>"""

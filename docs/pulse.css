@@ -1,35 +1,42 @@
 /* ============================================
-   DESIGN TOKENS - Modern Color Palette
+   DESIGN TOKENS - Editorial Premium
+   Serif display + refined neutrals + indigo ink
    ============================================ */
 :root {
-  /* Refined neutrals */
-  --bg: #f8fafc;
-  --bg-subtle: #f1f5f9;
+  /* Warm paper neutrals */
+  --bg: #f7f7f4;
+  --bg-subtle: #efeee9;
   --card: #ffffff;
   --ink: #0f172a;
   --ink-soft: #334155;
-  --muted: #64748b;
-  --line: #e2e8f0;
-  --line-light: #f1f5f9;
-  
+  /* Batch 3.15: --muted darkened for 4.5:1 body-text contrast on paper */
+  --muted: #5b6b7f;
+  --line: #e5e3dc;
+  --line-light: #f0efe9;
+
+  /* Typography */
+  --serif: Georgia, 'Times New Roman', 'Source Serif 4', serif;
+  --sans: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+
   /* Vibrant accents */
-  --ai: #6366f1;
+  --ai: #4f46e5;
+  --ai-deep: #4338ca;
   --ai-light: #eef2ff;
-  --ai-border: rgba(99, 102, 241, 0.2);
-  --sw: #f97316;
-  --ft: #10b981;
-  
+  --ai-border: rgba(79, 70, 229, 0.18);
+  --sw: #c2410c;
+  --ft: #047857;
+
   /* Layout */
-  --radius: 16px;
+  --radius: 18px;
   --radius-sm: 12px;
   --radius-xs: 8px;
-  --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.04);
-  --shadow: 0 1px 3px rgba(15, 23, 42, 0.04), 0 4px 12px rgba(15, 23, 42, 0.03);
-  --shadow-lg: 0 4px 16px rgba(15, 23, 42, 0.08), 0 8px 32px rgba(15, 23, 42, 0.04);
-  
+  --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.05);
+  --shadow: 0 1px 3px rgba(15, 23, 42, 0.05), 0 8px 24px rgba(15, 23, 42, 0.05);
+  --shadow-lg: 0 2px 8px rgba(15, 23, 42, 0.06), 0 16px 40px rgba(15, 23, 42, 0.08);
+
   /* Transitions */
   --transition-fast: 0.15s ease;
-  --transition: 0.2s ease;
+  --transition: 0.22s ease;
 }
 
 /* ============================================
@@ -124,12 +131,13 @@ header.site a:focus-visible img.brand-mark {
 }
 
 header.site h1 {
-  font-family: 'Orbitron', system-ui, sans-serif;
-  font-weight: 700;
-  letter-spacing: 0.4px;
+  font-family: var(--sans);
+  font-weight: 800;
+  letter-spacing: -0.02em;
   font-size: 1.25rem;
   margin: 0;
   color: var(--ink);
+  white-space: nowrap;
 }
 
 /* Header tag line */
@@ -137,6 +145,11 @@ header .tag {
   display: flex;
   align-items: center;
   gap: 0.75rem;
+}
+
+/* Batch 2.11: compact header tag — date pill only; tagline moved to edition line */
+header .tag-compact {
+  gap: 0;
 }
 
 header .tag .date {
@@ -166,6 +179,30 @@ header .tag .desc strong {
   font-weight: 600;
   color: var(--ink-soft);
 }
+
+/* Batch 2.11: edition tagline under the sticky header, not inside it */
+.edition-line {
+  margin: 1.5rem 0 0;
+  font-size: 0.9rem;
+  color: var(--muted);
+  font-weight: 500;
+}
+.edition-line strong { font-weight: 600; color: var(--ink-soft); }
+
+/* Batch 2.11: shrink header on scroll (JS toggles .shadow) */
+header.site .site-inner {
+  transition: padding var(--transition-fast);
+}
+header.site.shadow .site-inner {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+header.site.shadow img.brand-mark {
+  width: 40px;
+  height: 40px;
+  border-radius: 11px;
+}
+header.site.shadow h1 { font-size: 1.1rem; }
 
 .grow { flex: 1; }
 
@@ -230,6 +267,23 @@ header .tag .desc strong {
   color: var(--ink);
 }
 
+/* Batch 2.9: clear-search affordance */
+.clear-search {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  color: var(--muted);
+  font-size: 1.1rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0.25rem 0.375rem;
+  border-radius: 8px;
+  min-width: 32px;
+  min-height: 32px;
+}
+.clear-search:hover { color: var(--ink); background: var(--bg-subtle); }
+.clear-search[hidden] { display: none; }
+
 .hdr-actions .search input::placeholder {
   color: var(--muted);
 }
@@ -275,12 +329,13 @@ header .tag .desc strong {
 /* ============================================
    GRID LAYOUT
    ============================================ */
+/* Grid uses intrinsic minimums so long titles and narrow viewports never
+   force horizontal scroll. */
 .items {
   display: grid;
   gap: 1.5rem;
-  /* Intelligent 3-column grid that falls back automatically */
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  align-items: start;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr));
+  align-items: stretch;
 }
 
 /* ============================================
@@ -296,69 +351,84 @@ article {
   overflow: hidden; /* Ensure image doesn't bleed out */
   height: 100%; /* Uniform height */
   transition: transform var(--transition-fast), box-shadow var(--transition), border-color var(--transition);
-  will-change: transform;
 }
 
 article:hover {
-  transform: translateY(-4px);
+  transform: translateY(-2px);
   box-shadow: var(--shadow-lg);
-  border-color: var(--line-light);
+  border-color: #d9d7cf;
   z-index: 2;
 }
 
-/* Article thumbnail - Full width card header */
+/* Article thumbnail - Full width card header.
+   Batch 1.1: broken-image resilience — calm paper box + muted alt text. */
 .article-thumb {
+  display: block;
   width: 100%;
-  height: 180px;
-  border-radius: 0;
+  height: auto;
+  aspect-ratio: 16 / 9;
   object-fit: cover;
-  background: var(--bg-subtle);
+  background:
+    linear-gradient(180deg, rgba(15, 23, 42, 0.03), rgba(15, 23, 42, 0) 55%),
+    var(--bg-subtle);
   border-bottom: 1px solid var(--line-light);
+  box-shadow: inset 0 0 0 1px rgba(15, 23, 42, 0.04);
+  /* Broken-image alt text: small, muted, padded — never an "alt wall". */
+  color: var(--muted);
+  font-size: 0.75rem;
+  line-height: 1.5;
+}
+/* Batch 3.13: typographic fallback cover for stories without thumbnails */
+.thumb-fallback {
+  display: grid;
+  place-items: center;
+  background:
+    linear-gradient(135deg, rgba(79, 70, 229, 0.10) 0%, rgba(79, 70, 229, 0.02) 55%),
+    var(--bg-subtle);
+}
+.thumb-fallback-mark {
+  font-family: var(--serif);
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--ai-deep);
+  opacity: 0.35;
+  line-height: 1;
+  user-select: none;
+}
+/* Batch 3.13: broken remote image — mute alt text, keep the box */
+img.article-thumb.is-broken {
+  object-fit: none;
+  object-position: center;
 }
 
 /* Article content wrapper */
 .article-content {
-  padding: 1.25rem;
+  padding: 1.25rem 1.25rem 1.1rem;
+  min-width: 0;
   flex: 1;
   display: flex;
   flex-direction: column;
 }
 
-/* Featured/top article - Spans columns on larger screens */
+/* Featured/top article — unused legacy rules retired (lead lives in .hero). */
 article.top {
-  background: linear-gradient(180deg, rgba(99, 102, 241, 0.03) 0%, var(--card) 100%);
+  background: linear-gradient(180deg, rgba(79, 70, 229, 0.04) 0%, var(--card) 100%);
   border-color: var(--ai-border);
 }
 
-/* Hero layout logic */
-@media (min-width: 768px) {
-  .items > article.top {
-    grid-column: span 2;
-  }
-  .items > article}
+/* Hero layout logic — retired: the lead lives in .hero (see FRONT PAGE LAYOUT).
+   Legacy .top card rules removed; broken selectors cleaned up. */
 
-@media (min-width: 1100px) {
-  .items > article.top {
-    grid-column: 1 / -1; /* Full width */
-    flex-direction: row; /* Side-by-side for hero */
-    align-items: stretch;
-  }
-  .items > article.items > article.items > article.top h3 {
-    font-size: 1.75rem;
-  }
-}
-
-article.top:hover {
-  border-color: rgba(99, 102, 241, 0.3);
-}
-
-/* Article title */
+/* Article title — editorial serif for headlines (Batch 1.5 type scale) */
 h3 {
-  margin: 0 0 0.75rem;
-  font-size: 1.125rem;
-  line-height: 1.4;
+  margin: 0 0 0.625rem;
+  font-family: var(--serif);
+  font-size: 1.25rem;
+  line-height: 1.3;
   font-weight: 700;
   letter-spacing: -0.01em;
+  text-wrap: pretty;
+  overflow-wrap: break-word;
 }
 
 h3 a {
@@ -372,16 +442,29 @@ h3 a:hover {
   color: var(--ai);
 }
 
-/* Article meta */
+/* Batch 1.6: visited state — scanned stories dim, unvisited stay ink. */
+h3 a:visited,
+.lead h2 a:visited {
+  color: #526078;
+}
+h3 a:visited:hover,
+.lead h2 a:visited:hover {
+  color: var(--ai-deep);
+}
+
+/* Article meta — source · time · badge */
 .meta {
   color: var(--muted);
   font-size: 0.75rem;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.625rem;
   display: flex;
   gap: 0.5rem;
-  align-items: center;
+  align-items: baseline;
   flex-wrap: wrap;
+  line-height: 1.6;
 }
+
+.meta time { white-space: nowrap; }
 
 .meta .src {
   font-weight: 600;
@@ -389,49 +472,60 @@ h3 a:hover {
   letter-spacing: 0.01em;
 }
 
-/* Badges */
+/* Badges — quiet by default so 90 pills don't shout (Batch 1.3) */
 .badge {
   display: inline-block;
-  padding: 0.15rem 0.4rem;
+  padding: 0.15rem 0.45rem;
   border-radius: 6px;
   font-size: 0.625rem;
-  font-weight: 700;
-  background: var(--ai);
-  color: white;
+  font-weight: 800;
+  background: var(--ai-light);
+  color: var(--ai-deep);
+  border: 1px solid var(--ai-border);
   text-transform: uppercase;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.06em;
 }
 
 .badge.muted {
-  background: var(--muted);
-  opacity: 0.7;
+  background: transparent;
+  color: var(--muted);
+  border: 1px solid var(--line);
+  opacity: 1;
 }
 
-/* Article summary */
+/* Article summary — clamp keeps grid rows even */
 p[data-summary] {
   margin: 0;
   color: var(--ink-soft);
   font-size: 0.9375rem;
   line-height: 1.6;
-  /* Clamp text to 3 lines for clean grid */
   display: -webkit-box;
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
   overflow: hidden;
-  flex-grow: 1; /* Push footer down */
 }
 
-/* ============================================
-   SHARE TOOLBAR
-   ============================================ */
+/* Share row pins to the card bottom.
+   Batch 1.4: quiet until hover/focus; never display:none (no CLS, stays
+   tabbable). Touch devices and keyboard focus always show it. */
 .share {
   display: flex;
-  gap: 0.5rem;
-  margin-top: 1.25rem;
-  padding-top: 1rem;
+  gap: 0.75rem;
+  margin-top: auto;
+  padding-top: 0.875rem;
   border-top: 1px solid var(--line-light);
   align-items: center;
+  opacity: 0.55;
+  transition: opacity var(--transition-fast);
 }
+article:hover .share,
+article:focus-within .share {
+  opacity: 1;
+}
+@media (hover: none) {
+  .share { opacity: 1; }
+}
+p[data-summary] + .share { margin-top: 1rem; }
 
 .share-btn {
   appearance: none;
@@ -439,7 +533,11 @@ p[data-summary] {
   border: none;
   background: transparent;
   color: var(--muted);
-  padding: 0;
+  padding: 0.375rem 0.125rem;
+  /* Batch 3.15: 44px touch target without moving layout */
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
   font-size: 0.75rem;
   font-weight: 600;
   text-decoration: none;
@@ -448,11 +546,31 @@ p[data-summary] {
 }
 
 .share-btn:hover {
-  color: var(--ai);
+  color: var(--ai-deep);
 }
 
 .share-btn.copy-url {
     margin-left: auto;
+}
+
+/* Batch 2.10: Latest pager — Load more */
+.pager {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 2rem 0 0;
+}
+.pager[hidden] { display: none; }
+.pager .btn {
+  padding: 0.75rem 1.75rem;
+  font-size: 0.9375rem;
+  border-color: var(--ai-border);
+}
+.pager .btn:hover {
+  border-color: var(--ai);
+  color: var(--ai-deep);
+  background: var(--ai-light);
 }
 
 /* ============================================
@@ -587,10 +705,7 @@ p[data-summary] {
     flex-direction: column;
   }
   
-  /* Reset hero styles on mobile */
-  .items > article.items > articleh3 {
-    font-size: 1.125rem;
-  }
+  /* Mobile cards stack single-column; hero type scales down (see below). */
   
   .share-btn {
     padding: 0.5rem 0; /* Larger touch target */
@@ -665,7 +780,8 @@ p[data-summary] {
   padding: 1rem 1.25rem;
   display: flex;
   align-items: center;
-  gap: .75rem;
+  flex-wrap: wrap;
+  gap: .5rem .75rem;
   user-select: none;
   transition: background var(--transition-fast);
 }
@@ -681,6 +797,7 @@ p[data-summary] {
   gap: .4rem;
   padding: .3rem .7rem;
   border-radius: 999px;
+  font-family: var(--sans);
   font-size: .7rem;
   font-weight: 800;
   letter-spacing: .07em;
@@ -714,7 +831,7 @@ p[data-summary] {
   min-width: 0;
 }
 
-/* Chevron */
+/* Chevron — points down when open (▾), up when closed */
 .pb-chev {
   margin-left: auto;
   width: 32px;
@@ -724,13 +841,26 @@ p[data-summary] {
   display: grid;
   place-items: center;
   background: var(--bg-subtle);
+  font-size: 0.8rem;
+  line-height: 1;
+  color: var(--ink-soft);
   transition: transform 0.25s ease, background var(--transition-fast);
   flex-shrink: 0;
 }
 .pb > summary:hover .pb-chev {
   background: var(--line);
 }
-details[open].pb .pb-chev { transform: rotate(180deg); }
+details.pb:not([open]) .pb-chev { transform: rotate(180deg); }
+
+/* Batch 2.8: descriptive sub-line under the pill row (hero + standalone) */
+.pb-sub {
+  display: block;
+  flex-basis: 100%;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--muted);
+  margin-top: -0.25rem;
+}
 
 /* Body area */
 .pb-body {
@@ -793,9 +923,9 @@ details[open].pb .pb-chev { transform: rotate(180deg); }
   flex-shrink: 0;
   line-height: 1;
 }
-.pb-cat--ai  { background: rgba(99,102,241,0.1);  color: var(--ai); }
-.pb-cat--sw  { background: rgba(249,115,22,0.1);  color: var(--sw); }
-.pb-cat--ft  { background: rgba(16,185,129,0.1);  color: var(--ft); }
+.pb-cat--ai  { background: rgba(79,70,229,0.12);  color: var(--ai-deep); }
+.pb-cat--sw  { background: rgba(194,65,12,0.12);  color: var(--sw); }
+.pb-cat--ft  { background: rgba(4,120,87,0.14);  color: var(--ft); }
 
 /* Takeaway content — middle column, grows to fill */
 .pb-takeaway-body {
@@ -823,8 +953,9 @@ details[open].pb .pb-chev { transform: rotate(180deg); }
   transition: max-height 0.25s ease, opacity 0.2s ease, margin 0.25s ease;
 }
 
-/* [C] Hover preview — expand impact on row hover */
-.pb-takeaways li:hover .pb-impact {
+/* [C] Hover/focus preview — expand impact on row hover or keyboard focus */
+.pb-takeaways li:hover .pb-impact,
+.pb-takeaways li:focus-within .pb-impact {
   max-height: 4rem;
   opacity: 1;
   margin-top: .3rem;
@@ -839,24 +970,28 @@ details[open].pb .pb-chev { transform: rotate(180deg); }
   display: block;
 }
 
-/* [D] Read CTA — right-aligned, vertically centered in row */
+/* [D] Read CTA — right-aligned, vertically centered in row.
+   Batch 3.15: 44px touch target, deeper hover ink. */
 .pb-read {
-  color: var(--ai);
+  color: var(--ai-deep);
   font-weight: 700;
   font-size: .78rem;
   text-decoration: none;
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: .2rem;
   flex-shrink: 0;
   margin-left: auto;
   padding: .35rem .65rem;
+  min-width: 44px;
+  min-height: 44px;
   border-radius: 999px;
   transition: color var(--transition-fast), background var(--transition-fast), gap var(--transition-fast);
   white-space: nowrap;
 }
 .pb-read:hover {
-  color: #4f46e5;
+  color: var(--ai-deep);
   background: var(--ai-light);
   gap: .35rem;
 }
@@ -873,8 +1008,8 @@ details[open].pb .pb-chev { transform: rotate(180deg); }
 
 /* Brief responsive */
 @media (max-width: 520px) {
-  .pb > summary { padding: .9rem 1rem; }
-  .pb-hook { font-size: .78rem; }
+  .pb > summary { padding: .9rem 1rem; gap: .5rem; }
+  .pb-hook { display: none; }
   .pb-body { padding: 0 1rem 1rem; }
   .pb-takeaways li { gap: .45rem; padding: .65rem .35rem; }
   .pb-rank { width: 22px; height: 22px; font-size: .68rem; }
@@ -885,7 +1020,7 @@ details[open].pb .pb-chev { transform: rotate(180deg); }
     opacity: 1;
     margin-top: .2rem;
   }
-  .pb-read { padding: .3rem .45rem; font-size: .75rem; }
+  .pb-read { padding: .3rem .45rem; font-size: .75rem; min-height: 44px; }
 }
 
 /* ============================================
@@ -894,7 +1029,7 @@ details[open].pb .pb-chev { transform: rotate(180deg); }
    Everything below extends the tokens and components above.
    ============================================ */
 
-/* Wordmark is visible again next to the logo */
+/* Wordmark is set above (Inter 800); keep single-line in the header row. */
 header.site h1 {
   white-space: nowrap;
 }
@@ -914,60 +1049,113 @@ header.site h1 {
   width: 220px;
 }
 
-/* Hero: lead story + Brief -------------------------------------------------- */
+/* Hero: lead story + Brief -----------------------------------------------
+   Magazine rail: lead takes ~2fr, Brief sits in a sticky right rail. */
 .hero {
   display: grid;
-  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
-  gap: 1.5rem;
+  grid-template-columns: minmax(0, 1.9fr) minmax(0, 1fr);
+  gap: 1.75rem;
   align-items: start;
-  margin-bottom: 2.25rem;
+  margin-bottom: 2.5rem;
 }
 .hero:empty { display: none; }
 
 article.lead {
   height: auto;
-  box-shadow: var(--shadow);
+  border-color: var(--ai-border);
+  box-shadow: var(--shadow-lg);
+  background:
+    linear-gradient(180deg, rgba(79, 70, 229, 0.05) 0%, rgba(79, 70, 229, 0) 38%),
+    var(--card);
 }
 article.lead:hover {
   transform: none;
   box-shadow: var(--shadow-lg);
+  border-color: var(--ai-border);
 }
 .lead .article-thumb {
-  height: 420px;
+  aspect-ratio: 16 / 9;
+  max-height: 440px;
 }
 .lead .article-content {
-  padding: 1.5rem 1.75rem 1.625rem;
+  padding: 1.75rem 2rem 1.625rem;
 }
 .lead h2 {
-  margin: 0 0 0.75rem;
-  font-size: 1.875rem;
-  line-height: 1.22;
+  margin: 0 0 0.625rem;
+  font-family: var(--serif);
+  font-size: 2.25rem;
+  line-height: 1.15;
   font-weight: 800;
   letter-spacing: -0.02em;
   text-wrap: balance;
 }
 .lead h2 a { color: var(--ink); text-decoration: none; }
-.lead h2 a:hover { color: var(--ai); }
+.lead h2 a:hover { color: var(--ai-deep); }
 .lead p[data-summary] {
-  font-size: 0.9375rem;
-  line-height: 1.6;
+  font-size: 1rem;
+  line-height: 1.62;
   color: var(--ink-soft);
   max-width: 640px;
   -webkit-line-clamp: unset;
 }
-.lead .meta { order: 2; margin: 0.5rem 0 0; }
+.lead .meta { order: 2; margin: 0.625rem 0 0; font-size: 0.8rem; }
 .lead p[data-summary] { order: 1; }
 .lead .share { order: 3; }
 
-/* Brief in the sidebar: same card, narrower rows */
+/* Batch 2.7: lead meta extras — favicon + read time + relative age.
+   Wraps to two lines on narrow cards. */
+.lead .meta {
+  row-gap: 0.3rem;
+}
+.lead .meta .src-icon {
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+  align-self: center;
+  flex-shrink: 0;
+  background: var(--bg-subtle);
+}
+.lead .meta .read,
+.lead .meta .rel {
+  font-weight: 600;
+  color: var(--ink-soft);
+  white-space: nowrap;
+}
+
+/* "Lead story" marker on the hero card — small caps over a hairline rule */
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.625rem;
+}
+.eyebrow::after {
+  content: "";
+  height: 1px;
+  flex: 1;
+  background: var(--line);
+}
+.eyebrow-note {
+  font-size: 0.6875rem;
+  font-weight: 800;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--ai-deep);
+}
+
+/* Brief in the sidebar rail: sticky, tighter rows, quieter hover */
 .hero .pb {
   margin: 0;
-  align-self: stretch;
+  align-self: start;
+  position: sticky;
+  top: 92px;
+  box-shadow: var(--shadow);
 }
 .hero .pb-hook { display: none; }
 .hero .pb > summary {
   padding: 0.875rem 1.25rem 0.75rem;
   border-bottom: 1px solid var(--line-light);
+  row-gap: 0.3rem;
 }
 .hero .pb-body { padding: 0.25rem 1.25rem 0.75rem; }
 .hero .pb-takeaways li {
@@ -988,19 +1176,22 @@ article.lead:hover {
   font-size: 0.72rem;
 }
 
-/* Section head ------------------------------------------------------------ */
+/* Section head — editorial rule with serif title ------------------------- */
 .section-head {
   display: flex;
   align-items: baseline;
   gap: 0.75rem;
-  margin: 0 0 1rem;
+  margin: 0 0 1.25rem;
+  padding-top: 1.25rem;
+  border-top: 2px solid var(--ink);
 }
 .section-title {
   margin: 0;
-  font-size: 0.8125rem;
+  font-family: var(--serif);
+  font-size: 1.5rem;
   font-weight: 800;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  text-transform: none;
   color: var(--ink);
 }
 .section-note {
@@ -1015,20 +1206,7 @@ article.lead:hover {
   white-space: nowrap;
 }
 
-/* "Lead story" marker on the hero card ---------------------------------- */
-.eyebrow {
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-  margin-bottom: 0.5rem;
-}
-.eyebrow-note {
-  font-size: 0.6875rem;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--muted);
-}
+/* "Lead story" marker — defined once above with the hero; no duplicate. */
 
 /* Filtering states -------------------------------------------------------- */
 /* The lead's grid copy is hidden while the hero shows it; a search hides the
@@ -1041,8 +1219,10 @@ body.is-filtered .items > article[data-lead] { display: flex; }
 /* Responsive -------------------------------------------------------------- */
 @media (max-width: 960px) {
   .hero { grid-template-columns: minmax(0, 1fr); }
-  .lead .article-thumb { height: 260px; }
-  .lead h2 { font-size: 1.5rem; }
+  .hero .pb { position: static; }
+  .lead .article-thumb { max-height: 320px; }
+  .lead h2 { font-size: 1.75rem; line-height: 1.2; }
+  .section-title { font-size: 1.35rem; }
 }
 @media (max-width: 768px) {
   /* Row 1: logo + wordmark. Row 2: search, full width. Row 3: date + tagline. */
@@ -1053,7 +1233,9 @@ body.is-filtered .items > article[data-lead] { display: flex; }
   .section-head .updated { display: none; }
 }
 @media (max-width: 520px) {
-  .lead .article-thumb { height: 200px; }
+  .lead .article-thumb { max-height: 240px; }
   .lead .article-content { padding: 1.125rem 1.25rem 1.25rem; }
-  .lead h2 { font-size: 1.3rem; }
+  .lead h2 { font-size: 1.5rem; line-height: 1.22; }
+  .section-head { padding-top: 1rem; }
+  .section-title { font-size: 1.25rem; }
 }

@@ -1,4 +1,4 @@
-const CACHE = 't2d-pulse-v3';
+const CACHE = 't2d-pulse-v4';
 const PREFIX = 't2d-pulse-';
 const CORE = ['/', '/offline.html', '/pulse.css', '/pulse.js', '/manifest.webmanifest', '/icons/t2d-pulse-192.png'];
 const MAX_ENTRIES = 100;
